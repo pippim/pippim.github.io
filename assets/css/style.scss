@@ -41,7 +41,8 @@ $color: #0cf;
     background-color: darken($color, 15%);
     transition: all .3s;
     border-radius: 10rem;
-    z-index: -1;
+    // z-index: -1;
+    z-index: 10;  // place over other elements
   }
   &:hover {
     color: #fff;
@@ -61,7 +62,7 @@ $color: #0cf;
 
 .container {
   position: sticky;
-  top: 0px;
+  top: 50px;
   // padding-top: 50px;
   margin: 0 auto;
   width: 100%;
