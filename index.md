@@ -1,6 +1,6 @@
 ## Welcome to pippim
 
-[About pippim](pippim.github.io/about.html)
+[About pippim](https://github.com/pippim/pippim.github.io/about.html)
 
 ### Github Pages
 
