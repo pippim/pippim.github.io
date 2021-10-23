@@ -29,7 +29,8 @@ $color: #0cf;
     height: 100%;
     background-color: $color;
     border-radius: 10rem;
-    z-index: -2;
+    // z-index: -2;
+    z-index: 9;
   }
   &:before {
     content: '';
@@ -62,7 +63,7 @@ $color: #0cf;
 
 .container {
   position: sticky;
-  top: 50px;
+  top: 10px;
   // padding-top: 50px;
   margin: 0 auto;
   width: 100%;
