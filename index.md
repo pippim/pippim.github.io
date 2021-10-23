@@ -2,6 +2,8 @@
 
 [About pippim](https://pippim.github.io/about.html)
 <button name="about_btn" onclick="https://pippim.github.io/about.html">About pippim</button>
+<button onclick="location.href='https://pippim.github.io/about.html'" type="button">
+         About pippim</button>
 [About pippim](https://pippim.github.io/about.html){: .btn}
 
 
