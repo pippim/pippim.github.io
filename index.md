@@ -1,16 +1,9 @@
 ## Welcome to pippim
-
-<button onclick="location.href='https://pippim.github.io/about.html'" type="button">
-         About pippim</button>
-[About pippim](https://pippim.github.io/about.html){: .btn}
-
 <div class="container">
   <a href="about.html" style="display: inline" class="button">About pippim</a>
   <a href="answers.html" style="display: inline" class="button">Answers</a>
   <a href="programs.html" style="display: inline" class="button">Programs</a>
 </div>  
-
-
 ### Github Pages
 
 You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
