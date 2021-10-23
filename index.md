@@ -6,9 +6,7 @@
          About pippim</button>
 [About pippim](https://pippim.github.io/about.html){: .btn}
 <div class="container">
-  <a href="#" class="button">About pippim</a>
-         <button onclick="location.href='https://pippim.github.io/about.html'" type="button">
-         About pippim</button>
+  <a href="#" class="button" onclick="location.href='https://pippim.github.io/about.html'>About pippim</a>
 </div>  
 
 
