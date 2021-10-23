@@ -1,7 +1,7 @@
 ## Welcome to pippim
 
 [About pippim](https://pippim.github.io/about.html)
-<button name="about" onclick="https://pippim.github.io/about.html">About pippim</button>
+<button name="button" onclick="https://pippim.github.io/about.html">About pippim</button>
 
 ### Github Pages
 
