@@ -4,9 +4,9 @@
          About pippim</button>
 [About pippim](https://pippim.github.io/about.html){: .btn}
 
-<div class="container">
+<span class="container">
   <a href="about.html" style="display: inline" class="button">About pippim</a>
-</div>  
+</span>  
 
 
 ### Github Pages
