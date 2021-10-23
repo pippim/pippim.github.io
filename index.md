@@ -5,6 +5,9 @@
 <button onclick="location.href='https://pippim.github.io/about.html'" type="button">
          About pippim</button>
 [About pippim](https://pippim.github.io/about.html){: .btn}
+<div class="container">
+  <a href="#" class="button">About pippim</a>
+</div>  
 
 
 ### Github Pages
