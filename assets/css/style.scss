@@ -69,7 +69,7 @@ $color: #7c334f;  // From: https://github.com/pages-themes/merlot/blob/master/_s
   position: absolute;  // Maybe something needed when sticky comment out
   // top: 10px;  // After removing sticky top expand from 10 to 20
   // top: 20px;  // Increasing didn't help, button top still cut off
-  padding-top: 20px;
+  // padding-top: 20px;  // With 20 it was pushed way down below banner
   // padding-top: 50px;
   margin: 0 auto;
   width: 100%;
