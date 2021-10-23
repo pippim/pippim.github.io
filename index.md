@@ -5,7 +5,7 @@
 [About pippim](https://pippim.github.io/about.html){: .btn}
 
 <div class="container">
-  <a href="#" class="button">About pippim</a>
+  <a href="about.html" style="display: inline" class="button">About pippim</a>
 </div>  
 
 
