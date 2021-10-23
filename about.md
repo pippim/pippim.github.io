@@ -1,6 +1,6 @@
 # The 5 W's of pippim
 
-This page is about the 5 W's of pippim:
+### This page is all ***about*** the 5 W's of pippim:
 
 | W     | Category                 |
 | ----- | ------------------------ |
@@ -10,6 +10,8 @@ This page is about the 5 W's of pippim:
 | When  | When was pippim created? |
 | Why   | Why was pippim created?  |
 | How   | How was pippim created?  |
+
+![The 5 Ws (and 1 H) that should be asked of every project!](/assets/img/Blog_Project-Management-101.png){:class="img-responsive"}
 
 ## Who is pippim?
 
@@ -35,7 +37,8 @@ pippim was created to make it easier to list the free software created on AskUbu
 
 Yes this is the sixth section. And yes "How" doesn't begin with a "W". But as they say:
 
-> 
+> Who, What, Where, When, Why and sometimes How
+
 Many hours went into finding a name that:
 
 1. Was easy to remember
@@ -55,5 +58,5 @@ Then the `pippim.github.io` website was created using Github Pages for free.
 
 ### Hopefully you enjoy the freedom! :)
 
-**Image from:** [The 5 Ws (and 1 H) that should be asked of every project!](https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project)
+**Image credit:** [The 5 Ws (and 1 H) that should be asked of every project!](https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project)
 
