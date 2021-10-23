@@ -65,7 +65,8 @@ $color: #0cf;
 .container {
   // position: sticky;  // Temporary stop from scrolling off because it is underneath other elments
   // top: 10px;  // After removing sticky top expand from 10 to 20
-  top: 20px;
+  // top: 20px;  // Increasing didn't help, button top still cut off
+  padding-top: 10px;
   // padding-top: 50px;
   margin: 0 auto;
   width: 100%;
