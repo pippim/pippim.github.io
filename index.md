@@ -1,12 +1,11 @@
 ## Welcome to pippim
 
-[About pippim](https://pippim.github.io/about.html)
-<button name="about_btn" onclick="https://pippim.github.io/about.html">About pippim</button>
 <button onclick="location.href='https://pippim.github.io/about.html'" type="button">
          About pippim</button>
 [About pippim](https://pippim.github.io/about.html){: .btn}
+
 <div class="container">
-  <a href="#" class="button" onclick="location.href='https://pippim.github.io/about.html'>About pippim</a>
+  <a href="#" class="button">About pippim</a>
 </div>  
 
 
