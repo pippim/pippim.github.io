@@ -14,6 +14,7 @@
 | How   | How was pippim created?  |
 
 
+
 ## Who is pippim?
 
 pippim is a one-man-show that has been answering questions since 2016 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix".
@@ -40,7 +41,7 @@ Yes this is the sixth section. And yes "How" doesn't begin with a "W". But as th
 
 > Who, What, Where, When, Why and sometimes How
 
-Many hours went into finding a name that:
+The first step was to find a domain (website) name that:
 
 1. Was easy to remember
 2. Was six characters of less
@@ -49,9 +50,9 @@ Many hours went into finding a name that:
 5. Did not contain "-" or digits like "9", "0", etc.
 6. Ended in ".com" instead of ".net" or ".org", etc.
 7. Wasn't a name already reserved and being sold for thousands of dollars
-8. Could be purchased from Google Domains with good security and performance
+8. Could be purchased from Google Domains that offers good security, performance and reliability
 
-After finding the name "pippim" was available weeks of contemplation went by before pulling the trigger and buying it for $17 CAD per year.
+After finding out that the name "pippim" was available, more weeks of contemplation went by before "pulling the trigger" and buying "pippim.com" for $17 CAD per year.
 
 Then the `www.pippim.com` website was created using Google Sites for free.
 
