@@ -1,6 +1,8 @@
 ## Welcome to pippim
 
-(About)[pippim.github.io/about.html)
+[About pippim][pippim.github.io/about.html)
+
+### Github Pages
 
 You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
