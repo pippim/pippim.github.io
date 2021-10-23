@@ -1,5 +1,7 @@
 # The 5 W's of pippim
 
+![The 5 Ws (and 1 H) that should be asked of every project!](/assets/img/Blog_Project-Management-101.png){:class="img-responsive"}
+
 ### This page is all ***about*** the 5 W's of pippim:
 
 | W     | Category                 |
@@ -11,7 +13,6 @@
 | Why   | Why was pippim created?  |
 | How   | How was pippim created?  |
 
-![The 5 Ws (and 1 H) that should be asked of every project!](/assets/img/Blog_Project-Management-101.png){:class="img-responsive"}
 
 ## Who is pippim?
 
