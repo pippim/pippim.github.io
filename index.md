@@ -4,9 +4,11 @@
          About pippim</button>
 [About pippim](https://pippim.github.io/about.html){: .btn}
 
-<span class="container">
+<div class="container">
   <a href="about.html" style="display: inline" class="button">About pippim</a>
-</span>  
+  <a href="answers.html" style="display: inline" class="button">Answers</a>
+  <a href="programs.html" style="display: inline" class="button">Programs</a>
+</div>  
 
 
 ### Github Pages
