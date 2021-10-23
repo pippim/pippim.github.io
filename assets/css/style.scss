@@ -6,7 +6,8 @@
 //                    Pure CSS Button Hover effect
 // From: https://www.sliderrevolution.com/resources/css-button-hover-effects/
 
-$color: #0cf;
+// $color: #0cf;  // Original
+$color: #7c334f;  // From: https://github.com/pages-themes/merlot/blob/master/_sass/screen.scss
 
 .button {
   display: inline-block;
