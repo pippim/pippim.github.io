@@ -1,7 +1,6 @@
 ## Welcome to pippim
 
 [About pippim](https://pippim.github.io/about.html)
-{% include button.html url="https://pippim.github.io/about.html" %}
 <button name="about_btn" onclick="https://pippim.github.io/about.html">About pippim</button>
 [About pippim](https://pippim.github.io/about.html){: .btn}
 
