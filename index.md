@@ -1,9 +1,7 @@
 ## Welcome to pippim
-<div class="container">
-  <a href="about.html" style="display: inline" class="button">About pippim</a>
-  <a href="answers.html" style="display: inline" class="button">Answers</a>
-  <a href="programs.html" style="display: inline" class="button">Programs</a>
-</div>  
+
+Free open-source software for the whole world!
+
 ### Github Pages
 
 You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
