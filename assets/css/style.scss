@@ -60,7 +60,9 @@ $color: #0cf;
  */
 
 .container {
-  padding-top: 50px;
+  position: sticky;
+  top: 0px;
+  // padding-top: 50px;
   margin: 0 auto;
   width: 100%;
   text-align: center;
