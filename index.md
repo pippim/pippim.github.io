@@ -1,7 +1,6 @@
 ## Welcome to pippim
 
 [About pippim](https://pippim.github.io/about.html)
-Below is from buttons are from: https://stackoverflow.com/questions/40688633/how-can-i-add-a-button-in-a-md-file-with-jekyll
 {% include button.html url="https://pippim.github.io/about.html" %}
 <button name="about_btn" onclick="https://pippim.github.io/about.html">About pippim</button>
 [About pippim](https://pippim.github.io/about.html){: .btn}
