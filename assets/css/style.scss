@@ -19,8 +19,8 @@ $color: #0cf;
   transition: all .3s;
   position: relative;
   overflow: hidden;
-  // z-index: 1;
-  z-index: 11;
+  z-index: 1;
+  //z-index: 11;
   &:after {
     content: '';
     position: absolute;
@@ -30,8 +30,8 @@ $color: #0cf;
     height: 100%;
     background-color: $color;
     border-radius: 10rem;
-    // z-index: -2;
-    z-index: 9;
+    z-index: -2;
+    //z-index: 9;
   }
   &:before {
     content: '';
@@ -43,8 +43,8 @@ $color: #0cf;
     background-color: darken($color, 15%);
     transition: all .3s;
     border-radius: 10rem;
-    // z-index: -1;
-    z-index: 10;  // place over other elements
+    z-index: -1;
+    //z-index: 10;  // place over other elements
   }
   &:hover {
     color: #fff;
