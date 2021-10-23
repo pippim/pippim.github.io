@@ -66,8 +66,9 @@ $color: #7c334f;  // From: https://github.com/pages-themes/merlot/blob/master/_s
 .container {
   // position: sticky;  // Temporary stop from scrolling off because it is underneath other elments
   position: relative;  // Maybe something needed when sticky comment out
-  top: 20px;  // After removing sticky top expand from 10 to 20
+  // top: 10px;  // After removing sticky top expand from 10 to 20
   // top: 20px;  // Increasing didn't help, button top still cut off
+  padding-top: 20px;
   // padding-top: 50px;
   margin: 0 auto;
   width: 100%;
