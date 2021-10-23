@@ -28,8 +28,8 @@ $color: #0cf;
   border-radius: 10rem;
   color: #fff;
   // text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: .15rem;
+  // font-size: 1rem;
+  // letter-spacing: .15rem;
   transition: all .3s;
   position: relative;
   overflow: hidden;
@@ -66,7 +66,7 @@ $color: #0cf;
 }
 
 /* optional reset for presentation */
-* {
+{
   font-family: Arial;
   text-decoration: none;
   font-size: 20px;
