@@ -1,8 +1,8 @@
 ## Welcome to pippim
 
-### Free open-source software for the whole world!
+### Free open-source software for the world!
 
-![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png.png){:class="img-responsive"}
+![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){:class="img-responsive"}
 
 **Image credit:** [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
