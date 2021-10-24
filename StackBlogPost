@@ -1,0 +1,163 @@
+-- StackBlogPost: Convert Stack Exchange Answers to Blog Posts in Jekyll
+-- From: https://data.stackexchange.com/stackoverflow/query/edit/1492412#resultSets
+-- AccountId: Your SE network account ID number, found in the URL of your network profile page:
+
+create table #PostsByUser (
+  PostId int primary key,
+  ParentId int,
+  PostTypeId int
+)
+create table #Results (
+  [Site] nvarchar(128) not null,
+  [Post ID] int not null,
+  [Type] nvarchar(50),
+  [Title] nvarchar(250),
+  [HTML] nvarchar(max),
+  [Markdown] nvarchar(max),
+  [Tags] nvarchar(250),
+  [Created] datetime,
+  [Last Edit] datetime,
+  [Edited By] nvarchar(max),
+  [Score] int,
+  [Favorites] int,
+  [Views] int,
+  [Answers] int,
+  [Accepted] nvarchar(20),
+  [CW] nvarchar(20),
+  [Closed] nvarchar(20)
+)
+
+declare @accountid as int = 4775729
+
+DECLARE sites CURSOR FOR
+  SELECT name
+  FROM sys.databases
+  WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb', 'Data.StackExchange')
+
+DECLARE @sitedbname AS nvarchar(128)
+DECLARE @query AS nvarchar(max)
+
+OPEN sites
+FETCH NEXT FROM sites INTO @sitedbname
+WHILE @@FETCH_STATUS = 0
+BEGIN
+  SET @query = '
+    use [' + @sitedbname + '];
+    
+    declare @localuserid as int = (select Id from Users where AccountId = ' + cast(@accountid as nvarchar(max)) + ');
+
+    insert into #PostsByUser
+    select Id as PostId, ParentId, PostTypeId
+    from Posts
+    where OwnerUserId = @localuserid;
+
+    with
+    PostsByUser as (
+      select * from #PostsByUser
+    ),
+    LastRevisions as (
+      select
+        PostsByUser.PostId as PostId,
+        max(PostHistory.Id) as LastRevId
+      from
+        PostsByUser
+        join PostHistory on PostHistory.PostId = PostsByUser.PostId
+      where
+        PostHistory.PostHistoryTypeId in (2,5,8)  -- create/edit/rollback body
+      group by
+        PostsByUser.PostId
+    ),
+    Editors as (
+      select
+        PostHistory.PostId as PostId,
+        PostHistory.UserId as UserId,
+        coalesce(Users.DisplayName, PostHistory.UserDisplayName) as UserName,
+        min(PostHistory.CreationDate) as FirstEditDate
+      from
+        PostsByUser
+        join PostHistory on PostHistory.PostId = PostsByUser.PostId
+        left join Users on Users.Id = PostHistory.UserId
+      where
+        PostHistory.PostHistoryTypeId in (4,5)  -- edit body/title
+        and (PostHistory.UserId != @localuserid or PostHistory.UserId is null)
+      group by
+        PostHistory.PostId,
+        PostHistory.UserId,
+        coalesce(Users.DisplayName, PostHistory.UserDisplayName)
+    ),
+    EditorsGrouped as (
+      select
+        PostId,
+        string_agg(UserName + '' ('' + coalesce(cast(UserId as nvarchar), ''n/a'') + '')'', '', '')
+          within group ( order by FirstEditDate asc ) as EditorNames
+      from
+        Editors
+      group by
+        PostId
+    ),
+    WikiTags as (
+      select
+        PostId, TagName
+      from
+        PostsByUser
+        join Tags on PostId = ExcerptPostId
+      where
+        PostTypeId = 4  -- tag excerpt
+    union
+      select
+        PostId, TagName
+      from
+        PostsByUser
+        join Tags on PostId = WikiPostId
+      where
+        PostTypeId = 5  -- tag wiki
+    ),
+    Dupes as (
+      select distinct
+        PostsByUser.PostId
+      from
+        PostsByUser
+        join PostLinks on PostLinks.PostId = PostsByUser.PostId
+      where
+        PostTypeId = 1 and LinkTypeId = 3  -- question, duplicate
+    )
+    insert into #Results
+    select
+      ''' + @sitedbname + ''' as [Site],
+      Posts.Id as [Post ID],
+      PostTypes.Name as [Type],
+      coalesce(Posts.Title, Parent.Title) as [Title],
+      Posts.Body as [HTML],
+      PostHistory.Text as [Markdown],
+      coalesce(WikiTags.TagName, Posts.Tags, Parent.Tags) as [Tags],
+      Posts.CreationDate as [Created],
+      Posts.LastEditDate as [Last Edit],
+      EditorNames as [Edited By],
+      Posts.Score as [Score],
+      Posts.FavoriteCount as [Favorites],
+      coalesce(Posts.ViewCount, Parent.ViewCount) as [Views],
+      Posts.AnswerCount as [Answers],
+      iif(Posts.AcceptedAnswerId is not null or Posts.Id = Parent.AcceptedAnswerId, ''Accepted'', '''') as [Accepted],
+      iif(Posts.CommunityOwnedDate is not null, ''CW'', '''') as [CW],
+      iif(Posts.ClosedDate is not null, iif(Dupes.PostId is not null, ''Duplicate'', ''Closed''), '''') as [Closed]
+    from
+      PostsByUser
+      join Posts on Posts.Id = PostsByUser.PostId
+      left join PostTypes on PostTypes.Id = PostsByUser.PostTypeId
+      left join Posts as Parent on Parent.Id = PostsByUser.ParentId
+      left join LastRevisions on LastRevisions.PostId = PostsByUser.PostId
+      left join PostHistory on PostHistory.Id = LastRevisions.LastRevId
+      left join EditorsGrouped on EditorsGrouped.PostId = PostsByUser.PostId
+      left join WikiTags on WikiTags.PostId = PostsByUser.PostId
+      left join Dupes on Dupes.PostId = PostsByUser.PostId;
+
+    delete from #PostsByUser;
+  '
+  execute(@query)
+  FETCH NEXT FROM sites INTO @sitedbname
+END
+CLOSE sites
+DEALLOCATE sites
+
+select * from #Results
+  
