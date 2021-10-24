@@ -2,6 +2,8 @@
 
 ![The 5 Ws (and 1 H) that should be asked of every project!](/assets/img/Blog_Project-Management-101.png){:class="img-responsive"}
 
+**Image credit:** [The 5 Ws (and 1 H) that should be asked of every project!](https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project)
+
 ### This page is all ***about*** the 5 W's of pippim:
 
 | W     | Category                 |
@@ -59,6 +61,9 @@ Then the `www.pippim.com` website was created using Google Sites for free.
 Then the `pippim.github.io` website was created using Github Pages for free.
 
 ### Hopefully you enjoy the freedom! :)
+---
+#### Hosted on Github with Jekyll, Ruby Gems, Javascript, HTML, SCSS and more
 
-**Image credit:** [The 5 Ws (and 1 H) that should be asked of every project!](https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project)
+![Jekyll Octocat Mascot](/assets/img/octojekyll-opt.jpg){:class="img-responsive"}
 
+**Image credit:** Jekyll Octocat Mascot [Github](https://www.github.com)
