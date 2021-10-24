@@ -2,7 +2,7 @@
 
 Free open-source software for the whole world!
 
-[Send an Email to pippim]((mailto:pippim.com@gmail.com)
+[Send an Email to pippim](mailto:pippim.com@gmail.com)
 
 Sister pippim Website on Google Sites: www.pippim.com
 
