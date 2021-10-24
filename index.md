@@ -1,8 +1,12 @@
 ## Welcome to pippim
 
-Free open-source software for the whole world!
+### Free open-source software for the whole world!
 
-[Send an Email to pippim](mailto:pippim.com@gmail.com)
+![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png.png){:class="img-responsive"}
+
+**Image credit:** [PNGWING](https://www.pngwing.com/en/free-png-medya)
+
+### [Send an Email to pippim](mailto:pippim.com@gmail.com)
 
 Sister pippim Website on Google Sites: [www.pippim.com](https://pippim.com)
 
