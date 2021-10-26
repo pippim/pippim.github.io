@@ -29,7 +29,7 @@ $header-bg-color-secondary: #155799 !default;
   // letter-spacing: .15rem;
   transition: all .3s;
   position: relative;
-  // overflow: hidden;  // Test to see if this makes container stay on top
+  overflow: hidden;  // Test to see if this makes container stay on top
   z-index: 1;
   //z-index: 11;
   &:after {
