@@ -54,7 +54,7 @@ $header-bg-color-secondary: #155799 !default;
     width: 0%;
     height: 100%;
     // background-color: darken($color, 15%);  // For Merlot
-    background-color: darken($header-bg-color-secondary, 15%);  // For Cayman
+    background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
     transition: all .3s;
     border-radius: 10rem;
     z-index: -1;
@@ -80,7 +80,7 @@ $header-bg-color-secondary: #155799 !default;
   // position: sticky;  // Temporary stop from scrolling off because it is underneath other elments
   // position: relative;  // Maybe something needed when sticky comment out
   position: absolute;  // Maybe something needed when sticky comment out
-  top: 10px;  // Cayman
+  padding-top: 10px;  // Cayman
   // top: 10px;  // After removing sticky top expand from 10 to 20
   // top: 20px;  // Increasing didn't help, button top still cut off
   // padding-top: -10px;  // With 20 it was pushed way down below banner (Merlot)
