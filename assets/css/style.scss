@@ -23,6 +23,7 @@ $header-bg-color-secondary: #155799 !default;
   padding: .75rem 1.25rem;
   border-radius: 10rem;
   color: #fff;
+  border: 2px solid white;  // Added for Cayman
   // text-transform: uppercase;
   // font-size: 1rem;
   // letter-spacing: .15rem;
@@ -52,7 +53,8 @@ $header-bg-color-secondary: #155799 !default;
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: darken($color, 15%);
+    // background-color: darken($color, 15%);  // For Merlot
+    background-color: darken($Header-bg-color, 15%);  // For Cayman
     transition: all .3s;
     border-radius: 10rem;
     z-index: -1;
@@ -80,7 +82,7 @@ $header-bg-color-secondary: #155799 !default;
   position: absolute;  // Maybe something needed when sticky comment out
   // top: 10px;  // After removing sticky top expand from 10 to 20
   // top: 20px;  // Increasing didn't help, button top still cut off
-  padding-top: -10px;  // With 20 it was pushed way down below banner
+  // padding-top: -10px;  // With 20 it was pushed way down below banner (Merlot)
   // padding-top: 50px;
   margin: 0 auto;
   width: 100%;
