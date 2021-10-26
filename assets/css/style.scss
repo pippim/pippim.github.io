@@ -54,7 +54,7 @@ $header-bg-color-secondary: #155799 !default;
     width: 0%;
     height: 100%;
     // background-color: darken($color, 15%);  // For Merlot
-    background-color: darken($Header-bg-color, 15%);  // For Cayman
+    background-color: darken($header-bg-color, 15%);  // For Cayman
     transition: all .3s;
     border-radius: 10rem;
     z-index: -1;
