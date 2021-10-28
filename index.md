@@ -1,8 +1,15 @@
-## Welcome to pippim
+
+![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left"}{:class="img-responsive"}
 
 ### Free open-source software for the world!
 
-![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){:class="img-responsive"}
+See the **About** page to learn what the name pippim stands for. *(Hint: it's nothing)*
+
+See the **Answers** page to read solutions for problems everyday people had using computers. Mostly in Linux and specifically in Ubuntu. Some of these answers are quite detailed and include lots of code.
+
+See the **Programs** page for full fledged applications you can use to solve such problems as automatically setting brightness and color temperatures independently on three monitors. The settings are controlled by sunrise and sunset times. The times are automatically retrieved each day.
+
+Click the **Email** button to send an email to pippim!
 
 **Image credit:** [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
