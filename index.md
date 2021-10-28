@@ -1,5 +1,5 @@
 
-![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="25%" width="25%"}{:class="img-responsive"}
+![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
 
 ### Free open-source software for the world!
 
