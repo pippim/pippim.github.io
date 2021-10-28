@@ -1,5 +1,7 @@
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
+## Introduction
+
 Click the <kbd>❓ About</kbd> button above to learn what the name pippim stands for. *(Hint: it's nothing)*
 
 Click the <kbd>✅ Answers</kbd> button above to read solutions for problems everyday people (*and experts in other fields*) had using computers. Mostly for problems in Linux and specifically in Ubuntu.
@@ -14,7 +16,7 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 
 ---
 
-## [📧 Send an Email to pippim](mailto:pippim.com@gmail.com)
+### [📧 Send an Email to pippim](mailto:pippim.com@gmail.com)
 
 ### Visit the pippim website on Google Sites: [www.pippim.com](https://pippim.com)
 
