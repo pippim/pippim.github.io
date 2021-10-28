@@ -52,7 +52,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ### Table of Contents support
 
-To insert TOC use `{% include toc.md %}` at the place you want it:
+To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{%` and `%} in real command but they had to be added here to prevent TOC from appearing. When used for real you get the below TOC:
 
 {% include toc.md %}
 
