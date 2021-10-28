@@ -1,16 +1,16 @@
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
-See the **About** page to learn what the name pippim stands for. *(Hint: it's nothing)*
+See the <a href="about.html" style="display: inline" class="button">❓ About</a> page to learn what the name pippim stands for. *(Hint: it's nothing)*
 
-See the **Answers** page to read solutions for problems everyday people had using computers. Mostly in Linux and specifically in Ubuntu.
+See the <a href="answers.html" style="display: inline" class="button">✅ Answers</a> page to read solutions for problems everyday people had using computers. Mostly in Linux and specifically in Ubuntu.
 
-See the **Programs** page for full fledged applications that make your life easier.
+See the <a href="programs.html" style="display: inline" class="button">💻 Programs</a> page for full fledged applications that make your life easier.
 
-Click the **Email** button to send an email to pippim!
+Click the <a href="mailto:pippim.com@gmail.com" style="display: inline" class="button">📧 Email</a> button to send an email to pippim!
 
 **Image credit:** [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
-### Free open-source software for the world!
+### Free open-source software for the world! It's also Ad-Free !!!
 
 ---
 
