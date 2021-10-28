@@ -4,7 +4,7 @@
 
 Click the <kbd>❓ About</kbd> button above to learn what the name pippim stands for. *(Hint: it's nothing)*
 
-Click the <kbd>✅ Answers</kbd> button above to read solutions for problems everyday people (*and experts in other fields*) had using computers. Mostly for problems in Linux and specifically in Ubuntu.
+Click the <kbd>✅ Answers</kbd> button above to read solutions for problems people have using computers. Mostly for problems in Linux and specifically in Ubuntu.
 
 The <kbd>💻 Programs</kbd> button leads you to applicationss pippim created to make your life easier.
 
