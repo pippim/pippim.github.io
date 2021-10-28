@@ -12,13 +12,17 @@ Click the **Email** button to send an email to pippim!
 
 ### Free open-source software for the world!
 
-### [📧 Send an Email to pippim](mailto:pippim.com@gmail.com)
+---
 
-Sister pippim Website on Google Sites: [www.pippim.com](https://pippim.com)
+## [📧 Send an Email to pippim](mailto:pippim.com@gmail.com)
 
-### Github Pages
+### Sister pippim Website on Google Sites: [www.pippim.com](https://pippim.com)
 
-You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+---
+
+## Github Pages
+
+This website was created (for free) on **Github Pages**. You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
