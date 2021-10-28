@@ -8,7 +8,7 @@ The <kbd>💻 Programs</kbd> button leads you to applicationss pippim created to
 
 Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also click the link below.
 
-**Image credit:** [PNGWING](https://www.pngwing.com/en/free-png-medya)
+**Github's "Octocat" mascot image credit:** [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
 ### Free open-source software for the world! It's also Ad-Free !!!
 
