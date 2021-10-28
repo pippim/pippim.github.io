@@ -1,6 +1,6 @@
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
-## Introduction
+# Introduction
 
 Click the <kbd>❓ About</kbd> button above to learn what the name pippim stands for. *(Hint: it's nothing)*
 
@@ -12,9 +12,9 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 
 **Github's "Octocat" mascot image credit:** [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
-### Free open-source software for the world! It's also Ad-Free !!!
-
 ---
+
+## Get in touch
 
 ### [📧 Send an Email to pippim](mailto:pippim.com@gmail.com)
 
