@@ -62,8 +62,11 @@ To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place yo
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pippim/pippim.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Images, SCSS and HTML
+### Images, Javascript, CSS and HTML
 
-Images are stored in `assets/img`.
-SCSS is stored in `assets/css`.
-HTML can be found in any file, including markdown files which end in `.md`.
+These are the file types in the pippim website:
+
+- Images are stored in `assets/img`
+- SCSS (a superset of CSS) files are stored in `assets/css`
+- HTML can be found in any file, including markdown files which end in `.md`. Pure HTML files can be found in the `_includes` directory
+
