@@ -54,7 +54,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ### Table of Contents support
 
-To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{ %` and `% } in real command but they had to be added here to prevent TOC from appearing. When used for real you get the below TOC:
+To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{ %` and `% }` in the command but, spaces had to be added to show the commnd. The real TOC command is used on the next line:
 
 {% include toc.md %}
 
@@ -62,6 +62,8 @@ To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place yo
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pippim/pippim.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### Images, SCSS and HTML
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Images are stored in `assets/img`.
+SCSS is stored in `assets/css`.
+HTML can be found in any file, including markdown files which end in `.md`.
