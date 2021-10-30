@@ -1,7 +1,6 @@
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
-<a href="#" class="hdr-btn">Top</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr2" class="hdr-btn">Skip</a>
-# Introduction<a id="hdr1"></a>
+# Introduction<a id="hdr1"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr2" class="hdr-btn">Skip</a>
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
 
@@ -29,8 +28,7 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 
 ---
 
-<a href="#" class="hdr-btn">Top</a><a href="#hdr1" class="hdr-btn">ToS</a><a href="#hdr1" class="hdr-btn">ToS</a><a href="#hdr3" class="hdr-btn">Skip</a>
-## Get in touch<a id="hdr2"></a>
+## Get in touch<a id="hdr2"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr1" class="hdr-btn">ToS</a><a href="#hdr1" class="hdr-btn">ToS</a><a href="#hdr3" class="hdr-btn">Skip</a>
 
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
 
