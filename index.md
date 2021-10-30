@@ -1,5 +1,6 @@
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
+<a href="#hdr6" class="button">ToC</a>
 # Introduction<a name="hdr1"></a>
 
 Click the <kbd>❓ About</kbd> button above to learn what the name pippim stands for. *(Hint: it's nothing)*
@@ -13,6 +14,7 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 *Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
 ---
+
 <a href="#hdr1" class="button">Top</a>
 ## Get in touch<a name="hdr2"></a>
 
@@ -23,13 +25,15 @@ Get in touch with pippim by sending an email. You can also visit the other pippi
 - Click this link to visit the pippim website on Google Sites: [www.pippim.com](https://pippim.com)
 
 ---
-<a href="#hdr1" class="button">Top</a><a href="#hdr2" class="button">ToS</a>
+
+<a href="#hdr1" class="button">Top</a><a href="#hdr2" class="button">ToS</a><a href="#hdr6" class="button">ToC</a>
 ## Github Pages<a name="hdr3"></a>
 
 This website was created (for free) on **Github Pages**. You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-<a href="#hdr1" class="button">Top</a><a href="#hdr3" class="button">ToS</a>
+
+<a href="#hdr1" class="button">Top</a><a href="#hdr3" class="button">ToS</a><a href="#hdr6" class="button">ToC</a>
 ### Markdown<a name="hdr4"></a>
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -53,17 +57,21 @@ Syntax highlighted code block
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-<a href="#hdr1" class="button">Top</a><a href="#hdr4" class="button">ToS</a>
+
+<a href="#hdr1" class="button">Top</a><a href="#hdr4" class="button">ToS</a><a href="#hdr6" class="button">ToC</a>
 ### Table of Contents support<a name="hdr5"></a>
 
 To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{ %` and `% }` in the command but, spaces had to be added to show the commnd. The real TOC command is used on the next line:
 
-{% include toc.md %}<a name"hdr6"></a>
-<a href="#hdr1" class="button">Top</a>  <a href="#hdr6" class="button">ToS</a>
+<a name"hdr6"></a>
+{% include toc.md %}
+
+<a href="#hdr1" class="button">Top</a><a href="#hdr6" class="button">ToS</a><a href="#hdr6" class="button">ToC</a>
 ### Jekyll Themes<a name="hdr7"></a>
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pippim/pippim.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-<a href="#hdr1" class="button">Top</a>  <a href="#hdr7" class="button">ToS</a>
+
+<a href="#hdr1" class="button">Top</a><a href="#hdr7" class="button">ToS</a><a href="#hdr6" class="button">ToC</a>
 ### Images, Javascript, CSS and HTML<a name="hdr8"></a>
 
 These are the file types in the pippim website:
