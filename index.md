@@ -13,8 +13,8 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 *Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
 ---
-
-## Get in touch<a name="hdr2"></a><a href="#hdr1" class="button">Top</a>
+</a><a href="#hdr1" class="button">Top</a>
+## Get in touch<a name="hdr2">
 
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
 
