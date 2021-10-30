@@ -90,6 +90,10 @@ span {
 // From: https://stackoverflow.com/questions/65297617/how-to-make-button-background-color-a-little-darker-on-hover-using-css
 .hdr-bar {
   display: block; 
+  &:before {
+    content: "";
+    display: block;
+  }
 }
 
 .hdr-btn {
