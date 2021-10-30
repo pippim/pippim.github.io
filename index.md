@@ -68,7 +68,7 @@ Syntax highlighted code block
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-<br><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr6" class="hdr-btn">Skip</a>
+<div><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr6" class="hdr-btn">Skip</a></div>
 ### Table of Contents support<a id="hdr5"></a>
 
 To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{ %` and `% }` in the command but, spaces had to be added to show the commnd. The real TOC command is used on the next line:
@@ -87,11 +87,11 @@ These are the file types in the pippim website:
 
 - Images are stored in `assets/img/` directory
 - SCSS (a superset of CSS) files are stored in `assets/css/` directory
-- Sass (a superset of SCSS) files are stored in `_sass/` diretory
+- Sass (Used to generat ToC) files are stored in `_sass/` diretory
 - This pages is stored in `index.md` file in the root directory
 - The <kbd>About</kbd> page is stored in `about.md` file in the root directory
-- The </kbd>Answers</kbd> page is stored in `answers.md` file in the root directory
-- The </kbd>Programs</kbd> page is stored in `programs.md` file in the root directory
+- The <kbd>Answers</kbd> page is stored in `answers.md` file in the root directory
+- The <kbd>Programs</kbd> page is stored in `programs.md` file in the root directory
 - The blog entries (called Answers in pippim) are stored in the `_posts/` directory
 - HTML can be found in any file, including markdown files which end in `.md`. Pure HTML files can be found in the `_includes` directory
 <a id="hdr9"></a>
