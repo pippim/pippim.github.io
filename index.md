@@ -19,10 +19,13 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 
 **How to use the navigation buttons at the top of each section:**
 
-- <a class="hdr-btn">Top</a>Takes you to the top of the page
-- <a class="hdr-btn">ToS</a>Takes you to the top of the previous section
-- <a class="hdr-btn">ToC</a>Takes you to the page's Table of Contents
-- <a class="hdr-btn">Skip</a>Skips the section and takes you to the next section
+<a class="hdr-btn" style="text-indent: 5%">Top</a>Takes you to the top of the page
+
+<a class="hdr-btn">ToS</a>Takes you to the top of the previous section
+
+<a class="hdr-btn">ToC</a>Takes you to the page's Table of Contents
+
+<a class="hdr-btn">Skip</a>Skips the section and takes you to the next section
 
 ---
 
