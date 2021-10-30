@@ -14,7 +14,7 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 
 ---
 
-## Get in touch<a name="hdr2"></a><a href="#hdr1">Top</a>
+## Get in touch<a name="hdr2"></a><a href="#hdr1" class="button">Top</a>
 
 ### [📧 Send an Email to pippim](mailto:pippim.com@gmail.com)
 
