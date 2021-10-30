@@ -88,6 +88,10 @@ span {
 }
 
 // From: https://stackoverflow.com/questions/65297617/how-to-make-button-background-color-a-little-darker-on-hover-using-css
+.hdr-bar {
+  display: inline-block; 
+}
+
 .hdr-btn {
   display: inline-block;
   position: relative;
@@ -96,7 +100,7 @@ span {
   color:#fff;
   padding: 5px 15px;  // vertical, horizontal padding around button text
   font-size:0.75em;  // 75% of normal font for button text
-  margin: 20px 10px -29px;  // top, right, bottom; margins for button box
+  margin: 20px 10px -20px;  // top, right, bottom; margins for button box
   background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
   background-color:lightblue;
   transition:0.5s;
