@@ -1,6 +1,6 @@
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
-<a href="#" class="button">Top</a><a href="#hdr6" class="button">ToC</a><a href="#hdr2" class="button">Skip</a>
+<a href="#" class="hdrbtn">Top</a><a href="#hdr6" class="hdrbtn">ToC</a><a href="#hdr2" class="hdrbtn">Skip</a>
 # Introduction<a id="hdr1"></a>
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
