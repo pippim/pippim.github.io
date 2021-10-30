@@ -1,6 +1,7 @@
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
-# Introduction<a name="hdr1"/a>
+<a name="hdr1"/a>
+# Introduction
 
 Click the <kbd>❓ About</kbd> button above to learn what the name pippim stands for. *(Hint: it's nothing)*
 
@@ -14,7 +15,7 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 
 ---
 
-## Get in touch<a name="hdr2"/a>
+## Get in touch <a name="hdr2"></a>
 
 ### [📧 Send an Email to pippim](mailto:pippim.com@gmail.com)
 
