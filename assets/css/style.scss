@@ -24,14 +24,12 @@ $header-bg-color-secondary: #155799 !default;
   border-radius: 10rem;
   color: #fff;
   border: 2px solid white;  // Added for Cayman
-  // text-transform: uppercase;
   font-size: .8rem;  // Try smaller font
-  // letter-spacing: .15rem;
   transition: all .3s;
   position: relative;
   overflow: hidden;  // Test to see if this makes container stay on top
   z-index: 1;
-  //z-index: 11;
+
   &:after {
     content: '';
     position: absolute;
@@ -44,7 +42,6 @@ $header-bg-color-secondary: #155799 !default;
     background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
     border-radius: 10rem;
     z-index: -2;
-    //z-index: 9;
   }
   &:before {
     content: '';
@@ -68,33 +65,16 @@ $header-bg-color-secondary: #155799 !default;
   }
 }
 
-/* optional reset for presentation
-* {
-  font-family: Arial;
-  text-decoration: none;
-  font-size: 20px;
-}
- */
-
 .container {
   // position: sticky;  // Temporary stop from scrolling off because it is underneath other elments
   // position: relative;  // Maybe something needed when sticky comment out
   position: absolute;  // Maybe something needed when sticky comment out
   padding-top: 20px;  // Cayman
-  // top: 10px;  // After removing sticky top expand from 10 to 20
-  // top: 20px;  // Increasing didn't help, button top still cut off
-  // padding-top: -10px;  // With 20 it was pushed way down below banner (Merlot)
-  // padding-top: 50px;
   margin: 0 auto;
   width: 100%;
   text-align: center;
 }
-/* h1 {
-  text-transform: uppercase;
-  font-size: .8rem;
-  margin-bottom: 2rem;
-  color: #777;
-} */
+
 span {
   display: block;
   margin-top: 2rem;
@@ -108,12 +88,12 @@ span {
 }
 
 // From: https://stackoverflow.com/questions/65297617/how-to-make-button-background-color-a-little-darker-on-hover-using-css
-.hdrbtn {
+.hdr-btn {
   display: inline-block;
   color:#fff;
-  // padding: 10px 20px;
+  padding: 5px 15px;  // vertical, horizontal
   font-size:0.75em;  // 75% of normal font
-  margin: 20px -20px 0px 10px;  // top, right, bottom and left;
+  margin: 20px 10px -20px;  // top, right, bottom;
   background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
   background-color:lightblue;
   transition:0.5s;
