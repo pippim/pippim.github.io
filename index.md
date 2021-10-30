@@ -1,6 +1,6 @@
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
-# Introduction <a name="hdr1"/a>
+# Introduction<a name="hdr1"></a>
 
 Click the <kbd>❓ About</kbd> button above to learn what the name pippim stands for. *(Hint: it's nothing)*
 
@@ -14,7 +14,7 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 
 ---
 
-## Get in touch <a name="hdr2"></a>
+## Get in touch<a name="hdr2"></a><a href="#hdr1">Top</a>
 
 ### [📧 Send an Email to pippim](mailto:pippim.com@gmail.com)
 
@@ -22,7 +22,7 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 
 ---
 
-## Github Pages
+## Github Pages<a name="hdr3"></a><a href="#hdr1">Top</a><a href="#hdr2">ToS</a>
 
 This website was created (for free) on **Github Pages**. You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
