@@ -114,31 +114,35 @@ These are the file types in the pippim website:
 
 ### Directory tree
 
-On October 21, 2021, the directory tree for Pippim on Github Pages looked like this:
+As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
 
 ```
 $ tree
 .
 ├── about.md
-├── about.md~
+├── answers.md
 ├── assets
 │   ├── css
-│   │   ├── style.scss
-│   │   └── style.scss~
+│   │   └── style.scss
 │   └── img
 │       ├── Blog_Project-Management-101.png
-│       ├── earth-from-space.jpg
 │       ├── octojekyll-opt.jpg
 │       └── pngwing.com.png
+├── _config.yml
 ├── _includes
-│   └── head-custom.html
+│   ├── head-custom.html
+│   └── toc.md
 ├── index.md
+├── LICENSE
 ├── _posts
-├── QueryResults.csv
+│   └── 2021-10-24-welcome-to-jekyll.md
+├── programs.md
+├── _sass
+│   └── toc.scss
 ├── StackBlogPost
 └── stack-to-blog.py
-```
 
-The tree is out of date though! Today is October 30, 2021 and it needs to be refreshed.
+6 directories, 16 files
+```
 
 <a id="hdr9"></a>
