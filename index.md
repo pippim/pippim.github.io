@@ -126,6 +126,7 @@ $ tree
 │   │   └── style.scss
 │   └── img
 │       ├── Blog_Project-Management-101.png
+│       ├── earth-from-space.jpg
 │       ├── octojekyll-opt.jpg
 │       └── pngwing.com.png
 ├── _config.yml
