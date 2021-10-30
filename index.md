@@ -28,7 +28,7 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 <kbd>Skip</kbd> - Skips the section and takes you to the next section
 
 ---
-<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr1" class="hdr-btn">ToS</a><a href="#hdr1" class="hdr-btn">ToS</a><a href="#hdr3" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr1" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr3" class="hdr-btn">Skip</a></div>
 ## Get in touch<a id="hdr2"></a>
 
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
