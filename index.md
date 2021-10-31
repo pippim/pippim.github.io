@@ -85,6 +85,26 @@ Pippim adds the navigation bar (Top, ToS, ToC and Skip) by putting HTML tags int
 ### Header3<a id="hdr3"></a>
 ```
 
+Pippim appends two spaces to the end of block quotes in Stack Exhange answers. For example:
+
+```
+> line 1
+> line 2
+```
+
+unformatted by pippim show up as:
+
+> line 1
+> line 2
+
+after formatting they show up as:
+
+> line 1  
+> line 2  
+
+
+
+
 You can open one of the blog posts and compare it to the Stack Exchange original answer.
 
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr6" class="hdr-btn">Skip</a></div>
