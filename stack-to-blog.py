@@ -17,14 +17,13 @@
     ============================================================================
 
     Run the stack exchange data explorer query:
-        https://data.stackexchange.com/stackoverflow/query/1407382/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s
+        https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s
         NOTE: Use your Stack Exchange UserID. Mine is: 4775729
     It has been saved in pippim.github.io/StackBlogPost. First 3 lines:
 
     -- StackBlogPost: Convert Stack Exchange Answers to Blog Posts in Jekyll
     -- From: https://data.stackexchange.com/stackoverflow/query/edit/1492412#resultSets
     -- AccountId: Your SE network account ID number, found in the URL of your network profile page:
-
 
     Save the results in CSV format as QueryResults.csv
 
@@ -128,22 +127,23 @@ print('RANDOM_LIMIT:', RANDOM_LIMIT,
 # Then change names to uppercase and assign each column a 0-based index.
 SITE = 0
 POST_ID = 1
-LINK = 2
-TYPE = 3
-TITLE = 4
-HTML = 5
-MARKDOWN = 6
-TAGS = 7
-CREATED = 8
-LAST_EDIT = 9
-EDITED_BY = 10
-SCORE = 11
-FAVORITES = 12
-VIEWS = 13
-ANSWERS = 14
-ACCEPTED = 15
-CW = 16
-CLOSED = 17
+URL = 2
+LINK = 3
+TYPE = 4
+TITLE = 5
+HTML = 6
+MARKDOWN = 7
+TAGS = 8
+CREATED = 9
+LAST_EDIT = 10
+EDITED_BY = 11
+SCORE = 12
+FAVORITES = 13
+VIEWS = 14
+ANSWERS = 15
+ACCEPTED = 16
+CW = 17
+CLOSED = 18
 
 row_number = 1              # Current row number in query
 accepted_count = 0          # How many posts were accepted
@@ -177,14 +177,10 @@ toc_index = None            # md_new position
 
 def dump(r):
     """ Dump contents of one row to terminal in good-looking format
-
-        NOTE: POST_ID is only "1083730" but we really need:
-        "https://askubuntu.com/a/1083730/307523"
-
     """
     print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
     print('Title:  ', r[TITLE][:80])
-    print('Link:   ', r[LINK][:80])
+    print('URL:    ', r[URL][:80])
     limit = r[HTML].find('\n')
     if limit > 80 or limit == -1:
         limit = 80
