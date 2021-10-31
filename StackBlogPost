@@ -1,6 +1,8 @@
 -- StackBlogPost: Convert Stack Exchange Answers to Blog Posts in Jekyll
--- From: https://data.stackexchange.com/stackoverflow/query/edit/1492412#resultSets
--- AccountId: Your SE network account ID number, found in the URL of your network profile page:
+-- From: https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s
+-- AccountId: Your SE network account ID number eg. 4775729,
+-- found in the URL of your network profile page.
+
 
 create table #PostsByUser (
   PostId int primary key,
@@ -10,6 +12,8 @@ create table #PostsByUser (
 create table #Results (
   [Site] nvarchar(128) not null,
   [Post ID] int not null,
+  [URL] nvarchar(max),
+  [Link] nvarchar(max),
   [Type] nvarchar(50),
   [Title] nvarchar(250),
   [HTML] nvarchar(max),
@@ -27,12 +31,37 @@ create table #Results (
   [Closed] nvarchar(20)
 )
 
-declare @accountid as int = 4775729
+declare @accountid as int = ##AccountId:int##
+
+-- Site details, cf. https://meta.stackexchange.com/a/359795/295232
+CREATE TABLE #Sites (URL NVARCHAR(100), SiteName NVARCHAR(100), DatabaseName NVARCHAR(50));
+-- fetch Markdown for post containing table with site details
+DECLARE @md NVARCHAR(MAX);
+SELECT TOP 1 @md = Text
+  FROM [StackExchange.Meta].dbo.PostHistory
+  WHERE PostId = 359796 AND PostHistoryTypeId = 5
+  ORDER BY CreationDate DESC;
+-- split Markdown on pipe symbol
+CREATE TABLE #TableEntries (ID INT IDENTITY(1, 1), Value NVARCHAR(100));
+INSERT INTO #TableEntries (Value)
+SELECT LEFT(TRIM(VALUE), 100) FROM STRING_SPLIT(@md, '|')
+  WHERE LEN(TRIM(REPLACE(REPLACE(VALUE, CHAR(10), ''), CHAR(13), ''))) > 0;
+-- 'pivot' - we have to discard the introductory text, headers and horizontal lines
+INSERT INTO #Sites
+SELECT t0.Value, t1.Value, t2.Value
+  FROM #TableEntries AS t0
+  INNER JOIN #TableEntries AS t1
+    ON t0.Id + 1 = t1.Id
+  INNER JOIN #TableEntries AS t2
+    ON t0.Id + 2 = t2.Id
+  WHERE t0.Id >= 8 -- that's where the real content starts
+    AND t0.Id % 3 = 2;
 
 DECLARE sites CURSOR FOR
   SELECT name
   FROM sys.databases
   WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb', 'Data.StackExchange')
+    AND name NOT LIKE '%_Temp' -- otherwise it won't work while SEDE refreshes
 
 DECLARE @sitedbname AS nvarchar(128)
 DECLARE @query AS nvarchar(max)
@@ -43,7 +72,7 @@ WHILE @@FETCH_STATUS = 0
 BEGIN
   SET @query = '
     use [' + @sitedbname + '];
-    
+
     declare @localuserid as int = (select Id from Users where AccountId = ' + cast(@accountid as nvarchar(max)) + ');
 
     insert into #PostsByUser
@@ -123,8 +152,10 @@ BEGIN
     )
     insert into #Results
     select
-      ''' + @sitedbname + ''' as [Site],
-      Posts.Id as [Post ID],
+      #Sites.SiteName as [Site],
+      Posts.Id as [Post Id],
+      concat(#Sites.URL, ''/q/'', Posts.Id) as [URL],
+      concat(#Sites.URL, ''/q/'', Posts.Id, ''|'', coalesce(Posts.Title, Parent.Title)) as [Link],
       PostTypes.Name as [Type],
       coalesce(Posts.Title, Parent.Title) as [Title],
       Posts.Body as [HTML],
@@ -149,7 +180,8 @@ BEGIN
       left join PostHistory on PostHistory.Id = LastRevisions.LastRevId
       left join EditorsGrouped on EditorsGrouped.PostId = PostsByUser.PostId
       left join WikiTags on WikiTags.PostId = PostsByUser.PostId
-      left join Dupes on Dupes.PostId = PostsByUser.PostId;
+      left join Dupes on Dupes.PostId = PostsByUser.PostId
+      join #Sites on ''' + @sitedbname + ''' = #Sites.DatabaseName;
 
     delete from #PostsByUser;
   '
@@ -160,4 +192,3 @@ CLOSE sites
 DEALLOCATE sites
 
 select * from #Results
-  
