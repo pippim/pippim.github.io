@@ -6,7 +6,7 @@ Assortment of Linux programs written in Bash and Python by pippim.
 
 To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is a small snippet of that program:
 
-``` python
+```python
 def dump(r):
     """ Dump contents of one row to terminal in good-looking format
     """
