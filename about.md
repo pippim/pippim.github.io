@@ -18,7 +18,9 @@
 
 ## Who is pippim?
 
-pippim is a one-man-show that has been answering questions since 2016 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". Here's the [profile](https://askubuntu.com/users/307523/wineunuuchs2unix) in Ask Ubuntu.
+pippim is a one-man-show that has been answering questions since 2016 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". Here's the [profile](https://askubuntu.com/users/307523/wineunuuchs2unix) in Ask Ubuntu. If you click the link you will see something like this:
+
+![Ask Ubuntu Profile](/assets/img/Ask Ubuntu profile.png)
 
 ## What is pippim?
 
