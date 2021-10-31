@@ -79,28 +79,28 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML tags into the markdown files:
 
-```
-# Header1<a id="hdr1"></a>
-## Header2<a id="hdr2"></a>
-### Header3<a id="hdr3"></a>
+``` html
+# Header1&lt;a id="hdr1"&gt;&lt;/a&gt;
+## Header2&lt;a id="hdr2"&gt;&lt;/a&gt;
+### Header3&lt;a id="hdr3"&gt;&lt;/a&gt;
 ```
 
 Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines.
 
 ``` html
-## Qaulified header 4<a id="hdr4"></a>
+## Qaulified header 4&lt;a id="hdr4"&gt;&lt;/a&gt;
 
 A bunch of text lines under qualified header
 
 ``` html
-<div class="hdr-bar">
-  &ltq;a href="#" class="hdr-btn">Top</a>
-  <a href="#hdr4" class="hdr-btn">ToS</a>
-  <a href="#hdr6" class="hdr-btn">ToC</a>
-  <a href="#hdr6" class="hdr-btn">Skip</a>
-</div
+&lt;div class="hdr-bar"&gt;
+  &lt;a href="#" class="hdr-btn"&gt;Top&lt;/a&gt;
+  &lt;a href="#hdr4" class="hdr-btn"&gt;ToSlt;/a&gt;
+  &lt;a href="#hdr6" class="hdr-btn"&gt;ToC&lt;/a&gt;&lt;/a&gt;
+  &lt;a href="#hdr6" class="hdr-btn"&gt;Skip&lt;/a&gt;
+&lt;/div
 
-## Qaulified header<a id="hdr5"></a>
+## Qaulified header&lt;a id="hdr5"&gt;&lt;/a&gt;
 ```
 
 Pippim appends two spaces to the end of block quotes in Stack Exhange answers. Take for example how block quotes are defined in Stack Exchange:
@@ -110,12 +110,12 @@ Pippim appends two spaces to the end of block quotes in Stack Exhange answers. T
 > line 2
 ```
 
-If they were not modified they would display as:
+If they were not modified they would display on Github Pages Markdown as:
 
 > line 1
 > line 2
 
-After Pippim reformats the block quotes for Github Pages markdown they show up properly:
+After Pippim adds two spaces to the block quotes they show up properly:
 
 > line 1  
 > line 2  
