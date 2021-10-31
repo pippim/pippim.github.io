@@ -79,6 +79,8 @@ from random import randint
 
 INPUT_FILE = 'QueryResults.csv'
 RANDOM_LIMIT = 10           # On initial trials limit the number of blog posts
+PRINT_RANDOM = True         # Print out matching random record found (10 lines)
+OUTPUT_DIR = "_posts/"      # Subdirectory name. Use "./" for current directory
 QUESTIONS = False           # Don't upload questions
 VOTES = 2                   # Answers need at least 2 votes to qualify
 ACCEPTED = True             # All accepted answers are uploaded
@@ -126,21 +128,22 @@ print('RANDOM_LIMIT:', RANDOM_LIMIT,
 # Then change names to uppercase and assign each column a 0-based index.
 SITE = 0
 POST_ID = 1
-TYPE = 2
-TITLE = 3
-HTML = 4
-MARKDOWN = 5
-TAGS = 6
-CREATED = 7
-LAST_EDIT = 8
-EDITED_BY = 9
-SCORE = 10
-FAVORITES = 11
-VIEWS = 12
-ANSWERS = 13
-ACCEPTED = 14
-CW = 15
-CLOSED = 16
+LINK = 2
+TYPE = 3
+TITLE = 4
+HTML = 5
+MARKDOWN = 6
+TAGS = 7
+CREATED = 8
+LAST_EDIT = 9
+EDITED_BY = 10
+SCORE = 11
+FAVORITES = 12
+VIEWS = 13
+ANSWERS = 14
+ACCEPTED = 15
+CW = 16
+CLOSED = 17
 
 row_number = 1              # Current row number in query
 accepted_count = 0          # How many posts were accepted
@@ -155,7 +158,11 @@ total_votes = 0             # How many up votes across all posts
 total_lines = 0             # Total lines of all posts
 total_header_spaces = 0     # Total headers we added a space behind lsat "#"
 total_quote_spaces = 0      # Total block quotes requiring two spaces at end
-total_paragraphs = 0
+total_paragraphs = 0        # How many paragraphs are there?
+total_code_blocks = 0       # How many code blocks are there?
+total_code_block_lines = 0  # How many lines are inside code blocks?
+total_pre_codes = 0         # How many times does <pre><code> appear?
+
 ''' Must be reinitialize between blog posts
     TODO: Put into class with init()
 '''
@@ -163,7 +170,9 @@ contents = ""               # Not used, placeholder
 blog_filename = ""          # YYYY-MM-DD-blog-title.md
 header_count = 0            # How many headers were found in blog post
 paragraph_count = 0         # How many paragraphs in post last one not counted
-toc_index = None            # md_out position
+in_code_block = False       # Are we in a code block? Then no # Header formatting
+image_links = []            # Links to images found at bottom of SE posts
+toc_index = None            # md_new position
 
 
 def dump(r):
@@ -173,16 +182,17 @@ def dump(r):
         "https://askubuntu.com/a/1083730/307523"
 
     """
-    print('Site: ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
-    print('Title:', r[TITLE][:80])
+    print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
+    print('Title:  ', r[TITLE][:80])
+    print('Link:   ', r[LINK][:80])
     limit = r[HTML].find('\n')
     if limit > 80 or limit == -1:
         limit = 80
-    print('HTML: ', r[HTML][:limit])
+    print('HTML:   ', r[HTML][:limit])
     limit = r[MARKDOWN].find('\n')
     if limit > 80 or limit == -1:
         limit = 80
-    print('MARK: ', r[MARKDOWN][:limit])
+    print('MARK:   ', r[MARKDOWN][:limit])
     print('Created:', r[CREATED], '  |  Tags:', r[TAGS])
     print('Edited: ', r[LAST_EDIT], '  |  Edited by:', r[EDITED_BY])
     print('Votes:  ', r[SCORE], '  |  Views:', r[VIEWS], '  |  Answers:', r[ANSWERS],
@@ -191,24 +201,35 @@ def dump(r):
 
 def header_space(ln):
     """ Add space after # for headers if necessary
+
+        Assign HTML tag <a id="hdr9"></a>
         This isn't perfect because if inside "```code" block then something
-        line "#HandleLidSwitch" should not be touched. However since it is a
-        comment line in the first place it should not matter if it was displayed
-        as "# HandleLidSwitch".
+            like "#HandleLidSwitch" should not be touched. However since it is
+            a comment line in the first place it should not matter if it was
+            displayed as "# HandleLidSwitch".
+
+            Further problem is <a id="hdr9"></a> is appended to line!
     """
-    global total_header_spaces, header_count
+    global total_header_spaces, header_count, total_code_block_lines
+
+    if in_code_block:
+        total_code_block_lines += 1
+        return ln
+
     if ln[0:1] == "#":
-        #print('Found header:', l)
+        #print('Found header:', ln)
         header_count += 1   # For current post, reset between posts
         # How many '#' are there at line start?
         hash_count = len(ln) - len(ln.lstrip('#'))
         # Is first character after "#" a space?
         if ln[hash_count:hash_count+1] != " ":
-            #print('Forcing space at:', hash_count, l)
+            #print('Forcing space at:', hash_count, ln)
             ln = ln[0:hash_count] + " " + ln[hash_count:]
             total_header_spaces += 1
-            #print('After forcing:   ', hash_count, l)
+            #print('After forcing:   ', hash_count, ln)
 
+        # Append HTML header ID. EG: <a> id="hdr9"></a>
+        ln = ln + '<a id="hdr' + str(header_count) + '"></a>'
     return ln
 
 
@@ -216,9 +237,9 @@ def block_quote(ln):
     """ Append two spaces at end of block quote ('>') if necessary """
     global total_quote_spaces
     if ln[0:1] == ">":
-        #print('Found block quote:', l)
+        #print('Found block quote:', ln)
         if ln[-2:] != "  ":
-            #print('Forcing two spaces after:', l)
+            #print('Forcing two spaces after:', ln)
             ln = ln + "  "
             total_quote_spaces += 1
     return ln
@@ -232,6 +253,63 @@ def check_paragraph(ln):
         paragraph_count += 1    # For current post
 
 
+def check_code_block(ln):
+    """ If line starts with ``` we are now in code block.
+
+        If already in code block and line begins with ```
+            then we are now out of code block.
+
+        The same holds true if line contains <pre><code> and
+            ends with </code></pre>
+     """
+    global in_code_block, total_code_blocks
+    if ln[0:3] == "```":
+        if in_code_block is False:
+            total_code_blocks += 1   # For all posts
+            in_code_block = True
+        else:
+            in_code_block = False
+
+
+def check_pre_code(ln):
+    """ Check if <pre><code> appers on line
+     """
+    if "<pre><code>" in ln:
+        print('===========:', ln)
+        total_pre_codes += 1
+
+
+def check_image_link(ln):
+    """ Image links appear at the bottom of SE posts in this format:
+       __[1]: https://www.reddit.com/r/gigabytegaming/comments/90jze6/aero_15x_v8_annoyances/
+
+       Where __ are two leading spaces
+
+       We need to take references to images in the format [![Image name][1]][1] and
+        convert them to: ![Image name](full_URL_name)
+    """
+    pass
+
+
+def check_url_link(ln):
+    """ Image links appear at the bottom of SE posts in this format:
+       __[1]: https://www.reddit.com/r/gigabytegaming/comments/90jze6/aero_15x_v8_annoyances/
+
+       Where __ are two leading spaces
+
+       We need to take references to images in the format [![Image name][1]][1] and
+        convert them to: ![Image name](full_URL_name)
+    """
+    pass
+
+
+def check_language_all(ln):
+    """ Check for <!-- Language-all: lang-bash --> line
+        If it exists then following ``` lines need " bash" appended
+    """
+    pass
+
+
 def check_contents(ln):
     """ check if TOC should be inserted here
 
@@ -241,20 +319,14 @@ def check_contents(ln):
     For TOC to work you need to create an include file named
     '_includes/toc.md" and fill it with this markup:
 
-<div style="position: relative;">
-    <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
-</div>
-
 ## Table of Contents
 {:.no_toc}
 
 * TOC
 {:toc}
 
-<div id="toc-skipped"></div>
-
     Then, in your post, all you have to do is insert this one-liner wherever
-     you want your table of contents to appear:
+    you want your table of contents to appear:
 
 {% include toc.md %}
 
@@ -273,15 +345,16 @@ def check_contents(ln):
     """
 
     global contents, total_quote_spaces
-    if CONTENTS == "":
+    if CONTENTS is None:
         return  # Global CONTENTS variable is null, so no TOC
+
     if ln[0:1] == "#":
-        #print('Found block quote:', l)
+        #print('Found header:', ln)
         if contents == "":
             # First time generate header stub for TOC
             contents = CONTENTS
         if ln[-2:] != "  ":
-            #print('Forcing two spaces after:', l)
+            #print('Forcing two spaces after:', ln)
             ln = ln + "  "
             total_quote_spaces += 1
     return ln
@@ -309,7 +382,8 @@ for row in data:
     save_blog = True        # Default until a condition turns it off
     header_count = 0        # How many headers were found in blog post
     paragraph_count = 0     # How many paragraphs (includes headers) in post
-    toc_index = None        # Position to insert within md_out [] list
+    in_code_block = False   # In a code block # Header formatting is skipped
+    toc_index = None        # Position to insert within md_new string
 
     if row[SCORE] != '':
         score = int(row[SCORE])
@@ -356,9 +430,10 @@ for row in data:
     line_count = 0
     for line in original_md.splitlines():
         line_count += 1
-        line = header_space(line)
-        line = block_quote(line)
-        check_paragraph(line)       # Simply counts if this is an empty line
+        check_code_block(line)      # Turn off formatting when in code block
+        line = header_space(line)   # Formatting for #Header or # Header lines
+        line = block_quote(line)    # Formatting for block quotes
+        check_paragraph(line)       # Check if markdown paragraph (empty line)
         new_md = new_md + line + '\n'
 
     total_lines += line_count
@@ -375,7 +450,8 @@ for row in data:
         if save_blog is True:
             save_blog_count += 1
             print('Random upload row number:', row_number)
-            print(blog_filename)
+            print(blog_filename, "=========== CONTENTS BELOW ==========:")
+            print(new_md)
             dump(row)
         else:
             # This random record doesn't qualify so replace
@@ -386,14 +462,14 @@ for row in data:
             random_row_nos[index] = row_number + 1
 
 
-print('\n============= TOTALS ================')
+print('\n==============   T O T A L S   ================')
 print('accepted_count:', accepted_count, 'total_votes:', total_votes)
 print('question_count:', question_count, 'answer_count:', answer_count,
       'unknown_count:', unknown_count)
 print('total_lines:', total_lines, 'total_header_spaces:', total_header_spaces,
       'total_quote_spaces:', total_quote_spaces)
-print('total_paragraphs:', total_paragraphs)
-
-dump(data[1])        # Print first data record
+print('total_paragraphs:', total_paragraphs, "total_code_blocks:",
+      total_code_blocks, 'total_code_block_lines:', total_code_block_lines)
+print('total_pre_codes:', total_pre_codes)
 
 # End of stack-to-blog.py
