@@ -75,33 +75,36 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Pippim navigation bar in markdown
+### How Pippim converts Stack Exchange Q&A to Jekyll Blog Posts
 
-Pippim adds the navigation bar (Top, ToS, ToC and Skip) by putting HTML tags into the markdown files:
+Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML tags into the markdown files:
 
 ```
 # Header1<a id="hdr1"></a>
 ## Header2<a id="hdr2"></a>
 ### Header3<a id="hdr3"></a>
 ```
-In front of qualifying secction headers Pippim places the navigation bar:
+
+Then, in front of qualifying secction headers, Pippim places the navigation bar:
+
 ```
-&lt;div class="hdr-bar">&lt;a href="#" class="hdr-btn">Top&lt;/a>&lt;a href="#hdr4" class="hdr-btn">ToS</a>&lt;a href="#hdr6" class="hdr-btn">ToC</a>&lta href="#hdr6" class="hdr-btn">Skip&lt;/a>&lt;/div>
+<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a>&lta href="#hdr6" class="hdr-btn">Skip</a></div>
 ## Qaulified header<a id="hdr5"></a>
 ```
-Pippim appends two spaces to the end of block quotes in Stack Exhange answers. For example:
+
+Pippim appends two spaces to the end of block quotes in Stack Exhange answers. Take for example how block quotes are defined in Stack Exchange:
 
 ```
 > line 1
 > line 2
 ```
 
-unformatted by pippim show up as:
+If they were not modified they would display as:
 
 > line 1
 > line 2
 
-after formatting they show up as:
+After Pippim reformats the block quotes for Github Pages markdown they show up properly:
 
 > line 1  
 > line 2  
