@@ -87,8 +87,18 @@ Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML ta
 
 Then, in front of qualifying secction headers, Pippim places the navigation bar:
 
-```
-<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a>&lta href="#hdr6" class="hdr-btn">Skip</a></div>
+``` html
+## Qaulified header 4<a id="hdr4"></a>
+
+A bunch of text lines under qualified header
+
+<div class="hdr-bar">
+  <a href="#" class="hdr-btn">Top</a>
+  <a href="#hdr4" class="hdr-btn">ToS</a>
+  <a href="#hdr6" class="hdr-btn">ToC</a>
+  <a href="#hdr6" class="hdr-btn">Skip</a>
+</div>
+
 ## Qaulified header<a id="hdr5"></a>
 ```
 
