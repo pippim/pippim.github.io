@@ -85,19 +85,20 @@ Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML ta
 ### Header3<a id="hdr3"></a>
 ```
 
-Then, in front of qualifying secction headers, Pippim places the navigation bar:
+Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines.
 
 ``` html
 ## Qaulified header 4<a id="hdr4"></a>
 
 A bunch of text lines under qualified header
 
+``` html
 <div class="hdr-bar">
-  <a href="#" class="hdr-btn">Top</a>
+  &ltq;a href="#" class="hdr-btn">Top</a>
   <a href="#hdr4" class="hdr-btn">ToS</a>
   <a href="#hdr6" class="hdr-btn">ToC</a>
   <a href="#hdr6" class="hdr-btn">Skip</a>
-</div>
+</div
 
 ## Qaulified header<a id="hdr5"></a>
 ```
@@ -122,16 +123,23 @@ After Pippim reformats the block quotes for Github Pages markdown they show up p
 You can open one of the blog posts and compare it to the Stack Exchange original answer.
 
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr6" class="hdr-btn">Skip</a></div>
+
 ## Table of Contents support<a id="hdr5"></a>
 
 To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{ %` and `% }` in the command but, spaces had to be added to show the commnd. The real TOC command is used on the next line:
+
 <div class="hdr-bar"><a id="hdr6"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr5" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr7" class="hdr-btn">Skip</a></div>
+
 {% include toc.md %}
+
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr6" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr8" class="hdr-btn">Skip</a></div>
+
 ## Jekyll Themes<a id="hdr7"></a>
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pippim/pippim.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+
 <div class="hdr-bar"><a href="#hdr1" class="hdr-btn">Top</a><a href="#hdr7" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr9" class="hdr-btn">Skip</a></div>
+
 ## Images, Javascript, CSS and HTML<a id="hdr8"></a>
 
 These are the file types in the pippim website:
