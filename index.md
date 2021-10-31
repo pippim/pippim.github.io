@@ -84,7 +84,11 @@ Pippim adds the navigation bar (Top, ToS, ToC and Skip) by putting HTML tags int
 ## Header2<a id="hdr2"></a>
 ### Header3<a id="hdr3"></a>
 ```
-
+In front of qualifying secction headers Pippim places the navigation bar:
+```
+&lt;div class="hdr-bar">&lt;a href="#" class="hdr-btn">Top&lt;/a>&lt;a href="#hdr4" class="hdr-btn">ToS</a>&lt;a href="#hdr6" class="hdr-btn">ToC</a>&lta href="#hdr6" class="hdr-btn">Skip&lt;/a>&lt;/div>
+## Qaulified header<a id="hdr5"></a>
+```
 Pippim appends two spaces to the end of block quotes in Stack Exhange answers. For example:
 
 ```
@@ -101,9 +105,6 @@ after formatting they show up as:
 
 > line 1  
 > line 2  
-
-
-
 
 You can open one of the blog posts and compare it to the Stack Exchange original answer.
 
