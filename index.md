@@ -77,6 +77,10 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ### How Pippim converts Stack Exchange Q&A to Jekyll Blog Posts
 
+The first step is to run this [Stack Exchange Data Explorer query](https://meta.stackexchange.com/a/371435/366359).
+
+Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
+
 Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML tags into the markdown files:
 
 ```
