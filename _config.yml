@@ -1,3 +1,7 @@
 theme: jekyll-theme-cayman
 title: pippim - Open-source
 description: Free open-source software for the World. Free of Ads too!
+
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
