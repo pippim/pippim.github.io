@@ -10,7 +10,11 @@ Assortment of Linux programs written in Bash and Python by pippim.
 
 To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is a small snippet of that program:
 
-``` python
+Note it is important to follow these instructions to setup your site: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+
+Otherwise Jekyll documentation itself could break your Github Pages theme you've chosen. For example, `_layouts/default.html` needs to be copied from your theme!
+
+```
 def dump(r):
     """ Dump contents of one row to terminal in good-looking format
     """
