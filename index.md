@@ -80,27 +80,29 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML tags into the markdown files:
 
 ```
-# Header1<a id="hdr1"></a>
-## Header2<a id="hdr2"></a>
-### Header3<a id="hdr3"></a>
+# Header 1     <a id="hdr1"></a>
+## Header 2    <a id="hdr2"></a>
+### Header 3   <a id="hdr3"></a>
 ```
 
 Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines.
 
 ```
-## Qaulified header 4<a id="hdr4"></a>
+## Qaulified header 4   <a id="hdr4"></a>
 
 A bunch of text lines under qualified header...
 
 <div class="hdr-bar">
-  &ltq;a href="#" class="hdr-btn">Top</a>
+  <a href="#" class="hdr-btn">Top</a>
   <a href="#hdr4" class="hdr-btn">ToS</a>
   <a href="#hdr6" class="hdr-btn">ToC</a>
   <a href="#hdr6" class="hdr-btn">Skip</a>
-</div
+</div>
 
-## Qaulified header<a id="hdr5"></a>
+# Qaulified header 5    <a id="hdr5"></a>
 ```
+
+The `SCSS` file to interpret `hdr-bar` and `hdr-btn` are kept in `assets/css/style.scss`.
 
 Pippim appends two spaces to the end of block quotes in Stack Exhange answers. Take for example how block quotes are defined in Stack Exchange:
 
