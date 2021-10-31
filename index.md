@@ -143,6 +143,8 @@ To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place yo
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pippim/pippim.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
+To see the current Jekyll, Sass, Rouge version numbers, etc. used by **Github Pages** click [here](https://pages.github.com/versions/). It is very important to find the correct documentation version when you are using instructions for setting up your website!
+
 <div class="hdr-bar"><a href="#hdr1" class="hdr-btn">Top</a><a href="#hdr7" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr9" class="hdr-btn">Skip</a></div>
 
 ## Images, Javascript, CSS and HTML<a id="hdr8"></a>
@@ -163,7 +165,7 @@ These are the file types in the pippim website:
 
 As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
 
-``` bash
+```
 $ tree
 .
 ├── about.md
