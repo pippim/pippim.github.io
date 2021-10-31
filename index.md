@@ -163,7 +163,7 @@ These are the file types in the pippim website:
 
 As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
 
-```
+``` bash
 $ tree
 .
 ├── about.md
