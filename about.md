@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # About pippim
 ![The 5 Ws (and 1 H) that should be asked of every project!](/assets/img/Blog_Project-Management-101.png){:height=80% weight=80%}{:class="img-responsive"}
 
