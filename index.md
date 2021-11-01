@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr2" class="hdr-btn">Skip</a></div>
@@ -165,7 +168,7 @@ These are the file types in the pippim website:
 
 As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
 
-```
+``` bash
 $ tree
 .
 ├── about.md
