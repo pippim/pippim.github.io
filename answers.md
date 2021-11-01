@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Answers by pippim
 
 These answers are posted on Stack Exchange websites like AskUbuntu.com, StackOverflow.com, etc.
