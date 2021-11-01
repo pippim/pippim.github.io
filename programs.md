@@ -14,7 +14,7 @@ Note it is important to follow these instructions to setup your site: https://do
 
 Otherwise Jekyll documentation itself could break your Github Pages theme you've chosen. For example, `_layouts/default.html` needs to be copied from your theme!
 
-```
+``` python
 def dump(r):
     """ Dump contents of one row to terminal in good-looking format
     """
