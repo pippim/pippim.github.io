@@ -145,7 +145,7 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 To see the current Jekyll, Sass, Rouge version numbers, etc. used by **Github Pages** click [here](https://pages.github.com/versions/). It is very important to find the correct documentation version when you are using instructions for setting up your website!
 
-<div class="hdr-bar"><a href="#hdr1" class="hdr-btn">Top</a><a href="#hdr7" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr9" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr7" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr9" class="hdr-btn">Skip</a></div>
 
 ## Images, Javascript, CSS and HTML<a id="hdr8"></a>
 
