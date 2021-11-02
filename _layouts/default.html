@@ -18,8 +18,9 @@
 
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <! –– <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> ––>
-      <h2 class="project-tagline">{{ page.path | default: page.path | default: page.path }}</h2>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+
+      <!--- Original Cayman buttons not used anymore
       {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       {% endif %}
@@ -27,10 +28,21 @@
         <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
-      <a href="https://pippim.github.io/" style="display: inline" class="button">⌂ Home</a>
-      <a href="about.html" style="display: inline" class="button">❓ About</a>
-      <a href="answers.html" style="display: inline" class="button">✅ Answers</a>
-      <a href="programs.html" style="display: inline" class="button">💻 Programs</a>
+      -->
+
+      <!-- Reduce number of buttons by suppressing button for current page -->
+      {% unless page.path == "index.md" %}
+        <a href="https://pippim.github.io/" style="display: inline" class="button">⌂ Home</a>
+      {% endunless %}
+      {% unless page.path == "about.md" %}
+        <a href="about.html" style="display: inline" class="button">❓ About</a>
+      {% endunless %}
+      {% unless page.path == "answers.md" %}
+        <a href="answers.html" style="display: inline" class="button">✅ Answers</a>
+      {% endunless %}
+      {% unless page.path == "programs.md" %}
+        <a href="programs.html" style="display: inline" class="button">💻 Programs</a>
+      {% endunless %}
       <a href="mailto:pippim.com@gmail.com" style="display: inline" class="button">📧 Email</a>
 
     </header>
