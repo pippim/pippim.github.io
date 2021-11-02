@@ -131,12 +131,12 @@ span {
   padding: 5px 15px;  // vertical, horizontal padding around button text
   font-size:0.75em;  // 75% of normal font for button text
   margin: 20px 10px -20px;  // top, right, bottom; margins for button box
-  background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
+  // background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
+  background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 50%;
   background-color:lightblue;
   transition:0.5s;
 
   &:hover {
     background-position:bottom;
-    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
   }
 }
