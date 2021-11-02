@@ -1,10 +1,10 @@
 ---
-title: Programs
+title: Pippim Programs
 layout: default
 ---
-# pippim Programs
+# Pippim Programs
 
-Assortment of Linux programs written in Bash and Python by pippim.
+This page lists Linux programs written in Bash and Python by Pippim. You can use them free of charge and change them however you like.
 
 ## Sample Python program snippet
 
@@ -14,7 +14,7 @@ Note it is important to follow these instructions to setup your site: https://do
 
 Otherwise Jekyll documentation itself could break your Github Pages theme you've chosen. For example, `_layouts/default.html` needs to be copied from your theme!
 
-```
+``` python
 def dump(r):
     """ Dump contents of one row to terminal in good-looking format
     """
