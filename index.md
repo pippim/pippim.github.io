@@ -22,6 +22,8 @@ The top of each page contains navigation buttons to take you to other pages:
 
 - <kbd>📧 Email</kbd> lets you send an email to Pippim.
 
+***BEWARE:*** When you click a button to go to a page, that button will disappear because the page you are on will never show the button for that page. This was done to limit number of buttons on mobile user screens. It deviates from traditional website design as of November 2, 2021.=.
+
 *Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
 ## Section navigation buttons
@@ -59,6 +61,7 @@ For Pippim programs on Github, you can go directly to the repository and post a 
 This website was created (for free) on **Github Pages**. You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr3" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr5" class="hdr-btn">Skip</a></div>
 ## Markdown<a id="hdr4"></a>
 
@@ -84,21 +87,24 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### How Pippim converts Stack Exchange Q&A to Jekyll Blog Posts
+<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr6" class="hdr-btn">Skip</a></div>
+## How Pippim converts Stack Exchange Q&A to Jekyll Blog Posts<a id="hdr5"></a>
+Pippim programs use *Web Scraping* like **Mr. Roboto** to get price changes, **eyesome** to get your sunrise/sunset times and **mserve** to get Music Lyrics. 
 
-The first step is to run this [Stack Exchange Data Explorer query](https://meta.stackexchange.com/a/371435/366359).
+Other Pippim programs use APIs like **bserve** to get gmail messages, **tvpowered** to use TV remote power button to put your system to sleep, **mserve** to get CD Audio track names and album covert art images. 
 
-Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
+This Pippim website and the 2,000 blog posts use a different technique than *Web Scraping* or *REST APIs* called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work**. 
 
-Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML tags into the markdown files:
-
+1. The first step is to run this [Stack Exchange Data Explorer query](https://meta.stackexchange.com/a/371435/366359).
+2. Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
+3. Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML tags into the markdown files:
 ```
 # Header 1     <a id="hdr1"></a>
 ## Header 2    <a id="hdr2"></a>
 ### Header 3   <a id="hdr3"></a>
 ```
 
-Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines.
+4. Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines:
 
 ```
 ## Qaulified header 4   <a id="hdr4"></a>
@@ -115,34 +121,28 @@ A bunch of text lines under qualified header...
 # Qaulified header 5    <a id="hdr5"></a>
 ```
 
-The `SCSS` file to interpret `hdr-bar` and `hdr-btn` are kept in `assets/css/style.scss`.
-
-Pippim appends two spaces to the end of block quotes in Stack Exhange answers. Take for example how block quotes are defined in Stack Exchange:
-
+5. **Note:** The `SCSS` file to interpret `hdr-bar` and `hdr-btn` are kept in `assets/css/style.scss`.
+6. Pippim appends two spaces to the end of block quotes in Stack Exhange answers. Take for example how block quotes are defined in Stack Exchange:
 ```
 > line 1
 > line 2
 ```
-
 If they were not modified they would display on Github Pages Markdown as:
-
 > line 1
 > line 2
-
 After Pippim adds two spaces to the block quotes they show up properly:
-
 > line 1  
 > line 2  
 
-You can open one of the blog posts and compare it to the Stack Exchange original answer.
-
-<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr6" class="hdr-btn">Skip</a></div>
-
-## Table of Contents support<a id="hdr5"></a>
-
-To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{ %` and `% }` in the command but, spaces had to be added to show the commnd. The real TOC command is used on the next line:
+7. **Note:** You can open one of the blog posts and compare it to the Stack Exchange original answer.
+8. Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
+9. Pippim converts Stack Exchange Question tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `Tags: [Tag1 Tag2 Tag3]` for Jekyll.
+10. Pippim setups the Jekyll **front matter** as required for Title and sets the blog filename as expected. However it also allows custom **front matter** for URL, Votes, Last Edit Date, etc.
 
 <div class="hdr-bar"><a id="hdr6"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr5" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr7" class="hdr-btn">Skip</a></div>
+## Table of Contents support
+
+To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{ %` and `% }` in the command but, spaces had to be added to show the commnd. The real TOC command is used on the next line:
 
 {% include toc.md %}
 
