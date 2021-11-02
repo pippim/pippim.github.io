@@ -8,7 +8,7 @@ layout: default
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
 
-## Page navigatin buttons
+## Page navigation buttons
 
 The top of each page contains navigation buttons to take you to other pages:
 
