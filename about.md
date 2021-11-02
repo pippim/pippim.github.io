@@ -20,7 +20,7 @@ layout: default
 
 ## Who is Pippim?
 
-Pippim is a one-man-show that has been answering questions since 2016 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". Here's the [profile](https://askubuntu.com/users/307523/wineunuuchs2unix) in Ask Ubuntu. If you click the link you will see something like this:
+Pippim is a one-man-show that has been answering questions since 2016 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". When you look at the **WinEnuuchs2Unix** [profile](https://askubuntu.com/users/307523/wineunuuchs2unix) in Ask Ubuntu you will see:
 
 ![Ask Ubuntu Profile](/assets/img/Ask Ubuntu profile.png)
 
@@ -32,7 +32,7 @@ pippim is a website containing free and open source software primarily for use o
 
 It's located on the cloud in Google Sites and Github Pages. As you may have spotted int the screen shot in *Who is Pippim*, **WinEunuuchs2Unix** is located in Edmonton, Canada.
 
-## When was Pppim created?
+## When was Pippim created?
 
 That's an easy question; The Domain Name and website was created October 16, 2021. Then many revisions were made utnil the final website version was finished on _____?
 
@@ -40,7 +40,7 @@ That's an easy question; The Domain Name and website was created October 16, 202
 
 Pippim was created to make it easier to list the free software created on AskUbuntu.com and Github.com.
 
-## How was pippim created?
+## How was Pippim created?
 
 Yes this is the sixth section. And yes "How" doesn't begin with a "W". But as they say:
 
