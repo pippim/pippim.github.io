@@ -16,7 +16,7 @@ The top of each page contains navigation buttons to take you to other pages:
 
 - <kbd>❓ About</kbd> disccusses everything (hopefully) you want to know about Pippim.
 
-- <kbd>✅ Answers</kbd> are solutions for problems people have using computers. Most answers are for problems in Linux and specifically in Ubuntu.
+- <kbd>✅ Answers</kbd> to questions people have using computers. Most posts are about Linux and specifically Ubuntu.
 
 - <kbd>💻 Programs</kbd> are applicationss Pippim created to make your life easier.
 
