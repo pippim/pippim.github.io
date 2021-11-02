@@ -8,7 +8,9 @@ layout: default
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
 
-## How to use the buttons at the top of the page
+## How to use the page navigatin buttons
+
+The top of each page contains navigation buttons to take you to other pages.
 
 Click the <kbd>❓ About</kbd> button above to learn what the name pippim stands for. *(Hint: it's nothing)*
 
@@ -20,7 +22,9 @@ Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also 
 
 *Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
-## How to use the navigation buttons at the top of each section
+## How to use the section navigation buttons
+
+The top of major sections contain navigation buttons to take you to other sections.
 
 <kbd>Top</kbd> - Takes you to the top of the page
 
@@ -168,15 +172,17 @@ These are the file types in the pippim website:
 
 As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
 
-``` bash
+```
 $ tree
 .
 ├── about.md
 ├── answers.md
 ├── assets
 │   ├── css
-│   │   └── style.scss
+│   │   ├── style.scss
+│   │   └── syntax.scss
 │   └── img
+│       ├── Ask Ubuntu profile.png
 │       ├── Blog_Project-Management-101.png
 │       ├── earth-from-space.jpg
 │       ├── octojekyll-opt.jpg
@@ -186,17 +192,26 @@ $ tree
 │   ├── head-custom.html
 │   └── toc.md
 ├── index.md
+├── _layouts
+│   ├── default.html
+│   └── post.html
 ├── LICENSE
 ├── _posts
 │   └── 2021-10-24-welcome-to-jekyll.md
 ├── programs.md
 ├── QueryResults.csv
 ├── _sass
-│   └── toc.scss
+│   ├── cayman.scss
+│   ├── jekyll-theme-cayman.scss
+│   ├── normalize.scss
+│   ├── rouge-github.scss
+│   ├── toc.scss
+│   └── variables.scss
 ├── StackBlogPost
 └── stack-to-blog.py
 
-6 directories, 16 files
+7 directories, 27 files
+
 ```
 
 <a id="hdr9"></a>
