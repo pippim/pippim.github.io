@@ -24,7 +24,7 @@ The top of each page contains navigation buttons to take you to other pages:
 
 *Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
-## How to use the section navigation buttons
+## Section navigation buttons
 
 The top of major sections contain navigation buttons to take you to other sections:
 
