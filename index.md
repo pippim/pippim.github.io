@@ -12,7 +12,9 @@ Welcome to Pippim. A collection of questions and answers about using your comput
 
 The top of each page contains navigation buttons to take you to other pages:
 
-- <kbd>❓ About</kbd> explains the 5 W's about Pippim.
+- <kbd>⌂ Home</kbd> brings you to this page.
+
+- <kbd>❓ About</kbd> disccusses everything (hopefully) you want to know about Pippim.
 
 - <kbd>✅ Answers</kbd> are solutions for problems people have using computers. Most answers are for problems in Linux and specifically in Ubuntu.
 
