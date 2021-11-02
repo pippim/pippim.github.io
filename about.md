@@ -2,45 +2,43 @@
 layout: default
 ---
 
-# About pippim
+# All About Pippim
 ![The 5 Ws (and 1 H) that should be asked of every project!](/assets/img/Blog_Project-Management-101.png){:height=80% weight=80%}{:class="img-responsive"}
 
 **Image credit:** [The 5 Ws (and 1 H) that should be asked of every project!](https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project)
 
-### This page is all ***about*** the 5 W's of pippim:
+### The 5 W's of pippim:
 
 | W     | Category                 |
 | ----- | ------------------------ |
-| Who   | Who is pippim?           |
-| What  | What is pippim?          |
-| Where | Where is pippim located? |
-| When  | When was pippim created? |
-| Why   | Why was pippim created?  |
-| How   | How was pippim created?  |
+| Who   | Who is Pippim?           |
+| What  | What is Pippim?          |
+| Where | Where is Pippim located? |
+| When  | When was Pippim created? |
+| Why   | Why was Pippim created?  |
+| How   | How was Pippim created?  |
 
+## Who is Pippim?
 
-
-## Who is pippim?
-
-pippim is a one-man-show that has been answering questions since 2016 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". Here's the [profile](https://askubuntu.com/users/307523/wineunuuchs2unix) in Ask Ubuntu. If you click the link you will see something like this:
+Pippim is a one-man-show that has been answering questions since 2016 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". Here's the [profile](https://askubuntu.com/users/307523/wineunuuchs2unix) in Ask Ubuntu. If you click the link you will see something like this:
 
 ![Ask Ubuntu Profile](/assets/img/Ask Ubuntu profile.png)
 
-## What is pippim?
+## What is Pippim?
 
 pippim is a website containing free and open source software primarily for use on Linux.
 
-## Where is pippim located?
+## Where is Pippim located?
 
-It's located on the cloud in Google Sites and Github Pages
+It's located on the cloud in Google Sites and Github Pages. As you may have spotted int the screen shot in *Who is Pippim*, **WinEunuuchs2Unix** is located in Edmonton, Canada.
 
-## When was pippim created?
+## When was Pppim created?
 
-That's an easy question - October 16, 2021
+That's an easy question; The Domain Name and website was created October 16, 2021. Then many revisions were made utnil the final website version was finished on _____?
 
-## Why was pippim created?
+## Why was Pippim created?
 
-pippim was created to make it easier to list the free software created on AskUbuntu.com and github.com.
+Pippim was created to make it easier to list the free software created on AskUbuntu.com and Github.com.
 
 ## How was pippim created?
 
