@@ -127,7 +127,7 @@ span {
   position: relative;
   top: 20px;
   left: 10px;
-  color: #FF6347;  // tomato
+  color: #FFFFFF;  // White
   padding: 5px 15px;  // vertical, horizontal padding around button text
   font-size:0.75em;  // 75% of normal font for button text
   margin: 20px 10px -20px;  // top, right, bottom; margins for button box
@@ -137,6 +137,5 @@ span {
 
   &:hover {
     background-position:bottom;
-    color:#DB7093
   }
 }
