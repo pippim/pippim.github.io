@@ -8,31 +8,31 @@ layout: default
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
 
-## How to use the page navigatin buttons
+## Page navigatin buttons
 
-The top of each page contains navigation buttons to take you to other pages.
+The top of each page contains navigation buttons to take you to other pages:
 
-Click the <kbd>❓ About</kbd> button above to learn what the name pippim stands for. *(Hint: it's nothing)*
+- <kbd>❓ About</kbd> explains the 5 W's about Pippim.
 
-Click the <kbd>✅ Answers</kbd> button above to read solutions for problems people have using computers. Mostly for problems in Linux and specifically in Ubuntu.
+- <kbd>✅ Answers</kbd> are solutions for problems people have using computers. Most answers are for problems in Linux and specifically in Ubuntu.
 
-The <kbd>💻 Programs</kbd> button leads you to applicationss pippim created to make your life easier.
+- <kbd>💻 Programs</kbd> are applicationss Pippim created to make your life easier.
 
-Click the <kbd>📧 Email</kbd> button to send an email to pippim. You can also click the link below.
+- <kbd>📧 Email</kbd> lets you send an email to Pippim.
 
 *Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
 ## How to use the section navigation buttons
 
-The top of major sections contain navigation buttons to take you to other sections.
+The top of major sections contain navigation buttons to take you to other sections:
 
-<kbd>Top</kbd> - Takes you to the top of the page
+- <kbd>Top</kbd> - Takes you to the top of the page
 
-<kbd>ToS</kbd> - Takes you to the top of the previous section
+- <kbd>ToS</kbd> - Takes you to the top of the previous section
 
-<kbd>ToC</kbd> - Takes you to the Table of Contents
+- <kbd>ToC</kbd> - Takes you to the Table of Contents
 
-<kbd>Skip</kbd> - Skips the section and takes you to the next section
+- <kbd>Skip</kbd> - Skips the section and takes you to the next section
 
 ---
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr1" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr3" class="hdr-btn">Skip</a></div>
