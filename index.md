@@ -105,6 +105,7 @@ This Pippim website and the 2,000 blog posts use a different technique than *Web
 ```
 
 - Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines:
+
 ```
 ## Qaulified header 4   <a id="hdr4"></a>
 
