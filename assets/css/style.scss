@@ -103,11 +103,11 @@ $header-bg-color-secondary: #155799 !default;
 
 span {
   // display: block;  // messes up markdown: https://github.com/jekyll/jekyll/issues/8868#issuecomment-959337744
-  margin-top: 2rem;
-  font-size: .7rem;
+  // margin-top: 2rem;  //   "
+  // font-size: .7rem;  //   "
   color: #777;
   a {
-    font-size: .7rem;
+    // font-size: .7rem;  //   "
     color: #999;
     text-decoration: underline;
   }
