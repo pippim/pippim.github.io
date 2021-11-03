@@ -65,7 +65,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr3" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr5" class="hdr-btn">Skip</a></div>
 ## Markdown<a id="hdr4"></a>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for:
 
 ```
 Syntax highlighted code block
@@ -96,7 +96,9 @@ Other Pippim programs use APIs like **bserve** to get gmail messages, **tvpowere
 This Pippim website and the 2,000 blog posts use a different technique than *Web Scraping* or *REST APIs* called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work**. 
 
 - The first step is to run this [Stack Exchange Data Explorer query](https://meta.stackexchange.com/a/371435/366359).
+
 - Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
+
 - Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML tags into the markdown files:
 ```
 # Header 1     <a id="hdr1"></a>
@@ -121,8 +123,9 @@ A bunch of text lines under qualified header...
 # Qaulified header 5    <a id="hdr5"></a>
 ```
 
-- **Note:** The `SCSS` file to interpret `hdr-bar` and `hdr-btn` are kept in `assets/css/style.scss`.
-- Pippim appends two spaces to the end of block quotes in Stack Exhange answers. Take for example how block quotes are defined in Stack Exchange:
+- If you would like to modify the buttons, `hdr-bar` and `hdr-btn` are kept in `assets/css/style.scss`.
+
+- Block quotes are defined in Stack Exchange like this:
 ```
 > line 1
 > line 2
@@ -131,13 +134,16 @@ A bunch of text lines under qualified header...
 > line 1
 > line 2
 
-- After Pippim adds two spaces to the block quotes they show up properly:
+- Pippim appends two spaces to the end of block quotes in Stack Exhange answers so they render properly:
 > line 1  
 > line 2  
 
 - **Note:** You can open one of the blog posts and compare it to the Stack Exchange original answer.
+
 - Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
+
 - Pippim converts Stack Exchange Question tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `Tags: [Tag1 Tag2 Tag3]` for Jekyll.
+
 - Pippim setups the Jekyll **front matter** as required for Title and sets the blog filename as expected. However it also allows custom **front matter** for URL, Votes, Last Edit Date, etc.
 
 <div class="hdr-bar"><a id="hdr6"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr5" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr7" class="hdr-btn">Skip</a></div>
