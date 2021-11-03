@@ -20,7 +20,8 @@ $header-bg-color-secondary: #155799 !default;
 
 .button {
   display: inline-block;
-  padding: .75rem 1.25rem;
+  // padding: .75rem 1.25rem;  // Nov 3/21 - Move a bit lower
+  padding: 1rem 1rem;
   border-radius: 10rem;
   color: #fff;
   border: 2px solid white;  // Added for Cayman
