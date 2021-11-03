@@ -58,9 +58,11 @@ For Pippim programs on Github, you can go directly to the repository and post a 
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr2" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr4" class="hdr-btn">Skip</a></div>
 # Github Pages<a id="hdr3"></a>
 
-This website was created (for free) on **Github Pages**. You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+This website was created (for free) on **Github Pages**. You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to see how this page was defined in the markdown file called `index.md`.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+The Pippim website is based on the Github Pages Jekyll theme called (Cayman)[https://pages-themes.github.io/cayman/]. Initial setup is straight forward. If you want custom buttons it becomes more complicated as you need to learn (HTML)[https://blog.webjeda.com/new-page-jekyll/] and (Sass/SCSS)[https://jekyllrb.com/docs/configuration/sass/].
 
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr3" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr5" class="hdr-btn">Skip</a></div>
 ## Markdown<a id="hdr4"></a>
