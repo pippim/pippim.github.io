@@ -124,9 +124,9 @@ span {
 
 .hdr-btn {
   display: inline-block;
-  position: relative;
+  position: absolute;
   // top: 20px;
-  bottom: -1rem;
+  bottom: -3rem;
   left: 10px;
   color: $header-bg-color;  // Cayman green
   padding: 5px 15px;  // vertical, horizontal padding around button text
