@@ -95,16 +95,15 @@ Other Pippim programs use APIs like **bserve** to get gmail messages, **tvpowere
 
 This Pippim website and the 2,000 blog posts use a different technique than *Web Scraping* or *REST APIs* called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work**. 
 
-1. The first step is to run this [Stack Exchange Data Explorer query](https://meta.stackexchange.com/a/371435/366359).
-2. Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
-3. Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML tags into the markdown files:
+- The first step is to run this [Stack Exchange Data Explorer query](https://meta.stackexchange.com/a/371435/366359).
+- Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
+- Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML tags into the markdown files:
 ```
 # Header 1     <a id="hdr1"></a>
 ## Header 2    <a id="hdr2"></a>
 ### Header 3   <a id="hdr3"></a>
 ```
-
-4. Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines:
+- Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines:
 
 ```
 ## Qaulified header 4   <a id="hdr4"></a>
@@ -118,24 +117,24 @@ A bunch of text lines under qualified header...
 # Qaulified header 5    <a id="hdr5"></a>
 ```
 
-5. **Note:** The `SCSS` file to interpret `hdr-bar` and `hdr-btn` are kept in `assets/css/style.scss`.
-6. Pippim appends two spaces to the end of block quotes in Stack Exhange answers. Take for example how block quotes are defined in Stack Exchange:
+- **Note:** The `SCSS` file to interpret `hdr-bar` and `hdr-btn` are kept in `assets/css/style.scss`.
+- Pippim appends two spaces to the end of block quotes in Stack Exhange answers. Take for example how block quotes are defined in Stack Exchange:
 ```
 > line 1
 > line 2
 ```
-If they were not modified they would display on Github Pages Markdown as:
+- If they were not modified they would display on Github Pages Markdown as:
 > line 1
 > line 2
 
-After Pippim adds two spaces to the block quotes they show up properly:
+- After Pippim adds two spaces to the block quotes they show up properly:
 > line 1  
 > line 2  
 
-7. **Note:** You can open one of the blog posts and compare it to the Stack Exchange original answer.
-8. Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
-9. Pippim converts Stack Exchange Question tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `Tags: [Tag1 Tag2 Tag3]` for Jekyll.
-10. Pippim setups the Jekyll **front matter** as required for Title and sets the blog filename as expected. However it also allows custom **front matter** for URL, Votes, Last Edit Date, etc.
+- **Note:** You can open one of the blog posts and compare it to the Stack Exchange original answer.
+- Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
+- Pippim converts Stack Exchange Question tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `Tags: [Tag1 Tag2 Tag3]` for Jekyll.
+- Pippim setups the Jekyll **front matter** as required for Title and sets the blog filename as expected. However it also allows custom **front matter** for URL, Votes, Last Edit Date, etc.
 
 <div class="hdr-bar"><a id="hdr6"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr5" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr7" class="hdr-btn">Skip</a></div>
 ## Table of Contents support
