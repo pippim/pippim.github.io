@@ -22,7 +22,7 @@ The top of each page contains navigation buttons to take you to other pages:
 
 - <kbd>📧 Email</kbd> lets you send an email to Pippim.
 
-***BEWARE:*** When you click a button to go to a page, that button will disappear because the page you are on will never show the button for that page. This was done to limit number of buttons on mobile user screens. It deviates from traditional website design as of November 2, 2021.=.
+> ***BEWARE:*** When you click a button to go to a page, that button will disappear because the page you are on will never show the button for that page. This was done to limit number of buttons on mobile user screens. It deviates from traditional website design as of November 2, 2021.
 
 *Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
@@ -107,16 +107,13 @@ This Pippim website and the 2,000 blog posts use a different technique than *Web
 4. Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines:
 ```
 ## Qaulified header 4   <a id="hdr4"></a>
-
 A bunch of text lines under qualified header...
-
 <div class="hdr-bar">
   <a href="#" class="hdr-btn">Top</a>
   <a href="#hdr4" class="hdr-btn">ToS</a>
   <a href="#hdr6" class="hdr-btn">ToC</a>
   <a href="#hdr6" class="hdr-btn">Skip</a>
 </div>
-
 # Qaulified header 5    <a id="hdr5"></a>
 ```
 
