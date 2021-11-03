@@ -12,9 +12,9 @@ Welcome to Pippim. A collection of questions and answers about using your comput
 
 The top of each page contains navigation buttons to take you to other pages:
 
-- <kbd>⌂ Home</kbd> brings you to this page.<div class="hdr-bar"><p>Empty contianer</p></div>
+- <kbd>⌂ Home</kbd> brings you to this page.
 
-- <kbd>❓ About</kbd> disccusses everything (hopefully) you want to know about Pippim.<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a></div>
+- <kbd>❓ About</kbd> disccusses everything you want to know about Pippim. Still have questions? Just email.
 
 - <kbd>✅ Answers</kbd> to questions people have using computers. Most posts are about Linux and specifically Ubuntu.
 
