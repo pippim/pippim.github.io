@@ -105,7 +105,6 @@ This Pippim website and the 2,000 blog posts use a different technique than *Web
 ```
 
 4. Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines:
-
 ```
 ## Qaulified header 4   <a id="hdr4"></a>
 
@@ -130,6 +129,7 @@ A bunch of text lines under qualified header...
 If they were not modified they would display on Github Pages Markdown as:
 > line 1
 > line 2
+
 After Pippim adds two spaces to the block quotes they show up properly:
 > line 1  
 > line 2  
