@@ -181,7 +181,7 @@ These are the file types in the pippim website:
 
 The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
 
-```
+``` bash
 $ tree
 .
 ├── about.md
