@@ -88,7 +88,7 @@ Syntax highlighted code block
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr6" class="hdr-btn">Skip</a></div>
-## How Pippim converts Stack Exchange Q&A to Jekyll Blog Posts<a id="hdr5"></a>
+## Convert Stack Exchange Q&A to Jekyll Blog Post<a id="hdr5"></a>
 Pippim programs use *Web Scraping* like **Mr. Roboto** to get price changes, **eyesome** to get your sunrise/sunset times and **mserve** to get music lyrics. 
 
 Other Pippim programs use APIs like **bserve** to get gmail messages, **tvpowered** to monitor TV remote power button to put your system to sleep and **mserve** to get CD Audio track names and album covert art images. 
