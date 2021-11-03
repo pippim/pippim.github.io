@@ -89,11 +89,11 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr6" class="hdr-btn">Skip</a></div>
 ## How Pippim converts Stack Exchange Q&A to Jekyll Blog Posts<a id="hdr5"></a>
-Pippim programs use *Web Scraping* like **Mr. Roboto** to get price changes, **eyesome** to get your sunrise/sunset times and **mserve** to get Music Lyrics. 
+Pippim programs use *Web Scraping* like **Mr. Roboto** to get price changes, **eyesome** to get your sunrise/sunset times and **mserve** to get music lyrics. 
 
-Other Pippim programs use APIs like **bserve** to get gmail messages, **tvpowered** to use TV remote power button to put your system to sleep, **mserve** to get CD Audio track names and album covert art images. 
+Other Pippim programs use APIs like **bserve** to get gmail messages, **tvpowered** to monitor TV remote power button to put your system to sleep and **mserve** to get CD Audio track names and album covert art images. 
 
-This Pippim website and the 2,000 blog posts use a different technique than *Web Scraping* or *REST APIs* called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work**. 
+This Pippim website (pippim.github.io) creates 2,000 blog posts using a different technique than *Web Scraping* or *REST APIs* called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work!***. Well OK the free **Github Pages** static website generator does *a lot* of work :). You do have to do the first two steps below:
 
 - The first step is to run this [Stack Exchange Data Explorer query](https://meta.stackexchange.com/a/371435/366359).
 
@@ -123,7 +123,7 @@ A bunch of text lines under qualified header...
 # Qaulified header 5    <a id="hdr5"></a>
 ```
 
-- If you would like to modify the buttons, `hdr-bar` and `hdr-btn` are kept in `assets/css/style.scss`.
+- If you would like to modify the button properties (position, color, size, hover, etc), `hdr-bar` and `hdr-btn` are defined in `assets/css/style.scss`.
 
 - Block quotes are defined in Stack Exchange like this:
 ```
@@ -167,19 +167,17 @@ To see the current Jekyll, Sass, Rouge version numbers, etc. used by **Github Pa
 
 These are the file types in the pippim website:
 
-- Images are stored in `assets/img/` directory
-- SCSS (a superset of CSS) files are stored in `assets/css/` directory
-- Sass (Used to generat ToC) files are stored in `_sass/` diretory
-- This pages is stored in `index.md` file in the root directory
-- The <kbd>About</kbd> page is stored in `about.md` file in the root directory
-- The <kbd>Answers</kbd> page is stored in `answers.md` file in the root directory
-- The <kbd>Programs</kbd> page is stored in `programs.md` file in the root directory
-- The blog entries (called Answers in pippim) are stored in the `_posts/` directory
-- HTML can be found in any file, including markdown files which end in `.md`. Pure HTML files can be found in the `_includes` directory
+- A few local images are stored in `assets/img/` directory. The hundreds of images in blog posts come directly from Stack Exchange though.
+- SCSS (Sass CSS) files are mostly stored in the `assets/css/` directory. Some are stored in the `_sass/` directory. The `_sass/` directory has files you can't see in `pippim.github.io` because they are really stored in the Cayman Theme for Jekyll and automatically pulled from there whenever website is rendered.
+- This <kbd>Home</kbd> page is stored in `index.md` file in the root directory (`/`).
+- The <kbd>About</kbd> page is stored in `about.md` in `/`.
+- The <kbd>Answers</kbd> page is stored in `answers.md` in `/`. Individual answers are internally known as "blog posts" and are stored in the `_posts` directory with one file per answer.
+- The <kbd>Programs</kbd> page is stored in `programs.md` in `/`.
+- HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory/
 
-### Directory tree
+### Pippim website directory tree
 
-As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
+The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
 
 ```
 $ tree
@@ -220,7 +218,6 @@ $ tree
 └── stack-to-blog.py
 
 7 directories, 27 files
-
 ```
 
 <a id="hdr9"></a>
