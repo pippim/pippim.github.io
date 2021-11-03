@@ -11,9 +11,9 @@ Welcome to Pippim. A collection of questions and answers about using your comput
 ## Page navigation buttons
 
 The top of each page contains navigation buttons to take you to other pages:
-
+<div class="hdr-bar"><p>Empty contianer</p></div>
 - <kbd>⌂ Home</kbd> brings you to this page.
-
+<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a></div>
 - <kbd>❓ About</kbd> disccusses everything (hopefully) you want to know about Pippim.
 
 - <kbd>✅ Answers</kbd> to questions people have using computers. Most posts are about Linux and specifically Ubuntu.
