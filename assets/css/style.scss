@@ -117,7 +117,7 @@ span {
   display: block;
   position: relative;
   width: 100%;
-  bottom: -3rem;
+  top: -3rem;
   float: right;
   &:before {
     content: "";
@@ -134,6 +134,7 @@ span {
   padding: 5px 15px;  // vertical, horizontal padding around button text
   font-size:0.75em;  // 75% of normal font for button text
   // margin: 20px 10px -20px;  // top, right, bottom; margins for button box
+  margin-left: 10px;
   background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
   background-color:#F0FFF0;  // Honeydew
 
