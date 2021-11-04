@@ -109,7 +109,6 @@ This Pippim website (pippim.github.io) creates 2,000 blog posts using a differen
 - Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
 
 - Pippim adds the navigation bar (Top, ToS, ToC and Skip) by putting HTML tags into the markdown files. Then HTML code controls jumping to tags when a button is clicked. Here's an easy to read example of the code:
-
 ``` html
 ## Qaulified header 4
 
@@ -118,13 +117,22 @@ A bunch of text lines under qualified header...
 <div class="hdr-bar">
   <a href="#" class="hdr-btn">Top</a>
   <a href="#hdr4" class="hdr-btn">ToS</a>
-  <a href="#hdr6" class="hdr-btn">ToC</a>
+  <a href="#hdr2" class="hdr-btn">ToC</a>
   <a href="#hdr6" class="hdr-btn">Skip</a>
 </div>
 <a id="hdr5"></a>
 
 # Qaulified header 5    
 ```
+
+- In the markdown file that `stack-to-blog.py` creates the real HTML navigation buttons and id tag look like this:
+``` html
+
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a>  </div>  <a id="hdr5"></a>
+
+# Qaulified header 5    
+```
+- Two extra spaces are added between HTML elements for readability. An extra line is added before and after the HTML button bar for readability however the markdown interpreter condenses multiple blank lines into a single blank line. The HTML commands themselves are considered a blank line.
 
 - If you would like to modify the button properties (position, color, size, hover, etc), `hdr-bar` and `hdr-btn` are defined in `assets/css/style.scss`.
 
