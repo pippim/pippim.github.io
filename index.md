@@ -199,7 +199,7 @@ A preview of `stack-to-blog.py` is presented a few sections below and the full p
 
 ## Table of Contents support
 
-A little bit of one-time prep work is reqquired for Table of Content (TOC) support. For example the file `_sass/toc.scss` is setup with:
+All markdown headers with `#`, `##` and `###`, etc. are used to create the **Table of Contents** (TOC). A little bit of one-time prep work is reqquired for TOC support. For example, the file `_sass/toc.scss` is setup with:
 
 ``` scss
 .screen-reader-only {
@@ -222,17 +222,17 @@ Another one-time setup is the file `_includes/toc.md` containing the markdown fo
 {:toc}
 ```
 
-To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page (`index.md`) you will see:
+To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page you are reading (`index.md`) you would see the following markdown code:
 
-``` liquid
-... generates the **Table of Contents** you see below:
+``` html
+... TOC command is used on the next line and generates the **Table of Contents** you see below:
 
-{% include toc.md %}
+{ % include toc.md % }
 
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div><a id="hdr7"></a>
 ```
 
-All the markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. The TOC command is used on the next line and generates the **Table of Contents** you see below:
+*Note:* a space was forced between `{` and `%` above to prevent [Jekyll's liquid processor](https://learn.cloudcannon.com/jekyll/introduction-to-liquid/) from interpreting them. Leave the space out in real code. The TOC command is used on the next line and generates the **Table of Contents** you see below:
 
 {% include toc.md %}
 
