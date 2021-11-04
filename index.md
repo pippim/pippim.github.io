@@ -3,7 +3,7 @@ layout: default
 ---
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a>  </div>  <a id="hdr1"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div><a id="hdr1"></a>
 # Introduction
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
@@ -39,7 +39,7 @@ The top of major sections contain navigation buttons to take you to other sectio
 - <kbd>Skip</kbd> - Skips the section and takes you to the next section
 
 ---
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a>  </div>  <a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div><a id="hdr2"></a>
 ## Get in touch
 
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
@@ -50,25 +50,25 @@ Get in touch with pippim by sending an email. You can also visit the other pippi
 
 ### Leave a comment / question at the source
 
-You can leave a comment or question where the Stack Exchange answer appears. In the future each answer will have a direct link to the original answer. For the time being you can search the Stack Exchange site + answer title. For example search on "Ask Ubuntu How to get CPU temperature".
+You can leave a comment or question where the Stack Exchange answer appears. Each answer on this website here has a direct link to the original answer on Stack Exchage.
 
-For Pippim programs on Github, you can go directly to the repository and post a new issue. Issues can be bug reports, questions or new features or enhancements to existing features.
+For Pippim programs on Github, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.  *Note: Not all new feature requests can be done for free.*
 
 ---
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a>  </div>  <a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div><a id="hdr3"></a>
 # Github Pages
 
-This website was created (for free) on **Github Pages**. You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to see how this page was defined in the markdown file called `index.md`.
+This website was created on **Github Pages**. You can download (or simply view) this website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md). This current page for example you can find in the markdown file called `index.md`.
 
 **TL;DR**
 
-"TL;DR" stands for "Too Long, Didn't Read". Unless you are truly interested in the technology of websites and how this website in particular was created, you will probably want to stop reading now...
+"TL;DR" stands for "Too Long, Didn't Read". Unless you are truly interested in the technology of websites and how this website in particular was created, you will probably want to stop reading the rest of this page.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Whenever you commit to a website repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 The Pippim website is based on the Github Pages Jekyll theme called [Cayman](https://pages-themes.github.io/cayman/). Initial setup is straight forward. If you want custom buttons it becomes more complicated as you need to learn [HTML](https://blog.webjeda.com/new-page-jekyll/) and [Sass/SCSS](https://jekyllrb.com/docs/configuration/sass/).
 
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a>  </div>  <a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div><a id="hdr4"></a>
 
 ## Markdown
 
@@ -98,11 +98,11 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ## Convert Stack Exchange Q&A to Jekyll Blog Post
 
-Pippim programs use *Web Scraping* like **Mr. Roboto** to get price changes, **eyesome** to get your sunrise/sunset times and **mserve** to get music lyrics. 
+Some Pippim programs use *Web Scraping*. Examples are **Mr. Roboto** to get price changes, **eyesome** to get your sunrise/sunset times and **mserve** to get music lyrics. 
 
-Other Pippim programs use APIs like **bserve** to get gmail messages, **tvpowered** to monitor TV remote power button to put your system to sleep and **mserve** to get CD Audio track names and album covert art images. 
+Other Pippim programs use *APIs*. Examples are **bserve** to get gmail messages, **tvpowered** to monitor TV remote power button to put your system to sleep and **mserve** to get CD Audio track names and album covert art images. 
 
-This Pippim website (pippim.github.io) creates 2,000 blog posts using a different technique than *Web Scraping* or *REST APIs* called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work!***. Well OK the free **Github Pages** static website generator does *a lot* of work :). You do have to do the first two steps below:
+This Pippim website creates 2,000 blog posts using a different technique than *Web Scraping* or *REST APIs*, called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work!***. You do have to do the first two steps below:
 
 - The first step is to run this [Stack Exchange Data Explorer query](https://meta.stackexchange.com/a/371435/366359).
 
@@ -111,33 +111,66 @@ This Pippim website (pippim.github.io) creates 2,000 blog posts using a differen
 - Pippim adds the navigation bar (Top, ToS, ToC and Skip) by putting HTML tags into the markdown files. Then HTML code controls jumping to tags when a button is clicked. Here's an easy to read example of the code:
 
 ``` html
-## Qualified header 4
+# Introduction
 
-A bunch of text lines under qualified header...
+Welcome to Pippim. A collection of questions and answers about...
 
 <div class="hdr-bar">
   <a href="#" class="hdr-btn">Top</a>
-  <a href="#hdr4" class="hdr-btn">ToS</a>
-  <a href="#hdr2" class="hdr-btn">ToC</a>
-  <a href="#hdr6" class="hdr-btn">Skip</a>
+  <a href="#hdr1" class="hdr-btn">ToS</a>
+  <a href="#hdr6" class="hdr-btn">ToC</a>
+  <a href="#hdr3" class="hdr-btn">Skip</a>
 </div>
-<a id="hdr5"></a>
+<a id="hdr2"></a>
 
-# Qualified header 5    
+## Get in touch
+
+Get in touch with pippim by sending an email. You can also...
 ```
 
 - In the markdown file that `stack-to-blog.py` creates the real HTML navigation buttons and id tag look like this:
 
 ``` html
 
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a>  </div>  <a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div><a id="hdr5"></a>
 
-# Qualified header 5    
+## Get in touch
 ```
 
-- Two extra spaces are added between HTML elements for readability. An extra line is added before and after the HTML button bar for readability however the markdown interpreter condenses multiple blank lines into a single blank line. The HTML commands themselves are considered a blank line.
+- Two extra spaces are added between HTML elements for readability in HTML and some of the spacing between buttons. A blank line is added before and after the HTML button bar for readability. Note however the markdown interpreter condenses multiple blank lines into a single blank line. The single HTML command line is also treated like a blank markdown line.
 
-- If you would like to modify the button properties (position, color, size, hover, etc), `hdr-bar` and `hdr-btn` are defined in `assets/css/style.scss`.
+- If you would like to modify the button properties (position, color, size, hover, etc), `hdr-bar` and `hdr-btn` are defined in `assets/css/style.scss`:
+
+``` scss
+.hdr-bar {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: .5rem;            // Allow bit extra for button box height
+  text-align: right;        // Don't use "float: right;" that breaks rendering order
+  &:before {
+    content: "";
+    display: block;
+  }
+}
+
+.hdr-btn {
+  display: inline-block;
+  position: relative;
+  color: $header-bg-color;  // Cayman green
+  padding: 5px 15px;        // vertical, horizontal padding around button text
+  font-size:0.75em;         // 75% of normal font for button text
+  margin: 0px 10px;         // top, right, bottom; margins for button box
+  // From: https://stackoverflow.com/questions/65297617/how-to-make-button-background-color-a-little-darker-on-hover-using-css
+  background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
+  background-color:#F0FFF0; // Honeydew
+
+  &:hover {
+    background-position:bottom;
+    color:#F0FFF0;
+  }
+}
+```
 
 - Block quotes are defined in Stack Exchange like this:
 ```
@@ -162,15 +195,48 @@ A bunch of text lines under qualified header...
 
 A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
 
-<div class="hdr-bar">  <a id="hdr6"></a>  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a>  </div>  <a id="hdr6"></a>
+<div class="hdr-bar">  <a id="hdr6"></a>  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div><a id="hdr6"></a>
 
 ## Table of Contents support
 
-To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{ %` and `% }` in the command but, spaces had to be added to show the commnd. The properly formatted TOC command is used on the next line and generates the **Table of Contents** you see below:
+A little bit of one-time prep work is reqquired for Table of Content (TOC) support. For example the file `_sass/toc.scss` is setup with:
+
+``` scss
+.screen-reader-only {
+    position: absolute;
+    left: -5000px;
+
+    &:focus {
+        left: 0;
+    }
+}
+```
+
+Another one-time setup is the file `_includes/toc.md` containing the markdown for how the TOC looks and functions. This file contains:
+
+```
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+```
+
+To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page (`index.md`) you will see:
+
+``` liquid
+... generates the **Table of Contents** you see below:
 
 {% include toc.md %}
 
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a>  </div>  <a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div><a id="hdr7"></a>
+```
+
+All the markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. The TOC command is used on the next line and generates the **Table of Contents** you see below:
+
+{% include toc.md %}
+
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div><a id="hdr7"></a>
 
 ## Jekyll Themes
 
