@@ -108,17 +108,10 @@ This Pippim website (pippim.github.io) creates 2,000 blog posts using a differen
 
 - Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
 
-- Pippim adds the navigation bar (Top, ToS, ToC and Skip) by first putting HTML tags into the markdown files:
-```
-# Header 1     <a id="hdr1"></a>
-## Header 2    <a id="hdr2"></a>
-### Header 3   <a id="hdr3"></a>
-```
+- Pippim adds the navigation bar (Top, ToS, ToC and Skip) by putting HTML tags into the markdown files. Then HTML code controls jumping to tags when a button is clicked. Here's an easy to read example of the code:
 
-- Navigation button bars are then inserted in front of qualifying secction headers as show below. Note the actual format is condensed but for illustration purposes the `<div>...</div>` is spread out over many lines:
-
-```
-## Qaulified header 4   <a id="hdr4"></a>
+``` html
+## Qaulified header 4
 
 A bunch of text lines under qualified header...
 
@@ -128,8 +121,9 @@ A bunch of text lines under qualified header...
   <a href="#hdr6" class="hdr-btn">ToC</a>
   <a href="#hdr6" class="hdr-btn">Skip</a>
 </div>
+<a id="hdr5"></a>
 
-# Qaulified header 5    <a id="hdr5"></a>
+# Qaulified header 5    
 ```
 
 - If you would like to modify the button properties (position, color, size, hover, etc), `hdr-bar` and `hdr-btn` are defined in `assets/css/style.scss`.
@@ -185,40 +179,8 @@ These are the file types in the pippim website:
 - The <kbd>❓ About</kbd> page is stored in `about.md` in `/`.
 - The <kbd>✅ Answers</kbd> page is stored in `answers.md` in `/`. Individual answers are internally known as "blog posts" and are stored in the `_posts` directory with one file per answer.
 - The <kbd>💻 Programs</kbd> page is stored in `programs.md` in `/`.
-- HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory/
-
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a>  </div>  <a id="hdr9"></a>
-
-## Python program stack-to-blog.py
-
-To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is a small snippet of that program:
-
-Note it is important to follow these instructions to setup your site: [Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
-
-Otherwise Jekyll documentation itself could break your Github Pages theme you've chosen. For example, `_layouts/default.html` needs to be copied from your theme!
-
-Here is a small snippet of the Python program `stack-to-blog.py`:
-
-``` python
-def dump(r):
-    """ Dump contents of one row to terminal in good-looking format
-    """
-    print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
-    print('Title:  ', r[TITLE][:80])
-    print('Link:   ', r[LINK][:80])
-    limit = r[HTML].find('\n')
-    if limit > 80 or limit == -1:
-        limit = 80
-    print('HTML:   ', r[HTML][:limit])
-    limit = r[MARKDOWN].find('\n')
-    if limit > 80 or limit == -1:
-        limit = 80
-    print('MARK:   ', r[MARKDOWN][:limit])
-    print('Created:', r[CREATED], '  |  Tags:', r[TAGS])
-    print('Edited: ', r[LAST_EDIT], '  |  Edited by:', r[EDITED_BY])
-    print('Votes:  ', r[SCORE], '  |  Views:', r[VIEWS], '  |  Answers:', r[ANSWERS],
-          '  |  Accepted:', r[ACCEPTED], '\n')
-```
+- HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory.
+- As of November 4, 2021 this website doesn't include and **Javascript** but typically you would place those files in `assets/js/`.
 
 ### Pippim website directory tree
 
@@ -263,6 +225,39 @@ $ tree
 └── stack-to-blog.py
 
 7 directories, 27 files
+```
+
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a>  </div>  <a id="hdr9"></a>
+
+## Python program stack-to-blog.py
+
+To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is a small snippet of that program:
+
+Note it is important to follow these instructions to setup your site: [Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
+
+Otherwise Jekyll documentation itself could break your Github Pages theme you've chosen. For example, `_layouts/default.html` needs to be copied from your theme!
+
+Here is a small snippet of the Python program `stack-to-blog.py`:
+
+``` python
+def dump(r):
+    """ Dump contents of one row to terminal in good-looking format
+    """
+    print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
+    print('Title:  ', r[TITLE][:80])
+    print('Link:   ', r[LINK][:80])
+    limit = r[HTML].find('\n')
+    if limit > 80 or limit == -1:
+        limit = 80
+    print('HTML:   ', r[HTML][:limit])
+    limit = r[MARKDOWN].find('\n')
+    if limit > 80 or limit == -1:
+        limit = 80
+    print('MARK:   ', r[MARKDOWN][:limit])
+    print('Created:', r[CREATED], '  |  Tags:', r[TAGS])
+    print('Edited: ', r[LAST_EDIT], '  |  Edited by:', r[EDITED_BY])
+    print('Votes:  ', r[SCORE], '  |  Views:', r[VIEWS], '  |  Answers:', r[ANSWERS],
+          '  |  Accepted:', r[ACCEPTED], '\n')
 ```
 
 <a id="hdr10"></a>
