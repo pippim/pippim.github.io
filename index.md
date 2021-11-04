@@ -199,7 +199,7 @@ A preview of `stack-to-blog.py` is presented a few sections below and the full p
 
 ## Table of Contents support
 
-All markdown headers with `#`, `##` and `###`, etc. are used to create the **Table of Contents** (TOC). A little bit of one-time prep work is reqquired for TOC support. For example, the file `_sass/toc.scss` is setup with:
+All markdown headers with `#`, `##` and `###`, etc. are used to create the **Table of Contents** (TOC). A little bit of one-time prep work is required for TOC support. For example, the file `_sass/toc.scss` is setup with:
 
 ``` scss
 .screen-reader-only {
@@ -225,14 +225,14 @@ Another one-time setup is the file `_includes/toc.md` containing the markdown fo
 To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page you are reading (`index.md`) you would see the following markdown code:
 
 ``` html
-... TOC command is used on the next line and generates the **Table of Contents** you see below:
+... on the next line and generates the **Table of Contents** you see below:
 
 { % include toc.md % }
 
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div><a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a> ... </div><a id="hdr7"></a>
 ```
 
-*Note:* a space was forced between `{` and `%` above to prevent [Jekyll's liquid processor](https://learn.cloudcannon.com/jekyll/introduction-to-liquid/) from interpreting them. Leave the space out in real code. The TOC command is used on the next line and generates the **Table of Contents** you see below:
+*Note:* a space was inserted above between `{` and `%` above to prevent [Jekyll's liquid processor](https://learn.cloudcannon.com/jekyll/introduction-to-liquid/) from interpreting them as a real command. Remove that space as well as the space between `%` and `}` above in real code. The TOC command is used in real markdown below and generates the **Table of Contents** you see below:
 
 {% include toc.md %}
 
