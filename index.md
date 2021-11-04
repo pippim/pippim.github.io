@@ -185,7 +185,7 @@ To see the current Jekyll, Sass, Rouge version numbers, etc. used by **Github Pa
 These are the file types in the pippim website:
 
 - A few local images are stored in `assets/img/` directory. The hundreds of images in blog posts come directly from Stack Exchange and are not stored in `pippim.github.io`.
-- SCSS (Sass CSS) files are mostly stored in the `assets/css/` directory. Some are stored in the `_sass/` directory. The `_sass/` directory has files you can't see in `pippim.github.io` because they are really stored in the Cayman Theme for Jekyll and automatically pulled from there whenever website is rendered.
+- SCSS and [Sass CSS](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/) files are mostly stored in the `assets/css/` directory. Some are stored in the `_sass/` directory. The `_sass/` directory has files you can't see in `pippim.github.io` because they are really stored in the Cayman Theme for Jekyll and automatically pulled from there whenever website is rendered.
 - This <kbd>⌂ Home</kbd> page is stored in `index.md` file in the root directory (`/`).
 - The <kbd>❓ About</kbd> page is stored in `about.md` in `/`.
 - The <kbd>✅ Answers</kbd> page is stored in `answers.md` in `/`. Individual answers are internally known as "blog posts" and are stored in the `_posts` directory with one file per answer.
