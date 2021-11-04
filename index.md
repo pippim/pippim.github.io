@@ -90,7 +90,9 @@ Syntax highlighted code block
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 <div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr6" class="hdr-btn">Skip</a></div>
+
 ## Convert Stack Exchange Q&A to Jekyll Blog Post<a id="hdr5"></a>
+
 Pippim programs use *Web Scraping* like **Mr. Roboto** to get price changes, **eyesome** to get your sunrise/sunset times and **mserve** to get music lyrics. 
 
 Other Pippim programs use APIs like **bserve** to get gmail messages, **tvpowered** to monitor TV remote power button to put your system to sleep and **mserve** to get CD Audio track names and album covert art images. 
@@ -148,6 +150,8 @@ A bunch of text lines under qualified header...
 
 - Pippim setups the Jekyll **front matter** as required for Title and sets the blog filename as expected. However it also allows custom **front matter** for URL, Votes, Last Edit Date, etc.
 
+A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
+
 <div class="hdr-bar"><a id="hdr6"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr5" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr7" class="hdr-btn">Skip</a></div>
 ## Table of Contents support
 
@@ -171,11 +175,42 @@ These are the file types in the pippim website:
 
 - A few local images are stored in `assets/img/` directory. The hundreds of images in blog posts come directly from Stack Exchange though.
 - SCSS (Sass CSS) files are mostly stored in the `assets/css/` directory. Some are stored in the `_sass/` directory. The `_sass/` directory has files you can't see in `pippim.github.io` because they are really stored in the Cayman Theme for Jekyll and automatically pulled from there whenever website is rendered.
-- This <kbd>Home</kbd> page is stored in `index.md` file in the root directory (`/`).
-- The <kbd>About</kbd> page is stored in `about.md` in `/`.
-- The <kbd>Answers</kbd> page is stored in `answers.md` in `/`. Individual answers are internally known as "blog posts" and are stored in the `_posts` directory with one file per answer.
-- The <kbd>Programs</kbd> page is stored in `programs.md` in `/`.
+- This <kbd>⌂ Home</kbd> page is stored in `index.md` file in the root directory (`/`).
+- The <kbd>❓ About</kbd> page is stored in `about.md` in `/`.
+- The <kbd>✅ Answers</kbd> page is stored in `answers.md` in `/`. Individual answers are internally known as "blog posts" and are stored in the `_posts` directory with one file per answer.
+- The <kbd>💻 Programs</kbd> page is stored in `programs.md` in `/`.
 - HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory/
+
+<div class="hdr-bar"><a id="hdr9"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr5" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr10" class="hdr-btn">Skip</a></div>
+
+## `stack-to-blog.py` Python program snippet<a id="hdr9"></a>
+
+To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is a small snippet of that program:
+
+Note it is important to follow these instructions to setup your site: [Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
+
+Otherwise Jekyll documentation itself could break your Github Pages theme you've chosen. For example, `_layouts/default.html` needs to be copied from your theme!
+
+``` python
+def dump(r):
+    """ Dump contents of one row to terminal in good-looking format
+    """
+    print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
+    print('Title:  ', r[TITLE][:80])
+    print('Link:   ', r[LINK][:80])
+    limit = r[HTML].find('\n')
+    if limit > 80 or limit == -1:
+        limit = 80
+    print('HTML:   ', r[HTML][:limit])
+    limit = r[MARKDOWN].find('\n')
+    if limit > 80 or limit == -1:
+        limit = 80
+    print('MARK:   ', r[MARKDOWN][:limit])
+    print('Created:', r[CREATED], '  |  Tags:', r[TAGS])
+    print('Edited: ', r[LAST_EDIT], '  |  Edited by:', r[EDITED_BY])
+    print('Votes:  ', r[SCORE], '  |  Views:', r[VIEWS], '  |  Answers:', r[ANSWERS],
+          '  |  Accepted:', r[ACCEPTED], '\n')
+```
 
 ### Pippim website directory tree
 
@@ -222,4 +257,4 @@ $ tree
 7 directories, 27 files
 ```
 
-<a id="hdr9"></a>
+<a id="hdr10"></a>
