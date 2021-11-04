@@ -181,9 +181,9 @@ These are the file types in the pippim website:
 - The <kbd>💻 Programs</kbd> page is stored in `programs.md` in `/`.
 - HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory/
 
-<a id="hdr9"></a><div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr8" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr10" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr8" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr10" class="hdr-btn">Skip</a></div>
 
-## Python program stack-to-blog.py
+## Python program stack-to-blog.py <a id="hdr9"></a>
 
 To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is a small snippet of that program:
 
