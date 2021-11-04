@@ -3,8 +3,8 @@ layout: default
 ---
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
-<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr2" class="hdr-btn">Skip</a></div>
-# Introduction<a id="hdr1"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a>  </div>  <a id="hdr1"></a>
+# Introduction
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
 
@@ -39,8 +39,8 @@ The top of major sections contain navigation buttons to take you to other sectio
 - <kbd>Skip</kbd> - Skips the section and takes you to the next section
 
 ---
-<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr1" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr3" class="hdr-btn">Skip</a></div>
-## Get in touch<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a>  </div>  <a id="hdr2"></a>
+## Get in touch
 
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
 
@@ -55,8 +55,8 @@ You can leave a comment or question where the Stack Exchange answer appears. In 
 For Pippim programs on Github, you can go directly to the repository and post a new issue. Issues can be bug reports, questions or new features or enhancements to existing features.
 
 ---
-<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr2" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr4" class="hdr-btn">Skip</a></div>
-# Github Pages<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a>  </div>  <a id="hdr3"></a>
+# Github Pages
 
 This website was created (for free) on **Github Pages**. You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to see how this page was defined in the markdown file called `index.md`.
 
@@ -68,8 +68,9 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 The Pippim website is based on the Github Pages Jekyll theme called (Cayman)[https://pages-themes.github.io/cayman/]. Initial setup is straight forward. If you want custom buttons it becomes more complicated as you need to learn (HTML)[https://blog.webjeda.com/new-page-jekyll/] and (Sass/SCSS)[https://jekyllrb.com/docs/configuration/sass/].
 
-<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr3" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr5" class="hdr-btn">Skip</a></div>
-## Markdown<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a>  </div>  <a id="hdr4"></a>
+
+## Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for:
 
@@ -93,9 +94,9 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr4" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr6" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a>  </div>  <a id="hdr5"></a>
 
-## Convert Stack Exchange Q&A to Jekyll Blog Post<a id="hdr5"></a>
+## Convert Stack Exchange Q&A to Jekyll Blog Post
 
 Pippim programs use *Web Scraping* like **Mr. Roboto** to get price changes, **eyesome** to get your sunrise/sunset times and **mserve** to get music lyrics. 
 
@@ -156,7 +157,7 @@ A bunch of text lines under qualified header...
 
 A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
 
-<div class="hdr-bar"><a id="hdr6"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr5" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr7" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a id="hdr6"></a>  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a>  </div>  <a id="hdr6"></a>
 
 ## Table of Contents support
 
@@ -164,17 +165,17 @@ To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place yo
 
 {% include toc.md %}
 
-<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr6" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr8" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a>  </div>  <a id="hdr7"></a>
 
-## Jekyll Themes<a id="hdr7"></a>
+## Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pippim/pippim.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 To see the current Jekyll, Sass, Rouge version numbers, etc. used by **Github Pages** click [here](https://pages.github.com/versions/). It is very important to find the correct documentation version when you are using instructions for setting up your website!
 
-<div class="hdr-bar"><a href="#" class="hdr-btn">Top</a><a href="#hdr7" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr9" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a>  </div>  <a id="hdr8"></a>
 
-## Images, Javascript, CSS and HTML<a id="hdr8"></a>
+## Images, Javascript, CSS and HTML
 
 These are the file types in the pippim website:
 
