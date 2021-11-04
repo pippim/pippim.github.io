@@ -181,15 +181,17 @@ These are the file types in the pippim website:
 - The <kbd>💻 Programs</kbd> page is stored in `programs.md` in `/`.
 - HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory/
 
-<div class="hdr-bar"><a id="hdr9"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr5" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr10" class="hdr-btn">Skip</a></div>
+<a id="hdr9"></a><div class="hdr-bar"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr8" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr10" class="hdr-btn">Skip</a></div>
 
-## `stack-to-blog.py` Python program snippet<a id="hdr9"></a>
+## `stack-to-blog.py` Python program snippet
 
 To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is a small snippet of that program:
 
 Note it is important to follow these instructions to setup your site: [Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
 
 Otherwise Jekyll documentation itself could break your Github Pages theme you've chosen. For example, `_layouts/default.html` needs to be copied from your theme!
+
+Here is a small snippet of the Python program `stack-to-blog.py`:
 
 ``` python
 def dump(r):
