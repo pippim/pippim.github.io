@@ -60,6 +60,10 @@ For Pippim programs on Github, you can go directly to the repository and post a 
 
 This website was created (for free) on **Github Pages**. You can use the [editor on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md) to see how this page was defined in the markdown file called `index.md`.
 
+**TL;DR**
+
+"TL;DR" stands for "Too Long, Didn't Read". Unless you are truly interested in the technology of websites and how this website in particular was created, you will probably want to stop reading now...
+
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 The Pippim website is based on the Github Pages Jekyll theme called (Cayman)[https://pages-themes.github.io/cayman/]. Initial setup is straight forward. If you want custom buttons it becomes more complicated as you need to learn (HTML)[https://blog.webjeda.com/new-page-jekyll/] and (Sass/SCSS)[https://jekyllrb.com/docs/configuration/sass/].
@@ -153,9 +157,10 @@ A bunch of text lines under qualified header...
 A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
 
 <div class="hdr-bar"><a id="hdr6"></a><a href="#" class="hdr-btn">Top</a><a href="#hdr5" class="hdr-btn">ToS</a><a href="#hdr6" class="hdr-btn">ToC</a><a href="#hdr7" class="hdr-btn">Skip</a></div>
+
 ## Table of Contents support
 
-To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{ %` and `% }` in the command but, spaces had to be added to show the commnd. The real (invisible to you( TOC command is used on the next line and generates the **Table of Contents** you see below:
+To get a Table of Contents (TOC) insert `{ % include toc.md % }` at the place you want it. All your markdown headers with `#`, `##` and `###`, etc. are used to create the TOC. Note there is no space between `{ %` and `% }` in the command but, spaces had to be added to show the commnd. The properly formatted TOC command is used on the next line and generates the **Table of Contents** you see below:
 
 {% include toc.md %}
 
@@ -173,7 +178,7 @@ To see the current Jekyll, Sass, Rouge version numbers, etc. used by **Github Pa
 
 These are the file types in the pippim website:
 
-- A few local images are stored in `assets/img/` directory. The hundreds of images in blog posts come directly from Stack Exchange though.
+- A few local images are stored in `assets/img/` directory. The hundreds of images in blog posts come directly from Stack Exchange and are not stored in `pippim.github.io`.
 - SCSS (Sass CSS) files are mostly stored in the `assets/css/` directory. Some are stored in the `_sass/` directory. The `_sass/` directory has files you can't see in `pippim.github.io` because they are really stored in the Cayman Theme for Jekyll and automatically pulled from there whenever website is rendered.
 - This <kbd>⌂ Home</kbd> page is stored in `index.md` file in the root directory (`/`).
 - The <kbd>❓ About</kbd> page is stored in `about.md` in `/`.
