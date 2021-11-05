@@ -160,8 +160,8 @@ Get in touch with pippim by sending an email. You can also...
   color: $header-bg-color;  // Cayman green
   padding: 5px 15px;        // vertical, horizontal padding around button text
   font-size:0.75em;         // 75% of normal font for button text
-  margin: 0px 10px;         // top, right, bottom; margins for button box
-  // From: https://stackoverflow.com/questions/65297617/how-to-make-button-background-color-a-little-darker-on-hover-using-css
+  margin-left: 10px;        // Now that right aligned, switch margin side
+  // From: https://stackoverflow.com/questions/65297617
   background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
   background-color:#F0FFF0; // Honeydew
 
