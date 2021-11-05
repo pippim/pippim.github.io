@@ -109,25 +109,25 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 - Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
 
 - Pippim adds the navigation bar (Top, ToS, ToC and Skip) by putting HTML tags into the markdown files. Then HTML code controls jumping to tags when a button is clicked. Here's an easy to read example of the code:
-
-        ``` html
-# Introduction
-
-Welcome to Pippim. A collection of questions and answers about...
-
-<div class="hdr-bar">
-  <a href="#" class="hdr-btn">Top</a>
-  <a href="#hdr1" class="hdr-btn">ToS</a>
-  <a href="#hdr6" class="hdr-btn">ToC</a>
-  <a href="#hdr3" class="hdr-btn">Skip</a>
-</div>
-<a id="hdr2"></a>
-
-## Get in touch
-
-Get in touch with pippim by sending an email. You can also...
-```
-
+  
+    ``` html
+    # Introduction
+    
+    Welcome to Pippim. A collection of questions and answers about...
+    
+    <div class="hdr-bar">
+      <a href="#" class="hdr-btn">Top</a>
+      <a href="#hdr1" class="hdr-btn">ToS</a>
+      <a href="#hdr6" class="hdr-btn">ToC</a>
+      <a href="#hdr3" class="hdr-btn">Skip</a>
+    </div>
+    <a id="hdr2"></a>
+    
+    ## Get in touch
+    
+    Get in touch with pippim by sending an email. You can also...
+    ```
+  
 - In the markdown file that `stack-to-blog.py` creates the real HTML navigation buttons and id tag look like this:
 
     ``` html
