@@ -130,7 +130,7 @@ Get in touch with pippim by sending an email. You can also...
 
 - In the markdown file that `stack-to-blog.py` creates the real HTML navigation buttons and id tag look like this:
 
-        ``` html
+    ``` html
 
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div><a id="hdr5"></a>
 
@@ -141,7 +141,7 @@ Get in touch with pippim by sending an email. You can also...
 
 - If you would like to modify the button properties (position, color, size, hover, etc), `hdr-bar` and `hdr-btn` are defined in `assets/css/style.scss`:
 
-        ``` scss
+    ``` scss
 .hdr-bar {
   display: block;
   position: relative;
@@ -173,7 +173,7 @@ Get in touch with pippim by sending an email. You can also...
 ```
 
 - Block quotes are defined in Stack Exchange like this:
-        ```
+    ```
 > line 1
 > line 2
 ```
@@ -201,7 +201,7 @@ A preview of `stack-to-blog.py` is presented a few sections below and the full p
 
 All markdown headers with `#`, `##` and `###`, etc. are used to create the **Table of Contents** (TOC). A little bit of one-time prep work is required for TOC support. For example, the file `_sass/toc.scss` is setup with:
 
-        ``` scss
+    ``` scss
 .screen-reader-only {
     position: absolute;
     left: -5000px;
@@ -214,7 +214,7 @@ All markdown headers with `#`, `##` and `###`, etc. are used to create the **Tab
 
 Another one-time setup is the file `_includes/toc.md` containing the markdown for how the TOC looks and functions. This file contains:
 
-        ``` sass
+    ``` sass
 ## Table of Contents
 {:.no_toc}
 
@@ -224,7 +224,7 @@ Another one-time setup is the file `_includes/toc.md` containing the markdown fo
 
 To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page you are reading (`index.md`) you would see the following markdown code:
 
-        ``` html
+    ``` html
 ... on the next line and generates the **Table of Contents** you see below:
 
 { % include toc.md % }
