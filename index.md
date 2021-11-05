@@ -202,26 +202,26 @@ A preview of `stack-to-blog.py` is presented a few sections below and the full p
 
 All markdown headers with `#`, `##` and `###`, etc. are used to create the **Table of Contents** (TOC). A little bit of one-time prep work is required for TOC support. For example, the file `_sass/toc.scss` is setup with:
 
-    ``` scss
-    .screen-reader-only {
-        position: absolute;
-        left: -5000px;
-    
-        &:focus {
-            left: 0;
-        }
+``` scss
+.screen-reader-only {
+    position: absolute;
+    left: -5000px;
+
+    &:focus {
+        left: 0;
     }
-    ```
+}
+```
 
 Another one-time setup is the file `_includes/toc.md` containing the markdown for how the TOC looks and functions. This file contains:
 
-    ``` sass
-    ## Table of Contents
-    {:.no_toc}
-    
-    * TOC
-    {:toc}
-    ```
+``` sass
+## Table of Contents
+{:.no_toc}
+
+* TOC
+{:toc}
+```
 
 To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page you are reading (`index.md`) you would see the following markdown code:
 
