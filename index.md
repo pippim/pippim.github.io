@@ -129,14 +129,14 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
     ```
   
 - In the markdown file that `stack-to-blog.py` creates the real HTML navigation buttons and id tag look like this:
-  
+
     ``` html
+    
+    <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div><a id="hdr5"></a>
+    
+    ## Get in touch
+    ```
 
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div><a id="hdr5"></a>
-
-## Get in touch
-```
-  
 - Two extra spaces are added between HTML elements for readability in HTML and some of the spacing between buttons. A blank line is added before and after the HTML button bar for readability. Note however the markdown interpreter condenses multiple blank lines into a single blank line. The single HTML command line is also treated like a blank markdown line.
 
 - If you would like to modify the button properties (position, color, size, hover, etc), `hdr-bar` and `hdr-btn` are defined in `assets/css/style.scss`:
