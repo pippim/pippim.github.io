@@ -41,7 +41,8 @@ The top of major sections contain navigation buttons to take you to other sectio
 - <kbd>Skip</kbd> - Skips the section and takes you to the next section
 
 ---
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div><a id="hdr2"></a>
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
 ## Get in touch
 
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
@@ -98,7 +99,8 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a>  </div>  <a id="hdr5"></a>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
 
 ## Convert Stack Exchange Q&A to Jekyll Blog Post
 
@@ -199,7 +201,8 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 
 A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
 
-<div class="hdr-bar">  <a id="hdr6"></a>  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div><a id="hdr6"></a>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
 
 ## Table of Contents support
 
@@ -233,14 +236,16 @@ To get a Table of Contents (TOC) in any website page, insert a liquid tag where 
     
     { % include toc.md % }
     
-    <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a> ... </div><a id="hdr7"></a>
+    <a id="hdr7"></a>
+    <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a> ... </div>
     ```
 
 *Note:* a space was inserted above between `{` and `%` above to prevent [Jekyll's liquid processor](https://learn.cloudcannon.com/jekyll/introduction-to-liquid/) from interpreting them as a real command. Remove that space as well as the space between `%` and `}` above in real code. The TOC command is used in real markdown below and generates the actual TOC:
 
 {% include toc.md %}
 
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div><a id="hdr7"></a>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
 ## Jekyll Themes
 
@@ -248,7 +253,8 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 To see the current Jekyll, Sass, Rouge version numbers, etc. used by **Github Pages** click [here](https://pages.github.com/versions/). It is very important to find the correct documentation version when you are using instructions for setting up your website!
 
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a>  </div>  <a id="hdr8"></a>
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
 
 ## Images, Javascript, CSS and HTML
 
@@ -308,7 +314,8 @@ $ tree
 7 directories, 27 files
 ```
 
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div><a id="hdr9"></a>
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
 ## Python program stack-to-blog.py
 
