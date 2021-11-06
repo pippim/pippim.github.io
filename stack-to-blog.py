@@ -3,12 +3,12 @@
 
 # ==============================================================================
 #
-#       stack-to-blog.py - Convert Stack Exchange Answers with a score of 2 or
-#           more into a Jekyll blog post. Accepted answers have 3 added to the
-#           score.
+#       stack-to-blog.py - Convert Stack Exchange Answers with a score >= 2 or
+#           accepted into a Jekyll blog post.
 #
 #       Oct. 24 2021 - Initial version. Supports "Tags: [Topic1 Topic2]" using
 #           Stack tags.
+#       NOv. 06 2021 - Two passes to count number of #, ##, etc. in first pass.
 #
 # ==============================================================================
 
@@ -19,13 +19,14 @@
     Run the stack exchange data explorer query:
         https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s
         NOTE: Use your Stack Exchange UserID. Mine is: 4775729
-    It has been saved in pippim.github.io/StackBlogPost. First 3 lines:
+
+    The query has  been saved in pippim.github.io/StackBlogPost. First 3 lines:
 
     -- StackBlogPost: Convert Stack Exchange Answers to Blog Posts in Jekyll
     -- From: https://data.stackexchange.com/stackoverflow/query/edit/1492412#resultSets
     -- AccountId: Your SE network account ID number, found in the URL of your network profile page:
 
-    Save the results in CSV format as QueryResults.csv
+    Run the query and Save the results in CSV format as QueryResults.csv
 
     Move query results to your website folder. In Linux use:
         mv ~/Downloads/QueryResults.csv ~/website
@@ -37,7 +38,6 @@
 ├── assets
 │   ├── css
 │   │   ├── style.scss
-│   │   └── style.scss~
 │   └── img
 │       ├── Blog_Project-Management-101.png
 │       ├── octojekyll-opt.jpg
@@ -83,12 +83,37 @@ OUTPUT_DIR = "_posts/"      # Subdirectory name. Use "./" for current directory
 QUESTIONS = False           # Don't upload questions
 VOTES = 2                   # Answers need at least 2 votes to qualify
 ACCEPTED = True             # All accepted answers are uploaded
-# Generate TOC when CONTENTS variable is not blank
-CONTENTS = "** Table of Contents **"
-TOC_HDR_MIN = 6             # Number of Headers required to qualify TOC
+
+''' Table of Contents (TOC) options. '''
+CONTENTS = "{% TOC %}"      # If TOC not wanted, set to None
+TOC_HDR_MIN = 6             # Number of Headers required to qualify TOC insert
+TOC_HDR_LEVEL = 2           # Only include TOC headers with "#" or "##"
 TOC_LOC = 2                 # Put TOC before second second paragraph
 
+NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
+''' None = No navigation bar
+    1    = single line. EG <a id=... </div>
+    2    = two lines. EG <a id= then new line then with <div>...</div>
+    3    = Option 2 plus empty (blank) line above for readability
+    4    = Option 3 plus empty (blank) line above for even more readability
+    5    = Option 4 plus comment for ultimate readability
 
+    Note: Markdown compresses all blank lines into a single blank line between
+          paragraphs. HTML code inserted simply counts as another blank line to
+          be compressed into a single blank line.
+'''
+NAV_BAR_SEP = True          # Separator line before Navigation bar?
+NAV_BAR_LEVEL = 1           # Only for "#" or "==" headers. Not "##" or "--"
+NAV_FORCE_TOC = True        # Force TOC to navigation bar even if "##" level
+
+''' TODO: Test Stack Exchange navigation bar for a long answer:
+
+    <div class="form-submit cbt d-flex gsx gs4">
+        <button id="submit-button" class="flex--item s-btn s-btn__primary s-btn__icon" type="submit" tabindex="120" autocomplete="off">
+Post Your Answer                                        </button>
+    </div>
+
+'''
 # If question or answer contains one of these keywords then jekyll front
 # matter has "categories: KEYWORD" added. There can be more than one KEYWORD.
 PROGRAMS = ["eyesome", "multi-timer", ".bashrc", ".conkyrc", "cdd", "mserve", "bserve"]
@@ -100,7 +125,7 @@ random_row_nos = []         # Random row numbers exported during trail runs
 all_tag_names = []          # Every tag name appearing on stack exchange answers
 all_tag_counts = []         # Count of times tag has been used on SE answers
 
-''' Read SE CSV file and convert to Python list '''
+''' Read S.E.D.E. CSV file and convert to Python list: data [] '''
 with open(INPUT_FILE) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     for row in csv_reader:
@@ -119,6 +144,7 @@ if row_count < 2:
     print('No CSV records found in INPUT_FILE:' + INPUT_FILE)
     exit()
 
+''' Overview of sample set used for blog posts based on RANDOM_LIMIT '''
 random_row_nos = [randint(1, row_count) for p in range(0, RANDOM_LIMIT)]
 print('RANDOM_LIMIT:', RANDOM_LIMIT,
       'yielded random record numbers:', random_row_nos)
@@ -144,6 +170,46 @@ ANSWERS = 15
 ACCEPTED = 16
 CW = 17
 CLOSED = 18
+
+''' Custom Front Matter for Jekyll blog posts
+
+Typical front matter contains:
+    ---
+    layout: post
+    ---
+
+If you change "FRONT_URL = None" below to: "FRONT_URL = stack_url" you get:
+
+    ---
+    layout: default
+    stack_url: https://askubuntu.com/questions/1039357/
+    ---
+
+This allows you access the data in javascript. For example to code a button
+that links to the original Stack Exchange answer 
+
+'''
+
+FRONT_SITE = None
+FRONT_POST_ID = None
+FRONT_URL = "stack_url"
+FRONT_LINK = None
+FRONT_TYPE = None
+FRONT_TITLE = None
+FRONT_HTML = None
+FRONT_MARKDOWN = None
+FRONT_TAGS = "tags"
+FRONT_CREATED = None
+FRONT_LAST_EDIT = "edit_date"
+FRONT_EDITED_BY = None
+FRONT_SCORE = "up_votes"
+FRONT_FAVORITES = None
+FRONT_VIEWS = None
+FRONT_ANSWERS = None
+FRONT_ACCEPTED = None
+FRONT_CW = None
+FRONT_CLOSED = None
+
 
 row_number = 1              # Current row number in query
 accepted_count = 0          # How many posts were accepted
@@ -181,14 +247,17 @@ def dump(r):
     print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
     print('Title:  ', r[TITLE][:80])
     print('URL:    ', r[URL][:80])
-    limit = r[HTML].find('\n')
+
+    limit = r[HTML].find('\n')      # Limit HTML to first line or 80 chars
     if limit > 80 or limit == -1:
         limit = 80
     print('HTML:   ', r[HTML][:limit])
-    limit = r[MARKDOWN].find('\n')
+
+    limit = r[MARKDOWN].find('\n')  # Limit MD to first line or 80 chars
     if limit > 80 or limit == -1:
         limit = 80
-    print('MARK:   ', r[MARKDOWN][:limit])
+    print('MARK_DN:', r[MARKDOWN][:limit])
+
     print('Created:', r[CREATED], '  |  Tags:', r[TAGS])
     print('Edited: ', r[LAST_EDIT], '  |  Edited by:', r[EDITED_BY])
     print('Votes:  ', r[SCORE], '  |  Views:', r[VIEWS], '  |  Answers:', r[ANSWERS],
@@ -198,13 +267,12 @@ def dump(r):
 def header_space(ln):
     """ Add space after # for headers if necessary
 
-        Assign HTML tag <a id="hdr9"></a>
-        This isn't perfect because if inside "```code" block then something
-            like "#HandleLidSwitch" should not be touched. However since it is
-            a comment line in the first place it should not matter if it was
-            displayed as "# HandleLidSwitch".
+        Count the number of headers to header_count
 
-            Further problem is <a id="hdr9"></a> is appended to line!
+        Assign HTML tag <a id="hdr9"></a>
+
+        If inside fenced code block, ignore # lines and don't count as header.
+
     """
     global total_header_spaces, header_count, total_code_block_lines
 
@@ -225,13 +293,23 @@ def header_space(ln):
             #print('After forcing:   ', hash_count, ln)
 
         # Append HTML header ID. EG: <a> id="hdr9"></a>
-        ln = ln + '<a id="hdr' + str(header_count) + '"></a>'
+        if hash_count <= TOC_HDR_LEVEL:
+            ln = ln + '<a id="hdr' + str(header_count) + '"></a>'
+            # Second pass will insert lines to GOTO this "id" name
     return ln
 
 
 def block_quote(ln):
-    """ Append two spaces at end of block quote ('>') if necessary """
+    """ Append two spaces at end of block quote ('>') if necessary
+
+        If inside fenced code block, ignore # lines and don't count as header.
+
+    """
     global total_quote_spaces
+
+    if in_code_block:
+        return ln
+
     if ln[0:1] == ">":
         #print('Found block quote:', ln)
         if ln[-2:] != "  ":
@@ -268,9 +346,10 @@ def check_code_block(ln):
 
 
 def check_pre_code(ln):
-    """ Check if <pre><code> appers on line
-     """
-    if "<pre><code>" in ln:
+    """ Check if line starts with <pre><code> or <code>
+    """
+    global total_pre_codes
+    if ln.startswith("<pre><code>") or ln.startswith("<code>"):
         print('===========:', ln)
         total_pre_codes += 1
 
@@ -359,8 +438,11 @@ def check_contents(ln):
 ''' Main loop to process All query records
     - If RANDOM_LIMIT is used then only output matching random_rec_nos []
     - Match criteria for answer up votes or accepted check mark
-    - Reformat '#Header 1' to '# Header 1'. Same for "##H2" to "## H2", etc.
-    - Count number of '#' header lines
+    - Check if in fenced code block (``` bash) for example. If not then:
+        - Reformat '#Header 1' to '# Header 1'. Same for "##H2" to "## H2", etc.
+        - Count number of '#' header lines
+        - Add two spaces after "< Block Quote" lines
+
     - Second pass to insert '{% include toc.md %}' at paragraph # (TOC_LOC)
     - Anytime a line is inserted, loop through following header_index []
         entries and bump index number up by 1
@@ -379,7 +461,13 @@ for row in data:
     header_count = 0        # How many headers were found in blog post
     paragraph_count = 0     # How many paragraphs (includes headers) in post
     in_code_block = False   # In a code block # Header formatting is skipped
+    ''' TODO:   ```` starts a code block then ``` doesn't end it. So instead
+                    of True/False use backtick count to start and match same
+                    count to end the code block. Ignore backticks less than 
+                Four leading spaces indicates code block or indent under item 
+    '''
     toc_index = None        # Position to insert within md_new string
+    force_end_line = False  # Did we force an empty blank line at end?
 
     if row[SCORE] != '':
         score = int(row[SCORE])
@@ -418,14 +506,24 @@ for row in data:
     #    print('tags before:', works)
     #    print('tags after: ', tags)
 
-    # Older posts could have "#HEADER" instead of "# HEADER" insert space
-    # Posts with block quotes ('>') need two spaces at the end of the line
-    #  for proper HTML conversion from Markdown
-    original_md = row[MARKDOWN]
-    new_md = ""
-    line_count = 0
-    for line in original_md.splitlines():
+    lines = row[MARKDOWN].splitlines()
+    line_count = len(lines)
+    if lines[line_count - 1] != "":
+        lines.append("")
         line_count += 1
+        force_end_line = True
+
+    ''' Pass #1: Count line types '''
+    for i, line in enumerate(lines):
+        check_code_block(line)      # Turn off formatting when in code block
+        line = header_space(line)   # Formatting for #Header or # Header lines
+        line = block_quote(line)    # Formatting for block quotes
+        check_paragraph(line)       # Check if markdown paragraph (empty line)
+        lines[i] = line             # Stuff back any changes made
+
+    ''' Pass #2: Generate new markdown (kramdown) '''
+    new_md = ""
+    for line in lines:
         check_code_block(line)      # Turn off formatting when in code block
         line = header_space(line)   # Formatting for #Header or # Header lines
         line = block_quote(line)    # Formatting for block quotes
