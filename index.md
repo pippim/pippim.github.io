@@ -193,7 +193,7 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 
 9. Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
 
-10. Pippim converts Stack Exchange Question tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `Tags: [Tag1 Tag2 Tag3]` for Jekyll.
+10. Pippim converts Stack Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll **front matter**.
 
 11. Pippim setups the Jekyll **front matter** as required for Title and sets the blog filename as expected. However it also allows custom **front matter** for URL, Votes, Last Edit Date, etc.
 
