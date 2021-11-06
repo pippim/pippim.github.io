@@ -348,13 +348,4 @@ def dump(r):
           '  |  Accepted:', r[ACCEPTED], '\n')
 ```
 
-Footer
-=
-
-Sub-Footer
--
-
-### Sub-Sub-Footer
-
-Temporary test for 
 <a id="hdr10"></a>
