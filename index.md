@@ -135,11 +135,11 @@ Other Pippim programs use *APIs*. Examples are **bserve** to get gmail messages,
 
 This Pippim website creates 2,000 blog posts using a different technique than *Web Scraping* or *REST APIs*, called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work!***. You do have to do the first two steps below:
 
-1. The first step is to run this [Stack Exchange Data Explorer query](https://meta.stackexchange.com/a/371435/366359).
+1. The first step is to run a [Stack Exchange Data Explorer query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s?AccountId=4775729). Many thanks to the the query's [Author](https://meta.stackexchange.com/a/371435/366359).
 
-2. Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
+2. Next a Python program called `stack-blog-post.py` is run. It does all the magic described below. This program was extensively debugged and tested to work on Pippim's markdown answers in Stack Exchange. Note that your markdown answers might be using extra features not tested.
 
-3. Pippim adds navigation bar buttons (Top, ToS, ToC and Skip) by putting HTML code into the markdown files. Then HTML code controls jumping to tags when a button is clicked. Here's an easy to read example of the code:
+3. Pippim adds navigation bar buttons (Top, ToS, ToC and Skip) by putting HTML code into the markdown files. Then HTML code controls jumping to id tags when a button is clicked. Here's an easy-to-read example of the HTML code:
   
     ``` html
     # Introduction
@@ -159,7 +159,7 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
     Get in touch with pippim by sending an email. You can also...
     ```
 
-4. In the markdown file that `stack-to-blog.py` creates, the HTML id tag and navigation bar buttons aren't as easy to read but do the same thing:
+4. In the markdown file that `stack-to-blog.py` creates, the HTML id tag and navigation bar buttons aren't as easy to read but accomplish the same task:
 
     ``` html
     <a id="hdr2"></a>
@@ -220,9 +220,11 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 
 9. Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
 
-10. Pippim converts Stack Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll *front matter*.
+10. Alternate H1 markdown "Header 1" line followed by "==" line are converted to "# Header 1". Alternate H2 markdown "Header 2" line followed by "-- line" are converted to "## Header 2". Consequently the trailing "==" or "--" lines are converted to blank lines.
 
-11. Pippim setups the Jekyll front matter as required for Title and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
+11. Pippim converts Stack Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll *front matter*.
+
+12. Pippim setups the Jekyll front matter as required for Title and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
 
 A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
 
