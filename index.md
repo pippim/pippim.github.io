@@ -17,7 +17,7 @@ Welcome to Pippim. A collection of questions and answers about using your comput
 
 ## Navigation Buttons
 
-In this section we will discuss the page navigation buttons on the top of each page. Then we will discuss the Section Navigation Button Bar that appears at the top of major sections.
+In this section we will discuss the *Page Navigation Buttons* that appear on the top of each page. Then we will discuss the *Section Navigation Buttons* that can appear at the top of major sections.
 
 ### Page Navigation Buttons
 
@@ -83,7 +83,8 @@ For Pippim programs on Github Repos, you can go directly to the repository and p
 ---
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
-# Github Pages
+Github Pages
+=
 
 This website was created on **Github Pages**. You can download (or simply view) this website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on Github Pages"). This current page for example you can find in the markdown file called `index.md`.
 
@@ -218,9 +219,9 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 
 9. Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
 
-10. Pippim converts Stack Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll **front matter**.
+10. Pippim converts Stack Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll *front matter*.
 
-11. Pippim setups the Jekyll **front matter** as required for Title and sets the blog filename as expected. However it also allows custom **front matter** for URL, Votes, Last Edit Date, etc.
+11. Pippim setups the Jekyll front matter as required for Title and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
 
 A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
 
@@ -270,7 +271,8 @@ To get a Table of Contents (TOC) in any website page, insert a liquid tag where 
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-## Jekyll Themes
+Jekyll Themes
+--
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pippim/pippim.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
@@ -280,6 +282,10 @@ To see the current Jekyll, Sass, Rouge version numbers, etc. used by **Github Pa
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
 
 ## Images, Javascript, CSS and HTML
+
+It is important to follow these instructions to setup your site: [Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
+
+Otherwise Jekyll documentation itself could break your Github Pages theme you've chosen. For example, `_layouts/default.html` needs to be copied from the theme to make significant changes to the theme.
 
 These are the file types in the pippim website:
 
@@ -343,10 +349,6 @@ $ tree
 ## Python Program `stack-to-blog.py` Snippet
 
 To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is a small snippet of that program:
-
-Note it is important to follow these instructions to setup your site: [Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
-
-Otherwise Jekyll documentation itself could break your Github Pages theme you've chosen. For example, `_layouts/default.html` needs to be copied from your theme!
 
 Here is a small snippet of the Python program `stack-to-blog.py`:
 
