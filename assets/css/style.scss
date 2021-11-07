@@ -71,7 +71,7 @@ $header-bg-color-secondary: #155799 !default;
 
   @include large {
     padding: 1.1rem 1rem;
-    top: 0.1rem;  // Force buttons down a bit for vertical centering
+    top: 0.3rem;  // Force buttons down a bit for vertical centering
   }
 
   @include medium {
@@ -91,30 +91,6 @@ $header-bg-color-secondary: #155799 !default;
     }
   }
 }
-
-// Comment out out .container function which probably isn't needed. Just a test
-//.container {
-  // position: sticky;  // Temporary stop from scrolling off because it is underneath other elments
-  // position: relative;  // Maybe something needed when sticky comment out
-//  position: absolute;  // Maybe something needed when sticky comment out
-//  padding-top: 20px;  // Cayman
-//  margin: 0 auto;
-//  width: 100%;
-//  text-align: center;
-//}
-
-// Comment out out span function which probably isn't needed. Just a test
-//span {
-  // display: block;  // messes up markdown: https://github.com/jekyll/jekyll/issues/8868#issuecomment-959337744
-  // margin-top: 2rem;  //   "
-  // font-size: .7rem;  //   "
-//  color: #777;
-//  a {
-    // font-size: .7rem;  //   "
-//    color: #999;
-//    text-decoration: underline;
-//  }
-//}
 
 .hdr-bar {
   display: block;
