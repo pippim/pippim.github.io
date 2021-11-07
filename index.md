@@ -24,7 +24,7 @@ The top of each page contains navigation buttons to take you to other pages:
 
 - <kbd>📧 Email</kbd> lets you send an email to Pippim.
 
-> ***BEWARE:*** When you click a button to go to a page, that button will disappear because the page you are on will never show the button for that page. This was done to limit number of buttons on mobile user screens. It deviates from traditional website design as of November 2, 2021.
+> ***NOTE:*** When you click a button to go to a page, that button will disappear and be replace by another. The page you are currently on will not be displayed. This was done to limit number of buttons on mobile user screens. It deviates from traditional website design as of November 2, 2021.
 
 *Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
 
@@ -45,6 +45,10 @@ The top of major sections contain navigation buttons to take you to other sectio
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
 ## Get in touch
 
+There are many ways of getting in touch with Pippim. The conventional way via email and on other websites. The direct method on Stack Exchange Answers or Github Repos.
+
+### The conventional way of getting in touch
+
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
 
 - Click this link to: [📧 Send an Email to pippim](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com")
@@ -53,10 +57,17 @@ Get in touch with pippim by sending an email. You can also visit the other pippi
 
 ### Leave a comment / question at the source
 
+Leaving a comment or question at the source such as Stack Exchange answer or Github Repo saves you from explaining what your communicadtion is referring to.
+
+#### Stack Exchange Answers (Ask Ubuntu)
+
 ![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: style="float: left" height="25%" width="25%"}{:class="img-responsive"}
 You can leave a comment or question where the Stack Exchange answer appears. Each answer on this website here has a direct link to the original answer on Stack Exchage.
 
-For Pippim programs on Github, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.  *Note: Not all new feature requests can be done for free.*
+#### Github Repos
+
+![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="25%" width="25%"}{:class="img-responsive"}
+For Pippim programs on Github Repos, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.
 
 ---
 <a id="hdr3"></a>
