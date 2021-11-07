@@ -12,12 +12,14 @@ layout: default
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
 
+*Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
+<br clear="left"/>
+
+## Navigation Buttons
+
 In this section we will discuss the page navigation buttons on the top of each page. Then we will discuss the Section Navigation Button Bar that appears at the top of major sections.
 
-*Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
-
-<br clear="left"/>
-## Page navigation buttons
+### Page Navigation Buttons
 
 The top of each page contains navigation buttons to take you to other pages:
 
@@ -33,7 +35,7 @@ The top of each page contains navigation buttons to take you to other pages:
 
 > ***NOTE:*** When you click a button to go to a page, that button will disappear and be replace by another. The page you are currently on will not be displayed. This was done to limit number of buttons on mobile user screens. It deviates from traditional website design as of November 2, 2021.
 
-## Section navigation button bar
+### Section Navigation Buttons
 
 The top of major sections contain navigation buttons to take you to other sections:
 
@@ -48,11 +50,11 @@ The top of major sections contain navigation buttons to take you to other sectio
 ---
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
-## Get in touch
+## Get in Touch
 
 There are many ways of getting in touch with Pippim. The conventional way via email and on other websites. The direct method on Stack Exchange Answers or Github Repos.
 
-### The conventional way of getting in touch
+### The Conventional Way of Getting in Touch
 
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
 
@@ -60,7 +62,7 @@ Get in touch with pippim by sending an email. You can also visit the other pippi
 
 - Click this link to visit the pippim website on Google Sites: [www.pippim.com](https://pippim.com "Visit www.pippim.com")
 
-### Leave a comment / question at the source
+### Leave a Comment / Question at The Source
 
 Leaving a comment or question at the source such as Stack Exchange answer or Github Repo saves you from explaining what your communicadtion is referring to.
 
@@ -125,7 +127,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ## Convert Stack Exchange Q&A to Jekyll Blog Post
 
-Some Pippim programs use *Web Scraping*. Examples are **Mr. Roboto** to get price changes, **eyesome** to get your sunrise/sunset times and **mserve** to get music lyrics. 
+Some Pippim programs use *Web Scraping*. Examples are **Roboto** to get price changes, **eyesome** to get sunrise/sunset times and **mserve** to get music lyrics. 
 
 Other Pippim programs use *APIs*. Examples are **bserve** to get gmail messages, **tvpowered** to monitor TV remote power button to put your system to sleep and **mserve** to get CD Audio track names and album covert art images. 
 
@@ -225,7 +227,7 @@ A preview of `stack-to-blog.py` is presented a few sections below and the full p
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
 
-## Table of Contents support
+## Generate the Table of Contents
 
 All markdown headers with `#`, `##` and `###`, etc. are used to create the **Table of Contents** (TOC). A little bit of one-time prep work is required for TOC support. For example, the file `_sass/toc.scss` is setup with:
 
@@ -290,7 +292,7 @@ These are the file types in the pippim website:
 - HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory.
 - As of November 4, 2021 this website doesn't include and **Javascript** but typically you would place those files in `assets/js/`.
 
-### Pippim website directory tree
+### Pippim Website Directory Tree
 
 The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
 
@@ -338,7 +340,7 @@ $ tree
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
-## Python program stack-to-blog.py
+## Python Program `stack-to-blog.py` Snippet
 
 To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is a small snippet of that program:
 
