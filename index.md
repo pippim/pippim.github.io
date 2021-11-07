@@ -53,7 +53,7 @@ Get in touch with pippim by sending an email. You can also visit the other pippi
 
 ### Leave a comment / question at the source
 
-![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
+![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: style="float: left" height="25%" width="25%"}{:class="img-responsive"}
 You can leave a comment or question where the Stack Exchange answer appears. Each answer on this website here has a direct link to the original answer on Stack Exchage.
 
 For Pippim programs on Github, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.  *Note: Not all new feature requests can be done for free.*
