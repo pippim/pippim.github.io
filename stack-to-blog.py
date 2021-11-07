@@ -81,30 +81,29 @@ RANDOM_LIMIT = 10           # On initial trials limit the number of blog posts
 PRINT_RANDOM = True         # Print out matching random record found (10 lines)
 OUTPUT_DIR = "_posts/"      # Subdirectory name. Use "./" for current directory
 QUESTIONS = False           # Don't upload questions
-VOTES = 2                   # Answers need at least 2 votes to qualify
-ACCEPTED = True             # All accepted answers are uploaded
+VOTE_QUALIFIER = 2          # Answers need at least 2 votes to qualify
+ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
+# Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
 
 ''' Table of Contents (TOC) options. '''
 CONTENTS = "{% TOC %}"      # If TOC not wanted, set to None
 TOC_HDR_MIN = 6             # Number of Headers required to qualify TOC insert
-TOC_HDR_LEVEL = 2           # Only include TOC headers with "#" or "##"
 TOC_LOC = 2                 # Put TOC before second second paragraph
 
 NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
-''' None = No navigation bar
-    1    = single line. EG <a id=... </div>
-    2    = two lines. EG <a id= then new line then with <div>...</div>
-    3    = Option 2 plus empty (blank) line above for readability
-    4    = Option 3 plus empty (blank) line above for even more readability
-    5    = Option 4 plus comment for ultimate readability
+''' 0 = No navigation bar
+    1 = single line. EG <a id=... </div>
+    2 = two lines. EG <a id= then new line then with <div>...</div>
+    3 = Option 2 plus empty (blank) line above for readability
+    4 = Option 3 plus empty (blank) line above for even more readability
+    5 = Option 4 plus comment for ultimate readability
 
     Note: Markdown compresses all blank lines into a single blank line between
           paragraphs. HTML code inserted simply counts as another blank line to
           be compressed into a single blank line.
 '''
-NAV_BAR_SEP = True          # Separator line before Navigation bar?
-NAV_BAR_LEVEL = 1           # Only for "#" or "==" headers. Not "##" or "--"
-NAV_FORCE_TOC = True        # Force TOC to navigation bar even if "##" level
+NAV_BAR_LEVEL = 2           # Only for "#" or "##". Not for "###", "####", etc.
+NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 
 ''' TODO: Test Stack Exchange navigation bar for a long answer:
 
@@ -228,17 +227,25 @@ total_paragraphs = 0        # How many paragraphs are there?
 total_code_blocks = 0       # How many code blocks are there?
 total_code_block_lines = 0  # How many lines are inside code blocks?
 total_pre_codes = 0         # How many times does <pre><code> appear?
+total_header_levels = [0, 0, 0, 0, 0, 0]
+total_alternate_h1 = 0      # Alternate H1 lines followed by "=="
+total_alternate_h2 = 0      # Alternate H2 lines followed by "--"
 
 ''' Must be reinitialize between blog posts
     TODO: Put into class with init()
 '''
 contents = ""               # Not used, placeholder
 blog_filename = ""          # YYYY-MM-DD-blog-title.md
+lines = []                  # Markdown lines list being processed
+curr_index = 0              # Current line index within lines []
 header_count = 0            # How many headers were found in blog post
+alternate_h1 = 0            # Alternate H1 lines followed by "=="
+alternate_h2 = 0            # Alternate H2 lines followed by "--"
+''' Counts of header levels - H1, H2 ... H6 '''
+header_levels = [0, 0, 0, 0, 0, 0]
 paragraph_count = 0         # How many paragraphs in post last one not counted
 in_code_block = False       # Are we in a code block? Then no # Header formatting
 image_links = []            # Links to images found at bottom of SE posts
-toc_index = None            # md_new position
 
 
 def dump(r):
@@ -261,22 +268,28 @@ def dump(r):
     print('Created:', r[CREATED], '  |  Tags:', r[TAGS])
     print('Edited: ', r[LAST_EDIT], '  |  Edited by:', r[EDITED_BY])
     print('Votes:  ', r[SCORE], '  |  Views:', r[VIEWS], '  |  Answers:', r[ANSWERS],
-          '  |  Accepted:', r[ACCEPTED], '\n')
+          '  |  Accepted:', r[ACCEPTED])
+    print('Alternate H1:', alternate_h1, '  |  Alternate H2:', alternate_h2,
+          '  |  6 Header level counts', header_levels, '\n')
 
 
 def header_space(ln):
     """ Add space after # for headers if necessary
 
-        Count the number of headers to header_count
-
-        Assign HTML tag <a id="hdr9"></a>
+        Count the number of headers to header_count and header_levels
 
         If inside fenced code block, ignore # lines and don't count as header.
 
+        Convert alternate H1 and H2 ('==', '--' line follows) to # and ##.
+            This will simply things during second pass when navigation bar
+            buttons need to be inserted.
     """
     global total_header_spaces, header_count, total_code_block_lines
+    global lines, curr_index, header_levels, total_header_levels
+    global alternate_h1, total_alternate_h1, alternate_h2, total_alternate_h2
 
     if in_code_block:
+        ''' Note only header_spaces() function will increment count '''
         total_code_block_lines += 1
         return ln
 
@@ -292,10 +305,52 @@ def header_space(ln):
             total_header_spaces += 1
             #print('After forcing:   ', hash_count, ln)
 
-        # Append HTML header ID. EG: <a> id="hdr9"></a>
-        if hash_count <= TOC_HDR_LEVEL:
-            ln = ln + '<a id="hdr' + str(header_count) + '"></a>'
-            # Second pass will insert lines to GOTO this "id" name
+        # Increment count at level
+        header_levels[hash_count - 1] += 1
+        total_header_levels[hash_count - 1] += 1
+
+    elif curr_index == line_count - 1:
+        pass  # Don't go past size of list
+
+    # If current line is empty or starts with < (HTML) skip alternate test
+    elif ln == "" or ln[0:1] == "<":
+        pass
+
+    elif lines[curr_index + 1][0:1] == "=":
+        ''' This is an H1 Line because next line is "=="
+        '''
+        header_count += 1   # For current post, reset between posts
+        alternate_h1 += 1
+        total_alternate_h1 += 1
+        ln = "# " + ln
+        lines[curr_index + 1] = ""  # Blank out "=="
+        # Increment count at level
+        header_levels[0] += 1
+        total_header_levels[0] += 1
+
+    elif lines[curr_index + 1][0:2] == "--":
+        ''' This is an H2 Line because next line is "--"
+            NOTE: Kramdown requires two "--" and a single one won't do.
+        '''
+        #print(ln)  # Uncomment this and next 2 lines to test alternate H2
+        #print(lines[curr_index + 1])
+        #print(row[URL])
+
+        header_count += 1   # For current post, reset between posts
+        alternate_h2 += 1
+        total_alternate_h2 += 1
+        ln = "## " + ln
+        lines[curr_index + 1] = ""  # Blank out "--"
+        # Increment count at level
+        header_levels[1] += 1
+        total_header_levels[1] += 1
+
+    # Append HTML header ID. EG: <a> id="hdr9"></a>
+    ''' Move this to second pass
+    if hash_count <= TOC_HDR_LEVEL:
+        ln = ln + '<a id="hdr' + str(header_count) + '"></a>'
+        # Second pass will insert lines to GOTO this "id" name
+    '''
     return ln
 
 
@@ -337,7 +392,22 @@ def check_code_block(ln):
             ends with </code></pre>
      """
     global in_code_block, total_code_blocks
-    if ln[0:3] == "```":
+    ''' Code blocks may be indented so left strip spaces before test
+    
+        TODO: count number of backticks that initiate a code block.
+              For example ```` (4) can start a code block then if ``` (3)
+              appears it doesn't terminate code block but is interpreted
+              literally as backticks. EG
+              
+              This is an example of using fenced code backticks:
+              
+              ````
+              ``` html
+              <element code>Stuff stuff stuff</element code>
+              ```
+              ```` 
+    '''
+    if ln.lstrip()[0:3] == "```":
         if in_code_block is False:
             total_code_blocks += 1   # For all posts
             in_code_block = True
@@ -350,6 +420,7 @@ def check_pre_code(ln):
     """
     global total_pre_codes
     if ln.startswith("<pre><code>") or ln.startswith("<code>"):
+        ''' NOT SUPPORTED. Print line to terminal '''
         print('===========:', ln)
         total_pre_codes += 1
 
@@ -363,17 +434,14 @@ def check_image_link(ln):
        We need to take references to images in the format [![Image name][1]][1] and
         convert them to: ![Image name](full_URL_name)
     """
+    ''' This probably isn't necessary as per Stack Overflow answer:
+        https://stackoverflow.com/questions/69783520/convert-stack-exchange-markdown
+    '''
     pass
 
 
 def check_url_link(ln):
-    """ Image links appear at the bottom of SE posts in this format:
-       __[1]: https://www.reddit.com/r/gigabytegaming/comments/90jze6/aero_15x_v8_annoyances/
-
-       Where __ are two leading spaces
-
-       We need to take references to images in the format [![Image name][1]][1] and
-        convert them to: ![Image name](full_URL_name)
+    """ Future check
     """
     pass
 
@@ -435,6 +503,37 @@ def check_contents(ln):
     return ln
 
 
+def navigation_bar(hdr_id):
+    """ Return Navigation Bar. Verbosity driven by NAV_BAR_OPT """
+    bar = ""
+    if NAV_BAR_OPT >= 3:
+        bar = "\n"
+
+    bar = bar + '<a id="hdr' + str(hdr_id) + '"></a>'
+    if NAV_BAR_OPT >= 2:
+        bar = bar + "\n"
+
+    # Calculate jump points  TODO: Need Toc point!!!
+    hdr_ToS = hdr_id - 1
+    hdr_Skip = hdr_id + 1
+    bar = bar + '<div class="hdr-bar">'
+    # If first Navigation Bar then no Top or Tos
+    if hdr_id != 1:
+        bar = bar + '  <a href="#" class ="hdr-btn">Top</a>'
+        bar = bar + '  <a href="#hdr"' + str(hdr_ToS) + ' class ="hdr-btn">Top</a>'
+
+    # TODO: Need the REAL hdr_TOC number
+    hdr_TOC = 2
+
+    # TOC and Skip buttons will always appear
+    bar = bar + '  <a href="#hdr"' + str(hdr_TOC) + ' class ="hdr-btn">ToC</a>'
+    bar = bar + '  <a href="#hdr"' + str(hdr_Skip) + ' class ="hdr-btn">Skip</a>'
+
+    bar = bar + '</div>'
+
+    return bar
+
+
 ''' Main loop to process All query records
     - If RANDOM_LIMIT is used then only output matching random_rec_nos []
     - Match criteria for answer up votes or accepted check mark
@@ -457,24 +556,23 @@ def check_contents(ln):
 for row in data:
 
     row_number += 1
+    ''' Reset counters for each stack exchange Q&A '''
     save_blog = True        # Default until a condition turns it off
+    lines = []              # Markdown lines list being processed
+    curr_index = 0          # Current line index within lines []
     header_count = 0        # How many headers were found in blog post
+    ''' Counts of header levels - H1, H2 ... H6 '''
+    header_levels = [0, 0, 0, 0, 0, 0]
     paragraph_count = 0     # How many paragraphs (includes headers) in post
     in_code_block = False   # In a code block # Header formatting is skipped
-    ''' TODO:   ```` starts a code block then ``` doesn't end it. So instead
-                    of True/False use backtick count to start and match same
-                    count to end the code block. Ignore backticks less than 
-                Four leading spaces indicates code block or indent under item 
-    '''
-    toc_index = None        # Position to insert within md_new string
-    force_end_line = False  # Did we force an empty blank line at end?
+    force_end_line = False  # Did Pass #1 force an empty blank line at end?
 
     if row[SCORE] != '':
         score = int(row[SCORE])
     else:
         score = 0
     total_votes += score    # score is up-votes - down-votes can be negative
-    if score < VOTES:
+    if score < VOTE_QUALIFIER:
         save_blog = False   # Below up-vote requirement
 
     if row[TYPE] == "Question":
@@ -490,7 +588,7 @@ for row in data:
     if row[ACCEPTED] != '':
         #dump(row)
         accepted_count += 1
-        if ACCEPTED:
+        if ACCEPTED_QUALIFIER:
             save_blog = True  # Previous tests may have turned off
 
     # SE tags have the format: "<tag1><tag2><tag3>"
@@ -514,20 +612,70 @@ for row in data:
         force_end_line = True
 
     ''' Pass #1: Count line types '''
-    for i, line in enumerate(lines):
+    for curr_index, line in enumerate(lines):
         check_code_block(line)      # Turn off formatting when in code block
         line = header_space(line)   # Formatting for #Header or # Header lines
         line = block_quote(line)    # Formatting for block quotes
         check_paragraph(line)       # Check if markdown paragraph (empty line)
-        lines[i] = line             # Stuff back any changes made
+        lines[curr_index] = line     # Stuff back any changes made
+
+    ''' Does this answer qualify for TOC or Navigation Bar?
+    
+        COMMENTS COPIED FROM ABOVE:
+        
+        ' Table of Contents (TOC) options. '
+CONTENTS = "{% TOC %}"      # If TOC not wanted, set to None
+TOC_HDR_MIN = 6             # Number of Headers required to qualify TOC insert
+TOC_LOC = 2                 # Put TOC before second second paragraph
+
+NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
+    0 = No navigation bar
+    1 = single line. EG <a id=... </div>
+    2 = two lines. EG <a id= then new line then with <div>...</div>
+    3 = Option 2 plus empty (blank) line above for readability
+    4 = Option 3 plus empty (blank) line above for even more readability
+    5 = Option 4 plus comment for ultimate readability
+
+    Note: Markdown compresses all blank lines into a single blank line between
+          paragraphs. HTML code inserted simply counts as another blank line to
+          be compressed into a single blank line.
+NAV_BAR_LEVEL = 2           # Put before "#" or "##" only. Not before "###"
+NAV_BAR_MIN = 2             # Minimum of 2 "#" or "##" for Navigation bar
+NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
+ 
+    '''
+
+    ''' Reset counts of header levels - H1, H2 ... H6 '''
+    header_levels = [0, 0, 0, 0, 0, 0]
+    paragraph_count = 0     # How many paragraphs (includes headers) in post
+    in_code_block = False   # In a code block # Header formatting is skipped
+
+    insert_toc = false
+    if CONTENTS is not None:
+        if header_count >= TOC_HDR_MIN:
+            insert_toc = True
+
+    insert_nav_bar = False
+    if NAV_BAR_OPT > 0:
+        qualifier = sum(header_levels[:NAV_BAR_LEVEL])
+        if qualifier >= NAV_BAR_MIN:
+            insert_nav_bar = True
 
     ''' Pass #2: Generate new markdown (kramdown) '''
     new_md = ""
     for line in lines:
         check_code_block(line)      # Turn off formatting when in code block
-        line = header_space(line)   # Formatting for #Header or # Header lines
-        line = block_quote(line)    # Formatting for block quotes
-        check_paragraph(line)       # Check if markdown paragraph (empty line)
+        if insert_nav_bar:
+            old_header_levels = list(header_levels)
+            # TODO: reverse doubling up totals
+            line = header_space(line)   # Formatting for #Header or # Header lines
+            sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
+            sum2 = sum(header_levels[:NAV_BAR_LEVEL])
+            if sum1 != sum2:
+                new_md = new_md + navigation_bar(sum2)
+
+        # line = block_quote(line)    # Formatting for block quotes
+        # check_paragraph(line)       # Check if markdown paragraph (empty line)
         new_md = new_md + line + '\n'
 
     total_lines += line_count
@@ -544,8 +692,8 @@ for row in data:
         if save_blog is True:
             save_blog_count += 1
             print('Random upload row number:', row_number)
-            print(blog_filename, "=========== CONTENTS BELOW ==========:")
-            print(new_md)
+            print('blog_filename:', blog_filename)
+            # print(new_md)
             dump(row)
         else:
             # This random record doesn't qualify so replace
@@ -557,13 +705,15 @@ for row in data:
 
 
 print('\n==============   T O T A L S   ================')
-print('accepted_count:', accepted_count, 'total_votes:', total_votes)
-print('question_count:', question_count, 'answer_count:', answer_count,
-      'unknown_count:', unknown_count)
-print('total_lines:', total_lines, 'total_header_spaces:', total_header_spaces,
-      'total_quote_spaces:', total_quote_spaces)
-print('total_paragraphs:', total_paragraphs, "total_code_blocks:",
-      total_code_blocks, 'total_code_block_lines:', total_code_block_lines)
-print('total_pre_codes:', total_pre_codes)
+print('accepted_count:', accepted_count, '  |  total_votes:', total_votes)
+print('question_count:', question_count, '  |  answer_count:', answer_count,
+      '  |  unknown_count:', unknown_count)
+print('total_lines:', total_lines, '  |  total_header_spaces:', total_header_spaces,
+      '  |  total_quote_spaces:', total_quote_spaces)
+print('total_paragraphs:', total_paragraphs, "  |  total_code_blocks:",
+      total_code_blocks, '  |  total_code_block_lines:', total_code_block_lines)
+print('total_pre_codes:', total_pre_codes, '<--- WARNING: Not Supported!')
+print('Alternate H1:', total_alternate_h1, '  |  Alternate H2:', total_alternate_h2,
+      '  |  6 Header level counts', total_header_levels)
 
 # End of stack-to-blog.py
