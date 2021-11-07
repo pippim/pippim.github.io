@@ -83,6 +83,7 @@ For Pippim programs on Github Repos, you can go directly to the repository and p
 ---
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
+
 Github Pages
 ==
 
