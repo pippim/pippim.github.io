@@ -12,6 +12,11 @@ layout: default
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
 
+In this section we will discuss the page navigation buttons on the top of each page. Then we will discuss the Section Navigation Button Bar that appears at the top of major sections.
+
+*Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
+
+<br clear="left"/>
 ## Page navigation buttons
 
 The top of each page contains navigation buttons to take you to other pages:
@@ -28,9 +33,7 @@ The top of each page contains navigation buttons to take you to other pages:
 
 > ***NOTE:*** When you click a button to go to a page, that button will disappear and be replace by another. The page you are currently on will not be displayed. This was done to limit number of buttons on mobile user screens. It deviates from traditional website design as of November 2, 2021.
 
-*Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
-
-## Section navigation buttons
+## Section navigation button bar
 
 The top of major sections contain navigation buttons to take you to other sections:
 
@@ -132,7 +135,7 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 
 2. Next a Python program called `stack-blog-post.py` is run. It does all the magic described below.
 
-3. Pippim adds the navigation bar (Top, ToS, ToC and Skip) by putting HTML tags into the markdown files. Then HTML code controls jumping to tags when a button is clicked. Here's an easy to read example of the code:
+3. Pippim adds navigation bar buttons (Top, ToS, ToC and Skip) by putting HTML code into the markdown files. Then HTML code controls jumping to tags when a button is clicked. Here's an easy to read example of the code:
   
     ``` html
     # Introduction
@@ -152,7 +155,7 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
     Get in touch with pippim by sending an email. You can also...
     ```
 
-4. In the markdown file that `stack-to-blog.py` creates the real HTML navigation buttons and id tag look like this:
+4. In the markdown file that `stack-to-blog.py` creates, the HTML id tag and navigation bar buttons aren't as easy to read but do the same thing:
 
     ``` html
     <a id="hdr2"></a>
@@ -161,17 +164,17 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
     ## Get in touch
     ```
 
-5. Two extra spaces are added between HTML elements for readability in HTML and some of the spacing between buttons. A blank line is added before and after the HTML button bar for readability. Note however the markdown interpreter condenses multiple blank lines into a single blank line. The single HTML command line is also treated like a blank markdown line.
+5. Two extra spaces are added between HTML elements for readability and some extra spacing between buttons. A blank line is added before the HTML id tag and after the HTML button bar for readability. Because the markdown interpreter condenses multiple blank lines into a single blank line, the HTML code has no effect on line spacing.
 
-6. If you would like to modify the button properties (position, color, size, hover, etc), `hdr-bar` and `hdr-btn` are defined in `assets/css/style.scss`:
+6. If you would like to modify the button properties (position, color, size, hover, etc), the header button bar (`hdr-bar`) and individual buttons (`hdr-btn`) are defined in filename `assets/css/style.scss`:
 
     ``` scss
     .hdr-bar {
       display: block;
       position: relative;
       width: 100%;
-      height: .5rem;            // Allow bit extra for button box height
-      text-align: right;        // Don't use "float: right;" that breaks rendering order
+      height: .5rem;            // Add bit extra for button box height
+      text-align: right;        // Don't use "float: right;" that renders backwards
       &:before {
           content: "";
           display: block;
@@ -201,11 +204,11 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 > line 1
 > line 2
 ```
-    - If they were not modified they would display on Github Pages Markdown as:
+    7.1. If they were not modified they would display on Github Pages Markdown as:
     > line 1
     > line 2
 
-    - Pippim appends two spaces to the end of block quotes in Stack Exhange answers so they render properly:
+    7.2. Pippim appends two spaces to the end of block quotes in Stack Exhange answers so they render properly:
     > line 1  
     > line 2  
 
