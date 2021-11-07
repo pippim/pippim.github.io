@@ -3,9 +3,11 @@ layout: default
 ---
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
+
 <!-- Define hdr1 id with ToC and Skip navigation buttons -->
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
+
 # Introduction
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
@@ -62,12 +64,16 @@ Leaving a comment or question at the source such as Stack Exchange answer or Git
 #### Stack Exchange Answers (Ask Ubuntu)
 
 ![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: style="float: left" height="25%" width="25%"}{:class="img-responsive"}
+
 You can leave a comment or question where the Stack Exchange answer appears. Each answer on this website here has a direct link to the original answer on Stack Exchage.
+<br clear="left"/>
 
 #### Github Repos
 
 ![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="25%" width="25%"}{:class="img-responsive"}
+
 For Pippim programs on Github Repos, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.
+<br clear="left"/>
 
 ---
 <a id="hdr3"></a>
