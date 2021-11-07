@@ -70,7 +70,8 @@ $header-bg-color-secondary: #155799 !default;
   }
 
   @include large {
-    padding-top: 1.3rem;
+    padding: 1.1rem 1rem;
+    top: 0.1rem;  // Force buttons down a bit for vertical centering
   }
 
   @include medium {
