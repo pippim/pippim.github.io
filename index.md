@@ -43,13 +43,13 @@ The top of each page contains navigation buttons to take you to other pages:
 
 The top of major sections contain navigation buttons to take you to other sections:
 
-- <kbd>Top</kbd> - Takes you to the top of the page
+- <kbd>Top</kbd> - Displays the top of the page
 
-- <kbd>ToS</kbd> - Takes you to the top of the previous section
+- <kbd>ToS</kbd> - Displays the top of the previous section
 
-- <kbd>ToC</kbd> - Takes you to the Table of Contents
+- <kbd>ToC</kbd> - Displays the Table of Contents
 
-- <kbd>Skip</kbd> - Skips the section and takes you to the next section
+- <kbd>Skip</kbd> - Skips the section and displays the next section
 
 ---
 <a id="hdr2"></a>
@@ -127,9 +127,6 @@ Syntax highlighted code block
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
 
 ## Convert Stack Exchange Q&A to Jekyll Blog Post
 
@@ -232,8 +229,8 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 
 A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
 
 ## Generate the Table of Contents
 
@@ -272,6 +269,9 @@ To get a Table of Contents (TOC) in any website page, insert a liquid tag where 
     ```
 
 *Note:* a space was inserted above between `{` and `%` above to prevent [Jekyll's liquid processor](https://learn.cloudcannon.com/jekyll/introduction-to-liquid/) from interpreting them as a real command. Remove that space as well as the space between `%` and `}` above in real code. The TOC command is used in real markdown below and generates the actual TOC:
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
 
 {% include toc.md %}
 
