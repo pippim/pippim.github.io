@@ -221,7 +221,7 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 
 9. Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
 
-10. Alternate H1 markdown "Header 1" line followed by "==" line are converted to "# Header 1". Alternate H2 markdown "Header 2" line followed by "-- line" are converted to "## Header 2". Consequently the trailing "==" or "--" lines are converted to blank lines.
+10. The alternate H1 markdown format "`Header 1`" line followed by a "`==`" line are converted to "`# Header 1`". The alternate H2 markdown format "`Header 2`" line followed by a "`--`" line are converted to "`## Header 2`". Trailing "==" and "--" lines are converted to blank lines.
 
 11. Pippim converts Stack Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll *front matter*.
 
@@ -232,7 +232,7 @@ A preview of `stack-to-blog.py` is presented a few sections below and the full p
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
 
-## Generate the Table of Contents
+## How the Table of Contents is generated
 
 All markdown headers with `#`, `##` and `###`, etc. are used to create the **Table of Contents** (TOC). A little bit of one-time prep work is required for TOC support. For example, the file `_sass/toc.scss` is setup with:
 
