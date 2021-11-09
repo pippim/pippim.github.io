@@ -380,4 +380,8 @@ def dump(r):
           '  |  Accepted:', r[ACCEPTED], '\n')
 ```
 
+Test if three lines
+written in a row are
+merged into a single paragraph.
+
 <a id="hdr10"></a>
