@@ -38,7 +38,7 @@ That's an easy question; The Domain Name and website was created October 16, 202
 
 ## Why was Pippim created?
 
-Pippim was created to make it easier to list the free software created on AskUbuntu.com and Github.com.
+Pippim was created to make it easier to list the free software created on [AskUbuntu](www.askubuntu.com) and [Github](www.github.com).  Pippim Answers (and a small percentage of questions) ahve over **51 million** views as of November 8, 2021. With over 2,000 answers, managing them on a Pippim website just makes sense.
 
 ## How was Pippim created?
 
