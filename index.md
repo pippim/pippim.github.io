@@ -31,7 +31,7 @@ The top of each page contains navigation buttons to take you to other pages:
 
 - <kbd>❓ About</kbd> disccusses everything you want to know about Pippim. Still have questions? Just email.
 
-- <kbd>✅ Answers</kbd> to questions people have using computers. Most posts are about Linux and specifically Ubuntu.
+- <kbd>✅ Answers</kbd> to questions people have using computers. Pippim questions and answers have 51 **million** views!
 
 - <kbd>💻 Programs</kbd> are applicationss Pippim created to make your life easier.
 
