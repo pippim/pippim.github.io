@@ -257,10 +257,10 @@ Another one-time setup is the file `_includes/toc.md` containing the markdown fo
 {:toc}
 ```
 
-To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page you are reading (`index.md`) you would see the following markdown code:
+To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page you are reading, `index.md`, you would see the following markdown code:
 
 ``` html
-... on the next line and generates the **Table of Contents** you see below:
+... in real markdown below and generates the actual TOCw:
 {% raw %}
 {% include toc.md %}
 {% endraw %}    
@@ -268,8 +268,7 @@ To get a Table of Contents (TOC) in any website page, insert a liquid tag where 
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a> ... </div>
 ```
 
-
-*Note:* a space was inserted above between `{` and `%` above to prevent [Jekyll's liquid processor](https://learn.cloudcannon.com/jekyll/introduction-to-liquid/) from interpreting them as a real command. Remove that space as well as the space between `%` and `}` above in real code. The TOC command is used in real markdown below and generates the actual TOC:
+The TOC command is used in real markdown below and generates the actual TOC:
 
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
