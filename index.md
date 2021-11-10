@@ -419,8 +419,8 @@ As of November 9, 2021 the program is about
 
 When the `stack-to-blog.py` finishes a summary appears on your screen:
 
-```  css
-=================================   T O T A L S   ==================================
+```  cpp
+// =============================/   T O T A L S   \============================== \\
 accepted_count:      620  | total_votes:         7,053  | total_views:    51,804,222
 question_count:      298  | answer_count:        2,139  | unknown_count:           2
 total_headers:     3,884  | total_header_spaces:   526  | total_quote_spaces:  2,464
