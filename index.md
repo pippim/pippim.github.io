@@ -382,13 +382,13 @@ def dump(r):
 
 When the `stack-to-blog.py` finishes a summary appears on your screen:
 
-``` bash
+```  scss
 =================================   T O T A L S   ==================================
 accepted_count:      620  | total_votes:         7,053  | total_views:    51,804,222
 question_count:      298  | answer_count:        2,139  | unknown_count:           2
 total_headers:     3,884  | total_header_spaces:   526  | total_quote_spaces:  2,464
 total_lines:      93,781  | total_paragraphs:   27,199  | total_words:       536,892
-total_code_blocks:   662  | Code Block Lines:   11,243
+total_code_blocks:   662  | code_block_lines:   11,243
 total_pre_codes:       0  | Alternate H1:            0  | Alternate H2:           52
 Six Header level counts:    [1467, 1957, 452, 8, 0, 0]
 ```
