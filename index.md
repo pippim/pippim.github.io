@@ -382,7 +382,7 @@ def dump(r):
 
 When the `stack-to-blog.py` finishes a summary appears on your screen:
 
-```  html
+```  console
 =================================   T O T A L S   ==================================
 accepted_count:      620  | total_votes:         7,053  | total_views:    51,804,222
 question_count:      298  | answer_count:        2,139  | unknown_count:           2
