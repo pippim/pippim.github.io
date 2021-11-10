@@ -353,7 +353,7 @@ $ tree
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
-## Python Program (stack-to-blog.py* Overview
+## Python Program *stack-to-blog.py* Overview
 
 To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is how Jekyll front matter is controlled:
 
