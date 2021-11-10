@@ -392,7 +392,7 @@ ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
 # Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
 
 ''' Table of Contents (TOC) options. '''
-CONTENTS = "{% TOC %}"      # If TOC not wanted, set to None
+CONTENTS = "{ % TOC % }"      # If TOC not wanted, set to None
 TOC_HDR_MIN = 6             # Number of Headers required to qualify TOC insert
 TOC_LOC = 2                 # Put TOC before second second paragraph
 
