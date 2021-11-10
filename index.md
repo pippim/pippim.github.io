@@ -380,8 +380,41 @@ def dump(r):
           '  |  Accepted:', r[ACCEPTED], '\n')
 ```
 
-Test if three lines
-written in a row are
-merged into a single paragraph.
+When the `stack-to-blog.py` finishes a summary appears on your screen:
+
+``` bash
+=================================   T O T A L S   ==================================
+accepted_count:      620  | total_votes:         7,053  | total_views:    51,804,222
+question_count:      298  | answer_count:        2,139  | unknown_count:           2
+total_headers:     3,884  | total_header_spaces:   526  | total_quote_spaces:  2,464
+total_lines:      93,781  | total_paragraphs:   27,199  | total_words:       536,892
+total_code_blocks:   662  | Code Block Lines:   11,243
+total_pre_codes:       0  | Alternate H1:            0  | Alternate H2:           52
+Six Header level counts:    [1467, 1957, 452, 8, 0, 0]
+```
+
+You may have to tweak the code if your numbers are much larger than mine:
+
+``` python
+print('=================================   T O T A L S   ==================================')
+print('accepted_count:   {:>6,}'.format(accepted_count),
+      ' | total_votes:   {:>11,}'.format(total_votes),
+      ' | total_views:   {:>11,}'.format(total_views))
+print('question_count:   {:>6,}'.format(question_count),
+      ' | answer_count:       {:>6,}'.format(answer_count),
+      ' | unknown_count:      {:>6,}'.format(unknown_count))
+print('total_headers:    {:>6,}'.format(total_headers),
+      ' | total_header_spaces:{:>6,}'.format(total_header_spaces),
+      ' | total_quote_spaces: {:>6,}'.format(total_quote_spaces))
+print('total_lines: {:>11,}'.format(total_lines),
+      ' | total_paragraphs:{:>9,}'.format(total_paragraphs),
+      ' | total_words: {:>13,}'.format(total_words))
+print('total_code_blocks:{:>6,}'.format(total_code_blocks),
+      ' | Code Block Lines:  {:>7,}'.format(total_code_block_lines))
+print('total_pre_codes:  {:>6,}'.format(total_pre_codes),
+      ' | Alternate H1:       {:>6,}'.format(total_alternate_h1),
+      ' | Alternate H2:       {:>6,}'.format(total_alternate_h2))
+print('Six Header level counts:   ', total_header_levels)
+```
 
 <a id="hdr10"></a>
