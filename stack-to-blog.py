@@ -20,35 +20,22 @@
         https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s
         NOTE: Use your Stack Exchange UserID. Mine is: 4775729
 
-    The query has  been saved in pippim.github.io/StackBlogPost. First 3 lines:
-
-    -- StackBlogPost: Convert Stack Exchange Answers to Blog Posts in Jekyll
-    -- From: https://data.stackexchange.com/stackoverflow/query/edit/1492412#resultSets
-    -- AccountId: Your SE network account ID number, found in the URL of your network profile page:
+    The query has  been saved in pippim.github.io/StackBlogPost.
 
     Run the query and Save the results in CSV format as QueryResults.csv
 
     Move query results to your website folder. In Linux use:
         mv ~/Downloads/QueryResults.csv ~/website
 
-    Run stack-to-blog.py which will populate the _posts directory in the tree:
-.
-├── about.md
-├── about.md~
-├── assets
-│   ├── css
-│   │   ├── style.scss
-│   └── img
-│       ├── Blog_Project-Management-101.png
-│       ├── octojekyll-opt.jpg
-│       └── pngwing.com.png
-├── _includes
-│   └── head-custom.html
-├── index.md
-├── _posts
-├── QueryResults.csv
-├── StackBlogPost
-└── stack-to-blog.py
+    Run ~/website/stack-to-blog.py which will populate the _posts directory in the tree:
+
+    Each post file begins with:
+
+        ---
+        layout: post
+        title: "What is the question in Stack Exchange?"
+        ---
+
 
     TODO: Add front matter. Include "categories: eyesome" or "categories:
             .conkyrc" "votes: 999" - Note accepted answers have 3 added
@@ -104,11 +91,13 @@ NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
 '''
 NAV_BAR_LEVEL = 2           # Only for "#" or "##". Not for "###", "####", etc.
 NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
+NAV_BAR_MIN = 3             # Temporary. Really need minimum paragraphs too.
 
 ''' TODO: Test Stack Exchange navigation bar for a long answer:
 
     <div class="form-submit cbt d-flex gsx gs4">
-        <button id="submit-button" class="flex--item s-btn s-btn__primary s-btn__icon" type="submit" tabindex="120" autocomplete="off">
+        <button id="submit-button" class="flex--item s-btn s-btn__primary s-btn__icon" 
+        type="submit" tab_index="120" autocomplete="off">
 Post Your Answer                                        </button>
     </div>
 
@@ -189,23 +178,23 @@ that links to the original Stack Exchange answer
 
 '''
 
-FRONT_SITE = None
+FRONT_SITE = "site: "
 FRONT_POST_ID = None
-FRONT_URL = "stack_url"
+FRONT_URL = "stack_url: "
 FRONT_LINK = None
 FRONT_TYPE = None
-FRONT_TITLE = None
-FRONT_HTML = None
-FRONT_MARKDOWN = None
-FRONT_TAGS = "tags"
+FRONT_TITLE = "title: "         # Always appears like this in front matter
+FRONT_HTML = None               # Never put into front matter
+FRONT_MARKDOWN = None           # Never put into front matter
+FRONT_TAGS = "tags: "
 FRONT_CREATED = None
-FRONT_LAST_EDIT = "edit_date"
+FRONT_LAST_EDIT = "edit_date: "
 FRONT_EDITED_BY = None
-FRONT_SCORE = "up_votes"
+FRONT_SCORE = "votes: "
 FRONT_FAVORITES = None
-FRONT_VIEWS = None
+FRONT_VIEWS = "views: "
 FRONT_ANSWERS = None
-FRONT_ACCEPTED = None
+FRONT_ACCEPTED = "accepted: "
 FRONT_CW = None
 FRONT_CLOSED = None
 
@@ -219,11 +208,14 @@ most_lines = 0              # Lines in the longest post
 qualifying_blog_count = 0   # How many blogs could be saved
 save_blog_count = 0         # How many blogs were saved given random limit
 
+total_views = 0             # Number of times viewed
 total_votes = 0             # How many up votes across all posts
 total_lines = 0             # Total lines of all posts
 total_header_spaces = 0     # Total headers we added a space behind lsat "#"
+total_headers = 0           # Total header count
 total_quote_spaces = 0      # Total block quotes requiring two spaces at end
 total_paragraphs = 0        # How many paragraphs are there?
+total_words = 0             # How many words by splitting whitespace
 total_code_blocks = 0       # How many code blocks are there?
 total_code_block_lines = 0  # How many lines are inside code blocks?
 total_pre_codes = 0         # How many times does <pre><code> appear?
@@ -244,8 +236,11 @@ alternate_h2 = 0            # Alternate H2 lines followed by "--"
 ''' Counts of header levels - H1, H2 ... H6 '''
 header_levels = [0, 0, 0, 0, 0, 0]
 paragraph_count = 0         # How many paragraphs in post last one not counted
+word_count = 0              # How many words by splitting whitespace
 in_code_block = False       # Are we in a code block? Then no # Header formatting
 image_links = []            # Links to images found at bottom of SE posts
+''' Used for each post '''
+tags = ""                   # Front matter format: tags: TAG1 TAG2 TAG3
 
 
 def dump(r):
@@ -265,10 +260,12 @@ def dump(r):
         limit = 80
     print('MARK_DN:', r[MARKDOWN][:limit])
 
-    print('Created:', r[CREATED], '  |  Tags:', r[TAGS])
+    print('Created:', r[CREATED], '  |  Tags In:', r[TAGS], '  |  Tags Out:', tags)
     print('Edited: ', r[LAST_EDIT], '  |  Edited by:', r[EDITED_BY])
     print('Votes:  ', r[SCORE], '  |  Views:', r[VIEWS], '  |  Answers:', r[ANSWERS],
           '  |  Accepted:', r[ACCEPTED])
+    print('header_count:', header_count, '  |  paragraph_count:', paragraph_count,
+          '  |  word_count:', word_count)
     print('Alternate H1:', alternate_h1, '  |  Alternate H2:', alternate_h2,
           '  |  6 Header level counts', header_levels, '\n')
 
@@ -285,6 +282,7 @@ def header_space(ln):
             buttons need to be inserted.
     """
     global total_header_spaces, header_count, total_code_block_lines
+    global total_headers
     global lines, curr_index, header_levels, total_header_levels
     global alternate_h1, total_alternate_h1, alternate_h2, total_alternate_h2
 
@@ -296,6 +294,7 @@ def header_space(ln):
     if ln[0:1] == "#":
         #print('Found header:', ln)
         header_count += 1   # For current post, reset between posts
+        total_headers += 1
         # How many '#' are there at line start?
         hash_count = len(ln) - len(ln.lstrip('#'))
         # Is first character after "#" a space?
@@ -320,6 +319,7 @@ def header_space(ln):
         ''' This is an H1 Line because next line is "=="
         '''
         header_count += 1   # For current post, reset between posts
+        total_headers += 1
         alternate_h1 += 1
         total_alternate_h1 += 1
         ln = "# " + ln
@@ -337,6 +337,7 @@ def header_space(ln):
         #print(row[URL])
 
         header_count += 1   # For current post, reset between posts
+        total_headers += 1
         alternate_h2 += 1
         total_alternate_h2 += 1
         ln = "## " + ln
@@ -375,11 +376,26 @@ def block_quote(ln):
 
 
 def check_paragraph(ln):
-    """ If line is empty it means it's a paragraph """
-    global total_paragraphs, paragraph_count
+    """ If line is empty it means it's a paragraph.  Note if line ends in
+        two spaces it forces a new line but not a paragraph break.  Also
+        note if three lines were written in a row they would be merged
+        into one paragraph.
+
+        FUTURE: The paragraph number indicates where to insert TOC.
+
+
+        Also count number of words
+    """
+    global total_paragraphs, paragraph_count, total_words, word_count
     if len(ln) == 0:
         total_paragraphs += 1   # For all posts
         paragraph_count += 1    # For current post
+
+    ''' Add to word counts '''
+    word_list = ln.split()
+    count = len(word_list)
+    word_count += count
+    total_words += count
 
 
 def check_code_block(ln):
@@ -423,34 +439,6 @@ def check_pre_code(ln):
         ''' NOT SUPPORTED. Print line to terminal '''
         print('===========:', ln)
         total_pre_codes += 1
-
-
-def check_image_link(ln):
-    """ Image links appear at the bottom of SE posts in this format:
-       __[1]: https://www.reddit.com/r/gigabytegaming/comments/90jze6/aero_15x_v8_annoyances/
-
-       Where __ are two leading spaces
-
-       We need to take references to images in the format [![Image name][1]][1] and
-        convert them to: ![Image name](full_URL_name)
-    """
-    ''' This probably isn't necessary as per Stack Overflow answer:
-        https://stackoverflow.com/questions/69783520/convert-stack-exchange-markdown
-    '''
-    pass
-
-
-def check_url_link(ln):
-    """ Future check
-    """
-    pass
-
-
-def check_language_all(ln):
-    """ Check for <!-- Language-all: lang-bash --> line
-        If it exists then following ``` lines need " bash" appended
-    """
-    pass
 
 
 def check_contents(ln):
@@ -504,7 +492,15 @@ def check_contents(ln):
 
 
 def navigation_bar(hdr_id):
-    """ Return Navigation Bar. Verbosity driven by NAV_BAR_OPT """
+    """ Return Navigation Bar. Verbosity driven by NAV_BAR_OPT
+
+        The first header doesn't contain "Top" or "ToS" because it is already
+        at the top.
+
+        The TOC header doesn't contain option for "ToC" because it is already
+        there.
+
+    """
     bar = ""
     if NAV_BAR_OPT >= 3:
         bar = "\n"
@@ -532,6 +528,49 @@ def navigation_bar(hdr_id):
     bar = bar + '</div>'
 
     return bar
+
+
+def front_matter():
+    """ Output Jekyll front matter to md string """
+    md = "---\nlayout: post\ntitle: " + r[TITLE] + '\n'
+    if FRONT_SITE is not None:
+        md = md + FRONT_SITE + r[SITE] + '\n'
+    if FRONT_URL is not None:
+        md = md + FRONT_URL + r[URL] + '\n'
+    if FRONT_POST_ID is not None:
+        md = md + FRONT_POST_ID + r[POST_ID] + '\n'
+    if FRONT_LINK is not None:
+        md = md + FRONT_LINK + r[LINK] + '\n'
+    if FRONT_TYPE is not None:
+        md = md + FRONT_TYPE + r[TYPE] + '\n'
+
+    if FRONT_TAGS is not None:
+        md = md + FRONT_TAGS + tags + '\n'
+
+    if FRONT_CREATED is not None:
+        md = md + FRONT_CREATED + r[CREATED] + '\n'
+    if FRONT_LAST_EDIT is not None:
+        md = md + FRONT_LAST_EDIT + r[LAST_EDIT] + '\n'
+    if FRONT_EDITED_BY is not None:
+        md = md + FRONT_EDITED_BY + r[EDITED_BY] + '\n'
+    if FRONT_SCORE is not None:
+        md = md + FRONT_SCORE + r[SCORE] + '\n'
+    if FRONT_FAVORITES is not None:
+        md = md + FRONT_FAVORITES + r[FAVORITES] + '\n'
+    if FRONT_VIEWS is not None:
+        md = md + FRONT_VIEWS + r[VIEWS] + '\n'
+    if FRONT_ANSWERS is not None:
+        md = md + FRONT_ANSWERS + r[ANSWERS] + '\n'
+    if FRONT_ACCEPTED is not None:
+        md = md + FRONT_ACCEPTED + r[ACCEPTED] + '\n'
+    if FRONT_CW is not None:
+        md = md + FRONT_CW + r[CW] + '\n'
+    if FRONT_CLOSED is not None:
+        md = md + FRONT_CLOSED + r[CW] + '\n'
+
+    md = md + "---\n\n"
+
+    return md
 
 
 ''' Main loop to process All query records
@@ -563,10 +602,12 @@ for row in data:
     header_count = 0        # How many headers were found in blog post
     ''' Counts of header levels - H1, H2 ... H6 '''
     header_levels = [0, 0, 0, 0, 0, 0]
-    paragraph_count = 0     # How many paragraphs (includes headers) in post
+    paragraph_count = 0     # How many paragraphs (headers count as 2) in post
+    word_count = 0          # How many words (includes "## ") in post
     in_code_block = False   # In a code block # Header formatting is skipped
     force_end_line = False  # Did Pass #1 force an empty blank line at end?
 
+    ''' SCORE = (Up Votes - Down Votes) in string format'''
     if row[SCORE] != '':
         score = int(row[SCORE])
     else:
@@ -575,6 +616,14 @@ for row in data:
     if score < VOTE_QUALIFIER:
         save_blog = False   # Below up-vote requirement
 
+    ''' VIEWS '''
+    if row[VIEWS] != '':
+        views = int(row[VIEWS])
+    else:
+        views = 0
+    total_views += views    # score is up-votes - down-votes can be negative
+
+    ''' TYPE = "Question" or "Answer" or "Wiki"'''
     if row[TYPE] == "Question":
         question_count += 1
         if not QUESTIONS:
@@ -591,14 +640,9 @@ for row in data:
         if ACCEPTED_QUALIFIER:
             save_blog = True  # Previous tests may have turned off
 
-    # SE tags have the format: "<tag1><tag2><tag3>"
-    works = row[TAGS].split('<')[1:]  # [ "Tag1>", "Tag2>", "Tag3>" ]
-    tag_count = 0
-    tags = []
-    for work in works:
-        tag_count += 1
-        work = work[0:-1]  # "Tag>" becomes "Tag"
-        tags.append(work)
+    ''' convert SE tags: "<tag1><tag2><tag3>" to: "tag1 tag2 tag3" '''
+    tags = row[TAGS].replace("><", " ")
+    tags = tags.replace("<", "").replace(">", "")
 
     #if row_number == 15:
     #    print('tags before:', works)
@@ -646,11 +690,22 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
     '''
 
     ''' Reset counts of header levels - H1, H2 ... H6 '''
-    header_levels = [0, 0, 0, 0, 0, 0]
-    paragraph_count = 0     # How many paragraphs (includes headers) in post
+    # header_levels = [0, 0, 0, 0, 0, 0]
+    # paragraph_count = 0     # How many paragraphs (headers count as 2) in post
+    # word_count = 0          # How words (includes "## ") in post
     in_code_block = False   # In a code block # Header formatting is skipped
 
-    insert_toc = false
+    '''
+    FROM: https://github.com/toshimaru/jekyll-toc
+    Set toc: true in posts for which you want the TOC to appear.
+
+        ---
+        layout: post
+        title: "Welcome to Jekyll!"
+        toc: true
+        ---
+    '''
+    insert_toc = False
     if CONTENTS is not None:
         if header_count >= TOC_HDR_MIN:
             insert_toc = True
@@ -662,7 +717,8 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
             insert_nav_bar = True
 
     ''' Pass #2: Generate new markdown (kramdown) '''
-    new_md = ""
+    new_md = front_matter()
+
     for line in lines:
         check_code_block(line)      # Turn off formatting when in code block
         if insert_nav_bar:
@@ -704,16 +760,24 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
             random_row_nos[index] = row_number + 1
 
 
-print('\n==============   T O T A L S   ================')
-print('accepted_count:', accepted_count, '  |  total_votes:', total_votes)
-print('question_count:', question_count, '  |  answer_count:', answer_count,
-      '  |  unknown_count:', unknown_count)
-print('total_lines:', total_lines, '  |  total_header_spaces:', total_header_spaces,
-      '  |  total_quote_spaces:', total_quote_spaces)
-print('total_paragraphs:', total_paragraphs, "  |  total_code_blocks:",
-      total_code_blocks, '  |  total_code_block_lines:', total_code_block_lines)
-print('total_pre_codes:', total_pre_codes, '<--- WARNING: Not Supported!')
-print('Alternate H1:', total_alternate_h1, '  |  Alternate H2:', total_alternate_h2,
-      '  |  6 Header level counts', total_header_levels)
+print('=================================   T O T A L S   ==================================')
+print('accepted_count:   {:>6,}'.format(accepted_count),
+      ' | total_votes:   {:>11,}'.format(total_votes),
+      ' | total_views:   {:>11,}'.format(total_views))
+print('question_count:   {:>6,}'.format(question_count),
+      ' | answer_count:       {:>6,}'.format(answer_count),
+      ' | unknown_count:      {:>6,}'.format(unknown_count))
+print('total_headers:    {:>6,}'.format(total_headers),
+      ' | total_header_spaces:{:>6,}'.format(total_header_spaces),
+      ' | total_quote_spaces: {:>6,}'.format(total_quote_spaces))
+print('total_lines: {:>11,}'.format(total_lines),
+      ' | total_paragraphs:{:>9,}'.format(total_paragraphs),
+      ' | total_words: {:>13,}'.format(total_words))
+print('total_pre_codes:  {:>6,}'.format(total_pre_codes),
+      ' | total_alternate_h1: {:>6,}'.format(total_alternate_h1),
+      ' | total_alternate_h2: {:>6,}'.format(total_alternate_h2))
+print('total_code_blocks:{:>6,}'.format(total_code_blocks),
+      ' | code_block_lines:  {:>7,}'.format(total_code_block_lines))
+print('total_header_levels:       ', total_header_levels)
 
 # End of stack-to-blog.py
