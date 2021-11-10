@@ -411,7 +411,6 @@ NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
 NAV_BAR_LEVEL = 2           # Only for "#" or "##". Not for "###", "####", etc.
 NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 NAV_BAR_MIN = 3             # Temporary. Really need minimum paragraphs too.
-
 ```
 
 **NOTE:** This is still a WIP (Work In Progress) and as of November 9, 2021 the program still isn't finished.
