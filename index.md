@@ -378,7 +378,7 @@ FRONT_ACCEPTED = "accepted: "
 FRONT_CW = None
 FRONT_CLOSED = None
 ```
-
+  
 Here is how you control settings for which answers (or even questions you posted) get deployed. Also how to control Table of Contents (TOC) and Navigation Bar Buttons between major sections:
 
 ``` python
