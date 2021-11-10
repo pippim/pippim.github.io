@@ -413,7 +413,9 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 NAV_BAR_MIN = 3             # Temporary. Really need minimum paragraphs too.
 ```
 
-**NOTE:** This is still a WIP (Work In Progress) and as of November 9, 2021 the program still isn't finished.
+**NOTE:** This is still a WIP (Work In Progress).
+As of November 9, 2021 the program is about
+80% complete.
 
 When the `stack-to-blog.py` finishes a summary appears on your screen:
 
