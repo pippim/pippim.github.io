@@ -434,7 +434,7 @@ The total label name is the actual internal python variable name. If you need to
 larger numbers, you can tweak the code shown below:
 
 ``` python
-print('=================================   T O T A L S   ==================================')
+print('// =============================/   T O T A L S   \\============================== \\\\')
 print('accepted_count:   {:>6,}'.format(accepted_count),
       ' | total_votes:   {:>11,}'.format(total_votes),
       ' | total_views:   {:>11,}'.format(total_views))
