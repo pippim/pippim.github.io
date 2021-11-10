@@ -353,32 +353,68 @@ $ tree
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
-## Python Program `stack-to-blog.py` Snippet
+## Python Program (stack-to-blog.py* Overview
 
-To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is a small snippet of that program:
-
-Here is a small snippet of the Python program `stack-to-blog.py`:
+To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is how Jekyll front matter is controlled:
 
 ``` python
-def dump(r):
-    """ Dump contents of one row to terminal in good-looking format
-    """
-    print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
-    print('Title:  ', r[TITLE][:80])
-    print('Link:   ', r[LINK][:80])
-    limit = r[HTML].find('\n')
-    if limit > 80 or limit == -1:
-        limit = 80
-    print('HTML:   ', r[HTML][:limit])
-    limit = r[MARKDOWN].find('\n')
-    if limit > 80 or limit == -1:
-        limit = 80
-    print('MARK:   ', r[MARKDOWN][:limit])
-    print('Created:', r[CREATED], '  |  Tags:', r[TAGS])
-    print('Edited: ', r[LAST_EDIT], '  |  Edited by:', r[EDITED_BY])
-    print('Votes:  ', r[SCORE], '  |  Views:', r[VIEWS], '  |  Answers:', r[ANSWERS],
-          '  |  Accepted:', r[ACCEPTED], '\n')
+FRONT_SITE = "site: "
+FRONT_POST_ID = None
+FRONT_URL = "stack_url: "
+FRONT_LINK = None
+FRONT_TYPE = None
+FRONT_TITLE = "title: "
+FRONT_HTML = None
+FRONT_MARKDOWN = None
+FRONT_TAGS = "tags: "
+FRONT_CREATED = None
+FRONT_LAST_EDIT = "edit_date: "
+FRONT_EDITED_BY = None
+FRONT_SCORE = "votes: "
+FRONT_FAVORITES = None
+FRONT_VIEWS = "views: "
+FRONT_ANSWERS = None
+FRONT_ACCEPTED = "accepted: "
+FRONT_CW = None
+FRONT_CLOSED = None
 ```
+
+Here is how you control settings for which answers (or even questions you posted) get deployed. Also how to control Table of Contents (TOC) and Navigation Bar Buttons between major sections:
+
+``` python
+INPUT_FILE = 'QueryResults.csv'
+RANDOM_LIMIT = 10           # On initial trials limit the number of blog posts
+PRINT_RANDOM = True         # Print out matching random record found (10 lines)
+OUTPUT_DIR = "_posts/"      # Subdirectory name. Use "./" for current directory
+QUESTIONS = False           # Don't upload questions
+VOTE_QUALIFIER = 2          # Answers need at least 2 votes to qualify
+ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
+# Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
+
+''' Table of Contents (TOC) options. '''
+CONTENTS = "{% TOC %}"      # If TOC not wanted, set to None
+TOC_HDR_MIN = 6             # Number of Headers required to qualify TOC insert
+TOC_LOC = 2                 # Put TOC before second second paragraph
+
+NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
+''' 0 = No navigation bar
+    1 = single line. EG <a id=... </div>
+    2 = two lines. EG <a id= then new line then with <div>...</div>
+    3 = Option 2 plus empty (blank) line above for readability
+    4 = Option 3 plus empty (blank) line above for even more readability
+    5 = Option 4 plus comment for ultimate readability
+
+    Note: Markdown compresses all blank lines into a single blank line between
+          paragraphs. HTML code inserted simply counts as another blank line to
+          be compressed into a single blank line.
+'''
+NAV_BAR_LEVEL = 2           # Only for "#" or "##". Not for "###", "####", etc.
+NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
+NAV_BAR_MIN = 3             # Temporary. Really need minimum paragraphs too.
+
+```
+
+**NOTE:** This is still a WIP (Work In Progress) and as of November 9, 2021 the program still isn't finished.
 
 When the `stack-to-blog.py` finishes a summary appears on your screen:
 
