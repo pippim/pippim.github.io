@@ -260,7 +260,7 @@ Another one-time setup is the file `_includes/toc.md` containing the markdown fo
 To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page you are reading, `index.md`, you would see the following markdown code:
 
 ``` html
-... in real markdown below and generates the actual TOCw:
+... in real markdown below and generates the actual TOC:
 {% raw %}
 {% include toc.md %}
 {% endraw %}    
