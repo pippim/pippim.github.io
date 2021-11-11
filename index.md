@@ -37,7 +37,7 @@ The top of each page contains navigation buttons to take you to other pages:
 
 - <kbd>📧 Email</kbd> lets you send an email to Pippim.
 
-> ***NOTE:*** &ensp;When you click a button to go to a page, that button will disappear and be replace by another. The page you are currently on will not display it's own button. This was done to limit number of buttons on mobile user screens. This technique deviates from conventional website design as of November 2, 2021. Perhaps this technique will be adopted in the future by other websites though. 😄
+> ***NOTE:*** &ensp;When you click a button to go to a page, that button will disappear and be replaced by another. The page you are currently on will not display it's own button. This was done to limit number of buttons on mobile user screens. This technique deviates from conventional website design as of November 2, 2021. Perhaps this technique will be adopted in the future by other websites though. 😄
 
 ### Section Navigation Buttons
 
