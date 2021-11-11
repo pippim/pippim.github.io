@@ -421,6 +421,7 @@ When the `stack-to-blog.py` finishes a summary appears on your screen:
 
 ```  cpp
 // =============================/   T O T A L S   \============================== \\
+
 accepted_count:      620  | total_votes:         7,053  | total_views:    51,804,222
 question_count:      298  | answer_count:        2,139  | unknown_count:           2
 total_headers:     3,884  | total_header_spaces:   526  | total_quote_spaces:  2,464
@@ -435,6 +436,7 @@ larger numbers, you can tweak the code shown below:
 
 ``` python
 print('// =============================/   T O T A L S   \\============================== \\\\')
+print('\n')
 print('accepted_count:   {:>6,}'.format(accepted_count),
       ' | total_votes:   {:>11,}'.format(total_votes),
       ' | total_views:   {:>11,}'.format(total_views))
