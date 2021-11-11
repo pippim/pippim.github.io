@@ -419,7 +419,7 @@ As of November 9, 2021 the program is about
 
 When the `stack-to-blog.py` finishes a summary appears on your screen:
 
-```  cpp
+```  yaml
 // =============================/   T O T A L S   \============================== \\
 
 accepted_count:      620  | total_votes:         7,053  | total_views:    51,804,222
