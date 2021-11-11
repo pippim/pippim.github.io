@@ -355,7 +355,17 @@ $ tree
 
 ## Python Program *stack-to-blog.py* Overview
 
-To generate this site's blog posts (which are really Stack Excahgne Answers), the Python program `stack-to-blog.py` was used. Here is how Jekyll front matter is controlled:
+Converting Stack Exchange Q&A in markdown format isn't as simple as copying it over to Github pages.
+To generate Pippim's blog posts fromt Stack Excahgne posts, the python program `stack-to-blog.py` was used.
+This program automatically:
+
+- Cretates Jekyll front matter.
+- Selects Stack Exchange Posts based on meeting minimum criterea such as up-votes or accepted status.
+- Prints summary totals when finished.
+
+### Jekyll front matter
+
+Here is how Jekyll front matter is controlled:
 
 ``` python
 FRONT_SITE = "site: "
@@ -378,7 +388,9 @@ FRONT_ACCEPTED = "accepted: "
 FRONT_CW = None
 FRONT_CLOSED = None
 ```
-  
+
+### Criteria for selection Stack Exchange posts
+
 Here is how you control settings for which answers (or even questions you posted) get deployed. Also how to control Table of Contents (TOC) and Navigation Bar Buttons between major sections:
 
 ``` python
@@ -413,9 +425,34 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 NAV_BAR_MIN = 3             # Temporary. Really need minimum paragraphs too.
 ```
 
-**NOTE:** This is still a WIP (Work In Progress).
-As of November 9, 2021 the program is about
-80% complete.
+**NOTE:** `stack-to-blog.py` is a Work-In-Progress.
+As of November 11, 2021 the program is about
+90% complete.
+
+### Jekyll blog filename
+
+The filename for a Jekyll blog resides in the `_posts/` directory and requires strict formatting:
+
+- Begins with date in `YYYY-MM-DD` format followed by `-`.
+- Next comes the title which has spaces repaced by `-`.
+- The forward slash (`/`) character is illegal in filenames so it is replaced by division symbol (`∕`).
+- The extension `.md` is added to the filename.
+
+Here's the python function which creates the blog filename:
+
+``` python
+def create_blog_filename():
+    """ Return blog filename.
+        Replace all spaces in title with "-"
+        Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
+    """
+    filename = '_posts/' + row[CREATED].split()[0] + '-' + \
+        row[TITLE].replace(' ', '-').replace('/', '∕') + '.md'
+
+    return filename
+```
+
+### Summary totals
 
 When the `stack-to-blog.py` finishes a summary appears on your screen:
 
