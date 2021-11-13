@@ -225,7 +225,9 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 
 11. Pippim converts Stack Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll *front matter*.
 
-12. Pippim setups the Jekyll front matter as required for Title and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
+12. Pippim setups the Jekyll front matter as required for `title:` and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
+
+13. Stack exchange command for `<!-- language-all: lang-bash --> (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
 
 A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
 
@@ -480,6 +482,63 @@ def create_blog_filename():
         row[TITLE].replace(' ', '-').replace('/', '∕') + '.md'
 
     return filename
+```
+
+### Stack Exchnage !-- language tags
+
+When Stack Exchange uses `<!-- language-all` it is converted to appropriate format for Github using this multi-purpose function:
+
+``` python
+def check_code_block(ln):
+    """ If line starts with ``` we are now in code block.
+
+        If already in code block and line begins with ```
+            then we are now out of code block.
+
+        The same holds true if line contains <pre><code> and
+            ends with </code></pre>
+
+        Set default syntax language when none on code block. SE standard:
+            <!-- language: bash -->
+            <!-- language-all: lang-bash -->
+
+     """
+    global in_code_block, total_code_blocks, language_used
+    ''' Code blocks may be indented so left strip spaces before test
+    
+        TODO: count number of backticks that initiate a code block.
+              For example ```` (4) can start a code block then if ``` (3)
+              appears it doesn't terminate code block but is interpreted
+              literally as backticks. EG
+              
+              This is an example of using fenced code backticks:
+              
+              ````
+              ``` html
+              <element code>Stuff stuff stuff</element code>
+              ```
+              ```` 
+    '''
+    if ln.startswith("<!-- language"):
+        language_used = ln.split(": ")[1]
+        # Strip off " -->" at end of string
+        language_used = language_used[:-4]
+        if language_used.startswith("lang-"):
+            language_used = language_used[5:]
+        if language_used == "none"
+            language_used = "text"
+        #print('language_used:', language_used, 'length:', len(language_used))
+
+    if ln.lstrip()[0:3] == "```":
+        # Add language if not used already
+        if ln[-1] == "`" or ln[-1] == " ":
+            ln = ln + " " + language_used
+        if in_code_block is False:
+            total_code_blocks += 1      # Total for all posts
+            in_code_block = True        # For this post only
+        else:
+            in_code_block = False       # For this post only
+
 ```
 
 ### Summary totals
