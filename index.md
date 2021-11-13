@@ -227,7 +227,7 @@ This Pippim website creates 2,000 blog posts using a different technique than *W
 
 12. Pippim setups the Jekyll front matter as required for `title:` and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
 
-13. Stack exchange command for `<!-- language-all: lang-bash --> (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
+13. Stack exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
 
 A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
 
@@ -484,7 +484,7 @@ def create_blog_filename():
     return filename
 ```
 
-### Stack Exchnage !-- language tags
+### Stack Exchnage `<!-- language` tags
 
 When Stack Exchange uses `<!-- language-all` it is converted to appropriate format for Github using this multi-purpose function:
 
