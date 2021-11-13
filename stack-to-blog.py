@@ -80,7 +80,7 @@ ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
 CONTENTS = "{% TOC %}"      # If TOC not wanted, set to None
 TOC_HDR_MIN = 6             # Number of Headers required to qualify TOC insert
 TOC_WORD_MIN = 1000         # Minimum 1,000 words for TOC
-TOC_LOC = 2                 # Put TOC before second header
+TOC_LOC = 2                 # Insert TOC as 2nd header (Don't go below 2!)
 
 NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
 ''' 0 = No navigation bar
@@ -142,8 +142,9 @@ if row_count < 2:
 
 ''' Overview of sample set used for blog posts based on RANDOM_LIMIT '''
 random_row_nos = [randint(1, row_count) for p in range(0, RANDOM_LIMIT)]
-print('RANDOM_LIMIT:', RANDOM_LIMIT,
-      'yielded random record numbers:', random_row_nos)
+if RANDOM_LIMIT < 100:
+    print('RANDOM_LIMIT:', RANDOM_LIMIT,
+          'yielded random record numbers:', random_row_nos)
 
 # Copy terminal output of record #1 with column names and paste below.
 # Then change names to uppercase and assign each column a 0-based index.
@@ -497,19 +498,13 @@ def check_contents(ln):
     if CONTENTS is None:
         return  # Global CONTENTS variable is null, so no TOC
 
-    if ln[0:1] == "#":
-        #print('Found header:', ln)
-        if contents == "":
-            # First time generate header stub for TOC
-            contents = CONTENTS
-        if ln[-2:] != "  ":
-            #print('Forcing two spaces after:', ln)
-            ln = ln + "  "
-            total_quote_spaces += 1
     return ln
 
 
-def navigation_bar(hdr_id):
+bar = ""      # Must be global because navigation_bar calls itself
+
+
+def navigation_bar(hdr_id, this_is_toc=False):
     """ Return Navigation Bar. Verbosity driven by NAV_BAR_OPT
 
         The first header doesn't contain "Top" or "ToS" because it is already
@@ -519,34 +514,57 @@ def navigation_bar(hdr_id):
         there.
 
     """
-    bar = ""
+    global bar
+
+    ''' AWKWARD. Have two calls from parent instead of calling ourself '''
+    if insert_toc and hdr_id == TOC_LOC:
+        # Call ourself one time to insert extra navigation bar and contents
+        #if bar == "":
+        if this_is_toc is False:
+            bar = navigation_bar(TOC_LOC, this_is_toc=True)
+            print(bar)
+        else:
+            pass  # We've already built the bar with TOC so don't call again
+    else:
+        bar = ""  # Create new navigation bar
+
+    if insert_toc and hdr_id >= TOC_LOC and not this_is_toc:
+        hdr_id += 1
+
     if NAV_BAR_OPT >= 3:
-        bar = "\n"
+        bar = bar + "\n"  # Empty line before navigation bar
 
     bar = bar + '<a id="hdr' + str(hdr_id) + '"></a>'
     if NAV_BAR_OPT >= 2:
-        bar = bar + "\n"
+        bar = bar + "\n"    # ID tag on separate line
 
-    # Calculate jump points  TODO: Need Toc point!!!
+    # Calculate jump points
     hdr_ToS = hdr_id - 1
     hdr_Skip = hdr_id + 1
     bar = bar + '<div class="hdr-bar">'
     # If first Navigation Bar then no Top or Tos
     if hdr_id != 1:
         bar = bar + '  <a href="#" class ="hdr-btn">Top</a>'
-        bar = bar + '  <a href="#hdr"' + str(hdr_ToS) + ' class ="hdr-btn">ToS</a>'
+        bar = bar + '  <a href="#hdr' + str(hdr_ToS) + '" class ="hdr-btn">ToS</a>'
 
-    # TODO: Need the REAL hdr_TOC number
-    hdr_TOC = 2
+    # TOC button only appears when active and if this isn't the TOC header itself.
+    if insert_toc and not this_is_toc:
+        bar = bar + '  <a href="#hdr' + str(TOC_LOC) + '" class ="hdr-btn">ToC</a>'
 
-    # TOC and Skip buttons will always appear
-    bar = bar + '  <a href="#hdr"' + str(hdr_TOC) + ' class ="hdr-btn">ToC</a>'
-    bar = bar + '  <a href="#hdr"' + str(hdr_Skip) + ' class ="hdr-btn">Skip</a>'
+    # Skip button will always appear except for footer
+    bar = bar + '  <a href="#hdr' + str(hdr_Skip) + '" class ="hdr-btn">Skip</a>'
 
     bar = bar + '</div>\n'
 
     if NAV_BAR_OPT >= 4:
         bar = bar + "\n"
+
+    if this_is_toc:
+        if NAV_BAR_OPT <= 3:
+            bar = bar + "\n"    # When 4 a blank line already inserted before us
+
+        bar = bar + CONTENTS + "\n"
+        bar = bar + "\n"  # When 4 a blank line already inserted before us
 
     return bar
 
@@ -806,6 +824,7 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
             if sum1 != sum2:
                 # Insert HTML for navigation bar.
                 new_md = new_md + navigation_bar(sum2)
+                bar = ""  # Very UGLY hack for TOC, must redesign
 
         # line = block_quote(line)    # Formatting for block quotes
         # check_paragraph(line)       # Check if markdown paragraph (empty line)
