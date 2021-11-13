@@ -377,7 +377,7 @@ FRONT_TITLE = "title: "         # Always appears like this in front matter
 FRONT_HTML = None               # Never put into front matter
 FRONT_MARKDOWN = None           # Never put into front matter
 FRONT_TAGS = "tags: "
-FRONT_CREATED = None
+FRONT_CREATED = "created_date: "
 FRONT_LAST_EDIT = "edit_date: "
 FRONT_EDITED_BY = None
 FRONT_SCORE = "votes: "
@@ -404,6 +404,7 @@ site: Ask Ubuntu
 stack_url: https://askubuntu.com/q/1338546
 type: Answer
 tags: networking sound pulseaudio streaming
+created_date: 2021-05-15 21:01:00
 edit_date: 
 votes: 3
 views: 431
@@ -485,12 +486,14 @@ When the `stack-to-blog.py` finishes a summary appears on your screen:
 // =============================/   T O T A L S   \============================== \\
 
 accepted_count:      620  | total_votes:         7,053  | total_views:    51,804,222
-question_count:      298  | answer_count:        2,139  | unknown_count:           2
-total_headers:     3,884  | total_header_spaces:   526  | total_quote_spaces:  2,464
-total_lines:      93,781  | total_paragraphs:   27,199  | total_words:       536,892
-total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     52
-total_code_blocks:   662  | code_block_lines:   11,243
-total_header_levels:        [1467, 1957, 452, 8, 0, 0]
+question_count:      298  | answer_count:        2,139  | save_blog_count:     1,227
+total_headers:     1,977  | total_header_spaces:   419  | total_quote_spaces:  1,557
+total_lines:      56,910  | total_paragraphs:   16,059  | total_words:       318,748
+total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     33
+total_code_blocks:   272  | code_block_lines:    5,092  | total_toc:              25
+most_lines:          820  | total_force_end:     1,066  | total_nav_bar:          35
+total_header_levels:        [733, 959, 283, 2, 0, 0]
+
 ```
 
 The total label name is the actual internal python variable name. If you need to print
@@ -498,13 +501,13 @@ larger numbers, you can tweak the code shown below:
 
 ``` python
 print('// =============================/   T O T A L S   \\============================== \\\\')
-print('\n')
+print('')
 print('accepted_count:   {:>6,}'.format(accepted_count),
       ' | total_votes:   {:>11,}'.format(total_votes),
       ' | total_views:   {:>11,}'.format(total_views))
 print('question_count:   {:>6,}'.format(question_count),
       ' | answer_count:       {:>6,}'.format(answer_count),
-      ' | unknown_count:      {:>6,}'.format(unknown_count))
+      ' | save_blog_count:    {:>6,}'.format(save_blog_count))
 print('total_headers:    {:>6,}'.format(total_headers),
       ' | total_header_spaces:{:>6,}'.format(total_header_spaces),
       ' | total_quote_spaces: {:>6,}'.format(total_quote_spaces))
@@ -515,8 +518,13 @@ print('total_pre_codes:  {:>6,}'.format(total_pre_codes),
       ' | total_alternate_h1: {:>6,}'.format(total_alternate_h1),
       ' | total_alternate_h2: {:>6,}'.format(total_alternate_h2))
 print('total_code_blocks:{:>6,}'.format(total_code_blocks),
-      ' | code_block_lines:  {:>7,}'.format(total_code_block_lines))
+      ' | code_block_lines:  {:>7,}'.format(total_code_block_lines),
+      ' | total_toc:         {:>7,}'.format(total_toc))
+print('most_lines:       {:>6,}'.format(most_lines),
+      ' | total_force_end:  {:>8,}'.format(total_force_end),
+      ' | total_nav_bar:     {:>7,}'.format(total_nav_bar))
 print('total_header_levels:       ', total_header_levels)
+
 ```
 
 <a id="hdr10"></a>
