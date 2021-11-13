@@ -148,7 +148,6 @@ Multi-timer requires the following packages to be installed:
 
 
 ``` bash
-#!/bin/bash
 
 # NAME: multi-timer
 # DESC: Multiple timers countdown with alarm.
