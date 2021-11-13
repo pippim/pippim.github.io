@@ -524,10 +524,14 @@ def check_code_block(ln):
         # Strip off " -->" at end of string
         language_used = language_used[:-4]
         if language_used.startswith("lang-"):
+            # Strip off "lang-" at start of string
             language_used = language_used[5:]
-        if language_used == "none"
+        if language_used == "none":
+            # "none" is best set as "text" for universal recognition
             language_used = "text"
+
         #print('language_used:', language_used, 'length:', len(language_used))
+        return ""  # Former "<!-- language" line is now an empty line
 
     if ln.lstrip()[0:3] == "```":
         # Add language if not used already
