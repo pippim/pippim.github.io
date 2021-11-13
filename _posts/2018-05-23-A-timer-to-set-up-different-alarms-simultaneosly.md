@@ -146,6 +146,7 @@ Multi-timer requires the following packages to be installed:
 ### Bash code for `multi-timer`
 
 ```bash
+
 #!/bin/bash
 
 # NAME: multi-timer
