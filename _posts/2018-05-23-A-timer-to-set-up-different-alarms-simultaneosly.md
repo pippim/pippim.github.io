@@ -11,7 +11,7 @@ votes: 11
 favorites: 
 views: 4006
 accepted: Accepted
-uploaded: 2021-11-13 11:11:43
+uploaded: 2021-11-13 16:40:57
 toc: true
 navigation: true
 ---
@@ -145,8 +145,9 @@ Multi-timer requires the following packages to be installed:
 
 ### Bash code for `multi-timer`
 
-```bash
 
+
+``` bash
 #!/bin/bash
 
 # NAME: multi-timer
@@ -770,7 +771,7 @@ LockScreenCheck "All sets end"
 Cleanup
 
 exit 0
-``` bash
+```
 
 
 <a id="hdr8"></a>
