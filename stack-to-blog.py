@@ -37,20 +37,13 @@
         ---
 
 
-    TODO: Add front matter. Include "categories: eyesome" or "categories:
-            .conkyrc" "votes: 999" - Note accepted answers have 3 added
-            up-votes
-
-        Sidebar navigation with top, original Q&A, Github, TOC Sections can
+    TODO: Sidebar navigation with top, original Q&A, Github, TOC Sections can
             be based on #, ## and ### headers. See email to Michael Rose tonight
             (October 26, 2021 @ 8pm) for more information.
 
         Automatic "Excerpt" front matter or in markdown taking first 200
             characters of blog post or perhaps first paragraph if close to 200.
 
-        Put TOC in markdown using:
-            https://ouyi.github.io/post/2017/12/31/jekyll-table-of-contents.html
-            
         Originally today was thinking of Michael Rose's Minimalistic Mistakes,
             Basically Basic or Skinny Bones Jekyll Themes but just now read
             about Jekyll Doc Them 6.0 and that might be better as it focuses
@@ -99,15 +92,6 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 NAV_BAR_MIN = 3             # Temporary. Really need minimum paragraphs too.
 NAV_WORD_MIN = 1000         # Minimum 1,000 words for navigation button bar
 
-''' TODO: Test Stack Exchange navigation bar for a long answer:
-
-    <div class="form-submit cbt d-flex gsx gs4">
-        <button id="submit-button" class="flex--item s-btn s-btn__primary s-btn__icon" 
-        type="submit" tab_index="120" autocomplete="off">
-Post Your Answer                                        </button>
-    </div>
-
-'''
 # If question or answer contains one of these keywords then jekyll front
 # matter has "categories: KEYWORD" added. There can be more than one KEYWORD.
 PROGRAMS = ["eyesome", "multi-timer", ".bashrc", ".conkyrc", "cdd", "mserve", "bserve"]
@@ -256,7 +240,7 @@ header_levels = [0, 0, 0, 0, 0, 0]
 paragraph_count = 0         # How many paragraphs in post last one not counted
 word_count = 0              # How many words by splitting whitespace
 in_code_block = False       # Are we in a code block? Then no # Header formatting
-language_test = "<!-- Language-all: lang-bash -->"
+language_used = ""          # What language when fenced code blocks have none?
 image_links = []            # Links to images found at bottom of SE posts
 ''' Used for each post '''
 tags = ""                   # Front matter format: tags: TAG1 TAG2 TAG3
@@ -426,8 +410,13 @@ def check_code_block(ln):
 
         The same holds true if line contains <pre><code> and
             ends with </code></pre>
+
+        Set default syntax language when none on code block. SE standard:
+            <!-- language: bash -->
+            <!-- language-all: lang-bash -->
+
      """
-    global in_code_block, total_code_blocks
+    global in_code_block, total_code_blocks, language_used
     ''' Code blocks may be indented so left strip spaces before test
     
         TODO: count number of backticks that initiate a code block.
@@ -443,12 +432,27 @@ def check_code_block(ln):
               ```
               ```` 
     '''
+    if ln.startswith("<!-- language"):
+        language_used = ln.split(": ")[1]
+        # Strip off " -->" at end of string
+        language_used = language_used[:-4]
+        if language_used.startswith("lang-"):
+            language_used = language_used[5:]
+        if language_used == "none"
+            language_used = "text"
+        #print('language_used:', language_used, 'length:', len(language_used))
+
     if ln.lstrip()[0:3] == "```":
+        # Add language if not used already
+        if ln[-1] == "`" or ln[-1] == " ":
+            ln = ln + " " + language_used
         if in_code_block is False:
-            total_code_blocks += 1   # For all posts
-            in_code_block = True
+            total_code_blocks += 1      # Total for all posts
+            in_code_block = True        # For this post only
         else:
-            in_code_block = False
+            in_code_block = False       # For this post only
+
+    return ln
 
 
 def check_pre_code(ln):
@@ -502,10 +506,7 @@ def check_contents(ln):
     return ln
 
 
-bar = ""      # Must be global because navigation_bar calls itself
-
-
-def navigation_bar(hdr_id, this_is_toc=False):
+def navigation_bar(hdr_id):
     """ Return Navigation Bar. Verbosity driven by NAV_BAR_OPT
 
         The first header doesn't contain "Top" or "ToS" because it is already
@@ -515,21 +516,7 @@ def navigation_bar(hdr_id, this_is_toc=False):
         there.
 
     """
-    global bar
-
-    ''' AWKWARD. Have two calls from parent instead of calling ourself '''
-    if insert_toc and hdr_id == TOC_LOC:
-        # Call ourself one time to insert extra navigation bar and contents
-        #if bar == "":
-        if this_is_toc is False:
-            bar = navigation_bar(TOC_LOC, this_is_toc=True)
-        else:
-            pass  # We've already built the bar with TOC so don't call again
-    else:
-        bar = ""  # Create new navigation bar
-
-    if insert_toc and hdr_id >= TOC_LOC and not this_is_toc:
-        hdr_id += 1
+    bar = ""  # Create new navigation bar
 
     if NAV_BAR_OPT >= 3:
         bar = bar + "\n"  # Empty line before navigation bar
@@ -548,23 +535,16 @@ def navigation_bar(hdr_id, this_is_toc=False):
         bar = bar + '  <a href="#hdr' + str(hdr_ToS) + '" class ="hdr-btn">ToS</a>'
 
     # TOC button only appears when active and if this isn't the TOC header itself.
-    if insert_toc and not this_is_toc:
+    if insert_toc and hdr_id != TOC_LOC:
         bar = bar + '  <a href="#hdr' + str(TOC_LOC) + '" class ="hdr-btn">ToC</a>'
 
-    # Skip button will always appear except for footer
+    # Skip button will always appear
     bar = bar + '  <a href="#hdr' + str(hdr_Skip) + '" class ="hdr-btn">Skip</a>'
 
     bar = bar + '</div>\n'
 
     if NAV_BAR_OPT >= 4:
         bar = bar + "\n"
-
-    if this_is_toc:
-        if NAV_BAR_OPT <= 3:
-            bar = bar + "\n"    # When 4 a blank line already inserted before us
-
-        bar = bar + CONTENTS + "\n"
-        bar = bar + "\n"  # When 4 a blank line already inserted before us
 
     return bar
 
@@ -679,6 +659,7 @@ for row in data:
     header_levels = [0, 0, 0, 0, 0, 0]
     paragraph_count = 0     # How many paragraphs (headers count as 2) in post
     word_count = 0          # How many words (includes "## ") in post
+    language_used = ""  # What language when fenced code blocks have none?
     in_code_block = False   # In a code block # Header formatting is skipped
     force_end_line = False  # Did Pass #1 force an empty blank line at end?
     ''' YYYY-MM-DD-Title-with-spaces-converted-to-dashes.md '''
@@ -744,11 +725,11 @@ for row in data:
 
     ''' Pass #1: Count line types '''
     for curr_index, line in enumerate(lines):
-        check_code_block(line)      # Turn off formatting when in code block
-        line = header_space(line)   # Formatting for #Header or # Header lines
-        line = block_quote(line)    # Formatting for block quotes
-        check_paragraph(line)       # Check if markdown paragraph (empty line)
-        lines[curr_index] = line     # Stuff back any changes made
+        line = check_code_block(line)  # Turn off formatting when in code block
+        line = header_space(line)  # Change #Header to # Header and Alt-H1, Alt-H2
+        line = block_quote(line)  # Formatting for block quotes
+        check_paragraph(line)  # Check if markdown paragraph (empty line)
+        lines[curr_index] = line  # Stuff back any changes made
 
     ''' Does this answer qualify for TOC or Navigation Bar?
     
@@ -805,30 +786,66 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
         if qualifier >= NAV_BAR_MIN and word_count >= TOC_WORD_MIN:
             insert_nav_bar = True
             total_nav_bar += 1
-            print('total_nav_bar:', total_nav_bar, blog_filename)
+            #print('total_nav_bar:', total_nav_bar, blog_filename)
 
     ''' Pass #2: Generate new markdown (kramdown) '''
     new_md = front_matter(row)
     header_levels = [0, 0, 0, 0, 0, 0]  # Reset
+    header_count = 0
+    total_header_spaces = 0
+    total_header_levels = [0, 0, 0, 0, 0, 0]
+    toc_inserted = False
 
     for line in lines:
         check_code_block(line)      # Turn off formatting when in code block
         # Did this post qualify for adding navigation bar?
+        # Save how header levels counts we have now
+        old_header_levels = list(header_levels)
+        # TODO: reverse doubling up totals
+        line = header_space(line)   # Formatting for #Header or # Header lines
         if insert_nav_bar:
-            # Save how header levels counts we have now
-            old_header_levels = list(header_levels)
-            # TODO: reverse doubling up totals
-            line = header_space(line)   # Formatting for #Header or # Header lines
             sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
             sum2 = sum(header_levels[:NAV_BAR_LEVEL])
+            # For next qualifying header level insert HTML for navigation bar.
             if sum1 != sum2:
-                # Insert HTML for navigation bar.
+                # First check if at TOC_LOC and insert TOC if needed
+                if insert_toc:
+                    if sum2 == TOC_LOC:
+                        new_md = new_md + navigation_bar(TOC_LOC)
+                        if NAV_BAR_OPT <= 3:
+                            # When 4 a blank line already inserted before us
+                            new_md = new_md + "\n"
+                        new_md = new_md + CONTENTS + "\n"
+                        new_md = new_md + "\n"  # When 4 a blank line already inserted before us
+                        toc_inserted = True  # Not necessary but is consistent
+                    if sum2 >= TOC_LOC:
+                        sum2 += 1   # All heading levels after TOC are 1 greater
+
                 new_md = new_md + navigation_bar(sum2)
-                bar = ""  # Very UGLY hack for TOC, must redesign
+
+        elif insert_toc:
+            # No navigation bar but we still need TOC at header count
+            if header_count == TOC_LOC and toc_inserted is False:
+                if NAV_BAR_OPT <= 3:
+                    # When 4 a blank line already inserted before us
+                    new_md = new_md + "\n"
+                new_md = new_md + CONTENTS + "\n"
+                new_md = new_md + "\n"
+                toc_inserted = True  # Prevents regeneration next line read
+                print('toc only:', blog_filename)
 
         # line = block_quote(line)    # Formatting for block quotes
         # check_paragraph(line)       # Check if markdown paragraph (empty line)
         new_md = new_md + line + '\n'
+
+    if insert_nav_bar:
+        # If navigation bar then add footer ID tag for last "Skip" jump point
+        hdr_id = sum2 + 1
+        if sum2 >= TOC_LOC:
+            hdr_id += 1  # All heading levels after TOC are 1 greater
+        if not force_end_line:
+            new_md = new_md + "\n"  # Empty line before HTML ID tag
+        new_md = new_md + '<a id="hdr' + str(hdr_id) + '"></a>'
 
     total_lines += line_count
     if line_count > most_lines:
