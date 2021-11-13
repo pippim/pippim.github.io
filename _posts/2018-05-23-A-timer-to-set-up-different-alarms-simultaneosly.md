@@ -30,7 +30,7 @@ The `multi-timer` bash script works in Ubuntu versions 14.04, 16.04 and 18.04. I
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
 
-{% TOC %}
+{% include toc.md %}
 
 
 <a id="hdr3"></a>
