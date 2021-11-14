@@ -786,7 +786,7 @@ To setup Sysmonitor Indicator see this Q&A: https://askubuntu.com/questions/8824
 
   [1]: https://i.stack.imgur.com/4m75Y.gif
   [2]: https://i.stack.imgur.com/mDbYLl.png
-  [3]: https://i.stack.imgur.com/pHZNHm.png
+  [3]: https://i.stack.imgur.com/pHZNHl.png
   [4]: https://i.stack.imgur.com/Actwjm.gif
 
 
