@@ -20,20 +20,11 @@
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 
-      <!-- Reduce number of buttons by suppressing button for current page -->
-      {% unless page.path == "index.md" %}
-        <a href="https://pippim.github.io/" style="display: inline" class="button">⌂ Home</a>
-      {% endunless %}
-      {% unless page.path == "about.md" %}
-        <a href="about.html" style="display: inline" class="button">❓ About</a>
-      {% endunless %}
-      {% unless page.path == "answers.md" %}
-        <a href="answers.html" style="display: inline" class="button">✅ Answers</a>
-      {% endunless %}
-      {% unless page.path == "programs.md" %}
-        <a href="programs.html" style="display: inline" class="button">💻 Programs</a>
-      {% endunless %}
-      <a href="mailto:pippim.com@gmail.com" style="display: inline" class="button">📧 Email</a>
+      <!-- Removing email button from current blog page, as separate button bar provided for it -->
+      <a href="{{ site.baseurl }}/index.html" style="display: inline" class="button">⌂ Home</a>
+      <a href="{{ site.baseurl }}/about.html" style="display: inline" class="button">❓ About</a>
+      <a href="{{ site.baseurl }}/answers.html" style="display: inline" class="button">✅ Answers</a>
+      <a href="{{ site.baseurl }}/programs.html" style="display: inline" class="button">💻 Programs</a>
 
     </header>
 
