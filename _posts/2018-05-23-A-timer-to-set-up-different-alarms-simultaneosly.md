@@ -4,7 +4,7 @@ title:        A timer to set up different alarms simultaneously
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039377
 type:         Answer
-tags:         [ software-recommendation, bash, parental-controls ]
+tags:         software-recommendation bash parental-controls
 created_date: 2018-05-23 11:14:12
 edit_date:    2021-10-05 12:00:18
 votes:        11
