@@ -595,3 +595,4 @@ print('total_header_levels:       ', total_header_levels)
 ```
 
 <a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a></div>
