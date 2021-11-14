@@ -224,6 +224,7 @@ a {
     padding: 2px 4px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     // font-size: 0.9rem;  // Go with default font size
+    font-size: 95%  // 95% of parent element, But who's your daddy?
     color: $code-text-color;
     background-color: $code-bg-color;
     border-radius: 0.3rem;
