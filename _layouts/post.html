@@ -39,7 +39,7 @@
       {% if page.votes and page.votes != "" and page.votes != nil %}
           <h2 class="project-tagline">Votes: {{ page.votes }}</h2>
       {% endif %}
-      {% if page.tags and page.tags != "" and page.tagsl != nil and page.tags.size > 0 %}
+      {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
         <h2 class="project-tagline">
           Tag{% if page.tags.size > 1 %}s{% endif %}:
           {{ page.tags | sort | join: ", " }}
