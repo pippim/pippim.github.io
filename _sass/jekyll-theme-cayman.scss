@@ -1,11 +1,7 @@
-// Github Pages Jekyll Cayman Theme font too small for code block in heading. Copied from: 
-// https://github.com/tuur29/pages-themes-cayman/blob/master/_sass/jekyll-theme-cayman.scss
-
 @import "normalize";
 @import "rouge-github";
 @import "variables";
-@import "hovertitles";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
 @mixin large {
   @media screen and (min-width: #{$large-breakpoint}) {
@@ -68,19 +64,19 @@ a {
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
-  color: rgba($header-heading-color, 0.7);
-  background-color: rgba($header-heading-color, 0.08);
-  border-color: rgba($header-heading-color, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
   &:hover {
-    color: rgba($header-heading-color, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    background-color: rgba($header-heading-color, 0.2);
-    border-color: rgba($header-heading-color, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
   }
 
   + .btn {
@@ -224,7 +220,7 @@ a {
   code {
     padding: 2px 4px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    // font-size: 0.9rem;  // Use default size
+    font-size: 0.9rem;
     color: $code-text-color;
     background-color: $code-bg-color;
     border-radius: 0.3rem;
