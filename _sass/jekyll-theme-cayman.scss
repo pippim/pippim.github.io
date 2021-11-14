@@ -1,3 +1,6 @@
+// Github Pages Jekyll Cayman Theme. Make code block font size larger. Copied from:
+// https://github.com/pages-themes/cayman/blob/master/_sass/jekyll-theme-cayman.scss
+
 @import "normalize";
 @import "rouge-github";
 @import "variables";
@@ -220,7 +223,7 @@ a {
   code {
     padding: 2px 4px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 0.9rem;
+    // font-size: 0.9rem;  // Go with default font size
     color: $code-text-color;
     background-color: $code-bg-color;
     border-radius: 0.3rem;
