@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A timer to set up different alarms simultaneosly
+title: A timer to set up different alarms simultaneously
 site: Ask Ubuntu
 stack_url: https://askubuntu.com/q/1039377
 type: Answer
