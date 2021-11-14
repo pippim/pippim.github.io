@@ -29,6 +29,10 @@
     </header>
 
     <main id="content" class="main-content" role="main">
+      {% if page.votes and page.votes != "" and page.votes != nil %}
+          <h2 class="project-tagline">Votes: {{ page.votes }}</h2>
+      {% endif %}
+
       {{ content }}
 
       <footer class="site-footer">
