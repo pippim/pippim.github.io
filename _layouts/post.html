@@ -29,8 +29,21 @@
     </header>
 
     <main id="content" class="main-content" role="main">
+
+      {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
+          <h2 class="project-tagline">Visit source: {{ page.stack_url }}</h2>
+      {% endif %}
+      {% if page.views and page.views != "" and page.views != nil %}
+          <h2 class="project-tagline">Views: {{ page.views }}</h2>
+      {% endif %}
       {% if page.votes and page.votes != "" and page.votes != nil %}
           <h2 class="project-tagline">Votes: {{ page.votes }}</h2>
+      {% endif %}
+      {% if page.tags and page.tags != "" and page.tags != nil %}
+          <h2 class="project-tagline">Tags: {{ page.tags }}</h2>
+      {% endif %}
+      {% if page.accepted and page.accepted != "" and page.accepted != nil %}
+          <h2 class="project-tagline">Aceepted?: {{ page.accepted }}</h2>
       {% endif %}
 
       {{ content }}
