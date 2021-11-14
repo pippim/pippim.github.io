@@ -39,8 +39,9 @@
       {% if page.votes and page.votes != "" and page.votes != nil %}
           <h2 class="project-tagline">Votes: {{ page.votes }}</h2>
       {% endif %}
-      {% if page.tags and page.tags != "" and page.tags != nil %}
-          <h2 class="project-tagline">Tags: {{ page.tags }}</h2>
+      {% if post.tags.size > 0 %}
+        Tag{% if post.tags.size > 1 %}s{% endif %}:
+        {{ post.tags | sort | join: ", " }}
       {% endif %}
       {% if page.accepted and page.accepted != "" and page.accepted != nil %}
           <h2 class="project-tagline">Aceepted?: {{ page.accepted }}</h2>
