@@ -31,15 +31,15 @@
     <main id="content" class="main-content" role="main">
 
       <h2 class="project-tagline">
-{% if page.views and page.views != "" and page.views != nil %}
-  Views: {{ page.views }}
-{% endif %}
-{% if page.votes and page.votes != "" and page.votes != nil %}
-  Votes: {{ page.votes }}
-{% endif %}
-{% if page.accepted and page.accepted != "" and page.accepted != nil %}
-  ANSWER was ACCEPTED!
-{% endif %}
+        {% if page.views and page.views != "" and page.views != nil %}
+          Views: {{ page.views }}
+        {% endif %}
+        {% if page.votes and page.votes != "" and page.votes != nil %}
+           &nbsp;&nbsp; Votes: {{ page.votes }}
+        {% endif %}
+        {% if page.accepted and page.accepted != "" and page.accepted != nil %}
+           &nbsp;&nbsp; Answer was ACCEPTED!
+        {% endif %}
       </h2>
 
       {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
@@ -50,7 +50,7 @@
       {% endif %}
 
       {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
-          <h2 class="project-tagline">[See Original Answer at Source]({{ page.stack_url }})</h2>
+          <h2 class="project-tagline"><a href="See original answer on {{ page.site }}">{{ page.stack_url }}</a></h2>
       {% endif %}
 
       {{ content }}
