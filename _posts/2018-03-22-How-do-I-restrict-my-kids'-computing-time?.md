@@ -238,7 +238,7 @@ While lock screen timer is running it records how many minutes are remaining int
 
 
   [1]: https://i.stack.imgur.com/N0gb6.gif
-  [2]: https://i.stack.imgur.com/0jBz6.png
+  [2]: https://i.stack.imgur.com/0jBz6m.png
   [3]: https://askubuntu.com/questions/882419/how-can-bash-display-in-ubuntus-unity-system-tray
 
 <a id="hdr11"></a>
