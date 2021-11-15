@@ -9,7 +9,7 @@ created_date: 2018-05-23 11:14:12
 edit_date:    2021-10-05 12:00:18
 votes:        11
 favorites: 
-views:        4006
+views:        4,006
 accepted:     Accepted
 uploaded:     2021-11-13 16:40:57
 toc:          true
