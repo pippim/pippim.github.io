@@ -93,20 +93,38 @@ Github Pages
 
 This website was created on **Github Pages**. You can download (or simply view) this website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on Github Pages"). This current page for example you can find in the markdown file called `index.md`.
 
-**TL;DR**
+With Github Pages you can very quickly get your own webiste up and running by
+quickly picking from a collection of website designs called themes. Github Pages
+is free to use. Although you will likely do most of your writing from a MAC,
+Linux or Windows PC, one of the cool things is you can change your website from
+a cell phone or any other device that has an internet browser installed.
 
-"TL;DR" stands for "Too Long, Didn't Read". Unless you are truly interested in the technology of websites and how this website in particular was created, you will probably want to stop reading the rest of this page.
+## **TL;DR**
 
-Whenever you commit to a website repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/ "See how Jekyll rebuilds Github Pages websites") to rebuild the pages in your site, from the content in your Markdown files.
+"**TL;DR**" stands for "**Too Long, Didn't Read**". So unless you
+are truly interested in the technology of websites and how this website 
+in particular was created, you will probably want to stop reading
+the rest of this page.
 
-The Pippim website is based on the Github Pages Jekyll theme called [Cayman](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for Github Pages website"). Initial setup is straight forward. If you want custom buttons it becomes more complicated as you need to learn [HTML](https://blog.webjeda.com/new-page-jekyll/ "See how HTML is used in Jekyll") and [Sass/SCSS](https://jekyllrb.com/docs/configuration/sass/ "See how Sass is used in Jekyll").
+Whenever you commit to a website repository, GitHub Pages will run
+[Jekyll](https://jekyllrb.com/ "See how Jekyll rebuilds Github Pages websites")
+to rebuild the pages in your site, from the content in your Markdown files.
+
+The Pippim website is based on the Github Pages Jekyll theme called 
+[Cayman](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for Github Pages website").
+Initial setup was straight forward and very quick. However adding custom buttons 
+becomes more complicated as you need to learn 
+[HTML](https://blog.webjeda.com/new-page-jekyll/ "See how HTML is used in Jekyll") 
+and [Sass/SCSS](https://jekyllrb.com/docs/configuration/sass/ "See how Sass is used in Jekyll").
 
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
 
 ## Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for:
+Github Pages and many other websites use a language called Markdown.
+Markdown is a lightweight and easy-to-use syntax for styling your 
+writing. It includes conventions for:
 
 ```
 Syntax highlighted code block
@@ -126,14 +144,13 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-
+For more details see 
+[GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
 
-## How the Table of Contents is generated
+## How the Table of Contents is Generated
 
 All markdown headers with `#`, `##` and `###`, etc. are used to create the **Table of Contents** (TOC). A little bit of one-time prep work is required for TOC support. For example, the file `_sass/toc.scss` is setup with:
 
@@ -182,20 +199,29 @@ The TOC command is used in real markdown below and generates the actual TOC:
 Jekyll Themes
 --
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pippim/pippim.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Your Pages site will use the layout and styles from the Jekyll
+theme you have selected in your 
+[repository settings](https://github.com/pippim/pippim.github.io/settings/pages).
+The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-To see the current Jekyll, Sass, Rouge version numbers, etc. used by **Github Pages** click [here](https://pages.github.com/versions/). It is very important to find the correct documentation version when you are using instructions for setting up your website!
+To see the current Jekyll, Sass, Rouge version numbers, etc. used by
+**Github Pages** click [here](https://pages.github.com/versions/).
+It is very important to find the correct documentation version when
+you are using instructions for setting up your website!
 
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
 
 ## Images, Javascript, CSS and HTML
 
-It is important to follow these instructions to setup your site: [Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
+It is important to follow these instructions to setup your site:
+[Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). 
+For example, `_layouts/default.html` needs to be copied from the
+theme to your own websited in order to make significant changes 
+to the theme.
 
-Otherwise Jekyll documentation itself could break your Github Pages theme you've chosen. For example, `_layouts/default.html` needs to be copied from the theme to make significant changes to the theme.
-
-These are the file types in the pippim website:
+There are many file types in the Pippim website stored at various
+locations:
 
 - A few local images are stored in `assets/img/` directory. The hundreds of images in blog posts come directly from Stack Exchange and are not stored in `pippim.github.io`.
 - SCSS and [Sass CSS](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/) files are mostly stored in the `assets/css/` directory. Some are stored in the `_sass/` directory. The `_sass/` directory has files you can't see in `pippim.github.io` because they are really stored in the Cayman Theme for Jekyll and automatically pulled from there whenever website is rendered.
@@ -424,17 +450,20 @@ blog post here is initial version:
 
 ![Jekyll front matter on blog post.png](/assets/img/Jekyll front matter on blog post.png){:class="img-responsive"}
 
-At the top of the page, in big bold letters, is  generated by
-front matter `title:`. Then you see "**Views: 4006** 
+At the top of the page, in big bold letters, appears 
+**A timer to setup different alarms simultaneously**
+which is generated by the front matter variable 
+called `title:`. In the middle you see "**Views: 4006** 
 which is generated by front matter `views:` Followed by
-**Votes: 11** generated by `votes:`. The **Answer was ACCEPTED!** was
-generated by: `accepted:` not being blank and containing
-the string "Accepted". 
+**Votes: 11** generated by `votes:`. The **Answer was 
+ACCEPTED!** text is generated by: `accepted:` not 
+being blank and containing the string "Accepted". 
 
-Finally the link: 
-[🔍 See Original Answer on Ask Ubuntu](https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneously/1039377#1039377)
-is generated by three front matter variables. The link
-itself is provided by `stack_url:`, the word **Answer**
+Finally at the bottom you see one of the most powerful
+features of Pippim's automataed blog pages, the link: 
+[🔍 See Original Answer on Ask Ubuntu](https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneously/1039377#1039377.
+The link is generated by three different front matter variables.
+The link itself is provided by `stack_url:`, the word **Answer**
 is controlled by `type:` and **Ask Ubuntu** is controlled
 by the `site:` front matter variable.
 
