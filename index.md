@@ -128,108 +128,7 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-## Convert Stack Exchange Q&A to Jekyll Blog Post
 
-Some Pippim programs use *Web Scraping*. Examples are **Roboto** to get price changes, **eyesome** to get sunrise/sunset times and **mserve** to get music lyrics. 
-
-Other Pippim programs use *APIs*. Examples are **bserve** to get gmail messages, **tvpowered** to monitor TV remote power button to put your system to sleep and **mserve** to get CD Audio track names and album covert art images. 
-
-This Pippim website creates 2,000 blog posts using a different technique than *Web Scraping* or *REST APIs*, called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work!***. You do have to do the first two steps below:
-
-1. The first step is to run a [Stack Exchange Data Explorer query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s?AccountId=4775729). Many thanks to the the query's [Author](https://meta.stackexchange.com/a/371435/366359).
-
-2. Next a Python program called `stack-blog-post.py` is run. It does all the magic described below. This program was extensively debugged and tested to work on Pippim's markdown answers in Stack Exchange. Note that your markdown answers might be using extra features not tested.
-
-3. Pippim adds navigation bar buttons (Top, ToS, ToC and Skip) by putting HTML code into the markdown files. Then HTML code controls jumping to id tags when a button is clicked. Here's an easy-to-read example of the HTML code:
-  
-    ``` html
-    # Introduction
-    
-    Welcome to Pippim. A collection of questions and answers about...
-    
-    <a id="hdr2"></a>
-    <div class="hdr-bar">
-      <a href="#" class="hdr-btn">Top</a>
-      <a href="#hdr1" class="hdr-btn">ToS</a>
-      <a href="#hdr6" class="hdr-btn">ToC</a>
-      <a href="#hdr3" class="hdr-btn">Skip</a>
-    </div>
-    
-    ## Get in touch
-    
-    Get in touch with pippim by sending an email. You can also...
-    ```
-
-4. In the markdown file that `stack-to-blog.py` creates, the HTML id tag and navigation bar buttons aren't as easy to read but accomplish the same task:
-
-    ``` html
-    <a id="hdr2"></a>
-    <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
-    
-    ## Get in touch
-    ```
-
-5. Two extra spaces are added between HTML elements for readability and some extra spacing between buttons. A blank line is added before the HTML id tag and after the HTML button bar for readability. Because the markdown interpreter condenses multiple blank lines into a single blank line, the HTML code has no effect on line spacing.
-
-6. If you would like to modify the button properties (position, color, size, hover, etc), the header button bar (`hdr-bar`) and individual buttons (`hdr-btn`) are defined in filename `assets/css/style.scss`:
-
-    ``` scss
-    .hdr-bar {
-      display: block;
-      position: relative;
-      width: 100%;
-      height: .5rem;            // Add bit extra for button box height
-      text-align: right;        // Don't use "float: right;" that renders backwards
-      &:before {
-          content: "";
-          display: block;
-        }
-      }
-      
-      .hdr-btn {
-        display: inline-block;
-        position: relative;
-        color: $header-bg-color;  // Cayman green
-        padding: 5px 15px;        // vertical, horizontal padding around button text
-        font-size:0.75em;         // 75% of normal font for button text
-        margin-left: 10px;        // Now that right aligned, switch margin side
-        // From: https://stackoverflow.com/questions/65297617
-        background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
-        background-color:#F0FFF0; // Honeydew
-      
-        &:hover {
-          background-position:bottom;
-          color:#F0FFF0;
-        }
-      }
-      ```
-
-7. Block quotes are defined in Stack Exchange like this:
-```
-> line 1
-> line 2
-```
-    7.1. If they were not modified they would display on Github Pages Markdown as:
-    > line 1
-    > line 2
-
-    7.2. Pippim appends two spaces to the end of block quotes in Stack Exhange answers so they render properly:
-    > line 1  
-    > line 2  
-
-8. **Note:** You can open one of the blog posts and compare it to the Stack Exchange original answer.
-
-9. Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
-
-10. The alternate H1 markdown format "`Header 1`" line followed by a "`==`" line are converted to "`# Header 1`". The alternate H2 markdown format "`Header 2`" line followed by a "`--`" line are converted to "`## Header 2`". Trailing "==" and "--" lines are converted to blank lines.
-
-11. Pippim converts Stack Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll *front matter*.
-
-12. Pippim setups the Jekyll front matter as required for `title:` and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
-
-13. Stack exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
-
-A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
 
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
@@ -355,7 +254,7 @@ $ tree
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
-# Python Program *stack-to-blog.py* Overview
+# Convert Stack Exchange Posts to Website Answers
 
 Converting Stack Exchange Q&A in markdown format isn't as easy as simply copying it over to Github pages.
 To generate Pippim's blog posts fromt Stack Excahgne posts, the python program `stack-to-blog.py` was used.
@@ -377,7 +276,7 @@ To the next section. Otherwise run the query again orodify
 It for different results.
 
 
-## parameters
+## `stack-to-blog.py` Options
 
 You set them in the program `srack-to-blog`.
 It's a good idea to set the record limit to 10 or so
@@ -407,8 +306,10 @@ Here is the relevant line of code you need to change:
 RANDOM_RECORD_LIMIT = 10. # BLAH BLAH
 ```
 
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
 
-### Post Selection Criteria
+### Blog Post Selection Criteria
 
 Although you have the option to convert SE Questions to blog
 Posts please keep in mind if you answered your own question 
@@ -430,7 +331,8 @@ BLAH BLAH
 The TOC (Table of Contents) and Navigation Bar Buttons
 (which navigate between sections) share similar traits.
 
-
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
 
 ## overview of steps
 
@@ -440,63 +342,71 @@ The TOC (Table of Contents) and Navigation Bar Buttons
 
 
 No
-### Jekyll front matter
+## Jekyll front matter
 
 Here is how Jekyll front matter is controlled:
 
 ``` python
-FRONT_SITE = "site: "           # EG "site: Ask Ubuntu"
-FRONT_POST_ID = None            # EG "post_id: 1104017"
-FRONT_URL = "stack_url: "       # stack_url: https://askubuntu.com/q/1104017
-FRONT_LINK = None               # post_link: https://askubuntu.com/q/1104017|How can I
-                                # send mobile text message from terminal?
-FRONT_TYPE = "type: "           # EG "type: Answer"
-FRONT_TITLE = "title: "         # Always appears like this in front matter
-FRONT_HTML = None               # NEVER put into front matter
-FRONT_MARKDOWN = None           # NEVER put into front matter
-FRONT_TAGS = "tags: "           # EG "tags: markdown github heading"
-FRONT_CREATED = "created_date: "  # EG "created_date: 2020-01-15 15:21:55"
-FRONT_LAST_EDIT = "edit_date: "  # EG "edit_date: 2020-05-27 17:27:45"
-FRONT_EDITED_BY = None          # EG "edit_user: Community (-1)"
-FRONT_SCORE = "votes: "         # EG "votes: 64"
-FRONT_FAVORITES = "favorites: "  # EG "favorites: 33"
-FRONT_VIEWS = "views: "         # EG "views: 72056"
-FRONT_ANSWERS = None            # EG "answers: 3"
-FRONT_ACCEPTED = "accepted: "   # EG "accepted: Accepted" or "accepted:" (blank)
-FRONT_CW = None                 # EG "community: CW" or "community:" (blank)
-FRONT_CLOSED = None             # EG "closed: Closed" or "closed:" (blank)
+FRONT_SITE      = "site:         "  # EG "site:         Ask Ubuntu"
+FRONT_POST_ID   = None              # EG "post_id:      1104017"
+FRONT_URL       = "stack_url:    "  # EG "stack_url:    https://askubuntu.com/q/1104017"
+                                    # If selected you MUST select FRONT_SITE & FRONT_TYPE too
+FRONT_LINK      = None              # EG "post_link:    https://askubuntu.com/q/1104017|How can I
+                                    # send mobile text message from terminal?"
+FRONT_TYPE      = "type:         "  # EG "type:         Question"
+FRONT_TITLE     = "title:        "  # Always appears in front matter!
+FRONT_HTML      = None              # This will NEVER be put into front matter
+FRONT_MARKDOWN  = None              # This will NEVER be put into front matter
+FRONT_TAGS      = "tags:         "  # EG "tags:         command-line bash sms
+FRONT_CREATED   = "created_date: "  # EG "created_date: 2020-01-15 15:21:55"
+FRONT_LAST_EDIT = "edit_date:    "  # EG "edit_date:    2020-05-27 17:27:45"
+FRONT_EDITED_BY = None              # EG "edit_user:    Community (-1)"
+FRONT_SCORE     = "votes:        "  # EG "votes:        64" or blank/nil
+FRONT_FAVORITES = "favorites:    "  # EG "favorites:    33" or blank/nil
+FRONT_VIEWS     = "views:        "  # EG "views:        72,056" or blank/nil
+FRONT_ANSWERS   = None              # EG "answers:      3" or blank/nil
+FRONT_ACCEPTED  = "accepted:     "  # EG "accepted:     Accepted" or blank/nil
+FRONT_CW        = None              # EG "community:    CW" blank/nil
+FRONT_CLOSED    = None              # EG "closed:       Closed" or blank/nil
 
 # Extra front matter generated by `stack-to-blog.py` actions:
-FRONT_UPLOADED = "uploaded: "   # Date & Time this program was run
-FRONT_TOC = "toc: "             # Table of Contents? "true" or "false"
-FRONT_NAV_BAR = "navigation: "  # Section navigation bar? "true" or "false"
+FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be changed
+FRONT_UPLOADED  = "uploaded:     "  # Date & Time this program was run
+FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
+FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
+
 ```
 
 Using above settings the front matter generated would look something like this:
 
 ``` yaml
 ---
-layout: post
-title: How can I send mobile text message from terminal?
-site: Ask Ubuntu
-stack_url: https://askubuntu.com/q/1104017
-type: Question
-tags: command-line bash windows-subsystem-for-linux sms
+layout:       post
+title:        How can I send mobile text message from terminal?
+site:         Ask Ubuntu
+stack_url:    https://askubuntu.com/q/1104018
+type:         Answer
+tags:         command-line bash windows-subsystem-for-linux sms
 created_date: 2018-12-23 13:55:49
-edit_date: 2019-04-26 10:37:58
-votes: 64
-favorites: 33
-views: 72056
-accepted: Accepted
-uploaded: 2021-11-13 08:28:28
-toc: false
-navigation: false
+edit_date:    2020-06-12 14:37:07
+votes:        60
+favorites:    
+views:        72,429
+accepted:     Accepted
+uploaded:     2021-11-15 19:56:38
+toc:          false
+navigation:   false
 ---
 ```
 
-Using front matter you can list blog posts with the most votes and most favorites within a given tag.
+Notice the generated front matter is a little different than the code snippet comments.
+That is because the code snippet was based on what happens when Questions are included.
+The final output though Questions were turned off using `QUESTIONS=False` option.
 
-### Criteria for selection Stack Exchange posts
+Using front matter you can list blog posts with the most votes and most favorites within a given tag.
+The `_layouts/page.html` code a few sections below will illustrate this.
+
+### Criteria for selecting Stack Exchange Posts
 
 Here is how you control settings for which answers (or even questions you posted) get deployed. Also how to control Table of Contents (TOC) and Navigation Bar Buttons between major sections:
 
@@ -536,6 +446,115 @@ NAV_BAR_MIN = 3             # Temporary. Really need minimum paragraphs too.
 As of November 11, 2021 the program is about
 90% complete.
 
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
+
+## Convert Stack Exchange Q&A to Jekyll Blog Post
+
+Some Pippim programs use *Web Scraping*. Examples are **Roboto** to get price changes, **eyesome** to get sunrise/sunset times and **mserve** to get music lyrics. 
+
+Other Pippim programs use *APIs*. Examples are **bserve** to get gmail messages, **tvpowered** to monitor TV remote power button to put your system to sleep and **mserve** to get CD Audio track names and album covert art images. 
+
+This Pippim website creates 2,000 blog posts using a different technique than *Web Scraping* or *REST APIs*, called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work!***. You do have to do the first two steps below:
+
+1. The first step is to run a [Stack Exchange Data Explorer query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s?AccountId=4775729). Many thanks to the the query's [Author](https://meta.stackexchange.com/a/371435/366359).
+
+2. Next a Python program called `stack-blog-post.py` is run. It does all the magic described below. This program was extensively debugged and tested to work on Pippim's markdown answers in Stack Exchange. Note that your markdown answers might be using extra features not tested.
+
+3. Pippim adds navigation bar buttons (Top, ToS, ToC and Skip) by putting HTML code into the markdown files. Then HTML code controls jumping to id tags when a button is clicked. Here's an easy-to-read example of the HTML code:
+  
+    ``` html
+    # Introduction
+    
+    Welcome to Pippim. A collection of questions and answers about...
+    
+    <a id="hdr2"></a>
+    <div class="hdr-bar">
+      <a href="#" class="hdr-btn">Top</a>
+      <a href="#hdr1" class="hdr-btn">ToS</a>
+      <a href="#hdr6" class="hdr-btn">ToC</a>
+      <a href="#hdr3" class="hdr-btn">Skip</a>
+    </div>
+    
+    ## Get in touch
+    
+    Get in touch with pippim by sending an email. You can also...
+    ```
+
+4. In the markdown file that `stack-to-blog.py` creates, the HTML id tag and navigation bar buttons aren't as easy to read but accomplish the same task:
+
+    ``` html
+    <a id="hdr2"></a>
+    <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
+    
+    ## Get in touch
+    ```
+
+5. Two extra spaces are added between HTML elements for readability and some extra spacing between buttons. A blank line is added before the HTML id tag and after the HTML button bar for readability. Because the markdown interpreter condenses multiple blank lines into a single blank line, the HTML code has no effect on line spacing.
+
+6. If you would like to modify the button properties (position, color, size, hover, etc), the header button bar (`hdr-bar`) and individual buttons (`hdr-btn`) are defined in filename `assets/css/style.scss`:
+
+    ``` scss
+    .hdr-bar {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: .5rem;            // Add bit extra for button box height
+      text-align: right;        // Don't use "float: right;" that renders backwards
+      &:before {
+          content: "";
+          display: block;
+        }
+      }
+      
+      .hdr-btn {
+        display: inline-block;
+        position: relative;
+        color: $header-bg-color;  // Cayman green
+        padding: 5px 15px;        // vertical, horizontal padding around button text
+        font-size:0.75em;         // 75% of normal font for button text
+        margin-left: 10px;        // Now that right aligned, switch margin side
+        // From: https://stackoverflow.com/questions/65297617
+        background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
+        background-color:#F0FFF0; // Honeydew
+      
+        &:hover {
+          background-position:bottom;
+          color:#F0FFF0;
+        }
+      }
+      ```
+
+7. Block quotes are defined in Stack Exchange like this:
+```
+> line 1
+> line 2
+```
+    7.1. If they were not modified they would display on Github Pages Markdown as:
+    > line 1
+    > line 2
+
+    7.2. Pippim appends two spaces to the end of block quotes in Stack Exhange answers so they render properly:
+    > line 1  
+    > line 2  
+
+8. **Note:** You can open one of the blog posts and compare it to the Stack Exchange original answer.
+
+9. Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
+
+10. The alternate H1 markdown format "`Header 1`" line followed by a "`==`" line are converted to "`# Header 1`". The alternate H2 markdown format "`Header 2`" line followed by a "`--`" line are converted to "`## Header 2`". Trailing "==" and "--" lines are converted to blank lines.
+
+11. Pippim converts Stack Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll *front matter*.
+
+12. Pippim setups the Jekyll front matter as required for `title:` and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
+
+13. Stack exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
+
+A preview of `stack-to-blog.py` is presented a few sections below and the full program can be accessed on the <kbd>💻 Programs</kbd> page.
+
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
+
 ### Jekyll blog filename
 
 The filename for a Jekyll blog resides in the `_posts/` directory and requires strict formatting:
@@ -558,6 +577,9 @@ def create_blog_filename():
 
     return filename
 ```
+
+<a id="hdr14"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
 
 ### Stack Exchnage `<!-- language` tags
 
@@ -620,6 +642,9 @@ def check_code_block(ln):
 
 ```
 
+<a id="hdr15"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
+
 ### Summary totals
 
 When the `stack-to-blog.py` finishes a summary appears on your screen:
@@ -669,5 +694,5 @@ print('total_header_levels:       ', total_header_levels)
 
 ```
 
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a></div>
+<a id="hdr16"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr15" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a></div>
