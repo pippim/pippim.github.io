@@ -355,9 +355,9 @@ $ tree
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
-## Python Program *stack-to-blog.py* Overview
+# Python Program *stack-to-blog.py* Overview
 
-Converting Stack Exchange Q&A in markdown format isn't as simple as copying it over to Github pages.
+Converting Stack Exchange Q&A in markdown format isn't as easy as simply copying it over to Github pages.
 To generate Pippim's blog posts fromt Stack Excahgne posts, the python program `stack-to-blog.py` was used.
 This program automatically:
 
@@ -365,6 +365,81 @@ This program automatically:
 - Selects Stack Exchange Posts based on meeting minimum criterea such as up-votes or accepted status.
 - Prints summary totals when finished.
 
+## Stack Exchange Data Explorer
+
+Run the query to download all your questions and answers 
+in Stack Exchange to your local storage in CSV (CMA Separated
+Values) format. After downloading you can view with Excel or
+Libre Office Calc.
+
+After verifying the results are as expected proceed 
+To the next section. Otherwise run the query again orodify 
+It for different results.
+
+
+## parameters
+
+You set them in the program `srack-to-blog`.
+It's a good idea to set the record limit to 10 or so
+for your first few trials.
+
+Review the three subsections below for fine tuning your
+Stack Exchange to Jekyll Blog Post conversion. They are:
+
+- Random Record Limit
+- Post Selection Criteria
+- TOC and Navigation Buttons
+
+### Random Record Limit
+
+The `RANDOM_RECORD_LIMIT` variable provides two
+Benefits:
+
+1. Limiting the number of blogs generated to your local 
+Storage.
+2. Returning different blogs at random each time the
+Program is run
+3. Displaying summary blog data to your screen
+
+Here is the relevant line of code you need to change:
+
+``` python
+RANDOM_RECORD_LIMIT = 10. # BLAH BLAH
+```
+
+
+### Post Selection Criteria
+
+Although you have the option to convert SE Questions to blog
+Posts please keep in mind if you answered your own question 
+then your answer may not be converted to a blog post. 
+This an portant consideration because the answers are
+usually what you want to showcase on your website.
+
+The program defaults are to only select answers that
+are accepted or have two or more up votes.
+
+Here is the relevant code:
+
+``` python
+BLAH BLAH
+```
+
+### TOC and Navigation Buttons
+
+The TOC (Table of Contents) and Navigation Bar Buttons
+(which navigate between sections) share similar traits.
+
+
+
+## overview of steps
+
+### pass 1
+
+### pass 2
+
+
+No
 ### Jekyll front matter
 
 Here is how Jekyll front matter is controlled:
