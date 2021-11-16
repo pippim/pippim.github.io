@@ -266,19 +266,27 @@ This program automatically:
 
 ## Stack Exchange Data Explorer
 
-Run the query to download all your questions and answers 
-in Stack Exchange to your local storage in CSV (CMA Separated
-Values) format. After downloading you can view with Excel or
-Libre Office Calc.
+The first step is to run the 
+[Stack Exchange Data Explorer query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s?AccountId=4775729).
+Many thanks to the the query's [Author](https://meta.stackexchange.com/a/371435/366359).
 
-After verifying the results are as expected proceed 
-To the next section. Otherwise run the query again orodify 
-It for different results.
+When the query finishes (it can take a few minutes), 
+download all your questions and answers 
+from Stack Exchange to your local storage in CSV (CMA Separated
+Values) format. 
+
+After downloading view with Excel or
+Libre Office Calc. After verifying the results are as expected,
+proceed to the next section. Otherwise run the query again or modify 
+It for expected results.
+
+Keep in mind if you change the query you may have to add
+extra CSV fields to `stack-to-blog.py`.
 
 
-## `stack-to-blog.py` Options
+## Setting `stack-to-blog.py` Options
 
-You set them in the program `srack-to-blog`.
+You set options in the program `stack-to-blog.py`.
 It's a good idea to set the record limit to 10 or so
 for your first few trials.
 
@@ -286,25 +294,37 @@ Review the three subsections below for fine tuning your
 Stack Exchange to Jekyll Blog Post conversion. They are:
 
 - Random Record Limit
-- Post Selection Criteria
+- Blog Post Selection Criteria
+- Jekyll Front Matter
 - TOC and Navigation Buttons
 
 ### Random Record Limit
 
-The `RANDOM_RECORD_LIMIT` variable provides two
+During intial testing phase you will want to utilize the
+random record limit feature. This provides two
 Benefits:
 
 1. Limiting the number of blogs generated to your local 
 Storage.
 2. Returning different blogs at random each time the
 Program is run
-3. Displaying summary blog data to your screen
 
-Here is the relevant line of code you need to change:
+Here is the relevant section of code where you can 
+change the `RANDCOM_LIMIT`:
 
 ``` python
-RANDOM_RECORD_LIMIT = 10. # BLAH BLAH
+INPUT_FILE = 'QueryResults.csv'
+RANDOM_LIMIT = 10           # On initial trials limit the number of blog posts
+PRINT_RANDOM = True         # Print out matching random recordS found
+OUTPUT_DIR = "_posts/"      # Subdirectory name. Use "" for current directory
 ```
+
+Initially you will want to have `PRINT_RANDOM` set to `True`. 
+when you decide to "pull the trigger" and want all your Stack Exchange posts
+converted to your website blog posts, just change `RANDOM_LIMIT` to 
+a large number like `10000` (ten thousand). Also set `PRINT_RANDOM` to `False`.
+The program finishes a lot faster without printing 10's of thousands of
+lines to your screen.
 
 <a id="hdr10"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
@@ -323,28 +343,16 @@ are accepted or have two or more up votes.
 Here is the relevant code:
 
 ``` python
-BLAH BLAH
+QUESTIONS_QUALIFIER = False  # Don't upload questions
+VOTE_QUALIFIER = 2          # Posts need at least 2 votes to qualify
+ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
+# Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
 ```
 
-### TOC and Navigation Buttons
+### Jekyll front matter
 
-The TOC (Table of Contents) and Navigation Bar Buttons
-(which navigate between sections) share similar traits.
-
-<a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
-
-## overview of steps
-
-### pass 1
-
-### pass 2
-
-
-No
-## Jekyll front matter
-
-Here is how Jekyll front matter is controlled:
+Here is how [Jekyll front matter](https://jekyllrb.com/docs/front-matter/)
+is controlled withing `stack-to-blog.py`:
 
 ``` python
 FRONT_SITE      = "site:         "  # EG "site:         Ask Ubuntu"
@@ -402,28 +410,33 @@ navigation:   false
 Notice the generated front matter is a little different than the code snippet comments.
 That is because the code snippet was based on what happens when Questions are included.
 The final output though Questions were turned off using `QUESTIONS=False` option.
+The reason Questions were turned off is because the Answer was never
+deployed and it was the Answer that was really desired. This 
+[Stack Exchange Q&A](https://askubuntu.com/q/1104018)
+is what's called a self answered question.
 
 Using front matter you can list blog posts with the most votes and most favorites within a given tag.
 The `_layouts/page.html` code a few sections below will illustrate this.
 
-### Criteria for selecting Stack Exchange Posts
+### TOC and Navigation Buttons
 
-Here is how you control settings for which answers (or even questions you posted) get deployed. Also how to control Table of Contents (TOC) and Navigation Bar Buttons between major sections:
+The TOC (Table of Contents) and Navigation Bar Buttons
+(which navigate between sections) you create for blog
+posts are identical to the TOC and buttons you see on
+this page.
+
+The criteria for when and how the TOC and navigation 
+buttons appear is almost identical.
+The code for both is show below:
 
 ``` python
-INPUT_FILE = 'QueryResults.csv'
-RANDOM_LIMIT = 10           # On initial trials limit the number of blog posts
-PRINT_RANDOM = True         # Print out matching random record found (10 lines)
-OUTPUT_DIR = "_posts/"      # Subdirectory name. Use "./" for current directory
-QUESTIONS = False           # Don't upload questions
-VOTE_QUALIFIER = 2          # Answers need at least 2 votes to qualify
-ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
-# Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
 
 ''' Table of Contents (TOC) options. '''
-CONTENTS = "{ % TOC % }"      # If TOC not wanted, set to None
+# If TOC is never wanted, set to None
+CONTENTS = "{% include toc.md %}"
 TOC_HDR_MIN = 6             # Number of Headers required to qualify TOC insert
-TOC_LOC = 2                 # Put TOC before second second paragraph
+TOC_WORD_MIN = 1000         # Minimum 1,000 words for TOC
+TOC_LOC = 2                 # Insert TOC as 2nd header (Don't go below 2!)
 
 NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
 ''' 0 = No navigation bar
@@ -439,12 +452,38 @@ NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
 '''
 NAV_BAR_LEVEL = 2           # Only for "#" or "##". Not for "###", "####", etc.
 NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
-NAV_BAR_MIN = 3             # Temporary. Really need minimum paragraphs too.
+NAV_BAR_MIN = 3             # Minimum number of # & ## headers required
+NAV_WORD_MIN = 1000         # Minimum 1,000 words for navigation button bar
 ```
 
-**NOTE:** `stack-to-blog.py` is a Work-In-Progress.
-As of November 11, 2021 the program is about
-90% complete.
+A minimum number of `6` header lines (`#`, `##`, `###` ... 
+`######`) are required before the TOC is inserted. Additionally 
+a minimum of 1000 words are required. `TOC_LOC = 2` means the
+TOC is inserted before the second header line.
+
+For the navigation button bar only the first two header levels (# & ##)
+are analyzed. After three headers at these levels are encountered
+the navigation bar is inserted in front of these header
+levels. A 1,000 word minimum is also required though. If not met
+then no navigation buttons will appear in the post.
+
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
+
+## Program Execution Ooverview
+
+When you are stepping through `stack-to-blog.py` code to see how it works,
+this overview will help you.
+
+The program uses a two pass technique. The first pass does some formatting
+but mostly counts occurences of headers.
+
+The second pass does most of the formatting and repeats some of the same
+counting solely for the sake of inserting HTML code at the right places.
+
+### pass 1
+
+### pass 2
 
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
@@ -457,7 +496,7 @@ Other Pippim programs use *APIs*. Examples are **bserve** to get gmail messages,
 
 This Pippim website creates 2,000 blog posts using a different technique than *Web Scraping* or *REST APIs*, called *Data Conversion*. Data conversion allows thousands of website pages to be created with ***no work!***. You do have to do the first two steps below:
 
-1. The first step is to run a [Stack Exchange Data Explorer query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s?AccountId=4775729). Many thanks to the the query's [Author](https://meta.stackexchange.com/a/371435/366359).
+1. 
 
 2. Next a Python program called `stack-blog-post.py` is run. It does all the magic described below. This program was extensively debugged and tested to work on Pippim's markdown answers in Stack Exchange. Note that your markdown answers might be using extra features not tested.
 
