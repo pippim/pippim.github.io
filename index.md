@@ -93,10 +93,10 @@ For Pippim programs on Github Repos, you can go directly to the repository and p
 This website was created on **Github Pages**. You can download (or simply view) this website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on Github Pages"). This current page for example you can find in the markdown file called `index.md`.
 
 With Github Pages you can very quickly get your own webiste up and running by
-quickly picking from a collection of website designs called themes. Github Pages
+simply picking from a collection of website designs called themes. Github Pages
 is free to use. Although you will likely do most of your writing from a MAC,
 Linux or Windows PC, one of the cool things is you can change your website from
-a cell phone or any other device that has an internet browser installed.
+a cell phone.
 
 ## **TL;DR**
 
