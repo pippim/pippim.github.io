@@ -521,7 +521,10 @@ The code for both is show below:
 
 ''' Table of Contents (TOC) options. '''
 # If TOC is never wanted, set to None
+.. in real markdown below and generates the actual TOC:
+{% raw %}
 CONTENTS = "{% include toc.md %}"
+{% endraw %}
 TOC_HDR_MIN = 6             # Number of Headers required to qualify TOC insert
 TOC_WORD_MIN = 1000         # Minimum 1,000 words for TOC
 TOC_LOC = 2                 # Insert TOC as 2nd header (Don't go below 2!)
