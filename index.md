@@ -88,8 +88,7 @@ For Pippim programs on Github Repos, you can go directly to the repository and p
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
 
-Github Pages
-==
+# Github Pages
 
 This website was created on **Github Pages**. You can download (or simply view) this website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on Github Pages"). This current page for example you can find in the markdown file called `index.md`.
 
@@ -198,7 +197,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 
 ## Jekyll Themes
 
-![github pages themes.png](/assets/img/github pages themes.png){:style="float: right" height="65%" width="65%"}(margin-left: 15px;}{:class="img-responsive"}
+![github pages themes.png](/assets/img/github pages themes.png){:style="float: right" height="65%" width="65%" margin="20px"}{:class="img-responsive"}
 
 There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
 you can can pick from to use for your website. Preview the various themes
