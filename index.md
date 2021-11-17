@@ -197,7 +197,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-![github pages themes.png](/assets/img/github pages themes.png){:style="float: right; height: 65%; width: 65%; margin-left: 1em;"}{:class="img-responsive"}
+![github pages themes.png](/assets/img/github pages themes.png){:style="float: right; height: 65%; width: 65%; margin-left: 1em; margin-top: 1em;"}{:class="img-responsive"}
 
 ## Jekyll Themes
 
