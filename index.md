@@ -202,7 +202,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 ## Jekyll Themes
 
 There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
-you can can pick for your website. Spend some time reviewing your options
+you can pick from for your website. Spend some time reviewing your options
 before committing to one.
 
 **NOTE:** *Image credit:* 
