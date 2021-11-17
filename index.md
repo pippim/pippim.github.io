@@ -216,12 +216,12 @@ At first the Cayman Theme didn't appear to display title properly. That
 was probably due to incorrect setup because it works fine now. Consequently 
 the Merlot theme was used. However problems arose with the Merlot banner on
 the left not rendering properly on small screens. So it was back to Cayman.
-Then problems arose with custom page buttons. However, persaverance solved 
-the custom button problems the Pippim website had making the buttons in
-Cayman.
+Then problems arose with custom page buttons. However, trial and error
+solved the problems making custom buttons in Cayman.
 
-Initially the first website creation estimate was it would take a weekend.
-That was back on October 16, 2021 and now it is November 16, 2021! The 
+This is the first website Pippim created and the somewhat naive estimate
+was it would take a weekend to create. That estimate was back on 
+October 16, 2021 and now it is November 16, 2021! The 
 moral of the story is it may take longer than expected
 to set up your first website but, don't give up! You can do it 😄.
 
