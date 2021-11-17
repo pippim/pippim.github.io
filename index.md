@@ -197,42 +197,43 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-![github pages themes.png](/assets/img/github pages themes.png){:style="float: right; height: 65%; width: 65%; margin-left: 1em; margin-top: 3em;"}{:class="img-responsive"}
+![github pages themes.png](/assets/img/github pages themes.png){:style="float: right; height: 65%; width: 65%; margin-left: 1em; margin-top: 2em;"}{:class="img-responsive"}
 
 ## Jekyll Themes
 
 There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
-you can can pick from to use for your website. Preview the various themes
+you can can pick for your website. Spend some time reviewing your options
 before committing to one.
 
-*Githhub page themes image credit:* 
+**NOTE:** *Image credit:* 
 [Yale University](https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/) 
 
-Initially for the Pippim website the Cayman Theme was chosen. Then the
-Merlot theme was used and full circle back to the Cayman Theme again.
-At first the Cayman Theme didn't appear to display title properly. That
-was probably due to inexperience. So for a week Merlot theme was used
-but problems arose with the banner on the left. So back to Cayman and then
-problems arose with custom page buttons. Persaverance solved the button
-problems.
+Initially the Pippim website used the Cayman Theme for a day. Then the
+Merlot Theme was used for a week and then it came back full circle to the 
+Cayman Theme again.
 
-Initially the estimate was first time website creation would take a weekend.
-That was the thinking on October 16, 2021. Now it is November 16, 2021 to
-get to this point. The moral of the story is it may take longer than expected
+At first the Cayman Theme didn't appear to display title properly. That
+was probably due to incorrect setup because it works fine now. Consequently 
+the Merlot theme was used. However problems arose with the Merlot banner on
+the left not rendering properly on small screens. So it was back to Cayman.
+Then problems arose with custom page buttons. However, persaverance solved 
+the custom button problems the Pippim website had making the buttons in
+Cayman.
+
+Initially the first website creation estimate was it would take a weekend.
+That was back on October 16, 2021 and now it is November 16, 2021! The 
+moral of the story is it may take longer than expected
 to set up your first website but, don't give up! You can do it 😄.
 
-Your Pages site will use the layout and styles from the Jekyll
+Your Github Pages site will use the layout and styles from the Jekyll
 theme you have selected in your 
 [repository settings](https://github.com/pippim/pippim.github.io/settings/pages).
 The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 To see the current Jekyll, Sass, Rouge version numbers, etc. used by
 **Github Pages** click [here](https://pages.github.com/versions/).
-It is very important to find the correct documentation version when
-you are using instructions for setting up your website!
 
-There are many open-source vendors involved in the Pippim website
-that gets delivered to your desktop browser or cell phone browser:
+There are many open-source providers involved in the Pippim website:
 
 - Github Pages
 - Jekyll
