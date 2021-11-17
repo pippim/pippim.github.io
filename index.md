@@ -197,7 +197,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 
 ## Jekyll Themes
 
-![github pages themes.png](/assets/img/github pages themes.png){:style="float: right" height="65%" width="65%" margin="20px 20px"}{:class="img-responsive"}
+![github pages themes.png](/assets/img/github pages themes.png){:style="float: right; height: 65%; width: 65%; margin-left: 1em;"}{:class="img-responsive"}
 
 There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
 you can can pick from to use for your website. Preview the various themes
