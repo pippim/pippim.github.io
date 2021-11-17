@@ -192,19 +192,24 @@ The TOC command is used in real markdown below and generates the actual TOC:
 
 {% include toc.md %}
 
+---
+
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-## Jekyll Themes
-
 ![github pages themes.png](/assets/img/github pages themes.png){:style="float: right; height: 65%; width: 65%; margin-left: 1em;"}{:class="img-responsive"}
+
+## Jekyll Themes
 
 There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
 you can can pick from to use for your website. Preview the various themes
 before committing to one.
 
-For the Pippim website at first the Cayman Theme was chosen. Then the
-Merlot theme and finally back to the Cayman Theme again.
+Initially for the Pippim website the Cayman Theme was chosen. Then the
+Merlot theme was used and full circle back to the Cayman Theme again.
+
+*Githhub page themes image credit:* 
+[Yale University](https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/) 
 
 Your Pages site will use the layout and styles from the Jekyll
 theme you have selected in your 
@@ -215,9 +220,6 @@ To see the current Jekyll, Sass, Rouge version numbers, etc. used by
 **Github Pages** click [here](https://pages.github.com/versions/).
 It is very important to find the correct documentation version when
 you are using instructions for setting up your website!
-
-*Githhub page themes image credit:* 
-[Yale University](https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/) 
 
 There are many open-source vendors involved in the Pippim website
 that gets delivered to your desktop browser or cell phone browser:
@@ -615,47 +617,47 @@ Pass 2 does the key job of creating a new markdown file for
 the website blog post based on the Stack Exchange Post:
 
 ``` python
-    for line in lines:
-        check_code_block(line)      # Turn off formatting when in code block
-        # Did this post qualify for adding navigation bar?
-        # Save how header levels counts we have now
-        old_header_levels = list(header_levels)
-        # TODO: reverse doubling up totals
-        line = header_space(line)   # Formatting for #Header or # Header lines
-        if insert_nav_bar:
-            sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
-            sum2 = sum(header_levels[:NAV_BAR_LEVEL])
-            # For next qualifying header level insert HTML for navigation bar.
-            if sum1 != sum2:
-                # First check if at TOC_LOC and insert TOC if needed
-                if insert_toc:
-                    if sum2 == TOC_LOC:
-                        new_md = new_md + navigation_bar(TOC_LOC)
-                        if NAV_BAR_OPT <= 3:
-                            # When 4 a blank line already inserted before us
-                            new_md = new_md + "\n"
-                        new_md = new_md + CONTENTS + "\n"
-                        new_md = new_md + "\n"  # When 4 a blank line already inserted before us
-                        toc_inserted = True  # Not necessary but is consistent
-                    if sum2 >= TOC_LOC:
-                        sum2 += 1   # All heading levels after TOC are 1 greater
-
-                new_md = new_md + navigation_bar(sum2)
-
-        elif insert_toc:
-            # No navigation bar but we still need TOC at header count
-            if header_count == TOC_LOC and toc_inserted is False:
+for line in lines:
+check_code_block(line)      # Turn off formatting when in code block
+# Did this post qualify for adding navigation bar?
+# Save how header levels counts we have now
+old_header_levels = list(header_levels)
+# TODO: reverse doubling up totals
+line = header_space(line)   # Formatting for #Header or # Header lines
+if insert_nav_bar:
+    sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
+    sum2 = sum(header_levels[:NAV_BAR_LEVEL])
+    # For next qualifying header level insert HTML for navigation bar.
+    if sum1 != sum2:
+        # First check if at TOC_LOC and insert TOC if needed
+        if insert_toc:
+            if sum2 == TOC_LOC:
+                new_md = new_md + navigation_bar(TOC_LOC)
                 if NAV_BAR_OPT <= 3:
                     # When 4 a blank line already inserted before us
                     new_md = new_md + "\n"
                 new_md = new_md + CONTENTS + "\n"
-                new_md = new_md + "\n"
-                toc_inserted = True  # Prevents regeneration next line read
-                print('toc only:', blog_filename)
+                new_md = new_md + "\n"  # When 4 a blank line already inserted before us
+                toc_inserted = True  # Not necessary but is consistent
+            if sum2 >= TOC_LOC:
+                sum2 += 1   # All heading levels after TOC are 1 greater
 
-        # line = block_quote(line)    # Formatting for block quotes
-        # check_paragraph(line)       # Check if markdown paragraph (empty line)
-        new_md = new_md + line + '\n'
+        new_md = new_md + navigation_bar(sum2)
+
+elif insert_toc:
+    # No navigation bar but we still need TOC at header count
+    if header_count == TOC_LOC and toc_inserted is False:
+        if NAV_BAR_OPT <= 3:
+            # When 4 a blank line already inserted before us
+            new_md = new_md + "\n"
+        new_md = new_md + CONTENTS + "\n"
+        new_md = new_md + "\n"
+        toc_inserted = True  # Prevents regeneration next line read
+        print('toc only:', blog_filename)
+
+# line = block_quote(line)    # Formatting for block quotes
+# check_paragraph(line)       # Check if markdown paragraph (empty line)
+new_md = new_md + line + '\n'
 ```
 
 Finally pass 2 writes the blog footer section and depending on
