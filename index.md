@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){: style="float: left" height="50%" width="50%"}{:class="img-responsive"}
+![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){:style="float: left" height="50%" width="50%"}{:class="img-responsive"}
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons -->
 <a id="hdr1"></a>
@@ -198,7 +198,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 
 ## Jekyll Themes
 
-![github pages themes.png](/assets/img/github pages themes.png){style="height=60%; width=60%"}{:class="img-responsive"}{:class="float_right"}
+![github pages themes.png](/assets/img/github pages themes.png){:style="height=60%; width=60%"}{:class="img-responsive"}{:class="float_right"}
 
 There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
 you can can pick from to use for your website. Preview the various themes
