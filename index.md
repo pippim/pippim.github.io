@@ -197,7 +197,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-![github pages themes.png](/assets/img/github pages themes.png){:style="float: right; height: 65%; width: 65%; margin-left: 1em; margin-top: 1em;"}{:class="img-responsive"}
+![github pages themes.png](/assets/img/github pages themes.png){:style="float: right; height: 65%; width: 65%; margin-left: 1em; margin-top: 3em;"}{:class="img-responsive"}
 
 ## Jekyll Themes
 
@@ -205,11 +205,21 @@ There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
 you can can pick from to use for your website. Preview the various themes
 before committing to one.
 
-Initially for the Pippim website the Cayman Theme was chosen. Then the
-Merlot theme was used and full circle back to the Cayman Theme again.
-
 *Githhub page themes image credit:* 
 [Yale University](https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/) 
+
+Initially for the Pippim website the Cayman Theme was chosen. Then the
+Merlot theme was used and full circle back to the Cayman Theme again.
+At first the Cayman Theme didn't appear to display title properly. That
+was probably due to inexperience. So for a week Merlot theme was used
+but problems arose with the banner on the left. So back to Cayman and then
+problems arose with custom page buttons. Persaverance solved the button
+problems.
+
+Initially the estimate was first time website creation would take a weekend.
+That was the thinking on October 16, 2021. Now it is November 16, 2021 to
+get to this point. The moral of the story is it may take longer than expected
+to set up your first website but, don't give up! You can do it 😄.
 
 Your Pages site will use the layout and styles from the Jekyll
 theme you have selected in your 
@@ -307,10 +317,11 @@ $ tree
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
-# Convert Stack Exchange Posts to Website Answers
+# Convert Stack Exchange Posts to Website Posts
 
-Converting Stack Exchange Q&A in markdown format isn't as easy as simply copying it over to Github pages.
-To generate Pippim's blog posts fromt Stack Excahgne posts, the python program `stack-to-blog.py` was used.
+Converting thousands of Stack Exchange Q&A in markdown format isn't as easy 
+as simply copying them over to Github Pages. To generate Pippim's blog posts
+fromt Stack Excahgne posts, the python program `stack-to-blog.py` was used.
 The full `stack-to-blog.py` program can be accessed on the 
 [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/StackBlogPost).
 This program automatically:
