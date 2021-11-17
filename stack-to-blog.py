@@ -37,7 +37,7 @@
         ---
 
 
-    TODO: Sidebar navigation with top, original Q&A, Github, TOC Sections can
+    TODO: Sbar navigation with top, original Q&A, Github, TOC Sections can
             be based on #, ## and ### headers. See email to Michael Rose tonight
             (October 26, 2021 @ 8pm) for more information.
 
