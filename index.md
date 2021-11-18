@@ -222,9 +222,9 @@ those problems were solved too.
 
 This is the first website Pippim created. The somewhat naive initial estimate
 was it would take a weekend to create. That estimate was back on 
-October 16, 2021 and todayit is November 16, 2021. The 
+October 16, 2021 and today is November 16, 2021. The 
 moral of the story is: *"It may take longer than expected
-to set up your first website but, don't give up."* **You can do it! 😄**
+to set up your first website but, don't give up."* &Endo; **You can do it!** 😄
 
 Your Github Pages site will use the layout and styles from the Jekyll
 theme you have selected in your 
