@@ -16,8 +16,8 @@ There are no ads on Pippim. You don't need to buy Pippim a coffee (it's already 
 
 If you are an aspiring developer perhaps the code published here will help you get a start. If you are a systems administrator perhaps you can learn from the questions and answers posted here. If in Technical Support remember "Google search is your friend" and many answers posted here come from using the *Google Search* engine.
 
-*Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
-<br clear="left"/>
+<sub>*Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
+<br clear="left"/></sub>
 
 ## Navigation Buttons
 
@@ -205,8 +205,8 @@ There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
 you can pick from for your website. Spend some time reviewing your options
 before committing to one.
 
-**NOTE:** *Image credit:* 
-[Yale University](https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/) 
+<sub>**NOTE:** *Image credit:* 
+[Yale University](https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/)</sub>
 
 Initially the Pippim website used the Cayman Theme for a day. Then the
 Merlot Theme was used for a week and then it came back full circle to the 
