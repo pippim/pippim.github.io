@@ -212,14 +212,15 @@ Initially the Pippim website used the Cayman Theme for a day. Then the
 Merlot Theme was used for a week and then it came back full circle to the 
 Cayman Theme again.
 
-At first the Cayman Theme didn't appear to display title properly. That
-was probably due to incorrect setup because it works fine now. Consequently 
-the Merlot theme was used. However problems arose with the Merlot banner on
-the left not rendering properly on small screens. So it was back to Cayman.
-Then problems arose with custom page buttons. However, trial and error
-solved the problems making custom buttons in Cayman.
+At first the Cayman Theme 
+[didn't display the page title properly](https://github.com/pages-themes/cayman/issues/134).
+Consequently the Merlot theme was used. However problems arose with the Merlot banner on
+the left not rendering properly on small screens. So it was back to Cayman and after
+changing the theme the page title worked properly. New problemw arose
+with page <kbd>Home</kbd>, <kbd>About</kbd> buttons, etc. With trial and error however
+those problems were solved too.
 
-This is the first website Pippim created and the somewhat naive estimate
+This is the first website Pippim created. The somewhat naive initial estimate
 was it would take a weekend to create. That estimate was back on 
 October 16, 2021 and now it is November 16, 2021! The 
 moral of the story is it may take longer than expected
