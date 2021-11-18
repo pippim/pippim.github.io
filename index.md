@@ -563,8 +563,7 @@ then no navigation buttons will appear in the post.
 
 ## Program Overview
 
-When you are stepping through `stack-to-blog.py` code to see how it works,
-this overview will help you.
+This overview will help you, when reviewing `stack-to-blog.py` code.
 
 The program uses a two pass technique. The first pass does some formatting
 but mostly counts occurences of headers.
