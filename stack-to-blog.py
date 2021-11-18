@@ -23,7 +23,7 @@
         all-my-posts-on-the-se-network-with-markdown-and-html-content-
         plus-editors-and-s"
 
-    A copy of the query has been saved in pippim.github.io/StackBlogPost. A
+    A copy of the query is in pippim.github.io/StackBlogPost. A
     copy of the output file QueryResults.CSV can also be found in the same
     root directory.
 
