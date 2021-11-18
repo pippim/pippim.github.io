@@ -9,6 +9,7 @@
 #       Oct. 24 2021 - Initial version.
 #       NOv. 06 2021 - Two passes to count number of #, ##, etc. in first pass.
 #       NOv. 13 2021 - Add TOC support and SE "<!-- language" conversion.
+#       Nov. 17 2021 - Support for Pseudo-tags from keywords in answers.
 #
 # ==============================================================================
 
@@ -16,39 +17,32 @@
     USAGE
     ============================================================================
 
-    Run the stack exchange data explorer query:
-        https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s
-        NOTE: Use your Stack Exchange UserID. Mine is: 4775729
+    Using your Stack Exchange UserID (EG mine is: 4775729), run the
+        Stack Exchange Data Explorer query:
+        "https://data.stackexchange.com/stackoverflow/query/1505559/
+        all-my-posts-on-the-se-network-with-markdown-and-html-content-
+        plus-editors-and-s"
 
-    The query has been saved in pippim.github.io/StackBlogPost.
+    A copy of the query has been saved in pippim.github.io/StackBlogPost. A
+    copy of the output file QueryResults.CSV can also be found in the same
+    root directory.
 
     Run the query and Save the results in CSV format as QueryResults.csv
 
     Move query results to your website folder. In Linux use:
         mv ~/Downloads/QueryResults.csv ~/website
 
-    Run ~/website/stack-to-blog.py which will populate the _posts directory in the tree:
+    Run ~/website/stack-to-blog.py which will populate "~/website/_posts"
+    sub-directory with one Jekyll blog post file for each Stack Exchange
+    post that qualifies.
 
     Each post file begins with:
 
         ---
         layout: post
-        title: "What is the question in Stack Exchange?"
+        title:  What is the question in Stack Exchange?
         ---
 
-
-    TODO: Sbar navigation with top, original Q&A, Github, TOC Sections can
-            be based on #, ## and ### headers. See email to Michael Rose tonight
-            (October 26, 2021 @ 8pm) for more information.
-
-        Automatic "Excerpt" front matter or in markdown taking first 200
-            characters of blog post or perhaps first paragraph if close to 200.
-
-        Originally today was thinking of Michael Rose's Minimalistic Mistakes,
-            Basically Basic or Skinny Bones Jekyll Themes but just now read
-            about Jekyll Doc Them 6.0 and that might be better as it focuses
-            on according sidebar navigation.
-            See https://github.com/tomjoht/documentation-theme-jekyll
 """
 
 from __future__ import print_function  # Must be first import
@@ -93,9 +87,10 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 NAV_BAR_MIN = 3             # Minimum number of # & ## headers required
 NAV_WORD_MIN = 1000         # Minimum 1,000 words for navigation button bar
 
-# If question or answer contains one of these keywords then jekyll front
-# matter has "categories: KEYWORD" added. There can be more than one KEYWORD.
-PROGRAMS = ["eyesome", "multi-timer", ".bashrc", ".conkyrc", "cdd", "mserve", "bserve"]
+# If question or answer contains one of these "pseudo tags" then jekyll front
+# will have tag added as if it were really on the question. Essentially you
+# are tagging your answers and adding them to OP's question tags.
+PSEUDO_TAGS = ["conky", "eyesome"]
 
 fields = []                 # The column names used by Stack Exchanges
 data = []                   # Returned rows, less record #1 (field names)
