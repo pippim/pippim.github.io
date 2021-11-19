@@ -685,7 +685,7 @@ Then the next `row` from `rows` is read and pass 1 starts over again.
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
 
-## Granular Details of Markdown Conversion
+## Detailed Markdown Conversion
 
 When reading the details below keep in mind when "Pippim" is stated it's just
 shorthand for saying "`stack-to-blog.py` python program".
@@ -784,9 +784,9 @@ The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo]
 <a id="hdr13"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
 
-### Jekyll blog filename
+## Jekyll Blog Post Filename
 
-The filename for a Jekyll blog resides in the `_posts/` directory and requires strict formatting:
+The filename for a Jekyll blog post resides in the `_posts/` directory and requires strict formatting:
 
 - Begins with date in `YYYY-MM-DD` format followed by `-`.
 - Next comes the title which has spaces repaced by `-`.
@@ -810,7 +810,7 @@ def create_blog_filename():
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
 
-### Stack Exchnage `<!-- language` tags
+## Stack Exchnage `<!-- language` Tags
 
 When Stack Exchange uses `<!-- language-all` it is converted to appropriate format for Github using this multi-purpose function:
 
@@ -874,7 +874,7 @@ def check_code_block(ln):
 <a id="hdr15"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
 
-### Summary totals
+## Summary Totals
 
 When the `stack-to-blog.py` finishes a summary appears on your screen:
 
@@ -889,11 +889,13 @@ total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:   
 total_code_blocks:   272  | code_block_lines:    5,092  | total_toc:              25
 most_lines:          820  | total_force_end:     1,066  | total_nav_bar:          35
 total_header_levels:        [733, 959, 283, 2, 0, 0]
-
 ```
 
-The total label name is the actual internal python variable name. If you need to print
-larger numbers, you can tweak the code shown below:
+The total label is the actual internal python variable name. The first two toal lines
+apply to all Stack Exchnage Questions and Answers you have posted. The remaining
+total lines apply only to those that qualify for saving as A Jekyll Blog Post.
+
+If you change the Totals summary layout it is found in the code below:
 
 ``` python
 print('// =============================/   T O T A L S   \\============================== \\\\')
