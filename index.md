@@ -197,7 +197,8 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-![github pages themes.png](/assets/img/github pages themes.png){:style="float: right; height: 65%; width: 65%; margin-left: 1em; margin-top: 2em;"}{:class="img-responsive"}
+![github pages themes.png](/assets/img/github pages themes.png){: style="float: right; 
+height: 65%; width: 65%; margin-left: 1em; margin-top: 2em;"}{:class="img-responsive"}
 
 ## Jekyll Themes
 
@@ -216,9 +217,9 @@ At first the Cayman Theme
 [didn't display the page title properly](https://github.com/pages-themes/cayman/issues/134).
 Consequently the Merlot theme was used. However problems arose with the Merlot banner on
 the left not rendering properly on small screens. So it was back to Cayman and after
-changing the theme the page title worked properly. New problemw arose
-with page <kbd>Home</kbd>, <kbd>About</kbd> buttons, etc. With trial and error however
-those problems were solved too.
+changing the theme, the page title worked properly. New problems arose
+with the page buttons, <kbd>Home</kbd>, <kbd>About</kbd>, etc. With trial 
+and error however those problems were solved too.
 
 This is the first website Pippim created. The somewhat naive initial estimate
 was it would take a weekend to create. That estimate was back on 
