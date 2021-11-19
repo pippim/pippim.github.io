@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+
+// Smooth scrolling
+html { scroll-behavior: smooth; }
+
 //                    Pure CSS Button Hover effect
 // From: https://www.sliderrevolution.com/resources/css-button-hover-effects/
 
