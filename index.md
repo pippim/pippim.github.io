@@ -891,11 +891,12 @@ most_lines:          820  | total_force_end:     1,066  | total_nav_bar:        
 total_header_levels:        [733, 959, 283, 2, 0, 0]
 ```
 
-The total label is the actual internal python variable name. The first two toal lines
+Each printed total name is the same as the internal program variable name. The
+first two total lines
 apply to all Stack Exchnage Questions and Answers you have posted. The remaining
 total lines apply only to those that qualify for saving as A Jekyll Blog Post.
 
-If you change the Totals summary layout it is found in the code below:
+If you want to change the totals layout it is found in the code below:
 
 ``` python
 print('// =============================/   T O T A L S   \\============================== \\\\')
