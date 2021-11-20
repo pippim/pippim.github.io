@@ -4,7 +4,7 @@ layout: default
 
 {% include image.html src="/assets/img/pngwing.com.png" alt="Github Octacat Mascot by pngwing.com"
    caption="Github's "Octocat" mascot image credit: [PNGWING](https://www.pngwing.com/en/free-png-medya)"
-   style="float: left; height: 50%; width: 50%"
+   style="float: left; height: 50%; width: 50%;"
 %}
 
 {% include image.html src="{% site.url %}/assets/img/pngwing.com.png" alt="Github Octacat Mascot by pngwing.com" %}
