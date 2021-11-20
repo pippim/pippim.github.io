@@ -123,11 +123,12 @@ $header-bg-color-secondary: #155799 !default;
 
 // Abridged version of: https://stackoverflow.com/a/25173024/6929343
 figure {
-     position: relative;
+   position: relative;
 }
 figure img {
-    display: block;
+  display: block;
 }
 figcaption {
-    position: absolute;
+  position: absolute;
+  bottom: 0;
 }
