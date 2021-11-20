@@ -113,6 +113,10 @@ $header-bg-color-secondary: #155799 !default;
   }
 }
 
+// From: https://stackoverflow.com/a/17803868/6929343
+// Call with:  <div class="clr"></div>
+.clr{clear:both;}
+
 // From: https://talk.jekyllrb.com/t/need-help-with-image-caption/6715/2
 .img-class {
   float: none;
