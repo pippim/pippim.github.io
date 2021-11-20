@@ -128,10 +128,9 @@ $header-bg-color-secondary: #155799 !default;
 // Abridged version of: https://stackoverflow.com/a/25173024/6929343
 figure {
   position: relative;
-  display:block;
 }
 figure img {
-  display: inline-block;
+  display: block;
 }
 figcaption {
   // Below from: https://stackoverflow.com/a/24879297/6929343
@@ -141,6 +140,7 @@ figcaption {
   // display: inline-block
   // display: block;
   // caption-side: bottom;
+  text-align: center;
   bottom: 0;
   // left: 0;
   // right: 0;
