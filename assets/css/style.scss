@@ -129,7 +129,10 @@ figure img {
   display: block;
 }
 figcaption {
-  display: inline-block;
-  // position: absolute;
+  // display: inline-block;
+  position: absolute;
   // caption-side: bottom;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
