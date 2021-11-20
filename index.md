@@ -9,7 +9,7 @@ layout: default
 % }
 -->
 
-{% include image.html src="{{ site.url }}/assets/img/pngwing.com.png" alt="Github Octacat Mascot by pngwing.com" %}
+{% include image.html src="{% site.url %}/assets/img/pngwing.com.png" alt="Github Octacat Mascot by pngwing.com" %}
 
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons -->
