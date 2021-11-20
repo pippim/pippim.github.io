@@ -8,9 +8,12 @@ layout: default
    style="float: left; height: 50%; width: 50%;"
 % }
 
-{% include image.html src="/assets/img/pngwing.com.png" alt="Github Octacat Mascot by pngwing.com" %}
-
 -->
+
+{% include image.html src="/assets/img/pngwing.com.png" 
+   alt="Github Octacat Mascot by pngwing.com" 
+   style="float: left; height: 50%; width: 50%;"
+%}
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons -->
 <a id="hdr1"></a>
