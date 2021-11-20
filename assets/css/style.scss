@@ -10,13 +10,6 @@ html { scroll-behavior: smooth; }
 //                    Pure CSS Button Hover effect
 // From: https://www.sliderrevolution.com/resources/css-button-hover-effects/
 
-// $color: #0cf;  // Original
-$color: #7c334f;  // From: https://github.com/pages-themes/merlot/blob/master/_sass/screen.scss
-
-/* October 25, 2021: Experiment with cayman-theme. The Heading uses:
-  background-color: $header-bg-color;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
-*/
 // Headers (From: https://github.com/pages-themes/cayman/blob/master/_sass/variables.scss)
 $header-heading-color: #fff !default;
 $header-bg-color: #159957 !default;
@@ -24,15 +17,13 @@ $header-bg-color-secondary: #155799 !default;
 
 .button {
   display: inline-block;
-  // padding: .75rem 1.25rem;  // Nov 3/21 - Move a bit lower
   padding: 1rem 1rem;
   border-radius: 10rem;
   color: #fff;
   border: 2px solid white;  // Added for Cayman
-  // font-size: .8rem;  // Try smaller font
   transition: all .3s;
   position: relative;
-  overflow: hidden;  // Test to see if this makes container stay on top
+  overflow: hidden;
   z-index: 1;
 
   &:after {
@@ -42,7 +33,6 @@ $header-bg-color-secondary: #155799 !default;
     left: 0;
     width: 100%;
     height: 100%;
-    // background-color: $color;  // For Merlot
     background-color: $header-bg-color;  // For Cayman
     background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
     border-radius: 10rem;
@@ -55,12 +45,10 @@ $header-bg-color-secondary: #155799 !default;
     left: 0;
     width: 0%;
     height: 100%;
-    // background-color: darken($color, 15%);  // For Merlot
     background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
     transition: all .3s;
     border-radius: 10rem;
     z-index: -1;
-    //z-index: 10;  // place over other elements
   }
   &:hover {
     color: #fff;
@@ -123,14 +111,4 @@ $header-bg-color-secondary: #155799 !default;
     background-position:bottom;
     color:#F0FFF0;
   }
-}
-
-.float_left {
-  float: left;
-  margin: 0 15px 0 0;
-}
-
-.float_right {
-  float: right;
-  margin: 0 0 0 15px;
 }
