@@ -121,6 +121,7 @@ $header-bg-color-secondary: #155799 !default;
   margin: 0px;
 }
 
+/*
 // Abridged version of: https://stackoverflow.com/a/25173024/6929343
 figure {
    position: relative;
@@ -135,4 +136,29 @@ figcaption {
   bottom: 0;
   left: 0;
   right: 0;
+}
+*/
+
+// From: https://stackoverflow.com/a/64622989/6929343
+
+figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+figcaption {
+  align-self: flex-end;
+  text-align: center;
+  // text-align: right;
+  // font-size: 22px;
+  // font-style: italic;
+  // line-height: 1.5;
+  // color: #777;
+  // padding-right: 35px;
+  /*adjust this to control how far it should be from egde*/
 }
