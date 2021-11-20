@@ -120,3 +120,14 @@ $header-bg-color-secondary: #155799 !default;
   height: 100%;
   margin: 0px;
 }
+
+// Abridged version of: https://stackoverflow.com/a/25173024/6929343
+figure {
+     position: relative;
+}
+figure img {
+    display: block;
+}
+figcaption {
+    position: absolute;
+}
