@@ -201,7 +201,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-
+<div class="clr"></div>
 {% include image.html src="/assets/img/github pages themes.png"
    alt="github pages themes.png"
    caption="<sub><em>Image credit:
