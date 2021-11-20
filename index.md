@@ -2,7 +2,12 @@
 layout: default
 ---
 
-![Github Octacat Mascot by pngwing.com](/assets/img/pngwing.com.png){:style="float: left" height="50%" width="50%"}{:class="img-responsive"}
+{% include image.html src="/assets/img/pngwing.com.png" 
+   alt="Github Octacat Mascot by pngwing.com"
+   caption="<sub><em>Github's "Octocat" mascot image credit: 
+     [PNGWING](https://www.pngwing.com/en/free-png-medya)</em></sub>"
+   style="float: left; height: 50%; width: 50%"
+%}
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons -->
 <a id="hdr1"></a>
@@ -16,8 +21,6 @@ There are no ads on Pippim. You don't need to buy Pippim a coffee (it's already 
 
 If you are an aspiring developer perhaps the code published here will help you get a start. If you are a systems administrator perhaps you can learn from the questions and answers posted here. If in Technical Support remember "Google search is your friend" and many answers posted here come from using the *Google Search* engine.
 
-<sub>*Github's "Octocat" mascot image credit:* [PNGWING](https://www.pngwing.com/en/free-png-medya)
-<br clear="left"/></sub>
 
 ## Navigation Buttons
 
