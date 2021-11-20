@@ -4,8 +4,9 @@ layout: default
 
 {% include image.html src="/assets/img/pngwing.com.png" 
    alt="Github Octacat Mascot by pngwing.com"
-   caption="<sub><em>Github's Octocat Nascot image credit: 
-      [PNGWING](https://www.pngwing.com/en/free-png-medya)</em></sub>"
+   caption="<sub><em>Github's Octocat Mascot image credit: 
+      <a href="https://www.pngwing.com/en/free-png-medya">PNGWING</a>
+   </em></sub>"
    style="float: left; height: 50%; width: 50%;"
 %}
 
@@ -213,8 +214,8 @@ There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
 you can pick from for your website. Spend some time reviewing your options
 before committing to one.
 
-<sub>**NOTE:** *Image credit:* 
-[Yale University](https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/)</sub>
+<sub><em>**NOTE:** *Image credit:* 
+   [Yale University](https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/)</em></sub>
 
 Initially the Pippim website used the Cayman Theme for a day. Then the
 Merlot Theme was used for a week and then it came back full circle to the 
