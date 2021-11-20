@@ -5,7 +5,7 @@ layout: default
 {% include image.html src="/assets/img/pngwing.com.png" 
    alt="Github Octacat Mascot by pngwing.com"
    caption="<sub><em>Github's Octocat Mascot image credit: 
-      <a href="https://www.pngwing.com/en/free-png-medya">PNGWING</a>
+      <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>
    </em></sub>"
    style="float: left; height: 50%; width: 50%;"
 %}
