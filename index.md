@@ -204,18 +204,17 @@ The TOC command is used in real markdown below and generates the actual TOC:
 
 {% include image.html src="/assets/img/github pages themes.png"
    alt="github pages themes.png"
-   caption="<sub><em>github pages themes.png</em></sub>"
    style="float: right; height: 65%; width: 65%; margin-left: 1em; margin-top: 2em;"
+   caption="<sub><em>Image credit:
+            <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
+               >Yale University</a></em></sub>"
 %}
-
+   
 ## Jekyll Themes
 
 There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
 you can pick from for your website. Spend some time reviewing your options
 before committing to one.
-
-<sub><em>**NOTE:** *Image credit:* 
-   [Yale University](https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/)</em></sub>
 
 Initially the Pippim website used the Cayman Theme for a day. Then the
 Merlot Theme was used for a week and then it came back full circle to the 
