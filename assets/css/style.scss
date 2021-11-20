@@ -123,22 +123,25 @@ $header-bg-color-secondary: #155799 !default;
 
 // Abridged version of: https://stackoverflow.com/a/25173024/6929343
 figure {
-  position: relative;
+  // Below from: https://stackoverflow.com/a/24879297/6929343
+  display: table;
+  width: 0;
+  // position: relative;
   // width from: https://community.canvaslms.com/t5/Canvas-Question-Forum
   // HTML-how-to-float-image-to-right-with-caption/td-p/179160
-  width: 100%;
+  // width: 100%;
 }
 figure img {
-  // display: block;
+  display: block;
 }
 figcaption {
-  // display: inline-block;
-  // position: relative;
-  position: absolute;
+  // Below from: https://stackoverflow.com/a/24879297/6929343
+  text-align: center;
+  // position: absolute;
   // caption-side: bottom;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
 }
 
 
