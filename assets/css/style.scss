@@ -121,7 +121,6 @@ $header-bg-color-secondary: #155799 !default;
   margin: 0px;
 }
 
-/*
 // Abridged version of: https://stackoverflow.com/a/25173024/6929343
 figure {
    position: relative;
@@ -131,14 +130,16 @@ figure img {
 }
 figcaption {
   // display: inline-block;
-  position: absolute;
+  position: relative;
+  // position: absolute;
   // caption-side: bottom;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
 }
-*/
 
+
+/*
 // From: https://stackoverflow.com/a/64622989/6929343
 
 figure {
@@ -164,3 +165,4 @@ figcaption {
   /*adjust this to control how far it should be from egde*/
 }
 
+*/
