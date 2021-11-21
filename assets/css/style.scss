@@ -152,6 +152,7 @@ div.floatright img {
 // Abridged version of: https://stackoverflow.com/a/25173024/6929343
 figure {
   // position: relative;
+  clear: both;   // Not going all way to right: https://stackoverflow.com/a/10456494/6929343
   float: right;  // Tip from:https://talk.jekyllrb.com/t/need-help-with-image-caption/6715?u=pippim
   width: 60%;
   margin-top: 2em;
