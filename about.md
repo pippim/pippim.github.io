@@ -2,12 +2,14 @@
 layout: default
 ---
 
-# All About Pippim
-![The 5 Ws (and 1 H) that should be asked of every project!](/assets/img/Blog_Project-Management-101.png){:height=80% weight=80%}{:class="img-responsive"}
+{% include image.html src="/assets/img/Blog_Project-Management-101.png"
+   alt="The 5 Ws (and 1 H) that should be asked of every project!"
+   caption="<sub><em>Image credit: 
+      <a href='https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project'>The 5 Ws (and 1 H)</a>
+   </em></sub>"
+%}
 
-**Image credit:** [The 5 Ws (and 1 H) that should be asked of every project!](https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project)
-
-### The 5 W's of pippim:
+# The 5 W's of Pippim:
 
 | W     | Category                 |
 | ----- | ------------------------ |
