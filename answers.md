@@ -8,7 +8,8 @@ Pippim answers (and a small percentage of questions) have over **51 million view
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}">{{ post.title }}</a>  
+      {{ post.content | strip_html | truncatewords:75 }}
     </li>
   {% endfor %}
 </ul>
