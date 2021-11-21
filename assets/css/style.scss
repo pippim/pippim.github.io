@@ -90,9 +90,6 @@ $header-bg-color-secondary: #155799 !default;
   width: 100%;
   height: .5rem;            // Allow bit extra for button box height
   text-align: right;        // Don't use "float: right;" that breaks rendering order
-  &:after {
-    clear: both;
-  }
   &:before {
     content: "";
     display: block;
@@ -155,8 +152,8 @@ div.floatright img {
 // Abridged version of: https://stackoverflow.com/a/25173024/6929343
 figure {
   // position: relative;
-  clear: both;   // Not going all way to right: https://stackoverflow.com/a/10456494/6929343
-  float: right;  // Tip from:https://talk.jekyllrb.com/t/need-help-with-image-caption/6715?u=pippim
+  float: right;  // Tip from: https://talk.jekyllrb.com/t/need-help-with-image-caption/6715?u=pippim
+  text-align:right; // Tip from: https://stackoverflow.com/a/38709210/6929343
   width: 60%;
   margin-top: 2em;
   margin-left: 1em;
