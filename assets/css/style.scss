@@ -151,22 +151,24 @@ p { margin-top: 0; }  // May have to be ditched if it effects all paragraphs
 
 // Abridged version of: https://stackoverflow.com/a/25173024/6929343
 figure {
-  position: relative;
+  // position: relative;
+  float: right;  // Tip from:https://talk.jekyllrb.com/t/need-help-with-image-caption/6715?u=pippim
+  width: 60%;
 }
 figure img {
-  display: block;
+  // display: block;
 }
 figure figcaption {
   // Below from: https://stackoverflow.com/a/24879297/6929343
   // text-align: center;
   // position: absolute;
-  position: absolute;
+  // position: absolute;
   // display: inline-block
   // display: block;
   // caption-side: bottom;
-  // text-align: center;
-  top: 7px;
-  bottom: -1px;
-  left: 0;
-  right: 0;
+  text-align: center;
+  // top: 7px;
+  // bottom: -1px;
+  // left: 0;
+  // right: 0;
 }
