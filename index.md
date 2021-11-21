@@ -2,6 +2,10 @@
 layout: default
 ---
 
+<!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
+<a id="hdr1"></a>
+<div class="hdr-bar">  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
+
 <div class="clr"></div>
 {% include image.html src="/assets/img/pngwing.com.png" 
    alt="Github Octacat Mascot by pngwing.com"
@@ -9,10 +13,6 @@ layout: default
       <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>
    </em></sub>"
 %}
-
-<!-- Define hdr1 id with ToC and Skip navigation buttons -->
-<a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
 
 # Introduction
 
