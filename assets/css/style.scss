@@ -90,6 +90,9 @@ $header-bg-color-secondary: #155799 !default;
   width: 100%;
   height: .5rem;            // Allow bit extra for button box height
   text-align: right;        // Don't use "float: right;" that breaks rendering order
+  &:after {
+    clear: both;
+  }
   &:before {
     content: "";
     display: block;
