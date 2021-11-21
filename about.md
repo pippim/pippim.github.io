@@ -9,16 +9,16 @@ layout: default
    </em></sub>"
 %}
 
-# The 5 W's of Pippim:
+# 5 W's of Pippim:
 
-| W     | Category                 |
-| ----- | ------------------------ |
-| Who   | Who is Pippim?           |
-| What  | What is Pippim?          |
-| Where | Where is Pippim located? |
-| When  | When was Pippim created? |
-| Why   | Why was Pippim created?  |
-| How   | How was Pippim created?  |
+| W     | Category        |
+| ----- | --------------- |
+| Who   | is Pippim?       |
+| What  | is Pippim?       |
+| Where | is Pippim? |
+| When  | was Pippim created? |
+| Why   | was Pippim created?  |
+| How   | was Pippim created?  |
 
 ## Who is Pippim?
 
