@@ -201,13 +201,22 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-{% include image.html src="/assets/img/github pages themes.png"
+<!-- BROKEN: Caption won't stay with image
+{ % include image.html src="/assets/img/github pages themes.png"
    alt="github pages themes.png"
    style="float: right; height: 65%; width: 65%; margin-left: 1em; margin-top: 2em;"
    caption="<sub><em>Image credit:
             <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
                >Yale University</a></em></sub>"
-%}
+% }
+-->
+
+<div class="float_right">
+<img src="/assets/img/github pages themes.png" alt="" width="65%" height="65%"><br>
+<sub><em>Image credit:
+            <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
+               >Yale University</a></em></sub>
+</div>
    
 ## Jekyll Themes
 
