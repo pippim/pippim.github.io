@@ -116,7 +116,7 @@ $header-bg-color-secondary: #155799 !default;
  // CSS CODE from: https://css.maxdesign.com.au/floatutorial/tutorial0211.htm
 .float_right {
 float: right;
-width: 103px;
+// width: 103px;
 margin: 0 0 10px 10px;
 background-color: #fff;
 padding: 10px;
@@ -133,7 +133,7 @@ border-bottom: 1px solid #999;
 border-left: 2px solid #555;
 }
 
-p { margin-top: 0; }  // May have to be ditched if it effects all paragraphs
+/* p { margin-top: 0; }  // May have to be ditched if it effects all paragraphs */
 
 // From: https://stackoverflow.com/a/17803868/6929343
 // Call with:  <div class="clr"></div>
