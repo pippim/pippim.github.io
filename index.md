@@ -212,10 +212,15 @@ The TOC command is used in real markdown below and generates the actual TOC:
 -->
 
 <div class="float_right">
-<img src="/assets/img/github pages themes.png" alt="" width="65%" height="65%"><br>
+<img src="/assets/img/github pages themes.png" alt="github pages themes.png"
+   style="float: right; height: 65%; width: 65%; margin-left: 1em; margin-top: 2em;"
+><br>
 <sub><em>Image credit:
             <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
                >Yale University</a></em></sub>
+
+</div>
+
    
 ## Jekyll Themes
 
@@ -234,8 +239,6 @@ the left not rendering properly on small screens. So it was back to Cayman and a
 changing the theme, the page title worked properly. New problems arose
 with the page buttons, <kbd>Home</kbd>, <kbd>About</kbd>, etc. With trial 
 and error however those problems were solved too.
-
-</div>
 
 This is the first website Pippim created. The somewhat naive initial estimate
 was it would take a weekend to create. That estimate was back on 
