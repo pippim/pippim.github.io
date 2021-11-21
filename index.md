@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<div class="clr"></div>
 {% include image.html src="/assets/img/pngwing.com.png" 
    alt="Github Octacat Mascot by pngwing.com"
    caption="<sub><em>Github's Octocat Mascot image credit: 
@@ -222,6 +223,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 </div>
 -->
 
+<div class="clr"></div>
 {% include image.html src="/assets/img/github pages themes.png"
    alt="github pages themes.png"
    caption="<sup><em>Image credit:
