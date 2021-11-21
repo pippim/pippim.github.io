@@ -23,7 +23,7 @@
         all-my-posts-on-the-se-network-with-markdown-and-html-content-
         plus-editors-and-s"
 
-    A copy of the query is in pippim.github.io/StackBlogPost. A
+    A copy of the query has been saved in pippim.github.io/StackBlogPost. A
     copy of the output file QueryResults.CSV can also be found in the same
     root directory.
 
@@ -55,8 +55,8 @@ import csv
 from random import randint
 
 INPUT_FILE = 'QueryResults.csv'
-RANDOM_LIMIT = 10           # On initial trials limit the number of blog posts
-PRINT_RANDOM = True         # Print out matching random record found (10 lines)
+RANDOM_LIMIT = 10000        # On initial trials limit the number of blog posts
+PRINT_RANDOM = False        # Print out matching random record found (10 lines)
 OUTPUT_DIR = "_posts/"      # Subdirectory name. Use "" for current directory
 QUESTIONS_QUALIFIER = False  # Don't upload questions
 VOTE_QUALIFIER = 2          # Posts need at least 2 votes to qualify
@@ -90,7 +90,7 @@ NAV_WORD_MIN = 1000         # Minimum 1,000 words for navigation button bar
 # If question or answer contains one of these "pseudo tags" then jekyll front
 # will have tag added as if it were really on the question. Essentially you
 # are tagging your answers and adding them to OP's question tags.
-PSEUDO_TAGS = ["conky", "eyesome"]
+PSEUDO_TAGS = ["conky", "eyesome", "cpuf", "iconic"]
 
 fields = []                 # The column names used by Stack Exchanges
 data = []                   # Returned rows, less record #1 (field names)
@@ -213,6 +213,8 @@ total_headers = 0               # Total header count
 total_quote_spaces = 0          # Total block quotes requiring two spaces at end
 total_paragraphs = 0            # How many paragraphs are there?
 total_words = 0                 # How many words by splitting whitespace
+total_pseudo_tags = 0           # Words in answer that qualify as tags for question
+total_tag_names = []            # All the tags added for all the posts
 total_code_blocks = 0           # How many code blocks are there?
 total_code_block_lines = 0      # How many lines are inside code blocks?
 total_pre_codes = 0             # How many times does <pre><code> appear?
@@ -232,12 +234,15 @@ blog_filename = ""          # YYYY-MM-DD-blog-title.md
 lines = []                  # Markdown lines list being processed
 curr_index = 0              # Current line index within lines []
 header_count = 0            # How many headers were found in blog post
+header_space_count = 0      # How many header spaces had to be added after #?
 alternate_h1 = 0            # Alternate H1 lines followed by "=="
 alternate_h2 = 0            # Alternate H2 lines followed by "--"
 ''' Counts of header levels - H1, H2 ... H6 '''
 header_levels = [0, 0, 0, 0, 0, 0]
 paragraph_count = 0         # How many paragraphs in post last one not counted
 word_count = 0              # How many words by splitting whitespace
+pseudo_tag_count = 0        # Words in answer that qualify as tags for question
+pseudo_tag_names = []       # All tag names added for this post
 in_code_block = False       # Are we in a code block? Then no # Header formatting
 language_used = ""          # What language when fenced code blocks have none?
 image_links = []            # Links to images found at bottom of SE posts
@@ -265,6 +270,8 @@ def dump(r):
     print('Created:', r[CREATED], ' |  Edited: ', r[LAST_EDIT],
           ' |  Edited by:', r[EDITED_BY])  # Compensate for time having extra space
     print('Tags In:', r[TAGS], '  |  Tags Out:', tags)
+    print('pseudo_tag_count:', pseudo_tag_count,
+          '  |  total_pseudo_tags:', total_pseudo_tags)
     print('Votes:  ', r[SCORE], '  |  Views:', r[VIEWS], '  |  Answers:', r[ANSWERS],
           '  |  Accepted:', r[ACCEPTED])
     print('header_count:', header_count, '  |  paragraph_count:', paragraph_count,
@@ -287,32 +294,27 @@ def header_space(ln):
         TODO: Called in pass 1 and pass 2 so has ugly reset of totals in
             mainline. Break into two separate functions instead.
     """
-    global total_header_spaces, header_count, total_code_block_lines
-    global total_headers
-    global lines, curr_index, header_levels, total_header_levels
-    global alternate_h1, total_alternate_h1, alternate_h2, total_alternate_h2
+    global header_count, header_space_count
+    global lines, curr_index, header_levels
+    global alternate_h1, alternate_h2
 
     if in_code_block:
-        ''' Note only header_spaces() function will increment count '''
-        total_code_block_lines += 1
         return ln
 
     if ln[0:1] == "#":
         #print('Found header:', ln)
         header_count += 1   # For current post, reset between posts
-        total_headers += 1
         # How many '#' are there at line start?
         hash_count = len(ln) - len(ln.lstrip('#'))
         # Is first character after "#" a space?
         if ln[hash_count:hash_count+1] != " ":
             #print('Forcing space at:', hash_count, ln)
             ln = ln[0:hash_count] + " " + ln[hash_count:]
-            total_header_spaces += 1
+            header_space_count += 1
             #print('After forcing:   ', hash_count, ln)
 
         # Increment count at level
         header_levels[hash_count - 1] += 1
-        total_header_levels[hash_count - 1] += 1
 
     elif curr_index == line_count - 1:
         pass  # Don't go past size of list
@@ -325,14 +327,11 @@ def header_space(ln):
         ''' This is an H1 Line because next line is "=="
         '''
         header_count += 1   # For current post, reset between posts
-        total_headers += 1
         alternate_h1 += 1
-        total_alternate_h1 += 1
         ln = "# " + ln
         lines[curr_index + 1] = ""  # Blank out "=="
         # Increment count at level
         header_levels[0] += 1
-        total_header_levels[0] += 1
 
     elif lines[curr_index + 1][0:2] == "--":
         ''' This is an H2 Line because next line is "--"
@@ -343,14 +342,11 @@ def header_space(ln):
         #print(row[URL])
 
         header_count += 1   # For current post, reset between posts
-        total_headers += 1
         alternate_h2 += 1
-        total_alternate_h2 += 1
         ln = "## " + ln
         lines[curr_index + 1] = ""  # Blank out "--"
         # Increment count at level
         header_levels[1] += 1
-        total_header_levels[1] += 1
 
     # Append HTML header ID. EG: <a> id="hdr9"></a>
     ''' Move this to second pass
@@ -387,12 +383,16 @@ def check_paragraph(ln):
         note if three lines were written in a row they would be merged
         into one paragraph.
 
-        FUTURE: The paragraph number indicates where to insert TOC.
+        FUTURE?: The paragraph number indicates where to insert TOC.
 
+        Count number of words. Check if word qualifies as a pseudo
+        tag.
 
-        Also count number of words
     """
     global total_paragraphs, paragraph_count, total_words, word_count
+    global pseudo_tag_count, total_pseudo_tags, pseudo_tag_names, total_tag_names
+
+
     if len(ln) == 0:
         total_paragraphs += 1   # For all posts
         paragraph_count += 1    # For current post
@@ -402,6 +402,22 @@ def check_paragraph(ln):
     count = len(word_list)
     word_count += count
     total_words += count
+
+    ''' Add to pseudo-tags '''
+    for pseudo in PSEUDO_TAGS:
+        search = pseudo.lower()
+        for word in word_list:
+            if search == word.lower():
+                pseudo_tag_count += 1
+                total_pseudo_tags += 1
+                if search not in pseudo_tag_names:
+                    if search not in tags:
+                        # All tag names added for this post
+                        pseudo_tag_names.append(search)
+                if search not in total_tag_names:
+                    if search not in tags:
+                        # All the tags added for all the posts
+                        total_tag_names.append(search)
 
 
 def check_code_block(ln):
@@ -678,11 +694,14 @@ for row in data:
     lines = []              # Markdown lines list being processed
     curr_index = 0          # Current line index within lines []
     header_count = 0        # How many headers were found in blog post
+    header_space_count = 0  # How many spaces had to be added after #?
     ''' Counts of header levels - H1, H2 ... H6 '''
     header_levels = [0, 0, 0, 0, 0, 0]
     paragraph_count = 0     # How many paragraphs (headers count as 2) in post
     word_count = 0          # How many words (includes "## ") in post
-    language_used = ""  # What language when fenced code blocks have none?
+    pseudo_tag_count = 0    # Words in answer that qualify as tags for question
+    pseudo_tag_names = []   # Reset pseudo tag names from last post
+    language_used = ""      # What language when fenced code blocks have none?
     in_code_block = False   # In a code block # Header formatting is skipped
     force_end_line = False  # Did Pass #1 force an empty blank line at end?
     ''' YYYY-MM-DD-Title-with-spaces-converted-to-dashes.md '''
@@ -730,7 +749,9 @@ for row in data:
             random_row_nos[index] = row_number + 1
         continue
 
-    ''' convert SE tags: "<tag1><tag2><tag3>" to: "tag1 tag2 tag3" '''
+    ''' convert SE tags: "<tag1><tag2><tag3>" to: "tag1 tag2 tag3"
+        NOTE: pseudo_tag_names will be appended to this list later.
+    '''
     tags = row[TAGS].replace("><", " ")
     tags = tags.replace("<", "").replace(">", "")
 
@@ -750,53 +771,13 @@ for row in data:
     for curr_index, line in enumerate(lines):
         line = check_code_block(line)  # Turn off formatting when in code block
         line = header_space(line)  # Change #Header to # Header and Alt-H1, Alt-H2
+        if in_code_block:
+            total_code_block_lines += 1
+
         line = block_quote(line)  # Formatting for block quotes
         check_paragraph(line)  # Check if markdown paragraph (empty line)
         lines[curr_index] = line  # Stuff back any changes made
 
-    ''' Does this answer qualify for TOC or Navigation Bar?
-    
-        COMMENTS COPIED FROM ABOVE:
-        
-        ' Table of Contents (TOC) options. '
-# If TOC is never wanted, set to None
-CONTENTS = "{% include toc.md %}"
-TOC_HDR_MIN = 6             # Number of Headers required to qualify TOC insert
-TOC_LOC = 2                 # Put TOC before second header
-
-NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
-    0 = No navigation bar
-    1 = single line. EG <a id=... </div>
-    2 = two lines. EG <a id= then new line then with <div>...</div>
-    3 = Option 2 plus empty (blank) line above for readability
-    4 = Option 3 plus empty (blank) line above for even more readability
-    5 = Option 4 plus comment for ultimate readability
-
-    Note: Markdown compresses all blank lines into a single blank line between
-          paragraphs. HTML code inserted simply counts as another blank line to
-          be compressed into a single blank line.
-NAV_BAR_LEVEL = 2           # Put before "#" or "##" only. Not before "###"
-NAV_BAR_MIN = 2             # Minimum of 2 "#" or "##" for Navigation bar
-NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
- 
-    '''
-
-    ''' Reset counts of header levels - H1, H2 ... H6 '''
-    # header_levels = [0, 0, 0, 0, 0, 0]
-    # paragraph_count = 0     # How many paragraphs (headers count as 2) in post
-    # word_count = 0          # How words (includes "## ") in post
-    in_code_block = False   # In a code block # Header formatting is skipped
-
-    '''
-    FROM: https://github.com/toshimaru/jekyll-toc
-    Set toc: true in posts for which you want the TOC to appear.
-
-        ---
-        layout: post
-        title: "Welcome to Jekyll!"
-        toc: true
-        ---
-    '''
     insert_toc = False
     if CONTENTS is not None:
         if header_count >= TOC_HDR_MIN and word_count >= TOC_WORD_MIN:
@@ -813,18 +794,30 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
             #print('total_nav_bar:', total_nav_bar, blog_filename)
 
     ''' Pass #2: Generate new markdown (kramdown) '''
+    # Add SE Question tags + our answer key tags (if any)
+    string = ' '.join(pseudo_tag_names)
+    if len(string) > 0:
+        tags = tags + " " + string
+
+    # Generate Markdown (MD)  with front matter
     new_md = front_matter(row)
-    header_levels = [0, 0, 0, 0, 0, 0]  # Reset pass 1 variables recycled now
+
+    ''' Add to totals using header_space() counts '''
+    total_headers += header_count
+    total_header_spaces += header_space_count
+    total_alternate_h1 += alternate_h1
+    total_alternate_h2 += alternate_h2
+    total_header_levels = [x + y for x, y in zip(total_header_levels,
+                                                 header_levels)]
+
+    ''' Reset counts used in header_space() '''
     header_count = 0
-    total_header_spaces = 0
-    total_header_levels = [0, 0, 0, 0, 0, 0]
-    # total_code_block_lines = 0
-    toc_inserted = False
-    sum2 = 0
+    header_levels = [0, 0, 0, 0, 0, 0]
     alternate_h1 = 0
-    total_alternate_h1 = 0
     alternate_h2 = 0
-    total_alternate_h2 = 0
+    in_code_block = False   # In a code block # Header formatting is skipped
+    toc_inserted = False    # Has TOC been inserted yet?        
+    sum2 = 0                # Track for new header to insert Navigation Bar
 
     for line in lines:
         check_code_block(line)      # Turn off formatting when in code block
@@ -864,8 +857,6 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
                 toc_inserted = True  # Prevents regeneration next line read
                 print('toc only:', blog_filename)
 
-        # line = block_quote(line)    # Formatting for block quotes
-        # check_paragraph(line)       # Check if markdown paragraph (empty line)
         new_md = new_md + line + '\n'
 
     ''' Add tag for footer to jump to when 'Skip' button used '''
@@ -906,6 +897,9 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 
 print('// =============================/   T O T A L S   \\============================== \\\\')
 print('')
+print('RANDOM_LIMIT:     {:>6,}'.format(RANDOM_LIMIT),
+      ' | PRINT_RANDOM:  {:>11}'.format(str(PRINT_RANDOM)),
+      ' | NAV_FORCE_TOC: {:>11}'.format(str(NAV_FORCE_TOC)))
 print('accepted_count:   {:>6,}'.format(accepted_count),
       ' | total_votes:   {:>11,}'.format(total_votes),
       ' | total_views:   {:>11,}'.format(total_views))
@@ -918,6 +912,8 @@ print('total_headers:    {:>6,}'.format(total_headers),
 print('total_lines: {:>11,}'.format(total_lines),
       ' | total_paragraphs:{:>9,}'.format(total_paragraphs),
       ' | total_words: {:>13,}'.format(total_words))
+print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
+      ' | total_tag_names:  ', total_tag_names)
 print('total_pre_codes:  {:>6,}'.format(total_pre_codes),
       ' | total_alternate_h1: {:>6,}'.format(total_alternate_h1),
       ' | total_alternate_h2: {:>6,}'.format(total_alternate_h2))
