@@ -154,9 +154,17 @@ figure {
   // position: relative;
   float: right;  // Tip from:https://talk.jekyllrb.com/t/need-help-with-image-caption/6715?u=pippim
   width: 65%;
+  border-top: 1px solid #999;
+  border-right: 2px solid #555;
+  border-bottom: 2px solid #555;
+  border-left: 1px solid #999;
 }
 figure img {
   // display: block;
+  border-top: 2px solid #555;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  border-left: 2px solid #555;
 }
 figure figcaption {
   // Below from: https://stackoverflow.com/a/24879297/6929343
