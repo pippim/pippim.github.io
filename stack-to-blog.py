@@ -291,8 +291,6 @@ def header_space(ln):
             This will simply things during second pass when navigation bar
             buttons need to be inserted.
 
-        TODO: Called in pass 1 and pass 2 so has ugly reset of totals in
-            mainline. Break into two separate functions instead.
     """
     global header_count, header_space_count
     global lines, curr_index, header_levels
@@ -666,24 +664,25 @@ def write_md(md):
             fh.write(md)
 
 
+''' MAIN LOOP to process All query records
+    ======================================
 
-''' Main loop to process All query records
-    - If RANDOM_LIMIT is used then only output matching random_rec_nos []
     - Match criteria for answer up votes or accepted check mark
     - Check if in fenced code block (``` bash) for example. If not then:
         - Reformat '#Header 1' to '# Header 1'. Same for "##H2" to "## H2", etc.
         - Count number of '#' header lines
+        - Count number of lines, paragraphs and number of words.
+        - Tally counts at header levels [H1, H2, H3, H4, H5 and H6]
         - Add two spaces after "< Block Quote" lines
 
     - Second pass to insert '{% include toc.md %}' at paragraph # (TOC_LOC)
-    - Anytime a line is inserted, loop through following header_index []
+    - Anytime a TOC is inserted, following header_index []
         entries and bump index number up by 1
-
-    TODO: 
-        Develop HTML anchors for "#pippim_hdr_1". Then apply links for:
-            Top, ToS, ToC, Skip, Back (Top of Page, Top of Section, Table of
-            Contents, Browser History Back). Mobile uses abbreviations,
-            Desktop uses full spelling.  
+    - Insert Navigation Bar Buttons: 
+        HTML anchors for #hdr1, #hdr2. etc. Then apply "<a href" links for:
+        Top, ToS, ToC and, Skip (Top of Page, Top of Section, Table of
+        Contents and, Skip section).  
+    - If RANDOM_LIMIT is used then only output matching random_rec_nos []
 '''
 
 for row in data:
@@ -778,14 +777,21 @@ for row in data:
         check_paragraph(line)  # Check if markdown paragraph (empty line)
         lines[curr_index] = line  # Stuff back any changes made
 
-    insert_toc = False
+    ''' Add to total lines '''
+    total_lines += line_count
+    if line_count > most_lines:
+        most_lines = line_count
+        #print('====== THE MOST LINES ======', most_lines)
+        #dump(row)
+
+    insert_toc = False  # Does not qualify for TOC yet
     if CONTENTS is not None:
         if header_count >= TOC_HDR_MIN and word_count >= TOC_WORD_MIN:
             insert_toc = True
             total_toc += 1
             print('total_toc:    ', total_toc, blog_filename)
 
-    insert_nav_bar = False
+    insert_nav_bar = False  # Does not qualify for Navigation Buttons yet
     if NAV_BAR_OPT > 0:
         qualifier = sum(header_levels[:NAV_BAR_LEVEL])
         if qualifier >= NAV_BAR_MIN and word_count >= TOC_WORD_MIN:
@@ -816,7 +822,7 @@ for row in data:
     alternate_h1 = 0
     alternate_h2 = 0
     in_code_block = False   # In a code block # Header formatting is skipped
-    toc_inserted = False    # Has TOC been inserted yet?        
+    toc_inserted = False    # Has TOC been inserted yet?
     sum2 = 0                # Track for new header to insert Navigation Bar
 
     for line in lines:
@@ -859,7 +865,7 @@ for row in data:
 
         new_md = new_md + line + '\n'
 
-    ''' Add tag for footer to jump to when 'Skip' button used '''
+    ''' Add tag for footer to jump to when 'Skip' button used on last #hdr'''
     if insert_nav_bar:
         # sum2 has last header id number used. Skip ID tag is 1 greater
         hdr_id = sum2 + 1
@@ -870,12 +876,6 @@ for row in data:
         else:
             new_md = new_md + "\n"  # Empty line before HTML ID tag
         new_md = new_md + navigation_bar(hdr_id, skip_btn=False)
-
-    total_lines += line_count
-    if line_count > most_lines:
-        most_lines = line_count
-        #print('====== THE MOST LINES ======', most_lines)
-        #dump(row)
 
     qualifying_blog_count += 1
     if row_number in random_row_nos:
