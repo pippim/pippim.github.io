@@ -44,7 +44,7 @@ Linux World still use Windows from time to time.
 ## What is Pippim?
 
 Pippim is a website providing free and open source computer software primarily for
-use on Linux. The focus is mostly on Ubutnu but, nowdaays some of the solutionss
+use on Linux. The focus is mostly on Ubutnu but, nowdaays some of the solutions
 work on 
 [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) as
 well.
@@ -81,8 +81,8 @@ It's common practice to create websites to make money. That isn't why Pippim
 was created though.
 Pippim was created to make it easier to list the free software created on 
 the websites [AskUbuntu](www.askubuntu.com) and [Github](www.github.com).
-Pippim Posts which are 92% Answers and 8% Questions, have over **51 million** 
-views as of November 8, 2021. With over 2,000 answers, managing them on 
+Pippim Posts which are 92% Answers and 8% Questions, have over **52 million
+views** as of November 22, 2021. With over 2,000 answers, managing them on 
 a managing them on a Pippim website just makes sense.
 
 Of course we all need money and maybe someday Pippim will earn revenue,
