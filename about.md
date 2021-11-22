@@ -11,8 +11,9 @@ layout: default
 
 # About Pippim
 
-This page answers some questions you might be asking about Pippim. The **5
-W's** of "Who", "What", Where", When and "Why" are answered here:
+This page answers questions you might have about Pippim. This page
+addresses the **5 W's**; "Who", "What", Where", When and "Why"
+of Pippim. On this page you will discover:
 
 - **Who** is Pippim?
 - **What** is Pippim?
@@ -30,18 +31,27 @@ W's** of "Who", "What", Where", When and "Why" are answered here:
 
 Pippim is a one-man-show that has been answering questions since 2016 
 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". When you 
-look at the **WinEnuuchs2Unix's
-[profile](https://askubuntu.com/users/307523/wineunuuchs2unix)** in Ask
-Ubuntu you will see the image on the right.
+look at
+**[WinEnuuchs2Unix'sprofile](https://askubuntu.com/users/307523/wineunuuchs2unix)**
+in Ask Ubuntu you will see the image on the right.
 
-WinEunuuchs2Unix basically means abaondoning MicroSoft Windows for the
-open-source world of Linux (Unix). That said Windows is undeniably the
-go-to platform for Governements, Corporations and most individuals in
-the world.
+At the time the "WinEunuuchs2Unix" name was create the intention basically meant
+abaondoning MicroSoft Windows for the open-source world of Linux (Unix). That said,
+Windows is undeniably the go-to platform for Governements, Corporations and most 
+individuals in the world. No doubt most people who actually make money in the
+Linux World still use Windows from time to time.
 
 ## What is Pippim?
 
-Pippim is a website containing free and open source software primarily for use on Linux.
+Pippim is a website providing free and open source computer software primarily for
+use on Linux. The focus is mostly on Ubutnu but, nowdaays some of the solutionss
+work on 
+[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) as
+well.
+
+Pippim has no business model for making money today. You will find no user tracking,
+no ads and no spamming. Maybe someday Pippim will make money but in the meantime it
+is simply a labour of love.
 
 ## Where is Pippim located?
 
@@ -67,16 +77,20 @@ Pippim Posts which are 70% Answers and 30% Questions, have over **51 million**
 views as of November 8, 2021. With over 2,000 answers, managing them on 
 a managing them on a Pippim website just makes sense.
 
-Of course we all need money and maybe someday Pippim will earn revenue and
-hire employees. But in the meantime, Pippim is strictly a labour of love.
+Of course we all need money and maybe someday Pippim will earn revenue,
+open an office in Silicon Valley and hire some employees. But in the
+meantime, Pippim is strictly a labour of love (yes that was already 
+said earlier).
 
 ## How was Pippim created?
 
-Yes this is the sixth section. And yes "How" doesn't begin with a "W". But as they say:
+Yes this is the 6th section which contravenes the "5 W's". Yes "How" 
+doesn't begin with a "W". But as they say:
 
 > Who, What, Where, When, Why and sometimes How
 
-The first step was to find a domain name (website name) that:
+So How as Pippin created anyway? Well the
+first step was to find a domain name (website name) that:
 
 1. Was easy to remember
 2. Was six characters or less
