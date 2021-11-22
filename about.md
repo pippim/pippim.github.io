@@ -9,7 +9,8 @@ layout: default
 %}
 # About Pippim
 
-This page answers some questions you might be asking about Pippim:
+This page answers some questions you might be asking about Pippim. The **5
+W's** of "Who", "What", Where", When and "Why" are answered here:
 
 - **Who** is Pippim?
 - **What** is Pippim?
