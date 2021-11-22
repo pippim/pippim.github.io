@@ -30,9 +30,14 @@ W's** of "Who", "What", Where", When and "Why" are answered here:
 
 Pippim is a one-man-show that has been answering questions since 2016 
 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". When you 
-look at the **WinEnuuchs2Unix** 
-[profile](https://askubuntu.com/users/307523/wineunuuchs2unix) in Ask
-Ubuntu you will see this image.
+look at the **WinEnuuchs2Unix's
+[profile](https://askubuntu.com/users/307523/wineunuuchs2unix)** in Ask
+Ubuntu you will see the image on the right.
+
+WinEunuuchs2Unix basically means abaondoning MicroSoft Windows for the
+open-source world of Linux (Unix). That said Windows is undeniably the
+go-to platform for Governements, Corporations and most individuals in
+the world.
 
 ## What is Pippim?
 
