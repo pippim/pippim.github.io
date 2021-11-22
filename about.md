@@ -9,16 +9,11 @@ layout: default
    </em></sub>"
 %}
 
-# 5 W's of Pippim:
+# About Pippim
 
-| W     | Category        |
-| ----- | --------------- |
-| Who   | is Pippim?       |
-| What  | is Pippim?       |
-| Where | is Pippim? |
-| When  | was Pippim created? |
-| Why   | was Pippim created?  |
-| How   | was Pippim created?  |
+This page answers questions you might be asking about Pippim. **Who** is Pippim?
+**What** is Pippim? **Where**is Pippim located? **When** was Pippim created? (The 
+easiest question to answer!) **Why** was Pippim created? **How**was Pippim created?
 
 ## Who is Pippim?
 
