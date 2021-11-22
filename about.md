@@ -1,14 +1,12 @@
 ---
 layout: default
 ---
-
 {% include image.html src="/assets/img/Blog_Project-Management-101.png"
    alt="The 5 Ws (and 1 H) that should be asked of every project!"
    caption="<sub><em>Image credit: 
       <a href='https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project'>The 5 Ws (and 1 H)</a>
    </em></sub>"
 %}
-
 # About Pippim
 
 This page answers questions you might be asking about Pippim. **Who** is Pippim?
