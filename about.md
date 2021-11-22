@@ -1,13 +1,15 @@
 ---
 layout: default
 ---
+
+# About Pippim
+
 {% include image.html src="/assets/img/Blog_Project-Management-101.png"
    alt="The 5 Ws (and 1 H) that should be asked of every project!"
    caption="<sub><em>Image credit: 
       <a href='https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project'>The 5 Ws (and 1 H)</a>
    </em></sub>"
 %}
-# About Pippim
 
 This page answers some questions you might be asking about Pippim. The **5
 W's** of "Who", "What", Where", When and "Why" are answered here:
@@ -21,13 +23,16 @@ W's** of "Who", "What", Where", When and "Why" are answered here:
 
 ## Who is Pippim?
 
+{% include image.html src="/assets/img/Ask Ubuntu profile.png"
+   alt="Ask Ubuntu Profile"
+   caption="<sub><em>WinEunuuchs2Unix Ask Ubuntu Profile Page</em></sub>"
+%}
+
 Pippim is a one-man-show that has been answering questions since 2016 
 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". When you 
 look at the **WinEnuuchs2Unix** 
 [profile](https://askubuntu.com/users/307523/wineunuuchs2unix) in Ask
-Ubuntu you will see:
-
-![Ask Ubuntu Profile](/assets/img/Ask Ubuntu profile.png)
+Ubuntu you will see this image.
 
 ## What is Pippim?
 
