@@ -60,9 +60,9 @@ is simply a labour of love.
 
 ## Where is Pippim located?
 
-Figuratively speaking, Pippim iss located on the cloud in Google Sites and
-Github Pages. However, as you may
-have spotted in the screen shot above in the *Who is Pippim* section, 
+Figuratively speaking, Pippim is located in "the clouds" on Google Sites and
+Github Pages. As you may have astutely spotted in the screen shot in the
+*Who is Pippim* section above though, 
 Pippim is physically located in Edmonton, Canada. Tonight (November 21, 2021 at
 8:30pm MST), as the map for Edmonton shows, it is cool but not cold. It's only
 one degree below freezing as the little yellow dot highlights.
