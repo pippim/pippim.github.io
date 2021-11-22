@@ -36,7 +36,7 @@ Ubuntu you will see this image.
 
 ## What is Pippim?
 
-pippim is a website containing free and open source software primarily for use on Linux.
+Pippim is a website containing free and open source software primarily for use on Linux.
 
 ## Where is Pippim located?
 
@@ -82,8 +82,8 @@ The first step was to find a domain name (website name) that:
 7. Wasn't a name already reserved and being sold for thousands of dollars
 8. Could be purchased from Google Domains which offers good security, performance and reliability
 
-After finding out that the name "pippim" was available, more weeks of contemplation 
-went by before "pulling the trigger" and buying "pippim.com" for $17 CAD per year.
+After finding out that the "pippim.com" was available, more weeks of contemplation 
+went by before "pulling the trigger" and buying the name for $17 CAD per year.
 
 Then the `www.pippim.com` website was created using Google Sites for free.
 
