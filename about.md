@@ -53,6 +53,11 @@ Pippim has no business model for making money today. You will find no user track
 no ads and no spamming. Maybe someday Pippim will make money but in the meantime it
 is simply a labour of love.
 
+{% include image.html src="/assets/img/Edmonton Temperature Nov 21, 2021.png"
+   alt="Edmonton Temperature"
+   caption="<sub><em>Edmonton Alberta Canada</em></sub>"
+%}
+
 ## Where is Pippim located?
 
 It's located on the cloud in Google Sites and Github Pages. As you may
