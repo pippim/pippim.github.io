@@ -13,14 +13,18 @@ This page answers some questions you might be asking about Pippim:
 
 - **Who** is Pippim?
 - **What** is Pippim?
-- **Where**is Pippim located?
+- **Where** is Pippim located?
 - **When** was Pippim created? (The easiest question to answer!) 
 - **Why** was Pippim created? 
-- **How**was Pippim created?
+- **How** was Pippim created? OK that doesn't begins with and "H" and not a "W" and that makes number 6.
 
 ## Who is Pippim?
 
-Pippim is a one-man-show that has been answering questions since 2016 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". When you look at the **WinEnuuchs2Unix** [profile](https://askubuntu.com/users/307523/wineunuuchs2unix) in Ask Ubuntu you will see:
+Pippim is a one-man-show that has been answering questions since 2016 
+on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". When you 
+look at the **WinEnuuchs2Unix** 
+[profile](https://askubuntu.com/users/307523/wineunuuchs2unix) in Ask
+Ubuntu you will see:
 
 ![Ask Ubuntu Profile](/assets/img/Ask Ubuntu profile.png)
 
@@ -30,7 +34,9 @@ pippim is a website containing free and open source software primarily for use o
 
 ## Where is Pippim located?
 
-It's located on the cloud in Google Sites and Github Pages. As you may have spotted int the screen shot in *Who is Pippim*, **WinEunuuchs2Unix** is located in Edmonton, Canada.
+It's located on the cloud in Google Sites and Github Pages. As you may
+have spotted int the screen shot in *Who is Pippim*, 
+**WinEunuuchs2Unix** is located in Edmonton, Canada.
 
 ## When was Pippim created?
 
@@ -85,4 +91,6 @@ Then the `pippim.github.io` website was created using Github Pages for free.
 
 ![Jekyll Octocat Mascot](/assets/img/octojekyll-opt.jpg){:class="img-responsive"}
 
-**Image credit:** Jekyll Octocat Mascot [Github](https://www.github.com)
+<sup><em>
+   **Image credit:** Jekyll Octocat Mascot [Github](https://www.github.com)
+</em></sup>
