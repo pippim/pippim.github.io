@@ -64,7 +64,8 @@ Figuratively speaking, Pippim iss located on the cloud in Google Sites and
 Github Pages. However, as you may
 have spotted in the screen shot above in the *Who is Pippim* section, 
 Pippim is physically located in Edmonton, Canada. Tonight (November 21, 2021 at
-8:30pm MST), as the map for Edmonton shows, it is cool but not cold.
+8:30pm MST), as the map for Edmonton shows, it is cool but not cold. It's only
+one degree below freezing as the little yellow dot highlights.
 
 ## When was Pippim created?
 
