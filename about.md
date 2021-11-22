@@ -32,7 +32,7 @@ of Pippim. On this page you will discover:
 Pippim is a one-man-show that has been answering questions since 2016 
 on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". When you 
 look at
-**[WinEnuuchs2Unix'sprofile](https://askubuntu.com/users/307523/wineunuuchs2unix)**
+**[WinEnuuchs2Unix's profile](https://askubuntu.com/users/307523/wineunuuchs2unix)**
 in Ask Ubuntu you will see the image on the right.
 
 At the time the "WinEunuuchs2Unix" name was create the intention basically meant
