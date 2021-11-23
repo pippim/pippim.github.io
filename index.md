@@ -15,8 +15,9 @@ layout: default
 % }
 -->
 
-<figure>
+<figure
    style="float: leftt; width: 50%; margin-right: 1em; margin-top: 2em; text-align: center;"
+  >
   <img
     src="/assets/img/pngwing.com.png"
     alt="Github Octacat Mascot by pngwing.com"
