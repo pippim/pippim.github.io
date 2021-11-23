@@ -239,7 +239,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 
 {% include image-right.html src="/assets/img/github pages themes.png"
    alt="github pages themes.png"
-   style="float: right; width: 60%; margin: 1em 2em 0px 0px; text-align: center;"
+   style="float: right; width: 60%; margin: 2em 0px 0px 1em; text-align: center;"
    caption="<sup><em>Image credit:
             <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
                >Yale University</a></em></sup>"
