@@ -1,11 +1,12 @@
 <!-- From: https://talk.jekyllrb.com/t/need-help-with-image-caption/6715/2 -->
 
-<figure>
+<figure
+    style="{{ include.style }}"
+  />
   <img
     src="{{ include.src }}"
     alt="{{ include.alt }}"
     class="img-class"
-    style="{{ include.style }}"
   />
   <figcaption>
     {{ include.caption }}
