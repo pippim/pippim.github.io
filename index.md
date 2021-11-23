@@ -6,12 +6,12 @@ layout: default
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
 
-{ % include image-left.html src="/assets/img/pngwing.com.png"
+{% include image-left.html src="/assets/img/pngwing.com.png"
    alt="Github Octacat Mascot by pngwing.com"
    style="float: left; width: 50%; margin-right: 1em; margin-top: 2em; text-align: center;"
    caption="Github's Octocat Mascot image credit: 
       <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>"
-% }
+%}
 
 <!-- OLD STYLE
 <figure
@@ -530,9 +530,9 @@ The `_layouts/page.html` code a few sections below will illustrate this.
 Just a quick preview of what it will look like on your
 blog post here is initial version:
 
-{ % include image.html src="/assets/img/Jekyll front matter on blog post.png"
+{% include image.html src="/assets/img/Jekyll front matter on blog post.png"
    style="float: none; width: 100%; margin: 0 0 0 0;"
-% }
+%}
 
 At the top of the page, in big bold letters, appears 
 **A timer to setup different alarms simultaneously**
