@@ -6,12 +6,26 @@ layout: default
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
 
-{% include image.html src="/assets/img/pngwing.com.png" 
+<!-- OLD STYLE
+{ % include image.html src="/assets/img/pngwing.com.png"
    alt="Github Octacat Mascot by pngwing.com"
    caption="<sub><em>Github's Octocat Mascot image credit: 
       <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>
    </em></sub>"
-%}
+% }
+-->
+
+<figure>
+   style="float: leftt; width: 50%; margin-right: 1em; margin-top: 2em; text-align: center;"
+  <img
+    src="/assets/img/pngwing.com.png"
+    alt="Github Octacat Mascot by pngwing.com"
+   >
+  <figcaption><sub><em>Github's Octocat Mascot image credit: 
+      <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>
+      </em></sub>
+   </figcaption>
+</figure>
 
 # Introduction
 
