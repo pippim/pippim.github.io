@@ -6,7 +6,6 @@ layout: default
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
 
-<div class="clr"></div>
 {% include image.html src="/assets/img/pngwing.com.png" 
    alt="Github Octacat Mascot by pngwing.com"
    caption="<sub><em>Github's Octocat Mascot image credit: 
@@ -223,7 +222,6 @@ The TOC command is used in real markdown below and generates the actual TOC:
 </div>
 -->
 
-<div class="clr"></div>
 {% include image.html src="/assets/img/github pages themes.png"
    alt="github pages themes.png"
    caption="<sup><em>Image credit:
