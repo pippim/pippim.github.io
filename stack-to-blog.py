@@ -24,7 +24,7 @@
         plus-editors-and-s"
 
     A copy of the query has been saved in pippim.github.io/StackBlogPost. A
-    copy of the output file QueryResults.CSV can also be found in the same
+    copy of the output file QueryResults.csv can also be found in the same
     root directory.
 
     Run the query and Save the results in CSV format as QueryResults.csv
@@ -389,7 +389,6 @@ def check_paragraph(ln):
     """
     global total_paragraphs, paragraph_count, total_words, word_count
     global pseudo_tag_count, total_pseudo_tags, pseudo_tag_names, total_tag_names
-
 
     if len(ln) == 0:
         total_paragraphs += 1   # For all posts
@@ -828,9 +827,8 @@ for row in data:
     for line in lines:
         check_code_block(line)      # Turn off formatting when in code block
         # Did this post qualify for adding navigation bar?
-        # Save how header levels counts we have now
+        # Save header levels counts we have now to "old_"
         old_header_levels = list(header_levels)
-        # TODO: reverse doubling up totals
         line = header_space(line)   # Formatting for #Header or # Header lines
         if insert_nav_bar:
             sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
@@ -842,7 +840,7 @@ for row in data:
                     if sum2 == TOC_LOC:
                         new_md = new_md + navigation_bar(TOC_LOC)
                         if NAV_BAR_OPT <= 3:
-                            # When 4 a blank line already inserted before us
+                            # If Option "4" a blank line already inserted before us
                             new_md = new_md + "\n"
                         new_md = new_md + CONTENTS + "\n"
                         new_md = new_md + "\n"  # When 4 a blank line already inserted before us
@@ -856,7 +854,7 @@ for row in data:
             # No navigation bar but we still need TOC at header count
             if header_count == TOC_LOC and toc_inserted is False:
                 if NAV_BAR_OPT <= 3:
-                    # When 4 a blank line already inserted before us
+                    # If Option "4" a blank line already inserted before us
                     new_md = new_md + "\n"
                 new_md = new_md + CONTENTS + "\n"
                 new_md = new_md + "\n"
