@@ -587,16 +587,15 @@ counting solely for the sake of inserting HTML code at the right places.
 - Initial values are defined for global variables and their names
 are in all upper-case letters.
 
-- The "QueryResults.CSV` file is read into a list call `rows`. 
+- The `QueryResults.csv` file is read into a list call `rows`. 
 
-- Then the main program loop reads each 
-`row` in `rows`. Most of the front matter is set at this
-point.
+- Then the main program outer loop reads each 
+`row` in `rows`. Most of the front matter is set at the
+top of the outer loop point.
 
 - Next two passes are done on each row as described below.
 
 ### Pass 1
-
 
 Each `row` has Stack Exchange Markdown which is converted into 
 a list call `lines`.
