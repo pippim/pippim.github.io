@@ -850,6 +850,40 @@ def create_blog_filename():
     return filename
 ```
 
+## Pseudo Tags
+
+Pseudo tags are created in front matter when a keyword is found in an answer. If that keyword
+is not a tag for the question already then it is added as a tag in front matter. Normally in
+Stack Exchange tags are only defined for the question. However you might want to use tags
+that highlight your answer. That is what "Pseudo Tags" are for.
+
+Let's say for example you include a lot of Conky displays in your answers to illustrate
+how a given solution works. A sort of "POC" (Proof of Concept). Now you'd like all your
+answers that used Conky to be an available Tag that can be searched on. You would use
+the keyword "conky" (all lower-case or mixed-case doesn't matter as a pseudo tag.
+
+In the `stack-to-blog.py` python program they are defined like this:
+
+``` python
+ word_list = ln.split()
+
+ ''' Add to pseudo-tags '''
+ for pseudo in PSEUDO_TAGS:
+     search = pseudo.lower()
+     for word in word_list:
+         if search == word.lower():
+             pseudo_tag_count += 1
+             total_pseudo_tags += 1
+             if search not in pseudo_tag_names:
+                 if search not in tags:
+                     # All tag names added for this post
+                     pseudo_tag_names.append(search)
+             if search not in total_tag_names:
+                 if search not in tags:
+                     # All the tags added for all the posts
+                     total_tag_names.append(search)
+```
+
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
 
@@ -924,14 +958,16 @@ When the `stack-to-blog.py` finishes a summary appears on your screen:
 ```  cpp
 // =============================/   T O T A L S   \============================== \\
 
-accepted_count:      620  | total_votes:         7,053  | total_views:    51,804,222
-question_count:      298  | answer_count:        2,139  | save_blog_count:     1,227
-total_headers:     1,977  | total_header_spaces:   419  | total_quote_spaces:  1,557
-total_lines:      56,910  | total_paragraphs:   16,059  | total_words:       318,748
-total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     33
-total_code_blocks:   272  | code_block_lines:    5,092  | total_toc:              25
-most_lines:          820  | total_force_end:     1,066  | total_nav_bar:          35
-total_header_levels:        [733, 959, 283, 2, 0, 0]
+RANDOM_LIMIT:     10,000  | PRINT_RANDOM:        False  | NAV_FORCE_TOC:        True
+accepted_count:      623  | total_votes:         7,110  | total_views:    52,261,286
+question_count:      299  | answer_count:        2,143  | save_blog_count:     1,075
+total_headers:     1,547  | total_header_spaces:   390  | total_quote_spaces:  1,533
+total_lines:      51,278  | total_paragraphs:   14,535  | total_words:       285,727
+total_pseudo_tags:   152  | total_tag_names:   ['conky', 'eyesome', 'cpuf', 'iconic']
+total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     26
+total_code_blocks:   178  | code_block_lines:    2,960  | total_toc:              25
+most_lines:          820  | total_force_end:       929  | total_nav_bar:          34
+total_header_levels:        [581, 754, 210, 2, 0, 0]
 ```
 
 Each printed total name is the same as the internal program variable name. The
@@ -942,8 +978,11 @@ total lines apply only to those that qualify for saving as A Jekyll Blog Post.
 If you want to change the totals layout it is found in the code below:
 
 ``` python
-print('// =============================/   T O T A L S   \\============================== \\\\')
+print('// =====================/   T O T A L S   \\====================== \\\\')
 print('')
+print('RANDOM_LIMIT:     {:>6,}'.format(RANDOM_LIMIT),
+      ' | PRINT_RANDOM:  {:>11}'.format(str(PRINT_RANDOM)),
+      ' | NAV_FORCE_TOC: {:>11}'.format(str(NAV_FORCE_TOC)))
 print('accepted_count:   {:>6,}'.format(accepted_count),
       ' | total_votes:   {:>11,}'.format(total_votes),
       ' | total_views:   {:>11,}'.format(total_views))
@@ -956,6 +995,8 @@ print('total_headers:    {:>6,}'.format(total_headers),
 print('total_lines: {:>11,}'.format(total_lines),
       ' | total_paragraphs:{:>9,}'.format(total_paragraphs),
       ' | total_words: {:>13,}'.format(total_words))
+print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
+      ' | total_tag_names:  ', total_tag_names)
 print('total_pre_codes:  {:>6,}'.format(total_pre_codes),
       ' | total_alternate_h1: {:>6,}'.format(total_alternate_h1),
       ' | total_alternate_h2: {:>6,}'.format(total_alternate_h2))
@@ -966,7 +1007,6 @@ print('most_lines:       {:>6,}'.format(most_lines),
       ' | total_force_end:  {:>8,}'.format(total_force_end),
       ' | total_nav_bar:     {:>7,}'.format(total_nav_bar))
 print('total_header_levels:       ', total_header_levels)
-
 ```
 
 <a id="hdr16"></a>
