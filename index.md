@@ -364,7 +364,7 @@ You set options in the program `stack-to-blog.py`.
 It's a good idea to set the record limit to 10 or so
 for your first few trials.
 
-Review the three subsections below for fine tuning your
+Review the four subsections below for fine tuning your
 Stack Exchange to Jekyll Blog Post conversion. They are:
 
 - Random Record Limit
