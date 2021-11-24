@@ -36,7 +36,8 @@ look at
 **[WinEnuuchs2Unix's profile](https://askubuntu.com/users/307523/wineunuuchs2unix)**
 in Ask Ubuntu you will see the image on the right.
 
-At the time the "WinEunuuchs2Unix" name was create the intention basically meant
+At the time the "WinEunuuchs2Unix" name was created,
+ the intention was to signal 
 abaondoning MicroSoft Windows for the open-source world of Linux (Unix). That said,
 Windows is undeniably the go-to platform for Governements, Corporations and most 
 individuals in the world. No doubt most people who actually make money in the
