@@ -96,7 +96,7 @@ said earlier).
 
 ## How was Pippim created?
 
-Yes this is the 6th section which contrdicts the "5 W's". Additionally,
+Yes this is the 6th section which contradicts the "5 W's". Additionally,
 "How" doesn't begin with a "W" which also seems to contradict the "5 W's" but,
 as the saying goes:
 
