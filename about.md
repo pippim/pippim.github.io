@@ -24,7 +24,7 @@ of Pippim. On this page you will discover:
 
 {% include image-right.html src="/assets/img/Ask Ubuntu profile.png"
    alt="Ask Ubuntu Profile"
-   style="float: right; width: 60%; margin: 0px 0px 0px 1em; text-align: center;"
+   style="float: right; width: 60%; margin: 1em 0px 0px 1em; text-align: center;"
    caption="WinEunuuchs2Unix Ask Ubuntu Profile Page"
 %}
 
@@ -56,7 +56,7 @@ is simply a labour of love.
 
 {% include image-right.html src="/assets/img/Edm Temp.png"
    alt="Edmonton Temperature"
-   style="float: right; width: 60%; margin: 0px 0px 0px 1em; text-align: center;"
+   style="float: right; width: 60%; margin: 1em 0px 0px 1em; text-align: center;"
    caption="Edmonton Alberta Canada"
 %}
 
