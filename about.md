@@ -2,11 +2,11 @@
 layout: default
 ---
 
-{% include image.html src="/assets/img/Blog_Project-Management-101.png"
+{% include image-right.html src="/assets/img/Blog_Project-Management-101.png"
    alt="The 5 Ws (and 1 H) that should be asked of every project!"
-   caption="<sub><em>Image credit: 
-      <a href='https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project'>The 5 Ws (and 1 H)</a>
-   </em></sub>"
+   style="float: right; width: 60%; margin: 2em 0px 0px 1em; text-align: center;"
+   caption="Image credit: 
+      <a href='https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project'>The 5 Ws (and 1 H)</a>"
 %}
 
 # About Pippim
@@ -22,9 +22,10 @@ of Pippim. On this page you will discover:
 - **Why** was Pippim created? 
 - **How** was Pippim created? OK that doesn't begins with and "H" and not a "W" and that makes number 6.
 
-{% include image.html src="/assets/img/Ask Ubuntu profile.png"
+{% include image-right.html src="/assets/img/Ask Ubuntu profile.png"
    alt="Ask Ubuntu Profile"
-   caption="<sub><em>WinEunuuchs2Unix Ask Ubuntu Profile Page</em></sub>"
+   style="float: right; width: 60%; margin: 2em 0px 0px 1em; text-align: center;"
+   caption="WinEunuuchs2Unix Ask Ubuntu Profile Page"
 %}
 
 ## Who is Pippim?
@@ -53,9 +54,10 @@ Pippim has no business model for making money today. You will find no user track
 no ads and no spamming. Maybe someday Pippim will make money but in the meantime it
 is simply a labour of love.
 
-{% include image.html src="/assets/img/Edm Temp.png"
+{% include image-right.html src="/assets/img/Edm Temp.png"
    alt="Edmonton Temperature"
-   caption="<sub><em>Edmonton Alberta Canada</em></sub>"
+   style="float: right; width: 60%; margin: 2em 0px 0px 1em; text-align: center;"
+   caption="Edmonton Alberta Canada"
 %}
 
 ## Where is Pippim located?
@@ -123,7 +125,7 @@ Then the `pippim.github.io` website was created using Github Pages for free.
 
 #### Hosted on Github with Jekyll, Ruby Gems, Javascript, HTML, SCSS and more
 
-![Jekyll Octocat Mascot](/assets/img/octojekyll-opt.jpg){:class="img-responsive"}
+![Jekyll Octocat Mascot](/assets/img/octojekyll-opt.jpg)
 
 <sup><em>
    **Image credit:** Jekyll Octocat Mascot [Github](https://www.github.com)
