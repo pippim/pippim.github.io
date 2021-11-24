@@ -13,21 +13,6 @@ layout: default
       <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>"
 %}
 
-<!-- OLD STYLE
-<figure
-   style="float: left; width: 50%; margin-right: 1em; margin-top: 2em; text-align: center;"
-  >
-  <img
-    src="/assets/img/pngwing.com.png"
-    alt="Github Octacat Mascot by pngwing.com"
-   >
-  <figcaption><sub><em>Github's Octocat Mascot image credit: 
-      <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>
-      </em></sub>
-   </figcaption>
-</figure>
--->
-
 # Introduction
 
 Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
@@ -215,34 +200,12 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-<!-- BROKEN: Caption won't stay with image
-{ % include image.html src="/assets/img/github pages themes.png"
-   alt="github pages themes.png"
-   style="float: right; height: 65%; width: 65%; margin-left: 1em; margin-top: 2em;"
-   caption="<sup><em>Image credit:
-            <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
-               >Yale University</a></em></sup>"
-% }
--->
-
-<!-- BROKEN: image border appears 100% and text starts below
-<div class="float_right">
-<img src="/assets/img/github pages themes.png" alt="github pages themes.png"
-   style="height: 65%; width: 65%; margin-left: 1em; margin-top: 2em;"
-><br>
-<sub><em>Image credit:
-            <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
-               >Yale University</a></em></sub>
-
-</div>
--->
-
 {% include image-right.html src="/assets/img/github pages themes.png"
    alt="github pages themes.png"
    style="float: right; width: 60%; margin: 2em 0px 0px 1em; text-align: center;"
-   caption="<sup><em>Image credit:
+   caption="Image credit:
             <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
-               >Yale University</a></em></sup>"
+               >Yale University</a>"
 %}
 
 ## Jekyll Themes
