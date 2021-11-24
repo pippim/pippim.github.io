@@ -82,7 +82,7 @@ You can leave a comment or question where the Stack Exchange answer appears. Eac
 
 #### Github Repos
 
-![Inspectocat detective cat with magnifying glass](/assets/img/Inspectocadt.jpeg){: style="float: left" width="20%")
+![Inspectocat detective cat with magnifying glass](/assets/img/Inspectocadt.jpeg){: style="float: left" width="20%"}
 
 For Pippim programs on Github Repos, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.
 <br clear="left"/>
