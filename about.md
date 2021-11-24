@@ -85,8 +85,9 @@ was created though.
 Pippim was created to make it easier to list the free software created on 
 the websites [AskUbuntu](www.askubuntu.com) and [Github](www.github.com).
 Pippim Posts which are 92% Answers and 8% Questions, have over **52 million
-views** as of November 22, 2021. With over 2,000 answers, managing them on 
-a managing them on a Pippim website just makes sense.
+views** as of November 22, 2021. With over 2,000 answers, 
+managing them on 
+a Pippim website just makes sense.
 
 Of course we all need money and maybe someday Pippim will earn revenue,
 open an office in Silicon Valley and hire some employees. But in the
@@ -95,13 +96,13 @@ said earlier).
 
 ## How was Pippim created?
 
-Yes this is the 6th section which contravenes the "5 W's". Additionally,
-"How" doesn't begin with a "W" which also seems to break the "5 W's" but,
+Yes this is the 6th section which contrdicts the "5 W's". Additionally,
+"How" doesn't begin with a "W" which also seems to contradict the "5 W's" but,
 as the saying goes:
 
-> Who, What, Where, When, Why and sometimes How
+> Who, What, Where, When, Why *and sometimes How*
 
-So how as Pippin created anyway? Well the
+So how as Pippin created? Well the
 first step was to find a domain name (website name) that:
 
 1. Was easy to remember
