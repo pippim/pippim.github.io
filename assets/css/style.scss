@@ -113,76 +113,13 @@ $header-bg-color-secondary: #155799 !default;
   }
 }
 
- // CSS CODE from: https://css.maxdesign.com.au/floatutorial/tutorial0211.htm
-.float_right {
-  float: right;
-  // width: 103px;
-  // margin: 0 0 10px 10px;
-  margin: 2rem 0 10px 10px;
-  text-align: center;
-  background-color: #fff;
-  padding: 10px;
-  border-top: 1px solid #999;
-  border-right: 2px solid #555;
-  border-bottom: 2px solid #555;
-  border-left: 1px solid #999;
-}
-
-div.floatright img {
-  border-top: 2px solid #555;
-  border-right: 1px solid #999;
-  border-bottom: 1px solid #999;
-  border-left: 2px solid #555;
-}
-
-/* p { margin-top: 0; }  // May have to be ditched if it effects all paragraphs */
-
-// From: https://stackoverflow.com/a/17803868/6929343
-// Call with:  <div class="clr"></div>
-.clr{clear:both;}
-
-// From: https://talk.jekyllrb.com/t/need-help-with-image-caption/6715/2
-.img-class {
-  float: none;
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-}
-
-// Abridged version of: https://stackoverflow.com/a/25173024/6929343
 figure {
-  // position: relative;
-  // float: right;  // Tip from: https://talk.jekyllrb.com/t/need-help-with-image-caption/6715?u=pippim
-  // text-align:right; // Tip from: https://stackoverflow.com/a/38709210/6929343
-  // width: 60%;
-  // margin-top: 2em;
-  // margin-left: 1em;
-  // margin-right: 0px;
-  // margin-bottom: 0px;
   padding: 10px;
   border-top: 1px solid #999;
   border-right: 2px solid #555;
   border-bottom: 2px solid #555;
   border-left: 1px solid #999;
-}
-figure img {
-  // display: block;
-  // border-top: 2px solid #555;
-  // border-right: 1px solid #999;
-  // border-bottom: 1px solid #999;
-  // border-left: 2px solid #555;
 }
 figure figcaption {
-  // Below from: https://stackoverflow.com/a/24879297/6929343
-  // text-align: center;
-  // position: absolute;
-  // position: absolute;
-  // display: inline-block
-  // display: block;
-  // caption-side: bottom;
   text-align: center;
-  // top: 7px;
-  // bottom: -1px;
-  // left: 0;
-  // right: 0;
 }
