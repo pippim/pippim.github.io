@@ -8,7 +8,7 @@ layout: default
 
 {% include image-left.html src="/assets/img/pngwing.com.png"
    alt="Github Octacat Mascot by pngwing.com"
-   style="float: left; width: 48%; margin: 2em 1em 0px 0px; text-align: center;"
+   style="float: left; width: 45%; margin: 2em 1em 0px 0px; text-align: center;"
    caption="Github's Octocat Mascot image credit: 
       <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>"
 %}
