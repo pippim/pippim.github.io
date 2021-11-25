@@ -15,7 +15,12 @@ layout: default
 
 # Introduction
 
-Welcome to Pippim. A collection of questions and answers about using your computer, especially in Linux and specifically Ubuntu. All the solutions are free. You can use them as you like. There are also full-fledged applications that are free for you to use as well.
+Welcome to Pippim. A collection of questions and 
+answers about using your computer in Linux and 
+specifically Ubuntu. All the solutions are free.
+ You can use them as you like. There are also
+ full-fledged applications that are free for 
+you to use as well.
 
 There are no ads on Pippim. You don't need to buy Pippim a coffee (it's already free at work!). Maybe some day you'll want to put all your technial documentation on an intranet or website and you will contract Pippim to help get the job done. Custom projects are the business model for how Pippim will earn revenue.
 
