@@ -364,7 +364,7 @@ You set options in the program `stack-to-blog.py`.
 It's a good idea to set the record limit to 10 or so
 for your first few trials.
 
-Review the four subsections below for fine tuning your
+Review the four subsections below for fine-tuning your
 Stack Exchange to Jekyll Blog Post conversion. They are:
 
 - Random Record Limit
@@ -423,6 +423,18 @@ ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
 # Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
 ```
 
+If you change `QUESTION_QUALIFIER` to `True` then questions
+will also be converted to blog posts unless they are
+self-answered questions. In that case the answer is converted
+instead if it matches the `VOTE_QUALIFIER` criteria.
+
+When the program finishes a list of all self-answered questions
+that were not accepted is printed. No doubt you forgot to go
+back after two day mandatory waiting period to accept your own
+answer. Copy URL's from the list to your browser address bar
+and accept the answers in Stack Exchange.
+Then rerun the query, the download and `stack-to-blog.py`
+
 ### Jekyll Front Matter
 
 Here is how [Jekyll front matter](https://jekyllrb.com/docs/front-matter/)
@@ -456,10 +468,9 @@ FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be c
 FRONT_UPLOADED  = "uploaded:     "  # Date & Time this program was run
 FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
 FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
-
 ```
 
-Using above settings the front matter generated would look something like this:
+Using above settings the front matter generated would look like this:
 
 ``` yaml
 ---
@@ -922,7 +933,8 @@ When the `stack-to-blog.py` finishes a summary appears on your screen:
 
 RANDOM_LIMIT:     10,000  | PRINT_RANDOM:        False  | NAV_FORCE_TOC:        True
 accepted_count:      623  | total_votes:         7,110  | total_views:    52,261,286
-question_count:      299  | answer_count:        2,143  | save_blog_count:     1,075
+question_count:      299  | answer_count:        2,143  | save_blog_count:     1,078
+total_self_accept:   113  | total_self_answer:      54  | Answers need accept:    59
 total_headers:     1,547  | total_header_spaces:   390  | total_quote_spaces:  1,533
 total_lines:      51,278  | total_paragraphs:   14,535  | total_words:       285,727
 total_pseudo_tags:   152  | total_tag_names:   ['conky', 'eyesome', 'cpuf', 'iconic']
@@ -930,10 +942,11 @@ total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:   
 total_code_blocks:   178  | code_block_lines:    2,960  | total_toc:              25
 most_lines:          820  | total_force_end:       929  | total_nav_bar:          34
 total_header_levels:        [581, 754, 210, 2, 0, 0]
+
 ```
 
 Each printed total name is the same as the internal program variable name. The
-first two total lines
+first four total lines
 apply to all Stack Exchnage Questions and Answers you have posted. The remaining
 total lines apply only to those that qualify for saving as A Jekyll Blog Post.
 
@@ -951,6 +964,10 @@ print('accepted_count:   {:>6,}'.format(accepted_count),
 print('question_count:   {:>6,}'.format(question_count),
       ' | answer_count:       {:>6,}'.format(answer_count),
       ' | save_blog_count:    {:>6,}'.format(save_blog_count))
+print('total_self_accept:{:>6,}'.format(total_self_answer),
+      ' | total_self_answer:  {:>6,}'.format(total_self_accept),
+      ' | Answers need accept:{:>6,}'.format(total_self_answer -
+                                             total_self_accept))
 print('total_headers:    {:>6,}'.format(total_headers),
       ' | total_header_spaces:{:>6,}'.format(total_header_spaces),
       ' | total_quote_spaces: {:>6,}'.format(total_quote_spaces))
