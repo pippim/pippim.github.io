@@ -571,7 +571,8 @@ The <mark>Reverse Formatting</mark> is defined in
 mark {
   background-color: $header-bg-color;
   color: #FFFFFF;
-}```
+}
+```
 
 ### TOC and Navigation Buttons
 
