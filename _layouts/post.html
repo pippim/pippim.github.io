@@ -32,13 +32,13 @@
 
       <h2 class="project-tagline">
         {% if page.views and page.views != "" and page.views != nil %}
-          Views: <mark>{{ page.views }}</mark>
+          Views: <mark>&nbsp;{{ page.views }}&nbsp;</mark>
         {% endif %}
         {% if page.votes and page.votes != "" and page.votes != nil %}
-           &nbsp;&nbsp; Votes: <mark>{{ page.votes }}</mark>
+           &nbsp;&nbsp; Votes: <mark>&nbsp;{{ page.votes }}&nbsp;</mark>
         {% endif %}
         {% if page.accepted and page.accepted != "" and page.accepted != nil %}
-           &nbsp;&nbsp; <mark>Answer was ACCEPTED!</mark>
+           &nbsp;&nbsp; <mark>&nbsp;Answer was ACCEPTED!&nbsp;</mark>
         {% endif %}
       </h2>
 
@@ -46,7 +46,7 @@
         <h2 class="project-tagline">
           Tag{% if page.tags.size > 1 %}s{% endif %}:
           {% for tag in page.tags %}
-            <mark>{{ tag }}</mark>&nbsp;
+            <mark>&nbsp;{{ tag }}&nbsp;</mark>&nbsp;&nbsp;
           {% endfor %}
         </h2>
       {% endif %}
