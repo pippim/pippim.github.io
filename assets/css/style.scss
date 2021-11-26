@@ -123,3 +123,9 @@ figure {
 figure figcaption {
   text-align: center;
 }
+
+// Swap font color and background color
+mark {
+  background-color:header-bg-color;
+  color:#FFFFFF;
+}
