@@ -410,14 +410,22 @@ lines to your screen.
 
 ### Blog Post Selection Criteria
 
-Although you have the option to convert SE Questions to blog
-Posts please keep in mind if you answered your own question 
-then your answer may not be converted to a blog post. 
-This an portant consideration because the answers are
-usually what you want to showcase on your website.
+Although most of the focus is on converting SE Answers
+to blog posts, you can convert SE Questions to blog
+posts as well. There is special processing when you have
+written both the question and an answer. That is
+called a self-answered question.
 
-The program defaults are to only select answers that
-are accepted or have two or more up votes.
+Considerations for self-answered questions:
+
+- Questions are never converted to a blog post only
+the answers.
+- If the question has enough up-votes it doesn't
+matter because only the answer up-votes count.
+
+The program defaults are to only convert answers that
+are accepted or have two or more up votes. The program
+defaults to never convert questions.
 
 Here is the relevant code:
 
