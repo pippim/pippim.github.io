@@ -45,7 +45,9 @@
       {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
         <h2 class="project-tagline">
           Tag{% if page.tags.size > 1 %}s{% endif %}:
-          <mark>{{ page.tags | sort | join: ", " }}</mark>
+          {% for tag in page.tags %}
+            <mark>{{ tag }}</mark>&nbsp;
+          {% endfor %}
         </h2>
       {% endif %}
 
