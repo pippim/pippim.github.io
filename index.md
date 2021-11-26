@@ -567,9 +567,11 @@ The <mark>Reverse Formatting</mark> is defined in
 `assets/css/style.scss` thusly:
 
 ``` scss
+// Swap font color and background color
 mark {
-}
-```
+  background-color: $header-bg-color;
+  color: #FFFFFF;
+}```
 
 ### TOC and Navigation Buttons
 
