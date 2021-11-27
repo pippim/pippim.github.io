@@ -40,23 +40,20 @@
         {% if page.accepted and page.accepted != "" and page.accepted != nil %}
            &nbsp;&nbsp; ✅ Accepted Answer
         {% endif %}
-      </h2>
-
-      {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
-        <h2 class="project-tagline">
+        {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
+          <br/>
           Tag{% if page.tags.size > 1 %}s{% endif %}:
           {% for tag in page.tags %}
             <mark>&nbsp;{{ tag }}&nbsp;</mark>&nbsp;&nbsp;
           {% endfor %}
-        </h2>
-      {% endif %}
+        {% endif %}
 
-      {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
-        <h2 class="project-tagline"><a href="{{ page.stack_url }}"
+        {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
+          <br/>
+          <a href="{{ page.stack_url }}"
                >🔍 See Original {{ page.type }} on {{ page.site }}</a>
-        </h2>
-      {% endif %}
-
+        {% endif %}
+      </h2>
       {{ content }}
 
       <footer class="site-footer">
