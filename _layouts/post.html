@@ -32,20 +32,21 @@
 
       <h2 class="project-tagline">
         {% if page.views and page.views != "" and page.views != nil %}
-          Views:<mark>&nbsp;{{ page.views }}&nbsp;</mark>
+          Views:&nbsp;&nbsp;<mark>&nbsp;{{ page.views }}&nbsp;</mark>
         {% endif %}
         {% if page.votes and page.votes != "" and page.votes != nil %}
-           &nbsp;&nbsp; Votes:&nbsp;<mark>&nbsp;{{ page.votes }}&nbsp;</mark>
+           &nbsp;&nbsp;&nbsp; Votes:&nbsp;&nbsp;<mark>&nbsp;{{ page.votes }}&nbsp;</mark>
         {% endif %}
         {% if page.accepted and page.accepted != "" and page.accepted != nil %}
-           &nbsp;&nbsp; ✅AcceptedAnswer
+           &nbsp;&nbsp;&nbsp; ✅&nbsp;Accepted&nbsp;Answer
         {% endif %}
 
         {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
           <br/>
-          Tag{% if page.tags.size > 1 %}s{% endif %}:
+          Tag{% if page.tags.size > 1 %}s{% endif %}:&nbsp;&nbsp;
           {% for tag in page.tags %}
-            <mark>&nbsp;{{ tag }}&nbsp;</mark>&nbsp;&nbsp;
+            <!-- &#32; is a breaking space: https://stackoverflow.com/a/38663112/6929343 -->
+            <mark>&nbsp;{{ tag }}&nbsp;</mark>&#32;&#32;
           {% endfor %}
         {% endif %}
 
