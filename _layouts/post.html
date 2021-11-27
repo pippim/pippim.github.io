@@ -32,13 +32,13 @@
 
       <h2 class="project-tagline">
         {% if page.views and page.views != "" and page.views != nil %}
-          Views: <mark>&nbsp;{{ page.views }}&nbsp;</mark>
+          Views:<mark>&nbsp;{{ page.views }}&nbsp;</mark>
         {% endif %}
         {% if page.votes and page.votes != "" and page.votes != nil %}
-           &nbsp;&nbsp; Votes: <mark>&nbsp;{{ page.votes }}&nbsp;</mark>
+           &nbsp;&nbsp; Votes:&nbsp;<mark>&nbsp;{{ page.votes }}&nbsp;</mark>
         {% endif %}
         {% if page.accepted and page.accepted != "" and page.accepted != nil %}
-           &nbsp;&nbsp; ✅ Accepted Answer
+           &nbsp;&nbsp; ✅AcceptedAnswer
         {% endif %}
 
         {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
