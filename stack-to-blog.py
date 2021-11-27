@@ -10,6 +10,7 @@
 #       NOv. 06 2021 - Two passes to count number of #, ##, etc. in first pass.
 #       NOv. 13 2021 - Add TOC support and SE "<!-- language" conversion.
 #       Nov. 17 2021 - Support for Pseudo-tags from keywords in answers.
+#       Nov. 24 2021 - Check self-answered questions and not accepted yet.
 #
 # ==============================================================================
 
@@ -58,7 +59,7 @@ INPUT_FILE = 'QueryResults.csv'
 RANDOM_LIMIT = 10000        # On initial trials limit the number of blog posts
 PRINT_RANDOM = False        # Print out matching random record found (10 lines)
 OUTPUT_DIR = "_posts/"      # Subdirectory name. Use "" for current directory
-QUESTIONS_QUALIFIER = False  # Don't upload questions
+QUESTIONS_QUALIFIER = True  # Convert questions to blog posts
 VOTE_QUALIFIER = 2          # Posts need at least 2 votes to qualify
 ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
 # Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
@@ -100,31 +101,6 @@ all_tag_names = []          # Every tag name appearing on stack exchange answers
 all_tag_counts = []         # Count of times tag has been used on SE answers
 
 now = dt.now().strftime("%Y-%m-%d %H:%M:%S")
-
-''' Read S.E.D.E. CSV file and convert to Python list: data [] '''
-with open(INPUT_FILE) as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    for row in csv_reader:
-        # The first row are column headings / field names
-        if row_count == 0:
-            print('Column names\n', row)
-            fields = row
-        else:
-            data.append(row)
-        row_count += 1
-
-    #print('Total rows:', row_count)
-
-row_count = len(data)
-if row_count < 2:
-    print('No CSV records found in INPUT_FILE:' + INPUT_FILE)
-    exit()
-
-''' Overview of sample set used for blog posts based on RANDOM_LIMIT '''
-random_row_nos = [randint(1, row_count) for p in range(0, RANDOM_LIMIT)]
-if RANDOM_LIMIT < 100:
-    print('RANDOM_LIMIT:', RANDOM_LIMIT,
-          'yielded random record numbers:', random_row_nos)
 
 # Copy terminal output of record #1 with column names and paste below.
 # Then change names to uppercase and assign each column a 0-based index.
@@ -196,6 +172,9 @@ FRONT_UPLOADED  = "uploaded:     "  # Date & Time this program was run
 FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
 FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
 
+'''
+Totals for all Stack Exchange posts even those not converted
+'''
 row_number = 1                  # Current row number in query
 accepted_count = 0              # How many posts were accepted
 question_count = 0              # How many posts are questions
@@ -224,10 +203,13 @@ total_alternate_h2 = 0          # Alternate H2 lines followed by "--"
 total_force_end = 0             # How many last empty lines added?
 total_toc = 0                   # How many table of contents added?
 total_nav_bar = 0               # How many navigation bars added?
+total_self_answer = 0           # How many self-answered questions?
+total_self_accept = 0           # Of those how many have been accepted?
+self_not_accept_url = []        # List of URLs not accepted
 language_forced = 0             # How many times was language fenced?
 
 '''
-Must be reinitialize between blog posts
+Totals for single blog post - reinitialized between blog posts
 '''
 contents = ""               # Not used, placeholder
 blog_filename = ""          # YYYY-MM-DD-blog-title.md
@@ -243,11 +225,36 @@ paragraph_count = 0         # How many paragraphs in post last one not counted
 word_count = 0              # How many words by splitting whitespace
 pseudo_tag_count = 0        # Words in answer that qualify as tags for question
 pseudo_tag_names = []       # All tag names added for this post
+self_answer = False         # Is this a self-answered question?
+self_accept = False         # Is this self-answered question accepted?
+
 in_code_block = False       # Are we in a code block? Then no # Header formatting
 language_used = ""          # What language when fenced code blocks have none?
 image_links = []            # Links to images found at bottom of SE posts
 ''' Used for each post '''
 tags = ""                   # Front matter format: tags: TAG1 TAG2 TAG3
+
+''' Functions
+    ====================================================================
+    
+    Functions must be defined prior to being called.  The following
+    functions are used:
+
+    dump(r)
+    header_space(ln)
+    block_quote(ln) 
+    check_paragraph(ln) 
+    check_code_block(ln) 
+    check_pre_code(ln)
+    check_contents(ln)
+    navigation_bar(level, skip_btn=True)  
+    front_matter(r)
+    create_blog_filename()
+    check_self_answer(r)
+    write_md(md)
+    fatal_error(msg)
+
+'''
 
 
 def dump(r):
@@ -570,7 +577,8 @@ def navigation_bar(level, skip_btn=True):
 
 def front_matter(r):
     """ Output Jekyll front matter to md string """
-    md = "---\n" + FRONT_LAYOUT + "\n" + FRONT_TITLE + r[TITLE] + '\n'
+    md = "---\n" + FRONT_LAYOUT + "\n"
+    md = md + FRONT_TITLE + r[TITLE] + '\n'
     if FRONT_SITE is not None:
         md = md + FRONT_SITE + r[SITE] + '\n'
     if FRONT_URL is not None:
@@ -652,6 +660,40 @@ def create_blog_filename():
     return filename
 
 
+def check_self_answer(r):
+    """ Called for every question.
+
+        If same title exists in an answer this is a self-answered question.
+
+        When self-answered question we skip blogging the question and the
+        answer is blogged assuming it reaches the required minimum vote. If
+        the answer is accepted (and it should be) it still needs the minimum
+        votes.
+
+        An error dump is printed if the question is self-answered but not
+        accepted. This happens when answer was forgotten after the 2 day
+        waiting period to accept answers had expired.
+
+    """
+
+    global self_answer, self_accept, total_self_answer, total_self_accept
+    for search in data:
+        if search[TITLE] == r[TITLE] and search[TYPE] == "Answer":
+            self_answer = True  # Is this a self-answered question?
+            total_self_answer += 1
+            print('SELF_ANSWERED')
+            if search[ACCEPTED] == "Accepted":
+                self_accept = True  # Is this self-answered question accepted?
+                total_self_accept += 1
+                dump(r)
+                dump(search)
+            else:
+                print('NOT ACCEPTED')
+                self_not_accept_url.append(search[URL])
+                dump(r)
+                dump(search)
+
+
 def write_md(md):
     """ Write to SE converted to Jekyll markdown to blog_filename """
     with open(blog_filename, 'w') as fh:
@@ -661,6 +703,62 @@ def write_md(md):
         else:
             # Write everything
             fh.write(md)
+
+
+def fatal_error(msg):
+    """ Print fatal error and exit program """
+    print('#' * 80)
+    print('#', ' ' * 31, "FATAL ERROR", ' ' * 32, '#')
+    print('#' * 80)
+    print()
+    print(msg)
+    exit()
+
+
+''' INITIALIZATION
+    =======================================================================
+
+    - Sanity Check on front matter
+    - Read S.E.D.E. CSV file and convert to Python list: data []
+    - Ensure file is not empty
+    - Set Random Record Limit list 
+'''
+
+# Bailout if incompatible front matter picked
+if not FRONT_LAYOUT.startswith('layout:'):
+    fatal_error('FRONT_LAYOUT does not begin with "layout:". CONTENT IS: '
+                + FRONT_LAYOUT)
+if FRONT_URL is not None:
+    # FRONT_SITE and FRONT_TYPE required by: _includes/page.html
+    if FRONT_SITE is None:
+        fatal_error('When FRONT_URL is used then FRONT_SITE is required.')
+    if FRONT_TYPE is None:
+        fatal_error('When FRONT_URL is used then FRONT_TYPE is required.')
+
+# Read CSV file into list
+with open(INPUT_FILE) as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        # The first row are column headings / field names
+        if row_count == 0:
+            print('Column names\n', row)
+            fields = row
+        else:
+            data.append(row)
+        row_count += 1
+
+    #print('Total rows:', row_count)
+
+# If less than 2 records consider an empty file
+row_count = len(data)
+if row_count < 2:
+    fatal_error('No CSV records found in INPUT_FILE:' + INPUT_FILE)
+
+# Number of blog posts converted controlled by RANDOM_LIMIT
+random_row_nos = [randint(1, row_count) for p in range(0, RANDOM_LIMIT)]
+if RANDOM_LIMIT < 100:
+    print('RANDOM_LIMIT:', RANDOM_LIMIT,
+          'Random record numbers to convert:', random_row_nos)
 
 
 ''' MAIN LOOP to process All query records
@@ -702,6 +800,9 @@ for row in data:
     language_used = ""      # What language when fenced code blocks have none?
     in_code_block = False   # In a code block # Header formatting is skipped
     force_end_line = False  # Did Pass #1 force an empty blank line at end?
+    self_answer = False     # Is this a self-answered question?
+    self_accept = False     # Is this self-answered question accepted?
+
     ''' YYYY-MM-DD-Title-with-spaces-converted-to-dashes.md '''
     blog_filename = create_blog_filename()
 
@@ -730,7 +831,8 @@ for row in data:
     ''' TYPE = "Question" or "Answer" or "Wiki"'''
     if row[TYPE] == "Question":
         question_count += 1
-        if not QUESTIONS_QUALIFIER:
+        check_self_answer(row)
+        if not QUESTIONS_QUALIFIER or self_answer:
             save_blog = False  # Questions aren't posted
     elif row[TYPE] == "Answer":
         answer_count += 1
@@ -893,6 +995,14 @@ for row in data:
             random_row_nos[index] = row_number + 1
 
 
+if len(self_not_accept_url) > 0:
+    print()
+    print('// ==============/   Self-Answered Questions not accepted   \\================ \\\\')
+    print('')
+    for url in self_not_accept_url:
+        print('URL:', url)
+    print('')
+
 print('// =============================/   T O T A L S   \\============================== \\\\')
 print('')
 print('RANDOM_LIMIT:     {:>6,}'.format(RANDOM_LIMIT),
@@ -904,6 +1014,10 @@ print('accepted_count:   {:>6,}'.format(accepted_count),
 print('question_count:   {:>6,}'.format(question_count),
       ' | answer_count:       {:>6,}'.format(answer_count),
       ' | save_blog_count:    {:>6,}'.format(save_blog_count))
+print('total_self_accept:{:>6,}'.format(total_self_answer),
+      ' | total_self_answer:  {:>6,}'.format(total_self_accept),
+      ' | Answers need accept:{:>6,}'.format(total_self_answer -
+                                             total_self_accept))
 print('total_headers:    {:>6,}'.format(total_headers),
       ' | total_header_spaces:{:>6,}'.format(total_header_spaces),
       ' | total_quote_spaces: {:>6,}'.format(total_quote_spaces))
@@ -923,4 +1037,4 @@ print('most_lines:       {:>6,}'.format(most_lines),
       ' | total_nav_bar:     {:>7,}'.format(total_nav_bar))
 print('total_header_levels:       ', total_header_levels)
 
-# End of stack-to-blog.py
+    # End of stack-to-blog.py
