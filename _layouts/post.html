@@ -40,6 +40,7 @@
         {% if page.accepted and page.accepted != "" and page.accepted != nil %}
            &nbsp;&nbsp; ✅ Accepted Answer
         {% endif %}
+
         {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
           <br/>
           Tag{% if page.tags.size > 1 %}s{% endif %}:
