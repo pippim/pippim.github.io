@@ -21,7 +21,7 @@ of Pippim. On this page you will discover:
 - **Where** is Pippim located?
 - **When** was Pippim created? (The easiest question to answer!) 
 - **Why** was Pippim created? 
-- **How** was Pippim created? OK that doesn't begins with and "H" and not a "W" and that makes number 6.
+- **How** was Pippim created? OK that doesn't begin with a "W". Plus that makes number 6 not 5.
 
 {% include image-right.html src="/assets/img/Ask Ubuntu profile.png"
    alt="Ask Ubuntu Profile"
