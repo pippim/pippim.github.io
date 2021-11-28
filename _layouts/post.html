@@ -33,7 +33,10 @@
       <h4 class="front-matter">
         {% assign fm_state = "Less" %}
         {% assign fm_button = "More" %}
-        <button class="hidden-child" style="position: absolute; text-align: right;">{{ fm_button}}</button>
+        <button class="hidden-child"
+                onclick="fm_toggle()"
+                style="position: absolute; text-align: right;">
+          {{ fm_button}}</button>
 
         {% if page.views and page.views != "" and page.views != nil %}
           Views:&nbsp;&nbsp;<mark>&nbsp;{{ page.views }}&nbsp;</mark>
@@ -74,3 +77,15 @@
     </main>
   </body>
 </html>
+
+<script>
+function fm_toggle() {
+  {% if fm_state = "Less" %}
+    {% assign fm_state = "More" %}
+    {% assign fm_button = "Less" %}
+  {% else %}
+    {% assign fm_state = "Less" %}
+    {% assign fm_button = "More" %}
+  {% endif %}
+}
+</script>
