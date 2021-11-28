@@ -43,7 +43,12 @@ function checkCookie() {
 }
 
 function fm_toggle() {
-  window.alert("State before eating cookie: " + fm_state);
+  if (fm_state != "") {
+    window.alert("State before eating cookie: " + fm_state);
+  }
+  else {
+    window.alert("fm_state is null");
+  }
   let fm_state = getCookie("fm_state");
   window.alert("State after eathing cookie: " + fm_state);
   if (fm_state != "More") {
