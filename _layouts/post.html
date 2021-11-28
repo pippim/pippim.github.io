@@ -48,7 +48,7 @@
         -->
 
         <button class="hidden-child"
-                id="jstrigger"
+                id="hidden_button"
                 onclick="fm_toggle();"
                 style="position: absolute; text-align: right;">
           ${fm_button}</button> 
@@ -78,14 +78,15 @@
           <a href="{{ page.stack_url }}"
                >🔍 See Original {{ page.type }} on {{ page.site }}</a>
         {% endif %}
-        <!-- Removing listener events because too many fm_toggle calls now.
+        <!-- Removing listener events because too many fm_toggle calls now.         -->
         <script>
-          document.getElementById("jstrigger").addEventListener("click", function(){
-    alert("oh snap, i was clicked...");
-          });
-          document.getElementById("jstrigger").addEventListener("click", fm_toggle);
+          document.querySelector('#hidden_button').textContent = ${ fm_button }
+          // OLD STUFF not used
+          // document.getElementById("jstrigger").addEventListener("click", function(){
+    // alert("oh snap, i was clicked...");
+          // });
+          // document.getElementById("jstrigger").addEventListener("click", fm_toggle);
         </script>
-        -->
       </h4>
       {{ content }}
 
