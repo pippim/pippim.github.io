@@ -56,3 +56,5 @@ function fm_toggle() {
   //window.location.reload(true);
 
 }
+
+document.getElementById("jstrigger").addEventListener("click", fm_toggle);
