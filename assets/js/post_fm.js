@@ -23,14 +23,14 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  let user = getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
+  let fm_state = getCookie("fm_state");
+  if (fm_state != "") {
+    alert("Front Matter state is: " + fm_state);
   }     }
   }
 } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
+     fm_state = prompt("Enter Front Matter state:","");
+     if (fm_state != "" && user != fm_state) {
+       setCookie("fm_state", fm_state, 30);
 
 </script>
