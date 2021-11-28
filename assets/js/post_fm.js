@@ -28,7 +28,7 @@ function getCookie(cname) {
 function checkCookie() {
   let fm_state = getCookie("fm_state");
   if (fm_state != "") {
-    window.alert("Front Matter state is: " + fm_state);
+    // window.alert("Front Matter state is: " + fm_state);
     if (fm_state == "Less") {
       var fm_button = "More"
       }
@@ -43,8 +43,9 @@ function checkCookie() {
 }
 
 function fm_toggle() {
+  window.alert("State before eating cookie: " + fm_state);
   let fm_state = getCookie("fm_state");
-  window.alert("Front Matter state is being toggled from: " + fm_state);
+  window.alert("State after eathing cookie: " + fm_state);
   if (fm_state != "More") {
     setCookie("fm_state", "More", 30);
   }
