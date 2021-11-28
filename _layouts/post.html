@@ -33,6 +33,7 @@
 
       <h4 class="front-matter">
 
+        <!-- NEW METHOD DOESN'T WORK
         var b = document.createElement('button');
         b.setAttribute('content', 'test content');
         b.setAttribute('class', 'hidden-child');  
@@ -40,13 +41,12 @@
 
         var wrapper = document.getElementById("divWrapper");
         wrapper.appendChild(b);
+        -->
 
-        <!-- OLD STYLE
         <button class="hidden-child"
                 onclick="fm_toggle()"
                 style="position: absolute; text-align: right;">
-          {{ fm_button }}</button> 
-        -->
+          ${fm_button}</button> 
 
         {% if page.views and page.views != "" and page.views != nil %}
           Views:&nbsp;&nbsp;<mark>&nbsp;{{ page.views }}&nbsp;</mark>
