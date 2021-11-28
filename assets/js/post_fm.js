@@ -40,13 +40,12 @@ function checkCookie() {
 
 function fm_toggle() {
   window.alert("Front Matter state is being toggled from: " + fm_state);
-  if (fm_state == "Less") {
+  if (fm_state != "More") {
     setCookie("fm_state", "More", 30);
   }
   else {
     setCookie("fm_state", "Less", 30);
   }
-
   window.location.reload();
   // If we needed to force the document to be fetched from the
   // web server again (such as where the document contents
@@ -54,6 +53,4 @@ function fm_toggle() {
   // configured properly), Firefox supports a non-standard
   // parameter that can be set to true to bypass the cache:
   //window.location.reload(true);
-
 }
-
