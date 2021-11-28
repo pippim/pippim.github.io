@@ -33,7 +33,7 @@
       <h4 class="front-matter">
         {% assign fm_state = "Less" %}
         {% assign fm_button = "More" %}
-        <button class="hidden-child" style="right: 0px;">{{ fm_button}}</button>
+        <button class="hidden-child" style="position: relative; right: 0px;">{{ fm_button}}</button>
 
         {% if page.views and page.views != "" and page.views != nil %}
           Views:&nbsp;&nbsp;<mark>&nbsp;{{ page.views }}&nbsp;</mark>
