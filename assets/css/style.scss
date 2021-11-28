@@ -126,7 +126,7 @@ $honeydew: #F0FFF0 !default; // Honeydew
   border-left: 1px solid #999;
 
   &:hover {
-    color: $honeydew;
+    background-color: $honeydew;
     &:before {
       width: 100%;
     }
