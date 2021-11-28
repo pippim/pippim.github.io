@@ -117,6 +117,7 @@ $honey_dew: #F0FFF0 !default; // Honeydew
 // Blog post front matter
 .front-matter {
   padding: 3px;
+  border-color: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
   border-top: 1px solid #999;
   border-right: 2px solid #555;
   border-bottom: 2px solid #555;
