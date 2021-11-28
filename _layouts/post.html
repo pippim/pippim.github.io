@@ -52,8 +52,9 @@
 
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
           <br/>
+          Link:&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="{{ page.stack_url }}"
-               >Link:&nbsp;&nbsp;&nbsp;🔍 See Original {{ page.type }} on {{ page.site }}</a>
+               >🔍 See Original {{ page.type }} on {{ page.site }}</a>
         {% endif %}
       </h2>
       {{ content }}
