@@ -32,17 +32,18 @@ function checkCookie() {
     // window.alert("Front Matter state is: " + fm_state);
     if (fm_state == "Less") {
       // Do not use: "var fm_button =" that makes variable local
-      fm_button = "More"
+      fm_button = "More";
       }
     else {
-      fm_button = "Less"
+      fm_button = "Less";
       }
   }
   else {
     setCookie("fm_state", "Less", 30);
-    fm_state = "Less"
-    fm_button = "More"
+    fm_state = "Less";
+    fm_button = "More";
   }
+  return fm_button;
 }
 
 function fm_toggle() {
