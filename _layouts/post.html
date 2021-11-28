@@ -79,7 +79,11 @@
           <a href="{{ page.stack_url }}"
                >🔍 See Original {{ page.type }} on {{ page.site }}</a>
         {% endif %}
-      </h2>
+        <script>
+        document.getElementById("jstrigger").addEventListener("click", function(){
+    alert("oh snap, i was clicked...");
+        </script>
+      </h4>
       {{ content }}
 
       <footer class="site-footer">
