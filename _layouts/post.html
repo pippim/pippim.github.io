@@ -47,7 +47,6 @@
         <script src="{{ site.url }}/assets/js/post_fm.js"></script>
 
         <button class="hidden-child"
-                type="button"
                 id="jstrigger"
                 onclick="fm_toggle();"
                 onmousedown="fm_toggle();"
@@ -83,6 +82,7 @@
           document.getElementById("jstrigger").addEventListener("click", function(){
     alert("oh snap, i was clicked...");
           });
+          document.getElementById("jstrigger").addEventListener("click", fm_toggle);
         </script>
       </h4>
       {{ content }}
