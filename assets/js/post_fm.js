@@ -58,3 +58,7 @@ function fm_toggle() {
 }
 
 document.getElementById("jstrigger").addEventListener("click", fm_toggle);
+
+document.getElementById("jstrigger").addEventListener("click", function(){
+    alert("oh snap, i was clicked...");
+});
