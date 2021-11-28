@@ -1,6 +1,6 @@
 // global variables
-var fm_state = ""
-var fm_button = ""
+var fm_state;
+var fm_button;
 
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
@@ -43,6 +43,7 @@ function checkCookie() {
 }
 
 function fm_toggle() {
+  let fm_state = getCookie("fm_state");
   window.alert("Front Matter state is being toggled from: " + fm_state);
   if (fm_state != "More") {
     setCookie("fm_state", "More", 30);
