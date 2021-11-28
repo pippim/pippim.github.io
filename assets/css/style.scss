@@ -133,6 +133,14 @@ $honeydew: #F0FFF0 !default; // Honeydew
   }
 }
 
+.front-matter .hidden-child{
+    visibility: hidden;
+}
+
+.front-matter:hover .hidden-child{
+    visibility: visible;
+}
+
 br {
  display: block;
  margin: 6px 0;
