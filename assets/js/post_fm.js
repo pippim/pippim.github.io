@@ -38,7 +38,7 @@ function checkCookie() {
   }
 }
 
-function toggle_fm() {
+function fm_toggle() {
   if (fm_state == "Less") {
     setCookie("fm_state", "More", 30);
   }
