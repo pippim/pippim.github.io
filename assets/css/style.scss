@@ -117,8 +117,9 @@ $honey_dew: #F0FFF0 !default; // Honeydew
 // Blog post front matter
 .front-matter {
   padding: 3px;
-  border-color: $header-bg-color;  // Cayman green
-  border-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  border-color: $header-bg-color-secondary;  // Cayman blue
+  // border-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  // above removes border and puts dots on corners
   border-top: 1px solid #999;
   border-right: 2px solid #555;
   border-bottom: 2px solid #555;
