@@ -114,7 +114,8 @@ $header-bg-color-secondary: #155799 !default;
 }
 
 br {
-  line-height: 150%;
+ display: block;
+ margin: 10px 0;
 }
 
 figure {
