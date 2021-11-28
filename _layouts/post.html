@@ -43,7 +43,7 @@
 
         {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
           <br/>
-          Tag{% if page.tags.size > 1 %}s{% endif %}:&nbsp;&nbsp;
+          Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:&nbsp;&nbsp;&nbsp;
           {% for tag in page.tags %}
             <!-- &#32; is a breaking space: https://stackoverflow.com/a/38663112/6929343 -->
             <mark>&nbsp;{{ tag }}&nbsp;</mark>&nbsp;&nbsp;
@@ -53,7 +53,7 @@
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
           <br/>
           <a href="{{ page.stack_url }}"
-               >🔍 See Original {{ page.type }} on {{ page.site }}</a>
+               >Link:&nbsp;&nbsp;&nbsp;🔍 See Original {{ page.type }} on {{ page.site }}</a>
         {% endif %}
       </h2>
       {{ content }}
