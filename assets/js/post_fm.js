@@ -39,6 +39,7 @@ function checkCookie() {
 }
 
 function fm_toggle() {
+  window.alert("Front Matter state is being toggled from: " + fm_state);
   if (fm_state == "Less") {
     setCookie("fm_state", "More", 30);
   }
