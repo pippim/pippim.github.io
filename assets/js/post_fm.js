@@ -1,6 +1,6 @@
 // global variables
-var fm_state;
-var fm_button;
+var fm_state = "None";
+var fm_button = "None";
 
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
@@ -26,19 +26,22 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  let fm_state = getCookie("fm_state");
+  // do not use "let fm_state =" that makes variable local
+  fm_state = getCookie("fm_state");
   if (fm_state != "") {
-    window.alert("Front Matter state is: " + fm_state);
+    // window.alert("Front Matter state is: " + fm_state);
     if (fm_state == "Less") {
-      var fm_button = "More"
+      // Do not use: "var fm_button =" that makes variable local
+      fm_button = "More"
       }
     else {
-      var fm_button = "Less"
+      fm_button = "Less"
       }
   }
   else {
     setCookie("fm_state", "Less", 30);
-    var fm_button = "More"
+    fm_state = "Less"
+    fm_button = "More"
   }
 }
 
@@ -49,7 +52,8 @@ function fm_toggle() {
   else {
     window.alert("fm_state is null");
   }
-  let fm_state = getCookie("fm_state");
+  // do not use "let fm_state =" that makes variable local
+  fm_state = getCookie("fm_state");
   window.alert("State after eathing cookie: " + fm_state);
   if (fm_state != "More") {
     setCookie("fm_state", "More", 30);
