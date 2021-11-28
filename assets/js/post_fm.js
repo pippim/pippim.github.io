@@ -1,6 +1,3 @@
-console.log("this worked");
-alert("hello");
-
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -39,4 +36,22 @@ function checkCookie() {
     setCookie("fm_state", "Less", 30);
     var fm_button = "More"
   }
+}
+
+function toggle_fm() {
+  if (fm_state == "Less") {
+    var fm_state = "More"
+  }
+  else {
+    var fm_state = "Less"
+  setCookie("fm_state", fm_state, 30);
+
+  window.location.reload();
+  // If we needed to force the document to be fetched from the
+  // web server again (such as where the document contents
+  // change dynamically but cache control headers are not
+  // configured properly), Firefox supports a non-standard
+  // parameter that can be set to true to bypass the cache:
+  //window.location.reload(true);
+
 }
