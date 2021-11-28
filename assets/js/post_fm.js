@@ -40,11 +40,11 @@ function checkCookie() {
 
 function toggle_fm() {
   if (fm_state == "Less") {
-    var fm_state = "More"
+    setCookie("fm_state", "More", 30);
   }
   else {
-    var fm_state = "Less"
-  setCookie("fm_state", fm_state, 30);
+    setCookie("fm_state", "Less", 30);
+  }
 
   window.location.reload();
   // If we needed to force the document to be fetched from the
