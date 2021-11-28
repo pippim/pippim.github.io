@@ -113,9 +113,18 @@ $header-bg-color-secondary: #155799 !default;
   }
 }
 
+// Blog post front matter
+.front-matter {
+  padding: 3px;
+  border-top: 1px solid #999;
+  border-right: 2px solid #555;
+  border-bottom: 2px solid #555;
+  border-left: 1px solid #999;
+}
+
 br {
  display: block;
- margin: 8px 0;
+ margin: 6px 0;
 }
 
 figure {
