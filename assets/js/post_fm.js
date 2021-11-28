@@ -43,20 +43,20 @@ function checkCookie() {
     fm_state = "Less";
     fm_button = "More";
   }
-  return fm_button;
+  return fm_button; // return value not used anymore but leave it
 }
 
 function fm_toggle() {
-  if (fm_state != "") {
-    window.alert("State before eating cookie: " + fm_state);
-  }
-  else {
-    window.alert("fm_state is null");
-  }
+  //if (fm_state != "") {
+  //  window.alert("State before eating cookie: " + fm_state);
+  //}
+  //else {
+  //  window.alert("fm_state is null");
+  //}
   // do not use "let fm_state =" that makes variable local
-  fm_state = getCookie("fm_state");
-  window.alert("State after eathing cookie: " + fm_state);
-  if (fm_state != "More") {
+  //fm_state = getCookie("fm_state");
+  //window.alert("State after eathing cookie: " + fm_state);
+  if (fm_state == "Less") {
     setCookie("fm_state", "More", 30);
   }
   else {
