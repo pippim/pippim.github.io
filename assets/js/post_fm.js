@@ -1,4 +1,3 @@
-<script>
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -25,12 +24,10 @@ function getCookie(cname) {
 function checkCookie() {
   let fm_state = getCookie("fm_state");
   if (fm_state != "") {
-    alert("Front Matter state is: " + fm_state);
+    window.alert("Front Matter state is: " + fm_state);
   }     }
   }
 } else {
      fm_state = prompt("Enter Front Matter state:","");
      if (fm_state != "" && user != fm_state) {
        setCookie("fm_state", fm_state, 30);
-
-</script>
