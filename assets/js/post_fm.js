@@ -25,9 +25,15 @@ function checkCookie() {
   let fm_state = getCookie("fm_state");
   if (fm_state != "") {
     window.alert("Front Matter state is: " + fm_state);
-  }     }
+    if (fm_state == "Less") {
+      var fm_button = "More"
+      }
+    else {
+      var fm_button = "Less"
+      }
   }
-} else {
-     fm_state = prompt("Enter Front Matter state:","");
-     if (fm_state != "" && user != fm_state) {
-       setCookie("fm_state", fm_state, 30);
+  else {
+    setCookie("fm_state", "Less", 30);
+    var fm_button = "More"
+  }
+}
