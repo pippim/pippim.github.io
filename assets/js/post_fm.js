@@ -28,7 +28,7 @@ function getCookie(cname) {
 function checkCookie() {
   let fm_state = getCookie("fm_state");
   if (fm_state != "") {
-    // window.alert("Front Matter state is: " + fm_state);
+    window.alert("Front Matter state is: " + fm_state);
     if (fm_state == "Less") {
       var fm_button = "More"
       }
