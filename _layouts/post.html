@@ -121,13 +121,13 @@
         {% if page.favorites and page.favorites != "" and page.favorites != nil %}
            &nbsp;&nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
         {% endif %}
+        <script>
         $(document).ready(function(){
           updateResult();
           });
-        <script>
         function updateResult() {
           var fm_state = getCookie('fm_state');
-          alert('fm_state is: ' + fm_state);
+          alert('updateResult(): fm_state is: ' + fm_state);
           if (fm_state == "More") {
             $('#hidden_front_matter').attr('display', 'inline');
           }
