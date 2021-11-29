@@ -70,8 +70,7 @@
           document.querySelector('#hidden_button').textContent = fm_button
         </script>
       </h4>
-      
-      <h4 class="more-front-matter" id="hidden_front_matter" style="display:none">
+      <h4 class="ront-matter" id="hidden_front_matter" style="display:none">
 
         <!-- EXTRA FRONT MATTER VARIABLES:
         FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be changed
@@ -91,6 +90,22 @@
         {% if page.navigation and page.navigation != "" and page.navigation != nil %}
            &nbsp;&nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
         {% endif %}
+        <!--
+        FRONT_POST_ID   = None              # EG "post_id:      1104017"
+        FRONT_URL       = "stack_url:    "  # EG "stack_url:    https://askubuntu.com/q/1104017"
+        FRONT_LINK      = None              # EG "post_link:    https://askubuntu.com/q/1104017|How can I
+        FRONT_TITLE     = "title:        "  # Always appears in front matter!
+        FRONT_CREATED   = "created_date: "  # EG "created_date: 2020-01-15 15:21:55"
+        FRONT_LAST_EDIT = "edit_date:    "  # EG "edit_date:    2020-05-27 17:27:45"
+        FRONT_EDITED_BY = None              # EG "edit_user:    Community (-1)"
+        FRONT_SCORE     = "votes:        "  # EG "votes:        64" or blank/nil
+        FRONT_FAVORITES = "favorites:    "  # EG "favorites:    33" or blank/nil
+        FRONT_VIEWS     = "views:        "  # EG "views:        72,056" or blank/nil
+        FRONT_ANSWERS   = None              # EG "answers:      3" or blank/nil
+        FRONT_ACCEPTED  = "accepted:     "  # EG "accepted:     Accepted" or blank/nil
+        FRONT_CW        = None              # EG "community:    CW" blank/nil
+        FRONT_CLOSED    = None              # EG "closed:       Closed" or blank/nil
+        -->
       </h4>
 
       {{ content }}
