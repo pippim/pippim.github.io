@@ -73,14 +73,23 @@
       
       <h4 class="more-front-matter" id="hidden_front_matter" style="display:none">
 
-        {% if page.views and page.views != "" and page.views != nil %}
-          Views:&nbsp;&nbsp;<mark>&nbsp;{{ page.views }}&nbsp;</mark>
+        <!-- EXTRA FRONT MATTER VARIABLES:
+        FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be changed
+        FRONT_UPLOADED  = "uploaded:     "  # Date & Time this program was run
+        FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
+        FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
+        -->
+        {% if page.layout and page.layout != "" and page.layout != nil %}
+          Layout: <mark>&nbsp;{{ page.layout }}&nbsp;</mark>
         {% endif %}
-        {% if page.votes and page.votes != "" and page.votes != nil %}
-           &nbsp;&nbsp;&nbsp; Votes:&nbsp;&nbsp;<mark>&nbsp;{{ page.votes }}&nbsp;</mark>
+        {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
+           &nbsp;&nbsp;&nbsp; Uploaded:&nbsp;&nbsp;<mark>&nbsp;{{ page.uploaded }}&nbsp;</mark>
         {% endif %}
-        {% if page.accepted and page.accepted != "" and page.accepted != nil %}
-           &nbsp;&nbsp;&nbsp; ✅&nbsp;Accepted&nbsp;Answer
+        {% if page.toc and page.toc != "" and page.toc != nil %}
+           &nbsp;&nbsp;&nbsp; TOC:&nbsp;&nbsp;<mark>&nbsp;{{ page.toc }}&nbsp;</mark>
+        {% endif %}
+        {% if page.navigation and page.navigation != "" and page.navigation != nil %}
+           &nbsp;&nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
         {% endif %}
       </h4>
 
