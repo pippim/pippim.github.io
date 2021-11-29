@@ -31,11 +31,13 @@
 
     <main id="content" class="main-content" role="main">
 
+      <!-- LESS FRONT MATTER -->
       <h4 class="front-matter">
 
-        <button class="hidden-child"
+        <!-- Less / More button hidden until hover -->
+        <button class="hidden-child"        <!-- /assets/css/style.scss -->
                 id="hidden_button"
-                onclick="fm_toggle();"
+                onclick="fm_toggle();"      <!-- /assets/js/post_fm.js -->
                 style="position: absolute;"
                 >Button Text
         </button> 
@@ -70,6 +72,8 @@
           document.querySelector('#hidden_button').textContent = fm_button
         </script>
       </h4>
+
+      <!-- MORE FRONT MATTER -->
       <h4 class="front-matter" id="hidden_front_matter" style="display:none">
 
         <!-- EXTRA FRONT MATTER VARIABLES:
@@ -122,20 +126,21 @@
            &nbsp;&nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
         {% endif %}
         <script>
-        $(document).ready(function(){
-          updateResult();
-          });
-        updateResult(); // Forced call
-        function updateResult() {
-          var fm_button = checkCookie('fm_state');
-          alert('updateResult(): fm_button is: ' + fm_button);
-          if (fm_button == "Less") {
-            $('#hidden_front_matter').attr('display', 'inline');
+          $(document).ready(function(){
+            updateResult();
+            });
+          updateResult(); // Forced call
+          function updateResult() {
+            var fm_state = getCookie('fm_state');
+            alert('updateResult(): fm_state is: ' + fm_state);
+            if (fm_state == "More") {
+              <!-- https://stackoverflow.com/a/27846302/6929343 -->
+              $('#hidden_front_matter').show();
+            }
+            else {
+              $('#hidden_front_matter').hide();
+            }
           }
-          else {
-            $('#hidden_front_matter').attr('display', 'none');
-          }
-        }
         </script>
 
       </h4>
