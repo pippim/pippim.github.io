@@ -70,7 +70,7 @@
           document.querySelector('#hidden_button').textContent = fm_button
         </script>
       </h4>
-      <h4 class="ront-matter" id="hidden_front_matter" style="display:none">
+      <h4 class="front-matter" id="hidden_front_matter" style="display:none">
 
         <!-- EXTRA FRONT MATTER VARIABLES:
         FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be changed
@@ -90,7 +90,7 @@
         {% if page.navigation and page.navigation != "" and page.navigation != nil %}
            &nbsp;&nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
         {% endif %}
-        <!--
+        <!-- MORE FRONT MATTER VARIABLES
         FRONT_POST_ID   = None              # EG "post_id:      1104017"
         FRONT_URL       = "stack_url:    "  # EG "stack_url:    https://askubuntu.com/q/1104017"
         FRONT_LINK      = None              # EG "post_link:    https://askubuntu.com/q/1104017|How can I
@@ -106,6 +106,36 @@
         FRONT_CW        = None              # EG "community:    CW" blank/nil
         FRONT_CLOSED    = None              # EG "closed:       Closed" or blank/nil
         -->
+        {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
+           &nbsp;&nbsp;&nbsp; Stack URL:&nbsp;&nbsp;<mark>&nbsp;{{ page.stack_url }}&nbsp;</mark>
+        {% endif %}
+        {% if page.title and page.title != "" and page.title != nil %}
+           &nbsp;&nbsp;&nbsp; Title:&nbsp;&nbsp;<mark>&nbsp;{{ page.title }}&nbsp;</mark>
+        {% endif %}
+        {% if page.created_date and page.created_date != "" and page.created_date != nil %}
+           &nbsp;&nbsp;&nbsp; Created:&nbsp;&nbsp;<mark>&nbsp;{{ page.created_date }}&nbsp;</mark>
+        {% endif %}
+        {% if page.edit_date and page.edit_date != "" and page.edit_date != nil %}
+           &nbsp;&nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>&nbsp;{{ page.edit_date }}&nbsp;</mark>
+        {% endif %}
+        {% if page.favorites and page.favorites != "" and page.favorites != nil %}
+           &nbsp;&nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
+        {% endif %}
+        $(document).ready(function(){
+          updateResult();
+          });
+        <script>
+        function updateResult() {
+          var fm_state = getCookie('fm_state');
+          if (fm_state == "More") {
+            $('#hidden_front_matter').attr('display', 'inline');
+          }
+          else {
+            $('#hidden_front_matter').attr('display', 'none');
+          }
+        }
+        </script>
+
       </h4>
 
       {{ content }}
