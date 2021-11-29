@@ -127,6 +127,7 @@
         <script>
         function updateResult() {
           var fm_state = getCookie('fm_state');
+          alert('fm_state is: ' + fm_state);
           if (fm_state == "More") {
             $('#hidden_front_matter').attr('display', 'inline');
           }
