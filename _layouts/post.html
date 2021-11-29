@@ -125,6 +125,7 @@
         $(document).ready(function(){
           updateResult();
           });
+        updateResult(); // Forced call
         function updateResult() {
           var fm_state = getCookie('fm_state');
           alert('updateResult(): fm_state is: ' + fm_state);
