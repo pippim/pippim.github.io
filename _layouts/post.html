@@ -70,6 +70,20 @@
           document.querySelector('#hidden_button').textContent = fm_button
         </script>
       </h4>
+      
+      <h4 class="more-front-matter" id="hidden_front_matter" style="display:none">
+
+        {% if page.views and page.views != "" and page.views != nil %}
+          Views:&nbsp;&nbsp;<mark>&nbsp;{{ page.views }}&nbsp;</mark>
+        {% endif %}
+        {% if page.votes and page.votes != "" and page.votes != nil %}
+           &nbsp;&nbsp;&nbsp; Votes:&nbsp;&nbsp;<mark>&nbsp;{{ page.votes }}&nbsp;</mark>
+        {% endif %}
+        {% if page.accepted and page.accepted != "" and page.accepted != nil %}
+           &nbsp;&nbsp;&nbsp; ✅&nbsp;Accepted&nbsp;Answer
+        {% endif %}
+      </h4>
+
       {{ content }}
 
       <footer class="site-footer">
