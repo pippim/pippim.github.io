@@ -23,9 +23,16 @@ specifically Ubuntu. All the solutions are free.
  full-fledged applications that are free for 
 you to use as well.
 
-There are no ads on Pippim. You don't need to buy Pippim a coffee (it's already free at work!). Maybe some day you'll want to put all your technial documentation on an intranet or website and you will contract Pippim to help get the job done. Custom projects are the business model for how Pippim will earn revenue.
+There are no ads on Pippim. You don't need to buy 
+Pippim a coffee (it's already free at work!).
+ Maybe some day you'll want to put all your
+ technical documentation on an intranet or website and you will contract Pippim to help get the job done. Custom projects are the business model for how Pippim will earn revenue.
 
-If you are an aspiring developer perhaps the code published here will help you get a start. If you are a systems administrator perhaps you can learn from the questions and answers posted here. If in Technical Support remember "Google search is your friend" and many answers posted here come from using the *Google Search* engine.
+If you are an aspiring developer perhaps 
+the code published here will help you get a start. 
+If you are a systems administrator perhaps you
+ can learn from the questions and answers posted 
+here. If in Technical Support remember "Google search is your friend" and many answers posted here come from using the *Google Search* engine.
 
 
 ## Navigation Buttons
