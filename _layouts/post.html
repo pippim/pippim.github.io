@@ -127,9 +127,9 @@
           });
         updateResult(); // Forced call
         function updateResult() {
-          var fm_state = getCookie('fm_state');
-          alert('updateResult(): fm_state is: ' + fm_state);
-          if (fm_state == "More") {
+          var fm_button = checkCookie('fm_state');
+          alert('updateResult(): fm_button is: ' + fm_button);
+          if (fm_button == "Less") {
             $('#hidden_front_matter').attr('display', 'inline');
           }
           else {
