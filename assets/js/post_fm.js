@@ -33,18 +33,18 @@ function checkCookie() {
     if (fm_state == "Less") {
       // Do not use: "var fm_button =" that makes variable local
       fm_button = "More";
-      $('#hidden_front_matter').hide();
+      // $('#hidden_front_matter').hide();
       }
     else {
       fm_button = "Less";
-      $('#hidden_front_matter').show();
+      // $('#hidden_front_matter').show();
       }
   }
   else {
     setCookie("fm_state", "Less", 30);
     fm_state = "Less";
     fm_button = "More";
-    $('#hidden_front_matter').hide();
+    // $('#hidden_front_matter').hide();
   }
   return fm_button; // return value not used anymore but leave it
 }
@@ -61,11 +61,11 @@ function fm_toggle() {
   //window.alert("State after eathing cookie: " + fm_state);
   if (fm_state == "Less") {
     setCookie("fm_state", "More", 30);
-    $('#hidden_front_matter').hide();
+    // $('#hidden_front_matter').hide();
   }
   else {
     setCookie("fm_state", "Less", 30);
-    $('#hidden_front_matter').show();
+    // $('#hidden_front_matter').show();
   }
   window.location.reload();
   // If we needed to force the document to be fetched from the
