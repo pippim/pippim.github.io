@@ -142,11 +142,11 @@
           else {
             window.alert("PREupdateResult(): fm_state is null");
           }
-          if (fm_button != "") {
-            window.alert("PREupdateResult(): fm_button is: " + fm_button);
+          if (fm_state != "More") {
+            $('#hidden_front_matter').hide();
           }
           else {
-            window.alert("PREupdateResult(): fm_button is null");
+            $('#hidden_front_matter').show();
           }
 
           $(document).ready(function(){
