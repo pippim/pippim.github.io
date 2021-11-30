@@ -51,10 +51,14 @@ function checkCookie() {
 function fm_toggle() {
   if (fm_state == "Less") {
     setCookie("fm_state", "More", 30);
+    fm_state = "More";
+    fm_button = "Less";
     // $('#hidden_front_matter').hide();
   }
   else {
     setCookie("fm_state", "Less", 30);
+    fm_state = "Less";
+    fm_button = "More";
     // $('#hidden_front_matter').show();
   }
   // window.location.reload();
