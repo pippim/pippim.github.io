@@ -53,13 +53,13 @@ function fm_toggle() {
     setCookie("fm_state", "More", 30);
     fm_state = "More";
     fm_button = "Less";
-    // $('#hidden_front_matter').hide();
+    $('#hidden_front_matter').show();
   }
   else {
     setCookie("fm_state", "Less", 30);
     fm_state = "Less";
     fm_button = "More";
-    // $('#hidden_front_matter').show();
+    $('#hidden_front_matter').hide();
   }
   document.querySelector('#hidden_button').textContent = fm_button
   // window.location.reload();
