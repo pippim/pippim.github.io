@@ -134,12 +134,15 @@
            &nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
         {% endif %}
 
-        <!-- Probably don't need...
+        <!-- Wouldn't need if checkCookie(); set the .show() / .hide() properly --->
         <script>
           $(document).ready(function(){
+            window.alert('document is ready');
             updateResult();
             });
+
           updateResult(); // Forced call
+          
           function updateResult() {
             var fm_state = getCookie('fm_state');
             if (fm_state != "") {
@@ -157,7 +160,6 @@
             }
           }
         </script>
-        -->
       </h4>
 
       {{ content }}
