@@ -62,7 +62,7 @@ function fm_toggle() {
   else {
     setCookie("fm_state", "Less", 30);
   }
-  window.location.reload();
+  //window.location.reload();
   // If we needed to force the document to be fetched from the
   // web server again (such as where the document contents
   // change dynamically but cache control headers are not
