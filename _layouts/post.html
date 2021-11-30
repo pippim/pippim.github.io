@@ -72,8 +72,6 @@
                >🔍 See Original {{ page.type }} on {{ page.site }}</a>
         {% endif %}
         <script>
-          fm_button = checkCookie();
-          document.querySelector('#hidden_button').textContent = fm_button
         </script>
       </h4>
 
@@ -135,8 +133,9 @@
         {% endif %}
 
         <script>
-          
-          showHide(fm_state);
+          fm_button = checkCookie();
+          document.querySelector('#hidden_button').textContent = fm_button
+          showHide(fm_state);  // fm_state is a global var set by checkCookie()
         </script>
       </h4>
     </div>
