@@ -25,6 +25,15 @@ function getCookie(cname) {
   return "";
 }
 
+function showHide(state){
+  var x = document.getElementById("hidden_front_matter");
+  if (state === "More") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 function checkCookie() {
   // do not use "let fm_state =" that makes variable local
   fm_state = getCookie("fm_state");
@@ -45,6 +54,7 @@ function checkCookie() {
     fm_button = "More";
     // $('#hidden_front_matter').hide();
   }
+  showHide(fm_state);
   return fm_button; // return value not used anymore but leave it
 }
 
@@ -62,6 +72,7 @@ function fm_toggle() {
     // $('#hidden_front_matter').hide();
   }
   document.querySelector('#hidden_button').textContent = fm_button
+  showHide(fm_state);
   // window.location.reload();
   // If we needed to force the document to be fetched from the
   // web server again (such as where the document contents
