@@ -148,29 +148,6 @@
           else {
             $("#hidden_front_matter").css("display", "block");
           }
-
-          $(document).ready(function(){
-            updateResult();
-            });
-
-          window.onload = updateResult(); // Forced call: https://stackoverflow.com/a/24814579/6929343
-          
-          function updateResult() {
-            fm_state = getCookie('fm_state');
-            if (fm_state != "") {
-              window.alert("updateResult(): fm_state is: " + fm_state);
-            }
-            else {
-              window.alert("updateResult(): fm_state is null");
-            }
-            if (fm_state == "More") {
-              // https://stackoverflow.com/a/27846302/6929343
-              $('#hidden_front_matter').show();
-            }
-            else {
-              $('#hidden_front_matter').hide();
-            }
-          }
         </script>
       </h4>
 
