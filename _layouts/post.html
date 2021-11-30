@@ -141,7 +141,7 @@
             updateResult();
             });
 
-          updateResult(); // Forced call
+          window.onload = updateResult(); // Forced call: https://stackoverflow.com/a/24814579/6929343
           
           function updateResult() {
             var fm_state = getCookie('fm_state');
