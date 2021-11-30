@@ -36,7 +36,7 @@
 
         <!-- Less / More button hidden until hover
                 class="hidden-child"        /assets/css/style.scss
-                id="hidden_button"          /assets/js/post_fm.js
+                id="hidden_button"          /assets/css/style.scss
                 onclick="fm_toggle();"      /assets/js/post_fm.js
         -->
         <button class="hidden-child"
@@ -90,13 +90,13 @@
           Layout: <mark>&nbsp;{{ page.layout }}&nbsp;</mark>
         {% endif %}
         {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
-           &nbsp;&nbsp;&nbsp; Uploaded:&nbsp;&nbsp;<mark>&nbsp;{{ page.uploaded }}&nbsp;</mark>
+           &nbsp;&nbsp; Uploaded:&nbsp;&nbsp;<mark>&nbsp;{{ page.uploaded }}&nbsp;</mark>
         {% endif %}
         {% if page.toc and page.toc != "" and page.toc != nil %}
-           &nbsp;&nbsp;&nbsp; TOC:&nbsp;&nbsp;<mark>&nbsp;{{ page.toc }}&nbsp;</mark>
+           &nbsp;&nbsp; TOC:&nbsp;&nbsp;<mark>&nbsp;{{ page.toc }}&nbsp;</mark>
         {% endif %}
         {% if page.navigation and page.navigation != "" and page.navigation != nil %}
-           &nbsp;&nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
+           &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
         {% endif %}
         <!-- MORE FRONT MATTER VARIABLES
         FRONT_POST_ID   = None              # EG "post_id:      1104017"
@@ -115,19 +115,23 @@
         FRONT_CLOSED    = None              # EG "closed:       Closed" or blank/nil
         -->
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
-           &nbsp;&nbsp;&nbsp; Stack URL:&nbsp;&nbsp;<mark>&nbsp;{{ page.stack_url }}&nbsp;</mark>
+           <br/>
+           &nbsp;&nbsp; Stack&nbsp;URL:&nbsp;&nbsp;<mark>&nbsp;{{ page.stack_url }}&nbsp;</mark>
         {% endif %}
+        <!-- title: is always present anyway AND displayed at top of page! -->
         {% if page.title and page.title != "" and page.title != nil %}
-           &nbsp;&nbsp;&nbsp; Title:&nbsp;&nbsp;<mark>&nbsp;{{ page.title }}&nbsp;</mark>
+           <br/>
+           Title:&nbsp;&nbsp;<mark>&nbsp;{{ page.title }}&nbsp;</mark>
+           <br/>
         {% endif %}
         {% if page.created_date and page.created_date != "" and page.created_date != nil %}
-           &nbsp;&nbsp;&nbsp; Created:&nbsp;&nbsp;<mark>&nbsp;{{ page.created_date }}&nbsp;</mark>
+           &nbsp;&nbsp; Created:&nbsp;&nbsp;<mark>&nbsp;{{ page.created_date }}&nbsp;</mark>
         {% endif %}
         {% if page.edit_date and page.edit_date != "" and page.edit_date != nil %}
-           &nbsp;&nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>&nbsp;{{ page.edit_date }}&nbsp;</mark>
+           &nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>&nbsp;{{ page.edit_date }}&nbsp;</mark>
         {% endif %}
         {% if page.favorites and page.favorites != "" and page.favorites != nil %}
-           &nbsp;&nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
+           &nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
         {% endif %}
 
         <!-- Probably don't need...
@@ -145,7 +149,7 @@
               window.alert("'updateResult(): fm_state is null");
             }
             if (fm_state == "More") {
-              <!-- https://stackoverflow.com/a/27846302/6929343 -->
+              // https://stackoverflow.com/a/27846302/6929343
               $('#hidden_front_matter').show();
             }
             else {
