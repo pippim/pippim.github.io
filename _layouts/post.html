@@ -32,7 +32,7 @@
     <main id="content" class="main-content" role="main">
 
       <!-- LESS FRONT MATTER -->
-      <h4 class="front-matter">
+      <h4 class="front-matter" id="minimal_front_matter">
 
         <!-- Less / More button hidden until hover
                 class="hidden-child"        /assets/css/style.scss
@@ -158,7 +158,7 @@
           window.onload = updateResult(); // Forced call: https://stackoverflow.com/a/24814579/6929343
           
           function updateResult() {
-            var fm_state = getCookie('fm_state');
+            fm_state = getCookie('fm_state');
             if (fm_state != "") {
               window.alert("updateResult(): fm_state is: " + fm_state);
             }
