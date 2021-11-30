@@ -135,15 +135,17 @@
         {% endif %}
 
         <script>
-          if (fm_state != "More") {
-            window.alert("Setting style to 'none' based on: " + fm_state);
-            $("#hidden_front_matter").css("display", "none");
-            document.getElementById("#hidden_front_matter").style.display = "none";
-          }
-          else {
-            window.alert("Setting style to 'block' based on: " + fm_state);
-            $("#hidden_front_matter").css("display", "block");
-            document.getElementById("#hidden_front_matter").style.display = "block";
+          window.onload = function() {
+            if (fm_state != "More") {
+              window.alert("Setting style to 'none' based on: " + fm_state);
+              $("#hidden_front_matter").css("display", "none");
+              document.getElementById("#hidden_front_matter").style.display = "none";
+            }
+            else {
+              window.alert("Setting style to 'block' based on: " + fm_state);
+              $("#hidden_front_matter").css("display", "block");
+              document.getElementById("#hidden_front_matter").style.display = "block";
+            }
           }
         </script>
       </h4>
