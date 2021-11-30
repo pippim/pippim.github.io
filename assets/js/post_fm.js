@@ -54,7 +54,7 @@ function checkCookie() {
     fm_button = "More";
     // $('#hidden_front_matter').hide();
   }
-  showHide(fm_state);
+  // showHide(fm_state);  // Breaks button text
   return fm_button; // return value not used anymore but leave it
 }
 
