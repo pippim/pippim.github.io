@@ -36,14 +36,15 @@
 
         <!-- Less / More button hidden until hover
                 class="hidden-child"        /assets/css/style.scss
-                onclick="fm_toggle();"      assets/js/post_fm.js
+                id="hidden_button"          /assets/js/post_fm.js
+                onclick="fm_toggle();"      /assets/js/post_fm.js
         -->
         <button class="hidden-child"
                 id="hidden_button"
                 onclick="fm_toggle();"
                 style="position: absolute;"
                 >Button Text
-        </button> 
+        </button>
 
         {% if page.views and page.views != "" and page.views != nil %}
           Views:&nbsp;&nbsp;<mark>&nbsp;{{ page.views }}&nbsp;</mark>
@@ -77,7 +78,7 @@
       </h4>
 
       <!-- MORE FRONT MATTER -->
-      <h4 class="front-matter" id="hidden_front_matter" style="display:none">
+      <h4 class="front-matter" id="hidden_front_matter">
 
         <!-- EXTRA FRONT MATTER VARIABLES:
         FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be changed
@@ -128,6 +129,8 @@
         {% if page.favorites and page.favorites != "" and page.favorites != nil %}
            &nbsp;&nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
         {% endif %}
+
+        <!-- Probably don't need...
         <script>
           $(document).ready(function(){
             updateResult();
@@ -150,7 +153,7 @@
             }
           }
         </script>
-
+        -->
       </h4>
 
       {{ content }}
