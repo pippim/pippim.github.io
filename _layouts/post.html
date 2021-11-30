@@ -72,13 +72,13 @@
                >🔍 See Original {{ page.type }} on {{ page.site }}</a>
         {% endif %}
         <script>
-          var fm_button = checkCookie();
+          fm_button = checkCookie();
           document.querySelector('#hidden_button').textContent = fm_button
         </script>
       </h4>
 
       <!-- MORE FRONT MATTER -->
-      <h4 class="front-matter" id="hidden_front_matter">
+      <h4 class="front-matter" id="hidden_front_matter" style="display: none;">
 
         <!-- EXTRA FRONT MATTER VARIABLES:
         FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be changed
@@ -136,9 +136,21 @@
 
         <!-- Wouldn't need if checkCookie(); set the .show() / .hide() properly --->
         <script>
+          if (fm_state != "") {
+            window.alert("PREupdateResult(): fm_state is: " + fm_state);
+          }
+          else {
+            window.alert("PREupdateResult(): fm_state is null");
+          }
+          if (fm_bittpm != "") {
+            window.alert("PREupdateResult(): fm_button is: " + fm_button);
+          }
+          else {
+            window.alert("PREupdateResult(): fm_button is null");
+          }
+
           $(document).ready(function(){
-            window.alert('document is ready');
-            // updateResult();
+            updateResult();
             });
 
           window.onload = updateResult(); // Forced call: https://stackoverflow.com/a/24814579/6929343
@@ -146,10 +158,10 @@
           function updateResult() {
             var fm_state = getCookie('fm_state');
             if (fm_state != "") {
-              window.alert("'updateResult(): fm_state is: " + fm_state);
+              window.alert("updateResult(): fm_state is: " + fm_state);
             }
             else {
-              window.alert("'updateResult(): fm_state is null");
+              window.alert("updateResult(): fm_state is null");
             }
             if (fm_state == "More") {
               // https://stackoverflow.com/a/27846302/6929343
