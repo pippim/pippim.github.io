@@ -15,8 +15,6 @@
     <script src="{{ site.url }}/assets/js/post_fm.js"></script>
   </head>
   <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
@@ -31,8 +29,10 @@
 
     <main id="content" class="main-content" role="main">
 
+      <div class="front-matter">
+
       <!-- LESS FRONT MATTER -->
-      <h4 class="front-matter" id="minimal_front_matter">
+      <h4 id="minimal_front_matter">
 
         <!-- Less / More button hidden until hover
                 class="hidden-child"        /assets/css/style.scss
@@ -78,7 +78,7 @@
       </h4>
 
       <!-- MORE FRONT MATTER -->
-      <h4 class="front-matter" id="hidden_front_matter">
+      <h4 id="hidden_front_matter">
 
         <!-- EXTRA FRONT MATTER VARIABLES:
         FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be changed
@@ -149,6 +149,7 @@
           }
         </script>
       </h4>
+    </div>
 
       {{ content }}
 
