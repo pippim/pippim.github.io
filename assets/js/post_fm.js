@@ -29,7 +29,6 @@ function checkCookie() {
   // do not use "let fm_state =" that makes variable local
   fm_state = getCookie("fm_state");
   if (fm_state != "") {
-    // window.alert("Front Matter state is: " + fm_state);
     if (fm_state == "Less") {
       // Do not use: "var fm_button =" that makes variable local
       fm_button = "More";
@@ -50,15 +49,6 @@ function checkCookie() {
 }
 
 function fm_toggle() {
-  //if (fm_state != "") {
-  //  window.alert("State before eating cookie: " + fm_state);
-  //}
-  //else {
-  //  window.alert("fm_state is null");
-  //}
-  // do not use "let fm_state =" that makes variable local
-  //fm_state = getCookie("fm_state");
-  //window.alert("State after eathing cookie: " + fm_state);
   if (fm_state == "Less") {
     setCookie("fm_state", "More", 30);
     // $('#hidden_front_matter').hide();
@@ -67,7 +57,7 @@ function fm_toggle() {
     setCookie("fm_state", "Less", 30);
     // $('#hidden_front_matter').show();
   }
-  window.location.reload();
+  // window.location.reload();
   // If we needed to force the document to be fetched from the
   // web server again (such as where the document contents
   // change dynamically but cache control headers are not
