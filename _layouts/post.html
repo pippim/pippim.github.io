@@ -135,7 +135,12 @@
           updateResult(); // Forced call
           function updateResult() {
             var fm_state = getCookie('fm_state');
-            alert('updateResult(): fm_state is: ' + fm_state);
+            if (fm_state != "") {
+              window.alert("'updateResult(): fm_state is: " + fm_state);
+            }
+            else {
+              window.alert("'updateResult(): fm_state is null");
+            }
             if (fm_state == "More") {
               <!-- https://stackoverflow.com/a/27846302/6929343 -->
               $('#hidden_front_matter').show();
