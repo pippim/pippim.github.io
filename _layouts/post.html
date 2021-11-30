@@ -136,17 +136,21 @@
 
         <!-- Wouldn't need if checkCookie(); set the .show() / .hide() properly --->
         <script>
+          <!--
           if (fm_state != "") {
             window.alert("PREupdateResult(): fm_state is: " + fm_state);
           }
           else {
             window.alert("PREupdateResult(): fm_state is null");
           }
+          -->
           if (fm_state != "More") {
+            window.alert("Setting style to 'none' based on: " + fm_state);
             $("#hidden_front_matter").css("display", "none");
             document.getElementById("#hidden_front_matter").style.display = "none";
           }
           else {
+            window.alert("Setting style to 'block' based on: " + fm_state);
             $("#hidden_front_matter").css("display", "block");
             document.getElementById("#hidden_front_matter").style.display = "block";
           }
