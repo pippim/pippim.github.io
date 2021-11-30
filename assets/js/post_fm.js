@@ -61,6 +61,7 @@ function fm_toggle() {
     fm_button = "More";
     // $('#hidden_front_matter').show();
   }
+  document.querySelector('#hidden_button').textContent = fm_button
   // window.location.reload();
   // If we needed to force the document to be fetched from the
   // web server again (such as where the document contents
