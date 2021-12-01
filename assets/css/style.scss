@@ -203,7 +203,7 @@ mark {
 
 // Neon glowing Text: https://www.w3schools.com/howto/howto_css_glowing_text.asp
 .glow {
-  font-size: 80px;
+  // font-size: 80px; // Way TOO BIG
   color: #fff;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
