@@ -150,9 +150,7 @@ below to expand it.
 
 <!-- From: https://gist.github.com/pierrejoubert73/902cc94d79424356a8d20be2b382e1ab -->
 <details>
-<summary>Click here to expand Bash code for `multi-timer`...</summary>
-<p>
-
+<summary><b>Click here to expand Bash code for `multi-timer`...</b></summary>
 
 {% include copyHeader.html  %}
 ``` bash
@@ -782,7 +780,6 @@ Cleanup
 exit 0
 ```
 
-</p>
 </details>
 
 <a id="hdr8"></a>
