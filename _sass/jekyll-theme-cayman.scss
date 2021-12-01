@@ -240,8 +240,9 @@ a {
     border: solid 1px $border-color;
     border-radius: 0.3rem;
     
-    /** Scroll bar From: https://stackoverflow.com/a/38490989/6929343 **/
-    max-height: 450px;
+    /** Code Block scroll bar From: 
+     ** https://stackoverflow.com/a/38490989/6929343 **/
+    max-height: 60%;
     overflow-y: auto;
 
     > code {
