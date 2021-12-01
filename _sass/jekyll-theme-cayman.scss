@@ -278,6 +278,11 @@ a {
     padding: 0;
     margin: 0;
     overflow: initial;
+    
+    /** Scroll bar From: https://stackoverflow.com/a/38490989/6929343 **/
+    max-height: 630px;
+    overflow-y: auto;
+
     line-height: inherit;
     word-wrap: normal;
     background-color: transparent;
