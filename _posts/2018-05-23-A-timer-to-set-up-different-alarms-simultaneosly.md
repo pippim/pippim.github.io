@@ -152,6 +152,7 @@ below to expand it.
 <details>
 <summary><b>Click here to expand Bash code for `multi-timer`...</b></summary>
 
+{% highlight ruby %}
 {% include copyHeader.html  %}
 ``` bash
 #!/bin/bash
@@ -779,6 +780,7 @@ Cleanup
 
 exit 0
 ```
+{% endhighlight %}
 
 </details>
 
