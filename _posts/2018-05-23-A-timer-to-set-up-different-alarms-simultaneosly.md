@@ -145,13 +145,17 @@ Multi-timer requires the following packages to be installed:
 
 ### Bash code for `multi-timer`
 
+The `multi-timer` bash code is quite long so it has been collapsed. Click
+below to expand it.
+
+<!-- From: https://gist.github.com/pierrejoubert73/902cc94d79424356a8d20be2b382e1ab -->
+<details>
+<summary>Click here to expand Bash code for `multi-timer`...</summary>
+<p>
+
 
 {% include copyHeader.html  %}
 ``` bash
-
-<details>
-<summary>
-
 #!/bin/bash
 
 # NAME: multi-timer
@@ -172,11 +176,6 @@ Multi-timer requires the following packages to be installed:
 #           Alarm only sounding for first timer but pop-up appears for all???
 #           See changes to /etc/pulse/default.pa below:
 #### Automatically suspend sinks/sources that become idle for too long
-</summary>
-
-{% highlight ruby %}
-puts 'Expanded message'
-{% endhighlight %}
 
 # Nov 4, 2018 - causes 3 to 5 second delay if last sound was 30 seconds ago.
 # So you get sound delayed unpausing video or miss multi-timer alerts. Add #
@@ -781,11 +780,10 @@ LockScreenCheck "All sets end"
 Cleanup
 
 exit 0
-
-</details>
-
 ```
 
+</p>
+</details>
 
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr9" class ="hdr-btn">Skip</a></div>
