@@ -148,6 +148,10 @@ Multi-timer requires the following packages to be installed:
 
 {% include copyHeader.html  %}
 ``` bash
+
+<details>
+<summary>
+
 #!/bin/bash
 
 # NAME: multi-timer
@@ -168,6 +172,12 @@ Multi-timer requires the following packages to be installed:
 #           Alarm only sounding for first timer but pop-up appears for all???
 #           See changes to /etc/pulse/default.pa below:
 #### Automatically suspend sinks/sources that become idle for too long
+</summary>
+
+{% highlight ruby %}
+puts 'Expanded message'
+{% endhighlight %}
+
 # Nov 4, 2018 - causes 3 to 5 second delay if last sound was 30 seconds ago.
 # So you get sound delayed unpausing video or miss multi-timer alerts. Add #
 # load-module module-suspend-on-idle
@@ -771,6 +781,9 @@ LockScreenCheck "All sets end"
 Cleanup
 
 exit 0
+
+</details>
+
 ```
 
 
