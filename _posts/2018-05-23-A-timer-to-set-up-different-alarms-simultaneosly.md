@@ -4,14 +4,14 @@ title:        A timer to set up different alarms simultaneously
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039377
 type:         Answer
-tags:         software-recommendation bash parental-controls
+tags:         software-recommendation multi-timer
 created_date: 2018-05-23 11:14:12
 edit_date:    2021-10-05 12:00:18
 votes:        11
-favorites: 
-views:        4,006
+favorites:    
+views:        4,063
 accepted:     Accepted
-uploaded:     2021-11-13 16:40:57
+uploaded:     2021-11-27 10:38:36
 toc:          true
 navigation:   true
 ---
@@ -145,15 +145,8 @@ Multi-timer requires the following packages to be installed:
 
 ### Bash code for `multi-timer`
 
-The `multi-timer` bash code is quite long so it has been collapsed. Click
-below to expand it.
 
-<!-- From: https://gist.github.com/pierrejoubert73/902cc94d79424356a8d20be2b382e1ab -->
-<details>
-<summary><b>Click here to expand Bash code for `multi-timer`...</b></summary>
-
-{% include copyHeader.html  %}
-{% highlight bash %}
+{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -175,7 +168,6 @@ below to expand it.
 #           Alarm only sounding for first timer but pop-up appears for all???
 #           See changes to /etc/pulse/default.pa below:
 #### Automatically suspend sinks/sources that become idle for too long
-
 # Nov 4, 2018 - causes 3 to 5 second delay if last sound was 30 seconds ago.
 # So you get sound delayed unpausing video or miss multi-timer alerts. Add #
 # load-module module-suspend-on-idle
@@ -780,9 +772,7 @@ Cleanup
 
 exit 0
 ```
-{% endhighlight %}
 
-</details>
 
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr9" class ="hdr-btn">Skip</a></div>
@@ -796,8 +786,10 @@ To setup Sysmonitor Indicator see this Q&A: https://askubuntu.com/questions/8824
 
   [1]: https://i.stack.imgur.com/4m75Y.gif
   [2]: https://i.stack.imgur.com/mDbYLl.png
-  [3]: https://i.stack.imgur.com/pHZNHl.png
+  [3]: https://i.stack.imgur.com/pHZNHm.png
   [4]: https://i.stack.imgur.com/Actwjm.gif
 
 
+
 <a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
