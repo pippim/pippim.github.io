@@ -152,8 +152,8 @@ below to expand it.
 <details>
 <summary><b>Click here to expand Bash code for `multi-timer`...</b></summary>
 
-{% highlight ruby %}
 {% include copyHeader.html  %}
+{% highlight bash %}
 ``` bash
 #!/bin/bash
 
