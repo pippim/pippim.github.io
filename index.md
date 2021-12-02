@@ -533,7 +533,7 @@ navigation:   false
 This is how front matter is displayed on your
 website page:
 
-{% include image.html src="/assets/img/Jekyll front matter on blog post.png"
+{% include image.html src="/assets/img/Pippim Post More Button Working.gif"
    style="float: none; width: 100%; margin: 0 0 0 0;"
 %}
 
@@ -552,7 +552,7 @@ variable `accepted:` containing the
 string "Accepted". When `accepted:` is nil (empty) then
 no text appears.
 
-Finally at the bottom you see one of the most powerful
+Then you see one of the most powerful
 features of Pippim's automataed blog pages:
 
 [🔍 See Original Answer on Ask Ubuntu](https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneously/1039377#1039377).
@@ -567,8 +567,12 @@ is controlled by `type:`
 - **Ask Ubuntu** is controlled
 by the `site:` front matter variable.
 
+The "More" or "Less" button lets you choose between
+more or less front matter.
+
 If you want to change how front matter is displayed
-on your website page, edit the file `_includes/page.html`.
+on your website page, edit the files `_includes/page.html`
+and `assets/js/post_fm.html`.
 
 The <mark>Reverse Formatting</mark> is defined in
 `assets/css/style.scss` thusly:
