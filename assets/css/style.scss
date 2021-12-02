@@ -227,12 +227,12 @@ mark {
 /* From: https://codepen.io/aJukebox/pen/eYNgLoJ */
 @-webkit-keyframes glow {
   from {
-    color: &header-bg-color;
+    color: &honeydew;
     text-shadow: 
       0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
   }
   to {
-    color: &honeydew;
+    color: &header-bg-color;
     text-shadow: 
       0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
   }
