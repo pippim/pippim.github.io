@@ -204,8 +204,8 @@ mark {
 // Neon glowing Text: https://www.w3schools.com/howto/howto_css_glowing_text.asp
 .glow {
   // font-size: 80px; // Way TOO BIG
-  color: #fff;
-  text-align: center;
+  color: $honeydew; // original #fff;
+  // text-align: center; // Use existing alignment
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
