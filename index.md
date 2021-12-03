@@ -642,13 +642,11 @@ then no navigation buttons will appear in the post.
 
 ## Program Overview
 
-This overview will help you, when reviewing `stack-to-blog.py` code.
-
-The program uses a two pass technique. The first pass does some formatting
-but mostly counts occurences of headers.
+The `stack-to-blog.py` program uses a two pass technique. The first pass 
+does some formatting but mostly counts occurences of key markdown elements.
 
 The second pass does most of the formatting and repeats some of the same
-counting solely for the sake of inserting HTML code at the right places.
+counting in order to insert HTML code in the correct places.
 
 ### Initialization
 
@@ -708,6 +706,7 @@ is called again for each line.
 Pass 2 does the key job of creating a new markdown file for
 the website blog post based on the Stack Exchange Post:
 
+{% include copyHeader.html %}
 ``` python
  for line in lines:
      check_code_block(line)      # Turn off formatting when in code block
@@ -796,6 +795,7 @@ shorthand for saying "`stack-to-blog.py` python program".
 
 4. If you would like to modify the button properties (position, color, size, hover, etc), the header button bar (`hdr-bar`) and individual buttons (`hdr-btn`) are defined in filename `assets/css/style.scss`:
 
+    {% include copyHeader.html %}
     ``` scss
     .hdr-bar {
       display: block;
@@ -921,6 +921,7 @@ In the `stack-to-blog.py` python program they are defined like this:
 
 When Stack Exchange uses `<!-- language-all` it is converted to appropriate format for Github using this multi-purpose function:
 
+{% include copyHeader.html %}
 ``` python
 def check_code_block(ln):
     """ If line starts with ``` we are now in code block.
@@ -1011,6 +1012,7 @@ for saving as a Jekyll blog post.
 
 If you want to change the totals layout it is found in the code below:
 
+{% include copyHeader.html %}
 ``` python
 print('// =====================/   T O T A L S   \\====================== \\\\')
 print('')
