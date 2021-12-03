@@ -794,8 +794,7 @@ shorthand for saying "`stack-to-blog.py` python program".
 3. Two extra spaces are added between HTML elements for readability and some extra spacing between buttons. A blank line is added before the HTML id tag and after the HTML button bar for readability. Because the markdown interpreter condenses multiple blank lines into a single blank line, the HTML code has no effect on line spacing.
 
 4. If you would like to modify the button properties (position, color, size, hover, etc), the header button bar (`hdr-bar`) and individual buttons (`hdr-btn`) are defined in filename `assets/css/style.scss`:
-
-{% include copyHeader.html %}
+    {% include copyHeader.html %}
     ``` scss
     .hdr-bar {
       display: block;
