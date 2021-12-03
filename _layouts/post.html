@@ -47,7 +47,7 @@
         </button>
 
         {% if page.views and page.views != "" and page.views != nil %}
-          Views:<span class="tab"></span>
+          Views:<div class="tab"></div>
             <mark>&nbsp;{{ page.views }}&nbsp;</mark>
         {% endif %}
         {% if page.votes and page.votes != "" and page.votes != nil %}
@@ -60,7 +60,7 @@
         {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
           <br/>
           Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:
-          <span class="tab"></span>
+          <div class="tab"></div>
             {% for tag in page.tags %}
               <!-- &#32; is a breaking space: https://stackoverflow.com/a/38663112/6929343 -->
               <mark>&nbsp;{{ tag }}&nbsp;</mark>&nbsp;&nbsp;
