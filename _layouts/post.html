@@ -88,26 +88,6 @@
 
       <!-- MORE FRONT MATTER -->
       <h4 id="hidden_front_matter">
-
-        <!-- EXTRA FRONT MATTER VARIABLES:
-        FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be changed
-        FRONT_UPLOADED  = "uploaded:     "  # Date & Time this program was run
-        FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
-        FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
-        -->
-        {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
-          <fmVar>Upload:</fmVar>
-           <mark>&nbsp;{{ page.uploaded }}&nbsp;</mark>
-        {% endif %}
-        {% if page.layout and page.layout != "" and page.layout != nil %}
-            &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>&nbsp;{{ page.layout }}&nbsp;</mark>
-        {% endif %}
-        {% if page.toc and page.toc != "" and page.toc != nil %}
-           &nbsp;&nbsp; TOC:&nbsp;&nbsp;<mark>&nbsp;{{ page.toc }}&nbsp;</mark>
-        {% endif %}
-        {% if page.navigation and page.navigation != "" and page.navigation != nil %}
-           &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
-        {% endif %}
         <!-- MORE FRONT MATTER VARIABLES
         FRONT_POST_ID   = None              # EG "post_id:      1104017"
         FRONT_URL       = "stack_url:    "  # EG "stack_url:    https://askubuntu.com/q/1104017"
@@ -146,6 +126,26 @@
         {% endif %}
         {% if page.favorites and page.favorites != "" and page.favorites != nil %}
           &nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
+        {% endif %}
+
+        <!-- EXTRA FRONT MATTER VARIABLES:
+        FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be changed
+        FRONT_UPLOADED  = "uploaded:     "  # Date & Time this program was run
+        FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
+        FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
+        -->
+        {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
+          <fmVar>Uploaded:</fmVar>
+           <mark>&nbsp;{{ page.uploaded }}&nbsp;</mark>
+        {% endif %}
+        {% if page.layout and page.layout != "" and page.layout != nil %}
+            &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>&nbsp;{{ page.layout }}&nbsp;</mark>
+        {% endif %}
+        {% if page.toc and page.toc != "" and page.toc != nil %}
+           &nbsp;&nbsp; TOC:&nbsp;&nbsp;<mark>&nbsp;{{ page.toc }}&nbsp;</mark>
+        {% endif %}
+        {% if page.navigation and page.navigation != "" and page.navigation != nil %}
+           &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
         {% endif %}
 
         <script>
