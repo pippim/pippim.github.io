@@ -241,5 +241,6 @@ mark {
 /* From: https://www.geeksforgeeks.org/how-to-insert-spaces-tabs-in-text-using-html-css/ */
 .tab {
   display: inline-block;
+  position: absolute;
   margin-left: 20px;
 }
