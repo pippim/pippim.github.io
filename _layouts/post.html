@@ -50,7 +50,7 @@
             fmVar {
                 float: left;
                 clear: left;
-                width: 3em;
+                width: 6em;
                 padding-right: .5em;
             }
         </style>
@@ -78,9 +78,9 @@
 
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
           <br/>
-          Link:&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="{{ page.stack_url }}"
-               >🔍 See Original {{ page.type }} on {{ page.site }}</a>
+          <fmVar>Link:</fmVar>
+            <a href="{{ page.stack_url }}"
+                 >🔍 See Original {{ page.type }} on {{ page.site }}</a>
         {% endif %}
         <script>
         </script>
@@ -96,7 +96,8 @@
         FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
         -->
         {% if page.layout and page.layout != "" and page.layout != nil %}
-          Layout:&nbsp;&nbsp;<mark>&nbsp;{{ page.layout }}&nbsp;</mark>
+          <fmVar>Layout:</fmVar>
+            <mark>&nbsp;{{ page.layout }}&nbsp;</mark>
         {% endif %}
         {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
            &nbsp;&nbsp; Uploaded:&nbsp;&nbsp;<mark>&nbsp;{{ page.uploaded }}&nbsp;</mark>
@@ -124,24 +125,27 @@
         FRONT_CLOSED    = None              # EG "closed:       Closed" or blank/nil
         -->
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
-           <br/>
-           URL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mark>&nbsp;{{ page.stack_url }}&nbsp;</mark>
+          <br/>
+          <fmVar>URL:</fmVar>
+            <mark>&nbsp;{{ page.stack_url }}&nbsp;</mark>
         {% endif %}
         <!-- title: is always present anyway AND displayed at top of page! -->
         {% if page.title and page.title != "" and page.title != nil %}
-           <br/>
-           Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mark>&nbsp;{{ page.title }}&nbsp;</mark>
-           <br/>
+          <br/>
+          <fmVar>Title:</fmVar>
+            <mark>&nbsp;{{ page.title }}&nbsp;</mark>
+          <br/>
         {% endif %}
         {% if page.created_date and page.created_date != "" and page.created_date != nil %}
           <fmVar>Created:</fmVar>
              <mark>&nbsp;{{ page.created_date }}&nbsp;</mark>
         {% endif %}
         {% if page.edit_date and page.edit_date != "" and page.edit_date != nil %}
-           &nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>&nbsp;{{ page.edit_date }}&nbsp;</mark>
+          <!-- Assumes Created always used if Edited is used! -->
+          &nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>&nbsp;{{ page.edit_date }}&nbsp;</mark>
         {% endif %}
         {% if page.favorites and page.favorites != "" and page.favorites != nil %}
-           &nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
+          &nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
         {% endif %}
 
         <script>
