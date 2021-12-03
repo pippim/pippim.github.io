@@ -240,7 +240,8 @@ mark {
 
 /* From: https://www.geeksforgeeks.org/how-to-insert-spaces-tabs-in-text-using-html-css/ */
 .tab {
-  display: inline-block;
+  // display: inline-block;
+  display: block;
   position: absolute;
   // position: fixed;
   // margin-left: 20px;
