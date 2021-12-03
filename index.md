@@ -795,7 +795,7 @@ shorthand for saying "`stack-to-blog.py` python program".
 
 4. If you would like to modify the button properties (position, color, size, hover, etc), the header button bar (`hdr-bar`) and individual buttons (`hdr-btn`) are defined in filename `assets/css/style.scss`:
 
-    {% include copyHeader.html %}
+{% include copyHeader.html %}
     ``` scss
     .hdr-bar {
       display: block;
