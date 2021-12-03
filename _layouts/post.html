@@ -69,8 +69,7 @@
 
         {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
           <br/>
-          Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:
-          <div class="tab"></div>
+        <fmVar>Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:</fmVar>
             {% for tag in page.tags %}
               <!-- &#32; is a breaking space: https://stackoverflow.com/a/38663112/6929343 -->
               <mark>&nbsp;{{ tag }}&nbsp;</mark>&nbsp;&nbsp;
@@ -135,7 +134,7 @@
            <br/>
         {% endif %}
         {% if page.created_date and page.created_date != "" and page.created_date != nil %}
-           Created:<span class="tab"></span>
+          <fmVar>Created:</fmVar>
              <mark>&nbsp;{{ page.created_date }}&nbsp;</mark>
         {% endif %}
         {% if page.edit_date and page.edit_date != "" and page.edit_date != nil %}
