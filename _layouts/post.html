@@ -47,7 +47,8 @@
         </button>
 
         {% if page.views and page.views != "" and page.views != nil %}
-          Views:&nbsp;&nbsp;<mark>&nbsp;{{ page.views }}&nbsp;</mark>
+          Views:<span class="tab"></span>
+            <mark>&nbsp;{{ page.views }}&nbsp;</mark>
         {% endif %}
         {% if page.votes and page.votes != "" and page.votes != nil %}
            &nbsp;&nbsp; Votes:&nbsp;&nbsp;<mark>&nbsp;{{ page.votes }}&nbsp;</mark>
