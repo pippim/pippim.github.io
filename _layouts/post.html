@@ -46,8 +46,18 @@
                 >Button Text
         </button>
 
+        <style>
+            fmVar {
+                float: left;
+                clear: left;
+                width: 3em;
+                padding-right: .5em;
+            }
+        </style>
+
+
         {% if page.views and page.views != "" and page.views != nil %}
-          Views:<div class="tab"></div>
+          <fmVar>Views:</fmVar>
             <mark>&nbsp;{{ page.views }}&nbsp;</mark>
         {% endif %}
         {% if page.votes and page.votes != "" and page.votes != nil %}
