@@ -135,17 +135,18 @@
         FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
         -->
         {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
+          <br/>
           <fmVar>Upload:</fmVar>
-           <mark>&nbsp;{{ page.uploaded }}&nbsp;</mark>
+            <mark>&nbsp;{{ page.uploaded }}&nbsp;</mark>
         {% endif %}
         {% if page.layout and page.layout != "" and page.layout != nil %}
-            &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>&nbsp;{{ page.layout }}&nbsp;</mark>
+          &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>&nbsp;{{ page.layout }}&nbsp;</mark>
         {% endif %}
         {% if page.toc and page.toc != "" and page.toc != nil %}
-           &nbsp;&nbsp; TOC:&nbsp;&nbsp;<mark>&nbsp;{{ page.toc }}&nbsp;</mark>
+         &nbsp;&nbsp; TOC:&nbsp;&nbsp;<mark>&nbsp;{{ page.toc }}&nbsp;</mark>
         {% endif %}
         {% if page.navigation and page.navigation != "" and page.navigation != nil %}
-           &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
+         &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
         {% endif %}
 
         <script>
