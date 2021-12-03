@@ -59,11 +59,12 @@
 
         {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
           <br/>
-          Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:&nbsp;&nbsp;&nbsp;
-          {% for tag in page.tags %}
-            <!-- &#32; is a breaking space: https://stackoverflow.com/a/38663112/6929343 -->
-            <mark>&nbsp;{{ tag }}&nbsp;</mark>&nbsp;&nbsp;
-          {% endfor %}
+          Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:
+          <span class="tab"></span>
+            {% for tag in page.tags %}
+              <!-- &#32; is a breaking space: https://stackoverflow.com/a/38663112/6929343 -->
+              <mark>&nbsp;{{ tag }}&nbsp;</mark>&nbsp;&nbsp;
+            {% endfor %}
         {% endif %}
 
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
