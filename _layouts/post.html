@@ -124,7 +124,8 @@
            <br/>
         {% endif %}
         {% if page.created_date and page.created_date != "" and page.created_date != nil %}
-           Created:&nbsp;<mark>&nbsp;{{ page.created_date }}&nbsp;</mark>
+           Created:<span class="tab"></span>
+             <mark>&nbsp;{{ page.created_date }}&nbsp;</mark>
         {% endif %}
         {% if page.edit_date and page.edit_date != "" and page.edit_date != nil %}
            &nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>&nbsp;{{ page.edit_date }}&nbsp;</mark>
