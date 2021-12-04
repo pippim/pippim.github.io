@@ -113,8 +113,7 @@ Open the `Terminal` using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and type:
 
 Toggle back to this screen and copy the following code by highlighting it and pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>:
 
-
-{ % include copyHeader.html % }
+{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -227,7 +226,7 @@ while true ; do # loop until cancel
 done # End of while loop getting minutes to next lock screen
 
 exit 0 # Closed dialog box or "Cancel" selected.
-``` bash
+```
 
 Then toggle back to the empty `gedit` window and paste the code using <kbd>Ctrl</kbd>+<kbd>V</kbd>. Save the file and exit the editor back to the command prompt.
 
