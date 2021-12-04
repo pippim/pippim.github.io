@@ -69,7 +69,7 @@
 
         {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
           <br/>
-        <fmVar>Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:</fmVar>
+          <fmVar>Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:</fmVar>
             {% for tag in page.tags %}
               <!-- &#32; is a breaking space: https://stackoverflow.com/a/38663112/6929343 -->
               <mark>&nbsp;{{ tag }}&nbsp;</mark>&nbsp;&nbsp;
@@ -105,7 +105,7 @@
         FRONT_CLOSED    = None              # EG "closed:       Closed" or blank/nil
         -->
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
-          <br/>
+          <!-- No br/ required because new H4 already inserts a big line break -->
           <fmVar>URL:</fmVar>
             <mark>&nbsp;{{ page.stack_url }}&nbsp;</mark>
         {% endif %}
