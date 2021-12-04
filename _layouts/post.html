@@ -133,6 +133,26 @@
             <mark>&nbsp;{{ page.name }}&nbsp;</mark>
           <br/>
         {% endif %}
+        {% if page.path and page.path != "" and page.path != nil %}
+          <fmVar>Path:</fmVar>
+            <mark>&nbsp;{{ page.path }}&nbsp;</mark>
+          <br/>
+        {% endif %}
+        {% if page.previous and page.previous != "" and page.previous != nil %}
+          <fmVar>Previous:</fmVar>
+            <mark>&nbsp;{{ page.previous }}&nbsp;</mark>
+          <br/>
+        {% endif %}
+        {% if page.previous and page.previous != "" and page.previous != nil %}
+          <fmVar>Previous:</fmVar>
+            <mark>&nbsp;{{ page.previous }}&nbsp;</mark>
+          <br/>
+        {% endif %}
+        {% if page.next and page.next != "" and page.next != nil %}
+          <fmVar>Next:</fmVar>
+            <mark>&nbsp;{{ page.next }}&nbsp;</mark>
+          <br/>
+        {% endif %}
         {% if page.created_date and page.created_date != "" and page.created_date != nil %}
           <fmVar>Created:</fmVar>
              <mark>&nbsp;{{ page.created_date }}&nbsp;</mark>
