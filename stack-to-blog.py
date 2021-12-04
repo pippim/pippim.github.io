@@ -7,10 +7,11 @@
 #           accepted into a Jekyll blog post.
 #
 #       Oct. 24 2021 - Initial version.
-#       NOv. 06 2021 - Two passes to count number of #, ##, etc. in first pass.
-#       NOv. 13 2021 - Add TOC support and SE "<!-- language" conversion.
+#       Nov. 06 2021 - Two passes to count number of #, ##, etc. in first pass.
+#       Nov. 13 2021 - Add TOC support and SE "<!-- language" conversion.
 #       Nov. 17 2021 - Support for Pseudo-tags from keywords in answers.
 #       Nov. 24 2021 - Check self-answered questions and not accepted yet.
+#       Dec. 04 2021 - Copy fenced code block to clipboard.
 #
 # ==============================================================================
 
@@ -88,10 +89,32 @@ NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 NAV_BAR_MIN = 3             # Minimum number of # & ## headers required
 NAV_WORD_MIN = 1000         # Minimum 1,000 words for navigation button bar
 
+''' Copy code block contents to clipboard options. '''
+# If Copy button is never wanted, set to None
+COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
+COPY_LINE_MIN = 20          # Number of lines required to qualify for button
+
+""" TODO: 
+
+https://talk.jekyllrb.com/t/plugin-for-show-more-code-block/4149/2
+
+<details>
+<summary>
+Preview
+</summary>
+
+{% highlight ruby %}
+puts 'Expanded message'
+{% endhighlight %}
+
+</details>
+
+"""
+
 # If question or answer contains one of these "pseudo tags" then jekyll front
 # will have tag added as if it were really on the question. Essentially you
 # are tagging your answers and adding them to OP's question tags.
-PSEUDO_TAGS = ["conky", "eyesome", "cpuf", "iconic"]
+PSEUDO_TAGS = ["conky", "eyesome", "cpuf", "iconic", "multi-timer"]
 
 fields = []                 # The column names used by Stack Exchanges
 data = []                   # Returned rows, less record #1 (field names)
@@ -171,6 +194,12 @@ FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be c
 FRONT_UPLOADED  = "uploaded:     "  # Date & Time this program was run
 FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
 FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
+# Variables below aren't necessary because Liquid has variables
+# See: https://stackoverflow.com/a/53251634/6929343
+FRONT_LINES     = None  # Number of lines and number of paragraphs are the same thing!
+FRONT_PARAGRAPHS = None
+FRONT_WORDS     = None
+FRONT_READ_TIME = None              # Reading Time = Number of words / 250
 
 '''
 Totals for all Stack Exchange posts even those not converted
@@ -229,6 +258,9 @@ self_answer = False         # Is this a self-answered question?
 self_accept = False         # Is this self-answered question accepted?
 
 in_code_block = False       # Are we in a code block? Then no # Header formatting
+old_in_code_block = False
+code_block_index = 0
+code_block_line_count = 0
 language_used = ""          # What language when fenced code blocks have none?
 image_links = []            # Links to images found at bottom of SE posts
 ''' Used for each post '''
@@ -238,15 +270,16 @@ tags = ""                   # Front matter format: tags: TAG1 TAG2 TAG3
     ====================================================================
     
     Functions must be defined prior to being called.  The following
-    functions are used:
+    functions are defined:
 
     dump(r)
     header_space(ln)
     block_quote(ln) 
     check_paragraph(ln) 
     check_code_block(ln) 
-    check_pre_code(ln)
-    check_contents(ln)
+    check_copy_clipboard(curr_index)
+    check_pre_code(ln) - NOT USED!
+    check_contents(ln) - NOT USED!
     navigation_bar(level, skip_btn=True)  
     front_matter(r)
     create_blog_filename()
@@ -439,6 +472,9 @@ def check_code_block(ln):
 
     ''' Code blocks may be indented so left strip spaces before test
     
+        To end code block you must use ``` in Kramdown. Stack Exchange lets
+        you end code block with "``` some-text" but that breaks Kramdown.
+        
         TODO: count number of backticks that initiate a code block.
               For example ```` (4) can start a code block then if ``` (3)
               appears it doesn't terminate code block but is interpreted
@@ -453,6 +489,8 @@ def check_code_block(ln):
               ```` 
     '''
     if ln.startswith("<!-- language"):
+        # Get "bash" inside of <!-- language-all: lang-bash -->
+        # Store as language_used for inside of code block.
         language_used = ln.split(": ")[1]
         # Strip off " -->" at end of string
         language_used = language_used[:-4]
@@ -470,14 +508,77 @@ def check_code_block(ln):
         # Add language if not used already
         if in_code_block is False:
             total_code_blocks += 1      # Total for all posts
-            in_code_block = True        # For this post only
+            in_code_block = True        # Code block has begun
             if ln[-1] == "`" or ln[-1] == " ":
                 ln = ln + " " + language_used
                 language_forced += 1
         else:
-            in_code_block = False       # For this post only
+            in_code_block = False       # Code block has ended
+            # Remove extra text after ``` whilst maintaining indenting
+            # NOTE: This breaks '````' coding (4 backticks)
+            before = ln
+            ln = ln.split('```')[0] + '```'
+            if before.strip() != ln.strip():
+                print(curr_index, 'of', len(lines) - 1, blog_filename)
+                print('OLD ln:', before)
+                print('NEW ln:', ln)
+                print('       ', lines[curr_index+1])
 
     return ln
+
+
+def check_copy_clipboard(this_index):
+    """ Check to insert copy to clipboard include.
+
+        If already in code block and line begins with ```
+            then we are now out of code block.
+
+        Set default syntax language when none on code block. SE standard:
+            <!-- language: bash -->
+            <!-- language-all: lang-bash -->
+
+    """
+    global total_code_block_lines, old_in_code_block, code_block_index
+    global code_block_line_count, lines, line_count, curr_index
+
+    inserted_command = ""
+    if in_code_block is True:
+        total_code_block_lines += 1
+        if old_in_code_block is False:
+            # Set index for start of code block
+            code_block_index = this_index
+            # print('Start code block:', lines[this_index])
+    elif old_in_code_block is True:
+        # Just ended code block how many lines?
+        code_block_line_count = this_index - code_block_index
+        # Sanity check, lines[index] must contain fenced code block ```
+        code = lines[code_block_index]
+        if code.lstrip()[0:3] != "```":
+            dump(row)
+            fatal_error('lines at index: ' + str(this_index) +
+                        ' should contain ``` but it is: ' + code)
+
+        # print('  End code block:', lines[this_index])
+        if code[0:3] == "```":
+            # Copy to clipboard only supported when fenced code
+            # block is NOT indented
+            if COPY_TO_CLIPBOARD is not None and \
+               code_block_line_count >= COPY_LINE_MIN:
+                # line_count += 1
+                # curr_index += 1  # Not sure this is needed...
+                # print()
+                # print('BEFORE:', lines[code_block_index])
+                inserted_command = COPY_TO_CLIPBOARD
+                # print('AFTER :', lines[code_block_index])
+                # print('       ', lines[code_block_index+1])
+                # print('CLIP:', blog_filename)
+        else:
+            # If lines[index] fenced code block ``` isn't left justified.
+            # Probably within list item and copy to clipboard doesn't work.
+            print('Unable to decipher code block:', code)
+
+    old_in_code_block = in_code_block
+    return inserted_command
 
 
 def check_pre_code(ln):
@@ -681,17 +782,17 @@ def check_self_answer(r):
         if search[TITLE] == r[TITLE] and search[TYPE] == "Answer":
             self_answer = True  # Is this a self-answered question?
             total_self_answer += 1
-            print('SELF_ANSWERED')
+            # print('SELF_ANSWERED')
             if search[ACCEPTED] == "Accepted":
                 self_accept = True  # Is this self-answered question accepted?
                 total_self_accept += 1
-                dump(r)
-                dump(search)
+                # dump(r)
+                # dump(search)
             else:
-                print('NOT ACCEPTED')
+                # print('NOT ACCEPTED')
                 self_not_accept_url.append(search[URL])
-                dump(r)
-                dump(search)
+                # dump(r)
+                # dump(search)
 
 
 def write_md(md):
@@ -799,6 +900,9 @@ for row in data:
     pseudo_tag_names = []   # Reset pseudo tag names from last post
     language_used = ""      # What language when fenced code blocks have none?
     in_code_block = False   # In a code block # Header formatting is skipped
+    old_in_code_block = False
+    code_block_index = 0
+    code_block_line_count = 0
     force_end_line = False  # Did Pass #1 force an empty blank line at end?
     self_answer = False     # Is this a self-answered question?
     self_accept = False     # Is this self-answered question accepted?
@@ -862,21 +966,37 @@ for row in data:
     lines = row[MARKDOWN].splitlines()
     line_count = len(lines)
     if lines[line_count - 1] != "":
+        # We need to force empty blank line at end to prevent searching
+        # past end of list when checking next line's contents
         lines.append("")
         line_count += 1
         force_end_line = True
         total_force_end += 1
 
-    ''' Pass #1: Count line types '''
+    ''' Pass #1: Count markdown elements '''
+    new_lines = []
+    copy_clipboard_count = 0
     for curr_index, line in enumerate(lines):
         line = check_code_block(line)  # Turn off formatting when in code block
         line = header_space(line)  # Change #Header to # Header and Alt-H1, Alt-H2
-        if in_code_block:
-            total_code_block_lines += 1
-
         line = block_quote(line)  # Formatting for block quotes
-        check_paragraph(line)  # Check if markdown paragraph (empty line)
-        lines[curr_index] = line  # Stuff back any changes made
+        check_paragraph(line)  # Check if Markdown paragraph (empty line)
+        new_lines.append(line)  # Modified version of original lines
+        command = check_copy_clipboard(curr_index)  # Insert command for clipboard?
+        if command:
+            # Code block qualifies for copy to clipboard button
+            offset = code_block_index + copy_clipboard_count
+            # offset will account for previous command inserted
+            new_lines.insert(offset, command)
+            # New lines list is now longer than original lines list
+            copy_clipboard_count += 1
+            # print('inserted line:', command)
+
+    lines = new_lines
+    #if copy_clipboard_count > 1:
+    #    print()
+    #    print('copy_clipboard_count:', copy_clipboard_count)
+    #    dump(row)
 
     ''' Add to total lines '''
     total_lines += line_count
@@ -890,7 +1010,7 @@ for row in data:
         if header_count >= TOC_HDR_MIN and word_count >= TOC_WORD_MIN:
             insert_toc = True
             total_toc += 1
-            print('total_toc:    ', total_toc, blog_filename)
+            # print('total_toc:    ', total_toc, blog_filename)
 
     insert_nav_bar = False  # Does not qualify for Navigation Buttons yet
     if NAV_BAR_OPT > 0:
@@ -898,7 +1018,7 @@ for row in data:
         if qualifier >= NAV_BAR_MIN and word_count >= TOC_WORD_MIN:
             insert_nav_bar = True
             total_nav_bar += 1
-            #print('total_nav_bar:', total_nav_bar, blog_filename)
+            # print('total_nav_bar:', total_nav_bar, blog_filename)
 
     ''' Pass #2: Generate new markdown (kramdown) '''
     # Add SE Question tags + our answer key tags (if any)
@@ -906,7 +1026,7 @@ for row in data:
     if len(string) > 0:
         tags = tags + " " + string
 
-    # Generate Markdown (MD)  with front matter
+    # Generate Markdown (MD)  with front matter file start
     new_md = front_matter(row)
 
     ''' Add to totals using header_space() counts '''
@@ -922,11 +1042,14 @@ for row in data:
     header_levels = [0, 0, 0, 0, 0, 0]
     alternate_h1 = 0
     alternate_h2 = 0
+    if in_code_block:
+        print('still in code block when post ended')
+        dump(row)
     in_code_block = False   # In a code block # Header formatting is skipped
     toc_inserted = False    # Has TOC been inserted yet?
     sum2 = 0                # Track for new header to insert Navigation Bar
 
-    for line in lines:
+    for curr_index, line in enumerate(lines):
         check_code_block(line)      # Turn off formatting when in code block
         # Did this post qualify for adding navigation bar?
         # Save header levels counts we have now to "old_"
@@ -953,7 +1076,7 @@ for row in data:
                 new_md = new_md + navigation_bar(sum2)
 
         elif insert_toc:
-            # No navigation bar but we still need TOC at header count
+            # No navigation bar, but we still need TOC at header count
             if header_count == TOC_LOC and toc_inserted is False:
                 if NAV_BAR_OPT <= 3:
                     # If Option "4" a blank line already inserted before us
@@ -961,7 +1084,7 @@ for row in data:
                 new_md = new_md + CONTENTS + "\n"
                 new_md = new_md + "\n"
                 toc_inserted = True  # Prevents regeneration next line read
-                print('toc only:', blog_filename)
+                # print('toc only:', blog_filename)
 
         new_md = new_md + line + '\n'
 
