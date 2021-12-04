@@ -45,7 +45,7 @@
                 // style="position: absolute;"
                 // style="float: right; clear: right;"
                 // style="position: absolute; top: 1; right: 1;"
-                style="display: inline-block; position: relative; text-align: right;"
+                // style="display: inline-block; position: relative; text-align: right;"
                 // right: 0;
                 // top: 0;
                 >Button Text
@@ -55,14 +55,14 @@
             fmVar {
                 float: left;
                 clear: left;
-                width: 5.2em;
+                width: 5.2em;  // Longest name is "Question:"
                 padding-right: .5em;
             }
         </style>
 
 
         {% if page.views and page.views != "" and page.views != nil %}
-          <fmVar>Question:</fmVar>
+          <fmVar>View:</fmVar>
             <mark>&nbsp;{{ page.views }}&nbsp;</mark>
         {% endif %}
         {% if page.votes and page.votes != "" and page.votes != nil %}
