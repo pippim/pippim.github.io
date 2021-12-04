@@ -201,13 +201,13 @@
                                    flex-wrap: wrap; align-content: stretch;
                                    margin-top: 2em;">
         <span style="flex: 1 1 0; width: 45%; padding-right: 0.5em;">
-          {% if page.previous.url %}
-          <a href="{{page.previous.url}}">&#8672;&nbsp;{{page.previous.title}}</a>
+          {% if page.next.url %}
+          <a href="{{page.next.url}}">⇧&nbsp;{{page.next.title}}</a>
           {% endif %}
         </span>
         <span style="flex: 1 1 0; width: 45%; padding-left: 0.5em; text-align: right">
-          {% if page.next.url %}
-          <a href="{{page.next.url}}">{{page.next.title}}&nbsp;&#8674;</a>
+          {% if page.previous.url %}
+          <a href="{{page.previous.url}}">{{page.previous.title}}&nbsp;⇩</a>
           {% endif %}
         </span>
       </div>
