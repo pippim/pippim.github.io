@@ -849,9 +849,9 @@ shorthand for saying "`stack-to-blog.py` python program".
 
 10. Pippim setups the Jekyll front matter as required for `title:` and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
 
-11. Stack exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
+11. Stack Exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
 
-12. Stack exchange allows a fenced code block to both begin and end with <code>``` bash</code>. Kramdown does not allow this so the closing fenced code block is changed to <code>```</code>.
+12. Stack Exchange Markdown allows a fenced code block to both begin and end with <code>``` bash</code>. Github Pages Jekyll Kramdown does not allow extra text for closing a fenced code block. Therefore, the closing fenced code block only is changed to <code>```</code>.
 
 The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/StackBlogPost).
 
