@@ -197,7 +197,8 @@
       {{ content }}
 
       <!-- From: https://www.bytedude.com/jekyll-previous-and-next-posts/ -->
-      <div class="post-nav" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+      <div class="post-nav" style="display: flex; justify-content: space-between; 
+                                   flex-wrap: wrap; align-content: stretch;">
         <p style="flex: 1 1 0; width: 45%; padding-right: 0.5em;">
           {% if page.previous.url %}
           <a href="{{page.previous.url}}">&#8672;&nbsp;{{page.previous.title}}</a>
