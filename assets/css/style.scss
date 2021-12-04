@@ -116,7 +116,8 @@ $honeydew: #F0FFF0 !default; // Honeydew
 
 // Blog post front matter
 .front-matter {
-  padding: 3px;
+  line-height: 1.5;
+  padding: 4px;
   border-color: $header-bg-color-secondary;  // Cayman blue
   // border-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
   // above removes border and puts dots on corners
@@ -139,11 +140,6 @@ $honeydew: #F0FFF0 !default; // Honeydew
 
 .front-matter:hover .hidden-child{
     visibility: visible;
-}
-
-br {
- display: block;
- margin: 6px 0;
 }
 
 figure {
@@ -203,26 +199,10 @@ mark {
 
 // Neon glowing Text: https://www.w3schools.com/howto/howto_css_glowing_text.asp
 .glow {
-  // font-size: 80px; // Way TOO BIG
-  // color: #fff;
-  // text-align: center; // Use existing alignment
   -webkit-animation: glow 4s ease-in-out infinite alternate;
   -moz-animation: glow 4s ease-in-out infinite alternate;
   animation: glow 4s ease-in-out infinite alternate;
 }
-
-/* From: https://www.w3schools.com/howto/howto_css_glowing_text.asp
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 
-      0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  to {
-    text-shadow: 
-      0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
-*/
 
 /* From: https://codepen.io/aJukebox/pen/eYNgLoJ */
 @-webkit-keyframes glow {
@@ -236,17 +216,5 @@ mark {
     text-shadow: 
       0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
   }
-}
-
-/* From: https://www.geeksforgeeks.org/how-to-insert-spaces-tabs-in-text-using-html-css/ */
-.tab {
-  display: inline-block;
-  // display: block;
-  position: sticky;
-  // position: absolute;
-  // position: fixed;
-  // margin-left: 20px;
-  left: 20px;
-  // padding-left: 10rem;
 }
 
