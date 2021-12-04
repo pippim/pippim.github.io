@@ -145,12 +145,12 @@
         {% endif %}
         {% if page.previous and page.previous != "" and page.previous != nil %}
           <fmVar>Previous:</fmVar>
-            <mark>&nbsp;   page.previous   &nbsp;</mark>
+            <mark>&nbsp;{{ page.previous.title }}&nbsp;</mark>
           <br/>
         {% endif %}
         {% if page.next and page.next != "" and page.next != nil %}
           <fmVar>Next:</fmVar>
-            <mark>&nbsp;   page.next   &nbsp;</mark>
+            <mark>&nbsp;{{ page.next.title }}&nbsp;</mark>
           <br/>
         {% endif %}
         {% if page.created_date and page.created_date != "" and page.created_date != nil %}
