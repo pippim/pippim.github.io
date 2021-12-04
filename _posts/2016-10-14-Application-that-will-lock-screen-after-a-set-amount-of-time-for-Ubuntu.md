@@ -114,8 +114,7 @@ Open the `Terminal` using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and type:
 Toggle back to this screen and copy the following code by highlighting it and pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>:
 
 
-{% include copyHeader.html %}
-
+{ % include copyHeader.html % }
 ``` bash
 #!/bin/bash
 
