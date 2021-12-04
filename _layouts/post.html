@@ -123,6 +123,18 @@
             <mark>&nbsp;{{ page.title }}&nbsp;</mark>
           <br/>
         {% endif %}
+        {% if page.id and page.id != "" and page.id != nil %}
+          <br/>
+          <fmVar>ID:</fmVar>
+            <mark>&nbsp;{{ page.id }}&nbsp;</mark>
+          <br/>
+        {% endif %}
+        {% if page.name and page.name != "" and page.name != nil %}
+          <br/>
+          <fmVar>ID:</fmVar>
+            <mark>&nbsp;{{ page.name }}&nbsp;</mark>
+          <br/>
+        {% endif %}
         {% if page.created_date and page.created_date != "" and page.created_date != nil %}
           <fmVar>Created:</fmVar>
              <mark>&nbsp;{{ page.created_date }}&nbsp;</mark>
