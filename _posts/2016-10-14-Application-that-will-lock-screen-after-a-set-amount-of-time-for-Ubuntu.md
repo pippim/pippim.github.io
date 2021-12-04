@@ -115,8 +115,8 @@ Toggle back to this screen and copy the following code by highlighting it and pr
 
 
 {% include copyHeader.html %}
-``` bash
 
+``` bash
 #!/bin/bash
 
 # NAME: lock-screen-timer
