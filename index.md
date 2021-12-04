@@ -851,6 +851,8 @@ shorthand for saying "`stack-to-blog.py` python program".
 
 11. Stack exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
 
+12. Stack exchange allows a fenced code block to begin and end with "``` bash". Kramdown does not so closing fenced code block is change to "```".
+
 The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/StackBlogPost).
 
 <a id="hdr13"></a>
