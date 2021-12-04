@@ -78,13 +78,15 @@
         {% endif %}
 
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
-          <br/>
-          <fmVar>Link:</fmVar>
-            <a href="{{ page.stack_url }}"
-                 >🔍 See Original {{ page.type }} on {{ page.site }}</a>
+          {% if page.type and page.type != "" and page.type != nil %}
+            {% if page.site and page.site != "" and page.site != nil %}
+              <br/>
+              <fmVar>{{page.type}}:</fmVar>
+                <a href="{{ page.stack_url }}"
+                     >🔍 See Original {{ page.type }} on {{ page.site }}</a>
+            {% endif %}
+          {% endif %}
         {% endif %}
-        <script>
-        </script>
       </h4>
 
       <!-- MORE FRONT MATTER -->
