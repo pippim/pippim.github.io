@@ -447,7 +447,11 @@ def check_paragraph(ln):
     for pseudo in PSEUDO_TAGS:
         search = pseudo.lower()
         for word in word_list:
-            if search == word.lower():
+            found = word.lower()
+            if found.startswith('`') and found.endswith('`'):
+                # `program_name` becomes program_name
+                found = found[1:-1]
+            if search == found:
                 pseudo_tag_count += 1
                 total_pseudo_tags += 1
                 if search not in pseudo_tag_names:
