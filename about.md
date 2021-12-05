@@ -20,7 +20,7 @@ of Pippim. On this page you will discover:
 - [**What** is Pippim?](https://pippim.github.io/about.html#what-is-pippim?)
 - [**Where** is Pippim?](https://pippim.github.io/about.html#where-is-pippim?)
 - [**When** was Pippim created?](https://pippim.github.io/about.html#when-was-pippim-created?) (The easiest question to answer!) 
-- [**Why** was Pippim created?](https://pippim.github.io/about.htm/#why-was-pippim-created?) 
+- [**Why** was Pippim created?](https://pippim.github.io/about.htm#why-was-pippim-created?) 
 - [**How** was Pippim created?](https://pippim.github.io/about.html#how-was-pippim-created?) OK that doesn't begin with a "W". Plus that makes number 6 not 5.
 
 {% include image-right.html src="/assets/img/Ask Ubuntu profile.png"
@@ -29,6 +29,7 @@ of Pippim. On this page you will discover:
    caption="WinEunuuchs2Unix Ask Ubuntu Profile Page"
 %}
 
+<a id="who-is-pippim?"></a>
 ## Who is Pippim?
 
 Pippim is a one-man-show that has been answering questions since 2016 
@@ -44,6 +45,7 @@ Windows is undeniably the go-to platform for Governements, Corporations and most
 individuals in the world. No doubt most people who actually make money in the
 Linux World still use Windows from time to time.
 
+<a id="what-is-pippim?"></a>
 ## What is Pippim?
 
 Pippim is a website providing free and open source computer software primarily for
@@ -78,6 +80,7 @@ Tonight (November 21, 2021 at 8:30pm MST), as the
 map for Edmonton shows, it is cool but not cold. It's only
 one degree below freezing.
 
+<a id="when-was-pippim-created?"></a>
 ## When was Pippim created?
 
 That's an easy question; The Domain Name and website was created October 16, 2021.
@@ -86,6 +89,7 @@ Initially www.pippim.com was quickly created on Google Sites. Then the
 already here!) was created much slower on Gikhub Pages. Many revisions were 
 made -- 1,020 commits (revisions) and still counting as of December 5, 2021.
 
+<a id="why-was-pippim-created?"></a>
 ## Why was Pippim created?
 
 It's common practice to create websites to make money. That isn't why Pippim 
@@ -102,6 +106,7 @@ meantime, Pippim is strictly a labour of love (yes that was already
 said earlier). It would not be unfair to classify Pippim as *"Software
 Development as a Hobby"*.
 
+<a id="how-was-pippim-created?"></a>
 ## How was Pippim created?
 
 Yes this is the 6th section which contradicts the "5 W's". Additionally,
