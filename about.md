@@ -16,12 +16,12 @@ This page answers questions you might have about Pippim. This page
 addresses the **5 W's**; "Who", "What", Where", When and "Why"
 of Pippim. On this page you will discover:
 
-- [**Who** is Pippim?](https://pippim.github.io/about.html/#who-is-pippim?)
-- [**What** is Pippim?](https://pippim.github.io/about.html/#what-is-pippim?)
-- [**Where** is Pippim?](https://pippim.github.io/about.html/#where-is-pippim?)
-- [**When** was Pippim created?](https://pippim.github.io/about.html/#when-was-pippim-created?) (The easiest question to answer!) 
-- [**Why** was Pippim created?](https://pippim.github.io/about.html/#why-was-pippim-created?) 
-- [**How** was Pippim created?](https://pippim.github.io/about.html/#how-was-pippim-created?) OK that doesn't begin with a "W". Plus that makes number 6 not 5.
+- [**Who** is Pippim?](https://pippim.github.io/about.html#who-is-pippim?)
+- [**What** is Pippim?](https://pippim.github.io/about.html#what-is-pippim?)
+- [**Where** is Pippim?](https://pippim.github.io/about.html#where-is-pippim?)
+- [**When** was Pippim created?](https://pippim.github.io/about.html#when-was-pippim-created?) (The easiest question to answer!) 
+- [**Why** was Pippim created?](https://pippim.github.io/about.htm/#why-was-pippim-created?) 
+- [**How** was Pippim created?](https://pippim.github.io/about.html#how-was-pippim-created?) OK that doesn't begin with a "W". Plus that makes number 6 not 5.
 
 {% include image-right.html src="/assets/img/Ask Ubuntu profile.png"
    alt="Ask Ubuntu Profile"
