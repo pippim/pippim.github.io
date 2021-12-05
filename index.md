@@ -274,9 +274,8 @@ There are many open-source providers involved in the Pippim website:
 
 It is important to follow these instructions to setup your site:
 [Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). 
-For example, `_layouts/default.html` needs to be copied from the
-theme to your own websited in order to make significant changes 
-to the theme.
+For example, `_layouts/default.html` probably needs to be copied from the
+theme website to your own website in order to make significant changes.
 
 There are many file types in the Pippim website stored at various
 locations:
