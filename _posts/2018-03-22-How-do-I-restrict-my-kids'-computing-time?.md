@@ -6,14 +6,15 @@ stack_url:    https://askubuntu.com/q/1018106
 type:         Answer
 tags:         software-recommendation bash parental-controls
 created_date: 2018-03-22 01:06:16
-edit_date:    2019-09-08 16:10:57
+edit_date:    2021-11-14 01:26:43
 votes:        2
-favorites: 
-views:        58,420
+favorites:    
+views:        58,579
 accepted:     Accepted
-uploaded:     2021-11-13 20:01:36
+uploaded:     2021-12-05 07:39:56
 toc:          true
 navigation:   true
+clipboard:    true
 ---
 
 
@@ -71,6 +72,7 @@ Open the `Terminal` using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and type:
 
 Toggle back to this screen and copy the following code by highlighting it and pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>:
 
+{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -78,15 +80,18 @@ Toggle back to this screen and copy the following code by highlighting it and pr
 # PATH: $HOME/bin
 # DESC: Lock screen in x minutes
 # CALL: Place on Desktop or call from Terminal with "lock-screen-timer 99"
-# DATE: Created Nov 19, 2016. Last revision Mar 22, 2018.
+# DATE: Created Nov 19, 2016. Last revision Nov 13, 2021.
+
 # UPDT: Updated to support WSL (Windows Subsystem for Linux)
 #       Remove hotplugtv. Replace ogg with paplay.
+#       May 30 2018 - Cohesion with multi-timer. New sysmonitor indicator style.
+#       Nov 13 2021 - Wrap long lines with \ continuation. Shorten comments.
 
 # NOTE: Time defaults to 30 minutes.
 #       If previous version is sleeping it is killed.
 #       Zenity is used to pop up entry box to get number of minutes.
 #       If zenity is closed with X or Cancel, no screen lock timer is launched.
-#       Pending lock warning displayed on-screen at set intervals.
+#       Pending lock warning displayed at set intervals.
 #       Write time remaining to ~/.lock-screen-timer-remaining
 
 MINUTES="$1" # Optional parameter 1 when invoked from terminal.
@@ -96,7 +101,8 @@ if [ $# == 0 ]; then
     MINUTES=30
 fi
 
-DEFAULT="$MINUTES" # When looping, minutes count down to zero. Save deafult for subsequent timers.
+DEFAULT="$MINUTES" # When looping, minutes count down to zero. 
+                   # Save deafult for subsequent timers.
 
 # Check if lock screen timer already running
 pID=$(pgrep -f "${0##*/}") # All PIDs matching lock-screen-timer name
@@ -104,7 +110,8 @@ PREVIOUS=$(echo "$pID" | grep -v ^"$$") # Strip out this running copy ($$$)
 if [ "$PREVIOUS" != "" ]; then
     kill "$PREVIOUS"
     rm ~/.lock-screen-timer-remaining
-    zenity --info --title="Lock screen timer already running" --text="Previous lock screen timer has been terminated."
+    zenity --info --title="Lock screen timer already running" \
+        --text="Previous lock screen timer has been terminated."
 fi
 
 # Running under WSL (Windows Subsystem for Linux)?
@@ -118,7 +125,8 @@ fi
 while true ; do # loop until cancel
 
     # Get number of minutes until lock from user
-    MINUTES=$(zenity --entry --title="Lock screen timer" --text="Set number of minutes until lock" --entry-text="$DEFAULT")
+    MINUTES=$(zenity --entry --title="Lock screen timer" \
+        --text="Set number of minutes until lock" --entry-text="$DEFAULT")
 
     RESULT=$? # Zenity return code
     if [ $RESULT != 0 ]; then
@@ -134,9 +142,12 @@ while true ; do # loop until cancel
     (( ++MINUTES )) 
     while (( --MINUTES > 0 )); do
         case $MINUTES in 1|2|3|5|10|15|30|45|60|120|480|960|1920)
-	        notify-send --urgency=critical --icon=/usr/share/icons/gnome/256x256/status/appointment-soon.png "Locking screen in ""$MINUTES"" minute(s)." ;
+	        notify-send --urgency=critical \
+	        --icon=/usr/share/icons/gnome/256x256/status/appointment-soon.png \
+	        "Locking screen in ""$MINUTES"" minute(s)." ;
             if [[ $WSL_running == true ]]; then  
-                powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\notify.wav").PlaySync();'
+                powershell.exe -c '(New-Object Media.SoundPlayer \
+                "C:\Windows\Media\notify.wav").PlaySync();'
             else
 	           paplay /usr/share/sounds/freedesktop/stereo/complete.oga ;
             fi
@@ -144,20 +155,21 @@ while true ; do # loop until cancel
         esac;
 
         # Record number of minutes remaining to file other processes can read.
-        echo "$MINUTES Minutes" > ~/.lock-screen-timer-remaining
+        echo "Lock screen in: $MINUTES Minutes" > ~/.lock-screen-timer-remaining
 
         sleep 60
 
     done
 
-    rm ~/.lock-screen-timer-remaining # Remove work file others can see our progress with
+    rm ~/.lock-screen-timer-remaining # Remove countdown work file
 
     if [[ $WSL_running == true ]]; then  
         # Call lock screen for Windows 10
         rundll32.exe user32.dll,LockWorkStation
     else
-        # Call screen saver lock for Ubuntu versions > 14.04.
-        dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
+        # Call screen saver lock for Unbuntu versions > 14.04.
+        dbus-send --type=method_call --dest=org.gnome.ScreenSaver \
+            /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
     fi
 
 done # End of while loop getting minutes to next lock screen
@@ -238,7 +250,9 @@ While lock screen timer is running it records how many minutes are remaining int
 
 
   [1]: https://i.stack.imgur.com/N0gb6.gif
-  [2]: https://i.stack.imgur.com/0jBz6m.png
+  [2]: https://i.stack.imgur.com/0jBz6.png
   [3]: https://askubuntu.com/questions/882419/how-can-bash-display-in-ubuntus-unity-system-tray
 
+
 <a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr10" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
