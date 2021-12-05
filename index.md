@@ -458,7 +458,7 @@ change the `RANDCOM_LIMIT`:
 INPUT_FILE = 'QueryResults.csv'
 RANDOM_LIMIT = 10           # On initial trials limit the number of blog posts
 PRINT_RANDOM = True         # Print out matching random recordS found
-OUTPUT_DIR = "_posts/"      # Subdirectory name. Use "" for current directory
+OUTPUT_DIR = "../_posts/"   # Subdirectory name. Use "" for current directory
 ```
 
 Initially you will want to have `PRINT_RANDOM` set to `True`. 
@@ -947,11 +947,22 @@ def create_blog_filename():
         Replace all spaces in title with "-"
         Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
     """
-    filename = '_posts/' + row[CREATED].split()[0] + '-' + \
+    filename = OUTPUT_DIR + row[CREATED].split()[0] + '-' + \
         row[TITLE].replace(' ', '-').replace('/', '∕') + '.md'
 
     return filename
 ```
+
+`OUTPUT_DIR` defaults to `../_posts/` because `stack-to-blog.py` sits in a sibling directory:
+
+```bash
+├── _posts
+│   └── 2021-10-24-welcome-to-jekyll.md
+└── sede
+    ├── QueryResults.csv
+    ├── StackQuery
+    └── stack-to-blog.py
+ ```
 
 ## Pseudo Tags
 
