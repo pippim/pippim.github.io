@@ -3,7 +3,7 @@ title: Pippim - Free Solutions
 layout: default
 ---
 
-{% include image-right.html src="/assets/img/Blog_Project-Management-101.png"
+{% include image.html src="/assets/img/Blog_Project-Management-101.png"
    alt="The 5 Ws (and 1 H) that should be asked of every project!"
    style="float: right; width: 60%; margin: 2em 0px 0px 1em; text-align: center;"
    caption="Image credit: 
@@ -58,7 +58,7 @@ Pippim has no business model for making money today. You will find no user track
 no ads and no spamming. Maybe someday Pippim will make money but in the meantime it
 is simply a labour of love.
 
-{% include image.html src="/assets/img/Edmonton Temperature Nov 21, 2021.png"
+{% include image.html src="/assets/img/Edmonton  Temperature Nov 21, 2021.png"
    alt="Edmonton Temperature"
    style="float: right; width: 60%; margin: 1em 0px 0px 1em; text-align: center;"
    caption="Edmonton Alberta Canada"
