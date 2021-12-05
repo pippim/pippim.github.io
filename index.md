@@ -308,7 +308,6 @@ pippim.github.io
 │   │   ├── Blog_Project-Management-101.png
 │   │   ├── earth-from-space.jpg
 │   │   ├── Edmonton  Temperature Nov 21, 2021.png
-│   │   ├── Edm Temp.png
 │   │   ├── github pages themes.png
 │   │   ├── Inspectocadt.jpeg
 │   │   ├── octojekyll-opt.jpg
