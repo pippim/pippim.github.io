@@ -64,12 +64,19 @@ is simply a labour of love.
 
 ## Where is Pippim located?
 
-Figuratively speaking, Pippim is located in "the clouds" on Google Sites and
-Github Pages. As you may have astutely spotted in the screen shot in the
-*Who is Pippim* section above though, 
-Pippim is physically located in Edmonton, Canada. Tonight (November 21, 2021 at
-8:30pm MST), as the map for Edmonton shows, it is cool but not cold. It's only
-one degree below freezing as the little yellow dot highlights.
+Figuratively speaking, Pippim is located in "the clouds" on 
+[Google Sites](https://pippim.com) (https://pippim.com) and
+[GitHub Pages](https://github.com/pippim/pippim.github.io)
+(https://github.com/pippim/pippim.github.io) where all the 
+source code is kept. The website you are viewing now is found
+at https://pippim.github.io. All three websites are hosted
+for free by the providers so the cost cannot be argued.
+
+As you may have deduced by the little yellow dot in this image
+though, Pippim is physically located in Edmonton, Canada. 
+Tonight (November 21, 2021 at 8:30pm MST), as the
+map for Edmonton shows, it is cool but not cold. It's only
+one degree below freezing.
 
 ## When was Pippim created?
 
@@ -77,23 +84,23 @@ That's an easy question; The Domain Name and website was created October 16, 202
 Initially www.pippim.com was quickly created on Google Sites. Then the
 [main Pippim Website](pippim.github.io) (don't click the link because you are
 already here!) was created much slower on Gikhub Pages. Many revisions were 
-made -- 630 commits (revisions) and still counting as of November 21, 2021.
+made -- 1,020 commits (revisions) and still counting as of December 5, 2021.
 
 ## Why was Pippim created?
 
 It's common practice to create websites to make money. That isn't why Pippim 
 was created though.
 Pippim was created to make it easier to list the free software created on 
-the websites [AskUbuntu](www.askubuntu.com) and [Github](www.github.com).
+the websites [Ask Ubuntu](https://askubuntu.com) and [GitHub](https://github.com).
 Pippim Posts which are 92% Answers and 8% Questions, have over **52 million
 views** as of November 22, 2021. With over 2,000 answers, 
-managing them on 
-a Pippim website just makes sense.
+managing them on a Pippim website just makes sense.
 
 Of course we all need money and maybe someday Pippim will earn revenue,
 open an office in Silicon Valley and hire some employees. But in the
 meantime, Pippim is strictly a labour of love (yes that was already 
-said earlier).
+said earlier). It would not be unfair to classify Pippim as *"Software
+Development as a Hobby"*.
 
 ## How was Pippim created?
 
@@ -118,18 +125,23 @@ first step was to find a domain name (website name) that:
 After finding out that the "pippim.com" was available, more weeks of contemplation 
 went by before "pulling the trigger" and buying the name for $17 CAD per year.
 
-Then the `www.pippim.com` website was created using Google Sites for free.
+Then the [www.pippim.com website](https://pippim.com) was
+created using Google Sites for free.
 
-Then the `pippim.github.io` website was created using Github Pages for free.
+Next the [pippim.github.io website](https://pippim.github.io) (Don't bother
+clicking the link as you are here now!) was created using 
+GitHub Pages for free. More details about how the website
+was created can be found on in the middle of the
+[Home Page](https://pippim.github.io/#how-the-table-of-contents-is-generated).
 
 ### Hopefully you enjoy the freedom! :)
 
 ---
 
-#### Hosted on Github with Jekyll, Ruby Gems, Javascript, HTML, SCSS and more
+#### Hosted on GitHub with Jekyll, Ruby Gems, Javascript, HTML, SCSS and more
 
 ![Jekyll Octocat Mascot](/assets/img/octojekyll-opt.jpg)
 
 <sup><em>
-   **Image credit:** Jekyll Octocat Mascot [Github](https://www.github.com)
+   **Image credit:** Jekyll Octocat Mascot [GitHub](https://www.github.com)
 </em></sup>
