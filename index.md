@@ -288,52 +288,65 @@ locations:
 - The <kbd>✅ Answers</kbd> page is stored in `answers.md` in `/`. Individual answers are internally known as "blog posts" and are stored in the `_posts` directory with one file per answer.
 - The <kbd>💻 Programs</kbd> page is stored in `programs.md` in `/`.
 - HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory.
-- As of November 4, 2021 this website doesn't include and **Javascript** but typically you would place those files in `assets/js/`.
+- Javascript files are kept in `assets/js/`.
 
 ### Pippim Website Directory Tree
 
 The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
 
 ``` bash
-$ tree
-.
+pippim.github.io
+│
 ├── about.md
 ├── answers.md
 ├── assets
 │   ├── css
-│   │   ├── style.scss
-│   │   └── syntax.scss
-│   └── img
-│       ├── Ask Ubuntu profile.png
-│       ├── Blog_Project-Management-101.png
-│       ├── earth-from-space.jpg
-│       ├── octojekyll-opt.jpg
-│       └── pngwing.com.png
+│   │   └── style.scss
+│   ├── img
+│   │   ├── ask_ubuntu.png
+│   │   ├── Ask Ubuntu profile.png
+│   │   ├── Blog_Project-Management-101.png
+│   │   ├── earth-from-space.jpg
+│   │   ├── Edmonton  Temperature Nov 21, 2021.png
+│   │   ├── Edm Temp.png
+│   │   ├── github pages themes.png
+│   │   ├── Inspectocadt.jpeg
+│   │   ├── octojekyll-opt.jpg
+│   │   ├── Pippim Post More Button Working.gif
+│   │   └── pngwing.com.png
+│   └── js
+│       ├── copyCode.js
+│       └── post_fm.js
 ├── _config.yml
 ├── _includes
+│   ├── copyHeader.html
 │   ├── head-custom.html
+│   ├── image.html
+│   ├── image-left.html
+│   ├── image-right.html
 │   └── toc.md
 ├── index.md
 ├── _layouts
 │   ├── default.html
 │   └── post.html
 ├── LICENSE
+├── _plugins
+│   └── insert_git_code.rb
 ├── _posts
 │   └── 2021-10-24-welcome-to-jekyll.md
 ├── programs.md
 ├── QueryResults.csv
 ├── _sass
-│   ├── cayman.scss
 │   ├── jekyll-theme-cayman.scss
-│   ├── normalize.scss
-│   ├── rouge-github.scss
-│   ├── toc.scss
-│   └── variables.scss
+│   └── toc.scss
 ├── StackBlogPost
 └── stack-to-blog.py
 
-7 directories, 27 files
+9 directories, 35 files
 ```
+
+**NOTE:** The `_posts` directory will contain over 1200 blog posts 
+which are not displayed above.
 
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
