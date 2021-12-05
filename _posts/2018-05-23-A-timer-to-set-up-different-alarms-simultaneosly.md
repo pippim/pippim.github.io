@@ -1,19 +1,20 @@
 ---
 layout:       post
-title:        A timer to set up different alarms simultaneosly
+title:        A timer to set up different alarms simultaneously
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039377
 type:         Answer
-tags:         software-recommendation
+tags:         software-recommendation multi-timer
 created_date: 2018-05-23 11:14:12
 edit_date:    2021-10-05 12:00:18
 votes:        11
 favorites:    
-views:        4,024
+views:        4,063
 accepted:     Accepted
-uploaded:     2021-11-21 12:50:00
+uploaded:     2021-12-05 08:45:54
 toc:          true
 navigation:   true
+clipboard:    true
 ---
 
 
@@ -147,6 +148,7 @@ Multi-timer requires the following packages to be installed:
 
 
 
+{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
