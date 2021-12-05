@@ -517,15 +517,6 @@ def check_code_block(ln):
                 language_forced += 1
         else:
             in_code_block = False       # Code block has ended
-            # Remove extra text after ``` whilst maintaining indenting
-            # NOTE: This breaks '````' coding (4 backticks)
-            before = ln
-            ln = ln.split('```')[0] + '```'
-            if before.strip() != ln.strip():
-                print(curr_index, 'of', len(lines) - 1, blog_filename)
-                print('OLD ln:', before)
-                print('NEW ln:', ln)
-                print('       ', lines[curr_index+1])
 
     return ln
 
@@ -768,7 +759,7 @@ def create_blog_filename():
         Replace all spaces in title with "-"
         Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
     """
-    filename = '_posts/' + row[CREATED].split()[0] + '-' + \
+    filename = '../_posts/' + row[CREATED].split()[0] + '-' + \
         row[TITLE].replace(' ', '-').replace('/', '∕') + '.md'
 
     return filename
