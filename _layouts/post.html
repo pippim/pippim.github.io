@@ -180,10 +180,15 @@
           &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>&nbsp;{{ page.layout }}&nbsp;</mark>
         {% endif %}
         {% if page.toc and page.toc != "" and page.toc != nil %}
-         &nbsp;&nbsp; TOC:&nbsp;&nbsp;<mark>&nbsp;{{ page.toc }}&nbsp;</mark>
+          <br/>
+          <fmVar>TOC:</fmVar>
+            <mark>&nbsp;{{ page.toc }}&nbsp;</mark>
         {% endif %}
         {% if page.navigation and page.navigation != "" and page.navigation != nil %}
-         &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
+          &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
+        {% endif %}
+        {% if page.clipboard and page.clipboard != "" and page.clipboard != nil %}
+          &nbsp;&nbsp; Copy to clipboard:&nbsp;&nbsp;<mark>&nbsp;{{ page.clipboard }}&nbsp;</mark>
         {% endif %}
 
         <script>
