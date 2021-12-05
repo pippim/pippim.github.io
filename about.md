@@ -23,7 +23,7 @@ of Pippim. On this page you will discover:
 - [**Why** was Pippim created?](https://pippim.github.io/about.html#why-was-pippim-created?) 
 - [**How** was Pippim created?](https://pippim.github.io/about.html#how-was-pippim-created?) OK that doesn't begin with a "W". Plus that makes number 6 not 5.
 
-{% include image-right.html src="/assets/img/Ask Ubuntu profile.png"
+{% include image.html src="/assets/img/Ask Ubuntu profile.png"
    alt="Ask Ubuntu Profile"
    style="float: right; width: 60%; margin: 1em 0px 0px 1em; text-align: center;"
    caption="WinEunuuchs2Unix Ask Ubuntu Profile Page"
