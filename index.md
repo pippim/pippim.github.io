@@ -335,14 +335,15 @@ pippim.github.io
 ├── _posts
 │   └── 2021-10-24-welcome-to-jekyll.md
 ├── programs.md
-├── QueryResults.csv
 ├── _sass
 │   ├── jekyll-theme-cayman.scss
 │   └── toc.scss
-├── StackBlogPost
-└── stack-to-blog.py
+└── sede
+    ├── QueryResults.csv
+    ├── StackQuery
+    └── stack-to-blog.py
 
-9 directories, 35 files
+10 directories, 35 files
 ```
 
 **NOTE:** The `_posts` directory will contain over 1200 blog posts 
@@ -357,7 +358,7 @@ Converting thousands of Stack Exchange Q&A in markdown format isn't as easy
 as simply copying them over to Github Pages. To generate Pippim's blog posts
 fromt Stack Excahgne posts, the python program `stack-to-blog.py` was used.
 The full `stack-to-blog.py` program can be accessed on the 
-[Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/StackBlogPost).
+[Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/StackQuery).
 This program automatically:
 
 - Cretates Jekyll front matter.
@@ -864,7 +865,7 @@ shorthand for saying "`stack-to-blog.py` python program".
 
 11. Stack Exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
 
-The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/StackBlogPost).
+The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
 <a id="hdr13"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
