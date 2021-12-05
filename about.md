@@ -20,7 +20,7 @@ of Pippim. On this page you will discover:
 - [**What** is Pippim?](https://pippim.github.io/about.html#what-is-pippim?)
 - [**Where** is Pippim?](https://pippim.github.io/about.html#where-is-pippim?)
 - [**When** was Pippim created?](https://pippim.github.io/about.html#when-was-pippim-created?) (The easiest question to answer!) 
-- [**Why** was Pippim created?](https://pippim.github.io/about.htm#why-was-pippim-created?) 
+- [**Why** was Pippim created?](https://pippim.github.io/about.html#why-was-pippim-created?) 
 - [**How** was Pippim created?](https://pippim.github.io/about.html#how-was-pippim-created?) OK that doesn't begin with a "W". Plus that makes number 6 not 5.
 
 {% include image-right.html src="/assets/img/Ask Ubuntu profile.png"
@@ -92,14 +92,14 @@ made -- 1,020 commits (revisions) and still counting as of December 5, 2021.
 <a id="why-was-pippim-created?"></a>
 ## Why was Pippim created?
 
-It's common practice to create websites to make money. That isn't why Pippim 
-was created though.
 Pippim was created to make it easier to list the free software created on 
 the websites [Ask Ubuntu](https://askubuntu.com) and [GitHub](https://github.com).
 Pippim Posts which are 92% Answers and 8% Questions, have over **52 million
 views** as of November 22, 2021. With over 2,000 answers, 
 managing them on a Pippim website just makes sense.
 
+It's common practice to create websites to make money. That isn't why Pippim 
+was created though.
 Of course we all need money and maybe someday Pippim will earn revenue,
 open an office in Silicon Valley and hire some employees. But in the
 meantime, Pippim is strictly a labour of love (yes that was already 
