@@ -349,6 +349,30 @@ pippim.github.io
 **NOTE:** The `_posts` directory will contain over 1200 blog posts 
 which are not displayed above.
 
+### Daily Backup
+
+Normally you will `git pull` all the directories and files from your website to your local drive.
+If you plan on working locally you probably backup your daily work. This script
+is what Pippim uses for dailiy backup to gmail.com (in the cloud so safe?):
+
+``` bash
+# WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
+tar -rpf "$Filename" website/*.md       # about.md, answers.md, programs.md   
+tar -rpf "$Filename" website/*.yml      # _config.yml
+tar -rpf "$Filename" website/_includes  # copyHeader.html, image.html & toc.md
+tar -rpf "$Filename" website/_layouts   # default.html & post.html
+tar -rpf "$Filename" website/_plugins   # insert_git_code.rb (NOT supported)
+tar -rpf "$Filename" website/_sass      # jekyll-theme-cayman.scss & toc.scss
+tar -rpf "$Filename" website/assets/css # style.scss file
+tar -rpf "$Filename" website/assets/js  # javascript files
+tar -rpf "$Filename" website/sede/*.py  # stack-to-blog.py and SEDE query below
+tar -rpf "$Filename" website/sede/StackQuery
+```
+
+**NOTE:** This is a small subset of the daily backup script. The full script
+may be posted someday if requested. The script is called from `cron` every
+morning, compresses files, and emails to gmail.com automatically.
+
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
@@ -484,6 +508,7 @@ This python code shows how
 [Jekyll front matter](https://jekyllrb.com/docs/front-matter/)
 is controlled inside `stack-to-blog.py`:
 
+{% include copyHeader.html %}
 ``` python
 FRONT_SITE      = "site:         "  # EG "site:         Ask Ubuntu"
 FRONT_POST_ID   = None              # EG "post_id:      1104017"
@@ -512,6 +537,7 @@ FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be c
 FRONT_UPLOADED  = "uploaded:     "  # Date & Time this program was run
 FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
 FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
+FRONT_CLIPBOARD = "clipboard:    "  # Copy to clipboard button used? "true" or "false"
 ```
 
 *When the global variable name `FRONT_xxx` 
@@ -539,6 +565,7 @@ accepted:     Accepted
 uploaded:     2021-11-15 19:56:38
 toc:          false
 navigation:   false
+clipboard:    false
 ---
 ```
 
@@ -599,7 +626,7 @@ mark {
 }
 ```
 
-### TOC and Navigation Buttons
+### TOC, Navigation Buttons, Copy to Clipboard
 
 The TOC (Table of Contents) and Navigation Bar Buttons
 (which navigate between sections) you create for blog
@@ -638,6 +665,11 @@ NAV_BAR_LEVEL = 2           # Only for "#" or "##". Not for "###", "####", etc.
 NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 NAV_BAR_MIN = 3             # Minimum number of # & ## headers required
 NAV_WORD_MIN = 1000         # Minimum 1,000 words for navigation button bar
+
+''' Copy code block contents to clipboard options. '''
+# If Copy button is never wanted, set to None
+COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
+COPY_LINE_MIN = 20          # Number of lines required to qualify for button
 ```
 
 A minimum number of `6` header lines (`#`, `##`, `###` ... 
@@ -650,6 +682,16 @@ are analyzed. After three headers at these levels are encountered
 the navigation bar is inserted in front of these header
 levels. A 1,000 word minimum is also required though. If not met
 then no navigation buttons will appear in the post.
+
+The copy to clipboard button will appear at the top of code blocks.
+It isn't automatically inserted on all code blocks because it
+takes up space on your website. If only a few lines appear in a
+code block, the user can easily highlight with mouse and use
+<kbd>Ctrl</kbd> + <kbd>C</kbd> to copy to clipboard.
+
+The variable `COPY_LINE_MIN` specifies how many code block
+lines are required before button appers. 
+The default is `20` lines.
 
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
@@ -686,6 +728,7 @@ the following functions:
 - `line = header_space(line)`
 - `line = block_quote(line)`
 - `check_paragraph(line)`
+- `command = check_copy_clipboard(curr_index)`
 
 After pass 1 completes the following bit of code decides whether TOC
 and/or navigation buttons are inserted:
@@ -865,6 +908,8 @@ shorthand for saying "`stack-to-blog.py` python program".
 
 11. Stack Exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
 
+12. For large code blocks a "Copy to Clipboard" button is provided.
+
 The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
 <a id="hdr13"></a>
@@ -992,6 +1037,9 @@ def check_code_block(ln):
 
 ```
 
+**NOTE:** This funcion also provides support for inserting the 
+"Copy to Clipboard" button.
+
 <a id="hdr15"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
 
@@ -1003,23 +1051,24 @@ When the `stack-to-blog.py` finishes a summary appears on your screen:
 // =============================/   T O T A L S   \============================== \\
 
 RANDOM_LIMIT:     10,000  | PRINT_RANDOM:        False  | NAV_FORCE_TOC:        True
+NAV_BAR_MIN:           3  | NAV_WORD_MIN:         1000  | COPY_LINE_MIN:          20
 accepted_count:      623  | total_votes:         7,110  | total_views:    52,261,286
-question_count:      299  | answer_count:        2,143  | save_blog_count:     1,078
-total_self_accept:   113  | total_self_answer:      54  | Answers need accept:    59
-total_headers:     1,547  | total_header_spaces:   390  | total_quote_spaces:  1,533
-total_lines:      51,278  | total_paragraphs:   14,535  | total_words:       285,727
-total_pseudo_tags:   152  | total_tag_names:   ['conky', 'eyesome', 'cpuf', 'iconic']
-total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     26
-total_code_blocks:   178  | code_block_lines:    2,960  | total_toc:              25
-most_lines:          820  | total_force_end:       929  | total_nav_bar:          34
-total_header_levels:        [581, 754, 210, 2, 0, 0]
-
+question_count:      299  | answer_count:        2,143  | save_blog_count:     1,211
+total_self_answer:   113  | total_self_accept:      54  | Self Needing Accept:    59
+total_headers:     1,619  | total_header_spaces:   402  | total_quote_spaces:  1,563
+total_lines:      56,410  | total_paragraphs:   15,991  | total_words:       317,101
+total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     31
+total_code_blocks:   264  | code_block_lines:    3,562  | total_clipboards:       32
+total_pseudo_tags:   170  | total_copy_lines:    2,671  | total_toc:              25
+most_lines:          820  | total_force_end:     1,052  | total_nav_bar:          37
+total_header_levels:  [599, 798, 220, 2, 0, 0]
+total_tag_names:      ['conky', 'multi-timer', 'eyesome', 'cpuf', 'iconic']
 ```
 
-Each total name with an underscore (`_`) is the same 
-as the internal program variable name. The
-first four total lines
-apply to all Stack Exchnage Questions and Answers post.
+Each total name with an underscore (`_`) is the
+python program internal variable name. The
+first four total lines apply to all Stack Exchnage
+Questions and Answers you have posted.
 The remaining total lines apply only to posts that qualify
 for saving as a Jekyll blog post.
 
@@ -1032,15 +1081,18 @@ print('')
 print('RANDOM_LIMIT:     {:>6,}'.format(RANDOM_LIMIT),
       ' | PRINT_RANDOM:  {:>11}'.format(str(PRINT_RANDOM)),
       ' | NAV_FORCE_TOC: {:>11}'.format(str(NAV_FORCE_TOC)))
+print('NAV_BAR_MIN:      {:>6,}'.format(NAV_BAR_MIN),
+      ' | NAV_WORD_MIN:  {:>11}'.format(NAV_WORD_MIN),
+      ' | COPY_LINE_MIN: {:>11}'.format(COPY_LINE_MIN))
 print('accepted_count:   {:>6,}'.format(accepted_count),
       ' | total_votes:   {:>11,}'.format(total_votes),
       ' | total_views:   {:>11,}'.format(total_views))
 print('question_count:   {:>6,}'.format(question_count),
       ' | answer_count:       {:>6,}'.format(answer_count),
       ' | save_blog_count:    {:>6,}'.format(save_blog_count))
-print('total_self_accept:{:>6,}'.format(total_self_answer),
-      ' | total_self_answer:  {:>6,}'.format(total_self_accept),
-      ' | Answers need accept:{:>6,}'.format(total_self_answer -
+print('total_self_answer:{:>6,}'.format(total_self_answer),
+      ' | total_self_accept:  {:>6,}'.format(total_self_accept),
+      ' | Self Needing Accept:{:>6,}'.format(total_self_answer -
                                              total_self_accept))
 print('total_headers:    {:>6,}'.format(total_headers),
       ' | total_header_spaces:{:>6,}'.format(total_header_spaces),
@@ -1048,18 +1100,20 @@ print('total_headers:    {:>6,}'.format(total_headers),
 print('total_lines: {:>11,}'.format(total_lines),
       ' | total_paragraphs:{:>9,}'.format(total_paragraphs),
       ' | total_words: {:>13,}'.format(total_words))
-print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
-      ' | total_tag_names:  ', total_tag_names)
 print('total_pre_codes:  {:>6,}'.format(total_pre_codes),
       ' | total_alternate_h1: {:>6,}'.format(total_alternate_h1),
       ' | total_alternate_h2: {:>6,}'.format(total_alternate_h2))
 print('total_code_blocks:{:>6,}'.format(total_code_blocks),
       ' | code_block_lines:  {:>7,}'.format(total_code_block_lines),
+      ' | total_clipboards:  {:>7,}'.format(total_clipboards))
+print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
+      ' | total_copy_lines:  {:>7,}'.format(total_copy_lines),
       ' | total_toc:         {:>7,}'.format(total_toc))
 print('most_lines:       {:>6,}'.format(most_lines),
       ' | total_force_end:  {:>8,}'.format(total_force_end),
       ' | total_nav_bar:     {:>7,}'.format(total_nav_bar))
-print('total_header_levels:       ', total_header_levels)
+print('total_header_levels: ', total_header_levels)
+print('total_tag_names:     ', total_tag_names)
 ```
 
 <a id="hdr16"></a>
