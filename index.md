@@ -8,9 +8,9 @@ layout: default
 <div class="hdr-bar">  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
 
 {% include image-left.html src="/assets/img/pngwing.com.png"
-   alt="Github Octacat Mascot by pngwing.com"
+   alt="GitHub Octacat Mascot by pngwing.com"
    style="float: left; width: 45%; margin: 2em 1em 0px 0px; text-align: center;"
-   caption="Github's Octocat Mascot image credit: 
+   caption="GitHub's Octocat Mascot image credit: 
       <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>"
 %}
 
@@ -72,7 +72,7 @@ The top of major sections contain navigation buttons to take you to other sectio
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
 ## Get in Touch
 
-There are many ways of getting in touch with Pippim. The conventional way via email and on other websites. The direct method on Stack Exchange Answers or Github Repos.
+There are many ways of getting in touch with Pippim. The conventional way via email and on other websites. The direct method on Stack Exchange Answers or GitHub Repos.
 
 ### The Conventional Way of Getting in Touch
 
@@ -84,7 +84,7 @@ Get in touch with pippim by sending an email. You can also visit the other pippi
 
 ### Leave a Comment / Question at The Source
 
-Leaving a comment or question at the source such as Stack Exchange answer or Github Repo saves you from explaining what your communicadtion is referring to.
+Leaving a comment or question at the source such as Stack Exchange answer or GitHub Repo saves you from explaining what your communicadtion is referring to.
 
 #### Stack Exchange Answers (Ask Ubuntu)
 
@@ -93,23 +93,23 @@ Leaving a comment or question at the source such as Stack Exchange answer or Git
 You can leave a comment or question where the Stack Exchange answer appears. Each answer on this website here has a direct link to the original answer on Stack Exchage.
 <br clear="left"/>
 
-#### Github Repos
+#### GitHub Repos
 
 ![Inspectocat detective cat with magnifying glass](/assets/img/Inspectocadt.jpeg){: style="float: left" width="20%"}
 
-For Pippim programs on Github Repos, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.
+For Pippim programs on GitHub Repos, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.
 <br clear="left"/>
 
 ---
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
 
-# Github Pages
+# GitHub Pages
 
-This website was created on **Github Pages**. You can download (or simply view) this website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on Github Pages"). This current page for example you can find in the markdown file called `index.md`.
+This website was created on **GitHub Pages**. You can download (or simply view) this website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages"). This current page for example you can find in the markdown file called `index.md`.
 
-With Github Pages you can very quickly get your own webiste up and running by
-simply picking from a collection of website designs called themes. Github Pages
+With GitHub Pages you can very quickly get your own webiste up and running by
+simply picking from a collection of website designs called themes. GitHub Pages
 is free to use. Although you will likely do most of your writing from a MAC,
 Linux or Windows PC, one of the cool things is you can change your website from
 a cell phone.
@@ -122,11 +122,11 @@ in particular was created, you will probably want to stop reading
 the rest of this page.
 
 Whenever you commit to a website repository, GitHub Pages will run
-[Jekyll](https://jekyllrb.com/ "See how Jekyll rebuilds Github Pages websites")
+[Jekyll](https://jekyllrb.com/ "See how Jekyll rebuilds GitHub Pages websites")
 to rebuild the pages in your site, from the content in your Markdown files.
 
-The Pippim website is based on the Github Pages Jekyll theme called 
-[Cayman](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for Github Pages website").
+The Pippim website is based on the GitHub Pages Jekyll theme called 
+[Cayman](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for GitHub Pages website").
 Initial setup was straight forward and very quick. However adding custom buttons 
 becomes more complicated as you need to learn 
 [HTML](https://blog.webjeda.com/new-page-jekyll/ "See how HTML is used in Jekyll") 
@@ -137,7 +137,7 @@ and [Sass/SCSS](https://jekyllrb.com/docs/configuration/sass/ "See how Sass is u
 
 ## Markdown
 
-Github Pages and many other websites use a language called Markdown.
+GitHub Pages and many other websites use a language called Markdown.
 Markdown is a lightweight and easy-to-use syntax for styling your 
 writing. It includes conventions for:
 
@@ -223,7 +223,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 
 ## Jekyll Themes
 
-There are many [Github Pages Jekyll Themes](https://pages.github.com/themes/)
+There are many [GitHub Pages Jekyll Themes](https://pages.github.com/themes/)
 you can pick from for your website. Spend some time reviewing your options
 before committing to one.
 
@@ -245,17 +245,17 @@ October 16, 2021 and today is November 16, 2021. The
 moral of the story is: *"It may take longer than expected
 to set up your first website but, don't give up."* &ensp; **You can do it!** 😄
 
-Your Github Pages site will use the layout and styles from the Jekyll
+Your GitHub Pages site will use the layout and styles from the Jekyll
 theme you have selected in your 
 [repository settings](https://github.com/pippim/pippim.github.io/settings/pages).
 The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 To see the current Jekyll, Sass, Rouge version numbers, etc. used by
-**Github Pages** click [here](https://pages.github.com/versions/).
+**GitHub Pages** click [here](https://pages.github.com/versions/).
 
 There are many open-source providers involved in the Pippim website:
 
-- Github Pages
+- GitHub Pages
 - Jekyll
 - Liquid
 - Sass
@@ -292,7 +292,7 @@ locations:
 
 ### Pippim Website Directory Tree
 
-The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for Pippim on Github Pages looked like this:
+The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for Pippim on GitHub Pages looked like this:
 
 ``` bash
 pippim.github.io
@@ -379,7 +379,7 @@ morning, compresses files, and emails to gmail.com automatically.
 # Convert Stack Exchange Posts to Website Posts
 
 Converting thousands of Stack Exchange Q&A in markdown format isn't as easy 
-as simply copying them over to Github Pages. To generate Pippim's blog posts
+as simply copying them over to GitHub Pages. To generate Pippim's blog posts
 fromt Stack Excahgne posts, the python program `stack-to-blog.py` was used.
 The full `stack-to-blog.py` program can be accessed on the 
 [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/StackQuery).
@@ -904,7 +904,7 @@ shorthand for saying "`stack-to-blog.py` python program".
 > line 1
 > line 2
 ```
-    5.1. If they were not modified they would display on Github Pages Markdown as:
+    5.1. If they were not modified they would display on GitHub Pages Markdown as:
     > line 1
     > line 2
 
@@ -922,7 +922,7 @@ shorthand for saying "`stack-to-blog.py` python program".
 
 10. Pippim setups the Jekyll front matter as required for `title:` and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
 
-11. Stack Exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for Github Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
+11. Stack Exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for GitHub Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
 
 12. For large code blocks a "Copy to Clipboard" button is provided.
 
@@ -993,7 +993,7 @@ In the `stack-to-blog.py` python program they are defined like this:
 
 ## Stack Exchnage `<!-- language` Tags
 
-When Stack Exchange uses `<!-- language-all` it is converted to appropriate format for Github using this multi-purpose function:
+When Stack Exchange uses `<!-- language-all` it is converted to appropriate format for GitHub using this multi-purpose function:
 
 {% include copyHeader.html %}
 ``` python
