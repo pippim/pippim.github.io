@@ -86,7 +86,7 @@ one degree below freezing.
 That's an easy question; The Domain Name and website was created October 16, 2021.
 Initially www.pippim.com was quickly created on Google Sites. Then the
 [main Pippim Website](pippim.github.io) (don't click the link because you are
-already here!) was created much slower on Gikhub Pages. Many revisions were 
+already here!) was created much slower on GitHhub Pages. Many revisions were 
 made -- 1,020 commits (revisions) and still counting as of December 5, 2021.
 
 <a id="why-was-pippim-created?"></a>
