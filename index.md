@@ -7,7 +7,7 @@ layout: default
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
 
-{% include image-left.html src="/assets/img/pngwing.com.png"
+{% include image.html src="/assets/img/pngwing.com.png"
    alt="GitHub Octacat Mascot by pngwing.com"
    style="float: left; width: 45%; margin: 2em 1em 0px 0px; text-align: center;"
    caption="GitHub's Octocat Mascot image credit: 
@@ -213,7 +213,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-{% include image-right.html src="/assets/img/github pages themes.png"
+{% include image.html src="/assets/img/github pages themes.png"
    alt="github pages themes.png"
    style="float: right; width: 60%; margin: 2em 0px 0px 1em; text-align: center;"
    caption="Image credit:
@@ -321,8 +321,6 @@ pippim.github.io
 │   ├── copyHeader.html
 │   ├── head-custom.html
 │   ├── image.html
-│   ├── image-left.html
-│   ├── image-right.html
 │   └── toc.md
 ├── index.md
 ├── _layouts
@@ -342,7 +340,7 @@ pippim.github.io
     ├── StackQuery
     └── stack-to-blog.py
 
-10 directories, 35 files
+10 directories, 33 files
 ```
 
 **NOTE:** The `_posts` directory will contain over 1200 blog posts 
