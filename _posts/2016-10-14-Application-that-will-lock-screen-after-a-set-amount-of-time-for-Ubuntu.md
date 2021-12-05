@@ -11,9 +11,10 @@ votes:        15
 favorites:    
 views:        2,963
 accepted:     Accepted
-uploaded:     2021-12-04 08:33:27
+uploaded:     2021-12-05 07:39:56
 toc:          true
 navigation:   true
+clipboard:    true
 ---
 
 
@@ -112,6 +113,7 @@ Open the `Terminal` using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and type:
 
 
 Toggle back to this screen and copy the following code by highlighting it and pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>:
+
 
 {% include copyHeader.html %}
 ``` bash
@@ -230,15 +232,23 @@ exit 0 # Closed dialog box or "Cancel" selected.
 
 Then toggle back to the empty `gedit` window and paste the code using <kbd>Ctrl</kbd>+<kbd>V</kbd>. Save the file and exit the editor back to the command prompt.
 
-Mark `lock-screen-timer` as an executable
------------------------------------------
+
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr9" class ="hdr-btn">Skip</a></div>
+
+## Mark `lock-screen-timer` as an executable
+
 
 Now we need to make the script executable by typing:
 
     chmod +x lock-screen-timer
 
-Test It!
---------
+
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr10" class ="hdr-btn">Skip</a></div>
+
+## Test It!
+
 
 Before calling the script from the GUI, we'll call it from the terminal so we can see if any error messages are displayed:
 
@@ -251,8 +261,8 @@ You are prompted for the number of minutes:
 Set the desired number of minutes and click OK to start the timer. When there are 15, 10, 5, 3, 2 and 1 minute(s) left a system sound is heard and a message bubble appears advising when the screen will be locked. After the screen is locked you need to enter your password to unlock the screen. 
 
 
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr9" class ="hdr-btn">Skip</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr11" class ="hdr-btn">Skip</a></div>
 
 # Configure Nautilus to execute bash scripts
 
@@ -267,8 +277,8 @@ Start Nautilus and navigate to directory containing `lock-screen-timer`. Left cl
  5. Check radio button `Run executable text files when they are opened`
 
 
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr10" class ="hdr-btn">Skip</a></div>
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr10" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr12" class ="hdr-btn">Skip</a></div>
 
 # Create desktop shortcut link
 
@@ -284,8 +294,8 @@ Now you can double click on the desktop shortcut link and the script is run. A d
 After the timer is running and you double click on it again the first running copy is "killed". You can now start a new scren lock countdown or click <kbd>Cancel</kbd> for no countdown.
 
 
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr11" class ="hdr-btn">Skip</a></div>
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr11" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr13" class ="hdr-btn">Skip</a></div>
 
 # Display Time Remaining in systray / notification area
 
@@ -298,5 +308,5 @@ While lock screen timer is running it records how many minutes are remaining int
   [4]: https://askubuntu.com/questions/882419/how-can-bash-display-in-ubuntus-unity-system-tray
 
 
-<a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr10" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr12" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
