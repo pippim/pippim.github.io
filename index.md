@@ -348,8 +348,8 @@ which are not displayed above.
 ### Daily Backup
 
 Normally you will `git pull` all the directories and files from your website to your local drive.
-If you plan on working locally you probably backup your daily work. This script
-is what Pippim uses for dailiy backup to gmail.com (in the cloud so safe?):
+If you plan on developing locally, you probably want to backup your daily work. This script
+is what Pippim uses for dailiy backup to gmail.com (in the cloud, so it should be safe):
 
 ``` bash
 # WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
