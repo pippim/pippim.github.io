@@ -32,9 +32,9 @@
     Run the query and Save the results in CSV format as QueryResults.csv
 
     Move query results to your website folder. In Linux use:
-        mv ~/Downloads/QueryResults.csv ~/website
+        mv ~/Downloads/QueryResults.csv ~/website/sede
 
-    Run ~/website/stack-to-blog.py which will populate "~/website/_posts"
+    Run ~/website/sede/stack-to-blog.py which will populate "~/website/_posts"
     sub-directory with one Jekyll blog post file for each Stack Exchange
     post that qualifies.
 
@@ -56,13 +56,39 @@ from datetime import datetime as dt
 import csv
 from random import randint
 
+
+"""
+    TO-DO
+    ============================================================================
+
+    There are TO-DO's littered through out the program.
+    
+    Find broken links: https://brianli.com/2021/06/how-to-find-broken-links-with-python/
+    
+    In the body of a Stack Exchange post you might see:
+    
+        A much superior program called `multi-timer` has been created:
+        [https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly][1]
+
+    Then at the bottom of the post you will see:
+    
+        [1]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
+
+    For G-H Pages it needs to be reformatted by looking up the title for 1039357.
+        In this case it was changed to "Set of Countdown Timers with Alarm". 
+
+"""
+
 INPUT_FILE = 'QueryResults.csv'
 RANDOM_LIMIT = 10000        # On initial trials limit the number of blog posts
-PRINT_RANDOM = False        # Print out matching random record found (10 lines)
-OUTPUT_DIR = "_posts/"      # Subdirectory name. Use "" for current directory
+PRINT_RANDOM = False        # Print out matching random records found
+OUTPUT_DIR = "../_posts/"   # Subdirectory name. Use "" for current directory
 QUESTIONS_QUALIFIER = True  # Convert questions to blog posts
 VOTE_QUALIFIER = 2          # Posts need at least 2 votes to qualify
 ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
+PRINT_COLUMN_NAMES = False  # Print QueryResults first row to terminal
+PRINT_NOT_ACCEPTED = False  # Print self answered questions not accepted
+
 # Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
 
 ''' Table of Contents (TOC) options. '''
@@ -114,11 +140,10 @@ puts 'Expanded message'
 # If question or answer contains one of these "pseudo tags" then jekyll front
 # will have tag added as if it were really on the question. Essentially you
 # are tagging your answers and adding them to OP's question tags.
-PSEUDO_TAGS = ["conky", "eyesome", "cpuf", "iconic", "multi-timer"]
+PSEUDO_TAGS = ["conky", "eyesome", "cpuf", "iconic", "multi-timer", 'vnstat', 'yad']
 
-fields = []                 # The column names used by Stack Exchanges
-data = []                   # Returned rows, less record #1 (field names)
-row_count = 0               # How many data rows (Answers / Blog posts)
+rows = []                   # Returned rows, less record #1 (field names)
+row_count = 0               # How many rows (Answers / Blog posts)
 random_row_nos = []         # Random row numbers exported during trail runs
 all_tag_names = []          # Every tag name appearing on stack exchange answers
 all_tag_counts = []         # Count of times tag has been used on SE answers
@@ -763,7 +788,7 @@ def create_blog_filename():
         Replace all spaces in title with "-"
         Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
     """
-    filename = '../_posts/' + row[CREATED].split()[0] + '-' + \
+    filename = OUTPUT_DIR + row[CREATED].split()[0] + '-' + \
         row[TITLE].replace(' ', '-').replace('/', '∕') + '.md'
 
     return filename
@@ -786,7 +811,7 @@ def check_self_answer(r):
     """
 
     global self_answer, self_accept, total_self_answer, total_self_accept
-    for search in data:
+    for search in rows:
         if search[TITLE] == r[TITLE] and search[TYPE] == "Answer":
             self_answer = True  # Is this a self-answered question?
             total_self_answer += 1
@@ -828,7 +853,7 @@ def fatal_error(msg):
     =======================================================================
 
     - Sanity Check on front matter
-    - Read S.E.D.E. CSV file and convert to Python list: data []
+    - Read S.E.D.E. CSV file and convert to Python list: rows []
     - Ensure file is not empty
     - Set Random Record Limit list 
 '''
@@ -850,16 +875,18 @@ with open(INPUT_FILE) as csv_file:
     for row in csv_reader:
         # The first row are column headings / field names
         if row_count == 0:
-            print('Column names\n', row)
-            fields = row
+            # We don't want column headings in rows list
+            if PRINT_COLUMN_NAMES:
+                print('Column names\n', row)
         else:
-            data.append(row)
+            # rows list contains all rows except first row
+            rows.append(row)
         row_count += 1
 
     #print('Total rows:', row_count)
 
 # If less than 2 records consider an empty file
-row_count = len(data)
+row_count = len(rows)
 if row_count < 2:
     fatal_error('No CSV records found in INPUT_FILE:' + INPUT_FILE)
 
@@ -891,7 +918,7 @@ if RANDOM_LIMIT < 100:
     - If RANDOM_LIMIT is used then only output matching random_rec_nos []
 '''
 
-for row in data:
+for row in rows:
 
     row_number += 1
     ''' Reset counters for each stack exchange Q&A '''
@@ -1127,8 +1154,7 @@ for row in data:
             index = random_row_nos.index(row_number)
             random_row_nos[index] = row_number + 1
 
-
-if len(self_not_accept_url) > 0:
+if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
     print()
     print('// ==============/   Self-Answered Questions not accepted   \\================ \\\\')
     print('')
