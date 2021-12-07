@@ -78,9 +78,9 @@ There are many ways of getting in touch with Pippim. The conventional way via em
 
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
 
-- Click this link to: [📧 Send an Email to pippim](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com")
+- [📧 Send an Email to pippim](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com")
 
-- Click this link to visit the pippim website on Google Sites: [www.pippim.com](https://pippim.com "Visit www.pippim.com")
+- Visit the Pippim website on [Google Sites](https://pippim.com "Visit www.pippim.com")
 
 ### Leave a Comment / Question at The Source
 
@@ -250,8 +250,10 @@ theme you have selected in your
 [repository settings](https://github.com/pippim/pippim.github.io/settings/pages).
 The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-To see the current Jekyll, Sass, Rouge version numbers, etc. used by
-**GitHub Pages** click [here](https://pages.github.com/versions/).
+
+**GitHub Pages** maintains live listing of 
+[version numbers](https://pages.github.com/versions/)
+for Jekyll, Sass, Kramdown, Rouge, etc..
 
 There are many open-source providers involved in the Pippim website:
 
