@@ -234,7 +234,8 @@ mark {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
-  animation: shine 1s linear infinite;
+  animation: shine 3s linear infinite;
+  
   @keyframes shine {
     to {
       background-position: 200% center;
