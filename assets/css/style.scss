@@ -219,3 +219,25 @@ mark {
   }
 }
 
+/* From: https://gist.github.com/CodeMyUI/530e25ec020cfbfc68526a2a56cb0247 
+   Note: No license or copyright found?
+*/
+.linear-wipe {
+  text-align: center;
+  
+  background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 1s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
