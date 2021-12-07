@@ -85,7 +85,7 @@
           {% if page.type and page.type != "" and page.type != nil %}
             {% if page.site and page.site != "" and page.site != nil %}
               <br/>
-              <fmVar>{{page.type}}:</fmVar>
+              <fmVar>Link:</fmVar>
                 <a href="{{ page.stack_url }}"
                      >🔍 See Original {{ page.type }} on {{ page.site }}</a>
             {% endif %}
@@ -173,7 +173,7 @@
         -->
         {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
           <br/>
-          <fmVar>Uploaded:</fmVar>
+          <fmVar>Upload:</fmVar>
             <mark>&nbsp;{{ page.uploaded }}&nbsp;</mark>
         {% endif %}
         {% if page.layout and page.layout != "" and page.layout != nil %}
