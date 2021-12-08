@@ -266,7 +266,7 @@ total_force_end = 0             # How many last empty lines added?
 total_toc = 0                   # How many table of contents added?
 total_nav_bar = 0               # How many navigation bars added?
 total_self_answer = 0           # How many self-answered questions?
-total_self_accept = 0           # Of those how many have been accepted?
+total_self_accept = 0           # Of those, how many have been accepted?
 self_not_accept_url = []        # List of URLs not accepted
 language_forced = 0             # How many times was language fenced?
 
@@ -511,7 +511,7 @@ def check_half_links(ln):
     last_start = 0
     while keep_looking:
 
-        # Note: slicing string not supported with .find()
+        # Note: slicing a string not supported with .find()
         start = ln.find("[https://", last_start)
 
         if start == -1:
@@ -544,14 +544,22 @@ def check_half_links(ln):
                 print_this = True
             close_before_found = True
 
+        if char_before != ")":
+            end = start + 50
+            if end + start >= len(ln):
+                end = None
+            print('HALF-LINK at:', line_index, 'of:', line_count,
+                  'row:', row_number, ln[start:end])
+
         if print_this:
-            print('MALFORMED https at:', line_index, 'of:', line_count)
+            print('SAMPLE half-link dump line [https://... at:',
+                  line_index, 'of:', line_count, 'row:', row_number)
             print(ln)
             print('start:', start, 'last_start:', last_start)
             print('char_before:', '"' + char_before + '"')
             dump(row)
 
-        last_start = start + 1
+        last_start = start + 8
 
     return ln
 
@@ -1189,7 +1197,17 @@ for row in rows:
             copy_code_count += 1
             # print('inserted line:', command)
 
-    lines = new_lines
+    lines = []
+    for line in new_lines:
+        # Split \n
+        sub_lines = line.split('\n')
+        if len(sub_lines) > 1:
+            # print('sub lines:', sub_lines)
+            for sub_line in sub_lines:
+                lines.append('sub_line')
+        else:
+            lines.append('line')
+
     #if copy_code_count > 1:
     #    print()
     #    print('copy_code_count:', copy_code_count)
@@ -1247,6 +1265,7 @@ for row in rows:
     toc_inserted = False    # Has TOC been inserted yet?
     sum2 = 0                # Track for new header to insert Navigation Bar
 
+    ''' Pass #2: Loop through lines to insert TOC and Navigation Bar '''
     for line_index, line in enumerate(lines):
         check_code_block(line)      # Turn off formatting when in code block
         # Did this post qualify for adding navigation bar?
