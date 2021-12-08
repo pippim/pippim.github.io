@@ -83,7 +83,7 @@ For a better view, right click on the picture, select
 This afternoon (December 7, 2021 at 5:46pm MST), as the
 map for Edmonton shows, it is chilly at 6 degrees below
 freezing. Obviously most people in Edmonton are happy for 
-global warming and climate change. Sorry Greta :/
+global warming and not climate change. Sorry Greta :/
 
 <a id="when-was-pippim-created?"></a>
 ## When was Pippim created?
