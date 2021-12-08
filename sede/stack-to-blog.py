@@ -12,6 +12,7 @@
 #       Nov. 17 2021 - Support for Pseudo-tags from keywords in answers.
 #       Nov. 24 2021 - Check self-answered questions and not accepted yet.
 #       Dec. 04 2021 - Copy fenced code block to clipboard.
+#       Dec. 07 2021 - Support 4 space indented code. Convert to fenced block.
 #
 # ==============================================================================
 
@@ -251,8 +252,8 @@ total_pseudo_tags = 0           # Keywords that qualify as tags for question
 total_tag_names = []            # All the tags added for all the posts
 total_code_blocks = 0           # How many code blocks are there?
 total_code_block_lines = 0      # How many lines are inside code blocks?
-total_code_indents = 0
-total_code_indent_lines = 0
+total_code_indents = 0          # How many code indents are there?
+total_code_indent_lines = 0     # How many lines are inside code indents?
 total_half_links = 0            # SE half-links with [] but no ()
 total_bad_half_links = 0        # SE half-links unresolved - not in this query
 total_clipboards = 0            # How many copy to clipboard inserts?
@@ -290,12 +291,10 @@ self_answer = False         # Is this a self-answered question?
 self_accept = False         # Is this self-answered question accepted?
 
 in_code_block = False       # Are we in a code block? Then no # Header formatting
-old_in_code_block = False
-code_block_index = 0
-code_block_line_count = 0
+old_in_code_block = False   # Double duty as old_in_code_indent
+code_block_index = 0        # Double duty as code_indent_index
+code_block_line_count = 0   # Double duty as code_indent_line_count
 in_code_indent = False
-total_code_indents = 0
-code_indent_language = None
 language_used = ""          # What language when fenced code blocks have none?
 half_links = 0              # SE half-links with [] but no ()
 bad_half_links = 0          # SE half-links unresolved - not in this query
@@ -311,6 +310,7 @@ bad_half_links = 0          # SE half-links unresolved - not in this query
     block_quote(ln) 
     check_paragraph(ln) 
     check_code_block(ln) 
+    check_code_indent(ln) 
     check_copy_code(line_index)
     navigation_bar(level, skip_btn=True)  
     front_matter(r)
@@ -371,11 +371,41 @@ def header_space(ln):
     if in_code_block or in_code_indent:
         return ln
 
+    # Kind of silly accepting parameter ln already known to be
+    # lines[line_index]
+    if line_index == len(lines) - 1:
+        return ln  # We are on the last line
+
     if ln[0:1] == "#":
         #print('Found header:', ln)
         header_count += 1   # For current post, reset between posts
         # How many '#' are there at line start?
         hash_count = len(ln) - len(ln.lstrip('#'))
+        if hash_count > 6:
+            print('Hash count > 6:', hash_count)
+            print('in_code_block:', in_code_block,
+                  '| in_code_indent:', in_code_indent)
+            if row[URL] == "https://askubuntu.com/q/835994":
+                print(row[MARKDOWN])
+                print(lines)
+            # eg: 2016-10-12-Command-line-snake-game?.md
+            #     ###########################END OF FUNCS##########################
+
+            # Shouldn't get this error because inside code indent
+            ''' Also at bottom of file:
+                    done
+        
+                    ```
+                    
+                    ```
+                      [1]: http://wp.subnetzero.org/?p=269
+                    ```
+                    
+                    ```
+            '''
+            dump(row)
+            return ln
+
         # Is first character after "#" a space?
         if ln[hash_count:hash_count+1] != " ":
             #print('Forcing space at:', hash_count, ln)
@@ -418,12 +448,6 @@ def header_space(ln):
         # Increment count at level
         header_levels[1] += 1
 
-    # Append HTML header ID. EG: <a> id="hdr9"></a>
-    ''' Move this to second pass
-    if hash_count <= TOC_HDR_LEVEL:
-        ln = ln + '<a id="hdr' + str(header_count) + '"></a>'
-        # Second pass will insert lines to GOTO this "id" name
-    '''
     return ln
 
 
@@ -580,6 +604,13 @@ def check_paragraph(ln):
 
 def check_shebang(ln):
     """ Check shebang's language """
+    # Kind of silly accepting parameter ln already known to be
+    # lines[line_index]
+    if line_index == len(lines) - 1:
+        return None  # We are on the last line
+
+    ln = lines[line_index + 1]  # Get next line
+
     if ln.startswith('#!/bin/') or ln.startswith('#!/usr/bin/env'):
         if "bash" in ln:
             return "bash"
@@ -650,8 +681,7 @@ def check_code_block(ln):
             in_code_block = True        # Code block has begun
             this_language = language_used
             # Check next line for shebang
-            next_line = lines[line_index + 1]
-            she_language = check_shebang(next_line)
+            she_language = check_shebang(ln)
             if she_language:
                 this_language = she_language
             if ln[-1] == "`" or ln[-1] == " ":
@@ -664,16 +694,16 @@ def check_code_block(ln):
 
 
 def check_code_indent(ln):
-    """ If line starts with "    " we are now in code block.
+    """ If line starts with "    " we are now in code indent.
 
-        If already in code block and line does NOT begin with "    "
+        If already in code indent and line does NOT begin with "    "
             then we are now out of code block.
 
 
     """
-    global in_code_indent, total_code_indents, code_indent_language
+    global in_code_indent, total_code_indents
 
-    ''' Code blocks may be indented which is called "in_code_indent" here.
+    ''' Code blocks may be indented which are called "in_code_indent" here.
 
         If line begins with four spaces condsider it entering a code indent.
         
@@ -690,7 +720,7 @@ def check_code_indent(ln):
     if in_code_block:
         return ln
 
-    if ln[0:4] == "    ":
+    if ln[:4] == "    ":
         # Add language if not used already
         if in_code_indent is False:
             total_code_indents += 1  # Total for all posts
@@ -701,19 +731,18 @@ def check_code_indent(ln):
             # #!/bin/.... (python anywhere in line)
             this_language = language_used
             # TODO Check past boundary
-            next_line = lines[line_index + 1]
-            she_language = check_shebang(next_line)
+            she_language = check_shebang(ln)
             if she_language:
                 this_language = she_language
-            if ln[-1] == "`" or ln[-1] == " ":
-                ln = "``` " + this_language + "\n" + ln
-            else:
-                ln = "``` \n" + ln
+            # print('BEFORE ln:', ln)
+            ln = "``` " + this_language + "\n" + ln[4:]
+            # print('AFTER ln:', ln)
         else:
             ln = ln[4:]     # Remove first four characters
-    else:
+            # print('ln:', ln)
+    elif in_code_indent:
         in_code_indent = False  # Code indent has ended
-        ln = ln + "\n```"  # Add ending clode block
+        ln = ln + "\n```\n"  # Add ending code block
 
     return ln
 
@@ -729,26 +758,28 @@ def check_copy_code(this_index):
             <!-- language-all: lang-bash -->
 
     """
-    global total_code_block_lines, old_in_code_block, code_block_index
+    global total_code_block_lines, total_code_indent_lines
+    global old_in_code_block, code_block_index
     global code_block_line_count, lines, line_count, line_index
     global total_clipboards, total_copy_lines
 
     inserted_command = ""
     if in_code_block is True or in_code_indent is True:
-        total_code_block_lines += 1
+        if in_code_block:
+            total_code_block_lines += 1
+        else:
+            total_code_indent_lines += 1
+
+        # old_in_code_block repurposed for old_in_code_indent as well
         if old_in_code_block is False:
-            # Set index for start of code block
+            # Set index for start of code block or code indent
             code_block_index = this_index
             # print('Start code block:', lines[this_index])
     elif old_in_code_block is True:
-        # Just ended code block how many lines?
+        # Just ended code block or code indent, how many lines?
         code_block_line_count = this_index - code_block_index
         # Sanity check, lines[index] must contain fenced code block ```
         code = lines[code_block_index]
-        if code.lstrip()[0:3] != "```":
-            dump(row)
-            fatal_error('lines at index: ' + str(this_index) +
-                        ' should contain ``` but it is: ' + code)
 
         # print('  End code block:', lines[this_index])
         if code[0:3] == "```":
@@ -1060,7 +1091,6 @@ for row in rows:
     code_block_index = 0
     code_block_line_count = 0
     in_code_indent = False
-    code_indent_language = None
     half_links = 0          # SE half-links with [] but no ()
     bad_half_links = 0      # SE half-links unresolved - not in this query
     force_end_line = False  # Did Pass #1 force an empty blank line at end?
@@ -1139,10 +1169,12 @@ for row in rows:
     copy_code_count = 0
     for line_index, line in enumerate(lines):
         line = check_code_block(line)   # Turn off formatting when in code block
+        line = check_code_indent(line)  # Reformat code indent to fenced code block
         line = header_space(line)       # #Header, Alt-H1, Alt-H2
         line = block_quote(line)        # Formatting for block quotes
         line = check_half_links(line)   # SE half-links with no () and only []
         check_paragraph(line)           # Check if Markdown paragraph (empty line)
+        lines[line_index] = line        # Update any changes
         new_lines.append(line)          # Modified version of original lines
 
         # Check if we need to include copy to clipboard command
