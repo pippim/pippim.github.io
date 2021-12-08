@@ -739,6 +739,7 @@ Each `line` in `lines` is read in a new loop and analyzed by
 the following functions:
 
 - `line = check_code_block(line)`
+- `line = check_code_indent(line)`
 - `line = header_space(line)`
 - `line = block_quote(line)`
 - `check_paragraph(line)`
