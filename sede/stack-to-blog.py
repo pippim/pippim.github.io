@@ -244,15 +244,19 @@ total_votes = 0                 # How many up votes across all posts
 total_lines = 0                 # Total lines of all posts
 total_header_spaces = 0         # Total headers we added a space behind lsat "#"
 total_headers = 0               # Total header count
-total_quote_spaces = 0          # Total block quotes requiring two spaces at end
+total_quote_spaces = 0          # Total block quotes with two spaces appended
 total_paragraphs = 0            # How many paragraphs are there?
 total_words = 0                 # How many words by splitting whitespace
-total_pseudo_tags = 0           # Words in answer that qualify as tags for question
+total_pseudo_tags = 0           # Keywords that qualify as tags for question
 total_tag_names = []            # All the tags added for all the posts
 total_code_blocks = 0           # How many code blocks are there?
 total_code_block_lines = 0      # How many lines are inside code blocks?
+total_code_indents = 0
+total_code_indent_lines = 0
+total_half_links = 0            # SE half-links with [] but no ()
+total_bad_half_links = 0        # SE half-links unresolved - not in this query
 total_clipboards = 0            # How many copy to clipboard inserts?
-total_copy_lines = 0       # How many code block lines in clipboard inserts?
+total_copy_lines = 0            # How many code block lines in clipboard inserts?
 total_pre_codes = 0             # How many times does <pre><code> appear?
 total_header_levels = [0, 0, 0, 0, 0, 0]
 total_alternate_h1 = 0          # Alternate H1 lines followed by "=="
@@ -271,7 +275,7 @@ Totals for single blog post - reinitialized between blog posts
 contents = ""               # Not used, placeholder
 blog_filename = ""          # YYYY-MM-DD-blog-title.md
 lines = []                  # Markdown lines list being processed
-curr_index = 0              # Current line index within lines []
+line_index = 0              # Current line index within lines []
 header_count = 0            # How many headers were found in blog post
 header_space_count = 0      # How many header spaces had to be added after #?
 alternate_h1 = 0            # Alternate H1 lines followed by "=="
@@ -289,10 +293,12 @@ in_code_block = False       # Are we in a code block? Then no # Header formattin
 old_in_code_block = False
 code_block_index = 0
 code_block_line_count = 0
+in_code_indent = False
+total_code_indents = 0
+code_indent_language = None
 language_used = ""          # What language when fenced code blocks have none?
-image_links = []            # Links to images found at bottom of SE posts
-''' Used for each post '''
-tags = ""                   # Front matter format: tags: TAG1 TAG2 TAG3
+half_links = 0              # SE half-links with [] but no ()
+bad_half_links = 0          # SE half-links unresolved - not in this query
 
 ''' Functions
     ====================================================================
@@ -305,9 +311,7 @@ tags = ""                   # Front matter format: tags: TAG1 TAG2 TAG3
     block_quote(ln) 
     check_paragraph(ln) 
     check_code_block(ln) 
-    check_copy_clipboard(curr_index)
-    check_pre_code(ln) - NOT USED!
-    check_contents(ln) - NOT USED!
+    check_copy_code(line_index)
     navigation_bar(level, skip_btn=True)  
     front_matter(r)
     create_blog_filename()
@@ -361,10 +365,10 @@ def header_space(ln):
 
     """
     global header_count, header_space_count
-    global lines, curr_index, header_levels
+    global lines, line_index, header_levels
     global alternate_h1, alternate_h2
 
-    if in_code_block:
+    if in_code_block or in_code_indent:
         return ln
 
     if ln[0:1] == "#":
@@ -382,35 +386,35 @@ def header_space(ln):
         # Increment count at level
         header_levels[hash_count - 1] += 1
 
-    elif curr_index == line_count - 1:
+    elif line_index == line_count - 1:
         pass  # Don't go past size of list
 
     # If current line is empty or starts with < (HTML) skip alternate test
     elif ln == "" or ln[0:1] == "<":
         pass
 
-    elif lines[curr_index + 1][0:1] == "=":
+    elif lines[line_index + 1][0:1] == "=":
         ''' This is an H1 Line because next line is "=="
         '''
         header_count += 1   # For current post, reset between posts
         alternate_h1 += 1
         ln = "# " + ln
-        lines[curr_index + 1] = ""  # Blank out "=="
+        lines[line_index + 1] = ""  # Blank out "=="
         # Increment count at level
         header_levels[0] += 1
 
-    elif lines[curr_index + 1][0:2] == "--":
+    elif lines[line_index + 1][0:2] == "--":
         ''' This is an H2 Line because next line is "--"
             NOTE: Kramdown requires two "--" and a single one won't do.
         '''
         #print(ln)  # Uncomment this and next 2 lines to test alternate H2
-        #print(lines[curr_index + 1])
+        #print(lines[line_index + 1])
         #print(row[URL])
 
         header_count += 1   # For current post, reset between posts
         alternate_h2 += 1
         ln = "## " + ln
-        lines[curr_index + 1] = ""  # Blank out "--"
+        lines[line_index + 1] = ""  # Blank out "--"
         # Increment count at level
         header_levels[1] += 1
 
@@ -426,12 +430,12 @@ def header_space(ln):
 def block_quote(ln):
     """ Append two spaces at end of block quote ('>') if necessary
 
-        If inside fenced code block, ignore # lines and don't count as header.
+        If inside fenced code block, ignore < lines and don't count as quote.
 
     """
     global total_quote_spaces
 
-    if in_code_block:
+    if in_code_block or in_code_indent:
         return ln
 
     if ln[0:1] == ">":
@@ -440,6 +444,91 @@ def block_quote(ln):
             #print('Forcing two spaces after:', ln)
             ln = ln + "  "
             total_quote_spaces += 1
+
+    return ln
+
+
+space_before_found = False
+open_before_found = False
+close_before_found = False
+
+
+def check_half_links(ln):
+    """ Scan line for SE half-links where '[https://' appears with no ')'
+        immediately before it. SE half-links support specifying only the
+        URL and SE goes out to get the current title for the URL. This
+        only works for SE URLs.
+
+        From: https://meta.stackexchange.com/help/formatting
+
+        There are three ways to write links. Each is easier to read than the last:
+
+            Here's an inline link to [Google](https://www.google.com/).
+            Here's a reference-style link to [Google][1].
+            Here's a very readable link to [Yahoo!][yahoo].
+
+              [1]: https://www.google.com/
+              [yahoo]: https://www.yahoo.com/
+
+
+    """
+    global total_half_links, total_bad_half_links, half_links, bad_half_links
+    global space_before_found, open_before_found, close_before_found
+
+    if in_code_block or in_code_indent:
+        return ln
+
+    if ln[0:4] == "    ":
+        # In code block
+        return ln
+
+    keep_looking = True
+    start = 0
+    last_start = 0
+    while keep_looking:
+
+        # Note: slicing string not supported with .find()
+        start = ln.find("[https://", last_start)
+
+        if start == -1:
+            break
+        if start == 0:
+            # We found [https:// at the start of the line, so we have to insert
+            last_start = start + 8
+            # Each time we insert, we have to add length of (...) to last_start
+            continue
+
+        char_before = ln[start-1:start]
+        print_this = False
+        if char_before == " ":
+            half_links += 1
+            total_half_links += 1
+            if space_before_found is False:
+                print_this = True
+            space_before_found = True
+
+        elif char_before == "(":
+            half_links += 1
+            total_half_links += 1
+            if open_before_found is False:
+                print_this = True
+            open_before_found = True
+
+        elif char_before == ")":
+            # This is a normal good link
+            if close_before_found is False:
+                print_this = True
+            close_before_found = True
+
+        if print_this:
+            print('MALFORMED https at:', line_index, 'of:', line_count)
+            print(ln)
+            print('start:', start, 'last_start:', last_start)
+            print('char_before:', '"' + char_before + '"')
+            dump(row)
+
+        last_start = start + 1
+
     return ln
 
 
@@ -489,6 +578,19 @@ def check_paragraph(ln):
                         total_tag_names.append(search)
 
 
+def check_shebang(ln):
+    """ Check shebang's language """
+    if ln.startswith('#!/bin/') or ln.startswith('#!/usr/bin/env'):
+        if "bash" in ln:
+            return "bash"
+        if "sh" in ln:
+            return "sh"
+        if "python" in ln:
+            return "python"
+
+    return None
+
+
 def check_code_block(ln):
     """ If line starts with ``` we are now in code block.
 
@@ -503,9 +605,10 @@ def check_code_block(ln):
     global in_code_block, total_code_blocks, language_used, language_forced
 
     ''' Code blocks may be indented so left strip spaces before test
-    
-        To end code block you must use ``` in Kramdown. Stack Exchange lets
-        you end code block with "``` some-text" but that breaks Kramdown.
+
+        NOTE: This test must be done BEFORE check_code_indent() test.    
+
+        To end code block you must use ```.
         
         TODO: count number of backticks that initiate a code block.
               For example ```` (4) can start a code block then if ``` (3)
@@ -520,6 +623,10 @@ def check_code_block(ln):
               ```
               ```` 
     '''
+
+    if in_code_indent:
+        return ln
+
     if ln.startswith("<!-- language"):
         # Get "bash" inside of <!-- language-all: lang-bash -->
         # Store as language_used for inside of code block.
@@ -541,8 +648,14 @@ def check_code_block(ln):
         if in_code_block is False:
             total_code_blocks += 1      # Total for all posts
             in_code_block = True        # Code block has begun
+            this_language = language_used
+            # Check next line for shebang
+            next_line = lines[line_index + 1]
+            she_language = check_shebang(next_line)
+            if she_language:
+                this_language = she_language
             if ln[-1] == "`" or ln[-1] == " ":
-                ln = ln + " " + language_used
+                ln = ln + " " + this_language
                 language_forced += 1
         else:
             in_code_block = False       # Code block has ended
@@ -550,7 +663,62 @@ def check_code_block(ln):
     return ln
 
 
-def check_copy_clipboard(this_index):
+def check_code_indent(ln):
+    """ If line starts with "    " we are now in code block.
+
+        If already in code block and line does NOT begin with "    "
+            then we are now out of code block.
+
+
+    """
+    global in_code_indent, total_code_indents, code_indent_language
+
+    ''' Code blocks may be indented which is called "in_code_indent" here.
+
+        If line begins with four spaces condsider it entering a code indent.
+        
+        TODO: code indents immediately following a ul (unordered list) or 
+        li (list item) are not considered a code indent. Neither are code
+        indents following another code indent. 
+
+        To end code indent you must use line with no leading space.
+
+        For many ways of SE code blocks see:
+        https://medium.com/analytics-vidhya/5-ways-to-embed-code-in-stack-overflow-8d9f38edf02c
+    '''
+
+    if in_code_block:
+        return ln
+
+    if ln[0:4] == "    ":
+        # Add language if not used already
+        if in_code_indent is False:
+            total_code_indents += 1  # Total for all posts
+            in_code_indent = True  # Code indent has begun
+            # Check next line for shebang
+            # #!/bin/sh (shell)
+            # #!/bin/bash
+            # #!/bin/.... (python anywhere in line)
+            this_language = language_used
+            # TODO Check past boundary
+            next_line = lines[line_index + 1]
+            she_language = check_shebang(next_line)
+            if she_language:
+                this_language = she_language
+            if ln[-1] == "`" or ln[-1] == " ":
+                ln = "``` " + this_language + "\n" + ln
+            else:
+                ln = "``` \n" + ln
+        else:
+            ln = ln[4:]     # Remove first four characters
+    else:
+        in_code_indent = False  # Code indent has ended
+        ln = ln + "\n```"  # Add ending clode block
+
+    return ln
+
+
+def check_copy_code(this_index):
     """ Check to insert copy to clipboard include.
 
         If already in code block and line begins with ```
@@ -562,11 +730,11 @@ def check_copy_clipboard(this_index):
 
     """
     global total_code_block_lines, old_in_code_block, code_block_index
-    global code_block_line_count, lines, line_count, curr_index
+    global code_block_line_count, lines, line_count, line_index
     global total_clipboards, total_copy_lines
 
     inserted_command = ""
-    if in_code_block is True:
+    if in_code_block is True or in_code_indent is True:
         total_code_block_lines += 1
         if old_in_code_block is False:
             # Set index for start of code block
@@ -589,7 +757,7 @@ def check_copy_clipboard(this_index):
             if COPY_TO_CLIPBOARD is not None and \
                code_block_line_count >= COPY_LINE_MIN:
                 # line_count += 1
-                # curr_index += 1  # Not sure this is needed...
+                # line_index += 1  # Not sure this is needed...
                 # print()
                 # print('BEFORE:', lines[code_block_index])
                 inserted_command = COPY_TO_CLIPBOARD
@@ -603,59 +771,12 @@ def check_copy_clipboard(this_index):
             # Probably within list item and copy to clipboard doesn't work.
             print('Unable to decipher code block:', code)
 
-    old_in_code_block = in_code_block
+    if in_code_block or in_code_indent:
+        old_in_code_block = True
+    else:
+        old_in_code_block = False
+
     return inserted_command
-
-
-def check_pre_code(ln):
-    """ Check if line starts with <pre><code> or <code>
-    """
-    global total_pre_codes
-    if ln.startswith("<pre><code>") or ln.startswith("<code>"):
-        ''' NOT SUPPORTED. Print line to terminal '''
-        print('===========:', ln)
-        total_pre_codes += 1
-
-
-def check_contents(ln):
-    """ check if TOC should be inserted here
-
-    CREDIT: https://www.aleksandrhovhannisyan.com/blog/
-            jekyll-table-of-contents/#how-to-create-a-table-of-contents-in-jekyll
-
-    For TOC to work you need to create an include file named
-    '_includes/toc.md" and fill it with this markup:
-
-## Table of Contents
-{:.no_toc}
-
-* TOC
-{:toc}
-
-    Then, in your post, all you have to do is insert this one-liner wherever
-    you want your table of contents to appear:
-
-{% include toc.md %}
-
-    So, here's the Sass that'll get the job done by creating the file
-    '_sass/someSassFile.scss':
-
-.screen-reader-only {
-    position: absolute;
-    left: -5000px;
-
-    &:focus {
-        left: 0;
-    }
-}
-
-    """
-
-    global contents, total_quote_spaces
-    if CONTENTS is None:
-        return  # Global CONTENTS variable is null, so no TOC
-
-    return ln
 
 
 def navigation_bar(level, skip_btn=True):
@@ -924,7 +1045,7 @@ for row in rows:
     ''' Reset counters for each stack exchange Q&A '''
     save_blog = True        # Default until a condition turns it off
     lines = []              # Markdown lines list being processed
-    curr_index = 0          # Current line index within lines []
+    line_index = 0          # Current line index within lines []
     header_count = 0        # How many headers were found in blog post
     header_space_count = 0  # How many spaces had to be added after #?
     ''' Counts of header levels - H1, H2 ... H6 '''
@@ -938,6 +1059,10 @@ for row in rows:
     old_in_code_block = False
     code_block_index = 0
     code_block_line_count = 0
+    in_code_indent = False
+    code_indent_language = None
+    half_links = 0          # SE half-links with [] but no ()
+    bad_half_links = 0      # SE half-links unresolved - not in this query
     force_end_line = False  # Did Pass #1 force an empty blank line at end?
     self_answer = False     # Is this a self-answered question?
     self_accept = False     # Is this self-answered question accepted?
@@ -1011,28 +1136,31 @@ for row in rows:
     ''' Pass #1: Count markdown elements '''
     new_lines = []
     insert_clipboard = False  # Does not have any copy to clipboard inserts yet
-    copy_clipboard_count = 0
-    for curr_index, line in enumerate(lines):
-        line = check_code_block(line)  # Turn off formatting when in code block
-        line = header_space(line)  # Change #Header to # Header and Alt-H1, Alt-H2
-        line = block_quote(line)  # Formatting for block quotes
-        check_paragraph(line)  # Check if Markdown paragraph (empty line)
-        new_lines.append(line)  # Modified version of original lines
-        command = check_copy_clipboard(curr_index)  # Insert command for clipboard?
+    copy_code_count = 0
+    for line_index, line in enumerate(lines):
+        line = check_code_block(line)   # Turn off formatting when in code block
+        line = header_space(line)       # #Header, Alt-H1, Alt-H2
+        line = block_quote(line)        # Formatting for block quotes
+        line = check_half_links(line)   # SE half-links with no () and only []
+        check_paragraph(line)           # Check if Markdown paragraph (empty line)
+        new_lines.append(line)          # Modified version of original lines
+
+        # Check if we need to include copy to clipboard command
+        command = check_copy_code(line_index)
         if command:
-            insert_clipboard = True  # Does not have any copy to clipboard inserts yet
+            insert_clipboard = True     # Copy to clipboard has been used
             # Code block qualifies for copy to clipboard button
-            offset = code_block_index + copy_clipboard_count
-            # offset will account for previous command inserted
+            offset = code_block_index + copy_code_count
+            # offset will account for any previous commands inserted in this post
             new_lines.insert(offset, command)
             # New lines list is now longer than original lines list
-            copy_clipboard_count += 1
+            copy_code_count += 1
             # print('inserted line:', command)
 
     lines = new_lines
-    #if copy_clipboard_count > 1:
+    #if copy_code_count > 1:
     #    print()
-    #    print('copy_clipboard_count:', copy_clipboard_count)
+    #    print('copy_code_count:', copy_code_count)
     #    dump(row)
 
     ''' Add to total lines '''
@@ -1079,14 +1207,15 @@ for row in rows:
     header_levels = [0, 0, 0, 0, 0, 0]
     alternate_h1 = 0
     alternate_h2 = 0
-    if in_code_block:
-        print('still in code block when post ended')
+    if in_code_block or in_code_indent:
+        print('still in code block or code_indent when post ended')
         dump(row)
     in_code_block = False   # In a code block # Header formatting is skipped
+    in_code_indent = False
     toc_inserted = False    # Has TOC been inserted yet?
     sum2 = 0                # Track for new header to insert Navigation Bar
 
-    for curr_index, line in enumerate(lines):
+    for line_index, line in enumerate(lines):
         check_code_block(line)      # Turn off formatting when in code block
         # Did this post qualify for adding navigation bar?
         # Save header levels counts we have now to "old_"
