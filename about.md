@@ -58,10 +58,10 @@ Pippim has no business model for making money today. You will find no user track
 no ads and no spamming. Maybe someday Pippim will make money but in the meantime it
 is simply a labour of love.
 
-{% include image.html src="/assets/img/Edmonton  Temperature Nov 21, 2021.png"
+{% include image.html src="/assets/img/Edm Temperature December 7, 2021.png"
    alt="Edmonton Temperature"
    style="float: right; width: 60%; margin: 1em 0px 0px 1em; text-align: center;"
-   caption="Edmonton Alberta Canada"
+   caption="Image Credit: Apple's DarkSky.net"
 %}
 
 ## Where is Pippim located?
@@ -76,9 +76,10 @@ for free by the providers so the cost cannot be argued.
 
 As you may have deduced by the little yellow dot in this image
 though, Pippim is physically located in Edmonton, Canada. 
-Tonight (November 21, 2021 at 8:30pm MST), as the
-map for Edmonton shows, it is cool but not cold. It's only
-one degree below freezing.
+This afternoon (December 7, 2021 at 5:46pm MST), as the
+map for Edmonton shows, it is chilly at 6 degrees below
+freezing. Obviously most people in Edmonton are happy for 
+global warming and climate change.
 
 <a id="when-was-pippim-created?"></a>
 ## When was Pippim created?
