@@ -830,10 +830,9 @@ Then the next `row` from `rows` is read and pass 1 starts over again.
 
 ## Detailed Markdown Conversion
 
-When reading the details below keep in mind when "Pippim" is stated it's just
-shorthand for saying "`stack-to-blog.py` python program".
+A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jekyll posts.
 
-1. Pippim adds navigation bar buttons (Top, ToS, ToC and Skip) by putting HTML code into the markdown files. Then HTML code controls jumping to id tags when a button is clicked. Here's an easy-to-read example of the HTML code:
+1. Navigation bar buttons (Top, ToS, ToC and Skip) are added by putting HTML code into the markdown files. Then HTML code controls jumping to id tags when a button is clicked. Here's an easy-to-read example of the HTML code:
   
     ``` html
     # Introduction
@@ -912,17 +911,19 @@ shorthand for saying "`stack-to-blog.py` python program".
 
 6. **Note:** You can open one of the blog posts and compare it to the Stack Exchange original answer.
 
-7. Pippim will take older markdown format on Stack Exchange Answers where `#Header` was used and convert it to `# Header`.
+7. Older markdown format on Stack Exchange posts where `#Header` was permitted are converted to `# Header`.
 
 8. The alternate H1 markdown format "`Header 1`" line followed by a "`==`" line are converted to "`# Header 1`". The alternate H2 markdown format "`Header 2`" line followed by a "`--`" line are converted to "`## Header 2`". Trailing "==" and "--" lines are converted to blank lines.
 
-9. Pippim converts Stack Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll *front matter*.
+9. Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll *front matter*.
 
 10. Pippim setups the Jekyll front matter as required for `title:` and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
 
 11. Stack Exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for GitHub Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
 
-12. For large code blocks a "Copy to Clipboard" button is provided.
+12. For larger code blocks, where the default is 15 lines or more, a "Copy to Clipboard" button is provided.
+
+13. Stack Exchange allows leading 4 spaces for a code block. These don't fit Krampdown Rouge formatting in GitHub Pages so they are converted to fenced code blocks ```` ``` bash ```` or ```` ``` python ```` depending on the "shebang".
 
 The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
