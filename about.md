@@ -68,18 +68,22 @@ is simply a labour of love.
 
 Figuratively speaking, Pippim is located in "the clouds" on 
 [Google Sites](https://pippim.com) (https://pippim.com) and
-[GitHub Pages](https://github.com/pippim/pippim.github.io)
+[GitHub](https://github.com/pippim/pippim.github.io)
 (https://github.com/pippim/pippim.github.io) where all the 
 source code is kept. The website you are viewing now is found
-at https://pippim.github.io. All three websites are hosted
-for free by the providers so the cost cannot be argued.
+on [GitHub Pages](https://pippim.github.io) 
+(https://pippim.github.io). All three websites are hosted
+for free by the providers. Other than the cost of time to 
+learn web design, I can't how cheap the process has been!
 
 As you may have deduced by the little yellow dot in this image
 though, Pippim is physically located in Edmonton, Canada. 
+For a better view, right click on the picture, select
+"Open in new tab" and then zoom in with your browser.
 This afternoon (December 7, 2021 at 5:46pm MST), as the
 map for Edmonton shows, it is chilly at 6 degrees below
 freezing. Obviously most people in Edmonton are happy for 
-global warming and climate change.
+global warming and climate change. Sorry Greta :/
 
 <a id="when-was-pippim-created?"></a>
 ## When was Pippim created?
