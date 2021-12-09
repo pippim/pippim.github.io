@@ -11,7 +11,7 @@ votes:        15
 favorites:    
 views:        2,989
 accepted:     Accepted
-uploaded:     2021-12-09 05:03:43
+uploaded:     2021-12-09 06:07:48
 toc:          true
 navigation:   true
 clipboard:    true
@@ -25,7 +25,7 @@ clipboard:    true
 
 ## June 4, 2018 Update
 
-A much superior program called `multi-timer` has been created: (A timer to set up different alarms simultaneously)[https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly][1]
+A much superior program called `multi-timer` has been created: [A timer to set up different alarms simultaneously][1]
 
 
 <a id="hdr2"></a>
