@@ -926,7 +926,7 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
 
 13. Stack Exchange allows leading 4 spaces for a code block. These don't fit Krampdown Rouge formatting in GitHub Pages so they are converted to fenced code blocks ```` ``` bash ```` or ```` ``` python ```` depending on the "shebang".
 
-14. Stack Exchange Markdown may be missing the link name. If so the link name is inserted. For example: If `[https://askubuntu.com/questions/1234567/question-title]`is found without a link name, it is converted to `(Question Title)[https://askubuntu.com/questions/1234567/question-title]`.
+14. Stack Exchange Markdown may be missing the link name. If so the link name is inserted. For example: If `[https://askubuntu.com/questions/1234567/question-title][1]`is found without a link name, it is converted to `[Question Title](https://askubuntu.com/questions/1234567/question-title)[1]`.
 
 The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
