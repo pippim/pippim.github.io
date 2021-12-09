@@ -738,31 +738,59 @@ a list call `lines`.
 Each `line` in `lines` is read in a new loop and analyzed by
 the following functions:
 
-- `line = check_code_block(line)`
-- `line = check_code_indent(line)`
-- `line = header_space(line)`
-- `line = block_quote(line)`
-- `check_paragraph(line)`
-- `command = check_copy_clipboard(curr_index)`
+``` python
+line = check_code_block(line)   # Turn off formatting when in code block
+line = check_code_indent(line)  # Reformat code indent to fenced code block
+line = header_space(line)       # #Header, Alt-H1, Alt-H2
+line = block_quote(line)        # Formatting for block quotes
+line = check_half_links(line)   # SE half-links with no () and only []
+check_paragraph(line)           # Check if Markdown paragraph (empty line)
+lines[line_index] = line        # Update any changes to original
+new_lines.append(line)          # Modified version of original lines
 
-After pass 1 completes the following bit of code decides whether TOC
+# Check if we need to include copy to clipboard command
+command = check_copy_code(line_index)
+if command:
+   insert_clipboard = True     # Will set Jekyll front matter = true
+   # prepend command + \n to ``` bash line
+   new_lines[code_block_index] = \
+       command + "\n" + new_lines[code_block_index]
+```
+
+After Pass 1 loop completes, the modified lines are reread and massaged
+back into the original lines list:
+
+``` python
+ lines = []
+ for line in new_lines:
+     # Split \n inserted by check_code_indent()
+     sub_lines = line.split('\n')
+     if len(sub_lines) > 1:
+         for sub_line in sub_lines:
+             lines.append(sub_line)
+     else:
+         lines.append(line)
+```
+
+Akso, after pass 1 completes, the following bit of code decides whether TOC
 and/or navigation buttons are inserted:
 
 ``` python
-    insert_toc = False
-    if CONTENTS is not None:
-        if header_count >= TOC_HDR_MIN and word_count >= TOC_WORD_MIN:
-            insert_toc = True
-            total_toc += 1
-            print('total_toc:    ', total_toc, blog_filename)
+ insert_toc = False
+ if CONTENTS is not None:
+     if header_count >= TOC_HDR_MIN and word_count >= TOC_WORD_MIN:
+         insert_toc = True
+         total_toc += 1
+         print('total_toc:    ', total_toc, blog_filename)
 
-    insert_nav_bar = False
-    if NAV_BAR_OPT > 0:
-        qualifier = sum(header_levels[:NAV_BAR_LEVEL])
-        if qualifier >= NAV_BAR_MIN and word_count >= TOC_WORD_MIN:
-            insert_nav_bar = True
-            total_nav_bar += 1
+ insert_nav_bar = False
+ if NAV_BAR_OPT > 0:
+     qualifier = sum(header_levels[:NAV_BAR_LEVEL])
+     if qualifier >= NAV_BAR_MIN and word_count >= TOC_WORD_MIN:
+         insert_nav_bar = True
+         total_nav_bar += 1
 ```
+
 
 ### Pass 2
 
@@ -916,17 +944,17 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
 
 8. The alternate H1 markdown format "`Header 1`" line followed by a "`==`" line are converted to "`# Header 1`". The alternate H2 markdown format "`Header 2`" line followed by a "`--`" line are converted to "`## Header 2`". Trailing "==" and "--" lines are converted to blank lines.
 
-9. Exchange tags formated as: `<Tag1><Tag2><Tag3>` and converts them to: `tags: Tag1 Tag2 Tag3` for Jekyll *front matter*.
+9. Stack Exchange post tags are formated as: `<Tag1><Tag2><Tag3>`. For GitHub they areconverted to: `tags: Tag1 Tag2 Tag3`.
 
-10. Pippim setups the Jekyll front matter as required for `title:` and sets the blog filename as expected. However it also allows custom front matter for URL, Votes, Last Edit Date, etc.
+10. The Stack Exchange title is set up as the Jekyll front matter title with the front matter variable `title:`. The blog filename is created based on the title. Optional front matter can be specified such as for URL, Votes, Last Edit Date, etc. based on the Stack Exchange post.
 
-11. Stack Exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for GitHub Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting.
+11. The Stack Exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for GitHub Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting. The fenced code block, for example ```` ``` bash ```` takes precedence though. After than the "shebang", for example `#!/bin/bash` takes precendence for code block syntax highlighting.
 
-12. For larger code blocks, where the default is 15 lines or more, a "Copy to Clipboard" button is provided.
+12. For larger code blocks, where the default is 15 lines or more, a button is provided to copy the fenced code block to the system clipboard.
 
-13. Stack Exchange allows leading 4 spaces for a code block. These don't fit Krampdown Rouge formatting in GitHub Pages so they are converted to fenced code blocks ```` ``` bash ```` or ```` ``` python ```` depending on the "shebang".
+13. Stack Exchange allows leading 4 spaces for a code block. These don't work well to support the Krampdown Rouge formatting in GitHub Pages. Therefore they are converted to fenced code blocks ```` ``` bash ```` or ```` ``` python ```` depending on the "shebang" or `<!-- language...` comment.
 
-14. Stack Exchange Markdown can dynamicallly provide the link name within SE sties. GitHub Pages does not support this feature. For example, if `[https://askubuntu.com/questions/1234567/question-title][1]`is found without a link name, it is converted to `[Question Title][1]`.
+14. Stack Exchange Markdown can dynamicallly look-up the link name within SE sties. GitHub Pages does not support this feature. For example, if `[https://askubuntu.com/questions/1234567/question-title][1]`is found without a link name, it is converted to `[Question Title][1]`. This will only work if the link is to one of your own posts in your `QueryResults.csv` file.
 
 The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
