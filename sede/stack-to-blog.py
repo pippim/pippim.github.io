@@ -13,7 +13,7 @@
 #       Nov. 24 2021 - Check self-answered questions and not accepted yet.
 #       Dec. 04 2021 - Copy fenced code block to clipboard.
 #       Dec. 07 2021 - Support 4 space indented code. Convert to fenced block.
-#       Dec. 08 2021 - Fix half-links [https://..] without (name) before.
+#       Dec. 09 2021 - Change SE half-links [https://..] to [link name].
 #
 # ==============================================================================
 
@@ -479,10 +479,10 @@ close_before_found = False
 
 
 def check_half_links(ln):
-    """ Scan line for SE half-links where '[https://' appears with no ')'
+    """ Scan line for SE half-links where '[https://...]' appears with ' '
         immediately before it. SE half-links support specifying only the
-        URL and SE goes out to get the current title for the URL. This
-        only works for SE URLs.
+        URL and SE goes out to get the current name for the URL. This
+        only works in SE though, not in G-H Pages.
 
         From: https://meta.stackexchange.com/help/formatting
 
@@ -495,6 +495,8 @@ def check_half_links(ln):
               [1]: https://www.google.com/
               [yahoo]: https://www.yahoo.com/
 
+        TODO:
+            Substitute HREF from SE post to G-H post if it exists.
 
     """
     global total_half_links, total_bad_half_links, half_links, bad_half_links
@@ -505,11 +507,13 @@ def check_half_links(ln):
 
     keep_looking = True
     last_start = 0
-    names = []
-    offsets = []
     while keep_looking:
 
         # Note: slicing a string not supported with .find()
+        half_link = None
+        name = None
+        print_this = False
+
         start = ln.find("[https://", last_start)
 
         if start == -1:
@@ -530,62 +534,73 @@ def check_half_links(ln):
             print('HALF-LINK start without end')
             continue
 
-        parts = ln[start+1:end-1].split('/')
-        # search = '<a href="' + ln[start+1:end-2]
-        search = '<a href="' + parts[0] + "//" + parts[2]
+        half_link = ln[start+1:end]  # Remove [] wrapper
+        parts = half_link.split('/')
+        # search = '<a href="' in HTML
+        parts_search = parts[0] + "//" + parts[2]
+        """ Search for:
+                <a href="https.../meaning-file?utm_medium=organic&utm_source=
+            What exists:
+                <a href="https.../meaning-file?utm_medium=organic&amp;utm_sou
+
+            So build a shorter search only containing:
+                <a href="https://askubuntu.com/questions/396957/
+        
+            TODO: Problem with shorter search is if multiple links to same
+                  website in HTML and links have long common nesting.
+        """
 
         if len(parts) > 3:
-            search = search + "/" + parts[3]
+            parts_search = parts_search + "/" + parts[3]
         if len(parts) > 4:
-            search = search + "/"
+            parts_search = parts_search + "/" + parts[4]
 
+        search = '<a href="' + parts_search
         # end-1 can have / which messes up .find
         found_start = row[HTML].find(search)
         if found_start == -1:
             print('LINK Not Found:', search)
             print(parts)
             print(row[HTML])
-            """ Search for:
-<a href="https://askubuntu.com/questions/396957/meaning-file?utm_medium=organic&utm_source=
-                What exists:
-<a href="https://askubuntu.com/questions/396957/meaning-file?utm_medium=organic&amp;utm_sou
-            
-            """
-            continue
+            break
 
-        ''' Search from ending > '''
+        ''' Search for name's starting > '''
         name_start = row[HTML].find('>', found_start)
         if name_start == -1:
             print('NAME START Not Found:', search)
             print(parts)
             print(row[HTML])
+
         name_start += 1  # Skip over >
-        ''' Search from ending </a> '''
+
+        ''' Search for name's ending </a> '''
         name_end = row[HTML].find('</a>', name_start)
         if name_end == -1:
             print('NAME END Not Found:', search)
             print(parts)
             print(row[HTML])
+            break
 
+        # Get link's name
         name = row[HTML][name_start:name_end]
-        names.append(name)
-        offsets.append(start)
-        #print('title:', name_start, name_end, '"' + title + '"')
+        # print('search:', search, 'name:', name)
+        # print('name_start:', name_start, 'name_end:', name_end, name)
+        if parts_search == "https://askubuntu.com/questions/1039357":
+            print()
+            print(ln, "\n")
+            print('PARTS:  ', parts_search)
+            print('SEARCH: ', search)
+            print('REPLACE:', '"' + half_link + '"')
+            print('WITH:   ', '"' + name + '"')
+            print_this = True
+
+        if half_link is not None and name is not None:
+            ln = ln.replace(half_link, name)
+            if print_this:
+                print(ln, "\n")
 
         last_start = start + 8  # Next link to search for
 
-    if len(names) == 0:
-        # There are no link names to insert
-        return ln
-
-    # Insert names backwards so offsets don't have to be recalculated
-    for i, name in reversed(list(enumerate(names))):
-        insert = "(" + name + ")"
-        ln = ln[:offsets[i]] + insert + ln[offsets[i]:]
-        #if i > 0:
-        #    print(ln)
-
-    # print(ln)
     return ln
 
 
@@ -1206,7 +1221,7 @@ for row in rows:
         line = block_quote(line)        # Formatting for block quotes
         line = check_half_links(line)   # SE half-links with no () and only []
         check_paragraph(line)           # Check if Markdown paragraph (empty line)
-        lines[line_index] = line        # Update any changes
+        lines[line_index] = line        # Update any changes to original
         new_lines.append(line)          # Modified version of original lines
 
         # Check if we need to include copy to clipboard command
@@ -1222,16 +1237,10 @@ for row in rows:
         # Split \n inserted by check_code_indent()
         sub_lines = line.split('\n')
         if len(sub_lines) > 1:
-            # print('sub lines:', sub_lines)
             for sub_line in sub_lines:
-                lines.append('sub_line')
+                lines.append(sub_line)
         else:
-            lines.append('line')
-
-    #if copy_code_count > 1:
-    #    print()
-    #    print('copy_code_count:', copy_code_count)
-    #    dump(row)
+            lines.append(line)
 
     ''' Add to total lines '''
     total_lines += line_count
