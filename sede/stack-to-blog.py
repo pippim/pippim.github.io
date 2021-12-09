@@ -13,6 +13,7 @@
 #       Nov. 24 2021 - Check self-answered questions and not accepted yet.
 #       Dec. 04 2021 - Copy fenced code block to clipboard.
 #       Dec. 07 2021 - Support 4 space indented code. Convert to fenced block.
+#       Dec. 08 2021 - Fix half-links [https://..] without (name) before.
 #
 # ==============================================================================
 
@@ -502,65 +503,89 @@ def check_half_links(ln):
     if in_code_block or in_code_indent:
         return ln
 
-    if ln[0:4] == "    ":
-        # In code block
-        return ln
-
     keep_looking = True
-    start = 0
     last_start = 0
+    names = []
+    offsets = []
     while keep_looking:
 
         # Note: slicing a string not supported with .find()
         start = ln.find("[https://", last_start)
 
         if start == -1:
+            # No more links were found
             break
         if start == 0:
             # We found [https:// at the start of the line, so we have to insert
-            last_start = start + 8
-            # Each time we insert, we have to add length of (...) to last_start
+            char_before = " "  # Fake it
+        else:
+            char_before = ln[start-1:start]
+
+        if char_before == ")":
+            continue  # Link has a name, search line for another without one
+
+        # We found start of half-link. Now find end of it.
+        end = ln.find("]", start)
+        if end == -1:
+            print('HALF-LINK start without end')
             continue
 
-        char_before = ln[start-1:start]
-        print_this = False
-        if char_before == " ":
-            half_links += 1
-            total_half_links += 1
-            if space_before_found is False:
-                print_this = True
-            space_before_found = True
+        parts = ln[start+1:end-1].split('/')
+        # search = '<a href="' + ln[start+1:end-2]
+        search = '<a href="' + parts[0] + "//" + parts[2]
 
-        elif char_before == "(":
-            half_links += 1
-            total_half_links += 1
-            if open_before_found is False:
-                print_this = True
-            open_before_found = True
+        if len(parts) > 3:
+            search = search + "/" + parts[3]
+        if len(parts) > 4:
+            search = search + "/"
 
-        elif char_before == ")":
-            # This is a normal good link
-            if close_before_found is False:
-                print_this = True
-            close_before_found = True
+        # end-1 can have / which messes up .find
+        found_start = row[HTML].find(search)
+        if found_start == -1:
+            print('LINK Not Found:', search)
+            print(parts)
+            print(row[HTML])
+            """ Search for:
+<a href="https://askubuntu.com/questions/396957/meaning-file?utm_medium=organic&utm_source=
+                What exists:
+<a href="https://askubuntu.com/questions/396957/meaning-file?utm_medium=organic&amp;utm_sou
+            
+            """
+            continue
 
-        if char_before != ")":
-            end = start + 50
-            if end + start >= len(ln):
-                end = None
-            print('HALF-LINK at:', line_index, 'of:', line_count,
-                  'row:', row_number, ln[start:end])
+        ''' Search from ending > '''
+        name_start = row[HTML].find('>', found_start)
+        if name_start == -1:
+            print('NAME START Not Found:', search)
+            print(parts)
+            print(row[HTML])
+        name_start += 1  # Skip over >
+        ''' Search from ending </a> '''
+        name_end = row[HTML].find('</a>', name_start)
+        if name_end == -1:
+            print('NAME END Not Found:', search)
+            print(parts)
+            print(row[HTML])
 
-        if print_this:
-            print('SAMPLE half-link dump line [https://... at:',
-                  line_index, 'of:', line_count, 'row:', row_number)
-            print(ln)
-            print('start:', start, 'last_start:', last_start)
-            print('char_before:', '"' + char_before + '"')
-            dump(row)
+        name = row[HTML][name_start:name_end]
+        names.append(name)
+        offsets.append(start)
+        #print('title:', name_start, name_end, '"' + title + '"')
 
-        last_start = start + 8
+        last_start = start + 8  # Next link to search for
 
+    if len(names) == 0:
+        # There are no link names to insert
+        return ln
+
+    # Insert names backwards so offsets don't have to be recalculated
+    for i, name in reversed(list(enumerate(names))):
+        insert = "(" + name + ")"
+        ln = ln[:offsets[i]] + insert + ln[offsets[i]:]
+        #if i > 0:
+        #    print(ln)
+
+    # print(ln)
     return ln
 
 
@@ -1174,7 +1199,6 @@ for row in rows:
     ''' Pass #1: Count markdown elements '''
     new_lines = []
     insert_clipboard = False  # Does not have any copy to clipboard inserts yet
-    copy_code_count = 0
     for line_index, line in enumerate(lines):
         line = check_code_block(line)   # Turn off formatting when in code block
         line = check_code_indent(line)  # Reformat code indent to fenced code block
@@ -1188,18 +1212,14 @@ for row in rows:
         # Check if we need to include copy to clipboard command
         command = check_copy_code(line_index)
         if command:
-            insert_clipboard = True     # Copy to clipboard has been used
-            # Code block qualifies for copy to clipboard button
-            offset = code_block_index + copy_code_count
-            # offset will account for any previous commands inserted in this post
-            new_lines.insert(offset, command)
-            # New lines list is now longer than original lines list
-            copy_code_count += 1
-            # print('inserted line:', command)
+            insert_clipboard = True     # Will set Jekyll front matter = true
+            # prepend command + \n to ``` bash line
+            new_lines[code_block_index] = \
+                command + "\n" + new_lines[code_block_index]
 
     lines = []
     for line in new_lines:
-        # Split \n
+        # Split \n inserted by check_code_indent()
         sub_lines = line.split('\n')
         if len(sub_lines) > 1:
             # print('sub lines:', sub_lines)
