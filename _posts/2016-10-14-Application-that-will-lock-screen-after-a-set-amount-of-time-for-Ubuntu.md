@@ -11,7 +11,7 @@ votes:        15
 favorites:    
 views:        2,989
 accepted:     Accepted
-uploaded:     2021-12-07 17:22:32
+uploaded:     2021-12-09 05:03:43
 toc:          true
 navigation:   true
 clipboard:    true
@@ -25,7 +25,7 @@ clipboard:    true
 
 ## June 4, 2018 Update
 
-A much superior program called `multi-timer` has been created: [https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly][1]
+A much superior program called `multi-timer` has been created: (A timer to set up different alarms simultaneously)[https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly][1]
 
 
 <a id="hdr2"></a>
@@ -103,7 +103,10 @@ amount of time before screen is locked.
 
 Open the `Terminal` using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and type:
 
-    gedit lock-screen-timer
+``` bash
+gedit lock-screen-timer
+
+```
 
 
 <a id="hdr7"></a>
@@ -241,7 +244,10 @@ Then toggle back to the empty `gedit` window and paste the code using <kbd>Ctrl<
 
 Now we need to make the script executable by typing:
 
-    chmod +x lock-screen-timer
+``` bash
+chmod +x lock-screen-timer
+
+```
 
 
 <a id="hdr9"></a>
@@ -252,7 +258,10 @@ Now we need to make the script executable by typing:
 
 Before calling the script from the GUI, we'll call it from the terminal so we can see if any error messages are displayed:
 
-    ~/lock-screen-timer
+``` bash
+~/lock-screen-timer
+
+```
 
 You are prompted for the number of minutes:
 
