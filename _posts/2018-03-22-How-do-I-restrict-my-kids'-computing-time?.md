@@ -6,12 +6,12 @@ stack_url:    https://askubuntu.com/q/1018106
 type:         Answer
 tags:         software-recommendation bash parental-controls
 created_date: 2018-03-22 01:06:16
-edit_date:    2021-11-14 01:26:43
+edit_date:    2021-12-04 21:51:58
 votes:        2
 favorites:    
-views:        58,579
+views:        58,711
 accepted:     Accepted
-uploaded:     2021-12-05 07:39:56
+uploaded:     2021-12-09 06:07:48
 toc:          true
 navigation:   true
 clipboard:    true
@@ -61,7 +61,10 @@ Although there are 3rd Party applications to do this, you can create your own. S
 
 Open the `Terminal` using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and type:
 
-    gedit lock-screen-timer
+``` bash
+gedit lock-screen-timer
+
+```
 
 
 <a id="hdr5"></a>
@@ -188,7 +191,10 @@ Then toggle back to the empty `gedit` window and paste the code using <kbd>Ctrl<
 
 Now we need to make the script executable by typing:
 
-    chmod +x lock-screen-timer
+``` bash
+chmod +x lock-screen-timer
+
+```
 
 
 <a id="hdr7"></a>
@@ -199,7 +205,10 @@ Now we need to make the script executable by typing:
 
 Before calling the script from the GUI, we'll call it from the terminal so we can see if any error messages are displayed:
 
-    ~/lock-screen-timer
+``` bash
+~/lock-screen-timer
+
+```
 
 You are prompted for the number of minutes:
 
@@ -246,12 +255,11 @@ After the timer is running and you double click on it again the first running co
 
 # Display Time Remaining in systray / notification area
 
-While lock screen timer is running it records how many minutes are remaining into the file `~/.lock-screen-timer-remaining`. You can look at this file with the `watch` command or display it on Ubuntu's system tray / application indicator bar as shown at the top of this answer. To display time remaining in the notification area, follow the instructions in this Q&A: ([https://askubuntu.com/questions/882419/how-can-bash-display-in-ubuntus-unity-system-tray][3]).
+While lock screen timer is running it records how many minutes are remaining into the file `~/.lock-screen-timer-remaining`. You can look at this file with the `watch` command or display it on Ubuntu's system tray / application indicator bar as shown at the top of this answer. To display time remaining in the notification area, follow the instructions in this Q&A: [Can BASH display in systray as application indicator?](https://askubuntu.com/questions/882419/how-can-bash-display-in-ubuntus-unity-system-tray).
 
 
   [1]: https://i.stack.imgur.com/N0gb6.gif
   [2]: https://i.stack.imgur.com/0jBz6.png
-  [3]: https://askubuntu.com/questions/882419/how-can-bash-display-in-ubuntus-unity-system-tray
 
 
 <a id="hdr11"></a>
