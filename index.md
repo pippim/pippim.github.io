@@ -439,6 +439,7 @@ Stack Exchange to Jekyll Blog Post conversion. They are:
 - Jekyll Front Matter
 - TOC and Navigation Buttons
 
+<a id="random_record_limit"></a>
 ### Random Record Limit
 
 During intial testing phase you will want to utilize the
@@ -743,7 +744,7 @@ line = check_code_block(line)   # Turn off formatting when in code block
 line = check_code_indent(line)  # Reformat code indent to fenced code block
 line = header_space(line)       # #Header, Alt-H1, Alt-H2
 line = block_quote(line)        # Formatting for block quotes
-line = check_half_links(line)   # SE half-links with no () and only []
+line = check_half_links(line)   # SE uses [https://…] instead of [Post Title]
 check_paragraph(line)           # Check if Markdown paragraph (empty line)
 lines[line_index] = line        # Update any changes to original
 new_lines.append(line)          # Modified version of original lines
@@ -772,8 +773,8 @@ back into the original lines list:
          lines.append(line)
 ```
 
-Akso, after pass 1 completes, the following bit of code decides whether TOC
-and/or navigation buttons are inserted:
+Also after pass 1 completes, the following bit of code decides whether TOC
+and/or navigation buttons are going to be used in the blog post:
 
 ``` python
  insert_toc = False
@@ -794,17 +795,19 @@ and/or navigation buttons are inserted:
 
 ### Pass 2
 
-The second pass rereads the `lines` all over again taking
-the knowledged gained in the first pass and using it to
-create TOC and navigation bar buttons at the correct
-locations.
+Pass 2 uses heading level list of total
+counts from Pass 1 to see if post qualifies for TOC or Navigation
+Bar. Then every line from the `lines` list is read again and the 
+steps below are done.
 
-Pass 2 must reinitialize some counts made in pass 1 so they
-are not doubled up wen the `check_code_block(line)` fuction
-is called again for each line.
+At the start of the pass 2 loop, some counts from Pass 1 are
+reset to zero so they are not doubled up when `header_space(line)`
+is called again. 
 
-Pass 2 does the key job of creating a new markdown file for
-the website blog post based on the Stack Exchange Post:
+At the bottom of the Pass 2 loop does the key job of adding 
+a new markdown line to the blog post file. Here is what Pass 2
+does as it loops through every line in the list:
+
 
 {% include copyHeader.html %}
 ``` python
@@ -848,9 +851,11 @@ the website blog post based on the Stack Exchange Post:
      new_md = new_md + line + '\n'
 ```
 
-Finally pass 2 writes the blog footer section and depending on
-random record limit physically writes the blog to local
-storage.
+When Pass 2 loop over every `line` in the `lines` finishes,
+the blog post footer section is written.
+
+Finally, depending on the [random record limit](#random_record_limit),
+the file is flushed to disk or simply discarded if it is not to be saved.
 
 Then the next `row` from `rows` is read and pass 1 starts over again.
 
