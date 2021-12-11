@@ -773,7 +773,7 @@ back into the original lines list:
          lines.append(line)
 ```
 
-Also after pass 1 completes, the following bit of code decides whether TOC
+Also after Pass 1 completes, the following bit of code decides whether TOC
 and/or navigation buttons are going to be used in the blog post:
 
 ``` python
@@ -792,63 +792,62 @@ and/or navigation buttons are going to be used in the blog post:
          total_nav_bar += 1
 ```
 
+The heading level list of total counts created in Pass 1 are
+checked to see if post qualifies for TOC or Navigation
+Bar. Then every line from the `lines` list is read again and the 
+steps below are done in Pass 2.
+
 
 ### Pass 2
-
-Pass 2 uses heading level list of total
-counts from Pass 1 to see if post qualifies for TOC or Navigation
-Bar. Then every line from the `lines` list is read again and the 
-steps below are done.
 
 At the start of the pass 2 loop, some counts from Pass 1 are
 reset to zero so they are not doubled up when `header_space(line)`
 is called again. 
 
-At the bottom of the Pass 2 loop does the key job of adding 
-a new markdown line to the blog post file. Here is what Pass 2
-does as it loops through every line in the list:
+The bottom of the Pass 2 loop does the key job of adding 
+a new markdown line to the blog post file in memory. Here is what
+Pass 2 does as it loops through every `line` in the `lines` list:
 
 
 {% include copyHeader.html %}
 ``` python
- for line in lines:
-     check_code_block(line)      # Turn off formatting when in code block
-     # Did this post qualify for adding navigation bar?
-     # Save header levels counts we have now to "old_"
-     old_header_levels = list(header_levels)
-     line = header_space(line)   # Formatting for #Header or # Header lines
-     if insert_nav_bar:
-         sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
-         sum2 = sum(header_levels[:NAV_BAR_LEVEL])
-         # For next qualifying header level insert HTML for navigation bar.
-         if sum1 != sum2:
-             # First check if at TOC_LOC and insert TOC if needed
-             if insert_toc:
-                 if sum2 == TOC_LOC:
-                     new_md = new_md + navigation_bar(TOC_LOC)
-                     if NAV_BAR_OPT <= 3:
-                         # If Option "4" a blank line already inserted before us
-                         new_md = new_md + "\n"
-                     new_md = new_md + CONTENTS + "\n"
-                     new_md = new_md + "\n"  # When 4 a blank line already inserted before us
-                     toc_inserted = True  # Not necessary but is consistent
-                 if sum2 >= TOC_LOC:
-                     sum2 += 1   # All heading levels after TOC are 1 greater
-
-             new_md = new_md + navigation_bar(sum2)
-
-     elif insert_toc:
-         # No navigation bar but we still need TOC at header count
-         if header_count == TOC_LOC and toc_inserted is False:
-             if NAV_BAR_OPT <= 3:
-                 # If Option "4" a blank line already inserted before us
-                 new_md = new_md + "\n"
-             new_md = new_md + CONTENTS + "\n"
-             new_md = new_md + "\n"
-             toc_inserted = True  # Prevents regeneration next line read
-             print('toc only:', blog_filename)
-
-     new_md = new_md + line + '\n'
+check_code_block(line)      # Turn off formatting when in code block
+# Did this post qualify for adding navigation bar?
+# Save header levels counts we have now to "old_"
+old_header_levels = list(header_levels)
+line = header_space(line)   # Formatting for #Header or # Header lines
+if insert_nav_bar:
+    sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
+    sum2 = sum(header_levels[:NAV_BAR_LEVEL])
+    # For next qualifying header level insert HTML for navigation bar.
+    if sum1 != sum2:
+        # First check if at TOC_LOC and insert TOC if needed
+        if insert_toc:
+            if sum2 == TOC_LOC:
+                new_md = new_md + navigation_bar(TOC_LOC)
+                if NAV_BAR_OPT <= 3:
+                    # If Option "4" a blank line already inserted before us
+                    new_md = new_md + "\n"
+                new_md = new_md + CONTENTS + "\n"
+                new_md = new_md + "\n"  # When 4 a blank line already inserted before us
+                toc_inserted = True  # Not necessary but is consistent
+            if sum2 >= TOC_LOC:
+                sum2 += 1   # All heading levels after TOC are 1 greater
+ 
+        new_md = new_md + navigation_bar(sum2)
+ 
+elif insert_toc:
+    # No navigation bar but we still need TOC at header count
+    if header_count == TOC_LOC and toc_inserted is False:
+        if NAV_BAR_OPT <= 3:
+            # If Option "4" a blank line already inserted before us
+            new_md = new_md + "\n"
+        new_md = new_md + CONTENTS + "\n"
+        new_md = new_md + "\n"
+        toc_inserted = True  # Prevents regeneration next line read
+        print('toc only:', blog_filename)
+ 
+new_md = new_md + line + '\n'
 ```
 
 When Pass 2 loop over every `line` in the `lines` finishes,
