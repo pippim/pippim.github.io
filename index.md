@@ -1112,18 +1112,19 @@ When the `stack-to-blog.py` finishes a summary appears on your screen:
 // =============================/   T O T A L S   \============================== \\
 
 RANDOM_LIMIT:     10,000  | PRINT_RANDOM:        False  | NAV_FORCE_TOC:        True
-NAV_BAR_MIN:           3  | NAV_WORD_MIN:         1000  | COPY_LINE_MIN:          20
-accepted_count:      623  | total_votes:         7,110  | total_views:    52,261,286
-question_count:      299  | answer_count:        2,143  | save_blog_count:     1,211
-total_self_answer:   113  | total_self_accept:      54  | Self Needing Accept:    59
-total_headers:     1,619  | total_header_spaces:   402  | total_quote_spaces:  1,563
-total_lines:      56,410  | total_paragraphs:   15,991  | total_words:       317,101
-total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     31
-total_code_blocks:   264  | code_block_lines:    3,562  | total_clipboards:       32
-total_pseudo_tags:   170  | total_copy_lines:    2,671  | total_toc:              25
-most_lines:          820  | total_force_end:     1,052  | total_nav_bar:          37
-total_header_levels:  [599, 798, 220, 2, 0, 0]
-total_tag_names:      ['conky', 'multi-timer', 'eyesome', 'cpuf', 'iconic']
+NAV_BAR_MIN:           3  | NAV_WORD_MIN:          700  | COPY_LINE_MIN:          20
+accepted_count:      632  | total_votes:         7,149  | total_views:    52,632,065
+question_count:      300  | answer_count:        2,145  | save_blog_count:     1,218
+total_self_answer:   112  | total_self_accept:      58  | Self Needing Accept:    54
+total_headers:     1,651  | total_header_spaces:   402  | total_quote_spaces:  1,574
+total_lines:      56,558  | total_paragraphs:   16,050  | total_words:       324,607
+total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     59
+total_code_blocks: 2,587  | total_block_lines:   3,606  | total_clipboards:      293
+total_code_indents:2,319  | total_indent_lines: 22,274  | total_half_links:      205
+total_pseudo_tags:   425  | total_copy_lines:   17,240  | total_toc:              26
+most_lines:          820  | total_force_end:     1,057  | total_nav_bar:          55
+total_header_levels:  [600, 828, 221, 2, 0, 0]
+total_tag_names:      ['conky', 'vnstat', 'multi-timer', 'yad', 'eyesome', 'iconic', 'cpuf']
 ```
 
 Each total name with an underscore (`_`) is the
@@ -1165,8 +1166,11 @@ print('total_pre_codes:  {:>6,}'.format(total_pre_codes),
       ' | total_alternate_h1: {:>6,}'.format(total_alternate_h1),
       ' | total_alternate_h2: {:>6,}'.format(total_alternate_h2))
 print('total_code_blocks:{:>6,}'.format(total_code_blocks),
-      ' | code_block_lines:  {:>7,}'.format(total_code_block_lines),
+      ' | total_block_lines: {:>7,}'.format(total_block_lines),
       ' | total_clipboards:  {:>7,}'.format(total_clipboards))
+print('total_code_indents:{:>5,}'.format(total_code_indents),
+      ' | total_indent_lines:{:>7,}'.format(total_indent_lines),
+      ' | total_half_links:  {:>7,}'.format(total_half_links))
 print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
       ' | total_copy_lines:  {:>7,}'.format(total_copy_lines),
       ' | total_toc:         {:>7,}'.format(total_toc))
