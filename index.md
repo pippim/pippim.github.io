@@ -742,7 +742,7 @@ the following functions:
 ``` python
 line = check_code_block(line)   # Turn off formatting when in code block
 line = check_code_indent(line)  # Reformat code indent to fenced code block
-line = header_space(line)       # #Header, Alt-H1, Alt-H2
+line = header_space(line)       # #Header, Alt-H1, Alt-H2. Set header_levels
 line = block_quote(line)        # Formatting for block quotes
 line = check_half_links(line)   # SE uses [https://…] instead of [Post Title]
 check_pseudo_tags(line)         # Check if pseudo tag(s) should be added
@@ -815,7 +815,7 @@ check_code_block(line)      # Turn off formatting when in code block
 # Did this post qualify for adding navigation bar?
 # Save header levels counts we have now to "old_"
 old_header_levels = list(header_levels)
-line = header_space(line)   # Formatting for #Header or # Header lines
+line = header_space(line)   # #Header, Alt-H1, Alt-H2. Set header_levels
 if insert_nav_bar:
     sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
     sum2 = sum(header_levels[:NAV_BAR_LEVEL])
