@@ -143,6 +143,7 @@ $honeydew: #F0FFF0 !default; // Honeydew
     visibility: visible;
 }
 
+/* Now in _includes/image.html
 figure {
   padding: 10px;
   border-top: 1px solid #999;
@@ -150,7 +151,6 @@ figure {
   border-bottom: 2px solid #555;
   border-left: 1px solid #999;
 }
-/* Now in _includes/image.html
 figure figcaption {
   text-align: center;
 }
