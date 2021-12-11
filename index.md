@@ -1036,7 +1036,7 @@ In the `stack-to-blog.py` python program they are defined like this:
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
 
-## Stack Exchnage `<!-- language` Tags
+## Stack Exchange `<!-- language` Tags
 
 When Stack Exchange uses `<!-- language-all` it is converted to appropriate format for GitHub using this multi-purpose function:
 
@@ -1100,6 +1100,69 @@ def check_code_block(ln):
 
 **NOTE:** This funcion also provides support for inserting the 
 "Copy to Clipboard" button.
+
+## Stack Exchange 4 spaces indented code block
+
+Stack Exchange can use four spaces (`    `) to signify a code
+block. When this happens, the language is lost to GitHub Pages
+markdown. Therefore they are converted to a ```` ``` fenced code
+block```` with language tag. The following code is used:
+
+{% include copyHeader.html %}
+``` python
+def check_code_indent(ln):
+    """ If line starts with "    " we are now in code indent.
+
+        If already in code indent and line does NOT begin with "    "
+            then we are now out of code block.
+
+
+    """
+    global in_code_indent, total_code_indents
+
+    ''' Code blocks may be indented which are called "in_code_indent" here.
+
+        If line begins with four spaces condsider it entering a code indent.
+        
+        TODO: code indents immediately following a ul (unordered list) or 
+        li (list item) are not considered a code indent. Neither are code
+        indents following another code indent. 
+
+        To end code indent you must use line with no leading space.
+
+        For many ways of SE code blocks see:
+        https://medium.com/analytics-vidhya/5-ways-to-embed-code-in-stack-overflow-8d9f38edf02c
+    '''
+
+    if in_code_block:
+        return ln
+
+    if ln[:4] == "    ":
+        # Add language if not used already
+        if in_code_indent is False:
+            total_code_indents += 1  # Total for all posts
+            in_code_indent = True  # Code indent has begun
+            # Check next line for shebang
+            # #!/bin/sh (shell)
+            # #!/bin/bash
+            # #!/bin/.... (python anywhere in line)
+            this_language = language_used
+            # TODO Check past boundary
+            she_language = check_shebang(ln)
+            if she_language:
+                this_language = she_language
+            # print('BEFORE ln:', ln)
+            ln = "``` " + this_language + "\n" + ln[4:]
+            # print('AFTER ln:', ln)
+        else:
+            ln = ln[4:]     # Remove first four characters
+            # print('ln:', ln)
+    elif in_code_indent:
+        in_code_indent = False  # Code indent has ended
+        ln = ln + "\n```\n"  # Add ending code block
+
+    return ln
+```
 
 <a id="hdr15"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
