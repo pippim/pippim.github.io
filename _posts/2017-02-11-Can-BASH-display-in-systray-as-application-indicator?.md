@@ -11,15 +11,19 @@ votes:        6
 favorites:    
 views:        1,817
 accepted:     Accepted
-uploaded:     2021-12-09 06:07:48
+uploaded:     2021-12-11 11:42:20
 toc:          false
-navigation:   false
+navigation:   true
 clipboard:    true
 ---
 
 The best method I've found is **System Monitor Indicator** from this article: [webupd8.org - Ubuntu application indicator that displays bash][1]. It displays text on the Unity system tray / application indicator bar that your bash script "echos".
 
 The above article is targeted to Ubuntu 16.04 with Unity. For more information on Xubuntu, Gnome-Shell + app-indicator extension, and Budgie, go to the Developers website: [fossfreedom / indicator-sysmonitor][2]. Also visit the site for more detailed installation and configuration instructions.
+
+
+<a id="hdr1"></a>
+<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
 
 # Install and Configure `indicator-sysmonitor`
 
@@ -48,6 +52,10 @@ _ In Command field type name of your bash script, ie `/mnt/e/bin/indicator-sysmo
 - I changed the refresh time interval from `2` seconds to `.3` second. To support "spinning pizza" explained below.
 - Now click the <kbd>Save</kbd> button.
 
+
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+
 # Sysmonitor Indicator in action
 
 This `.gif` shows how it looks when Ubuntu’s Unity System Tray is updated.
@@ -59,6 +67,10 @@ This `.gif` shows how it looks when Ubuntu’s Unity System Tray is updated.
 - A spinning pizza appears along with a count down of remaining time.
 
 **NOTE:** System Monitor Indicator also displays "Brightness: 3000". This is the daytime setting for my Intel Backlight hardware brightness level (link below).
+
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
 
 # Sysmonitor Indicator BASH script
 
@@ -102,6 +114,10 @@ exit 0
 After telling ***Sysmonitor Indicator*** the name of your bash script by setting the `{Custom}` variable it runs every refresh interval. Whatever your bash script outputs via `echo` command appears in Ubuntu's System Tray.
 
 **NOTE:** The script displays *Time Remaining* and *Display Brightness Level* values. These value are set by scripts documented in **Ask Ubuntu**:  [Application that will lock screen after a set amount of time for Ubuntu][4], [A timer to set up different alarms simultaneosly][5] and [Automatically adjust display brightness based on sunrise and sunset][6] respectively.
+
+
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
 
 # Spinning pizza--`text-spinner` BASH script
 
@@ -148,3 +164,7 @@ fi
   [4]: https://askubuntu.com/questions/837078/application-that-will-lock-screen-after-a-set-amount-of-time-for-ubuntu/837115#837115
   [5]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
   [6]: https://askubuntu.com/questions/894460/automatically-adjust-display-brightness-based-on-sunrise-and-sunset
+
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a></div>
