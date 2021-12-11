@@ -64,21 +64,30 @@ from random import randint
     ============================================================================
 
     There are TO-DO's littered through out the program.
-    
-    Find broken links: https://brianli.com/2021/06/how-to-find-broken-links-with-python/
-    
-    In the body of a Stack Exchange post you might see:
-    
-        A much superior program called `multi-timer` has been created:
-        [https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly][1]
 
-    Then at the bottom of the post you will see:
+    Suppress Navigation bar if last bar was < 100 words ago. For example
     
-        [1]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
+                            < Navigation Bar >
+        # Summary
+        
+        Short one line sentence.
+    
+                            < Navigation Bar >
+    
+        ## Additional Information
+    
+        Visit the linked pages for mor information.    
 
-    For G-H Pages it needs to be reformatted by looking up the title for 1039357.
-        In this case it was changed to "Set of Countdown Timers with Alarm". 
+    Because there are only six words between the first and second
+    navigation bars, the second navigation bar will not be
+    generated.
 
+    Build array of all posts front matter stack_URL and corresponding 
+    post filename. Then use post over Stack Exchange post reference if
+    it exists. From example https://stackoverflow.com/a/9195560/6929343 :
+    
+        [Some Link]({% post_url 2010-07-21-name-of-post %})
+    
 """
 
 INPUT_FILE = 'QueryResults.csv'
@@ -255,7 +264,7 @@ total_code_blocks = 0           # How many code blocks are there?
 total_code_block_lines = 0      # How many lines are inside code blocks?
 total_code_indents = 0          # How many code indents are there?
 total_code_indent_lines = 0     # How many lines are inside code indents?
-total_half_links = 0            # SE half-links with [] but no ()
+total_half_links = 0            # SE uses [https://…] instead of [Post Title]
 total_bad_half_links = 0        # SE half-links unresolved - not in this query
 total_clipboards = 0            # How many copy to clipboard inserts?
 total_copy_lines = 0            # How many code block lines in clipboard inserts?
@@ -297,7 +306,7 @@ code_block_index = 0        # Double duty as code_indent_index
 code_block_line_count = 0   # Double duty as code_indent_line_count
 in_code_indent = False
 language_used = ""          # What language when fenced code blocks have none?
-half_links = 0              # SE half-links with [] but no ()
+half_links = 0              # SE uses [https://…] instead of [Post Title]
 bad_half_links = 0          # SE half-links unresolved - not in this query
 
 ''' Functions
@@ -309,7 +318,7 @@ bad_half_links = 0          # SE half-links unresolved - not in this query
     dump(r)
     header_space(ln)
     block_quote(ln) 
-    check_paragraph(ln) 
+    check_pseudo_tags(ln) 
     check_code_block(ln) 
     check_code_indent(ln) 
     check_copy_code(line_index)
@@ -473,11 +482,6 @@ def block_quote(ln):
     return ln
 
 
-space_before_found = False
-open_before_found = False
-close_before_found = False
-
-
 def check_half_links(ln):
     """ Scan line for SE half-links where '[https://...]' appears with ' '
         immediately before it. SE half-links support specifying only the
@@ -500,38 +504,24 @@ def check_half_links(ln):
 
     """
     global total_half_links, total_bad_half_links, half_links, bad_half_links
-    global space_before_found, open_before_found, close_before_found
 
     if in_code_block or in_code_indent:
         return ln
 
-    keep_looking = True
     last_start = 0
-    while keep_looking:
+    print_this = None
+    # print_this = "https://askubuntu.com/questions/1039357"
 
-        # Note: slicing a string not supported with .find()
-        half_link = None
-        name = None
-        print_this = False
-
+    while True:
+        # Search for next half-link after last half-link
         start = ln.find("[https://", last_start)
-
         if start == -1:
-            # No more links were found
-            break
-        if start == 0:
-            # We found [https:// at the start of the line, so we have to insert
-            char_before = " "  # Fake it
-        else:
-            char_before = ln[start-1:start]
+            break  # No more half-links were found
 
-        if char_before == ")":
-            continue  # Link has a name, search line for another without one
-
-        # We found start of half-link. Now find end of it.
-        end = ln.find("]", start)
+        end = ln.find("]", start)  # Find end of half-link.
         if end == -1:
             print('HALF-LINK start without end')
+            last_start = start + 8  # Next link to search for
             continue
 
         half_link = ln[start+1:end]  # Remove [] wrapper
@@ -546,8 +536,8 @@ def check_half_links(ln):
             So build a shorter search only containing:
                 <a href="https://askubuntu.com/questions/396957/
         
-            TODO: Problem with shorter search is if multiple links to same
-                  website in HTML and links have long common nesting.
+            TODO: Drawback with shorter search is if there are multiple links
+                  to the same website and links have > 2 common sub-directories.
         """
 
         if len(parts) > 3:
@@ -566,46 +556,50 @@ def check_half_links(ln):
 
         ''' Search for name's starting > '''
         name_start = row[HTML].find('>', found_start)
-        if name_start == -1:
-            print('NAME START Not Found:', search)
+        failure = "'name_start'"
+        if name_start != -1:
+            name_start += 1  # Skip over >
+            failure = None
+            ''' Search for name's ending </a> '''
+            name_end = row[HTML].find('</a>', name_start)
+            if name_end == -1:
+                failure = "'name_end'"
+
+        if failure:
+            print(failure, 'Not Found:', search)
             print(parts)
             print(row[HTML])
-
-        name_start += 1  # Skip over >
-
-        ''' Search for name's ending </a> '''
-        name_end = row[HTML].find('</a>', name_start)
-        if name_end == -1:
-            print('NAME END Not Found:', search)
-            print(parts)
-            print(row[HTML])
-            break
+            bad_half_links += 1
+            total_bad_half_links += 1
+            last_start = start + 8
+            continue
 
         # Get link's name
         name = row[HTML][name_start:name_end]
-        # print('search:', search, 'name:', name)
-        # print('name_start:', name_start, 'name_end:', name_end, name)
-        if parts_search == "https://askubuntu.com/questions/1039357":
+
+        half_links += 1
+        total_half_links += 1
+        ln = ln.replace(half_link, name)
+
+        if parts_search == print_this:
             print()
-            print(ln, "\n")
             print('PARTS:  ', parts_search)
             print('SEARCH: ', search)
-            print('REPLACE:', '"' + half_link + '"')
-            print('WITH:   ', '"' + name + '"')
-            print_this = True
-
-        if half_link is not None and name is not None:
-            ln = ln.replace(half_link, name)
-            if print_this:
-                print(ln, "\n")
+            print('REPLACE:', '[' + half_link + ']')
+            print('WITH:   ', '[' + name + ']')
+            print('URL:    ', row[URL])
+            print(ln, "\n")
 
         last_start = start + 8  # Next link to search for
 
     return ln
 
 
-def check_paragraph(ln):
-    """ If line is empty it means it's a paragraph.  Note if line ends in
+def check_pseudo_tags(ln):
+    """
+        Check if pseudo-tag should be inserted based on keywords list.
+        
+        If line is empty it means it's a paragraph.  Note if line ends in
         two spaces it forces a new line but not a paragraph break.  Also
         note if three lines were written in a row they would be merged
         into one paragraph.
@@ -1139,7 +1133,7 @@ for row in rows:
     code_block_index = 0
     code_block_line_count = 0
     in_code_indent = False
-    half_links = 0          # SE half-links with [] but no ()
+    half_links = 0          # SE uses [https://…] instead of [Post Title]
     bad_half_links = 0      # SE half-links unresolved - not in this query
     force_end_line = False  # Did Pass #1 force an empty blank line at end?
     self_answer = False     # Is this a self-answered question?
@@ -1220,7 +1214,7 @@ for row in rows:
         line = header_space(line)       # #Header, Alt-H1, Alt-H2
         line = block_quote(line)        # Formatting for block quotes
         line = check_half_links(line)   # SE half-links with no () and only []
-        check_paragraph(line)           # Check if Markdown paragraph (empty line)
+        check_pseudo_tags(line)           # Check if Markdown paragraph (empty line)
         lines[line_index] = line        # Update any changes to original
         new_lines.append(line)          # Modified version of original lines
 
