@@ -745,7 +745,7 @@ line = check_code_indent(line)  # Reformat code indent to fenced code block
 line = header_space(line)       # #Header, Alt-H1, Alt-H2
 line = block_quote(line)        # Formatting for block quotes
 line = check_half_links(line)   # SE uses [https://…] instead of [Post Title]
-check_paragraph(line)           # Check if Markdown paragraph (empty line)
+check_pseudo_tags(line)         # Check if pseudo tag(s) should be added
 lines[line_index] = line        # Update any changes to original
 new_lines.append(line)          # Modified version of original lines
 
