@@ -9,7 +9,7 @@ layout: default
 
 {% include image.html src="/assets/img/pngwing.com.png"
    alt="GitHub Octacat Mascot by pngwing.com"
-   style="float: left; width: 45%; margin: 2em 1em 0px 0px; text-align: center;"
+   style="float: left; width: 45%; margin: 2em 1em 0px 0px;"
    caption="GitHub's Octocat Mascot image credit: 
       <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>"
 %}
@@ -215,7 +215,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 
 {% include image.html src="/assets/img/github pages themes.png"
    alt="github pages themes.png"
-   style="float: right; width: 60%; margin: 2em 0px 0px 1em; text-align: center;"
+   style="float: right; width: 60%; margin: 2em 0px 0px 1em;"
    caption="Image credit:
             <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
                >Yale University</a>"
