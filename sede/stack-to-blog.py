@@ -483,10 +483,10 @@ def block_quote(ln):
 
 
 def check_half_links(ln):
-    """ Scan line for SE half-links where '[https://...]' appears with ' '
-        immediately before it. SE half-links support specifying only the
-        URL and SE goes out to get the current name for the URL. This
-        only works in SE though, not in G-H Pages.
+    """ Scan line for SE half-links where '[https://...]' appears.
+        SE half-links support specifying only the URL and SE goes
+        out to get the current name for the URL. This only works in
+        SE though, not in G-H Pages.
 
         From: https://meta.stackexchange.com/help/formatting
 
@@ -1211,10 +1211,10 @@ for row in rows:
     for line_index, line in enumerate(lines):
         line = check_code_block(line)   # Turn off formatting when in code block
         line = check_code_indent(line)  # Reformat code indent to fenced code block
-        line = header_space(line)       # #Header, Alt-H1, Alt-H2
+        line = header_space(line)       # #Header, Alt-H1, Alt-H2. Set header_levels
         line = block_quote(line)        # Formatting for block quotes
-        line = check_half_links(line)   # SE half-links with no () and only []
-        check_pseudo_tags(line)           # Check if Markdown paragraph (empty line)
+        line = check_half_links(line)   # SE uses [https://…] instead of [Post Title]
+        check_pseudo_tags(line)         # Check if Markdown paragraph (empty line)
         lines[line_index] = line        # Update any changes to original
         new_lines.append(line)          # Modified version of original lines
 
@@ -1294,7 +1294,7 @@ for row in rows:
         # Did this post qualify for adding navigation bar?
         # Save header levels counts we have now to "old_"
         old_header_levels = list(header_levels)
-        line = header_space(line)   # Formatting for #Header or # Header lines
+        line = header_space(line)   # #Header, Alt-H1, Alt-H2. Set header_levels
         if insert_nav_bar:
             sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
             sum2 = sum(header_levels[:NAV_BAR_LEVEL])
