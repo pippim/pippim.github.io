@@ -62,14 +62,14 @@
 
 
         {% if page.views and page.views != "" and page.views != nil %}
-          <fmVar>View:</fmVar>
+          <fmVar>Views:</fmVar>
             <mark>&nbsp;{{ page.views }}&nbsp;</mark>
         {% endif %}
         {% if page.votes and page.votes != "" and page.votes != nil %}
            &nbsp;&nbsp; Votes:&nbsp;&nbsp;<mark>&nbsp;{{ page.votes }}&nbsp;</mark>
         {% endif %}
         {% if page.accepted and page.accepted != "" and page.accepted != nil %}
-           &nbsp;&nbsp; ✅&nbsp;Accepted&nbsp;Answer
+           &nbsp;&nbsp; ✅&nbsp;Solution
         {% endif %}
 
         {% if page.tags and page.tags != "" and page.tags != nil and page.tags.size > 0 %}
