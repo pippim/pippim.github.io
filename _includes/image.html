@@ -1,7 +1,13 @@
 <!-- From: https://talk.jekyllrb.com/t/need-help-with-image-caption/6715/2 -->
 
 <figure
-    style="{{ include.style }}"
+    style="{{ include.style }}
+            padding: 10px;
+            border-top: 1px solid #999;
+            border-right: 2px solid #555;
+            border-bottom: 2px solid #555;
+            border-left: 1px solid #999;
+          "
   >
   <img
     src="{{ include.src }}"
