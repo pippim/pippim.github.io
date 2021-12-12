@@ -647,7 +647,7 @@ on your website page, edit the files `_includes/page.html`
 and `assets/js/post_fm.html`.
 
 The <mark>Reverse Formatting</mark> is defined in
-`assets/css/style.scss` thusly:
+`assets/css/style.scss`:
 
 ``` scss
 // Swap font color and background color
@@ -1283,12 +1283,12 @@ def check_copy_code(this_index):
 The Liquid Tag to include the Copy Code Block button is inserted
 into markdown thusly:
 
-```` Python
+```` python
 {% raw %}
 {% include copyHeader.html %}
 ``` python
 def check_copy_code(this_index):
-    (... SNIP ...)
+    (... SNIP rest of code shown in previous section ...)
 {% endraw %}    
 ````
 
