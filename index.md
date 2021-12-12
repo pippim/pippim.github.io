@@ -1356,7 +1356,7 @@ The `code-header` and `copy-code-button` classes are kept in `assets/css/style.s
 }
 ```
 
-Javascript is used to do the actually copying from Fenced Code Block
+Javascript Query is used to copy a Fenced Code Block
 to the System Clipboard. The code is located in `assets/js/copyCode.js`:
 
 ``` js
