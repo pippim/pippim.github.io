@@ -16,12 +16,13 @@ layout: default
 
 # Introduction
 
-Welcome to Pippim. A collection of questions and 
+Welcome to Pippim. A collection of Stack Exchange questions and 
 answers about using your computer in Linux and 
-specifically Ubuntu. All the solutions are free.
- You can use them as you like. There are also
- full-fledged applications that are free for 
-you to use as well.
+specifically Ubuntu. All the solutions are free for you.
+to use as you like. There are full-fledged applications 
+free for you to use as well. You can even duplicate the
+Pippim website for free. Then **automatically convert your
+own Stack Exchange posts to your own website.**
 
 There are no ads on Pippim. You don't need to buy 
 Pippim a coffee (it's already free at work!).
@@ -374,17 +375,24 @@ morning, compresses files, and emails to gmail.com automatically.
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
-# Convert Stack Exchange Posts to Website Posts
+# Convert Stack Exchange to GitHub Pages
 
 Converting thousands of Stack Exchange Q&A in markdown format isn't as easy 
-as simply copying them over to GitHub Pages. To generate Pippim's blog posts
-fromt Stack Excahgne posts, the python program `stack-to-blog.py` was used.
+as simply copying them over to GitHub Pages. The python program 
+`stack-to-blog.py` was used to convert Stack Exchange posts to
+GitHub Pages Posts.
 The full `stack-to-blog.py` program can be accessed on the 
 [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/StackQuery).
-This program automatically:
 
-- Cretates Jekyll front matter.
-- Selects Stack Exchange Posts based on meeting minimum criterea such as up-votes or accepted status.
+The program automatically:
+
+- Creates Jekyll front matter.
+- Selects Stack Exchange Posts based on meeting minimum criterea such as up-votes or accepted answer status.
+- Converts Stack Exchange Markdown format to GitHub Pages Kramdown Markdown format.
+- Inserts Table of Contents (TOC)
+- Inserts section navigation buttons for: Top of Page, Top of Section, Table of Contents and Skip Section.
+- Inserts "Copy Code Block to System Clipboard" button
+- Prints list of self-answered questions you neglected to accept after two day wait period.
 - Prints summary totals when finished.
 
 ## Stack Exchange Data Explorer
@@ -392,6 +400,11 @@ This program automatically:
 The first step is to run the 
 [Stack Exchange Data Explorer query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s?AccountId=4775729).
 Many thanks to the the query's [Author](https://meta.stackexchange.com/a/371435/366359).
+
+**IMPORTANT:** When you add or revise a post in Stack Exchange the data is not avaialble
+for a query until Sunday at 3am UTC. A `cron` job or GitHub Actions
+can theoretically run the query every Monday morning but that step
+has not been created yet.
 
 When the query finishes (it can take a few minutes), 
 download all your questions and answers 
@@ -471,7 +484,7 @@ lines to your screen.
 <a id="hdr10"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
 
-### Blog Post Selection Criteria
+### Stack Exchange Post Selection Criteria
 
 Although most of the focus is on converting SE Answers
 to blog posts, you can convert SE Questions to blog
@@ -486,29 +499,32 @@ the answers.
 - If the question has enough up-votes it doesn't
 matter because only the answer up-votes count.
 
-The program defaults are to only convert answers that
-are accepted or have two or more up votes. The program
-defaults to never convert questions.
+The `stack-to-blog.py` program defaults are to convert:
+
+- Questions with 2 or more up-votes (see note above on self-answered questions).
+- Answers with 2 or more up-votes.
+- Answers that have been accepted, regardless of voting.
 
 Here is the relevant code:
 
 ``` python
-QUESTIONS_QUALIFIER = False  # Don't upload questions
+QUESTIONS_QUALIFIER = True  # Convert questions to blog posts
 VOTE_QUALIFIER = 2          # Posts need at least 2 votes to qualify
 ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
-# Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
+PRINT_COLUMN_NAMES = False  # Print QueryResults first row to terminal
+PRINT_NOT_ACCEPTED = False  # Print self answered questions not accepted
 ```
 
-If you change `QUESTION_QUALIFIER` to `True`, then questions
-will also be converted to blog posts. If they are
-self-answered questions though, the answer is converted
-instead.
+If you change `QUESTION_QUALIFIER` to `False`, then questions
+will not be converted to blog posts. If they are
+self-answered questions though, the answer may still be converted.
 
-When the program finishes a list of all self-answered questions
-that were not accepted is printed. No doubt you forgot to go
-back after two day mandatory waiting period to accept your own
-answer. Copy URL's from the list to your browser address bar
-and accept the answers in Stack Exchange. After you've
+When the program finishes it can print a list of all
+self-answered questions that were not accepted. After the 
+two day mandatory waiting period to accept your own
+answers you forgot to accept it. Copy URL's from the
+list to your browser address bar and accept the answers
+in Stack Exchange. After you've
 accepted your own answers you should run the query, 
 download `QueryResults.csv` and `run stack-to-blog.py`
 
@@ -861,7 +877,7 @@ Then the next `row` from `rows` is read and pass 1 starts over again.
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
 
-## Detailed Markdown Conversion
+# Detailed Stack Exchange Conversion
 
 A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jekyll posts.
 
@@ -1166,6 +1182,97 @@ def check_code_indent(ln):
 
 <a id="hdr15"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
+
+## Copy Code Block to Clipboard
+
+The default is to provide a button to copy a fenced code block to
+the system clipboard when there are 20 lines or more. It doesn't
+make sense to take up extra space with a copy button when the
+user can easily select a line or two with their mouse and use
+Right Click + Copy.
+
+**IMPORTANT:** Stack Exchange allows indenting four spaces to
+define a code block. These are converted to a fenced code block
+and the four leading spaces are removed. Language syntax 
+highlighting tag is added based on "shebang". If shebang is
+not available or not recognized the previous `<!-- Langage`
+tag is used. The following example:
+
+```
+    #!/bin/bash
+    exit 0
+```
+
+is converted to:
+
+````
+``` bash
+#!/bin/bash
+exit 0
+```
+````
+
+The `check_copy_code()` function below keeps track of where code
+blocks begin, how many lines are in the code block and
+what liquid command (if any) is inserted before the code
+block.
+
+``` python
+def check_copy_code(this_index):
+    """ Check to insert copy to clipboard include.
+
+        If already in code block and line begins with ```
+            then we are now out of code block.
+
+        Set default syntax language when none on code block. SE standard:
+            <!-- language: bash -->
+            <!-- language-all: lang-bash -->
+
+    """
+    global total_block_lines, total_indent_lines
+    global old_in_code_block, code_block_index
+    global lines, line_count, line_index
+    global total_clipboards, total_copy_lines
+
+    inserted_command = ""
+    if in_code_block is True or in_code_indent is True:
+        if in_code_block:
+            total_block_lines += 1
+        else:
+            total_indent_lines += 1
+
+        # old_in_code_block repurposed for old_in_code_indent as well
+        if old_in_code_block is False:
+            # Set index for start of code block or code indent
+            code_block_index = this_index
+            # print('Start code block:', lines[this_index])
+    elif old_in_code_block is True:
+        # Just ended code block or code indent, how many lines?
+        code_block_line_count = this_index - code_block_index
+        # Sanity check, lines[index] must contain fenced code block ```
+        code = lines[code_block_index]
+
+        # print('  End code block:', lines[this_index])
+        if code[0:3] == "```":
+            # Copy to clipboard only supported when fenced code
+            # block is NOT indented
+            if COPY_TO_CLIPBOARD is not None and \
+               code_block_line_count >= COPY_LINE_MIN:
+                inserted_command = COPY_TO_CLIPBOARD
+                total_clipboards += 1
+                total_copy_lines += code_block_line_count
+        else:
+            # The lines[index] fenced code block ``` isn't left justified.
+            # Probably within list item and copy to clipboard doesn't work.
+            print('Unable to decipher code block:', code)
+
+    if in_code_block or in_code_indent:
+        old_in_code_block = True
+    else:
+        old_in_code_block = False
+
+    return inserted_command
+```
 
 ## Summary Totals
 
