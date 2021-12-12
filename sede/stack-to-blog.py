@@ -14,6 +14,7 @@
 #       Dec. 04 2021 - Copy fenced code block to clipboard.
 #       Dec. 07 2021 - Support 4 space indented code. Convert to fenced block.
 #       Dec. 09 2021 - Change SE half-links [https://..] to [link name].
+#       Dec. 11 2021 - Minimum number of words since last Navigation Bar.
 #
 # ==============================================================================
 
@@ -63,7 +64,10 @@ from random import randint
     TO-DO
     ============================================================================
 
-    There are TO-DO's littered through out the program.
+    There are long-term TO-DO's littered through out the program. This section is
+    for the immediate TO-DO's.
+
+    FIRST TO-DO:
 
     Suppress Navigation bar if last bar was < 100 words ago. For example
     
@@ -80,7 +84,11 @@ from random import randint
 
     Because there are only six words between the first and second
     navigation bars, the second navigation bar will not be
-    generated.
+    generated.  The NAV_LAST_WORDS global variable (currently set to 80)
+    will be used for suppressing Navigation Bars that are too close
+    to the previous Navigation Bar.
+
+    SECOND TO-DO:
 
     Build array of all posts front matter stack_URL and corresponding 
     post filename. Then use post over Stack Exchange post reference if
@@ -124,7 +132,8 @@ NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
 NAV_BAR_LEVEL = 2           # Only for "#" or "##". Not for "###", "####", etc.
 NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 NAV_BAR_MIN = 3             # Minimum number of # & ## headers required
-NAV_WORD_MIN = 1000         # Minimum 1,000 words for navigation button bar
+NAV_WORD_MIN = 700          # Minimum 700 words for navigation button bar
+NAV_LAST_WORDS = 80         # Minimum of 80 words since last navigation bar
 
 ''' Copy code block contents to clipboard options. '''
 # If Copy button is never wanted, set to None
@@ -261,9 +270,9 @@ total_words = 0                 # How many words by splitting whitespace
 total_pseudo_tags = 0           # Keywords that qualify as tags for question
 total_tag_names = []            # All the tags added for all the posts
 total_code_blocks = 0           # How many code blocks are there?
-total_code_block_lines = 0      # How many lines are inside code blocks?
+total_block_lines = 0      # How many lines are inside code blocks?
 total_code_indents = 0          # How many code indents are there?
-total_code_indent_lines = 0     # How many lines are inside code indents?
+total_indent_lines = 0     # How many lines are inside code indents?
 total_half_links = 0            # SE uses [https://…] instead of [Post Title]
 total_bad_half_links = 0        # SE half-links unresolved - not in this query
 total_clipboards = 0            # How many copy to clipboard inserts?
@@ -303,7 +312,6 @@ self_accept = False         # Is this self-answered question accepted?
 in_code_block = False       # Are we in a code block? Then no # Header formatting
 old_in_code_block = False   # Double duty as old_in_code_indent
 code_block_index = 0        # Double duty as code_indent_index
-code_block_line_count = 0   # Double duty as code_indent_line_count
 in_code_indent = False
 language_used = ""          # What language when fenced code blocks have none?
 half_links = 0              # SE uses [https://…] instead of [Post Title]
@@ -800,17 +808,17 @@ def check_copy_code(this_index):
             <!-- language-all: lang-bash -->
 
     """
-    global total_code_block_lines, total_code_indent_lines
+    global total_block_lines, total_indent_lines
     global old_in_code_block, code_block_index
-    global code_block_line_count, lines, line_count, line_index
+    global lines, line_count, line_index
     global total_clipboards, total_copy_lines
 
     inserted_command = ""
     if in_code_block is True or in_code_indent is True:
         if in_code_block:
-            total_code_block_lines += 1
+            total_block_lines += 1
         else:
-            total_code_indent_lines += 1
+            total_indent_lines += 1
 
         # old_in_code_block repurposed for old_in_code_indent as well
         if old_in_code_block is False:
@@ -829,18 +837,11 @@ def check_copy_code(this_index):
             # block is NOT indented
             if COPY_TO_CLIPBOARD is not None and \
                code_block_line_count >= COPY_LINE_MIN:
-                # line_count += 1
-                # line_index += 1  # Not sure this is needed...
-                # print()
-                # print('BEFORE:', lines[code_block_index])
                 inserted_command = COPY_TO_CLIPBOARD
                 total_clipboards += 1
                 total_copy_lines += code_block_line_count
-                # print('AFTER :', lines[code_block_index])
-                # print('       ', lines[code_block_index+1])
-                # print('CLIP:', blog_filename)
         else:
-            # If lines[index] fenced code block ``` isn't left justified.
+            # The lines[index] fenced code block ``` isn't left justified.
             # Probably within list item and copy to clipboard doesn't work.
             print('Unable to decipher code block:', code)
 
@@ -1131,7 +1132,6 @@ for row in rows:
     in_code_block = False   # In a code block # Header formatting is skipped
     old_in_code_block = False
     code_block_index = 0
-    code_block_line_count = 0
     in_code_indent = False
     half_links = 0          # SE uses [https://…] instead of [Post Title]
     bad_half_links = 0      # SE half-links unresolved - not in this query
@@ -1214,7 +1214,7 @@ for row in rows:
         line = header_space(line)       # #Header, Alt-H1, Alt-H2. Set header_levels
         line = block_quote(line)        # Formatting for block quotes
         line = check_half_links(line)   # SE uses [https://…] instead of [Post Title]
-        check_pseudo_tags(line)         # Check if Markdown paragraph (empty line)
+        check_pseudo_tags(line)         # Check if pseudo tag(s) should be added
         lines[line_index] = line        # Update any changes to original
         new_lines.append(line)          # Modified version of original lines
 
@@ -1253,7 +1253,7 @@ for row in rows:
     insert_nav_bar = False  # Does not qualify for Navigation Buttons yet
     if NAV_BAR_OPT > 0:
         qualifier = sum(header_levels[:NAV_BAR_LEVEL])
-        if qualifier >= NAV_BAR_MIN and word_count >= TOC_WORD_MIN:
+        if qualifier >= NAV_BAR_MIN and word_count >= NAV_WORD_MIN:
             insert_nav_bar = True
             total_nav_bar += 1
             # print('total_nav_bar:', total_nav_bar, blog_filename)
@@ -1287,6 +1287,7 @@ for row in rows:
     in_code_indent = False
     toc_inserted = False    # Has TOC been inserted yet?
     sum2 = 0                # Track for new header to insert Navigation Bar
+    last_nav_id = 0         # Last navigation bar ID assigned
 
     ''' Pass #2: Loop through lines to insert TOC and Navigation Bar '''
     for line_index, line in enumerate(lines):
@@ -1309,6 +1310,7 @@ for row in rows:
                             new_md = new_md + "\n"
                         new_md = new_md + CONTENTS + "\n"
                         new_md = new_md + "\n"  # When 4 a blank line already inserted before us
+                        last_nav_id += 1
                         toc_inserted = True  # Not necessary but is consistent
                     if sum2 >= TOC_LOC:
                         sum2 += 1   # All heading levels after TOC are 1 greater
@@ -1393,8 +1395,11 @@ print('total_pre_codes:  {:>6,}'.format(total_pre_codes),
       ' | total_alternate_h1: {:>6,}'.format(total_alternate_h1),
       ' | total_alternate_h2: {:>6,}'.format(total_alternate_h2))
 print('total_code_blocks:{:>6,}'.format(total_code_blocks),
-      ' | code_block_lines:  {:>7,}'.format(total_code_block_lines),
+      ' | total_block_lines: {:>7,}'.format(total_block_lines),
       ' | total_clipboards:  {:>7,}'.format(total_clipboards))
+print('total_code_indents:{:>5,}'.format(total_code_indents),
+      ' | total_indent_lines:{:>7,}'.format(total_indent_lines),
+      ' | total_half_links:  {:>7,}'.format(total_half_links))
 print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
       ' | total_copy_lines:  {:>7,}'.format(total_copy_lines),
       ' | total_toc:         {:>7,}'.format(total_toc))
