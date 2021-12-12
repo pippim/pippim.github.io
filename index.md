@@ -1356,6 +1356,30 @@ The `code-header` and `copy-code-button` classes are kept in `assets/css/style.s
 }
 ```
 
+Javascript is used to do the actually copying from Fenced Code Block
+to the System Clipboard. The code is located in `assets/js/copyCode.js`:
+
+``` js
+// Copy code block contents to clipboard. 
+// See _includes/copyHeader.html for credit
+
+const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
+const copyCodeButtons = document.querySelectorAll('.copy-code-button');
+
+copyCodeButtons.forEach((copyCodeButton, index) => {
+  const code = codeBlocks[index].innerText;
+
+  copyCodeButton.addEventListener('click', () => {
+    window.navigator.clipboard.writeText(code);
+    copyCodeButton.classList.add('copied');
+
+    setTimeout(() => {
+      copyCodeButton.classList.remove('copied');
+    }, 2000);
+  });
+});
+```
+
 <a id="hdr17"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr16" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr18" class="hdr-btn">Skip</a></div>
 
