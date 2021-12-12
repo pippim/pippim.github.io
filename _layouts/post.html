@@ -179,15 +179,16 @@
         {% if page.layout and page.layout != "" and page.layout != nil %}
           &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>&nbsp;{{ page.layout }}&nbsp;</mark>
         {% endif %}
+        <!-- Don't test "if page.toc" value because "false" prevents displaying FM -->
         {% if page.toc != "" and page.toc != nil %}
           <br/>
           <fmVar>TOC:</fmVar>
             <mark>&nbsp;{{ page.toc }}&nbsp;</mark>
         {% endif %}
-        {% if page.navigation and page.navigation != "" and page.navigation != nil %}
+        {% if page.navigation != "" and page.navigation != nil %}
           &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
         {% endif %}
-        {% if page.clipboard and page.clipboard != "" and page.clipboard != nil %}
+        {% if page.clipboard != "" and page.clipboard != nil %}
           &nbsp;&nbsp; Copy&nbsp;to&nbsp;clipboard:&nbsp;&nbsp;<mark>&nbsp;{{ page.clipboard }}&nbsp;</mark>
         {% endif %}
 
