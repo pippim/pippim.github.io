@@ -634,7 +634,7 @@ and can also include pseudo-tags. In this example the
 <mark>&nbsp;eyesome&nbsp;</mark> and <mark>&nbsp;multi-timer&nbsp;</mark>
 keywords were found in the answer and are
 pseudo-tag which have been added to `tags:` front matter. 
-The <mark>&nbsp;unity`&nbsp;</mark>. <mark>&nbsp;bash&nbsp;</mark>,
+The <mark>&nbsp;unity&nbsp;</mark>. <mark>&nbsp;bash&nbsp;</mark>,
 <mark>&nbsp;scripts&nbsp;</mark> and <mark>&nbsp;system-tray&nbsp;</mark>
 tags come from the original Stack Exchange question tags.
 
@@ -1133,12 +1133,12 @@ def check_code_block(ln):
 **NOTE:** This funcion also provides support for inserting the 
 "Copy to Clipboard" button.
 
-## Stack Exchange fou space indented code block
+## Stack Exchange four space indented code block
 
 Stack Exchange can use four spaces (`    `) to signify a code
 block. When this happens, the language is lost to GitHub Pages
 markdown. Therefore they are converted to a ```` ``` fenced code
-block```` with language tag. The following code is used:
+block```` with a suitable language tag. The following code is used:
 
 {% include copyHeader.html %}
 ``` python
