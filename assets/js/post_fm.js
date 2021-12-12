@@ -28,7 +28,9 @@ function getCookie(cname) {
 function showHide(state){
   var x = document.getElementById("hidden_front_matter");
   if (state === "More") {
-    x.style.display = "block";
+    // x.style.display = "block";
+    x.style.display = "flex";
+    x.style.justifyContent "flex-end";
   } else {
     x.style.display = "none";
   }
