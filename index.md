@@ -1117,7 +1117,7 @@ def check_code_block(ln):
 **NOTE:** This funcion also provides support for inserting the 
 "Copy to Clipboard" button.
 
-## Stack Exchange 4 spaces indented code block
+## Stack Exchange fou space indented code block
 
 Stack Exchange can use four spaces (`    `) to signify a code
 block. When this happens, the language is lost to GitHub Pages
@@ -1198,14 +1198,14 @@ highlighting tag is added based on "shebang". If shebang is
 not available or not recognized the previous `<!-- Langage`
 tag is used. The following example:
 
-```
+``` bash
     #!/bin/bash
     exit 0
 ```
 
 is converted to:
 
-````
+```` bash
 ``` bash
 #!/bin/bash
 exit 0
@@ -1217,6 +1217,7 @@ blocks begin, how many lines are in the code block and
 what liquid command (if any) is inserted before the code
 block.
 
+{% include copyHeader.html %}
 ``` python
 def check_copy_code(this_index):
     """ Check to insert copy to clipboard include.
@@ -1273,6 +1274,90 @@ def check_copy_code(this_index):
 
     return inserted_command
 ```
+
+<a id="hdr16"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr15" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr17" class="hdr-btn">Skip</a></div>
+
+### Liquid Tag for Copy Code Block
+
+The Liquid Tag to include the Copy Code Block button is inserted
+into markdown thusly:
+
+```` Python
+{% raw %}
+{% include copyHeader.html %}
+``` python
+def check_copy_code(this_index):
+    (... SNIP ...)
+{% endraw %}    
+````
+
+`copyHeader.html` is located in the `_includes/` directory:
+
+``` text
+├── _includes
+│   ├── copyHeader.html
+│   ├── head-custom.html
+│   ├── image.html
+│   └── toc.md
+```
+
+It contains the following HTML code:
+
+``` html
+<!-- Copy code block contents to system clipboard. From: 
+https://www.aleksandrhovhannisyan.com/blog/
+how-to-add-a-copy-to-clipboard-button-to-your-jekyll-blog/
+-->
+<div class="code-header">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+```
+
+The `code-header` and `copy-code-button` classes are kept in `assets/css/style.scss`:
+
+``` scss
+// Copy code block contents to clipboard
+// See: _includes/copyHeader.html for credit
+.code-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.copy-code-button {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-column-gap: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 8px;
+
+  &::before {
+    content: "Copy";
+  }
+
+  &::after {
+    content: "📋";
+    display: block;
+  }
+
+  // This class will be toggled via JavaScript
+  &.copied {
+    &::before {
+      content: "Copied!";
+    }
+
+    &::after {
+      content: "✔️";
+    }
+  }
+}
+```
+
+<a id="hdr17"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr16" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr18" class="hdr-btn">Skip</a></div>
 
 ## Summary Totals
 
@@ -1351,5 +1436,5 @@ print('total_header_levels: ', total_header_levels)
 print('total_tag_names:     ', total_tag_names)
 ```
 
-<a id="hdr16"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr15" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a></div>
+<a id="hdr18></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr17" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a></div>
