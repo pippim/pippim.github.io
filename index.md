@@ -296,7 +296,7 @@ locations:
 
 The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for Pippim on GitHub Pages looked like this:
 
-``` bash
+``` terminal
 pippim.github.io
 │
 ├── about.md
@@ -354,7 +354,7 @@ Normally you will `git pull` all the directories and files from your website to 
 If you plan on developing locally, you probably want to backup your daily work. This script
 is what Pippim uses for dailiy backup to gmail.com (in the cloud, so it should be safe):
 
-``` bash
+``` terminal
 # WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
 tar -rpf "$Filename" website/*.md       # about.md, answers.md, programs.md   
 tar -rpf "$Filename" website/*.yml      # _config.yml
@@ -425,11 +425,28 @@ change the CSV fields in `sede/stack-to-blog.py`.
 After downloading the query results, the next
 steps are:
 
-``` bash
-cd ~/website/sede
-mv ~/Downloads/QueryResults.csv .
-stack-to-blog.py
-ls -l ../_posts/* | wc -l
+``` terminal
+me@host:~$ cd ~/website/sede
+me@host:~/website/sede$ mv ~/Downloads/QueryResults.csv .
+me@host:~/website/sede$ stack-to-blog.py
+// =============================/   T O T A L S   \============================== \\
+
+RANDOM_LIMIT:     10,000  | PRINT_RANDOM:        False  | NAV_FORCE_TOC:        True
+NAV_BAR_MIN:           3  | NAV_WORD_MIN:          700  | COPY_LINE_MIN:          20
+accepted_count:      632  | total_votes:         7,165  | total_views:    52,783,387
+question_count:      300  | answer_count:        2,148  | save_blog_count:     1,215
+total_self_answer:   112  | total_self_accept:      58  | Self Needing Accept:    54
+total_headers:     1,657  | total_header_spaces:   401  | total_quote_spaces:  1,574
+total_lines:      56,607  | total_paragraphs:   16,066  | total_words:       324,884
+total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     59
+total_code_blocks: 2,591  | total_block_lines:   3,663  | total_clipboards:      293
+total_code_indents:2,317  | total_indent_lines: 22,230  | total_half_links:      205
+total_pseudo_tags:   427  | total_copy_lines:   17,242  | total_toc:              26
+most_lines:          820  | total_force_end:     1,058  | total_nav_bar:          56
+total_header_levels:  [602, 832, 221, 2, 0, 0]
+total_tag_names:      ['conky', 'vnstat', 'multi-timer', 'eyesome', 'yad', 'iconic', 'cpuf']
+me@host:~/website/sede$ ls -l ../_posts/* | wc -l
+1228
 ```
 
 This assumes your local copy of your website is in your home
@@ -1022,7 +1039,7 @@ def create_blog_filename():
 
 `OUTPUT_DIR` defaults to `../_posts/` because `stack-to-blog.py` sits in a sibling directory:
 
-```bash
+``` terminal
 ├── _posts
 │   └── 2021-10-24-welcome-to-jekyll.md
 └── sede
@@ -1046,23 +1063,23 @@ the keyword "conky" (all lower-case or mixed-case doesn't matter as a pseudo tag
 In the `stack-to-blog.py` python program they are defined like this:
 
 ``` python
- word_list = ln.split()
+word_list = ln.split()
 
- ''' Add to pseudo-tags '''
- for pseudo in PSEUDO_TAGS:
-     search = pseudo.lower()
-     for word in word_list:
-         if search == word.lower():
-             pseudo_tag_count += 1
-             total_pseudo_tags += 1
-             if search not in pseudo_tag_names:
-                 if search not in tags:
-                     # All tag names added for this post
-                     pseudo_tag_names.append(search)
-             if search not in total_tag_names:
-                 if search not in tags:
-                     # All the tags added for all the posts
-                     total_tag_names.append(search)
+''' Add to pseudo-tags '''
+for pseudo in PSEUDO_TAGS:
+    search = pseudo.lower()
+    for word in word_list:
+        if search == word.lower():
+            pseudo_tag_count += 1
+            total_pseudo_tags += 1
+            if search not in pseudo_tag_names:
+                if search not in tags:
+                    # All tag names added for this post
+                    pseudo_tag_names.append(search)
+            if search not in total_tag_names:
+                if search not in tags:
+                    # All the tags added for all the posts
+                    total_tag_names.append(search)
 ```
 
 <a id="hdr14"></a>
@@ -1310,7 +1327,7 @@ def check_copy_code(this_index):
 
 `copyHeader.html` is located in the `_includes/` directory:
 
-``` text
+``` terminal
 ├── _includes
 │   ├── copyHeader.html
 │   ├── head-custom.html
