@@ -4,26 +4,44 @@ title:        Can BASH display in systray as application indicator?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/882420
 type:         Answer
-tags:         unity bash scripts system-tray multi-timer
+tags:         unity bash scripts system-tray eyesome multi-timer
 created_date: 2017-02-11 23:34:13
-edit_date:    2020-06-12 14:37:07
+edit_date:    2021-12-11 20:37:15
 votes:        6
 favorites:    
-views:        1,817
+views:        1,853
 accepted:     Accepted
-uploaded:     2021-12-11 11:42:20
+uploaded:     2021-12-12 09:14:56
 toc:          false
 navigation:   true
 clipboard:    true
 ---
 
-The best method I've found is **System Monitor Indicator** from this article: [webupd8.org - Ubuntu application indicator that displays bash][1]. It displays text on the Unity system tray / application indicator bar that your bash script "echos".
-
-The above article is targeted to Ubuntu 16.04 with Unity. For more information on Xubuntu, Gnome-Shell + app-indicator extension, and Budgie, go to the Developers website: [fossfreedom / indicator-sysmonitor][2]. Also visit the site for more detailed installation and configuration instructions.
-
 
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+
+# System Monitor Indicator
+
+The best method I've found is **Sysmonitor Indicator** from this article on the **WEB UPD8** website:
+
+- [Ubuntu AppIndicator That Displays Bash Scripts Output On The Panel: Sysmonitor Indicator][1].
+
+It displays text on the Ubuntu System Tray (Systray) / Application Indicator Bar that your bash script updates with a single `echo` command.
+
+
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+
+## Different Desktop Environments
+
+The above article is targeted to Ubuntu 16.04 to 20.04 with the **Unity Desktop**. If you don't have Unity Desktop installed for Ubuntu 20.04 see [these instructions](https://linuxconfig.org/ubuntu-20-04-unity-desktop). 
+
+For more information on Xubuntu, Gnome-Shell + app-indicator extension, and Budgie, go to the Developers website: [fossfreedom / indicator-sysmonitor][2]. Also visit the site for more detailed installation and configuration instructions.
+
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
 
 # Install and Configure `indicator-sysmonitor`
 
@@ -53,8 +71,8 @@ _ In Command field type name of your bash script, ie `/mnt/e/bin/indicator-sysmo
 - Now click the <kbd>Save</kbd> button.
 
 
-<a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
 
 # Sysmonitor Indicator in action
 
@@ -62,27 +80,24 @@ This `.gif` shows how it looks when Ubuntu’s Unity System Tray is updated.
 
 [![multi-timer sysmonitor indicator.gif][3]][3]
 
-- At the beginning of the animation our systray output contains "Brightness: 3000".
+- At the beginning of the animation the Systray output contains "Brightness: 3000". **Note:** As of July 6, 2020 the script was changed to display "eyesome: 99%" where 99 is the percentage of sunlight based on time of day. A link to `eyesome` is provided below.
 - Then `multi-timer` (link below) is started and steps through multiple timers.
-- A spinning pizza appears along with a count down of remaining time.
-
-**NOTE:** System Monitor Indicator also displays "Brightness: 3000". This is the daytime setting for my Intel Backlight hardware brightness level (link below).
+- A spinning pizza appears along with a count down of time remaining for the current timer.
 
 
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
 
 # Sysmonitor Indicator BASH script
 
-Create a script similar to the following and assign it to the variable `{Custom}` in **Sysmonitor Indicator**:
-
-
+Create a script similar to the following script called `indicator-sysmonitor-display`. Assign the script's filename to the variable `{Custom}` in **Sysmonitor Indicator**:
 
 {% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
 # UPDT: May 30 2018 - Cohesion with new multi-timer and old lock-screen-timer.
+#       July 6 2020 - New eyesome sunlight percentage.
 
 if [ -f ~/.lock-screen-timer-remaining ]; then
     text-spinner
@@ -93,11 +108,11 @@ else
     systray=""
 fi
 
-if [ -f /tmp/display-current-brightness ]; then
-    Brightness=$(cat /tmp/display-current-brightness)
-    systray="$systray  Brightness: $Brightness"
+if [ -f /usr/local/bin/.eyesome-percent ]; then
+    Brightness=$(cat /usr/local/bin/.eyesome-percent)
+    systray="$systray  eyesome: $Brightness"
 else
-    systray="$systray  Brightness: OFF"
+    systray="$systray  eyesome: OFF"
 fi
 
 # Below for AU answer: https://askubuntu.com/questions/1024866/is-it-possible-to-show-ip-address-on-top-bar-near-the-time
@@ -108,16 +123,27 @@ fi
 echo "$systray" # sysmon-indidicator will put echo string into systray for us.
 
 exit 0
-
 ```
 
 After telling ***Sysmonitor Indicator*** the name of your bash script by setting the `{Custom}` variable it runs every refresh interval. Whatever your bash script outputs via `echo` command appears in Ubuntu's System Tray.
 
-**NOTE:** The script displays *Time Remaining* and *Display Brightness Level* values. These value are set by scripts documented in **Ask Ubuntu**:  [Application that will lock screen after a set amount of time for Ubuntu][4], [A timer to set up different alarms simultaneosly][5] and [Automatically adjust display brightness based on sunrise and sunset][6] respectively.
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
+
+## Three bash scripts that output to Systray
+
+The `indicator-sysmonitor-display` script displays *Time Remaining* and *Display Brightness Level* values. These values are set by other scripts documented within **Ask Ubuntu**:  
+
+- [Application that will lock screen after a set amount of time for Ubuntu][4]
+- [Set of countdown timers with alarm][5]
+- [Automatically adjust display brightness based on sunrise and sunset][6]
+
+These three bash scripts illustrate how multiple scripts can output to the Systray concurrently and share the same script file (`indicator-sysmonitor-display`) that updates the display.
 
 
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
 
 # Spinning pizza--`text-spinner` BASH script
 
@@ -126,7 +152,7 @@ The `text-spinner` bash script creates a spinning pizza effect by cycling throug
 Here is the `text-spinner` bash script:
 
 {% include copyHeader.html %}
-``` bash
+``` 
 #!/bin/bash
 
 # return '|', '/', '─', '\' sequentially with each call to this script.
@@ -166,5 +192,5 @@ fi
   [6]: https://askubuntu.com/questions/894460/automatically-adjust-display-brightness-based-on-sunrise-and-sunset
 
 
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a></div>
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a></div>
