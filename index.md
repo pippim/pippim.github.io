@@ -221,7 +221,6 @@ The TOC command is used in real markdown below and generates the actual TOC:
             <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
                >Yale University</a>"
 %}
-
 ## Jekyll Themes
 
 There are many [GitHub Pages Jekyll Themes](https://pages.github.com/themes/)
@@ -266,7 +265,7 @@ There are many open-source providers involved in the Pippim website:
 - Ruby
 - Gems
 - Bootstrap
-- Rouge
+- Rouge [language syntax highlighting](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
 - Kramdown
 - Pippim
 
@@ -423,7 +422,8 @@ If you add or subtract columns to the query, you have to
 change the CSV fields in `sede/stack-to-blog.py`. 
 
 After downloading the query results, the next
-steps are:
+steps require you to open a terminal and type the following
+after then command prompt (`$`):
 
 ``` terminal
 me@host:~$ cd ~/website/sede
@@ -455,7 +455,7 @@ copy with the
 [`git pull`](https://opensource.com/article/18/2/how-clone-modify-add-delete-git-files) 
 command.
 
-After the progma `stack-to-blog.py` finishes all your
+After the progam `stack-to-blog.py` finishes, all your
 blog posts for GitHub Pages will be stored in your
 `~/website/_posts` directory. A count of the posts is
 generated above using `ls -l ../_posts/* | wc -l`.
