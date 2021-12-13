@@ -84,7 +84,7 @@ amount of time before screen is locked.
 
 **Edit 8 (Nov 12,2017):** Add WSL (Windows 10 Subsystem for Linux) support. Note you need to add `VcXsrv` and `ubuntu-desktop` or `xubuntu-desktop` (preferred) to use Linux GUI in WSL. Windows 10 system tray / notification area time remaining display requires complementing what `indicator-sysmonitor` does in Linux. A future `powershell.exe` script is planned for Windows 10 notification area support.
 
-**Edit 9 (Feb 19,2018):** Fix animation missing the `\` from spinning pizza "|,/,─,\" sequence.
+**Edit 9 (Feb 19,2018):** Fix animation missing the `\` from spinning pizza `|,/,─,\` sequence.
 
 **Edit 10 (Nov 14,2021):** New variable `WORK_FILE` set to `~/.lock-screen-timer-remaining`. If previous timer was run from command line and cancelled with <kbd>Ctrl</kbd>+<kbd>C</kbd> then `$WORK_FILE` removed on script startup. The following cosmetic changes were made to this answer:
 
