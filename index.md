@@ -79,9 +79,9 @@ There are many ways of getting in touch with Pippim. The conventional way via em
 
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
 
-- [📧 Send an Email to pippim](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com")
+- [📧 Send an Email to pippim](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com ")
 
-- Visit the Pippim website on [Google Sites](https://pippim.com "Visit www.pippim.com")
+- Visit the Pippim website on [Google Sites](https://pippim.com "Visit www.pippim.com ")
 
 ### Leave a Comment / Question at The Source
 
