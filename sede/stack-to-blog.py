@@ -523,7 +523,7 @@ def check_half_links(ln):
         half_link = ln[start+1:end]  # Remove [] wrapper
         parts = half_link.split('/')
         # search = '<a href="' in HTML
-        parts_search = parts[0] + "//" + parts[2]
+        part_search = parts[0] + "//" + parts[2]
         """ Search for:
                 <a href="https.../meaning-file?utm_medium=organic&utm_source=
             What exists:
@@ -537,15 +537,15 @@ def check_half_links(ln):
         """
 
         if len(parts) > 3:
-            parts_search = parts_search + "/" + parts[3]
+            part_search = part_search + "/" + parts[3]
         if len(parts) > 4:
-            parts_search = parts_search + "/" + parts[4]
+            part_search = part_search + "/" + parts[4]
 
-        search = '<a href="' + parts_search
+        html_search = '<a href="' + part_search
         # end-1 can have / which messes up .find
-        found_start = row[HTML].find(search)
+        found_start = row[HTML].find(html_search)
         if found_start == -1:
-            print('LINK Not Found:', search)
+            print('LINK Not Found:', html_search)
             print(parts)
             print(row[HTML])
             break
@@ -563,7 +563,7 @@ def check_half_links(ln):
                 failure = "'name_end'"
 
         if failure:
-            print(failure, 'Not Found:', search)
+            print(failure, 'Not Found:', html_search)
             print(parts)
             print(row[HTML])
             bad_half_links += 1
@@ -578,10 +578,10 @@ def check_half_links(ln):
         total_half_links += 1
         ln = ln.replace(half_link, name)
 
-        if parts_search == print_this:
+        if part_search == print_this:
             print()
-            print('PARTS:  ', parts_search)
-            print('SEARCH: ', search)
+            print('PARTS:  ', part_search)
+            print('SEARCH: ', html_search)
             print('REPLACE:', '[' + half_link + ']')
             print('WITH:   ', '[' + name + ']')
             print('URL:    ', row[URL])
@@ -622,23 +622,23 @@ def check_pseudo_tags(ln):
 
     ''' Add to pseudo-tags '''
     for pseudo in PSEUDO_TAGS:
-        search = pseudo.lower()
+        tag_search = pseudo.lower()
         for word in word_list:
             found = word.lower()
             if found.startswith('`') and found.endswith('`'):
                 # `program_name` becomes program_name
                 found = found[1:-1]
-            if search == found:
+            if tag_search == found:
                 pseudo_tag_count += 1
                 total_pseudo_tags += 1
-                if search not in pseudo_tag_names:
-                    if search not in tags:
+                if tag_search not in pseudo_tag_names:
+                    if tag_search not in tags:
                         # All tag names added for this post
-                        pseudo_tag_names.append(search)
-                if search not in total_tag_names:
-                    if search not in tags:
+                        pseudo_tag_names.append(tag_search)
+                if tag_search not in total_tag_names:
+                    if tag_search not in tags:
                         # All the tags added for all the posts
-                        total_tag_names.append(search)
+                        total_tag_names.append(tag_search)
 
 
 def check_shebang():
@@ -842,6 +842,26 @@ def check_copy_code(this_index):
     return inserted_command
 
 
+def one_time_change(ln):
+    """ One time change for unique situations """
+
+    # One time change before SEDE data dump Dec 26/2021
+    search_str  = '"|,/,─,\\"'
+    replace_str = '`|,/,─,\\`'
+    if search_str in ln:
+        if now > "2021-12-26":
+            return ln  # One time change has been done already
+        print('One Time Change FOUND! now=', now)
+        print(ln)
+        print(search_str, 'has been replaced with:', replace_str)
+        ln = ln.replace(search_str, replace_str)
+
+    return ln
+
+
+''' ==========================  PASS 2 Functions  ========================== '''
+
+
 def check_last_navigation_bar():
     """ Counts how many words since last navigation bar
 
@@ -876,7 +896,7 @@ def check_last_navigation_bar():
     return True
 
 
-def navigation_bar(level, skip_btn=True):
+def navigation_bar(skip_btn=True):
     """ Return Navigation Bar. Verbosity driven by NAV_BAR_OPT
 
         The first header doesn't contain "Top" or "ToS" because it is already
@@ -1252,6 +1272,7 @@ for row in rows:
         line = block_quote(line)        # Formatting for block quotes
         line = check_half_links(line)   # SE uses [https://…] instead of [Post Title]
         check_pseudo_tags(line)         # Check if pseudo tag(s) should be added
+        line = one_time_change(line)    # One Time Changes
         lines[line_index] = line        # Update any changes to original
         new_lines.append(line)          # Modified version of original lines
 
@@ -1295,7 +1316,7 @@ for row in rows:
             total_nav_bar += 1
             # print('total_nav_bar:', total_nav_bar, blog_filename)
 
-    ''' Pass #2: Generate new markdown (kramdown) '''
+    ''' Pass #2: Generate new markdown (Kramdown) '''
     # Add SE Question tags + our answer key tags (if any)
     string = ' '.join(pseudo_tag_names)
     if len(string) > 0:
@@ -1341,7 +1362,7 @@ for row in rows:
                 # First check if at TOC_LOC and insert TOC if needed
                 if insert_toc:
                     if sum2 == TOC_LOC:
-                        new_md = new_md + navigation_bar(TOC_LOC)
+                        new_md = new_md + navigation_bar()
                         if NAV_BAR_OPT <= 3:
                             # If Option "4" a blank line already inserted before us
                             new_md = new_md + "\n"
@@ -1353,7 +1374,7 @@ for row in rows:
                         sum2 += 1   # All heading levels after TOC are 1 greater
 
                 if check_last_navigation_bar():
-                    new_md = new_md + navigation_bar(sum2)
+                    new_md = new_md + navigation_bar()
 
         elif insert_toc:
             # No navigation bar, but we still need TOC at header count
@@ -1378,7 +1399,7 @@ for row in rows:
             force_end_line = False  # Keep EOF empty line we added
         else:
             new_md = new_md + "\n"  # Empty line before HTML ID tag
-        new_md = new_md + navigation_bar(hdr_id, skip_btn=False)
+        new_md = new_md + navigation_bar(skip_btn=False)
 
     qualifying_blog_count += 1
     if row_number in random_row_nos:
