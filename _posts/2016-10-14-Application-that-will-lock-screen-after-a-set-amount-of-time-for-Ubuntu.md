@@ -11,7 +11,7 @@ votes:        15
 favorites:    
 views:        3,004
 accepted:     Accepted
-uploaded:     2021-12-13 05:41:46
+uploaded:     2021-12-13 17:17:47
 toc:          true
 navigation:   true
 clipboard:    true
@@ -84,7 +84,7 @@ amount of time before screen is locked.
 
 **Edit 8 (Nov 12,2017):** Add WSL (Windows 10 Subsystem for Linux) support. Note you need to add `VcXsrv` and `ubuntu-desktop` or `xubuntu-desktop` (preferred) to use Linux GUI in WSL. Windows 10 system tray / notification area time remaining display requires complementing what `indicator-sysmonitor` does in Linux. A future `powershell.exe` script is planned for Windows 10 notification area support.
 
-**Edit 9 (Feb 19,2018):** Fix animation missing the `\` from spinning pizza "|,/,─,\" sequence.
+**Edit 9 (Feb 19,2018):** Fix animation missing the `\` from spinning pizza `|,/,─,\` sequence.
 
 **Edit 10 (Nov 14,2021):** New variable `WORK_FILE` set to `~/.lock-screen-timer-remaining`. If previous timer was run from command line and cancelled with <kbd>Ctrl</kbd>+<kbd>C</kbd> then `$WORK_FILE` removed on script startup. The following cosmetic changes were made to this answer:
 
@@ -277,10 +277,6 @@ Start Nautilus and navigate to directory containing `lock-screen-timer`. Left cl
  4. Observe the radio option buttons under `Executable Text Files`
  5. Check radio button `Run executable text files when they are opened`
 
-
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr10" class ="hdr-btn">Skip</a></div>
-
 # Create desktop shortcut link
 
 From previous section `lock-screen-timer` still has focus. If not, navigate to the script and left click on it once to give it focus. Then use:
@@ -295,8 +291,8 @@ Now you can double click on the desktop shortcut link and the script is run. A d
 After the timer is running and you double click on it again the first running copy is "killed". You can now start a new scren lock countdown or click <kbd>Cancel</kbd> for no countdown.
 
 
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr11" class ="hdr-btn">Skip</a></div>
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr10" class ="hdr-btn">Skip</a></div>
 
 # Display Time Remaining in systray / notification area
 
@@ -309,5 +305,5 @@ While lock screen timer is running it records how many minutes are remaining int
   [4]: https://askubuntu.com/questions/882419/how-can-bash-display-in-ubuntus-unity-system-tray
 
 
-<a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr10" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
