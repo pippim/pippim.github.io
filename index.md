@@ -561,13 +561,15 @@ download `QueryResults.csv` and `run stack-to-blog.py`
 
 Jekyll front matter is required by GitHub Pages
 at the top of every
-blog post. The program `stack-to-blog.py` creates
+blog post. At the very minimum, the front matter 
+must contain `layout: post` and
+`title: The Title of the Blog Post`. 
+Pippim adds a lot more
+front matter though, to make searching for blog posts
+more powerful.The program `stack-to-blog.py` creates
 front matter when it converts Stack Exchnage posts.
-At the very minimum, front matter must contain `layout: post` and
-`title: The Title of the Blog Post`. Pippim adds a lot more
-front matter though to make searching for blog posts
-more powerful. When you view a blog post the
-front matter within is displayed
+ When you view a blog post, the
+front matter is displayed
 at the top of the post with a More/Less details button.
 
 #### Define front matter in `stack-to-blog.py`
