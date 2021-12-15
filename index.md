@@ -656,7 +656,7 @@ website page:
    style="float: none; width: 100%; margin: 0 0 0 0;"
 %}
 
-The short version (`Less`) version begins with **Views:** <mark>1853</mark>
+The short version (`Less`), begins with **Views:** <mark>1853</mark>
 generated from the front matter label `views:` This is followed by
 **Votes:** <mark>6</mark> generated from the label `votes:`. 
 
@@ -678,7 +678,8 @@ tags come from the original Stack Exchange question tags.
 Next you see one of the most powerful
 features of Pippim's automataed blog pages:
 
-[🔍 See Original Answer on Ask Ubuntu](https://askubuntu.com/q/837115).
+[🔍 See Original Answer on Ask Ubuntu 🔗](https://askubuntu.com/q/882420 
+"Read original Answer on Stack Exchange website but, you might see subtle ads.")
 
 This Stack Exchange post link is generated 
 by three front matter variables:
