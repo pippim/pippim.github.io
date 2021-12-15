@@ -564,9 +564,9 @@ at the top of every blog post.
 
 At the very minimum, the front matter 
 must contain two lines. One line must be the
-label `layout:` followed by the variable ` post`.
-The other line must be the label `title:` followed
-by `Title of the Blog Post`. 
+label `layout:`, followed by the variable `post`.
+The other line must be the label `title:`, followed
+by a variable with the `Title of the Blog Post`. 
 
 Pippim adds a lot more front matter. Making it more
 powerful in searching for blog posts. The program 
