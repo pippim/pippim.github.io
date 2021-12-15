@@ -563,8 +563,10 @@ Jekyll front matter is required by GitHub Pages
 at the top of every blog post. 
 
 At the very minimum, the front matter 
-must contain two lines. One being `layout: post` and 
-the other being `title: The Title of the Blog Post`. 
+must contain two lines. One line must be the
+label `layout:` followed by the variable ` post`.
+The other line must be the label `title:` followed
+by `Title of the Blog Post`. 
 
 Pippim adds a lot more front matter. Making it more
 powerful in searching for blog posts. The program 
