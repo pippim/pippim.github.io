@@ -552,7 +552,7 @@ download `QueryResults.csv` and `run stack-to-blog.py`
 
 {% include image.html src="/assets/img/Jekyll.png"
    alt="Jekyll Logo from subpng"
-   style="float: left; width: 80%; margin: 2em 1em 0px 0px;"
+   style="float: left; width: 75%; margin: 1em 1em 0px 0px;"
    caption="Jekyll image credit: 
       <a href='https://www.subpng.com/png-xk9iwy/'>Ronncraze</a>"
 %}
