@@ -715,12 +715,12 @@ mark {
 
 The TOC (Table of Contents) and Navigation Bar Buttons
 (which navigate between sections) you create for blog
-posts are identical to the TOC and buttons you see on
-this page.
+posts are identical to the TOC and Navigation Bars
+you see on this page.
 
 The criteria for when and how the TOC and navigation 
-buttons appear is almost identical.
-The code for both is show below:
+buttons appear are similar. The python global variables 
+for both are show below:
 
 ``` python
 
@@ -749,7 +749,11 @@ NAV_BAR_OPT = 4             # Insert Navigation Bar into markdown?
 NAV_BAR_LEVEL = 2           # Only for "#" or "##". Not for "###", "####", etc.
 NAV_FORCE_TOC = True        # Put TOC to navigation bar regardless of "#"
 NAV_BAR_MIN = 3             # Minimum number of # & ## headers required
-NAV_WORD_MIN = 1000         # Minimum 1,000 words for navigation button bar
+NAV_WORD_MIN = 700          # Minimum 700 words for navigation button bar
+NAV_LAST_WORDS = 200        # Minimum of 200 words since last navigation bar to
+                            # qualify for a new bar. An image counts as 1,000 words.
+NAV_LAST_LINES = 13         # Minimum of 13 lines since last navigation bar. Note
+                            # TOC is 1 line and automatically counts as minimum.
 
 ''' Copy code block contents to clipboard options. '''
 # If Copy button is never wanted, set to None
@@ -757,16 +761,24 @@ COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
 COPY_LINE_MIN = 20          # Number of lines required to qualify for button
 ```
 
-A minimum number of `6` header lines (`#`, `##`, `###` ... 
-`######`) are required before the TOC is inserted. Additionally 
-a minimum of 1000 words are required. `TOC_LOC = 2` means the
+The global variable `TOC_HDR_MIN = 6` means a minimum number of six
+header lines (markdown lines beginning with `#`, `##`, `###`, etc.)
+are required before the TOC is inserted. Additionally 
+a minimum of 1000 words are required as defined by the global
+variable `TOC_WORD_MIN = 1000`. `TOC_LOC = 2` means the
 TOC is inserted before the second header line.
 
-For the navigation button bar only the first two header levels (# & ##)
-are analyzed. After three headers at these levels are encountered
-the navigation bar is inserted in front of these header
-levels. A 1,000 word minimum is also required though. If not met
-then no navigation buttons will appear in the post.
+For the navigation button bar, `NAV_BAR_LEVEL = 2` means only the
+first two header levels (`#` & `##`) will receive a navigation bar.
+This means third and following header levels (`###`, `####`, etc.)
+will not receive Navigation Bars. `NAV_WORD_MIN = 700` means a
+blog post with a minimum of 700 words qualifies for Navigation Bars.
+
+`NAV_LAST_WORDS = 200` and `NAV_LAST_LINES = 13` means if at least
+`200` words or `13` lines have passed since the last header with
+a Navigation Bar then the following header will also receive a
+Navigation Bar. Too little distance between Navigation Bars will
+clutter the web page with little purpose.
 
 The copy to clipboard button will appear at the top of code blocks.
 It isn't automatically inserted on all code blocks because it
@@ -774,7 +786,7 @@ takes up space on your website. If only a few lines appear in a
 code block, the user can easily highlight with mouse and use
 <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy to clipboard.
 
-The variable `COPY_LINE_MIN` specifies how many code block
+The global variable `COPY_LINE_MIN` specifies how many code block
 lines are required before button appers. 
 The default is `20` lines.
 
