@@ -198,7 +198,7 @@ To get a Table of Contents (TOC) in any website page, insert a liquid tag where 
 {% raw %}
 {% include toc.md %}
 {% endraw %}    
-<a id="hdr7"></a>
+<a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a> ... </div>
 ```
 
