@@ -265,7 +265,8 @@ There are many open-source providers involved in the Pippim website:
 - Ruby
 - Gems
 - Bootstrap
-- Rouge [language syntax highlighting](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
+- Rouge - [language syntax highlighting 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers "List of all languages supported by Rouge 🔗")
+
 - Kramdown
 - Pippim
 
