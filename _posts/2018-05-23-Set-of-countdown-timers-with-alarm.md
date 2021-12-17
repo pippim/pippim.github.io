@@ -8,7 +8,7 @@ tags:         software-recommendation multi-timer yad
 created_date: 2018-05-23 11:14:12
 edit_date:    2021-12-04 22:06:42
 votes:        11
-favorites:    
+favorites: 
 views:        4,087
 accepted:     Accepted
 uploaded:     2021-12-08 19:59:58
