@@ -389,7 +389,7 @@ The program automatically:
 - Creates Jekyll front matter.
 - Selects Stack Exchange Posts based on meeting minimum criterea such as up-votes or accepted answer status.
 - Converts Stack Exchange Markdown format to GitHub Pages Kramdown Markdown format.
-- Inserts Table of Contents (TOC)
+- Inserts Table of Contents
 - Inserts section navigation buttons for: Top of Page, Top of Section, Table of Contents and Skip Section.
 - Inserts "Copy Code Block to System Clipboard" button
 - Prints list of self-answered questions you neglected to accept after two day wait period.
