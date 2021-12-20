@@ -15,6 +15,7 @@
 #       Dec. 07 2021 - Support 4 space indented code. Convert to fenced block.
 #       Dec. 09 2021 - Change SE half-links [https://..] to [link name].
 #       Dec. 11 2021 - Minimum number of words since last Navigation Bar.
+#       Dec. 18 2021 - Posts by Tag index generation.
 #
 # ==============================================================================
 
@@ -70,11 +71,28 @@ from random import randint
     FIRST TO-DO:
 
     Build array of all posts front matter stack_URL and corresponding 
-    post filename. Then use post over Stack Exchange post reference if
-    it exists. From example https://stackoverflow.com/a/9195560/6929343 :
+    post filename. Prioritize post filename over Stack Exchange reference.
+    From example https://stackoverflow.com/a/9195560/6929343 :
     
         [Some Link]({% post_url 2010-07-21-name-of-post %})
+
+    SECOND TO-DO:
     
+    Generate dictionary of nested accordion summaries by:
+
+        Date Created: 1) Year (999) 2) Month (99)
+        Date : 1) Year 2) Month
+        Tags: 1) A-B-C (999) 2) A (99)
+        Votes: 1) 2-10 (999) 2) 2 (99) 3-8 (99)
+               1) 11-15 (13)
+
+    TAG_MIN_GROUP = 10          # Minimum index page group of posts sorted by Tag Name
+    TAG_MAX_GROUP = 20          # Maximum index page group of posts sorted by Tag Name
+
+    Calculate TAG_AVG_GROUP = 15 to control nesting. If more than 15
+    entries then they are halved into two parents. If more than
+    30 entries they are 1/3rd into three parents.         
+
 """
 
 INPUT_FILE = 'QueryResults.csv'
@@ -142,13 +160,16 @@ puts 'Expanded message'
 # If question or answer contains one of these "pseudo tags" then jekyll front
 # will have tag added as if it were really on the question. Essentially you
 # are tagging your answers and adding them to OP's question tags.
-PSEUDO_TAGS = ["conky", "eyesome", "cpuf", "iconic", "multi-timer", 'vnstat', 'yad']
+PSEUDO_TAGS = ["conky", "cpuf", "eyesome", "grub", "iconic", "multi-timer", 'vnstat', 'yad']
 
+TAG_MIN_GROUP = 10          # Minimum index page group of posts sorted by Tag Name
+TAG_MAX_GROUP = 20          # Maximum index page group of posts sorted by Tag Name
+
+''' Initialize Global Variables '''
 rows = []                   # Returned rows, less record #1 (field names)
 row_count = 0               # How many rows (Answers / Blog posts)
 random_row_nos = []         # Random row numbers exported during trail runs
-all_tag_names = []          # Every tag name appearing on stack exchange answers
-all_tag_counts = []         # Count of times tag has been used on SE answers
+all_tag_counts = 0          # Count of tags used on SE answers
 
 now = dt.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -251,7 +272,14 @@ total_quote_spaces = 0      # Total block quotes with two spaces appended
 total_paragraphs = 0        # How many paragraphs are there?
 total_words = 0             # How many words by splitting whitespace
 total_pseudo_tags = 0       # Keywords that qualify as tags for question
-total_tag_names = []        # All the tags added for all the posts
+total_tag_names = []        # Tag names and counts for all the posts,
+                            # Pseudo tags starts the list automatically
+total_tag_letters = []      # Tag names first letter (or digit) and counts
+tag_posts = []
+ACCEPTED_STRING = "✅&ensp;Solution"
+#tag_posts.append((str_name, r[TITLE], blog_filename, r[VIEWS, r[SCORE],
+#                 accepted, last_revision]))
+
 total_code_blocks = 0       # How many code blocks are there?
 total_block_lines = 0       # How many lines are inside code blocks?
 total_code_indents = 0      # How many code indents are there?
@@ -277,7 +305,8 @@ language_forced = 0         # How many times was language fenced?
 Totals for single blog post - reinitialized between blog posts
 '''
 contents = ""               # Not used, placeholder
-blog_filename = ""          # YYYY-MM-DD-blog-title.md
+base_filename = ""          # YYYY-MM-DD-blog-title.md
+blog_filename = ""          # OUTPUT_DIR + base_filename
 lines = []                  # Markdown lines list being processed
 line_index = 0              # Current line index within lines []
 header_count = 0            # How many headers were found in blog post
@@ -592,6 +621,117 @@ def check_half_links(ln):
     return ln
 
 
+def get_index(search, names):
+    """ Find index matching search in names list """
+    for name_index, name in enumerate(names):
+        if search == name.split()[0]:
+            return name_index
+
+    return None
+
+
+def incr_index(name_index, names):
+    """ Increment value within "Tag-name 9999"
+    """
+    str_name, str_value = names[name_index].split()
+    names[name_index] = str_name + " " + str(int(str_value) + 1)
+
+
+def look_index(offset, name_index, names):
+    """ Return previous or next tuple pair in list using offset
+    """
+    ndx = name_index + offset
+    if 0 <= ndx < len(names):
+        str_name, str_value = names[ndx].split()
+        return str_name, int(str_value)
+    else:
+        return None, None
+
+
+
+def add_tag_post(name_index, names, r):
+    """ Log post detail in tag_posts[] list of tuples. The tuple
+        contains:
+            1: tag name: grub
+            2: post title: How to fix problem?
+            3: post blog filename: 2021-12-15-How-to-fix-problem?.md
+            4: post views: 99,999
+            5: post votes: 99
+            6: post accepted: ✅ Solution (or blank if not accepted)
+            7: last edit: December 16, 2021 (if blank then created date)
+        :param name_index index in names list
+        :param names - list of "Tag-name 9999"
+        :param r - Row
+    """
+    global tag_posts, total_tag_letters
+
+    str_name, str_value = names[name_index].split()
+    if r[TYPE] == "Answer" and r[ACCEPTED] == "Accepted":
+        accepted = ACCEPTED_STRING
+    else:
+        accepted = ""
+    revised_date = r[CREATED]
+    if r[LAST_EDIT] != "":
+        revised_date = r[LAST_EDIT]
+    import datetime  # Audience screams in horror!!!
+    s = datetime.datetime.strptime(revised_date[:10], "%Y-%m-%d")
+    last_revision = s.strftime('%B %-d, %Y')
+    #if len(tag_posts) == 0:
+    #    print(last_revision)
+    t = (str_name, base_filename, r[TITLE], r[VIEWS], r[SCORE],
+         accepted, last_revision)
+    tag_posts.append(t)
+    #if len(tag_posts) == 450:
+    #    print(tag_posts[329])
+
+    ''' Add to first letter (or digit) of tags '''
+    entry = str_name[:1]  # First let (or digit) of tag
+    #if entry == ".":
+    #    print(entry, tags)
+    #if str_name == "ram":
+    #    print(str_name, tags)
+    entry_ndx = get_index(entry, total_tag_letters)
+    if entry_ndx is not None:
+        # All the tags added for all the posts
+        incr_index(entry_ndx, total_tag_letters)
+    else:
+        total_tag_letters.append(entry + " 1")
+
+    #if entry == ".":
+    #    print(entry, tags)
+    #    print(t)
+
+
+def tally_tags():
+    """ Record tags used and how many posts they appear in
+        Must be called after pseudo_tag_names calculated for post
+        Called between Pass 1 and Pass 2.
+    """
+    global total_tag_names, all_tag_counts
+
+    for entry in pseudo_tag_names:
+        all_tag_counts += 1
+        entry_ndx = get_index(entry, total_tag_names)
+        if entry_ndx is not None:
+            # All the tags added for all the posts
+            incr_index(entry_ndx, total_tag_names)
+        else:
+            fatal_error("entry_ndx not found: " + entry)
+        add_tag_post(entry_ndx, total_tag_names, row)
+
+    entries = tags.split()
+    for entry in entries:
+        all_tag_counts += 1
+        entry_ndx = get_index(entry, total_tag_names)
+        if entry_ndx is not None:
+            # All the tags added for all the posts
+            incr_index(entry_ndx, total_tag_names)
+        else:
+            total_tag_names.append(entry + " 1")
+            entry_ndx = len(total_tag_names) - 1
+        add_tag_post(entry_ndx, total_tag_names, row)
+
+
 def check_pseudo_tags(ln):
     """
         Check if pseudo-tag should be inserted based on keywords list.
@@ -608,7 +748,7 @@ def check_pseudo_tags(ln):
 
     """
     global total_paragraphs, paragraph_count, total_words, word_count
-    global pseudo_tag_count, total_pseudo_tags, pseudo_tag_names, total_tag_names
+    global pseudo_tag_count, total_pseudo_tags, pseudo_tag_names
 
     if len(ln) == 0:
         total_paragraphs += 1   # For all posts
@@ -620,7 +760,7 @@ def check_pseudo_tags(ln):
     word_count += count
     total_words += count
 
-    ''' Add to pseudo-tags '''
+    ''' Add to pseudo-tags - SE tags (and ours) are always in lower case '''
     for pseudo in PSEUDO_TAGS:
         tag_search = pseudo.lower()
         for word in word_list:
@@ -631,14 +771,11 @@ def check_pseudo_tags(ln):
             if tag_search == found:
                 pseudo_tag_count += 1
                 total_pseudo_tags += 1
+                # A pseudo-tag isn't added if it's already in question tags
                 if tag_search not in pseudo_tag_names:
                     if tag_search not in tags:
-                        # All tag names added for this post
+                        # Pseudo-tag names added for this post's list
                         pseudo_tag_names.append(tag_search)
-                if tag_search not in total_tag_names:
-                    if tag_search not in tags:
-                        # All the tags added for all the posts
-                        total_tag_names.append(tag_search)
 
 
 def check_shebang():
@@ -843,7 +980,8 @@ def check_copy_code(this_index):
 
 
 def one_time_change(ln):
-    """ One time change for unique situations """
+    """ One time change for unique situations
+    """
 
     # One time change before SEDE data dump Dec 26/2021
     search_str  = '"|,/,─,\\"'
@@ -851,9 +989,9 @@ def one_time_change(ln):
     if search_str in ln:
         if now > "2021-12-26":
             return ln  # One time change has been done already
-        print('One Time Change FOUND! now=', now)
-        print(ln)
-        print(search_str, 'has been replaced with:', replace_str)
+        # print('One Time Change FOUND! now=', now)
+        # print(ln)
+        # print(search_str, 'has been replaced with:', replace_str)
         ln = ln.replace(search_str, replace_str)
 
     return ln
@@ -1036,8 +1174,11 @@ def create_blog_filename():
         Replace all spaces in title with "-"
         Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
     """
-    filename = OUTPUT_DIR + row[CREATED].split()[0] + '-' + \
+    global base_filename
+
+    base_filename = row[CREATED].split()[0] + '-' + \
         row[TITLE].replace(' ', '-').replace('/', '∕') + '.md'
+    filename = OUTPUT_DIR + base_filename
 
     return filename
 
@@ -1097,6 +1238,330 @@ def fatal_error(msg):
     exit()
 
 
+''' END OF JOB
+    =======================================================================
+
+    - gen_post_by_tag_index(): Generate html for index of posts by tags
+'''
+
+
+def gen_post_by_tag_index():
+    """ Generate Posts by Tag HTML index using <DETAIL><SUMMARY>
+
+    INPUT:
+
+    tag_posts[] is list of tuples that contains:
+        1: tag name: grub
+        2: post blog filename: 2021-12-15-How-to-fix-problem?.md
+        3: post title: How to fix problem?
+        4: post views: 99,999
+        5: post votes: 99
+        6: post accepted: ✅ Solution (or blank if not accepted)
+        7: last edit: December 16, 2021 (if blank then created date)
+
+    total_tag_letters is list of tuples containing:
+
+        1. First letter (or digit / special character) of Tag name
+        2. Count of posts beginning with this Tag letter
+
+    total_tag_names is list of tuples containing:
+
+        1. Tag name
+        2. Count of posts with this Tag name
+
+    TAG_MIN_GROUP = 10          # Minimum index page group of posts sorted by Tag Name
+    TAG_MAX_GROUP = 20          # Maximum index page group of posts sorted by Tag Name
+
+    TAG_AVG_GROUP is a calculated field in this function
+
+SAMPLE:
+-------
+new tag letter: a                    expected: 100
+  new tag name: accepted-answer      expected: 1
+  new tag name: accessibility        expected: 2
+  new tag name: acpi                 expected: 2
+  new tag name: adapter              expected: 1
+  new tag name: addition             expected: 1
+  new tag name: alias                expected: 3
+  new tag name: alienware            expected: 2
+  new tag name: alsa                 expected: 8
+  new tag name: alternative          expected: 1
+  new tag name: amazon               expected: 1
+  new tag name: amd-graphics         expected: 5
+  new tag name: amd-processor        expected: 2
+  new tag name: amdgpu               expected: 1
+  new tag name: android              expected: 2
+  new tag name: android-sdk          expected: 1
+  new tag name: answered-questions   expected: 1
+  new tag name: answers              expected: 3
+  new tag name: apparmor             expected: 1
+  new tag name: appearance           expected: 2
+  new tag name: application-switcher expected: 1
+  new tag name: april-fools          expected: 1
+  new tag name: apt                  expected: 30
+  new tag name: architecture         expected: 1
+  new tag name: arm                  expected: 1
+
+    """
+    global tag_posts, total_tag_letters, total_tag_names
+    tag_posts.sort()
+    total_tag_letters.sort()
+    total_tag_names.sort()
+
+    TAG_AVG_GROUP = TAG_MIN_GROUP + (TAG_MAX_GROUP - TAG_MIN_GROUP) / 2
+    # print("TAG_AVG_GROUP:", TAG_AVG_GROUP)  # TESTED WORKING
+
+    full_letters = []
+    lumped_letters = []
+    split_letters = []
+    full_names = []
+    lumped_names = []
+    split_names = []
+    letter_groups = []   # Letter, type (full, lump, split), parents, count, from, to
+    name_groups = []     # Name, type ('f', 'l', 's'), parents, count, from, to
+
+    prev_tag_letter = ""
+    prev_tag_name = ""
+    prev_tag_spans_many_groups = ""
+    current_tag_fits = False    # Will current tag fit inside group?
+    current_tag_fits_own_group = False  # > TAG_MIN_GROUP
+    current_tag_spans_many_groups = False  # > TAG_AVG_GROUP * 2
+    this_tag_forced_break = False
+    break_rule = 0              # Undocumented rule force group break
+    next_tag_fits = False       # Will next tag fit inside group?
+    next_tag_fits_own_group = False  # Will next tag fit inside group?
+
+    inner_letter_count = 0
+    inner_name_count = 0
+
+    group_count = 0             # Number of <DETAIL> groups
+    groups = []                 # Control list of posts in <DETAIL> group
+    group_start_name = ""       # First tag name + YYYY-MM-DD in group
+    group_start_index = None    # First post_tags[index] in group
+    group_end_name = ""         # Last tag name + YYYY-MM-DD in group
+    group_end_index = None      # Last post_tags[index] in group
+    inner_count = 0             # How many posts added so far in group
+
+    for post_index, post in enumerate(tag_posts):
+        # parse post tuple into named fields
+        tag_name, post_filename, title, view, votes, accepted, \
+            last_revision = post
+
+        tag_name_index = get_index(tag_name, total_tag_names)
+        tag_name_count = int(total_tag_names[tag_name_index].split()[1])
+
+        tag_letter = tag_name[:1]
+        tag_letter_index = get_index(tag_letter, total_tag_letters)
+        tag_letter_count = int(total_tag_letters[tag_letter_index].split()[1])
+
+        # Use previous and next counts to massage number of posts in group
+        prev_name, prev_name_count = \
+            look_index(-1, tag_name_index, total_tag_names)
+        prev_letter_index, prev_letter_count = \
+            look_index(-1, tag_letter_index, total_tag_letters)
+        if prev_name_count is None:
+            prev_name_count = 0
+
+        next_name, next_name_count = \
+            look_index(+1, tag_name_index, total_tag_names)
+        next_letter_index, next_letter_count = \
+            look_index(+1, tag_letter_index, total_tag_letters)
+        if next_name_count is None:
+            next_name_count = 0
+
+        force_break = False
+
+        # When tag letter changes see what fits in this group and next group
+        if tag_letter != prev_tag_letter:
+            inner_letter_count = 0
+
+        # When tag name changes see what fits in this group and next group
+        if tag_name != prev_tag_name:
+            inner_name_count = 0
+            this_tag_forced_break = False
+            prev_tag_spans_many_groups = current_tag_spans_many_groups
+            # Some debugging
+            if 32 <= group_count <= 24:  # Adjust when wanted
+                print()
+                print('TAG:', tag_name, 'BEFORE:', 'current_tag_fits:', current_tag_fits,
+                      ' | next_tag_fits:', next_tag_fits)
+                print('inner_count + tag_name_count < TAG_MAX_GROUP:',
+                      inner_count, tag_name_count, TAG_MAX_GROUP)
+                #print('prev_name_count:', prev_name_count,
+                #      '| next_name_count:', next_name_count)  # TESTED & WORKING
+
+            if inner_count + tag_name_count <= TAG_AVG_GROUP:
+                current_tag_fits = True
+            else:
+                current_tag_fits = False
+
+            current_tag_fits_own_group = False
+            if TAG_MIN_GROUP <= tag_name_count <= TAG_MAX_GROUP:
+                current_tag_fits_own_group = True
+
+            current_tag_spans_many_groups = False  # > TAG_AVG_GROUP * 2
+            if tag_name_count > TAG_MAX_GROUP:
+                current_tag_spans_many_groups = True
+
+            if inner_count + tag_name_count + next_name_count <= TAG_AVG_GROUP:
+                next_tag_fits = True
+            else:
+                next_tag_fits = False
+
+            next_tag_fits_own_group = False
+            if next_name_count >= TAG_MIN_GROUP:
+                next_tag_fits_own_group = True
+            if 32 <= group_count <= 24:  # Adjust when wanted
+                print('AFTER:', 'current_tag_fits:', current_tag_fits,
+                      ' | next_tag_fits:', next_tag_fits,
+                      ' | next_tag_fits_own_group:', next_tag_fits_own_group)
+                print('current_tag_spans_many_groups:', current_tag_spans_many_groups,
+                      ' | prev_tag_spans_many_groups:', prev_tag_spans_many_groups)
+                print('next_name_count:', next_name_count,
+                      ' | inner_count:', inner_count,
+                      ' | inner_name_count:', inner_name_count)
+                print()
+
+        if current_tag_fits:
+            # If the current tag fits, don't overflow previous large group
+            if inner_count <= prev_name_count >= TAG_MIN_GROUP:
+                # (29, 'apt 2016-08-29', 378, 'apt 2018-08-14', 392, 15)
+                # (30, 'apt', 393, 'ascii', 412, 20)
+                if not this_tag_forced_break:
+                    force_break = True
+                    break_rule = 1
+                    this_tag_forced_break = True
+            # If the current tag fits, don't spill over into next group
+            elif inner_count + tag_name_count - inner_name_count > TAG_AVG_GROUP:
+                force_break = True
+                break_rule = 2
+            elif prev_tag_spans_many_groups:
+                force_break = True
+                break_rule = 3
+            else:
+                force_break = False
+
+        # The current tag doesn't fit the group, decide where to break group
+        elif current_tag_spans_many_groups and prev_tag_name != tag_name:
+            force_break = True
+            break_rule = 4
+
+        elif current_tag_spans_many_groups and inner_count >= TAG_AVG_GROUP:
+            force_break = True
+            break_rule = 5
+
+        elif inner_count >= TAG_AVG_GROUP:
+            if not current_tag_fits_own_group and tag_name_count > TAG_MIN_GROUP:
+                force_break = True
+                break_rule = 6
+            if inner_count >= TAG_MAX_GROUP:
+                force_break = True
+                break_rule = 7
+            if inner_count + tag_name_count >= TAG_MAX_GROUP:
+                force_break = True
+                break_rule = 8
+            if prev_tag_spans_many_groups:
+                force_break = True
+                break_rule = 9
+
+        elif current_tag_fits_own_group and prev_tag_name != tag_name:
+            force_break = True
+            break_rule = 10
+
+        elif prev_tag_spans_many_groups:
+            force_break = True
+            break_rule = 11
+
+        elif next_tag_fits_own_group and current_tag_fits_own_group is False:
+            # Special rule for:
+            # (33, 'automation', 425, 'background-process', 436, 12)
+            # (34, 'backlight', 437, 'backlight', 445, 9)
+            # (35, 'backup', 446, 'backup', 459, 14)
+            if not this_tag_forced_break:
+                force_break = True
+                break_rule = 12
+                this_tag_forced_break = True
+
+        if force_break:
+            group_count += 1
+            t = (group_count, group_start_name, group_start_index,
+                 group_end_name, group_end_index, inner_count)
+            groups.append(t)
+            if 32 <= group_count <= 24:  # Adjust start/end when wanted
+                print('tag_name:', tag_name, ' | current_tag_fits:', current_tag_fits,
+                      ' | current_tag_fits_own_group:', current_tag_fits_own_group)
+                print('current_tag_spans_many_groups:', current_tag_spans_many_groups,
+                      ' | prev_tag_spans_many_groups:', prev_tag_spans_many_groups)
+                print('prev_tag_name:', prev_tag_name, ' | prev_name_count:',
+                      prev_name_count, ' | prev_name:', prev_name)
+                print('next_name:', next_name, ' | next_name_count:',
+                      next_name_count, ' | next_tag_fits:', next_tag_fits)
+                print("group_count:",  group_count, " | group_start_name:",
+                      group_start_name, " | group_start_index:", group_start_index)
+                print("group_end_name:", group_end_name, " | group_end_index:",
+                      group_end_index, " | inner_count:", inner_count)
+                print('tag_name_count:', tag_name_count, " | next_name_count:",
+                      next_name_count, ' | break_rule:', break_rule)
+                print()
+            if group_count == 40000:  # Adjust to force printing
+                for group in groups:
+                    print(group)
+            inner_count = 0  # Reset
+
+        if inner_count == 0:
+            group_start_name = tag_name + " " + post_filename[:10]
+            group_start_index = post_index
+
+        #if "." <= tag_letter <= "9":           # TESTED WORKING
+        #    if tag_letter != prev_tag_letter:
+        #        print('Starting tag letter:', tag_letter.ljust(20), 'expected:', tag_letter_count)
+        #    if tag_name != prev_tag_name:
+        #        print('  Starting tag name:', tag_name.ljust(20), 'expected:', tag_name_count)
+
+        prev_tag_name = tag_name
+        prev_tag_letter = tag_letter
+        inner_name_count += 1
+        inner_letter_count += 1
+        inner_count += 1
+        # Set default in case next read starts a new group or this is EOL
+        group_end_name = tag_name + " " + post_filename[:10]
+        group_end_index = post_index
+
+    # Remove suffixes from names that don't span two groups
+    new_groups = []
+    last_start = ""
+    last_end = "$as$@#%23 1234"  # Something never a tag name
+    for group_ndx, group in enumerate(groups):
+        group_no, start, start_ndx, end, end_ndx, count = group
+        start_name, start_suffix = start.split()
+        end_name, end_suffix = end.split()
+
+        if start_name != end_name:
+            start = start_name
+            end = end_name
+
+        # start name is equal to end name, but is it a name spanning only one group?
+        else:
+            last_name = last_end.split()[0]
+            if start_name != last_name:
+                if group_ndx < len(groups):
+                    next_group = groups[group_ndx + 1]
+                    next_start = next_group[1].split()[0]
+                    # print(next_start)  # TESTED WORKING
+                    if end_name != next_start:
+                        start = start_name
+                        end = end_name
+
+        t = (group_no, start, start_ndx, end, end_ndx, count)
+        new_groups.append(t)
+        last_start = start
+        last_end = end
+    print('Group count:', group_count)
+    print('group_no, start, start_ndx, end, end_ndx, count')
+    for i in range(40, 80):
+        print(new_groups[i])
+
+
 ''' INITIALIZATION
     =======================================================================
 
@@ -1143,6 +1608,10 @@ random_row_nos = [randint(1, row_count) for p in range(0, RANDOM_LIMIT)]
 if RANDOM_LIMIT < 100:
     print('RANDOM_LIMIT:', RANDOM_LIMIT,
           'Random record numbers to convert:', random_row_nos)
+
+''' Initialize Total Tag Names with Pseudo-Tags '''
+for tag in PSEUDO_TAGS:
+    total_tag_names.append(tag + " 0")
 
 
 ''' MAIN LOOP to process All query records
@@ -1295,6 +1764,7 @@ for row in rows:
             lines.append(line)
 
     ''' Add to total lines '''
+    tally_tags()
     total_lines += line_count
     if line_count > most_lines:
         most_lines = line_count
@@ -1418,6 +1888,8 @@ for row in rows:
             index = random_row_nos.index(row_number)
             random_row_nos[index] = row_number + 1
 
+gen_post_by_tag_index()  # Generate HTML for posts by tag index page
+
 if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
     print()
     print('// ==============/   Self-Answered Questions not accepted   \\================ \\\\')
@@ -1462,10 +1934,14 @@ print('total_code_indents:{:>5,}'.format(total_code_indents),
 print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
       ' | total_copy_lines:  {:>7,}'.format(total_copy_lines),
       ' | total_toc:         {:>7,}'.format(total_toc))
-print('most_lines:       {:>6,}'.format(most_lines),
+print('# total_tag_names:{:>6,}'.format(len(total_tag_names)),
       ' | total_force_end:  {:>8,}'.format(total_force_end),
       ' | total_nav_bar:     {:>7,}'.format(total_nav_bar))
-print('total_header_levels: ', total_header_levels)
-print('total_tag_names:     ', total_tag_names)
+print('all_tag_counts: {:>8,}'.format(all_tag_counts),
+      ' | # tag_posts:      {:>8,}'.format(len(tag_posts)),
+      ' | # total_tag_letters:{:>6,}'.format(len(total_tag_letters)))
+print('total_header_levels:       ', total_header_levels)
+print('total_tag_letters:         ', total_tag_letters)
+#print('total_tag_names:     ', total_tag_names)
 
 # End of stack-to-blog.py
