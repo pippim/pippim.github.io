@@ -53,10 +53,12 @@
 
 from __future__ import print_function  # Must be first import
 from __future__ import with_statement  # Error handling for file opens
+
 from datetime import datetime as dt
 # Above for error: datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 # AttributeError: 'module' object has no attribute 'now'
 # Credit: https://stackoverflow.com/a/32463688/6929343
+
 import csv
 from random import randint
 
@@ -75,23 +77,6 @@ from random import randint
     From example https://stackoverflow.com/a/9195560/6929343 :
     
         [Some Link]({% post_url 2010-07-21-name-of-post %})
-
-    SECOND TO-DO:
-    
-    Generate dictionary of nested accordion summaries by:
-
-        Date Created: 1) Year (999) 2) Month (99)
-        Date : 1) Year 2) Month
-        Tags: 1) A-B-C (999) 2) A (99)
-        Votes: 1) 2-10 (999) 2) 2 (99) 3-8 (99)
-               1) 11-15 (13)
-
-    TAG_MIN_GROUP = 10          # Minimum index page group of posts sorted by Tag Name
-    TAG_MAX_GROUP = 20          # Maximum index page group of posts sorted by Tag Name
-
-    Calculate TAG_AVG_GROUP = 15 to control nesting. If more than 15
-    entries then they are halved into two parents. If more than
-    30 entries they are 1/3rd into three parents.         
 
 """
 
@@ -164,6 +149,11 @@ PSEUDO_TAGS = ["conky", "cpuf", "eyesome", "grub", "iconic", "multi-timer", 'vns
 
 TAG_MIN_GROUP = 10          # Minimum index page group of posts sorted by Tag Name
 TAG_MAX_GROUP = 20          # Maximum index page group of posts sorted by Tag Name
+# Unfortunately for the time-being the letter groups must be hand-crafted.
+# To assist with hand-crafting print out new_groups[] in gen_post_by_tag_index()
+TAG_LETTERS = [('.', '9'), ('a', 'a'), ('b', 'b'), ('c', 'c'), ('d', 'd'),
+               ('e', 'f'), ('g', 'g'), ('h', 'k'), ('l', 'l'), ('m', 'o'),
+               ('p', 'r'), ('s', 's'), ('t', 't'), ('u', 'v'), ('w', 'z')]
 
 ''' Initialize Global Variables '''
 rows = []                   # Returned rows, less record #1 (field names)
@@ -673,16 +663,12 @@ def add_tag_post(name_index, names, r):
     revised_date = r[CREATED]
     if r[LAST_EDIT] != "":
         revised_date = r[LAST_EDIT]
-    import datetime  # Audience screams in horror!!!
-    s = datetime.datetime.strptime(revised_date[:10], "%Y-%m-%d")
+
+    s = dt.strptime(revised_date[:10], "%Y-%m-%d")
     last_revision = s.strftime('%B %-d, %Y')
-    #if len(tag_posts) == 0:
-    #    print(last_revision)
     t = (str_name, base_filename, r[TITLE], r[VIEWS], r[SCORE],
          accepted, last_revision)
     tag_posts.append(t)
-    #if len(tag_posts) == 450:
-    #    print(tag_posts[329])
 
     ''' Add to first letter (or digit) of tags '''
     entry = str_name[:1]  # First let (or digit) of tag
@@ -730,6 +716,7 @@ def tally_tags():
             total_tag_names.append(entry + " 1")
             entry_ndx = len(total_tag_names) - 1
         add_tag_post(entry_ndx, total_tag_names, row)
+
 
 
 def check_pseudo_tags(ln):
@@ -1241,8 +1228,19 @@ def fatal_error(msg):
 ''' END OF JOB
     =======================================================================
 
+    - get_tag_letter_index(letter)
     - gen_post_by_tag_index(): Generate html for index of posts by tags
 '''
+
+
+def get_tag_letter_index(letter):
+    """ Return index within TAG_LETTERS for letter passed. """
+    for ndx, letters in enumerate(TAG_LETTERS):
+        first, last = letters
+        if first <= letter <= last:
+            return ndx
+        
+    fatal_error("letter: " + letter + ' not found in TAG_LETTERS')
 
 
 def gen_post_by_tag_index():
@@ -1274,35 +1272,8 @@ def gen_post_by_tag_index():
 
     TAG_AVG_GROUP is a calculated field in this function
 
-SAMPLE:
--------
-new tag letter: a                    expected: 100
-  new tag name: accepted-answer      expected: 1
-  new tag name: accessibility        expected: 2
-  new tag name: acpi                 expected: 2
-  new tag name: adapter              expected: 1
-  new tag name: addition             expected: 1
-  new tag name: alias                expected: 3
-  new tag name: alienware            expected: 2
-  new tag name: alsa                 expected: 8
-  new tag name: alternative          expected: 1
-  new tag name: amazon               expected: 1
-  new tag name: amd-graphics         expected: 5
-  new tag name: amd-processor        expected: 2
-  new tag name: amdgpu               expected: 1
-  new tag name: android              expected: 2
-  new tag name: android-sdk          expected: 1
-  new tag name: answered-questions   expected: 1
-  new tag name: answers              expected: 3
-  new tag name: apparmor             expected: 1
-  new tag name: appearance           expected: 2
-  new tag name: application-switcher expected: 1
-  new tag name: april-fools          expected: 1
-  new tag name: apt                  expected: 30
-  new tag name: architecture         expected: 1
-  new tag name: arm                  expected: 1
-
     """
+
     global tag_posts, total_tag_letters, total_tag_names
     tag_posts.sort()
     total_tag_letters.sort()
@@ -1311,15 +1282,8 @@ new tag letter: a                    expected: 100
     TAG_AVG_GROUP = TAG_MIN_GROUP + (TAG_MAX_GROUP - TAG_MIN_GROUP) / 2
     # print("TAG_AVG_GROUP:", TAG_AVG_GROUP)  # TESTED WORKING
 
-    full_letters = []
-    lumped_letters = []
-    split_letters = []
-    full_names = []
-    lumped_names = []
-    split_names = []
-    letter_groups = []   # Letter, type (full, lump, split), parents, count, from, to
-    name_groups = []     # Name, type ('f', 'l', 's'), parents, count, from, to
-
+    letter_group_counts = [0] * len(TAG_LETTERS)  # A-B, C-D-E, F-H, etc.
+    prev_tag_index = None
     prev_tag_letter = ""
     prev_tag_name = ""
     prev_tag_spans_many_groups = ""
@@ -1327,7 +1291,6 @@ new tag letter: a                    expected: 100
     current_tag_fits_own_group = False  # > TAG_MIN_GROUP
     current_tag_spans_many_groups = False  # > TAG_AVG_GROUP * 2
     this_tag_forced_break = False
-    break_rule = 0              # Undocumented rule force group break
     next_tag_fits = False       # Will next tag fit inside group?
     next_tag_fits_own_group = False  # Will next tag fit inside group?
 
@@ -1347,41 +1310,48 @@ new tag letter: a                    expected: 100
         tag_name, post_filename, title, view, votes, accepted, \
             last_revision = post
 
-        tag_name_index = get_index(tag_name, total_tag_names)
-        tag_name_count = int(total_tag_names[tag_name_index].split()[1])
-
-        tag_letter = tag_name[:1]
-        tag_letter_index = get_index(tag_letter, total_tag_letters)
-        tag_letter_count = int(total_tag_letters[tag_letter_index].split()[1])
-
-        # Use previous and next counts to massage number of posts in group
-        prev_name, prev_name_count = \
-            look_index(-1, tag_name_index, total_tag_names)
-        prev_letter_index, prev_letter_count = \
-            look_index(-1, tag_letter_index, total_tag_letters)
-        if prev_name_count is None:
-            prev_name_count = 0
-
-        next_name, next_name_count = \
-            look_index(+1, tag_name_index, total_tag_names)
-        next_letter_index, next_letter_count = \
-            look_index(+1, tag_letter_index, total_tag_letters)
-        if next_name_count is None:
-            next_name_count = 0
 
         force_break = False
-
-        # When tag letter changes see what fits in this group and next group
-        if tag_letter != prev_tag_letter:
-            inner_letter_count = 0
+        break_rule = 0  # Undocumented rule force group break
+        keep_rule = 0  # Keep next > TAG_AVG but <= TAG_MAX
 
         # When tag name changes see what fits in this group and next group
         if tag_name != prev_tag_name:
+            tag_name_index = get_index(tag_name, total_tag_names)
+            tag_name_count = int(total_tag_names[tag_name_index].split()[1])
+
+            tag_letter = tag_name[:1]
+            # tag_letter_index and tag_letter_count are not used
+            tag_letter_index = get_index(tag_letter, total_tag_letters)
+            tag_letter_count = int(total_tag_letters[tag_letter_index].split()[1])
+
+            tag_index = get_tag_letter_index(tag_letter)
+            letter_group_counts[tag_index] += 1
+
+            # Use previous and next counts to massage number of posts in group
+            prev_name, prev_name_count = \
+                look_index(-1, tag_name_index, total_tag_names)
+            if prev_name_count is None:
+                prev_name_count = 0
+
+            next_name, next_name_count = \
+                look_index(+1, tag_name_index, total_tag_names)
+            if next_name_count is None:
+                next_name_count = 0
+
+            # When tag letter changes see what fits in this group and next group
+            if tag_letter != prev_tag_letter:
+                inner_letter_count = 0
+
             inner_name_count = 0
             this_tag_forced_break = False
             prev_tag_spans_many_groups = current_tag_spans_many_groups
+            # Has letter group changed?
+            tag_letter_index_changed = tag_index == prev_tag_index
+
+
             # Some debugging
-            if 32 <= group_count <= 24:  # Adjust when wanted
+            if 178 <= group_count <= 177:  # Adjust when wanted
                 print()
                 print('TAG:', tag_name, 'BEFORE:', 'current_tag_fits:', current_tag_fits,
                       ' | next_tag_fits:', next_tag_fits)
@@ -1411,7 +1381,7 @@ new tag letter: a                    expected: 100
             next_tag_fits_own_group = False
             if next_name_count >= TAG_MIN_GROUP:
                 next_tag_fits_own_group = True
-            if 32 <= group_count <= 24:  # Adjust when wanted
+            if 178 <= group_count <= 177:  # Adjust when wanted
                 print('AFTER:', 'current_tag_fits:', current_tag_fits,
                       ' | next_tag_fits:', next_tag_fits,
                       ' | next_tag_fits_own_group:', next_tag_fits_own_group)
@@ -1421,6 +1391,9 @@ new tag letter: a                    expected: 100
                       ' | inner_count:', inner_count,
                       ' | inner_name_count:', inner_name_count)
                 print()
+
+        if tag_letter_index_changed:
+            pass
 
         if current_tag_fits:
             # If the current tag fits, don't overflow previous large group
@@ -1447,8 +1420,12 @@ new tag letter: a                    expected: 100
             break_rule = 4
 
         elif current_tag_spans_many_groups and inner_count >= TAG_AVG_GROUP:
-            force_break = True
-            break_rule = 5
+            remaining = tag_name_count - inner_name_count
+            if remaining <= TAG_MAX_GROUP - TAG_AVG_GROUP:
+                keep_rule = 1
+            else:
+                force_break = True
+                break_rule = 5
 
         elif inner_count >= TAG_AVG_GROUP:
             if not current_tag_fits_own_group and tag_name_count > TAG_MIN_GROUP:
@@ -1457,7 +1434,7 @@ new tag letter: a                    expected: 100
             if inner_count >= TAG_MAX_GROUP:
                 force_break = True
                 break_rule = 7
-            if inner_count + tag_name_count >= TAG_MAX_GROUP:
+            if inner_count + tag_name_count - inner_name_count >= TAG_MAX_GROUP:
                 force_break = True
                 break_rule = 8
             if prev_tag_spans_many_groups:
@@ -1468,11 +1445,13 @@ new tag letter: a                    expected: 100
             force_break = True
             break_rule = 10
 
-        elif prev_tag_spans_many_groups:
+        elif prev_tag_spans_many_groups and prev_tag_name != tag_name:
             force_break = True
             break_rule = 11
 
-        elif next_tag_fits_own_group and current_tag_fits_own_group is False:
+        elif next_tag_fits_own_group and current_tag_fits_own_group is False\
+                and inner_count + tag_name_count - inner_name_count > TAG_MAX_GROUP\
+                and not (current_tag_spans_many_groups or current_tag_fits_own_group):
             # Special rule for:
             # (33, 'automation', 425, 'background-process', 436, 12)
             # (34, 'backlight', 437, 'backlight', 445, 9)
@@ -1487,7 +1466,7 @@ new tag letter: a                    expected: 100
             t = (group_count, group_start_name, group_start_index,
                  group_end_name, group_end_index, inner_count)
             groups.append(t)
-            if 32 <= group_count <= 24:  # Adjust start/end when wanted
+            if 178 <= group_count <= 177:  # Adjust start/end when wanted
                 print('tag_name:', tag_name, ' | current_tag_fits:', current_tag_fits,
                       ' | current_tag_fits_own_group:', current_tag_fits_own_group)
                 print('current_tag_spans_many_groups:', current_tag_spans_many_groups,
@@ -1503,21 +1482,20 @@ new tag letter: a                    expected: 100
                 print('tag_name_count:', tag_name_count, " | next_name_count:",
                       next_name_count, ' | break_rule:', break_rule)
                 print()
-            if group_count == 40000:  # Adjust to force printing
-                for group in groups:
-                    print(group)
+
             inner_count = 0  # Reset
 
         if inner_count == 0:
             group_start_name = tag_name + " " + post_filename[:10]
             group_start_index = post_index
 
-        #if "." <= tag_letter <= "9":           # TESTED WORKING
-        #    if tag_letter != prev_tag_letter:
-        #        print('Starting tag letter:', tag_letter.ljust(20), 'expected:', tag_letter_count)
-        #    if tag_name != prev_tag_name:
-        #        print('  Starting tag name:', tag_name.ljust(20), 'expected:', tag_name_count)
+        if "." <= tag_letter <= " ":           # TESTED WORKING
+            if tag_letter != prev_tag_letter:
+                print('Starting tag letter:', tag_letter.ljust(20), 'expected:', tag_letter_count)
+            if tag_name != prev_tag_name:
+                print('  Starting tag name:', tag_name.ljust(20), 'expected:', tag_name_count)
 
+        prev_tag_index = tag_index
         prev_tag_name = tag_name
         prev_tag_letter = tag_letter
         inner_name_count += 1
@@ -1527,9 +1505,14 @@ new tag letter: a                    expected: 100
         group_end_name = tag_name + " " + post_filename[:10]
         group_end_index = post_index
 
-    # Remove suffixes from names that don't span two groups
+    # Last group still in buffer
+    if group_count >= 1:
+        t = (group_count, group_start_name, group_start_index,
+             group_end_name, group_end_index, inner_count)
+        groups.append(t)
+
+    # Remove suffixes from names that don't span at least two groups
     new_groups = []
-    last_start = ""
     last_end = "$as$@#%23 1234"  # Something never a tag name
     for group_ndx, group in enumerate(groups):
         group_no, start, start_ndx, end, end_ndx, count = group
@@ -1539,12 +1522,11 @@ new tag letter: a                    expected: 100
         if start_name != end_name:
             start = start_name
             end = end_name
-
         # start name is equal to end name, but is it a name spanning only one group?
         else:
             last_name = last_end.split()[0]
             if start_name != last_name:
-                if group_ndx < len(groups):
+                if group_ndx < len(groups) - 1:
                     next_group = groups[group_ndx + 1]
                     next_start = next_group[1].split()[0]
                     # print(next_start)  # TESTED WORKING
@@ -1554,12 +1536,19 @@ new tag letter: a                    expected: 100
 
         t = (group_no, start, start_ndx, end, end_ndx, count)
         new_groups.append(t)
-        last_start = start
         last_end = end
-    print('Group count:', group_count)
-    print('group_no, start, start_ndx, end, end_ndx, count')
-    for i in range(40, 80):
-        print(new_groups[i])
+
+    # Uncomment below to hand-craft TAG_LETTERS. Note that 2+ ranges
+    # are combined into new sub-group. For example:
+    # (251, 'upgrade 2016-08-13', 3420, 'upgrade 2018-04-29', 3434, 15)
+    # (252, 'upgrade 2018-04-29', 3435, 'upgrade 2019-07-09', 3449, 15)
+    # (253, 'upgrade 2019-07-20', 3450, 'upgrade 2019-12-15', 3458, 9)
+    # becomes:
+    # (None, 'upgrade', 251, 'upgrade', 253, 39)
+    #print('Group count:', group_count)
+    #print('group_no, start, start_ndx, end, end_ndx, count')
+    #for group in new_groups:
+    #    print(group)
 
 
 ''' INITIALIZATION
@@ -1941,6 +1930,7 @@ print('all_tag_counts: {:>8,}'.format(all_tag_counts),
       ' | # tag_posts:      {:>8,}'.format(len(tag_posts)),
       ' | # total_tag_letters:{:>6,}'.format(len(total_tag_letters)))
 print('total_header_levels:       ', total_header_levels)
+print('TAG_LETTERS:               ', TAG_LETTERS)
 print('total_tag_letters:         ', total_tag_letters)
 #print('total_tag_names:     ', total_tag_names)
 
