@@ -143,19 +143,6 @@ $honeydew: #F0FFF0 !default; // Honeydew
     visibility: visible;
 }
 
-/* Now in _includes/image.html
-figure {
-  padding: 10px;
-  border-top: 1px solid #999;
-  border-right: 2px solid #555;
-  border-bottom: 2px solid #555;
-  border-left: 1px solid #999;
-}
-figure figcaption {
-  text-align: center;
-}
-*/
-
 // Swap font color and background color
 mark {
   background-color: $header-bg-color;
@@ -208,6 +195,7 @@ details {
 }
 
 details > summary {
+  margin-top: 10px;        // some spacing between groups
   padding: 2px 6px;
   width: 15em;
   background-color: #ddd;
