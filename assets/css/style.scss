@@ -200,6 +200,36 @@ mark {
   }
 }
 
+// Details syling: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
+
+details {
+  font: 16px "Open Sans", Calibri, sans-serif;
+  width: 620px;
+}
+
+details > summary {
+  padding: 2px 6px;
+  width: 15em;
+  background-color: #ddd;
+  border: none;
+  box-shadow: 3px 3px 4px black;
+  cursor: pointer;
+}
+
+details > p {
+  border-radius: 0 0 10px 10px;
+  background-color: #ddd;
+  padding: 2px 6px;
+  margin: 0;
+  box-shadow: 3px 3px 4px black;
+}
+
+/* LEAVE ALL CLOSED FOR NOW
+details[open] > summary {
+  background-color: #ccf;
+}
+*/
+
 // Neon glowing Text: https://www.w3schools.com/howto/howto_css_glowing_text.asp
 .glow {
   -webkit-animation: glow 4s ease-in-out infinite alternate;
