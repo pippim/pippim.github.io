@@ -204,11 +204,18 @@ details > summary {
   cursor: pointer;
 }
 
+/* From: https://stackoverflow.com/a/47848620/6929343
+details > *:not(summary){
+  margin-left: 2em;
+}
+*/
+
 details > p {
   border-radius: 0 0 10px 10px;
   background-color: #ddd;
   padding: 2px 6px;
-  margin: 0;
+  margin-left: 2em;
+  // margin: 0;
   box-shadow: 3px 3px 4px black;
 }
 
