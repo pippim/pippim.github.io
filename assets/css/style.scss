@@ -212,11 +212,11 @@ details > p {
   box-shadow: 3px 3px 4px black;
 }
 
-/* LEAVE ALL CLOSED FOR NOW
 details[open] > summary {
-  background-color: #ccf;
+  background-color: $honeydew;
+  color: $header-bg-color;
 }
-*/
+
 
 // Neon glowing Text: https://www.w3schools.com/howto/howto_css_glowing_text.asp
 .glow {
