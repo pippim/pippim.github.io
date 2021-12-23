@@ -196,9 +196,9 @@ details {
 details > summary {
   // Chevron from https://stackoverflow.com/a/10813665/6929343
   list-style-type: none;
-  margin-top: 10px;        // some spacing between groups
+  margin-top: 10px;     // some spacing between groups
   padding: 2px 6px;
-  width: 60%;
+  width: 40em;          // 60% no good for cell phone
   background-color: #ddd;
   border: none;
   box-shadow: 3px 3px 4px black;
