@@ -195,6 +195,8 @@ details {
 }
 
 details > summary {
+  // Chevron from https://stackoverflow.com/a/10813665/6929343
+  list-style-type: none;
   margin-top: 10px;        // some spacing between groups
   padding: 2px 6px;
   width: 15em;
@@ -204,11 +206,17 @@ details > summary {
   cursor: pointer;
 }
 
-/* From: https://stackoverflow.com/a/47848620/6929343
-details > *:not(summary){
-  margin-left: 2em;
+details > summary::-webkit-details-marker {
+    display: none;
 }
-*/
+
+details > summary::before {
+    content: '▶️ ';
+}
+
+details[open] > summary::before {
+    content: '🔽 ';
+}
 
 details > p {
   border-radius: 0 0 10px 10px;
