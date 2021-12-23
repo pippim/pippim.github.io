@@ -1230,7 +1230,8 @@ def fatal_error(msg):
 ''' END OF JOB
     =======================================================================
 
-    - write_html(html): Write posts by tags HTML page
+    - html_badge(count):
+    - html_write(html): Write posts by tags HTML page
     - get_tag_letter_index(letter): Get index in TAG_LETTERS
     - gen_post_by_tag_groups(): Generate list of posts by tags small groups
     - gen_post_by_tag_html(): Generate <details><summary> html code 
@@ -1238,7 +1239,46 @@ def fatal_error(msg):
 '''
 
 
-def write_html(html):
+def html_badge(badge_count):
+    """ Make HTML badge. Requires css styling in assets/css/style.scss:
+
+        // From: https://stackoverflow.com/a/29064517/6929343
+        .badge {
+          // width:20px;
+          height: 1.2rem;
+          font-size: 1.1rem;
+          border-radius:4px; //modify it according to your needs.
+          -webkit-border-radius:4px;
+          background:green;
+          color:white;
+          text-align:center;
+        }
+
+    :param badge_count: integer value
+    :return: HTML string
+    """
+
+    return '&ensp;&ensp;<span class="badge">&ensp;' + \
+        str(badge_count) + '&ensp;</span>'
+
+
+def html_tag_line(ts, te, tc):
+    """ Build tag line 'TAGS x ⟶ y (count)
+
+    :param ts = starting tag
+    :param te = ending tag
+    :param tc = tag count for badge
+    """
+    badge = html_badge(tc)
+    if ts != te:
+        t_line = "TAGS: " + ts + " ⟶ " + te + badge
+    else:
+        t_line = "TAG: " + ts + badge
+
+    return t_line
+
+
+def html_write(html):
     """ Write posts by tags HTML page """
     with open(POST_BY_TAG_HTML, 'w') as fh:
         # Write everything
@@ -1639,16 +1679,11 @@ def gen_post_by_tag_groups():
     total_group_count = 0
     for letter_index, letter_group in enumerate(TAG_LETTERS):
         group_count = letter_group_counts[letter_index]
-        badge = " (" + str(group_count) + ")"  # How many posts in letter group
-        badge = ' <span class="badge">'  + str(group_count) + ' </span>'
         if group_count == 0:
             continue  # No post groups under this letter group
         # Write out <details><summary>tag</summary><p>\n
         group_start, group_end = letter_group
-        if group_start != group_end:
-            tag_line = "TAGS: " + group_start + " ⟶ " + group_end + badge
-        else:
-            tag_line = "TAG: " + group_start + badge
+        tag_line = html_tag_line(group_start, group_end, group_count)
 
         # FROM: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
         html += html_details_start(tag_line)
@@ -1661,21 +1696,29 @@ def gen_post_by_tag_groups():
             if letter > group_end:
                 break                   # Past letter end
 
-            badge = " (" + str(count) + ")"  # How many posts in group
-            badge = ' <span class="badge"> ' + str(count) + ' </span>'
+            #badge = html_badge(count)
+            tag_line = html_tag_line(start, end, count)
+            html += html_details_start(tag_line) + "<p>\n"
 
-            if start != end:
-                html += "TAGS: " + start + " ⟶ " + end + badge + "<br>\n"
-            else:
-                html += "TAG: " + start + badge + "<br>\n"
+            #if start != end:
+            #    html += start + " ⟶ " + end + badge + "<br>\n"
+            #else:
+            #    html += start + badge + "<br>\n"
+            for i in range(start_ndx, end_ndx):
+                tag_name, post_filename, title, view, votes, accepted, \
+                    last_revision = tag_posts[i]
+                html += title + "<br>\n"
+                html += post_filename + "<br>\n"
 
+            # Write out </p></details> end tag
+            html += "</p>" + html_details_end()
             total_group_count += count
 
         print('letter_index:', letter_index, 'letter_group:', letter_group,
               'group count:', group_count)
 
         # Write out </p></details> end tag
-        html += "</p></details>\n\n"
+        html += html_details_end()
 
     if total_group_count != len(new_groups):
         print('total_group_count:', total_group_count,
@@ -1683,7 +1726,7 @@ def gen_post_by_tag_groups():
         # fatal_error('total_count != len(new_groups)')
 
     #print(html)
-    write_html(html)
+    html_write(html)
 
 
 
@@ -1763,7 +1806,11 @@ def gen_post_by_tag_groups():
 
 
 def html_details_start(summary):
-    return "<details><summary>" + summary + "</summary><p>\n"
+    return "<details><summary>" + summary + "</summary>\n"
+
+
+def html_details_end():
+    return "</details>\n\n"
 
 
 ''' INITIALIZATION
