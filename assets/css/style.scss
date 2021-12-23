@@ -189,7 +189,7 @@ mark {
 
 // Details syling: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
 details {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: 80%;
 }
 
@@ -235,7 +235,7 @@ details[open] > summary {
 .badge {
   // width:20px;
   height: 1.2rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border-radius:4px; //modify it according to your need..
   -webkit-border-radius:4px;
   background:green;
