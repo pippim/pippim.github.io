@@ -188,7 +188,6 @@ mark {
 }
 
 // Details syling: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
-
 details {
   font: 16px "Open Sans", Calibri, sans-serif;
   width: 620px;
@@ -232,6 +231,16 @@ details[open] > summary {
   color: $header-bg-color;
 }
 
+// From: https://stackoverflow.com/a/29064517/6929343
+.badge {
+  width:20px;
+  height:20px;
+  border-radius:4px; //modify it according to your need..
+  -webkit-border-radius:4px;
+  background:green;
+  color:white;
+  text-align:center;
+}
 
 // Neon glowing Text: https://www.w3schools.com/howto/howto_css_glowing_text.asp
 .glow {
