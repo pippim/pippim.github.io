@@ -232,10 +232,14 @@ details > p {
   border-radius: 0 0 10px 10px;
   background-color: $honeydew;
   color: $header-bg-color;
-  padding: 2px 6px;
+  // padding: 2px 6px;
   margin-left: 2em;
   // margin: 0;
   box-shadow: 3px 3px 4px black;
+  // Below copied from .front_matter:
+  line-height: 1.75;
+  padding: 4px 4px 4px 4px;
+
 }
 
 details[open] > summary {
@@ -250,10 +254,12 @@ details[open] > summary {
 // From: https://stackoverflow.com/a/29064517/6929343
 .badge {
   // width:20px;
+  width: auto;
+  padding: .1rem .25rem .1rem .25rem;
   height: 1rem;
   font-size: .9rem;
-  border-radius:4px; //modify it according to your needs.
-  -webkit-border-radius:4px;
+  border-radius: .25rem; //modify it according to your needs.
+  -webkit-border-radius: .25rem;
   background:red;
   color:white;
   text-align:center;
