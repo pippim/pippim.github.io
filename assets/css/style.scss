@@ -197,14 +197,14 @@ mark {
 
 // Details syling: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
 details {
-  font-size: 1.3rem;
+  // font-size: 1.3rem;
   // width: 80%;
 }
 
 details > summary {
   // Chevron from https://stackoverflow.com/a/10813665/6929343
   list-style-type: none;
-  margin-bottom: 10px;     // some spacing between groups
+  margin-bottom: .6emx;     // some spacing between groups
   padding: 2px 6px;
   width: 35em;          // 60% no good for cell phone
   background-color: $honeydew;
@@ -242,11 +242,15 @@ details[open] > summary {
   color: $header-bg-color;
 }
 
+.dtl {
+  margin-left: .5em;
+}
+
 // From: https://stackoverflow.com/a/29064517/6929343
 .badge {
   // width:20px;
-  height: 1.2rem;
-  font-size: 1.1rem;
+  height: .9rem;
+  font-size: .8rem;
   border-radius:4px; //modify it according to your needs.
   -webkit-border-radius:4px;
   background:red;
