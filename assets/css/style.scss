@@ -147,8 +147,8 @@ $honeydew: #F0FFF0 !default; // Honeydew
 mark {
   background-color: $header-bg-color;
   color: #FFFFFF;
-  border-radius: .8em;
-  padding: .33rem;
+  border-radius: .8em .2em;
+  padding: .25rem .5rem .25rem .5rem;
 }
 
 // Copy code block contents to clipboard
