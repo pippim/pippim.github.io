@@ -207,7 +207,8 @@ details > summary {
   margin-bottom: 10px;     // some spacing between groups
   padding: 2px 6px;
   width: 35em;          // 60% no good for cell phone
-  background-color: #ddd;
+  background-color: $honeydew;
+  color: $header-bg-color;
   border: none;
   box-shadow: 3px 3px 4px black;
   cursor: pointer;
@@ -222,12 +223,14 @@ details > summary::before {
 }
 
 details[open] > summary::before {
+    background-color: #ddd;
     content: '🔽 ';
 }
 
 details > p {
   border-radius: 0 0 10px 10px;
-  background-color: #ddd;
+  background-color: $honeydew;
+  color: $header-bg-color;
   padding: 2px 6px;
   margin-left: 2em;
   // margin: 0;
