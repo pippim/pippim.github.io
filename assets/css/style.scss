@@ -199,6 +199,7 @@ details > summary {
   // Chevron from https://stackoverflow.com/a/10813665/6929343
   list-style-type: none;
   margin-top: 10px;     // some spacing between groups
+  margin-left: 2rem;    // experiemnt for indenting nested <details>
   padding: 2px 6px;
   width: 40em;          // 60% no good for cell phone
   background-color: #ddd;
