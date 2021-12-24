@@ -22,4 +22,14 @@ also questions. Sometimes a good question can
   {% endfor %}
 </ul>
 
+## Posts by Tag
+
+There are about 4,000 posts in Pippim's Answers directory (`_posts`).
+To make accessing them more managagle nested tags by letter, then
+tag, then posts are used.
+
+Click the expand chevron (▶️) to expand a group of tags.
+
+Click the collapse chevron (🔽) to shrink a group of tags.
+
 {% include posts_by_tag.html %}
