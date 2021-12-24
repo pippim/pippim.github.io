@@ -233,7 +233,9 @@ details > p {
   background-color: $honeydew;
   color: $header-bg-color;
   // padding: 2px 6px;
-  margin-left: 2em;
+  // Hanging indent: https://stackoverflow.com/a/2833097/6929343
+  margin-left: 4em;
+  text-indent: -2em;
   // margin: 0;
   box-shadow: 3px 3px 4px black;
   // Below copied from .front_matter:
