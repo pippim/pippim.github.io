@@ -78,6 +78,11 @@ from random import randint
     
         [Some Link]({% post_url 2010-07-21-name-of-post %})
 
+    SECOND TO-DO:
+    
+    Create list of intangible sites to exclude, EG medicine, politics, etc.
+
+    Create list of tag substitutions, eg windows-subsystem-for-linux becomes wsl
 """
 
 INPUT_FILE = 'QueryResults.csv'
@@ -156,6 +161,10 @@ TAG_LETTERS = [('.', '9'), ('a', 'a'), ('b', 'b'), ('c', 'c'), ('d', 'd'),
                ('p', 'r'), ('s', 's'), ('t', 't'), ('u', 'v'), ('w', 'z')]
 POST_BY_TAG_HTML = "../_includes/posts_by_tag.html"  # relative to sede directory
 
+''' SE Sites to exclude from our website '''
+EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
+                 "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
+                 "Medical Sciences", "Ask Ubuntu Meta"]
 
 ''' Initialize Global Variables '''
 rows = []                   # Returned rows, less record #1 (field names)
@@ -264,13 +273,14 @@ total_quote_spaces = 0      # Total block quotes with two spaces appended
 total_paragraphs = 0        # How many paragraphs are there?
 total_words = 0             # How many words by splitting whitespace
 total_pseudo_tags = 0       # Keywords that qualify as tags for question
+total_sites = []            # Post counts by SE site name
 total_tag_names = []        # Tag names and counts for all the posts,
                             # Pseudo tags starts the list automatically
 total_tag_letters = []      # Tag names first letter (or digit) and counts
 tag_posts = []
 ACCEPTED_STRING = "✅&ensp;Solution"
 #tag_posts.append((str_name, r[TITLE], blog_filename, r[VIEWS, r[SCORE],
-#                 accepted, last_revision]))
+#                 accepted, created_date_string]))
 
 total_code_blocks = 0       # How many code blocks are there?
 total_block_lines = 0       # How many lines are inside code blocks?
@@ -616,25 +626,25 @@ def check_half_links(ln):
 def get_index(search, names):
     """ Find index matching search in names list """
     for name_index, name in enumerate(names):
-        if search == name.split()[0]:
+        if search == name.split('|')[0]:
             return name_index
 
     return None
 
 
 def incr_index(name_index, names):
-    """ Increment value within "Tag-name 9999"
+    """ Increment value within "Tag-name|9999"
     """
-    str_name, str_value = names[name_index].split()
-    names[name_index] = str_name + " " + str(int(str_value) + 1)
+    str_name, str_value = names[name_index].split('|')
+    names[name_index] = str_name + "|" + str(int(str_value) + 1)
 
 
 def look_index(offset, name_index, names):
-    """ Return previous or next tuple pair in list using offset
+    """ Return previous or next name/value pair in list using offset
     """
     ndx = name_index + offset
     if 0 <= ndx < len(names):
-        str_name, str_value = names[ndx].split()
+        str_name, str_value = names[ndx].split('|')
         return str_name, int(str_value)
     else:
         return None, None
@@ -650,26 +660,24 @@ def add_tag_post(name_index, names, r):
             4: post views: 99,999
             5: post votes: 99
             6: post accepted: ✅ Solution (or blank if not accepted)
-            7: last edit: December 16, 2021 (if blank then created date)
+            7: created date
         :param name_index index in names list
         :param names - list of "Tag-name 9999"
         :param r - Row
     """
     global tag_posts, total_tag_letters
 
-    str_name, str_value = names[name_index].split()
+    str_name, str_value = names[name_index].split('|')
     if r[TYPE] == "Answer" and r[ACCEPTED] == "Accepted":
         accepted = ACCEPTED_STRING
     else:
         accepted = ""
-    revised_date = r[CREATED]
-    if r[LAST_EDIT] != "":
-        revised_date = r[LAST_EDIT]
+    post_created_date = r[CREATED]
 
-    s = dt.strptime(revised_date[:10], "%Y-%m-%d")
-    last_revision = s.strftime('%B %-d, %Y')
+    s = dt.strptime(post_created_date[:10], "%Y-%m-%d")
+    created_date_string = s.strftime('%B %-d, %Y')
     t = (str_name, base_filename, r[TITLE], r[VIEWS], r[SCORE],
-         accepted, last_revision)
+         accepted, created_date_string)
     tag_posts.append(t)
 
     ''' Add to first letter (or digit) of tags '''
@@ -683,7 +691,7 @@ def add_tag_post(name_index, names, r):
         # All the tags added for all the posts
         incr_index(entry_ndx, total_tag_letters)
     else:
-        total_tag_letters.append(entry + " 1")
+        total_tag_letters.append(entry + "|1")
 
     #if entry == ".":
     #    print(entry, tags)
@@ -700,23 +708,23 @@ def tally_tags():
     for entry in pseudo_tag_names:
         all_tag_counts += 1
         entry_ndx = get_index(entry, total_tag_names)
-        if entry_ndx is not None:
-            # All the tags added for all the posts
-            incr_index(entry_ndx, total_tag_names)
-        else:
-            fatal_error("entry_ndx not found: " + entry)
+        if entry_ndx is None:
+            print('total_tag_names:', total_tag_names)
+            fatal_error("pseudo_tag_name not found: " + entry +
+                        " in total_tag_names.")
+        # All the tags added for all the posts
+        incr_index(entry_ndx, total_tag_names)
         add_tag_post(entry_ndx, total_tag_names, row)
 
     entries = tags.split()
     for entry in entries:
         all_tag_counts += 1
         entry_ndx = get_index(entry, total_tag_names)
-        if entry_ndx is not None:
-            # All the tags added for all the posts
-            incr_index(entry_ndx, total_tag_names)
-        else:
-            total_tag_names.append(entry + " 1")
+        if entry_ndx is None:
+            total_tag_names.append(entry + "|0")
             entry_ndx = len(total_tag_names) - 1
+        # All the tags added for all the posts
+        incr_index(entry_ndx, total_tag_names)
         add_tag_post(entry_ndx, total_tag_names, row)
 
 
@@ -1005,7 +1013,7 @@ def check_last_navigation_bar():
         return True  # Always do nav bar after TOC.
 
     words = 0
-    for i in range(last_nav_index, line_index):
+    for i in range(last_nav_index, line_index + 1):
         ln = lines[i]
         word_list = ln.split()
         count = len(word_list)
@@ -1230,59 +1238,16 @@ def fatal_error(msg):
 ''' END OF JOB
     =======================================================================
 
-    - html_badge(count):
-    - html_write(html): Write posts by tags HTML page
+    - next_group_matches(current, group_list)
     - get_tag_letter_index(letter): Get index in TAG_LETTERS
     - gen_post_by_tag_groups(): Generate list of posts by tags small groups
     - gen_post_by_tag_html(): Generate <details><summary> html code 
+    - html_badge(count):
+    - html_tag_line(start, end, count):
+    - html_details_start(summary):
+    - html_write(html): Write posts by tags HTML page
 
 '''
-
-
-def html_badge(badge_count):
-    """ Make HTML badge. Requires css styling in assets/css/style.scss:
-
-        // From: https://stackoverflow.com/a/29064517/6929343
-        .badge {
-          // width:20px;
-          height: 1.2rem;
-          font-size: 1.1rem;
-          border-radius:4px; //modify it according to your needs.
-          -webkit-border-radius:4px;
-          background:green;
-          color:white;
-          text-align:center;
-        }
-
-    :param badge_count: integer value
-    :return: HTML string
-    """
-
-    return '&ensp;&ensp;<span class="badge">&ensp;' + \
-        str(badge_count) + '&ensp;</span>'
-
-
-def html_tag_line(ts, te, tc):
-    """ Build tag line 'TAGS x ⟶ y (count)
-
-    :param ts = starting tag
-    :param te = ending tag
-    :param tc = tag count for badge
-    """
-    badge = html_badge(tc)
-    if ts != te:
-        t_line = "TAGS: " + ts + " ⟶ " + te + badge
-    else:
-        t_line = "TAG: " + ts + badge
-
-    return t_line
-
-
-def html_write(html):
-    """ Write posts by tags HTML page """
-    with open(POST_BY_TAG_HTML, 'w') as fh:
-        # Write everything
-        fh.write(html)
 
 
 def get_tag_letter_index(letter):
@@ -1372,7 +1337,7 @@ def gen_post_by_tag_groups():
     for post_index, post in enumerate(tag_posts):
         # parse post tuple into named fields
         tag_name, post_filename, title, view, votes, accepted, \
-            last_revision = post
+            created_date_string = post
 
         tag_letter_index_changed = False
         force_break = False
@@ -1382,12 +1347,12 @@ def gen_post_by_tag_groups():
         # When tag name changes see what fits in this group and next group
         if tag_name != prev_tag_name:
             tag_name_index = get_index(tag_name, total_tag_names)
-            tag_name_count = int(total_tag_names[tag_name_index].split()[1])
+            tag_name_count = int(total_tag_names[tag_name_index].split('|')[1])
 
             tag_letter = tag_name[:1]
             # tag_letter_index and tag_letter_count are not used
             tag_letter_index = get_index(tag_letter, total_tag_letters)
-            tag_letter_count = int(total_tag_letters[tag_letter_index].split()[1])
+            tag_letter_count = int(total_tag_letters[tag_letter_index].split('|')[1])
 
             # Use previous and next counts to massage number of posts in group
             prev_name, prev_name_count = \
@@ -1418,7 +1383,7 @@ def gen_post_by_tag_groups():
 
 
             # Some debugging
-            if 49 <= group_count <= 51:  # Adjust when wanted
+            if 49 <= group_count <= 48:  # Adjust when wanted
                 print()
                 print('TAG:', tag_name, 'BEFORE:', 'current_tag_fits:', current_tag_fits,
                       ' | next_tag_fits:', next_tag_fits)
@@ -1448,7 +1413,7 @@ def gen_post_by_tag_groups():
             next_tag_fits_own_group = False
             if next_name_count >= TAG_MIN_GROUP:
                 next_tag_fits_own_group = True
-            if 49 <= group_count <= 51:  # Adjust when wanted
+            if 49 <= group_count <= 48:  # Adjust when wanted
                 print('AFTER:', 'current_tag_fits:', current_tag_fits,
                       ' | next_tag_fits:', next_tag_fits,
                       ' | next_tag_fits_own_group:', next_tag_fits_own_group)
@@ -1565,7 +1530,7 @@ def gen_post_by_tag_groups():
             t = (group_count, group_start_name, group_start_index,
                  group_end_name, group_end_index, inner_count)
             groups.append(t)
-            if 49 <= group_count <= 51:  # Adjust start/end when wanted
+            if 49 <= group_count <= 48:  # Adjust start/end when wanted
                 print('tag_name:', tag_name, ' | current_tag_fits:', current_tag_fits,
                       ' | current_tag_fits_own_group:', current_tag_fits_own_group)
                 print('current_tag_spans_many_groups:', current_tag_spans_many_groups,
@@ -1611,6 +1576,19 @@ def gen_post_by_tag_groups():
              group_end_name, group_end_index, inner_count)
         groups.append(t)
 
+    ''' Hand-crafting tag letter groups.
+    '''
+    # Uncomment below to get needed data to hand-craft TAG_LETTERS.
+    #for group_ndx, group in enumerate(new_groups):
+    #    group_no, start, start_ndx, end, end_ndx, count = group
+    #    print(group)
+
+    ''' BUILD new_groups WITH MASSAGED TEXT
+        ==========================================================================
+        
+        new_groups same structure as groups
+
+    '''
     # Remove suffixes from names that don't span at least two groups
     new_groups = []
     last_end = "$as$@#%23 1234"  # Something never a tag name
@@ -1638,42 +1616,10 @@ def gen_post_by_tag_groups():
         new_groups.append(t)
         last_end = end
 
-    # Note that 2+ ranges  are combined into new sub-group. For example:
-    # (251, 'upgrade 2016-08-13', 3420, 'upgrade 2018-04-29', 3434, 15)
-    # (252, 'upgrade 2018-04-29', 3435, 'upgrade 2019-07-09', 3449, 15)
-    # (253, 'upgrade 2019-07-20', 3450, 'upgrade 2019-12-15', 3458, 9)
-    # becomes:
-    # (None, 'upgrade', 251, 'upgrade', 253, 39)
-    # Uncomment below to get needed data to hand-craft TAG_LETTERS.
-    print('Group count:', group_count)
-    print('group_no, start, start_ndx, end, end_ndx, count')
-    for group_ndx, group in enumerate(new_groups):
-        group_no, start, start_ndx, end, end_ndx, count = group
-        if 100 <= group_ndx <= 200:  # Adjust start/end when wanted
-            print(group)
+    ''' USE new_groups LIST TO BUILD HTML IN _includes/post_by_tags.html
+        ======================================================================
 
-    #for group_ndx, group in enumerate(new_groups):
-    #    group_no, start, start_ndx, end, end_ndx, count = group
-    #    print(group)
-
-    prev_tag_index = None
-    prev_tag_letter = ""
-    prev_tag_name = ""
-    tag_letter_index_changed = False
-    current_tag_spans_many_groups = False  # > TAG_AVG_GROUP * 2
-
-    inner_letter_count = 0
-    inner_name_count = 0
-
-    group_count = 0             # Number of <DETAIL> groups
-    groups = []                 # Control list of posts in <DETAIL> group
-    group_start_name = ""       # First tag name + YYYY-MM-DD in group
-    group_start_index = None    # First post_tags[index] in group
-    group_end_name = ""         # Last tag name + YYYY-MM-DD in group
-    group_end_index = None      # Last post_tags[index] in group
-    inner_count = 0             # How many posts added so far in group
-    tag_letter = None
-    tag_index = None
+    '''
 
     html = ""
     total_group_count = 0
@@ -1681,13 +1627,16 @@ def gen_post_by_tag_groups():
         group_count = letter_group_counts[letter_index]
         if group_count == 0:
             continue  # No post groups under this letter group
-        # Write out <details><summary>tag</summary><p>\n
+
+        # Write out <details><summary>tag</summary>\n\n
         group_start, group_end = letter_group
         tag_line = html_tag_line(group_start, group_end, group_count)
 
         # FROM: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
         html += html_details_start(tag_line)
         # Now find groups of posts beginning with this letter / these letters
+        fake_group_count = 0  # Currently not traversing a made up fake group
+
         for group in new_groups:
             group_no, start, start_ndx, end, end_ndx, count = group
             letter = start[:1]
@@ -1696,26 +1645,36 @@ def gen_post_by_tag_groups():
             if letter > group_end:
                 break                   # Past letter end
 
-            #badge = html_badge(count)
-            tag_line = html_tag_line(start, end, count)
-            html += html_details_start(tag_line) + "<p>\n"
+            total_group_count += 1
 
-            #if start != end:
-            #    html += start + " ⟶ " + end + badge + "<br>\n"
-            #else:
-            #    html += start + badge + "<br>\n"
-            for i in range(start_ndx, end_ndx):
-                tag_name, post_filename, title, view, votes, accepted, \
-                    last_revision = tag_posts[i]
-                html += title + "<br>\n"
-                html += post_filename + "<br>\n"
+            # Does tag span many groups?
 
-            # Write out </p></details> end tag
-            html += "</p>" + html_details_end()
-            total_group_count += count
+            # Make tag spanning many groups of posts a parent
+            # Note that 2+ ranges  are combined into new sub-group. For example:
+            # (251, 'upgrade 2016-08-13', 3420, 'upgrade 2018-04-29', 3434, 15)
+            # (252, 'upgrade 2018-04-29', 3435, 'upgrade 2019-07-09', 3449, 15)
+            # (253, 'upgrade 2019-07-20', 3450, 'upgrade 2019-12-15', 3458, 9)
+            # becomes:
+            # (None, 'upgrade', 251, 'upgrade', 253, 39)
+            # (251, '2016-08-13', 3420, '2018-04-29', 3434, 15)
+            # (252, '2018-04-29', 3435, '2019-07-09', 3449, 15)
+            # (253, '2019-07-20', 3450, '2019-12-15', 3458, 9)
 
-        print('letter_index:', letter_index, 'letter_group:', letter_group,
-              'group count:', group_count)
+            # Write posts with href
+            if fake_group_count == 0:
+                fake_group_count, fake_post_count = test_fake_group(group_no, new_groups)
+                if fake_group_count > 1:
+                    html += expand_fake_groups(group_no, new_groups,
+                                               fake_group_count, fake_post_count)
+                else:
+                    fake_group_count = 0
+                    mark_tag = start != end
+                    html += html_posts(start, start_ndx, end, end_ndx, count, mark_tag)
+            else:
+                fake_group_count -= 1
+
+        #print('letter_index:', letter_index, 'letter_group:', letter_group,
+        #      'group count:', group_count)
 
         # Write out </p></details> end tag
         html += html_details_end()
@@ -1724,93 +1683,163 @@ def gen_post_by_tag_groups():
         print('total_group_count:', total_group_count,
               'len(new_groups):', len(new_groups))
         # fatal_error('total_count != len(new_groups)')
-
     #print(html)
     html_write(html)
 
 
+def test_fake_group(group_no, groups):
+    """
+    Does tag span many groups? If so we'll create pseudo group of groups.
+
+    Return the number of groups and total number of posts if true. Otherwise,
+    return 0, 0.
+     
+    :param group_no: Group number within groups list
+    :param groups: List of
+    :return: True if tag spans many groups, False if not
+    """
+    group_count = post_count = 0
+    group_no, start, start_ndx, end, end_ndx, count = groups[group_no - 1]
+    if " " not in start or " " not in end:
+        return group_count, post_count
+
+    our_group = start.split()[0]
+    while True:
+        if " " not in start or " " not in end:
+            return group_count, post_count
+
+        if our_group != end.split()[0]:
+            return group_count, post_count
+    
+        if group_no >= len(groups):
+            return group_count, post_count
+
+        group_no += 1
+        group_count += 1
+        post_count += count
+
+        group_no, start, start_ndx, end, end_ndx, count = groups[group_no - 1]
+        if " " not in start or " " not in end:
+            return group_count, post_count
+        if start.split()[0] != our_group:
+            return group_count, post_count
 
 
+def expand_fake_groups(group_no, groups, fake_group_count, fake_post_count):
+
+    html = ""   # Start with empty html
+    # print("expanding group_no:", group_no)
+    our_group_no = group_no
+    group_no, start, start_ndx, end, end_ndx, count = groups[group_no - 1]
+    our_group_name = start.split()[0]
+    tag_line = html_tag_line(our_group_name, our_group_name, fake_post_count)
+
+    html += html_details_start(tag_line)
+
+    for fake_group_ndx in range(0, fake_group_count):
+        group_no, start, start_ndx, end, end_ndx, count = \
+            groups[our_group_no - 1 + fake_group_ndx]
+
+        # Write out <details><summary>tag</summary>\n\n
+        group_name = start.split()[0]
+        if group_name != our_group_name:
+            break
+        group_start = start.split()[1]
+        group_end = end.split()[1]
+
+        # Try using regular processing
+        html += html_posts(group_start, start_ndx, group_end, end_ndx, count,
+                           mark_tag=False, details="Dates: ")
+
+    # Write out </p></details> end tag
+    html += html_details_end()
+
+    return html
 
 
-    if len(new_groups) >= 1:
-        return
+def html_posts(start, start_ndx, end, end_ndx, count,
+               mark_tag=False, details=None):
+
+    html = ""  # Start with empty html
+
+    # Write out <details><summary>tag</summary>\n\n
+    tag_line = html_tag_line(start, end, count, details)
+    html = html_details_start(tag_line) + "<p>\n"
+
+    # details of posts with href
+    for i in range(start_ndx, end_ndx + 1):
+        html += html_post_line(i, mark_tag=mark_tag)
+
+    # Write out </p></details> end tag
+    html += "</p>" + html_details_end()
+
+    return html
 
 
+def html_badge(count):
+    """ Make HTML badge. Requires css styling in assets/css/style.scss:
+
+    param badge_count: integer value
+    return HTML string
+    """
+
+    return '&ensp;&ensp;<span class="badge">' + str(count) + '</span>'
 
 
-    for post_index, post in enumerate(tag_posts):
-        # parse post tuple into named fields
-        tag_name, post_filename, title, view, votes, accepted, \
-            last_revision = post
+def html_tag_line(start, end, count, details=None):
+    """ Build tag line 'TAGS x ⟶ y (count)
 
-        tag_letter_index_changed = False
+    param start = starting tag
+    param end = ending tag
+    param count = tag count for badge
+    """
+    badge = html_badge(count)
+    if details is not None:
+        t_line = details + "<mark>" + start + "</mark> ⟶ <mark>" + \
+                 end + "</mark>" + badge
+    elif start != end:
+        t_line = "TAGS: <mark>" + start + "</mark> ⟶ <mark>" + \
+                 end + "</mark>" + badge
+    else:
+        t_line = "TAG: <mark>" + start + "</mark>" + badge
 
-        # When tag name changes see what fits in this group and next group
-        if tag_name != prev_tag_name:
-            tag_name_index = get_index(tag_name, total_tag_names)
-            tag_name_count = int(total_tag_names[tag_name_index].split()[1])
+    return t_line
 
-            tag_letter = tag_name[:1]
-            # tag_letter_index and tag_letter_count are not used
-            tag_letter_index = get_index(tag_letter, total_tag_letters)
-            tag_letter_count = int(total_tag_letters[tag_letter_index].split()[1])
 
-            # Use previous and next counts to massage number of posts in group
-            prev_name, prev_name_count = \
-                look_index(-1, tag_name_index, total_tag_names)
-            if prev_name_count is None:
-                prev_name_count = 0
+def html_post_line(pi, mark_tag=False):
+    """ Build post reference line
 
-            next_name, next_name_count = \
-                look_index(+1, tag_name_index, total_tag_names)
-            if next_name_count is None:
-                next_name_count = 0
+    param pi = Posts by Tag index
+    """
+    tag_name, post_filename, title, view, votes, accepted, \
+        created_date_string = tag_posts[pi]
 
-            if tag_letter != prev_tag_letter:
-                inner_letter_count = 0
+    opt_tag = ""
+    if mark_tag:
+        opt_tag = "<mark>" + tag_name + "</mark>"
 
-            inner_name_count = 0
-            this_tag_forced_break = False
-
-            # Has letter group changed?
-            # It changes see what fits in this group of posts and next group
-            tag_index = get_tag_letter_index(tag_letter)
-            if tag_index != prev_tag_index and prev_tag_index is not None:
-                tag_letter_index_changed = True
-                prev_name_count = 0
-                prev_tag_spans_many_groups = False
-            else:
-                prev_tag_spans_many_groups = current_tag_spans_many_groups
-
-        if tag_letter_index_changed:
-            force_break = True
-            break_rule = 0
-
-        prev_tag_index = tag_index
-        prev_tag_name = tag_name
-        prev_tag_letter = tag_letter
-        inner_name_count += 1
-        inner_letter_count += 1
-        inner_count += 1
-        letter_group_counts[tag_index] += 1
-        # Set default in case next read starts a new group or this is EOL
-        group_end_name = tag_name + " " + post_filename[:10]
-        group_end_index = post_index
-
-    # Last group still in buffer
-    if group_count >= 1:
-        t = (group_count, group_start_name, group_start_index,
-             group_end_name, group_end_index, inner_count)
-        groups.append(t)
+    # Fix " in title: # https://meta.stackexchange.com/a/21557/366359
+    title = title.replace('<', '&lt;')
+    # Convert post_filename to html filename
+    html_filename = \
+        post_filename.replace('-', '/', 3).replace('"', '%22').replace('.md', '.html')
+    return opt_tag + '<a href="' + html_filename + '">' + title + '</a><br />\n'
 
 
 def html_details_start(summary):
-    return "<details><summary>" + summary + "</summary>\n"
+    """ One extra blank line after summary to please Kramdown. """
+    return '<details class="dtl"><summary>' + summary + "</summary>\n\n"
 
 
 def html_details_end():
     return "</details>\n\n"
+
+
+def html_write(html):
+    """ Write posts by tags HTML page """
+    with open(POST_BY_TAG_HTML, 'w') as fh:
+        # Write everything
+        fh.write(html)
 
 
 ''' INITIALIZATION
@@ -1862,7 +1891,7 @@ if RANDOM_LIMIT < 100:
 
 ''' Initialize Total Tag Names with Pseudo-Tags '''
 for tag in PSEUDO_TAGS:
-    total_tag_names.append(tag + " 0")
+    total_tag_names.append(tag + "|0")
 
 
 ''' MAIN LOOP to process All query records
@@ -1916,6 +1945,16 @@ for row in rows:
     self_answer = False     # Is this a self-answered question?
     self_accept = False     # Is this self-answered question accepted?
 
+    ''' Tally SE Site Name counts'''
+    site_name = row[SITE]
+    site_ndx = get_index(site_name, total_sites)
+    if site_ndx is None:
+        # First time add the site name to list with count of 0
+        total_sites.append(site_name + "|0")
+        site_ndx = len(total_sites) - 1
+    # Increment post count for current SE site name
+    incr_index(site_ndx, total_sites)
+
     ''' YYYY-MM-DD-Title-with-spaces-converted-to-dashes.md '''
     blog_filename = create_blog_filename()
 
@@ -1952,6 +1991,12 @@ for row in rows:
     else:
         unknown_count += 1  # Happens when managing stack exchange site
         #print('Unknown Type:', dump(row))
+
+    ''' Exclude specific SE sites '''
+    for exclude in EXCLUDE_SITES:
+        if row[SITE] == exclude:
+            save_blog = False
+            break
 
     ''' If we aren't saving this blog, grab the next '''
     if save_blog is False:
@@ -2192,8 +2237,10 @@ print('all_tag_counts: {:>8,}'.format(all_tag_counts),
       ' | # tag_posts:      {:>8,}'.format(len(tag_posts)),
       ' | # total_tag_letters:{:>6,}'.format(len(total_tag_letters)))
 print('total_header_levels:       ', total_header_levels)
-print('TAG_LETTERS:               ', TAG_LETTERS)
-print('total_tag_letters:         ', total_tag_letters)
+#print('TAG_LETTERS:               ', TAG_LETTERS)
+#print('total_tag_letters:         ', total_tag_letters)
+#print('EXCLUDE_SITES:, EXCLUDE_SITES'
 #print('total_tag_names:     ', total_tag_names)
+#print(total_sites)
 
 # End of stack-to-blog.py
