@@ -24,12 +24,14 @@ also questions. Sometimes a good question can
 
 ## Posts by Tag
 
-There are about 4,000 posts in Pippim's Answers directory (`_posts`).
-To make accessing them more managagle nested tags by letter, then
-tag, then posts are used.
+There are about 3,633 tags used by Pippim Answers.
+To make accessing them more managable, tags are nested by letter,
+then by tag, then the posts are listed in small grouups of about 15.
 
 Click the expand chevron (▶️) to expand a group of tags.
 
 Click the collapse chevron (🔽) to shrink a group of tags.
+
+### Answer Tags
 
 {% include posts_by_tag.html %}
