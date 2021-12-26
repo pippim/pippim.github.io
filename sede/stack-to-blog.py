@@ -1297,7 +1297,10 @@ def gen_post_by_tag_groups():
     global tag_posts, total_tag_letters, total_tag_names
     tag_posts.sort()
     total_tag_letters.sort()
+    # Force "logitech-unifying" after "logitech"
+    total_tag_names = [i.replace('|', ' |') for i in total_tag_names]
     total_tag_names.sort()
+    total_tag_names = [i.replace(' |', '|') for i in total_tag_names]
 
     TAG_AVG_GROUP = TAG_MIN_GROUP + (TAG_MAX_GROUP - TAG_MIN_GROUP) / 2
     # print("TAG_AVG_GROUP:", TAG_AVG_GROUP)  # TESTED WORKING
@@ -1383,7 +1386,7 @@ def gen_post_by_tag_groups():
 
 
             # Some debugging
-            if 49 <= group_count <= 48:  # Adjust when wanted
+            if 169 <= group_count <= 168:  # Adjust when wanted
                 print()
                 print('TAG:', tag_name, 'BEFORE:', 'current_tag_fits:', current_tag_fits,
                       ' | next_tag_fits:', next_tag_fits)
@@ -1413,7 +1416,7 @@ def gen_post_by_tag_groups():
             next_tag_fits_own_group = False
             if next_name_count >= TAG_MIN_GROUP:
                 next_tag_fits_own_group = True
-            if 49 <= group_count <= 48:  # Adjust when wanted
+            if 169 <= group_count <= 168:  # Adjust when wanted
                 print('AFTER:', 'current_tag_fits:', current_tag_fits,
                       ' | next_tag_fits:', next_tag_fits,
                       ' | next_tag_fits_own_group:', next_tag_fits_own_group)
@@ -1422,6 +1425,9 @@ def gen_post_by_tag_groups():
                 print('next_name_count:', next_name_count,
                       ' | inner_count:', inner_count,
                       ' | inner_name_count:', inner_name_count)
+                print('tag_name_index:', tag_name_index,
+                      ' | prev_name:', prev_name,
+                      ' | prev_name_count:', prev_name_count)
                 print('tag_index:', tag_index,
                       ' | prev_tag_index:', prev_tag_index,
                       ' | letter_group_counts[tag_index]:',
@@ -1530,7 +1536,7 @@ def gen_post_by_tag_groups():
             t = (group_count, group_start_name, group_start_index,
                  group_end_name, group_end_index, inner_count)
             groups.append(t)
-            if 49 <= group_count <= 48:  # Adjust start/end when wanted
+            if 169 <= group_count <= 168:  # Adjust start/end when wanted
                 print('tag_name:', tag_name, ' | current_tag_fits:', current_tag_fits,
                       ' | current_tag_fits_own_group:', current_tag_fits_own_group)
                 print('current_tag_spans_many_groups:', current_tag_spans_many_groups,
@@ -1579,9 +1585,17 @@ def gen_post_by_tag_groups():
     ''' Hand-crafting tag letter groups.
     '''
     # Uncomment below to get needed data to hand-craft TAG_LETTERS.
-    #for group_ndx, group in enumerate(new_groups):
-    #    group_no, start, start_ndx, end, end_ndx, count = group
-    #    print(group)
+    print('group_count:', group_count)
+    for group_ndx, group in enumerate(groups):
+        hold_count = group_count
+        group_count = group_ndx + 1
+        if 169 <= group_count <= 168:  # Adjust when wanted
+            group_no, start, start_ndx, end, end_ndx, count = group
+            print(group)
+        group_count = hold_count  # Awkward recycling so same test is used
+
+    for i in range(370, 369):
+        print(total_tag_names[i])
 
     ''' BUILD new_groups WITH MASSAGED TEXT
         ==========================================================================
