@@ -223,16 +223,19 @@ details > summary {
 
 details > summary::-webkit-details-marker {
     display: none;
+    cursor: s-resize;
+}
+
+details[open] > summary {
+    cursor: n-resize;
 }
 
 details > summary::before {
     content: '▶️ ';
-    cursor: s-resize;
 }
 
 details[open] > summary::before {
     content: '🔽 ';
-    cursor: n-resize;
 }
 
 details > p {
