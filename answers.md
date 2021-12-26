@@ -32,9 +32,9 @@ Click the expand chevron (▶️) to expand a group of tags.
 
 Click the collapse chevron (🔽) to shrink a group of tags.
 
-### Answer Tags - Speed up Support parse_block_html = True
+### Answer Tags
 
-{::options parse_block_html="true" /}
+{::options parse_block_html="false" /}
 
 {% include posts_by_tag.html %}
 
