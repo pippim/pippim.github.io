@@ -226,11 +226,13 @@ details > summary::-webkit-details-marker {
 
 details > summary::before {
     content: '▶️ ';
+    cursor: s-resize;
 }
 
 details[open] > summary::before {
     background-color: #ddd;
     content: '🔽 ';
+    cursor: n-resize;
 }
 
 details > p {
