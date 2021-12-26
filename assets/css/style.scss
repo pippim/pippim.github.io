@@ -212,30 +212,32 @@ details > summary {
   color: $header-bg-color;
   border: none;
   box-shadow: 3px 3px 4px black;
-  cursor: pointer;
   
   &:hover {
     // background-position:bottom;
     background-color: #ddd;
-    cursor: row-resize;
   }
 }
 
 details > summary::-webkit-details-marker {
-    display: none;
-    cursor: s-resize;
+  // Fringe browsers from https://stackoverflow.com/a/10813665/6929343
+  display: none;
+}
+
+details > summary {
+  cursor: s-resize;
 }
 
 details[open] > summary {
-    cursor: n-resize;
+  cursor: n-resize;
 }
 
 details > summary::before {
-    content: '▶️ ';
+  content: '▶️ ';
 }
 
 details[open] > summary::before {
-    content: '🔽 ';
+  content: '🔽 ';
 }
 
 details > p {
