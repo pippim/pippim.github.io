@@ -213,6 +213,11 @@ details > summary {
   border: none;
   box-shadow: 3px 3px 4px black;
   cursor: pointer;
+  
+  &:hover {
+    background-position:bottom;
+    color:#F0FFF0;
+  }
 }
 
 details > summary::-webkit-details-marker {
