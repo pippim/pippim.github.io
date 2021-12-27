@@ -18,7 +18,7 @@ layout: default
 
 Welcome to Pippim. A collection of Stack Exchange questions and 
 answers about using your computer in Linux and 
-specifically Ubuntu. All the solutions are free for you.
+specifically Ubuntu. All the solutions are free for you
 to use as you like. There are full-fledged applications 
 free for you to use as well. You can even duplicate the
 Pippim website for free. Then **automatically convert your
