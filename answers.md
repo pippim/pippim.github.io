@@ -11,8 +11,7 @@ They are posted on Stack Exchange websites
  such as [Ask Ubuntu 🔗](https://askubuntu.com "Visit www.askubuntu.com 🔗") and
 [Stack Overflow 🔗](https://stackoverflow.com "Visit www.stackoverflow.com 🔗"). About 8%
  of the posts Pippim has made are
-also questions. Sometimes a good question can
- be as helpful as an answer.
+also. Hopefully, reviewing these questions will help you to write your own.
 
 ## Top Ten Answers
 
