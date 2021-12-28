@@ -10,7 +10,7 @@ Pippim answers have over
 They are posted on Stack Exchange websites
  such as [Ask Ubuntu 🔗](https://askubuntu.com "Visit www.askubuntu.com 🔗") and
 [Stack Overflow 🔗](https://stackoverflow.com "Visit www.stackoverflow.com 🔗").
-About 8% of the posts Pippim has made are questions.
+About 5% of the posts you see here are questions and not answers.
 Hopefully, reviewing these questions will help you to write your own when you need to.
 
 ## Top Ten Answers
