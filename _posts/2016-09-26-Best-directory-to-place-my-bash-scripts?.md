@@ -11,7 +11,7 @@ votes:        4
 favorites:    1
 views:        240
 accepted:     
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -37,5 +37,5 @@ Even though I accepted below answer over a year ago, I ended up using:
 
 After creating directory `/home/me/bin` you need to log out and in again for it to get into your PATH.
 
-  [1]: https://pippim.github.io/2016/09/26/Turn-off-Motherboard∕PC-Speaker-%22beep%22-in-Ubuntu-16.04-regression.html
+  [1]: https://pippim.github.io/2016/09/26/Turn-off-Motherboard&sol;PC-Speaker-%22beep%22-in-Ubuntu-16.04-regression.html
   [2]: https://pippim.github.io/2016/10/22/Ubuntu-changing-default-audio-output-after-suspend.html

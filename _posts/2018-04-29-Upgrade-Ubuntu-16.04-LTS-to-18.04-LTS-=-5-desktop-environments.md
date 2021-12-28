@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        2,175
 accepted:     
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -35,4 +35,4 @@ I would first click the gear to select the Desktop environment and then enter my
 
 
   [1]: https://i.stack.imgur.com/dNXhZ.jpg
-  [2]: https://pippim.github.io/2018/04/27/Bash-script-to-backup∕clone-Ubuntu-to-another-partition.html
+  [2]: https://pippim.github.io/2018/04/27/Bash-script-to-backup&sol;clone-Ubuntu-to-another-partition.html

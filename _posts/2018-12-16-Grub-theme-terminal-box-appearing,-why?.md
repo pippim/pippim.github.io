@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        900
 accepted:     Accepted
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -50,4 +50,4 @@ Insert the two `echo` lines in front of the two existing lines.
 
 
   [1]: https://i.stack.imgur.com/tOliY.gif
-  [2]: https://pippim.github.io/2016/09/09/Editing-OS-names-in-∕etc∕default∕grub---where-is-the-OS-name-read-from?.html
+  [2]: https://pippim.github.io/2016/09/09/Editing-OS-names-in-&sol;etc&sol;default&sol;grub---where-is-the-OS-name-read-from?.html

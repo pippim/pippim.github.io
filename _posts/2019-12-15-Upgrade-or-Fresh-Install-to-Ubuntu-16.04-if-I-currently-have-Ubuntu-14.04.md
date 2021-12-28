@@ -11,7 +11,7 @@ votes:        5
 favorites:    
 views:        837
 accepted:     
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -46,4 +46,4 @@ Please note an upgrade can take 40 minutes (in my case) to a few hours (reported
 A few times a day, a few times a week, month and year I will change different system settings. Over the course of five years I forget all that I've changed. The advantage of upgrading is none get lost. The disadvantage of reinstalling is all get lost.
 
   [1]: https://help.ubuntu.com/community/EOLUpgrades
-  [2]: https://pippim.github.io/2018/04/27/Bash-script-to-backup∕clone-Ubuntu-to-another-partition.html
+  [2]: https://pippim.github.io/2018/04/27/Bash-script-to-backup&sol;clone-Ubuntu-to-another-partition.html

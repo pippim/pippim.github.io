@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        52,562
 accepted:     
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -26,5 +26,5 @@ You can boot with a Live USB and manually clone your Ubuntu 16.04 partition or y
 You can also create a **test plan** for what you need to test after upgrading your cloned 16.04 to 18.04: [Is 18.04 already somewhat safe for installing?][2]
 
 
-  [1]: https://pippim.github.io/2018/04/27/Bash-script-to-backup∕clone-Ubuntu-to-another-partition.html
+  [1]: https://pippim.github.io/2018/04/27/Bash-script-to-backup&sol;clone-Ubuntu-to-another-partition.html
   [2]: https://pippim.github.io/2018/03/01/Is-18.04-already-somewhat-safe-for-installing?.html

@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        11,265
 accepted:     
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -40,4 +40,4 @@ Adding /lib/firmware/i915/skl_guc_ver9_33.bin
 In particular you should be seeing the last line. If not follow the instructions here: [Updated kernel to 4.8 now missing firmware warnings][1]
 
 
-  [1]: https://pippim.github.io/2016/10/03/Possible-missing-firmware-∕lib∕firmware∕i915.html
+  [1]: https://pippim.github.io/2016/10/03/Possible-missing-firmware-&sol;lib&sol;firmware&sol;i915.html

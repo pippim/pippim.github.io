@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        2,126
 accepted:     Accepted
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    true
@@ -137,5 +137,5 @@ It crashes at end with this message:
 
 
 
-  [1]: https://pippim.github.io/2018/04/01/Change-2-or-more-LibreOffice-documents-to-have-the-exact-same-styling∕formatting.html
+  [1]: https://pippim.github.io/2018/04/01/Change-2-or-more-LibreOffice-documents-to-have-the-exact-same-styling&sol;formatting.html
   [2]: https://i.stack.imgur.com/DRj6V.png

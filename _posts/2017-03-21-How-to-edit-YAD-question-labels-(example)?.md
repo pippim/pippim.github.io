@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        2,443
 accepted:     
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    true
@@ -92,5 +92,5 @@ done # End of while loop
 ```
 
 
-  [1]: https://pippim.github.io/2017/03/25/Bash-template-to-use-zenity-(or-yad)-to-insert-∕-edit-∕-delete-records-in-a-file-or-database.html
+  [1]: https://pippim.github.io/2017/03/25/Bash-template-to-use-zenity-(or-yad)-to-insert-&sol;-edit-&sol;-delete-records-in-a-file-or-database.html
   [2]: https://i.stack.imgur.com/vAWT6.png

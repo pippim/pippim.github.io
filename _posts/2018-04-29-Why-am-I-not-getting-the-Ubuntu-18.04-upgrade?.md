@@ -11,7 +11,7 @@ votes:        24
 favorites:    
 views:        52,600
 accepted:     
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -99,4 +99,4 @@ All the more reason for cloning is you can test what happens when you accept def
 Because your original Ubuntu version is left intact you can run the `diff` command against the new 18.04 configuration files if you chose to install them.
 
   [1]: https://help.ubuntu.com/community/Upgrades
-  [2]: https://pippim.github.io/2018/04/27/Bash-script-to-backup∕clone-Ubuntu-to-another-partition.html
+  [2]: https://pippim.github.io/2018/04/27/Bash-script-to-backup&sol;clone-Ubuntu-to-another-partition.html

@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        210
 accepted:     
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -36,4 +36,4 @@ I think you get the picture. To assist in the cloning process you can refer to t
 
 **Note:** The linked script was written on April 28 and works fine. I'm revising it with extra tests to validate the correct test partition is selected as a clone. Another revision is to display Source and Target partition OS version details. The final revision is to display `rsync` stats for deleted files which are relevant when re-cloning over top of a clone.
 
-  [1]: https://pippim.github.io/2018/04/27/Bash-script-to-backup∕clone-Ubuntu-to-another-partition.html
+  [1]: https://pippim.github.io/2018/04/27/Bash-script-to-backup&sol;clone-Ubuntu-to-another-partition.html

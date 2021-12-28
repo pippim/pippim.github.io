@@ -11,7 +11,7 @@ votes:        5
 favorites:    
 views:        389
 accepted:     Accepted
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -41,4 +41,4 @@ Some notable comments about parameters:
 
 As with all backup scenarios **always test** the backups to make sure all files are there and contain the appropriate information.
 
-  [1]: https://pippim.github.io/2018/04/27/Bash-script-to-backup∕clone-Ubuntu-to-another-partition.html
+  [1]: https://pippim.github.io/2018/04/27/Bash-script-to-backup&sol;clone-Ubuntu-to-another-partition.html

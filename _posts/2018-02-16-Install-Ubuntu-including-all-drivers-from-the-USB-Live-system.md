@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        14,882
 accepted:     
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -43,7 +43,7 @@ Here are a couple of similar questions where during Live-USB session Wifi works 
 - [Internet worked during install, but not after][11]
 
 
-  [1]: https://pippim.github.io/2018/02/17/Ubuntu-Menu-and-Launcher-not-showing-after-2∕16∕2018-update.html
+  [1]: https://pippim.github.io/2018/02/17/Ubuntu-Menu-and-Launcher-not-showing-after-2&sol;16&sol;2018-update.html
   [2]: https://askubuntu.com/questions/1006621/2-15-18-compiz-update-broke-unity
   [3]: https://askubuntu.com/questions/992571/gui-unity-crashing-in-16-04-lts-after-updates-2018-01-04-compiz-segfaults
   [4]: https://askubuntu.com/questions/995819/touchpad-gestures-and-holding-keys-does-not-work

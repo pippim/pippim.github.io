@@ -11,7 +11,7 @@ votes:        5
 favorites:    
 views:        1,389
 accepted:     Accepted
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -65,4 +65,4 @@ In summary Nautilus gives us a nice GUI into our partitions. It's very handy on 
 
 
   [1]: https://i.stack.imgur.com/v4Nn2.png
-  [2]: https://pippim.github.io/2016/10/10/How-do-I-hide-∕-remove-a-partition-from-the-Nautilus-left-panel?.html
+  [2]: https://pippim.github.io/2016/10/10/How-do-I-hide-&sol;-remove-a-partition-from-the-Nautilus-left-panel?.html

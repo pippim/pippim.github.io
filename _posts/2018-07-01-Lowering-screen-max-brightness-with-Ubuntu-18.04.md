@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        998
 accepted:     Accepted
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    true
@@ -118,4 +118,4 @@ done
 
 
 
-  [1]: https://pippim.github.io/2018/06/12/How-to-switch-between-options-in-`∕sys∕class∕backlight`-to-solve-brightness-problem?.html
+  [1]: https://pippim.github.io/2018/06/12/How-to-switch-between-options-in-`&sol;sys&sol;class&sol;backlight`-to-solve-brightness-problem?.html

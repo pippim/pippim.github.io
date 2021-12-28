@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        4,784
 accepted:     
-uploaded:     2021-12-28 13:55:01
+uploaded:     2021-12-28 15:43:52
 toc:          false
 navigation:   false
 clipboard:    false
@@ -30,4 +30,4 @@ Additionally you can install new applications previously not available such as t
 Wash, Rinse, Repeat then Repeat again...
 
 
-  [1]: https://pippim.github.io/2018/04/27/Bash-script-to-backup∕clone-Ubuntu-to-another-partition.html
+  [1]: https://pippim.github.io/2018/04/27/Bash-script-to-backup&sol;clone-Ubuntu-to-another-partition.html
