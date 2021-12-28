@@ -8,8 +8,8 @@ layout: default
 Pippim answers have over
  **53 million views** as of December 28, 2021.
 They are posted on Stack Exchange websites
- such as [Ask Ubuntu](askubuntu.com) and
-[Stack Overflow](stackoverflow.com). About 8%
+ such as [Ask Ubuntu 🔗](https://askubuntu.com "Visit www.askubuntu.com 🔗") and
+[Stack Overflow 🔗](https://stackoverflow.com "Visit www.stackoverflow.com 🔗"). About 8%
  of the posts Pippim has made are
 also questions. Sometimes a good question can
  be as helpful as an answer.
