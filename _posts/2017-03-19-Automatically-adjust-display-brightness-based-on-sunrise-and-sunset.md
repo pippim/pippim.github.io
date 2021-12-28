@@ -9,9 +9,9 @@ created_date: 2017-03-19 01:10:27
 edit_date:    2019-02-07 01:43:56
 votes:        8
 favorites:    
-views:        5,134
+views:        5,186
 accepted:     Accepted
-uploaded:     2021-12-09 06:07:48
+uploaded:     2021-12-28 11:11:13
 toc:          true
 navigation:   true
 clipboard:    true
@@ -369,10 +369,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 ```
 
-
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr11" class ="hdr-btn">Skip</a></div>
-
 # Instant brightness adjustment resuming from suspend
 
 You can suspend your computer at 6 am when it before the sun rises and your setting is at 300. You can resume it at 4 pm when the sun is bright and the setting should be 2000 but you have to wait 1 to 59 seconds for `display-auto-brightness` to reset the display. When the display does reset the change is dramatic. To solve this a `systemd` script is needed. Create the file `/lib/systemd/system-sleep/display-auto-brightness` containing:
@@ -429,14 +425,10 @@ chmod a+x /lib/systemd/system-sleep/display-auto-brightness
 ```
 
 
-<a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr10" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr12" class ="hdr-btn">Skip</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr11" class ="hdr-btn">Skip</a></div>
 
 # Summary
-
-
-<a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr11" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr13" class ="hdr-btn">Skip</a></div>
 
 ## Display current brightness level is systray
 
@@ -477,8 +469,8 @@ exit 0
 This Q&A ([Can BASH display in systray as application indicator?][6]) describes how to setup indicator-sysmonitor.
 
 
-<a id="hdr13"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr12" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr14" class ="hdr-btn">Skip</a></div>
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr10" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr12" class ="hdr-btn">Skip</a></div>
 
 ## Future Enhancements
 
@@ -492,9 +484,9 @@ This Q&A ([Can BASH display in systray as application indicator?][6]) describes 
   [3]: https://i.stack.imgur.com/4njOT.png
   [4]: https://i.stack.imgur.com/CWjQ8.png
   [5]: https://i.stack.imgur.com/esEG1.png
-  [6]: https://askubuntu.com/questions/882419/can-bash-display-in-systray-as-application-indicator/882420#882420
+  [6]: https://pippim.github.io/2017/02/11/Can-BASH-display-in-systray-as-application-indicator?.html
 
 
-<a id="hdr14"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr13" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr11" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
 

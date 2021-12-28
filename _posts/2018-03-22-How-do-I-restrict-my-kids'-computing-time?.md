@@ -9,9 +9,9 @@ created_date: 2018-03-22 01:06:16
 edit_date:    2021-12-04 21:51:58
 votes:        2
 favorites:    
-views:        58,747
+views:        58,846
 accepted:     Accepted
-uploaded:     2021-12-18 12:14:05
+uploaded:     2021-12-28 11:11:13
 toc:          true
 navigation:   true
 clipboard:    true
@@ -252,3 +252,4 @@ While lock screen timer is running it records how many minutes are remaining int
 
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+

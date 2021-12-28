@@ -6,12 +6,12 @@ stack_url:    https://askubuntu.com/q/837115
 type:         Answer
 tags:         16.04 lock-screen dbus gnome-screensaver multi-timer
 created_date: 2016-10-14 17:35:27
-edit_date:    2021-11-14 17:30:21
+edit_date:    2021-12-13 00:29:13
 votes:        15
 favorites:    
-views:        3,004
+views:        3,020
 accepted:     Accepted
-uploaded:     2021-12-13 17:17:47
+uploaded:     2021-12-28 11:11:13
 toc:          true
 navigation:   true
 clipboard:    true
@@ -25,7 +25,7 @@ clipboard:    true
 
 ## June 4, 2018 Update
 
-A much superior program called `multi-timer` has been created: [A timer to set up different alarms simultaneously][1]
+A much superior program called `multi-timer` has been created: [Set of countdown timers with alarm][1]
 
 
 <a id="hdr2"></a>
@@ -302,8 +302,9 @@ While lock screen timer is running it records how many minutes are remaining int
   [1]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
   [2]: https://i.stack.imgur.com/N0gb6.gif
   [3]: https://i.stack.imgur.com/0jBz6m.png
-  [4]: https://askubuntu.com/questions/882419/how-can-bash-display-in-ubuntus-unity-system-tray
+  [4]: https://pippim.github.io/2017/02/11/Can-BASH-display-in-systray-as-application-indicator?.html
 
 
 <a id="hdr10"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+

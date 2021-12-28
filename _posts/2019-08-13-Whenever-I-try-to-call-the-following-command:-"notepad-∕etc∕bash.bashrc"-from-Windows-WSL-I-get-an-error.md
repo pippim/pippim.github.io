@@ -1,0 +1,29 @@
+---
+layout:       post
+title:        Whenever I try to call the following command: "notepad /etc/bash.bashrc" from Windows WSL I get an error
+site:         Ask Ubuntu
+stack_url:    https://askubuntu.com/q/1165306
+type:         Answer
+tags:         command-line bash windows windows-subsystem-for-linux
+created_date: 2019-08-13 01:51:16
+edit_date:    
+votes:        1
+favorites:    
+views:        666
+accepted:     Accepted
+uploaded:     2021-12-28 11:11:13
+toc:          false
+navigation:   false
+clipboard:    false
+---
+
+NEVER EVER Use a Windows Application to change a WSL file. YOU WILL CORRUPT YOUR DATA.
+
+If you have Windows update 1903 installed (March 2019) you can [use Windows File Explorer][1] to access WSL files. However WSL must be running first.
+
+If you want a GUI to edit files try `gedit` after installing `sudo apt install ubuntu-desktop`. See this for more information:
+
+- https://askubuntu.com/questions/993225/whats-the-easiest-way-to-run-gui-apps-on-windows-subsystem-for-linux-as-of-2018
+
+
+  [1]: https://www.omgubuntu.co.uk/2019/02/access-linux-files-from-windows-explorer-wsl

@@ -6,12 +6,12 @@ stack_url:    https://askubuntu.com/q/882420
 type:         Answer
 tags:         unity bash scripts system-tray eyesome multi-timer
 created_date: 2017-02-11 23:34:13
-edit_date:    2021-12-11 20:37:15
+edit_date:    2021-12-12 22:34:32
 votes:        6
 favorites:    
-views:        1,853
+views:        1,883
 accepted:     Accepted
-uploaded:     2021-12-12 09:14:56
+uploaded:     2021-12-28 11:11:13
 toc:          false
 navigation:   true
 clipboard:    true
@@ -35,13 +35,9 @@ It displays text on the Ubuntu System Tray (Systray) / Application Indicator Bar
 
 ## Different Desktop Environments
 
-The above article is targeted to Ubuntu 16.04 to 20.04 with the **Unity Desktop**. If you don't have Unity Desktop installed for Ubuntu 20.04 see [these instructions](https://linuxconfig.org/ubuntu-20-04-unity-desktop). 
+The above article is targeted to Ubuntu 14.04 to 20.04 with the **Unity Desktop**. If you don't have Unity Desktop installed for Ubuntu 20.04 see [these instructions](https://linuxconfig.org/ubuntu-20-04-unity-desktop). 
 
 For more information on Xubuntu, Gnome-Shell + app-indicator extension, and Budgie, go to the Developers website: [fossfreedom / indicator-sysmonitor][2]. Also visit the site for more detailed installation and configuration instructions.
-
-
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
 
 # Install and Configure `indicator-sysmonitor`
 
@@ -54,7 +50,7 @@ sudo apt-get install indicator-sysmonitor
 
 ```
 
-Now run the "indicator-sysmonitor" GUI from Dash (<kbd>Alt</kbd>+<kbd>F2</kbd>).
+Now run the "indicator-sysmonitor" GUI from Unity Dash (<kbd>Alt</kbd>+<kbd>F2</kbd> or <kbd>⊞ Super</kbd> aka <kbd>⊞ Win</kbd> key). If you are using GNOME use <kbd>⊞ Super</kbd>+<kbd>A</kbd> to open Show Applications instead of Dash.
 
 - Click on the systray area that appears with "cpu: 99% mem: 99%"
 - Select "Preferences"
@@ -71,8 +67,8 @@ _ In Command field type name of your bash script, ie `/mnt/e/bin/indicator-sysmo
 - Now click the <kbd>Save</kbd> button.
 
 
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
 
 # Sysmonitor Indicator in action
 
@@ -85,8 +81,8 @@ This `.gif` shows how it looks when Ubuntu’s Unity System Tray is updated.
 - A spinning pizza appears along with a count down of time remaining for the current timer.
 
 
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
 
 # Sysmonitor Indicator BASH script
 
@@ -128,8 +124,8 @@ exit 0
 After telling ***Sysmonitor Indicator*** the name of your bash script by setting the `{Custom}` variable it runs every refresh interval. Whatever your bash script outputs via `echo` command appears in Ubuntu's System Tray.
 
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
 
 ## Three bash scripts that output to Systray
 
@@ -140,10 +136,6 @@ The `indicator-sysmonitor-display` script displays *Time Remaining* and *Display
 - [Automatically adjust display brightness based on sunrise and sunset][6]
 
 These three bash scripts illustrate how multiple scripts can output to the Systray concurrently and share the same script file (`indicator-sysmonitor-display`) that updates the display.
-
-
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
 
 # Spinning pizza--`text-spinner` BASH script
 
@@ -187,10 +179,11 @@ fi
   [1]: http://www.webupd8.org/2014/05/ubuntu-appindicator-that-displays-bash.html
   [2]: https://github.com/fossfreedom/indicator-sysmonitor
   [3]: https://i.stack.imgur.com/zdDGs.gif
-  [4]: https://askubuntu.com/questions/837078/application-that-will-lock-screen-after-a-set-amount-of-time-for-ubuntu/837115#837115
+  [4]: https://pippim.github.io/2016/10/14/Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu.html
   [5]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
-  [6]: https://askubuntu.com/questions/894460/automatically-adjust-display-brightness-based-on-sunrise-and-sunset
+  [6]: https://pippim.github.io/2017/03/19/Automatically-adjust-display-brightness-based-on-sunrise-and-sunset.html
 
 
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a></div>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a></div>
+
