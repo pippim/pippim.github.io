@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Convert today's HH:MM am/pm to epoch in Bash
+title:        Convert today's HH:MM am∕pm to epoch in Bash
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/42521666
 type:         Question
@@ -11,7 +11,7 @@ votes:        2
 favorites:    1
 views:        816
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

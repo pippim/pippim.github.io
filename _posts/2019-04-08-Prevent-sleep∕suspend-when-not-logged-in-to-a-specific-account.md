@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Prevent sleep/suspend when not logged in to a specific account
+title:        Prevent sleep∕suspend when not logged in to a specific account
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1132068
 type:         Answer
@@ -11,7 +11,7 @@ votes:        11
 favorites:    
 views:        7,340
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

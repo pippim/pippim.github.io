@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Android Studio Fall 2018 which JDK for Ubuntu 16/18?
+title:        Android Studio Fall 2018 which JDK for Ubuntu 16∕18?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1084101
 type:         Question
@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        1,503
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

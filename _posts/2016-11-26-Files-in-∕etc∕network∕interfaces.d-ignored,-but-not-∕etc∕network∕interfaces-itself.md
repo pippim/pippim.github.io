@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Files in /etc/network/interfaces.d ignored, but not /etc/network/interfaces itself
+title:        Files in ∕etc∕network∕interfaces.d ignored, but not ∕etc∕network∕interfaces itself
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/853689
 type:         Answer
@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        66,355
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

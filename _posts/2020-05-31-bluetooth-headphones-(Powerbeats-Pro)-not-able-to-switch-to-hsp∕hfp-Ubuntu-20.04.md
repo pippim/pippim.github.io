@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        bluetooth headphones (Powerbeats Pro) not able to switch to hsp/hfp Ubuntu 20.04
+title:        bluetooth headphones (Powerbeats Pro) not able to switch to hsp∕hfp Ubuntu 20.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1245600
 type:         Answer
@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        2,879
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

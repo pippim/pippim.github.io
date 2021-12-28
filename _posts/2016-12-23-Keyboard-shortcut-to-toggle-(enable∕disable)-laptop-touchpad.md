@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Keyboard shortcut to toggle (enable/disable) laptop touchpad
+title:        Keyboard shortcut to toggle (enable∕disable) laptop touchpad
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/863750
 type:         Answer
@@ -11,7 +11,7 @@ votes:        9
 favorites:    
 views:        3,521
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

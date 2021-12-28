@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        SD card insert/remove behaviors not detected until running lspci command
+title:        SD card insert∕remove behaviors not detected until running lspci command
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1182400
 type:         Answer
@@ -11,7 +11,7 @@ votes:        0
 favorites:    
 views:        1,067
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

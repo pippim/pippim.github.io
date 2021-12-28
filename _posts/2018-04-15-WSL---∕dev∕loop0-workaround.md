@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        WSL - /dev/loop0 workaround
+title:        WSL - ∕dev∕loop0 workaround
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1025297
 type:         Answer
@@ -11,7 +11,7 @@ votes:        6
 favorites:    
 views:        6,320
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

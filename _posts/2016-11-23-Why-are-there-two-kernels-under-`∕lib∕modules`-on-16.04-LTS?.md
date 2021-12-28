@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Why are there two kernels under `/lib/modules` on 16.04 LTS?
+title:        Why are there two kernels under `∕lib∕modules` on 16.04 LTS?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/852797
 type:         Answer
@@ -11,7 +11,7 @@ votes:        8
 favorites:    
 views:        3,019
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

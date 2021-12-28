@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Bash script to maintain audit trail / log of files accessed
+title:        Bash script to maintain audit trail ∕ log of files accessed
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/851051
 type:         Answer
@@ -11,7 +11,7 @@ votes:        0
 favorites:    
 views:        1,194
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

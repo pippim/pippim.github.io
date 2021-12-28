@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        help! W: Possible missing firmware /lib/firmware/i915/kbl_guc_ver9_14.bin for module i915
+title:        help! W: Possible missing firmware ∕lib∕firmware∕i915∕kbl_guc_ver9_14.bin for module i915
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1132078
 type:         Answer
@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        33,442
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

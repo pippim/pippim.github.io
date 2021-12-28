@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How to remove /dev/loops
+title:        How to remove ∕dev∕loops
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1195398
 type:         Answer
@@ -11,7 +11,7 @@ votes:        9
 favorites:    
 views:        20,475
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

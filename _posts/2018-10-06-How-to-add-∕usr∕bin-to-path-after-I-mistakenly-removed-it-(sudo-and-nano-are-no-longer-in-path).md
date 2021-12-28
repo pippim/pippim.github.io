@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How to add /usr/bin to path after I mistakenly removed it (sudo and nano are no longer in path)
+title:        How to add ∕usr∕bin to path after I mistakenly removed it (sudo and nano are no longer in path)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1081545
 type:         Answer
@@ -11,7 +11,7 @@ votes:        5
 favorites:    
 views:        1,825
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How can I copy /home and / to new partitions on the same drive which I can boot into for testing.
+title:        How can I copy ∕home and ∕ to new partitions on the same drive which I can boot into for testing.
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1010462
 type:         Answer
@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        355
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

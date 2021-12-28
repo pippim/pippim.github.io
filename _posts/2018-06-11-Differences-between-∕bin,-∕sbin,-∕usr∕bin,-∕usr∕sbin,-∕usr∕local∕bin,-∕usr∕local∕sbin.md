@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Differences between /bin, /sbin, /usr/bin, /usr/sbin, /usr/local/bin, /usr/local/sbin
+title:        Differences between ∕bin, ∕sbin, ∕usr∕bin, ∕usr∕sbin, ∕usr∕local∕bin, ∕usr∕local∕sbin
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1045759
 type:         Answer
@@ -11,7 +11,7 @@ votes:        24
 favorites:    
 views:        291,410
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

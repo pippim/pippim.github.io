@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Laptop selectively will/will not wake up from suspend on Ubuntu 18.04.3
+title:        Laptop selectively will∕will not wake up from suspend on Ubuntu 18.04.3
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1206241
 type:         Answer
@@ -11,7 +11,7 @@ votes:        4
 favorites:    
 views:        2,432
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

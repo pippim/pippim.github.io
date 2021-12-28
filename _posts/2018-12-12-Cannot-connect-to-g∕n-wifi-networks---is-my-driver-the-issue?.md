@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Cannot connect to g/n wifi networks - is my driver the issue?
+title:        Cannot connect to g∕n wifi networks - is my driver the issue?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1100218
 type:         Answer
@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        245
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

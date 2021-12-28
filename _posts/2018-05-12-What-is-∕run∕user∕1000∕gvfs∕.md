@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        What is /run/user/1000/gvfs/
+title:        What is ∕run∕user∕1000∕gvfs∕
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035122
 type:         Answer
@@ -11,7 +11,7 @@ votes:        12
 favorites:    
 views:        16,452
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

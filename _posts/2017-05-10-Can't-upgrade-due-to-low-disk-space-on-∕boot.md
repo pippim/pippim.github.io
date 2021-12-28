@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Can't upgrade due to low disk space on /boot
+title:        Can't upgrade due to low disk space on ∕boot
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/913597
 type:         Answer
@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        122,794
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   true
 clipboard:    true

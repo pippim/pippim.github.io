@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Expand $PATH problem $HOME/bin is set twice
+title:        Expand $PATH problem $HOME∕bin is set twice
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1169391
 type:         Answer
@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        449
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        strace hwinfo --dump-db 0 does not dump to /var/lib/hardware
+title:        strace hwinfo --dump-db 0 does not dump to ∕var∕lib∕hardware
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018828
 type:         Answer
@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        140
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

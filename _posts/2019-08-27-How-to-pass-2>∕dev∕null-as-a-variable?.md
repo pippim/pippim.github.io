@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How to pass 2>/dev/null as a variable?
+title:        How to pass 2>∕dev∕null as a variable?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1168750
 type:         Question
@@ -11,7 +11,7 @@ votes:        16
 favorites:    2
 views:        4,619
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

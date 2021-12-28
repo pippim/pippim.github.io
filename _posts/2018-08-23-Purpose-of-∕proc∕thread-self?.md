@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Purpose of /proc/thread-self?
+title:        Purpose of ∕proc∕thread-self?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/51977002
 type:         Question
@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        1,312
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

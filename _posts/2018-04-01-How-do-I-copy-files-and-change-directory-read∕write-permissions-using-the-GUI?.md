@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How do I copy files and change directory read/write permissions using the GUI?
+title:        How do I copy files and change directory read∕write permissions using the GUI?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1020977
 type:         Answer
@@ -11,7 +11,7 @@ votes:        0
 favorites:    
 views:        108
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

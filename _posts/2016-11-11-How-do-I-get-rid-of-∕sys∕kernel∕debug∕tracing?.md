@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How do I get rid of /sys/kernel/debug/tracing?
+title:        How do I get rid of ∕sys∕kernel∕debug∕tracing?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/848237
 type:         Answer
@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        10,689
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

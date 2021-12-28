@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How to get the temperature using hddtemp for a Samsung SSD/NVMe in Thinkpad T480
+title:        How to get the temperature using hddtemp for a Samsung SSD∕NVMe in Thinkpad T480
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1247294
 type:         Answer
@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        4,841
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

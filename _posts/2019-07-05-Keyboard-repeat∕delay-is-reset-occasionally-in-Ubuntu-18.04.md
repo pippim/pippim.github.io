@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Keyboard repeat/delay is reset occasionally in Ubuntu 18.04
+title:        Keyboard repeat∕delay is reset occasionally in Ubuntu 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1156053
 type:         Answer
@@ -11,7 +11,7 @@ votes:        4
 favorites:    
 views:        1,554
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

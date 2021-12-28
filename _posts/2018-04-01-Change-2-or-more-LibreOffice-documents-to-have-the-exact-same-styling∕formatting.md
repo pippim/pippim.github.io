@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Change 2 or more LibreOffice documents to have the exact same styling/formatting
+title:        Change 2 or more LibreOffice documents to have the exact same styling∕formatting
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021152
 type:         Answer
@@ -11,7 +11,7 @@ votes:        4
 favorites:    
 views:        614
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          true
 navigation:   true
 clipboard:    true

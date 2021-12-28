@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Considerations for using `/tmp` directory on multi-user systems
+title:        Considerations for using `∕tmp` directory on multi-user systems
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/882608
 type:         Question
@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        372
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

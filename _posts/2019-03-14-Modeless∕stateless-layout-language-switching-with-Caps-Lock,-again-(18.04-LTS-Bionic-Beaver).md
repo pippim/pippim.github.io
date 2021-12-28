@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Modeless/stateless layout language switching with Caps Lock, again (18.04 LTS Bionic Beaver)
+title:        Modeless∕stateless layout language switching with Caps Lock, again (18.04 LTS Bionic Beaver)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1125584
 type:         Answer
@@ -11,7 +11,7 @@ votes:        6
 favorites:    
 views:        1,187
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

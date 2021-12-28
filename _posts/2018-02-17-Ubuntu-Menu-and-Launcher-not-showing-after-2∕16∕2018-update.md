@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Ubuntu Menu and Launcher not showing after 2/16/2018 update
+title:        Ubuntu Menu and Launcher not showing after 2∕16∕2018 update
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007213
 type:         Answer
@@ -11,7 +11,7 @@ votes:        8
 favorites:    
 views:        6,554
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

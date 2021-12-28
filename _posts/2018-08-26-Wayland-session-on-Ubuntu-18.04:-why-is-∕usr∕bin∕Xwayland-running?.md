@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Wayland session on Ubuntu 18.04: why is /usr/bin/Xwayland running?
+title:        Wayland session on Ubuntu 18.04: why is ∕usr∕bin∕Xwayland running?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1069168
 type:         Answer
@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        2,300
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

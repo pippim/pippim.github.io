@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How to disable sleep / suspend / hibernate HP keyboard buttons for Ubuntu 18.04?
+title:        How to disable sleep ∕ suspend ∕ hibernate HP keyboard buttons for Ubuntu 18.04?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1128676
 type:         Answer
@@ -11,7 +11,7 @@ votes:        7
 favorites:    
 views:        5,656
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

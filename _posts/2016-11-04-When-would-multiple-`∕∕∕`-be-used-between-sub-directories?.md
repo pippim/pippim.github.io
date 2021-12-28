@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        When would multiple `///` be used between sub-directories?
+title:        When would multiple `∕∕∕` be used between sub-directories?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/845338
 type:         Question
@@ -11,7 +11,7 @@ votes:        0
 favorites:    
 views:        34
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

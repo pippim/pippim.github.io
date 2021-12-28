@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Set CPU temperature throttle threshold on Ubuntu/Thinkpad
+title:        Set CPU temperature throttle threshold on Ubuntu∕Thinkpad
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1144572
 type:         Answer
@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        15,237
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

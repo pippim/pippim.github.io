@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How to set S3/S4 state for devices on suspend
+title:        How to set S3∕S4 state for devices on suspend
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1150514
 type:         Answer
@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        1,814
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

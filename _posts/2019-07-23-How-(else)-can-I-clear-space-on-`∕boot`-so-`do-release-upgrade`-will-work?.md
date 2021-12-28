@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How (else) can I clear space on `/boot` so `do-release-upgrade` will work?
+title:        How (else) can I clear space on `∕boot` so `do-release-upgrade` will work?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160495
 type:         Answer
@@ -11,7 +11,7 @@ votes:        4
 favorites:    
 views:        752
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

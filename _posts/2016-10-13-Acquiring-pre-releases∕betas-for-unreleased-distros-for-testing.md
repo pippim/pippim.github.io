@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Acquiring pre-releases/betas for unreleased distros for testing
+title:        Acquiring pre-releases∕betas for unreleased distros for testing
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/836291
 type:         Answer
@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        101
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

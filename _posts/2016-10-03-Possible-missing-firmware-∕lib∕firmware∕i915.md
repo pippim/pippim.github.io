@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Possible missing firmware /lib/firmware/i915
+title:        Possible missing firmware ∕lib∕firmware∕i915
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/832528
 type:         Answer
@@ -11,7 +11,7 @@ votes:        149
 favorites:    
 views:        169,578
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          true
 navigation:   true
 clipboard:    false

@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Disabling sleep/suspend mode in 16.04
+title:        Disabling sleep∕suspend mode in 16.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159943
 type:         Answer
@@ -11,7 +11,7 @@ votes:        0
 favorites:    
 views:        53
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

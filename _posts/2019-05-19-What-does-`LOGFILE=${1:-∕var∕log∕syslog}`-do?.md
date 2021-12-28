@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        What does `LOGFILE=${1:-/var/log/syslog}` do?
+title:        What does `LOGFILE=${1:-∕var∕log∕syslog}` do?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1144592
 type:         Answer
@@ -11,7 +11,7 @@ votes:        6
 favorites:    
 views:        397
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

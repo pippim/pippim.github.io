@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        initramfs error when installing / updating
+title:        initramfs error when installing ∕ updating
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1137679
 type:         Answer
@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        50,882
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        How to switch between options in `/sys/class/backlight` to solve brightness problem?
+title:        How to switch between options in `∕sys∕class∕backlight` to solve brightness problem?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1045763
 type:         Answer
@@ -11,7 +11,7 @@ votes:        4
 favorites:    
 views:        3,129
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

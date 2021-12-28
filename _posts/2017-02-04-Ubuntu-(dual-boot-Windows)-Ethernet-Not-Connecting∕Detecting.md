@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Ubuntu (dual boot Windows) Ethernet Not Connecting/Detecting
+title:        Ubuntu (dual boot Windows) Ethernet Not Connecting∕Detecting
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/879818
 type:         Answer
@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        16,128
 accepted:     
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    true

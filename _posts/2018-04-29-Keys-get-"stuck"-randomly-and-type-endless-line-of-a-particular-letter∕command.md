@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Keys get "stuck" randomly and type endless line of a particular letter/command
+title:        Keys get "stuck" randomly and type endless line of a particular letter∕command
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029791
 type:         Answer
@@ -11,7 +11,7 @@ votes:        8
 favorites:    
 views:        8,482
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

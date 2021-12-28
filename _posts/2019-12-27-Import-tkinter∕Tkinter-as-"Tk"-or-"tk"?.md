@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Import tkinter/Tkinter as "Tk" or "tk"?
+title:        Import tkinter∕Tkinter as "Tk" or "tk"?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59506193
 type:         Question
@@ -11,7 +11,7 @@ votes:        0
 favorites:    
 views:        461
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

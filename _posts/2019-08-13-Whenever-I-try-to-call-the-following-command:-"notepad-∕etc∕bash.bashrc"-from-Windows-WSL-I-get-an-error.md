@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Whenever I try to call the following command: "notepad /etc/bash.bashrc" from Windows WSL I get an error
+title:        Whenever I try to call the following command: "notepad ∕etc∕bash.bashrc" from Windows WSL I get an error
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1165306
 type:         Answer
@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        666
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false

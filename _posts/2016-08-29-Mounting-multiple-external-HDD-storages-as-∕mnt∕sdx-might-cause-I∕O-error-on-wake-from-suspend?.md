@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Mounting multiple external HDD storages as /mnt/sdx might cause I/O error on wake from suspend?
+title:        Mounting multiple external HDD storages as ∕mnt∕sdx might cause I∕O error on wake from suspend?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/818017
 type:         Answer
@@ -11,7 +11,7 @@ votes:        0
 favorites:    
 views:        54
 accepted:     Accepted
-uploaded:     2021-12-28 11:11:13
+uploaded:     2021-12-28 13:55:01
 toc:          false
 navigation:   false
 clipboard:    false
