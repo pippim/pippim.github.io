@@ -18,7 +18,7 @@ layout: default
 
 Welcome to Pippim. A collection of Stack Exchange questions and 
 answers about using your computer in Linux and 
-specifically Ubuntu. All the solutions are free for you.
+specifically Ubuntu. All the solutions are free for you
 to use as you like. There are full-fledged applications 
 free for you to use as well. You can even duplicate the
 Pippim website for free. Then **automatically convert your
@@ -700,7 +700,7 @@ If you want to change how front matter is displayed
 on your website page, edit the files `_includes/page.html`
 and `assets/js/post_fm.html`.
 
-The <mark>&nbsp;Reverse Formatting&nbsp;</mark> is defined in
+The <mark>&nbsp;Highlight Formatting&nbsp;</mark> is defined in
 `assets/css/style.scss`:
 
 ``` scss

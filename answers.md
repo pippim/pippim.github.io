@@ -6,21 +6,17 @@ layout: default
 # Answers by Pippim
 
 Pippim answers have over
- **52 million views** as of November 22, 2021.
+ **53 million views** as of December 28, 2021.
 They are posted on Stack Exchange websites
- like [AskUbuntu](askubuntu.com) and
-[Stack Overflow](stackoverflow.com). About 8%
+ such as [Ask Ubuntu 🔗](https://askubuntu.com "Visit www.askubuntu.com 🔗") and
+[Stack Overflow 🔗](https://stackoverflow.com "Visit www.stackoverflow.com 🔗"). About 8%
  of the posts Pippim has made are
 also questions. Sometimes a good question can
  be as helpful as an answer.
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>  
-    </li>
-  {% endfor %}
-</ul>
+## Top Ten Answers
+
+{% include posts_by_vote.html %}
 
 ## Posts by Tag
 
@@ -34,4 +30,8 @@ Click the collapse chevron (🔽) to shrink a group of tags.
 
 ### Answer Tags
 
+{::options parse_block_html="false" /}
+
 {% include posts_by_tag.html %}
+
+{::options parse_block_html="false" /}
