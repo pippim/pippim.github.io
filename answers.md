@@ -9,9 +9,9 @@ Pippim answers have over
  **53 million views** as of December 28, 2021.
 They are posted on Stack Exchange websites
  such as [Ask Ubuntu 🔗](https://askubuntu.com "Visit www.askubuntu.com 🔗") and
-[Stack Overflow 🔗](https://stackoverflow.com "Visit www.stackoverflow.com 🔗"). About 8%
- of the posts Pippim has made are
-also. Hopefully, reviewing these questions will help you to write your own.
+[Stack Overflow 🔗](https://stackoverflow.com "Visit www.stackoverflow.com 🔗").
+About 8% of the posts Pippim has made are questions.
+Hopefully, reviewing these questions will help you to write your own when you need to.
 
 ## Top Ten Answers
 
