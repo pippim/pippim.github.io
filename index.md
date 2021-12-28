@@ -700,7 +700,7 @@ If you want to change how front matter is displayed
 on your website page, edit the files `_includes/page.html`
 and `assets/js/post_fm.html`.
 
-The <mark>&nbsp;Reverse Formatting&nbsp;</mark> is defined in
+The <mark>&nbsp;Highlight Formatting&nbsp;</mark> is defined in
 `assets/css/style.scss`:
 
 ``` scss
