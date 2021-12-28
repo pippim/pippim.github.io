@@ -23,7 +23,7 @@ clipboard:    false
 
 # May 20, 2019 Update
 
-To answer your question you don't need to update drivers for a processor you aren't running but it is nice to see the warnings disappear when you do.
+To answer your question, you don't need to update drivers for a processor you aren't running but it is nice to see the warnings disappear when you do.
 
 Today I received these warning:
 
