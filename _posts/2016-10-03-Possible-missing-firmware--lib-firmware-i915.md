@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        Possible missing firmware /lib/firmware/i915
+title:        Possible missing firmware -lib-firmware-i915
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/832528
 type:         Answer
