@@ -15,8 +15,9 @@
 #       Dec. 07 2021 - Support 4 space indented code. Convert to fenced block.
 #       Dec. 09 2021 - Change SE half-links [https://..] to [link name].
 #       Dec. 11 2021 - Minimum number of words since last Navigation Bar.
-#       Dec. 18 2021 - Posts by Tag index generation.
-#       Dec. 28 2021 - Create posts_by_vote.html
+#       Dec. 18 2021 - posts_by_tag.html generation.
+#       Dec. 26 2021 - swap_se_links() and speed_search() development.
+#       Dec. 29 2021 - Convert from <a href= to ({% post_url
 #
 # ==============================================================================
 
@@ -69,23 +70,46 @@ from random import randint
     ============================================================================
 
     There are long-term TO-DO's littered through out the program. This section is
-    for the immediate TO-DO's.
+    for the immediate TO-DO's:
 
-    FIRST TO-DO:
-
-    Build array of all posts front matter stack_URL and corresponding 
-    post filename. Prioritize post filename over Stack Exchange reference.
-    From example https://stackoverflow.com/a/9195560/6929343 :
-    
-        [Some Link]({% post_url 2010-07-21-name-of-post %})
-
-    SECOND TO-DO:
-    
     Create list of tag substitutions, eg windows-subsystem-for-linux becomes wsl
+
+    From: https://jekyllrb.com/docs/liquid/tags/#linking-to-posts
+    [Name of Link]({% post_url 2010-07-21-name-of-post %})
+
+    From: https://stackoverflow.com/a/41213193/6929343
+    {{ site.baseurl }}{% link _posts/2016-07-26-name-of-post.md %}
+
+    From: https://jekyllrb.com/docs/liquid/tags/#link
+
+            
+    It's substituting characters in file name
+    
+    ADD THESE NOTES TO NEW SHELL SCRIPT:
+    
+    After creating your personal access token:
+    
+$ git config --global user.name "pippim"
+$ git config --global user.email "pippim.com@gmail.com"
+$ git config -l
+user.name=pippim
+user.email=pippim.com@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/pippim/pippim.github.io
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+
+$git config --global credential.helper cache
+            
 """
 
+WEBSITE_NAME = "pippim.github.io"
 INPUT_FILE = 'QueryResults.csv'
-RANDOM_LIMIT = None         # On initial trials limit the number of blog posts
+RANDOM_LIMIT = None         # On initial trials limit the number of blog posts to 10
 PRINT_RANDOM = False        # Print out matching random records found
 OUTPUT_DIR = "../_posts/"   # Subdirectory name. Use "" for current directory
 QUESTIONS_QUALIFIER = True  # Convert questions to blog posts
@@ -129,6 +153,23 @@ NAV_LAST_LINES = 13         # Minimum of 13 lines since last navigation bar. Not
 COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
 COPY_LINE_MIN = 20          # Number of lines required to qualify for button
 
+""" TODO: 
+
+https://talk.jekyllrb.com/t/plugin-for-show-more-code-block/4149/2
+
+<details>
+<summary>
+Preview
+</summary>
+
+{% highlight ruby %}
+puts 'Expanded message'
+{% endhighlight %}
+
+</details>
+
+"""
+
 # If question or answer contains one of these "pseudo tags" then jekyll front
 # will have tag added as if it were really on the question. Essentially you
 # are tagging your answers and adding them to OP's question tags.
@@ -142,8 +183,9 @@ TAG_LETTERS = [('.', '9'), ('a', 'a'), ('b', 'b'), ('c', 'c'), ('d', 'd'),
                ('e', 'f'), ('g', 'g'), ('h', 'k'), ('l', 'l'), ('m', 'o'),
                ('p', 'r'), ('s', 's'), ('t', 't'), ('u', 'v'), ('w', 'z')]
 POST_BY_TAG_HTML = "../_includes/posts_by_tag.html"  # relative to sede directory
-POST_BY_VOTE_HTML = "../_includes/posts_by_vote.html"  # relative to sede directory
-posts_vote = []  # tuple score, title, our_url
+TOP_POSTS_HTML = "../_includes/posts_by_vote.html"  # relative to sede directory
+TOP_POSTS_INCLUDE = 10      # Top 10 posts will appear
+top_posts = []              # List of tuples [(views, title, our_url])
 
 ''' SE Sites to exclude from our website '''
 EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
@@ -154,31 +196,39 @@ EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
 rows = []                   # Returned rows, less record #1 (field names)
 row_count = 0               # How many rows (Answers / Blog posts)
 random_row_nos = []         # Random row numbers exported during trail runs
-all_tag_counts = 0          # Count of tags used on SE answers
+ss_list = []                # Speed search list
+ss_index = None             # Last speeed search index found
+ss_row_index = None         # Row's index number in rows [] list
+ss_url = None               # SE URL
+ss_type = None              # "Question", "Answer" or "Wiki"
+ss_title = None             # Post title, can be duplicated for Q & As
+ss_full_url = None          # Full SE URL with title appended
+ss_post_url = None          # "{% post_url base_filename %}"
+ss_save_blog = None         # Save this as blog post? True/False
+ss_accepted = None          # Has this answer been accepted?
+ss_count = None             # Number of times used
 
-now = dt.now().strftime("%Y-%m-%d %H:%M:%S")
-
-# Copy terminal output of record #1 with column names and paste below.
-# Then change names to uppercase and assign each column a 0-based index.
-SITE = 0
-POST_ID = 1
-URL = 2
-LINK = 3
-TYPE = 4
-TITLE = 5
-HTML = 6
-MARKDOWN = 7
-TAGS = 8
-CREATED = 9
-LAST_EDIT = 10
-EDITED_BY = 11
-SCORE = 12
-FAVORITES = 13
-VIEWS = 14
-ANSWERS = 15
-ACCEPTED = 16
-CW = 17
-CLOSED = 18
+# If you add fields to CSV, change "PRINT_COLUMN_NAMES = False" above to True.
+# Review terminal output of column names and assign their positions below.
+SITE = 0                    # Site Name, EG "Ask Ubuntu"
+POST_ID = 1                 # Post ID, EG "1104017"
+URL = 2                     # Post URL, EG "https://askubuntu.com/q/1104017"
+LINK = 3                    # Post Link, EG "https://askubuntu.com/q/1104017|How can..?"
+TYPE = 4                    # Post Type, EG "Question", "Answer", "Wiki"
+TITLE = 5                   # Title, EG "How can I send mobile text message from terminal?"
+HTML = 6                    # Post as rendered in HTML. Used by speed search to find links
+MARKDOWN = 7                # Original SE markdown, used for GitHub Pages/Jekyll/Kramdown
+TAGS = 8                    # Post tags, EG: "<command-line><bash><sms>"
+CREATED = 9                 # Created Date, EG: "2020-01-15 15:21:55+0000"
+LAST_EDIT = 10              # Last Edit Date, EG: "2020-05-27 17:27:45+0000" or blank
+EDITED_BY = 11              # Edited By, EG: "Community (-1)" or blank
+SCORE = 12                  # Votes Up-Down, EG: "64" or blank
+FAVORITES = 13              # How many made a favorite, EG "34" or blank
+VIEWS = 14                  # Number of times viewed, EG: "72056"
+ANSWERS = 15                # Number of answers to question, EG: "3" or blank
+ACCEPTED = 16               # Is answer accepted, EG: "Accepted" or blank
+CW = 17                     # Community Wiki, EG: "CW" or blank
+CLOSED = 18                 # Is question closed, EG: "Closed" or blank
 
 ''' Custom Front Matter for Jekyll blog posts
 
@@ -258,6 +308,8 @@ total_paragraphs = 0        # How many paragraphs are there?
 total_words = 0             # How many words by splitting whitespace
 total_pseudo_tags = 0       # Keywords that qualify as tags for question
 total_sites = []            # Post counts by SE site name
+all_tag_counts = 0          # Count of tags used on SE answers
+
 total_tag_names = []        # Tag names and counts for all the posts,
                             # Pseudo tags starts the list automatically
 total_tag_letters = []      # Tag names first letter (or digit) and counts
@@ -272,6 +324,7 @@ total_code_indents = 0      # How many code indents are there?
 total_indent_lines = 0      # How many lines are inside code indents?
 total_half_links = 0        # SE uses [https://…] instead of [Post Title]
 total_bad_half_links = 0    # SE half-links unresolved - not in this query
+total_tail_links = 0        # "[x]:  https://…"  replaced with ss_post_url
 total_suppress_nav = 0      # Total Navigation Bars suppressed (< NAV_LAST_WORDS)
 total_clipboards = 0        # How many copy to clipboard inserts?
 total_copy_lines = 0        # How many code block lines in clipboard inserts?
@@ -320,36 +373,220 @@ last_nav_level = 0
 last_nav_TOC = False
 suppress_nav_bars = 0       # How many nav bars suppressed in this post?
 
-''' Functions
-    ====================================================================
-    
-    Functions must be defined prior to being called.  The following
-    functions are defined:
+# Current timestamp for front matter "uploaded:"
+now = dt.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    dump(r)
-    header_space(ln)
-    block_quote(ln) 
-    check_pseudo_tags(ln) 
-    check_code_block(ln) 
-    check_code_indent(ln) 
-    check_copy_code(line_index)
-    navigation_bar(level, skip_btn=True)  
-    front_matter(r)
-    create_blog_filename()
-    check_self_answer(r)
-    write_md(md)
-    fatal_error(msg)
 
-'''
+def create_speed_search():
+    """ Create Speed Search List
+
+        Allows for faster processing and simplicity of https: lookups in
+        internal list (ss_list). Contains following elements:
+
+        ss_list = []                # Speed search list
+        ss_index = None             # Last speeed search index found
+        ss_row_ndx = None           # Row's index number in rows [] list
+        ss_url = None               # SE URL
+        ss_type = None              # "Question", "Answer" or "Wiki"
+        ss_title = None             # Post title, can be duplicated for Q & As
+        ss_full_url = None          # Full SE URL with title appended
+        ss_post_url = None          # "{% post_url base_filename %}"
+        ss_save_blog = None         # Save this as blog post? True/False
+        ss_accepted = None          # Has answer been accepted?
+        ss_count = None             # Number of times used
+
+    NOTES:
+        When you answer someone else's question it might be this:
+            https://askubuntu.com/a/1026478/307523
+            https://askubuntu.com/q/1026478 (Type = Answer)
+            https://askubuntu.com/questions/822135/16-04-locate-not-finding-files-in-mnt/1026478#1026478
+            (Redirected from https://askubuntu.com/q/1026478)
+
+    """
+    global ss_row_index, ss_accepted
+    global ss_save_blog, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, ss_count
+
+    #print('len(rows):', len(rows))
+    ss_row_index = 0
+
+    for r in rows:
+        # Build base_fn: "9999-99-99-Title-of-my-blog.md"
+        base_fn, blog_fn = create_blog_filename(r)
+        ss_post_url = "{% post_url " + base_fn + " %}"
+        ss_url = r[URL]
+        ss_type = r[TYPE]
+        ss_title = r[TITLE].replace('/', '∕')  # Illegal to division symbol
+        ss_full_url = None
+        ss_accepted = r[ACCEPTED]  # Has this answer been accepted?
+        ss_count = 0
+        add_ss_entry()              # Add entry to Speed Search List
+        ss_row_index += 1           # Should always match ss_index
+
+    #print('len(ss_list):', len(ss_list))
+    # Pass 2, set ss_save_blog and tally up answer/question totals
+    for i, r in enumerate(rows):
+        save = set_ss_save_blog(r)  # Also sets self-answered question flags
+        get_ss_index(i)
+        ss_save_blog = save
+        update_ss()
+
+
+def pack_ss_entry():
+    """ Pack Speed Search entry fields to tuple """
+    t = (ss_index, ss_row_index, ss_url, ss_type, ss_title, ss_full_url, ss_post_url,
+         ss_save_blog, ss_accepted, ss_count)
+    return t
+
+
+def unpack_ss_entry(packed_tuple):
+    """ Unpack tuple to Speed Search entry fields """
+    global ss_index, ss_row_index, ss_accepted
+    global ss_save_blog, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, ss_count
+
+    ss_index, ss_row_index, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, \
+        ss_save_blog, ss_accepted, ss_count = packed_tuple
+
+
+def add_ss_entry():
+    """ Add entry to Speed Search List
+    """
+    global ss_list, ss_index
+
+    ss_index = len(ss_list)     # All other ss_ fields set by caller
+    t = pack_ss_entry()
+    ss_list.append(t)
+
+    #print('added entry t:', t) # Some debugging stuff when needed
+    if ss_url == "?https://askubuntu.com/q/1039377":  # Debugging stuff
+        print('ADDING KEY ANSWER')
+        print('ss_url:', ss_url)
+        print('ss_type:', ss_type)
+        print('ss_title:', ss_title)
+
+
+def get_ss_index(ndx):
+    t = ss_list[ndx]
+    unpack_ss_entry(t)
+
+
+def update_ss():
+    t = pack_ss_entry()
+    ss_list[ss_index] = t
+
+
+def get_ss_url(search, search_type="Question"):
+    """ Get ss entry in Speed Search List using short URL
+    """
+
+    if search_type != "Question" and search_type != "Answer":
+        fatal_error('Boo-boo typo on search_type: ' + search_type)
+
+    for ndx, entry in enumerate(ss_list):
+        unpack_ss_entry(entry)
+        if ndx != ss_index:
+            fatal_error('ndx != ss_index: ndx=' + str(ndx) + ' ss_index=' + str(ss_index))
+        if search == ss_url and search_type == ss_type:
+            return True
+
+    #print('not found URL:', search, 'TYPE:', search_type)  # Debugging stuff
+    return False
+
+
+def get_ss_title(search, search_type="Question"):
+    """ Get ss entry in Speed Search List using Title
+    """
+
+    for ndx, entry in enumerate(ss_list):
+        unpack_ss_entry(entry)
+        if ndx != ss_index:
+            fatal_error('ndx != ss_index: ndx=' + str(ndx) + ' ss_index=' + str(ss_index))
+        if search == ss_title and search_type == ss_type:
+            return True
+
+    return False
+
+
+def set_ss_save_blog(r):
+    """ First pass is done creating all the entries.
+        This is second pass to check if self answered question and if blog
+        should be saved. Also updates totals.
+
+        Code taken from check_save_blog()
+
+        Returns:
+             True/False - if blog should be saved
+    """
+
+    global total_votes, total_views, unknown_count
+    global question_count, answer_count, accepted_count
+    global self_answer, self_accept, total_self_answer, total_self_accept
+
+    save = True          # save_blog Default until a condition turns it off
+
+    ''' SCORE = (Up Votes - Down Votes) in string format'''
+    if r[SCORE] != '':
+        score = int(r[SCORE])
+    else:
+        score = 0
+
+    total_votes += score    # score is up-votes - down-votes can be negative
+
+    if score < VOTE_QUALIFIER:
+        save = False   # Below up-vote requirement
+
+    ''' VIEWS '''
+    if r[VIEWS] != '':
+        views = int(r[VIEWS])
+    else:
+        views = 0
+    total_views += views    # score is up-votes - down-votes can be negative
+
+    ''' If Accepted turned on save blog (but it might be question) '''
+    if r[ACCEPTED] != '':
+        accepted_count += 1
+        if ACCEPTED_QUALIFIER:
+            save = True  # Previous tests may have turned off
+
+    ''' TYPE = "Question" or "Answer" or "Wiki"'''
+    if r[TYPE] == "Question":
+        question_count += 1
+
+        # Converted from tally_self_answer
+        self_answer, self_accept, search_url = check_self_answer(r)
+        if not QUESTIONS_QUALIFIER or self_answer:
+            save = False  # Questions don't qualify or this self-answered
+
+        if self_answer:
+            total_self_answer += 1
+            if self_accept:
+                total_self_accept += 1
+            else:
+                self_not_accept_url.append(search_url)
+
+    elif r[TYPE] == "Answer":
+        answer_count += 1
+    else:
+        unknown_count += 1  # Happens when managing stack exchange site
+        #print('Unknown Type:', dump(row))
+
+    ''' Exclude specific SE sites '''
+    for exclude in EXCLUDE_SITES:
+        if r[SITE] == exclude:
+            save = False
+            break
+
+    return save
 
 
 def dump(r):
     """ Dump contents of one row to terminal in good-looking format
     """
     print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
-    print('Title:  ', r[TITLE][:80])
+    print('Title:  ', r[TITLE].replace('/', '∕')[:80])
     print('URL:    ', r[URL][:80])
-    print('blog:   ', blog_filename)
+    print('LINK:   ', r[LINK][:80])
+    print('blog:   ', blog_filename[:80])
+    print('base:   ', base_filename[:80])
 
     limit = r[HTML].find('\n')      # Limit HTML to first line or 80 chars
     if limit > 80 or limit == -1:
@@ -521,7 +758,7 @@ def check_half_links(ln):
 
     last_start = 0
     print_this = None
-    # print_this = "https://askubuntu.com/questions/1039357"
+    # print_this = "https://askubuntu.com/q/882420"
 
     while True:
         # Search for next half-link after last half-link
@@ -547,8 +784,9 @@ def check_half_links(ln):
             So build a shorter search only containing:
                 <a href="https://askubuntu.com/questions/396957/
         
-            TODO: Drawback with shorter search is if there are multiple links
-                  to the same website and links have > 2 common sub-directories.
+            TODO: Check if there are multiple links
+                  to the same website when links have > 2 common sub-directories.
+
         """
 
         if len(parts) > 3:
@@ -558,18 +796,20 @@ def check_half_links(ln):
 
         html_search = '<a href="' + part_search
         # end-1 can have / which messes up .find
-        found_start = row[HTML].find(html_search)
+        found_start = row[HTML].find(html_search)  # where <a href=" link starts
         if found_start == -1:
             print('LINK Not Found:', html_search)
             print(parts)
             print(row[HTML])
             break
+        found_start += 9
 
         ''' Search for name's starting > '''
         name_start = row[HTML].find('>', found_start)
         failure = "'name_start'"
         name_end = name_start  # For PyCharm error checker
         if name_start != -1:
+            found_end = name_start - 1  # Where href link ends
             name_start += 1  # Skip over >
             failure = None
             ''' Search for name's ending </a> '''
@@ -586,7 +826,8 @@ def check_half_links(ln):
             last_start = start + 8
             continue
 
-        # Get link's name
+        # Get link href link's name
+        href = row[HTML][found_start:found_end]
         name = row[HTML][name_start:name_end]
 
         half_links += 1
@@ -595,6 +836,8 @@ def check_half_links(ln):
 
         if part_search == print_this:
             print()
+            print('<a href:', href)
+            print('>name<: ', name)
             print('PARTS:  ', part_search)
             print('SEARCH: ', html_search)
             print('REPLACE:', '[' + half_link + ']')
@@ -608,28 +851,244 @@ def check_half_links(ln):
 
 
 def check_tail_links(ln):
-    """ Scan line for '  [x]: [https://...]'
+    """ Scan line for SE tail-links where '  [x]: [https://...]' appears.
 
-        if the https:// reference is to SE answer in Pippim then
-        replace it.
+        From: https://meta.stackexchange.com/help/formatting
+
+        There are three ways to write links. Each is easier to read than the last:
+
+            Here's an inline link to [Google](https://www.google.com/).
+            Here's a reference-style link to [Google][1].
+            Here's a very readable link to [Yahoo!][yahoo].
+
+              [1]: https://www.google.com/
+              [yahoo]: https://www.yahoo.com/
+
+    """
+
+    global total_tail_links
+
+    if in_code_block or in_code_indent:
+        return ln
+
+    if not ln[:3] == "  [":
+        # Must start with "  ["
+        return ln
+
+    # Must start with "  [xxx]: h"
+    h_start = ln.find(']: h', 4)
+    if h_start == -1:
+        return ln
+
+    http_str = ln[h_start + 3:]
+    our_url, test_str = check_html_substitute(http_str)
+    if our_url is None:
+        return ln
+
+    # print('our_url:', our_url)
+    total_tail_links += 1  # "[x]:  https://…"  replaced with ss_post_url
+    return ln.replace(http_str, our_url)
+
+
+def check_full_links(ln):
+    """ Scan line for SE full-links where '[Name](https://...)' appears.
+
+        If https:// appears in ss_url then swap in Pippim's answer if
+        ss_save_blog is True.
+
+        NOTE: No records were ever found matching this search...
 
     """
 
     if in_code_block or in_code_indent:
         return ln
 
-    if ln[:3] != "  [":
+    # NOTE: Although below code works there are no links found. Presumably
+    # SE always massages with [This is my answer][1]
+    # For now automatically force return
+    if total_sites > 0:
         return ln
 
-    # Bail out early until code developed
-    if ln[:3] == "  [":
-        return ln
+    # Look for "[" NAME OF LINK followed by "](https://site.com/.html)"
+
+    ln_len = len(ln)
+    last_start = 0
+    print_this = None
+    # print_this = "https://askubuntu.com/q/882420"
+
+    while True:
+        # Search for next half-link after last half-link
+        name_start = ln.find("[", last_start)
+        if name_start == -1:
+            break  # No more hyper-links found
+
+        name_start += 1
+        name_end = ln.find("](http", name_start)  # Find end of half-link.
+        if name_end == -1:
+            # print('NAME start without end')
+            last_start = name_start  # Next name to search for
+            continue
+
+        last_start = name_end  # Next name starting position to search for
+
+        name = ln[name_start:name_end]
+        test_pos = name_end + 2
+        if test_pos > ln_len:
+            break  # End of the line
+        #if ln[test_pos:test_pos+4] != "(http":
+        #    continue
+
+        found_start = ln.find("(http", name_end)
+        if found_start == -1:
+            continue
+
+        found_start += 1
+        found_end = ln.find(")", found_start)
+        if found_end == -1:
+            continue
+
+        found = ln[found_start:found_end]
+        if get_ss_url(found, search_type="Answer"):
+            print('======================= YES ====================')
+        print()
+        print('Found Name:', name)
+        print('Found Link:', found)
+
+        last_start = name_end  # Next link to search for
 
     return ln
 
 
+def check_html_substitute(http_str):
+    """ Check if [https://...]' appears in QueryResults.csv
+
+        WARNING: Awkward code below...
+
+    """
+
+    """ Change: https://askubuntu.com/questions/1020692/how-can-i-get
+            to: https://askubuntu.com/q/1020692
+        for looking up in QueryResults.csv
+        
+        If someone else asked the question:
+        
+        GIVEN:
+https://askubuntu.com/questions/837078/
+        
+        QUESTION IS REALLY:
+https://askubuntu.com/questions/837078/application-that-will-lock-screen-after-a-set-amount-of-time-for-ubuntu
+
+        AND ANSWER IS REALLY:
+https://askubuntu.com/a/837115/307523
+        
+        OR GIVEN THE LINK:
+  [5]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
+  
+        QUESTION (asked by another) IS REALLY:
+https://askubuntu.com/q/1039357/307523
+
+        ANSWER IS REALLY:
+https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm/1039377#1039377
+
+        OR ANSWER IS REALLY:
+https://askubuntu.com/a/1039377/307523
+    """
+
+    trace = False  # Set to True to print out debugging stuff
+    if "?1039357" in http_str:  # Some debugging stuff
+        print()
+        print("KEY QUESTION:", http_str)
+        trace = True
+
+    parts = http_str.split('/')
+    search_url = None
+    if len(parts) >= 5:
+        if parts[3] == "questions":
+            #print('make_url found "questions"!')
+            search_url = parts[0] + "//" + parts[2] + "/q/" + parts[4]
+        elif parts[3] == "answers":
+            #print('make_url found "questions"!')
+            # print('search_url:', search_url, http_str)
+            search_url = parts[0] + "//" + parts[2] + "/a/" + parts[4]
+
+    if search_url is None:
+        # print('Cannot build search_url:', search_url, http_str)
+        # Website outside of Stack Exchange
+        return None, search_url
+
+    # Grab the last part of http_str split into parts divided by / (pun noted)
+    fallback_part4 = None
+    last_part = parts[-1]
+    # split last part in half at # divider. Are they equal
+    last_part_splits = last_part.split('#')
+    if len(last_part_splits) >= 2:
+        if last_part_splits[0] == last_part_splits[1]:
+            fallback_part4 = last_part_splits[0]
+
+    # Grab the last part of http_str split into parts divided by / (pun noted)
+    fallback_part2 = None
+    test_part2 = parts[0] + "//" + parts[2] + "/a/" + parts[4]
+    if get_ss_url(test_part2, search_type="Answer"):
+        print('test_part2:', test_part2)
+        fallback_part2 = True
+
+    if trace:
+        print('search_url:', search_url)
+        print('fallback_part4:', fallback_part4)
+        print('fallback_part2:', fallback_part2)
+
+    #print('LOOKING FOR search_url:', search_url)
+    # Try to find an answer first, then question second
+    if get_ss_url(search_url, search_type="Answer"):
+        #print('Found Answer URL:', search_url)
+        if trace:
+            print('PASSED: get_ss_url(search_url, search_type="Answer"):')
+        pass
+    elif fallback_part4 is not None:
+        search_url = parts[0] + "//" + parts[2] + "/q/" + fallback_part4
+        if trace:
+            print('BEGIN: fallback_part4 using:', search_url)
+        # print('Found Question URL:', search_url)
+        # Now get our answer matching question's title
+        if get_ss_url(search_url, search_type="Answer"):
+            # print('retrieved title using fallback_part4:', ss_title)
+            if trace:
+                print('PASSED: fallback_part4')
+            pass
+        else:
+            #print('FALLBACK_PART4, NOT found URL:', search_url)
+            if trace:
+                print('FAILED: fallback_part4')
+            return None, search_url
+    elif fallback_part2 is not None:
+        get_ss_url(test_part2, search_type="Answer")
+        print('retrieved title using fallback_part2:', ss_title)
+        search_url = test_part2
+    elif get_ss_url(search_url):
+        if trace:
+            print('BEGIN: Match question title to answer title')
+        #print('Found Question URL:', search_url)
+        # Now get our answer matching question's title
+        if get_ss_title(ss_title, search_type="Answer"):
+            #print('retrieved title:', ss_title)
+            pass
+        else:
+            #print('Neither Answer nor Question found URL:', search_url)
+            return None, search_url
+    else:
+        #print('Neither Answer nor Question found URL:', search_url)
+        return None, search_url
+
+    #print('Found ss_title:', ss_title)
+    if ss_save_blog is False:
+        return None, search_url
+
+    #print('ss_post_url:', ss_post_url)
+    return ss_post_url, search_url
+
+
 def get_index(search, names):
-    """ Find index matching search in names list """
+    """ Find index matching search in names list of 'Key|Value' """
     for name_index, name in enumerate(names):
         if search == name.split('|')[0]:
             return name_index
@@ -638,14 +1097,14 @@ def get_index(search, names):
 
 
 def incr_index(name_index, names):
-    """ Increment value within "Tag-name|9999"
+    """ Increment value "Tag-name|9999" at passed index
     """
     str_name, str_value = names[name_index].split('|')
     names[name_index] = str_name + "|" + str(int(str_value) + 1)
 
 
 def look_index(offset, name_index, names):
-    """ Return previous or next name/value pair in list using offset
+    """ Return previous or next key|value pair in list using offset
     """
     ndx = name_index + offset
     if 0 <= ndx < len(names):
@@ -681,8 +1140,8 @@ def add_tag_post(name_index, names, r):
 
     s = dt.strptime(post_created_date[:10], "%Y-%m-%d")
     created_date_string = s.strftime('%B %-d, %Y')
-    t = (str_name, base_filename, r[TITLE], r[VIEWS], r[SCORE],
-         accepted, created_date_string)
+    t = (str_name, base_filename, r[TITLE].replace('/', '∕'), r[VIEWS],
+         r[SCORE], accepted, created_date_string)
     tag_posts.append(t)
 
     ''' Add to first letter (or digit) of tags '''
@@ -731,7 +1190,6 @@ def tally_tags():
         # All the tags added for all the posts
         incr_index(entry_ndx, total_tag_names)
         add_tag_post(entry_ndx, total_tag_names, row)
-
 
 
 def check_pseudo_tags(ln):
@@ -1093,7 +1551,7 @@ def navigation_bar(skip_btn=True):
 def front_matter(r):
     """ Output Jekyll front matter to md string """
     md = "---\n" + FRONT_LAYOUT + "\n"
-    md = md + FRONT_TITLE + r[TITLE] + '\n'
+    md = md + FRONT_TITLE + r[TITLE].replace('/', '∕') + '\n'
     if FRONT_SITE is not None:
         md = md + FRONT_SITE + r[SITE] + '\n'
     if FRONT_URL is not None:
@@ -1117,7 +1575,10 @@ def front_matter(r):
         md = md + FRONT_TAGS + tags + '\n'
 
     if FRONT_CREATED is not None:
+        # 2018-03-24 01:21:10+0000 - Strip off "+0000"
         md = md + FRONT_CREATED + r[CREATED][:19] + '\n'
+        if len(r[CREATED]) > 20 and r[CREATED][21:] != "0000":
+            print('UTC adjustment not done on time r[CREATED]:', r[CREATED])
     if FRONT_LAST_EDIT is not None:
         md = md + FRONT_LAST_EDIT + r[LAST_EDIT][:19] + '\n'
     if FRONT_EDITED_BY is not None:
@@ -1171,19 +1632,15 @@ def front_matter(r):
     return md
 
 
-def create_blog_filename():
+def create_blog_filename(r):
     """ Return blog filename.
         Replace all spaces in title with "-"
         Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
+        TODO: Separate into subdirectories by year
     """
-    global base_filename
-
-    base_filename = row[CREATED].split()[0] + '-' + row[TITLE] + '.md'
-    base_filename = \
-        base_filename.replace(' ', '-').replace('/', '-').replace('%', '-').replace('`', '-').replace('"', '%22')
-    filename = OUTPUT_DIR + base_filename
-
-    return filename
+    base_fn = r[CREATED].split()[0] + '-' + r[TITLE].replace('/', '∕').replace(' ', '-')
+    blog_fn = OUTPUT_DIR + base_fn + ".md"
+    return base_fn, blog_fn
 
 
 def check_self_answer(r):
@@ -1202,22 +1659,17 @@ def check_self_answer(r):
 
     """
 
-    global self_answer, self_accept, total_self_answer, total_self_accept
-    for search in rows:
-        if search[TITLE] == r[TITLE] and search[TYPE] == "Answer":
-            self_answer = True  # Is this a self-answered question?
-            total_self_answer += 1
-            # print('SELF_ANSWERED')
-            if search[ACCEPTED] == "Accepted":
-                self_accept = True  # Is this self-answered question accepted?
-                total_self_accept += 1
-                # dump(r)
-                # dump(search)
-            else:
-                # print('NOT ACCEPTED')
-                self_not_accept_url.append(search[URL])
-                # dump(r)
-                # dump(search)
+    answer = accepted = search_url = False
+
+    if get_ss_title(r[TITLE].replace('/', '∕')):
+        # Verify question title exists
+        if get_ss_title(r[TITLE].replace('/', '∕'), search_type="Answer"):
+            answer = True
+            search_url = ss_url
+            if ss_accepted == "Accepted":
+                accepted = True  # Is this self-answered question accepted?
+
+    return answer, accepted, search_url
 
 
 def write_md(md):
@@ -1251,7 +1703,7 @@ def fatal_error(msg):
     - html_badge(count):
     - html_tag_line(start, end, count):
     - html_details_start(summary):
-    - html_write_post_by_tag(html): Write posts by tags HTML page
+    - html_write_post_tags(html): Write posts by tags HTML page
 
 '''
 
@@ -1269,16 +1721,41 @@ def get_tag_letter_index(letter):
     fatal_error("letter: " + letter + ' not found in TAG_LETTERS')
 
 
-def gen_post_by_vote():
-    """ Generate Posts by Tag HTML index using <details><summary>
-    """
-    posts_vote.sort()
-    html = ""
-    for i in range(len(posts_vote) - 1, len(posts_vote) - 11, -1):
-        vote, title, post_filename = posts_vote[i]
-        html += html_post_line(str(vote), post_filename, title, mark_tag=True)
+parse_block_html = False  # When no Kramdown, remove fixes to HTML
+''' Parent .md file needs: 
+        {::options parse_block_html="false" /}
+        {% include posts_by_tag.html %}
+        {::options parse_block_html="false" /}
 
-    html_write_post_by_vote(html)
+    Requires more work such as tracking indent level and prepending 2 spaces
+    before <summary> group. For example:
+
+    <details>
+      <summary>blah blah</summary>
+      <details>
+        <summary>BLAH BLAH</summary>
+        <p>First line<br />
+        Last line<br /></p>
+      </details>
+    </details>
+ 
+'''
+
+
+def gen_top_posts():
+    """ Generate top 10 posts in html format
+    """
+
+    top_posts.sort()
+    html = ""  # Start with empty html
+    # Read bottom 10
+    for i in range(len(top_posts) - 1, len(top_posts) - 11, -1):
+        vote, title, our_url = top_posts[i]
+        # print('our_url:', our_url, 'vote:', vote)
+        html += html_post_line(str(vote), our_url, title,
+                               url_fixed=True, mark_tag=True)
+
+    html_write_top_posts(html)
 
 
 def gen_post_by_tag_groups():
@@ -1603,12 +2080,11 @@ def gen_post_by_tag_groups():
     ''' Hand-crafting tag letter groups.
     '''
     # Uncomment below to get needed data to hand-craft TAG_LETTERS.
-    print('group_count:', group_count)
+    # print('group_count:', group_count)
     for group_ndx, group in enumerate(groups):
         hold_count = group_count
         group_count = group_ndx + 1
         if 169 <= group_count <= 168:  # Adjust when wanted
-            group_no, start, start_ndx, end, end_ndx, count = group
             print(group)
         group_count = hold_count  # Awkward recycling so same test is used
 
@@ -1667,7 +2143,7 @@ def gen_post_by_tag_groups():
         # FROM: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
         html += html_details_start(tag_line)
         # Now find groups of posts beginning with this letter / these letters
-        fake_group_count = 0  # Currently not traversing a made up fake group
+        fake_group_count = 0  # Not currently traversing a fake group
 
         for group in new_groups:
             group_no, start, start_ndx, end, end_ndx, count = group
@@ -1716,7 +2192,7 @@ def gen_post_by_tag_groups():
               'len(new_groups):', len(new_groups))
         # fatal_error('total_count != len(new_groups)')
     #print(html)
-    html_write_post_by_tag(html)
+    html_write_post_tags(html)
 
 
 def test_fake_group(group_no, groups):
@@ -1724,10 +2200,10 @@ def test_fake_group(group_no, groups):
     Does tag span many groups? If so we'll create pseudo group of groups.
 
     Return the number of groups and total number of posts if true. Otherwise,
-    return 0, 0.
+    return 0, 0
      
-    :param group_no: Group number within groups list
-    :param groups: List of
+    :param: group_no: Group number within groups list
+    :param: groups: List of
     :return: True if tag spans many groups, False if not
     """
     group_count = post_count = 0
@@ -1796,7 +2272,7 @@ def html_posts(start, start_ndx, end, end_ndx, count,
 
     # Write out <details><summary>tag</summary>\n\n
     tag_line = html_tag_line(start, end, count, details)
-    html = html_details_start(tag_line) + "<p>\n"
+    html += html_details_start(tag_line) + "<p>\n"
 
     # details of posts with href
     for i in range(start_ndx, end_ndx + 1):
@@ -1840,42 +2316,67 @@ def html_tag_line(start, end, count, details=None):
     return t_line
 
 
-def html_post_line(tag_name, post_filename, title, mark_tag=False):
+def html_post_line(tag_name, post_filename, title, url_fixed=False, mark_tag=False):
     """ Build post reference line
+        See: https://jekyllrb.com/docs/liquid/tags/#link
     """
+
     opt_tag = ""
     if mark_tag:
         opt_tag = "<mark>" + tag_name + "</mark>"
 
-    # Fix " in title: # https://meta.stackexchange.com/a/21557/366359
-    title = title.replace('<', '&lt;')
     # Convert post_filename to html filename
-    html_filename = \
-        post_filename.replace('-', '/', 3).replace('.md', '.html')
-    return opt_tag + '<a href="' + html_filename + '">' + title + '</a><br />\n'
+    if url_fixed:
+        html_filename = "(" + post_filename + ")"
+    else:
+        html_filename = "({% post_url " + post_filename + " %})"
+    title = "[" + title + "]"
+    return opt_tag + title + html_filename + '<br />\n'
 
 
 def html_details_start(summary):
     """ One extra blank line after summary to please Kramdown. """
-    return '<details class="dtl"><summary>' + summary + "</summary>\n\n"
+    if parse_block_html:
+        return '<details class="dtl">\n<summary>' + summary + "</summary>" + "\n"
+    else:
+        return '<details class="dtl"><summary>' + summary + "</summary>" + "\n\n"
 
 
 def html_details_end():
-    return "</details>\n\n"
+    if parse_block_html:
+        return "\n</details>\n"
+    else:
+        return "</details>\n\n"
 
 
-def html_write_post_by_vote(html):
+def html_write_top_posts(html):
     """ Write posts by tags HTML page """
-    with open(POST_BY_VOTE_HTML, 'w') as fh:
+    with open(TOP_POSTS_HTML, 'w') as fh:
         # Write everything
         fh.write(html)
 
 
-def html_write_post_by_tag(html):
+def html_write_post_tags(html):
     """ Write posts by tags HTML page """
     with open(POST_BY_TAG_HTML, 'w') as fh:
         # Write everything
         fh.write(html)
+
+
+''' Swap SE links for Internal links when available
+    =======================================================================
+
+    Very Time Consuming!
+
+    After all posts have been written, reread them and look up links with
+    rows[] (QueryResults.csv). If link name found, reverse engineer the
+    blog post filename and if it exists, use that link instead. 
+
+'''
+
+
+def swap_se_links():
+    pass
 
 
 ''' INITIALIZATION
@@ -1926,10 +2427,12 @@ if RANDOM_LIMIT is not None:
         print('RANDOM_LIMIT:', RANDOM_LIMIT,
               'Random record numbers to convert:', random_row_nos)
 
-''' Initialize Total Tag Names with Pseudo-Tags '''
+''' Initialize Total Tag Names found with Pseudo-Tags as defaults '''
 for tag in PSEUDO_TAGS:
     total_tag_names.append(tag + "|0")
 
+''' Create Speed Search List '''
+create_speed_search()
 
 ''' MAIN LOOP to process All query records
     ======================================
@@ -1967,6 +2470,8 @@ for row in rows:
     word_count = 0          # How many words (includes "## ") in post
     pseudo_tag_count = 0    # Words in answer that qualify as tags for question
     pseudo_tag_names = []   # Reset pseudo tag names from last post
+    self_answer = False     # Is this a self-answered question?
+    self_accept = False     # Is this self-answered question accepted?
     language_used = ""      # What language when fenced code blocks have none?
     in_code_block = False   # In a code block # Header formatting is skipped
     old_in_code_block = False
@@ -1979,8 +2484,6 @@ for row in rows:
     last_nav_TOC = False
     suppress_nav_bars = 0   # How many nav bars suppressed in this post?
     force_end_line = False  # Did Pass #1 force an empty blank line at end?
-    self_answer = False     # Is this a self-answered question?
-    self_accept = False     # Is this self-answered question accepted?
 
     ''' Tally SE Site Name counts'''
     site_name = row[SITE]
@@ -1992,48 +2495,21 @@ for row in rows:
     # Increment post count for current SE site name
     incr_index(site_ndx, total_sites)
 
-    ''' YYYY-MM-DD-Title-with-spaces-converted-to-dashes.md '''
-    blog_filename = create_blog_filename()  # Also sets base_filename
-
-    ''' SCORE = (Up Votes - Down Votes) in string format'''
-    if row[SCORE] != '':
-        score = int(row[SCORE])
-    else:
-        score = 0
-    total_votes += score    # score is up-votes - down-votes can be negative
-    if score < VOTE_QUALIFIER:
-        save_blog = False   # Below up-vote requirement
-
-    ''' VIEWS '''
-    if row[VIEWS] != '':
-        views = int(row[VIEWS])
-    else:
-        views = 0
-    total_views += views    # score is up-votes - down-votes can be negative
-
-    ''' If Accepted turned on save blog (but it might be question) '''
-    if row[ACCEPTED] != '':
-        accepted_count += 1
-        if ACCEPTED_QUALIFIER:
-            save_blog = True  # Previous tests may have turned off
-
-    ''' TYPE = "Question" or "Answer" or "Wiki"'''
-    if row[TYPE] == "Question":
-        question_count += 1
-        check_self_answer(row)
-        if not QUESTIONS_QUALIFIER or self_answer:
-            save_blog = False  # Questions aren't posted
-    elif row[TYPE] == "Answer":
-        answer_count += 1
-    else:
-        unknown_count += 1  # Happens when managing stack exchange site
-        #print('Unknown Type:', dump(row))
-
-    ''' Exclude specific SE sites '''
-    for exclude in EXCLUDE_SITES:
-        if row[SITE] == exclude:
-            save_blog = False
-            break
+    ''' Get filenames and save_blog flag. '''
+    base_filename, blog_filename = create_blog_filename(row)
+    get_ss_index(row_number - 2)
+    if ss_title != row[TITLE].replace('/', '∕'):
+        print('index does not match:', row_number - 2)
+        fatal_error("Terminating")
+    save_blog = ss_save_blog
+    # While Speed Search variables are fresh in memory, record top_posts []
+    if ss_type == "Answer":
+        if row[SCORE] != '':
+            score = int(row[SCORE])
+        else:
+            score = 0
+        t = (score, ss_title, ss_post_url)
+        top_posts.append(t)
 
     ''' If we aren't saving this blog, grab the next '''
     if save_blog is False:
@@ -2045,19 +2521,11 @@ for row in rows:
                 random_row_nos[index] = row_number + 1
         continue
 
-    ''' Add to post votes list '''
-    vote_tuple = (score, row[TITLE], base_filename)
-    posts_vote.append(vote_tuple)
-
     ''' convert SE tags: "<tag1><tag2><tag3>" to: "tag1 tag2 tag3"
         NOTE: pseudo_tag_names will be appended to this list later.
     '''
     tags = row[TAGS].replace("><", " ")
     tags = tags.replace("<", "").replace(">", "")
-
-    #if row_number == 15:
-    #    print('tags before:', works)
-    #    print('tags after: ', tags)
 
     lines = row[MARKDOWN].splitlines()
     line_count = len(lines)
@@ -2066,10 +2534,12 @@ for row in rows:
         # past end of list when checking next line's contents
         lines.append("")
         line_count += 1
-        force_end_line = True
+        force_end_line = True   # So we know to remove extra blank line later
         total_force_end += 1
 
-    ''' Pass #1: Count markdown elements '''
+    ''' Pass #1: Count significant markdown elements
+        ======================================================================
+    '''
     new_lines = []
     insert_clipboard = False  # Does not have any copy to clipboard inserts yet
     for line_index, line in enumerate(lines):
@@ -2078,7 +2548,8 @@ for row in rows:
         line = header_space(line)       # #Header, Alt-H1, Alt-H2. Set header_levels
         line = block_quote(line)        # Formatting for block quotes
         line = check_half_links(line)   # SE uses [https://…] instead of [Post Title]
-        line = check_tail_links(line)   # SE uses [https://…] instead of [Post Title]
+        line = check_tail_links(line)   # Change [x]: https://… from SE to Jekyll
+        line = check_full_links(line)   # Change [Name](https://…) from SE to Jekyll
         check_pseudo_tags(line)         # Check if pseudo tag(s) should be added
         line = one_time_change(line)    # One Time Changes
         lines[line_index] = line        # Update any changes to original
@@ -2125,7 +2596,9 @@ for row in rows:
             total_nav_bar += 1
             # print('total_nav_bar:', total_nav_bar, blog_filename)
 
-    ''' Pass #2: Generate new markdown (Kramdown) '''
+    ''' Pass #2: Generate new markdown (Kramdown)
+        ======================================================================
+    '''
     # Add SE Question tags + our answer key tags (if any)
     string = ' '.join(pseudo_tag_names)
     if len(string) > 0:
@@ -2227,12 +2700,13 @@ for row in rows:
                 #      " - Does NOT qualify as blog so using next number.")
                 index = random_row_nos.index(row_number)
                 random_row_nos[index] = row_number + 1
-    else:
+
+    elif save_blog is True:
         save_blog_count += 1
         write_md(new_md)
 
-gen_post_by_vote()
-gen_post_by_tag_groups()    # Generate list of posts in smaller groups
+gen_top_posts()             # Generate top ten posts
+gen_post_by_tag_groups()    # Generate list of posts in smaller tagged groups
 
 if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
     print()
@@ -2242,14 +2716,14 @@ if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
         print('URL:', url)
     print('')
 
-if RANDOM_LIMIT is None:
-    random_limit = '  None'
-else:
+if RANDOM_LIMIT is not None:
     random_limit = '{:>6,}'.format(RANDOM_LIMIT)
+else:
+    random_limit = '   None'
 
 print('// =============================/   T O T A L S   \\============================== \\\\')
 print('')
-print('RANDOM_LIMIT:    ', random_limit,
+print('RANDOM_LIMIT:   ', random_limit,
       ' | PRINT_RANDOM:  {:>11}'.format(str(PRINT_RANDOM)),
       ' | NAV_FORCE_TOC: {:>11}'.format(str(NAV_FORCE_TOC)))
 print('NAV_BAR_MIN:      {:>6,}'.format(NAV_BAR_MIN),
@@ -2280,6 +2754,10 @@ print('total_code_blocks:{:>6,}'.format(total_code_blocks),
 print('total_code_indents:{:>5,}'.format(total_code_indents),
       ' | total_indent_lines:{:>7,}'.format(total_indent_lines),
       ' | total_half_links:  {:>7,}'.format(total_half_links))
+print('total_tail_links:  {:>5,}'.format(total_tail_links),
+      ' | total_bad_half_links:{:>5,}'.format(total_bad_half_links),
+      ' | Half Links Changed:{:>7,}'.format(total_half_links -
+                                            total_bad_half_links))
 print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
       ' | total_copy_lines:  {:>7,}'.format(total_copy_lines),
       ' | total_toc:         {:>7,}'.format(total_toc))
@@ -2290,10 +2768,64 @@ print('all_tag_counts: {:>8,}'.format(all_tag_counts),
       ' | # tag_posts:      {:>8,}'.format(len(tag_posts)),
       ' | # total_tag_letters:{:>6,}'.format(len(total_tag_letters)))
 print('total_header_levels:       ', total_header_levels)
+
+exit()
+
+# REMOVE exit() above and uncomment below to execute debugging
 #print('TAG_LETTERS:               ', TAG_LETTERS)
 #print('total_tag_letters:         ', total_tag_letters)
 #print('EXCLUDE_SITES:, EXCLUDE_SITES'
 #print('total_tag_names:     ', total_tag_names)
 #print(total_sites)
+
+'''
+    NOTES:
+        When you answer someone else's question it might be this:
+            https://askubuntu.com/a/1026478/307523
+            https://askubuntu.com/q/1026478 (Type = Answer)
+            https://askubuntu.com/questions/822135/16-04-locate-not-finding-files-in-mnt/1026478#1026478
+            (Redirected from https://askubuntu.com/q/1026478)
+'''
+for row_no, row in enumerate(rows):
+    if row_no == 20000:
+        dump(row)
+    parts2 = row[URL].split('/')
+    if len(parts2) >= 5:
+        if parts2[3][:1] != "q":
+            print(parts2)
+    if "https://askubuntu.com/q/824617" in row[URL]:
+        # Question answered by someone else
+        print('TYPE:', row[TYPE], 'URL:', row[URL])
+        if get_ss_url(row[URL]):
+            print('Question FOUND by get_ss_url:', ss_url, 'ss_index:', ss_index,
+                  'row_no:', row_no, 'ss_save_blog:', ss_save_blog)
+        else:
+            print('Question NOT FOUND by get_ss_url')
+        if get_ss_url(row[URL], search_type="Answer"):
+            print('Answer FOUND by get_ss_url:', ss_url, 'ss_index:', ss_index,
+                  'row_no:', row_no, 'ss_save_blog:', ss_save_blog)
+        else:
+            print('Answer NOT FOUND by get_ss_url')
+
+    if "https://askubuntu.com/q/1026478" in row[URL]:
+        # Answer with no question
+        print('TYPE:', row[TYPE], 'URL:', row[URL])
+        if get_ss_url(row[URL]):
+            print('Question FOUND by get_ss_url:', ss_url, 'ss_index:', ss_index,
+                  'row_no:', row_no, 'ss_save_blog:', ss_save_blog)
+        else:
+            print('Question NOT FOUND by get_ss_url')
+        if get_ss_url(row[URL], search_type="Answer"):
+            print('Answer FOUND by get_ss_url:', ss_url, 'ss_index:', ss_index,
+                  'row_no:', row_no, 'ss_save_blog:', ss_save_blog)
+        else:
+            print('Answer NOT FOUND by get_ss_url')
+
+for index in range(1000, 1003):
+    get_ss_index(index)
+    print()
+    print('ss_index:', ss_index, 'ss_url:', ss_url, 'ss_save_blog:', ss_save_blog)
+    s = ss_list[ss_index]
+    print(s)
 
 # End of stack-to-blog.py
