@@ -86,7 +86,7 @@ from random import randint
 """
 
 INPUT_FILE = 'QueryResults.csv'
-RANDOM_LIMIT = 10000        # On initial trials limit the number of blog posts
+RANDOM_LIMIT = None         # On initial trials limit the number of blog posts
 PRINT_RANDOM = False        # Print out matching random records found
 OUTPUT_DIR = "../_posts/"   # Subdirectory name. Use "" for current directory
 QUESTIONS_QUALIFIER = True  # Convert questions to blog posts
@@ -1173,8 +1173,9 @@ def create_blog_filename():
     """
     global base_filename
 
-    base_filename = row[CREATED].split()[0] + '-' + \
-        row[TITLE].replace(' ', '-').replace('/', '∕') + '.md'
+    base_filename = row[CREATED].split()[0] + '-' + row[TITLE] + '.md'
+    base_filename = \
+        base_filename.replace(' ', '-').replace('/', '-').replace('%', '-').replace('`', '-')
     filename = OUTPUT_DIR + base_filename
 
     return filename
@@ -1898,10 +1899,11 @@ if row_count < 2:
     fatal_error('No CSV records found in INPUT_FILE:' + INPUT_FILE)
 
 # Number of blog posts converted controlled by RANDOM_LIMIT
-random_row_nos = [randint(1, row_count) for p in range(0, RANDOM_LIMIT)]
-if RANDOM_LIMIT < 100:
-    print('RANDOM_LIMIT:', RANDOM_LIMIT,
-          'Random record numbers to convert:', random_row_nos)
+if RANDOM_LIMIT is not None:
+    random_row_nos = [randint(1, row_count) for p in range(0, RANDOM_LIMIT)]
+    if RANDOM_LIMIT < 100:
+        print('RANDOM_LIMIT:', RANDOM_LIMIT,
+              'Random record numbers to convert:', random_row_nos)
 
 ''' Initialize Total Tag Names with Pseudo-Tags '''
 for tag in PSEUDO_TAGS:
@@ -2014,11 +2016,12 @@ for row in rows:
 
     ''' If we aren't saving this blog, grab the next '''
     if save_blog is False:
-        if row_number in random_row_nos:
-            # This random record doesn't qualify so replace
-            # with next record number
-            index = random_row_nos.index(row_number)
-            random_row_nos[index] = row_number + 1
+        if RANDOM_LIMIT is not None:
+            if row_number in random_row_nos:
+                # This random record doesn't qualify so replace
+                # with next record number
+                index = random_row_nos.index(row_number)
+                random_row_nos[index] = row_number + 1
         continue
 
     ''' convert SE tags: "<tag1><tag2><tag3>" to: "tag1 tag2 tag3"
@@ -2182,21 +2185,25 @@ for row in rows:
         new_md = new_md + navigation_bar(skip_btn=False)
 
     qualifying_blog_count += 1
-    if row_number in random_row_nos:
-        if save_blog is True:
-            save_blog_count += 1
-            #print('Random upload row number: {:>6,}'.format(row_number))
-            # print(new_md)
-            if PRINT_RANDOM:
-                dump(row)
-            write_md(new_md)
-        else:
-            # This random record doesn't qualify so replace
-            # with next record number
-            #print('Random row record number: {:>6,}'.format(row_number),
-            #      " - Does NOT qualify as blog so using next number.")
-            index = random_row_nos.index(row_number)
-            random_row_nos[index] = row_number + 1
+    if RANDOM_LIMIT is not None:
+        if row_number in random_row_nos:
+            if save_blog is True:
+                save_blog_count += 1
+                #print('Random upload row number: {:>6,}'.format(row_number))
+                # print(new_md)
+                if PRINT_RANDOM:
+                    dump(row)
+                write_md(new_md)
+            else:
+                # This random record doesn't qualify so replace
+                # with next record number
+                #print('Random row record number: {:>6,}'.format(row_number),
+                #      " - Does NOT qualify as blog so using next number.")
+                index = random_row_nos.index(row_number)
+                random_row_nos[index] = row_number + 1
+    else:
+        save_blog_count += 1
+        write_md(new_md)
 
 gen_post_by_tag_groups()    # Generate list of posts in smaller groups
 
@@ -2208,9 +2215,14 @@ if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
         print('URL:', url)
     print('')
 
+if RANDOM_LIMIT is None:
+    random_limit = '  None'
+else:
+    random_limit = '{:>6,}'.format(RANDOM_LIMIT)
+
 print('// =============================/   T O T A L S   \\============================== \\\\')
 print('')
-print('RANDOM_LIMIT:     {:>6,}'.format(RANDOM_LIMIT),
+print('RANDOM_LIMIT:    ', random_limit,
       ' | PRINT_RANDOM:  {:>11}'.format(str(PRINT_RANDOM)),
       ' | NAV_FORCE_TOC: {:>11}'.format(str(NAV_FORCE_TOC)))
 print('NAV_BAR_MIN:      {:>6,}'.format(NAV_BAR_MIN),
