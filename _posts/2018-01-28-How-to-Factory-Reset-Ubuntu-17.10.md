@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        3,534
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -23,4 +23,4 @@ Completely reinstalling Ubuntu should not be necessary in such a case.
 
 When you say "sassy" I assume you mean [sudo insults][1].
 
-  [1]: https://askubuntu.com/questions/837558/where-are-sudos-insults-stored/837614#837614
+  [1]: {% post_url 2016-10-15-Where-are-sudo's-insults-stored? %}

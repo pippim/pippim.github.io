@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        2,233
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -82,6 +82,6 @@ Switching back to **powersave** mode CPU% utilization has spiked by 5%, but CPU 
 
 
   [1]: https://askubuntu.com/a/936488/307523
-  [2]: https://askubuntu.com/questions/604720/setting-to-high-performance/1047763#1047763
+  [2]: {% post_url 2018-06-19-Setting-to-High-Performance %}
   [3]: https://i.stack.imgur.com/imYi5.gif
   [4]: https://i.stack.imgur.com/q5cuK.gif

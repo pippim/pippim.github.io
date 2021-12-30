@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        5,985
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   true
 clipboard:    false
@@ -192,7 +192,7 @@ I wish my search had yielded more positive results.
   [7]: https://askubuntu.com/questions/781970/mondo-rescue-repository-unsigned-for-apt-get
   [8]: https://askubuntu.com/questions/962597/bootable-recovery-partition-or-dvd
   [9]: https://askubuntu.com/questions/781738/making-an-iso-backup-of-my-system/781755#781755
-  [10]: https://askubuntu.com/questions/917562/backup-linux-configuration-scripts-and-documents-to-gmail/922493#922493
+  [10]: {% post_url 2017-06-06-Backup-Linux-configuration,-scripts-and-documents-to-Gmail %}
 
 
 <a id="hdr7"></a>

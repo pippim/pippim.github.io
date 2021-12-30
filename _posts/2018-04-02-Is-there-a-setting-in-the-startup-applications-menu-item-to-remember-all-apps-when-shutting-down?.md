@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        574
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -61,7 +61,7 @@ Someone recommended [here][4] to use Compiz Session Management:
 but it doesn't appear to work in Ubuntu 16.04 either.
 
 
-  [1]: https://askubuntu.com/questions/1017045/bash-one-liner-to-display-all-gsettings-in-zenity-or-yad/1017046#1017046
+  [1]: {% post_url 2018-03-18-Bash-one-liner-to-display-ALL-`gsettings`-in-GUI-dialog-window %}
   [2]: https://i.stack.imgur.com/IbmaX.png
   [3]: https://packages.ubuntu.com/trusty/utils/dconf-editor
   [4]: https://askubuntu.com/a/719602/307523

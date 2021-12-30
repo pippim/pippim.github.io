@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        42,113
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -58,5 +58,5 @@ After installing the newest kernel a dozen times you will ask the question "*How
   [1]: http://kernel.ubuntu.com/~kernel-ppa/mainline/
   [2]: https://i.stack.imgur.com/0aGxt.png
   [3]: https://i.stack.imgur.com/BnsVG.png
-  [4]: https://askubuntu.com/questions/892076/how-to-selectively-purge-old-kernels-all-at-once/892077#892077
+  [4]: {% post_url 2017-03-11-How-to-selectively-purge-old-kernels-all-at-once %}
   [5]: https://askubuntu.com/questions/2793/how-do-i-remove-old-kernel-versions-to-clean-up-the-boot-menu

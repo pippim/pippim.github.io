@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        620
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -104,4 +104,4 @@ $ kill 7970
 - Due to the `sleep "$Sec"` command after exiting Nautilus with <kbd>Alt</kbd>+<kbd>F4</kbd> or clicking <kbd>X</kbd> on window a three second delay (to reduce resource usage) will occur before Nautilus reappears on the desktop.
 
   [1]: https://unix.stackexchange.com/questions/546241/best-way-to-check-if-nautilus-file-manager-is-running
-  [2]: https://askubuntu.com/questions/826887/how-can-i-display-text-from-a-file-automatically-after-powering-up-my-computer/826898#826898
+  [2]: {% post_url 2016-09-19-How-can-I-display-text-from-a-file-automatically-after-powering-up-my-computer,-in-text-editor-or-terminal? %}

@@ -11,7 +11,7 @@ votes:        0
 favorites:    
 views:        1,027
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -42,5 +42,5 @@ The journal log file in question is 185 MB on my system and was 312 MB before I 
 As far as `/var/log/installer/cdebconf/` goes there is no such directory on my machine. I did find a [reference][2] where 75 GB was consumed there for someone else.
 
 
-  [1]: https://askubuntu.com/questions/1012912/systemd-logs-journalctl-are-too-large-and-slow/1012913#1012913
+  [1]: {% post_url 2018-03-08-Systemd-logs-(`journalctl`)-are-too-large-and-slow %}
   [2]: http://forums.debian.net/viewtopic.php?f=30&t=118776

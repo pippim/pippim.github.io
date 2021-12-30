@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        28,622
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          true
 navigation:   true
 clipboard:    true
@@ -485,12 +485,12 @@ Now that the warning are out of the way, to install the latest mainline kernel (
   [5]: http://www.kroah.com/log/blog/2018/01/06/meltdown-status/
   [6]: http://news.softpedia.com/news/linux-kernels-4-14-11-4-9-74-4-4-109-3-16-52-and-3-2-97-patch-meltdown-flaw-519215.shtml
   [7]: http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.14.11/
-  [8]: https://askubuntu.com/questions/879888/how-do-i-update-kernel-to-the-latest-mainline-version/879920#879920
+  [8]: {% post_url 2017-02-04-How-do-I-update-kernel-to-the-latest-mainline-version? %}
   [9]: http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.14.12/
   [10]: https://lkml.org/lkml/2018/1/5/337
   [11]: https://askubuntu.com/questions/763360/does-manual-kernel-update-affect-the-next-regular-automatic-update
   [12]: https://askubuntu.com/questions/2793/how-do-i-remove-old-kernel-versions-to-clean-up-the-boot-menu
-  [13]: https://askubuntu.com/questions/119080/how-to-update-kernel-to-the-latest-mainline-version-without-any-distro-upgrade/885165#885165
+  [13]: {% post_url 2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade? %}
   [14]: https://i.stack.imgur.com/VOt2M.png
 
 

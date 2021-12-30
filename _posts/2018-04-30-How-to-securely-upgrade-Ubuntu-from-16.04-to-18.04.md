@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        4,767
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -30,4 +30,4 @@ Additionally you can install new applications previously not available such as t
 Wash, Rinse, Repeat then Repeat again...
 
 
-  [1]: https://askubuntu.com/questions/1028604/bash-script-to-clone-ubuntu-to-new-partition-for-testing-18-04-lts-upgrade
+  [1]: {% post_url 2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %}

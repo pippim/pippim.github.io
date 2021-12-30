@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        58,468
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          true
 navigation:   true
 clipboard:    true
@@ -322,7 +322,7 @@ unset color_prompt force_color_prompt
 Note the length of the separator line coincides with width of `screenfetch` output. In this case it is 92 characters wide and `gnome-terminal` preferences are set accordingly.
 
 
-  [1]: https://askubuntu.com/questions/1020692/how-can-i-get-this-gnome-terminal-splash-screen/1020693#1020693
+  [1]: {% post_url 2018-03-30-Terminal-splash-screen-with-Weather,-Calendar,-Time-&-Sysinfo? %}
   [2]: https://i.stack.imgur.com/LY6hT.png
   [3]: https://i.stack.imgur.com/pl1P7.png
   [4]: https://i.stack.imgur.com/43AWN.png

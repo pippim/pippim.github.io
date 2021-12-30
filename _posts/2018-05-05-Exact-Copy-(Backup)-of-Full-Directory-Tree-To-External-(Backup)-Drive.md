@@ -11,7 +11,7 @@ votes:        5
 favorites:    
 views:        388
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -41,4 +41,4 @@ Some notable comments about parameters:
 
 As with all backup scenarios **always test** the backups to make sure all files are there and contain the appropriate information.
 
-  [1]: https://askubuntu.com/questions/1028604/bash-script-to-clone-ubuntu-to-new-partition-for-testing-18-04-lts-upgrade/1028605#1028605
+  [1]: {% post_url 2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %}

@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        14,802
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -43,7 +43,7 @@ Here are a couple of similar questions where during Live-USB session Wifi works 
 - [Internet worked during install, but not after][11]
 
 
-  [1]: https://askubuntu.com/questions/1007026/ubuntu-menu-and-launcher-not-showing-after-2-16-2018-update/1007213#1007213
+  [1]: {% post_url 2018-02-17-Ubuntu-Menu-and-Launcher-not-showing-after-2∕16∕2018-update %}
   [2]: https://askubuntu.com/questions/1006621/2-15-18-compiz-update-broke-unity
   [3]: https://askubuntu.com/questions/992571/gui-unity-crashing-in-16-04-lts-after-updates-2018-01-04-compiz-segfaults
   [4]: https://askubuntu.com/questions/995819/touchpad-gestures-and-holding-keys-does-not-work
@@ -51,6 +51,6 @@ Here are a couple of similar questions where during Live-USB session Wifi works 
   [6]: https://askubuntu.com/questions/995782/lubuntu-16-04-3-after-the-last-updatekernel-4-13-0-26-crashed
   [7]: https://askubuntu.com/questions/1001699/ubuntu-16-04-not-booting-4-13-0-x-generic
   [8]: https://askubuntu.com/questions/996284/problem-with-ethernet-on-latest-kernel-on-ubuntu-16-04-lts
-  [9]: https://askubuntu.com/questions/998471/razer-blade-stealth-disk-corruption-fsck-needed-probably-samsung-ssd-bug-afte/1000454#1000454
+  [9]: {% post_url 2018-01-27-Samsung-M2-NVME-enters-read-only-on-linux-every-day,-not-on-Windows %}
   [10]: https://askubuntu.com/questions/996702/why-does-my-wireless-work-during-install-but-not-after-booting
   [11]: https://askubuntu.com/questions/358810/internet-worked-during-install-but-not-after

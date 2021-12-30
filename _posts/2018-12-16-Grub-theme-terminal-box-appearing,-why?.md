@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        891
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -50,4 +50,4 @@ Insert the two `echo` lines in front of the two existing lines.
 
 
   [1]: https://i.stack.imgur.com/tOliY.gif
-  [2]: https://askubuntu.com/questions/822757/editing-os-names-in-etc-default-grub-where-is-the-os-name-read-from/822774#822774
+  [2]: {% post_url 2016-09-09-Editing-OS-names-in-∕etc∕default∕grub---where-is-the-OS-name-read-from? %}

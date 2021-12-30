@@ -11,7 +11,7 @@ votes:        14
 favorites:    
 views:        155,249
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -70,5 +70,5 @@ Here's what the `yad` window looks like in Ubuntu (in WSL it's slightly differen
 
 ![Lock Screen Timer][2]
 
-  [1]: https://askubuntu.com/questions/837078/application-that-will-lock-screen-after-a-set-amount-of-time-for-ubuntu/837115#837115
+  [1]: {% post_url 2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu %}
   [2]: https://i.stack.imgur.com/0jBz6.png

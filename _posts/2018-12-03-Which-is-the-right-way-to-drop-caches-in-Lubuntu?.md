@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        7,812
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -38,4 +38,4 @@ Call it using `sudo ./drop-caches`
 
 If you place the script in `/usr/local/bin` you can call it using `sudo drop-caches`
 
-  [1]: https://askubuntu.com/questions/1027186/improve-initial-use-of-find-performance-time
+  [1]: {% post_url 2018-04-22-Improve-initial-use-of-`find`-performance-time %}

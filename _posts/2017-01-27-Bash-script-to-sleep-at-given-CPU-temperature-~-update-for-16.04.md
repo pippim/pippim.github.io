@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        2,562
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   true
 clipboard:    false
@@ -174,7 +174,7 @@ echo "1" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
 
 ```
 
-  [1]: https://askubuntu.com/questions/391474/stop-cpu-from-overheating/875872#875872
+  [1]: {% post_url 2017-01-25-Stop-cpu-from-overheating %}
   [2]: https://wiki.debian.org/thermald
   [3]: https://www.kernel.org/doc/Documentation/thermal/intel_powerclamp.txt
   [4]: https://i.stack.imgur.com/TYc48.png

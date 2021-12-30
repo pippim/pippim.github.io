@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        10,360
 accepted:     Accepted
-uploaded:     2021-12-28 19:30:13
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -60,5 +60,5 @@ As Piotr Bartnicki notes, many people may prefer a lighter blue for directories.
 
   [1]: https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2
   [2]: https://i.stack.imgur.com/zfwZQ.png
-  [3]: https://askubuntu.com/questions/978977/windows-subsystem-for-linux-display-linux-distribution/978978?r=SearchResults#978978
+  [3]: {% post_url 2017-11-22-Windows-Subsystem-for-Linux-display-Linux-distribution? %}
   [4]: https://i.stack.imgur.com/Ki66O.png

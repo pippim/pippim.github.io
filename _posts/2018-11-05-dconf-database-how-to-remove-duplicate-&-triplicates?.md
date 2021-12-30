@@ -11,7 +11,7 @@ votes:        2
 favorites:    1
 views:        315
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -114,8 +114,8 @@ Two of three files are dated from 2016 (Ubuntu 16.04 development time):
 -rw-r--r-- 1 root root   28 Jan 19  2016 /etc/dconf/profile/ibus
 ```
 
-  [1]: https://askubuntu.com/questions/1017045/bash-one-liner-to-display-all-gsettings-in-zenity-or-yad/1017046#1017046
+  [1]: {% post_url 2018-03-18-Bash-one-liner-to-display-ALL-`gsettings`-in-GUI-dialog-window %}
   [2]: https://i.stack.imgur.com/j9qV3.png
-  [3]: https://askubuntu.com/questions/1039235/how-to-make-locate-output-look-like-ll-or-ls-la-but-nicer/1039236#1039236
+  [3]: {% post_url 2018-05-23-How-to-make-locate-output-look-like-`ll`-or-`ls--la`-but-nicer? %}
   [4]: https://bugzilla.gnome.org/show_bug.cgi?id=723003#c12
 

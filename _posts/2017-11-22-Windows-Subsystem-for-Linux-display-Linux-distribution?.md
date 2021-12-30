@@ -11,7 +11,7 @@ votes:        7
 favorites:    
 views:        3,754
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -257,4 +257,4 @@ Some people like the top part of the Ubuntu Bash on Windows 10 (WSL) terminal sp
 
   [1]: https://github.com/nijikokun/WinScreeny
   [2]: https://i.stack.imgur.com/Ki66O.png
-  [3]: https://askubuntu.com/questions/1020692/how-can-i-get-this-terminal-splash-screen/1020693#1020693
+  [3]: {% post_url 2018-03-30-Terminal-splash-screen-with-Weather,-Calendar,-Time-&-Sysinfo? %}

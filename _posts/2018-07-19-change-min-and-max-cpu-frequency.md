@@ -11,7 +11,7 @@ votes:        6
 favorites:    
 views:        24,748
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -72,5 +72,5 @@ for x in /sys/devices/system/cpu/*/cpufreq/; do echo 1700000 | sudo tee $x/scali
 ```
 
 
-  [1]: https://askubuntu.com/questions/1141605/how-can-i-control-cpu-usage-on-a-chuwi-hi10-pro/1142671#1142671
+  [1]: {% post_url 2019-05-12-GUI-or-simple-Bash-script-to-throttle-the-CPU? %}
   [2]: https://i.stack.imgur.com/aBbiY.png

@@ -11,7 +11,7 @@ votes:        10
 favorites:    
 views:        15,852
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -190,6 +190,6 @@ wlp60s0    1500 0      1036      0      0 0           237      0      0      0 B
 ```
 
   [1]: https://i.stack.imgur.com/meM7C.gif
-  [2]: https://askubuntu.com/questions/951783/how-to-find-out-who-is-taking-70-gb-of-data-from-me-each-month
+  [2]: {% post_url 2017-09-03-Why-is-internet-upload-so-high-when-I-don't-actually-upload-much? %}
 
 

@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        327,553
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -29,4 +29,4 @@ For a tutorial on setting up "Indicator-Sysmonitor" see: [Can BASH display in sy
 
 
   [1]: https://i.stack.imgur.com/uvvZ6.gif
-  [2]: https://askubuntu.com/questions/882419/can-bash-display-in-systray-as-application-indicator/882420#882420
+  [2]: {% post_url 2017-02-11-Can-BASH-display-in-systray-as-application-indicator? %}

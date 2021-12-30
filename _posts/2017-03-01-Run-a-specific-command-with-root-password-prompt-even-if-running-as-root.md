@@ -11,7 +11,7 @@ votes:        8
 favorites:    
 views:        1,815
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -132,4 +132,4 @@ Taken from the answer posted at ([How can I set up a password for the &#39;rm&#3
 
 
   [1]: https://i.stack.imgur.com/HvKlZ.png
-  [2]: https://askubuntu.com/questions/865023/how-can-i-set-up-a-password-for-the-rm-command/866003#866003
+  [2]: {% post_url 2016-12-30-How-can-I-set-up-a-password-for-the-'rm'-command? %}

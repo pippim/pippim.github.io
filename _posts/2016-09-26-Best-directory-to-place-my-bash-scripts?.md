@@ -11,7 +11,7 @@ votes:        4
 favorites:    1
 views:        239
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -37,5 +37,5 @@ Even though I accepted below answer over a year ago, I ended up using:
 
 After creating directory `/home/me/bin` you need to log out and in again for it to get into your PATH.
 
-  [1]: https://askubuntu.com/questions/829258/turn-off-motherboard-pc-speaker-beep-in-ubuntu-16-04-regression
-  [2]: https://askubuntu.com/questions/840473/ubuntu-changing-default-audio-output-after-suspend/840543#840543
+  [1]: {% post_url 2016-09-26-Turn-off-Motherboard∕PC-Speaker-"beep"-in-Ubuntu-16.04-regression %}
+  [2]: {% post_url 2016-10-22-Ubuntu-changing-default-audio-output-after-suspend %}

@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        11,257
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -40,4 +40,4 @@ Adding /lib/firmware/i915/skl_guc_ver9_33.bin
 In particular you should be seeing the last line. If not follow the instructions here: [Updated kernel to 4.8 now missing firmware warnings][1]
 
 
-  [1]: https://askubuntu.com/questions/832524/updated-kernel-to-4-8-now-missing-firmware-warnings/832528#832528
+  [1]: {% post_url 2016-10-03-Possible-missing-firmware-∕lib∕firmware∕i915 %}

@@ -11,7 +11,7 @@ votes:        2
 favorites:    0
 views:        762
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -63,4 +63,4 @@ I've incorporated above technique into an answer in **Ask Ubuntu** I'd like to i
 - [How can I automatically relaunch nautilus if I quit the program?][1]
 
 
-  [1]: https://askubuntu.com/questions/1180043/how-can-i-automatically-relaunch-nautilus-if-i-quit-the-program/1180596#1180596
+  [1]: {% post_url 2019-10-13-How-can-I-automatically-relaunch-nautilus-if-I-quit-the-program? %}

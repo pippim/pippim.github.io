@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        1,719
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -38,7 +38,7 @@ The other option is to roll back your microcode to a version prior to the bug. Y
 
 - https://askubuntu.com/questions/293948/where-to-find-older-sourcebinary-package-versions
 
-  [1]: https://askubuntu.com/questions/992232/what-is-ubuntus-status-on-the-meltdown-and-spectre-vulnerabilities/992459#992459
-  [2]: https://askubuntu.com/questions/998471/razer-blade-stealth-disk-corruption-fsck-needed-probably-samsung-ssd-bug-afte/1000454#1000454
+  [1]: {% post_url 2018-01-05-What-is-Ubuntu's-status-on-the-Meltdown-and-Spectre-vulnerabilities? %}
+  [2]: {% post_url 2018-01-27-Samsung-M2-NVME-enters-read-only-on-linux-every-day,-not-on-Windows %}
   [3]: https://linuxreviews.org/HOWTO_make_Linux_run_blazing_fast_(again)_on_Intel_CPUs
   [4]: https://www.reddit.com/r/linuxquestions/comments/bqn8we/can_i_disable_the_intel_spectre_fixes/

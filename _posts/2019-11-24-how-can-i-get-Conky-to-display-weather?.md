@@ -11,7 +11,7 @@ votes:        4
 favorites:    
 views:        8,346
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -104,7 +104,7 @@ ${image /home/rick/Pictures/Weather.png -p 0,1080 -s 400x120}
 
 
   [1]: https://i.stack.imgur.com/EqapD.png
-  [2]: https://askubuntu.com/questions/1020692/terminal-splash-screen-with-weather-calendar-time-sysinfo/1020693#1020693
+  [2]: {% post_url 2018-03-30-Terminal-splash-screen-with-Weather,-Calendar,-Time-&-Sysinfo? %}
   [3]: https://i.stack.imgur.com/tYXAo.png
   [4]: https://github.com/chubin/wttr.in
   [5]: https://i.stack.imgur.com/8ovPb.png

@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        2,100
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -137,5 +137,5 @@ It crashes at end with this message:
 
 
 
-  [1]: https://askubuntu.com/questions/1019791/change-2-or-more-libreoffice-documents-to-have-the-exact-same-styling-formatting/1021152#1021152
+  [1]: {% post_url 2018-04-01-Change-2-or-more-LibreOffice-documents-to-have-the-exact-same-styling∕formatting %}
   [2]: https://i.stack.imgur.com/DRj6V.png

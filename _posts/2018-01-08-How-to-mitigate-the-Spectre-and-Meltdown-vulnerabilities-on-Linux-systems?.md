@@ -11,15 +11,15 @@ votes:        11
 favorites:    
 views:        29,208
 accepted:     
-uploaded:     2021-12-28 20:39:21
-toc:          false
+uploaded:     2021-12-29 16:51:17
+toc:          true
 navigation:   true
 clipboard:    false
 ---
 
 
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
 
 # January 27, 2018 Intel Microcode breaks some systems
 
@@ -30,6 +30,12 @@ If you experienced problems with updates, reinstalled Ubuntu and turned off upda
 
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+
+{% include toc.md %}
+
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
 
 # January 16, 2018 update Spectre in 4.14.14 and 4.9.77
 
@@ -52,8 +58,8 @@ Without getting into details of JavaScript here is how to immediately avoid the 
 
 
 
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
 
 # January 12, 2018 update
 
@@ -81,8 +87,8 @@ Many users had problems with Ubuntu LTS updates on January 4, 2018 and January 1
 
 
 
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
 
 # January 7, 2018 update
 
@@ -107,8 +113,8 @@ The Linux 4.14.11, 4.9.74, 4.4.109, 3.16.52, 3.18.91, and 3.2.97 kernels are now
 As reported earlier, Meltdown and Spectre are two exploits that affect nearly all devices powered by modern processors (CPUs) released in the past 25 years. Yes, that means almost all mobile phones and personal computers. Meltdown can be exploited by an unprivileged attacker to maliciously obtain sensitive information stored in kernel memory.
 
 
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
 
 ## Patch for Spectre vulnerability still in the works
 
@@ -128,8 +134,8 @@ If your regular updates do not install the Kernel version you desire you can do 
 ----------
 
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
 
 # 4.14.12 - What a difference a day makes
 
@@ -148,17 +154,17 @@ Less than 24 hours after my initial answer a patch was released to fix 4.14.11 k
 Looking at this update not very many lines of source code were changed. 
 
 
-  [1]: https://askubuntu.com/questions/998471/razer-blade-stealth-disk-corruption-fsck-needed-probably-samsung-ssd-bug-afte/1000454#1000454
+  [1]: {% post_url 2018-01-27-Samsung-M2-NVME-enters-read-only-on-linux-every-day,-not-on-Windows %}
   [2]: https://www.phoronix.com/scan.php?page=news_item&px=Linux-4.9-4.14-Retpoline
   [3]: http://news.softpedia.com/news/linux-kernels-4-14-13-4-9-76-and-4-4-111-bring-more-security-fixes-update-now-519321.shtml
   [4]: http://www.kroah.com/log/blog/2018/01/06/meltdown-status/
   [5]: http://news.softpedia.com/news/linux-kernels-4-14-11-4-9-74-4-4-109-3-16-52-and-3-2-97-patch-meltdown-flaw-519215.shtml
   [6]: http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.14.11/
-  [7]: https://askubuntu.com/questions/879888/how-do-i-update-kernel-to-the-latest-mainline-version/879920#879920
+  [7]: {% post_url 2017-02-04-How-do-I-update-kernel-to-the-latest-mainline-version? %}
   [8]: http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.14.12/
   [9]: https://lkml.org/lkml/2018/1/5/337
 
 
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a></div>
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
 

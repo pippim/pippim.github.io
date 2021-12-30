@@ -11,7 +11,7 @@ votes:        16
 favorites:    
 views:        84,031
 accepted:     
-uploaded:     2021-12-28 19:30:13
+uploaded:     2021-12-29 16:51:17
 toc:          true
 navigation:   true
 clipboard:    true
@@ -315,7 +315,7 @@ exit 0
 
 
 
-  [1]: https://askubuntu.com/questions/1019213/display-grub-menu-and-options-without-rebooting/1019214#1019214
+  [1]: {% post_url 2018-03-26-Display-grub-menu-and-options-without-rebooting? %}
   [2]: https://i.stack.imgur.com/a95hd.png
 
 

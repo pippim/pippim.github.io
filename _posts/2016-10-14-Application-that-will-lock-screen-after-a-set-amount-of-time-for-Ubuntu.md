@@ -11,7 +11,7 @@ votes:        15
 favorites:    
 views:        3,004
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          true
 navigation:   true
 clipboard:    true
@@ -302,7 +302,7 @@ While lock screen timer is running it records how many minutes are remaining int
   [1]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
   [2]: https://i.stack.imgur.com/N0gb6.gif
   [3]: https://i.stack.imgur.com/0jBz6m.png
-  [4]: https://askubuntu.com/questions/882419/how-can-bash-display-in-ubuntus-unity-system-tray
+  [4]: {% post_url 2017-02-11-Can-BASH-display-in-systray-as-application-indicator? %}
 
 
 <a id="hdr10"></a>

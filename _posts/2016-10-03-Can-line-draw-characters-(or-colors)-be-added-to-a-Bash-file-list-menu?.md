@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        536
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   true
 clipboard:    true
@@ -268,7 +268,7 @@ With a little work the **world's ugliest menu** and now become and acceptable lo
 
   [1]: https://askubuntu.com/questions/682095/create-bash-menu-based-on-file-list-map-files-to-numbers/682146#682146
   [2]: http://linuxcommand.org/lc3_adv_tput.php
-  [3]: https://askubuntu.com/questions/829258/turn-off-motherboard-pc-speaker-beep-in-ubuntu-16-04-regression
+  [3]: {% post_url 2016-09-26-Turn-off-Motherboard∕PC-Speaker-"beep"-in-Ubuntu-16.04-regression %}
   [4]: http://i.stack.imgur.com/L9J10.png
 
 

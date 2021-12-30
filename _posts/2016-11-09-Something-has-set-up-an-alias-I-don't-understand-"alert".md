@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        350
 accepted:     Accepted
-uploaded:     2021-12-28 19:30:13
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -57,4 +57,4 @@ I have voted to close this question as a duplicate too.
 
 
   [1]: https://askubuntu.com/questions/847294/why-is-sudo-colourless-when-user-is-colourful-for-ls-command
-  [2]: https://askubuntu.com/questions/847623/notify-send-alert-not-popping-up-gui-bubble-messages?noredirect=1#comment1302244_847623
+  [2]: {% post_url 2016-11-10-notify-send-(alert)-not-popping-up-GUI-bubble-messages %}

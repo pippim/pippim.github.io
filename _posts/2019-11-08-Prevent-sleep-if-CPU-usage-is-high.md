@@ -11,7 +11,7 @@ votes:        4
 favorites:    
 views:        3,178
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -144,6 +144,6 @@ Real uptime 296,568 seconds (3 days, 10 hours, 22 minutes, 48 seconds)
 ```
 
 
-  [1]: https://askubuntu.com/questions/1155093/turn-off-all-monitors-while-watching-vlc-media-on-tv/1155095#1155095
+  [1]: {% post_url 2019-07-01-Turn-off-all-monitors-while-watching-VLC-media-on-TV %}
   [2]: https://i.stack.imgur.com/Dxo3M.png
-  [3]: https://askubuntu.com/questions/321855/how-to-get-real-uptime/1186845#1186845
+  [3]: {% post_url 2019-11-07-How-to-get-real-uptime? %}

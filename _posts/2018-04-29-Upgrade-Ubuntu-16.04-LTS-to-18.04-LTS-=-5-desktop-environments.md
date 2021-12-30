@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        2,172
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -35,4 +35,4 @@ I would first click the gear to select the Desktop environment and then enter my
 
 
   [1]: https://i.stack.imgur.com/dNXhZ.jpg
-  [2]: https://askubuntu.com/questions/1028604/bash-script-to-clone-ubuntu-to-new-partition-for-testing-18-04-lts-upgrade/1028605#1028605
+  [2]: {% post_url 2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %}

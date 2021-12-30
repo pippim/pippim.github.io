@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        1,507
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   true
 clipboard:    true
@@ -160,7 +160,7 @@ Mar 30 11:17:28 alien lightdm[1046]: update-alternatives: error: no alternatives
 You might think "Mar 30" at the bottom is in error but it's a laptop that gets suspended and and still part of March 27, 2018 boot log.
 
   [1]: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1618188
-  [2]: https://askubuntu.com/questions/1002524/why-does-journalctl-list-boots-only-show-the-current-boot?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+  [2]: {% post_url 2018-02-03-Why-does-`journalctl---list-boots`-only-show-the-current-boot? %}
 
 
 

@@ -11,7 +11,7 @@ votes:        4
 favorites:    
 views:        354,058
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -130,4 +130,4 @@ sudo update-grub
 ```
 
   [1]: https://askubuntu.com/a/1097697/307523
-  [2]: https://askubuntu.com/questions/599208/how-to-list-grubs-menuentries-in-command-line/1022706#1022706
+  [2]: {% post_url 2018-04-07-How-to-list-GRUB's-"menuentries"-in-command-line? %}

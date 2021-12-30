@@ -11,7 +11,7 @@ votes:        8
 favorites:    
 views:        5,160
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          true
 navigation:   true
 clipboard:    true
@@ -484,7 +484,7 @@ This Q&A ([Can BASH display in systray as application indicator?][6]) describes 
   [3]: https://i.stack.imgur.com/4njOT.png
   [4]: https://i.stack.imgur.com/CWjQ8.png
   [5]: https://i.stack.imgur.com/esEG1.png
-  [6]: https://askubuntu.com/questions/882419/can-bash-display-in-systray-as-application-indicator/882420#882420
+  [6]: {% post_url 2017-02-11-Can-BASH-display-in-systray-as-application-indicator? %}
 
 
 <a id="hdr12"></a>

@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        1,868
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -127,7 +127,7 @@ $ sudo time grep -rnI -E "([0-9]{1,3}[\.]){3}[0-9]{1,3}" /etc/etc/hosts:1:127.0.
 
 ```
 
-  [1]: https://askubuntu.com/questions/1005437/greping-all-files-for-a-string-takes-a-long-time
+  [1]: {% post_url 2018-02-12-`grep`ing-all-files-for-a-string-takes-a-long-time %}
 
 
 

@@ -11,7 +11,7 @@ votes:        6
 favorites:    
 views:        9,013
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -60,5 +60,5 @@ Sample screen:
 
 
 
-  [1]: https://askubuntu.com/questions/871312/nautilus-can-set-desktop-wallpaper-how-can-it-set-login-and-lock-screen-wallpap
+  [1]: {% post_url 2017-01-13-Nautilus-can-set-desktop-wallpaper.-How-can-it-set-login-and-lock-screen-wallpaper? %}
   [2]: https://i.stack.imgur.com/CsQ9O.png

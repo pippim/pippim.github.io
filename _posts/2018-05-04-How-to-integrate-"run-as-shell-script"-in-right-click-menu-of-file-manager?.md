@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        1,302
 accepted:     
-uploaded:     2021-12-28 19:30:13
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -123,4 +123,4 @@ Reboot and enjoy your new login and lock screen wallpaper.
 
   [1]: https://i.stack.imgur.com/EleRC.png
   [2]: https://i.stack.imgur.com/CsQ9O.png
-  [3]: https://askubuntu.com/questions/871312/nautilus-can-set-desktop-wallpaper-how-can-it-set-login-and-lock-screen-wallpap
+  [3]: {% post_url 2017-01-13-Nautilus-can-set-desktop-wallpaper.-How-can-it-set-login-and-lock-screen-wallpaper? %}

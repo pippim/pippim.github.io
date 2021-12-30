@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        539
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -48,5 +48,5 @@ Looking at the output you could decide to have a given package "pinned" or "held
 
 ### Without a separate `apt update` you can't see what would be upgraded!
 
-  [1]: https://askubuntu.com/questions/1002995/how-can-ppas-be-removed-using-gui/1002996#1002996
+  [1]: {% post_url 2018-02-04-How-can-PPAs-be-removed-using-GUI? %}
   [2]: https://i.stack.imgur.com/wMJvE.png

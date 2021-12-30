@@ -11,7 +11,7 @@ votes:        8
 favorites:    
 views:        1,249,301
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -96,4 +96,4 @@ You'll want to put the `screenfetch` command an the bottom of your `~/.bashrc` f
   [1]: https://i.stack.imgur.com/7eNp3.gif
   [2]: https://i.stack.imgur.com/MnBGg.gif
   [3]: https://i.stack.imgur.com/itFpX.png
-  [4]: https://askubuntu.com/questions/1020692/how-can-i-get-this-terminal-splash-screen
+  [4]: {% post_url 2018-03-30-Terminal-splash-screen-with-Weather,-Calendar,-Time-&-Sysinfo? %}

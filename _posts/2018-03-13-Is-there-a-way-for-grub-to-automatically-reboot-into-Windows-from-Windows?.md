@@ -11,7 +11,7 @@ votes:        20
 favorites:    
 views:        9,640
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -78,5 +78,5 @@ reboot-to-windows
 
 If Windows automatically restarts when you aren't looking, Windows is rebooted. This allows Windows automatic updates to be processed normally over multiple-reboot cycles Windows sometimes uses.
 
-  [1]: https://askubuntu.com/questions/1003079/dual-booting-how-to-change-the-order-on-my-dual-booting-distros/1003086#1003086
+  [1]: {% post_url 2018-02-04-How-to-change-the-order-on-my-dual-booting-distros %}
   [2]: https://unix.stackexchange.com/a/112284/200094

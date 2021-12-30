@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        983
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -110,5 +110,5 @@ Vacuuming done, freed 176.0M of archived journals on disk.
 ```
 
 
-  [1]: https://askubuntu.com/questions/765315/how-to-find-previous-boot-log-after-ubuntu-16-04-restarts/1008210#1008210
+  [1]: {% post_url 2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04+-restarts? %}
 

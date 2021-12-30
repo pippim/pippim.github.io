@@ -11,7 +11,7 @@ votes:        5
 favorites:    
 views:        1,158,421
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          true
 navigation:   true
 clipboard:    true
@@ -386,7 +386,7 @@ The total of all kernel sizes (excluding the current running version which canno
 The dialog box used to display each Kernel's **Last Access Date**. This date can get mass overwritten for all kernels during backup or similar operations. The dialog box now shows the **Modified Date** instead.
 
 
-  [1]: https://askubuntu.com/questions/892076/how-to-selectively-purge-old-kernels-all-at-once/892077#892077
+  [1]: {% post_url 2017-03-11-How-to-selectively-purge-old-kernels-all-at-once %}
   [2]: https://i.stack.imgur.com/KOKWr.png
   [3]: https://askubuntu.com/questions/841810/how-do-you-find-out-when-a-specific-kernel-version-was-last-booted
   [4]: https://i.stack.imgur.com/CJyAf.png

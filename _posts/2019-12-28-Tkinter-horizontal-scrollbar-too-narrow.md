@@ -11,7 +11,7 @@ votes:        0
 favorites:    
 views:        380
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -59,4 +59,4 @@ As [Stovfl's comment][1] states:
 > be passed as parent.  
 
 
-  [1]: https://stackoverflow.com/questions/59503487/tkinter-horizontal-scrollbar-too-narrow?noredirect=1#comment105186807_59503487
+  [1]: {% post_url 2019-12-28-Tkinter-horizontal-scrollbar-too-narrow %}

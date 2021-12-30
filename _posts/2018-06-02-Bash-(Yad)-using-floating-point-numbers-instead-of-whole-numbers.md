@@ -11,7 +11,7 @@ votes:        0
 favorites:    
 views:        512
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -84,7 +84,7 @@ The problem was YAD (Yet Another Dialog) storing numbers with decimal precision 
 
 ```
 
-  [1]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly/1039377#1039377
+  [1]: {% post_url 2018-05-23-Set-of-countdown-timers-with-alarm %}
 
 
 

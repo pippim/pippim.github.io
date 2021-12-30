@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        3,596
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -81,6 +81,6 @@ find $BACKUP_DIR -maxdepth 1 -mtime +"$DAYS_TO_KEEP" -exec rm -rf {} \;
 ```
 
 
-  [1]: https://askubuntu.com/questions/917562/backup-linux-configuration-scripts-and-documents-to-gmail
-  [2]: https://askubuntu.com/questions/998082/is-it-necessary-to-keep-records-of-my-backups/998121#998121
+  [1]: {% post_url 2017-06-06-Backup-Linux-configuration,-scripts-and-documents-to-Gmail %}
+  [2]: {% post_url 2018-01-20-Is-it-necessary-to-keep-records-of-my-backups? %}
   [3]: https://askubuntu.com/questions/553628/find-not-removing-files-in-folders-through-bash-script

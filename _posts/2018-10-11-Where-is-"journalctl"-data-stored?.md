@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        112,672
 accepted:     
-uploaded:     2021-12-28 19:30:13
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -38,5 +38,5 @@ Vacuuming done, freed 176.0M of archived journals on disk.
 
 ```
 
-  [1]: https://askubuntu.com/questions/765315/how-to-find-previous-boot-log-after-ubuntu-16-04-restarts/1008210#1008210
-  [2]: https://askubuntu.com/questions/1012912/systemd-logs-journalctl-are-too-large-and-slow/1012913#1012913
+  [1]: {% post_url 2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04+-restarts? %}
+  [2]: {% post_url 2018-03-08-Systemd-logs-(`journalctl`)-are-too-large-and-slow %}

@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        1,979
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -57,5 +57,5 @@ Here are a few examples from the ***WebUpd8*** link above:
 
   [1]: https://i.stack.imgur.com/Zh8Wh.gif
   [2]: http://www.webupd8.org/2014/05/ubuntu-appindicator-that-displays-bash.html
-  [3]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly/1039377#1039377
-  [4]: https://askubuntu.com/questions/894460/automatically-adjust-display-brightness-based-on-sunrise-and-sunset/894470#894470
+  [3]: {% post_url 2018-05-23-Set-of-countdown-timers-with-alarm %}
+  [4]: {% post_url 2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset %}

@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        1,162
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -178,4 +178,4 @@ $ locate 4.14.34 | head -n1000
 
 ```
 
-  [1]: https://askubuntu.com/questions/1010811/how-do-i-map-linux-kernels-to-ubuntu-kernels
+  [1]: {% post_url 2018-03-01-How-do-I-map-Linux-Kernels-to-Ubuntu-Kernels? %}

@@ -11,7 +11,7 @@ votes:        6
 favorites:    
 views:        1,853
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   true
 clipboard:    true
@@ -179,9 +179,9 @@ fi
   [1]: http://www.webupd8.org/2014/05/ubuntu-appindicator-that-displays-bash.html
   [2]: https://github.com/fossfreedom/indicator-sysmonitor
   [3]: https://i.stack.imgur.com/zdDGs.gif
-  [4]: https://askubuntu.com/questions/837078/application-that-will-lock-screen-after-a-set-amount-of-time-for-ubuntu/837115#837115
+  [4]: {% post_url 2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu %}
   [5]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
-  [6]: https://askubuntu.com/questions/894460/automatically-adjust-display-brightness-based-on-sunrise-and-sunset
+  [6]: {% post_url 2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset %}
 
 
 <a id="hdr6"></a>

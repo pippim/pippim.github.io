@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        989
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -118,4 +118,4 @@ done
 
 
 
-  [1]: https://askubuntu.com/questions/1045624/how-to-switch-between-options-in-sys-class-backlight-to-solve-brightness-prob/1045763#1045763
+  [1]: {% post_url 2018-06-12-How-to-switch-between-options-in-`∕sys∕class∕backlight`-to-solve-brightness-problem? %}

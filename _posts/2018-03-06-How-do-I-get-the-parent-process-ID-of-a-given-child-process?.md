@@ -11,7 +11,7 @@ votes:        11
 favorites:    
 views:        254,691
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -59,5 +59,5 @@ systemd,1 splash fastboot kaslr
 
 **Note:** Another minute has passed and the sleep command gets a new PID (8541).
 
-  [1]: https://askubuntu.com/questions/894460/automatically-adjust-display-brightness-based-on-sunrise-and-sunset
+  [1]: {% post_url 2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset %}
 

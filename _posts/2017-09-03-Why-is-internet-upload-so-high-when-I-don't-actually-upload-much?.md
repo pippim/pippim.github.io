@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        3,479
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          true
 navigation:   true
 clipboard:    true
@@ -449,11 +449,11 @@ In the last couple of days I had problems using Chrome so started using Firefox 
 
 So.... full circle :(
 
-  [1]: https://askubuntu.com/questions/103634/any-good-application-for-data-usage-monitor/851703#851703
+  [1]: {% post_url 2016-11-20-Any-good-application-for-data-usage-monitor? %}
   [2]: https://i.stack.imgur.com/2oqXi.png
   [3]: https://i.stack.imgur.com/xKq1O.png
   [4]: https://i.stack.imgur.com/PJsgg.png
-  [5]: https://askubuntu.com/questions/845013/whats-eating-all-the-ram-and-swap/845020#845020
+  [5]: {% post_url 2016-11-03-What's-eating-all-the-RAM-and-swap? %}
   [6]: https://i.stack.imgur.com/4GhNh.gif
   [7]: https://bugzilla.kernel.org/show_bug.cgi?id=109051
 

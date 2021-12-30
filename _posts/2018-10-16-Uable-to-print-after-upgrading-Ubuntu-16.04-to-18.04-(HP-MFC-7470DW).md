@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        1,528
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -51,4 +51,4 @@ Many people are having problems printing after 16.04 to 18.04 upgrade:
 
 
   [1]: https://askubuntu.com/questions/1080720/printer-filter-failed/1080926#1080926
-  [2]: https://askubuntu.com/questions/1028604/bash-script-to-clone-ubuntu-to-new-partition-for-testing-18-04-lts-upgrade/1028605#1028605
+  [2]: {% post_url 2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %}

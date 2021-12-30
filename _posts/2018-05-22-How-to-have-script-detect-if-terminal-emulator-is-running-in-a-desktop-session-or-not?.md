@@ -11,7 +11,7 @@ votes:        3
 favorites:    
 views:        943
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -47,4 +47,4 @@ fi
 ```
 
 
-  [1]: https://askubuntu.com/questions/1019464/desktop-shortcut-to-bash-script-crashes-and-burns
+  [1]: {% post_url 2018-03-26-Desktop-shortcut-to-Bash-script-crashes-and-burns %}

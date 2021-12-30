@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        9,499
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -47,4 +47,4 @@ Back in 1995 32 MB Swap out of 760 MB HDD was 4% of HDD. Indeed the swap partiti
 
   [1]: https://www.washingtonpost.com/archive/business/technology/1995/04/26/packard-bell-multimedia-easy-does-it/c127c133-a439-4b38-94f8-115965dbba85/?utm_term=.e2fa6b8f2275
   [2]: https://www.linux.com/news/all-about-linux-swap-space
-  [3]: https://askubuntu.com/questions/817966/google-chrome-will-take-up-my-memory-to-the-point-where-it-causes-my-computer-to/817995#817995
+  [3]: {% post_url 2016-08-28-Google-Chrome-will-take-up-my-memory-to-the-point-where-it-causes-my-computer-to-freeze-to-a-near-halt.-What-can-I-do-to-prevent-this? %}

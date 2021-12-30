@@ -11,7 +11,7 @@ votes:        10
 favorites:    
 views:        19,287
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   true
 clipboard:    true
@@ -282,7 +282,7 @@ Use 'sudo apt autoremove' to remove them.
   [2]: http://kernel.ubuntu.com/~kernel-ppa/mainline/
   [3]: https://bugs.launchpad.net/ubuntu/+source/linux-base/+bug/1766851
   [4]: https://i.stack.imgur.com/NWARG.png
-  [5]: https://askubuntu.com/questions/892076/how-to-selectively-purge-old-kernels-all-at-once/892077#892077
+  [5]: {% post_url 2017-03-11-How-to-selectively-purge-old-kernels-all-at-once %}
   [6]: https://i.stack.imgur.com/tZLnH.png
 
 

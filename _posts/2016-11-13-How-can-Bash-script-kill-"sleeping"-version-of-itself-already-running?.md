@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        1,117
 accepted:     Accepted
-uploaded:     2021-12-28 19:30:13
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -74,6 +74,6 @@ This simply kills the previously running version which we want to do whether we 
 
   [1]: https://askubuntu.com/users/231142/terrance
   [2]: https://askubuntu.com/users/295286/serg
-  [3]: https://askubuntu.com/questions/837078/application-that-will-lock-screen-after-a-set-amount-of-time-for-ubuntu/837115#837115
+  [3]: {% post_url 2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu %}
 
 

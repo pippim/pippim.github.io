@@ -11,7 +11,7 @@ votes:        55
 favorites:    
 views:        100,223
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -48,4 +48,4 @@ A commentator requested posting the entire conky script which I did here: [conky
 
 
   [1]: https://i.stack.imgur.com/bJmjj.gif
-  [2]: https://askubuntu.com/questions/941701/conky-transparent/941705#941705
+  [2]: {% post_url 2017-08-01-conky-transparent %}

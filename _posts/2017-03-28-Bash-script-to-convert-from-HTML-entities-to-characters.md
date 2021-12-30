@@ -11,7 +11,7 @@ votes:        14
 favorites:    
 views:        53,957
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -55,4 +55,4 @@ HTMLtoText () {
 ```
 
   [1]: https://stackoverflow.com/questions/12873682/short-way-to-escape-html-in-bash
-  [2]: https://askubuntu.com/questions/900319/code-version-control-between-local-files-and-au-answers
+  [2]: {% post_url 2017-04-05-Code-version-control-between-local-files-and-AU-answers %}

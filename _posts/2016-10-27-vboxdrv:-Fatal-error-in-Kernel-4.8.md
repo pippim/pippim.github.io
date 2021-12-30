@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        647
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -30,4 +30,4 @@ Also instead of Kernel version 4.8.1 which has the "Dirty COW" security holes ([
 
 
   [1]: https://www.linuxbabe.com/virtualbox/install-latest-virtualbox-5-1-ubuntu-16-04
-  [2]: https://askubuntu.com/questions/839919/what-is-dirty-cow-bug-that-allows-local-user-to-gain-administrative-access
+  [2]: {% post_url 2016-10-21-What-is-the-"Dirty-COW"-bug,-and-how-can-I-secure-my-system-against-it? %}

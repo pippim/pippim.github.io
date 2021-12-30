@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        2,865
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -54,5 +54,5 @@ gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
 ```
 
 
-  [1]: https://askubuntu.com/questions/1000734/prevent-a-workstation-screen-from-dimming/1000745#1000745
+  [1]: {% post_url 2018-01-28-Prevent-a-Workstation-Screen-from-dimming %}
   [2]: https://unix.stackexchange.com/questions/257329/laptop-screen-dims-after-20-seconds-cannot-change-that/258886

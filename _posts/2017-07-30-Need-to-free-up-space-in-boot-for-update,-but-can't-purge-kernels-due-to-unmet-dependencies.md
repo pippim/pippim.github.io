@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        1,085
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -50,5 +50,5 @@ If you manually installed a kernel using a technique like this: [How do I update
 
 No. But I wouldn't encrypt my hard drive.
 
-  [1]: https://askubuntu.com/questions/892076/how-to-selectively-purge-old-kernels-all-at-once/892077#892077
-  [2]: https://askubuntu.com/questions/879888/how-do-i-update-kernel-to-the-latest-mainline-version/879920#879920
+  [1]: {% post_url 2017-03-11-How-to-selectively-purge-old-kernels-all-at-once %}
+  [2]: {% post_url 2017-02-04-How-do-I-update-kernel-to-the-latest-mainline-version? %}

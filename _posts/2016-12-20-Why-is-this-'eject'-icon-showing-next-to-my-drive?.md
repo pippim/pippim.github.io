@@ -11,7 +11,7 @@ votes:        5
 favorites:    
 views:        1,386
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -65,4 +65,4 @@ In summary Nautilus gives us a nice GUI into our partitions. It's very handy on 
 
 
   [1]: https://i.stack.imgur.com/v4Nn2.png
-  [2]: https://askubuntu.com/questions/122783/how-do-i-hide-remove-a-partition-from-the-nautilus-left-panel/835040#835040
+  [2]: {% post_url 2016-10-10-How-do-I-hide-∕-remove-a-partition-from-the-Nautilus-left-panel? %}

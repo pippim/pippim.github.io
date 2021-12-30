@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        1,918
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -38,4 +38,4 @@ grep -rnw '/home' -e 'String in file'
 ```
 
 
-  [1]: https://askubuntu.com/questions/1005437/greping-all-files-for-a-string-takes-53-hours
+  [1]: {% post_url 2018-02-12-`grep`ing-all-files-for-a-string-takes-a-long-time %}

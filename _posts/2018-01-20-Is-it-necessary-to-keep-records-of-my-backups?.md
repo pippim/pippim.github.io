@@ -11,7 +11,7 @@ votes:        1
 favorites:    
 views:        118
 accepted:     Accepted
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    false
@@ -48,5 +48,5 @@ Programs are not backed up but a list of installed programs (package names) is b
 It is extremely important that you test your backups from time to time. You can do this by restoring them to an empty partition and then running `diff` command between the backup restored partition and real partition.
 
 
-  [1]: https://askubuntu.com/questions/917562/backup-linux-configuration-scripts-and-documents-to-gmail/922493#922493
+  [1]: {% post_url 2017-06-06-Backup-Linux-configuration,-scripts-and-documents-to-Gmail %}
   [2]: https://en.wikipedia.org/wiki/Backup_rotation_scheme

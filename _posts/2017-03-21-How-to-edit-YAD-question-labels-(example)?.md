@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        2,436
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -92,5 +92,5 @@ done # End of while loop
 ```
 
 
-  [1]: https://askubuntu.com/questions/894888/bash-template-to-use-zenity-or-yad-to-insert-edit-delete-records-in-a-file
+  [1]: {% post_url 2017-03-25-Bash-template-to-use-zenity-(or-yad)-to-insert-∕-edit-∕-delete-records-in-a-file-or-database %}
   [2]: https://i.stack.imgur.com/vAWT6.png

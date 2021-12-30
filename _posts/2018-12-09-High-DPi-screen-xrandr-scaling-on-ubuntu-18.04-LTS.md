@@ -11,7 +11,7 @@ votes:        2
 favorites:    
 views:        3,570
 accepted:     
-uploaded:     2021-12-28 20:39:21
+uploaded:     2021-12-29 16:51:17
 toc:          false
 navigation:   false
 clipboard:    true
@@ -78,4 +78,4 @@ You can also have it run in your [startup applications][1] by adding an entry co
 
 Startup Applications are run **after** you sign on.
 
-  [1]: https://askubuntu.com/questions/826887/how-can-i-display-text-from-a-file-automatically-after-powering-up-my-computer/826898#826898
+  [1]: {% post_url 2016-09-19-How-can-I-display-text-from-a-file-automatically-after-powering-up-my-computer,-in-text-editor-or-terminal? %}

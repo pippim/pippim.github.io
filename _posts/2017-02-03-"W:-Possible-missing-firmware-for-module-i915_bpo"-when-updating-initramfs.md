@@ -11,7 +11,7 @@ votes:        25
 favorites:    
 views:        184,671
 accepted:     
-uploaded:     2021-12-28 19:30:13
+uploaded:     2021-12-29 16:51:17
 toc:          true
 navigation:   true
 clipboard:    false
@@ -367,7 +367,7 @@ sudo apt upgrade
   [2]: https://i.stack.imgur.com/PzEm6.png
   [3]: https://01.org/linuxgraphics/downloads/firmware
   [4]: https://i.stack.imgur.com/BFYtB.png
-  [5]: https://askubuntu.com/questions/1039235/how-to-make-locate-output-look-like-ll-or-ls-la-but-nicer/1039236#1039236
+  [5]: {% post_url 2018-05-23-How-to-make-locate-output-look-like-`ll`-or-`ls--la`-but-nicer? %}
   [6]: https://bugs.launchpad.net/ubuntu/+source/linux-firmware/+bug/1611124
   [7]: https://i.stack.imgur.com/9lQBJ.png
   [8]: https://01.org/linuxgraphics/downloads/kabylake-guc-9.14
