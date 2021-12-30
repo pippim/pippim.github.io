@@ -13,11 +13,11 @@ They are posted on Stack Exchange websites
 About 5% of the posts you see here are questions and not answers.
 Hopefully, reviewing these questions will help you to write your own when you need to.
 
-## Top Ten Answers
+## Top Ten Answers by <mark>Votes</mark>
 
 {% include posts_by_vote.html %}
 
-## Posts by Tag
+## Posts grouped by <mark>Tag</mark>
 
 There are about 3,633 tags used by Pippim Answers.
 To make accessing them more managable, tags are nested by letter,
