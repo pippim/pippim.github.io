@@ -74,17 +74,9 @@ from random import randint
 
     Create list of tag substitutions, eg windows-subsystem-for-linux becomes wsl
 
-    From: https://jekyllrb.com/docs/liquid/tags/#linking-to-posts
-    [Name of Link]({% post_url 2010-07-21-name-of-post %})
+    Option to separate posts by year so GitHubs limit of 1,000 files isn't hit.
+    Requires OS module to create directory if it doesn't exist. Grab from mserve.    
 
-    From: https://stackoverflow.com/a/41213193/6929343
-    {{ site.baseurl }}{% link _posts/2016-07-26-name-of-post.md %}
-
-    From: https://jekyllrb.com/docs/liquid/tags/#link
-
-            
-    It's substituting characters in file name
-    
     ADD THESE NOTES TO NEW SHELL SCRIPT:
     
     After creating your personal access token:
@@ -412,6 +404,7 @@ def create_speed_search():
     for r in rows:
         # Build base_fn: "9999-99-99-Title-of-my-blog.md"
         base_fn, blog_fn = create_blog_filename(r)
+        # post_url see: https://jekyllrb.com/docs/liquid/tags/#link
         ss_post_url = "{% post_url " + base_fn + " %}"
         ss_url = r[URL]
         ss_type = r[TYPE]
@@ -1751,9 +1744,9 @@ def gen_top_posts():
     # Read bottom 10
     for i in range(len(top_posts) - 1, len(top_posts) - 11, -1):
         vote, title, our_url = top_posts[i]
-        # print('our_url:', our_url, 'vote:', vote)
+        #print('our_url:', our_url)  # Debugging stuff
         html += html_post_line(str(vote), our_url, title,
-                               url_fixed=True, mark_tag=True)
+                               post_url_done=True, mark_tag=True)
 
     html_write_top_posts(html)
 
@@ -2316,7 +2309,8 @@ def html_tag_line(start, end, count, details=None):
     return t_line
 
 
-def html_post_line(tag_name, post_filename, title, url_fixed=False, mark_tag=False):
+def html_post_line(tag_name, post_filename, title,
+                   post_url_done=False, mark_tag=False):
     """ Build post reference line
         See: https://jekyllrb.com/docs/liquid/tags/#link
     """
@@ -2326,12 +2320,12 @@ def html_post_line(tag_name, post_filename, title, url_fixed=False, mark_tag=Fal
         opt_tag = "<mark>" + tag_name + "</mark>"
 
     # Convert post_filename to html filename
-    if url_fixed:
-        html_filename = "(" + post_filename + ")"
+    if post_url_done:
+        html_href = post_filename
     else:
-        html_filename = "({% post_url " + post_filename + " %})"
-    title = "[" + title + "]"
-    return opt_tag + title + html_filename + '<br />\n'
+        html_href = "{% post_url " + post_filename + " %}"
+    title = title.replace('<', "&lt;").replace('>', "&gt;")
+    return opt_tag + '<a href="' + html_href + '">' + title + '</a><br />\n'
 
 
 def html_details_start(summary):
