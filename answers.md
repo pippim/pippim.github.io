@@ -19,17 +19,6 @@ Hopefully, reviewing these questions will help you to write your own when you ne
 
 ## Posts grouped by <mark>Tag</mark>
 
-Test post_url with name and no < p >: 
-
-[Olla 1]({% post_url 2016-08-28-System-unresponsive-if-left-unattended-for-a-few-days %})<br />
-[Olla 2]({% post_url 2016-08-28-System-unresponsive-if-left-unattended-for-a-few-days %})<br />
-[Olla 3]({% post_url 2016-08-28-System-unresponsive-if-left-unattended-for-a-few-days %})<br />
-
-Test post_url inside html:
-
-<a href="{% post_url 2016-08-28-System-unresponsive-if-left-unattended-for-a-few-days %}">Simple title</a><br />
-
-
 There are about 3,600 tags used by Pippim Answers.
 To make accessing them more managable, tags are nested by letter,
 then by tag, then the posts are listed in small grouups of about 15.
