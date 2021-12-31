@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why does Ubuntu enable TRIM for certain brands only?
+title:        >
+    Why does Ubuntu enable TRIM for certain brands only?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1026242
 type:         Answer
 tags:         ssd trim
-created_date: 2018-04-18 23:41:03
-edit_date:    2018-04-19 10:55:10
-votes:        14
+created_date: !!str "2018-04-18 23:41:03"
+edit_date:    !!str "2018-04-19 10:55:10"
+votes:        !!str "14"
 favorites:    
-views:        2,985
+views:        !!str "2,985"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

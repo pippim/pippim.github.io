@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Commandline shortcut for current directory similar to ~ for home directory?
+title:        >
+    Commandline shortcut for current directory similar to ~ for home directory?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840899
 type:         Answer
 tags:         bash command-line shortcuts grub
-created_date: 2016-10-23 16:47:53
-edit_date:    2020-06-12 14:37:07
-votes:        4
+created_date: !!str "2016-10-23 16:47:53"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "4"
 favorites:    
-views:        70,254
+views:        !!str "70,254"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

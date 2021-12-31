@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why my Ubuntu 16.04 can't connect to wired when I change kernel to 4.2
+title:        >
+    Why my Ubuntu 16.04 can't connect to wired when I change kernel to 4.2
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/917429
 type:         Answer
 tags:         networking kernel ethernet
-created_date: 2017-05-21 14:37:37
-edit_date:    2017-05-22 15:14:28
-votes:        2
+created_date: !!str "2017-05-21 14:37:37"
+edit_date:    !!str "2017-05-22 15:14:28"
+votes:        !!str "2"
 favorites:    
-views:        1,330
+views:        !!str "1,330"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

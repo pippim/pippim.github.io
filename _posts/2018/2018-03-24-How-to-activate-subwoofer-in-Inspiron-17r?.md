@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to activate subwoofer in Inspiron 17r?
+title:        >
+    How to activate subwoofer in Inspiron 17r?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018740
 type:         Answer
 tags:         sound dell inspiron
-created_date: 2018-03-24 01:21:10
-edit_date:    2018-04-01 23:07:51
-votes:        2
+created_date: !!str "2018-03-24 01:21:10"
+edit_date:    !!str "2018-04-01 23:07:51"
+votes:        !!str "2"
 favorites:    
-views:        12,411
+views:        !!str "12,411"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

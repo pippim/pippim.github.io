@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Where to find ∕usr∕include∕X11∕extensions∕Xcomposite.h
+title:        >
+    Where to find ∕usr∕include∕X11∕extensions∕Xcomposite.h
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/68011128
 type:         Question
 tags:         c linux screenshot x11
-created_date: 2021-06-16 23:26:25
-edit_date:    
-votes:        0
+created_date: !!str "2021-06-16 23:26:25"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        96
+views:        !!str "96"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

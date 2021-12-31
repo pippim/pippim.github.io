@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to install 2 Graphics drivers, and have Ubuntu detect and load which one (without conflict)
+title:        >
+    How to install 2 Graphics drivers, and have Ubuntu detect and load which one (without conflict)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064740
 type:         Answer
 tags:         nvidia graphics amd-graphics vga
-created_date: 2018-08-12 18:34:19
-edit_date:    
-votes:        2
+created_date: !!str "2018-08-12 18:34:19"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        218
+views:        !!str "218"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

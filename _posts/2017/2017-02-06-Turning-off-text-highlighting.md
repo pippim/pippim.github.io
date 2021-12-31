@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Turning off text highlighting
+title:        >
+    Turning off text highlighting
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/880269
 type:         Answer
 tags:         bash
-created_date: 2017-02-06 02:16:28
-edit_date:    
-votes:        2
+created_date: !!str "2017-02-06 02:16:28"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        5,562
+views:        !!str "5,562"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

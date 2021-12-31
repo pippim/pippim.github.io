@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        "W: Possible missing firmware for module i915_bpo" when updating initramfs
+title:        >
+    "W: Possible missing firmware for module i915_bpo" when updating initramfs
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/879250
 type:         Answer
 tags:         drivers 16.04 intel-graphics initramfs i915
-created_date: 2017-02-03 01:12:04
-edit_date:    2020-06-12 14:37:07
-votes:        25
+created_date: !!str "2017-02-03 01:12:04"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "25"
 favorites:    
-views:        184,671
+views:        !!str "184,671"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I identify an empty window?
+title:        >
+    How can I identify an empty window?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/832523
 type:         Answer
 tags:         unity window conky
-created_date: 2016-10-03 10:45:57
-edit_date:    
-votes:        4
+created_date: !!str "2016-10-03 10:45:57"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        248
+views:        !!str "248"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

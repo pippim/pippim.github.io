@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Automatically adjust display brightness based on sunrise and sunset
+title:        >
+    Automatically adjust display brightness based on sunrise and sunset
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/894470
 type:         Answer
 tags:         display laptop brightness backlight eyesome conky
-created_date: 2017-03-19 01:10:27
-edit_date:    2019-02-07 01:43:56
-votes:        8
+created_date: !!str "2017-03-19 01:10:27"
+edit_date:    !!str "2019-02-07 01:43:56"
+votes:        !!str "8"
 favorites:    
-views:        5,160
+views:        !!str "5,160"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

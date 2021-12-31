@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Ubuntu fails to "Suspend"
+title:        >
+    Ubuntu fails to "Suspend"
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/822337
 type:         Answer
 tags:         14.04 suspend
-created_date: 2016-09-08 01:34:48
-edit_date:    2020-02-08 18:37:04
-votes:        2
+created_date: !!str "2016-09-08 01:34:48"
+edit_date:    !!str "2020-02-08 18:37:04"
+votes:        !!str "2"
 favorites:    
-views:        1,386
+views:        !!str "1,386"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

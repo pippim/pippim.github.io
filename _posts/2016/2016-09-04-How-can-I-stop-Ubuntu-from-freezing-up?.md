@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I stop Ubuntu from freezing up?
+title:        >
+    How can I stop Ubuntu from freezing up?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/820657
 type:         Answer
 tags:         16.04 package-management updates
-created_date: 2016-09-04 00:44:38
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2016-09-04 00:44:38"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        703
+views:        !!str "703"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

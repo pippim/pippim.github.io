@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        xdotool how to select desktop send F5 and return?
+title:        >
+    xdotool how to select desktop send F5 and return?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1147294
 type:         Question
 tags:         command-line bash gnome-shell window-manager xdotool
-created_date: 2019-05-30 02:56:14
-edit_date:    2019-05-31 01:04:55
-votes:        5
+created_date: !!str "2019-05-30 02:56:14"
+edit_date:    !!str "2019-05-31 01:04:55"
+votes:        !!str "5"
 favorites:    1
-views:        1,854
+views:        !!str "1,854"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

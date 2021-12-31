@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Install DPKG package without updating and upgrating the whole system
+title:        >
+    Install DPKG package without updating and upgrating the whole system
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1168622
 type:         Answer
 tags:         apt package-management upgrade updates
-created_date: 2019-08-26 12:30:29
-edit_date:    
-votes:        2
+created_date: !!str "2019-08-26 12:30:29"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        219
+views:        !!str "219"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Any file manager that can XOR two home folders?
+title:        >
+    Any file manager that can XOR two home folders?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/966176
 type:         Question
 tags:         dual-boot software-recommendation windows-subsystem-for-linux
-created_date: 2017-10-18 23:45:08
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2017-10-18 23:45:08"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        360
+views:        !!str "360"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

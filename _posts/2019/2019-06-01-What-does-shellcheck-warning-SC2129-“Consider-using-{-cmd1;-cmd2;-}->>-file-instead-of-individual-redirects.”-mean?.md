@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What does shellcheck warning SC2129 “Consider using { cmd1; cmd2; } >> file instead of individual redirects.” mean?
+title:        >
+    What does shellcheck warning SC2129 “Consider using { cmd1; cmd2; } >> file instead of individual redirects.” mean?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1147775
 type:         Question
 tags:         bash debugging output
-created_date: 2019-06-01 01:43:37
-edit_date:    2020-06-12 14:37:07
-votes:        6
+created_date: !!str "2019-06-01 01:43:37"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "6"
 favorites:    
-views:        716
+views:        !!str "716"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

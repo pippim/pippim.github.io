@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to create a directory within your home directory - Linux
+title:        >
+    How to create a directory within your home directory - Linux
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/846614
 type:         Answer
 tags:         home-directory
-created_date: 2016-11-07 12:47:52
-edit_date:    2016-11-14 21:05:32
-votes:        4
+created_date: !!str "2016-11-07 12:47:52"
+edit_date:    !!str "2016-11-14 21:05:32"
+votes:        !!str "4"
 favorites:    
-views:        17,561
+views:        !!str "17,561"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

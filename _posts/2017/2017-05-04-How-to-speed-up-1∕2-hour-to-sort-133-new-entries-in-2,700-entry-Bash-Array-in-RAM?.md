@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to speed up 1∕2 hour to sort 133 new entries in 2,700 entry Bash Array in RAM?
+title:        >
+    How to speed up 1∕2 hour to sort 133 new entries in 2,700 entry Bash Array in RAM?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43772024
 type:         Answer
 tags:         arrays bash performance yad
-created_date: 2017-05-04 00:36:14
-edit_date:    2020-06-20 09:12:55
-votes:        2
+created_date: !!str "2017-05-04 00:36:14"
+edit_date:    !!str "2020-06-20 09:12:55"
+votes:        !!str "2"
 favorites:    
-views:        46
+views:        !!str "46"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

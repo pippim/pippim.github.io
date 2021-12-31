@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why is internet upload so high when I don't actually upload much?
+title:        >
+    Why is internet upload so high when I don't actually upload much?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/952431
 type:         Answer
 tags:         networking firefox google-chrome monitoring bandwidth vnstat conky
-created_date: 2017-09-03 16:51:09
-edit_date:    2018-01-07 20:55:09
-votes:        2
+created_date: !!str "2017-09-03 16:51:09"
+edit_date:    !!str "2018-01-07 20:55:09"
+votes:        !!str "2"
 favorites:    
-views:        3,479
+views:        !!str "3,479"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

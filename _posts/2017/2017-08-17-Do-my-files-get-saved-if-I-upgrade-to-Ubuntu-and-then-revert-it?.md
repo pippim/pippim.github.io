@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Do my files get saved if I upgrade to Ubuntu and then revert it?
+title:        >
+    Do my files get saved if I upgrade to Ubuntu and then revert it?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/946932
 type:         Answer
 tags:         upgrade
-created_date: 2017-08-17 00:40:06
-edit_date:    2017-08-17 15:21:21
-votes:        2
+created_date: !!str "2017-08-17 00:40:06"
+edit_date:    !!str "2017-08-17 15:21:21"
+votes:        !!str "2"
 favorites:    
-views:        93
+views:        !!str "93"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

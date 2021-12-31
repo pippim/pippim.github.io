@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Log-in screen background (on Ubuntu 18.04) is not changing though I made necessary changes in necessary files
+title:        >
+    Log-in screen background (on Ubuntu 18.04) is not changing though I made necessary changes in necessary files
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1155300
 type:         Answer
 tags:         login-screen
-created_date: 2019-07-01 20:25:32
-edit_date:    
-votes:        1
+created_date: !!str "2019-07-01 20:25:32"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        199
+views:        !!str "199"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

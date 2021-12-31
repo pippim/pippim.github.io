@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Half of bash history is missing
+title:        >
+    Half of bash history is missing
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/885531
 type:         Question
 tags:         command-line bash bash-history
-created_date: 2017-02-20 22:49:16
-edit_date:    2017-04-13 12:24:42
-votes:        11
+created_date: !!str "2017-02-20 22:49:16"
+edit_date:    !!str "2017-04-13 12:24:42"
+votes:        !!str "11"
 favorites:    9
-views:        22,315
+views:        !!str "22,315"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

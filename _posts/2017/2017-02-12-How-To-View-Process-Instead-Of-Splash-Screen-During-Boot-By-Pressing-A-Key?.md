@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How To View Process Instead Of Splash Screen During Boot By Pressing A Key?
+title:        >
+    How To View Process Instead Of Splash Screen During Boot By Pressing A Key?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/882472
 type:         Answer
 tags:         boot 16.04 keyboard
-created_date: 2017-02-12 07:48:37
-edit_date:    
-votes:        3
+created_date: !!str "2017-02-12 07:48:37"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        975
+views:        !!str "975"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

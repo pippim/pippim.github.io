@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How NVIDIA On-Demand option works in NVIDIA X Server Settings?
+title:        >
+    How NVIDIA On-Demand option works in NVIDIA X Server Settings?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1202902
 type:         Answer
 tags:         nvidia graphics hybrid-graphics nvidia-prime
-created_date: 2020-01-14 12:35:15
-edit_date:    2020-06-12 14:37:07
-votes:        12
+created_date: !!str "2020-01-14 12:35:15"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "12"
 favorites:    
-views:        34,410
+views:        !!str "34,410"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

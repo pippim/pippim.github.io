@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Bluetooth in Toshiba Satellite C845
+title:        >
+    Bluetooth in Toshiba Satellite C845
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/861641
 type:         Answer
 tags:         drivers bluetooth 15.10 toshiba-satellite
-created_date: 2016-12-17 12:25:38
-edit_date:    2017-04-13 12:23:41
-votes:        3
+created_date: !!str "2016-12-17 12:25:38"
+edit_date:    !!str "2017-04-13 12:23:41"
+votes:        !!str "3"
 favorites:    
-views:        1,406
+views:        !!str "1,406"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

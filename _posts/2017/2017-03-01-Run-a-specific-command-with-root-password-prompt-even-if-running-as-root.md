@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Run a specific command with root password prompt even if running as root
+title:        >
+    Run a specific command with root password prompt even if running as root
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/888467
 type:         Answer
 tags:         command-line password root rm
-created_date: 2017-03-01 12:00:12
-edit_date:    2017-04-13 12:23:52
-votes:        8
+created_date: !!str "2017-03-01 12:00:12"
+edit_date:    !!str "2017-04-13 12:23:52"
+votes:        !!str "8"
 favorites:    
-views:        1,815
+views:        !!str "1,815"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

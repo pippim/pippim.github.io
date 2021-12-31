@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        New installation of Windows 10 and Ubuntu from Windows Store error
+title:        >
+    New installation of Windows 10 and Ubuntu from Windows Store error
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/966214
 type:         Answer
 tags:         windows-subsystem-for-linux
-created_date: 2017-10-19 03:15:06
-edit_date:    2019-10-02 17:55:43
-votes:        6
+created_date: !!str "2017-10-19 03:15:06"
+edit_date:    !!str "2019-10-02 17:55:43"
+votes:        !!str "6"
 favorites:    
-views:        96,857
+views:        !!str "96,857"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

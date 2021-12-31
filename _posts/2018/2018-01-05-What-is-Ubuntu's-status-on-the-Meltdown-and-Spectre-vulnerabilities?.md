@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is Ubuntu's status on the Meltdown and Spectre vulnerabilities?
+title:        >
+    What is Ubuntu's status on the Meltdown and Spectre vulnerabilities?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/992459
 type:         Answer
 tags:         security
-created_date: 2018-01-05 01:44:43
-edit_date:    2018-01-21 18:50:22
-votes:        2
+created_date: !!str "2018-01-05 01:44:43"
+edit_date:    !!str "2018-01-21 18:50:22"
+votes:        !!str "2"
 favorites:    
-views:        28,622
+views:        !!str "28,622"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Audio starts playing 3-5 seconds after video does
+title:        >
+    Audio starts playing 3-5 seconds after video does
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1089961
 type:         Answer
 tags:         sound multimedia displayport
-created_date: 2018-11-04 14:31:09
-edit_date:    2020-06-12 14:37:07
-votes:        5
+created_date: !!str "2018-11-04 14:31:09"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "5"
 favorites:    
-views:        2,978
+views:        !!str "2,978"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

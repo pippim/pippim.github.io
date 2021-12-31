@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Installing Intel Graphics in 18.04 LTS
+title:        >
+    Installing Intel Graphics in 18.04 LTS
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1037926
 type:         Answer
 tags:         intel-graphics 18.04
-created_date: 2018-05-19 01:05:31
-edit_date:    2018-07-22 14:50:53
-votes:        3
+created_date: !!str "2018-05-19 01:05:31"
+edit_date:    !!str "2018-07-22 14:50:53"
+votes:        !!str "3"
 favorites:    
-views:        47,641
+views:        !!str "47,641"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

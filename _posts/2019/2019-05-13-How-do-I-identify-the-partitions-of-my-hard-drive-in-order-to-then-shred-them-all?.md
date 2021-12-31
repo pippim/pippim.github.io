@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I identify the partitions of my hard drive in order to then shred them all?
+title:        >
+    How do I identify the partitions of my hard drive in order to then shred them all?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1142845
 type:         Answer
 tags:         partitioning hard-drive format
-created_date: 2019-05-13 10:45:35
-edit_date:    
-votes:        2
+created_date: !!str "2019-05-13 10:45:35"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        2,855
+views:        !!str "2,855"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

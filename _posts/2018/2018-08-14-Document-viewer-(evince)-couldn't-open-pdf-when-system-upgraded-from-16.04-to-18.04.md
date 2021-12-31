@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Document viewer (evince) couldn't open pdf when system upgraded from 16.04 to 18.04
+title:        >
+    Document viewer (evince) couldn't open pdf when system upgraded from 16.04 to 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1065428
 type:         Answer
 tags:         upgrade 18.04 pdf evince
-created_date: 2018-08-14 22:34:40
-edit_date:    
-votes:        5
+created_date: !!str "2018-08-14 22:34:40"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        4,655
+views:        !!str "4,655"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

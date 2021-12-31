@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Laptop wakes up seconds after suspend
+title:        >
+    Laptop wakes up seconds after suspend
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1307811
 type:         Answer
 tags:         suspend wakeup standby
-created_date: 2021-01-14 00:24:34
-edit_date:    
-votes:        1
+created_date: !!str "2021-01-14 00:24:34"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        933
+views:        !!str "933"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        In what order does the shell execute commands and stream redirection?
+title:        >
+    In what order does the shell execute commands and stream redirection?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/861522
 type:         Answer
 tags:         command-line bash redirect
-created_date: 2016-12-17 03:18:28
-edit_date:    
-votes:        3
+created_date: !!str "2016-12-17 03:18:28"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        5,548
+views:        !!str "5,548"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

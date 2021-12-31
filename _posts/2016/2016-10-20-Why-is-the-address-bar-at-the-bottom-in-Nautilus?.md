@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why is the address bar at the bottom in Nautilus?
+title:        >
+    Why is the address bar at the bottom in Nautilus?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/839578
 type:         Answer
 tags:         nautilus samba gui
-created_date: 2016-10-20 10:20:27
-edit_date:    2016-10-20 10:39:48
-votes:        2
+created_date: !!str "2016-10-20 10:20:27"
+edit_date:    !!str "2016-10-20 10:39:48"
+votes:        !!str "2"
 favorites:    
-views:        85
+views:        !!str "85"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Don't see new kernel after upgrade
+title:        >
+    Don't see new kernel after upgrade
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1037217
 type:         Answer
 tags:         grub2 upgrade kernel
-created_date: 2018-05-17 04:06:39
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2018-05-17 04:06:39"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        709
+views:        !!str "709"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

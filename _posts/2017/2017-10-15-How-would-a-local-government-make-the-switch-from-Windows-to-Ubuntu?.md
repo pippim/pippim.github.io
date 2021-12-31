@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How would a local government make the switch from Windows to Ubuntu?
+title:        >
+    How would a local government make the switch from Windows to Ubuntu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/965154
 type:         Answer
 tags:         networking dual-boot windows migration
-created_date: 2017-10-15 16:22:55
-edit_date:    2017-10-15 16:28:30
-votes:        9
+created_date: !!str "2017-10-15 16:22:55"
+edit_date:    !!str "2017-10-15 16:28:30"
+votes:        !!str "9"
 favorites:    
-views:        10,354
+views:        !!str "10,354"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

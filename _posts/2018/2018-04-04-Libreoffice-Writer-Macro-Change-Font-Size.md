@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Libreoffice Writer Macro Change Font Size
+title:        >
+    Libreoffice Writer Macro Change Font Size
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/49640951
 type:         Question
 tags:         basic libreoffice-basic
-created_date: 2018-04-04 00:29:34
-edit_date:    2018-04-06 12:20:11
-votes:        1
+created_date: !!str "2018-04-04 00:29:34"
+edit_date:    !!str "2018-04-06 12:20:11"
+votes:        !!str "1"
 favorites:    
-views:        2,100
+views:        !!str "2,100"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

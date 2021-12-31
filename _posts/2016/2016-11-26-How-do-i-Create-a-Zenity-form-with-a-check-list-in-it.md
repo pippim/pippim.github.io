@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do i Create a Zenity form with a check list in it
+title:        >
+    How do i Create a Zenity form with a check list in it
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/853717
 type:         Answer
 tags:         16.04 bash zenity
-created_date: 2016-11-26 02:07:07
-edit_date:    2017-04-13 12:37:16
-votes:        1
+created_date: !!str "2016-11-26 02:07:07"
+edit_date:    !!str "2017-04-13 12:37:16"
+votes:        !!str "1"
 favorites:    
-views:        10,860
+views:        !!str "10,860"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

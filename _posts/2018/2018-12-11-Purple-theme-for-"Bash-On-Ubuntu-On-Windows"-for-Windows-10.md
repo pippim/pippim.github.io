@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Purple theme for "Bash On Ubuntu On Windows" for Windows 10
+title:        >
+    Purple theme for "Bash On Ubuntu On Windows" for Windows 10
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1099927
 type:         Answer
 tags:         command-line themes windows-subsystem-for-linux
-created_date: 2018-12-11 02:01:41
-edit_date:    
-votes:        2
+created_date: !!str "2018-12-11 02:01:41"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        10,360
+views:        !!str "10,360"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

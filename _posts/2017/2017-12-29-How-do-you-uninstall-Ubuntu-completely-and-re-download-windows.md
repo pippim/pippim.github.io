@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do you uninstall Ubuntu completely and re download windows
+title:        >
+    How do you uninstall Ubuntu completely and re download windows
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/990521
 type:         Answer
 tags:         system-installation windows uninstall ubuntu-gnome
-created_date: 2017-12-29 11:57:20
-edit_date:    
-votes:        3
+created_date: !!str "2017-12-29 11:57:20"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        168
+views:        !!str "168"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

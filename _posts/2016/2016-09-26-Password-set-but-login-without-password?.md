@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Password set but login without password?
+title:        >
+    Password set but login without password?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/829799
 type:         Answer
 tags:         16.04 password
-created_date: 2016-09-26 10:24:15
-edit_date:    2017-04-13 12:25:12
-votes:        10
+created_date: !!str "2016-09-26 10:24:15"
+edit_date:    !!str "2017-04-13 12:25:12"
+votes:        !!str "10"
 favorites:    
-views:        14,438
+views:        !!str "14,438"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

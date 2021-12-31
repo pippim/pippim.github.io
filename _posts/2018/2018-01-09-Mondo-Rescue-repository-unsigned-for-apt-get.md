@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Mondo Rescue repository unsigned for apt-get
+title:        >
+    Mondo Rescue repository unsigned for apt-get
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/993881
 type:         Answer
 tags:         14.04 apt 16.04 backup ftp
-created_date: 2018-01-09 12:14:43
-edit_date:    2018-01-10 00:33:49
-votes:        2
+created_date: !!str "2018-01-09 12:14:43"
+edit_date:    !!str "2018-01-10 00:33:49"
+votes:        !!str "2"
 favorites:    
-views:        5,985
+views:        !!str "5,985"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    false

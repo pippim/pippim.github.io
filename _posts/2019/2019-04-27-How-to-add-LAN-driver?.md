@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to add LAN driver?
+title:        >
+    How to add LAN driver?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138726
 type:         Answer
 tags:         internet ethernet lan 19.04
-created_date: 2019-04-27 21:05:35
-edit_date:    
-votes:        1
+created_date: !!str "2019-04-27 21:05:35"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        2,579
+views:        !!str "2,579"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

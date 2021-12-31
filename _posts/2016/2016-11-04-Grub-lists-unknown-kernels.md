@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Grub lists unknown kernels
+title:        >
+    Grub lists unknown kernels
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/845620
 type:         Answer
 tags:         grub2
-created_date: 2016-11-04 19:43:00
-edit_date:    
-votes:        2
+created_date: !!str "2016-11-04 19:43:00"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        255
+views:        !!str "255"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

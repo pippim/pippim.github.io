@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I limit page cache∕buffer size
+title:        >
+    How can I limit page cache∕buffer size
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1102222
 type:         Answer
 tags:         ram swap rsync 18.10
-created_date: 2018-12-16 00:59:36
-edit_date:    
-votes:        2
+created_date: !!str "2018-12-16 00:59:36"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        1,203
+views:        !!str "1,203"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

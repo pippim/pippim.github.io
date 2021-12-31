@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        When I close the lid of my laptop, the Wifi should not disconnect automatically
+title:        >
+    When I close the lid of my laptop, the Wifi should not disconnect automatically
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/830562
 type:         Answer
 tags:         wireless 16.04 lid
-created_date: 2016-09-28 01:37:15
-edit_date:    2016-09-28 02:12:25
-votes:        3
+created_date: !!str "2016-09-28 01:37:15"
+edit_date:    !!str "2016-09-28 02:12:25"
+votes:        !!str "3"
 favorites:    
-views:        6,533
+views:        !!str "6,533"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

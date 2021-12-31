@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Samsung SSD 850 Pro slow speed
+title:        >
+    Samsung SSD 850 Pro slow speed
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/939990
 type:         Answer
 tags:         partitioning ssd performance
-created_date: 2017-07-26 13:57:39
-edit_date:    2017-07-26 14:33:42
-votes:        3
+created_date: !!str "2017-07-26 13:57:39"
+edit_date:    !!str "2017-07-26 14:33:42"
+votes:        !!str "3"
 favorites:    
-views:        1,194
+views:        !!str "1,194"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

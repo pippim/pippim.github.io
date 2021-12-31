@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Purple Screen of Death w∕New AMD Card
+title:        >
+    Purple Screen of Death w∕New AMD Card
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/995572
 type:         Answer
 tags:         17.10 radeon amd-graphics vulkan grub
-created_date: 2018-01-13 18:16:51
-edit_date:    
-votes:        3
+created_date: !!str "2018-01-13 18:16:51"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        1,161
+views:        !!str "1,161"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Google Chrome Cleanup Tool for Ubuntu (Linux) like Windows?
+title:        >
+    Google Chrome Cleanup Tool for Ubuntu (Linux) like Windows?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/858018
 type:         Answer
 tags:         google-chrome
-created_date: 2016-12-07 12:00:31
-edit_date:    2016-12-07 12:37:25
-votes:        0
+created_date: !!str "2016-12-07 12:00:31"
+edit_date:    !!str "2016-12-07 12:37:25"
+votes:        !!str "0"
 favorites:    
-views:        4,628
+views:        !!str "4,628"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Setting gmail as default for sending files via email
+title:        >
+    Setting gmail as default for sending files via email
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/936540
 type:         Answer
 tags:         libreoffice email thunderbird empathy gmail
-created_date: 2017-07-15 22:42:06
-edit_date:    2017-07-16 17:39:31
-votes:        3
+created_date: !!str "2017-07-15 22:42:06"
+edit_date:    !!str "2017-07-16 17:39:31"
+votes:        !!str "3"
 favorites:    
-views:        2,092
+views:        !!str "2,092"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

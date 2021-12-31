@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to automate the input of a password, in a custom batch file?
+title:        >
+    How to automate the input of a password, in a custom batch file?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1189182
 type:         Answer
 tags:         command-line bash scripts
-created_date: 2019-11-16 01:42:38
-edit_date:    2019-11-16 05:28:28
-votes:        1
+created_date: !!str "2019-11-16 01:42:38"
+edit_date:    !!str "2019-11-16 05:28:28"
+votes:        !!str "1"
 favorites:    
-views:        2,885
+views:        !!str "2,885"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

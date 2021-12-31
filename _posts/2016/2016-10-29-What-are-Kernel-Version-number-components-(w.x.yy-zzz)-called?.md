@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What are Kernel Version number components (w.x.yy-zzz) called?
+title:        >
+    What are Kernel Version number components (w.x.yy-zzz) called?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/843198
 type:         Answer
 tags:         kernel
-created_date: 2016-10-29 14:51:48
-edit_date:    2017-04-13 12:23:52
-votes:        6
+created_date: !!str "2016-10-29 14:51:48"
+edit_date:    !!str "2017-04-13 12:23:52"
+votes:        !!str "6"
 favorites:    
-views:        29,999
+views:        !!str "29,999"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

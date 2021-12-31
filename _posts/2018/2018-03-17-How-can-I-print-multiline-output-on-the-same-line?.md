@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I print multiline output on the same line?
+title:        >
+    How can I print multiline output on the same line?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1016826
 type:         Answer
 tags:         command-line scripts text-processing
-created_date: 2018-03-17 19:24:43
-edit_date:    2018-03-17 19:31:22
-votes:        4
+created_date: !!str "2018-03-17 19:24:43"
+edit_date:    !!str "2018-03-17 19:31:22"
+votes:        !!str "4"
 favorites:    
-views:        65,811
+views:        !!str "65,811"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

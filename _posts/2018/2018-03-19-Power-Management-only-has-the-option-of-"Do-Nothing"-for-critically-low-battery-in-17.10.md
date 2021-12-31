@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Power Management only has the option of "Do Nothing" for critically low battery in 17.10
+title:        >
+    Power Management only has the option of "Do Nothing" for critically low battery in 17.10
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1017269
 type:         Answer
 tags:         17.10 power-management
-created_date: 2018-03-19 11:08:53
-edit_date:    2018-03-22 00:03:58
-votes:        8
+created_date: !!str "2018-03-19 11:08:53"
+edit_date:    !!str "2018-03-22 00:03:58"
+votes:        !!str "8"
 favorites:    
-views:        2,745
+views:        !!str "2,745"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

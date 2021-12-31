@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        dell-wmi-dkms errors when updating
+title:        >
+    dell-wmi-dkms errors when updating
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/939737
 type:         Answer
 tags:         16.04 wireless dell
-created_date: 2017-07-25 20:22:20
-edit_date:    
-votes:        1
+created_date: !!str "2017-07-25 20:22:20"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        560
+views:        !!str "560"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

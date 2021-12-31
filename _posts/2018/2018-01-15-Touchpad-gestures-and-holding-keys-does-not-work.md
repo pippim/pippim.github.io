@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Touchpad gestures and holding keys does not work
+title:        >
+    Touchpad gestures and holding keys does not work
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/995948
 type:         Answer
 tags:         16.04 keyboard touchpad grub
-created_date: 2018-01-15 00:00:49
-edit_date:    2018-02-11 16:41:20
-votes:        13
+created_date: !!str "2018-01-15 00:00:49"
+edit_date:    !!str "2018-02-11 16:41:20"
+votes:        !!str "13"
 favorites:    
-views:        7,793
+views:        !!str "7,793"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    false

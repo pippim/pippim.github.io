@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Screen turning off when idle even with power settings disabled
+title:        >
+    Screen turning off when idle even with power settings disabled
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1001331
 type:         Answer
 tags:         gnome display 17.10
-created_date: 2018-01-30 12:07:54
-edit_date:    2018-01-31 00:46:37
-votes:        3
+created_date: !!str "2018-01-30 12:07:54"
+edit_date:    !!str "2018-01-31 00:46:37"
+votes:        !!str "3"
 favorites:    
-views:        6,174
+views:        !!str "6,174"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Unable to wake with external keyboard while lid is closed
+title:        >
+    Unable to wake with external keyboard while lid is closed
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1060397
 type:         Answer
 tags:         16.04 suspend hibernate lid
-created_date: 2018-07-28 22:08:57
-edit_date:    
-votes:        2
+created_date: !!str "2018-07-28 22:08:57"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        2,865
+views:        !!str "2,865"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

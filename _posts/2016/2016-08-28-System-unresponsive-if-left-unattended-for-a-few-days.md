@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        System unresponsive if left unattended for a few days
+title:        >
+    System unresponsive if left unattended for a few days
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/817663
 type:         Answer
 tags:         14.04 grub
-created_date: 2016-08-28 04:03:16
-edit_date:    2019-09-08 15:51:53
-votes:        5
+created_date: !!str "2016-08-28 04:03:16"
+edit_date:    !!str "2019-09-08 15:51:53"
+votes:        !!str "5"
 favorites:    
-views:        221
+views:        !!str "221"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

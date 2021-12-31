@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I save terminal output to a file?
+title:        >
+    How do I save terminal output to a file?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1198795
 type:         Answer
 tags:         command-line
-created_date: 2019-12-27 01:38:52
-edit_date:    
-votes:        11
+created_date: !!str "2019-12-27 01:38:52"
+edit_date:    !!str ""
+votes:        !!str "11"
 favorites:    
-views:        2,889,754
+views:        !!str "2,889,754"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Gnome Energy Saving: How to turn of the watch screen?
+title:        >
+    Gnome Energy Saving: How to turn of the watch screen?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1079806
 type:         Answer
 tags:         gnome ubuntu-gnome lock-screen
-created_date: 2018-09-30 20:04:05
-edit_date:    
-votes:        2
+created_date: !!str "2018-09-30 20:04:05"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        547
+views:        !!str "547"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

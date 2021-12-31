@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to edit YAD question labels (example)?
+title:        >
+    How to edit YAD question labels (example)?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/895471
 type:         Answer
 tags:         scripts zenity yad
-created_date: 2017-03-21 23:11:34
-edit_date:    2017-04-13 12:23:38
-votes:        2
+created_date: !!str "2017-03-21 23:11:34"
+edit_date:    !!str "2017-04-13 12:23:38"
+votes:        !!str "2"
 favorites:    
-views:        2,436
+views:        !!str "2,436"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

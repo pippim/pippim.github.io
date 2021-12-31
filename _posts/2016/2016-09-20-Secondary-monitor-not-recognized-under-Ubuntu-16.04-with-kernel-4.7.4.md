@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Secondary monitor not recognized under Ubuntu 16.04 with kernel 4.7.4
+title:        >
+    Secondary monitor not recognized under Ubuntu 16.04 with kernel 4.7.4
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/827197
 type:         Answer
 tags:         16.04 kernel external-monitor grub
-created_date: 2016-09-20 00:48:08
-edit_date:    
-votes:        1
+created_date: !!str "2016-09-20 00:48:08"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        712
+views:        !!str "712"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What's the shell session?
+title:        >
+    What's the shell session?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1026071
 type:         Answer
 tags:         command-line bash tty
-created_date: 2018-04-18 10:13:44
-edit_date:    
-votes:        2
+created_date: !!str "2018-04-18 10:13:44"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        6,713
+views:        !!str "6,713"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

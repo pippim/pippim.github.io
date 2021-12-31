@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        ndiswrapper windows drivers uninstall issue
+title:        >
+    ndiswrapper windows drivers uninstall issue
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160789
 type:         Answer
 tags:         xubuntu uninstall ndiswrapper
-created_date: 2019-07-24 18:44:46
-edit_date:    2019-07-24 18:55:16
-votes:        0
+created_date: !!str "2019-07-24 18:44:46"
+edit_date:    !!str "2019-07-24 18:55:16"
+votes:        !!str "0"
 favorites:    
-views:        140
+views:        !!str "140"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

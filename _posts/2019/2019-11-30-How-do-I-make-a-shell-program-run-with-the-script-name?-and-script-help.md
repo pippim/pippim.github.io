@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I make a shell program run with the script name? and script help
+title:        >
+    How do I make a shell program run with the script name? and script help
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1192784
 type:         Answer
 tags:         bash scripts
-created_date: 2019-11-30 17:38:12
-edit_date:    2019-11-30 18:25:09
-votes:        1
+created_date: !!str "2019-11-30 17:38:12"
+edit_date:    !!str "2019-11-30 18:25:09"
+votes:        !!str "1"
 favorites:    
-views:        120
+views:        !!str "120"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why does my ubuntu 18.04 get stuck on the 'purple' screen after logging in?
+title:        >
+    Why does my ubuntu 18.04 get stuck on the 'purple' screen after logging in?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032200
 type:         Answer
 tags:         boot drivers login login-screen
-created_date: 2018-05-05 02:02:12
-edit_date:    
-votes:        3
+created_date: !!str "2018-05-05 02:02:12"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        7,380
+views:        !!str "7,380"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

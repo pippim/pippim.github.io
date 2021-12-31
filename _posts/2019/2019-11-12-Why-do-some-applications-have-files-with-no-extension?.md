@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why do some applications have files with no extension?
+title:        >
+    Why do some applications have files with no extension?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1188178
 type:         Answer
 tags:         file-format
-created_date: 2019-11-12 14:34:59
-edit_date:    
-votes:        2
+created_date: !!str "2019-11-12 14:34:59"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        7,250
+views:        !!str "7,250"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

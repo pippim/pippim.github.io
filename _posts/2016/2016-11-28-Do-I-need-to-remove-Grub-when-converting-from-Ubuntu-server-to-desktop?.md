@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Do I need to remove Grub when converting from Ubuntu server to desktop?
+title:        >
+    Do I need to remove Grub when converting from Ubuntu server to desktop?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/854716
 type:         Answer
 tags:         16.04 server grub2 system-installation
-created_date: 2016-11-28 22:35:37
-edit_date:    
-votes:        2
+created_date: !!str "2016-11-28 22:35:37"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        62
+views:        !!str "62"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

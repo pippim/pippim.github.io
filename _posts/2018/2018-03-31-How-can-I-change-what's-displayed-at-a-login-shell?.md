@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I change what's displayed at a login shell?
+title:        >
+    How can I change what's displayed at a login shell?
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/434701
 type:         Answer
 tags:         bash login prompt profile
-created_date: 2018-03-31 16:28:12
-edit_date:    
-votes:        3
+created_date: !!str "2018-03-31 16:28:12"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        58,468
+views:        !!str "58,468"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

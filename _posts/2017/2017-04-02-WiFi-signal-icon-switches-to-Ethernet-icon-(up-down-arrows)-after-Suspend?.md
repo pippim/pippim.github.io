@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        WiFi signal icon switches to Ethernet icon (up down arrows) after Suspend?
+title:        >
+    WiFi signal icon switches to Ethernet icon (up down arrows) after Suspend?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/899304
 type:         Answer
 tags:         networking 16.04 wireless suspend ethernet
-created_date: 2017-04-02 00:44:55
-edit_date:    2020-06-12 14:37:07
-votes:        5
+created_date: !!str "2017-04-02 00:44:55"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "5"
 favorites:    
-views:        2,869
+views:        !!str "2,869"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

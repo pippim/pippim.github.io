@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        updatedb : File size limit exceeded (18.04 LTS)
+title:        >
+    updatedb : File size limit exceeded (18.04 LTS)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1298463
 type:         Answer
 tags:         locate updatedb
-created_date: 2020-12-08 12:06:19
-edit_date:    
-votes:        1
+created_date: !!str "2020-12-08 12:06:19"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        330
+views:        !!str "330"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

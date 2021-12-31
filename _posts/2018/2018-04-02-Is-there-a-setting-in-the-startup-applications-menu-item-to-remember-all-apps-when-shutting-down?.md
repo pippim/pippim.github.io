@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is there a setting in the startup applications menu item to remember all apps when shutting down?
+title:        >
+    Is there a setting in the startup applications menu item to remember all apps when shutting down?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021436
 type:         Answer
 tags:         shutdown session
-created_date: 2018-04-02 21:21:59
-edit_date:    2018-04-02 21:27:59
-votes:        2
+created_date: !!str "2018-04-02 21:21:59"
+edit_date:    !!str "2018-04-02 21:27:59"
+votes:        !!str "2"
 favorites:    
-views:        574
+views:        !!str "574"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

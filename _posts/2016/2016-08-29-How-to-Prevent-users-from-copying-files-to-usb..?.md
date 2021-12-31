@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to Prevent users from copying files to usb..?
+title:        >
+    How to Prevent users from copying files to usb..?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/818165
 type:         Answer
 tags:         file-sharing usb-storage copy
-created_date: 2016-08-29 10:40:46
-edit_date:    2017-04-13 12:24:53
-votes:        3
+created_date: !!str "2016-08-29 10:40:46"
+edit_date:    !!str "2017-04-13 12:24:53"
+votes:        !!str "3"
 favorites:    
-views:        1,531
+views:        !!str "1,531"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

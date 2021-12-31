@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        how do you copy a directory and its contents to a new location under a new directory name?
+title:        >
+    how do you copy a directory and its contents to a new location under a new directory name?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/844886
 type:         Answer
 tags:         command-line directory copy cp
-created_date: 2016-11-02 22:34:46
-edit_date:    2016-11-02 23:07:13
-votes:        5
+created_date: !!str "2016-11-02 22:34:46"
+edit_date:    !!str "2016-11-02 23:07:13"
+votes:        !!str "5"
 favorites:    
-views:        464,073
+views:        !!str "464,073"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

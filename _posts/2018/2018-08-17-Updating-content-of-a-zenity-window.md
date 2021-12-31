@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Updating content of a zenity window
+title:        >
+    Updating content of a zenity window
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/51887111
 type:         Answer
 tags:         linux bash shell zenity yad
-created_date: 2018-08-17 01:01:00
-edit_date:    
-votes:        2
+created_date: !!str "2018-08-17 01:01:00"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        4,129
+views:        !!str "4,129"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

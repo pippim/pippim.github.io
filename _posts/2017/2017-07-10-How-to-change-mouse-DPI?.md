@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to change mouse DPI?
+title:        >
+    How to change mouse DPI?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/934636
 type:         Answer
 tags:         14.04 mouse hardware
-created_date: 2017-07-10 02:27:44
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2017-07-10 02:27:44"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        26,865
+views:        !!str "26,865"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

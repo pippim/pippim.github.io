@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Grub terminal after cloning Ubuntu 16.04 from internal SSD to external HDD
+title:        >
+    Grub terminal after cloning Ubuntu 16.04 from internal SSD to external HDD
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1057543
 type:         Answer
 tags:         boot grub2 ssd external-hdd clone
-created_date: 2018-07-19 11:25:33
-edit_date:    
-votes:        0
+created_date: !!str "2018-07-19 11:25:33"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        1,948
+views:        !!str "1,948"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

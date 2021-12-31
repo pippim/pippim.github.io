@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        No sound in Ubuntu 18.04 after rebooting from windows 10
+title:        >
+    No sound in Ubuntu 18.04 after rebooting from windows 10
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032576
 type:         Answer
 tags:         dual-boot sound pulseaudio alsa grub
-created_date: 2018-05-05 23:53:09
-edit_date:    2018-05-12 01:20:28
-votes:        4
+created_date: !!str "2018-05-05 23:53:09"
+edit_date:    !!str "2018-05-12 01:20:28"
+votes:        !!str "4"
 favorites:    
-views:        5,690
+views:        !!str "5,690"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

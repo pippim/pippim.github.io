@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Tkinter text box font size
+title:        >
+    Tkinter text box font size
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/53678471
 type:         Question
 tags:         python tkinter
-created_date: 2018-12-08 00:41:57
-edit_date:    2020-06-20 09:12:55
-votes:        1
+created_date: !!str "2018-12-08 00:41:57"
+edit_date:    !!str "2020-06-20 09:12:55"
+votes:        !!str "1"
 favorites:    
-views:        3,344
+views:        !!str "3,344"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

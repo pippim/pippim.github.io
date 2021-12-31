@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Adding 1 to a variable doesn't work as expected (Bash arithmetic)
+title:        >
+    Adding 1 to a variable doesn't work as expected (Bash arithmetic)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/823649
 type:         Answer
 tags:         bash
-created_date: 2016-09-11 14:38:17
-edit_date:    
-votes:        2
+created_date: !!str "2016-09-11 14:38:17"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        9,151
+views:        !!str "9,151"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I set the row height in Tkinter TreeView?
+title:        >
+    How can I set the row height in Tkinter TreeView?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59530481
 type:         Answer
 tags:         python tkinter treeview hidpi
-created_date: 2019-12-30 11:59:50
-edit_date:    2019-12-30 12:19:51
-votes:        2
+created_date: !!str "2019-12-30 11:59:50"
+edit_date:    !!str "2019-12-30 12:19:51"
+votes:        !!str "2"
 favorites:    
-views:        7,691
+views:        !!str "7,691"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

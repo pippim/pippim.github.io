@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Command not found error in Bash script
+title:        >
+    Command not found error in Bash script
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1126586
 type:         Answer
 tags:         command-line bash scripts
-created_date: 2019-03-18 10:52:18
-edit_date:    2019-03-19 07:34:00
-votes:        4
+created_date: !!str "2019-03-18 10:52:18"
+edit_date:    !!str "2019-03-19 07:34:00"
+votes:        !!str "4"
 favorites:    
-views:        5,022
+views:        !!str "5,022"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

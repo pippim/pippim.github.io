@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        WSL: Is there a conditional to detect "Open Linux Shell Here" case?
+title:        >
+    WSL: Is there a conditional to detect "Open Linux Shell Here" case?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1162728
 type:         Answer
 tags:         bashrc windows-subsystem-for-linux
-created_date: 2019-08-01 17:23:00
-edit_date:    2019-08-02 03:36:11
-votes:        3
+created_date: !!str "2019-08-01 17:23:00"
+edit_date:    !!str "2019-08-02 03:36:11"
+votes:        !!str "3"
 favorites:    
-views:        264
+views:        !!str "264"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

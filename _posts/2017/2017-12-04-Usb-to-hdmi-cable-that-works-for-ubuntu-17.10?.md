@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Usb to hdmi cable that works for ubuntu 17.10?
+title:        >
+    Usb to hdmi cable that works for ubuntu 17.10?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/982903
 type:         Answer
 tags:         usb 17.10 hdmi budgie
-created_date: 2017-12-04 01:57:56
-edit_date:    
-votes:        2
+created_date: !!str "2017-12-04 01:57:56"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        1,077
+views:        !!str "1,077"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

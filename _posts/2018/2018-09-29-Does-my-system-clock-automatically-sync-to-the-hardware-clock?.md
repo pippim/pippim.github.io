@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Does my system clock automatically sync to the hardware clock?
+title:        >
+    Does my system clock automatically sync to the hardware clock?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1079387
 type:         Answer
 tags:         time clock
-created_date: 2018-09-29 02:02:21
-edit_date:    
-votes:        3
+created_date: !!str "2018-09-29 02:02:21"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        2,336
+views:        !!str "2,336"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

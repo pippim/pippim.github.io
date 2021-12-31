@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Laptop with external HDMI monitor: screen off∕on loop
+title:        >
+    Laptop with external HDMI monitor: screen off∕on loop
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1027247
 type:         Answer
 tags:         multiple-monitors display laptop hdmi
-created_date: 2018-04-22 18:45:26
-edit_date:    
-votes:        3
+created_date: !!str "2018-04-22 18:45:26"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        1,329
+views:        !!str "1,329"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

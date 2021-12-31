@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I install Guest Additions in a VirtualBox VM?
+title:        >
+    How do I install Guest Additions in a VirtualBox VM?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1053061
 type:         Answer
 tags:         virtualbox guest-additions
-created_date: 2018-07-07 18:29:55
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2018-07-07 18:29:55"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        2,144,752
+views:        !!str "2,144,752"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

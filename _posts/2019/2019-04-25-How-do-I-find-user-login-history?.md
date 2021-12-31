@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I find user login history?
+title:        >
+    How do I find user login history?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138206
 type:         Answer
 tags:         security users vnstat
-created_date: 2019-04-25 23:27:16
-edit_date:    2019-04-25 23:51:10
-votes:        7
+created_date: !!str "2019-04-25 23:27:16"
+edit_date:    !!str "2019-04-25 23:51:10"
+votes:        !!str "7"
 favorites:    
-views:        4,202
+views:        !!str "4,202"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Weather from terminal
+title:        >
+    Weather from terminal
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035779
 type:         Answer
 tags:         command-line
-created_date: 2018-05-13 17:23:31
-edit_date:    
-votes:        2
+created_date: !!str "2018-05-13 17:23:31"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        118,075
+views:        !!str "118,075"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

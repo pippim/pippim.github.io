@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Could not find valid key in user session keyring for sig specified in mount option after upgrade from 16.04 to 18.04
+title:        >
+    Could not find valid key in user session keyring for sig specified in mount option after upgrade from 16.04 to 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1079802
 type:         Answer
 tags:         upgrade password encryption ecryptfs
-created_date: 2018-09-30 19:35:53
-edit_date:    2020-06-12 14:37:07
-votes:        4
+created_date: !!str "2018-09-30 19:35:53"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "4"
 favorites:    
-views:        6,671
+views:        !!str "6,671"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

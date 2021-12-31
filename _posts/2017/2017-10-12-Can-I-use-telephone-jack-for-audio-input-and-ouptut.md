@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I use telephone jack for audio input and ouptut
+title:        >
+    Can I use telephone jack for audio input and ouptut
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/964097
 type:         Answer
 tags:         sound headphones microphone phone
-created_date: 2017-10-12 02:57:29
-edit_date:    
-votes:        1
+created_date: !!str "2017-10-12 02:57:29"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        631
+views:        !!str "631"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

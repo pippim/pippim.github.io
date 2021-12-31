@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Changing processor
+title:        >
+    Changing processor
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/919718
 type:         Answer
 tags:         64-bit cpu
-created_date: 2017-05-28 13:19:25
-edit_date:    
-votes:        2
+created_date: !!str "2017-05-28 13:19:25"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        72
+views:        !!str "72"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

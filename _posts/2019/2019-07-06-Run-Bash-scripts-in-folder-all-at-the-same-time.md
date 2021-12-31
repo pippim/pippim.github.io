@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Run Bash scripts in folder all at the same time
+title:        >
+    Run Bash scripts in folder all at the same time
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1156436
 type:         Answer
 tags:         bash scripts
-created_date: 2019-07-06 17:17:00
-edit_date:    2019-07-07 17:52:17
-votes:        9
+created_date: !!str "2019-07-06 17:17:00"
+edit_date:    !!str "2019-07-07 17:52:17"
+votes:        !!str "9"
 favorites:    
-views:        4,038
+views:        !!str "4,038"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

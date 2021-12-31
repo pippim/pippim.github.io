@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to buy a laptop with Ubuntu pre-installed
+title:        >
+    How to buy a laptop with Ubuntu pre-installed
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1089063
 type:         Answer
 tags:         lenovo preinstallation
-created_date: 2018-11-01 00:29:06
-edit_date:    
-votes:        1
+created_date: !!str "2018-11-01 00:29:06"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        1,462
+views:        !!str "1,462"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

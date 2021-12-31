@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to pass 2>∕dev∕null as a variable?
+title:        >
+    How to pass 2>∕dev∕null as a variable?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1168750
 type:         Question
 tags:         command-line bash redirect
-created_date: 2019-08-27 00:51:14
-edit_date:    2019-08-28 04:23:58
-votes:        16
+created_date: !!str "2019-08-27 00:51:14"
+edit_date:    !!str "2019-08-28 04:23:58"
+votes:        !!str "16"
 favorites:    2
-views:        4,581
+views:        !!str "4,581"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

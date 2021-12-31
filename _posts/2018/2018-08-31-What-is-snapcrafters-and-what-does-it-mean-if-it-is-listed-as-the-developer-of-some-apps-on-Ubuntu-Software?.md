@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is snapcrafters and what does it mean if it is listed as the developer of some apps on Ubuntu Software?
+title:        >
+    What is snapcrafters and what does it mean if it is listed as the developer of some apps on Ubuntu Software?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1070688
 type:         Answer
 tags:         software-center snap
-created_date: 2018-08-31 00:44:24
-edit_date:    
-votes:        3
+created_date: !!str "2018-08-31 00:44:24"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        2,908
+views:        !!str "2,908"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

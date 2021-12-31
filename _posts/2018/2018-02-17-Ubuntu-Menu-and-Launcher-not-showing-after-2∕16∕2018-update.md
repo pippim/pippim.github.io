@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Ubuntu Menu and Launcher not showing after 2∕16∕2018 update
+title:        >
+    Ubuntu Menu and Launcher not showing after 2∕16∕2018 update
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007213
 type:         Answer
 tags:         unity launcher
-created_date: 2018-02-17 23:00:50
-edit_date:    2018-02-18 19:12:33
-votes:        8
+created_date: !!str "2018-02-17 23:00:50"
+edit_date:    !!str "2018-02-18 19:12:33"
+votes:        !!str "8"
 favorites:    
-views:        6,548
+views:        !!str "6,548"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

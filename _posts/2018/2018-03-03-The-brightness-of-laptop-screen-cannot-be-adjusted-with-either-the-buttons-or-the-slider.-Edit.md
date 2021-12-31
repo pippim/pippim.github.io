@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        The brightness of laptop screen cannot be adjusted with either the buttons or the slider. Edit
+title:        >
+    The brightness of laptop screen cannot be adjusted with either the buttons or the slider. Edit
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1011557
 type:         Answer
 tags:         nvidia 17.10 brightness settings backlight
-created_date: 2018-03-03 15:58:50
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2018-03-03 15:58:50"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        7,520
+views:        !!str "7,520"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

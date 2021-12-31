@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How To Make .RTF Files Non-Executable in Ubuntu 16.04
+title:        >
+    How To Make .RTF Files Non-Executable in Ubuntu 16.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/846418
 type:         Answer
 tags:         command-line bash permissions
-created_date: 2016-11-07 01:35:58
-edit_date:    2016-12-04 16:52:08
-votes:        2
+created_date: !!str "2016-11-07 01:35:58"
+edit_date:    !!str "2016-12-04 16:52:08"
+votes:        !!str "2"
 favorites:    
-views:        320
+views:        !!str "320"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

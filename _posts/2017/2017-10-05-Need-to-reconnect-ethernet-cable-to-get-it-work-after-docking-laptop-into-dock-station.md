@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Need to reconnect ethernet cable to get it work after docking laptop into dock station
+title:        >
+    Need to reconnect ethernet cable to get it work after docking laptop into dock station
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/962090
 type:         Answer
 tags:         networking dell ethernet dockstation
-created_date: 2017-10-05 00:00:50
-edit_date:    
-votes:        2
+created_date: !!str "2017-10-05 00:00:50"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        959
+views:        !!str "959"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to stop "cable snake" symbol from appearing in taskbar?
+title:        >
+    How to stop "cable snake" symbol from appearing in taskbar?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1302334
 type:         Answer
 tags:         gnome indicator thunderbolt docking statusbar
-created_date: 2020-12-23 12:48:39
-edit_date:    2020-12-24 15:15:02
-votes:        4
+created_date: !!str "2020-12-23 12:48:39"
+edit_date:    !!str "2020-12-24 15:15:02"
+votes:        !!str "4"
 favorites:    
-views:        364
+views:        !!str "364"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

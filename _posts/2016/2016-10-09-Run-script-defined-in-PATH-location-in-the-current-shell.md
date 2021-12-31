@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Run script defined in PATH location in the current shell
+title:        >
+    Run script defined in PATH location in the current shell
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/834794
 type:         Answer
 tags:         bash scripts
-created_date: 2016-10-09 08:59:54
-edit_date:    2016-10-10 01:30:39
-votes:        1
+created_date: !!str "2016-10-09 08:59:54"
+edit_date:    !!str "2016-10-10 01:30:39"
+votes:        !!str "1"
 favorites:    
-views:        347
+views:        !!str "347"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I setup keyboard macros?
+title:        >
+    How do I setup keyboard macros?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866629
 type:         Answer
 tags:         keyboard shortcut-keys
-created_date: 2016-12-31 23:10:06
-edit_date:    2019-12-22 04:45:08
-votes:        20
+created_date: !!str "2016-12-31 23:10:06"
+edit_date:    !!str "2019-12-22 04:45:08"
+votes:        !!str "20"
 favorites:    
-views:        38,765
+views:        !!str "38,765"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

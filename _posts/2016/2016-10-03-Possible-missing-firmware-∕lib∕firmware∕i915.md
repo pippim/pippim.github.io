@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Possible missing firmware ∕lib∕firmware∕i915
+title:        >
+    Possible missing firmware ∕lib∕firmware∕i915
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/832528
 type:         Answer
 tags:         16.04 drivers kernel intel i915
-created_date: 2016-10-03 10:57:43
-edit_date:    2020-06-12 14:37:07
-votes:        149
+created_date: !!str "2016-10-03 10:57:43"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "149"
 favorites:    
-views:        168,826
+views:        !!str "168,826"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    false

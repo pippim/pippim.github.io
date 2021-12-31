@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Find likely processes based on snapshot in time
+title:        >
+    Find likely processes based on snapshot in time
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1073700
 type:         Answer
 tags:         command-line text-processing
-created_date: 2018-09-09 17:15:30
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2018-09-09 17:15:30"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        203
+views:        !!str "203"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

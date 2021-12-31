@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Data randomly disapeared
+title:        >
+    Data randomly disapeared
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/879951
 type:         Answer
 tags:         login files data-loss user-data conky
-created_date: 2017-02-05 00:24:23
-edit_date:    2017-04-13 12:24:26
-votes:        3
+created_date: !!str "2017-02-05 00:24:23"
+edit_date:    !!str "2017-04-13 12:24:26"
+votes:        !!str "3"
 favorites:    
-views:        30
+views:        !!str "30"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

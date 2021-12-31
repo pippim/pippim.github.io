@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I change the resolution of the GRUB menu?
+title:        >
+    How can I change the resolution of the GRUB menu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1096354
 type:         Answer
 tags:         boot grub2 display-resolution 18.10
-created_date: 2018-11-27 02:33:21
-edit_date:    2020-06-12 14:37:07
-votes:        5
+created_date: !!str "2018-11-27 02:33:21"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "5"
 favorites:    
-views:        22,347
+views:        !!str "22,347"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

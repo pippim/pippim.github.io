@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        USB Hub not working with Ubuntu 16.04
+title:        >
+    USB Hub not working with Ubuntu 16.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/812022
 type:         Answer
 tags:         16.04
-created_date: 2016-08-14 01:52:35
-edit_date:    
-votes:        1
+created_date: !!str "2016-08-14 01:52:35"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        2,621
+views:        !!str "2,621"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

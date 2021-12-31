@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to make locate output look like `ll` or `ls -la` but nicer?
+title:        >
+    How to make locate output look like `ll` or `ls -la` but nicer?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039236
 type:         Answer
 tags:         command-line ls locate
-created_date: 2018-05-23 02:45:51
-edit_date:    2020-07-05 22:04:26
-votes:        2
+created_date: !!str "2018-05-23 02:45:51"
+edit_date:    !!str "2020-07-05 22:04:26"
+votes:        !!str "2"
 favorites:    
-views:        3,167
+views:        !!str "3,167"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        `grep`ing all files for a string takes a long time
+title:        >
+    `grep`ing all files for a string takes a long time
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1005438
 type:         Answer
 tags:         command-line performance search grep
-created_date: 2018-02-12 12:08:35
-edit_date:    2018-02-17 19:12:35
-votes:        16
+created_date: !!str "2018-02-12 12:08:35"
+edit_date:    !!str "2018-02-17 19:12:35"
+votes:        !!str "16"
 favorites:    
-views:        4,664
+views:        !!str "4,664"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    false

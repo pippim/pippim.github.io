@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        how can i get Conky to display weather?
+title:        >
+    how can i get Conky to display weather?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1191205
 type:         Answer
 tags:         18.04 conky weather eyesome
-created_date: 2019-11-24 00:53:55
-edit_date:    2020-06-12 14:37:07
-votes:        4
+created_date: !!str "2019-11-24 00:53:55"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "4"
 favorites:    
-views:        8,346
+views:        !!str "8,346"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

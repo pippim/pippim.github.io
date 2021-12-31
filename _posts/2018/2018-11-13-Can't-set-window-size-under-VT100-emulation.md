@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can't set window size under VT100 emulation
+title:        >
+    Can't set window size under VT100 emulation
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1092620
 type:         Answer
 tags:         command-line resize
-created_date: 2018-11-13 17:33:18
-edit_date:    
-votes:        1
+created_date: !!str "2018-11-13 17:33:18"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        1,658
+views:        !!str "1,658"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

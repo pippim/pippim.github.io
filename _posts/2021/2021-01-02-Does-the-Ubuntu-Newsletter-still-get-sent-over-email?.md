@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Does the Ubuntu Newsletter still get sent over email?
+title:        >
+    Does the Ubuntu Newsletter still get sent over email?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1304590
 type:         Answer
 tags:         canonical community
-created_date: 2021-01-02 20:06:52
-edit_date:    2021-01-24 15:29:09
-votes:        5
+created_date: !!str "2021-01-02 20:06:52"
+edit_date:    !!str "2021-01-24 15:29:09"
+votes:        !!str "5"
 favorites:    
-views:        781
+views:        !!str "781"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

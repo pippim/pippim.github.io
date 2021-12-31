@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Adding new sudo insults
+title:        >
+    Adding new sudo insults
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1188898
 type:         Answer
 tags:         sudo
-created_date: 2019-11-15 01:01:04
-edit_date:    
-votes:        4
+created_date: !!str "2019-11-15 01:01:04"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        857
+views:        !!str "857"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

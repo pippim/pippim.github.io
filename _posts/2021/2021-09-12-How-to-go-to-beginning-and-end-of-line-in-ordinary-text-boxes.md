@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to go to beginning and end of line in ordinary text boxes
+title:        >
+    How to go to beginning and end of line in ordinary text boxes
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1363381
 type:         Answer
 tags:         shortcut-keys
-created_date: 2021-09-12 20:41:44
-edit_date:    
-votes:        7
+created_date: !!str "2021-09-12 20:41:44"
+edit_date:    !!str ""
+votes:        !!str "7"
 favorites:    
-views:        438
+views:        !!str "438"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

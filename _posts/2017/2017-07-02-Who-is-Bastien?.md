@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Who is Bastien?
+title:        >
+    Who is Bastien?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/931360
 type:         Answer
 tags:         bluetooth
-created_date: 2017-07-02 20:56:37
-edit_date:    
-votes:        5
+created_date: !!str "2017-07-02 20:56:37"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        1,616
+views:        !!str "1,616"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I get my extra monitors working again?
+title:        >
+    How do I get my extra monitors working again?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1349989
 type:         Answer
 tags:         nvidia multiple-monitors xorg grub
-created_date: 2021-07-04 17:12:33
-edit_date:    
-votes:        1
+created_date: !!str "2021-07-04 17:12:33"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        35
+views:        !!str "35"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

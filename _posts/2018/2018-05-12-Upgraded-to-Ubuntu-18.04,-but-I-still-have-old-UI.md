@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Upgraded to Ubuntu 18.04, but I still have old UI
+title:        >
+    Upgraded to Ubuntu 18.04, but I still have old UI
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035452
 type:         Answer
 tags:         18.04 unity gnome desktop-environments
-created_date: 2018-05-12 20:34:05
-edit_date:    2020-01-06 15:58:11
-votes:        6
+created_date: !!str "2018-05-12 20:34:05"
+edit_date:    !!str "2020-01-06 15:58:11"
+votes:        !!str "6"
 favorites:    
-views:        2,114
+views:        !!str "2,114"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

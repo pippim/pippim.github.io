@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Best way to check if Nautilus File Manager is running?
+title:        >
+    Best way to check if Nautilus File Manager is running?
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/546241
 type:         Question
 tags:         gnome desktop nautilus icons
-created_date: 2019-10-11 02:21:53
-edit_date:    2019-10-13 14:59:50
-votes:        2
+created_date: !!str "2019-10-11 02:21:53"
+edit_date:    !!str "2019-10-13 14:59:50"
+votes:        !!str "2"
 favorites:    0
-views:        762
+views:        !!str "762"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

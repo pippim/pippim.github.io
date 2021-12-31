@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I move all dotfiles from ~ to ~∕.config?
+title:        >
+    Can I move all dotfiles from ~ to ~∕.config?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866531
 type:         Answer
 tags:         home-directory
-created_date: 2016-12-31 16:37:51
-edit_date:    2017-04-13 12:24:55
-votes:        9
+created_date: !!str "2016-12-31 16:37:51"
+edit_date:    !!str "2017-04-13 12:24:55"
+votes:        !!str "9"
 favorites:    
-views:        6,139
+views:        !!str "6,139"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

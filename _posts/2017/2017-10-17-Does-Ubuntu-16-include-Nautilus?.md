@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Does Ubuntu 16 include Nautilus?
+title:        >
+    Does Ubuntu 16 include Nautilus?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/965590
 type:         Answer
 tags:         16.04 nautilus dropbox
-created_date: 2017-10-17 00:54:04
-edit_date:    2020-06-12 14:37:07
-votes:        4
+created_date: !!str "2017-10-17 00:54:04"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "4"
 favorites:    
-views:        553
+views:        !!str "553"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

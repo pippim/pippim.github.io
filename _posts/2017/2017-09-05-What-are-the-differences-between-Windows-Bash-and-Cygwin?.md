@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What are the differences between Windows Bash and Cygwin?
+title:        >
+    What are the differences between Windows Bash and Cygwin?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/953152
 type:         Answer
 tags:         windows-subsystem-for-linux
-created_date: 2017-09-05 23:29:44
-edit_date:    2020-06-12 14:37:07
-votes:        19
+created_date: !!str "2017-09-05 23:29:44"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "19"
 favorites:    
-views:        48,559
+views:        !!str "48,559"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

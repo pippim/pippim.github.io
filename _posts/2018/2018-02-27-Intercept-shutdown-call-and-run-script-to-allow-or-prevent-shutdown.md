@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Intercept shutdown call and run script to allow or prevent shutdown
+title:        >
+    Intercept shutdown call and run script to allow or prevent shutdown
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1010124
 type:         Answer
 tags:         16.04 bash shutdown
-created_date: 2018-02-27 00:23:41
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2018-02-27 00:23:41"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        1,615
+views:        !!str "1,615"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

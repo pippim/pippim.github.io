@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        how to do I force-yes on fsck
+title:        >
+    how to do I force-yes on fsck
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1038764
 type:         Answer
 tags:         grub2 fsck
-created_date: 2018-05-21 16:44:54
-edit_date:    
-votes:        4
+created_date: !!str "2018-05-21 16:44:54"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        26,636
+views:        !!str "26,636"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

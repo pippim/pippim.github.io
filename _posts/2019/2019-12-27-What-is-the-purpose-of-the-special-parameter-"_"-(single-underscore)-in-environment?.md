@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the purpose of the special parameter "_" (single underscore) in environment?
+title:        >
+    What is the purpose of the special parameter "_" (single underscore) in environment?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1198935
 type:         Question
 tags:         command-line bash
-created_date: 2019-12-27 14:56:34
-edit_date:    2020-06-12 14:37:07
-votes:        11
+created_date: !!str "2019-12-27 14:56:34"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "11"
 favorites:    1
-views:        2,259
+views:        !!str "2,259"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

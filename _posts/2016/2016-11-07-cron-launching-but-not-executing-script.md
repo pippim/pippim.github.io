@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        cron launching but not executing script
+title:        >
+    cron launching but not executing script
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/846557
 type:         Answer
 tags:         cron
-created_date: 2016-11-07 09:43:10
-edit_date:    2016-11-07 11:41:29
-votes:        6
+created_date: !!str "2016-11-07 09:43:10"
+edit_date:    !!str "2016-11-07 11:41:29"
+votes:        !!str "6"
 favorites:    
-views:        1,814
+views:        !!str "1,814"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

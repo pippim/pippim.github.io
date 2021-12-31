@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        CPU overheating in Ubuntu 18.04
+title:        >
+    CPU overheating in Ubuntu 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1158119
 type:         Answer
 tags:         18.04 cpu overheating temperature intel-cpu
-created_date: 2019-07-13 22:31:16
-edit_date:    
-votes:        3
+created_date: !!str "2019-07-13 22:31:16"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        4,998
+views:        !!str "4,998"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

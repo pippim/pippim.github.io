@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Terminal size at startup?
+title:        >
+    Terminal size at startup?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1229635
 type:         Answer
 tags:         gnome-terminal
-created_date: 2020-04-23 01:50:05
-edit_date:    
-votes:        4
+created_date: !!str "2020-04-23 01:50:05"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        1,362
+views:        !!str "1,362"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

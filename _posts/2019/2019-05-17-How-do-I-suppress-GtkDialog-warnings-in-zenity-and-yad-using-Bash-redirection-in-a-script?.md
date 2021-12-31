@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I suppress GtkDialog warnings in zenity and yad using Bash redirection in a script?
+title:        >
+    How do I suppress GtkDialog warnings in zenity and yad using Bash redirection in a script?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1144080
 type:         Question
 tags:         command-line bash redirect yad
-created_date: 2019-05-17 16:54:07
-edit_date:    2019-05-18 10:31:15
-votes:        3
+created_date: !!str "2019-05-17 16:54:07"
+edit_date:    !!str "2019-05-18 10:31:15"
+votes:        !!str "3"
 favorites:    
-views:        1,959
+views:        !!str "1,959"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

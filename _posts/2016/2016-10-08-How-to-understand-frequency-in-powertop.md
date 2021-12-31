@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to understand frequency in powertop
+title:        >
+    How to understand frequency in powertop
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/834601
 type:         Answer
 tags:         powertop conky grub
-created_date: 2016-10-08 17:06:47
-edit_date:    2016-10-08 17:16:22
-votes:        2
+created_date: !!str "2016-10-08 17:06:47"
+edit_date:    !!str "2016-10-08 17:16:22"
+votes:        !!str "2"
 favorites:    
-views:        747
+views:        !!str "747"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

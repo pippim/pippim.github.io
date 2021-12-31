@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I assign <SuperKey>+<N> to invoke Nautilus?
+title:        >
+    How can I assign <SuperKey>+<N> to invoke Nautilus?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/837281
 type:         Question
 tags:         16.04 nautilus shortcut-keys
-created_date: 2016-10-15 01:28:11
-edit_date:    
-votes:        0
+created_date: !!str "2016-10-15 01:28:11"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        29
+views:        !!str "29"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

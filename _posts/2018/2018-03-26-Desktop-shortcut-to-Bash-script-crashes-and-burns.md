@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Desktop shortcut to Bash script crashes and burns
+title:        >
+    Desktop shortcut to Bash script crashes and burns
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1019481
 type:         Answer
 tags:         bash nautilus symbolic-link
-created_date: 2018-03-26 22:36:38
-edit_date:    2020-06-12 14:37:07
-votes:        5
+created_date: !!str "2018-03-26 22:36:38"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "5"
 favorites:    
-views:        261
+views:        !!str "261"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

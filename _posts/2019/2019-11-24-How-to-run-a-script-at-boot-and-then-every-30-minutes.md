@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to run a script at boot and then every 30 minutes
+title:        >
+    How to run a script at boot and then every 30 minutes
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1191405
 type:         Answer
 tags:         server scripts cron automation eyesome
-created_date: 2019-11-24 21:15:24
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2019-11-24 21:15:24"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        1,744
+views:        !!str "1,744"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        ASUS PCE cant detect 5ghz network
+title:        >
+    ASUS PCE cant detect 5ghz network
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1099864
 type:         Answer
 tags:         networking drivers network-manager broadcom asus
-created_date: 2018-12-10 19:05:15
-edit_date:    
-votes:        5
+created_date: !!str "2018-12-10 19:05:15"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        5,263
+views:        !!str "5,263"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

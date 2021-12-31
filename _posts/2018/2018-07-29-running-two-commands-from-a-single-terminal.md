@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        running two commands from a single terminal
+title:        >
+    running two commands from a single terminal
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1060423
 type:         Answer
 tags:         command-line
-created_date: 2018-07-29 02:07:35
-edit_date:    2018-07-29 02:13:27
-votes:        2
+created_date: !!str "2018-07-29 02:07:35"
+edit_date:    !!str "2018-07-29 02:13:27"
+votes:        !!str "2"
 favorites:    
-views:        1,040
+views:        !!str "1,040"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

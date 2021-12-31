@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I change the font of the text-mode console?
+title:        >
+    Can I change the font of the text-mode console?
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/455009
 type:         Answer
 tags:         console tty fonts
-created_date: 2018-07-13 00:09:43
-edit_date:    
-votes:        4
+created_date: !!str "2018-07-13 00:09:43"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        197,714
+views:        !!str "197,714"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

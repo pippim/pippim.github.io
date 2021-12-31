@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Set CPU governor to performance in 18.04
+title:        >
+    Set CPU governor to performance in 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1084727
 type:         Answer
 tags:         cpu 18.04 governor
-created_date: 2018-10-18 01:48:54
-edit_date:    2020-08-09 15:24:54
-votes:        8
+created_date: !!str "2018-10-18 01:48:54"
+edit_date:    !!str "2020-08-09 15:24:54"
+votes:        !!str "8"
 favorites:    
-views:        137,208
+views:        !!str "137,208"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

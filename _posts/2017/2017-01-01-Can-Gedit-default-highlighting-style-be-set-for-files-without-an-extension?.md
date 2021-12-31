@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can Gedit default highlighting style be set for files without an extension?
+title:        >
+    Can Gedit default highlighting style be set for files without an extension?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866679
 type:         Answer
 tags:         gedit mime-type
-created_date: 2017-01-01 05:12:43
-edit_date:    2017-01-01 08:06:54
-votes:        5
+created_date: !!str "2017-01-01 05:12:43"
+edit_date:    !!str "2017-01-01 08:06:54"
+votes:        !!str "5"
 favorites:    
-views:        1,210
+views:        !!str "1,210"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

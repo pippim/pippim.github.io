@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Steam: libGL error: No matching fbConfigs or visuals found libGL error: failed to load driver: swrast
+title:        >
+    Steam: libGL error: No matching fbConfigs or visuals found libGL error: failed to load driver: swrast
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/978112
 type:         Answer
 tags:         drivers nvidia steam yad
-created_date: 2017-11-19 17:26:41
-edit_date:    2020-06-12 14:37:07
-votes:        14
+created_date: !!str "2017-11-19 17:26:41"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "14"
 favorites:    
-views:        155,249
+views:        !!str "155,249"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to selectively purge old kernels all at once
+title:        >
+    How to selectively purge old kernels all at once
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/892077
 type:         Answer
 tags:         boot apt grub2 kernel
-created_date: 2017-03-11 19:05:58
-edit_date:    2017-08-06 02:24:19
-votes:        5
+created_date: !!str "2017-03-11 19:05:58"
+edit_date:    !!str "2017-08-06 02:24:19"
+votes:        !!str "5"
 favorites:    
-views:        6,709
+views:        !!str "6,709"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

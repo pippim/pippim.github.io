@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to update kernel to the latest mainline version without any Distro-upgrade?
+title:        >
+    How to update kernel to the latest mainline version without any Distro-upgrade?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/885165
 type:         Answer
 tags:         upgrade kernel updates grub
-created_date: 2017-02-20 00:23:47
-edit_date:    2018-02-25 15:14:36
-votes:        18
+created_date: !!str "2017-02-20 00:23:47"
+edit_date:    !!str "2018-02-25 15:14:36"
+votes:        !!str "18"
 favorites:    
-views:        565,015
+views:        !!str "565,015"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

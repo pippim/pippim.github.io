@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Insert transparent circle into gimp
+title:        >
+    Insert transparent circle into gimp
 site:         Graphic Design
 stack_url:    https://graphicdesign.stackexchange.com/q/143117
 type:         Question
 tags:         gimp transparency
-created_date: 2020-11-21 02:39:45
-edit_date:    
-votes:        0
+created_date: !!str "2020-11-21 02:39:45"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        220
+views:        !!str "220"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

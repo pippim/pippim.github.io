@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can't find local disks
+title:        >
+    Can't find local disks
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821051
 type:         Answer
 tags:         disk
-created_date: 2016-09-05 02:13:12
-edit_date:    
-votes:        0
+created_date: !!str "2016-09-05 02:13:12"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        48
+views:        !!str "48"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        help! W: Possible missing firmware ∕lib∕firmware∕i915∕kbl_guc_ver9_14.bin for module i915
+title:        >
+    help! W: Possible missing firmware ∕lib∕firmware∕i915∕kbl_guc_ver9_14.bin for module i915
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1132078
 type:         Answer
 tags:         boot dual-boot grub2 kernel uefi
-created_date: 2019-04-08 08:51:03
-edit_date:    2019-04-09 00:22:11
-votes:        3
+created_date: !!str "2019-04-08 08:51:03"
+edit_date:    !!str "2019-04-09 00:22:11"
+votes:        !!str "3"
 favorites:    
-views:        33,333
+views:        !!str "33,333"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

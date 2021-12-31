@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Forgot my passphrase of my encrypted hard disk
+title:        >
+    Forgot my passphrase of my encrypted hard disk
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821094
 type:         Answer
 tags:         encryption
-created_date: 2016-09-05 06:09:24
-edit_date:    2016-09-05 13:47:43
-votes:        4
+created_date: !!str "2016-09-05 06:09:24"
+edit_date:    !!str "2016-09-05 13:47:43"
+votes:        !!str "4"
 favorites:    
-views:        1,882
+views:        !!str "1,882"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

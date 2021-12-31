@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to restart X Window Server from command line and be able to login again afterwards?
+title:        >
+    How to restart X Window Server from command line and be able to login again afterwards?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1144565
 type:         Answer
 tags:         19.04
-created_date: 2019-05-19 17:58:24
-edit_date:    2021-04-13 22:41:11
-votes:        3
+created_date: !!str "2019-05-19 17:58:24"
+edit_date:    !!str "2021-04-13 22:41:11"
+votes:        !!str "3"
 favorites:    
-views:        6,382
+views:        !!str "6,382"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

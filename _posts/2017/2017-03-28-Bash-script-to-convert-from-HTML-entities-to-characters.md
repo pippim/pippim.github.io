@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Bash script to convert from HTML entities to characters
+title:        >
+    Bash script to convert from HTML entities to characters
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43058947
 type:         Answer
 tags:         html bash html-escape-characters
-created_date: 2017-03-28 01:06:23
-edit_date:    2021-12-07 02:21:43
-votes:        14
+created_date: !!str "2017-03-28 01:06:23"
+edit_date:    !!str "2021-12-07 02:21:43"
+votes:        !!str "14"
 favorites:    
-views:        53,957
+views:        !!str "53,957"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

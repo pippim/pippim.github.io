@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        gedit put BOLD text with Yellow Background on a script comment line
+title:        >
+    gedit put BOLD text with Yellow Background on a script comment line
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/861087
 type:         Question
 tags:         bash gedit
-created_date: 2016-12-15 22:18:40
-edit_date:    2016-12-21 03:11:58
-votes:        3
+created_date: !!str "2016-12-15 22:18:40"
+edit_date:    !!str "2016-12-21 03:11:58"
+votes:        !!str "3"
 favorites:    
-views:        1,124
+views:        !!str "1,124"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

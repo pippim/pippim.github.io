@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Acquiring pre-releases∕betas for unreleased distros for testing
+title:        >
+    Acquiring pre-releases∕betas for unreleased distros for testing
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/836291
 type:         Answer
 tags:         upgrade lts release-management testing beta
-created_date: 2016-10-13 00:33:34
-edit_date:    
-votes:        1
+created_date: !!str "2016-10-13 00:33:34"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        100
+views:        !!str "100"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

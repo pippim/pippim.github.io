@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How are the default user folders in the home created for a new user?
+title:        >
+    How are the default user folders in the home created for a new user?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064548
 type:         Answer
 tags:         directory home-directory default
-created_date: 2018-08-12 01:16:02
-edit_date:    
-votes:        3
+created_date: !!str "2018-08-12 01:16:02"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        5,624
+views:        !!str "5,624"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

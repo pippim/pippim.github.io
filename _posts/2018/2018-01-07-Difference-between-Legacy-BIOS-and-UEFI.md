@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Difference between Legacy BIOS and UEFI
+title:        >
+    Difference between Legacy BIOS and UEFI
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/993308
 type:         Answer
 tags:         uefi bios gpt mbr
-created_date: 2018-01-07 18:36:55
-edit_date:    
-votes:        6
+created_date: !!str "2018-01-07 18:36:55"
+edit_date:    !!str ""
+votes:        !!str "6"
 favorites:    
-views:        61,087
+views:        !!str "61,087"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

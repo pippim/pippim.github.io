@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Force Xorg to use CPU not GPU
+title:        >
+    Force Xorg to use CPU not GPU
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1056431
 type:         Answer
 tags:         unity nvidia xorg cpu gpu
-created_date: 2018-07-16 01:33:58
-edit_date:    2019-02-21 10:47:27
-votes:        3
+created_date: !!str "2018-07-16 01:33:58"
+edit_date:    !!str "2019-02-21 10:47:27"
+votes:        !!str "3"
 favorites:    
-views:        10,707
+views:        !!str "10,707"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

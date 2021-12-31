@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        summary and restricted output from fdisk in ubuntu bionic beaver
+title:        >
+    summary and restricted output from fdisk in ubuntu bionic beaver
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1079566
 type:         Answer
 tags:         18.04 fdisk
-created_date: 2018-09-29 19:10:04
-edit_date:    2018-09-29 22:51:08
-votes:        2
+created_date: !!str "2018-09-29 19:10:04"
+edit_date:    !!str "2018-09-29 22:51:08"
+votes:        !!str "2"
 favorites:    
-views:        131
+views:        !!str "131"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to make speaking clock (via cron and festival tts) work while playing music
+title:        >
+    How to make speaking clock (via cron and festival tts) work while playing music
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1045336
 type:         Answer
 tags:         sound pulseaudio alsa cron 15.04
-created_date: 2018-06-10 16:02:33
-edit_date:    2018-06-10 17:38:32
-votes:        2
+created_date: !!str "2018-06-10 16:02:33"
+edit_date:    !!str "2018-06-10 17:38:32"
+votes:        !!str "2"
 favorites:    
-views:        928
+views:        !!str "928"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

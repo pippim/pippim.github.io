@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        install Ubuntu and complete wipe out Windows on a machine with a "Windows Boot Manager"
+title:        >
+    install Ubuntu and complete wipe out Windows on a machine with a "Windows Boot Manager"
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/848423
 type:         Answer
 tags:         boot
-created_date: 2016-11-12 01:54:20
-edit_date:    
-votes:        0
+created_date: !!str "2016-11-12 01:54:20"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        231
+views:        !!str "231"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Output redirection to a file, used inside script, is not working when executed from crontab
+title:        >
+    Output redirection to a file, used inside script, is not working when executed from crontab
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1188181
 type:         Answer
 tags:         scripts cron
-created_date: 2019-11-12 14:45:00
-edit_date:    
-votes:        1
+created_date: !!str "2019-11-12 14:45:00"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        2,811
+views:        !!str "2,811"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

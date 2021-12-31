@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Replacing gksudo with pkexec: editor doesn't start in current folder
+title:        >
+    Replacing gksudo with pkexec: editor doesn't start in current folder
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1026821
 type:         Answer
 tags:         gksudo pkexec
-created_date: 2018-04-21 01:21:40
-edit_date:    
-votes:        5
+created_date: !!str "2018-04-21 01:21:40"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        2,157
+views:        !!str "2,157"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

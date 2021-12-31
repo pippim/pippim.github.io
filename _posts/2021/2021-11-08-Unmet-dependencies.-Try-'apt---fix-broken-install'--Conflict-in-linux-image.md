@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Unmet dependencies. Try 'apt --fix-broken install'- Conflict in linux-image
+title:        >
+    Unmet dependencies. Try 'apt --fix-broken install'- Conflict in linux-image
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1374281
 type:         Answer
 tags:         apt 20.04 kernel xubuntu dpkg
-created_date: 2021-11-08 12:21:01
-edit_date:    
-votes:        4
+created_date: !!str "2021-11-08 12:21:01"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        375
+views:        !!str "375"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

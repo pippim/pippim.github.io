@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Automatic tabulation when writing code on Gedit?
+title:        >
+    Automatic tabulation when writing code on Gedit?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1010254
 type:         Answer
 tags:         gedit
-created_date: 2018-02-27 11:39:21
-edit_date:    2018-08-05 18:19:21
-votes:        0
+created_date: !!str "2018-02-27 11:39:21"
+edit_date:    !!str "2018-08-05 18:19:21"
+votes:        !!str "0"
 favorites:    
-views:        132
+views:        !!str "132"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to set S3∕S4 state for devices on suspend
+title:        >
+    How to set S3∕S4 state for devices on suspend
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1150514
 type:         Answer
 tags:         usb lubuntu suspend power-management
-created_date: 2019-06-12 10:56:18
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2019-06-12 10:56:18"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        1,787
+views:        !!str "1,787"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

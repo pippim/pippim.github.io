@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        GUI application for controlling Samsung Smart TV connected to the same LAN of ubuntu desktop
+title:        >
+    GUI application for controlling Samsung Smart TV connected to the same LAN of ubuntu desktop
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1148133
 type:         Answer
 tags:         software-recommendation samsung remote smart-tv yad
-created_date: 2019-06-02 20:37:08
-edit_date:    2019-06-04 23:16:26
-votes:        3
+created_date: !!str "2019-06-02 20:37:08"
+edit_date:    !!str "2019-06-04 23:16:26"
+votes:        !!str "3"
 favorites:    
-views:        2,706
+views:        !!str "2,706"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

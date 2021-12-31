@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I quickly disable standby lid off in Ubuntu Unity 16.04?
+title:        >
+    How can I quickly disable standby lid off in Ubuntu Unity 16.04?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/815082
 type:         Answer
 tags:         software-recommendation suspend power-management
-created_date: 2016-08-21 20:32:10
-edit_date:    
-votes:        5
+created_date: !!str "2016-08-21 20:32:10"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        1,442
+views:        !!str "1,442"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

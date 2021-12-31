@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Bash script to sleep at given CPU temperature ~ update for 16.04
+title:        >
+    Bash script to sleep at given CPU temperature ~ update for 16.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/876732
 type:         Answer
 tags:         16.04 suspend cpu temperature conky
-created_date: 2017-01-27 03:23:44
-edit_date:    2017-04-13 12:23:51
-votes:        2
+created_date: !!str "2017-01-27 03:23:44"
+edit_date:    !!str "2017-04-13 12:23:51"
+votes:        !!str "2"
 favorites:    
-views:        2,562
+views:        !!str "2,562"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    false

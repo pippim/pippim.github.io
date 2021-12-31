@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Set of countdown timers with alarm
+title:        >
+    Set of countdown timers with alarm
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039377
 type:         Answer
 tags:         software-recommendation multi-timer yad
-created_date: 2018-05-23 11:14:12
-edit_date:    2021-12-04 22:06:42
-votes:        11
+created_date: !!str "2018-05-23 11:14:12"
+edit_date:    !!str "2021-12-04 22:06:42"
+votes:        !!str "11"
 favorites:    
-views:        4,120
+views:        !!str "4,120"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

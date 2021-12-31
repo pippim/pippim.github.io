@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is there any Ubuntu flavor that handles HiDPI consistently?
+title:        >
+    Is there any Ubuntu flavor that handles HiDPI consistently?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/848445
 type:         Answer
 tags:         hdpi
-created_date: 2016-11-12 04:53:19
-edit_date:    2016-11-12 05:37:35
-votes:        2
+created_date: !!str "2016-11-12 04:53:19"
+edit_date:    !!str "2016-11-12 05:37:35"
+votes:        !!str "2"
 favorites:    
-views:        29,408
+views:        !!str "29,408"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

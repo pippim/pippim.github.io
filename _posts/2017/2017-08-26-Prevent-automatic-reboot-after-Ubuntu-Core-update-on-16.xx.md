@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Prevent automatic reboot after Ubuntu Core update on 16.xx
+title:        >
+    Prevent automatic reboot after Ubuntu Core update on 16.xx
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/949895
 type:         Answer
 tags:         updates ubuntu-core
-created_date: 2017-08-26 02:34:42
-edit_date:    
-votes:        2
+created_date: !!str "2017-08-26 02:34:42"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        1,616
+views:        !!str "1,616"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

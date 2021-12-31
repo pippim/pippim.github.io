@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the difference between echo $var and echo "$var"
+title:        >
+    What is the difference between echo $var and echo "$var"
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1068366
 type:         Answer
 tags:         bash
-created_date: 2018-08-23 23:56:06
-edit_date:    
-votes:        5
+created_date: !!str "2018-08-23 23:56:06"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        2,954
+views:        !!str "2,954"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Which is better, High CPU % with Low Frequency or the opposite?
+title:        >
+    Which is better, High CPU % with Low Frequency or the opposite?
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/416954
 type:         Question
 tags:         kernel cpu battery cpu-frequency temperature conky
-created_date: 2018-01-14 03:14:21
-edit_date:    2020-06-11 14:16:50
-votes:        4
+created_date: !!str "2018-01-14 03:14:21"
+edit_date:    !!str "2020-06-11 14:16:50"
+votes:        !!str "4"
 favorites:    
-views:        1,691
+views:        !!str "1,691"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is there any way to make brightness work on a HP ENVY 15-dr0350nd?
+title:        >
+    Is there any way to make brightness work on a HP ENVY 15-dr0350nd?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1151552
 type:         Answer
 tags:         nvidia brightness monitor settings gpu
-created_date: 2019-06-16 18:15:41
-edit_date:    2019-06-16 20:55:26
-votes:        2
+created_date: !!str "2019-06-16 18:15:41"
+edit_date:    !!str "2019-06-16 20:55:26"
+votes:        !!str "2"
 favorites:    
-views:        489
+views:        !!str "489"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

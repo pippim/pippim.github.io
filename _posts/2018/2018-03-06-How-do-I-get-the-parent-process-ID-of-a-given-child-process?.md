@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I get the parent process ID of a given child process?
+title:        >
+    How do I get the parent process ID of a given child process?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1012277
 type:         Answer
 tags:         command-line bash process
-created_date: 2018-03-06 04:03:44
-edit_date:    2020-06-12 14:37:07
-votes:        11
+created_date: !!str "2018-03-06 04:03:44"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "11"
 favorites:    
-views:        254,691
+views:        !!str "254,691"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

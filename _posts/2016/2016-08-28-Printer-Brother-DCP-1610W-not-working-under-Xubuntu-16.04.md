@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Printer Brother DCP 1610W not working under Xubuntu 16.04
+title:        >
+    Printer Brother DCP 1610W not working under Xubuntu 16.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/817899
 type:         Answer
 tags:         16.04 xubuntu printing brother
-created_date: 2016-08-28 18:17:20
-edit_date:    2016-08-28 18:28:43
-votes:        3
+created_date: !!str "2016-08-28 18:17:20"
+edit_date:    !!str "2016-08-28 18:28:43"
+votes:        !!str "3"
 favorites:    
-views:        1,627
+views:        !!str "1,627"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

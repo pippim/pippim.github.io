@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why does system say my hdd is only 26GB
+title:        >
+    Why does system say my hdd is only 26GB
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/874374
 type:         Answer
 tags:         hard-drive
-created_date: 2017-01-21 02:24:18
-edit_date:    2017-01-21 05:00:41
-votes:        3
+created_date: !!str "2017-01-21 02:24:18"
+edit_date:    !!str "2017-01-21 05:00:41"
+votes:        !!str "3"
 favorites:    
-views:        112
+views:        !!str "112"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

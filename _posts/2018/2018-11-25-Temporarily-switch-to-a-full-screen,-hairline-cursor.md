@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Temporarily switch to a full-screen, hairline cursor
+title:        >
+    Temporarily switch to a full-screen, hairline cursor
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1095983
 type:         Answer
 tags:         16.04 cursor
-created_date: 2018-11-25 19:01:19
-edit_date:    2020-06-12 14:37:07
-votes:        10
+created_date: !!str "2018-11-25 19:01:19"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "10"
 favorites:    
-views:        1,778
+views:        !!str "1,778"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

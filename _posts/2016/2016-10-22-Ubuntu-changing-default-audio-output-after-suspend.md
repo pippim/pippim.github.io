@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Ubuntu changing default audio output after suspend
+title:        >
+    Ubuntu changing default audio output after suspend
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840543
 type:         Answer
 tags:         sound suspend hdmi kodi
-created_date: 2016-10-22 18:05:45
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2016-10-22 18:05:45"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        1,926
+views:        !!str "1,926"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

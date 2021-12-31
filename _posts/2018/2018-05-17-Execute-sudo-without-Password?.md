@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Execute sudo without Password?
+title:        >
+    Execute sudo without Password?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1037177
 type:         Answer
 tags:         command-line password sudo root
-created_date: 2018-05-17 00:12:01
-edit_date:    
-votes:        5
+created_date: !!str "2018-05-17 00:12:01"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        775,134
+views:        !!str "775,134"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

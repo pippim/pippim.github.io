@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I need an equivalent of gksu in 18.04
+title:        >
+    I need an equivalent of gksu in 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1100220
 type:         Answer
 tags:         sudo root gksu
-created_date: 2018-12-12 05:14:22
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2018-12-12 05:14:22"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        45,783
+views:        !!str "45,783"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

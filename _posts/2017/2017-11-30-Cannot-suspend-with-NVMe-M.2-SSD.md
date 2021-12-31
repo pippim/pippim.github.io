@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Cannot suspend with NVMe M.2 SSD
+title:        >
+    Cannot suspend with NVMe M.2 SSD
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/981658
 type:         Answer
 tags:         16.04 suspend ssd nvme
-created_date: 2017-11-30 01:52:04
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2017-11-30 01:52:04"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        3,924
+views:        !!str "3,924"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

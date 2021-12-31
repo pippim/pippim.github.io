@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Very high fan speed on Ubuntu 18.04
+title:        >
+    Very high fan speed on Ubuntu 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1036727
 type:         Answer
 tags:         18.04 fan fancontrol
-created_date: 2018-05-15 22:29:23
-edit_date:    
-votes:        7
+created_date: !!str "2018-05-15 22:29:23"
+edit_date:    !!str ""
+votes:        !!str "7"
 favorites:    
-views:        88,735
+views:        !!str "88,735"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

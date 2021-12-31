@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to securely upgrade Ubuntu from 16.04 to 18.04
+title:        >
+    How to securely upgrade Ubuntu from 16.04 to 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1030348
 type:         Answer
 tags:         16.04 upgrade updates system 18.04
-created_date: 2018-04-30 23:23:17
-edit_date:    
-votes:        2
+created_date: !!str "2018-04-30 23:23:17"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        4,767
+views:        !!str "4,767"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

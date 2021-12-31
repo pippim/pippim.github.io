@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the Emergency Shell (emergency.target) of the Systemd, and in what case is it used?
+title:        >
+    What is the Emergency Shell (emergency.target) of the Systemd, and in what case is it used?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/954081
 type:         Answer
 tags:         command-line systemd
-created_date: 2017-09-08 23:54:30
-edit_date:    
-votes:        4
+created_date: !!str "2017-09-08 23:54:30"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        3,044
+views:        !!str "3,044"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

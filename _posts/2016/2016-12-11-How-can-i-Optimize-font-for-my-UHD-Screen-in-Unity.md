@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can i Optimize font for my UHD Screen in Unity
+title:        >
+    How can i Optimize font for my UHD Screen in Unity
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/859565
 type:         Answer
 tags:         unity desktop-environments settings
-created_date: 2016-12-11 19:40:19
-edit_date:    2016-12-11 20:27:09
-votes:        2
+created_date: !!str "2016-12-11 19:40:19"
+edit_date:    !!str "2016-12-11 20:27:09"
+votes:        !!str "2"
 favorites:    
-views:        377
+views:        !!str "377"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

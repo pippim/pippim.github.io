@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Bash (Yad) using floating point numbers instead of whole numbers
+title:        >
+    Bash (Yad) using floating point numbers instead of whole numbers
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/447533
 type:         Question
 tags:         bash locale unicode yad
-created_date: 2018-06-02 20:48:08
-edit_date:    2018-06-13 10:07:19
-votes:        0
+created_date: !!str "2018-06-02 20:48:08"
+edit_date:    !!str "2018-06-13 10:07:19"
+votes:        !!str "0"
 favorites:    
-views:        512
+views:        !!str "512"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

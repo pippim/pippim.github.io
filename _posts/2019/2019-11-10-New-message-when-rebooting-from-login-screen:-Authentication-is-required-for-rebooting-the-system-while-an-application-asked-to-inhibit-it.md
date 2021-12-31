@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        New message when rebooting from login screen: Authentication is required for rebooting the system while an application asked to inhibit it
+title:        >
+    New message when rebooting from login screen: Authentication is required for rebooting the system while an application asked to inhibit it
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1187756
 type:         Answer
 tags:         login reboot authentication
-created_date: 2019-11-10 16:30:42
-edit_date:    2019-11-10 16:37:20
-votes:        2
+created_date: !!str "2019-11-10 16:30:42"
+edit_date:    !!str "2019-11-10 16:37:20"
+votes:        !!str "2"
 favorites:    
-views:        2,449
+views:        !!str "2,449"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

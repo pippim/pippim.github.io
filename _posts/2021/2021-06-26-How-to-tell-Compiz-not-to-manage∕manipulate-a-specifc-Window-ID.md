@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to tell Compiz not to manage∕manipulate a specifc Window ID
+title:        >
+    How to tell Compiz not to manage∕manipulate a specifc Window ID
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1348326
 type:         Question
 tags:         unity python xorg compiz window-manager
-created_date: 2021-06-26 12:47:21
-edit_date:    2021-06-27 17:49:15
-votes:        2
+created_date: !!str "2021-06-26 12:47:21"
+edit_date:    !!str "2021-06-27 17:49:15"
+votes:        !!str "2"
 favorites:    1
-views:        24
+views:        !!str "24"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Hibernate∕suspend on critical battery level - where should I set it from MATE GUI?
+title:        >
+    Hibernate∕suspend on critical battery level - where should I set it from MATE GUI?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1089951
 type:         Answer
 tags:         16.04 suspend battery hibernate mate
-created_date: 2018-11-04 14:05:06
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2018-11-04 14:05:06"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        2,298
+views:        !!str "2,298"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

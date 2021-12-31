@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Multiple Ubuntu versions updating same vnstat database
+title:        >
+    Multiple Ubuntu versions updating same vnstat database
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035141
 type:         Question
 tags:         16.04 dual-boot 18.04 vnstat conky
-created_date: 2018-05-12 01:44:55
-edit_date:    2018-05-21 23:10:36
-votes:        1
+created_date: !!str "2018-05-12 01:44:55"
+edit_date:    !!str "2018-05-21 23:10:36"
+votes:        !!str "1"
 favorites:    
-views:        416
+views:        !!str "416"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

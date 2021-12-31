@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is CSM option
+title:        >
+    What is CSM option
 site:         Super User
 stack_url:    https://superuser.com/q/1165802
 type:         Answer
 tags:         boot bios uefi
-created_date: 2017-01-11 05:03:29
-edit_date:    
-votes:        3
+created_date: !!str "2017-01-11 05:03:29"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        494,211
+views:        !!str "494,211"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

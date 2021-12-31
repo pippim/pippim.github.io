@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why are Ubuntu updates faster than Windows updates?
+title:        >
+    Why are Ubuntu updates faster than Windows updates?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/841205
 type:         Answer
 tags:         updates update-manager
-created_date: 2016-10-24 11:41:17
-edit_date:    
-votes:        2
+created_date: !!str "2016-10-24 11:41:17"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        358
+views:        !!str "358"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

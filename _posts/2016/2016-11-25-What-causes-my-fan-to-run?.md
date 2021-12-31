@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What causes my fan to run?
+title:        >
+    What causes my fan to run?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/853314
 type:         Answer
 tags:         16.04 fan temperature conky
-created_date: 2016-11-25 01:02:12
-edit_date:    
-votes:        2
+created_date: !!str "2016-11-25 01:02:12"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        2,628
+views:        !!str "2,628"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

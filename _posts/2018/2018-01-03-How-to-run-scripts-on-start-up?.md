@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to run scripts on start up?
+title:        >
+    How to run scripts on start up?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/991672
 type:         Answer
 tags:         startup autostart
-created_date: 2018-01-03 01:02:31
-edit_date:    2020-06-12 14:37:07
-votes:        9
+created_date: !!str "2018-01-03 01:02:31"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "9"
 favorites:    
-views:        1,316,646
+views:        !!str "1,316,646"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

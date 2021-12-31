@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Python can't find tkinter item at coordinates
+title:        >
+    Python can't find tkinter item at coordinates
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59437505
 type:         Answer
 tags:         python tkinter mouse-coordinates
-created_date: 2019-12-21 15:34:03
-edit_date:    
-votes:        0
+created_date: !!str "2019-12-21 15:34:03"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        595
+views:        !!str "595"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

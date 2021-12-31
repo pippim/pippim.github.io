@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to install Ubuntu One?
+title:        >
+    How to install Ubuntu One?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1014275
 type:         Answer
 tags:         backup cloud
-created_date: 2018-03-12 19:01:01
-edit_date:    
-votes:        6
+created_date: !!str "2018-03-12 19:01:01"
+edit_date:    !!str ""
+votes:        !!str "6"
 favorites:    
-views:        103
+views:        !!str "103"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        execute script on low UPS power
+title:        >
+    execute script on low UPS power
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157949
 type:         Answer
 tags:         power-management hibernate ups nut
-created_date: 2019-07-13 01:02:51
-edit_date:    
-votes:        1
+created_date: !!str "2019-07-13 01:02:51"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        573
+views:        !!str "573"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

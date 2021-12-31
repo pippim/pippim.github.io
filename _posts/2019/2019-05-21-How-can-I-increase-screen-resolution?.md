@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I increase screen resolution?
+title:        >
+    How can I increase screen resolution?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1145204
 type:         Answer
 tags:         screen display-resolution desktop-environments
-created_date: 2019-05-21 23:02:30
-edit_date:    
-votes:        1
+created_date: !!str "2019-05-21 23:02:30"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        344
+views:        !!str "344"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

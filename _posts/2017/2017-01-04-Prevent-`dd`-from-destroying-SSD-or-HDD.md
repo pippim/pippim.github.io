@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Prevent `dd` from destroying SSD or HDD
+title:        >
+    Prevent `dd` from destroying SSD or HDD
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/867747
 type:         Answer
 tags:         hard-drive ssd dd undelete
-created_date: 2017-01-04 03:17:07
-edit_date:    2017-06-25 19:26:08
-votes:        3
+created_date: !!str "2017-01-04 03:17:07"
+edit_date:    !!str "2017-06-25 19:26:08"
+votes:        !!str "3"
 favorites:    
-views:        2,546
+views:        !!str "2,546"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

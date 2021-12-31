@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Screen brightness changes when moving mouse to certain areas (XPS13 9379 - Ubuntu)
+title:        >
+    Screen brightness changes when moving mouse to certain areas (XPS13 9379 - Ubuntu)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1005664
 type:         Answer
 tags:         16.04 graphics mouse screen brightness
-created_date: 2018-02-13 03:11:06
-edit_date:    2018-02-13 08:32:56
-votes:        2
+created_date: !!str "2018-02-13 03:11:06"
+edit_date:    !!str "2018-02-13 08:32:56"
+votes:        !!str "2"
 favorites:    
-views:        1,687
+views:        !!str "1,687"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

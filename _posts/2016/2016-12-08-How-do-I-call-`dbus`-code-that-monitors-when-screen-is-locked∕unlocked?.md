@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I call `dbus` code that monitors when screen is locked∕unlocked?
+title:        >
+    How do I call `dbus` code that monitors when screen is locked∕unlocked?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/858236
 type:         Question
 tags:         16.04 scripts lock-screen dbus
-created_date: 2016-12-08 01:01:02
-edit_date:    2017-04-13 12:37:16
-votes:        5
+created_date: !!str "2016-12-08 01:01:02"
+edit_date:    !!str "2017-04-13 12:37:16"
+votes:        !!str "5"
 favorites:    1
-views:        2,174
+views:        !!str "2,174"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

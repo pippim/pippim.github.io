@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can't see internal drive when using Ubuntu's LiveUSB
+title:        >
+    Can't see internal drive when using Ubuntu's LiveUSB
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1122768
 type:         Answer
 tags:         18.04 live-usb gparted ssd fdisk
-created_date: 2019-03-03 17:04:05
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2019-03-03 17:04:05"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        2,532
+views:        !!str "2,532"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

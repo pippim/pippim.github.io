@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is Vim safe to use in combination with sudo?
+title:        >
+    Is Vim safe to use in combination with sudo?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1090647
 type:         Answer
 tags:         sudo vim
-created_date: 2018-11-07 00:46:21
-edit_date:    
-votes:        2
+created_date: !!str "2018-11-07 00:46:21"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        5,036
+views:        !!str "5,036"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

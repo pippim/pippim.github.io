@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        When will Ubuntu 18.04 get kernel version 5.3?
+title:        >
+    When will Ubuntu 18.04 get kernel version 5.3?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1180255
 type:         Answer
 tags:         18.04 kernel lts
-created_date: 2019-10-11 11:52:50
-edit_date:    
-votes:        5
+created_date: !!str "2019-10-11 11:52:50"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        8,032
+views:        !!str "8,032"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

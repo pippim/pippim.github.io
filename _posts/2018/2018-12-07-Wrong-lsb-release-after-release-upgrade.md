@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Wrong lsb-release after release upgrade
+title:        >
+    Wrong lsb-release after release upgrade
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1099248
 type:         Answer
 tags:         apt package-management upgrade dpkg do-release-upgrade
-created_date: 2018-12-07 19:02:48
-edit_date:    
-votes:        0
+created_date: !!str "2018-12-07 19:02:48"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        3,104
+views:        !!str "3,104"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

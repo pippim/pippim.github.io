@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Battery drain when HP laptop is shut down from Ubuntu, but not from Windows
+title:        >
+    Battery drain when HP laptop is shut down from Ubuntu, but not from Windows
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1024516
 type:         Answer
 tags:         16.04 power-management shutdown battery
-created_date: 2018-04-13 02:05:19
-edit_date:    2018-04-18 23:47:20
-votes:        6
+created_date: !!str "2018-04-13 02:05:19"
+edit_date:    !!str "2018-04-18 23:47:20"
+votes:        !!str "6"
 favorites:    
-views:        3,752
+views:        !!str "3,752"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

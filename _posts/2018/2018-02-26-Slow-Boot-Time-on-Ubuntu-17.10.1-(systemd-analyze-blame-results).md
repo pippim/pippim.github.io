@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Slow Boot Time on Ubuntu 17.10.1 (systemd-analyze blame results)
+title:        >
+    Slow Boot Time on Ubuntu 17.10.1 (systemd-analyze blame results)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1010024
 type:         Answer
 tags:         boot shutdown performance
-created_date: 2018-02-26 16:52:44
-edit_date:    
-votes:        5
+created_date: !!str "2018-02-26 16:52:44"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        3,340
+views:        !!str "3,340"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

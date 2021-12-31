@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I check system health?
+title:        >
+    How do I check system health?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1038711
 type:         Answer
 tags:         software-recommendation hardware hardware-test conky
-created_date: 2018-05-21 13:37:40
-edit_date:    2020-10-12 02:07:35
-votes:        12
+created_date: !!str "2018-05-21 13:37:40"
+edit_date:    !!str "2020-10-12 02:07:35"
+votes:        !!str "12"
 favorites:    
-views:        27,663
+views:        !!str "27,663"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

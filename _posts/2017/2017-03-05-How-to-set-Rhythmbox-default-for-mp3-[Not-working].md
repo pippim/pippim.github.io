@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to set Rhythmbox default for mp3 [Not working]
+title:        >
+    How to set Rhythmbox default for mp3 [Not working]
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/889857
 type:         Answer
 tags:         rhythmbox music mp3
-created_date: 2017-03-05 15:58:56
-edit_date:    
-votes:        3
+created_date: !!str "2017-03-05 15:58:56"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        1,745
+views:        !!str "1,745"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

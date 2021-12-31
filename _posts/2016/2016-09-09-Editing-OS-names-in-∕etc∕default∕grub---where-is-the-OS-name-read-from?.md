@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Editing OS names in ∕etc∕default∕grub - where is the OS name read from?
+title:        >
+    Editing OS names in ∕etc∕default∕grub - where is the OS name read from?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/822774
 type:         Answer
 tags:         dual-boot grub2
-created_date: 2016-09-09 02:29:40
-edit_date:    2016-09-09 10:55:36
-votes:        2
+created_date: !!str "2016-09-09 02:29:40"
+edit_date:    !!str "2016-09-09 10:55:36"
+votes:        !!str "2"
 favorites:    
-views:        3,916
+views:        !!str "3,916"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

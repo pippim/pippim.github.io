@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I create new "gksu" command based on pkexec?
+title:        >
+    How can I create new "gksu" command based on pkexec?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/847769
 type:         Answer
 tags:         command-line nautilus gedit policykit gksudo grub
-created_date: 2016-11-10 11:49:50
-edit_date:    2016-11-11 00:09:35
-votes:        2
+created_date: !!str "2016-11-10 11:49:50"
+edit_date:    !!str "2016-11-11 00:09:35"
+votes:        !!str "2"
 favorites:    
-views:        617
+views:        !!str "617"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Problem switching to Ubuntu from Windows
+title:        >
+    Problem switching to Ubuntu from Windows
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1310693
 type:         Answer
 tags:         drivers nvidia graphics
-created_date: 2021-01-24 21:16:20
-edit_date:    
-votes:        1
+created_date: !!str "2021-01-24 21:16:20"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        68
+views:        !!str "68"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

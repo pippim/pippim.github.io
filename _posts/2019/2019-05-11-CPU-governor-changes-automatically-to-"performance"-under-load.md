@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        CPU governor changes automatically to "performance" under load
+title:        >
+    CPU governor changes automatically to "performance" under load
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1142294
 type:         Answer
 tags:         xubuntu performance cpu governor
-created_date: 2019-05-11 03:09:43
-edit_date:    
-votes:        2
+created_date: !!str "2019-05-11 03:09:43"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        1,923
+views:        !!str "1,923"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

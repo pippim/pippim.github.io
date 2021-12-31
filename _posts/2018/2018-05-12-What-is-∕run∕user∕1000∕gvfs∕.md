@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is ∕run∕user∕1000∕gvfs∕
+title:        >
+    What is ∕run∕user∕1000∕gvfs∕
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035122
 type:         Answer
 tags:         gvfs mountpoint
-created_date: 2018-05-12 00:11:57
-edit_date:    2020-06-12 14:37:07
-votes:        12
+created_date: !!str "2018-05-12 00:11:57"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "12"
 favorites:    
-views:        16,321
+views:        !!str "16,321"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

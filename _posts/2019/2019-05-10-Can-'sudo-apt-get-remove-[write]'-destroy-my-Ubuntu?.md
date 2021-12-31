@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can 'sudo apt-get remove [write]' destroy my Ubuntu?
+title:        >
+    Can 'sudo apt-get remove [write]' destroy my Ubuntu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1142089
 type:         Answer
 tags:         apt
-created_date: 2019-05-10 11:26:56
-edit_date:    2019-05-11 15:38:28
-votes:        9
+created_date: !!str "2019-05-10 11:26:56"
+edit_date:    !!str "2019-05-11 15:38:28"
+votes:        !!str "9"
 favorites:    
-views:        6,233
+views:        !!str "6,233"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

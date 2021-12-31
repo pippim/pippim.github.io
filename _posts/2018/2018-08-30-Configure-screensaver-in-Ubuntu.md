@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Configure screensaver in Ubuntu
+title:        >
+    Configure screensaver in Ubuntu
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1070684
 type:         Answer
 tags:         configuration screensaver
-created_date: 2018-08-30 23:59:14
-edit_date:    2019-05-22 10:40:26
-votes:        3
+created_date: !!str "2018-08-30 23:59:14"
+edit_date:    !!str "2019-05-22 10:40:26"
+votes:        !!str "3"
 favorites:    
-views:        249,296
+views:        !!str "249,296"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

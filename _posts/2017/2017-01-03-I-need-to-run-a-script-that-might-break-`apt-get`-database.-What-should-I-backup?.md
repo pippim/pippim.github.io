@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I need to run a script that might break `apt-get` database. What should I backup?
+title:        >
+    I need to run a script that might break `apt-get` database. What should I backup?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/867285
 type:         Question
 tags:         apt package-management backup
-created_date: 2017-01-03 02:03:32
-edit_date:    2017-01-03 11:54:51
-votes:        1
+created_date: !!str "2017-01-03 02:03:32"
+edit_date:    !!str "2017-01-03 11:54:51"
+votes:        !!str "1"
 favorites:    2
-views:        419
+views:        !!str "419"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

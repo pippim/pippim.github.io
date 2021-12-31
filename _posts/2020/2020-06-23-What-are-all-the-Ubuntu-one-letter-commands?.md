@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What are all the Ubuntu one letter commands?
+title:        >
+    What are all the Ubuntu one letter commands?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1252962
 type:         Question
 tags:         command-line
-created_date: 2020-06-23 02:27:53
-edit_date:    
-votes:        10
+created_date: !!str "2020-06-23 02:27:53"
+edit_date:    !!str ""
+votes:        !!str "10"
 favorites:    0
-views:        2,955
+views:        !!str "2,955"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Failure to upgrade to 16.04
+title:        >
+    Failure to upgrade to 16.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/811988
 type:         Answer
 tags:         14.04 16.04 upgrade
-created_date: 2016-08-13 23:27:40
-edit_date:    2017-04-13 12:23:18
-votes:        0
+created_date: !!str "2016-08-13 23:27:40"
+edit_date:    !!str "2017-04-13 12:23:18"
+votes:        !!str "0"
 favorites:    
-views:        77
+views:        !!str "77"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

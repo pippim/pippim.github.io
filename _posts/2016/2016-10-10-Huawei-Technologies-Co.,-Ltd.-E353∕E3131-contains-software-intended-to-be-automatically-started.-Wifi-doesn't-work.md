@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Huawei Technologies Co., Ltd. E353∕E3131 contains software intended to be automatically started. Wifi doesn't work
+title:        >
+    Huawei Technologies Co., Ltd. E353∕E3131 contains software intended to be automatically started. Wifi doesn't work
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/835125
 type:         Answer
 tags:         16.04 usb internet
-created_date: 2016-10-10 07:33:19
-edit_date:    2016-10-10 15:17:31
-votes:        3
+created_date: !!str "2016-10-10 07:33:19"
+edit_date:    !!str "2016-10-10 15:17:31"
+votes:        !!str "3"
 favorites:    
-views:        6,923
+views:        !!str "6,923"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

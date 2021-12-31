@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Selected Sound Output Device Not Persisting Between Reboots in gnome-control-center
+title:        >
+    Selected Sound Output Device Not Persisting Between Reboots in gnome-control-center
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1183074
 type:         Answer
 tags:         gnome sound pulseaudio gnome-control-center 19.10
-created_date: 2019-10-22 23:19:51
-edit_date:    
-votes:        6
+created_date: !!str "2019-10-22 23:19:51"
+edit_date:    !!str ""
+votes:        !!str "6"
 favorites:    
-views:        1,826
+views:        !!str "1,826"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

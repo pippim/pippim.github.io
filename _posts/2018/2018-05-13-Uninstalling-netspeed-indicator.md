@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Uninstalling netspeed indicator
+title:        >
+    Uninstalling netspeed indicator
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035723
 type:         Answer
 tags:         uninstall indicator
-created_date: 2018-05-13 14:46:09
-edit_date:    
-votes:        0
+created_date: !!str "2018-05-13 14:46:09"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        1,153
+views:        !!str "1,153"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

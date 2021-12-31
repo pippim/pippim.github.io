@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I stop Ubuntu from asking for my password every time I install something?
+title:        >
+    How do I stop Ubuntu from asking for my password every time I install something?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/852530
 type:         Answer
 tags:         prompt
-created_date: 2016-11-23 04:10:00
-edit_date:    
-votes:        6
+created_date: !!str "2016-11-23 04:10:00"
+edit_date:    !!str ""
+votes:        !!str "6"
 favorites:    
-views:        43,231
+views:        !!str "43,231"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        problem installing sqlite3 using apt-get install
+title:        >
+    problem installing sqlite3 using apt-get install
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157654
 type:         Answer
 tags:         sqlite3
-created_date: 2019-07-11 21:43:30
-edit_date:    
-votes:        0
+created_date: !!str "2019-07-11 21:43:30"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        64
+views:        !!str "64"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to tell which installation guide is legit?
+title:        >
+    How to tell which installation guide is legit?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1087295
 type:         Answer
 tags:         software-installation
-created_date: 2018-10-26 01:42:39
-edit_date:    
-votes:        2
+created_date: !!str "2018-10-26 01:42:39"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        40
+views:        !!str "40"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

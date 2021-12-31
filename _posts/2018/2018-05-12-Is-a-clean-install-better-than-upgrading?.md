@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is a clean install better than upgrading?
+title:        >
+    Is a clean install better than upgrading?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035368
 type:         Answer
 tags:         upgrade system-installation grub
-created_date: 2018-05-12 15:22:51
-edit_date:    
-votes:        11
+created_date: !!str "2018-05-12 15:22:51"
+edit_date:    !!str ""
+votes:        !!str "11"
 favorites:    
-views:        41,151
+views:        !!str "41,151"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

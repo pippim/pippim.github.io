@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Unable to install mailutils
+title:        >
+    Unable to install mailutils
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/887539
 type:         Answer
 tags:         command-line apt mailutils
-created_date: 2017-02-26 16:22:38
-edit_date:    2017-02-26 19:36:49
-votes:        2
+created_date: !!str "2017-02-26 16:22:38"
+edit_date:    !!str "2017-02-26 19:36:49"
+votes:        !!str "2"
 favorites:    
-views:        13,975
+views:        !!str "13,975"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

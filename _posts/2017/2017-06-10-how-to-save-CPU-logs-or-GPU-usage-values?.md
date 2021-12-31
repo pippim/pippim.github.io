@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        how to save CPU logs or GPU usage values?
+title:        >
+    how to save CPU logs or GPU usage values?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/923938
 type:         Answer
 tags:         cpu cpu-load top htop
-created_date: 2017-06-10 02:22:48
-edit_date:    2017-06-14 01:22:11
-votes:        2
+created_date: !!str "2017-06-10 02:22:48"
+edit_date:    !!str "2017-06-14 01:22:11"
+votes:        !!str "2"
 favorites:    
-views:        5,261
+views:        !!str "5,261"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    false

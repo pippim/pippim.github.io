@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I test a shell script in a "safe environment" to avoid harm to my computer?
+title:        >
+    How can I test a shell script in a "safe environment" to avoid harm to my computer?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1141067
 type:         Answer
 tags:         scripts testing safely
-created_date: 2019-05-06 21:52:11
-edit_date:    2020-06-12 14:37:07
-votes:        11
+created_date: !!str "2019-05-06 21:52:11"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "11"
 favorites:    
-views:        7,568
+views:        !!str "7,568"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

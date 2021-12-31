@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to track the total network data in a month
+title:        >
+    How to track the total network data in a month
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/844317
 type:         Answer
 tags:         networking conky monitoring system-monitor vnstat
-created_date: 2016-11-01 17:28:52
-edit_date:    2021-08-05 10:19:27
-votes:        21
+created_date: !!str "2016-11-01 17:28:52"
+edit_date:    !!str "2021-08-05 10:19:27"
+votes:        !!str "21"
 favorites:    
-views:        38,053
+views:        !!str "38,053"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

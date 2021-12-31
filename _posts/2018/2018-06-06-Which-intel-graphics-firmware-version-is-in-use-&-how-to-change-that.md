@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Which intel graphics firmware version is in use & how to change that
+title:        >
+    Which intel graphics firmware version is in use & how to change that
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1044310
 type:         Answer
 tags:         18.04 intel-graphics
-created_date: 2018-06-06 23:12:59
-edit_date:    2018-06-07 00:31:27
-votes:        2
+created_date: !!str "2018-06-06 23:12:59"
+edit_date:    !!str "2018-06-07 00:31:27"
+votes:        !!str "2"
 favorites:    
-views:        4,162
+views:        !!str "4,162"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Where is the output from startup scripts stored in Ubuntu 19.10?
+title:        >
+    Where is the output from startup scripts stored in Ubuntu 19.10?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1202642
 type:         Answer
 tags:         boot startup 19.10 log
-created_date: 2020-01-13 12:51:21
-edit_date:    2020-01-19 14:00:20
-votes:        0
+created_date: !!str "2020-01-13 12:51:21"
+edit_date:    !!str "2020-01-19 14:00:20"
+votes:        !!str "0"
 favorites:    
-views:        2,538
+views:        !!str "2,538"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

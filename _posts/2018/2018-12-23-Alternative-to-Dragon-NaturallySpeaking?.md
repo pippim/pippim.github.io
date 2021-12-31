@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Alternative to Dragon NaturallySpeaking?
+title:        >
+    Alternative to Dragon NaturallySpeaking?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1104075
 type:         Answer
 tags:         software-recommendation alternative speech-recognition
-created_date: 2018-12-23 19:49:39
-edit_date:    2020-06-12 14:37:07
-votes:        6
+created_date: !!str "2018-12-23 19:49:39"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "6"
 favorites:    
-views:        32,438
+views:        !!str "32,438"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Ubuntu changes sound device after suspend, how to fix?
+title:        >
+    Ubuntu changes sound device after suspend, how to fix?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/809849
 type:         Answer
 tags:         sound
-created_date: 2016-08-09 01:05:07
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2016-08-09 01:05:07"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        34,182
+views:        !!str "34,182"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

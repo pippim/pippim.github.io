@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is there a command to get the number of frames in a gif?
+title:        >
+    Is there a command to get the number of frames in a gif?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1027295
 type:         Answer
 tags:         command-line imagemagick image-processing gif
-created_date: 2018-04-23 00:29:47
-edit_date:    2020-06-12 14:37:07
-votes:        9
+created_date: !!str "2018-04-23 00:29:47"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "9"
 favorites:    
-views:        12,148
+views:        !!str "12,148"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

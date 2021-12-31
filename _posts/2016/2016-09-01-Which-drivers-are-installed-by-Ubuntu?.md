@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Which drivers are installed by Ubuntu?
+title:        >
+    Which drivers are installed by Ubuntu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/819407
 type:         Answer
 tags:         drivers system-installation
-created_date: 2016-09-01 02:16:54
-edit_date:    
-votes:        2
+created_date: !!str "2016-09-01 02:16:54"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        59
+views:        !!str "59"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

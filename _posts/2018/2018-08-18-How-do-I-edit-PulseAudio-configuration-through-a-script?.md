@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I edit PulseAudio configuration through a script?
+title:        >
+    How do I edit PulseAudio configuration through a script?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1066655
 type:         Answer
 tags:         command-line sound pulseaudio hdmi
-created_date: 2018-08-18 19:14:50
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2018-08-18 19:14:50"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        2,111
+views:        !!str "2,111"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

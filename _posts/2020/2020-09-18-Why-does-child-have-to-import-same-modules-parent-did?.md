@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why does child have to import same modules parent did?
+title:        >
+    Why does child have to import same modules parent did?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63947893
 type:         Question
 tags:         python python-import
-created_date: 2020-09-18 00:48:06
-edit_date:    2020-09-18 00:51:37
-votes:        0
+created_date: !!str "2020-09-18 00:48:06"
+edit_date:    !!str "2020-09-18 00:51:37"
+votes:        !!str "0"
 favorites:    
-views:        34
+views:        !!str "34"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

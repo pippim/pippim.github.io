@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        hOW TO rEMAP cAPS-LOCK TO cAPS-LOCK ON uBUNTU
+title:        >
+    hOW TO rEMAP cAPS-LOCK TO cAPS-LOCK ON uBUNTU
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1205502
 type:         Answer
 tags:         keyboard shortcut-keys
-created_date: 2020-01-24 20:44:31
-edit_date:    
-votes:        0
+created_date: !!str "2020-01-24 20:44:31"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        371
+views:        !!str "371"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

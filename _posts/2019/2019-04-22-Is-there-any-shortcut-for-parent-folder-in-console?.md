@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is there any shortcut for parent folder in console?
+title:        >
+    Is there any shortcut for parent folder in console?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1136115
 type:         Answer
 tags:         command-line shortcut-keys
-created_date: 2019-04-22 15:41:54
-edit_date:    2019-04-22 15:48:16
-votes:        2
+created_date: !!str "2019-04-22 15:41:54"
+edit_date:    !!str "2019-04-22 15:48:16"
+votes:        !!str "2"
 favorites:    
-views:        418
+views:        !!str "418"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

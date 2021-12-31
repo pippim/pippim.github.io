@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to find out if computer was shut down at a given time?
+title:        >
+    How to find out if computer was shut down at a given time?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840031
 type:         Answer
 tags:         power-management shutdown schedule
-created_date: 2016-10-21 10:45:17
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2016-10-21 10:45:17"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        347
+views:        !!str "347"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

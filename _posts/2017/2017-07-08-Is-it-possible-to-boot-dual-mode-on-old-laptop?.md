@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is it possible to boot dual mode on old laptop?
+title:        >
+    Is it possible to boot dual mode on old laptop?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/933216
 type:         Answer
 tags:         boot dual-boot
-created_date: 2017-07-08 11:12:54
-edit_date:    2020-06-12 14:37:07
-votes:        10
+created_date: !!str "2017-07-08 11:12:54"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "10"
 favorites:    
-views:        1,232
+views:        !!str "1,232"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

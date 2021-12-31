@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Bash script to backup∕clone Ubuntu to another partition
+title:        >
+    Bash script to backup∕clone Ubuntu to another partition
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1028605
 type:         Answer
 tags:         grub2 bash upgrade backup clone
-created_date: 2018-04-27 03:53:41
-edit_date:    2020-06-12 14:37:07
-votes:        28
+created_date: !!str "2018-04-27 03:53:41"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "28"
 favorites:    
-views:        14,669
+views:        !!str "14,669"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

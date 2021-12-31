@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to get a Brother DCP-350C scanner working?
+title:        >
+    How to get a Brother DCP-350C scanner working?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1013560
 type:         Answer
 tags:         drivers scanner brother sane simplescan
-created_date: 2018-03-10 01:49:45
-edit_date:    2018-03-13 23:03:51
-votes:        10
+created_date: !!str "2018-03-10 01:49:45"
+edit_date:    !!str "2018-03-13 23:03:51"
+votes:        !!str "10"
 favorites:    
-views:        5,230
+views:        !!str "5,230"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    false

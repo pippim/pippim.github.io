@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Upgraded to Ubuntu 19.10, cannot boot anymore, boot repair log attached
+title:        >
+    Upgraded to Ubuntu 19.10, cannot boot anymore, boot repair log attached
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1184572
 type:         Answer
 tags:         boot grub2 upgrade initramfs 19.10
-created_date: 2019-10-28 23:23:48
-edit_date:    
-votes:        2
+created_date: !!str "2019-10-28 23:23:48"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        11,805
+views:        !!str "11,805"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

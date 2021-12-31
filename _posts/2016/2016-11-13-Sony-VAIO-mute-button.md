@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Sony VAIO mute button
+title:        >
+    Sony VAIO mute button
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/849129
 type:         Answer
 tags:         vaio sony
-created_date: 2016-11-13 22:15:58
-edit_date:    
-votes:        1
+created_date: !!str "2016-11-13 22:15:58"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        549
+views:        !!str "549"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

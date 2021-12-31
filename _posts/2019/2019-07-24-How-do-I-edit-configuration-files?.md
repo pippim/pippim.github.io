@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I edit configuration files?
+title:        >
+    How do I edit configuration files?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160748
 type:         Answer
 tags:         configuration text-editor editing
-created_date: 2019-07-24 15:58:05
-edit_date:    2019-08-24 21:47:20
-votes:        6
+created_date: !!str "2019-07-24 15:58:05"
+edit_date:    !!str "2019-08-24 21:47:20"
+votes:        !!str "6"
 favorites:    
-views:        7,078
+views:        !!str "7,078"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

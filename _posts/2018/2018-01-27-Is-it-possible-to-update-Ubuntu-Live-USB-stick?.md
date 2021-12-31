@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is it possible to update Ubuntu Live USB stick?
+title:        >
+    Is it possible to update Ubuntu Live USB stick?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1000274
 type:         Answer
 tags:         networking dual-boot system-installation live-usb live-cd
-created_date: 2018-01-27 04:20:11
-edit_date:    
-votes:        2
+created_date: !!str "2018-01-27 04:20:11"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        5,134
+views:        !!str "5,134"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

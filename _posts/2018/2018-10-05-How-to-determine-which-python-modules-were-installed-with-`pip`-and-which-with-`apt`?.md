@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to determine which python modules were installed with `pip` and which with `apt`?
+title:        >
+    How to determine which python modules were installed with `pip` and which with `apt`?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1081040
 type:         Answer
 tags:         apt package-management software-installation updates python
-created_date: 2018-10-05 01:19:26
-edit_date:    
-votes:        2
+created_date: !!str "2018-10-05 01:19:26"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        1,963
+views:        !!str "1,963"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

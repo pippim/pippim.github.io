@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Print screen key opens default browser on Kubuntu. How to fix?
+title:        >
+    Print screen key opens default browser on Kubuntu. How to fix?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1011841
 type:         Answer
 tags:         kubuntu 17.10 plasma-5 ksnapshot
-created_date: 2018-03-04 17:13:35
-edit_date:    
-votes:        4
+created_date: !!str "2018-03-04 17:13:35"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        174
+views:        !!str "174"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

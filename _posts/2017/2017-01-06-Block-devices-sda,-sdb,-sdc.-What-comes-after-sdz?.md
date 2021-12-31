@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Block devices sda, sdb, sdc. What comes after sdz?
+title:        >
+    Block devices sda, sdb, sdc. What comes after sdz?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/868688
 type:         Answer
 tags:         kernel hard-drive
-created_date: 2017-01-06 11:53:34
-edit_date:    
-votes:        3
+created_date: !!str "2017-01-06 11:53:34"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        7,896
+views:        !!str "7,896"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

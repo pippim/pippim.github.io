@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why is ls -R called "recursive" listing?
+title:        >
+    Why is ls -R called "recursive" listing?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/875471
 type:         Answer
 tags:         command-line ls
-created_date: 2017-01-24 01:07:07
-edit_date:    
-votes:        7
+created_date: !!str "2017-01-24 01:07:07"
+edit_date:    !!str ""
+votes:        !!str "7"
 favorites:    
-views:        21,691
+views:        !!str "21,691"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

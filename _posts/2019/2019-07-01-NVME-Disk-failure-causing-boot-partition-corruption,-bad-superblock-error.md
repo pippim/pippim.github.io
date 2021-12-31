@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        NVME Disk failure causing boot partition corruption, bad-superblock error
+title:        >
+    NVME Disk failure causing boot partition corruption, bad-superblock error
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1155268
 type:         Answer
 tags:         boot grub2 partitioning nvme
-created_date: 2019-07-01 17:34:17
-edit_date:    2019-07-01 18:03:49
-votes:        2
+created_date: !!str "2019-07-01 17:34:17"
+edit_date:    !!str "2019-07-01 18:03:49"
+votes:        !!str "2"
 favorites:    
-views:        1,763
+views:        !!str "1,763"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

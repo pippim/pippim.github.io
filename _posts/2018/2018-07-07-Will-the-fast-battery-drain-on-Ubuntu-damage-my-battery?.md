@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Will the fast battery drain on Ubuntu damage my battery?
+title:        >
+    Will the fast battery drain on Ubuntu damage my battery?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1052878
 type:         Answer
 tags:         battery
-created_date: 2018-07-07 03:36:51
-edit_date:    
-votes:        0
+created_date: !!str "2018-07-07 03:36:51"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        1,266
+views:        !!str "1,266"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

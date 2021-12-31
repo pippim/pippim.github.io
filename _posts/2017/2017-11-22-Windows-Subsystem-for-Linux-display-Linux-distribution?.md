@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Windows Subsystem for Linux display Linux distribution?
+title:        >
+    Windows Subsystem for Linux display Linux distribution?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/978978
 type:         Answer
 tags:         command-line windows-subsystem-for-linux ascii
-created_date: 2017-11-22 03:00:29
-edit_date:    2018-04-01 17:18:58
-votes:        7
+created_date: !!str "2017-11-22 03:00:29"
+edit_date:    !!str "2018-04-01 17:18:58"
+votes:        !!str "7"
 favorites:    
-views:        3,754
+views:        !!str "3,754"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

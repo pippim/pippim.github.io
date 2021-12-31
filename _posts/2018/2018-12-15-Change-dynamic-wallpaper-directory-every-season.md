@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Change dynamic wallpaper directory every season
+title:        >
+    Change dynamic wallpaper directory every season
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1102084
 type:         Answer
 tags:         scripts wallpaper
-created_date: 2018-12-15 14:24:49
-edit_date:    2018-12-15 17:59:42
-votes:        3
+created_date: !!str "2018-12-15 14:24:49"
+edit_date:    !!str "2018-12-15 17:59:42"
+votes:        !!str "3"
 favorites:    
-views:        862
+views:        !!str "862"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

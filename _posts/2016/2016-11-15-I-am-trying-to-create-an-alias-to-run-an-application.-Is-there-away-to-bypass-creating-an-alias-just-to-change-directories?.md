@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I am trying to create an alias to run an application. Is there away to bypass creating an alias just to change directories?
+title:        >
+    I am trying to create an alias to run an application. Is there away to bypass creating an alias just to change directories?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/849690
 type:         Answer
 tags:         command-line bash alias
-created_date: 2016-11-15 11:37:47
-edit_date:    2016-11-15 12:59:57
-votes:        2
+created_date: !!str "2016-11-15 11:37:47"
+edit_date:    !!str "2016-11-15 12:59:57"
+votes:        !!str "2"
 favorites:    
-views:        83
+views:        !!str "83"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

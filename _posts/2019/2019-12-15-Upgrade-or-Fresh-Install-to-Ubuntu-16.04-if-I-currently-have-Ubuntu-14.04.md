@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Upgrade or Fresh Install to Ubuntu 16.04 if I currently have Ubuntu 14.04
+title:        >
+    Upgrade or Fresh Install to Ubuntu 16.04 if I currently have Ubuntu 14.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1196392
 type:         Answer
 tags:         14.04 16.04 upgrade
-created_date: 2019-12-15 19:02:15
-edit_date:    2020-06-12 14:37:07
-votes:        5
+created_date: !!str "2019-12-15 19:02:15"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "5"
 favorites:    
-views:        834
+views:        !!str "834"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

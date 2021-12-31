@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Sleep & Wakeup Schedule | Ubuntu 16.04.3 LTS
+title:        >
+    Sleep & Wakeup Schedule | Ubuntu 16.04.3 LTS
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1012051
 type:         Answer
 tags:         suspend cron rtc
-created_date: 2018-03-05 11:50:48
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2018-03-05 11:50:48"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        11,638
+views:        !!str "11,638"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

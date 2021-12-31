@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        List of file types and default Ubuntu applications to open with
+title:        >
+    List of file types and default Ubuntu applications to open with
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/912370
 type:         Question
 tags:         bash files default-programs mime-type yad
-created_date: 2017-05-06 01:28:22
-edit_date:    2017-05-07 00:26:33
-votes:        1
+created_date: !!str "2017-05-06 01:28:22"
+edit_date:    !!str "2017-05-07 00:26:33"
+votes:        !!str "1"
 favorites:    
-views:        1,137
+views:        !!str "1,137"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

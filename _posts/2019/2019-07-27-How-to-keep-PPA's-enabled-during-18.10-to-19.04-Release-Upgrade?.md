@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to keep PPA's enabled during 18.10 to 19.04 Release Upgrade?
+title:        >
+    How to keep PPA's enabled during 18.10 to 19.04 Release Upgrade?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161520
 type:         Answer
 tags:         do-release-upgrade
-created_date: 2019-07-27 18:20:57
-edit_date:    2019-07-28 02:41:27
-votes:        2
+created_date: !!str "2019-07-27 18:20:57"
+edit_date:    !!str "2019-07-28 02:41:27"
+votes:        !!str "2"
 favorites:    
-views:        79
+views:        !!str "79"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

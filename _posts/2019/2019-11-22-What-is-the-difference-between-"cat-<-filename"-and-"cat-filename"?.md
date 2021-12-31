@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the difference between "cat < filename" and "cat filename"?
+title:        >
+    What is the difference between "cat < filename" and "cat filename"?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1190733
 type:         Answer
 tags:         command-line redirect cat
-created_date: 2019-11-22 00:03:29
-edit_date:    2019-12-12 01:01:10
-votes:        14
+created_date: !!str "2019-11-22 00:03:29"
+edit_date:    !!str "2019-12-12 01:01:10"
+votes:        !!str "14"
 favorites:    
-views:        10,233
+views:        !!str "10,233"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

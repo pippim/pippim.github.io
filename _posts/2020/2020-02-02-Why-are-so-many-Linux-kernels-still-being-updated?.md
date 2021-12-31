@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why are so many Linux kernels still being updated?
+title:        >
+    Why are so many Linux kernels still being updated?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1207540
 type:         Answer
 tags:         kernel
-created_date: 2020-02-02 12:49:19
-edit_date:    
-votes:        4
+created_date: !!str "2020-02-02 12:49:19"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        1,336
+views:        !!str "1,336"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

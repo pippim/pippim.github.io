@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Does someone other than Canonical provide paid support for Ubuntu?
+title:        >
+    Does someone other than Canonical provide paid support for Ubuntu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/914154
 type:         Answer
 tags:         support
-created_date: 2017-05-11 15:00:17
-edit_date:    2017-05-12 23:07:52
-votes:        6
+created_date: !!str "2017-05-11 15:00:17"
+edit_date:    !!str "2017-05-12 23:07:52"
+votes:        !!str "6"
 favorites:    
-views:        1,483
+views:        !!str "1,483"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Toshiba Satellite FN key animation
+title:        >
+    Toshiba Satellite FN key animation
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821894
 type:         Answer
 tags:         16.04 gui toshiba-satellite
-created_date: 2016-09-06 23:57:03
-edit_date:    
-votes:        1
+created_date: !!str "2016-09-06 23:57:03"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        986
+views:        !!str "986"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

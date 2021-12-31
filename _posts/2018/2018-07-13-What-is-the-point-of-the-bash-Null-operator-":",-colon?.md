@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the point of the bash Null-operator ":", colon?
+title:        >
+    What is the point of the bash Null-operator ":", colon?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1054677
 type:         Answer
 tags:         bash scripts syntax
-created_date: 2018-07-13 01:57:37
-edit_date:    2018-07-13 02:16:03
-votes:        3
+created_date: !!str "2018-07-13 01:57:37"
+edit_date:    !!str "2018-07-13 02:16:03"
+votes:        !!str "3"
 favorites:    
-views:        9,411
+views:        !!str "9,411"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

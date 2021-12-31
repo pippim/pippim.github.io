@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can PPAs be removed using GUI?
+title:        >
+    How can PPAs be removed using GUI?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1002996
 type:         Answer
 tags:         apt ppa gui software-sources
-created_date: 2018-02-04 16:56:48
-edit_date:    2020-06-12 14:37:07
-votes:        15
+created_date: !!str "2018-02-04 16:56:48"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "15"
 favorites:    
-views:        1,319
+views:        !!str "1,319"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

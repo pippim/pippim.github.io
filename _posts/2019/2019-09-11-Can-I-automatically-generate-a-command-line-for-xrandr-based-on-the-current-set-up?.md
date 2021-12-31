@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I automatically generate a command-line for xrandr based on the current set-up?
+title:        >
+    Can I automatically generate a command-line for xrandr based on the current set-up?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1173410
 type:         Answer
 tags:         xrandr
-created_date: 2019-09-11 11:20:30
-edit_date:    
-votes:        3
+created_date: !!str "2019-09-11 11:20:30"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        504
+views:        !!str "504"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

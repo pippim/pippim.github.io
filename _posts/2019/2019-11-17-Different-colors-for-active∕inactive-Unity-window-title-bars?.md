@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Different colors for active∕inactive Unity window title bars?
+title:        >
+    Different colors for active∕inactive Unity window title bars?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1189575
 type:         Answer
 tags:         unity themes window colors
-created_date: 2019-11-17 16:53:51
-edit_date:    2019-11-20 00:56:28
-votes:        4
+created_date: !!str "2019-11-17 16:53:51"
+edit_date:    !!str "2019-11-20 00:56:28"
+votes:        !!str "4"
 favorites:    
-views:        949
+views:        !!str "949"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

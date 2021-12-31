@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I've deleted all initramfs files (like an idiot) How to restore them?
+title:        >
+    I've deleted all initramfs files (like an idiot) How to restore them?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1312597
 type:         Answer
 tags:         boot kernel initramfs grub
-created_date: 2021-02-01 03:25:48
-edit_date:    
-votes:        2
+created_date: !!str "2021-02-01 03:25:48"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        277
+views:        !!str "277"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

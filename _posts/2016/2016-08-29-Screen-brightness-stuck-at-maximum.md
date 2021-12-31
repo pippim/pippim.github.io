@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Screen brightness stuck at maximum
+title:        >
+    Screen brightness stuck at maximum
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/818175
 type:         Answer
 tags:         screen brightness grub
-created_date: 2016-08-29 11:00:36
-edit_date:    
-votes:        0
+created_date: !!str "2016-08-29 11:00:36"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        742
+views:        !!str "742"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

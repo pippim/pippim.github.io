@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Prevent sleep∕suspend when not logged in to a specific account
+title:        >
+    Prevent sleep∕suspend when not logged in to a specific account
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1132068
 type:         Answer
 tags:         18.04 suspend power-management hibernate
-created_date: 2019-04-08 08:19:26
-edit_date:    2020-06-12 14:37:07
-votes:        11
+created_date: !!str "2019-04-08 08:19:26"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "11"
 favorites:    
-views:        7,245
+views:        !!str "7,245"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

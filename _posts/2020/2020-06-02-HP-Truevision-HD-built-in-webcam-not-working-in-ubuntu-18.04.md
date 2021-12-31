@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        HP Truevision HD built-in webcam not working in ubuntu 18.04
+title:        >
+    HP Truevision HD built-in webcam not working in ubuntu 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1245950
 type:         Answer
 tags:         drivers 18.04 hp webcam camera
-created_date: 2020-06-02 00:17:28
-edit_date:    
-votes:        2
+created_date: !!str "2020-06-02 00:17:28"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        8,075
+views:        !!str "8,075"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

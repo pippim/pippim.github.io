@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What does the indicator icon with three dots over a power plug mean in Ubuntu 20.04?
+title:        >
+    What does the indicator icon with three dots over a power plug mean in Ubuntu 20.04?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1270227
 type:         Answer
 tags:         dell 20.04 gnome-shell indicator docking
-created_date: 2020-08-26 11:02:45
-edit_date:    2020-08-26 22:41:40
-votes:        4
+created_date: !!str "2020-08-26 11:02:45"
+edit_date:    !!str "2020-08-26 22:41:40"
+votes:        !!str "4"
 favorites:    
-views:        1,764
+views:        !!str "1,764"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

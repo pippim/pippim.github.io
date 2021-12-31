@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Dedicated GPU increases idling temps
+title:        >
+    Dedicated GPU increases idling temps
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1188198
 type:         Answer
 tags:         drivers conky
-created_date: 2019-11-12 15:28:31
-edit_date:    
-votes:        2
+created_date: !!str "2019-11-12 15:28:31"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        229
+views:        !!str "229"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

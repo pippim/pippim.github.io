@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Libinput: Change Touchpad 2 finger and 3 finger clicks
+title:        >
+    Libinput: Change Touchpad 2 finger and 3 finger clicks
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/999704
 type:         Answer
 tags:         touchpad hardware synaptics libinput
-created_date: 2018-01-25 11:41:13
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2018-01-25 11:41:13"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        4,770
+views:        !!str "4,770"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

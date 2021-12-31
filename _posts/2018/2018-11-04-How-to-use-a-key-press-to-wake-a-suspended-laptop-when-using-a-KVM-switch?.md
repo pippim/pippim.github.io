@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to use a key press to wake a suspended laptop when using a KVM switch?
+title:        >
+    How to use a key press to wake a suspended laptop when using a KVM switch?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1089840
 type:         Answer
 tags:         laptop wakeup lid kvm-switch
-created_date: 2018-11-04 00:33:56
-edit_date:    2018-11-04 15:41:57
-votes:        3
+created_date: !!str "2018-11-04 00:33:56"
+edit_date:    !!str "2018-11-04 15:41:57"
+votes:        !!str "3"
 favorites:    
-views:        4,856
+views:        !!str "4,856"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    false

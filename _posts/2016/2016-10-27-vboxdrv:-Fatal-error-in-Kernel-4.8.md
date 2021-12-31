@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        vboxdrv: Fatal error in Kernel 4.8
+title:        >
+    vboxdrv: Fatal error in Kernel 4.8
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/842626
 type:         Answer
 tags:         kernel virtualbox virtualization
-created_date: 2016-10-27 23:17:02
-edit_date:    2017-04-13 12:25:11
-votes:        1
+created_date: !!str "2016-10-27 23:17:02"
+edit_date:    !!str "2017-04-13 12:25:11"
+votes:        !!str "1"
 favorites:    
-views:        647
+views:        !!str "647"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

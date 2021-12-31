@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Freeze after computer suspends for the first time in a session
+title:        >
+    Freeze after computer suspends for the first time in a session
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/940520
 type:         Answer
 tags:         suspend
-created_date: 2017-07-28 01:37:58
-edit_date:    
-votes:        0
+created_date: !!str "2017-07-28 01:37:58"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        93
+views:        !!str "93"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

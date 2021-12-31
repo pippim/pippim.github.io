@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to diagnose Software Updater issue? It just pops up a window with no content
+title:        >
+    How to diagnose Software Updater issue? It just pops up a window with no content
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1193304
 type:         Answer
 tags:         update-manager
-created_date: 2019-12-02 20:44:38
-edit_date:    
-votes:        1
+created_date: !!str "2019-12-02 20:44:38"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        30
+views:        !!str "30"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

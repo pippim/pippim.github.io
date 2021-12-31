@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I prevent my display from turning off when screen is locked?
+title:        >
+    How do I prevent my display from turning off when screen is locked?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/891090
 type:         Answer
 tags:         power-management 16.10 lock-screen
-created_date: 2017-03-09 01:54:03
-edit_date:    2018-02-21 01:02:10
-votes:        2
+created_date: !!str "2017-03-09 01:54:03"
+edit_date:    !!str "2018-02-21 01:02:10"
+votes:        !!str "2"
 favorites:    
-views:        2,062
+views:        !!str "2,062"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

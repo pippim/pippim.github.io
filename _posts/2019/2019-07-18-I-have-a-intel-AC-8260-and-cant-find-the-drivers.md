@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I have a intel AC 8260 and cant find the drivers
+title:        >
+    I have a intel AC 8260 and cant find the drivers
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159338
 type:         Answer
 tags:         drivers nic
-created_date: 2019-07-18 22:31:57
-edit_date:    
-votes:        1
+created_date: !!str "2019-07-18 22:31:57"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        807
+views:        !!str "807"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I restrict my kids' computing time?
+title:        >
+    How do I restrict my kids' computing time?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018106
 type:         Answer
 tags:         software-recommendation bash parental-controls
-created_date: 2018-03-22 01:06:16
-edit_date:    2021-12-04 21:51:58
-votes:        2
+created_date: !!str "2018-03-22 01:06:16"
+edit_date:    !!str "2021-12-04 21:51:58"
+votes:        !!str "2"
 favorites:    
-views:        58,747
+views:        !!str "58,747"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

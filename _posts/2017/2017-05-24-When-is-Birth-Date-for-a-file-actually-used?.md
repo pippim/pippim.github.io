@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        When is Birth Date for a file actually used?
+title:        >
+    When is Birth Date for a file actually used?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/918300
 type:         Question
 tags:         command-line stat
-created_date: 2017-05-24 03:01:14
-edit_date:    2017-05-24 03:59:08
-votes:        13
+created_date: !!str "2017-05-24 03:01:14"
+edit_date:    !!str "2017-05-24 03:59:08"
+votes:        !!str "13"
 favorites:    1
-views:        7,197
+views:        !!str "7,197"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

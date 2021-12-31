@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Exact Copy (Backup) of Full Directory Tree To External (Backup) Drive
+title:        >
+    Exact Copy (Backup) of Full Directory Tree To External (Backup) Drive
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032562
 type:         Answer
 tags:         hard-drive backup external-hdd
-created_date: 2018-05-05 22:13:26
-edit_date:    
-votes:        5
+created_date: !!str "2018-05-05 22:13:26"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        388
+views:        !!str "388"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

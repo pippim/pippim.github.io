@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Boot options not appearing after Esc and all F## keys held when powering up laptop
+title:        >
+    Boot options not appearing after Esc and all F## keys held when powering up laptop
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1305982
 type:         Answer
 tags:         boot 20.04 uefi bios canonical-livepatch
-created_date: 2021-01-08 00:35:32
-edit_date:    
-votes:        0
+created_date: !!str "2021-01-08 00:35:32"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        357
+views:        !!str "357"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

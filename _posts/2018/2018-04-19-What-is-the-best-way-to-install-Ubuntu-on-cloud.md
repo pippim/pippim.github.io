@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the best way to install Ubuntu on cloud
+title:        >
+    What is the best way to install Ubuntu on cloud
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1026264
 type:         Answer
 tags:         virtualbox virtualization cloud virtual-console
-created_date: 2018-04-19 03:31:57
-edit_date:    2018-04-21 22:46:43
-votes:        1
+created_date: !!str "2018-04-19 03:31:57"
+edit_date:    !!str "2018-04-21 22:46:43"
+votes:        !!str "1"
 favorites:    
-views:        178
+views:        !!str "178"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

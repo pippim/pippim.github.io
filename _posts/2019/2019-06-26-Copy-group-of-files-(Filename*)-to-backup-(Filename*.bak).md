@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Copy group of files (Filename*) to backup (Filename*.bak)
+title:        >
+    Copy group of files (Filename*) to backup (Filename*.bak)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1153995
 type:         Answer
 tags:         command-line cp ms-dos
-created_date: 2019-06-26 00:44:37
-edit_date:    2019-06-27 23:20:51
-votes:        4
+created_date: !!str "2019-06-26 00:44:37"
+edit_date:    !!str "2019-06-27 23:20:51"
+votes:        !!str "4"
 favorites:    
-views:        6,809
+views:        !!str "6,809"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Battery Charged at 97%
+title:        >
+    Battery Charged at 97%
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821880
 type:         Answer
 tags:         battery
-created_date: 2016-09-06 23:05:23
-edit_date:    
-votes:        3
+created_date: !!str "2016-09-06 23:05:23"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        7,966
+views:        !!str "7,966"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

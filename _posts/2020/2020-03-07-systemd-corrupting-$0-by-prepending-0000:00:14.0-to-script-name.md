@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        systemd corrupting $0 by prepending 0000:00:14.0 to script name
+title:        >
+    systemd corrupting $0 by prepending 0000:00:14.0 to script name
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/571712
 type:         Answer
 tags:         bash systemd suspend
-created_date: 2020-03-07 20:03:28
-edit_date:    2020-06-11 14:16:50
-votes:        1
+created_date: !!str "2020-03-07 20:03:28"
+edit_date:    !!str "2020-06-11 14:16:50"
+votes:        !!str "1"
 favorites:    
-views:        52
+views:        !!str "52"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        No Audio Over HDMI on NVIDIA GeForce GTX 1050 Ti
+title:        >
+    No Audio Over HDMI on NVIDIA GeForce GTX 1050 Ti
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1062956
 type:         Answer
 tags:         drivers nvidia 17.10 nvidia-optimus nvidia-prime
-created_date: 2018-08-06 17:28:18
-edit_date:    2018-09-26 01:07:31
-votes:        2
+created_date: !!str "2018-08-06 17:28:18"
+edit_date:    !!str "2018-09-26 01:07:31"
+votes:        !!str "2"
 favorites:    
-views:        7,042
+views:        !!str "7,042"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the difference between graphics drivers in the kernel, and graphics drivers for Xorg?
+title:        >
+    What is the difference between graphics drivers in the kernel, and graphics drivers for Xorg?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1009652
 type:         Answer
 tags:         drivers nvidia kernel xorg nouveau
-created_date: 2018-02-25 15:49:05
-edit_date:    2018-02-25 17:28:45
-votes:        4
+created_date: !!str "2018-02-25 15:49:05"
+edit_date:    !!str "2018-02-25 17:28:45"
+votes:        !!str "4"
 favorites:    
-views:        1,807
+views:        !!str "1,807"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

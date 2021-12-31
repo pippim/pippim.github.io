@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What system monitoring tools are available?
+title:        >
+    What system monitoring tools are available?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1033381
 type:         Answer
 tags:         command-line software-recommendation gui system monitoring conky
-created_date: 2018-05-08 02:27:12
-edit_date:    
-votes:        2
+created_date: !!str "2018-05-08 02:27:12"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        327,553
+views:        !!str "327,553"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

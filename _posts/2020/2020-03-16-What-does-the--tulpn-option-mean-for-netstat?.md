@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What does the -tulpn option mean for netstat?
+title:        >
+    What does the -tulpn option mean for netstat?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1217526
 type:         Answer
 tags:         netstat
-created_date: 2020-03-16 10:36:01
-edit_date:    2020-03-16 10:48:00
-votes:        4
+created_date: !!str "2020-03-16 10:36:01"
+edit_date:    !!str "2020-03-16 10:48:00"
+votes:        !!str "4"
 favorites:    
-views:        14,951
+views:        !!str "14,951"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

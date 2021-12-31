@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Does Ubuntu have a "device manager" equivalent? And what is an easy way to access USB drives?
+title:        >
+    Does Ubuntu have a "device manager" equivalent? And what is an easy way to access USB drives?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/887314
 type:         Answer
 tags:         hard-drive
-created_date: 2017-02-25 23:02:23
-edit_date:    2017-05-26 17:20:04
-votes:        57
+created_date: !!str "2017-02-25 23:02:23"
+edit_date:    !!str "2017-05-26 17:20:04"
+votes:        !!str "57"
 favorites:    
-views:        148,960
+views:        !!str "148,960"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

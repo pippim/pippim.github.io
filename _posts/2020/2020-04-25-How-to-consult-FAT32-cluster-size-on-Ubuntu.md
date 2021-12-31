@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to consult FAT32 cluster size on Ubuntu
+title:        >
+    How to consult FAT32 cluster size on Ubuntu
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1231102
 type:         Answer
 tags:         format sd-card fat32
-created_date: 2020-04-25 22:52:55
-edit_date:    2020-04-25 23:29:42
-votes:        4
+created_date: !!str "2020-04-25 22:52:55"
+edit_date:    !!str "2020-04-25 23:29:42"
+votes:        !!str "4"
 favorites:    
-views:        2,825
+views:        !!str "2,825"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

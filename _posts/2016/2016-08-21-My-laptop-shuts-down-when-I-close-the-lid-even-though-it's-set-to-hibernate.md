@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        My laptop shuts down when I close the lid even though it's set to hibernate
+title:        >
+    My laptop shuts down when I close the lid even though it's set to hibernate
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/815134
 type:         Answer
 tags:         suspend laptop power-management shutdown hibernate grub
-created_date: 2016-08-21 23:55:05
-edit_date:    2020-06-12 14:37:07
-votes:        6
+created_date: !!str "2016-08-21 23:55:05"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "6"
 favorites:    
-views:        7,314
+views:        !!str "7,314"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

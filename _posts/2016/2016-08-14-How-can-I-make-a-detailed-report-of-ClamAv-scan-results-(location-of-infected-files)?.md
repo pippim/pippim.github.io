@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I make a detailed report of ClamAv scan results (location of infected files)?
+title:        >
+    How can I make a detailed report of ClamAv scan results (location of infected files)?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/812345
 type:         Answer
 tags:         security scanner log malware clamav
-created_date: 2016-08-14 23:59:43
-edit_date:    2016-08-16 13:50:31
-votes:        6
+created_date: !!str "2016-08-14 23:59:43"
+edit_date:    !!str "2016-08-16 13:50:31"
+votes:        !!str "6"
 favorites:    
-views:        29,792
+views:        !!str "29,792"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

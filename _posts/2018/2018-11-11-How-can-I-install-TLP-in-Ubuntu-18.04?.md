@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I install TLP in Ubuntu 18.04?
+title:        >
+    How can I install TLP in Ubuntu 18.04?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1091962
 type:         Answer
 tags:         apt package-management tlp
-created_date: 2018-11-11 14:47:09
-edit_date:    2018-12-29 06:11:21
-votes:        19
+created_date: !!str "2018-11-11 14:47:09"
+edit_date:    !!str "2018-12-29 06:11:21"
+votes:        !!str "19"
 favorites:    
-views:        20,950
+views:        !!str "20,950"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

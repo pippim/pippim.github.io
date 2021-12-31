@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Desktop icons on left screen go down into black hole
+title:        >
+    Desktop icons on left screen go down into black hole
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1147993
 type:         Answer
 tags:         bash multiple-monitors desktop-environments window-manager desktop-icons iconic
-created_date: 2019-06-02 03:01:03
-edit_date:    2020-06-12 14:37:07
-votes:        0
+created_date: !!str "2019-06-02 03:01:03"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "0"
 favorites:    
-views:        414
+views:        !!str "414"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

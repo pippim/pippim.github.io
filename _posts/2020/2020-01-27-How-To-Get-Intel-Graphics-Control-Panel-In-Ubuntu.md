@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How To Get Intel Graphics Control Panel In Ubuntu
+title:        >
+    How To Get Intel Graphics Control Panel In Ubuntu
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1206088
 type:         Answer
 tags:         graphics intel-graphics intel
-created_date: 2020-01-27 12:47:43
-edit_date:    
-votes:        2
+created_date: !!str "2020-01-27 12:47:43"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        8,298
+views:        !!str "8,298"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

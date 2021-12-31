@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Ubuntu does not output monitor's native resolution over HDMI (W10 does)
+title:        >
+    Ubuntu does not output monitor's native resolution over HDMI (W10 does)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1245034
 type:         Answer
 tags:         display hdmi display-resolution
-created_date: 2020-05-30 00:18:31
-edit_date:    
-votes:        1
+created_date: !!str "2020-05-30 00:18:31"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        842
+views:        !!str "842"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

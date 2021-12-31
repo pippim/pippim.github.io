@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Poor battery life and performance due to incorrect CPU frequency scaling
+title:        >
+    Poor battery life and performance due to incorrect CPU frequency scaling
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1072579
 type:         Answer
 tags:         power-management battery cpu
-created_date: 2018-09-06 01:01:14
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2018-09-06 01:01:14"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        1,105
+views:        !!str "1,105"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

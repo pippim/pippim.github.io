@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Expand Python Tkinter Object Types
+title:        >
+    Expand Python Tkinter Object Types
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/67813663
 type:         Question
 tags:         python tkinter object-tag object-type s3-object-tagging
-created_date: 2021-06-02 23:24:11
-edit_date:    
-votes:        0
+created_date: !!str "2021-06-02 23:24:11"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        79
+views:        !!str "79"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

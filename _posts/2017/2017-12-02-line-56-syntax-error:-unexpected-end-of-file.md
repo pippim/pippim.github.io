@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        line 56 syntax error: unexpected end of file
+title:        >
+    line 56 syntax error: unexpected end of file
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/982586
 type:         Answer
 tags:         bash syntax
-created_date: 2017-12-02 22:53:32
-edit_date:    2017-12-05 11:22:38
-votes:        3
+created_date: !!str "2017-12-02 22:53:32"
+edit_date:    !!str "2017-12-05 11:22:38"
+votes:        !!str "3"
 favorites:    
-views:        1,824
+views:        !!str "1,824"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

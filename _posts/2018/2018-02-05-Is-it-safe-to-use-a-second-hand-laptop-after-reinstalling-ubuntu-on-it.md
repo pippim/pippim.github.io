@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is it safe to use a second hand laptop after reinstalling ubuntu on it
+title:        >
+    Is it safe to use a second hand laptop after reinstalling ubuntu on it
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1003115
 type:         Answer
 tags:         system-installation security
-created_date: 2018-02-05 01:59:29
-edit_date:    2020-06-12 14:37:07
-votes:        49
+created_date: !!str "2018-02-05 01:59:29"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "49"
 favorites:    
-views:        11,132
+views:        !!str "11,132"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

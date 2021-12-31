@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Questions about Ubuntu 18.04 LTS Install ∕ partition sizing on SSD ∕ HDD system
+title:        >
+    Questions about Ubuntu 18.04 LTS Install ∕ partition sizing on SSD ∕ HDD system
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159345
 type:         Answer
 tags:         dual-boot 18.04 partitioning ssd
-created_date: 2019-07-18 23:40:08
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2019-07-18 23:40:08"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        1,006
+views:        !!str "1,006"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

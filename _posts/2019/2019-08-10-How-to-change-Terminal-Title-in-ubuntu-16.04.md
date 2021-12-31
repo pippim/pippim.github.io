@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to change Terminal Title in ubuntu 16.04
+title:        >
+    How to change Terminal Title in ubuntu 16.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1164870
 type:         Answer
 tags:         command-line bash 16.04
-created_date: 2019-08-10 23:13:16
-edit_date:    2019-08-11 00:24:52
-votes:        2
+created_date: !!str "2019-08-10 23:13:16"
+edit_date:    !!str "2019-08-11 00:24:52"
+votes:        !!str "2"
 favorites:    
-views:        34,502
+views:        !!str "34,502"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

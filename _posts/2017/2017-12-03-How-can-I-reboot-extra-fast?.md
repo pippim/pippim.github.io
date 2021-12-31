@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I reboot extra fast?
+title:        >
+    How can I reboot extra fast?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/982797
 type:         Answer
 tags:         boot grub2 uefi login reboot yad
-created_date: 2017-12-03 17:37:58
-edit_date:    2017-12-05 04:56:25
-votes:        3
+created_date: !!str "2017-12-03 17:37:58"
+edit_date:    !!str "2017-12-05 04:56:25"
+votes:        !!str "3"
 favorites:    
-views:        6,032
+views:        !!str "6,032"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    false

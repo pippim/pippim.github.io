@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Unable to read files between two distros
+title:        >
+    Unable to read files between two distros
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1034746
 type:         Answer
 tags:         dual-boot partitioning mount gparted
-created_date: 2018-05-11 03:31:29
-edit_date:    2018-05-12 02:22:49
-votes:        2
+created_date: !!str "2018-05-11 03:31:29"
+edit_date:    !!str "2018-05-12 02:22:49"
+votes:        !!str "2"
 favorites:    
-views:        247
+views:        !!str "247"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

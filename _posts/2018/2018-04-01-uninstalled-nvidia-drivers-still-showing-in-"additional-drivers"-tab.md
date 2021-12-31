@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        uninstalled nvidia drivers still showing in "additional drivers" tab
+title:        >
+    uninstalled nvidia drivers still showing in "additional drivers" tab
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021116
 type:         Answer
 tags:         drivers nvidia purge
-created_date: 2018-04-01 18:30:06
-edit_date:    
-votes:        0
+created_date: !!str "2018-04-01 18:30:06"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        161
+views:        !!str "161"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

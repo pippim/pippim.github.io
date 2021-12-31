@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why is running Wine with sudo dangerous?
+title:        >
+    Why is running Wine with sudo dangerous?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/947935
 type:         Answer
 tags:         permissions wine sudo root
-created_date: 2017-08-20 00:27:41
-edit_date:    
-votes:        3
+created_date: !!str "2017-08-20 00:27:41"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        5,292
+views:        !!str "5,292"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

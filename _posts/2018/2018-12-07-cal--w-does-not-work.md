@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        cal -w does not work
+title:        >
+    cal -w does not work
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1099211
 type:         Answer
 tags:         command-line calendar
-created_date: 2018-12-07 16:00:05
-edit_date:    
-votes:        0
+created_date: !!str "2018-12-07 16:00:05"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        722
+views:        !!str "722"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

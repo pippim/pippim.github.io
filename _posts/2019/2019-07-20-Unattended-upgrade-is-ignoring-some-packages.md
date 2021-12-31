@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Unattended upgrade is ignoring some packages
+title:        >
+    Unattended upgrade is ignoring some packages
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159563
 type:         Answer
 tags:         apt upgrade unattended-upgrades
-created_date: 2019-07-20 00:07:30
-edit_date:    2019-07-22 16:31:21
-votes:        2
+created_date: !!str "2019-07-20 00:07:30"
+edit_date:    !!str "2019-07-22 16:31:21"
+votes:        !!str "2"
 favorites:    
-views:        4,296
+views:        !!str "4,296"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Where to find power option config file(s) for 17.10
+title:        >
+    Where to find power option config file(s) for 17.10
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/998465
 type:         Answer
 tags:         17.10 power-management monitor settings configure
-created_date: 2018-01-21 23:07:08
-edit_date:    
-votes:        2
+created_date: !!str "2018-01-21 23:07:08"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        239
+views:        !!str "239"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

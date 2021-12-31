@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Wakes from suspend immediately when bluetooth device disconnected
+title:        >
+    Wakes from suspend immediately when bluetooth device disconnected
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1089078
 type:         Answer
 tags:         18.04 kubuntu suspend bluetooth
-created_date: 2018-11-01 02:49:00
-edit_date:    
-votes:        3
+created_date: !!str "2018-11-01 02:49:00"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        2,779
+views:        !!str "2,779"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Laptop not shutting down on low power
+title:        >
+    Laptop not shutting down on low power
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1150124
 type:         Answer
 tags:         laptop battery
-created_date: 2019-06-10 22:45:51
-edit_date:    2019-06-10 22:56:03
-votes:        3
+created_date: !!str "2019-06-10 22:45:51"
+edit_date:    !!str "2019-06-10 22:56:03"
+votes:        !!str "3"
 favorites:    
-views:        545
+views:        !!str "545"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

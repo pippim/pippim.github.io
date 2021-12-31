@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        List gsettings changes from default
+title:        >
+    List gsettings changes from default
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1170671
 type:         Question
 tags:         gsettings
-created_date: 2019-09-04 00:29:57
-edit_date:    
-votes:        2
+created_date: !!str "2019-09-04 00:29:57"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    1
-views:        243
+views:        !!str "243"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

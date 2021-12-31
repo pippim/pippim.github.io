@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Installing Ubuntu with HD + SSD
+title:        >
+    Installing Ubuntu with HD + SSD
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1158113
 type:         Answer
 tags:         boot dual-boot grub2 partitioning ssd
-created_date: 2019-07-13 21:42:49
-edit_date:    
-votes:        3
+created_date: !!str "2019-07-13 21:42:49"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        1,797
+views:        !!str "1,797"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

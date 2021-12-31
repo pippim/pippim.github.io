@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to have script detect if terminal emulator is running in a desktop session or not?
+title:        >
+    How to have script detect if terminal emulator is running in a desktop session or not?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039023
 type:         Answer
 tags:         scripts desktop-environments virtual-console
-created_date: 2018-05-22 12:05:03
-edit_date:    2018-05-22 12:25:26
-votes:        3
+created_date: !!str "2018-05-22 12:05:03"
+edit_date:    !!str "2018-05-22 12:25:26"
+votes:        !!str "3"
 favorites:    
-views:        943
+views:        !!str "943"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

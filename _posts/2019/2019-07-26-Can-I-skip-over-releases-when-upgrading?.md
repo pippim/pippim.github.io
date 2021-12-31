@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I skip over releases when upgrading?
+title:        >
+    Can I skip over releases when upgrading?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161354
 type:         Answer
 tags:         upgrade
-created_date: 2019-07-26 22:59:51
-edit_date:    2019-08-04 00:32:39
-votes:        5
+created_date: !!str "2019-07-26 22:59:51"
+edit_date:    !!str "2019-08-04 00:32:39"
+votes:        !!str "5"
 favorites:    
-views:        114,380
+views:        !!str "114,380"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

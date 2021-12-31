@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Black screen beteen GRUB and login screen
+title:        >
+    Black screen beteen GRUB and login screen
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1105656
 type:         Answer
 tags:         boot
-created_date: 2018-12-30 18:14:29
-edit_date:    2020-06-12 14:37:07
-votes:        0
+created_date: !!str "2018-12-30 18:14:29"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "0"
 favorites:    
-views:        413
+views:        !!str "413"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

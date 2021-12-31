@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Error unknown command hwmatch
+title:        >
+    Error unknown command hwmatch
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/869670
 type:         Answer
 tags:         boot grub2 raid
-created_date: 2017-01-09 02:25:25
-edit_date:    2017-03-20 10:18:11
-votes:        4
+created_date: !!str "2017-01-09 02:25:25"
+edit_date:    !!str "2017-03-20 10:18:11"
+votes:        !!str "4"
 favorites:    
-views:        23,168
+views:        !!str "23,168"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

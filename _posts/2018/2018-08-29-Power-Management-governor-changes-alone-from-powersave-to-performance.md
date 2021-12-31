@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Power Management governor changes alone from powersave to performance
+title:        >
+    Power Management governor changes alone from powersave to performance
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1069961
 type:         Answer
 tags:         18.04 power-management cpu overheating tlp
-created_date: 2018-08-29 01:17:00
-edit_date:    
-votes:        3
+created_date: !!str "2018-08-29 01:17:00"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        2,844
+views:        !!str "2,844"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

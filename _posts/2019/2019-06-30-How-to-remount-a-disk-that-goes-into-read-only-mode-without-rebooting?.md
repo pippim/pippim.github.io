@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to remount a disk that goes into read-only mode without rebooting?
+title:        >
+    How to remount a disk that goes into read-only mode without rebooting?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1155086
 type:         Answer
 tags:         boot partitioning mount hard-drive ssd
-created_date: 2019-06-30 23:21:56
-edit_date:    2019-07-01 22:22:32
-votes:        3
+created_date: !!str "2019-06-30 23:21:56"
+edit_date:    !!str "2019-07-01 22:22:32"
+votes:        !!str "3"
 favorites:    
-views:        6,184
+views:        !!str "6,184"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

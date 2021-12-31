@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Ubuntu Server 16.04 unusual crontab entry
+title:        >
+    Ubuntu Server 16.04 unusual crontab entry
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1180445
 type:         Answer
 tags:         server cron
-created_date: 2019-10-12 02:46:45
-edit_date:    
-votes:        1
+created_date: !!str "2019-10-12 02:46:45"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        632
+views:        !!str "632"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

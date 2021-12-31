@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I increase the font size in Ubuntu 18.04 LTS for a HDPI ∕ 4K display?
+title:        >
+    How do I increase the font size in Ubuntu 18.04 LTS for a HDPI ∕ 4K display?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035541
 type:         Answer
 tags:         fonts hdpi
-created_date: 2018-05-13 01:36:42
-edit_date:    
-votes:        7
+created_date: !!str "2018-05-13 01:36:42"
+edit_date:    !!str ""
+votes:        !!str "7"
 favorites:    
-views:        41,824
+views:        !!str "41,824"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

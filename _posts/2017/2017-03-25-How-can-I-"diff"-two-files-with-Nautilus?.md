@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I "diff" two files with Nautilus?
+title:        >
+    How can I "diff" two files with Nautilus?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/896832
 type:         Answer
 tags:         nautilus gnome gtk3 diff
-created_date: 2017-03-25 18:27:34
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2017-03-25 18:27:34"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        7,951
+views:        !!str "7,951"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

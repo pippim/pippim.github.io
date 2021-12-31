@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to disable automatic brightness adjustment in Ubuntu 14.04?
+title:        >
+    How to disable automatic brightness adjustment in Ubuntu 14.04?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1045950
 type:         Answer
 tags:         nvidia laptop power-management brightness
-created_date: 2018-06-12 15:14:03
-edit_date:    
-votes:        2
+created_date: !!str "2018-06-12 15:14:03"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        4,228
+views:        !!str "4,228"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

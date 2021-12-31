@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        systemctl failed to connect to bus - docker ubuntu:16.04 container
+title:        >
+    systemctl failed to connect to bus - docker ubuntu:16.04 container
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/813644
 type:         Answer
 tags:         server 16.04 systemd docker
-created_date: 2016-08-18 03:57:34
-edit_date:    2017-07-22 16:16:42
-votes:        19
+created_date: !!str "2016-08-18 03:57:34"
+edit_date:    !!str "2017-07-22 16:16:42"
+votes:        !!str "19"
 favorites:    
-views:        239,195
+views:        !!str "239,195"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

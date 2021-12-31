@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        syntax error near unexpected token `
+title:        >
+    syntax error near unexpected token `
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1196192
 type:         Answer
 tags:         command-line bash
-created_date: 2019-12-14 20:01:55
-edit_date:    
-votes:        1
+created_date: !!str "2019-12-14 20:01:55"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        1,589
+views:        !!str "1,589"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

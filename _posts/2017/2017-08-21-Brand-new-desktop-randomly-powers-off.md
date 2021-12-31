@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Brand new desktop randomly powers off
+title:        >
+    Brand new desktop randomly powers off
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/948181
 type:         Answer
 tags:         dual-boot xubuntu
-created_date: 2017-08-21 00:24:42
-edit_date:    
-votes:        2
+created_date: !!str "2017-08-21 00:24:42"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        158
+views:        !!str "158"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

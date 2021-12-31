@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Turning screen off when running in without window manager running
+title:        >
+    Turning screen off when running in without window manager running
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1134773
 type:         Answer
 tags:         command-line screen
-created_date: 2019-04-17 22:47:34
-edit_date:    
-votes:        1
+created_date: !!str "2019-04-17 22:47:34"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        316
+views:        !!str "316"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to disable access to Win7 disk partition(Dual Boot)
+title:        >
+    How to disable access to Win7 disk partition(Dual Boot)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/858225
 type:         Answer
 tags:         dual-boot 16.04 partitioning
-created_date: 2016-12-08 00:13:27
-edit_date:    
-votes:        1
+created_date: !!str "2016-12-08 00:13:27"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        1,311
+views:        !!str "1,311"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

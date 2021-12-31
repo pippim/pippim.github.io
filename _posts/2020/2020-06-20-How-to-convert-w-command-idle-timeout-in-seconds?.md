@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to convert w command idle timeout in seconds?
+title:        >
+    How to convert w command idle timeout in seconds?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/62481189
 type:         Answer
 tags:         bash shell
-created_date: 2020-06-20 03:11:31
-edit_date:    2020-06-20 17:13:16
-votes:        1
+created_date: !!str "2020-06-20 03:11:31"
+edit_date:    !!str "2020-06-20 17:13:16"
+votes:        !!str "1"
 favorites:    
-views:        129
+views:        !!str "129"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

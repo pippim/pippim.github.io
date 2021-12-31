@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        LibreOffice: See reason for broken images
+title:        >
+    LibreOffice: See reason for broken images
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1043245
 type:         Answer
 tags:         libreoffice
-created_date: 2018-06-03 16:52:47
-edit_date:    2018-06-09 00:11:06
-votes:        4
+created_date: !!str "2018-06-03 16:52:47"
+edit_date:    !!str "2018-06-09 00:11:06"
+votes:        !!str "4"
 favorites:    
-views:        609
+views:        !!str "609"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

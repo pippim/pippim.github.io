@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Dual booting: every time Windows boots, it increases the scrolling speed of the mouse on Ubuntu
+title:        >
+    Dual booting: every time Windows boots, it increases the scrolling speed of the mouse on Ubuntu
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064744
 type:         Answer
 tags:         dual-boot 18.04 mouse scrolling mouse-scroll grub
-created_date: 2018-08-12 18:58:21
-edit_date:    2020-06-12 14:37:07
-votes:        6
+created_date: !!str "2018-08-12 18:58:21"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "6"
 favorites:    
-views:        1,077
+views:        !!str "1,077"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

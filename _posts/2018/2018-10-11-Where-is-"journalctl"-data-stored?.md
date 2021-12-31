@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Where is "journalctl" data stored?
+title:        >
+    Where is "journalctl" data stored?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1083044
 type:         Answer
 tags:         log systemd systemd-journald
-created_date: 2018-10-11 22:31:25
-edit_date:    2021-08-02 18:46:52
-votes:        2
+created_date: !!str "2018-10-11 22:31:25"
+edit_date:    !!str "2021-08-02 18:46:52"
+votes:        !!str "2"
 favorites:    
-views:        112,672
+views:        !!str "112,672"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

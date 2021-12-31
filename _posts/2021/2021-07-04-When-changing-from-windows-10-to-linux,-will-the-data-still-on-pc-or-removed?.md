@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        When changing from windows 10 to linux, will the data still on pc or removed?
+title:        >
+    When changing from windows 10 to linux, will the data still on pc or removed?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1350030
 type:         Answer
 tags:         system-installation windows-10
-created_date: 2021-07-04 22:39:30
-edit_date:    
-votes:        5
+created_date: !!str "2021-07-04 22:39:30"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        1,008
+views:        !!str "1,008"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

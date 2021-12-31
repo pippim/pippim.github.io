@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I plug a Ubuntu Laptop into a Ubuntu Laptop?
+title:        >
+    Can I plug a Ubuntu Laptop into a Ubuntu Laptop?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821477
 type:         Question
 tags:         networking ethernet file-sharing
-created_date: 2016-09-06 02:03:35
-edit_date:    2016-10-10 20:16:09
-votes:        4
+created_date: !!str "2016-09-06 02:03:35"
+edit_date:    !!str "2016-10-10 20:16:09"
+votes:        !!str "4"
 favorites:    1
-views:        500
+views:        !!str "500"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

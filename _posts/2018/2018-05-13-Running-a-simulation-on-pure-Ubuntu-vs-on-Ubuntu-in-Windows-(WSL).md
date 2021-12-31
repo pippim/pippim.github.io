@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Running a simulation on pure Ubuntu vs on Ubuntu in Windows (WSL)
+title:        >
+    Running a simulation on pure Ubuntu vs on Ubuntu in Windows (WSL)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035571
 type:         Answer
 tags:         windows windows-subsystem-for-linux benchmarks
-created_date: 2018-05-13 04:02:33
-edit_date:    2020-06-12 14:37:07
-votes:        12
+created_date: !!str "2018-05-13 04:02:33"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "12"
 favorites:    
-views:        10,539
+views:        !!str "10,539"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

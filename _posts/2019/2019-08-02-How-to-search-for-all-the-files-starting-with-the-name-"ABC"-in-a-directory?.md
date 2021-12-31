@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to search for all the files starting with the name "ABC" in a directory?
+title:        >
+    How to search for all the files starting with the name "ABC" in a directory?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1162893
 type:         Answer
 tags:         directory search regex
-created_date: 2019-08-02 11:02:09
-edit_date:    2019-08-02 11:17:57
-votes:        3
+created_date: !!str "2019-08-02 11:02:09"
+edit_date:    !!str "2019-08-02 11:17:57"
+votes:        !!str "3"
 favorites:    
-views:        499,305
+views:        !!str "499,305"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I get the CPU temperature?
+title:        >
+    How do I get the CPU temperature?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/854029
 type:         Answer
 tags:         hardware cpu temperature monitoring sensors conky
-created_date: 2016-11-26 22:15:04
-edit_date:    2018-10-15 10:41:04
-votes:        113
+created_date: !!str "2016-11-26 22:15:04"
+edit_date:    !!str "2018-10-15 10:41:04"
+votes:        !!str "113"
 favorites:    
-views:        1,526,126
+views:        !!str "1,526,126"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

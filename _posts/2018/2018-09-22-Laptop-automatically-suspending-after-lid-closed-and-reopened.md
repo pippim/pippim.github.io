@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Laptop automatically suspending after lid closed and reopened
+title:        >
+    Laptop automatically suspending after lid closed and reopened
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1077388
 type:         Answer
 tags:         suspend laptop lid
-created_date: 2018-09-22 01:52:30
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2018-09-22 01:52:30"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        1,199
+views:        !!str "1,199"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

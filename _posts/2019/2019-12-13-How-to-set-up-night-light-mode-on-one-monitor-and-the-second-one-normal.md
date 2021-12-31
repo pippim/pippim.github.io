@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to set up night light mode on one monitor and the second one normal
+title:        >
+    How to set up night light mode on one monitor and the second one normal
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1195792
 type:         Answer
 tags:         display 19.10 settings night-light
-created_date: 2019-12-13 02:04:38
-edit_date:    2019-12-13 02:31:07
-votes:        1
+created_date: !!str "2019-12-13 02:04:38"
+edit_date:    !!str "2019-12-13 02:31:07"
+votes:        !!str "1"
 favorites:    
-views:        1,079
+views:        !!str "1,079"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

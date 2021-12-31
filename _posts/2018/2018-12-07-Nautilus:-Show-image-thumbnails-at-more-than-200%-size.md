@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Nautilus: Show image thumbnails at more than 200% size
+title:        >
+    Nautilus: Show image thumbnails at more than 200% size
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1099186
 type:         Answer
 tags:         nautilus thumbnails
-created_date: 2018-12-07 14:42:32
-edit_date:    
-votes:        3
+created_date: !!str "2018-12-07 14:42:32"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        3,652
+views:        !!str "3,652"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

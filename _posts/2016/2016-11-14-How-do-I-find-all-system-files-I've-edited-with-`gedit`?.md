@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I find all system files I've edited with `gedit`?
+title:        >
+    How do I find all system files I've edited with `gedit`?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/849163
 type:         Question
 tags:         gedit log
-created_date: 2016-11-14 00:53:33
-edit_date:    2017-04-13 12:24:16
-votes:        2
+created_date: !!str "2016-11-14 00:53:33"
+edit_date:    !!str "2017-04-13 12:24:16"
+votes:        !!str "2"
 favorites:    1
-views:        150
+views:        !!str "150"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

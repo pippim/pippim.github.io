@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I ensure that binaries installed by my install script are executable?
+title:        >
+    How can I ensure that binaries installed by my install script are executable?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/52357904
 type:         Question
 tags:         github
-created_date: 2018-09-16 19:59:06
-edit_date:    2018-09-16 20:13:42
-votes:        1
+created_date: !!str "2018-09-16 19:59:06"
+edit_date:    !!str "2018-09-16 20:13:42"
+votes:        !!str "1"
 favorites:    
-views:        57
+views:        !!str "57"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

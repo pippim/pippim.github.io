@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Which is the right way to drop caches in Lubuntu?
+title:        >
+    Which is the right way to drop caches in Lubuntu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1098062
 type:         Answer
 tags:         permissions lubuntu cache
-created_date: 2018-12-03 04:23:42
-edit_date:    
-votes:        3
+created_date: !!str "2018-12-03 04:23:42"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        7,812
+views:        !!str "7,812"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        GUI or simple Bash script to throttle the CPU?
+title:        >
+    GUI or simple Bash script to throttle the CPU?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1142671
 type:         Answer
 tags:         power-management cpu 19.04 frequency cpuf conky yad
-created_date: 2019-05-12 17:09:10
-edit_date:    2020-06-12 14:37:07
-votes:        9
+created_date: !!str "2019-05-12 17:09:10"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "9"
 favorites:    
-views:        8,398
+views:        !!str "8,398"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

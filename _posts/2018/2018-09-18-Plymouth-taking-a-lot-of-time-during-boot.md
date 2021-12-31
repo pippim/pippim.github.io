@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Plymouth taking a lot of time during boot
+title:        >
+    Plymouth taking a lot of time during boot
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1076190
 type:         Answer
 tags:         boot plymouth boot-time
-created_date: 2018-09-18 03:41:31
-edit_date:    
-votes:        2
+created_date: !!str "2018-09-18 03:41:31"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        4,179
+views:        !!str "4,179"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

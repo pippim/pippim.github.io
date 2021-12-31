@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Get names of devices on the network
+title:        >
+    Get names of devices on the network
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/530019
 type:         Answer
 tags:         networking wifi raspbian
-created_date: 2019-07-13 21:07:07
-edit_date:    
-votes:        8
+created_date: !!str "2019-07-13 21:07:07"
+edit_date:    !!str ""
+votes:        !!str "8"
 favorites:    
-views:        91,139
+views:        !!str "91,139"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

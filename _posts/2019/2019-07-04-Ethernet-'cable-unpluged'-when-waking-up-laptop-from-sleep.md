@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Ethernet 'cable unpluged' when waking up laptop from sleep
+title:        >
+    Ethernet 'cable unpluged' when waking up laptop from sleep
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1156038
 type:         Answer
 tags:         networking 18.04 suspend ethernet
-created_date: 2019-07-04 23:52:22
-edit_date:    
-votes:        0
+created_date: !!str "2019-07-04 23:52:22"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        51
+views:        !!str "51"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

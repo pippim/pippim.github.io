@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Plymouth Error Logging
+title:        >
+    Plymouth Error Logging
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/864247
 type:         Answer
 tags:         grub2 plymouth initramfs
-created_date: 2016-12-24 18:38:57
-edit_date:    
-votes:        4
+created_date: !!str "2016-12-24 18:38:57"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        2,310
+views:        !!str "2,310"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

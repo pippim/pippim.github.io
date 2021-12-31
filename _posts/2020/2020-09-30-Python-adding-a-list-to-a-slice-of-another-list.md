@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Python adding a list to a slice of another list
+title:        >
+    Python adding a list to a slice of another list
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/64129264
 type:         Question
 tags:         python list slice addition
-created_date: 2020-09-30 00:12:54
-edit_date:    2020-09-30 00:50:00
-votes:        1
+created_date: !!str "2020-09-30 00:12:54"
+edit_date:    !!str "2020-09-30 00:50:00"
+votes:        !!str "1"
 favorites:    
-views:        48
+views:        !!str "48"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

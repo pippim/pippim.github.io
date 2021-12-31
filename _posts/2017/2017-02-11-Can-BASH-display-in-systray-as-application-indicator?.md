@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can BASH display in systray as application indicator?
+title:        >
+    Can BASH display in systray as application indicator?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/882420
 type:         Answer
 tags:         unity bash scripts system-tray eyesome multi-timer
-created_date: 2017-02-11 23:34:13
-edit_date:    2021-12-11 20:37:15
-votes:        6
+created_date: !!str "2017-02-11 23:34:13"
+edit_date:    !!str "2021-12-11 20:37:15"
+votes:        !!str "6"
 favorites:    
-views:        1,853
+views:        !!str "1,853"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

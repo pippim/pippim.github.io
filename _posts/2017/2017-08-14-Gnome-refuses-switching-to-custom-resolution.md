@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Gnome refuses switching to custom resolution
+title:        >
+    Gnome refuses switching to custom resolution
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/945993
 type:         Answer
 tags:         gnome xorg display-resolution
-created_date: 2017-08-14 01:12:41
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2017-08-14 01:12:41"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        654
+views:        !!str "654"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

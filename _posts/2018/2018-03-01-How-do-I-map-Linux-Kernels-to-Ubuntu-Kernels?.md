@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I map Linux Kernels to Ubuntu Kernels?
+title:        >
+    How do I map Linux Kernels to Ubuntu Kernels?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1010812
 type:         Answer
 tags:         kernel
-created_date: 2018-03-01 01:01:21
-edit_date:    
-votes:        4
+created_date: !!str "2018-03-01 01:01:21"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        499
+views:        !!str "499"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

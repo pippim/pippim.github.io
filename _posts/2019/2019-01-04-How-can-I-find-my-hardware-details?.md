@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I find my hardware details?
+title:        >
+    How can I find my hardware details?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1106788
 type:         Answer
 tags:         hardware
-created_date: 2019-01-04 02:51:06
-edit_date:    
-votes:        2
+created_date: !!str "2019-01-04 02:51:06"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        730,213
+views:        !!str "730,213"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

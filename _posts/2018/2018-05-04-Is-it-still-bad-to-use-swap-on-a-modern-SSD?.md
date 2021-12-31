@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is it still bad to use swap on a modern SSD?
+title:        >
+    Is it still bad to use swap on a modern SSD?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032093
 type:         Answer
 tags:         ssd swap 18.04 memory-usage
-created_date: 2018-05-04 17:49:40
-edit_date:    2020-06-12 14:37:07
-votes:        14
+created_date: !!str "2018-05-04 17:49:40"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "14"
 favorites:    
-views:        17,695
+views:        !!str "17,695"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

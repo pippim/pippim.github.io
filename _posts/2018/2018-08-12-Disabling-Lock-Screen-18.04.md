@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Disabling Lock Screen 18.04
+title:        >
+    Disabling Lock Screen 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064704
 type:         Answer
 tags:         18.04 lock-screen
-created_date: 2018-08-12 16:22:14
-edit_date:    2020-01-06 15:11:47
-votes:        63
+created_date: !!str "2018-08-12 16:22:14"
+edit_date:    !!str "2020-01-06 15:11:47"
+votes:        !!str "63"
 favorites:    
-views:        43,306
+views:        !!str "43,306"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

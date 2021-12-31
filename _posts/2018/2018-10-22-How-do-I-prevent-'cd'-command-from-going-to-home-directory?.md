@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I prevent 'cd' command from going to home directory?
+title:        >
+    How do I prevent 'cd' command from going to home directory?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1086196
 type:         Answer
 tags:         command-line cd-command
-created_date: 2018-10-22 18:17:40
-edit_date:    2020-06-12 14:37:07
-votes:        15
+created_date: !!str "2018-10-22 18:17:40"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "15"
 favorites:    
-views:        4,062
+views:        !!str "4,062"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to list PIDs (procesees) for one CPU core only?
+title:        >
+    How to list PIDs (procesees) for one CPU core only?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/950465
 type:         Answer
 tags:         command-line bash cpu cpu-load multi-core
-created_date: 2017-08-28 00:31:59
-edit_date:    
-votes:        4
+created_date: !!str "2017-08-28 00:31:59"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        883
+views:        !!str "883"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

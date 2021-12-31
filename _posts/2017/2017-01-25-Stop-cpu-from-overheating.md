@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Stop cpu from overheating
+title:        >
+    Stop cpu from overheating
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/875872
 type:         Answer
 tags:         cpu temperature conky
-created_date: 2017-01-25 00:50:03
-edit_date:    2017-08-06 13:29:25
-votes:        12
+created_date: !!str "2017-01-25 00:50:03"
+edit_date:    !!str "2017-08-06 13:29:25"
+votes:        !!str "12"
 favorites:    
-views:        24,240
+views:        !!str "24,240"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

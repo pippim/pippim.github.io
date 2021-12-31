@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I make my Ubuntu Desktop have a dock at the bottom and system utilization widgets on the side?
+title:        >
+    How do I make my Ubuntu Desktop have a dock at the bottom and system utilization widgets on the side?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/991480
 type:         Answer
 tags:         appearance conky
-created_date: 2018-01-02 11:50:18
-edit_date:    2020-06-12 14:37:07
-votes:        8
+created_date: !!str "2018-01-02 11:50:18"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "8"
 favorites:    
-views:        2,752
+views:        !!str "2,752"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

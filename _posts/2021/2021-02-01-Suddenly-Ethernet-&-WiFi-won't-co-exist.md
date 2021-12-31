@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Suddenly Ethernet & WiFi won't co-exist
+title:        >
+    Suddenly Ethernet & WiFi won't co-exist
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1312745
 type:         Question
 tags:         networking wireless ethernet
-created_date: 2021-02-01 15:57:57
-edit_date:    2021-02-03 12:26:24
-votes:        2
+created_date: !!str "2021-02-01 15:57:57"
+edit_date:    !!str "2021-02-03 12:26:24"
+votes:        !!str "2"
 favorites:    
-views:        58
+views:        !!str "58"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I'm looking for a command to flash screens (if possible in colors)
+title:        >
+    I'm looking for a command to flash screens (if possible in colors)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1092835
 type:         Answer
 tags:         18.04 xubuntu notification eyesome
-created_date: 2018-11-14 11:49:42
-edit_date:    2018-11-16 01:15:58
-votes:        4
+created_date: !!str "2018-11-14 11:49:42"
+edit_date:    !!str "2018-11-16 01:15:58"
+votes:        !!str "4"
 favorites:    
-views:        1,030
+views:        !!str "1,030"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

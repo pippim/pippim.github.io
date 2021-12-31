@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Timezone changes do not persist
+title:        >
+    Timezone changes do not persist
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1182535
 type:         Answer
 tags:         18.04 time timezone
-created_date: 2019-10-20 23:18:20
-edit_date:    2019-10-24 10:57:12
-votes:        1
+created_date: !!str "2019-10-20 23:18:20"
+edit_date:    !!str "2019-10-24 10:57:12"
+votes:        !!str "1"
 favorites:    
-views:        602
+views:        !!str "602"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

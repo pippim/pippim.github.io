@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the "Dirty COW" bug, and how can I secure my system against it?
+title:        >
+    What is the "Dirty COW" bug, and how can I secure my system against it?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/839920
 type:         Answer
 tags:         kernel security
-created_date: 2016-10-21 03:35:38
-edit_date:    2020-06-12 14:37:07
-votes:        20
+created_date: !!str "2016-10-21 03:35:38"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "20"
 favorites:    
-views:        17,352
+views:        !!str "17,352"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

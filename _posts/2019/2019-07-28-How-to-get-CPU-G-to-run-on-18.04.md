@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to get CPU-G to run on 18.04
+title:        >
+    How to get CPU-G to run on 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161709
 type:         Answer
 tags:         18.04
-created_date: 2019-07-28 17:57:25
-edit_date:    
-votes:        7
+created_date: !!str "2019-07-28 17:57:25"
+edit_date:    !!str ""
+votes:        !!str "7"
 favorites:    
-views:        5,772
+views:        !!str "5,772"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

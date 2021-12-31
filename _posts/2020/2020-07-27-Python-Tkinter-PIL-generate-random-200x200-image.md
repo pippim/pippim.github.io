@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Python Tkinter PIL generate random 200x200 image
+title:        >
+    Python Tkinter PIL generate random 200x200 image
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63107373
 type:         Question
 tags:         python tkinter python-imaging-library
-created_date: 2020-07-27 01:05:13
-edit_date:    2020-07-28 00:35:57
-votes:        0
+created_date: !!str "2020-07-27 01:05:13"
+edit_date:    !!str "2020-07-28 00:35:57"
+votes:        !!str "0"
 favorites:    
-views:        634
+views:        !!str "634"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

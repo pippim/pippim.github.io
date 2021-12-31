@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        USB ports not working after resume from sleep on Ubuntu 18.04
+title:        >
+    USB ports not working after resume from sleep on Ubuntu 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1056420
 type:         Answer
 tags:         usb 18.04
-created_date: 2018-07-15 23:56:01
-edit_date:    2020-12-19 09:02:59
-votes:        8
+created_date: !!str "2018-07-15 23:56:01"
+edit_date:    !!str "2020-12-19 09:02:59"
+votes:        !!str "8"
 favorites:    
-views:        7,457
+views:        !!str "7,457"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

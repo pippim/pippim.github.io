@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        UbuntuOnWindows: Restoring backup directory causes UbuntuOnWindows to fail starting
+title:        >
+    UbuntuOnWindows: Restoring backup directory causes UbuntuOnWindows to fail starting
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1069578
 type:         Answer
 tags:         windows windows-10
-created_date: 2018-08-27 23:45:11
-edit_date:    
-votes:        1
+created_date: !!str "2018-08-27 23:45:11"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        19
+views:        !!str "19"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

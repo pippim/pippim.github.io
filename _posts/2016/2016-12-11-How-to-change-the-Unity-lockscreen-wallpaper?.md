@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to change the Unity lockscreen wallpaper?
+title:        >
+    How to change the Unity lockscreen wallpaper?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/859587
 type:         Answer
 tags:         lightdm wallpaper lock-screen
-created_date: 2016-12-11 20:39:42
-edit_date:    2018-05-14 21:44:50
-votes:        6
+created_date: !!str "2016-12-11 20:39:42"
+edit_date:    !!str "2018-05-14 21:44:50"
+votes:        !!str "6"
 favorites:    
-views:        9,013
+views:        !!str "9,013"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

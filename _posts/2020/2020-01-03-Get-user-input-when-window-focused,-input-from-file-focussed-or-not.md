@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Get user input when window focused, input from file focussed or not
+title:        >
+    Get user input when window focused, input from file focussed or not
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59572043
 type:         Question
 tags:         python tkinter parallel-processing
-created_date: 2020-01-03 01:11:07
-edit_date:    2020-06-20 09:12:55
-votes:        0
+created_date: !!str "2020-01-03 01:11:07"
+edit_date:    !!str "2020-06-20 09:12:55"
+votes:        !!str "0"
 favorites:    
-views:        35
+views:        !!str "35"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

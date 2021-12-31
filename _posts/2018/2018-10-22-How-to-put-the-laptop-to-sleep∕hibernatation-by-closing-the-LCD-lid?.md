@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to put the laptop to sleep∕hibernatation by closing the LCD lid?
+title:        >
+    How to put the laptop to sleep∕hibernatation by closing the LCD lid?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1086247
 type:         Answer
 tags:         suspend laptop hibernate lid
-created_date: 2018-10-22 22:31:21
-edit_date:    
-votes:        3
+created_date: !!str "2018-10-22 22:31:21"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        835
+views:        !!str "835"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

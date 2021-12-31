@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I get a virus by using "sudo apt-get install"?
+title:        >
+    Can I get a virus by using "sudo apt-get install"?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/818005
 type:         Answer
 tags:         apt software-installation security
-created_date: 2016-08-29 00:12:22
-edit_date:    2017-11-30 00:10:05
-votes:        5
+created_date: !!str "2016-08-29 00:12:22"
+edit_date:    !!str "2017-11-30 00:10:05"
+votes:        !!str "5"
 favorites:    
-views:        20,037
+views:        !!str "20,037"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Cannot install openjdk-8-jre successfully On 18.04
+title:        >
+    Cannot install openjdk-8-jre successfully On 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1187842
 type:         Answer
 tags:         18.04
-created_date: 2019-11-11 04:23:12
-edit_date:    
-votes:        2
+created_date: !!str "2019-11-11 04:23:12"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        304
+views:        !!str "304"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

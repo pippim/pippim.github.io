@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        how to find or list file and directories which having size more than 100mb
+title:        >
+    how to find or list file and directories which having size more than 100mb
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1193438
 type:         Answer
 tags:         grep find awk
-created_date: 2019-12-03 11:53:10
-edit_date:    
-votes:        2
+created_date: !!str "2019-12-03 11:53:10"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        1,565
+views:        !!str "1,565"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

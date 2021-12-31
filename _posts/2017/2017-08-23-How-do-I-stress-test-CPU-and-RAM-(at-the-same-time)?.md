@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I stress test CPU and RAM (at the same time)?
+title:        >
+    How do I stress test CPU and RAM (at the same time)?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/948865
 type:         Answer
 tags:         software-recommendation stress-testing conky
-created_date: 2017-08-23 02:53:37
-edit_date:    2017-09-05 22:13:23
-votes:        55
+created_date: !!str "2017-08-23 02:53:37"
+edit_date:    !!str "2017-09-05 22:13:23"
+votes:        !!str "55"
 favorites:    
-views:        100,223
+views:        !!str "100,223"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

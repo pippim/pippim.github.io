@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the "Wanna Cry" ransomware's possible impact on Linux users?
+title:        >
+    What is the "Wanna Cry" ransomware's possible impact on Linux users?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/914623
 type:         Question
 tags:         windows wine malware
-created_date: 2017-05-12 23:57:00
-edit_date:    2017-05-16 00:03:39
-votes:        64
+created_date: !!str "2017-05-12 23:57:00"
+edit_date:    !!str "2017-05-16 00:03:39"
+votes:        !!str "64"
 favorites:    11
-views:        48,941
+views:        !!str "48,941"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to list GRUB's "menuentries" in command-line?
+title:        >
+    How to list GRUB's "menuentries" in command-line?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1022706
 type:         Answer
 tags:         command-line grub2
-created_date: 2018-04-07 00:14:42
-edit_date:    2019-07-27 19:16:36
-votes:        16
+created_date: !!str "2018-04-07 00:14:42"
+edit_date:    !!str "2019-07-27 19:16:36"
+votes:        !!str "16"
 favorites:    
-views:        84,031
+views:        !!str "84,031"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

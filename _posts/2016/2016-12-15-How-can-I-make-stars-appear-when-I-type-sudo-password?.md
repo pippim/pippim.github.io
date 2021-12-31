@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I make stars appear when I type sudo password?
+title:        >
+    How can I make stars appear when I type sudo password?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/860767
 type:         Answer
 tags:         command-line sudo password
-created_date: 2016-12-15 03:10:27
-edit_date:    
-votes:        7
+created_date: !!str "2016-12-15 03:10:27"
+edit_date:    !!str ""
+votes:        !!str "7"
 favorites:    
-views:        1,238
+views:        !!str "1,238"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

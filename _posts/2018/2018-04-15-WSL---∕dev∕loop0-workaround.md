@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        WSL - ∕dev∕loop0 workaround
+title:        >
+    WSL - ∕dev∕loop0 workaround
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1025297
 type:         Answer
 tags:         mount devices windows-subsystem-for-linux loop-device
-created_date: 2018-04-15 17:45:00
-edit_date:    
-votes:        6
+created_date: !!str "2018-04-15 17:45:00"
+edit_date:    !!str ""
+votes:        !!str "6"
 favorites:    
-views:        6,306
+views:        !!str "6,306"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

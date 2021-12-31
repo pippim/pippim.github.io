@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why am I not getting the Ubuntu 18.04 upgrade?
+title:        >
+    Why am I not getting the Ubuntu 18.04 upgrade?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029863
 type:         Answer
 tags:         upgrade 18.04 grub
-created_date: 2018-04-29 20:51:34
-edit_date:    2018-05-03 22:59:55
-votes:        24
+created_date: !!str "2018-04-29 20:51:34"
+edit_date:    !!str "2018-05-03 22:59:55"
+votes:        !!str "24"
 favorites:    
-views:        52,317
+views:        !!str "52,317"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

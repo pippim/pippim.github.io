@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        After upgrading dual boot system from 19.04 to 19.10, unable to boot into Windows from grub menu
+title:        >
+    After upgrading dual boot system from 19.04 to 19.10, unable to boot into Windows from grub menu
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1182429
 type:         Answer
 tags:         boot grub2 windows uefi 19.10
-created_date: 2019-10-20 15:15:07
-edit_date:    2019-10-24 23:16:33
-votes:        3
+created_date: !!str "2019-10-20 15:15:07"
+edit_date:    !!str "2019-10-24 23:16:33"
+votes:        !!str "3"
 favorites:    
-views:        1,550
+views:        !!str "1,550"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How well does Intel Graphics on Linux work vs Windows, for gaming and day-to-day use?
+title:        >
+    How well does Intel Graphics on Linux work vs Windows, for gaming and day-to-day use?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/905573
 type:         Answer
 tags:         windows intel-graphics intel playonlinux conky
-created_date: 2017-04-16 20:38:22
-edit_date:    
-votes:        2
+created_date: !!str "2017-04-16 20:38:22"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        1,421
+views:        !!str "1,421"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

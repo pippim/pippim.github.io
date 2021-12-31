@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        My laptop screen reduces light on dark applicatins
+title:        >
+    My laptop screen reduces light on dark applicatins
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/887575
 type:         Answer
 tags:         brightness backlight ubuntu-mate
-created_date: 2017-02-26 18:16:58
-edit_date:    2017-02-26 18:30:08
-votes:        4
+created_date: !!str "2017-02-26 18:16:58"
+edit_date:    !!str "2017-02-26 18:30:08"
+votes:        !!str "4"
 favorites:    
-views:        1,635
+views:        !!str "1,635"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

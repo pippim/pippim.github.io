@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the correct way to view your CPU speed on Linux?
+title:        >
+    What is the correct way to view your CPU speed on Linux?
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/463736
 type:         Answer
 tags:         linux cpu
-created_date: 2018-08-20 23:06:33
-edit_date:    
-votes:        7
+created_date: !!str "2018-08-20 23:06:33"
+edit_date:    !!str ""
+votes:        !!str "7"
 favorites:    
-views:        212,195
+views:        !!str "212,195"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

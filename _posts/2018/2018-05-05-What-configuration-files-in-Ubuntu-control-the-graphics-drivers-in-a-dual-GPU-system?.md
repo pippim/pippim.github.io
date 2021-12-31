@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What configuration files in Ubuntu control the graphics drivers in a dual GPU system?
+title:        >
+    What configuration files in Ubuntu control the graphics drivers in a dual GPU system?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032510
 type:         Answer
 tags:         drivers nvidia graphics xorg
-created_date: 2018-05-05 19:00:49
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2018-05-05 19:00:49"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        173
+views:        !!str "173"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Searchable Clipboard Manager, like ctrl-r in bash
+title:        >
+    Searchable Clipboard Manager, like ctrl-r in bash
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/883082
 type:         Answer
 tags:         software-recommendation indicator clipboard text history
-created_date: 2017-02-14 00:17:58
-edit_date:    2017-04-13 12:24:59
-votes:        4
+created_date: !!str "2017-02-14 00:17:58"
+edit_date:    !!str "2017-04-13 12:24:59"
+votes:        !!str "4"
 favorites:    
-views:        1,652
+views:        !!str "1,652"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

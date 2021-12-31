@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I need some help understanding this bash script
+title:        >
+    I need some help understanding this bash script
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840293
 type:         Answer
 tags:         bash scripts
-created_date: 2016-10-22 01:29:13
-edit_date:    2020-06-12 14:37:07
-votes:        4
+created_date: !!str "2016-10-22 01:29:13"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "4"
 favorites:    
-views:        96
+views:        !!str "96"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

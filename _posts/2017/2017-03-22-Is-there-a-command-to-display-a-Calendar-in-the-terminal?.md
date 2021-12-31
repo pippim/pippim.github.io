@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is there a command to display a Calendar in the terminal?
+title:        >
+    Is there a command to display a Calendar in the terminal?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/895530
 type:         Answer
 tags:         command-line calendar yad
-created_date: 2017-03-22 04:56:25
-edit_date:    
-votes:        4
+created_date: !!str "2017-03-22 04:56:25"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        30,404
+views:        !!str "30,404"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

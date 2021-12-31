@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is it normal for dpkg ∕ kernel update to hit 100%?
+title:        >
+    Is it normal for dpkg ∕ kernel update to hit 100%?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/854690
 type:         Question
 tags:         kernel dpkg conky
-created_date: 2016-11-28 20:58:24
-edit_date:    
-votes:        2
+created_date: !!str "2016-11-28 20:58:24"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        426
+views:        !!str "426"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

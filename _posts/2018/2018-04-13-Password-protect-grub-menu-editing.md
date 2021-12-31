@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Password protect grub menu editing
+title:        >
+    Password protect grub menu editing
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1024620
 type:         Answer
 tags:         14.04 grub2
-created_date: 2018-04-13 10:35:16
-edit_date:    
-votes:        0
+created_date: !!str "2018-04-13 10:35:16"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        1,164
+views:        !!str "1,164"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

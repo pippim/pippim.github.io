@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I have just one OS in my laptop, why Have I 3 partitions?
+title:        >
+    I have just one OS in my laptop, why Have I 3 partitions?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1245639
 type:         Answer
 tags:         boot partitioning boot-partition
-created_date: 2020-06-01 00:27:59
-edit_date:    
-votes:        0
+created_date: !!str "2020-06-01 00:27:59"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        290
+views:        !!str "290"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

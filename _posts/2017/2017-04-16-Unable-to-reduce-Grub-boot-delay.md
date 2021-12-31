@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Unable to reduce Grub boot delay
+title:        >
+    Unable to reduce Grub boot delay
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/905477
 type:         Answer
 tags:         grub2
-created_date: 2017-04-16 14:44:45
-edit_date:    2017-04-20 22:30:38
-votes:        2
+created_date: !!str "2017-04-16 14:44:45"
+edit_date:    !!str "2017-04-20 22:30:38"
+votes:        !!str "2"
 favorites:    
-views:        2,172
+views:        !!str "2,172"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

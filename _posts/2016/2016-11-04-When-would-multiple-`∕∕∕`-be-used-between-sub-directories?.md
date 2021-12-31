@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        When would multiple `∕∕∕` be used between sub-directories?
+title:        >
+    When would multiple `∕∕∕` be used between sub-directories?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/845338
 type:         Question
 tags:         command-line syntax directory-structure
-created_date: 2016-11-04 04:05:41
-edit_date:    
-votes:        0
+created_date: !!str "2016-11-04 04:05:41"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        34
+views:        !!str "34"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

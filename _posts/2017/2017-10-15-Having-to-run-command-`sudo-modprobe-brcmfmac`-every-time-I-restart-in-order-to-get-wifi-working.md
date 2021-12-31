@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Having to run command `sudo modprobe brcmfmac` every time I restart in order to get wifi working
+title:        >
+    Having to run command `sudo modprobe brcmfmac` every time I restart in order to get wifi working
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/965141
 type:         Answer
 tags:         wireless asus executable
-created_date: 2017-10-15 15:51:02
-edit_date:    2020-06-12 14:37:07
-votes:        4
+created_date: !!str "2017-10-15 15:51:02"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "4"
 favorites:    
-views:        4,698
+views:        !!str "4,698"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

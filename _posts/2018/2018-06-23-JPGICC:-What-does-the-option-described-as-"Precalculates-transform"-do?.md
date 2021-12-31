@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        JPGICC: What does the option described as "Precalculates transform" do?
+title:        >
+    JPGICC: What does the option described as "Precalculates transform" do?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1049106
 type:         Answer
 tags:         color-management photo-management
-created_date: 2018-06-23 16:00:02
-edit_date:    2020-10-03 13:23:54
-votes:        2
+created_date: !!str "2018-06-23 16:00:02"
+edit_date:    !!str "2020-10-03 13:23:54"
+votes:        !!str "2"
 favorites:    
-views:        148
+views:        !!str "148"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

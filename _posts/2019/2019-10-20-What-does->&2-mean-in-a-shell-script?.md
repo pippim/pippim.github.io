@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What does >&2 mean in a shell script?
+title:        >
+    What does >&2 mean in a shell script?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1182458
 type:         Answer
 tags:         command-line bash redirect
-created_date: 2019-10-20 16:37:44
-edit_date:    2019-10-26 17:43:08
-votes:        10
+created_date: !!str "2019-10-20 16:37:44"
+edit_date:    !!str "2019-10-26 17:43:08"
+votes:        !!str "10"
 favorites:    
-views:        15,660
+views:        !!str "15,660"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

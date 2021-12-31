@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Search is useless. How can I force it to index my hard drive (2018)
+title:        >
+    Search is useless. How can I force it to index my hard drive (2018)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1104112
 type:         Answer
 tags:         18.04 nautilus gnome-shell search yad
-created_date: 2018-12-24 00:01:35
-edit_date:    2018-12-24 21:36:09
-votes:        3
+created_date: !!str "2018-12-24 00:01:35"
+edit_date:    !!str "2018-12-24 21:36:09"
+votes:        !!str "3"
 favorites:    
-views:        808
+views:        !!str "808"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

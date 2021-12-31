@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Output the current PATH to text file using BASH script
+title:        >
+    Output the current PATH to text file using BASH script
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1099855
 type:         Answer
 tags:         bash
-created_date: 2018-12-10 18:12:47
-edit_date:    2018-12-10 18:18:35
-votes:        1
+created_date: !!str "2018-12-10 18:12:47"
+edit_date:    !!str "2018-12-10 18:18:35"
+votes:        !!str "1"
 favorites:    
-views:        500
+views:        !!str "500"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

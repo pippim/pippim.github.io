@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I use cron to chime at top of hour like a grandfather clock?
+title:        >
+    Can I use cron to chime at top of hour like a grandfather clock?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/832266
 type:         Answer
 tags:         sound scripts cron
-created_date: 2016-10-02 15:58:32
-edit_date:    2020-06-12 14:37:07
-votes:        8
+created_date: !!str "2016-10-02 15:58:32"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "8"
 favorites:    
-views:        2,507
+views:        !!str "2,507"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

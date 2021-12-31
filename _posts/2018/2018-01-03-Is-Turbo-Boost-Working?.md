@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is Turbo Boost Working?
+title:        >
+    Is Turbo Boost Working?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/991839
 type:         Answer
 tags:         intel turbo-boost conky
-created_date: 2018-01-03 11:50:16
-edit_date:    2018-02-10 20:37:51
-votes:        11
+created_date: !!str "2018-01-03 11:50:16"
+edit_date:    !!str "2018-02-10 20:37:51"
+votes:        !!str "11"
 favorites:    
-views:        69,515
+views:        !!str "69,515"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

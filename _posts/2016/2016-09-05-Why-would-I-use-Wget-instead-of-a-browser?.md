@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why would I use Wget instead of a browser?
+title:        >
+    Why would I use Wget instead of a browser?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821054
 type:         Answer
 tags:         internet downloads wget
-created_date: 2016-09-05 02:26:03
-edit_date:    
-votes:        4
+created_date: !!str "2016-09-05 02:26:03"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        9,652
+views:        !!str "9,652"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

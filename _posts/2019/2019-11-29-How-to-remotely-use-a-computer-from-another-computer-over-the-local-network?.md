@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to remotely use a computer from another computer over the local network?
+title:        >
+    How to remotely use a computer from another computer over the local network?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1192609
 type:         Answer
 tags:         networking xorg monitor x11-forwarding
-created_date: 2019-11-29 23:02:25
-edit_date:    2019-11-30 00:13:03
-votes:        3
+created_date: !!str "2019-11-29 23:02:25"
+edit_date:    !!str "2019-11-30 00:13:03"
+votes:        !!str "3"
 favorites:    
-views:        260
+views:        !!str "260"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

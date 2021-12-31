@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Changing the hostname on WSL
+title:        >
+    Changing the hostname on WSL
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/47007615
 type:         Answer
 tags:         ubuntu windows-10 windows-subsystem-for-linux
-created_date: 2017-10-30 03:06:11
-edit_date:    2017-11-24 14:43:32
-votes:        24
+created_date: !!str "2017-10-30 03:06:11"
+edit_date:    !!str "2017-11-24 14:43:32"
+votes:        !!str "24"
 favorites:    
-views:        33,154
+views:        !!str "33,154"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

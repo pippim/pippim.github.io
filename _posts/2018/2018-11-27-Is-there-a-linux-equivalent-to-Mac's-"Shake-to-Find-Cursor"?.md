@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is there a linux equivalent to Mac's "Shake to Find Cursor"?
+title:        >
+    Is there a linux equivalent to Mac's "Shake to Find Cursor"?
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/484332
 type:         Answer
 tags:         linux-mint x11 mouse accessibility
-created_date: 2018-11-27 00:30:12
-edit_date:    
-votes:        2
+created_date: !!str "2018-11-27 00:30:12"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        4,685
+views:        !!str "4,685"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

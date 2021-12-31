@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to change the order on my dual booting distros
+title:        >
+    How to change the order on my dual booting distros
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1003086
 type:         Answer
 tags:         dual-boot grub2
-created_date: 2018-02-04 22:42:32
-edit_date:    
-votes:        4
+created_date: !!str "2018-02-04 22:42:32"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        3,741
+views:        !!str "3,741"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

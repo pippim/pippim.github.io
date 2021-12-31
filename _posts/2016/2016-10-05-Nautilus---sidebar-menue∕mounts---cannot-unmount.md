@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Nautilus - sidebar menue∕mounts - cannot unmount
+title:        >
+    Nautilus - sidebar menue∕mounts - cannot unmount
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/833590
 type:         Answer
 tags:         nautilus
-created_date: 2016-10-05 23:16:40
-edit_date:    
-votes:        1
+created_date: !!str "2016-10-05 23:16:40"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        956
+views:        !!str "956"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

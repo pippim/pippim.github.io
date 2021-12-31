@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Reformat data only drive from NTFS to whatever Linux likes?
+title:        >
+    Reformat data only drive from NTFS to whatever Linux likes?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866851
 type:         Answer
 tags:         hard-drive ntfs format
-created_date: 2017-01-01 19:28:46
-edit_date:    
-votes:        3
+created_date: !!str "2017-01-01 19:28:46"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        469
+views:        !!str "469"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

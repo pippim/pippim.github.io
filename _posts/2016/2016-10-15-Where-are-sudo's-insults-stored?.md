@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Where are sudo's insults stored?
+title:        >
+    Where are sudo's insults stored?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/837614
 type:         Answer
 tags:         sudo
-created_date: 2016-10-15 20:22:01
-edit_date:    2019-11-15 03:43:34
-votes:        88
+created_date: !!str "2016-10-15 20:22:01"
+edit_date:    !!str "2019-11-15 03:43:34"
+votes:        !!str "88"
 favorites:    
-views:        46,641
+views:        !!str "46,641"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

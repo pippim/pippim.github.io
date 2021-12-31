@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Desktop Facebook application for Ubuntu
+title:        >
+    Desktop Facebook application for Ubuntu
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/864835
 type:         Answer
 tags:         software-installation facebook
-created_date: 2016-12-26 21:35:23
-edit_date:    
-votes:        7
+created_date: !!str "2016-12-26 21:35:23"
+edit_date:    !!str ""
+votes:        !!str "7"
 favorites:    
-views:        39,891
+views:        !!str "39,891"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

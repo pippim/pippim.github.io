@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        terminal - count how many types of (file) extensions exist with their associated files in current directory
+title:        >
+    terminal - count how many types of (file) extensions exist with their associated files in current directory
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160058
 type:         Answer
 tags:         command-line gnome-terminal
-created_date: 2019-07-22 04:26:20
-edit_date:    2019-07-22 04:35:45
-votes:        1
+created_date: !!str "2019-07-22 04:26:20"
+edit_date:    !!str "2019-07-22 04:35:45"
+votes:        !!str "1"
 favorites:    
-views:        339
+views:        !!str "339"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

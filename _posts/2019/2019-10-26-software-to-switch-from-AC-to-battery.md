@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        software to switch from AC to battery
+title:        >
+    software to switch from AC to battery
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1183902
 type:         Answer
 tags:         power-management
-created_date: 2019-10-26 01:57:15
-edit_date:    2019-10-26 02:38:49
-votes:        3
+created_date: !!str "2019-10-26 01:57:15"
+edit_date:    !!str "2019-10-26 02:38:49"
+votes:        !!str "3"
 favorites:    
-views:        244
+views:        !!str "244"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

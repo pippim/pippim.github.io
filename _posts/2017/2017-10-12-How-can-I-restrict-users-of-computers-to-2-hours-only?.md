@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I restrict users of computers to 2 hours only?
+title:        >
+    How can I restrict users of computers to 2 hours only?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/964246
 type:         Answer
 tags:         user-management
-created_date: 2017-10-12 11:43:21
-edit_date:    
-votes:        6
+created_date: !!str "2017-10-12 11:43:21"
+edit_date:    !!str ""
+votes:        !!str "6"
 favorites:    
-views:        336
+views:        !!str "336"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

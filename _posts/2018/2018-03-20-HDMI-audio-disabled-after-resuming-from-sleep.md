@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        HDMI audio disabled after resuming from sleep
+title:        >
+    HDMI audio disabled after resuming from sleep
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1017582
 type:         Answer
 tags:         sound pulseaudio hdmi spdif
-created_date: 2018-03-20 10:50:34
-edit_date:    
-votes:        2
+created_date: !!str "2018-03-20 10:50:34"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        941
+views:        !!str "941"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

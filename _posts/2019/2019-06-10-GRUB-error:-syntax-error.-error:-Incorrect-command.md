@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        GRUB error: syntax error. error: Incorrect command
+title:        >
+    GRUB error: syntax error. error: Incorrect command
 site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/523914
 type:         Answer
 tags:         ubuntu grub2
-created_date: 2019-06-10 02:51:50
-edit_date:    2020-06-11 14:16:50
-votes:        0
+created_date: !!str "2019-06-10 02:51:50"
+edit_date:    !!str "2020-06-11 14:16:50"
+votes:        !!str "0"
 favorites:    
-views:        960
+views:        !!str "960"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

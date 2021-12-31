@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Ensure python script isn't run as root
+title:        >
+    Ensure python script isn't run as root
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/60292202
 type:         Answer
 tags:         python sudo
-created_date: 2020-02-19 02:37:54
-edit_date:    
-votes:        4
+created_date: !!str "2020-02-19 02:37:54"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        55
+views:        !!str "55"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

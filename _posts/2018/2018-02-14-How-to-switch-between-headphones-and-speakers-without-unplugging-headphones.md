@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to switch between headphones and speakers without unplugging headphones
+title:        >
+    How to switch between headphones and speakers without unplugging headphones
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1005980
 type:         Answer
 tags:         sound alsa headphones
-created_date: 2018-02-14 02:17:24
-edit_date:    2018-04-28 17:19:43
-votes:        13
+created_date: !!str "2018-02-14 02:17:24"
+edit_date:    !!str "2018-04-28 17:19:43"
+votes:        !!str "13"
 favorites:    
-views:        39,286
+views:        !!str "39,286"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

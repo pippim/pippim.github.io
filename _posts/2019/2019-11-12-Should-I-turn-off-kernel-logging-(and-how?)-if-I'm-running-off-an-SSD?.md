@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Should I turn off kernel logging (and how?) if I'm running off an SSD?
+title:        >
+    Should I turn off kernel logging (and how?) if I'm running off an SSD?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1188283
 type:         Answer
 tags:         kernel kubuntu dell ssd
-created_date: 2019-11-12 20:34:12
-edit_date:    2020-06-12 14:37:07
-votes:        10
+created_date: !!str "2019-11-12 20:34:12"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "10"
 favorites:    
-views:        3,073
+views:        !!str "3,073"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

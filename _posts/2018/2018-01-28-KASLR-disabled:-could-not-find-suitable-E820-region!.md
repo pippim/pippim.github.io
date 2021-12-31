@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        KASLR disabled: could not find suitable E820 region!
+title:        >
+    KASLR disabled: could not find suitable E820 region!
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1000559
 type:         Answer
 tags:         boot kernel virtualbox
-created_date: 2018-01-28 01:25:31
-edit_date:    2018-01-28 01:39:07
-votes:        3
+created_date: !!str "2018-01-28 01:25:31"
+edit_date:    !!str "2018-01-28 01:39:07"
+votes:        !!str "3"
 favorites:    
-views:        4,823
+views:        !!str "4,823"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

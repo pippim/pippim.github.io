@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to change Gnome-Terminal title?
+title:        >
+    How to change Gnome-Terminal title?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1164880
 type:         Answer
 tags:         command-line gnome-terminal titlebar
-created_date: 2019-08-11 00:45:50
-edit_date:    2021-04-07 01:20:21
-votes:        9
+created_date: !!str "2019-08-11 00:45:50"
+edit_date:    !!str "2021-04-07 01:20:21"
+votes:        !!str "9"
 favorites:    
-views:        246,407
+views:        !!str "246,407"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I add up file sizes in Bash by pattern into array ∕ list?
+title:        >
+    How do I add up file sizes in Bash by pattern into array ∕ list?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/891096
 type:         Question
 tags:         command-line bash kernel files
-created_date: 2017-03-09 02:54:25
-edit_date:    2017-03-09 03:23:00
-votes:        3
+created_date: !!str "2017-03-09 02:54:25"
+edit_date:    !!str "2017-03-09 03:23:00"
+votes:        !!str "3"
 favorites:    1
-views:        188
+views:        !!str "188"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

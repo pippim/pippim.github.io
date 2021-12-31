@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is Ubuntu Server required for LAMP server or will anything break if I install LAMP on Ubuntu Desktop?
+title:        >
+    Is Ubuntu Server required for LAMP server or will anything break if I install LAMP on Ubuntu Desktop?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/864574
 type:         Question
 tags:         14.04 server lamp webserver
-created_date: 2016-12-26 00:24:35
-edit_date:    2017-04-13 12:23:36
-votes:        5
+created_date: !!str "2016-12-26 00:24:35"
+edit_date:    !!str "2017-04-13 12:23:36"
+votes:        !!str "5"
 favorites:    
-views:        794
+views:        !!str "794"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

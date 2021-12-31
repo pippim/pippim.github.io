@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Google Chrome will take up my memory to the point where it causes my computer to freeze to a near halt. What can I do to prevent this?
+title:        >
+    Google Chrome will take up my memory to the point where it causes my computer to freeze to a near halt. What can I do to prevent this?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/817995
 type:         Answer
 tags:         16.04 google-chrome ram memory-usage
-created_date: 2016-08-28 23:41:48
-edit_date:    2017-10-04 19:46:26
-votes:        32
+created_date: !!str "2016-08-28 23:41:48"
+edit_date:    !!str "2017-10-04 19:46:26"
+votes:        !!str "32"
 favorites:    
-views:        19,557
+views:        !!str "19,557"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

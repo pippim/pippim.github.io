@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why is my start-up is ultra slow?
+title:        >
+    Why is my start-up is ultra slow?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1151767
 type:         Answer
 tags:         18.04 kubuntu startup
-created_date: 2019-06-17 17:13:14
-edit_date:    2019-06-17 17:20:42
-votes:        2
+created_date: !!str "2019-06-17 17:13:14"
+edit_date:    !!str "2019-06-17 17:20:42"
+votes:        !!str "2"
 favorites:    
-views:        1,712
+views:        !!str "1,712"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

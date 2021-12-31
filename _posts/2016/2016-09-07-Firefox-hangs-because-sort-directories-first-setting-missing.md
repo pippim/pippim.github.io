@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Firefox hangs because sort-directories-first setting missing
+title:        >
+    Firefox hangs because sort-directories-first setting missing
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821901
 type:         Answer
 tags:         gnome xubuntu firefox gsettings
-created_date: 2016-09-07 01:02:36
-edit_date:    
-votes:        2
+created_date: !!str "2016-09-07 01:02:36"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        2,039
+views:        !!str "2,039"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

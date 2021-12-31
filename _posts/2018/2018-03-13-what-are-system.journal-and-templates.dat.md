@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        what are system.journal and templates.dat
+title:        >
+    what are system.journal and templates.dat
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1014370
 type:         Answer
 tags:         files filesystem log
-created_date: 2018-03-13 01:58:22
-edit_date:    2018-03-13 02:07:20
-votes:        0
+created_date: !!str "2018-03-13 01:58:22"
+edit_date:    !!str "2018-03-13 02:07:20"
+votes:        !!str "0"
 favorites:    
-views:        1,027
+views:        !!str "1,027"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

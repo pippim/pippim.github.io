@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Which LTS version is supported? 18.04.1 or 18.04.2? both?
+title:        >
+    Which LTS version is supported? 18.04.1 or 18.04.2? both?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1162750
 type:         Answer
 tags:         18.04 upgrade security
-created_date: 2019-08-01 19:48:53
-edit_date:    2019-08-01 23:00:13
-votes:        2
+created_date: !!str "2019-08-01 19:48:53"
+edit_date:    !!str "2019-08-01 23:00:13"
+votes:        !!str "2"
 favorites:    
-views:        1,119
+views:        !!str "1,119"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

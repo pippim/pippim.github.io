@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to fix the ubuntu splash loading bar showing up on the desktop view?
+title:        >
+    How to fix the ubuntu splash loading bar showing up on the desktop view?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021878
 type:         Answer
 tags:         16.04 lts
-created_date: 2018-04-04 10:48:28
-edit_date:    
-votes:        2
+created_date: !!str "2018-04-04 10:48:28"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        8,093
+views:        !!str "8,093"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

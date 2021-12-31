@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        HTML5 Videos flickering
+title:        >
+    HTML5 Videos flickering
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/823683
 type:         Answer
 tags:         google-chrome
-created_date: 2016-09-11 16:21:55
-edit_date:    2016-09-11 16:30:57
-votes:        2
+created_date: !!str "2016-09-11 16:21:55"
+edit_date:    !!str "2016-09-11 16:30:57"
+votes:        !!str "2"
 favorites:    
-views:        1,758
+views:        !!str "1,758"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

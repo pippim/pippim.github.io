@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Setting to High Performance
+title:        >
+    Setting to High Performance
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1047763
 type:         Answer
 tags:         power-management performance conky vnstat
-created_date: 2018-06-19 02:14:50
-edit_date:    2020-10-06 13:31:29
-votes:        46
+created_date: !!str "2018-06-19 02:14:50"
+edit_date:    !!str "2020-10-06 13:31:29"
+votes:        !!str "46"
 favorites:    
-views:        82,452
+views:        !!str "82,452"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

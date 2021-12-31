@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Bluetooth does not turn on
+title:        >
+    Bluetooth does not turn on
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159949
 type:         Answer
 tags:         18.04 bluetooth
-created_date: 2019-07-21 16:48:43
-edit_date:    2019-07-22 15:35:47
-votes:        1
+created_date: !!str "2019-07-21 16:48:43"
+edit_date:    !!str "2019-07-22 15:35:47"
+votes:        !!str "1"
 favorites:    
-views:        1,078
+views:        !!str "1,078"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Default Ubuntu Desktop with TightVnc and Windows Linux Subsystem
+title:        >
+    Default Ubuntu Desktop with TightVnc and Windows Linux Subsystem
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1134063
 type:         Answer
 tags:         gnome vnc windows-subsystem-for-linux tightvncserver yad
-created_date: 2019-04-15 11:27:40
-edit_date:    
-votes:        2
+created_date: !!str "2019-04-15 11:27:40"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        7,306
+views:        !!str "7,306"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I make a "choice image list" in MAAS UBUNTU?
+title:        >
+    Can I make a "choice image list" in MAAS UBUNTU?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/885142
 type:         Answer
 tags:         maas grub
-created_date: 2017-02-19 22:57:22
-edit_date:    2020-06-12 14:37:07
-votes:        4
+created_date: !!str "2017-02-19 22:57:22"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "4"
 favorites:    
-views:        318
+views:        !!str "318"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

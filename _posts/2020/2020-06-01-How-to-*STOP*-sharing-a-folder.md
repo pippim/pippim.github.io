@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to *STOP* sharing a folder
+title:        >
+    How to *STOP* sharing a folder
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1245644
 type:         Answer
 tags:         nautilus samba file-sharing sharing
-created_date: 2020-06-01 01:32:39
-edit_date:    2020-06-01 01:37:56
-votes:        0
+created_date: !!str "2020-06-01 01:32:39"
+edit_date:    !!str "2020-06-01 01:37:56"
+votes:        !!str "0"
 favorites:    
-views:        1,349
+views:        !!str "1,349"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

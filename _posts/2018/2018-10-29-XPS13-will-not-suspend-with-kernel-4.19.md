@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        XPS13 will not suspend with kernel 4.19
+title:        >
+    XPS13 will not suspend with kernel 4.19
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1088146
 type:         Answer
 tags:         18.04 kernel suspend xps
-created_date: 2018-10-29 01:37:01
-edit_date:    
-votes:        2
+created_date: !!str "2018-10-29 01:37:01"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        349
+views:        !!str "349"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

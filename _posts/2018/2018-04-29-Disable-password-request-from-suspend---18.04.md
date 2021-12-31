@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Disable password request from suspend - 18.04
+title:        >
+    Disable password request from suspend - 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029805
 type:         Answer
 tags:         suspend password lock-screen 18.04
-created_date: 2018-04-29 18:04:15
-edit_date:    2018-07-01 08:14:59
-votes:        63
+created_date: !!str "2018-04-29 18:04:15"
+edit_date:    !!str "2018-07-01 08:14:59"
+votes:        !!str "63"
 favorites:    
-views:        47,670
+views:        !!str "47,670"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Xrandr shows HDMI1 disconnect w∕ HDMI2 as primary with only one monitor
+title:        >
+    Xrandr shows HDMI1 disconnect w∕ HDMI2 as primary with only one monitor
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1079356
 type:         Answer
 tags:         16.04 drivers intel-graphics hdmi xrandr
-created_date: 2018-09-28 23:01:36
-edit_date:    
-votes:        0
+created_date: !!str "2018-09-28 23:01:36"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        2,214
+views:        !!str "2,214"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

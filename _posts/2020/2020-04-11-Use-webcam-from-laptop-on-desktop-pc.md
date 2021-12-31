@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Use webcam from laptop on desktop pc
+title:        >
+    Use webcam from laptop on desktop pc
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1226284
 type:         Answer
 tags:         networking webcam streaming video-streaming v4l
-created_date: 2020-04-11 18:24:15
-edit_date:    
-votes:        2
+created_date: !!str "2020-04-11 18:24:15"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        12,402
+views:        !!str "12,402"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

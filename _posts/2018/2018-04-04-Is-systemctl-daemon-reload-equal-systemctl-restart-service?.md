@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is systemctl daemon-reload equal systemctl restart service?
+title:        >
+    Is systemctl daemon-reload equal systemctl restart service?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021780
 type:         Answer
 tags:         16.04 services
-created_date: 2018-04-04 03:26:00
-edit_date:    2020-06-12 14:37:07
-votes:        14
+created_date: !!str "2018-04-04 03:26:00"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "14"
 favorites:    
-views:        37,335
+views:        !!str "37,335"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

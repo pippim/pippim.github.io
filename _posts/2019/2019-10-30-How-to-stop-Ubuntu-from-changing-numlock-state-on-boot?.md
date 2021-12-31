@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to stop Ubuntu from changing numlock state on boot?
+title:        >
+    How to stop Ubuntu from changing numlock state on boot?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1184884
 type:         Answer
 tags:         boot 18.04 keyboard login-screen numlock
-created_date: 2019-10-30 00:37:11
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2019-10-30 00:37:11"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        3,458
+views:        !!str "3,458"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

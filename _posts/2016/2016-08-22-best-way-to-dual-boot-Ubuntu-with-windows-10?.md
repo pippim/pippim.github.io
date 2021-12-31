@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        best way to dual boot Ubuntu with windows 10?
+title:        >
+    best way to dual boot Ubuntu with windows 10?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/815191
 type:         Answer
 tags:         boot mbr grub
-created_date: 2016-08-22 04:21:51
-edit_date:    
-votes:        1
+created_date: !!str "2016-08-22 04:21:51"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        1,643
+views:        !!str "1,643"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

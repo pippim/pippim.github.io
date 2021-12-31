@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Prevent host shutting down when remotely logged in
+title:        >
+    Prevent host shutting down when remotely logged in
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1252628
 type:         Answer
 tags:         server ssh suspend client
-created_date: 2020-06-22 02:15:33
-edit_date:    2020-06-22 02:52:27
-votes:        0
+created_date: !!str "2020-06-22 02:15:33"
+edit_date:    !!str "2020-06-22 02:52:27"
+votes:        !!str "0"
 favorites:    
-views:        436
+views:        !!str "436"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

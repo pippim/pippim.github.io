@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can line draw characters (or colors) be added to a Bash file list menu?
+title:        >
+    Can line draw characters (or colors) be added to a Bash file list menu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/832766
 type:         Question
 tags:         command-line bash scripts menu
-created_date: 2016-10-03 23:49:01
-edit_date:    2017-04-13 12:24:08
-votes:        2
+created_date: !!str "2016-10-03 23:49:01"
+edit_date:    !!str "2017-04-13 12:24:08"
+votes:        !!str "2"
 favorites:    
-views:        536
+views:        !!str "536"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

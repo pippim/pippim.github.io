@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Touchpad not working after suspending laptop
+title:        >
+    Touchpad not working after suspending laptop
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/828920
 type:         Answer
 tags:         touchpad suspend asus synaptics
-created_date: 2016-09-24 01:23:55
-edit_date:    2016-09-24 02:26:03
-votes:        18
+created_date: !!str "2016-09-24 01:23:55"
+edit_date:    !!str "2016-09-24 02:26:03"
+votes:        !!str "18"
 favorites:    
-views:        40,401
+views:        !!str "40,401"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

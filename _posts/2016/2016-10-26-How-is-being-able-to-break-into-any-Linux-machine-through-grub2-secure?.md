@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How is being able to break into any Linux machine through grub2 secure?
+title:        >
+    How is being able to break into any Linux machine through grub2 secure?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/842196
 type:         Answer
 tags:         boot permissions security grub
-created_date: 2016-10-26 23:54:19
-edit_date:    2017-04-13 12:24:41
-votes:        3
+created_date: !!str "2016-10-26 23:54:19"
+edit_date:    !!str "2017-04-13 12:24:41"
+votes:        !!str "3"
 favorites:    
-views:        18,581
+views:        !!str "18,581"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

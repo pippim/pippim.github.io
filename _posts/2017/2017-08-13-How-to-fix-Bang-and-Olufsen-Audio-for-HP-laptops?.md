@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to fix Bang and Olufsen Audio for HP laptops?
+title:        >
+    How to fix Bang and Olufsen Audio for HP laptops?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/945969
 type:         Answer
 tags:         drivers sound pulseaudio speakers
-created_date: 2017-08-13 23:37:45
-edit_date:    2021-01-07 00:31:36
-votes:        3
+created_date: !!str "2017-08-13 23:37:45"
+edit_date:    !!str "2021-01-07 00:31:36"
+votes:        !!str "3"
 favorites:    
-views:        24,387
+views:        !!str "24,387"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

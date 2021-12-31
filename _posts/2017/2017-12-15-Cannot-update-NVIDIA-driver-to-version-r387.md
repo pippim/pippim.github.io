@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Cannot update NVIDIA driver to version r387
+title:        >
+    Cannot update NVIDIA driver to version r387
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/986384
 type:         Answer
 tags:         drivers nvidia kernel cuda
-created_date: 2017-12-15 00:31:42
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2017-12-15 00:31:42"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        1,830
+views:        !!str "1,830"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

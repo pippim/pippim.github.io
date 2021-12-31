@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the difference between ∕etc∕profile and .bashrc
+title:        >
+    What is the difference between ∕etc∕profile and .bashrc
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/939742
 type:         Answer
 tags:         bash bashrc
-created_date: 2017-07-25 20:29:44
-edit_date:    2020-06-12 14:37:07
-votes:        6
+created_date: !!str "2017-07-25 20:29:44"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "6"
 favorites:    
-views:        8,805
+views:        !!str "8,805"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

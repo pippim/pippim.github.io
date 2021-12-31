@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to use "xrandr --gamma" for Gnome "Night Light"-like usage?
+title:        >
+    How to use "xrandr --gamma" for Gnome "Night Light"-like usage?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1061304
 type:         Answer
 tags:         ubuntu-gnome xrandr redshift f.lux gamma
-created_date: 2018-08-01 04:12:55
-edit_date:    2020-06-12 14:37:07
-votes:        23
+created_date: !!str "2018-08-01 04:12:55"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "23"
 favorites:    
-views:        14,382
+views:        !!str "14,382"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

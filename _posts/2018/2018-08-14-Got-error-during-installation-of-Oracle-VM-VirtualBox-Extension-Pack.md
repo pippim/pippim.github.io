@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Got error during installation of Oracle VM VirtualBox Extension Pack
+title:        >
+    Got error during installation of Oracle VM VirtualBox Extension Pack
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1065249
 type:         Answer
 tags:         permissions virtualbox virtualization root oracle
-created_date: 2018-08-14 11:01:17
-edit_date:    
-votes:        3
+created_date: !!str "2018-08-14 11:01:17"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        5,159
+views:        !!str "5,159"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

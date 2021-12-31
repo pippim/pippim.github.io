@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to get the GPU info?
+title:        >
+    How to get the GPU info?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1026234
 type:         Answer
 tags:         command-line graphics gpu conky
-created_date: 2018-04-18 23:05:59
-edit_date:    2020-06-12 14:37:07
-votes:        8
+created_date: !!str "2018-04-18 23:05:59"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "8"
 favorites:    
-views:        1,249,301
+views:        !!str "1,249,301"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

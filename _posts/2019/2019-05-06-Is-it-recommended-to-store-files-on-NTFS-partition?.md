@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is it recommended to store files on NTFS partition?
+title:        >
+    Is it recommended to store files on NTFS partition?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1140935
 type:         Answer
 tags:         dual-boot partitioning ntfs
-created_date: 2019-05-06 11:29:28
-edit_date:    
-votes:        1
+created_date: !!str "2019-05-06 11:29:28"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        479
+views:        !!str "479"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

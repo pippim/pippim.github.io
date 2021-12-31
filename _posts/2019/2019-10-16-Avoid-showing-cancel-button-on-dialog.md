@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Avoid showing cancel button on dialog
+title:        >
+    Avoid showing cancel button on dialog
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1181487
 type:         Answer
 tags:         command-line button zenity yad
-created_date: 2019-10-16 23:19:07
-edit_date:    2020-06-12 14:37:07
-votes:        7
+created_date: !!str "2019-10-16 23:19:07"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "7"
 favorites:    
-views:        3,922
+views:        !!str "3,922"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

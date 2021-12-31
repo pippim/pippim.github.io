@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Would I install android studio with 2 GB RAM
+title:        >
+    Would I install android studio with 2 GB RAM
 site:         Android Enthusiasts
 stack_url:    https://android.stackexchange.com/q/202708
 type:         Answer
 tags:         windows android-sdk
-created_date: 2018-10-14 21:15:06
-edit_date:    2020-06-10 13:47:31
-votes:        2
+created_date: !!str "2018-10-14 21:15:06"
+edit_date:    !!str "2020-06-10 13:47:31"
+votes:        !!str "2"
 favorites:    
-views:        1,514
+views:        !!str "1,514"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What's eating all the RAM and swap?
+title:        >
+    What's eating all the RAM and swap?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/845020
 type:         Answer
 tags:         games swap 16.10
-created_date: 2016-11-03 10:19:56
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2016-11-03 10:19:56"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        363
+views:        !!str "363"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to integrate "run as shell script" in right click menu of file manager?
+title:        >
+    How to integrate "run as shell script" in right click menu of file manager?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1031914
 type:         Answer
 tags:         command-line scripts filemanager sh csh
-created_date: 2018-05-04 10:09:40
-edit_date:    
-votes:        3
+created_date: !!str "2018-05-04 10:09:40"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        1,302
+views:        !!str "1,302"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

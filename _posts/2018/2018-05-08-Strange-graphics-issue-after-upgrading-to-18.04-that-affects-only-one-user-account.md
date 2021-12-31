@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Strange graphics issue after upgrading to 18.04 that affects only one user account
+title:        >
+    Strange graphics issue after upgrading to 18.04 that affects only one user account
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1033800
 type:         Answer
 tags:         xorg 18.04 ubuntu-gnome window-manager
-created_date: 2018-05-08 23:46:30
-edit_date:    2018-05-09 11:31:48
-votes:        2
+created_date: !!str "2018-05-08 23:46:30"
+edit_date:    !!str "2018-05-09 11:31:48"
+votes:        !!str "2"
 favorites:    
-views:        11,257
+views:        !!str "11,257"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

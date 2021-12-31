@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Removing exeuctable bit on ntfs stored linux files corrupts files
+title:        >
+    Removing exeuctable bit on ntfs stored linux files corrupts files
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1038502
 type:         Question
 tags:         mount ntfs chmod data-corruption vnstat
-created_date: 2018-05-20 22:12:21
-edit_date:    2018-05-20 22:17:34
-votes:        0
+created_date: !!str "2018-05-20 22:12:21"
+edit_date:    !!str "2018-05-20 22:17:34"
+votes:        !!str "0"
 favorites:    
-views:        50
+views:        !!str "50"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

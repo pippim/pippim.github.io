@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Grub: reboot to specific kernel
+title:        >
+    Grub: reboot to specific kernel
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1062304
 type:         Answer
 tags:         grub2
-created_date: 2018-08-04 12:12:49
-edit_date:    2020-06-12 14:37:07
-votes:        4
+created_date: !!str "2018-08-04 12:12:49"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "4"
 favorites:    
-views:        13,126
+views:        !!str "13,126"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

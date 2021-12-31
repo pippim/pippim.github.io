@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Differences between ∕bin, ∕sbin, ∕usr∕bin, ∕usr∕sbin, ∕usr∕local∕bin, ∕usr∕local∕sbin
+title:        >
+    Differences between ∕bin, ∕sbin, ∕usr∕bin, ∕usr∕sbin, ∕usr∕local∕bin, ∕usr∕local∕sbin
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1045759
 type:         Answer
 tags:         command-line filesystem scripts directory system
-created_date: 2018-06-11 23:44:36
-edit_date:    2020-06-12 14:37:07
-votes:        23
+created_date: !!str "2018-06-11 23:44:36"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "23"
 favorites:    
-views:        289,928
+views:        !!str "289,928"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

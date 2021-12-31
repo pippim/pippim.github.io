@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Poor IO performance - PCIe NVMe Samsung 950 pro
+title:        >
+    Poor IO performance - PCIe NVMe Samsung 950 pro
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/964094
 type:         Answer
 tags:         performance io pcie
-created_date: 2017-10-12 02:39:22
-edit_date:    2018-10-08 19:52:57
-votes:        3
+created_date: !!str "2017-10-12 02:39:22"
+edit_date:    !!str "2018-10-08 19:52:57"
+votes:        !!str "3"
 favorites:    
-views:        36,439
+views:        !!str "36,439"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

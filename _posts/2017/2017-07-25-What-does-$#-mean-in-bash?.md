@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What does $# mean in bash?
+title:        >
+    What does $# mean in bash?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/939627
 type:         Answer
 tags:         bash
-created_date: 2017-07-25 14:44:21
-edit_date:    2017-07-26 14:03:18
-votes:        16
+created_date: !!str "2017-07-25 14:44:21"
+edit_date:    !!str "2017-07-26 14:03:18"
+votes:        !!str "16"
 favorites:    
-views:        83,870
+views:        !!str "83,870"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

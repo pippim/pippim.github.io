@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Cut or limit internet connection to other wifi devices
+title:        >
+    Cut or limit internet connection to other wifi devices
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/848031
 type:         Answer
 tags:         wireless
-created_date: 2016-11-11 00:59:15
-edit_date:    2017-04-13 12:37:16
-votes:        2
+created_date: !!str "2016-11-11 00:59:15"
+edit_date:    !!str "2017-04-13 12:37:16"
+votes:        !!str "2"
 favorites:    
-views:        4,532
+views:        !!str "4,532"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

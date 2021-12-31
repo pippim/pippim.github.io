@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I safely resize Windows 10 system partition from Ubuntu?
+title:        >
+    Can I safely resize Windows 10 system partition from Ubuntu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1030518
 type:         Answer
 tags:         dual-boot partitioning gparted
-created_date: 2018-05-01 10:34:33
-edit_date:    2018-05-01 10:52:57
-votes:        5
+created_date: !!str "2018-05-01 10:34:33"
+edit_date:    !!str "2018-05-01 10:52:57"
+votes:        !!str "5"
 favorites:    
-views:        8,747
+views:        !!str "8,747"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

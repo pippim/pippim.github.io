@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to execute script file at startup without using any commands like ln -s or any other to be executed at first?
+title:        >
+    How to execute script file at startup without using any commands like ln -s or any other to be executed at first?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840847
 type:         Answer
 tags:         init.d init
-created_date: 2016-10-23 15:03:43
-edit_date:    
-votes:        4
+created_date: !!str "2016-10-23 15:03:43"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        1,343
+views:        !!str "1,343"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

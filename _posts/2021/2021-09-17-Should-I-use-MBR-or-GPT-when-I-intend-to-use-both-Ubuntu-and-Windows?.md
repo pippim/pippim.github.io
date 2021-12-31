@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Should I use MBR or GPT when I intend to use both Ubuntu and Windows?
+title:        >
+    Should I use MBR or GPT when I intend to use both Ubuntu and Windows?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1364351
 type:         Answer
 tags:         system-installation
-created_date: 2021-09-17 22:28:06
-edit_date:    
-votes:        2
+created_date: !!str "2021-09-17 22:28:06"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        3,007
+views:        !!str "3,007"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

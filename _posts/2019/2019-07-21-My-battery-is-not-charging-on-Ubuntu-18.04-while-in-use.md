@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        My battery is not charging on Ubuntu 18.04 while in use
+title:        >
+    My battery is not charging on Ubuntu 18.04 while in use
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159999
 type:         Answer
 tags:         18.04 power-management hp battery
-created_date: 2019-07-21 19:53:24
-edit_date:    
-votes:        2
+created_date: !!str "2019-07-21 19:53:24"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        2,990
+views:        !!str "2,990"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

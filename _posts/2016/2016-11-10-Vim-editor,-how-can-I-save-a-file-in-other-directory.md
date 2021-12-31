@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Vim editor, how can I save a file in other directory
+title:        >
+    Vim editor, how can I save a file in other directory
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/848003
 type:         Answer
 tags:         vim
-created_date: 2016-11-10 22:46:37
-edit_date:    
-votes:        2
+created_date: !!str "2016-11-10 22:46:37"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        80,659
+views:        !!str "80,659"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

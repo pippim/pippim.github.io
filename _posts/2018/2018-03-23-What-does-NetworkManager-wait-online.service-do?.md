@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What does NetworkManager-wait-online.service do?
+title:        >
+    What does NetworkManager-wait-online.service do?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018731
 type:         Answer
 tags:         network-manager 17.10
-created_date: 2018-03-23 23:35:51
-edit_date:    2020-06-12 14:37:07
-votes:        64
+created_date: !!str "2018-03-23 23:35:51"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "64"
 favorites:    
-views:        80,896
+views:        !!str "80,896"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

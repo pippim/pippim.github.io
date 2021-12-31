@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the meaning of the output of the command 'sensors'?
+title:        >
+    What is the meaning of the output of the command 'sensors'?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1083487
 type:         Answer
 tags:         cpu temperature
-created_date: 2018-10-13 14:31:58
-edit_date:    2018-10-13 14:51:57
-votes:        11
+created_date: !!str "2018-10-13 14:31:58"
+edit_date:    !!str "2018-10-13 14:51:57"
+votes:        !!str "11"
 favorites:    
-views:        18,615
+views:        !!str "18,615"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

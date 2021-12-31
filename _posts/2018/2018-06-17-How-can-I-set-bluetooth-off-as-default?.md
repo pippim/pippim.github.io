@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I set bluetooth off as default?
+title:        >
+    How can I set bluetooth off as default?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1047455
 type:         Answer
 tags:         boot bluetooth settings
-created_date: 2018-06-17 21:38:02
-edit_date:    2018-06-17 23:53:20
-votes:        18
+created_date: !!str "2018-06-17 21:38:02"
+edit_date:    !!str "2018-06-17 23:53:20"
+votes:        !!str "18"
 favorites:    
-views:        18,658
+views:        !!str "18,658"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

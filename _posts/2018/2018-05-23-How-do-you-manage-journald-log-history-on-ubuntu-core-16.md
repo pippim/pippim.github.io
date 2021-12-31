@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do you manage journald log history on ubuntu core 16
+title:        >
+    How do you manage journald log history on ubuntu core 16
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039213
 type:         Answer
 tags:         ubuntu-core
-created_date: 2018-05-23 00:23:03
-edit_date:    2018-05-23 22:45:51
-votes:        1
+created_date: !!str "2018-05-23 00:23:03"
+edit_date:    !!str "2018-05-23 22:45:51"
+votes:        !!str "1"
 favorites:    
-views:        983
+views:        !!str "983"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

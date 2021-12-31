@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Help using crontab to play a sound
+title:        >
+    Help using crontab to play a sound
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1045344
 type:         Answer
 tags:         sound cron
-created_date: 2018-06-10 16:17:17
-edit_date:    2018-06-10 17:39:19
-votes:        7
+created_date: !!str "2018-06-10 16:17:17"
+edit_date:    !!str "2018-06-10 17:39:19"
+votes:        !!str "7"
 favorites:    
-views:        4,809
+views:        !!str "4,809"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

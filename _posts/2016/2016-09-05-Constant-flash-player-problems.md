@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Constant flash player problems
+title:        >
+    Constant flash player problems
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821423
 type:         Answer
 tags:         google-chrome flash
-created_date: 2016-09-05 22:07:21
-edit_date:    2016-09-05 22:19:15
-votes:        4
+created_date: !!str "2016-09-05 22:07:21"
+edit_date:    !!str "2016-09-05 22:19:15"
+votes:        !!str "4"
 favorites:    
-views:        1,632
+views:        !!str "1,632"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

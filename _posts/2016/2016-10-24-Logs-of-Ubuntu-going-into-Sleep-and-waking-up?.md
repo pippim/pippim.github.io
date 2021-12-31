@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Logs of Ubuntu going into Sleep and waking up?
+title:        >
+    Logs of Ubuntu going into Sleep and waking up?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/841202
 type:         Answer
 tags:         suspend power-management
-created_date: 2016-10-24 11:27:27
-edit_date:    2016-10-27 14:50:24
-votes:        9
+created_date: !!str "2016-10-24 11:27:27"
+edit_date:    !!str "2016-10-27 14:50:24"
+votes:        !!str "9"
 favorites:    
-views:        9,778
+views:        !!str "9,778"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

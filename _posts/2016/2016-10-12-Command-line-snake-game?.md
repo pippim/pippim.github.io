@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Command-line snake game?
+title:        >
+    Command-line snake game?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/835994
 type:         Answer
 tags:         command-line software-recommendation games
-created_date: 2016-10-12 09:21:07
-edit_date:    2021-12-08 02:56:40
-votes:        7
+created_date: !!str "2016-10-12 09:21:07"
+edit_date:    !!str "2021-12-08 02:56:40"
+votes:        !!str "7"
 favorites:    
-views:        2,211
+views:        !!str "2,211"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

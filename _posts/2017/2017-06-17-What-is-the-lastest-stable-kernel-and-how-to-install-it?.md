@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is the lastest stable kernel and how to install it?
+title:        >
+    What is the lastest stable kernel and how to install it?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/926287
 type:         Answer
 tags:         kernel 16.04 grub
-created_date: 2017-06-17 01:15:37
-edit_date:    2017-07-04 10:09:15
-votes:        3
+created_date: !!str "2017-06-17 01:15:37"
+edit_date:    !!str "2017-07-04 10:09:15"
+votes:        !!str "3"
 favorites:    
-views:        42,113
+views:        !!str "42,113"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

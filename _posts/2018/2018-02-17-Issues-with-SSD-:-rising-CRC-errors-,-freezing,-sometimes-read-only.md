@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Issues with SSD : rising CRC errors , freezing, sometimes read-only
+title:        >
+    Issues with SSD : rising CRC errors , freezing, sometimes read-only
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007204
 type:         Answer
 tags:         ssd hardware disk ubuntu-gnome smart grub
-created_date: 2018-02-17 22:02:17
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2018-02-17 22:02:17"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        2,447
+views:        !!str "2,447"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

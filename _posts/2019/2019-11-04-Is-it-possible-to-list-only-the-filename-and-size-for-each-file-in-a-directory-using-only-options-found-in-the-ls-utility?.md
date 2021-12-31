@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is it possible to list only the filename and size for each file in a directory using only options found in the ls utility?
+title:        >
+    Is it possible to list only the filename and size for each file in a directory using only options found in the ls utility?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1186028
 type:         Answer
 tags:         command-line bash
-created_date: 2019-11-04 01:59:26
-edit_date:    
-votes:        3
+created_date: !!str "2019-11-04 01:59:26"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        10,358
+views:        !!str "10,358"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

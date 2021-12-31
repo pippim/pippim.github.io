@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Need to free up space in boot for update, but can't purge kernels due to unmet dependencies
+title:        >
+    Need to free up space in boot for update, but can't purge kernels due to unmet dependencies
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/941360
 type:         Answer
 tags:         kernel dpkg
-created_date: 2017-07-30 23:18:26
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2017-07-30 23:18:26"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        1,085
+views:        !!str "1,085"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

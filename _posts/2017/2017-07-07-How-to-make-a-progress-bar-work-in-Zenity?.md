@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to make a progress bar work in Zenity?
+title:        >
+    How to make a progress bar work in Zenity?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/932774
 type:         Answer
 tags:         bash zenity
-created_date: 2017-07-07 02:00:08
-edit_date:    
-votes:        2
+created_date: !!str "2017-07-07 02:00:08"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        11,355
+views:        !!str "11,355"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

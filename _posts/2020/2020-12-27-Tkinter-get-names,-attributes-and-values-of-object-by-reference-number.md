@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Tkinter get names, attributes and values of object by reference number
+title:        >
+    Tkinter get names, attributes and values of object by reference number
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/65461996
 type:         Answer
 tags:         python tkinter
-created_date: 2020-12-27 00:30:37
-edit_date:    2020-12-27 00:42:54
-votes:        0
+created_date: !!str "2020-12-27 00:30:37"
+edit_date:    !!str "2020-12-27 00:42:54"
+votes:        !!str "0"
 favorites:    
-views:        194
+views:        !!str "194"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

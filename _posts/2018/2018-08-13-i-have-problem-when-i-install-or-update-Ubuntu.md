@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        i have problem when i install or update Ubuntu
+title:        >
+    i have problem when i install or update Ubuntu
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064902
 type:         Answer
 tags:         system-installation upgrade updates
-created_date: 2018-08-13 10:01:48
-edit_date:    
-votes:        1
+created_date: !!str "2018-08-13 10:01:48"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        68
+views:        !!str "68"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

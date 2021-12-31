@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How should I setup Tuned-adm?
+title:        >
+    How should I setup Tuned-adm?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1187749
 type:         Answer
 tags:         power-management cpu
-created_date: 2019-11-10 16:02:32
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2019-11-10 16:02:32"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        1,665
+views:        !!str "1,665"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

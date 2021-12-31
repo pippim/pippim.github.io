@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is it possible to fix Ubuntu 16.04 by installing Ubuntu 16.04 over the top of the existing Ubuntu 16.04?
+title:        >
+    Is it possible to fix Ubuntu 16.04 by installing Ubuntu 16.04 over the top of the existing Ubuntu 16.04?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/820260
 type:         Answer
 tags:         update-alternatives
-created_date: 2016-09-02 23:30:54
-edit_date:    2017-04-13 12:23:35
-votes:        0
+created_date: !!str "2016-09-02 23:30:54"
+edit_date:    !!str "2017-04-13 12:23:35"
+votes:        !!str "0"
 favorites:    
-views:        285
+views:        !!str "285"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

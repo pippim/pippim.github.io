@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Accidentally copied files to wrong directory
+title:        >
+    Accidentally copied files to wrong directory
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1255496
 type:         Answer
 tags:         command-line sudo find rm
-created_date: 2020-07-01 19:33:32
-edit_date:    2020-07-02 23:01:16
-votes:        8
+created_date: !!str "2020-07-01 19:33:32"
+edit_date:    !!str "2020-07-02 23:01:16"
+votes:        !!str "8"
 favorites:    
-views:        1,194
+views:        !!str "1,194"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

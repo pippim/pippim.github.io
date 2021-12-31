@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Output channel for audio resets after every reboot
+title:        >
+    Output channel for audio resets after every reboot
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1171617
 type:         Answer
 tags:         sound
-created_date: 2019-09-07 22:41:56
-edit_date:    2019-09-08 16:49:40
-votes:        2
+created_date: !!str "2019-09-07 22:41:56"
+edit_date:    !!str "2019-09-08 16:49:40"
+votes:        !!str "2"
 favorites:    
-views:        2,810
+views:        !!str "2,810"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

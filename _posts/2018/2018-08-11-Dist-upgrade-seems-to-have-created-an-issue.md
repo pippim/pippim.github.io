@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Dist-upgrade seems to have created an issue
+title:        >
+    Dist-upgrade seems to have created an issue
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064512
 type:         Answer
 tags:         16.04 apt upgrade updates
-created_date: 2018-08-11 20:27:01
-edit_date:    2020-06-12 14:37:07
-votes:        12
+created_date: !!str "2018-08-11 20:27:01"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "12"
 favorites:    
-views:        5,840
+views:        !!str "5,840"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

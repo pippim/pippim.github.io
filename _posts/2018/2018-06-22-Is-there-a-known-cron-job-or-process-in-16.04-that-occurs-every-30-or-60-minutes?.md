@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is there a known cron job or process in 16.04 that occurs every 30 or 60 minutes?
+title:        >
+    Is there a known cron job or process in 16.04 that occurs every 30 or 60 minutes?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1048709
 type:         Answer
 tags:         16.04 kernel cron
-created_date: 2018-06-22 02:37:21
-edit_date:    2018-06-22 10:40:12
-votes:        3
+created_date: !!str "2018-06-22 02:37:21"
+edit_date:    !!str "2018-06-22 10:40:12"
+votes:        !!str "3"
 favorites:    
-views:        199
+views:        !!str "199"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

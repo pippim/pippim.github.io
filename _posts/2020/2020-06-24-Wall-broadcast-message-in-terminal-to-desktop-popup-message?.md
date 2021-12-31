@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Wall broadcast message in terminal to desktop popup message?
+title:        >
+    Wall broadcast message in terminal to desktop popup message?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1253239
 type:         Question
 tags:         libnotify
-created_date: 2020-06-24 01:34:42
-edit_date:    
-votes:        3
+created_date: !!str "2020-06-24 01:34:42"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        43
+views:        !!str "43"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

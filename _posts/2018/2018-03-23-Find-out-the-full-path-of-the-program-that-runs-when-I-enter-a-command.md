@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Find out the full path of the program that runs when I enter a command
+title:        >
+    Find out the full path of the program that runs when I enter a command
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018403
 type:         Answer
 tags:         command-line
-created_date: 2018-03-23 00:22:47
-edit_date:    2020-06-12 14:37:07
-votes:        5
+created_date: !!str "2018-03-23 00:22:47"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "5"
 favorites:    
-views:        227
+views:        !!str "227"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

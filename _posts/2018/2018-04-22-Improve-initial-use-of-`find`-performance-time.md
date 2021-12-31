@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Improve initial use of `find` performance time
+title:        >
+    Improve initial use of `find` performance time
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1027187
 type:         Answer
 tags:         command-line performance ram find cache conky
-created_date: 2018-04-22 12:37:03
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2018-04-22 12:37:03"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        1,263
+views:        !!str "1,263"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

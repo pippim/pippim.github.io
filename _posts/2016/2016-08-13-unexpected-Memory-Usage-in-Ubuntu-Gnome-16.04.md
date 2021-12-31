@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        unexpected Memory Usage in Ubuntu Gnome 16.04
+title:        >
+    unexpected Memory Usage in Ubuntu Gnome 16.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/811989
 type:         Answer
 tags:         gnome 16.04 ram
-created_date: 2016-08-13 23:40:21
-edit_date:    
-votes:        2
+created_date: !!str "2016-08-13 23:40:21"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        3,209
+views:        !!str "3,209"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I know if my GPU card driver supports Vulkan?
+title:        >
+    How can I know if my GPU card driver supports Vulkan?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/846565
 type:         Answer
 tags:         opengl mesa vulkan
-created_date: 2016-11-07 10:03:42
-edit_date:    2016-11-07 10:37:51
-votes:        2
+created_date: !!str "2016-11-07 10:03:42"
+edit_date:    !!str "2016-11-07 10:37:51"
+votes:        !!str "2"
 favorites:    
-views:        41,460
+views:        !!str "41,460"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        conky transparent
+title:        >
+    conky transparent
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/941705
 type:         Answer
 tags:         kubuntu conky vnstat
-created_date: 2017-08-01 01:14:46
-edit_date:    2020-06-12 14:37:07
-votes:        10
+created_date: !!str "2017-08-01 01:14:46"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "10"
 favorites:    
-views:        15,852
+views:        !!str "15,852"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

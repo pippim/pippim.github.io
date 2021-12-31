@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I install `mpich` library?
+title:        >
+    How can I install `mpich` library?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1010469
 type:         Answer
 tags:         16.04 compiling
-created_date: 2018-02-28 01:26:56
-edit_date:    2018-03-02 12:47:01
-votes:        6
+created_date: !!str "2018-02-28 01:26:56"
+edit_date:    !!str "2018-03-02 12:47:01"
+votes:        !!str "6"
 favorites:    
-views:        32,395
+views:        !!str "32,395"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I find GNOME desktop slower and less suited to my needs than Unity. What can I do about it?
+title:        >
+    I find GNOME desktop slower and less suited to my needs than Unity. What can I do about it?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1085850
 type:         Answer
 tags:         unity gnome 18.04
-created_date: 2018-10-21 14:06:29
-edit_date:    2020-06-12 14:37:07
-votes:        4
+created_date: !!str "2018-10-21 14:06:29"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "4"
 favorites:    
-views:        249
+views:        !!str "249"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

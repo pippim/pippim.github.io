@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        `cal -h` command: Bash substring `${string:offset:length}` error
+title:        >
+    `cal -h` command: Bash substring `${string:offset:length}` error
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1013954
 type:         Question
 tags:         bash
-created_date: 2018-03-11 19:47:52
-edit_date:    2018-04-29 17:11:18
-votes:        5
+created_date: !!str "2018-03-11 19:47:52"
+edit_date:    !!str "2018-04-29 17:11:18"
+votes:        !!str "5"
 favorites:    
-views:        559
+views:        !!str "559"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

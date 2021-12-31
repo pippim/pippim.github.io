@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Grub file can't be saved after modification
+title:        >
+    Grub file can't be saved after modification
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160778
 type:         Answer
 tags:         grub2 files configuration wacom text-editor
-created_date: 2019-07-24 18:12:35
-edit_date:    2019-08-24 21:32:17
-votes:        3
+created_date: !!str "2019-07-24 18:12:35"
+edit_date:    !!str "2019-08-24 21:32:17"
+votes:        !!str "3"
 favorites:    
-views:        444
+views:        !!str "444"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

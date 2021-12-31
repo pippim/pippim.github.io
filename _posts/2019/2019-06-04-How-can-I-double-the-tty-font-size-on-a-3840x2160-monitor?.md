@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I double the tty font size on a 3840x2160 monitor?
+title:        >
+    How can I double the tty font size on a 3840x2160 monitor?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1148410
 type:         Answer
 tags:         fonts tty
-created_date: 2019-06-04 02:20:04
-edit_date:    
-votes:        4
+created_date: !!str "2019-06-04 02:20:04"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        2,226
+views:        !!str "2,226"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

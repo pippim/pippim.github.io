@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Unusual power management following fresh reinstall of 16.10
+title:        >
+    Unusual power management following fresh reinstall of 16.10
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/839431
 type:         Answer
 tags:         suspend power-management shutdown 16.10
-created_date: 2016-10-20 00:36:28
-edit_date:    
-votes:        0
+created_date: !!str "2016-10-20 00:36:28"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        94
+views:        !!str "94"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

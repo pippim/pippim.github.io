@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        When will xrandr version 1.5.1 be available in Ubuntu?
+title:        >
+    When will xrandr version 1.5.1 be available in Ubuntu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1192154
 type:         Question
 tags:         xrandr
-created_date: 2019-11-28 01:56:29
-edit_date:    2020-06-12 14:37:07
-votes:        7
+created_date: !!str "2019-11-28 01:56:29"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "7"
 favorites:    1
-views:        2,417
+views:        !!str "2,417"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        how to take whole ubuntu 16.04 system backup into external hard disk
+title:        >
+    how to take whole ubuntu 16.04 system backup into external hard disk
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/963223
 type:         Answer
 tags:         backup
-created_date: 2017-10-09 04:53:28
-edit_date:    2017-11-14 15:59:16
-votes:        3
+created_date: !!str "2017-10-09 04:53:28"
+edit_date:    !!str "2017-11-14 15:59:16"
+votes:        !!str "3"
 favorites:    
-views:        7,803
+views:        !!str "7,803"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

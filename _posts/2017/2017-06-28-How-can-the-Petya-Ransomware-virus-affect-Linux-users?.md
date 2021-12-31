@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can the Petya Ransomware virus affect Linux users?
+title:        >
+    How can the Petya Ransomware virus affect Linux users?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/930083
 type:         Question
 tags:         wine security malware
-created_date: 2017-06-28 23:09:40
-edit_date:    2017-06-29 01:47:21
-votes:        4
+created_date: !!str "2017-06-28 23:09:40"
+edit_date:    !!str "2017-06-29 01:47:21"
+votes:        !!str "4"
 favorites:    1
-views:        3,359
+views:        !!str "3,359"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

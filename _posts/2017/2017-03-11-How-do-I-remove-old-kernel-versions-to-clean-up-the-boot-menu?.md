@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I remove old kernel versions to clean up the boot menu?
+title:        >
+    How do I remove old kernel versions to clean up the boot menu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/892096
 type:         Answer
 tags:         grub2 kernel cleanup
-created_date: 2017-03-11 20:25:32
-edit_date:    2017-07-28 22:35:52
-votes:        5
+created_date: !!str "2017-03-11 20:25:32"
+edit_date:    !!str "2017-07-28 22:35:52"
+votes:        !!str "5"
 favorites:    
-views:        1,158,421
+views:        !!str "1,158,421"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

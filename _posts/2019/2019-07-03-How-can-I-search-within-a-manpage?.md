@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I search within a manpage?
+title:        >
+    How can I search within a manpage?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1155773
 type:         Answer
 tags:         search manpage
-created_date: 2019-07-03 22:03:12
-edit_date:    2019-08-23 22:35:43
-votes:        2
+created_date: !!str "2019-07-03 22:03:12"
+edit_date:    !!str "2019-08-23 22:35:43"
+votes:        !!str "2"
 favorites:    
-views:        111,826
+views:        !!str "111,826"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Brightness wont go up or down and is stuck on max setting! Tried others solutions but still no fix! Please someone help!
+title:        >
+    Brightness wont go up or down and is stuck on max setting! Tried others solutions but still no fix! Please someone help!
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1058157
 type:         Answer
 tags:         grub2 brightness asus mint
-created_date: 2018-07-21 15:04:37
-edit_date:    2020-06-12 14:37:07
-votes:        0
+created_date: !!str "2018-07-21 15:04:37"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "0"
 favorites:    
-views:        813
+views:        !!str "813"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

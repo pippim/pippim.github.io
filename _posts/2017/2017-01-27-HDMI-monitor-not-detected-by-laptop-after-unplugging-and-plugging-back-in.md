@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        HDMI monitor not detected by laptop after unplugging and plugging back in
+title:        >
+    HDMI monitor not detected by laptop after unplugging and plugging back in
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/876684
 type:         Answer
 tags:         nvidia multiple-monitors display monitor
-created_date: 2017-01-27 00:23:33
-edit_date:    
-votes:        2
+created_date: !!str "2017-01-27 00:23:33"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        2,715
+views:        !!str "2,715"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

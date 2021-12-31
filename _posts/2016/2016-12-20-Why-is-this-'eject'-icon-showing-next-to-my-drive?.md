@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why is this 'eject' icon showing next to my drive?
+title:        >
+    Why is this 'eject' icon showing next to my drive?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/862786
 type:         Answer
 tags:         16.04
-created_date: 2016-12-20 19:13:37
-edit_date:    2017-04-13 12:24:56
-votes:        5
+created_date: !!str "2016-12-20 19:13:37"
+edit_date:    !!str "2017-04-13 12:24:56"
+votes:        !!str "5"
 favorites:    
-views:        1,386
+views:        !!str "1,386"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

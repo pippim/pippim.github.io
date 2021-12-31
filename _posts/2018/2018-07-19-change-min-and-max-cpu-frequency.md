@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        change min and max cpu frequency
+title:        >
+    change min and max cpu frequency
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1057727
 type:         Answer
 tags:         18.04 cpu scaling frequency
-created_date: 2018-07-19 23:37:41
-edit_date:    2020-06-12 14:37:07
-votes:        6
+created_date: !!str "2018-07-19 23:37:41"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "6"
 favorites:    
-views:        24,748
+views:        !!str "24,748"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

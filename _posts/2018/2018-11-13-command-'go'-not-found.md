@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        command 'go' not found
+title:        >
+    command 'go' not found
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1092673
 type:         Answer
 tags:         golang
-created_date: 2018-11-13 21:18:41
-edit_date:    2018-12-29 20:58:31
-votes:        10
+created_date: !!str "2018-11-13 21:18:41"
+edit_date:    !!str "2018-12-29 20:58:31"
+votes:        !!str "10"
 favorites:    
-views:        92,636
+views:        !!str "92,636"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

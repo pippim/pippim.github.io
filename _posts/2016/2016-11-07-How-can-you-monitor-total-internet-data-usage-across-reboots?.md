@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can you monitor total internet data usage across reboots?
+title:        >
+    How can you monitor total internet data usage across reboots?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/846455
 type:         Answer
 tags:         networking system-monitor bandwidth vnstat conky
-created_date: 2016-11-07 04:50:28
-edit_date:    2017-10-31 23:50:16
-votes:        60
+created_date: !!str "2016-11-07 04:50:28"
+edit_date:    !!str "2017-10-31 23:50:16"
+votes:        !!str "60"
 favorites:    
-views:        92,144
+views:        !!str "92,144"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

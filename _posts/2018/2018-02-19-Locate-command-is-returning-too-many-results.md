@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Locate command is returning too many results
+title:        >
+    Locate command is returning too many results
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007525
 type:         Question
 tags:         command-line bash scripts duplicate duplicate-files
-created_date: 2018-02-19 01:31:51
-edit_date:    2018-03-30 00:24:24
-votes:        2
+created_date: !!str "2018-02-19 01:31:51"
+edit_date:    !!str "2018-03-30 00:24:24"
+votes:        !!str "2"
 favorites:    
-views:        177
+views:        !!str "177"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

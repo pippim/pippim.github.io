@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is there a way to install Ubuntu completely on a portable external HDD and boot into it on any computer∕laptop?
+title:        >
+    Is there a way to install Ubuntu completely on a portable external HDD and boot into it on any computer∕laptop?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007421
 type:         Answer
 tags:         system-installation usb-installation portable
-created_date: 2018-02-18 16:11:58
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2018-02-18 16:11:58"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        260
+views:        !!str "260"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

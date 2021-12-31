@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Network not working properly after restart notebook closed lid
+title:        >
+    Network not working properly after restart notebook closed lid
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021563
 type:         Answer
 tags:         16.04 networking suspend laptop
-created_date: 2018-04-03 10:33:21
-edit_date:    2020-06-12 14:37:07
-votes:        0
+created_date: !!str "2018-04-03 10:33:21"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "0"
 favorites:    
-views:        131
+views:        !!str "131"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

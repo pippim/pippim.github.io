@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to turn off the computer from the GRUB screen in dual boot
+title:        >
+    How to turn off the computer from the GRUB screen in dual boot
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/886225
 type:         Answer
 tags:         boot dual-boot grub2 windows-10 reboot
-created_date: 2017-02-22 18:18:04
-edit_date:    2017-02-22 20:19:24
-votes:        20
+created_date: !!str "2017-02-22 18:18:04"
+edit_date:    !!str "2017-02-22 20:19:24"
+votes:        !!str "20"
 favorites:    
-views:        25,984
+views:        !!str "25,984"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

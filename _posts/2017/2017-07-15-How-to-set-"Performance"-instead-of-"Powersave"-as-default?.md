@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to set "Performance" instead of "Powersave" as default?
+title:        >
+    How to set "Performance" instead of "Powersave" as default?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/936488
 type:         Answer
 tags:         17.04 cpufreq
-created_date: 2017-07-15 17:54:43
-edit_date:    2020-08-09 15:24:45
-votes:        29
+created_date: !!str "2017-07-15 17:54:43"
+edit_date:    !!str "2020-08-09 15:24:45"
+votes:        !!str "29"
 favorites:    
-views:        50,508
+views:        !!str "50,508"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

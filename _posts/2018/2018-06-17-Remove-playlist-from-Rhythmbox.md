@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Remove playlist from Rhythmbox
+title:        >
+    Remove playlist from Rhythmbox
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1047452
 type:         Answer
 tags:         rhythmbox playlists
-created_date: 2018-06-17 21:30:47
-edit_date:    2018-06-17 23:06:42
-votes:        8
+created_date: !!str "2018-06-17 21:30:47"
+edit_date:    !!str "2018-06-17 23:06:42"
+votes:        !!str "8"
 favorites:    
-views:        1,139
+views:        !!str "1,139"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

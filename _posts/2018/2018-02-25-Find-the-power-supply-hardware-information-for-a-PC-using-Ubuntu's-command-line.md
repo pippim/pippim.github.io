@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Find the power supply hardware information for a PC using Ubuntu's command-line
+title:        >
+    Find the power supply hardware information for a PC using Ubuntu's command-line
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1009641
 type:         Answer
 tags:         command-line power-management hardware
-created_date: 2018-02-25 15:26:19
-edit_date:    2018-02-26 19:07:38
-votes:        7
+created_date: !!str "2018-02-25 15:26:19"
+edit_date:    !!str "2018-02-26 19:07:38"
+votes:        !!str "7"
 favorites:    
-views:        59,300
+views:        !!str "59,300"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

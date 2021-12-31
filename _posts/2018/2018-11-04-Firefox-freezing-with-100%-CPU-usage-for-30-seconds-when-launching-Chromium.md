@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Firefox freezing with 100% CPU usage for 30 seconds when launching Chromium
+title:        >
+    Firefox freezing with 100% CPU usage for 30 seconds when launching Chromium
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1089834
 type:         Answer
 tags:         firefox fonts chromium performance
-created_date: 2018-11-04 00:16:18
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2018-11-04 00:16:18"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        4,639
+views:        !!str "4,639"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

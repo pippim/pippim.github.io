@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Application that will lock screen after a set amount of time for Ubuntu
+title:        >
+    Application that will lock screen after a set amount of time for Ubuntu
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/837115
 type:         Answer
 tags:         16.04 lock-screen dbus gnome-screensaver multi-timer
-created_date: 2016-10-14 17:35:27
-edit_date:    2021-11-14 17:30:21
-votes:        15
+created_date: !!str "2016-10-14 17:35:27"
+edit_date:    !!str "2021-11-14 17:30:21"
+votes:        !!str "15"
 favorites:    
-views:        3,004
+views:        !!str "3,004"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

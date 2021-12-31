@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Cannot mount usb hard drive
+title:        >
+    Cannot mount usb hard drive
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1132581
 type:         Answer
 tags:         18.04 mount gparted exfat
-created_date: 2019-04-09 23:42:35
-edit_date:    2019-04-09 23:50:21
-votes:        4
+created_date: !!str "2019-04-09 23:42:35"
+edit_date:    !!str "2019-04-09 23:50:21"
+votes:        !!str "4"
 favorites:    
-views:        11,227
+views:        !!str "11,227"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

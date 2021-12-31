@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Python convert named string fields to tuple
+title:        >
+    Python convert named string fields to tuple
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59726703
 type:         Question
 tags:         python tuples
-created_date: 2020-01-14 02:21:56
-edit_date:    
-votes:        0
+created_date: !!str "2020-01-14 02:21:56"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        53
+views:        !!str "53"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Seemingly locked in console after CTRL+ALT+F1 --- How to quit?
+title:        >
+    Seemingly locked in console after CTRL+ALT+F1 --- How to quit?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007868
 type:         Answer
 tags:         command-line
-created_date: 2018-02-20 00:07:24
-edit_date:    
-votes:        4
+created_date: !!str "2018-02-20 00:07:24"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        702
+views:        !!str "702"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do you set scaling for a high dpi monitor and low dpi monitor independently?
+title:        >
+    How do you set scaling for a high dpi monitor and low dpi monitor independently?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/823535
 type:         Answer
 tags:         unity gui display-resolution scaling 4k-monitor
-created_date: 2016-09-11 04:03:18
-edit_date:    2020-06-12 14:37:07
-votes:        6
+created_date: !!str "2016-09-11 04:03:18"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "6"
 favorites:    
-views:        57,588
+views:        !!str "57,588"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

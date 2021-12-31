@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to change the Ubuntu 18.04 default greeter?
+title:        >
+    How to change the Ubuntu 18.04 default greeter?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1062002
 type:         Answer
 tags:         18.04
-created_date: 2018-08-03 11:20:15
-edit_date:    
-votes:        5
+created_date: !!str "2018-08-03 11:20:15"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        23,016
+views:        !!str "23,016"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

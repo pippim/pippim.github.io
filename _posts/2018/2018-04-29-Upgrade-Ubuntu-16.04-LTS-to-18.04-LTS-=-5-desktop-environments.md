@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Upgrade Ubuntu 16.04 LTS to 18.04 LTS = 5 desktop environments
+title:        >
+    Upgrade Ubuntu 16.04 LTS to 18.04 LTS = 5 desktop environments
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029748
 type:         Question
 tags:         16.04 upgrade login desktop-environments 18.04
-created_date: 2018-04-29 15:43:30
-edit_date:    
-votes:        2
+created_date: !!str "2018-04-29 15:43:30"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        2,172
+views:        !!str "2,172"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

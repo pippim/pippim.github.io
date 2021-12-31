@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Upgrade from 17.04 to 17.10
+title:        >
+    Upgrade from 17.04 to 17.10
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/997532
 type:         Answer
 tags:         17.04 17.10 .desktop
-created_date: 2018-01-19 01:55:22
-edit_date:    2018-01-19 02:02:05
-votes:        2
+created_date: !!str "2018-01-19 01:55:22"
+edit_date:    !!str "2018-01-19 02:02:05"
+votes:        !!str "2"
 favorites:    
-views:        1,411
+views:        !!str "1,411"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

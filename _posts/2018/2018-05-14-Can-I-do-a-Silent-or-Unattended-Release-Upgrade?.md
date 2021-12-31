@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I do a Silent or Unattended Release Upgrade?
+title:        >
+    Can I do a Silent or Unattended Release Upgrade?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035893
 type:         Answer
 tags:         upgrade release-management
-created_date: 2018-05-14 00:19:42
-edit_date:    
-votes:        9
+created_date: !!str "2018-05-14 00:19:42"
+edit_date:    !!str ""
+votes:        !!str "9"
 favorites:    
-views:        33,749
+views:        !!str "33,749"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

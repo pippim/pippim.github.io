@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Bash script to maintain audit trail ∕ log of files accessed
+title:        >
+    Bash script to maintain audit trail ∕ log of files accessed
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/851051
 type:         Answer
 tags:         command-line bash scripts gedit log
-created_date: 2016-11-19 02:21:17
-edit_date:    
-votes:        0
+created_date: !!str "2016-11-19 02:21:17"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        1,180
+views:        !!str "1,180"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

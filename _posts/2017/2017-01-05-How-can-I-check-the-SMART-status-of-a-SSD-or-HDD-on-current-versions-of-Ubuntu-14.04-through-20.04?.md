@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I check the SMART status of a SSD or HDD on current versions of Ubuntu 14.04 through 20.04?
+title:        >
+    How can I check the SMART status of a SSD or HDD on current versions of Ubuntu 14.04 through 20.04?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/868179
 type:         Answer
 tags:         hard-drive ssd smart
-created_date: 2017-01-05 03:07:18
-edit_date:    2019-11-13 02:36:22
-votes:        20
+created_date: !!str "2017-01-05 03:07:18"
+edit_date:    !!str "2019-11-13 02:36:22"
+votes:        !!str "20"
 favorites:    
-views:        295,210
+views:        !!str "295,210"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

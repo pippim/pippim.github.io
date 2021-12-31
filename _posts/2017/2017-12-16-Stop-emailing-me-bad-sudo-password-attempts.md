@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Stop emailing me bad sudo password attempts
+title:        >
+    Stop emailing me bad sudo password attempts
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/986696
 type:         Question
 tags:         16.04 password security email
-created_date: 2017-12-16 00:08:22
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2017-12-16 00:08:22"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        1,540
+views:        !!str "1,540"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

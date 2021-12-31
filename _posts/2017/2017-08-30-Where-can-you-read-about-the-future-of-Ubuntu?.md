@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Where can you read about the future of Ubuntu?
+title:        >
+    Where can you read about the future of Ubuntu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/951132
 type:         Question
 tags:         unity gnome desktop-environments
-created_date: 2017-08-30 02:25:26
-edit_date:    
-votes:        2
+created_date: !!str "2017-08-30 02:25:26"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    1
-views:        170
+views:        !!str "170"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

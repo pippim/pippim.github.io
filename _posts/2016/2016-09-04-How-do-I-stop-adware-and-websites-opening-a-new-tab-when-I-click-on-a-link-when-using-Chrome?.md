@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I stop adware and websites opening a new tab when I click on a link when using Chrome?
+title:        >
+    How do I stop adware and websites opening a new tab when I click on a link when using Chrome?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/820977
 type:         Answer
 tags:         malware
-created_date: 2016-09-04 20:14:12
-edit_date:    
-votes:        3
+created_date: !!str "2016-09-04 20:14:12"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        5,335
+views:        !!str "5,335"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

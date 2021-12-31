@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Looping command line program
+title:        >
+    Looping command line program
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/882768
 type:         Answer
 tags:         command-line bash scripts python java
-created_date: 2017-02-13 01:43:53
-edit_date:    2017-02-13 01:47:00
-votes:        5
+created_date: !!str "2017-02-13 01:43:53"
+edit_date:    !!str "2017-02-13 01:47:00"
+votes:        !!str "5"
 favorites:    
-views:        143
+views:        !!str "143"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

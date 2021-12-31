@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Start script on system startup (Ubuntu 16.04.1)
+title:        >
+    Start script on system startup (Ubuntu 16.04.1)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/843328
 type:         Answer
 tags:         server scripts startup cron autostart
-created_date: 2016-10-29 23:04:46
-edit_date:    2020-06-12 14:37:07
-votes:        0
+created_date: !!str "2016-10-29 23:04:46"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "0"
 favorites:    
-views:        21,383
+views:        !!str "21,383"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

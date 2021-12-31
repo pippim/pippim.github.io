@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I need to re-connect HDMI everytime after boot
+title:        >
+    I need to re-connect HDMI everytime after boot
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1262046
 type:         Answer
 tags:         multiple-monitors lenovo hdmi
-created_date: 2020-07-26 00:50:59
-edit_date:    
-votes:        2
+created_date: !!str "2020-07-26 00:50:59"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        775
+views:        !!str "775"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

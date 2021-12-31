@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I shorten my command line (bash) prompt?
+title:        >
+    How can I shorten my command line (bash) prompt?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1165407
 type:         Answer
 tags:         command-line bash bashrc prompt ps1
-created_date: 2019-08-13 11:32:11
-edit_date:    2019-08-13 22:55:04
-votes:        2
+created_date: !!str "2019-08-13 11:32:11"
+edit_date:    !!str "2019-08-13 22:55:04"
+votes:        !!str "2"
 favorites:    
-views:        239,278
+views:        !!str "239,278"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

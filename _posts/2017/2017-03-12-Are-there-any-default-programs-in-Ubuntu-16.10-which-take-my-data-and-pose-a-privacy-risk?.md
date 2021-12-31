@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Are there any default programs in Ubuntu 16.10 which take my data and pose a privacy risk?
+title:        >
+    Are there any default programs in Ubuntu 16.10 which take my data and pose a privacy risk?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/892294
 type:         Answer
 tags:         16.10 plugins privacy amazon
-created_date: 2017-03-12 15:36:27
-edit_date:    
-votes:        2
+created_date: !!str "2017-03-12 15:36:27"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        105
+views:        !!str "105"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

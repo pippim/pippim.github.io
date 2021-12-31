@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Pin kernel version
+title:        >
+    Pin kernel version
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1049234
 type:         Answer
 tags:         16.04 kernel updates pinning
-created_date: 2018-06-24 07:20:34
-edit_date:    2018-06-24 15:01:21
-votes:        2
+created_date: !!str "2018-06-24 07:20:34"
+edit_date:    !!str "2018-06-24 15:01:21"
+votes:        !!str "2"
 favorites:    
-views:        2,621
+views:        !!str "2,621"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

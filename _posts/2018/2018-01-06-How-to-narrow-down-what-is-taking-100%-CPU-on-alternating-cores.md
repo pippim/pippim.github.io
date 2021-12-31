@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to narrow down what is taking 100% CPU on alternating cores
+title:        >
+    How to narrow down what is taking 100% CPU on alternating cores
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/992779
 type:         Question
 tags:         google-chrome cpu conky
-created_date: 2018-01-06 00:20:02
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2018-01-06 00:20:02"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    2
-views:        622
+views:        !!str "622"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

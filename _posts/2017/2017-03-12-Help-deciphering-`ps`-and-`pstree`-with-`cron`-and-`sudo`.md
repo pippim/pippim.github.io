@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Help deciphering `ps` and `pstree` with `cron` and `sudo`
+title:        >
+    Help deciphering `ps` and `pstree` with `cron` and `sudo`
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/892141
 type:         Answer
 tags:         command-line bash cron windows-subsystem-for-linux ps
-created_date: 2017-03-12 01:03:36
-edit_date:    2017-04-13 12:23:52
-votes:        0
+created_date: !!str "2017-03-12 01:03:36"
+edit_date:    !!str "2017-04-13 12:23:52"
+votes:        !!str "0"
 favorites:    
-views:        1,047
+views:        !!str "1,047"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

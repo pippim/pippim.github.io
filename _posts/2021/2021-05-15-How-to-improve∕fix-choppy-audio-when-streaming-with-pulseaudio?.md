@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to improve∕fix choppy audio when streaming with pulseaudio?
+title:        >
+    How to improve∕fix choppy audio when streaming with pulseaudio?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1338546
 type:         Answer
 tags:         networking sound pulseaudio streaming
-created_date: 2021-05-15 21:01:00
-edit_date:    
-votes:        3
+created_date: !!str "2021-05-15 21:01:00"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        528
+views:        !!str "528"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    false

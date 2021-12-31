@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        nvidia backlight brightness problem
+title:        >
+    nvidia backlight brightness problem
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/937133
 type:         Answer
 tags:         16.04 nvidia xorg brightness backlight grub
-created_date: 2017-07-17 23:26:12
-edit_date:    2020-06-12 14:37:07
-votes:        13
+created_date: !!str "2017-07-17 23:26:12"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "13"
 favorites:    
-views:        18,976
+views:        !!str "18,976"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

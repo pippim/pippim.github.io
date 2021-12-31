@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Disable hyper threading in Ubuntu
+title:        >
+    Disable hyper threading in Ubuntu
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/942843
 type:         Answer
 tags:         16.04 configuration performance cpu conky
-created_date: 2017-08-04 03:30:27
-edit_date:    2021-11-15 11:54:31
-votes:        12
+created_date: !!str "2017-08-04 03:30:27"
+edit_date:    !!str "2021-11-15 11:54:31"
+votes:        !!str "12"
 favorites:    
-views:        24,015
+views:        !!str "24,015"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

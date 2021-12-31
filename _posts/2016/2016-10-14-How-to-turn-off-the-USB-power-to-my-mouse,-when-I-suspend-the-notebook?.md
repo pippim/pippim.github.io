@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to turn off the USB power to my mouse, when I suspend the notebook?
+title:        >
+    How to turn off the USB power to my mouse, when I suspend the notebook?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/836725
 type:         Answer
 tags:         usb kernel mouse suspend power-management
-created_date: 2016-10-14 01:04:17
-edit_date:    2020-06-12 14:37:07
-votes:        7
+created_date: !!str "2016-10-14 01:04:17"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "7"
 favorites:    
-views:        5,535
+views:        !!str "5,535"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

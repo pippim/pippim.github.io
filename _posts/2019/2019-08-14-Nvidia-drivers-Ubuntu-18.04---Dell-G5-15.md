@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Nvidia drivers Ubuntu 18.04 - Dell G5 15
+title:        >
+    Nvidia drivers Ubuntu 18.04 - Dell G5 15
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1165689
 type:         Answer
 tags:         drivers nvidia
-created_date: 2019-08-14 11:39:33
-edit_date:    2019-08-15 11:53:15
-votes:        2
+created_date: !!str "2019-08-14 11:39:33"
+edit_date:    !!str "2019-08-15 11:53:15"
+votes:        !!str "2"
 favorites:    
-views:        3,277
+views:        !!str "3,277"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

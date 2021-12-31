@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        GNOME choose audio device headphones over headset automatically
+title:        >
+    GNOME choose audio device headphones over headset automatically
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1245605
 type:         Answer
 tags:         gnome sound 18.04 headphones
-created_date: 2020-05-31 20:59:34
-edit_date:    
-votes:        2
+created_date: !!str "2020-05-31 20:59:34"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        969
+views:        !!str "969"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

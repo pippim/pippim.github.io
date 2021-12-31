@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Jekyll code block size in header is too small
+title:        >
+    Jekyll code block size in header is too small
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/69967570
 type:         Answer
 tags:         css jekyll github-pages rouge
-created_date: 2021-11-14 22:08:25
-edit_date:    2021-11-14 22:40:13
-votes:        0
+created_date: !!str "2021-11-14 22:08:25"
+edit_date:    !!str "2021-11-14 22:40:13"
+votes:        !!str "0"
 favorites:    
-views:        32
+views:        !!str "32"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What are these LED power supply plugs called?
+title:        >
+    What are these LED power supply plugs called?
 site:         Electrical Engineering
 stack_url:    https://electronics.stackexchange.com/q/461935
 type:         Question
 tags:         led connector cables
-created_date: 2019-10-07 23:35:41
-edit_date:    
-votes:        2
+created_date: !!str "2019-10-07 23:35:41"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        326
+views:        !!str "326"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

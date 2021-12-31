@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why does `journalctl --list-boots` only show the current boot?
+title:        >
+    Why does `journalctl --list-boots` only show the current boot?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1002525
 type:         Answer
 tags:         boot kernel systemd systemd-journald
-created_date: 2018-02-03 01:33:54
-edit_date:    2020-06-12 14:37:07
-votes:        15
+created_date: !!str "2018-02-03 01:33:54"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "15"
 favorites:    
-views:        9,029
+views:        !!str "9,029"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

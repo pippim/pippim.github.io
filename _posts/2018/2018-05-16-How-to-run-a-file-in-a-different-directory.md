@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to run a file in a different directory
+title:        >
+    How to run a file in a different directory
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1037165
 type:         Answer
 tags:         command-line
-created_date: 2018-05-16 23:20:52
-edit_date:    2018-05-24 02:07:37
-votes:        9
+created_date: !!str "2018-05-16 23:20:52"
+edit_date:    !!str "2018-05-24 02:07:37"
+votes:        !!str "9"
 favorites:    
-views:        52,268
+views:        !!str "52,268"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

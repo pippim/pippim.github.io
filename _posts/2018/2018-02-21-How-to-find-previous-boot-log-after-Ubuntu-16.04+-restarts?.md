@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to find previous boot log after Ubuntu 16.04+ restarts?
+title:        >
+    How to find previous boot log after Ubuntu 16.04+ restarts?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1008210
 type:         Answer
 tags:         16.04 boot logs systemd-journald
-created_date: 2018-02-21 01:24:55
-edit_date:    2019-01-16 02:50:51
-votes:        28
+created_date: !!str "2018-02-21 01:24:55"
+edit_date:    !!str "2019-01-16 02:50:51"
+votes:        !!str "28"
 favorites:    
-views:        54,403
+views:        !!str "54,403"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Windows option just reloads grub bootloader after updating to Ubuntu 19.10
+title:        >
+    Windows option just reloads grub bootloader after updating to Ubuntu 19.10
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1183623
 type:         Answer
 tags:         boot dual-boot windows-10 bootloader
-created_date: 2019-10-24 22:54:33
-edit_date:    2019-10-24 23:05:13
-votes:        1
+created_date: !!str "2019-10-24 22:54:33"
+edit_date:    !!str "2019-10-24 23:05:13"
+votes:        !!str "1"
 favorites:    
-views:        622
+views:        !!str "622"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

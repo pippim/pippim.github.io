@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to install the right-click photo-resizer on Ubuntu 18.04
+title:        >
+    How to install the right-click photo-resizer on Ubuntu 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1053089
 type:         Answer
 tags:         nautilus 18.04 ubuntu-mate photo
-created_date: 2018-07-07 20:27:14
-edit_date:    
-votes:        3
+created_date: !!str "2018-07-07 20:27:14"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        3,206
+views:        !!str "3,206"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

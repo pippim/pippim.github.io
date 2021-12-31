@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Bash builtin (not SED!) search and replace using octal values
+title:        >
+    Bash builtin (not SED!) search and replace using octal values
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43623085
 type:         Question
 tags:         arrays bash replace built-in
-created_date: 2017-04-26 00:35:43
-edit_date:    
-votes:        0
+created_date: !!str "2017-04-26 00:35:43"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    1
-views:        251
+views:        !!str "251"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

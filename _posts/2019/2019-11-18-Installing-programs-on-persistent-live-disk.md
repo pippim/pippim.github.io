@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Installing programs on persistent live disk
+title:        >
+    Installing programs on persistent live disk
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1189665
 type:         Answer
 tags:         18.04 live-usb persistence
-created_date: 2019-11-18 02:40:54
-edit_date:    2019-11-18 02:55:30
-votes:        0
+created_date: !!str "2019-11-18 02:40:54"
+edit_date:    !!str "2019-11-18 02:55:30"
+votes:        !!str "0"
 favorites:    
-views:        433
+views:        !!str "433"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Getting error code(1) when installing MSSQL server in Ubuntu 16.04
+title:        >
+    Getting error code(1) when installing MSSQL server in Ubuntu 16.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/850700
 type:         Answer
 tags:         16.04 server mssql
-created_date: 2016-11-18 03:27:18
-edit_date:    2016-11-18 03:39:45
-votes:        2
+created_date: !!str "2016-11-18 03:27:18"
+edit_date:    !!str "2016-11-18 03:39:45"
+votes:        !!str "2"
 favorites:    
-views:        4,646
+views:        !!str "4,646"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

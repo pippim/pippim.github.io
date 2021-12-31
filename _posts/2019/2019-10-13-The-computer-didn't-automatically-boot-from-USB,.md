@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        The computer didn't automatically boot from USB,
+title:        >
+    The computer didn't automatically boot from USB,
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1180697
 type:         Answer
 tags:         boot
-created_date: 2019-10-13 16:47:44
-edit_date:    2020-12-08 11:54:00
-votes:        3
+created_date: !!str "2019-10-13 16:47:44"
+edit_date:    !!str "2020-12-08 11:54:00"
+votes:        !!str "3"
 favorites:    
-views:        731
+views:        !!str "731"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

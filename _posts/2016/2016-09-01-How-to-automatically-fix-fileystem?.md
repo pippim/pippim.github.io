@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to automatically fix fileystem?
+title:        >
+    How to automatically fix fileystem?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/819806
 type:         Answer
 tags:         boot filesystem
-created_date: 2016-09-01 23:26:02
-edit_date:    2017-04-13 12:24:03
-votes:        2
+created_date: !!str "2016-09-01 23:26:02"
+edit_date:    !!str "2017-04-13 12:24:03"
+votes:        !!str "2"
 favorites:    
-views:        5,873
+views:        !!str "5,873"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

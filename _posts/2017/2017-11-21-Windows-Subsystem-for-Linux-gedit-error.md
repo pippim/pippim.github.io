@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Windows Subsystem for Linux gedit error
+title:        >
+    Windows Subsystem for Linux gedit error
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/978606
 type:         Answer
 tags:         xubuntu xfce gedit windows-subsystem-for-linux
-created_date: 2017-11-21 01:51:11
-edit_date:    
-votes:        4
+created_date: !!str "2017-11-21 01:51:11"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        1,186
+views:        !!str "1,186"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

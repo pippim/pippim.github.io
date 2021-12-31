@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Failure to mount partition
+title:        >
+    Failure to mount partition
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1037215
 type:         Answer
 tags:         partitioning mount
-created_date: 2018-05-17 03:49:36
-edit_date:    
-votes:        3
+created_date: !!str "2018-05-17 03:49:36"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        3,286
+views:        !!str "3,286"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

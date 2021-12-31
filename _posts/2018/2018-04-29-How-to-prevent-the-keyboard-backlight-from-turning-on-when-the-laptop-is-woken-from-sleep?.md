@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to prevent the keyboard backlight from turning on when the laptop is woken from sleep?
+title:        >
+    How to prevent the keyboard backlight from turning on when the laptop is woken from sleep?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029549
 type:         Answer
 tags:         16.04 thinkpad keyboard-backlight
-created_date: 2018-04-29 06:18:45
-edit_date:    2020-09-14 23:22:29
-votes:        2
+created_date: !!str "2018-04-29 06:18:45"
+edit_date:    !!str "2020-09-14 23:22:29"
+votes:        !!str "2"
 favorites:    
-views:        2,652
+views:        !!str "2,652"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

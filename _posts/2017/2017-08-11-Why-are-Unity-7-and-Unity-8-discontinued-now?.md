@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why are Unity 7 and Unity 8 discontinued now?
+title:        >
+    Why are Unity 7 and Unity 8 discontinued now?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/945149
 type:         Answer
 tags:         unity
-created_date: 2017-08-11 00:19:32
-edit_date:    2017-08-12 11:48:39
-votes:        8
+created_date: !!str "2017-08-11 00:19:32"
+edit_date:    !!str "2017-08-12 11:48:39"
+votes:        !!str "8"
 favorites:    
-views:        1,183
+views:        !!str "1,183"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

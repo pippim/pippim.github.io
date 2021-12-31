@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Selecting files from different folders
+title:        >
+    Selecting files from different folders
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/906042
 type:         Answer
 tags:         nautilus filemanager yad
-created_date: 2017-04-18 02:03:38
-edit_date:    
-votes:        2
+created_date: !!str "2017-04-18 02:03:38"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        742
+views:        !!str "742"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I install the util linux version of the column command in 18.04?
+title:        >
+    How can I install the util linux version of the column command in 18.04?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1098274
 type:         Answer
 tags:         command-line software-installation
-created_date: 2018-12-04 02:10:58
-edit_date:    
-votes:        7
+created_date: !!str "2018-12-04 02:10:58"
+edit_date:    !!str ""
+votes:        !!str "7"
 favorites:    
-views:        3,126
+views:        !!str "3,126"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

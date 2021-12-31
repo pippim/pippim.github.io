@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why is bash ">" string comparison failing for path names?
+title:        >
+    Why is bash ">" string comparison failing for path names?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43669662
 type:         Question
 tags:         string bash command-line path
-created_date: 2017-04-27 23:44:25
-edit_date:    2017-04-28 02:23:56
-votes:        0
+created_date: !!str "2017-04-27 23:44:25"
+edit_date:    !!str "2017-04-28 02:23:56"
+votes:        !!str "0"
 favorites:    
-views:        58
+views:        !!str "58"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

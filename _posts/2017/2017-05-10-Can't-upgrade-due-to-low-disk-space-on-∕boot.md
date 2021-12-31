@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can't upgrade due to low disk space on ∕boot
+title:        >
+    Can't upgrade due to low disk space on ∕boot
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/913597
 type:         Answer
 tags:         upgrade kernel disk-usage
-created_date: 2017-05-10 02:54:21
-edit_date:    2017-07-28 22:26:01
-votes:        3
+created_date: !!str "2017-05-10 02:54:21"
+edit_date:    !!str "2017-07-28 22:26:01"
+votes:        !!str "3"
 favorites:    
-views:        122,583
+views:        !!str "122,583"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

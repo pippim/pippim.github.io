@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        `sudo reboot` vs `reboot` - what is the difference?
+title:        >
+    `sudo reboot` vs `reboot` - what is the difference?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1005907
 type:         Answer
 tags:         command-line reboot
-created_date: 2018-02-13 20:42:21
-edit_date:    
-votes:        9
+created_date: !!str "2018-02-13 20:42:21"
+edit_date:    !!str ""
+votes:        !!str "9"
 favorites:    
-views:        58,186
+views:        !!str "58,186"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

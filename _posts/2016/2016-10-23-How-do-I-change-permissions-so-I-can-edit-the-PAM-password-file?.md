@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I change permissions so I can edit the PAM password file?
+title:        >
+    How do I change permissions so I can edit the PAM password file?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840995
 type:         Answer
 tags:         permissions
-created_date: 2016-10-23 21:36:09
-edit_date:    
-votes:        1
+created_date: !!str "2016-10-23 21:36:09"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        90
+views:        !!str "90"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

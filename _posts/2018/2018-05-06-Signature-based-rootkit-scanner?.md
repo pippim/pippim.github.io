@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Signature-based rootkit scanner?
+title:        >
+    Signature-based rootkit scanner?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032588
 type:         Answer
 tags:         software-recommendation security malware rootkit signature
-created_date: 2018-05-06 01:44:40
-edit_date:    
-votes:        3
+created_date: !!str "2018-05-06 01:44:40"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        1,079
+views:        !!str "1,079"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

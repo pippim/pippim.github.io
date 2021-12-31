@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I set up a password for the 'rm' command?
+title:        >
+    How can I set up a password for the 'rm' command?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866003
 type:         Answer
 tags:         command-line permissions password rm
-created_date: 2016-12-30 02:32:38
-edit_date:    2017-03-05 18:08:55
-votes:        5
+created_date: !!str "2016-12-30 02:32:38"
+edit_date:    !!str "2017-03-05 18:08:55"
+votes:        !!str "5"
 favorites:    
-views:        5,960
+views:        !!str "5,960"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

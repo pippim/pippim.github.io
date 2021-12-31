@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Stop a process when my PC sleeps
+title:        >
+    Stop a process when my PC sleeps
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/851917
 type:         Answer
 tags:         suspend
-created_date: 2016-11-21 12:53:08
-edit_date:    2017-11-29 21:21:06
-votes:        3
+created_date: !!str "2016-11-21 12:53:08"
+edit_date:    !!str "2017-11-29 21:21:06"
+votes:        !!str "3"
 favorites:    
-views:        782
+views:        !!str "782"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can't grep price in downloaded webpage
+title:        >
+    Can't grep price in downloaded webpage
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1167206
 type:         Question
 tags:         websites html css
-created_date: 2019-08-21 01:16:35
-edit_date:    2019-08-24 03:48:05
-votes:        0
+created_date: !!str "2019-08-21 01:16:35"
+edit_date:    !!str "2019-08-24 03:48:05"
+votes:        !!str "0"
 favorites:    
-views:        299
+views:        !!str "299"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

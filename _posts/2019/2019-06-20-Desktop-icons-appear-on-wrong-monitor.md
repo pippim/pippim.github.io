@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Desktop icons appear on wrong monitor
+title:        >
+    Desktop icons appear on wrong monitor
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1152464
 type:         Answer
 tags:         multiple-monitors xfce monitor .desktop desktop-icons iconic
-created_date: 2019-06-20 01:27:44
-edit_date:    
-votes:        2
+created_date: !!str "2019-06-20 01:27:44"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        12,010
+views:        !!str "12,010"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

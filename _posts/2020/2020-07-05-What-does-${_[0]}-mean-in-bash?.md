@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What does ${_[0]} mean in bash?
+title:        >
+    What does ${_[0]} mean in bash?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1256426
 type:         Answer
 tags:         command-line bash
-created_date: 2020-07-05 00:54:24
-edit_date:    2020-07-05 11:44:22
-votes:        5
+created_date: !!str "2020-07-05 00:54:24"
+edit_date:    !!str "2020-07-05 11:44:22"
+votes:        !!str "5"
 favorites:    
-views:        2,057
+views:        !!str "2,057"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

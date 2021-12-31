@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Code version control between local files and AU answers
+title:        >
+    Code version control between local files and AU answers
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/900609
 type:         Answer
 tags:         bash gui yad
-created_date: 2017-04-05 23:40:24
-edit_date:    2018-06-11 23:25:22
-votes:        4
+created_date: !!str "2017-04-05 23:40:24"
+edit_date:    !!str "2018-06-11 23:25:22"
+votes:        !!str "4"
 favorites:    
-views:        393
+views:        !!str "393"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

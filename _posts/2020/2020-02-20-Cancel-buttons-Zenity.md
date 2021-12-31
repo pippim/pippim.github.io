@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Cancel buttons Zenity
+title:        >
+    Cancel buttons Zenity
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1211685
 type:         Answer
 tags:         command-line bash scripts notification zenity
-created_date: 2020-02-20 01:23:40
-edit_date:    
-votes:        1
+created_date: !!str "2020-02-20 01:23:40"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        1,380
+views:        !!str "1,380"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

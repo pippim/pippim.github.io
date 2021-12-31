@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        GNU grub menu takes too long to boot
+title:        >
+    GNU grub menu takes too long to boot
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/850840
 type:         Answer
 tags:         dual-boot grub2 gnu
-created_date: 2016-11-18 11:53:39
-edit_date:    
-votes:        3
+created_date: !!str "2016-11-18 11:53:39"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        5,623
+views:        !!str "5,623"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

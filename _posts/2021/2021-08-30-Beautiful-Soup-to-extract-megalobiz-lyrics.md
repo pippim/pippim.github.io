@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Beautiful Soup to extract megalobiz lyrics
+title:        >
+    Beautiful Soup to extract megalobiz lyrics
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/68977976
 type:         Question
 tags:         html beautifulsoup
-created_date: 2021-08-30 00:44:27
-edit_date:    
-votes:        1
+created_date: !!str "2021-08-30 00:44:27"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        58
+views:        !!str "58"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

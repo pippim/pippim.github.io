@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why does Gparted leave a spare used space after formating for all File Systems(ntfs,fat32,ex4)?
+title:        >
+    Why does Gparted leave a spare used space after formating for all File Systems(ntfs,fat32,ex4)?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161539
 type:         Answer
 tags:         partitioning filesystem gparted ntfs ext4
-created_date: 2019-07-27 19:58:33
-edit_date:    
-votes:        1
+created_date: !!str "2019-07-27 19:58:33"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        352
+views:        !!str "352"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

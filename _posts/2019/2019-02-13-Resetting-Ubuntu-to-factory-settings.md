@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Resetting Ubuntu to factory settings
+title:        >
+    Resetting Ubuntu to factory settings
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1117800
 type:         Answer
 tags:         reset
-created_date: 2019-02-13 00:58:09
-edit_date:    2020-06-12 14:37:07
-votes:        4
+created_date: !!str "2019-02-13 00:58:09"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "4"
 favorites:    
-views:        71,706
+views:        !!str "71,706"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

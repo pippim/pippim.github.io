@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can't boot Acer laptop into Ubuntu 19.10 after dual boot install
+title:        >
+    Can't boot Acer laptop into Ubuntu 19.10 after dual boot install
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1184573
 type:         Answer
 tags:         dual-boot grub2 uefi windows-10 19.10
-created_date: 2019-10-28 23:25:18
-edit_date:    
-votes:        2
+created_date: !!str "2019-10-28 23:25:18"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        2,700
+views:        !!str "2,700"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

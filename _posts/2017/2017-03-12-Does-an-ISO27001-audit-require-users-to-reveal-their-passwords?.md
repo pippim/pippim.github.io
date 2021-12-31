@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Does an ISO27001 audit require users to reveal their passwords?
+title:        >
+    Does an ISO27001 audit require users to reveal their passwords?
 site:         Information Security
 stack_url:    https://security.stackexchange.com/q/153596
 type:         Answer
 tags:         passwords password-management iso27001
-created_date: 2017-03-12 05:35:48
-edit_date:    
-votes:        45
+created_date: !!str "2017-03-12 05:35:48"
+edit_date:    !!str ""
+votes:        !!str "45"
 favorites:    
-views:        19,977
+views:        !!str "19,977"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

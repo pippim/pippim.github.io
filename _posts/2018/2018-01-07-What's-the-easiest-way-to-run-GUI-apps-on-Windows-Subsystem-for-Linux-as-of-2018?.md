@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What's the easiest way to run GUI apps on Windows Subsystem for Linux as of 2018?
+title:        >
+    What's the easiest way to run GUI apps on Windows Subsystem for Linux as of 2018?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/993331
 type:         Answer
 tags:         gui windows-subsystem-for-linux yad
-created_date: 2018-01-07 19:59:43
-edit_date:    2019-06-07 02:14:40
-votes:        100
+created_date: !!str "2018-01-07 19:59:43"
+edit_date:    !!str "2019-06-07 02:14:40"
+votes:        !!str "100"
 favorites:    
-views:        286,222
+views:        !!str "286,222"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

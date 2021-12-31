@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Only one line in script output
+title:        >
+    Only one line in script output
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138332
 type:         Answer
 tags:         command-line bash scripts
-created_date: 2019-04-26 11:24:14
-edit_date:    2019-04-27 17:53:11
-votes:        6
+created_date: !!str "2019-04-26 11:24:14"
+edit_date:    !!str "2019-04-27 17:53:11"
+votes:        !!str "6"
 favorites:    
-views:        3,050
+views:        !!str "3,050"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

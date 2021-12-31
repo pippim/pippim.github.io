@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to mute volume on every boot in Kubuntu 18.04?
+title:        >
+    How to mute volume on every boot in Kubuntu 18.04?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1085617
 type:         Answer
 tags:         boot kubuntu mute
-created_date: 2018-10-20 17:28:42
-edit_date:    2018-10-21 13:53:23
-votes:        2
+created_date: !!str "2018-10-20 17:28:42"
+edit_date:    !!str "2018-10-21 13:53:23"
+votes:        !!str "2"
 favorites:    
-views:        173
+views:        !!str "173"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

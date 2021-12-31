@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can Grub boot multiple Ubuntu desktops - Unity, Mate, Xfce, Gnome x.xx, etc?
+title:        >
+    Can Grub boot multiple Ubuntu desktops - Unity, Mate, Xfce, Gnome x.xx, etc?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/820638
 type:         Question
 tags:         unity grub2 gnome xfce mate
-created_date: 2016-09-03 23:50:09
-edit_date:    
-votes:        1
+created_date: !!str "2016-09-03 23:50:09"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        318
+views:        !!str "318"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

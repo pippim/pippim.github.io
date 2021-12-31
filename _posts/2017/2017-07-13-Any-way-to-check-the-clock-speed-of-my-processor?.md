@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Any way to check the clock speed of my processor?
+title:        >
+    Any way to check the clock speed of my processor?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/935623
 type:         Answer
 tags:         cpu conky
-created_date: 2017-07-13 00:35:40
-edit_date:    
-votes:        10
+created_date: !!str "2017-07-13 00:35:40"
+edit_date:    !!str ""
+votes:        !!str "10"
 favorites:    
-views:        600,180
+views:        !!str "600,180"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

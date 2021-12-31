@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        GRUB with two drives and two Ubuntu distros
+title:        >
+    GRUB with two drives and two Ubuntu distros
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/850661
 type:         Answer
 tags:         boot grub2 hard-drive
-created_date: 2016-11-18 00:12:26
-edit_date:    
-votes:        4
+created_date: !!str "2016-11-18 00:12:26"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        1,632
+views:        !!str "1,632"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

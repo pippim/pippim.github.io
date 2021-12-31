@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why combine commands on a single line in a Bash script?
+title:        >
+    Why combine commands on a single line in a Bash script?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1182804
 type:         Answer
 tags:         command-line bash scripts
-created_date: 2019-10-21 23:21:33
-edit_date:    2019-10-23 17:25:39
-votes:        5
+created_date: !!str "2019-10-21 23:21:33"
+edit_date:    !!str "2019-10-23 17:25:39"
+votes:        !!str "5"
 favorites:    
-views:        19,763
+views:        !!str "19,763"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

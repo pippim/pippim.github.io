@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to start Ubuntu in Console mode
+title:        >
+    How to start Ubuntu in Console mode
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/859637
 type:         Answer
 tags:         boot 16.04 nvidia
-created_date: 2016-12-11 22:54:26
-edit_date:    2019-09-18 22:41:08
-votes:        52
+created_date: !!str "2016-12-11 22:54:26"
+edit_date:    !!str "2019-09-18 22:41:08"
+votes:        !!str "52"
 favorites:    
-views:        352,823
+views:        !!str "352,823"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

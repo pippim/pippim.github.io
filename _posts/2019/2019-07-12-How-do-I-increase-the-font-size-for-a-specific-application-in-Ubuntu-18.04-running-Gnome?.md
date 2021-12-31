@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I increase the font size for a specific application in Ubuntu 18.04 running Gnome?
+title:        >
+    How do I increase the font size for a specific application in Ubuntu 18.04 running Gnome?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157937
 type:         Answer
 tags:         18.04 gnome fonts display-resolution
-created_date: 2019-07-12 23:03:28
-edit_date:    2019-07-13 17:28:04
-votes:        3
+created_date: !!str "2019-07-12 23:03:28"
+edit_date:    !!str "2019-07-13 17:28:04"
+votes:        !!str "3"
 favorites:    
-views:        2,259
+views:        !!str "2,259"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

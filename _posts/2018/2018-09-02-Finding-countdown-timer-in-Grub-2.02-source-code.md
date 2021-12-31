@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Finding countdown timer in Grub 2.02 source code
+title:        >
+    Finding countdown timer in Grub 2.02 source code
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/52138789
 type:         Answer
 tags:         c assembly grub
-created_date: 2018-09-02 16:10:28
-edit_date:    2020-06-20 09:12:55
-votes:        2
+created_date: !!str "2018-09-02 16:10:28"
+edit_date:    !!str "2020-06-20 09:12:55"
+votes:        !!str "2"
 favorites:    
-views:        923
+views:        !!str "923"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

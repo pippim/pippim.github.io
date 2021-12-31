@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I distinguish between a command, utility, or builtin for getting documentation?
+title:        >
+    How do I distinguish between a command, utility, or builtin for getting documentation?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1017149
 type:         Answer
 tags:         command-line manpage documentation info
-created_date: 2018-03-19 01:22:18
-edit_date:    2018-03-19 10:27:21
-votes:        3
+created_date: !!str "2018-03-19 01:22:18"
+edit_date:    !!str "2018-03-19 10:27:21"
+votes:        !!str "3"
 favorites:    
-views:        260
+views:        !!str "260"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

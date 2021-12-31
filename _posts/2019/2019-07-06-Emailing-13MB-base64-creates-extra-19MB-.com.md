@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Emailing 13MB base64 creates extra 19MB .com
+title:        >
+    Emailing 13MB base64 creates extra 19MB .com
 site:         Super User
 stack_url:    https://superuser.com/q/1456859
 type:         Answer
 tags:         email backup gmail tar gmail-imap
-created_date: 2019-07-06 18:26:26
-edit_date:    
-votes:        1
+created_date: !!str "2019-07-06 18:26:26"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        39
+views:        !!str "39"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        cant edit hddtemp.db for ssd temp
+title:        >
+    cant edit hddtemp.db for ssd temp
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1247291
 type:         Answer
 tags:         ssd hddtemp
-created_date: 2020-06-05 17:25:46
-edit_date:    2020-06-12 14:37:07
-votes:        0
+created_date: !!str "2020-06-05 17:25:46"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "0"
 favorites:    
-views:        126
+views:        !!str "126"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

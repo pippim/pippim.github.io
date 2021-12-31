@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to interact with zenity window and type some text inside it?
+title:        >
+    How to interact with zenity window and type some text inside it?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1337013
 type:         Answer
 tags:         18.04 bash python xdotool zenity
-created_date: 2021-05-08 19:07:14
-edit_date:    
-votes:        5
+created_date: !!str "2021-05-08 19:07:14"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        572
+views:        !!str "572"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

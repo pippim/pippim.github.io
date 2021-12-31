@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Set LD_LIBRARY_PATH correctly
+title:        >
+    Set LD_LIBRARY_PATH correctly
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1066846
 type:         Answer
 tags:         environment-variables matlab paths boost
-created_date: 2018-08-19 14:30:47
-edit_date:    
-votes:        5
+created_date: !!str "2018-08-19 14:30:47"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        10,986
+views:        !!str "10,986"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

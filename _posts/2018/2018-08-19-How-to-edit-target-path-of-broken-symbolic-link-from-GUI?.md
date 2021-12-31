@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to edit target path of broken symbolic link from GUI?
+title:        >
+    How to edit target path of broken symbolic link from GUI?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1066741
 type:         Answer
 tags:         gui filemanager symbolic-link
-created_date: 2018-08-19 04:06:00
-edit_date:    2018-08-19 14:01:57
-votes:        3
+created_date: !!str "2018-08-19 04:06:00"
+edit_date:    !!str "2018-08-19 14:01:57"
+votes:        !!str "3"
 favorites:    
-views:        1,541
+views:        !!str "1,541"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

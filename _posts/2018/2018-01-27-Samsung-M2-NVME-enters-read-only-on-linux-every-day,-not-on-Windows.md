@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Samsung M2 NVME enters read only on linux every day, not on Windows
+title:        >
+    Samsung M2 NVME enters read only on linux every day, not on Windows
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1000454
 type:         Answer
 tags:         partitioning upgrade ssd disk fsck
-created_date: 2018-01-27 16:50:22
-edit_date:    2018-01-29 04:09:11
-votes:        2
+created_date: !!str "2018-01-27 16:50:22"
+edit_date:    !!str "2018-01-29 04:09:11"
+votes:        !!str "2"
 favorites:    
-views:        1,510
+views:        !!str "1,510"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

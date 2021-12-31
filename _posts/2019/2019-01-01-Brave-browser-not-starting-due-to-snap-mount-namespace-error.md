@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Brave browser not starting due to snap mount namespace error
+title:        >
+    Brave browser not starting due to snap mount namespace error
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1105938
 type:         Answer
 tags:         chromium snap apparmor
-created_date: 2019-01-01 02:06:48
-edit_date:    
-votes:        3
+created_date: !!str "2019-01-01 02:06:48"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        1,521
+views:        !!str "1,521"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

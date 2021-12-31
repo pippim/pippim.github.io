@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to make linux-generic point to 4.9 and not linux-headers-4.4.0-62 after kernel upgrade from 4.4 to 4.9?
+title:        >
+    How to make linux-generic point to 4.9 and not linux-headers-4.4.0-62 after kernel upgrade from 4.4 to 4.9?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/875106
 type:         Answer
 tags:         upgrade kernel grub
-created_date: 2017-01-23 02:14:16
-edit_date:    2017-04-13 12:23:21
-votes:        2
+created_date: !!str "2017-01-23 02:14:16"
+edit_date:    !!str "2017-04-13 12:23:21"
+votes:        !!str "2"
 favorites:    
-views:        4,410
+views:        !!str "4,410"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

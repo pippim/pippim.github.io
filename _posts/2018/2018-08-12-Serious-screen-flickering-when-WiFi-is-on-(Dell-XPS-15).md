@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Serious screen flickering when WiFi is on (Dell XPS 15)
+title:        >
+    Serious screen flickering when WiFi is on (Dell XPS 15)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064747
 type:         Answer
 tags:         wireless graphics intel-graphics xps
-created_date: 2018-08-12 19:14:06
-edit_date:    2018-08-14 00:46:15
-votes:        3
+created_date: !!str "2018-08-12 19:14:06"
+edit_date:    !!str "2018-08-14 00:46:15"
+votes:        !!str "3"
 favorites:    
-views:        2,460
+views:        !!str "2,460"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

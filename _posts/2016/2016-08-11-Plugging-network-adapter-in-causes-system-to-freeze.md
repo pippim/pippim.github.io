@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Plugging network adapter in causes system to freeze
+title:        >
+    Plugging network adapter in causes system to freeze
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/810777
 type:         Answer
 tags:         networking wireless hardware
-created_date: 2016-08-11 01:08:41
-edit_date:    2016-08-11 01:13:50
-votes:        1
+created_date: !!str "2016-08-11 01:08:41"
+edit_date:    !!str "2016-08-11 01:13:50"
+votes:        !!str "1"
 favorites:    
-views:        51
+views:        !!str "51"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

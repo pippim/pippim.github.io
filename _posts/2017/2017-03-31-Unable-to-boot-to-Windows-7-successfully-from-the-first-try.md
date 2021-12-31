@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Unable to boot to Windows 7 successfully from the first try
+title:        >
+    Unable to boot to Windows 7 successfully from the first try
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/898806
 type:         Answer
 tags:         dual-boot grub2 windows-7 windows-10
-created_date: 2017-03-31 10:28:18
-edit_date:    2017-04-13 12:24:27
-votes:        1
+created_date: !!str "2017-03-31 10:28:18"
+edit_date:    !!str "2017-04-13 12:24:27"
+votes:        !!str "1"
 favorites:    
-views:        176
+views:        !!str "176"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

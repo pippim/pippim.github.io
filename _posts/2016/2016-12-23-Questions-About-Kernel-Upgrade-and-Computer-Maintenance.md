@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Questions About Kernel Upgrade and Computer Maintenance
+title:        >
+    Questions About Kernel Upgrade and Computer Maintenance
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/863912
 type:         Answer
 tags:         upgrade kernel
-created_date: 2016-12-23 16:06:16
-edit_date:    
-votes:        3
+created_date: !!str "2016-12-23 16:06:16"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        135
+views:        !!str "135"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

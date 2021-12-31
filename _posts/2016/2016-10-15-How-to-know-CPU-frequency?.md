@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to know CPU frequency?
+title:        >
+    How to know CPU frequency?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/837563
 type:         Answer
 tags:         14.04 cpu
-created_date: 2016-10-15 18:36:33
-edit_date:    
-votes:        4
+created_date: !!str "2016-10-15 18:36:33"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        5,826
+views:        !!str "5,826"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I copy the content of a text file and paste it to another starting at a certain line?
+title:        >
+    How can I copy the content of a text file and paste it to another starting at a certain line?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/950434
 type:         Answer
 tags:         text-processing
-created_date: 2017-08-27 21:30:47
-edit_date:    2020-06-12 14:37:07
-votes:        11
+created_date: !!str "2017-08-27 21:30:47"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "11"
 favorites:    
-views:        36,412
+views:        !!str "36,412"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

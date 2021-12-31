@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I fix very slow scrolling USB wheel mouse (after waking from suspend) which started after upgrade to 19.04?
+title:        >
+    How do I fix very slow scrolling USB wheel mouse (after waking from suspend) which started after upgrade to 19.04?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138030
 type:         Answer
 tags:         usb suspend 19.04 mouse-scroll
-created_date: 2019-04-25 11:24:27
-edit_date:    2020-06-12 14:37:07
-votes:        7
+created_date: !!str "2019-04-25 11:24:27"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "7"
 favorites:    
-views:        6,349
+views:        !!str "6,349"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

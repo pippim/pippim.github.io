@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Uable to print after upgrading Ubuntu 16.04 to 18.04 (HP MFC-7470DW)
+title:        >
+    Uable to print after upgrading Ubuntu 16.04 to 18.04 (HP MFC-7470DW)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1084100
 type:         Answer
 tags:         drivers usb printing brother cups-lpd
-created_date: 2018-10-16 00:34:32
-edit_date:    2018-10-21 17:18:14
-votes:        2
+created_date: !!str "2018-10-16 00:34:32"
+edit_date:    !!str "2018-10-21 17:18:14"
+votes:        !!str "2"
 favorites:    
-views:        1,528
+views:        !!str "1,528"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

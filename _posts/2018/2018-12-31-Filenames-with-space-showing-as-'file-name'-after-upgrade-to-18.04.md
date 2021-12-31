@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Filenames with space showing as 'file name' after upgrade to 18.04
+title:        >
+    Filenames with space showing as 'file name' after upgrade to 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1105870
 type:         Answer
 tags:         command-line 18.04 ls
-created_date: 2018-12-31 16:16:37
-edit_date:    2018-12-31 16:28:01
-votes:        33
+created_date: !!str "2018-12-31 16:16:37"
+edit_date:    !!str "2018-12-31 16:28:01"
+votes:        !!str "33"
 favorites:    
-views:        2,232
+views:        !!str "2,232"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

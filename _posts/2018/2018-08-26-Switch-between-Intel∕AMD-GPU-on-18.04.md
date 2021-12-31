@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Switch between Intel∕AMD GPU on 18.04
+title:        >
+    Switch between Intel∕AMD GPU on 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1069136
 type:         Answer
 tags:         drivers graphics amd-graphics gpu-drivers
-created_date: 2018-08-26 16:16:33
-edit_date:    
-votes:        7
+created_date: !!str "2018-08-26 16:16:33"
+edit_date:    !!str ""
+votes:        !!str "7"
 favorites:    
-views:        55,927
+views:        !!str "55,927"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Interfacing DBus using gjs
+title:        >
+    Interfacing DBus using gjs
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161035
 type:         Answer
 tags:         gnome gnome-shell ubuntu-gnome dbus javascript
-created_date: 2019-07-25 16:45:46
-edit_date:    2019-07-25 17:38:24
-votes:        2
+created_date: !!str "2019-07-25 16:45:46"
+edit_date:    !!str "2019-07-25 17:38:24"
+votes:        !!str "2"
 favorites:    
-views:        690
+views:        !!str "690"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        What is faster for granular time stamping than `date` command?
+title:        >
+    What is faster for granular time stamping than `date` command?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/52617824
 type:         Question
 tags:         bash performance date
-created_date: 2018-10-02 23:39:29
-edit_date:    2018-10-03 02:50:46
-votes:        0
+created_date: !!str "2018-10-02 23:39:29"
+edit_date:    !!str "2018-10-03 02:50:46"
+votes:        !!str "0"
 favorites:    
-views:        86
+views:        !!str "86"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

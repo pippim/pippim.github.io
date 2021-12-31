@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is it possible to show ip address on top bar near the time?
+title:        >
+    Is it possible to show ip address on top bar near the time?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1025026
 type:         Answer
 tags:         17.10
-created_date: 2018-04-14 17:44:41
-edit_date:    
-votes:        3
+created_date: !!str "2018-04-14 17:44:41"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        3,184
+views:        !!str "3,184"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to clean "Preload" cache?
+title:        >
+    How to clean "Preload" cache?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1048363
 type:         Answer
 tags:         18.04 preload
-created_date: 2018-06-20 22:43:55
-edit_date:    2020-06-12 14:37:07
-votes:        2
+created_date: !!str "2018-06-20 22:43:55"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "2"
 favorites:    
-views:        4,311
+views:        !!str "4,311"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

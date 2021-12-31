@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Switch between internal and HDMI speakers automatically
+title:        >
+    Switch between internal and HDMI speakers automatically
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/854079
 type:         Answer
 tags:         16.04 sound pulseaudio alsa hdmi
-created_date: 2016-11-27 02:34:12
-edit_date:    2017-02-08 00:15:52
-votes:        9
+created_date: !!str "2016-11-27 02:34:12"
+edit_date:    !!str "2017-02-08 00:15:52"
+votes:        !!str "9"
 favorites:    
-views:        10,730
+views:        !!str "10,730"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

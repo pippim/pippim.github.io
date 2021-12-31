@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to find `.desktop` file location for a particular application
+title:        >
+    How to find `.desktop` file location for a particular application
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160753
 type:         Answer
 tags:         configuration .desktop ftp default-programs image-viewers
-created_date: 2019-07-24 16:22:34
-edit_date:    
-votes:        5
+created_date: !!str "2019-07-24 16:22:34"
+edit_date:    !!str ""
+votes:        !!str "5"
 favorites:    
-views:        2,582
+views:        !!str "2,582"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

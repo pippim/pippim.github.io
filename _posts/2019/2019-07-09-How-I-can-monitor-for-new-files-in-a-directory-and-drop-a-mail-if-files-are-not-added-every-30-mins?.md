@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How I can monitor for new files in a directory and drop a mail if files are not added every 30 mins?
+title:        >
+    How I can monitor for new files in a directory and drop a mail if files are not added every 30 mins?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157136
 type:         Answer
 tags:         command-line bash scripts
-created_date: 2019-07-09 23:38:56
-edit_date:    
-votes:        2
+created_date: !!str "2019-07-09 23:38:56"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        2,457
+views:        !!str "2,457"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to remove gnome settings from ubuntu 20.04 with unity desktop?
+title:        >
+    How to remove gnome settings from ubuntu 20.04 with unity desktop?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1247933
 type:         Answer
 tags:         20.04
-created_date: 2020-06-07 15:25:55
-edit_date:    2020-06-07 16:41:47
-votes:        6
+created_date: !!str "2020-06-07 15:25:55"
+edit_date:    !!str "2020-06-07 16:41:47"
+votes:        !!str "6"
 favorites:    
-views:        2,964
+views:        !!str "2,964"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

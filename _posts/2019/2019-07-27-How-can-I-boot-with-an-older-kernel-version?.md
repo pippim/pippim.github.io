@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I boot with an older kernel version?
+title:        >
+    How can I boot with an older kernel version?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161535
 type:         Answer
 tags:         grub2 kernel
-created_date: 2019-07-27 19:31:54
-edit_date:    
-votes:        4
+created_date: !!str "2019-07-27 19:31:54"
+edit_date:    !!str ""
+votes:        !!str "4"
 favorites:    
-views:        354,058
+views:        !!str "354,058"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

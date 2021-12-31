@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Something has set up an alias I don't understand "alert"
+title:        >
+    Something has set up an alias I don't understand "alert"
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/847302
 type:         Question
 tags:         alias
-created_date: 2016-11-09 03:30:07
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2016-11-09 03:30:07"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        350
+views:        !!str "350"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

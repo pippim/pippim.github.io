@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to delete CPU-stats from cpufreq?
+title:        >
+    How to delete CPU-stats from cpufreq?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138740
 type:         Answer
 tags:         18.04 xubuntu cpu 32-bit cpufreq
-created_date: 2019-04-27 22:15:04
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2019-04-27 22:15:04"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        1,425
+views:        !!str "1,425"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

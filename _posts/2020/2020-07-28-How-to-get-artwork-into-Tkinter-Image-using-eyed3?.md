@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to get artwork into Tkinter Image using eyed3?
+title:        >
+    How to get artwork into Tkinter Image using eyed3?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63144242
 type:         Question
 tags:         python tkinter eyed3
-created_date: 2020-07-28 23:30:47
-edit_date:    
-votes:        0
+created_date: !!str "2020-07-28 23:30:47"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        189
+views:        !!str "189"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

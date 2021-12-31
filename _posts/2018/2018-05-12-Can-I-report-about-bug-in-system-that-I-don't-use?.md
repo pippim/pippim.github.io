@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I report about bug in system that I don't use?
+title:        >
+    Can I report about bug in system that I don't use?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035169
 type:         Answer
 tags:         bug-reporting
-created_date: 2018-05-12 03:42:00
-edit_date:    2018-05-12 20:27:51
-votes:        2
+created_date: !!str "2018-05-12 03:42:00"
+edit_date:    !!str "2018-05-12 20:27:51"
+votes:        !!str "2"
 favorites:    
-views:        42
+views:        !!str "42"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

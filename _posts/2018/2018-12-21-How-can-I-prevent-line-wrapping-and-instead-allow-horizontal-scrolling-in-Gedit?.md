@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I prevent line wrapping and instead allow horizontal scrolling in Gedit?
+title:        >
+    How can I prevent line wrapping and instead allow horizontal scrolling in Gedit?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1103573
 type:         Answer
 tags:         gedit scrolling
-created_date: 2018-12-21 11:30:12
-edit_date:    2018-12-21 11:36:47
-votes:        6
+created_date: !!str "2018-12-21 11:30:12"
+edit_date:    !!str "2018-12-21 11:36:47"
+votes:        !!str "6"
 favorites:    
-views:        1,127
+views:        !!str "1,127"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

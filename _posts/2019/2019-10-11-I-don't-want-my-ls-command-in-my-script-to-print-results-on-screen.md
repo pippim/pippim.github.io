@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        I don't want my ls command in my script to print results on screen
+title:        >
+    I don't want my ls command in my script to print results on screen
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1180236
 type:         Answer
 tags:         command-line bash scripts printing
-created_date: 2019-10-11 10:50:43
-edit_date:    2019-10-11 23:01:51
-votes:        4
+created_date: !!str "2019-10-11 10:50:43"
+edit_date:    !!str "2019-10-11 23:01:51"
+votes:        !!str "4"
 favorites:    
-views:        2,293
+views:        !!str "2,293"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

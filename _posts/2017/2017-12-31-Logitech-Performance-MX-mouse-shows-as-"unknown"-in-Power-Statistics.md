@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Logitech Performance MX mouse shows as "unknown" in Power Statistics
+title:        >
+    Logitech Performance MX mouse shows as "unknown" in Power Statistics
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/991155
 type:         Answer
 tags:         16.04 mouse indicator battery logitech-unifying
-created_date: 2017-12-31 22:02:55
-edit_date:    2020-06-13 17:35:13
-votes:        2
+created_date: !!str "2017-12-31 22:02:55"
+edit_date:    !!str "2020-06-13 17:35:13"
+votes:        !!str "2"
 favorites:    
-views:        2,385
+views:        !!str "2,385"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

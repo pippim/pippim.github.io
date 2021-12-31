@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Running a Bash while loop over all similar files
+title:        >
+    Running a Bash while loop over all similar files
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1051609
 type:         Answer
 tags:         bash scripts
-created_date: 2018-07-02 19:55:00
-edit_date:    2018-07-03 10:12:57
-votes:        6
+created_date: !!str "2018-07-02 19:55:00"
+edit_date:    !!str "2018-07-03 10:12:57"
+votes:        !!str "6"
 favorites:    
-views:        3,744
+views:        !!str "3,744"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

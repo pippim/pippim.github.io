@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to make calendar points to Sunday as first day of the week in Ubuntu 18.04
+title:        >
+    How to make calendar points to Sunday as first day of the week in Ubuntu 18.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1047183
 type:         Answer
 tags:         18.04 gnome-shell calendar
-created_date: 2018-06-16 18:58:29
-edit_date:    2019-12-08 14:12:41
-votes:        4
+created_date: !!str "2018-06-16 18:58:29"
+edit_date:    !!str "2019-12-08 14:12:41"
+votes:        !!str "4"
 favorites:    
-views:        4,051
+views:        !!str "4,051"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

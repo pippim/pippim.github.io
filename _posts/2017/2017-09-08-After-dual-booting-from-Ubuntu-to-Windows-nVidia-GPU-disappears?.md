@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        After dual booting from Ubuntu to Windows nVidia GPU disappears?
+title:        >
+    After dual booting from Ubuntu to Windows nVidia GPU disappears?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/953778
 type:         Answer
 tags:         dual-boot grub2 nvidia windows-8 reboot
-created_date: 2017-09-08 03:21:29
-edit_date:    
-votes:        3
+created_date: !!str "2017-09-08 03:21:29"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        415
+views:        !!str "415"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

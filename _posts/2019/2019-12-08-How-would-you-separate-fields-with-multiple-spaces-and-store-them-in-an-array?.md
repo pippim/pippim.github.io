@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How would you separate fields with multiple spaces and store them in an array?
+title:        >
+    How would you separate fields with multiple spaces and store them in an array?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1194718
 type:         Answer
 tags:         bash sed awk cut-command tr
-created_date: 2019-12-08 15:57:22
-edit_date:    2019-12-09 11:55:37
-votes:        2
+created_date: !!str "2019-12-08 15:57:22"
+edit_date:    !!str "2019-12-09 11:55:37"
+votes:        !!str "2"
 favorites:    
-views:        3,547
+views:        !!str "3,547"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

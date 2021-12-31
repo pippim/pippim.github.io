@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Make Ubuntu's Night Light look like Manjaro KDE's Night Color
+title:        >
+    Make Ubuntu's Night Light look like Manjaro KDE's Night Color
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1244707
 type:         Answer
 tags:         kde gnome-shell colors color-management night-light eyesome
-created_date: 2020-05-28 23:12:01
-edit_date:    2020-06-12 09:58:59
-votes:        2
+created_date: !!str "2020-05-28 23:12:01"
+edit_date:    !!str "2020-06-12 09:58:59"
+votes:        !!str "2"
 favorites:    
-views:        973
+views:        !!str "973"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

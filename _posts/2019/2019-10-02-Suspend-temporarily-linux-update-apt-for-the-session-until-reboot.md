@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Suspend temporarily linux update apt for the session until reboot
+title:        >
+    Suspend temporarily linux update apt for the session until reboot
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1178114
 type:         Answer
 tags:         command-line apt scripts
-created_date: 2019-10-02 11:16:53
-edit_date:    
-votes:        1
+created_date: !!str "2019-10-02 11:16:53"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        53
+views:        !!str "53"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

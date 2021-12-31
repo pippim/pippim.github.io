@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I debug frequent unrecoverable freezes?
+title:        >
+    How can I debug frequent unrecoverable freezes?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/850816
 type:         Answer
 tags:         16.04 dell xps
-created_date: 2016-11-18 11:22:02
-edit_date:    
-votes:        3
+created_date: !!str "2016-11-18 11:22:02"
+edit_date:    !!str ""
+votes:        !!str "3"
 favorites:    
-views:        5,674
+views:        !!str "5,674"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

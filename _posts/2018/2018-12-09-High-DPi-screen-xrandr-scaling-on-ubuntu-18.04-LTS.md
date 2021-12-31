@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        High DPi screen xrandr scaling on ubuntu 18.04 LTS
+title:        >
+    High DPi screen xrandr scaling on ubuntu 18.04 LTS
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1099471
 type:         Answer
 tags:         gnome 18.04 xorg display-resolution xrandr
-created_date: 2018-12-09 01:01:25
-edit_date:    
-votes:        2
+created_date: !!str "2018-12-09 01:01:25"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        3,570
+views:        !!str "3,570"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How does the new "Bash on Windows 10" really work?
+title:        >
+    How does the new "Bash on Windows 10" really work?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1003732
 type:         Answer
 tags:         windows-subsystem-for-linux
-created_date: 2018-02-07 01:49:21
-edit_date:    2018-02-07 02:22:34
-votes:        3
+created_date: !!str "2018-02-07 01:49:21"
+edit_date:    !!str "2018-02-07 02:22:34"
+votes:        !!str "3"
 favorites:    
-views:        10,498
+views:        !!str "10,498"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

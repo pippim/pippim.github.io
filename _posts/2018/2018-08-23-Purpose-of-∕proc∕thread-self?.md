@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Purpose of ∕proc∕thread-self?
+title:        >
+    Purpose of ∕proc∕thread-self?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/51977002
 type:         Question
 tags:         linux multithreading linux-kernel proc
-created_date: 2018-08-23 00:59:48
-edit_date:    
-votes:        2
+created_date: !!str "2018-08-23 00:59:48"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        1,299
+views:        !!str "1,299"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

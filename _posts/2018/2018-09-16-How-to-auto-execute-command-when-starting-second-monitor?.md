@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to auto execute command when starting second monitor?
+title:        >
+    How to auto execute command when starting second monitor?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1075809
 type:         Answer
 tags:         gnome multiple-monitors nvidia-geforce
-created_date: 2018-09-16 17:30:00
-edit_date:    
-votes:        2
+created_date: !!str "2018-09-16 17:30:00"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        368
+views:        !!str "368"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

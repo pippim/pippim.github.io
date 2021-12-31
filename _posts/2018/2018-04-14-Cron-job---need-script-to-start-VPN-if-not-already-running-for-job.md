@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Cron job - need script to start VPN if not already running for job
+title:        >
+    Cron job - need script to start VPN if not already running for job
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1025048
 type:         Answer
 tags:         network-manager vpn cron nmcli openconnect
-created_date: 2018-04-14 19:07:26
-edit_date:    
-votes:        1
+created_date: !!str "2018-04-14 19:07:26"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        567
+views:        !!str "567"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

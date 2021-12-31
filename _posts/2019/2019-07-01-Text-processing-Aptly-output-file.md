@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Text processing Aptly output file
+title:        >
+    Text processing Aptly output file
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1155253
 type:         Answer
 tags:         text-processing sed awk
-created_date: 2019-07-01 16:31:39
-edit_date:    2020-06-12 14:37:07
-votes:        3
+created_date: !!str "2019-07-01 16:31:39"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "3"
 favorites:    
-views:        165
+views:        !!str "165"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   true
 clipboard:    true

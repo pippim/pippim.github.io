@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How can I find help for new Ubuntu users?
+title:        >
+    How can I find help for new Ubuntu users?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1100180
 type:         Answer
 tags:         documentation
-created_date: 2018-12-12 01:01:03
-edit_date:    
-votes:        2
+created_date: !!str "2018-12-12 01:01:03"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        812
+views:        !!str "812"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

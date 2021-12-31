@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Remove second hard drive OS from grub
+title:        >
+    Remove second hard drive OS from grub
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1042589
 type:         Answer
 tags:         boot grub2 hard-drive
-created_date: 2018-06-01 11:06:16
-edit_date:    2020-06-12 14:37:07
-votes:        1
+created_date: !!str "2018-06-01 11:06:16"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "1"
 favorites:    
-views:        4,018
+views:        !!str "4,018"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

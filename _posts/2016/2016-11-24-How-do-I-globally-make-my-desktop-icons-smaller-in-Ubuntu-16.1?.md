@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I globally make my desktop icons smaller in Ubuntu 16.1?
+title:        >
+    How do I globally make my desktop icons smaller in Ubuntu 16.1?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/852915
 type:         Answer
 tags:         gnome icons ubuntu-gnome desktop-icons
-created_date: 2016-11-24 00:53:54
-edit_date:    
-votes:        1
+created_date: !!str "2016-11-24 00:53:54"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        6,386
+views:        !!str "6,386"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

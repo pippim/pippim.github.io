@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Random freezes on 19.04, unsure which logs to check
+title:        >
+    Random freezes on 19.04, unsure which logs to check
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1191155
 type:         Answer
 tags:         google-chrome 19.04 freeze
-created_date: 2019-11-23 19:28:58
-edit_date:    
-votes:        2
+created_date: !!str "2019-11-23 19:28:58"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        1,696
+views:        !!str "1,696"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

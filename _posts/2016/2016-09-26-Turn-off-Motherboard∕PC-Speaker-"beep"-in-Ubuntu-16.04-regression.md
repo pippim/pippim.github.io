@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Turn off Motherboard∕PC Speaker "beep" in Ubuntu 16.04 regression
+title:        >
+    Turn off Motherboard∕PC Speaker "beep" in Ubuntu 16.04 regression
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/829657
 type:         Answer
 tags:         16.04 sound xorg pulseaudio teminal-bell
-created_date: 2016-09-26 02:00:45
-edit_date:    2017-04-13 12:24:56
-votes:        1
+created_date: !!str "2016-09-26 02:00:45"
+edit_date:    !!str "2017-04-13 12:24:56"
+votes:        !!str "1"
 favorites:    
-views:        2,631
+views:        !!str "2,631"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

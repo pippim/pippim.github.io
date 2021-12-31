@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Mistyped <Ctrl>+<Alt>+<T> split existing terminal window
+title:        >
+    Mistyped <Ctrl>+<Alt>+<T> split existing terminal window
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1008546
 type:         Question
 tags:         16.04 command-line shortcut-keys gnome-terminal
-created_date: 2018-02-22 00:09:14
-edit_date:    2018-03-29 23:56:22
-votes:        3
+created_date: !!str "2018-02-22 00:09:14"
+edit_date:    !!str "2018-03-29 23:56:22"
+votes:        !!str "3"
 favorites:    
-views:        1,015
+views:        !!str "1,015"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

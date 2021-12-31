@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Display grub menu and options without rebooting?
+title:        >
+    Display grub menu and options without rebooting?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1019214
 type:         Answer
 tags:         command-line grub2
-created_date: 2018-03-26 04:05:58
-edit_date:    2018-05-08 00:32:11
-votes:        17
+created_date: !!str "2018-03-26 04:05:58"
+edit_date:    !!str "2018-05-08 00:32:11"
+votes:        !!str "17"
 favorites:    
-views:        7,698
+views:        !!str "7,698"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          true
 navigation:   true
 clipboard:    true

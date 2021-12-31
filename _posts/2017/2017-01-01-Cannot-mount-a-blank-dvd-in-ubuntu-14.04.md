@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Cannot mount a blank dvd in ubuntu 14.04
+title:        >
+    Cannot mount a blank dvd in ubuntu 14.04
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866648
 type:         Answer
 tags:         14.04 dvd
-created_date: 2017-01-01 01:34:15
-edit_date:    2017-01-01 09:16:18
-votes:        2
+created_date: !!str "2017-01-01 01:34:15"
+edit_date:    !!str "2017-01-01 09:16:18"
+votes:        !!str "2"
 favorites:    
-views:        328
+views:        !!str "328"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

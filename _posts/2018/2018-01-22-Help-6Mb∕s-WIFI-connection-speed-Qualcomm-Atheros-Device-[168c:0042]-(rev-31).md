@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Help 6Mb∕s WIFI connection speed Qualcomm Atheros Device [168c:0042] (rev 31)
+title:        >
+    Help 6Mb∕s WIFI connection speed Qualcomm Atheros Device [168c:0042] (rev 31)
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/998636
 type:         Answer
 tags:         16.04 networking drivers wireless atheros
-created_date: 2018-01-22 12:09:40
-edit_date:    2018-04-09 00:44:25
-votes:        1
+created_date: !!str "2018-01-22 12:09:40"
+edit_date:    !!str "2018-04-09 00:44:25"
+votes:        !!str "1"
 favorites:    
-views:        2,037
+views:        !!str "2,037"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

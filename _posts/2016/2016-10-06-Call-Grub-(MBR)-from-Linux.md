@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Call Grub (MBR) from Linux
+title:        >
+    Call Grub (MBR) from Linux
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/39887196
 type:         Question
 tags:         assemblies mbr grub2
-created_date: 2016-10-06 03:46:20
-edit_date:    
-votes:        2
+created_date: !!str "2016-10-06 03:46:20"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    1
-views:        63
+views:        !!str "63"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

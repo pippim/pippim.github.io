@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Terminal icon in window titlebar is stretched out over window control buttons
+title:        >
+    Terminal icon in window titlebar is stretched out over window control buttons
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035788
 type:         Answer
 tags:         icons themes gnome-terminal titlebar window-buttons
-created_date: 2018-05-13 17:42:40
-edit_date:    
-votes:        2
+created_date: !!str "2018-05-13 17:42:40"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        3,622
+views:        !!str "3,622"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

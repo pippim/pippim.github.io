@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        CheckboxTreeview() - scale size of checkboxes, change colors
+title:        >
+    CheckboxTreeview() - scale size of checkboxes, change colors
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/64582469
 type:         Answer
 tags:         python tkinter checkbox treeview
-created_date: 2020-10-28 22:54:04
-edit_date:    
-votes:        1
+created_date: !!str "2020-10-28 22:54:04"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        186
+views:        !!str "186"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

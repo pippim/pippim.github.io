@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to set subtitles to 'none' as a default for totem?
+title:        >
+    How to set subtitles to 'none' as a default for totem?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007209
 type:         Answer
 tags:         video totem subtitle
-created_date: 2018-02-17 22:39:09
-edit_date:    2020-06-12 14:37:07
-votes:        6
+created_date: !!str "2018-02-17 22:39:09"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "6"
 favorites:    
-views:        1,665
+views:        !!str "1,665"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

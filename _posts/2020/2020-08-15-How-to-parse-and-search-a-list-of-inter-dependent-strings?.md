@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to parse and search a list of inter-dependent strings?
+title:        >
+    How to parse and search a list of inter-dependent strings?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63429034
 type:         Answer
 tags:         python list search
-created_date: 2020-08-15 17:39:04
-edit_date:    
-votes:        1
+created_date: !!str "2020-08-15 17:39:04"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        141
+views:        !!str "141"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

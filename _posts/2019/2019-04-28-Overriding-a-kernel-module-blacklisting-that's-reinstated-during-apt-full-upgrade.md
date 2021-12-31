@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Overriding a kernel module blacklisting that's reinstated during apt full-upgrade
+title:        >
+    Overriding a kernel module blacklisting that's reinstated during apt full-upgrade
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138978
 type:         Answer
 tags:         apt 18.04 kernel lubuntu udev
-created_date: 2019-04-28 22:04:50
-edit_date:    2019-04-28 22:12:37
-votes:        2
+created_date: !!str "2019-04-28 22:04:50"
+edit_date:    !!str "2019-04-28 22:12:37"
+votes:        !!str "2"
 favorites:    
-views:        457
+views:        !!str "457"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

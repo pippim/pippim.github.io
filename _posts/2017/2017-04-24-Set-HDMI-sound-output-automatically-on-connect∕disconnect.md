@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Set HDMI sound output automatically on connect∕disconnect
+title:        >
+    Set HDMI sound output automatically on connect∕disconnect
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/908534
 type:         Answer
 tags:         12.04 sound hdmi events
-created_date: 2017-04-24 22:54:02
-edit_date:    2020-06-12 14:37:07
-votes:        6
+created_date: !!str "2017-04-24 22:54:02"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "6"
 favorites:    
-views:        18,945
+views:        !!str "18,945"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    true

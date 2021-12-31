@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Can I use Nautilus to drag and drop files to encrypted folder?
+title:        >
+    Can I use Nautilus to drag and drop files to encrypted folder?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/880608
 type:         Question
 tags:         nautilus encryption drag-and-drop
-created_date: 2017-02-07 00:49:12
-edit_date:    
-votes:        0
+created_date: !!str "2017-02-07 00:49:12"
+edit_date:    !!str ""
+votes:        !!str "0"
 favorites:    
-views:        104
+views:        !!str "104"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

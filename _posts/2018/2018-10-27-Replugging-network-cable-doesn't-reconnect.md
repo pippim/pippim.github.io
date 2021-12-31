@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Replugging network cable doesn't reconnect
+title:        >
+    Replugging network cable doesn't reconnect
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1087720
 type:         Answer
 tags:         tlp
-created_date: 2018-10-27 11:24:43
-edit_date:    2018-10-27 14:56:37
-votes:        1
+created_date: !!str "2018-10-27 11:24:43"
+edit_date:    !!str "2018-10-27 14:56:37"
+votes:        !!str "1"
 favorites:    
-views:        613
+views:        !!str "613"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

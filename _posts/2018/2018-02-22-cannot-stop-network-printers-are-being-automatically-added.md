@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        cannot stop network printers are being automatically added
+title:        >
+    cannot stop network printers are being automatically added
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1008550
 type:         Answer
 tags:         printing 17.10
-created_date: 2018-02-22 00:25:35
-edit_date:    2020-06-12 14:37:07
-votes:        8
+created_date: !!str "2018-02-22 00:25:35"
+edit_date:    !!str "2020-06-12 14:37:07"
+votes:        !!str "8"
 favorites:    
-views:        13,367
+views:        !!str "13,367"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

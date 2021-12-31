@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I free up space on ∕boot?
+title:        >
+    How do I free up space on ∕boot?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1033109
 type:         Answer
 tags:         boot partitioning dependencies
-created_date: 2018-05-07 11:09:14
-edit_date:    
-votes:        2
+created_date: !!str "2018-05-07 11:09:14"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        1,473
+views:        !!str "1,473"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How to make a Tkinter window jump to the front?
+title:        >
+    How to make a Tkinter window jump to the front?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63238973
 type:         Answer
 tags:         python tkinter focus
-created_date: 2020-08-04 01:22:26
-edit_date:    
-votes:        2
+created_date: !!str "2020-08-04 01:22:26"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        83,247
+views:        !!str "83,247"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

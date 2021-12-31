@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Why does xubuntu require less ram than ubuntu?
+title:        >
+    Why does xubuntu require less ram than ubuntu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/819552
 type:         Answer
 tags:         xubuntu
-created_date: 2016-09-01 11:03:05
-edit_date:    
-votes:        2
+created_date: !!str "2016-09-01 11:03:05"
+edit_date:    !!str ""
+votes:        !!str "2"
 favorites:    
-views:        575
+views:        !!str "575"
 accepted:     
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

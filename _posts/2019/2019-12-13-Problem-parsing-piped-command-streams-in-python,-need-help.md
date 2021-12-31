@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Problem parsing piped command streams in python, need help
+title:        >
+    Problem parsing piped command streams in python, need help
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1195775
 type:         Answer
 tags:         bash python
-created_date: 2019-12-13 00:06:06
-edit_date:    
-votes:        1
+created_date: !!str "2019-12-13 00:06:06"
+edit_date:    !!str ""
+votes:        !!str "1"
 favorites:    
-views:        108
+views:        !!str "108"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

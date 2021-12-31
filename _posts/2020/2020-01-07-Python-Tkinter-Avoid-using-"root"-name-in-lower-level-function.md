@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Python Tkinter Avoid using "root" name in lower level function
+title:        >
+    Python Tkinter Avoid using "root" name in lower level function
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59621559
 type:         Question
 tags:         python tkinter
-created_date: 2020-01-07 02:48:23
-edit_date:    2020-01-07 03:47:24
-votes:        0
+created_date: !!str "2020-01-07 02:48:23"
+edit_date:    !!str "2020-01-07 03:47:24"
+votes:        !!str "0"
 favorites:    
-views:        48
+views:        !!str "48"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        Is there some way that I can see performance in Ubuntu?
+title:        >
+    Is there some way that I can see performance in Ubuntu?
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/931394
 type:         Answer
 tags:         software-recommendation performance conky
-created_date: 2017-07-02 23:42:59
-edit_date:    2017-07-03 00:11:57
-votes:        5
+created_date: !!str "2017-07-02 23:42:59"
+edit_date:    !!str "2017-07-03 00:11:57"
+votes:        !!str "5"
 favorites:    
-views:        741
+views:        !!str "741"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false

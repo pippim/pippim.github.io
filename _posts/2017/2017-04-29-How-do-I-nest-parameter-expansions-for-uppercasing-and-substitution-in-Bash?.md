@@ -1,17 +1,18 @@
 ---
 layout:       post
-title:        How do I nest parameter expansions for uppercasing and substitution in Bash?
+title:        >
+    How do I nest parameter expansions for uppercasing and substitution in Bash?
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43690512
 type:         Question
 tags:         bash replace uppercase
-created_date: 2017-04-29 00:14:39
-edit_date:    2017-04-29 00:40:16
-votes:        1
+created_date: !!str "2017-04-29 00:14:39"
+edit_date:    !!str "2017-04-29 00:40:16"
+votes:        !!str "1"
 favorites:    
-views:        49
+views:        !!str "49"
 accepted:     Accepted
-uploaded:     2021-12-30 17:00:34
+uploaded:     !!str "2021-12-31 14:57:34"
 toc:          false
 navigation:   false
 clipboard:    false
