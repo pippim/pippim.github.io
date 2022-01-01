@@ -365,7 +365,7 @@ Normally you will `git pull` all the directories and files from your website to 
 If you plan on developing locally, you probably want to backup your daily work. This script
 is what Pippim uses for dailiy backup to gmail.com (in the cloud, so it should be safe):
 
-``` terminal
+``` bash
 # WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
 tar -rpf "$Filename" website/*.md       # about.md, answers.md, programs.md   
 tar -rpf "$Filename" website/*.yml      # _config.yml
@@ -375,13 +375,16 @@ tar -rpf "$Filename" website/_plugins   # insert_git_code.rb (NOT supported)
 tar -rpf "$Filename" website/_sass      # jekyll-theme-cayman.scss & toc.scss
 tar -rpf "$Filename" website/assets/css # style.scss file
 tar -rpf "$Filename" website/assets/js  # javascript files
+tar -rpf "$Filename" website/sede/*.sh  # refresh GitHub Pages each week
 tar -rpf "$Filename" website/sede/*.py  # stack-to-blog.py and SEDE query below
 tar -rpf "$Filename" website/sede/StackQuery
 ```
 
-**NOTE:** This is a small subset of the daily backup script. The full script
+**NOTE:** This is a subset of the daily backup script. The complete script
 may be posted someday if requested. The script is called from `cron` every
-morning, compresses files, and emails to gmail.com automatically.
+morning, compresses files, and emails to gmail.com automatically. A python
+program called `bserve.py` is used to rotat daily backups into weekly, monthly
+and yearly backups.
 
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
