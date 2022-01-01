@@ -34,13 +34,6 @@ else
     commit_message="Update website posts on $now"
 fi
 
-stack-to-blog.py
-retVal=$?
-if [ $retVal -ne 0 ]; then
-    echo "git pull FAILED with code: $retVal"
-    exit $retVal
-fi
-
 cd ~/website2
 
 git pull
@@ -49,6 +42,18 @@ if [ $retVal -ne 0 ]; then
     echo "git pull FAILED with code: $retVal"
     exit $retVal
 fi
+
+cd ~/website/sede
+
+cp ~/website2/_config.yml ../
+stack-to-blog.py
+retVal=$?
+if [ $retVal -ne 0 ]; then
+    echo "git pull FAILED with code: $retVal"
+    exit $retVal
+fi
+
+cd ~/website2
 
 rm -rf _posts/
 mkdir _posts/
@@ -71,6 +76,15 @@ if [ $retVal -ne 0 ]; then
     exit $retVal
 fi
 
+cp ~/website/_config.yml .
+
+git add _config.yml
+retVal=$?
+if [ $retVal -ne 0 ]; then
+    echo "git add _config.yml FAILED with code: $retVal"
+    exit $retVal
+fi
+
 git commit -m '"'"$commit_message"'"'
 retVal=$?
 if [ $retVal -ne 0 ]; then
@@ -86,5 +100,5 @@ if [ $retVal -ne 0 ]; then
 fi
 
 # Change back to original directory (probably ~/website/sede)
-cd -
+cd ~/website/sede
 
