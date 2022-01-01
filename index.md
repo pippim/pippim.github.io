@@ -297,10 +297,8 @@ locations:
 The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for Pippim on GitHub Pages looked like this:
 
 ``` terminal
-pippim.github.io
-│
-├── about.md
-├── answers.md
+$ tree --dirsfirst --filelimit 20
+.
 ├── assets
 │   ├── css
 │   │   └── style.scss
@@ -309,43 +307,56 @@ pippim.github.io
 │   │   ├── Ask Ubuntu profile.png
 │   │   ├── Blog_Project-Management-101.png
 │   │   ├── earth-from-space.jpg
-│   │   ├── Edmonton  Temperature Nov 21, 2021.png
+│   │   ├── Edm Temperature December 7, 2021.png
 │   │   ├── github pages themes.png
 │   │   ├── Inspectocadt.jpeg
+│   │   ├── Jekyll.png
 │   │   ├── octojekyll-opt.jpg
 │   │   ├── Pippim Post More Button Working.gif
 │   │   └── pngwing.com.png
 │   └── js
 │       ├── copyCode.js
 │       └── post_fm.js
-├── _config.yml
 ├── _includes
 │   ├── copyHeader.html
 │   ├── head-custom.html
 │   ├── image.html
+│   ├── posts_by_tag.html
+│   ├── posts_by_vote.html
 │   └── toc.md
-├── index.md
 ├── _layouts
 │   ├── default.html
 │   └── post.html
-├── LICENSE
 ├── _plugins
 │   └── insert_git_code.rb
 ├── _posts
-│   └── 2021-10-24-welcome-to-jekyll.md
-├── programs.md
+│   ├── 2016 [183 entries exceeds filelimit, not opening dir]
+│   ├── 2017 [163 entries exceeds filelimit, not opening dir]
+│   ├── 2018 [448 entries exceeds filelimit, not opening dir]
+│   ├── 2019 [269 entries exceeds filelimit, not opening dir]
+│   ├── 2020 [72 entries exceeds filelimit, not opening dir]
+│   └── 2021 [36 entries exceeds filelimit, not opening dir]
 ├── _sass
 │   ├── jekyll-theme-cayman.scss
 │   └── toc.scss
-└── sede
-    ├── QueryResults.csv
-    ├── StackQuery
-    └── stack-to-blog.py
+├── sede
+│   ├── QueryResults.csv
+│   ├── refresh.sh
+│   ├── StackQuery
+│   └── stack-to-blog.py
+├── about.md
+├── answers.md
+├── _config.yml
+├── index.md
+├── LICENSE
+├── programs.md
+└── stack-to-blog.py
 
-10 directories, 33 files
+16 directories, 36 files
+
 ```
 
-**NOTE:** The `_posts` directory will contain over 1200 blog posts 
+**NOTE:** The `_posts` directory will contain about 1200 blog posts 
 which are not displayed above.
 
 ### Daily Backup
