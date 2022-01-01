@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 title: Pippim - Free Software
 description: Free Open-Source Software for the World. Free of Ads Too!
+
+# Must be last comment! stack-to-blog.py variables added below
