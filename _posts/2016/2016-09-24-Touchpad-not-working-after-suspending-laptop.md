@@ -12,7 +12,7 @@ votes:        !!str "18"
 favorites:    
 views:        !!str "40,401"
 accepted:     
-uploaded:     !!str "2021-12-31 14:57:34"
+uploaded:     !!str "2021-12-31 17:41:14"
 toc:          false
 navigation:   false
 clipboard:    false
