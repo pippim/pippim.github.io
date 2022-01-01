@@ -68,10 +68,10 @@
 
         {% if page.views and page.views != "" and page.views != nil %}
           <fmVar>Views:</fmVar>
-            <mark>&nbsp;{{ page.views }}&nbsp;</mark>
+            <mark>{{ page.views }}</mark>
         {% endif %}
         {% if page.votes and page.votes != "" and page.votes != nil %}
-           &nbsp;&nbsp; Votes:&nbsp;&nbsp;<mark>&nbsp;{{ page.votes }}&nbsp;</mark>
+           &nbsp;&nbsp; Votes:&nbsp;&nbsp;<mark>{{ page.votes }}</mark>
         {% endif %}
         {% if page.accepted and page.accepted != "" and page.accepted != nil %}
            &nbsp;&nbsp; ✅&nbsp;Solution
@@ -82,7 +82,7 @@
           <fmVar>Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:</fmVar>
             {% for tag in page.tags %}
               <!-- &#32; is a breaking space: https://stackoverflow.com/a/38663112/6929343 -->
-              <mark>&nbsp;{{ tag }}&nbsp;</mark>&nbsp;&nbsp;
+              <mark>{{ tag }}</mark>&nbsp;&nbsp;
             {% endfor %}
         {% endif %}
 
@@ -120,57 +120,57 @@
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
           <!-- No br/ required because new H4 already inserts a big line break -->
           <fmVar>URL:</fmVar>
-            <mark>&nbsp;{{ page.stack_url }}&nbsp;</mark>
+            <mark>{{ page.stack_url }}</mark>
         {% endif %}
         <!-- title: is always present anyway AND displayed at top of page! -->
         {% if page.title and page.title != "" and page.title != nil %}
           <br/>
           <fmVar>Title:</fmVar>
-            <mark>&nbsp;{{ page.title }}&nbsp;</mark>
+            <mark>{{ page.title }}</mark>
           <br/>
         {% endif %}
         {% if page.id and page.id != "" and page.id != nil %}
           <fmVar>ID:</fmVar>
-            <mark>&nbsp;{{ page.id }}&nbsp;</mark>
+            <mark>{{ page.id }}</mark>
           <br/>
         {% endif %}
 <!-- page.name & page.dir has NOTHING. Hide other less useful fields too
         {% if page.name and page.name != "" and page.name != nil %}
           <fmVar>Name:</fmVar>
-            <mark>&nbsp;{{ page.name }}&nbsp;</mark>
+            <mark>{{ page.name }}</mark>
           <br/>
         {% endif %}
         {% if page.path and page.path != "" and page.path != nil %}
           <fmVar>Path:</fmVar>
-            <mark>&nbsp;{{ page.path }}&nbsp;</mark>
+            <mark>{{ page.path }}</mark>
           <br/>
         {% endif %}
         {% if page.dir and page.dir != "" and page.dir != nil %}
           <fmVar>Directory:</fmVar>
-            <mark>&nbsp;{{ page.dir }}&nbsp;</mark>
+            <mark>{{ page.dir }}</mark>
           <br/>
         {% endif %}
         {% if page.previous and page.previous != "" and page.previous != nil %}
           <fmVar>Previous:</fmVar>
-            <mark>&nbsp;{{ page.previous.title }}&nbsp;</mark>
+            <mark>{{ page.previous.title }}</mark>
           <br/>
         {% endif %}
         {% if page.next and page.next != "" and page.next != nil %}
           <fmVar>Next:</fmVar>
-            <mark>&nbsp;{{ page.next.title }}&nbsp;</mark>
+            <mark>{{ page.next.title }}</mark>
           <br/>
         {% endif %}
 -->
         {% if page.created_date and page.created_date != "" and page.created_date != nil %}
           <fmVar>Created:</fmVar>
-             <mark>&nbsp;{{ page.created_date | date: "%B %e, %Y" }}&nbsp;</mark>
+             <mark>{{ page.created_date | date: "%B %e, %Y" }}</mark>
         {% endif %}
         {% if page.edit_date and page.edit_date != "" and page.edit_date != nil %}
           <!-- Assumes Created always used if Edited is used! -->
-          &nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>&nbsp;{{ page.edit_date | date: "%B %e, %Y" }}&nbsp;</mark>
+          &nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>{{ page.edit_date | date: "%B %e, %Y" }}</mark>
         {% endif %}
         {% if page.favorites and page.favorites != "" and page.favorites != nil %}
-          &nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>&nbsp;{{ page.favorites }}&nbsp;</mark>
+          &nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>{{ page.favorites }}</mark>
         {% endif %}
 
         <!-- EXTRA FRONT MATTER VARIABLES:
@@ -182,22 +182,22 @@
         {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
           <br/>
           <fmVar>Upload:</fmVar>
-            <mark>&nbsp;{{ page.uploaded | date: "%B %e, %Y" }}&nbsp;</mark>
+            <mark>{{ page.uploaded | date: "%B %e, %Y" }}</mark>
         {% endif %}
         {% if page.layout and page.layout != "" and page.layout != nil %}
-          &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>&nbsp;{{ page.layout }}&nbsp;</mark>
+          &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>{{ page.layout }}</mark>
         {% endif %}
         <!-- Don't test "if page.toc" value because "false" prevents displaying FM -->
         {% if page.toc != "" and page.toc != nil %}
           <br/>
           <fmVar>TOC:</fmVar>
-            <mark>&nbsp;{{ page.toc }}&nbsp;</mark>
+            <mark>{{ page.toc }}</mark>
         {% endif %}
         {% if page.navigation != "" and page.navigation != nil %}
-          &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>&nbsp;{{ page.navigation }}&nbsp;</mark>
+          &nbsp;&nbsp; Navigation:&nbsp;&nbsp;<mark>{{ page.navigation }}</mark>
         {% endif %}
         {% if page.clipboard != "" and page.clipboard != nil %}
-          &nbsp;&nbsp; Copy&nbsp;to&nbsp;clipboard:&nbsp;&nbsp;<mark>&nbsp;{{ page.clipboard }}&nbsp;</mark>
+          &nbsp;&nbsp; Copy&nbsp;to&nbsp;clipboard:&nbsp;&nbsp;<mark>{{ page.clipboard }}</mark>
         {% endif %}
 
         <script>
