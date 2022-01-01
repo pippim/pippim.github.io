@@ -28,11 +28,13 @@ if [ ! -d ~/website2 ] ; then
 fi
 
 if [ -z "$1" ] ; then
-    commit_message="$1"
-else
     now=$(date)
     commit_message="Update website posts on $now"
+else
+    commit_message="$1"
 fi
+
+echo "Commit message set to: '$commit_message'"
 
 cd ~/website2
 
