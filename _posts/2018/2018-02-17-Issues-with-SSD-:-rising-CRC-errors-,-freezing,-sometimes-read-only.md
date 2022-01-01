@@ -8,9 +8,9 @@ type:         Answer
 tags:         ssd hardware disk ubuntu-gnome smart grub
 created_date: !!str "2018-02-17 22:02:17"
 edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "3"
+votes:        !!str "3 "
 favorites:    
-views:        !!str "2,447"
+views:        !!str "2,447 "
 accepted:     
 uploaded:     !!str "2021-12-31 19:13:18"
 toc:          false
