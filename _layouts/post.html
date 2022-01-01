@@ -134,6 +134,7 @@
             <mark>&nbsp;{{ page.id }}&nbsp;</mark>
           <br/>
         {% endif %}
+<!-- page.name & page.dir has NOTHING. Hide other less useful fields too
         {% if page.name and page.name != "" and page.name != nil %}
           <fmVar>Name:</fmVar>
             <mark>&nbsp;{{ page.name }}&nbsp;</mark>
@@ -159,6 +160,7 @@
             <mark>&nbsp;{{ page.next.title }}&nbsp;</mark>
           <br/>
         {% endif %}
+-->
         {% if page.created_date and page.created_date != "" and page.created_date != nil %}
           <fmVar>Created:</fmVar>
              <mark>&nbsp;{{ page.created_date | date: "%B %e, %Y" }}&nbsp;</mark>
