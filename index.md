@@ -349,10 +349,9 @@ $ tree --dirsfirst --filelimit 20
 ├── _config.yml
 ├── index.md
 ├── LICENSE
-├── programs.md
-└── stack-to-blog.py
+└── programs.md
 
-16 directories, 36 files
+16 directories, 35 files
 
 ```
 
