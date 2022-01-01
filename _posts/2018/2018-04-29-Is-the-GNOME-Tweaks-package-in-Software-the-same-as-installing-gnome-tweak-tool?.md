@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029828
 type:         Answer
 tags:         18.04 gnome gnome-tweaks
-created_date: !!str "2018-04-29 19:27:13"
-edit_date:    !!str "2019-09-16 11:03:56"
-votes:        !!str "8"
+created_date: 2018-04-29 19:27:13
+edit_date:    2019-09-16 11:03:56
+votes:        "8 "
 favorites:    
-views:        !!str "19,962"
+views:        "19,962 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

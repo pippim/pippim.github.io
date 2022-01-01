@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43669662
 type:         Question
 tags:         string bash command-line path
-created_date: !!str "2017-04-27 23:44:25"
-edit_date:    !!str "2017-04-28 02:23:56"
-votes:        !!str "0"
+created_date: 2017-04-27 23:44:25
+edit_date:    2017-04-28 02:23:56
+votes:        "0 "
 favorites:    
-views:        !!str "58"
+views:        "58 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

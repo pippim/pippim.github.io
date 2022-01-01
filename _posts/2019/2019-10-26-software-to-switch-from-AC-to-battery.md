@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1183902
 type:         Answer
 tags:         power-management
-created_date: !!str "2019-10-26 01:57:15"
-edit_date:    !!str "2019-10-26 02:38:49"
-votes:        !!str "3"
+created_date: 2019-10-26 01:57:15
+edit_date:    2019-10-26 02:38:49
+votes:        "3 "
 favorites:    
-views:        !!str "244"
+views:        "244 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

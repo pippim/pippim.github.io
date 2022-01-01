@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035893
 type:         Answer
 tags:         upgrade release-management
-created_date: !!str "2018-05-14 00:19:42"
-edit_date:    !!str ""
-votes:        !!str "9"
+created_date: 2018-05-14 00:19:42
+edit_date:    
+votes:        "9 "
 favorites:    
-views:        !!str "33,749"
+views:        "33,749 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

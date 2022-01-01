@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1262046
 type:         Answer
 tags:         multiple-monitors lenovo hdmi
-created_date: !!str "2020-07-26 00:50:59"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2020-07-26 00:50:59
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "775"
+views:        "775 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

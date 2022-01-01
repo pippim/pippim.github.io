@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1188025
 type:         Answer
 tags:         command-line ram memory-usage
-created_date: !!str "2019-11-11 20:36:34"
-edit_date:    !!str "2019-11-12 20:10:47"
-votes:        !!str "2"
+created_date: 2019-11-11 20:36:34
+edit_date:    2019-11-12 20:10:47
+votes:        "2 "
 favorites:    
-views:        !!str "8,211"
+views:        "8,211 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

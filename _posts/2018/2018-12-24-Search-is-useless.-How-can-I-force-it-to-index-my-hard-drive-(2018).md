@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1104112
 type:         Answer
 tags:         18.04 nautilus gnome-shell search yad
-created_date: !!str "2018-12-24 00:01:35"
-edit_date:    !!str "2018-12-24 21:36:09"
-votes:        !!str "3"
+created_date: 2018-12-24 00:01:35
+edit_date:    2018-12-24 21:36:09
+votes:        "3 "
 favorites:    
-views:        !!str "808"
+views:        "808 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

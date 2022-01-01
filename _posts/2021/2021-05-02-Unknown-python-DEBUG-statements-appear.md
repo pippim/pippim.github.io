@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/67352300
 type:         Answer
 tags:         python logging
-created_date: !!str "2021-05-02 01:40:30"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2021-05-02 01:40:30
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "33"
+views:        "33 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

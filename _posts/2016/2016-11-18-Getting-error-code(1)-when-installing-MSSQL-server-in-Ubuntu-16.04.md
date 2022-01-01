@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/850700
 type:         Answer
 tags:         16.04 server mssql
-created_date: !!str "2016-11-18 03:27:18"
-edit_date:    !!str "2016-11-18 03:39:45"
-votes:        !!str "2"
+created_date: 2016-11-18 03:27:18
+edit_date:    2016-11-18 03:39:45
+votes:        "2 "
 favorites:    
-views:        !!str "4,646"
+views:        "4,646 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

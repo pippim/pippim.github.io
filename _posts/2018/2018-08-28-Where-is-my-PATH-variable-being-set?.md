@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1069939
 type:         Answer
 tags:         bash java environment-variables bashrc .profile
-created_date: !!str "2018-08-28 23:01:05"
-edit_date:    !!str "2018-09-30 14:43:51"
-votes:        !!str "3"
+created_date: 2018-08-28 23:01:05
+edit_date:    2018-09-30 14:43:51
+votes:        "3 "
 favorites:    
-views:        !!str "7,719"
+views:        "7,719 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

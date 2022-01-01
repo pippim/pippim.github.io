@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160778
 type:         Answer
 tags:         grub2 files configuration wacom text-editor
-created_date: !!str "2019-07-24 18:12:35"
-edit_date:    !!str "2019-08-24 21:32:17"
-votes:        !!str "3"
+created_date: 2019-07-24 18:12:35
+edit_date:    2019-08-24 21:32:17
+votes:        "3 "
 favorites:    
-views:        !!str "444"
+views:        "444 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

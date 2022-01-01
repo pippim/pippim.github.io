@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1245644
 type:         Answer
 tags:         nautilus samba file-sharing sharing
-created_date: !!str "2020-06-01 01:32:39"
-edit_date:    !!str "2020-06-01 01:37:56"
-votes:        !!str "0"
+created_date: 2020-06-01 01:32:39
+edit_date:    2020-06-01 01:37:56
+votes:        "0 "
 favorites:    
-views:        !!str "1,349"
+views:        "1,349 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

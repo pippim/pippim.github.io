@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/828920
 type:         Answer
 tags:         touchpad suspend asus synaptics
-created_date: !!str "2016-09-24 01:23:55"
-edit_date:    !!str "2016-09-24 02:26:03"
-votes:        !!str "18"
+created_date: 2016-09-24 01:23:55
+edit_date:    2016-09-24 02:26:03
+votes:        "18 "
 favorites:    
-views:        !!str "40,401"
+views:        "40,401 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

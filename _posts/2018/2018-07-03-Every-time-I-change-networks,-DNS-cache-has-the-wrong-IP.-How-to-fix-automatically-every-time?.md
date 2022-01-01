@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1051686
 type:         Answer
 tags:         networking dns intranet
-created_date: !!str "2018-07-03 04:08:14"
-edit_date:    !!str "2018-07-04 02:06:52"
-votes:        !!str "3"
+created_date: 2018-07-03 04:08:14
+edit_date:    2018-07-04 02:06:52
+votes:        "3 "
 favorites:    
-views:        !!str "247"
+views:        "247 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

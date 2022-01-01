@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/931394
 type:         Answer
 tags:         software-recommendation performance conky
-created_date: !!str "2017-07-02 23:42:59"
-edit_date:    !!str "2017-07-03 00:11:57"
-votes:        !!str "5"
+created_date: 2017-07-02 23:42:59
+edit_date:    2017-07-03 00:11:57
+votes:        "5 "
 favorites:    
-views:        !!str "741"
+views:        "741 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Super User
 stack_url:    https://superuser.com/q/1165802
 type:         Answer
 tags:         boot bios uefi
-created_date: !!str "2017-01-11 05:03:29"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2017-01-11 05:03:29
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "494,211"
+views:        "494,211 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1020693
 type:         Answer
 tags:         command-line bash bashrc ascii-art
-created_date: !!str "2018-03-30 20:07:59"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "17"
+created_date: 2018-03-30 20:07:59
+edit_date:    2020-06-12 14:37:07
+votes:        "17 "
 favorites:    
-views:        !!str "13,317"
+views:        "13,317 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

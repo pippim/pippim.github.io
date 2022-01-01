@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1156053
 type:         Answer
 tags:         gnome 18.04 keyboard xorg
-created_date: !!str "2019-07-05 01:49:26"
-edit_date:    !!str ""
-votes:        !!str "4"
+created_date: 2019-07-05 01:49:26
+edit_date:    
+votes:        "4 "
 favorites:    
-views:        !!str "1,535"
+views:        "1,535 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

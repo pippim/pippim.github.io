@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1146146
 type:         Answer
 tags:         19.04 screenshot gnome-screenshot yad
-created_date: !!str "2019-05-25 14:56:20"
-edit_date:    !!str "2019-05-31 22:29:54"
-votes:        !!str "17"
+created_date: 2019-05-25 14:56:20
+edit_date:    2019-05-31 22:29:54
+votes:        "17 "
 favorites:    
-views:        !!str "1,714"
+views:        "1,714 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

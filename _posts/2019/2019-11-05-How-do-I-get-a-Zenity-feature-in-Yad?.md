@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1186286
 type:         Answer
 tags:         zenity yad
-created_date: !!str "2019-11-05 00:17:52"
-edit_date:    !!str "2019-11-05 00:22:56"
-votes:        !!str "3"
+created_date: 2019-11-05 00:17:52
+edit_date:    2019-11-05 00:22:56
+votes:        "3 "
 favorites:    
-views:        !!str "426"
+views:        "426 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

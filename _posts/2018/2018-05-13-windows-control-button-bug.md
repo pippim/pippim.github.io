@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035769
 type:         Answer
 tags:         gnome configuration 18.04 window-buttons
-created_date: !!str "2018-05-13 16:59:23"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2018-05-13 16:59:23
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "224"
+views:        "224 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1065431
 type:         Question
 tags:         apt gnome internet versions
-created_date: !!str "2018-08-14 22:51:08"
-edit_date:    !!str "2018-08-15 23:02:44"
-votes:        !!str "0"
+created_date: 2018-08-14 22:51:08
+edit_date:    2018-08-15 23:02:44
+votes:        "0 "
 favorites:    
-views:        !!str "10,359"
+views:        "10,359 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43727451
 type:         Answer
 tags:         bash
-created_date: !!str "2017-05-01 22:31:42"
-edit_date:    !!str "2017-06-22 22:54:43"
-votes:        !!str "3"
+created_date: 2017-05-01 22:31:42
+edit_date:    2017-06-22 22:54:43
+votes:        "3 "
 favorites:    
-views:        !!str "33,405"
+views:        "33,405 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

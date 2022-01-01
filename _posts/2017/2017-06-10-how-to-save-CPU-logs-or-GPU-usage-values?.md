@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/923938
 type:         Answer
 tags:         cpu cpu-load top htop
-created_date: !!str "2017-06-10 02:22:48"
-edit_date:    !!str "2017-06-14 01:22:11"
-votes:        !!str "2"
+created_date: 2017-06-10 02:22:48
+edit_date:    2017-06-14 01:22:11
+votes:        "2 "
 favorites:    
-views:        !!str "5,261"
+views:        "5,261 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    false

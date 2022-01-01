@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064568
 type:         Answer
 tags:         command-line coreutils
-created_date: !!str "2018-08-12 04:53:30"
-edit_date:    !!str "2018-08-12 23:58:58"
-votes:        !!str "10"
+created_date: 2018-08-12 04:53:30
+edit_date:    2018-08-12 23:58:58
+votes:        "10 "
 favorites:    
-views:        !!str "4,544"
+views:        "4,544 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

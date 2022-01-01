@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1187749
 type:         Answer
 tags:         power-management cpu
-created_date: !!str "2019-11-10 16:02:32"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "1"
+created_date: 2019-11-10 16:02:32
+edit_date:    2020-06-12 14:37:07
+votes:        "1 "
 favorites:    
-views:        !!str "1,665"
+views:        "1,665 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

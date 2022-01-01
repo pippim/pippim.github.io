@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1336985
 type:         Answer
 tags:         camera devices
-created_date: !!str "2021-05-08 16:14:02"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2021-05-08 16:14:02
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "1,380"
+views:        "1,380 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

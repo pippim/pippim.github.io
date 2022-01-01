@@ -6,13 +6,13 @@ site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/447533
 type:         Question
 tags:         bash locale unicode yad
-created_date: !!str "2018-06-02 20:48:08"
-edit_date:    !!str "2018-06-13 10:07:19"
-votes:        !!str "0"
+created_date: 2018-06-02 20:48:08
+edit_date:    2018-06-13 10:07:19
+votes:        "0 "
 favorites:    
-views:        !!str "512"
+views:        "512 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

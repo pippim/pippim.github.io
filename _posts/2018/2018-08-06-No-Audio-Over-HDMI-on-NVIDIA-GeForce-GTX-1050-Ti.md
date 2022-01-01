@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1062956
 type:         Answer
 tags:         drivers nvidia 17.10 nvidia-optimus nvidia-prime
-created_date: !!str "2018-08-06 17:28:18"
-edit_date:    !!str "2018-09-26 01:07:31"
-votes:        !!str "2"
+created_date: 2018-08-06 17:28:18
+edit_date:    2018-09-26 01:07:31
+votes:        "2 "
 favorites:    
-views:        !!str "7,042"
+views:        "7,042 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

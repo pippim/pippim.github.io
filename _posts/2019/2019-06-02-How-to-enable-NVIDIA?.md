@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1148161
 type:         Answer
 tags:         nvidia graphics 19.04
-created_date: !!str "2019-06-02 22:46:33"
-edit_date:    !!str "2019-06-03 10:32:14"
-votes:        !!str "3"
+created_date: 2019-06-02 22:46:33
+edit_date:    2019-06-03 10:32:14
+votes:        "3 "
 favorites:    
-views:        !!str "14,293"
+views:        "14,293 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

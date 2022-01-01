@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1255496
 type:         Answer
 tags:         command-line sudo find rm
-created_date: !!str "2020-07-01 19:33:32"
-edit_date:    !!str "2020-07-02 23:01:16"
-votes:        !!str "8"
+created_date: 2020-07-01 19:33:32
+edit_date:    2020-07-02 23:01:16
+votes:        "8 "
 favorites:    
-views:        !!str "1,194"
+views:        "1,194 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

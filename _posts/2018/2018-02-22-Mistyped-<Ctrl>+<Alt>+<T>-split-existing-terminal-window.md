@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1008546
 type:         Question
 tags:         16.04 command-line shortcut-keys gnome-terminal
-created_date: !!str "2018-02-22 00:09:14"
-edit_date:    !!str "2018-03-29 23:56:22"
-votes:        !!str "3"
+created_date: 2018-02-22 00:09:14
+edit_date:    2018-03-29 23:56:22
+votes:        "3 "
 favorites:    
-views:        !!str "1,015"
+views:        "1,015 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

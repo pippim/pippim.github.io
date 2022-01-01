@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1165065
 type:         Answer
 tags:         dual-boot 18.04 virtualbox live-usb
-created_date: !!str "2019-08-12 01:16:59"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2019-08-12 01:16:59
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "252"
+views:        "252 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

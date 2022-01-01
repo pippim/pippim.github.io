@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/889113
 type:         Answer
 tags:         command-line calendar
-created_date: !!str "2017-03-03 11:10:55"
-edit_date:    !!str ""
-votes:        !!str "50"
+created_date: 2017-03-03 11:10:55
+edit_date:    
+votes:        "50 "
 favorites:    
-views:        !!str "30,404"
+views:        "30,404 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

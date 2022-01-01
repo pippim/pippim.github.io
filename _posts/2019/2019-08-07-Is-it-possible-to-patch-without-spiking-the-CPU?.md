@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1164186
 type:         Answer
 tags:         16.04 upgrade swap cpu-load unattended-upgrades
-created_date: !!str "2019-08-07 23:18:13"
-edit_date:    !!str "2019-08-08 00:05:07"
-votes:        !!str "3"
+created_date: 2019-08-07 23:18:13
+edit_date:    2019-08-08 00:05:07
+votes:        "3 "
 favorites:    
-views:        !!str "317"
+views:        "317 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

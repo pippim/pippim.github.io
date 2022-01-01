@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1132068
 type:         Answer
 tags:         18.04 suspend power-management hibernate
-created_date: !!str "2019-04-08 08:19:26"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "11"
+created_date: 2019-04-08 08:19:26
+edit_date:    2020-06-12 14:37:07
+votes:        "11 "
 favorites:    
-views:        !!str "7,245"
+views:        "7,245 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

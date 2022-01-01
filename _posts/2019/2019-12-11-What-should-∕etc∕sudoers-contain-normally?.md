@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1195402
 type:         Answer
 tags:         visudo
-created_date: !!str "2019-12-11 11:50:36"
-edit_date:    !!str "2019-12-11 12:00:58"
-votes:        !!str "1"
+created_date: 2019-12-11 11:50:36
+edit_date:    2019-12-11 12:00:58
+votes:        "1 "
 favorites:    
-views:        !!str "222"
+views:        "222 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

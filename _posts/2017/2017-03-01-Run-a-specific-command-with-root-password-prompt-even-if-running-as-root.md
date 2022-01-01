@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/888467
 type:         Answer
 tags:         command-line password root rm
-created_date: !!str "2017-03-01 12:00:12"
-edit_date:    !!str "2017-04-13 12:23:52"
-votes:        !!str "8"
+created_date: 2017-03-01 12:00:12
+edit_date:    2017-04-13 12:23:52
+votes:        "8 "
 favorites:    
-views:        !!str "1,815"
+views:        "1,815 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

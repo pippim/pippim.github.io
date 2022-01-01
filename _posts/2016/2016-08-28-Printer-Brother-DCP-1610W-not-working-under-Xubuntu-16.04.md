@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/817899
 type:         Answer
 tags:         16.04 xubuntu printing brother
-created_date: !!str "2016-08-28 18:17:20"
-edit_date:    !!str "2016-08-28 18:28:43"
-votes:        !!str "3"
+created_date: 2016-08-28 18:17:20
+edit_date:    2016-08-28 18:28:43
+votes:        "3 "
 favorites:    
-views:        !!str "1,627"
+views:        "1,627 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

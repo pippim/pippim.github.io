@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1017269
 type:         Answer
 tags:         17.10 power-management
-created_date: !!str "2018-03-19 11:08:53"
-edit_date:    !!str "2018-03-22 00:03:58"
-votes:        !!str "8"
+created_date: 2018-03-19 11:08:53
+edit_date:    2018-03-22 00:03:58
+votes:        "8 "
 favorites:    
-views:        !!str "2,745"
+views:        "2,745 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

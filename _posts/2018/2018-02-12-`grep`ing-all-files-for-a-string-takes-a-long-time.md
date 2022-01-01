@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1005438
 type:         Answer
 tags:         command-line performance search grep
-created_date: !!str "2018-02-12 12:08:35"
-edit_date:    !!str "2018-02-17 19:12:35"
-votes:        !!str "16"
+created_date: 2018-02-12 12:08:35
+edit_date:    2018-02-17 19:12:35
+votes:        "16 "
 favorites:    
-views:        !!str "4,664"
+views:        "4,664 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    false

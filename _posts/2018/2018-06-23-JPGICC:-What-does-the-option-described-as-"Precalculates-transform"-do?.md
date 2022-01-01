@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1049106
 type:         Answer
 tags:         color-management photo-management
-created_date: !!str "2018-06-23 16:00:02"
-edit_date:    !!str "2020-10-03 13:23:54"
-votes:        !!str "2"
+created_date: 2018-06-23 16:00:02
+edit_date:    2020-10-03 13:23:54
+votes:        "2 "
 favorites:    
-views:        !!str "148"
+views:        "148 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

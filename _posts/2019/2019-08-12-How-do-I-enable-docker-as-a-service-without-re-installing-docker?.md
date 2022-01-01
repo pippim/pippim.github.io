@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1165063
 type:         Answer
 tags:         software-installation services docker
-created_date: !!str "2019-08-12 00:56:36"
-edit_date:    !!str "2019-08-12 11:24:48"
-votes:        !!str "5"
+created_date: 2019-08-12 00:56:36
+edit_date:    2019-08-12 11:24:48
+votes:        "5 "
 favorites:    
-views:        !!str "5,772"
+views:        "5,772 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

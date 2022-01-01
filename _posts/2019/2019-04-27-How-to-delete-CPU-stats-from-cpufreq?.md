@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138740
 type:         Answer
 tags:         18.04 xubuntu cpu 32-bit cpufreq
-created_date: !!str "2019-04-27 22:15:04"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "3"
+created_date: 2019-04-27 22:15:04
+edit_date:    2020-06-12 14:37:07
+votes:        "3 "
 favorites:    
-views:        !!str "1,425"
+views:        "1,425 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

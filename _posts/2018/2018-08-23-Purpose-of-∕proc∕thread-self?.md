@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/51977002
 type:         Question
 tags:         linux multithreading linux-kernel proc
-created_date: !!str "2018-08-23 00:59:48"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2018-08-23 00:59:48
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "1,299"
+views:        "1,299 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

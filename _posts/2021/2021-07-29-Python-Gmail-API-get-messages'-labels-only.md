@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/68582674
 type:         Answer
 tags:         python gmail-api
-created_date: !!str "2021-07-29 20:54:08"
-edit_date:    !!str "2021-07-29 21:33:43"
-votes:        !!str "1"
+created_date: 2021-07-29 20:54:08
+edit_date:    2021-07-29 21:33:43
+votes:        "1 "
 favorites:    
-views:        !!str "77"
+views:        "77 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1202642
 type:         Answer
 tags:         boot startup 19.10 log
-created_date: !!str "2020-01-13 12:51:21"
-edit_date:    !!str "2020-01-19 14:00:20"
-votes:        !!str "0"
+created_date: 2020-01-13 12:51:21
+edit_date:    2020-01-19 14:00:20
+votes:        "0 "
 favorites:    
-views:        !!str "2,538"
+views:        "2,538 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

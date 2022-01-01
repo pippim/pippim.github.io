@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029805
 type:         Answer
 tags:         suspend password lock-screen 18.04
-created_date: !!str "2018-04-29 18:04:15"
-edit_date:    !!str "2018-07-01 08:14:59"
-votes:        !!str "63"
+created_date: 2018-04-29 18:04:15
+edit_date:    2018-07-01 08:14:59
+votes:        "63 "
 favorites:    
-views:        !!str "47,670"
+views:        "47,670 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

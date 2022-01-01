@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/935623
 type:         Answer
 tags:         cpu conky
-created_date: !!str "2017-07-13 00:35:40"
-edit_date:    !!str ""
-votes:        !!str "10"
+created_date: 2017-07-13 00:35:40
+edit_date:    
+votes:        "10 "
 favorites:    
-views:        !!str "600,180"
+views:        "600,180 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

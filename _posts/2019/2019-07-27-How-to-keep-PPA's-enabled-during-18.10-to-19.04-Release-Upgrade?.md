@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161520
 type:         Answer
 tags:         do-release-upgrade
-created_date: !!str "2019-07-27 18:20:57"
-edit_date:    !!str "2019-07-28 02:41:27"
-votes:        !!str "2"
+created_date: 2019-07-27 18:20:57
+edit_date:    2019-07-28 02:41:27
+votes:        "2 "
 favorites:    
-views:        !!str "79"
+views:        "79 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

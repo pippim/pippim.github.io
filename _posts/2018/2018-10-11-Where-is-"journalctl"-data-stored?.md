@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1083044
 type:         Answer
 tags:         log systemd systemd-journald
-created_date: !!str "2018-10-11 22:31:25"
-edit_date:    !!str "2021-08-02 18:46:52"
-votes:        !!str "2"
+created_date: 2018-10-11 22:31:25
+edit_date:    2021-08-02 18:46:52
+votes:        "2 "
 favorites:    
-views:        !!str "112,672"
+views:        "112,672 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

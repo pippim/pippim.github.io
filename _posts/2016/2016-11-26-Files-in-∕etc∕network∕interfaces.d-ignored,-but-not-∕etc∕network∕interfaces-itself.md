@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/853689
 type:         Answer
 tags:         networking network-manager systemd raspberrypi arm
-created_date: !!str "2016-11-26 00:32:26"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "2"
+created_date: 2016-11-26 00:32:26
+edit_date:    2020-06-12 14:37:07
+votes:        "2 "
 favorites:    
-views:        !!str "66,026"
+views:        "66,026 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

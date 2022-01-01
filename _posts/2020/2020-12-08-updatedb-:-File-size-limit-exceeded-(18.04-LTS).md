@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1298463
 type:         Answer
 tags:         locate updatedb
-created_date: !!str "2020-12-08 12:06:19"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2020-12-08 12:06:19
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "330"
+views:        "330 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

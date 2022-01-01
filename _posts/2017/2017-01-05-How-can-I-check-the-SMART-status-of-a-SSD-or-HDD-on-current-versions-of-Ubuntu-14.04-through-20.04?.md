@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/868179
 type:         Answer
 tags:         hard-drive ssd smart
-created_date: !!str "2017-01-05 03:07:18"
-edit_date:    !!str "2019-11-13 02:36:22"
-votes:        !!str "20"
+created_date: 2017-01-05 03:07:18
+edit_date:    2019-11-13 02:36:22
+votes:        "20 "
 favorites:    
-views:        !!str "295,210"
+views:        "295,210 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

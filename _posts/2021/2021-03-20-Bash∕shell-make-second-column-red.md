@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1324945
 type:         Answer
 tags:         command-line bash gnome-terminal colors
-created_date: !!str "2021-03-20 19:59:18"
-edit_date:    !!str "2021-03-20 20:07:07"
-votes:        !!str "2"
+created_date: 2021-03-20 19:59:18
+edit_date:    2021-03-20 20:07:07
+votes:        "2 "
 favorites:    
-views:        !!str "38"
+views:        "38 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

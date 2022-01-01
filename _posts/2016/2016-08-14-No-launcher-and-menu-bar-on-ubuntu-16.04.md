@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/811994
 type:         Answer
 tags:         unity 16.04 launcher compiz
-created_date: !!str "2016-08-14 00:11:41"
-edit_date:    !!str "2016-09-19 21:38:21"
-votes:        !!str "11"
+created_date: 2016-08-14 00:11:41
+edit_date:    2016-09-19 21:38:21
+votes:        "11 "
 favorites:    
-views:        !!str "64,896"
+views:        "64,896 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

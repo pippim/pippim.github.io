@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59621559
 type:         Question
 tags:         python tkinter
-created_date: !!str "2020-01-07 02:48:23"
-edit_date:    !!str "2020-01-07 03:47:24"
-votes:        !!str "0"
+created_date: 2020-01-07 02:48:23
+edit_date:    2020-01-07 03:47:24
+votes:        "0 "
 favorites:    
-views:        !!str "48"
+views:        "48 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

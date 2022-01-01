@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1155086
 type:         Answer
 tags:         boot partitioning mount hard-drive ssd
-created_date: !!str "2019-06-30 23:21:56"
-edit_date:    !!str "2019-07-01 22:22:32"
-votes:        !!str "3"
+created_date: 2019-06-30 23:21:56
+edit_date:    2019-07-01 22:22:32
+votes:        "3 "
 favorites:    
-views:        !!str "6,184"
+views:        "6,184 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

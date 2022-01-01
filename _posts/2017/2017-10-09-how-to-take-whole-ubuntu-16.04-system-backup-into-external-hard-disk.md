@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/963223
 type:         Answer
 tags:         backup
-created_date: !!str "2017-10-09 04:53:28"
-edit_date:    !!str "2017-11-14 15:59:16"
-votes:        !!str "3"
+created_date: 2017-10-09 04:53:28
+edit_date:    2017-11-14 15:59:16
+votes:        "3 "
 favorites:    
-views:        !!str "7,803"
+views:        "7,803 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

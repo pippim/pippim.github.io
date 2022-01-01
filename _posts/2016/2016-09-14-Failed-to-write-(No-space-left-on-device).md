@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/824760
 type:         Answer
 tags:         apt virtualbox xubuntu dependencies disk-usage
-created_date: !!str "2016-09-14 10:27:12"
-edit_date:    !!str "2017-04-13 12:23:12"
-votes:        !!str "4"
+created_date: 2016-09-14 10:27:12
+edit_date:    2017-04-13 12:23:12
+votes:        "4 "
 favorites:    
-views:        !!str "30,959"
+views:        "30,959 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

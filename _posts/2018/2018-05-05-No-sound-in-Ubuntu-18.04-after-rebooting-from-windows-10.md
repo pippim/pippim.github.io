@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032576
 type:         Answer
 tags:         dual-boot sound pulseaudio alsa grub
-created_date: !!str "2018-05-05 23:53:09"
-edit_date:    !!str "2018-05-12 01:20:28"
-votes:        !!str "4"
+created_date: 2018-05-05 23:53:09
+edit_date:    2018-05-12 01:20:28
+votes:        "4 "
 favorites:    
-views:        !!str "5,690"
+views:        "5,690 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

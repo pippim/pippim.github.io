@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/882608
 type:         Question
 tags:         bash directory tmp multi-user single-user
-created_date: !!str "2017-02-12 16:45:03"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2017-02-12 16:45:03
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "359"
+views:        "359 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

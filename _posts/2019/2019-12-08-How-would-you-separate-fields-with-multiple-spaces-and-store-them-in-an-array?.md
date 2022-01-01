@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1194718
 type:         Answer
 tags:         bash sed awk cut-command tr
-created_date: !!str "2019-12-08 15:57:22"
-edit_date:    !!str "2019-12-09 11:55:37"
-votes:        !!str "2"
+created_date: 2019-12-08 15:57:22
+edit_date:    2019-12-09 11:55:37
+votes:        "2 "
 favorites:    
-views:        !!str "3,547"
+views:        "3,547 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

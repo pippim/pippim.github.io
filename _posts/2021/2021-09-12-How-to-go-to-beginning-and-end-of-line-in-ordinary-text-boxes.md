@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1363381
 type:         Answer
 tags:         shortcut-keys
-created_date: !!str "2021-09-12 20:41:44"
-edit_date:    !!str ""
-votes:        !!str "7"
+created_date: 2021-09-12 20:41:44
+edit_date:    
+votes:        "7 "
 favorites:    
-views:        !!str "438"
+views:        "438 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/988203
 type:         Answer
 tags:         multiple-monitors
-created_date: !!str "2017-12-21 02:02:42"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "6"
+created_date: 2017-12-21 02:02:42
+edit_date:    2020-06-12 14:37:07
+votes:        "6 "
 favorites:    
-views:        !!str "7,994"
+views:        "7,994 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

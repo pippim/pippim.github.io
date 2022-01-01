@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/851703
 type:         Answer
 tags:         software-recommendation broadband vnstat conky
-created_date: !!str "2016-11-20 22:49:02"
-edit_date:    !!str "2018-01-13 16:40:21"
-votes:        !!str "10"
+created_date: 2016-11-20 22:49:02
+edit_date:    2018-01-13 16:40:21
+votes:        "10 "
 favorites:    
-views:        !!str "39,277"
+views:        "39,277 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1180236
 type:         Answer
 tags:         command-line bash scripts printing
-created_date: !!str "2019-10-11 10:50:43"
-edit_date:    !!str "2019-10-11 23:01:51"
-votes:        !!str "4"
+created_date: 2019-10-11 10:50:43
+edit_date:    2019-10-11 23:01:51
+votes:        "4 "
 favorites:    
-views:        !!str "2,293"
+views:        "2,293 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

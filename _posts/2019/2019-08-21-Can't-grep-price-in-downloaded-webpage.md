@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1167206
 type:         Question
 tags:         websites html css
-created_date: !!str "2019-08-21 01:16:35"
-edit_date:    !!str "2019-08-24 03:48:05"
-votes:        !!str "0"
+created_date: 2019-08-21 01:16:35
+edit_date:    2019-08-24 03:48:05
+votes:        "0 "
 favorites:    
-views:        !!str "299"
+views:        "299 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

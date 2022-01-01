@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/846614
 type:         Answer
 tags:         home-directory
-created_date: !!str "2016-11-07 12:47:52"
-edit_date:    !!str "2016-11-14 21:05:32"
-votes:        !!str "4"
+created_date: 2016-11-07 12:47:52
+edit_date:    2016-11-14 21:05:32
+votes:        "4 "
 favorites:    
-views:        !!str "17,561"
+views:        "17,561 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

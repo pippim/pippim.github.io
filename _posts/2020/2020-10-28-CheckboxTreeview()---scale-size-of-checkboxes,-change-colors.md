@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/64582469
 type:         Answer
 tags:         python tkinter checkbox treeview
-created_date: !!str "2020-10-28 22:54:04"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2020-10-28 22:54:04
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "186"
+views:        "186 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

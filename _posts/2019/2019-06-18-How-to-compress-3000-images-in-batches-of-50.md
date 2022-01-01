@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1151970
 type:         Answer
 tags:         command-line tar image-processing compression batch
-created_date: !!str "2019-06-18 11:32:51"
-edit_date:    !!str "2019-06-18 23:00:33"
-votes:        !!str "1"
+created_date: 2019-06-18 11:32:51
+edit_date:    2019-06-18 23:00:33
+votes:        "1 "
 favorites:    
-views:        !!str "156"
+views:        "156 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

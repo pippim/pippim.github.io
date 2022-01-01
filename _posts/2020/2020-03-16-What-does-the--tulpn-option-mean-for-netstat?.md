@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1217526
 type:         Answer
 tags:         netstat
-created_date: !!str "2020-03-16 10:36:01"
-edit_date:    !!str "2020-03-16 10:48:00"
-votes:        !!str "4"
+created_date: 2020-03-16 10:36:01
+edit_date:    2020-03-16 10:48:00
+votes:        "4 "
 favorites:    
-views:        !!str "14,951"
+views:        "14,951 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

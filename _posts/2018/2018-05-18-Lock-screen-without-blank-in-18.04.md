@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1037753
 type:         Answer
 tags:         18.04 lock-screen
-created_date: !!str "2018-05-18 12:54:24"
-edit_date:    !!str "2018-05-19 18:41:24"
-votes:        !!str "2"
+created_date: 2018-05-18 12:54:24
+edit_date:    2018-05-19 18:41:24
+votes:        "2 "
 favorites:    
-views:        !!str "20,219"
+views:        "20,219 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

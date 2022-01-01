@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1033800
 type:         Answer
 tags:         xorg 18.04 ubuntu-gnome window-manager
-created_date: !!str "2018-05-08 23:46:30"
-edit_date:    !!str "2018-05-09 11:31:48"
-votes:        !!str "2"
+created_date: 2018-05-08 23:46:30
+edit_date:    2018-05-09 11:31:48
+votes:        "2 "
 favorites:    
-views:        !!str "11,257"
+views:        "11,257 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

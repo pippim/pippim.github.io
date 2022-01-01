@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/850816
 type:         Answer
 tags:         16.04 dell xps
-created_date: !!str "2016-11-18 11:22:02"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2016-11-18 11:22:02
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "5,674"
+views:        "5,674 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

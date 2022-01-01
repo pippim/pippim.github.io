@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/837115
 type:         Answer
 tags:         16.04 lock-screen dbus gnome-screensaver multi-timer
-created_date: !!str "2016-10-14 17:35:27"
-edit_date:    !!str "2021-11-14 17:30:21"
-votes:        !!str "15"
+created_date: 2016-10-14 17:35:27
+edit_date:    2021-11-14 17:30:21
+votes:        "15 "
 favorites:    
-views:        !!str "3,004"
+views:        "3,004 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

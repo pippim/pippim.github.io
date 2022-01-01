@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1338546
 type:         Answer
 tags:         networking sound pulseaudio streaming
-created_date: !!str "2021-05-15 21:01:00"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2021-05-15 21:01:00
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "528"
+views:        "528 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    false

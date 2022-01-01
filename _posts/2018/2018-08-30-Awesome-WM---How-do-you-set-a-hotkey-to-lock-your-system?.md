@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1070660
 type:         Answer
 tags:         window-manager awesome
-created_date: !!str "2018-08-30 21:56:00"
-edit_date:    !!str "2018-08-30 23:17:59"
-votes:        !!str "3"
+created_date: 2018-08-30 21:56:00
+edit_date:    2018-08-30 23:17:59
+votes:        "3 "
 favorites:    
-views:        !!str "1,821"
+views:        "1,821 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

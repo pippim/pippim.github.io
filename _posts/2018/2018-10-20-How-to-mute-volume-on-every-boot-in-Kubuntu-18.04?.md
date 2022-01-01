@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1085617
 type:         Answer
 tags:         boot kubuntu mute
-created_date: !!str "2018-10-20 17:28:42"
-edit_date:    !!str "2018-10-21 13:53:23"
-votes:        !!str "2"
+created_date: 2018-10-20 17:28:42
+edit_date:    2018-10-21 13:53:23
+votes:        "2 "
 favorites:    
-views:        !!str "173"
+views:        "173 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

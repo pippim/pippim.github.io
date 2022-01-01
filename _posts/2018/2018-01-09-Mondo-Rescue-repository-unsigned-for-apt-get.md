@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/993881
 type:         Answer
 tags:         14.04 apt 16.04 backup ftp
-created_date: !!str "2018-01-09 12:14:43"
-edit_date:    !!str "2018-01-10 00:33:49"
-votes:        !!str "2"
+created_date: 2018-01-09 12:14:43
+edit_date:    2018-01-10 00:33:49
+votes:        "2 "
 favorites:    
-views:        !!str "5,985"
+views:        "5,985 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    false

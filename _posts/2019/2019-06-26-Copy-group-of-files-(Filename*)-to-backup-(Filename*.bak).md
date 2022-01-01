@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1153995
 type:         Answer
 tags:         command-line cp ms-dos
-created_date: !!str "2019-06-26 00:44:37"
-edit_date:    !!str "2019-06-27 23:20:51"
-votes:        !!str "4"
+created_date: 2019-06-26 00:44:37
+edit_date:    2019-06-27 23:20:51
+votes:        "4 "
 favorites:    
-views:        !!str "6,809"
+views:        "6,809 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

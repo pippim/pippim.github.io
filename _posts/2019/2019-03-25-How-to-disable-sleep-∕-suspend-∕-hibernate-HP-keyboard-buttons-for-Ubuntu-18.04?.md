@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1128676
 type:         Answer
 tags:         18.04 shortcut-keys power-management
-created_date: !!str "2019-03-25 22:36:32"
-edit_date:    !!str "2019-03-26 10:24:41"
-votes:        !!str "7"
+created_date: 2019-03-25 22:36:32
+edit_date:    2019-03-26 10:24:41
+votes:        "7 "
 favorites:    
-views:        !!str "5,592"
+views:        "5,592 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

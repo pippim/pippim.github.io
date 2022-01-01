@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1173410
 type:         Answer
 tags:         xrandr
-created_date: !!str "2019-09-11 11:20:30"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2019-09-11 11:20:30
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "504"
+views:        "504 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

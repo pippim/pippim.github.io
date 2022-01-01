@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157252
 type:         Answer
 tags:         hard-drive ssd sata optical conky
-created_date: !!str "2019-07-10 10:59:53"
-edit_date:    !!str "2019-07-10 23:38:21"
-votes:        !!str "4"
+created_date: 2019-07-10 10:59:53
+edit_date:    2019-07-10 23:38:21
+votes:        "4 "
 favorites:    
-views:        !!str "1,076"
+views:        "1,076 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

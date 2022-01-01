@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159742
 type:         Answer
 tags:         sound pulseaudio alsa volume-control jack
-created_date: !!str "2019-07-20 18:18:25"
-edit_date:    !!str "2019-07-21 15:54:39"
-votes:        !!str "2"
+created_date: 2019-07-20 18:18:25
+edit_date:    2019-07-21 15:54:39
+votes:        "2 "
 favorites:    
-views:        !!str "7,675"
+views:        "7,675 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

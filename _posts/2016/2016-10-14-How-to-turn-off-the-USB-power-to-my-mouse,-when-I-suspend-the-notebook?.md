@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/836725
 type:         Answer
 tags:         usb kernel mouse suspend power-management
-created_date: !!str "2016-10-14 01:04:17"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "7"
+created_date: 2016-10-14 01:04:17
+edit_date:    2020-06-12 14:37:07
+votes:        "7 "
 favorites:    
-views:        !!str "5,535"
+views:        "5,535 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

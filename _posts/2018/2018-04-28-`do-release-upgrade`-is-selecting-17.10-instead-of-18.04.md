@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029453
 type:         Question
 tags:         16.04 upgrade 18.04
-created_date: !!str "2018-04-28 22:33:34"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2018-04-28 22:33:34
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "488"
+views:        "488 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

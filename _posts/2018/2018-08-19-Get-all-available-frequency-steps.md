@@ -6,13 +6,13 @@ site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/463517
 type:         Answer
 tags:         cpu cpu-frequency
-created_date: !!str "2018-08-19 16:08:45"
-edit_date:    !!str "2018-08-19 18:34:34"
-votes:        !!str "2"
+created_date: 2018-08-19 16:08:45
+edit_date:    2018-08-19 18:34:34
+votes:        "2 "
 favorites:    
-views:        !!str "3,727"
+views:        "3,727 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

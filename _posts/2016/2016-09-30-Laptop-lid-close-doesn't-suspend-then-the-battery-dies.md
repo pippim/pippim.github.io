@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/831765
 type:         Answer
 tags:         16.04 suspend shutdown lid
-created_date: !!str "2016-09-30 23:12:23"
-edit_date:    !!str ""
-votes:        !!str "6"
+created_date: 2016-09-30 23:12:23
+edit_date:    
+votes:        "6 "
 favorites:    
-views:        !!str "4,996"
+views:        "4,996 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1155773
 type:         Answer
 tags:         search manpage
-created_date: !!str "2019-07-03 22:03:12"
-edit_date:    !!str "2019-08-23 22:35:43"
-votes:        !!str "2"
+created_date: 2019-07-03 22:03:12
+edit_date:    2019-08-23 22:35:43
+votes:        "2 "
 favorites:    
-views:        !!str "111,826"
+views:        "111,826 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

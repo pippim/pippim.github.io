@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138206
 type:         Answer
 tags:         security users vnstat
-created_date: !!str "2019-04-25 23:27:16"
-edit_date:    !!str "2019-04-25 23:51:10"
-votes:        !!str "7"
+created_date: 2019-04-25 23:27:16
+edit_date:    2019-04-25 23:51:10
+votes:        "7 "
 favorites:    
-views:        !!str "4,202"
+views:        "4,202 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

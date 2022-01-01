@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018740
 type:         Answer
 tags:         sound dell inspiron
-created_date: !!str "2018-03-24 01:21:10"
-edit_date:    !!str "2018-04-01 23:07:51"
-votes:        !!str "2"
+created_date: 2018-03-24 01:21:10
+edit_date:    2018-04-01 23:07:51
+votes:        "2 "
 favorites:    
-views:        !!str "12,411"
+views:        "12,411 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

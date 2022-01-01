@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1248665
 type:         Answer
 tags:         20.04 shutdown gnome-shell
-created_date: !!str "2020-06-09 23:16:55"
-edit_date:    !!str "2020-12-31 17:51:16"
-votes:        !!str "2"
+created_date: 2020-06-09 23:16:55
+edit_date:    2020-12-31 17:51:16
+votes:        "2 "
 favorites:    
-views:        !!str "15,322"
+views:        "15,322 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

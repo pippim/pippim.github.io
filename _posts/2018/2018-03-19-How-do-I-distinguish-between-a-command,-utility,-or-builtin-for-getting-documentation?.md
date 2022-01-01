@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1017149
 type:         Answer
 tags:         command-line manpage documentation info
-created_date: !!str "2018-03-19 01:22:18"
-edit_date:    !!str "2018-03-19 10:27:21"
-votes:        !!str "3"
+created_date: 2018-03-19 01:22:18
+edit_date:    2018-03-19 10:27:21
+votes:        "3 "
 favorites:    
-views:        !!str "260"
+views:        "260 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

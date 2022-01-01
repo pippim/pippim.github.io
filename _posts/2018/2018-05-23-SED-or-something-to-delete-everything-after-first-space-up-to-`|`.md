@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039220
 type:         Question
 tags:         command-line text-processing stat
-created_date: !!str "2018-05-23 01:09:44"
-edit_date:    !!str "2018-05-23 08:12:41"
-votes:        !!str "0"
+created_date: 2018-05-23 01:09:44
+edit_date:    2018-05-23 08:12:41
+votes:        "0 "
 favorites:    
-views:        !!str "824"
+views:        "824 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157937
 type:         Answer
 tags:         18.04 gnome fonts display-resolution
-created_date: !!str "2019-07-12 23:03:28"
-edit_date:    !!str "2019-07-13 17:28:04"
-votes:        !!str "3"
+created_date: 2019-07-12 23:03:28
+edit_date:    2019-07-13 17:28:04
+votes:        "3 "
 favorites:    
-views:        !!str "2,259"
+views:        "2,259 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

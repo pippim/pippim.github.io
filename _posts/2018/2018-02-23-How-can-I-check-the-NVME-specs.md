@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1008891
 type:         Answer
 tags:         nvme
-created_date: !!str "2018-02-23 01:08:23"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "7"
+created_date: 2018-02-23 01:08:23
+edit_date:    2020-06-12 14:37:07
+votes:        "7 "
 favorites:    
-views:        !!str "19,155"
+views:        "19,155 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

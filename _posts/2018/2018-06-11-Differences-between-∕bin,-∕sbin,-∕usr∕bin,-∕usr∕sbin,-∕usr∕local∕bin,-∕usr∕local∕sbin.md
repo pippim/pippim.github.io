@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1045759
 type:         Answer
 tags:         command-line filesystem scripts directory system
-created_date: !!str "2018-06-11 23:44:36"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "23"
+created_date: 2018-06-11 23:44:36
+edit_date:    2020-06-12 14:37:07
+votes:        "23 "
 favorites:    
-views:        !!str "289,928"
+views:        "289,928 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

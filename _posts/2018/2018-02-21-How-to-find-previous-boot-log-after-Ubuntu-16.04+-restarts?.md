@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1008210
 type:         Answer
 tags:         16.04 boot logs systemd-journald
-created_date: !!str "2018-02-21 01:24:55"
-edit_date:    !!str "2019-01-16 02:50:51"
-votes:        !!str "28"
+created_date: 2018-02-21 01:24:55
+edit_date:    2019-01-16 02:50:51
+votes:        "28 "
 favorites:    
-views:        !!str "54,403"
+views:        "54,403 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

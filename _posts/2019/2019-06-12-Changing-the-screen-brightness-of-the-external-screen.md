@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1150416
 type:         Answer
 tags:         16.04 multiple-monitors brightness hdmi
-created_date: !!str "2019-06-12 00:48:29"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "2"
+created_date: 2019-06-12 00:48:29
+edit_date:    2020-06-12 14:37:07
+votes:        "2 "
 favorites:    
-views:        !!str "33,471"
+views:        "33,471 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/49640951
 type:         Question
 tags:         basic libreoffice-basic
-created_date: !!str "2018-04-04 00:29:34"
-edit_date:    !!str "2018-04-06 12:20:11"
-votes:        !!str "1"
+created_date: 2018-04-04 00:29:34
+edit_date:    2018-04-06 12:20:11
+votes:        "1 "
 favorites:    
-views:        !!str "2,100"
+views:        "2,100 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

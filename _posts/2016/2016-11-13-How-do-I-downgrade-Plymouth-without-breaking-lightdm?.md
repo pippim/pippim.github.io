@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/849021
 type:         Question
 tags:         boot apt package-management lightdm plymouth
-created_date: !!str "2016-11-13 17:20:20"
-edit_date:    !!str "2017-04-13 12:24:07"
-votes:        !!str "1"
+created_date: 2016-11-13 17:20:20
+edit_date:    2017-04-13 12:24:07
+votes:        "1 "
 favorites:    0
-views:        !!str "464"
+views:        "464 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

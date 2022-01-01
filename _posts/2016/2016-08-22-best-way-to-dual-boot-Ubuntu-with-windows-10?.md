@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/815191
 type:         Answer
 tags:         boot mbr grub
-created_date: !!str "2016-08-22 04:21:51"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2016-08-22 04:21:51
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "1,643"
+views:        "1,643 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

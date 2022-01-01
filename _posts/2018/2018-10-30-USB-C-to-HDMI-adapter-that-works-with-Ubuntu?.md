@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1088534
 type:         Answer
 tags:         hardware hdmi adapter usb-c
-created_date: !!str "2018-10-30 10:56:10"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2018-10-30 10:56:10
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "11,684"
+views:        "11,684 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

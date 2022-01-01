@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59437505
 type:         Answer
 tags:         python tkinter mouse-coordinates
-created_date: !!str "2019-12-21 15:34:03"
-edit_date:    !!str ""
-votes:        !!str "0"
+created_date: 2019-12-21 15:34:03
+edit_date:    
+votes:        "0 "
 favorites:    
-views:        !!str "595"
+views:        "595 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/874374
 type:         Answer
 tags:         hard-drive
-created_date: !!str "2017-01-21 02:24:18"
-edit_date:    !!str "2017-01-21 05:00:41"
-votes:        !!str "3"
+created_date: 2017-01-21 02:24:18
+edit_date:    2017-01-21 05:00:41
+votes:        "3 "
 favorites:    
-views:        !!str "112"
+views:        "112 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/843198
 type:         Answer
 tags:         kernel
-created_date: !!str "2016-10-29 14:51:48"
-edit_date:    !!str "2017-04-13 12:23:52"
-votes:        !!str "6"
+created_date: 2016-10-29 14:51:48
+edit_date:    2017-04-13 12:23:52
+votes:        "6 "
 favorites:    
-views:        !!str "29,999"
+views:        "29,999 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

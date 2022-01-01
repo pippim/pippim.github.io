@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1191538
 type:         Answer
 tags:         disk smart
-created_date: !!str "2019-11-25 12:26:14"
-edit_date:    !!str ""
-votes:        !!str "10"
+created_date: 2019-11-25 12:26:14
+edit_date:    
+votes:        "10 "
 favorites:    
-views:        !!str "10,057"
+views:        "10,057 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

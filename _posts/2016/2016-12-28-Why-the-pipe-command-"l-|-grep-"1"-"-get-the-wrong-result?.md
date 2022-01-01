@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/865249
 type:         Answer
 tags:         command-line grep ls pipe
-created_date: !!str "2016-12-28 04:03:46"
-edit_date:    !!str "2016-12-28 19:28:10"
-votes:        !!str "6"
+created_date: 2016-12-28 04:03:46
+edit_date:    2016-12-28 19:28:10
+votes:        "6 "
 favorites:    
-views:        !!str "2,652"
+views:        "2,652 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

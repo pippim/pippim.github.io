@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59812974
 type:         Answer
 tags:         python optimization pep8
-created_date: !!str "2020-01-19 18:11:30"
-edit_date:    !!str "2020-06-20 09:12:55"
-votes:        !!str "2"
+created_date: 2020-01-19 18:11:30
+edit_date:    2020-06-20 09:12:55
+votes:        "2 "
 favorites:    
-views:        !!str "142,325"
+views:        "142,325 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

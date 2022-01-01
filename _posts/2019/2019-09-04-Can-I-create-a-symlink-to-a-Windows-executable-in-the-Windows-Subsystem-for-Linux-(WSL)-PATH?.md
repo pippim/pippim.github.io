@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1170907
 type:         Answer
 tags:         command-line java jdk symbolic-link windows-subsystem-for-linux
-created_date: !!str "2019-09-04 21:49:51"
-edit_date:    !!str "2019-09-04 23:49:17"
-votes:        !!str "6"
+created_date: 2019-09-04 21:49:51
+edit_date:    2019-09-04 23:49:17
+votes:        "6 "
 favorites:    
-views:        !!str "7,538"
+views:        "7,538 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

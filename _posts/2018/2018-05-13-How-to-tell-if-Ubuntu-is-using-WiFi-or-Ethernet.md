@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035548
 type:         Answer
 tags:         networking internet ethernet vnstat
-created_date: !!str "2018-05-13 01:57:44"
-edit_date:    !!str "2018-05-13 15:29:08"
-votes:        !!str "2"
+created_date: 2018-05-13 01:57:44
+edit_date:    2018-05-13 15:29:08
+votes:        "2 "
 favorites:    
-views:        !!str "2,270"
+views:        "2,270 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

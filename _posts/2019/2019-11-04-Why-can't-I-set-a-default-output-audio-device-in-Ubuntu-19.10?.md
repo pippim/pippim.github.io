@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1186131
 type:         Answer
 tags:         sound hdmi
-created_date: !!str "2019-11-04 12:03:03"
-edit_date:    !!str "2019-11-08 22:40:07"
-votes:        !!str "14"
+created_date: 2019-11-04 12:03:03
+edit_date:    2019-11-08 22:40:07
+votes:        "14 "
 favorites:    
-views:        !!str "8,419"
+views:        "8,419 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

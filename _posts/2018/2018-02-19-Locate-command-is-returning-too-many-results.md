@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007525
 type:         Question
 tags:         command-line bash scripts duplicate duplicate-files
-created_date: !!str "2018-02-19 01:31:51"
-edit_date:    !!str "2018-03-30 00:24:24"
-votes:        !!str "2"
+created_date: 2018-02-19 01:31:51
+edit_date:    2018-03-30 00:24:24
+votes:        "2 "
 favorites:    
-views:        !!str "177"
+views:        "177 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63107373
 type:         Question
 tags:         python tkinter python-imaging-library
-created_date: !!str "2020-07-27 01:05:13"
-edit_date:    !!str "2020-07-28 00:35:57"
-votes:        !!str "0"
+created_date: 2020-07-27 01:05:13
+edit_date:    2020-07-28 00:35:57
+votes:        "0 "
 favorites:    
-views:        !!str "634"
+views:        "634 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

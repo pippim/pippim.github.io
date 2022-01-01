@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/859637
 type:         Answer
 tags:         boot 16.04 nvidia
-created_date: !!str "2016-12-11 22:54:26"
-edit_date:    !!str "2019-09-18 22:41:08"
-votes:        !!str "52"
+created_date: 2016-12-11 22:54:26
+edit_date:    2019-09-18 22:41:08
+votes:        "52 "
 favorites:    
-views:        !!str "352,823"
+views:        "352,823 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

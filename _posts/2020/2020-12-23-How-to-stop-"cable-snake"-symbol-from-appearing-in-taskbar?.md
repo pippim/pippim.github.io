@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1302334
 type:         Answer
 tags:         gnome indicator thunderbolt docking statusbar
-created_date: !!str "2020-12-23 12:48:39"
-edit_date:    !!str "2020-12-24 15:15:02"
-votes:        !!str "4"
+created_date: 2020-12-23 12:48:39
+edit_date:    2020-12-24 15:15:02
+votes:        "4 "
 favorites:    
-views:        !!str "364"
+views:        "364 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

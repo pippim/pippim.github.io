@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/922493
 type:         Answer
 tags:         bash backup cloud gmail eyesome grub
-created_date: !!str "2017-06-06 00:00:07"
-edit_date:    !!str "2021-05-07 21:29:49"
-votes:        !!str "7"
+created_date: 2017-06-06 00:00:07
+edit_date:    2021-05-07 21:29:49
+votes:        "7 "
 favorites:    
-views:        !!str "4,638"
+views:        "4,638 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

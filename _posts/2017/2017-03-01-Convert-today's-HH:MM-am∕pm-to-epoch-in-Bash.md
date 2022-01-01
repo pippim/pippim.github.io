@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/42521666
 type:         Question
 tags:         bash date time epoch
-created_date: !!str "2017-03-01 01:31:23"
-edit_date:    !!str "2017-10-17 05:36:06"
-votes:        !!str "2"
+created_date: 2017-03-01 01:31:23
+edit_date:    2017-10-17 05:36:06
+votes:        "2 "
 favorites:    1
-views:        !!str "815"
+views:        "815 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/978112
 type:         Answer
 tags:         drivers nvidia steam yad
-created_date: !!str "2017-11-19 17:26:41"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "14"
+created_date: 2017-11-19 17:26:41
+edit_date:    2020-06-12 14:37:07
+votes:        "14 "
 favorites:    
-views:        !!str "155,249"
+views:        "155,249 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

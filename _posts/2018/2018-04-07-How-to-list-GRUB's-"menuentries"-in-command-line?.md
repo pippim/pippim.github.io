@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1022706
 type:         Answer
 tags:         command-line grub2
-created_date: !!str "2018-04-07 00:14:42"
-edit_date:    !!str "2019-07-27 19:16:36"
-votes:        !!str "16"
+created_date: 2018-04-07 00:14:42
+edit_date:    2019-07-27 19:16:36
+votes:        "16 "
 favorites:    
-views:        !!str "84,031"
+views:        "84,031 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

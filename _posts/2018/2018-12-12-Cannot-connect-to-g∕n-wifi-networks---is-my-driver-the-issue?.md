@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1100218
 type:         Answer
 tags:         networking drivers 18.04 dell xps
-created_date: !!str "2018-12-12 05:06:26"
-edit_date:    !!str "2018-12-16 16:51:49"
-votes:        !!str "2"
+created_date: 2018-12-12 05:06:26
+edit_date:    2018-12-16 16:51:49
+votes:        "2 "
 favorites:    
-views:        !!str "243"
+views:        "243 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

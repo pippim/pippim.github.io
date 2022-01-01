@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1025297
 type:         Answer
 tags:         mount devices windows-subsystem-for-linux loop-device
-created_date: !!str "2018-04-15 17:45:00"
-edit_date:    !!str ""
-votes:        !!str "6"
+created_date: 2018-04-15 17:45:00
+edit_date:    
+votes:        "6 "
 favorites:    
-views:        !!str "6,306"
+views:        "6,306 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

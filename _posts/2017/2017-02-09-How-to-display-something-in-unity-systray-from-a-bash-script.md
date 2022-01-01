@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/881548
 type:         Answer
 tags:         unity bash system-tray
-created_date: !!str "2017-02-09 11:58:00"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "3"
+created_date: 2017-02-09 11:58:00
+edit_date:    2020-06-12 14:37:07
+votes:        "3 "
 favorites:    
-views:        !!str "1,979"
+views:        "1,979 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

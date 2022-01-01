@@ -6,13 +6,13 @@ site:         Super User
 stack_url:    https://superuser.com/q/1456859
 type:         Answer
 tags:         email backup gmail tar gmail-imap
-created_date: !!str "2019-07-06 18:26:26"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2019-07-06 18:26:26
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "39"
+views:        "39 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

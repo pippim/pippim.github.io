@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1150514
 type:         Answer
 tags:         usb lubuntu suspend power-management
-created_date: !!str "2019-06-12 10:56:18"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "2"
+created_date: 2019-06-12 10:56:18
+edit_date:    2020-06-12 14:37:07
+votes:        "2 "
 favorites:    
-views:        !!str "1,787"
+views:        "1,787 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

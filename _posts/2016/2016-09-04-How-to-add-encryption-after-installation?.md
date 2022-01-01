@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/820651
 type:         Answer
 tags:         encryption .desktop
-created_date: !!str "2016-09-04 00:23:32"
-edit_date:    !!str "2016-09-04 01:31:56"
-votes:        !!str "5"
+created_date: 2016-09-04 00:23:32
+edit_date:    2016-09-04 01:31:56
+votes:        "5 "
 favorites:    
-views:        !!str "6,815"
+views:        "6,815 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

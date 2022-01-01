@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035368
 type:         Answer
 tags:         upgrade system-installation grub
-created_date: !!str "2018-05-12 15:22:51"
-edit_date:    !!str ""
-votes:        !!str "11"
+created_date: 2018-05-12 15:22:51
+edit_date:    
+votes:        "11 "
 favorites:    
-views:        !!str "41,151"
+views:        "41,151 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

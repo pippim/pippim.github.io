@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1010024
 type:         Answer
 tags:         boot shutdown performance
-created_date: !!str "2018-02-26 16:52:44"
-edit_date:    !!str ""
-votes:        !!str "5"
+created_date: 2018-02-26 16:52:44
+edit_date:    
+votes:        "5 "
 favorites:    
-views:        !!str "3,340"
+views:        "3,340 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

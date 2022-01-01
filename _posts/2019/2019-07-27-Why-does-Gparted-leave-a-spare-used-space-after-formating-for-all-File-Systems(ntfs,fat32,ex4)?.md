@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161539
 type:         Answer
 tags:         partitioning filesystem gparted ntfs ext4
-created_date: !!str "2019-07-27 19:58:33"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2019-07-27 19:58:33
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "352"
+views:        "352 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

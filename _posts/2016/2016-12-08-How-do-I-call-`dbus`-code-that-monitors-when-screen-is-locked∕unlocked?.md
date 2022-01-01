@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/858236
 type:         Question
 tags:         16.04 scripts lock-screen dbus
-created_date: !!str "2016-12-08 01:01:02"
-edit_date:    !!str "2017-04-13 12:37:16"
-votes:        !!str "5"
+created_date: 2016-12-08 01:01:02
+edit_date:    2017-04-13 12:37:16
+votes:        "5 "
 favorites:    1
-views:        !!str "2,174"
+views:        "2,174 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/982903
 type:         Answer
 tags:         usb 17.10 hdmi budgie
-created_date: !!str "2017-12-04 01:57:56"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2017-12-04 01:57:56
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "1,077"
+views:        "1,077 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

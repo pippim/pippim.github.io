@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/887539
 type:         Answer
 tags:         command-line apt mailutils
-created_date: !!str "2017-02-26 16:22:38"
-edit_date:    !!str "2017-02-26 19:36:49"
-votes:        !!str "2"
+created_date: 2017-02-26 16:22:38
+edit_date:    2017-02-26 19:36:49
+votes:        "2 "
 favorites:    
-views:        !!str "13,975"
+views:        "13,975 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

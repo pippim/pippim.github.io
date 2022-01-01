@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/848796
 type:         Answer
 tags:         bash scripts process
-created_date: !!str "2016-11-13 03:10:08"
-edit_date:    !!str "2017-04-13 12:23:38"
-votes:        !!str "2"
+created_date: 2016-11-13 03:10:08
+edit_date:    2017-04-13 12:23:38
+votes:        "2 "
 favorites:    
-views:        !!str "1,117"
+views:        "1,117 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

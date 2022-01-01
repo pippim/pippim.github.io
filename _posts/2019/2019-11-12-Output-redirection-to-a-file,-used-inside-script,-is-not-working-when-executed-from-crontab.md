@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1188181
 type:         Answer
 tags:         scripts cron
-created_date: !!str "2019-11-12 14:45:00"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2019-11-12 14:45:00
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "2,811"
+views:        "2,811 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

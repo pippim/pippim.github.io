@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/864835
 type:         Answer
 tags:         software-installation facebook
-created_date: !!str "2016-12-26 21:35:23"
-edit_date:    !!str ""
-votes:        !!str "7"
+created_date: 2016-12-26 21:35:23
+edit_date:    
+votes:        "7 "
 favorites:    
-views:        !!str "39,891"
+views:        "39,891 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

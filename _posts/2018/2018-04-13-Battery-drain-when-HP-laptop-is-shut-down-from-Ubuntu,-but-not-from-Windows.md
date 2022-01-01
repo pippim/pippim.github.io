@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1024516
 type:         Answer
 tags:         16.04 power-management shutdown battery
-created_date: !!str "2018-04-13 02:05:19"
-edit_date:    !!str "2018-04-18 23:47:20"
-votes:        !!str "6"
+created_date: 2018-04-13 02:05:19
+edit_date:    2018-04-18 23:47:20
+votes:        "6 "
 favorites:    
-views:        !!str "3,752"
+views:        "3,752 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

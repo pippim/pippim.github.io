@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1026264
 type:         Answer
 tags:         virtualbox virtualization cloud virtual-console
-created_date: !!str "2018-04-19 03:31:57"
-edit_date:    !!str "2018-04-21 22:46:43"
-votes:        !!str "1"
+created_date: 2018-04-19 03:31:57
+edit_date:    2018-04-21 22:46:43
+votes:        "1 "
 favorites:    
-views:        !!str "178"
+views:        "178 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1088129
 type:         Answer
 tags:         boot grub2 18.04
-created_date: !!str "2018-10-28 22:55:08"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "3"
+created_date: 2018-10-28 22:55:08
+edit_date:    2020-06-12 14:37:07
+votes:        "3 "
 favorites:    
-views:        !!str "9,527"
+views:        "9,527 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866679
 type:         Answer
 tags:         gedit mime-type
-created_date: !!str "2017-01-01 05:12:43"
-edit_date:    !!str "2017-01-01 08:06:54"
-votes:        !!str "5"
+created_date: 2017-01-01 05:12:43
+edit_date:    2017-01-01 08:06:54
+votes:        "5 "
 favorites:    
-views:        !!str "1,210"
+views:        "1,210 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

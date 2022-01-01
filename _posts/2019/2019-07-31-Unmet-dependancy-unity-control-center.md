@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1162267
 type:         Question
 tags:         16.04 apt upgrade dependencies 19.04
-created_date: !!str "2019-07-31 01:13:08"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "0"
+created_date: 2019-07-31 01:13:08
+edit_date:    2020-06-12 14:37:07
+votes:        "0 "
 favorites:    
-views:        !!str "564"
+views:        "564 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

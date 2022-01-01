@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/876684
 type:         Answer
 tags:         nvidia multiple-monitors display monitor
-created_date: !!str "2017-01-27 00:23:33"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2017-01-27 00:23:33
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "2,715"
+views:        "2,715 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

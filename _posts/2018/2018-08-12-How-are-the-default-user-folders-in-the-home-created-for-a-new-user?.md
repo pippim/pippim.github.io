@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064548
 type:         Answer
 tags:         directory home-directory default
-created_date: !!str "2018-08-12 01:16:02"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2018-08-12 01:16:02
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "5,624"
+views:        "5,624 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

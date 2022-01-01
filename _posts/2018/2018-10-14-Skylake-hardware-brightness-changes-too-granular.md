@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/52804560
 type:         Question
 tags:         ubuntu-16.04 screen intel hardware-programming
-created_date: !!str "2018-10-14 16:04:27"
-edit_date:    !!str "2019-06-30 08:20:02"
-votes:        !!str "0"
+created_date: 2018-10-14 16:04:27
+edit_date:    2019-06-30 08:20:02
+votes:        "0 "
 favorites:    
-views:        !!str "61"
+views:        "61 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

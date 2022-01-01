@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1202118
 type:         Question
 tags:         notify-osd notify-send systemd-journald conky
-created_date: !!str "2020-01-11 00:03:00"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2020-01-11 00:03:00
+edit_date:    
+votes:        "2 "
 favorites:    1
-views:        !!str "50"
+views:        "50 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021174
 type:         Answer
 tags:         gnome 17.10 cpufreq conky
-created_date: !!str "2018-04-01 23:20:08"
-edit_date:    !!str "2018-04-02 00:43:57"
-votes:        !!str "1"
+created_date: 2018-04-01 23:20:08
+edit_date:    2018-04-02 00:43:57
+votes:        "1 "
 favorites:    
-views:        !!str "949"
+views:        "949 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

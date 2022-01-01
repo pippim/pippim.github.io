@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/960926
 type:         Answer
 tags:         backup extract
-created_date: !!str "2017-10-01 00:27:14"
-edit_date:    !!str ""
-votes:        !!str "5"
+created_date: 2017-10-01 00:27:14
+edit_date:    
+votes:        "5 "
 favorites:    
-views:        !!str "306"
+views:        "306 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

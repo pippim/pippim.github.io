@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1102084
 type:         Answer
 tags:         scripts wallpaper
-created_date: !!str "2018-12-15 14:24:49"
-edit_date:    !!str "2018-12-15 17:59:42"
-votes:        !!str "3"
+created_date: 2018-12-15 14:24:49
+edit_date:    2018-12-15 17:59:42
+votes:        "3 "
 favorites:    
-views:        !!str "862"
+views:        "862 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

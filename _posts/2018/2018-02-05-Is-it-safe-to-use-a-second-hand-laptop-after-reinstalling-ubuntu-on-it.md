@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1003115
 type:         Answer
 tags:         system-installation security
-created_date: !!str "2018-02-05 01:59:29"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "49"
+created_date: 2018-02-05 01:59:29
+edit_date:    2020-06-12 14:37:07
+votes:        "49 "
 favorites:    
-views:        !!str "11,132"
+views:        "11,132 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

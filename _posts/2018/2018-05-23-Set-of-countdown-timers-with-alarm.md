@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039377
 type:         Answer
 tags:         software-recommendation multi-timer yad
-created_date: !!str "2018-05-23 11:14:12"
-edit_date:    !!str "2021-12-04 22:06:42"
-votes:        !!str "11"
+created_date: 2018-05-23 11:14:12
+edit_date:    2021-12-04 22:06:42
+votes:        "11 "
 favorites:    
-views:        !!str "4,120"
+views:        "4,120 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

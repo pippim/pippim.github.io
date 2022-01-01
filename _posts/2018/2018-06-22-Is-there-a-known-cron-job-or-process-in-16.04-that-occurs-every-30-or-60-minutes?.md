@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1048709
 type:         Answer
 tags:         16.04 kernel cron
-created_date: !!str "2018-06-22 02:37:21"
-edit_date:    !!str "2018-06-22 10:40:12"
-votes:        !!str "3"
+created_date: 2018-06-22 02:37:21
+edit_date:    2018-06-22 10:40:12
+votes:        "3 "
 favorites:    
-views:        !!str "199"
+views:        "199 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

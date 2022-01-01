@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/67813663
 type:         Question
 tags:         python tkinter object-tag object-type s3-object-tagging
-created_date: !!str "2021-06-02 23:24:11"
-edit_date:    !!str ""
-votes:        !!str "0"
+created_date: 2021-06-02 23:24:11
+edit_date:    
+votes:        "0 "
 favorites:    
-views:        !!str "79"
+views:        "79 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

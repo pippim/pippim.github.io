@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/867747
 type:         Answer
 tags:         hard-drive ssd dd undelete
-created_date: !!str "2017-01-04 03:17:07"
-edit_date:    !!str "2017-06-25 19:26:08"
-votes:        !!str "3"
+created_date: 2017-01-04 03:17:07
+edit_date:    2017-06-25 19:26:08
+votes:        "3 "
 favorites:    
-views:        !!str "2,546"
+views:        "2,546 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

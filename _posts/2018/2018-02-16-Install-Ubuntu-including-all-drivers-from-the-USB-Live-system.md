@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1006666
 type:         Answer
 tags:         system-installation live-usb
-created_date: !!str "2018-02-16 03:12:50"
-edit_date:    !!str "2018-02-19 19:53:59"
-votes:        !!str "2"
+created_date: 2018-02-16 03:12:50
+edit_date:    2018-02-19 19:53:59
+votes:        "2 "
 favorites:    
-views:        !!str "14,802"
+views:        "14,802 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

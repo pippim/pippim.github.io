@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029534
 type:         Answer
 tags:         boot 18.04
-created_date: !!str "2018-04-29 05:32:41"
-edit_date:    !!str "2018-07-07 04:07:13"
-votes:        !!str "3"
+created_date: 2018-04-29 05:32:41
+edit_date:    2018-07-07 04:07:13
+votes:        "3 "
 favorites:    
-views:        !!str "8,224"
+views:        "8,224 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

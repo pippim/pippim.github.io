@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064309
 type:         Answer
 tags:         cpu
-created_date: !!str "2018-08-10 23:32:56"
-edit_date:    !!str "2018-08-19 18:32:36"
-votes:        !!str "0"
+created_date: 2018-08-10 23:32:56
+edit_date:    2018-08-19 18:32:36
+votes:        "0 "
 favorites:    
-views:        !!str "1,184"
+views:        "1,184 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1301658
 type:         Answer
 tags:         16.04 bash suspend
-created_date: !!str "2020-12-20 19:49:43"
-edit_date:    !!str "2020-12-20 21:31:38"
-votes:        !!str "4"
+created_date: 2020-12-20 19:49:43
+edit_date:    2020-12-20 21:31:38
+votes:        "4 "
 favorites:    
-views:        !!str "109"
+views:        "109 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

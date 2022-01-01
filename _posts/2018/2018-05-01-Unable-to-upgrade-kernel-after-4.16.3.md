@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1030377
 type:         Answer
 tags:         16.04 upgrade kernel grub
-created_date: !!str "2018-05-01 01:21:40"
-edit_date:    !!str "2018-10-28 15:07:06"
-votes:        !!str "10"
+created_date: 2018-05-01 01:21:40
+edit_date:    2018-10-28 15:07:06
+votes:        "10 "
 favorites:    
-views:        !!str "19,287"
+views:        "19,287 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1190733
 type:         Answer
 tags:         command-line redirect cat
-created_date: !!str "2019-11-22 00:03:29"
-edit_date:    !!str "2019-12-12 01:01:10"
-votes:        !!str "14"
+created_date: 2019-11-22 00:03:29
+edit_date:    2019-12-12 01:01:10
+votes:        "14 "
 favorites:    
-views:        !!str "10,233"
+views:        "10,233 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

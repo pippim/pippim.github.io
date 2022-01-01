@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1194001
 type:         Answer
 tags:         xorg multiple-monitors display-resolution xrandr scaling
-created_date: !!str "2019-12-05 11:46:08"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2019-12-05 11:46:08
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "6,842"
+views:        "6,842 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

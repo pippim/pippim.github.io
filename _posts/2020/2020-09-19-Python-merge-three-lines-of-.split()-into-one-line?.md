@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63964383
 type:         Question
 tags:         python split
-created_date: !!str "2020-09-19 01:14:33"
-edit_date:    !!str "2020-09-19 01:58:36"
-votes:        !!str "0"
+created_date: 2020-09-19 01:14:33
+edit_date:    2020-09-19 01:58:36
+votes:        "0 "
 favorites:    
-views:        !!str "54"
+views:        "54 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

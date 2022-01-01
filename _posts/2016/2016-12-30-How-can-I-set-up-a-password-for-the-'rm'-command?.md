@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/866003
 type:         Answer
 tags:         command-line permissions password rm
-created_date: !!str "2016-12-30 02:32:38"
-edit_date:    !!str "2017-03-05 18:08:55"
-votes:        !!str "5"
+created_date: 2016-12-30 02:32:38
+edit_date:    2017-03-05 18:08:55
+votes:        "5 "
 favorites:    
-views:        !!str "5,960"
+views:        "5,960 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

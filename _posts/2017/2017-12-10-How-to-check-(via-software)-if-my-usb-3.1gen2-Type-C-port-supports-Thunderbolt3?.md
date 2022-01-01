@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/985074
 type:         Answer
 tags:         usb thunderbolt
-created_date: !!str "2017-12-10 23:12:08"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "12"
+created_date: 2017-12-10 23:12:08
+edit_date:    2020-06-12 14:37:07
+votes:        "12 "
 favorites:    
-views:        !!str "23,499"
+views:        "23,499 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

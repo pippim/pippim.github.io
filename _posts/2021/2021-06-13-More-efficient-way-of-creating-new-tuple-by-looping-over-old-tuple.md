@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/67963375
 type:         Question
 tags:         python tuples generator
-created_date: !!str "2021-06-13 23:30:41"
-edit_date:    !!str "2021-06-14 00:30:03"
-votes:        !!str "0"
+created_date: 2021-06-13 23:30:41
+edit_date:    2021-06-14 00:30:03
+votes:        "0 "
 favorites:    
-views:        !!str "50"
+views:        "50 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

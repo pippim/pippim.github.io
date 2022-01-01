@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1147993
 type:         Answer
 tags:         bash multiple-monitors desktop-environments window-manager desktop-icons iconic
-created_date: !!str "2019-06-02 03:01:03"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "0"
+created_date: 2019-06-02 03:01:03
+edit_date:    2020-06-12 14:37:07
+votes:        "0 "
 favorites:    
-views:        !!str "414"
+views:        "414 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

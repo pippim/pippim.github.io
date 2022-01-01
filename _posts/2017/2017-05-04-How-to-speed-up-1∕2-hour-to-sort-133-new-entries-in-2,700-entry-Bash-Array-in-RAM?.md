@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43772024
 type:         Answer
 tags:         arrays bash performance yad
-created_date: !!str "2017-05-04 00:36:14"
-edit_date:    !!str "2020-06-20 09:12:55"
-votes:        !!str "2"
+created_date: 2017-05-04 00:36:14
+edit_date:    2020-06-20 09:12:55
+votes:        "2 "
 favorites:    
-views:        !!str "46"
+views:        "46 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

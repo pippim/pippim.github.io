@@ -6,13 +6,13 @@ site:         Electrical Engineering
 stack_url:    https://electronics.stackexchange.com/q/461935
 type:         Question
 tags:         led connector cables
-created_date: !!str "2019-10-07 23:35:41"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2019-10-07 23:35:41
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "326"
+views:        "326 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

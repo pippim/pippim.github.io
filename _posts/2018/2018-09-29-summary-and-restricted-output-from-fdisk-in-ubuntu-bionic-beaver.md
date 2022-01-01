@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1079566
 type:         Answer
 tags:         18.04 fdisk
-created_date: !!str "2018-09-29 19:10:04"
-edit_date:    !!str "2018-09-29 22:51:08"
-votes:        !!str "2"
+created_date: 2018-09-29 19:10:04
+edit_date:    2018-09-29 22:51:08
+votes:        "2 "
 favorites:    
-views:        !!str "131"
+views:        "131 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

@@ -6,13 +6,13 @@ site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/546241
 type:         Question
 tags:         gnome desktop nautilus icons
-created_date: !!str "2019-10-11 02:21:53"
-edit_date:    !!str "2019-10-13 14:59:50"
-votes:        !!str "2"
+created_date: 2019-10-11 02:21:53
+edit_date:    2019-10-13 14:59:50
+votes:        "2 "
 favorites:    0
-views:        !!str "762"
+views:        "762 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

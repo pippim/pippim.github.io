@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/847769
 type:         Answer
 tags:         command-line nautilus gedit policykit gksudo grub
-created_date: !!str "2016-11-10 11:49:50"
-edit_date:    !!str "2016-11-11 00:09:35"
-votes:        !!str "2"
+created_date: 2016-11-10 11:49:50
+edit_date:    2016-11-11 00:09:35
+votes:        "2 "
 favorites:    
-views:        !!str "617"
+views:        "617 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

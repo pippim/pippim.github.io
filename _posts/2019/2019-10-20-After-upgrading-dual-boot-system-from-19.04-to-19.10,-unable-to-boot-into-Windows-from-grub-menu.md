@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1182429
 type:         Answer
 tags:         boot grub2 windows uefi 19.10
-created_date: !!str "2019-10-20 15:15:07"
-edit_date:    !!str "2019-10-24 23:16:33"
-votes:        !!str "3"
+created_date: 2019-10-20 15:15:07
+edit_date:    2019-10-24 23:16:33
+votes:        "3 "
 favorites:    
-views:        !!str "1,550"
+views:        "1,550 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

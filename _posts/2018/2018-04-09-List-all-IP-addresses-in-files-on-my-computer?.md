@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1023189
 type:         Answer
 tags:         command-line text-processing ip
-created_date: !!str "2018-04-09 00:12:10"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "2"
+created_date: 2018-04-09 00:12:10
+edit_date:    2020-06-12 14:37:07
+votes:        "2 "
 favorites:    
-views:        !!str "1,868"
+views:        "1,868 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

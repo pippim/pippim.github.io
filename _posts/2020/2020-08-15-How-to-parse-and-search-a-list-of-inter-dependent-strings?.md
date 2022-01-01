@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63429034
 type:         Answer
 tags:         python list search
-created_date: !!str "2020-08-15 17:39:04"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2020-08-15 17:39:04
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "141"
+views:        "141 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

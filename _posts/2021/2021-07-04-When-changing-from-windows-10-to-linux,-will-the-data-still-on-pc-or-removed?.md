@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1350030
 type:         Answer
 tags:         system-installation windows-10
-created_date: !!str "2021-07-04 22:39:30"
-edit_date:    !!str ""
-votes:        !!str "5"
+created_date: 2021-07-04 22:39:30
+edit_date:    
+votes:        "5 "
 favorites:    
-views:        !!str "1,008"
+views:        "1,008 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1348326
 type:         Question
 tags:         unity python xorg compiz window-manager
-created_date: !!str "2021-06-26 12:47:21"
-edit_date:    !!str "2021-06-27 17:49:15"
-votes:        !!str "2"
+created_date: 2021-06-26 12:47:21
+edit_date:    2021-06-27 17:49:15
+votes:        "2 "
 favorites:    1
-views:        !!str "24"
+views:        "24 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1068153
 type:         Answer
 tags:         apt 18.04 nodejs npm
-created_date: !!str "2018-08-23 10:45:11"
-edit_date:    !!str "2018-08-25 02:57:55"
-votes:        !!str "1"
+created_date: 2018-08-23 10:45:11
+edit_date:    2018-08-25 02:57:55
+votes:        "1 "
 favorites:    
-views:        !!str "1,725"
+views:        "1,725 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

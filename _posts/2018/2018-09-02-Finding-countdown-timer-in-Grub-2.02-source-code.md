@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/52138789
 type:         Answer
 tags:         c assembly grub
-created_date: !!str "2018-09-02 16:10:28"
-edit_date:    !!str "2020-06-20 09:12:55"
-votes:        !!str "2"
+created_date: 2018-09-02 16:10:28
+edit_date:    2020-06-20 09:12:55
+votes:        "2 "
 favorites:    
-views:        !!str "923"
+views:        "923 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

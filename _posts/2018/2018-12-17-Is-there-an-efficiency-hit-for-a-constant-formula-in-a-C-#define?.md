@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/53816917
 type:         Question
 tags:         c c-preprocessor
-created_date: !!str "2018-12-17 14:07:21"
-edit_date:    !!str "2018-12-17 15:50:03"
-votes:        !!str "-2"
+created_date: 2018-12-17 14:07:21
+edit_date:    2018-12-17 15:50:03
+votes:        "-2 "
 favorites:    
-views:        !!str "99"
+views:        "99 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

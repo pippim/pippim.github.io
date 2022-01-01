@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/817995
 type:         Answer
 tags:         16.04 google-chrome ram memory-usage
-created_date: !!str "2016-08-28 23:41:48"
-edit_date:    !!str "2017-10-04 19:46:26"
-votes:        !!str "32"
+created_date: 2016-08-28 23:41:48
+edit_date:    2017-10-04 19:46:26
+votes:        "32 "
 favorites:    
-views:        !!str "19,557"
+views:        "19,557 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/812345
 type:         Answer
 tags:         security scanner log malware clamav
-created_date: !!str "2016-08-14 23:59:43"
-edit_date:    !!str "2016-08-16 13:50:31"
-votes:        !!str "6"
+created_date: 2016-08-14 23:59:43
+edit_date:    2016-08-16 13:50:31
+votes:        "6 "
 favorites:    
-views:        !!str "29,792"
+views:        "29,792 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/839920
 type:         Answer
 tags:         kernel security
-created_date: !!str "2016-10-21 03:35:38"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "20"
+created_date: 2016-10-21 03:35:38
+edit_date:    2020-06-12 14:37:07
+votes:        "20 "
 favorites:    
-views:        !!str "17,352"
+views:        "17,352 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

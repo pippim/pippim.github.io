@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1256392
 type:         Answer
 tags:         nvidia lubuntu multiple-monitors 20.04 display
-created_date: !!str "2020-07-04 21:24:35"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2020-07-04 21:24:35
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "547"
+views:        "547 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

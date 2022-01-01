@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1092673
 type:         Answer
 tags:         golang
-created_date: !!str "2018-11-13 21:18:41"
-edit_date:    !!str "2018-12-29 20:58:31"
-votes:        !!str "10"
+created_date: 2018-11-13 21:18:41
+edit_date:    2018-12-29 20:58:31
+votes:        "10 "
 favorites:    
-views:        !!str "92,636"
+views:        "92,636 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

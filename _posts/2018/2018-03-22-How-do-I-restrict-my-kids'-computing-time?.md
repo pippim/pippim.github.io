@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018106
 type:         Answer
 tags:         software-recommendation bash parental-controls
-created_date: !!str "2018-03-22 01:06:16"
-edit_date:    !!str "2021-12-04 21:51:58"
-votes:        !!str "2"
+created_date: 2018-03-22 01:06:16
+edit_date:    2021-12-04 21:51:58
+votes:        "2 "
 favorites:    
-views:        !!str "58,747"
+views:        "58,747 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

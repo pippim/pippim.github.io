@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1012264
 type:         Answer
 tags:         usb mount permissions
-created_date: !!str "2018-03-06 03:03:28"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "2"
+created_date: 2018-03-06 03:03:28
+edit_date:    2020-06-12 14:37:07
+votes:        "2 "
 favorites:    
-views:        !!str "75,255"
+views:        "75,255 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

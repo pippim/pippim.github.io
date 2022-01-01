@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/59530481
 type:         Answer
 tags:         python tkinter treeview hidpi
-created_date: !!str "2019-12-30 11:59:50"
-edit_date:    !!str "2019-12-30 12:19:51"
-votes:        !!str "2"
+created_date: 2019-12-30 11:59:50
+edit_date:    2019-12-30 12:19:51
+votes:        "2 "
 favorites:    
-views:        !!str "7,691"
+views:        "7,691 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

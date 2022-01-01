@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/818005
 type:         Answer
 tags:         apt software-installation security
-created_date: !!str "2016-08-29 00:12:22"
-edit_date:    !!str "2017-11-30 00:10:05"
-votes:        !!str "5"
+created_date: 2016-08-29 00:12:22
+edit_date:    2017-11-30 00:10:05
+votes:        "5 "
 favorites:    
-views:        !!str "20,037"
+views:        "20,037 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

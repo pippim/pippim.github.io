@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1168750
 type:         Question
 tags:         command-line bash redirect
-created_date: !!str "2019-08-27 00:51:14"
-edit_date:    !!str "2019-08-28 04:23:58"
-votes:        !!str "16"
+created_date: 2019-08-27 00:51:14
+edit_date:    2019-08-28 04:23:58
+votes:        "16 "
 favorites:    2
-views:        !!str "4,581"
+views:        "4,581 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

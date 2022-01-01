@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161035
 type:         Answer
 tags:         gnome gnome-shell ubuntu-gnome dbus javascript
-created_date: !!str "2019-07-25 16:45:46"
-edit_date:    !!str "2019-07-25 17:38:24"
-votes:        !!str "2"
+created_date: 2019-07-25 16:45:46
+edit_date:    2019-07-25 17:38:24
+votes:        "2 "
 favorites:    
-views:        !!str "690"
+views:        "690 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

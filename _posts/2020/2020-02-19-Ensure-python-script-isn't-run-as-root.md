@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/60292202
 type:         Answer
 tags:         python sudo
-created_date: !!str "2020-02-19 02:37:54"
-edit_date:    !!str ""
-votes:        !!str "4"
+created_date: 2020-02-19 02:37:54
+edit_date:    
+votes:        "4 "
 favorites:    
-views:        !!str "55"
+views:        "55 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

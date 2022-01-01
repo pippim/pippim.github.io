@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1171617
 type:         Answer
 tags:         sound
-created_date: !!str "2019-09-07 22:41:56"
-edit_date:    !!str "2019-09-08 16:49:40"
-votes:        !!str "2"
+created_date: 2019-09-07 22:41:56
+edit_date:    2019-09-08 16:49:40
+votes:        "2 "
 favorites:    
-views:        !!str "2,810"
+views:        "2,810 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

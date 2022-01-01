@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1144565
 type:         Answer
 tags:         19.04
-created_date: !!str "2019-05-19 17:58:24"
-edit_date:    !!str "2021-04-13 22:41:11"
-votes:        !!str "3"
+created_date: 2019-05-19 17:58:24
+edit_date:    2021-04-13 22:41:11
+votes:        "3 "
 favorites:    
-views:        !!str "6,382"
+views:        "6,382 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

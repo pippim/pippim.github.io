@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159021
 type:         Answer
 tags:         16.04 18.04 security cron malware
-created_date: !!str "2019-07-17 17:19:19"
-edit_date:    !!str "2019-07-18 00:35:05"
-votes:        !!str "2"
+created_date: 2019-07-17 17:19:19
+edit_date:    2019-07-18 00:35:05
+votes:        "2 "
 favorites:    
-views:        !!str "1,914"
+views:        "1,914 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

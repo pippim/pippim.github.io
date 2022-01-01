@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1153463
 type:         Answer
 tags:         command-line syntax ksh
-created_date: !!str "2019-06-24 01:54:33"
-edit_date:    !!str "2019-06-24 16:56:29"
-votes:        !!str "2"
+created_date: 2019-06-24 01:54:33
+edit_date:    2019-06-24 16:56:29
+votes:        "2 "
 favorites:    
-views:        !!str "2,350"
+views:        "2,350 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

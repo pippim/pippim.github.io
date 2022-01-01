@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1152459
 type:         Answer
 tags:         icons desktop-icons iconic
-created_date: !!str "2019-06-20 00:57:14"
-edit_date:    !!str ""
-votes:        !!str "4"
+created_date: 2019-06-20 00:57:14
+edit_date:    
+votes:        "4 "
 favorites:    
-views:        !!str "36,956"
+views:        "36,956 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

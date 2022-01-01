@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1012913
 type:         Answer
 tags:         command-line performance disk-usage systemd systemd-journald
-created_date: !!str "2018-03-08 01:13:36"
-edit_date:    !!str "2019-05-21 23:11:00"
-votes:        !!str "81"
+created_date: 2018-03-08 01:13:36
+edit_date:    2019-05-21 23:11:00
+votes:        "81 "
 favorites:    
-views:        !!str "42,061"
+views:        "42,061 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

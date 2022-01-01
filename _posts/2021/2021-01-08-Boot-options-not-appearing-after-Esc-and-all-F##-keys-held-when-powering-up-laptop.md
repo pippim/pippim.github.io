@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1305982
 type:         Answer
 tags:         boot 20.04 uefi bios canonical-livepatch
-created_date: !!str "2021-01-08 00:35:32"
-edit_date:    !!str ""
-votes:        !!str "0"
+created_date: 2021-01-08 00:35:32
+edit_date:    
+votes:        "0 "
 favorites:    
-views:        !!str "357"
+views:        "357 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

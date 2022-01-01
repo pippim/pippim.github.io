@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43623085
 type:         Question
 tags:         arrays bash replace built-in
-created_date: !!str "2017-04-26 00:35:43"
-edit_date:    !!str ""
-votes:        !!str "0"
+created_date: 2017-04-26 00:35:43
+edit_date:    
+votes:        "0 "
 favorites:    1
-views:        !!str "251"
+views:        "251 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

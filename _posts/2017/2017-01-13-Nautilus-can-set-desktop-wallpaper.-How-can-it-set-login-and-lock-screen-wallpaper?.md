@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/871313
 type:         Answer
 tags:         scripts nautilus login wallpaper lock-screen
-created_date: !!str "2017-01-13 04:15:36"
-edit_date:    !!str "2018-07-08 19:01:51"
-votes:        !!str "3"
+created_date: 2017-01-13 04:15:36
+edit_date:    2018-07-08 19:01:51
+votes:        "3 "
 favorites:    
-views:        !!str "2,414"
+views:        "2,414 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

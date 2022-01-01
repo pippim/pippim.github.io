@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039236
 type:         Answer
 tags:         command-line ls locate
-created_date: !!str "2018-05-23 02:45:51"
-edit_date:    !!str "2020-07-05 22:04:26"
-votes:        !!str "2"
+created_date: 2018-05-23 02:45:51
+edit_date:    2020-07-05 22:04:26
+votes:        "2 "
 favorites:    
-views:        !!str "3,167"
+views:        "3,167 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

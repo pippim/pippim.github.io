@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1156038
 type:         Answer
 tags:         networking 18.04 suspend ethernet
-created_date: !!str "2019-07-04 23:52:22"
-edit_date:    !!str ""
-votes:        !!str "0"
+created_date: 2019-07-04 23:52:22
+edit_date:    
+votes:        "0 "
 favorites:    
-views:        !!str "51"
+views:        "51 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

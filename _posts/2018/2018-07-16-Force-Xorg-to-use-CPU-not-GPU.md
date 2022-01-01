@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1056431
 type:         Answer
 tags:         unity nvidia xorg cpu gpu
-created_date: !!str "2018-07-16 01:33:58"
-edit_date:    !!str "2019-02-21 10:47:27"
-votes:        !!str "3"
+created_date: 2018-07-16 01:33:58
+edit_date:    2019-02-21 10:47:27
+votes:        "3 "
 favorites:    
-views:        !!str "10,707"
+views:        "10,707 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

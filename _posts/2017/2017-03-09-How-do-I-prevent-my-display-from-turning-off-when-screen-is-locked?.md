@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/891090
 type:         Answer
 tags:         power-management 16.10 lock-screen
-created_date: !!str "2017-03-09 01:54:03"
-edit_date:    !!str "2018-02-21 01:02:10"
-votes:        !!str "2"
+created_date: 2017-03-09 01:54:03
+edit_date:    2018-02-21 01:02:10
+votes:        "2 "
 favorites:    
-views:        !!str "2,062"
+views:        "2,062 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

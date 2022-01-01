@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/52357904
 type:         Question
 tags:         github
-created_date: !!str "2018-09-16 19:59:06"
-edit_date:    !!str "2018-09-16 20:13:42"
-votes:        !!str "1"
+created_date: 2018-09-16 19:59:06
+edit_date:    2018-09-16 20:13:42
+votes:        "1 "
 favorites:    
-views:        !!str "57"
+views:        "57 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

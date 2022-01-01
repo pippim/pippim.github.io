@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1005907
 type:         Answer
 tags:         command-line reboot
-created_date: !!str "2018-02-13 20:42:21"
-edit_date:    !!str ""
-votes:        !!str "9"
+created_date: 2018-02-13 20:42:21
+edit_date:    
+votes:        "9 "
 favorites:    
-views:        !!str "58,186"
+views:        "58,186 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

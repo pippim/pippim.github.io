@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1069578
 type:         Answer
 tags:         windows windows-10
-created_date: !!str "2018-08-27 23:45:11"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2018-08-27 23:45:11
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "19"
+views:        "19 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

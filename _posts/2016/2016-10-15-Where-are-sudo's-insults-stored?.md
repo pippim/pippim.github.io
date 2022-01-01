@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/837614
 type:         Answer
 tags:         sudo
-created_date: !!str "2016-10-15 20:22:01"
-edit_date:    !!str "2019-11-15 03:43:34"
-votes:        !!str "88"
+created_date: 2016-10-15 20:22:01
+edit_date:    2019-11-15 03:43:34
+votes:        "88 "
 favorites:    
-views:        !!str "46,641"
+views:        "46,641 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

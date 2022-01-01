@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/854079
 type:         Answer
 tags:         16.04 sound pulseaudio alsa hdmi
-created_date: !!str "2016-11-27 02:34:12"
-edit_date:    !!str "2017-02-08 00:15:52"
-votes:        !!str "9"
+created_date: 2016-11-27 02:34:12
+edit_date:    2017-02-08 00:15:52
+votes:        "9 "
 favorites:    
-views:        !!str "10,730"
+views:        "10,730 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

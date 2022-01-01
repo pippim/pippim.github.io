@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/993308
 type:         Answer
 tags:         uefi bios gpt mbr
-created_date: !!str "2018-01-07 18:36:55"
-edit_date:    !!str ""
-votes:        !!str "6"
+created_date: 2018-01-07 18:36:55
+edit_date:    
+votes:        "6 "
 favorites:    
-views:        !!str "61,087"
+views:        "61,087 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

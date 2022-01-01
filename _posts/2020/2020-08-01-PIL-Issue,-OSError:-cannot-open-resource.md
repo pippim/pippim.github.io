@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63200562
 type:         Answer
 tags:         image python-3.x fonts python-imaging-library
-created_date: !!str "2020-08-01 00:17:46"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2020-08-01 00:17:46
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "43,286"
+views:        "43,286 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

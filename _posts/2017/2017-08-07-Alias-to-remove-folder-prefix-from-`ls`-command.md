@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/943728
 type:         Question
 tags:         command-line bash directory alias ls
-created_date: !!str "2017-08-07 03:43:20"
-edit_date:    !!str "2017-08-07 03:54:35"
-votes:        !!str "1"
+created_date: 2017-08-07 03:43:20
+edit_date:    2017-08-07 03:54:35
+votes:        "1 "
 favorites:    
-views:        !!str "535"
+views:        "535 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

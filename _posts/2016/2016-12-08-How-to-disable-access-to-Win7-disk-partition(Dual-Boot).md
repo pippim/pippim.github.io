@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/858225
 type:         Answer
 tags:         dual-boot 16.04 partitioning
-created_date: !!str "2016-12-08 00:13:27"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2016-12-08 00:13:27
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "1,311"
+views:        "1,311 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

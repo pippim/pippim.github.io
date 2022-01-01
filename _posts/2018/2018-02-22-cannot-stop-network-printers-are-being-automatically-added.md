@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1008550
 type:         Answer
 tags:         printing 17.10
-created_date: !!str "2018-02-22 00:25:35"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "8"
+created_date: 2018-02-22 00:25:35
+edit_date:    2020-06-12 14:37:07
+votes:        "8 "
 favorites:    
-views:        !!str "13,367"
+views:        "13,367 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

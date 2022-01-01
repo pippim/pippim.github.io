@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1131572
 type:         Answer
 tags:         18.04 java environment-variables
-created_date: !!str "2019-04-06 01:30:08"
-edit_date:    !!str "2019-04-06 01:36:33"
-votes:        !!str "1"
+created_date: 2019-04-06 01:30:08
+edit_date:    2019-04-06 01:36:33
+votes:        "1 "
 favorites:    
-views:        !!str "3,807"
+views:        "3,807 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

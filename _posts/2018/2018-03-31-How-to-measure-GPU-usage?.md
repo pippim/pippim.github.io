@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1020887
 type:         Answer
 tags:         software-recommendation gpu conky
-created_date: !!str "2018-03-31 17:44:58"
-edit_date:    !!str "2019-07-08 10:35:06"
-votes:        !!str "15"
+created_date: 2018-03-31 17:44:58
+edit_date:    2019-07-08 10:35:06
+votes:        "15 "
 favorites:    
-views:        !!str "394,109"
+views:        "394,109 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

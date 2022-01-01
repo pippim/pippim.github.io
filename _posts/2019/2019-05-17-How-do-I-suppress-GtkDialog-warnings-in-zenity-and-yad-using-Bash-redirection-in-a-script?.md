@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1144080
 type:         Question
 tags:         command-line bash redirect yad
-created_date: !!str "2019-05-17 16:54:07"
-edit_date:    !!str "2019-05-18 10:31:15"
-votes:        !!str "3"
+created_date: 2019-05-17 16:54:07
+edit_date:    2019-05-18 10:31:15
+votes:        "3 "
 favorites:    
-views:        !!str "1,959"
+views:        "1,959 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

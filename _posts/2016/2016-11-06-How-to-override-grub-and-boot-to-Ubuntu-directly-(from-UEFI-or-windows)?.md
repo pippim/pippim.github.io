@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/846297
 type:         Answer
 tags:         boot dual-boot grub2 uefi
-created_date: !!str "2016-11-06 17:55:18"
-edit_date:    !!str "2017-03-20 10:18:11"
-votes:        !!str "0"
+created_date: 2016-11-06 17:55:18
+edit_date:    2017-03-20 10:18:11
+votes:        "0 "
 favorites:    
-views:        !!str "1,300"
+views:        "1,300 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

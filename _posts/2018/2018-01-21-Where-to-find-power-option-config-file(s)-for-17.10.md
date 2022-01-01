@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/998465
 type:         Answer
 tags:         17.10 power-management monitor settings configure
-created_date: !!str "2018-01-21 23:07:08"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2018-01-21 23:07:08
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "239"
+views:        "239 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1105870
 type:         Answer
 tags:         command-line 18.04 ls
-created_date: !!str "2018-12-31 16:16:37"
-edit_date:    !!str "2018-12-31 16:28:01"
-votes:        !!str "33"
+created_date: 2018-12-31 16:16:37
+edit_date:    2018-12-31 16:28:01
+votes:        "33 "
 favorites:    
-views:        !!str "2,232"
+views:        "2,232 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

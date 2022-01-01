@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1202340
 type:         Answer
 tags:         18.04 display hdmi
-created_date: !!str "2020-01-11 21:09:00"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2020-01-11 21:09:00
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "6,360"
+views:        "6,360 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1078191
 type:         Answer
 tags:         drivers nvidia 18.04 display-resolution 4k-monitor grub
-created_date: !!str "2018-09-25 02:19:57"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2018-09-25 02:19:57
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "1,643"
+views:        "1,643 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

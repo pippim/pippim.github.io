@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/920920
 type:         Question
 tags:         bash benchmarks
-created_date: !!str "2017-06-01 00:51:26"
-edit_date:    !!str "2017-06-01 01:35:03"
-votes:        !!str "3"
+created_date: 2017-06-01 00:51:26
+edit_date:    2017-06-01 01:35:03
+votes:        "3 "
 favorites:    3
-views:        !!str "6,267"
+views:        "6,267 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

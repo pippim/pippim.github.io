@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/936488
 type:         Answer
 tags:         17.04 cpufreq
-created_date: !!str "2017-07-15 17:54:43"
-edit_date:    !!str "2020-08-09 15:24:45"
-votes:        !!str "29"
+created_date: 2017-07-15 17:54:43
+edit_date:    2020-08-09 15:24:45
+votes:        "29 "
 favorites:    
-views:        !!str "50,508"
+views:        "50,508 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

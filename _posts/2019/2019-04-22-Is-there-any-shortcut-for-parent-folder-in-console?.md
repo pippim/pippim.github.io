@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1136115
 type:         Answer
 tags:         command-line shortcut-keys
-created_date: !!str "2019-04-22 15:41:54"
-edit_date:    !!str "2019-04-22 15:48:16"
-votes:        !!str "2"
+created_date: 2019-04-22 15:41:54
+edit_date:    2019-04-22 15:48:16
+votes:        "2 "
 favorites:    
-views:        !!str "418"
+views:        "418 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/840293
 type:         Answer
 tags:         bash scripts
-created_date: !!str "2016-10-22 01:29:13"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "4"
+created_date: 2016-10-22 01:29:13
+edit_date:    2020-06-12 14:37:07
+votes:        "4 "
 favorites:    
-views:        !!str "96"
+views:        "96 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

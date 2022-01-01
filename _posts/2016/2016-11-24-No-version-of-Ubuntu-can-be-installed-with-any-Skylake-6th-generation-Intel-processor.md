@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/852910
 type:         Answer
 tags:         drivers system-installation kernel intel-graphics grub
-created_date: !!str "2016-11-24 00:37:49"
-edit_date:    !!str "2017-04-13 12:23:56"
-votes:        !!str "2"
+created_date: 2016-11-24 00:37:49
+edit_date:    2017-04-13 12:23:56
+votes:        "2 "
 favorites:    
-views:        !!str "36,924"
+views:        "36,924 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

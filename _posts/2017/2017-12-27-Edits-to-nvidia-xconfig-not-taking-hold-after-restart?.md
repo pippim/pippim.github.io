@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/989752
 type:         Answer
 tags:         drivers nvidia xorg nvidia-settings
-created_date: !!str "2017-12-27 03:30:59"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2017-12-27 03:30:59
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "3,010"
+views:        "3,010 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

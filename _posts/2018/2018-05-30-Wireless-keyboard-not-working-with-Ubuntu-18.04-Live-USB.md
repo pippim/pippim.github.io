@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1041758
 type:         Answer
 tags:         usb keyboard mouse
-created_date: !!str "2018-05-30 01:40:15"
-edit_date:    !!str "2018-06-03 22:19:19"
-votes:        !!str "3"
+created_date: 2018-05-30 01:40:15
+edit_date:    2018-06-03 22:19:19
+votes:        "3 "
 favorites:    
-views:        !!str "11,899"
+views:        "11,899 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

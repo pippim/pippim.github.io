@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1160495
 type:         Answer
 tags:         partitioning upgrade do-release-upgrade
-created_date: !!str "2019-07-23 19:21:17"
-edit_date:    !!str "2019-07-24 06:57:00"
-votes:        !!str "4"
+created_date: 2019-07-23 19:21:17
+edit_date:    2019-07-24 06:57:00
+votes:        "4 "
 favorites:    
-views:        !!str "737"
+views:        "737 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

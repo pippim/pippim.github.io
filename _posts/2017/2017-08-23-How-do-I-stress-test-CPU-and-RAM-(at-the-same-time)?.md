@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/948865
 type:         Answer
 tags:         software-recommendation stress-testing conky
-created_date: !!str "2017-08-23 02:53:37"
-edit_date:    !!str "2017-09-05 22:13:23"
-votes:        !!str "55"
+created_date: 2017-08-23 02:53:37
+edit_date:    2017-09-05 22:13:23
+votes:        "55 "
 favorites:    
-views:        !!str "100,223"
+views:        "100,223 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

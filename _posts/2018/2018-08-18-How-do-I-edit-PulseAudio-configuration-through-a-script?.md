@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1066655
 type:         Answer
 tags:         command-line sound pulseaudio hdmi
-created_date: !!str "2018-08-18 19:14:50"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "1"
+created_date: 2018-08-18 19:14:50
+edit_date:    2020-06-12 14:37:07
+votes:        "1 "
 favorites:    
-views:        !!str "2,111"
+views:        "2,111 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/913597
 type:         Answer
 tags:         upgrade kernel disk-usage
-created_date: !!str "2017-05-10 02:54:21"
-edit_date:    !!str "2017-07-28 22:26:01"
-votes:        !!str "3"
+created_date: 2017-05-10 02:54:21
+edit_date:    2017-07-28 22:26:01
+votes:        "3 "
 favorites:    
-views:        !!str "122,583"
+views:        "122,583 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

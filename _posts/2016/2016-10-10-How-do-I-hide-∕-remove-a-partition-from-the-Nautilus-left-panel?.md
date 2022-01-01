@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/835040
 type:         Answer
 tags:         nautilus udev luks
-created_date: !!str "2016-10-10 00:48:42"
-edit_date:    !!str "2016-10-14 01:09:17"
-votes:        !!str "8"
+created_date: 2016-10-10 00:48:42
+edit_date:    2016-10-14 01:09:17
+votes:        "8 "
 favorites:    
-views:        !!str "10,864"
+views:        "10,864 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

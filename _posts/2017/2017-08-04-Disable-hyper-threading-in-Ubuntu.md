@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/942843
 type:         Answer
 tags:         16.04 configuration performance cpu conky
-created_date: !!str "2017-08-04 03:30:27"
-edit_date:    !!str "2021-11-15 11:54:31"
-votes:        !!str "12"
+created_date: 2017-08-04 03:30:27
+edit_date:    2021-11-15 11:54:31
+votes:        "12 "
 favorites:    
-views:        !!str "24,015"
+views:        "24,015 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

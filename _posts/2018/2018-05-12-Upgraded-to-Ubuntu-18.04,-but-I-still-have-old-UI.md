@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035452
 type:         Answer
 tags:         18.04 unity gnome desktop-environments
-created_date: !!str "2018-05-12 20:34:05"
-edit_date:    !!str "2020-01-06 15:58:11"
-votes:        !!str "6"
+created_date: 2018-05-12 20:34:05
+edit_date:    2020-01-06 15:58:11
+votes:        "6 "
 favorites:    
-views:        !!str "2,114"
+views:        "2,114 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

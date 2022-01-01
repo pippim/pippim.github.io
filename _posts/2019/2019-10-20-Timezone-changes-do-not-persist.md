@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1182535
 type:         Answer
 tags:         18.04 time timezone
-created_date: !!str "2019-10-20 23:18:20"
-edit_date:    !!str "2019-10-24 10:57:12"
-votes:        !!str "1"
+created_date: 2019-10-20 23:18:20
+edit_date:    2019-10-24 10:57:12
+votes:        "1 "
 favorites:    
-views:        !!str "602"
+views:        "602 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

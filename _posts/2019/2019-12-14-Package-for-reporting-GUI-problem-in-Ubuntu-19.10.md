@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1196023
 type:         Answer
 tags:         ubuntu-gnome 19.10
-created_date: !!str "2019-12-14 00:53:25"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2019-12-14 00:53:25
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "136"
+views:        "136 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

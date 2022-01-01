@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1138927
 type:         Answer
 tags:         rfkill
-created_date: !!str "2019-04-28 17:34:04"
-edit_date:    !!str "2019-04-29 12:30:42"
-votes:        !!str "14"
+created_date: 2019-04-28 17:34:04
+edit_date:    2019-04-29 12:30:42
+votes:        "14 "
 favorites:    
-views:        !!str "6,951"
+views:        "6,951 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

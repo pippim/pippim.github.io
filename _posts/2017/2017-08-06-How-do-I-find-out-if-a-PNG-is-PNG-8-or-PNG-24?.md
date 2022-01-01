@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/943627
 type:         Answer
 tags:         command-line image-processing png
-created_date: !!str "2017-08-06 17:52:52"
-edit_date:    !!str "2017-08-09 02:53:27"
-votes:        !!str "28"
+created_date: 2017-08-06 17:52:52
+edit_date:    2017-08-09 02:53:27
+votes:        "28 "
 favorites:    
-views:        !!str "14,384"
+views:        "14,384 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

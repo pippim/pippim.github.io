@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/941061
 type:         Question
 tags:         boot printing services systemd cups-lpd
-created_date: !!str "2017-07-29 18:02:33"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "3"
+created_date: 2017-07-29 18:02:33
+edit_date:    2020-06-12 14:37:07
+votes:        "3 "
 favorites:    1
-views:        !!str "746"
+views:        "746 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1089078
 type:         Answer
 tags:         18.04 kubuntu suspend bluetooth
-created_date: !!str "2018-11-01 02:49:00"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2018-11-01 02:49:00
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "2,779"
+views:        "2,779 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

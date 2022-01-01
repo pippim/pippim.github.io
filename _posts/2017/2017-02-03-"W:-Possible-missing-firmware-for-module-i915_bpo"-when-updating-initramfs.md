@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/879250
 type:         Answer
 tags:         drivers 16.04 intel-graphics initramfs i915
-created_date: !!str "2017-02-03 01:12:04"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "25"
+created_date: 2017-02-03 01:12:04
+edit_date:    2020-06-12 14:37:07
+votes:        "25 "
 favorites:    
-views:        !!str "184,671"
+views:        "184,671 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    false

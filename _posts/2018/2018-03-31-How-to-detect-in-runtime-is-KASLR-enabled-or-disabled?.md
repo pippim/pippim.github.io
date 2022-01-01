@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1020911
 type:         Answer
 tags:         command-line kernel
-created_date: !!str "2018-03-31 20:38:26"
-edit_date:    !!str "2021-09-12 07:15:57"
-votes:        !!str "3"
+created_date: 2018-03-31 20:38:26
+edit_date:    2021-09-12 07:15:57
+votes:        "3 "
 favorites:    
-views:        !!str "8,780"
+views:        "8,780 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

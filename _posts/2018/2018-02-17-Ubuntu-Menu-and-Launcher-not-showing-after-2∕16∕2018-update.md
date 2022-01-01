@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1007213
 type:         Answer
 tags:         unity launcher
-created_date: !!str "2018-02-17 23:00:50"
-edit_date:    !!str "2018-02-18 19:12:33"
-votes:        !!str "8"
+created_date: 2018-02-17 23:00:50
+edit_date:    2018-02-18 19:12:33
+votes:        "8 "
 favorites:    
-views:        !!str "6,548"
+views:        "6,548 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

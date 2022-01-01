@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1014491
 type:         Answer
 tags:         dual-boot grub2 windows
-created_date: !!str "2018-03-13 10:34:15"
-edit_date:    !!str "2018-03-30 17:17:19"
-votes:        !!str "20"
+created_date: 2018-03-13 10:34:15
+edit_date:    2018-03-30 17:17:19
+votes:        "20 "
 favorites:    
-views:        !!str "9,640"
+views:        "9,640 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

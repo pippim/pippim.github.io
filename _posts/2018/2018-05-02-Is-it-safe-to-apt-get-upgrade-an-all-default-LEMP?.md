@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1031018
 type:         Answer
 tags:         apt upgrade mysql php nginx
-created_date: !!str "2018-05-02 10:32:45"
-edit_date:    !!str "2018-05-02 11:32:05"
-votes:        !!str "3"
+created_date: 2018-05-02 10:32:45
+edit_date:    2018-05-02 11:32:05
+votes:        "3 "
 favorites:    
-views:        !!str "210"
+views:        "210 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1037199
 type:         Answer
 tags:         keyboard 18.04 xinput
-created_date: !!str "2018-05-17 02:23:09"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "0"
+created_date: 2018-05-17 02:23:09
+edit_date:    2020-06-12 14:37:07
+votes:        "0 "
 favorites:    
-views:        !!str "206"
+views:        "206 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

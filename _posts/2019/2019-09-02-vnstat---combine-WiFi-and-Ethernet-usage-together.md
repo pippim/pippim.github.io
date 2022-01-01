@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1170353
 type:         Answer
 tags:         networking bash conky bandwidth vnstat
-created_date: !!str "2019-09-02 18:33:20"
-edit_date:    !!str "2019-09-07 15:18:07"
-votes:        !!str "4"
+created_date: 2019-09-02 18:33:20
+edit_date:    2019-09-07 15:18:07
+votes:        "4 "
 favorites:    
-views:        !!str "291"
+views:        "291 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

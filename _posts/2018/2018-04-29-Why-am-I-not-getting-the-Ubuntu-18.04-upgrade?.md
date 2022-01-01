@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029863
 type:         Answer
 tags:         upgrade 18.04 grub
-created_date: !!str "2018-04-29 20:51:34"
-edit_date:    !!str "2018-05-03 22:59:55"
-votes:        !!str "24"
+created_date: 2018-04-29 20:51:34
+edit_date:    2018-05-03 22:59:55
+votes:        "24 "
 favorites:    
-views:        !!str "52,317"
+views:        "52,317 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

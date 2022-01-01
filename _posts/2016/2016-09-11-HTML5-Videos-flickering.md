@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/823683
 type:         Answer
 tags:         google-chrome
-created_date: !!str "2016-09-11 16:21:55"
-edit_date:    !!str "2016-09-11 16:30:57"
-votes:        !!str "2"
+created_date: 2016-09-11 16:21:55
+edit_date:    2016-09-11 16:30:57
+votes:        "2 "
 favorites:    
-views:        !!str "1,758"
+views:        "1,758 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

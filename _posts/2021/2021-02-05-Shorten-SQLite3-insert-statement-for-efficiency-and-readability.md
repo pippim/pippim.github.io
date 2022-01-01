@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/66056368
 type:         Question
 tags:         python sqlite sql-insert
-created_date: !!str "2021-02-05 01:33:01"
-edit_date:    !!str ""
-votes:        !!str "0"
+created_date: 2021-02-05 01:33:01
+edit_date:    
+votes:        "0 "
 favorites:    
-views:        !!str "34"
+views:        "34 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

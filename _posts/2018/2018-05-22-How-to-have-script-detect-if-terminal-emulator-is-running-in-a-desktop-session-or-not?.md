@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1039023
 type:         Answer
 tags:         scripts desktop-environments virtual-console
-created_date: !!str "2018-05-22 12:05:03"
-edit_date:    !!str "2018-05-22 12:25:26"
-votes:        !!str "3"
+created_date: 2018-05-22 12:05:03
+edit_date:    2018-05-22 12:25:26
+votes:        "3 "
 favorites:    
-views:        !!str "943"
+views:        "943 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

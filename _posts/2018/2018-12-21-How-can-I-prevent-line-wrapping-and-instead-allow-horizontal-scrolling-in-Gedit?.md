@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1103573
 type:         Answer
 tags:         gedit scrolling
-created_date: !!str "2018-12-21 11:30:12"
-edit_date:    !!str "2018-12-21 11:36:47"
-votes:        !!str "6"
+created_date: 2018-12-21 11:30:12
+edit_date:    2018-12-21 11:36:47
+votes:        "6 "
 favorites:    
-views:        !!str "1,127"
+views:        "1,127 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

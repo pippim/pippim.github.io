@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/821054
 type:         Answer
 tags:         internet downloads wget
-created_date: !!str "2016-09-05 02:26:03"
-edit_date:    !!str ""
-votes:        !!str "4"
+created_date: 2016-09-05 02:26:03
+edit_date:    
+votes:        "4 "
 favorites:    
-views:        !!str "9,652"
+views:        "9,652 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

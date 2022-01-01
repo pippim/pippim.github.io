@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1150124
 type:         Answer
 tags:         laptop battery
-created_date: !!str "2019-06-10 22:45:51"
-edit_date:    !!str "2019-06-10 22:56:03"
-votes:        !!str "3"
+created_date: 2019-06-10 22:45:51
+edit_date:    2019-06-10 22:56:03
+votes:        "3 "
 favorites:    
-views:        !!str "545"
+views:        "545 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

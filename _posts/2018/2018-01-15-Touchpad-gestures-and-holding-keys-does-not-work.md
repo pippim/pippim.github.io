@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/995948
 type:         Answer
 tags:         16.04 keyboard touchpad grub
-created_date: !!str "2018-01-15 00:00:49"
-edit_date:    !!str "2018-02-11 16:41:20"
-votes:        !!str "13"
+created_date: 2018-01-15 00:00:49
+edit_date:    2018-02-11 16:41:20
+votes:        "13 "
 favorites:    
-views:        !!str "7,793"
+views:        "7,793 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    false

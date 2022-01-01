@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/854756
 type:         Answer
 tags:         power-management shutdown battery automation
-created_date: !!str "2016-11-29 01:00:23"
-edit_date:    !!str "2019-04-09 10:43:58"
-votes:        !!str "5"
+created_date: 2016-11-29 01:00:23
+edit_date:    2019-04-09 10:43:58
+votes:        "5 "
 favorites:    
-views:        !!str "1,611"
+views:        "1,611 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

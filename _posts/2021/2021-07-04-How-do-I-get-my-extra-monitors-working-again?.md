@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1349989
 type:         Answer
 tags:         nvidia multiple-monitors xorg grub
-created_date: !!str "2021-07-04 17:12:33"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2021-07-04 17:12:33
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "35"
+views:        "35 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

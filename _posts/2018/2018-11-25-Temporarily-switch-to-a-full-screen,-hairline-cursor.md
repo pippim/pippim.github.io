@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1095983
 type:         Answer
 tags:         16.04 cursor
-created_date: !!str "2018-11-25 19:01:19"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "10"
+created_date: 2018-11-25 19:01:19
+edit_date:    2020-06-12 14:37:07
+votes:        "10 "
 favorites:    
-views:        !!str "1,778"
+views:        "1,778 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

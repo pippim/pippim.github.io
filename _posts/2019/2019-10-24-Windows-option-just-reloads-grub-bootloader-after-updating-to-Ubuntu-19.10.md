@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1183623
 type:         Answer
 tags:         boot dual-boot windows-10 bootloader
-created_date: !!str "2019-10-24 22:54:33"
-edit_date:    !!str "2019-10-24 23:05:13"
-votes:        !!str "1"
+created_date: 2019-10-24 22:54:33
+edit_date:    2019-10-24 23:05:13
+votes:        "1 "
 favorites:    
-views:        !!str "622"
+views:        "622 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

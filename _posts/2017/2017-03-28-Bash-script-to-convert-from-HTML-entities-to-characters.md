@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43058947
 type:         Answer
 tags:         html bash html-escape-characters
-created_date: !!str "2017-03-28 01:06:23"
-edit_date:    !!str "2021-12-07 02:21:43"
-votes:        !!str "14"
+created_date: 2017-03-28 01:06:23
+edit_date:    2021-12-07 02:21:43
+votes:        "14 "
 favorites:    
-views:        !!str "53,957"
+views:        "53,957 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

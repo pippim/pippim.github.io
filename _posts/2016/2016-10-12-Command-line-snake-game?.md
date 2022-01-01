@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/835994
 type:         Answer
 tags:         command-line software-recommendation games
-created_date: !!str "2016-10-12 09:21:07"
-edit_date:    !!str "2021-12-08 02:56:40"
-votes:        !!str "7"
+created_date: 2016-10-12 09:21:07
+edit_date:    2021-12-08 02:56:40
+votes:        "7 "
 favorites:    
-views:        !!str "2,211"
+views:        "2,211 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

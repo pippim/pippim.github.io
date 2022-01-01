@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/869670
 type:         Answer
 tags:         boot grub2 raid
-created_date: !!str "2017-01-09 02:25:25"
-edit_date:    !!str "2017-03-20 10:18:11"
-votes:        !!str "4"
+created_date: 2017-01-09 02:25:25
+edit_date:    2017-03-20 10:18:11
+votes:        "4 "
 favorites:    
-views:        !!str "23,168"
+views:        "23,168 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

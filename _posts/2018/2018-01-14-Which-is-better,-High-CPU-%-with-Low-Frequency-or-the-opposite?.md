@@ -6,13 +6,13 @@ site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/416954
 type:         Question
 tags:         kernel cpu battery cpu-frequency temperature conky
-created_date: !!str "2018-01-14 03:14:21"
-edit_date:    !!str "2020-06-11 14:16:50"
-votes:        !!str "4"
+created_date: 2018-01-14 03:14:21
+edit_date:    2020-06-11 14:16:50
+votes:        "4 "
 favorites:    
-views:        !!str "1,691"
+views:        "1,691 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

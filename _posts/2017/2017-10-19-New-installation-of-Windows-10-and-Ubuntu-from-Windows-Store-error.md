@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/966214
 type:         Answer
 tags:         windows-subsystem-for-linux
-created_date: !!str "2017-10-19 03:15:06"
-edit_date:    !!str "2019-10-02 17:55:43"
-votes:        !!str "6"
+created_date: 2017-10-19 03:15:06
+edit_date:    2019-10-02 17:55:43
+votes:        "6 "
 favorites:    
-views:        !!str "96,857"
+views:        "96,857 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

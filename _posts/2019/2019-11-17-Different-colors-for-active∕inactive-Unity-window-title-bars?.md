@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1189575
 type:         Answer
 tags:         unity themes window colors
-created_date: !!str "2019-11-17 16:53:51"
-edit_date:    !!str "2019-11-20 00:56:28"
-votes:        !!str "4"
+created_date: 2019-11-17 16:53:51
+edit_date:    2019-11-20 00:56:28
+votes:        "4 "
 favorites:    
-views:        !!str "949"
+views:        "949 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

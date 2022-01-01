@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1035370
 type:         Answer
 tags:         networking wireless suspend
-created_date: !!str "2018-05-12 15:32:16"
-edit_date:    !!str "2019-04-05 10:58:19"
-votes:        !!str "17"
+created_date: 2018-05-12 15:32:16
+edit_date:    2019-04-05 10:58:19
+votes:        "17 "
 favorites:    
-views:        !!str "21,873"
+views:        "21,873 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/67667116
 type:         Question
 tags:         python class initialization instance-variables
-created_date: !!str "2021-05-24 05:36:20"
-edit_date:    !!str "2021-05-24 11:27:35"
-votes:        !!str "0"
+created_date: 2021-05-24 05:36:20
+edit_date:    2021-05-24 11:27:35
+votes:        "0 "
 favorites:    
-views:        !!str "41"
+views:        "41 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

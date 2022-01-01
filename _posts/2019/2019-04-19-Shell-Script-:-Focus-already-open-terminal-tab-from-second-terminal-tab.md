@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1135206
 type:         Answer
 tags:         command-line scripts gnome-terminal
-created_date: !!str "2019-04-19 12:18:51"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "6"
+created_date: 2019-04-19 12:18:51
+edit_date:    2020-06-12 14:37:07
+votes:        "6 "
 favorites:    
-views:        !!str "2,071"
+views:        "2,071 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

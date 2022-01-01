@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/868688
 type:         Answer
 tags:         kernel hard-drive
-created_date: !!str "2017-01-06 11:53:34"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2017-01-06 11:53:34
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "7,896"
+views:        "7,896 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/894470
 type:         Answer
 tags:         display laptop brightness backlight eyesome conky
-created_date: !!str "2017-03-19 01:10:27"
-edit_date:    !!str "2019-02-07 01:43:56"
-votes:        !!str "8"
+created_date: 2017-03-19 01:10:27
+edit_date:    2019-02-07 01:43:56
+votes:        "8 "
 favorites:    
-views:        !!str "5,160"
+views:        "5,160 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

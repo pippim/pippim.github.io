@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/826750
 type:         Answer
 tags:         apt 16.04 firefox google-chrome flash
-created_date: !!str "2016-09-19 02:27:58"
-edit_date:    !!str "2017-04-13 12:25:15"
-votes:        !!str "11"
+created_date: 2016-09-19 02:27:58
+edit_date:    2017-04-13 12:25:15
+votes:        "11 "
 favorites:    
-views:        !!str "10,460"
+views:        "10,460 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

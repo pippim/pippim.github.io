@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1195804
 type:         Answer
 tags:         command-line sudo password
-created_date: !!str "2019-12-13 04:08:20"
-edit_date:    !!str "2019-12-13 04:51:17"
-votes:        !!str "3"
+created_date: 2019-12-13 04:08:20
+edit_date:    2019-12-13 04:51:17
+votes:        "3 "
 favorites:    
-views:        !!str "5,040"
+views:        "5,040 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

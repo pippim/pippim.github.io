@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1245640
 type:         Answer
 tags:         disk-usage
-created_date: !!str "2020-06-01 00:55:34"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2020-06-01 00:55:34
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "365"
+views:        "365 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

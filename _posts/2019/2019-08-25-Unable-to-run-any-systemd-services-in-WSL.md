@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1168459
 type:         Answer
 tags:         18.04 windows-subsystem-for-linux kubernetes
-created_date: !!str "2019-08-25 18:51:00"
-edit_date:    !!str ""
-votes:        !!str "5"
+created_date: 2019-08-25 18:51:00
+edit_date:    
+votes:        "5 "
 favorites:    
-views:        !!str "21,916"
+views:        "21,916 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

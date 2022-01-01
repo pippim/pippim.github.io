@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1162750
 type:         Answer
 tags:         18.04 upgrade security
-created_date: !!str "2019-08-01 19:48:53"
-edit_date:    !!str "2019-08-01 23:00:13"
-votes:        !!str "2"
+created_date: 2019-08-01 19:48:53
+edit_date:    2019-08-01 23:00:13
+votes:        "2 "
 favorites:    
-views:        !!str "1,119"
+views:        "1,119 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/810777
 type:         Answer
 tags:         networking wireless hardware
-created_date: !!str "2016-08-11 01:08:41"
-edit_date:    !!str "2016-08-11 01:13:50"
-votes:        !!str "1"
+created_date: 2016-08-11 01:08:41
+edit_date:    2016-08-11 01:13:50
+votes:        "1 "
 favorites:    
-views:        !!str "51"
+views:        "51 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/823535
 type:         Answer
 tags:         unity gui display-resolution scaling 4k-monitor
-created_date: !!str "2016-09-11 04:03:18"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "6"
+created_date: 2016-09-11 04:03:18
+edit_date:    2020-06-12 14:37:07
+votes:        "6 "
 favorites:    
-views:        !!str "57,588"
+views:        "57,588 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

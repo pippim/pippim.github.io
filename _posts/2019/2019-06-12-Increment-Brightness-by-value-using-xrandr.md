@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1150409
 type:         Answer
 tags:         display laptop brightness xrandr alienware
-created_date: !!str "2019-06-12 00:00:39"
-edit_date:    !!str "2021-01-04 23:56:25"
-votes:        !!str "6"
+created_date: 2019-06-12 00:00:39
+edit_date:    2021-01-04 23:56:25
+votes:        "6 "
 favorites:    
-views:        !!str "4,658"
+views:        "4,658 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

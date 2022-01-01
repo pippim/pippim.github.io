@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/844317
 type:         Answer
 tags:         networking conky monitoring system-monitor vnstat
-created_date: !!str "2016-11-01 17:28:52"
-edit_date:    !!str "2021-08-05 10:19:27"
-votes:        !!str "21"
+created_date: 2016-11-01 17:28:52
+edit_date:    2021-08-05 10:19:27
+votes:        "21 "
 favorites:    
-views:        !!str "38,053"
+views:        "38,053 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

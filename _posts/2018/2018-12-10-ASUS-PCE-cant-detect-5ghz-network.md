@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1099864
 type:         Answer
 tags:         networking drivers network-manager broadcom asus
-created_date: !!str "2018-12-10 19:05:15"
-edit_date:    !!str ""
-votes:        !!str "5"
+created_date: 2018-12-10 19:05:15
+edit_date:    
+votes:        "5 "
 favorites:    
-views:        !!str "5,263"
+views:        "5,263 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

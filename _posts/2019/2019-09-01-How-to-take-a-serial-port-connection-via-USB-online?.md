@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1170099
 type:         Answer
 tags:         usb uefi serial-port
-created_date: !!str "2019-09-01 21:21:02"
-edit_date:    !!str "2019-09-01 22:23:08"
-votes:        !!str "2"
+created_date: 2019-09-01 21:21:02
+edit_date:    2019-09-01 22:23:08
+votes:        "2 "
 favorites:    
-views:        !!str "6,673"
+views:        "6,673 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

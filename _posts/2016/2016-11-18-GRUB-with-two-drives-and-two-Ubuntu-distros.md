@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/850661
 type:         Answer
 tags:         boot grub2 hard-drive
-created_date: !!str "2016-11-18 00:12:26"
-edit_date:    !!str ""
-votes:        !!str "4"
+created_date: 2016-11-18 00:12:26
+edit_date:    
+votes:        "4 "
 favorites:    
-views:        !!str "1,632"
+views:        "1,632 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

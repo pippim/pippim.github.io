@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/828486
 type:         Question
 tags:         16.04 kernel suspend systemd-logind
-created_date: !!str "2016-09-23 01:31:11"
-edit_date:    !!str "2019-06-29 16:20:32"
-votes:        !!str "11"
+created_date: 2016-09-23 01:31:11
+edit_date:    2019-06-29 16:20:32
+votes:        "11 "
 favorites:    5
-views:        !!str "4,370"
+views:        "4,370 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

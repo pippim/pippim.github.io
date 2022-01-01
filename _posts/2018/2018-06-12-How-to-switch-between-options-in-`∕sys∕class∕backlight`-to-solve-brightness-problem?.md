@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1045763
 type:         Answer
 tags:         brightness acpi
-created_date: !!str "2018-06-12 00:19:10"
-edit_date:    !!str "2019-04-04 23:15:22"
-votes:        !!str "4"
+created_date: 2018-06-12 00:19:10
+edit_date:    2019-04-04 23:15:22
+votes:        "4 "
 favorites:    
-views:        !!str "3,096"
+views:        "3,096 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

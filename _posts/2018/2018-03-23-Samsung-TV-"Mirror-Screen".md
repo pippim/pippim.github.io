@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018515
 type:         Answer
 tags:         display samsung screencast smart-tv
-created_date: !!str "2018-03-23 11:01:17"
-edit_date:    !!str "2018-10-17 07:39:57"
-votes:        !!str "8"
+created_date: 2018-03-23 11:01:17
+edit_date:    2018-10-17 07:39:57
+votes:        "8 "
 favorites:    
-views:        !!str "79,242"
+views:        "79,242 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

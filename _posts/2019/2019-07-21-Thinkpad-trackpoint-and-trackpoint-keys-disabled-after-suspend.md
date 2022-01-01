@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1159960
 type:         Answer
 tags:         18.04 thinkpad trackpoint
-created_date: !!str "2019-07-21 17:25:56"
-edit_date:    !!str "2019-07-22 15:37:41"
-votes:        !!str "4"
+created_date: 2019-07-21 17:25:56
+edit_date:    2019-07-22 15:37:41
+votes:        "4 "
 favorites:    
-views:        !!str "353"
+views:        "353 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

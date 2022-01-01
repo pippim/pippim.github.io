@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/47007615
 type:         Answer
 tags:         ubuntu windows-10 windows-subsystem-for-linux
-created_date: !!str "2017-10-30 03:06:11"
-edit_date:    !!str "2017-11-24 14:43:32"
-votes:        !!str "24"
+created_date: 2017-10-30 03:06:11
+edit_date:    2017-11-24 14:43:32
+votes:        "24 "
 favorites:    
-views:        !!str "33,154"
+views:        "33,154 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

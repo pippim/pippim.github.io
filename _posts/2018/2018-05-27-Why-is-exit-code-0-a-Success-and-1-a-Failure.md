@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1040914
 type:         Answer
 tags:         scripts
-created_date: !!str "2018-05-27 14:37:23"
-edit_date:    !!str "2018-05-27 16:04:12"
-votes:        !!str "6"
+created_date: 2018-05-27 14:37:23
+edit_date:    2018-05-27 16:04:12
+votes:        "6 "
 favorites:    
-views:        !!str "2,853"
+views:        "2,853 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

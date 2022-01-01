@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/837281
 type:         Question
 tags:         16.04 nautilus shortcut-keys
-created_date: !!str "2016-10-15 01:28:11"
-edit_date:    !!str ""
-votes:        !!str "0"
+created_date: 2016-10-15 01:28:11
+edit_date:    
+votes:        "0 "
 favorites:    
-views:        !!str "29"
+views:        "29 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

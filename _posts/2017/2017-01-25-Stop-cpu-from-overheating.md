@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/875872
 type:         Answer
 tags:         cpu temperature conky
-created_date: !!str "2017-01-25 00:50:03"
-edit_date:    !!str "2017-08-06 13:29:25"
-votes:        !!str "12"
+created_date: 2017-01-25 00:50:03
+edit_date:    2017-08-06 13:29:25
+votes:        "12 "
 favorites:    
-views:        !!str "24,240"
+views:        "24,240 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1021152
 type:         Answer
 tags:         libreoffice style
-created_date: !!str "2018-04-01 20:56:11"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "4"
+created_date: 2018-04-01 20:56:11
+edit_date:    2020-06-12 14:37:07
+votes:        "4 "
 favorites:    
-views:        !!str "609"
+views:        "609 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

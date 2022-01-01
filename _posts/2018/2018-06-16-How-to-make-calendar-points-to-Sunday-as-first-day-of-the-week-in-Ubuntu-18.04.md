@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1047183
 type:         Answer
 tags:         18.04 gnome-shell calendar
-created_date: !!str "2018-06-16 18:58:29"
-edit_date:    !!str "2019-12-08 14:12:41"
-votes:        !!str "4"
+created_date: 2018-06-16 18:58:29
+edit_date:    2019-12-08 14:12:41
+votes:        "4 "
 favorites:    
-views:        !!str "4,051"
+views:        "4,051 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

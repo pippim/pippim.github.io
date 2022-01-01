@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1001596
 type:         Answer
 tags:         14.04 server
-created_date: !!str "2018-01-31 05:58:18"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "3"
+created_date: 2018-01-31 05:58:18
+edit_date:    2020-06-12 14:37:07
+votes:        "3 "
 favorites:    
-views:        !!str "115"
+views:        "115 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/978978
 type:         Answer
 tags:         command-line windows-subsystem-for-linux ascii
-created_date: !!str "2017-11-22 03:00:29"
-edit_date:    !!str "2018-04-01 17:18:58"
-votes:        !!str "7"
+created_date: 2017-11-22 03:00:29
+edit_date:    2018-04-01 17:18:58
+votes:        "7 "
 favorites:    
-views:        !!str "3,754"
+views:        "3,754 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

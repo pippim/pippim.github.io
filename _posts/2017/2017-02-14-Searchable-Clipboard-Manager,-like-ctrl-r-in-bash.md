@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/883082
 type:         Answer
 tags:         software-recommendation indicator clipboard text history
-created_date: !!str "2017-02-14 00:17:58"
-edit_date:    !!str "2017-04-13 12:24:59"
-votes:        !!str "4"
+created_date: 2017-02-14 00:17:58
+edit_date:    2017-04-13 12:24:59
+votes:        "4 "
 favorites:    
-views:        !!str "1,652"
+views:        "1,652 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

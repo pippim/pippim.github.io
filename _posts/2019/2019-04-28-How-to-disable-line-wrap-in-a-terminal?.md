@@ -6,13 +6,13 @@ site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/515938
 type:         Answer
 tags:         terminal
-created_date: !!str "2019-04-28 01:15:29"
-edit_date:    !!str ""
-votes:        !!str "12"
+created_date: 2019-04-28 01:15:29
+edit_date:    
+votes:        "12 "
 favorites:    
-views:        !!str "101,954"
+views:        "101,954 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029808
 type:         Answer
 tags:         display 18.04 scaling
-created_date: !!str "2018-04-29 18:14:34"
-edit_date:    !!str "2018-05-07 23:29:11"
-votes:        !!str "7"
+created_date: 2018-04-29 18:14:34
+edit_date:    2018-05-07 23:29:11
+votes:        "7 "
 favorites:    
-views:        !!str "280,975"
+views:        "280,975 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

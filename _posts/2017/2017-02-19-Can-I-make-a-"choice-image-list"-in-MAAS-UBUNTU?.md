@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/885142
 type:         Answer
 tags:         maas grub
-created_date: !!str "2017-02-19 22:57:22"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "4"
+created_date: 2017-02-19 22:57:22
+edit_date:    2020-06-12 14:37:07
+votes:        "4 "
 favorites:    
-views:        !!str "318"
+views:        "318 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

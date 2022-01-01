@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1304590
 type:         Answer
 tags:         canonical community
-created_date: !!str "2021-01-02 20:06:52"
-edit_date:    !!str "2021-01-24 15:29:09"
-votes:        !!str "5"
+created_date: 2021-01-02 20:06:52
+edit_date:    2021-01-24 15:29:09
+votes:        "5 "
 favorites:    
-views:        !!str "781"
+views:        "781 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

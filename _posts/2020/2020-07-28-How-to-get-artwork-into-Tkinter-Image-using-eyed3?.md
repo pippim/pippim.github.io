@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63144242
 type:         Question
 tags:         python tkinter eyed3
-created_date: !!str "2020-07-28 23:30:47"
-edit_date:    !!str ""
-votes:        !!str "0"
+created_date: 2020-07-28 23:30:47
+edit_date:    
+votes:        "0 "
 favorites:    
-views:        !!str "189"
+views:        "189 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1196392
 type:         Answer
 tags:         14.04 16.04 upgrade
-created_date: !!str "2019-12-15 19:02:15"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "5"
+created_date: 2019-12-15 19:02:15
+edit_date:    2020-06-12 14:37:07
+votes:        "5 "
 favorites:    
-views:        !!str "834"
+views:        "834 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

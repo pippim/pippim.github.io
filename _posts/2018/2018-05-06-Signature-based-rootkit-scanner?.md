@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1032588
 type:         Answer
 tags:         software-recommendation security malware rootkit signature
-created_date: !!str "2018-05-06 01:44:40"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2018-05-06 01:44:40
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "1,079"
+views:        "1,079 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

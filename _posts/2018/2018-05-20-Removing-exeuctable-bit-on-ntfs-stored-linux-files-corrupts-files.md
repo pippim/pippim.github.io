@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1038502
 type:         Question
 tags:         mount ntfs chmod data-corruption vnstat
-created_date: !!str "2018-05-20 22:12:21"
-edit_date:    !!str "2018-05-20 22:17:34"
-votes:        !!str "0"
+created_date: 2018-05-20 22:12:21
+edit_date:    2018-05-20 22:17:34
+votes:        "0 "
 favorites:    
-views:        !!str "50"
+views:        "50 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157128
 type:         Answer
 tags:         16.04 upgrade updates lts
-created_date: !!str "2019-07-09 22:48:18"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2019-07-09 22:48:18
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "204"
+views:        "204 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

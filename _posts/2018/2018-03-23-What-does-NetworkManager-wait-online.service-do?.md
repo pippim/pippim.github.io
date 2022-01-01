@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1018731
 type:         Answer
 tags:         network-manager 17.10
-created_date: !!str "2018-03-23 23:35:51"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "64"
+created_date: 2018-03-23 23:35:51
+edit_date:    2020-06-12 14:37:07
+votes:        "64 "
 favorites:    
-views:        !!str "80,896"
+views:        "80,896 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

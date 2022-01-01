@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/937133
 type:         Answer
 tags:         16.04 nvidia xorg brightness backlight grub
-created_date: !!str "2017-07-17 23:26:12"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "13"
+created_date: 2017-07-17 23:26:12
+edit_date:    2020-06-12 14:37:07
+votes:        "13 "
 favorites:    
-views:        !!str "18,976"
+views:        "18,976 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

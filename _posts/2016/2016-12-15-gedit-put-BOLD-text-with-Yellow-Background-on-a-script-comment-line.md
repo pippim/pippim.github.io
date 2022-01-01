@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/861087
 type:         Question
 tags:         bash gedit
-created_date: !!str "2016-12-15 22:18:40"
-edit_date:    !!str "2016-12-21 03:11:58"
-votes:        !!str "3"
+created_date: 2016-12-15 22:18:40
+edit_date:    2016-12-21 03:11:58
+votes:        "3 "
 favorites:    
-views:        !!str "1,124"
+views:        "1,124 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

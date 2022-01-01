@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/863750
 type:         Answer
 tags:         scripts shortcut-keys touchpad
-created_date: !!str "2016-12-23 06:06:32"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "9"
+created_date: 2016-12-23 06:06:32
+edit_date:    2020-06-12 14:37:07
+votes:        "9 "
 favorites:    
-views:        !!str "3,511"
+views:        "3,511 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

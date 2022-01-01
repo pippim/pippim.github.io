@@ -6,13 +6,13 @@ site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/415479
 type:         Answer
 tags:         linux x86 vulnerability
-created_date: !!str "2018-01-08 00:12:49"
-edit_date:    !!str "2018-01-27 17:17:03"
-votes:        !!str "11"
+created_date: 2018-01-08 00:12:49
+edit_date:    2018-01-27 17:17:03
+votes:        "11 "
 favorites:    
-views:        !!str "29,208"
+views:        "29,208 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    false

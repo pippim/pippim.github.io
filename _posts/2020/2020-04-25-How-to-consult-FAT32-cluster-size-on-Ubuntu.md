@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1231102
 type:         Answer
 tags:         format sd-card fat32
-created_date: !!str "2020-04-25 22:52:55"
-edit_date:    !!str "2020-04-25 23:29:42"
-votes:        !!str "4"
+created_date: 2020-04-25 22:52:55
+edit_date:    2020-04-25 23:29:42
+votes:        "4 "
 favorites:    
-views:        !!str "2,825"
+views:        "2,825 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

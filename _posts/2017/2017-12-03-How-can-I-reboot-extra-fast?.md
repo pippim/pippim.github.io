@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/982797
 type:         Answer
 tags:         boot grub2 uefi login reboot yad
-created_date: !!str "2017-12-03 17:37:58"
-edit_date:    !!str "2017-12-05 04:56:25"
-votes:        !!str "3"
+created_date: 2017-12-03 17:37:58
+edit_date:    2017-12-05 04:56:25
+votes:        "3 "
 favorites:    
-views:        !!str "6,032"
+views:        "6,032 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    false

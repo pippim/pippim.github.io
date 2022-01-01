@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1162728
 type:         Answer
 tags:         bashrc windows-subsystem-for-linux
-created_date: !!str "2019-08-01 17:23:00"
-edit_date:    !!str "2019-08-02 03:36:11"
-votes:        !!str "3"
+created_date: 2019-08-01 17:23:00
+edit_date:    2019-08-02 03:36:11
+votes:        "3 "
 favorites:    
-views:        !!str "264"
+views:        "264 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

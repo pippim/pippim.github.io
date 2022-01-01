@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/906042
 type:         Answer
 tags:         nautilus filemanager yad
-created_date: !!str "2017-04-18 02:03:38"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2017-04-18 02:03:38
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "742"
+views:        "742 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    false

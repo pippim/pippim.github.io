@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1028605
 type:         Answer
 tags:         grub2 bash upgrade backup clone
-created_date: !!str "2018-04-27 03:53:41"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "28"
+created_date: 2018-04-27 03:53:41
+edit_date:    2020-06-12 14:37:07
+votes:        "28 "
 favorites:    
-views:        !!str "14,669"
+views:        "14,669 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

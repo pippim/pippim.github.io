@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/939742
 type:         Answer
 tags:         bash bashrc
-created_date: !!str "2017-07-25 20:29:44"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "6"
+created_date: 2017-07-25 20:29:44
+edit_date:    2020-06-12 14:37:07
+votes:        "6 "
 favorites:    
-views:        !!str "8,805"
+views:        "8,805 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

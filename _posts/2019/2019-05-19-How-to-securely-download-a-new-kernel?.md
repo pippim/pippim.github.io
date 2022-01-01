@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1144551
 type:         Answer
 tags:         kernel updates grub
-created_date: !!str "2019-05-19 17:10:07"
-edit_date:    !!str ""
-votes:        !!str "6"
+created_date: 2019-05-19 17:10:07
+edit_date:    
+votes:        "6 "
 favorites:    
-views:        !!str "758"
+views:        "758 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

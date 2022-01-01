@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064747
 type:         Answer
 tags:         wireless graphics intel-graphics xps
-created_date: !!str "2018-08-12 19:14:06"
-edit_date:    !!str "2018-08-14 00:46:15"
-votes:        !!str "3"
+created_date: 2018-08-12 19:14:06
+edit_date:    2018-08-14 00:46:15
+votes:        "3 "
 favorites:    
-views:        !!str "2,460"
+views:        "2,460 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

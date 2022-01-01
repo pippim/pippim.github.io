@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/936540
 type:         Answer
 tags:         libreoffice email thunderbird empathy gmail
-created_date: !!str "2017-07-15 22:42:06"
-edit_date:    !!str "2017-07-16 17:39:31"
-votes:        !!str "3"
+created_date: 2017-07-15 22:42:06
+edit_date:    2017-07-16 17:39:31
+votes:        "3 "
 favorites:    
-views:        !!str "2,092"
+views:        "2,092 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

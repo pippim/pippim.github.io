@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/843328
 type:         Answer
 tags:         server scripts startup cron autostart
-created_date: !!str "2016-10-29 23:04:46"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "0"
+created_date: 2016-10-29 23:04:46
+edit_date:    2020-06-12 14:37:07
+votes:        "0 "
 favorites:    
-views:        !!str "21,383"
+views:        "21,383 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

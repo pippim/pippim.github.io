@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/882420
 type:         Answer
 tags:         unity bash scripts system-tray eyesome multi-timer
-created_date: !!str "2017-02-11 23:34:13"
-edit_date:    !!str "2021-12-11 20:37:15"
-votes:        !!str "6"
+created_date: 2017-02-11 23:34:13
+edit_date:    2021-12-11 20:37:15
+votes:        "6 "
 favorites:    
-views:        !!str "1,853"
+views:        "1,853 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    true

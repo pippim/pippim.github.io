@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1374281
 type:         Answer
 tags:         apt 20.04 kernel xubuntu dpkg
-created_date: !!str "2021-11-08 12:21:01"
-edit_date:    !!str ""
-votes:        !!str "4"
+created_date: 2021-11-08 12:21:01
+edit_date:    
+votes:        "4 "
 favorites:    
-views:        !!str "375"
+views:        "375 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

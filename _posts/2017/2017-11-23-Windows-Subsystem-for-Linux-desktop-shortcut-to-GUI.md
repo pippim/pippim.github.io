@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/979332
 type:         Answer
 tags:         bash gui shortcuts windows-subsystem-for-linux yad
-created_date: !!str "2017-11-23 01:26:29"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "7"
+created_date: 2017-11-23 01:26:29
+edit_date:    2020-06-12 14:37:07
+votes:        "7 "
 favorites:    
-views:        !!str "10,158"
+views:        "10,158 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

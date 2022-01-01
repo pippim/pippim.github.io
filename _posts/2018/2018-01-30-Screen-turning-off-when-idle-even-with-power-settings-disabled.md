@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1001331
 type:         Answer
 tags:         gnome display 17.10
-created_date: !!str "2018-01-30 12:07:54"
-edit_date:    !!str "2018-01-31 00:46:37"
-votes:        !!str "3"
+created_date: 2018-01-30 12:07:54
+edit_date:    2018-01-31 00:46:37
+votes:        "3 "
 favorites:    
-views:        !!str "6,174"
+views:        "6,174 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

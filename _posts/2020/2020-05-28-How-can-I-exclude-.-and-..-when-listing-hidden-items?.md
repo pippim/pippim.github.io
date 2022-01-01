@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1244495
 type:         Answer
 tags:         command-line ls hidden-files
-created_date: !!str "2020-05-28 10:53:24"
-edit_date:    !!str "2020-05-28 12:31:35"
-votes:        !!str "4"
+created_date: 2020-05-28 10:53:24
+edit_date:    2020-05-28 12:31:35
+votes:        "4 "
 favorites:    
-views:        !!str "460"
+views:        "460 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

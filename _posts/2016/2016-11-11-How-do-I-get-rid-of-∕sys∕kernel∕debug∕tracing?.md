@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/848237
 type:         Answer
 tags:         16.04 mount debug
-created_date: !!str "2016-11-11 15:04:09"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "3"
+created_date: 2016-11-11 15:04:09
+edit_date:    2020-06-12 14:37:07
+votes:        "3 "
 favorites:    
-views:        !!str "10,607"
+views:        "10,607 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

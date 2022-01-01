@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/886225
 type:         Answer
 tags:         boot dual-boot grub2 windows-10 reboot
-created_date: !!str "2017-02-22 18:18:04"
-edit_date:    !!str "2017-02-22 20:19:24"
-votes:        !!str "20"
+created_date: 2017-02-22 18:18:04
+edit_date:    2017-02-22 20:19:24
+votes:        "20 "
 favorites:    
-views:        !!str "25,984"
+views:        "25,984 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

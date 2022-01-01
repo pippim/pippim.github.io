@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/892077
 type:         Answer
 tags:         boot apt grub2 kernel
-created_date: !!str "2017-03-11 19:05:58"
-edit_date:    !!str "2017-08-06 02:24:19"
-votes:        !!str "5"
+created_date: 2017-03-11 19:05:58
+edit_date:    2017-08-06 02:24:19
+votes:        "5 "
 favorites:    
-views:        !!str "6,709"
+views:        "6,709 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

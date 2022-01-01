@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1091962
 type:         Answer
 tags:         apt package-management tlp
-created_date: !!str "2018-11-11 14:47:09"
-edit_date:    !!str "2018-12-29 06:11:21"
-votes:        !!str "19"
+created_date: 2018-11-11 14:47:09
+edit_date:    2018-12-29 06:11:21
+votes:        "19 "
 favorites:    
-views:        !!str "20,950"
+views:        "20,950 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

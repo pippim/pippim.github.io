@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1076190
 type:         Answer
 tags:         boot plymouth boot-time
-created_date: !!str "2018-09-18 03:41:31"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2018-09-18 03:41:31
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "4,179"
+views:        "4,179 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

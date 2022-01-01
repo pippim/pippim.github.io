@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161354
 type:         Answer
 tags:         upgrade
-created_date: !!str "2019-07-26 22:59:51"
-edit_date:    !!str "2019-08-04 00:32:39"
-votes:        !!str "5"
+created_date: 2019-07-26 22:59:51
+edit_date:    2019-08-04 00:32:39
+votes:        "5 "
 favorites:    
-views:        !!str "114,380"
+views:        "114,380 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

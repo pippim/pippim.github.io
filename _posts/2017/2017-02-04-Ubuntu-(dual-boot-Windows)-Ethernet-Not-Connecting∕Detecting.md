@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/879818
 type:         Answer
 tags:         16.04 ethernet windows-10
-created_date: !!str "2017-02-04 16:54:25"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2017-02-04 16:54:25
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "16,015"
+views:        "16,015 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/991155
 type:         Answer
 tags:         16.04 mouse indicator battery logitech-unifying
-created_date: !!str "2017-12-31 22:02:55"
-edit_date:    !!str "2020-06-13 17:35:13"
-votes:        !!str "2"
+created_date: 2017-12-31 22:02:55
+edit_date:    2020-06-13 17:35:13
+votes:        "2 "
 favorites:    
-views:        !!str "2,385"
+views:        "2,385 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

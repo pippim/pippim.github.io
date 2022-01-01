@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/846455
 type:         Answer
 tags:         networking system-monitor bandwidth vnstat conky
-created_date: !!str "2016-11-07 04:50:28"
-edit_date:    !!str "2017-10-31 23:50:16"
-votes:        !!str "60"
+created_date: 2016-11-07 04:50:28
+edit_date:    2017-10-31 23:50:16
+votes:        "60 "
 favorites:    
-views:        !!str "92,144"
+views:        "92,144 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

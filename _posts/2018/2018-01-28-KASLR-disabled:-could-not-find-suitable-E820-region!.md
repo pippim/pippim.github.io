@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1000559
 type:         Answer
 tags:         boot kernel virtualbox
-created_date: !!str "2018-01-28 01:25:31"
-edit_date:    !!str "2018-01-28 01:39:07"
-votes:        !!str "3"
+created_date: 2018-01-28 01:25:31
+edit_date:    2018-01-28 01:39:07
+votes:        "3 "
 favorites:    
-views:        !!str "4,823"
+views:        "4,823 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

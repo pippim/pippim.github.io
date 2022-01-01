@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1064000
 type:         Answer
 tags:         backup dd grub
-created_date: !!str "2018-08-09 23:26:25"
-edit_date:    !!str ""
-votes:        !!str "7"
+created_date: 2018-08-09 23:26:25
+edit_date:    
+votes:        "7 "
 favorites:    
-views:        !!str "224,189"
+views:        "224,189 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

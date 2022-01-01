@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1093350
 type:         Answer
 tags:         startup-applications
-created_date: !!str "2018-11-16 01:39:42"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "6"
+created_date: 2018-11-16 01:39:42
+edit_date:    2020-06-12 14:37:07
+votes:        "6 "
 favorites:    
-views:        !!str "3,043"
+views:        "3,043 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

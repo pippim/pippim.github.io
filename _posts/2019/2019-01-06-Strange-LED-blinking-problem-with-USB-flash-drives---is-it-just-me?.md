@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1107458
 type:         Answer
 tags:         usb kernel flash udisks eject
-created_date: !!str "2019-01-06 15:56:20"
-edit_date:    !!str "2019-01-06 16:59:10"
-votes:        !!str "2"
+created_date: 2019-01-06 15:56:20
+edit_date:    2019-01-06 16:59:10
+votes:        "2 "
 favorites:    
-views:        !!str "1,339"
+views:        "1,339 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

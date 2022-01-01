@@ -6,13 +6,13 @@ site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/434701
 type:         Answer
 tags:         bash login prompt profile
-created_date: !!str "2018-03-31 16:28:12"
-edit_date:    !!str ""
-votes:        !!str "3"
+created_date: 2018-03-31 16:28:12
+edit_date:    
+votes:        "3 "
 favorites:    
-views:        !!str "58,468"
+views:        "58,468 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          true
 navigation:   true
 clipboard:    true

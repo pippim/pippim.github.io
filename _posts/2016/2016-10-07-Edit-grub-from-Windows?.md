@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/834406
 type:         Answer
 tags:         dual-boot grub2
-created_date: !!str "2016-10-07 23:32:48"
-edit_date:    !!str "2017-04-13 12:23:51"
-votes:        !!str "9"
+created_date: 2016-10-07 23:32:48
+edit_date:    2017-04-13 12:23:51
+votes:        "9 "
 favorites:    
-views:        !!str "27,609"
+views:        "27,609 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1188283
 type:         Answer
 tags:         kernel kubuntu dell ssd
-created_date: !!str "2019-11-12 20:34:12"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "10"
+created_date: 2019-11-12 20:34:12
+edit_date:    2020-06-12 14:37:07
+votes:        "10 "
 favorites:    
-views:        !!str "3,073"
+views:        "3,073 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

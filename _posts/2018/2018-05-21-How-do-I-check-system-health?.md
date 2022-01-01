@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1038711
 type:         Answer
 tags:         software-recommendation hardware hardware-test conky
-created_date: !!str "2018-05-21 13:37:40"
-edit_date:    !!str "2020-10-12 02:07:35"
-votes:        !!str "12"
+created_date: 2018-05-21 13:37:40
+edit_date:    2020-10-12 02:07:35
+votes:        "12 "
 favorites:    
-views:        !!str "27,663"
+views:        "27,663 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

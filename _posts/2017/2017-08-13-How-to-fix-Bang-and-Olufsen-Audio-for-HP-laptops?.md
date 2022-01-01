@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/945969
 type:         Answer
 tags:         drivers sound pulseaudio speakers
-created_date: !!str "2017-08-13 23:37:45"
-edit_date:    !!str "2021-01-07 00:31:36"
-votes:        !!str "3"
+created_date: 2017-08-13 23:37:45
+edit_date:    2021-01-07 00:31:36
+votes:        "3 "
 favorites:    
-views:        !!str "24,387"
+views:        "24,387 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

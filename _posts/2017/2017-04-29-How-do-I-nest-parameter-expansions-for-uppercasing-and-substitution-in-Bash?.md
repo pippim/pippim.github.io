@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/43690512
 type:         Question
 tags:         bash replace uppercase
-created_date: !!str "2017-04-29 00:14:39"
-edit_date:    !!str "2017-04-29 00:40:16"
-votes:        !!str "1"
+created_date: 2017-04-29 00:14:39
+edit_date:    2017-04-29 00:40:16
+votes:        "1 "
 favorites:    
-views:        !!str "49"
+views:        "49 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

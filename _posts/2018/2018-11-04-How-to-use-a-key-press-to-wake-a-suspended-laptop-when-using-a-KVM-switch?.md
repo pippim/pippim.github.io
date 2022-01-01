@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1089840
 type:         Answer
 tags:         laptop wakeup lid kvm-switch
-created_date: !!str "2018-11-04 00:33:56"
-edit_date:    !!str "2018-11-04 15:41:57"
-votes:        !!str "3"
+created_date: 2018-11-04 00:33:56
+edit_date:    2018-11-04 15:41:57
+votes:        "3 "
 favorites:    
-views:        !!str "4,856"
+views:        "4,856 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   true
 clipboard:    false

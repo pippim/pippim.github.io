@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1043245
 type:         Answer
 tags:         libreoffice
-created_date: !!str "2018-06-03 16:52:47"
-edit_date:    !!str "2018-06-09 00:11:06"
-votes:        !!str "4"
+created_date: 2018-06-03 16:52:47
+edit_date:    2018-06-09 00:11:06
+votes:        "4 "
 favorites:    
-views:        !!str "609"
+views:        "609 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

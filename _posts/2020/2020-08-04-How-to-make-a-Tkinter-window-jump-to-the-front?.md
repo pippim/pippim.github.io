@@ -6,13 +6,13 @@ site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/63238973
 type:         Answer
 tags:         python tkinter focus
-created_date: !!str "2020-08-04 01:22:26"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2020-08-04 01:22:26
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "83,247"
+views:        "83,247 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

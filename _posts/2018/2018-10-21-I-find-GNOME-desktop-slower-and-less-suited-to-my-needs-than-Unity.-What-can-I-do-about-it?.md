@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1085850
 type:         Answer
 tags:         unity gnome 18.04
-created_date: !!str "2018-10-21 14:06:29"
-edit_date:    !!str "2020-06-12 14:37:07"
-votes:        !!str "4"
+created_date: 2018-10-21 14:06:29
+edit_date:    2020-06-12 14:37:07
+votes:        "4 "
 favorites:    
-views:        !!str "249"
+views:        "249 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

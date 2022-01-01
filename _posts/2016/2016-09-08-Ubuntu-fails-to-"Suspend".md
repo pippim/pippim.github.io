@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/822337
 type:         Answer
 tags:         14.04 suspend
-created_date: !!str "2016-09-08 01:34:48"
-edit_date:    !!str "2020-02-08 18:37:04"
-votes:        !!str "2"
+created_date: 2016-09-08 01:34:48
+edit_date:    2020-02-08 18:37:04
+votes:        "2 "
 favorites:    
-views:        !!str "1,386"
+views:        "1,386 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

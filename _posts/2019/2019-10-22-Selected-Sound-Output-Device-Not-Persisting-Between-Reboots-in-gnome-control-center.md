@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1183074
 type:         Answer
 tags:         gnome sound pulseaudio gnome-control-center 19.10
-created_date: !!str "2019-10-22 23:19:51"
-edit_date:    !!str ""
-votes:        !!str "6"
+created_date: 2019-10-22 23:19:51
+edit_date:    
+votes:        "6 "
 favorites:    
-views:        !!str "1,826"
+views:        "1,826 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

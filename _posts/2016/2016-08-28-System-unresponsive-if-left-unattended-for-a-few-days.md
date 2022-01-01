@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/817663
 type:         Answer
 tags:         14.04 grub
-created_date: !!str "2016-08-28 04:03:16"
-edit_date:    !!str "2019-09-08 15:51:53"
-votes:        !!str "5"
+created_date: 2016-08-28 04:03:16
+edit_date:    2019-09-08 15:51:53
+votes:        "5 "
 favorites:    
-views:        !!str "221"
+views:        "221 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

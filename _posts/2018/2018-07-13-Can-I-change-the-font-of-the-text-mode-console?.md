@@ -6,13 +6,13 @@ site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/455009
 type:         Answer
 tags:         console tty fonts
-created_date: !!str "2018-07-13 00:09:43"
-edit_date:    !!str ""
-votes:        !!str "4"
+created_date: 2018-07-13 00:09:43
+edit_date:    
+votes:        "4 "
 favorites:    
-views:        !!str "197,714"
+views:        "197,714 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

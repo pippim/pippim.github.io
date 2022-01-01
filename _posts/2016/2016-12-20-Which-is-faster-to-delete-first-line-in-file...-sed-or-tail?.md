@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/862804
 type:         Question
 tags:         scripts sed tail
-created_date: !!str "2016-12-20 20:32:09"
-edit_date:    !!str "2017-04-13 12:25:10"
-votes:        !!str "14"
+created_date: 2016-12-20 20:32:09
+edit_date:    2017-04-13 12:25:10
+votes:        "14 "
 favorites:    3
-views:        !!str "15,010"
+views:        "15,010 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

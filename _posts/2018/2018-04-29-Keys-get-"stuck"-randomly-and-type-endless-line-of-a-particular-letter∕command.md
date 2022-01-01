@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1029791
 type:         Answer
 tags:         keyboard 18.04
-created_date: !!str "2018-04-29 17:39:09"
-edit_date:    !!str ""
-votes:        !!str "8"
+created_date: 2018-04-29 17:39:09
+edit_date:    
+votes:        "8 "
 favorites:    
-views:        !!str "8,387"
+views:        "8,387 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

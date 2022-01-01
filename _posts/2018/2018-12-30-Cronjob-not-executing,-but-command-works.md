@@ -6,13 +6,13 @@ site:         Unix & Linux
 stack_url:    https://unix.stackexchange.com/q/491623
 type:         Answer
 tags:         ubuntu cron
-created_date: !!str "2018-12-30 17:18:04"
-edit_date:    !!str "2018-12-30 17:20:41"
-votes:        !!str "2"
+created_date: 2018-12-30 17:18:04
+edit_date:    2018-12-30 17:20:41
+votes:        "2 "
 favorites:    
-views:        !!str "306"
+views:        "306 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

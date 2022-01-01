@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1155300
 type:         Answer
 tags:         login-screen
-created_date: !!str "2019-07-01 20:25:32"
-edit_date:    !!str ""
-votes:        !!str "1"
+created_date: 2019-07-01 20:25:32
+edit_date:    
+votes:        "1 "
 favorites:    
-views:        !!str "199"
+views:        "199 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

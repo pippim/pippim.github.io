@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1187756
 type:         Answer
 tags:         login reboot authentication
-created_date: !!str "2019-11-10 16:30:42"
-edit_date:    !!str "2019-11-10 16:37:20"
-votes:        !!str "2"
+created_date: 2019-11-10 16:30:42
+edit_date:    2019-11-10 16:37:20
+votes:        "2 "
 favorites:    
-views:        !!str "2,449"
+views:        "2,449 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

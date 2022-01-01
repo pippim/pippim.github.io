@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1102222
 type:         Answer
 tags:         ram swap rsync 18.10
-created_date: !!str "2018-12-16 00:59:36"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2018-12-16 00:59:36
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "1,203"
+views:        "1,203 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

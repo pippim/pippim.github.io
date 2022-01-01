@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1157668
 type:         Answer
 tags:         18.04 gui gnome-shell tty
-created_date: !!str "2019-07-11 22:54:48"
-edit_date:    !!str "2019-07-12 01:56:22"
-votes:        !!str "12"
+created_date: 2019-07-11 22:54:48
+edit_date:    2019-07-12 01:56:22
+votes:        "12 "
 favorites:    
-views:        !!str "17,106"
+views:        "17,106 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/818165
 type:         Answer
 tags:         file-sharing usb-storage copy
-created_date: !!str "2016-08-29 10:40:46"
-edit_date:    !!str "2017-04-13 12:24:53"
-votes:        !!str "3"
+created_date: 2016-08-29 10:40:46
+edit_date:    2017-04-13 12:24:53
+votes:        "3 "
 favorites:    
-views:        !!str "1,531"
+views:        "1,531 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

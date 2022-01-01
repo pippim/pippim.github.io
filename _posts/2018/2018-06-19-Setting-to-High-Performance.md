@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1047763
 type:         Answer
 tags:         power-management performance conky vnstat
-created_date: !!str "2018-06-19 02:14:50"
-edit_date:    !!str "2020-10-06 13:31:29"
-votes:        !!str "46"
+created_date: 2018-06-19 02:14:50
+edit_date:    2020-10-06 13:31:29
+votes:        "46 "
 favorites:    
-views:        !!str "82,452"
+views:        "82,452 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

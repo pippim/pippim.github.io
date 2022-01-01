@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1057543
 type:         Answer
 tags:         boot grub2 ssd external-hdd clone
-created_date: !!str "2018-07-19 11:25:33"
-edit_date:    !!str ""
-votes:        !!str "0"
+created_date: 2018-07-19 11:25:33
+edit_date:    
+votes:        "0 "
 favorites:    
-views:        !!str "1,948"
+views:        "1,948 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

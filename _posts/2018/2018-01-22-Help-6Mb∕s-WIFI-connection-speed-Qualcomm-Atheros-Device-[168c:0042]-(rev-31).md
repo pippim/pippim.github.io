@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/998636
 type:         Answer
 tags:         16.04 networking drivers wireless atheros
-created_date: !!str "2018-01-22 12:09:40"
-edit_date:    !!str "2018-04-09 00:44:25"
-votes:        !!str "1"
+created_date: 2018-01-22 12:09:40
+edit_date:    2018-04-09 00:44:25
+votes:        "1 "
 favorites:    
-views:        !!str "2,037"
+views:        "2,037 "
 accepted:     Accepted
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

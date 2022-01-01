@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1008228
 type:         Answer
 tags:         16.04 lock-screen
-created_date: !!str "2018-02-21 03:16:40"
-edit_date:    !!str ""
-votes:        !!str "2"
+created_date: 2018-02-21 03:16:40
+edit_date:    
+votes:        "2 "
 favorites:    
-views:        !!str "2,865"
+views:        "2,865 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

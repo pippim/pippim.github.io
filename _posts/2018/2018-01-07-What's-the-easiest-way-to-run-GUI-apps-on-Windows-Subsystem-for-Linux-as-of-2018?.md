@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/993331
 type:         Answer
 tags:         gui windows-subsystem-for-linux yad
-created_date: !!str "2018-01-07 19:59:43"
-edit_date:    !!str "2019-06-07 02:14:40"
-votes:        !!str "100"
+created_date: 2018-01-07 19:59:43
+edit_date:    2019-06-07 02:14:40
+votes:        "100 "
 favorites:    
-views:        !!str "286,222"
+views:        "286,222 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/964094
 type:         Answer
 tags:         performance io pcie
-created_date: !!str "2017-10-12 02:39:22"
-edit_date:    !!str "2018-10-08 19:52:57"
-votes:        !!str "3"
+created_date: 2017-10-12 02:39:22
+edit_date:    2018-10-08 19:52:57
+votes:        "3 "
 favorites:    
-views:        !!str "36,439"
+views:        "36,439 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    false

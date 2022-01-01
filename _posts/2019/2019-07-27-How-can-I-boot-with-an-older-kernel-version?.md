@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1161535
 type:         Answer
 tags:         grub2 kernel
-created_date: !!str "2019-07-27 19:31:54"
-edit_date:    !!str ""
-votes:        !!str "4"
+created_date: 2019-07-27 19:31:54
+edit_date:    
+votes:        "4 "
 favorites:    
-views:        !!str "354,058"
+views:        "354,058 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true

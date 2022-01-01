@@ -6,13 +6,13 @@ site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1084727
 type:         Answer
 tags:         cpu 18.04 governor
-created_date: !!str "2018-10-18 01:48:54"
-edit_date:    !!str "2020-08-09 15:24:54"
-votes:        !!str "8"
+created_date: 2018-10-18 01:48:54
+edit_date:    2020-08-09 15:24:54
+votes:        "8 "
 favorites:    
-views:        !!str "137,208"
+views:        "137,208 "
 accepted:     
-uploaded:     !!str "2021-12-31 19:13:18"
+uploaded:     2022-01-01 10:05:50
 toc:          false
 navigation:   false
 clipboard:    true
