@@ -16,8 +16,9 @@
 #       Dec. 09 2021 - Change SE half-links [https://..] to [link name].
 #       Dec. 11 2021 - Minimum number of words since last Navigation Bar.
 #       Dec. 18 2021 - posts_by_tag.html generation.
-#       Dec. 26 2021 - swap_se_links() and speed_search() development.
-#       Dec. 29 2021 - Convert from <a href= to ({% post_url
+#       Dec. 26 2021 - create_speed_search() development.
+#       Dec. 29 2021 - Update <a href= to use {% post_url %}.
+#       Dec. 31 2021 - Add site wide variables to CONFIG_YML
 #
 # ==============================================================================
 
@@ -74,8 +75,7 @@ from random import randint
 
     Create list of tag substitutions, eg windows-subsystem-for-linux becomes wsl
 
-    Option to separate posts by year so GitHubs limit of 1,000 files isn't hit.
-    Requires OS module to create directory if it doesn't exist. Grab from mserve.    
+
 
     ADD THESE NOTES TO NEW SHELL SCRIPT:
     
@@ -86,16 +86,17 @@ $ git config --global user.email "pippim.com@gmail.com"
 $ git config -l
 user.name=pippim
 user.email=pippim.com@gmail.com
-core.repositoryformatversion=0
-core.filemode=true
-core.bare=false
-core.logallrefupdates=true
-remote.origin.url=https://github.com/pippim/pippim.github.io
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.main.remote=origin
-branch.main.merge=refs/heads/main
-
+(.. SNIP...)
 $git config --global credential.helper cache
+
+Above didn't work for me. Instead: https://stackoverflow.com/a/17979600/6929343
+
+$ git config credential.helper store
+$ git push http://example.com/repo.git
+Username: <type your username>
+Password: <type your password>
+
+
             
 """
 
@@ -103,7 +104,8 @@ WEBSITE_NAME = "pippim.github.io"
 INPUT_FILE = 'QueryResults.csv'
 RANDOM_LIMIT = None         # On initial trials limit the number of blog posts to 10
 PRINT_RANDOM = False        # Print out matching random records found
-OUTPUT_DIR = "../_posts/"   # Subdirectory name. Use "" for current directory
+OUTPUT_DIR = "../_posts/"   # Must match G-H Pages / Jekyll name
+OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
 QUESTIONS_QUALIFIER = True  # Convert questions to blog posts
 VOTE_QUALIFIER = 2          # Posts need at least 2 votes to qualify
 ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
@@ -145,23 +147,6 @@ NAV_LAST_LINES = 13         # Minimum of 13 lines since last navigation bar. Not
 COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
 COPY_LINE_MIN = 20          # Number of lines required to qualify for button
 
-""" TODO: 
-
-https://talk.jekyllrb.com/t/plugin-for-show-more-code-block/4149/2
-
-<details>
-<summary>
-Preview
-</summary>
-
-{% highlight ruby %}
-puts 'Expanded message'
-{% endhighlight %}
-
-</details>
-
-"""
-
 # If question or answer contains one of these "pseudo tags" then jekyll front
 # will have tag added as if it were really on the question. Essentially you
 # are tagging your answers and adding them to OP's question tags.
@@ -183,6 +168,11 @@ top_posts = []              # List of tuples [(views, title, our_url])
 EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
                  "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
                  "Medical Sciences", "Ask Ubuntu Meta"]
+
+# See: /website/sede/refresh.sh for how file is updated on GitHub Pages
+CONFIG_YML = "../_config.yml"
+# "../_config.yml" file is opened and parsed for following string:
+CONFIG_STR = "# Must be last comment! stack-to-blog.py variables added below"
 
 ''' Initialize Global Variables '''
 rows = []                   # Returned rows, less record #1 (field names)
@@ -348,6 +338,7 @@ alternate_h2 = 0            # Alternate H2 lines followed by "--"
 header_levels = [0, 0, 0, 0, 0, 0]
 paragraph_count = 0         # How many paragraphs in post last one not counted
 word_count = 0              # How many words by splitting whitespace
+tags = []                   # Tags used in this blog post
 pseudo_tag_count = 0        # Words in answer that qualify as tags for question
 pseudo_tag_names = []       # All tag names added for this post
 self_answer = False         # Is this a self-answered question?
@@ -367,6 +358,7 @@ suppress_nav_bars = 0       # How many nav bars suppressed in this post?
 
 # Current timestamp for front matter "uploaded:"
 now = dt.now().strftime("%Y-%m-%d %H:%M:%S")
+
 
 
 def create_speed_search():
@@ -518,13 +510,13 @@ def set_ss_save_blog(r):
 
     ''' SCORE = (Up Votes - Down Votes) in string format'''
     if r[SCORE] != '':
-        score = int(r[SCORE])
+        vote = int(r[SCORE])
     else:
-        score = 0
+        vote = 0
 
-    total_votes += score    # score is up-votes - down-votes can be negative
+    total_votes += vote    # score is up-votes - down-votes can be negative
 
-    if score < VOTE_QUALIFIER:
+    if vote < VOTE_QUALIFIER:
         save = False   # Below up-vote requirement
 
     ''' VIEWS '''
@@ -573,7 +565,13 @@ def set_ss_save_blog(r):
 
 def dump(r):
     """ Dump contents of one row to terminal in good-looking format
+
+        For example use something like:
+
+            if sub_dir == "/2014/":
+                dump(r)
     """
+
     print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
     print('Title:  ', r[TITLE].replace('/', '∕')[:80])
     print('URL:    ', r[URL][:80])
@@ -801,8 +799,8 @@ def check_half_links(ln):
         name_start = row[HTML].find('>', found_start)
         failure = "'name_start'"
         name_end = name_start  # For PyCharm error checker
+        found_end = name_start - 1  # Where href link ends
         if name_start != -1:
-            found_end = name_start - 1  # Where href link ends
             name_start += 1  # Skip over >
             failure = None
             ''' Search for name's ending </a> '''
@@ -886,7 +884,7 @@ def check_tail_links(ln):
 def check_full_links(ln):
     """ Scan line for SE full-links where '[Name](https://...)' appears.
 
-        If https:// appears in ss_url then swap in Pippim's answer if
+        If https:// appears in ss_url then swap in Pippim answer if
         ss_save_blog is True.
 
         NOTE: No records were ever found matching this search...
@@ -906,14 +904,12 @@ def check_full_links(ln):
 
     ln_len = len(ln)
     last_start = 0
-    print_this = None
-    # print_this = "https://askubuntu.com/q/882420"
 
     while True:
         # Search for next half-link after last half-link
         name_start = ln.find("[", last_start)
         if name_start == -1:
-            break  # No more hyper-links found
+            break  # No more hyperlinks found
 
         name_start += 1
         name_end = ln.find("](http", name_start)  # Find end of half-link.
@@ -1131,8 +1127,8 @@ def add_tag_post(name_index, names, r):
         accepted = ""
     post_created_date = r[CREATED]
 
-    s = dt.strptime(post_created_date[:10], "%Y-%m-%d")
-    created_date_string = s.strftime('%B %-d, %Y')
+    cs = dt.strptime(post_created_date[:10], "%Y-%m-%d")
+    created_date_string = cs.strftime('%B %-d, %Y')
     t = (str_name, base_filename, r[TITLE].replace('/', '∕'), r[VIEWS],
          r[SCORE], accepted, created_date_string)
     tag_posts.append(t)
@@ -1542,20 +1538,30 @@ def navigation_bar(skip_btn=True):
 
 
 def front_matter(r):
-    """ Output Jekyll front matter to md string """
+    """ Output Jekyll front matter to md string
+
+    """
     md = "---\n" + FRONT_LAYOUT + "\n"
-    md = md + FRONT_TITLE + r[TITLE].replace('/', '∕') + '\n'
+    # Folded Title: https://talk.jekyllrb.com/t/
+    # how-to-use-single-quote-and-double-quote-as-part-of-title-without-escaping/2705/9
+    md = md + FRONT_TITLE + ">\n    " + r[TITLE].replace('/', '∕') + '\n'
     if FRONT_SITE is not None:
         md = md + FRONT_SITE + r[SITE] + '\n'
     if FRONT_URL is not None:
         md = md + FRONT_URL + r[URL] + '\n'
         ''' NOTE: When FRONT_URL is used then FRONT_SITE and FRONT_TYPE must
             also be used because "_layouts/post.html" contains:
-              {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
-                <h2 class="project-tagline"><a href="{{ page.stack_url }}"
-                       >🔍 See Original {{ page.type }} on {{ page.site }}</a>
-                </h2>
-              {% endif %}
+                {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
+                  {% if page.type and page.type != "" and page.type != nil %}
+                    {% if page.site and page.site != "" and page.site != nil %}
+                      <br/>
+                      <fmVar>Link:</fmVar>
+                        <a href="{{ page.stack_url }}" title=
+                           "Read original {{ page.type }} on Stack Exchange website but, you might see subtle ads."
+                             >🔍 See Original {{ page.type }} on {{ page.site }} 🔗</a>
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
         '''
     if FRONT_POST_ID is not None:
         md = md + FRONT_POST_ID + r[POST_ID] + '\n'
@@ -1568,19 +1574,17 @@ def front_matter(r):
         md = md + FRONT_TAGS + tags + '\n'
 
     if FRONT_CREATED is not None:
-        # 2018-03-24 01:21:10+0000 - Strip off "+0000"
-        md = md + FRONT_CREATED + r[CREATED][:19] + '\n'
-        if len(r[CREATED]) > 20 and r[CREATED][21:] != "0000":
-            print('UTC adjustment not done on time r[CREATED]:', r[CREATED])
+        md = md + FRONT_CREATED + r[CREATED] + '\n'
     if FRONT_LAST_EDIT is not None:
-        md = md + FRONT_LAST_EDIT + r[LAST_EDIT][:19] + '\n'
+        md = md + FRONT_LAST_EDIT + r[LAST_EDIT] + '\n'
     if FRONT_EDITED_BY is not None:
         md = md + FRONT_EDITED_BY + r[EDITED_BY] + '\n'
     if FRONT_SCORE is not None:
         if r[SCORE] == "":
             md = md + FRONT_SCORE + r[SCORE] + '\n'
         else:
-            md = md + FRONT_SCORE + '{:,}'.format(int(r[SCORE])) + '\n'
+            # Insert thin space “ ” (U+2005) at string's closing double quote
+            md = md + FRONT_SCORE + '"' + '{:,}'.format(int(r[SCORE])) + ' "\n'
     if FRONT_FAVORITES is not None:
         if r[FAVORITES] == "":
             md = md + FRONT_FAVORITES + r[FAVORITES] + '\n'
@@ -1590,7 +1594,8 @@ def front_matter(r):
         if r[VIEWS] == "":
             md = md + FRONT_VIEWS + r[VIEWS] + '\n'
         else:
-            md = md + FRONT_VIEWS + '{:,}'.format(int(r[VIEWS])) + '\n'
+            # See: https://github.com/dtao/safe_yaml/issues/71
+            md = md + FRONT_VIEWS + '"' + '{:,}'.format(int(r[VIEWS])) + ' "\n'
     if FRONT_ANSWERS is not None:
         md = md + FRONT_ANSWERS + r[ANSWERS] + '\n'
     if FRONT_ACCEPTED is not None:
@@ -1601,7 +1606,7 @@ def front_matter(r):
         md = md + FRONT_CLOSED + r[CW] + '\n'
 
     # Extra front matter generated by `stack-to-blog.py` actions:
-    md = md + FRONT_UPLOADED + now[:19] + '\n'
+    md = md + FRONT_UPLOADED + now + '\n'
     if insert_toc is True:
         jekyll_boolean = "true"
     else:
@@ -1629,10 +1634,14 @@ def create_blog_filename(r):
     """ Return blog filename.
         Replace all spaces in title with "-"
         Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
-        TODO: Separate into subdirectories by year
+        When using {% post_url %} base_fn
+        When using {% link %} blog_fn
     """
-    base_fn = r[CREATED].split()[0] + '-' + r[TITLE].replace('/', '∕').replace(' ', '-')
+    sub_dir = make_output_year_dir(r[CREATED])
+    base_fn = sub_dir + r[CREATED].split()[0] + '-' + \
+        r[TITLE].replace('/', '∕').replace(' ', '-')
     blog_fn = OUTPUT_DIR + base_fn + ".md"
+    blog_fn = blog_fn.replace('//', '/')
     return base_fn, blog_fn
 
 
@@ -1663,6 +1672,28 @@ def check_self_answer(r):
                 accepted = True  # Is this self-answered question accepted?
 
     return answer, accepted, search_url
+
+
+def make_output_year_dir(post_date):
+    """
+    """
+    import os
+    if OUTPUT_BY_YEAR_DIR is None or False or OUTPUT_BY_YEAR_DIR == "":
+        return ""  # Will be concatenated into string making up blog_filename
+
+    # Does target directory exist?
+    new_sub = "/" + post_date[0:4] + "/"
+    prefix = OUTPUT_DIR + new_sub
+    prefix = prefix.replace('//', '/')
+    if not os.path.isdir(prefix):
+        try:
+            os.makedirs(prefix)
+            print('Created directory:', prefix)
+        except OSError as error:
+            print(error)
+            fatal_error('Could not make directory path:' + prefix)
+
+    return new_sub
 
 
 def write_md(md):
@@ -1741,8 +1772,11 @@ def gen_top_posts():
 
     top_posts.sort()
     html = ""  # Start with empty html
-    # Read bottom 10
-    for i in range(len(top_posts) - 1, len(top_posts) - 11, -1):
+    # Read bottom 10 of list backwards
+    highest = len(top_posts) - 1
+    lowest = highest - TOP_POSTS_INCLUDE
+
+    for i in range(highest, lowest, -1):
         vote, title, our_url = top_posts[i]
         #print('our_url:', our_url)  # Debugging stuff
         html += html_post_line(str(vote), our_url, title,
@@ -1798,7 +1832,6 @@ def gen_post_by_tag_groups():
     prev_tag_letter = ""
     prev_tag_name = ""
     prev_tag_spans_many_groups = ""
-    tag_letter_index_changed = False
     current_tag_fits = False    # Will current tag fit inside group?
     current_tag_fits_own_group = False  # > TAG_MIN_GROUP
     current_tag_spans_many_groups = False  # > TAG_AVG_GROUP * 2
@@ -1965,6 +1998,13 @@ def gen_post_by_tag_groups():
             remaining = tag_name_count - inner_name_count
             if remaining <= TAG_MAX_GROUP - TAG_AVG_GROUP:
                 keep_rule = 1
+                if 27 <= group_count <= 26:
+                    print()
+                    print('keep-rule: 1 using: remaining + TAG_AVG_GROUP <= TAG_MAX_GROUP:')
+                    print(keep_rule, remaining, TAG_AVG_GROUP, TAG_MAX_GROUP)
+                    print('tag_name_count:', tag_name_count, 'inner_name_count:',
+                          inner_name_count, 'inner_count:', inner_count)
+                    print('prev_tag_name != ', prev_tag_name, 'tag_name:', tag_name)
             else:
                 force_break = True
                 break_rule = 5
@@ -1977,7 +2017,7 @@ def gen_post_by_tag_groups():
                 if 27 <= group_count <= 26:
                     print()
                     print('keep-rule: 2 using: remaining + TAG_AVG_GROUP <= TAG_MAX_GROUP:')
-                    print(remaining, TAG_AVG_GROUP, TAG_MAX_GROUP)
+                    print(keep_rule, remaining, TAG_AVG_GROUP, TAG_MAX_GROUP)
                     print('tag_name_count:', tag_name_count, 'inner_name_count:',
                           inner_name_count, 'inner_count:', inner_count)
                     print('prev_tag_name != ', prev_tag_name, 'tag_name:', tag_name)
@@ -2357,19 +2397,14 @@ def html_write_post_tags(html):
         fh.write(html)
 
 
-''' Swap SE links for Internal links when available
-    =======================================================================
+def update_config():
+    """ Update site wide variables in _config.yml
+    # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
+    CONFIG_YML = "../_config.yml"
+    # "../_config.yml" file is opened and parsed for following string:
+    CONFIG_STR = "# Must be last comment! stack-to-blog.py variables added below"
+    """
 
-    Very Time Consuming!
-
-    After all posts have been written, reread them and look up links with
-    rows[] (QueryResults.csv). If link name found, reverse engineer the
-    blog post filename and if it exists, use that link instead. 
-
-'''
-
-
-def swap_se_links():
     pass
 
 
@@ -2462,6 +2497,7 @@ for row in rows:
     header_levels = [0, 0, 0, 0, 0, 0]
     paragraph_count = 0     # How many paragraphs (headers count as 2) in post
     word_count = 0          # How many words (includes "## ") in post
+    tags = []               # Tags used in this blog post
     pseudo_tag_count = 0    # Words in answer that qualify as tags for question
     pseudo_tag_names = []   # Reset pseudo tag names from last post
     self_answer = False     # Is this a self-answered question?
@@ -2502,8 +2538,8 @@ for row in rows:
             score = int(row[SCORE])
         else:
             score = 0
-        t = (score, ss_title, ss_post_url)
-        top_posts.append(t)
+        pt = (score, ss_title, ss_post_url)
+        top_posts.append(pt)
 
     ''' If we aren't saving this blog, grab the next '''
     if save_blog is False:
@@ -2711,6 +2747,7 @@ if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
     print('')
 
 if RANDOM_LIMIT is not None:
+    # noinspection PyStringFormat
     random_limit = '{:>6,}'.format(RANDOM_LIMIT)
 else:
     random_limit = '   None'
