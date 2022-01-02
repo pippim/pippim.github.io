@@ -141,6 +141,10 @@ $honeydew: #F0FFF0 !default; // Honeydew
 
 .front-matter:hover .hidden-child{
     visibility: visible;
+    // From: https://stackoverflow.com/a/31874748/6929343
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }
 
 // Swap font color and background color
