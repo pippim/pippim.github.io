@@ -143,7 +143,8 @@ $honeydew: #F0FFF0 !default; // Honeydew
     visibility: visible;
     // From: https://stackoverflow.com/a/31874748/6929343
     position: fixed;
-    right: 0;
+    // Goes far right of screen not right of border
+    // right: 0;
     bottom: 0;
 }
 
