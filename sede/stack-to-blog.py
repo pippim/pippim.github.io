@@ -19,6 +19,7 @@
 #       Dec. 26 2021 - create_speed_search() development.
 #       Dec. 29 2021 - Update <a href= to use {% post_url %}.
 #       Dec. 31 2021 - Add site wide variables to CONFIG_YML
+#       Jan. 01 2022 - Resurrect check_full_links(), add check_no_links()
 #
 # ==============================================================================
 
@@ -62,6 +63,7 @@ from datetime import datetime as dt
 # AttributeError: 'module' object has no attribute 'now'
 # Credit: https://stackoverflow.com/a/32463688/6929343
 
+import os
 import csv
 from random import randint
 
@@ -307,6 +309,8 @@ total_indent_lines = 0      # How many lines are inside code indents?
 total_half_links = 0        # SE uses [https://…] instead of [Post Title]
 total_bad_half_links = 0    # SE half-links unresolved - not in this query
 total_tail_links = 0        # "[x]:  https://…"  replaced with ss_post_url
+total_full_links = 0        # "[https://…](https://…)"  replaced with ss_post_url
+total_no_links = 0          # "https://…"  replaced with "[https://…](https://…)"
 total_suppress_nav = 0      # Total Navigation Bars suppressed (< NAV_LAST_WORDS)
 total_clipboards = 0        # How many copy to clipboard inserts?
 total_copy_lines = 0        # How many code block lines in clipboard inserts?
@@ -537,13 +541,20 @@ def set_ss_save_blog(r):
         question_count += 1
 
         # Converted from tally_self_answer
+        # TODO: FIx: https://stackoverflow.com/questions/59621559/python-tkinter-avoid-using-root-name-in-lower-level-function
+        # Fix: https://stackoverflow.com/questions/68011128/where-to-find-usr-include-x11-extensions-xcomposite-h
+        # Question is answered by someone else and accepted. self_answer should be false
         self_answer, self_accept, search_url = check_self_answer(r)
-        if not QUESTIONS_QUALIFIER or self_answer:
+        if "17466561" in r[URL] or "59621559" in r[URL]:
+            print(search_url)
+            print('self_answer:', self_answer, 'self_accept:', self_accept)
+            # fatal_error("This is it")
+        if not QUESTIONS_QUALIFIER or self_answer is True:
             save = False  # Questions don't qualify or this self-answered
 
-        if self_answer:
+        if self_answer is True:
             total_self_answer += 1
-            if self_accept:
+            if self_accept is True:
                 total_self_accept += 1
             else:
                 self_not_accept_url.append(search_url)
@@ -715,7 +726,7 @@ def block_quote(ln):
         #print('Found block quote:', ln)
         if ln[-2:] != "  ":
             #print('Forcing two spaces after:', ln)
-            ln = ln + "  "
+            ln += "  "
             total_quote_spaces += 1
 
     return ln
@@ -844,6 +855,13 @@ def check_half_links(ln):
 def check_tail_links(ln):
     """ Scan line for SE tail-links where '  [x]: [https://...]' appears.
 
+        Assumes certain hierarchy chain:
+
+            line = check_half_links(ln)
+            line = check_tail_links(ln)
+                Above calls: ln = check_no_links(ln)
+            line = check_full_links(ln)
+
         From: https://meta.stackexchange.com/help/formatting
 
         There are three ways to write links. Each is easier to read than the last:
@@ -864,7 +882,9 @@ def check_tail_links(ln):
 
     if not ln[:3] == "  [":
         # Must start with "  ["
-        return ln
+        # Perfect time to check for no links as it would normally break this
+        # function, check_tail_links(), with a false positive.
+        return check_no_links(ln)
 
     # Must start with "  [xxx]: h"
     h_start = ln.find(']: h', 4)
@@ -881,6 +901,95 @@ def check_tail_links(ln):
     return ln.replace(http_str, our_url)
 
 
+def check_no_links(ln):
+    """ Scan line for SE no-links where 'https://...' appears with no
+        surrounding controls like [] or ().
+
+        This function must be called FROM check_tail_links when not in
+        a tail link.
+
+        This function must be called BEFORE check_full_links which
+        will fix up the link name if it is in Pippim's website.
+
+        Written to fix problem in: https://askubuntu.com/a/1195782/307523
+
+You can probably disable network waiting altogether:
+
+- https://askubuntu.com/questions/1018576/what-does-networkmanager-wait-online-service-do/1018731#1018731
+
+Remove the journal flush service and vacuum it instead:
+
+- https://askubuntu.com/questions/1094389/what-is-the-use-of-systemd-journal-flush-service/1094543#1094543
+- https://askubuntu.com/questions/1012912/systemd-logs-journalctl-are-too-large-and-slow/1012913#1012913
+
+Slow `snapd` times can be sped up by jiggling your mouse at boot time:
+
+- https://askubuntu.com/questions/1051762/long-boot-delay-on-ubuntu-loading-splash-screen
+-following-regular-dist-upgrade-o
+
+
+TODO: Breaks on: https://unix.stackexchange.com/posts/415479/edit
+
+If your regular updates do not install the Kernel version you desire
+you can do it manually following this Ask Ubuntu answer:
+[https://askubuntu.com/questions/879888/how-do-i-update-kernel-to-the-latest-
+mainline-version/879920#879920][7]
+
+char_before is [ so this should have been skipped.
+last_char is ] so this should have been skipped.
+
+    """
+
+    global total_no_links
+
+    if in_code_block or in_code_indent:
+        return ln
+
+    # Look for "https://site.com/..." without any wrap characters
+    wrap_chars = "`*[]()"
+    last_start = 0
+    while True:
+        # Search for next no_link after last no_link test
+        name_start = ln.find("https://", last_start)
+        if name_start == -1:
+            break  # No more hyperlinks found
+
+        # To qualify character before must not be [ or (
+        char_before = "?"  # Must set if debug printing below
+        if name_start > 1:
+            char_before = ln[name_start - 1:name_start]
+            if char_before in wrap_chars:
+                # print('skipping char_before:', "'" + char_before + "'")
+                last_start = name_start + 8
+                continue
+
+        name_end = ln.find(" ", name_start)
+        if name_end == -1:
+            # print('NAME start without end')
+            name_end = len(ln)
+        else:
+            name_end = name_end - 1
+
+        last_char = ln[name_end - 1:name_end]
+        if last_char in wrap_chars:
+            last_start = name_start + 8
+            continue
+
+        name = ln[name_start:name_end]
+        #print('Before:', char_before, 'Found Name:', name)
+        #print('link:', row[LINK], '\n')
+        total_no_links += 1
+        new = "[" + name + "](" + name + ")"
+        ln = ln.replace(name, new)
+        # print('\nchar_before:', "'" + char_before + "'", 'last_char:', "'" + last_char + "'")
+        #print()
+        #print(ln[name_start:name_start + len(new)])
+        #print(row[URL])
+        last_start += name_start + len(new)  # Next link to search for
+
+    return ln
+
+
 def check_full_links(ln):
     """ Scan line for SE full-links where '[Name](https://...)' appears.
 
@@ -888,16 +997,13 @@ def check_full_links(ln):
         ss_save_blog is True.
 
         NOTE: No records were ever found matching this search...
+              However, it was repurposed to support check_no_link()
 
     """
 
-    if in_code_block or in_code_indent:
-        return ln
+    global total_full_links
 
-    # NOTE: Although below code works there are no links found. Presumably
-    # SE always massages with [This is my answer][1]
-    # For now automatically force return
-    if total_sites > 0:
+    if in_code_block or in_code_indent:
         return ln
 
     # Look for "[" NAME OF LINK followed by "](https://site.com/.html)"
@@ -906,7 +1012,7 @@ def check_full_links(ln):
     last_start = 0
 
     while True:
-        # Search for next half-link after last half-link
+        # Search for next full_link after last found
         name_start = ln.find("[", last_start)
         if name_start == -1:
             break  # No more hyperlinks found
@@ -937,11 +1043,30 @@ def check_full_links(ln):
             continue
 
         found = ln[found_start:found_end]
-        if get_ss_url(found, search_type="Answer"):
-            print('======================= YES ====================')
-        print()
-        print('Found Name:', name)
-        print('Found Link:', found)
+        post_url, search_url = check_html_substitute(found)
+        if post_url is not None:
+            total_full_links += 1
+            old_ln = ln
+            search_str = "[" + name + "]"
+            replace_str = "[" + ss_title + "]"
+            ln = ln.replace(search_str, replace_str)
+            search_str = "(" + found + ")"
+            replace_str = "(" + ss_post_url + ")"
+            ln = ln.replace(search_str, replace_str)
+            if ss_type != "Answer":
+                print()
+                print('OLD:', old_ln)
+                print('NEW:', ln)
+                # Change (] to (pippim_title)[pippim_link]
+                print('==== YES:', post_url)
+            else:
+                print('found:', post_url)
+        else:
+            # Parse HTML to get link title
+            #print()
+            #print('NOT Found Name:', name)
+            #print('NOT Found Link:', found)
+            pass
 
         last_start = name_end  # Next link to search for
 
@@ -949,7 +1074,7 @@ def check_full_links(ln):
 
 
 def check_html_substitute(http_str):
-    """ Check if [https://...]' appears in QueryResults.csv
+    """ Check if [https://...]' appears in speed search list
 
         WARNING: Awkward code below...
 
@@ -1310,7 +1435,7 @@ def check_code_block(ln):
             if she_language:
                 this_language = she_language
             if ln[-1] == "`" or ln[-1] == " ":
-                ln = ln + " " + this_language
+                ln += " " + this_language
                 language_forced += 1
         else:
             in_code_block = False       # Code block has ended
@@ -1366,8 +1491,13 @@ def check_code_indent(ln):
             ln = ln[4:]     # Remove first four characters
             # print('ln:', ln)
     elif in_code_indent:
+        # if len(ln) > 0:
+        # TODO: Must have at least one character to end code indent
+        # Because code indents can have empty spacing lines
+        # However if line after this is regular text we do want to
+        # end now
         in_code_indent = False  # Code indent has ended
-        ln = ln + "\n```\n"  # Add ending code block
+        ln += "\n```\n"  # Add ending code block
 
     return ln
 
@@ -1537,6 +1667,7 @@ def navigation_bar(skip_btn=True):
     return bar
 
 
+# noinspection PyUnresolvedReferences
 def front_matter(r):
     """ Output Jekyll front matter to md string
 
@@ -1544,11 +1675,11 @@ def front_matter(r):
     md = "---\n" + FRONT_LAYOUT + "\n"
     # Folded Title: https://talk.jekyllrb.com/t/
     # how-to-use-single-quote-and-double-quote-as-part-of-title-without-escaping/2705/9
-    md = md + FRONT_TITLE + ">\n    " + r[TITLE].replace('/', '∕') + '\n'
+    md += FRONT_TITLE + ">\n    " + r[TITLE].replace('/', '∕') + '\n'
     if FRONT_SITE is not None:
-        md = md + FRONT_SITE + r[SITE] + '\n'
+        md += FRONT_SITE + r[SITE] + '\n'
     if FRONT_URL is not None:
-        md = md + FRONT_URL + r[URL] + '\n'
+        md += FRONT_URL + r[URL] + '\n'
         ''' NOTE: When FRONT_URL is used then FRONT_SITE and FRONT_TYPE must
             also be used because "_layouts/post.html" contains:
                 {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
@@ -1564,68 +1695,68 @@ def front_matter(r):
                 {% endif %}
         '''
     if FRONT_POST_ID is not None:
-        md = md + FRONT_POST_ID + r[POST_ID] + '\n'
+        md += FRONT_POST_ID + r[POST_ID] + '\n'
     if FRONT_LINK is not None:
-        md = md + FRONT_LINK + r[LINK] + '\n'
+        md += FRONT_LINK + r[LINK] + '\n'
     if FRONT_TYPE is not None:
-        md = md + FRONT_TYPE + r[TYPE] + '\n'
+        md += FRONT_TYPE + r[TYPE] + '\n'
 
     if FRONT_TAGS is not None:
-        md = md + FRONT_TAGS + tags + '\n'
+        md += FRONT_TAGS + tags + '\n'
 
     if FRONT_CREATED is not None:
-        md = md + FRONT_CREATED + r[CREATED] + '\n'
+        md += FRONT_CREATED + r[CREATED] + '\n'
     if FRONT_LAST_EDIT is not None:
-        md = md + FRONT_LAST_EDIT + r[LAST_EDIT] + '\n'
+        md += FRONT_LAST_EDIT + r[LAST_EDIT] + '\n'
     if FRONT_EDITED_BY is not None:
-        md = md + FRONT_EDITED_BY + r[EDITED_BY] + '\n'
+        md += FRONT_EDITED_BY + r[EDITED_BY] + '\n'
     if FRONT_SCORE is not None:
         if r[SCORE] == "":
-            md = md + FRONT_SCORE + r[SCORE] + '\n'
+            md += FRONT_SCORE + r[SCORE] + '\n'
         else:
             # Insert thin space “ ” (U+2005) at string's closing double quote
-            md = md + FRONT_SCORE + '"' + '{:,}'.format(int(r[SCORE])) + ' "\n'
+            md += FRONT_SCORE + '"{:,}'.format(int(r[SCORE])) + ' "\n'
     if FRONT_FAVORITES is not None:
         if r[FAVORITES] == "":
-            md = md + FRONT_FAVORITES + r[FAVORITES] + '\n'
+            md += FRONT_FAVORITES + r[FAVORITES] + '\n'
         else:
-            md = md + FRONT_FAVORITES + '{:,}'.format(int(r[FAVORITES])) + '\n'
+            md += FRONT_FAVORITES + '{:,}'.format(int(r[FAVORITES])) + '\n'
     if FRONT_VIEWS is not None:
         if r[VIEWS] == "":
-            md = md + FRONT_VIEWS + r[VIEWS] + '\n'
+            md += FRONT_VIEWS + r[VIEWS] + '\n'
         else:
             # See: https://github.com/dtao/safe_yaml/issues/71
-            md = md + FRONT_VIEWS + '"' + '{:,}'.format(int(r[VIEWS])) + ' "\n'
+            md += FRONT_VIEWS + '"{:,}'.format(int(r[VIEWS])) + ' "\n'
     if FRONT_ANSWERS is not None:
-        md = md + FRONT_ANSWERS + r[ANSWERS] + '\n'
+        md += FRONT_ANSWERS + r[ANSWERS] + '\n'
     if FRONT_ACCEPTED is not None:
-        md = md + FRONT_ACCEPTED + r[ACCEPTED] + '\n'
+        md += FRONT_ACCEPTED + r[ACCEPTED] + '\n'
     if FRONT_CW is not None:
-        md = md + FRONT_CW + r[CW] + '\n'
+        md += FRONT_CW + r[CW] + '\n'
     if FRONT_CLOSED is not None:
-        md = md + FRONT_CLOSED + r[CW] + '\n'
+        md += FRONT_CLOSED + r[CW] + '\n'
 
     # Extra front matter generated by `stack-to-blog.py` actions:
-    md = md + FRONT_UPLOADED + now + '\n'
+    md += FRONT_UPLOADED + now + '\n'
     if insert_toc is True:
         jekyll_boolean = "true"
     else:
         jekyll_boolean = "false"
-    md = md + FRONT_TOC  + jekyll_boolean + '\n'
+    md += FRONT_TOC  + jekyll_boolean + '\n'
 
     if insert_nav_bar is True:
         jekyll_boolean = "true"
     else:
         jekyll_boolean = "false"
-    md = md + FRONT_NAV_BAR + jekyll_boolean + '\n'
+    md += FRONT_NAV_BAR + jekyll_boolean + '\n'
 
     if insert_clipboard is True:
         jekyll_boolean = "true"
     else:
         jekyll_boolean = "false"
-    md = md + FRONT_CLIPBOARD + jekyll_boolean + '\n'
+    md += FRONT_CLIPBOARD + jekyll_boolean + '\n'
 
-    md = md + "---\n\n"
+    md += "---\n\n"
 
     return md
 
@@ -1664,11 +1795,15 @@ def check_self_answer(r):
     answer = accepted = search_url = False
 
     if get_ss_title(r[TITLE].replace('/', '∕')):
-        # Verify question title exists
+        # Have verified question title exists. Now check if answer exists
         if get_ss_title(r[TITLE].replace('/', '∕'), search_type="Answer"):
+            if "68011128" in ss_post_url:
+                print('Answer is true @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
             answer = True
             search_url = ss_url
             if ss_accepted == "Accepted":
+                if "68011128" in ss_post_url:
+                    print('accepted is true @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
                 accepted = True  # Is this self-answered question accepted?
 
     return answer, accepted, search_url
@@ -1677,7 +1812,6 @@ def check_self_answer(r):
 def make_output_year_dir(post_date):
     """
     """
-    import os
     if OUTPUT_BY_YEAR_DIR is None or False or OUTPUT_BY_YEAR_DIR == "":
         return ""  # Will be concatenated into string making up blog_filename
 
@@ -2084,7 +2218,11 @@ def gen_post_by_tag_groups():
             inner_count = 0  # Reset
 
         if inner_count == 0:
-            group_start_name = tag_name + " " + post_filename[:10]
+            if OUTPUT_BY_YEAR_DIR:
+                group_start_name = tag_name + " " + post_filename[6:16]
+                print('group_start_name:',  group_start_name)
+            else:
+                group_start_name = tag_name + " " + post_filename[:10]
             group_start_index = post_index
 
         if "." <= tag_letter <= " ":           # TESTED WORKING
@@ -2101,7 +2239,12 @@ def gen_post_by_tag_groups():
         inner_count += 1
         letter_group_counts[tag_index] += 1
         # Set default in case next read starts a new group or this is EOL
-        group_end_name = tag_name + " " + post_filename[:10]
+        # Put date into group
+        if OUTPUT_BY_YEAR_DIR:
+            group_end_name = tag_name + " " + post_filename[6:16]
+            print('group_end_name:', group_end_name)
+        else:
+            group_end_name = tag_name + " " + post_filename[:10]
         group_end_index = post_index
 
     # Last group still in buffer
@@ -2404,8 +2547,13 @@ def update_config():
     # "../_config.yml" file is opened and parsed for following string:
     CONFIG_STR = "# Must be last comment! stack-to-blog.py variables added below"
     """
+    if not os.path.exists(CONFIG_YML):
+        fatal_error('The file: ' + CONFIG_YML + 'not found!')
 
-    pass
+    with open(CONFIG_YML, 'r') as fn:
+        all_lines = fn.readlines()
+        old_config = [one_line.rstrip() for one_line in all_lines]
+
 
 
 ''' INITIALIZATION
@@ -2674,32 +2822,32 @@ for row in rows:
                 # First check if at TOC_LOC and insert TOC if needed
                 if insert_toc:
                     if sum2 == TOC_LOC:
-                        new_md = new_md + navigation_bar()
+                        new_md += navigation_bar()
                         if NAV_BAR_OPT <= 3:
                             # If Option "4" a blank line already inserted before us
-                            new_md = new_md + "\n"
-                        new_md = new_md + CONTENTS + "\n"
-                        new_md = new_md + "\n"  # When 4 a blank line already inserted before us
+                            new_md += "\n"
+                        new_md += CONTENTS + "\n"
+                        new_md += "\n"  # When 4 a blank line already inserted before us
                         last_nav_id += 1
                         toc_inserted = True  # Not necessary but is consistent
                     if sum2 >= TOC_LOC:
                         sum2 += 1   # All heading levels after TOC are 1 greater
 
                 if check_last_navigation_bar():
-                    new_md = new_md + navigation_bar()
+                    new_md += navigation_bar()
 
         elif insert_toc:
             # No navigation bar, but we still need TOC at header count
             if header_count == TOC_LOC and toc_inserted is False:
                 if NAV_BAR_OPT <= 3:
                     # If Option "4" a blank line already inserted before us
-                    new_md = new_md + "\n"
-                new_md = new_md + CONTENTS + "\n"
-                new_md = new_md + "\n"
+                    new_md += "\n"
+                new_md += CONTENTS + "\n"
+                new_md += "\n"
                 toc_inserted = True  # Prevents regeneration next line read
                 # print('toc only:', blog_filename)
 
-        new_md = new_md + line + '\n'
+        new_md += line + '\n'
 
     ''' Add Navigation Bar for footer '''
     if insert_nav_bar:
@@ -2710,8 +2858,8 @@ for row in rows:
         if force_end_line:
             force_end_line = False  # Keep EOF empty line we added
         else:
-            new_md = new_md + "\n"  # Empty line before HTML ID tag
-        new_md = new_md + navigation_bar(skip_btn=False)
+            new_md += "\n"  # Empty line before HTML ID tag
+        new_md += navigation_bar(skip_btn=False)
 
     qualifying_blog_count += 1
     if RANDOM_LIMIT is not None:
@@ -2746,20 +2894,27 @@ if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
         print('URL:', url)
     print('')
 
-if RANDOM_LIMIT is not None:
+if RANDOM_LIMIT is None:
+    random_limit = '   None'
+else:
     # noinspection PyStringFormat
     random_limit = '{:>6,}'.format(RANDOM_LIMIT)
-else:
-    random_limit = '   None'
+
+# Uses CONFIG_YML = "../_config.yml"
+update_config()
+
 
 print('// =============================/   T O T A L S   \\============================== \\\\')
-print('')
+print('Run-time options:\n')
 print('RANDOM_LIMIT:   ', random_limit,
       ' | PRINT_RANDOM:  {:>11}'.format(str(PRINT_RANDOM)),
       ' | NAV_FORCE_TOC: {:>11}'.format(str(NAV_FORCE_TOC)))
 print('NAV_BAR_MIN:      {:>6,}'.format(NAV_BAR_MIN),
       ' | NAV_WORD_MIN:  {:>11}'.format(NAV_WORD_MIN),
       ' | COPY_LINE_MIN: {:>11}'.format(COPY_LINE_MIN))
+print()
+print('Totals written to:', "'" + CONFIG_YML + "'",
+      '(relative to /sede directory)\n')
 print('accepted_count:   {:>6,}'.format(accepted_count),
       ' | total_votes:   {:>11,}'.format(total_votes),
       ' | total_views:   {:>11,}'.format(total_views))
@@ -2789,6 +2944,13 @@ print('total_tail_links:  {:>5,}'.format(total_tail_links),
       ' | total_bad_half_links:{:>5,}'.format(total_bad_half_links),
       ' | Half Links Changed:{:>7,}'.format(total_half_links -
                                             total_bad_half_links))
+print('total_no_links:    {:>5,}'.format(total_no_links),
+      ' | total_full_links:    {:>5,}'.format(total_full_links),
+      ' | Bad No Links:      {:>7,}'.format(total_no_links -
+                                            total_full_links))
+# Note "Bad No Links" only accurate when full_links aren't native in posts
+# and are created internally by stack-to-blog.py. Therefore, a negative total
+# is possible when [https://...](https://...) appears in a post.
 print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
       ' | total_copy_lines:  {:>7,}'.format(total_copy_lines),
       ' | total_toc:         {:>7,}'.format(total_toc))
