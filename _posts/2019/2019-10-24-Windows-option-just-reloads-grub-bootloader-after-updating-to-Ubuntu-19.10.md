@@ -5,14 +5,14 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1183623
 type:         Answer
-tags:         boot dual-boot windows-10 bootloader
+tags:         boot dual-boot windows-10 bootloader grub
 created_date: 2019-10-24 22:54:33
 edit_date:    2019-10-24 23:05:13
 votes:        "1 "
 favorites:    
 views:        "622 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 First you need to change your boot order to Windows instead of Grub. To find out the key to press during boot to bring up the BIOS menu see:
 
-- https://askubuntu.com/questions/1180675/the-computer-didnt-automatically-boot-from-usb/1180697#1180697
+- [The computer didn't automatically boot from USB,]({% post_url /2019/2019-10-13-The-computer-didn't-automatically-boot-from-USB, %})
 
 Ignore the part about selecting device boot order, you want to change the UEFI boot order and move Windows to the top.
 
@@ -33,4 +33,4 @@ Do this from Windows and then if it doesn't work revise your question with curre
 
 Also note boot-repair created 5 entries to boot Windows but in my experience they won't all work. After you fix the booting issues see this answer:
 
-- https://askubuntu.com/questions/938633/boot-repair-created-too-many-grub-menu-entries-for-windows/1022700#1022700
+- [Boot-Repair created too many grub menu entries for Windows]({% post_url /2018/2018-04-06-Boot-Repair-created-too-many-grub-menu-entries-for-Windows %})

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "3,096 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -152,15 +152,15 @@ done
 
 There are many nVidia users with similar problems in Ubuntu 18.04:
 
-- https://askubuntu.com/questions/1030526/brightness-on-laptop-msi-gt72vr-in-ubuntu-18-04-with-nvidia-gtx-1060-mobile-does
-- https://askubuntu.com/questions/1042809/computer-doesnt-wake-from-suspension-and-couldnt-change-the-brightness
-- https://askubuntu.com/questions/1042069/brightness-control-missing-when-using-nvidia-drivers-but-re-appears-with-x-org
-- https://askubuntu.com/questions/1041051/xubuntu-18-04-make-fn-brightness-keys-work-with-sys-class-backlight-nv-backlig
-- https://askubuntu.com/questions/1041145/how-to-alter-backlight-driver-in-lubuntu
-- https://askubuntu.com/questions/1030526/brightness-on-laptop-msi-gt72vr-in-ubuntu-18-04-with-nvidia-gtx-1060-mobile-does
-- https://askubuntu.com/questions/1031541/ubuntu-solution-for-the-nvidia-display-issue-on-brightness-control-and-video-pla
-- https://askubuntu.com/questions/1028979/unable-to-change-the-screen-brightness
-- https://askubuntu.com/questions/1010405/the-brightness-of-laptop-screen-cannot-be-adjusted-with-either-the-buttons-or-th
+- [https://askubuntu.com/questions/1030526/brightness-on-laptop-msi-gt72vr-in-ubuntu-18-04-with-nvidia-gtx-1060-mobile-does](https://askubuntu.com/questions/1030526/brightness-on-laptop-msi-gt72vr-in-ubuntu-18-04-with-nvidia-gtx-1060-mobile-does)
+- [https://askubuntu.com/questions/1042809/computer-doesnt-wake-from-suspension-and-couldnt-change-the-brightness](https://askubuntu.com/questions/1042809/computer-doesnt-wake-from-suspension-and-couldnt-change-the-brightness)
+- [https://askubuntu.com/questions/1042069/brightness-control-missing-when-using-nvidia-drivers-but-re-appears-with-x-org](https://askubuntu.com/questions/1042069/brightness-control-missing-when-using-nvidia-drivers-but-re-appears-with-x-org)
+- [https://askubuntu.com/questions/1041051/xubuntu-18-04-make-fn-brightness-keys-work-with-sys-class-backlight-nv-backlig](https://askubuntu.com/questions/1041051/xubuntu-18-04-make-fn-brightness-keys-work-with-sys-class-backlight-nv-backlig)
+- [https://askubuntu.com/questions/1041145/how-to-alter-backlight-driver-in-lubuntu](https://askubuntu.com/questions/1041145/how-to-alter-backlight-driver-in-lubuntu)
+- [https://askubuntu.com/questions/1030526/brightness-on-laptop-msi-gt72vr-in-ubuntu-18-04-with-nvidia-gtx-1060-mobile-does](https://askubuntu.com/questions/1030526/brightness-on-laptop-msi-gt72vr-in-ubuntu-18-04-with-nvidia-gtx-1060-mobile-does)
+- [https://askubuntu.com/questions/1031541/ubuntu-solution-for-the-nvidia-display-issue-on-brightness-control-and-video-pla](https://askubuntu.com/questions/1031541/ubuntu-solution-for-the-nvidia-display-issue-on-brightness-control-and-video-pla)
+- [https://askubuntu.com/questions/1028979/unable-to-change-the-screen-brightness](https://askubuntu.com/questions/1028979/unable-to-change-the-screen-brightness)
+- [https://askubuntu.com/questions/1010405/the-brightness-of-laptop-screen-cannot-be-adjusted-with-either-the-buttons-or-th](https://askubuntu.com/questions/1010405/the-brightness-of-laptop-screen-cannot-be-adjusted-with-either-the-buttons-or-th)
 
 ----------
 
@@ -175,12 +175,12 @@ I can write a script to mimic changes to /acpi_video and populate /nv_backlight 
 - Save the file
 - Run `sudo update-grub`
 
-According to this answer it should work for you: https://askubuntu.com/questions/1041051/xubuntu-18-04-make-fn-brightness-keys-work-with-sys-class-backlight-nv-backlig/1041585#1041585
+According to this answer it should work for you: [https://askubuntu.com/questions/1041051/xubuntu-18-04-make-fn-brightness-keys-work-with-sys-class-backlight-nv-backlig/1041585#1041585](https://askubuntu.com/questions/1041051/xubuntu-18-04-make-fn-brightness-keys-work-with-sys-class-backlight-nv-backlig/1041585#1041585)
 
 
 ----------
 
 ## Wayland
 
-Brightness doesn't work under Wayland. Make sure you aren't using it. See: https://askubuntu.com/questions/1010405/the-brightness-of-laptop-screen-cannot-be-adjusted-with-either-the-buttons-or-th/1011557#1011557
+Brightness doesn't work under Wayland. Make sure you aren't using it. See: [The brightness of laptop screen cannot be adjusted with either the buttons or the slider. Edit]({% post_url /2018/2018-03-03-The-brightness-of-laptop-screen-cannot-be-adjusted-with-either-the-buttons-or-the-slider.-Edit %})
 

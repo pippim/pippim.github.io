@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "24,015 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          true
 navigation:   true
 clipboard:    true
@@ -231,7 +231,7 @@ ${color orange}${voffset 2}${hr 1}
 
 ```
 
-**NOTE:** The full conky resource file can be found on [this answer](https://askubuntu.com/questions/604720/setting-to-high-performance/1047763#1047763).
+**NOTE:** The full conky resource file can be found on [Setting to High Performance]({% post_url /2018/2018-06-19-Setting-to-High-Performance %}).
 
 
   [1]: https://www.theregister.co.uk/2017/06/25/intel_skylake_kaby_lake_hyperthreading/

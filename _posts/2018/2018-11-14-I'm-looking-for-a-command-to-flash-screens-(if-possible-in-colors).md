@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,030 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -273,7 +273,7 @@ done
 ```
 
 
-To generate the ASCII Art you can use Figlet or Toilet. See: https://askubuntu.com/questions/901393/when-terminal-is-opened-can-i-get-current-calendar-and-time-displayed/901394#901394
+To generate the ASCII Art you can use Figlet or Toilet. See: [When terminal is opened can I get current calendar and time displayed?]({% post_url /2017/2017-04-08-When-terminal-is-opened-can-I-get-current-calendar-and-time-displayed? %})
 
 
   [1]: https://i.stack.imgur.com/4PBfR.gif

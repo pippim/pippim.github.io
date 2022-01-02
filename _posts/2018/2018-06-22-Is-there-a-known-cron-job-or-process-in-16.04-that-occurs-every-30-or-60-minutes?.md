@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "199 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -35,6 +35,6 @@ ps -eo 'tty,pid,comm' | grep ^?
 ```
 
 
-So which deamon runs every 30 minutes? The first google hit is the `chef` deamon (not a cooking thing): https://stackoverflow.com/questions/14905278/chef-daemon-running-every-30-minutes
+So which deamon runs every 30 minutes? The first google hit is the `chef` deamon (not a cooking thing): [https://stackoverflow.com/questions/14905278/chef-daemon-running-every-30-minutes](https://stackoverflow.com/questions/14905278/chef-daemon-running-every-30-minutes)
 
 If it's not documented you would have to check every single daemon's source code to see how often it run.

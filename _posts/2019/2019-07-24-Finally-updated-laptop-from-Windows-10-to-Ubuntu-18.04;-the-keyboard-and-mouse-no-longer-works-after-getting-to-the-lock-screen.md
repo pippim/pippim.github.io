@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "97 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,15 +20,15 @@ clipboard:    false
 
 The same problem was reported yesterday:
 
-- https://askubuntu.com/questions/1160548/5-0-0-21-kernel-update-causing-desktop-and-mouse-problems
+- [https://askubuntu.com/questions/1160548/5-0-0-21-kernel-update-causing-desktop-and-mouse-problems](https://askubuntu.com/questions/1160548/5-0-0-21-kernel-update-causing-desktop-and-mouse-problems)
 
 At the same time a related kernel problem was reported:
 
-- https://askubuntu.com/questions/1160549/software-updater-kernel-update-broke-package-manager-cannot-install-linux-modu/1160555#1160555
+- [https://askubuntu.com/questions/1160549/software-updater-kernel-update-broke-package-manager-cannot-install-linux-modu/1160555#1160555](https://askubuntu.com/questions/1160549/software-updater-kernel-update-broke-package-manager-cannot-install-linux-modu/1160555#1160555)
 
 Hopefully this will be fixed in the next Ubuntu kernel update `5.0.0-21` but in the meantime use kernel `5.0.0-20`. If you want to avoid reinstalling Ubuntu you can manually install the previous Linux Mainline/Stable kernel with these instructions:
 
-- https://askubuntu.com/questions/119080/how-to-update-kernel-to-the-latest-mainline-version-without-any-distro-upgrade/885165#885165
+- [How to update kernel to the latest mainline version without any Distro-upgrade?]({% post_url /2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade? %})
 
 The kernel before `5.0.0-21` in Ubuntu Speak is `5.1.16` or `4.19.59` in Linux Speak. When looking at the mainline kernels the important thing to remember is the dates. Anything dated July 21-23 is new one with bugs, anything around July 14 is the previous version:
 

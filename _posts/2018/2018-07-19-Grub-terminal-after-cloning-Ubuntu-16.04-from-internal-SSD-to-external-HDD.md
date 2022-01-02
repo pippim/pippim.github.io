@@ -12,13 +12,13 @@ votes:        "0 "
 favorites:    
 views:        "1,948 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-You can use this script: https://askubuntu.com/questions/1028604/bash-script-to-clone-ubuntu-to-new-partition-for-testing-18-04-lts-upgrade to clone Ubuntu 16.04 (or other distros and versions):
+You can use this script: [Bash script to backup∕clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %})e to clone Ubuntu 16.04 (or other distros and versions):
 
 
 [![clone-ubuntu.png][1]][1]

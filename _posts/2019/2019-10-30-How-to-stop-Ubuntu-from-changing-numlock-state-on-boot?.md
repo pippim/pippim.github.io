@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,458 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -35,7 +35,7 @@ gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 
 For a plethora of even more options:
 
-- https://askubuntu.com/questions/155679/how-to-enable-numlock-at-boot-time-for-login-screen
+- [https://askubuntu.com/questions/155679/how-to-enable-numlock-at-boot-time-for-login-screen](https://askubuntu.com/questions/155679/how-to-enable-numlock-at-boot-time-for-login-screen)
 
 
 ----------

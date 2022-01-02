@@ -12,13 +12,13 @@ votes:        "2 "
 favorites:    
 views:        "928 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-As per this answer: https://askubuntu.com/questions/832072/can-i-use-cron-to-chime-at-top-of-hour-like-a-grandfather-clock/832266#832266 you need to export an environment variable before playing sounds in your cron script:
+As per this answer: [Can I use cron to chime at top of hour like a grandfather clock?]({% post_url /2016/2016-10-02-Can-I-use-cron-to-chime-at-top-of-hour-like-a-grandfather-clock? %})6 you need to export an environment variable before playing sounds in your cron script:
 
 ``` 
 export XDG_RUNTIME_DIR="/run/user/1000"

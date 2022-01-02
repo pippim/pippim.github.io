@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "730,213 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -31,6 +31,6 @@ My terminal splash screen contains four components:
 
 You can find details for doing this yourself in this answer:
 
-- https://askubuntu.com/questions/1020692/terminal-splash-screen-with-weather-calendar-time-sysinfo/1020693#1020693
+- [Terminal splash screen with Weather, Calendar, Time & Sysinfo?]({% post_url /2018/2018-03-30-Terminal-splash-screen-with-Weather,-Calendar,-Time-&-Sysinfo? %})
 
   [3]: https://i.stack.imgur.com/neTG7.png

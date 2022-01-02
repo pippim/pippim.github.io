@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,162 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -26,7 +26,7 @@ To change the drivers in use you need to change your kernel version. However you
 
 The `install.sh` scripts have been deprecated and are no longer used. Now there are ***blobs*** (Binary Large Objects) that simply need to be downloaded and then copied to `/lib/firmware/i915`. If you follow the link you posted you will see it has been changed from the last time you downloaded.
 
-For instructions on installing the new ***blobs*** see: https://askubuntu.com/questions/832524/updated-kernel-to-4-8-now-missing-firmware-warnings/832528#832528
+For instructions on installing the new ***blobs*** see: [Possible missing firmware ∕lib∕firmware∕i915]({% post_url /2016/2016-10-03-Possible-missing-firmware-∕lib∕firmware∕i915 %})
 
 As far as quickly seeing which i915 drivers for ***Skylake*** you have installed (but not necessarily active for current boot) use:
 

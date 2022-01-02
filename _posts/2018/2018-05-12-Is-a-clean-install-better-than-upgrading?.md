@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "41,151 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -46,7 +46,7 @@ Running the upgrade on May 6, 2018 I was told that **203 packages** will be remo
 
 Backing up and restoring is a pain. It's time consuming and often times your restore doesn't proceed as planned. An alternative is to clone your 16.04 LTS (or whichever version) to a new test partition and upgrade to 18.04 LTS (or whichever version) there.
 
-I use a script to clone Ubuntu to a test partition for upgrading: https://askubuntu.com/questions/1028604/bash-script-to-clone-ubuntu-to-new-partition-for-testing-18-04-lts-upgrade
+I use a script to clone Ubuntu to a test partition for upgrading: [Bash script to backup∕clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %})
 
 The script will:
 

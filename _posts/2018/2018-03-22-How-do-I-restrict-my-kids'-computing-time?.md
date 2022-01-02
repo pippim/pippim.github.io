@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "58,747 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          true
 navigation:   true
 clipboard:    true
@@ -244,7 +244,7 @@ After the timer is running and you double click on it again the first running co
 
 # Display Time Remaining in systray / notification area
 
-While lock screen timer is running it records how many minutes are remaining into the file `~/.lock-screen-timer-remaining`. You can look at this file with the `watch` command or display it on Ubuntu's system tray / application indicator bar as shown at the top of this answer. To display time remaining in the notification area, follow the instructions in this Q&A: [Can BASH display in systray as application indicator?](https://askubuntu.com/questions/882419/how-can-bash-display-in-ubuntus-unity-system-tray).
+While lock screen timer is running it records how many minutes are remaining into the file `~/.lock-screen-timer-remaining`. You can look at this file with the `watch` command or display it on Ubuntu's system tray / application indicator bar as shown at the top of this answer. To display time remaining in the notification area, follow the instructions in this Q&A: [Can BASH display in systray as application indicator?]({% post_url /2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator? %}).
 
 
   [1]: https://i.stack.imgur.com/N0gb6.gif

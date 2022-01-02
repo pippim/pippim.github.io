@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "96 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -22,7 +22,7 @@ I need to place my application over a full screen video and capture it to put in
 
 I found this C program on **Stack Overflow** which looks promising:
 
-- https://stackoverflow.com/questions/21512177/get-a-screenshot-of-a-window-that-is-cover-or-not-visible-or-minimized-with-xcom
+- [https://stackoverflow.com/questions/21512177/get-a-screenshot-of-a-window-that-is-cover-or-not-visible-or-minimized-with-xcom](https://stackoverflow.com/questions/21512177/get-a-screenshot-of-a-window-that-is-cover-or-not-visible-or-minimized-with-xcom)
 
 {% include copyHeader.html %}
 ``` c

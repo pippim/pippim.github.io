@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    1
 views:        "1,854 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -31,7 +31,7 @@ Any ideas?
 
 This project is related to this Q&A where the icons drop off the left screen into a black whole because of different sized monitors:
 
-- https://askubuntu.com/questions/1146175/desktop-icons-just-dropped-down-left-screen-into-never-never-land
+- [Desktop icons on left screen go down into black hole]({% post_url /2019/2019-06-02-Desktop-icons-on-left-screen-go-down-into-black-hole %})
 
 Thanks to [Podesta's help][1] I created this code:
 

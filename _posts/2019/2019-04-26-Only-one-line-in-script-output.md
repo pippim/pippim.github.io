@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "3,050 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -62,4 +62,4 @@ done < "$StringCsv"
 
 There are two ways to create a new empty file `> Token.csv` as used above and `touch Token.csv`. However only `> Token.csv` will empty an existing file. See:
 
-- https://askubuntu.com/questions/831414/what-is-the-difference-between-touch-file-and-file
+- [https://askubuntu.com/questions/831414/what-is-the-difference-between-touch-file-and-file](https://askubuntu.com/questions/831414/what-is-the-difference-between-touch-file-and-file)

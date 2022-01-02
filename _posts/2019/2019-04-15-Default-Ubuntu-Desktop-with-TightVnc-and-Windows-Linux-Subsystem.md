@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "7,306 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 I use [VcXsrv][1] because it's free and is frequently updated. See my answer here:
 
-- https://askubuntu.com/questions/993225/whats-the-easiest-way-to-run-gui-apps-on-windows-subsystem-for-linux-as-of-2018/993331#993331.
+- [https://askubuntu.com/questions/993225/whats-the-easiest-way-to-run-gui-apps-on-windows-subsystem-for-linux-as-of-2018/993331#993331.](https://askubuntu.com/questions/993225/whats-the-easiest-way-to-run-gui-apps-on-windows-subsystem-for-linux-as-of-2018/993331#993331.)
 
 The important thing is to install it accepting the defaults and then (for me) to edit `/etc/environment` and change this:
 

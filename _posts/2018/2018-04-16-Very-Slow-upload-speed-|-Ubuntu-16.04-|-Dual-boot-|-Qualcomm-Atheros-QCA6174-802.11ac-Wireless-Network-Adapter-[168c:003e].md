@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,012 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -54,7 +54,7 @@ I'm still on kernel `4.14.xxx` LTS (Long Term Support) which has another 5 years
 
 To prove the bug fix is there go to where my current kernel `4.14.114` is: 
 
-- https://kernel.ubuntu.com/~kernel-ppa/mainline/v4.14.114/
+- [https://kernel.ubuntu.com/~kernel-ppa/mainline/v4.14.114/](https://kernel.ubuntu.com/~kernel-ppa/mainline/v4.14.114/)
 
 It says:
 
@@ -65,7 +65,7 @@ It says:
 - Copy and paste the address into your web browser and press <kbd>Enter</kbd>
 - Google search comes up
 - Click the first link
-- A web page appears: https://code.launchpad.net/~ubuntu-kernel-test/ubuntu/+source/linux/+git/mainline-crack/+ref/master
+- A web page appears: [https://code.launchpad.net/~ubuntu-kernel-test/ubuntu/+source/linux/+git/mainline-crack/+ref/master](https://code.launchpad.net/~ubuntu-kernel-test/ubuntu/+source/linux/+git/mainline-crack/+ref/master)
 - Scroll to the bottom and select `All commits`
 - The commit we are looking for is 10,000 messages back which is a lot of scrolling and searching. 
 - To speed the process up type `Adjust TSQ pacing shift` into the search field.

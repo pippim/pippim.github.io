@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "8,032 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -26,7 +26,7 @@ To install manually you can select from `5.3.1` through `5.3.5` kernels released
 
 For full instructions (and warnings) see:
 
-- https://askubuntu.com/questions/119080/how-to-update-kernel-to-the-latest-mainline-version-without-any-distro-upgrade/885165#885165
+- [How to update kernel to the latest mainline version without any Distro-upgrade?]({% post_url /2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade? %})
 
 
   [1]: https://wiki.ubuntu.com/Kernel/LTSEnablementStack

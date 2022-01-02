@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "573 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -103,7 +103,7 @@ done
 ```
 
 - emailing cell phone: [Use mail command](https://www.binarytides.com/linux-mail-command-examples/)
-- texting cell phone: https://askubuntu.com/questions/1104017/how-can-i-send-mobile-text-message-from-terminal
+- texting cell phone: [How can I send mobile text message from terminal?]({% post_url /2018/2018-12-23-How-can-I-send-mobile-text-message-from-terminal? %})
 
 This is a script I would use, in your case adapt it to hibernate (I have a laptop so I never hibernate). My UPS is for window fan, not laptop which has it's own battery and is suspended when I'm at work. Technology can be used differently by different people.
 

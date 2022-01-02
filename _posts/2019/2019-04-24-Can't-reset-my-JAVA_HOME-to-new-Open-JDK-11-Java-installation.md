@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "16,191 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -22,7 +22,7 @@ clipboard:    false
 
 The answers and some comments focus on how to set `JAVA_HOME` to version 11 but the question is partly about "where is version 8 being set?". To answer that see: 
 
-- https://askubuntu.com/questions/1005437/greping-all-files-for-a-string-takes-a-long-time/1005438#1005438
+- [`grep`ing all files for a string takes a long time]({% post_url /2018/2018-02-12-`grep`ing-all-files-for-a-string-takes-a-long-time %})
 
 Use this command:
 
@@ -57,7 +57,7 @@ You probably surmise `/etc/profile.d/jdk.csh` needs changing too. Indeed it cont
 
 There is a better way than going through files line by line and changing an `8` to an `11`.
 
-The easiest method is using Java installer. From this **Ask Ubuntu Q&A**: https://askubuntu.com/questions/272187/setting-jdk-7-as-default/272190
+The easiest method is using Java installer. From this **Ask Ubuntu Q&A**: [https://askubuntu.com/questions/272187/setting-jdk-7-as-default/272190](https://askubuntu.com/questions/272187/setting-jdk-7-as-default/272190)
 
 
 

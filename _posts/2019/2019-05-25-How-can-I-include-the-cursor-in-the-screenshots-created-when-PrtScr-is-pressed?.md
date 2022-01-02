@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "1,714 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -44,7 +44,7 @@ Use the same technique for the other `gnome-screenshot` settings.
 
 Note you can get a list of all settings with `gsettings list-recursively`. For the screenshot above I used the technique in this answer:
 
-- https://askubuntu.com/questions/1017045/bash-one-liner-to-display-all-gsettings-in-gui-dialog-window/1017046#1017046
+- [Bash one-liner to display ALL `gsettings` in GUI dialog window]({% post_url /2018/2018-03-18-Bash-one-liner-to-display-ALL-`gsettings`-in-GUI-dialog-window %})
 
 And the one-liner code (works with `yad` only) is:
 

@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "394,109 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -69,8 +69,8 @@ ${color orange}${hr 1}${endif}
 
 Different versions of the full code listing can be found in these answers:
 
-- https://askubuntu.com/questions/941701/conky-transparent/941705#941705
-- https://askubuntu.com/questions/604720/setting-to-high-performance/1047763#1047763
+- [conky transparent]({% post_url /2017/2017-08-01-conky-transparent %})
+- [Setting to High Performance]({% post_url /2018/2018-06-19-Setting-to-High-Performance %})
 
   [1]: https://i.stack.imgur.com/ZyTJ7.gif
   [2]: https://i.stack.imgur.com/Vhi8T.gif

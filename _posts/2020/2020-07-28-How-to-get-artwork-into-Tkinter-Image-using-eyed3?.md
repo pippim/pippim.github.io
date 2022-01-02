@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "189 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 Similar to this question:
 
-- https://stackoverflow.com/questions/29702179/how-to-get-detail-title-artist-from-mp3-files-in-python-using-eyed3
+- [https://stackoverflow.com/questions/29702179/how-to-get-detail-title-artist-from-mp3-files-in-python-using-eyed3](https://stackoverflow.com/questions/29702179/how-to-get-detail-title-artist-from-mp3-files-in-python-using-eyed3)
 
 I'd like to get music artwork from a `.m4a` file (similar to `.mp3') into Tkinter Image for displaying on a label.
 

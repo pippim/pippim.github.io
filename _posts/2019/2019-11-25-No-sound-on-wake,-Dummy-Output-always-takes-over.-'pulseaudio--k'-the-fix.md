@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "3,078 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -20,7 +20,7 @@ clipboard:    true
 
 It be caused by a new kernel introduced in 19.10 like this case:
 
-- https://askubuntu.com/questions/1184366/lagging-after-update-to-19-10-from-19-04/1184571#1184571
+- [Lagging after update to 19.10 from 19.04]({% post_url /2019/2019-10-28-Lagging-after-update-to-19.10-from-19.04 %})
 
 <!-- Language-all: lang-bash -->
 

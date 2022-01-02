@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "13,193 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -38,7 +38,7 @@ Oct 21 07:20:18 alien kernel:  cache: parent cpu7 should not be sleeping
 
 ```
 
-It could mean when you suspended the CPU's were not put to sleep as per his bounty Q&A a couple of years ago: https://askubuntu.com/questions/828486/systemd-suspends-system-but-upon-resume-kernel-then-enters-sleep-and-wake-up
+It could mean when you suspended the CPU's were not put to sleep as per his bounty Q&A a couple of years ago: [https://askubuntu.com/questions/828486/systemd-suspends-system-but-upon-resume-kernel-then-enters-sleep-and-wake-up](https://askubuntu.com/questions/828486/systemd-suspends-system-but-upon-resume-kernel-then-enters-sleep-and-wake-up)
 
 If so, I'm sad to report the problem persists to this day on my newest laptop just as it did on that older laptop.
 
@@ -66,7 +66,7 @@ Some other interesting points is it often takes 5 to 8 seconds to suspend when i
 
 ----------
 
-If you don't have the same problem in the previous sections and, your laptop stays warm when suspended, then your fix maybe here: https://askubuntu.com/questions/1029474/ubuntu-18-04-dell-xps13-9370-no-longer-suspends-on-lid-close/1036122#1036122
+If you don't have the same problem in the previous sections and, your laptop stays warm when suspended, then your fix maybe here: [https://askubuntu.com/questions/1029474/ubuntu-18-04-dell-xps13-9370-no-longer-suspends-on-lid-close/1036122#1036122](https://askubuntu.com/questions/1029474/ubuntu-18-04-dell-xps13-9370-no-longer-suspends-on-lid-close/1036122#1036122)
 
 
   [1]: https://www.spinics.net/lists/linux-acpi/msg37409.html

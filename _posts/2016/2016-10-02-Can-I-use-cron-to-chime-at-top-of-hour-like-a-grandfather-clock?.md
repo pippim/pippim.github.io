@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "2,507 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -20,8 +20,8 @@ clipboard:    true
 
 [heemayl][1] has provided the correct answer to get `cron` to run at the top of the hour and bottom of the hour. **Thanks again!** However as other users have discovered a `cronjob` cannot play sound files by default:
 
-- https://askubuntu.com/questions/621049/how-to-make-speaking-clock-via-cron-and-festival-tts-work-while-playing-music
-- https://askubuntu.com/questions/719590/help-using-crontab-to-play-a-sound
+- [https://askubuntu.com/questions/621049/how-to-make-speaking-clock-via-cron-and-festival-tts-work-while-playing-music](https://askubuntu.com/questions/621049/how-to-make-speaking-clock-via-cron-and-festival-tts-work-while-playing-music)
+- [https://askubuntu.com/questions/719590/help-using-crontab-to-play-a-sound](https://askubuntu.com/questions/719590/help-using-crontab-to-play-a-sound)
 
 ----------
 

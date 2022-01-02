@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "105,192 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -61,7 +61,7 @@ Note on my system this no only changes the initial login screen but also the loc
 
 ## Point and click with Nautilus to set login screen wallpaper
 
-I wrote a script where you can navigate to a directory / image, right click on it and set it as login screen / lock screen background using Nautilus (file manager now called "Files"): https://askubuntu.com/questions/871312/nautilus-can-set-desktop-wallpaper-how-can-it-set-login-and-lock-screen-wallpap
+I wrote a script where you can navigate to a directory / image, right click on it and set it as login screen / lock screen background using Nautilus (file manager now called "Files"): [Nautilus can set desktop wallpaper. How can it set login and lock screen wallpaper?]({% post_url /2017/2017-01-13-Nautilus-can-set-desktop-wallpaper.-How-can-it-set-login-and-lock-screen-wallpaper? %})
 
 [![Nautilus set-login-wallpaper Drop Down][2]][2]
 

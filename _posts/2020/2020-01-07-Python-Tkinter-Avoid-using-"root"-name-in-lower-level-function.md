@@ -12,13 +12,13 @@ votes:        "0 "
 favorites:    
 views:        "48 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-Inspired by this 300+ vote closed Q&A: https://stackoverflow.com/questions/17466561/best-way-to-structure-a-tkinter-application, I'm looking to avoid explicitly using `root` in a function within a class. I think it should be implicitly declared through `self` or `parent` or something like that. Here is the code in question:
+Inspired by this 300+ vote closed Q&A: [https://stackoverflow.com/questions/17466561/best-way-to-structure-a-tkinter-application](https://stackoverflow.com/questions/17466561/best-way-to-structure-a-tkinter-application), I'm looking to avoid explicitly using `root` in a function within a class. I think it should be implicitly declared through `self` or `parent` or something like that. Here is the code in question:
 
 I have this code...
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,347 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -26,8 +26,8 @@ Overheating is a common problem in Linux. This article: [Most Effective Ways To 
 - Install CPUFreq (often not necessary)
 - Monitor System temperatures
 
-You do **NOT** need to add PPAs as the article instructs to install `TLP`. See this answer: https://askubuntu.com/questions/1091959/how-can-i-install-tlp-in-ubuntu-18-04/1091962#1091962
+You do **NOT** need to add PPAs as the article instructs to install `TLP`. See this answer: [How can I install TLP in Ubuntu 18.04?]({% post_url /2018/2018-11-11-How-can-I-install-TLP-in-Ubuntu-18.04? %})
 
-You can read an in-depth Q&A here in **Ask Ubuntu** on CPU temperature control: https://askubuntu.com/questions/391474/stop-cpu-from-overheating/875872#875872
+You can read an in-depth Q&A here in **Ask Ubuntu** on CPU temperature control: [Stop cpu from overheating]({% post_url /2017/2017-01-25-Stop-cpu-from-overheating %})
 
   [1]: https://itsfoss.com/reduce-overheating-laptops-linux/

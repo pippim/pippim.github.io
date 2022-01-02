@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "357 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 For those with other computers with the same question comes this answer:
 
-- https://askubuntu.com/questions/1180675/the-computer-didnt-automatically-boot-from-usb/1180697#1180697
+- [The computer didn't automatically boot from USB,]({% post_url /2019/2019-10-13-The-computer-didn't-automatically-boot-from-USB, %})
 
 ## Access Boot Menu
 

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "758 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -34,7 +34,7 @@ However, it seems the 1809 update has been pulled for unrelated issues and is an
 
 I'm on 1803 and I'm wondering if there is any way to get this functionality back or do I have to wait until 1809 is re-released?
 
-History, more info on this: https://github.com/Microsoft/WSL/issues/1852
+History, more info on this: [https://github.com/Microsoft/WSL/issues/1852](https://github.com/Microsoft/WSL/issues/1852)
 
 
   [1]: https://www.reddit.com/r/bashonubuntuonwindows/comments/9sn6a3/wsl_support_for_the_builtin_windows_firewall/

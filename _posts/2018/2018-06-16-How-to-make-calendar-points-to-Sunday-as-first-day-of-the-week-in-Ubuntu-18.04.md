@@ -12,13 +12,13 @@ votes:        "4 "
 favorites:    
 views:        "4,051 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-A similar question was asked here: https://askubuntu.com/questions/197613/monday-as-first-day-in-gnome-shell-instead-of-sunday.
+A similar question was asked here: [https://askubuntu.com/questions/197613/monday-as-first-day-in-gnome-shell-instead-of-sunday.](https://askubuntu.com/questions/197613/monday-as-first-day-in-gnome-shell-instead-of-sunday.)
 
 1.  Use `sudo -H gedit /usr/share/i18n/locales/en_GB`.
 2.  Edit the value of `first_weekday` to `1`.

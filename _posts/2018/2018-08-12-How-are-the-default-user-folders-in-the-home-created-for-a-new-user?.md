@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "5,624 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -43,4 +43,4 @@ VIDEOS=Videos
 
 If you don't want a specific subdirectory created put a `#` in front of it to comment out the line.
 
-The sub-directories aren't created until the user logs in with a GUI: https://askubuntu.com/questions/335961/create-default-home-directory-for-existing-user-in-terminal
+The sub-directories aren't created until the user logs in with a GUI: [https://askubuntu.com/questions/335961/create-default-home-directory-for-existing-user-in-terminal](https://askubuntu.com/questions/335961/create-default-home-directory-for-existing-user-in-terminal)

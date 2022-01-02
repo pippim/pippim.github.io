@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "17,674 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -22,7 +22,7 @@ clipboard:    false
 
 As mentioned on this thread `tlp` works wonders for keeping system under control. It works with `thermald`, Intel Powerclamp, Battery vs AC for USB power, etc. Although highly configurable I've never had to change the configuration settings for a pleasant Out-Of-The-Box experience. Prior to using it I had all kinds of problems with an IvyBridge laptop overheating all the time. I have it on my new Skylake laptop and the fans NEVER run except when doing Ubuntu 16.04 LTS to 18.04 upgrade.
 
-You can get a very detailed write-up with installation instructions here: https://askubuntu.com/questions/391474/stop-cpu-from-overheating/875872#875872
+You can get a very detailed write-up with installation instructions here: [Stop cpu from overheating]({% post_url /2017/2017-01-25-Stop-cpu-from-overheating %})
 
 
 ----------

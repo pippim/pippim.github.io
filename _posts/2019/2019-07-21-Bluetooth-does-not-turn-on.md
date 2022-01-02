@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,078 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -28,9 +28,9 @@ I suggest you subscribe to the bug report because the more people that do the qu
 
 There are too many fixes listed in **Ask Ubuntu** to pick a single one that will work for you. Here are the various questions you can check on the RT3290 though:
 
-- https://askubuntu.com/questions/453605/ralink-rt-3290-bluetooth-problem-on-ubuntu-14-04
-- https://askubuntu.com/questions/756166/rt3290-ralink-driver-in-ubuntu
-- https://askubuntu.com/questions/778615/ralink-rt-3290-bluetooth-problem-on-ubuntu-16-04
+- [https://askubuntu.com/questions/453605/ralink-rt-3290-bluetooth-problem-on-ubuntu-14-04](https://askubuntu.com/questions/453605/ralink-rt-3290-bluetooth-problem-on-ubuntu-14-04)
+- [https://askubuntu.com/questions/756166/rt3290-ralink-driver-in-ubuntu](https://askubuntu.com/questions/756166/rt3290-ralink-driver-in-ubuntu)
+- [https://askubuntu.com/questions/778615/ralink-rt-3290-bluetooth-problem-on-ubuntu-16-04](https://askubuntu.com/questions/778615/ralink-rt-3290-bluetooth-problem-on-ubuntu-16-04)
 
 ## How to get WiFi Information
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "312 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -41,7 +41,7 @@ The title of the bug report is:
 
 The workaroud leads us to this infamous thread in Linux-Land / Ubuntu-Utopia:
 
-- https://askubuntu.com/questions/803640/system-freezes-completely-with-intel-bay-trail
+- [https://askubuntu.com/questions/803640/system-freezes-completely-with-intel-bay-trail](https://askubuntu.com/questions/803640/system-freezes-completely-with-intel-bay-trail)
 
 Your best bet is to update grub command line (`sudo -H gedit /etc/default/grub`) with:
 

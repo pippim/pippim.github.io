@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "857 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -28,14 +28,14 @@ The bad news is there are lots of answers in ***Ask Ubuntu*** dealing with overh
 
 Each laptop model can require different "tweaking" for CPU frequency, Turbo Boost, Hyper-Threading, Fan Speed and battery life. The answers I've written are based on my Dell Laptop. Here are the answers I've written for others with overheating issues:
 
-- https://askubuntu.com/questions/206214/bash-script-to-sleep-at-given-cpu-temperature-update-for-16-04/876732#876732
-- https://askubuntu.com/questions/929884/how-to-set-performance-instead-of-powersave-as-default/936488#936488
-- https://askubuntu.com/questions/391474/stop-cpu-from-overheating/875872#875872
-- https://askubuntu.com/questions/852502/laptop-running-hot-under-ubuntu/852918#852918
-- https://askubuntu.com/questions/853209/what-causes-my-fan-to-run/853314#853314
-- https://askubuntu.com/questions/691216/no-version-of-ubuntu-can-be-installed-with-any-skylake-6th-generation-intel-proc/852910#852910
+- [Bash script to sleep at given CPU temperature ~ update for 16.04]({% post_url /2017/2017-01-27-Bash-script-to-sleep-at-given-CPU-temperature-~-update-for-16.04 %})
+- [How to set "Performance" instead of "Powersave" as default?]({% post_url /2017/2017-07-15-How-to-set-"Performance"-instead-of-"Powersave"-as-default? %})
+- [Stop cpu from overheating]({% post_url /2017/2017-01-25-Stop-cpu-from-overheating %})
+- [https://askubuntu.com/questions/852502/laptop-running-hot-under-ubuntu/852918#852918](https://askubuntu.com/questions/852502/laptop-running-hot-under-ubuntu/852918#852918)
+- [What causes my fan to run?]({% post_url /2016/2016-11-25-What-causes-my-fan-to-run? %})
+- [No version of Ubuntu can be installed with any Skylake 6th generation Intel processor]({% post_url /2016/2016-11-24-No-version-of-Ubuntu-can-be-installed-with-any-Skylake-6th-generation-Intel-processor %})
 
 # Which is the best link?
 
-From the answers I've written I feel https://askubuntu.com/questions/391474/stop-cpu-from-overheating/875872#875872 is the best link for you. However I've included all the links because answers written by other users will probably be helpful and some might even be better for your laptop.
+From the answers I've written I feel [https://askubuntu.com/questions/391474/stop-cpu-from-overheating/875872#87587](https://askubuntu.com/questions/391474/stop-cpu-from-overheating/875872#87587)2 is the best link for you. However I've included all the links because answers written by other users will probably be helpful and some might even be better for your laptop.
 

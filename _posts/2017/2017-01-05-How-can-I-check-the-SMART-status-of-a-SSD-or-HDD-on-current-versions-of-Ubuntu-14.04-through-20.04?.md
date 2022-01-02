@@ -12,7 +12,7 @@ votes:        "20 "
 favorites:    
 views:        "295,210 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -48,7 +48,7 @@ If you require further explanation please comment below.
 
 In comments it was mentioned the SMART option was greyed out. This can happen with NVMe SSD's. In this case referring to this answer:
 
-- https://askubuntu.com/questions/1038701/how-do-i-check-system-health/1038711#1038711
+- [How do I check system health?]({% post_url /2018/2018-05-21-How-do-I-check-system-health? %})
 
 You need to first install NVMe SSD specific SMART tools:
 

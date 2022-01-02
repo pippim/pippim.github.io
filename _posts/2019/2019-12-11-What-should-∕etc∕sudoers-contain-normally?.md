@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "222 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -42,4 +42,4 @@ I put my changes at the top of the file. They are displayed in bold above:
 - `timeout` makes sudo privalege last for 2 hours so I don't have retype password every 5 minutes or whatever the default is.
 - `pwfeedback` places a `*` on screen with each key press during password input.
 - `mail_badpass` stops an email being sent to my account each time I enter the sudo password incorrectly.
-- `!secure_path` is explained here: https://askubuntu.com/questions/1012922/can-i-make-sudo-follow-my-path-via-cli
+- `!secure_path` is explained here: [https://askubuntu.com/questions/1012922/can-i-make-sudo-follow-my-path-via-cli](https://askubuntu.com/questions/1012922/can-i-make-sudo-follow-my-path-via-cli)

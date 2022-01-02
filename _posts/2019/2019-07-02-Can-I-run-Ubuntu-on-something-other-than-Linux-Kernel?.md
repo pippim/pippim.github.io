@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "1,444 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,4 +24,4 @@ You have to have an Operating System. Because this site is called **Ask Ubuntu**
 
 One answer would be Windows 10 with the WSL (Windows Subsystem for Linux) option turned on. You can also run most, if not all, the GNU utilities there. Extra steps are needed though to run the Ubuntu GUI desktop in Windows 10:
 
-- https://askubuntu.com/questions/993225/whats-the-easiest-way-to-run-gui-apps-on-windows-subsystem-for-linux-as-of-2018/993331#993331
+- [What's the easiest way to run GUI apps on Windows Subsystem for Linux as of 2018?]({% post_url /2018/2018-01-07-What's-the-easiest-way-to-run-GUI-apps-on-Windows-Subsystem-for-Linux-as-of-2018? %})

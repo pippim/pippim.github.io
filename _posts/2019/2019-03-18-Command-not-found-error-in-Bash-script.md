@@ -12,13 +12,13 @@ votes:        "4 "
 favorites:    
 views:        "5,022 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
 ---
 
-Pasting your code into https://www.shellcheck.net/ reports:
+Pasting your code into [https://www.shellcheck.net](https://www.shellcheck.net)/ reports:
 
 {% include copyHeader.html %}
 ``` 

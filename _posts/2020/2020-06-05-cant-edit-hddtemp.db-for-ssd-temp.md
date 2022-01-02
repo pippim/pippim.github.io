@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "126 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -20,7 +20,7 @@ clipboard:    true
 
 From:
 
-- https://askubuntu.com/questions/1038701/how-do-i-check-system-health/1038711#1038711
+- [How do I check system health?]({% post_url /2018/2018-05-21-How-do-I-check-system-health? %})
 
 ### NVMe PCIe M.2 Gen 3.0 x 4 (or 2) SSD
 

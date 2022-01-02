@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "67 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 It sounds like your grub is setup to always boot to a specific menu option. Taking this answer:
 
-- https://askubuntu.com/questions/834205/edit-grub-from-windows/834406#834406
+- [Edit grub from Windows?]({% post_url /2016/2016-10-07-Edit-grub-from-Windows? %})
 
 You can always have grub remember the previous boot option each boot. Use `sudo -H gedit /etc/default/grub`, comment the line below and insert two lines below it:
 

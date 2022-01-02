@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,905 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,4 +24,4 @@ From the first window of Nautilus select copy. In the second instance of Nautilu
 
 Note there are problems reported in Nautilus DnD (Drag and Drop) for Ubuntu 19.04. For that version see:
 
-- https://askubuntu.com/questions/1136203/drag-and-drop-functionality-no-longer-working-after-upgrade-to-19-04
+- [https://askubuntu.com/questions/1136203/drag-and-drop-functionality-no-longer-working-after-upgrade-to-19-04](https://askubuntu.com/questions/1136203/drag-and-drop-functionality-no-longer-working-after-upgrade-to-19-04)

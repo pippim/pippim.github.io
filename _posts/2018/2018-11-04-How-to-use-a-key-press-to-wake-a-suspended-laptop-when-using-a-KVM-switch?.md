@@ -12,13 +12,13 @@ votes:        "3 "
 favorites:    
 views:        "4,856 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   true
 clipboard:    false
 ---
 
-From: https://askubuntu.com/questions/546762/usb-ir-remote-wakup-from-suspend
+From: [https://askubuntu.com/questions/546762/usb-ir-remote-wakup-from-suspend](https://askubuntu.com/questions/546762/usb-ir-remote-wakup-from-suspend)
 
 I had the same problem and was also stumped by my USBs not appearing in /proc/acpi/wakeup. In the end, however, despite many solutions suggesting this was required I did not need to enable USBs in ACPI.
 
@@ -146,7 +146,7 @@ One problem with this approach is that if the USB port the IR device is plugged 
 
 # Original Answer Below
 
-This question has three answers that may work for you: https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro
+This question has three answers that may work for you: [https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro](https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro)
 
 
 ----------

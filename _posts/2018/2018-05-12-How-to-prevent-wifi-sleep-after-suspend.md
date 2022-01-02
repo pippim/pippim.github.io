@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "21,873 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -37,7 +37,7 @@ wifi.powersave = 3
 - If it's already set to `3` try setting it to `2` (Disable power saving).
 - After saving the file run `sudo systemctl restart NetworkManager`
 
-The second is a `systemd` script which reloads the WiFi kernel module when resuming from suspend. It comes from this answer: https://askubuntu.com/questions/951261/wifi-available-networks-not-showing-up-suddenly/951422#951422:
+The second is a `systemd` script which reloads the WiFi kernel module when resuming from suspend. It comes from this answer: [https://askubuntu.com/questions/951261/wifi-available-networks-not-showing-up-suddenly/951422#951422:](https://askubuntu.com/questions/951261/wifi-available-networks-not-showing-up-suddenly/951422#951422:)
 
 This script is written for iwlwifi` which is the common Intel driver name. If your's is different change that name below:
 

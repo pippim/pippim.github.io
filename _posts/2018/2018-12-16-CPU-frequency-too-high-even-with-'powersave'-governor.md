@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "4,833 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -32,7 +32,7 @@ Now as you can see when system is idle system is at 800 MHz as it should be:
 
 OP updated question with results of Initial Answer below and for whatever reason the governor is set to `performance` mode which runs all CPU's at max speed all the time.
 
-We need to do the reverse of this answer: https://askubuntu.com/questions/1021748/set-cpu-governor-to-performance-in-18-04/1084727#1084727:
+We need to do the reverse of this answer: [https://askubuntu.com/questions/1021748/set-cpu-governor-to-performance-in-18-04/1084727#1084727:](https://askubuntu.com/questions/1021748/set-cpu-governor-to-performance-in-18-04/1084727#1084727:)
 
 <!-- Language-all: lang-bash -->
 
@@ -54,7 +54,7 @@ Save the file and reboot. Two minutes after rebooting your CPU's will settle dow
 
 # What if `/etc/rc.local` doesn't exist?
 
-From this: https://askubuntu.com/questions/840836/ubuntu-16-10-rc-local-file-does-not-exist
+From this: [https://askubuntu.com/questions/840836/ubuntu-16-10-rc-local-file-does-not-exist](https://askubuntu.com/questions/840836/ubuntu-16-10-rc-local-file-does-not-exist)
 
 you need to enter:
 

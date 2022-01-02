@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "1,844 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   true
 clipboard:    true
@@ -24,7 +24,7 @@ clipboard:    true
 
 # Improved Version
 
-You can see the improved version here: https://askubuntu.com/a/1020693/307523
+You can see the improved version here: [https://askubuntu.com/a/1020693/307523](https://askubuntu.com/a/1020693/307523)
 
 It looks like this:
 

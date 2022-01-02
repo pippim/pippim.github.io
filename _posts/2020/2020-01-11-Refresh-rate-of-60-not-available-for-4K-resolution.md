@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "6,360 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 I had the exact same problem with my 4K TV. The solution was to generate a 3840x2160 resolution with a 54 Hz refresh rate:
 
-- https://askubuntu.com/questions/377937/how-to-set-a-custom-resolution
+- [https://askubuntu.com/questions/377937/how-to-set-a-custom-resolution](https://askubuntu.com/questions/377937/how-to-set-a-custom-resolution)
 
 To summarize I used:
 

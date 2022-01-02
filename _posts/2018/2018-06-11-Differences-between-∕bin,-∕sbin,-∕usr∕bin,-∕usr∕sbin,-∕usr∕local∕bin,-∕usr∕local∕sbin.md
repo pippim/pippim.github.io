@@ -12,13 +12,13 @@ votes:        "23 "
 favorites:    
 views:        "289,928 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
 ---
 
-I had a similar question myself a year+ ago: https://askubuntu.com/questions/830074/best-directory-to-place-my-bash-scripts
+I had a similar question myself a year+ ago: [https://askubuntu.com/questions/830074/best-directory-to-place-my-bash-scripts](https://askubuntu.com/questions/830074/best-directory-to-place-my-bash-scripts)
 
 
 ## System directories for binaries
@@ -65,9 +65,9 @@ $ man hier | grep -E 'bin$|sbin$|^.{7}(/bin)|^.{7}(/sbin)' -A2
 
 ## Where to put your own scripts?
 
-For all users to access your scripts you can put them in `/usr/local/bin`. Keep in mind you need `sudo` access to add / change files here. See: https://askubuntu.com/questions/195652/is-there-a-standard-place-for-placing-custom-linux-scripts
+For all users to access your scripts you can put them in `/usr/local/bin`. Keep in mind you need `sudo` access to add / change files here. See: [https://askubuntu.com/questions/195652/is-there-a-standard-place-for-placing-custom-linux-scripts](https://askubuntu.com/questions/195652/is-there-a-standard-place-for-placing-custom-linux-scripts)
 
-For your own user ID scripts put them in `/home/YOUR_NAME/bin`. Keep in mind you have to create this directory first and relaunch the terminal to get the path automatically setup by `~/.profile`. See: https://askubuntu.com/questions/402353/how-to-add-home-username-bin-to-path?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+For your own user ID scripts put them in `/home/YOUR_NAME/bin`. Keep in mind you have to create this directory first and relaunch the terminal to get the path automatically setup by `~/.profile`. See: [https://askubuntu.com/questions/402353/how-to-add-home-username-bin-to-path?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa](https://askubuntu.com/questions/402353/how-to-add-home-username-bin-to-path?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
 
 
 ----------
@@ -77,10 +77,10 @@ For your own user ID scripts put them in `/home/YOUR_NAME/bin`. Keep in mind you
 
 I'm contemplating taking some of my more complex bash scripts in **Ask Ubuntu** and setting them up with install scripts on `github`. Here are few examples:
 
-- https://askubuntu.com/questions/894460/automatically-adjust-display-brightness-based-on-sunrise-and-sunset/894470#894470
-- https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly/1039377#1039377
-- https://askubuntu.com/questions/837078/application-that-will-lock-screen-after-a-set-amount-of-time-for-ubuntu/837115#837115
-- https://askubuntu.com/questions/900319/code-version-control-between-local-files-and-au-answers/900609#900609
+- [Automatically adjust display brightness based on sunrise and sunset]({% post_url /2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset %})
+- [Set of countdown timers with alarm]({% post_url /2018/2018-05-23-Set-of-countdown-timers-with-alarm %})
+- [Application that will lock screen after a set amount of time for Ubuntu]({% post_url /2016/2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu %})
+- [Code version control between local files and AU answers]({% post_url /2017/2017-04-05-Code-version-control-between-local-files-and-AU-answers %})
 
 I *think* the scripts should be installed in `/usr/bin` which is in the $PATH, but I'm not sure on the appropriate place yet.
 

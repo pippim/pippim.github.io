@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,129 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -31,7 +31,7 @@ Child(yad -tail --> *.log --> Yad Parent(yad --text-info )
 > displayed and auto scrolling. This is not possible with `zenity`. See  
 > my below video:  
 
-https://www.youtube.com/watch?v=stPAWGXQyLY
+[https://www.youtube.com/watch?v=stPAWGXQyLY](https://www.youtube.com/watch?v=stPAWGXQyLY)
 
 
 

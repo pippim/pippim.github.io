@@ -12,13 +12,13 @@ votes:        "12 "
 favorites:    
 views:        "17,106 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-The part you are look for is at the bottom from: https://askubuntu.com/questions/1033206/switch-to-console-in-ubuntu-18-04-how-to-leave-gui
+The part you are look for is at the bottom from: [https://askubuntu.com/questions/1033206/switch-to-console-in-ubuntu-18-04-how-to-leave-gui](https://askubuntu.com/questions/1033206/switch-to-console-in-ubuntu-18-04-how-to-leave-gui)
 
 > In Ubuntu 18.04, they have changed things around and you cannot get to  
 > tty1, it is always showing the display manager / login screen. If you  

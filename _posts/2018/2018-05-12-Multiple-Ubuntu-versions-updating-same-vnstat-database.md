@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "416 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -26,7 +26,7 @@ I've been testing Ubuntu 16.04 to 18.04 upgrade. I upgraded last week and I rebo
 - "Week" shows 7 GB but should be 32.33 GB + 2.52 GB for 18.04 boot tonight.
 - "Month" shows 45.63 GB but it really is about 70 GB
 
-The reason is 16.04 and 18.04 have separate databases that aren't synced when I clone 16.04 to test partition and upgrade to 18.04: https://askubuntu.com/questions/1028604/bash-script-to-clone-ubuntu-to-new-partition-for-testing-18-04-lts-upgrade/1028605#1028605
+The reason is 16.04 and 18.04 have separate databases that aren't synced when I clone 16.04 to test partition and upgrade to 18.04: [Bash script to backup∕clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %})
 
 How can I have Ubuntu 16.04 on one partition and Ubuntu 18.04 on another partition both updating the same `vnstat` database? I would like to store the database on a third partition (`ntfs` File System) already setup for sharing Windows Subsystem for Linux (WSL) data and Ubuntu data.
 

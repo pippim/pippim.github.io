@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "500 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -65,7 +65,7 @@ PATH is an environmental variable. To set the variable we use "PATH=" but to ref
 ----------
 
 
-The PATH variable can be set in many places as outlined in this Q&A: https://askubuntu.com/questions/705912/where-is-my-path-variable-being-set. To discover which files are setting the PATH one of the answers recommends using:
+The PATH variable can be set in many places as outlined in this Q&A: [https://askubuntu.com/questions/705912/where-is-my-path-variable-being-set](https://askubuntu.com/questions/705912/where-is-my-path-variable-being-set). To discover which files are setting the PATH one of the answers recommends using:
 
 ``` 
 grep --color -H 'PATH=' ~/.bashrc ~/.profile ~/.bash_profile ~/bash.login \

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "4,998 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,9 +24,9 @@ You should see (and possibly subscribe to) this bug report:
 
 There have been numerous posts in **Ask Ubuntu** about CPU throttling recently:
 
-- https://askubuntu.com/questions/1144129/core-package-temperature-above-threshold-cpu-clock-throttled-lenovo-e590
-- https://askubuntu.com/questions/1013225/set-cpu-temperature-throttle-threshold-on-ubuntu-thinkpad
-- https://askubuntu.com/questions/1040015/xps-9370-thermal-throttling-ubuntu-18-04/1051025
+- [https://askubuntu.com/questions/1144129/core-package-temperature-above-threshold-cpu-clock-throttled-lenovo-e590](https://askubuntu.com/questions/1144129/core-package-temperature-above-threshold-cpu-clock-throttled-lenovo-e590)
+- [https://askubuntu.com/questions/1013225/set-cpu-temperature-throttle-threshold-on-ubuntu-thinkpad](https://askubuntu.com/questions/1013225/set-cpu-temperature-throttle-threshold-on-ubuntu-thinkpad)
+- [https://askubuntu.com/questions/1040015/xps-9370-thermal-throttling-ubuntu-18-04/1051025](https://askubuntu.com/questions/1040015/xps-9370-thermal-throttling-ubuntu-18-04/1051025)
 
 All these posts say the same thing which happens to me periodically:
 

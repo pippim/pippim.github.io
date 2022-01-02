@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "960 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -43,7 +43,7 @@ If your system boots normally after recommended repair great. If not post the li
 
 On some systems this annoyance can occur:
 
-- https://askubuntu.com/questions/938633/boot-repair-created-too-many-grub-menu-entries-for-windows/1022700#1022700
+- [Boot-Repair created too many grub menu entries for Windows]({% post_url /2018/2018-04-06-Boot-Repair-created-too-many-grub-menu-entries-for-Windows %})
 
 If this happens to you, visit the link for a solution.
 

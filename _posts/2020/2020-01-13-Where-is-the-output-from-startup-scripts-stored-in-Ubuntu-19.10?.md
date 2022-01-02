@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "2,538 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 The problem has been around since Ubuntu 16.04:
 
-- https://askubuntu.com/questions/763638/no-more-boot-logging-since-16-04#comment1910684_771406
+- [https://askubuntu.com/questions/763638/no-more-boot-logging-since-16-04#comment1910684_771406](https://askubuntu.com/questions/763638/no-more-boot-logging-since-16-04#comment1910684_771406)
 
 Answers there also recommend `journalctl` but buried in comments:
 

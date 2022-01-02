@@ -12,13 +12,13 @@ votes:        "5 "
 favorites:    
 views:        "5,263 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-Sounds the same as this problem: https://askubuntu.com/questions/749420/wireless-lost-ability-to-use-5ghz-pce-ac68
+Sounds the same as this problem: [https://askubuntu.com/questions/749420/wireless-lost-ability-to-use-5ghz-pce-ac68](https://askubuntu.com/questions/749420/wireless-lost-ability-to-use-5ghz-pce-ac68)
 
 The answer there says:
 

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "983 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -96,7 +96,7 @@ Pay close attention to the parameter `-b-1` it is different than other reference
 
 ### Keep log file size down with `vacuum`
 
-I have a monthly `cron` job setup to keep log files down to 200MB in size: https://askubuntu.com/questions/1012912/systemd-logs-journalctl-are-too-large-and-slow/1012913#1012913. This not only decreases storage requirements but speeds up search across all boot logs.
+I have a monthly `cron` job setup to keep log files down to 200MB in size: [Systemd logs (`journalctl`) are too large and slow]({% post_url /2018/2018-03-08-Systemd-logs-(`journalctl`)-are-too-large-and-slow %}). This not only decreases storage requirements but speeds up search across all boot logs.
 
 
 For example to reduce 312 MB consumption down to 200 MB (or less) use:

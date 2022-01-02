@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "709 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -75,7 +75,7 @@ Errors were encountered while processing:
 
 ```
 
-Then you'll see an error message because of this [bug][1]. Now you'll have to fix it using this answer: https://askubuntu.com/questions/1030043/unable-to-upgrade-kernel-after-4-16-3
+Then you'll see an error message because of this [bug][1]. Now you'll have to fix it using this answer: [https://askubuntu.com/questions/1030043/unable-to-upgrade-kernel-after-4-16-3](https://askubuntu.com/questions/1030043/unable-to-upgrade-kernel-after-4-16-3)
 
 
   [1]: https://bugs.launchpad.net/ubuntu/+source/linux-base/+bug/1766851

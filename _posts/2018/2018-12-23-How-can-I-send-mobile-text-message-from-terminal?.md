@@ -12,7 +12,7 @@ votes:        "60 "
 favorites:    
 views:        "74,309 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   true
 clipboard:    false
@@ -121,7 +121,7 @@ Many carriers allow you to send SMS Text Message to a smartphone by addressing a
 
 ## Phone Number look up to get carrier's website address
 
-To get the provider's website address using the phone number go to: https://freecarrierlookup.com/. Imagine we entered the phone number: `7801234567`:
+To get the provider's website address using the phone number go to: [https://freecarrierlookup.com/](https://freecarrierlookup.com/). Imagine we entered the phone number: `7801234567`:
 
 [![Fee Carrier Lookup.png][3]][3]
 
@@ -135,7 +135,7 @@ Of course if you have your smartphone configured to sound with a notification wh
 
 ## CLI interface for sending email address
 
-In **Ask Ubuntu** there are many questions and answers on how to send email using bash. I'm using `ssmtp` (Secure Simple Mail Transport Protocol) for my `cron` daily backups: https://askubuntu.com/questions/917562/backup-linux-configuration-scripts-and-documents-to-gmail/922493#922493
+In **Ask Ubuntu** there are many questions and answers on how to send email using bash. I'm using `ssmtp` (Secure Simple Mail Transport Protocol) for my `cron` daily backups: [Backup Linux configuration, scripts and documents to Gmail]({% post_url /2017/2017-06-06-Backup-Linux-configuration,-scripts-and-documents-to-Gmail %})
 
 Although this setup is for one user, you can create a file with multiple users to text messages to:
 

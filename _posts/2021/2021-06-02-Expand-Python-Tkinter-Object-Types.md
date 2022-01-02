@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "79 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,6 +20,6 @@ clipboard:    false
 
 There is this question to discover existing types:
 
-- https://stackoverflow.com/questions/27281097/getting-python-tkinter-object-type
+- [https://stackoverflow.com/questions/27281097/getting-python-tkinter-object-type](https://stackoverflow.com/questions/27281097/getting-python-tkinter-object-type)
 
 However I've just developed tooltips (balloons) I've assigned to some buttons and would like to be able to recall all of them as a unique type. Also down the road I'd like to hand-craft canvas objects which will operate like pseudo buttons with `<enter>`, `<leave>`, `<active>`, `<press>` and `<release>` events. How might I declare a new object type for them?

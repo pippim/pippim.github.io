@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "204 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 You can still get hardware upgrades on 16.04 by installing a newer kernel:
 
-- https://askubuntu.com/questions/119080/how-to-update-kernel-to-the-latest-mainline-version-without-any-distro-upgrade/885165#885165
+- [How to update kernel to the latest mainline version without any Distro-upgrade?]({% post_url /2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade? %})
 
 You would do this for example if you bought a new device to add onto your computer and the drivers for it were only on a newer kernel.
 

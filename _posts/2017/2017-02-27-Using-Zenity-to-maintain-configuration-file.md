@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,022 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -172,7 +172,7 @@ The last line contains current value from configuration array (`CfgArr`) followe
 
 To see all the screens and read an overview see this **Ask Ubuntu** Answer:
 
-- https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime/887249#887249
+- [https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime/887249#887249](https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime/887249#887249)
 
 Visit the `eyesome` github page and download all the bash code here:
 

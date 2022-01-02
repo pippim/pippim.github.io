@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,071 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -22,7 +22,7 @@ clipboard:    true
 
 <!-- Language-all: lang-bash -->
 
-As per this Q&A: https://askubuntu.com/questions/52046/is-there-a-hotkey-to-switch-between-tabs-in-the-default-terminal-app/52049
+As per this Q&A: [https://askubuntu.com/questions/52046/is-there-a-hotkey-to-switch-between-tabs-in-the-default-terminal-app/52049](https://askubuntu.com/questions/52046/is-there-a-hotkey-to-switch-between-tabs-in-the-default-terminal-app/52049)
 
 After opening the new tab you can return to the previous tab with <kbd>Ctrl</kbd> + <kbd>pg up</kbd>
 
@@ -55,7 +55,7 @@ OP desires Wayland support and more importantly a POSIX method that works with m
 
 From this Q&A:
 
-- https://askubuntu.com/questions/684703/script-to-open-terminal-and-show-the-output-of-the-running-commands 
+- [https://askubuntu.com/questions/684703/script-to-open-terminal-and-show-the-output-of-the-running-command](https://askubuntu.com/questions/684703/script-to-open-terminal-and-show-the-output-of-the-running-command)s 
 
 ... comes this command:
 

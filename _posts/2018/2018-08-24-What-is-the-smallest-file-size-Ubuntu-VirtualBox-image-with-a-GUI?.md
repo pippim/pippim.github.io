@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,719 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 ## Lubuntu 16.04 is probably best and needs 4 GB minimum
 
-I asked a similar for the smallest footprint / fastest flavour of Ubuntu here: https://askubuntu.com/questions/1051964/is-one-distribution-better-for-virtualbox-5-1-inside-ubuntu-16-04 and the answer was **Lubuntu**.
+I asked a similar for the smallest footprint / fastest flavour of Ubuntu here: [https://askubuntu.com/questions/1051964/is-one-distribution-better-for-virtualbox-5-1-inside-ubuntu-16-0](https://askubuntu.com/questions/1051964/is-one-distribution-better-for-virtualbox-5-1-inside-ubuntu-16-0)4 and the answer was **Lubuntu**.
 
 I created my Lubuntu 16.04 Virtual Image at 7 GB:
 

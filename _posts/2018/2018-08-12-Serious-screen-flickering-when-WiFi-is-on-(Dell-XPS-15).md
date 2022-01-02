@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,460 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -33,7 +33,7 @@ in embedded display applications
 
 As many people here already know, `i915` is Intel's display driver for Linux that has been around for decades.
 
-The `vswing` component I cannot fathom but, you can find the C code that controls it here: https://patchwork.kernel.org/patch/6349211/
+The `vswing` component I cannot fathom but, you can find the C code that controls it here: [https://patchwork.kernel.org/patch/6349211/](https://patchwork.kernel.org/patch/6349211/)
 
 The parameter settings (after `=` sign) can be:
 
@@ -45,7 +45,7 @@ I will set my kernel parameter to `1` and reboot after posting this answer.
 
 **This is a temporary setting for older kernels** according to what I read tonight. So you should occasionally remove the setting after new kernels are installed to see if it's still necessary.
 
-Finally there is an interesting tidbit here: https://patchwork.kernel.org/patch/9303023/
+Finally there is an interesting tidbit here: [https://patchwork.kernel.org/patch/9303023/](https://patchwork.kernel.org/patch/9303023/)
 
 ``` 
 >  	/*
@@ -88,7 +88,7 @@ Here is a great link for you: [Arch Linux Dell XPS 13 (9350)][2]:
 
 Additionally check these posts from other Dell users:
 
-- https://www.dell.com/community/Laptops-General/XPS-15-9530-screen-flicker/td-p/4360533/page/2
+- [https://www.dell.com/community/Laptops-General/XPS-15-9530-screen-flicker/td-p/4360533/page/2](https://www.dell.com/community/Laptops-General/XPS-15-9530-screen-flicker/td-p/4360533/page/2)
 - [Disable Panel Self-Refresh (Windows instructions need to find Linux)][3]
 
 

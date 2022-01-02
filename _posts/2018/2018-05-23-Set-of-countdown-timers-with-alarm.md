@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "4,120 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          true
 navigation:   true
 clipboard:    true
@@ -804,7 +804,7 @@ exit 0
 
 You can have the System Tray / Application Indicator Area update with the time remaining along with a "spinning text pizza" as illustrated in the GIF in above the bash listing.
 
-To setup Sysmonitor Indicator see this Q&A: [Can BASH display in systray as application indicator?](https://askubuntu.com/questions/882419/can-bash-display-in-systray-as-application-indicator/882420#882420)
+To setup Sysmonitor Indicator see this Q&A: [Can BASH display in systray as application indicator?]({% post_url /2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator? %})
 
 
   [1]: https://i.stack.imgur.com/4m75Y.gif

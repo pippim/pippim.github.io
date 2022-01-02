@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,764 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -47,10 +47,10 @@ I emailed the developer today and this is our conversation:
 
 > This was introduced via a change in the kernel/udev, but a work-around  
 > laded in bolt 0.9:  
-> https://gitlab.freedesktop.org/bolt/bolt/-/issues/156  
+> [https://gitlab.freedesktop.org/bolt/bolt/-/issues/15](https://gitlab.freedesktop.org/bolt/bolt/-/issues/15)6  
 >   
 > There is an ubuntu bug open:  
-> https://bugs.launchpad.net/ubuntu/+source/bolt/+bug/1892657  
+> [https://bugs.launchpad.net/ubuntu/+source/bolt/+bug/189265](https://bugs.launchpad.net/ubuntu/+source/bolt/+bug/189265)7  
 
 
 *Is there a way to disable the icon but keep boltd running?*
@@ -68,7 +68,7 @@ I use the Unity interface where application indicators are right justified on th
 
 For Gnome Users to prevent icons jumping back and forth the only band-aid I can think of is moving all icons to the right side. This can probably be achieved here:
 
-- https://askubuntu.com/questions/453969/how-can-i-order-gnome3-shell-extensions-at-the-top
+- [https://askubuntu.com/questions/453969/how-can-i-order-gnome3-shell-extensions-at-the-top](https://askubuntu.com/questions/453969/how-can-i-order-gnome3-shell-extensions-at-the-top)
 
 ***If*** this works, then when the `boltctl` icon appears and disappears on the left side nothing "jumps around".
 

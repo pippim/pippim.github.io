@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "959 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -28,4 +28,4 @@ The important things to remember is most people suggest AHCI instead of Intel RA
 
 Finally after installing you may still need to run `boot-repair`:
 
-- https://askubuntu.com/questions/1104855/how-to-make-grub-menu-appear-instead-grub-minimal-bash-like-in-booting/1105737#1105737
+- [How to make grub menu appear instead grub minimal bash-like in booting?]({% post_url /2018/2018-12-31-How-to-make-grub-menu-appear-instead-grub-minimal-bash-like-in-booting? %})

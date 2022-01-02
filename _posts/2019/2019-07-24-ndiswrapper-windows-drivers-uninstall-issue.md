@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "140 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -34,8 +34,8 @@ sudo apt-get remove ndisgtk
 
 There are additional details you might want to read:
 
-- https://askubuntu.com/questions/96557/how-do-i-cleanly-remove-ndiswrapper
-- https://askubuntu.com/questions/19013/how-do-i-remove-ndiswrapper-completely
+- [https://askubuntu.com/questions/96557/how-do-i-cleanly-remove-ndiswrapper](https://askubuntu.com/questions/96557/how-do-i-cleanly-remove-ndiswrapper)
+- [https://askubuntu.com/questions/19013/how-do-i-remove-ndiswrapper-completely](https://askubuntu.com/questions/19013/how-do-i-remove-ndiswrapper-completely)
 - [How to Uninstall Ndiswrapper](https://sourceforge.net/p/ndiswrapper/ndiswrapper/Uninstall_HowTo/)
 
 The last link deals with the windows wrapped drivers that are created in `/lib/modules/uname -r/misc`, `/etc/ndiswrapper` and `/etc/modprobe.d/ndiswrapper`.

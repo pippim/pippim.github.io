@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,304 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -22,7 +22,7 @@ clipboard:    false
 
 But with both `rsync` and `dd` or another cloning method you must change `/etc/fstab` and `/etc/default/grub` and by extension `/boot/grub/grub.cfg` for Ubuntu to work properly.
 
-From this script: https://askubuntu.com/questions/1028604/bash-script-to-backkup-clone-ubuntu-to-another-partition/1028605#1028605
+From this script: [Bash script to backup∕clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %})
 
 `rsync` is called like this:
 

@@ -12,13 +12,13 @@ votes:        "2 "
 favorites:    
 views:        "5,557 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-You can try this Q&A: https://askubuntu.com/questions/985963/disable-mouse-battery-low-spam-notification
+You can try this Q&A: [https://askubuntu.com/questions/985963/disable-mouse-battery-low-spam-notification](https://askubuntu.com/questions/985963/disable-mouse-battery-low-spam-notification)
 
 > For ubuntu 17.10 go to org --> gnome --> settings-daemon --> plugins  
 > --> power Alter the "percentage-low" setting to what you want. I changed from 10% to 4%.  

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "731 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 This article has detailed steps for creating Ubuntu 18.04 Live USB and booting it:
 
-- https://linuxconfig.org/install-ubuntu-from-usb-18-04-bionic-beaver
+- [https://linuxconfig.org/install-ubuntu-from-usb-18-04-bionic-beaver](https://linuxconfig.org/install-ubuntu-from-usb-18-04-bionic-beaver)
 
 The part you are stuck on now is getting BIOS to boot the Live USB:
 

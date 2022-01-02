@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,692 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -30,7 +30,7 @@ In my case, I discovered that the problem was caused by icc profiles used by gho
 > ./base/gsicc_manage.c:2025: gsicc_set_device_profile(): cannot find device profile   
 > **** Unable to open the initial device, quitting.   
 
-So what worked out for me has been to manually remove the icc profiles and then re-install libgs9-common (following https://askubuntu.com/questions/924915/broken-ghostscript-configuration) : 
+So what worked out for me has been to manually remove the icc profiles and then re-install libgs9-common (following [https://askubuntu.com/questions/924915/broken-ghostscript-configuration](https://askubuntu.com/questions/924915/broken-ghostscript-configuration)) : 
 > sudo rmdir /usr/share/ghostscript/9.25/iccprofiles   
 > sudo apt-get install --reinstall libgs9-common   
 

@@ -12,13 +12,13 @@ votes:        "8 "
 favorites:    
 views:        "6,548 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-This doesn't sound like the bug linked in the OP's question or the close candidate in the comments section: https://askubuntu.com/questions/1006621/2-15-18-compiz-update-broke-unity. It sounds more like this common problem: [Unity doesn&#39;t load, no Launcher, no Dash appears][1]
+This doesn't sound like the bug linked in the OP's question or the close candidate in the comments section: [https://askubuntu.com/questions/1006621/2-15-18-compiz-update-broke-unity](https://askubuntu.com/questions/1006621/2-15-18-compiz-update-broke-unity). It sounds more like this common problem: [Unity doesn&#39;t load, no Launcher, no Dash appears][1]
 
 This is especially true due to comments in deep within my proposed link stating the guest session works perfectly just not the normal user. The OP here has same scenario.
 

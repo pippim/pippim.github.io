@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,974 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,7 +24,7 @@ There is the [ydotool][1] package for wayland:
 
 Generic command-line automation tool (no X!)
 
-https://github.com/ReimuNotMoe/ydotool
+[https://github.com/ReimuNotMoe/ydotool](https://github.com/ReimuNotMoe/ydotool)
 
 Performs some of the functions of xdotool(1) without requiring X11 -
 however, it generally requires root permission (to open /dev/uinput)

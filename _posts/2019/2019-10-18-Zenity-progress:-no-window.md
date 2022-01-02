@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "318 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -82,7 +82,7 @@ Passing `${filename}` to `--text` option will not update display with each file 
 
 Although the source code appears in the `.gif` you can copy and paste in your own script from this Q&A:
 
-- https://askubuntu.com/questions/1027543/how-do-i-create-a-fake-process-bar/1027622#1027622
+- [How do I create a fake process bar?]({% post_url /2018/2018-04-23-How-do-I-create-a-fake-process-bar? %})
 
 
   [1]: https://i.stack.imgur.com/w4HlS.gif

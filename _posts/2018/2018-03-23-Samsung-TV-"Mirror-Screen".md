@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "79,242 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -30,7 +30,7 @@ Although this is the recommended option for the OP, check your TV model first be
 
 Image:
  
-[<img src="https://i.stack.imgur.com/aVOnF.jpg" width="125" height="180" alt="IMG: " title="">][3]
+[<img src="[https://i.stack.imgur.com/aVOnF.jpg](https://i.stack.imgur.com/aVOnF.jpg)" width="125" height="180" alt="IMG: " title="">][3]
 
 Google cast extension has been discontinued, [now is integrated][4] into Chrome/Chromium:
 

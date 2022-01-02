@@ -12,13 +12,13 @@ votes:        "6 "
 favorites:    
 views:        "32,395 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
 ---
 
-Go to [http://www.mpich.org/downloads/][1] and click on `Xenial` for Ubuntu 16.04. This takes you here: [https://packages.ubuntu.com/xenial/mpich][2]. Then click on `amd64` and you are here: https://packages.ubuntu.com/xenial/amd64/mpich/download. Where it says:
+Go to [http://www.mpich.org/downloads/][1] and click on `Xenial` for Ubuntu 16.04. This takes you here: [https://packages.ubuntu.com/xenial/mpich][2]. Then click on `amd64` and you are here: [https://packages.ubuntu.com/xenial/amd64/mpich/download](https://packages.ubuntu.com/xenial/amd64/mpich/download). Where it says:
 
 > If you are running Ubuntu, it is strongly suggested to use a package  
 > manager like aptitude or synaptic to download and install packages,  

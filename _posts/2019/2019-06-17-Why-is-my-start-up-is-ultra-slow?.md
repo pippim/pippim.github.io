@@ -12,13 +12,13 @@ votes:        "2 "
 favorites:    
 views:        "1,712 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-Part of the solution can be found here: https://askubuntu.com/questions/800479/ubuntu-16-04-slow-boot-apt-daily-service
+Part of the solution can be found here: [https://askubuntu.com/questions/800479/ubuntu-16-04-slow-boot-apt-daily-service](https://askubuntu.com/questions/800479/ubuntu-16-04-slow-boot-apt-daily-service)
 
 The accepted answer says:
 
@@ -40,6 +40,6 @@ This changes the "timer" that triggers `apt-daily.service` to run at a random ti
 
 The second part of the solution can be found here:
 
-- https://askubuntu.com/questions/1094389/what-is-the-use-of-systemd-journal-flush-service/1095784
+- [https://askubuntu.com/questions/1094389/what-is-the-use-of-systemd-journal-flush-service/1095784](https://askubuntu.com/questions/1094389/what-is-the-use-of-systemd-journal-flush-service/1095784)
 
 I would have merged in but using phone is awkward.

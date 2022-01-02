@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,099 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -22,8 +22,8 @@ clipboard:    true
 
 All these most popular google search hits ignore the question or say **NO** it can't be done. That isn't true though. `fsck` is scheduled to run during boot before the filesystem is mounted as `rw` (read/write). As such most answers says it can't be run after system is fully booted:
 
-- https://askubuntu.com/questions/47953/can-i-run-fsck-or-e2fsck-when-linux-file-system-is-mounted
-- https://askubuntu.com/questions/915866/doing-disk-checks-on-mounted-os-partition
+- [https://askubuntu.com/questions/47953/can-i-run-fsck-or-e2fsck-when-linux-file-system-is-mounted](https://askubuntu.com/questions/47953/can-i-run-fsck-or-e2fsck-when-linux-file-system-is-mounted)
+- [https://askubuntu.com/questions/915866/doing-disk-checks-on-mounted-os-partition](https://askubuntu.com/questions/915866/doing-disk-checks-on-mounted-os-partition)
 - [Is it possible to run fsck to only see errors on mounted disk][1]
 
 ## Why it needs to be done

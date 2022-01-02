@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "808 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   true
 clipboard:    true
@@ -201,7 +201,7 @@ sudo chmod a+x /usr/local/bin/glocate
 
 ```
 
-If you want to create a desktop shortcut see: https://askubuntu.com/questions/450266/an-easy-way-to-create-a-desktop-shortcut
+If you want to create a desktop shortcut see: [https://askubuntu.com/questions/450266/an-easy-way-to-create-a-desktop-shortcut](https://askubuntu.com/questions/450266/an-easy-way-to-create-a-desktop-shortcut)
 
 To call the script from the terminal simply use: `glocate`.
 

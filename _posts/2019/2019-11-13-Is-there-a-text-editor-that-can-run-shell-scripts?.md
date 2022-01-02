@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "8,788 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 From:
 
-- https://askubuntu.com/questions/728306/how-to-debug-c-programs-by-gedit/1082769#1082769
+- [https://askubuntu.com/questions/728306/how-to-debug-c-programs-by-gedit/1082769#1082769](https://askubuntu.com/questions/728306/how-to-debug-c-programs-by-gedit/1082769#1082769)
 
 # Gedit Plug-ins
 
@@ -75,7 +75,7 @@ There are three other plug-ins I currently use in the `gedit` coding window:
 
 For further reading please see:
 
-- https://askubuntu.com/questions/1084602/code-completion-for-gedit/1084697#1084697
+- [Code completion for gedit]({% post_url /2018/2018-10-17-Code-completion-for-gedit %})
 - [Useful Gedit plugins for programmers - HowtoForge][6]
 - [gedit: Add Python / C++ Autocomplete Support - nixCraft][7]
 - [5 Must-Have Gedit Plugins for Programmers | Yaser Sulaiman's Blog][8]

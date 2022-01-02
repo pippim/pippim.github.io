@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "6,349 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -22,7 +22,7 @@ clipboard:    true
 
 A special program has been released to reset Microsoft Mice when dual booting Windows and Linux experiences insanely fast scrolling. It has just been confirmed to work for Ubuntu 19.04 suspend/resume problem of insanely slow scrolling.
 
-Go to this site: https://sourceforge.net/projects/resetmsmice/
+Go to this site: [https://sourceforge.net/projects/resetmsmice/](https://sourceforge.net/projects/resetmsmice/)
 
 Click the link for: `resetmsmice_1.1.3_amd64.deb`
 

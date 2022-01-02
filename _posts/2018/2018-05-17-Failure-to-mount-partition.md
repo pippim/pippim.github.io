@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "3,286 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -34,4 +34,4 @@ sudo rm -d /mnt/stuff
 
 ```
 
-This is from an interactive script I wrote last week: https://askubuntu.com/questions/1034739/unable-to-read-files-between-two-distros/1034746#1034746
+This is from an interactive script I wrote last week: [Unable to read files between two distros]({% post_url /2018/2018-05-11-Unable-to-read-files-between-two-distros %})

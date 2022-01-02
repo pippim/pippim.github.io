@@ -12,13 +12,13 @@ votes:        "2 "
 favorites:    
 views:        "3,277 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
 ---
 
-It might be an "18.04 thing": https://askubuntu.com/questions/1033785/external-monitor-not-detected-on-ubuntu-18-04. I've never experienced it upgrading to 18.04 or 19.04 but I'm already using LightDM.
+It might be an "18.04 thing": [https://askubuntu.com/questions/1033785/external-monitor-not-detected-on-ubuntu-18-04](https://askubuntu.com/questions/1033785/external-monitor-not-detected-on-ubuntu-18-04). I've never experienced it upgrading to 18.04 or 19.04 but I'm already using LightDM.
 
 I have a close but not identical system. Dell AW 17R3, I-7 6700HQ Intel HD 530 iGPU, nVidia GTX 970M GPU. Besides comments above, I'll share my `xorg.conf` in hopes it might help:
 

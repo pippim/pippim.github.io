@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "13,126 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -41,7 +41,7 @@ sudo grub-reboot "1>6"
 
 ## Getting the bash script `grub-menu.sh`
 
-You can find the bash script in this Q&A: https://askubuntu.com/questions/1019213/display-grub-menu-and-options-without-rebooting
+You can find the bash script in this Q&A: [Display grub menu and options without rebooting?]({% post_url /2018/2018-03-26-Display-grub-menu-and-options-without-rebooting? %})
 
 
   [1]: https://i.stack.imgur.com/99pqV.png

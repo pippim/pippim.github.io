@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,550 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -30,4 +30,4 @@ Do this from Windows and then if it doesn't work revise your question with curre
 
 Also note boot-repair created 7 custom entries to boot Windows and Ubuntu from UEFI. In my experience they won't all work. After you fix the booting issues see this answer:
 
-- https://askubuntu.com/questions/938633/boot-repair-created-too-many-grub-menu-entries-for-windows/1022700#1022700
+- [Boot-Repair created too many grub menu entries for Windows]({% post_url /2018/2018-04-06-Boot-Repair-created-too-many-grub-menu-entries-for-Windows %})

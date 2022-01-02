@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "7,698 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          true
 navigation:   true
 clipboard:    true
@@ -20,7 +20,7 @@ clipboard:    true
 
 ### Updated May 7, 2018
 
-Developing the script: https://askubuntu.com/questions/1028604/bash-script-to-clone-ubuntu-to-new-partition-for-testing-18-04-lts-upgrade I discovered you get some ridiculously long menu options that causes the menu to malign:
+Developing the script: [Bash script to backup∕clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %})e I discovered you get some ridiculously long menu options that causes the menu to malign:
 
 ``` 
 4>8  Ubuntu, with Linux 4.14.30-041430-generic (recovery mode) (on /dev/nvme0n1p8)

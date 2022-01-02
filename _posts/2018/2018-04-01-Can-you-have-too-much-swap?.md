@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "9,499 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -32,7 +32,7 @@ On this 8 GB RAM machine 3 GB minimum is needed to hibernate.
 
 You can tweak the values in `image_size` for a smaller swap size with risk of failure. You can tweak it for a larger swap size and possibly speeding up the hibernation speed.
 
-Reference: https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate
+Reference: [https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate)
 
 
 ----------

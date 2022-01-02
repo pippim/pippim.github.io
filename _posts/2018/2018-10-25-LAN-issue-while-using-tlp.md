@@ -12,13 +12,13 @@ votes:        "3 "
 favorites:    
 views:        "593 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-TLP will power off devices during suspend to save battery life. This answer: https://askubuntu.com/questions/950871/need-to-reconnect-ethernet-cable-to-get-it-work-after-docking-laptop-into-dock-s/962090#962090. will reload the R8169 drivers for you realtek network card and might be a sufficient approach.
+TLP will power off devices during suspend to save battery life. This answer: [Need to reconnect ethernet cable to get it work after docking laptop into dock station]({% post_url /2017/2017-10-05-Need-to-reconnect-ethernet-cable-to-get-it-work-after-docking-laptop-into-dock-station %}). will reload the R8169 drivers for you realtek network card and might be a sufficient approach.
 
 Another approach is to leave power to the network card during suspend. To do this use `sudo -H gedit /etc/default/tlp` and insert these lines:
 

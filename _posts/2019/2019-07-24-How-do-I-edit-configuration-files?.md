@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "7,078 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -59,4 +59,4 @@ sudo -H gedit /etc/default/grub
 
 At which point you will be prompted for your password.
 
-**Note:** Related question today: https://askubuntu.com/questions/1160777/grub-file-cant-be-saved-after-modification
+**Note:** Related question today: [https://askubuntu.com/questions/1160777/grub-file-cant-be-saved-after-modification](https://askubuntu.com/questions/1160777/grub-file-cant-be-saved-after-modification)

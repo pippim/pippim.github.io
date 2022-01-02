@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,270 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -40,7 +40,7 @@ $ vnstat
 
 Today the WiFi (wlp60s0) has sent/received 593 MB and Ethernet (enp59s0) has sent/received 4.39 GB.
 
-To setup `vnstat` see this Q&A: https://askubuntu.com/questions/15836/how-to-track-the-total-network-data-in-a-month/844317#844317
+To setup `vnstat` see this Q&A: [How to track the total network data in a month]({% post_url /2016/2016-11-01-How-to-track-the-total-network-data-in-a-month %})
 
 ----------
 

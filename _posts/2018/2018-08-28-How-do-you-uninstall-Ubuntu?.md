@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "93 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -135,7 +135,7 @@ The menu will clear and a message will be display:
 
 
 
-You can find both scripts here: https://askubuntu.com/questions/1034739/unable-to-read-files-between-two-distros/1034746#1034746
+You can find both scripts here: [Unable to read files between two distros]({% post_url /2018/2018-05-11-Unable-to-read-files-between-two-distros %})
 
 
 

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,137 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -60,7 +60,7 @@ export -f OpenFileWithMagic
 ----------
 
 
-**Edit** This is not a duplicate of https://askubuntu.com/questions/15354/how-to-open-file-with-default-application-from-command-line because:
+**Edit** This is not a duplicate of [https://askubuntu.com/questions/15354/how-to-open-file-with-default-application-from-command-lin](https://askubuntu.com/questions/15354/how-to-open-file-with-default-application-from-command-lin)e because:
 
  - That question is how to open a file from the **command line**. This question is how do it from a **bash script** within a `case` structure.
  - The answer there would result in `rhythembox` being used for sound files which is not wanted. `ogg123` is more suited for playing sounds without a new window being opened and closing with python error messages.

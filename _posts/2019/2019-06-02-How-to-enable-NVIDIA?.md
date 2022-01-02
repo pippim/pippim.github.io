@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "14,293 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -77,7 +77,7 @@ If you need sound turned on for your nVidia HDMI and most manufacturers these da
 
 Here is someone that has taken the `prime-select` code and patched it because it wouldn't switch from `nvidia` to `intel`. If his patch doesn't help you perhaps he can?
 
-- https://askubuntu.com/questions/879856/nvidia-prime-cant-switch-to-intel
+- [https://askubuntu.com/questions/879856/nvidia-prime-cant-switch-to-intel](https://askubuntu.com/questions/879856/nvidia-prime-cant-switch-to-intel)
 
 
   [1]: http://www.ubuntubuzz.com/2019/05/unity-desktop-on-ubuntu-1904.html

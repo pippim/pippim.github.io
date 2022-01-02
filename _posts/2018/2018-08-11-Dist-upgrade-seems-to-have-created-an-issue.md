@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "5,840 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -85,7 +85,7 @@ Reading package lists... Done
 
 I abort the upgrade by answering <kbd>N</kbd> to prompt.
 
-A quick search leads to this Question & Answer: https://askubuntu.com/questions/943463/e-problem-executing-scripts-apt-updatepost-invoke-success-error-during-apt-ge
+A quick search leads to this Question & Answer: [https://askubuntu.com/questions/943463/e-problem-executing-scripts-apt-updatepost-invoke-success-error-during-apt-ge](https://askubuntu.com/questions/943463/e-problem-executing-scripts-apt-updatepost-invoke-success-error-during-apt-ge)
 
 I can verify the same situation using:
 
@@ -129,7 +129,7 @@ Next step will be to run `sudo do-release-upgrade -d` a third time and cross my 
 
 ## Misleading message during upgrade
 
-Another user had similar problem: https://askubuntu.com/questions/1063206/ubuntu-upgrade-from-16-04-to-18-04-is-taking-too-long/1063436
+Another user had similar problem: [https://askubuntu.com/questions/1063206/ubuntu-upgrade-from-16-04-to-18-04-is-taking-too-long/1063436](https://askubuntu.com/questions/1063206/ubuntu-upgrade-from-16-04-to-18-04-is-taking-too-long/1063436)
 
 Turns out the two line message comes out at the same time:
 

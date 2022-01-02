@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,815 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 From this Q&A:
 
-- https://askubuntu.com/questions/851975/a-tpm-error-7-occurred-attempting-to-read-a-pcr-value
+- [https://askubuntu.com/questions/851975/a-tpm-error-7-occurred-attempting-to-read-a-pcr-value](https://askubuntu.com/questions/851975/a-tpm-error-7-occurred-attempting-to-read-a-pcr-value)
 
 A number of solutions are provided:
 

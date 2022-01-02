@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "862 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   true
 clipboard:    true
@@ -190,7 +190,7 @@ chmod a+x ~/bin/season.sh
 
 ```
 
-Next we need to add it to startup applications. Reference: https://askubuntu.com/questions/48321/how-do-i-start-applications-automatically-on-login
+Next we need to add it to startup applications. Reference: [https://askubuntu.com/questions/48321/how-do-i-start-applications-automatically-on-login](https://askubuntu.com/questions/48321/how-do-i-start-applications-automatically-on-login)
 
 **Note:** You probably already have your slide show setup in startup applications. You will want to use `season.sh` **BEFORE** your regular slide show as it deletes and copies files which would crash the slide show program if it started first.
 
@@ -203,7 +203,7 @@ Next we need to add it to startup applications. Reference: https://askubuntu.com
 
 # Testing
 
-You will want to test `season.sh` script when you create it and not wait a year to see if it works properly or not. Reference: https://serverfault.com/questions/138325/faking-the-date-for-a-specific-shell-session
+You will want to test `season.sh` script when you create it and not wait a year to see if it works properly or not. Reference: [https://serverfault.com/questions/138325/faking-the-date-for-a-specific-shell-session](https://serverfault.com/questions/138325/faking-the-date-for-a-specific-shell-session)
 
 
 ----------
@@ -214,7 +214,7 @@ After initially developing a script it is common to enhance it Days, Weeks, Mont
 
 ## Compress files to save disk space
 
-Consider keeping the off-season images compressed in **TAR** (Tape Archive) format to save on disk space. Then replace the `cp` (Copy) command with the `tar` command to un-compress the files. Reference: https://www.rootusers.com/23-tar-command-examples-for-linux/:
+Consider keeping the off-season images compressed in **TAR** (Tape Archive) format to save on disk space. Then replace the `cp` (Copy) command with the `tar` command to un-compress the files. Reference: [https://www.rootusers.com/23-tar-command-examples-for-linux/:](https://www.rootusers.com/23-tar-command-examples-for-linux/:)
 
 For example, we would change:
 

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "90 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -22,11 +22,11 @@ There's been a few posts lately of launcher disappearing. Most likely everyone s
 
 Other than that check these Q&As:
 
-- https://askubuntu.com/questions/17381/unity-doesnt-load-no-launcher-no-dash-appears
-- https://askubuntu.com/questions/962497/ubuntu-16-04-unity-doesnt-load-no-launcher-or-dash-appears
-- https://askubuntu.com/questions/811552/no-launcher-and-menu-bar-on-ubuntu-16-04
-- https://askubuntu.com/questions/1007026/ubuntu-menu-and-launcher-not-showing-after-2-16-2018-update
-- https://askubuntu.com/questions/810091/ubuntu-16-04-unity-does-not-load-icons-and-not-displayed
+- [https://askubuntu.com/questions/17381/unity-doesnt-load-no-launcher-no-dash-appears](https://askubuntu.com/questions/17381/unity-doesnt-load-no-launcher-no-dash-appears)
+- [https://askubuntu.com/questions/962497/ubuntu-16-04-unity-doesnt-load-no-launcher-or-dash-appears](https://askubuntu.com/questions/962497/ubuntu-16-04-unity-doesnt-load-no-launcher-or-dash-appears)
+- [https://askubuntu.com/questions/811552/no-launcher-and-menu-bar-on-ubuntu-16-04](https://askubuntu.com/questions/811552/no-launcher-and-menu-bar-on-ubuntu-16-04)
+- [https://askubuntu.com/questions/1007026/ubuntu-menu-and-launcher-not-showing-after-2-16-2018-update](https://askubuntu.com/questions/1007026/ubuntu-menu-and-launcher-not-showing-after-2-16-2018-update)
+- [https://askubuntu.com/questions/810091/ubuntu-16-04-unity-does-not-load-icons-and-not-displayed](https://askubuntu.com/questions/810091/ubuntu-16-04-unity-does-not-load-icons-and-not-displayed)
 
 
 ----------
@@ -36,7 +36,7 @@ Other than that check these Q&As:
 
 After answer was accepted a comment was made how system worked in recovery mode. If that's the case try the solution in this answer:
 
-- https://askubuntu.com/questions/1007026/ubuntu-menu-and-launcher-not-showing-after-2-16-2018-update
+- [https://askubuntu.com/questions/1007026/ubuntu-menu-and-launcher-not-showing-after-2-16-2018-update](https://askubuntu.com/questions/1007026/ubuntu-menu-and-launcher-not-showing-after-2-16-2018-update)
 
 Open a terminal and use:
 

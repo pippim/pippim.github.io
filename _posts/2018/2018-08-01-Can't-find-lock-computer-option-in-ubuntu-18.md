@@ -12,13 +12,13 @@ votes:        "4 "
 favorites:    
 views:        "6,484 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-As per this answer: https://askubuntu.com/questions/1034196/where-is-the-power-off-button-in-ubuntu-18-04-lts/1034271#1034271 try:
+As per this answer: [https://askubuntu.com/questions/1034196/where-is-the-power-off-button-in-ubuntu-18-04-lts/1034271#103427](https://askubuntu.com/questions/1034196/where-is-the-power-off-button-in-ubuntu-18-04-lts/1034271#103427)1 try:
 
 ``` 
 gsettings set org.gnome.desktop.lockdown disable-lock-screen false

@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,484 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,8 +20,8 @@ clipboard:    false
 
 First I tried two of the most popular Android apps for sharing files over WiFi *FTP server* and *WiFi FTP Server*:
 
-- https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&hl=en_CA
-- https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver.pro&hl=en_CA
+- [https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&hl=en_CA](https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&hl=en_CA)
+- [https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver.pro&hl=en_CA](https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver.pro&hl=en_CA)
 
 Both worked great with Nautilus. Except neither one relayed "Last Access Date" to Nautilus like my projected needed. Both showed "Unknown" instead of a valid date.
 
@@ -46,14 +46,14 @@ chown rick:rick /mnt/phone
 
 You will want to sign onto your router and make the IP address (in my case **192.168.0.11**) static so it doesn't change each time your phone connects to your router. Here is a link to give you an idea but, yours will no doubt be different:
 
-- https://business.shaw.ca/support/business-router-settings-dhcp-reservation
+- [https://business.shaw.ca/support/business-router-settings-dhcp-reservation](https://business.shaw.ca/support/business-router-settings-dhcp-reservation)
 
 Since FTP Servers on Android don't support SSH the next step try SimpleSSH as recommended here:
 
--  https://www.techrepublic.com/article/how-to-install-an-ssh-server-on-your-android-phone/
+-  [https://www.techrepublic.com/article/how-to-install-an-ssh-server-on-your-android-phone/](https://www.techrepublic.com/article/how-to-install-an-ssh-server-on-your-android-phone/)
 
 However SimpleSSH doesn't seem recommended in Google Play Store that well? Use this instead with very high ratings *SSH/SFTP Server - Terminal* from **Banana Studio**:
-- https://play.google.com/store/apps/details?id=net.xnano.android.sshserver
+- [https://play.google.com/store/apps/details?id=net.xnano.android.sshserver](https://play.google.com/store/apps/details?id=net.xnano.android.sshserver)
 
 During testing and crashes you'll need to unmount your drive:
 

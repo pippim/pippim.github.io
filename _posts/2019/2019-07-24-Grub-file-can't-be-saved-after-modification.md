@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "444 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -36,4 +36,4 @@ sudo update-grub
 
 This will compile the changes you made to `/etc/default/grub` and compile them with `grub` functions to create a new `/boot/grub/grub.cfg` which is the actual file parsed at boot time.
 
-**Note:** Related question today: https://askubuntu.com/questions/1160728/how-do-i-edit-configuration-files/1160748#1160748
+**Note:** Related question today: [How do I edit configuration files?]({% post_url /2019/2019-07-24-How-do-I-edit-configuration-files? %})

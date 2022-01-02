@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,781 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -41,7 +41,7 @@ sys     0m0.004s
 
 It is important to flush cached buffers in-between tests though:
 
-- https://askubuntu.com/questions/1098059/which-is-the-right-way-to-drop-caches-in-lubuntu/1098062#1098062
+- [Which is the right way to drop caches in Lubuntu?]({% post_url /2018/2018-12-03-Which-is-the-right-way-to-drop-caches-in-Lubuntu? %})
 
 If two loops are about the same in speed, I'll pick the one with best readability.
 

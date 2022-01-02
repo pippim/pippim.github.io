@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "10,539 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -35,7 +35,7 @@ It takes about 5 seconds for the WSL Bash splash screen to paint. By comparison 
 
 The first section shows how slow screen I/O is but what about CPU benchmarking?
 
-From this Ask Ubuntu Q&A: https://askubuntu.com/questions/634513/cpu-benchmarking-utility-for-linux?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa, I ran tests on Ubuntu 16.04 on Linux and Windows. On Linux about 24 seconds on Windows 10 version 1709 about 31 seconds. Linux is 6 seconds faster or about 25% faster. However I just upgraded Windows 10 to version 1803 (Redstone 4 aka Spring Creators April 2018 update) and it took 24 seconds which is the same as Linux.
+From this Ask Ubuntu Q&A: [https://askubuntu.com/questions/634513/cpu-benchmarking-utility-for-linux?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa](https://askubuntu.com/questions/634513/cpu-benchmarking-utility-for-linux?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa), I ran tests on Ubuntu 16.04 on Linux and Windows. On Linux about 24 seconds on Windows 10 version 1709 about 31 seconds. Linux is 6 seconds faster or about 25% faster. However I just upgraded Windows 10 to version 1803 (Redstone 4 aka Spring Creators April 2018 update) and it took 24 seconds which is the same as Linux.
 
 ### Ubuntu 16.04 on Linux
 

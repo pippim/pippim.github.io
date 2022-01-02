@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "3,073 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -22,7 +22,7 @@ The linux kernel is well aware of SSDs for a long time and default installations
 
 I would leave logging and everything else to the default settings. From time to time I would monitor the life span of the SSD:
 
-- https://askubuntu.com/questions/1032082/is-it-still-bad-to-use-swap-on-a-modern-ssd/1032093#1032093
+- [Is it still bad to use swap on a modern SSD?]({% post_url /2018/2018-05-04-Is-it-still-bad-to-use-swap-on-a-modern-SSD? %})
 
 The above answer details how to check your remaining life of your SSD:
 

@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "224,189 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,7 +24,7 @@ A menu is provided to help you select the correct partition to clone to. The clo
 
 `rsync` is used for optimal speed should you choose to reclone the partition. This is beneficial if upgrade fails, you wait for bug fix and want to run upgrade again. Similarly you may have chosen wrong options during upgrade and want to do it again.
 
-The full script can be found here: https://askubuntu.com/questions/1028604/bash-script-to-clone-ubuntu-to-new-partition-for-testing-18-04-lts-upgrade/1028605#1028605 and this is what the screen looks like:
+The full script can be found here: [Bash script to backup∕clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %})5 and this is what the screen looks like:
 
 [![clone-ubuntu.png][1]][1]
 

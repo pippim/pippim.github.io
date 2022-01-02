@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    5
 views:        "4,370 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   true
 clipboard:    true
@@ -42,7 +42,7 @@ Another bug report was filed in **Launchpad**:
 
 ## Oct 21/2018 Update
 
-The problem is still here and no matter how much research I've done (mostly repeating previous research) a solution is no closer. Another user reported the same problem today: https://askubuntu.com/questions/1072066/sleep-mode-drains-battery-very-fast/1085901#1085901
+The problem is still here and no matter how much research I've done (mostly repeating previous research) a solution is no closer. Another user reported the same problem today: [Sleep mode drains battery very fast]({% post_url /2018/2018-10-21-Sleep-mode-drains-battery-very-fast %})
 
 In a nutshell you can see my `journalctl -xe` log:
 

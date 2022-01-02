@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,964 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -34,7 +34,7 @@ This works for for Ubuntu **16.04** to **20.04** and even **20.10** (Groovy). So
 ----------
 
 
-Although article is written for Ubuntu **16.04**, you can verify the package is still around for **20.04** (called Focal) by visiting https://packages.ubuntu.com/focal/ubuntu-gnome-desktop:
+Although article is written for Ubuntu **16.04**, you can verify the package is still around for **20.04** (called Focal) by visiting [https://packages.ubuntu.com/focal/ubuntu-gnome-desktop:](https://packages.ubuntu.com/focal/ubuntu-gnome-desktop:)
 
 [![ubuntu-gnome-deskop package.png][2]][2]
 

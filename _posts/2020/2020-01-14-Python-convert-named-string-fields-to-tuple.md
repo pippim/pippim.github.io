@@ -12,13 +12,13 @@ votes:        "0 "
 favorites:    
 views:        "53 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-Similar to this question: https://stackoverflow.com/questions/34809173/tuple-declaration-in-python
+Similar to this question: [https://stackoverflow.com/questions/34809173/tuple-declaration-in-python](https://stackoverflow.com/questions/34809173/tuple-declaration-in-python)
 
 I have this function:
 

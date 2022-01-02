@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "885 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -31,4 +31,4 @@ Try this:
 - save file and exit editor
 - type `pulseaudio -k` to reload configuration
 
-Source: https://askubuntu.com/questions/1061414/how-to-disable-pulseaudio-automatic-device-switch/1061578#1061578
+Source: [How to disable pulseaudio automatic device switch?]({% post_url /2018/2018-08-01-How-to-disable-pulseaudio-automatic-device-switch? %})

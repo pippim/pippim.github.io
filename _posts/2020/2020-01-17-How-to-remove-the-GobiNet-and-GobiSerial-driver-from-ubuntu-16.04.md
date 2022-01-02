@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "457 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -31,7 +31,7 @@ modprobe -vr GobiNet
 
 To prevent drivers from loading in the first place see blacklisting:
 
-- https://askubuntu.com/questions/110341/how-to-blacklist-kernel-modules
+- [https://askubuntu.com/questions/110341/how-to-blacklist-kernel-modules](https://askubuntu.com/questions/110341/how-to-blacklist-kernel-modules)
 
 ## Gobiserial specific
 

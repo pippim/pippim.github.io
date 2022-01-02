@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "173 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -48,7 +48,7 @@ exit 0       # <---- This is the last line
 
 ----------
 
-In my Ubuntu 16.04 LTS sound is already muted on boot. This happens to others as well: https://askubuntu.com/questions/162153/how-to-make-my-microphone-unmuted-on-startup
+In my Ubuntu 16.04 LTS sound is already muted on boot. This happens to others as well: [https://askubuntu.com/questions/162153/how-to-make-my-microphone-unmuted-on-startup](https://askubuntu.com/questions/162153/how-to-make-my-microphone-unmuted-on-startup)
 
 Check the file `/etc/modprobe.d/alsa-base.conf` and look for the line:
 

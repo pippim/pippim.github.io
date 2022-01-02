@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "781 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,15 +20,15 @@ clipboard:    false
 
 You can read the newsletter by copying and pasting the address into your browser:
 
-- https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Issue663
+- [https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Issue663](https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Issue663)
 
 For previous issues just decrement the number:
 
-- https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Issue662
+- [https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Issue662](https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Issue662)
 
 Next week you would increment the number:
 
-- https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Issue664
+- [https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Issue664](https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Issue664)
 
 
 ----------
@@ -39,7 +39,7 @@ Next week you would increment the number:
 
 You could make a `cron` job that incremented the Issue Number and emailed you a link every week. It does take a few steps to setup `cron` for emailing though:
 
-- https://askubuntu.com/questions/1020965/how-do-i-set-cron-to-send-emails/1021764#1021764
+- [How do I set Cron to send emails?]({% post_url /2018/2018-04-04-How-do-I-set-Cron-to-send-emails? %})
 
 I made a sample bash script for `cron` to send a message each week with the Ubuntu Newsletter link. Create the script with `sudo` powers in `/etc/cron.weekly/ubuntu-newsletter`
 

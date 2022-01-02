@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "9,853 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -39,7 +39,7 @@ gsettings set org.gnome.desktop.lockdown disable-lock-screen 'true'
 
 ```
 
-Source: https://ubuntuforums.org/showthread.php?t=2359828
+Source: [https://ubuntuforums.org/showthread.php?t=2359828](https://ubuntuforums.org/showthread.php?t=2359828)
 
 On my dual monitor system the lock screen no longer appears when pressing <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>L</kbd>. However the screens saver still kicks in and you have to move mouse, touch a key, etc to turn the monitors back on. Although a password is not required to unlock the screen it might be a bug.
 

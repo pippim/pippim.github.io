@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "7,717 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -131,7 +131,7 @@ sys     0m2.786s
 
 It takes 15 seconds to count 1,637,135 files in 286,705 directories. YMMV.
 
-For a detailed breakdown on `locate` command's regex handling (appears not to be needed in this Q&A but used just in case) please read this: https://askubuntu.com/questions/33280/use-locate-under-some-specific-directory
+For a detailed breakdown on `locate` command's regex handling (appears not to be needed in this Q&A but used just in case) please read this: [https://askubuntu.com/questions/33280/use-locate-under-some-specific-directory](https://askubuntu.com/questions/33280/use-locate-under-some-specific-directory)
 
 Additional reading from recent articles:
 

@@ -12,13 +12,13 @@ votes:        "2 "
 favorites:    
 views:        "547 "
 accepted:     Accepted
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-Lots of people are annoyed by this "Screen Shield" or "Curtain" or "Swipe to Unlock" as it is can be called. This **Ask Ubuntu** question has 33 up-votes: https://askubuntu.com/questions/967842/how-to-remove-phone-style-gnome-swipe-to-unlock
+Lots of people are annoyed by this "Screen Shield" or "Curtain" or "Swipe to Unlock" as it is can be called. This **Ask Ubuntu** question has 33 up-votes: [https://askubuntu.com/questions/967842/how-to-remove-phone-style-gnome-swipe-to-unlock](https://askubuntu.com/questions/967842/how-to-remove-phone-style-gnome-swipe-to-unlock)
 
 The answer with the most votes states:
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,696 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    true
@@ -53,7 +53,7 @@ In your case the messages won't show a normal shutdown but rather the last recor
 
 The first error message is addressed here:
 
-- https://askubuntu.com/questions/1058750/new-alert-keeps-showing-up-server-returned-error-nxdomain-mitigating-potential
+- [https://askubuntu.com/questions/1058750/new-alert-keeps-showing-up-server-returned-error-nxdomain-mitigating-potential](https://askubuntu.com/questions/1058750/new-alert-keeps-showing-up-server-returned-error-nxdomain-mitigating-potential)
 
 The solution is to use:
 

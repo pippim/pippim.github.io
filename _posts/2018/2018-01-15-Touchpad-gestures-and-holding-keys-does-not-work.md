@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    
 views:        "7,793 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          true
 navigation:   true
 clipboard:    false
@@ -42,8 +42,8 @@ Around January 11, 2018 many Ubuntu users began reporting problems with Kernel 4
 - [Lenovo ideapad320 laptop(amd a9 processor) touchpad stop working - Ubuntu 17.10][15]
 - [Touchpad double tap and two finger scroll is only working when press Window Keys/SuperKey on Ubuntu 16.04][16]
 - [How to prevent installation of kernel 4.13 on Ubuntu 16.04 LTS][17]
-- https://askubuntu.com/questions/995905/16-04-external-mic-or-headphone-jacks-no-longer-detected-since-last-hwe-update
-- https://askubuntu.com/questions/995628/how-to-do-emergency-upgrade-to-kernel-4-14-13
+- [https://askubuntu.com/questions/995905/16-04-external-mic-or-headphone-jacks-no-longer-detected-since-last-hwe-update](https://askubuntu.com/questions/995905/16-04-external-mic-or-headphone-jacks-no-longer-detected-since-last-hwe-update)
+- [https://askubuntu.com/questions/995628/how-to-do-emergency-upgrade-to-kernel-4-14-13](https://askubuntu.com/questions/995628/how-to-do-emergency-upgrade-to-kernel-4-14-13)
 
 These are issues reported over the last few days. *Not all of these issues have been verified as caused by Kernel 4.13.0-26.*
 

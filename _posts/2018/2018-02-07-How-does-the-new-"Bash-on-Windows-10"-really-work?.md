@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "10,498 "
 accepted:     
-uploaded:     2022-01-01 10:05:50
+uploaded:     2022-01-02 16:07:48
 toc:          false
 navigation:   false
 clipboard:    false
@@ -26,7 +26,7 @@ The GUI for Ubuntu Desktop (`gedit`, `nautilus`, etc.) only works after installi
 
 Sharing files between Linux and Windows WSL is complicated to setup. When when moving files between the shared WSL+Linux NTFS folder I have had some file permission "weirdness" either due to my ignorance or software deficiencies.
 
-Speed is a lot slower in WSL than it is in Ubuntu. You can actually see the screen paint character by character when you run `cal` or `toilet`: https://askubuntu.com/questions/813848/what-are-the-differences-between-windows-bash-and-cygwin/953152#953152
+Speed is a lot slower in WSL than it is in Ubuntu. You can actually see the screen paint character by character when you run `cal` or `toilet`: [What are the differences between Windows Bash and Cygwin?]({% post_url /2017/2017-09-05-What-are-the-differences-between-Windows-Bash-and-Cygwin? %})
 
 I think WSL is a good product and I enjoy tinkering with it when dual-booting into Windows-World. It'll never become a great product because of MS lack of funding and they really don't want to have a great Linux Free-Ware Distro anyway. If you had enough RAM you would probably be happier with a VM. With only 8 GB myself and RAM prices rising until mid-2019 or so, I'll happily stick with WSL and forgo the 32 GB RAM upgrade for now.
 
