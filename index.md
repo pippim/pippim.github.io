@@ -1,5 +1,5 @@
 ---
-title: Welcome to {{ site.title }}
+title: Welcome to {% site.title %}
 layout: default
 ---
 
