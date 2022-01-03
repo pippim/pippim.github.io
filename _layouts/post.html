@@ -44,18 +44,6 @@
                 id="hidden_button"          /assets/css/style.scss
                 onclick="fm_toggle();"      /assets/js/post_fm.js
         -->
-        <button class="hidden-child"
-                id="hidden_button"
-                onclick="fm_toggle();"
-                // style="position: absolute;"
-                // style="float: right; clear: right;"
-                // style="position: absolute; top: 1; right: 1;"
-                // style="display: inline-block; position: relative; text-align: right;"
-                // right: 0;
-                // top: 0;
-                >Button Text
-        </button>
-
         <style>
             fmVar {
                 float: left;
@@ -199,6 +187,18 @@
         {% if page.clipboard != "" and page.clipboard != nil %}
           &nbsp;&nbsp; Copy&nbsp;to&nbsp;clipboard:&nbsp;&nbsp;<mark>{{ page.clipboard }}</mark>
         {% endif %}
+
+        <button class="hidden-child"
+                id="hidden_button"
+                onclick="fm_toggle();"
+                // style="position: absolute;"
+                // style="float: right; clear: right;"
+                // style="position: absolute; top: 1; right: 1;"
+                // style="display: inline-block; position: relative; text-align: right;"
+                // right: 0;
+                // top: 0;
+                >Button Text
+        </button>
 
         <script>
           fm_button = checkCookie();
