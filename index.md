@@ -50,7 +50,7 @@ The top of each page contains navigation buttons to take you to other pages:
 
 - <kbd>❓ About</kbd> disccusses everything you want to know about {{ site.title }}. Still have questions? Just email.
 
-- <kbd>✅ Answers</kbd> to questions people have using computers. As of November 22, 2021, {{ site.title }} answers have over **52 million views!**
+- <kbd>✅ Answers</kbd> to questions people have using computers. As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers have over **{{ site.views_human }} views!**
 
 - <kbd>💻 Programs</kbd> are applicationss {{ site.title }} created to make your life easier.
 
