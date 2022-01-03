@@ -300,62 +300,7 @@ locations:
 The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for {{ site.title }} on GitHub Pages looked like this:
 
 ``` terminal
-$ tree --dirsfirst --filelimit 20
-.
-├── assets
-│   ├── css
-│   │   └── style.scss
-│   ├── img
-│   │   ├── ask_ubuntu.png
-│   │   ├── Ask Ubuntu profile.png
-│   │   ├── Blog_Project-Management-101.png
-│   │   ├── earth-from-space.jpg
-│   │   ├── Edm Temperature December 7, 2021.png
-│   │   ├── github pages themes.png
-│   │   ├── Inspectocadt.jpeg
-│   │   ├── Jekyll.png
-│   │   ├── octojekyll-opt.jpg
-│   │   ├── Pippim Post More Button Working.gif
-│   │   └── pngwing.com.png
-│   └── js
-│       ├── copyCode.js
-│       └── post_fm.js
-├── _includes
-│   ├── copyHeader.html
-│   ├── head-custom.html
-│   ├── image.html
-│   ├── posts_by_tag.html
-│   ├── posts_by_vote.html
-│   └── toc.md
-├── _layouts
-│   ├── default.html
-│   └── post.html
-├── _plugins
-│   └── insert_git_code.rb
-├── _posts
-│   ├── 2016 [183 entries exceeds filelimit, not opening dir]
-│   ├── 2017 [163 entries exceeds filelimit, not opening dir]
-│   ├── 2018 [448 entries exceeds filelimit, not opening dir]
-│   ├── 2019 [269 entries exceeds filelimit, not opening dir]
-│   ├── 2020 [72 entries exceeds filelimit, not opening dir]
-│   └── 2021 [36 entries exceeds filelimit, not opening dir]
-├── _sass
-│   ├── jekyll-theme-cayman.scss
-│   └── toc.scss
-├── sede
-│   ├── QueryResults.csv
-│   ├── refresh.sh
-│   ├── StackQuery
-│   └── stack-to-blog.py
-├── about.md
-├── answers.md
-├── _config.yml
-├── index.md
-├── LICENSE
-└── programs.md
-
-16 directories, 35 files
-
+{% include website_tree %}
 ```
 
 **NOTE:** The `_posts` directory will contain about 1200 blog posts 
