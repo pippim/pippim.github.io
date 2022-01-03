@@ -360,8 +360,8 @@ The program automatically:
 
 The first step is to run a 
 [Stack Exchange Data Explorer Query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s?AccountId=4775729). 
-You may need to click the twice. The first time to sign in and
-the second time to run the query.
+You may need to click the link twice; once to sign in (then navigate back to this page) and
+again to run the query.
 
 Many thanks to the the query's [Author](https://meta.stackexchange.com/a/371435/366359).
 
@@ -370,8 +370,8 @@ for a query until Sunday at 3am UTC. A `cron` job or GitHub Actions
 can theoretically run the query every Monday morning but that step
 has not been created yet.
 
-When the query finishes (it can take a few minutes), 
-download all your questions and answers 
+When the query finishes (it can take a few minutes), click the `Download` button.
+This will download all your questions and answers 
 from Stack Exchange to your local storage in **CSV** (**C**omma **S**eparated
 **V**alues) format. 
 
@@ -394,20 +394,37 @@ me@host:~/website/sede$ mv ~/Downloads/QueryResults.csv .
 
 me@host:~/website/sede$ refresh.sh
 
-Commit message set to: 'Update website posts on Sun Jan  2 20:50:10 MST 2022'
-remote: Enumerating objects: 36, done.
-remote: Counting objects: 100% (36/36), done.
-remote: Compressing objects: 100% (26/26), done.
-remote: Total 31 (delta 13), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (31/31), done.
+Commit message set to: 'Refresh website on: Mon Jan  3 08:14:43 MST 2022'
+remote: Enumerating objects: 42, done.
+remote: Counting objects: 100% (42/42), done.
+remote: Compressing objects: 100% (31/31), done.
+remote: Total 33 (delta 19), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (33/33), done.
 From https://github.com/pippim/pippim.github.io
-   eaeef60..43ca974  main       -> origin/main
-Updating eaeef60..43ca974
+   3b28116..f481dbd  main       -> origin/main
+Updating 3b28116..f481dbd
 Fast-forward
- _config.yml           | 3 ++-
- assets/css/style.scss | 5 +++--
- 2 files changed, 5 insertions(+), 3 deletions(-)
-Created directory: ../_posts/2022/
+ _config.yml            |   2 -
+ _includes/website_tree |  61 +++++++++++++++++++++++++++++
+ assets/css/style.scss  |   7 ++--
+ index.md               | 175 ++++++++++++++++++++++++++++++++++++++---------------------------------------------
+ sede/refresh.sh        |  18 ++++++++-
+ 5 files changed, 161 insertions(+), 102 deletions(-)
+ create mode 100644 _includes/website_tree
+
+Running ~/website/sede/stack-to-blog.py
+NEW CONFIGURATION:
+theme: jekyll-theme-cayman
+# The title: appears frequently on my pages. It's your company / personal name
+title: Pippim
+description: Free Open-Source Software for the World. Free of Ads Too!
+views: "53,134,690 "
+views_human: 53.1 million
+refreshed: 2022-01-03 08:14:44
+questions: "297 "
+answers: "2,145 "
+accepted: "464 "
+post_count: "1,123 "
 // =============================/   T O T A L S   \============================== \\
 Run-time options:
 
@@ -430,32 +447,33 @@ total_pseudo_tags:   646  | total_copy_lines:   16,357  | total_toc:            
 # total_tag_names:   731  | total_force_end:       961  | total_nav_bar:          56
 all_tag_counts:    3,478  | # tag_posts:         3,478  | # total_tag_letters:    31
 total_header_levels:        [593, 813, 214, 2, 0, 0]
-[main 3b28116] "Update website posts on Sun Jan  2 20:50:10 MST 2022"
- 1124 files changed, 2406 insertions(+), 2241 deletions(-)
- create mode 100644 _posts/2020/2020-04-02-Mouse-pointer-moving-by-itself.md
- create mode 100644 _posts/2021/2021-01-25-tracker-service-running-every-minute.md
- create mode 100644 _posts/2021/2021-03-28-There-a-quicker-way-between-Ubuntu-and-my-android-to-send-files-instead-of-Bluetooth-or-cable.md
+
+Updating: ~/website2/_posts/ and /_includes/
+
+Updating Configuration file: ~/website2/_config.yml
+[main 37df3e5] "Refresh website on: Mon Jan  3 08:14:43 MST 2022"
+ 1124 files changed, 1186 insertions(+), 1122 deletions(-)
+
+Pushing ~/website2 changes to github.com
 Counting objects: 1134, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (1134/1134), done.
-Writing objects: 100% (1134/1134), 168.96 KiB | 0 bytes/s, done.
-Total 1134 (delta 1053), reused 0 (delta 0)
-remote: Resolving deltas: 100% (1053/1053), completed with 1052 local objects.
+Writing objects: 100% (1134/1134), 160.20 KiB | 0 bytes/s, done.
+Total 1134 (delta 1055), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1055/1055), completed with 1054 local objects.
 To https://github.com/pippim/pippim.github.io
-   43ca974..3b28116  main -> main
-
+   f481dbd..37df3e5  main -> main
 ```
 
 This assumes your local copy of your website is in your home
-directory with the name `website`. You can generate a local
+directory with the name `website`. Another local copy is in your
+home directory with the name `website2`. You can generate a local
 copy with the 
 [`git pull`](https://opensource.com/article/18/2/how-clone-modify-add-delete-git-files) 
 command.
 
-After the progam `stack-to-blog.py` finishes, all your
-blog posts for GitHub Pages will be stored in your
-`~/website/_posts` directory. A count of the posts is
-generated above using `ls -l ../_posts/* | wc -l`.
+The setup allows you to use `website` for development and `website2` to mirror
+the production version which is **pulled** and **pushed** to GitHub Pages.
 
 ## Setting `stack-to-blog.py` Options
 
@@ -487,10 +505,8 @@ Here is the relevant section of code where you can
 change the `RANDCOM_LIMIT`:
 
 ``` python
-INPUT_FILE = 'QueryResults.csv'
 RANDOM_LIMIT = 10           # On initial trials limit the number of blog posts
 PRINT_RANDOM = True         # Print out matching random recordS found
-OUTPUT_DIR = "../_posts/"   # Subdirectory name. Use "" for current directory
 ```
 
 Initially you will want to have `PRINT_RANDOM` set to `True`. 
