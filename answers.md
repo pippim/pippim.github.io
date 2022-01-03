@@ -6,7 +6,7 @@ layout: default
 # Answers by Pippim
 
 Pippim answers have over
- **53 million views** as of December 28, 2021.
+ **{{ site.views_human }} views** as of {{ site.refreshed | date: "%B %e, %Y" }}.
 They are posted on Stack Exchange websites
  such as [Ask Ubuntu 🔗](https://askubuntu.com "Visit www.askubuntu.com 🔗") and
 [Stack Overflow 🔗](https://stackoverflow.com "Visit www.stackoverflow.com 🔗").
