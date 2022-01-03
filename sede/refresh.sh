@@ -29,7 +29,7 @@ fi
 
 if [ -z "$1" ] ; then
     now=$(date)
-    commit_message="Update website posts on $now"
+    commit_message="Refresh website on: $now"
 else
     commit_message="$1"
 fi
@@ -48,6 +48,8 @@ fi
 cd ~/website/sede
 
 cp ~/website2/_config.yml ../
+echo
+echo "Running ~/website/sede/stack-to-blog.py"
 stack-to-blog.py
 retVal=$?
 if [ $retVal -ne 0 ]; then
@@ -56,6 +58,9 @@ if [ $retVal -ne 0 ]; then
 fi
 
 cd ~/website2
+
+echo
+echo "Updating: ~/website2/_posts/ and /_includes/"
 
 rm -rf _posts/
 mkdir _posts/
@@ -71,12 +76,20 @@ fi
 cp ~/website/_includes/posts_by_tag.html _includes/
 cp ~/website/_includes/posts_by_vote.html _includes/
 
+# Add tree listing
+tree --dirsfirst --filelimit 20 > tree.work
+tail -n +2 tree.work >> _includes/website_tree
+rm tree.work
+
 git add _includes/
 retVal=$?
 if [ $retVal -ne 0 ]; then
     echo "git add _includes/ FAILED with code: $retVal"
     exit $retVal
 fi
+
+echo
+echo "Updating Configuration file: ~/website2/_config.yml"
 
 cp ~/website/_config.yml .
 
@@ -93,6 +106,9 @@ if [ $retVal -ne 0 ]; then
     echo "git commit -m FAILED with code: $retVal"
     exit $retVal
 fi
+
+echo
+echo "Pushing ~/website2 changes to github.com"
 
 git push
 retVal=$?
