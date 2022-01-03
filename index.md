@@ -772,6 +772,31 @@ NAV_LAST_LINES = 13         # Minimum of 13 lines since last navigation bar. Not
 # If Copy button is never wanted, set to None
 COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
 COPY_LINE_MIN = 20          # Number of lines required to qualify for button
+
+# If question or answer contains one of these "pseudo tags" then jekyll front matter
+# will have tag added as if it were really on the question. Essentially you
+# are tagging your answers and adding them to OP's question tags.
+PSEUDO_TAGS = ["conky", "cpuf", "eyesome", "grub", "iconic", "multi-timer", 'vnstat', 'yad']
+
+TAG_MIN_GROUP = 10          # Minimum index page group of posts sorted by Tag Name
+TAG_MAX_GROUP = 20          # Maximum index page group of posts sorted by Tag Name
+# Unfortunately for the time-being the letter groups must be hand-crafted.
+# To assist with hand-crafting print out new_groups[] in gen_post_by_tag_groups()
+TAG_LETTERS = [('.', '9'), ('a', 'a'), ('b', 'b'), ('c', 'c'), ('d', 'd'),
+               ('e', 'f'), ('g', 'g'), ('h', 'k'), ('l', 'l'), ('m', 'o'),
+               ('p', 'r'), ('s', 's'), ('t', 't'), ('u', 'v'), ('w', 'z')]
+POST_BY_TAG_HTML = "../_includes/posts_by_tag.html"  # relative to sede directory
+TOP_POSTS_HTML = "../_includes/posts_by_vote.html"  # relative to sede directory
+TOP_POSTS_INCLUDE = 10      # Top 10 posts will appear
+top_posts = []              # List of tuples [(views, title, our_url])
+
+''' SE Sites to exclude from our website '''
+EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
+                 "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
+                 "Medical Sciences", "Ask Ubuntu Meta"]
+
+# See: /website/sede/refresh.sh for how file is updated on GitHub Pages
+CONFIG_YML = "../_config.yml"
 ```
 
 The global variable `TOC_HDR_MIN = 6` means a minimum number of six
@@ -802,6 +827,17 @@ code block, the user can easily highlight with mouse and use
 The global variable `COPY_LINE_MIN` specifies how many code block
 lines are required before button appers. 
 The default is `20` lines.
+
+Additional documentation will be added for the python global variables:
+
+- `TAG_MIN_GROUP = 10`          # Minimum index page group of posts sorted by Tag Name
+- `TAG_MAX_GROUP = 20`          # Maximum index page group of posts sorted by Tag Name
+- `TAG_LETTERS = [('.', '9'), ('a', 'a'), ('b', 'b'), ('c', 'c'), ('d', 'd'),`
+- `POST_BY_TAG_HTML = "../_includes/posts_by_tag.html"`  # relative to sede directory
+- `TOP_POSTS_HTML = "../_includes/posts_by_vote.html"`   # relative to sede directory
+- `TOP_POSTS_INCLUDE = 10`      # Top 10 posts will appear
+- `EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",`
+- `CONFIG_YML = "../_config.yml"`
 
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
