@@ -100,7 +100,7 @@ if [ $retVal -ne 0 ]; then
     exit $retVal
 fi
 
-git commit -m '"'"$commit_message"'"'
+git commit -m "$commit_message"
 retVal=$?
 if [ $retVal -ne 0 ]; then
     echo "git commit -m FAILED with code: $retVal"
