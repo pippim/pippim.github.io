@@ -1,5 +1,5 @@
 ---
-title: Welcome to Pippim
+title: Welcome to {{ site.title }}
 layout: default
 ---
 
@@ -441,26 +441,61 @@ after then command prompt (`$`):
 
 ``` terminal
 me@host:~$ cd ~/website/sede
-me@host:~/website/sede$ mv ~/Downloads/QueryResults.csv .
-me@host:~/website/sede$ stack-to-blog.py
-// =============================/   T O T A L S   \============================== \\
 
-RANDOM_LIMIT:     10,000  | PRINT_RANDOM:        False  | NAV_FORCE_TOC:        True
+me@host:~/website/sede$ mv ~/Downloads/QueryResults.csv .
+
+me@host:~/website/sede$ refresh.sh
+
+Commit message set to: 'Update website posts on Sun Jan  2 20:50:10 MST 2022'
+remote: Enumerating objects: 36, done.
+remote: Counting objects: 100% (36/36), done.
+remote: Compressing objects: 100% (26/26), done.
+remote: Total 31 (delta 13), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (31/31), done.
+From https://github.com/pippim/pippim.github.io
+   eaeef60..43ca974  main       -> origin/main
+Updating eaeef60..43ca974
+Fast-forward
+ _config.yml           | 3 ++-
+ assets/css/style.scss | 5 +++--
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+Created directory: ../_posts/2022/
+// =============================/   T O T A L S   \============================== \\
+Run-time options:
+
+RANDOM_LIMIT:       None  | PRINT_RANDOM:        False  | NAV_FORCE_TOC:        True
 NAV_BAR_MIN:           3  | NAV_WORD_MIN:          700  | COPY_LINE_MIN:          20
-accepted_count:      632  | total_votes:         7,165  | total_views:    52,783,387
-question_count:      300  | answer_count:        2,148  | save_blog_count:     1,215
-total_self_answer:   112  | total_self_accept:      58  | Self Needing Accept:    54
-total_headers:     1,657  | total_header_spaces:   401  | total_quote_spaces:  1,574
-total_lines:      56,607  | total_paragraphs:   16,066  | total_words:       324,884
-total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     59
-total_code_blocks: 2,591  | total_block_lines:   3,663  | total_clipboards:      293
-total_code_indents:2,317  | total_indent_lines: 22,230  | total_half_links:      205
-total_pseudo_tags:   427  | total_copy_lines:   17,242  | total_toc:              26
-most_lines:          820  | total_force_end:     1,058  | total_nav_bar:          56
-total_header_levels:  [602, 832, 221, 2, 0, 0]
-total_tag_names:      ['conky', 'vnstat', 'multi-timer', 'eyesome', 'yad', 'iconic', 'cpuf']
-me@host:~/website/sede$ ls -l ../_posts/* | wc -l
-1228
+
+Totals written to: '../_config.yml' (relative to /sede directory)
+
+accepted_count:      464  | total_votes:         7,214  | total_views:    53,134,690
+question_count:      297  | answer_count:        2,145  | save_blog_count:     1,123
+total_self_answer:   107  | total_self_accept:      56  | Self Needing Accept:    51
+total_headers:     1,622  | total_header_spaces:   395  | total_quote_spaces:  1,547
+total_lines:      53,421  | total_paragraphs:   15,113  | total_words:       307,309
+total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     56
+total_code_blocks: 2,434  | total_block_lines:   3,234  | total_clipboards:      275
+total_code_indents:2,206  | total_indent_lines: 21,144  | total_half_links:      187
+total_tail_links:    111  | total_bad_half_links:    0  | Half Links Changed:    187
+total_no_links:      291  | total_full_links:       80  | Bad No Links:          211
+total_pseudo_tags:   646  | total_copy_lines:   16,357  | total_toc:              27
+# total_tag_names:   731  | total_force_end:       961  | total_nav_bar:          56
+all_tag_counts:    3,478  | # tag_posts:         3,478  | # total_tag_letters:    31
+total_header_levels:        [593, 813, 214, 2, 0, 0]
+[main 3b28116] "Update website posts on Sun Jan  2 20:50:10 MST 2022"
+ 1124 files changed, 2406 insertions(+), 2241 deletions(-)
+ create mode 100644 _posts/2020/2020-04-02-Mouse-pointer-moving-by-itself.md
+ create mode 100644 _posts/2021/2021-01-25-tracker-service-running-every-minute.md
+ create mode 100644 _posts/2021/2021-03-28-There-a-quicker-way-between-Ubuntu-and-my-android-to-send-files-instead-of-Bluetooth-or-cable.md
+Counting objects: 1134, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (1134/1134), done.
+Writing objects: 100% (1134/1134), 168.96 KiB | 0 bytes/s, done.
+Total 1134 (delta 1053), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1053/1053), completed with 1052 local objects.
+To https://github.com/pippim/pippim.github.io
+   43ca974..3b28116  main -> main
+
 ```
 
 This assumes your local copy of your website is in your home
@@ -966,7 +1001,7 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
     ``` html
     # Introduction
     
-    Welcome to Pippim. A collection of questions and answers about...
+    Welcome to {{ site.title }}. A collection of questions and answers about...
     
     <a id="hdr2"></a>
     <div class="hdr-bar">
