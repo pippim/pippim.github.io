@@ -303,7 +303,7 @@ The directory tree will help you get a better understanding of the Pippim websit
 {% include website_tree %}
 ```
 
-**NOTE:** The `_posts` directory will contain about 1200 blog posts 
+**NOTE:** The `_posts` directory contains {{ site.post_count }} posts 
 which are not displayed above.
 
 ### Daily Backup
