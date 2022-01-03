@@ -375,7 +375,7 @@ This will download all your questions and answers
 from Stack Exchange to your local storage in **CSV** (**C**omma **S**eparated
 **V**alues) format. 
 
-After downloading, you can view `~/documents/QueryResults.csv` with Excel or
+After downloading, you can view `~/Downloads/QueryResults.csv` with Excel or
 Libre Office Calc. After verifying the results are as expected,
 proceed to the next section. Otherwise run the query again or modify 
 it for the desired results.
@@ -423,6 +423,7 @@ Totals written to: '../_config.yml' (relative to /sede directory)
 
 accepted_count:      464  | total_votes:         7,214  | total_views:    53,134,690
 question_count:      297  | answer_count:        2,145  | save_blog_count:     1,123
+blog_question_count:  50  | blog_answer_count:   1,073  | blog_accepted_count:   491
 total_self_answer:   107  | total_self_accept:      56  | Self Needing Accept:    51
 total_headers:     1,622  | total_header_spaces:   395  | total_quote_spaces:  1,547
 total_lines:      53,421  | total_paragraphs:   15,113  | total_words:       307,309
@@ -1525,24 +1526,30 @@ When the `stack-to-blog.py` finishes a summary appears on your screen:
 
 ```  cpp
 // =============================/   T O T A L S   \============================== \\
+Run-time options:
 
 RANDOM_LIMIT:     10,000  | PRINT_RANDOM:        False  | NAV_FORCE_TOC:        True
 NAV_BAR_MIN:           3  | NAV_WORD_MIN:          700  | COPY_LINE_MIN:          20
+
+Totals written to: '../_config.yml' (relative to /sede directory)
+
 accepted_count:      632  | total_votes:         7,149  | total_views:    52,632,065
 question_count:      300  | answer_count:        2,145  | save_blog_count:     1,218
+blog_question_count:  50  | blog_answer_count:   1,073  | blog_accepted_count:   491
 total_self_answer:   112  | total_self_accept:      58  | Self Needing Accept:    54
 total_headers:     1,651  | total_header_spaces:   402  | total_quote_spaces:  1,574
 total_lines:      56,558  | total_paragraphs:   16,050  | total_words:       324,607
 total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     59
 total_code_blocks: 2,587  | total_block_lines:   3,606  | total_clipboards:      293
 total_code_indents:2,319  | total_indent_lines: 22,274  | total_half_links:      205
+total_tail_links:    111  | total_bad_half_links:    0  | Half Links Changed:    187
+total_no_links:      291  | total_full_links:       80  | Bad No Links:          211
 total_pseudo_tags:   425  | total_copy_lines:   17,240  | total_toc:              26
 most_lines:          820  | total_force_end:     1,057  | total_nav_bar:          55
 total_header_levels:  [600, 828, 221, 2, 0, 0]
-total_tag_names:      ['conky', 'vnstat', 'multi-timer', 'yad', 'eyesome', 'iconic', 'cpuf']
 ```
 
-Each total name with an underscore (`_`) is the
+Every total name with an underscore (`_`) is the
 python program internal variable name. The
 first four total lines apply to all Stack Exchnage
 Questions and Answers you have posted.
@@ -1553,20 +1560,32 @@ If you want to change the totals layout it is found in the code below:
 
 {% include copyHeader.html %}
 ``` python
+if RANDOM_LIMIT is None:
+    random_limit = '   None'
+else:
+    # noinspection PyStringFormat
+    random_limit = '{:>6,}'.format(RANDOM_LIMIT)
+
 print('// =====================/   T O T A L S   \\====================== \\\\')
-print('')
-print('RANDOM_LIMIT:     {:>6,}'.format(RANDOM_LIMIT),
+print('Run-time options:\n')
+print('RANDOM_LIMIT:   ', random_limit,
       ' | PRINT_RANDOM:  {:>11}'.format(str(PRINT_RANDOM)),
       ' | NAV_FORCE_TOC: {:>11}'.format(str(NAV_FORCE_TOC)))
 print('NAV_BAR_MIN:      {:>6,}'.format(NAV_BAR_MIN),
       ' | NAV_WORD_MIN:  {:>11}'.format(NAV_WORD_MIN),
       ' | COPY_LINE_MIN: {:>11}'.format(COPY_LINE_MIN))
+print()
+print('Totals written to:', "'" + CONFIG_YML + "'",
+      '(relative to /sede directory)\n')
 print('accepted_count:   {:>6,}'.format(accepted_count),
       ' | total_votes:   {:>11,}'.format(total_votes),
       ' | total_views:   {:>11,}'.format(total_views))
 print('question_count:   {:>6,}'.format(question_count),
       ' | answer_count:       {:>6,}'.format(answer_count),
       ' | save_blog_count:    {:>6,}'.format(save_blog_count))
+print('blog_question_count:{:>4,}'.format(blog_question_count),
+      ' | blog_answer_count:  {:>6,}'.format(blog_answer_count),
+      ' | blog_accepted_count:{:>6,}'.format(blog_accepted_count))
 print('total_self_answer:{:>6,}'.format(total_self_answer),
       ' | total_self_accept:  {:>6,}'.format(total_self_accept),
       ' | Self Needing Accept:{:>6,}'.format(total_self_answer -
@@ -1586,14 +1605,27 @@ print('total_code_blocks:{:>6,}'.format(total_code_blocks),
 print('total_code_indents:{:>5,}'.format(total_code_indents),
       ' | total_indent_lines:{:>7,}'.format(total_indent_lines),
       ' | total_half_links:  {:>7,}'.format(total_half_links))
+print('total_tail_links:  {:>5,}'.format(total_tail_links),
+      ' | total_bad_half_links:{:>5,}'.format(total_bad_half_links),
+      ' | Half Links Changed:{:>7,}'.format(total_half_links -
+                                            total_bad_half_links))
+print('total_no_links:    {:>5,}'.format(total_no_links),
+      ' | total_full_links:    {:>5,}'.format(total_full_links),
+      ' | Bad No Links:      {:>7,}'.format(total_no_links -
+                                            total_full_links))
+# Note "Bad No Links" only accurate when full_links aren't native in posts
+# and are created internally by stack-to-blog.py. Therefore, a negative total
+# is possible when [https://...](https://...) appears in a post.
 print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
       ' | total_copy_lines:  {:>7,}'.format(total_copy_lines),
       ' | total_toc:         {:>7,}'.format(total_toc))
-print('most_lines:       {:>6,}'.format(most_lines),
+print('# total_tag_names:{:>6,}'.format(len(total_tag_names)),
       ' | total_force_end:  {:>8,}'.format(total_force_end),
       ' | total_nav_bar:     {:>7,}'.format(total_nav_bar))
-print('total_header_levels: ', total_header_levels)
-print('total_tag_names:     ', total_tag_names)
+print('all_tag_counts: {:>8,}'.format(all_tag_counts),
+      ' | # tag_posts:      {:>8,}'.format(len(tag_posts)),
+      ' | # total_tag_letters:{:>6,}'.format(len(total_tag_letters)))
+print('total_header_levels:       ', total_header_levels)
 ```
 
 <a id="hdr18"></a>
