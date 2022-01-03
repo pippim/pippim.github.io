@@ -36,6 +36,19 @@
 
       <div class="front-matter">
 
+        <button class="hidden-child"
+          id="hidden_button"
+          onclick="fm_toggle();"
+          // style="position: absolute;"
+          // style="float: right; clear: right;"
+          // style="position: absolute; top: 1; right: 1;"
+          // style="display: inline-block; position: relative; text-align: right;"
+          // right: 0;
+          // top: 0;
+          bottom: .5rem;
+          >Toggle details
+        </button>
+
       <!-- LESS FRONT MATTER -->
       <h4 id="minimal_front_matter">
 
@@ -194,18 +207,6 @@
           showHide(fm_state);  // fm_state is a global var set by checkCookie()
         </script>
       </h4>
-      <button class="hidden-child"
-              id="hidden_button"
-              onclick="fm_toggle();"
-              // style="position: absolute;"
-              // style="float: right; clear: right;"
-              // style="position: absolute; top: 1; right: 1;"
-              // style="display: inline-block; position: relative; text-align: right;"
-              // right: 0;
-              // top: 0;
-              bottom: .5rem;
-              >Toggle details
-      </button>
     </div>
 
       {{ content }}
