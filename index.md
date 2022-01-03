@@ -1,5 +1,5 @@
 ---
-title: Welcome to {% site.title %}
+title: Welcome to Pippim
 layout: default
 ---
 
@@ -16,18 +16,20 @@ layout: default
 
 # Introduction
 
-Welcome to Pippim. A collection of Stack Exchange questions and 
+Welcome to {{ site.title }}. A collection of Stack Exchange questions and 
 answers about using your computer in Linux and 
 specifically Ubuntu. All the solutions are free for you
 to use as you like. There are full-fledged applications 
 free for you to use as well. You can even duplicate the
-Pippim website for free. Then **automatically convert your
+{{ site.title }} website for free. Then **automatically convert your
 own Stack Exchange posts to your own website.**
 
-There are no ads on Pippim. You don't need to buy 
-Pippim a coffee (it's already free at work!).
- Maybe some day you'll want to put all your
- technical documentation on an intranet or website and you will contract Pippim to help get the job done. Custom projects are the business model for how Pippim will earn revenue.
+There are no ads on {{ site.title }}. You don't need to buy 
+{{ site.title }} a coffee (it's already free at work!).
+Maybe some day you'll want to put all your
+technical documentation on an intranet or website and you will contract
+{{ site.title }} to help get the job done. Custom projects are the business
+model for how {{ site.title }} will earn revenue.
 
 If you are an aspiring developer perhaps 
 the code published here will help you get a start. 
@@ -46,13 +48,13 @@ The top of each page contains navigation buttons to take you to other pages:
 
 - <kbd>⌂ Home</kbd> brings you to this page.
 
-- <kbd>❓ About</kbd> disccusses everything you want to know about Pippim. Still have questions? Just email.
+- <kbd>❓ About</kbd> disccusses everything you want to know about {{ site.title }}. Still have questions? Just email.
 
-- <kbd>✅ Answers</kbd> to questions people have using computers. As of November 22, 2021, Pippim answers have over **52 million views!**
+- <kbd>✅ Answers</kbd> to questions people have using computers. As of November 22, 2021, {{ site.title }} answers have over **52 million views!**
 
-- <kbd>💻 Programs</kbd> are applicationss Pippim created to make your life easier.
+- <kbd>💻 Programs</kbd> are applicationss {{ site.title }} created to make your life easier.
 
-- <kbd>📧 Email</kbd> lets you send an email to Pippim.
+- <kbd>📧 Email</kbd> lets you send an email to {{ site.title }}.
 
 > ***NOTE:*** &ensp;When you click a button to go to a page, that button will disappear and be replaced by another. The page you are currently on will not display it's own button. This was done to limit number of buttons on mobile user screens. This technique deviates from conventional website design as of November 2, 2021. Perhaps this technique will be adopted in the future by other websites though. 😄
 
@@ -73,12 +75,13 @@ The top of major sections contain navigation buttons to take you to other sectio
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
 ## Get in Touch
 
-There are many ways of getting in touch with Pippim. The conventional way via email and on other websites. The direct method on Stack Exchange Answers or GitHub Repos.
+There are many ways of getting in touch with {{ site.title }}. The conventional way via email and on other websites. The direct method on Stack Exchange Answers or GitHub Repos.
 
 ### The Conventional Way of Getting in Touch
 
 Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
 
+<-- Change Pippim to your contact info below -->
 - [📧 Send an Email to Pippim 🔗](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com 🔗")
 
 - Visit the Pippim website on [Google Sites 🔗](https://pippim.com "Visit www.pippim.com 🔗")
@@ -98,7 +101,7 @@ You can leave a comment or question where the Stack Exchange answer appears. Eac
 
 ![Inspectocat detective cat with magnifying glass](/assets/img/Inspectocadt.jpeg){: style="float: left" width="20%"}
 
-For Pippim programs on GitHub Repos, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.
+For {{ site.title }} programs on GitHub Repos, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.
 <br clear="left"/>
 
 ---
@@ -126,7 +129,7 @@ Whenever you commit to a website repository, GitHub Pages will run
 [Jekyll](https://jekyllrb.com/ "See how Jekyll rebuilds GitHub Pages websites")
 to rebuild the pages in your site, from the content in your Markdown files.
 
-The Pippim website is based on the GitHub Pages Jekyll theme called 
+The {{ site.title }} website is based on the GitHub Pages Jekyll theme called 
 [Cayman](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for GitHub Pages website").
 Initial setup was straight forward and very quick. However adding custom buttons 
 becomes more complicated as you need to learn 
@@ -227,7 +230,7 @@ There are many [GitHub Pages Jekyll Themes](https://pages.github.com/themes/)
 you can pick from for your website. Spend some time reviewing your options
 before committing to one.
 
-Initially the Pippim website used the Cayman Theme for a day. Then the
+Initially the {{ site.title }} website used the Cayman Theme for a day. Then the
 Merlot Theme was used for a week and then it came back full circle to the 
 Cayman Theme again.
 
@@ -239,7 +242,7 @@ changing the theme, the page title worked properly. New problems arose
 with the page buttons, <kbd>Home</kbd>, <kbd>About</kbd>, etc. With trial 
 and error however those problems were solved too.
 
-This is the first website Pippim created. The somewhat naive initial estimate
+This is the first website {{ site.title }} created. The somewhat naive initial estimate
 was it would take a weekend to create. That estimate was back on 
 October 16, 2021 and today is November 16, 2021. The 
 moral of the story is: *"It may take longer than expected
@@ -255,7 +258,7 @@ The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 [version numbers](https://pages.github.com/versions/)
 for Jekyll, Sass, Kramdown, Rouge, etc..
 
-There are many open-source providers involved in the Pippim website:
+There are many open-source providers involved in the {{ site.title }} website:
 
 - GitHub Pages
 - Jekyll
@@ -280,7 +283,7 @@ It is important to follow these instructions to setup your site:
 For example, `_layouts/default.html` probably needs to be copied from the
 theme website to your own website in order to make significant changes.
 
-There are many file types in the Pippim website stored at various
+There are many file types in the {{ site.title }} website stored at various
 locations:
 
 - A few local images are stored in `assets/img/` directory. The hundreds of images in blog posts come directly from Stack Exchange and are not stored on the `pippim.github.io` website.
@@ -292,9 +295,9 @@ locations:
 - HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory.
 - Javascript files are kept in `assets/js/`.
 
-### Pippim Website Directory Tree
+### {{ site.title }} Website Directory Tree
 
-The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for Pippim on GitHub Pages looked like this:
+The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for {{ site.title }} on GitHub Pages looked like this:
 
 ``` terminal
 $ tree --dirsfirst --filelimit 20
@@ -362,7 +365,7 @@ which are not displayed above.
 
 Normally you will `git pull` all the directories and files from your website to your local drive.
 If you plan on developing locally, you probably want to backup your daily work. This script
-is what Pippim uses for dailiy backup to gmail.com (in the cloud, so it should be safe):
+is what {{ site.title }} uses for dailiy backup to gmail.com (in the cloud, so it should be safe):
 
 ``` bash
 # WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
@@ -617,7 +620,7 @@ label `layout:`, followed by the variable `post`.
 The other line must be the label `title:`, followed
 by a variable with the `Title of the Blog Post`. 
 
-Pippim adds a lot more front matter. Making it more
+{{ site.title }} adds a lot more front matter. Making it more
 powerful in searching for blog posts. The program 
 `stack-to-blog.py` creates this front matter when 
 it converts Stack Exchnage posts.
@@ -725,7 +728,7 @@ The <mark>&nbsp;unity&nbsp;</mark>. <mark>&nbsp;bash&nbsp;</mark>,
 tags come from the original Stack Exchange question tags.
 
 Next you see one of the most powerful
-features of Pippim's automataed blog pages:
+features of {{ site.title }}'s automataed blog pages:
 
 [🔍 See Original Answer on Ask Ubuntu 🔗](https://askubuntu.com/q/882420 
 "Read original Answer on Stack Exchange website but, you might see subtle ads.")
@@ -1069,7 +1072,7 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
     > line 1
     > line 2
 
-    5.2. Pippim appends two spaces to the end of block quotes in Stack Exhange answers so they render properly:
+    5.2. {{ site.title }} appends two spaces to the end of block quotes in Stack Exhange answers so they render properly:
     > line 1  
     > line 2  
 
