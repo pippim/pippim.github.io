@@ -99,8 +99,8 @@ made -- 1,020 commits (revisions) and still counting as of December 5, 2021.
 
 Pippim was created to make it easier to list the free software created on 
 the websites [Ask Ubuntu](https://askubuntu.com) and [GitHub](https://github.com).
-Pippim Posts which are 92% Answers and 8% Questions, have over **52 million
-views** as of November 22, 2021. With over 2,000 answers, 
+Pippim Posts which are 95% Answers and 5% Questions, have over **{{ site.views_human }}
+views** as of {{ site.refreshed | date: "%B %e, %Y" }}. With over 2,000 answers, 
 managing them on a Pippim website just makes sense.
 
 It's common practice to create websites to make money. That isn't why Pippim 
