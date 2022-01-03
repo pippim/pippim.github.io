@@ -412,19 +412,7 @@ Fast-forward
  5 files changed, 161 insertions(+), 102 deletions(-)
  create mode 100644 _includes/website_tree
 
-Running ~/website/sede/stack-to-blog.py
-NEW CONFIGURATION:
-theme: jekyll-theme-cayman
-# The title: appears frequently on my pages. It's your company / personal name
-title: Pippim
-description: Free Open-Source Software for the World. Free of Ads Too!
-views: "53,134,690 "
-views_human: 53.1 million
-refreshed: 2022-01-03 08:14:44
-questions: "297 "
-answers: "2,145 "
-accepted: "464 "
-post_count: "1,123 "
+Running: ~/website/sede/stack-to-blog.py
 // =============================/   T O T A L S   \============================== \\
 Run-time options:
 
@@ -669,11 +657,11 @@ website page:
    style="float: none; width: 100%; margin: 0 0 0 0;"
 %}
 
-The short version (`Less`), begins with **Views:** <mark>1853</mark>
+The short version (`Less`), begins with **Views:** <mark>1,893</mark>
 generated from the front matter label `views:` This is followed by
 **Votes:** <mark>6</mark> generated from the label `votes:`. 
 
-Next the ✅&nbsp;<mark>&nbsp;Solution&nbsp;</mark> text is controlled
+Next the "✅ **Solution**" text is controlled
 by the front matter label `accepted:`. The text only appears when 
 `accepted:` contains the value "Accepted". When `accepted:` has no
 value (it's blank / nil / empty) then
@@ -681,11 +669,22 @@ no checkmark or text appears.
 
 The **Tags:** are controlled by the front matter variable `tags:`
 and can also include pseudo-tags. In this example the 
-<mark>&nbsp;eyesome&nbsp;</mark> and <mark>&nbsp;multi-timer&nbsp;</mark>
+<mark>eyesome</mark> and <mark>multi-timer</mark>
 keywords were found in the answer and are
-pseudo-tag which have been added to `tags:` front matter. 
-The <mark>&nbsp;unity&nbsp;</mark>. <mark>&nbsp;bash&nbsp;</mark>,
-<mark>&nbsp;scripts&nbsp;</mark> and <mark>&nbsp;system-tray&nbsp;</mark>
+pseudo-tag which have been added to `tags:` front matter.
+
+You control pseudo-tags in the following code snippet in
+`stack-to-blog.py`:
+
+``` python
+# If question or answer contains one of these "pseudo tags" then jekyll front matter
+# will have tag added as if it were really on the question. Essentially you
+# are tagging your answers and adding them to OP's question tags.
+PSEUDO_TAGS = ["conky", "cpuf", "eyesome", "grub", "iconic", "multi-timer", 'vnstat', 'yad']
+```
+
+The <mark>unity</mark>. <mark>bash</mark>,
+<mark>scripts</mark> and <mark>system-tray</mark>
 tags come from the original Stack Exchange question tags.
 
 Next you see one of the most powerful
@@ -709,20 +708,21 @@ designing your website.
 ---
 
 If you want to change how front matter is displayed
-on your website page, edit the files `_includes/page.html`
+on your website page, edit the files `_includes/post.html`
 and `assets/js/post_fm.html`.
 
-The <mark>&nbsp;Highlight Formatting&nbsp;</mark> is defined in
+The <mark>Highlight Formatting</mark> is defined in
 `assets/css/style.scss`:
 
 ``` scss
-// Swap font color and background color
+// Yellow highlighter pen
 mark {
-  background-color: $header-bg-color;
-  color: #FFFFFF;
+  // total new style: https://www.abeautifulsite.net/posts/a-clever-way-to-style-the-mark-element/
+  background: linear-gradient(-100deg, hsla(48,92%,75%,.3), hsla(48,92%,75%,.7) 95%, hsla(48,92%,75%,.1));
+  border-radius: 1em 0;
+  padding: .2rem .5rem .2rem .5rem;
 }
 ```
-
 
 ### TOC, Navigation Buttons, Copy to Clipboard
 
