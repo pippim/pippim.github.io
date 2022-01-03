@@ -5,20 +5,20 @@ title:        >
 site:         Ask Ubuntu
 stack_url:    https://askubuntu.com/q/1061304
 type:         Answer
-tags:         ubuntu-gnome xrandr redshift f.lux gamma
+tags:         ubuntu-gnome xrandr redshift f.lux gamma eyesome
 created_date: 2018-08-01 04:12:55
-edit_date:    2020-06-12 14:37:07
+edit_date:    2021-12-17 11:59:38
 votes:        "23 "
 favorites:    
-views:        "14,382 "
+views:        "14,653 "
 accepted:     Accepted
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    true
 ---
 
-## December 9, 2018 Update
+## December 9, 2018 Update - `sct`
 
 I found source code for program `sct` which allows user to set color temperature. It has "cribbed the code" from `redshift` and provides mapping for red, green and blue values:
 
@@ -53,23 +53,26 @@ static const struct { float r; float g; float b; } whitepoints[] = {
 ```
 
 The three columns above are values for **Red**, **Green** and **Blue**.
-## November 4, 2018 Update
 
-I wrote a collection of bash scripts to [adjust brightness and gamma gradually][1] at dawn and dusk over a 90 minute to 120 minute period. The full brightness setting is:
+## November 4, 2018 Update - Eyesome
+
+I wrote a collection of bash scripts called **Eyesome** that [adjust brightness and gamma gradually][1] at dawn and dusk over a 90 minute to 120 minute period. Although user can change the settings, a good starting point for full brightness setting is:
 
 ``` 
 xrandr --output DP-1-1 --gamma 1:1:1 --brightness 1.0
 
 ```
 
-The nighttime setting is:
+The nighttime setting (for one of the three monitors) is:
 
 ``` 
-xrandr --output DP-1-1 --gamma 1.1:0.8:0.7 --brightness 0.55
-## 
+xrandr --output DP-1-1 --gamma 1.0:0.88:0.76 --brightness 0.55
+
 ```
 
+**Note:** Up to three monitors can be defined with separate settings.
 
+----------
 
 ## Original Answer
 

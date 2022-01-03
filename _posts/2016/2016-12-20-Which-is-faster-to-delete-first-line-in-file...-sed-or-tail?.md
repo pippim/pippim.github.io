@@ -8,11 +8,11 @@ type:         Question
 tags:         scripts sed tail
 created_date: 2016-12-20 20:32:09
 edit_date:    2017-04-13 12:25:10
-votes:        "14 "
+votes:        "15 "
 favorites:    3
-views:        "15,010 "
+views:        "15,049 "
 accepted:     Accepted
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

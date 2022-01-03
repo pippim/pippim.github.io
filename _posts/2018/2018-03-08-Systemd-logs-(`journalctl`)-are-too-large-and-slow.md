@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line performance disk-usage systemd systemd-journald
 created_date: 2018-03-08 01:13:36
 edit_date:    2019-05-21 23:11:00
-votes:        "81 "
+votes:        "86 "
 favorites:    
-views:        "42,061 "
+views:        "43,005 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    true

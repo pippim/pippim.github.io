@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/837115
 type:         Answer
 tags:         16.04 lock-screen dbus gnome-screensaver multi-timer
 created_date: 2016-10-14 17:35:27
-edit_date:    2021-11-14 17:30:21
+edit_date:    2021-12-13 00:29:13
 votes:        "15 "
 favorites:    
-views:        "3,004 "
+views:        "3,037 "
 accepted:     Accepted
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          true
 navigation:   true
 clipboard:    true
@@ -26,7 +26,7 @@ clipboard:    true
 
 ## June 4, 2018 Update
 
-A much superior program called `multi-timer` has been created: [A timer to set up different alarms simultaneously][1]
+A much superior program called `multi-timer` has been created: [Set of countdown timers with alarm][1]
 
 
 <a id="hdr2"></a>
@@ -85,7 +85,7 @@ amount of time before screen is locked.
 
 **Edit 8 (Nov 12,2017):** Add WSL (Windows 10 Subsystem for Linux) support. Note you need to add `VcXsrv` and `ubuntu-desktop` or `xubuntu-desktop` (preferred) to use Linux GUI in WSL. Windows 10 system tray / notification area time remaining display requires complementing what `indicator-sysmonitor` does in Linux. A future `powershell.exe` script is planned for Windows 10 notification area support.
 
-**Edit 9 (Feb 19,2018):** Fix animation missing the `\` from spinning pizza "|,/,─,\" sequence.
+**Edit 9 (Feb 19,2018):** Fix animation missing the `\` from spinning pizza `|,/,─,\` sequence.
 
 **Edit 10 (Nov 14,2021):** New variable `WORK_FILE` set to `~/.lock-screen-timer-remaining`. If previous timer was run from command line and cancelled with <kbd>Ctrl</kbd>+<kbd>C</kbd> then `$WORK_FILE` removed on script startup. The following cosmetic changes were made to this answer:
 

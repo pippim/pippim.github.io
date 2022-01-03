@@ -8,11 +8,11 @@ type:         Answer
 tags:         software-recommendation samsung remote smart-tv yad
 created_date: 2019-06-02 20:37:08
 edit_date:    2019-06-04 23:16:26
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "2,706 "
+views:        "2,763 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

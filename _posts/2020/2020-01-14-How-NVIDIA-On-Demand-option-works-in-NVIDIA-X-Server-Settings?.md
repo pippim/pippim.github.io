@@ -8,11 +8,11 @@ type:         Answer
 tags:         nvidia graphics hybrid-graphics nvidia-prime
 created_date: 2020-01-14 12:35:15
 edit_date:    2020-06-12 14:37:07
-votes:        "12 "
+votes:        "14 "
 favorites:    
-views:        "34,410 "
+views:        "35,518 "
 accepted:     Accepted
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

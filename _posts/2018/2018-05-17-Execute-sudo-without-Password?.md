@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line password sudo root
 created_date: 2018-05-17 00:12:01
 edit_date:    
-votes:        "5 "
+votes:        "7 "
 favorites:    
-views:        "775,134 "
+views:        "779,937 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

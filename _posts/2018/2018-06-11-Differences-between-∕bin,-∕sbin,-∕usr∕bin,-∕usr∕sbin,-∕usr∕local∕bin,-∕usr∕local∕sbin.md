@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line filesystem scripts directory system
 created_date: 2018-06-11 23:44:36
 edit_date:    2020-06-12 14:37:07
-votes:        "23 "
+votes:        "24 "
 favorites:    
-views:        "289,928 "
+views:        "292,053 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    true

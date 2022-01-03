@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1064704
 type:         Answer
 tags:         18.04 lock-screen
 created_date: 2018-08-12 16:22:14
-edit_date:    2020-01-06 15:11:47
+edit_date:    2022-01-02 01:15:57
 votes:        "63 "
 favorites:    
-views:        "43,306 "
+views:        "43,639 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false
@@ -71,9 +71,11 @@ To reverse the setting back use:
 
 ``` 
 gsettings set org.gnome.desktop.screensaver lock-enabled true
-## 
+
 ```
 
+
+---
 
 
 In Gnome [screen locking guide][1] it says:

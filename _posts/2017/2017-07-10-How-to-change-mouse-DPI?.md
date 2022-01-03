@@ -8,11 +8,11 @@ type:         Answer
 tags:         14.04 mouse hardware
 created_date: 2017-07-10 02:27:44
 edit_date:    2020-06-12 14:37:07
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "26,865 "
+views:        "27,289 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    true

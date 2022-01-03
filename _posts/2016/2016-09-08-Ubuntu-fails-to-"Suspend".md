@@ -10,9 +10,9 @@ created_date: 2016-09-08 01:34:48
 edit_date:    2020-02-08 18:37:04
 votes:        "2 "
 favorites:    
-views:        "1,386 "
+views:        "1,398 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

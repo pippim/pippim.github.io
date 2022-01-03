@@ -8,11 +8,11 @@ type:         Answer
 tags:         17.04 cpufreq
 created_date: 2017-07-15 17:54:43
 edit_date:    2020-08-09 15:24:45
-votes:        "29 "
+votes:        "31 "
 favorites:    
-views:        "50,508 "
+views:        "50,986 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

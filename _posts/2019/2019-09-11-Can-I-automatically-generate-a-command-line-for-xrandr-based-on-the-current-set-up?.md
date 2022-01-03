@@ -8,11 +8,11 @@ type:         Answer
 tags:         xrandr
 created_date: 2019-09-11 11:20:30
 edit_date:    
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "504 "
+views:        "534 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

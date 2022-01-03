@@ -8,11 +8,11 @@ type:         Answer
 tags:         hardware cpu temperature monitoring sensors conky
 created_date: 2016-11-26 22:15:04
 edit_date:    2018-10-15 10:41:04
-votes:        "113 "
+votes:        "115 "
 favorites:    
-views:        "1,526,126 "
+views:        "1,532,098 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

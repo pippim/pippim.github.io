@@ -7,16 +7,18 @@ stack_url:    https://askubuntu.com/q/1198795
 type:         Answer
 tags:         command-line
 created_date: 2019-12-27 01:38:52
-edit_date:    
-votes:        "11 "
+edit_date:    2021-12-13 01:02:51
+votes:        "12 "
 favorites:    
-views:        "2,889,754 "
+views:        "2,914,245 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false
 ---
+
+# The `script` command
 
 There are two different questions here. The first is in the title:
 
@@ -64,6 +66,16 @@ command |& tee ~/outputfile.txt
 - The `script` command has added benefit (or disadvantage) of reloading `~/.bashrc` when it starts.
 - The `script` command shows the command prompt (`$PS1`) followed by the command(s) you entered.
 - The `script` command records all the details in full color.
+
+# Send output to clipboard
+
+Many times we want the output to go to the clipboard so we can paste it later. From [this answer](https://stackoverflow.com/a/5130969/6929343) you can use:
+
+``` bash
+cat ~/.bashrc | xclip -selection clipboard
+```
+
+Now you can use <kbd>Ctrl</kbd>+<kbd>V</kbd> in almost any application to paste the terminal output into your document. To paste the terminal output in the clipboard back into your terminal use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> instead.
 
   [1]: https://unix.stackexchange.com/a/200642/200094
   [2]: https://askubuntu.com/a/485762/307523

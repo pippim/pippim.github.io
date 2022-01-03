@@ -8,11 +8,11 @@ type:         Answer
 tags:         terminal
 created_date: 2019-04-28 01:15:29
 edit_date:    
-votes:        "12 "
+votes:        "13 "
 favorites:    
-views:        "101,954 "
+views:        "102,679 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/882420
 type:         Answer
 tags:         unity bash scripts system-tray eyesome multi-timer
 created_date: 2017-02-11 23:34:13
-edit_date:    2021-12-11 20:37:15
+edit_date:    2021-12-12 22:34:32
 votes:        "6 "
 favorites:    
-views:        "1,853 "
+views:        "1,893 "
 accepted:     Accepted
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   true
 clipboard:    true
@@ -36,7 +36,7 @@ It displays text on the Ubuntu System Tray (Systray) / Application Indicator Bar
 
 ## Different Desktop Environments
 
-The above article is targeted to Ubuntu 16.04 to 20.04 with the **Unity Desktop**. If you don't have Unity Desktop installed for Ubuntu 20.04 see [these instructions](https://linuxconfig.org/ubuntu-20-04-unity-desktop). 
+The above article is targeted to Ubuntu 14.04 to 20.04 with the **Unity Desktop**. If you don't have Unity Desktop installed for Ubuntu 20.04 see [these instructions](https://linuxconfig.org/ubuntu-20-04-unity-desktop). 
 
 For more information on Xubuntu, Gnome-Shell + app-indicator extension, and Budgie, go to the Developers website: [fossfreedom / indicator-sysmonitor][2]. Also visit the site for more detailed installation and configuration instructions.
 
@@ -51,7 +51,7 @@ sudo apt-get install indicator-sysmonitor
 
 ```
 
-Now run the "indicator-sysmonitor" GUI from Dash (<kbd>Alt</kbd>+<kbd>F2</kbd>).
+Now run the "indicator-sysmonitor" GUI from Unity Dash (<kbd>Alt</kbd>+<kbd>F2</kbd> or <kbd>⊞ Super</kbd> aka <kbd>⊞ Win</kbd> key). If you are using GNOME use <kbd>⊞ Super</kbd>+<kbd>A</kbd> to open Show Applications instead of Dash.
 
 - Click on the systray area that appears with "cpu: 99% mem: 99%"
 - Select "Preferences"

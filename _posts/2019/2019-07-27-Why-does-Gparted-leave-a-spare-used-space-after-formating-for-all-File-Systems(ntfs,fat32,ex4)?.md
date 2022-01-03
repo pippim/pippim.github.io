@@ -8,11 +8,11 @@ type:         Answer
 tags:         partitioning filesystem gparted ntfs ext4
 created_date: 2019-07-27 19:58:33
 edit_date:    
-votes:        "1 "
+votes:        "2 "
 favorites:    
-views:        "352 "
+views:        "356 "
 accepted:     Accepted
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

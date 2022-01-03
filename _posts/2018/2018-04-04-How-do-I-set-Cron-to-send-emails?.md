@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line cron email rm
 created_date: 2018-04-04 01:50:29
 edit_date:    2018-08-05 17:11:21
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "24,547 "
+views:        "24,932 "
 accepted:     
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

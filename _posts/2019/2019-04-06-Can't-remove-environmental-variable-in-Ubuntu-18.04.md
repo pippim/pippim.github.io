@@ -8,11 +8,11 @@ type:         Answer
 tags:         18.04 java environment-variables
 created_date: 2019-04-06 01:30:08
 edit_date:    2019-04-06 01:36:33
-votes:        "1 "
+votes:        "3 "
 favorites:    
-views:        "3,807 "
+views:        "3,879 "
 accepted:     Accepted
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

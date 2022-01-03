@@ -8,11 +8,11 @@ type:         Answer
 tags:         configuration .desktop ftp default-programs image-viewers
 created_date: 2019-07-24 16:22:34
 edit_date:    
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "2,582 "
+views:        "2,716 "
 accepted:     Accepted
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    false

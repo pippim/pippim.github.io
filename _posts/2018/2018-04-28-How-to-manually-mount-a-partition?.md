@@ -8,11 +8,11 @@ type:         Answer
 tags:         mount
 created_date: 2018-04-28 03:00:41
 edit_date:    2020-06-12 14:37:07
-votes:        "39 "
+votes:        "40 "
 favorites:    
-views:        "98,805 "
+views:        "100,762 "
 accepted:     Accepted
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          false
 navigation:   false
 clipboard:    true

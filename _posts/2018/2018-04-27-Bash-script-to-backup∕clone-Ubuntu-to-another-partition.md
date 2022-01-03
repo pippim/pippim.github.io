@@ -8,11 +8,11 @@ type:         Answer
 tags:         grub2 bash upgrade backup clone
 created_date: 2018-04-27 03:53:41
 edit_date:    2020-06-12 14:37:07
-votes:        "28 "
+votes:        "29 "
 favorites:    
-views:        "14,669 "
+views:        "14,857 "
 accepted:     Accepted
-uploaded:     2022-01-02 16:31:33
+uploaded:     2022-01-02 20:50:10
 toc:          true
 navigation:   true
 clipboard:    true
