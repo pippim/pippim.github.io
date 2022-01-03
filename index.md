@@ -876,17 +876,20 @@ line = check_code_indent(line)  # Reformat code indent to fenced code block
 line = header_space(line)       # #Header, Alt-H1, Alt-H2. Set header_levels
 line = block_quote(line)        # Formatting for block quotes
 line = check_half_links(line)   # SE uses [https://…] instead of [Post Title]
+line = check_tail_links(line)   # Change [x]: https://… from SE to Jekyll
+line = check_full_links(line)   # Change [Name](https://…) from SE to Jekyll
 check_pseudo_tags(line)         # Check if pseudo tag(s) should be added
+line = one_time_change(line)    # One Time Changes
 lines[line_index] = line        # Update any changes to original
 new_lines.append(line)          # Modified version of original lines
 
 # Check if we need to include copy to clipboard command
 command = check_copy_code(line_index)
 if command:
-   insert_clipboard = True     # Will set Jekyll front matter = true
-   # prepend command + \n to ``` bash line
-   new_lines[code_block_index] = \
-       command + "\n" + new_lines[code_block_index]
+    insert_clipboard = True     # Will set Jekyll front matter = true
+    # prepend command + \n to ``` bash line
+    new_lines[code_block_index] = \
+        command + "\n" + new_lines[code_block_index]
 ```
 
 After Pass 1 loop completes, the modified lines are reread and massaged
@@ -955,30 +958,32 @@ if insert_nav_bar:
         # First check if at TOC_LOC and insert TOC if needed
         if insert_toc:
             if sum2 == TOC_LOC:
-                new_md = new_md + navigation_bar(TOC_LOC)
+                new_md += navigation_bar()
                 if NAV_BAR_OPT <= 3:
                     # If Option "4" a blank line already inserted before us
-                    new_md = new_md + "\n"
-                new_md = new_md + CONTENTS + "\n"
-                new_md = new_md + "\n"  # When 4 a blank line already inserted before us
+                    new_md += "\n"
+                new_md += CONTENTS + "\n"
+                new_md += "\n"  # When 4 a blank line already inserted before us
+                last_nav_id += 1
                 toc_inserted = True  # Not necessary but is consistent
             if sum2 >= TOC_LOC:
                 sum2 += 1   # All heading levels after TOC are 1 greater
- 
-        new_md = new_md + navigation_bar(sum2)
- 
+
+        if check_last_navigation_bar():
+            new_md += navigation_bar()
+
 elif insert_toc:
-    # No navigation bar but we still need TOC at header count
+    # No navigation bar, but we still need TOC at header count
     if header_count == TOC_LOC and toc_inserted is False:
         if NAV_BAR_OPT <= 3:
             # If Option "4" a blank line already inserted before us
-            new_md = new_md + "\n"
-        new_md = new_md + CONTENTS + "\n"
-        new_md = new_md + "\n"
+            new_md += "\n"
+        new_md += CONTENTS + "\n"
+        new_md += "\n"
         toc_inserted = True  # Prevents regeneration next line read
-        print('toc only:', blog_filename)
- 
-new_md = new_md + line + '\n'
+        # print('toc only:', blog_filename)
+
+new_md += line + '\n'
 ```
 
 When Pass 2 loop over every `line` in the `lines` finishes,
@@ -1079,7 +1084,7 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
 
 8. The alternate H1 markdown format "`Header 1`" line followed by a "`==`" line are converted to "`# Header 1`". The alternate H2 markdown format "`Header 2`" line followed by a "`--`" line are converted to "`## Header 2`". Trailing "==" and "--" lines are converted to blank lines.
 
-9. Stack Exchange post tags are formated as: `<Tag1><Tag2><Tag3>`. For GitHub they areconverted to: `tags: Tag1 Tag2 Tag3`.
+9. Stack Exchange post tags are formated as: `<Tag1><Tag2><Tag3>`. For GitHub they are converted to: `tags: Tag1 Tag2 Tag3`.
 
 10. The Stack Exchange title is set up as the Jekyll front matter title with the front matter variable `title:`. The blog filename is created based on the title. Optional front matter can be specified such as for URL, Votes, Last Edit Date, etc. based on the Stack Exchange post.
 
@@ -1090,6 +1095,8 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
 13. Stack Exchange allows leading 4 spaces for a code block. These don't work well to support the Krampdown Rouge formatting in GitHub Pages. Therefore they are converted to fenced code blocks ```` ``` bash ```` or ```` ``` python ```` depending on the "shebang" or `<!-- language...` comment.
 
 14. Stack Exchange Markdown can dynamicallly look-up the link name within SE sties. GitHub Pages does not support this feature. For example, if `[https://askubuntu.com/questions/1234567/question-title][1]`is found without a link name, it is converted to `[Question Title][1]`. This will only work if the link is to one of your own posts in your `QueryResults.csv` file.
+
+15. Stack Exchange posts which are saved on the {{ site.title }} website are converted to internal links. This minimizes clicks away from the {{ site.title }} website and presents the post in the same uncluttered format the {{ site.title }} website provides.
 
 The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
@@ -1105,30 +1112,44 @@ The filename for a Jekyll blog post resides in the `_posts/` directory and requi
 - The forward slash (`/`) character is illegal in filenames so it is replaced by division symbol (`∕`).
 - The extension `.md` is added to the filename.
 
-Here's the python function which creates the blog filename:
+Here are the python functions which create the blog post's filename:
 
+{% include copyHeader.html %}
 ``` python
-def create_blog_filename():
+def create_blog_filename(r):
     """ Return blog filename.
         Replace all spaces in title with "-"
         Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
+        Prepend "/YYYY/" to post filename as required.
     """
-    filename = OUTPUT_DIR + row[CREATED].split()[0] + '-' + \
-        row[TITLE].replace(' ', '-').replace('/', '∕') + '.md'
+    sub_dir = make_output_year_dir(r[CREATED])
+    base_fn = sub_dir + r[CREATED].split()[0] + '-' + \
+        r[TITLE].replace('/', '∕').replace(' ', '-')
+    blog_fn = OUTPUT_DIR + base_fn + ".md"
+    blog_fn = blog_fn.replace('//', '/')
+    return base_fn, blog_fn
 
-    return filename
+
+def make_output_year_dir(post_date):
+    """
+    """
+    if OUTPUT_BY_YEAR_DIR is None or False or OUTPUT_BY_YEAR_DIR == "":
+        return ""  # Will be concatenated into string making up blog_filename
+
+    # Does target directory exist?
+    new_sub = "/" + post_date[0:4] + "/"
+    prefix = OUTPUT_DIR + new_sub
+    prefix = prefix.replace('//', '/')
+    if not os.path.isdir(prefix):
+        try:
+            os.makedirs(prefix)
+            print('Created directory:', prefix)
+        except OSError as error:
+            print(error)
+            fatal_error('Could not make directory path:' + prefix)
+
+    return new_sub
 ```
-
-`OUTPUT_DIR` defaults to `../_posts/` because `stack-to-blog.py` sits in a sibling directory:
-
-``` terminal
-├── _posts
-│   └── 2021-10-24-welcome-to-jekyll.md
-└── sede
-    ├── QueryResults.csv
-    ├── StackQuery
-    └── stack-to-blog.py
- ```
 
 ## Pseudo Tags
 
