@@ -1,5 +1,6 @@
 theme: jekyll-theme-cayman
-title: Pippim - Free Software
+# title: appears frequently on my pages. It's your company / personal name
+title: Pippim
 description: Free Open-Source Software for the World. Free of Ads Too!
 
 # Must be last comment! stack-to-blog.py variables added below
