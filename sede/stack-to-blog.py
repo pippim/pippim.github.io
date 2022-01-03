@@ -102,7 +102,6 @@ Password: <type your password>
             
 """
 
-WEBSITE_NAME = "pippim.github.io"
 INPUT_FILE = 'QueryResults.csv'
 RANDOM_LIMIT = None         # On initial trials limit the number of blog posts to 10
 PRINT_RANDOM = False        # Print out matching random records found
@@ -173,8 +172,6 @@ EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
 
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 CONFIG_YML = "../_config.yml"
-# "../_config.yml" file is opened and parsed for following string:
-CONFIG_STR = "# Must be last comment! stack-to-blog.py variables added below"
 
 ''' Initialize Global Variables '''
 rows = []                   # Returned rows, less record #1 (field names)
@@ -531,7 +528,7 @@ def set_ss_save_blog(r):
     total_views += views    # score is up-votes - down-votes can be negative
 
     ''' If Accepted turned on save blog (but it might be question) '''
-    if r[ACCEPTED] != '':
+    if r[TYPE] == "Answer" and r[ACCEPTED] != '':
         accepted_count += 1
         if ACCEPTED_QUALIFIER:
             save = True  # Previous tests may have turned off
@@ -545,7 +542,7 @@ def set_ss_save_blog(r):
         # Fix: https://stackoverflow.com/questions/68011128/where-to-find-usr-include-x11-extensions-xcomposite-h
         # Question is answered by someone else and accepted. self_answer should be false
         self_answer, self_accept, search_url = check_self_answer(r)
-        if "17466561" in r[URL] or "59621559" in r[URL]:
+        if "?17466561" in r[URL] or "?59621559" in r[URL]:
             print(search_url)
             print('self_answer:', self_answer, 'self_accept:', self_accept)
             # fatal_error("This is it")
@@ -1053,20 +1050,6 @@ def check_full_links(ln):
             search_str = "(" + found + ")"
             replace_str = "(" + ss_post_url + ")"
             ln = ln.replace(search_str, replace_str)
-            if ss_type != "Answer":
-                print()
-                print('OLD:', old_ln)
-                print('NEW:', ln)
-                # Change (] to (pippim_title)[pippim_link]
-                print('==== YES:', post_url)
-            else:
-                print('found:', post_url)
-        else:
-            # Parse HTML to get link title
-            #print()
-            #print('NOT Found Name:', name)
-            #print('NOT Found Link:', found)
-            pass
 
         last_start = name_end  # Next link to search for
 
@@ -2220,7 +2203,6 @@ def gen_post_by_tag_groups():
         if inner_count == 0:
             if OUTPUT_BY_YEAR_DIR:
                 group_start_name = tag_name + " " + post_filename[6:16]
-                print('group_start_name:',  group_start_name)
             else:
                 group_start_name = tag_name + " " + post_filename[:10]
             group_start_index = post_index
@@ -2242,7 +2224,6 @@ def gen_post_by_tag_groups():
         # Put date into group
         if OUTPUT_BY_YEAR_DIR:
             group_end_name = tag_name + " " + post_filename[6:16]
-            print('group_end_name:', group_end_name)
         else:
             group_end_name = tag_name + " " + post_filename[:10]
         group_end_index = post_index
@@ -2542,18 +2523,69 @@ def html_write_post_tags(html):
 
 def update_config():
     """ Update site wide variables in _config.yml
-    # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
-    CONFIG_YML = "../_config.yml"
-    # "../_config.yml" file is opened and parsed for following string:
-    CONFIG_STR = "# Must be last comment! stack-to-blog.py variables added below"
+
+    See: /website/sede/refresh.sh for how file is updated on GitHub Pages
+
+    Key/Value pairs that are updated. Note "_" is a 1/4 space to trick YAML:
+
+    views = 99,999,999_
+    views_human = 99.9 million
+    refreshed = YYYY-MM-DD HH:MM:SS+0000
+    questions = 300_
+    answers = 2,172_
+    accepted = 469_
+    save_blog = 1,122_
+
     """
     if not os.path.exists(CONFIG_YML):
         fatal_error('The file: ' + CONFIG_YML + 'not found!')
 
     with open(CONFIG_YML, 'r') as fn:
         all_lines = fn.readlines()
-        old_config = [one_line.rstrip() for one_line in all_lines]
+        config = [one_line.rstrip() for one_line in all_lines]
 
+    one_config_line(config, "views", '"{:,}'.format(total_views) + ' "')
+    one_config_line(config, "views_human", humansize(total_views))
+    one_config_line(config, "refreshed", now)
+    one_config_line(config, "questions", '"{:,}'.format(question_count) + ' "')
+    one_config_line(config, "answers", '"{:,}'.format(answer_count) + ' "')
+    one_config_line(config, "accepted", '"{:,}'.format(accepted_count) + ' "')
+    one_config_line(config, "post_count", '"{:,}'.format(save_blog_count) + ' "')
+
+    print('NEW CONFIGURATION:')
+    for ln in config:
+        print(ln)
+
+    """ Write posts by tags HTML page """
+    with open(CONFIG_YML, 'w') as fh:
+        # Write everything
+        for ln in config:
+            fh.write(ln + "\n")
+
+
+suffixes = ['', 'thousand', 'million', 'billion', 'TB', 'PB']
+
+
+def humansize(num):
+    """ Credit: https://stackoverflow.com/a/14996816/6929343 """
+    i = 0
+    while num >= 1000 and i < len(suffixes)-1:
+        num /= 1000.
+        i += 1
+    f = ('%.1f' % num).rstrip('0').rstrip('.')
+    return '%s %s' % (f, suffixes[i])
+
+
+def one_config_line(config, key, value):
+    """ Add or update one configuration line """
+    full = key + ": "
+    for i, ln in enumerate(config):
+        if full in ln:
+            config[i] = full + value
+            return
+
+    # Not found so add to end
+    config.append(full + value)
 
 
 ''' INITIALIZATION
