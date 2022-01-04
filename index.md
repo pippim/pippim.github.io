@@ -123,10 +123,15 @@ for blog posts. This controls how much front matter is displayed at
 the top of blog posts.
 
 If you are uncomfortable having the More/Less cookie on your computer
-you can disable cookies with your browser. See:
+you can disable cookies with your browser.
 
-- [Clear, enable, and manage cookies in Chrome](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop)
-- [Block websites from storing cookies and site data in Firefox](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
+## Disable Cookies in Chrome
+
+[Clear, enable, and manage cookies in Chrome](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop)
+
+## Disable Cookies in Firefox
+
+[Block websites from storing cookies and site data in Firefox](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
 
 {% include image.html src="/assets/img/Octocat.png"
    alt="Octocate image by github.com"
