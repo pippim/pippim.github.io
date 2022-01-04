@@ -117,10 +117,9 @@ For {{ site.title }} programs on GitHub Repos, you can go directly to the reposi
 
 # Cookies
 
-Currently there is only one cookie used on the {{ site.title }} website.
+There is one cookie used on the {{ site.title }} website.
 The cookie is used to track the status of the "More" or "Less" button
-for blog posts. This controls how much front matter is displayed at
-the top of blog posts. You can disable cookies using links below.
+for blog posts. You can disable the cookie using links below.
 
 ### Disable Cookies in Chrome
 
