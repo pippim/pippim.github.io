@@ -817,7 +817,19 @@ blog post with a minimum of 700 words qualifies for Navigation Bars.
 `200` words or `13` lines have passed since the last header with
 a Navigation Bar then the following header will also receive a
 Navigation Bar. Too little distance between Navigation Bars will
-clutter the web page with little purpose.
+clutter the web page with little purpose. Note that a picture is
+literally worth a thousand words as the code below illustrates:
+
+``` python
+words = 0
+for i in range(last_nav_index, line_index + 1):
+  ln = lines[i]
+  word_list = ln.split()
+  count = len(word_list)
+  words += count
+  if "[![" in ln:
+      words += 1000
+```
 
 The copy to clipboard button will appear at the top of code blocks.
 It isn't automatically inserted on all code blocks because it
@@ -826,8 +838,8 @@ code block, the user can easily highlight with mouse and use
 <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy to clipboard.
 
 The global variable `COPY_LINE_MIN` specifies how many code block
-lines are required before button appers. 
-The default is `20` lines.
+lines are required since the last button before a new button is
+eligible.  The default is `20` lines.
 
 Additional documentation will be added for the python global variables:
 
@@ -1432,14 +1444,15 @@ def check_copy_code(this_index):
 `copyHeader.html` is located in the `_includes/` directory:
 
 ``` terminal
-├── _includes
 │   ├── copyHeader.html
 │   ├── head-custom.html
 │   ├── image.html
+│   ├── posts_by_tag.html
+│   ├── posts_by_vote.html
 │   └── toc.md
 ```
 
-It contains the following HTML code:
+`copyHeader.html` contains the following HTML code:
 
 ``` html
 <!-- Copy code block contents to system clipboard. From: 
