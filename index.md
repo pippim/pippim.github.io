@@ -120,16 +120,13 @@ For {{ site.title }} programs on GitHub Repos, you can go directly to the reposi
 Currently there is only one cookie used on the {{ site.title }} website.
 The cookie is used to track the status of the "More" or "Less" button
 for blog posts. This controls how much front matter is displayed at
-the top of blog posts.
+the top of blog posts. You can disable cookies using links below.
 
-If you are uncomfortable having the More/Less cookie on your computer
-you can disable cookies with your browser.
-
-## Disable Cookies in Chrome
+### Disable Cookies in Chrome
 
 [Clear, enable, and manage cookies in Chrome](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop)
 
-## Disable Cookies in Firefox
+### Disable Cookies in Firefox
 
 [Block websites from storing cookies and site data in Firefox](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
 
