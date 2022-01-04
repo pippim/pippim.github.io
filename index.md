@@ -122,12 +122,17 @@ The cookie is used to track the status of the "More" or "Less" button
 for blog posts. This controls how much front matter is displayed at
 the top of blog posts.
 
+If you are uncomfortable having the More/Less cookie on your computer
+you can disable cookies with your browser. See:
 
-{% include image.html src="/assets/img/GitHub-round-pngegg.com.png"
-   alt="GitHub image by pngegg.com"
+- [Clear, enable, and manage cookies in Chrome](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop)
+- [Block websites from storing cookies and site data in Firefox](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
+
+{% include image.html src="/assets/img/Octocat.png"
+   alt="Octocate image by github.com"
    style="float: right; width: 40%; margin: 2em 0px 0px 1em;"
-   caption="GitHub image credit: 
-      <a href='https://www.pngegg.com/en/search?q=git+Logo'>PNGEGG.com</a>"
+   caption="Octocat image credit: 
+      <a href='https://github.com/logos'>github.com logos</a>"
 %}
 
 
