@@ -108,6 +108,20 @@ For {{ site.title }} programs on GitHub Repos, you can go directly to the reposi
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
 
+{% include image.html src="/assets/img/cookie-clicker.png"
+   alt="Cookie image by cookie-clicker.co"
+   style="float: left; width: 30%; margin: 2em 1em 0px 0px;"
+   caption="Cookie image credit: 
+      <a href='https://cookie-clicker.co/'>Cookie-Clicker.co</a>"
+%}
+
+# Cookies
+
+Currently there is only one cookie used on the {{ site.title }} website.
+The cookie is used to track the status of the "More" or "Less" button
+for blog posts. This controls how much front matter is displayed at
+the top of blog posts.
+
 # GitHub Pages
 
 This website was created on **GitHub Pages**. You can download (or simply view) this website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages"). This current page for example you can find in the markdown file called `index.md`.
