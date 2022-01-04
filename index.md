@@ -110,7 +110,7 @@ For {{ site.title }} programs on GitHub Repos, you can go directly to the reposi
 
 {% include image.html src="/assets/img/cookie-clicker.png"
    alt="Cookie image by cookie-clicker.co"
-   style="float: left; width: 30%; margin: 2em 1em 0px 0px;"
+   style="float: left; width: 40%; margin: 2em 1em 0px 0px;"
    caption="Cookie image credit: 
       <a href='https://cookie-clicker.co/'>Cookie-Clicker.co</a>"
 %}
