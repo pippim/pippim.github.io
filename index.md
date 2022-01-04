@@ -122,9 +122,18 @@ The cookie is used to track the status of the "More" or "Less" button
 for blog posts. This controls how much front matter is displayed at
 the top of blog posts.
 
+
+{% include image.html src="/assets/img/GitHub-round-pngegg.com.png"
+   alt="GitHub image by pngegg.com"
+   style="float: right; width: 40%; margin: 2em 0px 0px 1em;"
+   caption="GitHub image credit: 
+      <a href='https://www.pngegg.com/en/search?q=git+Logo'>PNGEGG.com</a>"
+%}
+
+
 # GitHub Pages
 
-This website was created on **GitHub Pages**. You can download (or simply view) this website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages"). This current page for example you can find in the markdown file called `index.md`.
+The {{ site.title }} website was created on **GitHub Pages**. You can download (or simply view) the {{ site.title }} website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages"). This current page for example you can find in the markdown file called `index.md` by clicking the link.
 
 With GitHub Pages you can very quickly get your own webiste up and running by
 simply picking from a collection of website designs called themes. GitHub Pages
