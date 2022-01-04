@@ -127,7 +127,7 @@ for blog posts. You can disable the cookie using links below.
 
 ### Disable Cookies in Firefox
 
-[Block websites from storing cookies and site data in Firefox](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
+[Block websites from storing cookies in Firefox](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
 
 {% include image.html src="/assets/img/Octocat.png"
    alt="Octocate image by github.com"
