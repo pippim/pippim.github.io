@@ -229,7 +229,7 @@ To get a Table of Contents (TOC) in any website page, insert a liquid tag where 
 ... in real markdown below and generates the actual TOC:
 {% raw %}
 {% include toc.md %}
-{% endraw %}    
+{% endraw %}
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a> ... </div>
 ```
@@ -811,8 +811,6 @@ CONFIG_YML = "../_config.yml"
 
 < **WARNING:** Turning off Site-Wide Front Matter will require extensive  
 < overhauling of many website pages here.
-
-{% endraw %}
 
 ### TOC, Navigation Buttons, Copy to Clipboard
 
