@@ -289,15 +289,14 @@ for Jekyll, Sass, Kramdown, Rouge, etc..
 
 There are many open-source providers involved in the {{ site.title }} website:
 
-- GitHub Pages- [Websites for you and your projects. 🔗]( "Hosted directly from your GitHub repository. Just edit, push, and your changes are live. 🔗")
-- Jekyll- [Transform your plain text into static websites and blogs. 🔗](https://jekyllrb.com/ "No more databases, comment moderation, or pesky updates to install—just your content. 🔗")
-- Liquid- [Jekyll uses the Liquid templating language to process templates. 🔗](https://jekyllrb.com/docs/liquid/ "Jekyll provides a number of useful Liquid additions to help you build your site. 🔗")
-- Sass - [Sass: Syntactically Awesome Style Sheets 🔗](https://sass-lang.com/ "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. 🔗")
-- Cayman Theme - [Cayman is a Jekyll theme for GitHub Pages. 🔗](https://pages-themes.github.io/cayman/ "Cayman is a clean, responsive theme for GitHub Pages. 🔗")
-- Ruby - [dynamic, open source programming language 🔗](http://www.ruby-lang.org/en/ "more powerful than Perl, and more object-oriented than Python 🔗")
-- Gems
-- Rouge - [language syntax highlighting 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers "List of all languages supported by Rouge 🔗")
-- kramdown - [converting a superset of Markdown 🔗](https://kramdown.gettalong.org/ "(sic, not Kramdown or KramDown, just kramdown) 🔗")
+- **GitHub Pages** - [Websites for you and your projects. 🔗]( "Hosted directly from your GitHub repository. Just edit, push, and your changes are live. 🔗")
+- **Jekyll** - [Transform your plain text into static websites and blogs. 🔗](https://jekyllrb.com/ "No more databases, comment moderation, or pesky updates to install—just your content. 🔗")
+- **Liquid** - [Jekyll uses the Liquid templating language to process templates. 🔗](https://jekyllrb.com/docs/liquid/ "Jekyll provides a number of useful Liquid additions to help you build your site. 🔗")
+- **Sass** - [Sass: Syntactically Awesome Style Sheets 🔗](https://sass-lang.com/ "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. 🔗")
+- **Cayman Theme** - [Cayman is a Jekyll theme for GitHub Pages. 🔗](https://pages-themes.github.io/cayman/ "Cayman is a clean, responsive theme for GitHub Pages. 🔗")
+- **Ruby** - [dynamic, open source programming language 🔗](http://www.ruby-lang.org/en/ "more powerful than Perl, and more object-oriented than Python 🔗")
+- **Rouge** - [language syntax highlighting 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers "List of all languages supported by Rouge 🔗")
+- **kramdown** - [converting a superset of Markdown 🔗](https://kramdown.gettalong.org/ "(sic, not Kramdown or KramDown, just kramdown) 🔗")
 
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
