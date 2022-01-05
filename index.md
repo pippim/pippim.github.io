@@ -369,6 +369,8 @@ and yearly backups.
 
 {% include image.html src="/assets/img/stack-to-blog progress display.gif"
    alt="stack-to-blog.py"
+   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+
 %}
 
 
