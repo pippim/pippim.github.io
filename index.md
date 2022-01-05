@@ -118,7 +118,7 @@ For {{ site.title }} programs on GitHub Repos, you can go directly to the reposi
 # Cookies
 
 There is one cookie used on the {{ site.title }} website.
-The cookie is used to track the status of the "More" or "Less" button
+It remembers the status of the "More" or "Less" button
 for blog posts. You can disable the cookie using links below.
 
 ### Disable Cookies in Chrome
@@ -366,6 +366,11 @@ and yearly backups.
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
 # Convert Stack Exchange to GitHub Pages
+
+{% include image.html src="/assets/img/stack-to-blog progress display.gif"
+   alt="stack-to-blog.py"
+%}
+
 
 Converting thousands of Stack Exchange Q&A in markdown format isn't as easy 
 as simply copying them over to GitHub Pages. The python program 
