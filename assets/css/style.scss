@@ -260,6 +260,7 @@ details > p {
 details[open] > summary {
   background-color: $honeydew;
   color: $header-bg-color;
+  transition: transform 250ms ease;
 }
 
 .dtl {
