@@ -789,13 +789,31 @@ answer_count: "1,073 "
 accepted_count: "491 "
 ```
 
-You can use these variables in your website. For example:
+You can use these variables in your website. For example the following code:
 
 {% raw %}
 ```
-Answers on Stack Exchange posts appearing on {{ site.title }}
-website have over {{ site.views_human }} views.
+- As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers 
+have over **{{ site.views_human }} views!**
 ```
+{% endraw %}
+
+Would be display as:
+
+- As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers have over **{{ site.views_human }} views!**
+
+
+You can turn off Site-Wide Front Matter by setting the filename to `None`
+as documented in the `stack-to-blog.py` progream:
+
+``` python
+# See: /website/sede/refresh.sh for how file is updated on GitHub Pages
+# If not desired, set `CONFIG_YML = None`
+CONFIG_YML = "../_config.yml"
+```
+
+< **WARNING:** Turning off Site-Wide Front Matter will require extensive  
+< overhauling of many website pages here.
 
 {% endraw %}
 
