@@ -387,8 +387,14 @@ The program automatically:
 - Selects Stack Exchange Posts based on meeting minimum criterea such as up-votes or accepted answer status.
 - Converts Stack Exchange Markdown format to GitHub Pages Kramdown Markdown format.
 - Inserts Table of Contents
-- Inserts section navigation buttons for: Top of Page, Top of Section, Table of Contents and Skip Section.
-- Inserts "Copy Code Block to System Clipboard" button
+- Intelligently inserts section navigation buttons for: Top of Page, Top of Section, Table of Contents and Skip Section.
+- Intelligently inserts "Copy Code Block to System Clipboard" button
+- Creates html with "Top Ten Answers" with the most votes
+- Creates powerful nested expandable/collapsible detail/summary html for many thousands of tags by post.
+- Maps hyperlinks in Stack Exchange Posts to {{ site.title }} website posts if they were converted.
+- Fixes old broken `#header` Stack Exchange Markdown.
+- Converts `< block quote` Stack Exchange Markdown into what works in Jekyll Kramdown.
+- Fixes broken Stack Exchange Hyperlinks where the website post title is implied and not explicit.
 - Prints list of self-answered questions you neglected to accept after two day wait period.
 - Prints summary totals when finished.
 
@@ -615,7 +621,7 @@ When you view a blog post on the website, the
 extra front matter is displayed at the top of 
 the post with a More/Less details button.
 
-#### Define front matter in `stack-to-blog.py`
+#### Define Front Matter in `stack-to-blog.py`
 
 This python code shows how
 [Jekyll front matter](https://jekyllrb.com/docs/front-matter/)
@@ -656,7 +662,7 @@ FRONT_CLIPBOARD = "clipboard:    "  # Copy to clipboard button used? "true" or "
 *When the global variable name `FRONT_xxx` 
 is set to `= None`, no front matter is written.*
 
-#### Front matter in each blog post
+#### Front Matter Stored in Post File
 
 Based on the global variable settings above, 
 the following front matter would be generated:
@@ -682,7 +688,7 @@ clipboard:    false
 ---
 ```
 
-#### Front matter displayed on your website page
+#### Front Matter Displayed on Post Website Page
 
 
 The "More" or "Less" button lets you choose between
@@ -760,6 +766,38 @@ mark {
   padding: .2rem .5rem .2rem .5rem;
 }
 ```
+
+#### Site-Wide Front matter
+
+A number of Site-Wide Front Matter variables are made available when
+`stack-to-blog.py` runs and is published in your `_config.yml` file:
+
+``` yml
+theme: jekyll-theme-cayman
+# The title: appears frequently on my pages. It's your company / personal name
+title: Pippim
+description: Free Open-Source Software for the World. Free of Ads Too!
+views: "53,134,690 "
+views_human: 53.1 million
+refreshed: 2022-01-04 16:54:10
+questions: "297 "
+answers: "2,145 "
+accepted: "464 "
+post_count: "1,123 "
+question_count: "50 "
+answer_count: "1,073 "
+accepted_count: "491 "
+```
+
+You can use these variables in your website. For example:
+
+{% raw %}
+```
+Answers on Stack Exchange posts appearing on {{ site.title }}
+website have over {{ site.views_human }} views.
+```
+
+{% endraw %}
 
 ### TOC, Navigation Buttons, Copy to Clipboard
 
