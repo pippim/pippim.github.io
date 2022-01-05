@@ -37,21 +37,9 @@
     copy of the output file QueryResults.csv can also be found in the same
     root directory.
 
-    Run the query and Save the results in CSV format as QueryResults.csv
+    Run the query and download the results in CSV format as QueryResults.csv
 
-    Move query results to your website folder. In Linux use:
-        mv ~/Downloads/QueryResults.csv ~/website/sede
-
-    Run ~/website/sede/stack-to-blog.py which will populate "~/website/_posts"
-    subdirectory with one Jekyll blog post file for each Stack Exchange
-    post that qualifies.
-
-    Each post file begins with:
-
-        ---
-        layout: post
-        title:  What is the question in Stack Exchange?
-        ---
+    Next run website/sede/refresh.sh
 
 """
 
@@ -63,9 +51,10 @@ from datetime import datetime as dt
 # AttributeError: 'module' object has no attribute 'now'
 # Credit: https://stackoverflow.com/a/32463688/6929343
 
-import os
-import csv
-from random import randint
+import os                   # Test if directory exists
+import sys                  # For progress bar
+import csv                  # For reading SE QueryResults.csv
+from random import randint  # To randomly process small set of CSV records
 
 
 """
@@ -148,7 +137,7 @@ NAV_LAST_LINES = 13         # Minimum of 13 lines since last navigation bar. Not
 COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
 COPY_LINE_MIN = 20          # Number of lines required to qualify for button
 
-# If question or answer contains one of these "pseudo tags" then jekyll front
+# If question or answer contains one of these "pseudo tags" then jekyll front matter
 # will have tag added as if it were really on the question. Essentially you
 # are tagging your answers and adding them to OP's question tags.
 PSEUDO_TAGS = ["conky", "cpuf", "eyesome", "grub", "iconic", "multi-timer", 'vnstat', 'yad']
@@ -171,6 +160,7 @@ EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
                  "Medical Sciences", "Ask Ubuntu Meta"]
 
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
+# If not desired, set `CONFIG_YML = None`
 CONFIG_YML = "../_config.yml"
 
 ''' Initialize Global Variables '''
@@ -278,6 +268,9 @@ unknown_count = 0           # How many posts are unknown, EG wiki-tags
 most_lines = 0              # Lines in the longest post
 qualifying_blog_count = 0   # How many blogs could be saved
 save_blog_count = 0         # How many blogs were saved given random limit
+blog_question_count = 0     # How many blog questions were saved
+blog_answer_count = 0       # How many blog answers were saved
+blog_accepted_count = 0     # How many questions and answers were accepted?
 
 total_views = 0             # Number of times viewed
 total_votes = 0             # How many up votes across all posts
@@ -1748,8 +1741,7 @@ def create_blog_filename(r):
     """ Return blog filename.
         Replace all spaces in title with "-"
         Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
-        When using {% post_url %} base_fn
-        When using {% link %} blog_fn
+        Prepend "/YYYY/" to post filename as required.
     """
     sub_dir = make_output_year_dir(r[CREATED])
     base_fn = sub_dir + r[CREATED].split()[0] + '-' + \
@@ -1757,6 +1749,27 @@ def create_blog_filename(r):
     blog_fn = OUTPUT_DIR + base_fn + ".md"
     blog_fn = blog_fn.replace('//', '/')
     return base_fn, blog_fn
+
+
+def make_output_year_dir(post_date):
+    """
+    """
+    if OUTPUT_BY_YEAR_DIR is None or False or OUTPUT_BY_YEAR_DIR == "":
+        return ""  # Will be concatenated into string making up blog_filename
+
+    # Does target directory exist?
+    new_sub = "/" + post_date[0:4] + "/"
+    prefix = OUTPUT_DIR + new_sub
+    prefix = prefix.replace('//', '/')
+    if not os.path.isdir(prefix):
+        try:
+            os.makedirs(prefix)
+            print('Created directory:', prefix)
+        except OSError as error:
+            print(error)
+            fatal_error('Could not make directory path:' + prefix)
+
+    return new_sub
 
 
 def check_self_answer(r):
@@ -1792,29 +1805,19 @@ def check_self_answer(r):
     return answer, accepted, search_url
 
 
-def make_output_year_dir(post_date):
-    """
-    """
-    if OUTPUT_BY_YEAR_DIR is None or False or OUTPUT_BY_YEAR_DIR == "":
-        return ""  # Will be concatenated into string making up blog_filename
-
-    # Does target directory exist?
-    new_sub = "/" + post_date[0:4] + "/"
-    prefix = OUTPUT_DIR + new_sub
-    prefix = prefix.replace('//', '/')
-    if not os.path.isdir(prefix):
-        try:
-            os.makedirs(prefix)
-            print('Created directory:', prefix)
-        except OSError as error:
-            print(error)
-            fatal_error('Could not make directory path:' + prefix)
-
-    return new_sub
-
-
-def write_md(md):
+def write_md(r, md):
     """ Write to SE converted to Jekyll markdown to blog_filename """
+    global save_blog_count, blog_question_count
+    global blog_answer_count, blog_accepted_count
+
+    save_blog_count += 1
+    if r[TYPE] == "Question":
+        blog_question_count += 1
+    if r[TYPE] == "Answer":
+        blog_answer_count += 1
+    if r[ACCEPTED] == "Accepted":  # Also tallies accepted questions by others
+        blog_accepted_count += 1
+
     with open(blog_filename, 'w') as fh:
         if force_end_line:
             # Write everything except last character ('\n`)
@@ -2537,6 +2540,9 @@ def update_config():
     save_blog = 1,122_
 
     """
+    if CONFIG_YML is None:
+        return  # They don't want this glorious feature! :)
+
     if not os.path.exists(CONFIG_YML):
         fatal_error('The file: ' + CONFIG_YML + 'not found!')
 
@@ -2551,10 +2557,13 @@ def update_config():
     one_config_line(config, "answers", '"{:,}'.format(answer_count) + ' "')
     one_config_line(config, "accepted", '"{:,}'.format(accepted_count) + ' "')
     one_config_line(config, "post_count", '"{:,}'.format(save_blog_count) + ' "')
+    one_config_line(config, "question_count", '"{:,}'.format(blog_question_count) + ' "')
+    one_config_line(config, "answer_count", '"{:,}'.format(blog_answer_count) + ' "')
+    one_config_line(config, "accepted_count", '"{:,}'.format(blog_accepted_count) + ' "')
 
-    print('NEW CONFIGURATION:')
-    for ln in config:
-        print(ln)
+    #print('NEW CONFIGURATION:')
+    #for ln in config:
+    #    print(ln)
 
     """ Write posts by tags HTML page """
     with open(CONFIG_YML, 'w') as fh:
@@ -2586,6 +2595,58 @@ def one_config_line(config, key, value):
 
     # Not found so add to end
     config.append(full + value)
+
+
+debug = False
+
+
+def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True):
+    """
+        Converted from Bash script: ~/sony/tvpowered
+    """
+    import sys
+    if debug:
+        return                      # printing debug lines, no progress bar
+
+    fill = "▒"                      # Fill up to $Len
+    utf_8s = ["▉", "▎", "▌", "▊"]   # UTF-8 left blocks: 7/8, 1/4, 1/2, 3/4
+    perc = 100 * float(step) / float(total_steps)
+    max_ticks = bar_width * 4
+    num_ticks = int(round(perc / 100 * max_ticks))
+    full_ticks = num_ticks / 4      # Number of full blocks
+    part_ticks = num_ticks % 4      # Size of partial block (array index)
+
+    disp = bar = ""                 # Blank out variables
+    bar += utf_8s[0] * full_ticks   # Add full blocks into Progress Bar
+
+    # If part_ticks is zero, then no partial block, else append part char
+    if part_ticks > 0:
+        bar += utf_8s[part_ticks]
+
+    # Pad Progress Bar with fill character
+    bar += fill * int((max_ticks/4 - float(num_ticks)/4.0))
+
+    if len(title) > 0:
+        disp = title + ": "         # Optional title to progress display
+
+    disp += bar                     # Progress bar to progress display
+    if print_perc:
+        # If requested, append percentage complete to progress display
+        if perc > 100.0:
+            perc = 100.0            # Fix "100.04 %" rounding error
+        disp += " {:6.2f}".format(perc) + " %"
+
+    # Output to terminal repetitively over the same line using '\r'.
+    sys.stdout.write("\r" + disp)
+    sys.stdout.flush()
+
+    if row_number == 10000:
+        print()
+        print('title:', "'" + title + "'", 'step:', step, 'total_steps:', total_steps)
+        print('len(bar):', len(bar), 'num_ticks:', num_ticks, 'max_ticks:', max_ticks)
+        print('full_ticks:', full_ticks, 'part_ticks:', part_ticks)
+        print('perc:', perc)
+        fatal_error("debug progress bar")
 
 
 ''' INITIALIZATION
@@ -2667,6 +2728,7 @@ create_speed_search()
 for row in rows:
 
     row_number += 1
+    percent_complete(row_number, row_count, title="Convert Markdown")
     ''' Reset counters for each stack exchange Q&A '''
     save_blog = True        # Default until a condition turns it off
     lines = []              # Markdown lines list being processed
@@ -2897,12 +2959,11 @@ for row in rows:
     if RANDOM_LIMIT is not None:
         if row_number in random_row_nos:
             if save_blog is True:
-                save_blog_count += 1
                 #print('Random upload row number: {:>6,}'.format(row_number))
                 # print(new_md)
                 if PRINT_RANDOM:
                     dump(row)
-                write_md(new_md)
+                write_md(row, new_md)
             else:
                 # This random record doesn't qualify so replace
                 # with next record number
@@ -2912,8 +2973,7 @@ for row in rows:
                 random_row_nos[index] = row_number + 1
 
     elif save_blog is True:
-        save_blog_count += 1
-        write_md(new_md)
+        write_md(row, new_md)
 
 gen_top_posts()             # Generate top ten posts
 gen_post_by_tag_groups()    # Generate list of posts in smaller tagged groups
@@ -2926,15 +2986,19 @@ if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
         print('URL:', url)
     print('')
 
+# Uses CONFIG_YML = "../_config.yml"
+update_config()
+
 if RANDOM_LIMIT is None:
     random_limit = '   None'
 else:
     # noinspection PyStringFormat
     random_limit = '{:>6,}'.format(RANDOM_LIMIT)
 
-# Uses CONFIG_YML = "../_config.yml"
-update_config()
-
+# Erase progress bar
+if not debug:
+    sys.stdout.write("\r")
+    sys.stdout.flush()
 
 print('// =============================/   T O T A L S   \\============================== \\\\')
 print('Run-time options:\n')
@@ -2944,15 +3008,19 @@ print('RANDOM_LIMIT:   ', random_limit,
 print('NAV_BAR_MIN:      {:>6,}'.format(NAV_BAR_MIN),
       ' | NAV_WORD_MIN:  {:>11}'.format(NAV_WORD_MIN),
       ' | COPY_LINE_MIN: {:>11}'.format(COPY_LINE_MIN))
-print()
-print('Totals written to:', "'" + CONFIG_YML + "'",
-      '(relative to /sede directory)\n')
+if CONFIG_YML is not None:
+    print()
+    print('Totals written to:', "'" + CONFIG_YML + "'",
+          '(relative to /sede directory)\n')
 print('accepted_count:   {:>6,}'.format(accepted_count),
       ' | total_votes:   {:>11,}'.format(total_votes),
       ' | total_views:   {:>11,}'.format(total_views))
 print('question_count:   {:>6,}'.format(question_count),
       ' | answer_count:       {:>6,}'.format(answer_count),
       ' | save_blog_count:    {:>6,}'.format(save_blog_count))
+print('blog_question_count:{:>4,}'.format(blog_question_count),
+      ' | blog_answer_count:  {:>6,}'.format(blog_answer_count),
+      ' | blog_accepted_count:{:>6,}'.format(blog_accepted_count))
 print('total_self_answer:{:>6,}'.format(total_self_answer),
       ' | total_self_accept:  {:>6,}'.format(total_self_accept),
       ' | Self Needing Accept:{:>6,}'.format(total_self_answer -
