@@ -383,23 +383,29 @@ The program automatically:
 - Selects Stack Exchange Posts based on meeting minimum criterea such as up-votes or accepted answer status.
 - Converts Stack Exchange Markdown format to GitHub Pages Kramdown Markdown format.
 - Inserts Table of Contents
-- Intelligently inserts section navigation buttons for: Top of Page, Top of Section, Table of Contents and Skip Section.
-- Intelligently inserts "Copy Code Block to System Clipboard" button
+- Selectively inserts section navigation buttons for: <kbd>Top</kbd> (Top of Page), <kbd>ToS</kbd> (Top of Section), <kbd>ToC</kbd> (Table of Contents) and <kbd>Skip</kbd> (Skip section).
+- Selectively inserts "Copy Code Block to System Clipboard" button
 - Creates html with "Top Ten Answers" with the most votes
 - Creates powerful nested expandable/collapsible detail/summary html for many thousands of tags by post.
 - Maps hyperlinks in Stack Exchange Posts to {{ site.title }} website posts if they were converted.
 - Fixes old broken `#header` Stack Exchange Markdown.
 - Converts `< block quote` Stack Exchange Markdown into what works in Jekyll Kramdown.
+- Convert Stack Exchange `Language` tags to fenced code block language.
 - Fixes broken Stack Exchange Hyperlinks where the website post title is implied and not explicit.
-- Prints list of self-answered questions you neglected to accept after two day wait period.
+- Prints list of self-answered questions that were not accepted after the mandatory two day wait period.
 - Prints summary totals when finished.
 
 ## Stack Exchange Data Explorer
 
-The first step is to run a 
-[Stack Exchange Data Explorer Query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s?AccountId=4775729). 
-You may need to click the link twice; once to sign in (then navigate back to this page) and
-again to run the query.
+The first step in converting Stack Exchange posts to {{ site.title }} website posts is to run a 
+[Stack Exchange Data Explorer Query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s?AccountId=4775729). The Query finds all your
+Stack Exchange Questions and Answers (up to 10 MB).
+
+You may need to click the link twice:
+
+- Click the link once to sign in
+- Navigate back to this page
+- Click the link again to run the query
 
 Many thanks to the the query's [Author](https://meta.stackexchange.com/a/371435/366359).
 
