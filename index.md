@@ -791,7 +791,7 @@ answer_count: "1,073 "
 accepted_count: "491 "
 ```
 
-You can use these variables in your website. For example the following code:
+You can use these variables in your website. For example the following code...
 
 {% raw %}
 ```
@@ -800,9 +800,9 @@ have over **{{ site.views_human }} views!**
 ```
 {% endraw %}
 
-Would be display as:
+...would be display as:
 
-- As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers have over **{{ site.views_human }} views!**
+> As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers have over **{{ site.views_human }} views!**
 
 
 You can turn off Site-Wide Front Matter by setting the filename to `None`
@@ -814,8 +814,9 @@ as documented in the `stack-to-blog.py` progream:
 CONFIG_YML = "../_config.yml"
 ```
 
-> **WARNING:** Turning off Site-Wide Front Matter will require extensive  
-> overhauling of many website pages here.
+{% raw %}
+- **WARNING:** Turning off Site-Wide Front Matter would require extensive revisions to many places where the `{{ site.views }}` Front Matter Liquid tag and other `site.` tags are used. It is recommended, at least initially, that you do **not** turn this option off.
+{% endraw %}
 
 ### TOC, Navigation Buttons, Copy to Clipboard
 
