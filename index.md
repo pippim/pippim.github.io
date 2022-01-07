@@ -814,8 +814,8 @@ as documented in the `stack-to-blog.py` progream:
 CONFIG_YML = "../_config.yml"
 ```
 
-< **WARNING:** Turning off Site-Wide Front Matter will require extensive  
-< overhauling of many website pages here.
+> **WARNING:** Turning off Site-Wide Front Matter will require extensive  
+> overhauling of many website pages here.
 
 ### TOC, Navigation Buttons, Copy to Clipboard
 
