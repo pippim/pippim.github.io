@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "5,270 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          true
 navigation:   true
 clipboard:    false
@@ -393,9 +393,6 @@ rick@alien:~/Downloads$ gunzip linux-brprinter-installer-2.2.0-1.gz
 rick@alien:~/Downloads$ sudo su
 root@alien:/home/rick/Downloads# 
 
-```
-
-``` 
 root@alien:/home/rick/Downloads# bash linux-brprinter-installer-2.2.0-1 DCP-7065DN # Change DCP-7065DN to DCP-350C
 You are going to install following packages.
    dcp7065dnlpr-2.1.0-1.i386.deb

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "6,414 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -46,7 +46,7 @@ GRANT SELECT ON *.* TO 'username'@'localhost';
 
 ```
 
-For more information about setting MySQL database permissions, please visit [https://dev.mysql.com/doc/refman/5.5/en/grant.html.](https://dev.mysql.com/doc/refman/5.5/en/grant.html.)
+For more information about setting MySQL database permissions, please visit [https://dev.mysql.com/doc/refman/5.5/en/grant.html](https://dev.mysql.com/doc/refman/5.5/en/grant.html)
 
 Type `\q` to exit the mysql program.
 
@@ -89,7 +89,7 @@ Much more can be found in the tutorial linked above such as:
 
 ## More Information
 
-To view the official MySQL documentation, please visit [https://dev.mysql.com/doc/refman/5.5/en/index.html.](https://dev.mysql.com/doc/refman/5.5/en/index.html.)
+To view the official MySQL documentation, please visit [https://dev.mysql.com/doc/refman/5.5/en/grant.html](https://dev.mysql.com/doc/refman/5.5/en/grant.html)
 
 
   [1]: https://www.a2hosting.com/kb/developer-corner/mysql/managing-mysql-databases-and-users-from-the-command-line

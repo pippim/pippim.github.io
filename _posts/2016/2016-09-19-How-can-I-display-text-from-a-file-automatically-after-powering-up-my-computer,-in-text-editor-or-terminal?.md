@@ -12,13 +12,13 @@ votes:        "8 "
 favorites:    
 views:        "1,233 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-Your first step is to find out the name of your notepad / GUI editor / writer program as described in this Q&A: [https://askubuntu.com/questions/80977/how-does-one-find-out-the-command-line-corresponding-to-gui-app-eg-libreoffic](https://askubuntu.com/questions/80977/how-does-one-find-out-the-command-line-corresponding-to-gui-app-eg-libreoffic)e In my case I use LibreOffice Write and the command is `libreoffice --writer`.
+Your first step is to find out the name of your notepad / GUI editor / writer program as described in this Q&A: [How does one find out the command line corresponding to GUI app (eg, LibreOffice Writer)?](How does one find out the command line corresponding to GUI app (eg, LibreOffice Writer)?)e In my case I use LibreOffice Write and the command is `libreoffice --writer`.
 
 The next step is to select `Dash` which is the first option on the `Launcher`. In the search field type in `Startup` and select the icon **Startup Applications**. The following window pops up: 
 

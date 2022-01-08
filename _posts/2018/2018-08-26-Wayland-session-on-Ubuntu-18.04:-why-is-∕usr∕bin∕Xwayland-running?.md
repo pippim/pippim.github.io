@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,306 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -29,7 +29,7 @@ Wayland is a complete window system in itself, but even so, if we're migrating a
 
 ----------
 
-When you boot with Wayland you still may need to access X-based applications: [https://askubuntu.com/questions/961967/why-dont-gksu-gksudo-or-launching-a-graphical-application-with-sudo-work-with-w](https://askubuntu.com/questions/961967/why-dont-gksu-gksudo-or-launching-a-graphical-application-with-sudo-work-with-w)
+When you boot with Wayland you still may need to access X-based applications: [Why don&#39;t gksu/gksudo or launching a graphical application with sudo work with Wayland?](Why don&#39;t gksu/gksudo or launching a graphical application with sudo work with Wayland?)
 
 To summarize many Q&A's on running an X applicatin within Wayland you need to use:
 

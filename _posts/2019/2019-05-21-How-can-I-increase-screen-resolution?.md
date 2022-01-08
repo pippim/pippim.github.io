@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "348 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -22,13 +22,10 @@ The maximum resolution of the Acer V196HQL 1366 x 768 @ 60 Hz. It may not sound 
 
 I'll walk you through my system to setup that resolution and you can substitute my monitor name for your own below:
 
+{% include copyHeader.html %}
 ``` 
 $ xrandr --current
 
-```
-
-{% include copyHeader.html %}
-``` 
 eDP-1-1 connected primary 1920x1080+3840+2160 (normal left inverted right x axis y axis) 382mm x 215mm
    1920x1080     60.02*+  60.01    59.97    59.96    59.93    48.02  
    1680x1050     59.95    59.88  

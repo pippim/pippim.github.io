@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "56,467 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,9 +20,9 @@ clipboard:    false
 
 You can find many answers to your question here in **Ask Ubuntu**:
 
-- June 2018 - [https://askubuntu.com/questions/1038271/intel-amd-hybrid-graphics-ubuntu-18-04](https://askubuntu.com/questions/1038271/intel-amd-hybrid-graphics-ubuntu-18-04)
-- August 2018 - [https://askubuntu.com/questions/1068343/switch-between-intel-amd-gpu-on-18-04](https://askubuntu.com/questions/1068343/switch-between-intel-amd-gpu-on-18-04)
-- June 2016 - [https://askubuntu.com/questions/791249/amd-intel-hybrid-graphics-on-ubuntu-16-04](https://askubuntu.com/questions/791249/amd-intel-hybrid-graphics-on-ubuntu-16-04)
+- June 2018 - [Intel/AMD Hybrid graphics Ubuntu 18.04](Intel/AMD Hybrid graphics Ubuntu 18.04)
+- August 2018 - [Switch between Intel/AMD GPU on 18.04](Switch between Intel/AMD GPU on 18.04)
+- June 2016 - [AMD-INTEL hybrid graphics on Ubuntu 16.04](AMD-INTEL hybrid graphics on Ubuntu 16.04)
 
 You should review all of these links.
 

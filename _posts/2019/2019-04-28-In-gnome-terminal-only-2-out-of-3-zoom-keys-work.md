@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "164 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -36,9 +36,6 @@ Attempting to restore **Normal Size** I found <kbd>Ctrl</kbd>+<kbd>o</kbd> or <k
 ``` 
 $ cat .inputrc
 
-```
-
-``` 
 # ~/.inputrc - complements /etc/inputrc - global inputrc for libreadline
 # April 15, 2019
 # See readline(3readline) and `info rluserman' for more information.
@@ -63,13 +60,10 @@ $include /etc/inputrc
 
 ## Ubuntu skeleton setup
 
+{% include copyHeader.html %}
 ``` 
 $ cat /etc/inputrc
 
-```
-
-{% include copyHeader.html %}
-``` 
 # /etc/inputrc - global inputrc for libreadline
 # See readline(3readline) and `info rluserman' for more information.
 

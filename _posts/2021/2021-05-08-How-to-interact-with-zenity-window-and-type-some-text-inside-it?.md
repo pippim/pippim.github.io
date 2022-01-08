@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "602 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 Change your `zenity.sh` file with:
 
-``` 
+``` python
 #!/usr/bin/python
 
 zenity --forms --title="Question" \
@@ -29,7 +29,7 @@ zenity --forms --title="Question" \
 
 To:
 
-``` 
+``` bash
 #!/usr/bin/bash
 
 zenity --forms --title="Question" \

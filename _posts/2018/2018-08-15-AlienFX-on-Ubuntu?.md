@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "12,717 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -55,7 +55,7 @@ Advantages:
 
 - Comes with `.deb` package for Ubuntu installation
 - Last updated 1 months ago (July 2018).
-- Your laptop appears supported  as device #10 and mine as device #14: [https://github.com/trackmastersteve/alienfx/blob/master/docs/Knowledgebase/Devicelist.md](https://github.com/trackmastersteve/alienfx/blob/master/docs/Knowledgebase/Devicelist.md)
+- Your laptop appears supported  as device #10 and mine as device #14: [alienfx](alienfx)
 
 I'll try to test this on my AW17R3 soon and report back.
 

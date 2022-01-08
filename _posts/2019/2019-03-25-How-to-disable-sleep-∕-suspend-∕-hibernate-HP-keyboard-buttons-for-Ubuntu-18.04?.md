@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "5,691 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -22,13 +22,10 @@ In addition to the Gnome Power settings you can set the `systemd` settings found
 
 My laptop looks like this:
 
+{% include copyHeader.html %}
 ``` 
 $ cat /etc/systemd/logind.conf
 
-```
-
-{% include copyHeader.html %}
-``` 
 #  This file is part of systemd.
 #
 #  systemd is free software; you can redistribute it and/or modify it

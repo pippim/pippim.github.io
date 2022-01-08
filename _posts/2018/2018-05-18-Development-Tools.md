@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "53,767 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -29,9 +29,6 @@ Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-```
-
-``` 
 $ g++ --version
 g++ (Ubuntu 5.4.0-6ubuntu1~16.04.9) 5.4.0 20160609
 Copyright (C) 2015 Free Software Foundation, Inc.

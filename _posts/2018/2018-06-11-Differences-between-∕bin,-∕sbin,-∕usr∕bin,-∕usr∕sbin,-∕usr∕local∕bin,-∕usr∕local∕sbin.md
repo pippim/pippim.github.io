@@ -12,13 +12,13 @@ votes:        "24 "
 favorites:    
 views:        "292,053 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
 ---
 
-I had a similar question myself a year+ ago: [https://askubuntu.com/questions/830074/best-directory-to-place-my-bash-scripts](https://askubuntu.com/questions/830074/best-directory-to-place-my-bash-scripts)
+I had a similar question myself a year+ ago: [Best directory to place my bash scripts?](Best directory to place my bash scripts?)
 
 
 ## System directories for binaries
@@ -65,9 +65,9 @@ $ man hier | grep -E 'bin$|sbin$|^.{7}(/bin)|^.{7}(/sbin)' -A2
 
 ## Where to put your own scripts?
 
-For all users to access your scripts you can put them in `/usr/local/bin`. Keep in mind you need `sudo` access to add / change files here. See: [https://askubuntu.com/questions/195652/is-there-a-standard-place-for-placing-custom-linux-scripts](https://askubuntu.com/questions/195652/is-there-a-standard-place-for-placing-custom-linux-scripts)
+For all users to access your scripts you can put them in `/usr/local/bin`. Keep in mind you need `sudo` access to add / change files here. See: [Is there a standard place for placing custom Linux scripts?](Is there a standard place for placing custom Linux scripts?)
 
-For your own user ID scripts put them in `/home/YOUR_NAME/bin`. Keep in mind you have to create this directory first and relaunch the terminal to get the path automatically setup by `~/.profile`. See: [https://askubuntu.com/questions/402353/how-to-add-home-username-bin-to-path?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa](https://askubuntu.com/questions/402353/how-to-add-home-username-bin-to-path?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
+For your own user ID scripts put them in `/home/YOUR_NAME/bin`. Keep in mind you have to create this directory first and relaunch the terminal to get the path automatically setup by `~/.profile`. See: [How to add /home/username/bin to $PATH?](How to add /home/username/bin to $PATH?)
 
 
 ----------

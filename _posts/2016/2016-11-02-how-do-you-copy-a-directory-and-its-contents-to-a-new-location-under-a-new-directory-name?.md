@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "468,806 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -26,9 +26,6 @@ sudo mkdir /boot_backup
 sudo cp -r . /boot_backup
 du /boot_backup -h
 
-```
-
-``` 
 752K	/boot_backup/extlinux/themes/debian-wheezy
 756K	/boot_backup/extlinux/themes
 832K	/boot_backup/extlinux

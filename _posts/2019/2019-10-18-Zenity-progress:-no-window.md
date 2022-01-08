@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "322 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -37,9 +37,6 @@ To test the progress bar on any system use this:
 ``` 
 $ for i in ./* ; do echo $i ; sleep .1 ;  done | zenity --pulsate --title "Processing " --text "${filename} " --pulsate --auto-close --auto-kill
 
-```
-
-``` 
 --pulsate is not supported for this dialogue
 
 ```
@@ -51,9 +48,6 @@ d1="$(zenity  --file-selection --title="Bulk Move    Choose starting directory" 
     --directory)"
 [[ "$?" != 0 ]] && exit
 
-```
-
-``` 
 d2="$(zenity  --file-selection --title="Bulk Move    Choose destination     directory" \
     --directory)"
 [[ "$?" != 0 ]] && exit

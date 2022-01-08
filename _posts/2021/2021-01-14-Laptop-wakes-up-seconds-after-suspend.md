@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "965 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -22,7 +22,7 @@ I had a similar problem which I reported in an [on-going bug report][1]
 
 For me the solution was in this answer:
 
-- [https://askubuntu.com/questions/823318/how-to-turn-off-the-usb-power-to-my-mouse-when-i-suspend-the-notebook/836725?](https://askubuntu.com/questions/823318/how-to-turn-off-the-usb-power-to-my-mouse-when-i-suspend-the-notebook/836725?)
+- [How to turn off the USB power to my mouse, when I suspend the notebook?](How to turn off the USB power to my mouse, when I suspend the notebook?)
 
 I'm still using that old answer today, however I'm using the second script in the answer: `/lib/systemd/system-sleep/custom-xhci_hcd`.
 

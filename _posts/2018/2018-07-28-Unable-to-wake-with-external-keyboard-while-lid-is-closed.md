@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,907 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 This related answer might be helpful:
 
-- [https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro](https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro)
+- [Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro)](Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro))
 
 You don't mention if your keyboard is wired or wireless. The basic steps are:
 

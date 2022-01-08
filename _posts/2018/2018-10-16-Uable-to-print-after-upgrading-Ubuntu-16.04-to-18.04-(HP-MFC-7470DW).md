@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,533 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -40,15 +40,15 @@ After initial reboot I was able to print normally.
 
 Many people are having problems printing after 16.04 to 18.04 upgrade:
 
-- [https://askubuntu.com/questions/1080720/printer-filter-failed/1080926#1080926](https://askubuntu.com/questions/1080720/printer-filter-failed/1080926#1080926)
-- [https://askubuntu.com/questions/1080558/printers-not-working-after-distribution-upgrade](https://askubuntu.com/questions/1080558/printers-not-working-after-distribution-upgrade)
-- [https://askubuntu.com/questions/1081885/printer-stopped-working-after-upgrade-16-04-to-18-04](https://askubuntu.com/questions/1081885/printer-stopped-working-after-upgrade-16-04-to-18-04)
-- [https://askubuntu.com/questions/1036429/ubuntu-18-04-printer-not-working-for-most-apps-pdf-evince-firefox](https://askubuntu.com/questions/1036429/ubuntu-18-04-printer-not-working-for-most-apps-pdf-evince-firefox)
-- [https://askubuntu.com/questions/1081885/printer-stopped-working-after-upgrade-16-04-to-18-04?rq=1](https://askubuntu.com/questions/1081885/printer-stopped-working-after-upgrade-16-04-to-18-04?rq=1)
-- [https://askubuntu.com/questions/1076529/brother-printer-printing-garbage-after-upgrade-to-18-04](https://askubuntu.com/questions/1076529/brother-printer-printing-garbage-after-upgrade-to-18-04)
-- [https://askubuntu.com/questions/1075136/epson-rx620-not-printing-since-upgrade-to-18-04-lts?noredirect=1&lq=1](https://askubuntu.com/questions/1075136/epson-rx620-not-printing-since-upgrade-to-18-04-lts?noredirect=1&lq=1)
-- [https://askubuntu.com/questions/1065068/ubuntu-18-04-lts-printing-service-not-available](https://askubuntu.com/questions/1065068/ubuntu-18-04-lts-printing-service-not-available)
-- [https://askubuntu.com/questions/1085872/upgraded-to-ubuntu-18-04-1-lts-now-cannot-print](https://askubuntu.com/questions/1085872/upgraded-to-ubuntu-18-04-1-lts-now-cannot-print)
+- [this answer](this answer)
+- [printers not working after distribution upgrade](printers not working after distribution upgrade)
+- [Printer stopped working after upgrade 16.04 to 18.04](Printer stopped working after upgrade 16.04 to 18.04)
+- [Ubuntu 18.04: Printer not working for most apps (PDF, evince, Firefox...)](Ubuntu 18.04: Printer not working for most apps (PDF, evince, Firefox...))
+- [Printer stopped working after upgrade 16.04 to 18.04](Printer stopped working after upgrade 16.04 to 18.04)
+- [Brother Printer printing garbage after upgrade to 18.04](Brother Printer printing garbage after upgrade to 18.04)
+- [Epson RX620 not printing since upgrade to 18.04 LTS](Epson RX620 not printing since upgrade to 18.04 LTS)
+- [Ubuntu 18.04 LTS -- Printing Service Not Available](Ubuntu 18.04 LTS -- Printing Service Not Available)
+- [Upgraded to Ubuntu 18.04.1 LTS now cannot print](Upgraded to Ubuntu 18.04.1 LTS now cannot print)
 
 
   [1]: https://askubuntu.com/questions/1080720/printer-filter-failed/1080926#1080926

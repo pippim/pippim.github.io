@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "426 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -25,9 +25,6 @@ Create this file `/home/$USER/.inputrc` with the following:
 # April 15, 2019
 # See readline(3readline) and `info rluserman' for more information.
 
-```
-
-``` 
 $include /etc/inputrc
 
 # Insert key to togged overwrite-mode

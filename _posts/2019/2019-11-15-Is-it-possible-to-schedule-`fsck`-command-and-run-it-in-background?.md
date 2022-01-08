@@ -12,19 +12,27 @@ votes:        "2 "
 favorites:    
 views:        "1,115 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
-navigation:   false
+navigation:   true
 clipboard:    true
 ---
+
+
+<a id="hdr1"></a>
+<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
 
 ## The Myth - "NO it can't be done"
 
 All these most popular google search hits ignore the question or say **NO** it can't be done. That isn't true though. `fsck` is scheduled to run during boot before the filesystem is mounted as `rw` (read/write). As such most answers says it can't be run after system is fully booted:
 
-- [https://askubuntu.com/questions/47953/can-i-run-fsck-or-e2fsck-when-linux-file-system-is-mounted](https://askubuntu.com/questions/47953/can-i-run-fsck-or-e2fsck-when-linux-file-system-is-mounted)
-- [https://askubuntu.com/questions/915866/doing-disk-checks-on-mounted-os-partition](https://askubuntu.com/questions/915866/doing-disk-checks-on-mounted-os-partition)
+- [Can I run fsck or e2fsck when Linux file system is mounted?](Can I run fsck or e2fsck when Linux file system is mounted?)
+- [Doing disk checks on mounted OS partition?](Doing disk checks on mounted OS partition?)
 - [Is it possible to run fsck to only see errors on mounted disk][1]
+
+
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
 
 ## Why it needs to be done
 
@@ -80,6 +88,10 @@ OPTIONS
               option.  fsck.minix(8) does not support the -n option at all.
 
 ```
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+
 ## What it looks like checking mounted partitions
 
 I have three partitions; Old (broken) Ubuntu 16.04, Ubuntu 19.04 (called `Ubuntu 18.04`) and New Ubuntu 16.04. When running `fchk` they look like this:
@@ -124,3 +136,8 @@ As you can see `fsck` is telling us Old Ubuntu 16.04 requires a real `fsck` be r
 Later I'll update this answer with a cron weekly job that runs `fsck` on three mounted Ubuntu partitions in check only mode.
 
   [1]: https://unix.stackexchange.com/questions/439675/is-it-possible-to-run-fsck-to-only-see-errors-on-mounted-disk
+
+
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a></div>
+

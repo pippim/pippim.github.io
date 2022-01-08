@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,732 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -27,7 +27,7 @@ nopti nospectre_v2 nospec
 
 ```
 
-- `nopti` [https://askubuntu.com/questions/991874/how-to-disable-page-table-isolation-to-regain-performance-lost-due-to-intel-cpu](https://askubuntu.com/questions/991874/how-to-disable-page-table-isolation-to-regain-performance-lost-due-to-intel-cpu)
+- `nopti` [How to disable Page Table Isolation to regain performance lost due to Intel CPU security hole patch?](How to disable Page Table Isolation to regain performance lost due to Intel CPU security hole patch?)
 - `nospectre_v2` [HOWTO make Linux run blazing fast (again) on Intel CPUs][3]
 - `nospec` [Can I disable the intel spectre fixes?][4]
 
@@ -37,7 +37,7 @@ I'm not suggesting you disable your meltdown/spectre kernel options for speed bu
 
 The other option is to roll back your microcode to a version prior to the bug. You can only discover if this is possible by trial and error:
 
-- [https://askubuntu.com/questions/293948/where-to-find-older-sourcebinary-package-versions](https://askubuntu.com/questions/293948/where-to-find-older-sourcebinary-package-versions)
+- [Where to find older source&amp;binary package versions?](Where to find older source&amp;binary package versions?)
 
   [1]: {% post_url /2018/2018-01-05-What-is-Ubuntu's-status-on-the-Meltdown-and-Spectre-vulnerabilities? %}
   [2]: {% post_url /2018/2018-01-27-Samsung-M2-NVME-enters-read-only-on-linux-every-day,-not-on-Windows %}

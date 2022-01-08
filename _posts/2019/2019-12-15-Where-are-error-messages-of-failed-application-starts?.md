@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "296 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 This question is probably a duplicate of:
 
-- [https://askubuntu.com/questions/7502/capture-stdout-and-stderr-of-all-gui-programs](https://askubuntu.com/questions/7502/capture-stdout-and-stderr-of-all-gui-programs)
+- [capture stdout and stderr of all GUI programs?](capture stdout and stderr of all GUI programs?)
 
 There are two answers there:
 

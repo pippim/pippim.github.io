@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,544 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -51,4 +51,4 @@ sudo ln -s python3.5 /usr/bin/python3
 
 ```
 
-Source: [https://askubuntu.com/questions/880188/gnome-terminal-will-not-start](https://askubuntu.com/questions/880188/gnome-terminal-will-not-start)
+Source: [Gnome terminal will not start](Gnome terminal will not start)

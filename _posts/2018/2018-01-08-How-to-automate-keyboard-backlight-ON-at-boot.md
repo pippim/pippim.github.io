@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,077 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -30,7 +30,7 @@ clipboard:    false
 [![Startup Applications 3.png][3]][3]
 
 - Make sure you enter the command as: /usr/bin/xset led 3
-- I entered the comment as: [https://askubuntu.com/questions/993072/ubuntu-16-04-regular-crash-compiz-segfault-error-4-in-i965-dri-so-fresh-inst](https://askubuntu.com/questions/993072/ubuntu-16-04-regular-crash-compiz-segfault-error-4-in-i965-dri-so-fresh-inst)a but you don't need to.
+- I entered the comment as: [Ubuntu 16.04 regular crash, Compiz segfault, error 4 in i965_dri.so, Fresh install](Ubuntu 16.04 regular crash, Compiz segfault, error 4 in i965_dri.so, Fresh install)a but you don't need to.
 
 ## Notes
 

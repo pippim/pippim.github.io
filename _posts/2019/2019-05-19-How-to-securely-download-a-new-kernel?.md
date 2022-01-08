@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "770 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -33,7 +33,7 @@ The key point in the question is how to do it securely. I've divided this answer
 
 # How to find the newest mainline stable Ubuntu kernels
 
-Go to [https://kernel.ubuntu.com/~kernel-ppa/mainlin](https://kernel.ubuntu.com/~kernel-ppa/mainlin)e and click on date modified two times. The first time sorts by date in ascending order, the second time sorts descending. Your newest kernels will be on top:
+Go to [https://kernel.ubuntu.com/~kernel-ppa/mainline](https://kernel.ubuntu.com/~kernel-ppa/mainline)e and click on date modified two times. The first time sorts by date in ascending order, the second time sorts descending. Your newest kernels will be on top:
 
 [![mainline kernel 1.png][1]][1]
 

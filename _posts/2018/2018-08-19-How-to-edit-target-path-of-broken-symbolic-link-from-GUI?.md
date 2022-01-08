@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,561 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -109,15 +109,12 @@ The method is similar to Nautilus but with some Caja specifics. We should follow
 
 So we need create script in the `~/.config/caja/scripts`:
 
+{% include copyHeader.html %}
 ``` bash
 mkdir -p ~/.config/caja/scripts
 cat > ~/.config/caja/scripts/edit-link << \EOF
 #!/bin/bash
 
-```
-
-{% include copyHeader.html %}
-``` bash
 # NAME: edit-link
 # PATH: $HOME/.config/caja/scripts
 # DESC: Edit symbolic link

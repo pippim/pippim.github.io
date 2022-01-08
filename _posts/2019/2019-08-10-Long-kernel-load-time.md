@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "427 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -80,18 +80,12 @@ $ cat device
 $ cat class
 0x060400
 
-```
-
-``` 
 $ cat max_link_speed
 2.5 GT/s
 
 $ cat max_link_width
 4
 
-```
-
-``` 
 $ lspci -n | tail -8
 03:00.0 0604: 8086:1576
 03:01.0 0604: 8086:1576

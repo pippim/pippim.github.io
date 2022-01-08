@@ -12,10 +12,10 @@ votes:        "2 "
 favorites:    
 views:        "1,815 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
-clipboard:    false
+clipboard:    true
 ---
 
 If using an older kernel a newer one ***might*** solve the problem. However in [Arch Linux Solid state drive/NVMe](https://wiki.archlinux.org/index.php/Solid_state_drive/NVMe) it says:
@@ -39,12 +39,10 @@ This sounds like your best first step.
 
 My Samsung 960 Pro is similar to your Samsung 970 EVO. As a reference I'll include my own system and yours will look similar after repair:
 
+{% include copyHeader.html %}
 ``` 
 $ lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL | egrep -v "^loop"
 
-```
-
-``` 
 NAME         FSTYPE LABEL            MOUNTPOINT   SIZE MODEL
 nvme0n1                                           477G Samsung SSD 960 PRO 512GB               
 ├─nvme0n1p9  swap                    [SWAP]       7.9G 

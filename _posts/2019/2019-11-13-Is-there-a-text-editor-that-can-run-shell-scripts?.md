@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "8,899 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 From:
 
-- [https://askubuntu.com/questions/728306/how-to-debug-c-programs-by-gedit/1082769#1082769](https://askubuntu.com/questions/728306/how-to-debug-c-programs-by-gedit/1082769#1082769)
+- [How to debug c programs by gedit?](How to debug c programs by gedit?)
 
 # Gedit Plug-ins
 

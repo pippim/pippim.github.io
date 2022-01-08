@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "114,577 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,7 +24,7 @@ Almost universally the answers here say **NO you can't** but in reality you can 
 
 The full article from the link is included below but check the link for new comments from users. I would point out that you can successfully upgrade directly from **16.04** to **19.04** but I had a few hiccups:
 
-- [https://askubuntu.com/questions/1162267/unmet-dependancy-unity-control-center](https://askubuntu.com/questions/1162267/unmet-dependancy-unity-control-center)
+- [Unmet dependancy unity-control-center](Unmet dependancy unity-control-center)
 
 
 ----------

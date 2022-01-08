@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "47,689 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -46,7 +46,7 @@ prime-select query
 
 ## Skylake (i7-6700) and newer processors
 
-The Intel iGPU driver is already built into the Linux kernel. Normally you don't have to do anything special unless you have extremely new hardware, or very old hardware. There are configuration files you may have to setup for issues such as screen tearing. If you have a Skylake or newer processor you will get warning(s) that there are additional drivers you can install: [https://askubuntu.com/questions/832524/updated-kernel-to-4-8-now-missing-firmware-warnings/832528#83252](https://askubuntu.com/questions/832524/updated-kernel-to-4-8-now-missing-firmware-warnings/832528#83252)8 :
+The Intel iGPU driver is already built into the Linux kernel. Normally you don't have to do anything special unless you have extremely new hardware, or very old hardware. There are configuration files you may have to setup for issues such as screen tearing. If you have a Skylake or newer processor you will get warning(s) that there are additional drivers you can install: [Updated kernel to 4.8 now missing firmware warnings](Updated kernel to 4.8 now missing firmware warnings)8 :
 
 ![download screen][1]
 

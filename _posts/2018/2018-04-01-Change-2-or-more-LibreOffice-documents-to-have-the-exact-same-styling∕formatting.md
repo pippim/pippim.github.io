@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "615 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          true
 navigation:   true
 clipboard:    true
@@ -215,15 +215,8 @@ rem is known to cause problems and will likely be reworked with a
 rem a dialog box telling operator the program is finished and maybe
 rem to press <Alt>+<F4>.
 
-```
-
-``` vba
 rem ========= Original code below for possible recycling ===========
 
-```
-
-{% include copyHeader.html %}
-``` vba
 Sub AllFonts
 rem - change all font names to Ubuntu.
 rem - If heading 1 set font size to 28

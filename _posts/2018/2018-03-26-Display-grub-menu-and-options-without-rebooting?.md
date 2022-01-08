@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "7,833 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          true
 navigation:   true
 clipboard:    true

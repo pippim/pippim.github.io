@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "92,227 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -20,6 +20,7 @@ clipboard:    true
 
 Three answers here refer to `nmap` but I found prefixing `sudo` (which none of the answers do) makes all the difference in the world:
 
+{% include copyHeader.html %}
 ``` 
 $ nmap -sP 192.168.1.0/24
 
@@ -38,10 +39,6 @@ Nmap scan report for 192.168.1.254
 Host is up (0.00070s latency).
 Nmap done: 256 IP addresses (6 hosts up) scanned in 6.86 seconds
 
-```
-
-{% include copyHeader.html %}
-``` 
 $ sudo nmap -sP 192.168.1.0/24
 
 Starting Nmap 7.01 ( https://nmap.org ) at 2019-07-13 14:56 MDT

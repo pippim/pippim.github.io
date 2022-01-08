@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,580 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -135,9 +135,6 @@ sdc   disk 119.2G KingFast
 sdd   disk  29.8G USB Flash Drive 
 sr0   rom   1024M DVD+-RW GT80N   
 
-```
-
-``` bash
  Current parameters: 'if=/dev/zero of=/dev/sdd bs=512 count=100'
 
       Press <Enter> to continue or <Ctrl>+C to abort.

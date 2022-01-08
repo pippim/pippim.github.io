@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,305 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   true
 clipboard:    false
@@ -160,9 +160,6 @@ Similar to the first section, create a bash script to loop 7,200 seconds:
 #       with time stamp in hh:mm:ss 24 hour format.
 # PARM: $1 number of seconds to run, ie 2 hours = 7200
 
-```
-
-``` bash
 now="$(date +'%d/%m/%Y')"
 printf "top CPU(s) summary for %s\n" "$now" > /tmp/top-cpu-summary.log
 for ((i=0; i<$1; i++))

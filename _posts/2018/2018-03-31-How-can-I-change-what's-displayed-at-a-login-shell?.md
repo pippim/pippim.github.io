@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "58,988 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          true
 navigation:   true
 clipboard:    true
@@ -77,9 +77,6 @@ echo " "
 curl wttr.in/Edmonton?0 --silent --max-time 3
 # Timeout #. Increase for slow connection---^
 
-```
-
-``` bash
 echo " "
 echo " "                # Pad with blank lines for calendar & time to fit
 
@@ -98,18 +95,11 @@ while [ $((++i)) -lt 10 ]; do tput cuu1; done
 #   2. Change subtraction value and set number of print spaces to match
 #      subtraction value. Then place comment on fourth code line.
 
-```
-
-``` bash
 Column=$(($DateColumn - 10))
 tput cuf $Column        # Move x column number
 printf "          "     # Blank out ", country" with x spaces
 #tput cuf $DateColumn    # Position to column 27 for date display
 
-```
-
-{% include copyHeader.html %}
-``` bash
 
 # -h needed to turn off formating: https://askubuntu.com/questions/1013954/bash-substring-stringoffsetlength-error/1013960#1013960
 cal -h > /tmp/terminal

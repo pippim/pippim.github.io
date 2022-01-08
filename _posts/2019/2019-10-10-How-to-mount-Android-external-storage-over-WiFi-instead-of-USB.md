@@ -12,16 +12,16 @@ votes:        "0 "
 favorites:    
 views:        "1,510 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
-clipboard:    false
+clipboard:    true
 ---
 
 First I tried two of the most popular Android apps for sharing files over WiFi *FTP server* and *WiFi FTP Server*:
 
-- [https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&hl=en_CA](https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&hl=en_CA)
-- [https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver.pro&hl=en_CA](https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver.pro&hl=en_CA)
+- [https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&amp;hl=en_CA](https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&amp;hl=en_CA)
+- [https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&amp;hl=en_CA](https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&amp;hl=en_CA)
 
 Both worked great with Nautilus. Except neither one relayed "Last Access Date" to Nautilus like my projected needed. Both showed "Unknown" instead of a valid date.
 
@@ -53,7 +53,7 @@ Since FTP Servers on Android don't support SSH the next step try SimpleSSH as re
 -  [https://www.techrepublic.com/article/how-to-install-an-ssh-server-on-your-android-phone/](https://www.techrepublic.com/article/how-to-install-an-ssh-server-on-your-android-phone/)
 
 However SimpleSSH doesn't seem recommended in Google Play Store that well? Use this instead with very high ratings *SSH/SFTP Server - Terminal* from **Banana Studio**:
-- [https://play.google.com/store/apps/details?id=net.xnano.android.sshserver](https://play.google.com/store/apps/details?id=net.xnano.android.sshserver)
+- [https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&amp;hl=en_CA](https://play.google.com/store/apps/details?id=com.theolivetree.ftpserver&amp;hl=en_CA)
 
 During testing and crashes you'll need to unmount your drive:
 
@@ -64,12 +64,10 @@ $fusermount -u /mnt/phone
 
 After installing *SSH/SFTP Server - Terminal* use this command:
 
+{% include copyHeader.html %}
 ``` 
 $ echo rick | sshfs -o password_stdin -p 2222 rick@192.168.0.11:/ /mnt/phone
 
-```
-
-``` 
 $ cd "/mnt/phone/Music/Uriah Heep/The Magician's Birthday"
 
 rick@alien:/mnt/phone/Music/Uriah Heep/The Magician's Birthday$ ll
@@ -83,9 +81,6 @@ total 79000
 -rw-rw-rw- 1 root root  9141838 Mar 10  2016 07 Tales.m4a
 -rw-rw-rw- 1 root root 22511187 Mar 10  2016 08 The Magician's Birthday.m4a
 
-```
-
-``` 
 $ stat "07 Tales.m4a"
   File: '07 Tales.m4a'
   Size: 9141838   	Blocks: 17856      IO Block: 4096   regular file

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "7,055 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -28,7 +28,7 @@ The problem for me with the `setpci` route is multiple screen resets as `lightdm
 
 The larger problem is complexity of setting up `systemd` and bash scripts.
 
-The `c` language, kernel based solution found on this link: [https://bugs.freedesktop.org/show_bug.cgi?id=75985#c3](https://bugs.freedesktop.org/show_bug.cgi?id=75985#c3)3 is far superior. I've included the bulk of the link below with some modifications to my platform.
+The `c` language, kernel based solution found on this link: [https://bugs.freedesktop.org/show_bug.cgi?id=75985#c33](https://bugs.freedesktop.org/show_bug.cgi?id=75985#c33)3 is far superior. I've included the bulk of the link below with some modifications to my platform.
 
 
 ----------

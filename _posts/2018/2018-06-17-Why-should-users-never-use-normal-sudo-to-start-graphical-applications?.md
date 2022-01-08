@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "32,103 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -60,7 +60,7 @@ Now when you are in Nautilus you'll have an extra option to Edit as administrato
 
 When you run `gedit` as root you can't use the preferences you've set up as a regular user for tab stops, convert tabs to spaces, font name, font size, line wrap, etc.
 
-To solve this I've written the script `sgedit` to inherit user preferences and apply them to root: [https://askubuntu.com/questions/92655/how-can-i-sync-my-root-gedit-with-my-user-gedits-preferences/1047405#1047405](https://askubuntu.com/questions/92655/how-can-i-sync-my-root-gedit-with-my-user-gedits-preferences/1047405#1047405)
+To solve this I've written the script `sgedit` to inherit user preferences and apply them to root: [How can I sync my root gedit with my user gedit&#39;s preferences?](How can I sync my root gedit with my user gedit&#39;s preferences?)
 
 
 -    Call using `sgedit filename1 filename2 ...`

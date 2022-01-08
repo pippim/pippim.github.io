@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "2,322 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -60,9 +60,6 @@ $ ls -lX *.sh
 -rwxrwxr-x 1 rick rick  506 Jul 15 17:54 Downloads.sh
 -rwxrwxr-x 1 rick rick   78 Jul  6 11:28 runall.sh
 
-```
-
-``` 
 $ ls -lX *.sh | awk '{if($5 >=200) {print}}' | wc -l
 3
 

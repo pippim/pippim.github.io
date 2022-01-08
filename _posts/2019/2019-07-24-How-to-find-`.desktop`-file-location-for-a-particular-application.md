@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,716 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -46,9 +46,6 @@ real	0m52.563s
 user	0m6.271s
 sys	    0m9.002s
 
-```
-
-``` 
 $ time locate *image*desktop
 real	0m0.705s
 user	0m0.693s

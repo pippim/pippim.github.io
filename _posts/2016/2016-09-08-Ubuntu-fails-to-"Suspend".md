@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,398 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -33,7 +33,7 @@ Failed to connect to non-global ctrl_ifname: (null)  error: No such file or dire
 ```
 Are perhaps the reason `/lib/systemd/system-sleep/wpasupplicant` was created as described in this [discussion][1]. Check if this file exists and if not see this:
 
-- [https://askubuntu.com/questions/972433/not-able-to-suspend-because-of-failed-to-connect-to-non-global-ctrl-ifname-nil](https://askubuntu.com/questions/972433/not-able-to-suspend-because-of-failed-to-connect-to-non-global-ctrl-ifname-nil)
+- [Not able to suspend because of Failed to connect to non-global ctrl_ifname: (nil) error: No such file or directory](Not able to suspend because of Failed to connect to non-global ctrl_ifname: (nil) error: No such file or directory)
 
 
   [1]: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=835648

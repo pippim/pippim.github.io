@@ -12,7 +12,7 @@ votes:        "16 "
 favorites:    2
 views:        "4,639 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -42,9 +42,6 @@ If I try to shorten it like this:
 local HideErrors
 [[ $fCron == true ]] && HideErrors="2>/dev/null"
 
-```
-
-``` 
 google-chrome --headless --disable-gpu --dump-dom \
     "$RobWebAddress" > "$DownloadName" "$HideErrors"
 
@@ -74,9 +71,6 @@ Currently I found success with second answer's alternate suggestion:
 ErrorPipe=/dev/stderr
 [[ $fCron == true ]] && ErrorPipe=/dev/null
 
-```
-
-``` 
 google-chrome --headless --disable-gpu --dump-dom \
                 "$RobWebAddress" > "$DownloadName" 2>"$ErrorPipe"
 ## 

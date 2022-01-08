@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,061 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -27,4 +27,4 @@ sudo -H gedit /path/to/filename
 
 ```
 
-The only problem remains that `sudo` doesn't have a profile for tab settings, extensions, word wrap, font name, font size, etc. You can inherit these from your user profile though with a wrapper script like this: [https://askubuntu.com/questions/92655/how-can-i-sync-my-root-gedit-with-my-user-gedits-preferences/1047405#1047405](https://askubuntu.com/questions/92655/how-can-i-sync-my-root-gedit-with-my-user-gedits-preferences/1047405#1047405)
+The only problem remains that `sudo` doesn't have a profile for tab settings, extensions, word wrap, font name, font size, etc. You can inherit these from your user profile though with a wrapper script like this: [How can I sync my root gedit with my user gedit&#39;s preferences?](How can I sync my root gedit with my user gedit&#39;s preferences?)

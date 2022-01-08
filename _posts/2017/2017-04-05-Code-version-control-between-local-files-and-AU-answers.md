@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "399 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -186,10 +186,6 @@ if [ $SearchTitle = true ] ; then
     continue
 fi
 
-```
-
-{% include copyHeader.html %}
-``` bash
 if [ $SearchTitle = false ] && [ $FoundTitle = false ] ; then
     if [[ $Line == *"<h1 itemprop=\"name\""* ]] ; then
         FoundTitle=true

@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "7,275 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -23,14 +23,8 @@ Configuration files are usually owned by `root`. For example:
 ``` 
 $ ll /etc/default/grub
 
-```
-
-``` 
 -rw-r--r-- 1 root root 6801 Jul 18 13:26 /etc/default/grub
 
-```
-
-``` 
  ^^ ^  ^
  || |  +-- Users can only read
  || +----- Members of the group can only read
@@ -59,4 +53,4 @@ sudo -H gedit /etc/default/grub
 
 At which point you will be prompted for your password.
 
-**Note:** Related question today: [https://askubuntu.com/questions/1160777/grub-file-cant-be-saved-after-modification](https://askubuntu.com/questions/1160777/grub-file-cant-be-saved-after-modification)
+**Note:** Related question today: [Grub file can&#39;t be saved after modification](Grub file can&#39;t be saved after modification)

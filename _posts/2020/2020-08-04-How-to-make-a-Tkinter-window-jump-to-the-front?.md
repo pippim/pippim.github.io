@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "84,022 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -34,9 +34,6 @@ def play_items(self):
             Close, Pause, Prev, Next, Commercial and Intermission
     '''
 
-```
-
-``` 
     if self.top2_is_active is True:
         self.top2.focus_force()     # Get focus
         self.top2.lift()            # Raise in stacking order

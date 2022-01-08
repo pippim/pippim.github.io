@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,531 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -20,13 +20,10 @@ clipboard:    true
 
 You can get a list of all systemd inhibitors with this:
 
+{% include copyHeader.html %}
 ``` 
 $ systemd-inhibit --list
 
-```
-
-{% include copyHeader.html %}
-``` 
      Who: rick (UID 1000/rick, PID 2358/unity-settings-)
     What: sleep
      Why: GNOME needs to lock the screen
@@ -61,9 +58,6 @@ However the list doesn't change after you open a file for editing for example. Y
 ``` 
 $ dbus-send --print-reply --dest=org.gnome.SessionManager /org/gnome/SessionManager org.gnome.SessionManager.GetInhibitors
 
-```
-
-``` 
 method return time=1573403207.555584 sender=:1.49 -> destination=:1.1853 serial=7743 reply_serial=2
    array [
    ]
@@ -74,9 +68,6 @@ $ gedit temp &
 
 $ dbus-send --print-reply --dest=org.gnome.SessionManager /org/gnome/SessionManager org.gnome.SessionManager.GetInhibitors
 
-```
-
-``` 
 method return time=1573403241.678869 sender=:1.49 -> destination=:1.1855 serial=7747 reply_serial=2
    array [
       object path "/org/gnome/SessionManager/Inhibitor1727"

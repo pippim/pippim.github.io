@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "1,829 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -44,21 +44,15 @@ Use `gksu gedit /usr/local/bin/rm` and copy in these lines:
 
 
 
+{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
-```
-
-``` bash
 tty -s;
 if [ "0" == "$?" ]; then Terminal="Y"; else Terminal="N"; fi
 
 if [ $Terminal == "Y" ] ; then    
 
-```
-
-{% include copyHeader.html %}
-``` bash
     # Running from terminal don't allow delete of / or /toplevel directory even if sudo
     for i in ${@:1}
     do
@@ -96,9 +90,6 @@ echo "md5sum: $encryptPassword" # Comment out after viewing one time and updatin
         exit 1
     fi
 
-```
-
-``` bash
 fi # non-terminals can't enter password.
     
 # Call REAL rm command with parameters passed to this wrapper sript

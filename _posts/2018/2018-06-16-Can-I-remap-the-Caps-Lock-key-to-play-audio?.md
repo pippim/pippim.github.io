@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "1,497 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -74,14 +74,14 @@ qdbus org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.
 
 ```
 
-**VLC** won't recognize media keys: [https://askubuntu.com/questions/48393/how-to-make-the-keyboard-media-keys-to-work-with-vlc-globall](https://askubuntu.com/questions/48393/how-to-make-the-keyboard-media-keys-to-work-with-vlc-globall)y even when built into the keyboard. Therefor the custom keyboard shortcut to XF86AudioPlay is useless with `xdotool`.
+**VLC** won't recognize media keys: [How to make the keyboard media keys to work with VLC globally?](How to make the keyboard media keys to work with VLC globally?)y even when built into the keyboard. Therefor the custom keyboard shortcut to XF86AudioPlay is useless with `xdotool`.
 
 
 ----------
 
 ## Setting custom keyboard shortcuts from command line
 
-This Q&A discusses how to set custom keyboard shortcuts from the command line: [https://askubuntu.com/questions/597395/how-to-set-custom-keyboard-shortcuts-from-terminal](https://askubuntu.com/questions/597395/how-to-set-custom-keyboard-shortcuts-from-terminal)
+This Q&A discusses how to set custom keyboard shortcuts from the command line: [How to set custom keyboard shortcuts from terminal?](How to set custom keyboard shortcuts from terminal?)
 
 ----------
 

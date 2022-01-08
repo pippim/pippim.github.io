@@ -12,20 +12,18 @@ votes:        "2 "
 favorites:    
 views:        "2,870 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
-clipboard:    false
+clipboard:    true
 ---
 
 To get a more meaningful report from `lsblk` without the **noise** from dozens of `loop` devices use:
 
+{% include copyHeader.html %}
 ``` 
 $ lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL | egrep -v "^loop"
 
-```
-
-``` 
 NAME         FSTYPE LABEL            MOUNTPOINT   SIZE MODEL
 nvme0n1                                           477G Samsung SSD 960 PRO 512GB               
 ├─nvme0n1p9  swap                    [SWAP]       7.9G 

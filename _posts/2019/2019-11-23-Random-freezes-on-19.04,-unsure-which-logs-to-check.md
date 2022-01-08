@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,700 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -53,7 +53,7 @@ In your case the messages won't show a normal shutdown but rather the last recor
 
 The first error message is addressed here:
 
-- [https://askubuntu.com/questions/1058750/new-alert-keeps-showing-up-server-returned-error-nxdomain-mitigating-potential](https://askubuntu.com/questions/1058750/new-alert-keeps-showing-up-server-returned-error-nxdomain-mitigating-potential)
+- [New alert keeps showing up: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001](New alert keeps showing up: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001)
 
 The solution is to use:
 

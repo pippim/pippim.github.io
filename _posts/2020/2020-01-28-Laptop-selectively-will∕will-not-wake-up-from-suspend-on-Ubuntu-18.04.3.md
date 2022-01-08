@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "2,440 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -34,7 +34,7 @@ Feb 17 20:09:33 neon-Predator-PH315-51 kernel: [    0.000000] Command line: BOOT
 This is similar to:
 
 - [Laptop reboots instead of resuming from systemd suspend when on battery power (suspending on AC power works)][1]
-- [https://askubuntu.com/questions/871950/dell-xps-15-9550-rebooting-after-suspend](https://askubuntu.com/questions/871950/dell-xps-15-9550-rebooting-after-suspend)
+- [Dell XPS 15 (9550) rebooting after suspend](Dell XPS 15 (9550) rebooting after suspend)
 
 ----------
 

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "33,461 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -20,7 +20,7 @@ clipboard:    true
 
 This answer appears to best solution for missing Intel Graphics Driver warnings:
 
-- [https://askubuntu.com/questions/832524/updated-kernel-to-4-8-now-missing-firmware-warnings](https://askubuntu.com/questions/832524/updated-kernel-to-4-8-now-missing-firmware-warnings)
+- [Updated kernel to 4.8 now missing firmware warnings](Updated kernel to 4.8 now missing firmware warnings)
 
 
 ----------

@@ -12,10 +12,10 @@ votes:        "3 "
 favorites:    
 views:        "14,572 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
-clipboard:    false
+clipboard:    true
 ---
 
 ## June 3, 2019 Update
@@ -35,12 +35,10 @@ sudo apt-get install lightdm
 
 I have a GTX 970M but I know this driver also works with the GTX 1060M which is one step above yours:
 
+{% include copyHeader.html %}
 ``` 
 $ sudo ubuntu-drivers devices
 
-```
-
-``` 
 == /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0 ==
 model    : GM204M [GeForce GTX 970M]
 vendor   : NVIDIA Corporation
@@ -48,14 +46,8 @@ modalias : pci:v000010DEd000013D8sv00001028sd00000708bc03sc02i00
 driver   : nvidia-384 - distro non-free recommended
 driver   : xserver-xorg-video-nouveau - distro free builtin
 
-```
-
-``` 
 $ dmesg | grep -i nvidia
 
-```
-
-``` 
 [    1.760813] nvidia: loading out-of-tree module taints kernel.
 [    1.760817] nvidia: module license 'NVIDIA' taints kernel.
 [    1.763857] nvidia: module verification failed: signature and/or required key missing - tainting kernel
@@ -77,7 +69,7 @@ If you need sound turned on for your nVidia HDMI and most manufacturers these da
 
 Here is someone that has taken the `prime-select` code and patched it because it wouldn't switch from `nvidia` to `intel`. If his patch doesn't help you perhaps he can?
 
-- [https://askubuntu.com/questions/879856/nvidia-prime-cant-switch-to-intel](https://askubuntu.com/questions/879856/nvidia-prime-cant-switch-to-intel)
+- [NVIDIA-PRIME: Cant switch to intel](NVIDIA-PRIME: Cant switch to intel)
 
 
   [1]: http://www.ubuntubuzz.com/2019/05/unity-desktop-on-ubuntu-1904.html

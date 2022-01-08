@@ -12,10 +12,10 @@ votes:        "11 "
 favorites:    
 views:        "7,625 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
-clipboard:    false
+clipboard:    true
 ---
 
 ## As the school you are attending has published the scripts, the best place to voice your concerns is with your instructors.
@@ -24,12 +24,10 @@ That said we can help you decipher the code on a line by line basis. It is proba
 
 You actually have 40 bash scripts with a total 5,360 lines. I've combined them together and looked for bash/shell commands that could be abused. ***They all appear to be used normally***:
 
+{% include copyHeader.html %}
 ``` 
 $ cat /tmp/sshellcheck.mrg | grep " rm "
 
-```
-
-``` 
       rm -rf "$RETURNPATH"/tmp/*
       rm -f "$RETURNPATH"/.mynorminette
     rm -f $LOGFILENAME
@@ -39,9 +37,6 @@ $ cat /tmp/sshellcheck.mrg | grep " rm "
 
 $ cat /tmp/sshellcheck.mrg | grep -i kill
 
-```
-
-``` 
   function check_kill_by_name
           kill $PROCESSID0
   declare -a CHK_MINISHELL_AUTHORIZED_FUNCS='(malloc free access open close read write opendir readdir closedir getcwd chdir stat lstat fstat fork execve wait waitpid wait3 wait4 signal kill exit main)'
@@ -54,9 +49,6 @@ $ cat /tmp/sshellcheck.mrg | grep -i kill
 
 $ cat /tmp/sshellcheck.mrg | grep -i root
 
-```
-
-``` 
       "check_configure_select ROOT" "Root folder:          /"\
       'ROOT')
         echo "'${ALLOWED_FILES}' must be placed at root folder but was found here:" >>"${LOGFILENAME}"

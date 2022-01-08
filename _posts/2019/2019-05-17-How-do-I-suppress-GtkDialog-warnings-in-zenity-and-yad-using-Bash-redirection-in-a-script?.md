@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,978 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -61,9 +61,6 @@ Using an array to hold the typing shortcut isn't working:
 ``` 
 $ aGtkSpam=(2\> \>\(grep -v GtkDialog \>\&2\))
 
-```
-
-``` 
 $ DumpArray "${aGtkSpam[@]}"
 Array Elements:
 0: 2>
@@ -72,15 +69,9 @@ Array Elements:
 3: GtkDialog
 4: >&2)
 
-```
-
-``` 
 $ zenity --error --text hello "${aGtkSpam[@]}"
 This option is not available. Please see --help for all possible usages.
 
-```
-
-``` 
 $ yad --text hello 2> >(grep -v GtkDialog >&2)
 
 $ yad --text hello "${aGtkSpam[@]}"

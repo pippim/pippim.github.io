@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "33,930 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -57,9 +57,6 @@ To make life even more interesting a new 898 MB partition was added to my NVMe S
 $ lsdrv
 NAME        FSTYPE  LABEL                  MOUNTPOINT          SIZE MODEL
 
-```
-
-``` 
 nvme0n1                                                        477G Samsung SSD 960 PRO 512G
 ├─nvme0n1p5 ntfs                                               858M 
 ├─nvme0n1p3                                                     16M 

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,106 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -64,9 +64,6 @@ To gain an appreciation of `locate` speed look at what it has indexed for instan
 ``` 
 $ locate -S
 
-```
-
-``` 
 Database /var/lib/mlocate/mlocate.db:
     381,154 directories
     2,548,775 files

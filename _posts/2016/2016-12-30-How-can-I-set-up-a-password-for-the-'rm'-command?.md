@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "5,984 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -41,13 +41,10 @@ Use `gksu gedit /usr/local/bin/rm` and copy in these lines:
 
 
 
+{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
-```
-
-{% include copyHeader.html %}
-``` bash
 tty -s;
 if [ "0" == "$?" ]; then Terminal="Y"; else Terminal="N"; fi
 

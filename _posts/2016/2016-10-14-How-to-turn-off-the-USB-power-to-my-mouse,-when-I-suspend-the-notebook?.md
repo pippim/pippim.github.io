@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "5,598 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -26,6 +26,7 @@ The current stumbling block with OP links, follow up comments and proposed answe
 
 Create a script (any name you want) in the directory `/etc/pm/sleep.d/` and place the following in it:
 
+{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 ZeroBUS=$(lsusb | grep 1b1a:7001 | cut -c  5-7 )
@@ -33,9 +34,6 @@ ZeroBUS=$(lsusb | grep 1b1a:7001 | cut -c  5-7 )
 # Strip leading zeros
 BUS=$(echo $ZeroBUS | sed 's/^0*//')
 
-```
-
-``` bash
 # Build "usbX" usb number
 USB=usb$BUS
 

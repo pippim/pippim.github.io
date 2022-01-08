@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,110 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -56,7 +56,7 @@ Pay close attention to removing or overriding other governor utilities such as `
 
 If you have any questions post a comment below and I'll try my best to assist with my limited knowledge of AMD platform.
 
-Additionally, here is a detailed report from another user in Ask Ubuntu: [https://askubuntu.com/questions/783183/cpu-frequency-scaling-stuck-2-80-ghz-and-its-not-going-down](https://askubuntu.com/questions/783183/cpu-frequency-scaling-stuck-2-80-ghz-and-its-not-going-down)
+Additionally, here is a detailed report from another user in Ask Ubuntu: [CPU frequency scaling stuck 2.80 Ghz and it&#39;s not going down](CPU frequency scaling stuck 2.80 Ghz and it&#39;s not going down)
 
 
   [1]: https://unix.stackexchange.com/questions/424602/is-it-possible-to-set-a-constant-lowest-cpu-frequency-under-the-modern-pstate

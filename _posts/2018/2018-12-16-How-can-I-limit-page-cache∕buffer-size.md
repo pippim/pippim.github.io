@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,221 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 By default when `rsync` updates your backup it creates a copy of the file and then moves it into place. To avoid this step you can have `rsync` write directly to your backup with the `--inplace` argument.
 
-As per [https://linux.die.net/man/1/rsync:](https://linux.die.net/man/1/rsync:)
+As per [https://linux.die.net/man/1/rsync](https://linux.die.net/man/1/rsync)
 
 > **--inplace**  
 >  

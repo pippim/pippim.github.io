@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,282 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -48,9 +48,6 @@ This Spanish term implies something magical or enchanting. It originally referre
 **Torschlusspanik**
 Are you getting older? Scared of being left behind or ‘left on the shelf’? This British idiom has its own word in German: Torschlusspanik, which literally translates as ‘panic at the shutting of a gate’, is used frequently in a general sense meaning ‘last –minute panic’, of the type you might experience before a deadline.
 
-```
-
-``` 
 *Do*Not*Return*these four star lines
 *word***
 ***word*

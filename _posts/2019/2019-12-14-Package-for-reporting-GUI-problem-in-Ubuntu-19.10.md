@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "136 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 It's not a bug it's a feature. Follow the steps from this answer:
 
-- [https://askubuntu.com/questions/1192009/gnome-shell-how-to-prevent-an-application-from-starting-behind-the-application#comment1994865_1192009](https://askubuntu.com/questions/1192009/gnome-shell-how-to-prevent-an-application-from-starting-behind-the-application#comment1994865_1192009)
+- [Gnome Shell - How to prevent an application from starting behind the application in focus?](Gnome Shell - How to prevent an application from starting behind the application in focus?)
 
 > Gnome Shell, which is used by Ubuntu, has the feature that launched  
 > applications are opened in the background. While this may be desirable  

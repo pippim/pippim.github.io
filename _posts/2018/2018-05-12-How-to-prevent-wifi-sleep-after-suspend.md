@@ -12,10 +12,10 @@ votes:        "17 "
 favorites:    
 views:        "22,204 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
-clipboard:    false
+clipboard:    true
 ---
 
 There are two ways of enabling WiFi after sleep. The first is a common patch to Network Manager as you can see I've made by listing the file:
@@ -37,10 +37,11 @@ wifi.powersave = 3
 - If it's already set to `3` try setting it to `2` (Disable power saving).
 - After saving the file run `sudo systemctl restart NetworkManager`
 
-The second is a `systemd` script which reloads the WiFi kernel module when resuming from suspend. It comes from this answer: [https://askubuntu.com/questions/951261/wifi-available-networks-not-showing-up-suddenly/951422#951422:](https://askubuntu.com/questions/951261/wifi-available-networks-not-showing-up-suddenly/951422#951422:)
+The second is a `systemd` script which reloads the WiFi kernel module when resuming from suspend. It comes from this answer: [Wifi available networks not showing up suddenly](Wifi available networks not showing up suddenly)
 
 This script is written for iwlwifi` which is the common Intel driver name. If your's is different change that name below:
 
+{% include copyHeader.html %}
 ``` bash
 #!/bin/sh
 
@@ -50,9 +51,6 @@ This script is written for iwlwifi` which is the common Intel driver name. If yo
 
 MYNAME=$0
 
-```
-
-``` bash
 restart_wifi() {
     /usr/bin/logger $MYNAME 'restart_wifi BEGIN'
     /sbin/modprobe -v -r iwldvm # This removes iwlwifi too

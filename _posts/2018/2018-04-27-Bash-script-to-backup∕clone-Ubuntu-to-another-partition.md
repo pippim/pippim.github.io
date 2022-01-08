@@ -12,7 +12,7 @@ votes:        "29 "
 favorites:    
 views:        "14,857 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          true
 navigation:   true
 clipboard:    true
@@ -638,7 +638,7 @@ Note step 10 most people will never see. I have an old nVidia driver installatio
 
 ## Grub changes boot menu to clone under UEFI
 
-Unlike 18.04 upgrades I found the 18.04.1 upgrade changed the Grub UEFI configuration to use the clone's grub menu instead of the original grub menu as per this answer: [https://askubuntu.com/questions/752627/dual-boot-and-the-files-boot-grub-grub-cfg-which-one-is-used/1068993#1068993](https://askubuntu.com/questions/752627/dual-boot-and-the-files-boot-grub-grub-cfg-which-one-is-used/1068993#1068993)
+Unlike 18.04 upgrades I found the 18.04.1 upgrade changed the Grub UEFI configuration to use the clone's grub menu instead of the original grub menu as per this answer: [Dual boot and the files /boot/grub/grub.cfg -- which one is used?](Dual boot and the files /boot/grub/grub.cfg -- which one is used?)
 
 ``` 
 $ sudo cat /boot/efi/EFI/ubuntu/grub.cfg

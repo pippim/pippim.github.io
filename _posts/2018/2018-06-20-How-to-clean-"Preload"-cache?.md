@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,332 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -40,7 +40,7 @@ You should read the whole article!
 
 Also of interest to you:
 
-- [https://askubuntu.com/questions/110335/drawbacks-of-using-preload-why-isnt-it-included-by-default](https://askubuntu.com/questions/110335/drawbacks-of-using-preload-why-isnt-it-included-by-default)
+- [Drawbacks of using preload? Why isn&#39;t it included by default?](Drawbacks of using preload? Why isn&#39;t it included by default?)
 
 
   [1]: https://itsfoss.com/improve-application-startup-speed-with-preload-in-ubuntu/

@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,433 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 You should read all the answers here:
 
-- [https://askubuntu.com/questions/74838/how-do-i-completely-remove-samba](https://askubuntu.com/questions/74838/how-do-i-completely-remove-samba)
+- [How do I completely remove Samba?](How do I completely remove Samba?)
 
 But the solution which seems best is:
 ``` 

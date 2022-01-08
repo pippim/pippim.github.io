@@ -12,13 +12,13 @@ votes:        "10 "
 favorites:    
 views:        "10,314 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-From [https://askubuntu.com/questions/528072/how-can-i-check-the-smart-status-of-a-ssd-or-hdd-on-current-versions-of-ubuntu-1/868179#868179:](https://askubuntu.com/questions/528072/how-can-i-check-the-smart-status-of-a-ssd-or-hdd-on-current-versions-of-ubuntu-1/868179#868179:)
+From [How can I check the SMART status of a SSD or HDD on current versions of Ubuntu 14.04 through 18.10?](How can I check the SMART status of a SSD or HDD on current versions of Ubuntu 14.04 through 18.10?)
 
 > ## SMART option greyed out  
 >   

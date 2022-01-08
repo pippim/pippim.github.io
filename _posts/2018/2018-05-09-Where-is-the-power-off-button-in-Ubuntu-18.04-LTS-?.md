@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,752 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -34,7 +34,7 @@ Now you will see the familiar "gear" on the top right of your screen where you c
 
 This video also shows how to activate the lock screen option which is disabled for some users.
 
-Also of interest is some users are not getting a chance to select an action because system shuts down immediately: [https://askubuntu.com/questions/1032461/how-to-make-ubuntu-18-04-lts-ask-for-action-when-i-press-acpi-power-button-key-o/1032948#1032948](https://askubuntu.com/questions/1032461/how-to-make-ubuntu-18-04-lts-ask-for-action-when-i-press-acpi-power-button-key-o/1032948#1032948)
+Also of interest is some users are not getting a chance to select an action because system shuts down immediately: [How to make Ubuntu 18.04 LTS ask for action when I press ACPI Power button/key on VirtualBox (now immediately shutdowns)?](How to make Ubuntu 18.04 LTS ask for action when I press ACPI Power button/key on VirtualBox (now immediately shutdowns)?)
 
 
 

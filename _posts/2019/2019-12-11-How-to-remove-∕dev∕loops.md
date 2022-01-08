@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "20,676 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -42,16 +42,13 @@ Then simply type `fdsk` in the command line and enter your password when prompte
 
 As mentioned in comments `/dev/loop99` are snap file system images described here:
 
-- [https://askubuntu.com/questions/834093/small-snap-loop-devices-visible-in-gnome-disk-utility-or-what-is-the-function-of](https://askubuntu.com/questions/834093/small-snap-loop-devices-visible-in-gnome-disk-utility-or-what-is-the-function-of)
+- [Small snap loop devices visible in gnome-disk-utility OR what is the function of snap ubuntu-core](Small snap loop devices visible in gnome-disk-utility OR what is the function of snap ubuntu-core)
 
 Assuming you don't want to uninstall all your snaps, your next best option is to hide them from output by appending `| grep -v ^/dev/loop`. For example:
 
 ``` 
 $ df | grep -v ^/dev/loop
 
-```
-
-``` 
 Filesystem      1K-blocks      Used Available Use% Mounted on
 udev              3978476         0   3978476   0% /dev
 tmpfs              802400      1688    800712   1% /run

@@ -12,72 +12,43 @@ votes:        "28 "
 favorites:    
 views:        "40,858 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
-clipboard:    false
+clipboard:    true
 ---
 
 Both `touch` and `>` will create a new file if it doesn't exist. As the following terminal commands show when you `touch` an existing file the access/last modified time are updated. But if you `>` to an existing file it is truncated and the last modified time is updated (access time is not).  Note that `>` does not delete/unlink the file.  The inode stays the same -- which is why `>` / or `truncate` are commonly used to clear out log files even with an open file handle.
 
+{% include copyHeader.html %}
 ``` 
 rick@dell:~$ > EmptyFile
 
-```
-
-``` 
 rick@dell:~$ touch EmptyFile2
 
-```
-
-``` 
 rick@dell:~$ ls Empty*
 EmptyFile  EmptyFile2
 
-```
-
-``` 
 rick@dell:~$ ls -l Empty*
 -rw-rw-r-- 1 rick rick 0 Sep 29 20:27 EmptyFile
 -rw-rw-r-- 1 rick rick 0 Sep 29 20:27 EmptyFile2
 
-```
-
-``` 
 rick@dell:~$ echo Hello > EmptyFile
 
-```
-
-``` 
 rick@dell:~$ ls -l Empty*
 -rw-rw-r-- 1 rick rick 6 Sep 29 20:28 EmptyFile
 -rw-rw-r-- 1 rick rick 0 Sep 29 20:27 EmptyFile2
 
-```
-
-``` 
 rick@dell:~$ > EmptyFile
 
-```
-
-``` 
 rick@dell:~$ ls -l Empty*
 -rw-rw-r-- 1 rick rick 0 Sep 29 20:28 EmptyFile
 -rw-rw-r-- 1 rick rick 0 Sep 29 20:27 EmptyFile2
 
-```
-
-``` 
 rick@dell:~$ echo Hello > EmptyFile
 
-```
-
-``` 
 rick@dell:~$ touch EmptyFile
 
-```
-
-``` 
 rick@dell:~$ ls -l Empty*
 -rw-rw-r-- 1 rick rick 6 Sep 29 20:32 EmptyFile
 -rw-rw-r-- 1 rick rick 0 Sep 29 20:27 EmptyFile2

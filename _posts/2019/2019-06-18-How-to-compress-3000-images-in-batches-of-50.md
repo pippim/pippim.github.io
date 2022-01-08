@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "162 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -70,13 +70,10 @@ done
 
 After running `CompressImages` script check the results:
 
+{% include copyHeader.html %}
 ``` 
 $ ll -h ~/Downloads/*.tar
 
-```
-
-{% include copyHeader.html %}
-``` 
 -rw-rw-r-- 1 rick rick  14M Jun 18 16:55 Downloads/CompressedImages10.tar
 -rw-rw-r-- 1 rick rick  48M Jun 18 16:55 Downloads/CompressedImages11.tar
 -rw-rw-r-- 1 rick rick  16M Jun 18 16:55 Downloads/CompressedImages12.tar

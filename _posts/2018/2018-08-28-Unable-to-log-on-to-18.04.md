@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,157 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 # Console access has changed in 18.04
 
-You converted from 16.04 to 18.04 and cannot log into TTY. See this: [https://askubuntu.com/questions/979027/how-do-i-switch-between-console-mode-and-gui-in-17-10-and-newer](https://askubuntu.com/questions/979027/how-do-i-switch-between-console-mode-and-gui-in-17-10-and-newer)
+You converted from 16.04 to 18.04 and cannot log into TTY. See this: [How do I switch between console mode and GUI in 17.10 and newer?](How do I switch between console mode and GUI in 17.10 and newer?)
 
 - In **16.04** you could press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F1</kbd> for **console** (as you call `tty`) and <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F7</kbd> for **GUI**.
 - In **18.04** pressing <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F1</kbd> brings up the **GUI** and <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F3</kbd> to <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F7</kbd> brings up the **console** (tty).

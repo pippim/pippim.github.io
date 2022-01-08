@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "76 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 You can route your microphone through your speakers. That might do the trick:
 
-- [https://askubuntu.com/questions/123798/how-to-hear-my-voice-in-speakers-with-a-mic](https://askubuntu.com/questions/123798/how-to-hear-my-voice-in-speakers-with-a-mic)
+- [How to hear my voice in speakers with a mic?](How to hear my voice in speakers with a mic?)
 
 In summary:
 

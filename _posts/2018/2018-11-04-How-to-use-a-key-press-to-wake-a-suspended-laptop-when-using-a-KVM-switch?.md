@@ -12,13 +12,13 @@ votes:        "3 "
 favorites:    
 views:        "4,890 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   true
 clipboard:    false
 ---
 
-From: [https://askubuntu.com/questions/546762/usb-ir-remote-wakup-from-suspend](https://askubuntu.com/questions/546762/usb-ir-remote-wakup-from-suspend)
+From: [USB IR remote wakup from Suspend](USB IR remote wakup from Suspend)
 
 I had the same problem and was also stumped by my USBs not appearing in /proc/acpi/wakeup. In the end, however, despite many solutions suggesting this was required I did not need to enable USBs in ACPI.
 
@@ -146,7 +146,7 @@ One problem with this approach is that if the USB port the IR device is plugged 
 
 # Original Answer Below
 
-This question has three answers that may work for you: [https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro](https://askubuntu.com/questions/848698/wake-up-from-suspend-using-wireless-usb-keyboard-or-mouse-for-any-linux-distro)
+This question has three answers that may work for you: [Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro)](Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro))
 
 
 ----------
@@ -281,18 +281,12 @@ This works on boot, but doesn't seem to run on wake from suspend, so I had to pu
 
 # Action script to enable wake after suspend by keyboard or mouse
 
-```
-
-``` 
 if [ $1 = post ]
 	then
 	KB="$(dmesg | grep "Logitech K270 as" | grep -o -P "usb.{0,5}" | egrep -o ".{0,3}$" | tail -1)"
 	echo enabled > /sys/bus/usb/devices/${KB}/power/wakeup
 fi
 
-```
-
-``` 
 if [ $1 = pre ]
     then
     KB="$(dmesg | grep "Logitech K270 as" | grep -o -P "usb.{0,5}" | egrep -o ".{0,3}$" | tail -1)"

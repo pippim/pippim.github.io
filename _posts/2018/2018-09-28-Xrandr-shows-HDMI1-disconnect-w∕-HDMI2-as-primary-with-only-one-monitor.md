@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "2,228 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -27,9 +27,6 @@ In my setup for example:
 ``` 
 $ xrandr | grep connected
 
-```
-
-``` 
 HDMI-0 connected 1920x1080+0+0 (normal left inverted right x axis y axis) 1107mm x 623mm
 eDP-1-1 connected primary 1920x1080+0+1080 (normal left inverted right x axis y axis) 382mm x 215mm
 DP-1-1 connected 1920x1080+1920+532 (normal left inverted right x axis y axis) 708mm x 398mm

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "495 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 From the second answer in:
 
-- [https://askubuntu.com/questions/468901/how-to-show-only-hidden-files-in-terminal](https://askubuntu.com/questions/468901/how-to-show-only-hidden-files-in-terminal)
+- [How to show only hidden files in Terminal?](How to show only hidden files in Terminal?)
 
 This works on my machine (I'm not using SSH like the OP though):
 

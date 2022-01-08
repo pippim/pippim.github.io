@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "787 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -41,7 +41,7 @@ Of the many comments the most relevant:
 >   
 > Funny because that's one of the things specifically mentioned in the  
 > 0064 changelog:  
-> [https://www.reddit.com/r/XMG_gg/comments/ea8vtn/xmg_fusion_15_drivers_firmware_bios_updates](https://www.reddit.com/r/XMG_gg/comments/ea8vtn/xmg_fusion_15_drivers_firmware_bios_updates)/  
+> [here](here)/  
 >   
 > Thanks for the heads up, I hadn't updated yet. I suggest you downgrade  
 > to 0062 if you want to fix it. Tagging /u/XMG_gg  

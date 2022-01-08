@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,888 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -41,7 +41,7 @@ and change it to:
 
 An additional step is needed as listed in:
 
-- [https://askubuntu.com/questions/859732/sound-configuration-is-lost-on-restar](https://askubuntu.com/questions/859732/sound-configuration-is-lost-on-restar)t 
+- [Sound configuration is lost on restart](Sound configuration is lost on restart)t 
 
 We need to add the line:
 

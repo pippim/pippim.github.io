@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "67,455 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -29,9 +29,6 @@ $ cat /sys/class/thermal/thermal_zone*/temp
 69000
 67000
 
-```
-
-``` 
 # Skylake Intel i7-6700HQ using paste after zone names
 $ paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp) | column -s $'\t' -t
 INT3400 Thermal  20000

@@ -12,13 +12,17 @@ votes:        "3 "
 favorites:    
 views:        "1,031 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
-navigation:   false
+navigation:   true
 clipboard:    true
 ---
 
 Zenity can only display previous value when there is only one entry field. As such the code below puts the previous values into the label fields and instructs user to type new value into entry fields or leave it blank to keep existing value.
+
+
+<a id="hdr1"></a>
+<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
 
 ## The Bash Code
 
@@ -56,6 +60,10 @@ echo "${CfgArr[@]}" > ~/bin/adaptive-brightness-configuration-file
 
 I was surprised after hours of googling, examples of this code couldn't be found. Hopefully others googling the same problem can find this code.
 
+
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+
 ## The Screen
 
 [![adaptive brightness 3][1]][1]
@@ -65,6 +73,10 @@ In this answer the `zenity` form has a different order and expanded labels for f
 Many thanks to [muru][5] for guidance converting original code from old-style COBOL format using field names, to modern Bash format utilizing arrays.
 
 ----------
+
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
 
 # Using `yad` instead of `zenity`
 
@@ -78,6 +90,10 @@ Using `yad` you can display current field values plus create forms in tabbed not
 
 <sub>Whilst writing this answer I noticed the screen was out of date and says `5 to 20 seconds`. I've changed it to say `1 to 20 seconds` for the next publication.</sub>
 
+
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
+
 ## Monitor 3 from the tab list
 
 Here is what Monitor 3 looks like from the tab list:
@@ -85,6 +101,10 @@ Here is what Monitor 3 looks like from the tab list:
 [![eyesome-edit-configuration-monitor-3.png][4]][4]
 
 Sample code for generating this screen is listed in the next section.
+
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
 
 ## Sample code
 
@@ -172,7 +192,7 @@ The last line contains current value from configuration array (`CfgArr`) followe
 
 To see all the screens and read an overview see this **Ask Ubuntu** Answer:
 
-- [https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime/887249#887249](https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime/887249#887249)
+- [Set initial startup background brightness depending on daytime](Set initial startup background brightness depending on daytime)
 
 Visit the `eyesome` github page and download all the bash code here:
 
@@ -184,3 +204,8 @@ Visit the `eyesome` github page and download all the bash code here:
   [3]: https://i.stack.imgur.com/EOV2y.png
   [4]: https://i.stack.imgur.com/C5YLm.png
   [5]: https://askubuntu.com/users/158442/muru
+
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a></div>
+

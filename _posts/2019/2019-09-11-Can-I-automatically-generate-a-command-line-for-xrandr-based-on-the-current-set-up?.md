@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "534 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -38,9 +38,6 @@ After you get your monitors arranged by position and resolution, grab the curren
 ``` 
 $ xrandr | grep " connected"
 
-```
-
-``` 
 HDMI-0 connected 1920x1080+0+0 (normal left inverted right x axis y axis) 1107mm x 623mm
 eDP-1-1 connected primary 1920x1080+3840+2160 (normal left inverted right x axis y axis) 382mm x 215mm
 DP-1-1 connected 3840x2160+1920+0 (normal left inverted right x axis y axis) 1600mm x 900mm

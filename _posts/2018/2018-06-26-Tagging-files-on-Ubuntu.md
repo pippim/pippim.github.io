@@ -12,13 +12,13 @@ votes:        "4 "
 favorites:    
 views:        "6,601 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-A similar question was asked previously: [https://askubuntu.com/questions/774103/selecting-files-from-different-folders](https://askubuntu.com/questions/774103/selecting-files-from-different-folders)
+A similar question was asked previously: [Selecting files from different folders](Selecting files from different folders)
 
 > Is it possible in nautilus to select a bunch of files from a folder,  
 > then go to a different folder and add some more files to the selection?  

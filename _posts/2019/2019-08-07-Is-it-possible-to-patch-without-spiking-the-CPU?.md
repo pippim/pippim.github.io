@@ -12,10 +12,10 @@ votes:        "3 "
 favorites:    
 views:        "317 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
-clipboard:    false
+clipboard:    true
 ---
 
 I think this [answer][1] contains everything you are looking for:
@@ -37,14 +37,8 @@ sudo apt-get install cgroup-bin cgroup-lite cgroup-tools cgroupfs-mount libcgrou
 description "mount available cgroup filesystems"
 author "Serge Hallyn <serge.hallyn@canonical.com>"
 
-```
-
-``` 
 start on mounted MOUNTPOINT=/sys/fs/cgroup
 
-```
-
-``` 
 pre-start script
 	test -x /bin/cgroups-mount || { stop; exit 0; }
 ```
@@ -55,9 +49,6 @@ pre-start script
 ``` 
 end script
 
-```
-
-``` 
 post-stop script
 	if [ -x /bin/cgroups-umount ]
 ```
@@ -72,6 +63,7 @@ end script
 
 `sudo -H gedit /etc/cgconfig.conf`
 
+{% include copyHeader.html %}
 ``` 
 
 # Since systemd is working well, this section may not be necessary.
@@ -88,36 +80,24 @@ end script
 # cpu = /cgroup/cpu;
 # }
 
-```
-
-``` 
 group limitcpu{
   cpu {
     cpu.shares = 400;
   }
 }
 
-```
-
-``` 
 group limitmem{
   memory {
     memory.limit_in_bytes = 512m;
   }
 }
 
-```
-
-``` 
 group limitio{
   blkio {
     blkio.throttle.read_bps_device = "252:0         2097152";
   }
 }
 
-```
-
-``` 
 group browsers {
     cpu {
 #       Set the relative share of CPU resources equal to 25%
@@ -131,9 +111,6 @@ memory {
     }
 }
 
-```
-
-``` 
 group media-players {
     cpu {
 #       Set the relative share of CPU resources equal to 25%
@@ -147,9 +124,6 @@ group media-players {
     }
 }
 
-```
-
-``` 
 cgconfigparser -l /etc/cgconfig.conf
 
 ```

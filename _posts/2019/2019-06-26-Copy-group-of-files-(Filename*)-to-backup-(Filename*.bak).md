@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "6,913 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -29,9 +29,6 @@ cps () {
     # If Filename1.bak exists, don't copy it to Filename1.bak.bak
     for f in "$1"*; do [[ ! "$f" == *"$2" ]] && cp -a "$f" "$f$2"; done
 
-```
-
-``` 
     # OLD version comments suggested to remove 
     # ls "$1"* | while read varname; do cp -a "$varname" "$varname$2"; done
 }

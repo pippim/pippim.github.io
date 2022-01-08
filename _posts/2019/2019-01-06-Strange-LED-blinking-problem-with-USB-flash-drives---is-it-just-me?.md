@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,362 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -36,6 +36,7 @@ Scouring through the first bug report (the one closed as a duplicate) you see th
 
 I think in the bug report they missed some of the important aspects of one user's output. Here is the equivalent output from my system (that works):
 
+{% include copyHeader.html %}
 ``` 
 $ gvfs-mount -li
 
@@ -55,10 +56,6 @@ Drive(3): 3SYSTEM USB Flash Disk
   start_stop_type=shutdown
   sort_key=01hotplug/1546789639130384
 
-```
-
-{% include copyHeader.html %}
-``` 
   Volume(0): LIVE_USB
     Type: GProxyVolume (GProxyVolumeMonitorUDisks2)
     ids:

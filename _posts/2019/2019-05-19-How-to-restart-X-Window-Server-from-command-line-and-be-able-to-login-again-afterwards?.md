@@ -12,13 +12,13 @@ votes:        "3 "
 favorites:    
 views:        "6,517 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-This old Q&A: [https://askubuntu.com/questions/100226/how-to-restart-gnome-shell-from-command-line/814336#81433](https://askubuntu.com/questions/100226/how-to-restart-gnome-shell-from-command-line/814336#81433)6 may have the answers for you.
+This old Q&A: [How to restart GNOME Shell from command line?](How to restart GNOME Shell from command line?)6 may have the answers for you.
 
 Initially these used to work for people:
 

@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "19,965 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -25,9 +25,6 @@ When we are writing answers here in **Ask Ubuntu** it is helpful to put them int
 ``` 
 $ CurrDir=$PWD ; cd /bin ; ls -la dd ; cd "$CurrDir"
 
-```
-
-``` 
 -rwxr-xr-x 1 root root 72632 Mar  2  2017 dd
 
 ```
@@ -50,9 +47,6 @@ There are some commands where you have to string multiple lines together. One ca
 ``` 
 $ [[ 2 -eq 2 ]] && { echo 2 equals 2 ; echo setting three to 3 ; three=3 ; }
 
-```
-
-``` 
 2 equals 2
 setting three to 3
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,434 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -53,7 +53,7 @@ The accept answer states:
 
 Additional reading:
 
-- [https://askubuntu.com/questions/87849/how-to-enable-silent-automatic-updates-for-any-repository](https://askubuntu.com/questions/87849/how-to-enable-silent-automatic-updates-for-any-repository)
+- [How to enable silent automatic updates for any repository?](How to enable silent automatic updates for any repository?)
 - [Generates system-specific repositories to be added in configuration file for silently updating all packages via unattended upgrades.][2]
 - [Upgrading External Packages with unattended-upgrade][3]
 

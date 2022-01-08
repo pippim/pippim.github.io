@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "703 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -31,6 +31,6 @@ sudo dpkg --purge virtualbox-dkms
 
 ----------
 
-As you are running Kernel 4.10.0-xx you may be interested in this if you upgrade some day: [https://askubuntu.com/questions/994315/virtualbox-crash-on-kernel-4-13-0-26](https://askubuntu.com/questions/994315/virtualbox-crash-on-kernel-4-13-0-26)
+As you are running Kernel 4.10.0-xx you may be interested in this if you upgrade some day: [virtualbox crash on kernel 4.13.0-26](virtualbox crash on kernel 4.13.0-26)
 
   [1]: https://github.com/hashicorp/vagrant/issues/8687

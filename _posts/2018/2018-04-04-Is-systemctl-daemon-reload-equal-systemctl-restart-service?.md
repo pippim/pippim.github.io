@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "38,030 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -30,9 +30,6 @@ Manager Lifecycle Commands
        dependency tree. While the daemon is being reloaded, all sockets systemd
        listens on behalf of user configuration will stay accessible.
 
-```
-
-``` 
        This command should not be confused with the reload command.
 
 ```
@@ -49,14 +46,8 @@ Unit Commands
        case of Apache, this will reload Apache's httpd.conf in the web server, not
        the apache.service systemd unit file.
 
-```
-
-``` 
        This command should not be confused with the daemon-reload command.
 
-```
-
-``` 
    restart PATTERN...
        Restart one or more units specified on the command line. If the units are not
        running yet, they will be started.

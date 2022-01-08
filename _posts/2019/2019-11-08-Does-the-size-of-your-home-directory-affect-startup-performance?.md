@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "93 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,7 +24,7 @@ After logging in there are programs which will index (or process) the files in y
 
 Some example programs would be:
 
-- [https://askubuntu.com/questions/627088/nautilus-not-generating-thumbnails-for-gif-images](https://askubuntu.com/questions/627088/nautilus-not-generating-thumbnails-for-gif-images)
-- [https://askubuntu.com/questions/722664/how-to-stop-a-file-or-folder-from-being-indexed-in-gnome](https://askubuntu.com/questions/722664/how-to-stop-a-file-or-folder-from-being-indexed-in-gnome)
+- [Nautilus not generating thumbnails for GIF images](Nautilus not generating thumbnails for GIF images)
+- [How to stop a file or folder from being indexed in GNOME?](How to stop a file or folder from being indexed in GNOME?)
 
 With a large home directory some commands will be slower such as `find` but the similar command `locate` will not be noticeably slower. `find` searches every file but `locate` has an index of every file stored in it's own database.

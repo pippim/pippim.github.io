@@ -12,7 +12,7 @@ votes:        "149 "
 favorites:    
 views:        "169,804 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          true
 navigation:   true
 clipboard:    false
@@ -183,9 +183,6 @@ Although you can run the `install.sh` scripts these instructions are the easiest
 ``` bash
 :~$ cd Downloads
 
-```
-
-``` bash
 :~/Downloads$ ll *tar*
 -rw-rw-r-- 1 rick rick 69329 Feb 14 21:05 bxtgucver87.tar.gz
 -rw-rw-r-- 1 rick rick  4338 Feb 14 21:06 kbldmcver101.tar.bz2

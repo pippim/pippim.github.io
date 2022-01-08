@@ -12,11 +12,15 @@ votes:        "4 "
 favorites:    
 views:        "3,144 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
-navigation:   false
+navigation:   true
 clipboard:    true
 ---
+
+
+<a id="hdr1"></a>
+<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
 
 # Bash script `redirect-brightness`
 
@@ -59,6 +63,10 @@ cat /tmp/redirect-brightness.log
 ```
 
 If all works well add `redirect-brightness` to your startup applications.
+
+
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
 
 ## `redirect-brightness` bash script
 
@@ -146,24 +154,32 @@ done
 
 
 
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+
 # Original Answer June 11, 2018.
 
 ### Work In Progress Answer
 
 There are many nVidia users with similar problems in Ubuntu 18.04:
 
-- [https://askubuntu.com/questions/1030526/brightness-on-laptop-msi-gt72vr-in-ubuntu-18-04-with-nvidia-gtx-1060-mobile-does](https://askubuntu.com/questions/1030526/brightness-on-laptop-msi-gt72vr-in-ubuntu-18-04-with-nvidia-gtx-1060-mobile-does)
-- [https://askubuntu.com/questions/1042809/computer-doesnt-wake-from-suspension-and-couldnt-change-the-brightness](https://askubuntu.com/questions/1042809/computer-doesnt-wake-from-suspension-and-couldnt-change-the-brightness)
-- [https://askubuntu.com/questions/1042069/brightness-control-missing-when-using-nvidia-drivers-but-re-appears-with-x-org](https://askubuntu.com/questions/1042069/brightness-control-missing-when-using-nvidia-drivers-but-re-appears-with-x-org)
-- [https://askubuntu.com/questions/1041051/xubuntu-18-04-make-fn-brightness-keys-work-with-sys-class-backlight-nv-backlig](https://askubuntu.com/questions/1041051/xubuntu-18-04-make-fn-brightness-keys-work-with-sys-class-backlight-nv-backlig)
-- [https://askubuntu.com/questions/1041145/how-to-alter-backlight-driver-in-lubuntu](https://askubuntu.com/questions/1041145/how-to-alter-backlight-driver-in-lubuntu)
-- [https://askubuntu.com/questions/1030526/brightness-on-laptop-msi-gt72vr-in-ubuntu-18-04-with-nvidia-gtx-1060-mobile-does](https://askubuntu.com/questions/1030526/brightness-on-laptop-msi-gt72vr-in-ubuntu-18-04-with-nvidia-gtx-1060-mobile-does)
-- [https://askubuntu.com/questions/1031541/ubuntu-solution-for-the-nvidia-display-issue-on-brightness-control-and-video-pla](https://askubuntu.com/questions/1031541/ubuntu-solution-for-the-nvidia-display-issue-on-brightness-control-and-video-pla)
-- [https://askubuntu.com/questions/1028979/unable-to-change-the-screen-brightness](https://askubuntu.com/questions/1028979/unable-to-change-the-screen-brightness)
-- [https://askubuntu.com/questions/1010405/the-brightness-of-laptop-screen-cannot-be-adjusted-with-either-the-buttons-or-th](https://askubuntu.com/questions/1010405/the-brightness-of-laptop-screen-cannot-be-adjusted-with-either-the-buttons-or-th)
+- [Brightness on laptop MSI GT72VR in Ubuntu 18.04 with NVIDIA GTX 1060 Mobile doesn&#39;t work](Brightness on laptop MSI GT72VR in Ubuntu 18.04 with NVIDIA GTX 1060 Mobile doesn&#39;t work)
+- [computer doesnt wake from suspension and couldnt change the brightness](computer doesnt wake from suspension and couldnt change the brightness)
+- [Brightness control missing when using Nvidia drivers but re-appears with X.Org](Brightness control missing when using Nvidia drivers but re-appears with X.Org)
+- [Xubuntu 18.04: make Fn brightness keys work with /sys/class/backlight/nv_backlight/](Xubuntu 18.04: make Fn brightness keys work with /sys/class/backlight/nv_backlight/)
+- [How to alter backlight driver in lubuntu](How to alter backlight driver in lubuntu)
+- [Brightness on laptop MSI GT72VR in Ubuntu 18.04 with NVIDIA GTX 1060 Mobile doesn&#39;t work](Brightness on laptop MSI GT72VR in Ubuntu 18.04 with NVIDIA GTX 1060 Mobile doesn&#39;t work)
+- [NVIDIA display issue with brightness control and video playback](NVIDIA display issue with brightness control and video playback)
+- [Unable to change the screen brightness](Unable to change the screen brightness)
+- [The brightness of laptop screen cannot be adjusted with either the buttons or the slider. Edit](The brightness of laptop screen cannot be adjusted with either the buttons or the slider. Edit)
 
 ----------
 
+
+
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
 
 ## Before writing a script
 
@@ -175,12 +191,21 @@ I can write a script to mimic changes to /acpi_video and populate /nv_backlight 
 - Save the file
 - Run `sudo update-grub`
 
-According to this answer it should work for you: [https://askubuntu.com/questions/1041051/xubuntu-18-04-make-fn-brightness-keys-work-with-sys-class-backlight-nv-backlig/1041585#1041585](https://askubuntu.com/questions/1041051/xubuntu-18-04-make-fn-brightness-keys-work-with-sys-class-backlight-nv-backlig/1041585#1041585)
+According to this answer it should work for you: [Xubuntu 18.04: make Fn brightness keys work with /sys/class/backlight/nv_backlight/](Xubuntu 18.04: make Fn brightness keys work with /sys/class/backlight/nv_backlight/)
 
 
 ----------
 
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
+
 ## Wayland
 
 Brightness doesn't work under Wayland. Make sure you aren't using it. See: [The brightness of laptop screen cannot be adjusted with either the buttons or the slider. Edit]({% post_url /2018/2018-03-03-The-brightness-of-laptop-screen-cannot-be-adjusted-with-either-the-buttons-or-the-slider.-Edit %})
+
+
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a></div>
 

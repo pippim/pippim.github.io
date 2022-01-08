@@ -12,13 +12,13 @@ votes:        "1 "
 favorites:    
 views:        "63 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-From: [https://askubuntu.com/questions/898517/closing-lid-problemFrom:](https://askubuntu.com/questions/898517/closing-lid-problemFrom:)
+From: [Closing lid problem](Closing lid problem)
 
 
 ----------

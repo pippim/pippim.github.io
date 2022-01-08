@@ -12,13 +12,13 @@ votes:        "3 "
 favorites:    
 views:        "795 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-This is not the same question as: [https://askubuntu.com/questions/489453/manage-external-tools-not-popping-up-dialo](https://askubuntu.com/questions/489453/manage-external-tools-not-popping-up-dialo)g where the dialog box doesn't pop-up after selecting *Manage External Tools* from the gedit *Tools* menu.
+This is not the same question as: [&quot;Manage external tools&quot; not popping up dialog](&quot;Manage external tools&quot; not popping up dialog)g where the dialog box doesn't pop-up after selecting *Manage External Tools* from the gedit *Tools* menu.
 
 My problem is the *Manage External Tools* option doesn't appear in the *Tools* menu at all.
 

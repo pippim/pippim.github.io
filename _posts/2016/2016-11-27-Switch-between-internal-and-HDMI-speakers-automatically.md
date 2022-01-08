@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "10,748 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   true
 clipboard:    true
@@ -46,13 +46,10 @@ gksu gedit hotplugtv
 
 When the editor opens with a blank screen, copy and paste the following into it:
 
+{% include copyHeader.html %}
 ``` bash
 #! /bin/bash
 
-```
-
-{% include copyHeader.html %}
-``` bash
 # NAME: hotplugtv
 # PATH: /usr/local/bin
 # DESC: Update pulseaudio output device when HDMI TV plugged / unplugged

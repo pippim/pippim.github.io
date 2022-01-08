@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "16,445 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -57,7 +57,7 @@ You probably surmise `/etc/profile.d/jdk.csh` needs changing too. Indeed it cont
 
 There is a better way than going through files line by line and changing an `8` to an `11`.
 
-The easiest method is using Java installer. From this **Ask Ubuntu Q&A**: [https://askubuntu.com/questions/272187/setting-jdk-7-as-default/272190](https://askubuntu.com/questions/272187/setting-jdk-7-as-default/272190)
+The easiest method is using Java installer. From this **Ask Ubuntu Q&A**: [Setting JDK 7 as default](Setting JDK 7 as default)
 
 
 

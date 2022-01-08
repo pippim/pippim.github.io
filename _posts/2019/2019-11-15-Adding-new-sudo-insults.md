@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "884 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -131,9 +131,6 @@ Hopefully no need to explain how to create a text file (hint: `gedit`)
 ``` 
 $ cat sudoinsult.txt
 
-```
-
-``` 
 Just what do you think you're doing Dave?
 Just what do you think you're doing Rick?
 It can only be attributed to human error.
@@ -143,44 +140,27 @@ It can only be attributed to the beer.
 
 ## Run the script and check results
 
+{% include copyHeader.html %}
 ``` 
 $ sudo ./sudoinsult
 
-```
-
-``` 
 Replacing: 'Just what do you think you're doing Dave?'
      With: 'Just what do you think you're doing Rick?'
 Replacing: 'It can only be attributed to human error.'
      With: 'It can only be attributed to the beer.'
 2 Insults replaced.
 
-```
-
-``` 
 $ ll /usr/lib/sudo/sudoers{.so,.so.bak}
 
 -rw-r--r-- 1 root root 316768 Nov 14 17:43 /usr/lib/sudo/sudoers.so
 -rw-r--r-- 1 root root 316768 Oct 11 06:01 /usr/lib/sudo/sudoers.so.bak
 
-```
-
-``` 
 $ grep "Just what do you think you're doing Rick?" /usr/lib/sudo/sudoers.so
 
-```
-
-``` 
 Binary file /usr/lib/sudo/sudoers.so matches
 
-```
-
-``` 
 $ grep "It can only be attributed to the beer." /usr/lib/sudo/sudoers.so
 
-```
-
-``` 
 Binary file /usr/lib/sudo/sudoers.so matches
 
 ```

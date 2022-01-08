@@ -12,7 +12,7 @@ votes:        "40 "
 favorites:    
 views:        "100,762 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -102,7 +102,7 @@ $ sudo umount /dev/nvme0n1p8 -l
 
 A script to mount partition is available in this answer:
 
-- [https://askubuntu.com/questions/1064537/mount-debian-install-as-usb-drive/1064681#1064681](https://askubuntu.com/questions/1064537/mount-debian-install-as-usb-drive/1064681#1064681)
+- [Mount Debian install as USB drive](Mount Debian install as USB drive)
 
 This screen appears tailored to your unique machine environment:
 

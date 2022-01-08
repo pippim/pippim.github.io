@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "669 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,7 +24,7 @@ If you have Windows update 1903 installed (March 2019) you can [use Windows File
 
 If you want a GUI to edit files try `gedit` after installing `sudo apt install ubuntu-desktop`. See this for more information:
 
-- [https://askubuntu.com/questions/993225/whats-the-easiest-way-to-run-gui-apps-on-windows-subsystem-for-linux-as-of-2018](https://askubuntu.com/questions/993225/whats-the-easiest-way-to-run-gui-apps-on-windows-subsystem-for-linux-as-of-2018)
+- [What&#39;s the easiest way to run GUI apps on Windows Subsystem for Linux as of 2018?](What&#39;s the easiest way to run GUI apps on Windows Subsystem for Linux as of 2018?)
 
 
   [1]: https://www.omgubuntu.co.uk/2019/02/access-linux-files-from-windows-explorer-wsl

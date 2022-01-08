@@ -12,7 +12,7 @@ votes:        "88 "
 favorites:    
 views:        "46,746 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -22,7 +22,7 @@ clipboard:    true
 
 You can change sudo insults without recompiling sudo.
 
-See: [https://askubuntu.com/questions/1188779/adding-new-sudo-insults](https://askubuntu.com/questions/1188779/adding-new-sudo-insults)
+See: [Adding new sudo insults](Adding new sudo insults)
 
 ----------
 

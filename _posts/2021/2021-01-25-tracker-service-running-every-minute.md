@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,360 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 The modern way to disable Tracker is found here:
 
-- [https://askubuntu.com/questions/1187191/tracker-process-taking-lot-of-cpu](https://askubuntu.com/questions/1187191/tracker-process-taking-lot-of-cpu)
+- [Tracker process taking lot of CPU](Tracker process taking lot of CPU)
 
 Run the following command to disable tracker for the current user:
 
@@ -36,7 +36,7 @@ sudo reboot
 
 Interestingly the question was quite popular in 2013:
 
-- [https://askubuntu.com/questions/346211/tracker-store-and-tracker-miner-fs-eating-up-my-cpu-on-every-startup](https://askubuntu.com/questions/346211/tracker-store-and-tracker-miner-fs-eating-up-my-cpu-on-every-startup)
+- [tracker-store and tracker-miner-fs eating up my CPU on every startup](tracker-store and tracker-miner-fs eating up my CPU on every startup)
 
 The solution to disable it here is now outdated. Just pointing out the more things change the more they stay the same...
 

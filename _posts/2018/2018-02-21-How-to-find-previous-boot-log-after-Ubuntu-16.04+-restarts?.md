@@ -12,7 +12,7 @@ votes:        "28 "
 favorites:    
 views:        "54,867 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   true
 clipboard:    true
@@ -149,9 +149,6 @@ Then every once in a while, with `cron` or [timers][6] you may clean [old logs][
 ``` 
 journalctl --vacuum-time=2d  # keep last two days or
 
-```
-
-``` 
 journalctl --vacuum-size=300M  # keep last 300MB
 
 ```

@@ -12,7 +12,7 @@ votes:        "60 "
 favorites:    
 views:        "75,295 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   true
 clipboard:    false
@@ -76,9 +76,6 @@ Only one **free** SMS message a day can be sent by a given sender. Here is an ex
 $ find-phone # bash script with above command
 {"success":true,"textId":"168141545572031481","quotaRemaining":0}
 
-```
-
-``` bash
 $ find-phone
 {"success":false,"error":"Only one test text message is allowed per day.","quotaRemaining":0}
 
@@ -162,10 +159,7 @@ Subject: Nightly Database Update FAILED
 From: root@our_company.com
 Content-Type: text/html; charset="utf8"
 
-```
 
-
-``` bash
 <html>
 <body>
 <div style="

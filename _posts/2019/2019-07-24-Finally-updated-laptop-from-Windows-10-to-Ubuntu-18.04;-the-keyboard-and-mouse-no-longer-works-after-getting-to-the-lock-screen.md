@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "98 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,11 +20,11 @@ clipboard:    false
 
 The same problem was reported yesterday:
 
-- [https://askubuntu.com/questions/1160548/5-0-0-21-kernel-update-causing-desktop-and-mouse-problems](https://askubuntu.com/questions/1160548/5-0-0-21-kernel-update-causing-desktop-and-mouse-problems)
+- [5.0.0-21 kernel update causing desktop and mouse problems](5.0.0-21 kernel update causing desktop and mouse problems)
 
 At the same time a related kernel problem was reported:
 
-- [https://askubuntu.com/questions/1160549/software-updater-kernel-update-broke-package-manager-cannot-install-linux-modu/1160555#1160555](https://askubuntu.com/questions/1160549/software-updater-kernel-update-broke-package-manager-cannot-install-linux-modu/1160555#1160555)
+- [Software Updater Kernel Update broke package manager - Cannot install linux-modules-extra-5.0.0-21-generic](Software Updater Kernel Update broke package manager - Cannot install linux-modules-extra-5.0.0-21-generic)
 
 Hopefully this will be fixed in the next Ubuntu kernel update `5.0.0-21` but in the meantime use kernel `5.0.0-20`. If you want to avoid reinstalling Ubuntu you can manually install the previous Linux Mainline/Stable kernel with these instructions:
 

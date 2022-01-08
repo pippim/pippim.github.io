@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,136 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -35,7 +35,7 @@ If you want the setting to be permanent change your preferences. Use: `Edit` => 
 ----------
 
 
-You can't access preferences if you are using `sudo -H gedit` though. You need to do this with regular user using `gedit` only. Then you can have `sudo` inherit your user preferences with a script such as this: [https://askubuntu.com/questions/92655/how-can-i-sync-my-root-gedit-with-my-user-gedits-preferences/1047405#1047405](https://askubuntu.com/questions/92655/how-can-i-sync-my-root-gedit-with-my-user-gedits-preferences/1047405#1047405)
+You can't access preferences if you are using `sudo -H gedit` though. You need to do this with regular user using `gedit` only. Then you can have `sudo` inherit your user preferences with a script such as this: [How can I sync my root gedit with my user gedit&#39;s preferences?](How can I sync my root gedit with my user gedit&#39;s preferences?)
 
 
   [1]: https://i.stack.imgur.com/UPHVs.png

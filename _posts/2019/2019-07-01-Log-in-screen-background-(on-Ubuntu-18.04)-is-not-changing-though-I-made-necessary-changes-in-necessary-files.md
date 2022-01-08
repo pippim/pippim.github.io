@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "200 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +20,7 @@ clipboard:    false
 
 The technique you followed has worked for most people: 
 
-- [https://askubuntu.com/questions/1042942/how-to-change-ubuntu-budgie-login-screen-background/1071765#1071765](https://askubuntu.com/questions/1042942/how-to-change-ubuntu-budgie-login-screen-background/1071765#1071765)
+- [How to change Ubuntu Budgie login screen background?](How to change Ubuntu Budgie login screen background?)
 
 However it didn't work for everyone and there is a lesser known technique in the same thread where they simply copy over the pre-packaged image filename with a new image:
 

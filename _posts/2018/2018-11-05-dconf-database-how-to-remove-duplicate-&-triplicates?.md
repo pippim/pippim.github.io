@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    1
 views:        "322 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -26,9 +26,6 @@ $ gsettings --schemadir /usr/share/glib-2.0/schemas list-recursively | grep butt
 org.gnome.settings-daemon.plugins.power button-power 'interactive'
 org.gnome.settings-daemon.plugins.power button-power 'interactive'
 
-```
-
-``` 
 $ gsettings list-recursively | grep sudoku-difficulty
 org.gnome.sudoku print-multiple-sudoku-difficulty 'easy'
 

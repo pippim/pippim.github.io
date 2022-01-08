@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "1,323,555 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -76,9 +76,6 @@ $ cat /etc/cron.d/cycle-grub-background SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin 
 @reboot   root    /usr/local/bin/cron-reboot-cycle-grub-background
 
-```
-
-``` 
 $ cat /etc/cron.d/touch-vmlinuz
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin

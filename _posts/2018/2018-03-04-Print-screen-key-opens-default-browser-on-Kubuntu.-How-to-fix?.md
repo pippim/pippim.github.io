@@ -12,13 +12,13 @@ votes:        "4 "
 favorites:    
 views:        "175 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-As per this Q&A: [https://askubuntu.com/questions/837260/the-print-screen-key-does-not-open-the-screen-shot-tool-in-kubuntu-16-10](https://askubuntu.com/questions/837260/the-print-screen-key-does-not-open-the-screen-shot-tool-in-kubuntu-16-10)
+As per this Q&A: [The print screen key does not open the screen shot tool in Kubuntu 16.10](The print screen key does not open the screen shot tool in Kubuntu 16.10)
 
 Follow these steps:
 

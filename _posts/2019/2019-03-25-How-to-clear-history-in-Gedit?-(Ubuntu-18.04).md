@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,556 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -27,9 +27,6 @@ Use this command to get current number of entries:
 ``` 
 $ gsettings get org.gnome.gedit.preferences.ui max-recents
 
-```
-
-``` 
 uint32 5
 
 ```
@@ -39,14 +36,8 @@ I want to change to `10` so I'll use this command:
 ``` 
 $ gsettings set org.gnome.gedit.preferences.ui max-recents 10
 
-```
-
-``` 
 $ gsettings get org.gnome.gedit.preferences.ui max-recents
 
-```
-
-``` 
 uint32 10
 
 ```

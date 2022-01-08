@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "622 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -89,9 +89,6 @@ If program runs amok use:
 $ pgrep ttlus
 7970
 
-```
-
-``` 
 $ kill 7970
 [1]+  Terminated              ttlus
 ## 

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,146 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -22,23 +22,23 @@ Your laptop has the **Intel i7-6700HQ** 6th generation CPU known as "Skylake". I
 
 When using Skylake you made need updates:
 
-- [https://askubuntu.com/questions/827939/ubuntu-15-10-various-types-of-freezes-and-now-unexpected-shutdown/828027#828027](https://askubuntu.com/questions/827939/ubuntu-15-10-various-types-of-freezes-and-now-unexpected-shutdown/828027#828027)
+- [Ubuntu 15.10: Various &quot;types&quot; of freezes and now unexpected shutdown](Ubuntu 15.10: Various &quot;types&quot; of freezes and now unexpected shutdown)
 - ["W: Possible missing firmware for module i915_bpo" when updating initramfs]({% post_url /2017/2017-02-03-"W:-Possible-missing-firmware-for-module-i915_bpo"-when-updating-initramfs %})
-- [https://askubuntu.com/questions/941252/ubuntu-doesnt-reboot](https://askubuntu.com/questions/941252/ubuntu-doesnt-reboot)
+- [Ubuntu doesn&#39;t reboot](Ubuntu doesn&#39;t reboot)
 
 These are some of the answers I've written but there are many great answers others have written:
 
-- [https://askubuntu.com/questions/691216/no-version-of-ubuntu-can-be-installed-with-any-skylake-6th-generation-intel-proc](https://askubuntu.com/questions/691216/no-version-of-ubuntu-can-be-installed-with-any-skylake-6th-generation-intel-proc)
-- [https://askubuntu.com/questions/929274/16-04-how-to-get-the-recommended-intel-microcode-package-to-fix-hyper-threading](https://askubuntu.com/questions/929274/16-04-how-to-get-the-recommended-intel-microcode-package-to-fix-hyper-threading)
-- [https://askubuntu.com/questions/752743/ubuntu-16-04-skylake-6th-generation-screen-flickering](https://askubuntu.com/questions/752743/ubuntu-16-04-skylake-6th-generation-screen-flickering)
-- [https://askubuntu.com/questions/830404/ubuntu-16-04-skylake-overheating](https://askubuntu.com/questions/830404/ubuntu-16-04-skylake-overheating)
+- [No version of Ubuntu can be installed with any Skylake 6th generation Intel processor](No version of Ubuntu can be installed with any Skylake 6th generation Intel processor)
+- [16.04: How to get the recommended intel-microcode package to fix hyper-threading issue?](16.04: How to get the recommended intel-microcode package to fix hyper-threading issue?)
+- [Ubuntu 16.04 Skylake 6th Generation Screen Flickering](Ubuntu 16.04 Skylake 6th Generation Screen Flickering)
+- [Ubuntu 16.04 Skylake overheating](Ubuntu 16.04 Skylake overheating)
 
 Unfortunately not enough is known about your specific problems to point your question as a duplicate of an existing one.
 
 One last thing to change is the Intel c-state max idle:
 
-- [https://askubuntu.com/questions/749349/how-to-set-intel-idle-max-cstate-1](https://askubuntu.com/questions/749349/how-to-set-intel-idle-max-cstate-1)
-- [https://askubuntu.com/questions/803640/system-freezes-completely-with-intel-bay-trail](https://askubuntu.com/questions/803640/system-freezes-completely-with-intel-bay-trail)
+- [How to set intel_idle.max_cstate=1](How to set intel_idle.max_cstate=1)
+- [System freezes completely with Intel Bay Trail](System freezes completely with Intel Bay Trail)
 
 Although targeted at Intel BayTrail users it seems to have improved things for other Intel CPU users as well. If these fixes work I regard them as a work-around to make life better in the short term until a real solution is found.
 

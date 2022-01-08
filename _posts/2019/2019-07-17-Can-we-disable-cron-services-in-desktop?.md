@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,949 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -55,13 +55,10 @@ I would call all my `crony` scrips from `/etc/rc.local` but there are other ways
 
 The format would be like this:
 
+{% include copyHeader.html %}
 ``` 
 $ cat /etc/rc.local
 
-```
-
-{% include copyHeader.html %}
-``` 
 #!/bin/sh -e
 #
 # rc.local
@@ -86,9 +83,6 @@ crony /etc/cron.daily/logrotate 30m d &
 crony /mnt/e/usr/local/bin/daily-backup 5m d &
 corny /usr/local/bin/eyesome-sun.sh 1m d &
 
-```
-
-``` 
 exit 0
 
 ```

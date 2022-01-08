@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "245 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -56,13 +56,10 @@ To answer your question, AFAIK there isn't a newer driver you can use.
 
 You can use this command however to check for errors:
 
+{% include copyHeader.html %}
 ``` 
 $ lspci -nnk | grep -iA2 net; dmesg | grep ath10k
 
-```
-
-{% include copyHeader.html %}
-``` 
 3b:00.0 Ethernet controller [0200]: Qualcomm Atheros Killer E2400 Gigabit Ethernet Controller [1969:e0a1] (rev 10)
 	Subsystem: Device [0707:2400]
 	Kernel driver in use: alx

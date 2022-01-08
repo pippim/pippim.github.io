@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "23,823 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          true
 navigation:   true
 clipboard:    true
@@ -331,10 +331,6 @@ The report below had to be truncated heavily because it won't fit into Ask Ubunt
     Kernel driver in use: pcieport
     Kernel modules: shpchp
 
-```
-
-{% include copyHeader.html %}
-``` 
 00:1c.5 PCI bridge: Intel Corporation Sunrise Point-H PCI Express Root Port #6 (rev f1) (prog-if 00 [Normal decode])
 
     (...SNIP...)

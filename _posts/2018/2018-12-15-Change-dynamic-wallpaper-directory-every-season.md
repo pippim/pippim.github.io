@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "874 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   true
 clipboard:    true
@@ -88,20 +88,15 @@ Edit the script using: `gedit ~/bin/season.sh`
 
 Copy and paste the following lines into `gedit`:
 
+{% include copyHeader.html %}
 ``` 
 #!/bin/bash
 # NAME: season.sh
 # PATH: ~/bin
 # DATE: December 15, 2018
 
-```
-
-``` 
 # NOTE: Written for: https://askubuntu.com/questions/1100934/change-dynamic-wallpaper-directory-every-season/1102084#1102084
 
-```
-
-``` 
 # User defined variables, change to suit your needs
 # Our directory names, lines indented for cosmetic reasons only
 SlideShowDir="~/Season Slide Show"
@@ -110,10 +105,6 @@ SlideShowDir="~/Season Slide Show"
      FallDir="~/Pictures/Fall Slide Show"
    WinterDir="~/Pictures/Winter Slide Show"
 
-```
-
-{% include copyHeader.html %}
-``` 
 CheckTripWire () {
     # Our last season is in "~/Season Slide Show/CurrentSeason"
     LastSeasonFilename="$SlideShowDir"/CurrentSeason
@@ -140,25 +131,13 @@ CheckTripWire () {
         cp -R "$WinterDir"/. "$SlideShowDir"/
     fi
 
-```
-
-``` 
 } # End of CheckTripWire () function.
 
-```
-
-``` 
 # Start of Mainline
 
-```
-
-``` 
 DOY=$(date '+%j')                     # DOY = Current Day of Year
 # Reference: https://stackoverflow.com/questions/10112453/how-to-get-day-of-the-year-in-shell
 
-```
-
-``` 
 if ((DOY>=079 && DOY<172)) ; then
     Season="SPRING"                   # Spring has sprung!
     # Reference: https://stackoverflow.com/questions/12614011/using-case-for-a-range-of-numbers-in-bash
@@ -170,15 +149,9 @@ else
     Season="WINTER"                   # Shovel the snow!
 fi
 
-```
-
-``` 
 # Current season establish, now see if we tripped the wire
 CheckTripWire
 
-```
-
-``` 
 exit 0 # Command not necessary but good habit to signify no Abend.
 
 ```
@@ -190,7 +163,7 @@ chmod a+x ~/bin/season.sh
 
 ```
 
-Next we need to add it to startup applications. Reference: [https://askubuntu.com/questions/48321/how-do-i-start-applications-automatically-on-login](https://askubuntu.com/questions/48321/how-do-i-start-applications-automatically-on-login)
+Next we need to add it to startup applications. Reference: [How do I start applications automatically on login?](How do I start applications automatically on login?)
 
 **Note:** You probably already have your slide show setup in startup applications. You will want to use `season.sh` **BEFORE** your regular slide show as it deletes and copies files which would crash the slide show program if it started first.
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "994 "
 accepted:     Accepted
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    true
@@ -24,7 +24,7 @@ clipboard:    true
 
 In addition to the documentation on the github page link above where you can download eyesome, additional documentation with screen shots is available here in Ask Ubuntu:
 
-- [https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime/887249#887249](https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime/887249#887249)
+- [Set initial startup background brightness depending on daytime](Set initial startup background brightness depending on daytime)
 
 ----------
 

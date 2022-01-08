@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,338 "
 accepted:     
-uploaded:     2022-01-03 08:14:44
+uploaded:     2022-01-07 19:08:07
 toc:          false
 navigation:   false
 clipboard:    false
@@ -52,7 +52,7 @@ Even though my Alienware laptop is two years old I would like to have this bug f
 Besides bug fixes there are security fixes to consider:
 
 - [Secondary monitor not recognized under Ubuntu 16.04 with kernel 4.7.4]({% post_url /2016/2016-09-20-Secondary-monitor-not-recognized-under-Ubuntu-16.04-with-kernel-4.7.4 %})
-- [https://askubuntu.com/questions/992232/what-is-ubuntus-status-on-the-meltdown-and-spectre-vulnerabilities](https://askubuntu.com/questions/992232/what-is-ubuntus-status-on-the-meltdown-and-spectre-vulnerabilities)
+- [What is Ubuntu&#39;s status on the Meltdown and Spectre vulnerabilities?](What is Ubuntu&#39;s status on the Meltdown and Spectre vulnerabilities?)
 
 In the last security fix the problem was with Intel chips predictive branching technology and was around for many years. Besides Linux, ***Windows and Mac were effected as well***.
 
