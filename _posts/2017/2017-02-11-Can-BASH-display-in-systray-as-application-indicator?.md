@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,901 "
 accepted:     Accepted
-uploaded:     2022-01-09 10:02:40
+uploaded:     2022-01-09 12:45:43
 toc:          false
 navigation:   true
 clipboard:    true
@@ -181,7 +181,7 @@ fi
   [2]: https://github.com/fossfreedom/indicator-sysmonitor
   [3]: https://i.stack.imgur.com/zdDGs.gif
   [4]: {% post_url /2016/2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu %}
-  [5]: https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
+  [5]: https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm
   [6]: {% post_url /2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset %}
 
 

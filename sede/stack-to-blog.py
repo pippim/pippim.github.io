@@ -66,7 +66,11 @@ from random import randint  # To randomly process small set of CSV records
 
     Create list of tag substitutions, eg windows-subsystem-for-linux becomes wsl
 
-
+    In: https://askubuntu.com/q/837115
+    /2016/10/14/Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu
+    It links to: Set of countdown timers with alarm
+    But on SE: https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm
+    Not on Pippim: /2018/05/23/Set-of-countdown-timers-with-alarm
 
     ADD THESE NOTES TO NEW SHELL SCRIPT:
     

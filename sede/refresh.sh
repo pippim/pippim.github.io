@@ -85,6 +85,9 @@ fi
 # One Time changes between weekly stack exchange data dumps
 # In this example change language "basic" to "vb" for rouge
 sed -i 's/lang-basic/lang-vb/g' QueryResults.csv
+sed -i 's#https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly#https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm#g' QueryResults.csv
+# https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
+# https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm
 
 echo
 echo "=== RUNNING: ~/website/sede/stack-to-blog.py"
@@ -119,7 +122,7 @@ cp ~/website/_includes/posts_by_vote.html _includes/
 
 # Add tree listing
 tree --dirsfirst --filelimit 20 > tree.work
-tail -n +2 tree.work >> _includes/website_tree
+tail -n +2 tree.work > _includes/website_tree
 rm tree.work
 
 git add _includes/
