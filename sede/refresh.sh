@@ -85,9 +85,9 @@ fi
 # One Time changes between weekly stack exchange data dumps
 # In this example change language "basic" to "vb" for rouge
 sed -i 's/lang-basic/lang-vb/g' QueryResults.csv
-sed -i 's#https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly#https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm#g' QueryResults.csv
+sed -i 's%https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly%https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm/1039377#1039377%g' QueryResults.csv
 # https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-alarms-simultaneosly
-# https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm
+# https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm/1039377#1039377
 
 echo
 echo "=== RUNNING: ~/website/sede/stack-to-blog.py"

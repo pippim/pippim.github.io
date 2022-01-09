@@ -66,6 +66,8 @@ from random import randint  # To randomly process small set of CSV records
 
     Create list of tag substitutions, eg windows-subsystem-for-linux becomes wsl
 
+    DIAGNOSE WITH: check_html_substitute(found)
+
     In: https://askubuntu.com/q/837115
     /2016/10/14/Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu
     It links to: Set of countdown timers with alarm
@@ -91,8 +93,6 @@ $ git push http://example.com/repo.git
 Username: <type your username>
 Password: <type your password>
 
-
-            
 """
 
 INPUT_FILE = 'QueryResults.csv'
@@ -807,7 +807,7 @@ def check_half_links(ln):
             last_start = start + 8
             continue
 
-        # Get link href link's name
+        # Get link href and link's name
         href = row[HTML][found_start:found_end]
         name = row[HTML][name_start:name_end]
 
@@ -996,6 +996,7 @@ def check_full_links(ln):
         if found_end == -1:
             continue
 
+        # Swap in Pippim website's link
         found = ln[found_start:found_end]
         post_url, search_url = check_html_substitute(found)
         if post_url is not None:
@@ -1059,12 +1060,24 @@ https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm/10393
 
         OR ANSWER IS REALLY:
 https://askubuntu.com/a/1039377/307523
+
+    DIAGNOSE WITH: check_html_substitute(found)
+
+    In: https://askubuntu.com/q/837115
+    /2016/10/14/Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu
+    It links to: Set of countdown timers with alarm
+    But on SE: https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm
+    Not on Pippim: /2018/05/23/Set-of-countdown-timers-with-alarm
+
+
     """
 
     trace = False  # Set to True to print out debugging stuff
-    if "?1039357" in http_str:  # Some debugging stuff
+    if "1039357" in http_str:  # Some debugging stuff
+        percent_complete_close()
         print()
         print("KEY QUESTION:", http_str)
+        print('LINK:', row[LINK])
         trace = True
 
     parts = http_str.split('/')
@@ -1096,7 +1109,8 @@ https://askubuntu.com/a/1039377/307523
     fallback_part2 = None
     test_part2 = parts[0] + "//" + parts[2] + "/a/" + parts[4]
     if get_ss_url(test_part2, search_type="Answer"):
-        print('test_part2:', test_part2)
+        # fallback_part2 never occurs
+        # print('test_part2:', test_part2)
         fallback_part2 = True
 
     if trace:
@@ -1129,7 +1143,7 @@ https://askubuntu.com/a/1039377/307523
             return None, search_url
     elif fallback_part2 is not None:
         get_ss_url(test_part2, search_type="Answer")
-        print('retrieved title using fallback_part2:', ss_title)
+        # print('retrieved title using fallback_part2:', ss_title)
         search_url = test_part2
     elif get_ss_url(search_url):
         if trace:
@@ -1138,15 +1152,21 @@ https://askubuntu.com/a/1039377/307523
         # Now get our answer matching question's title
         if get_ss_title(ss_title, search_type="Answer"):
             #print('retrieved title:', ss_title)
+            if trace:
+                print('BEGIN: Match answer title to answer title')
             pass
         else:
             #print('Neither Answer nor Question found URL:', search_url)
             return None, search_url
     else:
         #print('Neither Answer nor Question found URL:', search_url)
+        if trace:
+            print('Neither Answer nor Question title to answer title')
         return None, search_url
 
     #print('Found ss_title:', ss_title)
+    if trace:
+        print('SUCCESS found:', ss_title)
     if ss_save_blog is False:
         return None, search_url
 

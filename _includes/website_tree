@@ -3,6 +3,7 @@
 │   │   └── style.scss
 │   ├── img
 │   │   ├── stack
+│   │   │   ├── Pippim post tags expand must scroll.gif
 │   │   │   ├── stack exchange data explorer download csv.png
 │   │   │   ├── stack exchange data explorer list of queries.png
 │   │   │   ├── stack exchange data explorer login.png
@@ -68,4 +69,4 @@
 ├── stack-to-blog.py
 └── tree.work
 
-19 directories, 50 files
+19 directories, 51 files
