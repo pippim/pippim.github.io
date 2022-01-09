@@ -400,7 +400,7 @@ The program automatically:
 # Stack Exchange Data Explorer
 
 The first step in converting Stack Exchange posts to {{ site.title }} website posts is to run a 
-[Stack Exchange Data Explorer Query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s){:target="_blank"}. 
+[Stack Exchange Data Explorer Query](https://data.stackexchange.com/){:target="_blank"}. 
 The Query finds all your
 Stack Exchange Questions and Answers, up to 10 MB.
 
@@ -431,7 +431,8 @@ Enter the following (or copy it and paste it):
 All my posts on the SE network
 ```
 
-Press <kbd>Enter</kbd> and a list of queries appears:
+After keying (or pasting) the above into the search bar,
+press <kbd>Enter</kbd> and a list of queries appears:
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer list of queries.png"
    alt="Stack Exchange Data Explorer Query List of Queries"
@@ -439,12 +440,14 @@ Press <kbd>Enter</kbd> and a list of queries appears:
 %}
 
 For our purposes, select the version from December 12, 2021.
+In the above screenshot it is the first entry on the list.
 If you have revised the query select your revised version.
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer parameters.png"
-   alt="Stack Exchange Data Explorer Query List of Queries"
+   alt="Stack Exchange Data Explorer Parameters"
    style="float: left; width: 65; margin: 2em 1em 1em 0px;"
 %}
+
 ## Specify Parameters
 
 At the bottom of the window you need to specify your parameters.
