@@ -1,6 +1,6 @@
 ---
 title: Convert Stack Exchange Posts
-layout: default
+layout: post
 ---
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
@@ -131,7 +131,7 @@ The program automatically:
 
 
 <a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
 
 # Stack Exchange Data Explorer
 
@@ -166,7 +166,9 @@ the latter since Google already knows too much about us :)
 After logging in, the top of the window provides a search bar to find a query.
 Enter the following (or copy it and paste it):
 
-{% include copyHeader.html %}
+<div class="code-header">
+    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
 ``` text
 All my posts on the SE network
 ```
@@ -741,7 +743,6 @@ for both are show below:
 
 ''' Table of Contents (TOC) options. '''
 # If TOC is never wanted, set to None
-.. in real markdown below and generates the actual TOC:
 {% raw %}
 CONTENTS = "{% include toc.md %}"
 {% endraw %}
@@ -775,6 +776,8 @@ NAV_LAST_LINES = 13         # Minimum of 13 lines since last navigation bar. Not
 # are tagging your answers and adding them to OP's question tags.
 PSEUDO_TAGS = ["conky", "cpuf", "eyesome", "grub", "iconic", "multi-timer", 'vnstat', 'yad']
 ```
+
+*Note:* The global variable `PSEDUO_TAGS` is described in its own section.
 
 The global variable `TOC_HDR_MIN = 6` means a minimum number of six
 header lines (markdown lines beginning with `#`, `##`, `###`, etc.)
@@ -896,6 +899,7 @@ def set_ss_save_blog(r):
             break
 
 ```
+
 <a id="hdr21"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr20" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr22" class="hdr-btn">Skip</a></div>
 
@@ -905,7 +909,7 @@ The `stack-to-blog.py` program uses a two pass technique. The first pass
 does some formatting but mostly counts occurrences of key markdown elements.
 
 The second pass does most of the formatting and repeats some of the same
-counting in order to insert HTML code in the correct places.
+counting in order to insert HTML codes in the correct places.
 
 ## Initialization
 
