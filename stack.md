@@ -418,8 +418,8 @@ Stack Exchange to Jekyll Blog Post conversion. They are:
 - Jekyll Front Matter Options
 - TOC and Navigation Buttons
 - Copy Code Block Options
-- Top Ten Answers Options
-- Posts by Tags Options
+- Posts by Tag HTML Options
+- Exclude Stack Exchange Sites Options
 
 <a id="random_record_limit"></a>
 ## Random Record Limit Option
@@ -835,7 +835,7 @@ The default is `20` lines.
 <a id="hdr19"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr18" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
 
-## Top Ten Answers Options
+## Posts by Tag HTML Options
 
 ``` python
 TAG_MIN_GROUP = 10          # Minimum index page group of posts sorted by Tag Name
@@ -850,14 +850,22 @@ TOP_POSTS_HTML = "../_includes/posts_by_vote.html"  # relative to sede directory
 TOP_POSTS_INCLUDE = 10      # Top 10 posts will appear
 top_posts = []              # List of tuples [(views, title, our_url])
 
-''' SE Sites to exclude from our website '''
-EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
-                 "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
-                 "Medical Sciences", "Ask Ubuntu Meta"]
-
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 CONFIG_YML = "../_config.yml"
 ```
+
+The `TAG_MIN_GROUP` and `TAG_MAX_GROUP` global constants are averaged
+together to create an internal global variable called `TAG_AVG_GROUP`.
+Using above settings the `TAG_AVG_GROUP` value is `15`.
+
+These variables create HTML that looks like this:
+
+{% include image.html src="/assets/img/Pippim post tags must scroll.gif"
+   style="float: none; width: 100%; margin: 0 0 0 0;"
+   caption="Image: /assets/img/Pippim post tags must scroll.gif"
+%}
+
+
 <a id="hdr20"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr19" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
 
