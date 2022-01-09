@@ -760,7 +760,7 @@ def check_half_links(ln):
             total_bad_half_links += 1
             # We don't normally get here. We do when the convoluted chain is called:
             # check_tail_links -> check_no_links -> check_full_links -> check_half_links
-            if "aVOnF.jpg" in parts[3]:
+            if "?aVOnF.jpg" in parts[3]:  # Change to valid name for debugging
                 percent_complete_close()
                 print()
                 print('LINK Not Found:', html_search)

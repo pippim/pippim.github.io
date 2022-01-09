@@ -17,7 +17,7 @@
 #       Username: <type your username>
 #       Password: <type your password>
 
-QUERY="~/Downloads/QueryResults.csv"
+QUERY=~/Downloads/QueryResults.csv
 
 if [ ! -d ~/website ] ; then 
     echo Requires directories ~/website and ~/website2
