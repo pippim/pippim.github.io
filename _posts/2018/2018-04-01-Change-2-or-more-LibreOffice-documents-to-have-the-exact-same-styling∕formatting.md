@@ -170,7 +170,7 @@ I spent a few days attempting to record a macro using "Tools" -> "Macros" -> "Re
 
 
 {% include copyHeader.html %}
-``` basic
+``` bbcbasic
 Sub ChangeAllFonts
     rem - Change all font names to Ubuntu.
     rem - If heading 1 set font size to 28
