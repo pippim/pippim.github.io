@@ -500,7 +500,7 @@ download `QueryResults.csv` and `run stack-to-blog.py`
 
 {% include image.html src="/assets/img/Jekyll.png"
    alt="Jekyll Logo from subpng"
-   style="float: left; width: 75%; margin: 1em 1em 0px 0px;"
+   style="float: left; width: 75%; margin: 2em 1em 0px 0px;"
    caption="Jekyll image credit: 
       <a href='https://www.subpng.com/png-xk9iwy/'>Ronncraze</a>"
 %}
@@ -860,9 +860,9 @@ Using above settings the `TAG_AVG_GROUP` value is `15`.
 
 These variables create HTML that looks like this:
 
-{% include image.html src="/assets/img/Pippim post tags must scroll.gif"
+{% include image.html src="/assets/img/stack/Pippim post tags must scroll.gif"
    style="float: none; width: 100%; margin: 0 0 0 0;"
-   caption="Image: /assets/img/Pippim post tags must scroll.gif"
+   caption="Image filename: /assets/img/stack/Pippim post tags must scroll.gif"
 %}
 
 
