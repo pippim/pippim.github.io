@@ -281,6 +281,8 @@ The `refresh.sh` bash script will both **pull** and **push** your
 GitHub Repo (Repository). The script will update your blog posts
 using Stack Exchange posts inbetween the **pull** and **push**.
 
+You can view the [`refresh.sh` script here](https://github.com/pippim/pippim.github.io/blob/main/sede/refresh.sh).
+
 {% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
    alt="stack-to-blog.py"
    style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
@@ -404,6 +406,8 @@ You can set many options in the program.
 It's a good idea to set the record limit to 10 or so
 for your first few trials.
 
+You can view the [`stack-to-blog.py` script here](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
+
 Review the subsections below for fine-tuning your
 Stack Exchange to Jekyll Blog Post conversion. They are:
 
@@ -416,7 +420,7 @@ Stack Exchange to Jekyll Blog Post conversion. They are:
 - Posts by Tags Options
 
 <a id="random_record_limit"></a>
-## Random Record Limit
+## Random Record Limit Option
 
 During initial testing phase you will want to utilize the
 random record limit feature. This provides two
@@ -519,7 +523,7 @@ When you view a blog post on the website, the
 extra front matter is displayed at the top of 
 the post with a More/Less details button.
 
-### Define Front Matter in `stack-to-blog.py`
+### Control Jekyll Front Matter in `stack-to-blog.py`
 
 This python code shows how
 [Jekyll front matter](https://jekyllrb.com/docs/front-matter/)
@@ -563,7 +567,7 @@ is set to `= None`, no front matter is written.*
 <a id="hdr15"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
 
-### Front Matter Stored in Post File
+### Post Front Matter Stored in Post File
 
 Based on the global variable settings above, 
 the following front matter would be generated:
@@ -589,7 +593,7 @@ clipboard:    false
 ---
 ```
 
-### Front Matter Displayed on Post Website Page
+### Post Front Matter Displayed on Post Website Page
 
 The "More" or "Less" button lets you choose between
 more or less front matter.
@@ -844,11 +848,17 @@ Additional documentation will be added for the python global variables:
 <a id="hdr18"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr17" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr19" class="hdr-btn">Skip</a></div>
 
+## Copy Code Block Options
+
 <a id="hdr19"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr18" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
 
+## Top Ten Answers Options
+
 <a id="hdr20"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr19" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
+
+## Posts by Tags Options
 
 - `TAG_MIN_GROUP = 10`          # Minimum index page group of posts sorted by Tag Name
 - `TAG_MAX_GROUP = 20`          # Maximum index page group of posts sorted by Tag Name
@@ -862,7 +872,7 @@ Additional documentation will be added for the python global variables:
 <a id="hdr21"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr20" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr22" class="hdr-btn">Skip</a></div>
 
-# Program Overview
+# `stack-to-blog.py` Program Overview
 
 The `stack-to-blog.py` program uses a two pass technique. The first pass 
 does some formatting but mostly counts occurrences of key markdown elements.
@@ -872,8 +882,41 @@ counting in order to insert HTML code in the correct places.
 
 ## Initialization
 
-- Initial values are defined for global variables and their names
-are in all upper-case letters.
+At the top of `stack-to-blog.py` global variable constants are defined. Later
+on they are read in the initialization section.
+
+The initialization section in `stack-to-blog.py` can be found by searching for:
+
+``` python
+''' MAIN LOOP to process All query records
+    ==========================================================================
+
+    - Match criteria for answer up votes or accepted check mark
+    - Check if in fenced code block (``` bash) for example. If not then:
+        - Reformat '#Header 1' to '# Header 1'. Same for "##H2" to "## H2", etc.
+        - Count number of '#' header lines
+        - Count number of lines, paragraphs and number of words.
+        - Tally counts at header levels [H1, H2, H3, H4, H5 and H6]
+        - Add two spaces after "< Block Quote" lines
+
+    - Second pass to insert '{% include toc.md %}' at paragraph # (TOC_LOC)
+    - Anytime a TOC is inserted, following header_index []
+        entries and bump index number up by 1
+    - Insert Navigation Bar Buttons: 
+        HTML anchors for #hdr1, #hdr2. etc. Then apply "<a href" links for:
+        Top, ToS, ToC and, Skip (Top of Page, Top of Section, Table of
+        Contents and, Skip section).  
+    - If RANDOM_LIMIT is used then only output matching random_rec_nos []
+'''
+```
+
+- Just above the **MAIN LOOP** is the initialization section
+
+- The first step is to "sanity check" the configuration options
+
+- The Rouge Syntax Highlighting Languages supported are read in.
+
+- All `PSEUDO_TAGS` are initialized into `tag_names` list as if they have already been found in a blog post.
 
 - The `QueryResults.csv` file is read into a list call `rows`. 
 
@@ -881,7 +924,7 @@ are in all upper-case letters.
 `row` in `rows`. Most of the front matter is set at the
 top of the outer loop point.
 
-- Next two passes are done on each row as described below.
+- Next, two passes are done on each row as described below.
 
 
 <a id="hdr22"></a>
@@ -1109,11 +1152,11 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
 
 6. **Note:** You can open one of the blog posts and compare it to the Stack Exchange original answer.
 
-7. Older markdown format on Stack Exchange posts where `#Header` was permitted are converted to `# Header`.
+7. Older Markdown format on Stack Exchange posts where `#Header` was permitted are converted to `# Header`.
 
-8. The alternate H1 markdown format "`Header 1`" line followed by a "`==`" line are converted to "`# Header 1`". The alternate H2 markdown format "`Header 2`" line followed by a "`--`" line are converted to "`## Header 2`". Trailing "==" and "--" lines are converted to blank lines.
+8. The alternate H1 Markdown format "`Header 1`" line followed by a "`==`" line are converted to "`# Header 1`". The alternate H2 markdown format "`Header 2`" line followed by a "`--`" line are converted to "`## Header 2`". Trailing "==" and "--" lines are converted to blank lines.
 
-9. Stack Exchange post tags are formated as: `<Tag1><Tag2><Tag3>`. For GitHub they are converted to: `tags: Tag1 Tag2 Tag3`.
+9. Stack Exchange post tags are formatted as: `<Tag1><Tag2><Tag3>`. For GitHub, they are converted to: `tags: Tag1 Tag2 Tag3`.
 
 10. The Stack Exchange title is set up as the Jekyll front matter title with the front matter variable `title:`. The blog filename is created based on the title. Optional front matter can be specified such as for URL, Votes, Last Edit Date, etc. based on the Stack Exchange post.
 
@@ -1123,7 +1166,7 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
 
 13. Stack Exchange allows leading 4 spaces for a code block. These don't work well to support the Krampdown Rouge formatting in GitHub Pages. Therefore they are converted to fenced code blocks ```` ``` bash ```` or ```` ``` python ```` depending on the "shebang" or `<!-- language...` comment.
 
-14. Stack Exchange Markdown can dynamicallly look-up the link name within SE sties. GitHub Pages does not support this feature. For example, if `[https://askubuntu.com/questions/1234567/question-title][1]`is found without a link name, it is converted to `[Question Title][1]`. This will only work if the link is to one of your own posts in your `QueryResults.csv` file.
+14. Stack Exchange Markdown can dynamically look-up the link name within SE sties. GitHub Pages does not support this feature. For example, if `[https://askubuntu.com/questions/1234567/question-title][1]`is found without a link name, it is converted to `[Question Title][1]`. This will only work if the link is to one of your own posts in your `QueryResults.csv` file.
 
 15. Stack Exchange posts which are saved on the {{ site.title }} website are converted to internal links. This minimizes clicks away from the {{ site.title }} website and presents the post in the same uncluttered format the {{ site.title }} website provides.
 
@@ -1137,8 +1180,8 @@ The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo]
 The filename for a Jekyll blog post resides in the `_posts/` directory and requires strict formatting:
 
 - Begins with date in `YYYY-MM-DD` format followed by `-`.
-- Next comes the title which has spaces repaced by `-`.
-- The forward slash (`/`) character is illegal in filenames so it is replaced by division symbol (`∕`).
+- Next comes the title which has spaces replaced by `-`.
+- The forward slash (`/`) character is illegal in filenames, so it is replaced by division symbol (`∕`).
 - The extension `.md` is added to the filename.
 
 Here are the python functions which create the blog post's filename:
@@ -1186,7 +1229,7 @@ def make_output_year_dir(post_date):
 
 Pseudo tags are created in front matter when a keyword is found in an answer. If that keyword
 is not a tag for the question already then it is added as a tag in front matter. Normally in
-Stack Exchange tags are only defined for the question. However you might want to use tags
+Stack Exchange tags are only defined for the question. However, you might want to use tags
 that highlight your answer. That is what "Pseudo Tags" are for.
 
 Let's say for example you include a lot of Conky displays in your answers to illustrate
