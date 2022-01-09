@@ -760,13 +760,7 @@ def check_half_links(ln):
             total_bad_half_links += 1
             # We don't normally get here. We do when the convoluted chain is called:
             # check_tail_links -> check_no_links -> check_full_links -> check_half_links
-            # TODO: Run this on January 9, 2022 after Data Dump to make sure only 1 error
-            #       is left over.
-            # Long Term TODO: Perform trace to see if called from check_full_links()
-            #                 which is called from check_no_links() which was called
-            #                 from check_tail_links() and if so create new error for
-            #                 total_bad_no_links += 1.
-            if "?aVOnF.jpg" in parts[3]:
+            if "aVOnF.jpg" in parts[3]:
                 percent_complete_close()
                 print()
                 print('LINK Not Found:', html_search)

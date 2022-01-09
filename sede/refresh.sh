@@ -10,12 +10,14 @@
 # Requires two directories ~/website (development directory) and
 # ~/website2 (the published clone)
 
-# Make sure creditials are stored https://stackoverflow.com/a/17979600/6929343
+# Make sure credentials are stored https://stackoverflow.com/a/17979600/6929343
 
 #       $ git config credential.helper store
 #       $ git push http://example.com/repo.git
 #       Username: <type your username>
 #       Password: <type your password>
+
+QUERY="~/Downloads/QueryResults.csv"
 
 if [ ! -d ~/website ] ; then 
     echo Requires directories ~/website and ~/website2
@@ -45,12 +47,46 @@ if [ $retVal -ne 0 ]; then
     exit $retVal
 fi
 
-cd ~/website/sede
+cd ~/website/sede || exit  1  # In case it fails
 
 cp ~/website2/_config.yml ../
+
+# Generate list of Rouge supported languages
+wget -qO languages https://raw.githubusercontent.com/rouge-ruby/rouge/master/docs/Languages.md
+
+> rouge_languages.txt  # Empty old file
+
+while read -r line; do
+  sub=$(echo "$line" | awk -F'`' '{print $2}')
+  # Get everything between '
+  if [[ $sub ]] ; then
+    # Was something found between '
+    echo "$sub" >> rouge_languages.txt
+  fi
+done <languages
+
+echo "bash" >> rouge_languages.txt  # Should be there? Maybe alias of "shell"?
+echo "sh" >> rouge_languages.txt    # Should be there? Maybe alias of "shell"?
+echo "text" >> rouge_languages.txt  # Should be there?
+echo "python3" >> rouge_languages.txt  # Tested and it works in rouge
+
+# mv ~/Downloads/QueryResults.csv .
+if [[ -e "$QUERY" ]] ; then
+    mv "$QUERY" QueryResults.csv
+    echo
+    echo "Moving QueryResults.csv from: $QUERY"
+fi
+
+# One Time changes between weekly stack exchange data dumps
+# In this example change language "basic" to "vb" for rouge
+sed -i 's/lang-basic/lang-vb/g' QueryResults.csv
+
 echo
-echo "Running ~/website/sede/stack-to-blog.py"
+echo "Running: ~/website/sede/stack-to-blog.py"
+
+### BIG TICKET EVENT ###
 stack-to-blog.py
+
 retVal=$?
 if [ $retVal -ne 0 ]; then
     echo "git pull FAILED with code: $retVal"
@@ -88,6 +124,19 @@ if [ $retVal -ne 0 ]; then
     exit $retVal
 fi
 
+# Refresh stack-to-blog and rouge_languages.txt
+cp ~/website/sede/refresh.sh sede/
+cp ~/website/sede/stack-to-blog.py sede/
+cp ~/website/sede/rouge_languages.txt sede/
+git add sede/
+retVal=$?
+if [ $retVal -ne 0 ]; then
+    echo "git add sede/ FAILED with code: $retVal"
+    exit $retVal
+fi
+
+
+
 echo
 echo "Updating Configuration file: ~/website2/_config.yml"
 
@@ -117,6 +166,13 @@ if [ $retVal -ne 0 ]; then
     exit $retVal
 fi
 
-# Change back to original directory (probably ~/website/sede)
+# Change back to original directory ~/website
 cd ~/website/sede
 
+echo
+echo "Compare Cayman Theme original to modified version"
+wget -qO original 'https://raw.githubusercontent.com/pages-themes/cayman/master/_sass/jekyll-theme-cayman.scss'
+wget -qO modified 'https://raw.githubusercontent.com/pippim/pippim.github.io/main/_sass/jekyll-theme-cayman.scss'
+diff original modified
+rm original modified
+# TODO: Save results to file and compare week-to-week for changes in diff results
