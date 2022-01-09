@@ -206,3 +206,6 @@ yaml
 yang
 zig
 bash
+sh
+text
+python3

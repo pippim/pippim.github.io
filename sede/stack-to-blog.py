@@ -250,12 +250,11 @@ FRONT_UPLOADED  = "uploaded:     "  # Date & Time this program was run
 FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
 FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
 FRONT_CLIPBOARD = "clipboard:    "  # Copy to clipboard button used? "true" or "false"
-# Variables below aren't necessary because Liquid has variables
-# See: https://stackoverflow.com/a/53251634/6929343
-FRONT_LINES     = None  # Number of lines and number of paragraphs are the same thing!
-FRONT_PARAGRAPHS = None
-FRONT_WORDS     = None
-FRONT_READ_TIME = None      # Reading Time = Number of words / 250
+ACCEPTED_STRING = "✅&ensp;Solution"
+
+# Tuple for valid Rouge Languages
+rouge_languages = ()        # Valid tuple built from rouge_languages.txt
+bad_languages = []          # Bad languages found + the link. Printed at end of job
 
 '''
 Totals for all Stack Exchange posts even those not converted
@@ -288,7 +287,6 @@ total_tag_names = []        # Tag names and counts for all the posts,
                             # Pseudo tags starts the list automatically
 total_tag_letters = []      # Tag names first letter (or digit) and counts
 tag_posts = []
-ACCEPTED_STRING = "✅&ensp;Solution"
 #tag_posts.append((str_name, r[TITLE], blog_filename, r[VIEWS, r[SCORE],
 #                 accepted, created_date_string]))
 
@@ -300,6 +298,7 @@ total_half_links = 0        # SE uses [https://…] instead of [Post Title]
 total_bad_half_links = 0    # SE half-links unresolved - not in this query
 total_tail_links = 0        # "[x]:  https://…"  replaced with ss_post_url
 total_full_links = 0        # "[https://…](https://…)"  replaced with ss_post_url
+total_bad_full_links = 0    # SE full-links unresolved - not in this query
 total_no_links = 0          # "https://…"  replaced with "[https://…](https://…)"
 total_suppress_nav = 0      # Total Navigation Bars suppressed (< NAV_LAST_WORDS)
 total_clipboards = 0        # How many copy to clipboard inserts?
@@ -315,6 +314,7 @@ total_self_answer = 0       # How many self-answered questions?
 total_self_accept = 0       # Of those, how many have been accepted?
 self_not_accept_url = []    # List of URLs not accepted
 language_forced = 0         # How many times was language fenced?
+total_bad_rouge = 0         # How many bad syntax highlighting languages
 
 '''
 Totals for single blog post - reinitialized between blog posts
@@ -530,10 +530,7 @@ def set_ss_save_blog(r):
     if r[TYPE] == "Question":
         question_count += 1
 
-        # Converted from tally_self_answer
-        # TODO: FIx: https://stackoverflow.com/questions/59621559/python-tkinter-avoid-using-root-name-in-lower-level-function
-        # Fix: https://stackoverflow.com/questions/68011128/where-to-find-usr-include-x11-extensions-xcomposite-h
-        # Question is answered by someone else and accepted. self_answer should be false
+        # Check if this is a self-answered question
         self_answer, self_accept, search_url = check_self_answer(r)
         if "?17466561" in r[URL] or "?59621559" in r[URL]:
             print(search_url)
@@ -621,39 +618,12 @@ def header_space(ln):
     if in_code_block or in_code_indent:
         return ln
 
-    # Kind of silly accepting parameter ln already known to be
-    # lines[line_index]
-    if line_index == len(lines) - 1:
-        return ln  # We are on the last line
-
     if ln[0:1] == "#":
         #print('Found header:', ln)
         header_count += 1   # For current post, reset between posts
         # How many '#' are there at line start?
         hash_count = len(ln) - len(ln.lstrip('#'))
         if hash_count > 6:
-            print('Hash count > 6:', hash_count)
-            print('in_code_block:', in_code_block,
-                  '| in_code_indent:', in_code_indent)
-            if row[URL] == "https://askubuntu.com/q/835994":
-                print(row[MARKDOWN])
-                print(lines)
-            # eg: 2016-10-12-Command-line-snake-game?.md
-            #     ###########################END OF FUNCS##########################
-
-            # Shouldn't get this error because inside code indent
-            ''' Also at bottom of file:
-                    done
-        
-                    ```
-                    
-                    ```
-                      [1]: http://wp.subnetzero.org/?p=269
-                    ```
-                    
-                    ```
-            '''
-            dump(row)
             return ln
 
         # Is first character after "#" a space?
@@ -739,9 +709,6 @@ def check_half_links(ln):
               [1]: https://www.google.com/
               [yahoo]: https://www.yahoo.com/
 
-        TODO:
-            Substitute HREF from SE post to G-H post if it exists.
-
     """
     global total_half_links, total_bad_half_links, half_links, bad_half_links
 
@@ -790,9 +757,33 @@ def check_half_links(ln):
         # end-1 can have / which messes up .find
         found_start = row[HTML].find(html_search)  # where <a href=" link starts
         if found_start == -1:
-            print('LINK Not Found:', html_search)
-            print(parts)
-            print(row[HTML])
+            total_bad_half_links += 1
+            # We don't normally get here. We do when the convoluted chain is called:
+            # check_tail_links -> check_no_links -> check_full_links -> check_half_links
+            # TODO: Run this on January 9, 2022 after Data Dump to make sure only 1 error
+            #       is left over.
+            # Long Term TODO: Perform trace to see if called from check_full_links()
+            #                 which is called from check_no_links() which was called
+            #                 from check_tail_links() and if so create new error for
+            #                 total_bad_no_links += 1.
+            if "?aVOnF.jpg" in parts[3]:
+                percent_complete_close()
+                print()
+                print('LINK Not Found:', html_search)
+                print(parts)
+                print(row[LINK])
+                print(row[HTML])
+
+            # Example:
+            # https://askubuntu.com/q/1018515|Samsung TV "Mirror Screen"
+            # MARKDOWN:
+            # [<img src="https://i.stack.imgur.com/aVOnF.jpg" width="125" height="180" alt="IMG: " title="">][3]
+            #   [3]: https://i.stack.imgur.com/jxpfj.png
+            # HTML:
+            # <p><a href="https://i.stack.imgur.com/jxpfj.png" rel="nofollow no referrer">
+            # <img src="https://i.stack.imgur.com/aVOnF.jpg" width="125" height="180"
+            # alt="IMG: " title=""></a></p>
+
             break
         found_start += 9
 
@@ -871,7 +862,7 @@ def check_tail_links(ln):
         return ln
 
     if not ln[:3] == "  [":
-        # Must start with "  ["
+        # Line must start with "  [x]: https://..."
         # Perfect time to check for no links as it would normally break this
         # function, check_tail_links(), with a false positive.
         return check_no_links(ln)
@@ -899,34 +890,9 @@ def check_no_links(ln):
         a tail link.
 
         This function must be called BEFORE check_full_links which
-        will fix up the link name if it is in Pippim's website.
+        will fix up the link name if it is in Pippim website.
 
         Written to fix problem in: https://askubuntu.com/a/1195782/307523
-
-You can probably disable network waiting altogether:
-
-- https://askubuntu.com/questions/1018576/what-does-networkmanager-wait-online-service-do/1018731#1018731
-
-Remove the journal flush service and vacuum it instead:
-
-- https://askubuntu.com/questions/1094389/what-is-the-use-of-systemd-journal-flush-service/1094543#1094543
-- https://askubuntu.com/questions/1012912/systemd-logs-journalctl-are-too-large-and-slow/1012913#1012913
-
-Slow `snapd` times can be sped up by jiggling your mouse at boot time:
-
-- https://askubuntu.com/questions/1051762/long-boot-delay-on-ubuntu-loading-splash-screen
--following-regular-dist-upgrade-o
-
-
-TODO: Breaks on: https://unix.stackexchange.com/posts/415479/edit
-
-If your regular updates do not install the Kernel version you desire
-you can do it manually following this Ask Ubuntu answer:
-[https://askubuntu.com/questions/879888/how-do-i-update-kernel-to-the-latest-
-mainline-version/879920#879920][7]
-
-char_before is [ so this should have been skipped.
-last_char is ] so this should have been skipped.
 
     """
 
@@ -945,7 +911,7 @@ last_char is ] so this should have been skipped.
             break  # No more hyperlinks found
 
         # To qualify character before must not be [ or (
-        char_before = "?"  # Must set if debug printing below
+        # char_before = "?"  # Uncomment when debug printing
         if name_start > 1:
             char_before = ln[name_start - 1:name_start]
             if char_before in wrap_chars:
@@ -991,7 +957,7 @@ def check_full_links(ln):
 
     """
 
-    global total_full_links
+    global total_full_links, total_bad_full_links
 
     if in_code_block or in_code_indent:
         return ln
@@ -1036,13 +1002,26 @@ def check_full_links(ln):
         post_url, search_url = check_html_substitute(found)
         if post_url is not None:
             total_full_links += 1
-            old_ln = ln
             search_str = "[" + name + "]"
             replace_str = "[" + ss_title + "]"
             ln = ln.replace(search_str, replace_str)
             search_str = "(" + found + ")"
             replace_str = "(" + ss_post_url + ")"
             ln = ln.replace(search_str, replace_str)
+        else:
+            # Not in Pippim website so check if in HTML
+            old_ln = ln
+            ln = check_half_links(ln)
+            if ln != old_ln:
+                total_full_links += 1
+            else:
+                total_bad_full_links += 1
+                # print('no_link -> full_lin -> half link SUCCESS')
+                # print(ln)
+            # Read HTML to fix:
+            # https://askubuntu.com/questions/880188/gnome-terminal-will-not-start
+            # https://askubuntu.com/questions/880188/gnome-terminal-will-not-start
+            pass
 
         last_start = name_end  # Next link to search for
 
@@ -1329,23 +1308,31 @@ def check_pseudo_tags(ln):
 
 
 def check_shebang():
-    """ Check shebang's language """
-    # Kind of silly accepting parameter ln already known to be
-    # lines[line_index]
+    """ Check shebang's language
+            #!/usr/bin/env python
+
+        shebangs cannot contain:
+            #!/usr/bin/env python  # Can you type more stuff?
+    """
     if line_index == len(lines) - 1:
         return None  # We are on the last line
 
     ln = lines[line_index + 1]  # Get next line
 
-    if ln.startswith('#!/bin/') or ln.startswith('#!/usr/bin/env'):
-        if "bash" in ln:
-            return "bash"
-        if "sh" in ln:
-            return "sh"
-        if "python" in ln:
-            return "python"
+    if not ln.startswith('#!/'):
+        return None
 
-    return None
+    ln = ln.rstrip()    # Don't worry, it's not updated
+    parts = ln.split()  # Might be trailing spaces
+    count = len(parts)
+    if count == 2 and not ln.startswith('#!/bin/'):
+        she = parts[1]
+    else:
+        parts = ln.split('/')  # Might be trailing spaces
+        she = parts[len(parts) - 1]
+        she = she.split()[0]   # Just in case -x, -i parameter, etc.
+
+    return she.lower()
 
 
 def check_code_block(ln):
@@ -1381,6 +1368,8 @@ def check_code_block(ln):
               ```` 
     '''
 
+    global total_bad_rouge
+
     if in_code_indent:
         return ln
 
@@ -1410,9 +1399,17 @@ def check_code_block(ln):
             she_language = check_shebang()
             if she_language:
                 this_language = she_language
+            # TODO: Figure out language used
+            # Need to change "vba" to "basic"
+            # See: https://askubuntu.com/q/1021152
             if ln[-1] == "`" or ln[-1] == " ":
                 ln += " " + this_language
                 language_forced += 1
+            # Check if 'this_language' is valid.
+            if this_language not in rouge_languages and this_language != '':
+                bad_languages.append((this_language, row[LINK]))
+                total_bad_rouge += 1
+                # Need to change "vba" to "basic"
         else:
             in_code_block = False       # Code block has ended
 
@@ -1456,7 +1453,6 @@ def check_code_indent(ln):
             # #!/bin/bash
             # #!/bin/.... (python anywhere in line)
             this_language = language_used
-            # TODO Check past boundary
             she_language = check_shebang()
             if she_language:
                 this_language = she_language
@@ -1467,15 +1463,49 @@ def check_code_indent(ln):
             ln = ln[4:]     # Remove first four characters
             # print('ln:', ln)
     elif in_code_indent:
-        # if len(ln) > 0:
-        # TODO: Must have at least one character to end code indent
         # Because code indents can have empty spacing lines
         # However if line after this is regular text we do want to
         # end now
+        stripped_line = ln.strip()
+        if stripped_line == "":
+            # This is an empty line, allowed in indented code block
+            if indented_code_block_ahead():
+                # Another indented code block line immediately coming up
+                # EG: https://askubuntu.com/q/1164186
+                #percent_complete_close()
+                #print(row[LINK])
+                return ln  # Return empty line
         in_code_indent = False  # Code indent has ended
-        ln += "\n```\n"  # Add ending code block
+        ln += "\n```\n"         # Add ending fenced code block
 
     return ln
+
+
+def indented_code_block_ahead():
+    """ We are checking indented code block and found line that
+        doesn't begin with four spaces.
+
+        Look ahead to see if a regular markdown line is next up. If so we will
+        end our code block now.
+
+        Return True if another indented code block line is in our future else
+        return False.
+
+    """
+    next_index = line_index + 1
+    while True:
+        if next_index >= line_count - 1:
+            # Hit end of post without finding another indented code block
+            return False
+        next_line = lines[next_index].rstrip()
+        if next_line[0:4] == "    ":
+            # next_line is an indented code block
+            return True
+        if len(next_line) >= 1:
+            # next_line is not indented code block
+            return False
+        # next_line is empty which is allowed for indented code block
+        next_index += 1
 
 
 def check_copy_code(this_index):
@@ -2597,24 +2627,23 @@ def one_config_line(config, key, value):
     config.append(full + value)
 
 
-debug = False
+percent_complete_closed = False
 
 
 def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True):
     """
-        Converted from Bash script: ~/sony/tvpowered
+        See: https://stackoverflow.com/a/70586588/6929343
     """
-    import sys
-    if debug:
+    if percent_complete_closed:
         return                      # printing debug lines, no progress bar
 
-    fill = "▒"                      # Fill up to $Len
-    utf_8s = ["▉", "▎", "▌", "▊"]   # UTF-8 left blocks: 7/8, 1/4, 1/2, 3/4
+    # UTF-8 left blocks: 4/4, 1/8, 1/4, 1/2, 5/8, 3/4, 7/8
+    utf_8s = ["█", "▏", "▎", "▍", "▌", "▋", "▊", "█"]
     perc = 100 * float(step) / float(total_steps)
-    max_ticks = bar_width * 4
+    max_ticks = bar_width * 8
     num_ticks = int(round(perc / 100 * max_ticks))
-    full_ticks = num_ticks / 4      # Number of full blocks
-    part_ticks = num_ticks % 4      # Size of partial block (array index)
+    full_ticks = num_ticks / 8      # Number of full blocks
+    part_ticks = num_ticks % 8      # Size of partial block (array index)
 
     disp = bar = ""                 # Blank out variables
     bar += utf_8s[0] * full_ticks   # Add full blocks into Progress Bar
@@ -2624,12 +2653,15 @@ def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True)
         bar += utf_8s[part_ticks]
 
     # Pad Progress Bar with fill character
-    bar += fill * int((max_ticks/4 - float(num_ticks)/4.0))
+    bar += "▒" * int((max_ticks/8 - float(num_ticks)/8.0))
 
     if len(title) > 0:
         disp = title + ": "         # Optional title to progress display
 
+    # Print progress bar in green: https://stackoverflow.com/a/21786287/6929343
+    disp += "\x1b[0;32m"            # Color Green
     disp += bar                     # Progress bar to progress display
+    disp += "\x1b[0m"               # Color Reset
     if print_perc:
         # If requested, append percentage complete to progress display
         if perc > 100.0:
@@ -2640,13 +2672,17 @@ def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True)
     sys.stdout.write("\r" + disp)
     sys.stdout.flush()
 
-    if row_number == 10000:
-        print()
-        print('title:', "'" + title + "'", 'step:', step, 'total_steps:', total_steps)
-        print('len(bar):', len(bar), 'num_ticks:', num_ticks, 'max_ticks:', max_ticks)
-        print('full_ticks:', full_ticks, 'part_ticks:', part_ticks)
-        print('perc:', perc)
-        fatal_error("debug progress bar")
+
+def percent_complete_close():
+    """ Remove percent complete progress bar display
+        Call this when you want to print something else to terminal
+    """
+    global percent_complete_closed
+    if percent_complete_closed:
+        return                      # printing debug lines, no progress bar
+    percent_complete_closed = True
+    sys.stdout.write("\r\x1b[K")
+    sys.stdout.flush()
 
 
 ''' INITIALIZATION
@@ -2668,6 +2704,10 @@ if FRONT_URL is not None:
         fatal_error('When FRONT_URL is used then FRONT_SITE is required.')
     if FRONT_TYPE is None:
         fatal_error('When FRONT_URL is used then FRONT_TYPE is required.')
+
+# Read Rouge Languages into tuple
+file = open("rouge_languages.txt", 'r')
+rouge_languages = tuple(map(str.rstrip, file))
 
 # Read CSV file into list
 with open(INPUT_FILE) as csv_file:
@@ -2705,7 +2745,7 @@ for tag in PSEUDO_TAGS:
 create_speed_search()
 
 ''' MAIN LOOP to process All query records
-    ======================================
+    ==========================================================================
 
     - Match criteria for answer up votes or accepted check mark
     - Check if in fenced code block (``` bash) for example. If not then:
@@ -2975,8 +3015,24 @@ for row in rows:
     elif save_blog is True:
         write_md(row, new_md)
 
+    # END OF: for row in rows:
+
+
+''' END OF JOB
+    ==========================================================================
+
+    - Generate Top Ten Answers html using gen_top_posts()
+    - Generate Tags by Post html using gen_post_by_tag_groups()
+    - Close progress display with percent_complete_close()
+    - Print self-answered questions no accepted list
+    - Print Rouge syntax highlighting language not supported list
+'''
+
 gen_top_posts()             # Generate top ten posts
 gen_post_by_tag_groups()    # Generate list of posts in smaller tagged groups
+
+# Erase progress bar
+percent_complete_close()
 
 if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
     print()
@@ -2986,7 +3042,17 @@ if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
         print('URL:', url)
     print('')
 
-# Uses CONFIG_YML = "../_config.yml"
+if len(bad_languages) > 0:
+    print()
+    print('// ==============/   Languages not supported by Rouge   \\================ \\\\')
+    print('')
+    for bad_tuple in bad_languages:
+        print('Invalid Rouge:', "'" + bad_tuple[0] + "'", 'Link:', bad_tuple[1])
+    print('')
+
+# print("# of rouge_languages:", len(rouge_languages))
+
+# update_confg() uses CONFIG_YML = "../_config.yml"
 update_config()
 
 if RANDOM_LIMIT is None:
@@ -2994,11 +3060,6 @@ if RANDOM_LIMIT is None:
 else:
     # noinspection PyStringFormat
     random_limit = '{:>6,}'.format(RANDOM_LIMIT)
-
-# Erase progress bar
-if not debug:
-    sys.stdout.write("\r")
-    sys.stdout.flush()
 
 print('// =============================/   T O T A L S   \\============================== \\\\')
 print('Run-time options:\n')
@@ -3046,8 +3107,7 @@ print('total_tail_links:  {:>5,}'.format(total_tail_links),
                                             total_bad_half_links))
 print('total_no_links:    {:>5,}'.format(total_no_links),
       ' | total_full_links:    {:>5,}'.format(total_full_links),
-      ' | Bad No Links:      {:>7,}'.format(total_no_links -
-                                            total_full_links))
+      ' | total_bad_full_links{:>6,}'.format(total_bad_full_links))
 # Note "Bad No Links" only accurate when full_links aren't native in posts
 # and are created internally by stack-to-blog.py. Therefore, a negative total
 # is possible when [https://...](https://...) appears in a post.
