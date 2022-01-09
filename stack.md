@@ -698,11 +698,11 @@ answer_count: "1,073 "
 accepted_count: "491 "
 ```
 
-You can use these variables in your website. For example the following code...
+You can use these variables in your website. For example the following code: ...
 
 {% raw %}
 ```
-- As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers 
+< As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers 
 have over **{{ site.views_human }} views!**
 ```
 {% endraw %}
@@ -884,7 +884,7 @@ EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
                  "Medical Sciences", "Ask Ubuntu Meta"]
 ```
 
-Then at the bottom of the `save_blog` function you will see:
+Then at the bottom of the `set_ss_save_blog` function you will see:
 
 ``` python
 def set_ss_save_blog(r):
@@ -926,6 +926,7 @@ on they are read in the initialization section.
 
 The initialization section in `stack-to-blog.py` can be found by searching for:
 
+{% raw %}
 ``` python
 ''' MAIN LOOP to process All query records
     ==========================================================================
@@ -948,6 +949,7 @@ The initialization section in `stack-to-blog.py` can be found by searching for:
     - If RANDOM_LIMIT is used then only output matching random_rec_nos []
 '''
 ```
+{% endraw %}
 
 - Just above the **MAIN LOOP** is the initialization section
 
@@ -1098,12 +1100,9 @@ When Pass 2 loop over every `line` in the `lines` finishes,
 the blog post footer section is written.
 
 Finally, depending on the [random record limit](#random_record_limit),
-the file is flushed to disk or simply discarded if it is not to be saved.
+the file is saved to local storage or, simply discarded if it is not to be saved.
 
 Then the next `row` from `rows` is read and pass 1 starts over again.
-
-<a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
 
 <a id="hdr24"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr23" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr25" class="hdr-btn">Skip</a></div>
@@ -1223,6 +1222,14 @@ The filename for a Jekyll blog post resides in the `_posts/` directory and requi
 - The forward slash (`/`) character is illegal in filenames, so it is replaced by division symbol (`∕`).
 - The extension `.md` is added to the filename.
 
+The `slugify` liquid function would change a title from:
+
+    How do I change CLI/Command Line Interface prompt from `$` to percent sign (%)?
+
+to:
+
+    {{ "How do I change CLI/Command Line Interface prompt from `$` to percent sign (%)?" | slugify }}
+    
 Here are the python functions which create the blog post's filename:
 
 {% include copyHeader.html %}
