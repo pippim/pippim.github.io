@@ -8,11 +8,11 @@ type:         Answer
 tags:         usb 18.04
 created_date: 2018-07-15 23:56:01
 edit_date:    2020-12-19 09:02:59
-votes:        "8 "
+votes:        "9 "
 favorites:    
-views:        "7,617 "
+views:        "7,672 "
 accepted:     Accepted
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    false

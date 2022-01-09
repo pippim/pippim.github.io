@@ -8,11 +8,11 @@ type:         Answer
 tags:         console tty fonts
 created_date: 2018-07-13 00:09:43
 edit_date:    
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "199,090 "
+views:        "199,582 "
 accepted:     
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    false

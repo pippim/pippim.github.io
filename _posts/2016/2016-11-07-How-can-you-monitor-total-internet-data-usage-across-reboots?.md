@@ -8,11 +8,11 @@ type:         Answer
 tags:         networking system-monitor bandwidth vnstat conky
 created_date: 2016-11-07 04:50:28
 edit_date:    2017-10-31 23:50:16
-votes:        "60 "
+votes:        "61 "
 favorites:    
-views:        "92,821 "
+views:        "93,064 "
 accepted:     
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    false

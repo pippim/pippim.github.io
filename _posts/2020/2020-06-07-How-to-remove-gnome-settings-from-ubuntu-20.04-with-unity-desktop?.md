@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1247933
 type:         Answer
 tags:         20.04
 created_date: 2020-06-07 15:25:55
-edit_date:    2020-06-07 16:41:47
+edit_date:    2022-01-06 12:41:10
 votes:        "6 "
 favorites:    
-views:        "3,012 "
+views:        "3,035 "
 accepted:     
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    false
@@ -34,7 +34,7 @@ This works for for Ubuntu **16.04** to **20.04** and even **20.10** (Groovy). So
 ----------
 
 
-Although article is written for Ubuntu **16.04**, you can verify the package is still around for **20.04** (called Focal) by visiting [https://packages.ubuntu.com/focal/ubuntu-gnome-desktop:](https://packages.ubuntu.com/focal/ubuntu-gnome-desktop:)
+Although article is written for Ubuntu **16.04**, you can verify the package is still around for **20.04** (called Focal) by visiting [Package: ubuntu-gnome-desktop](https://packages.ubuntu.com/focal/ubuntu-gnome-desktop):
 
 [![ubuntu-gnome-deskop package.png][2]][2]
 

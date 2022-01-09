@@ -8,11 +8,11 @@ type:         Answer
 tags:         usb thunderbolt
 created_date: 2017-12-10 23:12:08
 edit_date:    2020-06-12 14:37:07
-votes:        "12 "
+votes:        "13 "
 favorites:    
-views:        "23,823 "
+views:        "23,930 "
 accepted:     Accepted
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          true
 navigation:   true
 clipboard:    true

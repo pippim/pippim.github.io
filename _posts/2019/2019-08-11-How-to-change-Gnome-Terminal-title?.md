@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line gnome-terminal titlebar
 created_date: 2019-08-11 00:45:50
 edit_date:    2021-04-07 01:20:21
-votes:        "10 "
+votes:        "11 "
 favorites:    
-views:        "247,481 "
+views:        "247,897 "
 accepted:     
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    false

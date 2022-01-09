@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1045314
 type:         Answer
 tags:         server permissions mysql
 created_date: 2018-06-10 14:44:30
-edit_date:    2020-06-12 14:37:07
+edit_date:    2022-01-02 20:37:14
 votes:        "3 "
 favorites:    
-views:        "6,414 "
+views:        "6,422 "
 accepted:     Accepted
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    false
@@ -46,7 +46,7 @@ GRANT SELECT ON *.* TO 'username'@'localhost';
 
 ```
 
-For more information about setting MySQL database permissions, please visit [https://dev.mysql.com/doc/refman/5.5/en/grant.html](https://dev.mysql.com/doc/refman/5.5/en/grant.html)
+For more information about setting MySQL database permissions, please visit [MySQL - 13.7.1.6 GRANT Statement](https://dev.mysql.com/doc/refman/5.5/en/grant.html).
 
 Type `\q` to exit the mysql program.
 
@@ -89,7 +89,7 @@ Much more can be found in the tutorial linked above such as:
 
 ## More Information
 
-To view the official MySQL documentation, please visit [https://dev.mysql.com/doc/refman/5.5/en/grant.html](https://dev.mysql.com/doc/refman/5.5/en/grant.html)
+To view the official MySQL documentation, please visit [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/5.5/en/index.html).
 
 
   [1]: https://www.a2hosting.com/kb/developer-corner/mysql/managing-mysql-databases-and-users-from-the-command-line

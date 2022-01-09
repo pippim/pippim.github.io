@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot grub2 raid
 created_date: 2017-01-09 02:25:25
 edit_date:    2017-03-20 10:18:11
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "23,626 "
+views:        "23,785 "
 accepted:     
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    true

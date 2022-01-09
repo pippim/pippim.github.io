@@ -7,18 +7,18 @@ stack_url:    https://askubuntu.com/q/843198
 type:         Answer
 tags:         kernel
 created_date: 2016-10-29 14:51:48
-edit_date:    2017-04-13 12:23:52
+edit_date:    2022-01-05 17:20:13
 votes:        "6 "
 favorites:    
-views:        "30,526 "
+views:        "30,731 "
 accepted:     
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-# Kernel Version . Major Revision . Minor Revision - Patch
+### Kernel Version . Major Revision . Minor Revision - Patch
 
 Using **w.xx.y-zzz** and looking at the fourth file listed `/boot/vmlinuz-4.4.0-45` we can say:
 
@@ -27,22 +27,22 @@ Using **w.xx.y-zzz** and looking at the fourth file listed `/boot/vmlinuz-4.4.0-
  - **y** = Minor Revision = 0
  - **zzz**=Patch number = 45
 
-If someone is using `4.8.0` which Ubuntu 16.10 ships with and encounters screen flickering they might say "I used the previous version 4.4.0-45" (which Ubuntu 16.04 uses) to fix the problem.
+If someone is using `4.8.0`, which Ubuntu 16.10 ships with, and encounters screen flickering they might say "I used the previous version 4.4.0-45" (which Ubuntu 16.04 uses) to fix the problem.
 
-In layman's terms is correct but technically it was a downgrade four major revision levels (4.8.y-z) to (4.4.y-z). Technically speaking to move from kernel version 4.8 to a previous kernel version it would have to be 3.2 or 3.13 using the file listing show in OP.
+In layman's terms, this is correct but technically it was a downgrade four major revision levels (4.8.y-z) to (4.4.y-z). Technically speaking, to move from kernel version 4.8 to a previous kernel version it would have to be 3.2 or 3.13 using the file listing shown in the OP.
 
-# Edit - Segment name changes after Kernel 3.0
+### Segment name changes after Kernel 3.0
 
 The above definitions come from: ([Kernel Version Numbering][1]) published May 9, 2006 but are now obsolete.
 
-As the duplicate comment link ([What does the fourth number in the release version mean?][2]) states the new names are:
+As the duplicate comment link ([What does the fourth number in the release version mean?][2]) states, the new names are:
 
 ``` 
 <base kernel version>.<ABI number>.<upload number>-<flavour>
 
 ```
 
-The proposed duplicate appears to be wrong because the second segment in the Kernel Version number seems to have nothing to do with `ABI`. In the other answer posted in this thread the fourth segment is tied to `ABI` but that doesn't seem right either. Here's the top of the list of ABI changes from ([Linux Kernel ABI Timeline][3]):
+The proposed duplicate appears to be wrong because the second segment in the kernel version number seems to have nothing to do with `ABI`. In the other answer posted in this thread the fourth segment is tied to `ABI` but that doesn't seem right either. Here's the top of the list of ABI changes from ([Linux Kernel ABI Timeline][3]):
 
 ``` 
                 ----- Symbols -----
@@ -67,7 +67,7 @@ Version	Date    Added Removed Total
 
 ```
 
-# ABI number
+### ABI number
 
 From `wiki.ubuntu` we learn:
 
@@ -79,7 +79,7 @@ From `wiki.ubuntu` we learn:
 > make use of subsystems in the kernel for memory management, device  
 > interfaces, filesystems (VFS), networking stacks, etc.  
 
-# Summary of Linux Kernel Version Numbering
+### Summary of Linux Kernel Version Numbering
 
 From perhaps the most definitive source ([wikipedia.org - Linux Kernel Version Numbering][4]) we learn:
 

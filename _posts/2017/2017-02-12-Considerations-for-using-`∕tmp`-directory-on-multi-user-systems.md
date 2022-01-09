@@ -8,11 +8,11 @@ type:         Question
 tags:         bash directory tmp multi-user single-user
 created_date: 2017-02-12 16:45:03
 edit_date:    
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "372 "
+views:        "376 "
 accepted:     Accepted
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    false

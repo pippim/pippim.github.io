@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1337013
 type:         Answer
 tags:         18.04 bash python xdotool zenity
 created_date: 2021-05-08 19:07:14
-edit_date:    
+edit_date:    2022-01-08 00:02:09
 votes:        "5 "
 favorites:    
-views:        "602 "
+views:        "615 "
 accepted:     
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    false
@@ -30,10 +30,10 @@ zenity --forms --title="Question" \
 To:
 
 ``` bash
-#!/usr/bin/bash
+#!/bin/bash
 
 zenity --forms --title="Question" \
    --add-entry="Question" \
 ```
 
-`zenity` is not a python command, it is a bash/shell command so your shebang (first line) must be `#!/usr/bin/bash` not `#!/usr/bin/python`.
+You are not calling `zenity` within a python script. You are calling it from a bash/shell command so your shebang (first line) must be `#!/bin/bash` not `#!/usr/bin/python`.

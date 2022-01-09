@@ -8,11 +8,11 @@ type:         Answer
 tags:         display laptop brightness xrandr alienware
 created_date: 2019-06-12 00:00:39
 edit_date:    2021-01-04 23:56:25
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "4,870 "
+views:        "4,941 "
 accepted:     
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    true

@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1021152
 type:         Answer
 tags:         libreoffice style
 created_date: 2018-04-01 20:56:11
-edit_date:    2020-06-12 14:37:07
+edit_date:    2022-01-08 04:23:24
 votes:        "4 "
 favorites:    
-views:        "615 "
+views:        "621 "
 accepted:     Accepted
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          true
 navigation:   true
 clipboard:    true
@@ -170,7 +170,7 @@ I spent a few days attempting to record a macro using "Tools" -> "Macros" -> "Re
 
 
 {% include copyHeader.html %}
-``` vba
+``` basic
 Sub ChangeAllFonts
     rem - Change all font names to Ubuntu.
     rem - If heading 1 set font size to 28

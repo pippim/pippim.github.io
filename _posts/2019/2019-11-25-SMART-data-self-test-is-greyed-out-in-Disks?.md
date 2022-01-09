@@ -8,11 +8,11 @@ type:         Answer
 tags:         disk smart
 created_date: 2019-11-25 12:26:14
 edit_date:    
-votes:        "10 "
+votes:        "11 "
 favorites:    
-views:        "10,314 "
+views:        "10,414 "
 accepted:     
-uploaded:     2022-01-09 05:38:31
+uploaded:     2022-01-09 05:43:54
 toc:          false
 navigation:   false
 clipboard:    false
