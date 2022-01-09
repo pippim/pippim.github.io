@@ -27,7 +27,7 @@ own Stack Exchange posts to your own website.**
 There are no ads on {{ site.title }}. You don't need to buy 
 {{ site.title }} a coffee (it's already free at work!).
 Maybe some day you'll want to put all your
-technical documentation on an intranet or website and you will contract
+technical documentation on an intranet or website. Perhaps you will contract
 {{ site.title }} to help get the job done. Custom projects are the business
 model for how {{ site.title }} will earn revenue.
 
@@ -35,12 +35,17 @@ If you are an aspiring developer perhaps
 the code published here will help you get a start. 
 If you are a systems administrator perhaps you
  can learn from the questions and answers posted 
-here. If in Technical Support remember "Google search is your friend" and many answers posted here come from using the *Google Search* engine.
+here. If in Technical Support remember "Google search 
+is your friend" and many answers posted here come from
+using the *Google Search* engine.
 
 
 ## Navigation Buttons
 
-In this section we will discuss the *Page Navigation Buttons* that appear on the top of each page. Then we will discuss the *Section Navigation Buttons* that can appear at the top of major sections.
+In this section we will discuss the *Page Navigation 
+Buttons* that appear on the top of each page. Then 
+we will discuss the *Section Navigation Buttons* 
+that can appear at the top of major sections.
 
 ### Page Navigation Buttons
 
@@ -48,11 +53,11 @@ The top of each page contains navigation buttons to take you to other pages:
 
 - <kbd>⌂ Home</kbd> brings you to this page.
 
-- <kbd>❓ About</kbd> disccusses everything you want to know about {{ site.title }}. Still have questions? Just email.
+- <kbd>❓ About</kbd> discusses everything you want to know about {{ site.title }}. Still have questions? Just email.
 
 - <kbd>✅ Answers</kbd> to questions people have using computers. As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers have over **{{ site.views_human }} views!**
 
-- <kbd>💻 Programs</kbd> are applicationss {{ site.title }} created to make your life easier.
+- <kbd>💻 Programs</kbd> are applications {{ site.title }} created to make your life easier.
 
 - <kbd>📧 Email</kbd> lets you send an email to {{ site.title }}.
 
@@ -75,11 +80,14 @@ The top of major sections contain navigation buttons to take you to other sectio
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
 ## Get in Touch
 
-There are many ways of getting in touch with {{ site.title }}. The conventional way via email and on other websites. The direct method on Stack Exchange Answers or GitHub Repos.
+There are many ways of getting in touch with {{ site.title }}. 
+The conventional way via email and on other websites. The direct 
+method on Stack Exchange Answers or GitHub Repos.
 
 ### The Conventional Way of Getting in Touch
 
-Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
+Get in touch with pippim by sending an email. You can also visit
+the other pippim.com website on Google Sites.
 
 <-- Change Pippim to your contact info below -->
 - [📧 Send an Email to Pippim 🔗](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com 🔗")
@@ -94,14 +102,19 @@ Leaving a comment or question at the source such as Stack Exchange answer or Git
 
 ![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: style="float: left" height="20%" width="20%"}
 
-You can leave a comment or question where the Stack Exchange answer appears. Each answer on this website here has a direct link to the original answer on Stack Exchage.
+You can leave a comment or question where the Stack Exchange 
+answer appears. Each answer on this website here has a direct
+link to the original answer on Stack Exchange.
 <br clear="left"/>
 
 #### GitHub Repos
 
 ![Inspectocat detective cat with magnifying glass](/assets/img/Inspectocadt.jpeg){: style="float: left" width="20%"}
 
-For {{ site.title }} programs on GitHub Repos, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.
+For {{ site.title }} programs on GitHub Repos, you can go directly
+to the repository and post a new issue. Issues can be bug reports,
+questions, requests for new features or enhancements to existing 
+functions.
 <br clear="left"/>
 
 ---
@@ -130,7 +143,7 @@ for blog posts. You can disable the cookie using links below.
 [Block websites from storing cookies in Firefox](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
 
 {% include image.html src="/assets/img/Octocat.png"
-   alt="Octocate image by github.com"
+   alt="Octocat image by GitHub.com"
    style="float: right; width: 40%; margin: 2em 0px 0px 1em;"
    caption="Octocat image credit: 
       <a href='https://github.com/logos'>github.com logos</a>"
@@ -251,7 +264,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
 {% include image.html src="/assets/img/github pages themes.png"
-   alt="github pages themes.png"
+   alt="GitHub Pages Themes.png"
    style="float: right; width: 60%; margin: 2em 0px 0px 1em;"
    caption="Image credit:
             <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
@@ -264,20 +277,21 @@ you can pick from for your website. Spend some time reviewing your options
 before committing to one.
 
 Initially the {{ site.title }} website used the Cayman Theme for a day. Then the
-Merlot Theme was used for a week and then it came back full circle to the 
+Merlot Theme was used for a week and, then it came back full circle to the 
 Cayman Theme again.
 
 At first the Cayman Theme 
 [didn't display the page title properly](https://github.com/pages-themes/cayman/issues/134).
-Consequently the Merlot theme was used. However problems arose with the Merlot banner on
-the left not rendering properly on small screens. So it was back to Cayman and after
-changing the theme, the page title worked properly. New problems arose
-with the page buttons, <kbd>Home</kbd>, <kbd>About</kbd>, etc. With trial 
+Consequently, the Merlot theme was used. However, problems arose
+with the Merlot banner on the left not rendering properly on small
+screens. So it was back to Cayman and after changing the theme, 
+the page title worked properly. New problems arose with the page 
+buttons, <kbd>Home</kbd>, <kbd>About</kbd>, etc. With trial 
 and error however those problems were solved too.
 
 This is the first website {{ site.title }} created. The somewhat naive initial estimate
 was it would take a weekend to create. That estimate was back on 
-October 16, 2021 and today is November 16, 2021. The 
+October 16, 2021 and today is January 9 2022. The 
 moral of the story is: *"It may take longer than expected
 to set up your first website but, don't give up."* &ensp; **You can do it!** 😄
 
