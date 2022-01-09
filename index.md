@@ -361,9 +361,10 @@ which are not displayed above.
 
 ## Daily Backup
 
-Normally you will `git pull` all the directories and files from your website to your local drive.
-If you plan on developing locally, you probably want to backup your daily work. This script
-is what {{ site.title }} uses for dailiy backup to gmail.com (in the cloud, so it should be safe):
+Normally you will `git pull` all the directories and files from your website
+to your local drive. If you plan on developing locally, you probably want 
+to save your daily work. This script is what {{ site.title }} uses for 
+daily backup to gmail.com (in the cloud, so it should be safe):
 
 ``` bash
 # WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
@@ -401,8 +402,11 @@ Converting thousands of Stack Exchange Q&A in MarkDown format isn't as easy
 as simply copying them over to GitHub Pages. The python program 
 `stack-to-blog.py` was used to convert Stack Exchange posts to
 GitHub Pages Posts.
-The full `stack-to-blog.py` program can be accessed on the 
-[Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/StackQuery).
+The complete `stack-to-blog.py` program can be accessed on the 
+[Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
+
+The [**FULL DOCUMENTATION**](stack.html) for `stack-to-blog.py` used to create
+the posts on this {{ site.title }} website will help you create your own website.
 
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a></div>
