@@ -36,9 +36,12 @@ else
     commit_message="$1"
 fi
 
-echo "Commit message set to: '$commit_message'"
+echo "=== COMMIT MESSAGE set to: '$commit_message'"
 
 cd ~/website2
+
+echo
+echo "=== PULLING: ~/website2 changes to github.com"
 
 git pull
 retVal=$?
@@ -52,6 +55,8 @@ cd ~/website/sede || exit  1  # In case it fails
 cp ~/website2/_config.yml ../
 
 # Generate list of Rouge supported languages
+echo
+echo "=== RETRIEVING: Rouge Syntax Highlighting Languages list"
 wget -qO languages https://raw.githubusercontent.com/rouge-ruby/rouge/master/docs/Languages.md
 
 > rouge_languages.txt  # Empty old file
@@ -74,7 +79,7 @@ echo "python3" >> rouge_languages.txt  # Tested and it works in rouge
 if [[ -e "$QUERY" ]] ; then
     mv "$QUERY" QueryResults.csv
     echo
-    echo "Moving QueryResults.csv from: $QUERY"
+    echo "=== MOVING: QueryResults.csv from: $QUERY to ~/website/sede"
 fi
 
 # One Time changes between weekly stack exchange data dumps
@@ -82,7 +87,7 @@ fi
 sed -i 's/lang-basic/lang-vb/g' QueryResults.csv
 
 echo
-echo "Running: ~/website/sede/stack-to-blog.py"
+echo "=== RUNNING: ~/website/sede/stack-to-blog.py"
 
 ### BIG TICKET EVENT ###
 stack-to-blog.py
@@ -96,7 +101,7 @@ fi
 cd ~/website2
 
 echo
-echo "Updating: ~/website2/_posts/ and /_includes/"
+echo "=== UPDATING: ~/website2/_posts/ and /_includes/"
 
 rm -rf _posts/
 mkdir _posts/
@@ -135,10 +140,8 @@ if [ $retVal -ne 0 ]; then
     exit $retVal
 fi
 
-
-
 echo
-echo "Updating Configuration file: ~/website2/_config.yml"
+echo "=== UPDATING: Configuration file: ~/website2/_config.yml"
 
 cp ~/website/_config.yml .
 
@@ -157,7 +160,7 @@ if [ $retVal -ne 0 ]; then
 fi
 
 echo
-echo "Pushing ~/website2 changes to github.com"
+echo "=== PUSHING: ~/website2 changes to github.com"
 
 git push
 retVal=$?
@@ -170,7 +173,7 @@ fi
 cd ~/website/sede
 
 echo
-echo "Compare Cayman Theme original to modified version"
+echo "=== COMPARE: Cayman Theme original to modified version"
 wget -qO original 'https://raw.githubusercontent.com/pages-themes/cayman/master/_sass/jekyll-theme-cayman.scss'
 wget -qO modified 'https://raw.githubusercontent.com/pippim/pippim.github.io/main/_sass/jekyll-theme-cayman.scss'
 diff original modified
