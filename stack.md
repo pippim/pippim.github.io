@@ -465,20 +465,23 @@ the browser window.
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer download csv.png"
    alt="Stack Exchange Data Explorer Download CSV"
-   style="float: right; width: 45%; margin: 1em 0px 1em 1em;"
+   style="float: right; width: 25%; margin: 0em 0px 1em 1em;"
 %}
 
-At the top right is the <kbd>Download CSV</kbd>
-button.
+At the top right of your browser window is the <kbd>Download CSV</kbd>
+button. This will download all your questions and answers 
+from Stack Exchange to your local storage in **CSV** (**C**omma **S**eparated
+**V**alues) format. 
 
 Click this button to initiate the download process.
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer save csv.png"
    alt="Stack Exchange Data Explorer Save CSV"
-   style="float: left; width: 65%; margin: 1em 1em 1em 0px;"
+   style="float: left; width: 65%; margin: 0em 1em 1em 0px;"
 %}
 
-The download process utilizes a confirmation pop-up window:
+The download process utilizes a confirmation pop-up window
+as shown on the left.
 
 **Note:** your confirmation pop-up window will look different
 depending on your Operating System and Platform. However, 
@@ -490,43 +493,54 @@ click the <kbd>OK</kbd> button.
 In a moment the query results a file named: `~/Downloads/QueryResults.csv`.
 Note that `~` is a shortcut to your home directory.
 
+## Important Notes
+
+**Weekly Update:** When you add or revise a post in Stack Exchange 
+the data is not available
+for a query until the following Sunday at 3am UTC. 
+
+**Automated Process:** A `cron` job or GitHub Actions
+can theoretically run the query every Monday morning but that
+has not been created. You will need to log in and complete
+the steps documented above.
+
+After downloading the CSV file, you can view it in
+`~/Downloads/QueryResults.csv` with Excel or
+LibreOffice Calc.
+
+If you add or subtract columns to the query, you have to
+change the CSV fields in the `sede/stack-to-blog.py`
+python program. 
+
+Many thanks to the Stack Exchange Data Explorer Query's 
+[Modifier](https://meta.stackexchange.com/a/371435/366359).
+
 # Run `refresh.sh` Bash Script
 
 The `refresh.sh` bash script will both **pull** and **push** your
 GitHub Repo (Repository) and update your blog posts with Stack Exchange
 posts inbetween.
 
+{% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
+   alt="stack-to-blog.py"
+   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+   caption="Progress Display Bar whilst `stack-to-blog.py` runs" 
+%}
+
 In addition to updating your Stack Exchange posts into your website it will:
 
+- Sanity checks to ensure the directories `~/website` (Working / Development version of your website) and `~/website2` (Your GitHub Repo production version stored locally) exist
+- If you don't pass a parameter, initializes commit message to `"Refresh website on: $now"`
 - Generate a list of Rouge Syntax Highlighting Languages supported
 - Move `~/Downloads/QueryResults.csv` to the `~/website/sede` directory
-- Run `stack-to-blog.py` python program
-- Update Top Ten Answers stored in `_includes/`
+- Run `~/website/stack-to-blog.py` python program
+- Update the latest development copies of `refresh.sh`, `stack-to-blog.py` and `rouge_languages.txt` to the production `sede/` directory on GitHub.
+- Update Top Ten Answers stored in `_includes/posts_by_vote.html`
+- Update Posts by Tag stored in `_includes/posts_by_tag.html`
+- Generate a fresh `tree` listing stored in `_includes/website_tree`
+- Update Site-Wide Front Matter stored in `_config.yml`
+- Compares the changes made to Cayman Theme. Watch this output to know when Cayman Theme has changed.
 
-- Navigate back to this page
-- Click the link again to run the query
-
-Many thanks to the query's [Modifier](https://meta.stackexchange.com/a/371435/366359).
-
-**IMPORTANT:** When you add or revise a post in Stack Exchange 
-the data is not available
-for a query until Sunday at 3am UTC. A `cron` job or GitHub Actions
-can theoretically run the query every Monday morning but that step
-has not been created yet.
-
-When the query finishes (it can take a few minutes), click the 
-kbd>Download</kbd> button.
-This will download all your questions and answers 
-from Stack Exchange to your local storage in **CSV** (**C**omma **S**eparated
-**V**alues) format. 
-
-After downloading, you can view `~/Downloads/QueryResults.csv` with Excel or
-LibreOffice Calc. After verifying the results are as expected,
-proceed to the next section. Otherwise, run the query again or modify 
-it for the desired results.
-
-If you add or subtract columns to the query, you have to
-change the CSV fields in `sede/stack-to-blog.py`. 
 
 After downloading the query results, the next
 steps require you to open a terminal and type the following
