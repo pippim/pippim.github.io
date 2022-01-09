@@ -136,11 +136,11 @@ for blog posts. You can disable the cookie using links below.
 
 ### Disable Cookies in Chrome
 
-[Clear, enable, and manage cookies in Chrome](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop)
+[Clear, enable, and manage cookies in Chrome 🔗](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop)
 
 ### Disable Cookies in Firefox
 
-[Block websites from storing cookies in Firefox](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
+[Block websites from storing cookies in Firefox 🔗](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
 
 {% include image.html src="/assets/img/Octocat.png"
    alt="Octocat image by GitHub.com"
@@ -152,7 +152,11 @@ for blog posts. You can disable the cookie using links below.
 
 # GitHub Pages
 
-The {{ site.title }} website was created on **GitHub Pages**. You can download (or simply view) the {{ site.title }} website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages"). This current page for example you can find in the markdown file called `index.md` by clicking the link.
+The {{ site.title }} website was created on **GitHub Pages**. You
+can download (or simply view) the {{ site.title }} website
+[on GitHub 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages").
+This current page for example you can find in the markdown file
+called `index.md` by clicking the link.
 
 With GitHub Pages you can very quickly get your own website up and running by
 simply picking from a collection of website designs called themes. GitHub Pages
@@ -172,15 +176,15 @@ in particular was created, you will probably want to stop reading
 the rest of this page.
 
 Whenever you commit to a website repository, GitHub Pages will run
-[Jekyll](https://jekyllrb.com/ "See how Jekyll rebuilds GitHub Pages websites")
+[Jekyll 🔗](https://jekyllrb.com/ "See how Jekyll rebuilds GitHub Pages websites")
 to rebuild the pages in your site, from the content in your Markdown files.
 
 The {{ site.title }} website is based on the GitHub Pages Jekyll theme called 
-[Cayman](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for GitHub Pages website").
+[Cayman 🔗](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for GitHub Pages website").
 Initial setup was straight forward and very quick. However adding custom buttons 
 becomes more complicated as you need to learn 
-[HTML](https://blog.webjeda.com/new-page-jekyll/ "See how HTML is used in Jekyll") 
-and [Sass/SCSS](https://jekyllrb.com/docs/configuration/sass/ "See how Sass is used in Jekyll").
+[HTML 🔗](https://blog.webjeda.com/new-page-jekyll/ "See how HTML is used in Jekyll") 
+and [Sass/SCSS 🔗](https://jekyllrb.com/docs/configuration/sass/ "See how Sass is used in Jekyll").
 
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
@@ -210,7 +214,7 @@ Syntax highlighted code block
 ```
 
 For more details see 
-[GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+[GitHub Flavored Markdown 🔗](https://guides.github.com/features/mastering-markdown/).
 
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
@@ -272,7 +276,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 %}
 ## Jekyll Themes
 
-There are many [GitHub Pages Jekyll Themes](https://pages.github.com/themes/)
+There are many [GitHub Pages Jekyll Themes 🔗](https://pages.github.com/themes/)
 you can pick from for your website. Spend some time reviewing your options
 before committing to one.
 
@@ -281,7 +285,7 @@ Merlot Theme was used for a week and, then it came back full circle to the
 Cayman Theme again.
 
 At first the Cayman Theme 
-[didn't display the page title properly](https://github.com/pages-themes/cayman/issues/134).
+[didn't display the page title properly 🔗](https://github.com/pages-themes/cayman/issues/134).
 Consequently, the Merlot theme was used. However, problems arose
 with the Merlot banner on the left not rendering properly on small
 screens. So it was back to Cayman and after changing the theme, 
@@ -297,17 +301,17 @@ to set up your first website but, don't give up."* &ensp; **You can do it!** �
 
 Your GitHub Pages site will use the layout and styles from the Jekyll
 theme you have selected in your 
-[repository settings](https://github.com/pippim/pippim.github.io/settings/pages).
+[repository settings 🔗](https://github.com/pippim/pippim.github.io/settings/pages).
 The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 
 **GitHub Pages** maintains live listing of 
-[version numbers](https://pages.github.com/versions/)
+[version number 🔗s](https://pages.github.com/versions/)
 for Jekyll, Sass, Kramdown, Rouge, etc..
 
 There are many open-source providers involved in the {{ site.title }} website:
 
-- **GitHub Pages** - [Websites for you and your projects. 🔗]( "Hosted directly from your GitHub repository. Just edit, push, and your changes are live. 🔗")
+- **GitHub Pages** - [Websites for you and your projects. 🔗](https://pages.github.com/ "Hosted directly from your GitHub repository. Just edit, push, and your changes are live. 🔗")
 - **Jekyll** - [Transform your plain text into static websites and blogs. 🔗](https://jekyllrb.com/ "No more databases, comment moderation, or pesky updates to install—just your content. 🔗")
 - **Liquid** - [Jekyll uses the Liquid templating language to process templates. 🔗](https://jekyllrb.com/docs/liquid/ "Jekyll provides a number of useful Liquid additions to help you build your site. 🔗")
 - **Sass** - [Sass: Syntactically Awesome Style Sheets 🔗](https://sass-lang.com/ "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. 🔗")
@@ -322,7 +326,7 @@ There are many open-source providers involved in the {{ site.title }} website:
 ## Images, Javascript, CSS and HTML
 
 It is important to follow these instructions to setup your site:
-[Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). 
+[Adding a theme to your GitHub Pages site using Jekyll 🔗](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). 
 For example, `_layouts/default.html` probably needs to be copied from the
 theme website to your own website in order to make significant changes.
 
@@ -330,7 +334,7 @@ There are many file types in the {{ site.title }} website stored at various
 locations:
 
 - A few local images are stored in `assets/img/` directory. The hundreds of images in blog posts come directly from Stack Exchange and are not stored on the `pippim.github.io` website.
-- SCSS and [Sass CSS](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/) files are mostly stored in the `assets/css/` directory. Some are stored in the `_sass/` directory. The `_sass/` directory has files you can't see in `pippim.github.io` because they are really stored in the Cayman Theme for Jekyll and automatically pulled from there whenever website is rendered.
+- SCSS and [Sass CSS 🔗](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/) files are mostly stored in the `assets/css/` directory. Some are stored in the `_sass/` directory. The `_sass/` directory has files you can't see in `pippim.github.io` because they are really stored in the Cayman Theme for Jekyll and automatically pulled from there whenever website is rendered.
 - This <kbd>⌂ Home</kbd> page is stored in `index.md` file in the root directory (`/`).
 - The <kbd>❓ About</kbd> page is stored in `about.md` in `/`.
 - The <kbd>✅ Answers</kbd> page is stored in `answers.md` in `/`. Individual answers are internally known as "blog posts" and are stored in the `_posts` directory with one file per answer.
@@ -403,7 +407,7 @@ as simply copying them over to GitHub Pages. The python program
 `stack-to-blog.py` was used to convert Stack Exchange posts to
 GitHub Pages Posts.
 The complete `stack-to-blog.py` program can be accessed on the 
-[Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
+[Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
 The [**FULL DOCUMENTATION**](stack.html) for `stack-to-blog.py` used to create
 the posts on this {{ site.title }} website will help you create your own website.
