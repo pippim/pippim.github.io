@@ -461,13 +461,23 @@ the results have been cached.
 ## Download Query Results
 
 When the Query finishes the rows of results are displayed in
-the browser window. At the top right is the <kbd>Download CSV</kbd>
-button. Click this button and the following confirmation pops up:
+the browser window. 
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer download csv.png"
    alt="Stack Exchange Data Explorer Download CSV"
-   style="float: left; width: 45; margin: 2em 1em 1em 0px;"
+   style="float: right; width: 45; margin: 1em 0px 1em 1em;"
 %}
+
+At the top right is the <kbd>Download CSV</kbd>
+button. Click this button to initiate the download process.
+
+{% include image.html src="/assets/img/stack/stack exchange data explorer save csv.png"
+   alt="Stack Exchange Data Explorer Save CSV"
+   style="float: left; width: 65; margin: 1em 1em 1em 0px;"
+%}
+
+The first step in the download ia a confirmation window pops up:
+
 **Note:** your confirmation pop-up window will look different
 depending on your platform. However, the window contents will
 be similar if not identical.
