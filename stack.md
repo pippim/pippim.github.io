@@ -726,7 +726,7 @@ CONFIG_YML = "../_config.yml"
 <a id="hdr17"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr16" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr18" class="hdr-btn">Skip</a></div>
 
-## TOC, Navigation Buttons, Copy to Clipboard
+## TOC and Navigation Buttons
 
 The TOC (Table of Contents) and Navigation Bar Buttons
 (which navigate between sections) you create for blog
@@ -770,40 +770,15 @@ NAV_LAST_WORDS = 200        # Minimum of 200 words since last navigation bar to
 NAV_LAST_LINES = 13         # Minimum of 13 lines since last navigation bar. Note
                             # TOC is 1 line and automatically counts as minimum.
 
-''' Copy code block contents to clipboard options. '''
-# If Copy button is never wanted, set to None
-COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
-COPY_LINE_MIN = 20          # Number of lines required to qualify for button
-
 # If question or answer contains one of these "pseudo tags" then jekyll front matter
 # will have tag added as if it were really on the question. Essentially you
 # are tagging your answers and adding them to OP's question tags.
 PSEUDO_TAGS = ["conky", "cpuf", "eyesome", "grub", "iconic", "multi-timer", 'vnstat', 'yad']
-
-TAG_MIN_GROUP = 10          # Minimum index page group of posts sorted by Tag Name
-TAG_MAX_GROUP = 20          # Maximum index page group of posts sorted by Tag Name
-# Unfortunately for the time-being the letter groups must be hand-crafted.
-# To assist with hand-crafting print out new_groups[] in gen_post_by_tag_groups()
-TAG_LETTERS = [('.', '9'), ('a', 'a'), ('b', 'b'), ('c', 'c'), ('d', 'd'),
-               ('e', 'f'), ('g', 'g'), ('h', 'k'), ('l', 'l'), ('m', 'o'),
-               ('p', 'r'), ('s', 's'), ('t', 't'), ('u', 'v'), ('w', 'z')]
-POST_BY_TAG_HTML = "../_includes/posts_by_tag.html"  # relative to sede directory
-TOP_POSTS_HTML = "../_includes/posts_by_vote.html"  # relative to sede directory
-TOP_POSTS_INCLUDE = 10      # Top 10 posts will appear
-top_posts = []              # List of tuples [(views, title, our_url])
-
-''' SE Sites to exclude from our website '''
-EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
-                 "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
-                 "Medical Sciences", "Ask Ubuntu Meta"]
-
-# See: /website/sede/refresh.sh for how file is updated on GitHub Pages
-CONFIG_YML = "../_config.yml"
 ```
 
 The global variable `TOC_HDR_MIN = 6` means a minimum number of six
 header lines (markdown lines beginning with `#`, `##`, `###`, etc.)
-are required before the TOC is inserted. Additionally 
+are required before the TOC is inserted. Additionally, 
 a minimum of 1000 words are required as defined by the global
 variable `TOC_WORD_MIN = 1000`. `TOC_LOC = 2` means the
 TOC is inserted before the second header line.
@@ -832,43 +807,95 @@ for i in range(last_nav_index, line_index + 1):
       words += 1000
 ```
 
+<a id="hdr18"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr17" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr19" class="hdr-btn">Skip</a></div>
+
+## Copy Code Block Options
+
 The copy to clipboard button will appear at the top of code blocks.
 It isn't automatically inserted on all code blocks because it
 takes up space on your website. If only a few lines appear in a
 code block, the user can easily highlight with mouse and use
 <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy to clipboard.
 
+``` python
+''' Copy code block contents to clipboard options. '''
+# If Copy button is never wanted, set to None
+COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
+COPY_LINE_MIN = 20          # Number of lines required to qualify for button
+```
+
 The global variable `COPY_LINE_MIN` specifies how many code block
-lines are required since the last button before a new button is
-eligible.  The default is `20` lines.
-
-Additional documentation will be added for the python global variables:
-
-
-<a id="hdr18"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr17" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr19" class="hdr-btn">Skip</a></div>
-
-## Copy Code Block Options
+lines are required before a <kbd>Copy</kbd> button is presented.
+The default is `20` lines.
 
 <a id="hdr19"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr18" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
 
 ## Top Ten Answers Options
 
+``` python
+TAG_MIN_GROUP = 10          # Minimum index page group of posts sorted by Tag Name
+TAG_MAX_GROUP = 20          # Maximum index page group of posts sorted by Tag Name
+# Unfortunately for the time-being the letter groups must be hand-crafted.
+# To assist with hand-crafting print out new_groups[] in gen_post_by_tag_groups()
+TAG_LETTERS = [('.', '9'), ('a', 'a'), ('b', 'b'), ('c', 'c'), ('d', 'd'),
+               ('e', 'f'), ('g', 'g'), ('h', 'k'), ('l', 'l'), ('m', 'o'),
+               ('p', 'r'), ('s', 's'), ('t', 't'), ('u', 'v'), ('w', 'z')]
+POST_BY_TAG_HTML = "../_includes/posts_by_tag.html"  # relative to sede directory
+TOP_POSTS_HTML = "../_includes/posts_by_vote.html"  # relative to sede directory
+TOP_POSTS_INCLUDE = 10      # Top 10 posts will appear
+top_posts = []              # List of tuples [(views, title, our_url])
+
+''' SE Sites to exclude from our website '''
+EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
+                 "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
+                 "Medical Sciences", "Ask Ubuntu Meta"]
+
+# See: /website/sede/refresh.sh for how file is updated on GitHub Pages
+CONFIG_YML = "../_config.yml"
+```
 <a id="hdr20"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr19" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
 
-## Posts by Tags Options
+## Exclude Stack Exchange Sites Options
 
-- `TAG_MIN_GROUP = 10`          # Minimum index page group of posts sorted by Tag Name
-- `TAG_MAX_GROUP = 20`          # Maximum index page group of posts sorted by Tag Name
-- `TAG_LETTERS = [('.', '9'), ('a', 'a'), ('b', 'b'), ('c', 'c'), ('d', 'd'),`
-- `POST_BY_TAG_HTML = "../_includes/posts_by_tag.html"`  # relative to sede directory
-- `TOP_POSTS_HTML = "../_includes/posts_by_vote.html"`   # relative to sede directory
-- `TOP_POSTS_INCLUDE = 10`      # Top 10 posts will appear
-- `EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",`
-- `CONFIG_YML = "../_config.yml"`
+There may be non-Black & White websites you've posted on. Likely
+you will want to exclude these "grey area" websites from the
+Stack Exchange website data conversion.
 
+Add these "grey area" websites to the following list:
+
+``` python
+''' SE Sites to exclude from our website '''
+EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
+                 "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
+                 "Medical Sciences", "Ask Ubuntu Meta"]
+```
+
+Then at the bottom of the `save_blog` function you will see:
+
+``` python
+def set_ss_save_blog(r):
+    """ First pass is done creating all the entries.
+        This is second pass to check if self answered question and if blog
+        should be saved. Also updates totals.
+
+        Code taken from check_save_blog()
+
+        Returns:
+             True/False - if blog should be saved
+    """
+
+    (... SNPPED ...)
+   
+    ''' Exclude specific SE sites '''
+    for exclude in EXCLUDE_SITES:
+        if r[SITE] == exclude:
+            save = False
+            break
+
+```
 <a id="hdr21"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr20" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr22" class="hdr-btn">Skip</a></div>
 
