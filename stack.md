@@ -5,326 +5,52 @@ layout: default
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
-
-{% include image.html src="/assets/img/pngwing.com.png"
-   alt="GitHub Octocat Mascot by pngwing.com"
-   style="float: left; width: 45%; margin: 2em 1em 0px 0px;"
-   caption="GitHub's Octocat Mascot image credit: 
-      <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>"
-%}
+<div class="hdr-bar">  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
 
 # Introduction
 
-Welcome to {{ site.title }}. A collection of Stack Exchange questions and 
-answers about using your computer in Linux and 
-specifically Ubuntu. All the solutions are free for you
-to use as you like. There are full-fledged applications 
-free for you to use as well. You can even duplicate the
-{{ site.title }} website for free. Then **automatically convert your
+This page describes how you can **automatically convert your
 own Stack Exchange posts to your own website.**
 
-There are no ads on {{ site.title }}. You don't need to buy 
-{{ site.title }} a coffee (it's already free at work!).
-Maybe some day you'll want to put all your
-technical documentation on an intranet or website and you will contract
-{{ site.title }} to help get the job done. Custom projects are the business
-model for how {{ site.title }} will earn revenue.
+Converting thousands of Stack Exchange Q&A in MarkDown format isn't as easy 
+as simply copying them over to GitHub Pages. The python program 
+`stack-to-blog.py` is used to convert Stack Exchange posts to
+GitHub Pages Posts.
 
-If you are an aspiring developer perhaps 
-the code published here will help you get a start. 
-If you are a systems administrator perhaps you
- can learn from the questions and answers posted 
-here. If in Technical Support remember "Google search is your friend" and many answers posted here come from using the *Google Search* engine.
+The `stack-to-blog.py` program automatically:
 
-
-## Navigation Buttons
-
-In this section we will discuss the *Page Navigation Buttons* that appear on the top of each page. Then we will discuss the *Section Navigation Buttons* that can appear at the top of major sections.
-
-### Page Navigation Buttons
-
-The top of each page contains navigation buttons to take you to other pages:
-
-- <kbd>⌂ Home</kbd> brings you to this page.
-
-- <kbd>❓ About</kbd> disccusses everything you want to know about {{ site.title }}. Still have questions? Just email.
-
-- <kbd>✅ Answers</kbd> to questions people have using computers. As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers have over **{{ site.views_human }} views!**
-
-- <kbd>💻 Programs</kbd> are applicationss {{ site.title }} created to make your life easier.
-
-- <kbd>📧 Email</kbd> lets you send an email to {{ site.title }}.
-
-> ***NOTE:*** &ensp;When you click a button to go to a page, that button will disappear and be replaced by another. The page you are currently on will not display it's own button. This was done to limit number of buttons on mobile user screens. This technique deviates from conventional website design as of November 2, 2021. Perhaps this technique will be adopted in the future by other websites though. 😄
-
-### Section Navigation Buttons
-
-The top of major sections contain navigation buttons to take you to other sections:
-
-- <kbd>Top</kbd> - Displays the top of the page
-
-- <kbd>ToS</kbd> - Displays the top of the previous section
-
-- <kbd>ToC</kbd> - Displays the Table of Contents
-
-- <kbd>Skip</kbd> - Skips the section and displays the next section
+- Creates Jekyll front matter.
+- Selects Stack Exchange Posts based on meeting minimum criteria such as up-votes or accepted answer status.
+- Converts Stack Exchange Markdown formats to GitHub Pages Kramdown Markdown format.
+- Selectively inserts Table of Contents
+- Selectively inserts section navigation buttons for: <kbd>Top</kbd> (Top of Page), <kbd>ToS</kbd> (Top of Section), <kbd>ToC</kbd> (Table of Contents) and <kbd>Skip</kbd> (Skip section).
+- Selectively inserts "Copy Code Block to System Clipboard" button
+- Creates html with "Top Ten Answers" with the most votes
+- Creates powerful nested expandable/collapsible detail/summary html for many thousands of tags by post.
+- Map hyperlinks in Stack Exchange Posts to {{ site.title }} website posts if they were converted.
+- Fixes old broken `#header` Stack Exchange Markdown.
+- Converts `< block quote` Stack Exchange Markdown into what works in Jekyll Kramdown.
+- Convert Stack Exchange `Language` tags to fenced code block language.
+- Fixes broken Stack Exchange Hyperlinks where the website post title is implied and not explicit.
+- Prints list of self-answered questions that were not accepted after the mandatory two day wait period.
+- Prints summary totals when finished.
 
 ---
+
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
-## Get in Touch
-
-There are many ways of getting in touch with {{ site.title }}. The conventional way via email and on other websites. The direct method on Stack Exchange Answers or GitHub Repos.
-
-### The Conventional Way of Getting in Touch
-
-Get in touch with pippim by sending an email. You can also visit the other pippim.com website on Google Sites.
-
-<-- Change Pippim to your contact info below -->
-- [📧 Send an Email to Pippim 🔗](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com 🔗")
-
-- Visit the Pippim website on [Google Sites 🔗](https://pippim.com "Visit www.pippim.com 🔗")
-
-### Leave a Comment / Question at The Source
-
-Leaving a comment or question at the source such as Stack Exchange answer or GitHub Repo saves you from explaining what your communicadtion is referring to.
-
-#### Stack Exchange Answers (Ask Ubuntu)
-
-![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: style="float: left" height="20%" width="20%"}
-
-You can leave a comment or question where the Stack Exchange answer appears. Each answer on this website here has a direct link to the original answer on Stack Exchage.
-<br clear="left"/>
-
-#### GitHub Repos
-
-![Inspectocat detective cat with magnifying glass](/assets/img/Inspectocadt.jpeg){: style="float: left" width="20%"}
-
-For {{ site.title }} programs on GitHub Repos, you can go directly to the repository and post a new issue. Issues can be bug reports, questions, requests for new features or enhancements to existing functions.
-<br clear="left"/>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
+{% include toc.md %}
 
 ---
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
 
-{% include image.html src="/assets/img/cookie-clicker.png"
-   alt="Cookie image by cookie-clicker.co"
-   style="float: left; width: 40%; margin: 2em 1em 0px 0px;"
-   caption="Cookie image credit: 
-      <a href='https://cookie-clicker.co/'>Cookie-Clicker.co</a>"
-%}
+# {{ site.title }} Website Directory Tree
 
-# Cookies
-
-There is one cookie used on the {{ site.title }} website.
-It remembers the status of the "More" or "Less" button
-for blog posts. You can disable the cookie using links below.
-
-### Disable Cookies in Chrome
-
-[Clear, enable, and manage cookies in Chrome](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop)
-
-### Disable Cookies in Firefox
-
-[Block websites from storing cookies in Firefox](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
-
-{% include image.html src="/assets/img/Octocat.png"
-   alt="Octocate image by github.com"
-   style="float: right; width: 40%; margin: 2em 0px 0px 1em;"
-   caption="Octocat image credit: 
-      <a href='https://github.com/logos'>github.com logos</a>"
-%}
-
-
-# GitHub Pages
-
-The {{ site.title }} website was created on **GitHub Pages**. You can download (or simply view) the {{ site.title }} website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages"). This current page for example you can find in the markdown file called `index.md` by clicking the link.
-
-With GitHub Pages you can very quickly get your own webiste up and running by
-simply picking from a collection of website designs called themes. GitHub Pages
-is free to use. Although you will likely do most of your writing from a MAC,
-Linux or Windows PC, one of the cool things is you can change your website from
-a cell phone.
-
-## **TL;DR**
-
-"**TL;DR**" stands for "**Too Long, Didn't Read**". So unless you
-are truly interested in the technology of websites and how this website 
-in particular was created, you will probably want to stop reading
-the rest of this page.
-
-Whenever you commit to a website repository, GitHub Pages will run
-[Jekyll](https://jekyllrb.com/ "See how Jekyll rebuilds GitHub Pages websites")
-to rebuild the pages in your site, from the content in your Markdown files.
-
-The {{ site.title }} website is based on the GitHub Pages Jekyll theme called 
-[Cayman](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for GitHub Pages website").
-Initial setup was straight forward and very quick. However adding custom buttons 
-becomes more complicated as you need to learn 
-[HTML](https://blog.webjeda.com/new-page-jekyll/ "See how HTML is used in Jekyll") 
-and [Sass/SCSS](https://jekyllrb.com/docs/configuration/sass/ "See how Sass is used in Jekyll").
-
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
-
-# Markdown
-
-GitHub Pages and many other websites use a language called Markdown.
-Markdown is a lightweight and easy-to-use syntax for styling your 
-writing. It includes conventions for:
-
-```
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see 
-[GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
-
-## How the Table of Contents is Generated
-
-All markdown headers with `#`, `##` and `###`, etc. are used to create the **Table of Contents** (TOC). A little bit of one-time prep work is required for TOC support. For example, the file `_sass/toc.scss` is setup with:
-
-``` scss
-.screen-reader-only {
-    position: absolute;
-    left: -5000px;
-
-    &:focus {
-        left: 0;
-    }
-}
-```
-
-Another one-time setup is the file `_includes/toc.md` containing the markdown for how the TOC looks and functions. This file contains:
-
-``` sass
-## Table of Contents
-{:.no_toc}
-
-* TOC
-{:toc}
-```
-
-To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page you are reading, `index.md`, you would see the following markdown code:
-
-``` html
-... in real markdown below and generates the actual TOC:
-{% raw %}
-{% include toc.md %}
-{% endraw %}
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a> ... </div>
-```
-
-The TOC command is used in real markdown below and generates the actual TOC:
-
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
-
-{% include toc.md %}
-
----
-
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
-
-{% include image.html src="/assets/img/github pages themes.png"
-   alt="github pages themes.png"
-   style="float: right; width: 60%; margin: 2em 0px 0px 1em;"
-   caption="Image credit:
-            <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
-               >Yale University</a>"
-%}
-# Jekyll Themes
-
-There are many [GitHub Pages Jekyll Themes](https://pages.github.com/themes/)
-you can pick from for your website. Spend some time reviewing your options
-before committing to one.
-
-Initially the {{ site.title }} website used the Cayman Theme for a day. Then the
-Merlot Theme was used for a week and then it came back full circle to the 
-Cayman Theme again.
-
-At first the Cayman Theme 
-[didn't display the page title properly](https://github.com/pages-themes/cayman/issues/134).
-Consequently, the Merlot theme was used. 
-However, problems arose with the Merlot banner on
-the left not rendering properly on small screens. 
-So it was back to Cayman and after
-changing the theme, the page title worked properly. New problems arose
-with the page buttons, <kbd>Home</kbd>, <kbd>About</kbd>, etc. With trial 
-and error however those problems were solved too.
-
-This is the first website {{ site.title }} created. The somewhat naive initial estimate
-was it would take a weekend to create. That estimate was back on 
-October 16, 2021, and today is January 9, 2022. The 
-moral of the story is: *"It may take longer than expected
-to set up your first website but, don't give up."* &ensp; **You can do it!** 😄
-
-Your GitHub Pages site will use the layout and styles from the Jekyll
-theme you have selected in your 
-[repository settings](https://github.com/pippim/pippim.github.io/settings/pages).
-The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-
-**GitHub Pages** maintains live listing of 
-[version numbers](https://pages.github.com/versions/)
-for Jekyll, Sass, Kramdown, Rouge, etc..
-
-There are many open-source providers involved in the {{ site.title }} website:
-
-- **GitHub Pages** - [Websites for you and your projects. 🔗]( "Hosted directly from your GitHub repository. Just edit, push, and your changes are live. 🔗")
-- **Jekyll** - [Transform your plain text into static websites and blogs. 🔗](https://jekyllrb.com/ "No more databases, comment moderation, or pesky updates to install—just your content. 🔗")
-- **Liquid** - [Jekyll uses the Liquid templating language to process templates. 🔗](https://jekyllrb.com/docs/liquid/ "Jekyll provides a number of useful Liquid additions to help you build your site. 🔗")
-- **Sass** - [Sass: Syntactically Awesome Style Sheets 🔗](https://sass-lang.com/ "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world. 🔗")
-- **Cayman Theme** - [Cayman is a Jekyll theme for GitHub Pages. 🔗](https://pages-themes.github.io/cayman/ "Cayman is a clean, responsive theme for GitHub Pages. 🔗")
-- **Ruby** - [dynamic, open source programming language 🔗](http://www.ruby-lang.org/en/ "more powerful than Perl, and more object-oriented than Python 🔗")
-- **Rouge** - [language syntax highlighting 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers "List of all languages supported by Rouge 🔗")
-- **kramdown** - [converting a superset of Markdown 🔗](https://kramdown.gettalong.org/ "(sic, not Kramdown or KramDown, just kramdown) 🔗")
-
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
-
-## Images, Javascript, CSS and HTML
-
-It is important to follow these instructions to setup your site:
-[Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). 
-For example, `_layouts/default.html` probably needs to be copied from the
-theme website to your own website in order to make significant changes.
-
-There are many file types in the {{ site.title }} website stored at various
-locations:
-
-- A few local images are stored in `assets/img/` directory. The hundreds of images in blog posts come directly from Stack Exchange and are not stored on the `pippim.github.io` website.
-- SCSS and [Sass CSS](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/) files are mostly stored in the `assets/css/` directory. Some are stored in the `_sass/` directory. The `_sass/` directory has files you can't see in `pippim.github.io` because they are really stored in the Cayman Theme for Jekyll and automatically pulled from there whenever website is rendered.
-- This <kbd>⌂ Home</kbd> page is stored in `index.md` file in the root directory (`/`).
-- The <kbd>❓ About</kbd> page is stored in `about.md` in `/`.
-- The <kbd>✅ Answers</kbd> page is stored in `answers.md` in `/`. Individual answers are internally known as "blog posts" and are stored in the `_posts` directory with one file per answer.
-- The <kbd>💻 Programs</kbd> page is stored in `programs.md` in `/`.
-- HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory.
-- Javascript files are kept in `assets/js/`.
-
-## {{ site.title }} Website Directory Tree
-
-The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for {{ site.title }} on GitHub Pages looked like this:
+The directory tree will help you get a better understanding 
+of the Pippim website at `pippim.github.io`. As of 
+{{ site.refreshed | date: "%B %e, %Y" }}, the directory tree 
+for {{ site.title }} on GitHub Pages looked like this:
 
 ``` terminal
 {% include website_tree %}
@@ -333,11 +59,17 @@ The directory tree will help you get a better understanding of the Pippim websit
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts 
 which are not displayed above.
 
-## Daily Backup
+---
 
-Normally you will `git pull` all the directories and files from your website to your local drive.
-If you plan on developing locally, you probably want to backup your daily work. This script
-is what {{ site.title }} uses for dailiy backup to gmail.com (in the cloud, so it should be safe):
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
+
+# Daily Backup
+
+Normally you will `git pull` all the directories and files from your website
+to your local drive. If you plan on developing locally, you probably want 
+to save your daily work. This script is what {{ site.title }} uses for 
+daily backup to gmail.com (in the cloud, so it should be safe):
 
 ``` bash
 # WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
@@ -357,11 +89,11 @@ tar -rpf "$Filename" website/sede/StackQuery
 **NOTE:** This is a subset of the daily backup script. The complete script
 may be posted someday if requested. The script is called from `cron` every
 morning, compresses files, and emails to gmail.com automatically. A python
-program called `bserve.py` is used to rotat daily backups into weekly, monthly
+program called `bserve.py` is used to rotate daily backups into weekly, monthly
 and yearly backups.
 
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
 
 # Convert Stack Exchange to GitHub Pages
 
@@ -370,7 +102,6 @@ and yearly backups.
    style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
 
 %}
-
 
 Converting thousands of Stack Exchange Q&A in markdown format isn't as easy 
 as simply copying them over to GitHub Pages. The python program 
@@ -397,6 +128,11 @@ The program automatically:
 - Prints list of self-answered questions that were not accepted after the mandatory two day wait period.
 - Prints summary totals when finished.
 
+
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
+
 # Stack Exchange Data Explorer
 
 The first step in converting Stack Exchange posts to {{ site.title }} website posts is to run a 
@@ -419,8 +155,12 @@ the latter since Google already knows too much about us :)
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer search bar.png"
    alt="Stack Exchange Data Explorer Query Search Bar"
-   style="float: right; width: 60%; margin: 2em 0px 0px 1em;"
+   style="float: right; width: 60%; margin: 1em 0px 0px 1em;"
 %}
+
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
+
 ## Search For Query
 
 After logging in, the top of the window provides a search bar to find a query.
@@ -443,10 +183,8 @@ For our purposes, select the version from December 12, 2021.
 In the above screenshot it is the first entry on the list.
 If you have revised the query select your revised version.
 
-{% include image.html src="/assets/img/stack/stack exchange data explorer parameters.png"
-   alt="Stack Exchange Data Explorer Parameters"
-   style="float: left; width: 65%; margin: 2em 1em 1em 0px;"
-%}
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
 
 ## Specify Parameters
 
@@ -454,9 +192,18 @@ At the bottom of the window you need to specify your parameters.
 Fill in your **SE network account ID number** which in our case
 is `4775729`.
 
+{% include image.html src="/assets/img/stack/stack exchange data explorer parameters.png"
+   alt="Stack Exchange Data Explorer Parameters"
+   style="float: none; width: 100%;"
+   caption="Stack Exchange Data Explorer Query Parameters"
+%}
+
 Then click the <kbd>Run Query</kbd> button and wait a few
 minutes. Or a few seconds if you have just run the query and
 the results have been cached.
+
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
 ## Download Query Results
 
@@ -468,12 +215,17 @@ the browser window.
    style="float: right; width: 25%; margin: 0em 0px 1em 1em;"
 %}
 
-At the top right of your browser window is the <kbd>Download CSV</kbd>
-button. This will download all your questions and answers 
+At the top right of your browser window is this download
+button. It will download all your questions and answers 
 from Stack Exchange to your local storage in **CSV** (**C**omma **S**eparated
 **V**alues) format. 
 
-Click this button to initiate the download process.
+Click the <kbd>Download CSV</kbd> to initiate the download process.
+
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
+
+### Download Confirmation Pop-Up Window
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer save csv.png"
    alt="Stack Exchange Data Explorer Save CSV"
@@ -490,10 +242,14 @@ the window contents will be similar if not identical.
 Ensure the **Save File** radio button is selected and
 click the <kbd>OK</kbd> button.
 
-In a moment the query results a file named: `~/Downloads/QueryResults.csv`.
-Note that `~` is a shortcut to your home directory.
+In a moment the query results are downloaded into a file named:
+`~/Downloads/QueryResults.csv`.
+Note that `~` is a shortcut to your home directory name.
 
-## Important Notes
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
+
+## Stack Exchange Data Explorer Important Notes
 
 **Weekly Update:** When you add or revise a post in Stack Exchange 
 the data is not available
@@ -515,19 +271,23 @@ python program.
 Many thanks to the Stack Exchange Data Explorer Query's 
 [Modifier](https://meta.stackexchange.com/a/371435/366359).
 
+
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
+
 # Run `refresh.sh` Bash Script
 
 The `refresh.sh` bash script will both **pull** and **push** your
-GitHub Repo (Repository) and update your blog posts with Stack Exchange
-posts inbetween.
+GitHub Repo (Repository). The script will update your blog posts
+using Stack Exchange posts inbetween the **pull** and **push**.
 
 {% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
    alt="stack-to-blog.py"
    style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
-   caption="Progress Display Bar whilst `stack-to-blog.py` runs" 
+   caption="Progress Display Bar used by <b>refresh.sh</b>" 
 %}
 
-In addition to updating your Stack Exchange posts into your website it will:
+In addition to updating your Stack Exchange posts into the {{ site.title }} website, `refresh.sh` will:
 
 - Sanity checks to ensure the directories `~/website` (Working / Development version of your website) and `~/website2` (Your GitHub Repo production version stored locally) exist
 - If you don't pass a parameter, initializes commit message to `"Refresh website on: $now"`
@@ -539,39 +299,27 @@ In addition to updating your Stack Exchange posts into your website it will:
 - Update Posts by Tag stored in `_includes/posts_by_tag.html`
 - Generate a fresh `tree` listing stored in `_includes/website_tree`
 - Update Site-Wide Front Matter stored in `_config.yml`
-- Compares the changes made to Cayman Theme. Watch this output to know when Cayman Theme has changed.
+- Compares the {{ site.title }} website changes made to Cayman Theme. Watch this output to know when Cayman Theme has changed.
 
 
 After downloading the query results, the next
 steps require you to open a terminal and type the following
 after then command prompt (`$`):
 
+{% include copyHeader.html %}
 ``` terminal
 me@host:~$ cd ~/website/sede
 
-me@host:~/website/sede$ mv ~/Downloads/QueryResults.csv .
-
 me@host:~/website/sede$ refresh.sh
 
-Commit message set to: 'Refresh website on: Mon Jan  3 08:14:43 MST 2022'
-remote: Enumerating objects: 42, done.
-remote: Counting objects: 100% (42/42), done.
-remote: Compressing objects: 100% (31/31), done.
-remote: Total 33 (delta 19), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (33/33), done.
-From https://github.com/pippim/pippim.github.io
-   3b28116..f481dbd  main       -> origin/main
-Updating 3b28116..f481dbd
-Fast-forward
- _config.yml            |   2 -
- _includes/website_tree |  61 +++++++++++++++++++++++++++++
- assets/css/style.scss  |   7 ++--
- index.md               | 175 ++++++++++++++++++++++++++++++++++++++---------------------------------------------
- sede/refresh.sh        |  18 ++++++++-
- 5 files changed, 161 insertions(+), 102 deletions(-)
- create mode 100644 _includes/website_tree
+=== COMMIT MESSAGE set to: 'Refresh website on: Sun Jan  9 10:02:38 MST 2022'
 
-Running: ~/website/sede/stack-to-blog.py
+=== PULLING: ~/website2 changes to github.com
+Already up-to-date.
+
+=== RETRIEVING: Rouge Syntax Highlighting Languages list
+
+=== RUNNING: ~/website/sede/stack-to-blog.py
 // =============================/   T O T A L S   \============================== \\
 Run-time options:
 
@@ -580,67 +328,97 @@ NAV_BAR_MIN:           3  | NAV_WORD_MIN:          700  | COPY_LINE_MIN:        
 
 Totals written to: '../_config.yml' (relative to /sede directory)
 
-accepted_count:      464  | total_votes:         7,214  | total_views:    53,134,690
-question_count:      297  | answer_count:        2,145  | save_blog_count:     1,123
+accepted_count:      464  | total_votes:         7,230  | total_views:    53,496,745
+question_count:      298  | answer_count:        2,147  | save_blog_count:     1,123
 blog_question_count:  50  | blog_answer_count:   1,073  | blog_accepted_count:   491
-total_self_answer:   107  | total_self_accept:      56  | Self Needing Accept:    51
-total_headers:     1,622  | total_header_spaces:   395  | total_quote_spaces:  1,547
-total_lines:      53,421  | total_paragraphs:   15,113  | total_words:       307,309
+total_self_answer:   108  | total_self_accept:      55  | Self Needing Accept:    53
+total_headers:     1,625  | total_header_spaces:   386  | total_quote_spaces:  1,552
+total_lines:      53,432  | total_paragraphs:   15,243  | total_words:       309,819
 total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     56
-total_code_blocks: 2,434  | total_block_lines:   3,234  | total_clipboards:      275
-total_code_indents:2,206  | total_indent_lines: 21,144  | total_half_links:      187
-total_tail_links:    111  | total_bad_half_links:    0  | Half Links Changed:    187
-total_no_links:      291  | total_full_links:       80  | Bad No Links:          211
-total_pseudo_tags:   646  | total_copy_lines:   16,357  | total_toc:              27
-# total_tag_names:   731  | total_force_end:       961  | total_nav_bar:          56
+total_code_blocks: 2,302  | total_block_lines:   3,234  | total_clipboards:      282
+total_code_indents:2,074  | total_indent_lines: 21,270  | total_half_links:      389
+total_tail_links:    110  | total_bad_half_links:    1  | Half Links Changed:    388
+total_no_links:      279  | total_full_links:      260  | total_bad_full_links   104
+total_pseudo_tags:   646  | total_copy_lines:   16,841  | total_toc:              27
+# total_tag_names:   731  | total_force_end:       961  | total_nav_bar:          59
 all_tag_counts:    3,478  | # tag_posts:         3,478  | # total_tag_letters:    31
-total_header_levels:        [593, 813, 214, 2, 0, 0]
+total_header_levels:        [592, 816, 215, 2, 0, 0]
 
-Updating: ~/website2/_posts/ and /_includes/
+=== UPDATING: ~/website2/_posts/ and /_includes/
 
-Updating Configuration file: ~/website2/_config.yml
-[main 37df3e5] "Refresh website on: Mon Jan  3 08:14:43 MST 2022"
- 1124 files changed, 1186 insertions(+), 1122 deletions(-)
+=== UPDATING: Configuration file: ~/website2/_config.yml
+[main 15c1121] Refresh website on: Sun Jan  9 10:02:38 MST 2022
+ 1125 files changed, 1206 insertions(+), 1132 deletions(-)
 
-Pushing ~/website2 changes to github.com
-Counting objects: 1134, done.
+=== PUSHING: ~/website2 changes to github.com
+Counting objects: 1136, done.
 Delta compression using up to 8 threads.
-Compressing objects: 100% (1134/1134), done.
-Writing objects: 100% (1134/1134), 160.20 KiB | 0 bytes/s, done.
-Total 1134 (delta 1055), reused 0 (delta 0)
-remote: Resolving deltas: 100% (1055/1055), completed with 1054 local objects.
+Compressing objects: 100% (1136/1136), done.
+Writing objects: 100% (1136/1136), 157.82 KiB | 0 bytes/s, done.
+Total 1136 (delta 1058), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1058/1058), completed with 1057 local objects.
 To https://github.com/pippim/pippim.github.io
-   f481dbd..37df3e5  main -> main
+   b6f2604..15c1121  main -> main
+
+=== COMPARE: Cayman Theme original to modified version
+0a1,5
+> /* Github Pages Jekyll Cayman Theme. Make code block font size larger. Copied from:
+>  * https://github.com/pages-themes/cayman/blob/master/_sass/jekyll-theme-cayman.scss
+>  * Source code version: January 2021
+>  */
+> 
+223c228
+<     font-size: 0.9rem;
+---
+>     font-size: 96%;  // Change 0.9rem to 96% for proper size in headings
+238a244,248
+>     
+>     /** Code Block scroll bar From: 
+>      ** https://stackoverflow.com/a/38490989/6929343 **/
+>     max-height: 400px;
+>     overflow-y: auto;
+277a288
+> 
 ```
 
-This assumes your local copy of your website is in your home
-directory with the name `website`. Another local copy is in your
-home directory with the name `website2`. You can generate a local
+The `refresh.sh` bash script needs a local copy of your website is in your home
+directory with the name `website` (used for development).
+Another local copy is required in your home directory with the name 
+`website2` (production clone) . You can generate a local
 copy with the 
 [`git pull`](https://opensource.com/article/18/2/how-clone-modify-add-delete-git-files) 
 command.
 
-The setup allows you to use `website` for development and `website2` to mirror
-the production version which is **pulled** and **pushed** to GitHub Pages.
+The two `website` directory setup allows you to use `website` 
+for development and `website2` to mirror
+the production version which is **pulled** and **pushed** from/to GitHub Pages.
 
-## Setting `stack-to-blog.py` Options
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
 
-You set options in the program `stack-to-blog.py`.
+# Setting `stack-to-blog.py` Options
+
+The heart of the `refresh.sh` bash script is the
+python program called `stack-to-blog.py`.
+You can set many options in the program.
 It's a good idea to set the record limit to 10 or so
 for your first few trials.
 
-Review the four subsections below for fine-tuning your
+Review the subsections below for fine-tuning your
 Stack Exchange to Jekyll Blog Post conversion. They are:
 
-- Random Record Limit
+- Random Record Limit Option
 - Blog Post Selection Criteria
-- Jekyll Front Matter
+- Jekyll Front Matter Options
 - TOC and Navigation Buttons
+- Copy Code Block Options
+- Top Ten Answers Options
+- Posts by Tags Options
 
 <a id="random_record_limit"></a>
-### Random Record Limit
+## Random Record Limit
 
-During intial testing phase you will want to utilize the
+During initial testing phase you will want to utilize the
 random record limit feature. This provides two
 Benefits:
 
@@ -664,10 +442,10 @@ a large number like `10000` (ten thousand). Also set `PRINT_RANDOM` to `False`.
 The program finishes a lot faster without printing 10's of thousands of
 lines to your screen.
 
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
 
-### Stack Exchange Post Selection Criteria
+## Stack Exchange Post Selection Criteria
 
 Although most of the focus is on converting SE Answers
 to blog posts, you can convert SE Questions to blog
@@ -711,6 +489,9 @@ in Stack Exchange. After you've
 accepted your own answers you should run the query, 
 download `QueryResults.csv` and `run stack-to-blog.py`
 
+<a id="hdr14"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
+
 {% include image.html src="/assets/img/Jekyll.png"
    alt="Jekyll Logo from subpng"
    style="float: left; width: 75%; margin: 1em 1em 0px 0px;"
@@ -718,7 +499,7 @@ download `QueryResults.csv` and `run stack-to-blog.py`
       <a href='https://www.subpng.com/png-xk9iwy/'>Ronncraze</a>"
 %}
 
-### Jekyll Front Matter
+## Jekyll Front Matter Options
 
 Jekyll front matter is required by GitHub Pages
 at the top of every blog post. 
@@ -738,7 +519,7 @@ When you view a blog post on the website, the
 extra front matter is displayed at the top of 
 the post with a More/Less details button.
 
-#### Define Front Matter in `stack-to-blog.py`
+### Define Front Matter in `stack-to-blog.py`
 
 This python code shows how
 [Jekyll front matter](https://jekyllrb.com/docs/front-matter/)
@@ -779,7 +560,10 @@ FRONT_CLIPBOARD = "clipboard:    "  # Copy to clipboard button used? "true" or "
 *When the global variable name `FRONT_xxx` 
 is set to `= None`, no front matter is written.*
 
-#### Front Matter Stored in Post File
+<a id="hdr15"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
+
+### Front Matter Stored in Post File
 
 Based on the global variable settings above, 
 the following front matter would be generated:
@@ -805,8 +589,7 @@ clipboard:    false
 ---
 ```
 
-#### Front Matter Displayed on Post Website Page
-
+### Front Matter Displayed on Post Website Page
 
 The "More" or "Less" button lets you choose between
 more or less front matter.
@@ -884,7 +667,10 @@ mark {
 }
 ```
 
-#### Site-Wide Front matter
+<a id="hdr16"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr15" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr17" class="hdr-btn">Skip</a></div>
+
+### Site-Wide Front Matter Options
 
 A number of Site-Wide Front Matter variables are made available when
 `stack-to-blog.py` runs and is published in your `_config.yml` file:
@@ -921,7 +707,7 @@ have over **{{ site.views_human }} views!**
 
 
 You can turn off Site-Wide Front Matter by setting the filename to `None`
-as documented in the `stack-to-blog.py` progream:
+as documented in the `stack-to-blog.py` program:
 
 ``` python
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
@@ -933,7 +719,10 @@ CONFIG_YML = "../_config.yml"
 - **WARNING:** Turning off Site-Wide Front Matter would require extensive revisions to many places where the `{{ site.views }}` Front Matter Liquid tag and other `site.` tags are used. It is recommended, at least initially, that you do **not** turn this option off.
 {% endraw %}
 
-### TOC, Navigation Buttons, Copy to Clipboard
+<a id="hdr17"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr16" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr18" class="hdr-btn">Skip</a></div>
+
+## TOC, Navigation Buttons, Copy to Clipboard
 
 The TOC (Table of Contents) and Navigation Bar Buttons
 (which navigate between sections) you create for blog
@@ -1051,6 +840,16 @@ eligible.  The default is `20` lines.
 
 Additional documentation will be added for the python global variables:
 
+
+<a id="hdr18"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr17" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr19" class="hdr-btn">Skip</a></div>
+
+<a id="hdr19"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr18" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
+
+<a id="hdr20"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr19" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
+
 - `TAG_MIN_GROUP = 10`          # Minimum index page group of posts sorted by Tag Name
 - `TAG_MAX_GROUP = 20`          # Maximum index page group of posts sorted by Tag Name
 - `TAG_LETTERS = [('.', '9'), ('a', 'a'), ('b', 'b'), ('c', 'c'), ('d', 'd'),`
@@ -1060,18 +859,18 @@ Additional documentation will be added for the python global variables:
 - `EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",`
 - `CONFIG_YML = "../_config.yml"`
 
-<a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
+<a id="hdr21"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr20" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr22" class="hdr-btn">Skip</a></div>
 
-## Program Overview
+# Program Overview
 
 The `stack-to-blog.py` program uses a two pass technique. The first pass 
-does some formatting but mostly counts occurences of key markdown elements.
+does some formatting but mostly counts occurrences of key markdown elements.
 
 The second pass does most of the formatting and repeats some of the same
 counting in order to insert HTML code in the correct places.
 
-### Initialization
+## Initialization
 
 - Initial values are defined for global variables and their names
 are in all upper-case letters.
@@ -1084,7 +883,11 @@ top of the outer loop point.
 
 - Next two passes are done on each row as described below.
 
-### Pass 1
+
+<a id="hdr22"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr21" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr23" class="hdr-btn">Skip</a></div>
+
+## Pass 1
 
 Each `row` has Stack Exchange Markdown which is converted into 
 a list call `lines`.
@@ -1128,7 +931,7 @@ back into the original lines list:
          lines.append(line)
 ```
 
-Also after Pass 1 completes, the following bit of code decides whether TOC
+Also, after Pass 1 completes, the following bit of code decides whether TOC
 and/or navigation buttons are going to be used in the blog post:
 
 ``` python
@@ -1152,8 +955,10 @@ checked to see if post qualifies for TOC or Navigation
 Bar. Then every line from the `lines` list is read again and the 
 steps below are done in Pass 2.
 
+<a id="hdr23"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr22" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr24" class="hdr-btn">Skip</a></div>
 
-### Pass 2
+## Pass 2
 
 At the start of the pass 2 loop, some counts from Pass 1 are
 reset to zero so they are not doubled up when `header_space(line)`
@@ -1216,7 +1021,10 @@ the file is flushed to disk or simply discarded if it is not to be saved.
 Then the next `row` from `rows` is read and pass 1 starts over again.
 
 <a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
+
+<a id="hdr24"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr23" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr25" class="hdr-btn">Skip</a></div>
 
 # Detailed Stack Exchange Conversion
 
@@ -1233,7 +1041,7 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
     <div class="hdr-bar">
       <a href="#" class="hdr-btn">Top</a>
       <a href="#hdr1" class="hdr-btn">ToS</a>
-      <a href="#hdr6" class="hdr-btn">ToC</a>
+      <a href="#hdr2" class="hdr-btn">ToC</a>
       <a href="#hdr3" class="hdr-btn">Skip</a>
     </div>
     
@@ -1246,7 +1054,7 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
 
     ``` html
     <a id="hdr2"></a>
-    <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
+    <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
     
     ## Get in touch
     ```
@@ -1321,8 +1129,8 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
 
 The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
-<a id="hdr13"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
+<a id="hdr25"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr24" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr26" class="hdr-btn">Skip</a></div>
 
 ## Jekyll Blog Post Filename
 
@@ -1371,6 +1179,8 @@ def make_output_year_dir(post_date):
 
     return new_sub
 ```
+<a id="hdr26"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr25" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr27" class="hdr-btn">Skip</a></div>
 
 ## Pseudo Tags
 
@@ -1406,8 +1216,8 @@ for pseudo in PSEUDO_TAGS:
                     total_tag_names.append(search)
 ```
 
-<a id="hdr14"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
+<a id="hdr27"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr26" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr28" class="hdr-btn">Skip</a></div>
 
 ## Stack Exchange `<!-- language` Tags
 
@@ -1471,8 +1281,11 @@ def check_code_block(ln):
 
 ```
 
-**NOTE:** This funcion also provides support for inserting the 
+**NOTE:** This function also provides support for inserting the 
 "Copy to Clipboard" button.
+
+<a id="hdr28"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr27" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr29" class="hdr-btn">Skip</a></div>
 
 ## Stack Exchange four space indented code block
 
@@ -1537,8 +1350,8 @@ def check_code_indent(ln):
     return ln
 ```
 
-<a id="hdr15"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
+<a id="hdr29"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr28" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr30" class="hdr-btn">Skip</a></div>
 
 ## Copy Code Block to Clipboard
 
@@ -1632,13 +1445,13 @@ def check_copy_code(this_index):
     return inserted_command
 ```
 
-<a id="hdr16"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr15" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr17" class="hdr-btn">Skip</a></div>
+<a id="hdr30"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr29" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr31" class="hdr-btn">Skip</a></div>
 
 ### Liquid Tag for Copy Code Block
 
 The Liquid Tag to include the Copy Code Block button is inserted
-into markdown thusly:
+into markdown this way:
 
 ```` python
 {% raw %}
@@ -1660,6 +1473,11 @@ def check_copy_code(this_index):
 │   └── toc.md
 ```
 
+<a id="hdr31"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr30" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr32" class="hdr-btn">Skip</a></div>
+
+### Copy Code Block HTML
+
 `copyHeader.html` contains the following HTML code:
 
 ``` html
@@ -1671,6 +1489,11 @@ how-to-add-a-copy-to-clipboard-button-to-your-jekyll-blog/
     <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
 </div>
 ```
+
+<a id="hdr32"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr31" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr33" class="hdr-btn">Skip</a></div>
+
+### Copy Code Block CSS
 
 The `code-header` and `copy-code-button` classes are kept in `assets/css/style.scss`:
 
@@ -1714,6 +1537,11 @@ The `code-header` and `copy-code-button` classes are kept in `assets/css/style.s
 }
 ```
 
+<a id="hdr33"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr32" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr34" class="hdr-btn">Skip</a></div>
+
+### Copy Code Block Javascript
+
 Javascript Query is used to copy a Fenced Code Block
 to the System Clipboard. The code is located in `assets/js/copyCode.js`:
 
@@ -1738,8 +1566,8 @@ copyCodeButtons.forEach((copyCodeButton, index) => {
 });
 ```
 
-<a id="hdr17"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr16" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr18" class="hdr-btn">Skip</a></div>
+<a id="hdr34"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr33" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr35" class="hdr-btn">Skip</a></div>
 
 ## Summary Totals
 
@@ -1777,7 +1605,7 @@ Questions and Answers you have posted.
 The remaining total lines apply only to posts that qualify
 for saving as a Jekyll blog post.
 
-If you want to change the totals layout it is found in the code below:
+If you want to change the totals' layout, it is found in the code below:
 
 {% include copyHeader.html %}
 ``` python
@@ -1849,5 +1677,5 @@ print('all_tag_counts: {:>8,}'.format(all_tag_counts),
 print('total_header_levels:       ', total_header_levels)
 ```
 
-<a id="hdr18"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr17" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a></div>
+<a id="hdr35"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr34" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a></div>
