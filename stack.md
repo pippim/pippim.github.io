@@ -1,5 +1,5 @@
 ---
-title: Welcome to Pippim
+title: Convert Stack Exchange Posts
 layout: default
 ---
 
@@ -141,15 +141,11 @@ for blog posts. You can disable the cookie using links below.
 
 The {{ site.title }} website was created on **GitHub Pages**. You can download (or simply view) the {{ site.title }} website [on GitHub](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages"). This current page for example you can find in the markdown file called `index.md` by clicking the link.
 
-With GitHub Pages you can very quickly get your own website up and running by
+With GitHub Pages you can very quickly get your own webiste up and running by
 simply picking from a collection of website designs called themes. GitHub Pages
 is free to use. Although you will likely do most of your writing from a MAC,
 Linux or Windows PC, one of the cool things is you can change your website from
-a cell phone. This is because GitHub Pages works from any modern browser which
-all modern cell phones have.
-
-The [**FULL DOCUMENTATION**](stack.html) for `stack-to-blog.py` used to create
-the posts on this {{ site.title }} website will help you create your own website.
+a cell phone.
 
 ## **TL;DR**
 
@@ -172,7 +168,7 @@ and [Sass/SCSS](https://jekyllrb.com/docs/configuration/sass/ "See how Sass is u
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
 
-## Markdown
+# Markdown
 
 GitHub Pages and many other websites use a language called Markdown.
 Markdown is a lightweight and easy-to-use syntax for styling your 
@@ -257,7 +253,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
             <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
                >Yale University</a>"
 %}
-## Jekyll Themes
+# Jekyll Themes
 
 There are many [GitHub Pages Jekyll Themes](https://pages.github.com/themes/)
 you can pick from for your website. Spend some time reviewing your options
@@ -269,15 +265,17 @@ Cayman Theme again.
 
 At first the Cayman Theme 
 [didn't display the page title properly](https://github.com/pages-themes/cayman/issues/134).
-Consequently the Merlot theme was used. However problems arose with the Merlot banner on
-the left not rendering properly on small screens. So it was back to Cayman and after
+Consequently, the Merlot theme was used. 
+However, problems arose with the Merlot banner on
+the left not rendering properly on small screens. 
+So it was back to Cayman and after
 changing the theme, the page title worked properly. New problems arose
 with the page buttons, <kbd>Home</kbd>, <kbd>About</kbd>, etc. With trial 
 and error however those problems were solved too.
 
 This is the first website {{ site.title }} created. The somewhat naive initial estimate
 was it would take a weekend to create. That estimate was back on 
-October 16, 2021 and today is November 16, 2021. The 
+October 16, 2021, and today is January 9, 2022. The 
 moral of the story is: *"It may take longer than expected
 to set up your first website but, don't give up."* &ensp; **You can do it!** 😄
 
@@ -324,7 +322,7 @@ locations:
 - HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory.
 - Javascript files are kept in `assets/js/`.
 
-### {{ site.title }} Website Directory Tree
+## {{ site.title }} Website Directory Tree
 
 The directory tree will help you get a better understanding of the Pippim website at `pippim.github.io`. As of October 30, 2021, the directory tree for {{ site.title }} on GitHub Pages looked like this:
 
@@ -335,7 +333,7 @@ The directory tree will help you get a better understanding of the Pippim websit
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts 
 which are not displayed above.
 
-### Daily Backup
+## Daily Backup
 
 Normally you will `git pull` all the directories and files from your website to your local drive.
 If you plan on developing locally, you probably want to backup your daily work. This script
@@ -399,33 +397,117 @@ The program automatically:
 - Prints list of self-answered questions that were not accepted after the mandatory two day wait period.
 - Prints summary totals when finished.
 
-## Stack Exchange Data Explorer
+# Stack Exchange Data Explorer
 
 The first step in converting Stack Exchange posts to {{ site.title }} website posts is to run a 
-[Stack Exchange Data Explorer Query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s?AccountId=4775729). The Query finds all your
-Stack Exchange Questions and Answers (up to 10 MB).
+[Stack Exchange Data Explorer Query](https://data.stackexchange.com/stackoverflow/query/1505559/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s){:target="_blank"}. 
+The Query finds all your
+Stack Exchange Questions and Answers, up to 10 MB.
 
-You may need to click the link twice:
+## First Step is to Log In
 
-- Click the link once to log in
+After clicking the above link you are presented with the Log In screen:
+
+{% include image.html src="/assets/img/stack/stack exchange data explorer login.png"
+   alt="Stack Exchange Data Explorer Log In Screen"
+   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+%}
+
+Click the <kbd>log in</kbd> button at the top right of the screen.
+Then you can log in using **Google** or **Stack Overflow**. I use
+the latter since Google already knows too much about us :)
+
+{% include image.html src="/assets/img/stack/stack exchange data explorer search bar.png"
+   alt="Stack Exchange Data Explorer Query Search Bar"
+   style="float: right; width: 60%; margin: 2em 0px 0px 1em;"
+%}
+## Search For Query
+
+After logging in, the top of the window provides a search bar to find a query.
+Enter the following (or copy it and paste it):
+
+{% include copyHeader.html %}
+``` text
+All my posts on the SE network
+```
+
+Press <kbd>Enter</kbd> and a list of queries appears:
+
+{% include image.html src="/assets/img/stack/stack exchange data explorer list of queries.png"
+   alt="Stack Exchange Data Explorer Query List of Queries"
+   style="float: None; width: 100%; margin: 2em 0px 1em 0px;"
+%}
+
+For our purposes, select the version from December 12, 2021.
+If you have revised the query select your revised version.
+
+{% include image.html src="/assets/img/stack/stack exchange data explorer parameters.png"
+   alt="Stack Exchange Data Explorer Query List of Queries"
+   style="float: left; width: 65; margin: 2em 1em 1em 0px;"
+%}
+## Specify Parameters
+
+At the bottom of the window you need to specify your parameters.
+Fill in your **SE network account ID number** which in our case
+is `4775729`.
+
+Then click the <kbd>Run Query</kbd> button and wait a few
+minutes. Or a few seconds if you have just run the query and
+the results have been cached.
+
+## Download Query Results
+
+When the Query finishes the rows of results are displayed in
+the browser window. At the top right is the <kbd>Download CSV</kbd>
+button. Click this button and the following confirmation pops up:
+
+{% include image.html src="/assets/img/stack/stack exchange data explorer download csv.png"
+   alt="Stack Exchange Data Explorer Download CSV"
+   style="float: left; width: 45; margin: 2em 1em 1em 0px;"
+%}
+**Note:** your confirmation pop-up window will look different
+depending on your platform. However, the window contents will
+be similar if not identical.
+
+Ensure the **Save File** radio button is selected and
+click the <kbd>OK</kbd> button.
+
+In a moment the query results a file named: `~/Downloads/QueryResults.csv`.
+Note that `~` is a shortcut to your home directory.
+
+# Run `refresh.sh` Bash Script
+
+The `refresh.sh` bash script will both **pull** and **push** your
+GitHub Repo (Repository) and update your blog posts with Stack Exchange
+posts inbetween.
+
+In addition to updating your Stack Exchange posts into your website it will:
+
+- Generate a list of Rouge Syntax Highlighting Languages supported
+- Move `~/Downloads/QueryResults.csv` to the `~/website/sede` directory
+- Run `stack-to-blog.py` python program
+- Update Top Ten Answers stored in `_includes/`
+
 - Navigate back to this page
 - Click the link again to run the query
 
-Many thanks to the query's [Author](https://meta.stackexchange.com/a/371435/366359).
+Many thanks to the query's [Modifier](https://meta.stackexchange.com/a/371435/366359).
 
-**IMPORTANT:** When you add or revise a post in Stack Exchange the data is not avaialble
+**IMPORTANT:** When you add or revise a post in Stack Exchange 
+the data is not available
 for a query until Sunday at 3am UTC. A `cron` job or GitHub Actions
 can theoretically run the query every Monday morning but that step
 has not been created yet.
 
-When the query finishes (it can take a few minutes), click the `Download` button.
+When the query finishes (it can take a few minutes), click the 
+kbd>Download</kbd> button.
 This will download all your questions and answers 
 from Stack Exchange to your local storage in **CSV** (**C**omma **S**eparated
 **V**alues) format. 
 
 After downloading, you can view `~/Downloads/QueryResults.csv` with Excel or
-Libre Office Calc. After verifying the results are as expected,
-proceed to the next section. Otherwise run the query again or modify 
+LibreOffice Calc. After verifying the results are as expected,
+proceed to the next section. Otherwise, run the query again or modify 
 it for the desired results.
 
 If you add or subtract columns to the query, you have to
