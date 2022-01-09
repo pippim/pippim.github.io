@@ -445,7 +445,7 @@ If you have revised the query select your revised version.
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer parameters.png"
    alt="Stack Exchange Data Explorer Parameters"
-   style="float: left; width: 65; margin: 2em 1em 1em 0px;"
+   style="float: left; width: 65%; margin: 2em 1em 1em 0px;"
 %}
 
 ## Specify Parameters
@@ -465,22 +465,24 @@ the browser window.
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer download csv.png"
    alt="Stack Exchange Data Explorer Download CSV"
-   style="float: right; width: 45; margin: 1em 0px 1em 1em;"
+   style="float: right; width: 45%; margin: 1em 0px 1em 1em;"
 %}
 
 At the top right is the <kbd>Download CSV</kbd>
-button. Click this button to initiate the download process.
+button.
+
+Click this button to initiate the download process.
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer save csv.png"
    alt="Stack Exchange Data Explorer Save CSV"
-   style="float: left; width: 65; margin: 1em 1em 1em 0px;"
+   style="float: left; width: 65%; margin: 1em 1em 1em 0px;"
 %}
 
-The first step in the download ia a confirmation window pops up:
+The download process utilizes a confirmation pop-up window:
 
 **Note:** your confirmation pop-up window will look different
-depending on your platform. However, the window contents will
-be similar if not identical.
+depending on your Operating System and Platform. However, 
+the window contents will be similar if not identical.
 
 Ensure the **Save File** radio button is selected and
 click the <kbd>OK</kbd> button.
