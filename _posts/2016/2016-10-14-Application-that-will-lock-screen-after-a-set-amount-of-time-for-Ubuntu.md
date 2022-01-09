@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "3,050 "
 accepted:     Accepted
-uploaded:     2022-01-09 15:58:35
+uploaded:     2022-01-09 16:04:07
 toc:          true
 navigation:   true
 clipboard:    true
@@ -300,7 +300,7 @@ After the timer is running and you double click on it again the first running co
 While lock screen timer is running it records how many minutes are remaining into the file `~/.lock-screen-timer-remaining`. You can look at this file with the `watch` command or display it on Ubuntu's system tray / application indicator bar as shown at the top of this answer. To display time remaining in the notification area, follow the instructions in this Q&A: [Can BASH display in systray as application indicator?][4].
 
 
-  [1]: https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm
+  [1]: {% post_url /2018/2018-05-23-Set-of-countdown-timers-with-alarm %}
   [2]: https://i.stack.imgur.com/N0gb6.gif
   [3]: https://i.stack.imgur.com/0jBz6m.png
   [4]: {% post_url /2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator? %}
