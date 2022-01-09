@@ -1228,7 +1228,7 @@ The `slugify` liquid function would change a title from:
 
 to:
 
-    {{ "How do I change CLI/Command Line Interface prompt from `$` to percent sign (%)?" | slugify }}
+    {{ "How do I change CLI/Command Line Interface prompt from `$` to percent sign (%)?" | slugify: "pretty" }}
     
 Here are the python functions which create the blog post's filename:
 
