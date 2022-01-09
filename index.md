@@ -11,7 +11,7 @@ layout: default
    alt="GitHub Octocat Mascot by pngwing.com"
    style="float: left; width: 45%; margin: 2em 1em 0px 0px;"
    caption="GitHub's Octocat Mascot image credit: 
-      <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING</a>"
+      <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING  🔗</a>"
 %}
 
 # Introduction
@@ -124,7 +124,7 @@ functions.
 {% include image.html src="/assets/img/cookie-clicker.png"
    alt="Cookie image by cookie-clicker.co"
    style="float: left; width: 40%; margin: 2em 1em 0px 0px;"
-   caption="Cookie image credit: 
+   caption="Cookie image credit  🔗: 
       <a href='https://cookie-clicker.co/'>Cookie-Clicker.co</a>"
 %}
 
@@ -145,7 +145,7 @@ for blog posts. You can disable the cookie using links below.
 {% include image.html src="/assets/img/Octocat.png"
    alt="Octocat image by GitHub.com"
    style="float: right; width: 40%; margin: 2em 0px 0px 1em;"
-   caption="Octocat image credit: 
+   caption="Octocat image credit 🔗: 
       <a href='https://github.com/logos'>github.com logos</a>"
 %}
 
@@ -266,7 +266,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 {% include image.html src="/assets/img/github pages themes.png"
    alt="GitHub Pages Themes.png"
    style="float: right; width: 60%; margin: 2em 0px 0px 1em;"
-   caption="Image credit:
+   caption="Image credit 🔗:
             <a href='https://docs.ycrc.yale.edu/clusters-at-yale/guides/github_pages/'
                >Yale University</a>"
 %}
