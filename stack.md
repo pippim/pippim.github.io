@@ -860,9 +860,9 @@ Using above settings the `TAG_AVG_GROUP` value is `15`.
 
 These variables create HTML that looks like this:
 
-{% include image.html src="/assets/img/stack/Pippim post tags must scroll.gif"
+{% include image.html src="/assets/img/stack/Pippim post tags expand must scroll.gif"
    style="float: none; width: 100%; margin: 0 0 0 0;"
-   caption="Image filename: /assets/img/stack/Pippim post tags must scroll.gif"
+   caption="Image filename: /assets/img/stack/Pippim post tags expand must scroll.gif"
 %}
 
 
