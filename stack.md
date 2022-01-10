@@ -158,7 +158,7 @@ the latter since Google already knows too much about us :)
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer search bar.png"
    alt="Stack Exchange Data Explorer Query Search Bar"
-   style="float: right; width: 60%; margin: 2em 0px 0px 1em;"
+   style="float: right; width: 60%; margin: 3em 0px 0px 1em;"
 %}
 
 ## Search For Query
