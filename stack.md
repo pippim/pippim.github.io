@@ -1224,11 +1224,11 @@ The filename for a Jekyll blog post resides in the `_posts/` directory and requi
 
 The `slugify` liquid function would change a title from:
 
-    How do I change CLI/Command Line Interface prompt from `$` to percent sign (%)?
+    How do I change "CLI"/<Command Line Interface> prompt from `$` to `%` (percent sign)?
 
 to:
 
-    {{ "How do I change CLI/Command Line Interface prompt from `$` to percent sign (%)?" | slugify: "pretty" }}
+    {{ 'How do I change "CLI"/<Command Line Interface> prompt from `$` to `%` (percent sign)?' | slugify: "pretty" }}
     
 Here are the python functions which create the blog post's filename:
 
