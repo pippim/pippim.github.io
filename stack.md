@@ -1222,7 +1222,7 @@ The filename for a Jekyll blog post resides in the `_posts/` directory and requi
 - The forward slash (`/`) character is illegal in filenames, so it is replaced by division symbol (`∕`).
 - The extension `.md` is added to the filename.
 
-<-- Some hidden tests
+<!- Some hidden tests
 
 The `slugify` liquid function would change a title from:
 
