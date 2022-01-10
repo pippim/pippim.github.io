@@ -164,8 +164,8 @@ the latter since Google already knows too much about us :)
 ## Search For Query
 
 After logging in, the top of the window provides a search bar to find a query. 
-Enter "All my posts on the SE network" as shown or copy it with the button below
-and paste it into the search bar.
+Enter; *"All my posts on the SE network"* or copy with the button below
+and, paste into the search bar.
 
 <div class="code-header">
     <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
@@ -210,20 +210,19 @@ the results have been cached.
 
 ## Download Query Results
 
-When the Query finishes the rows of results are displayed in
-the browser window. 
+When the Query finishes, the resulting rows are displayed in
+the browser window. At the top of the first row you will see this button: 
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer download csv.png"
    alt="Stack Exchange Data Explorer Download CSV"
    style="float: right; width: 25%; margin: 0em 0px 1em 1em;"
 %}
 
-At the top right of your browser window is this download
-button. It will download all your questions and answers 
-from Stack Exchange to your local storage in **CSV** (**C**omma **S**eparated
-**V**alues) format. 
+It will download all your questions and answers 
+from Stack Exchange to your local storage in 
+**CSV** (**C**omma **S**eparated **V**alues) format. 
 
-Click the <kbd>Download CSV</kbd> to initiate the download process.
+Click the <kbd>Download CSV</kbd> button to initiate the download process.
 
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
