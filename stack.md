@@ -1217,11 +1217,19 @@ The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo 
 
 The filename for a Jekyll blog post resides in the `_posts/` directory and requires strict formatting:
 
-- Begins with date in `YYYY-MM-DD` format followed by `-`.
-- Next comes the title which has spaces replaced by `-`.
+- Begins with date in `YYYY-MM-DD-` format.
+- Next comes the title which has spaces replaced with `-`.
 - The forward slash (`/`) character is illegal in filenames, so it is replaced by division symbol (`∕`).
 - The extension `.md` is added to the filename.
+- If `OUTPUT_BY_YEAR_DIR=True` is set then `/YYYY/` is prepended to the filename. Required when there are more than 1,000 posts.
+- Lastly, the `OUTPUT_DIR` setting is prepended to the filename. 
 
+These global constants are defined at the top of `stack-to-blog.py`:
+
+```python
+OUTPUT_DIR = "../_posts/"   # Must match G-H Pages / Jekyll name
+OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
+```
 <!-- Some hidden tests
 
 The `slugify` liquid function would change a title from:
