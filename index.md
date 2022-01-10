@@ -354,7 +354,7 @@ of the Pippim website at `pippim.github.io`. As of
 for {{ site.title }} on GitHub Pages looked like this:
 
 ``` terminal
-{% include website_tree %}
+{% include website_tree.txt %}
 ```
 
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts 

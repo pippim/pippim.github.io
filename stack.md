@@ -53,7 +53,7 @@ of the Pippim website at `pippim.github.io`. As of
 for {{ site.title }} on GitHub Pages looked like this:
 
 ``` terminal
-{% include website_tree %}
+{% include website_tree.txt %}
 ```
 
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts 
@@ -301,7 +301,7 @@ In addition to updating your Stack Exchange posts into the {{ site.title }} webs
 - Update the latest development copies of `refresh.sh`, `stack-to-blog.py` and `rouge_languages.txt` to the production `sede/` directory on GitHub.
 - Update Top Ten Answers stored in `_includes/posts_by_vote.html`
 - Update Posts by Tag stored in `_includes/posts_by_tag.html`
-- Generate a fresh `tree` listing stored in `_includes/website_tree`
+- Generate a fresh `tree` listing stored in `_includes/website_tree.txt`
 - Update Site-Wide Front Matter stored in `_config.yml`
 - Compares the {{ site.title }} website changes made to Cayman Theme. Watch this output to know when Cayman Theme has changed.
 
