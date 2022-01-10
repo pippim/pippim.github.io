@@ -163,8 +163,9 @@ the latter since Google already knows too much about us :)
 
 ## Search For Query
 
-After logging in, the top of the window provides a search bar to find a query.
-Enter the following (or copy it and paste it):
+After logging in, the top of the window provides a search bar to find a query. 
+Enter "All my posts on the SE network" as shown or copy it with the button below
+and paste it into the search bar.
 
 <div class="code-header">
     <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
