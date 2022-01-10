@@ -1222,6 +1222,8 @@ The filename for a Jekyll blog post resides in the `_posts/` directory and requi
 - The forward slash (`/`) character is illegal in filenames, so it is replaced by division symbol (`∕`).
 - The extension `.md` is added to the filename.
 
+<-- Some hidden tests
+
 The `slugify` liquid function would change a title from:
 
     How do I change "CLI"/<Command Line Interface> prompt from `$` to `%` (percent sign)?
@@ -1229,7 +1231,13 @@ The `slugify` liquid function would change a title from:
 to:
 
     {{ 'How do I change "CLI"/<Command Line Interface> prompt from `$` to `%` (percent sign)?' | slugify: "pretty" }}
-    
+
+In reality, it ends up something like this:
+
+    https://pippim.github.io/2016/09/30/What-is-the-difference-between-touch-file-and-file.html
+
+End of Some hidden tests -->
+
 Here are the python functions which create the blog post's filename:
 
 {% include copyHeader.html %}
