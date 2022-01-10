@@ -93,7 +93,7 @@ program called `bserve.py` is used to rotate daily backups into weekly, monthly
 and yearly backups.
 
 <a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
 
 # Convert Stack Exchange to GitHub Pages
 
@@ -153,13 +153,13 @@ Click the <kbd>log in</kbd> button at the top right of the screen.
 Then you can log in using **Google** or **Stack Overflow**. I use
 the latter since Google already knows too much about us :)
 
-{% include image.html src="/assets/img/stack/stack exchange data explorer search bar.png"
-   alt="Stack Exchange Data Explorer Query Search Bar"
-   style="float: right; width: 60%; margin: 1em 0px 0px 1em;"
-%}
-
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
+
+{% include image.html src="/assets/img/stack/stack exchange data explorer search bar.png"
+   alt="Stack Exchange Data Explorer Query Search Bar"
+   style="float: right; width: 60%; margin: 2em 0px 0px 1em;"
+%}
 
 ## Search For Query
 
@@ -196,7 +196,7 @@ is `4775729`.
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer parameters.png"
    alt="Stack Exchange Data Explorer Parameters"
-   style="float: none; width: 100%;"
+   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
    caption="Stack Exchange Data Explorer Query Parameters"
 %}
 
