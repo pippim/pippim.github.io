@@ -117,7 +117,7 @@ The program automatically:
 - Prints list of self-answered questions that were not accepted after the mandatory two day wait period.
 - Prints summary totals when finished.
 
-
+---
 
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
@@ -260,6 +260,7 @@ python program.
 Many thanks to the Stack Exchange Data Explorer Query's 
 [Modifier 🔗](https://meta.stackexchange.com/a/371435/366359).
 
+---
 
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
@@ -383,6 +384,8 @@ command.
 The two `website` directory setup allows you to use `website` 
 for development and `website2` to mirror
 the production version which is **pulled** and **pushed** from/to GitHub Pages.
+
+---
 
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
@@ -896,6 +899,8 @@ def set_ss_save_blog(r):
 
 ```
 
+---
+
 <a id="hdr21"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr20" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr22" class="hdr-btn">Skip</a></div>
 
@@ -1092,12 +1097,16 @@ the file is saved to local storage or, simply discarded if it is not to be saved
 
 Then the next `row` from `rows` is read and pass 1 starts over again.
 
+---
+
 <a id="hdr24"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr23" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr25" class="hdr-btn">Skip</a></div>
 
-# Detailed Stack Exchange Conversion
+# `stack-to-blog.py` Detailed Conversion
 
-A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jekyll posts.
+A lot of work has gone into converting Stack Exchange posts to 
+GitHub Pages Jekyll posts. Here are the key steps the `stack-to-blog.py`
+python program performs:
 
 1. Navigation bar buttons (Top, ToS, ToC and Skip) are added by putting HTML code into the markdown files. Then HTML code controls jumping to id tags when a button is clicked. Here's an easy-to-read example of the HTML code:
   
@@ -1192,7 +1201,7 @@ A lot of work has gone into converting Stack Exchange posts to GitHub Pages Jeky
 
 13. Stack Exchange allows leading 4 spaces for a code block. These don't work well to support the Krampdown Rouge formatting in GitHub Pages. Therefore they are converted to fenced code blocks ```` ``` bash ```` or ```` ``` python ```` depending on the "shebang" or `<!-- language...` comment.
 
-14. Stack Exchange Markdown can dynamically look-up the link name within SE sties. GitHub Pages does not support this feature. For example, if `[https://askubuntu.com/questions/1234567/question-title][1]`is found without a link name, it is converted to `[Question Title][1]`. This will only work if the link is to one of your own posts in your `QueryResults.csv` file.
+14. Stack Exchange Markdown can dynamically look-up the link name within SE sties. GitHub Pages does not support this feature. For example, if `[https://askubuntu.com/q/123456/how-can-i?][1]`is found without a link name, it is converted to `[How Can I?][1]`.
 
 15. Stack Exchange posts which are saved on the {{ site.title }} website are converted to internal links. This minimizes clicks away from the {{ site.title }} website and presents the post in the same uncluttered format the {{ site.title }} website provides.
 
