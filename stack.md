@@ -208,24 +208,22 @@ the results have been cached.
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
+{% include image.html src="/assets/img/stack/stack exchange data explorer download csv.png"
+   alt="Stack Exchange Data Explorer Download CSV"
+   style="float: right; width: 25%; margin: 3em 0px 1em 1em;"
+%}
+
 ## Download Query Results
 
 When the Query finishes, the resulting rows are displayed in
-the browser window. At the top of the first row you will see this button: 
+the browser window. At the top of the first results' row you will see
+the button on the right.
 
-{% include image.html src="/assets/img/stack/stack exchange data explorer download csv.png"
-   alt="Stack Exchange Data Explorer Download CSV"
-   style="float: right; width: 25%; margin: 0em 0px 1em 1em;"
-%}
-
-It will download all your questions and answers 
+The button will download all your questions and answers 
 from Stack Exchange to your local storage in 
 **CSV** (**C**omma **S**eparated **V**alues) format. 
 
 Click the <kbd>Download CSV</kbd> button to initiate the download process.
-
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
 ### Download Confirmation Pop-Up Window
 
@@ -241,7 +239,7 @@ as shown on the left.
 depending on your Operating System and Platform. However, 
 the window contents will be similar if not identical.
 
-Ensure the **Save File** radio button is selected and
+Ensure the **Save File** radio button is selected and then
 click the <kbd>OK</kbd> button.
 
 In a moment the query results are downloaded into a file named:
