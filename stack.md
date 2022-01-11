@@ -70,11 +70,13 @@ tar -rpf "$Filename" website/sede/*.py  # stack-to-blog.py and SEDE query below
 tar -rpf "$Filename" website/sede/StackQuery
 ```
 
-<h3> **IMPORTANT NOTE:** </h3> 
+<h3><b> IMPORTANT NOTE: </b></h3> 
 
-> Images are ***NOT*** included in the daily backup.  This is because this is a small subset of my daily backup script that is called from  
-> `cron` every morning. The full script compresses files and emails to gmail.com. Images would make the backup to large. If you want images  
-> them in your own backup, add the following to the daily backup script:  
+> Images are ***NOT*** included in the daily backup.  This is because this is a small subset of my daily backup script that is called from `cron` every morning.
+>   
+> The full script compresses files and emails to gmail.com. Including images would make the backup exceed Google quotas of 20 MB per backup and 15 GB for all backups.
+>   
+>  If you want to include images  in your own backup, add the following to the daily backup script:  
 >    ``` bash  
 >    tar -rpf "$Filename" website/assets/img # Image files  
 >    ````  
