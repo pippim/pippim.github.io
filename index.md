@@ -388,11 +388,16 @@ tar -rpf "$Filename" website/sede/*.py  # stack-to-blog.py and SEDE query below
 tar -rpf "$Filename" website/sede/StackQuery
 ```
 
-**NOTE:** This is a subset of the daily backup script. The complete script
-may be posted someday if requested. The script is called from `cron` every
-morning, compresses files, and emails to gmail.com automatically. A python
-program called `bserve.py` is used to rotate daily backups into weekly, monthly
-and yearly backups.
+<h3><b> IMPORTANT NOTE: </b></h3> 
+
+> Images are ***NOT*** included in the daily backup.  This is because this is a small subset of my daily backup script that is called from `cron` every morning.
+>   
+> The full script compresses files and emails to gmail.com. Including images would make the backup exceed Google quotas of 20 MB per backup and 15 GB for all backups.
+>   
+>  If you want to include images  in your own backup, add the following to the daily backup script:  
+>    ``` bash  
+>    tar -rpf "$Filename" website/assets/img # Image files  
+>    ````  
 
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
