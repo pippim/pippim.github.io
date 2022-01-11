@@ -24,6 +24,8 @@ free for you to use as well. You can even duplicate the
 {{ site.title }} website for free. Then **automatically convert your
 own Stack Exchange posts to your own website.**
 
+Check out the [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](stack.html).
+
 There are no ads on {{ site.title }}. You don't need to buy 
 {{ site.title }} a coffee (it's already free at work!).
 Maybe some day you'll want to put all your
@@ -165,7 +167,8 @@ Linux or Windows PC, one of the cool things is you can change your website from
 a cell phone. This is because GitHub Pages works from any modern browser which
 all modern cell phones have.
 
-The [**FULL DOCUMENTATION**](stack.html) for `stack-to-blog.py` used to create
+The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](stack.html) 
+for `stack-to-blog.py` used to create
 the posts on this {{ site.title }} website will help you create your own website.
 
 ## **TL;DR**
@@ -409,7 +412,7 @@ GitHub Pages Posts.
 The complete `stack-to-blog.py` program can be accessed on the 
 [Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
-The [**FULL DOCUMENTATION**](stack.html) for `stack-to-blog.py` used to create
+The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](stack.html) for `stack-to-blog.py` used to create
 the posts on this {{ site.title }} website will help you create your own website.
 
 <a id="hdr12"></a>

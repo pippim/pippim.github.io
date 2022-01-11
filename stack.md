@@ -1,5 +1,5 @@
 ---
-title: Convert Stack Exchange Posts
+title: Convert Stack Exchange Posts to Your Own Website
 layout: page
 ---
 
@@ -15,25 +15,9 @@ own Stack Exchange posts to your own website.**
 Converting thousands of Stack Exchange Q&A in MarkDown format isn't as easy 
 as simply copying them over to GitHub Pages. The python program 
 `stack-to-blog.py` is used to convert Stack Exchange posts to
-GitHub Pages Posts.
-
-The `stack-to-blog.py` program automatically:
-
-- Creates Jekyll front matter.
-- Selects Stack Exchange Posts based on meeting minimum criteria such as up-votes or accepted answer status.
-- Converts Stack Exchange Markdown formats to GitHub Pages Kramdown Markdown format.
-- Selectively inserts Table of Contents
-- Selectively inserts section navigation buttons for: <kbd>Top</kbd> (Top of Page), <kbd>ToS</kbd> (Top of Section), <kbd>ToC</kbd> (Table of Contents) and <kbd>Skip</kbd> (Skip section).
-- Selectively inserts "Copy Code Block to System Clipboard" button
-- Creates html with "Top Ten Answers" with the most votes
-- Creates powerful nested expandable/collapsible detail/summary html for many thousands of tags by post.
-- Map hyperlinks in Stack Exchange Posts to {{ site.title }} website posts if they were converted.
-- Fixes old broken `#header` Stack Exchange Markdown.
-- Converts `< block quote` Stack Exchange Markdown into what works in Jekyll Kramdown.
-- Convert Stack Exchange `Language` tags to fenced code block language.
-- Fixes broken Stack Exchange Hyperlinks where the website post title is implied and not explicit.
-- Prints list of self-answered questions that were not accepted after the mandatory two day wait period.
-- Prints summary totals when finished.
+GitHub Pages Posts. The bash script `refresh.sh` is used to **pull** your
+GitHub Repo, run `stack-to-blog.py` and **push** the results back
+to your website.
 
 ---
 
