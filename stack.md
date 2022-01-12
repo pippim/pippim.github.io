@@ -1185,7 +1185,7 @@ python program performs:
     > line 1  
     > line 2  
 
-6. **Note:** When parsing inside a fenced code block like ```` ``` bash ```` or an indented code block demarked by four leading spaces, no special processing is done for block quotes discussed above, for `# Header` lines discussed below or, for hyperlinks discussed further below.
+6. **Note:** When parsing inside a fenced code block like `` ``` bash `` or an indented code block (demarcated by four leading spaces), no special processing is done for block quotes discussed above, for `# Header` lines discussed below or, for hyperlinks discussed further below.
 
 7. Older Markdown format on Stack Exchange posts where `#Header` was permitted are converted to `# Header`.
 
@@ -1232,7 +1232,7 @@ Given the settings above, a post with the date **January 11, 2022** and the titl
 
     _posts/2022/2022-01-11-How-can-I-copy-files?.md
 
-Note that the `../` in the `OUTPUT_DIR` constant is only to navigate from `/sede` directory where `stack-to-blog.py` is run from. The `_posts` directory is in the root directory of the website.
+Note that the `../` in the `OUTPUT_DIR` constant is only to navigate from `/sede` directory where `stack-to-blog.py` is run from. The `/_posts` directory is in the root directory of the website.
 
 <!-- Some hidden tests
 
