@@ -122,7 +122,7 @@ cp ~/website/_includes/posts_by_vote.html _includes/
 
 # Add tree listing
 tree --dirsfirst --filelimit 20 > tree.work
-tail -n +2 tree.work > _includes/website_tree
+tail -n +2 tree.work > _includes/website_tree.txt
 rm tree.work
 
 git add _includes/
@@ -182,3 +182,10 @@ wget -qO modified 'https://raw.githubusercontent.com/pippim/pippim.github.io/mai
 diff original modified
 rm original modified
 # TODO: Save results to file and compare week-to-week for changes in diff results
+
+# Get GitHub Pages status for 2 minutes: every 1 second for 120 times
+count=0
+
+#$ curl -u USERNAME https://api.github.com/repos/USERNAME/REPO/pages/builds/latest
+
+curl -u pippim https://api.github.com/repos/pippim/pippim.github.io/main/pages/builds/latest
