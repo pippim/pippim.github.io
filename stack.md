@@ -1,6 +1,6 @@
 ---
 title: Convert Stack Exchange Posts to Your Own Website
-layout: page
+layout: program
 ---
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
