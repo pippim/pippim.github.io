@@ -14,7 +14,7 @@ The full documentation is [here](stack.html).
 
 ## Music Player with CD encoding, lyrics scraping and synchronization
 
-The full documentation is [here](stack.html).
+See it in action [here](mserve.html).
 
 ## Coming soon to this page
 
