@@ -1185,7 +1185,7 @@ python program performs:
     > line 1  
     > line 2  
 
-6. **Note:** You can open one of the blog posts and compare it to the Stack Exchange original answer.
+6. **Note:** When parsing inside a fenced code block like ```` ``` bash ```` or an indented code block demarked by four leading spaces, no special processing is done for block quotes discussed above, for `# Header` lines discussed below or, for hyperlinks discussed further below.
 
 7. Older Markdown format on Stack Exchange posts where `#Header` was permitted are converted to `# Header`.
 
@@ -1227,6 +1227,13 @@ These global constants are defined at the top of `stack-to-blog.py`:
 OUTPUT_DIR = "../_posts/"   # Must match G-H Pages / Jekyll name
 OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
 ```
+
+Given the settings above, a post with the date **January 11, 2022** and the title *"How can I copy files?", would be saved as:
+
+    _posts/2022/2022-01-11-How-can-I-copy-files?.md
+
+Note that the `../` in the `OUTPUT_DIR` constant is only to navigate from `/sede` directory where `stack-to-blog.py` is run from. The `_posts` directory is in the root directory of the website.
+
 <!-- Some hidden tests
 
 The `slugify` liquid function would change a title from:
