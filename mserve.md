@@ -9,13 +9,23 @@ layout: program
 
 # Introduction
 
-mserve.py
+mserve.py, called with `m` from the command line or a desktop shortcut is a powerful Music Player
+with functions to encode CDs with track titles using MusicBrainz database. It will also get
+lyrics from the internet and let you synchronize them in real time by simply clicking each line
+as it is sung.
 
 ---
 
+<video src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4" data-canonical-src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" style="max-height:640px;">
+
+  </video>
+
+  
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
 {% include toc.md %}
+
+# Synchronized Lyrics
 
 ---
 <a id="hdr3"></a>
