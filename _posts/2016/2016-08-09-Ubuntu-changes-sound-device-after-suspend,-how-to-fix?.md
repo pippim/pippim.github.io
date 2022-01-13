@@ -24,7 +24,8 @@ This "undocumented feature" appeared with Ubuntu 16.04 and new version of PulseA
 
 Create a new file `/lib/systemd/system-sleep/tv-sound` and copy in:
 
-
+{% assign repo_url = link.url | prepend: site.code_url %} 
+> **repo_url:** {{ repo_url }}
 
 ``` sh
 #!/bin/sh
