@@ -676,6 +676,10 @@ theme: jekyll-theme-cayman
 # The title: appears frequently on my pages. It's your company / personal name
 title: Pippim
 description: Free Open-Source Software for the World. Free of Ads Too!
+# Link to content on the repo
+code_url: https://github.com/pippim/pippim.github.io/blob/main
+
+# Following site-wide values automatically set by sede/refresh.sh script
 views: "53,134,690 "
 views_human: 53.1 million
 refreshed: 2022-01-04 16:54:10
@@ -691,7 +695,7 @@ accepted_count: "491 "
 You can use these variables in your website. For example the following code: ...
 
 {% raw %}
-```
+``` liquid
 < As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers 
 have over **{{ site.views_human }} views!**
 ```
@@ -700,6 +704,20 @@ have over **{{ site.views_human }} views!**
 ...would be display as:
 
 > As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers have over **{{ site.views_human }} views!**
+
+Another example is to link back to the original Markdown with the following code: ...
+
+{% raw %}
+``` liquid
+{% assign repo_url = post.url | prepend: site.code_url %} 
+**repo_url:** {{ repo_url }}
+```
+{% endraw %}
+
+...would be display as:
+
+{% assign repo_url = post.url | prepend: site.code_url %} 
+> **repo_url:** {{ repo_url }}
 
 
 You can turn off Site-Wide Front Matter by setting the filename to `None`
@@ -711,9 +729,7 @@ as documented in the `stack-to-blog.py` program:
 CONFIG_YML = "../_config.yml"
 ```
 
-{% raw %}
 - **WARNING:** Turning off Site-Wide Front Matter would require extensive revisions to many places where the `{{ site.views }}` Front Matter Liquid tag and other `site.` tags are used. It is recommended, at least initially, that you do **not** turn this option off.
-{% endraw %}
 
 <a id="hdr17"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr16" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr18" class="hdr-btn">Skip</a></div>
