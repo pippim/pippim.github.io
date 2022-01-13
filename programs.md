@@ -24,7 +24,15 @@ The full documentation is [here](stack.html).
    style="float: left; width: 85%; margin: 0em 1em 1em 0px;"
 %}
 
-See it in action [here](mserve.html).
+This short little video clip shows a subset of the main `mserve`
+music player window. Find out more and see a lot more [here](mserve.html).
+
+The full source code is available for you to download and
+modify to your own tastes.
+
+Features like automatically encoding CDs with internet
+lookup for album tracks, artwork and song lyrics make
+`mserve` a "do everything" application for you. 
 
 ## Coming soon to this page
 
