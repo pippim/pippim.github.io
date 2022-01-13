@@ -27,6 +27,7 @@ Create a new file `/lib/systemd/system-sleep/tv-sound` and copy in:
 {% assign repo_url = link.url | prepend: site.code_url %} 
 > **repo_url:** {{ repo_url }}  
 > **page_url:** {{ page.url }}  
+> **full_url:** {{ repo_url }}{{ page.url }}  
 
 ``` sh
 #!/bin/sh
