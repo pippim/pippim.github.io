@@ -9,10 +9,20 @@ You can use them free of charge and change them however you like.
 
 ## Convert Stack Exchange Posts to Your Own Website
 
+{% include image.html src="/assets/img/stack-to-blog progress display.gif"
+   alt="stack-to-blog.py"
+   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+%}
+
 The full documentation is [here](stack.html).
 
 
 ## Music Player with CD encoding, lyrics scraping and synchronization
+
+{% include image.html src="/assets/img/mserve/mserve small demo.gif"
+   alt="mserve small demo"
+   style="float: left; width: 85%; margin: 0em 1em 1em 0px;"
+%}
 
 See it in action [here](mserve.html).
 
