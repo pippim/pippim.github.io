@@ -28,6 +28,7 @@ Create a new file `/lib/systemd/system-sleep/tv-sound` and copy in:
 > **repo_url:** {{ repo_url }}  
 > **page_url:** {{ page.url }}  
 > **full_url:** {{ repo_url }}{{ page.url }}  
+> **page.path:** {{ page.path }}  
 
 ``` sh
 #!/bin/sh
