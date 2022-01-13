@@ -2,6 +2,10 @@ theme: jekyll-theme-cayman
 # The title: appears frequently on my pages. It's your company / personal name
 title: Pippim
 description: Free Open-Source Software for the World. Free of Ads Too!
+# Link to content on the repo
+code_url: https://github.com/pippim/pippim.github.io/blob/main
+
+# Following site-wide values automatically set by sede/refresh.sh script
 views: "53,496,745 "
 views_human: 53.5 million
 refreshed: 2022-01-11 18:01:29
