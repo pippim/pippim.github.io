@@ -45,7 +45,7 @@ on your screen:
 <video src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4" 
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
-style="max-height:640px; width: 75% !important; height: auto !important;">
+style="max-height:640px; width: 100% !important; height: auto !important;">
 
   </video>
 
@@ -89,8 +89,8 @@ This video shows how the skin changes color:
 
 <video src="https://user-images.githubusercontent.com/92641463/149242688-5cde502e-1025-4237-9e22-af9af3b2d93a.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149242688-5cde502e-1025-4237-9e22-af9af3b2d93a.mp4"
-controls="controls" muted="muted"
-class="d-block rounded-bottom-2 width-fit" style="max-height:640px;">
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
+style="max-height:640px; width: 100% !important; height: auto !important;">
 
   </video>
 
@@ -125,7 +125,7 @@ lag while a CD is being encoded:
 <video src="https://user-images.githubusercontent.com/92641463/149241934-99d01df8-2cbf-4488-aa14-efe9e4d4f3aa.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149241934-99d01df8-2cbf-4488-aa14-efe9e4d4f3aa.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
-style="max-height:640px;">
+style="max-height:640px; width: 100% !important; height: auto !important;">
 
   </video>
 
