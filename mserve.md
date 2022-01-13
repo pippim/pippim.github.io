@@ -192,6 +192,7 @@ And, there is still more work to be done...
 
 Here are the tables and indices used:
 
+{% include copyHeader.html %}
 ``` python
 def open_db():
     """ Open SQL Tables """
@@ -272,6 +273,7 @@ def open_db():
 
 Here is how mserve remembers and restores window positions and sizes:
 
+{% include copyHeader.html %}
 ``` python
 def save_window_geom(name, geom):
     """
