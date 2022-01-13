@@ -45,7 +45,7 @@ on your screen:
 <video src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4" 
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
-style="max-height:640px;">
+style="max-height:640px; width: 75% !important; height: auto !important;">
 
   </video>
 
