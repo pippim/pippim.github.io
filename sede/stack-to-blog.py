@@ -393,7 +393,7 @@ def create_speed_search():
         ss_post_url = "{% post_url " + base_fn + " %}"
         ss_url = r[URL]
         ss_type = r[TYPE]
-        ss_title = r[TITLE].replace('/', '∕')  # Illegal to division symbol
+        ss_title = r[TITLE]
         ss_full_url = None
         ss_accepted = r[ACCEPTED]  # Has this answer been accepted?
         ss_count = 0
@@ -473,7 +473,6 @@ def get_ss_url(search, search_type="Question"):
 def get_ss_title(search, search_type="Question"):
     """ Get ss entry in Speed Search List using Title
     """
-    search = search.replace('/', '∕')  # Convert slash to division symbol
     for ndx, entry in enumerate(ss_list):
         unpack_ss_entry(entry)
         if ndx != ss_index:
@@ -570,7 +569,7 @@ def dump(r):
     """
 
     print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
-    print('Title:  ', r[TITLE].replace('/', '∕')[:80])
+    print('Title:  ', r[TITLE][:80])
     print('URL:    ', r[URL][:80])
     print('LINK:   ', r[LINK][:80])
     print('blog:   ', blog_filename[:80])
@@ -1214,7 +1213,7 @@ def add_tag_post(name_index, names, r):
 
     cs = dt.strptime(post_created_date[:10], "%Y-%m-%d")
     created_date_string = cs.strftime('%B %-d, %Y')
-    t = (str_name, base_filename, r[TITLE].replace('/', '∕'), r[VIEWS],
+    t = (str_name, base_filename, r[TITLE], r[VIEWS],
          r[SCORE], accepted, created_date_string)
     tag_posts.append(t)
 
@@ -1686,7 +1685,7 @@ def front_matter(r):
     md = "---\n" + FRONT_LAYOUT + "\n"
     # Folded Title: https://talk.jekyllrb.com/t/
     # how-to-use-single-quote-and-double-quote-as-part-of-title-without-escaping/2705/9
-    md += FRONT_TITLE + ">\n    " + r[TITLE].replace('/', '∕') + '\n'
+    md += FRONT_TITLE + ">\n    " + r[TITLE] + '\n'
     if FRONT_SITE is not None:
         md += FRONT_SITE + r[SITE] + '\n'
     if FRONT_URL is not None:
@@ -1886,9 +1885,9 @@ def check_self_answer(r):
 
     answer = accepted = search_url = False
 
-    if get_ss_title(r[TITLE].replace('/', '∕')):
+    if get_ss_title(r[TITLE]):
         # Have verified question title exists. Now check if answer exists
-        if get_ss_title(r[TITLE].replace('/', '∕'), search_type="Answer"):
+        if get_ss_title(r[TITLE], search_type="Answer"):
             if "68011128" in ss_post_url:
                 print('Answer is true @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
             answer = True
@@ -2937,7 +2936,7 @@ for row in rows:
     ''' Get filenames and save_blog flag. '''
     base_filename, blog_filename = create_blog_filename(row)
     get_ss_index(row_number - 2)
-    if ss_title != row[TITLE].replace('/', '∕'):
+    if ss_title != row[TITLE]:
         print('index does not match:', row_number - 2)
         fatal_error("Terminating")
     save_blog = ss_save_blog
