@@ -21,7 +21,7 @@ The full documentation is [here](stack.html).
 
 {% include image.html src="/assets/img/mserve/mserve small demo.gif"
    alt="mserve small demo"
-   style="float: left; width: 85%; margin: 0em 1em 1em 0px;"
+   style="float: left; width: 82%; margin: 0em 1em 1em 0px;"
 %}
 
 This short little video clip shows a subset of the main `mserve`
