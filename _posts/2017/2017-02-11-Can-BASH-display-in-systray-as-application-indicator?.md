@@ -12,7 +12,8 @@ votes:        "6 "
 favorites:    
 views:        "1,901 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator?
 toc:          false
 navigation:   true
 clipboard:    true

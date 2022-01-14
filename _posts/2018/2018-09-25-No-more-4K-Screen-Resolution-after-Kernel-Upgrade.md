@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "1,649 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-25-No-more-4K-Screen-Resolution-after-Kernel-Upgrade.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -34,4 +35,4 @@ sudo apt autoremove
 ```
 
   [1]: https://i.stack.imgur.com/yT6o0.png
-  [2]: {% post_url /2018/2018-04-07-How-to-list-GRUB's-"menuentries"-in-command-line? %}
+  [2]: {% post_url /2018/2018-04-07-How-to-list-GRUB's-"menuentries"-in-command-line^ %}

@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "4,791 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-30-How-to-securely-upgrade-Ubuntu-from-16.04-to-18.04.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -31,4 +32,4 @@ Additionally you can install new applications previously not available such as t
 Wash, Rinse, Repeat then Repeat again...
 
 
-  [1]: {% post_url /2018/2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %}
+  [1]: {% post_url /2018/2018-04-27-Bash-script-to-backup^clone-Ubuntu-to-another-partition %}

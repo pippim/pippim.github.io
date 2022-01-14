@@ -12,7 +12,8 @@ votes:        "7 "
 favorites:    
 views:        "452 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-09-12-How-to-go-to-beginning-and-end-of-line-in-ordinary-text-boxes.md
 toc:          false
 navigation:   false
 clipboard:    false

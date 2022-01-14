@@ -12,7 +12,8 @@ votes:        "5 "
 favorites:    
 views:        "3,056 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-Audio-starts-playing-3-5-seconds-after-video-does.md
 toc:          false
 navigation:   false
 clipboard:    false

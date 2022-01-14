@@ -12,7 +12,8 @@ votes:        "17 "
 favorites:    
 views:        "13,612 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-30-Terminal-splash-screen-with-Weather,-Calendar,-Time-&-Sysinfo?
 toc:          false
 navigation:   false
 clipboard:    true

@@ -12,7 +12,8 @@ votes:        "5 "
 favorites:    
 views:        "1,029 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-07-04-When-changing-from-windows-10-to-linux,-will-the-data-still-on-pc-or-removed?
 toc:          false
 navigation:   false
 clipboard:    false

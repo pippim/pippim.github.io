@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "16,252 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-21-Check-if-Bash-version-is->=-given-version-number
 toc:          false
 navigation:   false
 clipboard:    true

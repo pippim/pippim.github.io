@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "10,432 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-11-Purple-theme-for-"Bash-On-Ubuntu-On-Windows"-for-Windows-10.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -61,5 +62,5 @@ As Piotr Bartnicki notes, many people may prefer a lighter blue for directories.
 
   [1]: https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2
   [2]: https://i.stack.imgur.com/zfwZQ.png
-  [3]: {% post_url /2017/2017-11-22-Windows-Subsystem-for-Linux-display-Linux-distribution? %}
+  [3]: {% post_url /2017/2017-11-22-Windows-Subsystem-for-Linux-display-Linux-distribution^ %}
   [4]: https://i.stack.imgur.com/Ki66O.png

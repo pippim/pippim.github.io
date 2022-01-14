@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "2,366 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-29-Video-drivers-for-Intel-onboard-graphic-in-18.04-and-thinkpad-t410.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -26,7 +27,7 @@ Overheating is a common problem in Linux. This article: [Most Effective Ways To 
 - Install CPUFreq (often not necessary)
 - Monitor System temperatures
 
-You do **NOT** need to add PPAs as the article instructs to install `TLP`. See this answer: [How can I install TLP in Ubuntu 18.04?]({% post_url /2018/2018-11-11-How-can-I-install-TLP-in-Ubuntu-18.04? %})
+You do **NOT** need to add PPAs as the article instructs to install `TLP`. See this answer: [How can I install TLP in Ubuntu 18.04?]({% post_url /2018/2018-11-11-How-can-I-install-TLP-in-Ubuntu-18.04^ %})
 
 You can read an in-depth Q&A here in **Ask Ubuntu** on CPU temperature control: [Stop cpu from overheating]({% post_url /2017/2017-01-25-Stop-cpu-from-overheating %})
 

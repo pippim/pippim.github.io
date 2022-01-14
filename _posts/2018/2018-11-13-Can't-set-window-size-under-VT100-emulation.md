@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "1,694 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-13-Can't-set-window-size-under-VT100-emulation.md
 toc:          false
 navigation:   false
 clipboard:    false

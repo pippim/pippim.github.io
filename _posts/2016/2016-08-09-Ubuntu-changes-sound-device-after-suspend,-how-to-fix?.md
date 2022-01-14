@@ -12,7 +12,8 @@ votes:        "3 "
 favorites:    
 views:        "34,398 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-09-Ubuntu-changes-sound-device-after-suspend,-how-to-fix?
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,11 +25,7 @@ This "undocumented feature" appeared with Ubuntu 16.04 and new version of PulseA
 
 Create a new file `/lib/systemd/system-sleep/tv-sound` and copy in:
 
-{% assign repo_url = link.url | prepend: site.code_url %} 
-> **repo_url:** {{ repo_url }}  
-> **page_url:** {{ page.url }}  
-> **full_url:** {{ repo_url }}{{ page.url }}  
-> **page.path:** {{ page.path }}  
+
 
 ``` sh
 #!/bin/sh

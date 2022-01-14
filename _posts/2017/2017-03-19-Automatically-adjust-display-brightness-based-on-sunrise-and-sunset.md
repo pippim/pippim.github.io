@@ -12,7 +12,8 @@ votes:        "8 "
 favorites:    
 views:        "5,211 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset.md
 toc:          true
 navigation:   true
 clipboard:    true
@@ -485,7 +486,7 @@ This Q&A ([Can BASH display in systray as application indicator?][6]) describes 
   [3]: https://i.stack.imgur.com/4njOT.png
   [4]: https://i.stack.imgur.com/CWjQ8.png
   [5]: https://i.stack.imgur.com/esEG1.png
-  [6]: {% post_url /2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator? %}
+  [6]: {% post_url /2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator^ %}
 
 
 <a id="hdr12"></a>

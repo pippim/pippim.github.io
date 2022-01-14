@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "1,178 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Set-custom-names-for-vmlinuz-and-initrd-so-multiple-distros-can-share-boot-directory.md
 toc:          false
 navigation:   false
 clipboard:    true
@@ -179,4 +180,4 @@ $ locate 4.14.34 | head -n1000
 
 ```
 
-  [1]: {% post_url /2018/2018-03-01-How-do-I-map-Linux-Kernels-to-Ubuntu-Kernels? %}
+  [1]: {% post_url /2018/2018-03-01-How-do-I-map-Linux-Kernels-to-Ubuntu-Kernels^ %}

@@ -12,7 +12,8 @@ votes:        "1 "
 favorites:    
 views:        "670 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-13-Whenever-I-try-to-call-the-following-command:-"notepad-∕etc∕bash.bashrc"-from-Windows-WSL-I-get-an-error
 toc:          false
 navigation:   false
 clipboard:    false

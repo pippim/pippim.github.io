@@ -12,13 +12,14 @@ votes:        "2 "
 favorites:    
 views:        "939 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-10-How-to-make-speaking-clock-(via-cron-and-festival-tts)-work-while-playing-music.md
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-As per this answer: [Can I use cron to chime at top of hour like a grandfather clock?]({% post_url /2016/2016-10-02-Can-I-use-cron-to-chime-at-top-of-hour-like-a-grandfather-clock? %})6 you need to export an environment variable before playing sounds in your cron script:
+As per this answer: [Can I use cron to chime at top of hour like a grandfather clock?]({% post_url /2016/2016-10-02-Can-I-use-cron-to-chime-at-top-of-hour-like-a-grandfather-clock^ %})6 you need to export an environment variable before playing sounds in your cron script:
 
 ``` 
 export XDG_RUNTIME_DIR="/run/user/1000"

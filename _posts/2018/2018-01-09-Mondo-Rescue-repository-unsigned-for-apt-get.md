@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "6,037 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-09-Mondo-Rescue-repository-unsigned-for-apt-get.md
 toc:          false
 navigation:   true
 clipboard:    false
@@ -193,7 +194,7 @@ I wish my search had yielded more positive results.
   [7]: https://askubuntu.com/questions/781970/mondo-rescue-repository-unsigned-for-apt-get
   [8]: https://askubuntu.com/questions/962597/bootable-recovery-partition-or-dvd
   [9]: https://askubuntu.com/questions/781738/making-an-iso-backup-of-my-system/781755#781755
-  [10]: {% post_url /2017/2017-06-06-Backup-Linux-configuration,-scripts-and-documents-to-Gmail %}
+  [10]: {% post_url /2017/2017-06-06-Backup-Linux-configuration^-scripts-and-documents-to-Gmail %}
 
 
 <a id="hdr7"></a>

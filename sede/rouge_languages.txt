@@ -175,6 +175,7 @@ sqf
 sql
 ssh
 stan
+stata
 supercollider
 swift
 systemd

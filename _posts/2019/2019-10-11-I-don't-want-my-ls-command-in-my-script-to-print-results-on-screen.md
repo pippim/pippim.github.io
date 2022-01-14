@@ -12,7 +12,8 @@ votes:        "4 "
 favorites:    
 views:        "2,331 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-11-I-don't-want-my-ls-command-in-my-script-to-print-results-on-screen.md
 toc:          false
 navigation:   false
 clipboard:    false

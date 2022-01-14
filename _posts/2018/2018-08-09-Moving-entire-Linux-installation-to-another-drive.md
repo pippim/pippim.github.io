@@ -12,7 +12,8 @@ votes:        "7 "
 favorites:    
 views:        "228,633 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-09-Moving-entire-Linux-installation-to-another-drive.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,7 +25,7 @@ A menu is provided to help you select the correct partition to clone to. The clo
 
 `rsync` is used for optimal speed should you choose to reclone the partition. This is beneficial if upgrade fails, you wait for bug fix and want to run upgrade again. Similarly you may have chosen wrong options during upgrade and want to do it again.
 
-The full script can be found here: [Bash script to backup∕clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %})5 and this is what the screen looks like:
+The full script can be found here: [Bash script to backup∕clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup^clone-Ubuntu-to-another-partition %})5 and this is what the screen looks like:
 
 [![clone-ubuntu.png][1]][1]
 

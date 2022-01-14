@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "12,081 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-20-Desktop-icons-appear-on-wrong-monitor.md
 toc:          false
 navigation:   false
 clipboard:    false

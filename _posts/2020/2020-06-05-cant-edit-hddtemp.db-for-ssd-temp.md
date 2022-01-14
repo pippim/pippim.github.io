@@ -12,7 +12,8 @@ votes:        "0 "
 favorites:    
 views:        "130 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-05-cant-edit-hddtemp.db-for-ssd-temp.md
 toc:          false
 navigation:   false
 clipboard:    true
@@ -20,7 +21,7 @@ clipboard:    true
 
 From:
 
-- [How do I check system health?]({% post_url /2018/2018-05-21-How-do-I-check-system-health? %})
+- [How do I check system health?]({% post_url /2018/2018-05-21-How-do-I-check-system-health^ %})
 
 ### NVMe PCIe M.2 Gen 3.0 x 4 (or 2) SSD
 

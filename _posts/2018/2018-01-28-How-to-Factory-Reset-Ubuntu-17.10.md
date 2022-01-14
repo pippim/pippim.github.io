@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "3,539 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-28-How-to-Factory-Reset-Ubuntu-17.10.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -24,4 +25,4 @@ Completely reinstalling Ubuntu should not be necessary in such a case.
 
 When you say "sassy" I assume you mean [sudo insults][1].
 
-  [1]: {% post_url /2016/2016-10-15-Where-are-sudo's-insults-stored? %}
+  [1]: {% post_url /2016/2016-10-15-Where-are-sudo's-insults-stored^ %}

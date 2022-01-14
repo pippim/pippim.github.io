@@ -12,7 +12,8 @@ votes:        "16 "
 favorites:    
 views:        "86,161 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-25-What-does-$#-mean-in-bash?
 toc:          false
 navigation:   false
 clipboard:    false

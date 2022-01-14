@@ -12,7 +12,8 @@ votes:        "3 "
 favorites:    
 views:        "12,085 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-30-Wireless-keyboard-not-working-with-Ubuntu-18.04-Live-USB.md
 toc:          false
 navigation:   false
 clipboard:    false

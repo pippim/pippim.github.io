@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "1,535 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-16-Uable-to-print-after-upgrading-Ubuntu-16.04-to-18.04-(HP-MFC-7470DW).md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -52,4 +53,4 @@ Many people are having problems printing after 16.04 to 18.04 upgrade:
 
 
   [1]: https://askubuntu.com/questions/1080720/printer-filter-failed/1080926#1080926
-  [2]: {% post_url /2018/2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %}
+  [2]: {% post_url /2018/2018-04-27-Bash-script-to-backup^clone-Ubuntu-to-another-partition %}

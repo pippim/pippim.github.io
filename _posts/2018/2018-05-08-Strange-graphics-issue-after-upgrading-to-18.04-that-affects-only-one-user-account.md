@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "11,280 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-Strange-graphics-issue-after-upgrading-to-18.04-that-affects-only-one-user-account.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -41,4 +42,4 @@ Adding /lib/firmware/i915/skl_guc_ver9_33.bin
 In particular you should be seeing the last line. If not follow the instructions here: [Updated kernel to 4.8 now missing firmware warnings][1]
 
 
-  [1]: {% post_url /2016/2016-10-03-Possible-missing-firmware-∕lib∕firmware∕i915 %}
+  [1]: {% post_url /2016/2016-10-03-Possible-missing-firmware-^lib^firmware^i915 %}

@@ -97,7 +97,7 @@ stack-to-blog.py
 
 retVal=$?
 if [ $retVal -ne 0 ]; then
-    echo "git pull FAILED with code: $retVal"
+    echo "stack-to-blog.py FAILED with code: $retVal"
     exit $retVal
 fi
 
@@ -121,7 +121,7 @@ cp ~/website/_includes/posts_by_tag.html _includes/
 cp ~/website/_includes/posts_by_vote.html _includes/
 
 # Add tree listing
-tree --dirsfirst --filelimit 20 > tree.work
+tree -L 3 --dirsfirst --filelimit 20 > tree.work
 tail -n +2 tree.work > _includes/website_tree.txt
 rm tree.work
 
@@ -188,4 +188,5 @@ count=0
 
 #$ curl -u USERNAME https://api.github.com/repos/USERNAME/REPO/pages/builds/latest
 
-curl -u pippim https://api.github.com/repos/pippim/pippim.github.io/main/pages/builds/latest
+## BROKEN :(
+# curl -u pippim https://api.github.com/repos/pippim/pippim.github.io/main/pages/builds/latest

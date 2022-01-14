@@ -12,7 +12,8 @@ votes:        "7 "
 favorites:    
 views:        "6,425 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-25-How-do-I-fix-very-slow-scrolling-USB-wheel-mouse-(after-waking-from-suspend)-which-started-after-upgrade-to-19.04?
 toc:          false
 navigation:   false
 clipboard:    true

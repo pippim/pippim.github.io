@@ -12,7 +12,8 @@ votes:        "3 "
 favorites:    2
 views:        "624 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-06-How-to-narrow-down-what-is-taking-100%-CPU-on-alternating-cores
 toc:          false
 navigation:   false
 clipboard:    false

@@ -12,7 +12,8 @@ votes:        "11 "
 favorites:    
 views:        "4,170 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-Set-of-countdown-timers-with-alarm.md
 toc:          true
 navigation:   true
 clipboard:    true
@@ -804,7 +805,7 @@ exit 0
 
 You can have the System Tray / Application Indicator Area update with the time remaining along with a "spinning text pizza" as illustrated in the GIF in above the bash listing.
 
-To setup Sysmonitor Indicator see this Q&A: [Can BASH display in systray as application indicator?]({% post_url /2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator? %})
+To setup Sysmonitor Indicator see this Q&A: [Can BASH display in systray as application indicator?]({% post_url /2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator^ %})
 
 
   [1]: https://i.stack.imgur.com/4m75Y.gif

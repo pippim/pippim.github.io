@@ -12,7 +12,8 @@ votes:        "3 "
 favorites:    
 views:        "6,628 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-28-When-I-close-the-lid-of-my-laptop,-the-Wifi-should-not-disconnect-automatically
 toc:          false
 navigation:   false
 clipboard:    false

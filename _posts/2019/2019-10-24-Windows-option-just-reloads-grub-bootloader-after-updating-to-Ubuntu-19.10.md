@@ -12,7 +12,8 @@ votes:        "1 "
 favorites:    
 views:        "629 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-24-Windows-option-just-reloads-grub-bootloader-after-updating-to-Ubuntu-19.10.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -20,7 +21,7 @@ clipboard:    false
 
 First you need to change your boot order to Windows instead of Grub. To find out the key to press during boot to bring up the BIOS menu see:
 
-- [The computer didn't automatically boot from USB,]({% post_url /2019/2019-10-13-The-computer-didn't-automatically-boot-from-USB, %})
+- [The computer didn't automatically boot from USB,]({% post_url /2019/2019-10-13-The-computer-didn't-automatically-boot-from-USB^ %})
 
 Ignore the part about selecting device boot order, you want to change the UEFI boot order and move Windows to the top.
 

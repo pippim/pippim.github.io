@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "21,728 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-17-Accidentally-did-dd-∕dev∕sda
 toc:          false
 navigation:   false
 clipboard:    false

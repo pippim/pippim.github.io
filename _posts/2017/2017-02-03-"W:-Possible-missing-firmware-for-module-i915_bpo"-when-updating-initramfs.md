@@ -12,7 +12,8 @@ votes:        "25 "
 favorites:    
 views:        "184,955 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-03-"W:-Possible-missing-firmware-for-module-i915_bpo"-when-updating-initramfs.md
 toc:          true
 navigation:   true
 clipboard:    false
@@ -365,7 +366,7 @@ sudo apt upgrade
   [2]: https://i.stack.imgur.com/PzEm6.png
   [3]: https://01.org/linuxgraphics/downloads/firmware
   [4]: https://i.stack.imgur.com/BFYtB.png
-  [5]: {% post_url /2018/2018-05-23-How-to-make-locate-output-look-like-`ll`-or-`ls--la`-but-nicer? %}
+  [5]: {% post_url /2018/2018-05-23-How-to-make-locate-output-look-like-`ll`-or-`ls--la`-but-nicer^ %}
   [6]: https://bugs.launchpad.net/ubuntu/+source/linux-firmware/+bug/1611124
   [7]: https://i.stack.imgur.com/9lQBJ.png
   [8]: https://01.org/linuxgraphics/downloads/kabylake-guc-9.14

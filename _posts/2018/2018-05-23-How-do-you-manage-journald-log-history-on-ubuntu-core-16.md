@@ -12,7 +12,8 @@ votes:        "1 "
 favorites:    
 views:        "989 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-How-do-you-manage-journald-log-history-on-ubuntu-core-16.md
 toc:          false
 navigation:   false
 clipboard:    true
@@ -111,5 +112,5 @@ Vacuuming done, freed 176.0M of archived journals on disk.
 ```
 
 
-  [1]: {% post_url /2018/2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04+-restarts? %}
+  [1]: {% post_url /2018/2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04^-restarts^ %}
 

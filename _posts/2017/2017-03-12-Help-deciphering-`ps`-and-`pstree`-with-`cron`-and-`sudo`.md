@@ -12,7 +12,8 @@ votes:        "0 "
 favorites:    
 views:        "1,061 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-12-Help-deciphering-`ps`-and-`pstree`-with-`cron`-and-`sudo`.md
 toc:          false
 navigation:   false
 clipboard:    false

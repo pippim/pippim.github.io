@@ -12,7 +12,8 @@ votes:        "8 "
 favorites:    
 views:        "139,907 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-18-Set-CPU-governor-to-performance-in-18.04.md
 toc:          false
 navigation:   false
 clipboard:    true

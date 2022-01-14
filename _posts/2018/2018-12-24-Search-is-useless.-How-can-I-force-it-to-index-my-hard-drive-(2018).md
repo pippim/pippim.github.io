@@ -12,7 +12,8 @@ votes:        "3 "
 favorites:    
 views:        "844 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-24-Search-is-useless.-How-can-I-force-it-to-index-my-hard-drive-(2018).md
 toc:          false
 navigation:   true
 clipboard:    true

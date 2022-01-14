@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "3,609 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-09-High-DPi-screen-xrandr-scaling-on-ubuntu-18.04-LTS.md
 toc:          false
 navigation:   false
 clipboard:    true
@@ -79,4 +80,4 @@ You can also have it run in your [startup applications][1] by adding an entry co
 
 Startup Applications are run **after** you sign on.
 
-  [1]: {% post_url /2016/2016-09-19-How-can-I-display-text-from-a-file-automatically-after-powering-up-my-computer,-in-text-editor-or-terminal? %}
+  [1]: {% post_url /2016/2016-09-19-How-can-I-display-text-from-a-file-automatically-after-powering-up-my-computer^-in-text-editor-or-terminal^ %}

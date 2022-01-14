@@ -12,7 +12,8 @@ votes:        "5 "
 favorites:    
 views:        "402 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-05-Exact-Copy-(Backup)-of-Full-Directory-Tree-To-External-(Backup)-Drive.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -42,4 +43,4 @@ Some notable comments about parameters:
 
 As with all backup scenarios **always test** the backups to make sure all files are there and contain the appropriate information.
 
-  [1]: {% post_url /2018/2018-04-27-Bash-script-to-backup∕clone-Ubuntu-to-another-partition %}
+  [1]: {% post_url /2018/2018-04-27-Bash-script-to-backup^clone-Ubuntu-to-another-partition %}

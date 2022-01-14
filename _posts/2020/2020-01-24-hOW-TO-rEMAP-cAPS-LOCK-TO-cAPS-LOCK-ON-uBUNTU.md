@@ -12,7 +12,8 @@ votes:        "0 "
 favorites:    
 views:        "402 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-24-hOW-TO-rEMAP-cAPS-LOCK-TO-cAPS-LOCK-ON-uBUNTU.md
 toc:          false
 navigation:   false
 clipboard:    false

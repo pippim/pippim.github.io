@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    
 views:        "2,360 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-22-Change-settings-for-simple-scan.md
 toc:          false
 navigation:   false
 clipboard:    false

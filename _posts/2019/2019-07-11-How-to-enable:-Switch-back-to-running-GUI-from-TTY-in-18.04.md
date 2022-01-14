@@ -12,7 +12,8 @@ votes:        "12 "
 favorites:    
 views:        "17,819 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-11-How-to-enable:-Switch-back-to-running-GUI-from-TTY-in-18.04.md
 toc:          false
 navigation:   false
 clipboard:    false

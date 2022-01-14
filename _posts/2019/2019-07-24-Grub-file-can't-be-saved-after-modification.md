@@ -12,7 +12,8 @@ votes:        "3 "
 favorites:    
 views:        "487 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-Grub-file-can't-be-saved-after-modification.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -36,4 +37,4 @@ sudo update-grub
 
 This will compile the changes you made to `/etc/default/grub` and compile them with `grub` functions to create a new `/boot/grub/grub.cfg` which is the actual file parsed at boot time.
 
-**Note:** Related question today: [How do I edit configuration files?]({% post_url /2019/2019-07-24-How-do-I-edit-configuration-files? %})
+**Note:** Related question today: [How do I edit configuration files?]({% post_url /2019/2019-07-24-How-do-I-edit-configuration-files^ %})

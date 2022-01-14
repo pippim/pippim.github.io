@@ -12,7 +12,8 @@ votes:        "1 "
 favorites:    
 views:        "2,064 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-22-Help-6Mb∕s-WIFI-connection-speed-Qualcomm-Atheros-Device-[168c:0042]-(rev-31)
 toc:          false
 navigation:   false
 clipboard:    true

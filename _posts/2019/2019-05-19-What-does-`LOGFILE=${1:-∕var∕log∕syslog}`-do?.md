@@ -12,7 +12,8 @@ votes:        "6 "
 favorites:    
 views:        "400 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-What-does-`LOGFILE=${1:-∕var∕log∕syslog}`-do?
 toc:          false
 navigation:   false
 clipboard:    true

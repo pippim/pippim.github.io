@@ -12,7 +12,8 @@ votes:        "2 "
 favorites:    1
 views:        "63 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-06-Call-Grub-(MBR)-from-Linux.md
 toc:          false
 navigation:   false
 clipboard:    false

@@ -12,7 +12,8 @@ votes:        "12 "
 favorites:    
 views:        "16,559 "
 accepted:     Accepted
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 04:38:28
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-What-is-∕run∕user∕1000∕gvfs∕
 toc:          false
 navigation:   false
 clipboard:    false

@@ -12,7 +12,8 @@ votes:        "3 "
 favorites:    
 views:        "1,741 "
 accepted:     
-uploaded:     2022-01-11 18:01:29
+uploaded:     2022-01-14 05:00:10
+git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-03-Intel-microcode-package-upgrade-in-ubuntu-18.04-leads-to-unbootable-system.md
 toc:          false
 navigation:   false
 clipboard:    false
@@ -39,7 +40,7 @@ The other option is to roll back your microcode to a version prior to the bug. Y
 
 - [Where to find older source&amp;binary package versions?](Where to find older source&amp;binary package versions?)
 
-  [1]: {% post_url /2018/2018-01-05-What-is-Ubuntu's-status-on-the-Meltdown-and-Spectre-vulnerabilities? %}
-  [2]: {% post_url /2018/2018-01-27-Samsung-M2-NVME-enters-read-only-on-linux-every-day,-not-on-Windows %}
+  [1]: {% post_url /2018/2018-01-05-What-is-Ubuntu's-status-on-the-Meltdown-and-Spectre-vulnerabilities^ %}
+  [2]: {% post_url /2018/2018-01-27-Samsung-M2-NVME-enters-read-only-on-linux-every-day^-not-on-Windows %}
   [3]: https://linuxreviews.org/HOWTO_make_Linux_run_blazing_fast_(again)_on_Intel_CPUs
   [4]: https://www.reddit.com/r/linuxquestions/comments/bqn8we/can_i_disable_the_intel_spectre_fixes/
