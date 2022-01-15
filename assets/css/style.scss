@@ -130,12 +130,12 @@ $lavender: #E6E6FA !default; // lavender
   border-left: 1px solid #999;
 
   // Try to avoid hdr-bar which requires page refresh to update fm_state. Copy from hdr-bar:
-  display: block;
-  position: relative;
-  &:before {
-    content: "";
-    display: block;
-  }
+  //display: block;
+  //position: relative;
+  //&:before {
+  //  content: "";
+  //  display: block;
+  //}
   // End of copy from hdr-bar
 
   &:hover {
