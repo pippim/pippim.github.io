@@ -148,6 +148,7 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter .hidden-child{
     visibility: hidden;
+    display: none;
     // display: block;  // Jan 14/22
     // position: relative;     // Jan 14/22
 
@@ -157,7 +158,7 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter:hover .hidden-child{
     visibility: visible;
-    // display: block;  // Jan 14/22
+    display: inline-block;  // Jan 14/22
     // position: relative;     // Jan 14/22
     // From: https://stackoverflow.com/a/31874748/6929343
     // position: relative;
