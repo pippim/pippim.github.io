@@ -148,7 +148,7 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter .hidden-child{
     visibility: hidden;
-    vertical-align: top; 
+    line-height: -1.75;
     // display: inline-block;  // Jan 14/22
     // position: relative;     // Jan 14/22
 
@@ -158,7 +158,7 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter:hover .hidden-child{
     visibility: visible;
-    vertical-align: top; 
+    line-height: -1.75;
     // From: https://stackoverflow.com/a/31874748/6929343
     // position: relative;
     // Goes far right of screen not right of border
