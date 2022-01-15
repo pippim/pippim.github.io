@@ -136,6 +136,9 @@ $honeydew: #F0FFF0 !default; // Honeydew
 
 .front-matter .hidden-child{
     visibility: hidden;
+    display: inline-block;  // Jan 14/22
+    position: relative;     // Jan 14/22
+
     // text-align: right;
     // top: 3rem;
 }
