@@ -28,7 +28,7 @@ function getCookie(cname) {
 function showHide(state){
   var x = document.getElementById("hidden_front_matter");
   if (state === "More") {
-    x.style.display = "block";
+    // x.style.display = "block";  // Jan 14/22 use hdr_btn
     // x.style.display = "flex";  // Breaks button text, doesn't move it
     // x.style.justifyContent "flex-end";
   } else {
