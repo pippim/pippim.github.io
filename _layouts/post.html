@@ -36,26 +36,28 @@
 
       <div class="front-matter">
 
-        <button class="button hidden-child"
-          id="hidden_button"
-          onclick="fm_toggle();"
-          // style="position: absolute;"
-          // style="float: right; clear: right;"
-          // style="position: absolute; top: 1; right: 1;"
-          // style="display: inline-block; position: relative; text-align: right;"
-          // right: 0;
-          // top: 0;
-          // bottom: .5rem;
-          // display: inline;
-          >Toggle details
-        </button>
+        <div class="hdr-bar">
+          <button class="hdr-btn hidden-child"
+            id="hidden_button"
+            onclick="fm_toggle();"
+            // style="position: absolute;"
+            // style="float: right; clear: right;"
+            // style="position: absolute; top: 1; right: 1;"
+            // style="display: inline-block; position: relative; text-align: right;"
+            // right: 0;
+            // top: 0;
+            // bottom: .5rem;
+            // display: inline;
+            >Toggle details
+          </button>
 
-        <button class="button hidden-child"
-          onclick="window.open('{{ page.git_md_url }}');"
-          // bottom: .4rem;
-          // display: inline;
-          >View markdown on GitHub Pages 🔗
-        </button>
+          <button class="hdr-btn hidden-child"
+            onclick="window.open('{{ page.git_md_url }}','_blank')"
+            // bottom: .4rem;
+            // display: inline;
+            >View markdown on GitHub Pages 🔗
+          </button>
+        </div>
 
       <!-- LESS FRONT MATTER -->
       <h4 id="minimal_front_matter">
