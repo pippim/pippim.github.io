@@ -1812,6 +1812,9 @@ def create_blog_filename(r):
 
             "▶️" to " ▶%EF%B8%8F"
 
+        HTML breaks references in links when using:
+
+            "'", '"', '<', '>', '(', ')', '[', ']'
     """
     global total_special_chars_in_titles, total_unicode_in_titles
 
@@ -1822,7 +1825,10 @@ def create_blog_filename(r):
     for i, lit in enumerate(little):
         if lit == " ":
             little[i] = "-"
-        elif lit in "#$%&+;,=?/":
+        elif lit in "#$%&+;,=?/'<>()[]":
+            little[i] = "^"
+            total_special_chars_in_titles += 1
+        elif lit in '"':
             little[i] = "^"
             total_special_chars_in_titles += 1
         elif len(lit) > 1:
