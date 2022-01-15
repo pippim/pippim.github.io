@@ -37,25 +37,16 @@
       <div class="front-matter">
 
         <div class="hdr-bar">
-          <button class="hdr-btn hidden-child"
-            id="hidden_button"
-            onclick="fm_toggle();"
-            // style="position: absolute;"
-            // style="float: right; clear: right;"
-            // style="position: absolute; top: 1; right: 1;"
-            // style="display: inline-block; position: relative; text-align: right;"
-            // right: 0;
-            // top: 0;
-            // bottom: .5rem;
-            // display: inline;
-            >Toggle details
-          </button>
 
           <button class="hdr-btn hidden-child"
             onclick="window.open('{{ page.git_md_url }}','_blank')"
-            // bottom: .4rem;
-            // display: inline;
             >View markdown on GitHub Pages 🔗
+          </button>
+
+          <button class="hdr-btn hidden-child"
+            id="hidden_button"
+            onclick="fm_toggle();"
+            >Toggle details
           </button>
         </div>
 
