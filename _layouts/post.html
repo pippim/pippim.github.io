@@ -36,22 +36,17 @@
 
       <div class="front-matter">
 
-        <!-- <div class="hdr-bar"> -->
+        <button class="hidden-child"
+          id="hidden_button"
+          onclick="fm_toggle();"
+          >Toggle details
+        </button>
 
-          <button class="hidden-child"
-            type="button"
-            id="hidden_button"
-            onclick="fm_toggle();"
-            >Toggle details
-          </button>
-
-          <button class="hidden-child"
-            id="view_button"
-            onclick="window.open('{{ page.git_md_url }}','_blank')"
-            >View markdown on GitHub Pages 🔗
-          </button>
-
-        <!-- </div> -->
+        <button class="hidden-child"
+          id="view_button"
+          onclick="window.open('{{ page.git_md_url }}','_blank')"
+          >View markdown on GitHub Pages 🔗
+        </button>
           
       <!-- LESS FRONT MATTER -->
       <h4 id="minimal_front_matter">
