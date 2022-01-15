@@ -169,7 +169,8 @@ $lavender: #E6E6FA !default; // lavender
     background-color: $honeydew; // Honeydew
 
     &:hover {
-      background-position:bottom;
+      // background-position:bottom;
+      background-position: top;
       color:#F0FFF0;
     }
     // End copy hdr-btn
