@@ -148,9 +148,8 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter .hidden-child{
     visibility: hidden;
-    line-height: 0;
-    display: inline-block;  // Jan 14/22
-    position: relative;     // Jan 14/22
+    // display: inline-block;  // Jan 14/22
+    // position: relative;     // Jan 14/22
 
     // text-align: right;
     // top: 3rem;
@@ -158,7 +157,6 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter:hover .hidden-child{
     visibility: visible;
-    line-height: 0;
     display: inline-block;  // Jan 14/22
     position: relative;     // Jan 14/22
     // From: https://stackoverflow.com/a/31874748/6929343
