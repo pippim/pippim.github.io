@@ -120,7 +120,6 @@ $lavender: #E6E6FA !default; // lavender
 // Blog post front matter
 .front-matter {
   // line-height: 1.75;
-  margin-top: -1rem;
   padding: 4px 4px 0 4px;
   border-color: $header-bg-color-secondary;  // Cayman blue DOESN'T WORK :(
   // border-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
@@ -149,7 +148,7 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter .hidden-child{
     visibility: hidden;
-    // display: inline-block;  // Jan 14/22
+    display: block;  // Jan 14/22
     // position: relative;     // Jan 14/22
 
     // text-align: right;
@@ -158,7 +157,7 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter:hover .hidden-child{
     visibility: visible;
-    display: inline-block;  // Jan 14/22
+    display: block;  // Jan 14/22
     position: relative;     // Jan 14/22
     // From: https://stackoverflow.com/a/31874748/6929343
     // position: relative;
