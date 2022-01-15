@@ -120,7 +120,6 @@ $lavender: #E6E6FA !default; // lavender
 // Blog post front matter
 .front-matter {
   line-height: 1.75;
-  top: -1rem;  // Attempt to remove gaps in lines
   padding: 4px 4px 0 4px;
   border-color: $header-bg-color-secondary;  // Cayman blue DOESN'T WORK :(
   // border-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
@@ -164,6 +163,7 @@ $lavender: #E6E6FA !default; // lavender
     // right: 0;
     // bottom: -2px;
     // top: 3rem;
+    top: -1rem;  // Attempt to remove gaps in lines
 
     // Copy from hdr-btn:
     background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
