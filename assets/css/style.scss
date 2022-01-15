@@ -16,6 +16,8 @@ $header-bg-color: #159957 !default;  // Cayman green
 $header-bg-color-secondary: #155799 !default;  // Cayman blue
 $honeydew: #F0FFF0 !default; // Honeydew
 $salmon: #FA8072 !default; // salmon
+$lavender: #E6E6FA !default; // lavender
+
 
 .button {
   display: inline-block;
@@ -128,7 +130,7 @@ $salmon: #FA8072 !default; // salmon
   border-left: 1px solid #999;
 
   &:hover {
-    background-color: $salmon;
+    background-color: $lavender;
     &:before {
       width: 100%;
     }
