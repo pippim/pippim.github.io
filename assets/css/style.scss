@@ -130,11 +130,11 @@ $lavender: #E6E6FA !default; // lavender
   border-left: 1px solid #999;
 
   // Try to avoid hdr-bar which requires page refresh to update fm_state. Copy from hdr-bar:
-  display: block;
+  display: inline-block;
   position: relative;
   &:before {
     content: "";
-    display: block;
+    display: inline-block;
   }
   // End of copy from hdr-bar
 
@@ -148,7 +148,7 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter .hidden-child{
     visibility: hidden;
-    display: block;  // Jan 14/22
+    // display: block;  // Jan 14/22
     // position: relative;     // Jan 14/22
 
     // text-align: right;
@@ -157,8 +157,8 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter:hover .hidden-child{
     visibility: visible;
-    display: block;  // Jan 14/22
-    position: relative;     // Jan 14/22
+    // display: block;  // Jan 14/22
+    // position: relative;     // Jan 14/22
     // From: https://stackoverflow.com/a/31874748/6929343
     // position: relative;
     // Goes far right of screen not right of border
