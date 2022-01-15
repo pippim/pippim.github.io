@@ -9,13 +9,15 @@ layout: program
 
 # Introduction
 
-mserve.py, called with `m` from the command line or a desktop shortcut is a powerful Music Player
-with functions to encode CDs with track titles using MusicBrainz database. It will also get
-lyrics from the internet and let you synchronize them in real time by simply clicking each line
-as it is sung.
+This Music Player entertains you with animated graphics, VU meters and scrolling lyrics.
+It includes functions to encode CDs with track titles using MusicBrainz database.
+It will get lyrics from the internet and let you synchronize them in real time
+by simply clicking each line as it is sung.
 
 The `mserve.py` Music Player program can be accessed on the 
 [Pippim mserve Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py).
+
+`mserve.py` is called with `m` from the command line or a desktop shortcut. 
 
 ---
 
@@ -1074,7 +1076,7 @@ width: 100% !important; height: auto !important;
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
 
-# Basic Time Synchronization
+## Basic Time Synchronization
 
 Basic Time Synchronization is fairly straight forward. You start playing 
 the song and then click each line as it is sung.
@@ -1084,7 +1086,7 @@ the song and then click each line as it is sung.
 <a id="hdr13"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
 
-# Fine-tune Time Synchronization
+## Fine-tune Time Synchronization
 
 Sometimes you just can't seem to click at the right time using
 *Basic Time Synchronization* in the previous section. For those
