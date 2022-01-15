@@ -120,6 +120,7 @@ $lavender: #E6E6FA !default; // lavender
 // Blog post front matter
 .front-matter {
   // line-height: 1.75;
+  margin-top: -1rem;
   padding: 4px 4px 0 4px;
   border-color: $header-bg-color-secondary;  // Cayman blue DOESN'T WORK :(
   // border-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
