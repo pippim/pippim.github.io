@@ -52,7 +52,7 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 This video also shows:
 
 - Two real-time VU meters for left and right channels
-- Tooltips for buttons. **THIS IS AN OLD VIDEO** The new tooltips fade in and out after delays and follow mouse cursor. A **SUBSTANCIAL** improvment.
+- Tooltips for buttons. **This is an OLD video:** The new tooltips fade in and out after delays and follow mouse cursor. See sections below for examples.
 - Lyrics are highlighted in time with the music
 - Lyrics are automatically retrieved from the internet (from eight different sites)
 - You can manually change the lyrics retrieved
@@ -315,10 +315,24 @@ A lot of work has gone into crafting the tooltips to delay before
 gradually fading in. Also, to gradually fade out. And finally, to
 follow the mouse pointer.
 
+<video src="https://user-images.githubusercontent.com/92641463/149630335-998fb026-67c5-4a4f-9cd0-fd2336f16e78.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/149630335-998fb026-67c5-4a4f-9cd0-fd2336f16e78.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+
+  </video>
+
+Key features of tooltips:
+
+- They appear after a delay
+- They fade in
+- The stay visible for a short time based on how long they are
+- They fade out 
+
 Here is the key code:
 
 {% include copyHeader.html %}
-```python
+``` python
 # ==============================================================================
 #
 #   toolkit.py - ToolTipsPool, CreateToolTip
@@ -1031,21 +1045,65 @@ def d_print(*args):
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
 
-# Blah
+# Lyrics Synchronization
+
+You can synchronize each lyrics line to highlight as it is being sung.
+
+<video src="https://user-images.githubusercontent.com/92641463/149630735-8d579143-0d6f-4a7f-84a6-c7349c349e82.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/149630735-8d579143-0d6f-4a7f-84a6-c7349c349e82.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+
+  </video>
+
+width: 100% !important; height: auto !important;
+
+**Notes:**
+
+1. When video starts with song in orange the default is "Auto Scrolling"
+2. Click button to engage "Manual Scroll"
+3. Now scroll bar appears on right, and you can scroll lyrics
+4. The vido changes to next song in black and the default is "Time Scrolling"
+5. Click the button to engage "Manual Scroll"
+6. Click the button again to reengage "Time Scrolling"
+7. Now each lyrics line is automatically highlighted as it is sung
+8. For Time Scrolling to work you need to train mserve with the timing.
 
 ---
 
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
 
-# BLAH
+# Basic Time Synchronization
 
+Basic Time Synchronization is fairly straight forward. You start playing 
+the song and then click each line as it is sung.
+
+---
 
 <a id="hdr13"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
 
-# More Blah
+# Fine-tune Time Synchronization
 
+Sometimes you just can't seem to click at the right time using
+*Basic Time Synchronization* in the previous section. For those
+cases the *Fine-tune Time Synchronization* window is provided.
+
+In the following video notice how the option is included in
+the "Hamburger" menu and is selected. The video delays long
+enough so that you can see all the menu options.
+
+<video src="https://user-images.githubusercontent.com/92641463/149632176-7ce43ab5-a207-4825-bf27-70000b494e64.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/149632176-7ce43ab5-a207-4825-bf27-70000b494e64.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+
+  </video>
+
+
+
+---
 
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
