@@ -45,12 +45,13 @@
           // style="display: inline-block; position: relative; text-align: right;"
           // right: 0;
           // top: 0;
-          bottom: .5rem;
+          // bottom: .5rem;
+          display: inline;
           >Toggle details
         </button>
         <button class="hidden-child"
           onclick=" window.open('{{ page.git_md_url }}', '_blank')"
-          bottom: .4rem;
+          // bottom: .4rem;
           display: inline;
           >View markdown on GitHub Pages 🔗
         </button>
@@ -72,7 +73,8 @@
             }
         </style>
 
-
+        {{ page.git_md_url }}
+        
         {% if page.views and page.views != "" and page.views != nil %}
           <fmVar>Views:</fmVar>
             <mark>{{ page.views }}</mark>
