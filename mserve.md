@@ -185,6 +185,33 @@ Then there is the splash screen program `m` which is 155 lines.
 
 And, there is still more work to be done...
 
+## Dependencies
+
+Here are the dependencies documented in `mserve.py` python program.
+You may already have them installed. Also, this list is for Ubuntu
+under version 2.7.12 and, you may have to substitute `python3` where
+it says `python`:
+
+``` terminal
+sudo apt install python-tk
+sudo apt install python-pil
+sudo apt install python-pil.imagetk
+sudo apt install python-subprocess32             # To compare locations
+sudo apt install ffmpeg                          # To get artwork
+sudo apt install xdotool                         # To move Kid3 into our
+sudo apt install wmctrl                          #  lib_top parent window
+sudo apt install python-libdiscid                # Get CD's disc ID
+sudo apt install python-musicbrainzngs           # Get metadata for CD
+sudo apt install python-requests                 # Get Cover Art
+sudo apt install python-notify2                  # Popup bubble messages
+sudo apt install python-magic                    # Get file type information
+sudo apt install python-mutagen                  # Encode and ID3 tags
+sudo apt install x11-apps                        # xwd window dump (screen shot)
+sudo apt install xclip                           # Insert clipboard
+sudo apt install python-beautifulsoup            # Scrape Song lyrics
+```
+
+
 ---
 
 <a id="hdr7"></a>
