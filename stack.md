@@ -599,7 +599,7 @@ website page:
    style="float: none; width: 100%; margin: 0 0 0 0;"
 %}
 
-The short version (`Less`), begins with **Views:** <mark>1,893</mark>
+The short version (`Less`), begins with **Views:** <mark>1,901</mark>
 generated from the front matter label `views:` This is followed by
 **Votes:** <mark>6</mark> generated from the label `votes:`. 
 
