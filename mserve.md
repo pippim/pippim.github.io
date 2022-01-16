@@ -19,6 +19,8 @@ The `mserve.py` Music Player program can be accessed on the
 
 `mserve.py` is called with `m` from the command line or a desktop shortcut. 
 
+> **IMPORTANT NOTE:** Only tested with Linux, specifically Ubuntu 16.04 LTS
+
 ---
 
 <a id="hdr2"></a>
@@ -48,8 +50,7 @@ on your screen:
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
 style="max-height:640px; width: 100% !important; height: auto !important;">
-
-  </video>
+</video>
 
 This video also shows:
 
@@ -61,7 +62,6 @@ This video also shows:
 
 Additional notes:
 
--    Lyrics are automatically scraped from the internet as new songs are played.
 -    Edit lyrics for minor changes or massive copy from internet and replace.
 -    Click on each line to synchronize the time for future playback.
 -    Auto scroll lyrics, time scroll lyrics or manually scroll lyrics score.
@@ -78,7 +78,7 @@ Additional notes:
 -    Original version in Linux but hopefully minor port to Windows and Apple.
 -    Hopefully in a couple of years port to cars with Apple or Android decks.
 -    Hopefully in a few years Record Companies will give away mserve.
--    If anyone is "disturbed" by sample video please advise ASAP and I'll find a different one.
+-    If anyone is "disturbed" by sample video please advise ASAP, and I'll find a different one.
 
 ---
 
@@ -93,8 +93,7 @@ This video shows how the skin changes color:
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149242688-5cde502e-1025-4237-9e22-af9af3b2d93a.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
 style="max-height:640px; width: 100% !important; height: auto !important;">
-
-  </video>
+</video>
 
 The album artwork is automatically downloaded from the internet 
 when the CD is encoded. You can also choose artwork from any 
@@ -128,8 +127,7 @@ lag while a CD is being encoded:
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149241934-99d01df8-2cbf-4488-aa14-efe9e4d4f3aa.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
 style="max-height:640px; width: 100% !important; height: auto !important;">
-
-  </video>
+</video>
 
 This video clip show how music player continues in real time while
 you use mserve to encode a CD.
@@ -348,8 +346,7 @@ follow the mouse pointer.
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149630335-998fb026-67c5-4a4f-9cd0-fd2336f16e78.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
-
-  </video>
+</video>
 
 Key features of tooltips:
 
@@ -1082,7 +1079,6 @@ You can synchronize each lyrics line to highlight as it is being sung.
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149630735-8d579143-0d6f-4a7f-84a6-c7349c349e82.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
-
   </video>
 
 width: 100% !important; height: auto !important;
@@ -1127,7 +1123,6 @@ enough so that you can see all the menu options.
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149632176-7ce43ab5-a207-4825-bf27-70000b494e64.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
-
   </video>
 
 
