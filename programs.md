@@ -19,8 +19,7 @@ by converting Stack Exchange Posts to GitHub Pages Jekyll Posts. That
 includes the Top Ten Answers and the Posts by Tag nested accordion with
 {{ site.post_count }} posts.
 
-<font size="2">[Read More...](stack.html)</font>
-<a href="stack.html" style="font-size: 50px; text-decoration: none">Read More...</a>
+<a href="stack.html" style="font-size: 30px;">Read More...</a>
 
 ---
 
@@ -50,8 +49,7 @@ the remote drives as local partitions.
 < requires extra steps to install dependencies if they  
 < are not already on your system.
 
-<font size="3">[Read More...](mserve.html)</font>
-<a href="mserve.html" style="font-size: 100px; text-decoration: none">Read More...</a>
+<a href="mserve.html" style="font-size: 25px;">Read More...</a>
 
 ---
 
