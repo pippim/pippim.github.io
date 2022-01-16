@@ -1104,6 +1104,20 @@ width: 100% !important; height: auto !important;
 Basic Time Synchronization is fairly straight forward. You start playing 
 the song and then click each line as it is sung.
 
+<video src="https://user-images.githubusercontent.com/92641463/149671978-18e1a98f-3a55-472c-9de2-ae3246ee3969.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/149671978-18e1a98f-3a55-472c-9de2-ae3246ee3969.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+This video shows:
+
+1. The "Hamburger Drop Down Menu" where the *Basic time index* option is picked.
+2. Canceling the *Basic time index* option once started.
+3. Restarting the *Basic time index* from the Hamburger menu.
+4. Clicking each line as it is sung.
+5. The time indices are automatically saved when the song ends or, you can choose the "Save index" option from the Hamburger menu if you don't want to wait for the song to end.
+
 ---
 
 <a id="hdr13"></a>
@@ -1114,6 +1128,8 @@ the song and then click each line as it is sung.
 Sometimes you just can't seem to click at the right time using
 *Basic Time Synchronization* in the previous section. For those
 cases the *Fine-tune Time Synchronization* window is provided.
+
+### Begin Sync option
 
 In the following video notice how the option is included in
 the "Hamburger" menu and is selected. The video delays long
@@ -1127,19 +1143,41 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 This video shows:
 
-1. The Lyrics "Hamburger Menu" options
-2. Fine-tune time-index window opens up and pauses the regular music player
-3. Select lyric lines in the lyrics score
-4. Begin sync button. As music plays you can click the line as it is sung
-5. Close Fine-tune window and regular music player resumes where it was interrupted
+1. The Lyrics "Hamburger Drop Down Menu" options
+2. The "Ignore click" option on the menu. This closes the menu which is the same as moving the mouse off the menu and clicking outside the menu.
+3. Access the hamburger menu again and select the "Fine-tune time index" option
+4. The *Fine-tune time-index* window opens up and pauses the regular music player
+5. Select lyric lines in the lyrics score
+6. Begin sync button. As music plays you can click the line as it is sung
+7. Clicking each line as it is sung is the same behavior as the *Basic time index* function except that additional details are displayed 
+8. Finally, the *Fine-tune time index* window is closed and regular music player resumes where it was interrupted
 
 ---
 
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
 
-# More BLAH
 
+### Sample All option
+
+The following video shows again how the *Fine-tune time index* function is selected.
+This time the video spends a little time showing you all the buttons in the function.
+
+<video src="https://user-images.githubusercontent.com/92641463/149672896-ed6b96ac-9c1f-4017-9b15-e41adac8126b.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/149672896-ed6b96ac-9c1f-4017-9b15-e41adac8126b.mp4" 
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+This also video shows:
+
+1. The "Paused" graphic in the regular music player. It is programmatically generated and not an image file.
+2. The regular music is resumed and the Hamburger menu is used to select the *Fine-tune time index* option
+3. The <kbd>Sample all</kbd> button is selected
+4. The function plays the first second of each line
+5. We noticed at time index `154` seconds the instrumental section was left on too long. This caused the Chorus line and next line to start too late.
+6. Those three lines were selected and <kbd>Being sync</kbd> button was used to fix the timing
+7. Finally, the time indices are saved, the function is closed and the regular music player resumes play automatically.
 
 <a id="hdr15"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
