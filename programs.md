@@ -19,7 +19,7 @@ by converting Stack Exchange Posts to GitHub Pages Jekyll Posts. That
 includes the Top Ten Answers and the Posts by Tag nested accordion with
 {{ site.post_count }} posts.
 
-<a href="stack.html" style="font-size: 30px;">Read More...</a>
+<a href="stack.html" style="font-size: 25px;">Read More...</a>
 
 ---
 
@@ -45,9 +45,9 @@ File Server or Cell Phone and play it locally without
 transferring the songs first.  **SSH** is used to mount
 the remote drives as local partitions.
 
-< **NOTE:** This program is still under development and  
-< requires extra steps to install dependencies if they  
-< are not already on your system.
+> **NOTE:** This program is still under development and may require extra steps to install any missing python module dependencies.
+>  
+> Some dependency examples are: `tk`, `pil`, `ffmpeg`, `libdiscid`, `musicbrainzngs`, `requests`, `mtagen` and `beautifulsoup`.
 
 <a href="mserve.html" style="font-size: 25px;">Read More...</a>
 
