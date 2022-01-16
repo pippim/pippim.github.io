@@ -716,14 +716,14 @@ Another example is to link back to the original Markdown with the following code
 
 {% raw %}
 ``` liquid
-{% assign repo_url = psge.url | prepend: site.code_url %} 
+{% assign repo_url = psge.url | prepend: site.code_url | replace: ".html", ".md" %} 
 **repo_url:** {{ repo_url }}
 ```
 {% endraw %}
 
 ...would be display as:
 
-{% assign repo_url = page.url | prepend: site.code_url %} 
+{% assign repo_url = page.url | prepend: site.code_url | replace: ".html", ".md" %} 
 > **repo_url:** {{ repo_url }}
 
 
