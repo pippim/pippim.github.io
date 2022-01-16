@@ -30,19 +30,18 @@ includes the Top Ten Answers and the Posts by Tag nested accordion with
    style="float: left; width: 82%; margin: 0em 1em 1em 0px;"
 %}
 
-This short little video clip shows a subset of the main `mserve`
-music player window.
+This short `.gif` video clip, with no sound, shows one third
+of the main `mserve` music player window.
 
-The full source code is available for you to download and
-modify to your own tastes.
+You can download and modify the source code to your own tastes.
 
 Features like encoding CDs using automatic internet
 lookup for album tracks, artwork and song lyrics make
 `mserve` a "do everything" Music Player.
 
-From your local PC you can access musics stored on your
+From your local PC you can access music stored on your
 File Server or Cell Phone and play it locally without
-transferring the songs first.  **SSH** is used to mount
+transferring all the songs.  **SSH** is used to mount
 the remote drives as local partitions.
 
 > **NOTE:** This program is still under development and may require extra steps to install any missing python module dependencies.
