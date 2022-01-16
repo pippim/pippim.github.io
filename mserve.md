@@ -183,6 +183,8 @@ Then there is the splash screen program `m` which is 155 lines.
 
 And, there is still more work to be done...
 
+---
+
 ## Dependencies
 
 Here are the dependencies documented in `mserve.py` python program.
@@ -293,6 +295,8 @@ def open_db():
     hist_cursor = con.cursor()
 ```
 
+---
+
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
 
@@ -332,6 +336,8 @@ def save_window_geom(name, geom):
     sql.cursor.execute(sql_cmd, (time.time(), geom, sql.HISTORY_ID))
     sql.con.commit()
 ```
+
+---
 
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
@@ -1157,7 +1163,6 @@ This video shows:
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
 
-
 ### Sample All option
 
 The following video shows again how the *Fine-tune time index* function is selected.
@@ -1184,6 +1189,8 @@ This also video shows:
 8. Next, the time indices are saved by clicking the <kbd>Save</kbd> button
 9. Finally, the function is closed by clicking the <kbd>Close</kbd> button and the regular music player resumes play automatically.
 
+---
+
 <a id="hdr15"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
 
@@ -1204,6 +1211,8 @@ Note that if you resize the window the artwork animation also shrinks and
 expands accordingly. It will maintain the "square" proportions and the
 skin background color can change depending on the color of the pixel at
 "3, 3" in the artwork.
+
+---
 
 # Locations
 
