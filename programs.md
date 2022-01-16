@@ -51,7 +51,7 @@ the remote drives as local partitions.
 >  
 > Some dependency examples are: `tk`, `pil`, `ffmpeg`, `libdiscid`, `musicbrainzngs`, `requests`, `mtagen` and `beautifulsoup`.
 
-<a href="mserve.html" style="font-size: 25px;">Read More...</a>
+<a href="mserve.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
