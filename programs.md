@@ -7,6 +7,9 @@ layout: default
 This page lists Linux programs written in Bash and Python by Pippim. 
 You can use them free of charge and change them however you like.
 
+---
+
+
 ## Convert Stack Exchange Posts to Your Own Website
 
 {% include image.html src="/assets/img/stack-to-blog progress display.gif"
@@ -19,7 +22,7 @@ by converting Stack Exchange Posts to GitHub Pages Jekyll Posts. That
 includes the Top Ten Answers and the Posts by Tag nested accordion with
 {{ site.post_count }} posts.
 
-<a href="stack.html" style="font-size: 25px;">Read More...</a>
+<a href="stack.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
