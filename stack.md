@@ -703,7 +703,7 @@ You can use these variables in your website. For example the following code: ...
 
 {% raw %}
 ``` liquid
-< As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers 
+> As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers 
 have over **{{ site.views_human }} views!**
 ```
 {% endraw %}
@@ -717,7 +717,7 @@ Another example is to link back to the original Markdown with the following code
 {% raw %}
 ``` liquid
 {% assign repo_url = psge.url | prepend: site.code_url | replace: ".html", ".md" %} 
-**repo_url:** {{ repo_url }}
+> **repo_url:** {{ repo_url }}
 ```
 {% endraw %}
 
@@ -726,9 +726,8 @@ Another example is to link back to the original Markdown with the following code
 {% assign repo_url = page.url | prepend: site.code_url | replace: ".html", ".md" %} 
 > **repo_url:** {{ repo_url }}
 
-
-You can turn off Site-Wide Front Matter by setting the filename to `None`
-as documented in the `stack-to-blog.py` program:
+You can turn off Site-Wide Front Matter by setting the configuration 
+filename to `None` as documented in the `stack-to-blog.py` program:
 
 ``` python
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
