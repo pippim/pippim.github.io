@@ -10,9 +10,9 @@ created_date: 2018-03-13 10:34:15
 edit_date:    2018-03-30 17:17:19
 votes:        "20 "
 favorites:    
-views:        "9,835 "
+views:        "9,887 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-13-Is-there-a-way-for-grub-to-automatically-reboot-into-Windows-from-Windows^.md
 toc:          false
 navigation:   false

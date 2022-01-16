@@ -10,9 +10,9 @@ created_date: 2016-10-14 01:04:17
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    
-views:        "5,618 "
+views:        "5,651 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-14-How-to-turn-off-the-USB-power-to-my-mouse^-when-I-suspend-the-notebook^.md
 toc:          false
 navigation:   false

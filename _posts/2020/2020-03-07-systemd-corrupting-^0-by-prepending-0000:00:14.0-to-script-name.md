@@ -10,9 +10,9 @@ created_date: 2020-03-07 20:03:28
 edit_date:    2020-06-11 14:16:50
 votes:        "1 "
 favorites:    
-views:        "53 "
+views:        "54 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-03-07-systemd-corrupting-^0-by-prepending-0000:00:14.0-to-script-name.md
 toc:          false
 navigation:   false

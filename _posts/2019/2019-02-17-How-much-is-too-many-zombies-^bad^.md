@@ -10,9 +10,9 @@ created_date: 2019-02-17 13:39:20
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "1,280 "
+views:        "1,298 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-02-17-How-much-is-too-many-zombies-^bad^.md
 toc:          false
 navigation:   false

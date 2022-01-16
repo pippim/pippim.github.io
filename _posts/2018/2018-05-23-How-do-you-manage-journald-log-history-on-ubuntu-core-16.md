@@ -10,9 +10,9 @@ created_date: 2018-05-23 00:23:03
 edit_date:    2018-05-23 22:45:51
 votes:        "1 "
 favorites:    
-views:        "989 "
+views:        "997 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-How-do-you-manage-journald-log-history-on-ubuntu-core-16.md
 toc:          false
 navigation:   false

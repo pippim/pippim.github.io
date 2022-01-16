@@ -10,9 +10,9 @@ created_date: 2016-10-10 07:33:19
 edit_date:    2016-10-10 15:17:31
 votes:        "3 "
 favorites:    
-views:        "7,006 "
+views:        "7,036 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-10-Huawei-Technologies-Co.^-Ltd.-E353^E3131-contains-software-intended-to-be-automatically-started.-Wifi-doesn^t-work.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-11-24 00:53:54
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "6,420 "
+views:        "6,427 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-24-How-do-I-globally-make-my-desktop-icons-smaller-in-Ubuntu-16.1^.md
 toc:          false
 navigation:   false

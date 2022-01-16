@@ -10,9 +10,9 @@ created_date: 2020-06-05 17:29:48
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "4,907 "
+views:        "4,942 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-05-How-to-get-the-temperature-using-hddtemp-for-a-Samsung-SSD^NVMe-in-Thinkpad-T480.md
 toc:          false
 navigation:   false

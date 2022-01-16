@@ -10,9 +10,9 @@ created_date: 2021-09-23 12:56:12
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "64 "
+views:        "65 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-09-23-HDMI-monitor-stops-working-when-lap-top-lid-is-closed.md
 toc:          false
 navigation:   false

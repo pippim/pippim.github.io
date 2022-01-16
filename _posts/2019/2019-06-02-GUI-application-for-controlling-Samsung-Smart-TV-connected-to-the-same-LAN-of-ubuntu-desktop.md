@@ -10,9 +10,9 @@ created_date: 2019-06-02 20:37:08
 edit_date:    2019-06-04 23:16:26
 votes:        "4 "
 favorites:    
-views:        "2,784 "
+views:        "2,803 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-02-GUI-application-for-controlling-Samsung-Smart-TV-connected-to-the-same-LAN-of-ubuntu-desktop.md
 toc:          false
 navigation:   false

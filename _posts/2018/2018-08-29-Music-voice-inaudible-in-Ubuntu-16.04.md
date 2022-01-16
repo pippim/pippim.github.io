@@ -10,9 +10,9 @@ created_date: 2018-08-29 10:52:53
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "226 "
+views:        "227 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-29-Music-voice-inaudible-in-Ubuntu-16.04.md
 toc:          false
 navigation:   false

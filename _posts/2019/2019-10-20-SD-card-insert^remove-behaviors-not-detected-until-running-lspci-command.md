@@ -10,9 +10,9 @@ created_date: 2019-10-20 13:16:56
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "1,091 "
+views:        "1,104 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-20-SD-card-insert^remove-behaviors-not-detected-until-running-lspci-command.md
 toc:          false
 navigation:   false

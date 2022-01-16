@@ -10,9 +10,9 @@ created_date: 2018-03-23 00:22:47
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "234 "
+views:        "239 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-Find-out-the-full-path-of-the-program-that-runs-when-I-enter-a-command.md
 toc:          false
 navigation:   false

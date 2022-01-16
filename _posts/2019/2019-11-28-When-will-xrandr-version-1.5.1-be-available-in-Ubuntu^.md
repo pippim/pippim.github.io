@@ -10,9 +10,9 @@ created_date: 2019-11-28 01:56:29
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    1
-views:        "2,446 "
+views:        "2,452 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-28-When-will-xrandr-version-1.5.1-be-available-in-Ubuntu^.md
 toc:          false
 navigation:   false

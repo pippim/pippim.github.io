@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/831418
 type:         Answer
 tags:         command-line
 created_date: 2016-09-30 02:53:37
-edit_date:    2018-08-06 02:42:01
-votes:        "28 "
+edit_date:    2022-01-12 01:11:19
+votes:        "30 "
 favorites:    
-views:        "40,951 "
+views:        "41,089 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-30-What-is-the-difference-between-touch-file-and-^-file^.md
 toc:          false
 navigation:   false
@@ -58,12 +58,12 @@ rick@dell:~$ ls -l Empty*
 
 ----------
 
-As mentioned in comments, `touch` is an external command and only operates on files. `>` is a shell built-in feature that serves many different purposes. Typically you would see it used like `cat source.fil > target.fil`. 
+As mentioned in comments, `touch` is an external command and only operates on files. `>` is a shell built-in feature that serves many different purposes. Sometimes you would see it used like `cat Source.txt > Target.txt`. 
 
 A long form to empty a file would be:
 
 ``` 
-cat /dev/null > emptyme.fil
+cat /dev/null > EmptyMe.txt
 ```
 
-Using `> emptme.fil` accomplishes the same thing in a compact format of redirecting nothing to the file.
+Using `> EmptyMe.txt` accomplishes the same thing in a compact format of redirecting nothing to the file.

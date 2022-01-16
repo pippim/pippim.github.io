@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line filesystem scripts directory system
 created_date: 2018-06-11 23:44:36
 edit_date:    2020-06-12 14:37:07
-votes:        "24 "
+votes:        "25 "
 favorites:    
-views:        "292,806 "
+views:        "293,758 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-11-Differences-between-^bin^-^sbin^-^usr^bin^-^usr^sbin^-^usr^local^bin^-^usr^local^sbin.md
 toc:          false
 navigation:   false

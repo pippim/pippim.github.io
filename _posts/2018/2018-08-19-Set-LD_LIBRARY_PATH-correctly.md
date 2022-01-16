@@ -10,9 +10,9 @@ created_date: 2018-08-19 14:30:47
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "11,097 "
+views:        "11,130 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-Set-LD_LIBRARY_PATH-correctly.md
 toc:          false
 navigation:   false

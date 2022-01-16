@@ -10,9 +10,9 @@ created_date: 2018-04-02 21:21:59
 edit_date:    2018-04-02 21:27:59
 votes:        "2 "
 favorites:    
-views:        "581 "
+views:        "582 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-02-Is-there-a-setting-in-the-startup-applications-menu-item-to-remember-all-apps-when-shutting-down^.md
 toc:          false
 navigation:   false

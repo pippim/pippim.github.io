@@ -10,9 +10,9 @@ created_date: 2016-09-26 02:00:45
 edit_date:    2017-04-13 12:24:56
 votes:        "1 "
 favorites:    
-views:        "2,660 "
+views:        "2,668 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-26-Turn-off-Motherboard^PC-Speaker-^beep^-in-Ubuntu-16.04-regression.md
 toc:          false
 navigation:   false

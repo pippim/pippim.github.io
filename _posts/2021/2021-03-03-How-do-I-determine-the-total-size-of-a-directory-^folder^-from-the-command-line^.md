@@ -10,9 +10,9 @@ created_date: 2021-03-03 21:45:02
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,325,224 "
+views:        "1,329,085 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-03-03-How-do-I-determine-the-total-size-of-a-directory-^folder^-from-the-command-line^.md
 toc:          false
 navigation:   false

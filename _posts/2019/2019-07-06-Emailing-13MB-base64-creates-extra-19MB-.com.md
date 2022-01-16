@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "39 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-Emailing-13MB-base64-creates-extra-19MB-.com.md
 toc:          false
 navigation:   false

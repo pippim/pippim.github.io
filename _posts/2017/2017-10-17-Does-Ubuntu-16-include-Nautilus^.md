@@ -10,9 +10,9 @@ created_date: 2017-10-17 00:54:04
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "559 "
+views:        "561 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-17-Does-Ubuntu-16-include-Nautilus^.md
 toc:          false
 navigation:   false

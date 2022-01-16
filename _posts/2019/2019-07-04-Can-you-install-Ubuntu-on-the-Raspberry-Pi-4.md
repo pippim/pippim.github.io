@@ -10,9 +10,9 @@ created_date: 2019-07-04 15:04:01
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "52,122 "
+views:        "52,138 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-04-Can-you-install-Ubuntu-on-the-Raspberry-Pi-4.md
 toc:          false
 navigation:   false

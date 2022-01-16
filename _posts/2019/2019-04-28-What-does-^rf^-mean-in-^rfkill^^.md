@@ -10,9 +10,9 @@ created_date: 2019-04-28 17:34:04
 edit_date:    2019-04-29 12:30:42
 votes:        "14 "
 favorites:    
-views:        "7,030 "
+views:        "7,050 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-What-does-^rf^-mean-in-^rfkill^^.md
 toc:          false
 navigation:   false

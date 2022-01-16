@@ -10,9 +10,9 @@ created_date: 2018-07-13 00:09:43
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "199,582 "
+views:        "200,012 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-13-Can-I-change-the-font-of-the-text-mode-console^.md
 toc:          false
 navigation:   false

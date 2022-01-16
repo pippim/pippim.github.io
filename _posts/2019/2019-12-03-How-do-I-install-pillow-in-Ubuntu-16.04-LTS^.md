@@ -10,9 +10,9 @@ created_date: 2019-12-03 03:13:37
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "27,252 "
+views:        "27,344 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-03-How-do-I-install-pillow-in-Ubuntu-16.04-LTS^.md
 toc:          false
 navigation:   false

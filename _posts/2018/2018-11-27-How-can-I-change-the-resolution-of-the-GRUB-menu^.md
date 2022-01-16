@@ -10,9 +10,9 @@ created_date: 2018-11-27 02:33:21
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "22,873 "
+views:        "23,014 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-27-How-can-I-change-the-resolution-of-the-GRUB-menu^.md
 toc:          false
 navigation:   false

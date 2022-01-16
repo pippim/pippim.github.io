@@ -15,7 +15,6 @@
 │   │   ├── Jekyll.png
 │   │   ├── Octocat.png
 │   │   ├── octojekyll-opt.jpg
-│   │   ├── Pippim Post More Button Working.gif
 │   │   ├── pngwing.com.png
 │   │   └── stack-to-blog progress display.gif
 │   └── js
@@ -37,7 +36,7 @@
 ├── _posts
 │   ├── 2016 [178 entries exceeds filelimit, not opening dir]
 │   ├── 2017 [154 entries exceeds filelimit, not opening dir]
-│   ├── 2018 [433 entries exceeds filelimit, not opening dir]
+│   ├── 2018 [434 entries exceeds filelimit, not opening dir]
 │   ├── 2019 [264 entries exceeds filelimit, not opening dir]
 │   ├── 2020 [62 entries exceeds filelimit, not opening dir]
 │   ├── 2021 [31 entries exceeds filelimit, not opening dir]
@@ -61,4 +60,4 @@
 ├── stack.md
 └── tree.work
 
-18 directories, 44 files
+18 directories, 43 files

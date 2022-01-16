@@ -8,11 +8,11 @@ type:         Answer
 tags:         networking conky monitoring system-monitor vnstat
 created_date: 2016-11-01 17:28:52
 edit_date:    2021-08-05 10:19:27
-votes:        "21 "
+votes:        "22 "
 favorites:    
-views:        "38,339 "
+views:        "38,427 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-01-How-to-track-the-total-network-data-in-a-month.md
 toc:          false
 navigation:   false

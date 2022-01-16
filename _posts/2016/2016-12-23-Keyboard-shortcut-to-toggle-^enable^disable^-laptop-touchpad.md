@@ -10,9 +10,9 @@ created_date: 2016-12-23 06:06:32
 edit_date:    2020-06-12 14:37:07
 votes:        "9 "
 favorites:    
-views:        "3,535 "
+views:        "3,539 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-23-Keyboard-shortcut-to-toggle-^enable^disable^-laptop-touchpad.md
 toc:          false
 navigation:   false

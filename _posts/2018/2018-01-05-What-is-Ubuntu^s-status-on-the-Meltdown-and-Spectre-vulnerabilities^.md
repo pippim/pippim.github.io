@@ -10,9 +10,9 @@ created_date: 2018-01-05 01:44:43
 edit_date:    2018-01-21 18:50:22
 votes:        "2 "
 favorites:    
-views:        "28,632 "
+views:        "28,633 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-05-What-is-Ubuntu^s-status-on-the-Meltdown-and-Spectre-vulnerabilities^.md
 toc:          true
 navigation:   true

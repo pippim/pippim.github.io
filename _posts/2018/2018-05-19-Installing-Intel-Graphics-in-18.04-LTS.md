@@ -10,9 +10,9 @@ created_date: 2018-05-19 01:05:31
 edit_date:    2018-07-22 14:50:53
 votes:        "3 "
 favorites:    
-views:        "47,712 "
+views:        "47,732 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-19-Installing-Intel-Graphics-in-18.04-LTS.md
 toc:          false
 navigation:   false

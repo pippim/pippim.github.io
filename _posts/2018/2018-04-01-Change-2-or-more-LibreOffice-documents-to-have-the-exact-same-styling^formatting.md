@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1021152
 type:         Answer
 tags:         libreoffice style
 created_date: 2018-04-01 20:56:11
-edit_date:    2022-01-08 04:23:24
+edit_date:    2022-01-09 13:25:41
 votes:        "4 "
 favorites:    
-views:        "621 "
+views:        "628 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-Change-2-or-more-LibreOffice-documents-to-have-the-exact-same-styling^formatting.md
 toc:          true
 navigation:   true
@@ -23,7 +23,7 @@ clipboard:    true
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
 
-## Use Libreoffice tools instead of CLI
+## Use LibreOffice Tools Instead of Command Line
 
 When all you have are command line tools everything looks like a command line problem. I've decided to write this answer using LibreOffice macros:
 
@@ -46,7 +46,7 @@ When all you have are command line tools everything looks like a command line pr
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
 
-## Create test data
+## Create Test Data
 
 Create two or more files containing:
 
@@ -68,7 +68,7 @@ chmod a+x ~/Downloads/copy-rtf.sh
 - Before each test type `cd ~/Downloads` and run `./copy-rtf.sh`
 - After output is perfect, they are copied back into live directory.
 
-The Downloads directory is used because:
+The `Downloads` directory is used because:
 
 - everyone has a `~/Downloads`
 - it gets added to regularly and manually emptied periodically
@@ -81,9 +81,9 @@ The Downloads directory is used because:
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
 
-## Run macro in headless environment
+## Run Macro in Headless Environment
 
-Using this [Stack Exchange answer][2] invoke Libreoffice Writer from the command line and pass it a global macro name to execute:
+Using this [Stack Exchange answer][2], run Libreoffice Writer from the command line and pass it a global macro name to execute:
 
 
 
@@ -91,7 +91,7 @@ Using this [Stack Exchange answer][2] invoke Libreoffice Writer from the command
 soffice -headless -invisible "vnd.sun.star.script:Standard.Module1.MySubroutine? language=Basic&location=application"
 ```
 
-The above answer may not work so [another method][3] can be tried:
+If the above method doesn't work, [another method][3] can be tried:
 
 ``` bash
 soffice "macro:///Standard.SaveCSV.Main" $1
@@ -149,9 +149,9 @@ The macro will read through the entire document and:
 - else if font size is 18 set to 22
 - else set font size to 12
 
-The macro will save document and exit Libreoffice Writer.
+The macro will save document and exit LibreOffice Writer.
 
-### Turn off Dialog
+### Turn Off Dialog
 
 Do a file save and this dialog comes up:
 
@@ -159,7 +159,7 @@ Do a file save and this dialog comes up:
 
 Turn this message off as show in the screen. The macro may not run properly if this option is on.
 
-### Macro contents
+### Macro Contents
 
 I spent a few days attempting to record a macro using "Tools" -> "Macros" -> "Record Macro" -> "Basic". At first it seemed promising but the recorded macro had inconsistent behavior and had to be abandoned for a hand written basic macro. A found help in Stack Overflow for an expert there to help me with the basic [basic coding][9]. Here is the result:
 
@@ -219,7 +219,7 @@ rem - If heading 1 set font size to 28
 rem - else if font size is 18 set to 22
 rem - else set font size to 12
 
-rem The macro will save document and exit Libreoffice Writer.
+rem The macro will save document and exit LibreOffice Writer.
 
 Dim CharHeight As Long, oSel as Object, oTC as Object
 Dim CharStyleName As String

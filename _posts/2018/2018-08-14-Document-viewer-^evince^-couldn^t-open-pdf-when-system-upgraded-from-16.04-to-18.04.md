@@ -10,9 +10,9 @@ created_date: 2018-08-14 22:34:40
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "4,702 "
+views:        "4,709 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-14-Document-viewer-^evince^-couldn^t-open-pdf-when-system-upgraded-from-16.04-to-18.04.md
 toc:          false
 navigation:   false

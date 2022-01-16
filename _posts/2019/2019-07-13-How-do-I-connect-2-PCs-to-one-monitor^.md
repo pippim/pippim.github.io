@@ -10,9 +10,9 @@ created_date: 2019-07-13 17:39:06
 edit_date:    2019-07-13 17:47:33
 votes:        "2 "
 favorites:    
-views:        "348 "
+views:        "353 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-How-do-I-connect-2-PCs-to-one-monitor^.md
 toc:          false
 navigation:   false

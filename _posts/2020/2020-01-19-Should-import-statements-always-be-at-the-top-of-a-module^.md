@@ -10,9 +10,9 @@ created_date: 2020-01-19 18:11:30
 edit_date:    2020-06-20 09:12:55
 votes:        "2 "
 favorites:    
-views:        "143,756 "
+views:        "144,196 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-19-Should-import-statements-always-be-at-the-top-of-a-module^.md
 toc:          false
 navigation:   false

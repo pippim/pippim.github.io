@@ -10,9 +10,9 @@ created_date: 2016-10-12 10:42:21
 edit_date:    2016-10-12 23:31:34
 votes:        "4 "
 favorites:    
-views:        "1,143 "
+views:        "1,147 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-12-Why-does-linux-native-file-system-prefer-^ExtFS^-file-system^-What-is-the-benefit-over-NTFS^.md
 toc:          false
 navigation:   false

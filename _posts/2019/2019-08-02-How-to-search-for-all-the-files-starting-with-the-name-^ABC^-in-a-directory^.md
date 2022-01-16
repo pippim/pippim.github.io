@@ -10,9 +10,9 @@ created_date: 2019-08-02 11:02:09
 edit_date:    2019-08-02 11:17:57
 votes:        "3 "
 favorites:    
-views:        "507,176 "
+views:        "509,388 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-02-How-to-search-for-all-the-files-starting-with-the-name-^ABC^-in-a-directory^.md
 toc:          false
 navigation:   false

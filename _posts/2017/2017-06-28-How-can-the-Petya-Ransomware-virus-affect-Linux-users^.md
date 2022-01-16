@@ -10,9 +10,9 @@ created_date: 2017-06-28 23:09:40
 edit_date:    2017-06-29 01:47:21
 votes:        "4 "
 favorites:    1
-views:        "3,366 "
+views:        "3,369 "
 accepted:     Accepted
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-28-How-can-the-Petya-Ransomware-virus-affect-Linux-users^.md
 toc:          false
 navigation:   false

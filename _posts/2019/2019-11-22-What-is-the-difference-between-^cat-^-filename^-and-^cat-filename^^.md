@@ -10,9 +10,9 @@ created_date: 2019-11-22 00:03:29
 edit_date:    2019-12-12 01:01:10
 votes:        "14 "
 favorites:    
-views:        "10,395 "
+views:        "10,449 "
 accepted:     
-uploaded:     2022-01-15 17:41:50
+uploaded:     2022-01-16 15:34:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-22-What-is-the-difference-between-^cat-^-filename^-and-^cat-filename^^.md
 toc:          false
 navigation:   false
