@@ -1187,6 +1187,24 @@ This also video shows:
 <a id="hdr15"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
 
+# Hide Chronology
+
+The chronology section shows the previous three songs played, the current song
+being played and the next six songs coming up in the playlist.
+
+You can hide the chronology section, which expands the art work dynamically:
+
+<video src="https://user-images.githubusercontent.com/92641463/149675348-e8471842-2755-4a22-9a7c-4ea432c7b5c3.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/149675348-e8471842-2755-4a22-9a7c-4ea432c7b5c3.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+Note that if you resize the window the artwork animation also shrinks and
+expands accordingly. It will maintain the "square" proportions and the
+skin background color can change depending on the color of the pixel at
+"3, 3" in the artwork.
+
 # Locations
 
 In addition to the music stored on your local storage, you can access
