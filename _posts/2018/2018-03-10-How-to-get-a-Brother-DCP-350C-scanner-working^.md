@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "5,288 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-10-How-to-get-a-Brother-DCP-350C-scanner-working^.md
 toc:          true
 navigation:   true
@@ -35,7 +35,6 @@ ii  brscan-skey                                0.2.4-1                          
 ii  brscan2                                    0.2.5-1                                                  amd64        Brother Scanner Driver
 ii  printer-driver-brlaser                     3-5~ubuntu1                                              amd64        printer driver for (some) Brother laser printers
 ii  printer-driver-ptouch                      1.4-1                                                    amd64        printer driver Brother P-touch label printers
-
 ```
 
 The newest versions are:
@@ -49,7 +48,6 @@ ii  cupswrapperdcp7065dn:i386                  2.0.4-2                          
 ii  dcp7065dnlpr:i386                          2.1.0-1                                      i386         Brother DCP-7065DN LPR driver
 ii  printer-driver-brlaser                     3-5~ubuntu1                                  amd64        printer driver for (some) Brother laser printers
 ii  printer-driver-ptouch                      1.4-1                                        amd64        printer driver Brother P-touch label printers
-
 ```
 
 - `udev` rule upgraded from `1.0.0-1` to `1.0.2`
@@ -255,7 +253,6 @@ Setting up brother-udev-rule-type1 (1.0.2) ...
 ls: cannot access '/etc/udev/rules.d/*.rules': No such file or directory
 ───────────────────────────────────────────────────────────────────────────────
 rick@alien:~/Downloads$ 
-
 ```
 
 ### Ohh No! Error on the last line.
@@ -265,14 +262,12 @@ No idea why `ls` was generating an error because the directory is there and thre
 ``` 
 $ ll /etc/udev/rules.d/*brother*.rules
 -rw-r--r-- 1 root root 1004 Mar 10 16:59 /etc/udev/rules.d/60-brother-libsane-type1.rules
-
 ```
 
 Oh well... let's proceed anyway. Looking at the new Brother `udev` rule all it does after a whole bunch of code is set:
 
 ``` 
 ENV{libsane_matched}="yes"
-
 ```
 
 Now it's time to post this answer as is and `reboot`.
@@ -286,7 +281,6 @@ Selecting previously unselected package brscan-skey.
 Preparing to unpack brscan-skey-0.2.4-1.amd64.deb ...
 Unpacking brscan-skey (0.2.4-1) ...
 Setting up brscan-skey (0.2.4-1) ...
-
 ```
 
 *Interesting* that there is more than a million files on my system. Those 25 kernels add up over time.
@@ -312,7 +306,6 @@ rick@alien:~/Downloads$ brscan-skey -l
 
 ───────────────────────────────────────────────────────────────────────────────
 rick@alien:~/Downloads$
-
 ```
 
 So far, so good. The answer (no long sure if it's sure valid) says you need to put `brscan-skey` into your **Startup Applications** and you need `gimp` installed. Comment below if you need help doing this.
@@ -326,7 +319,6 @@ Building dependency tree
    (...BLAH, BLAH, BLAH...)
 Setting up xsane-common (0.999-3ubuntu1) ...
 Setting up xsane (0.999-3ubuntu1) ...
-
 ```
 
 
@@ -384,7 +376,6 @@ Open terminal, change to `~/Downloads` and verify file exists:
 ``` 
 rick@alien:~/Downloads$ ll *.gz*
 -rw-rw-r-- 1 rick rick    24666 Mar 11 08:24 linux-brprinter-installer-2.2.0-1.gz
-
 ```
 
 After downloading these instructions appear on the website. Abbreviated format follows:
@@ -401,7 +392,6 @@ You are going to install following packages.
    brscan4-0.4.4-3.amd64.deb
    brscan-skey-0.2.4-1.amd64.deb
 OK? [y/N] ->
-
 ```
 
 Uh-Oh... It's selecting `brscan4-0.4.4-3.amd64.deb` but earlier I had installed `brscan4-0.4.4-4.i386.deb` which was a newer version but the wrong architecture. This could explain the errors I had!
@@ -412,7 +402,6 @@ A prompt appears:
 
 ``` 
 Will you specify the Device URI? [Y/n] ->
-
 ```
 
 For yours and mine **USB Printer** we select `n`.
@@ -452,7 +441,6 @@ ii  printer-driver-brlaser                     3-5~ubuntu1                      
 ii  printer-driver-ptouch                      1.4-1                                        amd64        printer driver Brother P-touch label printers
 ───────────────────────────────────────────────────────────────────────────────
 rick@alien:~$ simple-scan
-
 ```
 
 After all the hard work we are rewarded with a scan:

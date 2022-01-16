@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,091 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-20-SD-card-insert^remove-behaviors-not-detected-until-running-lspci-command.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ After many pages of scrolling the solution is a new `udev` rule:
 # enable in-kernel media-presence polling
 ACTION=="add", SUBSYSTEM=="module", KERNEL=="block", ATTR{parameters/events_dfl_poll_msecs}=="0", ATTR{parameters/events_dfl_poll_msecs}="2000"
 ACTION=="add", ATTR{removable}=="1", ATTR{events_poll_msecs}=="-1", ATTR{events_poll_msecs}="2000"
-
 ```
 
 The Q&A is far too long to repost here, but please read the entire link to learn more.

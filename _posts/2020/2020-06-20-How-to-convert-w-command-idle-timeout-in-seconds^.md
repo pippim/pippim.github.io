@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "133 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-20-How-to-convert-w-command-idle-timeout-in-seconds^.md
 toc:          false
 navigation:   false
@@ -79,21 +79,18 @@ Instead of using:
 
 ``` 
 w | tr -s " " | cut -d" " -f1,5 | tail -n+3
-
 ```
 
 You can chop off the tail and use:
 
 ``` 
 w -h | tr -s " " | cut -d" " -f1,5
-
 ```
 
 This will remove the headers for you. I do the same plus use short format (sans CPU stats) and IP addresses instead of host names so I use:
 
 ``` 
 w -ish | tr -s " " | cut -d" " -f1,5
-
 ```
 
 Use `man w` for more argument details.

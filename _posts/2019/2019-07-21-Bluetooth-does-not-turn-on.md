@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,085 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Bluetooth-does-not-turn-on.md
 toc:          false
 navigation:   false
@@ -41,7 +41,6 @@ There is a diagnostics script you can run to [analyze all things WiFi][2]:
 wget -N -t 5 -T 10 https://github.com/UbuntuForums/wireless-info/raw/master/wireless-info
 chmod +x wireless-info
 ./wireless-info
-
 ```
 
 It will create the file `wireless-info.txt` at which point you will need to use:
@@ -195,7 +194,6 @@ wlp60s0   IEEE 802.11  ESSID:"TELUS1213-5G"
           Tx excessive retries:0  Invalid misc:88   Missed beacon:0
 
 ##### route #############################
-
 ```
 
 

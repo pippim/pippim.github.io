@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "162 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-16-Why-does-my-laptop-suspend-after-5-minutes^.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
-
 ```
 
 The value of `0` seconds on lines 1 and 3 turns the function off. The `nothing` feature on lines 2 and 4 are like hitting it was a hammer twice.

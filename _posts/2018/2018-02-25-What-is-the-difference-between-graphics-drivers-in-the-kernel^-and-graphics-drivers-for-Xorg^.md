@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,830 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-25-What-is-the-difference-between-graphics-drivers-in-the-kernel^-and-graphics-drivers-for-Xorg^.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ $ ll /usr/lib/xorg/modules/drivers/nouveau_drv.so
 -rw-r--r-- 1 root root 221200 Jul  6  2017 /usr/lib/xorg/modules/drivers/nouveau_drv.so
 $ ll /lib/modules/4.14.20-041420-generic/kernel/drivers/gpu/drm/nouveau/nouveau.ko
 -rw-r--r-- 1 root root 3646510 Feb 16 15:53 /lib/modules/4.14.20-041420-generic/kernel/drivers/gpu/drm/nouveau/nouveau.ko
-
 ```
 
 The kernel Nouveau module is 16 times larger than the Xorg driver. This implies the kernel module does a lot more.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "697 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-30-Laptop-not-coming-back-from-sleep-after-lid-close.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ This problem has been reported on [Launchpad][1] and [ArchLinux][2]. The solutio
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpiphp.disable=1"
-
 ```
 
 Your options will be different but add the option `acpihp.disable=1` between the double quotes.

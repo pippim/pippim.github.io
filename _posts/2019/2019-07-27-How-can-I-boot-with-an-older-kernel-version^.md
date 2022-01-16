@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "358,038 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-27-How-can-I-boot-with-an-older-kernel-version^.md
 toc:          false
 navigation:   false
@@ -51,7 +51,6 @@ clipboard:    true
      │                                                                              │ 
      └──────────────────────────────────────────────────────────────────────────────┘ 
                                                                                       
-
 ```
 
 
@@ -62,7 +61,6 @@ clipboard:    true
 ``` 
      │  1>10 Ubuntu, with Linux 4.14.134-0414134-generic (upstart)                 ▒│ 
      │  1>11 Ubuntu, with Linux 4.14.134-0414134-generic (recovery mode)           ▒│ 
-
 ```
 
 
@@ -96,7 +94,6 @@ echo 'Loading initial ramdisk ...'
 initrd /boot/initrd.img-4.14.134-0414134-generic
 }
 Press <Enter> to continue
-
 ```
 
 ## Updating grub to boot previous kernel
@@ -107,28 +104,24 @@ In this example we want menu number `1>9> set as the default so we use:
 
 ``` 
 sudo -H gedit /etc/default/grub
-
 ```
 
 and find this line:
 
 ``` 
 GRUB_DEFAULT=0
-
 ```
 
 and change it to this:
 
 ``` 
 GRUB_DEFAULT="1>9"
-
 ```
 
 Then save the file and run
 
 ``` 
 sudo update-grub
-
 ```
 
   [1]: https://askubuntu.com/a/1097697/307523

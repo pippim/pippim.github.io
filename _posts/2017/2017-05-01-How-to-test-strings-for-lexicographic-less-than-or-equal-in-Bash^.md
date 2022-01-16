@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "33,634 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-01-How-to-test-strings-for-lexicographic-less-than-or-equal-in-Bash^.md
 toc:          false
 navigation:   false
@@ -26,12 +26,10 @@ $ a="abc"
 $ b="abc"
 $ if ! [[ "$b" > "$a" ]] ; then  echo "a <= b" ; fi
 a <= b
-
 ```
 
 If you want collating sequence of "A" then "a" then "B"... use:
 
 ``` 
 shopt -s nocaseglob
-
 ```

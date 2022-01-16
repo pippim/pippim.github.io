@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "1,898 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-08-When-terminal-is-opened-can-I-get-current-calendar-and-time-displayed^.md
 toc:          false
 navigation:   true
@@ -119,7 +119,6 @@ done < /tmp/terminal
 tput rc                 # Restore saved cursor position.
 
 exit 0
-
 ```
 
 ### Mark script as executable
@@ -128,7 +127,6 @@ Copy this code into your editor and save it to the file `now`. Next mark it as e
 
 ``` bash
 sudo chmod +x now
-
 ```
 
 ### Add script to `~./bashrc`
@@ -157,14 +155,12 @@ In the code above a comment can be copied to your command line and executed to s
 
 ``` bash
 for i in ${TOILET_FONT_PATH:=/usr/share/figlet}/*.{t,f}lf; do j=${i##*/}; toilet -d "${i%/*}" -f "$j" "${j%.*}"; done
-
 ```
 
 To change the font used for time display search the code for this line:
 
 ``` bash
 toilet -f future --filter border > /tmp/terminal
-
 ```
 
 and change the font name `future` to the font name you choose. Keep in mind some fonts are too large to fit on the display.
@@ -175,7 +171,6 @@ Set the color you want for the calendar and the time separately. In the above co
 
 ``` bash
 printf "\033[36m"       # color 36=cyan
-
 ```
 
 Change the last two digits to the color code you want to use. From tinkering with the code I found these values:

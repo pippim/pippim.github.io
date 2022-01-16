@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "5,710 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-18-GNU-grub-menu-takes-too-long-to-boot.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ To see what grub is doing while it's loading the kernel image and booting up Ubu
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash vt.handoff=7 kaslr"
-
 ```
 
 Change the line to look like this:
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="vt.handoff=7 kaslr"
-
 ```
 
 Leave the other parameters alone (which probably don't look like mine). The important thing is to remove "quiet" and "splash" parameters.
@@ -39,21 +37,18 @@ Save the file and then use:
 
 ``` 
 sudo update-grub
-
 ```
 
 Now reboot your computer and watch for messages that pause for a long time. After getting a message that pauses for a long time you can review the log file using:
 
 ``` 
 gedit /var/log/syslog
-
 ```
 
 Additionally the time for all services loaded during boot can be reviewed using:
 
 ``` 
 systemd-analyze blame
-
 ```
 
 After getting specifics of what module(s) is/are slowing down your boot you can ask pointed question(s) about it/them

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    1
 views:        "820 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-01-Convert-today^s-HH:MM-am^pm-to-epoch-in-Bash.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ I have two variables `$sunrise`="7:23 am" and `$sunset`="6:10 pm". I need to con
 ``` 
 secSunrise=($date ... "$sunrise" ... +"%s")
 secSunset=$(date ... "$sunset" ... +"%s")
-
 ```
 
 The only thing I've figured out so far is doing it with current date-time:
@@ -33,7 +32,6 @@ The only thing I've figured out so far is doing it with current date-time:
 $ secNow=$(date +"%s")
 $ echo $secNow
 1488331535
-
 ```
 
 

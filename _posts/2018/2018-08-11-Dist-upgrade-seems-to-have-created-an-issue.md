@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "5,885 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-11-Dist-upgrade-seems-to-have-created-an-issue.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ I had the same problem after running `sudo do-release-upgrade -d` on a Ubuntu 16
 ``` 
 To continue please press [ENTER]
 Inhibiting until Ctrl+C is pressed...
-
 ```
 
 So I pressed <kbd>Ctrl</kbd>+<kbd>C</kbd> and it returned to command prompt.
@@ -50,14 +49,12 @@ Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
 1675 packages can be upgraded. Run 'apt list --upgradable' to see them.
-
 ```
 
 Based on comments above plus this answer: [Hit Ctrl+c during do-release-upgrade. Did I break it?][1] I used:
 
 ``` 
 sudo sed -i -e 's/bionic/xenial/g' /etc/apt/sources.list
-
 ```
 
 Now `sudo apt update` completes normally. 
@@ -81,7 +78,6 @@ AppStream cache update completed, but some metadata was ignored due to errors.
 
 Checking package manager
 Reading package lists... Done    
-
 ```
 
 I abort the upgrade by answering <kbd>N</kbd> to prompt.
@@ -101,14 +97,12 @@ Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
 All packages are up to date.
-
 ```
 
 The recommended solution in the link is to use:
 
 ``` 
 sudo apt-get purge libappstream3
-
 ```
 
 Running this the meta error is now gone:
@@ -123,7 +117,6 @@ Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
 All packages are up to date.
-
 ```
 
 Next step will be to run `sudo do-release-upgrade -d` a third time and cross my fingers.
@@ -137,7 +130,6 @@ Turns out the two line message comes out at the same time:
 ``` 
 To continue please press [ENTER]
 Inhibiting until Ctrl+C is pressed...
-
 ```
 
 You think the upgrade is inhibited until you press <kbd>Ctrl</kbd>+<kbd>C</kbd> but what it really means is the upgrade doesn't start until you press <kbd>Enter</Kbd>.

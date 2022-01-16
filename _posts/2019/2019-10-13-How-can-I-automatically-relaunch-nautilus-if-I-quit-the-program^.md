@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "623 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-13-How-can-I-automatically-relaunch-nautilus-if-I-quit-the-program^.md
 toc:          false
 navigation:   false
@@ -77,7 +77,6 @@ for (( l=0; l<LoopLimit; l++ )) ; do
 done
 
 notify-send "ERROR in $0: $Program exceeded $LoopLimit loop limit"
-
 ```
 
 Make it executable with `chmod a+x ~/ttlus`
@@ -92,8 +91,7 @@ $ pgrep ttlus
 
 $ kill 7970
 [1]+  Terminated              ttlus
-## 
-```
+## ```
 
 
 

@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,901 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator^.md
 toc:          false
 navigation:   true
@@ -49,7 +49,6 @@ To install **System Monitor Indicator** you need to first specify the PPA where 
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 sudo apt-get update
 sudo apt-get install indicator-sysmonitor
-
 ```
 
 Now run the "indicator-sysmonitor" GUI from Unity Dash (<kbd>Alt</kbd>+<kbd>F2</kbd> or <kbd>⊞ Super</kbd> aka <kbd>⊞ Win</kbd> key). If you are using GNOME use <kbd>⊞ Super</kbd>+<kbd>A</kbd> to open Show Applications instead of Dash.
@@ -174,7 +173,6 @@ else
     echo '|' > $FILE
     exit 124 # ASCII
 fi
-
 ```
 
 

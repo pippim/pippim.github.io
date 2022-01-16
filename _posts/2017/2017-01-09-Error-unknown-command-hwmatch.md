@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "23,785 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-09-Error-unknown-command-hwmatch.md
 toc:          false
 navigation:   false
@@ -48,7 +48,6 @@ else
 fi
 EOF
 fi
-
 ```
 
 For whatever reason your grub installation is incomplete and missing `hwmatch` module. You should see it among many other files when you use `ll /boot/grub/i386-pc`:
@@ -77,7 +76,6 @@ For whatever reason your grub installation is incomplete and missing `hwmatch` m
 -rw-r--r-- 1 root root   4928 Dec  5 07:13 lspci.mod
 -rw-r--r-- 1 root root   6724 Dec  5 07:13 luks.mod
 -rw-r--r-- 1 root root   6776 Dec  5 07:13 lvm.mod
-
 ```
 
 As per this bug report ([bugs.launchpad.net - Ubuntu Upgrade from Lucid to Precise results in broken grub configuration][1]) the easiest way of getting all the grub modules is to reinstall it.
@@ -89,7 +87,6 @@ Above is a direct quote from the bug report. As a comment here points out and lo
 
 ``` 
 sudo dpkg-reconfigure grub-efi-amd64
-
 ```
 
 However looking at this post ([superuser.com - How to reinstall grub2 efi][2]) you must first boot with a live USB/DVD and use:
@@ -101,21 +98,18 @@ for i in /dev /dev/pts /proc /sys; do sudo mount -B $i /mnt$i; done
 sudo cp /etc/resolv.conf /mnt/etc/ #makes the network available after chrooting
 modprobe efivars # make sure this is loaded
 sudo chroot /mnt
-
 ```
 
 The first step is to confirm that the file `hwmatch` is really missing. If so the easiest method is to simply copy it from:
 
 ``` 
 /usr/lib/grub/i386-pc/hwmatch.mod
-
 ```
 
 into the directory:
 
 ``` 
 /boot/efi/efi/grub
-
 ```
 
 This directory name comes from ([https://help.ubuntu.com/community/UEFIBooting][3]) where they say that is "mostly" the directory name. Please confirm for your installation.

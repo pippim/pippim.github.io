@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "261 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-19-How-do-I-distinguish-between-a-command^-utility^-or-builtin-for-getting-documentation^.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ echo is /bin/echo
 $ type -a printf
 printf is a shell builtin
 printf is /usr/bin/printf
-
 ```
 
 A detailed analysis of builtins and external commands can be found in [Unix & Linux][1].
@@ -73,7 +72,6 @@ DESCRIPTION
        \a     alert (BEL)
 
  Manual page echo(1) line 1 (press h for help or q to quit)
-
 ```
 
 And you can type:
@@ -111,7 +109,6 @@ echo: echo [-neE] [arg ...]
     
     Exit Status:
     Returns success unless a write error occurs.
-
 ```
 
   [1]: https://unix.stackexchange.com/a/1359/200094

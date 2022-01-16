@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "10,756 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-27-Switch-between-internal-and-HDMI-speakers-automatically.md
 toc:          false
 navigation:   true
@@ -42,7 +42,6 @@ cd /usr/local/bin
 sudo touch hotplugtv
 sudo chmod +x hotplugtv
 gksu gedit hotplugtv
-
 ```
 
 When the editor opens with a blank screen, copy and paste the following into it:
@@ -72,7 +71,6 @@ else
 fi
 
 exit 0
-
 ```
 
 You will need to replace the two occurrences of `rick` with your own user id, ie `UTF-8`, etc.
@@ -91,7 +89,6 @@ udev monitors hotplug events when you plug in and unplug your HDMI monitor. Type
 cd /etc/udev/rules.d
 sudo cp 70-persistent-net.rules 99-hotplugtv.rules
 gksu gedit 99-hotplugtv.rules
-
 ```
 
 
@@ -109,7 +106,6 @@ The editor will show a bunch of irrelevant text, highlight it and delete it.  Th
 # NOTE: in future may requre systemd service hooks
 
 ACTION=="change", SUBSYSTEM=="drm", ENV{HOTPLUG}=="1", RUN+="/usr/local/bin/hotplugtv"
-
 ```
 
 Save the file and exit.
@@ -118,7 +114,6 @@ To enable the rule (without rebooting) we need to reload udev:
 
 ``` bash
 sudo udevadm control --reload-rules
-
 ```
 
 Now you can plug and unplug your HDMI monitor / TV and the sound switches appropriately.
@@ -137,21 +132,18 @@ You can quickly test the code at the terminal by using:
 
 ``` bash
     export PULSE_RUNTIME_PATH="/run/user/1000/pulse/";
-
 ```
 
  - Switch to HDMI / TV:
 
 ``` bash
         sudo -u rick -E pacmd set-card-profile 0 output:hdmi-stereo;
-
 ```
 
  - Switch back to built in speakers:
 
 ``` bash
         sudo -u rick -E pacmd set-card-profile 0 output:analog-stereo;
-
 ```
 
  - Remember to replace `rick` with your user name. 
@@ -174,7 +166,6 @@ $ pacmd list-sinks | grep -e 'name:' -e 'index'
 $ pacmd list-sinks | grep -e 'name:' -e 'index'
   * index: 30
 	name: <alsa_output.pci-0000_00_1b.0.analog-stereo>
-
 ```
 
 
@@ -194,7 +185,6 @@ card 0: PCH [HDA Intel PCH], device 0: 92HD91BXX Analog [92HD91BXX Analog]
 card 0: PCH [HDA Intel PCH], device 3: HDMI 0 [HDMI 0]
   Subdevices: 0/1
   Subdevice #0: subdevice #0
-
 ```
 
 In the above example all card numbers are 0 with different output sources. If you have USB speakers they can have a different card number than 0.

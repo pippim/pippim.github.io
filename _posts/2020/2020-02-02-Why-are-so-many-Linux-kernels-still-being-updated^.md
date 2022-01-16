@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,340 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-02-02-Why-are-so-many-Linux-kernels-still-being-updated^.md
 toc:          false
 navigation:   false
@@ -45,7 +45,6 @@ Although my system is extremely stable I'm none-the-less interested in this bug 
 
 ``` 
 platform/x86: alienware-wmi: fix kfree on potentially uninitialized pointer
-
 ```
 
 Even though my Alienware laptop is two years old I would like to have this bug fix applied "just in case".

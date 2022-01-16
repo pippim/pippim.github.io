@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "3,195 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-08-Prevent-sleep-if-CPU-usage-is-high.md
 toc:          false
 navigation:   false
@@ -28,28 +28,24 @@ org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
 org.gnome.settings-daemon.plugins.power button-sleep 'suspend'
 org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 0
 org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'suspend'
-
 ```
 
 My system is set to never go to sleep, but if yours is set for 5 minutes (300 seconds) it would look like this:
 
 ``` 
 org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 300
-
 ```
 
 When your python program starts issue the command:
 
 ``` 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
-
 ```
 
 When your python program ends restore the previous settings:
 
 ``` 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 300
-
 ```
 
 
@@ -79,7 +75,6 @@ org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/gnome/a
 org.gnome.desktop.screensaver status-message-enabled true
 org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
 org.gnome.desktop.screensaver user-switch-enabled true
-
 ```
 
 
@@ -103,7 +98,6 @@ Then the code using `xprintidle` (keyboard and mouse unused time) needs to be ya
 ``` 
 $ uptime
  08:08:54 up 9 days,  3:38,  1 user,  load average: 0.30, 0.47, 0.71
-
 ```
 
 The load average prints for 1 minute, 5 minutes and 15 minutes. Once 5 minutes or 15 minutes is below threshold, simply suspend the system.
@@ -119,7 +113,6 @@ To start testing run this in a terminal now:
 ``` 
 $ while true ; do uptime; sleep 300; done
  08:20:36 up 9 days,  3:50,  1 user,  load average: 0.36, 0.50, 0.64
-
 ```
 
 Every five minutes the load average will display to give you an idea of where your thresholds should be to suspend.
@@ -142,7 +135,6 @@ Nov 08 23:26:19 to Nov 09 07:38:50 lasting 29,551 seconds
 Linux uptime 791,119 seconds (9 days, 3 hours, 45 minutes, 19 seconds)
 18 Suspends 494,551 seconds (5 days, 17 hours, 22 minutes, 31 seconds)
 Real uptime 296,568 seconds (3 days, 10 hours, 22 minutes, 48 seconds)
-
 ```
 
 

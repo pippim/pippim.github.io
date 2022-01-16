@@ -12,7 +12,7 @@ votes:        "24 "
 favorites:    
 views:        "292,806 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-11-Differences-between-^bin^-^sbin^-^usr^bin^-^usr^sbin^-^usr^local^bin^-^usr^local^sbin.md
 toc:          false
 navigation:   false
@@ -57,7 +57,6 @@ $ man hier | grep -E 'bin$|sbin$|^.{7}(/bin)|^.{7}(/sbin)' -A2
        /usr/sbin
               This directory contains program binaries for  system  administration  which
               are  not  essential  for the boot process, for mounting /usr, or for system
-
 ```
 
 

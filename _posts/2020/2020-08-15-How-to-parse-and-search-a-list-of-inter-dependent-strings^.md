@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "143 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-15-How-to-parse-and-search-a-list-of-inter-dependent-strings^.md
 toc:          false
 navigation:   false
@@ -60,7 +60,6 @@ When you run it it returns a list of tuples:
 
 ``` 
 [('1828', '100', 'Firefox'), ('1891', '50', 'ffplay'), ('1907', '100', 'ffplay')]
-
 ```
 
 Each tuple contains:

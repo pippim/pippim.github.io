@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,944 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-09-Editing-OS-names-in-^etc^default^grub---where-is-the-OS-name-read-from^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ In terminal type `cat /proc/version`:
 
 ``` 
 Linux version 4.7.3-040703-generic (kernel@tangerine) (gcc version 6.2.0 20160901 (Ubuntu 6.2.0-3ubuntu11) ) #201609070334 SMP Wed Sep 7 07:36:45 UTC 2016
-
 ```
 
 **Ubuntu** appears in /proc/version but not the way it appears on grub menus. So we move on....
@@ -36,7 +35,6 @@ Now type `cat /etc/issue`:
 
 ``` 
 Ubuntu 16.04.1 LTS \n \l
-
 ```
 
 This is where **lsb_release** is probably getting the Linux Distro, because **Ubuntu 16.04.1 LTS** is what appears on my grub menu.
@@ -51,7 +49,6 @@ set_default_theme(){
 			# Set a monochromatic theme for Tanglu/Ubuntu.
 			echo "${1}set menu_color_normal=white/black"
 			echo "${1}set menu_color_highlight=black/light-gray"
-
 ```
 
 

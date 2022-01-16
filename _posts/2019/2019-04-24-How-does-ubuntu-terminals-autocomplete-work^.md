@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "418 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-24-How-does-ubuntu-terminals-autocomplete-work^.md
 toc:          false
 navigation:   false
@@ -43,7 +43,6 @@ There are two parts to the autocompletion:
    `complete «options» «command»` you define the completion for some command. For example `complete -u su` says
 ``` 
 *when completing an argument for the `su` command, search for users of the current system*.
-
 ```
 
    If this is more complicated than the

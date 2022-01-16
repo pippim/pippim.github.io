@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "4,429 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-10-How-can-I-scale-Windows-Individually^.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ If you open the terminal first and use:
 
 ``` 
 xrandr --dpi 144
-
 ```
 
 then call `kid3` the screen is magnified and easier to read:

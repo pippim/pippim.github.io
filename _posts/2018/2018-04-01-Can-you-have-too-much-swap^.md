@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "9,704 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-Can-you-have-too-much-swap^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ It's a misconception that you need RAM x 2 for SWAP size when you use hibernatio
 ``` 
 $ cat /sys/power/image_size
 3153907712
-
 ```
 
 On this 8 GB RAM machine 3 GB minimum is needed to hibernate.

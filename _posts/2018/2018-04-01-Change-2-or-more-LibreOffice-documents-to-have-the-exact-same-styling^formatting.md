@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "621 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-Change-2-or-more-LibreOffice-documents-to-have-the-exact-same-styling^formatting.md
 toc:          true
 navigation:   true
@@ -56,14 +56,12 @@ Create script `~/Downloads/copy-rtf.sh` containing:
 
 ``` 
 cp ~/Documents/*.rtf ~/Downloads
-
 ```
 
 Mark as executable using
 
 ``` 
 chmod a+x ~/Downloads/copy-rtf.sh
-
 ```
 
 - During development and testing, the macros modifying `*.rtf` files will run against `~/Downloads` directory. 
@@ -91,14 +89,12 @@ Using this [Stack Exchange answer][2] invoke Libreoffice Writer from the command
 
 ``` bash
 soffice -headless -invisible "vnd.sun.star.script:Standard.Module1.MySubroutine? language=Basic&location=application"
-
 ```
 
 The above answer may not work so [another method][3] can be tried:
 
 ``` bash
 soffice "macro:///Standard.SaveCSV.Main" $1
-
 ```
 
 
@@ -118,7 +114,6 @@ However this AU Q&A: [https://askubuntu.com/a/728153/307523][5] suggests it is a
 sudo apt-add-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer oracle-java8-set-default
-
 ```
 
 I tried the AU Q&A method and after the first step of adding the PPA a splash screen appears with additional information. The most helpful is a link to [setting up JRE 8 on Debian systems][6].
@@ -314,7 +309,6 @@ rem ----------------------------------------------------------------------
 dispatcher.executeDispatch(document, ".uno:Save", "", 0, Array())
 
 end sub
-
 ```
 
   [1]: https://i.stack.imgur.com/9UmyA.png

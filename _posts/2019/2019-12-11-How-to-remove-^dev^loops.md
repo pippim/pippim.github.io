@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "20,923 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-11-How-to-remove-^dev^loops.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ The question was changed today so here is how you can remove the extra output wi
 
 ``` 
 sudo fdisk -l | sed -e '/Disk \/dev\/loop/,+5d'
-
 ```
 
 As this can be hard to remember you could create an alias in your `~/.bashrc`:
 
 ``` 
 alias fdsk="sudo fdisk -l | sed -e '/Disk \/dev\/loop/,+5d'"
-
 ```
 
 Then simply type `fdsk` in the command line and enter your password when prompted.
@@ -64,6 +62,5 @@ tmpfs             4011984         0   4011984   0% /sys/fs/cgroup
 /dev/nvme0n1p2      97280     33222     64058  35% /boot/efi
 /dev/sda3       963668988  43929712 919739276   5% /mnt/d
 tmpfs              802400        60    802340   1% /run/user/1000
-
 ```
 

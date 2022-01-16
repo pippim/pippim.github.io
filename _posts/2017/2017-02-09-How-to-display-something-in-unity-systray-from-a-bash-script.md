@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,003 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-09-How-to-display-something-in-unity-systray-from-a-bash-script.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ You need to install `indicator-sysmonitor` from ppa:
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 sudo apt-get update
 sudo apt-get install indicator-sysmonitor
-
 ```
 
 Then run the gui and configure it with the script name that updates the system tray.
@@ -46,14 +45,12 @@ Here are a few examples from the ***WebUpd8*** link above:
 
 ``` 
 `echo $(grep "cpu MHz" /proc/cpuinfo | head -1 | cut -d ' ' -f3 | cut -d '.' -f1) MHz`
-
 ```
 
 - Check if a website is up (smiley face) or down (sad face):
 
 ``` 
 `if wget -O /dev/null webupd8.org > /dev/null; then echo "☺"; else echo "☹"; fi`
-
 ```
 
 

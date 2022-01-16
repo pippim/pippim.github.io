@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "39 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-Emailing-13MB-base64-creates-extra-19MB-.com.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ that recommends:
 
 ``` 
 echo -e "to: receiver@domain.tld\nsubject: subject\n"| (cat - && uuencode /path/to/attachment attachment.name) | ssmtp receiver@gmail.com
-
 ```
 
 I did some new research and it seems `uuencode` was something popular 25 years ago but not so much today. The basic flaw with the bash script is `uuencode` is putting the attachment within the body of the message.
@@ -40,7 +39,6 @@ Where I used the `mail` program built into my Ubuntu distribution already:
 
 ``` 
 mail -a "$Filename64" -s "$Filename64" "$EmailAddr" < /dev/null
-
 ```
 
 

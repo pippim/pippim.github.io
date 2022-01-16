@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    0
 views:        "791 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-11-Best-way-to-check-if-Nautilus-File-Manager-is-running^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ I've been working hours on this problem. When nautilus file manager is NOT runni
 ``` 
 $ ps -aux | grep nautilus | grep -v grep
 rick      5613  0.2  1.7 2355392 140012 pts/19 Sl+  19:04   0:08 nautilus
-
 ```
 
 So use this command without nautilus file manager open and you see:
@@ -38,7 +37,6 @@ $ ps -L -p 5613 -o pid,nice,lwp,comm
  5613   0  5614 gmain
  5613   0  5615 gdbus
  5613   0  5617 dconf worker
-
 ```
 
 Now open up nautilus file manager and redo `ps` command:
@@ -53,7 +51,6 @@ $ ps -L -p 5613 -o pid,nice,lwp,comm
  5613   0  5615 gdbus
  5613   0  5617 dconf worker
  5613   0  4788 pool
-
 ```
 
 Close the nautilus files window and rerun the command (after waiting a second or two) and the pool disappears.

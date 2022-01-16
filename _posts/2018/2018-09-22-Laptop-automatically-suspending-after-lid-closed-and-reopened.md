@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,207 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-22-Laptop-automatically-suspending-after-lid-closed-and-reopened.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ Use `sudo -H gedit /etc/systemd/logind.conf` and search for this line:
 
 ``` 
 #HandlLidSwitch=
-
 ```
 
 change it to:
 
 ``` 
 HandleLidSwitch=ignore
-
 ```
 
 Then save the file and reboot.

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "47,712 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-19-Installing-Intel-Graphics-in-18.04-LTS.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ To activate your Intel iGPU use:
 ``` 
 sudo prime-select intel
 reboot
-
 ```
 
 To turn your nVidia GPU back use:
@@ -34,14 +33,12 @@ To turn your nVidia GPU back use:
 ``` 
 sudo prime-select nvidia
 reboot
-
 ```
 
 If you forget which one is running use:
 
 ``` 
 prime-select query
-
 ```
 
 

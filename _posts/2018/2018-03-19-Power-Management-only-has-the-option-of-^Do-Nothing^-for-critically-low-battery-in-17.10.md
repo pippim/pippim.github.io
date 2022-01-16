@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "2,773 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-19-Power-Management-only-has-the-option-of-^Do-Nothing^-for-critically-low-battery-in-17.10.md
 toc:          false
 navigation:   true
@@ -32,7 +32,6 @@ $ gsettings get org.gnome.settings-daemon.plugins.power critical-battery-action
 'suspend'
 $ gsettings get org.gnome.settings-daemon.plugins.power percentage-low
 '10'
-
 ```
 
 Then to change them use:
@@ -40,7 +39,6 @@ Then to change them use:
 ``` 
 $ gsettings set org.gnome.settings-daemon.plugins.power critical-battery-action suspend
 $ gsettings set org.gnome.settings-daemon.plugins.power percentage-low 10
-
 ```
 
 Note on my system they are just fine, so I changed them back to what they were in the first place for sake of example.
@@ -165,7 +163,6 @@ Daemon:
   lid-is-closed:   no
   lid-is-present:  yes
   critical-action: HybridSleep
-
 ```
 
 First run this command when the laptop is plugged in. Then unplug the laptop and run the command after some time and ensure battery remaining time has reduced appropriately.
@@ -193,7 +190,6 @@ $ cat /etc/udev/rules.d/99-lowbat.rules
 
 # Suspend the system when battery level drops to 5% or lower
 SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-5]", RUN+="/usr/bin/systemctl hibernate"
-
 ```
 
 This rule will be repeated whenever the condition is set. As such, when resuming from hibernate when the battery is critical, the computer will hibernate directly. Some laptops do not boot beyond a certain battery level, so the rule could be adjusted accordingly.
@@ -214,7 +210,6 @@ acpi -b | awk -F'[,:%]' '{print $2, $3}' | {
 		systemctl hibernate
 	fi
 }
-
 ```
 
 
@@ -229,14 +224,9 @@ One way to test `udev` rules is to have them create a file when they are run. Fo
 $ cat /etc/udev/rules.d/98-discharging.rules
 
 SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", RUN+="/usr/bin/touch /home/example/discharging"
-
 ```
 
 This creates a file at `/home/example/discharging` when the laptop charger is unplugged. You can test whether the rule worked by unplugging your laptop and looking for this file. For more advanced `udev` rule testing, see [Udev#Testing rules before loading][2]. 
-
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
 
 # Summary
 
@@ -246,6 +236,6 @@ There are more steps to post between Step #2 and "Last Step" but these will be p
   [2]: https://wiki.archlinux.org/index.php/Udev#Testing_rules_before_loading
 
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a></div>
 

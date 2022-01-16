@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "225 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-windows-control-button-bug.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ If so review all the comments. Of particular interest is comment #8:
 ``` 
 sudo apt install gnome-icon-theme # fixes
 sudo apt purge gnome-icon-theme # breaks
-
 ```
 
 I don't have this problem using **Unity** on 18.04 LTS so I hope this helps you.

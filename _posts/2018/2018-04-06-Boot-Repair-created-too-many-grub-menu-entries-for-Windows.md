@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    
 views:        "12,392 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-06-Boot-Repair-created-too-many-grub-menu-entries-for-Windows.md
 toc:          false
 navigation:   false
@@ -80,7 +80,6 @@ menuentry 'Windows Boot Manager (on /dev/sda1)' --class windows --class os $menu
     chainloader /efi/Microsoft/Boot/bootmgfw.efi
 }
 ### END /etc/grub.d/30_os-prober ###
-
 ```
 
 The section `30_os-prober` contains the "good" Windows `grub` menu entries you want to keep. Section `25_custom` contains the bogus entries created by `boot-repair`. You can't edit the grub configuration file because it will simply be overwritten the next time `update-grub` is run.
@@ -97,7 +96,6 @@ $ locate 25_custom
 /boot/efi/boot-repair/log/20171111_224241/nvme0n1p5/25_custom
 /boot/efi/boot-repair/log/20171208_030854/nvme0n1p5/25_custom
 /etc/grub.d/25_custom
-
 ```
 
 Take a look at the extra Windows options that were setup (and don't work):
@@ -131,7 +129,6 @@ chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
 menuentry "Windows Boot UEFI loader sda1" {
 search --fs-uuid --no-floppy --set=root 9478-B6E2
 chainloader (${root})/EFI/Boot/bkpbootx64.efi
-
 ```
 
 These are the erroneous entries `boot-repair` created in `/etc/grub.d/25_custom` that were subsequently compiled into `\boot\grub\grub.cfg`.
@@ -146,7 +143,6 @@ Use `sudo -H gedit /etc/grub.d/25_custom` and delete everything except the first
 ``` bash
 #!/bin/sh
 exec tail -n +3 $0
-
 
 ```
 
@@ -168,7 +164,6 @@ $ wc /etc/grub.d/25_custom
 #     |       |       +--- Number of characters
 #     |       +----------- Number of words
 #     +------------------- Number of lines
-
 ```
 
 I added the `#` comments to decipher `wc` (word count) output.

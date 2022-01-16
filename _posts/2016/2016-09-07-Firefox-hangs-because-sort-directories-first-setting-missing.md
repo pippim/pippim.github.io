@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,056 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-07-Firefox-hangs-because-sort-directories-first-setting-missing.md
 toc:          false
 navigation:   false
@@ -33,14 +33,12 @@ If I'm reading your setup correctly you have your `.xml` files in:
 
 ``` 
 /usr/share/glib/schemas
-
 ```
 
 and not in:
 
 ``` 
 /usr/share/glib-2.0/schemas
-
 ```
 
 where they are expected to be.

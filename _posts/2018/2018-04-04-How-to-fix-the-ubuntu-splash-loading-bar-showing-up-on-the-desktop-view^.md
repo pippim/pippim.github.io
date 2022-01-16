@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "8,131 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-04-How-to-fix-the-ubuntu-splash-loading-bar-showing-up-on-the-desktop-view^.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ This is the Plymouth splash screen. As a short term fix you can disable it by ed
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-
 ```
 
 Remove the `splash` parameter so it looks like this:
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet"
-
 ```
 
 **NOTE:** You may have other options besides `quite splash`. Only remove the `splash` option.
@@ -41,7 +39,6 @@ Save the file and exit your editor. Then use:
 
 ``` 
  sudo update-grub
-
 ```
 
 On the next reboot instead of the purple splash screen with moving dots you'll have a plain black screen instead.
@@ -64,7 +61,6 @@ SUB    = The low-level unit activation state, values depend on unit type.
 
 1 loaded units listed.
 To show all installed unit files use 'systemctl list-unit-files'.
-
 ```
 
 Above is the the normal output. Compare yours and report any differences in your question.
@@ -84,7 +80,6 @@ Apr 03 05:39:32 alien systemd[1]: Starting Show Plymouth Reboot Screen...
 Apr 03 05:39:33 alien systemd[1]: Received SIGRTMIN+20 from PID 20980 (plymouthd).
 Apr 03 05:39:33 alien systemd[1]: Started Show Plymouth Reboot Screen.
 Apr 03 05:39:34 alien systemd[1]: Stopped Forward Password Requests to Plymouth Directory Watch.
-
 ```
 
 Once again the above is normal output.

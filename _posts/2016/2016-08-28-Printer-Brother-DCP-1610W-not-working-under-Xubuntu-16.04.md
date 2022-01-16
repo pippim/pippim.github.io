@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,636 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-28-Printer-Brother-DCP-1610W-not-working-under-Xubuntu-16.04.md
 toc:          false
 navigation:   false
@@ -46,7 +46,6 @@ KLimit 0
 OpPolicy default
 ErrorPolicy retry-job
 </DefaultPrinter>
-
 ```
 
 I would delete your second printer starting from `<Printer DCP1610W>` down to the last line of the file `</Printer>`.
@@ -55,14 +54,12 @@ Before editing `/etc/cups/printers.conf` you need to stop cupsd service with:
 
 ``` 
 sudo systemctl stop cups
-
 ```
 
 Then do your edit. After saving your configuration file restart cupsd service with:
 
 ``` 
 sudo systemctl start cups
-
 ```
 
 One caveat I'm running Ubuntu 16.04 not Xubuntu 16.04.

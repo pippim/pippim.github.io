@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,788 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-Get-all-available-frequency-steps.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ To assist in typing create this alias:
 
 ``` bash
 alias cpuinfo="paste <(ls *) <(cat *) | column -s $'\t' -t"
-
 ```
 
 First discover the number of frequency steps
@@ -43,7 +42,6 @@ no_turbo      0
 num_pstates   28
 status        active
 turbo_pct     33
-
 ```
 
 We have 28 frequency steps determined by `num_pstates`.
@@ -67,7 +65,6 @@ scaling_governor                          powersave
 scaling_max_freq                          3500000
 scaling_min_freq                          800000
 scaling_setspeed                          <unsupported>
-
 ```
 
 I may write a script later to display frequencies automatically but to do it by hand this way:
@@ -94,7 +91,6 @@ ApproximateFrequencies () {
         LastFreq=$(( $LastFreq + $StepRate))
     done
 }
-
 ```
 
 Then run the function using `ApproximateFrequencies`:
@@ -106,7 +102,6 @@ Then run the function using `ApproximateFrequencies`:
  . . .
 3403556
 3499984
-
 ```
 
 Better still pipe through `column` command if you have it installed:
@@ -116,7 +111,6 @@ $ ApproximateFrequencies | column
 800000	1089284	1378568	1667852	1957136	2246420	2535704	2824988	3114272	3403556
 896428	1185712	1474996	1764280	2053564	2342848	2632132	2921416	3210700	3499984
 992856	1282140	1571424	1860708	2149992	2439276	2728560	3017844	3307128
-
 ```
 
 

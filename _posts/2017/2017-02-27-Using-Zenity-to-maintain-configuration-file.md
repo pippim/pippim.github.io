@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,031 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-27-Using-Zenity-to-maintain-configuration-file.md
 toc:          false
 navigation:   true
@@ -56,7 +56,6 @@ done
 
 # write configuration file using array (fields automatically separated by " ")
 echo "${CfgArr[@]}" > ~/bin/adaptive-brightness-configuration-file
-
 ```
 
 I was surprised after hours of googling, examples of this code couldn't be found. Hopefully others googling the same problem can find this code.
@@ -116,7 +115,6 @@ The three monitors share a common function to build the bulk of the code. For Mo
 BuildMonitorPage "$CFG_MON3_NDX"
 yad --plug=$KEY --tabnum=4 --form \
     "${aMonPage[@]}" > "$res4" &
-
 ```
 
 The `BuildMonitorPage` function does the heavy lifting though. Here is what it looks like:
@@ -173,7 +171,6 @@ BuildMonitorPage () {
     aMonPage+=("${CfgArr[$((i++))]}")
     
 } # BuildMonitorPage
-
 ```
 
 Yad will store numbers internally to 6 decimal places by default. During presentation to user you can override the number of decimal places used. In the code above you see:
@@ -181,7 +178,6 @@ Yad will store numbers internally to 6 decimal places by default. During present
 ``` bash
     aMonPage+=("--field=Nighttime Brightness::NUM")
     aMonPage+=("${CfgArr[$((i++))]}"!0.1..9999!.01!2)
-
 ```
 
 The last line contains current value from configuration array (`CfgArr`) followed by:

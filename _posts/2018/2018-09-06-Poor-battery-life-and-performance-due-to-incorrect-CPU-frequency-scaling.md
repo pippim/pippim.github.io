@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,113 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-06-Poor-battery-life-and-performance-due-to-incorrect-CPU-frequency-scaling.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ Summary of the answer:
 
 ``` 
 sudo apt-get install linux-cpupower
-
 ```
 
 Then:
@@ -36,7 +35,6 @@ Then:
 sudo cpupower frequency-set -g powersave
 sudo cpupower frequency-set -d 400MHz
 sudo cpupower frequency-set -u 3100MHz
-
 ```
 
 As mentioned elsewhere I don't have an AMD processor and cannot test this for you...
@@ -50,7 +48,6 @@ I've been thinking of purchasing a Ryzen based system based upon leading-edge de
 
 ``` 
 sudo apt install cpufrequtils
-
 ```
 
 Pay close attention to removing or overriding other governor utilities such as `laptop-mode-tools`.

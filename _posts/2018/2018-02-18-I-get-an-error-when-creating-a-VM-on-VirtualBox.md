@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "706 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-18-I-get-an-error-when-creating-a-VM-on-VirtualBox.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ I got this error after upgrading from Virtualbox 5.1 to 5.2, as installed on Ubu
 ``` 
 sudo dpkg --purge virtualbox-5.1
 sudo dpkg --purge virtualbox-dkms
-
 ```
 
 

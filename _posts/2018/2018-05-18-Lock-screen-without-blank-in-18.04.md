@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "20,389 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-18-Lock-screen-without-blank-in-18.04.md
 toc:          false
 navigation:   false
@@ -23,21 +23,18 @@ Check the current setting using:
 
 ``` 
 gsettings get org.gnome.desktop.screensaver idle-activation-enabled
-
 ```
 
 If the result is `true` turn it off using:
 
 ``` 
 gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
-
 ```
 
 Second option to try is:
 
 ``` 
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
-
 ```
 
 ### Gnome bug

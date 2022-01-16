@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,827 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-NVME-Disk-failure-causing-boot-partition-corruption^-bad-superblock-error.md
 toc:          false
 navigation:   false
@@ -63,6 +63,5 @@ sda                                             931.5G HGST HTS721010A9
 ├─sda5       ntfs   Image                        11.4G 
 ├─sda3       ntfs   HGST_Win10       /mnt/d       919G 
 └─sda1       vfat   ESP                           500M 
-
 ```
 

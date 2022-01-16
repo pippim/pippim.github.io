@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,041 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-05-Variable-doesn^t-parse-as-string.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ $ echo $string
 Link Quality=68/70 Signal level=-42 dBm
 $ echo $string | cut -d' ' -f4,5
 level=-42 dBm
-
 ```
 
 - For your machine replace `wlp60s0` with `wlan0`.
@@ -38,7 +37,6 @@ You could also use:
 ``` 
 $ echo $string | cut -d'=' -f3
 -42 dBm
-
 ```
 
 - In this case `cut` is told to use `=` as field delimiter.
@@ -51,7 +49,6 @@ $ echo ${string##*=}
 
 $ echo "${string##*=}"
 -38 dBm  
-
 ```
 
 Either method will work to take the substring after the last `=`. The original method of `5` in your question I don't understand how it can work.

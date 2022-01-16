@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "9,017 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Bash-script-to-run-python-script-for-all-images-in-all-subdirectories.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ From [Super User][1] they tell us how to loop through sub-directories:
 for d in */ ; do
     echo "$d"
 done
-
 ```
 
 Using this reference you can use nested `for` loops:
@@ -39,7 +38,6 @@ for d in */ ; do
         python modifyImage.py /"$file" /"$file"
     done
 done
-
 ```
 
 

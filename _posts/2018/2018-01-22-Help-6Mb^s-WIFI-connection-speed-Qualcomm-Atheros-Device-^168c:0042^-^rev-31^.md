@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,064 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-22-Help-6Mb^s-WIFI-connection-speed-Qualcomm-Atheros-Device-^168c:0042^-^rev-31^.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ wlp60s0   IEEE 802.11  ESSID:"TELUS1213-5G"
           Link Quality=64/70  Signal level=-46 dBm  
           Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
           Tx excessive retries:0  Invalid misc:81   Missed beacon:0
-
 ```
 
 However speedtest.net reports almost 60 Mbps throughput:
@@ -68,7 +67,6 @@ Running the same test on an Ethernet adapter rated at 1000 Mbps results in same 
 	Capabilities: <access denied>
 	Kernel driver in use: ath10k_pci
 	Kernel modules: ath10k_pci
-
 ```
 
 I can't explain why the `iwconfig` speed is so low when the real speed is so high. The same results are obtained from other Linux CLI sources:
@@ -89,7 +87,6 @@ $ iw dev wlp60s0 link
 $ iwlist wlp60s0 bitrate
 wlp60s0   unknown bit-rate information.
           Current Bit Rate=6 Mb/s
-
 ```
 
   [1]: https://i.stack.imgur.com/oyD90.png

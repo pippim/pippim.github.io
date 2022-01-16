@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "6,037 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-09-Mondo-Rescue-repository-unsigned-for-apt-get.md
 toc:          false
 navigation:   true
@@ -29,7 +29,6 @@ The [Mondo Rescue Website][1] says manually downloading install files is not nee
 
 ``` 
 sudo apt-get install mondo
-
 ```
 
 However ***THIS IS BROKEN***
@@ -121,7 +120,6 @@ Pin: version 3.0.*
 Pin-Priority: 1001
 EOF
 "
-
 ```
 
 ***I would double check these version numbers***
@@ -145,7 +143,6 @@ sudo apt-get update
 sudo apt-get install mondo afio buffer lzop mindi mindi-busybox
 sudo ln -s /sbin/parted2fdisk /usr/sbin/parted2fdisk
 sudo ln -s /sbin/mke2fs /usr/sbin/mke2fs
-
 ```
 
 Now Mondo Archive v3.2.120150305095420-0 is installed, including the required dependencies (afio buffer lzop mindi mindi-busybox)
@@ -154,14 +151,12 @@ Then you can run mondo using the following commands:
 
 ``` 
 sudo mondoarchive
-
 ```
 
 or
 
 ``` 
 sudo mondorestore
-
 ```
 
 

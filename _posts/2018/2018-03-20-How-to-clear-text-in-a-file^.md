@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "204,665 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-20-How-to-clear-text-in-a-file^.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ World!
 $ truncate -s 0 Hello.txt
 $ ll Hello.txt
 -rw-rw-r-- 1 rick rick 0 Mar 20 17:32 Hello.txt
-
 ```
 
 Parameters used with `truncate` command here:
@@ -46,7 +45,6 @@ An advantage of `truncate` is you can specify how much to keep, not just zero:
 
 ``` 
 $ truncate -s 10000 Hello.txt
-
 ```
 
 ... will truncate everything after the first 10,000 bytes. This could be useful if a program went crazy and dumped many Megabytes of data into a small log file:

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,545 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-01-Brave-browser-not-starting-due-to-snap-mount-namespace-error.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ The solution presented [here][1] is to use:
 
 ``` 
 sudo usysconf run -f
-
 ```
 
 Additionally in the link another user points out you don't need to use `snap` because `brave` is in the repo's now. You can download the `brave` `.deb` installation package [here][2].

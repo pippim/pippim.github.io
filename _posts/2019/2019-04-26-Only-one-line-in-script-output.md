@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "3,135 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-26-Only-one-line-in-script-output.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ You are writing to a file in a loop with this command:
 
 ``` 
 echo "$serial"|sha256sum > Token.csv
-
 ```
 
 However each time you loop you are erasing the file and writing a new entry. What you want to do is append (add to) the file each time you loop with this command:
 
 ``` 
 echo "$serial"|sha256sum >> Token.csv
-
 ```
 
 A single `>` tells bash to erase the file `Token.csv` and write the contents. A double `>>` tells bash to add to the end of the file.
@@ -54,7 +52,6 @@ do
  serial=${j}:${epoch}:${StringToken}
  echo "$serial"|sha256sum >> Token.csv # Append new record to end
 done < "$StringCsv"
-
 ```
 
 

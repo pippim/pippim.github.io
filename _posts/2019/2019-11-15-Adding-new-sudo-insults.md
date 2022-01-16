@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "893 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-15-Adding-new-sudo-insults.md
 toc:          false
 navigation:   false
@@ -39,7 +39,6 @@ From the second answer in your link are these phrases:
 ``` 
 $ grepall "Just what do you think you're doing Dave?"
 Binary file /usr/lib/sudo/sudoers.so matches
-
 ```
 
 OK we now know the file name. That was the easy part.
@@ -54,7 +53,6 @@ $ sudo cp -a /usr/lib/sudo/sudoers{.so,.so.bak}
 $ ll /usr/lib/sudo/sudoers{.so,.so.bak}
 -rw-r--r-- 1 root root 316768 Oct 11 06:01 /usr/lib/sudo/sudoers.so
 -rw-r--r-- 1 root root 316768 Oct 11 06:01 /usr/lib/sudo/sudoers.so.bak
-
 ```
 
 ## Make the script
@@ -122,7 +120,6 @@ if [[ $upper -gt 0 ]] ; then
 else
     echo "Insult file (sudoinsult.txt) does not exist or only has one line." >2
 fi
-
 ```
 
 ## Create the datafile
@@ -136,7 +133,6 @@ Just what do you think you're doing Dave?
 Just what do you think you're doing Rick?
 It can only be attributed to human error.
 It can only be attributed to the beer.
-
 ```
 
 ## Run the script and check results
@@ -163,7 +159,6 @@ Binary file /usr/lib/sudo/sudoers.so matches
 $ grep "It can only be attributed to the beer." /usr/lib/sudo/sudoers.so
 
 Binary file /usr/lib/sudo/sudoers.so matches
-
 ```
 
 

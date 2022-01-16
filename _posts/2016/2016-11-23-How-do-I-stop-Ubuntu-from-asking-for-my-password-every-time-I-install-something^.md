@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "44,285 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-23-How-do-I-stop-Ubuntu-from-asking-for-my-password-every-time-I-install-something^.md
 toc:          false
 navigation:   false
@@ -41,7 +41,6 @@ Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:$
 # Cmnd alias specification
 
 # User privilege specification
-
 ```
 
 

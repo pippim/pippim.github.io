@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "19,275 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-24-Set-HDMI-sound-output-automatically-on-connect^disconnect.md
 toc:          false
 navigation:   false
@@ -54,7 +54,6 @@ else
 fi
 
 exit 0
-
 ```
 
 **IMPORTANT:** Change the user name "rick" to your user name.
@@ -63,7 +62,6 @@ In order to call this script from `udev` during hot-plug events create the file 
 
 ``` bash
 ACTION=="change", SUBSYSTEM=="drm", ENV{HOTPLUG}=="1", RUN+="/home/rick/bin/hotplugtv"
-
 ```
 
 Change `/home/rick/bin/` to the path where you placed `hotplugtv` script.

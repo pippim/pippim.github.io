@@ -12,7 +12,7 @@ votes:        "20 "
 favorites:    
 views:        "17,361 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-21-What-is-the-^Dirty-COW^-bug^-and-how-can-I-secure-my-system-against-it^.md
 toc:          false
 navigation:   false
@@ -52,14 +52,12 @@ To display your current running Kernel version open the terminal with <kbd>Ctrl<
 
 ``` 
 uname -a
-
 ```
 
 The kernel version **you booted with** is then displayed like this:
 
 ``` 
 Linux dell 4.8.1-040801-generic #201610071031 SMP Fri Oct 7 14:34:10 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
-
 ```
 
 Remember after you install the new kernel with the patches, you can still boot older kernel versions from Grub. Older versions will not have the patch applied, which is the case of this kernel version 4.8.1.
@@ -80,7 +78,6 @@ If Ubuntu has not automatically upgraded your kernel version then run:
 sudo apt-get update
 sudo apt-get dist-upgrade
 sudo reboot
-
 ```
 
 After rebooting check your current kernel version by repeating the previous section instructions.
@@ -96,7 +93,6 @@ wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.5/linux-headers-4.8.5-04
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.5/linux-image-4.8.5-040805-generic_4.8.5-040805.201610280434_amd64.deb
 sudo dpkg -i *.deb
 sudo reboot
-
 ```
 
 After rebooting check your current kernel version by repeating the instructions two sections back.

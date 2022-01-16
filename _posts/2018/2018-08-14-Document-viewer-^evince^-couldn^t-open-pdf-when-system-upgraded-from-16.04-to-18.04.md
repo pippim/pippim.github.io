@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "4,702 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-14-Document-viewer-^evince^-couldn^t-open-pdf-when-system-upgraded-from-16.04-to-18.04.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ The solution was to remove:
 
 ``` 
 sudo rm -f /usr/local/lib/libpoppler-glib.so.4
-
 ```
 
 

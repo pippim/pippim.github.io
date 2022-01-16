@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "216,045 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-20-What-is-the-correct-way-to-view-your-CPU-speed-on-Linux^.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ $ paste <(cat cpu*/cpufreq/affected_cpus) <(cat cpu*/cpufreq/scaling_cur_freq) |
 5  800460
 6  800118
 7  800141
-
 ```
 
 If you don't need to know the CPU #'s a shorter method is simply using:
@@ -47,6 +46,5 @@ $ cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
 800017
 800001
 1392006
-
 ```
 

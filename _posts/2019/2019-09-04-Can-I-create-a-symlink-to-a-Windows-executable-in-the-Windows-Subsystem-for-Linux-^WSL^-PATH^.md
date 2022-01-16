@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "7,653 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-04-Can-I-create-a-symlink-to-a-Windows-executable-in-the-Windows-Subsystem-for-Linux-^WSL^-PATH^.md
 toc:          false
 navigation:   false
@@ -66,22 +66,19 @@ Even in Linux symbolic links contain the path. Take for example this command:
 $ ls -la /bin | grep ^l
 (...SNIP...)
 lrwxrwxrwx  1 root root      20 Jun 27 09:49 systemd -> /lib/systemd
-
 ```
 
 `systemd` is linked to `/lib/systemd/systemd`. So your symbolic link of:
 
 ``` 
 sudo ln -s -t java.exe java
-
 ```
 
 I imagine (because I'm not a link expert) would need to look something like:
 
 ``` 
 sudo ln -s -t /mnt/c/Windows/Path/To/java.exe java
-## 
-```
+## ```
 
 
 
@@ -91,7 +88,6 @@ Rather than a symbolic link I would create an alias in my `~/.bashrc` file thusl
 
 ``` 
 alias java='/mnt/c/WindowsPathTo/java.exe'
-
 ```
 
 Then whenever you type `java` the mumbo-jumbo is typed on your behalf. Any parameters passed are honoured.

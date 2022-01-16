@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "33,504 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-08-help!-W:-Possible-missing-firmware-^lib^firmware^i915^kbl_guc_ver9_14.bin-for-module-i915.md
 toc:          false
 navigation:   false
@@ -60,7 +60,6 @@ update-initramfs: Generating /boot/initrd.img-4.14.70-041470-generic
 W: Possible missing firmware /lib/firmware/i915/kbl_guc_ver9_14.bin for module i915
 update-initramfs: Generating /boot/initrd.img-4.4.0-145-generic
 update-initramfs: Generating /boot/initrd.img-3.16.60-031660-generic
-
 ```
 
 

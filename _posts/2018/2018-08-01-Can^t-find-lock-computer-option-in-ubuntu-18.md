@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "6,489 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-01-Can^t-find-lock-computer-option-in-ubuntu-18.md
 toc:          false
 navigation:   false
@@ -23,5 +23,4 @@ As per this answer: [Where is the power off button in Ubuntu 18.04 LTS ?](Where 
 
 ``` 
 gsettings set org.gnome.desktop.lockdown disable-lock-screen false
-
 ```

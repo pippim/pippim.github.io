@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "313 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-25-Crashes-on-BayTrail-device.md
 toc:          false
 navigation:   false
@@ -41,7 +41,6 @@ echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo
 
 
 thanks
-
 ```
 
 I've read hundreds of these posts and some users can report "success" one day and the report back with "failed again!" a few days later. Above the author recommends Kernel version 4.8.0-rc8 but I would recommend using stable kernel version 4.8.4 instead. A summary for doing this is:
@@ -53,7 +52,6 @@ wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.4/linux-headers-4.8.4-04
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.4/linux-image-4.8.4-040804-generic_4.8.4-040804.201610220733_amd64.deb
 sudo dpkg -i *.deb
 sudo reboot
-
 ```
 
 **Note:** Version 4.8.4 is the most current *stable kernel* as of October 24, 2016.
@@ -75,7 +73,6 @@ echo 1 > /sys/devices/system/cpu/cpu0/cpuidle/state3/disable
 echo 1 > /sys/devices/system/cpu/cpu1/cpuidle/state3/disable
 echo 1 > /sys/devices/system/cpu/cpu2/cpuidle/state3/disable
 echo 1 > /sys/devices/system/cpu/cpu3/cpuidle/state3/disable
-
 ```
 
   [1]: https://bugzilla.kernel.org/show_bug.cgi?id=109051

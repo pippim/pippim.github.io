@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,220 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-29-Execute-a-script-when-the-output-of-a-command-has-a-specific-string.md
 toc:          false
 navigation:   false
@@ -23,13 +23,11 @@ I would use this:
 
 ``` 
 [[ $(Command1) == 1234 ]] && Command2
-
 ```
 
 - The `[[` and `]]` tests if the condition inside is true
 - `&&` executes `Command2` if the condition tested true
 - `$(...)` executes command inside parenthesis and returns output (what was echoed inside `Command1`
 ``` 
-
 
 ```

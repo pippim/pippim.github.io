@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "224,964 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-11-Copy-file-to-current-directory^.md
 toc:          false
 navigation:   false
@@ -50,7 +50,6 @@ rick@dell:~/a$ tree
     └── grub
 
 3 directories, 3 files
-
 ```
 
 We created 4 directories on one line by using `&&` to join multiple lines together. Then changed to the directory `a/b/c`, which is the current directory for the following copy commands:

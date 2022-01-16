@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,176 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Upgrade-Ubuntu-16.04-LTS-to-18.04-LTS-^-5-desktop-environments.md
 toc:          false
 navigation:   false

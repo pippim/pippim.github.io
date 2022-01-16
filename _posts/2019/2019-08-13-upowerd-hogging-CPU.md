@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "13,640 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-13-upowerd-hogging-CPU.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ $ ps -aux | grep upowerd | grep -v grep
 root      2013  0.5  0.0 349976  7372 ?        Rsl  Aug11  11:12 /usr/lib/upower/upowerd
 
 $ sudo killall -9 upowerd
-
 ```
 
 Of course now `upowerd` isn't running at all but that's OK it'll come back with the next reboot. I don't use it much anyway just to check when wireless mouse or keyboard batteries are low.

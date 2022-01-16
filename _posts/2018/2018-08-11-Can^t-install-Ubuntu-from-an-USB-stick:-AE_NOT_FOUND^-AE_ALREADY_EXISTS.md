@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "3,527 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-11-Can^t-install-Ubuntu-from-an-USB-stick:-AE_NOT_FOUND^-AE_ALREADY_EXISTS.md
 toc:          false
 navigation:   false
@@ -53,7 +53,6 @@ Aug 11 15:28:35 alien kernel: [    0.035222] CPU: Processor Core ID: 0
 Aug 11 15:28:35 alien kernel: [    0.035226] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'
 Aug 11 15:28:35 alien kernel: [    0.035227] ENERGY_PERF_BIAS: View and update with x86_energy_perf_policy(8)
 Aug 11 15:28:35 alien kernel: [    0.035228] FEATURE SPEC_CTRL Present
-
 ```
 
   [1]: https://bbs.archlinux.org/viewtopic.php?id=233768

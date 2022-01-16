@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "7,894 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-09-how-to-take-whole-ubuntu-16.04-system-backup-into-external-hard-disk.md
 toc:          false
 navigation:   false
@@ -51,7 +51,6 @@ time tar -cvpzf backup.tar.gz \
 --exclude=/var/run/ \
 --exclude=/run \
 --exclude=/var/cache/apt/archives /
-
 ```
 
 I've never used the backup to restore files and hope I will never have to.

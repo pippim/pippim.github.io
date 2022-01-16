@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "143,756 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-19-Should-import-statements-always-be-at-the-top-of-a-module^.md
 toc:          false
 navigation:   false
@@ -38,7 +38,6 @@ for child in xmlroot:
     result.append(child.text)
 listdata.append(['Gnome version', result[0]+"."+result[1]+"."+
                  result[2]+" "+result[3]])
-
 ```
 
 If the `import` statement was at the top of file I would have to scroll up a long way, or press <kbd>Home</kbd>, to find out what `ET` was. Then I would have to navigate back to line 1283 to continue reading code.

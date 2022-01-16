@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,429 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-23-How-to-make-linux-generic-point-to-4.9-and-not-linux-headers-4.4.0-62-after-kernel-upgrade-from-4.4-to-4.9^.md
 toc:          false
 navigation:   false
@@ -24,14 +24,12 @@ clipboard:    false
 ``` 
 The following packages have been kept back:
  linux-generic linux-headers-generic linux-image-generic
-
 ```
 
 Is discussed here: ([digitalocean.com - Packages have been kept back new Ubuntu 14 image][1]) and the solution is to perform:
 
 ``` 
 sudo apt-get dist-upgrade
-
 ```
 
 ## The second message you are receiving
@@ -39,7 +37,6 @@ sudo apt-get dist-upgrade
 ``` 
 The following NEW packages will be installed:
   linux-headers-4.4.0-62 linux-headers-4.4.0-62-generic linux-image-4.4.0-62-generic linux-image-extra-4.4.0-62-generic
-
 ```
 
 Is perfectly normal and not a cause for concern. When you do regular Ubuntu 16.04 updates the kernel 4.4.0-xx is automatically updated. It has nothing to do with your Kernel 4.9.4 or Kernel 4.9.5 which is the first option on your Grub menu.
@@ -57,7 +54,6 @@ $ ls /lib/modules
 4.4.0-59-generic       4.8.10-040810-generic  4.9.1-040901-generic
 4.4.33-040433-generic  4.8.1-040801-generic   4.9.4-040904-generic
 4.6.3-040603-generic   4.8.11-040811-generic
-
 ```
 
 To see your header files for 4.4.0-xxx:
@@ -70,7 +66,6 @@ acpi_dma.h                i7300_idle.h             pid.h
   (... hundreds of files ....)
 i2c-pnx.h                 phonet.h                 zsmalloc.h
 i2c-pxa.h                 phy                      zutil.h
-
 ```
 
 To see your header files for 4.9.4:
@@ -84,7 +79,6 @@ acpi_dma.h                i2c-pca-platform.h       pid.h
 i2c-mux-gpio.h            pfn_t.h                  zutil.h
 i2c-mux.h                 phonet.h
 i2c-mux-pinctrl.h         phy
-
 ```
 
 ## Removing older kernels
@@ -95,14 +89,12 @@ Older kernel versions for 4.6, 4.7, 4.8 and 4.9 must be manually removed using:
 
 ``` 
 sudo apt-get purge linux-image-x.x.x.x-generic
-
 ```
 
 followed by:
 
 ``` 
 sudo update-grub
-
 ```
 
 As each kernel version is > 100 MB you can save a lot of storage space. A full write up for deleting older kernels you manually installed can be found here: [How do I remove old kernel versions to clean up the boot menu?][2]
@@ -114,7 +106,6 @@ As each kernel version is > 100 MB you can save a lot of storage space. A full w
 ``` 
 Suggested packages:
   fdutils linux-tools
-
 ```
 
 This doesn't happen on my system and might be of interest to research further.
@@ -125,7 +116,6 @@ I used to use `wget` as you did because those are popular / common instructions 
 
 ``` 
 http://kernel.ubuntu.com/~kernel-ppa/mainline/
-
 ```
 
 Press the <kbd>End</kbd> key and click on `4.9.5` or the newest kernel you want. Then this screen appears:
@@ -146,7 +136,6 @@ When done open terminal with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and typ
 cd Downloads
 sudo dpkg -i *.deb
 rm *4.9.5*
-
 ```
 
 I think everyone will find this method much easier than methods commonly published on the internet.

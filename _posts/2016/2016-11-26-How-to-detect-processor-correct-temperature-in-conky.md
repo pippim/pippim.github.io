@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "67,585 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-to-detect-processor-correct-temperature-in-conky.md
 toc:          false
 navigation:   false
@@ -40,7 +40,6 @@ SEN4             55000
 pch_skylake      70000
 B0D4             47000
 x86_pkg_temp     48000
-
 ```
 
 ## Temperature with Conky
@@ -49,21 +48,18 @@ Within `conky` the system variable I used to monitor an Ivy Bridge CPU is:
 
 ``` 
 ${hwmon 2 temp 1}°C
-
 ```
 
 To monitor a Skylake CPU I initially used:
 
 ``` 
 ${hwmon 0 temp 1}°C
-
 ```
 
 A few months later (possibly due to new kernel) on the same Skylake CPU I switched to:
 
 ``` 
 ${hwmon 1 temp 1}°C
-
 ```
 
 The display looks like this:

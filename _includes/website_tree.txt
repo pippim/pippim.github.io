@@ -34,8 +34,6 @@
 │   ├── default.html
 │   ├── post.html
 │   └── program.html
-├── _plugins
-│   └── insert_git_code.rb
 ├── _posts
 │   ├── 2016 [178 entries exceeds filelimit, not opening dir]
 │   ├── 2017 [154 entries exceeds filelimit, not opening dir]
@@ -63,4 +61,4 @@
 ├── stack.md
 └── tree.work
 
-19 directories, 45 files
+18 directories, 44 files

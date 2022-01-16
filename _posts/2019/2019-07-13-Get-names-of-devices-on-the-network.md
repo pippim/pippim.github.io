@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "92,695 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-Get-names-of-devices-on-the-network.md
 toc:          false
 navigation:   false
@@ -60,7 +60,6 @@ Host is up.
 Nmap scan report for 192.168.1.68
 Host is up.
 Nmap done: 256 IP addresses (6 hosts up) scanned in 2.41 seconds
-
 ```
 
 I stumbled upon this Q&A because I'm researching a project on how to display Human readable names rather than computer coded IP addresses and MAC addresses to devices.

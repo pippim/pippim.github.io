@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "374 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-22-terminal---count-how-many-types-of-^file^-extensions-exist-with-their-associated-files-in-current-directory.md
 toc:          false
 navigation:   false
@@ -23,5 +23,4 @@ The duplicate candidate (deep down) has a close answer. Here it is modified:
 
 ``` 
 find . -maxdepth 1 -type f | sed 's/.*\.//' | sort | uniq -c
-
 ```

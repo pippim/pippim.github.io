@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "4,749 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-15-Having-to-run-command-`sudo-modprobe-brcmfmac`-every-time-I-restart-in-order-to-get-wifi-working.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ You have to run `sudo modprobe brcmfmac` because it is blacklisted. You can tell
 ``` 
 $ sudo grep brcmfmac /etc/modprobe.d/*
 etc/modprobe.d/blacklist-custom.conf:blacklist brcmfmac
-
 ```
 
 In order to "whitelist" your card you need to use sudo powers to edit `etc/modprobe.d/blacklist-custom.conf`. Then:

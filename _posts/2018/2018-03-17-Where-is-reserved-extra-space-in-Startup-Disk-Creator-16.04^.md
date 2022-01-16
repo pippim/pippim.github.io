@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,117 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-17-Where-is-reserved-extra-space-in-Startup-Disk-Creator-16.04^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ I'll answering your last question first. The newer live-usb ISO's are hybrids th
 
 ``` 
 sudo dd if=/dev/zero of=/dev/sdX bs=512 count=1
-
 ```
 
 Change `sdX` to `sdd`, `sde`, or whatever your USB drive letter is. 

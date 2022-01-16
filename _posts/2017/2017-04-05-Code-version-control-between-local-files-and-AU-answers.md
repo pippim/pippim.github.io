@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "403 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-05-Code-version-control-between-local-files-and-AU-answers.md
 toc:          false
 navigation:   false
@@ -813,7 +813,6 @@ done
 IFS="$OldIFS"
 
 exit
-
 ```
 
 ## `spawn-progress-multi` script
@@ -844,5 +843,4 @@ while true ; do # loop until 100 %
 done | yad $2
 
 exit 0
-
 ```

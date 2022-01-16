@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "6,684 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-29-How-to-debug-suspend^.md
 toc:          false
 navigation:   false
@@ -47,7 +47,6 @@ Device  S-state   Status   Sysfs node
 EHC1      S3    *enabled  pci:0000:00:1d.0
 EHC2      S3    *enabled  pci:0000:00:1a.0
 XHC       S3    *enabled  pci:0000:00:14.0
-
 ```
 
 ...
@@ -58,7 +57,6 @@ The relevant devices are `EHC1`, `EHC2` and `XHC` (for USB 3.0). To toggle their
 # echo EHC1 > /proc/acpi/wakeup
 # echo EHC2 > /proc/acpi/wakeup
 # echo XHC > /proc/acpi/wakeup
-
 ```
 
 This should result in suspension working again. However, this settings are only temporary and would have to be set at every reboot. To automate this take a look at [systemd#Writing unit files][4]. See [BBS thread][5] for a possible solution and more information.
@@ -86,7 +84,6 @@ The entire Arch Linux article above on Suspend/Resume is a great reference for m
     4.3 Suspend/hibernate doesn't work, or not consistently
     4.4 Wake-on-LAN
     4.5 Instantaneous wakeups from suspend
-
 ```
 
 

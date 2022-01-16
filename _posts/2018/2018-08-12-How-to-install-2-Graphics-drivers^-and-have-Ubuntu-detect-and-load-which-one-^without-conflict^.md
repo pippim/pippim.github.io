@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "227 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-How-to-install-2-Graphics-drivers^-and-have-Ubuntu-detect-and-load-which-one-^without-conflict^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ It will require the program `glxinfo` which you can get by installing:
 
 ``` 
 sudo apt install mesa-utils
-
 ```
 
 One key function in the bash script that will interest you is this one:
@@ -43,7 +42,6 @@ function CheckForCurrentVideoCardInUse {
 		ErrorHandler
 	fi
 }
-
 ```
 
   [1]: https://github.com/bauca/graphics-switcher/blob/master/Graphics-Switcher

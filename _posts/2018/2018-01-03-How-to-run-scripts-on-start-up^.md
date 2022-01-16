@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "1,326,085 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-03-How-to-run-scripts-on-start-up^.md
 toc:          false
 navigation:   false
@@ -44,7 +44,6 @@ Jan 02 16:54:40 alien cron[919]: sendmail: Cannot open smtp.gmail.com:587
 Jan 02 16:54:40 alien CRON[952]: pam_unix(cron:session): session closed for user root
 Jan 02 16:54:40 alien cron[919]: sendmail: Cannot open smtp.gmail.com:587
 Jan 02 16:54:40 alien CRON[950]: pam_unix(cron:session): session closed for user root
-
 ```
 
 One thing to note is `cron` can email you status of jobs run and `@reboot` jobs run so early network manager and email won't be running unless you put a `sleep` command into your script(s).
@@ -65,7 +64,6 @@ drwxr-xr-x 139 root root 12288 Dec 31 13:58 ../
 -rw-r--r--   1 root root   102 Feb  9  2013 .placeholder
 -rw-r--r--   1 root root   224 Nov 19  2016 touch-vmlinuz
 -rw-r--r--   1 root root   700 Aug  5 11:15 turn-off-hyper-threading
-
 ```
 
 ## What does a script look like?
@@ -81,6 +79,5 @@ $ cat /etc/cron.d/touch-vmlinuz
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 @reboot   root    touch "/boot/vmlinuz-"`uname -r`
-
 ```
 

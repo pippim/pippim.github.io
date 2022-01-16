@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "94 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-20-Unusual-power-management-following-fresh-reinstall-of-16.10.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ I'm not sure what's causing the first problem but for your second one you can ty
 
 ``` 
 gksu gedit /etc/systemd/logind.conf
-
 ```
 
 Look for these two lines and change them to look like this:
@@ -31,7 +30,6 @@ Look for these two lines and change them to look like this:
 ``` 
 HandleLidSwitch=ignore
 HandleLidSwitchDocked=ignore
-
 ```
 
 These should be the defaults anyway but remove the `#` in front of them if it's there. Save the file and reboot.

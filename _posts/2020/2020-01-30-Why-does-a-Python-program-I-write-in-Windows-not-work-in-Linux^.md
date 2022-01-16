@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,815 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-30-Why-does-a-Python-program-I-write-in-Windows-not-work-in-Linux^.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ It is likely some code will have to be changed. For example if your original pro
 
 ``` 
 INPUT_FNAME='\Documents\python_datain\today.csv
-
 ```
 
 It would have to be change to:
 
 ``` 
 INPUT_FNAME='~/Documents/python_datain/today.csv'
-
 ```
 
 If it's low level python and does such things as moving mouse on screen, closing popup browser windows and adjusting screen brightness and color temperature many changes will be needed with added calls to `xdotool`, `xrandr` and possibly `wmctrl`.

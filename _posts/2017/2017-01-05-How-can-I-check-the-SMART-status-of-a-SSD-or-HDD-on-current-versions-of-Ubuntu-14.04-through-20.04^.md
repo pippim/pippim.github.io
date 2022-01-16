@@ -12,7 +12,7 @@ votes:        "20 "
 favorites:    
 views:        "298,018 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-05-How-can-I-check-the-SMART-status-of-a-SSD-or-HDD-on-current-versions-of-Ubuntu-14.04-through-20.04^.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ Select `Dash` the first option on the `Launcher` and type `disks`. Select the ic
 
 ``` 
 sudo apt-get install gnome-disk-utility
-
 ```
 
 The `disks` main screen looks like this:
@@ -55,7 +54,6 @@ You need to first install NVMe SSD specific SMART tools:
 
 ``` 
 sudo apt install nvme-cli
-
 ```
 
 Then run the program to report health of drive:
@@ -83,14 +81,12 @@ Warning Temperature Time            : 0
 Critical Composite Temperature Time : 0
 Temperature Sensor 1                : 40 C
 Temperature Sensor 2                : 51 C
-
 ```
 
 The most important data point is:
 
 ``` 
 percentage_used                     : 0%
-
 ```
 
 When it hits 100% it is time worry about replacing your drive. That said this drive is two years old and still at `0%`

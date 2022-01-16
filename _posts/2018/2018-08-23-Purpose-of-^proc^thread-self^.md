@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,327 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-Purpose-of-^proc^thread-self^.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ lrwxrwxrwx 1 root root 0 Aug 22 04:26 /proc/self -> 29636/
 
 $ ll /proc/thread-self
 lrwxrwxrwx 1 root root 0 Aug 22 04:26 /proc/thread-self -> 30021/task/30021/
-
 ```
 
 `thread-self` and `self` are constantly changing every time you list the symbolic links with `ll`. The date and time remain at the last boot time though.

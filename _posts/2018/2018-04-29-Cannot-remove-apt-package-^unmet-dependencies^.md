@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,464 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Cannot-remove-apt-package-^unmet-dependencies^.md
 toc:          false
 navigation:   false
@@ -25,21 +25,18 @@ Referring to this Q&A: [Remove broken PPA package with unknown option][1], but f
 
 ``` 
 #!/bin/sh
-
 ```
 
 insert the line
 
 ``` 
 exit 0
-
 ```
 
 Save the file and use:
 
 ``` 
 sudo apt install -f
-
 ```
 
 It should run without any errors now.

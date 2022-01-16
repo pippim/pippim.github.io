@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,164 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-13-Purple-Screen-of-Death-w^New-AMD-Card.md
 toc:          false
 navigation:   false
@@ -35,13 +35,11 @@ From the [AMD website][2] instructions for installing under Ubuntu 16.04 are lis
 
 ``` 
 `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash amdgpu.vm_fragment_size=9"`
-- Update grub and reboot as root:
-```
+- Update grub and reboot as root:```
 
 
 ``` 
 `update-grub;reboot`
-
 ```
 
 # Your card is verified as AMDGPU-PRO compatible
@@ -63,7 +61,6 @@ AMD Radeon™ R7 240/250/250X/260/260X/350    AMD FirePro™ W600
 AMD Radeon™ HD7700/7800/8500/8600           AMD FirePro™ S-Series
 AMD Radeon™ R9 360 Graphics                 AMD Radeon™ Pro WX 9100
 AMD Radeon™ R5 340
-
 ```
 
   [1]: https://community.amd.com/thread/221419

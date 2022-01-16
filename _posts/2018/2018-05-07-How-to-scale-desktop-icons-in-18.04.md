@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "13,461 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-07-How-to-scale-desktop-icons-in-18.04.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ If you are using the Unity Desktop the most comprehensive method is font scaling
 
 ``` 
 sudo apt install unity-tweak-tool
-
 ```
 
 Then call it from the command line or Dash.  The settings I'm using for scaling on a 1920x1080 monitor are:
@@ -53,7 +52,6 @@ mate-tweak/bionic,bionic 18.04.16-1 all
 mousetweaks/bionic,bionic,now 3.12.0-4 amd64 [installed]
 tweak/bionic 3.02-2 amd64
 unity-tweak-tool/bionic,bionic,now 0.0.7ubuntu4 all [installed]
-
 ```
 
 

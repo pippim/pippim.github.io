@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,294 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-24-Can^t-delete-empty-directories-with-strange-names.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ If the directories are owned by root Nautilus won't let you delete them. In this
 
 ``` 
 gksu nautilus
-
 ```
 
 ## Can't move to trash but can delete directly
@@ -38,7 +37,6 @@ Another answer in this thread points out how to find out the file system type us
 
 ``` 
 df -T /media/<path_to_project_folder>
-
 ```
 
 Then changing the `/etc/fstab` entry worked for mounting using different parameters and successfully deleting the files.
@@ -51,7 +49,6 @@ As per this [Super User Q&A][2] you can delete files with special characters (we
 
 ``` 
 rm -i -- *
-
 ```
 
 This will prompt you to delete each file. You can and should change '*' to a narrower match if there are a lot of files. The `--` stops processing options, so a file named `-d` will be removed by rm successfully.
@@ -60,14 +57,12 @@ Another answer in the same thread proposes deleting by inode number using. It sa
 
 ``` 
 find . -inum ${INODE_NUM} -delete
-
 ```
 
 You can add `-maxdepth 1` to my find just to be safe:
 
 ``` 
 find . -maxdepth 1 -inum ${INODE_NUM} -delete
-
 ```
 
 

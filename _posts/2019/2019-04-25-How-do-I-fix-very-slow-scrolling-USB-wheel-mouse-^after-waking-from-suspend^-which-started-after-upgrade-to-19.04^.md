@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "6,425 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-25-How-do-I-fix-very-slow-scrolling-USB-wheel-mouse-^after-waking-from-suspend^-which-started-after-upgrade-to-19.04^.md
 toc:          false
 navigation:   false
@@ -34,14 +34,12 @@ To install it use:
 ``` 
 sudo dpkg -i ~/Downloads/resetmsmice_1.1.3_amd64.deb
 rm -f ~/Downloads/resetmsmice_1.1.3_amd64.deb
-
 ```
 
 The program automatically runs during boot but you can also call it from the terminal at any time with:
 
 ``` 
 resetmsmice
-
 ```
 
 To automatically call it after resuming you need to create a script with `gedit`.
@@ -62,14 +60,12 @@ case $1/$2 in
     resetmsmice
         ;;
 esac
-
 ```
 
 The `echo` statements help you locate your program in system logs, eg `grep resetmsmice` Save the file and exit the editor. Then use:
 
 ``` 
 sudo chmod a+x /lib/systemd/system-sleep/resetmsmice
-
 ```
 
 
@@ -122,14 +118,12 @@ case $1/$2 in
     rm $TMPLIST
         ;;
 esac
-
 ```
 
 Save the file and exit the editor. Then use:
 
 ``` 
 sudo chmod a+x /lib/systemd/system-sleep/custom-xhci_hcd
-
 ```
 
 

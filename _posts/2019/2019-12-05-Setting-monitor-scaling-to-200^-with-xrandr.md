@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "7,255 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-05-Setting-monitor-scaling-to-200^-with-xrandr.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ xrandr \
   --output DP-4 --primary --pos 0x0 --scale 2x2 \
   --output DP-2 --pos 3840x0 --scale 2x2 \
   --output eDP-1-1 --off
-
 ```
 
 **Note:** Double quoting the monitor and position is unnecessary so I removed the `"`.

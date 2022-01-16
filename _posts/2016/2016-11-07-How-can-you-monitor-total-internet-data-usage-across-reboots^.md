@@ -12,7 +12,7 @@ votes:        "61 "
 favorites:    
 views:        "93,064 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-How-can-you-monitor-total-internet-data-usage-across-reboots^.md
 toc:          false
 navigation:   false
@@ -52,7 +52,6 @@ nvStat is in the official repositories so no need to link to a new ppa. To insta
 
 ``` 
 sudo apt-get install vnstat
-
 ```
 
 After installation, keep your Terminal open for the following sections. There is no need to reboot.
@@ -63,14 +62,12 @@ Pick a preferred network interface and edit the Interface variable in the  `/etc
 
 ``` 
 vnstat --iflist
-
 ```
 
 To start monitoring a particular interface you must initialize a database first. Each interface needs its own database. The command to initialize one for the eth0 interface is:
 
 ``` 
 sudo vnstat -u -i eth0 
-
 ```
 
 # Start Systemd Service
@@ -79,14 +76,12 @@ After introducing the interface(s) and checking the config file. You can start t
 
 ``` 
 sudo systemctl start vnstat.service
-
 ```
 
 To make this service permanent use:
 
 ``` 
 sudo systemctl enable vnstat.service
-
 ```
 
 From now on `vnstat` will be gathering network usage in the background using such a small percentage of CPU it doesn't show up on conky's (system monitor's) top 9 list of processes (on my machine).
@@ -97,21 +92,18 @@ Query the network traffic:
 
 ``` 
 vnstat -q
-
 ```
 
 Viewing live network traffic usage:
 
 ``` 
 vnstat -l
-
 ```
 
 To find more options, use:
 
 ``` 
 vnstat --help
-
 ```
 
 # Monthly Totals
@@ -128,7 +120,6 @@ rick@dell:~$ vnstat -m
       Nov '16     76.31 MiB |    2.03 MiB |   78.35 MiB |   10.45 kbit/s
     ------------------------+-------------+-------------+---------------
     estimated      3.13 GiB |      84 MiB |    3.21 GiB |
-
 ```
 
 # Conky example
@@ -147,7 +138,6 @@ ${color1}Network using vnStat "-i", "-w" and "-m"
 ${color}${goto 5}Today ${goto 100}Yesterday ${goto 225}Week ${goto 325}Month ${color green}
 ${execi 300 vnstat -i eth0 | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'} ${goto 110}${execi 300 vnstat -i eth0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'} ${goto 220}${execi 300 vnstat -i eth0 -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'} ${goto 315}${execi 300 vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
 ${color orange}${voffset 2}${hr 1}
-
 ```
 
 To save space on my narrow window I used "G" instead of "GiB", "M" instead of "MiB", etc. If you have more screen realestate change `substr ($10, 1, 1)` to `$10` and the same for `$9`.

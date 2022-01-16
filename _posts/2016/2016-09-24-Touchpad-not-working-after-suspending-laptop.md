@@ -12,7 +12,7 @@ votes:        "18 "
 favorites:    
 views:        "41,075 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-24-Touchpad-not-working-after-suspending-laptop.md
 toc:          false
 navigation:   false
@@ -39,7 +39,6 @@ case $1/$2 in
     modprobe psmouse
     ;;
 esac
-
 ```
 
 It is known after a suspend the **psmouse** module can't be removed. We also know it can be removed and inserted before a suspend. So this technique removes it before suspend. After resume insert it and hopefully the kernel won't reject it.

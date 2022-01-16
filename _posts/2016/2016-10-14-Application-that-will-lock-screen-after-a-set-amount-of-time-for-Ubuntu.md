@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "3,050 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu.md
 toc:          true
 navigation:   true
@@ -107,7 +107,6 @@ Open the `Terminal` using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and type:
 
 ``` bash
 gedit lock-screen-timer
-
 ```
 
 ## Copy and paste code from window below to `lock-screen-timer`
@@ -244,7 +243,6 @@ Now we need to make the script executable by typing:
 
 ``` bash
 chmod +x lock-screen-timer
-
 ```
 
 ## Test It!
@@ -254,7 +252,6 @@ Before calling the script from the GUI, we'll call it from the terminal so we ca
 
 ``` bash
 ~/lock-screen-timer
-
 ```
 
 You are prompted for the number of minutes:

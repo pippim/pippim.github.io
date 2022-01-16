@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "176 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-31-Unable-to-boot-to-Windows-7-successfully-from-the-first-try.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ This question is a duplicate of [GRUB2: black screen when booting Windows][1] bu
 
 ``` 
 sudo gedit /etc/default/grub
-
 ```
 
 Search for the following and change the second line to look like:
@@ -31,14 +30,12 @@ Search for the following and change the second line to look like:
 ``` 
 # Uncomment to disable graphical terminal (grub-pc only)
 GRUB_TERMINAL=console
-
 ```
 
 Save and exit then run:
 
 ``` 
 sudo update-grub
-
 ```
 
 

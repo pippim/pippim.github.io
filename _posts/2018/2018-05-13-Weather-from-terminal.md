@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "118,954 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Weather-from-terminal.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ You can compare cities using:
 
 ``` 
 diff -Naur <(curl -s http://wttr.in/london ) <(curl -s http://wttr.in/new-york )
-
 ```
 
 as illustrated in the top-voted answer. `wttr.in` also makes a great "splash" screen every time you open the terminal. Do this by adding it to your `~/.bashrc` file. I've done that to include Weather, Date, Time and Distribution information as detailed in this answer: [Terminal splash screen with Weather, Calendar, Time & Sysinfo?]({% post_url /2018/2018-03-30-Terminal-splash-screen-with-Weather^-Calendar^-Time-^-Sysinfo^ %})

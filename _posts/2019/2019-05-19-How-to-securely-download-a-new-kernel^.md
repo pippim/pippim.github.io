@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "773 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-How-to-securely-download-a-new-kernel^.md
 toc:          false
 navigation:   false
@@ -55,7 +55,6 @@ linux-headers-4.14.120-0414120_4.14.120-0414120.201905161610_all.deb
 linux-headers-4.14.120-0414120-generic_4.14.120-0414120.201905161610_amd64.deb
 linux-image-unsigned-4.14.120-0414120-generic_4.14.120-0414120.201905161610_amd64.deb
 linux-modules-4.14.120-0414120-generic_4.14.120-0414120.201905161610_amd64.deb
-
 ```
 
 Scroll down further and you will find the `CHECKSUM` files that guarantees what was published is what you actually received:
@@ -63,7 +62,6 @@ Scroll down further and you will find the `CHECKSUM` files that guarantees what 
 ``` 
 CHECKSUMS       2019-05-16 21:34    9.0K	 
 CHECKSUMS.gpg   2019-05-16 21:34    473 	
-
 ```
 
 Click both checksums to download them and move onto the next section.
@@ -125,7 +123,6 @@ bf32ef3ee0b410f9264f1b6dd2349c5753ba73d02b5977d49010120ac6f1e7aa  linux-headers-
 4f769f431f99cadb4c564d0da4c6231a2c593307c10c520f81b74834a6149b28  linux-headers-4.14.120-0414120-generic_4.14.120-0414120.201905161610_amd64.deb
 b18a6163ec0a42a598795cb181dcde86d0c59e9b9b117a1b9e5d7186e967b59a  linux-image-unsigned-4.14.120-0414120-generic_4.14.120-0414120.201905161610_amd64.deb
 8aa8790171b9e948f2d5b0ce8c54a81d2b2bfb9d33ead499d865f841497fcabc  linux-modules-4.14.120-0414120-generic_4.14.120-0414120.201905161610_amd64.deb
-
 ```
 
 
@@ -143,7 +140,6 @@ cd ~/Downloads        # Go to our downloads directory
 sudo dpkg -i *.deb    # Install all four kernel .deb files downloaded
 rm -f *.deb           # Clean up so we don't accidentally install next time around
 reboot                # reboot to grub and select new kernel on Advanced Options
-
 ```
 
 Note don't key in `#` comments those are for explanation purposes and machine ignores them.

@@ -12,7 +12,7 @@ votes:        "88 "
 favorites:    
 views:        "46,780 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-15-Where-are-sudo^s-insults-stored^.md
 toc:          false
 navigation:   false
@@ -47,7 +47,6 @@ When we look at all the insults we discover an interesting tidbit: saying Brocco
     "Take a stress pill and think things over.",
     "This mission is too important for me to allow you to jeopardize it.",
     "I feel much better now.",
-
 ```
 
 ## `ins_classic.h` (Original Sudo 8 insults):
@@ -69,7 +68,6 @@ When we look at all the insults we discover an interesting tidbit: saying Brocco
     "You type like i drive.",
     "Do you think like you type?",
     "Your mind just hasn't been the same since the electro-shock, has it?",
-
 ```
 
 ## `ins_csops.h` (CSOps insults):
@@ -92,7 +90,6 @@ When we look at all the insults we discover an interesting tidbit: saying Brocco
     "I've seen penguins that can type better than that.",
     "Have you considered trying to match wits with a rutabaga?",
     "You speak an infinite deal of nothing",
-
 ```
 
 ## `ins_goons.h` (Goon Show insults):
@@ -127,7 +124,6 @@ When we look at all the insults we discover an interesting tidbit: saying Brocco
     "I have been called worse.",
     "It's only your word against mine.",
     "I think ... err ... I think ... I think I'll go home",
-
 ```
 
 The file `insults.h` contains compiler instructions on which of the above insults to include in the compiled sudo program. Indeed, you could create your own insults file, add the name to insults.h and recompile to have messages like, "What, are you an ArchLinux user?" or "This isn't Windows where errors are commonplace!", etc.
@@ -144,7 +140,6 @@ For Ubuntu 16.04.6 LTS you can use this:
 
 ``` 
 strings /usr/lib/sudo/sudoers.so | head -n1670 | tail -n49
-
 ```
 
 For other Ubuntu versions the line numbers passed to `head` command might change. Hopefully others can verify for their version.

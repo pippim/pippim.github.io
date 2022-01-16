@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "307 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-30-Cronjob-not-executing^-but-command-works.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ In the terminal use:
 
 ``` 
 echo $PATH
-
 ```
 
 When `cron` is running it doesn't know all your paths that allows your python script work in the terminal.
@@ -32,5 +31,4 @@ The solution is to create a bash script that calls the python script. Before doi
 
 ``` 
 PATH="new-paths:$PATH"
-
 ```

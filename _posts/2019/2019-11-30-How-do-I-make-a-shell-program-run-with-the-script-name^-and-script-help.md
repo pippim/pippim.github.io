@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "121 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-30-How-do-I-make-a-shell-program-run-with-the-script-name^-and-script-help.md
 toc:          false
 navigation:   false
@@ -39,7 +39,6 @@ done
 ``` 
 ((Count++))
 echo "$Count: $1"
-
 ```
 
 So when you run the script you now see:
@@ -55,14 +54,12 @@ The next problem is calling the `prargs` without specifying a location in front.
 
 ``` 
 mkdir -p $HOME/bin
-
 ```
 
 After this reopen the terminal to have it in your path. So create your script as `$HOME/bin/prargs` and then mark it executable:
 
 ``` 
 chmod a+x $HOME/bin/prargs
-
 ```
 
 After this no matter what your current directory is you can type `prargs a 'b c' d`.

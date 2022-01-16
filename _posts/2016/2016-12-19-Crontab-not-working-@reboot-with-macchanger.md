@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,125 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-19-Crontab-not-working-@reboot-with-macchanger.md
 toc:          false
 navigation:   false
@@ -23,12 +23,10 @@ Commands have to be prefixed with the directory name and parameters have to be e
 
 ``` 
 SHELL=/bin/sh
-	PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-```
+	PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin```
 
 ``` 
 @reboot root sleep 15
 @reboot root macchanger "-r eth0"
-
 ```
 

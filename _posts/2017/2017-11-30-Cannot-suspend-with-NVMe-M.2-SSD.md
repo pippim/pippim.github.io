@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,027 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-30-Cannot-suspend-with-NVMe-M.2-SSD.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ This problem has been reported on [Launchpad][1] and [ArchLinux][2]. The solutio
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet kaslr acpiphp.disable=1 pcie_aspm=off nloglevel=3 udev.log-priority=3"
-
 ```
 
 Your options will be different but add the option `acpiphp.disable=1` between the double quotes.

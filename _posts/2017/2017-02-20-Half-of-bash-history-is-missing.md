@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    9
 views:        "22,660 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-20-Half-of-bash-history-is-missing.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ The other night I was reading AU Q&A and used a bash command:
 
 ``` 
 inxi -????
-
 ```
 
 Problem is today I don't remember characters comprising ????. I want to put the command and parameters into my documentation spreadsheet. Based on an this answer ([How to recall history in teminal][1]) I used this command:
@@ -33,7 +32,6 @@ $ cat .bash_history | grep inxi
 inxi -b
 sudo apt install inxi
 inxi -b
-
 ```
 
 However the command I want isn't there even though the history goes far back. I've used the `inxi` commands many times in the terminal since that old history but none of is showing up.

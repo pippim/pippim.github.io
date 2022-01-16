@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "2,998 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-18-Why-does-Ubuntu-enable-TRIM-for-certain-brands-only^.md
 toc:          false
 navigation:   false
@@ -48,7 +48,6 @@ nvme0n1          512      512B       2T         0
 ├─nvme0n1p4        0      512B       2T         0
 ├─nvme0n1p2        0      512B       2T         0
 └─nvme0n1p7        0      512B       2T         0
-
 ```
 
 When `DISC-GRAN DISC-MAX` columns contain non-zero values it is safe to use TRIM. If you are unsure which disk is which in this display you can get the model name and number using:
@@ -78,7 +77,6 @@ nvme0n1                                                        477G Samsung SSD 
 ├─nvme0n1p4 ntfs    NVMe_Win10             /mnt/c            414.9G 
 ├─nvme0n1p2 vfat                           /boot/efi            99M 
 └─nvme0n1p7 ntfs    Shared_WSL+Linux       /mnt/e                9G 
-
 ```
 
 So in this case the SSD is a **Samsung Pro 960** which does indeed support TRIM command.

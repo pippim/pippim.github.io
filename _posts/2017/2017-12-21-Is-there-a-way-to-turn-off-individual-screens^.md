@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "8,145 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-21-Is-there-a-way-to-turn-off-individual-screens^.md
 toc:          false
 navigation:   false
@@ -42,7 +42,6 @@ This shows you the list of monitor names assigned by `xrandr`. Now if you want t
 
 ``` 
 xrandr --output DP-1-1 --brightness 0
-
 ```
 
 
@@ -74,7 +73,6 @@ if [[ $# -ne 1 ]]; then
 fi
 
 xrandr --output HDMI-0  --brightness "$1"
-
 ```
 
 To turn off the display you would use `sony 0`
@@ -85,7 +83,6 @@ When you call the script with no parameters it displays the `xrandr` screen name
 
 ``` bash
 echo "$(tput setaf 1)" ; tail -n1 /tmp/sony ; echo "$(tput sgr0)"
-
 ```
 
 After `setaf` change the `1` to:
@@ -102,14 +99,12 @@ Place the script in a directory in your path such as:
 
 ``` bash
 /usr/local/bin/sony
-
 ```
 
 Mark the script as executable using:
 
 ``` bash
 sudo chmod a+x /usr/local/bin/sony
-
 ```
 
 

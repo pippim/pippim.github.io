@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "364 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Thinkpad-trackpoint-and-trackpoint-keys-disabled-after-suspend.md
 toc:          false
 navigation:   false
@@ -41,14 +41,12 @@ case $1/$2 in
     modprobe psmouse
     ;;
 esac
-
 ```
 
 Make it executable:
 
 ``` 
 sudo chmod a+x /lib/systemd/system-sleep/script-name
-
 ```
 
 After the next reboot, the script will be active.

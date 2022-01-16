@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "16,308 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-01-conky-transparent.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Change:
 own_window_transparent yes
 #own_window_argb_visual yes
 #own_window_argb_value 255
-
 ```
 
 To:
@@ -34,7 +33,6 @@ To:
 own_window_transparent no
 own_window_argb_visual yes
 own_window_argb_value 145  # semi-transparent
-
 ```
 
 At least this worked for my conky display:
@@ -155,7 +153,6 @@ Total: ${color green}${totaldown eth0} $color${alignr}Total: ${color green}${tot
 ${color orange}${voffset 2}${hr 1}
 ${color}${goto 5}Day: ${color green}${execpi 300 cat /usr/local/bin/sunrise} ${color}Night: ${color green}${execpi 300 cat /usr/local/bin/sunset} ${color}Level: ${color green}${execpi 10 cat cat /sys/class/backlight/intel_backlight/brightness}
 ${color orange}${voffset 2}${hr 1}
-
 ```
 
 Please keep in mind conky scripts change frequently depending on what project you are working on. Two days ago the focus was [Why is internet upload so high when I don&#39;t actually upload much?][2] and I added the network bandwidth real time display section. As such you may see conky displays posted by me in other questions that don't reflect the code as of today (September 5, 2017).
@@ -174,7 +171,6 @@ $ ip link show
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
 2: enp59s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
 3: wlp60s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DORMANT group default qlen 1000
-
 ```
 
 In my case #2 is the Ethernet interface name and #3 is the Wifi interface name.
@@ -188,7 +184,6 @@ Iface   MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
 enp59s0    1500 0    125122      0      0 0         66472      0      0      0 BMRU
 lo        65536 0       970      0      0 0           970      0      0      0 LRU
 wlp60s0    1500 0      1036      0      0 0           237      0      0      0 BMRU
-
 ```
 
   [1]: https://i.stack.imgur.com/meM7C.gif

@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    1
 views:        "7,316 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-24-When-is-Birth-Date-for-a-file-actually-used^.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ Access: 2017-05-23 16:38:03.848124217 -0600
 Modify: 2017-05-16 06:49:55.000000000 -0600
 Change: 2017-05-18 07:43:22.946694155 -0600
  Birth: -
-
 ```
 
 I see the Birth Date for `/bin/bash` is null / empty. When is this field ever used and what purpose might it have in Linux when it works?

@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,220 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-10-Cpufrequtils-available-frequencies.md
 toc:          false
 navigation:   false
@@ -50,7 +50,6 @@ scaling_governor                          powersave
 scaling_max_freq                          3500000
 scaling_min_freq                          800000
 scaling_setspeed                          <unsupported>
-
 ```
 
 From this answer I just posted on Stack Exchange: [Get all available frequency steps][1] copy and paste this function into your terminal:
@@ -67,7 +66,6 @@ ApproximateFrequencies () {
         LastFreq=$(( $LastFreq + $StepRate))
     done
 }
-
 ```
 
 Then use this to display frequencies:
@@ -77,7 +75,6 @@ $ ApproximateFrequencies | column
 800000  1089284 1378568 1667852 1957136 2246420 2535704 2824988 3114272 3403556
 896428  1185712 1474996 1764280 2053564 2342848 2632132 2921416 3210700 3499984
 992856  1282140 1571424 1860708 2149992 2439276 2728560 3017844 3307128
-
 ```
 
 If you don't have `column` installed then omit `| column` portion of command.

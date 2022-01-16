@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "414 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-30-Black-screen-beteen-GRUB-and-login-screen.md
 toc:          false
 navigation:   false
@@ -23,21 +23,18 @@ To see what is happening during the 20 to 30 seconds use:
 
 ``` 
 sudo -H gedit /etc/default/grub
-
 ```
 
 Find the line that starts with:
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash
-
 ```
 
 and change it to:
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="noplymouth
-
 ```
 
 Leave the rest of the line as is.
@@ -48,7 +45,6 @@ Run:
 
 ``` 
 sudo update-grub
-
 ```
 
 Now when you reboot you will see the messages scroll by as the kernel boots up. If it gets stuck on one message for more than a second note it and add it to your question.
@@ -57,7 +53,6 @@ For a detailed time break down of your boot use:
 
 ``` 
 systemd-analyze blame
-
 ```
 
 The longest running boot commands are listed first. Use <kbd>Q</kbd> to exit the command.
@@ -71,7 +66,6 @@ After completing above steps this error is revealed during boot up:
 
 ``` 
 WARNING: Failed to connect to lvmetad. Falling back to device scanning.
-
 ```
 
 Arch Linux references this error [here][1].

@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "5,824 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-how-to-make-conky-true-transparent^.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ own_window_argb_visual yes
 ## cairo-compmgr
 own_window_type conky
 own_window_argb_visual no
-
 ```
 
 Copy this code over top of the section:
@@ -50,5 +49,4 @@ own_window_argb_visual yes
 ## cairo-compmgr
 #own_window_type conky
 #own_window_argb_visual no
-
 ```

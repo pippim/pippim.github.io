@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "989 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-How-do-you-manage-journald-log-history-on-ubuntu-core-16.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ To summarize the link:
 ``` 
 $ sudo mkdir -p /var/log/journal
 $ sudo systemd-tmpfiles --create --prefix /var/log/journal
-
 ```
 
 
@@ -52,7 +51,6 @@ $ journalctl --list-boots
  -2 c0d2c0141dd840cbab75d3c2254f8781 Wed 2018-02-14 22:59:13 MST—Sat 2018-02-17 22:46:14 M
  -1 aafb2573a6374e019a7165cb8eee74a0 Sun 2018-02-18 06:02:03 MST—Mon 2018-02-19 04:16:36 M
   0 8462f1969c6f4d61973e7e245014b846 Mon 2018-02-19 04:16:53 MST—Tue 2018-02-20 18:51:42 M
-
 ```
 
 ### Display last boot log
@@ -90,7 +88,6 @@ Feb 28 20:03:15 alien kernel: BIOS-e820: [mem 0x0000000030a8b000-0x0000000030ad4
 Feb 28 20:03:15 alien kernel: BIOS-e820: [mem 0x0000000030ad5000-0x0000000030b2dfff] usabl
 Feb 28 20:03:15 alien kernel: BIOS-e820: [mem 0x0000000030b2e000-0x0000000031099fff] reser
 lines 1-29
-
 ```
 
 Pay close attention to the parameter `-b-1` it is different than other references you may see.
@@ -108,7 +105,6 @@ Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/syste
 Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/user-65534@00056515dbfe731d-b7bab56cb4efcbf6.journal~ (8.0M).
 Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/user-1000@1bbb77599cf14c65a18af51646751696-000000000000064f-00056444d58433e1.journal (112.0M).
 Vacuuming done, freed 176.0M of archived journals on disk.
-
 ```
 
 

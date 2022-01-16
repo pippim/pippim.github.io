@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,740 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-27-How-to-add-LAN-driver^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ $ uname -r
 4.14.110-0414110-generic
 
 $ sudo dkms add r8168/8.046.00 -k 4.14.110-0414110-generic
-
 ```
 
 
@@ -37,8 +36,7 @@ To reinstall `dkms` driver for the `rtl8168` use:
 ``` 
 sudo apt update
 sudo apt install --reinstall r8168-dkms
-## 
-```
+## ```
 
 
 

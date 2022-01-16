@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,207 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-19-Bash-script-to-maintain-audit-trail-^-log-of-files-accessed.md
 toc:          false
 navigation:   false
@@ -39,7 +39,6 @@ COMMAND="$1" # extract gedit or nautilus
 pkexec "$COMMAND" "${@:2}"
 
 log-file "${@:2}" gsu-log-file-for-"$COMMAND"
-
 ```
 
 `/usr/local/bin/log-file`:
@@ -69,7 +68,6 @@ fi
 echo "$TIME_STAMP" - '"'"$ABSOLUTE_NAME"'"' >> "$LOG_FILE"
 
 exit 0
-
 ```
 
 Contents of log file `gsu-log-file-for-gedit`after a few edits:
@@ -79,7 +77,6 @@ __Date__ - __Time__ - ______File Name______
 11/18/16 - 19:07:54 - "/etc/default/grub"
 11/18/16 - 19:08:34 - "/home/rick/bin/gsu"
 11/18/16 - 19:09:26 - "/home/rick/bin/gsu"
-
 ```
 
 ## Future enhancements
@@ -88,6 +85,5 @@ A consolidation script which will take take last two lines and merge them into:
 
 ``` 
 11/18/16 - 19:09:26 - "/home/rick/bin/gsu" (2 edits, first on 11/18/16 - 19:08:34"
-
 ```
 

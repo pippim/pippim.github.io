@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "13,461 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-21-Sleep-mode-drains-battery-very-fast.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ After resuming from suspend, use this command in the terminal:
 
 ``` 
 journalctl -b | grep -i "should not be sleeping"
-
 ```
 
 If you see this:
@@ -36,7 +35,6 @@ Oct 21 07:20:18 alien kernel:  cache: parent cpu4 should not be sleeping
 Oct 21 07:20:18 alien kernel:  cache: parent cpu5 should not be sleeping
 Oct 21 07:20:18 alien kernel:  cache: parent cpu6 should not be sleeping
 Oct 21 07:20:18 alien kernel:  cache: parent cpu7 should not be sleeping
-
 ```
 
 It could mean when you suspended the CPU's were not put to sleep as per his bounty Q&A a couple of years ago: [systemd suspends system but upon resume kernel then enters sleep and wake-up](systemd suspends system but upon resume kernel then enters sleep and wake-up)
@@ -56,7 +54,6 @@ From my log file today:
 Oct 21 13:48:15 alien kernel: PM: Preparing system for sleep (mem)
 Oct 21 13:48:16 alien acpid[964]: client 1171[0:0] has disconnected
 Oct 21 13:48:32 alien kernel: Freezing user space processes ... (elapsed 0.003 seconds) done.
-
 ```
 
 - Line 1 is normal

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "168 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-29-How-do-you-uninstall-Ubuntu-completely-and-re-download-windows.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ You'll need to get your Windows 8 product key from your BIOS and write it down f
 
 ``` 
 sudo cat /sys/firmware/acpi/tables/MSDM
-
 ```
 
 Which will reveal something like this:
 
 ``` 
 MSDMUoDELL  QA09   LOHR#####-#####-#####-#####-#####%
-
 ```
 
 You can read other techniques of accomplishing key extraction [here][1].

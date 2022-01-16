@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "6,558 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-11-Refresh-rate-of-60-not-available-for-4K-resolution.md
 toc:          false
 navigation:   false
@@ -31,14 +31,12 @@ Then take the output from above and pass it to below:
 
 ``` 
 xrandr --newmode "3840x2160_54.00"  637.50  3840 4152 4568 5296  2160 2163 2168 2230 -hsync +vsync
-
 ```
 
 Finally set the monitor to the new resolution - refresh rate:
 
 ``` 
 xrandr --addmode DP-1-1 3840x2160_54.00
-
 ```
 
 The difference between 30 Hz and 54 Hz is night and day. At 30 Hz colors are washed out and causes eye strain.

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "27,252 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-03-How-do-I-install-pillow-in-Ubuntu-16.04-LTS^.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ apt install python3-pip -y
 apt install libjpeg8-dev zlib1g-dev libtiff-dev libfreetype6 libfreetype6-dev libwebp-dev libopenjp2-7-dev libopenjp2-7-dev -y
 
 pip3 install pillow --global-option="build_ext" --global-option="--enable-zlib" --global-option="--enable-jpeg" --global-option="--enable-tiff" --global-option="--enable-freetype" --global-option="--enable-webp" --global-option="--enable-webpmux" --global-option="--enable-jpeg2000"
-
 ```
 
 This also addresses some of the "dependencies" which I believe OP was referring to:

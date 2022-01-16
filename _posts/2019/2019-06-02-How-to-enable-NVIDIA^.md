@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "14,698 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-02-How-to-enable-NVIDIA^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ Nvidia needs a working Xorg installation to operate within. As your current Xorg
 ``` 
 sudo apt-get install unity-session
 sudo apt-get install lightdm 
-
 ```
 
 - And using TAB key select lightdm between "gdm3" and "lightdm" choices there, and press ENTER key to go.
@@ -61,7 +60,6 @@ $ dmesg | grep -i nvidia
 [    4.866848] nvidia-uvm: Loaded the UVM driver in 8 mode, major device number 240
 [    5.248695] input: HDA NVidia HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input9
 [    8.877159] nvidia-modeset: Allocated GPU:0 (GPU-30fab9bc-fe6f-ec05-e8e6-c151a1a96121) @ PCI:0000:01:00.0
-
 ```
 
 If you need sound turned on for your nVidia HDMI and most manufacturers these days have it powered off, then you need to use this:

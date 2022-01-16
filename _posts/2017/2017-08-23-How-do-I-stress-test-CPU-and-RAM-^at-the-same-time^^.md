@@ -12,7 +12,7 @@ votes:        "55 "
 favorites:    
 views:        "101,609 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-23-How-do-I-stress-test-CPU-and-RAM-^at-the-same-time^^.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ You can install `stress` with:
 
 ``` 
 sudo apt install stress
-
 ```
 
 Then call it with:
 
 ``` 
 stress --cpu 8 --io 4 --vm 4 --vm-bytes 1024M --timeout 10s
-
 ```
 
 On my conky display notice how:

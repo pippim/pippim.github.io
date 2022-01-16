@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "621 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-10-How-can-I-create-new-^gksu^-command-based-on-pkexec^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ Before you can use `pkexec` with `gedit` and `nautilus` you need to copy the pol
 ``` 
 wget https://raw.githubusercontent.com/hotice/webupd8/master/org.gnome.nautilus.policy -O /tmp/org.gnome.nautilus.policy
 sudo cp /tmp/org.gnome.nautilus.policy /usr/share/polkit-1/actions/
-
 ```
 
 ### Gedit Policy Kit
@@ -34,7 +33,6 @@ sudo cp /tmp/org.gnome.nautilus.policy /usr/share/polkit-1/actions/
 ``` 
 wget https://raw.githubusercontent.com/hotice/webupd8/master/org.gnome.gedit.policy -O /tmp/org.gnome.gedit.policy
 sudo cp /tmp/org.gnome.gedit.policy /usr/share/polkit-1/actions/
-
 ```
 
 ## "gsu" bash script to replace "gksu"
@@ -55,7 +53,6 @@ Creating a bash script is one of two ways to call `pxexec` using the somewhat fa
 COMMAND=$1 # extract gedit or nautilus
 
 pkexec "$COMMAND" "${@:2}" &> /dev/null&
-
 ```
 
 Save the file and mark it as executable with `chmod +x gsu`
@@ -64,7 +61,6 @@ Now instead of typing `gksu` to edit grub configuration you can use:
 
 ``` bash
 gsu gedit /etc/default/grub
-
 ```
 
 ## "gsu" as an alias of "pkexec" to replace "gksu"
@@ -76,14 +72,12 @@ Creating an alias is the second option to call `pxexec` using the somewhat famil
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
 ```
 
 After the last line add this:
 
 ``` bash
 alias gsu='pkexec'
-
 ```
 
 Save the file and exit.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "15,314 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-Set-CPU-temperature-throttle-threshold-on-Ubuntu^Thinkpad.md
 toc:          false
 navigation:   false
@@ -42,7 +42,6 @@ Oct 14 22:30:59 p5520 kernel: [ 9481.034738] CPU2: Package temperature/speed nor
 Oct 14 22:30:59 p5520 kernel: [ 9481.034738] CPU6: Package temperature/speed normal
 Oct 14 22:30:59 p5520 kernel: [ 9481.034739] CPU1: Package temperature/speed normal
 Oct 14 22:30:59 p5520 kernel: [ 9481.034740] CPU5: Package temperature/speed normal
-
 ```
 
 Comment #18 says to:
@@ -64,7 +63,6 @@ On my machine I can't duplicate the problem with `thermald` and `tlp` loaded. I 
 
 ``` 
 while true ; do : ; done
-
 ```
 
 All that happened is five cores are running at 100% and 3100 MHz. No throttling has occurred but it did make the two laptop fans run on low speed. Normally in Linux they are off (or at least I can't hear them). System temperature is 88 Celsius and keyboard is still responsive to type this answer. The living room does feel a bit warmer though...

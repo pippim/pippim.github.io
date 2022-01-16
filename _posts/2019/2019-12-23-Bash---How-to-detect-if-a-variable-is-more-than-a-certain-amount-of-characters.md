@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "7,549 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-23-Bash---How-to-detect-if-a-variable-is-more-than-a-certain-amount-of-characters.md
 toc:          false
 navigation:   false
@@ -46,7 +46,6 @@ If you didn't need an error message the `{ ... }` braces aren't required for a s
 
 ``` 
 [[ ${#detect} -gt 8 ]] && exit 1
-
 ```
 
 can be used to say "If the variable named detect is > 8 then exit".
@@ -79,7 +78,6 @@ The concise lines:
 ``` 
 [[ ${#StringVar} -ge 1 ]] && [[ ${#StringVar} -le 8 ]] && break
 echo "Sorry that string is ${#StringVar} long. Please try again."
-
 ```
 
 ... can be made ridiculously verbose like this:
@@ -96,7 +94,6 @@ else
     echo "Sorry that string is ${#StringVar} long. Please try again."
     continue
 fi
-
 ```
 
 Although not incorrect it is wasteful to both the programmer's and system's time.

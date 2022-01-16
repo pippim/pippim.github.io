@@ -12,7 +12,7 @@ votes:        "57 "
 favorites:    
 views:        "151,206 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-25-Does-Ubuntu-have-a-^device-manager^-equivalent^-And-what-is-an-easy-way-to-access-USB-drives^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ When I googled "Linux device manager equivalent" one of the recommendations is `
 
 ``` 
 sudo apt install hardinfo
-
 ```
 
 Then typing `hardinfo` in the terminal or calling from Dash (<kbd>Alt</kbd>+<kbd>F2</kbd>) the gui appears like this:

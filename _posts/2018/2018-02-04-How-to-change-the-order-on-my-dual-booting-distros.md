@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "3,892 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-04-How-to-change-the-order-on-my-dual-booting-distros.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ This is fairly straight forward. Using `sudo` powers edit `/etc/default/grub` an
 #GRUB_DEFAULT=0 # Rather than option #1, we'll always default to last boot choice.
 GRUB_DEFAULT=saved
 GRUB_SAVEDEFAULT=true
-
 ```
 
 The first line you will be commenting out and right below that insert the next two lines.
@@ -44,7 +43,6 @@ Save the file and type in the terminal:
 
 ``` 
 sudo update-grub
-
 ```
 
 # If you still want your original request
@@ -55,7 +53,6 @@ As above edit `/etc/default/grub` but this time use:
 
 ``` 
 GRUB_DEFAULT=0
-
 ```
 
 Remove the `#` at the beginning of the line to transform it from a comment into a command. Use `0` for menu first entry, `1` for second menu entry, etc.

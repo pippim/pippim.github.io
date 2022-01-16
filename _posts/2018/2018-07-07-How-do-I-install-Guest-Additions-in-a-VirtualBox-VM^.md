@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,153,994 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-07-How-do-I-install-Guest-Additions-in-a-VirtualBox-VM^.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ First step: Install required software
 ``` 
 sudo apt-get update
 sudo apt-get install make gcc
-
 ```
 
 Next, use Virtualbox to download the Guest Additions, then select "Install Guest Additions" from the Virtualbox menu.
@@ -39,7 +38,6 @@ If the VBOXADDITIONS cd does not pop up in File Manager, Use File Manager to ope
 
 ``` 
 sudo sh VBoxLinux*
-
 ```
 
 reboot and enjoy! 

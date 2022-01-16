@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,850 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-29-Power-Management-governor-changes-alone-from-powersave-to-performance.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ You are using `sudo tlp stat -p` to find out when the speed governor is set at `
 ``` 
 $ echo "powersave" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 powersave
-
 ```
 
 Run `tlp` statistics again and ensure minimum frequency is normalized and no longer set at maximum frequency.

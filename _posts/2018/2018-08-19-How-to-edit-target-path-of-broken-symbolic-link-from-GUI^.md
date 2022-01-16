@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,573 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-How-to-edit-target-path-of-broken-symbolic-link-from-GUI^.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ To do this in Nautilus we need to create a script using:
 ``` bash
 mkdir -p ~/.local/share/nautilus/scripts
 gedit ~/.local/share/nautilus/scripts/edit-link
-
 ```
 
 Paste in the following:
@@ -76,14 +75,12 @@ NewLink=$(zenity --entry --text "Enter new symbolic link")
 ln -sf "$NewLink" "${FILENAME}"
 
 exit 0
-
 ```
 
 and make it executable
 
 ``` bash
 chmod +x ~/.local/share/nautilus/scripts/edit-link
-
 ```
 
 ## Sample output
@@ -152,14 +149,12 @@ ln -sf "$NewLink" "${FILENAME}"
 
 exit 0
 EOF
-
 ```
 
 and make it executable
 
 ``` bash
 chmod +x ~/.config/caja/scripts/edit-link
-
 ```
 
 Then we can use this script from Caja Scripts drop-down menu. 

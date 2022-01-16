@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "5,051 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-30-Laptop-lid-close-doesn^t-suspend-then-the-battery-dies.md
 toc:          false
 navigation:   false
@@ -46,7 +46,6 @@ Invoke the `Terminal` by pressing <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>. E
 
 ``` 
 gksu gedit /etc/systemd/logind.conf
-
 ```
 
 Look for these two lines and change them to look like this:
@@ -54,7 +53,6 @@ Look for these two lines and change them to look like this:
 ``` 
 HandleLidSwitch=suspend
 HandleLidSwitchDocked=suspend
-
 ```
 
 You might have to change `ignore` or `lock` to read `suspend`. You might have to remove a leading `#`.
@@ -63,7 +61,6 @@ Save the file and quit `gedit`. After ensuring no applications (like word proces
 
 ``` 
 sudo reboot
-
 ```
 
 Voila! everything is reversed and your system will operate as you expect.

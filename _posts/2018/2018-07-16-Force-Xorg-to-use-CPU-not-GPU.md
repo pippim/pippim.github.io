@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "10,909 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-16-Force-Xorg-to-use-CPU-not-GPU.md
 toc:          false
 navigation:   false
@@ -56,7 +56,6 @@ Section "Screen"
     Option "AllowEmptyInitialConfiguration" "on"
     Option "IgnoreDisplayDevices" "CRT"
 EndSection
-
 ```
 
  Read the entire [post][1] for more details.
@@ -84,7 +83,6 @@ It is important to know your CPU. Discover this using:
 
 ``` 
 cat /proc/cpuinfo | grep 'model name'
-
 ```
 
 and report back.

@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "234 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-Find-out-the-full-path-of-the-program-that-runs-when-I-enter-a-command.md
 toc:          false
 navigation:   false
@@ -39,7 +39,6 @@ $ locate uname
 /usr/share/man/man2/oldolduname.2.gz
 /usr/share/man/man2/olduname.2.gz
 /usr/share/man/man2/uname.2.gz
-
 ```
 
 The last option `locate` returns all files containing `uname` not just the program that is run from the command prompt.
@@ -92,7 +91,6 @@ close(1)                                = 0
 close(2)                                = 0
 exit_group(0)                           = ?
 +++ exited with 0 +++
-
 ```
 
 For more information refer to `man strace`:
@@ -126,7 +124,6 @@ DESCRIPTION
        events that happen at the user/kernel interface, a close examination of this boundary is
        very  useful  for  bug  isolation, sanity checking and attempting to capture race condi‐
        tions.
-
 ```
 
 *Above is just the beginning of manpage for `strace`*

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,520 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-27-Samsung-M2-NVME-enters-read-only-on-linux-every-day^-not-on-Windows.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ $ apt list --installed | grep intel-microcode
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 intel-microcode/now 3.20170707.1~ubuntu16.04.0 amd64 [installed,upgradable to: 3.20180108.0+really20170707ubuntu16.04.1]
-
 ```
 
 In my case the Intel Microcode update for `2018-01-08` is **not** being used and the original version from `2017-07-07` is being used. When patches for Meltdown were announced bugs started appearing on regular updates on 2018-01-04. Since then I declined all automatic updates in favour of manually installing new mainline kernels instead. That is why I have the older original microcode.
@@ -74,7 +73,6 @@ To install Microcode from Terminal without going through Ubuntu GUI Settings pan
 ``` 
 sudo apt update
 sudo apt install intel-microcode
-
 ```
 
   [1]: https://usn.ubuntu.com/usn/usn-3531-2/

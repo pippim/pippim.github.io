@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,234 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-27-Is-it-possible-to-update-Ubuntu-Live-USB-stick^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ Boot with your live USB, open a terminal and use:
 
 ``` 
 sudo apt install mkusb
-
 ```
 
 Then run `mkusb` and create a new live USB with persistence using a new stick on a different USB port. Pay careful attention to using the correct USB port with the new USB stick.

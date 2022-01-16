@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,289 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Extract-one-element-from-lines-of-a-text-file.md
 toc:          false
 navigation:   false
@@ -53,7 +53,6 @@ Are you getting older? Scared of being left behind or ‘left on the shelf’? T
 *word***
 ***word*
 word**
-
 ```
 
 # Using `grep`
@@ -69,7 +68,6 @@ $ grep -E -o '\*\*[^*]{,20}\*\*' ~/Downloads/wordlist.txt
 **Depaysement**
 **Duende**
 **Torschlusspanik**
-
 ```
 
 If you want to remove the `**` encasing the words, add a pipe to `sed`:
@@ -83,7 +81,6 @@ Schlimazel
 Depaysement
 Duende
 Torschlusspanik
-
 ```
 
 # Saving index of words to a file
@@ -101,7 +98,6 @@ Schlimazel
 Depaysement
 Duende
 Torschlusspanik
-
 ```
 
 Note original answer posted yesterday enhanced with new post today from muru on a separate Q&A: [Use specified quantifier in grep to retrieve satisfied vocabulary][1]

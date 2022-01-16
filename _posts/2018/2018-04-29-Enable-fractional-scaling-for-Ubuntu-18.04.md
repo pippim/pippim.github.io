@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "283,128 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Enable-fractional-scaling-for-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -41,7 +41,6 @@ To install Unity Tweak Tool use:
 
 ``` 
 sudo apt install unity-tweak-tool
-
 ```
 
 Others may be interested in the full suite of tools available in **18.04 LTS**:
@@ -55,7 +54,6 @@ mate-tweak/bionic,bionic 18.04.16-1 all
 mousetweaks/bionic,bionic,now 3.12.0-4 amd64 [installed]
 tweak/bionic 3.02-2 amd64
 unity-tweak-tool/bionic,bionic,now 0.0.7ubuntu4 all [installed]
-
 ```
 
 

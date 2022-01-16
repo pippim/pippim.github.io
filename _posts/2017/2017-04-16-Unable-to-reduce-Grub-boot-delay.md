@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,195 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-16-Unable-to-reduce-Grub-boot-delay.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ GRUB_SAVEDEFAULT=true
 GRUB_HIDDEN_TIMEOUT=0.0
 GRUB_HIDDEN_TIMEOUT_QUIET=true
 GRUB_TIMEOUT=0.0
-
 ```
 
 I've used the values `0.0` without double quotes to reflect how numeric values are used.

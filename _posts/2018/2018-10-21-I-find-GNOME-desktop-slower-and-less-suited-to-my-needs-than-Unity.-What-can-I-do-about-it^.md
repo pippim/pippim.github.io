@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "249 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-21-I-find-GNOME-desktop-slower-and-less-suited-to-my-needs-than-Unity.-What-can-I-do-about-it^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ clipboard:    false
 
 ``` 
 sudo apt install ubuntu-unity-desktop
-
 ```
 
 When installation starts you are asked if you want to switch to the Unity `lightdm` greeter. You will likely want this as you get the familiar login screen with the ability of easily changing login screen wallpaper.

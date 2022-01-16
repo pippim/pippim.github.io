@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "3,379 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-26-Slow-Boot-Time-on-Ubuntu-17.10.1-^systemd-analyze-blame-results^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ Using one answer within [Ubuntu 15.04 network manager causing slow boot][1] work
 
 ``` 
 systemctl disable NetworkManager-wait-online.service
-
 ```
 
 A bug report for 17.10 has already been filed and you may wish to subscribe to it:

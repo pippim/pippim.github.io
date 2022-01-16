@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "7,411 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-08-Prevent-sleep^suspend-when-not-logged-in-to-a-specific-account.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ GDM uses a separate dconf database to control power management. You can make GDM
 
 ``` 
 $ IFS=$'\n'; for x in $(sudo -u username gsettings list-recursively org.gnome.settings-daemon.plugins.power); do eval "sudo -u gdm dbus-launch gsettings set $x"; done; unset IFS
-
 ```
 
 where `username` is your user's name.
@@ -38,7 +37,6 @@ Or to simply disable auto-suspend (also run the command with ac replaced with ba
 
 ``` 
 $ sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
-
 ```
 
   [1]: https://wiki.archlinux.org/index.php/GDM#Setup_default_monitor_settings

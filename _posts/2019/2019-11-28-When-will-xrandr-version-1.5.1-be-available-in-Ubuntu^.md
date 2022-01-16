@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    1
 views:        "2,446 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-28-When-will-xrandr-version-1.5.1-be-available-in-Ubuntu^.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ Ubuntu 16.04.6 LTS current version is:
 $ xrandr --version
 xrandr program version       1.5.0
 Server reports RandR version 1.5
-
 ```
 
 I'm not well-versed on the subject but could I simply get `1.5.1` source code and compile it? Or should such a mission critical app such as `xrandr` never be compiled from source?

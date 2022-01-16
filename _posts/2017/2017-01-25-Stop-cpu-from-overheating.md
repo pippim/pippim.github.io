@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "24,480 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-25-Stop-cpu-from-overheating.md
 toc:          true
 navigation:   true
@@ -41,20 +41,9 @@ It operates in two modes:
 
 ``` 
 apt-get install thermald
-## 
-```
+## ```
 
 
-
-
-<a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
-
-{% include toc.md %}
-
-
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
 
 # TLP
 
@@ -77,10 +66,6 @@ Since installing TLP, ***Powerclamp*** (described below) has never been invoked 
 
 ----------
 
-
-
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
 
 # Intel Powerclamp
 
@@ -110,17 +95,12 @@ Intel's ***Powerclamp*** driver is defined here ([kernel.org - Intel Power Clamp
 ----------
 
 
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
-
 # How do you know Powerclamp is running?
 
 ***Powerclamp*** might only show itself once a year when your fan vents get too much dust & lint. So how do you know it's actually running in the background? Use:
 
 ``` 
 lsmod | grep intel
-
 ```
 
 And you should see a list similar to this:
@@ -132,7 +112,6 @@ intel_rapl             20480  0
 intel_powerclamp       16384  0
    (.... more intel drivers ....)
 snd                    81920  18 snd_hwdep,snd_timer,snd_hda_codec_hdmi,snd_hda_codec_idt,snd_pcm,snd_seq,snd_rawmidi,snd_hda_codec_generic,snd_hda_codec,snd_hda_intel,snd_seq_device
-
 ```
 
 If you see `intel_rapl` and `intel_powerclamp` you know it's working and simply waiting temps to exceed 85C.
@@ -140,10 +119,6 @@ If you see `intel_rapl` and `intel_powerclamp` you know it's working and simply 
 
 ----------
 
-
-
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
 
 # Powerclamp in action displayed by Conky
 
@@ -163,10 +138,6 @@ The ***Powerclamp*** driver runs until temps drop below 85C again. While the dri
 ----------
 
 
-
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
-
 # Disable Intel Turbo Boost
 
 Back in the "cool old days" of Ubuntu 14.04 Intel Turbo Boost was broken so my processor speed fluctuated between 1200 Mhz and 2400 Mhz. After upgrade to Ubuntu 16.04 it would go up to 3400 Mhz (3.4 Ghz) because Turbo Boost was finally working. But it also raised the heat.
@@ -175,16 +146,11 @@ To disable Intel Turbo Boost use:
 
 ``` 
 echo "1" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
-
 ```
 
 
 ----------
 
-
-
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr9" class ="hdr-btn">Skip</a></div>
 
 # Short term fix in this scenario
 
@@ -203,10 +169,6 @@ Have been using `TLP` (described above) for many months now and temperatures are
 
 ----------
 
-
-
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr10" class ="hdr-btn">Skip</a></div>
 
 # Watch out for too many fan control drivers
 
@@ -235,7 +197,6 @@ Core 0:         +65.0°C  (high = +87.0°C, crit = +105.0°C)
 Core 1:         +64.0°C  (high = +87.0°C, crit = +105.0°C)
 Core 2:         +63.0°C  (high = +87.0°C, crit = +105.0°C)
 Core 3:         +57.0°C  (high = +87.0°C, crit = +105.0°C)
-
 ```
 
 ***Ignore the virtual temps, they are out to lunch***. Under Ubuntu 14.04 the were accurate and I used `temp 1` in Conky display. After Ubuntu 16.04 upgrade I had to refer to a third temperature not displayed on this screen. To see the **REAL** temps you can use this command:
@@ -245,7 +206,6 @@ $ cat /sys/class/thermal/thermal_zone*/temp
 27800
 29800
 62000
-
 ```
 
 When I type:
@@ -260,7 +220,6 @@ dcdbas                 16384  1 dell_smbios
 dell_smm_hwmon         16384  0
 wmi                    16384  1 dell_wmi
 video                  40960  3 dell_wmi,dell_laptop,i915
-
 ```
 
 I see the `dell_smm_hwmon` kernel module / driver. When I google that driver and `I8K` people report the two drivers cause system freezes for a split-second every 10 seconds or so. I was having this problem myself so had to remove *I8K fan control*.
@@ -277,6 +236,6 @@ There are lots of other utilities and cooling methodologies but this is getting 
 
 
 
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a></div>
 

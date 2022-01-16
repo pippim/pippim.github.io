@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "56 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-02-Suspend-temporarily-linux-update-apt-for-the-session-until-reboot.md
 toc:          false
 navigation:   false
@@ -39,35 +39,30 @@ done
 
 # now proceed
 echo Apt Daily Service has been killed
-
 ```
 
 Mark the script as executable in order to call the command:
 
 ``` 
 sudo chmod /path/to/my_script.sh
-
 ```
 
 You need sudo powers to call the command:
 
 ``` 
 sudo /path/to/my_script.sh
-
 ```
 
 When you are away from the hotspot and back to your regular network reboot to reinstate apt services or type:
 
 ``` 
 sudo systemctl start apt-daily.service
-
 ```
 
 Of course you can forgo the fancy script altogether and stop services with:
 
 ``` 
 sudo systemctl stop apt-daily.service
-
 ```
 
   [1]: https://unix.stackexchange.com/questions/315502/how-to-disable-apt-daily-service-on-ubuntu-cloud-vm-image

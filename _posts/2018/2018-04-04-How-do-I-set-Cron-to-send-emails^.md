@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "25,058 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-04-How-do-I-set-Cron-to-send-emails^.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ From [Send email alerts using ssmtp][2] we find the simplest way of sending emai
 sudo apt install ssmtp
 sudo nano /etc/ssmtp/ssmtp.conf
 # Change "MyEmailAddress" and "MyPassword" to your own.
-
 ```
 
 There  is one step not mentioned; Google will send you an email confirming you want to allow a "less secure" application to send mail with your account:

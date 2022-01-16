@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,895 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-21-Avoid-screen-turning-off-when-the-screen-is-locked^.md
 toc:          false
 navigation:   false
@@ -27,14 +27,12 @@ To prevent screen from turning off you need two settings, one under battery powe
 
 ``` 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout <time_in_seconds>
-
 ```
 
 ## For AC timeout:
 
 ``` 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout <time_in_seconds>
-
 ```
 
 So for both Battery and A/C set the time to 0 (never).
@@ -43,7 +41,6 @@ So for both Battery and A/C set the time to 0 (never).
 
 ``` 
 gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
-
 ```
 
 ## Disable dimming screen when idle:
@@ -52,7 +49,6 @@ In [Unix & Linux][2] someone complained when on battery screen dims every 20 sec
 
 ``` 
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
-
 ```
 
 

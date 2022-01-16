@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "4,762 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-Firefox-freezing-with-100^-CPU-usage-for-30-seconds-when-launching-Chromium.md
 toc:          false
 navigation:   false
@@ -49,7 +49,6 @@ In the bug report it is revealed:
 $ dpkg -l 'fontconfig*' | grep "^ii"
 ii  fontconfig        2.12.6-0ubuntu2 amd64        generic font configuration library - support binaries
 ii  fontconfig-config 2.12.6-0ubuntu2 all          generic font configuration library - configuration
-
 ```
 
 In my non-buggy version (could be because of no local fonts though):
@@ -58,7 +57,6 @@ In my non-buggy version (could be because of no local fonts though):
 $ dpkg -l 'fontconfig*' | grep "^ii"
 ii  fontconfig        2.11.94-0ubuntu1.1 amd64        generic font configuration library - support binaries
 ii  fontconfig-config 2.11.94-0ubuntu1.1 all          generic font configuration library - configuration
-
 ```
 
 I'm at `2.11.94` version earlier than bug report `2.12` version. In bug report upgrading to `2.13` is a recommended solution but OP mentioned in comments this isn't possible. As such `2.11.94` **might** be an option.

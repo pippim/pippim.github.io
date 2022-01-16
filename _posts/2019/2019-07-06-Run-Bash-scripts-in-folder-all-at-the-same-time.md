@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "4,113 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-Run-Bash-scripts-in-folder-all-at-the-same-time.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ script_2.sh &
 script_3.sh &
 script_4.sh &
 script_5.sh &
-
 ```
 
 To run the one after the other (sequentially) use:
@@ -40,7 +39,6 @@ script_2.sh &&
 script_3.sh &&
 script_4.sh &&
 script_5.sh
-
 ```
 
 
@@ -55,27 +53,23 @@ If you have 200 scripts you want to run at the same time (which might bog down t
 for Script in my_folder/*.sh ; do
     echo bash "$Script" &
 done
-
 ```
 
 Set the script attributes to executable with the command:
 
 ``` 
 chmod a+x /path/to/script.sh
-
 ```
 
 The first time you run the script it will only echo the names of the 200 scripts it will be executing. When you are happy the right names are being selected edit the script and change this line:
 
 ``` 
     echo bash "$Script" &
-to:
-```
+to:```
 
 
 ``` 
     bash "$Script" &
-
 ```
 
 

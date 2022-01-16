@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,164 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-17-Updating-content-of-a-zenity-window.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ Seven years late but better than never. This [`yad` support forum][1] addresses 
 
 ``` 
 Child(yad -tail --> *.log --> Yad Parent(yad --text-info )
-
 ```
 
 > displayed and auto scrolling. This is not possible with `zenity`. See  

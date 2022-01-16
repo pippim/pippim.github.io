@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "440 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-05-How-do-I-get-a-Zenity-feature-in-Yad^.md
 toc:          false
 navigation:   false
@@ -55,14 +55,12 @@ while true ; do
     "${IconsArr[@]}")
 
     Retn="$?"
-
 ```
 
 Columns #3 and #5 are hidden but they are still counted. We want to search on Icon Name so it is column #4 as recorded here:
 
 ``` 
     --margins=10 --no-click  --search-column=4 \
-
 ```
 
 The short `.gif` clip below shows what happens when we type:

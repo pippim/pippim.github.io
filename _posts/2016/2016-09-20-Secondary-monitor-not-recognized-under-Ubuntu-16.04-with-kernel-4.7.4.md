@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "712 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-20-Secondary-monitor-not-recognized-under-Ubuntu-16.04-with-kernel-4.7.4.md
 toc:          false
 navigation:   false
@@ -29,14 +29,12 @@ To enable KASLR as parameter to the Kernel type:
 
 ``` 
 gksu gedit /etc/default/grub
-
 ```
 
 Search for the line:
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="nosplash vt.handoff=7 kaslr"
-
 ```
 
 As you can see `kaslr` option has already been added to the end of mine. Simply add those five characters to yours, save the file and exit. Please note most people have "quiet splash" as options and you should **leave existing options as is** the point here is to add `kaslr`. 
@@ -47,7 +45,6 @@ After saving the grub kernel changes, you need to recompile your boot strap load
 
 ``` 
 sudo update-grub
-
 ```
 
 Now you will have the best, easiest security fix available for Linux, other than unplugging the internet.

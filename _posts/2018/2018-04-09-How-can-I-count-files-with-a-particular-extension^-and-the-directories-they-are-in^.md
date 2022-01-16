@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "7,811 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-09-How-can-I-count-files-with-a-particular-extension^-and-the-directories-they-are-in^.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ $ sudo updatedb # necessary if files in focus were added `cron` daily.
 $ printf "Number Files: " && locate -0r "$PWD.*\.c$" | xargs -0 -I{} sh -c 'test ! -L "$1" && echo "regular file"' _  {} | wc -l &&  printf "Number Dirs.: " && locate -r "$PWD.*\.c$" | sed 's%/[^/]*$%/%' | uniq -cu | wc -l
 Number Files: 29
 Number Dirs.: 7
-
 ```
 
 Thanks to Muru for his answer to help me through stripping symbolic links out of the file count in [Unix & Linux answer][1].
@@ -50,7 +49,6 @@ $ printf "Number Files: " && locate -cr "$PWD.*\.c$"
 Number Files: 3523
 $ printf "Number Dirs.: " && locate -r "$PWD.*\.c$" | sed 's%/[^/]*$%/%' | uniq -c | wc -l 
 Number Dirs.: 648
-
 ```
 
 - `sudo updatedb` Update database used by `locate` command if `.c` files were created today or if you've deleted `.c` files today.
@@ -64,7 +62,6 @@ $ cd /usr/src
 $ printf "Number Files: " && locate -cr "$PWD.*\.c$" &&  printf "Number Dirs.: " && locate -r "$PWD.*\.c$" | sed 's%/[^/]*$%/%' | uniq -c | wc -l
 Number Files: 3430
 Number Dirs.: 624
-
 ```
 
 Notice how file count and directory count have changed. I believe all users have the `/usr/src` directory and can run above commands with different counts depending on number of installed kernels.
@@ -93,7 +90,6 @@ real    0m0.778s
 user    0m0.788s
 sys     0m0.027s
 ───────────────────────────────────────────────────────────────────────────────────────────
-
 ```
 
 **Note:** This is all files on **ALL** drives and partitions. ie we can search for Windows commands too:
@@ -112,7 +108,6 @@ Number Dirs.: 3394
 real    0m0.942s
 user    0m0.803s
 sys     0m0.092s
-
 ```
 
 I have three Windows 10 NTFS partitions automatically mounted in `/etc/fstab`. Be aware locate knows everything!
@@ -127,7 +122,6 @@ Number Dirs.: 286705
 real    0m15.460s
 user    0m13.471s
 sys     0m2.786s
-
 ```
 
 It takes 15 seconds to count 1,637,135 files in 286,705 directories. YMMV.

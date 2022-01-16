@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    
 views:        "7,836 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-15-Touchpad-gestures-and-holding-keys-does-not-work.md
 toc:          true
 navigation:   true
@@ -70,21 +70,18 @@ Open a terminal using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>. Then type:
 
 ``` 
 uname -r
-
 ```
 
 Since the terminal is open already, get your Ubuntu release using:
 
 ``` 
 lsb_release -a
-
 ```
 
 To close the terminal use:
 
 ``` 
 exit
-
 ```
 
 
@@ -126,7 +123,6 @@ $ xinput list
     ↳ AT Translated Set 2 keyboard                  id=15   [slave  keyboard (3)]
     ↳ Dell Dell KM632 Wireless Keyboard and Mouse   id=18   [slave  keyboard (3)]
     ↳ PEAQ WMI hotkeys                              id=17   [slave  keyboard (3)]
-
 ```
 
 **Note the last line above**
@@ -137,7 +133,6 @@ If you have it loaded you can disable it with an `xinput` command but we'll use 
 
 ``` 
 sudo rmmod peaq_wmi
-
 ```
 
 ### Disable PEAQ WMI Hotkeys Permenantly
@@ -147,7 +142,6 @@ Using your favourite sudo editor, edit `/etc/modprobe.d/blacklist.conf`. At the 
 ``` 
 #spams ^@
 blacklist peaq_wmi
-
 ```
 
 Save the file and exit. 
@@ -168,7 +162,6 @@ According to this [Debian Bug Report][22] a short term fix is to use:
 ``` 
 sudo rmmod psmouse
 sudo modprobe psmouse
-
 ```
 
 Try this in the terminal and then test your Touchpad.
@@ -184,7 +177,6 @@ If the temporary fix works then edit the file `/etc/rc.local` with sudo powers. 
 ``` 
 /sbin/rmmod psmouse
 /sbin/modprobe psmouse
-
 ```
 
 From now on when you reboot the fix will be permanent.
@@ -237,7 +229,6 @@ linux-image-4.13.0-26-generic - Linux kernel image for version 4.13.0 on 64 bit 
 linux-image-4.13.0-31-generic - Linux kernel image for version 4.13.0 on 64 bit x86 SMP
 linux-image-4.13.0-32-generic - Linux kernel image for version 4.13.0 on 64 bit x86 SMP
 (... SNIP ....)
-
 ```
 
 When you see a newer supported kernel offered by Ubuntu Kernel Team you should install it and test it. For example to see what to install for `4.13.0-32` use:
@@ -250,7 +241,6 @@ linux-image-4.13.0-32-generic - Linux kernel image for version 4.13.0 on 64 bit 
 linux-image-extra-4.13.0-32-generic - Linux kernel extra modules for version 4.13.0 on 64 bit x86 SMP
 linux-signed-image-4.13.0-32-generic - Signed kernel image generic
 linux-tools-4.13.0-32-generic - Linux kernel version specific tools for version 4.13.0-32
-
 ```
 
 Most users won't need all these packages. Usually just `headers`, `image`, `image-extra` and `signed-image`.

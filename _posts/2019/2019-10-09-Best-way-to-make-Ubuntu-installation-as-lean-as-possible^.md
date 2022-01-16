@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,059 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-09-Best-way-to-make-Ubuntu-installation-as-lean-as-possible^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Next I would install the desktop (not all the apps) onto [the server version][2]
 
 ``` 
 sudo apt-get install xubuntu-desktop
-
 ```
 
 Then reboot and run a script to install your bare minimum GUI requirements.

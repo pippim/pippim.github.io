@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,425 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-31-Logitech-Performance-MX-mouse-shows-as-^unknown^-in-Power-Statistics.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ Digging through old bug reports I found this related problem: [Logitech M515 doe
 # Jan 05 2018 - Reload Logitech Unifying Receiver to get Mouse in Power Stats
 modprobe -r hid_logitech_dj
 modprobe    hid_logitech_dj
-
 ```
 
 Then I rebooted **twice**. On the first reboot the external display didn't appear and the login prompt was delayed. On the second reboot everything was normal and the Power Statistics appeared as they should:
@@ -79,7 +78,6 @@ E: POWER_SUPPLY_SCOPE=Device
 E: POWER_SUPPLY_SERIAL_NUMBER=101a-e6-ce-45-71
 E: POWER_SUPPLY_STATUS=Discharging
 E: SUBSYSTEM=power_supply
-
 ```
 
 **IMPORTANT NOTE:** Even though `/sys/class/power...` contains information on Keyboard and Mouse batteries the Power Statistics display currently shows NOTHING, not even the keyboard anymore. After writing this paragraph I replugged the unifying receiver and the battery levels were displayed.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "6,831 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-18-What^s-the-shell-session^.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ systemd,1 splash fastboot kaslr
               └─gnome-terminal-,10481
                   └─bash,3612
                       └─pstree,15684 -aps 3612
-
 ```
 
 

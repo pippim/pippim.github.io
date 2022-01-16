@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "1,647 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Turn-off-all-monitors-while-watching-VLC-media-on-TV.md
 toc:          false
 navigation:   true
@@ -43,21 +43,18 @@ Save the script below to a filename in your path such as `/usr/local/bin/movie.s
 
 ``` 
 chmod a+x /path/to/script/movie.sh
-
 ```
 
 Xorg's package `xprintidle` is required to track how long your computer has been idle since a mouse movement or keyboard activity:
 
 ``` 
 sudo apt install xprintidle
-
 ```
 
 Then to launch the script use:
 
 ``` 
 movie.sh
-
 ```
 
 **Note:** When testing, change `TIME_TO_FADE` from `200000` to `10000` so you only have to wait 10 seconds instead of 200 seconds for fading to start.
@@ -543,7 +540,6 @@ while true ; do
     fi
     
 done
-
 ```
 
   [1]: https://i.stack.imgur.com/1OyCj.png

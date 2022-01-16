@@ -12,7 +12,7 @@ votes:        "16 "
 favorites:    
 views:        "4,724 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-12-`grep`ing-all-files-for-a-string-takes-a-long-time.md
 toc:          true
 navigation:   true
@@ -29,7 +29,6 @@ Looking at the sample output log we see virtual file systems are included in the
 
 ``` 
 sudo time grep -rnw --exclude-dir={boot,dev,lib,media,mnt,proc,root,run,sys,/tmp,tmpfs,var} '/' -e 'Sony 50"'
-
 ```
 
 When `grep` parses the `/proc` directory chain it is uselessly looking at all the process ID's which takes more than a day in my case.
@@ -55,7 +54,6 @@ $ sudo time grep -rnw --exclude-dir={boot,dev,lib,media,mnt,proc,root,run,sys,/t
 Binary file /home/Me/.config/google-chrome/Default/Sync Data/SyncData.sqlite3 matches
 11.35user 13.83system 0:56.35elapsed 44%CPU (0avgtext+0avgdata 8480maxresident)k
 17369032inputs+0outputs (0major+1620minor)pagefaults 0swaps
-
 ```
 
 There you go **56 Seconds** instead of **50 Hours**!
@@ -65,7 +63,6 @@ Note if you exclude `usr` (containing 6.5 GB of files in in my case) from the se
 ``` 
 4.48user 1.80system 0:08.75elapsed 71%CPU (0avgtext+0avgdata 6012maxresident)k
 13008964inputs+0outputs (0major+1180minor)pagefaults 0swaps
-
 ```
 
 
@@ -86,7 +83,6 @@ Consider setting up an alias in `~/.bashrc` so you don't have to type the `--exc
 
 ``` 
 alias grepall="grep --exclude-dir={boot,dev,lib,media,mnt,proc,root,run,sys,/tmp,tmpfs,var}"
-
 ```
 
 
@@ -124,7 +120,6 @@ grep: /run/user/1000/gvfs: Permission denied
 Command exited with non-zero status 2
 422.43user 112.91system 26:59.03elapsed 33%CPU (0avgtext+0avgdata 31152maxresident)k
 379671064inputs+0outputs (1major+10738minor)pagefaults 0swaps
-
 ```
 
 Only **27 Minutes** this time saving over **52 Hours**!
@@ -147,7 +142,6 @@ grep: /run/user/1000/gvfs: Permission denied
 Command exited with non-zero status 2
 405.51user 105.38system 23:26.89elapsed 36%CPU (0avgtext+0avgdata 30908maxresident)k
 365800875inputs+0outputs (0major+10961minor)pagefaults 0swaps
-
 ```
 
 Excluding the faulty hard drive connected via USB 3.0 enclosure only saved 3 minutes but reduced error messages.
@@ -181,7 +175,6 @@ grep: /run/user/1000/gvfs: Permission denied
 Command exited with non-zero status 2
 51.50user 23.28system 2:08.85elapsed 58%CPU (0avgtext+0avgdata 15800maxresident)k
 39866258inputs+0outputs (0major+6059minor)pagefaults 0swaps
-
 ```
 
 Now `grep` only takes 2 minutes and 8 seconds. By excluding Windows 10 partitions with 147 Gib of Programs and Data **saves 21.5 minutes!**
@@ -205,7 +198,6 @@ grep: /run/user/1000/gvfs: Permission denied
 Command exited with non-zero status 2
 44.21user 8.54system 1:15.51elapsed 69%CPU (0avgtext+0avgdata 15864maxresident)k
 33754180inputs+0outputs (0major+6062minor)pagefaults 0swaps
-
 ```
 
 Now grep is only taking 1 minutes and 15 seconds. Excluding `/usr/src` by specifying `src` on the `--exclude-dir` list saves 53 seconds.
@@ -233,7 +225,6 @@ grep: /run/user/1000/gvfs: Permission denied
 Command exited with non-zero status 2
 19.22user 5.84system 0:35.61elapsed 70%CPU (0avgtext+0avgdata 15600maxresident)k
 22111388inputs+0outputs (0major+6059minor)pagefaults 0swaps
-
 ```
 
 By skipping 6 GB of kernel modules, our `grep` time is 36 seconds. Adding `/lib/modules` by specifying `modules` in the `--exclude-dir` parameter saves 39 seconds.

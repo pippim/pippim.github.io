@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,649 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-06-Turning-off-text-highlighting.md
 toc:          false
 navigation:   false
@@ -47,7 +47,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Add a "redalert" alias to pop-up on GUI desktop screens.  Use like so:
 #   redalert "Weather update: It's raining Red States"
 alias redalert='notify-send --urgency=critical -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 ```
 
 The last **Alias**: ***redalert*** I added manually and is not in normal Ubuntu distributions.
@@ -56,7 +55,6 @@ What you can do if you want no colors is use:
 
 ``` 
 sudo chmod -x /usr/bin/dircolors
-
 ```
 
 However in your case you might be looking at a windows partition, ie:

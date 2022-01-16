@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "2,232 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-28-Xrandr-shows-HDMI1-disconnect-w^-HDMI2-as-primary-with-only-one-monitor.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ DP-1-1 connected 1920x1080+1920+532 (normal left inverted right x axis y axis) 7
 HDMI-1-1 disconnected (normal left inverted right x axis y axis)
 DP-1-2 disconnected (normal left inverted right x axis y axis)
 HDMI-1-2 disconnected (normal left inverted right x axis y axis)
-
 ```
 
 Everything works and I'm not concerned there are duplicate names for HDMI-1 that show as "disconnected".

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "4,099 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-16-How-to-make-calendar-points-to-Sunday-as-first-day-of-the-week-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -39,7 +39,6 @@ $ cat /usr/share/i18n/locales/en_US | grep week -A1
 week    7;19971130;7
 first_weekday	1
 first_workday	2
-
 ```
 
 I don't know what the `week` variable does so would leave it unchanged at first.

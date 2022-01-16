@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "8,565 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-12-GUI-or-simple-Bash-script-to-throttle-the-CPU^.md
 toc:          false
 navigation:   true
@@ -47,7 +47,6 @@ With three monitors `cpuf` can appear 10 feet away, so use parameter 1 `--geomet
 
 ``` 
 sudo cpuf --geometry="450x450+4720+80" /home/rick/Pictures/icons/cpu-intel-128.svg
-
 ```
 
 - Parameter 1 `--geometry` is Window Width x Height + Width Offset + Height Offset
@@ -72,7 +71,6 @@ In order to function, `cpuf` bash script requires:
 ``` 
 sudo apt install yad         # from the repository universe
 sudo apt install coreutils   # installed by default in most distros
-
 ```
 
 It's easiest when you place `cpuf` script into a root-owned directory within your search path. For example: `/usr/local/bin`.
@@ -306,7 +304,6 @@ done
 
 IFS="$OLD_IFS"
 exit 0
-
 ```
 
   [1]: https://i.stack.imgur.com/2lHSD.gif

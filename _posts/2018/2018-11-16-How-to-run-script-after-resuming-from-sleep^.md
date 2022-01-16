@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "3,076 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-16-How-to-run-script-after-resuming-from-sleep^.md
 toc:          false
 navigation:   false
@@ -42,7 +42,6 @@ case $1/$2 in
     mouse_script.sh
     ;;
 esac
-
 ```
 
 
@@ -52,6 +51,5 @@ Then mark it executable with the command:
 
 ``` sh
 sudo chmod +x /lib/systemd/system-sleep/resume
-
 ```
 

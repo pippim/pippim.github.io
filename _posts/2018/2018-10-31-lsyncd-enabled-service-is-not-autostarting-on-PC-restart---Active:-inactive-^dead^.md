@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,335 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-31-lsyncd-enabled-service-is-not-autostarting-on-PC-restart---Active:-inactive-^dead^.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ Systemd can be confusing with before's and after's but I would change:
 
 ``` 
 After=network.target remote-fs.target media-blueray-Data.mount media-blueray-WDRed.mount
-
 ```
 
 To:
 
 ``` 
 After=network.target remote-fs.target media-blueray-Data.mount media-blueray-WDRed.mount network.target multi-user.target
-
 ```
 
 based upon this [answer][1].

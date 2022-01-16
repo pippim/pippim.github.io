@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "345 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-08-11-My-daily-backup-crashed^-how-can-I-rerun-cron-daily^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ This [answer](https://unix.stackexchange.com/a/245056/200094) is close but you r
 
 ``` 
 sudo run-parts /etc/cron.daily
-
 ```
 
 The linked answer omits `sudo` and my daily backup crashed again. This is because the same `.tar` work file (with errant 30 MB file) that was created with `sudo` privileges (which cron runs with) still existed. 

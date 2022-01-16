@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,479 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-27-Install-NDiSWrapper-in-Ubuntu-20.04.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ You don't need to download from sourceforge.net. You can simply use:
 ``` 
 sudo apt update
 sudo apt install ndiswrapper-common ndiswrapper-utils-1.9
-
 ```
 
 You can read full instructions [here][1].

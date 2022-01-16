@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "3,057 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-08-What-is-the-Emergency-Shell-^emergency.target^-of-the-Systemd^-and-in-what-case-is-it-used^.md
 toc:          false
 navigation:   false
@@ -29,14 +29,12 @@ The first step in severe problem resolution is rescue mode initiated with:
 Broadcast message from root@localhost on pts/0 (Fri 2013-10-25 18:23:15 CEST):
 
 The system is going down to rescue mode NOW!
-
 ```
 
 However there are times where `rescue mode` doesn't work and you have to enter `emergency` mode. This mounts foot file system as `read-only`, doesn't mount any other local file systems and doesn't enable network connections. To enter emergency mode use:
 
 ``` 
 systemctl emergency
-
 ```
 
 This is an abbreviated summary so please read the Red Hat link for more detailed `systemd` usage.

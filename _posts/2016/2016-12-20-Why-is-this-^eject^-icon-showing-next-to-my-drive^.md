@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,392 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-20-Why-is-this-^eject^-icon-showing-next-to-my-drive^.md
 toc:          false
 navigation:   false
@@ -60,7 +60,6 @@ sdc      8:32   0 119.2G  0 disk
 ├─sdc3   8:35   0  29.3G  0 part /
 └─sdc4   8:36   0   7.8G  0 part [SWAP]
 sr0     11:0    1 695.9M  0 rom  
-
 ```
 
 In summary Nautilus gives us a nice GUI into our partitions. It's very handy on this Laptop with three drives and many partitions.

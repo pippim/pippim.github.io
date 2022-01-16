@@ -12,7 +12,7 @@ votes:        "64 "
 favorites:    
 views:        "82,384 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-What-does-NetworkManager-wait-online.service-do^.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ For many users 10 to 15 seconds can be sliced off the parallel boot time by usin
 
 ``` 
 sudo systemctl disable NetworkManager-wait-online.service
-
 ```
 
 After you sign on you will likely get a message bubble stating you've now been connected to the network (WiFi or Ethernet access to Internet).

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,581 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-27-Bash-script-to-sleep-at-given-CPU-temperature-~-update-for-16.04.md
 toc:          false
 navigation:   true
@@ -28,7 +28,6 @@ $ cat /sys/class/thermal/thermal_zone*/temp
 27800
 29800
 58000
-
 ```
 
 and from `sensors`:
@@ -38,7 +37,6 @@ acpitz-virtual-0
 Adapter: Virtual device
 temp1:        +27.8°C  (crit = +106.0°C)
 temp2:        +29.8°C  (crit = +106.0°C)
-
 ```
 
 This happens after suspend/resume. The **REAL** temperature is +58.0°C but is falsely reported as +27.8°C after resuming. So the heat protection would only work once to suspend and never work again until a reboot. So the system would hit critical (+106.0°C) at which point a hard power off is performed and data can be corrupted.
@@ -69,7 +67,6 @@ It operates in two modes:
 
 ``` 
 apt-get install thermald
-
 ```
 
 
@@ -118,7 +115,6 @@ Intel's ***Powerclamp*** driver is defined here ([kernel.org - Intel Power Clamp
 
 ``` 
 lsmod | grep intel
-
 ```
 
 And you should see a list similar to this:
@@ -130,7 +126,6 @@ intel_rapl             20480  0
 intel_powerclamp       16384  0
    (.... more intel drivers ....)
 snd                    81920  18 snd_hwdep,snd_timer,snd_hda_codec_hdmi,snd_hda_codec_idt,snd_pcm,snd_seq,snd_rawmidi,snd_hda_codec_generic,snd_hda_codec,snd_hda_intel,snd_seq_device
-
 ```
 
 If you see `intel_rapl` and `intel_powerclamp` you know it's working and simply waiting temps to exceed 85C.
@@ -173,7 +168,6 @@ To disable Intel Turbo Boost use:
 
 ``` 
 echo "1" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
-
 ```
 
   [1]: {% post_url /2017/2017-01-25-Stop-cpu-from-overheating %}

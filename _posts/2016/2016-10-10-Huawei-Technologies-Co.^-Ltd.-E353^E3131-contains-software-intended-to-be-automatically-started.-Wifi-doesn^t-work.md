@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "7,006 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-10-Huawei-Technologies-Co.^-Ltd.-E353^E3131-contains-software-intended-to-be-automatically-started.-Wifi-doesn^t-work.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ Disk identifier: 0xc3072e18
 
 Device     Boot Start     End Sectors  Size Id Type
 /dev/sdb1  *     8064 7819263 7811200  3,7G  c W95 FAT32 (LBA)
-
 ```
 
 The output with your adapter unplugged ends at line 107.

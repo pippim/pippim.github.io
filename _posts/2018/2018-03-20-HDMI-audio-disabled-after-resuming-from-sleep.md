@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "948 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-20-HDMI-audio-disabled-after-resuming-from-sleep.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ An easier way is to check this:
 ``` 
 $ cat /etc/pulse/default.pa | grep switch-on-port-available
 load-module module-switch-on-port-available
-
 ```
 
 If the second line doesn't begin with a `#` (commented out) then edit the file and insert a `#` in the beginning.

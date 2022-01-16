@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "318 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-07-Is-it-possible-to-patch-without-spiking-the-CPU^.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ I think this [answer][1] contains everything you are looking for:
 
 ``` 
 sudo apt-get install cgroup-bin cgroup-lite cgroup-tools cgroupfs-mount libcgroup1
-
 ```
 
 2) I edited conf files like this:
@@ -41,8 +40,7 @@ author "Serge Hallyn <serge.hallyn@canonical.com>"
 start on mounted MOUNTPOINT=/sys/fs/cgroup
 
 pre-start script
-	test -x /bin/cgroups-mount || { stop; exit 0; }
-```
+	test -x /bin/cgroups-mount || { stop; exit 0; }```
 
 	test -d /sys/fs/cgroup || { stop; exit 0; }
 	/bin/cgroups-mount
@@ -51,15 +49,13 @@ pre-start script
 end script
 
 post-stop script
-	if [ -x /bin/cgroups-umount ]
-```
+	if [ -x /bin/cgroups-umount ]```
 
 	then
 		/bin/cgroups-umount
 	fi
 ``` 
 end script
-
 ```
 
 `sudo -H gedit /etc/cgconfig.conf`
@@ -126,7 +122,6 @@ group media-players {
 }
 
 cgconfigparser -l /etc/cgconfig.conf
-
 ```
 
 `sudo -H gedit /etc/cgrules.conf`
@@ -135,7 +130,6 @@ cgconfigparser -l /etc/cgconfig.conf
 user:process                                         subsystems   group
 [user]:/usr/lib/chromium-browser/chromium-browser   cpu,memory      browsers
 [user]:/usr/bin/clementine	            		  cpu,memory	 media-players
-
 ```
 
 **Note: This section needs to be updated with `/usr/bin/apt`**
@@ -146,14 +140,12 @@ I edited the `GRUB_CMDLINE_LINUX_DEFAULT` line in `/etc/default/grub`:
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="cgroup_enable=memory swapaccount=1"
-
 ```
 
 Updating it: 
 ``` 
 
 sudo update-grub
-
 ```
 
 3) And finally rebooting to apply changes.

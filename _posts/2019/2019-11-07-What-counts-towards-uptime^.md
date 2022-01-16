@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "701 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-07-What-counts-towards-uptime^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ The `uptime` is grossly misleading. If you use `uptime -s` it is more meaningful
 ``` 
 $ uptime -s
 2019-10-31 05:30:09
-
 ```
 
 Now you can see it simply shows you the last boot time. If you want to know the real uptime see [this answer][1]. Sample output:
@@ -50,7 +49,6 @@ Nov 06 05:50:45 to Nov 06 16:22:54 lasting 37,929 seconds
 Linux uptime 572,689 seconds (6 Days 15 Hours 4 Minutes 49 Seconds)
 13 Suspends 366,910 seconds (4 Days 5 Hours 55 Minutes 10 Seconds)
 Real uptime 205,779 seconds (2 Days 9 Hours 9 Minutes 39 Seconds)
-
 ```
 
 

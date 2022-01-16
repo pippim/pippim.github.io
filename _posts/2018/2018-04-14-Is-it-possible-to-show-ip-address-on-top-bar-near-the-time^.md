@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "3,249 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-14-Is-it-possible-to-show-ip-address-on-top-bar-near-the-time^.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ default_interface=$(route -n | awk '$1 == "0.0.0.0" {print $8; exit}')
 ip_address=$(ifconfig "$default_interface" | awk 'sub(/.* inet addr:/, "") {print $1}')
 echo $ip_address
 192.168.1.66
-
 ```
 
 ## Install Sysmonitor Indicator
@@ -43,7 +42,6 @@ You now need an Application Indicator that to let's you pick and choose the info
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 sudo apt-get update
 sudo apt-get install indicator-sysmonitor
-
 ```
 
 You need to configure the name of the bash script that is called and the update interval in the `Advanced` tab of the `Preferences` panel:
@@ -58,7 +56,6 @@ Here's a complaint I have to the developer the input field for the command is ab
 
 ``` 
 ~/bin/indicator-sysmonitor-display
-
 ```
 
 I already have a main bash script so I created an abbreviated version for this answer.
@@ -76,7 +73,6 @@ systray=$(ifconfig "$default_interface" | awk 'sub(/.* inet addr:/, "") {print $
 echo "$systray" # sysmon-indidicator will put echo string into systray for us.
 
 exit 0
-
 ```
 
 

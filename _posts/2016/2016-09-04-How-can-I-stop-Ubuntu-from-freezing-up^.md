@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "703 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-04-How-can-I-stop-Ubuntu-from-freezing-up^.md
 toc:          false
 navigation:   false
@@ -46,7 +46,6 @@ wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.4/linux-headers-4.8.4-04
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.4/linux-image-4.8.4-040804-generic_4.8.4-040804.201610220733_amd64.deb
 sudo dpkg -i *.deb
 sudo reboot
-
 ```
 
 Using the Website address and adding in the file name, you complete the entire `wget` command. Study this technique so you can repeat it with any kernel version. We want `amd64` for 64-bit versions of Ubuntu running on Intel and AMD chips. We want `generic` which is the mainstream version of the kernel. `low-latency` on the other hand is difficult to setup and maintain but necessary for those in the sound recording industry and similar industries.

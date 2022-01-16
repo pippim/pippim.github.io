@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,917 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-07-Output-channel-for-audio-resets-after-every-reboot.md
 toc:          false
 navigation:   false
@@ -23,21 +23,18 @@ You can have pulse audio stay on the last selected output source no matter what:
 
 ``` 
 sudo -H gedit /etc/pulse/default.pa
-
 ```
 
 Find this line:
 
 ``` 
 load-module module-switch-on-port-available
-
 ```
 
 and change it to:
 
 ``` 
 # load-module module-switch-on-port-available
-
 ```
 
 An additional step is needed as listed in:
@@ -48,7 +45,6 @@ We need to add the line:
 
 ``` 
 set-sink-port <name|index>  analog-output-headphones
-
 ```
 
 The `name` or `index` of the active sink, and available ports can be displayed with `pactl list sinks`. The way I spelled `analog-output-lineout` may be incorrect.
@@ -59,7 +55,6 @@ Restart pulse audio with:
 
 ``` 
 pulseaudio -k
-
 ```
 
 In your sound settings select "Line Out" and it will always stay connected even if you physically unplug it.

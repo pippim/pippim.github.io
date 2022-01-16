@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "8,576 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Keys-get-^stuck^-randomly-and-type-endless-line-of-a-particular-letter^command.md
 toc:          false
 navigation:   false
@@ -24,14 +24,12 @@ In Ubuntu 18.04 issue this command:
 ``` 
 $ gsettings get org.gnome.desktop.peripherals.keyboard repeat
 true
-
 ```
 
 If the result is `true` then turn off keyboard repeat using this command:
 
 ``` 
 $ gsettings set org.gnome.desktop.peripherals.keyboard repeat false
-
 ```
 
 The other related commands you can use are:
@@ -41,6 +39,5 @@ $ gsettings get org.gnome.desktop.peripherals.keyboard delay
 uint32 500
 $ gsettings get org.gnome.desktop.peripherals.keyboard repeat-interval
 uint32 30
-
 ```
 

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "464 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-17-How-to-remove-the-GobiNet-and-GobiSerial-driver-from-ubuntu-16.04.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ To remove drivers from memory use:
 ``` 
 modprobe -vr GobiSerial
 modprobe -vr GobiNet
-
 ```
 
 To prevent drivers from loading in the first place see blacklisting:

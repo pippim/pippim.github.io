@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "757 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-My-wifi-cuts-out-after-awhile.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ $ cat /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
 wifi.powersave = 3
 # Slow sleep fix: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1670041
 #wifi.powersave = 2
-
 ```
 
 - Edit the Network Manager file shown above.
@@ -53,7 +52,6 @@ You can fix it by running in terminal
 
 ``` 
 sudo tee /etc/modprobe.d/iwlwifi-opt.conf <<< "options iwlwifi 11n_disable=1"
-
 ```
 
 then reboot.
@@ -70,7 +68,6 @@ From this [Q&A][3] you can try:
 ``` 
 sudo modprobe -r iwlwifi
 sudo modprobe iwlwifi
-
 ```
 
 If this works for the current session, it can be setup to run automatically on startup.

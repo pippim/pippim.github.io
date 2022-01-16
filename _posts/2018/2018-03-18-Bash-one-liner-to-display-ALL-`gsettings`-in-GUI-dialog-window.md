@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,134 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-18-Bash-one-liner-to-display-ALL-`gsettings`-in-GUI-dialog-window.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ If you don't have `yad` installed already you need to use:
 
 ``` bash
 sudo apt install yad
-
 ```
 
 `yad` lets you sort the list by any column in ascending/descending order. You can grab the scroll bar to quickly move up and down the list. The Up/Down arrow, <kbd>PgUp</kbd>, <kbd>PgDn</kbd>, <kbd>Home</kbd> and <kbd>End</kbd> keys navigate as expected.
@@ -40,14 +39,12 @@ Here's the bash one-liner code you can copy and paste into your terminal window:
 
 ``` bash
 gsettings list-recursively | sed 's/  */\n/;s/  */\n/;s/\&/\&amp;/g' | yad --list --title "gsettings" --item-seperator='\n' --width=1800 --height=800 --wrap-width=600 --column=Group --column=Key --column=Setting --no-markup
-
 ```
 
 This is for a 1080p display where the screen is 1920 pixels wide. If your screen is smaller, reduce the size of these arguments:
 
 ``` bash
 --width=1800 --height=800 --wrap-width=600
-
 ```
 
 # Sample output
@@ -67,7 +64,6 @@ Here is the new `gsettings` I discovered:
 ``` bash
 $ gsettings get org.gnome.settings-daemon.plugins.power lid-close-suspend-with-external-monitor
 false
-
 ```
 
 The `gsettings` contradicts a `systemd` setting I have:
@@ -75,7 +71,6 @@ The `gsettings` contradicts a `systemd` setting I have:
 ``` bash
 $ cat /etc/systemd/logind.conf | grep -i lidswitchdock | grep -vF "#"
 HandleLidSwitchDocked=suspend
-
 ```
 
 # dconf-editor a complete GUI application
@@ -86,7 +81,6 @@ To summarize the link, install it using:
 
 ``` bash
 sudo apt install dconf-tools
-
 ```
 
 The whole link is highly recommended reading and it covers `gsettings` in depth as well.

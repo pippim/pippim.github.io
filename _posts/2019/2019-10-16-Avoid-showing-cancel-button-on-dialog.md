@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "4,022 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-16-Avoid-showing-cancel-button-on-dialog.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ You can relabel the button but you can't remove it:
 
 ``` 
 $ zenity --list --cancel-label="Go Back" --column="Column 1"
-
 ```
 
 Will give you:
@@ -42,7 +41,6 @@ Both `yad` and `zenity` allow you to use GUI dialog boxes from a bash script or 
 
 ``` 
 sudo apt install yad
-
 ```
 
 Works in all distros.

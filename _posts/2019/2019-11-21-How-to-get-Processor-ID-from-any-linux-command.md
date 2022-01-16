@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "734 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-21-How-to-get-Processor-ID-from-any-linux-command.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ From comments:
 
 ``` 
 sudo dmidecode -t processor | grep -E ID |  sed 's/.*: //'
-
 ```
 
 The `sed` command is used to remove the line prefix: "       ID: " as explained in this popular answer:

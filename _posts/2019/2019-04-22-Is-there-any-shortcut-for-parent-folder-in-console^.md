@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "428 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-22-Is-there-any-shortcut-for-parent-folder-in-console^.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ $include /etc/inputrc
 # April 22, 2019 AU Q&A: https://askubuntu.com/q/1135306/307523
 # Make Shift-tab act like "cd ../" (move to parent directory)
 "\e[Z": "cd ../"
-
 ```
 
 Save the file and open a new terminal.

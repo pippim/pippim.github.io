@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "25,279 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-19-change-min-and-max-cpu-frequency.md
 toc:          false
 navigation:   false
@@ -48,7 +48,6 @@ $ sudo -i
 800000  844187  3500000
 # exit
 $
-
 ```
 
 The minimum frequency, current frequency and maximum frequency is listed for each CPU. In my case it is 8 CPUs, in your case it will be 4 CPUs (dual core x 2 threads per core).
@@ -57,7 +56,6 @@ Values are listed in MHz with three decimals. So CPU 0 showing:
 
 ``` 
 800000  900757  3500000
-
 ```
 
 - Minimum Frequency 800.000 MHz
@@ -70,7 +68,6 @@ To change the maximum frequency lower (you can't change it higher) use this comm
 
 ``` 
 for x in /sys/devices/system/cpu/*/cpufreq/; do echo 1700000 | sudo tee $x/scaling_max_freq; done
-
 ```
 
 

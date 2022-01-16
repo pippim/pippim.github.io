@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,314 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-26-Wayland-session-on-Ubuntu-18.04:-why-is-^usr^bin^Xwayland-running^.md
 toc:          false
 navigation:   false
@@ -36,7 +36,6 @@ To summarize many Q&A's on running an X applicatin within Wayland you need to us
 
 ``` 
 xhost +si:localuser:root
-
 ```
 
 

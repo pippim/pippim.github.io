@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "12,578 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-04-How-do-I-update-kernel-to-the-latest-mainline-version^.md
 toc:          false
 navigation:   false
@@ -40,7 +40,6 @@ Open a terminal session with <kbd>ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and use
 ``` 
 cd Downloads # Assuming this is your browser download directory
 rm *.deb     # This erases all *.deb files, ensure only old ones are here
-
 ```
 
 Now toggle back to the download screen above and single-click on all three of the `.deb` kernel downloads. After downloads complete (you'll see status in your browser) toggle back to terminal session and use:
@@ -49,7 +48,6 @@ Now toggle back to the download screen above and single-click on all three of th
 sudo dpkg -i *.deb
 rm *.deb
 reboot
-
 ```
 
 Voila! - you are running the latest kernel when first option in grub boot menu is selected. Your older kernel versions are still available under grub's **Advanced Options** menu.

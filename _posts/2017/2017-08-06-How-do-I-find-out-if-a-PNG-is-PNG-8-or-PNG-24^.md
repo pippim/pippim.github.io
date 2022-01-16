@@ -12,7 +12,7 @@ votes:        "28 "
 favorites:    
 views:        "14,503 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-06-How-do-I-find-out-if-a-PNG-is-PNG-8-or-PNG-24^.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ rick@dell:~/Pictures$ file "256 colors.jpg"
 ───────────────────────────────────────────────────────────────────────────────
 rick@dell:~/Pictures$ file "vnStat.png"
 vnStat.png: PNG image data, 410 x 121, 8-bit/color RGB, non-interlaced
-
 ```
 
 The first instance is likely a camera picture and the second instance I took using a screen capture.
@@ -38,8 +37,7 @@ The `identify` command, which my answer is based on, appears to work correctly i
 ``` 
 rick@dell:~/Pictures$ identify "256 colors.jpg"
 256 colors.jpg JPEG 800x800 800x800+0+0 8-bit sRGB 45KB 0.000u 0:00.000
-## 
-```
+## ```
 
 
 
@@ -135,7 +133,6 @@ Image: vnStat.png
   User time: 0.000u
   Elapsed time: 0:01.000
   Version: ImageMagick 6.8.9-9 Q16 x86_64 2017-07-31 http://www.imagemagick.org
-
 ```
 
 
@@ -146,7 +143,6 @@ For a summary report omit all parameters:
 ``` 
 $ identify vnStat.png
 vnStat.png PNG 410x121 410x121+0+0 8-bit sRGB 14.7KB 0.000u 0:00.000
-
 ```
 
 
@@ -165,7 +161,6 @@ Channel depth:
   red: 8-bit
   green: 8-bit
   blue: 8-bit
-
 ```
 
 If your PNG image is 32 bit you will see:
@@ -176,7 +171,6 @@ Channel depth:
   green: 8-bit
   blue: 8-bit
   alpha: 8-bit
-
 ```
 
 However this answer is not complete because 8-bit color also shows 8 bits for Red, Green and Blue, only a color palette is used to limit the number of selections (like in good old Windows 2.0).
@@ -195,7 +189,6 @@ Using:
 ``` 
 identify -verbose  8_bit.png | grep colors
     png:PLTE.number_colors: 249
-
 ```
 
 We see there are 249 colors used. The maximum possible with 8 bits is 256 colors.
@@ -213,7 +206,6 @@ Using:
 ``` 
 identify -verbose  4_bit.png | grep colors
     png:PLTE.number_colors: 16
-
 ```
 
 We see there are 16 colors used which is the maximum color combinations possible with 4 bits.
@@ -231,7 +223,6 @@ Using:
 ``` 
 $ identify -verbose  2_bit.png | grep colors
     png:PLTE.number_colors: 4
-
 ```
 
 We see there are 4 colors used which is the maximum color combinations possible with 2 bits.

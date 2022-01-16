@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "6,422 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-10-I-cannot-use-MySql-as-normal-user-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ At the command line, log in to MySQL as the root user:
 
 ``` 
 mysql -u root -p
-
 ```
 
 Type the MySQL root password, and then press Enter.
@@ -37,14 +36,12 @@ To create a database user, type the following command. Replace `username` with t
 
 ``` 
 GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
-
 ```
 
 This command grants the user all permissions. However, you can grant specific permissions to maintain precise control over database access. For example, to explicitly grant the `SELECT` permission, you would use the following command:
 
 ``` 
 GRANT SELECT ON *.* TO 'username'@'localhost';
-
 ```
 
 For more information about setting MySQL database permissions, please visit [MySQL - 13.7.1.6 GRANT Statement](https://dev.mysql.com/doc/refman/5.5/en/grant.html).
@@ -55,7 +52,6 @@ To log in to MySQL as the user you just created, type the following command. Rep
 
 ``` 
 mysql -u username -p
-
 ```
 
 Type the user's password, and then press Enter.
@@ -64,14 +60,12 @@ To create a database, type the following command. Replace `dbname` with the name
 
 ``` 
 CREATE DATABASE dbname;
-
 ```
 
 To work with the new database, type the following command. Replace `dbname` with the name of the database you created above:
 
 ``` 
 USE dbname;
-
 ```
 
 You can now work with the database. For example, the following commands demonstrate how to create a basic table named example, and how to insert some data into it:
@@ -79,7 +73,6 @@ You can now work with the database. For example, the following commands demonstr
 ``` 
 CREATE TABLE example ( id smallint unsigned not null auto_increment, name varchar(20) not null, constraint pk_example primary key (id) );
 INSERT INTO example ( id, name ) VALUES ( null, 'Sample data' );
-
 ```
 
 Much more can be found in the tutorial linked above such as:

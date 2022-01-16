@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "438 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-10-Long-kernel-load-time.md
 toc:          false
 navigation:   false
@@ -106,7 +106,6 @@ $ lspci | tail -8
 3c:00.0 Network controller: Qualcomm Atheros QCA6174 802.11ac Wireless Network Adapter (rev 32)
 3d:00.0 Unassigned class [ff00]: Realtek Semiconductor Co., Ltd. RTS5227 PCI Express Card Reader (rev 01)
 3e:00.0 Non-Volatile memory controller: Samsung Electronics Co Ltd NVMe SSD Controller SM961/PM961
-
 ```
 
 If my system had the error then it would be caused by the Thunderbolt subsystem and I might just start by unplugging my Thunderbolt DPI to HDMI adapter.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,918 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-14-Ubuntu-goes-suspended-after-login-if-lid-is-closed.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ change the line:
 
 ``` 
 #HandleLidSwitch=suspend
-
 ```
 
 to:
 
 ``` 
 HandleLidSwitch=ignore
-
 ```
 
 Save the file and reboot.
@@ -47,7 +45,6 @@ $ grep -i lid /etc/systemd/logind.conf
 HandleLidSwitch=ignore
 #HandleLidSwitchDocked=ignore
 #LidSwitchIgnoreInhibited=yes
-
 ```
 
 Also check your Ubuntu power settings for what to do when lid is closed. For myself I have to open lid to access power button so the settings there are irrelevant. Since you can access power button with lid closed it may be significant.

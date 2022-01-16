@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "2,541 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-02-Can-I-use-cron-to-chime-at-top-of-hour-like-a-grandfather-clock^.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ In order for `cron` to play sound files it needs to `export` an environment vari
 
 ``` bash
 export XDG_RUNTIME_DIR="/run/user/1000"
-
 ```
 
 Once this is done in your script sounds will play.
@@ -45,7 +44,6 @@ As pointed out by another answer **your** user ID may not always be `1000`. To f
 $ id
 
 uid=1000(rick) gid=1000(rick) groups=1000(rick),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
-
 ```
 
 If your user ID is not 1000, then change the script to your ID.
@@ -60,7 +58,6 @@ If your user ID is not 1000, then change the script to your ID.
 # m h  dom mon dow   command
 00 *    *   *   *    /usr/local/bin/top-of-hour-chime    >/dev/null
 00,30 * *   *   *    /usr/local/bin/bottom-of-hour-chime >/dev/null
-
 ```
 
 Most users setup `cron` to use the `nano` editor. Use these control keys in `nano` to save your work:
@@ -75,7 +72,6 @@ If you don't have the `>/dev/null` at the end of the lines `cron` tries to email
 
 ``` bash
 Oct 02 10:00:07 dell CRON[21259]: (CRON) info (No MTA installed, discarding output)
-
 ```
 
 ## Configuring `cron` to display pop-up notifications
@@ -84,7 +80,6 @@ The script  displays a pop-up notification message at the top of every hour. So 
 
 ``` bash
 eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome-session)/environ)";
-
 ```
 
 ### Contents of `top-of-hour-chime`
@@ -117,7 +112,6 @@ pactl set-sink-volume 0 -25%
 DISPLAY=:0 notify-send --urgency=critical --icon=/usr/share/icons/gnome/256x256/status/appointment-soon.png "It is ""$ZHOUR"" o'clock"
 paplay '/usr/share/sounds/ubuntu/ringtones/Melody piano.ogg'
 pactl set-sink-volume 0 +25%
-
 ```
 
 The `export XDG_RUNTIME_DIR...` is necessary to get sound to play. This is because `cron` runs in minimal environment. This line should be omitted first if it you use a third party sound player. Then if no sound put the line back. Then still if no sound, well happy hunting!
@@ -148,7 +142,6 @@ export XDG_RUNTIME_DIR="/run/user/1000"
 pactl set-sink-volume 0 -25%
 paplay /usr/share/sounds/ubuntu/ringtones/Bliss.ogg
 pactl set-sink-volume 0 +25%
-
 ```
 
 

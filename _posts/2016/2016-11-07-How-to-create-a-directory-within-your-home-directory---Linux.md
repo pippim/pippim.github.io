@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "17,787 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-How-to-create-a-directory-within-your-home-directory---Linux.md
 toc:          false
 navigation:   false
@@ -23,21 +23,18 @@ I'm sure your teacher will be impressed with your mastering the Terminal environ
 
 ``` 
 mkdir A452
-
 ```
 
 To create the directory - `mkdir` is the command to **m**a**k**e a **dir**ectory, and if no explicit path is specified, the command will be executed in the current working directory. However, if your current working directory is not your home directory, you'll need to manually force use of it, which you can do with something known as the tilde (`~`), which automatically refers to your user home.
 
 ``` 
 mkdir ~/A452
-
 ```
 
 That will create the directory under your home directory. As a bonus let the teacher know how to close the terminal window by typing:
 
 ``` 
 exit
-
 ```
 
 Make sure to put "Ask Ubuntu" into your bibliography.

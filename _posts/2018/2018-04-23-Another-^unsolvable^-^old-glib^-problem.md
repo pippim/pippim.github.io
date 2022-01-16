@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "844 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-23-Another-^unsolvable^-^old-glib^-problem.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ Desired=Unknown/Install/Remove/Purge/Hold
 ii  libglib2.0-0:amd6 2.48.2-0ubunt amd64         GLib library of C routines
 ii  libglib2.0-bin    2.48.2-0ubunt amd64         Programs for the GLib library
 ii  libglib2.0-data   2.48.2-0ubunt all           Common files for GLib library
-
 ```
 
 Although my Ubuntu 16.04 works perfectly for my needs it appears I have similar `glib` errors to you. I'll just ignore them though because I don't need to reinstall `glib`:
@@ -69,7 +68,6 @@ The following packages have unmet dependencies:
                   Depends: libglib2.0-bin (= 2.48.0-1ubuntu4)
                   Depends: zlib1g-dev but it is not going to be installed
 E: Unable to correct problems, you have held broken packages.
-
 ```
 
 On one hand the messages say the most current version is already installed on the other hand it says incorrect versions are installed. At the end it says there are broken packages.

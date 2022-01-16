@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "9,024 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-11-How-to-change-the-Unity-lockscreen-wallpaper^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ This solution will change the lock-screen wallpaper and the logon wallpaper (gre
 
 ``` 
 gksu gedit /usr/share/glib-2.0/schemas/10_unity_greeter_background.gschema.override
-
 ```
 
 Then add the lines below:
@@ -34,7 +33,6 @@ Then add the lines below:
 [com.canonical.unity-greeter]
 draw-user-backgrounds=false
 background='/home/user_name/Pictures/picture_name.png'
-
 ```
 
 In my example change `/home/user_name/Pictures/picture_name.png` to whatever directory and file name you want to use. Note `.jpg` file formats are also accepted.
@@ -43,7 +41,6 @@ Next compile the schema using:
 
 ``` 
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
-
 ```
 
 The final step is to log-out or reboot.

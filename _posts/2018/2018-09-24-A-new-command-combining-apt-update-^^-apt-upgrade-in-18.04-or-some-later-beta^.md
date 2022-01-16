@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,746 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-24-A-new-command-combining-apt-update-^^-apt-upgrade-in-18.04-or-some-later-beta^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ update () {
     sudo apt-get update
     sudo apt-get upgrade "$@"
 }
-
 ```
 
 Save the file, close any open terminal(s) and open a new terminal.
@@ -58,7 +57,6 @@ Inst google-chrome-stable [69.0.3497.92-1] (69.0.3497.100-1 Google:1.0/stable [a
 Inst binutils [2.26.1-1ubuntu1~16.04.6] (2.26.1-1ubuntu1~16.04.7 Ubuntu:16.04/xenial-updates [amd64])
 Conf google-chrome-stable (69.0.3497.100-1 Google:1.0/stable [amd64])
 Conf binutils (2.26.1-1ubuntu1~16.04.7 Ubuntu:16.04/xenial-updates [amd64])
-
 ```
 
 You will be prompted for your password if you haven't used the `sudo` command in awhile.

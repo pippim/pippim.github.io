@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "17,977 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-04-Is-it-still-bad-to-use-swap-on-a-modern-SSD^.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ First step is to install `nvme-cli` because it provides the most information:
 
 ``` 
 sudo apt install nvme-cli
-
 ```
 
 Next gather information available from SSD:
@@ -68,7 +67,6 @@ Temperature Sensor 5                : 0 C
 Temperature Sensor 6                : 0 C
 Temperature Sensor 7                : 0 C
 Temperature Sensor 8                : 0 C
-
 ```
 
 The most important field is `Percentage used` which shows as 0%. This isn't disk usage percent but life used percent. I've had this drive since October 2017 and now it's May 2018. As soon as `Percentage used` hits 1% I can multiply the number of months I've owned it by 100 to find out when it will die. But they say the drive typically lives longer than that.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "748 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-18-Selecting-files-from-different-folders.md
 toc:          true
 navigation:   true
@@ -55,7 +55,6 @@ The list of directories is cut down from > 20,000 (the bafman limit) using this 
 
 ``` 
 tree --noreport -danifI "src*|dev|lib|media|mnt|proc|root|run|sys|tmp|tmpfs|var|usr" / > "$bafmanTemp"
-
 ```
 
 If you are a programmer you might want to see all the "src*" directories and would remove this from the code.

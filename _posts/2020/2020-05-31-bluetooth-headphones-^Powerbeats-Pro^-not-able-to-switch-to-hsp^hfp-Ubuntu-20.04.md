@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,918 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-31-bluetooth-headphones-^Powerbeats-Pro^-not-able-to-switch-to-hsp^hfp-Ubuntu-20.04.md
 toc:          false
 navigation:   false

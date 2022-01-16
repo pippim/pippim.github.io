@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "8,935 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-13-Is-there-a-text-editor-that-can-run-shell-scripts^.md
 toc:          false
 navigation:   false
@@ -47,7 +47,6 @@ Install `gedit-plugs` with the command:
 
 ``` 
 sudo apt install gedit-plugins
-
 ```
 
 ## Step 3. Activate "Embedded Terminal"

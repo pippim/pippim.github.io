@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "199,582 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-13-Can-I-change-the-font-of-the-text-mode-console^.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ now
 
 # ASCII Linux distribution display
 screenfetch
-
 ```
 
 Now when selected <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F1</kbd> through <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F6</kbd> and get nice big fonts.
@@ -45,7 +44,6 @@ Arabic-VGA14.psf.gz               Lat15-Terminus24x12.psf.gz
     (... SNIP ...)
 Lat15-Terminus14.psf.gz           Vietnamese-Fixed16.psf.gz
 Lat15-Terminus16.psf.gz           Vietnamese-Fixed18.psf.gz
-
 ```
 
 ## Sample screen

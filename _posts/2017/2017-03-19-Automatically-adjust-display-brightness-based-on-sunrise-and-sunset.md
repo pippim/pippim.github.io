@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "5,211 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset.md
 toc:          true
 navigation:   true
@@ -105,7 +105,6 @@ else
 fi
 
 done
-
 ```
 
 Before saving the script replace the two occurrences of `/canada/edmonton` with your own country and city. Visit the site `www.timeanddate.com` to get the exact name or number. For example, "Paris, USA" has dozens of names so they'll contain a number such as `/worldclock/@5205082` for "Paris, PA USA".
@@ -125,7 +124,6 @@ With sudo powers edit the file `/etc/cron.daily/sun-hours` and paste this:
 
 sleep 60 # give time for network to come up.
 /usr/local/bin/sun-hours
-
 ```
 
 Mark both files as executable with `sudo chmod a+x ___/sun-hours` where "___" is the directory for each file.
@@ -144,7 +142,6 @@ Mark both files as executable with `sudo chmod a+x ___/sun-hours` where "___" is
 ${color orange}${voffset 2}${hr 1}
 ${color}${goto 5}Day: ${color green}${execpi 300 cat /usr/local/bin/sunrise}  ${color}Night: ${color green}${execpi 300 cat /usr/local/bin/sunset}  ${color}Level: ${color green}${execpi 10 cat cat /sys/class/backlight/intel_backlight/brightness}
 ${color orange}${voffset 2}${hr 1}
-
 ```
 
 This is what it looks like:
@@ -197,14 +194,12 @@ done
 
 # write hidden configuration file using array (fields automatically separated by " ")
 echo "${CfgArr[@]}" > /usr/local/bin/.auto-brightness-config
-
 ```
 
 Mark the file as executable using:
 
 ``` bash
 chmod a+x /usr/local/bin/auto-brightness-config
-
 ```
 
 
@@ -344,14 +339,12 @@ while true ; do
     sleep 60 # reset brightness once / minute.
         
 done # End of forever loop
-
 ```
 
 Mark the file as executable using:
 
 ``` bash
 chmod a+x /usr/local/bin/display-auto-brightness
-
 ```
 
 **NOTE:** Unsuccessfully revised August 26, 2017 to correct bug where program would stop when last brightness level was equal to minimum or maximum brightness and current minute's adjustment value is blank (zero). Successfully fixed December 2, 2017 but not published until February 17, 2018. Ooops!
@@ -368,7 +361,6 @@ Cron is used to start the main application every boot. Create the file `/etc/cro
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 @reboot   root    /usr/local/bin/display-auto-brightness
-
 ```
 
 # Instant brightness adjustment resuming from suspend
@@ -416,14 +408,12 @@ case $1/$2 in
     echo "display-auto-brightness: sleep pID: '$pID' has been killed."
     ;;
 esac
-
 ```
 
 Mark the file as executable using:
 
 ``` bash
 chmod a+x /lib/systemd/system-sleep/display-auto-brightness
-
 ```
 
 
@@ -465,7 +455,6 @@ fi
 echo "$systray" # sysmon-indidicator will put echo string into systray for us.
 
 exit 0
-
 ```
 
 This Q&A ([Can BASH display in systray as application indicator?][6]) describes how to setup indicator-sysmonitor.

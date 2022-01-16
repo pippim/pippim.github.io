@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "19,857 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-23-How-can-I-check-the-NVME-specs.md
 toc:          false
 navigation:   false
@@ -45,7 +45,6 @@ nvme0n1                                                 477G Samsung SSD 960 PRO
 ├─nvme0n1p4 ntfs   NVMe_Win10            /mnt/c       414.9G 
 ├─nvme0n1p2 vfat                         /boot/efi       99M 
 └─nvme0n1p7 ntfs   Shared_WSL+Linux      /mnt/e           9G 
-
 ```
 
 You can see my NVMe SSD is a **Samsung SSD 960 PRO 512GB**
@@ -58,7 +57,6 @@ As pointed out in comments a typo was made for `MODEL` and the output was incomp
 $ cat ~/.bashrc | grep lsdrv
 # Create lsdrv version of lsblk without UUID's
 alias lsdrv="lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL"
-
 ```
 
 Now in the terminal you can simply use `lsdrv` to see all your drives complete with model number and other useful information.

@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "1,286 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-15-How-can-I-make-stars-appear-when-I-type-sudo-password^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ After entering `sudo` at the Terminal if you want stars / asterisks to appear wi
 
 ``` 
 sudo visudo
-
 ```
 
 Locate the line containing `env_reset` and add the parameter `, pwfeedback` behind it.  Here is an example:
@@ -54,7 +53,6 @@ Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
 
 ^G Get Help     ^O Write Out    ^W Where Is     ^K Cut Text     ^J Justify      ^C Cur Pos      ^Y Prev Page
 ^X Exit         ^R Read File    ^\ Replace      ^U Uncut Text   ^T To Spell     ^_ Go To Line   ^V Next Page
-
 ```
 
 After making changes save the file using <kbd>Ctrl</kbd>+<kbd>O</kbd> to write the file. You will be prompted for the file name but simply press <kbd>Enter</kbd> to accept the default. After saving, exit the editor using <kbd>Ctrl</kbd>+<kbd>X</kbd>.

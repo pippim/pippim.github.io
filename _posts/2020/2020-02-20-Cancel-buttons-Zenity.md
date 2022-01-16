@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,454 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-02-20-Cancel-buttons-Zenity.md
 toc:          false
 navigation:   false
@@ -44,7 +44,6 @@ however I like the shortcut of:
 
 ``` 
 [[ "$?" != "0" ]] && exit 1
-
 ```
 
 No matter which method you choose the importance is consistency with your programming style so those that follow in your footsteps and maintain your code can think inside your head.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "973 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-05-Need-to-reconnect-ethernet-cable-to-get-it-work-after-docking-laptop-into-dock-station.md
 toc:          false
 navigation:   false
@@ -52,7 +52,6 @@ case "${1}/${2}" in
    resume|thaw|post*)
       restart_ethernet;;
 esac
-
 ```
 
 
@@ -63,7 +62,6 @@ Note the line:
 
 ``` text
 /usr/bin/logger 'systemctl restart NetworkManager.service (SUPPRESED)'
-
 ```
 
 Sometimes simply restarting the network manager is all that is needed and you can try that too.
@@ -72,7 +70,6 @@ You'll need sudo powers to save the file. For good measure I always mark these s
 
 ``` text
 sudo chmod a+x /lib/systemd/system-sleep/r8169-reset
-
 ```
 
 You can check `/var/log/syslog` to see output from the script.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,937 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-28-Unable-to-wake-with-external-keyboard-while-lid-is-closed.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ You don't mention if your keyboard is wired or wireless. The basic steps are:
 
 ``` 
 grep . /sys/bus/usb/devices/*/power/wakeup
-
 ```
 
 And then (assuming 8 ports are returned) use:
@@ -43,7 +42,6 @@ echo enabled > /sys/bus/usb/devices/usb6/power/wakeup
 echo enabled > /sys/bus/usb/devices/usb7/power/wakeup
 echo enabled > /sys/bus/usb/devices/usb8/power/wakeup
 exit
-
 ```
 
 See the accepted answer for all the steps.

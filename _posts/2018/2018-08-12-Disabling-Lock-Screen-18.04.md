@@ -12,7 +12,7 @@ votes:        "63 "
 favorites:    
 views:        "43,767 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Disabling-Lock-Screen-18.04.md
 toc:          false
 navigation:   false
@@ -28,21 +28,18 @@ First use this command to discover current settings:
 ``` 
 $ gsettings get org.gnome.desktop.lockdown disable-lock-screen
 false
-
 ```
 
 Now set it to `true` using this command:
 
 ``` 
 gsettings set org.gnome.desktop.lockdown disable-lock-screen 'true'
-
 ```
 
 If you are unhappy with the new setting you can reverse it using:
 
 ``` 
 gsettings set org.gnome.desktop.lockdown disable-lock-screen 'false'
-
 ```
 
 
@@ -58,21 +55,18 @@ To check screen saver lock status use:
 ``` 
 $ gsettings get org.gnome.desktop.screensaver lock-enabled
 true
-
 ```
 
 If true you can turn off screen saver locking with:
 
 ``` 
 gsettings set org.gnome.desktop.screensaver lock-enabled false
-
 ```
 
 To reverse the setting back use:
 
 ``` 
 gsettings set org.gnome.desktop.screensaver lock-enabled true
-
 ```
 
 

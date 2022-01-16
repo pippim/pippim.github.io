@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "226 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-26-Install-DPKG-package-without-updating-and-upgrating-the-whole-system.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ What I do when I want a new package is:
 ``` 
 sudo apt update
 sudo apt install paxkage-name
-
 ```
 
 The `update` doesn't remove software as happened with your Firefox.

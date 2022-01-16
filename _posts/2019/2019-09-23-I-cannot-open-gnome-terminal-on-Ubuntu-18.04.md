@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,574 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-23-I-cannot-open-gnome-terminal-on-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -30,14 +30,12 @@ WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 gnome-terminal/xenial,now 3.18.3-1ubuntu1 amd64 [installed]
 gnome-terminal-data/xenial,xenial,now 3.18.3-1ubuntu1 all [installed]
-
 ```
 
 If it doesn't say "`[installed]`" at the end of the last two lines then let's install it with:
 
 ``` 
 sudo apt install gnome-terminal
-
 ```
 
 Hopefully the problem is as simple to fix as that...
@@ -49,7 +47,6 @@ Sounds like you need to use:
 ``` 
 sudo rm /usr/bin/python3
 sudo ln -s python3.5 /usr/bin/python3
-
 ```
 
 Source: [Gnome terminal will not start](Gnome terminal will not start)

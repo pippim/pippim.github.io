@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "263 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Desktop-shortcut-to-Bash-script-crashes-and-burns.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ echo "Using env | grep TERM output below:" >> ~/Downloads/test-term.txt
 env | grep TERM >> ~/Downloads/test-term.txt
 
 exit 0
-
 ```
 
 Create a link in Nautilus to `test-term.sh` and run the link. Then check the output file:
@@ -46,7 +45,6 @@ $ cat ~/Downloads/test-term.txt
 TERM environment variable: dumb
 Using env | grep TERM output below:
 (... blank line appears here ...)
-
 ```
 
 As you can see the environment variable `TERM` is blank when the command `env | grep TERM` is used. Also the variable `$TERM` is set to `dumb` which doesn't suit the color-based, mouse-supported command `dialog` very well.
@@ -65,6 +63,5 @@ if [[ $CurrentTERM == "" ]] ; then
     notify-send --urgency=critical "$0 cannot be run from GUI without TERM environment variable."
     exit 1
 fi
-
 ```
 

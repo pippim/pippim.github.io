@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "781,768 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Execute-sudo-without-Password^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Use the -S switch which reads the password from STDIN:
 
 ``` 
 echo <password> | sudo -S <command>
-
 ```
 
 Replace `<password>` with your password.

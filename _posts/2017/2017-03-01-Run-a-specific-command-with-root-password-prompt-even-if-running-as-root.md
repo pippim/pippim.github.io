@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "1,831 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-01-Run-a-specific-command-with-root-password-prompt-even-if-running-as-root.md
 toc:          false
 navigation:   false
@@ -97,7 +97,6 @@ fi # non-terminals can't enter password.
 /bin/rm "$@"
     
 exit 0
-
 ```
 
 Change the password "WE2U" to anything you like and save the file.
@@ -108,7 +107,6 @@ Flag new `rm` script as executable using:
 
 ``` bash
 sudo chmod +x /usr/local/bin/rm
-
 ```
 
 ## How it Works

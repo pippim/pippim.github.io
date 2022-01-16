@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "492 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-25-Linux-keeps-on-Logging-and-freezing-after-entering-password.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ As per this [bug report](https://bugs.launchpad.net/ubuntu/+source/linux/+bug/15
 
 ``` 
 pci=noaer
-
 ```
 
 I'm on mobile but will update from computer with instructions on how to update grub.

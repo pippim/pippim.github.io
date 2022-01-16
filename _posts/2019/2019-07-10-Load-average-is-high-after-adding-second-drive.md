@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,087 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-10-Load-average-is-high-after-adding-second-drive.md
 toc:          false
 navigation:   false
@@ -29,14 +29,12 @@ The solution from top-voted answer was this command:
 
 ``` 
 echo "disable" > /sys/firmware/acpi/interrupts/gpe6F
-
 ```
 
 In the link `grep` was used to discover the interrupt causing grief:
 
 ``` 
 grep . -r /sys/firmware/acpi/interrupts/
-
 ```
 
 
@@ -49,7 +47,6 @@ If you look at your system load average for 1-5-15 minutes like this:
 ``` 
 $ cat /proc/loadavg
 0.50 0.76 0.91 2/1037 14366
-
 ```
 
 It's reporting .5, .76 and .91. From [Understanding Linux CPU Load - when should you be worried?](https://scoutapm.com/blog/understanding-load-averages) it says:
@@ -71,7 +68,6 @@ Notice the 4th line from the bottom display 1-5-15 minute load averages as:
 
 ``` 
 .150 .177 .143
-
 ```
 
 The 1 minute load average of .15 equates to 15% which matches the **All CPU** percentage value two lines above the **Load Average**.
@@ -80,14 +76,12 @@ Without diving by 8 I'd have a heart attack because I would be seeing:
 
 ``` 
 1.200 1.416 1.144
-
 ```
 
 Conky automatically divides for me with the Conky code:
 
 ``` 
 ${execpi .001 (awk '{printf "%s/", $1}' /proc/loadavg; grep -c processor /proc/cpuinfo;) | bc -l | cut -c1-4} ${execpi .001 (awk '{printf "%s/", $2}' /proc/loadavg; grep -c processor /proc/cpuinfo;) | bc -l | cut -c1-4} ${execpi .001 (awk '{printf "%s/", $3}' /proc/loadavg; grep -c processor /proc/cpuinfo;) | bc -l | cut -c1-4}
-
 ```
 
 Of course not everyone uses conky probably only 1% of Linux users but for those out there that love Conky like me, you might find this code helpful.

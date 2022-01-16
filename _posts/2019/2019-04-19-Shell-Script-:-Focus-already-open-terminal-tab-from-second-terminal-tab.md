@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,099 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-19-Shell-Script-:-Focus-already-open-terminal-tab-from-second-terminal-tab.md
 toc:          false
 navigation:   false
@@ -34,14 +34,12 @@ In order to send the signal to Bash Shell (gnome-terminal) use
 
 ``` 
 sudo apt install xdotool
-
 ```
 
 In your script issue this command:
 
 ``` 
 xdotool key Control+Page_Up
-
 ```
 
 I've just finished installing and testing on Ubuntu 16.04 LTS and it works perfectly. It should work on all X11 desktops.
@@ -62,14 +60,12 @@ From this Q&A:
 
 ``` 
 gnome-terminal -e 'bash -c "sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade; exec bash"'
-
 ```
 
 We will modify the example command to look like this:
 
 ``` 
 gnome-terminal -e 'bash -c "second-script.sh; exec bash"'
-
 ```
 
 This is what `second-script.sh` looks like:
@@ -94,14 +90,12 @@ sleep 5
 
 # Now terminates.
 exit 0
-
 ```
 
 Always remember to marks scripts executable using:
 
 ``` 
 chmod a+x second-script.sh
-
 ```
 
 **Note:** This opens a second terminal window that stays open until user closes it. This can be changed to auto-close.
@@ -143,7 +137,6 @@ echo "Parent program completed"
 read -n 1 -s -r -p "Press any key to continue"
 
 exit 0
-
 ```
 
 Advantages of current approach:

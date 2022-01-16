@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,625 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-03-how-to-find-or-list-file-and-directories-which-having-size-more-than-100mb.md
 toc:          false
 navigation:   false
@@ -46,7 +46,6 @@ $ du -Sh | sort -rh | head -20
 90M 	./Android/Sdk/emulator/lib64/qt/lib
 80M 	./gmail
 80M 	./Downloads
-
 ```
 
 Another of the commands comes close to solving your file size needs:
@@ -74,7 +73,6 @@ $ find -type f -exec du -Sh {} + | sort -rh | head -n 20
 46M 	./Downloads/linux-modules-4.14.153-0414153-generic_4.14.153-0414153.201911101449_amd64.deb
 45M 	./Android/Sdk/platforms/android-28/android.jar
 42M 	./android-studio/lib/java-impl.jar
-
 ```
 
 In both examples, just tweak the number of lines listed to get files over 100 MB. For example change `head -n 20` to `head -n 40` to list double the number of files.

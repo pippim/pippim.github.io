@@ -12,7 +12,7 @@ votes:        "40 "
 favorites:    
 views:        "101,519 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-28-How-to-manually-mount-a-partition^.md
 toc:          false
 navigation:   false
@@ -47,7 +47,6 @@ nvme0n1                                      477G
 ├─nvme0n1p4 ntfs    NVMe_Win10             391.2G /mnt/c
 ├─nvme0n1p2 vfat                              99M /boot/efi
 └─nvme0n1p7 ntfs    Shared_WSL+Linux           9G /mnt/e
-
 ```
 
 For this example, we will mount `nvme0n1p8` which has the label `Ubuntu18.04`. To credit sources, we'll be following this [article][1] as a 
@@ -59,7 +58,6 @@ The next step is to create a directory under `/mnt` that the newly mounted parti
 
 ``` 
 sudo mkdir /mnt/Ubuntu18.04
-
 ```
 
 ## Mount the partition to the new directory
@@ -69,7 +67,6 @@ The final step is to mount the partition to the new directory:
 ``` 
 $ sudo mount -t auto -v /dev/nvme0n1p8 /mnt/Ubuntu18.04
 /dev/nvme0n1p8 mounted on /mnt/Ubuntu18.04.
-
 ```
 
 Notice we prepend `/dev/` to the names provided by `lsblk` above.
@@ -82,7 +79,6 @@ total 24
 drwxr-xr-x 3 root root  4096 Apr 26 17:00 ./
 drwxr-xr-x 6 root root  4096 Apr 27 20:51 ../
 drwx------ 2 root root 16384 Apr 26 17:00 lost+found/
-
 ```
 
 `lost_found` is needed for `fschk` command (File System check). It is automatically created and normally we don't have to "fiddle" with it.
@@ -93,7 +89,6 @@ When we are finished we can unmount the partition using the `-l` parameter which
 
 ``` 
 $ sudo umount /dev/nvme0n1p8 -l
-
 ```
 
 

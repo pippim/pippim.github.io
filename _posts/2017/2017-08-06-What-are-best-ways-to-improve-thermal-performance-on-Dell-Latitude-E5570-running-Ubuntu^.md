@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "864 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-06-What-are-best-ways-to-improve-thermal-performance-on-Dell-Latitude-E5570-running-Ubuntu^.md
 toc:          false
 navigation:   false

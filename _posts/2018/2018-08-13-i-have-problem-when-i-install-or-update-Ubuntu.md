@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "68 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-13-i-have-problem-when-i-install-or-update-Ubuntu.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ Try using:
 
 ``` 
 sudo apt install -f
-
 ```
 
 Do not add `upstart` to the end.
@@ -35,7 +34,6 @@ What you probably intend to do is:
 ``` 
 sudo apt update
 sudo apt upgrade
-
 ```
 
 But as the error message states run `sudo apt install -f` all by itself first.

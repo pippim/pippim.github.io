@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    1
 views:        "2,213 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-08-How-do-I-call-`dbus`-code-that-monitors-when-screen-is-locked^unlocked^.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ dbus-monitor --session "type='signal',interface='com.ubuntu.Upstart0_6'" | \
     fi
   done
 )
-
 ```
 
 I can't really say I understand the program / subroutine top-down flow or looping but someone from here commented there that it works and I trust his judgement.

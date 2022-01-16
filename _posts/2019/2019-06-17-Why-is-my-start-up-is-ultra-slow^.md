@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,736 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-17-Why-is-my-start-up-is-ultra-slow^.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ OnBootSec=15min
 OnUnitActiveSec=1d
 AccuracySec=1h
 RandomizedDelaySec=30min
-
 ```
 
 This changes the "timer" that triggers `apt-daily.service` to run at a random time between 15 min and 45 min after boot, and once a day thereafter.  See the [systemd.timer manpage](http://man7.org/linux/man-pages/man5/systemd.timer.5.html) for additional (not very well written, alas) explanation of what this means.

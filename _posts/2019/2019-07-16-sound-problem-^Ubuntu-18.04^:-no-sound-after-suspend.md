@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,071 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-16-sound-problem-^Ubuntu-18.04^:-no-sound-after-suspend.md
 toc:          false
 navigation:   false
@@ -71,7 +71,6 @@ case $1/$2 in
     sudo -u UserName -E pacmd set-card-profile 0 output:hdmi-stereo
     ;;
 esac
-
 ```
 
 - change `UserName` to your user name.

@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "5,931 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-12-How-do-I-enable-docker-as-a-service-without-re-installing-docker^.md
 toc:          false
 navigation:   false
@@ -63,14 +63,12 @@ Most current Linux distributions (RHEL, CentOS, Fedora, Ubuntu 16.04 and higher)
 
 ``` 
 $ sudo systemctl enable docker
-
 ```
 
 To disable this behavior, use disable instead.
 
 ``` 
 $ sudo systemctl disable docker
-
 ```
 
 
@@ -93,14 +91,12 @@ Once Docker is installed, you need to start the Docker daemon. Most Linux distri
 
 ``` 
 $ sudo systemctl start docker
-
 ```
 
 -    service:
 
 ``` 
 $ sudo service docker start
-
 ```
 
 
@@ -148,7 +144,6 @@ StartLimitInterval=60s
 
 [Install]
 WantedBy=multi-user.target
-
 ```
 
 ### docker.socket
@@ -168,7 +163,6 @@ SocketGroup=docker
 
 [Install]
 WantedBy=sockets.target
-
 ```
 
 

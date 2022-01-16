@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "892 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-28-How-to-list-PIDs-^procesees^-for-one-CPU-core-only^.md
 toc:          false
 navigation:   false
@@ -47,7 +47,6 @@ let ZeroCPU--
 
 ps -eLF | head -n 1 # Get heading
 ps -eLF | awk -v a="$ZeroCPU" '$9 == a {print;}'
-
 ```
 
 # What the output looks like
@@ -99,7 +98,6 @@ rick     15441  2019 15553  0   42 347528 234428 7 Aug26 ?        00:00:00 /opt/
 rick     15441  2019 21397 52   42 347528 234428 7 15:44 ?        01:20:21 /opt/google/chrome/chrome
 rick     15746 15524 21853  0   13 236965 74032  7 Aug26 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --enable-smooth-scrolling --field-trial-handle=14075765731346784657,198534808813688123,131072 --service-pipe-token=B6F0CC243787B18BB0EA42A02C364626 --lang=en-GB --enable-crash-reporter=b0f732a8-ad2f-4a2e-b904-4ab12fecf64e, --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --blink-settings=disallowFetchForDocWrittenScriptsInMainFrame=false,disallowFetchForDocWrittenScriptsInMainFrameOnSlowConnections=true --enable-pinch --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;0,16,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;1,16,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;2,16,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553;3,16,3553;4,0,3553;4,1,3553;4,2,3553;4,3,3553;4,4,3553;4,5,3553;4,6,3553;4,7,3553;4,8,3553;4,9,3553;4,10,3553;4,11,3553;4,12,3553;4,13,3553;4,14,3553;4,15,3553;4,16,3553 --disable-accelerated-video-decode --service-request-channel-token=B6F0CC243787B18BB0EA42A02C364626 --renderer-client-id=5 --shared-files=v8_natives_data:100,v8_snapshot_data:101
 rick     17004 15524 17010  0   14 254605 146636 7 Aug26 ?        00:00:03 /opt/google/chrome/chrome --type=renderer --enable-smooth-scrolling --field-trial-handle=14075765731346784657,198534808813688123,131072 --service-pipe-token=B04C26F870675DF1A8643418BED74ECD --lang=en-GB --enable-crash-reporter=b0f732a8-ad2f-4a2e-b904-4ab12fecf64e, --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --blink-settings=disallowFetchForDocWrittenScriptsInMainFrame=false,disallowFetchForDocWrittenScriptsInMainFrameOnSlowConnections=true --enable-pinch --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;0,16,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;1,16,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;2,16,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553;3,16,3553;4,0,3553;4,1,3553;4,2,3553;4,3,3553;4,4,3553;4,5,3553;4,6,3553;4,7,3553;4,8,3553;4,9,3553;4,10,3553;4,11,3553;4,12,3553;4,13,3553;4,14,3553;4,15,3553;4,16,3553 --disable-accelerated-video-decode --service-request-channel-token=B04C26F870675DF1A8643418BED74ECD --renderer-client-id=8 --shared-files=v8_natives_data:100,v8_snapshot_data:101
-
 ```
 
 We can see it is probably `chrome` causing the problem.

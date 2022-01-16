@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,593 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-12-Intel-SkyLake-Blank-Screen-on-Ubuntu-16.10.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Your error:
 
 ``` 
 [    5.088899] fb: switching to inteldrmfb from VESA VGA
-
 ```
 
 Is similar to this one discussed in 2014 bug report: ([Screen freezes on boot at "fb: switching to inteldrmfb from simple"][1]). However it was supposed to have been been fixed in Kernel 3.17 / 3.18.
@@ -48,7 +47,6 @@ Section "Device"
     Driver      "intel"
     Option      "DRI"   "false"
 EndSection
-
 ```
 
 Save and reboot (without the nomodeset).

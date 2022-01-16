@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "5,618 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-14-How-to-turn-off-the-USB-power-to-my-mouse^-when-I-suspend-the-notebook^.md
 toc:          false
 navigation:   false
@@ -51,7 +51,6 @@ case $1 in
         echo $USB | sudo tee /sys/bus/usb/drivers/usb/bind
         ;;
 esac
-
 ```
 
 Mark the file as executable with `sudo chmod +x file_name` where "file_name" is the name you chose.
@@ -112,6 +111,5 @@ case $1/$2 in
     rm $TMPLIST
         ;;
 esac
-
 ```
 

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "641 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Nautilus-doesn^t-remember-sorting-options-in-Ubuntu-19.04.md
 toc:          false
 navigation:   false
@@ -24,14 +24,12 @@ This should work in all supported Ubuntu releases. First get default sort order:
 ``` 
 $ gsettings get org.gnome.nautilus.preferences default-sort-order
 'name'
-
 ```
 
 Now change it to new sort order by modification date:
 
 ``` 
 $ gsettings set org.gnome.nautilus.preferences default-sort-order 'mtime'
-
 ```
 
 The list of all sort values allowed:

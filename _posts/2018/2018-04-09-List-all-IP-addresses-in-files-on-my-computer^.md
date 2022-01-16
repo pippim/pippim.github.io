@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,898 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-09-List-all-IP-addresses-in-files-on-my-computer^.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ You can use `grep` to find all files containing something that looks like an IPv
 
 ``` 
 /usr/src/linux-headers-4.14.30-041430/include/linux/oid_registry.h
-
 ```
 
 at line 48 will contain:
 
 ``` 
 OID_smimeAuthenticatedAttrs,    /* 1.2.840.113549.1.9.16.2.11 */
-
 ```
 
 It sort of looks like an IP address in the comments but it is not.
@@ -44,7 +42,6 @@ $ sudo time grep -rnwI --exclude-dir={boot,dev,media,mnt,lib,proc,root,run,sys,/
 27.76user 13.17system 1:31.06elapsed 44%CPU (0avgtext+0avgdata 10416maxresident)k
 12451744inputs+0outputs (2major+2098minor)pagefaults 0swaps
   17164  122083 3138285
-
 ```
 
 Let's break down the commands
@@ -76,8 +73,7 @@ As shown earlier, the search string passed to `grep` is `"([0-9]{1,3}[\.]){3}[0-
     |    |   +------------------ count of 1 to 3 digits must be followed by .
     |    +---------------------- count of digits is 1 to 3
     +--------------------------- look for digits 0 to 9
-## 
-```
+## ```
 
 
 
@@ -95,21 +91,18 @@ $ sudo time grep -rnwI --exclude-dir={boot,dev,media,mnt,lib,proc,root,run,sys,/
 /opt/google/chrome/product_logo_32.xpm:330:"    [.}.}.|.1.2.3.4.5.6.7.8.9.0.a.b.8.c.d.e.f.g.h.h.i.j.k.l.    ",
 28.52user 12.54system 1:31.78elapsed 44%CPU (0avgtext+0avgdata 9516maxresident)k
 12793352inputs+0outputs (3major+1884minor)pagefaults 0swaps
-
 ```
 
 The listing is too long to fit in this answer. Note the last file found is a false positive: 
 
 ``` 
 /opt/google/chrome/product_logo_32.xpm
-
 ```
 
 because it doesn't contain a real IP address:
 
 ``` 
 [.}.}.|.1.2.3.4.5.6.7.8.9.0.a.b.8.c.d.e.f.g.h.h.i.j.k.l.
-
 ```
 
 ## Restrict your search to `/etc` directory at first
@@ -126,7 +119,6 @@ $ sudo time grep -rnI -E "([0-9]{1,3}[\.]){3}[0-9]{1,3}" /etc/etc/hosts:1:127.0.
 /etc/cups/cups-browsed.conf:79:# BrowseDeny 192.168.3.0/255.255.255.0
 0.04user 0.03system 0:00.19elapsed 40%CPU (0avgtext+0avgdata 2800maxresident)k
 22384inputs+0outputs (1major+181minor)pagefaults 0swaps
-
 ```
 
   [1]: {% post_url /2018/2018-02-12-`grep`ing-all-files-for-a-string-takes-a-long-time %}

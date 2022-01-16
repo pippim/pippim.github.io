@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "5,298 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-14-Got-error-during-installation-of-Oracle-VM-VirtualBox-Extension-Pack.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ LatestVirtualBoxVersion=$(wget -qO - http://download.virtualbox.org/virtualbox/L
 https://www.virtualbox.org/download/hashes/${LatestVirtualBoxVersion}/SHA256SUMS
 sudo VBoxManage extpack install --replace Oracle_VM_VirtualBox_Extension_Pack-${LatestVirtualBoxVersion}.vbox-extpack
 VBoxManage list extpacks
-
 ```
 
 

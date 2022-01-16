@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "22,348 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-How-to-prevent-wifi-sleep-after-suspend.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ $ cat /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
 wifi.powersave = 3
 # Slow sleep fix: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1670041
 #wifi.powersave = 2
-
 ```
 
 - Edit the Network Manager file shown above.
@@ -68,7 +67,6 @@ case "${1}/${2}" in
     resume|thaw|post*)
       restart_wifi;;
 esac
-
 ```
 
 **NOTE:** Sometimes simply resetting network manager is all that is needed. In that case un-comment the line above by removing `#`. Then comment out the two lines above it by putting `#` at the beginning of those two lines.
@@ -77,5 +75,4 @@ You'll need to create this script, called `iwlwifi-reset`, with `sudo` powers an
 
 ``` bash
 chmod a+x /lib/systemd/system-sleep/iwlwifi-reset
-
 ```

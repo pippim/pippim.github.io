@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "2,512 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-Can-I-uninstall-Ubuntu-Software-Centre-from-18.04^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ You can simulate `software-center` removal to see what will be impacted:
 
 ``` 
 sudo apt -s remove software-center
-
 ```
 
 I don't have it installed so cannot show you what removal would look like.
@@ -169,7 +168,6 @@ Conf python3-oneconf (0.3.9 Ubuntu:16.04/xenial [all])
 Conf oneconf (0.3.9 Ubuntu:16.04/xenial [all])
 Conf python-oneconf (0.3.9 Ubuntu:16.04/xenial [all])
 Conf software-center (16.01+16.04.20160420 Ubuntu:16.04/xenial [all])
-
 ```
 
 As you can see it has a great number of dependencies. By comparison `ubuntu-software` has none that would be removed:
@@ -183,6 +181,5 @@ The following packages will be REMOVED:
   ubuntu-software
 0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
 Remv ubuntu-software [3.20.5-0ubuntu0.16.04.11]
-
 ```
 

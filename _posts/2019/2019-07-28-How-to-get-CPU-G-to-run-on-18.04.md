@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "5,796 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-28-How-to-get-CPU-G-to-run-on-18.04.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ I couldn't find up-to-date information on `cpu-g`. In the meantime you might wan
 
 ``` 
 sudo apt install hardinfo
-
 ```
 
 Then typing `hardinfo` in the terminal or calling from Dash (<kbd>Alt</kbd>+<kbd>F2</kbd>) the gui appears like this:

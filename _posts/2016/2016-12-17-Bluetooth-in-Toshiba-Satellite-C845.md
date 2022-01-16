@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,424 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-17-Bluetooth-in-Toshiba-Satellite-C845.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ Summary of steps to solve it there (**which you probably shouldn't use!**):
 sudo dpkg -i  linux-firmware_1.145_all.deb
 sudo updatedb
 rfkill list all; hciconfig -a
-
 ```
 
 Updated steps for your Ubuntu 15.10 on the other hand would be:
@@ -36,7 +35,6 @@ Updated steps for your Ubuntu 15.10 on the other hand would be:
 sudo apt update
 sudo apt install linux_firmware
 rfkill list all; hciconfig -a
-
 ```
 
 This is based on instructions for 15.10 found here ([https://www.howtoinstall.co/en/ubuntu/wily/linux-firmware][2])

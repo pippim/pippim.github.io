@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,375 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-How-to-tell-if-Ubuntu-is-using-WiFi-or-Ethernet.md
 toc:          false
 navigation:   false
@@ -36,7 +36,6 @@ $ vnstat
        May '18     63.19 GiB  /   13.34 GiB  /   76.53 GiB  /  200.60 GiB
      yesterday      6.73 GiB  /  817.44 MiB  /    7.53 GiB
          today      4.03 GiB  /  376.32 MiB  /    4.39 GiB  /    5.31 GiB
-
 ```
 
 Today the WiFi (wlp60s0) has sent/received 593 MB and Ethernet (enp59s0) has sent/received 4.39 GB.

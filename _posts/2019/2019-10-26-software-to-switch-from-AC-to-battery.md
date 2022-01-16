@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "248 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-26-software-to-switch-from-AC-to-battery.md
 toc:          false
 navigation:   false
@@ -38,28 +38,24 @@ Switch plug on:
 
 ``` 
 hs100.sh on
-
 ```
 
 Switch plug off:
 
 ``` 
 hs100.sh on
-
 ```
 
 Check if plug is on or off:
 
 ``` 
 hs100.sh check
-
 ```
 
 Print plug system status:
 
 ``` 
 hs100.sh status
-
 ```
 
 [Blog about developing hs100.sh including full bash script][4]

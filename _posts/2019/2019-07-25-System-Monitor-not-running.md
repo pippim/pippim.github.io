@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "182 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-25-System-Monitor-not-running.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ I'm not sure what happened to break your system. The missing file `update-initra
 # initramfs should be rebuilt.
 
 #udev_log="info"
-
 ```
 
 You can easily create it with `sudo -H gedit /etc/udev/udev.conf` and pasting in lines above.
@@ -37,5 +36,4 @@ Then reinstall the system monitor snap with:
 
 ``` 
 sudo snap install gnome-system-monitor
-
 ```

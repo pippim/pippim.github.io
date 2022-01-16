@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,339 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-21-Why-my-Ubuntu-16.04-can^t-connect-to-wired-when-I-change-kernel-to-4.2.md
 toc:          false
 navigation:   false
@@ -53,7 +53,6 @@ root@horatio2-OptiPlex-7050:/home/horatio2/e1000e-3.3.5.3/s‌​rc# make instal
 Makefile:67: *** Kernel header files not in any of the expected locations.
 Makefile:68: *** Install the appropriate kernel development package, e.g. 
 Makefile:69: *** kernel-devel, for building kernel modules and try again. Stop.'
-
 ```
 
 These errors are likely because only `linux-image` was installed and not `linux-headers`. Exact kernel version number is required from `uname -a` output to install appropriate header version.

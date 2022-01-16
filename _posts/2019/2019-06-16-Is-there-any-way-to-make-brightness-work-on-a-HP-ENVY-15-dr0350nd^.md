@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "497 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-16-Is-there-any-way-to-make-brightness-work-on-a-HP-ENVY-15-dr0350nd^.md
 toc:          false
 navigation:   false
@@ -80,7 +80,6 @@ The only solution therefor is to use something like this:
 
 ``` 
 $ xrandr --output eDP1 --brightness .5
-
 ```
 
 - where `.5` is 50% brightness, `.63` would be 63% brightness, etc.

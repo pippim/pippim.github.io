@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "6,951 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-26-Copy-group-of-files-^Filename*^-to-backup-^Filename*.bak^.md
 toc:          false
 navigation:   false
@@ -34,8 +34,7 @@ cps () {
     # ls "$1"* | while read varname; do cp -a "$varname" "$varname$2"; done
 }
 
-- `for f in "$1"*; do` : `$1` is the `gmail-meta3` parameter and `f` is the list of files matching. Combined this means for gmail-meta3, gmail-meta3-LAB-9999, etc. do the following
-```
+- `for f in "$1"*; do` : `$1` is the `gmail-meta3` parameter and `f` is the list of files matching. Combined this means for gmail-meta3, gmail-meta3-LAB-9999, etc. do the following```
 
 - `[[ ! "$f" == *"$2" ]] &&` : `$f` is the same as `f` above. `$2` is the `.bak` parameter passed. Combined this means if the filename doesn't end in `.bak` (because we don't want to copy `.bak` and create `.bak.bak`) then do the following
 - `cp -a "$f" "$f$2";` copy gmail-meta3 to gmail-meta3.bak, etc.
@@ -74,7 +73,6 @@ rick@alien:~/gmail$ ll gmail-meta3*
 -rw-rw-r-- 1 rick rick   728954 Jun 27 17:04 gmail-meta3-YAD-1558392194-26467821.bak
 ───────────────────────────────────────────────────────────────────────────────────────────
 rick@alien:~/gmail$ 
-
 ```
 
 **Note:** This uses the `-a` flag with the `cp` command to preserve timestamps and give you better grasp of your file backups.

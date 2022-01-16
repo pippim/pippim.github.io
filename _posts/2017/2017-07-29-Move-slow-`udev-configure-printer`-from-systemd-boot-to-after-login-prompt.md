@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    1
 views:        "750 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-29-Move-slow-`udev-configure-printer`-from-systemd-boot-to-after-login-prompt.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ I've been tweaking my boot speed today. The first step was to remove:
 
 ``` 
       6.194s NetworkManager-wait-online.service
-
 ```
 
 To remove it I used:
 
 ``` 
 systemctl disable NetworkManager-wait-online.service
-
 ```
 
 And now my boot time shows:
@@ -38,7 +36,6 @@ And now my boot time shows:
 ``` 
 $ systemd-analyze
 Startup finished in 3.407s (kernel) + 8.356s (userspace) = 11.764s
-
 ```
 
 The network still works ok so it appears no harm has come from the change.
@@ -47,7 +44,6 @@ Next on the `systemd-analyze blame` list is:
 
 ``` 
       5.467s udev-configure-printer@-devices-pci0000:00-0000:00:14.0-usb3-3\x2d3-3\x2d3.1.service
-
 ```
 
 I only use my printer a couple times a month and I certainly don't need it during the boot up phase. My question is; how do I move CUPS initialization out of the boot sequence into a post boot environment like **Startup Applications** or `/etc/rc.local` or whatever place makes sense?
@@ -77,7 +73,6 @@ ExecStart=/lib/udev/udev-configure-printer add %I
 # IPP-over-USB) ExecStop gets run immediately making a printer getting
 # disabled again right after it getting enabled or set up
 # ExecStop=/lib/udev/udev-configure-printer remove %I
-
 ```
 
 Even after rebooting twice to confirm speeds, the boot time went from 11 seconds to 16 seconds.

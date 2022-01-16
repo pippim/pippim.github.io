@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "3,181 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Wrong-lsb-release-after-release-upgrade.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ clipboard:    false
 
 ``` 
 sudo -H gedit /etc/lsb-release
-
 ```
 
 Then change the contents to suit your platform. Mine contains:
@@ -34,6 +33,5 @@ DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=16.04
 DISTRIB_CODENAME=xenial
 DISTRIB_DESCRIPTION="Ubuntu 16.04.5 LTS"
-
 ```
 

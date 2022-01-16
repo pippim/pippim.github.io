@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "5,704 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-18-How-can-I-debug-frequent-unrecoverable-freezes^.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.5/linux-headers-4.8.5-04
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.5/linux-image-4.8.5-040805-generic_4.8.5-040805.201610280434_amd64.deb
 sudo dpkg -i *.deb
 sudo reboot
-
 ```
 
 You can install any kernel by visiting the site: ([http://kernel.ubuntu.com/~kernel-ppa/mainline/][2]) and adapting the links there to the instructions above.

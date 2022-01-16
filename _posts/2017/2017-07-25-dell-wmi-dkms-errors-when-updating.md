@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "564 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-25-dell-wmi-dkms-errors-when-updating.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ To address comments posted above; although your Dell-WMI compiled binaries haven
  *
  * Copyright (C) 2008 Red Hat <mjg@redhat.com>
  * Copyright (C) 2014-2015 Pali Rohár <pali.rohar@gmail.com>
-
 ```
 
 The full source code can be found [here][1].
@@ -52,7 +51,6 @@ Press each of the three keys in order and type in the terminal:
 
 ``` 
 dmesg | tail
-
 ```
 
 If the keys are undefined in Linux (as on my Dell 17R 7720 SE) you'll see this:
@@ -68,7 +66,6 @@ If the keys are undefined in Linux (as on my Dell 17R 7720 SE) you'll see this:
 [22461.174731] dell_wmi: Unknown key e02b pressed
 [22461.958683] atkbd serio0: Unknown key pressed (translated set 2, code 0x60 on isa0060/serio0).
 [22461.958689] atkbd serio0: Use 'setkeycodes 60 <keycode>' to make it known.
-
 ```
 
 If the keys were working a pop-up menu according to that keys function would appear on your screen. If they aren't assigned, you can assign these keys as shortcuts to your everyday work functions. Personally I use a wireless backlit keyboard (Logitech K800) so never touch the laptop's backlit keyboard and haven't looked at these keys in years.

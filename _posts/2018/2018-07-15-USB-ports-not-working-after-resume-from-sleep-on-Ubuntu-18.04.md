@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "7,672 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-15-USB-ports-not-working-after-resume-from-sleep-on-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ This answer from [Unix & Linux Stack Exchange][1] (slightly enhanced here) has a
 
 ``` 
    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-
 ```
 
    to:
 
 ``` 
    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash usbcore.autosuspend=-1"
-
 ```
 
 2. Save the file, run `sudo update-grub`, and reboot.
@@ -42,7 +40,6 @@ This answer from [Unix & Linux Stack Exchange][1] (slightly enhanced here) has a
 ``` 
    $ cat /sys/module/usbcore/parameters/autosuspend
    -1
-
 ```
 
    The default value is `2`. The kernel parameter changes this value.
@@ -54,7 +51,6 @@ Suggestion: When USB devices don't work after suspend, you can also reload the d
 ``` 
 modprobe -r uhci_hcd
 modprobe uhci_hcd
-
 ```
 
 and/or:
@@ -62,7 +58,6 @@ and/or:
 ``` 
 modprobe -r ehci_hcd
 modprobe ehci_hcd
-
 ```
 
 

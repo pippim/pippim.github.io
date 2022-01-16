@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "865 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-10-Cron-Monthly-job-works-randomly-using-`0-0-1-*-*`.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ In this case use:
 
 ``` 
 sudo -H gedit /etc/cron.monthly/journal_vacuum
-
 ```
 
 Insert these lines:
@@ -45,14 +44,12 @@ Insert these lines:
 #       which only runs if machine is turned on at midnight.
 
 /bin/journalctl --vacuum-size=200M
-
 ```
 
 Save the file and exit `gedit`. Make the script executable using:
 
 ``` 
 sudo chmod a+x /etc/cron.monthly/journal_vacuum
-
 ```
 
 Now the first time the machine is turned on each month, be it 1st day of month at 7:00am or even 2nd day of month the `cron` job will run.
@@ -81,7 +78,6 @@ Following the link's explanation I discovered:
 ``` 
 $ sudo cat /var/spool/anacron/cron.monthly
 20190130
-
 ```
 
 Therefore with `sudo` powers I used:
@@ -90,7 +86,6 @@ Therefore with `sudo` powers I used:
 rick@alien:~$ sudo -i
 root@alien:~# echo 20190101 > /var/spool/anacron/cron.monthly
 root@alien:~# exit
-
 ```
 
 Now cron believes that last time `monthly` jobs were run is January 1, 2019.
@@ -110,7 +105,6 @@ to root, bcc: XxxxxXxxxx999
 
 /etc/cron.monthly/journal_vacuum:
 Vacuuming done, freed 0B of archived journals on disk.
-
 ```
 
 Now we can see:
@@ -118,7 +112,6 @@ Now we can see:
 ``` 
 $ sudo cat /var/spool/anacron/cron.monthly
 20190203
-
 ```
 
 The last step is to replace `20190203` with `20190201` using technique in **Update 2**.

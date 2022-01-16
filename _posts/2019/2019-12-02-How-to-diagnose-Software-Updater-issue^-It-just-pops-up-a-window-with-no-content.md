@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "30 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-02-How-to-diagnose-Software-Updater-issue^-It-just-pops-up-a-window-with-no-content.md
 toc:          false
 navigation:   false
@@ -23,5 +23,4 @@ Simulate what GUI does in your terminal and look for error messages:
 
 ``` 
 sudo apt update && sudo apt upgrade
-
 ```

@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "24,251 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-04-Disable-hyper-threading-in-Ubuntu.md
 toc:          true
 navigation:   true
@@ -86,7 +86,6 @@ The CPU topology is displayed with hyper-threading turned off and only the four 
 /sys/devices/system/cpu/cpu2/topology/core_id:1
 /sys/devices/system/cpu/cpu4/topology/core_id:2
 /sys/devices/system/cpu/cpu6/topology/core_id:3
-
 ```
 
 
@@ -108,7 +107,6 @@ The CPU topology is displayed with hyper-threading turned on and only the four c
 /sys/devices/system/cpu/cpu5/topology/core_id:2
 /sys/devices/system/cpu/cpu6/topology/core_id:3
 /sys/devices/system/cpu/cpu7/topology/core_id:3
-
 ```
 
 
@@ -229,7 +227,6 @@ Load Avg. 1-5-15 minutes: ${alignr}${color green}${execpi .001 (awk '{printf "%s
 ${color1}NVIDIA  ${color}-GPU ${color green}${nvidia gpufreq} Mhz  ${color}-Memory ${color green}${nvidia memfreq} Mhz
 ${color1}GT650M ${color}-Temp ${color green}${nvidia temp}°C  ${color}-Threshold ${color green}${nvidia threshold}°C
 ${color orange}${voffset 2}${hr 1}
-
 ```
 
 **NOTE:** The full conky resource file can be found on [Setting to High Performance]({% post_url /2018/2018-06-19-Setting-to-High-Performance %}).

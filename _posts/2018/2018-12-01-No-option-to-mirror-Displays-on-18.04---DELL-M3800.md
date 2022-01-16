@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "8,568 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-01-No-option-to-mirror-Displays-on-18.04---DELL-M3800.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ From this answer: [How can I mirror one of the screens in a 3-monitor setup?](Ho
 
 ``` 
 xrandr --output eDP-1-1 --output HDMI-1-2 --output HDMI-1-2 --same-as HDMI-1-1
-
 ```
 
 In the accepted solution above, screen 3 is mirrored to screen 2 but the primary screen is not mirrored.

@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    
 views:        "23,930 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-10-How-to-check-^via-software^-if-my-usb-3.1gen2-Type-C-port-supports-Thunderbolt3^.md
 toc:          true
 navigation:   true
@@ -62,7 +62,6 @@ $ lsusb -t
     |__ Port 9: Dev 9, If 0, Class=Human Interface Device, Driver=usbhid, 12M
     |__ Port 9: Dev 9, If 1, Class=Human Interface Device, Driver=usbhid, 12M
     |__ Port 9: Dev 9, If 2, Class=Human Interface Device, Driver=usbhid, 12M
-
 ```
 
 Notice the speed of `10000M` which doesn't appear on your display.
@@ -105,7 +104,6 @@ Notice the speed of `10000M` which doesn't appear on your display.
                          version: 4.14
                          capabilities: usb-3.10
                          configuration: driver=hub slots=2 speed=10000Mbit/s
-
 ```
 
 Notice the last line `speed=10000Mbit/s`.
@@ -151,7 +149,6 @@ $ lspci -tv
            +-1f.2  Intel Corporation Sunrise Point-H PMC
            +-1f.3  Intel Corporation Sunrise Point-H HD Audio
            \-1f.4  Intel Corporation Sunrise Point-H SMBus
-
 ```
 
 Looking at the details below we see nVidia GPU can take a maximum of 16 PCIe lanes at Gen 3.0 speeds but, is currently using 8 lanes. NVMe M.2 Samsung SSD is taking 4 PCIe lanes at Gen 3.0 speeds. Others devices at taking 1 PCIe lane at Gen 3.0 speeds or less.
@@ -162,7 +159,6 @@ Device 1c.0 -02 looks like it may serve the Thunderbolt3 taking 4 PCIe lanes at 
    +-1c.0-[02-3a]----00.0-[03-3a]--+-00.0-[04]--
    |                               +-01.0-[05-38]--
    |                               \-02.0-[39]----00.0  Intel Corporation Device 15b5
-
 ```
 
 **When you google `15b5` it confirms it's the Intel Thunderbolt 3!**
@@ -503,7 +499,6 @@ The report below had to be truncated heavily because it won't fit into Ask Ubunt
 
     Kernel driver in use: nvme
     Kernel modules: nvme
-
 ```
 
 I'll try to study this a little more and update it later.

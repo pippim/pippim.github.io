@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "95,719 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-13-command-^go^-not-found.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Use this command:
 
 ``` 
 sudo apt update && sudo apt install golang
-
 ```
 
 

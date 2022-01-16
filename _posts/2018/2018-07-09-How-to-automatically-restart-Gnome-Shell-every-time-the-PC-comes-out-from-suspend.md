@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,036 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-09-How-to-automatically-restart-Gnome-Shell-every-time-the-PC-comes-out-from-suspend.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ case "${1}" in
          gnome-shell --replace
 ;;
 esac
-
 ```
 
 To this:
@@ -52,7 +51,6 @@ case $1/$2 in
     gnome-shell --replace
     ;;
 esac
-
 ```
 
 For sure you are missing `#!/bin/sh` at the top of your script. Most of the rest of the proposed changes are not be necessary but informative.

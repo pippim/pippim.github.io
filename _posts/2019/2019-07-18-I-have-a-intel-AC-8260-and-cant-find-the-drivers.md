@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "866 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-18-I-have-a-intel-AC-8260-and-cant-find-the-drivers.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ The Intel Wifi drivers are built into the Linux kernel already. To see them use:
 
 ``` 
 lsmod | grep iwlwifi
-
 ```
 
 Firmware for Linux Intel WiFi drivers by card model and Kernel version are [here][1]:

@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,085 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Dual-booting:-every-time-Windows-boots^-it-increases-the-scrolling-speed-of-the-mouse-on-Ubuntu.md
 toc:          false
 navigation:   false
@@ -57,14 +57,12 @@ done
 systemctl restart NetworkManager.service
 
 exit 0
-
 ```
 
 Mark the file as executable with:
 
 ``` 
 sudo chmod +x /usr/local/bin/reset-usb
-
 ```
 
 Edit the file `/etc/rc.local` and insert these lines **before** the last line that says `exit 0`:
@@ -72,7 +70,6 @@ Edit the file `/etc/rc.local` and insert these lines **before** the last line th
 ``` 
 # Reboot / reset all USB devices
 /usr/local/bin/reset-usb
-
 ```
 
 **Credit**: [How do you reset a USB device from the command line?][1]

@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "9,276 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-03-Why-does-`journalctl---list-boots`-only-show-the-current-boot^.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ Most of us won't do a new install so to enable multiple `journalctl` boot logs u
 sudo mkdir -p /var/log/journal
 sudo systemd-tmpfiles --create --prefix /var/log/journal
 Cannot set file attribute for '/var/log/journal', value=0x00800000, mask=0x00800000: Operation not supported
-
 ```
 
 According to this [github report][2] the warning message on attributes can be ignored.
@@ -45,7 +44,6 @@ $ ll /var/log/journal
 total 8
 drwxr-sr-x+  2 root systemd-journal 4096 Feb  2 18:18 ./
 drwxrwxr-x  15 root syslog          4096 Feb  2 18:18 ../
-
 ```
 
 
@@ -71,8 +69,7 @@ $ journalctl --list-boots
  -2 c0d2c0141dd840cbab75d3c2254f8781 Wed 2018-02-14 22:59:13 MST—Sat 2018-02-17 22:46:14 M
  -1 aafb2573a6374e019a7165cb8eee74a0 Sun 2018-02-18 06:02:03 MST—Mon 2018-02-19 04:16:36 M
   0 8462f1969c6f4d61973e7e245014b846 Mon 2018-02-19 04:16:53 MST—Wed 2018-02-21 04:07:07 M
-`lines 1-16/16 (END)`
-```
+`lines 1-16/16 (END)````
 
 
 

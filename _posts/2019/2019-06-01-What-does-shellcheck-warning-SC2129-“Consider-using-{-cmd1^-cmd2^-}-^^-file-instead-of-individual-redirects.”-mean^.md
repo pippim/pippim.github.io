@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "730 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-01-What-does-shellcheck-warning-SC2129-“Consider-using-{-cmd1^-cmd2^-}-^^-file-instead-of-individual-redirects.”-mean^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ I have this `shellcheck` warning I can't figure out:
 In /mnt/e/bin/iconic line 540:
             printf "FALSE|" >> "$IconsRaw"           # Select field number 1
             ^-- SC2129: Consider using { cmd1; cmd2; } >> file instead of individual redirects.
-
 ```
 
 I've noticed many of us here use [shellcheck][1] to fix our bash scripts / shell commands so I hope the question is on topic.
@@ -47,7 +46,6 @@ As per comments posting relevant section of bash script:
         printf "%s|" "$X" >> "$IconsRaw"         # 6
         echo   "$Y" >> "$IconsRaw"               # 7
     fi
-
 ```
 
 
@@ -63,7 +61,6 @@ The more efficient bash code:
     # X,Y screen coordinates invalid on backup files ending with "~"
     ! [[ "$X" == "?" || "$Y" == "?" ]] && { let i++; echo \
         "FALSE|$i|${File##*/}|$Linkless|$Date|$X|$Y" >> "$IconsRaw"; }
-
 ```
 
 

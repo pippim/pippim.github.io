@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,360 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-03-Can-I-check-if-the-terminal-was-started-by-Visual-Studio-Code^.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ systemd,1 splash fastboot kaslr
               └─gnome-terminal-,25109
                   └─bash,25119
                       └─pstree,5696 -aps 25119
-
 ```
 
 The environment variable `$$` returns the current running processes PID (Process ID) which is the bash terminal.

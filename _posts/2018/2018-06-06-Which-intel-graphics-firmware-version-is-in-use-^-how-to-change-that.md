@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,183 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-06-Which-intel-graphics-firmware-version-is-in-use-^-how-to-change-that.md
 toc:          false
 navigation:   false
@@ -44,7 +44,6 @@ $ locate i915/skl_
 /lib/firmware/i915/skl_guc_ver6_1.bin
 /lib/firmware/i915/skl_guc_ver9_33.bin
 /lib/firmware/i915/skl_huc_ver01_07_1398.bin
-
 ```
 
 I noticed in your link a new version `skl_dmc_ver1_27.bin` so I downloaded it and then ran:
@@ -64,7 +63,6 @@ rick@alien:~$ sudo update-initramfs -u -k `uname -r`
 update-initramfs: Generating /boot/initrd.img-4.14.42-041442-generic
 W: Possible missing firmware /lib/firmware/i915/skl_dmc_ver1_26.bin for module i915
 Adding /lib/firmware/i915/skl_guc_ver9_33.bin
-
 ```
 
 So even though `skl_dmc_ver1_27.bin` is available it doesn't work with the Kernel `4.14` chain and it still looks for `skl_dmc_ver1_26.bin`. Ubuntu 18.04 uses the `4.15` kernel chain so apparently it is using `skl_dmc_ver1_26.bin` as well.
@@ -85,7 +83,6 @@ W: Possible missing firmware /lib/firmware/i915/cnl_dmc_ver1_07.bin for module i
 W: Possible missing firmware /lib/firmware/i915/kbl_guc_ver9_39.bin for module i915
 W: Possible missing firmware /lib/firmware/i915/bxt_guc_ver9_29.bin for module i915
 Adding /lib/firmware/i915/skl_guc_ver9_33.bin
-
 ```
 
 **Notice how it's looking for `/lib/firmware/i915/skl_dmc_ver1_27.bin`**
@@ -109,6 +106,5 @@ update-initramfs: Generating /boot/initrd.img-4.14.42-041442-generic
 W: Possible missing firmware /lib/firmware/i915/skl_dmc_ver1_26.bin for module i915
 W: Possible missing firmware /lib/firmware/i915/skl_huc_ver01_07_1398.bin for module i915
 Adding /lib/firmware/i915/skl_guc_ver9_33.bin
-
 ```
 

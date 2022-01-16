@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,038 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-13-what-are-system.journal-and-templates.dat.md
 toc:          false
 navigation:   false
@@ -36,7 +36,6 @@ $ sudo du -h -d1 /var/log
 68K     /var/log/cups
 4.0K	/var/log/unattended-upgrades
 194M	/var/log
-
 ```
 
 The journal log file in question is 185 MB on my system and was 312 MB before I used the [vacuum cleaner][1] (function's real name) to reduce it's size below 200 MB.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,338 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-14-Nvidia-drivers-Ubuntu-18.04---Dell-G5-15.md
 toc:          false
 navigation:   false
@@ -64,7 +64,6 @@ Section "Screen"
     Option "AllowEmptyInitialConfiguration" "on"
     Option "IgnoreDisplayDevices" "CRT"
 EndSection
-
 ```
 
 Ignore the `DP-1-1` monitor section. It is only for my 3rd monitor which has a finicky; 4K TV, or Thuderbolt 3 adapter, or cable or all three.

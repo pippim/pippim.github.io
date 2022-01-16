@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "381 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-21-How-to-find-out-if-computer-was-shut-down-at-a-given-time^.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ Oct 20 19:17:01 dell CRON[19789]: (root) CMD (   cd / && run-parts --report /etc
 Oct 20 20:17:01 dell CRON[16936]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
 Oct 20 21:17:01 dell CRON[24757]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
 Oct 20 22:17:01 dell CRON[32481]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
-
 ```
 
 It shows us the system was active at 4 am and 5 am. Then it was active again at 6 pm, 7 pm, 8 pm, 9 pm and your magic number `10 pm` represented by "22:17:01".

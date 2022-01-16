@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,642 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-27-Intercept-shutdown-call-and-run-script-to-allow-or-prevent-shutdown.md
 toc:          false
 navigation:   false
@@ -101,7 +101,6 @@ In concept it seems pretty easy. Simply find the command, rename it, and replace
 $ type -a shutdown
 shutdown is /sbin/shutdown
 $ sudo mv /sbin/shutdown /sbin/shutdownoriginal
-
 ```
 
 Then edit your own script in `/sbin/shutdown` containing at the very least:
@@ -109,14 +108,12 @@ Then edit your own script in `/sbin/shutdown` containing at the very least:
 ``` bash
 #!/bin/bash
 /sbin/shutdownoriginal
-
 ```
 
 Then mark your script as executable for everyone:
 
 ``` bash
 $ sudo chmod a+x /sbin/shutdown
-
 ```
 
 Voila! Everything that calls shutdown now calls your script which then calls the original commmand.
@@ -127,7 +124,6 @@ In reality by the time your script gets called things may not be in the state yo
 echo "/sbin/shutdown custom script calling /sbin/shutdownoriginal"
 shutdowntime=`date`
 echo "Last shutdown: $shutdowntime" >> /home/rick/shutdownlog.txt
-
 ```
 
 The first `echo` should have appeared in `/var/log/syslog` but it did not. The second `echo` should have appended a line to the log file but it did not. This tells me that by the time the `/sbin/shutdown` command is executed system logging is already turned off and the file I/O system is shutdown.

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "250,627 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-30-Configure-screensaver-in-Ubuntu.md
 toc:          false
 navigation:   false
@@ -79,7 +79,6 @@ You can decommission the <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>L</kbd> shortcut fr
 
 ``` 
 xscreensaver-command -lock
-
 ```
 
 This keyboard shortcut reassignment also works in Ubuntu 16.04.

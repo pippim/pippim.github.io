@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,219 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-01-Can-Gedit-default-highlighting-style-be-set-for-files-without-an-extension^.md
 toc:          false
 navigation:   false
@@ -52,7 +52,6 @@ Building dependency tree
 Reading state information... Done
 gedit is already the newest version (3.18.3-0ubuntu4).
 0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
-
 ```
 
 

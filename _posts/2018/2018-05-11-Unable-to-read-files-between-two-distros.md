@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "252 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-11-Unable-to-read-files-between-two-distros.md
 toc:          false
 navigation:   true
@@ -30,7 +30,6 @@ Mount the 2nd Distro with these commands
 ``` 
 sudo mkdir /mnt/MyOtherDistro
 sudo mount -t auto -v /dev/sdb5 /mnt/MyOtherDistro
-
 ```
 
 Now you will be able to use Nautilus or any other file manager to navigate to the directory `/mnt/MyOtherDistro` to view / copy / delete files, etc.
@@ -39,7 +38,6 @@ You can also change to a directory in the 2nd Distro:
 
 ``` 
 cd /mnt/MyOtherDistro/home/Me/Documents
-
 ```
 
 When you are done unmount the partition and delete the directory:
@@ -47,7 +45,6 @@ When you are done unmount the partition and delete the directory:
 ``` 
 sudo umount -l /mnt/MyOtherDistro
 sudo rm -d /mnt/MyOtherDistro
-
 ```
 
 
@@ -77,7 +74,6 @@ CODENAME:      bionic
 DESCRIPTION:   Ubuntu 18.04 LTS
  Size  Used Avail Use%
   24G   17G  5.2G  77%
-
 ```
 
 To create the script, copy the following to a file called `/usr/local/bin/mount-menu.sh`:
@@ -255,7 +251,6 @@ cat $tmpInfo
 CleanUp                             # Remove temporary files
 
 exit 0
-
 ```
 
 ### Unmount a partition
@@ -393,7 +388,6 @@ echo $(tput sgr0)                           # Reset to normal text
 CleanUp                                     # Remove temporary files
 
 exit 0
-
 ```
 
 
@@ -407,7 +401,6 @@ After creating the files, both scripts must be marked executable:
 ``` bash
 sudo chmod a+x /usr/local/bin/mount-menu.sh
 sudo chmod a+x /usr/local/bin/umount-menu.sh
-
 ```
 
 

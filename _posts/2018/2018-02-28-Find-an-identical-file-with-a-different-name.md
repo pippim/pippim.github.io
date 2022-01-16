@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,941 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-28-Find-an-identical-file-with-a-different-name.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ For optimum speed use:
 
 ``` 
 grep -rnw --exclude-dir={boot,dev,lib,media,mnt,proc,root,run,sys,/tmp,tmpfs,var} '/' -e 'String in file'
-
 ```
 
 If your file might be on a Windows directory remove the `mnt` directory.
@@ -36,7 +35,6 @@ If you know the file is within the `/home` directory someplace you can shorten t
 
 ``` 
 grep -rnw '/home' -e 'String in file'
-
 ```
 
 

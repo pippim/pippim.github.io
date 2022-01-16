@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "9,071 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-06-Formatting-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ ACCESS      OWNER  GROUP  SIZE  MODIFIED      NAME (updatdb last ran: 2018-10-06
 -rw-r--r--  root   root   3771  Aug 31  2015  /etc/skel/.bashrc
 -rw-r--r--  rick   rick   7522  Sep 30 10:10  /home/rick/.bashrc
 -rw-r--r--  rick   rick   7492  Sep 30 10:09  /home/rick/.bashrc~
-
 ```
 
 **If** you modified `.bashrc` and damaged it there **may** be a backup called `.bashrc~` which you can copy over top.

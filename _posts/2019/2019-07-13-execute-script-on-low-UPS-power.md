@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "585 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-execute-script-on-low-UPS-power.md
 toc:          false
 navigation:   false
@@ -46,7 +46,6 @@ $ upower -i $(upower -e | grep -i UPS)
     time to empty:       25.5 minutes
     percentage:          100%
     icon-name:          'battery-full-charged-symbolic'
-
 ```
 
 Then to narrow it down to percentage use:
@@ -54,7 +53,6 @@ Then to narrow it down to percentage use:
 ``` 
 $ upower -i $(upower -e | grep -i UPS) | grep -i percentage
     percentage:          100%
-
 ```
 
 Then to extract the second column use:
@@ -62,7 +60,6 @@ Then to extract the second column use:
 ``` 
 $ upower -i $(upower -e | grep -i UPS) | grep -i percentage | cut -d':' -f2
           100%
-
 ```
 
 Then to extract only digits and eliminate leading spaces and trailing % use:
@@ -70,7 +67,6 @@ Then to extract only digits and eliminate leading spaces and trailing % use:
 ``` 
 $ upower -i $(upower -e | grep -i UPS) | grep -i percentage | sed 's/[^0-9]*//g'
 100
-
 ```
 
 Now assign what you want to a variable and display it:
@@ -79,7 +75,6 @@ Now assign what you want to a variable and display it:
 $ PERCENT=$(upower -i $(upower -e | grep -i UPS) | grep -i percentage | sed 's/[^0-9]*//g')
 $ echo $PERCENT
 100
-
 ```
 
 Next step is to write a script something like this
@@ -100,7 +95,6 @@ while true; do
     fi
     sleep 300 # Sleep for 5 minutes to reduce resource usage
 done
-
 ```
 
 - emailing cell phone: [Use mail command](https://www.binarytides.com/linux-mail-command-examples/)

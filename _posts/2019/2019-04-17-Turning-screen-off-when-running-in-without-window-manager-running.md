@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "323 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-17-Turning-screen-off-when-running-in-without-window-manager-running.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ As no desktop manager is running you need to edit `/etc/systemd/logind.conf` and
 
 ``` 
 #HandleLidSwitch=suspend
-
 ```
 
 to this:
 
 ``` 
 HandleLidSwitch=ignore
-
 ```
 
 Save the file and use `systemctl restart systemd-logind`

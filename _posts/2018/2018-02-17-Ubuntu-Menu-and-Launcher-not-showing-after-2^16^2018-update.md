@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "6,558 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-17-Ubuntu-Menu-and-Launcher-not-showing-after-2^16^2018-update.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ Try the simple solution there by opening a terminal and typing:
 ``` 
 rm -rf ~/.config/compiz-1/compizconfig/*
 sudo reboot
-
 ```
 
 Some users say it works right away while someone else says the reboot is necessary.

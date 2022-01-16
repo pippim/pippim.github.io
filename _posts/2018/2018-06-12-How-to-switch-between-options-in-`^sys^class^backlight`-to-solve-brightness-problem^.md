@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "3,163 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-12-How-to-switch-between-options-in-`^sys^class^backlight`-to-solve-brightness-problem^.md
 toc:          false
 navigation:   true
@@ -39,28 +39,24 @@ In the bash script below you need to set:
 ``` 
 WatchDriver="/sys/class/backlight/acpi_video0/brightness"
 PatchDriver="/sys/class/backlight/nv_backlight/brightness"
-
 ```
 
 Place the script in `/usr/local/bin` and make it executable using:
 
 ``` 
 chmod a+x /usr/local/bin/redirect-brightness
-
 ```
 
 First run the script from the command line using
 
 ``` 
 redirect-brightness -l
-
 ```
 
 If there is a problem check the log file using:
 
 ``` 
 cat /tmp/redirect-brightness.log
-
 ```
 
 If all works well add `redirect-brightness` to your startup applications.
@@ -150,14 +146,9 @@ while (true); do
         echo "Processing modify event in $WatchDriver/actual_brightness" >> $LogFile
     SetBrightness
 done
-## 
-```
+## ```
 
 
-
-
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
 
 # Original Answer June 11, 2018.
 
@@ -178,10 +169,6 @@ There are many nVidia users with similar problems in Ubuntu 18.04:
 ----------
 
 
-
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
-
 ## Before writing a script
 
 I can write a script to mimic changes to /acpi_video and populate /nv_backlight but before I do try this:
@@ -197,16 +184,12 @@ According to this answer it should work for you: [Xubuntu 18.04: make Fn brightn
 
 ----------
 
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
-
 ## Wayland
 
 Brightness doesn't work under Wayland. Make sure you aren't using it. See: [The brightness of laptop screen cannot be adjusted with either the buttons or the slider. Edit]({% post_url /2018/2018-03-03-The-brightness-of-laptop-screen-cannot-be-adjusted-with-either-the-buttons-or-the-slider.-Edit %})
 
 
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a></div>
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a></div>
 

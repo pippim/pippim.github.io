@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "4,707 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-06-Backup-Linux-configuration^-scripts-and-documents-to-Gmail.md
 toc:          true
 navigation:   true
@@ -405,14 +405,12 @@ ls -la "$Filename" "$Filename64"
 rm     "$Filename" "$Filename64"
 
 exit 0
-
 ```
 
 Replace `USER_NAME` above with your user name. Replace `EMAIL_NAME@gamil.com` with your actual gmail address. Change the directory `/mnt/e/bin` to the directory you store your bash scripts. Save the file and exit. Then use:
 
 ``` bash
 chmod a+x /mnt/e/bin/backup
-
 ```
 
 This makes the script executable.
@@ -433,7 +431,6 @@ From [Send email alerts using ssmtp][1] we find the simplest way of sending emai
 sudo apt install ssmtp
 sudo nano /etc/ssmtp/ssmtp.conf
 # Change "MyEmailAddress" and "MyPassword" to your own.
-
 ```
 
 There  is one step not mentioned; Google will send you an email confirming you want to allow a "less secure" application to send mail with your account:
@@ -444,7 +441,6 @@ After installing and configuring `ssmpt` one more package is required in order t
 
 ``` bash
 sudo apt install sharutils
-
 ```
 
 This package contains the program `uuencode` which is need to convert binary files for transmission.
@@ -483,14 +479,12 @@ fi
 
 today=$( date +%Y-%m-%d-%A )
 /mnt/e/bin/daily-backup.sh Daily-$(hostname)-$Distro-backup-$today
-
 ```
 
 Save the file, exit and use:
 
 ``` bash
 chmod a+x /etc/cron.daily/daily-backup
-
 ```
 
 This makes the script executable.
@@ -517,7 +511,6 @@ bin/now
 .xscreensaver
 .xsession-errors
 .xsession-errors.old
-
 ```
 
 
@@ -559,14 +552,9 @@ time tar -cvpzf backup.tar.gz \
 --exclude=/var/run/ \
 --exclude=/run \
 --exclude=/var/cache/apt/archives /
-## 
-```
+## ```
 
 
-
-
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr10" class ="hdr-btn">Skip</a></div>
 
 # Historical section
 
@@ -579,16 +567,11 @@ I have two directories where I have invested most of my time since August 2016:
 ``` bash
 /home/rick/bin
 /usr/local/bin
-
 ```
 
 When I first created a `tar` file (tape archive) using these two directories and tried to email them to myself I received this error:
 
 [![gmail 25MB limit][3]][3]
-
-
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr11" class ="hdr-btn">Skip</a></div>
 
 # gmail.com won't accept files > 25 MB
 
@@ -598,7 +581,6 @@ In turns out to be a single file created for testing purposes:
 
 ``` bash
 -rw-rw-r--  1 rick rick 191143744 Dec 23 17:27 log-gsu-gedit.tst
-
 ```
 
 So delete this test file and rerun the commands:
@@ -606,7 +588,6 @@ So delete this test file and rerun the commands:
 ``` bash
 tar -cvf scripts-2017-06-05.tar /home/rick/bin
 tar -rvf scripts-2017-06-05.tar /usr/local/bin
-
 ```
 
 The first command creates the `.tar` file using one directory of script files and the second appends to the `.tar` file using the second directory of script files.
@@ -615,12 +596,7 @@ The `.tar` file is now a more respectable size of 1.3 MB:
 
 ``` bash
 -rw-rw-r-- 1 rick rick 1341440 Jun  5 17:27 scripts-2017-06-05.tar
-
 ```
-
-
-<a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr10" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr12" class ="hdr-btn">Skip</a></div>
 
 # The simplest way is to email as an attachment
 
@@ -639,13 +615,16 @@ I discovered tonight some configuration files difficult to backup until I stumbl
 .conkyrc
 .websync # one of my own databases
 .bafman* # Another one of my own databases
-
 ```
 
 Using the link above I created a script called `~/bin/backup` with:
 
 ``` bash
-#!/bin/bash
+
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr10" class ="hdr-btn">Skip</a></div>
+
+# !/bin/bash
 
 if [[ $1 == "" ]] ; then
     echo 'Parameter required for file name, ie "Backup-2017-06-26"'
@@ -655,14 +634,12 @@ fi
 tar -cvf $1.tar /home/rick/bin
 tar -rvf $1.tar /usr/local/bin
 find .* -maxdepth 0 -type f -exec tar -rvf $1.tar {} +
-
 ```
 
 To view what is in the `.tar` archive use the command:
 
 ``` bash
 tar -tvf Backup-2017-06-26.tar
-
 ```
 
 Remember to replace "Backup-2017-06-26" with the parameter you used when creating the backup.
@@ -670,10 +647,6 @@ Remember to replace "Backup-2017-06-26" with the parameter you used when creatin
 
 ----------
 
-
-
-<a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr11" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr13" class ="hdr-btn">Skip</a></div>
 
 # Edit July 1, 2017
 
@@ -683,7 +656,6 @@ This following command worked for me when I tested in my machine.
 
 ``` bash
 echo "This is the message body" | mutt -a "/path/to/file.to.attach" -s "subject of message" -- recipient@domain.com
-
 ```
 
 So probably the approach to follow will be something like, 
@@ -691,14 +663,12 @@ So probably the approach to follow will be something like,
 ``` bash
 tar -zcf /home/blah/backup.tgz /home/blah/
 echo "Please find attached the backup file" | mutt -a "/home/blah/backup.tgz" -s "File attached" -- recipient@domain.com
-
 ```
 
 I will save the above script as `backup_email.sh` and schedule the cron job as,
 
 ``` bash
 0 1 * * * /path/to/backup_email.sh
-
 ```
 
 **References**
@@ -718,6 +688,6 @@ I will save the above script as `backup_email.sh` and schedule the cron job as,
 
 
 
-<a id="hdr13"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr12" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
 

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "3,783 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-30-External-hard-drive-keeps-powering-down.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ nr_writeback 0
 nr_writeback_temp 0
 nr_dirty_threshold 261131
 nr_dirty_background_threshold 130406
-
 ```
 
 The accepted answer (with 66 up-votes) here: [stackexchange.com - Why is my pc freezing while I'm copying a file to a pendrive?][2]
@@ -40,7 +39,6 @@ suggests using:
 ``` 
 echo $((16*1024*1024)) > /proc/sys/vm/dirty_background_bytes
 echo $((48*1024*1024)) > /proc/sys/vm/dirty_bytes
-
 ```
 
 The accepted answer is using indirect math to set 16 MiB for dirty background bytes and 48 MiB for dirty bytes.
@@ -49,7 +47,6 @@ From the first link (bug report) though, comment #83 recommends a more aggressiv
 
 ``` 
 vm.dirty_bytes = 200000000
-
 ```
 
 Then run `systctl -p` or reboot.

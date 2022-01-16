@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "4,170 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-Set-of-countdown-timers-with-alarm.md
 toc:          true
 navigation:   true
@@ -111,7 +111,6 @@ Copy and paste the bash script below to filename `multi-timer`. I suggest the di
 
 ``` 
 chmod a+x /home/<your_user_name>/bin/multi-timer
-
 ```
 
 ### Changing number of Timers
@@ -122,7 +121,6 @@ At line number 78, 79 and 80 you will see this:
 # No. of timers default is 17 for 768 line screen and TMR_DURATION_NDX is 30
 TMR_DURATION_NDX=30 # Set to 28 for 800x600 screen, 32 for 1920x1080 screen
 MAX_TIMERS=17       # Set to 15 for 800x600 screen, 19 for 1920x1080 screen
-
 ```
 
 Although 19 timers are supported, they might only fit on a 1920x1080 screen. About 17 (the default setting) will fit on the average 1024x768 screen. If you have Super VGA with 800x600 resolution you might only get 13 to 15 timers.
@@ -133,7 +131,6 @@ You must change the values on lines 85 & 86 at the same time:
 Bash field name    ----------- Values to assign ---------
 TMR_DURATION_NDX   23  24  25  26  27  28  29  30  31  32
 MAX_TIMERS         10  11  12  13  14  15  16  17  18  19
-
 ```
 
 eg If you want a maximum of 12 timers, set `TMR_DURATION_NDX=25` and `MAX_TIMERS=12`.
@@ -142,7 +139,6 @@ After changing the Index and Maximum save the `multi-timer` file. If you have al
 
 ``` 
 rm ~/.multi-timer
-
 ```
 
 Note that `~/` is a short cut to your home directory, ie `/home/your_user_name/`.
@@ -155,7 +151,6 @@ Multi-timer requires the following packages to be installed:
 ``` 
 sudo apt install yad
 sudo apt install libnotify-bin
-
 ```
 
 `yad` is required for the windows and `libnotify-bin` is required for optional pop up message when a timer ends.

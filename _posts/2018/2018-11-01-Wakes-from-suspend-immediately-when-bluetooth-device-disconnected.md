@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,799 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-01-Wakes-from-suspend-immediately-when-bluetooth-device-disconnected.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ Use this command:
 
 ``` 
 sudo -H gedit /lib/systemd/system-sleep/custom-xhci_hcd
-
 ```
 
 Copy and paste the following into the editor:
@@ -70,7 +69,6 @@ case $1/$2 in
     rm $TMPLIST
         ;;
 esac
-
 ```
 
 Then save the file and exit `gedit`. 
@@ -79,7 +77,6 @@ Mark the script as executable using:
 
 ``` 
 sudo chmod a+x /lib/systemd/system-sleep/custom-xhci_hcd
-
 ```
 
 Now your suspend/resume problems should go away. If not hopefully someone else posts their solution.

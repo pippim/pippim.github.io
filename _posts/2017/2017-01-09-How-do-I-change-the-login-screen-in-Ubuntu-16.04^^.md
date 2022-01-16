@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "105,671 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-09-How-do-I-change-the-login-screen-in-Ubuntu-16.04^^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ To change the login screen in Ubuntu 16.04 I used the following:
 
 ``` 
 gksu gedit /usr/share/glib-2.0/schemas/10_unity_greeter_background.gschema.override
-
 ```
 
 Insert these lines:
@@ -33,7 +32,6 @@ Insert these lines:
 draw-user-backgrounds=false
 background='/home/$USER/Pictures/1920x1080-TuxSuckingWindowsTetraWwallpaper.jpg'
 # After changing use: sudo glib-compile-schemas /usr/share/glib-2.0/schemas
-
 ```
 
 Where:
@@ -49,7 +47,6 @@ Now compile the new login wallpaper with:
 
 ``` 
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
-
 ```
 
 Last step is to reboot.

@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "21,449 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-29-Start-script-on-system-startup-^Ubuntu-16.04.1^.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 @reboot   root    mkdir /cronjobs
 @reboot   root    sleep 10
 @reboot   root    mkdir /cronjobs/demofolder
-
 ```
 
 This avoids the use of a script file altogether and works for all users regardless of their home directory name, ie /home/steve, /home/mary, etc.
@@ -46,7 +45,6 @@ As per comments below a simpler method is to use:
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 @reboot   root    mkdir -p -v /cronjobs/demofolder
-
 ```
 
 - `-p` (long version `--parents`) tells `mkdir` to automatically create all directory parent levels if they don't exist.

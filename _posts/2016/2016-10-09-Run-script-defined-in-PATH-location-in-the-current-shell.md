@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "359 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-09-Run-script-defined-in-PATH-location-in-the-current-shell.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ In your script you need to push the directory you want to end up in when the scr
 rick@dell:/$ cat /usr/local/bin/windows
 pushd /boot/grub > /dev/null
 ls
-
 ```
 
 When you call the script you must but a dot and space in front of it `. ` like this:
@@ -39,7 +38,6 @@ fonts             grub.cfg   grubenv  locale       zapgrub.cfg
 gfxblacklist.txt  grub.cfg~  i386-pc  unicode.pf2
 ────────────────────────────────────────────────────────────────
 rick@dell:/boot/grub$ 
-
 ```
 
 Above is simple example of how calling `. windows` containing the `push` command works instead of calling `windows` containing `cd` command.

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,060 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-14-I^m-looking-for-a-command-to-flash-screens-^if-possible-in-colors^.md
 toc:          false
 navigation:   false
@@ -200,14 +200,12 @@ Main () {
 } # Main
 
 Main "$@"
-
 ```
 
 Mark the script as executable using:
 
 ``` 
 chmod a+x /path/flash-primary-screen.sh
-
 ```
 
 Where `/path` is the directory you placed the script.
@@ -270,7 +268,6 @@ for ((c=1; c <= 7; c++)); do
 done
 
 done
-
 ```
 
 

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,396 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-23-How-do-I-create-a-fake-process-bar^.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ It uses `yad` which is a super-charged version of `zenity` the default GUI used 
 
 ``` 
 sudo apt install yad
-
 ```
 
 Here's the code:
@@ -64,7 +63,6 @@ done | yad --progress       --auto-close \
     --log-expanded          --log-height=250 \
     --log-on-top            --percentage=0 \
     --no-cancel             --center
-
 ```
 
 

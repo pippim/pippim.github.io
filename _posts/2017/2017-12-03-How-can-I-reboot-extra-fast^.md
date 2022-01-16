@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "6,125 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-03-How-can-I-reboot-extra-fast^.md
 toc:          true
 navigation:   true
@@ -32,7 +32,6 @@ Recently I acquired a "modern" laptop with a NVMe M.2 Gen 3.0 x 4 SSD with blazi
 ``` 
 $ systemd-analyze
 Startup finished in 6.823s (firmware) + 4.447s (loader) + 3.467s (kernel) + 8.412s (userspace) = 23.151s
-
 ```
 
 This time is actually **after** tweaking. It was much worse 80 seconds because nVidia and Dell choose to cut power to HDMI audio on nVidia GTX970M graphics card which drives the HDMI port. As such a `setpci` command was required which caused "low grapics error" message and you had to wait 20 seconds for mouse pointer to proceed. Then it would reload all graphic drivers and restart lightdm.
@@ -102,7 +101,6 @@ $ uname -r
 4.14.2-041402-generic
 $ grep KEXEC= /boot/config-`uname -r`
 CONFIG_KEXEC=y
-
 ```
 
 The first command `uname -r` is optional just to show what kernel you've booted with. As we can see on the second command the kernel is compiled by Ubuntu team with the necessary flag set. Not sure when this was added but likely <= year 2012.
@@ -117,7 +115,6 @@ The next step is to install the `kexec` tools for user space:
 
 ``` 
 $sudo apt install kexec-tools
-
 ```
 
 After normal binary downloads you are greeted with this screen:
@@ -141,7 +138,6 @@ Found Windows Boot Manager on /dev/sda1@/efi/Microsoft/Boot/bootmgfw.efi
 Adding boot menu entry for EFI firmware configuration
 done
 Processing triggers for systemd (229-4ubuntu21) ...
-
 ```
 
 
@@ -157,7 +153,6 @@ Our cohorts at ArchLinux have [great documentation for kexec][3] but it needs ma
 ``` 
 sudo kexec -l /boot/vmlinuz-`uname -r` --initrd=/boot/initrd.img-`uname -r` --reuse-cmdline
 sudo kexec -e
-
 ```
 
 from this point forward it appears every time you click reboot it automatically reloads the last kernel in fast reboot mode.
@@ -183,7 +178,6 @@ ExecStart=/usr/bin/kexec -l /boot/vmlinuz-%i --initrd=/boot/initrd.img-%i --reus
 
 [Install]
 WantedBy=kexec.target
-
 ```
 
 
@@ -192,21 +186,18 @@ Then enable the service file for the kernel you want to load, for example to sim
 ``` 
 $ sudo systemctl enable kexec-load@`uname -r`
 Created symlink from /etc/systemd/system/kexec.target.wants/kexec-load@4.4.0-101-generic.service to /etc/systemd/system/kexec-load@.service.
-
 ```
 
 Then to kexec:
 
 ``` 
 $ sudo systemctl kexec
-
 ```
 
 If you have `youtube` running there might be a system inhibitor preventing you from rebooting in which case use:
 
 ``` 
 $ sudo systemctl kexec -i
-
 ```
 
 If you wish to load a different kernel for the next kexec, for example 4.12.2-041202-generic, disable the service for the current kernel and enable the one for the new kernel:
@@ -214,7 +205,6 @@ If you wish to load a different kernel for the next kexec, for example 4.12.2-04
 ``` 
 $ sudo systemctl disable kexec-load@`uname -r`
 $ sudo systemctl enable kexec-load@4.12.2-041202-generic
-
 ```
 
 

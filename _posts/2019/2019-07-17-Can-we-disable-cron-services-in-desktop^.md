@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,967 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-17-Can-we-disable-cron-services-in-desktop^.md
 toc:          false
 navigation:   false
@@ -47,7 +47,6 @@ lrwxrwxrwx   1 root root    37 Jun  4 01:43 google-chrome -> /opt/google/chrome/
 -rwxr-xr-x   1 root root   383 Mar  7  2016 samba*
 -rwxr-xr-x   1 root root   214 Apr  9  2014 update-notifier-common*
 -rwxr-xr-x   1 root root  1046 May 19  2016 upstart*
-
 ```
 
 The script `mlocate` I don't even use daily. I have it run every 15 minutes because daily isn't enough for my liking. the script `popularity-contest` is [kind of like spyware][1] so I wouldn't call it with `crony` if I were replacing `cron`.
@@ -85,7 +84,6 @@ crony /mnt/e/usr/local/bin/daily-backup 5m d &
 corny /usr/local/bin/eyesome-sun.sh 1m d &
 
 exit 0
-
 ```
 
 This is what a typical installation has for entries that are already setup in `/etc/rc.local` along with new `crony` entries after them. The last two of my `crony` entries are custom scripts my machine has in `/etc/cron.daily`
@@ -112,7 +110,6 @@ while true; do
     continue
 
 done
-
 ```
 
 `crony` script needs more work but you get the general idea. This may or may not be a good project for WSL (Windows Subsystem for Linux) in which case I may finish it.

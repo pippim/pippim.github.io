@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,520 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-10-How-to-mount-Android-external-storage-over-WiFi-instead-of-USB.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ As mentioned in other answer `curlftpfs` doesn't work so I tried:
 
 ``` 
 sudo apt-get install sshfs
-
 ```
 
 However neither of the Android WiFi file sharing apps would let me signon. An email to tech support confirmed they don't support Secure Shell, only FTP which is notoriously insecure.
@@ -40,7 +39,6 @@ No matter which app you use you need to create a directory to mount the remote f
 ``` 
 mkdir /mnt/phonesudo
 chown rick:rick /mnt/phone
-
 ```
 
 "rick" being the User ID.
@@ -60,7 +58,6 @@ During testing and crashes you'll need to unmount your drive:
 
 ``` 
 $fusermount -u /mnt/phone
-
 ```
 
 After installing *SSH/SFTP Server - Terminal* use this command:
@@ -91,7 +88,6 @@ Access: 2016-03-10 17:22:24.000000000 -0700
 Modify: 2016-03-10 17:22:24.000000000 -0700
 Change: 2016-03-10 17:22:24.000000000 -0700
  Birth: -
-
 ```
 
 **Voila!** I can now see the Last Access Date like my project needs. Unfortunately I discover Android has the biggest security hole in the history of Mankind. Although based on the Linux Kernel Google decided to disable the date a file was opened and read.

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "8,103 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-Why-can^t-I-cd-to-a-quoted-tilde-^^~^^^.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ $ echo "~"
 ~
 $ echo `~`
 bash: /home/rick: Is a directory
-
 ```
 
 As you can see, when you single quote or use double quotes around `~` it is interpreted literally as a string and not expanded as a variable. When you use backticks (`) it is executed as a command and generates an error message.

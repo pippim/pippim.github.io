@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "8,231 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Long-boot-times-on-18.04.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ I just did a test conversion from 16.04 to 18.04 and did not have this problem. 
 
 ``` 
 sudo -H gedit /etc/default/grub
-
 ```
 
 
@@ -32,7 +31,6 @@ Look for the line containing:
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-
 ```
 
 and remove the word `splash` (which causes Plymouth to load).
@@ -41,7 +39,6 @@ Then save your file and run
 
 ``` 
 sudo update-grub
-
 ```
 
 Now Plymouth will no longer run on boot. This is a band-aid fix and you should keep searching for a real fix.

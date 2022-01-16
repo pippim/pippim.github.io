@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "4,588 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Use-sleep-with-minutes-and-seconds.md
 toc:          false
 navigation:   false
@@ -25,8 +25,7 @@ There are two excellent answers already but I'd like to expand a bit. Copy and p
 $ sleep 3d 5h 7m 30.05s &
 [1] 7321
 
-This will start a second process that will sleep for 3 days, 5 hours, 7 minutes and 30.05 seconds. The process ID (PID) is `7321` in my case.
-```
+This will start a second process that will sleep for 3 days, 5 hours, 7 minutes and 30.05 seconds. The process ID (PID) is `7321` in my case.```
 
 
 To confirm the PID use
@@ -36,7 +35,6 @@ $ ps aux | grep sleep
 rick      7321  0.0  0.0  14356   660 pts/2    S    22:40   0:00 sleep 3d 5h 7m 30.05s
 root     12415  0.0  0.0  14356   700 ?        S    22:41   0:00 sleep 60
 rick     12500  0.0  0.0  21292   968 pts/2    R+   22:41   0:00 grep --color=auto sleep
-
 ```
 
 The first entry is the one we are interested in. The second entry is for a permanent program I have running in startup. The third entry is for the grep command itself.
@@ -50,7 +48,6 @@ $ remaining_sleep_time 7321
 277296.05
 $ remaining_sleep_time 7321
 277262.05
-
 ```
 
 The code for the command you can include in your `~/.bashrc` file:
@@ -71,7 +68,6 @@ remaining_sleep_time() { # arg: pid
     }
     print $t'
 }
-
 ```
 
 

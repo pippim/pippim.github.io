@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,787 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-17-Is-a-for-loop-using-arrays-better-than-using-field-splitting-on-a-simple-variable^.md
 toc:          false
 navigation:   false
@@ -37,7 +37,6 @@ $ time ls
 real    0m0.004s
 user    0m0.000s
 sys     0m0.004s
-
 ```
 
 It is important to flush cached buffers in-between tests though:
@@ -59,7 +58,6 @@ The line:
 
 ``` 
 list=$(wmctrl -l | awk ' !/-1/ { print $1 } ')
-
 ```
 
 - is malformed if intent is to be an array
@@ -69,7 +67,6 @@ So I would use:
 
 ``` 
 Windows=( $(wmctrl -l | awk ' !/-1/ { print $1 } ') )
-
 ```
 
 - The outer set of () tells bash/shell everything inside is an array element delineated by spaces.
@@ -80,7 +77,6 @@ The line:
 
 ``` 
 wmctrl -i -a $i
-
 ```
 
 - `-i` and `-a` can be combined into `-ia`.
@@ -92,7 +88,6 @@ There are two ways of writing a shorter more readable script, first with an arra
 #!/bin/bash
 Windows=( $(wmctrl -l | awk ' !/-1/ { print $1 } ' ) )
 for Window in "${Windows[@]}" ; do wmctrl -ia $Window -c $Window ; done
-
 ```
 
 second without an array:
@@ -101,7 +96,6 @@ second without an array:
 #!/bin/bash
 Windows=$(wmctrl -l | awk ' !/-1/ { print $1 } ' )
 for Window in $Windows ; do wmctrl -ia $Window -c $Window ; done
-
 ```
 
 I prefer the array method because I'm trying to learn more about them and want to use them as much as possible. The choice is yours however.

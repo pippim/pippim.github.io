@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "167 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Text-processing-Aptly-output-file.md
 toc:          false
 navigation:   true
@@ -66,7 +66,6 @@ rick@alien:~/askubuntu$ cat aptfileout
  test_repo_two/trusty [trusty-main_20190312] [trusty-multiverse_20190312] [trusty-restricted_201]
 ───────────────────────────────────────────────────────────────────────────────────────────
 rick@alien:~/askubuntu$ 
-
 ```
 
 
@@ -153,7 +152,6 @@ done < "$INPUT"
 
 echo  "$CountIn lines read from $INPUT"
 echo "$CountOut lines written to $OUTPUT"
-
 ```
 
 
@@ -177,7 +175,6 @@ $ time grep ^" \*" aptfilein | sed 's/ \* //;s/ /: /;s/^/ /' | cut -d':' -f1,3,6
 real    0m0.011s
 user    0m0.003s
 sys     0m0.008s
-
 ```
 
 - `grep ^" \*" aptfilein` - the `grep` command selects lines containing a search string. The carrot (`^`) denotes the string must start at the beginning of the line. The backslash (`\`) denotes the asterisk/splat (`*`) is to be taken literally and not act as a wildcard character that selects everything. In summary this `grep` command selects all lines beginning with ` *` in file `aptfilein`.

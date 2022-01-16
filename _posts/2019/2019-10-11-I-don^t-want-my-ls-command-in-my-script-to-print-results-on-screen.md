@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "2,331 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-11-I-don^t-want-my-ls-command-in-my-script-to-print-results-on-screen.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ After posting script used in the question it was discovered:
 
 ``` 
 #!/bin/bash -x
-
 ```
 
 was used where the `-x` option outputs all commands to the terminal. 
@@ -42,14 +41,12 @@ You're missing the argument flag indicator so this:
 
 ``` 
 ls lX umbrella31_*log |  awk '{if($5 >=20000) {print}}' | wc -l
-
 ```
 
 should be this instead:
 
 ``` 
 ls -lX umbrella31_*log |  awk '{if($5 >=20000) {print}}' | wc -l
-
 ```
 
 On my system looking for bash scripts it works like so:
@@ -63,6 +60,5 @@ $ ls -lX *.sh
 
 $ ls -lX *.sh | awk '{if($5 >=200) {print}}' | wc -l
 3
-
 ```
 

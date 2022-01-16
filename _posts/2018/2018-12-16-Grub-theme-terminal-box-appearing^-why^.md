@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "911 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-16-Grub-theme-terminal-box-appearing^-why^.md
 toc:          false
 navigation:   false
@@ -43,7 +43,6 @@ Although you can write a [script to update][2] `/boot/grub/grub.cfg` it is easie
         linux   /boot/vmlinuz-4.15.0-42-generic root=UUID=b40b3925-70ef-447f-923e-1b05467c00e7 ro  noplymouth fastboot acpiphp.disable=1 pcie_aspm=force scsi_mod.use_blk_mq=1 vt.handoff=7 i915.enable_guc_loading=1 i915.enable_guc_submission=1 i915.edp_vswing=2 nopti nospectre_v2 nospec
     echo    'Loading initial ramdisk ...'
     initrd  /boot/initrd.img-4.15.0-42-generic
-
 ```
 
 Insert the two `echo` lines in front of the two existing lines.

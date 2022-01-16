@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,257 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-17-Dollar-Value-To-Word-In-LibreOffice-Calc.md
 toc:          false
 navigation:   false
@@ -141,8 +141,7 @@ Select Case Val(pDigit)
     Case Else: GetDigit = ""
 End Select
 End Function
-## 
-```
+## ```
 
 
 
@@ -476,7 +475,6 @@ Public Function getTensOnesPart(strAmount As String, strTensPart As String, strO
         End If
     End If
 End Function
-
 ```
 
 This macro's currency units are in " Lakhs " and " Crores ". You can modify the code to your needs.

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "2,303 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-04-How-can-I-double-the-tty-font-size-on-a-3840x2160-monitor^.md
 toc:          false
 navigation:   false
@@ -28,6 +28,5 @@ I put the following into my `~/.bashrc` and my problems went away:
 if [ $TERM == linux ]; then
     /bin/setfont /usr/share/consolefonts/Lat2-Terminus32x16.psf.gz
 fi
-
 ```
 

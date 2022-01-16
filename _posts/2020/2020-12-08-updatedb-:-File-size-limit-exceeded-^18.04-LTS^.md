@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "362 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-08-updatedb-:-File-size-limit-exceeded-^18.04-LTS^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ As per this [tutorial][1] increase it using:
 
 ``` 
 vi /etc/security/limits.conf
-
 ```
 
 By comparison my system which is stock has:

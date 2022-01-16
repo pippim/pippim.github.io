@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "4,093 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-22-How-do-I-prevent-^cd^-command-from-going-to-home-directory^.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ cd() {
     [[ $# -eq 0 ]] && return
     builtin cd "$@"
 }
-
 ```
 
 Open a new terminal and now when you type `cd` with no parameters you simply stay in the same directory.
@@ -58,7 +57,6 @@ Usage:
     cd ../sibling   Move up one directory level and change to sibling directory
 
     cd /path/to/    Change to specific directory '/path/to/' eg '/var/log'
-
 ```
 
 
@@ -92,7 +90,6 @@ EOF
 
     builtin cd "$@"
 }
-
 ```
 
 

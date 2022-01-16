@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "20,028 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Is-the-GNOME-Tweaks-package-in-Software-the-same-as-installing-gnome-tweak-tool^.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ mate-tweak/bionic,bionic 18.04.16-1 all
 mousetweaks/bionic,bionic,now 3.12.0-4 amd64 [installed]
 tweak/bionic 3.02-2 amd64
 unity-tweak-tool/bionic,bionic,now 0.0.7ubuntu4 all [installed]
-
 ```
 
 

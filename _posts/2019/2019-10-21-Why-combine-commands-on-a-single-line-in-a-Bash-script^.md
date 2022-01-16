@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "20,039 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-21-Why-combine-commands-on-a-single-line-in-a-Bash-script^.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ When we are writing answers here in **Ask Ubuntu** it is helpful to put them int
 $ CurrDir=$PWD ; cd /bin ; ls -la dd ; cd "$CurrDir"
 
 -rwxr-xr-x 1 root root 72632 Mar  2  2017 dd
-
 ```
 
 As mentioned earlier you could use `&&` for the same effect but if there were errors above you could end up on the wrong directory. In this case `;` is preferable to `&&` that isn't tested for success:
@@ -38,7 +37,6 @@ rick@alien:~/askubuntu$ CurrDir=$PWD && cd /bin && llllssss -la dd && cd "$CurrD
 llllssss: command not found
 
 rick@alien:/bin$ 
-
 ```
 
 ## Why we have to use it
@@ -50,5 +48,4 @@ $ [[ 2 -eq 2 ]] && { echo 2 equals 2 ; echo setting three to 3 ; three=3 ; }
 
 2 equals 2
 setting three to 3
-
 ```

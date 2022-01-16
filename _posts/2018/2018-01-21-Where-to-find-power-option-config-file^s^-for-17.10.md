@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "247 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-21-Where-to-find-power-option-config-file^s^-for-17.10.md
 toc:          false
 navigation:   false
@@ -27,14 +27,12 @@ Timeout for blanking the screen (seconds; 0 = never):
 
 ``` 
 gsettings set org.gnome.desktop.session idle-delay 1800
-
 ```
 
 Timeout for locking the screen after blanking (seconds; 0 = instant):
 
 ``` 
 gsettings set org.gnome.desktop.screensaver lock-delay 0
-
 ```
 
 

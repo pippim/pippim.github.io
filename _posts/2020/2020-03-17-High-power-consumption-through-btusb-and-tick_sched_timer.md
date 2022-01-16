@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,433 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-03-17-High-power-consumption-through-btusb-and-tick_sched_timer.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ To turn off bluetooth only temporarily, use `rfkill`:
 
 ``` 
 $ sudo rfkill block bluetooth
-
 ```
 
 To permanently turn off bluetooth create a `udev` rule:
 
 ``` 
 $ sudo -H gedit /etc/udev/rules.d/50-bluetooth.rules
-
 ```
 
 Then in the empty file, insert these lines:
@@ -40,7 +38,6 @@ Then in the empty file, insert these lines:
 ``` 
 # disable bluetooth
 SUBSYSTEM=="rfkill", ATTR{type}=="bluetooth", ATTR{state}="0"
-
 ```
 
 Save the file and exist.

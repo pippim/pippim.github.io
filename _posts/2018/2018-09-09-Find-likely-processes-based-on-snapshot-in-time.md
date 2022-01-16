@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "203 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-09-Find-likely-processes-based-on-snapshot-in-time.md
 toc:          false
 navigation:   false
@@ -73,7 +73,6 @@ while true ; do
     sleep .05 # 20 samples / second
     
 done
-
 ```
 
 ## Missing pieces
@@ -88,8 +87,7 @@ HighCnt=$(awk -v max=0 '{if($1>max){want=$2; max=$1}}END{print want} '\
 echo HighCnt: $HighCnt
 # Exclude all processes => highest count
 awk '($1 < var) ' var="$HighCnt" ~/pid.tmp
-## 
-```
+## ```
 
 
 
@@ -119,6 +117,5 @@ HighCnt: 63
       1 /mnt/e/bin/ps-suspects.sh Possible suspects causing problems
      26 0 R rick     25976  2051  0  80   0 - 120676 -     10:43 ?        00:00:00 gnome-calculator
      62 0 S root     22561   980  0  80   0 -  3589 -      10:42 ?        00:00:00 sleep 60
-
 ```
 

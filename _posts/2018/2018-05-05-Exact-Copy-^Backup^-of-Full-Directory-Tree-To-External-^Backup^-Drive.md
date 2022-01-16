@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "402 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-05-Exact-Copy-^Backup^-of-Full-Directory-Tree-To-External-^Backup^-Drive.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ Borrowing from this answer: [Bash script to clone Ubuntu to new partition for te
 ``` 
 rsync -haxAX --stats --delete --info=progress2 --info=name0 /* "$TargetMnt" \
       --exclude={/dev/*,/proc/*,/sys/*,/tmp/*,/run/*,/mnt/*,/media/*,/lost+found}
-
 ```
 
 Some notable comments about parameters:

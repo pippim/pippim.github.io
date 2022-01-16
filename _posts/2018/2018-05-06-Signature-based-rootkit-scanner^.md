@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,082 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-06-Signature-based-rootkit-scanner^.md
 toc:          false
 navigation:   false
@@ -52,7 +52,6 @@ The [AIDE homepage][2] states Debian is supported which means the application ca
 
 ``` 
 sudo apt install aide
-
 ```
 
 As far as portability and USB pen drive support the homepage goes on to say:

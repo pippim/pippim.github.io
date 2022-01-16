@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "797 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-09-gedit-^Manage-External-Tools^-menu-option-doesn^t-appear.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ My current version is:
 ``` 
 $ gedit --version
 gedit - Version 3.18.3
-
 ```
 
 **Does anyone know why the *Manage External Tools* option isn't appearing?**
@@ -53,7 +52,6 @@ drwxr-xr-x rick rick rick
 drwx------ rick rick .config
 drwxr-xr-x root root gedit
                      tools - No such file or directory
-
 ```
 
 
@@ -63,7 +61,6 @@ Based on steeldriver's comment I ran:
 
 ``` 
 sudo chown -cR rick:rick /home/rick
-
 ```
 
 and all is well now.

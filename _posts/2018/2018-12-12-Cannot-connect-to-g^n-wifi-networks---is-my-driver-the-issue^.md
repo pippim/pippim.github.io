@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "245 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-12-Cannot-connect-to-g^n-wifi-networks---is-my-driver-the-issue^.md
 toc:          false
 navigation:   false
@@ -36,21 +36,18 @@ I have the same Wifi Card:
    capabilities: pm msi pciexpress bus_master cap_list ethernet physical wireless
    configuration: broadcast=yes driver=ath10k_pci driverversion=4.14.78-041478-generic firmware=WLAN.RM.4.4.1-00079-QCARMSWPZ-1 ip=192.168.1.68 latency=0 link=yes multicast=yes wireless=IEEE 802.11
    resources: irq:138 memory:dd200000-dd3fffff
-
 ```
 
 It's using the same driver but compiled for an older kernel:
 
 ``` 
 driver=ath10k_pci driverversion=4.14.78-041478-generic firmware=WLAN.RM.4.4.1-00079-QCARMSWPZ-1
-
 ```
 
 Your firmware is also identical:
 
 ``` 
 firmware=WLAN.RM.4.4.1-00079-QCARMSWPZ-1
-
 ```
 
 To answer your question, AFAIK there isn't a newer driver you can use.
@@ -88,14 +85,12 @@ $ lspci -nnk | grep -iA2 net; dmesg | grep ath10k
 [ 3585.446346] ath10k_pci 0000:3c:00.0: Unknown eventid: 90118
 [ 8863.625325] ath10k_pci 0000:3c:00.0: Unknown eventid: 118809
 [ 8863.628239] ath10k_pci 0000:3c:00.0: Unknown eventid: 90118
-
 ```
 
 Please **Update** your question with the results of:
 
 ``` 
 lspci -nnk | grep -iA2 net; dmesg | grep ath10k
-
 ```
 
 

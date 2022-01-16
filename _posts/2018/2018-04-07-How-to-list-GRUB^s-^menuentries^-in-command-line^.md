@@ -12,7 +12,7 @@ votes:        "16 "
 favorites:    
 views:        "85,628 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-07-How-to-list-GRUB^s-^menuentries^-in-command-line^.md
 toc:          true
 navigation:   true
@@ -79,7 +79,6 @@ Grub Version: 2.02~beta2-36ubuntu3.15
         │                   <Display Grub Boot>        <Exit>                      │ 
         │                                                                          │ 
         └──────────────────────────────────────────────────────────────────────────┘ 
-
 ```
 
 
@@ -112,14 +111,16 @@ echo 'Loading initial ramdisk ...'
 initrd /boot/initrd.img-4.14.27-041427-generic
 }
 Press <Enter> to continue
-## 
-```
+## ```
 
 
 ``` 
                                                                                  
-# `grub-menu.sh` bash script
-```
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
+
+# `grub-menu.sh` bash script```
 
 
 
@@ -129,7 +130,6 @@ Press <Enter> to continue
 ``` bash
 # Default for hide duplicate and triplicate options with (upstart) and (recovery mode)?
 HideUpstartRecovery=false
-
 ```
 
 Set the value to `true` (hide the extra entries) or `false` (list all entries).
@@ -138,19 +138,17 @@ The default format can be overridden when calling the script using:
 
 ``` bash
 grub-menu.sh short
-
 ```
 
 or:
 
 ``` bash
 grub-menu.sh long
-
 ```
 
 
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
 
 ## The code:
 
@@ -309,8 +307,7 @@ done
 tput rmcup
 
 exit 0
-## 
-```
+## ```
 
 
 
@@ -321,6 +318,6 @@ exit 0
   [2]: https://i.stack.imgur.com/a95hd.png
 
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
 

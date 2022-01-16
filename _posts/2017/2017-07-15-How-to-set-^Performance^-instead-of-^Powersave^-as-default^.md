@@ -12,7 +12,7 @@ votes:        "31 "
 favorites:    
 views:        "51,185 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-15-How-to-set-^Performance^-instead-of-^Powersave^-as-default^.md
 toc:          false
 navigation:   false
@@ -39,21 +39,18 @@ Install cpufrequtils:
 
 ``` 
 sudo apt-get install cpufrequtils
-
 ```
 
 Then edit the following file (if it doesn't exist, create it):
 
 ``` 
 sudo nano /etc/default/cpufrequtils
-
 ```
 
 And add the following line to it:
 
 ``` 
 GOVERNOR="performance"
-
 ```
 
 Save and exit.
@@ -62,7 +59,6 @@ For changes take effect, run:
 
 ``` 
 sudo systemctl restart cpufrequtils
-
 ```
 
 Then you can run `cpufreq-info` to see informations about your cpu frequency, governor and more:
@@ -72,7 +68,6 @@ $ cpufreq-info
     current policy: frequency should be within 800 MHz and 3.90 GHz.
               The governor "performance" may decide which speed to use
               within this range.
-
 ```
 
 
@@ -85,7 +80,6 @@ If you want performance governor all the time you need to edit `/etc/rc.local` a
 ``` 
 sleep 120 # Give CPU startup routines time to settle.
 cpupower frequency-set --governor performance
-
 ```
 
 To setup `/etc/rc.local` in 18.04 see: [How to Enable `/etc/rc.local` with Systemd](https://www.linuxbabe.com/linux-server/how-to-enable-etcrc-local-with-systemd)

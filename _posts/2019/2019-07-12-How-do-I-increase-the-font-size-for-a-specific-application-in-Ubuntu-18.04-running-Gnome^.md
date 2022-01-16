@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,341 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-12-How-do-I-increase-the-font-size-for-a-specific-application-in-Ubuntu-18.04-running-Gnome^.md
 toc:          false
 navigation:   false
@@ -27,21 +27,18 @@ Create a script call `ue` (Unity Editor). Place within it:
 #!/bin/bash
 xrandr --dpi 144
 unity-editor "$@"    # Or whatever the program is you want to run
-
 ```
 
 Mark the script as executable using:
 
 ``` 
 chmod a+x ue
-
 ```
 
 Call the script using
 
 ``` 
 ./ue
-
 ```
 
 - Or replace `./` with the directory name if not in the current directory
@@ -65,14 +62,12 @@ $ xdpyinfo | grep dots
 $ grep DPI /var/log/Xorg.0.log
 [     9.555] (--) NVIDIA(0): DPI set to (43, 44); computed from "UseEdidDpi" X config
 [     9.761] (==) modeset(G0): DPI set to (96, 96)
-
 ```
 
 In the above script you can reset `xrandr` back to default DPI of `96` by adding the following line to the bottom:
 
 ``` 
 xrandr --dpi 96
-
 ```
 
 I've never encountered a need to do this, but you might.

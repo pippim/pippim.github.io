@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "936 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-15-Getting-the-checksum-of-a-file-through-vsFTPd.md
 toc:          false
 navigation:   false
@@ -42,7 +42,6 @@ Here is one I have handy already for calculating hash sums on files:
         acpi-lid-event-eyesome \
         eyesome-dbus.sh \
         > eyesome.md5
-
 ```
 
 So you would download the file `eyesome.md5` to your remote machine.
@@ -61,7 +60,6 @@ d70ca24ca2aea58b043d86e9bdd15c0e  eyesome-sun.sh
 e06f195dcf254d65b4f8512d46e44458  acpi-lid-eyesome.sh
 8ce2412bdb1bab4bca6e4921f9ae282b  acpi-lid-event-eyesome
 54e3052f12ca33fc53e38b01d4dd05d6  eyesome-dbus.sh
-
 ```
 
 **Note:** If your file names are prefixed with a path you may have to change it from the server's path to your local path with `sed`, `grep` or another utility.
@@ -83,7 +81,6 @@ acpi-lid-eyesome.sh: OK
 acpi-lid-event-eyesome: OK
 eyesome-dbus.sh: OK
 md5sum: WARNING: 2 computed checksums did NOT match
-
 ```
 
 The files that fail (`eyesome-src.sh` and `wake-eyesome.sh`) you need to download.

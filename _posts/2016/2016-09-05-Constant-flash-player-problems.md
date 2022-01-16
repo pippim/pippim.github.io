@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,632 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-05-Constant-flash-player-problems.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ This is a shot in the dark based on a similar problem reported in February 2013.
 ``` 
 chmod -R 0700 ~/.config/google-chrome/PepperFlash
 rm -rf ~/.config/google-chrome/PepperFlash
-
 ```
 
 This will cause the working copy of Flash configuration to be deleted and the next time you start Chrome it is rebuilt from defaults. Type `exit` to close the Terminal.

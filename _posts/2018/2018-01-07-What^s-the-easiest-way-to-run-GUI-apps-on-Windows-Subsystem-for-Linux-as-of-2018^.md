@@ -12,7 +12,7 @@ votes:        "100 "
 favorites:    
 views:        "287,168 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-07-What^s-the-easiest-way-to-run-GUI-apps-on-Windows-Subsystem-for-Linux-as-of-2018^.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ Installation is straight forward. As of March 17, 2019 you can simply accept the
 
 ``` 
 export DISPLAY=localhost:0.0
-
 ```
 
 # What can you do after VcXsrv is installed?
@@ -40,7 +39,6 @@ I was able to run:
 sudo apt install ubuntu-desktop
 sudo apt install yad
 sudo apt install gedit
-
 ```
 
 ... to install GUI desktop software. This then allowed me to run `gedit` and `nautilus`. Also I was then able to install specific GUI applications through the CLI (Command Line Interface) using `apt` or `apt-get` commands.
@@ -57,7 +55,6 @@ I modified `/etc/environment` to tweak GUI drop down menus:
 PATH="/mnt/e/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export LIBGL_ALWAYS_INDIRECT=Yes
 export DISPLAY=localhost:0.0
-
 ```
 
 - `/mnt/e/bin` is unusual path because it is where I store scripts used in both Windows 10 dual boot WSL and Ubuntu 16.04 dual boot. Most users would not include this on their machine.

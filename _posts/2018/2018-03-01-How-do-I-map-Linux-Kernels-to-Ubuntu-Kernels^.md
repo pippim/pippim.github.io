@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "501 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-01-How-do-I-map-Linux-Kernels-to-Ubuntu-Kernels^.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ Go to this [page][1] and search on `4.15.5` and you will see:
 ``` 
 Ubuntu Kernel Version   Ubuntu Kernel Tag     Mainline Kernel Version
 4.15.0-11.12            Ubuntu-4.15.0-11.12	  4.15.5
-
 ```
 
 I'm not totally convinced this page is complete or updated on a timely basis but it is the closest answer I've found so far.

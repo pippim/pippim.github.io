@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "8,707 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-24-how-can-i-get-Conky-to-display-weather^.md
 toc:          false
 navigation:   false
@@ -67,7 +67,6 @@ Weather report: Edmonton
    ― (   ) ―   → 6 km/h       
       `-’      10 km          
      /   \     0.0 mm         
-
 ```
 
 To get your city name for `wttr.in` see:
@@ -97,7 +96,6 @@ ${color1}${goto 5}Rise: ${color green}${execpi 300 cat /usr/local/bin/.eyesome-s
 # Image      |
 #------------+
 ${image /home/rick/Pictures/Weather.png -p 0,1080 -s 400x120}
-
 ```
 
 - I included the section just before for reference

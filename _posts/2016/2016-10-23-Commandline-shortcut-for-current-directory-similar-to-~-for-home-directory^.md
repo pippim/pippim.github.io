@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "70,667 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-23-Commandline-shortcut-for-current-directory-similar-to-~-for-home-directory^.md
 toc:          false
 navigation:   false
@@ -36,7 +36,6 @@ cp /etc/default/grub ..
 cp /etc/default/grub ../c2
 cd ../../
 tree
-
 ```
 
 The output from tree command appears like this:
@@ -51,7 +50,6 @@ The output from tree command appears like this:
     └── grub
 
 3 directories, 3 files
-
 ```
 
 The `.` at the top of tree output represents the new current directory `a`  which is the grandparent of `a/b/c` which we navigated to using the `cd ../../` command. Underneath `a` we see the sub-directories `a/b`, `a/b/c` and `a/b/c2`
@@ -78,6 +76,5 @@ After we are done, we remove the three directories and files with:
 ``` 
 cd ~/
 rm -r tree
-
 ```
 

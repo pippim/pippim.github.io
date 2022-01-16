@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,942 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-11-CPU-governor-changes-automatically-to-^performance^-under-load.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ clipboard:    false
 
 ``` 
 sudo apt install cpufreqd
-
 ```
 
 A configuration file [cpufreqd.conf][1] is used to change frequencies. There are two sections where you can see it changing governor to "performance":
@@ -40,7 +39,6 @@ policy=performance
 name=AC_on
 ac=on                   # (on/off)
 profile=hi_boost
-
 ```
 
 It's harder to figure out when it changes to "powersave" unless the battery charger is unplugged.

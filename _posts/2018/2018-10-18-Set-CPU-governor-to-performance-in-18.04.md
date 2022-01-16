@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "139,907 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-18-Set-CPU-governor-to-performance-in-18.04.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ In `/etc/rc.local` put in these commands:
 ``` 
 sleep 120
 cpupower frequency-set --governor performance
-
 ```
 
 
@@ -79,7 +78,6 @@ for ((i=0; i<300; i++)) ; do
     fi
     sleep 1
 done
-
 ```
 
 Call the script in `/etc/rc.local` before the `exit 0` command (explained in detail below).
@@ -90,7 +88,6 @@ One minute after logging in look at the output:
 $ cat /tmp/watch-gov.log
 watch-gov.sh: Set to performance at  17:50:09 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00 
 watch-gov.sh: Current governor: powersave Uptime:  17:51:09 up 1 min,  1 user,  load average: 1.89, 0.62, 0.22
-
 ```
 
 Confirmation from this [answer][2] states this 1 minute force to `powersave` governor is controlled by `/etc/init.d/ondemand`.
@@ -105,7 +102,6 @@ The simplest way to stay in Performance mode is to edit `/etc/rc.local` and inse
 ``` 
 sleep 120 # Give CPU startup routines time to settle.
 echo performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-
 ```
 
 Save the file and reboot.

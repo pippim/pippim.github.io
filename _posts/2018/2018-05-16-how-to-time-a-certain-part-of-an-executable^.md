@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "393 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-16-how-to-time-a-certain-part-of-an-executable^.md
 toc:          false
 navigation:   false
@@ -41,7 +41,6 @@ $ time locate display-auto
 real	0m0.826s
 user	0m0.803s
 sys 	0m0.016s
-
 ```
 
 We are using the `locate` command to find all the filenames with `display-auto` in the names. Simply insert the `time` command in front of the command.
@@ -64,7 +63,6 @@ done <"$BLOCKEDIPS_XS"
 timer stops, shows elapsed time
 BlockTime=$SECONDS
 echo "Total time to block IPs: $BlockTime Seconds"
-
 ```
 
 In this code the `SECONDS` is reset to zero and then obtained after a lengthy process occurs.

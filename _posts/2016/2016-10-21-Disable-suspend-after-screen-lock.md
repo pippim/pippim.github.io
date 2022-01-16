@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,672 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-21-Disable-suspend-after-screen-lock.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ You can try this. Open the terminal and type:
 
 ``` 
 gksu gedit /etc/systemd/logind.conf
-
 ```
 
 Set these two lines to look like this:
@@ -31,7 +30,6 @@ Set these two lines to look like this:
 ``` 
 HandleLidSwitch=suspend
 HandleLidSwitchDocked=ignore
-
 ```
 
 Save the file, reboot and test it under the two environments (docked and undocked).

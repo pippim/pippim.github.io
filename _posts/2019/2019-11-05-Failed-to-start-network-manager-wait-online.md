@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "4,138 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-05-Failed-to-start-network-manager-wait-online.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ Boot into recovery mode, open a terminal and use:
 
 ``` 
 sudo systemctl disable NetworkManager-wait-online.service
-
 ```
 
 This will allow you to reboot in normal mode.

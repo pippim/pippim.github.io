@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,163 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Uninstalling-netspeed-indicator.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ You only removed the PPA containing the program for downloading. You need to rem
 ``` 
 sudo apt update
 sudo apt install remove --purge indicator-netspeed
-
 ```
 
 If that doesn't work you probably need to add back the PPA first (granted I'm not sure on this one):
@@ -33,5 +32,4 @@ If that doesn't work you probably need to add back the PPA first (granted I'm no
 add-apt-repository ppa:nilarimogard/webupd8
 sudo apt update
 sudo apt install remove --purge indicator-netspeed
-
 ```

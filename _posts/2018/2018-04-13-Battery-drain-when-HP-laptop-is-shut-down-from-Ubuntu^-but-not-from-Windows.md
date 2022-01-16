@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "3,792 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-13-Battery-drain-when-HP-laptop-is-shut-down-from-Ubuntu^-but-not-from-Windows.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Another user with an HP Pavilion was [loosing 10% battery overnight][1]. Apparen
 $ sudo lshw -class network | grep logical
        logical name: enp59s0
        logical name: wlp60s0
-
 ```
 
 The logical name starting with `e` is for Ethernet which means "LAN". The logical name starting with `w` is for WiFi which is of no concern.
@@ -57,14 +56,12 @@ Settings for enp59s0:
 	Current message level: 0x000060e4 (24804)
 			       link ifup rx_err tx_err hw wol
 	Link detected: yes
-
 ```
 
 In my case "Wake on LAN" is not turned on but if yours shows:
 
 ``` 
     Wake-on: g
-
 ```
 
 That means "Wake-on-LAN" is turned on and like the OP is loosing `0% battery per night you are loosing the 5% per day.
@@ -73,7 +70,6 @@ To turn off "Wake-on-LAN" the OP used:
 
 ``` 
 sudo ethtool -s enp59s0 wol d
-
 ```
 
 - Remember to substitute `enp59s0` with your logical name from step 1. above.

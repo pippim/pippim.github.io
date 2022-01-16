@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "122,969 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-10-Can^t-upgrade-due-to-low-disk-space-on-^boot.md
 toc:          false
 navigation:   true
@@ -60,7 +60,6 @@ The following packages will be REMOVED:
 0 upgraded, 0 newly installed, 24 to remove and 2 not upgraded.
 After this operation, 2,330 MB disk space will be freed.
 Do you want to continue? [Y/n] 
-
 ```
 
 
@@ -184,21 +183,18 @@ done
 if [ "$i" -gt 0 ] ; then
      apt-get purge $list
 fi
-
 ```
 
 **NOTE:** You need sudo permission to create the file so use:
 
 ``` bash
 gksu gedit /usr/local/bin/rm-kernels
-
 ```
 
 To make file executable use:
 
 ``` bash
 sudo chmod +x /usr/local/bin/rm-kernels
-
 ```
 
 **NOTE:** For a server (Text based, not GUI) version of this script see: [How do I remove old kernel versions to clean up the boot menu?][3]

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "112 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-21-Why-does-system-say-my-hdd-is-only-26GB.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ sdd      8:48   1  29.8G  0 disk
 ├─sdd1   8:49   1   1.5G  0 part /media/rick/Ubuntu 17.04 amd64
 └─sdd2   8:50   1   2.3M  0 part 
 sr0     11:0    1  1024M  0 rom  
-
 ```
 
 

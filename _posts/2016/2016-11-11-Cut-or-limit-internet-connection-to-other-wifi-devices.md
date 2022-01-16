@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,547 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-11-Cut-or-limit-internet-connection-to-other-wifi-devices.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ You can change the aggregate speed of the NIC port using `ethtool`.
 
 ``` 
 $ sudo ethtool -s eth0 speed 10
-
 ```
 
 This will set the port to 10MB, for example.
@@ -36,14 +35,12 @@ You can also use the tool `wondershaper` to do it as well. NOTE: Speed should be
 
 ``` 
 $ sudo wondershaper eth1 downspeed upspeed
-
 ```
 
 For example:
 
 ``` 
 $ sudo wondershaper eth0 10000 280
-
 ```
 
 ## trickle
@@ -54,7 +51,6 @@ User mode - [trickle man page][1]
 
 ``` 
 $ sudo trickle -d 20 -u 20 wget http://www.google.com/bigfile
-
 ```
 
 Will throttle 20K/s for both up and down traffic for just this `wget`, everything else will not be limited.
@@ -65,7 +61,6 @@ In daemon mode, trickled can limit a group of programs to a fixed limit of bandw
 
 ``` 
 $ sudo trickled -d 20 -u 20
-
 ```
 
 ## pyshaper

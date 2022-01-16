@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "21,683 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-18-Why-is-this-python-script-running-in-background-consuming-100-^-CPU^.md
 toc:          false
 navigation:   false
@@ -37,14 +37,12 @@ while true ; do
     sleep 1.0
     
 done
-
 ```
 
 It does require Xorg's `xclip` package:
 
 ``` 
 sudo apt install xclip
-
 ```
 
 It's dumping clipboard contents to screen using `cat` command. If you want hard copy instead replace `cat` with `lp` and specify your printer name, orientation and possibly "fit to page" option.

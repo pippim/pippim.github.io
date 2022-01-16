@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "13,475 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-22-cannot-stop-network-printers-are-being-automatically-added.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ There is one answer though with another step to take. With your favourite editor
 
 ``` 
 enable-dbus=no
-
 ```
 
 then restart the avahi-daemon service:
@@ -33,7 +32,6 @@ then restart the avahi-daemon service:
 ``` 
 sudo service avahi-daemon stop
 sudo service avahi-deamon start
-
 ```
 
 Stop/Start is preferable in some instances as documented in [Unix & Linux][2].

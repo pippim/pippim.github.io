@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "39 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-23-Diappearence-of-icon-of-applications-and-folders.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ My general rule of thumb when I remove something and something else breaks I put
 
 ``` 
 sudo apt install --reinstall ubuntu-mono
-
 ```
 
 ...will hopefully get you icons back the way they were.

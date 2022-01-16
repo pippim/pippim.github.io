@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "36,580 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-12-Poor-IO-performance---PCIe-NVMe-Samsung-950-pro.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ After implementing `scsi_mod.use_blk_mq=1` kernel parameter:
 ``` 
 $ systemd-analyze
 Startup finished in 7.052s (firmware) + 6.644s (loader) + 2.427s (kernel) + 8.440s (userspace) = 24.565s
-
 ```
 
 Removing the kernel parameter and rebooting:
@@ -43,7 +42,6 @@ Removing the kernel parameter and rebooting:
 ``` 
 $ systemd-analyze
 Startup finished in 7.060s (firmware) + 6.045s (loader) + 2.712s (kernel) + 8.168s (userspace) = 23.986s
-
 ```
 
 So it would appear now that `scsi_mod.use_blk_mq=1` makes system **slower** not faster. At one time it may have been beneficial though.

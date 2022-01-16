@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "471 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-Overriding-a-kernel-module-blacklisting-that^s-reinstated-during-apt-full-upgrade.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ This answer:
 
 ``` 
 apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y udev
-
 ```
 
 Read the comments below the answer though. It suggests `--force-yes` is sometimes an extreme option although it's not explained clearly.

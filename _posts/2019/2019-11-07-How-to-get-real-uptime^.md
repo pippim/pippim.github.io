@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,172 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-07-How-to-get-real-uptime^.md
 toc:          false
 navigation:   false
@@ -129,7 +129,6 @@ Oct 31 16:54:26 alien systemd[1]: Started Suspend.
  (... SNIP ...)
 Nov 07 21:07:28 alien systemd[1]: Starting Suspend...
 Nov 08 05:08:52 alien systemd[1]: Started Suspend.
-
 ```
 
 - The `journalctl -b-0` command reads all the system messages for the current boot. You could enhance the function to look at the previous boot using `-b-1` the boot before that with `-b-2`, etc.

@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,616 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-02-Who-is-Bastien^.md
 toc:          false
 navigation:   false
@@ -25,15 +25,13 @@ The common solution is to use:
 
 ``` 
 rfkill list
-
 ```
 
 and search for:
 
 ``` 
 #: hci0: Bluetooth
-	        Soft blocked: yes
-```
+	        Soft blocked: yes```
 
 	        Hard blocked: no
 
@@ -41,7 +39,6 @@ Then use:
 
 ``` 
 rfkill unblock #
-
 ```
 
 Where `#` is a number like `0`, `1`, `3` or `6`.

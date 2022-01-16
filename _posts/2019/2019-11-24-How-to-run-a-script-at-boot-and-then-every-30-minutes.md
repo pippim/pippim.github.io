@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,799 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-24-How-to-run-a-script-at-boot-and-then-every-30-minutes.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ Write a control file and place it in `/etc/cron.d/myscriptrun`
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 @reboot   root    /usr/local/bin/myscript.sh
-
 ```
 
 **Do not** make this file executable. It is a control file not a script.
@@ -46,7 +45,6 @@ while true ; do
     sleep 30m
 
 done
-
 ```
 
 Make it executable `chmod a+x /etc/cron.d/bashscript`.
@@ -77,7 +75,6 @@ $ systemctl status cron*
            ├─1168 dbus-monitor --system type=method_call, interface=org.freedesktop.ColorManag
            ├─1169 /bin/bash /usr/local/bin/eyesome-dbus.sh
            └─6575 sleep 57207
-
 ```
 
 Your display will have `cron` at the top and `sleep` at the bottom but will not have `eyesome` stuff in the middle, unless you are using that sunrise/sunset multiple monitor brightness/gamma transitioning software.
@@ -90,7 +87,6 @@ $ remaining_sleep_time 6575
 
 $ echo $((55923/60))
 932
-
 ```
 
 The time remaining is 55923 seconds divided by 60 seconds in a minute = 932 minutes before the job wakes up. To get a copy of `remaining_sleep_time` function see:

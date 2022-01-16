@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "11,552 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-07-How-to-make-a-progress-bar-work-in-Zenity^.md
 toc:          false
 navigation:   false
@@ -74,7 +74,6 @@ zenity --progress \
 (( $? != 0 )) && zenity --error --text="Error in zenity command."
 
 exit 0
-
 ```
 
 If you follow the link to ***Ubuntu Forums*** you can read a discussion of this script. If after that you still have questions please ask via comment below and I'll do my best to answer them for you.

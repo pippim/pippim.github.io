@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "5,074 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-18-Command-not-found-error-in-Bash-script.md
 toc:          false
 navigation:   false
@@ -68,7 +68,6 @@ Line 56:
 
 Did you mean: (apply this, apply all SC2086)
   if [ -n "$(ls -A "$fullpath"/project1/project1_repo)" ]; then
-
 ```
 
 You can follow the suggestion to use `"$fullpath"` and any other recommendations in comments above. After fixing current errors  **ShellCheck** reports, it may then report additional errors when you run it again.

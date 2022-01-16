@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "12,822 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-09-Benchmarking-a-HDD-using-the-Benchmark-utility-in-^Disks^-on-Ubuntu-16.04.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ $ sudo hdparm -tT /dev/sdb
 /dev/sdb:
  Timing cached reads:   18822 MB in  1.99 seconds = 9442.74 MB/sec
  Timing buffered disk reads:  80 MB in  3.08 seconds =  26.01 MB/sec
-
 ```
 
 The first drive is an SSD and the second drive is a USB pen drive.

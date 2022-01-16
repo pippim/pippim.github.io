@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "10,521 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-07-How-does-the-new-^Bash-on-Windows-10^-really-work^.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,248 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-22-CPU-Frequency-is-allways-the-lowest-possible-^and-high-CPU-usage^.md
 toc:          false
 navigation:   false
@@ -33,14 +33,12 @@ Edit the following file (if it doesn't exist, create it):
 
 ``` 
 sudo nano /etc/default/cpufrequtils
-
 ```
 
 And add the following line to it:
 
 ``` 
 GOVERNOR="performance"
-
 ```
 
 Save and exit.
@@ -49,7 +47,6 @@ For changes to immediately take effect without rebooting, run:
 
 ``` 
 sudo /etc/init.d/cpufrequtils restart
-
 ```
 
 Then you can run `cpufreq-info` to see informations about your cpu frequency, governor and more:
@@ -59,7 +56,6 @@ $ cpufreq-info
 current policy: frequency should be within 800 MHz and 3.90 GHz.
           The governor "performance" may decide which speed to use
           within this range.
-
 ```
 
 

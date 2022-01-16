@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "4,124 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-01-Remove-second-hard-drive-OS-from-grub.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ If you don't want third party utilities you can do it with a move command:
 
 ``` 
 sudo mv /mnt/extra_distro/boot /mnt/extra_distro/boot.old
-
 ```
 
 Then `sudo update-grub` of course.
@@ -65,7 +64,6 @@ Mount Partition
       │                                                                              │ 
       └──────────────────────────────────────────────────────────────────────────────┘ 
                                                                                        
-
 ```
 
 
@@ -83,7 +81,6 @@ CODENAME:      bionic
 DESCRIPTION:   Ubuntu 18.04 LTS
  Size  Used Avail Use%
   24G   18G  4.7G  79%
-
 ```
 
 Now update `grub` and look at the menu:
@@ -120,7 +117,6 @@ Grub Version: 2.02~beta2-36ubuntu3.18
         │                                                                          │ 
         └──────────────────────────────────────────────────────────────────────────┘ 
                                                                                      
-
 ```
 
 Notice the grub options:
@@ -165,7 +161,6 @@ Grub Version: 2.02~beta2-36ubuntu3.18
         │                   <Display Grub Boot>        <Exit>                      │ 
         │                                                                          │ 
         └──────────────────────────────────────────────────────────────────────────┘ 
-
 ```
 
 **VOILA** Extra unwanted distribution no longer appears. Note, I had read once that simply renaming `/mnt/extra_distro/grub/grub.cfg` file would solve the issue but testing this just now didn't seem to work.

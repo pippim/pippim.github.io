@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "759 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Can-I-make-`sudo`-follow-my-path-via-CLI^.md
 toc:          false
 navigation:   false
@@ -47,7 +47,6 @@ rick@alien:~$ sudo locate auto-brightness-config
 /usr/local/bin/.auto-brightness-config
 /usr/local/bin/Link to auto-brightness-config
 /usr/local/bin/auto-brightness-config
-
 ```
 
 When I run using `sudo` it is finding the wrong copy of the script in `/usr/local/bin` when I really want the version in `/mnt/e/usr/local/bin` .

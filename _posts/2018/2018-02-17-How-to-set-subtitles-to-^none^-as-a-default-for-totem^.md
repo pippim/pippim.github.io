@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,682 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-17-How-to-set-subtitles-to-^none^-as-a-default-for-totem^.md
 toc:          false
 navigation:   false
@@ -67,7 +67,6 @@ select_subtitle_action_cb (GSimpleAction *action,
     totem_playlist_select_subtitle_dialog (TOTEM_OBJECT (user_data)->playlist,
                            TOTEM_PLAYLIST_DIALOG_PLAYING);
 }
-
 ```
 
 

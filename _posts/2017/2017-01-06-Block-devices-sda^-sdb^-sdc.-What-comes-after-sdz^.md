@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "7,966 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-06-Block-devices-sda^-sdb^-sdc.-What-comes-after-sdz^.md
 toc:          false
 navigation:   false
@@ -38,7 +38,6 @@ Drive # - Name
 703	    - sdaaa
 704	    - sdaab
 18278   - sdzzz
-
 ```
 
 Needless to say Linux is well positioned for expansion of drives.

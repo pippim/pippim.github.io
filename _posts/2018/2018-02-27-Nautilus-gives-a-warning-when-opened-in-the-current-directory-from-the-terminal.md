@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "4,774 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-27-Nautilus-gives-a-warning-when-opened-in-the-current-directory-from-the-terminal.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ To open Nautilus from the current directory use:
 
 ``` 
 nautilus .
-
 ```
 
 To open with a given file selected use:
 
 ``` 
 nautilus . -s filename
-
 ```
 
 If the file name has spaces enclose it in double quotes (`" `).
@@ -55,7 +53,6 @@ $ nautilus .
 (nautilus:18233): GLib-GObject-WARNING **: invalid (NULL) pointer instance
 
 (nautilus:18233): GLib-GObject-CRITICAL **: g_signal_connect_object: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
-
 ```
 
 

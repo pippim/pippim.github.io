@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "602 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-25-LAN-issue-while-using-tlp.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ Another approach is to leave power to the network card during suspend. To do thi
 ``` 
 USB_BLACKLIST="10ec:8168"
 USB_BLACKLIST="103c:832b"
-
 ```
 
 Save the file and reboot.

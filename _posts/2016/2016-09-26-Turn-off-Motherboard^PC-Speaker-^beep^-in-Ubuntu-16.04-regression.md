@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,660 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-26-Turn-off-Motherboard^PC-Speaker-^beep^-in-Ubuntu-16.04-regression.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ After much searching I found typing this in the Terminal works:
 
 ``` 
 pactl upload-sample /usr/share/sounds/ubuntu/stereo/message.ogg bell.ogg
-
 ```
 
 It will give a soft bubble popping sound instead of annoying beep. All the other `.ogg` files can be used from `/usr/share/sounds/ubuntu/stereo` and `/usr/share/sounds/ubuntu/notifications`.
@@ -41,7 +40,6 @@ Internet searches suggest putting:
 
 ``` 
 pactl upload-sample /usr/share/sounds/ubuntu/stereo/message.ogg bell.ogg
-
 ```
 
 into the file `~/.profile` but that didn't work. Perhaps **pulseaudio** wasn't running at that time?
@@ -65,7 +63,6 @@ Rather than switching directories to select the ***bell de jour*** I created a n
 $ ls /usr/local/bin/bell/sounds
 Amsterdam.ogg  Blip.ogg     Mallet.ogg   Positive.ogg  Slick.ogg
 bell.ogg       default.ogg  message.ogg  Rhodes.ogg
-
 ```
 
 Next I created a script to sample all sounds in a directory. If a given sound file plays to long you can skip to the end with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
@@ -101,7 +98,6 @@ do
     printf $DIRNAME
     ogg123 $DIRNAME # If a sound plays too long <Ctrl>+C for next
 done
-
 ```
 
 A special sound file called `default.ogg` is used to set the bell sound during boot. To set the default a new script was created.
@@ -130,7 +126,6 @@ $cat /usr/local/bin/load-default-bell
 
 pactl upload-sample /usr/local/bin/bell/sounds/default.ogg bell.ogg
 printf '\a' # play new bell sound
-
 ```
 
 Coinciding with the new script above the `Startup Applications` described above was changed to look like this:
@@ -202,7 +197,6 @@ do
     # loop back to ask for another
     continue
 done
-
 ```
 
 The drawback of this design is when you select `play all` the menu scrolls off the screen and you need to scroll back the window to see the options again.

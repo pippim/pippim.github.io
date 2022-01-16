@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "10,589 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Running-a-simulation-on-pure-Ubuntu-vs-on-Ubuntu-in-Windows-^WSL^.md
 toc:          false
 navigation:   false
@@ -69,7 +69,6 @@ Test execution summary:
 Threads fairness:
     events (avg/stddev):           10000.0000/0.00
     execution time (avg/stddev):   23.5049/0.00
-
 ```
 
 ### Ubuntu 16.04 on Windows 10 build 1709
@@ -103,7 +102,6 @@ Test execution summary:
 Threads fairness:
     events (avg/stddev):           10000.0000/0.00
     execution time (avg/stddev):   30.5231/0.00
-
 ```
 
 
@@ -138,8 +136,7 @@ Test execution summary:
 Threads fairness:
     events (avg/stddev):           10000.0000/0.00
     execution time (avg/stddev):   23.7155/0.00
-## 
-```
+## ```
 
 
 

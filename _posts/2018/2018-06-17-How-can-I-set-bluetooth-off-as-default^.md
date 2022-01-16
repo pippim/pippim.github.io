@@ -12,7 +12,7 @@ votes:        "18 "
 favorites:    
 views:        "18,858 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-How-can-I-set-bluetooth-off-as-default^.md
 toc:          false
 navigation:   false
@@ -36,14 +36,12 @@ The solution is to edit `/etc/default/tlp` and find:
 # Radio devices to disable on startup: bluetooth, wifi, wwan.
 # Separate multiple devices with spaces.
 #DEVICES_TO_DISABLE_ON_STARTUP="bluetooth wifi wwan"
-
 ```
 
 Edit the last line to read:
 
 ``` 
 DEVICES_TO_DISABLE_ON_STARTUP="bluetooth"
-
 ```
 
 

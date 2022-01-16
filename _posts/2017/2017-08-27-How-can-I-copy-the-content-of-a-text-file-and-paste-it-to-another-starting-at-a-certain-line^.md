@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "36,676 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-27-How-can-I-copy-the-content-of-a-text-file-and-paste-it-to-another-starting-at-a-certain-line^.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ Assume the source file is called `~/a` and the file to be inserted is called `~/
 head -n 5 ~/a > ~/c
 cat ~/b >> ~/c
 tail --lines=+6 ~/a >> ~/c
-
 ```
 
 - The path `~/` is short hand for your `/home/user` directory name
@@ -41,7 +40,6 @@ After verifying that file `c` is merged correctly from files `a` and `b` we'll r
 
 ``` 
 mv ~/c ~/a
-
 ```
 
 - `mv` moves file `c` into file `a`. Data isn't physically moved. The file is simply renamed which saves time.

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,208 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-21-Windows-Subsystem-for-Linux-gedit-error.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ The solution is to edit your `~/.bashrc` file and put in the following line(s) (
 # As per: https://unix.stackexchange.com/questions/230238/starting-x-applications-from-the-terminal-and-the-warnings-that-follow
 # This also speeds up gedit load time
 export NO_AT_BRIDGE=1
-
 ```
 
 The error message will go away and `gedit` will appear to load faster (at least on an Samsung Pro 960 bench-marked at 2.2 GBps on Linux and 3.4 GBps on Windows 10).

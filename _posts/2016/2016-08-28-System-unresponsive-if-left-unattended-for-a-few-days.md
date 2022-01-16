@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "221 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-28-System-unresponsive-if-left-unattended-for-a-few-days.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ Because you are doing nothing for 3 or 4 days yet the system crashes on it's own
 
 ``` 
 free -t
-
 ```
 
 in the terminal. If my hunch is right each day you will see less and less available memory until the third or fourth day when there is none left. If my hunch is wrong there are no warranties on the crystal ball and you are back at square one digging though message files.

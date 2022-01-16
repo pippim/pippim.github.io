@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "2,883 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-02-WiFi-signal-icon-switches-to-Ethernet-icon-^up-down-arrows^-after-Suspend^.md
 toc:          false
 navigation:   false
@@ -50,21 +50,18 @@ case "${1}/${2}" in
     resume|thaw|post*)
       restart_wifi;;
 esac
-
 ```
 
 Mark the script as executable using:
 
 ``` 
 sudo chmod a+x /lib/systemd/system-sleep/iwlwifi-reset
-
 ```
 
 To check execution of the script after waking up from suspend use:
 
 ``` 
 cat /var/log/syslog | grep iwlwifi
-
 ```
 
 Don't get too excited if it seems to work during testing because there are times when this script works with a short suspend but doesn't work after a long suspend.
@@ -90,14 +87,12 @@ MYNAME=$0
 # modprobe iwlwifi      # This starts iwldvm too
 systemctl restart NetworkManager.service
 /usr/bin/logger $MYNAME 'restart_wifi END'
-
 ```
 
 Mark the script as executable using:
 
 ``` 
 sudo chmod a+x /usr/local/bin/iwlwifi-reset
-
 ```
 
 As described in the last section you can check **/var/log/syslog** for messages when this script is run but you will see any error messages in your terminal anyway.
@@ -106,7 +101,6 @@ To call this script use:
 
 ``` 
 sudo iwlwifi-reset
-
 ```
 
 You don't need to specify the directory because `/usr/local/bin` is in the terminal's command search path.

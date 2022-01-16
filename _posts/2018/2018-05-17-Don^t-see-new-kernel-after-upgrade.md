@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "712 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Don^t-see-new-kernel-after-upgrade.md
 toc:          false
 navigation:   false
@@ -73,7 +73,6 @@ Setting up linux-modules-4.16.9-041609-generic (4.16.9-041609.201805161024) ...
 Errors were encountered while processing:
  linux-headers-4.16.9-041609-generic
  linux-image-unsigned-4.16.9-041609-generic
-
 ```
 
 Then you'll see an error message because of this [bug][1]. Now you'll have to fix it using this answer: [Unable to upgrade kernel after 4.16.3](Unable to upgrade kernel after 4.16.3)

@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "53,322 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-16-How-to-run-a-file-in-a-different-directory.md
 toc:          false
 navigation:   false
@@ -24,21 +24,18 @@ No you don't need to use:
 ``` 
 cd home/directoryA/directoryB/directoryC/DirectoryD
 ./somefile 
-
 ```
 
 You can simply run the command by prefixing it with its path:
 
 ``` 
 /home/directoryA/directoryB/directoryC/DirectoryD/somefile
-
 ```
 
 Because you are already in the `/home/directoryA` you can use the current directory shortcut `.` and run the command like this:
 
 ``` 
 ./directoryB/directoryC/DirectoryD/somefile
-
 ```
 
 

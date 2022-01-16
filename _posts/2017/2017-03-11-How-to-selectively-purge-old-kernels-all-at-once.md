@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "6,786 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-11-How-to-selectively-purge-old-kernels-all-at-once.md
 toc:          true
 navigation:   true
@@ -68,7 +68,6 @@ The following packages will be REMOVED:
 0 upgraded, 0 newly installed, 19 to remove and 1 not upgraded.
 After this operation, 1,794 MB disk space will be freed.
 Do you want to continue? [Y/n] 
-
 ```
 
 `apt purge` reports 1,784 MB will be freed but the real total 2,379 MB. I don't know why it is different.
@@ -233,7 +232,6 @@ done
 if [ "$i" -gt 0 ] ; then
      apt-get purge $list
 fi
-
 ```
 
 **NOTE:** You need to use `sudo` powers to save the file with your favorite editor.
@@ -242,7 +240,6 @@ To make file executable use:
 
 ``` bash
 sudo chmod +x /usr/local/bin/rm-kernels
-
 ```
 
 
@@ -260,22 +257,17 @@ sudo chmod +x /usr/local/bin/rm-kernels
 
 ``` bash
 `sudo apt install dialog`
-
 ```
 
 Dialog is in the default Ubuntu Desktop installation but not in Ubuntu Server.
-
-
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
 
 ## Sample screen
 
 [![rm-kernels-server 1][3]][3]
 
 
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
 
 ## `rm-kernels-server` bash code
 
@@ -431,7 +423,6 @@ done
 if [ "$i" -gt 0 ] ; then
     apt-get purge $list
 fi
-
 ```
 
 **NOTE:** In the call to `dialog` the directive `--ascii-lines` is passed to replace line-draw extended character set (which `ssh` doesn't like) with "+-----+" for drawing boxes. If you do not like this appearance you can use the `--no-lines` directive for no box at all. If you aren't using `ssh` you can delete the `--ascii-lines` and your display will be formated with line-draw characters:
@@ -441,8 +432,8 @@ fi
 ----------
 
 
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr9" class ="hdr-btn">Skip</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
 
 ## July 28, 2017 Updates
 
@@ -469,6 +460,6 @@ An additional column has been added for `/boot size`. In the graphical Zenity ve
   [4]: https://i.stack.imgur.com/doq4q.png
 
 
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
 

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "4,873 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-16-CPU-frequency-too-high-even-with-^powersave^-governor.md
 toc:          false
 navigation:   false
@@ -44,7 +44,6 @@ Use: `sudo -H gedit /etc/rc.local` put insert this **before** the last line cont
 sleep 120 # Give CPU startup routines time to settle.
 echo powersave | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo 800000 | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq
-
 ```
 
 
@@ -61,7 +60,6 @@ you need to enter:
 
 ``` 
 sudo systemctl enable rc-local.service
-
 ```
 
 
@@ -106,7 +104,6 @@ scaling_governor                          powersave
 scaling_max_freq                          3500000
 scaling_min_freq                          800000
 scaling_setspeed                          <unsupported>
-
 ```
 
 This is what I have in a default configuration without `intel_pstate=disable`.
@@ -117,14 +114,12 @@ You might want to temporarily uninstall CPU Freq Utils package:
 
 ``` 
 sudo apt remove cpufrequtils
-
 ```
 
 I have never found a need for it and it might be mucking your system up. Later you can install it again (if need be) with:
 
 ``` 
 sudo apt install cpufrequtils
-
 ```
 
 

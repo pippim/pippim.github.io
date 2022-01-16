@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "631 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-27-Replugging-network-cable-doesn^t-reconnect.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ Locate these lines:
 ``` 
 # Disable wake on LAN: Y/N
 WOL_DISABLE=Y
-
 ```
 
 - Change "`Y`" to "`N`"
@@ -38,7 +37,6 @@ Locate your USB_BLACKLIST lines (if any) and un-blacklist them by placing `#` at
 ``` 
 #USB_BLACKLIST="10ec:8168"
 #USB_BLACKLIST="103c:832b"
-
 ```
 
 - Save file and exit
@@ -58,7 +56,6 @@ Comment both related config lines with a leading '`#`':
 ``` 
 #RUNTIME_PM_ON_AC=on
 #RUNTIME_PM_ON_BAT=auto
-
 ```
 
 When the problem disappears, uncomment above lines and continue with the next section.

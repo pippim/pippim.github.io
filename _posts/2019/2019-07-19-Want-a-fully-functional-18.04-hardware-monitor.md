@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,967 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-19-Want-a-fully-functional-18.04-hardware-monitor.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ I like to use `conky`:
 
 ``` 
  sudo apt install conky
-
 ```
 
 Conky is a light weight system monitor that let's you pick and choose system information and your own information and place it on the same window you can move anywhere:

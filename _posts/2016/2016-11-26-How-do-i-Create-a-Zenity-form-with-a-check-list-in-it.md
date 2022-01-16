@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "10,980 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-do-i-Create-a-Zenity-form-with-a-check-list-in-it.md
 toc:          false
 navigation:   false
@@ -38,7 +38,6 @@ zenity --forms --title="Create user" --text="Add new user" \
    --add-password="Password" \
    --add-password="Confirm Password" \
    --add-calendar="Expires"
-
 ```
 
 The first section you know what it looks like already. The second section looks like this:

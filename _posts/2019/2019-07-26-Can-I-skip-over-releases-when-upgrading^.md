@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "114,640 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-26-Can-I-skip-over-releases-when-upgrading^.md
 toc:          false
 navigation:   false
@@ -45,28 +45,24 @@ First, run the following command to upgrade existing software. (Please note that
 
 ``` 
 sudo apt update && sudo apt dist-upgrade
-
 ```
 
 Then make sure you have update-manager-core package installed.
 
 ``` 
 sudo apt install update-manager-core
-
 ```
 
 Next, edit a configuration file using nano or your preferred command line text editor.
 
 ``` 
 sudo nano /etc/update-manager/release-upgrades
-
 ```
 
 At the bottom of this file, change the value of Prompt from lts to normal.
 
 ``` 
 Prompt=normal
-
 ```
 
 [![upgrade to ubuntu 19.04 from command line][1]][1]
@@ -77,14 +73,12 @@ After that, we need to run the following command to change all instances of bion
 
 ``` 
 sudo sed -i 's/bionic/disco/g' /etc/apt/sources.list
-
 ```
 
 Then we need to disable third-party repositories (PPAs) with the command below.
 
 ``` 
 sudo sed -i 's/^/#/' /etc/apt/sources.list.d/*.list
-
 ```
 
 After you disable third-party repositories, run the following commands to update software sources and upgrade software to the latest version available in the Ubuntu 19.04 repository. This step is called minimal upgrade.
@@ -92,14 +86,12 @@ After you disable third-party repositories, run the following commands to update
 ``` 
 sudo apt update  
 sudo apt upgrade  
-
 ```
 
 If the apt-listchanges shows up during the upgrade, you can press the <kbd>Q</kbd> key to return to the main screen.
 
 ``` 
 apt-listchanges  
-
 ```
 
 [![enter image description here][2]][2]
@@ -108,28 +100,24 @@ Once minimal upgrade is finished, run the following command to begin full upgrad
 
 ``` 
 sudo apt dist-upgrade
-
 ```
 
 If you see this error:
 
 ``` 
 Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
-
 ```
 
 Then run the following command to fix the error.
 
 ``` 
 sudo apt update
-
 ```
 
 And rerun:
 
 ``` 
 sudo apt dist-upgrade
-
 ```
 
 Now you can remove obsolete/unneeded software packages from your Ubuntu system.
@@ -137,21 +125,18 @@ Now you can remove obsolete/unneeded software packages from your Ubuntu system.
 ``` 
 sudo apt autoremove  
 sudo apt clean  
-
 ```
 
 Finally, reboot the system.
 
 ``` 
 sudo reboot  
-
 ```
 
 Once restarting, you can open up a terminal window and check your Ubuntu version.
 
 ``` 
 lsb_release  -a
-
 ```
 
 You should see the following text.
@@ -162,7 +147,6 @@ Distributor ID: Ubuntu
 Description:    Ubuntu 19.04
 Release:        19.04
 Codename:       disco
-
 ```
 
 ### How to re-enable third-party repositories
@@ -171,21 +155,18 @@ Third-party repositories are defined in the .list files under `/etc/apt/sources.
 
 ``` 
 sudo sed -i '/deb/s/^#//g' /etc/apt/sources.list.d/*.list
-
 ```
 
 Then change all instances of bionic to disco.
 
 ``` 
 sudo sed -i 's/bionic/disco/g' /etc/apt/sources.list.d/*.list
-
 ```
 
 Update package repository index.
 
 ``` 
 sudo apt update
-
 ```
 
 Some third-party repositories don’t have an entry for Ubuntu 19.04, so you will likely to see errors like:
@@ -194,14 +175,12 @@ Some third-party repositories don’t have an entry for Ubuntu 19.04, so you wil
 E: The repository 'http://linux.dropbox.com/ubuntu disco Release' does not have a Release file.
 N: Updating from such a repository can't be done securely, and is therefore disabled by default.
 N: See apt-secure(8) manpage for repository creation and user configuration details.
-
 ```
 
 You will need to edit these repository files one by one and change disco back to bionic. For example, I edit the Dropbox repository file.
 
 ``` 
 sudo nano /etc/apt/sources.list.d/dropbox.list
-
 ```
 
 Change disco back to bionic. Save and close the file.

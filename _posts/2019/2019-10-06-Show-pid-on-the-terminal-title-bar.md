@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "74 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-06-Show-pid-on-the-terminal-title-bar.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ If all you truly want to see is the pid then in the terminal type:
 
 ``` 
 PS1="${PS1/\\u@\\h: \\w/$$}"
-
 ```
 
 If you want this to be persistent every time you open your terminal then add the command somewhere near the bottom of `~/.bashrc` after all the other `PS1` definitions are set.

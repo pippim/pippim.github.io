@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "32,159 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-Why-should-users-never-use-normal-sudo-to-start-graphical-applications^.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ HOME=/home/rick
 
 $ sudo -H printenv | grep HOME
 HOME=/root
-
 ```
 
 As you can see, `sudo` above does not perform like `sudo -H` so using plain `sudo` can harm your user configuration files.
@@ -47,7 +46,6 @@ Installation is straight forward:
 
 ``` 
 sudo apt install nautilus-admin
-
 ```
 
 Now when you are in Nautilus you'll have an extra option to Edit as administrator:

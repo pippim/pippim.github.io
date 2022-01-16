@@ -12,7 +12,7 @@ votes:        "20 "
 favorites:    
 views:        "9,835 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-13-Is-there-a-way-for-grub-to-automatically-reboot-into-Windows-from-Windows^.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ This is fairly straight forward. Using `sudo` powers edit `/etc/default/grub` an
 #GRUB_DEFAULT=0 # Rather than option #1, we'll always default to last boot choice.
 GRUB_DEFAULT=saved
 GRUB_SAVEDEFAULT=true
-
 ```
 
 The first line you will be commenting out and right below that insert the next two lines.
@@ -42,7 +41,6 @@ Save the file and type in the terminal:
 
 ``` 
 sudo update-grub
-
 ```
 
 # Ubuntu command line to reboot into Windows
@@ -52,7 +50,6 @@ Currently you use something like this:
 ``` 
 sudo grub-reboot x # Where x is Windows zero-based grub menu number
 sudo reboot now
-
 ```
 
 From this modified Stack Exchange [answer][2] you can use the grub default to reboot into Windows. Copy this code into your `~/.bashrc` file:
@@ -63,7 +60,6 @@ function reboot-to-windows {
     sudo grub-set-default "$WINDOWS_TITLE"
     sudo reboot
 }
-
 ```
 
 - Save the `~/.bashrc` file with new `reboot-to-windows` function.
@@ -75,7 +71,6 @@ To reboot into Windows from the command line use:
 
 ``` 
 reboot-to-windows
-
 ```
 
 If Windows automatically restarts when you aren't looking, Windows is rebooted. This allows Windows automatic updates to be processed normally over multiple-reboot cycles Windows sometimes uses.

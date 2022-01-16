@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "56,668 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-26-Switch-between-Intel^AMD-GPU-on-18.04.md
 toc:          false
 navigation:   false
@@ -51,7 +51,6 @@ $ lspci -k | grep -EA3 'VGA|Display|3D'
 	Subsystem: Dell GM204M [GeForce GTX 970M]
 	Kernel driver in use: nvidia
 	Kernel modules: nvidiafb, nouveau, nvidia_384_drm, nvidia_384
-
 ```
 
   [1]: https://help.ubuntu.com/community/AMDGPU-Driver

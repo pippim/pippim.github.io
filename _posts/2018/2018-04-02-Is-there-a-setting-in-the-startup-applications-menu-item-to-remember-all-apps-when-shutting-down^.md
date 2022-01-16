@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "581 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-02-Is-there-a-setting-in-the-startup-applications-menu-item-to-remember-all-apps-when-shutting-down^.md
 toc:          false
 navigation:   false
@@ -42,14 +42,12 @@ $ gsettings get org.gnome.SessionManager auto-save-session
 false
 $ gsettings get org.gnome.SessionManager auto-save-session-one-shot
 false
-
 ```
 
 To save the session for across reboots use:
 
 ``` 
 gsettings set org.gnome.SessionManager auto-save-session true
-
 ```
 
 Then reboot.

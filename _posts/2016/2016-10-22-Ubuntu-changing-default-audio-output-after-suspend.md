@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,937 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-22-Ubuntu-changing-default-audio-output-after-suspend.md
 toc:          false
 navigation:   false
@@ -46,7 +46,6 @@ case $1/$2 in
     sudo -u rick -E pacmd set-card-profile 0 output:hdmi-stereo
     ;;
 esac
-
 ```
 
 
@@ -56,7 +55,6 @@ Then mark it executable with the command:
 
 ``` sh
 sudo chmod +x /lib/systemd/system-sleep/tv-sound
-
 ```
 
 An additional step might be required if `output:hdmi-stereo` (the device for most people) is different on your system.

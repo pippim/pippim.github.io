@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "131 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-29-summary-and-restricted-output-from-fdisk-in-ubuntu-bionic-beaver.md
 toc:          false
 navigation:   false
@@ -43,7 +43,6 @@ nvme0n1                                           477G Samsung SSD 960 PRO 512GB
 ├─nvme0n1p2  vfat                    /boot/efi     99M 
 ├─nvme0n1p9  swap                    [SWAP]       7.9G 
 └─nvme0n1p7  ext4   Old_Ubuntu_16.04 /mnt/old    44.6G 
-
 ```
 
 The alias selects the important fields I want to see that fit on a regular screen without line wrapping:
@@ -51,6 +50,5 @@ The alias selects the important fields I want to see that fit on a regular scree
 ``` 
 $ alias lsdrv
 alias lsdrv='lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL | grep -v loop'
-
 ```
 

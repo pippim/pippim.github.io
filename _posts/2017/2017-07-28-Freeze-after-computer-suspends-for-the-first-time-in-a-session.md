@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "94 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-28-Freeze-after-computer-suspends-for-the-first-time-in-a-session.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ On Intel platforms such as mine it reads:
 
 ``` 
 Using Processor microcode firmware for Intel CPUs from Intel-microcode (proprietary)
-
 ```
 
 To access this screen (whether on AMD or Intel CPU, or whether using Nvidia GPU or Radeon GPU) use:

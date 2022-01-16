@@ -12,7 +12,7 @@ votes:        "29 "
 favorites:    
 views:        "14,926 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-27-Bash-script-to-backup^clone-Ubuntu-to-another-partition.md
 toc:          true
 navigation:   true
@@ -80,7 +80,6 @@ NOTE: If you are recloning, new files in clone will be deleted,
       files deleted from clone are added back from source.
 
 Type Y (or y) to proceed. Any other key to exit: 
-
 ```
 
 In this example a previous clone has been selected for recloning. The available space on the clone is a mute point because we already know there is enough space available.
@@ -187,7 +186,6 @@ done
 
 =====================================================================
 Unmounting /dev/nvme0n1p8 as /mnt/clone16.04
-
 ```
 
 
@@ -565,21 +563,18 @@ echo "Unmounting $TargetDev as $TargetMnt"
 CleanUp             # Remove temporary files
 
 exit 0
-
 ```
 
 Copy and paste the bash code above to a new file called `/usr/local/bin/clone-ubuntu.sh`. Then make the new file executable using:
 
 ``` 
 sudo chmod a+x /usr/local/bin/clone-ubuntu.sh
-
 ```
 
 To call the script use:
 
 ``` 
 sudo clone-ubuntu.sh
-
 ```
 
 
@@ -600,7 +595,6 @@ One way to convert the cloned 16.04 LTS to 18.04 LTS is to run:
 
 ``` 
 sudo do-release-upgrade
-
 ```
 
 Note the `-d` flag was required prior to July 26, 2018 but is no longer necessary.
@@ -650,7 +644,6 @@ configfile $prefix/grub.cfg
 $ sudo grub-install
 Installing for x86_64-efi platform.
 Installation finished. No error reported.
-
 ```
 
 Running `sudo update-grub` after booting the original partition isn't enough to change which `grub.cfg` is loaded by grub. You need to use `sudo grub-install` to force grub to use the original partition's configuration.

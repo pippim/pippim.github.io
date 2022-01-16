@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "3,559 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-source-command-error-from-^usr^share^bash-completion^bash-completion-when-I-open-a-terminal.md
 toc:          false
 navigation:   false
@@ -39,7 +39,6 @@ while read -r line
 do 
    command type -a ${line}
 done< /tmp/alias.lst
-
 ```
 
 ## Testing bad aliases
@@ -51,7 +50,6 @@ Edit `~/.bashrc` and insert these "bad" aliases:
 ``` text
 alias fi=find
 alias test='ls test'
-
 ```
 
 Now run the script `alias-check`:
@@ -87,7 +85,6 @@ zenity is aliased to `zenity 2>/dev/null'
 zenity is /mnt/e/usr/local/bin/zenity
 zenity is /usr/local/bin/zenity
 zenity is /usr/bin/zenity
-
 ```
 
 

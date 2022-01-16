@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "506 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-28-How-can-I-exclude-.-and-..-when-listing-hidden-items^.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ This works on my machine (I'm not using SSH like the OP though):
 
 ``` 
 ls -d .!(|.)
-
 ```
 
 If there are no hidden files or directories you will get an error message:
@@ -35,7 +34,6 @@ If there are no hidden files or directories you will get an error message:
 ``` 
 $ ls -d .!(|.)
 ls: cannot access '.!(|.)': No such file or directory
-
 ```
 
 The error message occurs on directories with no hidden files because `.` and `..` are excluded.

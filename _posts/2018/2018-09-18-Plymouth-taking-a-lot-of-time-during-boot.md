@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,227 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-18-Plymouth-taking-a-lot-of-time-during-boot.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ You can remove `plymouth` during your boot up process and display progress messa
 
 ``` 
 sudo -H gedit /etc/default/grub
-
 ```
 
 Find the line containing:
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-
 ```
 
 and remove `quiet splash` between the double quotes. If you have additional parameters leave them as is.
@@ -39,7 +37,6 @@ Save the file and run:
 
 ``` 
 sudo update-grub
-
 ```
 
 Then reboot and watch the messages that appear for any clues on what is causing delays.
@@ -48,7 +45,6 @@ After boot completes run:
 
 ``` 
 systemd-analze blame
-
 ```
 
 once more and report back with the results.

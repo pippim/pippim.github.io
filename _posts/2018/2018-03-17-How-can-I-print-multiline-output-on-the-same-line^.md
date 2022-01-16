@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "66,624 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-17-How-can-I-print-multiline-output-on-the-same-line^.md
 toc:          false
 navigation:   false
@@ -27,14 +27,12 @@ If you type `cat myfile.txt` you will see:
 abc
 def
 ghi
-
 ```
 
 But if you type `echo $(cat myfile.txt)` you will see:
 
 ``` 
 abc def ghi
-
 ```
 
 Note this method inserts a space where separate new lines used to be. This makes the output easier to read but doesn't strictly adhere to your question scope.

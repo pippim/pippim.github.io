@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "3,039 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-27-Edits-to-nvidia-xconfig-not-taking-hold-after-restart^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ I had a similar problem repairing screen tearing for nVidia. Even if I deleted /
 
 ``` 
 /etc/X11/xorg.conf.d/20-nvidia.conf
-
 ```
 
 A thorough write-up of nVidia modifications can be found [here][1].

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "115 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-31-Create-cheat-sheet-for-all-users.md
 toc:          false
 navigation:   false
@@ -25,5 +25,4 @@ When you want files to be shared by all users it is best to create a public dire
 
 ``` 
 /home/Public
-
 ```

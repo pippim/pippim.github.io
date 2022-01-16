@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "15,633 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-09-4-clicks-to-shut-down-Ubuntu---can-we-reduce-this^.md
 toc:          false
 navigation:   true
@@ -83,7 +83,6 @@ Copy and paste the script into a file on your computer and mark it executable wi
 
 ``` 
 chmod a+x /path/to/tvpowered
-
 ```
 
 Where `/path/to/` is the directory name you created the file in.

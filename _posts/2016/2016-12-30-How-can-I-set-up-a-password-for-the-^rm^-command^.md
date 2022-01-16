@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "5,992 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-30-How-can-I-set-up-a-password-for-the-^rm^-command^.md
 toc:          false
 navigation:   false
@@ -94,7 +94,6 @@ fi # root doesn't need to enter password.
 /bin/rm "$@"
     
 exit 0
-
 ```
 
 Change the password "WE2U" to anything you like and save the file.
@@ -105,7 +104,6 @@ Flag new `rm` script as executable using:
 
 ``` bash
 sudo chmod +x /usr/local/bin/rm
-
 ```
 
 ## How it Works

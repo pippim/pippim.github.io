@@ -12,7 +12,7 @@ votes:        "24 "
 favorites:    
 views:        "52,887 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Why-am-I-not-getting-the-Ubuntu-18.04-upgrade^.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ A thorough guide for upgrading is presented [here][1]. Other answers already men
 ``` 
 do-release-upgrade -d     # Use this until 18.04.1 comes out
 do-release-upgrade        # Use this after 18.04.1 comes out
-
 ```
 
 Additionally though you need to check the file:
@@ -48,7 +47,6 @@ Additionally though you need to check the file:
 #           release, since in that case the upgrader won't be able to
 #           determine if a newer release is available.
 Prompt=never
-
 ```
 
 If the last line says "never" change it to "normal" for Ubuntu 17.10 users. For Ubuntu 16.04 LTS users, change it to "LTS". Otherwise you will get the upgrade...um "never":
@@ -66,7 +64,6 @@ available from the latest supported release.
 rick@alien:~$ do-release-upgrade -c
 Checking for a new Ubuntu release
 No new release found.
-
 ```
 
 These commands were issued with `Prompt=never` under Ubuntu 16.04 where it is available for upgrading yesterday (April 28, 2018). Changing the prompt to `lts` solved the problem.
@@ -91,7 +88,6 @@ Error Message multiple times: /sbin/ldconfig.real: Warning: ignoring configurati
 Step 10: Non-standard: Configuration file '/etc/vnstat.conf' (display differences 1.13 vs 1.18) take Y
 Step 11: 220 packages are going to be removed. (can take hours) enter Y
 Step 12: To finish the upgrade, a restart is required. Take Y
-
 ```
 
 Note your steps will vary depending on software installed.

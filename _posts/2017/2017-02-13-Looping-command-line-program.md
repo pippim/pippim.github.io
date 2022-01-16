@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "144 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-13-Looping-command-line-program.md
 toc:          false
 navigation:   false
@@ -25,19 +25,16 @@ Using bash by default one command doesn't start until the first one finishes so 
 /path/to/command /path/to/file1
 /path/to/command /path/to/file2
 /path/to/command /path/to/file3
-
 ```
 
 Put the commands in a script called for example `~/run-all-commands`. Then mark it as executable using:
 
 ``` 
 chmod +x ~/run-all-commands
-
 ```
 
 Then call the bash script with batch of commands using:
 
 ``` 
 ~/run-all-commands
-
 ```

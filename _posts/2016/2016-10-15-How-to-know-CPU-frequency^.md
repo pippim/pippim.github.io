@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "5,908 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-15-How-to-know-CPU-frequency^.md
 toc:          false
 navigation:   false
@@ -36,7 +36,6 @@ rick@dell:~$  sudo cat /sys/devices/system/cpu/cpu*/cpufreq/cpuinfo_cur_freq
 3134619
 ────────────────────────────────────────────────────────────────
 rick@dell:~$ 
-
 ```
 
 You can shorten the above output by replacing `*` with a given CPU number such as `0` for the first CPU or `7` for the last CPU (on an 8 CPU system).
@@ -55,7 +54,6 @@ rick@dell:~$ cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
 3245654
 ────────────────────────────────────────────────────────────────
 rick@dell:~$ 
-
 ```
 
 These are other commands in regards to Frequencies and the CPU that you might like to try out:
@@ -79,7 +77,6 @@ cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_setspeed 
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_driver
-
 ```
 
 Once again you can replace `*` with a given CPU number to shorten output.

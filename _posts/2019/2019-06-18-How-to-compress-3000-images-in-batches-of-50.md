@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "162 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-18-How-to-compress-3000-images-in-batches-of-50.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ Let's assume your images are stored in `~/Pictures` which is shorthand for `/hom
 
 ``` 
 chmod a+x ~/CompressImages
-
 ```
 
 Call the script using:
 
 ``` 
 ~/CompressImages
-
 ```
 
 Copy the following script into the file `~/CompressImages`:
@@ -63,7 +61,6 @@ do
     fi
     let i++
 done
-
 ```
 
 
@@ -99,7 +96,6 @@ $ ll -h ~/Downloads/*.tar
 -rw-rw-r-- 1 rick rick  20M Jun 18 16:55 Downloads/CompressedImages7.tar
 -rw-rw-r-- 1 rick rick 7.4M Jun 18 16:55 Downloads/CompressedImages8.tar
 -rw-rw-r-- 1 rick rick  21M Jun 18 16:55 Downloads/CompressedImages9.tar
-
 ```
 
 

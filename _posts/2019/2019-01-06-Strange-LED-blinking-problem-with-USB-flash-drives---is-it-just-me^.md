@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,367 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-06-Strange-LED-blinking-problem-with-USB-flash-drives---is-it-just-me^.md
 toc:          false
 navigation:   false
@@ -79,7 +79,6 @@ Drive(3): 3SYSTEM USB Flash Disk
       can_eject=1
       is_shadowed=0
       sort_key=gvfs.time_detected_usec.1546789639395990
-
 ```
 
 - The variable `is_media_removable` is set to `1` on my system but on the bug reporters system is is set to `0`. I think this should have been addressed.

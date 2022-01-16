@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "28,365 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-How-do-I-check-system-health^.md
 toc:          false
 navigation:   false
@@ -42,7 +42,6 @@ If you have an SSD they're life span is measured in trillions of writes. Your **
 
 ``` 
 sudo apt install nvme-cli
-
 ```
 
 Next gather information available from SSD:
@@ -76,7 +75,6 @@ Temperature Sensor 5                : 0 C
 Temperature Sensor 6                : 0 C
 Temperature Sensor 7                : 0 C
 Temperature Sensor 8                : 0 C
-
 ```
 
 The most important field is `Percentage used` which shows as 0%. This isn't disk usage percent but **life used** percent. The drive was purchased in October 2017 and it was still `0%` in December 2018. The `Percentage used` hit 1% on October 2020. At this rate the NVMe SSD lifespan will be 300 years. Of course it will be obsolete well before then...

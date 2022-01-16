@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "643 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-12-Ubuntu-Server-16.04-unusual-crontab-entry.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ apt-get remove --auto-remove wget
 crontab -r
 while true ; do killall watchbog ; done
 sudo passwd root
-
 ```
 
 Read the entire link for step by step details and to verify you have this virus in the first place.

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "7,938 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-03-Which-is-the-right-way-to-drop-caches-in-Lubuntu^.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 sync; echo 1 > /proc/sys/vm/drop_caches
 sync; echo 2 > /proc/sys/vm/drop_caches
 sync; echo 3 > /proc/sys/vm/drop_caches
-
 ```
 
 Call the script `drop-caches`.

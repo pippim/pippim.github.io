@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "506 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-11-powernow_k8-on-Lubuntu-18.04-is-flooding-my-kernel-log-with-CPU-frequency-errors.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Start by reading the current available settings for your system:
 
 ``` 
 sudo cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
-
 ```
 
 this will return a list of available settings you can use to regulate each core of your CPU, if you can you should then set them to max performance by selecting the performance option. This will make your CPU cores run always at max frequency.
@@ -34,7 +33,6 @@ Knowing what options you have and if the performance option is available, you ca
 
 ``` 
 sudo echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-
 ```
 
 this will make cpu0 (first core) run all the time at max performance. Do it for all the logical cores in your CPU.
@@ -43,7 +41,6 @@ You can then check if the option was successfully changed with the command:
 
 ``` 
 sudo cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-
 ```
 
 this will check the current set option for cpu0 (first core). Check if the change was successful for all cores and if everything was set correctly you are good to go: Intel SpeedStep will be on but all your cores will be running at max frequency speed all the time.
@@ -58,7 +55,6 @@ powernow_k8 has been deprecated since kernel `3.7`. You can blacklist it (https:
 
 ``` 
 sudo -H leafpad /etc/modprobe.d/blacklist.conf
-
 ```
 
 and inserting these two lines:
@@ -66,7 +62,6 @@ and inserting these two lines:
 ``` 
 # powernow-k8 deprecated since kernel 3.7
 blacklist powernow-k8
-
 ```
 
 Save the file and exit `gedit`
@@ -75,7 +70,6 @@ After reboot confirm module is no longer loaded using:
 
 ``` 
 lsmod | grep powernow-k8
-
 ```
 
 You can also read the link above for steps to temporarily blacklist a module.

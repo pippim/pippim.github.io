@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "3,768 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-20-Battery-icon-not-showing-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ $ upower -i /org/freedesktop/uPower/devices/battery/BAT0
   unknown
     warning-level:       unknown
     icon-name:          '(null)'
-
 ```
 
 Using the correct parameter however:
@@ -62,7 +61,6 @@ $ upower -i /org/freedesktop/UPower/devices/battery_BAT1
     capacity:            95.791%
     technology:          lithium-ion
     icon-name:          'battery-full-charging-symbolic'
-
 ```
 
 To see everything (including what the correct parameter would be) use:
@@ -176,6 +174,5 @@ Daemon:
   lid-is-closed:   no
   lid-is-present:  yes
   critical-action: HybridSleep
-
 ```
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,325 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-10-how-to-save-CPU-logs-or-GPU-usage-values^.md
 toc:          false
 navigation:   true
@@ -54,7 +54,6 @@ do
     uptime >> /home/user/cpuload.log
     sleep 1
 done
-
 ```
 
 
@@ -68,7 +67,6 @@ To look at your output use the command:
 ``` bash
 $ cat cpuload.log
  20:04:06 up 2 days, 14 min,  1 user,  load average: 1.39, 1.12, 0.95
-
 ```
 
 The load average is reporting three variables--last minute, last five minutes and last fifteen minutes. For simplicity sake only consider the last minute load average which is reported every second in our loop.
@@ -96,7 +94,6 @@ $ cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
 1855875
 1849125
 1778156
-
 ```
 
 This shows there are 8 CPUs (it's a quad-core hyper-threaded Intel i-7 3630QM laptop CPU running 1200 Mhz to 3400 Mhz). In this snapshot CPU#1 (called CPU0 internally) is running at `2,0749.68 Mhz` and CPU#8 is running at `1,7781.56 Mhz`. But I digress, the important thing is to count how many CPUs there are which is 8.
@@ -116,7 +113,6 @@ To use the `top` command to see the 10 most resource intensive processes use thi
 
 ``` bash
 top -n 1 -b | head -n 17 | tail -n 10 >> /home/user/top10.log
-
 ```
 
 The file `/home/user/top10.log` will look something like this (repeated every second for two hours):
@@ -133,7 +129,6 @@ $ top -n 1 -b | head -n 17 | tail -n 10
     3 root      20   0       0      0      0 S   0.0  0.0   0:01.31 ksoftirqd/0
     5 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/0:+
     7 root      20   0       0      0      0 S   0.0  0.0   1:39.28 rcu_sched
-
 ```
 
 **NOTE:** replace `user` with your actual user name.
@@ -170,7 +165,6 @@ do
     top -n 1 -b | head -n 3 | tail -n 1 >> /tmp/top-cpu-summary.log
     sleep 1
 done
-
 ```
 
 When you call the bash script using `top-cpu-summary 10` you can see the output for 10 seconds using:
@@ -188,7 +182,6 @@ top CPU(s) summary for 13/06/2017
 19:17:42 - %Cpu(s): 24.9 us,  9.2 sy,  0.0 ni, 65.4 id,  0.2 wa,  0.0 hi,  0.2 si,  0.0 st
 19:17:43 - %Cpu(s): 24.9 us,  9.2 sy,  0.0 ni, 65.4 id,  0.2 wa,  0.0 hi,  0.2 si,  0.0 st
 19:17:44 - %Cpu(s): 24.9 us,  9.2 sy,  0.0 ni, 65.4 id,  0.2 wa,  0.0 hi,  0.2 si,  0.0 st
-
 ```
 
 

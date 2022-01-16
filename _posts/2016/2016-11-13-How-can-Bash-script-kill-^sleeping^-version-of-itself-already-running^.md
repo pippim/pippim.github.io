@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,146 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-13-How-can-Bash-script-kill-^sleeping^-version-of-itself-already-running^.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ Having spent many hours following the white rabbit into various alternate univer
 ``` 
 # If called a second time, kill the first version already running
 kill $(pgrep -f "${0##*/}" | grep -v ^$$)
-
 ```
 
 
@@ -43,7 +42,6 @@ if [ $PREVIOUS != "" ]; then
     zenity --info --title="Lock screen timer already running" --text="Previous lock screen timer has been terminated."
     kill "$PREVIOUS"
 fi
-
 ```
 
 ### `pgrep -f "${0##*/}"`

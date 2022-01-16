@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "583 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-05-15-How-to-improve^fix-choppy-audio-when-streaming-with-pulseaudio^.md
 toc:          true
 navigation:   true
@@ -60,7 +60,6 @@ For authentication you need the same auth cookies on all sides. For that copy ~/
 ``` 
 load-module module-esound-protocol-tcp auth-anonymous=1
 load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;192.168.0.0/16
-
 ```
 
 These two modules are not loaded in the default configuration because they might open PulseAudio for remote attackers.
@@ -79,7 +78,6 @@ If the $PULSE_SERVER variable does not exist or is empty, PulseAudio will then c
 
 ``` 
 xprop -root | grep PULSE
-
 ```
 
 The variables names used are the same as those used in the environment, so PulseAudio will look for a property called PULSE_SERVER. Note that only the X11 properties are forwarded over the SSH tunnel, but the pulseaudio client still connects to the server using its own native protocol.
@@ -119,12 +117,10 @@ You can connect to other sound servers running on the LAN by using Zeroconf/Avah
 # for servers
 ``` 
 load-module module-zeroconf-publish
-# for clients
-```
+# for clients```
 
 ``` 
 load-module module-zeroconf-discover
-
 ```
 
 These modules are not loaded in the default configuration because they might open PulseAudio for remote attackers.
@@ -132,10 +128,6 @@ These modules are not loaded in the default configuration because they might ope
 
 ----------
 
-
-
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
 
 ## RTP
 
@@ -156,7 +148,6 @@ This will make rtp the default sink, i.e. all applications will write to this vi
 
 ``` 
 load-module module-rtp-recv
-
 ```
 
 Now you can play your favourite music on the sender side and all clients will output it simultaneously. BTW: You can have more than one sender machine set up like this. The audio data will be mixed on the client side.
@@ -166,7 +157,6 @@ On the sender side simply load the RTP sender module:
 
 ``` 
 load-module module-rtp-send
-
 ```
 
 On the receiver sides, create an RTP source:
@@ -175,7 +165,6 @@ On the receiver sides, create an RTP source:
 load-module module-null-sink sink_name=rtp
 load-module module-rtp-recv sink=rtp
 set-default-source rtp_monitor
-
 ```
 
 Now the audio data will be available from the default source rtp_monitor.
@@ -186,7 +175,6 @@ After loading all the necessary audio drivers for recording and playback, just l
 ``` 
 load-module module-rtp-send
 load-module module-rtp-recv
-
 ```
 
 As long as the PulseAudio daemon runs, the microphone data will be streamed to the network and the data from other hosts is played back locally. Please note that this may cause quite a lot of traffic. Hence consider passing rate=8000 format=ulaw channels=1 to the sender module to save bandwith while still maintaining good quality for speech transmission.
@@ -195,6 +183,6 @@ Can I have more than one multicast RTP group?
 Yes! Simply use a new multicast group address. Use the destination/sap_address arguments of the RTP modules to select them. Choose your group addresses from the range 225.0.0.x to make sure the audio data never leaves the LAN.
 
 
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
 

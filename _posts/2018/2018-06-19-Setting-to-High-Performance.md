@@ -12,7 +12,7 @@ votes:        "46 "
 favorites:    
 views:        "85,009 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-19-Setting-to-High-Performance.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ To view available speed governors use this command:
 ``` 
 $ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors 
 performance powersave
-
 ```
 
 If you do have more than one governor you can check what is currently in use with this command:
@@ -32,7 +31,6 @@ If you do have more than one governor you can check what is currently in use wit
 ``` 
 $ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 powersave
-
 ```
 
 To change your processor to **performance** mode use:
@@ -40,7 +38,6 @@ To change your processor to **performance** mode use:
 ``` 
 $ echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 performance
-
 ```
 
 You will then notice CPU% utilization drop by about 5% but also notice speed will increase from about 1000 MHz to 3000 MHz and temperatures will spike by ~10 degree, depending on your processor:
@@ -201,7 +198,6 @@ Total: ${color green}${totaldown enp59s0} $color${alignr}Total: ${color green}${
 #------------+
 ${color orange}${voffset 2}${hr 1}
 ${color1}${goto 5}Rise: ${color green}${execpi 300 cat /usr/local/bin/.eyesome-sunrise} ${goto 155}${color1}Set: ${color green}${execpi 300 cat /usr/local/bin/.eyesome-sunset} ${alignr}${color1}Level: ${color green}${execpi 10 cat /sys/class/backlight/intel_backlight/brightness}
-
 ```
 
 ## Bottom half of conky screenshot

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "75,297 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-06-Automounted-USB-devices-are-read-only.md
 toc:          false
 navigation:   false
@@ -43,7 +43,6 @@ $ dmesg | tail -n18
 [115531.480738] ISO 9660 Extensions: Microsoft Joliet Level 3
 [115531.483397] ISO 9660 Extensions: Microsoft Joliet Level 3
 [115531.512219] ISO 9660 Extensions: RRIP_1991A
-
 ```
 
 Unlike OP implies, there is no warning for read-only. Notice the line:

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "3,908 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-06-Can^t-remove-environmental-variable-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ clipboard:    false
 ``` 
 $ echo $JAVA_HOME
 /usr/lib/jvm/java-8-oracle
-
 ```
 
 That said, the `unset` command will eliminate a variable. From: [Unix / Linux - Using Shell Variables][1]
@@ -61,7 +60,6 @@ $ echo $JAVA_HOME
 
 ───────────────────────────────────────────────────────────────────────────────────────────
 $ 
-
 ```
 
   [1]: https://www.tutorialspoint.com/unix/unix-using-variables.htm

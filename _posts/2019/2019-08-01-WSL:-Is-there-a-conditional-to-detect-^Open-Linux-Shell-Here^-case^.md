@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "269 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-01-WSL:-Is-there-a-conditional-to-detect-^Open-Linux-Shell-Here^-case^.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ if [[ "$CurrDir" == "$SystemDir" ]]
 then
     cd /path/to/sensible-dir-name
 Fi
-
 ```
 
 Where `$SystemDir` is your System32 directory. Always remember how `\` and `/` differ between Windows and Linux paths:
@@ -40,7 +39,6 @@ Suggests using:
 
 ``` 
 sed -e 's#^J:##' -e 's#\\#/#g'
-
 ```
 
 That said in your instance you could probably hard-code the path.

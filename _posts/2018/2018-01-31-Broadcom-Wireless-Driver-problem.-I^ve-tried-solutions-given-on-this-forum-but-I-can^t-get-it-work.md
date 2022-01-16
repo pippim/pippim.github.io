@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "946 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-31-Broadcom-Wireless-Driver-problem.-I^ve-tried-solutions-given-on-this-forum-but-I-can^t-get-it-work.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ After installing DO NOT update your software.
 ``` 
 $ uname -r
 4.14.15-041415-generic
-
 ```
 
 ## Find out the specific package names
@@ -42,7 +41,6 @@ WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 linux-headers-4.14.15-041415-generic/now 4.14.15-041415.201801231530 amd64 [installed,local]
 linux-image-4.14.15-041415-generic/now 4.14.15-041415.201801231530 amd64 [installed,local]
-
 ```
 
 ## Pin the packages so they don't get updated
@@ -54,7 +52,6 @@ $ sudo apt-mark hold linux-headers-4.14.15-041415-generic
 linux-headers-4.14.15-041415-generic set on hold.
 $ sudo apt-mark hold linux-image-4.14.15-041415-generic
 linux-image-4.14.15-041415-generic set on hold.
-
 ```
 
 *Note: Rather than retyping, copy and pasting portions from above section will save time and reduce errors*
@@ -66,5 +63,4 @@ You can update your software through the software centre or using:
 ``` 
 sudo apt update
 sudo apt upgrade
-
 ```

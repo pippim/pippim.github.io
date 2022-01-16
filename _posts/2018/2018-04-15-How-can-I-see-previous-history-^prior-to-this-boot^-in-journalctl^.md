@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,597 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-15-How-can-I-see-previous-history-^prior-to-this-boot^-in-journalctl^.md
 toc:          false
 navigation:   true
@@ -68,7 +68,6 @@ $ journalctl --list-boots
 -22 77c66f077f0e47a5b63f96d0e26fa9da Tue 2018-03-27 17:17:52 MDT—Fri 2018-03-30 11:17:30 MDT
 -21 320ccedf358b4aba8b4786a1bec35b96 Fri 2018-03-30 11:52:18 MDT—Fri 2018-03-30 16:29:28 MDT
 lines 7-35/56 63%
-
 ```
 
 On the screen we see a boot on March 27th and then one on March 30th. So the boot we want is March 27th called boot number `-22`
@@ -113,7 +112,6 @@ Mar 27 17:17:52 alien kernel: BIOS-e820: [mem 0x0000000030a8b000-0x0000000030ad4
 Mar 27 17:17:52 alien kernel: BIOS-e820: [mem 0x0000000030ad5000-0x0000000030b2dfff] usable
 Mar 27 17:17:52 alien kernel: BIOS-e820: [mem 0x0000000030b2e000-0x0000000031099fff] reserved
 lines 1-29
-
 ```
 
 After the first few lines we see the Kernel version that was booted is: `4.14.23-041423-generic`. When done press <kbd>Q</kbd> to quit.
@@ -156,7 +154,6 @@ Mar 30 11:17:28 alien lightdm[1046]: /etc/modprobe.d is not a file
 Mar 30 11:17:28 alien lightdm[1046]: Error: can't open /lib/modules/4.14.23-041423-generic/updates/dkms
 Mar 30 11:17:28 alien lightdm[1046]: Error: can't open /lib/modules/4.14.23-041423-generic/updates/dkms
 Mar 30 11:17:28 alien lightdm[1046]: update-alternatives: error: no alternatives for x86_64-linux-gnu_gfxcore_conf
-
 ```
 
 You might think "Mar 30" at the bottom is in error but it's a laptop that gets suspended and and still part of March 27, 2018 boot log.

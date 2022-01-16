@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "2,203 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-28-Lagging-after-update-to-19.10-from-19.04.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ Make sure you **do not** autoremove the kernel that is working for you now. The 
 
 ``` 
 sudo apt autoremove
-
 ```
 
 **So don't do that!**

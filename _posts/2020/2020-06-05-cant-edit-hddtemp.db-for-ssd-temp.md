@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "130 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-05-cant-edit-hddtemp.db-for-ssd-temp.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ If you have an SSD they're life span is measured in trillions of writes. Your **
 
 ``` 
 sudo apt install nvme-cli
-
 ```
 
 Next gather information available from SSD:
@@ -63,7 +62,6 @@ Temperature Sensor 5                : 0 C
 Temperature Sensor 6                : 0 C
 Temperature Sensor 7                : 0 C
 Temperature Sensor 8                : 0 C
-
 ```
 
 The most important field is `Percentage used` which shows as 0%. This isn't disk usage percent but **life used** percent. I've had this drive since October 2017 and now it's December 2018. As soon as `Percentage used` hits 1% I can multiply the number of months I've owned it by 100 to find out when it will die. At the current rate I can say the drive will live 100+ years. Of course it will be obsolete in ten years anyway.

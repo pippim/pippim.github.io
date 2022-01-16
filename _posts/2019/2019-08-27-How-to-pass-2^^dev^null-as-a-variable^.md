@@ -12,7 +12,7 @@ votes:        "16 "
 favorites:    2
 views:        "4,657 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-27-How-to-pass-2^^dev^null-as-a-variable^.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ else
     google-chrome --headless --disable-gpu --dump-dom \
         "$RobWebAddress" > "$DownloadName"
 fi
-
 ```
 
 If I try to shorten it like this:
@@ -45,7 +44,6 @@ local HideErrors
 
 google-chrome --headless --disable-gpu --dump-dom \
     "$RobWebAddress" > "$DownloadName" "$HideErrors"
-
 ```
 
 I get error messages:
@@ -55,7 +53,6 @@ I get error messages:
 [0826/043058.672587:ERROR:headless_shell.cc(597)] Open multiple tabs is only supported when remote debugging is enabled.
 [0826/043058.711640:ERROR:headless_shell.cc(597)] Open multiple tabs is only supported when remote debugging is enabled.
 (... SNIP ...)
-
 ```
 
 Why does a hard-coded argument work but not an argument as a variable?
@@ -74,8 +71,7 @@ ErrorPipe=/dev/stderr
 
 google-chrome --headless --disable-gpu --dump-dom \
                 "$RobWebAddress" > "$DownloadName" 2>"$ErrorPipe"
-## 
-```
+## ```
 
 
 
@@ -86,5 +82,4 @@ Based on the first answer, I should point out program header already contains:
 ``` 
 [[ $fCron != true ]] &&
     exec 2> >(grep -v 'GtkDialog mapped without a transient parent' >&2)
-
 ```

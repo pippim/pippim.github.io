@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "3,056 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-Audio-starts-playing-3-5-seconds-after-video-does.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ Locate this section and place `#` in front of second line:
 ``` 
 ### Automatically suspend sinks/sources that become idle for too long
 # load-module module-suspend-on-idle
-
 ```
 
 Save the file and exit.

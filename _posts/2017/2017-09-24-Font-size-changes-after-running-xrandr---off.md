@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "2,307 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-24-Font-size-changes-after-running-xrandr---off.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ You can change the size of fonts for future windows opened by opening the termin
 
 ``` 
 xrandr --dpi 96
-
 ```
 
 For higher resolution (1920x1080) monitors try using:
 
 ``` 
 xrandr --dpi 144
-
 ```
 
 I use this on programs that do not implement HiDPI scaling themselves. Although it may not explain your problem it may solve it. Or it may not... YMMV.

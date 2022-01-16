@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "400 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-What-does-`LOGFILE^^{1:-^var^log^syslog}`-do^.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ then
 else
     LOGFILE="$1"                  # LOGFILE set to parameter 1
 fi
-
 ```
 
 If parameter 1 is not passed you see:
@@ -40,7 +39,6 @@ If you pass paraemeter 1:
 ``` 
 journalctl -b > /tmp/messages
 yad-logfile /tmp/messages
-
 ```
 
 you see:
@@ -84,7 +82,6 @@ yad --title="Log viewer" --window-icon=logviewer \
     --column @font@ --column @back@
 
 exit $?
-
 ```
 
 

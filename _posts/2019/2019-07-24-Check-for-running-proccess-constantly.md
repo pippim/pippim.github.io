@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "112 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-Check-for-running-proccess-constantly.md
 toc:          false
 navigation:   false
@@ -37,7 +37,6 @@ root      1226  0.0  0.0  12768  2368 ?        S    07:36   0:00 /bin/bash /usr/
 root     10567  0.0  0.0  54792  3964 pts/18   S    10:27   0:00 sudo eyesome/movie.sh asdf
 root     10568  0.0  0.0  12896  3380 pts/18   S    10:27   0:08 /bin/bash eyesome/movie.sh asdf
 rick     26612  0.0  0.0  14224  1020 pts/19   S+   16:52   0:00 grep --color=auto eyesome
-
 ```
 
 So let's narrow it down whilst making it user-friendly:
@@ -45,7 +44,6 @@ So let's narrow it down whilst making it user-friendly:
 ``` 
 $ ps -aux | grep "sudo eyesome/movie" | grep -v grep
 root     10567  0.0  0.0  54792  3964 pts/18   S    10:27   0:00 sudo eyesome/movie.sh asdf
-
 ```
 
 Now put it into a script that you have loaded in Startup Applications:
@@ -67,14 +65,12 @@ while true; do
     sleep 10
 
 done
-
 ```
 
 Mark the file as executable using:
 
 ``` 
 chmod /path/to/checkrunning.sh
-
 ```
 
 Replace the `echo` commands with `notify-send`.

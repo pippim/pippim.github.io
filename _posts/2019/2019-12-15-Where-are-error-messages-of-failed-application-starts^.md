@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "299 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-15-Where-are-error-messages-of-failed-application-starts^.md
 toc:          false
 navigation:   false
@@ -37,7 +37,6 @@ To briefly summarize the top-voted answer:
 ``` 
 lsof -p1234 | awk '$4 ~ /^[12][^0-9]/'
 ls -l /proc/1234/fd/[12]
-
 ```
 
 Of course the most common method is to simply call the GUI from the command line and your terminal window will show warning and error messages:
@@ -45,7 +44,6 @@ Of course the most common method is to simply call the GUI from the command line
 ``` 
 $ zenity --info --text "Hello World"
 Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
-
 ```
 
 

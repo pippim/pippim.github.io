@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "257,258 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-06-How-do-I-get-the-parent-process-ID-of-a-given-child-process^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ Using `pstree` you can search by the child process name and get the Process ID (
 ``` 
 $ pstree -hp | grep sleep
            |-cron(763)---cron(795)---sh(839)---display-auto-br(841)---sleep(8414)
-
 ```
 
 
@@ -37,7 +36,6 @@ If you want to search by Process ID of `sleep` instead of name you can use:
 ``` 
 $ pstree -hp | grep 14653
            |-cron(763)---cron(795)---sh(839)---display-auto-br(841)---sleep(14653)
-
 ```
 
 Notice the `sleep` process ID changed to `14653`. The parent (PID 841) sleeps for 1 minute, wakes up for a split second and then starts a new `sleep` command which gets a new process ID. This is another reason why searching for `sleep` is easier than searching by process ID.
@@ -56,7 +54,6 @@ systemd,1 splash fastboot kaslr
           └─sh,839 -c    /usr/local/bin/display-auto-brightness
               └─display-auto-br,841 /usr/local/bin/display-auto-brightness
                   └─sleep,8541 60
-
 ```
 
 **Note:** Another minute has passed and the sleep command gets a new PID (8541).

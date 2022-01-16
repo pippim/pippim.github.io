@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,342 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-Hibernate^suspend-on-critical-battery-level---where-should-I-set-it-from-MATE-GUI^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ you can install `dconf-editor` using:
 
 ``` 
 $ sudo apt-get install dconf-editor
-
 ```
 
 Then go to **org -> cinnamon -> settings-daemon -> plugins -> power**
@@ -53,14 +52,12 @@ $ gsettings list-recursively | grep critical
 org.gnome.settings-daemon.plugins.power critical-battery-action 'shutdown'
 org.gnome.settings-daemon.plugins.power percentage-critical 3
 org.gnome.settings-daemon.plugins.power time-critical 300
-
 ```
 
 ### Change your `critical-battery-action`
 
 ``` 
 $ gsettings set org.gnome.settings-daemon.plugins.power critical-battery-action 'suspend'
-
 ```
 
 
@@ -77,7 +74,6 @@ To disable the notification on battery discharge, run:
 
 ``` 
 $ gsettings set org.mate.power-manager.notify-discharging false
-
 ```
 
 However in Ubuntu there is no equivalent.
@@ -88,14 +84,12 @@ To find all Mate power settings use:
 
 ``` 
 $ gsettings list-recursively | grep power-manager
-
 ```
 
 In Ubuntu you would use:
 
 ``` 
 $ gsettings list-recursively | grep plugins.power
-
 ```
 
 

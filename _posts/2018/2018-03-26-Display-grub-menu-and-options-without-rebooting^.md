@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "7,901 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Display-grub-menu-and-options-without-rebooting^.md
 toc:          true
 navigation:   true
@@ -25,7 +25,6 @@ Developing the script: [Bash script to backup/clone Ubuntu to another partition]
 
 ``` 
 4>8  Ubuntu, with Linux 4.14.30-041430-generic (recovery mode) (on /dev/nvme0n1p8)
-
 ```
 
 This was fixed today by truncating lines longer than 68 characters.
@@ -88,7 +87,6 @@ Grub Version: 2.02~beta2-36ubuntu3.15
         │                   <Display Grub Boot>        <Exit>                      │ 
         │                                                                          │ 
         └──────────────────────────────────────────────────────────────────────────┘ 
-
 ```
 
 
@@ -97,8 +95,7 @@ Grub Version: 2.02~beta2-36ubuntu3.15
 
 ``` 
                                                                                  
-# `grub-menu.sh` bash script
-```
+# `grub-menu.sh` bash script```
 
 
 
@@ -106,9 +103,12 @@ Grub Version: 2.02~beta2-36ubuntu3.15
 Previous versions `grub-display.sh` and `grub-display-lite.sh` required many tweaking options in the code. `grub-menu.sh` only has one option to tweak:
 
 ``` bash
+
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
+
 # Default for hide duplicate and triplicate options with (upstart) and (recovery mode)?
 HideUpstartRecovery=false
-
 ```
 
 Set the value to `true` or `false`.
@@ -117,25 +117,23 @@ The default format can be overridden when calling the script using:
 
 ``` bash
 grub-menu.sh short
-
 ```
 
 or:
 
 ``` bash
 grub-menu.sh long
-
 ```
-
-
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
 
 ## The code:
 
 {% include copyHeader.html %}
 ``` bash
-#!/bin/bash
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
+
+# !/bin/bash
 
 # NAME: grub-menu.sh
 # PATH: $HOME/bin
@@ -150,6 +148,10 @@ if [[ $CurrentTERM == "" ]] ; then
 fi
 
 AllMenusArr=()      # All menu options.
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
+
 # Default for hide duplicate and triplicate options with (upstart) and (recovery mode)?
 HideUpstartRecovery=false
 if [[ $1 == short ]] ; then
@@ -281,14 +283,13 @@ while true ; do
 done
 
 exit 0
-## 
-```
+
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
+
+## ```
 
 
-
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
 
 # Previous versions (not recommended)
 
@@ -381,12 +382,11 @@ while true ; do
 done
 
 exit 0
-
 ```
 
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr9" class ="hdr-btn">Skip</a></div>
 
 ## Note to Ubuntu Server users
 
@@ -400,7 +400,6 @@ To shorten the grub menu option list displayed you can remove the `(upstart)` an
 # Version without upstart and recovery options displayed
 awk -F\' '/menuentry / { print i++, $2}' /boot/grub/grub.cfg \
         | grep -v upstart | grep -v recovery > ~/.grub-display-menu
-
 ```
 
 Then apply comments to these lines:
@@ -409,12 +408,11 @@ Then apply comments to these lines:
 # Version with upstart and recovery options displayed
 #awk -F\' '/menuentry / { print i++, $2}' /boot/grub/grub.cfg \
 #        > ~/.grub-display-menu
-
 ```
 
 
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr10" class ="hdr-btn">Skip</a></div>
 
 ## Screenshots
 
@@ -423,8 +421,8 @@ Here's what it looks like when invoked from the command line. Unfortunately I wa
 [![grub-display.sh.png][2]][2]
 
 
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr9" class ="hdr-btn">Skip</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr11" class ="hdr-btn">Skip</a></div>
 
 ## Turn off mouse support for copy & paste
 
@@ -456,7 +454,6 @@ Here's what it looks like when invoked from the command line. Unfortunately I wa
        ├──────────────────────────────────────────────────────────────────────────┤  
        │             <Display Grub Boot>       <      Exit       >                │  
        └──────────────────────────────────────────────────────────────────────────┘  
-
 ```
 
 When the default mouse support is enabled, you can't copy the screen to the clipboard but must use <kbd>Print Screen</kbd> for a graphical screen snapshot. In order to support copy & paste you need disable mouse support by searching for these lines:
@@ -465,14 +462,13 @@ When the default mouse support is enabled, you can't copy the screen to the clip
     --default-item "$DefaultItem" \
     --no-mouse \
     --menu "Menu Number       ----------- Menu Name ----------" 24 76 16 \
-
 ```
 
 The argument `--no-mouse` has been inserted below `--default-item`. This means you loose mouse support but gain better resolution and copy to clipboard ability by highlighting text and pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr10" class ="hdr-btn">Skip</a></div>
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr10" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr12" class ="hdr-btn">Skip</a></div>
 
 ## Display grub boot parameters
 
@@ -500,12 +496,11 @@ echo 'Loading initial ramdisk ...'
 initrd /boot/initrd.img-4.14.27-041427-generic
 }
 Press <Enter> to continue
-
 ```
 
 
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr11" class ="hdr-btn">Skip</a></div>
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr11" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr13" class ="hdr-btn">Skip</a></div>
 
 ## Grub menu entry #94
 
@@ -522,12 +517,11 @@ fi
 chainloader /EFI/Microsoft/Boot/bootmgfw.efi
 }
 Press <Enter> to continue
-
 ```
 
 
-<a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr10" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr12" class ="hdr-btn">Skip</a></div>
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr12" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr14" class ="hdr-btn">Skip</a></div>
 
 ## Grub menu entry #96
 
@@ -536,7 +530,6 @@ menuentry 'System setup' $menuentry_id_option 'uefi-firmware' {
 fwsetup
 }
 Press <Enter> to continue
-
 ```
 
 
@@ -544,8 +537,8 @@ Press <Enter> to continue
 
 
 
-<a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr11" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr13" class ="hdr-btn">Skip</a></div>
+<a id="hdr14"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr13" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr15" class ="hdr-btn">Skip</a></div>
 
 # `grub-display-lite.sh` for Ubuntu Server
 
@@ -634,14 +627,13 @@ while true ; do
 done
 
 exit 0
-
 ```
 
 The `grub-display-lite.sh` bash script is basically the same as `grub-display.sh` except there is no error message if `dialog` isn't installed. Also some `whiptail` arguments have different names.
 
 
-<a id="hdr13"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr12" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr14" class ="hdr-btn">Skip</a></div>
+<a id="hdr15"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr14" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr16" class ="hdr-btn">Skip</a></div>
 
 ## `grub-display-lite.sh` screenshots
 
@@ -681,20 +673,17 @@ Grub Version: 2.02~beta2-36ubuntu3.15
         │                                                                          │ 
         └──────────────────────────────────────────────────────────────────────────┘ 
                                                                                      
-As mentioned above you can reduce the size of the grub menu displayed here by 66% when removing `(upstart)` and `(recovery)` menu options. Such is the case here but as a consequence the detail lines get narrower and the headings don't line up perfectly. You can tweak the column headings by changing this line:
-```
+As mentioned above you can reduce the size of the grub menu displayed here by 66% when removing `(upstart)` and `(recovery)` menu options. Such is the case here but as a consequence the detail lines get narrower and the headings don't line up perfectly. You can tweak the column headings by changing this line:```
 
 
 ``` bash
     --menu "Menu Number       ----------- Menu Name ----------" 24 76 16 \
-
 ```
 
 to something like this:
 
 ``` bash
     --menu "      Menu Number ----------- Menu Name ----------" 24 76 16 \
-
 ```
 
 
@@ -703,6 +692,6 @@ to something like this:
   [3]: https://i.stack.imgur.com/13sHY.png
 
 
-<a id="hdr14"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr13" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr16"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr15" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
 

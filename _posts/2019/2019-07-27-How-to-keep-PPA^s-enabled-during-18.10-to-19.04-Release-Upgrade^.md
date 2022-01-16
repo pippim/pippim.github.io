@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "79 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-27-How-to-keep-PPA^s-enabled-during-18.10-to-19.04-Release-Upgrade^.md
 toc:          false
 navigation:   false
@@ -36,7 +36,6 @@ You can use (in 18.10 now, in 18.04 soon) a new flag:
 
 ``` 
 RELEASE_UPGRADER_ALLOW_THIRD_PARTY=1 update-manager -d
-
 ```
 
 **Note:** Only PPAs supported in the new version will be enabled:

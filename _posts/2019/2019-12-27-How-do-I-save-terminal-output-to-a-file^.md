@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "2,922,708 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-27-How-do-I-save-terminal-output-to-a-file^.md
 toc:          false
 navigation:   false
@@ -46,21 +46,18 @@ $ command3
 $ exit
 exit
 Script done, file is /home/rick/outputfile.txt
-
 ```
 
 Then look at your recorded output of commands 1, 2 & 3 with:
 
 ``` 
 cat ~/outputfile.txt
-
 ```
 
 This is similar to [earlier answer][2] of:
 
 ``` 
 command |& tee ~/outputfile.txt
-
 ```
 
 - But you don't have to use `|& tee ~/outputfile.txt` after each `commnd`.

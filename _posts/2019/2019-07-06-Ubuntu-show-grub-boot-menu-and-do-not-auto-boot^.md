@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,155 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-Ubuntu-show-grub-boot-menu-and-do-not-auto-boot^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ What you tried:
 ``` 
 sudo nano /etc/default/grub
 GRUB_TIMEOUT=0
-
 ```
 
 Then run `sudo update-grub`
@@ -36,7 +35,6 @@ Does not work because grub automatically changes a time out of zero to 10. What 
 sudo nano /etc/default/grub
 GRUB_RECORDFAIL_TIMEOUT=0.1
 GRUB_TIMEOUT=0.1
-
 ```
 
 Then run `sudo update-grub`

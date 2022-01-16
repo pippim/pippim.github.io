@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "752 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-cal--w-does-not-work.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ Usage: cal [general options] [-hjy] [[month] year]
        ncal [general options] [-bhJeoSM] [year]
 General options: [-NC31] [-A months] [-B months]
 For debug the highlighting: [-H yyyy-mm-dd] [-d yyyy-mm]
-
 ```
 
 - `cal` only supports `h`, `j` and `y` arguments

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,824 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-24-Manage-Keyboard-backlight-on-dual-boot-system.md
 toc:          false
 navigation:   false
@@ -68,7 +68,6 @@ if __name__ == '__main__':
             print("Unknown argument:", argv[1])
     else:
         print("Script takes exactly one argument.", len(argv[1:]), "arguments provided.")
-
 ```
 
 

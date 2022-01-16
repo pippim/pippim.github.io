@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,278 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-22-Improve-initial-use-of-`find`-performance-time.md
 toc:          false
 navigation:   true
@@ -53,7 +53,6 @@ for i in {1..10}; do
     echo "Sleeping 15 seconds..."   >> /tmp/find-cache.log
     sleep 15
 done
-
 ```
 
 Copy above text to a script file named: `find-cache`. Put the script name in **Startup Applications**. Use the instructions in the next section but substitute the command name `/usr/bin/find...` with `/<path-to-script>/find-cache`.
@@ -62,7 +61,6 @@ Don't forget to mark the script as executable using:
 
 ``` bash
 chmod a+x /<path-to-script>/find-cache
-
 ```
 
 `<path-to-script>` should be in your $PATH environment such as `/usr/local/bin` or preferably `/home/<your-user-name>/bin`. To double check use `echo $PATH` to reveal the environment variable.
@@ -96,7 +94,6 @@ Mem:           7.4G        1.1G        3.0G        599M        3.3G        5.3G
 Sleeping 15 seconds...
 
     (... SNIP ...)
-
 ```
 
 **Note:** between 1st and 2nd iteration free RAM drops 3 GB but `firefox` is restoring 12 tabs at the same time.
@@ -144,7 +141,6 @@ You can use `cron` to call the `find` command at boot time to cache the slow dis
 
 ``` bash
 @reboot /usr/sleep 30 && /usr/bin/find /* 2>/dev/null | wc -l
-
 ```
 
 - `@reboot` tells `cron` to run this command at every boot / reboot.
@@ -171,7 +167,6 @@ rick@alien:~$ time find / -type f \( -name "*.tar" -o -name "*.tar.*" \) 2>/dev/
 real    0m8.954s
 user    0m2.476s
 sys     0m3.709s
-
 ```
 
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,931 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-12-lsblk-partuuid-not-recognized-command.md
 toc:          false
 navigation:   false
@@ -46,6 +46,5 @@ nvme0n1                                                                         
 ├─nvme0n1p4 ntfs   NVMe_Win10       f354f364-9819-4209-955a-297505eebfd0 /mnt/c     414.9G 
 ├─nvme0n1p2 vfat                    5a989e57-3bb3-4821-907f-5822bb14a635 /boot/efi     99M 
 └─nvme0n1p7 ntfs   Shared_WSL+Linux 1ca41115-5e65-4ade-8825-b9a2807ae51c /mnt/e         9G 
-
 ```
 

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "59,158 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-can-I-change-what^s-displayed-at-a-login-shell^.md
 toc:          true
 navigation:   true
@@ -44,7 +44,6 @@ Weather report: Edmonton               March 2018            ┌─────�
       `-’      14 km              18 19 20 21 22 23 24  
      /   \     0.9 mm             25 26 27 28 29 30 31  
                                                         
-
 ```
 
 Yes it really is -14 in Edmonton and feels like -23. A good time to spend the long-weekend inside playing the newly arrived Tomb Raider 2013! Maybe brush up on that Resume to move to Vancouver or Montreal...
@@ -172,7 +171,6 @@ done < /tmp/terminal
 tput rc                     # Restore saved cursor position.
 
 exit 0
-
 ```
 
 
@@ -191,14 +189,12 @@ For the fancy time display you need to install `toilet`:
 
 ``` bash
 sudo apt install toilet
-
 ```
 
 For another fancy time display (but not quite as fancy) install `figlet`:
 
 ``` bash
 sudo apt install figlet
-
 ```
 
 Otherwise the time will be displayed in "normal" font.
@@ -219,7 +215,6 @@ You'll want to modify this section of code and change `Edmonton` to your city na
 # Replace Edmonton with your city name, GPS, etc. See: curl wttr.in/:help
 curl wttr.in/Edmonton?0 --silent --max-time 3
 # Timeout #. Increase for slow connection---^
-
 ```
 
 Unicode is supported for city names like `/Москва` (Moscow). Airport letters are supported such as `YEG` for Edmonton.
@@ -245,7 +240,6 @@ Column=$(($DateColumn - 10))
 tput cuf $Column        # Move x column number
 printf "          "     # Blank out ", country" with x spaces
 #tput cuf $DateColumn    # Position to column 27 for date display
-
 ```
 
 If you need help with this part of the script please post comment below for assistance.
@@ -262,7 +256,6 @@ Adjust the spacing to your terminal screen width by changing:
 # Setup for 92 character wide terminal
 DateColumn=34 # Default is 27 for 80 character line, 34 for 92 character line
 TimeColumn=61 # Default is 49 for   "   "   "   "    61 "   "   "   "
-
 ```
 
 
@@ -283,7 +276,6 @@ now
 
 # ASCII Linux distribution display
 screenfetch
-
 ```
 
 Save the `~/.bashrc" file changes.
@@ -292,7 +284,6 @@ To display the Ubuntu information you need `screenfetch`:
 
 ``` bash
 sudo apt install screenfetch
-
 ```
 
 There are similar display packages to `screenfetch` so shop around!
@@ -308,7 +299,6 @@ else
 ${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
-
 ```
 
 Note the length of the separator line coincides with width of `screenfetch` output. In this case it is 92 characters wide and `gnome-terminal` preferences are set accordingly.

@@ -12,7 +12,7 @@ votes:        "16 "
 favorites:    
 views:        "86,161 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-25-What-does-^^-mean-in-bash^.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ if [[ $# -ne 1 ]]; then
     echo '.tar will automatically be added as a file extension'
     exit 1
 fi
-
 ```
 
 To summarize `$#` reports the number of parameters passed to a script. In your case you passed no parameters and the reported result is `0`.
@@ -45,7 +44,6 @@ To find the length of a string:
 
 ``` 
 myvar="some string"; echo ${#myvar}
-
 ```
 
 returns: `11`
@@ -54,7 +52,6 @@ To find the number of array elements:
 
 ``` 
 myArr=(A B C); echo ${#myArr[@]}
-
 ```
 
 returns: `3`
@@ -63,7 +60,6 @@ To find the length of the first array element:
 
 ``` 
 myArr=(A B C); echo ${#myArr[0]}
-
 ```
 
 returns: `1` (The length of `A`, 0 is first element as arrays use zero-based indices/subscripts).

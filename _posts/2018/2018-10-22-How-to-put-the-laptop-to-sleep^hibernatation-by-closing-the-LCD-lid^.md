@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "847 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-22-How-to-put-the-laptop-to-sleep^hibernatation-by-closing-the-LCD-lid^.md
 toc:          false
 navigation:   false
@@ -23,21 +23,18 @@ When an HDMI monitor is plugged in, the system considers it "docked" as if it we
 
 ``` 
 sudo -H gedit /etc/systemd/logind.conf
-
 ```
 
 Change the line:
 
 ``` 
 #HandleLidSwitchDocked=ignore
-
 ```
 
 to read:
 
 ``` 
 HandleLidSwitchDocked=suspend
-
 ```
 
 Then save the file and reboot.

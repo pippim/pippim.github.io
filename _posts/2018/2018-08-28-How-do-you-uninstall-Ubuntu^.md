@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "100 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-28-How-do-you-uninstall-Ubuntu^.md
 toc:          false
 navigation:   false
@@ -57,7 +57,6 @@ nvme0n1                                           477G Samsung SSD 960 PRO 512GB
 ├─nvme0n1p2  vfat                    /boot/efi     99M 
 ├─nvme0n1p9  swap                    [SWAP]       7.9G 
 └─nvme0n1p7  ext4   Old_Ubuntu_16.04 /mnt/old    44.6G 
-
 ```
 
 Imagine I wanted to reformat the partitions **Ubuntu 18.04** and **Old_Ubuntu_16.04** I would reference them as `/dev/nvme0n1p10` and `/dev/nvme0n1p7` within `gparted` or any other partition formatting program. Of course they would likely display the LABEL as well so using `lsblk` might be unnecessary.
@@ -72,7 +71,6 @@ DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=16.04
 DISTRIB_CODENAME=xenial
 DISTRIB_DESCRIPTION="Ubuntu 16.04.5 LTS"
-
 ```
 
 We can repeat this command (with minor modification) on every partition after mounting it.
@@ -98,7 +96,6 @@ CODENAME:      xenial
 DESCRIPTION:   Ubuntu 16.04.5 LTS
  Size  Used Avail Use%
   27G  9.4G   16G  38%
-
 ```
 
 ### Mounted partition's `/etc/lsb-release`
@@ -111,7 +108,6 @@ DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=16.04
 DISTRIB_CODENAME=xenial
 DISTRIB_DESCRIPTION="Ubuntu 16.04.5 LTS"
-
 ```
 
 Yes I know it looks wrong but I cloned my Ubuntu 16.04 over to the 18.04 partition recently to test Ubuntu's 16.04 to 18.04 upgrade process (it's a hobby of mine).
@@ -130,8 +126,7 @@ The menu will clear and a message will be display:
 =====================================================================
 
 /dev/nvme0n1p10 mounted on /mnt/mount-menu.jcXDv unmounted.
-## 
-```
+## ```
 
 
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,221 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-07-Why-show-desktop-^with-alt-tab^-in-kde-renders-alternatively-two-different-things^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ The OP's solution is to turn off desktop icons using:
 
 ``` 
 gsettings set org.gnome.desktop.background show-desktop-icons false
-
 ```
 
 Now there are no icons on the desktop at all, whether you minimize all Windows or not.
@@ -38,7 +37,6 @@ Now there are no icons on the desktop at all, whether you minimize all Windows o
 
 ``` 
 sudo apt-get install kwin-addons
-
 ```
 
 

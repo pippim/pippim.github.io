@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "435 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-12-Downgrade-of-kernel-fails.md
 toc:          false
 navigation:   false
@@ -43,7 +43,6 @@ Change to your downloads directory:
 
 ``` 
 cd ~/Downloads
-
 ```
 
 Keep repeating command until all three files are downloaded with right size:
@@ -53,7 +52,6 @@ $ ll *.deb
 -rw-rw-r-- 1 rick rick  9064576 Nov 12 16:40 linux-headers-3.16.60-031660_3.16.60-031660.201810220732_all.deb
 -rw-rw-r-- 1 rick rick   693010 Nov 12 16:39 linux-headers-3.16.60-031660-generic_3.16.60-031660.201810220732_amd64.deb
 -rw-rw-r-- 1 rick rick 54562272 Nov 12 16:40 linux-image-3.16.60-031660-generic_3.16.60-031660.201810220732_amd64.deb
-
 ```
 
 Install the kernel files for `3.16.60`:
@@ -70,7 +68,6 @@ dpkg: error processing package linux-image-3.16.60-031660-generic (--install):
  dependency problems - leaving unconfigured
 Errors were encountered while processing:
  linux-image-3.16.60-031660-generic
-
 ```
 
 **OH OH** There is a dependency problem. Install missing module:
@@ -109,7 +106,6 @@ run-parts: executing /etc/kernel/postinst.d/zz-update-grub 3.16.60-031660-generi
 Generating grub configuration file ...
     (... SNIP ...)
 done
-
 ```
 
 **AFTER** missing module is installed, kernel `3.16.60` installation carries on where it left off.

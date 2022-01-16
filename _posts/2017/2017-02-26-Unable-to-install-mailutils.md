@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "14,143 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-26-Unable-to-install-mailutils.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ Use `apt policy` to see what's wrong :
 ``` 
 $ apt policy mailtuils
 N: Unable to locate package mailtuils
-
 ```
 
 Aha ... now what do I see ? ... a typo ! :D
@@ -37,7 +36,6 @@ mailutils:
   Version table:
      1:2.99.99-1.1ubuntu3 500
         500 http://archive.ubuntu.com/ubuntu yakkety/universe amd64 Packages
-
 ```
 
 Double check `universe` is in your repositories:
@@ -45,7 +43,6 @@ Double check `universe` is in your repositories:
 ``` 
 $ sudo add-apt-repository universe
 'universe' distribution component is already enabled for all sources.
-
 ```
 
 And here we go ...
@@ -67,7 +64,6 @@ Need to get 1,285 kB of archives.
 After this operation, 6,657 kB of additional disk space will be used.
 Do you want to continue? [Y/n] n
 Abort.
-
 ```
 
 

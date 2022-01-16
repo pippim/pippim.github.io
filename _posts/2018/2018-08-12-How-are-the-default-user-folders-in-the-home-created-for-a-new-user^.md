@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "5,727 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-How-are-the-default-user-folders-in-the-home-created-for-a-new-user^.md
 toc:          false
 navigation:   false
@@ -39,7 +39,6 @@ VIDEOS=Videos
 #MUSIC=Documents/Music
 #PICTURES=Documents/Pictures
 #VIDEOS=Documents/Videos
-
 ```
 
 If you don't want a specific subdirectory created put a `#` in front of it to comment out the line.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,067 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-07-Is-Vim-safe-to-use-in-combination-with-sudo^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ The general consensus in the **Ask Ubuntu** community recently is to use:
 
 ``` 
 sudo -H gedit /path/to/filename
-
 ```
 
 The only problem remains that `sudo` doesn't have a profile for tab settings, extensions, word wrap, font name, font size, etc. You can inherit these from your user profile though with a wrapper script like this: [How can I sync my root gedit with my user gedit&#39;s preferences?](How can I sync my root gedit with my user gedit&#39;s preferences?)

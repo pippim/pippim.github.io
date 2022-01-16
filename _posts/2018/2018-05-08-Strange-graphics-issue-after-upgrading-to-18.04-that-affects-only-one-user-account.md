@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "11,280 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-Strange-graphics-issue-after-upgrading-to-18.04-that-affects-only-one-user-account.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ When you run `update-initramfs` you should not be getting error messages for mis
 $ sudo update-initramfs -u
 update-initramfs: Generating /boot/initrd.img-4.14.34-041434-generic
 Adding /lib/firmware/i915/skl_guc_ver9_33.bin
-
 ```
 
 ### Under Ubuntu 18.04 LTS:
@@ -36,7 +35,6 @@ Adding /lib/firmware/i915/skl_guc_ver9_33.bin
 $ sudo update-initramfs -u
 update-initramfs: Generating /boot/initrd.img-4.15.0-20-generic
 Adding /lib/firmware/i915/skl_guc_ver9_33.bin
-
 ```
 
 In particular you should be seeing the last line. If not follow the instructions here: [Updated kernel to 4.8 now missing firmware warnings][1]

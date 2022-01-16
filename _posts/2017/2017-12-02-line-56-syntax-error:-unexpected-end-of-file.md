@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,838 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-02-line-56-syntax-error:-unexpected-end-of-file.md
 toc:          false
 navigation:   false
@@ -51,21 +51,18 @@ Line 56:
 ^-- SC1072: Missing '}'. Fix any mentioned problems and try again.
 
 $ 
-
 ```
 
 As the shell checker tells us you need to change line 7 from:
 
 ``` text
 CIVIS(){ $e "\e[25l"}
-
 ```
 
 to:
 
 ``` text
 CIVIS(){ $e "\e[25l";}
-
 ```
 
 

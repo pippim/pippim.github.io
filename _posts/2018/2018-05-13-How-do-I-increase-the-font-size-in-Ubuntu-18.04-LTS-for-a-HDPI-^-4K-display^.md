@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "42,142 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-How-do-I-increase-the-font-size-in-Ubuntu-18.04-LTS-for-a-HDPI-^-4K-display^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ You may use *(UNITY) Tweaks* to adjust font size along with other UI elements. I
 
 ``` 
 sudo apt install unity-tweak-tool
-
 ```
 
 The settings I'm using for scaling on a 1920x1080 monitor are 1.38 times. You would probably want 2.00 or higher:
@@ -54,7 +53,6 @@ mate-tweak/bionic,bionic 18.04.16-1 all
 mousetweaks/bionic,bionic,now 3.12.0-4 amd64 [installed]
 tweak/bionic 3.02-2 amd64
 unity-tweak-tool/bionic,bionic,now 0.0.7ubuntu4 all [installed]
-
 ```
 
   [1]: https://i.stack.imgur.com/ebLJk.png

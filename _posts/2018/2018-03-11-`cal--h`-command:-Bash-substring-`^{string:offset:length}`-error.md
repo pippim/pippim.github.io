@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "567 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-11-`cal--h`-command:-Bash-substring-`^{string:offset:length}`-error.md
 toc:          false
 navigation:   false
@@ -35,21 +35,18 @@ Su Mo Tu We Th Fr Sa
 18 19 20 21 22 23 24  T=18 T=19 T=20 T=21 T=22 T=23 T=24 
 25 26 27 28 29 30 31  T=25 T=26 T=27 T=28 T=29 T=30 T=31 
                       T=   T=   T=   T=   T=   T=   T=   
-
 ```
 
 It is showing:
 
 ``` 
 T= T= T= 1 T= 1 T= 1 T= 1 T= 1
-
 ```
 
 But it **should** show:
 
 ``` 
 T=11 T=12 T=13 T=14 T=15 T=16 T=17
-
 ```
 
 The code is pretty straight forward:
@@ -85,7 +82,6 @@ printf "T=$Test "
     tput cud1           # Down one line
     CalLineCnt=$((++CalLineCnt))
 done < /tmp/terminal
-
 ```
 
 Can anyone point me in the right direction?

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,171 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-How-to-make-locate-output-look-like-`ll`-or-`ls--la`-but-nicer^.md
 toc:          false
 navigation:   false
@@ -37,7 +37,6 @@ drwxr-xr-x  root   root   4096  Jun  4 17:19  /etc/profile.d
 real	0m0.760s
 user	0m0.754s
 sys 	0m0.020s
-
 ```
 
 It takes `.76` seconds to run versus `.70` seconds for the regular `locate` command. The difference is negligible.
@@ -52,7 +51,6 @@ The bash code is fairly straight forward. Copy the script below into the directo
 
 ``` bash
 chmod a+x /home/YOUR_NAME/bin/llocate`
-
 ```
 
 Here's the script `llocate`:

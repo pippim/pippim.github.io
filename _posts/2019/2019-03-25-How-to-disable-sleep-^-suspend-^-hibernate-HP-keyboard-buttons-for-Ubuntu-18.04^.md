@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "5,732 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-25-How-to-disable-sleep-^-suspend-^-hibernate-HP-keyboard-buttons-for-Ubuntu-18.04^.md
 toc:          false
 navigation:   false
@@ -62,7 +62,6 @@ HandleLidSwitch=ignore
 #RuntimeDirectorySize=10%
 #RemoveIPC=yes
 #UserTasksMax=12288
-
 ```
 
 Notice on my system the only option I've changed is `HandleLidswitch`. For your system I would override these defaults:
@@ -70,7 +69,6 @@ Notice on my system the only option I've changed is `HandleLidswitch`. For your 
 ``` 
 #HandleSuspendKey=suspend
 #HandleHibernateKey=hibernate
-
 ```
 
 to this:
@@ -78,7 +76,6 @@ to this:
 ``` 
 HandleSuspendKey=ignore
 HandleHibernateKey=ignore
-
 ```
 
 `systemd` is a little unique in that a line beginning with a hashtag (`#`) is not only a comment but also represents the default action taken.
@@ -89,5 +86,4 @@ Unfortunately I don't have your keyboard to test this configuration.
 
 ``` 
 sudo systemctl restart systemd-logind.service
-
 ```

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "6,725 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-30-Could-not-find-valid-key-in-user-session-keyring-for-sig-specified-in-mount-option-after-upgrade-from-16.04-to-18.04.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ The error there is like your own:
 [ 1265.695394] Could not find valid key in user session keyring for sig specified in mount option: [<correct key ID>]
 [ 1265.695395] One or more global auth toks could not properly register; rc = [-2]
 [ 1265.695396] Error parsing options; rc = [-2]
-
 ```
 
 You should subscribe to the bug report and make sure you mark it affects you too.

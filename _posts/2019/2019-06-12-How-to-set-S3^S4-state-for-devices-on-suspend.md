@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,833 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-How-to-set-S3^S4-state-for-devices-on-suspend.md
 toc:          false
 navigation:   false
@@ -61,14 +61,12 @@ case $1/$2 in
     rm $TMPLIST
         ;;
 esac
-
 ```
 
 Place the script in `/lib/systemd/system-sleep/custom-xhci_hcd` and mark it executable with:
 
 ``` 
 chmod a+x /lib/systemd/system-sleep/custom-xhci_hcd
-
 ```
 
 On next reboot script is activated.
@@ -92,7 +90,6 @@ Jun 14 17:30:51 alien kernel: usb 1-1: USB disconnect, device number 2
 Jun 14 17:30:51 alien kernel: usb 1-1.1: USB disconnect, device number 4
 Jun 14 17:30:51 alien kernel: usblp1: removed
 Jun 14 17:30:51 alien kernel: usb 1-1.2: USB disconnect, device number 6
-
 ```
 
 Then press <kbd>Page Down</kbd> numerous times to see the resume messages:
@@ -126,6 +123,5 @@ Jun 14 17:31:07 alien kernel: usb usb2: SerialNumber: 0000:00:14.0
 Jun 14 17:31:07 alien kernel: hub 2-0:1.0: USB hub found
 Jun 14 17:31:07 alien kernel: hub 2-0:1.0: 8 ports detected
 Jun 14 17:31:07 alien eyesome[16633]: Wakeup: Called from suspend.
-
 ```
 

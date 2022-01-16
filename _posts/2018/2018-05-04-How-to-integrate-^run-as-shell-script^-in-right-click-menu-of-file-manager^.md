@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,332 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-04-How-to-integrate-^run-as-shell-script^-in-right-click-menu-of-file-manager^.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ To create the script use:
 ``` 
 cd ~/.local/share/nautilus/scripts/
 gedit set-login-wallpaper
-
 ```
 
 Paste in these lines:
@@ -97,7 +96,6 @@ else
 fi
 
 exit 0
-
 ```
 
 Save the file and exit the `gedit` editor.
@@ -106,7 +104,6 @@ Now mark the script as executable using:
 
 ``` bash
 chmod +x set-login-wallpaper
-
 ```
 
 Open Nautilus and navigate to your directory with wallpaper images. Find an appropriate image and right-click on it. This drop-down menu appears:

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "383 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-11-How-can-i-Optimize-font-for-my-UHD-Screen-in-Unity.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ Install Unity Tweak Tool using:
 
 ``` 
 sudo apt install unity-tweak-tool
-
 ```
 
 Then open Dash using <kbd>Alt</kbd>+<kbd>F2</kbd> and type "Unity". The Unity Tweak Tool icon will appear and click on it.
@@ -59,7 +58,6 @@ Some applications, for example `Kid3` ignore High DPI scaling in Ubuntu and insi
 
 ``` 
 xrandr --dpi 144
-
 ```
 
 Change 144 to any number which is a multiple of 16 for best results, ie: 96, 128, 144, etc.

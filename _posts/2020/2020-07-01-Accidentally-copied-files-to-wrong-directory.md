@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "1,199 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-01-Accidentally-copied-files-to-wrong-directory.md
 toc:          false
 navigation:   false
@@ -129,7 +129,6 @@ rm: cannot remove '/bin/zap/Assembly-Intro-hello/Linux': Is a directory
 
 ``` 
 $ find /usr/local/bin/ /bin/ -printf '%P\n' | sort | uniq -d | tail -n +2 | awk '{print "/bin/" $0}' | sudo xargs rm -rf
-
 ```
 
 

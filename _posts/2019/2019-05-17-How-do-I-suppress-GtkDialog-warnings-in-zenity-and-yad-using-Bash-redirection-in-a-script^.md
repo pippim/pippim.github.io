@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,985 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-17-How-do-I-suppress-GtkDialog-warnings-in-zenity-and-yad-using-Bash-redirection-in-a-script^.md
 toc:          false
 navigation:   false
@@ -26,14 +26,12 @@ I'm trying to suppress `GtkDialog` warnings in `zenity` and `yad`:
 ``` 
 $ zenity --error --text hello
 Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
-
 ```
 
 Error redirection and filtering works:
 
 ``` 
 $ zenity --error --text hello 2> >(grep -v GtkDialog >&2)
-
 ```
 
 **YEAH...** Annoying warning message disappears!!
@@ -77,7 +75,6 @@ $ yad --text hello 2> >(grep -v GtkDialog >&2)
 
 $ yad --text hello "${aGtkSpam[@]}"
 Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
-
 ```
 
 I found many excellent generic answers on word-splitting and parameters which ***should*** solve my problem but a specific syntax eludes me.

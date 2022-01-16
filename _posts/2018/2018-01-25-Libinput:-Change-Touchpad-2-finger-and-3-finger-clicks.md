@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "4,859 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-25-Libinput:-Change-Touchpad-2-finger-and-3-finger-clicks.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ Section "InputClass"
     Option "Tapping" "on"
     Option "TappingButtonMap" "lmr"
 EndSection
-
 ```
 
 Remember to remove `MatchIsTouchpad "on"` if your device is not a touchpad and adjust the Identifier accordingly.

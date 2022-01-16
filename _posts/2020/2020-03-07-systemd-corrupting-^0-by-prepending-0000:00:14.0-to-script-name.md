@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "53 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-03-07-systemd-corrupting-^0-by-prepending-0000:00:14.0-to-script-name.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ To fix my problem I created the script:
 
 ``` 
 /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
-
 ```
 
 The script must be marked executable (`chmod a+x scriptname`) and for me it contains:

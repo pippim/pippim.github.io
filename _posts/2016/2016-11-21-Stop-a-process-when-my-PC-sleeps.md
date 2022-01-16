@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "786 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-21-Stop-a-process-when-my-PC-sleeps.md
 toc:          false
 navigation:   false
@@ -40,7 +40,6 @@ case $1/$2 in
     libinput-gestures-setup start
     ;;
 esac
-
 ```
 
 To ensure the script is created with the right permissions, copy and existing script and then edit it:
@@ -49,7 +48,6 @@ To ensure the script is created with the right permissions, copy and existing sc
 cd /lib/systemd/system-sleep
 sudo cp wpasupplicant tv_refresh
 gksu gedit tv_refresh
-
 ```
 
 The `sleep 2` pause may be unnecessary for you but for my setup it was necessary restoring sound from laptop back to HDMI TV.
@@ -82,7 +80,6 @@ ExecStartPost=/usr/bin/sleep 1
 
 [Install]
 WantedBy=sleep.target
-
 ```
 
 ### Resume
@@ -101,7 +98,6 @@ ExecStart=/usr/bin/mysql -e 'slave start'
 
 [Install]
 WantedBy=suspend.target 
-
 ```
 
 

@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "604,474 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-13-Any-way-to-check-the-clock-speed-of-my-processor^.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ I'd like to point out `sudo` is needed for Ian's answer above:
 
 ``` 
 sudo cat /sys/devices/system/cpu/cpu*/cpufreq/cpuinfo_cur_freq
-
 ```
 
 However you can get the same results without sudo using:
 
 ``` 
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq
-
 ```
 
 My favourite is to use Conky where you can paint your own picture:
@@ -50,7 +48,6 @@ ${color}${goto 13}CPU 6 ${goto 81}${color green}${cpu cpu6}% ${goto 131}${color3
 ${color}${goto 13}CPU 7 ${goto 81}${color green}${cpu cpu7}% ${goto 131}${color3}${cpubar cpu7 18}
 ${color}${goto 13}CPU 8 ${goto 81}${color green}${cpu cpu8}% ${goto 131}${color3}${cpubar cpu8 18}
 ${color1}All CPU ${color green}${cpu}% ${goto 131}${color1}Temp: ${color green}${hwmon 2 temp 1}°C ${goto 250}${color1}Up: ${color green}$uptime
-
 ```
 
 

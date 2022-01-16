@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "16,249 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-04-Ubuntu-^dual-boot-Windows^-Ethernet-Not-Connecting^Detecting.md
 toc:          false
 navigation:   false
@@ -74,7 +74,6 @@ Although there are dozens of things you can try:
 7.5 Broadcom BCM57780
 7.6 Realtek RTL8111/8168B
 7.7 Gigabyte Motherboard with Realtek 8111/8168/8411 8 See also
-
 ```
 
 We'll start with the most likely based on limited information given that the network card works in Windows but not Ubuntu. This is outlined in the next section.
@@ -91,7 +90,6 @@ Right click my computer and choose "Properties"
    --> Advanced tab
     --> Wake-On-Lan After Shutdown
      --> Enable
-
 ```
 
 This may not solve the OP problem because exact details are not given. However there is a high degree of confidence that one of the other solutions on this web page will solve the problem.

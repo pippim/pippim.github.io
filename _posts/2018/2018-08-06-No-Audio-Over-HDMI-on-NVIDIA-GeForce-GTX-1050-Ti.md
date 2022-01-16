@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "7,064 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-06-No-Audio-Over-HDMI-on-NVIDIA-GeForce-GTX-1050-Ti.md
 toc:          false
 navigation:   false
@@ -42,7 +42,6 @@ i7-6700HQ + GTX 970M
 Linux kernel version: 4.13.0-26-generic
 Nvidia driver Version: 384.130
 OS: Ubuntu 16.04.5 LTS
-
 ```
 
 I can confirm that kernel module, posted by Maik Freudenberg [Comment 27], is working fine on my system. Thank you for the fix. The HDMI audio device now works as it should.
@@ -60,7 +59,6 @@ echo "options nvhda load_state=1" | sudo tee /etc/modprobe.d/nvhda.conf
 sudo update-initramfs -u # This updated newest kernel 4.15.0-26
 sudo update-initramfs -u -k `uname -r` # Update booted 4.13.0-36
 reboot
-
 ```
 
 With this fix, I did not notice any problems with power management or system stability. HDMI audio works at system startup, after resume from sleep, after plugging/unplugging HDMI cable.

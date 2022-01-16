@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "7,391 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-21-My-laptop-shuts-down-when-I-close-the-lid-even-though-it^s-set-to-hibernate.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ With `sudo` powers open up `/etc/systemd/logind.conf` and look for the following
 ``` 
 #HandleLidSwitch=suspend
 #HandleLidSwitchDocked=suspend
-
 ```
 
 If they begin with a hash tag (`#`) remove it and set your option to ignore, poweroff, reboot, halt, suspend, hibernate, hybrid-sleep, lock or kexec. More details can be found at [Power Management][1]
@@ -40,7 +39,6 @@ There are many bug reports starting in August 2016 with Linux Suspend / Resume i
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=vendor acpi_osi='!Windows 2013' acpi_osi='!Windows 2012'"
-
 ```
 
 If this doesn't work, by all means check out the other solutions in this bug report. Also check out other bug reports using google search string: "Resume shuts down 16.04"

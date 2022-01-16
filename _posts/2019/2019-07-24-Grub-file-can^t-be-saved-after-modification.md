@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "487 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-Grub-file-can^t-be-saved-after-modification.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ clipboard:    false
 
 ``` 
 sudo -H gedit /etc/default/grub
-
 ```
 
 If you omit `sudo -H` you can view the file but not save any changes.
@@ -32,7 +31,6 @@ After editing the file you need to run:
 
 ``` 
 sudo update-grub
-
 ```
 
 This will compile the changes you made to `/etc/default/grub` and compile them with `grub` functions to create a new `/boot/grub/grub.cfg` which is the actual file parsed at boot time.

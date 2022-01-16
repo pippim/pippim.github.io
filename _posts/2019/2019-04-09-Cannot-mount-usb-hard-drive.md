@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "11,470 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-09-Cannot-mount-usb-hard-drive.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ Firstly, an easier way of mounting is to use:
 
 ``` 
 mount -t auto /dev/sdb /media/usb-drive
-
 ```
 
 This way you are spared the magical incantations of specifying a partition type.

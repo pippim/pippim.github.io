@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "666 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-09-Nvidia-card-on-an-ASUS-ZenBook-Flip-14-sometimes-boots-to-a-purple-screen.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ To do this use:
 
 ``` 
 sudo -H gedit /etc/default/grub
-
 ```
 
 Find the line containing `quiet splash` and make it read `quiet splash dis_ucode_ldr` whilst keeping everything else on the line the same.
@@ -45,7 +44,6 @@ Save the file and type:
 ``` 
 sudo update-grub
 reboot
-
 ```
 
 Hopefully it all works fine now. If this is your situation make sure to subscribe to the bug report.

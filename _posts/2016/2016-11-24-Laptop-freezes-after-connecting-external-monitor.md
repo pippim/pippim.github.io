@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "769 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-24-Laptop-freezes-after-connecting-external-monitor.md
 toc:          false
 navigation:   false
@@ -44,7 +44,6 @@ wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.10/linux-headers-4.8.10-
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.10/linux-image-4.8.10-040810-generic_4.8.10-040810.201611210531_amd64.deb
 sudo dpkg -i *.deb
 sudo reboot
-
 ```
 
 I look forward to feedback and updating this answer as new information comes to light.

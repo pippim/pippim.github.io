@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,061 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-12-Help-deciphering-`ps`-and-`pstree`-with-`cron`-and-`sudo`.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ rick@dell:~$ pstree -p -g | grep display-auto
              |-cron(1376,1376)---cron(1436,1376)---sh(1584,1584)---display-auto-br(1592,1584)---sleep(16989,1584)
 ───────────────────────────────────────────────────────────────────────────────
 rick@dell:~$ 
-
 ```
 
 Killing cron (with pid's 1376 and 1436) is probably a bad idea. However killing bash shell (1584) which is the parent to ***display-auto-brightness*** (1592) and grandparent to ***sleep*** (16989) should kill the child and grandchild. Then two copies of the child process (display-auto-brightness) won't be running at the same time.

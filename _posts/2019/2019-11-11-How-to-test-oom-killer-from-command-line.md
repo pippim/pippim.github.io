@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "8,489 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-11-How-to-test-oom-killer-from-command-line.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ My initial answer took 1/2 hour to execute and has been dropped in this revision
 
 ``` 
 ls -d /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*
-
 ```
 
 I'll accept someone else's answer as a faster way of invoking `oom-killer` from the command line. As a revised answer I'll explain how to get relevant oom-killer details from `journalctl` and what they mean.
@@ -38,7 +37,6 @@ This [more efficient answer][1] by [mjoao][2] to use up RAM:
 
 ``` 
 logger --tag="kernel" "Start for oom-killer"; a=""; for b in {0..99999999}; do a=$b$a$a$a$a$a$a; done
-
 ```
 
 The `logger` command was prepended to give a timestamp in `journalctl` for when the RAM eating process starts.
@@ -63,7 +61,6 @@ Nov 12 12:30:02 alien kernel: [ 4358]  1000  4358  2853387  1773446    5578     
 Nov 12 12:30:02 alien kernel: Out of memory: Kill process 4358 (bash) score 701 or sacrifice child
 Nov 12 12:30:02 alien kernel: Killed process 4358 (bash) total-vm:11413548kB, anon-rss:7093784kB, file-rss:0kB, shmem-rss:0kB
 Nov 12 12:30:03 alien kernel: oom_reaper: reaped process 4358 (bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
-
 ```
 
 The better answer takes 30 seconds to use up RAM which is not too fast (like `tail /dev/zero`) and not too slow (like my original answer).
@@ -114,7 +111,6 @@ PID=$(journalctl "$BootNo" | grep oom_reaper | tail -n1 | cut -d' ' -f9)
 journalctl "$BootNo" | grep "$PID"']' | tail -n1
 # Print summary infomation
 journalctl "$BootNo" | grep oom_reaper -B2 | tail -n3
-
 ```
 
 

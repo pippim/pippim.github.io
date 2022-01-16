@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "7,636 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-06-How-can-I-test-a-shell-script-in-a-^safe-environment^-to-avoid-harm-to-my-computer^.md
 toc:          false
 navigation:   false
@@ -58,7 +58,6 @@ $ cat /tmp/sshellcheck.mrg | grep -i root
 $ cat /tmp/sshellcheck.mrg | grep -i sudo
 
 $ 
-
 ```
 
 - There is no `rm -rf /` command to wipe the whole hard disk partition.
@@ -106,14 +105,12 @@ I took a deeper look into your bash script instructions:
 git clone https://github.com/jgigault/42FileChecker ~/42FileChecker &&
     cd ~/42FileChecker &&
     bash ./42FileChecker.sh
-
 ```
 
 The "safe" method is to only run the first line:
 
 ``` 
 git clone https://github.com/jgigault/42FileChecker ~/42FileChecker
-
 ```
 
 This downloads the scripts but doesn't run them. Next use `nautilus` (file manager) to inspect the directories and files installed. Very quickly you discover there are a collection of bash scripts written by a group of students in France.

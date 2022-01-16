@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "7,983 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-25-How-can-I-^diff^-two-files-with-Nautilus^.md
 toc:          false
 navigation:   false
@@ -101,7 +101,6 @@ rm $workfile
 rm $differences
 
 exit 0
-
 ```
 
 **NOTE:** I developed this Nautilus script a couple weeks ago and have been meaning to post it as a new Q&A but have been pressed for time and was unsure if anyone would really be all that interested in it.

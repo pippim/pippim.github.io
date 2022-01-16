@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,922 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-16-How-to-automate-the-input-of-a-password^-in-a-custom-batch-file^.md
 toc:          false
 navigation:   false
@@ -29,5 +29,4 @@ if ! [[ $(id -u) == 0 ]]; then
     echo You must call this script using sudo. Aborting.
     exit 99
 fi
-
 ```

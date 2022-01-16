@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,543 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-30-How-to-stop-Ubuntu-from-changing-numlock-state-on-boot^.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ xhost +SI:localuser:gdm
 su gdm -s /bin/bash
 gsettings set org.gnome.settings-daemon.peripherals.keyboard numlock-state 'on'
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
-
 ```
 
 For a plethora of even more options:
@@ -59,7 +58,6 @@ on     - turns NumLock on in X ( default )
 off    - turns NumLock off in X
 toggle - toggles the NumLock on and off in X
 status - gets the NumLock status
-
 ```
 
 Next step is to get it running during login screen:
@@ -69,14 +67,12 @@ $ locate 50-unity-greeter.conf
 /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
 
 $ sudo -H gedit /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
-
 ```
 
 ### At bottom of file add:
 
 ``` 
 greeter-setup-script=/usr/bin/numlockx on
-
 ```
 
 Save file and login again.
@@ -92,14 +88,12 @@ Install `numlockx` as show above. Then
 ``` 
 
 $ sudo -H gedit /etc/rc.local
-
 ```
 
 ### At bottom of file add:
 
 ``` 
 /usr/bin/numlockx on
-
 ```
 
 Save file and reboot.

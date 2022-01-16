@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "3,003 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-What-is-the-difference-between-echo-^var-and-echo-^^var^.md
 toc:          false
 navigation:   false
@@ -36,7 +36,6 @@ ls: cannot access 'A': No such file or directory
 
 $ ls "$var"
 File A
-
 ```
 
 The double quotes `"` tells Linux to treat everything in between as a single entity. Without the double quotes everything inside is treated as separate entities delineated by spaces.

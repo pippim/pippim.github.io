@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,535 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-16-Uable-to-print-after-upgrading-Ubuntu-16.04-to-18.04-^HP-MFC-7470DW^.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ I tried [this answer][1] which worked for some:
 ``` 
 sudo rmdir /usr/share/ghostscript/9.25/iccprofiles
 sudo apt-get install --reinstall libgs9-common 
-
 ```
 
 But it didn't work for me with Brother DCP-7065DN printer after fresh [cloning of 16.04][2] and upgrade to 18.04 on October 14, 2018.

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "993 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-06-Toshiba-Satellite-FN-key-animation.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ If you are interested you can press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> 
 
 ``` 
 acpi_listen
-
 ```
 
 Now use your <kbd>Fn</kbd>+<kbd>F3</kbd> to turn brightness up and then <kbd>Fn</kbd>+<kbd>F2</kbd> to turn brightness down. The terminal will look similar to this:
@@ -36,7 +35,6 @@ video/brightnessup BRTUP 00000086 00000000
  PNP0C14:00 000000d0 00000000
 video/brightnessdown BRTDN 00000087 00000000
  PNP0C14:00 000000d0 00000000
-
 ```
 
 By listening to these events you can trigger actions that run scripts can pop a window up on your screen or many other things. For example, I developed event -> action scripts for `lid-close` (to go to sleep) and `lid-open` (to change sound back to TV when waking up).

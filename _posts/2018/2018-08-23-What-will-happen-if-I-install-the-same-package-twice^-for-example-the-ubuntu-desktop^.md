@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,211 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-What-will-happen-if-I-install-the-same-package-twice^-for-example-the-ubuntu-desktop^.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ If the package was just installed it will say:
 
 ``` 
 <Package> is already the newest version (<version number>)
-
 ```
 
 If the package was upgraded since it was last installed/upgraded then it will be upgraded:
@@ -36,5 +35,4 @@ If the package was upgraded since it was last installed/upgraded then it will be
 The following packages will be upgraded:
   <Package>
 1 upgraded, 0 newly installed, ___ to remove and ___ not upgraded
-
 ```

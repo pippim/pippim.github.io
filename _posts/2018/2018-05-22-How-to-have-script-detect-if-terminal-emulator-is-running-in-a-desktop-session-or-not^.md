@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "946 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-22-How-to-have-script-detect-if-terminal-emulator-is-running-in-a-desktop-session-or-not^.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ if [[ $CurrentTERM == "" ]] ; then
     notify-send --urgency=critical "$0 cannot be run from GUI without TERM environment variable."
     exit 1
 fi
-
 ```
 
 The reason for this code was this question: [Desktop shortcut to Bash script crashes and burns][1]
@@ -45,7 +44,6 @@ if [[ $CurrentTERM == "" ]] ; then
 else
     gedit ...
 fi
-
 ```
 
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "15,003 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-24-Can-I-run-Steam-as-its-own-standalone-session^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ Another answer references:
 
 ``` 
 sudo add-apt-repository ppa:thor27-gmail/steam-desktop
-
 ```
 
 But from the author's [Steam Login github page][1] it is stated:
@@ -55,7 +54,6 @@ Exec=/usr/bin/steam -bigpicture
 TryExec=/usr/bin/steam
 Icon=
 Type=Application
-
 ```
 
 ### Steam skins

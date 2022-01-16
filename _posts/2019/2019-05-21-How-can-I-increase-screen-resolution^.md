@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "349 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-21-How-can-I-increase-screen-resolution^.md
 toc:          false
 navigation:   false
@@ -74,7 +74,6 @@ eDP-1-1 connected primary 1920x1080+3840+2160 (normal left inverted right x axis
    320x240       60.05  
    360x202       59.51    59.13  
    320x180       59.84    59.32  
-
 ```
 
 The first step is to get the signals using the `cvt` command:
@@ -84,14 +83,12 @@ $ cvt 1366 768
 
 # 1368x768 59.88 Hz (CVT) hsync: 47.79 kHz; pclk: 85.25 MHz
 Modeline "1368x768_60.00"   85.25  1368 1440 1576 1784  768 771 781 798 -hsync +vsync
-
 ```
 
 The last line you will mostly copy and paste into the next command:
 
 ``` 
 $ xrandr --newmode "1368x768_60.00"   85.25  1368 1440 1576 1784  768 771 781 798 -hsync +vsync
-
 ```
 
 - On my machine it prefers 1368x768 but copy and paste what your machine shows
@@ -100,7 +97,6 @@ Now we need to add the new mode to your monitor:
 
 ``` 
 $ xrandr --addmode eDP-1-1 1368x768_60.00
-
 ```
 
 - Remember your machine uses `VGA-0` instead of my `eDP-1-1`
@@ -109,7 +105,6 @@ Last step is to activate the new `VGA-0`:
 
 ``` 
 $ xrandr --output eDP-1-1 --mode 1368x768_60.00
-
 ```
 
 VOILA!

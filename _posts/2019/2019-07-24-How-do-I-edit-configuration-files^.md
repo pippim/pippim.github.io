@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "7,352 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-How-do-I-edit-configuration-files^.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ $ ll /etc/default/grub
  || +----- Members of the group can only read
  |+------- The owner can write
  +-------- The owner can read
-
 ```
 
 In order for a user (yourself) to edit `/etc/grub/default` you need to use `sudo` powers. So **instead of using**:
@@ -40,7 +39,6 @@ In order for a user (yourself) to edit `/etc/grub/default` you need to use `sudo
 
 ``` bash
 gedit /etc/default/grub
-
 ```
 
 **You must use**:
@@ -49,7 +47,6 @@ gedit /etc/default/grub
 
 ``` bash
 sudo -H gedit /etc/default/grub
-
 ```
 
 At which point you will be prompted for your password.

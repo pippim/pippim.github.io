@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "6,628 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-28-When-I-close-the-lid-of-my-laptop^-the-Wifi-should-not-disconnect-automatically.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ You already edited `logind.conf` once and need to again. Set the line:
 
 ``` 
 HandleLidSwitchDocked=ignore
-
 ```
 
 Then save the file and reboot. Hopefully this solves the problem. If so mark this as solution by clicking check mark, if not post a comment.

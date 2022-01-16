@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,122 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-15-Is-it-possible-to-schedule-`fsck`-command-and-run-it-in-background^.md
 toc:          false
 navigation:   true
@@ -125,7 +125,6 @@ e2fsck 1.42.13 (17-May-2015)
 Warning!  /dev/nvme0n1p6 is mounted.
 Warning: skipping journal recovery because doing a read-only filesystem check.
 New_Ubuntu_16.04: clean, 833786/2953920 files, 8256858/11829504 blocks
-
 ```
 
 As you can see `fsck` is telling us Old Ubuntu 16.04 requires a real `fsck` be run with system mounted in `ro` (read only mode) so fixes can be applied if necessary. However I already know it is broken.

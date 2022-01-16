@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "797 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-26-Is-Ubuntu-Server-required-for-LAMP-server-or-will-anything-break-if-I-install-LAMP-on-Ubuntu-Desktop^.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ I know people will through in opinions on which is better and that is fine but I
 
 ``` 
 sudo apt install lamp-server^
-
 ```
 
 on my laptop.

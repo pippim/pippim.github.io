@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "440 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-18-Installing-programs-on-persistent-live-disk.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ In the copy of the screen are missing the lines preceding:
 Do you want to continue? [Y/n] Y
 Setting up linux-image-5.0.0-36-generic (5.0.0-36.39~18.04.1) ...
 Setting up initramfs-tools (0.130ubuntu3.9) ...
-
 ```
 
 This leads me to believe you entered `sudo apt upgrade`. You can't do this with a persistent USB.
@@ -35,7 +34,6 @@ You can only do:
 ``` 
 sudo apt update
 sudo apt install <package_name>
-
 ```
 
 Where `<package_name>` is not a linux kernel package such as `linux_image` or `linux_header`.
@@ -46,7 +44,6 @@ Additionally make sure automatic upgrades are turned off in systems settings. Fr
 
 ``` 
 apt list --upgradable
-
 ```
 
 Only select those packages with `sudo apt upgrade <package_name>` when they are not related to `initramfs`, `grub`, `linux_image` or `linux_header`. There may be other packages as well that should not be upgraded.

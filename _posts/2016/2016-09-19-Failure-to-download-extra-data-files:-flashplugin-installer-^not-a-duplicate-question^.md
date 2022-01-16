@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "10,483 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-19-Failure-to-download-extra-data-files:-flashplugin-installer-^not-a-duplicate-question^.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ The error message:
 
 ``` 
 Err:1 http://archive.canonical.com/pool/partner/a/adobe-flashplugin/adobe-flashplugin_20160913.1.orig.tar.gz
-
 ```
 
 showed up because Canonical partners was not enabled. I don't remember turning it off but the solution is to turn it on.
@@ -51,7 +50,6 @@ The final solution is:
 sudo apt-get remove flashplugin-installer
 sudo apt-get purge flashplugin-installer
 sudo apt-get install adobe-flashplugin
-
 ```
 
 Thanks again to **Gunnar** for his comments to solve the pesky pop-up message.

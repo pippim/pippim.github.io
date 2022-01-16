@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    3
 views:        "15,066 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-20-Which-is-faster-to-delete-first-line-in-file...-sed-or-tail^.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ In this answer ([How can I remove the first line of a file with sed?][1]) there 
 
 ``` 
 sed '1d' $file >> headerless.txt
-
 ```
 
 ** ----------------  OR ----------------**
 
 ``` 
 tail -n +2 $file >> headerless.txt
-
 ```
 
 Personally I think the `tail` option is cosmetically more pleasing and more readable but probably because I'm sed-challenged.

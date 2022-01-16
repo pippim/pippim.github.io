@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,356 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-23-How-to-execute-script-file-at-startup-without-using-any-commands-like-ln--s-or-any-other-to-be-executed-at-first^.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ First you need to create a directory of scripts you want automatically run at st
 
 ``` 
 sudo mkdir /usr/local/bin/startup-scripts
-
 ```
 
 # Modify rc.local to run all your scripts
@@ -41,8 +40,7 @@ Before the last line that says `exit 0` copy and paste these lines:
 		sudo chmod +x $SCRIPT
 ``` 
     $SCRIPT
-	done
-```
+	done```
 
 
 
@@ -53,7 +51,6 @@ Optionally, for every script in the `startup-scripts` directory, I would put in 
 
 ``` 
 echo "running script xyz within /usr/local/bin/startup-scripts"
-
 ```
 
 as this message will appear in `/var/log/syslog` file and document your system setup.

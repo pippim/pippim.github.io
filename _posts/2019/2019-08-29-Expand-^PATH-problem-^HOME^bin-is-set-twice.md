@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "458 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-29-Expand-^PATH-problem-^HOME^bin-is-set-twice.md
 toc:          false
 navigation:   false
@@ -49,7 +49,6 @@ fi
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-
 ```
 
 It sounds like this is being executed and what you are manually doing is doubling up on the last line in the file.
@@ -64,5 +63,4 @@ You can use grep to find all the files where `$HOME/bin` is referenced:
 
 ``` 
 grep -rnw --exclude-dir={proc,root,run,sys,/tmp,tmpfs,var} '/' -e "$HOME/bin"
-
 ```

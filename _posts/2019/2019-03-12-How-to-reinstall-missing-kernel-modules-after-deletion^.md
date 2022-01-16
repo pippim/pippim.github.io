@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "13,580 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-12-How-to-reinstall-missing-kernel-modules-after-deletion^.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ From: [How to install Linux Kernel headers on Debian or Ubuntu][1]
 
 ``` 
 sudo apt-get install --reinstall linux-headers-$(uname -r)
-
 ```
 
 Then:
 
 ``` 
 sudo apt-get update && sudo apt-get upgrade
-
 ```
 
   [1]: https://www.garron.me/en/go2linux/how-install-linux-kernel-headers-debian-or-ubuntu.html

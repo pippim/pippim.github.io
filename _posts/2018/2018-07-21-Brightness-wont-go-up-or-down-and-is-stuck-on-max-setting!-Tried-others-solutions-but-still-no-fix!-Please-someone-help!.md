@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "817 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-21-Brightness-wont-go-up-or-down-and-is-stuck-on-max-setting!-Tried-others-solutions-but-still-no-fix!-Please-someone-help!.md
 toc:          false
 navigation:   false
@@ -63,7 +63,6 @@ if [[ $# -ne 1 ]]; then
 fi
 
 xrandr --output "$FullMonitor" --brightness "$1"
-
 ```
 
 The script above was written for a three monitor system and addresses the laptop screen. Two other scripts (not listed here) are called "Sony" and "Toshiba" for two external HDMI monitors. The laptop can have Intel driver for i7-6700 HQ HD 530 graphics iGPU, nVidia GTX 970M GPU with different `xrandr` screen names depending on nVidia Proprietary Graphics driver or Nouveau Open Source driver.
@@ -90,7 +89,6 @@ $ cat /sys/class/backlight/intel_backlight/*brightness*
 3000
 3000
 7500
-
 ```
 
 - The first `3000` is the actual brightness
@@ -102,7 +100,6 @@ To attempt to change hardware brightness level use:
 ``` 
 $ echo 2500 | sudo tee /sys/class/backlight/intel_backlight/brightness
 2500
-
 ```
 
 If hardware is supported you will see a change:
@@ -112,6 +109,5 @@ $ cat /sys/class/backlight/intel_backlight/*brightness*
 2500
 2500
 7500
-
 ```
 

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,610 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-05-08-How-can-I-tell-which-of-these-video-devices-is-a-webcam^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ There is a package called `usbutils` which can be an invaluable tool:
 
 ``` 
 sudo apt install usbutils
-
 ```
 
 Then you can query any USB device and get a lot of information:

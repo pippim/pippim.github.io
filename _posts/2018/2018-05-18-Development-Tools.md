@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "53,820 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-18-Development-Tools.md
 toc:          false
 navigation:   false
@@ -43,7 +43,6 @@ Copyright (C) 1988-2014 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
-
 ```
 
 You are definitely correct that `git` is not installed by default however I don't consider it a programming language, more of a library system.

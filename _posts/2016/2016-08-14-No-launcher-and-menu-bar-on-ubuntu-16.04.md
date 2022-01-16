@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "65,181 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-14-No-launcher-and-menu-bar-on-ubuntu-16.04.md
 toc:          false
 navigation:   false
@@ -26,5 +26,4 @@ sudo apt-get update
 sudo apt-get install --reinstall ubuntu-desktop
 sudo apt-get install unity
 sudo reboot
-
 ```

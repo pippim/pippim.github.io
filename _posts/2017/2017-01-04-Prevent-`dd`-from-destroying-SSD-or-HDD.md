@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,588 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-04-Prevent-`dd`-from-destroying-SSD-or-HDD.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Open the terminal using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>. Then call `
 
 ``` 
 gksu gedit /usr/local/bin/dd
-
 ```
 
 and copy and paste these commands:
@@ -97,7 +96,6 @@ fi
 /bin/dd "$@"
     
 exit 0
-
 ```
 
 Save the file and exit `gedit`.
@@ -106,7 +104,6 @@ Lastly mark the new `dd` as executable with:
 
 ``` bash
 sudo chmod +x /usr/local/bin/dd
-
 ```
 
 ### What it looks like
@@ -143,7 +140,6 @@ sr0   rom   1024M DVD+-RW GT80N
 100+0 records in
 100+0 records out
 51200 bytes (51 kB, 50 KiB) copied, 0.00339331 s, 15.1 MB/s
-
 ```
 
 ### Notes

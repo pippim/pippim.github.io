@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "61,656 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-07-Difference-between-Legacy-BIOS-and-UEFI.md
 toc:          false
 navigation:   false
@@ -68,7 +68,6 @@ nvme0n1                                          477G Samsung SSD 960 PRO 512GB
 ├─nvme0n1p4 ntfs   NVMe_Win10       /mnt/c     414.9G 
 ├─nvme0n1p2 vfat                    /boot/efi     99M 
 └─nvme0n1p7 ntfs   Shared_WSL+Linux /mnt/e         9G 
-
 ```
 
 There are many files in `/boot/efi` you can see using `ls` command. To see the size of all files within the 99MB partition use:
@@ -76,7 +75,6 @@ There are many files in `/boot/efi` you can see using `ls` command. To see the s
 ``` 
 $ du -hs /boot/efi
 35M	/boot/efi
-
 ```
 
 ## `gdisk` Information
@@ -112,7 +110,6 @@ Number  Start (sector)    End (sector)  Size       Code  Name
    3         1288192      1928626175   919.0 GiB   0700  Basic data partition
    4      1928626176      1929547775   450.0 MiB   2700  
    5      1929547776      1953523711   11.4 GiB    2700  
-
 ```
 
 I will reboot into Windows 10 and see if Linux `gdisk` had any ramifications of repairing the Windows hard drive `D:` which is `/dev/sda` in my Linux setup. I'm not concerned because it's the original Hard Drive I haven't used yet but you should be careful if it has data on it. I'll update this section after rebooting and testing.

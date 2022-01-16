@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "174 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-20-How-to-mute-volume-on-every-boot-in-Kubuntu-18.04^.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ From the question you want to use this command:
 
 ``` 
 `/usr/bin/amixer -c 0 sset Master,0 0% > /dev/null`
-
 ```
 
 From the answer you want to add the command in:
 
 ``` 
 /etc/rc.local
-
 ```
 
 Insert the command after the first line and before the last line:
@@ -43,7 +41,6 @@ Insert the command after the first line and before the last line:
 `/usr/bin/amixer -c 0 sset Master,0 0% > /dev/null`
 
 exit 0       # <---- This is the last line
-
 ```
 
 
@@ -55,7 +52,6 @@ Check the file `/etc/modprobe.d/alsa-base.conf` and look for the line:
 
 ``` 
 options snd-hda-intel model=auto enable=yes
-
 ```
 
 If it exists either delete it or put `#` in the first character position.

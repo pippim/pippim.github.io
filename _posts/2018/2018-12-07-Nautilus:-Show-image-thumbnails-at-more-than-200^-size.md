@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "3,780 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Nautilus:-Show-image-thumbnails-at-more-than-200^-size.md
 toc:          false
 navigation:   false
@@ -45,7 +45,6 @@ gsettings set org.gnome.nautilus.icon-view thumbnail-size "$1"
 nautilus -q
 
 exit 0
-
 ```
 
 ## Installation and Usage

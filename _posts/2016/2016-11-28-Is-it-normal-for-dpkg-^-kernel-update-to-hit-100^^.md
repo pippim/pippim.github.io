@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "438 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-28-Is-it-normal-for-dpkg-^-kernel-update-to-hit-100^^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ I ran `sudo dpkg -i *.deb` today and my heart skipped a beat when Conky showed a
 
 ``` 
 run-parts: executing /etc/kernel/header_postinst.d/dkms 4.8.11-040811-generic /boot/vmlinuz-4.8.11-040811-generic
-
 ```
 
 Is this normal behavior?

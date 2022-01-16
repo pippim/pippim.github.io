@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,690 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-How-to-prevent-the-keyboard-backlight-from-turning-on-when-the-laptop-is-woken-from-sleep^.md
 toc:          false
 navigation:   false
@@ -39,7 +39,6 @@ ExecStart=/bin/echo 0 > "/sys/devices/platform/thinkpad_acpi/leds/tpacpi::kbd_ba
 WantedBy=suspend.target
 WantedBy=hibernate.target
 WantedBy=hybrid-sleep.target
-
 ```
 
 I don't have a Thinkpad and my Dell backlight keyboard has different directory structures. I'm unable to test this for your environment. You might have to manually tweak the code if the directory names above are off.

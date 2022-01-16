@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    3
 views:        "6,318 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-01-How-to-interpret-time-^real^^-^user^-and-^sys^.md
 toc:          false
 navigation:   false
@@ -41,7 +41,6 @@ time for (( i=0; i<$FilesArrCnt; i=i+$FaElementCnt )); do
     FilesNdxArr["${FilesArr[$i]}"]=$i
     AllTagSizes=$(( $AllTagSizes + ${FilesArr[$(( $i + $FaColFileSizes ))]} ))
 done
-
 ```
 
 ## That reports this:
@@ -58,7 +57,6 @@ Time to build FilesNdxArr from FilesArr 390 elements:
 real	0m0.002s
 user	0m0.002s
 sys  	0m0.000s
-
 ```
 
 ## Why is `sys` time reporting zero?

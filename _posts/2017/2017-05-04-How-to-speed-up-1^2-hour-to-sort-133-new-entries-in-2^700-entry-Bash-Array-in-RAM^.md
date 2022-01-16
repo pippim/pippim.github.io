@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "47 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-04-How-to-speed-up-1^2-hour-to-sort-133-new-entries-in-2^700-entry-Bash-Array-in-RAM^.md
 toc:          false
 navigation:   false
@@ -110,7 +110,6 @@ echo "100" > $YadNamedPipe &    # Signal close
 rm -f $YadNamedPipe             # Remove FIFO named pipe for IPC
 
 } ### ExternalSortDirsArr ()
-
 ```
 
 Here are the benchmark time displays. Notice how 1/2 hour has dropped to 9 seconds:
@@ -147,5 +146,4 @@ Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
 real    0m9.667s
 user    0m1.828s
 sys 0m0.952s
-
 ```

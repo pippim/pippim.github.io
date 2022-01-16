@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "51 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-04-Ethernet-^cable-unpluged^-when-waking-up-laptop-from-sleep.md
 toc:          false
 navigation:   false
@@ -49,14 +49,12 @@ case "${1}/${2}" in
    resume|thaw|post*)
       restart_ethernet;;
 esac
-
 ```
 
 Place the script in the directory `/lib/systemd/system-sleep` with the name `r8169-reset`. Mark the script executable with the command
 
 ``` 
 sudo chmod a+x /lib/systemd/system-sleep/r8169-reset
-
 ```
 
 Reboot and script will run automatically with every resume after suspend.

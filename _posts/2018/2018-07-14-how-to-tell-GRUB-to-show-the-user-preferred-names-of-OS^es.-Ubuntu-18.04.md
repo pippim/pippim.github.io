@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,401 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-14-how-to-tell-GRUB-to-show-the-user-preferred-names-of-OS^es.-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -47,7 +47,6 @@ sed -i "s|Windows Boot Manager (on /dev/sda1)|Windows 10 original|g" /boot/grub/
 sed -i "s|Ubuntu 18.04 LTS (18.04) (on /dev/nvme0n1p6)|Ubuntu 18.04|g" /boot/grub/grub.cfg
 
 exit 0
-
 ```
 
 - Change comment `PATH:` to where you put script, probably `/usr/local/bin`
@@ -66,7 +65,6 @@ I tested this on my system first but, if in doubt, backup first using:
 
 ``` 
 sudo cp /boot/grub/grub.cfg /boot/grub/grub.sav
-
 ```
 
 

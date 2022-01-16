@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,767 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-How-to-find-`.desktop`-file-location-for-a-particular-application.md
 toc:          false
 navigation:   false
@@ -36,7 +36,6 @@ $ locate *image*desktop
 /usr/share/applications/gnome-disk-image-mounter.desktop
 /usr/share/applications/gnome-disk-image-writer.desktop
 /usr/share/applications/screensavers/tessellimage.desktop
-
 ```
 
 `locate` can search millions of files in a few seconds where it would take `find` many many minutes:
@@ -51,7 +50,6 @@ $ time locate *image*desktop
 real	0m0.705s
 user	0m0.693s
 sys	    0m0.012s
-
 ```
 
 Notice how `grep` was eliminated from original method and `find` command was ammended.
@@ -60,5 +58,4 @@ The disadvantage of `locate` is the database is updated daily. If you just insta
 
 ``` 
 sudo updatedb
-
 ```

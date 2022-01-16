@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "303 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-02-vnstat---combine-WiFi-and-Ethernet-usage-together.md
 toc:          false
 navigation:   false
@@ -94,7 +94,6 @@ Init () {
 
 Init "$@"
 Tally
-
 ```
 
 ## Automatic vs Manual interface names
@@ -106,7 +105,6 @@ Notes this section of code:
 # aInterfaces=( "enp59s0" "wlp60s0" )
 # Use automatic discovery if you are unsure of names or don't want to look up
 Interfaces=( $(lshw -c network 2>/dev/null | grep name: | cut -d':' -f2) )
-
 ```
 
 The fourth line automatically discovers the interface names (in my case `enp59s0` and `wlp60s0`) and builds the array of interfaces (`aInterfaces`). If you prefer to manually specify the names in your script then place a comment (`#`) at the beginning of the line and uncomment the second line by removing the `#` line prefix.
@@ -119,7 +117,6 @@ Because the new `vnall` script automatically creates parameters as needed, the c
 ${color}${goto 5}Today ${goto 100}Yesterday ${goto 225}Week ${goto 325}Month ${color green}
 # vnstatd updates database every five minutes
 ${execi 300 vnall "today"} ${goto 110}${execi 300 vnall "yesterday"} ${goto 220}${execi 300 vnall "week"} ${goto 315}${execi 300 vnall "month"}
-
 ```
 
 ## Conky Image

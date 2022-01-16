@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "470,404 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-02-how-do-you-copy-a-directory-and-its-contents-to-a-new-location-under-a-new-directory-name^.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ du /boot_backup -h
 2.3M	/boot_backup/grub/fonts
 7.2M	/boot_backup/grub
 565M	/boot_backup
-
 ```
 
 For the `cp` command the current directory is identified as `.` which is the `/boot` directory we changed to. The `-r` option makes it recursive to include all sub-directories.

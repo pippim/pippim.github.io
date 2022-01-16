@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,535 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-15-Can-I-connect-two-external-monitors-on-one-USB-C-port.md
 toc:          false
 navigation:   false

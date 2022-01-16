@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,342 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-22-Laptop-with-external-HDMI-monitor:-screen-off^on-loop.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ As per this answer: [How do I prevent my display from turning off when screen is
 
 ``` 
 gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
-
 ```
 
 Your screen will still lock after inactivity but the password prompt will stay up and the screen won't turn off.

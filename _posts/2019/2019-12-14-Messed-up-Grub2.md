@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "116 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-14-Messed-up-Grub2.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Boot with a live USB, select "Try before installing", open a terminal with <kbd>
 sudo add-apt-repository ppa:yannubuntu/boot-repair
 sudo apt-get update
 sudo apt-get install -y boot-repair && boot-repair
-
 ```
 
 Then type `boot-repair` and a menu will appear:

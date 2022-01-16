@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "6,241 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-10-Can-^sudo-apt-get-remove-^write^^-destroy-my-Ubuntu^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Before doing an `sudo apt-get`, it is wise to do a simulation:
 ``` 
 $ apt-get remove [write] -s | wc -l
 65280
-
 ```
 
 There are nearly **65,280** packages that qualify for removal ***if*** installed on your system. `[write]` is a search pattern for  [Regex matching][1] causing every package to be selected if it contains:
@@ -54,7 +53,6 @@ Package 'libnet-patricial-perl' is not installed, so not removed
 Package 'pe' is not installed, so not removed
 
    (.... Plus 65,269 more packages ....)
-
 ```
 
   [1]: https://en.wikipedia.org/wiki/Regular_expression

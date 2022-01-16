@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,121 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-How-to-quickly-find-the-deepest-subdirectory.md
 toc:          false
 navigation:   false
@@ -35,7 +35,6 @@ $ time locate "/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*"
 real    0m1.731s
 user    0m1.653s
 sys     0m0.072s
-
 ```
 
 Stuff in enough `/*/*` until no results are displayed, then subtract one `/*` to get the deepest subdirectory level. The files in the deepest levels will also be display.
@@ -50,14 +49,12 @@ The database used by locate is updated daily by cron. If you installed an applic
 
 ``` 
 sudo updatedb
-
 ```
 
 In Ubuntu 19.10 the locate command is no longer installed by default. Hopefully it returns in 20.04 but in the meantime you need to install it with:
 
 ``` 
 sudo apt install mlocate
-
 ```
 
 To gain an appreciation of `locate` speed look at what it has indexed for instant retrieval:
@@ -70,8 +67,7 @@ Database /var/lib/mlocate/mlocate.db:
     2,548,775 files
     213,049,136 bytes in file names
     92,287,412 bytes used to store database
-## 
-```
+## ```
 
 
 
@@ -106,7 +102,6 @@ Common path followed by unique sub-paths (deepest subdir 25 levels):
 real    0m6.123s
 user    0m6.041s
 sys     0m0.080s
-
 ```
 
 - The first time you run the script you don't know how deep the subdirectories go. Therefore the default of 50 levels will takes 43 seconds to run.
@@ -117,7 +112,7 @@ sys     0m0.080s
 
 {% include copyHeader.html %}
 ``` 
-#!/bin/bash
+# !/bin/bash
 
 # NAME: deepdir
 # PATH: $HOME/askubuntu/
@@ -168,6 +163,5 @@ for p in "${Arr[@]}" ; do
 done
 
 exit 0
-
 ```
 

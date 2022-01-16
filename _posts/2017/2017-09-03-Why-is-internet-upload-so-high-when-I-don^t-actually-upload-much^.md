@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,529 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-03-Why-is-internet-upload-so-high-when-I-don^t-actually-upload-much^.md
 toc:          true
 navigation:   true
@@ -154,7 +154,6 @@ Monitoring eth0...    (press CTRL-C to stop)
           min                  0 p/s  |           0 p/s
 --------------------------------------+------------------
   time                  5.33 minutes
-
 ```
 
 
@@ -188,7 +187,6 @@ Monitoring eth0...    (press CTRL-C to stop)
           min                  0 p/s  |           0 p/s
 --------------------------------------+------------------
   time                  5.57 minutes
-
 ```
 
 
@@ -226,7 +224,6 @@ Monitoring eth0...    (press CTRL-C to stop)
           min                  0 p/s  |           0 p/s
 --------------------------------------+------------------
   time                 26.33 minutes
-
 ```
 
 As can be expected at 1080p the total download is 718.79 MiB. What is shocking is the 1.13 GiB uploaded! This gives a tx/rx ratio of **157%**. This leads me to conclude my test results from 2 days ago and those screen snapshots had my usual 10 Chrome tabs and 3 Firefox tabs open.
@@ -266,7 +263,6 @@ Monitoring eth0...    (press CTRL-C to stop)
           min                  0 p/s  |           0 p/s
 --------------------------------------+------------------
   time                 16.63 minutes
-
 ```
 
 Next a test with 7 tabs open doing nothing for 1/2 hour on the machine:
@@ -296,7 +292,6 @@ Monitoring eth0...    (press CTRL-C to stop)
           min                  0 p/s  |           0 p/s
 --------------------------------------+------------------
   time                 30.70 minutes
-
 ```
 
 So we can see even when nothing is happening on your machine it's normal for Chrome to transmit packets but the size is small (529 KiB or so).
@@ -316,7 +311,6 @@ ${downspeedgraph eth0 25,190 000000 ff0000} ${alignr}${upspeedgraph eth0
 25,190 000000 00ff00}$color
 Total: ${color green}${totaldown eth0} $color${alignr}Total: ${color green}${totalup eth0}
 ${color orange}${voffset 2}${hr 1}
-
 ```
 
 
@@ -362,7 +356,6 @@ Monitoring eth0...    (press CTRL-C to stop)
           min                  0 p/s  |           0 p/s
 --------------------------------------+------------------
   time                 27.50 minutes
-
 ```
 
 474.04 MiB were downloaded and 19.49 MiB were uploaded giving the average tx/rx ratio of **4%**. This test was done using Chrome browser but I expect the Firefox browser results would be the same. Therefore it's safe to assume the massive data uploads are limited to Flashplayer and not HTML5.
@@ -406,7 +399,6 @@ In the last couple of days the problem has gone away on it's own. Likely a Flash
           min                  1 p/s  |           1 p/s
 --------------------------------------+------------------
   time                 12.37 minutes
-
 ```
 
 **Note:** Last month I got a new laptop where the problem persisted. However in the last couple of days the problem went away on it's own either from a Chrome update *Version 63.0.3239.84 (Official Build) (64-bit)* and/or because *Kernel 4.14.4* is being used.
@@ -446,7 +438,6 @@ In the last couple of days I had problems using Chrome so started using Firefox 
           min                147 p/s  |          94 p/s
 --------------------------------------+------------------
   time                 13.93 minutes
-
 ```
 
 So.... full circle :(

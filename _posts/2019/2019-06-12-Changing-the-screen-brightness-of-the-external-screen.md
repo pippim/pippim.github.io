@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "34,160 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-Changing-the-screen-brightness-of-the-external-screen.md
 toc:          false
 navigation:   false
@@ -66,7 +66,6 @@ xrandr --output "$MON" --brightness "$CurrBright"   # Set new brightness
 # Display current brightness
 printf "Monitor $MON "
 echo $( xrandr --verbose --current | grep ^"$MON" -A5 | tail -n1 )
-
 ```
 
 - Change `MON="DP-1-1"` to your monitor name, ie `MON="eDP-1-1"`

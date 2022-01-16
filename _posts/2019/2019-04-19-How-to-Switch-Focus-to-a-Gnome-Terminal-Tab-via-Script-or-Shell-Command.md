@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,708 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-19-How-to-Switch-Focus-to-a-Gnome-Terminal-Tab-via-Script-or-Shell-Command.md
 toc:          false
 navigation:   false
@@ -23,13 +23,11 @@ In order to send the signal from Bash Shell use `xdotool`:
 
 ``` 
 sudo apt install xdotool
-
 ```
 
 In your script issue this command:
 
 ``` 
 xdotool key Control+Page_Up
-
 ```
 

@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "54,400 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-28-Bash-script-to-convert-from-HTML-entities-to-characters.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ This answer is based on: [Short way to escape HTML in Bash?][1] which works fine
 
 ``` 
 sed 's/&nbsp;/ /g; s/&amp;/\&/g; s/&lt;/\</g; s/&gt;/\>/g; s/&quot;/\"/g; s/#&#39;/\'"'"'/g; s/&ldquo;/\"/g; s/&rdquo;/\"/g;'
-
 ```
 
 **Edit 1:** April 7, 2017 - Added left double quote and right double quote conversion. This is part of bash script that web-scrapes SE answers and compares them to local code files here: [Ask Ubuntu -

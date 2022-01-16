@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "144 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-ndiswrapper-windows-drivers-uninstall-issue.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ Uninstalling (for the most part) is simply reversing the installation method. Fo
 
 ``` 
 sudo apt-get install ndisgtk
-
 ```
 
 Then to uninstall it you would use:
 
 ``` 
 sudo apt-get remove ndisgtk
-
 ```
 
 There are additional details you might want to read:

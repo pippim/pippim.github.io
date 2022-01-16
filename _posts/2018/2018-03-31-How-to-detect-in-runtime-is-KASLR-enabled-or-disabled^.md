@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "8,854 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-to-detect-in-runtime-is-KASLR-enabled-or-disabled^.md
 toc:          false
 navigation:   false
@@ -24,5 +24,4 @@ To answer the question:
 ``` 
 $ cat /proc/cmdline
 BOOT_IMAGE=/boot/vmlinuz-4.14.27-041427-generic root=UUID=f3f8e7bc-b337-4194-88b8-3a513f6be55b ro quiet splash loglevel=0 vga=current udev.log-priority=3 fastboot kaslr acpiphp.disable=1 crashkernel=384M-2G:128M,2G-:256M vt.handoff=7
-
 ```

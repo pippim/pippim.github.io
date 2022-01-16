@@ -12,7 +12,7 @@ votes:        "86 "
 favorites:    
 views:        "43,378 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Systemd-logs-^`journalctl`^-are-too-large-and-slow.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ To limit log files to a specific size `systemd` provides a `vacuum` feature to "
  --vacuum-size=BYTES   Reduce disk usage below specified size
  --vacuum-files=INT    Leave only the specified number of journal files
  --vacuum-time=TIME    Remove journal files older than specified time
-
 ```
 
 
@@ -39,7 +38,6 @@ Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/syste
 Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/user-65534@00056515dbfe731d-b7bab56cb4efcbf6.journal~ (8.0M).
 Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/user-1000@1bbb77599cf14c65a18af51646751696-000000000000064f-00056444d58433e1.journal (112.0M).
 Vacuuming done, freed 176.0M of archived journals on disk.
-
 ```
 
 # Disk Space saved
@@ -49,7 +47,6 @@ The `journalctl` size is reduced substantially:
 ``` 
 $ journalctl --disk-usage
 Archived and active journals take up 136.0M on disk.
-
 ```
 
 Size has dropped from 312 MB to 136 MB a savings of 176 MB and 64 MB more than expected. This is probably a one time anomaly due to an extraordinary large single log file. I'll revise this answer after a month if new info arises.
@@ -88,7 +85,6 @@ $ journalctl --list-boots
  -2 9b317bb8403344ca84dd2f288bc90410 Tue 2018-03-06 17:02:15 MST—Tue 2018-03-06 
  -1 dcb126be665a4531aae4312af7e51a34 Tue 2018-03-06 17:09:00 MST—Tue 2018-03-06 
   0 6a105af650d5442a9b03004165e58adf Tue 2018-03-06 17:42:45 MST—Wed 2018-03-07 
-
 ```
 
 # Performance improved
@@ -115,14 +111,12 @@ Another option as mentioned in comments is to set `SystemMaxUse=50M` in `/etc/sy
 /etc/systemd/journald.conf.d/*.conf
 /run/systemd/journald.conf.d/*.conf
 /usr/lib/systemd/journald.conf.d/*.conf
-
 ```
 
 There are actually [many options][3] you can use for similar goals:
 
 ``` 
 SystemMaxUse=, SystemKeepFree=, SystemMaxFileSize=, SystemMaxFiles=, RuntimeMaxUse=, RuntimeKeepFree=, RuntimeMaxFileSize=, RuntimeMaxFiles=
-
 ```
 
 

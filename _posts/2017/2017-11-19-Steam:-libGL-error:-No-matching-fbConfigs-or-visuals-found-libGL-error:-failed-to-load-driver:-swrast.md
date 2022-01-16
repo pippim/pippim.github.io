@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "157,442 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-19-Steam:-libGL-error:-No-matching-fbConfigs-or-visuals-found-libGL-error:-failed-to-load-driver:-swrast.md
 toc:          false
 navigation:   false
@@ -59,7 +59,6 @@ Linux version 4.4.0-43-Microsoft (Microsoft@Microsoft.com) (gcc version 5.4.0 (G
 Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
 ───────────────────────────────────────────────────────────────────────────────
 rick@alien:/mnt/e/etc$
-
 ```
 
 I verified the change is persistent, ie close the WSL terminal window and open a new window.

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "2,784 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-02-GUI-application-for-controlling-Samsung-Smart-TV-connected-to-the-same-LAN-of-ubuntu-desktop.md
 toc:          false
 navigation:   false
@@ -33,14 +33,12 @@ Using this command:
 
 ``` 
 yad --title "Remote Control" --text "Samsung Smart TV" --width 250 --height 400 --form --columns 2 --field "Power:FBTN"  --field "Vol +:FBTN" --field "Vol -:FBTN" --field "Input:FBTN"  --field "Chan +:FBTN" --field "Chan -:FBTN"
-
 ```
 
 Additional code is required to link each button to the Samsung Control program:
 
 ``` 
 samsungctl --host <host> [options] <key> [key ...]
-
 ```
 
 If I had a Samsung Smart TV I would enjoy writing the full script. However my Smart TVs are Sony and Toshiba. I will try to write a remote control GUI script soon for those TVs.
@@ -59,7 +57,6 @@ The one-liner code is a little longer now:
 
 ``` 
 yad --title "Remote Control" --text "Samsung Smart TV" --width 250 --height 400 --form --columns 2 --field "Power:FBTN" 'bash -c "echo Power"'  --field "Vol +:FBTN" 'bash -c "echo Volume Up"' --field "Vol -":FBTN 'bash -c "echo Volume Down"' --field "Input:FBTN" "bash -c 'echo "Input"'"  --field "Chan +:FBTN" 'echo "Channel up"' --field "Chan -:FBTN" 'bash -c "echo Channel Down"'
-
 ```
 
 As mentioned in comments if you have a Samsung TV newer than 2016 you will also need to download the [`websocket-client`][4]

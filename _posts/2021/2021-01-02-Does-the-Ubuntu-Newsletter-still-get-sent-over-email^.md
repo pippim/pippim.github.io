@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "781 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-02-Does-the-Ubuntu-Newsletter-still-get-sent-over-email^.md
 toc:          false
 navigation:   false
@@ -83,7 +83,6 @@ $ ll /etc/cron.weekly/ubuntu*
 
 ``` 
 sudo chmod a+w /etc/cron.weekly/ubuntu-newsletter-issue
-
 ```
 
 I had to use this on my system because the script doesn't give you write permissions to manually change the last Newsletter Issue number if and when you need to.
@@ -98,7 +97,6 @@ Each week `cron` will email you with the shell script's echo output:
 
 ``` 
 sudo echo 666 > /etc/cron.weekly/ubuntu-newsletter-issue
-
 ```
 
 In this case, the next time `cron` weekly runs, it will email you issue number 667.

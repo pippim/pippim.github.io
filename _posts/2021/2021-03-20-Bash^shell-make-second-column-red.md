@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "38 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-03-20-Bash^shell-make-second-column-red.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ Using [bac0n's](https://askubuntu.com/users/986805/bac0n) comment I replaced:
 
 ``` 
 paste <(ls "$@") <(cat "$@") | column -s $'\t' -t | sed "s#$prefix##g"
-
 ```
 
 with:
@@ -31,7 +30,6 @@ with:
 ``` 
 paste <(ls "$@") <(printf '\e[1;91m%s\e[0m\n' $(cat "$@")) | \
     column -s $'\t' -t | sed "s#$prefix##g"
-
 ```
 
 Now it displays as desired:

@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "97,183 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-19-New-installation-of-Windows-10-and-Ubuntu-from-Windows-Store-error.md
 toc:          false
 navigation:   false
@@ -27,6 +27,5 @@ After *rebooting* and launching Ubuntu again; I got the following messages:
 "Installing, this may take a few minutes..." [healthy coffee break; YMMV]
 Installation successful!
 Please create a default UNIX user...
-and completed the *second phase* to install/initialize Ubuntu in WSL (Windows Subsystem for Linux).
-```
+and completed the *second phase* to install/initialize Ubuntu in WSL (Windows Subsystem for Linux).```
 

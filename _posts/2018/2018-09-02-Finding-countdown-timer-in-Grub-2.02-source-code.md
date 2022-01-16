@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "937 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-02-Finding-countdown-timer-in-Grub-2.02-source-code.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ The code to change in:
 
 ``` 
 /grub-2.02/grub-core/normal/menu.c
-
 ```
 
 Line 546:
@@ -56,21 +55,18 @@ has_second_elapsed (grub_uint64_t *saved_time)
   else
     return 0;
 }
-
 ```
 
 Change the line:
 
 ``` 
 if (current_time - *saved_time >= 1000)
-
 ```
 
 to:
 
 ``` 
 if (current_time - *saved_time >= 100)
-
 ```
 
 ## **Voila!** one line of code to change. Plus two comment lines added for good measure.
@@ -83,7 +79,6 @@ Before following instructions on Grub's [website][1]:
 ``` 
 sudo apt install bison
 sudo apt install flex
-
 ```
 
 Then follow grub's website instructions:
@@ -91,14 +86,12 @@ Then follow grub's website instructions:
 ``` 
 cd grub-2.02
 ./configure
-
 ```
 
 Run next command on Grub's website:
 
 ``` 
 make install
-
 ```
 
 Files are created in `/usr/local/bin` (surprise!!!) along with `.../grub-2.02` directory which is to be expected.
@@ -137,7 +130,6 @@ Build-time grub-mkfont: No (need freetype2 library)
 Without unifont (no build-time grub-mkfont)
 Without liblzma (no support for XZ-compressed mips images) (need lzma library)
 *******************************************************
-
 ```
 
 However, after `make install` there is an error:
@@ -156,7 +148,6 @@ make[1]: *** [install-recursive] Error 1
 make[1]: Leaving directory '/home/rick/src/grub-2.02'
 Makefile:11927: recipe for target 'install' failed
 make: *** [install] Error 2
-
 ```
 
 I filed a bug report with Grub folks (July 2018) but haven't heard a thing back. The next step for EFI system is to download the source code on fresh install using Ubuntu's repositories instead of Grub's website instructions.

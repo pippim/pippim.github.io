@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "11,924 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-05-Sleep-^-Wakeup-Schedule-|-Ubuntu-16.04.3-LTS.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Before a full implementation of 1am sleep and 6am wake, you can do a simple 10 s
 
 ``` 
 sudo rtcwake -m mem -s 10 && firefox
-
 ```
 
 This test will ensure suspending to RAM actually works. Upon resuming `firefox` is automatically started up.
@@ -34,7 +33,6 @@ Rather than messing around with UTC, have your `rtcwake` command called from `cr
 
 ``` 
 0 1 * * *  sh /usr/sbin/rtcwake -m mem -s 18000 >> /home/Me/SuspendResume.log 2>&1
-
 ```
 
 There is no need for `sudo` prefix because `cron` runs with sudo privileges.

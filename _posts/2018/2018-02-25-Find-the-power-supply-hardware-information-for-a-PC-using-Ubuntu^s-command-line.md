@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "60,717 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-25-Find-the-power-supply-hardware-information-for-a-PC-using-Ubuntu^s-command-line.md
 toc:          false
 navigation:   false
@@ -45,7 +45,6 @@ The UPS information shows as following:
 		Load......................... 72 Watt(22 %)
 		Test Result.................. Unknown
 		Last Power Event............. None
-
 ```
 
 The current load is 72 Watts and the maximum load is 330 watts.
@@ -58,7 +57,6 @@ After downloading install it using:
 
 ``` 
 sudo dpkg -i powerpanel_132_amd64.deb
-
 ```
 
 To learn more about using `pwrstat` use:
@@ -68,7 +66,6 @@ To learn more about using `pwrstat` use:
 ``` bash
 man pwrstat   # to learn more about the terminal interface
 man pwrstatd  # to learn about background daemon with alarms, auto shutdown, etc.
-
 ```
 
 # What to do when there is no software

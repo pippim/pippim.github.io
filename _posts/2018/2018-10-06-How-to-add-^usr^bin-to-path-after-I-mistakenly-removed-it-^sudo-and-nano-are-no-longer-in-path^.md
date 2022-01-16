@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,833 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-06-How-to-add-^usr^bin-to-path-after-I-mistakenly-removed-it-^sudo-and-nano-are-no-longer-in-path^.md
 toc:          false
 navigation:   false
@@ -23,5 +23,4 @@ You can prefix the commands with the path:
 
 ``` 
 /usr/bin/sudo /bin/nano ~/.bashrc
-
 ```

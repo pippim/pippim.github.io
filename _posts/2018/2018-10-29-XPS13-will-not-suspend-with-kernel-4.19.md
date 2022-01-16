@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "349 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-29-XPS13-will-not-suspend-with-kernel-4.19.md
 toc:          false
 navigation:   false
@@ -63,12 +63,10 @@ case $1/$2 in
     rm $TMPLIST
         ;;
 esac
-
 ```
 
 Then mark as executable using:
 
 ``` 
 sudo chmod a+x /lib/systemd/system-sleep/custom-xhci_hcd
-
 ```

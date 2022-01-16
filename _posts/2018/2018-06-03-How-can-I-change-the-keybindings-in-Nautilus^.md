@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,593 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-03-How-can-I-change-the-keybindings-in-Nautilus^.md
 toc:          false
 navigation:   false
@@ -40,7 +40,6 @@ $ gsettings get org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy
 '<Control>Page_Down'
 $ gsettings get org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ prev-tab
 '<Control>Page_Up'
-
 ```
 
 Then to change them use:
@@ -48,7 +47,6 @@ Then to change them use:
 ``` 
 $ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/next-tab '<Primary>Tab'
 $ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/prev-tab '<Primary><Shift>Tab'
-
 ```
 
 This successfully changes behavior switching between `gnome-terminal` tabs but has no effect in Nautilus or even YAD.

@@ -12,7 +12,7 @@ votes:        "28 "
 favorites:    
 views:        "55,051 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04^-restarts^.md
 toc:          false
 navigation:   true
@@ -41,7 +41,6 @@ Most of us won't do a new install so to enable multiple `journalctl` boot logs i
 $ sudo mkdir -p /var/log/journal
 $ sudo systemd-tmpfiles --create --prefix /var/log/journal
 Cannot set file attribute for '/var/log/journal', value=0x00800000, mask=0x00800000: Operation not supported
-
 ```
 
 According to this [github report][2] the warning message *"Cannot set file attribute"* can be ignored.
@@ -71,7 +70,6 @@ In a nutshell remove the comment and revise the line to:
 
 ``` 
 Storage=persistent
-
 ```
 
 
@@ -100,7 +98,6 @@ $ journalctl --list-boots
  -2 c0d2c0141dd840cbab75d3c2254f8781 Wed 2018-02-14 22:59:13 MST—Sat 2018-02-17 22:46:14 M
  -1 aafb2573a6374e019a7165cb8eee74a0 Sun 2018-02-18 06:02:03 MST—Mon 2018-02-19 04:16:36 M
   0 8462f1969c6f4d61973e7e245014b846 Mon 2018-02-19 04:16:53 MST—Tue 2018-02-20 18:51:42 M
-
 ```
 
 
@@ -132,7 +129,6 @@ Feb 28 20:03:15 alien kernel: x86/fpu: Enabled xstate features 0x1f, context siz
 Feb 28 20:03:15 alien kernel: e820: BIOS-provided physical RAM map:
 Feb 28 20:03:15 alien kernel: BIOS-e820: [mem 0x0000000000000000-0x0000000000057fff] usabl
 lines 1-19
-
 ```
 
 Pay close attention to the parameter `-b-1` it is different than other references you may see. From [man page][5]:
@@ -151,7 +147,6 @@ Then every once in a while, with `cron` or [timers][6] you may clean [old logs][
 journalctl --vacuum-time=2d  # keep last two days or
 
 journalctl --vacuum-size=300M  # keep last 300MB
-
 ```
 
 

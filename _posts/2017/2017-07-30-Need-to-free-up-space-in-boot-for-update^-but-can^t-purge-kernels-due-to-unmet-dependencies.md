@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,086 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-30-Need-to-free-up-space-in-boot-for-update^-but-can^t-purge-kernels-due-to-unmet-dependencies.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ $ sudo apt-get purge linux-headers-4.4.33-040433* linux-headers-4.4.33-040433-ge
 The following packages will be REMOVED:
   linux-headers-4.4.33-040433* linux-headers-4.4.33-040433-generic*
   linux-image-4.4.33-040433-generic*
-
 ```
 
 To avoid this manual work try my [bash script][1] which automates the process. Yes it may be a shameless plug but I spent many hours in development and fine-tuning so would like to see as many use it as possible.
@@ -43,7 +42,6 @@ Ubuntu does remove kernels automatically that it installed automatically when yo
 
 ``` 
 sudo apt-get autoremove
-
 ```
 
 If you manually installed a kernel using a technique like this: [How do I update kernel to the latest mainline version?][2] then you have to manually remove the kernel as well.

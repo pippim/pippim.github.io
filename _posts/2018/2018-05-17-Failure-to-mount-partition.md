@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "3,399 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Failure-to-mount-partition.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ Try this:
 ``` 
 sudo mkdir /mnt/stuff
 sudo mount -t auto /dev/sda1 /mnt/stuff
-
 ```
 
 Then do what you want to with the "stuff" and when finished use:
@@ -32,7 +31,6 @@ Then do what you want to with the "stuff" and when finished use:
 ``` 
 sudo umount -l /mnt/stuff
 sudo rm -d /mnt/stuff
-
 ```
 
 This is from an interactive script I wrote last week: [Unable to read files between two distros]({% post_url /2018/2018-05-11-Unable-to-read-files-between-two-distros %})

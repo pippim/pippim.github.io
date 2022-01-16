@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "114,126 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-11-Where-is-^journalctl^-data-stored^.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ In addition to Muru's answer on where data is stored there are other relevant an
 ``` 
 $ sudo mkdir -p /var/log/journal
 $ sudo systemd-tmpfiles --create --prefix /var/log/journal
-
 ```
 
 ### [How to keep `journalctl` file size down][2]
@@ -37,7 +36,6 @@ Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/syste
 Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/user-65534@00056515dbfe731d-b7bab56cb4efcbf6.journal~ (8.0M).
 Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/user-1000@1bbb77599cf14c65a18af51646751696-000000000000064f-00056444d58433e1.journal (112.0M).
 Vacuuming done, freed 176.0M of archived journals on disk.
-
 ```
 
   [1]: {% post_url /2018/2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04^-restarts^ %}

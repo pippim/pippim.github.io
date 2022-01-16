@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "478 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Big-Number-Calculator-^human-readable-format^.md
 toc:          false
 navigation:   false
@@ -36,7 +36,6 @@ self.newtext=self.newtext.replace('G','000000000')
 self.newtext=self.newtext.replace('T','000000000000')
 self.newtext=self.newtext.replace('P','000000000000000')
 self.newtext=self.newtext.replace('E','000000000000000000')
-
 ```
 
 Insert these lines near the bottom:
@@ -49,7 +48,6 @@ Insert these lines near the bottom:
   Button(master,text="G",width=3,command=lambda:self.action('G')).grid(row=5, column=3)
   Button(master,text="M",width=3,command=lambda:self.action('M')).grid(row=5, column=4)
   Button(master,text="K",width=3,command=lambda:self.action('K')).grid(row=5, column=5)
-
 ```
 
 Insert these lines in the middle:
@@ -65,7 +63,6 @@ Insert these lines in the middle:
         size /=  power
         n += 1
     return size, Dic_powerN[n]
-
 ```
 
 There are a few other cosmetic changes for larger font on HDPI monitor (1920x1080 pixels)
@@ -230,7 +227,6 @@ default_font = tkFont.nametofont("TkDefaultFont")
 default_font.configure(size=11)
 obj=calc(root) #object instantiated
 root.mainloop()
-
 ```
 
 Many thanks to the author (on first link above) for contributing this code!
@@ -242,7 +238,6 @@ You need `python-tk` (**Tkinter**) installed to use Python GUI Calculator:
 ``` 
 sudo apt update
 sudo apt install python-tk
-
 ```
 
 

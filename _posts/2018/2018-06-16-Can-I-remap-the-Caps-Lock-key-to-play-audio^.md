@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "1,504 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-16-Can-I-remap-the-Caps-Lock-key-to-play-audio^.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ If you need Gnome `XF86AudioPlay` support you need `xdotool` (not needed for **V
 
 ``` 
 sudo apt install xdotool
-
 ```
 
 Now here's the tricky part. Every time you press the <kbd>Caps LocK</kbd> key to toggle the music between Play and Pause, capital letters also toggle off and on.
@@ -43,7 +42,6 @@ Use this method to turn off Caps Lock toggling while still keeping key active:
 
 ``` 
 setxkbmap -option caps:none
-
 ```
 
 
@@ -72,7 +70,6 @@ Follow the steps for Gnome in the previous section but for the *command* use thi
 
 ``` 
 qdbus org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-
 ```
 
 **VLC** won't recognize media keys: [How to make the keyboard media keys to work with VLC globally?](How to make the keyboard media keys to work with VLC globally?)y even when built into the keyboard. Therefor the custom keyboard shortcut to XF86AudioPlay is useless with `xdotool`.
@@ -97,7 +94,6 @@ An easy way would be to add the command to your `$HOME/.profile` file (you can c
 
 ``` 
 setxkbmap -option caps:none
-
 ```
 
 That should make it run every time you log in.

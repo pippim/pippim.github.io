@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,209 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-19-How-to-cycle-through-grub-background-images-every-boot.md
 toc:          false
 navigation:   false
@@ -56,7 +56,6 @@ sed -i "s|$CURR_FILE|$NEXT_FILE|g" /etc/default/grub
 cp /boot/grub/grub.cfg /boot/grub/grub.cfg~
 # Short cut so we don't have to run `sudo update-grub`
 sed -i "s|$CURR_FILE|$NEXT_FILE|g" /boot/grub/grub.cfg
-
 ```
 
 ## Credits
@@ -73,7 +72,6 @@ Create the file `/etc/cron.d/cycle-grub-background` containing:
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 @reboot   root    /usr/local/bin/cron-reboot-cycle-grub-background
-
 ```
 
 **NOTE:** create file using `sudo` powers. No need to mark it as executable but doing so won't hurt either.
@@ -138,7 +136,6 @@ sed -i "s|$CURR_FILE|$NEXT_FILE|g" /boot/grub/grub.cfg
 
 # Now next reboot will have new background image
 exit 0
-
 ```
 
 ## A few notes

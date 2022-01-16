@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "38,282 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-04-Is-systemctl-daemon-reload-equal-systemctl-restart-service^.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ Manager Lifecycle Commands
        listens on behalf of user configuration will stay accessible.
 
        This command should not be confused with the reload command.
-
 ```
 
 There is a distinction between `reload` and `restart`
@@ -52,6 +51,5 @@ Unit Commands
    restart PATTERN...
        Restart one or more units specified on the command line. If the units are not
        running yet, they will be started.
-
 ```
 

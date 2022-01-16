@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,441 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-27-How-to-delete-CPU-stats-from-cpufreq^.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ drwxr-xr-x  3 root root    0 May 14 15:58 ..
 -r--r--r--  1 root root 4096 May 14 16:06 time_in_state
 -r--r--r--  1 root root 4096 May 14 16:06 total_trans
 -r--r--r--  1 root root 4096 May 14 16:06 trans_table
-
 ```
 
 
@@ -44,8 +43,7 @@ This should reset all the stats:
 
 ``` 
 echo '1' | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/stats/reset
-## 
-```
+## ```
 
 
 
@@ -62,7 +60,6 @@ Allows setting
 -f  specific frequency (userspace governor must be set first) and
 -g  governor on a
 -c  specific CPU.
-
 ```
 
 `cpufreq-set` needs root privileges in order to work. 
@@ -71,14 +68,12 @@ Look for this in your setup:
 
 ``` 
 sudo cpufreq-set -u 950MGhz
-
 ```
 
 and remove it. Or add this to your setup:
 
 ``` 
 sudo cpufreq-set -u 1.20Ghz
-
 ```
 
 
@@ -97,7 +92,6 @@ This may happen if you have laptop-mode-tools installed. laptop-mode configures 
 BATT_CPU_GOVERNOR=powersave
 LM_AC_CPU_GOVERNOR=conservative
 NOLM_AC_CPU_GOVERNOR=ondemand
-
 ```
 
 
@@ -113,21 +107,18 @@ To set the maximum clock frequency (clock_freq is a clock frequency with units: 
 
 ``` 
 sudo cpupower frequency-set -u clock_freq
-
 ```
 
 To set the minimum clock frequency:
 
 ``` 
 sudo cpupower frequency-set -d clock_freq
-
 ```
 
 To set the CPU to run at a specified frequency:
 
 ``` 
 sudo cpupower frequency-set -f clock_freq
-
 ```
 
 

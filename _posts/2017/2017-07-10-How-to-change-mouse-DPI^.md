@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "27,435 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-10-How-to-change-mouse-DPI^.md
 toc:          false
 navigation:   false
@@ -54,7 +54,6 @@ rick@dell:~$ xinput --list --short
     ↳ Laptop_Integrated_Webcam_HD               id=13   [slave  keyboard (3)]
     ↳ Dell WMI hotkeys                          id=16   [slave  keyboard (3)]
     ↳ AT Translated Set 2 keyboard              id=14   [slave  keyboard (3)]
-
 ```
 
 From the list we see the mouse is named "**Logitech Performance MX**".
@@ -89,14 +88,12 @@ Device 'Logitech Performance MX':
     Evdev Wheel Emulation Timeout (287):    200
     Evdev Wheel Emulation Button (288): 4
     Evdev Drag Lock Buttons (289):  0
-
 ```
 
 We need to multiply the `constant deceleration` above by 5 (recommended for gaming mice) using:
 
 ``` 
 xinput --set-prop "Logitech Performance MX" "Device Accel Constant Deceleration" 5
-
 ```
 
 Again `5` is recommended. On my platform (1600 DPI mouse) I used `2` (double slow) and had to increase the Ubuntu Mouse Pointer Speed slider bar from 1/3 to about 7/8.
@@ -106,7 +103,6 @@ If the above doesn't work, other recommended settings for gaming mice are:
 ``` 
 xinput --set-prop "Logitech Performance MX" "Device Accel Velocity Scaling" 1
 xinput --set-prop "Logitech Performance MX" "Device Accel Profile" -1
-
 ```
 
 **NOTE:** Replace "Logitech Performance MX" above with the mouse name your `xinput` reports.

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "324 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-18-Zenity-progress:-no-window.md
 toc:          false
 navigation:   false
@@ -28,7 +28,6 @@ d1="$(zenity  --file-selection --title="Bulk Move    Choose starting directory" 
 [[ "$?" != 0 ]] && exit
 d2="$(zenity  --file-selection --title="Bulk Move    Choose destination directory"  --directory)"
 [[ "$?" != 0 ]] && exit
-
 ```
 
 This gives double the amount of abort checking with 1 less line of code.
@@ -39,7 +38,6 @@ To test the progress bar on any system use this:
 $ for i in ./* ; do echo $i ; sleep .1 ;  done | zenity --pulsate --title "Processing " --text "${filename} " --pulsate --auto-close --auto-kill
 
 --pulsate is not supported for this dialogue
-
 ```
 
 Ah there is an error message! `--progress` is missing to tell `zenity` a progress bar is desired. So the working script would be:
@@ -64,7 +62,6 @@ for i in "$d1"/* ; do
 done | zenity --progress --pulsate --title "Processing " \
               --text "ffmpeg - convert files" \
               --pulsate --auto-close --auto-kill
-
 ```
 
 

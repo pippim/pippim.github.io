@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    
 views:        "19,191 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-17-nvidia-backlight-brightness-problem.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Last month, 2 years after problem was reported, OP discovered LightDM (Ubuntu Un
 
 ``` 
 video.use_native_backlight=1
-
 ```
 
 See [this answer][1] for more.
@@ -46,7 +45,6 @@ Sometimes, ACPI does not work well due to different motherboard implementations 
 acpi_backlight=video
 acpi_backlight=vendor
 acpi_backlight=native
-
 ```
 
 If you find that changing the `acpi_video0` backlight does not actually change the brightness, you may need to use `acpi_backlight=none`.
@@ -89,7 +87,6 @@ xbacklight -set "$(luminance)"
 inotifywait -me modify --format '' "$path"/actual_brightness | while read; do
     xbacklight -set "$(luminance)"
 done
-
 ```
 
 There is a lot more in the link above but these steps are a good place to start.

@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "3,035 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-07-How-to-remove-gnome-settings-from-ubuntu-20.04-with-unity-desktop^.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ After you've install **Unity Desktop** and, logged into it, use:
 ``` 
 sudo apt remove ubuntu-gnome-desktop
 sudo apt remove gnome-shell
-
 ```
 
 This works for for Ubuntu **16.04** to **20.04** and even **20.10** (Groovy). Source:
@@ -58,7 +57,6 @@ Tell you to simply use:
 
 ``` 
 sudo apt remove gnome-shell
-
 ```
 
 The article doesn't mention `ubuntu-gnome-desktop` needing to be removed. This article includes additional tips on setting up **Unity Desktop**.

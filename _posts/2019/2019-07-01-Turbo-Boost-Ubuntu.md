@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "267 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Turbo-Boost-Ubuntu.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ To disable turbo boost (for Intel anyway) use this command:
 ``` 
 $ echo "1" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
 1
-
 ```
 
 

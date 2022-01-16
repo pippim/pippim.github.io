@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "32,628 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-28-How-can-I-install-`mpich`-library^.md
 toc:          false
 navigation:   false
@@ -55,7 +55,6 @@ The following packages will be upgraded:
 Need to get 41.0 MB of archives.
 After this operation, 39.0 MB of additional disk space will be used.
 Do you want to continue? [Y/n] 
-
 ```
 
 At this point click `y` to install the package. 

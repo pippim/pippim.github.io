@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "7,470 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-15-Default-Ubuntu-Desktop-with-TightVnc-and-Windows-Linux-Subsystem.md
 toc:          false
 navigation:   false
@@ -28,15 +28,13 @@ The important thing is to install it accepting the defaults and then (for me) to
 ``` 
 PATH="/mnt/e/bin:/mnt/e/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:"
 
-to this:
-```
+to this:```
 
 
 ``` 
 PATH="/mnt/e/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export LIBGL_ALWAYS_INDIRECT=Yes
 export DISPLAY=localhost:0.0
-
 ```
 
 - Adding `/mnt/e/bin:` at beginning of path is only important for shared scripts stored on NTFS partition that both Ubuntu natively runs and WSL Bash runs.

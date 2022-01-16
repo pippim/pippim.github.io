@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    1
 views:        "323 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-05-dconf-database-how-to-remove-duplicate-^-triplicates^.md
 toc:          false
 navigation:   false
@@ -34,8 +34,7 @@ $ gsettings list-recursively | grep print-wrap-mode
 org.gnome.gedit.preferences.print print-wrap-mode 'word'
 org.gnome.gedit.preferences.print print-wrap-mode 'word'
 org.gnome.gedit.preferences.print print-wrap-mode 'word'
-## 
-```
+## ```
 
 
 
@@ -50,7 +49,6 @@ idle-dim=false
 lid-close-battery-action='nothing'
 critical-battery-action='shutdown'
 lid-close-ac-action='nothing'
-
 ```
 
 Running `dconf dump` of single entries to file and import same file using `dconf load` doesn't get rid of duplicate entries:
@@ -67,8 +65,7 @@ $ dconf load /org/gnome/settings-daemon/plugins/power/ < dconf-lid-battery.txt
 $ gsettings list-recursively | grep lid-close-battery
 org.gnome.settings-daemon.plugins.power lid-close-battery-action 'nothing'
 org.gnome.settings-daemon.plugins.power lid-close-battery-action 'nothing'
-## 
-```
+## ```
 
 
 
@@ -83,7 +80,6 @@ Based on bug reports it could be these three areas:
 ``` 
 $ gsettings get org.freedesktop.ibus.general dconf-preserve-name-prefixes
 ['/desktop/ibus/engine/pinyin', '/desktop/ibus/engine/bopomofo', '/desktop/ibus/engine/hangul']
-
 ```
 
 

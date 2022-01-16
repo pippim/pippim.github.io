@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "959 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-cpufreq-gnome-extension-keeps-reverting-to-powersave.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ In your `/etc/init.d/cpufrequtils` file change:
 
 ``` 
 GOVERNOR="ondemand"
-
 ```
 
 to:
 
 ``` 
 GOVERNOR="performance"
-
 ```
 
 Leave the rest of the line as is. Save and reboot.
@@ -51,7 +49,6 @@ To view available speed governors use this command:
 ``` 
 $ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors 
 performance powersave
-
 ```
 
 If you do have more than one governor you can check what is currently in use with this command:
@@ -59,7 +56,6 @@ If you do have more than one governor you can check what is currently in use wit
 ``` 
 $ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 powersave
-
 ```
 
 To change your processor to **performance** mode use:
@@ -67,7 +63,6 @@ To change your processor to **performance** mode use:
 ``` 
 $ echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 performance
-
 ```
 
 You will then notice CPU% utilization drop by about 5% but also notice speed will increase from about 1000 MHz to 3000 MHz and temperatures will spike by ~10 degree, depending on your processor:

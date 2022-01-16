@@ -12,7 +12,7 @@ votes:        "19 "
 favorites:    
 views:        "21,225 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-11-How-can-I-install-TLP-in-Ubuntu-18.04^.md
 toc:          false
 navigation:   false
@@ -23,21 +23,18 @@ You are reading old instructions off the internet. `tlp` is included in Ubuntu's
 
 ``` 
 sudo apt install tlp
-
 ```
 
 If you want to utilize the Radio Wizard also use:
 
 ``` 
 sudo apt install tlp-rdw
-
 ```
 
 Thinkpad users can install optional packages for battery threshold levels:
 
 ``` 
 sudo apt-get install tp-smapi-dkms acpi-call-dkms
-
 ```
 
 Source: [Welcome to TLP!][1]

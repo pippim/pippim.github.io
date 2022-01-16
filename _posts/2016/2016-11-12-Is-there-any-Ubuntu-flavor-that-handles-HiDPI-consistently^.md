@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "29,450 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-12-Is-there-any-Ubuntu-flavor-that-handles-HiDPI-consistently^.md
 toc:          false
 navigation:   false
@@ -45,7 +45,6 @@ $ xrandr --listmonitors
 Monitors: 2
  0: +*LVDS1 1920/382x1080/215+0+1080  LVDS1
  1: +HDMI1 1920/1107x1080/623+0+0  HDMI1
-
 ```
 
 Notice the screen size 382x215 millimeters for the 17" laptop display (LVDS1) and 1107x623 millimeters for the 50" TV. This plays an important role in the new DPI scaling I'm benefiting from, but I don't have the experience to explain it academically.

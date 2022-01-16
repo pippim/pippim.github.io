@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "199 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-22-Is-there-a-known-cron-job-or-process-in-16.04-that-occurs-every-30-or-60-minutes^.md
 toc:          false
 navigation:   false
@@ -25,14 +25,12 @@ clipboard:    false
 $ ps -eo 'tty,pid,comm' | grep ^? | grep cron
 ?          841 cron
 ?          896 cron
-
 ```
 
 For a complete list of all 264 on my system I use:
 
 ``` 
 ps -eo 'tty,pid,comm' | grep ^?
-
 ```
 
 

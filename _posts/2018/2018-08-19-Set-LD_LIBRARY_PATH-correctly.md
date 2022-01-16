@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "11,097 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-Set-LD_LIBRARY_PATH-correctly.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ This [Stack Exchange Q&A][1] has various ways of setting `LD_LIBRARY_PATH` the t
 
 ``` 
 sudo -H gedit /etc/ld.so.conf.d/randomLibs.conf
-
 ```
 
 inside the file you are supposed to write the complete path to the directory that contains all the libraries that you wish to add to the system, for example
 
 ``` 
 /home/linux/myLocalLibs
-
 ```
 
 remember to add only the path to the dir, not the full path for the file, all the libs inside that path will be automatically indexed.

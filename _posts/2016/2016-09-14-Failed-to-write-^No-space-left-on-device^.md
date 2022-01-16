@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "31,195 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-14-Failed-to-write-^No-space-left-on-device^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ The problem is:
 
 ``` 
 /dev/sda1                  236M  226M     0 100% /boot
-
 ```
 
 The package installer is working on `/boot/vmlinuz-3.13.0-91-generic` and there is no space available.

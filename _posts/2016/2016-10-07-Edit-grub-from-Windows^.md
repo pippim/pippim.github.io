@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "27,882 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-07-Edit-grub-from-Windows^.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ In summary edit `/etc/default/grub`, comment out one line and insert two lines b
 #GRUB_DEFAULT=0 # Rather than first menu option, we'll default to last  OS.
 GRUB_DEFAULT=saved
 GRUB_SAVEDEFAULT=true
-
 ```
 
 Then save the changes and run `sudo update-grub`.

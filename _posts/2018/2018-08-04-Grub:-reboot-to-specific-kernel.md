@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "13,357 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-04-Grub:-reboot-to-specific-kernel.md
 toc:          false
 navigation:   false
@@ -34,7 +34,6 @@ If you wanted to reboot into Kernel `4.4.0-131` you would use:
 
 ``` 
 sudo grub-reboot "1>6"
-
 ```
 
 

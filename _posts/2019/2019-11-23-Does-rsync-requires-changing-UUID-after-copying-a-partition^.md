@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,331 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-23-Does-rsync-requires-changing-UUID-after-copying-a-partition^.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ From this script: [Bash script to backup/clone Ubuntu to another partition]({% p
 rsync -haxAX --stats --delete --info=progress2 --info=name0 --inplace  \
       /* "$TargetMnt"                                                   \
       --exclude={/dev/*,/proc/*,/sys/*,/tmp/*,/run/*,/mnt/*,/media/*,/lost+found}
-
 ```
 
 Notice the many directories that you **do not** want to copy specified with the `--exclude` directive. These directories are either recreated at boot time (virtual file system) or are pointers to other partitions (like `/mnt` and `/media`). You might also want to exclude the Trash folder from copying too.
@@ -42,7 +41,6 @@ After `rsync` completes you need to change the aforementioned files like this:
 sudo sed -i "s/$SourceUUID/$TargetUUID/g" "$TargetMnt"/etc/fstab
 sudo sed -i "s/$SourceUUID/$TargetUUID/g" "$TargetMnt"/boot/grub/grub.cfg
 sudo sed -i "s/quiet splash/nosplash/g" "$TargetMnt"/boot/grub/grub.cfg
-
 ```
 
 Where:
@@ -56,5 +54,4 @@ Finally to add a GRUB menu option pointing to your new cloned Ubuntu use:
 
 ``` 
 sudo update grub
-
 ```

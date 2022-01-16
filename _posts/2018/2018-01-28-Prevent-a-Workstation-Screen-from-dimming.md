@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "491 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-28-Prevent-a-Workstation-Screen-from-dimming.md
 toc:          false
 navigation:   false
@@ -27,14 +27,12 @@ OP requests a CLI (Command Line Interface) methodology.
 
 ``` 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout <time_in_seconds>
-
 ```
 
 ## For AC timeout:
 
 ``` 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout <time_in_seconds>
-
 ```
 
 So for both Battery and A/C set the time to 0 (never).
@@ -43,5 +41,4 @@ So for both Battery and A/C set the time to 0 (never).
 
 ``` 
 gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
-
 ```

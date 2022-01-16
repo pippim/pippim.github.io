@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,660 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-07-Use-Intel-RST-while-dual-booting-Ubuntu^.md
 toc:          false
 navigation:   false
@@ -31,14 +31,12 @@ By default error messages are hidden for most users during `grub` boot and a "pu
 
 ``` 
 gksu gedit /etc/default/grub
-
 ```
 
 Look for the line containing:
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-
 ```
 
 There may be other options on this line which you should not touch. Remove the options "quiet splash" in order to see error messages during boot up. Leave the double quotes (") at the beginning and ending of the parameter list.
@@ -47,7 +45,6 @@ Save the file, exit and then type:
 
 ``` 
 sudo update-grub
-
 ```
 
 **NOTE:** When using Intel RST you must first decelerate the Windows drive before typing `update-grub` or `update-initramfs` when grub is installed on the same drive as the accelerated Windows.

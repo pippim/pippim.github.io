@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "399,937 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-to-measure-GPU-usage^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ I like to use `conky` as a real-time monitor for both CPU and GPU. Installation 
 
 ``` 
 sudo apt install conky
-
 ```
 
 ## Intel i7-6700HQ iGPU HD 530
@@ -65,7 +64,6 @@ ${color2}${voffset 5}${execpi .001 (nvidia-smi --query-gpu=gpu_name --format=csv
 ${color1}${voffset 5}Ver: ${color green}${execpi .001 (nvidia-smi --query-gpu=driver_version --format=csv,noheader)} ${color1} P-State: ${color green}${execpi .001 (nvidia-smi --query-gpu=pstate --format=csv,noheader)} ${alignr}${color1}BIOS: ${color green}${execpi .001 (nvidia-smi --query-gpu=vbios_version --format=csv,noheader)}
 ${color1}${voffset 5}GPU:${color green}${execpi .001 (nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader)} ${color1}Ram:${color green}${execpi .001 (nvidia-smi --query-gpu=utilization.memory --format=csv,noheader)} ${color1}Pwr:${color green}${execpi .001 (nvidia-smi --query-gpu=power.draw --format=csv,noheader)} ${alignr}${color1}Freq: ${color green}${execpi .001 (nvidia-smi --query-gpu=clocks.mem --format=csv,noheader)}
 ${color orange}${hr 1}${endif}
-
 ```
 
 Different versions of the full code listing can be found in these answers:

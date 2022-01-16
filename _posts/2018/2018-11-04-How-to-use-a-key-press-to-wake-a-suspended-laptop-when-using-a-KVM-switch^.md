@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "4,902 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-How-to-use-a-key-press-to-wake-a-suspended-laptop-when-using-a-KVM-switch^.md
 toc:          false
 navigation:   true
@@ -29,7 +29,6 @@ Find your device ID:
 
 ``` 
 $ lsusb
-
 ```
 
 >Bus 002 Device 002: ID 8087:8001 Intel Corp.  
@@ -48,7 +47,6 @@ Grep /sys/bus/usb to find the port your device is plugged into:
 
 ``` 
 $ grep 5168 /sys/bus/usb/devices/*/idProduct  
-
 ```
 
 >/sys/bus/usb/devices/3-13/idProduct:5168  
@@ -59,7 +57,6 @@ Confirm the port is correct:
 
 ``` 
 $lsusb -t
-
 ```
 
 >/:  Bus 04.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/6p, 5000M  
@@ -70,8 +67,7 @@ $lsusb -t
 >/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=ehci-pci/2p, 480M  
 ``` 
 |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/8p, 480M  
->/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=ehci-pci/2p, 480M  
-```
+>/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=ehci-pci/2p, 480M  ```
   
 >    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/6p, 480M  
 
@@ -82,7 +78,6 @@ Check if wakeup is enabled:
 
 ``` 
 $ cat /sys/bus/usb/devices/3-13/power/wakeup  
-
 ```
 
 >disabled  
@@ -92,7 +87,6 @@ Enable wakeup on port:
 
 ``` 
 $ sudo sh -c 'echo "enabled" > /sys/bus/usb/devices/3-13/power/wakeup'
-
 ```
 
 
@@ -100,7 +94,6 @@ Check if wakeup enabled:
 
 ``` 
 $ cat /sys/bus/usb/devices/3-13/power/wakeup  
-
 ```
 
 >enabled  
@@ -112,15 +105,17 @@ Make this change persistent across reboots:
 
 ``` 
 $ sudo nano /etc/rc.local
-
 ```
 
 Add the following lines after the comments and before 'exit 0'  
 
 ``` 
+
+<a id="hdr1"></a>
+<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+
 # Enable Wake on IR for USB bus 3 port 13.  
 echo enabled > /sys/bus/usb/devices/3-13/power/wakeup
-
 ```
 
 Now happily wake your PC from your USB device.
@@ -141,10 +136,6 @@ One problem with this approach is that if the USB port the IR device is plugged 
 ----------
 
 
-
-<a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
-
 # Original Answer Below
 
 This question has three answers that may work for you: [Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro)](Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro))
@@ -159,8 +150,7 @@ hit in terminal:
 
 ``` 
 grep . /sys/bus/usb/devices/*/power/wakeup
-The result, for me, was to find out that all usb were disabled.
-```
+The result, for me, was to find out that all usb were disabled.```
 
 So now, type:
 
@@ -168,8 +158,7 @@ So now, type:
 
 ``` 
 sudo su
-we have now root privillages.
-```
+we have now root privillages.```
 
 
 2.I have 8 usb ports (**you do that for as many usb ports you have**) ,so: 
@@ -183,7 +172,6 @@ echo enabled > /sys/bus/usb/devices/usb5/power/wakeup
 echo enabled > /sys/bus/usb/devices/usb6/power/wakeup
 echo enabled > /sys/bus/usb/devices/usb7/power/wakeup
 echo enabled > /sys/bus/usb/devices/usb8/power/wakeup
-
 ```
 
 Go ahead and test it. Now you can wake up from any wireless or wired usb keyboard and mouse.
@@ -197,7 +185,6 @@ Next step:
 
 ``` 
 sudo nano /etc/rc.local
-
 ```
 
 and we paste everything from step 2. in there (before the exit 0 of course).
@@ -209,10 +196,6 @@ I hope it works for all of you. This guide was made after testing all other poss
 
 ----------
 
-
-
-<a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
 
 # Answer 2 (7 upvotes)
 
@@ -227,7 +210,6 @@ Open a terminal and do :
 
 ``` 
 lsusb
-
 ```
 
 At your keyboard device id information the 4 first digits are the vendor id and the 4 next digits are the product id (see screenshot)
@@ -237,7 +219,6 @@ Next do:
 
 ``` 
 sudo nano /etc/udev/rules.d/10-wakeup.rules
-
 ```
 
 Where "wakeup" enter your desired name of the script. Number 10 is the priority in case you have many other udev rules, the lower the number the 'rule' will be executed before the others.
@@ -246,7 +227,6 @@ Copy paste this and replace the vendor id and product id with your own wireless 
 
 ``` 
 ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="062a", ATTRS{idProduct}=="4101" RUN+="/bin/sh -c 'echo enabled > /sys/bus/usb/devices/usb8/power/wakeup'"
-
 ```
 
 ***usb8** for me is my wireless keyboard (you can also see that in the screenshot (Bus 008)), replace it with your own.
@@ -256,10 +236,6 @@ ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="062a", ATTRS{idProduct}=="410
 
 ----------
 
-
-
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
 
 # Answer 3
 
@@ -272,13 +248,16 @@ I put the following in my /etc/rc.local file and it finds my logitech receiver e
 ``` 
 KB="$(dmesg | grep "Logitech K270 as" | grep -o -P "usb.{0,5}" | egrep -o ".{0,3}$" | tail -1)"
 echo enabled > /sys/bus/usb/devices/${KB}/power/wakeup
-
 ```
 
 This works on boot, but doesn't seem to run on wake from suspend, so I had to put a script file in /lib/systemd/system-sleep/.  Create it, set it as globally executable and give it a name that starts with a double digit number between 00 and 99.  My script is as follows, again substite ***your*** keyboard/mouse verbage from dmesg:
 
 ``` 
-#!/bin/sh
+
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+
+# !/bin/sh
 
 # Action script to enable wake after suspend by keyboard or mouse
 
@@ -293,7 +272,6 @@ if [ $1 = pre ]
     KB="$(dmesg | grep "Logitech K270 as" | grep -o -P "usb.{0,5}" | egrep -o ".{0,3}$" | tail -1)"
     echo enabled > /sys/bus/usb/devices/${KB}/power/wakeup
 fi
-
 ```
 
 
@@ -306,6 +284,6 @@ For some reason I can't explain, the 'post' sleep *if* statement only works ever
 
 
 
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a></div>
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a></div>
 

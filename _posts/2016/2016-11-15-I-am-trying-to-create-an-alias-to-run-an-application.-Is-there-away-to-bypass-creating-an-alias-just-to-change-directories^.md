@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "85 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-15-I-am-trying-to-create-an-alias-to-run-an-application.-Is-there-away-to-bypass-creating-an-alias-just-to-change-directories^.md
 toc:          false
 navigation:   false
@@ -25,21 +25,18 @@ Even if it is not in your PATH, you don't need to change to a program's / script
 
 ``` 
 /usr/local/bin/packettracer
-
 ```
 
 Therefore your alias can simply be:
 
 ``` 
 alias pt='/usr/local/bin/packettracer'
-
 ```
 
 or even
 
 ``` 
 alias pt='packettracer'
-
 ```
 
 Before setting an alias, check that the command you want to use doesn't already exist using the `type` command. Hopefully you will see that it is not in use:
@@ -47,7 +44,6 @@ Before setting an alias, check that the command you want to use doesn't already 
 ``` 
 $ type pt
 bash: type: pt: not found
-
 ```
 
 Once you have a suitable alias, to make is permanent you can add it to the end of your `~/.bashrc` file (use your favourite text editor; for example, open a terminal and type `nano .bashrc` add the alias, save and exit, and the alias will be available as soon as you open a new shell).

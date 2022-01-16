@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,480 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-17-Issues-with-SSD-:-rising-CRC-errors-^-freezing^-sometimes-read-only.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ $ sudo fstrim --verbose --all
 /mnt/c: 16 EiB (18446744073709551615 bytes) trimmed
 /mnt/e: 16 EiB (18446744073709551615 bytes) trimmed
 /: 23.4 GiB (25132920832 bytes) trimmed
-
 ```
 
 In my case the results for Windows 10 partitions `/mnt/c` and `/mnt/e` were out of this world. So I checked the files and no harm was done to the data.
@@ -72,7 +71,6 @@ As a compromise between the negative answer (return it) and the positive answer 
 
 ``` 
 sudo tune2fs -c 1 /dev/sdX
-
 ```
 
 *Note: replace `X` with your drive letter, ie `a`, `b`, etc.*.

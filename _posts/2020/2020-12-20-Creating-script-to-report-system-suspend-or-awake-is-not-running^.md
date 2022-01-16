@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "115 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-20-Creating-script-to-report-system-suspend-or-awake-is-not-running^.md
 toc:          false
 navigation:   false
@@ -23,28 +23,24 @@ Copy your script to:
 
 ``` 
 /lib/systemd/system-sleep/sleep_mode
-
 ```
 
 You will need to use `sudo` powers. After copying flag it as executable:
 
 ``` 
 sudo chmod +x /lib/systemd/system-sleep/sleep_mode
-
 ```
 
 Additionally change all occurrences of:
 
 ``` 
 echo "%s
-
 ```
 
 to:
 
 ``` 
 echo "s
-
 ```
 
 The percent sign is unnecessary.
@@ -53,7 +49,6 @@ The existing date command is OK:
 
 ``` 
 date +%s >>  /tmp/suspend_time.txt
-
 ```
 
 However it is formatted as number of seconds since January 1, 1970 which isn't the most readable date format.

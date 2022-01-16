@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    
 views:        "39,884 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-14-How-to-switch-between-headphones-and-speakers-without-unplugging-headphones.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ Edit:
 
 ``` 
 /usr/share/pulseaudio/alsa-mixer/paths/analog-output-lineout.conf
-
 ```
 
 Find:
@@ -40,7 +39,6 @@ Find:
 [Jack Headphone]
 state.plugged = no
 state.unplugged = unknown
-
 ```
 
 Change `no` to `yes`.
@@ -55,7 +53,6 @@ We want to merge Line Out with Master. Add this snippet to the end of the file:
 [Element Line Out]
 switch = mute
 volume = merge
-
 ```
 
 ### 3. We need to completely cut off Line Out when we use headphones.
@@ -64,7 +61,6 @@ Edit:
 
 ``` 
 /usr/share/pulseaudio/alsa-mixer/paths/analog-output-headphones.conf
-
 ```
 
 Add this snippet to the end of the file:
@@ -73,7 +69,6 @@ Add this snippet to the end of the file:
 [Element Line Out]
 switch = off
 volume = off
-
 ```
 
 On some systems you may also need to disable Front by adding this snippet:
@@ -82,7 +77,6 @@ On some systems you may also need to disable Front by adding this snippet:
 [Element Front]
 switch = off
 volume = off
-
 ```
 
 ### 4. Like Pulseaudio, Alsa itself cuts off speakers when headphones are plugged in. 
@@ -98,7 +92,6 @@ Save your changes with: `alsactl store`
 ``` 
 $ pulseaudio -k
 $ pulseaudio --start
-
 ```
 
 Now you have two separate ports on the same sink in pulseaudio. They mute each other, so you can switch to headphones and this will mute Line Out, and vice versa. To switch between ports you can use Gnome or Plasma sound mixer, or install appropriate desktop extension. 

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "90 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-Unity-launch-bar-and-menu-bar-won^t-come-up-on-Ubuntu-16.04.md
 toc:          false
 navigation:   false
@@ -44,7 +44,6 @@ Open a terminal and use:
 ``` 
 rm -rf ~/.config/compiz-1/compizconfig/*
 sudo reboot
-
 ```
 
 When rebooting select the most recent kernel rather than the older recovery option.

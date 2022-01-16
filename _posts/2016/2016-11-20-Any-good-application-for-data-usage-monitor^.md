@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "39,356 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-20-Any-good-application-for-data-usage-monitor^.md
 toc:          false
 navigation:   true
@@ -65,7 +65,6 @@ nvStat is in the official repositories so no need to link to a new ppa. To insta
 ``` 
 sudo apt-get update
 sudo apt-get install vnstat
-
 ```
 
 After installation, keep your Terminal open for the following sections. There is no need to reboot.
@@ -77,14 +76,12 @@ Pick a preferred network interface and edit the Interface variable in the  `/etc
 ``` 
 $ vnstat --iflist
 Available interfaces: wlp60s0 lo enp59s0 (1000 Mbit)
-
 ```
 
 To start monitoring a particular interface you must initialize a database first. Each interface needs its own database. The command to initialize one for the eth0 interface is:
 
 ``` 
 sudo vnstat -u -i enp59s0 
-
 ```
 
 
@@ -97,14 +94,12 @@ After introducing the interface(s) and checking the config file. You can start t
 
 ``` 
 sudo systemctl start vnstat.service
-
 ```
 
 To make this service permanent use:
 
 ``` 
 sudo systemctl enable vnstat.service
-
 ```
 
 From now on `vnstat` will be gathering network usage in the background using such a small percentage of CPU it doesn't show up on conky's (system monitor's) top 9 list of processes (on my machine).
@@ -119,21 +114,18 @@ Query the network traffic:
 
 ``` 
 vnstat -q
-
 ```
 
 Viewing live network traffic usage:
 
 ``` 
 vnstat -l
-
 ```
 
 To find more options, use:
 
 ``` 
 vnstat --help
-
 ```
 
 
@@ -157,7 +149,6 @@ $ vnstat -m
       Jan '18    102.77 GiB |   30.21 GiB |  132.97 GiB |    1.04 Mbit/s
     ------------------------+-------------+-------------+---------------
     estimated    257.06 GiB |   75.56 GiB |  332.62 GiB |
-
 ```
 
 
@@ -191,7 +182,6 @@ Total: ${color green}${totaldown enp59s0} $color${alignr}Total: ${color green}${
 ${color orange}${voffset 2}${hr 1}
 ${color}${goto 5}Dawn: ${color green}${execpi 300 cat /usr/local/bin/sunrise} ${goto 155}${color}Dusk: ${color green}${execpi 300 cat /usr/local/bin/sunset} ${alignr}${color}Level: ${color green}${execpi 10 cat /sys/class/backlight/intel_backlight/brightness}
 ${color orange}${voffset 2}${hr 1}
-
 ```
 
 To save desktop space, my narrow Conky window uses "G" instead of "GiB", "M" instead of "MiB", etc. If you have more screen real estate change `substr ($10, 1, 1)` to `$10` and do the same for `$9`.

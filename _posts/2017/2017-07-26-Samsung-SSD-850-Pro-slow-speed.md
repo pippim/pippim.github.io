@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,210 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-26-Samsung-SSD-850-Pro-slow-speed.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ $ sudo hdparm -tT /dev/sdc
 /dev/sdc:
  Timing cached reads:   20494 MB in  2.00 seconds = 10255.92 MB/sec
  Timing buffered disk reads: 812 MB in  3.00 seconds = 270.63 MB/sec
-
 ```
 
 What you are hoping for is timings like my `/dev/sda`
@@ -40,7 +39,6 @@ $ sudo hdparm -tT /dev/sda
 /dev/sda:
  Timing cached reads:   21598 MB in  2.00 seconds = 10809.23 MB/sec
  Timing buffered disk reads: 1566 MB in  3.00 seconds = 521.44 MB/sec
-
 ```
 
 The explanation can be found using `dmesg | grep SATA`
@@ -56,7 +54,6 @@ $ dmesg | grep SATA
 [    1.521318] ata3: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
 [    1.521337] ata2: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
 [    1.521356] ata4: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
-
 ```
 
 Both `/dev/sda` and `/dev/sdc` are SATA III SSD's but `sda` is on a 6 Gbps bus (ata1) and `sdc` is on a 3 Gbps bus.
@@ -71,7 +68,6 @@ $ sudo hdparm -tT /dev/sdb
 /dev/sdb:
  Timing cached reads:   20632 MB in  2.00 seconds = 10325.32 MB/sec
  Timing buffered disk reads: 340 MB in  3.02 seconds = 112.76 MB/sec
-
 ```
 
 # Summary

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,659 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-18-Getting-error-code^1^-when-installing-MSSQL-server-in-Ubuntu-16.04.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ $ free
               total        used        free      shared  buff/cache   available
 Mem:        8031732     1614708     4377704      750208     2039320     5357500
 Swap:       8191996           0     8191996
-
 ```
 
 The first row "Mem:" refers to RAM. The second row "Swap" refers to hard disk swap space which we'll call "backup RAM" for lack of a better term.

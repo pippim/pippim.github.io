@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "402 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-24-hOW-TO-rEMAP-cAPS-LOCK-TO-cAPS-LOCK-ON-uBUNTU.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ From [Linux Mint][1]:
 
 ``` 
 sudo apt install xdotool
-
 ```
 
 Then toggle the caps lock key with this command:
 
 ``` 
 xdotool key Caps_Lock
-
 ```
 
 Run this command again to turn caps lock off.

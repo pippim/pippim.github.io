@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "234 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-27-CPU-on-Ubuntu-running-high.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ If your load factor show ".92" and you have 8 CPUs then your real load factor is
 
 ``` 
 ${execpi .001 (awk '{printf "%s/", $1}' /proc/loadavg; grep -c processor /proc/cpuinfo;) | bc -l | cut -c1-4} ${execpi .001 (awk '{printf "%s/", $2}' /proc/loadavg; grep -c processor /proc/cpuinfo;) | bc -l | cut -c1-4} ${execpi .001 (awk '{printf "%s/", $3}' /proc/loadavg; grep -c processor /proc/cpuinfo;) | bc -l | cut -c1-4}
-
 ```
 
 The **Real** CPU percentage can never go over 100% and the **Real** load factor can never go over 1 so you have to mentally do the math dividing by the number of CPUs or use Conky for accurate results instead of `Top` or whatever program you were using.

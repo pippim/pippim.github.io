@@ -12,7 +12,7 @@ votes:        "60 "
 favorites:    
 views:        "75,646 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-23-How-can-I-send-mobile-text-message-from-terminal^.md
 toc:          false
 navigation:   true
@@ -38,7 +38,6 @@ curl -X POST https://textbelt.com/text \
    --data-urlencode phone='7801234567' \
    --data-urlencode message='Find Your Phone!' \
    -d key=textbelt
-
 ```
 
 Replace `7801234567` with your phone number. If you are texting an international phone number (outside Canada / USA) follow these [instructions][2].
@@ -79,7 +78,6 @@ $ find-phone # bash script with above command
 
 $ find-phone
 {"success":false,"error":"Only one test text message is allowed per day.","quotaRemaining":0}
-
 ```
 
 **Note:** You maybe able to reset your router's IP address for more than one text per day but I haven't tested this yet.
@@ -99,7 +97,6 @@ You could create a bash script called `sms` containing:
 ``` bash
 #!/bin/bash
 curl -X POST https://textbelt.com/text --data-urlencode phone='$1' --data-urlencode message='$2' -d key=textbelt
-
 ```
 
 - Send SMS message using `sms 7801234567 "Hello World"`
@@ -142,14 +139,12 @@ Name         Email Address
 Tiny Tim     5551234567@att.com
 Mrs. Clause  5552223333@sprint.com
 Bad Elf      5551114444@telus.net
-
 ```
 
 Then in your bash code [something like this][4]:
 
 ``` bash
 ssmtp 5551234567@att.com < mail.txt
-
 ```
 
 Where `mail.txt` looks like this:
@@ -172,7 +167,6 @@ Content-Type: text/html; charset="utf8"
 Nightly database update failed at procedure: AP005.
 </body>
 </html>
-
 ```
 
 <sub>There are many ways of sending email from bash. This is just one example. The important thing is the email address contains the smartphone number followed by the smartphone provider's web address</sub>

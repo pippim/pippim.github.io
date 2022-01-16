@@ -12,7 +12,7 @@ votes:        "52 "
 favorites:    
 views:        "357,026 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-11-How-to-start-Ubuntu-in-Console-mode.md
 toc:          false
 navigation:   false
@@ -24,7 +24,6 @@ Yes you can. As described here ([ubuntuhandbook.org - Boot into text console ubu
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="text"
 GRUB_TERMINAL=console
-
 ```
 
 After saving changes you need to run:
@@ -33,7 +32,6 @@ After saving changes you need to run:
 sudo update-grub
 sudo systemctl enable multi-user.target --force
 sudo systemctl set-default multi-user.target
-
 ```
 
 
@@ -47,5 +45,4 @@ To undo `sudo systemctl set-default multi-user.target` simply type
 ``` 
 sudo systemctl enable graphical.target --force
 sudo systemctl set-default graphical.target 
-
 ```

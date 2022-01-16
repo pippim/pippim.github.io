@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,178 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Set-custom-names-for-vmlinuz-and-initrd-so-multiple-distros-can-share-boot-directory.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ $ ll /boot/*4.14.34*
 -rw-r--r-- 1 root root        0 Apr 12 05:53 /boot/retpoline-4.14.34-041434-generic
 -rw------- 1 root root  3952348 Apr 12 05:53 /boot/System.map-4.14.34-041434-generic
 -rw------- 1 root root  8607504 Apr 30 03:52 /boot/vmlinuz-4.14.34-041434-generic
-
 ```
 
 There are 70,192 files link to kernel version `4.14.34` but only five of them reside in `/boot` where you wish to do your renaming.
@@ -177,7 +176,6 @@ $ locate 4.14.34 | head -n1000
 /lib/modules/4.14.34-041434-generic/kernel/crypto/lz4hc.ko
 /lib/modules/4.14.34-041434-generic/kernel/crypto/mcryptd.ko
 /lib/modules/4.14.34-041434-generic/kernel/crypto/md4.ko
-
 ```
 
   [1]: {% post_url /2018/2018-03-01-How-do-I-map-Linux-Kernels-to-Ubuntu-Kernels^ %}

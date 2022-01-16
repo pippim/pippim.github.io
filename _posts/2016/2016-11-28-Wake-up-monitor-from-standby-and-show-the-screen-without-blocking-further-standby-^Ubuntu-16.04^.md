@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "5,067 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-28-Wake-up-monitor-from-standby-and-show-the-screen-without-blocking-further-standby-^Ubuntu-16.04^.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ The only thing I could find on your situation was this webpage ([Can't wake up m
 
 ``` 
 sleep 1 && xset dpms force standby && sleep 8 && xset dpms force on
-
 ```
 
 Note this user tip implies it is based on having turned off DRI3 in `/etc/X11/xorg.conf.d/20-intel.conf` and using DRI2:
@@ -34,7 +33,6 @@ Section "Device"
    Driver      "intel"
    Option "DRI" "2"
 EndSection
-
 ```
 
 Please note this is the best I could come up with for your problem and felt compelled to post it because there have been no other answers. Since I can't reproduce your problem I have no idea if it will work for you as it has for others.

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "530 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-11-08-Unmet-dependencies.-Try-^apt---fix-broken-install^--Conflict-in-linux-image.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ The first method you can try is to reconfigure the package database. Probably th
 
 ``` 
 sudo dpkg --configure -a
-
 ```
 
 ## Method 2: Use force install
@@ -36,7 +35,6 @@ If a package installation was interrupted previously, you may try to do a force 
 
 ``` 
 sudo apt-get install -f
-
 ```
 
 ## Method 3: Try removing the troublesome package
@@ -45,7 +43,6 @@ If it’s not an issue for you, you may try to remove the package manually. Plea
 
 ``` 
 sudo apt remove package_name
-
 ```
 
 ## Method 4: Remove post info files of the troublesome package

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "877 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-15-Change-dynamic-wallpaper-directory-every-season.md
 toc:          false
 navigation:   true
@@ -74,15 +74,10 @@ $ echo $(date --date="Sep 22" '+%j')
 $ echo $(date --date="Dec 21" '+%j')
 355
 # Reference: https://unix.stackexchange.com/questions/352176/take-input-arguments-and-pass-them-to-date
-## 
-```
+## ```
 
 
 
-
-
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
 
 # Create bash script: `season.sh`
 
@@ -98,7 +93,11 @@ Copy and paste the following lines into `gedit`:
 
 {% include copyHeader.html %}
 ``` 
-#!/bin/bash
+
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
+
+# !/bin/bash
 # NAME: season.sh
 # PATH: ~/bin
 # DATE: December 15, 2018
@@ -141,6 +140,10 @@ CheckTripWire () {
 
 } # End of CheckTripWire () function.
 
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
+
 # Start of Mainline
 
 DOY=$(date '+%j')                     # DOY = Current Day of Year
@@ -157,18 +160,20 @@ else
     Season="WINTER"                   # Shovel the snow!
 fi
 
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
+
 # Current season establish, now see if we tripped the wire
 CheckTripWire
 
 exit 0 # Command not necessary but good habit to signify no Abend.
-
 ```
 
 Save the file in `gedit`. Now mark it as executable using:
 
 ``` 
 chmod a+x ~/bin/season.sh
-
 ```
 
 Next we need to add it to startup applications. Reference: [How do I start applications automatically on login?](How do I start applications automatically on login?)
@@ -177,10 +182,6 @@ Next we need to add it to startup applications. Reference: [How do I start appli
 
 
 ----------
-
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
 
 # Testing
 
@@ -201,21 +202,15 @@ For example, we would change:
 
 ``` 
 cp -R "$SpringDir"/. "$SlideShowDir"/
-
 ```
 
 To:
 
 ``` 
 tar -xf "$SpringDir"archive.tar -C "$SlideShowDir"/
-
 ```
 
 ... and so on for the other seasons.
-
-
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
 
 ## Setup variables for season start
 
@@ -228,7 +223,6 @@ SpringStart=079
 SummerStart=179
 FallStart=265
 WinterStart=355
-
 ```
 
 Define the variables at the top of the script to make them easier to spot and change. You might want to do this for leap years. You might want to change to "Meteorological" season starts instead of "Astronomical" start dates.
@@ -239,7 +233,6 @@ Then change these lines:
 if ((DOY>=079 && DOY<172)) ; then
 elif ((DOY>=172 && DOY<265)) ; then
 elif ((DOY>=265 && DOY<355)) ; then
-
 ```
 
 To this:
@@ -248,7 +241,6 @@ To this:
 if ((DOY>="$SpringStart" && DOY<"$SummerStart")) ; then
 elif ((DOY>="$SummerStart" && DOY<"$FallStart")) ; then
 elif ((DOY>="$FallStart" && DOY<"$WinterStart")) ; then
-
 ```
 
 

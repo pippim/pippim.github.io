@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "12,717 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-04-11-Use-webcam-from-laptop-on-desktop-pc.md
 toc:          false
 navigation:   false
@@ -29,14 +29,12 @@ To install VLC on Debian, Ubuntu or Linux Mint:
 
 ``` 
 $ sudo apt-get install vlc
-
 ```
 
 To install VLC on Fedora, first enable RPM Fusion's free repository, then run:
 
 ``` 
 $ sudo yum install vlc
-
 ```
 
 To install VLC on CentOS or RHEL 6, first set up EPEL repository, and then use the following commands:
@@ -45,7 +43,6 @@ To install VLC on CentOS or RHEL 6, first set up EPEL repository, and then use t
 $ cd /etc/yum.repos.d/
 $ sudo wget http://pkgrepo.linuxtech.net/el6/release/linuxtech.repo
 $ sudo yum install vlc
-
 ```
 
 ## Step 2 - Verify Webcam in VLC
@@ -57,14 +54,12 @@ You’ll need to know the webcam’s name for that. In the example below, the we
 ``` 
 $ ls /dev/video*
 /dev/video0
-
 ```
 
 Then you have to test video from your webcam. Here is the command you need to use, do not forget to replace "video0" with the name of your device.
 
 ``` 
 $ vlc v4l2:///dev/video0
-
 ```
 
 If your webcam is successfully detected by VLC, you should be able to see your video stream.
@@ -77,7 +72,6 @@ In this example webcam is streamed over HTTP in WMV format. To configure VLC for
 
 ``` 
 $ vlc
-
 ```
 
 In VLC menu choose "Streaming".
@@ -98,7 +92,6 @@ To verify that VLC is running correctly at TCP port 8080, run the following comm
 
 ``` 
 $ sudo netstat -nap | grep 8080
-
 ```
 
 ## Step 4 - Watch Streaming Video from Webcam
@@ -111,7 +104,6 @@ You can use VLC player or MPlayer to access the webcam feed as follows.
 ``` 
 $ vlc http://:8080/stream.wmv
 $ mplayer http://:8080/stream.wmv
-
 ```
 
 If you are testing the feed from the same host, use loopback address 127.0.0.1 instead.

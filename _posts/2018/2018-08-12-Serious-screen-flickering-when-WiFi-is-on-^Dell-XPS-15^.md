@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,486 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Serious-screen-flickering-when-WiFi-is-on-^Dell-XPS-15^.md
 toc:          false
 navigation:   false
@@ -61,8 +61,7 @@ Finally there is an interesting tidbit here: [https://patchwork.kernel.org/patch
 > +	 * let's simply ignore the OpRegion panel type on SKL and
 > +	 * IVYBRIDGE for now.
 >  	 */
-## 
-```
+## ```
 
 
 

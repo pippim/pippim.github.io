@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,563 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-New-message-when-rebooting-from-login-screen:-Authentication-is-required-for-rebooting-the-system-while-an-application-asked-to-inhibit-it.md
 toc:          false
 navigation:   false
@@ -51,7 +51,6 @@ $ systemd-inhibit --list
     Mode: block
 
 5 inhibitors listed.
-
 ```
 
 However the list doesn't change after you open a file for editing for example. You can use this instead:
@@ -73,7 +72,6 @@ method return time=1573403241.678869 sender=:1.49 -> destination=:1.1855 serial=
    array [
       object path "/org/gnome/SessionManager/Inhibitor1727"
    ]
-
 ```
 
 In the first instance there are no inhibitor locks. We edit a file in gedit and in the second instance a lock exists. However it doesn't actually tell us the name `gedit`.

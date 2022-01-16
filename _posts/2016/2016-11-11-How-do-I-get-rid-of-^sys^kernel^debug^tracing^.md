@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "10,749 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-11-How-do-I-get-rid-of-^sys^kernel^debug^tracing^.md
 toc:          false
 navigation:   false
@@ -28,14 +28,12 @@ Imagine my surprise learning on my system kernel tracing was also enabled:
 ``` 
 # cat /proc/sys/kernel/ftrace_enabled
 1
-
 ```
 
 Also when I type `mount`, this is one of the lines that appears:
 
 ``` 
 debugfs on /sys/kernel/debug type debugfs (rw,relatime)
-
 ```
 
 I rebooted my kernel `4.4.0-47` to `4.4.0-45` then to `4.8.5` and finally to `3.13.0-92`. **ALL** these versions have `/sys/kernel/debug` mounted.
@@ -48,7 +46,6 @@ To answer your question "how do I get rid of it?", use:
 
 ``` 
 sudo umount debugfs
-
 ```
 
 Note this only works for current session.

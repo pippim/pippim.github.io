@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "34,632 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-10-How-to-change-Terminal-Title-in-ubuntu-16.04.md
 toc:          false
 navigation:   false
@@ -23,21 +23,18 @@ This is the function I use in my `~/.bashrc` file:
 
 ``` 
 function termtitle() { PS1="${PS1/\\u@\\h: \\w/$@}"; }
-
 ```
 
 After adding it (or changing it) you must resource your file:
 
 ``` 
 . ~/.bashrc
-
 ```
 
 To use it type something like:
 
 ``` 
 termtitle Special Projects
-
 ```
 
 After changing the title once, you must resource to change it again:
@@ -45,5 +42,4 @@ After changing the title once, you must resource to change it again:
 ``` 
 . ~/.bashrc
 termtitle My new title
-
 ```

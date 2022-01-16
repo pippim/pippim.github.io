@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,692 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-04-Monitor-network-traffic-^during-a-specific-time^-in-linux.md
 toc:          false
 navigation:   false
@@ -48,7 +48,6 @@ Monitoring enp59s0...    (press CTRL-C to stop)
           min                129 p/s  |          55 p/s
 --------------------------------------+------------------
   time                    36 seconds
-
 ```
 
 

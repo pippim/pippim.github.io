@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "507,176 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-02-How-to-search-for-all-the-files-starting-with-the-name-^ABC^-in-a-directory^.md
 toc:          false
 navigation:   false
@@ -32,7 +32,6 @@ $ locate /ABC
 /usr/src/linux-headers-5.0.1-050001/tools/lib/lockdep/tests/ABCABC.sh
 /usr/src/linux-headers-5.0.1-050001/tools/lib/lockdep/tests/ABCDBCDA.sh
 /usr/src/linux-headers-5.0.1-050001/tools/lib/lockdep/tests/ABCDBDDA.sh
-
 ```
 
 **Notes:**

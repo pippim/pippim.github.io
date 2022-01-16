@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,149 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-06-MainThread-unfamiliar-process-suddenly-showing-up-18.04.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ For me to kill an unresponsive Firefox session I now need to use:
 
 ``` 
 sudo killall /usr/lib/firefox/firefox
-
 ```
 
 Note above problem isn't limited to Ubuntu 18.04 as I'm using Ubuntu 16.04.6 LTS.

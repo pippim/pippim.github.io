@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "995 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-31-GNOME-choose-audio-device-headphones-over-headset-automatically.md
 toc:          false
 navigation:   false
@@ -64,14 +64,12 @@ There is something you can quickly try with no guarantee of success. There is a 
 
 ``` 
 pacmd load-module module-switch-on-connect
-
 ```
 
 Now plug in your headphones. If that works make it permanent by adding the following line to your `/etc/pulse/default.pa`:
 
 ``` 
 load-module module-switch-on-connect
-
 ```
 
 save the file and it will work on future reboots.

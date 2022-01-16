@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "3,237 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-04-What-does-`ls---directory`-stand-for^.md
 toc:          false
 navigation:   false
@@ -29,6 +29,5 @@ $ ls -d /home/rick/*/
 /home/rick/Desktop/    /home/rick/Music/             /home/rick/tmpe/
 /home/rick/Documents/  /home/rick/Pictures/          /home/rick/Videos/
 /home/rick/Downloads/  /home/rick/Public/
-
 ```
 

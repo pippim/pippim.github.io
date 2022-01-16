@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,002 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-28-Make-Ubuntu^s-Night-Light-look-like-Manjaro-KDE^s-Night-Color.md
 toc:          false
 navigation:   false
@@ -109,7 +109,6 @@ You can forego using internet to get sunrise/sunset times with these commands:
 ``` 
 sudo echo "7:00 am" > /usr/local/bin/.eyesome-sunrise
 sudo echo "9:00 pm" > /usr/local/bin/.eyesome-sunset
-
 ```
 
 Change the time appropriately. I'll look at changing the software in the next upgrade to make this easier. 

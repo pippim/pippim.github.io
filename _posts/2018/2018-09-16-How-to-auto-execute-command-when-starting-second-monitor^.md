@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "377 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-16-How-to-auto-execute-command-when-starting-second-monitor^.md
 toc:          false
 navigation:   false
@@ -80,7 +80,6 @@ do
 #         echo "${dmode}"
 #    fi
 done
-
 ```
 
 ## Sample output when closing laptop lid
@@ -98,7 +97,6 @@ Watches established.
 /sys/class/drm/card1-DP-1/status OPEN 
 Setting up watches.
 Watches established.
-
 ```
 
 ## Sample output of log file
@@ -109,7 +107,6 @@ $ cat /tmp/mon*
 ./monitor-eyesome.sh: Sun Sep 16 11:16:55 MDT 2018 connected
 ./monitor-eyesome.sh: Sun Sep 16 11:16:56 MDT 2018 connected
 ./monitor-eyesome.sh: Sun Sep 16 11:16:56 MDT 2018 connected
-
 ```
 
 ## Summary

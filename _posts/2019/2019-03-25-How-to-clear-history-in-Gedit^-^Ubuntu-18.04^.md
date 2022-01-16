@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,572 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-25-How-to-clear-history-in-Gedit^-^Ubuntu-18.04^.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ Use this command to get current number of entries:
 $ gsettings get org.gnome.gedit.preferences.ui max-recents
 
 uint32 5
-
 ```
 
 I want to change to `10` so I'll use this command:
@@ -40,7 +39,6 @@ $ gsettings set org.gnome.gedit.preferences.ui max-recents 10
 $ gsettings get org.gnome.gedit.preferences.ui max-recents
 
 uint32 10
-
 ```
 
 If you permanently want to have zero saved recent files change `10` to `0`. Notice how the `get` command is repeated after the `set` command to ensure it "sticks".
@@ -70,7 +68,6 @@ $ sudo cat /root/.local/share/recently-used.xbel
       </metadata>
     </info>
   </bookmark>
-
 ```
 
 ## Normal User
@@ -95,7 +92,6 @@ $ cat ~/.local/share/recently-used.xbel
       </metadata>
     </info>
   </bookmark>
-
 ```
 
 When removing a `gedit` entry delete all lines from `<bookmark href...>` to `</bookmark>` inclusive.

@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "19,303 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Unable-to-upgrade-kernel-after-4.16.3.md
 toc:          false
 navigation:   true
@@ -29,7 +29,6 @@ For dkms support of nVidia, bbswitch and virtual box compiling use:
 
 ``` 
 sudo apt install libelf-dev
-
 ```
 
 To circumvent newer `linux-header` installation errors download: [libssl1.1][1]
@@ -43,22 +42,16 @@ $ ll *.deb
 -rw-rw-r-- 1 rick rick  1052200 Oct 28 08:05 linux-headers-4.14.78-041478-generic_4.14.78-041478.201810200529_amd64.deb
 -rw-rw-r-- 1 rick rick  8243552 Oct 28 08:05 linux-image-unsigned-4.14.78-041478-generic_4.14.78-041478.201810200529_amd64.deb
 -rw-rw-r-- 1 rick rick 47559380 Oct 28 08:06 linux-modules-4.14.78-041478-generic_4.14.78-041478.201810200529_amd64.deb
-
 ```
 
 Now you should be able to successfully install:
 
 ``` 
 sudo dpkg -i *.deb
-## 
-```
+## ```
 
 
 
-
-
-<a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
 
 # Original Answer
 
@@ -99,7 +92,6 @@ dpkg: error processing package linux-image-unsigned-4.14.38-041438-generic (--in
 Errors were encountered while processing:
  linux-headers-4.14.38-041438-generic
  linux-image-unsigned-4.14.38-041438-generic
-
 ```
 
 To fix errors I tried `sudo apt install -f` but it won't fix it plus causes a "crash report":
@@ -128,7 +120,6 @@ dpkg: error processing package linux-image-unsigned-4.14.38-041438-generic (--co
 Errors were encountered while processing:
  linux-image-unsigned-4.14.38-041438-generic
 E: Sub-process /usr/bin/dpkg returned an error code (1)
-
 ```
 
 Now let's see what is left over:
@@ -139,7 +130,6 @@ $ apt list | grep 4.14.36
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 linux-image-unsigned-4.14.36-041436-generic/now 4.14.36-041436.201804240906 amd64 [residual-config]
-
 ```
 
 Let's try to remove it:
@@ -174,26 +164,27 @@ Removing linux-modules-4.14.38-041438-generic (4.14.38-041438.201804300419) ...
 Errors were encountered while processing:
  linux-image-unsigned-4.14.38-041438-generic
 E: Sub-process /usr/bin/dpkg returned an error code (1)
-
 ```
 
 Edit the file `/var/lib/dpkg/info/linux-image-unsigned-4.14.38-041438-generic.prerm`:
 
 ``` 
-#!/bin/sh
+
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+
+# !/bin/sh
 set -e
 
 version=4.14.38-041438-generic
 image_path=/boot/vmlinuz-$version
     (... SNIP ...)
-
 ```
 
 Just below the first line `#!/bin/sh` insert a new line:
 
 ``` 
 exit 0
-
 ```
 
 Save the file and rerun the failed command:
@@ -258,7 +249,6 @@ Found Ubuntu 18.04 LTS (18.04) on /dev/nvme0n1p8
 Found Windows Boot Manager on /dev/sda1@/efi/Microsoft/Boot/bootmgfw.efi
 Adding boot menu entry for EFI firmware configuration
 done
-
 ```
 
 Double check everything is ok:
@@ -276,7 +266,6 @@ The following packages were automatically installed and are no longer required:
   python-compizconfig python-pyudev screen-resolution-extra
 Use 'sudo apt autoremove' to remove them.
 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
-
 ```
 
 

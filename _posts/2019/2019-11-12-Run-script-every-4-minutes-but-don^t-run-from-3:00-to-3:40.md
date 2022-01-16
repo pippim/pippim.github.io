@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,942 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Run-script-every-4-minutes-but-don^t-run-from-3:00-to-3:40.md
 toc:          false
 navigation:   false
@@ -39,27 +39,23 @@ You can combine your two lines of:
 ``` 
 */4 0-3 * * * example.sh
 */4 4-0 * * * example.sh
-
 ```
 
 With one line of:
 
 ``` 
 */4 0-2,4-23 * * * example.sh
-
 ```
 
 Then for your last complicated line:
 
 ``` 
 40,44,48,52,56 4 * * * example.sh
-
 ```
 
 Replace it with:
 
 ``` 
 40-59/4 3 * * * example.sh
-
 ```
 

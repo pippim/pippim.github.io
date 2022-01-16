@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    1
 views:        "188 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-09-How-do-I-add-up-file-sizes-in-Bash-by-pattern-into-array-^-list^.md
 toc:          false
 navigation:   false
@@ -52,7 +52,6 @@ I have these kernel versions installed which via cron reboot job have been "touc
 -rw------- 1 root root 7403296 Feb  2 17:14 vmlinuz-4.9.5-040905-generic
 -rw------- 1 root root 7419680 Feb 12 00:43 vmlinuz-4.9.8-040908-generic
 -rw------- 1 root root 7415584 Feb 12 10:58 vmlinuz-4.9.9-040909-generic
-
 ```
 
 For a given kernel I'd like to add up the file size to show how much space can be saved by deleting that kernel. For example **4.7.1** is ancient history in computer terms and at End of Life (EOL):
@@ -64,7 +63,6 @@ For a given kernel I'd like to add up the file size to show how much space can b
 -rw-r--r-- 1 root root 41705644 Feb  9 16:50 initrd.img-4.7.1-040701-generic
 -rw------- 1 root root  3141159 Aug 16  2016 System.map-4.7.1-040701-generic
 -rw------- 1 root root  3974752 Aug 16  2016 vmlinuz-4.7.1-040701-generic
-
 ```
 
 What would be the best way of creating a list / array of:
@@ -74,7 +72,6 @@ Kernel Version w.x.y-zzzz - Last Access - Size
 Kernel Version w.x.y-zzzz - Last Access - Size
     .     .     .      .      .     .      .
 Kernel Version w.x.y-zzzz - Last Access - Size
-
 ```
 
 The plan is to present this list using **zenity** with option to delete specific entries from the partition to save space. I install new kernels once or twice a week (they no longer come out every Sunday like they used to) so my 30 GB partition needs pruning every two or three months.

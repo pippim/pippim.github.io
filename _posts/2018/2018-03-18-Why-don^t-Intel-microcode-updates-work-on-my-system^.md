@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "10,077 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-18-Why-don^t-Intel-microcode-updates-work-on-my-system^.md
 toc:          false
 navigation:   false
@@ -31,14 +31,12 @@ $ apt list --installed | grep intel-microcode
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 intel-microcode/now 3.20170707.1~ubuntu16.04.0 amd64 [installed,upgradable to: 3.20180108.0+really20170707ubuntu16.04.1]
-
 ```
 
 When you install Intel Microcode Update you will get this version or something similar:
 
 ``` 
 intel-microcode/3.20180108.0+really20170707ubuntu16.04.1
-
 ```
 
 # Ubuntu 16.04 LTS Menu
@@ -56,7 +54,6 @@ To skip the GUI menus altogether you can install from command line:
 ``` 
 sudo apt update
 sudo apt install intel-microcode
-
 ```
 
 # `dmesg` now shows correct output
@@ -68,7 +65,6 @@ $ dmesg | grep -i microcode
 [    1.166542] microcode: sig=0x506e3, pf=0x20, revision=0xba
 [    1.166993] microcode: Microcode Update Driver: v2.2.
 [16082.584598] microcode: microcode updated early to revision 0xba, date = 2017-04-09
-
 ```
 
   [1]: https://askubuntu.com/a/1000454/307523

@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "1,249 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-08-Is-it-possible-to-boot-dual-mode-on-old-laptop^.md
 toc:          false
 navigation:   false

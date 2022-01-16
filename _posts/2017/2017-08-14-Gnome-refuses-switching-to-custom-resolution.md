@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "665 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-14-Gnome-refuses-switching-to-custom-resolution.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ Section "Monitor"
     Identifier "HDMI1"
     Option "PreferredMode" "1680x1050_60.00"
 EndSection
-
 ```
 
 You need an extra line (real life example, not yours):
@@ -37,14 +36,12 @@ Section "Monitor"
     Modeline "1280x1024_60.00"  109.00  1280 1368 1496 1712  1024 1027 1034 1063 -hsync +vsync
     Option "PreferredMode" "1280x1024_60.00"
 EndSection
-
 ```
 
 To setup the `Modeline` values you need to use:
 
 ``` 
 cvt 1680 1050
-
 ```
 
 copy and paste the output values to your `/etc/X11/xorg.conf`. In addition 

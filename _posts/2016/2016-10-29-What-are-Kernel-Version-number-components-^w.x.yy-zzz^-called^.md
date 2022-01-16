@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "30,731 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-29-What-are-Kernel-Version-number-components-^w.x.yy-zzz^-called^.md
 toc:          false
 navigation:   false
@@ -40,7 +40,6 @@ As the duplicate comment link ([What does the fourth number in the release versi
 
 ``` 
 <base kernel version>.<ABI number>.<upload number>-<flavour>
-
 ```
 
 The proposed duplicate appears to be wrong because the second segment in the kernel version number seems to have nothing to do with `ABI`. In the other answer posted in this thread the fourth segment is tied to `ABI` but that doesn't seem right either. Here's the top of the list of ABI changes from ([Linux Kernel ABI Timeline][3]):
@@ -65,7 +64,6 @@ Version	Date    Added Removed Total
 3.14.64	2016-03-10	279	91	1019
 3.13.11	2014-04-23	140	99	822
 3.12.56	2016-03-04	171	77	994
-
 ```
 
 ### ABI number

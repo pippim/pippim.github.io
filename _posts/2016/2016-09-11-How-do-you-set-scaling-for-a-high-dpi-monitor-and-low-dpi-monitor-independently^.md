@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "57,670 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-11-How-do-you-set-scaling-for-a-high-dpi-monitor-and-low-dpi-monitor-independently^.md
 toc:          false
 navigation:   false
@@ -37,7 +37,6 @@ To solve this (in my case), use:
 
 ``` 
 xrandr --dpi 168
-
 ```
 
 Then reopen the application:
@@ -51,7 +50,6 @@ Section "Monitor"
     Identifier             "Monitor0"
     DisplaySize             286 179    # In millimeters
 EndSection
-
 ```
 
 I haven't played with this yet.

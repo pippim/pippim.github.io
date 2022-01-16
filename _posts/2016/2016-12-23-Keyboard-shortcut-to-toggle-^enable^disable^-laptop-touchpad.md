@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "3,535 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-23-Keyboard-shortcut-to-toggle-^enable^disable^-laptop-touchpad.md
 toc:          false
 navigation:   false
@@ -48,7 +48,6 @@ else
 fi
 
 exit 0
-
 ```
 
 ### Mark toggle-touchpad script as executable
@@ -95,7 +94,6 @@ USER@host:~/bin$ xinput
     ↳ AT Translated Set 2 keyboard              id=13   [slave  keyboard (3)]
 ───────────────────────────────────────────────────────────────────────────────
 USER@host:~/bin$ 
-
 ```
 
 You can pick any device you like, ie Touchpad = 14, Webcam =  12, etc.

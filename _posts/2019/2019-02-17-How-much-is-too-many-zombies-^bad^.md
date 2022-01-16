@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,280 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-02-17-How-much-is-too-many-zombies-^bad^.md
 toc:          false
 navigation:   false
@@ -60,7 +60,6 @@ One way is by sending the SIGCHLD signal to the parent process. This signal tell
 
 ``` 
 kill -s SIGCHLD pid
-
 ```
 
 However, if the parent process isn’t programmed properly and is ignoring SIGCHLD signals, this won’t help. You’ll have to kill or close the zombies’ parent process. When the process that created the zombies ends, init inherits the zombie processes and becomes their new parent. (init is the first process started on Linux at boot and is assigned PID 1.) init periodically executes the wait() system call to clean up its zombie children, so init will make short work of the zombies. You can restart the parent process after closing it.

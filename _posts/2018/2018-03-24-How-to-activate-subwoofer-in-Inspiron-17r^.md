@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "12,430 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-24-How-to-activate-subwoofer-in-Inspiron-17r^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Firstly you will need to install alsa-tools & alsa-tools-gui from either the sof
 
 ``` 
 sudo apt-get install alsa-tools alsa-tools-gui
-
 ```
 
 Open HDAJackRetask
@@ -38,8 +37,7 @@ Check the “Show unconnected pins” box (the internal speakers do not show as 
  3. Remap 0×10 (“Not connected”, which is the subwoofer) to “Internal speaker (LFE)”
 ``` 
 
-Select **“Install boot override”** to save the settings to apply at boot time. **Reboot**. When it comes back, you should have full sound from all speakers.
-```
+Select **“Install boot override”** to save the settings to apply at boot time. **Reboot**. When it comes back, you should have full sound from all speakers.```
 
 
 

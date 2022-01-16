@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    5
 views:        "4,407 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-23-Kernel-suspends-too-quickly^-upon-resume-continues-suspend-tasks.md
 toc:          false
 navigation:   true
@@ -54,7 +54,6 @@ Oct 21 16:12:29 alien whoopsie[1129]: [16:12:29] Cannot reach: https://daisy.ubu
 Oct 21 16:12:29 alien whoopsie[1129]: [16:12:29] Cannot reach: https://daisy.ubuntu.com
 Oct 21 16:12:29 alien nm-dispatcher[14659]: req:2 'down' [enp59s0]: start running ordered scripts...
 Oct 21 16:13:14 alien kernel: Freezing user space processes ... (elapsed 0.002 seconds) done.
-
 ```
 
 - At `16:12:28` system begins to suspend.
@@ -153,7 +152,6 @@ Feb 25 07:40:16 alien systemd[1]: Started Run anacron jobs.
 Feb 25 07:40:16 alien anacron[9772]: Anacron 2.3 started on 2018-02-25
 Feb 25 07:40:16 alien anacron[9772]: Will run job `cron.daily' in 5 min.
 Feb 25 07:40:16 alien anacron[9772]: Will run job `cron.weekly' in 10 min.
-
 ```
 
 Notice how the system is suspended Feb 24 at 11:30pm then resumed on Feb 25 at 7:40 am. Upon resuming the system immediately goes to "sleep" and then "wakes up".
@@ -355,7 +353,6 @@ Apr 11 16:46:51 dell kernel: [17374.169369] ehci-pci 0000:00:1d.0: System wakeup
 Apr 11 16:46:51 dell kernel: [17374.170294] ehci-pci 0000:00:1a.0: System wakeup disabled by ACPI
 Apr 11 16:46:51 dell kernel: [17374.170310] xhci_hcd 0000:00:14.0: System wakeup disabled by ACPI
 Apr 11 16:46:51 dell kernel: [17374.170418] PM: noirq resume of devices complete after 17.795 msecs
-
 ```
 
 Is this normal? (Note lid-close does same thing except systemd suspends faster and does fewer tasks).

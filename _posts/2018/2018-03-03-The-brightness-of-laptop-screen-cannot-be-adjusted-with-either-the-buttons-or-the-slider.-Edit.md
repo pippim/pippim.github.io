@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "7,562 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-03-The-brightness-of-laptop-screen-cannot-be-adjusted-with-either-the-buttons-or-the-slider.-Edit.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "314 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-20-Using-syslog-to-diagnose-a-crash.md
 toc:          false
 navigation:   false
@@ -48,14 +48,12 @@ Your best bet is to update grub command line (`sudo -H gedit /etc/default/grub`)
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_idle.max_cstate=1"
-
 ```
 
 and then run:
 
 ``` 
 sudo update-grub
-
 ```
 
 

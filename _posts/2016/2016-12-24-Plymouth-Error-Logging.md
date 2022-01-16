@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "2,331 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-24-Plymouth-Error-Logging.md
 toc:          false
 navigation:   false
@@ -23,14 +23,12 @@ You need to edit your grub configuration file using:
 
 ``` 
 gksu gedit /etc/default/grub
-
 ```
 
 look for the line containing "quiet splash" and change it like so:
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="splash plymouth:debug"
-
 ```
 
 You might have other options there like `kslar` or `vt.handoff=7` leave them in place. The important thing is to remove `quiet` and add `plymouth:debug`.
@@ -39,14 +37,12 @@ Save the file and then use:
 
 ``` 
 sudo update-grub
-
 ```
 
 Now when you reboot error messages appear on the boot screen plus a full `plymouth` log is located at:
 
 ``` 
 /var/log/plymouth-debug.log
-
 ```
 
 Good luck tracing down you errors!

@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "10,212 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-23-Windows-Subsystem-for-Linux-desktop-shortcut-to-GUI.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ The full line for the `Target` field should look like this:
 
 ``` 
 C:\Windows\System32\bash.exe -c "cd && DISPLAY=:0 /mnt/e/bin/lock-screen-timer"
-
 ```
 
 **NOTE:** Most users will use `/mnt/c/....` as their path but I'm dual-booting and the same script is shared by WSL and Ubuntu 16.04 so must be on a separate NTFS partition I've called `/mnt/e`. WSL cannot write to a Linux `ext4` drive and Linux nor Windows Apps can write to a WSL sub-directory. It's complicated...

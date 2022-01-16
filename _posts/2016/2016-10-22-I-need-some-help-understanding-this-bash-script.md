@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "96 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-22-I-need-some-help-understanding-this-bash-script.md
 toc:          false
 navigation:   false
@@ -55,12 +55,10 @@ To test this script copy and paste the OP's text to a new file. For our purposes
 
 ``` 
 chmod +x seconds
-
 ```
 
 Then call the bash script with the current directory prefix in front:
 
 ``` 
 ./seconds
-
 ```

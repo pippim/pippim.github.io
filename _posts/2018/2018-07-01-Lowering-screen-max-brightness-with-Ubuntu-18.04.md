@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,005 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-01-Lowering-screen-max-brightness-with-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ It can be quickly modified to your needs by adding three lines:
     # Modification for: https://askubuntu.com/questions/1051171/lowering-screen-max-brightness-with-ubuntu-18-04
     # If brightness > 50, set to 50
     [[ WatchPer -gt 50 ]] && WatchPer=50
-
 ```
 
 ## Modified `redirected-brightness` script
@@ -114,7 +113,6 @@ while (true); do
         echo "Processing modify event in $WatchDriver/actual_brightness" >> $LogFile
     SetBrightness
 done
-
 ```
 
 

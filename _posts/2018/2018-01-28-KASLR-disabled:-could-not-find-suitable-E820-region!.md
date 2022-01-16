@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "4,874 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-28-KASLR-disabled:-could-not-find-suitable-E820-region!.md
 toc:          false
 navigation:   false
@@ -30,14 +30,12 @@ Using `sudo` powers edit your `/etc/default/grub` and add the option `nokaslr` t
 
 ``` 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nokaslr"
-
 ```
 
 You may have other options besides `quiet splash` which you will want to leave in place. Save the file and exit your editor. Then run:
 
 ``` 
 sudo update-grub
-
 ```
 
 # Second Option

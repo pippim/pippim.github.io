@@ -12,7 +12,7 @@ votes:        "23 "
 favorites:    
 views:        "14,748 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-01-How-to-use-^xrandr---gamma^-for-Gnome-^Night-Light^-like-usage^.md
 toc:          false
 navigation:   false
@@ -50,7 +50,6 @@ static const struct { float r; float g; float b; } whitepoints[] = {
     { 0.78988728,  0.86491137,  1.00000000, }, /* 10000K */
     { 0.77442176,  0.85453121,  1.00000000, },
 };
-
 ```
 
 The three columns above are values for **Red**, **Green** and **Blue**.
@@ -61,14 +60,12 @@ I wrote a collection of bash scripts called **Eyesome** that [adjust brightness 
 
 ``` 
 xrandr --output DP-1-1 --gamma 1:1:1 --brightness 1.0
-
 ```
 
 The nighttime setting (for one of the three monitors) is:
 
 ``` 
 xrandr --output DP-1-1 --gamma 1.0:0.88:0.76 --brightness 0.55
-
 ```
 
 **Note:** Up to three monitors can be defined with separate settings.
@@ -92,7 +89,6 @@ case $1 in
   off) night_mode 1:1:1 1.0 ;; 
   *) night_mode 1:1:0.5 0.7 ;;
 esac
-
 ```
 
 The script reduces blue light component and brightness of all Xorg displays attached. Simply save it in your `bin` directory, `chmod +x` it and, if you want to, add a `cron` job or keyboard shortcut to call the function.

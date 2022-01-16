@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "6,468 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-What-software-is-in-the-Canonical-Partners-repository^.md
 toc:          false
 navigation:   false
@@ -50,7 +50,6 @@ drwxrwxr-x 14 rick rick 4096 May 20 20:01 t
 drwxrwxr-x  3 rick rick 4096 May 20 20:01 u
 drwxrwxr-x  3 rick rick 4096 May 20 20:01 v
 drwxrwxr-x  4 rick rick 4096 May 20 20:01 x
-
 ```
 
 Now you have a complete index (I hope) of all packages available on your drive. To check out what's available in the `a` category:
@@ -58,7 +57,6 @@ Now you have a complete index (I hope) of all packages available on your drive. 
 ``` 
 $ ls archive.canonical.com/ubuntu/pool/partner/a
 acroread  adobe-flashplugin
-
 ```
 
 The size of the list is nominal so you might want to keep it on your drive or delete it:
@@ -83,7 +81,6 @@ $ du -h -d1 archive.canonical.com/ubuntu/pool/partner/
 20K     archive.canonical.com/ubuntu/pool/partner/d
 12K     archive.canonical.com/ubuntu/pool/partner/m
 248K	archive.canonical.com/ubuntu/pool/partner/
-
 ```
 
 

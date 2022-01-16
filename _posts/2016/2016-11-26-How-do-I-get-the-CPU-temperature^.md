@@ -12,7 +12,7 @@ votes:        "115 "
 favorites:    
 views:        "1,534,253 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-do-I-get-the-CPU-temperature^.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ $ cat /sys/class/thermal/thermal_zone*/temp
 68000
 49000
 50000
-
 ```
 
 To see what zones the temperatures are referring to use:
@@ -48,7 +47,6 @@ SEN4             59.0°C
 pch_skylake      77.5°C
 B0D4             50.0°C
 x86_pkg_temp     51.0°C
-
 ```
 
 The temperatures are stored in Celsius with 3 implied decimal places. `sed` is used to "prettify" output. 
@@ -65,14 +63,12 @@ Within conky the system variable I used to monitor an Ivy Bridge CPU is:
 
 ``` 
 ${hwmon 2 temp 1}°C
-
 ```
 
 To monitor a Skylake CPU I used:
 
 ``` 
 ${hwmon 0 temp 1}°C
-
 ```
 
 ### Conky display

@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "13,612 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-30-Terminal-splash-screen-with-Weather^-Calendar^-Time-^-Sysinfo^.md
 toc:          false
 navigation:   false
@@ -36,7 +36,6 @@ Weather report: Edmonton               March 2018            ┌─────�
       `-’      14 km              18 19 20 21 22 23 24  
      /   \     0.9 mm             25 26 27 28 29 30 31  
                                                         
-
 ```
 
 Yes it really is -14 in Edmonton and feels like -23. A good time to spend the long-weekend inside playing the newly arrived Tomb Raider 2013! Maybe brush up on that Resume to move to Vancouver or Montreal...
@@ -183,7 +182,6 @@ done < /tmp/terminal
 tput rc                     # Restore saved cursor position.
 
 exit 0
-
 ```
 
 Save the `~/.bashrc" file changes.
@@ -192,7 +190,6 @@ To display the Ubuntu information you need `screenfetch`:
 
 ``` bash
 sudo apt install screenfetch
-
 ```
 
 There are similar display packages to `screenfetch` so shop around!
@@ -208,7 +205,6 @@ else
 ${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
-
 ```
 
 Note the length of the separator line coincides with width of `screenfetch` output. In this case it is 92 characters wide and `gnome-terminal` preferences are set accordingly.

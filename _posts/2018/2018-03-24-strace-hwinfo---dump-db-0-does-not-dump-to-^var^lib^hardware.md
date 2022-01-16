@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "140 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-24-strace-hwinfo---dump-db-0-does-not-dump-to-^var^lib^hardware.md
 toc:          false
 navigation:   false
@@ -27,7 +27,6 @@ In summary the debian version wasn't creating the directories:
 DIR PERMISSION
 /var/lib/hardware 0755
 /var/lib/hardware/udi 0755
-
 ```
 
 I tried creating these directories manually after installing `hwinfo` but the command to dump the database still wouldn't work for me.

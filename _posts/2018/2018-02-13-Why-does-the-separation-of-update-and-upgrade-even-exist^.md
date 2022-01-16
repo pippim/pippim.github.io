@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "567 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-13-Why-does-the-separation-of-update-and-upgrade-even-exist^.md
 toc:          false
 navigation:   false
@@ -43,7 +43,6 @@ google-chrome-stable/stable 65.0.3325.181-1 amd64 [upgradable from: 63.0.3239.13
 libxnvctrl0/xenial 390.48-0ubuntu0~gpu16.04.1 amd64 [upgradable from: 387.22-0ubuntu0~gpu16.04.1]
 nvidia-settings/xenial 390.48-0ubuntu0~gpu16.04.1 amd64 [upgradable from: 387.22-0ubuntu0~gpu16.04.1]
 peek/xenial 1.3.1-0~ppa23~ubuntu16.04.1 amd64 [upgradable from: 1.2.1-0~ppa20~ubuntu16.04.1]
-
 ```
 
 Looking at the output you could decide to have a given package "pinned" or "held back" and not upgraded the next time `sudo apt upgrade" is run. If there were a single "update/upgrade" process you would loose these ability.

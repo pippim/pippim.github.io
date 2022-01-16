@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "844 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-24-Search-is-useless.-How-can-I-force-it-to-index-my-hard-drive-^2018^.md
 toc:          false
 navigation:   true
@@ -40,7 +40,6 @@ $ time locate etc/profile
 real	0m0.696s
 user	0m0.671s
 sys 	0m0.024s
-
 ```
 
 
@@ -67,7 +66,6 @@ drwxr-xr-x  root   root   4096  Jun  4 17:19  /etc/profile.d
 real	0m0.760s
 user	0m0.754s
 sys 	0m0.020s
-
 ```
 
 Notice how the heading tells you the last time files were indexed. If you can't find the file you are looking for and, was created before that time, simply run `sudo updatedb`.
@@ -113,7 +111,6 @@ Here is the bash script you can create using:
 
 ``` 
 sudo -H gedit /usr/local/bin/glocate
-
 ```
 
 Then copy and paste the following line:
@@ -190,7 +187,6 @@ Main () {
 }
 
 Main
-
 ```
 
 Save the file and exit `gedit`.
@@ -199,7 +195,6 @@ Mark the script as executable using:
 
 ``` 
 sudo chmod a+x /usr/local/bin/glocate
-
 ```
 
 If you want to create a desktop shortcut see: [An easy way to create a desktop shortcut?](An easy way to create a desktop shortcut?)

@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,842 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-cron-launching-but-not-executing-script.md
 toc:          false
 navigation:   false
@@ -26,7 +26,6 @@ Change your `monday.sh` script from:
 ``` 
 #!/bin/bash
 ruby ~/Documents/Scripts/monday_task.rb >> ~/Documents/Scripts/monday
-
 ```
 
 to:
@@ -34,7 +33,6 @@ to:
 ``` 
 #!/bin/bash
 /home/asarluhi/.rvm/rubies/ruby-2.3.1/bin/ruby /home/asarluhi/Documents/Scripts/monday_task.rb >> /home/asarluhi/Documents/Scripts/monday
-
 ```
 
 As your `syslog` demonstrates the `monday.sh` script is being run on time so absolute path-names is the only answer. As per OP comment `ruby` also has to be prefixed with absolute path-name.

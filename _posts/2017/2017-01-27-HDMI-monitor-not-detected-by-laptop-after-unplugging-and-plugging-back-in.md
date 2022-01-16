@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,736 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-27-HDMI-monitor-not-detected-by-laptop-after-unplugging-and-plugging-back-in.md
 toc:          false
 navigation:   false
@@ -38,7 +38,6 @@ for MODE in $BAD_MODE $GOOD_MODE; do
 DISPLAY=:0 xrandr --output $OUTPUT --mode $MODE
 sleep 2
 done
-
 ```
 
 I think this script can be improved but wanted to post it in it's original incarnation. 
@@ -64,7 +63,6 @@ else
 fi
 
 exit 0
-
 ```
 
 You will need to modify the if test with your `/sys/class/drm/...` directory. Then modify the true side of the if test with your script file that resets hdmi screen. On the false side of the if test simply replace the code with a `:` (noop) if there is nothing to do when the `hdmi` device is unplugged.
@@ -73,7 +71,6 @@ In order to call this scrip from `udev` during hot-plug events create the file `
 
 ``` bash
 ACTION=="change", SUBSYSTEM=="drm", ENV{HOTPLUG}=="1", RUN+="/path/to/hotplugtv"
-
 ```
 
 Change `/path/to/` to the path where you placed `hotplugtv` script.

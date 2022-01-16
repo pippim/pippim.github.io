@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,715 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-How-should-I-setup-Tuned-adm^.md
 toc:          false
 navigation:   false
@@ -30,7 +30,6 @@ $ systemctl status ondemand
 
 Oct 31 05:30:08 alien systemd[1]: Starting LSB: Set the CPU Frequency Scaling governor to "o
 Oct 31 05:30:09 alien systemd[1]: Started LSB: Set the CPU Frequency Scaling governor to "on
-
 ```
 
 

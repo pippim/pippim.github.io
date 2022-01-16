@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "564 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-10-Laptop-not-shutting-down-on-low-power.md
 toc:          false
 navigation:   false
@@ -118,7 +118,6 @@ TimeAction=120
 # If HybridSleep isn't available, Hibernate will be used
 # If Hibernate isn't available, PowerOff will be used
 CriticalPowerAction=HybridSleep
-
 ```
 
 When percentage is true (default), the lines:
@@ -127,7 +126,6 @@ When percentage is true (default), the lines:
 PercentageLow=10
 PercentageCritical=3
 PercentageAction=2
-
 ```
 
 Means at 10% remaining you are told battery is running low. At 3% remaining a critical warning is issued saying battery is about to die. At 2% remaining your machine shuts down.
@@ -138,7 +136,6 @@ When percentage is false, the lines:
 TimeLow=1200
 TimeCritical=300
 TimeAction=120
-
 ```
 
 Means at 1200 seconds (20 minutes) remaining you are told battery is running low. At 300 seconds (5 minutes) remaining a critical warning is issued saying battery is about to die. At 120 seconds (2 minutes) remaining your machine shuts down.
@@ -153,7 +150,6 @@ org.gnome.settings-daemon.plugins.power time-low 1200
 org.gnome.settings-daemon.plugins.power time-action 120
 org.gnome.settings-daemon.plugins.power time-critical 300
 org.gnome.settings-daemon.plugins.power use-time-for-policy true
-
 ```
 
 and with:
@@ -163,6 +159,5 @@ $ gsettings list-recursively | grep plugins.power | grep percentage
 org.gnome.settings-daemon.plugins.power percentage-low 10
 org.gnome.settings-daemon.plugins.power percentage-critical 3
 org.gnome.settings-daemon.plugins.power percentage-action 2
-
 ```
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "185 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-19-Locate-command-is-returning-too-many-results.md
 toc:          false
 navigation:   false
@@ -33,7 +33,6 @@ rick@alien:~$ locate "display-auto-brightness"
 /mnt/e/lib/systemd/system-sleep/display-auto-brightness
 /mnt/e/usr/local/bin/display-auto-brightness
 /usr/local/bin/display-auto-brightness
-
 ```
 
 The `locate` command is automatically placing the `*` wild card after the search string and returning extra undesired results. The `.png` files should not be returned.

@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "2,220 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-12-Command-line-snake-game^.md
 toc:          false
 navigation:   true
@@ -36,7 +36,6 @@ You can change the size of the screen to make it smaller and more challenging by
 ``` bash
 LASTCOL=40               # Last col of game area
 LASTROW=20               # Last row of game area
-
 ```
 
 Check out options for getting "pretty characters":
@@ -331,7 +330,6 @@ do
         ;;
    esac
 done
-
 ```
 
 

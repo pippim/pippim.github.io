@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "618 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-20-Timezone-changes-do-not-persist.md
 toc:          false
 navigation:   false
@@ -33,14 +33,12 @@ $ timedatectl # lists your current time zone
 $ sudo timedatectl set-timezone "Pacific/Auckland"
 
 $ timedatectl # lists your new time zone
-
 ```
 
 If time zone reverts back to UTC, use this command:
 
 ``` 
 sudo dpkg-reconfigure tzdata
-
 ```
 
   [1]: https://linuxize.com/post/how-to-set-or-change-timezone-on-ubuntu-18-04/

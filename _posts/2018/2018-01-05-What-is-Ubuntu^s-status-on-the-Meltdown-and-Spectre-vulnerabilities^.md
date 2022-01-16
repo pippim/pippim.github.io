@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "28,632 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-05-What-is-Ubuntu^s-status-on-the-Meltdown-and-Spectre-vulnerabilities^.md
 toc:          true
 navigation:   true
@@ -328,7 +328,6 @@ index 000000000000..d11eff61fc9a
 +   as mount(8) failing to mount the rootfs.  These have
 +   tended to be TLB invalidation issues.  Usually invalidating
 +   the wrong PCID, or otherwise missing an invalidation.
-
 ```
 
 If you have any questions about the programmers' documentation post a comment below and I'll try my best to answer.

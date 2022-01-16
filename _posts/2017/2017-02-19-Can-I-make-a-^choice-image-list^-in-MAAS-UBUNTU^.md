@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "320 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-19-Can-I-make-a-^choice-image-list^-in-MAAS-UBUNTU^.md
 toc:          false
 navigation:   false
@@ -52,7 +52,6 @@ inspection by doing the following:
     - service ssh start
     - ifconfig (to find configured IP)
     - ssh into the system as the ubuntu user
-
 ```
 
 Also there is this complaining how MAAS installs grub to `/dev/sda` instead of the real boot drive which is `/dev/sdb` ([MAAS always installs GRUB to /dev/sda, even when that's inappropriate][3]):

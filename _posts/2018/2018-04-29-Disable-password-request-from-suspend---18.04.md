@@ -12,7 +12,7 @@ votes:        "64 "
 favorites:    
 views:        "48,224 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Disable-password-request-from-suspend---18.04.md
 toc:          false
 navigation:   false
@@ -24,14 +24,12 @@ For most Ubuntu distributions and versions try this in the terminal:
 ``` 
 gsettings get org.gnome.desktop.screensaver ubuntu-lock-on-suspend
 true
-
 ```
 
 If the result is `true` then set it to `false` using:
 
 ``` 
 gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
-
 ```
 
 Just remember to reset it before your cleaning person comes over for monthly work.

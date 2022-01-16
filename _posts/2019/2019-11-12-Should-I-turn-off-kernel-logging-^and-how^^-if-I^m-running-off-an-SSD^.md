@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "3,108 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Should-I-turn-off-kernel-logging-^and-how^^-if-I^m-running-off-an-SSD^.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ First step is to install `nvme-cli` because it provides the most information:
 
 ``` 
 sudo apt install nvme-cli
-
 ```
 
 Next gather information available from SSD:
@@ -59,7 +58,6 @@ Warning Temperature Time            : 0
 Critical Composite Temperature Time : 0
 Temperature Sensor 1                : 42 C
 Temperature Sensor 2                : 55 C
-
 ```
 
 The percentage used is `0%` after two years. When it hits `100%` then theoretically the drive is all used up and needs replacing. But here is someone who has used up `250%` which one would think impossible:

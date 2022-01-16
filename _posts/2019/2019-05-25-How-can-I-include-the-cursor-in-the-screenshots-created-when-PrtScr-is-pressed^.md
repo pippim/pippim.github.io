@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "1,720 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-25-How-can-I-include-the-cursor-in-the-screenshots-created-when-PrtScr-is-pressed^.md
 toc:          false
 navigation:   false
@@ -28,14 +28,12 @@ Use this command to check current settings:
 ``` 
 gsettings get org.gnome.gnome-screenshot include-pointer
 false
-
 ```
 
 Use this command to turn on the option:
 
 ``` 
 gsettings set org.gnome.gnome-screenshot include-pointer true
-
 ```
 
 Use the same technique for the other `gnome-screenshot` settings.
@@ -51,7 +49,6 @@ And the one-liner code (works with `yad` only) is:
 
 ``` 
 gsettings list-recursively | sed 's/  */\n/;s/  */\n/;s/\&/\&amp;/g' | yad --list --title "gsettings" --item-seperator='\n' --width=1800 --height=800 --wrap-width=600 --column=Group --column=Key --column=Setting --no-markup
-
 ```
 
   [1]: https://www.linuxhelp.com/how-to-install-dconf-editor-on-ubuntu-18-04

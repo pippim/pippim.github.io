@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,641 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-25-What-causes-my-fan-to-run^.md
 toc:          false
 navigation:   false
@@ -29,7 +29,6 @@ $ cat /sys/class/thermal/thermal_zone*/temp
 27800
 29800
 60000
-
 ```
 
 On my system the last temperature is that of the CPU 60 degrees Celsius. The first two temperatures I honestly can't say what they are but I presume ambient temperatures somewhere on the motherboard. Keep in mind this is a laptop.
@@ -51,7 +50,6 @@ wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.10/linux-headers-4.8.10-
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.8.10/linux-image-4.8.10-040810-generic_4.8.10-040810.201611210531_amd64.deb
 sudo dpkg -i *.deb
 sudo reboot
-
 ```
 
 **NOTE:** Manually installing the newest kernel requires extra steps to manually remove it in the future when it is no longer needed. Also note the newest kernel is not supported by Ubuntu and crash reports will be ignored by them. The fact the newest kernel comes from Ubuntu should not give you a false sense of security.

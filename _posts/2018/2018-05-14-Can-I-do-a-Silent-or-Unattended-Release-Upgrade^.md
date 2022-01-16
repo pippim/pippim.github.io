@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "34,006 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-14-Can-I-do-a-Silent-or-Unattended-Release-Upgrade^.md
 toc:          false
 navigation:   false
@@ -42,7 +42,6 @@ Configuration file '/etc/systemd/logind.conf'
 
 Y
 CRASHED... NOTHING HAPPENS NOW... WILL KILL AND RESTART WITHOUT -f OPTION...
-
 ```
 
 Due to Input Inhibitors neither reboot nor shutdown will work after killing the script. You have to do a cold shutdown (hold power button ~ 10 seconds).
@@ -68,7 +67,6 @@ nvme0n1                                                        477G Samsung SSD 
 ├─nvme0n1p2 vfat                           /boot/efi            99M 
 ├─nvme0n1p9 swap    Linux Swap             [SWAP]              7.9G 
 └─nvme0n1p7 ext4    NVMe_Ubuntu_16.0       /                  44.6G 
-
 ```
 
 

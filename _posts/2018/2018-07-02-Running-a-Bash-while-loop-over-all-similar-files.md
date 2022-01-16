@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "3,787 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-02-Running-a-Bash-while-loop-over-all-similar-files.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ From this **Stack Overflow** answer: [List files that only have number in names]
 
 ``` bash
 find . -regex '.*/[0-9]+\.tst'
-
 ```
 
 **OR**
@@ -37,7 +36,6 @@ while IFS='' read -r -d '' file
 do
   # ...
 done < <(find . -regex '.*/[0-9]+\.tst' -print0)
-
 ```
 
 
@@ -52,7 +50,6 @@ $ ls *.tst
 $ find . -maxdepth 1 -regex '.*/[0-9]+\.tst'
 ./1.tst
 ./2.tst
-
 ```
 
 **NOTE:** Use `-maxdepth 1` argument to only list numbered files in the current directory and not in sub-directories.

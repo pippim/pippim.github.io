@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "89,897 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-15-Very-high-fan-speed-on-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -31,7 +31,6 @@ Installation is the predictable
 
 ``` 
 sudo apt install tlp
-
 ```
 
 Configuration is automatic and I've never had to change it out of the box. 

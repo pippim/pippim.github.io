@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "16,559 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-What-is-^run^user^1000^gvfs^.md
 toc:          false
 navigation:   false
@@ -46,7 +46,6 @@ dr-x------ 1 rick rick 0 Dec 31  1969 ./
 dr-x------ 3 rick rick 0 May  9 18:20 ../
 drwx------ 1 rick rick 0 Dec 31  1969 Internal storage/
 drwx------ 1 rick rick 0 Dec 31  1969 SD card/
-
 ```
 
 The USB enumeration is notorious for changing so you can be assured the directory name will be different next time. `/media` "stuff" on the other hand is static.

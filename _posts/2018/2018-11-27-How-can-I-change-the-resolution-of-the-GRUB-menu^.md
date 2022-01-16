@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "22,873 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-27-How-can-I-change-the-resolution-of-the-GRUB-menu^.md
 toc:          false
 navigation:   false
@@ -45,7 +45,6 @@ $ ll /usr/share/grub/themes/Tuxkiller2/*.pf2
 -rwxrwx--- 1 root root  41020 Jul 11 17:16 /usr/share/grub/themes/Tuxkiller2/ubuntu_regular_18.pf2*
 -rwxrwx--- 1 root root  46423 Jul 11 17:16 /usr/share/grub/themes/Tuxkiller2/ubuntu_regular_20.pf2*
 -rwxrwx--- 1 root root  68602 Jul 11 16:59 /usr/share/grub/themes/Tuxkiller2/ubuntu_regular_28.pf2*
-
 ```
 
 To create a font use the `grub-mkfont` program like this guide outlines: [Increase Font in GRUB for High DPI Screens][2]:
@@ -53,7 +52,6 @@ To create a font use the `grub-mkfont` program like this guide outlines: [Increa
 ``` 
 sudo grub-mkfont --output=/boot/grub/fonts/DejaVuSansMono24.pf2 \
   --size=24 /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
-
 ```
 
 Then in your `/etc/default/grub` configuration file tell it to use the new `.pf2` font file:
@@ -63,14 +61,12 @@ Then in your `/etc/default/grub` configuration file tell it to use the new `.pf2
 # sudo grub-mkfont --output=/boot/grub/fonts/DejaVuSansMono24.pf2 \
 #    --size=24 /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
 GRUB_FONT=/boot/grub/fonts/DejaVuSansMono24.pf2
-
 ```
 
 Finally run:
 
 ``` 
 sudo update-grub
-
 ```
 
 

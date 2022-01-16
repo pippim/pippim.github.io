@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "2,773 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-02-How-do-I-make-my-Ubuntu-Desktop-have-a-dock-at-the-bottom-and-system-utilization-widgets-on-the-side^.md
 toc:          false
 navigation:   false
@@ -25,7 +25,6 @@ Assuming you don't want to install a totally new desktop, you can simply move th
 
 ``` 
 gsettings set com.canonical.Unity.Launcher launcher-position bottom
-
 ```
 
 [Reference][1]

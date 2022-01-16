@@ -12,7 +12,7 @@ votes:        "18 "
 favorites:    
 views:        "568,175 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade^.md
 toc:          false
 navigation:   false
@@ -58,7 +58,6 @@ Open a terminal session with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> and use
 cd ~/Downloads # Change to your downloads directory
 ll linux*.deb  # Check if any previous downloads still exist
 rm linux*.deb  # Use this command if any previous downloads found
-
 ```
 
 Now switch back to the download screen above and single-click on all three of the `.deb` kernel downloads. After downloads complete (you'll see status in your browser) switch back to terminal session and use:
@@ -67,7 +66,6 @@ Now switch back to the download screen above and single-click on all three of th
 sudo dpkg -i linux*.deb
 rm linux*.deb
 sudo reboot
-
 ```
 
 Voila! - you are running the latest kernel when the first option in grub boot menu is selected. Your older kernel versions are still available under grub's **Advanced Options** menu.

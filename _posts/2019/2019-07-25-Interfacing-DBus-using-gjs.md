@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "708 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-25-Interfacing-DBus-using-gjs.md
 toc:          false
 navigation:   false
@@ -82,7 +82,6 @@ kbdProxy.connectSignal("BrightnessChanged", function(proxy) {
 
 let loop = new GLib.MainLoop(null, false);
 loop.run();
-
 ```
 
 
@@ -92,21 +91,18 @@ If not already done, install gjs:
 
 ``` java
 sudo apt update && sudo apt install gjs
-
 ```
 
 Create a directory for your Java Scripts:
 
 ``` java
 mkdir ~/javascript
-
 ```
 
 Use `gedit` to create sample script above and save it:
 
 ``` java
 gedit ~/javascript/dbusclient.js
-
 ```
 
 Now run it:
@@ -114,7 +110,6 @@ Now run it:
 ``` java
 cd ~/javascript
 gjs dbusclient.js
-
 ```
 
 WIP Errors reported (I'll fix and come back to this Q&A with results):
@@ -126,7 +121,6 @@ _makeProxyMethod/<@resource:///org/gnome/gjs/modules/overrides/Gio.js:124
 @dbusclient.js:36
 
 JS_EvaluateScript() failed
-
 ```
 
 
@@ -143,7 +137,6 @@ $ dbus-send --print-reply \
             --dest=org.freedesktop.UPower \
             /org/freedesktop/UPower \
             org.freedesktop.UPower.EnumerateDevices
-
 ```
 
 Return this:
@@ -157,7 +150,6 @@ method return time=1564075040.686545 sender=:1.49 -> destination=:1.145 serial=4
       object path "/org/freedesktop/UPower/devices/mouse_0003o046Do101Ax0017"
       object path "/org/freedesktop/UPower/devices/keyboard_0003o046Do2010x0018"
    ]
-
 ```
 
 This could be a handy script to modify for monitoring Laptop Battery charge percentage though.

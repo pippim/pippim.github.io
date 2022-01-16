@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "4,893 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-10-Help-using-crontab-to-play-a-sound.md
 toc:          false
 navigation:   false
@@ -23,7 +23,6 @@ As per this answer: [Can I use cron to chime at top of hour like a grandfather c
 
 ``` 
 export XDG_RUNTIME_DIR="/run/user/1000"
-
 ```
 
 So rather than calling your music player directly, call a script name in `crontab` like this:
@@ -32,7 +31,6 @@ So rather than calling your music player directly, call a script name in `cronta
 0 1,13 * * * /home/ME/bin/big-ben.sh /home/ME/bin/bigben/Clock_Chime_01.ogg >/dev/null 2>&1 # JOB_ID_75
     (... SNIP ...)
 45 0-23 * * * /home/ME/bin/big-ben.sh /home/ME/bin/bigben/Clock_Chime_15-3.ogg >/dev/null 2>&1
-
 ```
 
 - Replace `ME` with your user name.
@@ -47,7 +45,6 @@ Then create your `/usr/local/bin/big-ben.sh` script:
 #!/bin/bash
 export XDG_RUNTIME_DIR="/run/user/1000"
 mplayer -really-quiet "$1" -volume 100
-
 ```
 
 - "$1" is the parameter 1 passed by `crontab` entry to your script
@@ -56,5 +53,4 @@ Remember to mark the script executable by using:
 
 ``` 
 chmod a+x /usr/local/bin/big-ben.sh
-
 ```

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "3,218 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-24-How-to-standby-a-monitor-using-xset-in-multi-monitor-setup^.md
 toc:          false
 navigation:   false
@@ -62,7 +62,6 @@ Font Path:
 DPMS (Energy Star):
   Standby: 0    Suspend: 0    Off: 0
   DPMS is Disabled
-
 ```
 
 Notice these lines:
@@ -70,7 +69,6 @@ Notice these lines:
 ``` 
 Screen Saver:
   prefer blanking:  yes
-
 ```
 
 - You would likely want `prefer blanking:  no`
@@ -81,7 +79,6 @@ Also notice these lines:
 DPMS (Energy Star):
   Standby: 0    Suspend: 0    Off: 0
   DPMS is Disabled
-
 ```
 
 - You would likely want `DPMS is enabled` to set monitor to `Standby` when desired.

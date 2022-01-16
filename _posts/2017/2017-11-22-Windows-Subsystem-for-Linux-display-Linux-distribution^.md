@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "3,817 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-22-Windows-Subsystem-for-Linux-display-Linux-distribution^.md
 toc:          false
 navigation:   false
@@ -233,7 +233,6 @@ $f4             \` $f3:EEEEtttt::::z7          ${f6}Font: ${f7}$font
 $f3                 $f3'VEzjt:;;z>*\`        $rst
 
 EOF
-
 ```
 
 I won't spend a lot of time dissecting it but you will notice it's a hybrid of some Linux kernel stuff and some Windows kernel stuff.
@@ -246,7 +245,6 @@ On the other hand this Windows kernel line displays your motherboard model:
 
 ``` 
 board=`/mnt/c/Windows/System32/wbem/WMIC.exe baseboard get product | tail -2 | tr -d '\r '`
-
 ```
 
 

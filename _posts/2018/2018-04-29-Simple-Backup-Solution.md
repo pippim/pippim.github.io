@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "3,684 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Simple-Backup-Solution.md
 toc:          false
 navigation:   false
@@ -56,7 +56,6 @@ fi
 
 today=$( date +%Y-%m-%d-%A )
 /mnt/e/bin/daily-backup.sh Daily-$(hostname)-$Distro-backup-$today
-
 ```
 
 
@@ -79,7 +78,6 @@ In summary:
 ``` bash
 DAYS_TO_KEEP=60
 find $BACKUP_DIR -maxdepth 1 -mtime +"$DAYS_TO_KEEP" -exec rm -rf {} \;
-
 ```
 
 

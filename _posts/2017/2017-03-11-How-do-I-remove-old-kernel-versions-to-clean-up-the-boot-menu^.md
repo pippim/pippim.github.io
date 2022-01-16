@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,161,840 "
 accepted:     
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-11-How-do-I-remove-old-kernel-versions-to-clean-up-the-boot-menu^.md
 toc:          true
 navigation:   true
@@ -67,7 +67,6 @@ The following packages will be REMOVED:
 0 upgraded, 0 newly installed, 24 to remove and 2 not upgraded.
 After this operation, 2,330 MB disk space will be freed.
 Do you want to continue? [Y/n] 
-
 ```
 
 
@@ -191,28 +190,21 @@ done
 if [ "$i" -gt 0 ] ; then
      apt-get purge $list
 fi
-
 ```
 
 **NOTE:** You need sudo permission to create the file so use:
 
 ``` bash
 gksu gedit /usr/local/bin/rm-kernels
-
 ```
 
 To make file executable use:
 
 ``` bash
 sudo chmod +x /usr/local/bin/rm-kernels
-## 
-```
+## ```
 
 
-
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
 
 # Server Version
 
@@ -222,28 +214,23 @@ sudo chmod +x /usr/local/bin/rm-kernels
 
 ``` bash
 `sudo apt install dialog`
-
 ```
 
 Dialog is in the default Ubuntu Desktop installation but not in Ubuntu Server.
-
-
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
 
 ## Sample screen
 
 [![rm-kernels-server 1][4]][4]
 
-
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
-
 ## `rm-kernels-server` bash code
 
 {% include copyHeader.html %}
 ``` bash
-#!/bin/bash
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
+
+# !/bin/bash
 
 # NAME: rm-kernels-server
 # PATH: /usr/local/bin
@@ -256,6 +243,10 @@ Dialog is in the default Ubuntu Desktop installation but not in Ubuntu Server.
 
 #       With 10 kernels on an SSD, empty cache from sudo prompt (#) using:
 #       # free && sync && echo 3 > /proc/sys/vm/drop_caches && free
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
+
 #       First time for `du` 34 seconds.
 #       Second time for `du` 1 second.
 
@@ -364,7 +355,6 @@ done
 if [ "$i" -gt 0 ] ; then
     apt-get purge $list
 fi
-
 ```
 
 
@@ -372,10 +362,6 @@ fi
 
 
 ----------
-
-
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr9" class ="hdr-btn">Skip</a></div>
 
 ## July 28, 2017 Updates
 
@@ -394,6 +380,6 @@ The dialog box used to display each Kernel's **Last Access Date**. This date can
   [4]: https://i.stack.imgur.com/CJyAf.png
 
 
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
 

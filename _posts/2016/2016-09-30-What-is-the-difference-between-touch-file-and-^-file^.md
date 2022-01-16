@@ -12,7 +12,7 @@ votes:        "28 "
 favorites:    
 views:        "40,951 "
 accepted:     Accepted
-uploaded:     2022-01-14 20:03:42
+uploaded:     2022-01-15 17:41:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-30-What-is-the-difference-between-touch-file-and-^-file^.md
 toc:          false
 navigation:   false
@@ -53,7 +53,6 @@ rick@dell:~$ touch EmptyFile
 rick@dell:~$ ls -l Empty*
 -rw-rw-r-- 1 rick rick 6 Sep 29 20:32 EmptyFile
 -rw-rw-r-- 1 rick rick 0 Sep 29 20:27 EmptyFile2
-
 ```
 
 
@@ -65,7 +64,6 @@ A long form to empty a file would be:
 
 ``` 
 cat /dev/null > emptyme.fil
-
 ```
 
 Using `> emptme.fil` accomplishes the same thing in a compact format of redirecting nothing to the file.
