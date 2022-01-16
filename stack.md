@@ -1432,7 +1432,7 @@ def check_code_indent(ln):
 
     ''' Code blocks may be indented which are called "in_code_indent" here.
 
-        If line begins with four spaces condsider it entering a code indent.
+        If line begins with four spaces consider it entering a code indent.
         
         TODO: code indents immediately following a ul (unordered list) or 
         li (list item) are not considered a code indent. Neither are code
@@ -1457,8 +1457,7 @@ def check_code_indent(ln):
             # #!/bin/bash
             # #!/bin/.... (python anywhere in line)
             this_language = language_used
-            # TODO Check past boundary
-            she_language = check_shebang(ln)
+            she_language = check_shebang()
             if she_language:
                 this_language = she_language
             # print('BEFORE ln:', ln)
@@ -1468,10 +1467,49 @@ def check_code_indent(ln):
             ln = ln[4:]     # Remove first four characters
             # print('ln:', ln)
     elif in_code_indent:
-        in_code_indent = False  # Code indent has ended
-        ln = ln + "\n```\n"  # Add ending code block
+        # Because code indents can have empty spacing lines
+        # However if line after this is regular text we do want to
+        # end now
+        stripped_line = ln.strip()
+        if stripped_line == "":
+            # This is an empty line, allowed in indented code block
+            if indented_code_block_ahead():
+                # Another indented code block line immediately coming up
+                # EG: https://askubuntu.com/q/1164186
+                #percent_complete_close()
+                #print(row[LINK])
+                return ln  # Return empty line
+        in_code_indent = False  # Code indent has ended with null line
+        ln += "```\n"           # Add extra ending fenced code block
 
     return ln
+
+
+def indented_code_block_ahead():
+    """ We are checking indented code block and found line that
+        doesn't begin with four spaces.
+
+        Look ahead to see if a regular markdown line is next up. If so we will
+        end our code block now.
+
+        Return True if another indented code block line is in our future else
+        return False.
+
+    """
+    next_index = line_index + 1
+    while True:
+        if next_index >= line_count - 1:
+            # Hit end of post without finding another indented code block
+            return False
+        next_line = lines[next_index].rstrip()
+        if next_line[0:4] == "    ":
+            # next_line is an indented code block
+            return True
+        if len(next_line) >= 1:
+            # next_line is not indented code block
+            return False
+        # next_line is empty which is allowed for indented code block
+        next_index += 1
 ```
 
 <a id="hdr29"></a>
