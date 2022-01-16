@@ -1125,7 +1125,13 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
+This video shows:
 
+1. The Lyrics "Hamburger Menu" options
+2. Fine-tune time-index window opens up and pauses the regular music player
+3. Select lyric lines in the lyrics score
+4. Begin sync button. As music plays you can click the line as it is sung
+5. Close Fine-tune window and regular music player resumes where it was interrupted
 
 ---
 
