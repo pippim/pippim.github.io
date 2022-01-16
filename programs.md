@@ -20,6 +20,7 @@ includes the Top Ten Answers and the Posts by Tag nested accordion with
 {{ site.post_count }} posts.
 
 <font size="2">[Read More...](stack.html)</font>
+<a href="stack.html" style="font-size: 50px; text-decoration: none">Read More...</a>
 
 ---
 
@@ -50,6 +51,7 @@ the remote drives as local partitions.
 < are not already on your system.
 
 <font size="3">[Read More...](mserve.html)</font>
+<a href="mserve.html" style="font-size: 100px; text-decoration: none">Read More...</a>
 
 ---
 
