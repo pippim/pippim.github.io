@@ -1162,6 +1162,9 @@ This video shows:
 
 The following video shows again how the *Fine-tune time index* function is selected.
 This time the video spends a little time showing you all the buttons in the function.
+After turning on sound for the video below and clicking play, make sure you move your
+mouse outside the video. This way you can see the entire contents underneath the video
+control bar.
 
 <video src="https://user-images.githubusercontent.com/92641463/149672896-ed6b96ac-9c1f-4017-9b15-e41adac8126b.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149672896-ed6b96ac-9c1f-4017-9b15-e41adac8126b.mp4" 
@@ -1177,12 +1180,22 @@ This also video shows:
 4. The function plays the first second of each line
 5. We noticed at time index `154` seconds the instrumental section was left on too long. This caused the Chorus line and next line to start too late.
 6. Those three lines were selected and <kbd>Being sync</kbd> button was used to fix the timing
-7. Finally, the time indices are saved, the function is closed and the regular music player resumes play automatically.
+7. When fixing the timing though we clicked too soon rather than too late as before. So we click back on a previous line and take a "mulligan". Then we click again as the music catches up.
+8. Next, the time indices are saved by clicking the <kbd>Save</kbd> button
+9. Finally, the function is closed by clicking the <kbd>Close</kbd> button and the regular music player resumes play automatically.
 
 <a id="hdr15"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
 
-# BLAH BLAH
+# Locations
+
+In addition to the music stored on your local storage, you can access
+music stored on a File Server or your Cell Phone.
+
+If the File Server spends most of its life sleeping, you can wake it
+up with a "Magic Packet" and keep it awake by "touching" a specific
+filename on the server.
+
 
 
 <a id="hdr16"></a>
