@@ -49,7 +49,7 @@ the remote drives as local partitions.
 
 > **NOTE:** This program is still under development and may require extra steps to install any missing python module dependencies.
 >  
-> Some dependency examples are: `tk`, `pil`, `ffmpeg`, `libdiscid`, `musicbrainzngs`, `requests`, `mtagen` and `beautifulsoup`.
+> Some dependency examples are: `tk`, `ttkwidgets`, `pil`, `ffmpeg`, `libdiscid`, `musicbrainzngs`, `requests`, `magic`, `mutagen` and `beautifulsoup`.
 
 <a href="mserve.html" style="font-size: 20px;">Read More...</a>
 
