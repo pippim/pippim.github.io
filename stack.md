@@ -646,11 +646,15 @@ by the `site:` front matter variable.
 The long version (`More`) has many fields useful for
 designing your website.
 
+The **View markdown on GitHub Pages** button is helpful
+to see how `stack_to_blog.py` converted the markdown
+from Stack Exchange Post to GitHub Pages Jekyll Post.
+
 ---
 
 If you want to change how front matter is displayed
-on your website page, edit the files `_includes/post.html`
-and `assets/js/post_fm.html`.
+on your website blog post page, edit the files
+`_includes/post.html` and `assets/js/post_fm.html`.
 
 The <mark>Highlight Formatting</mark> is defined in
 `assets/css/style.scss`:
