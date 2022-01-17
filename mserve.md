@@ -1087,8 +1087,6 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-width: 100% !important; height: auto !important;
-
 **Notes:**
 
 1. When video starts with song in orange the default is "Auto Scrolling"
