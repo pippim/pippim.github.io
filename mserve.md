@@ -1074,8 +1074,8 @@ def d_print(*args):
 
 ---
 
-<a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
 
 # Lyrics Synchronization
 
@@ -1100,8 +1100,8 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 ---
 
-<a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
 
 ## Basic Time Synchronization
 
@@ -1124,8 +1124,8 @@ This video shows:
 
 ---
 
-<a id="hdr13"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
 
 ## Fine-tune Time Synchronization
 
@@ -1158,8 +1158,8 @@ This video shows:
 
 ---
 
-<a id="hdr14"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
 
 ### Sample All option
 
@@ -1189,8 +1189,8 @@ This also video shows:
 
 ---
 
-<a id="hdr15"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
+<a id="hdr14"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
 
 # Hide Chronology
 
@@ -1211,6 +1211,9 @@ skin background color can change depending on the color of the pixel at
 "3, 3" in the artwork.
 
 ---
+
+<a id="hdr15"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
 
 # Locations
 
