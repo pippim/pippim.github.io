@@ -359,6 +359,7 @@ Key features of tooltips:
 - They appear after a delay
 - They fade in
 - The stay visible for a short time based on how long they are
+- They move instep with mouse movements 
 - They fade out 
 
 Here is the key code:
