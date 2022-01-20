@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,332 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:35:30
+uploaded:     2022-01-19 20:40:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-08-How-to-disable-access-to-Win7-disk-partition^Dual-Boot^.md
 toc:          false
 navigation:   false

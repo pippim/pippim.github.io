@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,456 "
 accepted:     
-uploaded:     2022-01-19 20:35:30
+uploaded:     2022-01-19 20:40:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-09-17-Should-I-use-MBR-or-GPT-when-I-intend-to-use-both-Ubuntu-and-Windows^.md
 toc:          false
 navigation:   false

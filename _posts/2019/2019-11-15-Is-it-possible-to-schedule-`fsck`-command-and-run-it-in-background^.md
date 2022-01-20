@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,129 "
 accepted:     
-uploaded:     2022-01-19 20:35:30
+uploaded:     2022-01-19 20:40:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-15-Is-it-possible-to-schedule-`fsck`-command-and-run-it-in-background^.md
 toc:          false
 navigation:   true

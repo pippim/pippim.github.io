@@ -12,7 +12,7 @@ votes:        "16 "
 favorites:    2
 views:        "4,675 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:35:30
+uploaded:     2022-01-19 20:40:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-27-How-to-pass-2^^dev^null-as-a-variable^.md
 toc:          false
 navigation:   false

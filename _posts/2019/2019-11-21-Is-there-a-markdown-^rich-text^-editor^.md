@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "7,314 "
 accepted:     
-uploaded:     2022-01-19 20:35:30
+uploaded:     2022-01-19 20:40:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-21-Is-there-a-markdown-^rich-text^-editor^.md
 toc:          false
 navigation:   false

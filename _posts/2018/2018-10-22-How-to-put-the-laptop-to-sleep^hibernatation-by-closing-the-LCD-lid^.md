@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "853 "
 accepted:     
-uploaded:     2022-01-19 20:35:30
+uploaded:     2022-01-19 20:40:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-22-How-to-put-the-laptop-to-sleep^hibernatation-by-closing-the-LCD-lid^.md
 toc:          false
 navigation:   false

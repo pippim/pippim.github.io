@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "8,921 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:35:30
+uploaded:     2022-01-19 20:40:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Can-I-safely-resize-Windows-10-system-partition-from-Ubuntu^.md
 toc:          false
 navigation:   false

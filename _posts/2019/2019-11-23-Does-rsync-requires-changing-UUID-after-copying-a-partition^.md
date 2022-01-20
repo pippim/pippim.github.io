@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,338 "
 accepted:     
-uploaded:     2022-01-19 20:35:30
+uploaded:     2022-01-19 20:40:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-23-Does-rsync-requires-changing-UUID-after-copying-a-partition^.md
 toc:          false
 navigation:   false

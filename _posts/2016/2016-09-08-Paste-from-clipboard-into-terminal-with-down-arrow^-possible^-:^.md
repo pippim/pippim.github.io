@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "975 "
 accepted:     
-uploaded:     2022-01-19 20:35:30
+uploaded:     2022-01-19 20:40:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-08-Paste-from-clipboard-into-terminal-with-down-arrow^-possible^-:^.md
 toc:          false
 navigation:   false

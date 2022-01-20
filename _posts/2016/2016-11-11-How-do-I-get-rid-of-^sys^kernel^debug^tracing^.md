@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "10,778 "
 accepted:     
-uploaded:     2022-01-19 20:35:30
+uploaded:     2022-01-19 20:40:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-11-How-do-I-get-rid-of-^sys^kernel^debug^tracing^.md
 toc:          false
 navigation:   false
