@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "442 "
 accepted:     Accepted
-uploaded:     2022-01-16 15:34:09
+uploaded:     2022-01-19 20:19:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-05-How-do-I-get-a-Zenity-feature-in-Yad^.md
 toc:          false
 navigation:   false

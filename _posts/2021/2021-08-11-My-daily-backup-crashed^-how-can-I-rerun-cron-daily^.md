@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "346 "
 accepted:     Accepted
-uploaded:     2022-01-16 15:34:09
+uploaded:     2022-01-19 20:19:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-08-11-My-daily-backup-crashed^-how-can-I-rerun-cron-daily^.md
 toc:          false
 navigation:   false

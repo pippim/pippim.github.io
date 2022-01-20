@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    3
 views:        "6,341 "
 accepted:     
-uploaded:     2022-01-16 15:34:09
+uploaded:     2022-01-19 20:19:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-01-How-to-interpret-time-^real^^-^user^-and-^sys^.md
 toc:          false
 navigation:   false

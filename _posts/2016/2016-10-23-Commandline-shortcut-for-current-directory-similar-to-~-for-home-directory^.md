@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "70,821 "
 accepted:     
-uploaded:     2022-01-16 15:34:09
+uploaded:     2022-01-19 20:19:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-23-Commandline-shortcut-for-current-directory-similar-to-~-for-home-directory^.md
 toc:          false
 navigation:   false

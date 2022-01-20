@@ -41,7 +41,7 @@ echo "=== COMMIT MESSAGE set to: '$commit_message'"
 cd ~/website2
 
 echo
-echo "=== PULLING: ~/website2 changes to github.com"
+echo "=== PULLING: $PWD changes to github.com"
 
 git pull
 retVal=$?
@@ -79,7 +79,7 @@ echo "python3" >> rouge_languages.txt  # Tested and it works in rouge
 if [[ -e "$QUERY" ]] ; then
     mv "$QUERY" QueryResults.csv
     echo
-    echo "=== MOVING: QueryResults.csv from: $QUERY to ~/website/sede"
+    echo "=== MOVING: QueryResults.csv from: $QUERY to $PWD"
 fi
 
 # One Time changes between weekly stack exchange data dumps
@@ -90,7 +90,7 @@ sed -i 's%https://askubuntu.com/questions/1039357/a-timer-to-set-up-different-al
 # https://askubuntu.com/questions/1039357/set-of-countdown-timers-with-alarm/1039377#1039377
 
 echo
-echo "=== RUNNING: ~/website/sede/stack-to-blog.py"
+echo "=== RUNNING: $PWD/stack-to-blog.py"
 
 ### BIG TICKET EVENT ###
 stack-to-blog.py
@@ -104,7 +104,7 @@ fi
 cd ~/website2
 
 echo
-echo "=== UPDATING: ~/website2/_posts/ and /_includes/"
+echo "=== UPDATING: $PWD/_posts/ and /_includes/"
 
 rm -rf _posts/
 mkdir _posts/
@@ -144,7 +144,7 @@ if [ $retVal -ne 0 ]; then
 fi
 
 echo
-echo "=== UPDATING: Configuration file: ~/website2/_config.yml"
+echo "=== UPDATING: Configuration file: $PWD/_config.yml"
 
 cp ~/website/_config.yml .
 
@@ -163,7 +163,7 @@ if [ $retVal -ne 0 ]; then
 fi
 
 echo
-echo "=== PUSHING: ~/website2 changes to github.com"
+echo "=== PUSHING: $PWD changes to github.com"
 
 git push
 retVal=$?
@@ -181,12 +181,3 @@ wget -qO original 'https://raw.githubusercontent.com/pages-themes/cayman/master/
 wget -qO modified 'https://raw.githubusercontent.com/pippim/pippim.github.io/main/_sass/jekyll-theme-cayman.scss'
 diff original modified
 rm original modified
-# TODO: Save results to file and compare week-to-week for changes in diff results
-
-# Get GitHub Pages status for 2 minutes: every 1 second for 120 times
-count=0
-
-#$ curl -u USERNAME https://api.github.com/repos/USERNAME/REPO/pages/builds/latest
-
-## BROKEN :(
-# curl -u pippim https://api.github.com/repos/pippim/pippim.github.io/main/pages/builds/latest

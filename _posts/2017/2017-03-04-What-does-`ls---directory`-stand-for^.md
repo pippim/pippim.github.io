@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "3,253 "
 accepted:     
-uploaded:     2022-01-16 15:34:09
+uploaded:     2022-01-19 20:19:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-04-What-does-`ls---directory`-stand-for^.md
 toc:          false
 navigation:   false

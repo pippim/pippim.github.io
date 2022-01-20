@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "5,980 "
 accepted:     Accepted
-uploaded:     2022-01-16 15:34:09
+uploaded:     2022-01-19 20:19:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-12-How-do-I-enable-docker-as-a-service-without-re-installing-docker^.md
 toc:          false
 navigation:   false

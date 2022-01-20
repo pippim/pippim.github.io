@@ -66,6 +66,12 @@ from random import randint  # To randomly process small set of CSV records
 
     Create list of tag substitutions, eg windows-subsystem-for-linux becomes wsl
 
+    Create list of self-answered questions that have been accepted by yourself.
+    Use this list to override rule of including accepted answers and defer to
+    VOTE_QUALIFIER instead. Just because you accepted your own answer to your
+    own question doesn't mean it was popular in the community when it has zero
+    votes, or even worse is down voted!
+    
     ADD THESE NOTES TO NEW SHELL SCRIPT:
     
     After creating your personal access token:

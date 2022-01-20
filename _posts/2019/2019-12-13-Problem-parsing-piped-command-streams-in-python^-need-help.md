@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "110 "
 accepted:     Accepted
-uploaded:     2022-01-16 15:34:09
+uploaded:     2022-01-19 20:19:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-13-Problem-parsing-piped-command-streams-in-python^-need-help.md
 toc:          false
 navigation:   false

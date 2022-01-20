@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "16,304 "
 accepted:     
-uploaded:     2022-01-16 15:34:09
+uploaded:     2022-01-19 20:19:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-04-Ubuntu-^dual-boot-Windows^-Ethernet-Not-Connecting^Detecting.md
 toc:          false
 navigation:   false
