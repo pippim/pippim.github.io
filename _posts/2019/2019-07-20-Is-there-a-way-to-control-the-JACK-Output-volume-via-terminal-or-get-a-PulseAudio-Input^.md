@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "8,010 "
 accepted:     
-uploaded:     2022-01-19 20:19:27
+uploaded:     2022-01-19 20:21:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-20-Is-there-a-way-to-control-the-JACK-Output-volume-via-terminal-or-get-a-PulseAudio-Input^.md
 toc:          false
 navigation:   false

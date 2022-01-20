@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "81,169 "
 accepted:     
-uploaded:     2022-01-19 20:19:27
+uploaded:     2022-01-19 20:21:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-10-Vim-editor^-how-can-I-save-a-file-in-other-directory.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "903 "
 accepted:     
-uploaded:     2022-01-19 20:19:27
+uploaded:     2022-01-19 20:21:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-28-How-to-list-PIDs-^procesees^-for-one-CPU-core-only^.md
 toc:          false
 navigation:   false

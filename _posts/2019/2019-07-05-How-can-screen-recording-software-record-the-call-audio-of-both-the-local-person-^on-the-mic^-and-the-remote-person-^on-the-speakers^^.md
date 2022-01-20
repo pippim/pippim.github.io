@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "77 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:19:27
+uploaded:     2022-01-19 20:21:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-05-How-can-screen-recording-software-record-the-call-audio-of-both-the-local-person-^on-the-mic^-and-the-remote-person-^on-the-speakers^^.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "136 "
 accepted:     
-uploaded:     2022-01-19 20:19:27
+uploaded:     2022-01-19 20:21:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-14-Package-for-reporting-GUI-problem-in-Ubuntu-19.10.md
 toc:          false
 navigation:   false

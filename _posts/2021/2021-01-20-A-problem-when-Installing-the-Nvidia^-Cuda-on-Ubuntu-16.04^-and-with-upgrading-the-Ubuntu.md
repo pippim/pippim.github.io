@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "908 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:19:27
+uploaded:     2022-01-19 20:21:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-20-A-problem-when-Installing-the-Nvidia^-Cuda-on-Ubuntu-16.04^-and-with-upgrading-the-Ubuntu.md
 toc:          false
 navigation:   false
