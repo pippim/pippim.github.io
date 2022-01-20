@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "228 "
 accepted:     
-uploaded:     2022-01-19 20:24:24
+uploaded:     2022-01-19 20:35:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-How-to-install-2-Graphics-drivers^-and-have-Ubuntu-detect-and-load-which-one-^without-conflict^.md
 toc:          false
 navigation:   false

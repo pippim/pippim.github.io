@@ -12,7 +12,7 @@ votes:        "30 "
 favorites:    
 views:        "41,089 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:24:24
+uploaded:     2022-01-19 20:35:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-30-What-is-the-difference-between-touch-file-and-^-file^.md
 toc:          false
 navigation:   false

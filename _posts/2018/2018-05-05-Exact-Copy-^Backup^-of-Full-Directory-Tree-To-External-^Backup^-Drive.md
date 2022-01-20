@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "404 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:24:24
+uploaded:     2022-01-19 20:35:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-05-Exact-Copy-^Backup^-of-Full-Directory-Tree-To-External-^Backup^-Drive.md
 toc:          false
 navigation:   false

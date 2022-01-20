@@ -12,7 +12,7 @@ votes:        "25 "
 favorites:    
 views:        "293,758 "
 accepted:     
-uploaded:     2022-01-19 20:24:24
+uploaded:     2022-01-19 20:35:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-11-Differences-between-^bin^-^sbin^-^usr^bin^-^usr^sbin^-^usr^local^bin^-^usr^local^sbin.md
 toc:          false
 navigation:   false

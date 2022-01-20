@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "6,286 "
 accepted:     
-uploaded:     2022-01-19 20:24:24
+uploaded:     2022-01-19 20:35:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-31-Can-I-move-all-dotfiles-from-~-to-~^.config^.md
 toc:          false
 navigation:   false

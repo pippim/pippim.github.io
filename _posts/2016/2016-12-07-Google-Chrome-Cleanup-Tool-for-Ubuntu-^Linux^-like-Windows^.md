@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "4,653 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:24:24
+uploaded:     2022-01-19 20:35:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-07-Google-Chrome-Cleanup-Tool-for-Ubuntu-^Linux^-like-Windows^.md
 toc:          false
 navigation:   false

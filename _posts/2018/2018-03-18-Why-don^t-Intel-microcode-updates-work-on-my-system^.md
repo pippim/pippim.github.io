@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "10,097 "
 accepted:     
-uploaded:     2022-01-19 20:24:24
+uploaded:     2022-01-19 20:35:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-18-Why-don^t-Intel-microcode-updates-work-on-my-system^.md
 toc:          false
 navigation:   false

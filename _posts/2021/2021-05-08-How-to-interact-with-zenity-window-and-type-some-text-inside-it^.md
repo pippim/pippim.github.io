@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "626 "
 accepted:     
-uploaded:     2022-01-19 20:24:24
+uploaded:     2022-01-19 20:35:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-05-08-How-to-interact-with-zenity-window-and-type-some-text-inside-it^.md
 toc:          false
 navigation:   false
