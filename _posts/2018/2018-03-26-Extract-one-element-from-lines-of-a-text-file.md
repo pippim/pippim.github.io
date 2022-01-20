@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,299 "
 accepted:     
-uploaded:     2022-01-19 20:21:13
+uploaded:     2022-01-19 20:24:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Extract-one-element-from-lines-of-a-text-file.md
 toc:          false
 navigation:   false

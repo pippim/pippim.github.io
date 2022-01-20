@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "27,168 "
 accepted:     
-uploaded:     2022-01-19 20:21:13
+uploaded:     2022-01-19 20:24:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-how-to-do-I-force-yes-on-fsck.md
 toc:          false
 navigation:   false

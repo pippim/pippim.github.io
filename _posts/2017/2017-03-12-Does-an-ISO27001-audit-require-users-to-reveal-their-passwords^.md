@@ -12,7 +12,7 @@ votes:        "45 "
 favorites:    
 views:        "20,008 "
 accepted:     
-uploaded:     2022-01-19 20:21:13
+uploaded:     2022-01-19 20:24:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-12-Does-an-ISO27001-audit-require-users-to-reveal-their-passwords^.md
 toc:          false
 navigation:   false

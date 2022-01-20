@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,024 "
 accepted:     
-uploaded:     2022-01-19 20:21:13
+uploaded:     2022-01-19 20:24:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-18-Questions-about-Ubuntu-18.04-LTS-Install-^-partition-sizing-on-SSD-^-HDD-system.md
 toc:          false
 navigation:   false

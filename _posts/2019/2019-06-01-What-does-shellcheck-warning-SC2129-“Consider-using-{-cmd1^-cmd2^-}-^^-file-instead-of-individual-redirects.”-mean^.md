@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "733 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:21:13
+uploaded:     2022-01-19 20:24:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-01-What-does-shellcheck-warning-SC2129-“Consider-using-{-cmd1^-cmd2^-}-^^-file-instead-of-individual-redirects.”-mean^.md
 toc:          false
 navigation:   false

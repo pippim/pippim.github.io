@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "478 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:21:13
+uploaded:     2022-01-19 20:24:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-22-Prevent-host-shutting-down-when-remotely-logged-in.md
 toc:          false
 navigation:   true

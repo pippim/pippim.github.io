@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "57 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:21:13
+uploaded:     2022-01-19 20:24:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-02-Suspend-temporarily-linux-update-apt-for-the-session-until-reboot.md
 toc:          false
 navigation:   false

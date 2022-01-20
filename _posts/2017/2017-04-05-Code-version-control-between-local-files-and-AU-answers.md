@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "403 "
 accepted:     
-uploaded:     2022-01-19 20:21:13
+uploaded:     2022-01-19 20:24:24
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-05-Code-version-control-between-local-files-and-AU-answers.md
 toc:          false
 navigation:   false
