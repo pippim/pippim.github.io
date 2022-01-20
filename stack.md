@@ -19,6 +19,23 @@ GitHub Pages Posts. The bash script `refresh.sh` is used to **pull** your
 GitHub Repo, run `stack-to-blog.py` and **push** the results back
 to your website.
 
+<video src="https://user-images.githubusercontent.com/92641463/150269801-cd00408a-d77b-4280-9511-3612e4002577.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/150269801-cd00408a-d77b-4280-9511-3612e4002577.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+This video shows:
+
+1. What the GitHub Pages repo looks likes before running `refresh.sh` bash script
+2. Running `refresh.sh` script in terminal window
+3. GitHub Pages is rebuilt in less than a minute
+4. View a converted Stack Exchange Post
+5. Look at the original post
+6. Return to GitHub Pages and notice the table of Contents and Navigation Bars that have been inserted because post qualifies as a long answer.
+
+
+
 ---
 
 <a id="hdr2"></a>
