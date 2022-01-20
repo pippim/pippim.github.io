@@ -163,7 +163,7 @@ the latter since Google already knows too much about us :)
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer search bar.png"
    alt="Stack Exchange Data Explorer Query Search Bar"
-   style="float: right; width: 60%; margin: 3em 0px 0px 1em;"
+   style="float: right; width: 60%; margin: 3rem 0px 0px 1rem;"
 %}
 
 ## Search For Query
@@ -184,7 +184,7 @@ press <kbd>Enter</kbd> and a list of queries appears:
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer list of queries.png"
    alt="Stack Exchange Data Explorer Query List of Queries"
-   style="float: None; width: 100%; margin: 2em 0px 1em 0px;"
+   style="float: None; width: 100%; margin: 1rem 0px 1rem 0px;"
 %}
 
 For our purposes, select the version from December 12, 2021.
@@ -215,7 +215,7 @@ the results have been cached.
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer download csv.png"
    alt="Stack Exchange Data Explorer Download CSV"
-   style="float: right; width: 25%; margin: 3em 0px 1em 1em;"
+   style="float: right; width: 25%; margin: 3em 0px 1rem 1rem;"
 %}
 
 ## Download Query Results
@@ -234,7 +234,7 @@ Click the <kbd>Download CSV</kbd> button to initiate the download process.
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer save csv.png"
    alt="Stack Exchange Data Explorer Save CSV"
-   style="float: left; width: 65%; margin: 0em 1em 1em 0px;"
+   style="float: left; width: 65%; margin: 0em 1rem 1rem 0px;"
 %}
 
 The download process utilizes a confirmation pop-up window
@@ -505,9 +505,9 @@ have low votes.
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
 
-{% include image.html src="/assets/img/Jekyll.png"
+{% include image.html src="/assets/img/stack/Jekyll.png"
    alt="Jekyll Logo from subpng"
-   style="float: left; width: 75%; margin: 2em 1em 0px 0px;"
+   style="float: left; width: 75%; margin: 2rem 1rem 0px 0px;"
    caption="Jekyll image credit: 
       <a href='https://www.subpng.com/png-xk9iwy/'>Ronncraze</a>"
 %}
@@ -682,7 +682,7 @@ The <mark>Highlight Formatting</mark> is defined in
 mark {
   // total new style: https://www.abeautifulsite.net/posts/a-clever-way-to-style-the-mark-element/
   background: linear-gradient(-100deg, hsla(48,92%,75%,.3), hsla(48,92%,75%,.7) 95%, hsla(48,92%,75%,.1));
-  border-radius: 1em 0;
+  border-radius: 1rem 0;
   padding: .2rem .5rem .2rem .5rem;
 }
 ```
