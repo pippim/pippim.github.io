@@ -502,6 +502,8 @@ list to your browser address bar. Then accept the answers
 in Stack Exchange or, delete the answer and question if they
 have low votes.
 
+---
+
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
 
