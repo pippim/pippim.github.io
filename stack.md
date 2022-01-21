@@ -509,7 +509,7 @@ have low votes.
 
 {% include image.html src="/assets/img/stack/Jekyll.png"
    alt="Jekyll Logo from subpng"
-   style="float: left; width: 75%; margin: 3rem 1rem 0px 0px;"
+   style="float: left; width: 75%; margin: 2.5rem 1rem 0px 0px;"
    caption="Jekyll image credit: 
       <a href='https://www.subpng.com/png-xk9iwy/'>Ronncraze</a>"
 %}
