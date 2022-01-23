@@ -10,9 +10,9 @@ created_date: 2016-11-19 02:21:17
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "1,213 "
+views:        "1,223 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-19-Bash-script-to-maintain-audit-trail-^-log-of-files-accessed.md
 toc:          false
 navigation:   false

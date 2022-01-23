@@ -10,9 +10,9 @@ created_date: 2016-12-20 19:13:37
 edit_date:    2017-04-13 12:24:56
 votes:        "5 "
 favorites:    
-views:        "1,394 "
+views:        "1,400 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-20-Why-is-this-^eject^-icon-showing-next-to-my-drive^.md
 toc:          false
 navigation:   false

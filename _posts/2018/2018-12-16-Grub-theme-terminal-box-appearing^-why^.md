@@ -10,9 +10,9 @@ created_date: 2018-12-16 21:54:51
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "912 "
+views:        "919 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-16-Grub-theme-terminal-box-appearing^-why^.md
 toc:          false
 navigation:   false

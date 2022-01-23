@@ -10,9 +10,9 @@ created_date: 2017-03-26 01:32:34
 edit_date:    2020-06-12 14:37:07
 votes:        "6 "
 favorites:    
-views:        "5,407 "
+views:        "5,416 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-26-How-to-make-zenity-^transient-parent^-warning-disappear-permanently.md
 toc:          false
 navigation:   false

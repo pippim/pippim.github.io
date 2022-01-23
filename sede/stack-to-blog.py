@@ -320,6 +320,9 @@ total_self_accept = 0       # Of those, how many have been accepted?
 self_not_accept_url = []    # List of URLs not accepted
 language_forced = 0         # How many times was language fenced?
 total_bad_rouge = 0         # How many bad syntax highlighting languages
+total_unicode_in_titles = 0  # When sanitizing URL from titles
+total_special_chars_in_titles = 0
+
 
 '''
 Totals for single blog post - reinitialized between blog posts
@@ -1780,18 +1783,12 @@ def front_matter(r):
     return md
 
 
-total_special_chars_in_titles=0
-total_unicode_in_titles=0
-
-
-
 def create_blog_filename(r):
     """ Return blog filename.
         Replace all spaces in title with "-"
-        Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
         Prepend "/YYYY/" to post filename as required.
 
-        The filename needs to be sanitized / slugivied. There is no
+        The filename needs to be sanitized for URL. There is no
         direct citation but this link is close:
 
         - https://github.com/AndyGlew/Test-GitHub-stuff/wiki/
@@ -1843,13 +1840,11 @@ def create_blog_filename(r):
         elif len(little) != len(r[TITLE]):
             fatal_error('Should be a unicode here?')
 
-    #base_fn = sub_dir + r[CREATED].split()[0] + '-' + \
-    #    r[TITLE].replace('/', '∕').replace(' ', '-')
-    # "year-mm-dd" of created date + "-" + little list as string
     base_fn = sub_dir + r[CREATED].split()[0] + '-' + ''.join(little)
 
     blog_fn = OUTPUT_DIR + base_fn + ".md"
     blog_fn = blog_fn.replace('//', '/')
+
     return base_fn, blog_fn
 
 

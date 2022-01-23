@@ -10,9 +10,9 @@ created_date: 2017-07-25 14:44:21
 edit_date:    2017-07-26 14:03:18
 votes:        "16 "
 favorites:    
-views:        "86,925 "
+views:        "87,678 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-25-What-does-^^-mean-in-bash^.md
 toc:          false
 navigation:   false

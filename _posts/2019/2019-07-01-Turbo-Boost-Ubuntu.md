@@ -10,9 +10,9 @@ created_date: 2019-07-01 20:07:49
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "268 "
+views:        "269 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Turbo-Boost-Ubuntu.md
 toc:          false
 navigation:   false

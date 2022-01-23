@@ -10,9 +10,9 @@ created_date: 2018-06-23 16:00:02
 edit_date:    2020-10-03 13:23:54
 votes:        "2 "
 favorites:    
-views:        "149 "
+views:        "150 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-23-JPGICC:-What-does-the-option-described-as-^Precalculates-transform^-do^.md
 toc:          false
 navigation:   false

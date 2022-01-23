@@ -10,9 +10,9 @@ created_date: 2016-12-28 04:03:46
 edit_date:    2016-12-28 19:28:10
 votes:        "6 "
 favorites:    
-views:        "2,667 "
+views:        "2,669 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-28-Why-the-pipe-command-^l-|-grep-^1^-^-get-the-wrong-result^.md
 toc:          false
 navigation:   false

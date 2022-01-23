@@ -10,9 +10,9 @@ created_date: 2017-02-25 17:21:57
 edit_date:    2017-04-13 12:23:38
 votes:        "2 "
 favorites:    
-views:        "665 "
+views:        "667 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-25-How-to-see-what-pkaction-a-software-uses.md
 toc:          false
 navigation:   false

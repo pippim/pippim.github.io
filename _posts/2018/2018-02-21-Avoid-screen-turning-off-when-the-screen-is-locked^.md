@@ -10,9 +10,9 @@ created_date: 2018-02-21 03:16:40
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,910 "
+views:        "2,919 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-21-Avoid-screen-turning-off-when-the-screen-is-locked^.md
 toc:          false
 navigation:   false

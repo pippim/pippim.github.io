@@ -10,9 +10,9 @@ created_date: 2018-11-14 12:47:16
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "5,810 "
+views:        "5,868 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-14-How-can-one-copy-the-entire-contents-of-a-Linux-Terminal-^-^man^-pages-to-a-a-text-editor-^gedit-in-this-instance^^.md
 toc:          false
 navigation:   false

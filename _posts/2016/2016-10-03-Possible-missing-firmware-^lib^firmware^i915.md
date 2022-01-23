@@ -8,11 +8,11 @@ type:         Answer
 tags:         16.04 drivers kernel intel i915
 created_date: 2016-10-03 10:57:43
 edit_date:    2020-06-12 14:37:07
-votes:        "149 "
+votes:        "150 "
 favorites:    
-views:        "170,463 "
+views:        "170,761 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-03-Possible-missing-firmware-^lib^firmware^i915.md
 toc:          true
 navigation:   true

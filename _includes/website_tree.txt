@@ -12,7 +12,6 @@
 │   │   ├── Edm Temperature December 7, 2021.png
 │   │   ├── github pages themes.png
 │   │   ├── Inspectocadt.jpeg
-│   │   ├── Jekyll.png
 │   │   ├── Octocat.png
 │   │   ├── octojekyll-opt.jpg
 │   │   ├── pngwing.com.png
@@ -38,7 +37,7 @@
 │   ├── 2017 [154 entries exceeds filelimit, not opening dir]
 │   ├── 2018 [434 entries exceeds filelimit, not opening dir]
 │   ├── 2019 [264 entries exceeds filelimit, not opening dir]
-│   ├── 2020 [62 entries exceeds filelimit, not opening dir]
+│   ├── 2020 [63 entries exceeds filelimit, not opening dir]
 │   ├── 2021 [31 entries exceeds filelimit, not opening dir]
 │   └── 2022
 ├── _sass
@@ -60,4 +59,4 @@
 ├── stack.md
 └── tree.work
 
-18 directories, 43 files
+18 directories, 42 files

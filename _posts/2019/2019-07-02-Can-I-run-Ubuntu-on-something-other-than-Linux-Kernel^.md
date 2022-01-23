@@ -10,9 +10,9 @@ created_date: 2019-07-02 18:30:32
 edit_date:    
 votes:        "11 "
 favorites:    
-views:        "1,453 "
+views:        "1,459 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-02-Can-I-run-Ubuntu-on-something-other-than-Linux-Kernel^.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-04-27 21:05:35
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "2,770 "
+views:        "2,811 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-27-How-to-add-LAN-driver^.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-06-12 10:56:18
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "1,852 "
+views:        "1,873 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-How-to-set-S3^S4-state-for-devices-on-suspend.md
 toc:          false
 navigation:   false

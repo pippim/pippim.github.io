@@ -10,9 +10,9 @@ created_date: 2018-04-04 10:48:28
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "8,139 "
+views:        "8,150 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-04-How-to-fix-the-ubuntu-splash-loading-bar-showing-up-on-the-desktop-view^.md
 toc:          false
 navigation:   false

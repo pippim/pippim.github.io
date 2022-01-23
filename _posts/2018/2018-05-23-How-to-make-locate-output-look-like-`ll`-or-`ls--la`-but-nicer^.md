@@ -10,9 +10,9 @@ created_date: 2018-05-23 02:45:51
 edit_date:    2020-07-05 22:04:26
 votes:        "2 "
 favorites:    
-views:        "3,175 "
+views:        "3,176 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-How-to-make-locate-output-look-like-`ll`-or-`ls--la`-but-nicer^.md
 toc:          false
 navigation:   false

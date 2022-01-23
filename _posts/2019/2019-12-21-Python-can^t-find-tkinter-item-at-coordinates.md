@@ -10,9 +10,9 @@ created_date: 2019-12-21 15:34:03
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "609 "
+views:        "616 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-21-Python-can^t-find-tkinter-item-at-coordinates.md
 toc:          false
 navigation:   false

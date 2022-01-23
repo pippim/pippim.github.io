@@ -8,11 +8,11 @@ type:         Answer
 tags:         gui windows-subsystem-for-linux yad
 created_date: 2018-01-07 19:59:43
 edit_date:    2019-06-07 02:14:40
-votes:        "100 "
+votes:        "101 "
 favorites:    
-views:        "287,461 "
+views:        "287,785 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-07-What^s-the-easiest-way-to-run-GUI-apps-on-Windows-Subsystem-for-Linux-as-of-2018^.md
 toc:          false
 navigation:   false

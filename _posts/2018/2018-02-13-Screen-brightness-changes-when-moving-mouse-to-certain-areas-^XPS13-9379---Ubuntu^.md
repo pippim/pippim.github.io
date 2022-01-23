@@ -10,9 +10,9 @@ created_date: 2018-02-13 03:11:06
 edit_date:    2018-02-13 08:32:56
 votes:        "2 "
 favorites:    
-views:        "1,735 "
+views:        "1,743 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-13-Screen-brightness-changes-when-moving-mouse-to-certain-areas-^XPS13-9379---Ubuntu^.md
 toc:          false
 navigation:   false

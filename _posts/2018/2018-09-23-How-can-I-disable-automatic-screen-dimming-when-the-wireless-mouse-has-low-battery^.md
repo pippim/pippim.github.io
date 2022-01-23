@@ -10,9 +10,9 @@ created_date: 2018-09-23 16:56:13
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "5,659 "
+views:        "5,685 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-23-How-can-I-disable-automatic-screen-dimming-when-the-wireless-mouse-has-low-battery^.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-10-29 23:04:46
 edit_date:    2020-06-12 14:37:07
 votes:        "0 "
 favorites:    
-views:        "21,467 "
+views:        "21,485 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-29-Start-script-on-system-startup-^Ubuntu-16.04.1^.md
 toc:          false
 navigation:   false

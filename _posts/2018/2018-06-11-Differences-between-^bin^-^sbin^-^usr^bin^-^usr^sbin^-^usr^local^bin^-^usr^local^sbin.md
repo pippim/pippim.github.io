@@ -10,9 +10,9 @@ created_date: 2018-06-11 23:44:36
 edit_date:    2020-06-12 14:37:07
 votes:        "25 "
 favorites:    
-views:        "293,758 "
+views:        "294,667 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-11-Differences-between-^bin^-^sbin^-^usr^bin^-^usr^sbin^-^usr^local^bin^-^usr^local^sbin.md
 toc:          false
 navigation:   false

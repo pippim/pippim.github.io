@@ -10,9 +10,9 @@ created_date: 2016-11-23 18:11:24
 edit_date:    2016-11-25 00:20:21
 votes:        "8 "
 favorites:    
-views:        "3,047 "
+views:        "3,062 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-23-Why-are-there-two-kernels-under-`^lib^modules`-on-16.04-LTS^.md
 toc:          false
 navigation:   false

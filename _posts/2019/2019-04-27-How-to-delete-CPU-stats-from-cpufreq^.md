@@ -10,9 +10,9 @@ created_date: 2019-04-27 22:15:04
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "1,448 "
+views:        "1,455 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-27-How-to-delete-CPU-stats-from-cpufreq^.md
 toc:          false
 navigation:   false

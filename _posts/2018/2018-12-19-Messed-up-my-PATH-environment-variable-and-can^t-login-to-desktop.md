@@ -10,9 +10,9 @@ created_date: 2018-12-19 00:50:22
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "7,740 "
+views:        "7,833 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-19-Messed-up-my-PATH-environment-variable-and-can^t-login-to-desktop.md
 toc:          false
 navigation:   false

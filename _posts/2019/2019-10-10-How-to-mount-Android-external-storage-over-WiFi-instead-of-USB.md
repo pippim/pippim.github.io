@@ -10,9 +10,9 @@ created_date: 2019-10-10 02:08:11
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "1,530 "
+views:        "1,536 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-10-How-to-mount-Android-external-storage-over-WiFi-instead-of-USB.md
 toc:          false
 navigation:   false

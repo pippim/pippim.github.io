@@ -10,9 +10,9 @@ created_date: 2016-09-23 01:31:11
 edit_date:    2019-06-29 16:20:32
 votes:        "11 "
 favorites:    5
-views:        "4,413 "
+views:        "4,429 "
 accepted:     
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-23-Kernel-suspends-too-quickly^-upon-resume-continues-suspend-tasks.md
 toc:          false
 navigation:   true

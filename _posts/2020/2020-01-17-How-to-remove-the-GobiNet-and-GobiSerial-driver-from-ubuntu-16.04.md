@@ -10,9 +10,9 @@ created_date: 2020-01-17 12:47:23
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "467 "
+views:        "471 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-17-How-to-remove-the-GobiNet-and-GobiSerial-driver-from-ubuntu-16.04.md
 toc:          false
 navigation:   false

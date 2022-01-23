@@ -10,9 +10,9 @@ created_date: 2018-12-10 18:12:47
 edit_date:    2018-12-10 18:18:35
 votes:        "1 "
 favorites:    
-views:        "551 "
+views:        "563 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-10-Output-the-current-PATH-to-text-file-using-BASH-script.md
 toc:          false
 navigation:   false

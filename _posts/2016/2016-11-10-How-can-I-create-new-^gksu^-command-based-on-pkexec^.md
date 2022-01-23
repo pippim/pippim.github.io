@@ -10,9 +10,9 @@ created_date: 2016-11-10 11:49:50
 edit_date:    2016-11-11 00:09:35
 votes:        "2 "
 favorites:    
-views:        "623 "
+views:        "627 "
 accepted:     Accepted
-uploaded:     2022-01-19 20:40:17
+uploaded:     2022-01-23 11:36:46
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-10-How-can-I-create-new-^gksu^-command-based-on-pkexec^.md
 toc:          false
 navigation:   false
