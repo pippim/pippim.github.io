@@ -1235,11 +1235,11 @@ python program performs:
 
 10. The Stack Exchange title is set up as the Jekyll front matter title with the front matter variable `title:`. The blog filename is created based on the title. Optional front matter can be specified such as for URL, Votes, Last Edit Date, etc. based on the Stack Exchange post.
 
-11. The Stack Exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for GitHub Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting. The fenced code block, for example ```` ``` bash ```` takes precedence though. After than the "shebang", for example `#!/bin/bash` takes precendence for code block syntax highlighting.
+11. The Stack Exchange command for `<!-- language-all: lang-bash -->` (and all other languages) are converted to suitable <code>``` bash</code> fenced code blocks for GitHub Pages Markdown / Jekyll / Kramdown / Rouge lanuguage syntax highlighting. The fenced code block, for example ```` ``` bash ```` takes precedence though. After than the "shebang", for example `#!/bin/bash` takes precedence for code block syntax highlighting.
 
 12. For larger code blocks, where the default is 15 lines or more, a button is provided to copy the fenced code block to the system clipboard.
 
-13. Stack Exchange allows leading 4 spaces for a code block. These don't work well to support the Krampdown Rouge formatting in GitHub Pages. Therefore they are converted to fenced code blocks ```` ``` bash ```` or ```` ``` python ```` depending on the "shebang" or `<!-- language...` comment.
+13. Stack Exchange allows leading 4 spaces for a code block. These don't work well to support the Kramdown Rouge formatting in GitHub Pages. Therefore they are converted to fenced code blocks ```` ``` bash ```` or ```` ``` python ```` depending on the "shebang" or `<!-- language...` comment.
 
 14. Stack Exchange Markdown can dynamically look-up the link name within SE sties. GitHub Pages does not support this feature. For example, if `[https://askubuntu.com/q/123456/how-can-i?][1]`is found without a link name, it is converted to `[How Can I?][1]`.
 
@@ -1279,12 +1279,12 @@ create the blog post's filename:
 
 {% include copyHeader.html %}
 ``` python
+def create_blog_filename(r):
  """ Return blog filename.
      Replace all spaces in title with "-"
-     Replace all forward slash (/) with ∕ DIVISION SLASH U+2215
      Prepend "/YYYY/" to post filename as required.
 
-     The filename needs to be sanitized / slugivied. There is no
+     The filename needs to be sanitized for URL. There is no
      direct citation but this link is close:
 
      - https://github.com/AndyGlew/Test-GitHub-stuff/wiki/
@@ -1336,13 +1336,11 @@ create the blog post's filename:
      elif len(little) != len(r[TITLE]):
          fatal_error('Should be a unicode here?')
 
- #base_fn = sub_dir + r[CREATED].split()[0] + '-' + \
- #    r[TITLE].replace('/', '∕').replace(' ', '-')
- # "year-mm-dd" of created date + "-" + little list as string
  base_fn = sub_dir + r[CREATED].split()[0] + '-' + ''.join(little)
 
  blog_fn = OUTPUT_DIR + base_fn + ".md"
  blog_fn = blog_fn.replace('//', '/')
+
  return base_fn, blog_fn
 
 
@@ -1390,49 +1388,49 @@ In the `stack-to-blog.py` python program they are defined in
 the `check_pseudo_tags(ln)` function like this:
 
 ``` python
- """
-     Check if pseudo-tag should be inserted based on keywords list.
-     
-     If line is empty it means it's a paragraph.  Note if line ends in
-     two spaces it forces a new line but not a paragraph break.  Also
-     note if three lines were written in a row they would be merged
-     into one paragraph.
+"""
+  Check if pseudo-tag should be inserted based on keywords list.
+  
+  If line is empty it means it's a paragraph.  Note if line ends in
+  two spaces it forces a new line but not a paragraph break.  Also
+  note if three lines were written in a row they would be merged
+  into one paragraph.
 
-     FUTURE?: The paragraph number indicates where to insert TOC.
+  FUTURE?: The paragraph number indicates where to insert TOC.
 
-     Count number of words. Check if word qualifies as a pseudo
-     tag.
+  Count number of words. Check if word qualifies as a pseudo
+  tag.
 
- """
- global total_paragraphs, paragraph_count, total_words, word_count
- global pseudo_tag_count, total_pseudo_tags, pseudo_tag_names
+"""
+global total_paragraphs, paragraph_count, total_words, word_count
+global pseudo_tag_count, total_pseudo_tags, pseudo_tag_names
 
- if len(ln) == 0:
-     total_paragraphs += 1   # For all posts
-     paragraph_count += 1    # For current post
+if len(ln) == 0:
+  total_paragraphs += 1   # For all posts
+  paragraph_count += 1    # For current post
 
- ''' Add to word counts '''
- word_list = ln.split()
- count = len(word_list)
- word_count += count
- total_words += count
+''' Add to word counts '''
+word_list = ln.split()
+count = len(word_list)
+word_count += count
+total_words += count
 
- ''' Add to pseudo-tags - SE tags (and ours) are always in lower case '''
- for pseudo in PSEUDO_TAGS:
-     tag_search = pseudo.lower()
-     for word in word_list:
-         found = word.lower()
-         if found.startswith('`') and found.endswith('`'):
-             # `program_name` becomes program_name
-             found = found[1:-1]
-         if tag_search == found:
-             pseudo_tag_count += 1
-             total_pseudo_tags += 1
-             # A pseudo-tag isn't added if it's already in question tags
-             if tag_search not in pseudo_tag_names:
-                 if tag_search not in tags:
-                     # Pseudo-tag names added for this post's list
-                     pseudo_tag_names.append(tag_search)
+''' Add to pseudo-tags - SE tags (and ours) are always in lower case '''
+for pseudo in PSEUDO_TAGS:
+  tag_search = pseudo.lower()
+  for word in word_list:
+      found = word.lower()
+      if found.startswith('`') and found.endswith('`'):
+          # `program_name` becomes program_name
+          found = found[1:-1]
+      if tag_search == found:
+          pseudo_tag_count += 1
+          total_pseudo_tags += 1
+          # A pseudo-tag isn't added if it's already in question tags
+          if tag_search not in pseudo_tag_names:
+              if tag_search not in tags:
+                  # Pseudo-tag names added for this post's list
+                  pseudo_tag_names.append(tag_search)
 ```
 
 <a id="hdr27"></a>
@@ -1440,64 +1438,89 @@ the `check_pseudo_tags(ln)` function like this:
 
 ## Stack Exchange `<!-- language` Tags
 
-When Stack Exchange uses `<!-- language-all` it is converted to appropriate format for GitHub using this multi-purpose function:
+When Stack Exchange uses `<!-- language-all` it is converted to appropriate 
+format for GitHub using this multi-purpose `check_code_block(ln)` function:
 
 {% include copyHeader.html %}
 ``` python
-def check_code_block(ln):
-    """ If line starts with ``` we are now in code block.
+ """ If line starts with ``` we are now in code block.
 
-        If already in code block and line begins with ```
-            then we are now out of code block.
+     If already in code block and line begins with ```
+         then we are now out of code block.
 
-        The same holds true if line contains <pre><code> and
-            ends with </code></pre>
+     Set default syntax language when none on code block. SE standard:
+         <!-- language: bash -->
+         <!-- language-all: lang-bash -->
 
-        Set default syntax language when none on code block. SE standard:
-            <!-- language: bash -->
-            <!-- language-all: lang-bash -->
+ """
+ global in_code_block, total_code_blocks, language_used, language_forced
 
-     """
-    global in_code_block, total_code_blocks, language_used
-    ''' Code blocks may be indented so left strip spaces before test
-    
-        TODO: count number of backticks that initiate a code block.
-              For example ```` (4) can start a code block then if ``` (3)
-              appears it doesn't terminate code block but is interpreted
-              literally as backticks. EG
-              
-              This is an example of using fenced code backticks:
-              
-              ````
-              ``` html
-              <element code>Stuff stuff stuff</element code>
-              ```
-              ```` 
-    '''
-    if ln.startswith("<!-- language"):
-        language_used = ln.split(": ")[1]
-        # Strip off " -->" at end of string
-        language_used = language_used[:-4]
-        if language_used.startswith("lang-"):
-            # Strip off "lang-" at start of string
-            language_used = language_used[5:]
-        if language_used == "none":
-            # "none" is best set as "text" for universal recognition
-            language_used = "text"
+ ''' Code blocks may be indented so left strip spaces before test
 
-        #print('language_used:', language_used, 'length:', len(language_used))
-        return ""  # Former "<!-- language" line is now an empty line
+     NOTE: This test must be done BEFORE check_code_indent() test.    
 
-    if ln.lstrip()[0:3] == "```":
-        # Add language if not used already
-        if ln[-1] == "`" or ln[-1] == " ":
-            ln = ln + " " + language_used
-        if in_code_block is False:
-            total_code_blocks += 1      # Total for all posts
-            in_code_block = True        # For this post only
-        else:
-            in_code_block = False       # For this post only
+     To end code block you must use ```.
+     
+     TODO: count number of backticks that initiate a code block.
+           For example ```` (4) can start a code block then if ``` (3)
+           appears it doesn't terminate code block but is interpreted
+           literally as backticks. EG
+           
+           This is an example of using fenced code backticks:
+           
+           ````
+           ``` html
+           <element code>Stuff stuff stuff</element code>
+           ```
+           ```` 
+ '''
 
+ global total_bad_rouge
+
+ if in_code_indent:
+     return ln
+
+ if ln.startswith("<!-- language"):
+     # Get "bash" inside of <!-- language-all: lang-bash -->
+     # Store as language_used for inside of code block.
+     language_used = ln.split(": ")[1]
+     # Strip off " -->" at end of string
+     language_used = language_used[:-4]
+     if language_used.startswith("lang-"):
+         # Strip off "lang-" at start of string
+         language_used = language_used[5:]
+     if language_used == "none":
+         # "none" is best set as "text" for universal recognition
+         language_used = "text"
+
+     #print('language_used:', language_used, 'length:', len(language_used))
+     return ""  # Former "<!-- language" line is now an empty line
+
+ if ln.lstrip()[0:3] == "```":
+     # Add language if not used already
+     if in_code_block is False:
+         total_code_blocks += 1      # Total for all posts
+         in_code_block = True        # Code block has begun
+         this_language = language_used
+         # Check next line for shebang
+         she_language = check_shebang()
+         if she_language:
+             this_language = she_language
+         # TODO: Figure out language used
+         # Need to change "vba" to "basic"
+         # See: https://askubuntu.com/q/1021152
+         if ln[-1] == "`" or ln[-1] == " ":
+             ln += " " + this_language
+             language_forced += 1
+         # Check if 'this_language' is valid.
+         if this_language not in rouge_languages and this_language != '':
+             bad_languages.append((this_language, row[LINK]))
+             total_bad_rouge += 1
+             # Need to change "vba" to "basic"
+     else:
+         in_code_block = False       # Code block has ended
+
+ return ln
 ```
 
 **NOTE:** This function also provides support for inserting the 
