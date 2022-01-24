@@ -192,7 +192,7 @@ You may already have them installed. Also, this list is for Ubuntu
 under version 2.7.12 and, you may have to substitute `python3` where
 it says `python`:
 
-``` terminal
+``` shell
 sudo apt install python-tk
 sudo apt install python-pil
 sudo apt install python-pil.imagetk
@@ -211,6 +211,26 @@ sudo apt install xclip                           # Insert clipboard
 sudo apt install python-beautifulsoup            # Scrape Song lyrics
 ```
 
+Additionally, there are external repositories (PPA) that need to be
+installed.
+
+``` shell
+sudo add-apt-repository ppa:j-4321-i/ttkwidgets  # CheckboxTreeview
+# This is necessary for ttkwidgets and ttkcaldenar
+sudo apt-get update
+sudo apt-get install python-ttkwidgets           # CheckboxTreeview
+sudo add-apt-repository ppa:j-4321-i/ppa
+sudo apt-get update
+sudo apt-get install python-tkcalendar
+```
+
+Finally, there are programs that have no `sudo apt install` capability
+such as [`pulsectl`](https://github.com/mk-fg/python-pulse-control/tree/master/pulsectl)
+that require `git pull` command followed by `cp` command.
+
+Unfortunately as of {{ site.refreshed }}, dependencies have to be
+manually installed. It is a priority to create an installation
+script that installs all dependencies automatically.
 
 ---
 
@@ -358,7 +378,7 @@ Key features of tooltips:
 
 - They appear after a delay
 - They fade in
-- The stay visible for a short time based on how long they are
+- The stay visible for a short time based on word count
 - They move instep with mouse movements 
 - They fade out 
 
