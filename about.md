@@ -33,15 +33,15 @@ of Pippim. On this page you will discover:
 ## Who is Pippim?
 
 Pippim is a one-man-show that has been answering questions since 2016 
-on AskUbuntu.com under the awkard name of "WinEunuuchs2Unix". When you 
+on AskUbuntu.com under the awkward name of "WinEunuuchs2Unix". When you 
 look at
-**[WinEnuuchs2Unix's profile](https://askubuntu.com/users/307523/wineunuuchs2unix)**
+**[WinEnuuchs2Unix's profile 🔗](https://askubuntu.com/users/307523/wineunuuchs2unix)**
 in Ask Ubuntu you will see the image on the right.
 
 At the time the "WinEunuuchs2Unix" name was created,
  the intention was to signal 
-abaondoning MicroSoft Windows for the open-source world of Linux (Unix). That said,
-Windows is undeniably the go-to platform for Governements, Corporations and most 
+abandoning MicroSoft Windows for the open-source world of Linux (Unix). That said,
+Windows is undeniably the go-to platform for Governments, Corporations and most 
 individuals in the world. No doubt most people who actually make money in the
 Linux World still use Windows from time to time.
 
@@ -49,16 +49,16 @@ Linux World still use Windows from time to time.
 ## What is Pippim?
 
 Pippim is a website providing free and open source computer software primarily for
-use on Linux. The focus is mostly on Ubutnu but, nowdaays some of the solutions
+use on Linux. The focus is mostly on Ubuntu but, nowadays some of the solutions
 work on 
-[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) as
+[Windows Subsystem for Linux 🔗](https://docs.microsoft.com/en-us/windows/wsl/about) as
 well.
 
 Pippim has no business model for making money today. You will find no user tracking,
 no ads and no spamming. Maybe someday Pippim will make money but in the meantime it
 is simply a labour of love.
 
-{% include image.html src="/assets/img/Edm Temperature December 7, 2021.png"
+{% include image.html src="/assets/img/Edm Temp 2022-01-26.png"
    alt="Edmonton Temperature"
    style="float: right; width: 60%; margin: 1em 0px 0px 1em; text-align: center;"
    caption="Image Credit: Apple's DarkSky.net"
@@ -67,11 +67,11 @@ is simply a labour of love.
 ## Where is Pippim located?
 
 Figuratively speaking, Pippim is located in "the clouds" on 
-[Google Sites](https://pippim.com) (https://pippim.com) and
-[GitHub](https://github.com/pippim/pippim.github.io)
+[Google Sites 🔗](https://pippim.com) (https://pippim.com) and
+[GitHub 🔗](https://github.com/pippim/pippim.github.io)
 (https://github.com/pippim/pippim.github.io) where all the 
 source code is kept. The website you are viewing now is found
-on [GitHub Pages](https://pippim.github.io) 
+on [GitHub Pages 🔗](https://pippim.github.io) 
 (https://pippim.github.io). All three websites are hosted
 for free by the providers. Other than the cost of time to 
 learn web design, I can't how cheap the process has been!
@@ -80,10 +80,8 @@ As you may have deduced by the little yellow dot in this image
 though, Pippim is physically located in Edmonton, Canada. 
 For a better view, right click on the picture, select
 "Open in new tab" and then zoom in with your browser.
-This afternoon (December 7, 2021 at 5:46pm MST), as the
-map for Edmonton shows, it is chilly at 6 degrees below
-freezing. Obviously most people in Edmonton are happy for 
-global warming and not climate change. Sorry Greta :/
+This morning, after long bouts of cold weather, it is
+surprisingly warm.
 
 <a id="when-was-pippim-created?"></a>
 ## When was Pippim created?
@@ -98,7 +96,7 @@ made -- 1,020 commits (revisions) and still counting as of December 5, 2021.
 ## Why was Pippim created?
 
 Pippim was created to make it easier to list the free software created on 
-the websites [Ask Ubuntu](https://askubuntu.com) and [GitHub](https://github.com).
+the websites [Ask Ubuntu 🔗](https://askubuntu.com) and [GitHub 🔗](https://github.com).
 Pippim Posts which are 95% Answers and 5% Questions, have over **{{ site.views_human }}
 views** as of {{ site.refreshed | date: "%B %e, %Y" }}. With over 2,000 answers, 
 managing them on a Pippim website just makes sense.
@@ -135,7 +133,7 @@ first step was to find a domain name (website name) that:
 After finding out that the "pippim.com" was available, more weeks of contemplation 
 went by before "pulling the trigger" and buying the name for $17 CAD per year.
 
-Then the [www.pippim.com website](https://pippim.com) was
+Then the [www.pippim.com website 🔗](https://pippim.com) was
 created using Google Sites for free.
 
 Next the [pippim.github.io website](https://pippim.github.io) (Don't bother
@@ -153,5 +151,5 @@ was created can be found on in the middle of the
 ![Jekyll Octocat Mascot](/assets/img/octojekyll-opt.jpg)
 
 <sup><em>
-   **Image credit:** Jekyll Octocat Mascot [GitHub](https://www.github.com)
+   **Image credit:** Jekyll Octocat Mascot [GitHub 🔗](https://www.github.com)
 </em></sup>
