@@ -20,6 +20,7 @@
 #       Dec. 29 2021 - Update <a href= to use {% post_url %}.
 #       Dec. 31 2021 - Add site wide variables to CONFIG_YML
 #       Jan. 01 2022 - Resurrect check_full_links(), add check_no_links()
+#       Jan. 26 2022 - Don't include self-answered with low votes
 #
 # ==============================================================================
 
@@ -56,6 +57,9 @@ import sys                  # For progress bar
 import csv                  # For reading SE QueryResults.csv
 from random import randint  # To randomly process small set of CSV records
 
+# Local modules
+import website_search
+ws = website_search.WebsiteSearch()
 
 """
     TO-DO
@@ -103,6 +107,8 @@ VOTE_QUALIFIER = 2          # Posts need at least 2 votes to qualify
 ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
 PRINT_COLUMN_NAMES = False  # Print QueryResults first row to terminal
 PRINT_NOT_ACCEPTED = False  # Print self answered questions not accepted
+PRINT_LOW_VOTES = True      # Print self answered questions with low answer votes
+SEARCH_ENGINE = True        # Spend twice the time generating website search?
 
 # Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
 
@@ -181,7 +187,8 @@ ss_full_url = None          # Full SE URL with title appended
 ss_post_url = None          # "{% post_url base_filename %}"
 ss_save_blog = None         # Save this as blog post? True/False
 ss_accepted = None          # Has this answer been accepted?
-ss_count = None             # Number of times used
+ss_votes = None             # How many votes for post?
+ss_both_q_and_a = None      # Part of self answered question pair?
 
 # If you add fields to CSV, change "PRINT_COLUMN_NAMES = False" above to True.
 # Review terminal output of column names and assign their positions below.
@@ -317,7 +324,8 @@ total_toc = 0               # How many table of contents added?
 total_nav_bar = 0           # How many navigation bars added?
 total_self_answer = 0       # How many self-answered questions?
 total_self_accept = 0       # Of those, how many have been accepted?
-self_not_accept_url = []    # List of URLs not accepted
+self_not_accept_url = []    # List of URLs self-answered not accepted
+self_low_votes_url = []     # List of URLs self-answered question < 2 votes
 language_forced = 0         # How many times was language fenced?
 total_bad_rouge = 0         # How many bad syntax highlighting languages
 total_unicode_in_titles = 0  # When sanitizing URL from titles
@@ -379,7 +387,8 @@ def create_speed_search():
         ss_post_url = None          # "{% post_url base_filename %}"
         ss_save_blog = None         # Save this as blog post? True/False
         ss_accepted = None          # Has answer been accepted?
-        ss_count = None             # Number of times used
+        ss_accepted = None          # How many votes for post?
+        ss_both_q_and_a = None      # Part of self answered question pair?
 
     NOTES:
         When you answer someone else's question it might be this:
@@ -389,11 +398,13 @@ def create_speed_search():
             (Redirected from https://askubuntu.com/q/1026478)
 
     """
-    global ss_row_index, ss_accepted
-    global ss_save_blog, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, ss_count
+    global ss_row_index, ss_accepted, ss_votes
+    global ss_save_blog, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, ss_both_q_and_a
+    global percent_complete_closed
 
     #print('len(rows):', len(rows))
     ss_row_index = 0
+    double_count = row_count * 2
 
     for r in rows:
         # Build base_fn: "9999-99-99-Title-of-my-blog.md"
@@ -404,34 +415,42 @@ def create_speed_search():
         ss_type = r[TYPE]
         ss_title = r[TITLE]
         ss_full_url = None
-        ss_accepted = r[ACCEPTED]  # Has this answer been accepted?
-        ss_count = 0
+        ss_accepted = r[ACCEPTED]   # Has this answer been accepted?
+        ss_votes = int(r[SCORE])    # How many votes for post?
+        ss_both_q_and_a = False     # Part of self answered question pair?
         add_ss_entry()              # Add entry to Speed Search List
         ss_row_index += 1           # Should always match ss_index
+        percent_complete(ss_row_index, double_count, title="Build Speed Search")
 
     #print('len(ss_list):', len(ss_list))
     # Pass 2, set ss_save_blog and tally up answer/question totals
     for i, r in enumerate(rows):
+        # Check if counterpart exists and set "ss_both_q_and_a" flag
+        update_both_q_and_a(r)      # TODO: Speed this up
         save = set_ss_save_blog(r)  # Also sets self-answered question flags
         get_ss_index(i)
         ss_save_blog = save
         update_ss()
+        percent_complete(row_count + i, double_count, title="Build Speed Search")
+
+    percent_complete_close()
+    percent_complete_closed = False     # Reset for next progress display
 
 
 def pack_ss_entry():
     """ Pack Speed Search entry fields to tuple """
     t = (ss_index, ss_row_index, ss_url, ss_type, ss_title, ss_full_url, ss_post_url,
-         ss_save_blog, ss_accepted, ss_count)
+         ss_save_blog, ss_accepted, ss_votes, ss_both_q_and_a)
     return t
 
 
 def unpack_ss_entry(packed_tuple):
     """ Unpack tuple to Speed Search entry fields """
-    global ss_index, ss_row_index, ss_accepted
-    global ss_save_blog, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, ss_count
+    global ss_index, ss_row_index, ss_accepted, ss_votes
+    global ss_save_blog, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, ss_both_q_and_a
 
     ss_index, ss_row_index, ss_url, ss_type, ss_title, ss_full_url, ss_post_url, \
-        ss_save_blog, ss_accepted, ss_count = packed_tuple
+        ss_save_blog, ss_accepted, ss_votes, ss_both_q_and_a = packed_tuple
 
 
 def add_ss_entry():
@@ -497,7 +516,21 @@ def set_ss_save_blog(r):
         This is second pass to check if self answered question and if blog
         should be saved. Also updates totals.
 
-        Code taken from check_save_blog()
+        If same title exists for both Q&A its a self-answered question.
+
+        When self-answered question we skip blogging the question and the
+        answer is blogged assuming it reaches the required minimum vote. If
+        the answer is accepted (and it should be) it still needs the minimum
+        votes.
+
+        An error dump is printed if the question is self-answered but not
+        accepted. This happens when answer was forgotten after the 2-day
+        waiting period to accept answers had expired.
+
+        An error dump is printed if we answered our own question but other
+        people didn't vote at least the VOTE_QUALIFIER. In this case we
+        should consider deleting our self-answer and possibly the question
+        as well.
 
         Returns:
              True/False - if blog should be saved
@@ -532,26 +565,38 @@ def set_ss_save_blog(r):
         accepted_count += 1
         if ACCEPTED_QUALIFIER:
             save = True  # Previous tests may have turned off
+        if vote < VOTE_QUALIFIER and ss_both_q_and_a:
+            self_low_votes_url.append(r[URL])
+            save = False
 
     ''' TYPE = "Question" or "Answer" or "Wiki"'''
     if r[TYPE] == "Question":
         question_count += 1
 
         # Check if this is a self-answered question
-        self_answer, self_accept, search_url = check_self_answer(r)
+        self_answer, self_accept, votes, search_url = check_self_answer(r)
         if "?17466561" in r[URL] or "?59621559" in r[URL]:
-            print(search_url)
+            print('votes:', votes, search_url)
             print('self_answer:', self_answer, 'self_accept:', self_accept)
             # fatal_error("This is it")
         if not QUESTIONS_QUALIFIER or self_answer is True:
             save = False  # Questions don't qualify or this self-answered
 
-        if self_answer is True:
+        #if self_answer is True:
+        if ss_both_q_and_a is True:
             total_self_answer += 1
+            #if ss_accepted is True:  # Question is not flagged as ACCEPTED
             if self_accept is True:
                 total_self_accept += 1
             else:
                 self_not_accept_url.append(search_url)
+
+            # If we are the only one that likes our self-answer,
+            # don't bother posting as a blog.
+            #if votes < VOTE_QUALIFIER:
+            #    self_low_votes_url.append(search_url)
+            #    # TODO not working because we are on question not answer.
+            #    save = False
 
     elif r[TYPE] == "Answer":
         answer_count += 1
@@ -1874,10 +1919,16 @@ def make_output_year_dir(post_date):
     return new_sub
 
 
-def check_self_answer(r):
-    """ Called for every question.
+def update_both_q_and_a(r):
+    """ Called for every question and answer during first pass of CSV rows
+        to setup for tests in second pass.
 
-        If same title exists in an answer this is a self-answered question.
+        Check if title exists for question and answer.
+
+        When on a question search_type="Answer". When on an answer the
+        search_type = "Question".
+
+        If same title exists for both Q&A its a self-answered question.
 
         When self-answered question we skip blogging the question and the
         answer is blogged assuming it reaches the required minimum vote. If
@@ -1888,13 +1939,71 @@ def check_self_answer(r):
         accepted. This happens when answer was forgotten after the 2-day
         waiting period to accept answers had expired.
 
+        An error dump is printed if we answered our own question but other
+        people didn't vote at least the VOTE_QUALIFIER. In this case we
+        should consider deleting our self-answer and possibly the question
+        as well.
+
+    """
+
+    global ss_both_q_and_a
+
+    if r[TYPE] == "Answer":
+        search_type = "Question"
+    else:
+        search_type = "Answer"
+
+    if get_ss_title(r[TITLE], search_type=r[TYPE]):
+        # Have verified we exist as we should. Now check for other half.
+        our_index = ss_index
+        if get_ss_title(r[TITLE], search_type=search_type):
+            # Flag counterpart as both Question and Answer
+            ss_both_q_and_a = True
+            update_ss()
+            # Restore saved index to ourself
+            get_ss_index(our_index)
+            # Flag ourself as both Question and Answer
+            ss_both_q_and_a = True
+            update_ss()
+    else:
+        fatal_error("update_both_q_and_a(): We don't exist!")
+
+
+def check_self_answer(r):
+    """ Called for every question.
+
+        When on a question search_type="Answer". When on an answer the
+        search_type = "Question".
+
+        If same title exists for both Q&A its a self-answered question.
+
+        When self-answered question we skip blogging the question and the
+        answer is blogged assuming it reaches the required minimum vote. If
+        the answer is accepted (and it should be) it still needs the minimum
+        votes.
+
+        An error dump is printed if the question is self-answered but not
+        accepted. This happens when answer was forgotten after the 2-day
+        waiting period to accept answers had expired.
+
+        An error dump is printed if we answered our own question but other
+        people didn't vote at least the VOTE_QUALIFIER. In this case we
+        should consider deleting our self-answer and possibly the question
+        as well.
+
     """
 
     answer = accepted = search_url = False
+    votes = 0
 
-    if get_ss_title(r[TITLE]):
+    if r[TYPE] == "Answer":
+        search_type = "Question"
+    else:
+        search_type = "Answer"
+
+    if get_ss_title(r[TITLE], search_type=r[TYPE]):
         # Have verified question title exists. Now check if answer exists
-        if get_ss_title(r[TITLE], search_type="Answer"):
+        if get_ss_title(r[TITLE], search_type=search_type):
             if "68011128" in ss_post_url:
                 print('Answer is true @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
             answer = True
@@ -1903,8 +2012,12 @@ def check_self_answer(r):
                 if "68011128" in ss_post_url:
                     print('accepted is true @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
                 accepted = True  # Is this self-answered question accepted?
+            # ss_votes only applies to self-answered questions
+            votes = ss_votes
+    else:
+        fatal_error("check_self_answer(): We don't exist!")
 
-    return answer, accepted, search_url
+    return answer, accepted, votes, search_url
 
 
 def write_md(r, md):
@@ -2758,13 +2871,22 @@ def one_config_line(config, key, value):
 
 
 percent_complete_closed = False
+percent_last_step = 0
 
 
 def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True):
     """
         See: https://stackoverflow.com/a/70586588/6929343
     """
+    global percent_last_step
+
     if percent_complete_closed:
+        return                      # printing debug lines, no progress bar
+
+    if percent_last_step > step:
+        print()
+        fatal_error("percent_last_step: " + str(percent_last_step) +
+                    " > step: " + str(step))
         return                      # printing debug lines, no progress bar
 
     # UTF-8 left blocks: 4/4, 1/8, 1/4, 1/2, 5/8, 3/4, 7/8
@@ -2801,17 +2923,21 @@ def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True)
     # Output to terminal repetitively over the same line using '\r'.
     sys.stdout.write("\r" + disp)
     sys.stdout.flush()
+    percent_last_step = step
 
 
 def percent_complete_close():
     """ Remove percent complete progress bar display
         Call this when you want to print something else to terminal
     """
-    global percent_complete_closed
+    global percent_complete_closed, percent_last_step
+
     if percent_complete_closed:
-        return                      # printing debug lines, no progress bar
+        return                      # Progress bar already closed
     percent_complete_closed = True
-    sys.stdout.write("\r\x1b[K")
+    percent_last_step = 0
+
+    sys.stdout.write("\r\x1b[K")    # Clear terminal display line
     sys.stdout.flush()
 
 
@@ -3074,13 +3200,17 @@ for row in rows:
     sum2 = 0                # Track for new header to insert Navigation Bar
     last_nav_id = 0         # Last navigation bar ID assigned
 
-    ''' Pass #2: Loop through lines to insert TOC and Navigation Bar '''
+    ''' Pass #2: Loop through lines to insert TOC and Navigation Bar
+                 Create search dictionary words 
+    '''
+    ws.post_init(code_url + base_filename + ".html")
     for line_index, line in enumerate(lines):
         check_code_block(line)      # Turn off formatting when in code block
         # Did this post qualify for adding navigation bar?
         # Save header levels counts we have now to "old_"
         old_header_levels = list(header_levels)
         line = header_space(line)   # #Header, Alt-H1, Alt-H2. Set header_levels
+        ws.parse(line)
         if insert_nav_bar:
             sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
             sum2 = sum(header_levels[:NAV_BAR_LEVEL])
@@ -3129,6 +3259,7 @@ for row in rows:
         new_md += navigation_bar(skip_btn=False)
 
     qualifying_blog_count += 1
+    ws.post_save()
     if RANDOM_LIMIT is not None:
         if row_number in random_row_nos:
             if save_blog is True:
@@ -3157,7 +3288,7 @@ for row in rows:
     - Generate Top Ten Answers html using gen_top_posts()
     - Generate Tags by Post html using gen_post_by_tag_groups()
     - Close progress display with percent_complete_close()
-    - Print self-answered questions no accepted list
+    - Print self-answered questions not accepted list
     - Print Rouge syntax highlighting language not supported list
 '''
 
@@ -3175,6 +3306,14 @@ if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
         print('URL:', url)
     print('')
 
+if PRINT_LOW_VOTES and len(self_low_votes_url) > 0:
+    print()
+    print('// =============/   Self-Answered Questions with low votes   \\=============== \\\\')
+    print('')
+    for url in self_low_votes_url:
+        print('URL:', url)
+    print('')
+
 if len(bad_languages) > 0:
     print()
     print('// ==============/   Languages not supported by Rouge   \\================ \\\\')
@@ -3185,7 +3324,7 @@ if len(bad_languages) > 0:
 
 # print("# of rouge_languages:", len(rouge_languages))
 
-# update_confg() uses CONFIG_YML = "../_config.yml"
+# update_config() uses CONFIG_YML = "../_config.yml"
 update_config()
 
 if RANDOM_LIMIT is None:
@@ -3193,6 +3332,9 @@ if RANDOM_LIMIT is None:
 else:
     # noinspection PyStringFormat
     random_limit = '{:>6,}'.format(RANDOM_LIMIT)
+
+# Write out .json website search files
+ws.site_save()
 
 print('// =============================/   T O T A L S   \\============================== \\\\')
 print('Run-time options:\n')
