@@ -155,6 +155,23 @@ if [ $retVal -ne 0 ]; then
     exit $retVal
 fi
 
+echo
+echo "=== UPDATING: website search JSON files"
+
+cp ~/website/assets/json/search_url.json assets/json/
+cp ~/website/assets/json/search_include.json assets/json/
+cp ~/website/assets/json/search_exclude.json assets/json/
+
+git add assets/json/search_url.json
+git add assets/json/search_include.json
+git add assets/json/search_exclude.json
+retVal=$?
+if [ $retVal -ne 0 ]; then
+    echo "git add /assets/json/search_exclude.jsonl FAILED with code: $retVal"
+    exit $retVal
+fi
+
+# Pull the trigger and commit changes
 git commit -m "$commit_message"
 retVal=$?
 if [ $retVal -ne 0 ]; then

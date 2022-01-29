@@ -17,9 +17,10 @@
 │   │   ├── octojekyll-opt.jpg
 │   │   ├── pngwing.com.png
 │   │   └── stack-to-blog progress display.gif
-│   └── js
-│       ├── copyCode.js
-│       └── post_fm.js
+│   ├── js
+│   │   ├── copyCode.js
+│   │   └── post_fm.js
+│   └── json
 ├── _includes
 │   ├── copyHeader.html
 │   ├── head-custom.html
@@ -33,12 +34,12 @@
 │   ├── post.html
 │   └── program.html
 ├── _posts
-│   ├── 2016 [178 entries exceeds filelimit, not opening dir]
-│   ├── 2017 [154 entries exceeds filelimit, not opening dir]
-│   ├── 2018 [434 entries exceeds filelimit, not opening dir]
-│   ├── 2019 [264 entries exceeds filelimit, not opening dir]
-│   ├── 2020 [63 entries exceeds filelimit, not opening dir]
-│   ├── 2021 [31 entries exceeds filelimit, not opening dir]
+│   ├── 2016 [291 entries exceeds filelimit, not opening dir]
+│   ├── 2017 [246 entries exceeds filelimit, not opening dir]
+│   ├── 2018 [694 entries exceeds filelimit, not opening dir]
+│   ├── 2019 [420 entries exceeds filelimit, not opening dir]
+│   ├── 2020 [99 entries exceeds filelimit, not opening dir]
+│   ├── 2021 [51 entries exceeds filelimit, not opening dir]
 │   └── 2022
 ├── _sass
 │   ├── jekyll-theme-cayman.scss
@@ -60,4 +61,4 @@
 ├── stack.md
 └── tree.work
 
-18 directories, 43 files
+19 directories, 43 files

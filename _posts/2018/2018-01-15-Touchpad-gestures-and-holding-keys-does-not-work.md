@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    
 views:        "7,856 "
 accepted:     
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 14:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-15-Touchpad-gestures-and-holding-keys-does-not-work.md
 toc:          true
 navigation:   true
@@ -262,7 +262,7 @@ Most users won't need all these packages. Usually just `headers`, `image`, `imag
   [15]: https://askubuntu.com/questions/995351/lenovo-ideapad320-laptopamd-a9-processor-touchpad-stop-working-ubuntu-17-10
   [16]: https://askubuntu.com/questions/995365/touchpad-double-tap-and-two-finger-scroll-is-only-working-when-press-window-keys
   [17]: https://askubuntu.com/questions/995839/how-to-prevent-installation-of-kernel-4-13-on-ubuntu-16-04-lts
-  [18]: {% post_url /2018/2018-01-27-Samsung-M2-NVME-enters-read-only-on-linux-every-day^-not-on-Windows %}
+  [18]: {% post_url /2018/2018-01-27-Samsung-M2-NVME-enters-read-only-on-linux-every-day_-not-on-Windows %}
   [19]: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1720219
   [20]: https://github.com/torvalds/linux/blob/master/drivers/platform/x86/peaq-wmi.c
   [21]: https://unix.stackexchange.com/questions/395535/autorepeat-does-not-work
@@ -270,7 +270,7 @@ Most users won't need all these packages. Usually just `headers`, `image`, `imag
   [23]: https://askubuntu.com/questions/948439/touchpad-not-detected-on-lenovo-ideapad-320-with-kubuntu-17-04/963853#963853
   [24]: https://askubuntu.com/questions/763360/does-manual-kernel-update-affect-the-next-regular-automatic-update
   [25]: https://askubuntu.com/questions/2793/how-do-i-remove-old-kernel-versions-to-clean-up-the-boot-menu
-  [26]: {% post_url /2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade^ %}
+  [26]: {% post_url /2017/2017-02-20-How-to-update-kernel-to-the-latest-mainline-version-without-any-Distro-upgrade_ %}
   [27]: https://i.stack.imgur.com/VOt2M.png
 
 

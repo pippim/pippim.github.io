@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "7,403 "
 accepted:     
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 13:56:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-05-Why-does-my-ubuntu-18.04-get-stuck-on-the-^purple^-screen-after-logging-in^.md
 toc:          false
 navigation:   false

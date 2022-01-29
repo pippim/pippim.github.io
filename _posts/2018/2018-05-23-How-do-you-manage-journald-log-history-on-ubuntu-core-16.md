@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "999 "
 accepted:     Accepted
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 14:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-How-do-you-manage-journald-log-history-on-ubuntu-core-16.md
 toc:          false
 navigation:   false
@@ -94,7 +94,7 @@ Pay close attention to the parameter `-b-1` it is different than other reference
 
 ### Keep log file size down with `vacuum`
 
-I have a monthly `cron` job setup to keep log files down to 200MB in size: [Systemd logs (`journalctl`) are too large and slow]({% post_url /2018/2018-03-08-Systemd-logs-^`journalctl`^-are-too-large-and-slow %}). This not only decreases storage requirements but speeds up search across all boot logs.
+I have a monthly `cron` job setup to keep log files down to 200MB in size: [Systemd logs (`journalctl`) are too large and slow]({% post_url /2018/2018-03-08-Systemd-logs-_`journalctl`_-are-too-large-and-slow %}). This not only decreases storage requirements but speeds up search across all boot logs.
 
 
 For example to reduce 312 MB consumption down to 200 MB (or less) use:
@@ -108,5 +108,5 @@ Vacuuming done, freed 176.0M of archived journals on disk.
 ```
 
 
-  [1]: {% post_url /2018/2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04^-restarts^ %}
+  [1]: {% post_url /2018/2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04_-restarts_ %}
 

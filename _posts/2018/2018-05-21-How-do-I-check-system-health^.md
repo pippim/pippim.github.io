@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "28,809 "
 accepted:     
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 13:56:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-How-do-I-check-system-health^.md
 toc:          false
 navigation:   false

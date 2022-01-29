@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "647 "
 accepted:     Accepted
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 14:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-27-vboxdrv:-Fatal-error-in-Kernel-4.8.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ Also instead of Kernel version 4.8.1 which has the "Dirty COW" security holes ([
 
 
   [1]: https://www.linuxbabe.com/virtualbox/install-latest-virtualbox-5-1-ubuntu-16-04
-  [2]: {% post_url /2016/2016-10-21-What-is-the-^Dirty-COW^-bug^-and-how-can-I-secure-my-system-against-it^ %}
+  [2]: {% post_url /2016/2016-10-21-What-is-the-_Dirty-COW_-bug_-and-how-can-I-secure-my-system-against-it_ %}

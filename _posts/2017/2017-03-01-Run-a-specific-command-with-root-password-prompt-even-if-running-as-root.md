@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "1,849 "
 accepted:     
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 14:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-01-Run-a-specific-command-with-root-password-prompt-even-if-running-as-root.md
 toc:          false
 navigation:   false
@@ -123,4 +123,4 @@ Taken from the answer posted at ([How can I set up a password for the &#39;rm&#3
 
 
   [1]: https://i.stack.imgur.com/HvKlZ.png
-  [2]: {% post_url /2016/2016-12-30-How-can-I-set-up-a-password-for-the-^rm^-command^ %}
+  [2]: {% post_url /2016/2016-12-30-How-can-I-set-up-a-password-for-the-_rm_-command_ %}

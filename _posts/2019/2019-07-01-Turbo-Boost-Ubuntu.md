@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "269 "
 accepted:     Accepted
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 14:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Turbo-Boost-Ubuntu.md
 toc:          false
 navigation:   false
@@ -35,7 +35,7 @@ $ echo "1" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
 Another option is to limit your CPU frequencies to non-turbo boost speeds or even lower. For this purpose I wrote `cpuf`:
 
 
-- [GUI or simple Bash script to throttle the CPU?]({% post_url /2019/2019-05-12-GUI-or-simple-Bash-script-to-throttle-the-CPU^ %})
+- [GUI or simple Bash script to throttle the CPU?]({% post_url /2019/2019-05-12-GUI-or-simple-Bash-script-to-throttle-the-CPU_ %})
 
 [![cpuf-demo.gif][1]][1]
 

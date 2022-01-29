@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "3,090 "
 accepted:     Accepted
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 14:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu.md
 toc:          true
 navigation:   true
@@ -301,7 +301,7 @@ While lock screen timer is running it records how many minutes are remaining int
   [1]: {% post_url /2018/2018-05-23-Set-of-countdown-timers-with-alarm %}
   [2]: https://i.stack.imgur.com/N0gb6.gif
   [3]: https://i.stack.imgur.com/0jBz6m.png
-  [4]: {% post_url /2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator^ %}
+  [4]: {% post_url /2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator_ %}
 
 
 <a id="hdr10"></a>

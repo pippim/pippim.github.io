@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,040 "
 accepted:     Accepted
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 14:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-13-what-are-system.journal-and-templates.dat.md
 toc:          false
 navigation:   false
@@ -43,5 +43,5 @@ The journal log file in question is 185 MB on my system and was 312 MB before I 
 As far as `/var/log/installer/cdebconf/` goes there is no such directory on my machine. I did find a [reference][2] where 75 GB was consumed there for someone else.
 
 
-  [1]: {% post_url /2018/2018-03-08-Systemd-logs-^`journalctl`^-are-too-large-and-slow %}
+  [1]: {% post_url /2018/2018-03-08-Systemd-logs-_`journalctl`_-are-too-large-and-slow %}
   [2]: http://forums.debian.net/viewtopic.php?f=30&t=118776

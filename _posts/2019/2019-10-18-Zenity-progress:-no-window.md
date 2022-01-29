@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "328 "
 accepted:     
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 14:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-18-Zenity-progress:-no-window.md
 toc:          false
 navigation:   false
@@ -74,7 +74,7 @@ Passing `${filename}` to `--text` option will not update display with each file 
 
 Although the source code appears in the `.gif` you can copy and paste in your own script from this Q&A:
 
-- [How do I create a fake process bar?]({% post_url /2018/2018-04-23-How-do-I-create-a-fake-process-bar^ %})
+- [How do I create a fake process bar?]({% post_url /2018/2018-04-23-How-do-I-create-a-fake-process-bar_ %})
 
 
   [1]: https://i.stack.imgur.com/w4HlS.gif

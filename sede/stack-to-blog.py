@@ -171,6 +171,7 @@ EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
 # If not desired, set `CONFIG_YML = None`
 CONFIG_YML = "../_config.yml"
 code_url = None             # https://github.com/pippim/pippim.github.io/blob/main
+html_url = None
 
 
 ''' Initialize Global Variables '''
@@ -1869,6 +1870,10 @@ def create_blog_filename(r):
         HTML breaks references in links when using:
 
             "'", '"', '<', '>', '(', ')', '[', ']'
+
+        Jekyll converts:
+            "^" to "" (null)
+
     """
     global total_special_chars_in_titles, total_unicode_in_titles
 
@@ -1879,11 +1884,11 @@ def create_blog_filename(r):
     for i, lit in enumerate(little):
         if lit == " ":
             little[i] = "-"
-        elif lit in "#$%&+;,=?/'<>()[]":
-            little[i] = "^"
+        elif lit in "#$%^&+;,=?/'<>()[]":
+            little[i] = "_"
             total_special_chars_in_titles += 1
         elif lit in '"':
-            little[i] = "^"
+            little[i] = "_"
             total_special_chars_in_titles += 1
         elif len(lit) > 1:
             little[i] = "u"
@@ -2793,6 +2798,7 @@ def set_config_code_url():
 
     """
     global code_url  # https://github.com/pippim/pippim.github.io/blob/main
+    global html_url  #
 
     if FRONT_GIT_URL is None:
         return ""  # They don't want this glorious feature! :)
@@ -2804,9 +2810,17 @@ def set_config_code_url():
             # Grab the value from "key: value" pair
             # Note "value" contains a ":" EG https:// so only split once
             code_url = ln.split(':', 1)[1].strip()
+            # Build our html URL. The config.yml key code_url value:
+            #   https://github.com/pippim/pippim.github.io/blob/main
+            # becomes:
+            #   https://pippim.github.io
+            parts = code_url.split('/')
+            html_url = "https://" + parts[4]
+            print('html_url:', html_url)
             # append "../_posts/" as "/_posts"
             code_url += OUTPUT_DIR[:-1].replace("../", "/")
             # print("code_url:", code_url)
+
             return
 
     fatal_error("code_url: not found in " + CONFIG_YML)
@@ -3224,10 +3238,20 @@ for row in rows:
     sum2 = 0                # Track for new header to insert Navigation Bar
     last_nav_id = 0         # Last navigation bar ID assigned
 
+    # Build our html URL. The config.yml key code_url value contains:
+    #   https://github.com/pippim/pippim.github.io/blob/main
+    # and it has already been changed inside html_url to:
+    #   https://pippim.github.io
+    filename = base_filename
+    if OUTPUT_BY_YEAR_DIR:
+        # /2018/2018/ becomes: /2018/
+        filename = filename[5:]
+    # /2018-05-18-Title-of-question becomes: /2018/05/18/Title-of-question
+    filename = filename.replace('-', '/', 3)
+    ws.post_init(html_url + filename + ".html")
     ''' Pass #2: Loop through lines to insert TOC and Navigation Bar
                  Create search dictionary words 
     '''
-    ws.post_init(code_url + base_filename + ".html")
     for line_index, line in enumerate(lines):
         check_code_block(line)      # Turn off formatting when in code block
         # Did this post qualify for adding navigation bar?

@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "235 "
 accepted:     Accepted
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 13:56:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-12-install-Ubuntu-and-complete-wipe-out-Windows-on-a-machine-with-a-^Windows-Boot-Manager^.md
 toc:          false
 navigation:   false

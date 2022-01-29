@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,946 "
 accepted:     Accepted
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 13:56:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-30-Awesome-WM---How-do-you-set-a-hotkey-to-lock-your-system^.md
 toc:          false
 navigation:   false

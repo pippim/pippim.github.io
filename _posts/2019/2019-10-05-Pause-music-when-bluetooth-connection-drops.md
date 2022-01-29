@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "952 "
 accepted:     Accepted
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 14:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-05-Pause-music-when-bluetooth-connection-drops.md
 toc:          false
 navigation:   false
@@ -32,4 +32,4 @@ Try this:
 - save file and exit editor
 - type `pulseaudio -k` to reload configuration
 
-Source: [How to disable pulseaudio automatic device switch?]({% post_url /2018/2018-08-01-How-to-disable-pulseaudio-automatic-device-switch^ %})
+Source: [How to disable pulseaudio automatic device switch?]({% post_url /2018/2018-08-01-How-to-disable-pulseaudio-automatic-device-switch_ %})

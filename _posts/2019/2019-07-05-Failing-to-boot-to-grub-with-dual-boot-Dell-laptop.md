@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "993 "
 accepted:     Accepted
-uploaded:     2022-01-29 11:32:30
+uploaded:     2022-01-29 14:37:33
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-05-Failing-to-boot-to-grub-with-dual-boot-Dell-laptop.md
 toc:          false
 navigation:   false
@@ -29,4 +29,4 @@ The important things to remember is most people suggest AHCI instead of Intel RA
 
 Finally after installing you may still need to run `boot-repair`:
 
-- [How to make grub menu appear instead grub minimal bash-like in booting?]({% post_url /2018/2018-12-31-How-to-make-grub-menu-appear-instead-grub-minimal-bash-like-in-booting^ %})
+- [How to make grub menu appear instead grub minimal bash-like in booting?]({% post_url /2018/2018-12-31-How-to-make-grub-menu-appear-instead-grub-minimal-bash-like-in-booting_ %})
