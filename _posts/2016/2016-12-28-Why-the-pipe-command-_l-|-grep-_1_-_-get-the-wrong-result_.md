@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,669 "
 accepted:     
-uploaded:     2022-01-29 14:37:33
+uploaded:     2022-01-29 15:42:01
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-28-Why-the-pipe-command-_l-|-grep-_1_-_-get-the-wrong-result_.md
 toc:          false
 navigation:   false

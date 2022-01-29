@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,868 "
 accepted:     Accepted
-uploaded:     2022-01-29 14:37:33
+uploaded:     2022-01-29 15:42:01
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-17-Failing-Installation-of-Ubuntu-18.04-w_-Lenovo-Thinkpad-P73-cannot-boot-up-saying:-__Firmware-bug_:-TPM-interrupt-not-working_.md
 toc:          false
 navigation:   false

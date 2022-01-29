@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    1
 views:        "258 "
 accepted:     
-uploaded:     2022-01-29 14:37:33
+uploaded:     2022-01-29 15:42:01
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-04-List-gsettings-changes-from-default.md
 toc:          false
 navigation:   false

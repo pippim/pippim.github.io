@@ -629,6 +629,7 @@ def dump(r):
                 dump(r)
     """
 
+    percent_complete_close()  # Just in case a progress display is generating
     print('Site:   ', r[SITE], '  |  Post ID:', r[POST_ID], '  |  Type:', r[TYPE])
     print('Title:  ', r[TITLE][:80])
     print('URL:    ', r[URL][:80])
@@ -2073,6 +2074,7 @@ def write_md(r, md):
 
 def fatal_error(msg):
     """ Print fatal error and exit program """
+    percent_complete_close()  # Just in case a progress display is generating
     print('#' * 80)
     print('#', ' ' * 31, "FATAL ERROR", ' ' * 32, '#')
     print('#' * 80)
@@ -3111,14 +3113,6 @@ for row in rows:
         print('index does not match:', row_number - 2)
         fatal_error("Terminating")
     save_blog = ss_save_blog
-    # While Speed Search variables are fresh in memory, record top_posts []
-    if ss_type == "Answer":
-        if row[SCORE] != '':
-            score = int(row[SCORE])
-        else:
-            score = 0
-        pt = (score, ss_title, ss_post_url)
-        top_posts.append(pt)
 
     ''' If we aren't saving this blog, grab the next '''
     if save_blog is False:
@@ -3129,6 +3123,15 @@ for row in rows:
                 index = random_row_nos.index(row_number)
                 random_row_nos[index] = row_number + 1
         continue
+
+    # While Speed Search variables are fresh in memory, record top_posts []
+    if ss_type == "Answer":
+        if row[SCORE] != '':
+            score = int(row[SCORE])
+        else:
+            score = 0
+        pt = (score, ss_title, ss_post_url)
+        top_posts.append(pt)
 
     ''' convert SE tags: "<tag1><tag2><tag3>" to: "tag1 tag2 tag3"
         NOTE: pseudo_tag_names will be appended to this list later.
@@ -3308,24 +3311,10 @@ for row in rows:
 
     qualifying_blog_count += 1
     ws.post_save()
+    write_md(row, new_md)
     if RANDOM_LIMIT is not None:
-        if row_number in random_row_nos:
-            if save_blog is True:
-                #print('Random upload row number: {:>6,}'.format(row_number))
-                # print(new_md)
-                if PRINT_RANDOM:
-                    dump(row)
-                write_md(row, new_md)
-            else:
-                # This random record doesn't qualify so replace
-                # with next record number
-                #print('Random row record number: {:>6,}'.format(row_number),
-                #      " - Does NOT qualify as blog so using next number.")
-                index = random_row_nos.index(row_number)
-                random_row_nos[index] = row_number + 1
-
-    elif save_blog is True:
-        write_md(row, new_md)
+        if PRINT_RANDOM:
+            dump(row)
 
     # END OF: for row in rows:
 

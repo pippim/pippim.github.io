@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "390 "
 accepted:     Accepted
-uploaded:     2022-01-29 14:37:33
+uploaded:     2022-01-29 15:42:01
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-08-updatedb-:-File-size-limit-exceeded-_18.04-LTS_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "405 "
 accepted:     
-uploaded:     2022-01-29 14:37:33
+uploaded:     2022-01-29 15:42:01
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-What-does-`LOGFILE__{1:-_var_log_syslog}`-do_.md
 toc:          false
 navigation:   false
