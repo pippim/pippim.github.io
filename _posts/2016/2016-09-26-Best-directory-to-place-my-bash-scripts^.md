@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    1
 views:        "240 "
 accepted:     
-uploaded:     2022-01-23 11:36:46
+uploaded:     2022-01-29 11:32:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-26-Best-directory-to-place-my-bash-scripts^.md
 toc:          false
 navigation:   false
@@ -39,5 +39,5 @@ Even though I accepted below answer over a year ago, I ended up using:
 
 After creating directory `/home/me/bin` you need to log out and in again for it to get into your PATH.
 
-  [1]: {% post_url /2016/2016-09-26-Turn-off-Motherboard^PC-Speaker-^beep^-in-Ubuntu-16.04-regression %}
+  [1]: https://askubuntu.com/questions/829258/turn-off-motherboard-pc-speaker-beep-in-ubuntu-16-04-regression
   [2]: {% post_url /2016/2016-10-22-Ubuntu-changing-default-audio-output-after-suspend %}

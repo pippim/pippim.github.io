@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "1,195 "
 accepted:     
-uploaded:     2022-01-23 11:36:46
+uploaded:     2022-01-29 11:32:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-11-Why-are-Unity-7-and-Unity-8-discontinued-now^.md
 toc:          false
 navigation:   false

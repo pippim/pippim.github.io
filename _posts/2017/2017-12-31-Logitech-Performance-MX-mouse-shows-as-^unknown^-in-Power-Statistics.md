@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,455 "
 accepted:     Accepted
-uploaded:     2022-01-23 11:36:46
+uploaded:     2022-01-29 11:32:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-31-Logitech-Performance-MX-mouse-shows-as-^unknown^-in-Power-Statistics.md
 toc:          false
 navigation:   false

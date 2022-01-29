@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "15,392 "
 accepted:     
-uploaded:     2022-01-23 11:36:46
+uploaded:     2022-01-29 11:32:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-Set-CPU-temperature-throttle-threshold-on-Ubuntu^Thinkpad.md
 toc:          false
 navigation:   false

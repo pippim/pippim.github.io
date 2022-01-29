@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "44 "
 accepted:     Accepted
-uploaded:     2022-01-23 11:36:46
+uploaded:     2022-01-29 10:40:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-11-14-Jekyll-code-block-size-in-header-is-too-small.md
 toc:          false
 navigation:   false

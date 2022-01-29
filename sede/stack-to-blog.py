@@ -516,7 +516,10 @@ def set_ss_save_blog(r):
         This is second pass to check if self answered question and if blog
         should be saved. Also updates totals.
 
-        If same title exists for both Q&A its a self-answered question.
+        NOTE: Coming into this function ss_ fields are current but, we can
+              destroy them as they are reread by parent.
+
+        If the same title exists for both Q&A its a self-answered question.
 
         When self-answered question we skip blogging the question and the
         answer is blogged assuming it reaches the required minimum vote. If
@@ -561,7 +564,7 @@ def set_ss_save_blog(r):
     total_views += views    # score is up-votes - down-votes can be negative
 
     ''' If Accepted turned on save blog (but it might be question) '''
-    if r[TYPE] == "Answer" and r[ACCEPTED] != '':
+    if r[TYPE] == "Answer" and r[ACCEPTED] == 'Accepted':
         accepted_count += 1
         if ACCEPTED_QUALIFIER:
             save = True  # Previous tests may have turned off
@@ -574,16 +577,19 @@ def set_ss_save_blog(r):
         question_count += 1
 
         # Check if this is a self-answered question
-        self_answer, self_accept, votes, search_url = check_self_answer(r)
+        # TODO: Speed up check_self_answer(r) by renaming to:
+        #       check_self_accept(r) and only returning self_accept flag.
+        #self_answer, self_accept, votes, search_url = check_self_answer(r)
+        self_accept, search_url = check_self_accept(r)
         if "?17466561" in r[URL] or "?59621559" in r[URL]:
-            print('votes:', votes, search_url)
+            print('search_url:', search_url)
             print('self_answer:', self_answer, 'self_accept:', self_accept)
             # fatal_error("This is it")
-        if not QUESTIONS_QUALIFIER or self_answer is True:
+        if not QUESTIONS_QUALIFIER or ss_both_q_and_a:
             save = False  # Questions don't qualify or this self-answered
 
         #if self_answer is True:
-        if ss_both_q_and_a is True:
+        if ss_both_q_and_a:
             total_self_answer += 1
             #if ss_accepted is True:  # Question is not flagged as ACCEPTED
             if self_accept is True:
@@ -2018,6 +2024,24 @@ def check_self_answer(r):
         fatal_error("check_self_answer(): We don't exist!")
 
     return answer, accepted, votes, search_url
+
+
+def check_self_accept(r):
+    """ Called for every question.
+    """
+
+    # Is this a self-answered question?
+    if get_ss_title(r[TITLE]):
+        if ss_both_q_and_a is False:
+            return False, None
+    else:
+        fatal_error("check_self_accept(): Question doesn't exist!")
+
+    if get_ss_title(r[TITLE], search_type="Answer"):
+        # Is this self-answered question accepted?
+        return ss_accepted == "Accepted", ss_url
+    else:
+        fatal_error("check_self_accept(): Answer doesn't exist!")
 
 
 def write_md(r, md):

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,648 "
 accepted:     
-uploaded:     2022-01-23 11:36:46
+uploaded:     2022-01-29 11:32:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-08-How-would-you-separate-fields-with-multiple-spaces-and-store-them-in-an-array^.md
 toc:          false
 navigation:   false

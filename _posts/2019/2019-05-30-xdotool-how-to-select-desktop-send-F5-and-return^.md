@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    1
 views:        "1,965 "
 accepted:     Accepted
-uploaded:     2022-01-23 11:36:46
+uploaded:     2022-01-29 11:32:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-30-xdotool-how-to-select-desktop-send-F5-and-return^.md
 toc:          false
 navigation:   false
@@ -32,7 +32,7 @@ Any ideas?
 
 This project is related to this Q&A where the icons drop off the left screen into a black whole because of different sized monitors:
 
-- [Desktop icons on left screen go down into black hole]({% post_url /2019/2019-06-02-Desktop-icons-on-left-screen-go-down-into-black-hole %})
+- [Desktop icons just dropped down left screen into never-never land](Desktop icons just dropped down left screen into never-never land)
 
 Thanks to [Podesta's help][1] I created this code:
 

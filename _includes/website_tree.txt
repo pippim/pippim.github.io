@@ -9,6 +9,7 @@
 │   │   ├── Blog_Project-Management-101.png
 │   │   ├── cookie-clicker.png
 │   │   ├── earth-from-space.jpg
+│   │   ├── Edm Temp 2022-01-26.png
 │   │   ├── Edm Temperature December 7, 2021.png
 │   │   ├── github pages themes.png
 │   │   ├── Inspectocadt.jpeg
@@ -26,7 +27,6 @@
 │   ├── posts_by_tag.html
 │   ├── posts_by_vote.html
 │   ├── toc.md
-│   ├── website_tree
 │   └── website_tree.txt
 ├── _layouts
 │   ├── default.html
@@ -48,7 +48,8 @@
 │   ├── refresh.sh
 │   ├── rouge_languages.txt
 │   ├── StackQuery
-│   └── stack-to-blog.py
+│   ├── stack-to-blog.py
+│   └── website_search.py
 ├── about.md
 ├── answers.md
 ├── _config.yml
@@ -59,4 +60,4 @@
 ├── stack.md
 └── tree.work
 
-18 directories, 42 files
+18 directories, 43 files

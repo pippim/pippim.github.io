@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "213 "
 accepted:     Accepted
-uploaded:     2022-01-23 11:36:46
+uploaded:     2022-01-29 10:40:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-27-Tkinter-get-names^-attributes-and-values-of-object-by-reference-number.md
 toc:          false
 navigation:   false

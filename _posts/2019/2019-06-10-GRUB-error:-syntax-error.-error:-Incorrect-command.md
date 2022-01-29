@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "991 "
 accepted:     Accepted
-uploaded:     2022-01-23 11:36:46
+uploaded:     2022-01-29 11:32:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-10-GRUB-error:-syntax-error.-error:-Incorrect-command.md
 toc:          false
 navigation:   false

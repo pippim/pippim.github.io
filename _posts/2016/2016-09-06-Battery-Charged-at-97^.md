@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "8,074 "
 accepted:     
-uploaded:     2022-01-23 11:36:46
+uploaded:     2022-01-29 11:32:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-06-Battery-Charged-at-97^.md
 toc:          false
 navigation:   false
