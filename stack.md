@@ -1256,7 +1256,7 @@ The filename for a Jekyll blog post resides in the `_posts/` directory and requi
 
 - Begins with date in `YYYY-MM-DD-` format.
 - Next comes the title which has spaces replaced with `-`.
-- The forward slash (`/`) character is illegal in filenames, so it is replaced by division symbol (`∕`).
+- Any special characters (`#$%^&+;,=?/'<>()[]"`) in the title are converted to underscore (`_`).
 - The extension `.md` is added to the filename.
 - If `OUTPUT_BY_YEAR_DIR=True` is set then `/YYYY/` is prepended to the filename. Required when there are more than 1,000 posts.
 - Lastly, the `OUTPUT_DIR` setting is prepended to the filename. 
@@ -1270,7 +1270,7 @@ OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
 
 Given the settings above, a post with the date **January 11, 2022** and the title *"How can I copy files?", would be saved as:
 
-    _posts/2022/2022-01-11-How-can-I-copy-files^.md
+    _posts/2022/2022-01-11-How-can-I-copy-files_.md
 
 Note that the `../` in the `OUTPUT_DIR` constant is only to navigate from `/sede` directory where `stack-to-blog.py` is run from. The `/_posts` directory is in the root directory of the website.
 
@@ -1314,6 +1314,10 @@ def create_blog_filename(r):
      HTML breaks references in links when using:
 
          "'", '"', '<', '>', '(', ')', '[', ']'
+
+     Jekyll converts:
+         "^" to "" (null)
+
  """
  global total_special_chars_in_titles, total_unicode_in_titles
 
@@ -1324,11 +1328,11 @@ def create_blog_filename(r):
  for i, lit in enumerate(little):
      if lit == " ":
          little[i] = "-"
-     elif lit in "#$%&+;,=?/'<>()[]":
-         little[i] = "^"
+     elif lit in "#$%^&+;,=?/'<>()[]":
+         little[i] = "_"
          total_special_chars_in_titles += 1
      elif lit in '"':
-         little[i] = "^"
+         little[i] = "_"
          total_special_chars_in_titles += 1
      elif len(lit) > 1:
          little[i] = "u"
