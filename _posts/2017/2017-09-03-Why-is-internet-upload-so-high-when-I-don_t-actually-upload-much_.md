@@ -10,9 +10,9 @@ created_date: 2017-09-03 16:51:09
 edit_date:    2018-01-07 20:55:09
 votes:        "2 "
 favorites:    
-views:        "3,549 "
+views:        "3,558 "
 accepted:     
-uploaded:     2022-01-29 15:42:01
+uploaded:     2022-01-30 11:51:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-03-Why-is-internet-upload-so-high-when-I-don_t-actually-upload-much_.md
 toc:          true
 navigation:   true

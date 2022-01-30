@@ -10,9 +10,9 @@ created_date: 2017-03-03 11:10:55
 edit_date:    
 votes:        "50 "
 favorites:    
-views:        "31,404 "
+views:        "31,578 "
 accepted:     Accepted
-uploaded:     2022-01-29 15:42:01
+uploaded:     2022-01-30 11:51:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-03-Is-there-a-command-to-display-a-Calendar-in-the-terminal_.md
 toc:          false
 navigation:   false

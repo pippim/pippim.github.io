@@ -10,9 +10,9 @@ created_date: 2016-10-27 23:17:02
 edit_date:    2017-04-13 12:25:11
 votes:        "1 "
 favorites:    
-views:        "647 "
+views:        "648 "
 accepted:     Accepted
-uploaded:     2022-01-29 15:42:01
+uploaded:     2022-01-30 11:51:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-27-vboxdrv:-Fatal-error-in-Kernel-4.8.md
 toc:          false
 navigation:   false

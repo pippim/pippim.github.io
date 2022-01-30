@@ -2818,7 +2818,7 @@ def set_config_code_url():
             #   https://pippim.github.io
             parts = code_url.split('/')
             html_url = "https://" + parts[4]
-            print('html_url:', html_url)
+            #print('html_url:', html_url)
             # append "../_posts/" as "/_posts"
             code_url += OUTPUT_DIR[:-1].replace("../", "/")
             # print("code_url:", code_url)

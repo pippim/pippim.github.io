@@ -10,9 +10,9 @@ created_date: 2019-02-06 13:36:33
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "238 "
+views:        "239 "
 accepted:     
-uploaded:     2022-01-29 15:42:01
+uploaded:     2022-01-30 11:51:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-02-06-What-are-the-dangers-of-upgrading-kernel-from-4.18.0-13-generic-to-5_.md
 toc:          false
 navigation:   false

@@ -38,12 +38,13 @@
 │   └── program.html
 ├── _posts
 │   ├── 2016 [291 entries exceeds filelimit, not opening dir]
-│   ├── 2017 [246 entries exceeds filelimit, not opening dir]
+│   ├── 2017 [247 entries exceeds filelimit, not opening dir]
 │   ├── 2018 [694 entries exceeds filelimit, not opening dir]
-│   ├── 2019 [420 entries exceeds filelimit, not opening dir]
+│   ├── 2019 [421 entries exceeds filelimit, not opening dir]
 │   ├── 2020 [99 entries exceeds filelimit, not opening dir]
-│   ├── 2021 [51 entries exceeds filelimit, not opening dir]
+│   ├── 2021 [52 entries exceeds filelimit, not opening dir]
 │   └── 2022
+│       └── 2022-01-05-Python-to-print-out-status-bar-and-percentage.md
 ├── _sass
 │   ├── jekyll-theme-cayman.scss
 │   └── toc.scss
@@ -62,6 +63,8 @@
 ├── mserve.md
 ├── programs.md
 ├── stack.md
-└── tree.work
+├── stack-to-blog.py
+├── tree.work
+└── website_search.py
 
-19 directories, 46 files
+19 directories, 49 files

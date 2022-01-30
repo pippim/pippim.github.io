@@ -10,9 +10,9 @@ created_date: 2016-09-30 02:53:37
 edit_date:    2022-01-12 01:11:19
 votes:        "31 "
 favorites:    
-views:        "41,214 "
+views:        "41,332 "
 accepted:     Accepted
-uploaded:     2022-01-29 15:42:01
+uploaded:     2022-01-30 11:51:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-30-What-is-the-difference-between-touch-file-and-_-file_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-02-27 11:39:21
 edit_date:    2018-08-05 18:19:21
 votes:        "0 "
 favorites:    
-views:        "132 "
+views:        "134 "
 accepted:     Accepted
-uploaded:     2022-01-29 15:42:01
+uploaded:     2022-01-30 11:51:20
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-27-Automatic-tabulation-when-writing-code-on-Gedit_.md
 toc:          false
 navigation:   false
