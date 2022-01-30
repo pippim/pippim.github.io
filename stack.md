@@ -3,6 +3,9 @@ title: Convert Stack Exchange Posts to Your Own Website
 layout: program
 ---
 
+<!-- Jan 30/22 - Initial attempt at search javascript -->
+<script type="text/javascript" src="/assets/js/search.js" ></script>
+
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
