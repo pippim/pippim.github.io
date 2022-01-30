@@ -11,11 +11,11 @@ async function load_search_objects() {
 
     console.log(search_words["brightness"]);
 
-    let url = 'https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json';
+    let url2 = 'https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json';
     let search_urls = null;
 
     try {
-        search_urls = await (await fetch(url)).json();
+        search_urls = await (await fetch(url2)).json();
     } catch(e) {
         console.log('error: search_urls could not be loaded.');
     }
