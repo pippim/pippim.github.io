@@ -22,3 +22,5 @@ async function load_search_objects() {
 
     console.log(search_urls[1000]);
 }
+
+load_search_objects();
