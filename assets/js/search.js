@@ -2,6 +2,7 @@
 var search_words = null         // global context
 var search_urls = null          //   "      "
 
+/* Causing build failure?
 search_words = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
 search_urls = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json')
 
@@ -22,8 +23,9 @@ async function load(url) {
     return obj
 }
 
+*/
 
-async function load_search_objects1() {
+async function load_search_objects() {
     let url = 'https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json';
     let search_words = null;
 
