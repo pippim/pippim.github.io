@@ -353,7 +353,8 @@ End of glow not being used anymore */
   -webkit-text-fill-color: transparent;
   // Jan 31/22 error: Unknown property “text-fill-color”.  Declaration dropped.
   
-  animation: shine 3s linear infinite;
+  // animation: shine 3s linear infinite;
+  animation: shine 3s linear 9s;
   
   @keyframes shine {
     to {
