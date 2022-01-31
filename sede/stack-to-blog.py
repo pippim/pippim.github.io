@@ -2929,7 +2929,7 @@ def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True)
                     " > step: " + str(step))
         return                      # printing debug lines, no progress bar
 
-    # UTF-8 left blocks: 4/4, 1/8, 1/4, 1/2, 5/8, 3/4, 7/8
+    # UTF-8 left blocks: 1, 1/8, 1/4, 3/8, 1/2, 5/8, 3/4, 7/8
     utf_8s = ["█", "▏", "▎", "▍", "▌", "▋", "▊", "█"]
     perc = 100 * float(step) / float(total_steps)
     max_ticks = bar_width * 8
@@ -3252,6 +3252,8 @@ for row in rows:
     # /2018-05-18-Title-of-question becomes: /2018/05/18/Title-of-question
     filename = filename.replace('-', '/', 3)
     ws.post_init(html_url + filename + ".html")
+    ws.parse(row[TITLE])
+    ws.parse(tags)
     ''' Pass #2: Loop through lines to insert TOC and Navigation Bar
                  Create search dictionary words 
     '''

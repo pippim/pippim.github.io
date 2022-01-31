@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "19 "
 accepted:     Accepted
-uploaded:     2022-01-30 11:51:20
+uploaded:     2022-01-30 22:11:11
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-27-UbuntuOnWindows:-Restoring-backup-directory-causes-UbuntuOnWindows-to-fail-starting.md
 toc:          false
 navigation:   false
