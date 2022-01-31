@@ -311,6 +311,8 @@ details[open] > summary {
   text-align:center;
 }
 
+/* glow is not used anymore and getting error in Firefox...
+
 // Neon glowing Text: https://www.w3schools.com/howto/howto_css_glowing_text.asp
 .glow {
   -webkit-animation: glow 4s ease-in-out infinite alternate;
@@ -331,6 +333,8 @@ details[open] > summary {
       0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
   }
 }
+
+End of glow not being used anymore */
 
 /* From: https://gist.github.com/CodeMyUI/530e25ec020cfbfc68526a2a56cb0247 
    Note: No license or copyright found?
