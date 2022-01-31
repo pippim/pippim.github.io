@@ -344,9 +344,9 @@ details[open] > summary {
   
   color: #000;
   background-clip: text;
-  text-fill-color: transparent;
+  // text-fill-color: transparent;
   -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   // Jan 31/22 error: Unknown property “text-fill-color”.  Declaration dropped.
   
   animation: shine 3s linear infinite;
