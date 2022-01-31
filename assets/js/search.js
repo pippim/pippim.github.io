@@ -1,5 +1,29 @@
 // From: https://stackoverflow.com/a/55784549/6929343
+var search_words = null         // global context
+var search_urls = null          //   "      "
+
+search_words = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
+search_urls = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json')
+
 async function load_search_objects() {
+    console.log(search_words["brightness"]);
+    console.log(search_urls[1000]);
+}
+
+async function load(url) {
+    let obj = null;
+
+    try {
+        obj = await (await fetch(url)).json();
+    } catch(e) {
+        console.log('load error: object could not be fetched.');
+    }
+
+    return obj
+}
+
+
+async function load_search_objects1() {
     let url = 'https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json';
     let search_words = null;
 
