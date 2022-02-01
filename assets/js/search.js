@@ -1,13 +1,15 @@
-// From: https://stackoverflow.com/a/55784549/6929343
-var search_words = null         // global context
-var search_urls = null          //   "      "
+// From: https://stackoverflow.com/a/12393346/6929343
+window.MyLib = {}; // global Object container; don't use var
+MyLib.search_words = null         // global context
+MyLib.earch_urls = null           //   "      "
 
-var search_words = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
-var search_urls = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json')
+// From: https://stackoverflow.com/a/55784549/6929343
+MyLib.search_words = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
+MyLib.search_urls = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json')
 
 async function load_search_objects() {
-    console.log(search_words["brightness"]);
-    console.log(search_urls[1000]);
+    console.log(MyLib.search_words["brightness"]);
+    console.log(MyLib.search_urls[1000]);
 }
 
 async function load(url) {
