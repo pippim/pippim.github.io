@@ -356,7 +356,8 @@ End of glow not being used anymore */
   // animation: shine 3s linear infinite;
   // animation: shine 3s 9s linear;
   //animation: shine 3s 9s linear infinite;
-  animation: shine 3s linear 9s;
+  // animation: shine 3s linear 9s;
+  animation: shine 3s ease-in-out;
   
   @keyframes shine {
     to {
