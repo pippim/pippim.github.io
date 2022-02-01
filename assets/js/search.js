@@ -2,7 +2,6 @@
 var search_words = null         // global context
 var search_urls = null          //   "      "
 
-/* Causing build failure?
 search_words = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
 search_urls = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json')
 
@@ -23,9 +22,7 @@ async function load(url) {
     return obj
 }
 
-*/
-
-async function load_search_objects() {
+async function load_search_objects_old() {
     let url = 'https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json';
     let search_words = null;
 
@@ -49,4 +46,4 @@ async function load_search_objects() {
     console.log(search_urls[1000]);
 }
 
-load_search_objects();
+load_search_objects();  // Do we really need this here?
