@@ -344,13 +344,16 @@ svg {
   padding: 10px;
 }
 
-// Use button instead of search-button
+/* Using button instead of search-button causes all other buttons to lose border
+   and doesn't even help .search-button
 button {
   all: unset;
   cursor: pointer;
   width: 44px;
   height: 44px;
 }
+*/
+
 .search-button {
   all: unset;
   cursor: pointer;
