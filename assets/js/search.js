@@ -50,4 +50,4 @@ async function load_search_objects_old() {
     console.log(search_urls[1000]);
 }
 
-load_search_objects();  // Do we really need this here?
+// load_search_objects();  // Do we really need this here?
