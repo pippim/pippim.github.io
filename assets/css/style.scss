@@ -344,6 +344,13 @@ svg {
   padding: 10px;
 }
 
+// Use button instead of search-button
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
 .search-button {
   all: unset;
   cursor: pointer;
