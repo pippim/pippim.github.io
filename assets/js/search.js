@@ -5,12 +5,14 @@ var search_urls = null           //   "      "
 
 // From: https://stackoverflow.com/a/55784549/6929343
 var search_words = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
+console.log(search_words["brightness"]);
 var search_urls = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json')
+console.log(search_urls[1000]);
 
 async function load_search_objects() {
-    search_words = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
+    // search_words = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
     console.log(search_words["brightness"]);
-    search_urls = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json')
+    // search_urls = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json')
     console.log(search_urls[1000]);
 }
 
@@ -50,4 +52,4 @@ async function load_search_objects_old() {
     console.log(search_urls[1000]);
 }
 
-load_search_objects();  // Do we really need this here?
+// load_search_objects();  // Do we really need this here?
