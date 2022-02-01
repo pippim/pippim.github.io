@@ -30,9 +30,9 @@ async function load(url, key_or_index) {
         console.log("load(url, key_or_index) error: 'obj' could not be fetched.");
     }
 
-    console.log(obj[key_or_index]);  // obj[index] Works ok here, but not outside of function?
+    console.log(obj[key_or_index]);
 
-    return obj  // Are we returning nothing because fetch isn't finished yet?
+    return obj;
 }
 
 /* End of /assets/js/search.js */
