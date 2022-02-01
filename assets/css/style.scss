@@ -354,7 +354,9 @@ End of glow not being used anymore */
   // Jan 31/22 error: Unknown property “text-fill-color”.  Declaration dropped.
   
   // animation: shine 3s linear infinite;
-  animation: shine 3s 9s linear infinite;
+  // animation: shine 3s 9s linear;
+  //animation: shine 3s 9s linear infinite;
+  animation: shine 3s linear 9s;
   
   @keyframes shine {
     to {
