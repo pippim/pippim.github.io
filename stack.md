@@ -3,9 +3,24 @@ title: Convert Stack Exchange Posts to Your Own Website
 layout: program
 ---
 
-<!-- Jan 30/22 - Initial attempt at search using javascript -->
+<!-- Jan 30/22 - Initial attempt at search using javascript
+
+1. Add search bar: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
+
+NOTE Fonts not being used error message in Developer Tools:
+   
+   $ grep -R "https://fonts.googleapis.com/css?family=Open+Sans:400" --with-filename
+   
+   _layouts/post.html:    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+   _layouts/default.html:    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+   _layouts/program.html:    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+   _sass/jekyll-theme-cayman.scss:@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+
+-->
 <script type="text/javascript" src="/assets/js/search.js" ></script>
-<input id="load_search" type="button" value="Search Website" onclick="load_search_objects();" />
+<button onclick="load_search_objects();">Load search objects</button>
+<button onclick="search_fetched();">Search fetched test</button>
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
