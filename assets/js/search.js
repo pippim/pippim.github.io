@@ -11,8 +11,8 @@ var search_urls = null           //   "      "
 
 async function load_search_objects() {
     Promise.all([
-        search_words = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json', 'brightness'),
-        search_urls  = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json', 750)
+        search_words = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json', 'brightness'),
+        search_urls  = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json', 750)
     ]).then(() => search_fetched())
 }
 
