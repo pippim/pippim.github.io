@@ -4,11 +4,9 @@ window.MyLib = {}; // global Object container; don't use var
 var search_words = null         // global context
 var search_urls = null           //   "      "
 
-// From: https://stackoverflow.com/a/55784549/6929343
-var search_words = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
-var search_urls  = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json', 630)
-
 async function load_search_objects() {
+    search_words = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
+    search_urls  = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json', 630)
     search_fetched();
 }
 
