@@ -362,6 +362,32 @@ svg {
   height: 44px;
 }
 
+/* From: https://stackoverflow.com/a/34393664/6929343 */
+#header-search, #search-button {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 0;
+    font-size: 1.1rem;
+    height: 1.7rem;
+    padding: 0;
+}
+
+#header-search {
+    margin: 0;
+    line-height: 0;
+    padding: 0.8rem 0.7rem
+}
+
+#search-button {
+    width: 2.4rem;
+    height: 1.9rem;
+}
+
+#search-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
 /* From: https://gist.github.com/CodeMyUI/530e25ec020cfbfc68526a2a56cb0247 
    Note: No license or copyright found?
 */
