@@ -10,10 +10,11 @@ var search_urls = null           //   "      "
 // var search_urls = load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json', 630)
 
 async function load_search_objects() {
-    Promise.all([
+    // Promise.all([
         search_words = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json', 'brightness'),
         search_urls  = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json', 750)
-    ]).then(() => search_fetched())
+        search_fetched();
+    // ]).then(() => search_fetched())
 }
 
 function search_fetched() {
