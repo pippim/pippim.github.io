@@ -21,10 +21,10 @@ $lavender: #E6E6FA !default; // lavender
 
 .button {
   display: inline-block;
-  padding: .5rem 1rem;
-  line-height: 3rem;
+  // padding: .5rem 1rem;
+  // line-height: 3rem;
   // nargin: 1rem 0;
-  padding: .3rem 1rem .3rem 1rem;
+  // padding: .3rem 1rem .3rem 1rem;
   // border-radius: 10rem;
   border-radius: 3rem;
   color: #fff;
@@ -39,8 +39,8 @@ $lavender: #E6E6FA !default; // lavender
     position: absolute;
     bottom: 0;
     left: 0;
-    // width: 100%;
-    // height: 100%;
+    width: 100%;
+    height: 100%;
     // height: 80%;
     background-color: $header-bg-color;  // For Cayman
     background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
@@ -53,8 +53,8 @@ $lavender: #E6E6FA !default; // lavender
     position: absolute;
     bottom: 0;
     left: 0;
-    // width: 0%;
-    // height: 100%;
+    width: 0%;
+    height: 100%;
     // height: 80%;
     background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
     transition: all .3s;
