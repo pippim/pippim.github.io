@@ -7,10 +7,11 @@ var search_urls = null           //   "      "
 async function load_search_objects() {
     search_words = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
     search_urls  = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json', 630)
-    search_fetched();
+    // search_fetched();
 }
 
 function search_fetched() {
+    /* Attach to test button onclick event */
     console.log("search_words: " + search_words['display']);
     console.log("search_urls:  " + search_urls[630]);
 }
@@ -26,6 +27,9 @@ async function load(url) {
 
     return obj;
 }
+
+// Preload search objects
+load_search_objects();
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const f = document.getElementById('form');
