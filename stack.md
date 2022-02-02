@@ -16,11 +16,11 @@ NOTE Fonts not being used error message in Developer Tools:
    _layouts/program.html:    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
    _sass/jekyll-theme-cayman.scss:@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
+<button onclick="load_search_objects();">Load search objects</button>
+<button onclick="search_fetched();">Search fetched test</button>
 
 -->
 <script type="text/javascript" src="/assets/js/search.js" ></script>
-<button onclick="load_search_objects();">Load search objects</button>
-<button onclick="search_fetched();">Search fetched test</button>
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
