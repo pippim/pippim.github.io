@@ -343,7 +343,8 @@ input {
 }
 
 ::placeholder {
-  color: #fff;
+  // color: #fff;  // White doesn't work with background: $honeydew;
+  color: $header-bg-color;
   opacity: 0.7; 
 }
 
