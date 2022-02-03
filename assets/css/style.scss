@@ -388,6 +388,22 @@ svg {
   height: 1.3rem;
 }
 
+// From: https://stackoverflow.com/a/34393626/6929343
+#search-btn {
+  width: 100px;
+  height: 50px;
+}
+    
+#search-btn svg {
+  width: 25px;
+  height: 25px;
+}
+
+#search-icon {
+  fill: white;
+}
+
+
 /* From: https://gist.github.com/CodeMyUI/530e25ec020cfbfc68526a2a56cb0247 
    Note: No license or copyright found?
 */
