@@ -5,8 +5,12 @@ var search_words = null         // global context
 var search_urls = null           //   "      "
 
 async function load_search_objects() {
-    search_words = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
-    search_urls  = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json', 630)
+    if (search_words == null) {
+        search_words = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
+    }
+    if (search_urls == null) {
+        search_urls  = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json', 630)
+    }
     // search_fetched();
 }
 
