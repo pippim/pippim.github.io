@@ -13,6 +13,16 @@
     </path></svg></button>
 </form>
 
+
+<form role="search" id="search-form">
+  <input type="search" id="search-query" name="search-q"
+   placeholder="Search... {{ page.description | default: site.description | default: site.github.project_tagline }}"
+   aria-label="Search through site content">
+  <button id="search-utf8-mag-glass" type="submit"
+          >🔍
+        </button>
+</form>
+
 <!-- From: https://stackoverflow.com/a/34393664/6929343 -->
 <div class="search">
     <input id="header-search" type="search"
