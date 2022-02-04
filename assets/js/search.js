@@ -87,14 +87,14 @@ function get_results(submit_str) {
 
     for (const word of words) {
         lword = word.toLowerCase();
-        console.log('lword: ' + lword);
+        // console.log('lword: ' + lword);
         // if (typeof search_include[lword] !== undefined && search_include[lword] !== null) {
         if (lword in search_include) {
-            console.log('search_include[lword]: ' + search_include[lword]);
+            // console.log('search_include[lword]: ' + search_include[lword]);
             let result_indices = search_include[lword] + '';
             // append '' see: https://stackoverflow.com/a/10145979/6929343
             const results = result_indices.split(",");
-            console.log('results: ' + results)
+            // console.log('results: ' + results)
             for (const result in results) {
                 // results_list.push(result);  // Key of object, not value in array :(
                 results_list.push(results[result]);
@@ -105,12 +105,12 @@ function get_results(submit_str) {
     return results_list
 }
 
-function sum_and_sort(results, top_limit) {
+function sum_and_sort(raw, top_limit) {
     // summarize number of times url found and sort high to low
     // https://stackoverflow.com/a/37604992/6929343
-    var arr = []
-    let counts = arr.reduce((map, results) => {
-        map[results] = (map[results] || 0) + 1;
+    // var arr = []  // Not needed
+    let counts = raw.reduce((map, fruit) => {
+        map[fruit] = (map[fruit] || 0) + 1;
         return map;
     }, {});
 
