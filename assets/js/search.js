@@ -72,7 +72,10 @@ function submitted(event) {
     const results = get_results(q.value);
     console.log("Number of results: " + results.length);
     const top_summary = sum_and_sort(results, 25);
-    console.log("Top 25 results: " + top_summary);
+    console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
+    for (url_ndx of top_summary[0:4]) {
+        console.log("url_ndx: " + url_ndx + "URL: " + search_urls[url_ndx]);
+    }
     // const url = google + site + '+' + q.value;
     // const win = window.open(url, '_blank');
     // win.focus();
@@ -99,7 +102,7 @@ function get_results(submit_str) {
                 // results_list.push(result);  // Key of object, not value in array :(
                 results_list.push(results[result]);
             }
-            console.log('results_list: ' + results_list)
+            // console.log('results_list: ' + results_list)
         }
     }
     return results_list
