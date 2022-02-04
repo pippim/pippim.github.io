@@ -78,15 +78,17 @@ function get_results(submit_str) {
     const words = submit_str.split(' ');
 
     for (const word of words) {
+        console.log('word: ' + word);
         if (search_include[word] !== null) {
             result_indices = search_include[word];
+            console.log('result_indices: ' + result_indices)
             if (result_indices !== null) {
                 results = result_indices.split(' ');
                 for (const result in results) {
                     results_list.push(result);
             };
             else {
-                console.log("result_indices is null!")
+                console.log("result_indices is null for word: " + word);
             };
         };
     };
