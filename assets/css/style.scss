@@ -375,7 +375,8 @@ svg {
   align-items:center;
 }
 
-#search-input {
+#search-query {
+  // could be called `search-input` as that is the process being styled
   all: unset;
   font: 1.5rem;
   height: 100%;
