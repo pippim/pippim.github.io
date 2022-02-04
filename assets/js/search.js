@@ -78,6 +78,7 @@ function get_results(submit_str) {
 
     for (const word of words) {
         if (search_include[word] !== null) {
+            const result_indices = [];
             result_indices = search_include[word];
             results = result_indices.split(' ');
             for (const result in results) {
