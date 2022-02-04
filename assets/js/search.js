@@ -74,11 +74,11 @@ f.addEventListener('submit', submitted);
 function get_results(submit_str) {
     // Build list array of each time url index found
     const results_list = [];
+    var result_indices = [];
     const words = submit_str.split(' ');
 
     for (const word of words) {
         if (search_include[word] !== null) {
-            const result_indices = [];
             result_indices = search_include[word];
             results = result_indices.split(' ');
             for (const result in results) {
