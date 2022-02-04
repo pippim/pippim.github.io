@@ -72,13 +72,14 @@ function submitted(event) {
 f.addEventListener('submit', submitted);
 
 function get_results(submit_str) {
+    // Build list array of each time url index found
     const results_list = [];
-    const words = submit_str.split(‘ ‘);
+    const words = submit_str.split(' ');
 
     for (const word of words) {
         if (search_include[word] !== null) {
             result_indices = search_include[word]
-            results = result_indices.split(‘ ‘)
+            results = result_indices.split(' ')
             for result in results {
                 results_list.push(result);
             }
@@ -88,6 +89,7 @@ function get_results(submit_str) {
 }
 
 function sum_and_sort(results, top_limit) {
+    // summarize number of times url found and sort high to low
     // https://stackoverflow.com/a/37604992/6929343
     let counts = arr.reduce((map, fruit) => {
         map[fruit] = (map[fruit] || 0) + 1;
