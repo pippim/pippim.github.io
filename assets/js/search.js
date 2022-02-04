@@ -81,15 +81,12 @@ function get_results(submit_str) {
         // if (typeof search_include[word] !== undefined && search_include[word] !== null) {
         if (word in search_include) {
             console.log('search_include[word]: ' + search_include[word]);
-            let result_indices = search_include[word];
+            let result_indices = search_include[word] + '';
+            // append '' see: https://stackoverflow.com/a/10145979/6929343
             console.log('result_indices: ' + result_indices)
-            if (typeof result_indices !== undefined && result_indices !== null) {
-                const results = result_indices.split(',');
-                for (const result in results) {
-                    results_list.push(result);
-                }
-            } else {
-                console.log("result_indices is null for word: " + word);
+            const results = result_indices.split(",");
+            for (const result in results) {
+                results_list.push(result);
             }
         }
     }
