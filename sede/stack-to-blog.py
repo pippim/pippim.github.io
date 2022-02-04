@@ -21,6 +21,7 @@
 #       Dec. 31 2021 - Add site wide variables to CONFIG_YML
 #       Jan. 01 2022 - Resurrect check_full_links(), add check_no_links()
 #       Jan. 26 2022 - Don't include self-answered with low votes
+#       Jan. 28 2022 - Website Search
 #
 # ==============================================================================
 
@@ -167,9 +168,16 @@ EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
                  "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
                  "Medical Sciences", "Ask Ubuntu Meta"]
 
+# Future upgrade, give points (weight) for place search word is used
+TITLE_SEARCH_POINTS = 10.0  # ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
+TAG_SEARCH_POINTS = 5.0     # ws.parse(tags, TAG_SEARCH_POINTS)
+WORD_SEARCH_POINTS = 0.5    # ws.parse(line, WORD_SEARCH_POINTS)
+
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 # If not desired, set `CONFIG_YML = None`
 CONFIG_YML = "../_config.yml"
+
+
 code_url = None             # https://github.com/pippim/pippim.github.io/blob/main
 html_url = None
 
@@ -3251,9 +3259,9 @@ for row in rows:
         filename = filename[5:]
     # /2018-05-18-Title-of-question becomes: /2018/05/18/Title-of-question
     filename = filename.replace('-', '/', 3)
-    ws.post_init(html_url + filename + ".html")
-    ws.parse(row[TITLE])
-    ws.parse(tags)
+    ws.post_init(html_url + filename + ".html", row[TITLE])
+    ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
+    ws.parse(tags, TAG_SEARCH_POINTS)
     ''' Pass #2: Loop through lines to insert TOC and Navigation Bar
                  Create search dictionary words 
     '''
@@ -3263,7 +3271,7 @@ for row in rows:
         # Save header levels counts we have now to "old_"
         old_header_levels = list(header_levels)
         line = header_space(line)   # #Header, Alt-H1, Alt-H2. Set header_levels
-        ws.parse(line)
+        ws.parse(line, WORD_SEARCH_POINTS)
         if insert_nav_bar:
             sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
             sum2 = sum(header_levels[:NAV_BAR_LEVEL])

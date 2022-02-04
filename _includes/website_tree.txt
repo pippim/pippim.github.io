@@ -31,6 +31,7 @@
 │   ├── image.html
 │   ├── posts_by_tag.html
 │   ├── posts_by_vote.html
+│   ├── search.html
 │   ├── toc.md
 │   └── website_tree.txt
 ├── _layouts
@@ -68,4 +69,4 @@
 ├── tree.work
 └── website_search.py
 
-19 directories, 50 files
+19 directories, 51 files
