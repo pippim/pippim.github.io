@@ -61,9 +61,9 @@ function submitted(event) {
     event.preventDefault();
     const q = document.getElementById('search-query');  // Added later, not sure if required...
     const results = get_results(q.value);
-    console.log("Number of results: " + results.length)
-    const top_summary = sum_and_sort(results, 25)
-    console.log("Top 25 results: " + top_summary)
+    console.log("Number of results: " + results.length);
+    const top_summary = sum_and_sort(results, 25);
+    console.log("Top 25 results: " + top_summary);
     // const url = google + site + '+' + q.value;
     // const win = window.open(url, '_blank');
     // win.focus();
@@ -86,12 +86,11 @@ function get_results(submit_str) {
                 results = result_indices.split(' ');
                 for (const result in results) {
                     results_list.push(result);
-            };
-            else {
+            } else {
                 console.log("result_indices is null for word: " + word);
-            };
-        };
-    };
+            }
+        }
+    }
     return results_list
 }
 
