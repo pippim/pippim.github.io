@@ -52,14 +52,14 @@ function submitted(event) {
 f.addEventListener('submit', submitted);
 */
 
-// const f = document.getElementById('search-form');
+const f = document.getElementById('search-form');
 const q = document.getElementById('search-query');
 // const google = 'https://www.google.com/search?q=site%3A+';
 // const site = 'pippim.github.io';
 
 function submitted(event) {
     event.preventDefault();
-    const q = document.getElementById('search-query');
+    const q = document.getElementById('search-query');  // Added later, not sure if required...
     const results = get_results(q.value);
     console.log("Number of results: " + results.length)
     const top_summary = sum_and_sort(results, 25)
