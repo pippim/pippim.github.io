@@ -79,8 +79,8 @@ function get_results(submit_str) {
     for (const word of words) {
         if (search_include[word] !== null) {
             result_indices = search_include[word]
-            results = result_indices.split(' ')
-            for result in results {
+            let results = result_indices.split(' ')
+            for (const result in results) {
                 results_list.push(result);
             }
         }
@@ -91,8 +91,8 @@ function get_results(submit_str) {
 function sum_and_sort(results, top_limit) {
     // summarize number of times url found and sort high to low
     // https://stackoverflow.com/a/37604992/6929343
-    let counts = arr.reduce((map, fruit) => {
-        map[fruit] = (map[fruit] || 0) + 1;
+    let counts = arr.reduce((map, results) => {
+        map[results] = (map[results] || 0) + 1;
         return map;
     }, {});
 
