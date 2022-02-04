@@ -5,11 +5,15 @@ var search_include = null         // global context
 var search_urls = null           //   "      "
 
 async function load_search_objects() {
-    if (search_include == null) {
+    if (search_include.length < 1) {
         search_include = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
+    } else {
+        console.log('Using preloaded search_include object')
     }
-    if (search_urls == null) {
+    if (search_urls < 1l) {
         search_urls  = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json', 630)
+    } else {
+        console.log('Using preloaded search_urls object')
     }
     // search_fetched();
 }
