@@ -84,7 +84,7 @@ function get_results(submit_str) {
             let result_indices = search_include[word];
             console.log('result_indices: ' + result_indices)
             if (typeof result_indices !== undefined && result_indices !== null) {
-                const results = result_indices.split(' ');
+                const results = result_indices.split(',');
                 for (const result in results) {
                     results_list.push(result);
                 }
