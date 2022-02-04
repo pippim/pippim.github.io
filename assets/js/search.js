@@ -85,6 +85,7 @@ function get_results(submit_str) {
             let result_indices = search_include[lword] + '';
             // append '' see: https://stackoverflow.com/a/10145979/6929343
             const results = result_indices.split(",");
+            console.log('results: ' + results)
             for (const result in results) {
                 results_list.push(result);
             }
