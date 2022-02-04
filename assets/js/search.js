@@ -78,13 +78,13 @@ function get_results(submit_str) {
 
     for (const word of words) {
         if (search_include[word] !== null) {
-            const result_indices = search_include[word]
-            let results = result_indices.split(' ')
+            result_indices = search_include[word];
+            results = result_indices.split(' ');
             for (const result in results) {
                 results_list.push(result);
-            }
-        }
-    }
+            };
+        };
+    };
     return results_list
 }
 
@@ -99,5 +99,9 @@ function sum_and_sort(results, top_limit) {
     sorted = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
 
     return sorted.slice(0, top_limit);
-}    
+}
+
+/* Need drop down search results: https://stackoverflow.com/a/63610185/6929343
+*/
+
 /* End of /assets/js/search.js */
