@@ -86,6 +86,7 @@ function get_results(submit_str) {
                 results = result_indices.split(' ');
                 for (const result in results) {
                     results_list.push(result);
+                }
             } else {
                 console.log("result_indices is null for word: " + word);
             }
