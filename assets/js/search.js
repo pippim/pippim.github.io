@@ -96,6 +96,7 @@ function get_results(submit_str) {
 function sum_and_sort(results, top_limit) {
     // summarize number of times url found and sort high to low
     // https://stackoverflow.com/a/37604992/6929343
+    var arr = {}
     let counts = arr.reduce((map, results) => {
         map[results] = (map[results] || 0) + 1;
         return map;
