@@ -91,7 +91,8 @@ function get_results(submit_str) {
             const results = result_indices.split(",");
             console.log('results: ' + results)
             for (const result in results) {
-                results_list.push(result);
+                // results_list.push(result);  // Key of object, not value in array :(
+                results_list.push(results[result]);
             }
             console.log('results_list: ' + results_list)
         }
