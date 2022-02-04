@@ -375,6 +375,14 @@ svg {
   align-items:center;
 }
 
+#search-input {
+  all: unset;
+  font: 1.5rem;
+  height: 100%;
+  width: 100%;
+  padding: .5rem .8rem;
+}
+
 #seach-query {
   all: unset;
   // font: 16px system-ui;
@@ -389,7 +397,7 @@ svg {
   // font-size: 2rem;
   background-color: yellow;
   border-radius: .5rem;
-  margin-right: .5rem;
+  margin-right: .25rem;
 }
 
 
