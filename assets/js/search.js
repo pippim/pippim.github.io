@@ -73,7 +73,7 @@ function submitted(event) {
     console.log("Number of results: " + results.length);
     const top_summary = sum_and_sort(results, 25);
     console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
-    for (url_ndx of top_summary[0:4]) {
+    for (url_ndx of top_summary.slice(0, 4) {
         console.log("url_ndx: " + url_ndx + "URL: " + search_urls[url_ndx]);
     }
     // const url = google + site + '+' + q.value;
