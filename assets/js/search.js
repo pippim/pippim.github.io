@@ -77,17 +77,18 @@ function get_results(submit_str) {
     const words = submit_str.split(' ');
 
     for (const word of words) {
-        console.log('word: ' + word);
-        // if (typeof search_include[word] !== undefined && search_include[word] !== null) {
-        if (word in search_include) {
-            console.log('search_include[word]: ' + search_include[word]);
-            let result_indices = search_include[word] + '';
+        lword = word.toLowerCase();
+        console.log('lword: ' + lword);
+        // if (typeof search_include[lword] !== undefined && search_include[lword] !== null) {
+        if (lword in search_include) {
+            console.log('search_include[lword]: ' + search_include[lword]);
+            let result_indices = search_include[lword] + '';
             // append '' see: https://stackoverflow.com/a/10145979/6929343
-            console.log('result_indices: ' + result_indices)
             const results = result_indices.split(",");
             for (const result in results) {
                 results_list.push(result);
             }
+            console.log('results_list: ' + results_list)
         }
     }
     return results_list
