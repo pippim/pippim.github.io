@@ -108,9 +108,8 @@ function get_results(submit_str) {
 function sum_and_sort(raw, top_limit) {
     // summarize number of times url found and sort high to low
     // https://stackoverflow.com/a/37604992/6929343
-    // var arr = []  // Not needed
-    let counts = raw.reduce((map, fruit) => {
-        map[fruit] = (map[fruit] || 0) + 1;
+    let counts = raw.reduce((map, item) => {
+        map[item] = (map[item] || 0) + 1;
         return map;
     }, {});
 
