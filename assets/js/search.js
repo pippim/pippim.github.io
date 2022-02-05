@@ -134,8 +134,8 @@ Array.prototype.forEach.call(document.querySelectorAll('.clearable-input'), func
 
   conditionallyHideClearIcon();
   input.addEventListener('input', conditionallyHideClearIcon);
-  el.querySelector('[data-clear-input]').addEventListener('click', function(e) {
-  // el.querySelector('[search-query]').addEventListener('click', function(e) {
+  // el.querySelector('[data-clear-input]').addEventListener('click', function(e) {
+  el.querySelector('[search-query]').addEventListener('click', function(e) {
     input.value = '';
     conditionallyHideClearIcon();
   });
