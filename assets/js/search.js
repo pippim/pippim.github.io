@@ -143,11 +143,11 @@ function sum_and_sort(raw, top_limit) {
     https://stackoverflow.com/questions/44678100/javascript-display-search-results-on-page
     
     Need to format HTML: https://stackoverflow.com/questions/2109205/open-window-in-javascript-with-html-inserted
-    
-    From: https://stackoverflow.com/a/46296164/6929343
+*/
 
 // Get the modal
-        var modal = document.getElementById('myModal');
+//     From: https://stackoverflow.com/a/46296164/6929343
+        var modal = document.getElementById('search-modal');
 
         // Get the button that opens the modal
         var btn = document.getElementById("myBtn");
@@ -172,6 +172,7 @@ function sum_and_sort(raw, top_limit) {
             }
         }
 
+/*
 .modal {
             display: none;
             // Hidden by default
