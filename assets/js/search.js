@@ -79,6 +79,9 @@ function submitted(event) {
     const q = document.getElementById('search-query');  // Added later, not sure if required...
     const results = get_results(q.value);
     console.log("Number of results: " + results.length);
+    if (results.length == 0) {
+        return
+    }
     const top_summary = sum_and_sort(results, 25);
     console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
     for (url_ndx of top_summary.slice(0, 5)) {
@@ -173,6 +176,7 @@ function sum_and_sort(raw, top_limit) {
     
     Need to format HTML: https://stackoverflow.com/questions/2109205/open-window-in-javascript-with-html-inserted
 
+
 // Get the modal
 //     From: https://stackoverflow.com/a/46296164/6929343
     var modal = document.getElementById('search-modal');
@@ -184,10 +188,8 @@ function sum_and_sort(raw, top_limit) {
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks the button, open the modal
-    if (modal !== undefined) {
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
+    btn.onclick = function () {
+        modal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
