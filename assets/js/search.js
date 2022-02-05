@@ -101,17 +101,20 @@ function submitted(event) {
     // invalid assignment left-hand side
     btn.onclick = function () {
         modal.style.display = "block";
+        console.log("btn.onclick event");
     }
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
+        console.log("span.onclick event");
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            window.log("btn.onclick event");
         }
     }
 
@@ -169,7 +172,6 @@ function sum_and_sort(raw, top_limit) {
     https://stackoverflow.com/questions/44678100/javascript-display-search-results-on-page
     
     Need to format HTML: https://stackoverflow.com/questions/2109205/open-window-in-javascript-with-html-inserted
-*/
 
 // Get the modal
 //     From: https://stackoverflow.com/a/46296164/6929343
@@ -200,7 +202,6 @@ function sum_and_sort(raw, top_limit) {
         }
     }
 
-/*
 .modal {
             display: none;
             // Hidden by default
