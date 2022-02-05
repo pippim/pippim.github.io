@@ -393,7 +393,7 @@ details[open] > summary {
 }
 
 // From: https://stackoverflow.com/a/46296164/692934
-.search-modal {
+.search-modal-bad-position {
     display: none;
     // Hidden by default
     position: fixed;
@@ -402,8 +402,8 @@ details[open] > summary {
     // Sit on top
     padding-top: 100px;
     // Location of the box
-    left: 0;
-    top: 0;
+    // left: 0;  // left: 0; goes over page title far left gutter
+    // top: 0;   // top: 0; goes over page title beginning of text
     width: 100%;
     // Full width
     height: 100%;
