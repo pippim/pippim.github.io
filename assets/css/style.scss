@@ -398,7 +398,8 @@ details[open] > summary {
     // Hidden by default
     position: fixed;
     // Stay in place
-    z-index: 1;
+    // z-index: 1;
+    z-index: 2;  // Place over buttons
     // Sit on top
     // padding-top: 100px;  // Causing text not to appear?
     // Location of the box
@@ -443,6 +444,29 @@ details[open] > summary {
     cursor: pointer;
 }
 
+// X to clear input search. From: https://stackoverflow.com/a/33683886/6929343
+.clearable-input {
+  position: relative;
+  display: inline-block;
+}
+.clearable-input > input {
+  padding-right: 1.4em;
+}
+//.clearable-input >[data-clear-input] {
+.clearable-input >[search-query] {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+  font-size: 1.4em;
+  padding: 0 0.2em;
+  line-height: 1em;
+  cursor: pointer;
+}
+.clearable-input > input::-ms-clear {
+  display: none;
+}
 
 /* From: https://stackoverflow.com/a/34393664/6929343 */
 #header-search, #search-button {
