@@ -1883,6 +1883,8 @@ def create_blog_filename(r):
         Jekyll converts:
             "^" to "" (null)
 
+        Pippim uses ' | ' to split hyperlink and title so disallow.
+
     """
     global total_special_chars_in_titles, total_unicode_in_titles
 
@@ -1893,7 +1895,7 @@ def create_blog_filename(r):
     for i, lit in enumerate(little):
         if lit == " ":
             little[i] = "-"
-        elif lit in "#$%^&+;,=?/'<>()[]":
+        elif lit in "#$%^&+;,=?/'<>()[]|\\":
             little[i] = "_"
             total_special_chars_in_titles += 1
         elif lit in '"':
