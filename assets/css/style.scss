@@ -400,7 +400,7 @@ details[open] > summary {
     // Stay in place
     z-index: 1;
     // Sit on top
-    padding-top: 100px;
+    // padding-top: 100px;  // Causing text not to appear?
     // Location of the box
     // left: 0;  // left: 0; goes over page title far left gutter
     // top: 0;   // top: 0; goes over page title beginning of text
