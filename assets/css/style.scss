@@ -320,7 +320,7 @@ details[open] > summary {
 }
 
 /* search.html styling */
-form {
+#org-form {
   background-color: #4654e1;
   // width: 300px;  // Use full width
   // height: 44px;
@@ -332,7 +332,7 @@ form {
   align-items:center;
 }
 
-input {
+#org-input {
   all: unset;
   // font: 16px system-ui;
   font: 1.5rem;
@@ -348,7 +348,7 @@ input {
   opacity: 0.7; 
 }
 
-svg {
+#org-svg {
   color: #fff;
   fill: currentColor;
   width: 24px;
@@ -356,7 +356,7 @@ svg {
   padding: 10px;
 }
 
-.search-button {
+#org-search-button {
   all: unset;
   cursor: pointer;
   width: 44px;
