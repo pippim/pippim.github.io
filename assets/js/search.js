@@ -100,7 +100,7 @@ function submitted(event) {
     // When the user clicks the button, open the modal
     // invalid assignment left-hand side
     btn.onclick = function () {
-        search-modal.style.display = "block";
+        modal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
@@ -184,7 +184,7 @@ function sum_and_sort(raw, top_limit) {
     // When the user clicks the button, open the modal
     // invalid assignment left-hand side
     btn.onclick = function () {
-        search-modal.style.display = "block";
+        modal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
