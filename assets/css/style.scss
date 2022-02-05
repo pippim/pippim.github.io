@@ -452,8 +452,8 @@ details[open] > summary {
 .clearable-input > input {
   padding-right: 1.4em;
 }
-.clearable-input >[data-clear-input] {
-//.clearable-input >[search-query] {
+//.clearable-input >[data-clear-input] {
+.clearable-input >[search-query] {
   display: none;
   position: absolute;
   top: 0;
