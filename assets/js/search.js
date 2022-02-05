@@ -5,8 +5,8 @@ var search_include = null         // global context
 var search_urls = null           //   "      "
 
 async function load_search_objects() {
-    search_include = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
-    search_urls  = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json')
+    search_include = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json');
+    search_urls  = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json');
 
     /* Following doesn't work when search_include is still a promise and not yet an array....
     if (search_include.length === 0) {
