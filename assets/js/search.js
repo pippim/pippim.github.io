@@ -182,9 +182,10 @@ function sum_and_sort(raw, top_limit) {
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks the button, open the modal
-    // invalid assignment left-hand side
-    btn.onclick = function () {
-        modal.style.display = "block";
+    if (modal !== undefined) {
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
     }
 
     // When the user clicks on <span> (x), close the modal
