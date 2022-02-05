@@ -42,7 +42,7 @@ async function load(url) {
 }
 
 // https://stackoverflow.com/a/51992739/6929343
-async getJSON(url) {
+async function getJSON(url) {
     return fetch(url)
         .then((response)=>response.json())
         .then((responseJson)=>{return responseJson});
