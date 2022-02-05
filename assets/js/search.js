@@ -150,13 +150,13 @@ function sum_and_sort(raw, top_limit) {
         var modal = document.getElementById('search-modal');
 
         // Get the button that opens the modal
-        var btn = document.getElementById("search-button");
+        var btn = document.getElementById("search-utf8-mag-glass");
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal 
-        search-button.onclick = function () {
+        search-utf8-mag-glass.onclick = function () {
             search-modal.style.display = "block";
         }
 
