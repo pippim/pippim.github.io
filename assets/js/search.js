@@ -75,10 +75,12 @@ function submitted(event) {
     console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
     for (url_ndx of top_summary.slice(0, 4)) {
         console.log("url_ndx: " + url_ndx + " | URL: " + search_urls[url_ndx]);
-        const arr = search_urls[url_ndx].split(' | ', 1)
-        hyper_link = arr[0]
-        hyper_title = arr[1]
+        const arr = search_urls[url_ndx].split(' | ', 1);
+        hyper_link = arr[0];
+        hyper_title = arr[1];
     }
+    console.log("input width: " + document.getElementById("search-query").offsetWidth);
+
     // const url = google + site + '+' + q.value;
     // const win = window.open(url, '_blank');
     // win.focus();
@@ -129,6 +131,8 @@ function sum_and_sort(raw, top_limit) {
     https://stackoverflow.com/questions/16806406/javascript-popup-window-with-scrollbars
     
     https://stackoverflow.com/questions/29326226/creating-javascript-search-boxes-for-custom-sites-that-create-popup-windows-show
+    
+    https://stackoverflow.com/questions/44678100/javascript-display-search-results-on-page
     
     Need to format HTML: https://stackoverflow.com/questions/2109205/open-window-in-javascript-with-html-inserted
 */
