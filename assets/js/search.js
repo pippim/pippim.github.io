@@ -125,6 +125,12 @@ function sum_and_sort(raw, top_limit) {
 }
 
 /* Need drop down search results: https://stackoverflow.com/a/63610185/6929343
+
+    https://stackoverflow.com/questions/16806406/javascript-popup-window-with-scrollbars
+    
+    https://stackoverflow.com/questions/29326226/creating-javascript-search-boxes-for-custom-sites-that-create-popup-windows-show
+    
+    Need to format HTML: https://stackoverflow.com/questions/2109205/open-window-in-javascript-with-html-inserted
 */
 
 /* End of /assets/js/search.js */
