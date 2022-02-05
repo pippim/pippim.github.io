@@ -393,7 +393,7 @@ details[open] > summary {
 }
 
 // From: https://stackoverflow.com/a/46296164/692934
-.search-modal-bad-position {
+.search-modal {
     display: none;
     // Hidden by default
     position: fixed;
@@ -423,9 +423,9 @@ details[open] > summary {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    left: 8px;
+    // left: 8px;    // left: 8px; goes over page title far left gutter
     position: absolute;
-    top: 90px;
+    // top: 90px;    // top: 90px; goes over page title beginning of text
 }
 
 // The Close Button
