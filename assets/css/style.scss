@@ -427,6 +427,8 @@ details[open] > summary {
     // left: 8px;    // left: 8px; goes over page title far left gutter
     position: absolute;
     // top: 90px;    // top: 90px; goes over page title beginning of text
+    z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
+
 }
 
 // The Close Button
