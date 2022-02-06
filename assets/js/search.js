@@ -119,7 +119,7 @@ function submitted(event) {
     // Process all results
     html += "<ol>\n"
     for (url_ndx of top_summary) {
-        const arr = search_urls[url_ndx].split(' | ', ``);
+        const arr = search_urls[url_ndx].split(' | ', 1);
         hyper_link = arr[0];
         hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
         html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n";
