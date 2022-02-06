@@ -100,11 +100,10 @@ function submitted(event) {
     if (results.length == 0) {
         document.getElementById("search-modal-text").innerHTML = "<h2>No results found!</h2>";
         return
+    } else if (results.length == 1) {
+        var html = "<h2>1 result found.</h2>\n"
     } else {
         var html = "<h2>" + results.length.toString() + " results found.</h2>\n"
-        // h.value = "<h2>" + results.length.toString() + " results found.</h2>\n";  // Not working
-        document.getElementById("search-modal-text").innerHTML =
-            "<h2>" + results.length.toString() + " results found.</h2>\n";
     }
     const top_summary = sum_and_sort(results, 1000); // Maximum 1000 links
     console.log("input width: " + document.getElementById("search-query").offsetWidth);
