@@ -157,23 +157,11 @@ $lavender: #E6E6FA !default; // lavender
 .front-matter .hidden-child{
     visibility: hidden;
     display: none;
-    // display: block;  // Jan 14/22
-    // position: relative;     // Jan 14/22
-
-    // text-align: right;
-    // top: 3rem;
 }
 
 .front-matter:hover .hidden-child{
     visibility: visible;
     display: inline-block;  // Jan 14/22
-    // position: relative;     // Jan 14/22
-    // From: https://stackoverflow.com/a/31874748/6929343
-    // position: relative;
-    // Goes far right of screen not right of border
-    // right: 0;
-    // bottom: -2px;
-    // top: 3rem;
 
     // Copy from hdr-btn:
     background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
@@ -435,9 +423,9 @@ details[open] > summary {
     text-align: start;  // parent flex box is centering text
     max-height: 30rem;     // After 30 lines, scroll bar appears
     // border-radius: 25% 10%;  // curvy borders
-    -moz-box-shadow: 4px 4px 4px black;
-    -webkit-box-shadow: 4px 4px 4px black;
-    box-shadow: 4px 4px 4px black;
+    -moz-box-shadow: 5px 4px 6px $lavender;
+    -webkit-box-shadow: 5px 4px 6px $lavender;
+    box-shadow: 5px 4px 6px $lavender;
 
     // top: 90px;    // top: 90px; goes over page title beginning of text
     z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
