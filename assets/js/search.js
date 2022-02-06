@@ -132,13 +132,13 @@ f.addEventListener('submit', submitted);
 Array.prototype.forEach.call(document.querySelectorAll('.clearable-input'), function(el) {
   var input = el.querySelector('input');
 
-  conditionallyHideClearIcon();
-  input.addEventListener('input', conditionallyHideClearIcon);
-  el.querySelector('[data-clear-input]').addEventListener('click', function(e) {
+  //conditionallyHideClearIcon();
+  // input.addEventListener('input', conditionallyHideClearIcon);
+  //el.querySelector('[data-clear-input]').addEventListener('click', function(e) {
   // el.querySelector('[search-query]').addEventListener('click', function(e) {
-    input.value = '';
-    conditionallyHideClearIcon();
-  });
+  //  input.value = '';
+  //  conditionallyHideClearIcon();
+  //});
 
   function conditionallyHideClearIcon(e) {
     var target = (e && e.target) || input;
