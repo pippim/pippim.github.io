@@ -420,6 +420,8 @@ details[open] > summary {
 // Modal Content
 .search-modal-content {
     background-color: #fefefe;
+    background-color: #777;     // Something grayish
+
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -428,7 +430,13 @@ details[open] > summary {
     position: absolute;
     // top: 90px;    // top: 90px; goes over page title beginning of text
     z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
+/*
+<p id="p1">Hello World!</p>
 
+<script>
+document.getElementById("p1").innerHTML = "New text!";
+</script>
+*/
 }
 
 // The Close Button
