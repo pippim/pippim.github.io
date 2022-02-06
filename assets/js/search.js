@@ -55,23 +55,6 @@ async function getJSON(url) {
 // Preload search objects
 load_search_objects();
 
-// From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
-/* ORIGINAL
-const f = document.getElementById('form');
-const q = document.getElementById('query');
-const google = 'https://www.google.com/search?q=site%3A+';
-const site = 'pagedart.com';
-
-function submitted(event) {
-    event.preventDefault();
-    const url = google + site + '+' + q.value;
-    const win = window.open(url, '_blank');
-    win.focus();
-}
-
-f.addEventListener('submit', submitted);
-*/
-
 // Get the modal - From: https://stackoverflow.com/a/46296164/6929343
 var modal = document.getElementById('search-modal');
 modal.style.display = "none";  // Fudge -- Appears before clicking???
@@ -103,10 +86,10 @@ window.onclick = function (event) {
     }
 }
 
+// From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const f = document.getElementById('search-form');
 const q = document.getElementById('search-query');
-// const google = 'https://www.google.com/search?q=site%3A+';
-// const site = 'pippim.github.io';
+const h = document.getElementById('search-modal-text').innerHTML;
 
 function submitted(event) {
     event.preventDefault();
@@ -114,7 +97,10 @@ function submitted(event) {
     const results = get_results(q.value);
     console.log("Number of results: " + results.length);
     if (results.length == 0) {
+        document.getElementById("search-modal-text").innerHTML = "<h2>No results found!</h2>";
         return
+    } else {
+        h.value = results.length.toString() + " results found."
     }
     const top_summary = sum_and_sort(results, 25);
     console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
