@@ -20,7 +20,7 @@ NOTE Fonts not being used error message in Developer Tools:
 <button onclick="search_fetched();">Search fetched test</button>
 
 -->
-<script type="text/javascript" src="/assets/js/search.js" ></script>
+
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
