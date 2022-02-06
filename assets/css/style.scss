@@ -423,8 +423,8 @@ details[open] > summary {
     text-align: start;  // parent flex box is centering text
     max-height: 30rem;     // After 30 lines, scroll bar appears
     // border-radius: 25% 10%;  // curvy borders
-    -webkit-box-shadow: 1rem 1.5rem .5rem $header-bg-color-secondary;
-    box-shadow: 1rem 1.5rem .5rem $header-bg-color-secondary;
+    -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
+    box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
 
     // top: 90px;    // top: 90px; goes over page title beginning of text
     z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
