@@ -44,7 +44,7 @@
 │   ├── 2018 [697 entries exceeds filelimit, not opening dir]
 │   ├── 2019 [421 entries exceeds filelimit, not opening dir]
 │   ├── 2020 [99 entries exceeds filelimit, not opening dir]
-│   ├── 2021 [52 entries exceeds filelimit, not opening dir]
+│   ├── 2021 [53 entries exceeds filelimit, not opening dir]
 │   └── 2022
 │       └── 2022-01-05-Python-to-print-out-status-bar-and-percentage.md
 ├── _sass
@@ -66,7 +66,6 @@
 ├── programs.md
 ├── stack.md
 ├── stack-to-blog.py
-├── tree.work
-└── website_search.py
+└── tree.work
 
-19 directories, 51 files
+19 directories, 50 files

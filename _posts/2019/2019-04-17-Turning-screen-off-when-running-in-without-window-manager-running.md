@@ -10,9 +10,9 @@ created_date: 2019-04-17 22:47:34
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "330 "
+views:        "335 "
 accepted:     Accepted
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-17-Turning-screen-off-when-running-in-without-window-manager-running.md
 toc:          false
 navigation:   false

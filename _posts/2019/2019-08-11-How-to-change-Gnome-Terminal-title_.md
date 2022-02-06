@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line gnome-terminal titlebar
 created_date: 2019-08-11 00:45:50
 edit_date:    2021-04-07 01:20:21
-votes:        "11 "
+votes:        "12 "
 favorites:    
-views:        "249,168 "
+views:        "249,580 "
 accepted:     
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-11-How-to-change-Gnome-Terminal-title_.md
 toc:          false
 navigation:   false

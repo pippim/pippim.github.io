@@ -10,9 +10,9 @@ created_date: 2019-06-09 03:40:06
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "666 "
+views:        "668 "
 accepted:     Accepted
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-09-Nvidia-card-on-an-ASUS-ZenBook-Flip-14-sometimes-boots-to-a-purple-screen.md
 toc:          false
 navigation:   false

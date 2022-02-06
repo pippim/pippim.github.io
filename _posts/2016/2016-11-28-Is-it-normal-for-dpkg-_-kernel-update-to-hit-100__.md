@@ -10,9 +10,9 @@ created_date: 2016-11-28 20:58:24
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "447 "
+views:        "450 "
 accepted:     Accepted
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-28-Is-it-normal-for-dpkg-_-kernel-update-to-hit-100__.md
 toc:          false
 navigation:   false

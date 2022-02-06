@@ -10,9 +10,9 @@ created_date: 2019-07-05 02:02:37
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "998 "
+views:        "1,006 "
 accepted:     Accepted
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-05-Failing-to-boot-to-grub-with-dual-boot-Dell-laptop.md
 toc:          false
 navigation:   false

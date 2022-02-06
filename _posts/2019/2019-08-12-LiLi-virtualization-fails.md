@@ -10,9 +10,9 @@ created_date: 2019-08-12 01:16:59
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "252 "
+views:        "253 "
 accepted:     Accepted
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-12-LiLi-virtualization-fails.md
 toc:          false
 navigation:   false

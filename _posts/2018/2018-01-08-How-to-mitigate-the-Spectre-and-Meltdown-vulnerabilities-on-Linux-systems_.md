@@ -10,9 +10,9 @@ created_date: 2018-01-08 00:12:49
 edit_date:    2018-01-27 17:17:03
 votes:        "11 "
 favorites:    
-views:        "29,261 "
+views:        "29,282 "
 accepted:     
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-08-How-to-mitigate-the-Spectre-and-Meltdown-vulnerabilities-on-Linux-systems_.md
 toc:          true
 navigation:   true

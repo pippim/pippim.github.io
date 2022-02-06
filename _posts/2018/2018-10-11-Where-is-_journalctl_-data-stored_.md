@@ -10,9 +10,9 @@ created_date: 2018-10-11 22:31:25
 edit_date:    2021-08-02 18:46:52
 votes:        "2 "
 favorites:    
-views:        "115,586 "
+views:        "116,072 "
 accepted:     
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-11-Where-is-_journalctl_-data-stored_.md
 toc:          false
 navigation:   false

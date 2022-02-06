@@ -10,9 +10,9 @@ created_date: 2019-10-28 22:57:52
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "2,215 "
+views:        "2,218 "
 accepted:     Accepted
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-28-Lagging-after-update-to-19.10-from-19.04.md
 toc:          false
 navigation:   false

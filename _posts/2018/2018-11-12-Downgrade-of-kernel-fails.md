@@ -10,9 +10,9 @@ created_date: 2018-11-12 23:39:10
 edit_date:    2018-11-13 00:07:32
 votes:        "2 "
 favorites:    
-views:        "443 "
+views:        "450 "
 accepted:     
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-12-Downgrade-of-kernel-fails.md
 toc:          false
 navigation:   false

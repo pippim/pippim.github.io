@@ -10,9 +10,9 @@ created_date: 2019-04-19 12:18:51
 edit_date:    2020-06-12 14:37:07
 votes:        "6 "
 favorites:    
-views:        "2,136 "
+views:        "2,149 "
 accepted:     
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-19-Shell-Script-:-Focus-already-open-terminal-tab-from-second-terminal-tab.md
 toc:          false
 navigation:   false

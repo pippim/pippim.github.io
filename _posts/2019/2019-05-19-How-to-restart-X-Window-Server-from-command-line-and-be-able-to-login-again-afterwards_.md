@@ -10,9 +10,9 @@ created_date: 2019-05-19 17:58:24
 edit_date:    2021-04-13 22:41:11
 votes:        "3 "
 favorites:    
-views:        "6,665 "
+views:        "6,713 "
 accepted:     
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-How-to-restart-X-Window-Server-from-command-line-and-be-able-to-login-again-afterwards_.md
 toc:          false
 navigation:   false

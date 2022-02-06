@@ -10,9 +10,9 @@ created_date: 2018-04-13 10:35:16
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "1,204 "
+views:        "1,211 "
 accepted:     Accepted
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-13-Password-protect-grub-menu-editing.md
 toc:          false
 navigation:   false

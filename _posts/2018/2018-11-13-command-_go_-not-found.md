@@ -8,11 +8,11 @@ type:         Answer
 tags:         golang
 created_date: 2018-11-13 21:18:41
 edit_date:    2018-12-29 20:58:31
-votes:        "10 "
+votes:        "11 "
 favorites:    
-views:        "98,426 "
+views:        "99,354 "
 accepted:     
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-13-command-_go_-not-found.md
 toc:          false
 navigation:   false

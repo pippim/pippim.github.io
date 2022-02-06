@@ -10,9 +10,9 @@ created_date: 2019-05-17 16:54:07
 edit_date:    2019-05-18 10:31:15
 votes:        "3 "
 favorites:    
-views:        "2,011 "
+views:        "2,020 "
 accepted:     Accepted
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-17-How-do-I-suppress-GtkDialog-warnings-in-zenity-and-yad-using-Bash-redirection-in-a-script_.md
 toc:          false
 navigation:   false

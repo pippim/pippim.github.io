@@ -10,9 +10,9 @@ created_date: 2018-03-11 19:47:52
 edit_date:    2018-04-29 17:11:18
 votes:        "5 "
 favorites:    
-views:        "574 "
+views:        "579 "
 accepted:     Accepted
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-11-`cal--h`-command:-Bash-substring-`_{string:offset:length}`-error.md
 toc:          false
 navigation:   false

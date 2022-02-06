@@ -10,9 +10,9 @@ created_date: 2019-07-21 17:25:56
 edit_date:    2022-01-29 19:16:15
 votes:        "4 "
 favorites:    
-views:        "373 "
+views:        "379 "
 accepted:     
-uploaded:     2022-02-04 17:13:08
+uploaded:     2022-02-06 11:17:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Thinkpad-trackpoint-and-trackpoint-keys-disabled-after-suspend.md
 toc:          false
 navigation:   false
