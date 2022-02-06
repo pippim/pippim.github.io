@@ -171,6 +171,10 @@ function get_results(submit_str) {
     return results_list
 }
 
+// Fudge it all anyways
+var fudge = document.getElementById('search-modal');
+fudge.style.display = "none";
+
 function sum_and_sort(raw, top_limit) {
     // summarize number of times url found and sort high to low
     // https://stackoverflow.com/a/37604992/6929343
