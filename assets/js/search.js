@@ -9,6 +9,7 @@ var search_urls = null           //   "      "
 //modal.style.display = "none";
     // Get the modal - From: https://stackoverflow.com/a/46296164/6929343
     var modal = document.getElementById('search-modal');
+    modal.style.display = "none";
 
     // Get the button that opens the modal
     var btn = document.getElementById("search-utf8-mag-glass");
