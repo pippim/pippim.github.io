@@ -98,6 +98,7 @@ function submitted(event) {
 
     // Get the modal - From: https://stackoverflow.com/a/46296164/6929343
     var modal = document.getElementById('search-modal');
+    modal.style.display = "block";
 
     // Get the button that opens the modal
     var btn = document.getElementById("search-utf8-mag-glass");
@@ -176,8 +177,8 @@ function get_results(submit_str) {
 }
 
 // Fudge it all anyways
-var fudge = document.getElementById('search-modal');
-fudge.style.display = "none";
+//var fudge = document.getElementById('search-modal');
+//fudge.style.display = "none";
 
 function sum_and_sort(raw, top_limit) {
     // summarize number of times url found and sort high to low
