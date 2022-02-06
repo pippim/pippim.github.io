@@ -106,19 +106,25 @@ function submitted(event) {
         document.getElementById("search-modal-text").innerHTML =
             "<h2>" + results.length.toString() + " results found.</h2>\n";
     }
-    const top_summary = sum_and_sort(results, 25);
+    const top_summary = sum_and_sort(results, 1000); // Maximum 1000 links
+    console.log("input width: " + document.getElementById("search-query").offsetWidth);
     console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
-    html += "<ol>\n"
     for (url_ndx of top_summary.slice(0, 5)) {
-        console.log("url_ndx: " + url_ndx + " | URL: " + search_urls[url_ndx]);
+        // console.log("url_ndx: " + url_ndx + " | URL: " + search_urls[url_ndx]);
         const arr = search_urls[url_ndx].split(' | ', 2);
         hyper_link = arr[0];
         hyper_title = arr[1];
         console.log("url_ndx: " + url_ndx + " | Title: " + hyper_title);
+    }
+    // Process all results
+    html += "<ol>\n"
+    for (url_ndx of top_summary) {
+        const arr = search_urls[url_ndx].split(' | ', 2);
+        hyper_link = arr[0];
+        hyper_title = arr[1];
         html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n";
     }
     html += "</ol>\n"
-    console.log("input width: " + document.getElementById("search-query").offsetWidth);
 
     document.getElementById("search-modal-text").innerHTML = html;
     // const url = google + site + '+' + q.value;
