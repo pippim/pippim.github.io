@@ -426,13 +426,13 @@ details[open] > summary {
 
     // margin: auto;  // too far down and too far to the left
     margin: -1rem 0 0 1rem;
-    padding: 20px;
+    padding: 1rem 0 .5rm .5rem;
     border: 1px solid #888;
     width: 80%;
     // left: 8px;    // left: 8px; goes over page title far left gutter
     position: absolute;
     text-align: start;  // parent flex box is centering text
-    max-height: 20rem;     // After 20 lines, scroll bar appears
+    max-height: 30rem;     // After 30 lines, scroll bar appears
     overflow: auto;
     // top: 90px;    // top: 90px; goes over page title beginning of text
     z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
