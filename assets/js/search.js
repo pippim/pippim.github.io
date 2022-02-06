@@ -4,6 +4,10 @@ window.MyLib = {}; // global Object container; don't use var
 var search_include = null         // global context
 var search_urls = null           //   "      "
 
+// fudge it
+var modal = document.getElementById('search-modal');
+modal.style.display = "none";
+
 async function load_search_objects() {
     search_include = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json');
     search_urls  = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json');
