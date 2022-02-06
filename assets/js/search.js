@@ -111,17 +111,17 @@ function submitted(event) {
     console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
     for (url_ndx of top_summary.slice(0, 5)) {
         // console.log("url_ndx: " + url_ndx + " | URL: " + search_urls[url_ndx]);
-        const arr = search_urls[url_ndx].split(' | ', 2);
+        const arr = search_urls[url_ndx].split(' | ', 1);
         hyper_link = arr[0];
-        hyper_title = arr[1];
+        hyper_title = search_urls[url_ndx].substring(hyper_link.length+ 3);
         console.log("url_ndx: " + url_ndx + " | Title: " + hyper_title);
     }
     // Process all results
     html += "<ol>\n"
     for (url_ndx of top_summary) {
-        const arr = search_urls[url_ndx].split(' | ', 2);
+        const arr = search_urls[url_ndx].split(' | ', ``);
         hyper_link = arr[0];
-        hyper_title = arr[1];
+        hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
         html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n";
     }
     html += "</ol>\n"
