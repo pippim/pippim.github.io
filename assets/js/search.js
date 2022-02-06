@@ -110,7 +110,7 @@ function submitted(event) {
     console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
     for (url_ndx of top_summary.slice(0, 5)) {
         console.log("url_ndx: " + url_ndx + " | URL: " + search_urls[url_ndx]);
-        const arr = search_urls[url_ndx].split(' | ', 1);
+        const arr = search_urls[url_ndx].split(' | ', 2);
         hyper_link = arr[0];
         hyper_title = arr[1];
         console.log("url_ndx: " + url_ndx + " | Title: " + hyper_title);
