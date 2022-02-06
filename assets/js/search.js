@@ -57,7 +57,7 @@ load_search_objects();
 
 // Get the modal - From: https://stackoverflow.com/a/46296164/6929343
 var modal = document.getElementById('search-modal');
-modal.style.display = "none";  // Fudge -- Appears before clicking???
+// modal.style.display = "none";  // Fudge -- Appears before clicking???
 
 // Get the button that opens the modal
 var btn = document.getElementById("search-utf8-mag-glass");
@@ -124,7 +124,7 @@ function submitted(event) {
         hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
         html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n";
     }
-    html += "</ol>\n"
+    html += "</ol>\n";
 
     document.getElementById("search-modal-text").innerHTML = html;
     // const url = google + site + '+' + q.value;
