@@ -433,6 +433,7 @@ details[open] > summary {
     position: absolute;
     text-align: start;  // parent flex box is centering text
     max-height: 20rem;     // After 20 lines, scroll bar appears
+    overflow: auto;
     // top: 90px;    // top: 90px; goes over page title beginning of text
     z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
 /*
