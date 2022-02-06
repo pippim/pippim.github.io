@@ -422,7 +422,8 @@ details[open] > summary {
     background-color: #fefefe;
     background-color: #777;     // Something grayish
 
-    margin: auto;
+    // margin: auto;  // too far down and too far to the left
+    margin -1rem 0 0 2rem;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
