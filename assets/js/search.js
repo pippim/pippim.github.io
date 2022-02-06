@@ -112,7 +112,7 @@ function submitted(event) {
     }
     console.log("input width: " + document.getElementById("search-query").offsetWidth);
 
-    document.getElementById("search-modal-text").innerHTML = "New text!";
+    // document.getElementById("search-modal-text").innerHTML = "New text!";
     // const url = google + site + '+' + q.value;
     // const win = window.open(url, '_blank');
     // win.focus();
