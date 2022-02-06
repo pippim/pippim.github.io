@@ -9,10 +9,10 @@ var search_urls = null           //   "      "
 //modal.style.display = "none";
 
 async function load_search_objects() {
-    //search_include = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json');
-    //search_urls  = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json');
+    search_include = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json');
+    search_urls  = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json');
 
-    /* Following doesn't work when search_include is still a promise and not yet an array.... */
+    /* Following doesn't work when search_include is still a promise and not yet an array....
     if (search_include typeof !== Promise) && (search_include.length === 0) {
         search_include = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
     } else {
@@ -23,6 +23,7 @@ async function load_search_objects() {
     } else {
         console.log('Using preloaded search_urls object')
     }
+    */
 }
 
 function search_fetched() {
