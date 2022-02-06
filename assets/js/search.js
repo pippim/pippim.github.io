@@ -5,8 +5,37 @@ var search_include = null         // global context
 var search_urls = null           //   "      "
 
 // fudge it
-var modal = document.getElementById('search-modal');
-modal.style.display = "none";
+//var modal = document.getElementById('search-modal');
+//modal.style.display = "none";
+    // Get the modal - From: https://stackoverflow.com/a/46296164/6929343
+    var modal = document.getElementById('search-modal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("search-utf8-mag-glass");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    // invalid assignment left-hand side
+    btn.onclick = function () {
+        modal.style.display = "block";
+        console.log("btn.onclick event");
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+        console.log("span.onclick event");
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            window.log("window.onclick event");
+        }
+    }
 
 async function load_search_objects() {
     search_include = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json');
@@ -96,36 +125,6 @@ function submitted(event) {
     }
     console.log("input width: " + document.getElementById("search-query").offsetWidth);
 
-    // Get the modal - From: https://stackoverflow.com/a/46296164/6929343
-    var modal = document.getElementById('search-modal');
-    modal.style.display = "block";
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("search-utf8-mag-glass");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal
-    // invalid assignment left-hand side
-    btn.onclick = function () {
-        modal.style.display = "block";
-        console.log("btn.onclick event");
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-        console.log("span.onclick event");
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            window.log("btn.onclick event");
-        }
-    }
 
     // const url = google + site + '+' + q.value;
     // const win = window.open(url, '_blank');
