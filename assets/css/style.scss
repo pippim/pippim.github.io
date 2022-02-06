@@ -426,7 +426,7 @@ details[open] > summary {
 
     // margin: auto;  // too far down and too far to the left
     margin: -1rem 0 0 1rem;
-    padding: 1rem 1rem 1.5rem 1.5rem;
+    padding: 1rem 1rem 1.5rem 1rem;
     border: 1px solid #888;
     width: 80%;
     // left: 8px;    // left: 8px; goes over page title far left gutter
@@ -447,8 +447,12 @@ document.getElementById("p1").innerHTML = "New text!";
 
 // The Close Button
 .close {
+    // position: fixed;  // Try to keep in place when scrolling
     color: #aaaaaa;
-    float: right;
+    // float: right;  // Try absolute
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     font-size: 28px;
     font-weight: bold;
 }
