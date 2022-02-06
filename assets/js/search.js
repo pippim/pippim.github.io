@@ -89,12 +89,12 @@ window.onclick = function (event) {
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const f = document.getElementById('search-form');
 const q = document.getElementById('search-query');
-const h = document.getElementById('search-modal-text').innerHTML;
+// const h = document.getElementById('search-modal-text').innerHTML;
 
 function submitted(event) {
     event.preventDefault();
     const q = document.getElementById('search-query');  // Added later, not sure if required...
-    const h = document.getElementById('search-modal-text').innerHTML;
+    // const h = document.getElementById('search-modal-text').innerHTML;
     const results = get_results(q.value);
     console.log("Number of results: " + results.length);
     if (results.length == 0) {
@@ -102,14 +102,14 @@ function submitted(event) {
         return
     } else {
         var html = "<h2>" + results.length.toString() + " results found.</h2>\n"
-        h.value = "<h2>" + results.length.toString() + " results found.</h2>\n";  // Not working
-        //document.getElementById("search-modal-text").innerHTML =
-        //    "<h2>" + results.length.toString() + " results found.</h2>\n";
+        // h.value = "<h2>" + results.length.toString() + " results found.</h2>\n";  // Not working
+        document.getElementById("search-modal-text").innerHTML =
+            "<h2>" + results.length.toString() + " results found.</h2>\n";
     }
     const top_summary = sum_and_sort(results, 25);
     console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
     for (url_ndx of top_summary.slice(0, 5)) {
-        // console.log("url_ndx: " + url_ndx + " | URL: " + search_urls[url_ndx]);
+        console.log("url_ndx: " + url_ndx + " | URL: " + search_urls[url_ndx]);
         const arr = search_urls[url_ndx].split(' | ', 1);
         hyper_link = arr[0];
         hyper_title = arr[1];
@@ -118,7 +118,7 @@ function submitted(event) {
     }
     console.log("input width: " + document.getElementById("search-query").offsetWidth);
 
-    // document.getElementById("search-modal-text").innerHTML = "New text!";
+    document.getElementById("search-modal-text").innerHTML = html;
     // const url = google + site + '+' + q.value;
     // const win = window.open(url, '_blank');
     // win.focus();
