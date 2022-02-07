@@ -99,8 +99,8 @@ function submitted(event) {
     if (results.length == 0) {
         html = "<h2>No results found!</h2>\n";
         html += "<p>Use more search words that are descriptive.<br><br>\n"
-        html += "Non-descriptive words are not indexed to save space. For example:<br>\n"
-        html += "&emsp;who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
+        html += "Non-descriptive words are not indexed to save space. For example:<br><br>\n"
+        html += "&emsp;- who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
         document.getElementById("search-modal-text").innerHTML = html;
         modal.style.display = "block";  // Turn on search results display
         return
