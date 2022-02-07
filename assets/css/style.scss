@@ -357,7 +357,7 @@ details[open] > summary {
   color: $header-bg-color;
   height: 2.2rem;
   margin: 1rem;     // New - space above and below
-  border-radius: 5px;
+  border-radius: .5rem;
   display:flex;
   flex-direction:row;
   align-items:center;
@@ -387,7 +387,7 @@ details[open] > summary {
     position: fixed;
     // Stay in place
     // z-index: 1;
-    z-index: 2;  // Place over buttons
+    z-index: 2;  // Place over header buttons appearing top of every page
     // Sit on top
     // padding-top: 100px;  // Causing text not to appear?
     // Location of the box
@@ -414,7 +414,7 @@ details[open] > summary {
     // margin: auto;  // too far down and too far to the left
     margin: -1rem 0 0 1rem;
     padding: 1rem 1rem 1.5rem 1rem;
-    border: 1px solid #888;
+    border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
     border-radius: .5rem;
     width: 80%;
     overflow: auto;
