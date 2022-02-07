@@ -81,14 +81,8 @@ span.onclick = function () {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (!modal.contains(event.target)) {
-        console.log('clicked Outside');
-    } else {
-        console.log('clicked Inside');
+        modal.style.display = "none";
     }
-    //if ((event.target !== modal) && (event.target !== "HTMLLIElement")) {
-    //    modal.style.display = "none";
-    //    console.log("window.onclick event outside of modal: " + event.target);
-    //}
 }
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
