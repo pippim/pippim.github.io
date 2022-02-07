@@ -82,7 +82,7 @@ span.onclick = function () {
 window.onclick = function (event) {
     if (event.target !== modal) {
         modal.style.display = "none";
-        console.log("window.onclick event outside of modal");
+        console.log("window.onclick event outside of modal: " + event.target);
     }
 }
 
