@@ -80,10 +80,10 @@ span.onclick = function () {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (modal.contains(event.target)) {
-        console.log('clicked inside');
+    if (!modal.contains(event.target)) {
+        console.log('clicked Outside');
     } else {
-        console.log('clicked outside');
+        console.log('clicked Inside');
     }
     //if ((event.target !== modal) && (event.target !== "HTMLLIElement")) {
     //    modal.style.display = "none";
