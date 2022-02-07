@@ -126,6 +126,7 @@ function submitted(event) {
     html += "</ol>\n";
 
     document.getElementById("search-modal-text").innerHTML = html;
+    modal.style.display = "block";
     // const url = google + site + '+' + q.value;
     // const win = window.open(url, '_blank');
     // win.focus();
