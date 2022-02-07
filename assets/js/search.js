@@ -97,7 +97,12 @@ function submitted(event) {
     const results = get_results(q.value);
     console.log("Number of results: " + results.length);
     if (results.length == 0) {
-        document.getElementById("search-modal-text").innerHTML = "<h2>No results found!</h2>";
+        html = "<h2>No results found!</h2>\n";
+        html += "Use more search words that are descriptive.</ BR></ BR>\n"
+        html += "Non-descriptive words are not indexed to save space. For example:</ BR>\n"
+        html += "&emsp;who, what, where, when, why, how, a, the, it, and, or, then, etc.\n"
+        document.getElementById("search-modal-text").innerHTML = html;
+        modal.style.display = "block";  // Turn on search results display
         return
     } else if (results.length == 1) {
         var html = "<h2>1 result found.</h2>\n"
