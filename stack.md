@@ -28,10 +28,10 @@ NOTE Fonts not being used error message in Developer Tools:
 
 # Introduction
 
-This page describes how you can **automatically convert your
-own Stack Exchange posts to your own website.**
+This page describes how to **convert your Stack Exchange posts
+to your own website, hosted for free on GitHub Pages.**
 
-Converting thousands of Stack Exchange Q&A in MarkDown format isn't as easy 
+Converting posts in Stack Exchange MarkDown format isn't as easy 
 as simply copying them over to GitHub Pages. The python program 
 `stack-to-blog.py` is used to convert Stack Exchange posts to
 GitHub Pages Posts. The bash script `refresh.sh` is used to **pull** your
