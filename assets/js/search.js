@@ -80,9 +80,9 @@ span.onclick = function () {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (event.target == modal) {
+    if (event.target !== modal) {
         modal.style.display = "none";
-        window.log("window.onclick event");
+        console.log("window.onclick event outside of modal");
     }
 }
 
