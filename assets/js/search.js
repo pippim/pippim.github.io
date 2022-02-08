@@ -67,10 +67,10 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
 // invalid assignment left-hand side
-btn.onclick = function () {
-    modal.style.display = "block";
-    console.log("btn.onclick event");
-}
+//btn.onclick = function () {
+//    modal.style.display = "block";  // Done directly in submitted event
+//    console.log("btn.onclick event");
+//}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
@@ -82,26 +82,28 @@ span.onclick = function () {
 window.onclick = function (event) {
     if (!modal.contains(event.target)) {
         modal.style.display = "none";
+        console.log("window.onclick event outside of modal");
     }
 }
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const f = document.getElementById('search-form');
-const q = document.getElementById('search-query');
-// const h = document.getElementById('search-modal-text').innerHTML;
+const q = document.getElementById('search-query');      // Search words input by user
+const h = document.getElementById('search-modal-text')  // Search results display
 
 function submitted(event) {
     event.preventDefault();
-    const q = document.getElementById('search-query');  // Added later, not sure if required...
+    // const q = document.getElementById('search-query');  // Added later, not sure if required...
     // const h = document.getElementById('search-modal-text').innerHTML;
     const results = get_results(q.value);
     console.log("Number of results: " + results.length);
     if (results.length == 0) {
-        html = "<h2> 🔍 &emsp; No results found! &emsp; 🔍 </h2>\n";
+        html = "<h2> 🔍 &emsp; No results found!</h2>\n";
         html += "<p>Use more search words that are descriptive.<br><br>\n"
         html += "Non-descriptive words are ignored. Some example words ignored are:<br><br>\n"
         html += "&emsp;- who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
-        document.getElementById("search-modal-text").innerHTML = html;
+        h.innerHTML = html;
+        q.value = ""  // Test because this is what X button would do
         modal.style.display = "block";  // Turn on search results display
         return
     } else if (results.length == 1) {
