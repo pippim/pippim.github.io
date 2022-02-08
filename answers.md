@@ -1,9 +1,9 @@
 ---
-title: Answers
+title: Converted Stack Exhange Answers
 layout: default
 ---
 
-# Answers by Pippim
+# Answers by {{ site.title }}
 
 Questions that {{ site.title }} has answered have over
  **{{ site.views_human }} views** as of {{ site.refreshed | date: "%B %e, %Y" }}.
@@ -19,7 +19,7 @@ Hopefully, reviewing these questions will help you to write your own when you ne
 
 ## Posts grouped by <mark>Tag</mark>
 
-There are {{ site.all_tag_counts }} tags used by [[ site.title }} Answers.
+There are {{ site.all_tag_counts }} tags used by {{ site.title }} Answers.
 To make accessing them more managable, tags are nested by letter,
 then by tag, then the posts are listed in small grouups of about 15.
 
