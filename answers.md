@@ -19,15 +19,16 @@ Hopefully, reviewing these questions will help you to write your own when you ne
 
 ## Posts grouped by <mark>Tag</mark>
 
-There are {{ site.all_tag_counts }} tags used by {{ site.title }} Answers.
-To make accessing them more managable, tags are nested by letter,
-then by tag, then the posts are listed in small grouups of about 15.
+There are {{ site.all_tag_counts }} tags used by {{ site.title }} posts.
+To make accessing them more managable, tags are grouped by letter,
+then grouped by tag, then optionally grouped by date range and then 
+grouped by about 15 posts.
 
 Click the expand chevron (▶️) to expand a group of tags.
 
 Click the collapse chevron (🔽) to shrink a group of tags.
 
-### Answer Tags
+## {{ site.all_tag_counts }} Tags in {{ site.post_count }} Posts
 
 {::options parse_block_html="false" /}
 
