@@ -74,7 +74,7 @@ source code is kept. The website you are viewing now is found
 on [GitHub Pages 🔗](https://pippim.github.io) 
 (https://pippim.github.io). All three websites are hosted
 for free by the providers. Other than the cost of time to 
-learn web design, I can't how cheap the process has been!
+learn web design, I can't believe how cheap the process has been!
 
 As you may have deduced by the little yellow dot in this image
 though, Pippim is physically located in Edmonton, Canada. 
