@@ -5,7 +5,7 @@ layout: default
 
 # Answers by Pippim
 
-Pippim answers have over
+Questions that {{ site.title }} has answered have over
  **{{ site.views_human }} views** as of {{ site.refreshed | date: "%B %e, %Y" }}.
 They are posted on Stack Exchange websites
  such as [Ask Ubuntu 🔗](https://askubuntu.com "Visit www.askubuntu.com 🔗") and
@@ -19,7 +19,7 @@ Hopefully, reviewing these questions will help you to write your own when you ne
 
 ## Posts grouped by <mark>Tag</mark>
 
-There are about 3,600 tags used by Pippim Answers.
+There are {{ site.all_tag_counts }} tags used by [[ site.title }} Answers.
 To make accessing them more managable, tags are nested by letter,
 then by tag, then the posts are listed in small grouups of about 15.
 
