@@ -97,7 +97,7 @@ function submitted(event) {
     const results = get_results(q.value);
     console.log("Number of results: " + results.length);
     if (results.length == 0) {
-        html = "<h2>No results found!</h2>\n";
+        html = "<h2>🔍 No results found! 🔍</h2>\n";
         html += "<p>Use more search words that are descriptive.<br><br>\n"
         html += "Non-descriptive words are ignored. Some example words ignored are:<br><br>\n"
         html += "&emsp;- who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
