@@ -1,5 +1,5 @@
 ---
-title: Pippim - Free Solutions
+title: The 5 W's of Pippim
 layout: default
 ---
 
@@ -12,9 +12,9 @@ layout: default
 
 # About Pippim
 
-This page answers questions you might have about Pippim. This page
-addresses the **5 W's**; "Who", "What", Where", When and "Why"
-of Pippim. On this page you will discover:
+This page answers questions you might have about Pippim. The
+**5 W's** are addressed; "Who", "What", Where", When and "Why"
+of Pippim. Here you will discover:
 
 - [**Who** is Pippim?](https://pippim.github.io/about.html#who-is-pippim?)
 - [**What** is Pippim?](https://pippim.github.io/about.html#what-is-pippim?)
