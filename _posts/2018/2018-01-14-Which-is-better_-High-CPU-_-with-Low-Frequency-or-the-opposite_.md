@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,728 "
 accepted:     
-uploaded:     2022-02-06 11:17:02
+uploaded:     2022-02-07 17:28:41
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-14-Which-is-better_-High-CPU-_-with-Low-Frequency-or-the-opposite_.md
 toc:          false
 navigation:   false

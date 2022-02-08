@@ -65,7 +65,6 @@
 ├── mserve.md
 ├── programs.md
 ├── stack.md
-├── stack-to-blog.py
 └── tree.work
 
-19 directories, 50 files
+19 directories, 49 files

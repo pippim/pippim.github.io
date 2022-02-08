@@ -66,8 +66,7 @@ ws = website_search.WebsiteSearch()
     TO-DO
     ============================================================================
 
-    There are long-term TO-DO's littered through out the program. This section is
-    for the immediate TO-DO's:
+    Read lines in index.md, about.md, programs.md and parse with website_search.
 
     Create list of tag substitutions, eg windows-subsystem-for-linux becomes wsl
 
@@ -172,6 +171,9 @@ EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
 TITLE_SEARCH_POINTS = 10.0  # ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
 TAG_SEARCH_POINTS = 5.0     # ws.parse(tags, TAG_SEARCH_POINTS)
 WORD_SEARCH_POINTS = 0.5    # ws.parse(line, WORD_SEARCH_POINTS)
+# All saved posts are indexed for searching but, add files below too:
+EXTRA_SEARCH_FILES = ['../about.md', '../answer.md', '../index.md',
+                      '../mserve.md', '../programs.md', '../stack.md']
 
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 # If not desired, set `CONFIG_YML = None`
@@ -2866,6 +2868,7 @@ def update_config():
     answers = 2,172_
     accepted = 469_
     save_blog = 1,122_
+    all_tag_counts = 3,342
 
     """
     if CONFIG_YML is None:
@@ -2883,6 +2886,7 @@ def update_config():
     one_config_line(config, "question_count", '"{:,}'.format(blog_question_count) + ' "')
     one_config_line(config, "answer_count", '"{:,}'.format(blog_answer_count) + ' "')
     one_config_line(config, "accepted_count", '"{:,}'.format(blog_accepted_count) + ' "')
+    one_config_line(config, "all_tag_counts", '"{:,}'.format(all_tag_counts) + ' "')
 
     #print('NEW CONFIGURATION:')
     #for ln in config:
