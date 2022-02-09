@@ -139,6 +139,30 @@ function submitted(event) {
 
 f.addEventListener('submit', submitted);
 
+/* From: https://stackoverflow.com/questions/10760847/entire-form-onchange */
+const c = document.getElementById('search-clear-input');
+f.addEventListener('change', function() {
+    if (q.value !== "") {
+        c.style.display = "block";
+    } else {
+        c.style.display = "none";
+    }
+});
+/* From: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
+
+<input placeholder="Enter some text" name="name"/>
+<p id="values"></p>
+
+*/
+const input = document.querySelector('input');
+const log = document.getElementById('values');
+
+input.addEventListener('input', updateValue);
+
+function updateValue(e) {
+  log.textContent = e.target.value;
+}
+
 //Array.prototype.forEach.call(document.querySelectorAll('.clearable-input'), function(el) {
   //var input = el.querySelector('input');
 
