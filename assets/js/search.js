@@ -86,9 +86,9 @@ window.onclick = function (event) {
     }
 }
 
-$('#search-clear-input').click(function(){
+document.getElementById('search-clear-input').onclick = function(){
     console.log("search-clear-input");
-});
+};
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const f = document.getElementById('search-form');
