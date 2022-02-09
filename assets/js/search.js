@@ -138,6 +138,18 @@ q.addEventListener('change', function() {
     check_q_values();
 });
 
+/* event listener
+From: https://stackoverflow.com/a/26946318/6929343
+*/
+document.getElementsByName("search-q")[0].addEventListener('change', doThing);
+
+/* function */
+function doThing(){
+   console.log('Horray! Someone wrote "' + this.value + '"!');
+}
+
+
+// Close ('X') clicked on search input bar
 c.onclick = function(){
     q.value = "";
     check_q_values();
