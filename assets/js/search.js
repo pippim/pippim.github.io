@@ -55,37 +55,37 @@ async function getJSON(url) {
 // Preload search objects
 load_search_objects();
 
+
+// From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
+const c = document.getElementsByClassName("close")[0];
+const f = document.getElementById('search-form');
+const q = document.getElementById('search-query');      // Search words input by user
+const h = document.getElementById('search-modal-text')  // Search results html codes
+const i = document.getElementById('search-clear-input');
+const m = document.getElementById('search-modal');
+
+check_q_values();  // Initial 'X' (close on input bar) status when page refreshed
+
 // Get the modal - From: https://stackoverflow.com/a/46296164/6929343
 var modal = document.getElementById('search-modal');
 // modal.style.display = "none";  // Fudge -- Appears before clicking???
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+c.onclick = function () {
     modal.style.display = "none";
-    console.log("span.onclick event");
+    // console.log("c.onclick event");
     // Also called when X clicked in input bar, but handled elsewhere
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    check_q_values();  // Fudge it. Because change listener not working yet...
     if (!modal.contains(event.target)) {
         modal.style.display = "none";
-        console.log("window.onclick event outside of modal");
+        // console.log("window.onclick event outside of modal");
     }
 }
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
-const c = document.getElementById('search-clear-input');
-const f = document.getElementById('search-form');
-const q = document.getElementById('search-query');      // Search words input by user
-const h = document.getElementById('search-modal-text')  // Search results html codes
-
-check_q_values();  // Initial 'X' (close on input bar) status when page refreshed
-
 function submitted(event) {
     event.preventDefault();                 // Not sure what this does?
     const results = get_results(q.value);   // URLS matching search words into array
@@ -136,16 +136,16 @@ q.addEventListener('keydown', function() {
 });
 
 // Close ('X') clicked on search input bar
-c.onclick = function(){
+i.onclick = function(){
     q.value = "";
     check_q_values();
 };
 
 function check_q_values() {
     if (q.value !== "") {
-        c.style.display = "block";
+        i.style.display = "block";
     } else {
-        c.style.display = "none";
+        i.style.display = "none";
     }
 }
 //Array.prototype.forEach.call(document.querySelectorAll('.clearable-input'), function(el) {
@@ -206,113 +206,5 @@ function sum_and_sort(raw, top_limit) {
 
     return sorted.slice(0, top_limit);
 }
-
-/* Need drop down search results: https://stackoverflow.com/a/63610185/6929343
-
-    https://stackoverflow.com/questions/16806406/javascript-popup-window-with-scrollbars
-    
-    https://stackoverflow.com/questions/29326226/creating-javascript-search-boxes-for-custom-sites-that-create-popup-windows-show
-    
-    https://stackoverflow.com/questions/44678100/javascript-display-search-results-on-page
-    
-    Need to format HTML: https://stackoverflow.com/questions/2109205/open-window-in-javascript-with-html-inserted
-
-
-// Get the modal
-//     From: https://stackoverflow.com/a/46296164/6929343
-    var modal = document.getElementById('search-modal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("search-utf8-mag-glass");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-.modal {
-            display: none;
-            // Hidden by default
-            position: fixed;
-            // Stay in place
-            z-index: 1;
-            // Sit on top
-            padding-top: 100px;
-            // Location of the box
-            left: 0;
-            top: 0;
-            width: 100%;
-            // Full width
-            height: 100%;
-            // Full height
-            overflow: auto;
-            // Enable scroll if needed
-            background-color: rgb(0, 0, 0);
-            // Fallback color
-            background-color: rgba(0, 0, 0, 0.4);
-            // Black w/ opacity
-        }
-        // Modal Content
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            left: 8px;
-            position: absolute;
-            top: 90px;
-        }
-        // The Close Button
-
-        .close {
-            color: #aaaaaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-<h2>Modal Example</h2>
-
-    <div><input id="myInputTextBox" /></div>
-
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-        </div>
-
-    </div>
-
-*/
 
 /* End of /assets/js/search.js */
