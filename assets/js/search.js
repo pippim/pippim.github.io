@@ -84,6 +84,8 @@ const f = document.getElementById('search-form');
 const q = document.getElementById('search-query');      // Search words input by user
 const h = document.getElementById('search-modal-text')  // Search results html codes
 
+check_q_values();  // Initial 'X' (close on input bar) status when page refreshed
+
 function submitted(event) {
     event.preventDefault();                 // Not sure what this does?
     const results = get_results(q.value);   // URLS matching search words into array
@@ -128,28 +130,10 @@ function submitted(event) {
 
 f.addEventListener('submit', submitted);
 
-/* From: https://stackoverflow.com/questions/10760847/entire-form-onchange */
-f.addEventListener('change', function() {
-    /* Only fired with submit button */
-    console.log("form changed")
-    check_q_values();
-});
 q.addEventListener('keydown', function() {
-    /* Only fired with submit button */
-    console.log("query keydown")
+    /* Fired on every key press */
     check_q_values();
 });
-
-/* event listener
-From: https://stackoverflow.com/a/26946318/6929343
-*/
-document.getElementsByName("search-q")[0].addEventListener('change', doThing);
-
-/* function */
-function doThing(){
-   console.log('Horray! Someone wrote "' + this.value + '"!');
-}
-
 
 // Close ('X') clicked on search input bar
 c.onclick = function(){
