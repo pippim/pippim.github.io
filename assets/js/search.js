@@ -71,6 +71,7 @@ span.onclick = function () {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
+    check_q_values();  // Fudge it. Because change listener not working yet...
     if (!modal.contains(event.target)) {
         modal.style.display = "none";
         console.log("window.onclick event outside of modal");
