@@ -89,21 +89,19 @@ window.onclick = function (event) {
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const f = document.getElementById('search-form');
 const q = document.getElementById('search-query');      // Search words input by user
-const h = document.getElementById('search-modal-text')  // Search results display
+const h = document.getElementById('search-modal-text')  // Search results html codes
 
 function submitted(event) {
-    event.preventDefault();
-    // const q = document.getElementById('search-query');  // Added later, not sure if required...
-    // const h = document.getElementById('search-modal-text').innerHTML;
-    const results = get_results(q.value);
-    console.log("Number of results: " + results.length);
+    event.preventDefault();                 // Not sure what this does?
+    const results = get_results(q.value);   // URLS matching search words into array
+    //console.log("Number of results: " + results.length);
     if (results.length == 0) {
         html = "<h2> 🔍 &emsp; No results found!</h2>\n";
         html += "<p>Use more search words that are descriptive.<br><br>\n"
         html += "Non-descriptive words are ignored. Some example words ignored are:<br><br>\n"
         html += "&emsp;- who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
         h.innerHTML = html;
-        q.value = ""  // Test because this is what X button would do
+        //q.value = ""  // Test because this is what X button would do
         modal.style.display = "block";  // Turn on search results display
         return
     } else if (results.length == 1) {
@@ -112,15 +110,15 @@ function submitted(event) {
         var html = "<h2>" + results.length.toString() + " results found.</h2>\n"
     }
     const top_summary = sum_and_sort(results, 1000); // Maximum 1000 links
-    console.log("input width: " + document.getElementById("search-query").offsetWidth);
+    console.log("input width: " + q.offsetWidth);
     console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
-    for (url_ndx of top_summary.slice(0, 5)) {
+    //for (url_ndx of top_summary.slice(0, 5)) {
         // console.log("url_ndx: " + url_ndx + " | URL: " + search_urls[url_ndx]);
-        const arr = search_urls[url_ndx].split(' | ', 1);
-        hyper_link = arr[0];
-        hyper_title = search_urls[url_ndx].substring(hyper_link.length+ 3);
-        console.log("url_ndx: " + url_ndx + " | Title: " + hyper_title);
-    }
+        // const arr = search_urls[url_ndx].split(' | ', 1);
+        // hyper_link = arr[0];
+        // hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
+        // console.log("url_ndx: " + url_ndx + " | Title: " + hyper_title);
+    //}
     // Process all results
     html += "<ol>\n"
     for (url_ndx of top_summary) {
@@ -131,11 +129,8 @@ function submitted(event) {
     }
     html += "</ol>\n";
 
-    document.getElementById("search-modal-text").innerHTML = html;
-    modal.style.display = "block";
-    // const url = google + site + '+' + q.value;
-    // const win = window.open(url, '_blank');
-    // win.focus();
+    h.innerHTML = html;                 // Put search results into modal box
+    modal.style.display = "block";      // Display search results by displaying modal
 }
 
 f.addEventListener('submit', submitted);
