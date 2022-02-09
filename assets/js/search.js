@@ -135,22 +135,22 @@ function submitted(event) {
 
 f.addEventListener('submit', submitted);
 
-Array.prototype.forEach.call(document.querySelectorAll('.clearable-input'), function(el) {
-  var input = el.querySelector('input');
+//Array.prototype.forEach.call(document.querySelectorAll('.clearable-input'), function(el) {
+  //var input = el.querySelector('input');
 
   // conditionallyHideClearIcon();
   // input.addEventListener('input', conditionallyHideClearIcon);
-  el.querySelector('[search-clear-input]').addEventListener('click', function(e) {
+  //el.querySelector('[search-clear-input]').addEventListener('click', function(e) {
   // el.querySelector('[search-query]').addEventListener('click', function(e) {
   //  input.value = '';
   //  conditionallyHideClearIcon();
-  });
+  //});
 
-  function conditionallyHideClearIcon(e) {
-    var target = (e && e.target) || input;
-    target.nextElementSibling.style.display = target.value ? 'block' : 'none';
-  }
-});
+  //function conditionallyHideClearIcon(e) {
+    //var target = (e && e.target) || input;
+    //target.nextElementSibling.style.display = target.value ? 'block' : 'none';
+  //}
+//});
 
 function get_results(submit_str) {
     // Build list array of each time url index found
