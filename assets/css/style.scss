@@ -441,11 +441,11 @@ document.getElementById("p1").innerHTML = "New text!";
 .close {
     // position: fixed;  // Try to keep in place when scrolling
     color: #aaaaaa;
-    // float: right;  // Try absolute
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 28px;
+    float: right;  // Try absolute
+    //position: absolute;
+    //top: 1rem;
+    //right: 1rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
