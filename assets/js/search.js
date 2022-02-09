@@ -59,18 +59,8 @@ load_search_objects();
 var modal = document.getElementById('search-modal');
 // modal.style.display = "none";  // Fudge -- Appears before clicking???
 
-// Get the button that opens the modal
-var btn = document.getElementById("search-utf8-mag-glass");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-// invalid assignment left-hand side
-//btn.onclick = function () {
-//    modal.style.display = "block";  // Done directly in submitted event
-//    console.log("btn.onclick event");
-//}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
@@ -139,9 +129,11 @@ f.addEventListener('submit', submitted);
 
 /* From: https://stackoverflow.com/questions/10760847/entire-form-onchange */
 f.addEventListener('change', function() {
+    console.log("form changed")
     check_q_values();
 });
 q.addEventListener('change', function() {
+    console.log("query changed")
     check_q_values();
 });
 
