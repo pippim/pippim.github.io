@@ -1,29 +1,13 @@
-<!-- Need to add: <h2 class="project-tagline"></h2> -->
-
-<!-- original from:
-<form role="search" id="org-form">
-  <input type="search" id="org-query" name="org-q"
-   placeholder="{{ page.description | default: site.description | default: site.github.project_tagline }}"
-   aria-label="Search through site content">
-  <button id="org-search-button" type="submit" > <svg width="50" height="50" viewBox="0 0 1024 1024">
-    <path d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 
-     0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059
-     177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 
-     218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364
-     0-218.455 97.091-218.455 218.455z">
-    </path></svg></button>
-</form>
+<!-- Search bar and search results. NOTE: Autocomplete turned off because Google Chrome
+     (but not Firefox) makes input bar extra tall when inserting automcomplete results from
+     drop down list
 -->
-
 <!-- class clearable-input from: https://stackoverflow.com/a/33683886/6929343 -->
 <form role="search" id="search-form">
-  <input type="search" class="clearable-input" id="search-query" name="search-q"
+  <input type="search" class="clearable-input" id="search-query" name="search-q" autocomplete="off"
    placeholder="Search... {{ page.description | default: site.description | default: site.github.project_tagline }}"
    aria-label="Search through site content">
-
-  <!-- class data-clear-input is HOPELESSLY BROKEN  -->
   <span id="search-clear-input">&times;</span>
-
   <button id="search-utf8-mag-glass" type="submit"
     >🔍
   </button>
@@ -39,25 +23,3 @@
     </div>
 
 </div>
-
-<!-- From: https://stackoverflow.com/a/34393664/6929343
-<div class="search">
-    <input id="header-search" type="search"
-           placeholder="Search... {{ page.description | default: site.description | default: site.github.project_tagline }}" />
-    <button id="search-button">
-        <svg id="search-icon" class="search-icon" viewBox="0 0 24 24">
-            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-            <path d="M0 0h24v24H0z" fill="none"/>
-        </svg>
-    </button>
-</div>
- -->
-
-<!-- From: https://stackoverflow.com/a/34393626/6929343
-<button id="search-btn">
-    <svg id="search-icon" class="search-icon" viewBox="0 0 24 24">
-        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-        <path d="M0 0h24v24H0z" fill="none"/>
-    </svg>
- </button>
-  -->
