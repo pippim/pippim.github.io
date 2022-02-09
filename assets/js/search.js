@@ -130,11 +130,13 @@ f.addEventListener('submit', submitted);
 
 /* From: https://stackoverflow.com/questions/10760847/entire-form-onchange */
 f.addEventListener('change', function() {
+    /* Only fired with submit button */
     console.log("form changed")
     check_q_values();
 });
-q.addEventListener('change', function() {
-    console.log("query changed")
+q.addEventListener('keydown', function() {
+    /* Only fired with submit button */
+    console.log("query keydown")
     check_q_values();
 });
 
