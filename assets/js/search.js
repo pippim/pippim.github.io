@@ -141,6 +141,9 @@ f.addEventListener('submit', submitted);
 f.addEventListener('change', function() {
     check_q_values();
 });
+q.addEventListener('change', function() {
+    check_q_values();
+});
 
 c.onclick = function(){
     q.value = "";
