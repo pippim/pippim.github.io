@@ -4,10 +4,6 @@ window.MyLib = {}; // global Object container; don't use var
 var search_include = null         // global context
 var search_urls = null           //   "      "
 
-// fudge it
-//var modal = document.getElementById('search-modal');
-//modal.style.display = "none";
-
 async function load_search_objects() {
     search_include = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json');
     search_urls  = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json');
@@ -67,20 +63,20 @@ const m = document.getElementById('search-modal');
 check_q_values();  // Initial 'X' (close on input bar) status when page refreshed
 
 // Get the modal - From: https://stackoverflow.com/a/46296164/6929343
-var modal = document.getElementById('search-modal');
+//var modal = document.getElementById('search-modal');
 // modal.style.display = "none";  // Fudge -- Appears before clicking???
 
 // When the user clicks on <span> (x), close the modal
 c.onclick = function () {
-    modal.style.display = "none";
+    m.style.display = "none";   // Turn off display for search results
     // console.log("c.onclick event");
     // Also called when X clicked in input bar, but handled elsewhere
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (!modal.contains(event.target)) {
-        modal.style.display = "none";
+    if (!m.contains(event.target)) {
+        m.style.display = "none";   // Turn off display for search results
         // console.log("window.onclick event outside of modal");
     }
 }
@@ -97,7 +93,7 @@ function submitted(event) {
         html += "&emsp;- who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
         h.innerHTML = html;
         //q.value = ""  // Test because this is what X button would do
-        modal.style.display = "block";  // Turn on search results display
+        m.style.display = "block";  // Turn on search results display
         return
     } else if (results.length == 1) {
         var html = "<h2>1 result found.</h2>\n"
@@ -124,8 +120,8 @@ function submitted(event) {
     }
     html += "</ol>\n";
 
-    h.innerHTML = html;                 // Put search results into modal box
-    modal.style.display = "block";      // Display search results by displaying modal
+    h.innerHTML = html;              // Put search results into modal box
+    m.style.display = "block";       // Display search results by displaying modal
 }
 
 f.addEventListener('submit', submitted);
@@ -189,10 +185,6 @@ function get_results(submit_str) {
     }
     return results_list
 }
-
-// Fudge it all anyways
-//var fudge = document.getElementById('search-modal');
-//fudge.style.display = "none";
 
 function sum_and_sort(raw, top_limit) {
     // summarize number of times url found and sort high to low
