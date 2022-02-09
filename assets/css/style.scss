@@ -438,6 +438,7 @@ document.getElementById("p1").innerHTML = "New text!";
 }
 
 // The Close Button
+#search-clear-input,
 .close {
     // position: fixed;  // Try to keep in place when scrolling
     color: #aaaaaa;
@@ -449,6 +450,8 @@ document.getElementById("p1").innerHTML = "New text!";
     font-weight: bold;
 }
 
+#search-clear-input:hover,
+#search-clear-input:focus,
 .close:hover,
 .close:focus {
     color: #000;
