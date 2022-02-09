@@ -105,8 +105,8 @@ function submitted(event) {
         var html = "<h2>" + results.length.toString() + " results found.</h2>\n"
     }
     const top_summary = sum_and_sort(results, 1000); // Maximum 1000 links
-    console.log("input width: " + q.offsetWidth);
-    console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
+    //console.log("input width: " + q.offsetWidth);
+    //console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
     //for (url_ndx of top_summary.slice(0, 5)) {
         // console.log("url_ndx: " + url_ndx + " | URL: " + search_urls[url_ndx]);
         // const arr = search_urls[url_ndx].split(' | ', 1);
