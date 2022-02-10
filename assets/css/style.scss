@@ -444,6 +444,7 @@ details[open] > summary {
     //position: absolute;
     //top: 1rem;
     //right: 1rem;
+    margin-right: 2rem;
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -453,6 +454,10 @@ details[open] > summary {
 .close:hover,
 .close:focus {
     color: #000;
+    background-color: #aaaaaa;
+    border: .0625rem;
+    border-radius: .5rem;
+    padding: .5rem:
     text-decoration: none;
     cursor: pointer;
 }
