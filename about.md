@@ -13,7 +13,7 @@ layout: default
 # About Pippim
 
 This page answers questions you might have about Pippim. The
-**5 W's** are addressed; "Who", "What", Where", When and "Why"
+**5 W's** are addressed; "Who", "What", "Where", "When" and "Why"
 of Pippim. Here you will discover:
 
 - [**Who** is Pippim?](https://pippim.github.io/about.html#who-is-pippim?)
