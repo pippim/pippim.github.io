@@ -1,5 +1,5 @@
 ---
-title: Converted Stack Exhange Answers
+title: Stack Exchange Answers
 layout: default
 ---
 
