@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "901 "
 accepted:     Accepted
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-30-Ubuntu-does-not-output-monitor_s-native-resolution-over-HDMI-_W10-does_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    1
 views:        "2,261 "
 accepted:     Accepted
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:26:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-08-How-do-I-call-`dbus`-code-that-monitors-when-screen-is-locked_unlocked_.md
 toc:          false
 navigation:   false

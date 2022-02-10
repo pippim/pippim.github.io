@@ -22,6 +22,7 @@
 #       Jan. 01 2022 - Resurrect check_full_links(), add check_no_links()
 #       Jan. 26 2022 - Don't include self-answered with low votes
 #       Jan. 28 2022 - Website Search
+#       Feb. 08 2022 - EXTRA_SEARCH_FILES - ADD .md files to search dictionary
 #
 # ==============================================================================
 
@@ -832,7 +833,7 @@ def check_half_links(ln):
             # check_tail_links -> check_no_links -> check_full_links -> check_half_links
             if "?aVOnF.jpg" in parts[3]:  # Change to valid name for debugging
                 percent_complete_close()
-                print()
+                print('')
                 print('LINK Not Found:', html_search)
                 print(parts)
                 print(row[LINK])
@@ -882,7 +883,7 @@ def check_half_links(ln):
         ln = ln.replace(half_link, name)
 
         if part_search == print_this:
-            print()
+            print('')
             print('<a href:', href)
             print('>name<: ', name)
             print('PARTS:  ', part_search)
@@ -1132,7 +1133,7 @@ https://askubuntu.com/a/1039377/307523
     trace = False  # Set to True to print out debugging stuff
     if "?1039357" in http_str:      # Remove ? to turn on debugging
         percent_complete_close()    # Turn off progress bar display
-        print()
+        print('')
         print("KEY QUESTION:", http_str)
         print('LINK:', row[LINK])
         trace = True
@@ -1407,6 +1408,9 @@ def check_shebang():
         parts = ln.split('/')  # Might be trailing spaces
         she = parts[len(parts) - 1]
         she = she.split()[0]   # Just in case -x, -i parameter, etc.
+        if language_used != "":
+            percent_complete_close()
+            print('she:', she, 'LINK', row[LINK])
 
     return she.lower()
 
@@ -1475,7 +1479,7 @@ def check_code_block(ln):
             she_language = check_shebang()
             if she_language:
                 this_language = she_language
-            # TODO: Figure out language used
+            # TODO: Figure out language used %60
             # Need to change "vba" to "basic"
             # See: https://askubuntu.com/q/1021152
             if ln[-1] == "`" or ln[-1] == " ":
@@ -1661,6 +1665,7 @@ def one_time_change(ln):
 ''' ==========================  PASS 2 Functions  ========================== '''
 
 
+# noinspection PyArgumentList
 def check_last_navigation_bar():
     """ Counts how many words since last navigation bar
 
@@ -1875,6 +1880,7 @@ def create_blog_filename(r):
             "=" to "%3D"
             "?" to "%3F"
             "@" to "%40"
+            "`" to "%60"
 
             "▶️" to " ▶%EF%B8%8F"
 
@@ -1884,6 +1890,7 @@ def create_blog_filename(r):
 
         Jekyll converts:
             "^" to "" (null)
+            ":" to "" (null)
 
         Pippim uses ' | ' to split hyperlink and title so disallow.
 
@@ -1897,7 +1904,7 @@ def create_blog_filename(r):
     for i, lit in enumerate(little):
         if lit == " ":
             little[i] = "-"
-        elif lit in "#$%^&+;,=?/'<>()[]|\\":
+        elif lit in "`#$%^&+;:,=?/'<>()[]|\\":
             little[i] = "_"
             total_special_chars_in_titles += 1
         elif lit in '"':
@@ -2090,7 +2097,7 @@ def fatal_error(msg):
     print('#' * 80)
     print('#', ' ' * 31, "FATAL ERROR", ' ' * 32, '#')
     print('#' * 80)
-    print()
+    print('')
     print(msg)
     exit()
 
@@ -2144,6 +2151,7 @@ parse_block_html = False  # When no Kramdown, remove fixes to HTML
 '''
 
 
+# noinspection PyArgumentList
 def gen_top_posts():
     """ Generate top 10 posts in html format
     """
@@ -2163,6 +2171,7 @@ def gen_top_posts():
     html_write_top_posts(html)
 
 
+# noinspection PyArgumentList
 def gen_post_by_tag_groups():
     """ Generate Posts by Tag HTML index using <details><summary>
 
@@ -2286,7 +2295,7 @@ def gen_post_by_tag_groups():
 
             # Some debugging
             if 169 <= group_count <= 168:  # Adjust when wanted
-                print()
+                print('')
                 print('TAG:', tag_name, 'BEFORE:', 'current_tag_fits:', current_tag_fits,
                       ' | next_tag_fits:', next_tag_fits)
                 print('inner_count + tag_name_count < TAG_MAX_GROUP:',
@@ -2331,7 +2340,7 @@ def gen_post_by_tag_groups():
                       ' | prev_tag_index:', prev_tag_index,
                       ' | letter_group_counts[tag_index]:',
                       letter_group_counts[tag_index])
-                print()
+                print('')
         else:
             # Tag name has not changed. Optional debug printing.
             if 152 <= group_count <= 151:  # Adjust when wanted
@@ -2342,7 +2351,7 @@ def gen_post_by_tag_groups():
                 print('next_name_count:', next_name_count,
                       ' | inner_count:', inner_count,
                       ' | inner_name_count:', inner_name_count)
-                print()
+                print('')
 
         if tag_letter_index_changed:
             force_break = True
@@ -2377,7 +2386,7 @@ def gen_post_by_tag_groups():
             if remaining <= TAG_MAX_GROUP - TAG_AVG_GROUP:
                 keep_rule = 1
                 if 27 <= group_count <= 26:
-                    print()
+                    print('')
                     print('keep-rule: 1 using: remaining + TAG_AVG_GROUP <= TAG_MAX_GROUP:')
                     print(keep_rule, remaining, TAG_AVG_GROUP, TAG_MAX_GROUP)
                     print('tag_name_count:', tag_name_count, 'inner_name_count:',
@@ -2393,7 +2402,7 @@ def gen_post_by_tag_groups():
             if remaining + inner_count <= TAG_MAX_GROUP and prev_tag_name == tag_name:
                 keep_rule = 2
                 if 27 <= group_count <= 26:
-                    print()
+                    print('')
                     print('keep-rule: 2 using: remaining + TAG_AVG_GROUP <= TAG_MAX_GROUP:')
                     print(keep_rule, remaining, TAG_AVG_GROUP, TAG_MAX_GROUP)
                     print('tag_name_count:', tag_name_count, 'inner_name_count:',
@@ -2457,7 +2466,7 @@ def gen_post_by_tag_groups():
                       group_end_index, " | inner_count:", inner_count)
                 print('tag_name_count:', tag_name_count, " | next_name_count:",
                       next_name_count, ' | break_rule:', break_rule)
-                print()
+                print('')
 
             inner_count = 0  # Reset
 
@@ -2655,6 +2664,7 @@ def test_fake_group(group_no, groups):
             return group_count, post_count
 
 
+# noinspection PyArgumentList
 def expand_fake_groups(group_no, groups, fake_group_count, fake_post_count):
 
     html = ""   # Start with empty html
@@ -2688,6 +2698,7 @@ def expand_fake_groups(group_no, groups, fake_group_count, fake_post_count):
     return html
 
 
+# noinspection PyArgumentList
 def html_posts(start, start_ndx, end, end_ndx, count,
                mark_key="", details=None):
     """ Write out <details><summary> html codes.
@@ -2924,6 +2935,15 @@ def one_config_line(config, key, value):
     config.append(full + value)
 
 
+def process_extra_files():
+    """
+    EXTRA_SEARCH_FILES = ['../about.md', '../answer.md', '../index.md',
+                      '../mserve.md', '../programs.md', '../stack.md']
+
+    """
+    pass
+
+
 percent_complete_closed = False
 percent_last_step = 0
 
@@ -2938,7 +2958,7 @@ def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True)
         return                      # printing debug lines, no progress bar
 
     if percent_last_step > step:
-        print()
+        print('')
         fatal_error("percent_last_step: " + str(percent_last_step) +
                     " > step: " + str(step))
         return                      # printing debug lines, no progress bar
@@ -3045,6 +3065,7 @@ if row_count < 2:
 
 # Number of blog posts converted controlled by RANDOM_LIMIT
 if RANDOM_LIMIT is not None:
+    # noinspection PyArgumentList
     random_row_nos = [randint(1, row_count) for p in range(0, RANDOM_LIMIT)]
     if RANDOM_LIMIT < 100:
         print('RANDOM_LIMIT:', RANDOM_LIMIT,
@@ -3265,6 +3286,7 @@ for row in rows:
         filename = filename[5:]
     # /2018-05-18-Title-of-question becomes: /2018/05/18/Title-of-question
     filename = filename.replace('-', '/', 3)
+    # noinspection PyUnresolvedReferences
     ws.post_init(html_url + filename + ".html", row[TITLE])
     ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
     ws.parse(tags, TAG_SEARCH_POINTS)
@@ -3352,7 +3374,7 @@ gen_post_by_tag_groups()    # Generate list of posts in smaller tagged groups
 percent_complete_close()
 
 if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
-    print()
+    print('')
     print('// ==============/   Self-Answered Questions not accepted   \\================ \\\\')
     print('')
     for url in self_not_accept_url:
@@ -3360,7 +3382,7 @@ if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
     print('')
 
 if PRINT_LOW_VOTES and len(self_low_votes_url) > 0:
-    print()
+    print('')
     print('// =============/   Self-Answered Questions with low votes   \\=============== \\\\')
     print('')
     for url in self_low_votes_url:
@@ -3368,7 +3390,7 @@ if PRINT_LOW_VOTES and len(self_low_votes_url) > 0:
     print('')
 
 if len(bad_languages) > 0:
-    print()
+    print('')
     print('// ==============/   Languages not supported by Rouge   \\================ \\\\')
     print('')
     for bad_tuple in bad_languages:
@@ -3398,7 +3420,7 @@ print('NAV_BAR_MIN:      {:>6,}'.format(NAV_BAR_MIN),
       ' | NAV_WORD_MIN:  {:>11}'.format(NAV_WORD_MIN),
       ' | COPY_LINE_MIN: {:>11}'.format(COPY_LINE_MIN))
 if CONFIG_YML is not None:
-    print()
+    print('')
     print('Totals written to:', "'" + CONFIG_YML + "'",
           '(relative to /sede directory)\n')
 print('accepted_count:   {:>6,}'.format(accepted_count),
@@ -3504,10 +3526,10 @@ for row_no, row in enumerate(rows):
                   'row_no:', row_no, 'ss_save_blog:', ss_save_blog)
         else:
             print('Answer NOT FOUND by get_ss_url')
-
+# noinspection PyArgumentList
 for index in range(1000, 1003):
     get_ss_index(index)
-    print()
+    print('')
     print('ss_index:', ss_index, 'ss_url:', ss_url, 'ss_save_blog:', ss_save_blog)
     s = ss_list[ss_index]
     print(s)

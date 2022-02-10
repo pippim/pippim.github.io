@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "588 "
 accepted:     
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-02-Is-there-a-setting-in-the-startup-applications-menu-item-to-remember-all-apps-when-shutting-down_.md
 toc:          false
 navigation:   false
@@ -61,7 +61,7 @@ Someone recommended [here][4] to use Compiz Session Management:
 but it doesn't appear to work in Ubuntu 16.04 either.
 
 
-  [1]: {% post_url /2018/2018-03-18-Bash-one-liner-to-display-ALL-`gsettings`-in-GUI-dialog-window %}
+  [1]: {% post_url /2018/2018-03-18-Bash-one-liner-to-display-ALL-_gsettings_-in-GUI-dialog-window %}
   [2]: https://i.stack.imgur.com/IbmaX.png
   [3]: https://packages.ubuntu.com/trusty/utils/dconf-editor
   [4]: https://askubuntu.com/a/719602/307523

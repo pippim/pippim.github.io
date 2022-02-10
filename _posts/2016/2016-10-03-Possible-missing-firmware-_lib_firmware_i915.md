@@ -12,7 +12,7 @@ votes:        "150 "
 favorites:    
 views:        "171,319 "
 accepted:     
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-03-Possible-missing-firmware-_lib_firmware_i915.md
 toc:          true
 navigation:   true
@@ -351,7 +351,7 @@ sudo apt upgrade
   [2]: https://i.stack.imgur.com/PzEm6.png
   [3]: https://01.org/linuxgraphics/downloads/firmware
   [4]: https://i.stack.imgur.com/BFYtB.png
-  [5]: {% post_url /2018/2018-05-23-How-to-make-locate-output-look-like-`ll`-or-`ls--la`-but-nicer_ %}
+  [5]: {% post_url /2018/2018-05-23-How-to-make-locate-output-look-like-_ll_-or-_ls--la_-but-nicer_ %}
   [6]: https://bugs.launchpad.net/ubuntu/+source/linux-firmware/+bug/1611124
   [7]: https://i.stack.imgur.com/9lQBJ.png
   [8]: https://01.org/linuxgraphics/downloads/kabylake-guc-9.14

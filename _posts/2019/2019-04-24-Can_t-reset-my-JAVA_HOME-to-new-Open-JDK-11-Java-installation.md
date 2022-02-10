@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "16,948 "
 accepted:     Accepted
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-24-Can_t-reset-my-JAVA_HOME-to-new-Open-JDK-11-Java-installation.md
 toc:          false
 navigation:   false
@@ -23,7 +23,7 @@ clipboard:    false
 
 The answers and some comments focus on how to set `JAVA_HOME` to version 11 but the question is partly about "where is version 8 being set?". To answer that see: 
 
-- [`grep`ing all files for a string takes a long time]({% post_url /2018/2018-02-12-`grep`ing-all-files-for-a-string-takes-a-long-time %})
+- [`grep`ing all files for a string takes a long time]({% post_url /2018/2018-02-12-_grep_ing-all-files-for-a-string-takes-a-long-time %})
 
 Use this command:
 

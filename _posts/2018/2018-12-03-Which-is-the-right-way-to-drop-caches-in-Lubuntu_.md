@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "8,105 "
 accepted:     
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-03-Which-is-the-right-way-to-drop-caches-in-Lubuntu_.md
 toc:          false
 navigation:   false
@@ -39,4 +39,4 @@ Call it using `sudo ./drop-caches`
 
 If you place the script in `/usr/local/bin` you can call it using `sudo drop-caches`
 
-  [1]: {% post_url /2018/2018-04-22-Improve-initial-use-of-`find`-performance-time %}
+  [1]: {% post_url /2018/2018-04-22-Improve-initial-use-of-_find_-performance-time %}

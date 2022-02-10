@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,943 "
 accepted:     Accepted
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-09-List-all-IP-addresses-in-files-on-my-computer_.md
 toc:          false
 navigation:   false
@@ -121,7 +121,7 @@ $ sudo time grep -rnI -E "([0-9]{1,3}[\.]){3}[0-9]{1,3}" /etc/etc/hosts:1:127.0.
 22384inputs+0outputs (1major+181minor)pagefaults 0swaps
 ```
 
-  [1]: {% post_url /2018/2018-02-12-`grep`ing-all-files-for-a-string-takes-a-long-time %}
+  [1]: {% post_url /2018/2018-02-12-_grep_ing-all-files-for-a-string-takes-a-long-time %}
 
 
 

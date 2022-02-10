@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "105 "
 accepted:     Accepted
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-12-Are-there-any-default-programs-in-Ubuntu-16.10-which-take-my-data-and-pose-a-privacy-risk_.md
 toc:          false
 navigation:   false

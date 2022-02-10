@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,155 "
 accepted:     Accepted
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-30-Ubuntu-doesn_t-reboot.md
 toc:          false
 navigation:   false
@@ -24,7 +24,7 @@ Your laptop has the **Intel i7-6700HQ** 6th generation CPU known as "Skylake". I
 When using Skylake you made need updates:
 
 - [Ubuntu 15.10: Various &quot;types&quot; of freezes and now unexpected shutdown](Ubuntu 15.10: Various &quot;types&quot; of freezes and now unexpected shutdown)
-- ["W: Possible missing firmware for module i915_bpo" when updating initramfs]({% post_url /2017/2017-02-03-_W:-Possible-missing-firmware-for-module-i915_bpo_-when-updating-initramfs %})
+- ["W: Possible missing firmware for module i915_bpo" when updating initramfs]({% post_url /2017/2017-02-03-_W_-Possible-missing-firmware-for-module-i915_bpo_-when-updating-initramfs %})
 - [Ubuntu doesn&#39;t reboot](Ubuntu doesn&#39;t reboot)
 
 These are some of the answers I've written but there are many great answers others have written:

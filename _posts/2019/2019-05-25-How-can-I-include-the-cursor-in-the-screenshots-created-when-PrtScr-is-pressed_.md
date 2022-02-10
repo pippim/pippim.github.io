@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "1,733 "
 accepted:     
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-25-How-can-I-include-the-cursor-in-the-screenshots-created-when-PrtScr-is-pressed_.md
 toc:          false
 navigation:   false
@@ -43,7 +43,7 @@ Use the same technique for the other `gnome-screenshot` settings.
 
 Note you can get a list of all settings with `gsettings list-recursively`. For the screenshot above I used the technique in this answer:
 
-- [Bash one-liner to display ALL `gsettings` in GUI dialog window]({% post_url /2018/2018-03-18-Bash-one-liner-to-display-ALL-`gsettings`-in-GUI-dialog-window %})
+- [Bash one-liner to display ALL `gsettings` in GUI dialog window]({% post_url /2018/2018-03-18-Bash-one-liner-to-display-ALL-_gsettings_-in-GUI-dialog-window %})
 
 And the one-liner code (works with `yad` only) is:
 

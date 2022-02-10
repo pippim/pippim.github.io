@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,765 "
 accepted:     
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-15-How-can-I-see-previous-history-_prior-to-this-boot_-in-journalctl_.md
 toc:          false
 navigation:   true
@@ -159,7 +159,7 @@ Mar 30 11:17:28 alien lightdm[1046]: update-alternatives: error: no alternatives
 You might think "Mar 30" at the bottom is in error but it's a laptop that gets suspended and and still part of March 27, 2018 boot log.
 
   [1]: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1618188
-  [2]: {% post_url /2018/2018-02-03-Why-does-`journalctl---list-boots`-only-show-the-current-boot_ %}
+  [2]: {% post_url /2018/2018-02-03-Why-does-_journalctl---list-boots_-only-show-the-current-boot_ %}
 
 
 

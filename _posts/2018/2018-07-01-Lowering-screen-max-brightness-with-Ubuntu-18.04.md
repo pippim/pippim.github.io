@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,018 "
 accepted:     Accepted
-uploaded:     2022-02-07 17:28:41
+uploaded:     2022-02-10 04:59:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-01-Lowering-screen-max-brightness-with-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -118,4 +118,4 @@ done
 
 
 
-  [1]: {% post_url /2018/2018-06-12-How-to-switch-between-options-in-`_sys_class_backlight`-to-solve-brightness-problem_ %}
+  [1]: {% post_url /2018/2018-06-12-How-to-switch-between-options-in-__sys_class_backlight_-to-solve-brightness-problem_ %}
