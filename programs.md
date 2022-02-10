@@ -30,7 +30,7 @@ includes the Top Ten Answers and the Posts by Tag nested accordion with
 
 {% include image.html src="/assets/img/mserve/mserve small demo.gif"
    alt="mserve small demo"
-   style="float: left; width: 82%; margin: 0em 1em 1em 0px;"
+   style="float: left; width: 80%; margin: 0em 1rem 1rem 0px;"
 %}
 
 This short `.gif` video clip, with no sound, shows one third
