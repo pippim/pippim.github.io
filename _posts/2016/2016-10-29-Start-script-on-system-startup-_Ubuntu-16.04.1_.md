@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "21,515 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-29-Start-script-on-system-startup-_Ubuntu-16.04.1_.md
 toc:          false
 navigation:   false

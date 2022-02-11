@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "110 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-13-Problem-parsing-piped-command-streams-in-python_-need-help.md
 toc:          false
 navigation:   false
@@ -21,7 +21,7 @@ clipboard:    false
 
 I'm in the same boat sailing from Bash Basin to Python Peninsula. I had to use a series of `xrandr` and `wmctrl` commands piped through `grep` for my inaugural project (still on-going *sigh*). Your solution would be:
 
-<!-- Language-all: lang-python -->
+
 
 <pre><code>$ sensors | grep Core
 <b>Core</b> 0:        +47.0°C  (high = +100.0°C, crit = +100.0°C)
@@ -30,7 +30,7 @@ I'm in the same boat sailing from Bash Basin to Python Peninsula. I had to use a
 <b>Core</b> 3:        +47.0°C  (high = +100.0°C, crit = +100.0°C)
 </code></pre>
 
-``` 
+``` python
 $ sensors.py
 49
 51

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "379 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-Thinkpad-trackpoint-and-trackpoint-keys-disabled-after-suspend.md
 toc:          false
 navigation:   false
@@ -21,11 +21,11 @@ clipboard:    false
 
 Having to unload and reload the `psmouse` driver when resuming from suspend is a common problem. You can automate the process with a script though:
 
-<!-- Language-all: lang-bash -->
+
 
 Create a new file in the  `/lib/systemd/system-sleep/` directory containing:
 
-``` 
+``` bash
 #!/bin/bash
 
 case $1/$2 in
@@ -45,7 +45,7 @@ esac
 
 Make it executable:
 
-``` 
+``` bash
 sudo chmod a+x /lib/systemd/system-sleep/script-name
 ```
 
@@ -58,7 +58,7 @@ A script like this has worked for many people over the years. Of course your oth
 - Ensure the systemd [suspend target is enabled](https://askubuntu.com/questions/1313479/correct-way-to-execute-a-script-on-resume-from-suspend).
 
 - From the same accepted answer in the link, you may need to set `PATH` for external commands by inserting the following command into your script. Add any additional directories your commands may be in:
-``` 
+``` bash
 
   PATH=/sbin:/usr/sbin:/bin:/usr/bin
 ```

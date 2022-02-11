@@ -12,14 +12,14 @@ votes:        "12 "
 favorites:    
 views:        "249,580 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-11-How-to-change-Gnome-Terminal-title_.md
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-<!-- Language-all: lang-bash -->
+
 # Without any 3rd party apps
 
 ## Use: `title "My new title"`
@@ -44,13 +44,13 @@ function title() {
 
 Save the `~ /.bashrc` file. After opening a new terminal tab use:
 
-``` 
+``` bash
 title "Special Projects"
 ```
 
 or:
 
-``` 
+``` bash
 title Special\ Projects
 ```
 

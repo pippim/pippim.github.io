@@ -12,7 +12,7 @@ votes:        "12 "
 favorites:    
 views:        "1,650 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Turn-off-all-monitors-while-watching-VLC-media-on-TV.md
 toc:          false
 navigation:   true
@@ -37,23 +37,23 @@ Before you think I watch too much TV note this is a laptop and the program has b
 
 ## Setup Instructions
 
-<!-- Language-all: lang-bash -->
+
 
 Save the script below to a filename in your path such as `/usr/local/bin/movie.sh` or `/home/your_user_name/bin/movie.sh` and then use:
 
-``` 
+``` bash
 chmod a+x /path/to/script/movie.sh
 ```
 
 Xorg's package `xprintidle` is required to track how long your computer has been idle since a mouse movement or keyboard activity:
 
-``` 
+``` bash
 sudo apt install xprintidle
 ```
 
 Then to launch the script use:
 
-``` 
+``` bash
 movie.sh
 ```
 
@@ -66,7 +66,7 @@ movie.sh
 ## The script
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: movie.sh

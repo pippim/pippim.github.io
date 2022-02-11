@@ -12,25 +12,25 @@ votes:        "3 "
 favorites:    
 views:        "2,020 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-17-How-do-I-suppress-GtkDialog-warnings-in-zenity-and-yad-using-Bash-redirection-in-a-script_.md
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-<!-- Language-all: lang-bash -->
+
 
 I'm trying to suppress `GtkDialog` warnings in `zenity` and `yad`:
 
-``` 
+``` bash
 $ zenity --error --text hello
 Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
 ```
 
 Error redirection and filtering works:
 
-``` 
+``` bash
 $ zenity --error --text hello 2> >(grep -v GtkDialog >&2)
 ```
 
@@ -57,7 +57,7 @@ For many reasons variable assignment `GTK_SPAM="2> >(grep -v GtkDialog >&2)"` fo
 
 Using an array to hold the typing shortcut isn't working:
 
-``` 
+``` bash
 $ aGtkSpam=(2\> \>\(grep -v GtkDialog \>\&2\))
 
 $ DumpArray "${aGtkSpam[@]}"

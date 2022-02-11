@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    0
 views:        "3,086 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-23-What-are-all-the-Ubuntu-one-letter-commands_.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 I came across this command whilst setting up `ssh`:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 $ w
 
  20:01:30 up 6 days,  2:20,  3 users,  load average: 0.06, 0.11, 0.10

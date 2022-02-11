@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,168 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-How-to-quickly-find-the-deepest-subdirectory.md
 toc:          false
 navigation:   false
@@ -23,9 +23,9 @@ clipboard:    true
 
 The locate command is your friend in this case:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 $ time locate "/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*"
 /mnt/clone/home/rick/.gradle/wrapper/dists/gradle-4.6-all/bcst21l2brirad8k2ben1letg/gradle-4.6/samples/userguide/multiproject/dependencies/java/services/personService/src/main/java/org/gradle/sample/services/PersonService.java
 /mnt/clone/home/rick/.gradle/wrapper/dists/gradle-4.6-all/bcst21l2brirad8k2ben1letg/gradle-4.6/samples/userguide/multiproject/dependencies/java/services/personService/src/test/java/org/gradle/sample/services/PersonServiceTest.java
@@ -47,19 +47,19 @@ Stuff in enough `/*/*` until no results are displayed, then subtract one `/*` to
 
 The database used by locate is updated daily by cron. If you installed an application or created new directories today you need update the database using:
 
-``` 
+``` bash
 sudo updatedb
 ```
 
 In Ubuntu 19.10 the locate command is no longer installed by default. Hopefully it returns in 20.04 but in the meantime you need to install it with:
 
-``` 
+``` bash
 sudo apt install mlocate
 ```
 
 To gain an appreciation of `locate` speed look at what it has indexed for instant retrieval:
 
-``` 
+``` bash
 $ locate -S
 
 Database /var/lib/mlocate/mlocate.db:
@@ -78,7 +78,7 @@ Comments point out how people won't know the starting point. I wrote a script th
 ### Script output:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 $ time deepdir
 
 Search point 50 levels deep: /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*
@@ -111,7 +111,7 @@ sys     0m0.080s
 ## The bash script
 
 {% include copyHeader.html %}
-``` 
+``` bash
 # !/bin/bash
 
 # NAME: deepdir

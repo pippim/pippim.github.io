@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "628 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-13-How-can-I-automatically-relaunch-nautilus-if-I-quit-the-program_.md
 toc:          false
 navigation:   false
@@ -31,10 +31,10 @@ This turned out to be a [challenging problem][1] because Nautilus is always runn
 
 Copy this script to a file called `~/ttlus`:
 
-<!-- Language-all: lang-bash -->
+
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: ttlus (Twenty Thousand Loops Under Startup)
@@ -85,7 +85,7 @@ First test is by typing `~/ttlus &` in the terminal. After you are satisfied add
 
 If program runs amok use:
 
-``` 
+``` bash
 $ pgrep ttlus
 7970
 

@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "2,149 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-19-Shell-Script-_-Focus-already-open-terminal-tab-from-second-terminal-tab.md
 toc:          false
 navigation:   false
@@ -21,7 +21,7 @@ clipboard:    true
 
 # Manual Method
 
-<!-- Language-all: lang-bash -->
+
 
 As per this Q&A: [Is there a hotkey to switch between tabs in the default terminal app?](Is there a hotkey to switch between tabs in the default terminal app?)
 
@@ -32,13 +32,13 @@ After opening the new tab you can return to the previous tab with <kbd>Ctrl</kbd
 In order to send the signal to Bash Shell (gnome-terminal) use 
 `xdotool`:
 
-``` 
+``` bash
 sudo apt install xdotool
 ```
 
 In your script issue this command:
 
-``` 
+``` bash
 xdotool key Control+Page_Up
 ```
 
@@ -58,19 +58,19 @@ From this Q&A:
 
 ... comes this command:
 
-``` 
+``` bash
 gnome-terminal -e 'bash -c "sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade; exec bash"'
 ```
 
 We will modify the example command to look like this:
 
-``` 
+``` bash
 gnome-terminal -e 'bash -c "second-script.sh; exec bash"'
 ```
 
 This is what `second-script.sh` looks like:
 
-``` 
+``` bash
 #!/bin/bash
 
 # AU question: https://askubuntu.com/questions/1134625/shell-script-focus-already-open-terminal-tab-from-second-terminal-tab/1135206#1135209
@@ -94,7 +94,7 @@ exit 0
 
 Always remember to marks scripts executable using:
 
-``` 
+``` bash
 chmod a+x second-script.sh
 ```
 
@@ -103,7 +103,7 @@ chmod a+x second-script.sh
 Our first (Parent) script will look like this:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # AU question: https://askubuntu.com/questions/1134625/shell-script-focus-already-open-terminal-tab-from-second-terminal-tab/1135206#1135209

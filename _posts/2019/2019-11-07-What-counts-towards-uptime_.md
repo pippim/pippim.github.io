@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "713 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-07-What-counts-towards-uptime_.md
 toc:          false
 navigation:   false
@@ -21,16 +21,16 @@ clipboard:    false
 
 The `uptime` is grossly misleading. If you use `uptime -s` it is more meaningful:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 $ uptime -s
 2019-10-31 05:30:09
 ```
 
 Now you can see it simply shows you the last boot time. If you want to know the real uptime see [this answer][1]. Sample output:
 
-``` 
+``` bash
 $ suspendtime
 Oct 31 05:55:19 to Oct 31 16:54:26 lasting 39,547 seconds
 Oct 31 23:21:21 to Nov 01 04:29:12 lasting 18,471 seconds

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "925 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-15-Adding-new-sudo-insults.md
 toc:          false
 navigation:   false
@@ -21,7 +21,7 @@ clipboard:    true
 
 You can add new insults only by replacing existing insults of equal or greater length.
 
-<!-- Language-all: lang-bash -->
+
 
 From the second answer in your link are these phrases:
 
@@ -36,7 +36,7 @@ From the second answer in your link are these phrases:
 
 ## Find the file
 
-``` 
+``` bash
 $ grepall "Just what do you think you're doing Dave?"
 Binary file /usr/lib/sudo/sudoers.so matches
 ```
@@ -47,7 +47,7 @@ OK we now know the file name. That was the easy part.
 
 First make a backup (because we always remember to do that right?):
 
-``` 
+``` bash
 $ sudo cp -a /usr/lib/sudo/sudoers{.so,.so.bak}
 
 $ ll /usr/lib/sudo/sudoers{.so,.so.bak}
@@ -60,7 +60,7 @@ $ ll /usr/lib/sudo/sudoers{.so,.so.bak}
 Then make our script called `sudoinsults`:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: sudoinsult
@@ -126,7 +126,7 @@ fi
 
 Hopefully no need to explain how to create a text file (hint: `gedit`)
 
-``` 
+``` bash
 $ cat sudoinsult.txt
 
 Just what do you think you're doing Dave?
@@ -138,7 +138,7 @@ It can only be attributed to the beer.
 ## Run the script and check results
 
 {% include copyHeader.html %}
-``` 
+``` bash
 $ sudo ./sudoinsult
 
 Replacing: 'Just what do you think you're doing Dave?'

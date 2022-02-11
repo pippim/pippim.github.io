@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "579 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 05:35:23
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-11-_cal--h_-command_-Bash-substring-__{string_offset_length}_-error.md
 toc:          false
 navigation:   false

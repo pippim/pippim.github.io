@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "969 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-17-Different-colors-for-active_inactive-Unity-window-title-bars_.md
 toc:          false
 navigation:   true
@@ -25,7 +25,7 @@ clipboard:    true
 
 # Out of the box solution
 
-<!-- Language-all: lang-bash -->
+
 
 There is a quick little trick pressing <kbd>Alt</kbd>+<kbd>F7</kbd>, jiggling your mouse and then press <kbd>Left-Click</kbd> on mouse when window is positioned back where you wanted it.
 

@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "1,211 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-01-Accidentally-copied-files-to-wrong-directory.md
 toc:          false
 navigation:   false
@@ -29,13 +29,13 @@ If you do enough research you will find a solution by combining these five answe
 - [giving grep output to rm][4]
 - [How do I make rm not give an error if a file doesn't exist?][5]
 
-<!-- Language-all: lang-bash -->
+
 
 ## Trial Run
 
 First run the command without `rm` (remove) option to ensure correct files are being found:
 
-``` 
+``` bash
 $ find /usr/local/bin/ /bin/ -printf '%P\n' | sort | uniq -d | tail -n +2 | awk '{print "/bin/" $0}'
 
 /bin/.auto-brightness-config
@@ -96,7 +96,7 @@ This gives us a list of Directory 1 filenames that were accidentally copied into
 
 Now that we've confirmed output is correct append the `rm` command via `xargs`. Note if you have filenames with special characters read the fourth link above for exceptional handling.
 
-``` 
+``` bash
 $ find /usr/local/bin/ /bin/ -printf '%P\n' | sort | uniq -d | tail -n +2 | awk '{print "/bin/" $0}' | xargs rm -f
 rm: cannot remove '/bin/.auto-brightness-config': Permission denied
 rm: cannot remove '/bin/auto-brightness-config': Permission denied
@@ -114,7 +114,7 @@ Note depending on how you copied the files into the target directory you may not
 
 Now lets run command with `sudo` powers:
 
-``` 
+``` bash
 $ find /usr/local/bin/ /bin/ -printf '%P\n' | sort | uniq -d | tail -n +2 | awk '{print "/bin/" $0}' | sudo xargs rm -f
 rm: cannot remove '/bin/bell': Is a directory
 rm: cannot remove '/bin/bell/sounds': Is a directory
@@ -127,7 +127,7 @@ rm: cannot remove '/bin/zap/Assembly-Intro-hello/Linux': Is a directory
 ```
 75 files have been deleted but 8 empty sub-directories are left to remove. We use the `-r` recursive option with `rm` command to delete them:
 
-``` 
+``` bash
 $ find /usr/local/bin/ /bin/ -printf '%P\n' | sort | uniq -d | tail -n +2 | awk '{print "/bin/" $0}' | sudo xargs rm -rf
 ```
 

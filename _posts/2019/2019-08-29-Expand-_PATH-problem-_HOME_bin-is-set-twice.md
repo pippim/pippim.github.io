@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "466 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-29-Expand-_PATH-problem-_HOME_bin-is-set-twice.md
 toc:          false
 navigation:   false
@@ -23,10 +23,10 @@ Ubuntu is already configured to automatically add `$HOME/bin` to the path.
 
 You mentioned you're distribution was Server converted to Desktop and I'm not sure how that effects things but you can check:
 
-<!-- Language-all: lang-bash -->
+
 
 {% include copyHeader.html %}
-``` 
+``` bash
 $ cat ~/.profile
 
 # ~/.profile: executed by the command interpreter for login shells.
@@ -61,6 +61,6 @@ It sounds like this is being executed and what you are manually doing is doublin
 
 You can use grep to find all the files where `$HOME/bin` is referenced:
 
-``` 
+``` bash
 grep -rnw --exclude-dir={proc,root,run,sys,/tmp,tmpfs,var} '/' -e "$HOME/bin"
 ```

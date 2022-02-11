@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "365 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-03-Strange-suspension-issues-on-macbook-pro-Ubuntu-18.04-LTS.md
 toc:          false
 navigation:   false
@@ -23,10 +23,10 @@ clipboard:    true
 
 It's very difficult to isolate what is going on. One good chance of making everything work is with this script:
 
-<!-- Language-all: lang-bash -->
+
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # Original script was using /bin/sh but shellcheck reporting warnings.

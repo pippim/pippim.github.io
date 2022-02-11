@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,090 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-16-sound-problem-_Ubuntu-18.04__-no-sound-after-suspend.md
 toc:          false
 navigation:   false
@@ -33,12 +33,12 @@ Question has been revised with new information:
 ----------
 
 
-<!-- Language-all: lang-bash -->
+
 
 Here's a script I used a few years ago `/lib/systemd/system-sleep/sound`:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/sh
 
 # NAME: sound

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,034 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-28-Make-Ubuntu_s-Night-Light-look-like-Manjaro-KDE_s-Night-Color.md
 toc:          false
 navigation:   false
@@ -56,13 +56,13 @@ Here's a few screenshots (of a dozen screens) to give you an idea about eyesome:
 
 
 ----------
-<!-- Language-all: lang-bash -->
+
 
 ## Reply to comment Color Temperature to Gamma
 
 The new version has a Color to Gamma conversion table (bash syntax):
 {% include copyHeader.html %}
-``` 
+``` bash
 #                 Red         Green       Blue     Color Temperature
 GammaRampArr=( 1.00000000  0.05181963  0.00000000   500 \
                1.00000000  0.18172716  0.00000000  1000 \
@@ -106,7 +106,7 @@ This question was asked today:
 
 You can forego using internet to get sunrise/sunset times with these commands:
 
-``` 
+``` bash
 sudo echo "7:00 am" > /usr/local/bin/.eyesome-sunrise
 sudo echo "9:00 pm" > /usr/local/bin/.eyesome-sunset
 ```

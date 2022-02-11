@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "236,638 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-04-Grep-characters-before-and-after-match_.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 I'll never easily remember these cryptic command modifiers so I took the [top answer](https://stackoverflow.com/a/8101776/6929343) and turned it into a function in my `~/.bashrc` file:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 cgrep() {
     # For files that are arrays 10's of thousands of characters print.
     # Use cpgrep to print 30 characters before and after search pattern.
@@ -39,7 +39,7 @@ cgrep() {
 
 Here's what it looks like in action:
 
-``` 
+``` bash
 $ ll /tmp/rick/scp.Mf7UdS/Mf7UdS.Source
 
 -rw-r--r-- 1 rick rick 25780 Jul  3 19:05 /tmp/rick/scp.Mf7UdS/Mf7UdS.Source

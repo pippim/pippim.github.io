@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "3,238 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-25-No-sound-on-wake_-Dummy-Output-always-takes-over.-_pulseaudio--k_-the-fix.md
 toc:          false
 navigation:   false
@@ -23,7 +23,7 @@ It be caused by a new kernel introduced in 19.10 like this case:
 
 - [Lagging after update to 19.10 from 19.04]({% post_url /2019/2019-10-28-Lagging-after-update-to-19.10-from-19.04 %})
 
-<!-- Language-all: lang-bash -->
+
 
 If not then you can use this script `/etc/systemd/system-sleep/reloadpulse`:
 

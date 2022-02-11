@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "141 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-20-How-to-convert-w-command-idle-timeout-in-seconds_.md
 toc:          false
 navigation:   false
@@ -21,10 +21,10 @@ clipboard:    true
 
 Here is a bash solution:
 
-<!-- Language-all: lang-bash -->
+
 
 {% include copyHeader.html %}
-``` 
+``` bash
 WishSeconds () {
 
     # PARM 1: 'w' command idle time 44.00s, 5:10, 1:28m, 3days, etc.
@@ -66,7 +66,7 @@ WishSeconds "44.20s" Secs ; echo Passing 44.20s: $Secs
 
 ## Results
 
-``` 
+``` bash
 Passing 20days: 1728000
 Passing 1:10m: 4200
 Passing 1:30: 90
@@ -77,19 +77,19 @@ Passing 44.20s: 44
 
 Instead of using:
 
-``` 
+``` bash
 w | tr -s " " | cut -d" " -f1,5 | tail -n+3
 ```
 
 You can chop off the tail and use:
 
-``` 
+``` bash
 w -h | tr -s " " | cut -d" " -f1,5
 ```
 
 This will remove the headers for you. I do the same plus use short format (sans CPU stats) and IP addresses instead of host names so I use:
 
-``` 
+``` bash
 w -ish | tr -s " " | cut -d" " -f1,5
 ```
 

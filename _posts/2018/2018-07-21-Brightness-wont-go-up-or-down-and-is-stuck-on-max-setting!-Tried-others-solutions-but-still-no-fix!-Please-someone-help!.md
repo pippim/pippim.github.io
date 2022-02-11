@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "828 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-21-Brightness-wont-go-up-or-down-and-is-stuck-on-max-setting!-Tried-others-solutions-but-still-no-fix!-Please-someone-help!.md
 toc:          false
 navigation:   false
@@ -23,10 +23,10 @@ clipboard:    true
 
 In the question and in comments OP has tried many different hardware solutions to no avail. This leaves software solutions which aren't as effective but better than nothing. This script can be adapted for all monitors:
 
-<!-- Language-all: bash -->
+
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: alien
@@ -82,7 +82,7 @@ To adapt this script to your needs:
 
 Use these commands to check if hardware is supported after a kernel update:
 
-``` 
+``` bash
 $ ls /sys/class/backlight
 intel_backlight
 $ cat /sys/class/backlight/intel_backlight/*brightness*
@@ -97,14 +97,14 @@ $ cat /sys/class/backlight/intel_backlight/*brightness*
 
 To attempt to change hardware brightness level use:
 
-``` 
+``` bash
 $ echo 2500 | sudo tee /sys/class/backlight/intel_backlight/brightness
 2500
 ```
 
 If hardware is supported you will see a change:
 
-``` 
+``` bash
 $ cat /sys/class/backlight/intel_backlight/*brightness*
 2500
 2500

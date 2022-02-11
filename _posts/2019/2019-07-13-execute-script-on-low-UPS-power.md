@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "602 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-execute-script-on-low-UPS-power.md
 toc:          false
 navigation:   false
@@ -25,11 +25,11 @@ Ubuntu automatically keeps track of all batteries status:
 
 The same information displayed in the GUI screen above can also be accessed from your terminal / shell / bash script (they are all sort of the same thing in many ways).
 
-<!-- Language-all: lang-bash -->
+
 
 To get the same information from CLI use:
 
-``` 
+``` bash
 $ upower -i $(upower -e | grep -i UPS)
   native-path:          /sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1.2/1-1.2:1.0/usbmisc/hiddev2
   vendor:               CPS
@@ -50,28 +50,28 @@ $ upower -i $(upower -e | grep -i UPS)
 
 Then to narrow it down to percentage use:
 
-``` 
+``` bash
 $ upower -i $(upower -e | grep -i UPS) | grep -i percentage
     percentage:          100%
 ```
 
 Then to extract the second column use:
 
-``` 
+``` bash
 $ upower -i $(upower -e | grep -i UPS) | grep -i percentage | cut -d':' -f2
           100%
 ```
 
 Then to extract only digits and eliminate leading spaces and trailing % use:
 
-``` 
+``` bash
 $ upower -i $(upower -e | grep -i UPS) | grep -i percentage | sed 's/[^0-9]*//g'
 100
 ```
 
 Now assign what you want to a variable and display it:
 
-``` 
+``` bash
 $ PERCENT=$(upower -i $(upower -e | grep -i UPS) | grep -i percentage | sed 's/[^0-9]*//g')
 $ echo $PERCENT
 100
@@ -79,7 +79,7 @@ $ echo $PERCENT
 
 Next step is to write a script something like this
 
-``` 
+``` bash
 #!/bin/bash
 
 while true; do

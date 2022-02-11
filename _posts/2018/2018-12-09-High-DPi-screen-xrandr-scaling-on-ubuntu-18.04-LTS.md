@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,658 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-09-High-DPi-screen-xrandr-scaling-on-ubuntu-18.04-LTS.md
 toc:          false
 navigation:   false
@@ -21,18 +21,18 @@ clipboard:    true
 
 This answers both the OP's question and the other answer's bonus question.
 
-<!-- Language-all: lang-bash -->
+
 
 Create a script using:
 
-``` 
+``` bash
 sudo -H gedit /lib/systemd/system-sleep/scale
 ```
 
 Copy these lines into `gedit`:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: scale
@@ -62,7 +62,7 @@ Save the script and exit `gedit`.
 
 Mark the script executable using:
 
-``` 
+``` bash
 chmod a+x /lib/systemd/system-sleep/scale
 ```
 
@@ -70,7 +70,7 @@ The script will run every time you resume from suspend.
 
 You can also have it run in your [startup applications][1] by adding an entry containing the command:
 
-``` 
+``` bash
 /lib/systemd/system-sleep/scale post suspend
 ```
 

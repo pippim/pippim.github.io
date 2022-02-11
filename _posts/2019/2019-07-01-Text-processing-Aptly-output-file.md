@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "170 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Text-processing-Aptly-output-file.md
 toc:          false
 navigation:   true
@@ -38,10 +38,10 @@ I've posted two answers here:
 
 I've turned off gnome-terminal line wrap to make input and output files easier to read.
 
-<!-- Language-all: lang-bash -->
+
 
 {% include copyHeader.html %}
-``` 
+``` bash
 ───────────────────────────────────────────────────────────────────────────────────────────
 rick@alien:~/askubuntu$ tput rmam # Turn off line wrap
 ───────────────────────────────────────────────────────────────────────────────────────────
@@ -81,7 +81,7 @@ rick@alien:~/askubuntu$
 Remember to make the script executable with `chmod a+x script.sh`
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: aptfileparse.sh
@@ -166,7 +166,7 @@ echo "$CountOut lines written to $OUTPUT"
 
 One-liners are popular in the Linux community and there are some excellent `awk` and `perl` answers posted in this Q&A. Here is an example using common utilities most experienced command line users are familiar with:
 
-``` 
+``` bash
 $ time grep ^" \*" aptfilein | sed 's/ \* //;s/ /: /;s/^/ /' | cut -d':' -f1,3,6,9,12 --output-delimiter=''
  test_repo_one/xenial [xenial-main_20190311] [xenial-multiverse_20190311] [xenial-restricted_20190311] [xenial-universe_20190311]
  test_repo_one/xenial-security [xenial-security-main_20190311] [xenial-security-multiverse_20190311] [xenial-security-restricted_20190311] [xenial-security-universe_20190311]

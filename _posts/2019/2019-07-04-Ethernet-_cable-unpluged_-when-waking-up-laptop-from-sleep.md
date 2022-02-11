@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "52 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-04-Ethernet-_cable-unpluged_-when-waking-up-laptop-from-sleep.md
 toc:          false
 navigation:   false
@@ -21,10 +21,10 @@ clipboard:    true
 
 Same thing happened to me years ago on an older laptop and I used this script:
 
-<!-- Language-all: lang-bash -->
+
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: r8169-reset
@@ -53,7 +53,7 @@ esac
 
 Place the script in the directory `/lib/systemd/system-sleep` with the name `r8169-reset`. Mark the script executable with the command
 
-``` 
+``` bash
 sudo chmod a+x /lib/systemd/system-sleep/r8169-reset
 ```
 

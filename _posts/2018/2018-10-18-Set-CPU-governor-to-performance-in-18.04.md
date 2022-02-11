@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "143,003 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-18-Set-CPU-governor-to-performance-in-18.04.md
 toc:          false
 navigation:   false
@@ -21,11 +21,11 @@ clipboard:    true
 
 # Short Answer
 
-<!-- Language-all: lang-bash -->
+
 
 In `/etc/rc.local` put in these commands:
 
-``` 
+``` bash
 sleep 120
 cpupower frequency-set --governor performance
 ```
@@ -50,10 +50,10 @@ In the GIF below, the 3000+ MHz CPU speed at start up appears near the top. The 
 
 Create this script in `/usr/local/bin/watch-gov.sh`:
 
-<!-- Language-all: lang-bash -->
+
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #! /bin/bash
 
 # NAME: watch-gov.sh
@@ -84,7 +84,7 @@ Call the script in `/etc/rc.local` before the `exit 0` command (explained in det
 
 One minute after logging in look at the output:
 
-``` 
+``` bash
 $ cat /tmp/watch-gov.log
 watch-gov.sh: Set to performance at  17:50:09 up 0 min,  0 users,  load average: 0.00, 0.00, 0.00 
 watch-gov.sh: Current governor: powersave Uptime:  17:51:09 up 1 min,  1 user,  load average: 1.89, 0.62, 0.22
@@ -99,7 +99,7 @@ Confirmation from this [answer][2] states this 1 minute force to `powersave` gov
 
 The simplest way to stay in Performance mode is to edit `/etc/rc.local` and insert these lines before the last line containing `exit 0`:
 
-``` 
+``` bash
 sleep 120 # Give CPU startup routines time to settle.
 echo performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```

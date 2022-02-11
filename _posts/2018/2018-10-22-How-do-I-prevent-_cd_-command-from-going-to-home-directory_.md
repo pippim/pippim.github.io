@@ -12,7 +12,7 @@ votes:        "15 "
 favorites:    
 views:        "4,147 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-22-How-do-I-prevent-_cd_-command-from-going-to-home-directory_.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    true
 
 Use `gedit ~/.bashrc` and insert these lines at the bottom:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 cd() {
     [[ $# -eq 0 ]] && return
     builtin cd "$@"
@@ -39,7 +39,7 @@ Open a new terminal and now when you type `cd` with no parameters you simply sta
 
 If you want to be really elaborate you can put in a help screen when no parameters are passed:
 
-``` 
+``` bash
 $ cd
 
 cd: missing operand
@@ -63,7 +63,7 @@ Usage:
 The expanded code to accomplish this is:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 cd() {
     if [[ $# -eq 0 ]] ; then
         cat << 'EOF'

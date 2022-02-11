@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "949 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-15-Getting-the-checksum-of-a-file-through-vsFTPd.md
 toc:          false
 navigation:   false
@@ -21,11 +21,11 @@ clipboard:    false
 
 On your server have a cron job that runs daily in `/etc/cron.daily`. No special `crontab` magic needs to be done. Simply but an executable script there.
 
-<!-- Language-all: lang-bash -->
+
 
 Here is one I have handy already for calculating hash sums on files:
 
-``` 
+``` bash
 #!/bin/bash
 
     md5sum \
@@ -46,7 +46,7 @@ Here is one I have handy already for calculating hash sums on files:
 
 So you would download the file `eyesome.md5` to your remote machine.
 
-``` 
+``` bash
 $ cat eyesome.md5
 2627fe73a1c99c1ec02a17002cf88dad  install.sh
 62999343cd603c4bff70e890367739bb  eyesome.sh
@@ -66,7 +66,7 @@ e06f195dcf254d65b4f8512d46e44458  acpi-lid-eyesome.sh
 
 Then run:
 
-``` 
+``` bash
 $ md5sum -c eyesome.md5
 install.sh: OK
 eyesome.sh: OK

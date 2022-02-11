@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "10,611 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-22-What-is-the-difference-between-_cat-_-filename_-and-_cat-filename__.md
 toc:          false
 navigation:   false
@@ -20,12 +20,12 @@ clipboard:    false
 ---
 
 # One Big Difference
-<!-- Language-all: lang-bash -->
+
 One big difference is with the `*`, `?`, or `[` globbing characters (wildcards) or anything else the shell may expand into multiple filenames. Anything the shell expands into two or more items, rather than treating as a single filename, cannot be opened for redirection.
 
 Without redirection (ie no `<`), the shell passes multiple filenames to `cat`, which outputs the files' contents one after another. For example this works:
 
-``` 
+``` bash
 $ ls hello?.py
 hello1.py  hello2.py
 
@@ -36,7 +36,7 @@ $ cat hello?.py
 
 But with redirection (`<`) an error message occurs:
 
-```     
+```     bash
 $ ls < hello?.py
 bash: hello?.py: ambiguous redirect
 
@@ -51,7 +51,7 @@ bash: hello?.py: ambiguous redirect
 
 I thought with redirection it would be slower but there is no perceivable time difference:
 
-``` 
+``` bash
 $ time for f in * ; do cat "$f" > /dev/null ; done
 
 real	0m3.399s

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "478 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-10-Long-kernel-load-time.md
 toc:          false
 navigation:   false
@@ -21,7 +21,7 @@ clipboard:    true
 
 > How can I troubleshoot this?  
 
-<!-- Language-all: lang-sh -->
+
 
 The first step is to find out what PCI device is generating the error:
 
@@ -30,7 +30,7 @@ The first step is to find out what PCI device is generating the error:
 My system doesn't have a `0000:04:00.0` but it does have `0000:03:00.0` so I would use:
 
 {% include copyHeader.html %}
-``` 
+``` sh
 $ cd /sys/bus/pci/devices/0000:03:00.0
 
 $ ls -la

@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "8,727 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-12-GUI-or-simple-Bash-script-to-throttle-the-CPU_.md
 toc:          false
 navigation:   true
@@ -25,7 +25,7 @@ clipboard:    true
 
 # cpuf - Simple Bash GUI to set CPU Min/Max Frequency
 
-<!-- Language-all: lang-bash -->
+
 
 
 <a id="hdr2"></a>
@@ -45,7 +45,7 @@ In this demo `cpuf` window is on left and `conky` system information is on right
 
 With three monitors `cpuf` can appear 10 feet away, so use parameter 1 `--geometry` option to put it close to `conky`:
 
-``` 
+``` bash
 sudo cpuf --geometry="450x450+4720+80" /home/rick/Pictures/icons/cpu-intel-128.svg
 ```
 
@@ -68,7 +68,7 @@ This section requires you to open a terminal with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>
 
 In order to function, `cpuf` bash script requires:
 
-``` 
+``` bash
 sudo apt install yad         # from the repository universe
 sudo apt install coreutils   # installed by default in most distros
 ```
@@ -88,7 +88,7 @@ Make the script executable with `sudo chmod a+x /usr/local/bin/cpuf`.
 ### `cpuf` code to copy to your editor
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: cpuf (Pronounced SEA-PUFF)

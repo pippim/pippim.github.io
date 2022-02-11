@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "112 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-Check-for-running-proccess-constantly.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 Using `pgrep` gives the least information. Using `ps -aux | grep` can provide too much at times:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 $ pgrep eyesome
 1200
 1217
@@ -41,14 +41,14 @@ rick     26612  0.0  0.0  14224  1020 pts/19   S+   16:52   0:00 grep --color=au
 
 So let's narrow it down whilst making it user-friendly:
 
-``` 
+``` bash
 $ ps -aux | grep "sudo eyesome/movie" | grep -v grep
 root     10567  0.0  0.0  54792  3964 pts/18   S    10:27   0:00 sudo eyesome/movie.sh asdf
 ```
 
 Now put it into a script that you have loaded in Startup Applications:
 
-``` 
+``` bash
 #!/bin/bash
 # Name: checkrunning.sh
 # For: https://askubuntu.com/questions/1160844/check-for-running-proccess-constantly
@@ -69,7 +69,7 @@ done
 
 Mark the file as executable using:
 
-``` 
+``` bash
 chmod /path/to/checkrunning.sh
 ```
 

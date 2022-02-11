@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "613 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-04-How-to-fix-screen-overlap-and-top-left-zoom-of-HD-external-monitors-while-using-4k-primary-Linux-Ubuntu-20_.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 Place this code in your `~/.bashrc` file to be able to call `xreset` from the command line:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 xreset () {
 
     # Reset xrandr to normal, first use: xrandr | grep " connected "
@@ -65,7 +65,7 @@ Save to a file and mark it executable with `chmod a+x filename`
 
 First you need to discover you monitor properties with:
 
-``` 
+``` bash
 xrandr | grep " connected"
 ```
 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "15,930 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-09-4-clicks-to-shut-down-Ubuntu---can-we-reduce-this_.md
 toc:          false
 navigation:   true
@@ -58,9 +58,9 @@ Program design is straight forward:
 
 In between these steps pop-up bubble messages appear on Desktop and are also logged to `journalctl`:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 $ journalctl -xe | grep tvpower
 
 Jun 11 18:11:20 tvpowered[27398]: TV is powered on. 'tvpowered' is now waiting for TV to power off.
@@ -81,7 +81,7 @@ Jun 11 18:12:26 tvpowered[31672]: TV is powered on. 'tvpowered' is now waiting f
 
 Copy and paste the script into a file on your computer and mark it executable with:
 
-``` 
+``` bash
 chmod a+x /path/to/tvpowered
 ```
 
@@ -91,7 +91,7 @@ You can also user your file manager (like Nautilus) to make the file executable.
 
 In the script below there are a few constants you will need to set:
 
-``` 
+``` bash
 SCTL=suspend        # systemctl paramater: suspend or poweroff
 IP=192.168.0.16     # IP address for Sony TV
 PWRD=123            # Password for Sony TV IP Connect

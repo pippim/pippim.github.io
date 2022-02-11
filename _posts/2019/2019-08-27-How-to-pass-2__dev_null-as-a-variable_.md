@@ -12,7 +12,7 @@ votes:        "16 "
 favorites:    2
 views:        "4,727 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-27-How-to-pass-2__dev_null-as-a-variable_.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 I have this code that works:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 # Hide irrelevant errors so chrome doesn't email us in cron
 if [[ $fCron == true ]] ; then
     google-chrome --headless --disable-gpu --dump-dom \
@@ -37,7 +37,7 @@ fi
 
 If I try to shorten it like this:
 
-``` 
+``` bash
 # Hide irrelevant errors so chrome doesn't email us in cron
 local HideErrors
 [[ $fCron == true ]] && HideErrors="2>/dev/null"
@@ -48,7 +48,7 @@ google-chrome --headless --disable-gpu --dump-dom \
 
 I get error messages:
 
-``` 
+``` bash
 [0826/043058.634775:ERROR:headless_shell.cc(597)] Open multiple tabs is only supported when remote debugging is enabled.
 [0826/043058.672587:ERROR:headless_shell.cc(597)] Open multiple tabs is only supported when remote debugging is enabled.
 [0826/043058.711640:ERROR:headless_shell.cc(597)] Open multiple tabs is only supported when remote debugging is enabled.
@@ -64,7 +64,7 @@ Why does a hard-coded argument work but not an argument as a variable?
 
 Currently I found success with second answer's alternate suggestion:
 
-``` 
+``` bash
 # Redirect errors when cron is used to /dev/null to reduce emails
 ErrorPipe=/dev/stderr
 [[ $fCron == true ]] && ErrorPipe=/dev/null
@@ -79,7 +79,7 @@ google-chrome --headless --disable-gpu --dump-dom \
 
 Based on the first answer, I should point out program header already contains:
 
-``` 
+``` bash
 [[ $fCron != true ]] &&
     exec 2> >(grep -v 'GtkDialog mapped without a transient parent' >&2)
 ```

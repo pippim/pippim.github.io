@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "873 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-10-Cron-Monthly-job-works-randomly-using-_0-0-1-*-*_.md
 toc:          false
 navigation:   false
@@ -23,17 +23,17 @@ The reason the job only ran on New Year's Eve is all the other first days of the
 
 The easiest way is to not use `sudo crontab -e` but rather create a bash script in the directory `/etc/cron.monthly`. Make sure the script filename doesn't contain a `.` in it. Filenames containing a `.` such as `Monthly job.cron` or `MonthlyUpdate.sh` will not run.
 
-<!-- Language-all: bash -->
+
 
 In this case use:
 
-``` 
+``` bash
 sudo -H gedit /etc/cron.monthly/journal_vacuum
 ```
 
 Insert these lines:
 
-``` 
+``` bash
 #!/bin/sh
 #
 # NAME: journal_vacuum
@@ -48,7 +48,7 @@ Insert these lines:
 
 Save the file and exit `gedit`. Make the script executable using:
 
-``` 
+``` bash
 sudo chmod a+x /etc/cron.monthly/journal_vacuum
 ```
 
@@ -75,14 +75,14 @@ The script in `/etc/cron.monthly/` did not run on February 1, 2019. Digging deep
 
 Following the link's explanation I discovered:
 
-``` 
+``` bash
 $ sudo cat /var/spool/anacron/cron.monthly
 20190130
 ```
 
 Therefore with `sudo` powers I used:
 
-``` 
+``` bash
 rick@alien:~$ sudo -i
 root@alien:~# echo 20190101 > /var/spool/anacron/cron.monthly
 root@alien:~# exit
@@ -99,7 +99,7 @@ Time to reboot and test...
 
 After reboot an email was almost instantly sent:
 
-``` 
+``` bash
 Anacron <XxxxxXxxxx999@gmail.com>    7:45 AM (3 minutes ago)
 to root, bcc: XxxxxXxxxx999
 
@@ -109,7 +109,7 @@ Vacuuming done, freed 0B of archived journals on disk.
 
 Now we can see:
 
-``` 
+``` bash
 $ sudo cat /var/spool/anacron/cron.monthly
 20190203
 ```

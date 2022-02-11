@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "176 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-12-How-to-remove-text-from-a-folder-name-after-a-certain-word.md
 toc:          false
 navigation:   false
@@ -21,7 +21,7 @@ clipboard:    true
 
 Here's the code you need plus some test data you don't need:
 
-<!-- Language-all: lang-bash -->
+
 
 {% include copyHeader.html %}
 ``` bash
@@ -55,7 +55,7 @@ rm -rf dnames
 
 When you run the script you get this:
 
-``` 
+``` bash
 $ truncate-dname
 ============== CREATE TEST DATA ==================
 Music List download dkjge3j6lk45j45756567
@@ -75,7 +75,7 @@ Music List  Song Band - Song Name  Video Chart
 
 The key operation you want is to extract sub-string within string before a search string. For example:
 
-``` 
+``` bash
 $ a="Song Band - Song Name download 9038450985934853434"
 
 $ b="${a% download*}"
@@ -86,7 +86,7 @@ Song Band - Song Name
 
 This process is a little tricky if the word "download" appears in the song title so it's in the filename twice:
 
-``` 
+``` bash
 $ c="People keep downloading my songs download 9038465489643541"
 
 $ d="${c%% download*}"
@@ -104,7 +104,7 @@ When you have two `%%` it deletes everything after the first "download" occurren
 
 There is also the `#` operation which searches in the opposite direction you definitely don't want:
 
-``` 
+``` bash
 $ c="People keep downloading my songs download 9038465489643541"
 
 $ e="${c##* download}"

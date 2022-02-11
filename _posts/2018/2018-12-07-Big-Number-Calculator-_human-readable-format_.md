@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "489 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Big-Number-Calculator-_human-readable-format_.md
 toc:          false
 navigation:   false
@@ -21,13 +21,13 @@ clipboard:    true
 
 An initial solution only took a few minutes by taking this readily available [Python Calculator GUI][1].
 
-<!-- Language-all: lang-python -->
+
 
 # Add a little code
 
 The full script is below but to summarize insert these lines near the top:
 
-``` 
+``` python
 self.newtext=self.newtext.replace(' ','')
 self.newtext=self.newtext.upper()
 self.newtext=self.newtext.replace('K','000')
@@ -41,7 +41,7 @@ self.newtext=self.newtext.replace('E','000000000000000000')
 Insert these lines near the bottom:
   
 
-``` 
+``` python
   Button(master,text="E",width=3,command=lambda:self.action('E')).grid(row=5, column=0)
   Button(master,text="P",width=3,command=lambda:self.action('P')).grid(row=5, column=1)
   Button(master,text="T",width=3,command=lambda:self.action('T')).grid(row=5, column=2)
@@ -52,7 +52,7 @@ Insert these lines near the bottom:
 
 Insert these lines in the middle:
 
-``` 
+``` python
  def convert(self):
     #2**10 = 1024
     power = 1000
@@ -81,7 +81,7 @@ There are a few other cosmetic changes for larger font on HDPI monitor (1920x108
 # Full Python Script
 
 {% include copyHeader.html %}
-``` 
+``` python
 #-*-coding: utf-8-*-
 # NAME: calc.py
 # CALL: python calc.py
@@ -235,7 +235,7 @@ Many thanks to the author (on first link above) for contributing this code!
 
 You need `python-tk` (**Tkinter**) installed to use Python GUI Calculator:
 
-``` 
+``` python
 sudo apt update
 sudo apt install python-tk
 ```

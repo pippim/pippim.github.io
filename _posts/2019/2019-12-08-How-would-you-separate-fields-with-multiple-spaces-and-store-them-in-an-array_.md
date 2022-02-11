@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,674 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-08-How-would-you-separate-fields-with-multiple-spaces-and-store-them-in-an-array_.md
 toc:          false
 navigation:   false
@@ -21,10 +21,10 @@ clipboard:    true
 
 This answer focuses on removing two heading lines from the array to match output requirements.
 
-<!-- Language-all: lang-bash -->
 
 
-``` 
+
+``` bash
 $ cat fieldone.txt
 field1                    field2
 ------                    -------
@@ -72,7 +72,7 @@ Hopefully code and comments are self explanatory. If not don't hesitate to comme
 
 The script still works if only one space separates the two columns whereas some other answers will break:
 
-``` 
+``` bash
 field1         field2
 ------         ------
 this is letter abcdef

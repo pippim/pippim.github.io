@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "285 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-02-Is-it-possible-to-fix-Ubuntu-16.04-by-installing-Ubuntu-16.04-over-the-top-of-the-existing-Ubuntu-16.04_.md
 toc:          false
 navigation:   false

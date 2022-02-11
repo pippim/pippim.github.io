@@ -12,31 +12,31 @@ votes:        "1 "
 favorites:    
 views:        "170 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-18-How-to-compress-3000-images-in-batches-of-50.md
 toc:          false
 navigation:   false
 clipboard:    true
 ---
 
-<!-- Language-all: lang-bash -->
+
 
 Let's assume your images are stored in `~/Pictures` which is shorthand for `/home/USER_ID/Pictures`. Place the following commands in your home directory in a script file called `CompressImages`. Make the file executable using:
 
-``` 
+``` bash
 chmod a+x ~/CompressImages
 ```
 
 Call the script using:
 
-``` 
+``` bash
 ~/CompressImages
 ```
 
 Copy the following script into the file `~/CompressImages`:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # Where to store Tars? We don't want in Images directory
@@ -69,7 +69,7 @@ done
 After running `CompressImages` script check the results:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 $ ll -h ~/Downloads/*.tar
 
 -rw-rw-r-- 1 rick rick  14M Jun 18 16:55 Downloads/CompressedImages10.tar

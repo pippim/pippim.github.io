@@ -1453,7 +1453,7 @@ def check_code_block(ln):
     if in_code_indent:
         return ln
 
-    if ln.startswith("<!-- language"):
+    if ln.lower().startswith("<!-- language"):
         # Get "bash" inside of <!-- language-all: lang-bash -->
         # Store as language_used for inside of code block.
         language_used = ln.split(": ")[1]
@@ -1479,9 +1479,10 @@ def check_code_block(ln):
             she_language = check_shebang()
             if she_language:
                 this_language = she_language
-            # TODO: Figure out language used %60
-            # Need to change "vba" to "basic"
+            # For rouge, need to change "vba" and "basic" to "vb"
             # See: https://askubuntu.com/q/1021152
+            if this_language == "vba" or this_language == "basic":
+                this_language = "vb"
             if ln[-1] == "`" or ln[-1] == " ":
                 ln += " " + this_language
                 language_forced += 1
@@ -1881,6 +1882,8 @@ def create_blog_filename(r):
             "?" to "%3F"
             "@" to "%40"
             "`" to "%60"
+            "{" to "%7B"
+            "}" to "%7D"
 
             "▶️" to " ▶%EF%B8%8F"
 
@@ -1904,7 +1907,7 @@ def create_blog_filename(r):
     for i, lit in enumerate(little):
         if lit == " ":
             little[i] = "-"
-        elif lit in "`#$%^&+;:,=?/'<>()[]|\\":
+        elif lit in "`#$%^&+;:,=?/'<>()[]{}|\\":
             little[i] = "_"
             total_special_chars_in_titles += 1
         elif lit in '"':

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "772 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-04-Display-Resolution-Setting-is-Lost-After-Wake-from-Suspend.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 From time to time the Window Manager will reset my displays as well. So as to not have to go manually reset them (or reboot) I've created a function in `~/.bashrc` to do this for me:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 xreset () {
 
     # Reset xrandr to normal, first use: xrandr | grep " connected "

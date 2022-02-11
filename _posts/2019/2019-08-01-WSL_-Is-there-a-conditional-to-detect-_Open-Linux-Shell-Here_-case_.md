@@ -12,18 +12,18 @@ votes:        "3 "
 favorites:    
 views:        "277 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-01-WSL_-Is-there-a-conditional-to-detect-_Open-Linux-Shell-Here_-case_.md
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-<!-- Language-all: lang-bash -->
+
 
 I would change the `~/.bashrc` enhancement to something like this:
 
-``` 
+``` bash
 CurrDir="$(pwd)"
 if [[ "$CurrDir" == "$SystemDir" ]]
 then
@@ -37,7 +37,7 @@ Where `$SystemDir` is your System32 directory. Always remember how `\` and `/` d
 
 Suggests using:
 
-``` 
+``` bash
 sed -e 's#^J:##' -e 's#\\#/#g'
 ```
 

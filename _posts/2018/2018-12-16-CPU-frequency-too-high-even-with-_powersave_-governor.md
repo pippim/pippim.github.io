@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "4,908 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-16-CPU-frequency-too-high-even-with-_powersave_-governor.md
 toc:          false
 navigation:   false
@@ -35,12 +35,12 @@ OP updated question with results of Initial Answer below and for whatever reason
 
 We need to do the reverse of this answer: [Set CPU governor to performance in 18.04](Set CPU governor to performance in 18.04)
 
-<!-- Language-all: lang-bash -->
+
 
 
 Use: `sudo -H gedit /etc/rc.local` put insert this **before** the last line containing `exit 0`:
 
-``` 
+``` bash
 sleep 120 # Give CPU startup routines time to settle.
 echo powersave | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo 800000 | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq
@@ -58,7 +58,7 @@ From this: [Ubuntu 16.10 rc.local file does not exist](Ubuntu 16.10 rc.local fil
 
 you need to enter:
 
-``` 
+``` bash
 sudo systemctl enable rc-local.service
 ```
 
@@ -85,7 +85,7 @@ My first step would be to remove your kernel command line parameter `intel_pstat
 
 Reboot and type the following:
 
-``` 
+``` bash
 $ cd /sys/devices/system/cpu/cpu0/cpufreq
 
 $ paste <(ls *) <(cat *)
@@ -112,13 +112,13 @@ This is what I have in a default configuration without `intel_pstate=disable`.
 
 You might want to temporarily uninstall CPU Freq Utils package:
 
-``` 
+``` bash
 sudo apt remove cpufrequtils
 ```
 
 I have never found a need for it and it might be mucking your system up. Later you can install it again (if need be) with:
 
-``` 
+``` bash
 sudo apt install cpufrequtils
 ```
 

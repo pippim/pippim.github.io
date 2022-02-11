@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "46,316 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-01-PIL-Issue_-OSError_-cannot-open-resource.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 For Linux I used:
 
-<!-- Language-all: lang-python -->
 
-``` 
+
+``` python
 $ locate .ttf
 
 /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-B.ttf
@@ -48,7 +48,7 @@ Then I took the python code posted here in Stack Overflow:
 
 Plugged in the font name "Ubuntu-R.ttf" returned by `locate`:
 
-``` 
+``` python
 color_palette = [BLUE, GREEN, RED]
 image_w=200
 image_h=200

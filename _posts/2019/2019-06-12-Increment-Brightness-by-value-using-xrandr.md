@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "5,244 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-Increment-Brightness-by-value-using-xrandr.md
 toc:          false
 navigation:   false
@@ -23,12 +23,12 @@ Copy bash script below to a file called `bright`
 
 Then mark it executable with `chmod a+x bright`
 
-<!-- Language-all: lang-bash -->
+
 
 # Bash Script
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 MON="DP-1-1"    # Discover monitor name with: xrandr | grep " connected"

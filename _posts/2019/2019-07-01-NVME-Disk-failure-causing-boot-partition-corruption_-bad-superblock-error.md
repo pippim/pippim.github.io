@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,898 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-NVME-Disk-failure-causing-boot-partition-corruption_-bad-superblock-error.md
 toc:          false
 navigation:   false
@@ -36,12 +36,12 @@ This sounds like your best first step.
 
 ## Reply to comments
 
-<!-- Language-all: lang-bash -->
+
 
 My Samsung 960 Pro is similar to your Samsung 970 EVO. As a reference I'll include my own system and yours will look similar after repair:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 $ lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL | egrep -v "^loop"
 
 NAME         FSTYPE LABEL            MOUNTPOINT   SIZE MODEL

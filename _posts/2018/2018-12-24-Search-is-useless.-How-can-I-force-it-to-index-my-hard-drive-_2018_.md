@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "882 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-24-Search-is-useless.-How-can-I-force-it-to-index-my-hard-drive-_2018_.md
 toc:          false
 navigation:   true
@@ -21,11 +21,11 @@ clipboard:    true
 
 Files are indexed for the `locate` command but normally it is updated every day so any new file you created today won't show up until tomorrow. I've circumvented this shortfall by putting `sudo updatedb` as a cron job that runs every 15 minutes (it only takes a few seconds to run).
 
-<!-- Language-all: bash -->
+
 
 The `locate` command behaves as if wildcards are used:
 
-``` 
+``` bash
 $ time locate etc/profile
 /etc/profile
 /etc/profile.d
@@ -50,7 +50,7 @@ I prefixed the `locate` command with the `time` command so you can see how blind
 
 The `locate` output is rather sparse so I created an alias `llocate` to format the output nicely (https://askubuntu.com/questions/1039235/how-to-make-locate-output-look-like-ll-or-ls-la-but-nicer/1039236#1039236):
 
-``` 
+``` bash
 $ time llocate etc/profile
 ACCESS      OWNER  GROUP  SIZE  MODIFIED      NAME (updatdb last ran: 2018-07-01 11:30:05)
 -rw-r--r--  root   root   575   Nov 12  2017  /etc/profile
@@ -109,14 +109,14 @@ You can enter directory names and filenames in whole or in part.
 
 Here is the bash script you can create using:
 
-``` 
+``` bash
 sudo -H gedit /usr/local/bin/glocate
 ```
 
 Then copy and paste the following line:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: glocate
@@ -193,7 +193,7 @@ Save the file and exit `gedit`.
 
 Mark the script as executable using:
 
-``` 
+``` bash
 sudo chmod a+x /usr/local/bin/glocate
 ```
 

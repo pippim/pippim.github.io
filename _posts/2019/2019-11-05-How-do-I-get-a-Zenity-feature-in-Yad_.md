@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "454 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-05-How-do-I-get-a-Zenity-feature-in-Yad_.md
 toc:          false
 navigation:   false
@@ -21,14 +21,14 @@ clipboard:    true
 
 For learning `yad` I found this great reference: [YAD - Smokey01.com][1]
 
-<!-- Language-all: lang-bash -->
+
 
 As mentioned in comments you want to use the option `--search-column=N`
 
 Take the following code snippet as an example:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 while true ; do
     local Selected INSTRUCTIONS
     INSTRUCTIONS="Click Icon to move and press Enter"
@@ -59,7 +59,7 @@ while true ; do
 
 Columns #3 and #5 are hidden but they are still counted. We want to search on Icon Name so it is column #4 as recorded here:
 
-``` 
+``` bash
     --margins=10 --no-click  --search-column=4 \
 ```
 

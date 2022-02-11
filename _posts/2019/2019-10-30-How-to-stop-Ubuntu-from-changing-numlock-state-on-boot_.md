@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,632 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-30-How-to-stop-Ubuntu-from-changing-numlock-state-on-boot_.md
 toc:          false
 navigation:   false
@@ -23,9 +23,9 @@ clipboard:    false
 
 When you are at the login screen the user ID active is `gdm` (Gnome Desktop Manager). To change that profile login with your own user ID and use:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 sudo -i
 xhost +SI:localuser:gdm
 su gdm -s /bin/bash
@@ -45,7 +45,7 @@ For a plethora of even more options:
 
 Install the the program `numlockx`:
 
-``` 
+``` bash
 $ sudo apt update && sudo apt install numlockx
 
 $ numlockx -h
@@ -62,7 +62,7 @@ status - gets the NumLock status
 
 Next step is to get it running during login screen:
 
-``` 
+``` bash
 $ locate 50-unity-greeter.conf
 /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
 
@@ -71,7 +71,7 @@ $ sudo -H gedit /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
 
 ### At bottom of file add:
 
-``` 
+``` bash
 greeter-setup-script=/usr/bin/numlockx on
 ```
 
@@ -85,14 +85,14 @@ Save file and login again.
 
 Install `numlockx` as show above. Then
 
-``` 
+``` bash
 
 $ sudo -H gedit /etc/rc.local
 ```
 
 ### At bottom of file add:
 
-``` 
+``` bash
 /usr/bin/numlockx on
 ```
 

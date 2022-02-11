@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,034 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-17-Can-we-disable-cron-services-in-desktop_.md
 toc:          false
 navigation:   false
@@ -23,11 +23,11 @@ clipboard:    true
 
 In comments it was mentioned `logrotate` gets called daily. This is an important part of Ubuntu for keeping log files down to size. If you are so concerned about `cron` you pull it fro mservice you would have to create your own script which mimicked `cron`. I'll call this script `crony`. You can keep it locked down in a place hackers wouldn't think to look for it.
 
-<!-- Language-all: lang-bash -->
+
 
 Let's look at the files in `/etc/cron.daily`:
 
-``` 
+``` bash
 -rwxr-xr-x   1 root root   311 Feb 19  2014 0anacron*
 -rwxr-xr-x   1 root root   376 Apr  4  2014 apport*
 -rwxr-xr-x   1 root root  1474 Oct 31  2016 apt-compat*
@@ -56,7 +56,7 @@ I would call all my `crony` scrips from `/etc/rc.local` but there are other ways
 The format would be like this:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 $ cat /etc/rc.local
 
 #!/bin/sh -e
@@ -89,7 +89,7 @@ exit 0
 This is what a typical installation has for entries that are already setup in `/etc/rc.local` along with new `crony` entries after them. The last two of my `crony` entries are custom scripts my machine has in `/etc/cron.daily`
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: crony

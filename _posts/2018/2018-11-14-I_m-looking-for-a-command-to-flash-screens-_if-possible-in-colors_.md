@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,107 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-14-I_m-looking-for-a-command-to-flash-screens-_if-possible-in-colors_.md
 toc:          false
 navigation:   false
@@ -21,7 +21,7 @@ clipboard:    true
 
 I made a bash script to meet the objective:
 
-<!-- Language-all: lang-bash -->
+
 
 [![flash-primary-screen.sh.gif][1]][1]
 
@@ -30,7 +30,7 @@ I made a bash script to meet the objective:
 Copy this bash script to your computer:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: flash-primary-screen.sh
@@ -204,7 +204,7 @@ Main "$@"
 
 Mark the script as executable using:
 
-``` 
+``` bash
 chmod a+x /path/flash-primary-screen.sh
 ```
 
@@ -225,7 +225,7 @@ You can also have color flashing ASCII Art text in the terminal:
 Here is the script:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 From: http://wiki.bash-hackers.org/scripting/terminalcodes

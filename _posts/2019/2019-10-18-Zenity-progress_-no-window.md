@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "332 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-18-Zenity-progress_-no-window.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 You aren't checking if the starting directory was aborted only the destination directory. Also you can shorten `if` - `then` - `fi` like this:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 d1="$(zenity  --file-selection --title="Bulk Move    Choose starting directory"  --directory)"
 [[ "$?" != 0 ]] && exit
 d2="$(zenity  --file-selection --title="Bulk Move    Choose destination directory"  --directory)"
@@ -34,7 +34,7 @@ This gives double the amount of abort checking with 1 less line of code.
 
 To test the progress bar on any system use this:
 
-``` 
+``` bash
 $ for i in ./* ; do echo $i ; sleep .1 ;  done | zenity --pulsate --title "Processing " --text "${filename} " --pulsate --auto-close --auto-kill
 
 --pulsate is not supported for this dialogue
@@ -42,7 +42,7 @@ $ for i in ./* ; do echo $i ; sleep .1 ;  done | zenity --pulsate --title "Proce
 
 Ah there is an error message! `--progress` is missing to tell `zenity` a progress bar is desired. So the working script would be:
 
-``` 
+``` bash
 d1="$(zenity  --file-selection --title="Bulk Move    Choose starting directory" \
     --directory)"
 [[ "$?" != 0 ]] && exit

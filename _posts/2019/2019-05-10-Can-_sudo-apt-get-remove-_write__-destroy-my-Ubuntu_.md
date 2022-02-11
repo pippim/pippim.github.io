@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "6,258 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-10-Can-_sudo-apt-get-remove-_write__-destroy-my-Ubuntu_.md
 toc:          false
 navigation:   false
@@ -20,9 +20,9 @@ clipboard:    false
 ---
 
 Before doing an `sudo apt-get`, it is wise to do a simulation:
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 $ apt-get remove [write] -s | wc -l
 65280
 ```
@@ -37,7 +37,7 @@ Output is piped to the **Word Count** command with ` | wc -l`. Output lines from
 
 To get an idea of the package names involved pipe output to the `less` command:
 
-``` 
+``` bash
 $ apt-get remove [write] --simulate | less
 
 NOTE: This is only a simulation!

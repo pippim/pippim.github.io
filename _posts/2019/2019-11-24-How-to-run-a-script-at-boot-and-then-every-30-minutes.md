@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,858 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-24-How-to-run-a-script-at-boot-and-then-every-30-minutes.md
 toc:          false
 navigation:   false
@@ -20,9 +20,9 @@ clipboard:    false
 ---
 
 Write a control file and place it in `/etc/cron.d/myscriptrun`
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 @reboot   root    /usr/local/bin/myscript.sh
@@ -36,7 +36,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 Write a bash script and place it in `/usr/local/bin/myscript.sh`
 
-``` 
+``` bash
 #!/bin/bash
 
 while true ; do
@@ -59,7 +59,7 @@ The `&` starts the job in the background so the script will sleep for exactly 30
 
 You don't need to start the script, cron does that automatically at boot time. To monitor status use:
 
-``` 
+``` bash
 $ systemctl status cron*
 ● cron.service - Regular background program processing daemon
    Loaded: loaded (/lib/systemd/system/cron.service; enabled; vendor preset: enabled)
@@ -81,7 +81,7 @@ Your display will have `cron` at the top and `sleep` at the bottom but will not 
 
 To see when your python job runs at it's next 30 minute interval run an inquiry on the process ID of the `sleep` command (which is `6575` in the example above):
 
-``` 
+``` bash
 $ remaining_sleep_time 6575
 55923
 

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "890 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-15-Change-dynamic-wallpaper-directory-every-season.md
 toc:          false
 navigation:   true
@@ -37,7 +37,7 @@ I've approached this answer using the OP's question "How do I develop a script?"
 ----------
 
 
-<!-- Language-all: lang-bash -->
+
 
 
 <a id="hdr2"></a>
@@ -64,7 +64,7 @@ From the [Farmer's Almanac][1]:
 
 For our `bash` script to work we need to know what day of the year each seasons start.
 
-``` 
+``` bash
 $ echo $(date --date="March 20" '+%j')
 079
 $ echo $(date --date="June 21" '+%j')
@@ -92,7 +92,7 @@ Edit the script using: `gedit ~/bin/season.sh`
 Copy and paste the following lines into `gedit`:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
@@ -172,7 +172,7 @@ exit 0 # Command not necessary but good habit to signify no Abend.
 
 Save the file in `gedit`. Now mark it as executable using:
 
-``` 
+``` bash
 chmod a+x ~/bin/season.sh
 ```
 
@@ -200,13 +200,13 @@ Consider keeping the off-season images compressed in **TAR** (Tape Archive) form
 
 For example, we would change:
 
-``` 
+``` bash
 cp -R "$SpringDir"/. "$SlideShowDir"/
 ```
 
 To:
 
-``` 
+``` bash
 tar -xf "$SpringDir"archive.tar -C "$SlideShowDir"/
 ```
 
@@ -218,7 +218,7 @@ Using variables for season start days makes it easier to modify the script and m
 
 Consider setting up Variables for start of season:
 
-``` 
+``` bash
 SpringStart=079
 SummerStart=179
 FallStart=265
@@ -229,7 +229,7 @@ Define the variables at the top of the script to make them easier to spot and ch
 
 Then change these lines:
 
-``` 
+``` bash
 if ((DOY>=079 && DOY<172)) ; then
 elif ((DOY>=172 && DOY<265)) ; then
 elif ((DOY>=265 && DOY<355)) ; then
@@ -237,7 +237,7 @@ elif ((DOY>=265 && DOY<355)) ; then
 
 To this:
 
-``` 
+``` bash
 if ((DOY>="$SpringStart" && DOY<"$SummerStart")) ; then
 elif ((DOY>="$SummerStart" && DOY<"$FallStart")) ; then
 elif ((DOY>="$FallStart" && DOY<"$WinterStart")) ; then

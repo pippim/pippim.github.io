@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,209 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-07-How-to-get-real-uptime_.md
 toc:          false
 navigation:   false
@@ -23,9 +23,9 @@ On one hand this answer is six years late, on the other hand it's a blink of the
 
 You can get the real uptime with this little bash script:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 $ suspendtime
 
 Apr 07 05:53:34 to Apr 07 17:07:17 suspended 11 hours, 13 minutes, 43 seconds
@@ -122,7 +122,7 @@ About half the program is converting seconds to human readable format in weeks, 
 
 The key component is getting suspend start and end times from `journalctl`:
 
-``` 
+``` bash
 $ journalctl -b-0 | grep -E 'systemd\[1]: Start.*Suspend'
 Oct 31 05:55:19 alien systemd[1]: Starting Suspend...
 Oct 31 16:54:26 alien systemd[1]: Started Suspend.

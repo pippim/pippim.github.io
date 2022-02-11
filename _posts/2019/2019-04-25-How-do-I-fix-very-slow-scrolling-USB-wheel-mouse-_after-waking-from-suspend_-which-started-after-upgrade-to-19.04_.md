@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "6,526 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-25-How-do-I-fix-very-slow-scrolling-USB-wheel-mouse-_after-waking-from-suspend_-which-started-after-upgrade-to-19.04_.md
 toc:          false
 navigation:   false
@@ -44,12 +44,12 @@ resetmsmice
 
 To automatically call it after resuming you need to create a script with `gedit`.
 
-<!-- Language-all: lang-bash -->
+
 Use `sudo -H gedit /lib/systemd/system-sleep/resetmsmice`
 
 Copy these lines into the editor:
 
-``` 
+``` bash
 #!/bin/bash
 case $1/$2 in
   pre/*)
@@ -64,7 +64,7 @@ esac
 
 The `echo` statements help you locate your program in system logs, eg `grep resetmsmice` Save the file and exit the editor. Then use:
 
-``` 
+``` bash
 sudo chmod a+x /lib/systemd/system-sleep/resetmsmice
 ```
 
@@ -75,13 +75,13 @@ sudo chmod a+x /lib/systemd/system-sleep/resetmsmice
 
 You can power off the USB mouse during suspend and power it on during resume. This will simulate a reboot.
 
-<!-- Language-all: lang-bash -->
+
 Use `sudo -H gedit /lib/systemd/system-sleep/custom-xhci_hcd`
 
 Copy these lines into the editor:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # Original script was using /bin/sh but shellcheck reporting warnings.
@@ -122,7 +122,7 @@ esac
 
 Save the file and exit the editor. Then use:
 
-``` 
+``` bash
 sudo chmod a+x /lib/systemd/system-sleep/custom-xhci_hcd
 ```
 

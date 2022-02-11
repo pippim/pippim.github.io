@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    0
 views:        "830 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-11-Best-way-to-check-if-Nautilus-File-Manager-is-running_.md
 toc:          false
 navigation:   false
@@ -21,16 +21,16 @@ clipboard:    false
 
 I've been working hours on this problem. When nautilus file manager is NOT running nautilus is running because it controls icons on the desktop.
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 $ ps -aux | grep nautilus | grep -v grep
 rick      5613  0.2  1.7 2355392 140012 pts/19 Sl+  19:04   0:08 nautilus
 ```
 
 So use this command without nautilus file manager open and you see:
 
-``` 
+``` bash
 $ ps -L -p 5613 -o pid,nice,lwp,comm
   PID  NI   LWP COMMAND
  5613   0  5613 nautilus
@@ -41,7 +41,7 @@ $ ps -L -p 5613 -o pid,nice,lwp,comm
 
 Now open up nautilus file manager and redo `ps` command:
 
-``` 
+``` bash
 $ nautilus
 
 $ ps -L -p 5613 -o pid,nice,lwp,comm

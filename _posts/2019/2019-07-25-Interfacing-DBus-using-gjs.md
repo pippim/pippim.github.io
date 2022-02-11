@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "725 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-25-Interfacing-DBus-using-gjs.md
 toc:          false
 navigation:   false
@@ -85,36 +85,36 @@ loop.run();
 ```
 
 
-<!-- Language-all: lang-bash -->
+
 
 If not already done, install gjs:
 
-``` java
+``` bash
 sudo apt update && sudo apt install gjs
 ```
 
 Create a directory for your Java Scripts:
 
-``` java
+``` bash
 mkdir ~/javascript
 ```
 
 Use `gedit` to create sample script above and save it:
 
-``` java
+``` bash
 gedit ~/javascript/dbusclient.js
 ```
 
 Now run it:
 
-``` java
+``` bash
 cd ~/javascript
 gjs dbusclient.js
 ```
 
 WIP Errors reported (I'll fix and come back to this Q&A with results):
 
-``` java
+``` bash
 (gjs:10134): Gjs-WARNING **: JS ERROR: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.freedesktop.UPower.KbdBacklight' on object at path /org/freedesktop/UPower/KbdBacklight
 _proxyInvoker@resource:///org/gnome/gjs/modules/overrides/Gio.js:98
 _makeProxyMethod/<@resource:///org/gnome/gjs/modules/overrides/Gio.js:124
@@ -131,7 +131,7 @@ JS_EvaluateScript() failed
 
 Although the laptop has keyboard lights and the wireless keyboard has 3 light settings, Gnome's UPOWER can't see them as these shell commands:
 
-``` java
+``` bash
 $ dbus-send --print-reply \
             --system \
             --dest=org.freedesktop.UPower \
@@ -141,7 +141,7 @@ $ dbus-send --print-reply \
 
 Return this:
 
-``` java
+``` bash
 method return time=1564075040.686545 sender=:1.49 -> destination=:1.145 serial=4392 reply_serial=2
    array [
       object path "/org/freedesktop/UPower/devices/line_power_ACAD"

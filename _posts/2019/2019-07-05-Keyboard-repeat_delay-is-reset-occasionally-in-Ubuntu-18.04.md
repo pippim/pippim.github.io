@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,603 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-05-Keyboard-repeat_delay-is-reset-occasionally-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 You can create a script to automatically reset keyboard repeat rate during resume:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 #!/bin/bash
 
 # NAME: keyrepeat
@@ -48,13 +48,13 @@ Place the script in `/lib/systemd/system-sleep`.
 
 Make it executable with:
 
-``` 
+``` bash
 chmod a+x /lib/systemd/system-sleep/keyrepeat
 ```
 
 Reboot and then every resume after suspend the command:
 
-``` 
+``` bash
 gsettings set org.gnome.desktop.peripherals.keyboard delay 250
 ```
 

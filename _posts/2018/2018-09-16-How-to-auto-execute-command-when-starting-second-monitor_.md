@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "379 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-16-How-to-auto-execute-command-when-starting-second-monitor_.md
 toc:          false
 navigation:   false
@@ -27,12 +27,12 @@ The script below contains credits to original authors and portions are commented
 
 Use `ll /sys/class/drm/*/status` to discover your monitor card name(s). Then replace `MONITOR=` below with the appropriate name.
 
-<!-- Language-all: lang-bash -->
+
 
 ## Bash script
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: monitory-eyesome.sh
@@ -84,7 +84,7 @@ done
 
 ## Sample output when closing laptop lid
 
-``` 
+``` bash
 $ sudo ./monitor-eyesome.sh
 Setting up watches.
 Watches established.
@@ -101,7 +101,7 @@ Watches established.
 
 ## Sample output of log file
 
-``` 
+``` bash
 $ cat /tmp/mon*
 ./monitor-eyesome.sh: Sun Sep 16 11:16:51 MDT 2018 Monitoring: /sys/class/drm/card1-DP-1/status
 ./monitor-eyesome.sh: Sun Sep 16 11:16:55 MDT 2018 connected

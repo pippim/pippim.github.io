@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "7,088 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-26-Copy-group-of-files-_Filename*_-to-backup-_Filename*.bak_.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    true
 
 I wrote this one-liner into my `~/.bashrc`. Much better answers using `find` can be posted I suppose. Even better answers could be written in in C. Hopefully this Q&A gets the ball rolling for better answers:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 cps () {
     # cps "Copy Splat", copy group of files to backup, ie "cps Filename .bak"
     # Copies Filename1 to Filename1.bak, Filename2 to Filename2.bak, etc.
@@ -48,7 +48,7 @@ cps () {
 Using the question as an example here is how it looks in action:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 ───────────────────────────────────────────────────────────────────────────────────────────
 rick@alien:~/gmail$ ll gmail-meta3*
 -rw-rw-r-- 1 rick rick 26467821 May 20 16:43 gmail-meta3

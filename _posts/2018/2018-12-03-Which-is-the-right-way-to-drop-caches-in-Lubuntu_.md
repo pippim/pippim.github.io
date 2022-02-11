@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "8,105 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-03-Which-is-the-right-way-to-drop-caches-in-Lubuntu_.md
 toc:          false
 navigation:   false
@@ -21,9 +21,9 @@ clipboard:    false
 
 The easiest way is with a script lifted [here][1]:
 
-<!-- Language-all: lang-bash -->
 
-``` 
+
+``` bash
 #!/bin/bash
 if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 sync; echo 1 > /proc/sys/vm/drop_caches

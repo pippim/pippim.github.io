@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,907 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-How-to-set-S3_S4-state-for-devices-on-suspend.md
 toc:          false
 navigation:   false
@@ -21,10 +21,10 @@ clipboard:    true
 
 I had a similar problem recently when all of a sudden suspend stopped working due to USB. I wrote this script to fix it:
 
-<!-- Language-all: lang-bash -->
+
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # Original script was using /bin/sh but shellcheck reporting warnings.
@@ -65,7 +65,7 @@ esac
 
 Place the script in `/lib/systemd/system-sleep/custom-xhci_hcd` and mark it executable with:
 
-``` 
+``` bash
 chmod a+x /lib/systemd/system-sleep/custom-xhci_hcd
 ```
 
@@ -77,7 +77,7 @@ On next reboot script is activated.
 
 Use `journalctl -xe` and press <kbd>Page Up</kbd> numerous times to see the suspend messages:
 
-``` 
+``` bash
 Jun 14 17:30:51 alien systemd-sleep[16326]: /lib/systemd/system-sleep/custom-xhci_hcd: Going
 Jun 14 17:30:51 alien kernel: xhci_hcd 0000:00:14.0: remove, state 4
 Jun 14 17:30:51 alien kernel: usb usb2: USB disconnect, device number 1
@@ -95,7 +95,7 @@ Jun 14 17:30:51 alien kernel: usb 1-1.2: USB disconnect, device number 6
 Then press <kbd>Page Down</kbd> numerous times to see the resume messages:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 Jun 14 17:31:07 alien systemd-sleep[16326]: /lib/systemd/system-sleep/custom-xhci_hcd: Wakin
 Jun 14 17:31:07 alien systemd-sleep[16326]: Selected interface 'p2p-dev-wlp60s0'
 Jun 14 17:31:07 alien systemd-sleep[16326]: OK

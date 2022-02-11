@@ -12,7 +12,7 @@ votes:        "23 "
 favorites:    
 views:        "15,150 "
 accepted:     Accepted
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-01-How-to-use-_xrandr---gamma_-for-Gnome-_Night-Light_-like-usage_.md
 toc:          false
 navigation:   false
@@ -23,10 +23,10 @@ clipboard:    true
 
 I found source code for program `sct` which allows user to set color temperature. It has "cribbed the code" from `redshift` and provides mapping for red, green and blue values:
 
-<!-- Language-all: lang-c -->
+
 
 {% include copyHeader.html %}
-``` 
+``` c
 /* cribbed from redshift, but truncated with 500K steps */
 static const struct { float r; float g; float b; } whitepoints[] = {
     { 1.00000000,  0.18172716,  0.00000000, }, /* 1000K */
@@ -58,13 +58,13 @@ The three columns above are values for **Red**, **Green** and **Blue**.
 
 I wrote a collection of bash scripts called **Eyesome** that [adjust brightness and gamma gradually][1] at dawn and dusk over a 90 minute to 120 minute period. Although user can change the settings, a good starting point for full brightness setting is:
 
-``` 
+``` c
 xrandr --output DP-1-1 --gamma 1:1:1 --brightness 1.0
 ```
 
 The nighttime setting (for one of the three monitors) is:
 
-``` 
+``` c
 xrandr --output DP-1-1 --gamma 1.0:0.88:0.76 --brightness 0.55
 ```
 
@@ -76,9 +76,9 @@ xrandr --output DP-1-1 --gamma 1.0:0.88:0.76 --brightness 0.55
 
 Finally found one answer: [MORE OF XRANDR OR BLUE LIGHT EXPOSURE][2] This script is presented:
 
-<!-- Language: bash -->
 
-``` 
+
+``` bash
 #!/bin/sh 
 
 night_mode() { 

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "349 "
 accepted:     
-uploaded:     2022-02-10 05:58:33
+uploaded:     2022-02-11 06:08:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-29-XPS13-will-not-suspend-with-kernel-4.19.md
 toc:          false
 navigation:   false
@@ -21,12 +21,12 @@ clipboard:    true
 
 Although technically off-topic question, I had same problem today with Kernel `4.14.78-generic` which I installed to fix problems suspending with supported kernel `4.13.0-36-generic`.
 
-<!-- Language-all: lang-bash -->
+
 
 I created this script: `/lib/systemd/system-sleep/custom-xhci_hcd`:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # Original script was using /bin/sh but shellcheck reporting warnings.
@@ -67,6 +67,6 @@ esac
 
 Then mark as executable using:
 
-``` 
+``` bash
 sudo chmod a+x /lib/systemd/system-sleep/custom-xhci_hcd
 ```
