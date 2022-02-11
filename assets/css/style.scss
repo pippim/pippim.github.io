@@ -404,8 +404,8 @@ details[open] > summary {
     color: $header-bg-color;
 
     // margin: auto;  // too far down and too far to the left
-    // margin: -1rem 0 0 1rem;
-    // padding: 1rem 1rem 1.5rem 1rem;
+    margin: -1rem 0 0 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
     border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
     border-radius: .5rem;
     width: 80%;
@@ -430,6 +430,7 @@ details[open] > summary {
 }
 
 // The Close Button
+#search-clear-input,
 .close {
     // position: fixed;  // Try to keep in place when scrolling
     color: #aaaaaa;
