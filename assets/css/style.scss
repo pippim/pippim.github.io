@@ -377,7 +377,14 @@ details[open] > summary {
   font-size: 1rem;
   background-color: yellow;
   border-radius: .5rem;
-  margin: .25rem;
+  margin: .15rem;
+}
+
+#search-utf8-mag-glass:hover,
+#search-utf8-mag-glass:focus {
+    background-color: #DDD;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 // From: https://stackoverflow.com/a/46296164/692934
