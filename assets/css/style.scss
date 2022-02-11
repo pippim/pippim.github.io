@@ -425,8 +425,7 @@ details[open] > summary {
 #search-clear-input {
     display: none;
     cursor: pointer;
-    // margin: -1rem 0 0 1rem;
-    // padding: 1rem 1rem 1.5rem 1rem;
+    margin-right: .7rem;
 }
 
 // The Close Button
@@ -436,7 +435,6 @@ details[open] > summary {
     color: #aaaaaa;
     float: right;
     font-weight: bold;
-    margin-right: .7rem;
     border-radius: .5rem;
     // Will appear to be invisible background
     //background-color: $honeydew;
