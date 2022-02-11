@@ -425,10 +425,9 @@ details[open] > summary {
 .close {
     // position: fixed;  // Try to keep in place when scrolling
     color: #aaaaaa;
-    float: right;  // Try absolute
-    // font-size: 1.8rem;
+    float: right;
     font-weight: bold;
-    margin-right: 1rem;
+    margin-right: .5rem;
     // Will appear to be invisible background
     //background-color: $honeydew;
     // Below is creating box too tall and too narrow
@@ -443,7 +442,7 @@ details[open] > summary {
 .close:hover,
 .close:focus {
     color: #000;
-    background-color: #CCC;
+    background-color: #DDD;
     text-decoration: none;
     cursor: pointer;
     //border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px;
