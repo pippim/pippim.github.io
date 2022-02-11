@@ -428,16 +428,14 @@ details[open] > summary {
     float: right;  // Try absolute
     // Will appear to be invisible background
     background-color: $honeydew;
-    border: .0625rem solid $honeydew;  // 1px equivalent when when 1rem = 16px;
-    margin: .25rem 1rem .25rem .25rem;
-    border-radius: .5rem;
-    padding: -.5rem .5rem -.5rem .5rem;
-    //position: absolute;
-    //top: 1rem;
-    //right: 1rem;
-    // margin-right: 1rem;
     font-size: 1.8rem;
     font-weight: bold;
+    margin-right: 1rem;
+    // Below is creating box too tall and too narrow
+    //border: .0625rem solid $honeydew;  // 1px equivalent when when 1rem = 16px;
+    //margin: .25rem 1rem .25rem .25rem;
+    //border-radius: .5rem;
+    //padding: -.5rem .5rem -.5rem .5rem;
 }
 
 #search-clear-input:hover,
@@ -446,11 +444,9 @@ details[open] > summary {
 .close:focus {
     color: #000;
     background-color: #bbbbbb;
-    border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px;
-    //border-radius: .5rem;  // Same as non-hover
-    //padding: -.25rem .25rem -.25rem .25rem;
     text-decoration: none;
     cursor: pointer;
+    //border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px;
 }
 
 // X to clear input search. From: https://stackoverflow.com/a/33683886/6929343
