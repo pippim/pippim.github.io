@@ -7,7 +7,8 @@
   <input type="search" class="clearable-input" id="search-query" name="search-q" autocomplete="off"
    placeholder="Search... {{ page.description | default: site.description | default: site.github.project_tagline }}"
    aria-label="Search through site content">
-  <span id="search-clear-input">&times;</span>
+  <!-- Try UTF-8 u+274c cross mark  <span id="search-clear-input">&times;</span> ❌🗙XX╳ -->
+  <span id="search-clear-input">╳;</span>
   <button id="search-utf8-mag-glass" type="submit"
     >🔍
   </button>
@@ -18,8 +19,8 @@
 
     <!-- Modal content -->
     <div class="search-modal-content">
-        <!-- Try UTF-8 u+274c cross mark  <span class="close">&times;</span> -->
-        <span class="close">❌</span>
+        <!-- Try UTF-8 u+274c cross mark  <span class="close">&times;</span> ❌🗙XX╳ -->
+        <span class="close">╳</span>
         <p id="search-modal-text">Some text in the Modal..</p>
     </div>
 
