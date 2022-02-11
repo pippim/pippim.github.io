@@ -382,27 +382,12 @@ details[open] > summary {
 
 // From: https://stackoverflow.com/a/46296164/692934
 .search-modal {
-    display: none;
-    // Hidden by default
-    position: fixed;
-    // Stay in place
-    // z-index: 1;
+    display: none;  // Hidden by default
+    position: fixed;  // Stay in place
     z-index: 2;  // Place over header buttons appearing top of every page
-    // Sit on top
-    // padding-top: 100px;  // Causing text not to appear?
-    // Location of the box
-    // left: 0;  // left: 0; goes over page title far left gutter
-    // top: 0;   // top: 0; goes over page title beginning of text
     width: 100%;
-    // Full width
     height: 100%;
-    // Full height
     overflow: auto;
-    // Enable scroll if needed
-    //background-color: rgb(0, 0, 0);
-    // Fallback color
-    //background-color: rgba(0, 0, 0, 0.4);
-    // Black w/ opacity
 }
 
 // Modal Content
@@ -444,12 +429,13 @@ details[open] > summary {
     // Will appear to be invisible background
     background-color: $honeydew;
     border: .0625rem solid $honeydew;  // 1px equivalent when when 1rem = 16px;
+    margin: .25rem 1rem .25rem .25rem;
     border-radius: .5rem;
     padding: -.5rem .5rem -.5rem .5rem;
     //position: absolute;
     //top: 1rem;
     //right: 1rem;
-    margin-right: 1rem;
+    // margin-right: 1rem;
     font-size: 1.8rem;
     font-weight: bold;
 }
