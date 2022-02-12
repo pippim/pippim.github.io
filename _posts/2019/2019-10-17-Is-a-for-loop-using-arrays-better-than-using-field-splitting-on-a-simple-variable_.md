@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,790 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-17-Is-a-for-loop-using-arrays-better-than-using-field-splitting-on-a-simple-variable_.md
 toc:          false
 navigation:   false
@@ -84,7 +84,7 @@ wmctrl -i -a $i
 
 There are two ways of writing a shorter more readable script, first with an array:
 
-``` 
+``` bash
 #!/bin/bash
 Windows=( $(wmctrl -l | awk ' !/-1/ { print $1 } ' ) )
 for Window in "${Windows[@]}" ; do wmctrl -ia $Window -c $Window ; done
@@ -92,7 +92,7 @@ for Window in "${Windows[@]}" ; do wmctrl -ia $Window -c $Window ; done
 
 second without an array:
 
-``` 
+``` bash
 #!/bin/bash
 Windows=$(wmctrl -l | awk ' !/-1/ { print $1 } ' )
 for Window in $Windows ; do wmctrl -ia $Window -c $Window ; done

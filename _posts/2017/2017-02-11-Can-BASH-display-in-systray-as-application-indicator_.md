@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,932 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator_.md
 toc:          false
 navigation:   true
@@ -145,7 +145,7 @@ The `text-spinner` bash script creates a spinning pizza effect by cycling throug
 Here is the `text-spinner` bash script:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # return '|', '/', '─', '\' sequentially with each call to this script.

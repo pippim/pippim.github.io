@@ -1384,9 +1384,12 @@ def check_pseudo_tags(ln):
                         pseudo_tag_names.append(tag_search)
 
 
-def check_shebang():
-    """ Check shebang's language
+def check_shebang(ln):
+    """ Called from check_code_block() and check_code_indent()
+
+        Check shebang's language
             #!/usr/bin/env python
+            #!/bin/bash -i
 
         shebangs cannot contain:
             #!/usr/bin/env python  # Can you type more stuff?
@@ -1394,23 +1397,25 @@ def check_shebang():
     if line_index == len(lines) - 1:
         return None  # We are on the last line
 
-    ln = lines[line_index + 1]  # Get next line
+    if in_code_block:
+        ln = lines[line_index + 1]  # Get next line
 
     if not ln.startswith('#!/'):
         return None
 
-    ln = ln.rstrip()    # Don't worry, it's not updated
-    parts = ln.split()  # Might be trailing spaces
+    ln = ln.rstrip()                    # Don't worry, it's not updated
+    parts = ln.split()                  # Might be trailing spaces
     count = len(parts)
     if count == 2 and not ln.startswith('#!/bin/'):
+        # ln starts with #!/usr/
         she = parts[1]
     else:
-        parts = ln.split('/')  # Might be trailing spaces
-        she = parts[len(parts) - 1]
-        she = she.split()[0]   # Just in case -x, -i parameter, etc.
-        if language_used != "":
-            percent_complete_close()
-            print('she:', she, 'LINK', row[LINK])
+        parts = ln.split('/')           # Might be trailing spaces
+        she = parts[len(parts) - 1]     # Grab "bash" from "#!/bin/bash"
+        she = she.split()[0]            # Strip out any -x, -i, etc. parameter
+        #if language_used == "" and she.lower() == "bash":
+        #    percent_complete_close()
+        #    print(she, '|', row[LINK])
 
     return she.lower()
 
@@ -1476,7 +1481,7 @@ def check_code_block(ln):
             in_code_block = True        # Code block has begun
             this_language = language_used
             # Check next line for shebang
-            she_language = check_shebang()
+            she_language = check_shebang(ln)
             if she_language:
                 this_language = she_language
             # For rouge, need to change "vba" and "basic" to "vb"
@@ -1495,6 +1500,29 @@ def check_code_block(ln):
             in_code_block = False       # Code block has ended
 
     return ln
+
+
+def set_language(ln):
+    """ Set syntax highlighting language.
+        Called from check_code_block() and check_code_indent()
+
+        NOT USED YET!
+    """
+    global language_forced
+    # language_used was set by check_code_block() when not in code block, ie when
+    # in regular line.
+    # TODO: compliment language_used with next_language_to_use
+    this_language = language_used
+    # Check next line for shebang
+    she_language = check_shebang(ln)
+    if she_language:
+        this_language = she_language
+    # For rouge, need to change "vba" and "basic" to "vb"
+    # See: https://askubuntu.com/q/1021152
+    if this_language == "vba" or this_language == "basic":
+        this_language = "vb"
+
+    return this_language
 
 
 def check_code_indent(ln):
@@ -1534,9 +1562,11 @@ def check_code_indent(ln):
             # #!/bin/bash
             # #!/bin/.... (python anywhere in line)
             this_language = language_used
-            she_language = check_shebang()
+            she_language = check_shebang(ln[4:])
             if she_language:
                 this_language = she_language
+            #else:
+            #    print('she language NOT found:', she_language)
             # print('BEFORE ln:', ln)
             ln = "``` " + this_language + "\n" + ln[4:]
             # print('AFTER ln:', ln)
@@ -1596,8 +1626,10 @@ def check_copy_code(this_index):
             then we are now out of code block.
 
         Set default syntax language when none on code block. SE standard:
-            <!-- language: bash -->
-            <!-- language-all: lang-bash -->
+            https://meta.stackexchange.com/questions/184108/
+            what-is-syntax-highlighting-and-how-does-it-work
+                <!-- language: bash -->
+                <!-- language-all: lang-bash -->
 
     """
     global total_block_lines, total_indent_lines
@@ -1629,6 +1661,7 @@ def check_copy_code(this_index):
             # block is NOT indented
             if COPY_TO_CLIPBOARD is not None and \
                code_block_line_count >= COPY_LINE_MIN:
+                # TODO: Explain what line below does
                 inserted_command = COPY_TO_CLIPBOARD
                 total_clipboards += 1
                 total_copy_lines += code_block_line_count

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,753 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-27-HDMI-monitor-not-detected-by-laptop-after-unplugging-and-plugging-back-in.md
 toc:          false
 navigation:   false
@@ -25,7 +25,7 @@ The solution proposed there is to reset the monitor to a bad mode and then a goo
 
 
 
-``` bash
+``` sh
 #!/bin/sh
 #Fix TV state when HDMI link is lost.
 #By Mario Limonciello <email address hidden>

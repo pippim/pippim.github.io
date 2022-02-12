@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,392 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-Hibernate_suspend-on-critical-battery-level---where-should-I-set-it-from-MATE-GUI_.md
 toc:          false
 navigation:   false

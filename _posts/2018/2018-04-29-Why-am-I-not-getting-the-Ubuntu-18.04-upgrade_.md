@@ -12,7 +12,7 @@ votes:        "25 "
 favorites:    
 views:        "53,498 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Why-am-I-not-getting-the-Ubuntu-18.04-upgrade_.md
 toc:          false
 navigation:   false

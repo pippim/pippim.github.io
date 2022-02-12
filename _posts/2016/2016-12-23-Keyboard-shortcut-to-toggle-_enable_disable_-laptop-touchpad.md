@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "3,555 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-23-Keyboard-shortcut-to-toggle-_enable_disable_-laptop-touchpad.md
 toc:          false
 navigation:   false
@@ -27,7 +27,7 @@ Partial credit to this post ([Enable/disable touchpad][1])
 Create a new directory `/home/USER/bin` and then use `gedit /home/USER/bin/toggle-touchpad`. **NOTE:** Replace **USER** with your user ID. Copy and paste these lines into your editor:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: toggle-touchpad

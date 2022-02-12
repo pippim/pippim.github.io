@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "2,798 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-19-Power-Management-only-has-the-option-of-_Do-Nothing_-for-critically-low-battery-in-17.10.md
 toc:          false
 navigation:   true
@@ -200,7 +200,7 @@ Other rules can be added to perform different actions depending on power supply 
 
 If your system has no or missing ACPI events, use `cron` with the following script:
 
-``` 
+``` sh
 #!/bin/sh
 acpi -b | awk -F'[,:%]' '{print $2, $3}' | {
 	read -r status capacity

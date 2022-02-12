@@ -12,7 +12,7 @@ votes:        "14 "
 favorites:    
 views:        "8,640 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-04-Why-can_t-I-set-a-default-output-audio-device-in-Ubuntu-19.10_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "4,759 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-06-Backup-Linux-configuration_-scripts-and-documents-to-Gmail.md
 toc:          true
 navigation:   true
@@ -454,7 +454,7 @@ This package contains the program `uuencode` which is need to convert binary fil
 Create the file `/etc/cron.daily/daily-backup` containing:
 
 {% include copyHeader.html %}
-``` bash
+``` sh
 #!/bin/sh
 #
 # NAME: daily-backup

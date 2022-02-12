@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "408 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-What-does-_LOGFILE___1_-_var_log_syslog__-do_.md
 toc:          false
 navigation:   false
@@ -51,7 +51,7 @@ you see:
 The original code in [question link][3] was modified:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: yad-logfile

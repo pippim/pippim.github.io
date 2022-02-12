@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    
 views:        "12,471 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-06-Boot-Repair-created-too-many-grub-menu-entries-for-Windows.md
 toc:          false
 navigation:   false
@@ -140,7 +140,7 @@ These are the erroneous entries `boot-repair` created in `/etc/grub.d/25_custom`
 
 Use `sudo -H gedit /etc/grub.d/25_custom` and delete everything except the first three lines:
 
-``` bash
+``` sh
 #!/bin/sh
 exec tail -n +3 $0
 

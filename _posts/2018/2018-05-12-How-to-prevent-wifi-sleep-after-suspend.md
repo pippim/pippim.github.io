@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "22,928 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-How-to-prevent-wifi-sleep-after-suspend.md
 toc:          false
 navigation:   false
@@ -42,7 +42,7 @@ The second is a `systemd` script which reloads the WiFi kernel module when resum
 This script is written for iwlwifi` which is the common Intel driver name. If your's is different change that name below:
 
 {% include copyHeader.html %}
-``` bash
+``` sh
 #!/bin/sh
 
 # NAME: /lib/systemd/system-sleep/iwlwifi-reset

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,343 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-26-Wayland-session-on-Ubuntu-18.04_-why-is-_usr_bin_Xwayland-running_.md
 toc:          false
 navigation:   false

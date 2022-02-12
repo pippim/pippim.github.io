@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "3,323 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-14-Is-it-possible-to-show-ip-address-on-top-bar-near-the-time_.md
 toc:          false
 navigation:   false
@@ -64,7 +64,7 @@ I already have a main bash script so I created an abbreviated version for this a
 
 Using the code from the first section create the file `~/bin/indicator-sysmonitor-display` containing:
 
-``` 
+``` bash
 #!/bin/bash
 
 default_interface=$(route -n | awk '$1 == "0.0.0.0" {print $8; exit}')

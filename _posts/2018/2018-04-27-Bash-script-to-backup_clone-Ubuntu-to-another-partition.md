@@ -12,7 +12,7 @@ votes:        "29 "
 favorites:    
 views:        "15,167 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition.md
 toc:          true
 navigation:   true
@@ -221,7 +221,7 @@ When `rsync` reclones it never hits `100%` because files that never changed are 
 ## Bash script - `clone-ubuntu.sh`
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 
 # NAME: clone-ubuntu.sh

@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "19,326 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Unable-to-upgrade-kernel-after-4.16.3.md
 toc:          false
 navigation:   true
@@ -168,7 +168,7 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 
 Edit the file `/var/lib/dpkg/info/linux-image-unsigned-4.14.38-041438-generic.prerm`:
 
-``` 
+``` sh
 
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>

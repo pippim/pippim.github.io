@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "57 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-02-Suspend-temporarily-linux-update-apt-for-the-session-until-reboot.md
 toc:          false
 navigation:   false
@@ -25,7 +25,7 @@ You can run a command based on this answer:
 
 Create a script:
 
-``` 
+``` bash
 #!/bin/bash
 
 systemctl stop apt-daily.service

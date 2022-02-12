@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "3,884 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-22-Windows-Subsystem-for-Linux-display-Linux-distribution_.md
 toc:          false
 navigation:   false
@@ -28,7 +28,7 @@ I took one of the three [Github WinScreeny][1] bash scripts and modified it  to 
 Here is the modified code:
 
 {% include copyHeader.html %}
-``` 
+``` bash
 #!/bin/bash
 #
 # Windows Screenfetch (Without the Screenshot functionality)

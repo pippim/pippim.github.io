@@ -12,7 +12,7 @@ votes:        "18 "
 favorites:    
 views:        "41,818 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-24-Touchpad-not-working-after-suspending-laptop.md
 toc:          false
 navigation:   false
@@ -23,7 +23,7 @@ This bug is reported in launchpad: [Elantech touchpad stops working after suspen
 
 If this works manually then you can automate by creating a new file in the  `/lib/systemd/system-sleep/` directory containing:
 
-``` 
+``` sh
 #!/bin/sh
 
 case $1/$2 in

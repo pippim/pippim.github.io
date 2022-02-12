@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "1,856 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-cron-launching-but-not-executing-script.md
 toc:          false
 navigation:   false
@@ -23,14 +23,14 @@ It looks like the executable `ruby` is not in `cron`'s path, so you need to use 
 
 Change your `monday.sh` script from:
 
-``` 
+``` bash
 #!/bin/bash
 ruby ~/Documents/Scripts/monday_task.rb >> ~/Documents/Scripts/monday
 ```
 
 to:
 
-``` 
+``` bash
 #!/bin/bash
 /home/asarluhi/.rvm/rubies/ruby-2.3.1/bin/ruby /home/asarluhi/Documents/Scripts/monday_task.rb >> /home/asarluhi/Documents/Scripts/monday
 ```

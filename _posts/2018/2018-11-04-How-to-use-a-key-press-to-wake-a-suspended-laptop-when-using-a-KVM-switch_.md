@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "4,985 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-How-to-use-a-key-press-to-wake-a-suspended-laptop-when-using-a-KVM-switch_.md
 toc:          false
 navigation:   true
@@ -252,7 +252,7 @@ echo enabled > /sys/bus/usb/devices/${KB}/power/wakeup
 
 This works on boot, but doesn't seem to run on wake from suspend, so I had to put a script file in /lib/systemd/system-sleep/.  Create it, set it as globally executable and give it a name that starts with a double digit number between 00 and 99.  My script is as follows, again substite ***your*** keyboard/mouse verbage from dmesg:
 
-``` 
+``` sh
 
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>

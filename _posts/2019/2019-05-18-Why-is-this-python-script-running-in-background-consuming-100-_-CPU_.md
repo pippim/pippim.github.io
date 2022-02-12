@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "22,054 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-18-Why-is-this-python-script-running-in-background-consuming-100-_-CPU_.md
 toc:          false
 navigation:   false
@@ -21,7 +21,7 @@ clipboard:    false
 
 I was intrigued by this project so wrote a bash script for those more comfortable in that environment:
 
-``` 
+``` bash
 #!/bin/bash
 
 xclip -o -sel clip > /tmp/LastClip

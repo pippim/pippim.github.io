@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "175 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-20-How-to-mute-volume-on-every-boot-in-Kubuntu-18.04_.md
 toc:          false
 navigation:   false
@@ -35,7 +35,7 @@ From the answer you want to add the command in:
 
 Insert the command after the first line and before the last line:
 
-``` 
+``` sh
 #!/bin/sh    # <---- This is the first line
 
 `/usr/bin/amixer -c 0 sset Master,0 0% > /dev/null`

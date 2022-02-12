@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "873 "
 accepted:     Accepted
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-10-Cron-Monthly-job-works-randomly-using-_0-0-1-*-*_.md
 toc:          false
 navigation:   false
@@ -33,7 +33,7 @@ sudo -H gedit /etc/cron.monthly/journal_vacuum
 
 Insert these lines:
 
-``` bash
+``` sh
 #!/bin/sh
 #
 # NAME: journal_vacuum

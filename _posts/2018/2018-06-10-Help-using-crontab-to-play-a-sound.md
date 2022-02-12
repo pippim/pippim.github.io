@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "5,004 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-10-Help-using-crontab-to-play-a-sound.md
 toc:          false
 navigation:   false
@@ -41,7 +41,7 @@ So rather than calling your music player directly, call a script name in `cronta
 
 Then create your `/usr/local/bin/big-ben.sh` script:
 
-``` 
+``` bash
 #!/bin/bash
 export XDG_RUNTIME_DIR="/run/user/1000"
 mplayer -really-quiet "$1" -volume 100

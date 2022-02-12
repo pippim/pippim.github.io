@@ -12,7 +12,7 @@ votes:        "13 "
 favorites:    
 views:        "40,455 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-14-How-to-switch-between-headphones-and-speakers-without-unplugging-headphones.md
 toc:          false
 navigation:   false

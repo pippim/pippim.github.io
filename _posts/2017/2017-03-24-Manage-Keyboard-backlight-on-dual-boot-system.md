@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,839 "
 accepted:     
-uploaded:     2022-02-11 06:08:50
+uploaded:     2022-02-12 11:18:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-24-Manage-Keyboard-backlight-on-dual-boot-system.md
 toc:          false
 navigation:   false
@@ -33,7 +33,7 @@ Here is python code for `/usr/local/bin/kb-light.py`:
 
 
 {% include copyHeader.html %}
-``` python
+``` python3
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-    
 from sys import argv
