@@ -53,7 +53,7 @@ load_search_objects();
 
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
-const c = document.getElementsByClassName("close")[0];
+const c = document.getElementsByClassName("close")[0];  // Both 'X' close classes
 const f = document.getElementById('search-form');
 const q = document.getElementById('search-query');      // Search words input by user
 const h = document.getElementById('search-modal-text')  // Search results html codes
@@ -70,7 +70,7 @@ check_q_values();  // Initial 'X' (close on input bar) status when page refreshe
 c.onclick = function () {
     m.style.display = "none";   // Turn off display for search results
     // console.log("c.onclick event");
-    // Also called when X clicked in input bar, but handled elsewhere
+    // Also called when X clicked in input bar, but handled in i.onclick listen
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -131,6 +131,15 @@ q.addEventListener('keydown', function() {
     check_q_values();
 });
 
+q.addEventListener('paste', function() {
+    /* Fired when pasting from clipboard */
+    check_q_values();
+});
+
+// Handle multiple query input actions at cne time
+['keydown', 'paste', 'cut'].forEach( function(evt) {
+    q.addEventListener(evt, check_q_values();, false);
+});
 // Close ('X') clicked on search input bar
 i.onclick = function(){
     q.value = "";
@@ -144,22 +153,6 @@ function check_q_values() {
         i.style.display = "none";
     }
 }
-//Array.prototype.forEach.call(document.querySelectorAll('.clearable-input'), function(el) {
-  //var input = el.querySelector('input');
-
-  // conditionallyHideClearIcon();
-  // input.addEventListener('input', conditionallyHideClearIcon);
-  //el.querySelector('[search-clear-input]').addEventListener('click', function(e) {
-  // el.querySelector('[search-query]').addEventListener('click', function(e) {
-  //  input.value = '';
-  //  conditionallyHideClearIcon();
-  //});
-
-  //function conditionallyHideClearIcon(e) {
-    //var target = (e && e.target) || input;
-    //target.nextElementSibling.style.display = target.value ? 'block' : 'none';
-  //}
-//});
 
 function get_results(submit_str) {
     // Build list array of each time url index found
