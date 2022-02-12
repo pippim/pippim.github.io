@@ -126,7 +126,7 @@ function submitted(event) {
 
 f.addEventListener('submit', submitted);
 
-q.addEventListener('keydown', function() {
+q.addEventListener('keyup', function() {
     /* Fired on every key press */
     check_q_values();
 });
