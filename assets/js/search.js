@@ -136,8 +136,8 @@ q.addEventListener('paste', function() {
     check_q_values();
 });
 
-q.addEventListener('cut', (event) ==> {
-    /* Fired when pasting from clipboard */
+q.addEventListener('cut', function() {
+    /* Fired when cutting text */
     check_q_values();
 });
 
