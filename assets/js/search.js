@@ -138,7 +138,7 @@ q.addEventListener('paste', function() {
 
 // Handle multiple query input actions at cne time
 ['keydown', 'paste', 'cut'].forEach( function(evt) {
-    q.addEventListener(evt, check_q_values();, false);
+    q.addEventListener(evt, check_q_values(), false);
 });
 // Close ('X') clicked on search input bar
 i.onclick = function(){
