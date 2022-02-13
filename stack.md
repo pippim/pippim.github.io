@@ -143,6 +143,7 @@ The program automatically:
 - Initial testing allows selecting small set of random record numbers to convert. 
 - Converts Stack Exchange Markdown formats to GitHub Pages Kramdown Markdown format.
 - Creates hyperlinks to original Answer in Stack Exchange and Kramdown in GitHub Pages.
+- Creates search word to URL indices excluding 50% of words like "a", "the", etc. to save space.
 - Selectively inserts Table of Contents based on minimum criteria settings.
 - Selectively inserts Section Navigation Buttons for: <kbd>Top</kbd> (Top of Page), <kbd>ToS</kbd> (Top of Section), <kbd>ToC</kbd> (Table of Contents) and <kbd>Skip</kbd> (Skip section).
 - Selectively inserts "Copy Code Block to System Clipboard" button based on lines of code.
