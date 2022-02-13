@@ -12,7 +12,7 @@ You can use them free of charge and change them however you like.
 
 ## Convert Stack Exchange Posts to Your Own Website
 
-{% include image.html src="/assets/img/stack-to-blog progress display.gif"
+{% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
    alt="stack-to-blog.py"
    style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
 %}

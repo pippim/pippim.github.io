@@ -122,7 +122,7 @@ tar -rpf "$Filename" website/sede/StackQuery
 
 # Convert Stack Exchange to GitHub Pages
 
-{% include image.html src="/assets/img/stack-to-blog progress display.gif"
+{% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
    alt="stack-to-blog.py"
    style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
 %}
