@@ -345,6 +345,7 @@ In addition to updating your Stack Exchange posts into the {{ site.title }} webs
 - Update Posts by Tag stored in `_includes/posts_by_tag.html`
 - Generate a fresh `tree` listing stored in `_includes/website_tree.txt`
 - Update Site-Wide Front Matter stored in `_config.yml`
+- Update search word files `search_url.json`, `search_include.json` and `search_exclude.json` stored in the `/assets/json/` directory on website.
 - Compares the {{ site.title }} website changes made to Cayman Theme. Watch this output to know when Cayman Theme has changed.
 
 
