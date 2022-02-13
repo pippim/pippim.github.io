@@ -136,20 +136,27 @@ The full `stack-to-blog.py` program can be accessed on the
 
 The program automatically:
 
-- Creates Jekyll front matter.
+- Creates Jekyll front matter on posts and front matter totals for site.
 - Selects Stack Exchange Posts based on meeting minimum criteria such as up-votes or accepted answer status.
+- If self-answered question, the answer is included and not the question.
+- If self-answered question, the accepted answer alone doesn't qualify. Votes from other are the qualifier. 
+- Initial testing allows selecting small set of random record numbers to convert. 
 - Converts Stack Exchange Markdown formats to GitHub Pages Kramdown Markdown format.
-- Inserts Table of Contents
-- Selectively inserts section navigation buttons for: <kbd>Top</kbd> (Top of Page), <kbd>ToS</kbd> (Top of Section), <kbd>ToC</kbd> (Table of Contents) and <kbd>Skip</kbd> (Skip section).
-- Selectively inserts "Copy Code Block to System Clipboard" button
-- Creates html with "Top Ten Answers" with the most votes
-- Creates powerful nested expandable/collapsible detail/summary html for many thousands of tags by post.
-- Maps hyperlinks in Stack Exchange Posts to {{ site.title }} website posts if they were converted.
+- Creates hyperlinks to original Answer in Stack Exchange and Kramdown in GitHub Pages.
+- Selectively inserts Table of Contents based on minimum criteria settings.
+- Selectively inserts Section Navigation Buttons for: <kbd>Top</kbd> (Top of Page), <kbd>ToS</kbd> (Top of Section), <kbd>ToC</kbd> (Table of Contents) and <kbd>Skip</kbd> (Skip section).
+- Selectively inserts "Copy Code Block to System Clipboard" button based on lines of code.
+- Creates HTML with "Top Ten Answers" with the most votes.
+- Creates powerful nested expandable/collapsible detail/summary HTML for many thousands of tags by post.
+- Remaps hyperlinks in Stack Exchange Posts to {{ site.title }} website posts if they were converted.
 - Fixes old broken `#header` Stack Exchange Markdown.
 - Converts `< block quote` Stack Exchange Markdown into what works in Jekyll Kramdown.
-- Convert Stack Exchange `Language` tags to fenced code block language.
-- Fixes broken Stack Exchange Hyperlinks where the website post title is implied and not explicit.
+- Convert Stack Exchange `<!-- language -->` tags to fenced code block language.
+- When no fenced code block language is provided, uses shebang language first (if available).
+- Converts older four-space indented code blocks to fenced code blocks.
+- Converts Stack Exchange Hyperlinks where the website post title is implied and not explicit.
 - Prints list of self-answered questions that were not accepted after the mandatory two day wait period.
+- Prints list of Rouge Syntax Highlighting languages not supported in fenced code blocks.
 - Prints summary totals when finished.
 
 ---
