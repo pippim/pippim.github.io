@@ -17,70 +17,12 @@
     ws = website_search.WebsiteSearch()
 
     For each post:
-        ws.post_init(final_url)
+        ws.post_init(final_url, post_title)
         For each line in post:
-            ws.parse(line)
+            ws.parse(line, word_weight)
         ws.post_save()
 
     ws.site_save()
-
-    On the client side using AJAX, see examples of $,getJSON():
-        https://www.sitepoint.com/ajaxjquery-getjson-simple-example/
-
-    On the client side using FETCH(), see examples:
-        https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-        https://www.xul.fr/en/html5/fetch.php
-
-Yes. "Object vs Arrays in Javascript is as Python's Dictionaries vs Lists".
-Performance pros and cons are also the same. With lists being more efficient
-if numeric indexes are appropriate to the task and dictionaries being more
-efficient for long lists that must be accessed by a string.
-
-var dict = {};
-dict['apple'] = "a sweet edible fruit";
-dict['boy'] = "a young male human";
-
-var list = [];
-list.push("apples");
-list.push("oranges");
-list.push("pears");
-
-================= Mozilla log On page load: ==================
-
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json
-[HTTP/2 304 Not Modified 102ms]
-
-Array(42) [ 44, 59, 205, 206, 216, 257, 309, 350, 373, 377, … ]
-search.js:12:13
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json
-
-https://pippim.github.io/2019/07/11/problem-installing-sqlite3-using-apt-get-install.html search.js:23:13
-
-================= Mozilla log On First Refresh: ==================
-
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json
-[HTTP/2 200 OK 0ms]
-
-Array(42) [ 44, 59, 205, 206, 216, 257, 309, 350, 373, 377, … ]
-search.js:12:13
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json
-[HTTP/2 200 OK 165ms]
-
-https://pippim.github.io/2019/07/11/problem-installing-sqlite3-using-apt-get-install.html search.js:23:13
-
-================= Mozilla log On Second Refresh: ==================
-
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json
-[HTTP/2 200 OK 0ms]
-
-Array(42) [ 44, 59, 205, 206, 216, 257, 309, 350, 373, 377, … ]
-search.js:12:13
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json
-[HTTP/2 200 OK 0ms]
-
-https://pippim.github.io/2019/07/11/problem-installing-sqlite3-using-apt-get-install.html search.js:23:13
-
-
 
 """
 
@@ -106,6 +48,9 @@ import json
 
         Punctuations in the middle like post.title, my_var, set-brightness.sh
             we want to keep. People will search matching programming terms.
+
+    Word weighting: https://towardsdatascience.com/
+        tf-idf-for-document-ranking-from-scratch-in-python-on-real-world-dataset-796d339a4089
 
     Change:
     
@@ -176,9 +121,9 @@ MAX_WORD_SIZE = 20  # Anything longer than 20 is a hyperlink
 # If word ends in "n't"     "           "           "           "
 # If word ends in "ing"     "           "           "           "
 
-''' TODO: What happens to e.g. or E.G.
-    NOTE: Decided not to exclude "slow", "slowly", "long", "forever"
-          'before', 'add', 'after', 'edit', 'update', 'appear', 'appears', 
+''' NOTE: Decided not to exclude "slow", "slowly", "long", "forever"
+          'before', 'add', 'after', 'edit', 'update', 'appear', 'appears',
+          'start', 'speed', 
 '''
 exclude_word_list = [
     'a', 'accept', 'afternoon', 'also', 'and', 'another',
@@ -189,8 +134,9 @@ exclude_word_list = [
     'conquer', 'consequently', 'cool', 'could', 'crazy',
     'dam', 'damn', 'delete', 'decide', 'decision', 'desperate',
     'disappear', 'do', 'done',
-    'eg', 'either', 'enough', 'error', 'even', 'eventually', 'evening',
-    'end', 'ever', 'every', 'everyone', 'everytime', 'everything', 'everywhere',
+    'eg', 'e.g', 'either', 'enough', 'error', 'even', 'eventually',
+    'evening', 'end', 'etc', 'ever', 'every', 'everyone', 'everytime',
+    'everything', 'everywhere',
     'fail', 'failure', 'famous', 'fantastic', 'feel', 'few', 'feeling',
     'finally', 'file', 'filename', 'finish', 'for', 'formerly', 'fun'
     'gather', 'get', 'go', 'good', 'got', 'great',
@@ -208,8 +154,8 @@ exclude_word_list = [
     'quality', 'question', 'quick', 'quickest', 'quickly', 'quirk', 'quit',
     'ready', 'real', 'really', 'revise', 'right',
     'said', 'script', 'searching', 'seems', 'set', 'she', 'should', 'side',
-    'so', 'solution', 'soon', 'someone', 'something', 'sometime', 'speed',
-    'start', 'strange', 'suggest', 'suggestion', 'sure',
+    'so', 'solution', 'soon', 'someone', 'something', 'sometime',
+    'strange', 'suggest', 'suggestion', 'sure',
     'thank', 'the', 'them', 'then', 'think', 'thought', 'through',
     'time', 'tired', 'to', 'today', 'tomorrow', 'tonight', 'tried', 'try',
     'ubuntu', 'unknown', 'until', 'unless', 'us',
@@ -256,7 +202,7 @@ class WebsiteSearch(InitCommonVars):
         # All words excluded on site - dict build from list with 0 counts
         self.site_excluded = dict.fromkeys(exclude_word_list, 0)
         self.url_list = []                  # list of urls in search dictionary
-        self.post_index = 0                 # post in
+        self.post_index = 0                 # post in url_list
 
     def post_init(self, post_final_url, post_title):
 
@@ -265,6 +211,7 @@ class WebsiteSearch(InitCommonVars):
         self.post_final_url = post_final_url
         self.post_title = post_title
         self.url_list.append(self.post_final_url + " | " + self.post_title)
+        # NOTE: self.post_index incremented after saving
 
     def parse(self, ln, points):
         """ Parse every word in line.
