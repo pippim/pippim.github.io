@@ -10,9 +10,9 @@ created_date: 2017-02-09 11:58:00
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "2,043 "
+views:        "2,053 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-09-How-to-display-something-in-unity-systray-from-a-bash-script.md
 toc:          false
 navigation:   false

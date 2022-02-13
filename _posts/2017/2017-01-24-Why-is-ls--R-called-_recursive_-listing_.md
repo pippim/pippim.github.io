@@ -10,9 +10,9 @@ created_date: 2017-01-24 01:07:07
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "21,931 "
+views:        "21,974 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-24-Why-is-ls--R-called-_recursive_-listing_.md
 toc:          false
 navigation:   false
@@ -71,8 +71,8 @@ temp
 
 6 directories, 0 files
 
-As you can see `tree` accomplishes the same as `ls -R` except is more concise and dare I say "prettier".```
-
+```
+As you can see `tree` accomplishes the same as `ls -R` except is more concise and dare I say "prettier".
 
 Now let's look at how to recursively remove the directories we just created in one simple command:
 

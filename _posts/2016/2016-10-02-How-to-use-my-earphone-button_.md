@@ -10,9 +10,9 @@ created_date: 2016-10-02 19:30:04
 edit_date:    2017-02-25 15:45:30
 votes:        "2 "
 favorites:    
-views:        "914 "
+views:        "920 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-02-How-to-use-my-earphone-button_.md
 toc:          false
 navigation:   false

@@ -7,31 +7,31 @@ stack_url:    https://askubuntu.com/q/939627
 type:         Answer
 tags:         bash
 created_date: 2017-07-25 14:44:21
-edit_date:    2017-07-26 14:03:18
+edit_date:    2022-02-11 07:31:10
 votes:        "16 "
 favorites:    
-views:        "89,327 "
+views:        "90,294 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-25-What-does-__-mean-in-bash_.md
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-`$#` is typically used in bash scripts to ensure a parameter is passed. Generally you check for a parameter in the beginning of your script.
+`$#` is typically used in bash scripts to ensure a parameter is passed. Generally, you check for a parameter at the beginning of your script.
 
-For example here's a snippet of a script I was working on today:
+For example, here's a snippet of a script I was working on today:
 
 ``` 
 if [[ $# -ne 1 ]]; then
-    echo 'One argument required for file name, e.g. "Backup-2017-07-25"'
+    echo 'One argument required for the file name, e.g. "Backup-2017-07-25"'
     echo '.tar will automatically be added as a file extension'
     exit 1
 fi
 ```
 
-To summarize `$#` reports the number of parameters passed to a script. In your case you passed no parameters and the reported result is `0`.
+To summarize `$#` reports the number of parameters passed to a script. In your case, you passed no parameters and the reported result is `0`.
 
 
 ----------
@@ -62,4 +62,4 @@ To find the length of the first array element:
 myArr=(A B C); echo ${#myArr[0]}
 ```
 
-returns: `1` (The length of `A`, 0 is first element as arrays use zero-based indices/subscripts).
+returns: `1` (The length of `A`, 0 is the first element as arrays use zero-based indices/subscripts).

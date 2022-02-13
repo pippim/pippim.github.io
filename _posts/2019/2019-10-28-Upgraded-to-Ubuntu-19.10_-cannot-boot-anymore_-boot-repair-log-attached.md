@@ -10,9 +10,9 @@ created_date: 2019-10-28 23:23:48
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "11,845 "
+views:        "11,848 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-28-Upgraded-to-Ubuntu-19.10_-cannot-boot-anymore_-boot-repair-log-attached.md
 toc:          false
 navigation:   false

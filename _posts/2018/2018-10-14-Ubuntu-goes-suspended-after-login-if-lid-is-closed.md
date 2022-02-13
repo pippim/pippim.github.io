@@ -8,11 +8,11 @@ type:         Answer
 tags:         18.04 multiple-monitors suspend power-management laptop
 created_date: 2018-10-14 17:47:47
 edit_date:    2018-10-14 17:54:35
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "1,978 "
+views:        "1,995 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-14-Ubuntu-goes-suspended-after-login-if-lid-is-closed.md
 toc:          false
 navigation:   false

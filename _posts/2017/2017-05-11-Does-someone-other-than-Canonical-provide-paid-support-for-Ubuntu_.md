@@ -10,9 +10,9 @@ created_date: 2017-05-11 15:00:17
 edit_date:    2017-05-12 23:07:52
 votes:        "6 "
 favorites:    
-views:        "1,528 "
+views:        "1,531 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-11-Does-someone-other-than-Canonical-provide-paid-support-for-Ubuntu_.md
 toc:          false
 navigation:   false

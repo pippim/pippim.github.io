@@ -10,9 +10,9 @@ created_date: 2019-11-10 16:30:42
 edit_date:    2019-11-10 16:37:20
 votes:        "2 "
 favorites:    
-views:        "2,729 "
+views:        "2,765 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-New-message-when-rebooting-from-login-screen_-Authentication-is-required-for-rebooting-the-system-while-an-application-asked-to-inhibit-it.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-04-07 00:14:42
 edit_date:    2019-07-27 19:16:36
 votes:        "16 "
 favorites:    
-views:        "87,680 "
+views:        "88,184 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-07-How-to-list-GRUB_s-_menuentries_-in-command-line_.md
 toc:          true
 navigation:   true
@@ -116,18 +116,18 @@ Press <Enter> to continue
 
 ``` 
                                                                                  
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
-
-# `grub-menu.sh` bash script```
-
+```
+#`grub-menu.sh` bash script
 
 
 
 `grub-menu.sh` only has one option to tweak:
 
 ``` bash
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
+
 # Default for hide duplicate and triplicate options with (upstart) and (recovery mode)?
 HideUpstartRecovery=false
 ```
@@ -146,15 +146,15 @@ or:
 grub-menu.sh long
 ```
 
-
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
-
 ## The code:
 
 {% include copyHeader.html %}
 ``` bash
-#!/bin/bash
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr7" class ="hdr-btn">Skip</a></div>
+
+# !/bin/bash
 
 # NAME: grub-menu.sh
 # PATH: $HOME/bin
@@ -168,6 +168,10 @@ if [[ $CurrentTERM == "" ]] ; then
     notify-send --urgency=critical "$0 cannot be run from GUI without TERM environment variable."
     exit 1
 fi
+
+
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr8" class ="hdr-btn">Skip</a></div>
 
 # Send output to secondary terminal such that previous history isn't cleared on exit
 tput smcup
@@ -184,6 +188,10 @@ SkippedMenuEntry=false  # Don't change this value, automatically maintained
 InSubMenu=false     # Within a line beginning with `submenu`?
 InMenuEntry=false   # Within a line beginning with `menuentry` and ending in `{`?
 NextMenuEntryNo=0   # Next grub internal menu entry number to assign
+
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr7" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr9" class ="hdr-btn">Skip</a></div>
+
 # Major / Minor internal grub submenu numbers, ie `1>0`, `1>1`, `1>2`, etc.
 ThisSubMenuMajorNo=0
 NextSubMenuMinorNo=0
@@ -303,6 +311,10 @@ while true ; do
 
 done
 
+
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr8" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a>  <a href="#hdr10" class ="hdr-btn">Skip</a></div>
+
 # Restore output to primary terminal
 tput rmcup
 
@@ -318,6 +330,6 @@ exit 0
   [2]: https://i.stack.imgur.com/a95hd.png
 
 
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr6" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr9" class ="hdr-btn">ToS</a>  <a href="#hdr2" class ="hdr-btn">ToC</a></div>
 

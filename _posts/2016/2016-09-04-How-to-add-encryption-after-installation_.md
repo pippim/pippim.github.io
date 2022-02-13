@@ -10,9 +10,9 @@ created_date: 2016-09-04 00:23:32
 edit_date:    2016-09-04 01:31:56
 votes:        "5 "
 favorites:    
-views:        "6,836 "
+views:        "6,838 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-04-How-to-add-encryption-after-installation_.md
 toc:          false
 navigation:   false
@@ -28,26 +28,26 @@ To summarize the link what you need to do is:
  1. Backup your data. Although the migration process uses a working
 ``` 
 backup you want your own just to be safe.
- 2. Install the encryption software with `sudo apt-get install```
-
+```
+ 2. Install the encryption software with `sudo apt-get install
 ``` 
 ecryptfs-utils cryptsetup`.
- 3. Create a temporary account with sudo privileges. In order to encrypt```
-
+```
+ 3. Create a temporary account with sudo privileges. In order to encrypt
 ``` 
 your /home directory you can't be logged on as yourself.
- 4. Login with temporary account.```
-
+```
+ 4. Login with temporary account.
  5. Migrate your data from unencrypted /home directory to an encrypted
 ``` 
 /home directory using the command `sudo ecryptfs-migrate-home -u
 user` where "user" is your regular user name.
- 6. Please note besides encrypting /home your swap partition can also be```
-
+```
+ 6. Please note besides encrypting /home your swap partition can also be
 ``` 
 encrypted for maximum protection.
- 7. DO NOT REBOOT```
-
+```
+ 7. DO NOT REBOOT
  8. Login with your regular user name. A random passphrase can be
 ``` 
 generated which you need to write down if something goes wrong in  

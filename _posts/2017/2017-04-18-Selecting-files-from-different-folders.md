@@ -10,9 +10,9 @@ created_date: 2017-04-18 02:03:38
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "760 "
+views:        "762 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-18-Selecting-files-from-different-folders.md
 toc:          true
 navigation:   true

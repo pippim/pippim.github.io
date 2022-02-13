@@ -1587,7 +1587,7 @@ def check_code_indent(ln):
                 #print(row[LINK])
                 return ln  # Return empty line
         in_code_indent = False  # Code indent has ended with null line
-        ln += "```\n"           # Add extra ending fenced code block
+        ln = "```\n" + ln       # Add extra ending fenced code block
 
     return ln
 

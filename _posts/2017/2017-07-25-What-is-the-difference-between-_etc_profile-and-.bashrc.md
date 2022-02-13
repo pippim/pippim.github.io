@@ -10,9 +10,9 @@ created_date: 2017-07-25 20:29:44
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    
-views:        "9,069 "
+views:        "9,112 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-25-What-is-the-difference-between-_etc_profile-and-.bashrc.md
 toc:          false
 navigation:   false

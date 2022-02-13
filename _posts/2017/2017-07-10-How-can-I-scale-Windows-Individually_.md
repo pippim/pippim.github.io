@@ -10,9 +10,9 @@ created_date: 2017-07-10 02:00:46
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "4,482 "
+views:        "4,492 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-10-How-can-I-scale-Windows-Individually_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-02-03 01:33:54
 edit_date:    2020-06-12 14:37:07
 votes:        "16 "
 favorites:    
-views:        "9,550 "
+views:        "9,627 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-03-Why-does-_journalctl---list-boots_-only-show-the-current-boot_.md
 toc:          false
 navigation:   false
@@ -69,8 +69,8 @@ $ journalctl --list-boots
  -2 c0d2c0141dd840cbab75d3c2254f8781 Wed 2018-02-14 22:59:13 MST—Sat 2018-02-17 22:46:14 M
  -1 aafb2573a6374e019a7165cb8eee74a0 Sun 2018-02-18 06:02:03 MST—Mon 2018-02-19 04:16:36 M
   0 8462f1969c6f4d61973e7e245014b846 Mon 2018-02-19 04:16:53 MST—Wed 2018-02-21 04:07:07 M
-`lines 1-16/16 (END)````
-
+```
+`lines 1-16/16 (END)`
 
 
   [1]: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1618188

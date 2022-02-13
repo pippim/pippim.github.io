@@ -8,11 +8,11 @@ type:         Answer
 tags:         gvfs mountpoint
 created_date: 2018-05-12 00:11:57
 edit_date:    2020-06-12 14:37:07
-votes:        "12 "
+votes:        "13 "
 favorites:    
-views:        "16,828 "
+views:        "16,882 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-What-is-_run_user_1000_gvfs_.md
 toc:          false
 navigation:   false

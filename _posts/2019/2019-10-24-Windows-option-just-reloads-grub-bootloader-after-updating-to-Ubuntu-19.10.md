@@ -10,9 +10,9 @@ created_date: 2019-10-24 22:54:33
 edit_date:    2019-10-24 23:05:13
 votes:        "1 "
 favorites:    
-views:        "636 "
+views:        "637 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-24-Windows-option-just-reloads-grub-bootloader-after-updating-to-Ubuntu-19.10.md
 toc:          false
 navigation:   false

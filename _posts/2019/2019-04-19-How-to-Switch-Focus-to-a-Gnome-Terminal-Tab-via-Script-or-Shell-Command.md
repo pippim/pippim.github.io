@@ -10,9 +10,9 @@ created_date: 2019-04-19 12:41:11
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,780 "
+views:        "1,798 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-19-How-to-Switch-Focus-to-a-Gnome-Terminal-Tab-via-Script-or-Shell-Command.md
 toc:          false
 navigation:   false

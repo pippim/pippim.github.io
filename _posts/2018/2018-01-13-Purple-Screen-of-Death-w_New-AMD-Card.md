@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,171 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-13-Purple-Screen-of-Death-w_New-AMD-Card.md
 toc:          false
 navigation:   false
@@ -35,8 +35,8 @@ From the [AMD website][2] instructions for installing under Ubuntu 16.04 are lis
 
 ``` 
 `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash amdgpu.vm_fragment_size=9"`
-- Update grub and reboot as root:```
-
+```
+- Update grub and reboot as root:
 
 ``` 
 `update-grub;reboot`

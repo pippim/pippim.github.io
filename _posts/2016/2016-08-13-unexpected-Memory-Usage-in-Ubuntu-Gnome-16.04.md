@@ -10,9 +10,9 @@ created_date: 2016-08-13 23:40:21
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,214 "
+views:        "3,215 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-13-unexpected-Memory-Usage-in-Ubuntu-Gnome-16.04.md
 toc:          false
 navigation:   false

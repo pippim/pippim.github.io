@@ -10,9 +10,9 @@ created_date: 2019-08-07 23:18:13
 edit_date:    2019-08-08 00:05:07
 votes:        "3 "
 favorites:    
-views:        "319 "
+views:        "321 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-07-Is-it-possible-to-patch-without-spiking-the-CPU_.md
 toc:          false
 navigation:   false
@@ -40,8 +40,8 @@ author "Serge Hallyn <serge.hallyn@canonical.com>"
 start on mounted MOUNTPOINT=/sys/fs/cgroup
 
 pre-start script
-	test -x /bin/cgroups-mount || { stop; exit 0; }```
-
+```
+	test -x /bin/cgroups-mount || { stop; exit 0; }
 	test -d /sys/fs/cgroup || { stop; exit 0; }
 	/bin/cgroups-mount
 	cgconfigparser -l /etc/cgconfig.conf
@@ -49,8 +49,8 @@ pre-start script
 end script
 
 post-stop script
-	if [ -x /bin/cgroups-umount ]```
-
+```
+	if [ -x /bin/cgroups-umount ]
 	then
 		/bin/cgroups-umount
 	fi

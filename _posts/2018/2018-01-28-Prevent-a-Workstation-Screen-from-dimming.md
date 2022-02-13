@@ -10,9 +10,9 @@ created_date: 2018-01-28 19:43:05
 edit_date:    2018-01-28 23:35:25
 votes:        "2 "
 favorites:    
-views:        "494 "
+views:        "495 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-28-Prevent-a-Workstation-Screen-from-dimming.md
 toc:          false
 navigation:   false

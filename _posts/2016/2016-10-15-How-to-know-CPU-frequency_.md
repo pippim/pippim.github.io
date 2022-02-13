@@ -10,9 +10,9 @@ created_date: 2016-10-15 18:36:33
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "5,972 "
+views:        "5,989 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-15-How-to-know-CPU-frequency_.md
 toc:          false
 navigation:   false

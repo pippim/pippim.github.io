@@ -10,9 +10,9 @@ created_date: 2019-04-15 11:27:40
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "7,661 "
+views:        "7,717 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-15-Default-Ubuntu-Desktop-with-TightVnc-and-Windows-Linux-Subsystem.md
 toc:          false
 navigation:   false
@@ -28,8 +28,8 @@ The important thing is to install it accepting the defaults and then (for me) to
 ``` 
 PATH="/mnt/e/bin:/mnt/e/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:"
 
-to this:```
-
+```
+to this:
 
 ``` 
 PATH="/mnt/e/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"

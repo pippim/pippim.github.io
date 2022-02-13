@@ -10,9 +10,9 @@ created_date: 2020-08-01 00:17:46
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "46,316 "
+views:        "46,777 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-01-PIL-Issue_-OSError_-cannot-open-resource.md
 toc:          false
 navigation:   false

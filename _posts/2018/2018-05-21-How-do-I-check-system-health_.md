@@ -10,9 +10,9 @@ created_date: 2018-05-21 13:37:40
 edit_date:    2020-10-12 02:07:35
 votes:        "12 "
 favorites:    
-views:        "29,267 "
+views:        "29,477 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-How-do-I-check-system-health_.md
 toc:          false
 navigation:   false

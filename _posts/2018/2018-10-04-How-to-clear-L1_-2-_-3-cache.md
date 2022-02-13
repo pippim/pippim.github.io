@@ -10,9 +10,9 @@ created_date: 2018-10-04 03:40:38
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,134 "
+views:        "1,145 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-04-How-to-clear-L1_-2-_-3-cache.md
 toc:          false
 navigation:   false

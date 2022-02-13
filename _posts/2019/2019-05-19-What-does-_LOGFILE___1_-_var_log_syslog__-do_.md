@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1144592
 type:         Answer
 tags:         command-line bash yad
 created_date: 2019-05-19 20:05:53
-edit_date:    
-votes:        "6 "
+edit_date:    2022-02-12 16:23:16
+votes:        "7 "
 favorites:    
-views:        "408 "
-accepted:     
-uploaded:     2022-02-12 11:18:14
+views:        "416 "
+accepted:     Accepted
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-19-What-does-_LOGFILE___1_-_var_log_syslog__-do_.md
 toc:          false
 navigation:   false
@@ -21,7 +21,10 @@ clipboard:    true
 
 The command: `LOGFILE=${1:-/var/log/syslog}` is shorthand for:
 
-``` 
+
+
+
+``` bash
 if [[ "$1" == "" ]]               # if parameter 1 is blank
 then
     LOGFILE="/var/log/syslog"     # LOGFILE set to /var/log/syslog
@@ -36,7 +39,7 @@ If parameter 1 is not passed you see:
 
 If you pass paraemeter 1:
 
-``` 
+``` bash
 journalctl -b > /tmp/messages
 yad-logfile /tmp/messages
 ```

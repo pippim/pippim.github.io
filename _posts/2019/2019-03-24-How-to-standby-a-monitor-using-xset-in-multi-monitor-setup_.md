@@ -10,9 +10,9 @@ created_date: 2019-03-24 16:43:11
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "3,306 "
+views:        "3,322 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-24-How-to-standby-a-monitor-using-xset-in-multi-monitor-setup_.md
 toc:          false
 navigation:   false

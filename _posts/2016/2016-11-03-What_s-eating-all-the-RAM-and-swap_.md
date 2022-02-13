@@ -10,9 +10,9 @@ created_date: 2016-11-03 10:19:56
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "377 "
+views:        "379 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-03-What_s-eating-all-the-RAM-and-swap_.md
 toc:          false
 navigation:   false

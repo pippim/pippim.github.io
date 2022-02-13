@@ -10,9 +10,9 @@ created_date: 2018-02-20 00:07:24
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "738 "
+views:        "741 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-20-Seemingly-locked-in-console-after-CTRL_ALT_F1-----How-to-quit_.md
 toc:          false
 navigation:   false

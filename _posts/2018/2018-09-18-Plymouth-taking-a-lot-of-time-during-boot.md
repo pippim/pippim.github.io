@@ -10,9 +10,9 @@ created_date: 2018-09-18 03:41:31
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "4,285 "
+views:        "4,301 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-18-Plymouth-taking-a-lot-of-time-during-boot.md
 toc:          false
 navigation:   false

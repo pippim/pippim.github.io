@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "332 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-01-Cannot-mount-a-blank-dvd-in-ubuntu-14.04.md
 toc:          false
 navigation:   false

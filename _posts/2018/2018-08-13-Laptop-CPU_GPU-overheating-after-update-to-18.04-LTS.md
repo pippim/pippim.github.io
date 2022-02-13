@@ -10,9 +10,9 @@ created_date: 2018-08-13 23:58:11
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "17,763 "
+views:        "17,767 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-13-Laptop-CPU_GPU-overheating-after-update-to-18.04-LTS.md
 toc:          false
 navigation:   false

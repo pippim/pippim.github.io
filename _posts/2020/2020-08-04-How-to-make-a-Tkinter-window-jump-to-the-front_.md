@@ -10,9 +10,9 @@ created_date: 2020-08-04 01:22:26
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "85,544 "
+views:        "85,882 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-04-How-to-make-a-Tkinter-window-jump-to-the-front_.md
 toc:          false
 navigation:   false

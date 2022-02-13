@@ -10,9 +10,9 @@ created_date: 2018-07-29 02:29:31
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,353 "
+views:        "3,389 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-29-Execute-a-script-when-the-output-of-a-command-has-a-specific-string.md
 toc:          false
 navigation:   false

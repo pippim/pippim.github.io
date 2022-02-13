@@ -10,9 +10,9 @@ created_date: 2019-06-26 00:44:37
 edit_date:    2019-06-27 23:20:51
 votes:        "4 "
 favorites:    
-views:        "7,088 "
+views:        "7,134 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-26-Copy-group-of-files-_Filename*_-to-backup-_Filename*.bak_.md
 toc:          false
 navigation:   false
@@ -34,8 +34,8 @@ cps () {
     # ls "$1"* | while read varname; do cp -a "$varname" "$varname$2"; done
 }
 
-- `for f in "$1"*; do` : `$1` is the `gmail-meta3` parameter and `f` is the list of files matching. Combined this means for gmail-meta3, gmail-meta3-LAB-9999, etc. do the following```
-
+```
+- `for f in "$1"*; do` : `$1` is the `gmail-meta3` parameter and `f` is the list of files matching. Combined this means for gmail-meta3, gmail-meta3-LAB-9999, etc. do the following
 - `[[ ! "$f" == *"$2" ]] &&` : `$f` is the same as `f` above. `$2` is the `.bak` parameter passed. Combined this means if the filename doesn't end in `.bak` (because we don't want to copy `.bak` and create `.bak.bak`) then do the following
 - `cp -a "$f" "$f$2";` copy gmail-meta3 to gmail-meta3.bak, etc.
 - `done` : loop back and grab next filename in `gmail-meta3`* list.

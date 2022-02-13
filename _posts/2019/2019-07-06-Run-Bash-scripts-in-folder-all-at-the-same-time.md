@@ -10,9 +10,9 @@ created_date: 2019-07-06 17:17:00
 edit_date:    2019-07-07 17:52:17
 votes:        "9 "
 favorites:    
-views:        "4,231 "
+views:        "4,252 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-Run-Bash-scripts-in-folder-all-at-the-same-time.md
 toc:          false
 navigation:   false
@@ -65,8 +65,8 @@ The first time you run the script it will only echo the names of the 200 scripts
 
 ``` bash
     echo bash "$Script" &
-to:```
-
+```
+to:
 
 ``` bash
     bash "$Script" &

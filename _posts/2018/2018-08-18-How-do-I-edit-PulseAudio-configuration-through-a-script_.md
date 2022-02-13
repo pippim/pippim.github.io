@@ -10,9 +10,9 @@ created_date: 2018-08-18 19:14:50
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "2,244 "
+views:        "2,260 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-18-How-do-I-edit-PulseAudio-configuration-through-a-script_.md
 toc:          false
 navigation:   false

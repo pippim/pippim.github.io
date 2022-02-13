@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "131 "
 accepted:     Accepted
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-29-summary-and-restricted-output-from-fdisk-in-ubuntu-bionic-beaver.md
 toc:          false
 navigation:   false

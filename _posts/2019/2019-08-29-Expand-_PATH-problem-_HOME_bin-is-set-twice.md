@@ -10,9 +10,9 @@ created_date: 2019-08-29 15:21:40
 edit_date:    2019-08-30 13:25:10
 votes:        "3 "
 favorites:    
-views:        "466 "
+views:        "467 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-29-Expand-_PATH-problem-_HOME_bin-is-set-twice.md
 toc:          false
 navigation:   false

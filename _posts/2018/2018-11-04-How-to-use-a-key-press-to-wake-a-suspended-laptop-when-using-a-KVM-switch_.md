@@ -10,9 +10,9 @@ created_date: 2018-11-04 00:33:56
 edit_date:    2018-11-04 15:41:57
 votes:        "3 "
 favorites:    
-views:        "4,985 "
+views:        "4,996 "
 accepted:     
-uploaded:     2022-02-12 11:18:14
+uploaded:     2022-02-13 07:46:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-How-to-use-a-key-press-to-wake-a-suspended-laptop-when-using-a-KVM-switch_.md
 toc:          false
 navigation:   true
@@ -67,8 +67,8 @@ $lsusb -t
 >/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=ehci-pci/2p, 480M  
 ``` 
 |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/8p, 480M  
->/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=ehci-pci/2p, 480M  ```
-  
+```
+>/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=ehci-pci/2p, 480M  
 >    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/6p, 480M  
 
 Bus 3, port 13 matches the bus/port returned by grep (3-13) 
@@ -110,10 +110,6 @@ $ sudo nano /etc/rc.local
 Add the following lines after the comments and before 'exit 0'  
 
 ``` 
-
-<a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
-
 # Enable Wake on IR for USB bus 3 port 13.  
 echo enabled > /sys/bus/usb/devices/3-13/power/wakeup
 ```
@@ -136,6 +132,10 @@ One problem with this approach is that if the USB port the IR device is plugged 
 ----------
 
 
+
+<a id="hdr1"></a>
+<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+
 # Original Answer Below
 
 This question has three answers that may work for you: [Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro)](Wake up from suspend using wireless USB keyboard or mouse (for any Linux Distro))
@@ -150,16 +150,16 @@ hit in terminal:
 
 ``` 
 grep . /sys/bus/usb/devices/*/power/wakeup
-The result, for me, was to find out that all usb were disabled.```
-
+```
+The result, for me, was to find out that all usb were disabled.
 So now, type:
 
 1.
 
 ``` 
 sudo su
-we have now root privillages.```
-
+```
+we have now root privillages.
 
 2.I have 8 usb ports (**you do that for as many usb ports you have**) ,so: 
 
@@ -196,6 +196,10 @@ I hope it works for all of you. This guide was made after testing all other poss
 
 ----------
 
+
+
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
 
 # Answer 2 (7 upvotes)
 
@@ -237,6 +241,10 @@ ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="062a", ATTRS{idProduct}=="410
 ----------
 
 
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+
 # Answer 3
 
 Pavlos Theodorou's answer is very helpful.  I would like to add that you can find the usb device that your mouse/keyboard is connected to at boot-up by piping *dmesg* through *grep* a couple of times, then *egrep* once, and finally using *tail* to make sure it was the most recent entry. 
@@ -253,11 +261,7 @@ echo enabled > /sys/bus/usb/devices/${KB}/power/wakeup
 This works on boot, but doesn't seem to run on wake from suspend, so I had to put a script file in /lib/systemd/system-sleep/.  Create it, set it as globally executable and give it a name that starts with a double digit number between 00 and 99.  My script is as follows, again substite ***your*** keyboard/mouse verbage from dmesg:
 
 ``` sh
-
-<a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
-
-# !/bin/sh
+#!/bin/sh
 
 # Action script to enable wake after suspend by keyboard or mouse
 
@@ -284,6 +288,6 @@ For some reason I can't explain, the 'post' sleep *if* statement only works ever
 
 
 
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a></div>
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a></div>
 
