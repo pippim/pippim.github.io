@@ -159,14 +159,25 @@ The program automatically:
 
 # Stack Exchange Data Explorer
 
-The first step in converting Stack Exchange posts to {{ site.title }} website posts is to run a 
-[Stack Exchange Data Explorer Query 🔗](https://data.stackexchange.com/){:target="_blank"}. 
-The Query finds all your
-Stack Exchange Questions and Answers, up to 10 MB.
+The **Stack Exchange Data Explorer** retrieves all your posts from the
+Stack Exchange (SE) network into a CSV file (up to 10 MB) for downloading.
+
+To download your SE posts you will need to:
+
+- Click the link below
+- Log in to the SE Data Explorer
+- Search for the query: *"All my posts on the SE network"*
+- Enter your network ID for the query parameter. E.G. 4775729
+- After a few minutes, when the query completes, download the Query Results.
+
+Each of these steps is described in detail in the following sections.
 
 ## First Step is to Log In
 
-After clicking the above link you are presented with the Log In screen:
+The first step in converting Stack Exchange posts to {{ site.title }}
+website posts is to run a 
+[Stack Exchange Data Explorer Query 🔗](https://data.stackexchange.com/){:target="_blank"}. 
+After clicking the link you are presented with the Log In screen:
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer login.png"
    alt="Stack Exchange Data Explorer Log In Screen"
