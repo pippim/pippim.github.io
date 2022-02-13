@@ -117,8 +117,8 @@ You can connect to other sound servers running on the LAN by using Zeroconf/Avah
 # for servers
 ``` 
 load-module module-zeroconf-publish
-# for clients```
-
+```
+# for clients
 ``` 
 load-module module-zeroconf-discover
 ```
