@@ -1,11 +1,13 @@
 // From: https://stackoverflow.com/a/12393346/6929343
 window.MyLib = {}; // global Object container; don't use var
 
-var search_include = null         // global context
-var search_urls = null           //   "      "
+var search_include = null         // global context old format as list of post indices
+var search_words = null           // global context new format as dictionary of points
+var search_urls = null            //   "      "
 
 async function load_search_objects() {
     search_include = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json');
+    search_words = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_words.json');
     search_urls  = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json');
 
     /* Following doesn't work when search_include is still a promise and not yet an array....
@@ -84,7 +86,8 @@ window.onclick = function (event) {
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 function submitted(event) {
     event.preventDefault();                 // Not sure what this does?
-    const results = get_results(q.value);   // URLS matching search words into array
+    // const results = get_results(q.value);   // URLS matching search words into array
+    const results = get_hits(q.value);   // URLS matching search words into array
     //console.log("Number of results: " + results.length);
     if (results.length == 0) {
         html = "<h2> 🔍 &emsp; No results found!</h2>\n";
@@ -100,28 +103,25 @@ function submitted(event) {
     } else {
         var html = "<h2>" + results.length.toString() + " results found.</h2>\n"
     }
-    const top_summary = sum_and_sort(results, 1000); // Maximum 1000 links
-    //console.log("input width: " + q.offsetWidth);
-    //console.log("Top 25 results: " + top_summary + " | Top 5 URLs below:");
-    //for (url_ndx of top_summary.slice(0, 5)) {
-        // console.log("url_ndx: " + url_ndx + " | URL: " + search_urls[url_ndx]);
-        // const arr = search_urls[url_ndx].split(' | ', 1);
-        // hyper_link = arr[0];
-        // hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
-        // console.log("url_ndx: " + url_ndx + " | Title: " + hyper_title);
-    //}
+    // const top_summary = sum_and_sort(results, 1000); // Maximum 1000 links
+    const top_summary = results // Maximum 1000 links
+
     // Process all results
     html += "<ol>\n"
-    for (url_ndx of top_summary) {
+    for (const [url_ndx, value] in Object.entries(top_summary)) {
+    // for (url_ndx of top_summary) {
+    //   const value = 1.11
+
         const arr = search_urls[url_ndx].split(' | ', 1);
         hyper_link = arr[0];
         hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
-        html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n";
+        html += "  <li><a href='" + hyper_link + "'>" + hyper_title +
+                 " <badge> " + floatToStr(value) + " </badge> score" + </a></li>\n";
     }
     html += "</ol>\n";
 
     h.innerHTML = html;              // Put search results into modal box
-    m.style.display = "block";       // Display search results by displaying modal
+    m.style.display = "block";       // Display search results by revealing modal
 }
 
 f.addEventListener('submit', submitted);
@@ -160,18 +160,55 @@ function check_q_values() {
     }
 }
 
+/* NEW format using object of posts and points */
+function get_hits(submit_str) {
+    // Build object key/value pairs of url index found and total points
+    const url_ndx_points = {};
+    const words = submit_str.split(' ');
+
+    for (const word of words) {
+        l_word = word.toLowerCase();
+        // console.log('l_word: ' + l_word);
+        // if (typeof search_include[l_word] !== undefined && search_include[l_word] !== null) {
+        if (l_word in search_words) {
+            // console.log('search_include[l_word]: ' + search_include[l_word]);
+            let result_indices = search_words[l_word] + '';
+            // append '' see: https://stackoverflow.com/a/10145979/6929343
+            const results = result_indices.split(",");
+            // console.log('results: ' + results)
+            for (const [key, value] in Object.entries(results)) {
+                if (key in url_ndx_points) {
+                //if (url_ndx_points[key]){
+                    // Key Exists push into array
+                    url_ndx_points[key] += value;
+                } else {
+                    // Key Exists push into array
+                    url_ndx_points[key] = value;
+                }
+            }
+            // console.log('url_ndx_points: ' + url_ndx_points)
+        }
+    }
+    // See: https://stackoverflow.com/a/7889040/6929343
+    console.log('< SORT url_ndx_points: ' + url_ndx_points)
+    url_ndx_points.sort((a, b) => parseFloat(b) - parseFloat(a));
+    console.log('> SORT url_ndx_points: ' + url_ndx_points)
+    return url_ndx_points
+}
+
+/* OLD format using array of posts */
 function get_results(submit_str) {
     // Build list array of each time url index found
     const results_list = [];
     const words = submit_str.split(' ');
 
     for (const word of words) {
-        lword = word.toLowerCase();
-        // console.log('lword: ' + lword);
-        // if (typeof search_include[lword] !== undefined && search_include[lword] !== null) {
-        if (lword in search_include) {
-            // console.log('search_include[lword]: ' + search_include[lword]);
-            let result_indices = search_include[lword] + '';
+        l_word = word.toLowerCase();
+        // console.log('l_word: ' + l_word);
+        // if (typeof search_include[l_word] !== undefined && search_include[l_word] !== null) {
+        if (l_word in search_include) {
+            // console.log('search_include[l_word]: ' + search_include[l_word]);
+            let result_indices = search_include[l_word] + '';
             // append '' see: https://stackoverflow.com/a/10145979/6929343
             const results = result_indices.split(",");
             // console.log('results: ' + results)
