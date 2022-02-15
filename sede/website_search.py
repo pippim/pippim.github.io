@@ -106,7 +106,8 @@ import json
 """
 
 # https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json
-INCLUDE_FILE = "../assets/json/search_include.json"
+#INCLUDE_FILE = "../assets/json/search_include.json"   # Old format as list
+INCLUDE_FILE = "../assets/json/search_words.json"   # New format as dictionary
 EXCLUDE_FILE = "../assets/json/search_exclude.json"
 SYMBOL_FILE = "../assets/json/search_symbol.json"
 # https://github.com/pippim/pippim.github.io/blob/main/assets/json/search_url.json
@@ -145,7 +146,7 @@ exclude_word_list = [
     'i', 'if', "i'm", 'in', 'instead', 'interest', 'it', 'itself',
     'just',
     'keep', 'know', 'known',
-    'laptop', 'less', 'like', 'linux', 'look',
+    'laptop', 'less', 'let', 'like', 'linux', 'look',
     'many', 'me', 'message', 'mine', 'more', 'modify', 'morning', 'my', 'myself',
     'neat', 'need', 'never', 'new', 'newbie', 'nice', 'night',
     'no', 'not', 'note', 'nothing',
@@ -156,13 +157,13 @@ exclude_word_list = [
     'said', 'script', 'searching', 'seems', 'set', 'she', 'should', 'side',
     'so', 'solution', 'soon', 'someone', 'something', 'sometime',
     'strange', 'suggest', 'suggestion', 'sure',
-    'thank', 'the', 'them', 'then', 'think', 'thought', 'through',
+    'thank', 'the', 'them', 'then', 'they', 'think', 'thought', 'through',
     'time', 'tired', 'to', 'today', 'tomorrow', 'tonight', 'tried', 'try',
     'ubuntu', 'unknown', 'until', 'unless', 'us',
-    'very', 'verify',
+    'very', 'vex', 'verify',
     'who', 'what', 'where', 'when', 'why', 'want', 'way', 'we', 'whenever',
-    'windows', 'weird', 'will',  'willing', 'wish', 'wonder', "won't",
-    'work', 'working', 'would', 'wrong',
+    'which', 'whichever', 'windows', 'weird', 'will',  'willing', 'wish',
+    'wonder', "won't", 'work', 'working', 'would', 'wrong',
     'yes', 'you', 'your', 'yourself', "you're",
     'zealous', 'zombie', 'january', 'february', 'march', 'april', 'may',
     'june', 'july', 'august', 'september', 'october', 'november', 'december',
@@ -174,7 +175,7 @@ exclude_word_list = [
 # Create dictionary from list, each key has value 0 (count word usage)
 # At EOJ write out dictionary to JSON file exclude.json for website to use
 
-tt_DEBUG = False  # Print debug events
+ws_DEBUG = True  # Print debug events
 
 
 class InitCommonVars:
@@ -232,7 +233,8 @@ class WebsiteSearch(InitCommonVars):
                 # https://stackoverflow.com/a/12992212/6929343
                 self.post_excluded[word] = self.post_excluded.get(word, 0) + 1
             else:
-                self.post_included[word] = self.post_included.get(word, 0) + 1
+                # Add the weight of the word between 0.5 in Body to 10.0 in Title
+                self.post_included[word] = self.post_included.get(word, 0.0) + points
 
     def remove_pairs(self, word):
         """ Recursive call such that "**Brightness**" becomes Brightness """
@@ -251,12 +253,13 @@ class WebsiteSearch(InitCommonVars):
                 word = word[:-1]
                 word = self.remove_pairs(word)
 
+        # TODO: Fix 'end][1]][1]', '[1]', '[![female', '[![male', 'end][2]][2]'
         # Note we want to keep $brightness as bash variable name
-        if first_char in ".,:*`":
+        if first_char in ".,:*`(":
             word = word[1:]
             word = self.remove_pairs(word)
 
-        if last_char in ".,:*`":
+        if last_char in ".,:*`)?":
             word = word[:-1]
             word = self.remove_pairs(word)
 
@@ -294,10 +297,14 @@ class WebsiteSearch(InitCommonVars):
     def post_save(self):
         """ Roll up post totals into site totals
         """
-        for i in self.post_included:
+        for word in self.post_included:
             # For every word included in post, update site included word dictionary
-            self.site_included.setdefault(i, [])
-            self.site_included[i].append(self.post_index)
+            # old list format below...
+            #self.site_included.setdefault(word, [])
+            #self.site_included[word].append(self.post_index)
+            # New dictionary format below...
+            self.site_included.setdefault(word, {})
+            self.site_included[word][str(self.post_index)] = self.post_included[word]
         for i in self.post_excluded:
             # For counts of words excluded from post, update site excluded word count
             self.site_excluded.setdefault(i, 0)
@@ -318,23 +325,24 @@ class WebsiteSearch(InitCommonVars):
         with open(URL_FILE, 'w') as fh:
             fh.write(json_object)
 
-        print('website-search.py')
-        print('total indexed pages: ', len(self.url_list))
-        print('total included words:', len(self.site_included))
+        d_print('website-search.py')
+        d_print('last post included:', self.post_included)
+        d_print('total indexed pages: ', len(self.url_list))
+        d_print('total included words:', len(self.site_included))
         total = 0
         for i in self.site_included:
             total += len(self.site_included[i])
-        print('total html page references:', total)
-        print('total excluded words:', len(self.site_excluded))
+        d_print('total html page references:', total)
+        d_print('total excluded words:', len(self.site_excluded))
         total = 0
         for i in self.site_excluded:
             total += self.site_excluded[i]
-        print('total times words excluded:', total)
+        d_print('total times words excluded:', total)
 
 
 def d_print(*args):
-    """ Only print debugging lines when tt_DEBUG is true """
-    if tt_DEBUG is True:
+    """ Only print debugging lines when ws_DEBUG is true """
+    if ws_DEBUG is True:
         prt_time = dt.utcnow().strftime("%M:%S.%f")[:-3]
         print(prt_time, *args)
 

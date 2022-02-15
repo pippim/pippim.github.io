@@ -23,6 +23,7 @@
 #       Jan. 26 2022 - Don't include self-answered with low votes
 #       Jan. 28 2022 - Website Search
 #       Feb. 08 2022 - EXTRA_SEARCH_FILES - ADD .md files to search dictionary
+#       Feb. 14 2022 - WORD_SEARCH_POINTS - Weighting system where word appears
 #
 # ==============================================================================
 
@@ -171,7 +172,9 @@ EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
 # Future upgrade, give points (weight) for place search word is used
 TITLE_SEARCH_POINTS = 10.0  # ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
 TAG_SEARCH_POINTS = 5.0     # ws.parse(tags, TAG_SEARCH_POINTS)
-WORD_SEARCH_POINTS = 0.5    # ws.parse(line, WORD_SEARCH_POINTS)
+# ws.parse(line, WORD_SEARCH_POINTS[current_header_level])
+# List depending on: Line  H1   H2   H3   H4    H5   H6
+WORD_SEARCH_POINTS = [0.5, 2.0, 1.5, 1.0, 0.75, 0.5, 0.5]
 # All saved posts are indexed for searching but, add files below too:
 EXTRA_SEARCH_FILES = ['../about.md', '../answer.md', '../index.md',
                       '../mserve.md', '../programs.md', '../stack.md']
@@ -179,10 +182,8 @@ EXTRA_SEARCH_FILES = ['../about.md', '../answer.md', '../index.md',
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 # If not desired, set `CONFIG_YML = None`
 CONFIG_YML = "../_config.yml"
-
-
 code_url = None             # https://github.com/pippim/pippim.github.io/blob/main
-html_url = None
+html_url = None             # https://pippim.github.io derived from code_url
 
 
 ''' Initialize Global Variables '''
@@ -358,6 +359,7 @@ alternate_h1 = 0            # Alternate H1 lines followed by "=="
 alternate_h2 = 0            # Alternate H2 lines followed by "--"
 ''' Counts of header levels - H1, H2 ... H6 '''
 header_levels = [0, 0, 0, 0, 0, 0]
+current_header_level = 0    # 0=None | 1=#=<h1> | 2=##=<h2> | 3=###=<h3>, etc.
 paragraph_count = 0         # How many paragraphs in post last one not counted
 word_count = 0              # How many words by splitting whitespace
 tags = []                   # Tags used in this blog post
@@ -685,6 +687,9 @@ def header_space(ln):
     global header_count, header_space_count
     global lines, line_index, header_levels
     global alternate_h1, alternate_h2
+    global current_header_level
+
+    current_header_level = 0  # 0=None | 1=#=<h1> | 2=##=<h2> | 3=###=<h3>...
 
     if in_code_block or in_code_indent:
         return ln
@@ -694,7 +699,11 @@ def header_space(ln):
         header_count += 1   # For current post, reset between posts
         # How many '#' are there at line start?
         hash_count = len(ln) - len(ln.lstrip('#'))
+        current_header_level = hash_count
+        # 0=None | 1=#=<h1> | 2=##=<h2> | 3=###=<h3> | ... 6=######<h6>
+
         if hash_count > 6:
+            current_header_level = 6  # Search Word Weight List only has 7
             return ln
 
         # Is first character after "#" a space?
@@ -1463,7 +1472,7 @@ def check_code_block(ln):
         # Store as language_used for inside of code block.
         language_used = ln.split(": ")[1]
         # Strip off " -->" at end of string
-        language_used = language_used[:-4]
+        language_used = language_used.lower()[:-4]
         if language_used.startswith("lang-"):
             # Strip off "lang-" at start of string
             language_used = language_used[5:]
@@ -2859,7 +2868,7 @@ def set_config_code_url():
 
     """
     global code_url  # https://github.com/pippim/pippim.github.io/blob/main
-    global html_url  #
+    global html_url  # https://pippim.github.io derived from code_url
 
     if FRONT_GIT_URL is None:
         return ""  # They don't want this glorious feature! :)
@@ -2876,6 +2885,7 @@ def set_config_code_url():
             # becomes:
             #   https://pippim.github.io
             parts = code_url.split('/')
+            # html_url https://pippim.github.io derived from code_url
             html_url = "https://" + parts[4]
             #print('html_url:', html_url)
             # append "../_posts/" as "/_posts"
@@ -3147,6 +3157,7 @@ for row in rows:
     header_space_count = 0  # How many spaces had to be added after #?
     ''' Counts of header levels - H1, H2 ... H6 '''
     header_levels = [0, 0, 0, 0, 0, 0]
+    current_header_level = 0  # 0=None | 1=#=<h1> | 2=##=<h2> | 3=###=<h3>, etc.
     paragraph_count = 0     # How many paragraphs (headers count as 2) in post
     word_count = 0          # How many words (includes "## ") in post
     tags = []               # Tags used in this blog post
@@ -3335,7 +3346,7 @@ for row in rows:
         # Save header levels counts we have now to "old_"
         old_header_levels = list(header_levels)
         line = header_space(line)   # #Header, Alt-H1, Alt-H2. Set header_levels
-        ws.parse(line, WORD_SEARCH_POINTS)
+        ws.parse(line, WORD_SEARCH_POINTS[current_header_level])
         if insert_nav_bar:
             sum1 = sum(old_header_levels[:NAV_BAR_LEVEL])
             sum2 = sum(header_levels[:NAV_BAR_LEVEL])
