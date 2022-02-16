@@ -108,7 +108,8 @@ function submitted(event) {
 
     // Process all results
     html += "<ol>\n"
-    for (const [url_ndx, value] in Object.entries(top_summary)) {
+    // for (const [url_ndx, value] in Object.entries(top_summary)) {
+    for (const [url_ndx, value] in top_summary) {
     // for (url_ndx of top_summary) {
     //   const value = 1.11
 
@@ -170,16 +171,7 @@ function get_hits(submit_str) {
         l_word = word.toLowerCase();
         console.log('l_word: ' + l_word);
         if (l_word in search_words) {
-        //if (search_words[l_word]){
-        //if (const [found, posts] in Object.entries(search_words[l_word]){
-            //console.log('search_words: ' + Object.entries(search_words));
-            // PRINTS: 0,[object Object],1,[object Object],2,[object Object],3,
-            //console.log('search_keys: ' + Object.keys(search_words));
-            // PRINTS: 0,[object Object],1,[object Object],2,[object Object],3,
-            //let result_indices = search_words[l_word] + '';
             let result_indices = search_words[l_word]
-            console.log('result_indices.length: ' + result_indices.length)
-            console.log('result_indices: ' + Object.entries(result_indices));
             let url_points = Object.entries(result_indices);
             console.log('url_points: ' + url_points);
             // PRINTS: 113,5.5,238,5.5,474,0.5,572,10
@@ -198,27 +190,10 @@ function get_hits(submit_str) {
                     url_ndx_points[key] = parseFloat(value);
                 }
             }
-            // PRINTS: result_indices: 15
-            // append '' see: https://stackoverflow.com/a/10145979/6929343
-            //const results = result_indices.split(",");
-            //console.log('results.length: ' + results.length)
-            // PRINTS: results.length: 1
-            //for (const [key, value] in Object.entries(results)) {
-             //   if (key in url_ndx_points) {
-                //if (url_ndx_points[key]){
-                    // Key Exists add to value
-             //       url_ndx_points[key] += value;
-             //   } else {
-                    // Key Exists push into array
-             //       url_ndx_points[key] = value;
-             //   }
-            //}
-            // console.log('url_ndx_points: ' + url_ndx_points)
         }
     }
-    console.log('< SORT url_ndx_points: ' + Object.keys(url_ndx_points)[0]);
-    // See: https://stackoverflow.com/a/7889040/6929343 (BROKEN)
-    // url_ndx_points.sort((a, b) => parseFloat(b) - parseFloat(a));
+    console.log('< SORT original first entry: ' +
+                Object.keys(url_ndx_points)[0]);
     // See: https://stackoverflow.com/a/37607084/6929343
     let sorted = Object.entries(url_ndx_points).sort((a, b) => b[1] - a[1])
     console.log('> SORT sorted: ' + sorted)
