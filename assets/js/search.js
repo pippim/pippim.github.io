@@ -172,9 +172,9 @@ function get_hits(submit_str) {
         if (l_word in search_words) {
         //if (search_words[l_word]){
         //if (const [found, posts] in Object.entries(search_words[l_word]){
-            console.log('search_words[l_word][0]: ' + search_words[l_word][0]);
+            console.log('search_words[l_word][0]: ' + Object.entries(search_words));
             let result_indices = search_words[l_word] + '';
-            console.log('result_indices.length: ' + result_indices.length)
+            console.log('result_indices: ' + result_indices.length)
             // append '' see: https://stackoverflow.com/a/10145979/6929343
             const results = result_indices.split(",");
             console.log('results.length: ' + results.length)
