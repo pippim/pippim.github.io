@@ -124,6 +124,8 @@ function submitted(event) {
     event.preventDefault();                 // Not sure what this does?
     // const results = get_results(q.value);   // URLS matching search words into array
     const results = get_hits(q.value);   // URLS matching search words into array
+    console.log('results: ' + results)
+
     //console.log("Number of results: " + results.length);
     if (results.length == 0) {
         html = "<h2> 🔍 &emsp; No results found!</h2>\n";
