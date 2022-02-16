@@ -178,16 +178,17 @@ function get_hits(submit_str) {
             // PRINTS: 0,[object Object],1,[object Object],2,[object Object],3,
             //let result_indices = search_words[l_word] + '';
             let result_indices = search_words[l_word]
+            console.log('result_indices.length: ' + result_indices.length)
             console.log('result_indices: ' + Object.entries(result_indices));
             let url_points = Object.entries(result_indices);
             console.log('url_points: ' + url_points);
+            console.log('url_points.length: ' + url_points.length)
             // PRINTS: 113,5.5,238,5.5,474,0.5,572,10
-            for (var i = 0; i < result_indices.length; i = i + 2) {
+            for (var i = 0; i < url_points.length; i = i + 2) {
             //for (const [key, value] in result_indices) {
                 console.log('key, value: ' + url_points[i].toString() +
                             ", " + url_points[i + 1].toString());
             }
-            console.log('result_indices.length: ' + result_indices.length)
             // PRINTS: result_indices: 15
             // append '' see: https://stackoverflow.com/a/10145979/6929343
             const results = result_indices.split(",");
