@@ -1,12 +1,10 @@
 // From: https://stackoverflow.com/a/12393346/6929343
 window.MyLib = {}; // global Object container; don't use var
 
-var search_include = null         // global context old format as list of post indices
 var search_words = null           // global context new format as dictionary of points
 var search_urls = null            //   "      "
 
 async function load_search_objects() {
-    search_include = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json');
     search_words = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_words.json');
     search_urls  = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json');
 
@@ -188,7 +186,7 @@ function get_hits(submit_str) {
         }
     }
     // console.log('< SORT original first entry: ' +
-                Object.keys(url_ndx_points)[0]);
+    //            Object.keys(url_ndx_points)[0]);
     // See: https://stackoverflow.com/a/37607084/6929343
     let sorted = Object.entries(url_ndx_points).sort((a, b) => b[1] - a[1])
     // console.log('> SORT sorted: ' + sorted)
