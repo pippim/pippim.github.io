@@ -182,12 +182,12 @@ function get_hits(submit_str) {
             console.log('result_indices: ' + Object.entries(result_indices));
             let url_points = Object.entries(result_indices);
             console.log('url_points: ' + url_points);
-            console.log('url_points.length: ' + url_points.length)
             // PRINTS: 113,5.5,238,5.5,474,0.5,572,10
-            for (var i = 0; i < url_points.length; i = i + 2) {
+            console.log('url_points.length: ' + url_points.length)
+            // PRINTS: url_points.length: 4
+            for (var i = 0; i < url_points.length; i++) {
             //for (const [key, value] in result_indices) {
-                console.log('key, value: ' + url_points[i].toString() +
-                            ", " + url_points[i + 1].toString());
+                console.log('key, value: ' + url_points[i].toString();
             }
             // PRINTS: result_indices: 15
             // append '' see: https://stackoverflow.com/a/10145979/6929343
