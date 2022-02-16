@@ -83,48 +83,6 @@ window.onclick = function (event) {
     }
 }
 
-// From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
-function submitted(event) {
-    event.preventDefault();                 // Not sure what this does?
-    // const results = get_results(q.value);   // URLS matching search words into array
-    const results = get_hits(q.value);   // URLS matching search words into array
-    //console.log("Number of results: " + results.length);
-    if (results.length == 0) {
-        html = "<h2> 🔍 &emsp; No results found!</h2>\n";
-        html += "<p>Use more search words that are descriptive.<br><br>\n"
-        html += "Non-descriptive words are ignored. Some example words ignored are:<br><br>\n"
-        html += "&emsp;- who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
-        h.innerHTML = html;
-        //q.value = ""  // Test because this is what X button would do
-        m.style.display = "block";  // Turn on search results display
-        return
-    } else if (results.length == 1) {
-        var html = "<h2>1 result found.</h2>\n"
-    } else {
-        var html = "<h2>" + results.length.toString() + " results found.</h2>\n"
-    }
-    // const top_summary = sum_and_sort(results, 1000); // Maximum 1000 links
-    const top_summary = results // Maximum 1000 links
-
-    // Process all results
-    html += "<ol>\n"
-    // for (const [url_ndx, value] in Object.entries(top_summary)) {
-    for (const [url_ndx, value] in top_summary) {
-    // for (url_ndx of top_summary) {
-    //   const value = 1.11
-
-        const arr = search_urls[url_ndx].split(' | ', 1);
-        hyper_link = arr[0];
-        hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
-        html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a>" +
-                 " <badge> " + value.toString() + " </badge> points." + "</li>\n";
-    }
-    html += "</ol>\n";
-
-    h.innerHTML = html;              // Put search results into modal box
-    m.style.display = "block";       // Display search results by revealing modal
-}
-
 f.addEventListener('submit', submitted);
 
 q.addEventListener('keyup', function() {
@@ -159,6 +117,50 @@ function check_q_values() {
     } else {
         i.style.display = "none";
     }
+}
+
+// From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
+function submitted(event) {
+    event.preventDefault();                 // Not sure what this does?
+    // const results = get_results(q.value);   // URLS matching search words into array
+    const results = get_hits(q.value);   // URLS matching search words into array
+    //console.log("Number of results: " + results.length);
+    if (results.length == 0) {
+        html = "<h2> 🔍 &emsp; No results found!</h2>\n";
+        html += "<p>Use more search words that are descriptive.<br><br>\n"
+        html += "Non-descriptive words are ignored. Some example words ignored are:<br><br>\n"
+        html += "&emsp;- who, what, where, when, why, how, a, the, it, and, or, then, etc.</p>\n"
+        h.innerHTML = html;
+        //q.value = ""  // Test because this is what X button would do
+        m.style.display = "block";  // Turn on search results display
+        return
+    } else if (results.length == 1) {
+        var html = "<h2>1 result found.</h2>\n"
+    } else {
+        var html = "<h2>" + results.length.toString() + " results found.</h2>\n"
+    }
+    // const top_summary = sum_and_sort(results, 1000); // Maximum 1000 links
+    // const top_summary = results // Maximum 1000 links
+    let top_summary = Object.entries(results);
+
+    // Process all results
+    html += "<ol>\n"
+
+    // for (const [url_ndx, value] in Object.entries(top_summary)) {
+    for (const [url_ndx, value] in top_summary) {
+    // for (url_ndx of top_summary) {
+    //   const value = 1.11
+
+        const arr = search_urls[url_ndx].split(' | ', 1);
+        hyper_link = arr[0];
+        hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
+        html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a>" +
+                 " <badge> " + value.toString() + " </badge> points." + "</li>\n";
+    }
+    html += "</ol>\n";
+
+    h.innerHTML = html;              // Put search results into modal box
+    m.style.display = "block";       // Display search results by revealing modal
 }
 
 /* NEW format using object of posts and points */
