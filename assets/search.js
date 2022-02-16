@@ -170,7 +170,9 @@ function get_hits(submit_str) {
         l_word = word.toLowerCase();
         console.log('l_word: ' + l_word);
         if (l_word in search_words) {
-            console.log('search_include[l_word]: ' + search_include[l_word]);
+        //if (search_words[l_word]){
+        //if (const [found, posts] in Object.entries(search_words[l_word]){
+            console.log('search_words[l_word][0]: ' + search_words[l_word][0]);
             let result_indices = search_words[l_word] + '';
             // append '' see: https://stackoverflow.com/a/10145979/6929343
             const results = result_indices.split(",");
