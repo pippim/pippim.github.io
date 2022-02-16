@@ -116,7 +116,7 @@ function submitted(event) {
         hyper_link = arr[0];
         hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
         html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a>" +
-                 " <badge> " + floatToStr(value) + " </badge> points." + "</li>\n";
+                 " <badge> " + floatToString(value) + " </badge> points." + "</li>\n";
     }
     html += "</ol>\n";
 
