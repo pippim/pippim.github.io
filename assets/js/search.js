@@ -187,7 +187,7 @@ function get_hits(submit_str) {
             // PRINTS: url_points.length: 4
             for (var i = 0; i < url_points.length; i++) {
             //for (const [key, value] in result_indices) {
-                console.log('key, value: ' + url_points[i].toString();
+                console.log('key, value: ' + url_points[i].toString());
             }
             // PRINTS: result_indices: 15
             // append '' see: https://stackoverflow.com/a/10145979/6929343
