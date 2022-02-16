@@ -193,9 +193,9 @@ function get_hits(submit_str) {
     // See: https://stackoverflow.com/a/7889040/6929343 (BROKEN)
     // url_ndx_points.sort((a, b) => parseFloat(b) - parseFloat(a));
     // See: https://stackoverflow.com/a/37607084/6929343
-    url_ndx_points = Object.entries(url_ndx_points).sort((a, b) => b[1] - a[1])
+    let sorted = Object.entries(url_ndx_points).sort((a, b) => b[1] - a[1])
     console.log('> SORT url_ndx_points: ' + url_ndx_points)
-    return url_ndx_points
+    return sorted
 }
 
 /* OLD format using array of posts */
