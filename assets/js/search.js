@@ -187,24 +187,32 @@ function get_hits(submit_str) {
             // PRINTS: url_points.length: 4
             for (var i = 0; i < url_points.length; i++) {
             //for (const [key, value] in result_indices) {
-                const [s_key, s_value] = url_points[i].split(',');
-                console.log('key: ' + s_key + ' value: ' + s_value);
-            }
-            // PRINTS: result_indices: 15
-            // append '' see: https://stackoverflow.com/a/10145979/6929343
-            const results = result_indices.split(",");
-            console.log('results.length: ' + results.length)
-            // PRINTS: results.length: 1
-            for (const [key, value] in Object.entries(results)) {
+                const [key, value] = url_points[i].toString().split(',');
+                console.log('key: ' + key + ' value: ' + value);
                 if (key in url_ndx_points) {
                 //if (url_ndx_points[key]){
                     // Key Exists add to value
-                    url_ndx_points[key] += value;
+                    url_ndx_points[key] += parseFloat(value);
                 } else {
                     // Key Exists push into array
-                    url_ndx_points[key] = value;
+                    url_ndx_points[key] = parseFloat(value);
                 }
             }
+            // PRINTS: result_indices: 15
+            // append '' see: https://stackoverflow.com/a/10145979/6929343
+            //const results = result_indices.split(",");
+            //console.log('results.length: ' + results.length)
+            // PRINTS: results.length: 1
+            //for (const [key, value] in Object.entries(results)) {
+             //   if (key in url_ndx_points) {
+                //if (url_ndx_points[key]){
+                    // Key Exists add to value
+             //       url_ndx_points[key] += value;
+             //   } else {
+                    // Key Exists push into array
+             //       url_ndx_points[key] = value;
+             //   }
+            //}
             // console.log('url_ndx_points: ' + url_ndx_points)
         }
     }
