@@ -149,13 +149,12 @@ function submitted(event) {
     html += "<ol>\n"
 
     // for (const [url_ndx, value] in Object.entries(top_summary)) {
-    for (const [url_ndx, value] in top_summary) {
-    // for (url_ndx of top_summary) {
-    //   const value = 1.11
-
-        const arr = search_urls[url_ndx].split(' | ', 1);
+    for (var i = 0; i < results.length; i++) {
+        const [key, value] = results[i].toString().split(',');
+        console.log('key: ' + key + ' value: ' + value);
+        const arr = search_urls[key].split(' | ', 1);
         hyper_link = arr[0];
-        hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
+        hyper_title = search_urls[key].substring(hyper_link.length + 3);
         html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a>" +
                  " <badge> " + value.toString() + " </badge> points." + "</li>\n";
     }
