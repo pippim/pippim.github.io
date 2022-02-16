@@ -22,12 +22,6 @@ async function load_search_objects() {
     */
 }
 
-function search_fetched() {
-    /* Attach to test button onclick event */
-    console.log("search_include: " + search_include['display']);
-    console.log("search_urls: " + search_urls[630]);
-}
-
 async function load(url) {
     let obj = null;
 
@@ -65,7 +59,6 @@ check_q_values();  // Initial 'X' (close on input bar) status when page refreshe
 // When the user clicks on <span> (x), close the modal
 c.onclick = function () {
     m.style.display = "none";   // Turn off display for search results
-    // console.log("c.onclick event");
     // Also called when X clicked in input bar, but handled in i.onclick listen
 }
 
@@ -73,7 +66,6 @@ c.onclick = function () {
 window.onclick = function (event) {
     if (!m.contains(event.target)) {
         m.style.display = "none";   // Turn off display for search results
-        // console.log("window.onclick event outside of modal");
     }
 }
 
@@ -115,11 +107,10 @@ function check_q_values() {
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 function submitted(event) {
+
     event.preventDefault();                 // Not sure what this does?
     const results = get_hits(q.value);      // URLS matching search words into array
-    console.log('results: ' + results)
 
-    //console.log("Number of results: " + results.length);
     if (results.length == 0) {
         html = "<h2> 🔍 &emsp; No results found!</h2>\n";
         html += "<p>Use more search words that are descriptive.<br><br>\n"
@@ -140,7 +131,6 @@ function submitted(event) {
 
     for (var i = 0; i < results.length; i++) {
         const [key, value] = results[i].toString().split(',');
-        console.log('key: ' + key + ' value: ' + value);
         const arr = search_urls[key].split(' | ', 1);
         hyper_link = arr[0];
         hyper_title = search_urls[key].substring(hyper_link.length + 3);
@@ -162,34 +152,21 @@ function get_hits(submit_str) {
 
     for (const word of words) {
         l_word = word.toLowerCase();
-        // console.log('l_word: ' + l_word);
         if (l_word in search_words) {
             let result_indices = search_words[l_word]
             let url_points = Object.entries(result_indices);
-            // console.log('url_points: ' + url_points);
-            // PRINTS: 113,5.5,238,5.5,474,0.5,572,10
-            // console.log('url_points.length: ' + url_points.length)
-            // PRINTS: url_points.length: 4
+
             for (var i = 0; i < url_points.length; i++) {
-            //for (const [key, value] in result_indices) {
                 const [key, value] = url_points[i].toString().split(',');
-                // console.log('key: ' + key + ' value: ' + value);
                 if (key in url_ndx_points) {
-                //if (url_ndx_points[key]){
-                    // Key Exists add to value
                     url_ndx_points[key] += parseFloat(value);
                 } else {
-                    // Key Exists push into array
                     url_ndx_points[key] = parseFloat(value);
                 }
             }
         }
     }
-    // console.log('< SORT original first entry: ' +
-    //            Object.keys(url_ndx_points)[0]);
-    // See: https://stackoverflow.com/a/37607084/6929343
     let sorted = Object.entries(url_ndx_points).sort((a, b) => b[1] - a[1])
-    // console.log('> SORT sorted: ' + sorted)
     return sorted
 }
 
