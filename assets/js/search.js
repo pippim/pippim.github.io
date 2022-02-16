@@ -115,8 +115,8 @@ function submitted(event) {
         const arr = search_urls[url_ndx].split(' | ', 1);
         hyper_link = arr[0];
         hyper_title = search_urls[url_ndx].substring(hyper_link.length + 3);
-        html += "  <li><a href='" + hyper_link + "'>" + hyper_title +
-                 " - " + floatToStr(value) + " points." + </a></li>\n";
+        html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a>" +
+                 " <badge> " + floatToStr(value) + " </badge> points." + "</li>\n";
     }
     html += "</ol>\n";
 
