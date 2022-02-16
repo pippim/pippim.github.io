@@ -169,7 +169,6 @@ function get_hits(submit_str) {
     for (const word of words) {
         l_word = word.toLowerCase();
         // console.log('l_word: ' + l_word);
-        // if (typeof search_include[l_word] !== undefined && search_include[l_word] !== null) {
         if (l_word in search_words) {
             // console.log('search_include[l_word]: ' + search_include[l_word]);
             let result_indices = search_words[l_word] + '';
@@ -189,12 +188,12 @@ function get_hits(submit_str) {
             // console.log('url_ndx_points: ' + url_ndx_points)
         }
     }
-    console.log('< SORT url_ndx_points: ' + url_ndx_points)
+    console.log('< SORT url_ndx_points: ' + Object.keys(url_ndx_points)[0]);
     // See: https://stackoverflow.com/a/7889040/6929343 (BROKEN)
     // url_ndx_points.sort((a, b) => parseFloat(b) - parseFloat(a));
     // See: https://stackoverflow.com/a/37607084/6929343
     let sorted = Object.entries(url_ndx_points).sort((a, b) => b[1] - a[1])
-    console.log('> SORT url_ndx_points: ' + url_ndx_points)
+    console.log('> SORT sorted: ' + sorted)
     return sorted
 }
 
