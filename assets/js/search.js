@@ -174,8 +174,12 @@ function get_hits(submit_str) {
         //if (const [found, posts] in Object.entries(search_words[l_word]){
             console.log('search_words: ' + Object.entries(search_words));
             // PRINTS: 0,[object Object],1,[object Object],2,[object Object],3,
-            let result_indices = search_words[l_word] + '';
+            console.log('search_keys: ' + Object.keys(search_words));
+            // PRINTS: 0,[object Object],1,[object Object],2,[object Object],3,
+            //let result_indices = search_words[l_word] + '';
+            let result_indices = search_words[l_word]
             console.log('result_indices: ' + Object.entries(result_indices));
+            // PRINTS: result_indices: 0,[,1,o,2,b,3,j,4,e,5,c,6,t,7, ,8,O,9,b,10,j,11,e,12,c,13,t,14,]
             console.log('result_indices: ' + result_indices.length)
             // PRINTS: result_indices: 15
             // append '' see: https://stackoverflow.com/a/10145979/6929343
