@@ -172,18 +172,20 @@ function get_hits(submit_str) {
         if (l_word in search_words) {
         //if (search_words[l_word]){
         //if (const [found, posts] in Object.entries(search_words[l_word]){
-            console.log('search_words: ' + Object.entries(search_words));
+            //console.log('search_words: ' + Object.entries(search_words));
             // PRINTS: 0,[object Object],1,[object Object],2,[object Object],3,
-            console.log('search_keys: ' + Object.keys(search_words));
+            //console.log('search_keys: ' + Object.keys(search_words));
             // PRINTS: 0,[object Object],1,[object Object],2,[object Object],3,
             //let result_indices = search_words[l_word] + '';
             let result_indices = search_words[l_word]
             console.log('result_indices: ' + Object.entries(result_indices));
+            let url_points = Object.entries(result_indices);
+            console.log('url_points: ' + url_points);
             // PRINTS: 113,5.5,238,5.5,474,0.5,572,10
             for (var i = 0; i < result_indices.length; i = i + 2) {
             //for (const [key, value] in result_indices) {
-                console.log('key, value: ' + result_indices[i].toString() +
-                            ", " + result_indices[i + 1].toString());
+                console.log('key, value: ' + url_points[i].toString() +
+                            ", " + url_points[i + 1].toString());
             }
             console.log('result_indices.length: ' + result_indices.length)
             // PRINTS: result_indices: 15
