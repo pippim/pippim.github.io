@@ -180,8 +180,10 @@ function get_hits(submit_str) {
             let result_indices = search_words[l_word]
             console.log('result_indices: ' + Object.entries(result_indices));
             // PRINTS: 113,5.5,238,5.5,474,0.5,572,10
-            for (const [key, value] in result_indices) {
-                console.log('key, value: ' + key.toString() + ", " + value.toString());
+            for (var i = 0; i < result_indices.length; i = i + 2)
+            //for (const [key, value] in result_indices) {
+                console.log('key, value: ' + result_indices[i].toString() +
+                            ", " + result_indices[i + 1].toString());
             }
             console.log('result_indices.length: ' + result_indices.length)
             // PRINTS: result_indices: 15
