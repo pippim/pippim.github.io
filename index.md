@@ -154,7 +154,7 @@ Get your own website up and running in a weekend by picking
 from a collection of website designs called themes. Then
 type your information into markdown files. 
 
-GitHub Pages is free. You can update your website from a MAC,
+GitHub Pages is free. Change your website from a MAC,
 a PC running Windows or Linux, and even from your cell phone.
 
 ## **TL;DR**
