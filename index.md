@@ -19,10 +19,11 @@ layout: default
 Welcome to {{ site.title }}'s website. 
 
 A ***different kind*** of site search engine greets you. Others 
-operate at an average speed of 2.5 MB/s over the internet. 
-This one runs at average RAM speed of 19,200 MB/s!
+operate at an average speed of 2.5 MB/s (Megabytes per second) 
+over the internet. This one runs at the speed of your RAM. An
+everyday modern computer speed of 19,200 MB/s!
 
-[Convert]((stack.html)) your most popular *Stack Exchange
+[Convert]((stack.html)) your popular *Stack Exchange
 Posts* to **your own website** with additional features like; 
 Table of Contents, Section Navigation buttons, Copy code 
 blocks to clipboard and Show summary statistics.
