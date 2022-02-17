@@ -144,22 +144,19 @@ for blog posts. You can disable the cookie using links below.
 
 # GitHub Pages
 
-The {{ site.title }} website was created on **GitHub Pages**. You
-can download (or simply view) the {{ site.title }} website
-[on GitHub 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages").
-This current page for example you can find in the markdown file
-called `index.md` by clicking the link.
+The {{ site.title }} website is hosted on **GitHub Pages**.
+You can download (or simply view) the {{ site.title }} 
+website markdown files. For example, `index.md` is the markdown
+file for the page you are reading now and available 
+[here 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages").
 
-With GitHub Pages you can very quickly get your own website up and running by
-simply picking from a collection of website designs called themes. GitHub Pages
-is free to use. Although you will likely do most of your writing from a MAC,
-Linux or Windows PC, one of the cool things is you can change your website from
-a cell phone. This is because GitHub Pages works from any modern browser which
-all modern cell phones have.
+With GitHub Pages you can get your own website up and running
+in a weekend by picking from a collection of website designs 
+called themes. Then simply type your information into markdown
+files. 
 
-The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](stack.html) 
-for `stack-to-blog.py` used to create
-the posts on this {{ site.title }} website will help you create your own website.
+GitHub Pages is free. You can update your website from a MAC,
+a PC running Windows or Linux, and even from your cell phone.
 
 ## **TL;DR**
 
