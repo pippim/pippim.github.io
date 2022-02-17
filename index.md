@@ -25,8 +25,7 @@ This one runs at average RAM speed of 19,200 MB/s!
 Convert your most popular Stack Exchange Posts to your own
 website with additional features like; Table of Contents,
 Section Navigation buttons, Copy code blocks to clipboard
-and summary statistics (or Front Matter in GitHub Pages
-parlance).
+and Show summary statistics.
 
 There are no ads on {{ site.title }}. You don't need to buy 
 {{ site.title }} a coffee (it's already free at work!).
