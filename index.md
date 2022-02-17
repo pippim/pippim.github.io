@@ -155,7 +155,7 @@ from a collection of website designs called themes. Then
 type your information into markdown files. 
 
 GitHub Pages is free. Change your website from a MAC,
-a PC running Windows or Linux, and even from your cell phone.
+a PC running Windows or Linux, and even a smart phone.
 
 ## **TL;DR**
 
