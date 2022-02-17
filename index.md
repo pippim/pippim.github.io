@@ -18,16 +18,16 @@ layout: default
 
 Welcome to {{ site.title }}'s website. 
 
-A different kind of site search engine greets you. Others 
+A ***different kind*** of site search engine greets you. Others 
 operate at an average speed of 2.5 MB/s over the internet. 
 This one runs at average RAM speed of 19,200 MB/s!
 
-Convert your most popular Stack Exchange Posts to your own
-website with additional features like; Table of Contents,
-Section Navigation buttons, Copy code blocks to clipboard
-and Show summary statistics.
+[Convert]((stack.html)) your most popular *Stack Exchange
+Posts* to **your own website** with additional features like; 
+Table of Contents, Section Navigation buttons, Copy code 
+blocks to clipboard and Show summary statistics.
 
-There are no ads on {{ site.title }}. You don't need to buy 
+There are **no ads** on {{ site.title }}. You don't need to buy 
 {{ site.title }} a coffee (it's already free at work!).
 
 ## Navigation Buttons
