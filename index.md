@@ -18,9 +18,9 @@ layout: default
 
 Welcome to {{ site.title }}'s website. 
 
-A different kind of search engine greets you. Most operate at
-2.5 MB/s over the internet. This one runs at 19,200 MB/s at
-average RAM speeds.
+A different kind of site search engine greets you. Others 
+operate at an average speed of 2.5 MB/s over the internet. 
+This one runs at average RAM speed of 19,200 MB/s!
 
 Convert your most popular Stack Exchange Posts to your own
 website with additional features like; Table of Contents,
