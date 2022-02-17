@@ -150,10 +150,9 @@ website markdown files. For example, `index.md` is the markdown
 file for the page you are reading now and available 
 [here 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages").
 
-With GitHub Pages you can get your own website up and running
-in a weekend by picking from a collection of website designs 
-called themes. Then simply type your information into markdown
-files. 
+Get your own website up and running in a weekend by picking
+from a collection of website designs called themes. Then
+type your information into markdown files. 
 
 GitHub Pages is free. You can update your website from a MAC,
 a PC running Windows or Linux, and even from your cell phone.
