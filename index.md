@@ -16,42 +16,32 @@ layout: default
 
 # Introduction
 
-Welcome to {{ site.title }}. A collection of Stack Exchange questions and 
-answers about using your computer in Linux and 
-specifically Ubuntu. All the solutions are free for you
-to use as you like. There are full-fledged applications 
-free for you to use as well. You can even duplicate the
-{{ site.title }} website for free. Then **automatically convert your
-own Stack Exchange posts to your own website.**
+Welcome to {{ site.title }}'s website. 
 
-Check out the [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](stack.html).
+A different kind of search engine greets you. Most operate at
+2.5 MB/s over the internet. This one runs at 19,200 MB/s at
+average RAM speeds.
+
+Convert your most popular Stack Exchange Posts to your own
+website with additional features like; Table of Contents,
+Section Navigation buttons, Copy code blocks to clipboard
+and summary statistics (or Front Matter in GitHub Pages
+parlance).
 
 There are no ads on {{ site.title }}. You don't need to buy 
 {{ site.title }} a coffee (it's already free at work!).
-Maybe some day you'll want to put all your
-technical documentation on an intranet or website. Perhaps you will contract
-{{ site.title }} to help get the job done. Custom projects are the business
-model for how {{ site.title }} will earn revenue.
-
-If you are an aspiring developer perhaps 
-the code published here will help you get a start. 
-If you are a systems administrator perhaps you
- can learn from the questions and answers posted 
-here. If in Technical Support remember "Google search 
-is your friend" and many answers posted here come from
-using the *Google Search* engine.
-
 
 ## Navigation Buttons
 
-In this section we will discuss the *Page Navigation 
+This section discusses the *Page Navigation 
 Buttons* that appear on the top of each page. Then 
 we will discuss the *Section Navigation Buttons* 
 that can appear at the top of major sections.
 
 ### Page Navigation Buttons
 
-The top of each page contains navigation buttons to take you to other pages:
+The top of each page contains a search bar and
+navigation buttons to take you to other pages:
 
 - <kbd>⌂ Home</kbd> brings you to this page.
 
