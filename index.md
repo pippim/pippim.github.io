@@ -88,7 +88,9 @@ the other pippim.com website on Google Sites.
 
 ### Leave a Comment / Question at The Source
 
-Leaving a comment or question at the source such as Stack Exchange answer or GitHub Repo saves you from explaining what your communicadtion is referring to.
+Leaving a comment or question at the source such as 
+Stack Exchange answer or GitHub Repo saves you from 
+specifying what your communication is referring to.
 
 #### Stack Exchange Answers (Ask Ubuntu)
 
@@ -330,7 +332,7 @@ locations:
 - The <kbd>❓ About</kbd> page is stored in `about.md` in `/`.
 - The <kbd>✅ Answers</kbd> page is stored in `answers.md` in `/`. Individual answers are internally known as "blog posts" and are stored in the `_posts` directory with one file per answer.
 - The <kbd>💻 Programs</kbd> page is stored in `programs.md` in `/`.
-- HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in andmarkdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory.
+- HTML encoding can be found in any file. Small bits and pieces of HTML can beven be found in and markdown files which end in `.md`. Pure HTML files (with no markdown or CSS) can be found in the `_includes` directory.
 - Javascript files are kept in `assets/js/`.
 
 
