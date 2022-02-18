@@ -205,7 +205,7 @@ Syntax highlighted code block
 ```
 
 For more details see 
-[GitHub Flavored Markdown 🔗](https://guides.github.com/features/mastering-markdown/ "See how GitHub converts markdown with kramdown  🔗").
+[GitHub Flavored Markdown 🔗](https://guides.github.com/features/mastering-markdown/ "See how GitHub converts markdown with kramdown 🔗").
 
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
