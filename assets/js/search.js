@@ -212,22 +212,22 @@ function check_root_word(word, url_ndx_points) {
     # If word ends in "ing"     "           "           "           "
     */
 
-    const last_3 = word[-3:];
+    const last_3 = word.slice(-3);
     if (last_3 == "ing" || last_3 == "n't") {
-        if (check_word(word[:-3], url_ndx_points)) {
+        if (check_word(word.slice(0, -3), url_ndx_points)) {
             return true;
         }
     }
 
-    const last_2 = word[-2:];
+    const last_2 = word.slice(-2);
     if (last_2 == "ly" || last_2 == "ed" || last_2 == "'s" || last_2 == "es") {
-        if (check_word(word[:-2], url_ndx_points)) {
+        if (check_word(word.slice(0, -2), url_ndx_points)) {
             return true;
         }
 
-    const last_1 = word[-1:];
+    const last_1 = word.slice(-1);
     if (last_1 == "s") {
-        if (check_word(word[:-1], url_ndx_points)) {
+        if (check_word(word.slice(0, -1), url_ndx_points)) {
             return true;
         }
     }
