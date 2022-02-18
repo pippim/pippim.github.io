@@ -152,13 +152,13 @@ function get_hits(submit_str) {
 
     for (const word of words) {
         l_word = word.toLowerCase();
-        /* NEW style
-        if (!check_word(l_word, url_ndx_points)) {
+        /* NEW style */
+        if (!(check_word(l_word, url_ndx_points))) {
             check_root_word(l_word, url_ndx_points);
         }
-        end of NEW style*/
+        /* end of NEW style */
 
-        /* OLD Style */
+        /* OLD Style
         if (l_word in search_words) {
             let result_indices = search_words[l_word]
             let url_points = Object.entries(result_indices);
@@ -172,7 +172,7 @@ function get_hits(submit_str) {
                 }
             }
         }
-        /* End of OLD style */
+        End of OLD style */
     }
     let sorted = Object.entries(url_ndx_points).sort((a, b) => b[1] - a[1])
     return sorted
@@ -180,22 +180,20 @@ function get_hits(submit_str) {
 
 function check_word(l_word, url_ndx_points) {
 
-    if (l_word in search_words) {
-        let result_indices = search_words[l_word]
-        let url_points = Object.entries(result_indices);
+    if (!(l_word in search_words)) return false;
 
-        for (var i = 0; i < url_points.length; i++) {
-            const [key, value] = url_points[i].toString().split(',');
-            if (key in url_ndx_points) {
-                url_ndx_points[key] += parseFloat(value);
-            } else {
-                url_ndx_points[key] = parseFloat(value);
-            }
+    let result_indices = search_words[l_word]
+    let url_points = Object.entries(result_indices);
+
+    for (var i = 0; i < url_points.length; i++) {
+        const [key, value] = url_points[i].toString().split(',');
+        if (key in url_ndx_points) {
+            url_ndx_points[key] += parseFloat(value);
+        } else {
+            url_ndx_points[key] = parseFloat(value);
         }
-        return true;
-    } else {
-        return false;
     }
+    return true;
 }
 
 
