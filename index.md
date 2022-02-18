@@ -103,7 +103,7 @@ link to the original answer on Stack Exchange.
 
 #### GitHub Repos
 
-![Inspectocat detective cat with magnifying glass](/assets/img/Inspectocadt.jpeg){: style="float: left" width="20%"}
+![Inspector cat detective with magnifying glass](/assets/img/Inspectocadt.jpeg){: style="float: left" width="20%"}
 
 For {{ site.title }} programs on GitHub Repos, you can go directly
 to the repository and post a new issue. Issues can be bug reports,
@@ -407,7 +407,8 @@ GitHub Pages Posts.
 The complete `stack-to-blog.py` program can be accessed on the 
 [Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
-The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](stack.html) for `stack-to-blog.py` used to create
+The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](https://pippim.github.io/stack.html)
+for `stack-to-blog.py` used to create
 the posts on this {{ site.title }} website will help you create your own website.
 
 <a id="hdr12"></a>
