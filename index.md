@@ -298,8 +298,8 @@ theme you have selected in your
 The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 
-**GitHub Pages** maintains live listing of 
-[version number 🔗s](https://pages.github.com/versions/ "View current GitHub Pages application version numbers 🔗")
+**GitHub Pages** maintains a real-time listing of 
+[version numbers 🔗](https://pages.github.com/versions/ "View current GitHub Pages application version numbers 🔗")
 for Jekyll, Sass, kramdown, Rouge, etc..
 
 There are many open-source providers involved in the {{ site.title }} website:
