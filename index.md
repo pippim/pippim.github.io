@@ -23,7 +23,7 @@ operate at an average speed of 2.5 MB/s (Megabytes per second)
 over the internet. This one runs at the speed of RAM; about 
 19,200 MB/s!
 
-[Convert](https://pippim.github.io/stack.html) your popular *Stack Exchange
+[Convert](https://pippim.github.io/stack.html "Convert Stack Exchange Posts to Your Own Website") your popular *Stack Exchange
 Posts* to **your own website** with additional features like; 
 Table of Contents, Section Navigation buttons, Copy code 
 blocks to clipboard and Show summary statistics.
@@ -130,11 +130,11 @@ for blog posts. You can disable the cookie using links below.
 
 ### Disable Cookies in Chrome
 
-[Clear, enable, and manage cookies in Chrome 🔗](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop)
+[Clear, enable, and manage cookies in Chrome 🔗](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop "How to clear cookies with Chrome Browser 🔗")
 
 ### Disable Cookies in Firefox
 
-[Block websites from storing cookies in Firefox 🔗](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox)
+[Block websites from storing cookies in Firefox 🔗](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox "How to clear cookies with Chrome Browser 🔗")
 
 {% include image.html src="/assets/img/Octocat.png"
    alt="Octocat image by GitHub.com"
@@ -150,7 +150,7 @@ The {{ site.title }} website is hosted on **GitHub Pages**.
 You can download (or simply view) the {{ site.title }} 
 website markdown files. For example, `index.md` is the markdown
 file for the page you are reading now and available 
-[here 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this website code on GitHub Pages").
+[here 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this page's markdown code in GitHub Pages 🔗").
 
 Get your own website up and running in a weekend by picking
 from a collection of website designs called themes. Then
@@ -167,15 +167,15 @@ in particular was created, you will probably want to stop reading
 the rest of this page.
 
 Whenever you commit to a website repository, GitHub Pages will run
-[Jekyll 🔗](https://jekyllrb.com/ "See how Jekyll rebuilds GitHub Pages websites")
+[Jekyll 🔗](https://jekyllrb.com/ "See how Jekyll rebuilds GitHub Pages websites 🔗")
 to rebuild the pages in your site, from the content in your Markdown files.
 
 The {{ site.title }} website is based on the GitHub Pages Jekyll theme called 
-[Cayman 🔗](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for GitHub Pages website").
+[Cayman 🔗](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for GitHub Pages website 🔗").
 Initial setup was straight forward and very quick. However adding custom buttons 
 becomes more complicated as you need to learn 
-[HTML 🔗](https://blog.webjeda.com/new-page-jekyll/ "See how HTML is used in Jekyll") 
-and [Sass/SCSS 🔗](https://jekyllrb.com/docs/configuration/sass/ "See how Sass is used in Jekyll").
+[HTML 🔗](https://blog.webjeda.com/new-page-jekyll/ "See how HTML is used in Jekyll 🔗") 
+and [Sass/SCSS 🔗](https://jekyllrb.com/docs/configuration/sass/ "See how Sass is used in Jekyll 🔗").
 
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
@@ -205,7 +205,7 @@ Syntax highlighted code block
 ```
 
 For more details see 
-[GitHub Flavored Markdown 🔗](https://guides.github.com/features/mastering-markdown/).
+[GitHub Flavored Markdown 🔗](https://guides.github.com/features/mastering-markdown/ "See how GitHub converts markdown with kramdown  🔗").
 
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
@@ -269,7 +269,7 @@ The TOC command is used in real markdown below and generates the actual TOC:
 %}
 ## Jekyll Themes
 
-There are many [GitHub Pages Jekyll Themes 🔗](https://pages.github.com/themes/)
+There are many [GitHub Pages Jekyll Themes 🔗](https://pages.github.com/themes/ "View the various GitHub Pages themes  🔗")
 you can pick from for your website. Spend some time reviewing your options
 before committing to one.
 
@@ -278,7 +278,7 @@ Merlot Theme was used for a week and, then it came back full circle to the
 Cayman Theme again.
 
 At first the Cayman Theme 
-[didn't display the page title properly 🔗](https://github.com/pages-themes/cayman/issues/134).
+[didn't display the page title properly 🔗](https://github.com/pages-themes/cayman/issues/134 "View the issue on Cayman Theme GitHub Repository 🔗").
 Consequently, the Merlot theme was used. However, problems arose
 with the Merlot banner on the left not rendering properly on small
 screens. So it was back to Cayman and after changing the theme, 
@@ -294,13 +294,13 @@ to set up your first website but, don't give up."* &ensp; **You can do it!** �
 
 Your GitHub Pages site will use the layout and styles from the Jekyll
 theme you have selected in your 
-[repository settings 🔗](https://github.com/pippim/pippim.github.io/settings/pages).
+[repository settings 🔗](https://github.com/pippim/pippim.github.io/settings/pages "View {{ site.title }} GitHub Pages repository settings 🔗").
 The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 
 **GitHub Pages** maintains live listing of 
-[version number 🔗s](https://pages.github.com/versions/)
-for Jekyll, Sass, Kramdown, Rouge, etc..
+[version number 🔗s](https://pages.github.com/versions/ "View current GitHub Pages application version numbers 🔗")
+for Jekyll, Sass, kramdown, Rouge, etc..
 
 There are many open-source providers involved in the {{ site.title }} website:
 
@@ -405,9 +405,9 @@ as simply copying them over to GitHub Pages. The python program
 `stack-to-blog.py` was used to convert Stack Exchange posts to
 GitHub Pages Posts.
 The complete `stack-to-blog.py` program can be accessed on the 
-[Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
+[Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py "View source code for stack-to-blog.py").
 
-The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](https://pippim.github.io/stack.html)
+The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](https://pippim.github.io/stack.html "Convert Stack Exchange Posts to Your Own Website")
 for `stack-to-blog.py` used to create
 the posts on this {{ site.title }} website will help you create your own website.
 
