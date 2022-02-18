@@ -218,20 +218,18 @@ function check_root_word(word, url_ndx_points) {
             return true;
         }
     }
-
     const last_2 = word.slice(-2);
     if (last_2 == "ly" || last_2 == "ed" || last_2 == "'s" || last_2 == "es") {
         if (check_word(word.slice(0, -2), url_ndx_points)) {
             return true;
         }
-
+    }
     const last_1 = word.slice(-1);
     if (last_1 == "s") {
         if (check_word(word.slice(0, -1), url_ndx_points)) {
             return true;
         }
     }
-
     return false;
 }
 
