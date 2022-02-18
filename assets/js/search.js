@@ -152,7 +152,7 @@ function get_hits(submit_str) {
 
     for (const word of words) {
         l_word = word.toLowerCase();
-        if !(check_word(l_word, url_ndx_points)) {
+        if (!check_word(l_word, url_ndx_points)) {
             check_root_word(l_word, url_ndx_points);
         }
         /* OLD Style
