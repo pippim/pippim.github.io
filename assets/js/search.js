@@ -152,6 +152,10 @@ function get_hits(submit_str) {
 
     for (const word of words) {
         l_word = word.toLowerCase();
+        if !(check_word(l_word, url_ndx_points)) {
+            check_root_word(l_word, url_ndx_points);
+        }
+        /* OLD Style
         if (l_word in search_words) {
             let result_indices = search_words[l_word]
             let url_points = Object.entries(result_indices);
@@ -165,9 +169,70 @@ function get_hits(submit_str) {
                 }
             }
         }
+        */
     }
     let sorted = Object.entries(url_ndx_points).sort((a, b) => b[1] - a[1])
     return sorted
+}
+
+function check_word(l_word, url_ndx_points) {
+
+    if (l_word in search_words) {
+        let result_indices = search_words[l_word]
+        let url_points = Object.entries(result_indices);
+
+        for (var i = 0; i < url_points.length; i++) {
+            const [key, value] = url_points[i].toString().split(',');
+            if (key in url_ndx_points) {
+                url_ndx_points[key] += parseFloat(value);
+            } else {
+                url_ndx_points[key] = parseFloat(value);
+            }
+        }
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+function check_root_word(word, url_ndx_points) {
+
+    /* Port Python from website_search.py:
+
+    def word_excluded(self, word):
+
+    # If word ends in "es" and no match subtract that and check for match
+    # If word ends in "'s"      "           "           "           "
+    # If word ends in "s"       "           "           "           "
+    # If word ends in "es"      "           "           "           "
+    # If word ends in "ed"      "           "           "           "
+    # If word ends in "ly"      "           "           "           "
+    # If word ends in "n't"     "           "           "           "
+    # If word ends in "ing"     "           "           "           "
+    */
+
+    const last_3 = word[-3:];
+    if (last_3 == "ing" || last_3 == "n't") {
+        if (check_word(word[:-3], url_ndx_points)) {
+            return true;
+        }
+    }
+
+    const last_2 = word[-2:];
+    if (last_2 == "ly" || last_2 == "ed" || last_2 == "'s" || last_2 == "es") {
+        if (check_word(word[:-2], url_ndx_points)) {
+            return true;
+        }
+
+    const last_1 = word[-1:];
+    if (last_1 == "s") {
+        if (check_word(word[:-1], url_ndx_points)) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 /* End of /assets/js/search.js */
