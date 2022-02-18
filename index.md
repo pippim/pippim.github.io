@@ -23,7 +23,7 @@ operate at an average speed of 2.5 MB/s (Megabytes per second)
 over the internet. This one runs at the speed of RAM; about 
 19,200 MB/s!
 
-[Convert]((stack.html)) your popular *Stack Exchange
+[Convert](https://pippim.github.io/stack.html) your popular *Stack Exchange
 Posts* to **your own website** with additional features like; 
 Table of Contents, Section Navigation buttons, Copy code 
 blocks to clipboard and Show summary statistics.
@@ -233,10 +233,12 @@ Another one-time setup is the file `_includes/toc.md` containing the markdown fo
 {:toc}
 ```
 
-To get a Table of Contents (TOC) in any website page, insert a liquid tag where you want the TOC to appear. For example on this website page you are reading, `index.md`, you would see the following markdown code:
+To get a Table of Contents (TOC) in any website page, insert a 
+liquid tag where you want the TOC to appear. For example on this 
+page you are reading, `index.md`, is the following markdown code:
 
 ``` html
-... in real markdown below and generates the actual TOC:
+... you are reading, `index.md`, is the following markdown code:
 {% raw %}
 {% include toc.md %}
 {% endraw %}
