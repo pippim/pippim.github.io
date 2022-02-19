@@ -9,6 +9,21 @@ You can use them free of charge and change them however you like.
 
 ---
 
+## Multi-Timer - Run Set of Alarms Consecutively
+
+{% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
+   alt="stack-to-blog.py"
+   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+%}
+
+Do you have a job with a fixed set of tasks and, each task always takes the
+same amount of time?
+
+Then Multi-Timer well help you get the job done with no wasted time!
+
+<a href="mt.html" style="font-size: 20px;">Read More...</a>
+
+---
 
 ## Convert Stack Exchange Posts to Your Own Website
 
