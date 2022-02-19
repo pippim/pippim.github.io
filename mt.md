@@ -17,7 +17,7 @@ layout: program
 
 Do you have a job with a fixed set of tasks and, each task always takes the same amount of time?
 
-Then Multi-Timer well help you get the job done with no wasted time!
+Then Multi-Timer will help you get the job done with no wasted time!
 
 Multi-Timer is called with `mt` from
 the command line or a Desktop Shortcut that calls `mt`. 
@@ -52,7 +52,7 @@ clicking a Desktop Shortcut linked to Multi-Timer.
 
 {% include image.html src="/assets/img/mt/mt maximum number of timers.png"
    alt="Multi-Timer Maximum Number of Timers.png"
-   style="float: left; width: 65%; margin: .25rem 1rem 1rem 0px;"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
    caption="Multi-Timer Maximum Number of Timers"
 %}
 
@@ -76,12 +76,16 @@ Your only recourse is to remove the configuration file,
 
 ## On-Going Configuration
 
-Each time you startup Multi-Timer you can change the
+Each time you start Multi-Timer, you can change the
 configuration.
 
 Initially you are presented with the Main Configuration
-window shown to the right. To switch to the Timers
+window shown to the left. To switch to the Timers
 tab click it at the top right.
+
+There are many options on this window. Two options
+that cannot be changed are **Multi-Timer Version
+Number** and **Maximum number of timers**.
 
 The options on this screen are:
 
