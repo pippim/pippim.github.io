@@ -11,8 +11,8 @@ You can use them free of charge and change them however you like.
 
 ## Multi-Timer - Run Set of Alarms Consecutively
 
-{% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
-   alt="stack-to-blog.py"
+{% include image.html src="/assets/img/mt/mt progress bars.gif"
+   alt="Multi-Timer Progress Bars"
    style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
 %}
 
