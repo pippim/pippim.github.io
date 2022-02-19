@@ -25,7 +25,11 @@ The `mt` Multi-Timer program can be downloaded from the
 After downloading, Multi-Timer is called with `mt` from
 the command line or a Desktop Shortcut that calls `mt`. 
 
-> **IMPORTANT NOTE:** Version 0.2.0 was released on February 19, 2022 and not tested with WSL.
+> **IMPORTANT NOTE:**
+>   
+> Version 0.2.0 was released on
+> February 19, 2022 and not tested with WSL
+> (Windows Subsystem for Linux).
 
 ---
 
