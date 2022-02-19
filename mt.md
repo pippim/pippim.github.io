@@ -11,7 +11,7 @@ layout: program
 
 {% include image.html src="/assets/img/mt/mt progress bars.gif"
    alt="Multi-Timer Progress Bars.gif"
-   style="float: left; width: 65%; margin: 1rem 1rem 0px 0px;"
+   style="float: left; width: 65%; margin: .5rem 1rem 0px 0px;"
    caption="Multi-Timer Application Indicator and Progress Bars"
 %}
 
@@ -19,11 +19,12 @@ Do you have a job with a fixed set of tasks and, each task always takes the same
 
 Then Multi-Timer well help you get the job done with no wasted time!
 
-The `mt` Multi-Timer program can be downloaded from the 
+Multi-Timer is called with `mt` from
+the command line or a Desktop Shortcut that calls `mt`. 
+
+The Multi-Timer program (`mt`) can be downloaded from the 
 [Pippim Multi-Timer Repository 🔗](https://github.com/pippim/multi-timer/blob/main/src/mt).
 
-After downloading, Multi-Timer is called with `mt` from
-the command line or a Desktop Shortcut that calls `mt`. 
 
 > **IMPORTANT NOTE:**
 >   
@@ -60,7 +61,21 @@ start over again.
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
 
-# Automatic Skin Color Based on Artwork 
+# Create a Second Configuration File
+
+Lets say you want a second Multi-Timer Configuration file
+for another project.  Enter these commands from the terminal (The `#`
+comments are not necessary but will not effect operations):
+
+```terminal
+cd ~/.config                  # Go to user's configuration directory
+cp mt.conf mt_laundry.conf    # Copy Multi-Timer configuration file 
+rm mt.conf                    # Remove Multi-Timer configuration file
+mt                            # Run Multi-Timer as if first time
+```
+
+This saves the current configuration as `mt_laundry.conf` and runs
+Multi-Timer as if it were the first time.
 
 ---
 
