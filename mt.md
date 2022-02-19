@@ -48,7 +48,7 @@ The Multi-Timer program (`mt`) can be downloaded from the
 Running Multi-Timer is as easy as typing `mt` at the command line. Or simply
 clicking a Desktop Shortcut linked to Multi-Timer.
 
-## One Time Configuration
+## One-Time Configuration
 
 {% include image.html src="/assets/img/mt/mt maximum number of timers.png"
    alt="Multi-Timer Maximum Number of Timers.png"
@@ -57,7 +57,12 @@ clicking a Desktop Shortcut linked to Multi-Timer.
 %}
 
 The first time you run Multi-Timer you need to specify the
-maximum number of timers (alarms) you will be using. 
+maximum number of timers (alarms) you will be using. The window
+on the left greets you the very first time you run Multi-Timer.
+
+Although chances are you will never need more than
+10 consecutive timers, you can can define up to 40
+if your screen size permits that many.
 
 Once the maximum number of timers is set, you cannot change it.
 Your only recourse is to remove the configuration file,
@@ -74,7 +79,45 @@ Your only recourse is to remove the configuration file,
    caption="Multi-Timer Main Configuration"
 %}
 
-## On-Going Configuration
+## Main Configuration
+
+Each time you start Multi-Timer, you can change the
+configuration.
+
+Initially you are presented with the Main Configuration
+window shown to the left. To switch to the Timers
+tab, click it at the top right. The Timers tab is
+discussed in detail in the next section.
+
+There are many options on the Main Configuration tab.
+Two options that cannot be changed are; **Multi-Timer Version
+Number** and **Maximum number of timers**.
+
+The options on this window which you can change are:
+
+- **Timer duration units** - Choose between "Minutes" and "Seconds" as the unit of measure for timers.
+- **Number of times to run set (all timers)** - Normally you just want to run a job once in a session. But you can repeat the same job multiple times with this option.
+- **Progress Bar update every x seconds** - Number of seconds between updating timer progress bars. The default "`1`" is appropriate in most circumstances.
+- **Sound Player filename** - Enter the command to play sounds. The default is `paplay` (PulseAudio) which is suitable for most Linux systems. On some Linux systems PulseAudio isn't installed so use the `aplay` command.
+- **Alarm sound filename** - Choose a sound file at least 5 seconds long. About 7 seconds is best.
+- **Icon image filename** - Choose the Icon which appears on windows and the task bar of running applicadtions.
+- **Lock screen** - Choose whether or not the screen should lock. Generally this should be set to "Never".
+- **Ask to begin each timer** - When checked, Multi-Timer prompts to start each timer. Usually, you want this checked. 
+
+
+---
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
+
+
+{% include image.html src="/assets/img/mt/mt Timers Configuration.png"
+   alt="Multi-Timer Timers Configuration.png"
+   style="float: left; width: 65%; margin: .25rem 1rem 0px 0px;"
+   caption="Multi-Timer Timers Configuration"
+%}
+
+## Timers Configuration
 
 Each time you start Multi-Timer, you can change the
 configuration.
@@ -88,29 +131,6 @@ that cannot be changed are **Multi-Timer Version
 Number** and **Maximum number of timers**.
 
 The options on this screen are:
-
-
----
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
-
-
-# Create a Second Configuration File
-
-Lets say you want a second Multi-Timer Configuration file
-for another project.  Enter these commands from the terminal (The `#`
-comments are not necessary but will not effect operations):
-
-```terminal
-cd ~/.config                  # Go to user's configuration directory
-cp mt.conf mt_laundry.conf    # Copy Multi-Timer configuration file 
-rm mt.conf                    # Remove Multi-Timer configuration file
-mt                            # Run Multi-Timer as if first time
-```
-
-This saves the current configuration as `mt_laundry.conf` and runs
-Multi-Timer as if it were the first time.
 
 
 ---
@@ -254,42 +274,22 @@ def open_db():
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
 
-# Reopen Windows on Same Monitor with Same Size
 
-Here is how mserve remembers and restores window positions and sizes:
+# Create a Second Configuration File
 
-{% include copyHeader.html %}
-``` python
-def save_window_geom(name, geom):
-    """
-    CURRENT:
-        Get geometry for window which was saved on last exit. If no record
-        use 100,100 and predefined default width & height. Returns string
-        of "width x height + x + y" with no spaces in between variables.
-    """
+Lets say you want a second Multi-Timer Configuration file
+for another project.  Enter these commands from the terminal (The `#`
+comments are not necessary but will not effect operations):
 
-    if sql.hist_check(0, 'window', name):
-        sql.hist_cursor.execute("SELECT * FROM History WHERE Id = ?",
-                                [sql.HISTORY_ID])
-        d = dict(sql.hist_cursor.fetchone())
-        if d is None:
-            print('monitor.save_window_geom error no History ID:', HISTORY_ID)
-            return False
-    else:
-        # First time add the record
-        # sql.hist_add(time.time(), 0, lc.USER, 'window', name, geom,
-        sql.hist_add(time.time(), 0, g.USER, 'window', name, geom,
-                     'saved on exit, loaded on starting', None, 0, 0, 0.0,
-                     "Used in conjunction with 'screen' History Record Id #")
-        sql.con.commit()
-        return True
-
-    ''' We have the existing history record, simply replace the geometry field '''
-    sql_cmd = "UPDATE History SET Time=?, SourceMaster=? WHERE Id = ?"
-
-    sql.cursor.execute(sql_cmd, (time.time(), geom, sql.HISTORY_ID))
-    sql.con.commit()
+```terminal
+cd ~/.config                  # Go to user's configuration directory
+cp mt.conf mt_laundry.conf    # Copy Multi-Timer configuration file 
+rm mt.conf                    # Remove Multi-Timer configuration file
+mt                            # Run Multi-Timer as if first time
 ```
+
+This saves the current configuration as `mt_laundry.conf` and runs
+Multi-Timer as if it were the first time.
 
 ---
 
