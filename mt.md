@@ -11,7 +11,7 @@ layout: program
 
 {% include image.html src="/assets/img/mt/mt progress bars.gif"
    alt="Multi-Timer Progress Bars.gif"
-   style="float: left; width: 65%; margin: .5rem 1rem 0px 0px;"
+   style="float: left; width: 65%; margin: .25rem 1rem 0px 0px;"
    caption="Multi-Timer Application Indicator and Progress Bars"
 %}
 
@@ -47,6 +47,13 @@ The Multi-Timer program (`mt`) can be downloaded from the
 
 Running Multi-Timer is as easy as typing `mt` at the command line. Or simply
 clicking a Desktop Shortcut linked to Multi-Timer.
+
+
+{% include image.html src="/assets/img/mt/mt progress bars.gif"
+   alt="Multi-Timer Progress Bars.gif"
+   style="float: right; width: 65%; margin: 2rem 1rem 0px 0px;"
+   caption="Multi-Timer Application Indicator and Progress Bars"
+%}
 
 ## One Time Configuration
 
@@ -93,7 +100,36 @@ Multi-Timer as if it were the first time.
 ## Multi-Timer Source Code
 
 The source code (Bash Script) can easily be changed by anyone with
-moderate knowledge of the Linux Shell.
+moderate knowledge of the Linux Shell.  You can view the full
+source code [here](https://github.com/pippim/multi-timer/blob/main/src/mt),
+
+If you wish to change the source code, here are the likely places you
+want to change:
+
+``` bash
+# Running under WSL (Windows Subsystem for Linux)?
+if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+    fWindows10=TRUE
+    SoundPlayer=""
+    DefaultSound="C:\Windows\media\Ring05.wav"
+    TitlePrefix="Windows 10"
+else
+    fWindows10=FALSE
+    SoundPlayer="/usr/bin/paplay"
+    DefaultSound="/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga"
+    TitlePrefix="Linux"
+fi
+
+DefaultIcon="/usr/share/icons/gnome/48x48/status/appointment-soon.png"
+sIconFilename="$DefaultIcon"    # Give default until configuration read in
+MAX_TIMERS=10                   # Default when creating configuration
+```
+
+> **IMPORTANT NOTE:**
+>   
+> Version 0.2.0 was released on
+> February 19, 2022 and not tested with WSL
+> (Windows Subsystem for Linux).
 
 ---
 
