@@ -19,7 +19,7 @@ You can use them free of charge and change them however you like.
 Do you have a job with a fixed set of tasks and, each task always takes the
 same amount of time?
 
-Then Multi-Timer well help you get the job done with no wasted time!
+Then Multi-Timer will help you get the job done with no wasted time!
 
 <a href="mt.html" style="font-size: 20px;">Read More...</a>
 
