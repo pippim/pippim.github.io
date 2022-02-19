@@ -1,5 +1,5 @@
 ---
-title: Music Player with CD Encoding, Lyrics Scraping and Synchronizing
+title: Multi-Timer - Run Set of Alarms Consecutively
 layout: program
 ---
 
@@ -9,17 +9,17 @@ layout: program
 
 # Introduction
 
-This Music Player entertains you with animated graphics, VU meters and scrolling lyrics.
-It includes functions to encode CDs with track titles using MusicBrainz database.
-It will get lyrics from the internet and let you synchronize them in real time
-by simply clicking each line as it is sung.
+Do you have a job with a fixed set of tasks and, each task always takes the same amount of time?
 
-The `mserve.py` Music Player program can be accessed on the 
-[Pippim mserve Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py).
+Then Multi-Timer well help you get the job done with no wasted time!
 
-`mserve.py` is called with `m` from the command line or a desktop shortcut. 
+The `mt` Multi-Timer program can be accessed on the 
+[Pippim Multi-Timer Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mt).
 
-> **IMPORTANT NOTE:** Only tested with Linux, specifically Ubuntu 16.04 LTS
+After downloading, Multi-Timer is called with `mt` from
+the command line or a desktop shortcut. 
+
+> **IMPORTANT NOTE:** Version 0.2.0 was released on February 19, 2022 and not tested with WSL.
 
 ---
 
@@ -32,53 +32,18 @@ The `mserve.py` Music Player program can be accessed on the
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
 
-# Synchronized Lyrics
+# Running Multi-Timer
 
-This video shows how artwork, automatically obtained from the internet, is animated
-on your screen:
+Running Multi-Timer is as easy as typing `mt` at the command line. Or simply
+clicking a Desktop Shortcut linked to Multi-Timer.
 
-- It rotates clockwise
-- At 90 degrees it slides right then resumes rotating
-- At 180 degrees it slides down then resumes rotating
-- At 270 degrees it slides left then resumes rotating
-- At 360 degrees it slides up, pixelates, then the process repeats
+## One Time Configuration
 
-> **IMPORTANT:** Un-mute video to hear song
- 
-
-<video src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4" 
-data-canonical-src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4"
-controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
-style="max-height:640px; width: 100% !important; height: auto !important;">
-</video>
-
-This video also shows:
-
-- Two real-time VU meters for left and right channels
-- Tooltips for buttons. **This is an OLD video:** The new tooltips fade in and out after delays and follow mouse cursor. See sections below for examples.
-- Lyrics are highlighted in time with the music
-- Lyrics are automatically retrieved from the internet (from eight different sites)
-- You can manually change the lyrics retrieved
-
-Additional notes:
-
--    Edit lyrics for minor changes or massive copy from internet and replace.
--    Click on each line to synchronize the time for future playback.
--    Auto scroll lyrics, time scroll lyrics or manually scroll lyrics score.
--    Fine-tune adjustments to time index are done on separate window.
--    Sample middle 10 seconds of song. Future select one or two key song lines.
--    Right click on song to bring up Kid3 which runs on Linux, Windows and Mac.
--    Multiple locations are supported including sleeping servers woken with magic packet.
--    Compare music files between locations and update differences.
--    Compare supports Android with shadow file system for last modified date.
--    Encode CDs with automatic track name retrieval from MusicBrainz.
--    Encode CDs with automatic Cover Art download or Image paste from clipboard.
--    SQLite3 now used to replace old pickles and to add new features for history tracking.
--    Music player runs while encoding process takes dozens of minutes per CD.
--    Original version in Linux but hopefully minor port to Windows and Apple.
--    Hopefully in a couple of years port to cars with Apple or Android decks.
--    Hopefully in a few years Record Companies will give away mserve.
--    If anyone is "disturbed" by sample video please advise ASAP, and I'll find a different one.
+The first time you run Multi-Timer you need to specify the
+maximum number of timers (alarms) you will be using. Once
+this is set you cannot change it. Your only recourse is to
+remove the configuration file (`rm ~/.config/mt.conf`) and
+start over again.
 
 ---
 
@@ -87,32 +52,6 @@ Additional notes:
 
 # Automatic Skin Color Based on Artwork 
 
-This video shows how the skin changes color:
-
-<video src="https://user-images.githubusercontent.com/92641463/149242688-5cde502e-1025-4237-9e22-af9af3b2d93a.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/149242688-5cde502e-1025-4237-9e22-af9af3b2d93a.mp4"
-controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
-style="max-height:640px; width: 100% !important; height: auto !important;">
-</video>
-
-The album artwork is automatically downloaded from the internet 
-when the CD is encoded. You can also choose artwork from any 
-website and use that instead.
-
-The third pixel to the right and third pixel down set the 
-skin tone when you resize the window that could yield a
-different skin tone!
-
-Additional Notes:
-
-- Windows can be resized and Album Artwork grows and shrinks accordingly.
-- Primary color (@ coordinates 3x3) can change as artwork is resized.
-- Commercial and Intermission buttons are for NHL Stanley Cup Playoffs. Click when they start and TV volume is turned down to 25% and music resumes play. When countdown ends music pauses and TV volume is turned back up to original state.
-- Shuffle button resorts the selected songs in the playlist.
-- Playlists are currently stored in pickle format but plans are to convert to SQL. Also, SQL search engine is planned.
-- SQL is used for the music library of songs and their lyrics.
-- Webscraping lyrics is via Genius but some results are "not ideal" so seven other websites out of six have support and a menu to select all six will come soon. SQL will record history of what was scraped when, edited when, how long edit took, time indexed synchronized when, other devices (locations) updated when, which songs were updated, etc.
-
 ---
 
 <a id="hdr5"></a>
@@ -120,68 +59,16 @@ Additional Notes:
 
 # CD Encoding
 
-This video shows how the music player keeps playing without any
-lag while a CD is being encoded:
-
-<video src="https://user-images.githubusercontent.com/92641463/149241934-99d01df8-2cbf-4488-aa14-efe9e4d4f3aa.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/149241934-99d01df8-2cbf-4488-aa14-efe9e4d4f3aa.mp4"
-controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
-style="max-height:640px; width: 100% !important; height: auto !important;">
-</video>
-
-This video clip show how music player continues in real time while
-you use mserve to encode a CD.
-
-Great lengths are taken to ensure animations never lag even when
-focus grabbing dialog boxes require a response.
-
-The encoding process uses libdiscid to read the Audio CD's Disc ID.
-Then Musicbrainz is accessed to get track listings for Disc ID. It
-also automatically extracts coverart from the internet. You can
-also paste album artwork from the clipboard which you manually
-copied from Amazon, etc. More work is required in encoding process
-to support more than just .OGA, .WAV and .FLAC formats currently
-supported.
 
 ---
 
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
 
-# Programs At a Glance
+## Multi-Timer Source Code
 
-There are 9,300 lines in the `mserve.py` core Music Player program.
-
-The 9,300 lines doesn't include the other programs like CD encoding
-(`encoding.py`) which is 2,450 lines. In turn, it calls sub-programs
-`mbz_get1.py` which is 1,136 lines, `mbz_get2.py` which is 186 lines
-and `get_disc.py` which is 65 lines.  **Total CD Encoding Lines:**
-3,837.
-
-All programs though can use common python modules that Pippim
-has written such as:
-
-- `external.py` - 215 lines
-- `global_variables.py` - 69 lines
-- `iamge.py` - 1,543 lines
-- `location.py` - 764 lines
-- `message.py` - 1247 lines
-- `monitor.py` - 763 lines
-- `scrape.py` - 1,843 lines
-- `sql.py` - 1,629 lines
-- `timefmt.py` - 207 lines
-- `toolkit.py` - 1,974 lines
-- `vu_meter.py` - 179 lines
-- `webscrape.py` - 1,342 lines
-- `x11.py` - 262 lines (but might be deprecated soon)
-
-Then there is the splash screen program `m` which is 155 lines.
-
-**Total Lines Other Modules:** 12,172
-
-**Grand Total Line Count:** 25,309
-
-And, there is still more work to be done...
+The source code (Bash Script) can easily be changed by anyone with
+moderate knowledge of the Linux Shell.
 
 ---
 
@@ -193,44 +80,9 @@ under version 2.7.12 and, you may have to substitute `python3` where
 it says `python`:
 
 ``` shell
-sudo apt install python-tk
-sudo apt install python-pil
-sudo apt install python-pil.imagetk
-sudo apt install python-subprocess32             # To compare locations
-sudo apt install ffmpeg                          # To get artwork
-sudo apt install xdotool                         # To move Kid3 into our
-sudo apt install wmctrl                          #  lib_top parent window
-sudo apt install python-libdiscid                # Get CD's disc ID
-sudo apt install python-musicbrainzngs           # Get metadata for CD
-sudo apt install python-requests                 # Get Cover Art
-sudo apt install python-notify2                  # Popup bubble messages
-sudo apt install python-magic                    # Get file type information
-sudo apt install python-mutagen                  # Encode and ID3 tags
-sudo apt install x11-apps                        # xwd window dump (screen shot)
-sudo apt install xclip                           # Insert clipboard
-sudo apt install python-beautifulsoup            # Scrape Song lyrics
+sudo apt install yad
+sudo apt install libnotify
 ```
-
-Additionally, there are external repositories (PPA) that need to be
-installed.
-
-``` shell
-sudo add-apt-repository ppa:j-4321-i/ttkwidgets  # CheckboxTreeview
-# This is necessary for ttkwidgets and ttkcaldenar
-sudo apt-get update
-sudo apt-get install python-ttkwidgets           # CheckboxTreeview
-sudo add-apt-repository ppa:j-4321-i/ppa
-sudo apt-get update
-sudo apt-get install python-tkcalendar
-```
-
-Finally, there are programs that have no `sudo apt install` capability
-such as [`pulsectl`](https://github.com/mk-fg/python-pulse-control/tree/master/pulsectl)
-that require `git pull` command followed by `cp` command.
-
-Unfortunately as of {{ site.refreshed }}, dependencies have to be
-manually installed. It is a priority to create an installation
-script that installs all dependencies automatically.
 
 ---
 
