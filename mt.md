@@ -11,7 +11,7 @@ layout: program
 
 {% include image.html src="/assets/img/mt/mt progress bars.gif"
    alt="Multi-Timer Progress Bars.gif"
-   style="float: left; width: 65%; margin: 2em 1em 0px 0px;"
+   style="float: left; width: 65%; margin: 1rem 1rem 0px 0px;"
    caption="Multi-Timer Application Indicator and Progress Bars"
 %}
 
@@ -19,11 +19,11 @@ Do you have a job with a fixed set of tasks and, each task always takes the same
 
 Then Multi-Timer well help you get the job done with no wasted time!
 
-The `mt` Multi-Timer program can be accessed on the 
+The `mt` Multi-Timer program can be downloaded from the 
 [Pippim Multi-Timer Repository 🔗](https://github.com/pippim/multi-timer/blob/main/src/mt).
 
 After downloading, Multi-Timer is called with `mt` from
-the command line or a desktop shortcut. 
+the command line or a Desktop Shortcut that calls `mt`. 
 
 > **IMPORTANT NOTE:** Version 0.2.0 was released on February 19, 2022 and not tested with WSL.
 
