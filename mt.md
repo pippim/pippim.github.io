@@ -48,19 +48,20 @@ The Multi-Timer program (`mt`) can be downloaded from the
 Running Multi-Timer is as easy as typing `mt` at the command line. Or simply
 clicking a Desktop Shortcut linked to Multi-Timer.
 
+## One Time Configuration
+
 {% include image.html src="/assets/img/mt/mt maximum number of timers.png"
    alt="Multi-Timer Maximum Number of Timers.png"
-   style="float: left; width: 65%; margin: .25rem 0px 0px 1rem;"
+   style="float: left; width: 65%; margin: .25rem 1rem 1rem 0px;"
    caption="Multi-Timer Maximum Number of Timers"
 %}
 
-## One Time Configuration
-
 The first time you run Multi-Timer you need to specify the
-maximum number of timers (alarms) you will be using. Once
-this is set, you cannot change it. Your only recourse is to
-remove the configuration file (`rm ~/.config/mt.conf`) and
-start over again.
+maximum number of timers (alarms) you will be using. 
+
+Once the maximum number of timers is set, you cannot change it.
+Your only recourse is to remove the configuration file,
+(using `rm ~/.config/mt.conf`), and start over again.
 
 ---
 
