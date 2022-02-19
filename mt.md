@@ -48,18 +48,17 @@ The Multi-Timer program (`mt`) can be downloaded from the
 Running Multi-Timer is as easy as typing `mt` at the command line. Or simply
 clicking a Desktop Shortcut linked to Multi-Timer.
 
-
-{% include image.html src="/assets/img/mt/mt progress bars.gif"
-   alt="Multi-Timer Progress Bars.gif"
-   style="float: right; width: 65%; margin: 2rem 1rem 0px 0px;"
-   caption="Multi-Timer Application Indicator and Progress Bars"
+{% include image.html src="/assets/img/mt/mt maximum number of timers.png"
+   alt="Multi-Timer Maximum Number of Timers.png"
+   style="float: left; width: 65%; margin: .25rem 0px 0px 1rem;"
+   caption="Multi-Timer Maximum Number of Timers"
 %}
 
 ## One Time Configuration
 
 The first time you run Multi-Timer you need to specify the
 maximum number of timers (alarms) you will be using. Once
-this is set you cannot change it. Your only recourse is to
+this is set, you cannot change it. Your only recourse is to
 remove the configuration file (`rm ~/.config/mt.conf`) and
 start over again.
 
@@ -67,6 +66,30 @@ start over again.
 
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
+
+{% include image.html src="/assets/img/mt/mt Main Configuration.png"
+   alt="Multi-Timer Main Configuration.png"
+   style="float: left; width: 65%; margin: .25rem 1rem 0px 0px;"
+   caption="Multi-Timer Main Configuration"
+%}
+
+## On-Going Configuration
+
+Each time you startup Multi-Timer you can change the
+configuration.
+
+Initially you are presented with the Main Configuration
+window shown to the right. To switch to the Timers
+tab click it at the top right.
+
+The options on this screen are:
+
+
+---
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
+
 
 # Create a Second Configuration File
 
@@ -83,13 +106,6 @@ mt                            # Run Multi-Timer as if first time
 
 This saves the current configuration as `mt_laundry.conf` and runs
 Multi-Timer as if it were the first time.
-
----
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
-
-# CD Encoding
 
 
 ---
