@@ -11,13 +11,13 @@ layout: program
 
 {% include image.html src="/assets/img/mt/mt progress bars.gif"
    alt="Multi-Timer Progress Bars.gif"
-   style="float: left; width: 65%; margin: .25rem 1rem 0px 0px;"
+   style="float: left; width: 75%; margin: .25rem 1rem 0px 0px;"
    caption="Multi-Timer Application Indicator and Progress Bars"
 %}
 
 Do you have a job with a fixed set of tasks and, each task always takes the same amount of time?
 
-Then Multi-Timer will help you get the job done with no wasted time!
+Then ***Multi-Timer*** will help you get the job done with no wasted time!
 
 Multi-Timer is called with `mt` from
 the command line or a Desktop Shortcut that calls `mt`. 
