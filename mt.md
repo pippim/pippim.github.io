@@ -221,16 +221,31 @@ sudo apt install libnotify-bin
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
 
-# Next section
 
-Here are the
+# Create a Second Configuration File
 
----
+Lets say you want a second Multi-Timer Configuration file
+for another project.  Enter these commands from the terminal (The `#`
+comments are not necessary but will not effect operations):
 
-<a id="hdr15"></a>
-<div class="hdr-bar hdr-btn">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr16">Skip</a></div>
+```shell
+cd ~/.config                  # Go to user's configuration directory
+cp mt.conf mt_laundry.conf    # Copy Multi-Timer configuration file 
+rm mt.conf                    # Remove Multi-Timer configuration file
+mt                            # Run Multi-Timer as if first time
+```
 
-# Last section
+This saves the current configuration as `mt_laundry.conf` and runs
+Multi-Timer as if it were the first time.
+
+The copy command (`cp`) and remove command (`rm`) can be combined into
+a single move command (`mv`) to rename the configuration file:
+
+```shell
+mv mt.conf mt_laundry.conf    # Rename Multi-Timer configuration file
+```
+
+
 
 
 <a id="hdr16"></a>
