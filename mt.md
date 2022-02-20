@@ -132,13 +132,13 @@ The changeable options on this window are:
 
 {% include image.html src="/assets/img/mt/mt Timers Configuration.png"
    alt="Multi-Timer Timers Configuration.png"
-   style="float: left; width: 65%; margin: .25rem 1rem 0px 0px;"
+   style="float: left; width: 65%; margin: 0px 1rem 1rem 0px;"
    caption="Multi-Timer Timers Configuration"
 %}
 
 ## Timers Configuration
 
-When you click the *Timers* tab a window similar to the
+When you click the *Timers Tab* a window similar to the
 one on the left appears.
 
 Initially all the *Aliases* are set to "Timer 1", "Timer 2",
