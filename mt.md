@@ -170,7 +170,69 @@ Next is the "`Rinse`" timer at 13 minutes. Finally, the
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
 
-# Multi-Timer Source Code
+# Installing Multi-Timer
+
+You can download the [Source Code](https://github.com/pippim/multi-timer) 
+from GitHub but that is a complicated process for a single file.
+
+The easiest way is to 
+[open the raw code](https://raw.githubusercontent.com/pippim/multi-timer/main/src/mt)
+on GitHub.
+
+Then use:
+
+- <kbd>Ctrl</kbd> + <kbd>A</kbd> to select all text
+- <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy all text to clipboard
+- Open the terminal with <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>
+- Run `gedit mt`
+- <kbd>Ctrl</kbd> + <kbd>V</kbd> to paste text from clipboard
+- Save the file and exit gedit.
+- Flag the file as executable using `chmod a+x mt`
+
+Voila! You have just installed `mt` to your home directory.
+
+## Move Multi-Timer into PATH
+
+In order to call Multi-Timer from any directory with the `mt` command
+you will want to move the program into your path.
+
+A good place for all users is `/usr/bin`. 
+
+A good place to use Multi-Timer just for yourself
+is `~/bin`. Because `~` is shorthand for `/home/<YOUR USER NAME>`, 
+the `bin` directory under your home user name. By default
+you do not have a `bin` directory under your home user name. So you
+will need to use:
+
+```shell
+mkdir ~/bin
+```
+
+> NOTE:
+>   
+> After creating the `~/bin` directory you will need to
+> close the terminal and reopen it.
+ 
+To verify the new directory is in your path use:
+
+```shell
+echo $PATH
+```
+
+The very first directory will be `/home/<YOUR USER NAME>/bin`.
+
+Now move the `mt` program from `~/mt` to `~/bin/mt` using:
+
+``` shell
+mv ~/mt ~/bin/mt
+```
+
+Now you are all set to call `mt` from any directory.
+
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
+
+# Optionally Modify Multi-Timer Source Code
 
 The source code (Bash Script) can easily be changed by anyone with
 moderate knowledge of the Linux Shell.  You can view the full
@@ -206,6 +268,10 @@ MAX_TIMERS=10                   # Default when creating configuration
 
 ---
 
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
+
+
 # Dependencies
 
 Here are the dependencies you ned to install for `mt`.
@@ -218,8 +284,9 @@ sudo apt install libnotify-bin
 
 ---
 
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
+
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
 
 
 # Create a Second Configuration File
@@ -246,7 +313,12 @@ mv mt.conf mt_laundry.conf    # Rename Multi-Timer configuration file
 ```
 
 
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
+
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
 
 
-<a id="hdr16"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr15" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a></div>
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a></div>
