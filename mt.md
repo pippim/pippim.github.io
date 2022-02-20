@@ -11,7 +11,7 @@ layout: program
 
 {% include image.html src="/assets/img/mt/mt progress bars.gif"
    alt="Multi-Timer Progress Bars.gif"
-   style="float: left; width: 75%; margin: .25rem 1rem 0px 0px;"
+   style="float: left; width: 75%; margin: .25rem 1rem 1 rem 0px;"
    caption="Multi-Timer Application Indicator and Progress Bars"
 %}
 
@@ -105,7 +105,7 @@ As mentioned in the *One-Time Configuration* section above,
 the only way to change the Maximum Number of Timers is to
 erase the configuration file and start again.
 
-The options on this window which you can change are:
+The changeable options on this window are:
 
 - **Timer duration units** - Choose between "Minutes" and "Seconds" as the unit of measure for timers.
 - **Number of times to run set (all timers)** - Normally you just want to run a job once in a session. But you can repeat the same job multiple times with this option.
@@ -138,19 +138,26 @@ The options on this window which you can change are:
 
 ## Timers Configuration
 
-Each time you start Multi-Timer, you can change the
-configuration.
+When you click the *Timers* tab a window similar to the
+one on the left appears.
 
-Initially you are presented with the Main Configuration
-window shown to the left. To switch to the Timers
-tab click it at the top right.
+Initially all the *Aliases* are set to "Timer 1", "Timer 2",
+"Timer 3", etc., all the way up to the Maximum Number of 
+Timers.
 
-There are many options on this window. Two options
-that cannot be changed are **Multi-Timer Version
-Number** and **Maximum number of timers**.
+The Alias that you enter is used in the Progress Display.
 
-The options on this screen are:
+Initially all the *Durations* are set to `0`. You can have
+as many `0` durations as you like but. However, there must be at
+least one non-zero duration to make up a valid set of timers.
 
+In this example the first Alias is "`Wash`" and the Duration is
+set to "`16`". In the Configuration Tab the units of measure
+were set to "`Minutes`" so the duration of the "`Wash`" timer
+is 16 minutes.
+
+Next is the "`Rinse`" timer at 13 minutes. Finally, the
+"`Dry`" timer is set to 58 minutes.
 
 ---
 
