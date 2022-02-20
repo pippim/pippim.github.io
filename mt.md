@@ -60,9 +60,9 @@ The first time you run Multi-Timer you need to specify the
 maximum number of timers (alarms) you will be using. The window
 on the left greets you the very first time you run Multi-Timer.
 
-Although chances are you will never need more than
-10 consecutive timers, you can can define up to 40
-if your screen size permits that many.
+Chances are you will never need more than
+10 consecutive timers. However, you can can define up to 40
+if, your screen size permits that many.
 
 Once the maximum number of timers is set, you cannot change it.
 Your only recourse is to remove the configuration file,
@@ -75,23 +75,35 @@ Your only recourse is to remove the configuration file,
 
 {% include image.html src="/assets/img/mt/mt Main Configuration.png"
    alt="Multi-Timer Main Configuration.png"
-   style="float: left; width: 65%; margin: .25rem 1rem 0px 0px;"
+   style="float: left; width: 65%; margin: 0px 1rem 0px 0px;"
    caption="Multi-Timer Main Configuration"
 %}
 
 ## Main Configuration
 
-Each time you start Multi-Timer, you can change the
-configuration.
+The *Main Configuration* window, shown on the left,
+greets you each time
+you start Multi-Timer. From here you can change the
+configuration. 
 
-Initially you are presented with the Main Configuration
-window shown to the left. To switch to the Timers
+When done click <kbd>OK</kbd> to begin running timers
+or, click <kbd>Cancel</kbd> to exit Multi-Timer.
+
+To switch to the Timers
 tab, click it at the top right. The Timers tab is
 discussed in detail in the next section.
 
-There are many options on the Main Configuration tab.
-Two options that cannot be changed are; **Multi-Timer Version
-Number** and **Maximum number of timers**.
+Although there are many options on the Main Configuration tab,
+don't be intimidated. The options are pretty straight forward.
+
+It is important to note two options are "greyed out"
+and, cannot be changed. The two options that cannot
+be changed are; *Multi-Timer Version
+Number* and *Maximum number of timers*.
+
+As mentioned in the *One-Time Configuration* section above,
+the only way to change the Maximum Number of Timers is to
+erase the configuration file and start again.
 
 The options on this window which you can change are:
 
@@ -102,7 +114,14 @@ The options on this window which you can change are:
 - **Alarm sound filename** - Choose a sound file at least 5 seconds long. About 7 seconds is best.
 - **Icon image filename** - Choose the Icon which appears on windows and the task bar of running applicadtions.
 - **Lock screen** - Choose whether or not the screen should lock. Generally this should be set to "Never".
-- **Ask to begin each timer** - When checked, Multi-Timer prompts to start each timer. Usually, you want this checked. 
+- **Ask to begin each timer** - When checked, Multi-Timer prompts to start each timer. Usually, you want this checked.
+- **Pop-up message when each timer ends** - When checked, a notification message (pop-up bubble message) is displayed. Usually, you leave this un-checked because an alarm already sounds. 
+- **Sound alarm when each timer ends** - When checked, the alarm sound specified above is played. Usually, you want this checked.
+- **Ask to begin each set (all timers)** - When checked, Multi-Timer prompts to start each set of timers. Usually, you want this un-checked.
+- **Pop-up message when each set ends** - When checked, a notification message (pop-up bubble message) is displayed. Usually, you leave this un-checked. 
+- **Sound alarm when each set ends** - When checked, the alarm sound specified above is played. Usually, you want this checked.
+- **Interface to Sysmonitor Indicator** - When checked, Multi-Timer records time remaining to the `~/.lock-screen-timer-remaining` file. See interface to Sysmonitor Indicator below. 
+- **Auto close progress bar display when all sets end** - When checked, Multi-Timer simply disappears when all timers end. If un-checked, the progress display remains on-screen at 100% until manually closed. 
 
 
 ---
