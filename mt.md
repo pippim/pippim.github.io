@@ -97,9 +97,8 @@ Although there are many options on the Main Configuration tab,
 don't be intimidated. The options are pretty straight forward.
 
 It is important to note two options are "greyed out"
-and, cannot be changed. The two options that cannot
-be changed are; *Multi-Timer Version
-Number* and *Maximum number of timers*.
+and, cannot be changed. Those two options are;
+*Multi-Timer Version Number* and *Maximum number of timers*.
 
 As mentioned in the *One-Time Configuration* section above,
 the only way to change the Maximum Number of Timers is to
