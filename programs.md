@@ -40,10 +40,11 @@ The Multi-Timer program (`mt`) can be downloaded from the
    style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
 %}
 
-This {{ site.title }} Website's Answers page was created automatically
+The {{ site.title }} Website's *Answers* page was created automatically
 by converting Stack Exchange Posts to GitHub Pages Jekyll Posts. That
 includes the Top Ten Answers and the Posts by Tag nested accordion with
-{{ site.post_count }} posts.
+{{ site.post_count }} posts. The site search engine is generated at
+the same time.
 
 <a href="stack.html" style="font-size: 20px;">Read More...</a>
 
