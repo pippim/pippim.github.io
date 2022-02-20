@@ -171,7 +171,7 @@ Next is the "`Rinse`" timer at 13 minutes. Finally, the
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
 
-## Multi-Timer Source Code
+# Multi-Timer Source Code
 
 The source code (Bash Script) can easily be changed by anyone with
 moderate knowledge of the Linux Shell.  You can view the full
@@ -207,16 +207,14 @@ MAX_TIMERS=10                   # Default when creating configuration
 
 ---
 
-## Dependencies
+# Dependencies
 
-Here are the dependencies documented in `mserve.py` python program.
-You may already have them installed. Also, this list is for Ubuntu
-under version 2.7.12 and, you may have to substitute `python3` where
-it says `python`:
+Here are the dependencies you ned to install for `mt`.
 
 ``` shell
+sudo apt update
 sudo apt install yad
-sudo apt install libnotify
+sudo apt install libnotify-bin
 ```
 
 ---
