@@ -147,9 +147,16 @@ Timers.
 
 The Alias that you enter is used in the Progress Display.
 
-Initially all the *Durations* are set to `0`. You can have
-as many `0` durations as you like but. However, there must be at
+Initially, all the *Durations* are set to `0`. You can have
+as many `0` durations as you like. However, there must be at
 least one non-zero duration to make up a valid set of timers.
+
+Any timers with a duration of "`0`" will not be displayed in
+the progress bars.
+
+You can key in the Duration directly or, click the <kbd>+</kbd>
+button to increment by a value of 1. You can also click the
+<kbd>-</kbd> to decrement by a value of 1.
 
 In this example the first Alias is "`Wash`" and the Duration is
 set to "`16`". In the Configuration Tab the units of measure
