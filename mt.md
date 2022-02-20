@@ -153,8 +153,8 @@ least one non-zero duration to make up a valid set of timers.
 Any timers with a duration of "`0`" will not be displayed in
 the progress bars.
 
-You can key in the Duration directly or, click the <kbd>+</kbd>
-button to increment by a value of 1. You can also click the
+You can key in the Duration number directly. Or, click 
+<kbd>+</kbd> to increment by a value of 1 and, click
 <kbd>-</kbd> to decrement by a value of 1.
 
 In this example the first Alias is "`Wash`" and the Duration is
