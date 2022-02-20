@@ -228,7 +228,7 @@ Here are the
 ---
 
 <a id="hdr15"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar"> <span class="hdr-btn">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr16">Skip</a> </span> </div>
 
 # Last section
 
