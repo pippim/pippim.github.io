@@ -8,11 +8,11 @@ type:         Answer
 tags:         kernel
 created_date: 2018-03-01 01:01:21
 edit_date:    
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "510 "
+views:        "513 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-01-How-do-I-map-Linux-Kernels-to-Ubuntu-Kernels_.md
 toc:          false
 navigation:   false

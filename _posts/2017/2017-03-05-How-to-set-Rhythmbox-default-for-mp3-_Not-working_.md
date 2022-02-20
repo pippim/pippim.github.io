@@ -10,9 +10,9 @@ created_date: 2017-03-05 15:58:56
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,784 "
+views:        "1,786 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-05-How-to-set-Rhythmbox-default-for-mp3-_Not-working_.md
 toc:          false
 navigation:   false

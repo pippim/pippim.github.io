@@ -10,9 +10,9 @@ created_date: 2018-08-11 22:00:21
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "3,604 "
+views:        "3,622 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-11-Can_t-install-Ubuntu-from-an-USB-stick_-AE_NOT_FOUND_-AE_ALREADY_EXISTS.md
 toc:          false
 navigation:   false

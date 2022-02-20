@@ -8,11 +8,11 @@ type:         Answer
 tags:         partitioning text-processing sort
 created_date: 2022-02-12 22:50:48
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "51 "
-accepted:     
-uploaded:     2022-02-13 07:46:52
+views:        "67 "
+accepted:     Accepted
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-12-How-to-change-_lsblk_-sort-order_.md
 toc:          false
 navigation:   false

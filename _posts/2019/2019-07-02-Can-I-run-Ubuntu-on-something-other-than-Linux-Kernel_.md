@@ -10,9 +10,9 @@ created_date: 2019-07-02 18:30:32
 edit_date:    
 votes:        "11 "
 favorites:    
-views:        "1,464 "
+views:        "1,466 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-02-Can-I-run-Ubuntu-on-something-other-than-Linux-Kernel_.md
 toc:          false
 navigation:   false
@@ -25,4 +25,4 @@ You have to have an Operating System. Because this site is called **Ask Ubuntu**
 
 One answer would be Windows 10 with the WSL (Windows Subsystem for Linux) option turned on. You can also run most, if not all, the GNU utilities there. Extra steps are needed though to run the Ubuntu GUI desktop in Windows 10:
 
-- [What's the easiest way to run GUI apps on Windows Subsystem for Linux as of 2018?]({% post_url /2018/2018-01-07-What_s-the-easiest-way-to-run-GUI-apps-on-Windows-Subsystem-for-Linux-as-of-2018_ %})
+- [What's the easiest way to run GUI apps on Windows Subsystem for Linux?]({% post_url /2018/2018-01-07-What_s-the-easiest-way-to-run-GUI-apps-on-Windows-Subsystem-for-Linux_ %})

@@ -10,9 +10,9 @@ created_date: 2018-04-01 23:20:08
 edit_date:    2018-04-02 00:43:57
 votes:        "1 "
 favorites:    
-views:        "969 "
+views:        "970 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-cpufreq-gnome-extension-keeps-reverting-to-powersave.md
 toc:          false
 navigation:   false

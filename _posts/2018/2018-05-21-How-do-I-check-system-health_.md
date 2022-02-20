@@ -8,11 +8,11 @@ type:         Answer
 tags:         software-recommendation hardware hardware-test conky
 created_date: 2018-05-21 13:37:40
 edit_date:    2020-10-12 02:07:35
-votes:        "12 "
+votes:        "13 "
 favorites:    
-views:        "29,477 "
+views:        "29,688 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-How-do-I-check-system-health_.md
 toc:          false
 navigation:   false

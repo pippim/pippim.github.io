@@ -7,12 +7,12 @@ stack_url:    https://electronics.stackexchange.com/q/461935
 type:         Question
 tags:         led connector cables
 created_date: 2019-10-07 23:35:41
-edit_date:    
+edit_date:    2022-02-15 01:33:30
 votes:        "2 "
 favorites:    
-views:        "398 "
+views:        "422 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-07-What-are-these-LED-power-supply-plugs-called_.md
 toc:          false
 navigation:   false
@@ -21,7 +21,7 @@ clipboard:    false
 
 New LED lamps made in China have fancy new connectors and I'm searching for the IEEE official name (or whichever authority names them). I need to order male and female ends that can be opened to expose wiring screws inside or soldering posts.
 
-According to Power Brick it's probably 20V DC. The wire looks like 24 gauge? Let's call them think speaker wires. I think the lamp is about 7 watts?
+According to Power Brick it's probably 20V DC. The wire looks like 24 gauge? Let's call them thin speaker wires. The LED lamp draws ~7 watts.
 
 Here's what the male plug looks like next to a dime:
 

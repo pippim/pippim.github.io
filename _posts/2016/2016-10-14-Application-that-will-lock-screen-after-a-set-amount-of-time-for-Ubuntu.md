@@ -10,9 +10,9 @@ created_date: 2016-10-14 17:35:27
 edit_date:    2022-01-09 23:07:08
 votes:        "15 "
 favorites:    
-views:        "3,131 "
+views:        "3,149 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-14-Application-that-will-lock-screen-after-a-set-amount-of-time-for-Ubuntu.md
 toc:          true
 navigation:   true

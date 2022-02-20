@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "25 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-06-Is-there-a-way-to-remove-something-locked-to-the-launcher-using-terminal_.md
 toc:          false
 navigation:   false

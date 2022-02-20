@@ -10,9 +10,9 @@ created_date: 2019-11-12 14:34:59
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "7,814 "
+views:        "7,886 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Why-do-some-applications-have-files-with-no-extension_.md
 toc:          false
 navigation:   false

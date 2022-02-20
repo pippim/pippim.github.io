@@ -10,9 +10,9 @@ created_date: 2018-09-02 16:10:28
 edit_date:    2020-06-20 09:12:55
 votes:        "2 "
 favorites:    
-views:        "949 "
+views:        "951 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-02-Finding-countdown-timer-in-Grub-2.02-source-code.md
 toc:          false
 navigation:   false

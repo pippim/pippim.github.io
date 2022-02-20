@@ -10,9 +10,9 @@ created_date: 2017-02-22 18:18:04
 edit_date:    2017-02-22 20:19:24
 votes:        "22 "
 favorites:    
-views:        "27,667 "
+views:        "27,851 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-22-How-to-turn-off-the-computer-from-the-GRUB-screen-in-dual-boot.md
 toc:          false
 navigation:   false

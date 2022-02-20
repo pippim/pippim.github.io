@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line
 created_date: 2018-05-16 23:20:52
 edit_date:    2018-05-24 02:07:37
-votes:        "9 "
+votes:        "10 "
 favorites:    
-views:        "55,291 "
+views:        "55,748 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-16-How-to-run-a-file-in-a-different-directory.md
 toc:          false
 navigation:   false

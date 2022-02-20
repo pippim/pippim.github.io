@@ -10,9 +10,9 @@ created_date: 2018-05-12 15:32:16
 edit_date:    2019-04-05 10:58:19
 votes:        "17 "
 favorites:    
-views:        "23,064 "
+views:        "23,180 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-How-to-prevent-wifi-sleep-after-suspend.md
 toc:          false
 navigation:   false

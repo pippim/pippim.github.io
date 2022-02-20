@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line software-recommendation games
 created_date: 2016-10-12 09:21:07
 edit_date:    2021-12-08 02:56:40
-votes:        "7 "
+votes:        "8 "
 favorites:    
-views:        "2,243 "
+views:        "2,248 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-12-Command-line-snake-game_.md
 toc:          false
 navigation:   true

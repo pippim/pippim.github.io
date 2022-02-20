@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "62 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-28-Do-I-need-to-remove-Grub-when-converting-from-Ubuntu-server-to-desktop_.md
 toc:          false
 navigation:   false

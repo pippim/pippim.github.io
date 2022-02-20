@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "1,278 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-07-Will-the-fast-battery-drain-on-Ubuntu-damage-my-battery_.md
 toc:          false
 navigation:   false

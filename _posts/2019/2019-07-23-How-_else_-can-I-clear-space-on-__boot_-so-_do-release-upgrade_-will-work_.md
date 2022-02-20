@@ -10,9 +10,9 @@ created_date: 2019-07-23 19:21:17
 edit_date:    2019-07-24 06:57:00
 votes:        "4 "
 favorites:    
-views:        "829 "
+views:        "836 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-23-How-_else_-can-I-clear-space-on-__boot_-so-_do-release-upgrade_-will-work_.md
 toc:          false
 navigation:   false

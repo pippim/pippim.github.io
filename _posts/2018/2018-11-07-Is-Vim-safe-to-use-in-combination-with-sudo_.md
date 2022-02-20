@@ -10,9 +10,9 @@ created_date: 2018-11-07 00:46:21
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "5,102 "
+views:        "5,106 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-07-Is-Vim-safe-to-use-in-combination-with-sudo_.md
 toc:          false
 navigation:   false

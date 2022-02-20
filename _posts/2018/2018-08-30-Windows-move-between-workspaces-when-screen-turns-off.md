@@ -10,9 +10,9 @@ created_date: 2018-08-30 00:26:12
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,529 "
+views:        "1,534 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-30-Windows-move-between-workspaces-when-screen-turns-off.md
 toc:          false
 navigation:   false

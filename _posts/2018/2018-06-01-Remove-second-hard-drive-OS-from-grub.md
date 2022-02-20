@@ -10,9 +10,9 @@ created_date: 2018-06-01 11:06:16
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "4,264 "
+views:        "4,291 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-01-Remove-second-hard-drive-OS-from-grub.md
 toc:          false
 navigation:   false

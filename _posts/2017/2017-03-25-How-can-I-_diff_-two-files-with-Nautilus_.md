@@ -10,9 +10,9 @@ created_date: 2017-03-25 18:27:34
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "8,020 "
+views:        "8,029 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-25-How-can-I-_diff_-two-files-with-Nautilus_.md
 toc:          false
 navigation:   false

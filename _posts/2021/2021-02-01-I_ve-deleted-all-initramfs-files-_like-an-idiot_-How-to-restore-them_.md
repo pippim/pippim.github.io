@@ -10,9 +10,9 @@ created_date: 2021-02-01 03:25:48
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "395 "
+views:        "409 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-02-01-I_ve-deleted-all-initramfs-files-_like-an-idiot_-How-to-restore-them_.md
 toc:          false
 navigation:   false

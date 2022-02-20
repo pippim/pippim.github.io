@@ -7,29 +7,28 @@ stack_url:    https://askubuntu.com/q/1029805
 type:         Answer
 tags:         suspend password lock-screen 18.04
 created_date: 2018-04-29 18:04:15
-edit_date:    2018-07-01 08:14:59
+edit_date:    2022-02-13 23:55:05
 votes:        "64 "
 favorites:    
-views:        "48,975 "
+views:        "49,110 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Disable-password-request-from-suspend---18.04.md
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-For most Ubuntu distributions and versions try this in the terminal:
+Type the following in the terminal after the `$` prompt:
 
 ``` 
 gsettings get org.gnome.desktop.screensaver ubuntu-lock-on-suspend
-true
 ```
 
-If the result is `true` then set it to `false` using:
+If the result displayed is `true` then set it to `false` using:
 
 ``` 
 gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend false
 ```
 
-Just remember to reset it before your cleaning person comes over for monthly work.
+**NOTE:** The above question and this answer is for **Ubuntu 18.04**.

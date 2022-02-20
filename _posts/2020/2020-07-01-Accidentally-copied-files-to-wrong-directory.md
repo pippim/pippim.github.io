@@ -10,9 +10,9 @@ created_date: 2020-07-01 19:33:32
 edit_date:    2020-07-02 23:01:16
 votes:        "8 "
 favorites:    
-views:        "1,215 "
+views:        "1,221 "
 accepted:     
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-01-Accidentally-copied-files-to-wrong-directory.md
 toc:          false
 navigation:   false

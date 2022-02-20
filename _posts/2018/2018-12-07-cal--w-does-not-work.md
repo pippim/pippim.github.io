@@ -10,9 +10,9 @@ created_date: 2018-12-07 16:00:05
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "800 "
+views:        "815 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-cal--w-does-not-work.md
 toc:          false
 navigation:   false

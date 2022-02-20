@@ -10,9 +10,9 @@ created_date: 2017-01-01 05:12:43
 edit_date:    2017-01-01 08:06:54
 votes:        "5 "
 favorites:    
-views:        "1,238 "
+views:        "1,242 "
 accepted:     Accepted
-uploaded:     2022-02-13 07:46:52
+uploaded:     2022-02-20 10:08:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-01-Can-Gedit-default-highlighting-style-be-set-for-files-without-an-extension_.md
 toc:          false
 navigation:   false
