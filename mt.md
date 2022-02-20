@@ -11,7 +11,7 @@ layout: program
 
 {% include image.html src="/assets/img/mt/mt progress bars.gif"
    alt="Multi-Timer Progress Bars.gif"
-   style="float: left; width: 75%; margin: .25rem 1rem 1 rem 0px;"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
    caption="Multi-Timer Application Indicator and Progress Bars"
 %}
 
