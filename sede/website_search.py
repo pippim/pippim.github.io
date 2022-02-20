@@ -36,6 +36,7 @@ from datetime import datetime as dt
 # Credit: https://stackoverflow.com/a/32463688/6929343
 
 import json
+import re
 
 """
     TO-DO
@@ -199,15 +200,36 @@ class WebsiteSearch(InitCommonVars):
         """ Duplicate entry_init() """
         InitCommonVars.__init__(self)       # Recycled class to set self. instances
 
-        self.site_included = {}             # All words indexed on site
+        self.site_included = {}             # search_words.json - words indexed on site
         # All words excluded on site - dict build from list with 0 counts
         self.site_excluded = dict.fromkeys(exclude_word_list, 0)
         self.url_list = []                  # list of urls in search dictionary
         self.post_index = 0                 # post in url_list
+        self.saved_size = 0                 # Amount saved by excluding words / links
+
+    def markdown_file(self, post_final_url, post_title):
+        """
+        Process entire .md file to add search words.
+
+        For example, 'index.md', 'programs.md' and 'mt.md'
+
+        The filename is specified relatively.
+        Strip out '<id=' and '<div' tags inserted for section navigation.
+        Strip out '{{ ... }}' liquid tags.
+        In future perhaps follow '{{ include ... }}' liquid tags.
+
+        """
+
+        InitCommonVars.__init__(self)  # Initialize all post instances
+
+        self.post_final_url = post_final_url
+        self.post_title = post_title
+        self.url_list.append(self.post_final_url + " | " + self.post_title)
+        # NOTE: self.post_index incremented after saving
 
     def post_init(self, post_final_url, post_title):
 
-        InitCommonVars.__init__(self)  # Initialize all tip instances
+        InitCommonVars.__init__(self)  # Initialize all post instances
 
         self.post_final_url = post_final_url
         self.post_title = post_title
@@ -215,32 +237,60 @@ class WebsiteSearch(InitCommonVars):
         # NOTE: self.post_index incremented after saving
 
     def parse(self, ln, points):
-        """ Parse every word in line.
+        """ Parse every word in line. Skipping footer and body links saves:
+
+            Footer:      28 words, 1,727 references,  29,948 bytes.
+            Picture:    473 words,   778 references,  24,295 bytes.
+            External: 1,234 words, 2,520 references,  70,002 bytes.
+            Regular:  1,648 words, 3,824 references, 101,515 bytes.
+
         """
+
+        # Skip footer lines with two spaces and: '  [1]: https://...'
+        line_len = len(ln)
+        if ln.startswith('  ['):
+            self.saved_size += line_len
+            return
+
+        # remove links so they don't show up in site search dictionary
+        ln = re.sub(r'\[!\[.*?\]\[\d+\]\]\[\d+\]', '', ln)  # [![Image][2][2]
+        ln = re.sub(r'\[.*?\]\[\d+\]', '', ln)              # [Link name][3]
+        ln = re.sub(r'\[.*?\]\(.*?\)', '', ln)              # [Name](https://...)
+
+        if len(ln) != line_len:
+            self.saved_size += line_len - len(ln)
+
         # Don't index #, ##, ###, etc heading levels at start of line
         while ln[:1] == "#":
+            self.saved_size += 1
             ln = ln[1:]
 
         words = ln.split()
         for word in words:
-            if len(word) > MAX_WORD_SIZE:
+            # Is this an https:// reference or super long directory name?
+            word_len = len(word)
+            if word_len > MAX_WORD_SIZE:
+                self.saved_size += word_len
                 continue
+
             word = word.lower()
             word = self.remove_pairs(word)
-            if len(word) == 0:
+            new_word_len = len(word)
+            if new_word_len == 0:
+                self.saved_size += word_len
                 continue
+
             if self.word_excluded(word):
                 # https://stackoverflow.com/a/12992212/6929343
                 self.post_excluded[word] = self.post_excluded.get(word, 0) + 1
+                self.saved_size += word_len
             else:
                 # Add the weight of the word between 0.5 in Body to 10.0 in Title
                 self.post_included[word] = self.post_included.get(word, 0.0) + points
+                self.saved_size += word_len - new_word_len
 
     def remove_pairs(self, word):
         """ Recursive call such that "**Brightness**" becomes Brightness """
-        # Unfortunately we get:
-        #   "sharing.png][2]][2": [
-        #     374
 
         if len(word) <= 1:
             return word  # Prevent infinite recursions
@@ -253,7 +303,6 @@ class WebsiteSearch(InitCommonVars):
                 word = word[:-1]
                 word = self.remove_pairs(word)
 
-        # TODO: Fix 'end][1]][1]', '[1]', '[![female', '[![male', 'end][2]][2]'
         # Note we want to keep $brightness as bash variable name
         if first_char in ".,:*`(":
             word = word[1:]
@@ -299,12 +348,11 @@ class WebsiteSearch(InitCommonVars):
         """
         for word in self.post_included:
             # For every word included in post, update site included word dictionary
-            # old list format below...
-            #self.site_included.setdefault(word, [])
-            #self.site_included[word].append(self.post_index)
-            # New dictionary format below...
             self.site_included.setdefault(word, {})
+            # Store post url and post points as strings = 2,438,381 bytes
             self.site_included[word][str(self.post_index)] = self.post_included[word]
+            # Store post url and post points as integers = 2,211,605 bytes
+            # self.site_included[word][self.post_index] = int(self.post_included[word])
         for i in self.post_excluded:
             # For counts of words excluded from post, update site excluded word count
             self.site_excluded.setdefault(i, 0)
@@ -318,10 +366,10 @@ class WebsiteSearch(InitCommonVars):
         json_object = json.dumps(self.site_included, indent=2, ensure_ascii=False)
         with open(INCLUDE_FILE, 'w') as fh:
             fh.write(json_object)
-        json_object = json.dumps(self.site_excluded, indent=2)
+        json_object = json.dumps(self.site_excluded, indent=2, ensure_ascii=False)
         with open(EXCLUDE_FILE, 'w') as fh:
             fh.write(json_object)
-        json_object = json.dumps(self.url_list, indent=2)
+        json_object = json.dumps(self.url_list, indent=2, ensure_ascii=False)
         with open(URL_FILE, 'w') as fh:
             fh.write(json_object)
 
@@ -338,6 +386,7 @@ class WebsiteSearch(InitCommonVars):
         for i in self.site_excluded:
             total += self.site_excluded[i]
         d_print('total times words excluded:', total)
+        d_print('Saved size::', self.saved_size)
 
 
 def d_print(*args):

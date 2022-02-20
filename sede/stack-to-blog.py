@@ -176,8 +176,9 @@ TAG_SEARCH_POINTS = 5.0     # ws.parse(tags, TAG_SEARCH_POINTS)
 # List depending on: Line  H1   H2   H3   H4    H5   H6
 WORD_SEARCH_POINTS = [0.5, 2.0, 1.5, 1.0, 0.75, 0.5, 0.5]
 # All saved posts are indexed for searching but, add files below too:
-EXTRA_SEARCH_FILES = ['../about.md', '../answer.md', '../index.md',
-                      '../mserve.md', '../programs.md', '../stack.md']
+EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../index.md',
+                      '../mserve.md', '../mt.md', '../programs.md',
+                      '../stack.md']
 
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 # If not desired, set `CONFIG_YML = None`
@@ -2862,7 +2863,7 @@ def html_write_post_tags(html):
 
 
 def set_config_code_url():
-    """ Set global variable code_url
+    """ Set global variables code_url and html_url
 
     Defined as FRONT_GIT_URL with "git_md_url:" value
 
@@ -2873,7 +2874,7 @@ def set_config_code_url():
     if FRONT_GIT_URL is None:
         return ""  # They don't want this glorious feature! :)
 
-    config = read_config()
+    config = read_file(CONFIG_YML)
 
     for i, ln in enumerate(config):
         if "code_url" in ln:
@@ -2897,14 +2898,15 @@ def set_config_code_url():
     fatal_error("code_url: not found in " + CONFIG_YML)
 
 
-def read_config():
-    """ Read _config.yml and return as list of lines: config[]
+def read_file(fname):
+    """ Read _config.yml (passed as fname) and return as list of
+        lines: config[]
     """
 
-    if not os.path.exists(CONFIG_YML):
-        fatal_error('The file: ' + CONFIG_YML + 'not found!')
+    if not os.path.exists(fname):
+        fatal_error("'The file: '" + fname + "' was not found!")
 
-    with open(CONFIG_YML, 'r') as fn:
+    with open(fname, 'r') as fn:
         all_lines = fn.readlines()
         config = [one_line.rstrip() for one_line in all_lines]
 
@@ -2931,7 +2933,7 @@ def update_config():
     if CONFIG_YML is None:
         return  # They don't want this glorious feature! :)
 
-    config = read_config()
+    config = read_file(CONFIG_YML)
 
     one_config_line(config, "views", '"{:,}'.format(total_views) + ' "')
     one_config_line(config, "views_human", humansize(total_views))
@@ -2983,11 +2985,75 @@ def one_config_line(config, key, value):
 
 def process_extra_files():
     """
-    EXTRA_SEARCH_FILES = ['../about.md', '../answer.md', '../index.md',
-                      '../mserve.md', '../programs.md', '../stack.md']
+        Add search words from markdown files.
 
+        EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', ...]
+
+        html_url contains 'https://pippim.github.io'
     """
-    pass
+    percent_complete_close()
+    file_count = len(EXTRA_SEARCH_FILES)
+    print('Processing', file_count, 'extra search files')
+    for i, extra in enumerate(EXTRA_SEARCH_FILES):
+        all_lines = extra_file_as_post_init(extra)
+        in_include = False
+        for ln in all_lines:
+            if ln.startswith('<'):
+                continue  # HTML lines are skipped over
+
+            ''' Skip over these lines:
+                {% include image.html src="/assets/img/pngwing.com.png"
+                   alt="GitHub Octocat Mascot by pngwing.com"
+                   style="float: left; width: 45%; margin: 2em 1em 0px 0px;"
+                   caption="GitHub's Octocat Mascot image credit: 
+                      <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING  🔗</a>"
+                %}
+            '''
+            if in_include:
+                if '%}' in ln:
+                    in_include = False      # We are out of include now
+                continue                    # Grab next line, this whole line is ditched
+
+            if ln.startswith('{%'):
+                if '%}' in ln:
+                    in_include = False      # Probably: '{% include toc.md %}'
+                else:
+                    in_include = True       # We are starting an include block of lines
+                continue                    # Grab next line, this whole line is ditched
+
+            hash_count = 0
+            if ln[0:1] == "#":
+                # print('Found header:', ln)
+                # How many '#' are there at line start?
+                hash_count = len(ln) - len(ln.lstrip('#'))
+                # 0=None | 1=#=<h1> | 2=##=<h2> | 3=###=<h3> | ... 6=######<h6>
+                if hash_count > 6:
+                    hash_count = 6  # Search Word Weight List only has 7
+
+            ws.parse(ln, WORD_SEARCH_POINTS[hash_count])
+
+        ws.post_save()
+
+
+def extra_file_as_post_init(extra):
+    """
+        Setup extra file as a post in website_search.py.
+
+        EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', ...]
+
+        html_url contains 'https://pippim.github.io'
+    """
+    basename = extra.replace('../', '').replace('.md', '')
+    final_url = html_url + "/" + basename + ".html"
+    all_lines = read_file(extra)
+    title_line = all_lines[1]
+    title = title_line.replace('title:', '')
+    title = title.lstrip()
+    print('title:', title)
+    ws.post_init(final_url, title)
+    ws.parse(title, TITLE_SEARCH_POINTS)
+
+    return all_lines
 
 
 percent_complete_closed = False
@@ -3419,6 +3485,8 @@ gen_post_by_tag_groups()    # Generate list of posts in smaller tagged groups
 
 # Erase progress bar
 percent_complete_close()
+
+process_extra_files()
 
 if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
     print('')
