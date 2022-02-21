@@ -939,6 +939,49 @@ These variables create HTML that looks like this:
 <a id="hdr20"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr19" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
 
+## Site Search Words
+
+A different kind of site search engine is provided. Instead of using "AND" between
+words it uses "OR" between words. Also "fluff" words are excluded to save space
+and time. Example "fluff" words are "What", "Who", "the", "a", etc.
+
+A weighting system is provided to give a word more importance depending on where
+it appears:
+
+``` python
+TITLE_SEARCH_POINTS = 10.0  # ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
+TAG_SEARCH_POINTS = 5.0     # ws.parse(tags, TAG_SEARCH_POINTS)
+# ws.parse(line, WORD_SEARCH_POINTS[current_header_level])
+# List depending on: Line  H1   H2   H3   H4    H5   H6
+WORD_SEARCH_POINTS = [0.5, 2.0, 1.5, 1.0, 0.75, 0.5, 0.5]
+# All saved posts are indexed for searching but, add files below too:
+EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../index.md',
+                      '../mserve.md', '../mt.md', '../programs.md',
+                      '../stack.md']
+```
+
+Using the above global variable values the following points are
+awarded when the word appears in:
+
+- **Title** - 10.0 points
+- **Tags** - 5.0 points
+- **Regular Line** - 0.5 points
+- **Heading 1 Line** - 2.0 points
+- **Heading 2 Line** - 1.5 points
+- **Heading 3 Line** - 1.0 points
+- **Heading 4 Line** - 0.75 points
+- **Heading 5 Line** - 0.5 points
+- **Heading 6+ Line** - 0.5 points (includes heading 6 and all above it)
+
+All posts are automatically added to the site search engine. But you can
+add specific markdown files to be included as well. Place these in the
+`EXTRA_SEARCH_FILES` list.
+
+<!-- Note this is duplicate hdr20 id. Let's see what happens now -->
+<a id="hdr20"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr19" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
+
+
 ## Exclude Stack Exchange Sites Options
 
 There may be non-Black & White websites you've posted on. Likely
@@ -1320,6 +1363,20 @@ create the blog post's filename:
 ``` python
 def create_blog_filename(r):
  """ Return blog filename.
+
+     TODO: Fix 404 from site search
+     https://pippim.github.io/2018/08/01/
+     How-to-use-_xrandr---gamma_-for-Gnome-_Night-Light_-like-usage_.html
+
+     Works with tags:
+     https://pippim.github.io/2018/08/01/
+     How-to-use-_xrandr-gamma_-for-Gnome-_Night-Light_-like-usage_.html
+
+     Real full title:
+     How to use "xrandr --gamma" for Gnome "Night Light"-like usage?
+
+     NB: For some reason '--gamma' is being changed to 'gamma'.
+
      Replace all spaces in title with "-"
      Prepend "/YYYY/" to post filename as required.
 
@@ -1347,6 +1404,9 @@ def create_blog_filename(r):
          "=" to "%3D"
          "?" to "%3F"
          "@" to "%40"
+         "`" to "%60"
+         "{" to "%7B"
+         "}" to "%7D"
 
          "▶️" to " ▶%EF%B8%8F"
 
@@ -1356,6 +1416,9 @@ def create_blog_filename(r):
 
      Jekyll converts:
          "^" to "" (null)
+         ":" to "" (null)
+
+     Pippim uses ' | ' to split hyperlink and title so disallow.
 
  """
  global total_special_chars_in_titles, total_unicode_in_titles
@@ -1367,7 +1430,7 @@ def create_blog_filename(r):
  for i, lit in enumerate(little):
      if lit == " ":
          little[i] = "-"
-     elif lit in "#$%^&+;,=?/'<>()[]":
+     elif lit in "`#$%^&+;:,=?/'<>()[]{}|\\":
          little[i] = "_"
          total_special_chars_in_titles += 1
      elif lit in '"':
@@ -1379,7 +1442,11 @@ def create_blog_filename(r):
      elif len(little) != len(r[TITLE]):
          fatal_error('Should be a unicode here?')
 
- base_fn = sub_dir + r[CREATED].split()[0] + '-' + ''.join(little)
+ fn = ''.join(little)  # Convert little list back to string
+ while "--" in fn:
+     fn = fn.replace('--', '-')
+
+ base_fn = sub_dir + r[CREATED].split()[0] + '-' + fn
 
  blog_fn = OUTPUT_DIR + base_fn + ".md"
  blog_fn = blog_fn.replace('//', '/')
