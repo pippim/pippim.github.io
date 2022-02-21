@@ -99,6 +99,9 @@ Password: <type your password>
 
 """
 
+''' GLOBAL VARIABLES - To see all from terminal use:
+    grep -w '^\([_]*[A-Z]\+\)\+' stack-to-blog.py
+'''
 INPUT_FILE = 'QueryResults.csv'
 RANDOM_LIMIT = None         # On initial trials limit the number of blog posts to 10
 PRINT_RANDOM = False        # Print out matching random records found
@@ -107,12 +110,10 @@ OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
 QUESTIONS_QUALIFIER = True  # Convert questions to blog posts
 VOTE_QUALIFIER = 2          # Posts need at least 2 votes to qualify
 ACCEPTED_QUALIFIER = True   # All accepted answers are uploaded
+# Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
 PRINT_COLUMN_NAMES = False  # Print QueryResults first row to terminal
 PRINT_NOT_ACCEPTED = False  # Print self answered questions not accepted
 PRINT_LOW_VOTES = True      # Print self answered questions with low answer votes
-SEARCH_ENGINE = True        # Spend twice the time generating website search?
-
-# Don't confuse above with row 'ACCEPTED' index or the flag 'FRONT_ACCEPTED'
 
 ''' Table of Contents (TOC) options. '''
 # If TOC is never wanted, set to None
@@ -169,7 +170,6 @@ EXCLUDE_SITES = ["English Language & Usage", "Politics", "Unix & Linux Meta",
                  "Meta Stack Exchange", "Sports", "Meta Stack Overflow",
                  "Medical Sciences", "Ask Ubuntu Meta"]
 
-# Future upgrade, give points (weight) for place search word is used
 TITLE_SEARCH_POINTS = 10.0  # ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
 TAG_SEARCH_POINTS = 5.0     # ws.parse(tags, TAG_SEARCH_POINTS)
 # ws.parse(line, WORD_SEARCH_POINTS[current_header_level])
@@ -597,6 +597,7 @@ def set_ss_save_blog(r):
         #self_answer, self_accept, votes, search_url = check_self_answer(r)
         self_accept, search_url = check_self_accept(r)
         if "?17466561" in r[URL] or "?59621559" in r[URL]:
+            percent_complete_close()
             print('search_url:', search_url)
             print('self_answer:', self_answer, 'self_accept:', self_accept)
             # fatal_error("This is it")
@@ -1329,6 +1330,7 @@ def tally_tags():
         all_tag_counts += 1
         entry_ndx = get_index(entry, total_tag_names)
         if entry_ndx is None:
+            percent_complete_close()
             print('total_tag_names:', total_tag_names)
             fatal_error("pseudo_tag_name not found: " + entry +
                         " in total_tag_names.")
@@ -1978,11 +1980,7 @@ def create_blog_filename(r):
 
     fn = ''.join(little)  # Convert little list back to string
     while "--" in fn:
-        # Jekyll renders "---" as "-" and "--" as "-" in final html
-        #percent_complete_close()
-        #print('OLD:', fn)
         fn = fn.replace('--', '-')
-        #print('NEW:', fn)
 
     base_fn = sub_dir + r[CREATED].split()[0] + '-' + fn
 
@@ -2010,8 +2008,9 @@ def make_output_year_dir(post_date):
     if not os.path.isdir(prefix):
         try:
             os.makedirs(prefix)
-            print('Created directory:', prefix)
+            #print('Created directory:', prefix)
         except OSError as error:
+            percent_complete_close()
             print(error)
             fatal_error('Could not make directory path:' + prefix)
 
@@ -2687,6 +2686,7 @@ def gen_post_by_tag_groups():
         html += html_details_end()
 
     if total_group_count != len(new_groups):
+        percent_complete_close()
         print('total_group_count:', total_group_count,
               'len(new_groups):', len(new_groups))
         # fatal_error('total_count != len(new_groups)')
@@ -3280,6 +3280,7 @@ for row in rows:
     base_filename, blog_filename = create_blog_filename(row)
     get_ss_index(row_number - 2)
     if ss_title != row[TITLE]:
+        percent_complete_close()
         print('index does not match:', row_number - 2)
         fatal_error("Terminating")
     save_blog = ss_save_blog
@@ -3422,13 +3423,6 @@ for row in rows:
         filename = filename[5:]
     # /2018-05-18-Title-of-question becomes: /2018/05/18/Title-of-question
     filename = filename.replace('-', '/', 3)
-    # TODO: This should be in create_blog_filename() function
-    if "---" in filename:
-        # Fix "xrandr --gamma" rendered as "xrandr-gamma"
-        filename = filename.replace('---', '-')
-    if "--" in filename:
-        # Fix "ls -la" rendered as "ls-la"
-        filename = filename.replace('--', '-')
 
     # noinspection PyUnresolvedReferences
     ws.post_init(html_url + filename + ".html", row[TITLE])
