@@ -23,7 +23,6 @@
 │   │   └── search.js
 │   └── json
 │       ├── search_exclude.json
-│       ├── search_include.json
 │       ├── search_url.json
 │       └── search_words.json
 ├── _includes
@@ -42,9 +41,9 @@
 ├── _posts
 │   ├── 2016 [175 entries exceeds filelimit, not opening dir]
 │   ├── 2017 [153 entries exceeds filelimit, not opening dir]
-│   ├── 2018 [436 entries exceeds filelimit, not opening dir]
-│   ├── 2019 [265 entries exceeds filelimit, not opening dir]
-│   ├── 2020 [59 entries exceeds filelimit, not opening dir]
+│   ├── 2018 [434 entries exceeds filelimit, not opening dir]
+│   ├── 2019 [262 entries exceeds filelimit, not opening dir]
+│   ├── 2020 [58 entries exceeds filelimit, not opening dir]
 │   ├── 2021 [31 entries exceeds filelimit, not opening dir]
 │   └── 2022
 │       ├── 2022-01-05-Python-to-print-out-status-bar-and-percentage.md
@@ -72,4 +71,4 @@
 ├── tree.work
 └── wc
 
-20 directories, 53 files
+20 directories, 52 files

@@ -159,11 +159,11 @@ echo
 echo "=== UPDATING: website search JSON files"
 
 cp ~/website/assets/json/search_url.json assets/json/
-cp ~/website/assets/json/search_include.json assets/json/
+cp ~/website/assets/json/search_words.json assets/json/
 cp ~/website/assets/json/search_exclude.json assets/json/
 
 git add assets/json/search_url.json
-git add assets/json/search_include.json
+git add assets/json/search_words.json
 git add assets/json/search_exclude.json
 retVal=$?
 if [ $retVal -ne 0 ]; then

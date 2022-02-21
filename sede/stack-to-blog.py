@@ -1976,7 +1976,15 @@ def create_blog_filename(r):
         elif len(little) != len(r[TITLE]):
             fatal_error('Should be a unicode here?')
 
-    base_fn = sub_dir + r[CREATED].split()[0] + '-' + ''.join(little)
+    fn = ''.join(little)  # Convert little list back to string
+    while "--" in fn:
+        # Jekyll renders "---" as "-" and "--" as "-" in final html
+        #percent_complete_close()
+        #print('OLD:', fn)
+        fn = fn.replace('--', '-')
+        #print('NEW:', fn)
+
+    base_fn = sub_dir + r[CREATED].split()[0] + '-' + fn
 
     blog_fn = OUTPUT_DIR + base_fn + ".md"
     blog_fn = blog_fn.replace('//', '/')
