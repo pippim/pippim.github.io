@@ -38,6 +38,8 @@ from datetime import datetime as dt
 import json
 import re
 
+ws_DEBUG = False  # Don't print debug events
+
 """
     TO-DO
     ============================================================================
@@ -207,26 +209,6 @@ class WebsiteSearch(InitCommonVars):
         self.post_index = 0                 # post in url_list
         self.saved_size = 0                 # Amount saved by excluding words / links
 
-    def markdown_file(self, post_final_url, post_title):
-        """
-        Process entire .md file to add search words.
-
-        For example, 'index.md', 'programs.md' and 'mt.md'
-
-        The filename is specified relatively.
-        Strip out '<id=' and '<div' tags inserted for section navigation.
-        Strip out '{{ ... }}' liquid tags.
-        In future perhaps follow '{{ include ... }}' liquid tags.
-
-        """
-
-        InitCommonVars.__init__(self)  # Initialize all post instances
-
-        self.post_final_url = post_final_url
-        self.post_title = post_title
-        self.url_list.append(self.post_final_url + " | " + self.post_title)
-        # NOTE: self.post_index incremented after saving
-
     def post_init(self, post_final_url, post_title):
 
         InitCommonVars.__init__(self)  # Initialize all post instances
@@ -297,6 +279,7 @@ class WebsiteSearch(InitCommonVars):
 
         first_char = word[:1]
         last_char = word[-1:]
+        # TODO: first_char = "{" and last_char = "}"
         if first_char == last_char:
             if first_char in ".,:[{(<``" or first_char in '"':
                 word = word[1:]
@@ -374,7 +357,7 @@ class WebsiteSearch(InitCommonVars):
             fh.write(json_object)
 
         d_print('website-search.py')
-        d_print('last post included:', self.post_included)
+        # d_print('last post included:', self.post_included)  # Can be VERY LONG
         d_print('total indexed pages: ', len(self.url_list))
         d_print('total included words:', len(self.site_included))
         total = 0

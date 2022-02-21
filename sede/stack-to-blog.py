@@ -1897,6 +1897,20 @@ def front_matter(r):
 
 def create_blog_filename(r):
     """ Return blog filename.
+
+        TODO: Fix 404 from site search
+        https://pippim.github.io/2018/08/01/
+        How-to-use-_xrandr---gamma_-for-Gnome-_Night-Light_-like-usage_.html
+
+        Works with tags:
+        https://pippim.github.io/2018/08/01/
+        How-to-use-_xrandr-gamma_-for-Gnome-_Night-Light_-like-usage_.html
+
+        Real full title:
+        How to use "xrandr --gamma" for Gnome "Night Light"-like usage?
+
+        NB: For some reason '--gamma' is being changed to 'gamma'.
+
         Replace all spaces in title with "-"
         Prepend "/YYYY/" to post filename as required.
 
@@ -3389,6 +3403,7 @@ for row in rows:
     sum2 = 0                # Track for new header to insert Navigation Bar
     last_nav_id = 0         # Last navigation bar ID assigned
 
+    ''' Setup search words for blog post '''
     # Build our html URL. The config.yml key code_url value contains:
     #   https://github.com/pippim/pippim.github.io/blob/main
     # and it has already been changed inside html_url to:
@@ -3399,6 +3414,14 @@ for row in rows:
         filename = filename[5:]
     # /2018-05-18-Title-of-question becomes: /2018/05/18/Title-of-question
     filename = filename.replace('-', '/', 3)
+    # TODO: This should be in create_blog_filename() function
+    if "---" in filename:
+        # Fix "xrandr --gamma" rendered as "xrandr-gamma"
+        filename = filename.replace('---', '-')
+    if "--" in filename:
+        # Fix "ls -la" rendered as "ls-la"
+        filename = filename.replace('--', '-')
+
     # noinspection PyUnresolvedReferences
     ws.post_init(html_url + filename + ".html", row[TITLE])
     ws.parse(row[TITLE], TITLE_SEARCH_POINTS)
@@ -3486,11 +3509,15 @@ gen_post_by_tag_groups()    # Generate list of posts in smaller tagged groups
 # Erase progress bar
 percent_complete_close()
 
+# Add /*.md files to site search words
 process_extra_files()
+
+# Write out website search files: search_words.json and search_url.json
+ws.site_save()
 
 if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
     print('')
-    print('// ==============/   Self-Answered Questions not accepted   \\================ \\\\')
+    print('// ================/   Self-Answered Questions not accepted   \\================== \\\\')
     print('')
     for url in self_not_accept_url:
         print('URL:', url)
@@ -3498,7 +3525,7 @@ if PRINT_NOT_ACCEPTED and len(self_not_accept_url) > 0:
 
 if PRINT_LOW_VOTES and len(self_low_votes_url) > 0:
     print('')
-    print('// =============/   Self-Answered Questions with low votes   \\=============== \\\\')
+    print('// ===============/   Self-Answered Questions with low votes   \\================= \\\\')
     print('')
     for url in self_low_votes_url:
         print('URL:', url)
@@ -3506,7 +3533,7 @@ if PRINT_LOW_VOTES and len(self_low_votes_url) > 0:
 
 if len(bad_languages) > 0:
     print('')
-    print('// ==============/   Languages not supported by Rouge   \\================ \\\\')
+    print('// ==================/   Languages not supported by Rouge   \\==================== \\\\')
     print('')
     for bad_tuple in bad_languages:
         print('Invalid Rouge:', "'" + bad_tuple[0] + "'", 'Link:', bad_tuple[1])
@@ -3522,9 +3549,6 @@ if RANDOM_LIMIT is None:
 else:
     # noinspection PyStringFormat
     random_limit = '{:>6,}'.format(RANDOM_LIMIT)
-
-# Write out .json website search files
-ws.site_save()
 
 print('// =============================/   T O T A L S   \\============================== \\\\')
 print('Run-time options:\n')
