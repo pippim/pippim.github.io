@@ -1327,7 +1327,7 @@ python program performs:
 
 14. Stack Exchange Markdown can dynamically look-up the link name within SE sties. GitHub Pages does not support this feature. For example, if `[https://askubuntu.com/q/123456/how-can-i?][1]`is found without a link name, it is converted to `[How Can I?][1]`.
 
-15. Stack Exchange posts which are saved on the {{ site.title }} website are converted to internal links. This minimizes clicks away from the {{ site.title }} website and presents the post in the same uncluttered format the {{ site.title }} website provides.
+15. When a post contains a link to a Stack Exchange post which is also saved on the {{ site.title }} website, that link is converted to internal links. This minimizes clicks away from the {{ site.title }} website and presents the post in the same uncluttered format the {{ site.title }} website provides.
 
 The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
