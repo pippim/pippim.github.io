@@ -58,7 +58,7 @@ This video shows:
 ---
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
 {% include toc.md %}
 
 ---
