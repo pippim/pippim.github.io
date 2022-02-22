@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "234,580 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-01-05-Python-to-print-out-status-bar-and-percentage.md
 toc:          false
 navigation:   true
@@ -32,7 +32,7 @@ None of the answers posted completely addressed my needs. So I wrote my own as s
 
 
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2">Skip</a></div>
 
 ## How to Call the Progress Display
 
@@ -102,7 +102,7 @@ A few points:
 
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 
 ## Summary
 
@@ -121,7 +121,7 @@ The bash script would display Sony TV volume with `libnotify-bin` (pop-up bubble
 
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr4">Skip</a></div>
 
 ## Edit January 30, 2022
 
@@ -133,5 +133,5 @@ The bash script would display Sony TV volume with `libnotify-bin` (pop-up bubble
 
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a></div>
 

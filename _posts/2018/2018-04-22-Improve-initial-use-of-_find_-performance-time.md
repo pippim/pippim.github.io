@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,325 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-22-Improve-initial-use-of-_find_-performance-time.md
 toc:          false
 navigation:   true
@@ -21,7 +21,7 @@ clipboard:    true
 
 
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2">Skip</a></div>
 
 # Challenging project
 
@@ -108,7 +108,7 @@ At least that is my best guess. Regardless of the reason, this approach works as
 
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 
 # What should work but doesn't work
 
@@ -133,7 +133,7 @@ Now reboot and check performance of `find` command.
 
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr4">Skip</a></div>
 
 ## Cron at reboot
 
@@ -177,5 +177,5 @@ sys     0m3.709s
 
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a></div>
 

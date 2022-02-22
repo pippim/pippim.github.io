@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,833 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-15-How-can-I-see-previous-history-_prior-to-this-boot_-in-journalctl_.md
 toc:          false
 navigation:   true
@@ -21,7 +21,7 @@ clipboard:    true
 
 
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2">Skip</a></div>
 
 ## On older installs `journalctl` doesn't keep boot history
 
@@ -29,7 +29,7 @@ Firstly only new installs will have boot history stored by `journalctl` as per t
 
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 
 ## Use `--list-boots` to get boot number
 
@@ -74,7 +74,7 @@ On the screen we see a boot on March 27th and then one on March 30th. So the boo
 
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr4">Skip</a></div>
 
 ## List your boot records
 
@@ -118,7 +118,7 @@ After the first few lines we see the Kernel version that was booted is: `4.14.23
 
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr5">Skip</a></div>
 
 ## More than kernel version is available
 
@@ -164,5 +164,5 @@ You might think "Mar 30" at the bottom is in error but it's a laptop that gets s
 
 
 <a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a></div>
 

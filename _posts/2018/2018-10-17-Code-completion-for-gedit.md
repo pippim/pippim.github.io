@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,882 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-17-Code-completion-for-gedit.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,621 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-27-Bash-script-to-sleep-at-given-CPU-temperature-~-update-for-16.04.md
 toc:          false
 navigation:   true
@@ -45,7 +45,7 @@ So here's my recommended solution to prevent overheating and utilizing CPU slow 
 
 
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2">Skip</a></div>
 
 # Slow down CPU to reduce heat
 
@@ -75,7 +75,7 @@ apt-get install thermald
 
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 
 # Intel Powerclamp
 
@@ -107,7 +107,7 @@ Intel's ***Powerclamp*** driver is defined here ([kernel.org - Intel Power Clamp
 
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr4">Skip</a></div>
 
 # How do you know Powerclamp is running?
 
@@ -136,7 +136,7 @@ If you see `intel_rapl` and `intel_powerclamp` you know it's working and simply 
 
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr5">Skip</a></div>
 
 # Powerclamp in action displayed by Conky
 
@@ -158,7 +158,7 @@ The ***Powerclamp*** driver runs until temps drop below 85C again. While the dri
 
 
 <a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a>  <a href="#hdr6" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr6">Skip</a></div>
 
 # Disable Intel Turbo Boost
 
@@ -178,5 +178,5 @@ echo "1" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo
 
 
 <a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr5" class ="hdr-btn">ToS</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a></div>
 

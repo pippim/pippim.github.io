@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,387 "
 accepted:     Accepted
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-29-Video-drivers-for-Intel-onboard-graphic-in-18.04-and-thinkpad-t410.md
 toc:          false
 navigation:   false

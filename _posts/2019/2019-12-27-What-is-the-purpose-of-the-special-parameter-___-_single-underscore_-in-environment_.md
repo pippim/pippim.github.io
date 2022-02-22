@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    1
 views:        "2,547 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-27-What-is-the-purpose-of-the-special-parameter-___-_single-underscore_-in-environment_.md
 toc:          false
 navigation:   false

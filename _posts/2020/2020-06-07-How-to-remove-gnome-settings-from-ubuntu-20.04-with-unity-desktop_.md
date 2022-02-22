@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "3,167 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-07-How-to-remove-gnome-settings-from-ubuntu-20.04-with-unity-desktop_.md
 toc:          false
 navigation:   false

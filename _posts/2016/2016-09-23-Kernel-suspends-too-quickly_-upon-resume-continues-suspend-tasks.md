@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    5
 views:        "4,461 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-23-Kernel-suspends-too-quickly_-upon-resume-continues-suspend-tasks.md
 toc:          false
 navigation:   true
@@ -21,7 +21,7 @@ clipboard:    true
 
 
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2">Skip</a></div>
 
 ## Jun 29/2019 Update
 
@@ -39,7 +39,7 @@ Another bug report was filed in **Launchpad**:
 
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 
 ## Oct 21/2018 Update
 
@@ -65,7 +65,7 @@ Oct 21 16:13:14 alien kernel: Freezing user space processes ... (elapsed 0.002 s
 
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr4">Skip</a></div>
 
 ## Feb 25/2018 Update
 
@@ -158,7 +158,7 @@ Notice how the system is suspended Feb 24 at 11:30pm then resumed on Feb 25 at 7
 
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a>  <a href="#hdr5" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr5">Skip</a></div>
 
 ## Background
 
@@ -361,5 +361,5 @@ Is this normal? (Note lid-close does same thing except systemd suspends faster a
 
 
 <a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr4" class ="hdr-btn">ToS</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a></div>
 

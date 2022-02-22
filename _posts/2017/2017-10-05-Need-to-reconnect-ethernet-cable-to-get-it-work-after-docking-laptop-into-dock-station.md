@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "995 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-05-Need-to-reconnect-ethernet-cable-to-get-it-work-after-docking-laptop-into-dock-station.md
 toc:          false
 navigation:   false

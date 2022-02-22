@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "770 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-13-The-computer-didn_t-automatically-boot-from-USB_.md
 toc:          false
 navigation:   false

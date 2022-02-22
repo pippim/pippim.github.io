@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "5,008 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-How-to-use-a-key-press-to-wake-a-suspended-laptop-when-using-a-KVM-switch_.md
 toc:          false
 navigation:   true
@@ -134,7 +134,7 @@ One problem with this approach is that if the USB port the IR device is plugged 
 
 
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2">Skip</a></div>
 
 # Original Answer Below
 
@@ -199,7 +199,7 @@ I hope it works for all of you. This guide was made after testing all other poss
 
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 
 # Answer 2 (7 upvotes)
 
@@ -243,7 +243,7 @@ ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="062a", ATTRS{idProduct}=="410
 
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a>  <a href="#hdr4" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr4">Skip</a></div>
 
 # Answer 3
 
@@ -289,5 +289,5 @@ For some reason I can't explain, the 'post' sleep *if* statement only works ever
 
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr3" class ="hdr-btn">ToS</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a></div>
 

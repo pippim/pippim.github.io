@@ -12,7 +12,7 @@ votes:        "10 "
 favorites:    
 views:        "18,395 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-20-What-does-__2-mean-in-a-shell-script_.md
 toc:          false
 navigation:   false

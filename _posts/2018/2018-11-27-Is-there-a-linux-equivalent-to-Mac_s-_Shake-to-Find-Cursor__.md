@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,950 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-27-Is-there-a-linux-equivalent-to-Mac_s-_Shake-to-Find-Cursor__.md
 toc:          false
 navigation:   false

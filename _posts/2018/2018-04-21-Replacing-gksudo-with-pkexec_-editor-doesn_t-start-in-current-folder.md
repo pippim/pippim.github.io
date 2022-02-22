@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "2,204 "
 accepted:     Accepted
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-21-Replacing-gksudo-with-pkexec_-editor-doesn_t-start-in-current-folder.md
 toc:          false
 navigation:   false

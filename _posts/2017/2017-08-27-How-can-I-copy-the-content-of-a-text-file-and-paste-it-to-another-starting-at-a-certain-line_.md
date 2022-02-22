@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "37,150 "
 accepted:     Accepted
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-27-How-can-I-copy-the-content-of-a-text-file-and-paste-it-to-another-starting-at-a-certain-line_.md
 toc:          false
 navigation:   false

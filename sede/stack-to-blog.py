@@ -1765,36 +1765,36 @@ def navigation_bar(skip_btn=True):
     bar = ""  # Create new navigation bar
 
     if NAV_BAR_OPT >= 3:
-        bar = bar + "\n"  # Empty line before navigation bar
+        bar += "\n"  # Empty line before navigation bar
 
-    bar = bar + '<a id="hdr' + str(level) + '"></a>'
+    bar += '<a id="hdr' + str(level) + '"></a>'
     if NAV_BAR_OPT >= 2:
-        bar = bar + "\n"    # ID tag on separate line
+        bar += "\n"    # ID tag on separate line
 
     # Calculate jump points
     hdr_ToS = level - 1
     hdr_Skip = level + 1
-    bar = bar + '<div class="hdr-bar">'
+    bar += '<div class="hdr-bar">'
     # If first Navigation Bar then no Top or Tos
     if level != 1:
-        bar = bar + '  <a href="#" class ="hdr-btn">Top</a>'
-        bar = bar + '  <a href="#hdr' + str(hdr_ToS) + '" class ="hdr-btn">ToS</a>'
+        bar += '  <a href="#">Top</a>'
+        bar += '  <a href="#hdr' + str(hdr_ToS) + '">ToS</a>'
 
     # TOC button only appears when active and if this isn't the TOC header itself.
     if insert_toc:
         if level != TOC_LOC:
-            bar = bar + '  <a href="#hdr' + str(TOC_LOC) + '" class ="hdr-btn">ToC</a>'
+            bar += '  <a href="#hdr' + str(TOC_LOC) + '">ToC</a>'
         else:
             last_nav_TOC = True
 
     # Skip button will always appear except on footer
     if skip_btn:
-        bar = bar + '  <a href="#hdr' + str(hdr_Skip) + '" class ="hdr-btn">Skip</a>'
+        bar += '  <a href="#hdr' + str(hdr_Skip) + '">Skip</a>'
 
-    bar = bar + '</div>\n'
+    bar += '</div>\n'
 
     if NAV_BAR_OPT >= 4:
-        bar = bar + "\n"
+        bar += "\n"
 
     last_nav_index = line_index
     return bar
@@ -3014,8 +3014,8 @@ def process_extra_files():
         html_url contains 'https://pippim.github.io'
     """
     percent_complete_close()
-    file_count = len(EXTRA_SEARCH_FILES)
-    print('Processing', file_count, 'extra search files')
+    # file_count = len(EXTRA_SEARCH_FILES)
+    # print('Processing', file_count, 'extra search files')
     for i, extra in enumerate(EXTRA_SEARCH_FILES):
         all_lines = extra_file_as_post_init(extra)
         in_include = False
@@ -3071,7 +3071,7 @@ def extra_file_as_post_init(extra):
     title_line = all_lines[1]
     title = title_line.replace('title:', '')
     title = title.lstrip()
-    print('title:', title)
+    # print('title:', title)
     ws.post_init(final_url, title)
     ws.parse(title, TITLE_SEARCH_POINTS)
 

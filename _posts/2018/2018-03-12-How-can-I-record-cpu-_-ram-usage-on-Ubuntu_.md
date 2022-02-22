@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "574 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-How-can-I-record-cpu-_-ram-usage-on-Ubuntu_.md
 toc:          false
 navigation:   true
@@ -41,7 +41,7 @@ The documentation below which is from: [Use vmstat to Monitor System Performance
 
 
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2">Skip</a></div>
 
 ## What is vmstat?
 
@@ -68,7 +68,7 @@ In this example, the first line of data provides the average since the last boot
 
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr1" class ="hdr-btn">ToS</a>  <a href="#hdr3" class ="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 
 ## vmstat Commands
 
@@ -185,5 +185,5 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
 
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class ="hdr-btn">Top</a>  <a href="#hdr2" class ="hdr-btn">ToS</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a></div>
 

@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "6,854 "
 accepted:     
-uploaded:     2022-02-21 09:31:49
+uploaded:     2022-02-22 04:32:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-26-Tagging-files-on-Ubuntu.md
 toc:          false
 navigation:   false
