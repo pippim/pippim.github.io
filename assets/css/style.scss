@@ -109,6 +109,7 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 /* here! from: https://stackoverflow.com/a/71213971/6929343 */
+.hdr-btn,
 .hdr-bar > a {
   display: inline-block;
   position: relative;
@@ -126,7 +127,7 @@ $lavender: #E6E6FA !default; // lavender
   }
 }
 
-// OLD class to be deprecated after check-html-ids.py does away with.
+/* OLD class to be deprecated after check-html-ids.py does away with.
 .hdr-btn {
   display: inline-block;
   position: relative;
@@ -143,6 +144,7 @@ $lavender: #E6E6FA !default; // lavender
     color:#F0FFF0;
   }
 }
+*/
 
 // Blog post front matter
 .front-matter {
