@@ -1239,10 +1239,10 @@ python program performs:
     
     <a id="hdr2"></a>
     <div class="hdr-bar">
-      <a href="#" class="hdr-btn">Top</a>
-      <a href="#hdr1" class="hdr-btn">ToS</a>
-      <a href="#hdr2" class="hdr-btn">ToC</a>
-      <a href="#hdr3" class="hdr-btn">Skip</a>
+      <a href="#">Top</a>
+      <a href="#hdr1">ToS</a>
+      <a href="#hdr2">ToC</a>
+      <a href="#hdr3">Skip</a>
     </div>
     
     ## Get in touch
@@ -1254,7 +1254,7 @@ python program performs:
 
     ``` html
     <a id="hdr2"></a>
-    <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
+    <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr3">Skip</a></div>
     
     ## Get in touch
     ```
@@ -1276,7 +1276,9 @@ python program performs:
         }
       }
       
-      .hdr-btn {
+      /* here! from: https://stackoverflow.com/a/71213971/6929343 */
+      .hdr-btn,
+      .hdr-bar > a {
         display: inline-block;
         position: relative;
         color: $header-bg-color;  // Cayman green
