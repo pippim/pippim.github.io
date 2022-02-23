@@ -178,8 +178,6 @@ exclude_word_list = [
 # Create dictionary from list, each key has value 0 (count word usage)
 # At EOJ write out dictionary to JSON file exclude.json for website to use
 
-ws_DEBUG = True  # Print debug events
-
 
 class InitCommonVars:
     """ Variables common to WebsiteSearch__init__() and post_init()
