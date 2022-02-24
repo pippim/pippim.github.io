@@ -335,7 +335,7 @@ mv mt.conf mt_laundry.conf    # Rename Multi-Timer configuration file
 
 # Increasing Maximum Number of Timers
 
-Lets say you created your configuration with the 
+Lets say you created your configuration with the
 *Maximum Number of Timers* for your laundry job set to 3 for:
 
 - Wash
@@ -359,7 +359,7 @@ Notice the end of the line contains:
 
     TRUE|3|Wash|Rinse|Dry|16|13|58
 
-The `3` indicates the maximum number of timers. This is followed 
+The `3` indicates the maximum number of timers. This is followed
 by the timer aliases: `Wash`, `Rinse` and `Dry`. Next comes
 the timer durations in minutes: `16`, `13` and `58`.
 
@@ -375,7 +375,7 @@ But while you are add it why not add some extra spare fields?
 
     TRUE|6|Timer 1|Wash|Rinse|Dry|Fold|Timer 6|0|16|13|58|10|0
 
-You've just successfully created timer aliases `Timer 1` and 
+You've just successfully created timer aliases `Timer 1` and
 `Timer 6` with a duration of `0` minutes which means they
 will never display and never get executed. If you ever want to
 activate them just use the regular Main Configuration Tab in
@@ -384,4 +384,39 @@ Multi-Timer program.
 ---
 
 <a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
+
+# Future Plans
+
+A web version where you can run Multi-Timer on any web browser on any
+platform anywhere in the world.
+
+The configuration file is stored on your web browser local storage in
+the form of a Cookie.
+
+A function to copy and paste your cookie into an email. Then send it
+to yourself and receive it. Then paste the cookie onto another web
+browser on your device. Or paste the cookie into a different device.
+Or share your e-amil cookie with a friend / colleague and they can
+run your Set of Timers.
+
+Perhaps some day {{ site.title }} will have a special page of the
+most popular Multi-Timer cookies that people can run.
+
+Gone will be the notion of *Maximum Number of Timers*. You can have
+an infinite amount depending on RAM. You can scroll and insert a
+new timer anywhere in the set. You can highlight a timer and click
+the Trash Bin. After confirmation all timers below simply move up
+the list.
+
+It will be easier to let you link the timer alarm to a YouTube
+video instead of just a simple audio file.
+
+The future can be revolutionary... or at the vary least evolutionary
+because Cookies have existed for a long time, just never something
+end-users were allowed to use for their own personal gain.
+
+---
+
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a></div>
