@@ -8,9 +8,9 @@ layout: program
 1. Add search bar: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 
 NOTE Fonts not being used error message in Developer Tools:
-   
+
    $ grep -R "https://fonts.googleapis.com/css?family=Open+Sans:400" --with-filename
-   
+
    _layouts/post.html:    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
    _layouts/default.html:    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
    _layouts/program.html:    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
@@ -25,14 +25,15 @@ NOTE Fonts not being used error message in Developer Tools:
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
+   <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
 # Introduction
 
 This page describes how to **convert your Stack Exchange posts
 to your own website, hosted for free on GitHub Pages.**
 
-Converting posts in Stack Exchange MarkDown format isn't as easy 
-as simply copying them over to GitHub Pages. The python program 
+Converting posts in Stack Exchange MarkDown format isn't as easy
+as simply copying them over to GitHub Pages. The python program
 `stack-to-blog.py` is used to convert Stack Exchange posts to
 GitHub Pages Posts. The bash script `refresh.sh` is used to **pull** your
 GitHub Repo, run `stack-to-blog.py` and **push** the results back
@@ -58,42 +59,42 @@ This video shows:
 ---
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
 ---
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
 # {{ site.title }} Website Directory Tree
 
-The directory tree will help you get a better understanding 
-of the Pippim website at `pippim.github.io`. As of 
-{{ site.refreshed | date: "%B %e, %Y" }}, the directory tree 
+The directory tree will help you get a better understanding
+of the Pippim website at `pippim.github.io`. As of
+{{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
 for {{ site.title }} on GitHub Pages looked like this:
 
 ``` terminal
 {% include website_tree.txt %}
 ```
 
-**NOTE:** The `_posts` directory contains {{ site.post_count }} posts 
+**NOTE:** The `_posts` directory contains {{ site.post_count }} posts
 which are not displayed above.
 
 ---
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
 # Daily Backup
 
 Normally you will `git pull` all the directories and files from your website
-to your local drive. If you plan on developing locally, you probably want 
-to save your daily work. This script is what {{ site.title }} uses for 
+to your local drive. If you plan on developing locally, you probably want
+to save your daily work. This script is what {{ site.title }} uses for
 daily backup to gmail.com (in the cloud, so it should be safe):
 
 ``` bash
 # WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
-tar -rpf "$Filename" website/*.md       # about.md, answers.md, programs.md   
+tar -rpf "$Filename" website/*.md       # about.md, answers.md, programs.md
 tar -rpf "$Filename" website/*.yml      # _config.yml
 tar -rpf "$Filename" website/_includes  # copyHeader.html, image.html & toc.md
 tar -rpf "$Filename" website/_layouts   # default.html & post.html
@@ -106,19 +107,19 @@ tar -rpf "$Filename" website/sede/*.py  # stack-to-blog.py and SEDE query below
 tar -rpf "$Filename" website/sede/StackQuery
 ```
 
-<h3><b> IMPORTANT NOTE: </b></h3> 
+<h3><b> IMPORTANT NOTE: </b></h3>
 
 > Images are ***NOT*** included in the daily backup.  This is because this is a small subset of my daily backup script that is called from `cron` every morning.
->   
+>
 > The full script compresses files and emails to gmail.com. Including images would make the backup exceed Google quotas of 20 MB per backup and 15 GB for all backups.
->   
->  If you want to include images  in your own backup, add the following to the daily backup script:  
->    ``` bash  
->    tar -rpf "$Filename" website/assets/img # Image files  
->    ````  
+>
+>  If you want to include images  in your own backup, add the following to the daily backup script:
+>    ``` bash
+>    tar -rpf "$Filename" website/assets/img # Image files
+>    ````
 
 <a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 # Convert Stack Exchange to GitHub Pages
 
@@ -127,11 +128,11 @@ tar -rpf "$Filename" website/sede/StackQuery
    style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
 %}
 
-Converting thousands of Stack Exchange Q&A in markdown format isn't as easy 
-as simply copying them over to GitHub Pages. The python program 
+Converting thousands of Stack Exchange Q&A in markdown format isn't as easy
+as simply copying them over to GitHub Pages. The python program
 `stack-to-blog.py` was used to convert Stack Exchange posts to
 GitHub Pages Posts.
-The full `stack-to-blog.py` program can be accessed on the 
+The full `stack-to-blog.py` program can be accessed on the
 [Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
 The program automatically:
@@ -139,8 +140,8 @@ The program automatically:
 - Creates Jekyll front matter on posts and front matter totals for site.
 - Selects Stack Exchange Posts based on meeting minimum criteria such as up-votes or accepted answer status.
 - If self-answered question, the answer is included and not the question.
-- If self-answered question, the accepted answer alone doesn't qualify. Votes from other are the qualifier. 
-- Initial testing allows selecting small set of random record numbers to convert. 
+- If self-answered question, the accepted answer alone doesn't qualify. Votes from other are the qualifier.
+- Initial testing allows selecting small set of random record numbers to convert.
 - Converts Stack Exchange Markdown formats to GitHub Pages Kramdown Markdown format.
 - Creates hyperlinks to original Answer in Stack Exchange and Kramdown in GitHub Pages.
 - Creates search word to URL indices excluding 50% of words like "a", "the", etc. to save space.
@@ -163,7 +164,7 @@ The program automatically:
 ---
 
 <a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 # Stack Exchange Data Explorer
 
@@ -183,8 +184,8 @@ Each of these steps is described in detail in the following sections.
 ## First Step is to Log In
 
 The first step in converting Stack Exchange posts to {{ site.title }}
-website posts is to run a 
-[Stack Exchange Data Explorer Query 🔗](https://data.stackexchange.com/){:target="_blank"}. 
+website posts is to run a
+[Stack Exchange Data Explorer Query 🔗](https://data.stackexchange.com/){:target="_blank"}.
 After clicking the link you are presented with the Log In screen:
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer login.png"
@@ -197,7 +198,7 @@ Then you can log in using **Google** or **Stack Overflow**. I use
 the latter since Google already knows too much about us :)
 
 <a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer search bar.png"
    alt="Stack Exchange Data Explorer Query Search Bar"
@@ -206,7 +207,7 @@ the latter since Google already knows too much about us :)
 
 ## Search For Query
 
-After logging in, the top of the window provides a search bar to find a query. 
+After logging in, the top of the window provides a search bar to find a query.
 Enter; *"All my posts on the SE network"* or copy with the button below
 and, paste into the search bar.
 
@@ -230,7 +231,7 @@ In the above screenshot it is the first entry on the list.
 If you have revised the query select your revised version.
 
 <a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 ## Specify Parameters
 
@@ -249,7 +250,7 @@ minutes. Or a few seconds if you have just run the query and
 the results have been cached.
 
 <a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 {% include image.html src="/assets/img/stack/stack exchange data explorer download csv.png"
    alt="Stack Exchange Data Explorer Download CSV"
@@ -262,9 +263,9 @@ When the Query finishes, the resulting rows are displayed in
 the browser window. At the top of the first results' row you will see
 the button on the right.
 
-The button will download all your questions and answers 
-from Stack Exchange to your local storage in 
-**CSV** (**C**omma **S**eparated **V**alues) format. 
+The button will download all your questions and answers
+from Stack Exchange to your local storage in
+**CSV** (**C**omma **S**eparated **V**alues) format.
 
 Click the <kbd>Download CSV</kbd> button to initiate the download process.
 
@@ -279,7 +280,7 @@ The download process utilizes a confirmation pop-up window
 as shown on the left.
 
 **Note:** your confirmation pop-up window will look different
-depending on your Operating System and Platform. However, 
+depending on your Operating System and Platform. However,
 the window contents will be similar if not identical.
 
 Ensure the **Save File** radio button is selected and then
@@ -290,13 +291,13 @@ In a moment the query results are downloaded into a file named:
 Note that `~` is a shortcut to your home directory name.
 
 <a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 ## Stack Exchange Data Explorer Important Notes
 
-**Weekly Update:** When you add or revise a post in Stack Exchange 
+**Weekly Update:** When you add or revise a post in Stack Exchange
 the data is not available
-for a query until the following Sunday at 3am UTC. 
+for a query until the following Sunday at 3am UTC.
 
 **Automated Process:** A `cron` job or GitHub Actions
 can theoretically run the query every Monday morning but that
@@ -309,15 +310,15 @@ LibreOffice Calc.
 
 If you add or subtract columns to the query, you have to
 change the CSV fields in the `sede/stack-to-blog.py`
-python program. 
+python program.
 
-Many thanks to the Stack Exchange Data Explorer Query's 
+Many thanks to the Stack Exchange Data Explorer Query's
 [Modifier 🔗](https://meta.stackexchange.com/a/371435/366359).
 
 ---
 
 <a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
 # Run `refresh.sh` Bash Script
 
@@ -330,7 +331,7 @@ You can view the [`refresh.sh` script here 🔗](https://github.com/pippim/pippi
 {% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
    alt="stack-to-blog.py"
    style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
-   caption="Progress Display Bar used by <b>refresh.sh</b>" 
+   caption="Progress Display Bar used by <b>refresh.sh</b>"
 %}
 
 In addition to updating your Stack Exchange posts into the {{ site.title }} website, `refresh.sh` will:
@@ -413,37 +414,37 @@ To https://github.com/pippim/pippim.github.io
 >  * https://github.com/pages-themes/cayman/blob/master/_sass/jekyll-theme-cayman.scss
 >  * Source code version: January 2021
 >  */
-> 
+>
 223c228
 <     font-size: 0.9rem;
 ---
 >     font-size: 96%;  // Change 0.9rem to 96% for proper size in headings
 238a244,248
->     
->     /** Code Block scroll bar From: 
+>
+>     /** Code Block scroll bar From:
 >      ** https://stackoverflow.com/a/38490989/6929343 **/
 >     max-height: 400px;
 >     overflow-y: auto;
 277a288
-> 
+>
 ```
 
 The `refresh.sh` bash script needs a local copy of your website is in your home
 directory with the name `website` (used for development).
-Another local copy is required in your home directory with the name 
+Another local copy is required in your home directory with the name
 `website2` (production clone) . You can generate a local
-copy with the 
-[`git pull 🔗`](https://opensource.com/article/18/2/how-clone-modify-add-delete-git-files) 
+copy with the
+[`git pull 🔗`](https://opensource.com/article/18/2/how-clone-modify-add-delete-git-files)
 command.
 
-The two `website` directory setup allows you to use `website` 
+The two `website` directory setup allows you to use `website`
 for development and `website2` to mirror
 the production version which is **pulled** and **pushed** from/to GitHub Pages.
 
 ---
 
 <a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
 
 # Setting `stack-to-blog.py` Options
 
@@ -473,12 +474,12 @@ During initial testing phase you will want to utilize the
 random record limit feature. This provides two
 Benefits:
 
-1. Limiting the number of blogs generated to your local 
+1. Limiting the number of blogs generated to your local
 Storage.
 2. Returning different blogs at random each time the
 Program is run
 
-Here is the relevant section of code where you can 
+Here is the relevant section of code where you can
 change the `RANDCOM_LIMIT`:
 
 ``` python
@@ -486,15 +487,15 @@ RANDOM_LIMIT = 10           # On initial trials limit the number of blog posts
 PRINT_RANDOM = True         # Print out matching random recordS found
 ```
 
-Initially you will want to have `PRINT_RANDOM` set to `True`. 
+Initially you will want to have `PRINT_RANDOM` set to `True`.
 when you decide to "pull the trigger" and want all your Stack Exchange posts
-converted to your website blog posts, just change `RANDOM_LIMIT` to 
+converted to your website blog posts, just change `RANDOM_LIMIT` to
 a large number like `10000` (ten thousand). Also set `PRINT_RANDOM` to `False`.
 The program finishes a lot faster without printing 10's of thousands of
 lines to your screen.
 
 <a id="hdr13"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr14">Skip</a></div>
 
 ## Stack Exchange Post Selection Criteria
 
@@ -533,10 +534,10 @@ self-answered questions though, the answer may still be converted.
 
 When the program finishes, it can print a list of all
 self-answered questions that were not accepted. This usually
-happens after the 
+happens after the
 two-day mandatory waiting period you forgot to accept your own
-answer. If you choose to print the answers not accepted, copy the 
-URLs from the terminal 
+answer. If you choose to print the answers not accepted, copy the
+URLs from the terminal
 list to your browser address bar. Then accept the answers
 in Stack Exchange or, delete the answer and question if they
 have low votes.
@@ -544,33 +545,33 @@ have low votes.
 ---
 
 <a id="hdr14"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr13">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr15">Skip</a></div>
 
 {% include image.html src="/assets/img/stack/Jekyll.png"
    alt="Jekyll Logo from subpng"
    style="float: left; width: 75%; margin: 2.5rem 1rem 0px 0px;"
-   caption="Jekyll image credit: 
+   caption="Jekyll image credit:
       <a href='https://www.subpng.com/png-xk9iwy/'>Ronncraze</a>"
 %}
 
 ## Jekyll Front Matter Options
 
 Jekyll front matter is required by GitHub Pages
-at the top of every blog post. 
+at the top of every blog post.
 
-At the very minimum, the front matter 
+At the very minimum, the front matter
 must contain two lines. One line must be the
 label `layout:`, followed by the variable `post`.
 The other line must be the label `title:`, followed
-by a variable with the `Title of the Blog Post`. 
+by a variable with the `Title of the Blog Post`.
 
 {{ site.title }} adds a lot more front matter. Making it more
-powerful in searching for blog posts. The program 
-`stack-to-blog.py` creates this front matter when 
+powerful in searching for blog posts. The program
+`stack-to-blog.py` creates this front matter when
 it converts Stack Exchange posts.
 
 When you view a blog post on the website, the
-extra front matter is displayed at the top of 
+extra front matter is displayed at the top of
 the post with a More/Less details button.
 
 ### Control Jekyll Front Matter in `stack-to-blog.py`
@@ -613,15 +614,15 @@ FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
 FRONT_CLIPBOARD = "clipboard:    "  # Copy to clipboard button used? "true" or "false"
 ```
 
-*When a global constant name (`FRONT_xxx`) 
+*When a global constant name (`FRONT_xxx`)
 is set to `= None`, no front matter is written.*
 
 <a id="hdr15"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr14">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr16">Skip</a></div>
 
 ### Post Front Matter Stored in Post File
 
-Based on the global variable settings above, 
+Based on the global variable settings above,
 the following front matter would be generated:
 
 ``` yaml
@@ -635,7 +636,7 @@ tags:         command-line bash windows-subsystem-for-linux sms
 created_date: 2018-12-23 13:55:49
 edit_date:    2020-06-12 14:37:07
 votes:        60
-favorites:    
+favorites:
 views:        72,429
 accepted:     Accepted
 uploaded:     2021-11-15 19:56:38
@@ -659,16 +660,16 @@ website page:
 
 The short version (`Less`), begins with **Views:** <mark>1,901</mark>
 generated from the front matter label `views:` This is followed by
-**Votes:** <mark>6</mark> generated from the label `votes:`. 
+**Votes:** <mark>6</mark> generated from the label `votes:`.
 
 Next the "✅ **Solution**" text is controlled
-by the front matter label `accepted:`. The text only appears when 
+by the front matter label `accepted:`. The text only appears when
 `accepted:` contains the value "Accepted". When `accepted:` has no
 value (it's blank / nil / empty) then
 no checkmark or text appears.
 
 The **Tags:** are controlled by the front matter variable `tags:`
-and can also include pseudo-tags. In this example the 
+and can also include pseudo-tags. In this example the
 <mark>eyesome</mark> and <mark>multi-timer</mark>
 keywords were found in the answer and are
 pseudo-tag which have been added to `tags:` front matter.
@@ -690,10 +691,10 @@ tags come from the original Stack Exchange question tags.
 Next you see one of the most powerful
 features of {{ site.title }}'s automated blog pages:
 
-[🔍 See Original Answer on Ask Ubuntu 🔗](https://askubuntu.com/q/882420 
+[🔍 See Original Answer on Ask Ubuntu 🔗](https://askubuntu.com/q/882420
 "Read original Answer on Stack Exchange website but, you might see subtle ads.")
 
-This Stack Exchange post link is generated 
+This Stack Exchange post link is generated
 by three front matter variables:
 
 - The link itself is provided by `stack_url:`
@@ -729,7 +730,7 @@ mark {
 ```
 
 <a id="hdr16"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr15" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr17" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr15">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr17">Skip</a></div>
 
 ### Site-Wide Front Matter Options
 
@@ -761,7 +762,7 @@ You can use these variables in your website. For example the following code: ...
 
 {% raw %}
 ``` liquid
-> As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers 
+> As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers
 have over **{{ site.views_human }} views!**
 ```
 {% endraw %}
@@ -774,17 +775,17 @@ Another example is to link back to the original Markdown with the following code
 
 {% raw %}
 ``` liquid
-{% assign repo_url = psge.url | prepend: site.code_url | replace: ".html", ".md" %} 
+{% assign repo_url = psge.url | prepend: site.code_url | replace: ".html", ".md" %}
 > **repo_url:** {{ repo_url }}
 ```
 {% endraw %}
 
 ...would be display as:
 
-{% assign repo_url = page.url | prepend: site.code_url | replace: ".html", ".md" %} 
+{% assign repo_url = page.url | prepend: site.code_url | replace: ".html", ".md" %}
 > **repo_url:** {{ repo_url }}
 
-You can turn off Site-Wide Front Matter by setting the configuration 
+You can turn off Site-Wide Front Matter by setting the configuration
 filename to `None` as documented in the `stack-to-blog.py` program:
 
 ``` python
@@ -796,7 +797,7 @@ CONFIG_YML = "../_config.yml"
 - **WARNING:** Turning off Site-Wide Front Matter would require extensive revisions to many places where the `{{ site.views }}` Front Matter Liquid tag and other `site.` tags are used. It is recommended, at least initially, that you do **not** turn this option off.
 
 <a id="hdr17"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr16" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr18" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr16">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr18">Skip</a></div>
 
 ## TOC and Navigation Buttons
 
@@ -805,8 +806,8 @@ The TOC (Table of Contents) and Navigation Bar Buttons
 posts are identical to the TOC and Navigation Bars
 you see on this page.
 
-The criteria for when and how the TOC and navigation 
-buttons appear are similar. The python global variables 
+The criteria for when and how the TOC and navigation
+buttons appear are similar. The python global variables
 for both are show below:
 
 ``` python
@@ -851,7 +852,7 @@ PSEUDO_TAGS = ["conky", "cpuf", "eyesome", "grub", "iconic", "multi-timer", 'vns
 
 The global variable `TOC_HDR_MIN = 6` means a minimum number of six
 header lines (markdown lines beginning with `#`, `##`, `###`, etc.)
-are required before the TOC is inserted. Additionally, 
+are required before the TOC is inserted. Additionally,
 a minimum of 1000 words are required as defined by the global
 variable `TOC_WORD_MIN = 1000`. `TOC_LOC = 2` means the
 TOC is inserted before the second header line.
@@ -881,7 +882,7 @@ for i in range(last_nav_index, line_index + 1):
 ```
 
 <a id="hdr18"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr17" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr19" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr17">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr19">Skip</a></div>
 
 ## Copy Code Block Options
 
@@ -903,7 +904,7 @@ lines are required before a <kbd>Copy</kbd> button is presented.
 The default is `20` lines.
 
 <a id="hdr19"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr18" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr18">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr20">Skip</a></div>
 
 ## Posts by Tag HTML Options
 
@@ -937,7 +938,7 @@ These variables create HTML that looks like this:
 
 
 <a id="hdr20"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr19" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr19">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr21">Skip</a></div>
 
 ## Site Search Words
 
@@ -978,8 +979,8 @@ add specific markdown files to be included as well. Place these in the
 `EXTRA_SEARCH_FILES` list.
 
 <!-- Note this is duplicate hdr20 id. Let's see what happens now -->
-<a id="hdr20"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr19" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr21" class="hdr-btn">Skip</a></div>
+<a id="hdr21"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr20">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr22">Skip</a></div>
 
 
 ## Exclude Stack Exchange Sites Options
@@ -1012,7 +1013,7 @@ def set_ss_save_blog(r):
     """
 
     (... SNPPED ...)
-   
+
     ''' Exclude specific SE sites '''
     for exclude in EXCLUDE_SITES:
         if r[SITE] == exclude:
@@ -1023,12 +1024,12 @@ def set_ss_save_blog(r):
 
 ---
 
-<a id="hdr21"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr20" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr22" class="hdr-btn">Skip</a></div>
+<a id="hdr22"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr21">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr23">Skip</a></div>
 
 # `stack-to-blog.py` Program Overview
 
-The `stack-to-blog.py` program uses a two pass technique. The first pass 
+The `stack-to-blog.py` program uses a two pass technique. The first pass
 does some formatting but mostly counts occurrences of key markdown elements.
 
 The second pass does most of the formatting and repeats some of the same
@@ -1057,10 +1058,10 @@ The initialization section in `stack-to-blog.py` can be found by searching for:
     - Second pass to insert '{% include toc.md %}' at paragraph # (TOC_LOC)
     - Anytime a TOC is inserted, following header_index []
         entries and bump index number up by 1
-    - Insert Navigation Bar Buttons: 
+    - Insert Navigation Bar Buttons:
         HTML anchors for #hdr1, #hdr2. etc. Then apply "<a href" links for:
         Top, ToS, ToC and, Skip (Top of Page, Top of Section, Table of
-        Contents and, Skip section).  
+        Contents and, Skip section).
     - If RANDOM_LIMIT is used then only output matching random_rec_nos []
 '''
 ```
@@ -1074,21 +1075,21 @@ The initialization section in `stack-to-blog.py` can be found by searching for:
 
 - All `PSEUDO_TAGS` are initialized into `tag_names` list as if they have already been found in a blog post.
 
-- The `QueryResults.csv` file is read into a list call `rows`. 
+- The `QueryResults.csv` file is read into a list call `rows`.
 
-- Then the main program outer loop reads each 
+- Then the main program outer loop reads each
 `row` in `rows`. Most of the front matter is set at the
 top of the outer loop point.
 
 - Next, two passes are done on each row as described below.
 
 
-<a id="hdr22"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr21" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr23" class="hdr-btn">Skip</a></div>
+<a id="hdr23"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr22">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr24">Skip</a></div>
 
 ## Pass 1
 
-Each `row` has Stack Exchange Markdown which is converted into 
+Each `row` has Stack Exchange Markdown which is converted into
 a list call `lines`.
 Each `line` in `lines` is read in a new loop and analyzed by
 the following functions:
@@ -1151,19 +1152,19 @@ and/or navigation buttons are going to be used in the blog post:
 
 The heading level list of total counts created in Pass 1 are
 checked to see if post qualifies for TOC or Navigation
-Bar. Then every line from the `lines` list is read again and the 
+Bar. Then every line from the `lines` list is read again and the
 steps below are done in Pass 2.
 
-<a id="hdr23"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr22" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr24" class="hdr-btn">Skip</a></div>
+<a id="hdr24"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr23">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr25">Skip</a></div>
 
 ## Pass 2
 
 At the start of the pass 2 loop, some counts from Pass 1 are
 reset to zero so they are not doubled up when `header_space(line)`
-is called again. 
+is called again.
 
-The bottom of the Pass 2 loop does the key job of adding 
+The bottom of the Pass 2 loop does the key job of adding
 a new markdown line to the blog post file in memory. Here is what
 Pass 2 does as it loops through every `line` in the `lines` list:
 
@@ -1221,22 +1222,22 @@ Then the next `row` from `rows` is read and pass 1 starts over again.
 
 ---
 
-<a id="hdr24"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr23" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr25" class="hdr-btn">Skip</a></div>
+<a id="hdr25"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr24">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr26">Skip</a></div>
 
 # `stack-to-blog.py` Detailed Conversion
 
-A lot of work has gone into converting Stack Exchange posts to 
+A lot of work has gone into converting Stack Exchange posts to
 GitHub Pages Jekyll posts. Here are the key steps the `stack-to-blog.py`
 python program performs:
 
 1. Navigation bar buttons (Top, ToS, ToC and Skip) are added by putting HTML code into the markdown files. Then HTML code controls jumping to id tags when a button is clicked. Here's an easy-to-read example of the HTML code:
-  
+
     ``` html
     # Introduction
-    
+
     Welcome to {{ site.title }}. A collection of questions and answers about...
-    
+
     <a id="hdr2"></a>
     <div class="hdr-bar">
       <a href="#">Top</a>
@@ -1244,9 +1245,9 @@ python program performs:
       <a href="#hdr2">ToC</a>
       <a href="#hdr3">Skip</a>
     </div>
-    
+
     ## Get in touch
-    
+
     Get in touch with pippim by sending an email. You can also...
     ```
 
@@ -1255,14 +1256,14 @@ python program performs:
     ``` html
     <a id="hdr2"></a>
     <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr3">Skip</a></div>
-    
+
     ## Get in touch
     ```
 
 3. Two extra spaces are added between HTML elements for readability and some extra spacing between buttons. A blank line is added before the HTML id tag and after the HTML button bar for readability. Because the markdown interpreter condenses multiple blank lines into a single blank line, the HTML code has no effect on line spacing.
 
 4. If you would like to modify the button properties (position, color, size, hover, etc), the header button bar (`hdr-bar`) and individual buttons (`hdr-btn`) are defined in filename `assets/css/style.scss`:
-    
+
     ``` scss
     .hdr-bar {
       display: block;
@@ -1275,7 +1276,7 @@ python program performs:
           display: block;
         }
       }
-      
+
       /* here! from: https://stackoverflow.com/a/71213971/6929343 */
       .hdr-btn,
       .hdr-bar > a {
@@ -1288,7 +1289,7 @@ python program performs:
         // From: https://stackoverflow.com/questions/65297617
         background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
         background-color:#F0FFF0; // Honeydew
-      
+
         &:hover {
           background-position:bottom;
           color:#F0FFF0;
@@ -1306,8 +1307,8 @@ python program performs:
     > line 2
 
     5.2. {{ site.title }} appends two spaces to the end of block quotes in Stack Exhange answers so they render properly:
-    > line 1  
-    > line 2  
+    > line 1
+    > line 2
 
 6. **Note:** When parsing inside a fenced code block like <code>``` bash</code> or an indented code block (demarcated by four leading spaces), no special processing is done for block quotes discussed above, for `# Header` lines discussed below or, for hyperlinks discussed further below.
 
@@ -1331,8 +1332,8 @@ python program performs:
 
 The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
 
-<a id="hdr25"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr24" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr26" class="hdr-btn">Skip</a></div>
+<a id="hdr26"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr25">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr27">Skip</a></div>
 
 ## Jekyll Blog Post Filename
 
@@ -1343,7 +1344,7 @@ The filename for a Jekyll blog post resides in the `_posts/` directory and requi
 - Any special characters (`#$%^&+;,=?/'<>()[]"`) in the title are converted to underscore (`_`).
 - The extension `.md` is added to the filename.
 - If `OUTPUT_BY_YEAR_DIR=True` is set then `/YYYY/` is prepended to the filename. Required when there are more than 1,000 posts.
-- Lastly, the `OUTPUT_DIR` setting is prepended to the filename. 
+- Lastly, the `OUTPUT_DIR` setting is prepended to the filename.
 
 These global constants are defined at the top of `stack-to-blog.py`:
 
@@ -1481,8 +1482,8 @@ def make_output_year_dir(post_date):
 
  return new_sub
 ```
-<a id="hdr26"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr25" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr27" class="hdr-btn">Skip</a></div>
+<a id="hdr27"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr26">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr28">Skip</a></div>
 
 ## Pseudo Tags
 
@@ -1496,13 +1497,13 @@ how a given solution works. A sort of "POC" (Proof of Concept). Now you'd like a
 answers that used Conky to be an available Tag that can be searched on. You would use
 the keyword "conky" (all lower-case or mixed-case doesn't matter as a pseudo tag.
 
-In the `stack-to-blog.py` python program they are defined in 
+In the `stack-to-blog.py` python program they are defined in
 the `check_pseudo_tags(ln)` function like this:
 
 ``` python
 """
   Check if pseudo-tag should be inserted based on keywords list.
-  
+
   If line is empty it means it's a paragraph.  Note if line ends in
   two spaces it forces a new line but not a paragraph break.  Also
   note if three lines were written in a row they would be merged
@@ -1545,12 +1546,12 @@ for pseudo in PSEUDO_TAGS:
                   pseudo_tag_names.append(tag_search)
 ```
 
-<a id="hdr27"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr26" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr28" class="hdr-btn">Skip</a></div>
+<a id="hdr28"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr27">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr29">Skip</a></div>
 
 ## Stack Exchange `<!-- language` Tags
 
-When Stack Exchange uses `<!-- language-all` it is converted to appropriate 
+When Stack Exchange uses `<!-- language-all` it is converted to appropriate
 format for GitHub using this multi-purpose `check_code_block(ln)` function:
 
 {% include copyHeader.html %}
@@ -1569,22 +1570,22 @@ format for GitHub using this multi-purpose `check_code_block(ln)` function:
 
  ''' Code blocks may be indented so left strip spaces before test
 
-     NOTE: This test must be done BEFORE check_code_indent() test.    
+     NOTE: This test must be done BEFORE check_code_indent() test.
 
      To end code block you must use ```.
-     
+
      TODO: count number of backticks that initiate a code block.
            For example ```` (4) can start a code block then if ``` (3)
            appears it doesn't terminate code block but is interpreted
            literally as backticks. EG
-           
+
            This is an example of using fenced code backticks:
-           
+
            ````
            ``` html
            <element code>Stuff stuff stuff</element code>
            ```
-           ```` 
+           ````
  '''
 
  global total_bad_rouge
@@ -1635,11 +1636,11 @@ format for GitHub using this multi-purpose `check_code_block(ln)` function:
  return ln
 ```
 
-**NOTE:** This function also provides support for inserting the 
+**NOTE:** This function also provides support for inserting the
 "Copy to Clipboard" button.
 
-<a id="hdr28"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr27" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr29" class="hdr-btn">Skip</a></div>
+<a id="hdr29"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr28">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr30">Skip</a></div>
 
 ## Stack Exchange four space indented code block
 
@@ -1663,10 +1664,10 @@ def check_code_indent(ln):
     ''' Code blocks may be indented which are called "in_code_indent" here.
 
         If line begins with four spaces consider it entering a code indent.
-        
-        TODO: code indents immediately following a ul (unordered list) or 
+
+        TODO: code indents immediately following a ul (unordered list) or
         li (list item) are not considered a code indent. Neither are code
-        indents following another code indent. 
+        indents following another code indent.
 
         To end code indent you must use line with no leading space.
 
@@ -1742,8 +1743,8 @@ def indented_code_block_ahead():
         next_index += 1
 ```
 
-<a id="hdr29"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr28" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr30" class="hdr-btn">Skip</a></div>
+<a id="hdr30"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr29">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr31">Skip</a></div>
 
 ## Copy Code Block to Clipboard
 
@@ -1755,7 +1756,7 @@ Right Click + Copy.
 
 **IMPORTANT:** Stack Exchange allows indenting four spaces to
 define a code block. These are converted to a fenced code block
-and the four leading spaces are removed. Language syntax 
+and the four leading spaces are removed. Language syntax
 highlighting tag is added based on "shebang". If shebang is
 not available or not recognized the previous `<!-- Langage`
 tag is used. The following example:
@@ -1837,8 +1838,8 @@ def check_copy_code(this_index):
     return inserted_command
 ```
 
-<a id="hdr30"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr29" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr31" class="hdr-btn">Skip</a></div>
+<a id="hdr31"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr30">ToS</a>  <a href="#hdr2">ToC</a></div>
 
 ### Liquid Tag for Copy Code Block
 
@@ -1851,7 +1852,7 @@ into markdown this way:
 ``` python
 def check_copy_code(this_index):
     (... SNIP rest of code shown in previous section ...)
-{% endraw %}    
+{% endraw %}
 ````
 
 `copyHeader.html` is located in the `_includes/` directory:
@@ -1873,7 +1874,7 @@ def check_copy_code(this_index):
 `copyHeader.html` contains the following HTML code:
 
 ``` html
-<!-- Copy code block contents to system clipboard. From: 
+<!-- Copy code block contents to system clipboard. From:
 https://www.aleksandrhovhannisyan.com/blog/
 how-to-add-a-copy-to-clipboard-button-to-your-jekyll-blog/
 -->
@@ -1938,7 +1939,7 @@ Javascript Query is used to copy a Fenced Code Block
 to the System Clipboard. The code is located in `assets/js/copyCode.js`:
 
 ``` js
-// Copy code block contents to clipboard. 
+// Copy code block contents to clipboard.
 // See _includes/copyHeader.html for credit
 
 const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');

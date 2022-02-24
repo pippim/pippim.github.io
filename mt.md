@@ -5,7 +5,7 @@ layout: program
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
 # Introduction
 
@@ -20,14 +20,14 @@ Do you have a job with a fixed set of tasks and, each task always takes the same
 Then ***Multi-Timer*** will help you get the job done with no wasted time!
 
 Multi-Timer is called with `mt` from
-the command line or a Desktop Shortcut that calls `mt`. 
+the command line or a Desktop Shortcut that calls `mt`.
 
-The Multi-Timer program (`mt`) can be downloaded from the 
+The Multi-Timer program (`mt`) can be downloaded from the
 [Pippim Multi-Timer Repository 🔗](https://github.com/pippim/multi-timer/blob/main/src/mt).
 
 
 > **IMPORTANT NOTE:**
->   
+>
 > Version 0.2.0 was released on
 > February 19, 2022 and not tested with WSL
 > (Windows Subsystem for Linux).
@@ -35,13 +35,13 @@ The Multi-Timer program (`mt`) can be downloaded from the
 ---
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
 ---
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
 # Running Multi-Timer
 
@@ -71,7 +71,7 @@ Your only recourse is to remove the configuration file,
 ---
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
 {% include image.html src="/assets/img/mt/mt Main Configuration.png"
    alt="Multi-Timer Main Configuration.png"
@@ -84,7 +84,7 @@ Your only recourse is to remove the configuration file,
 The *Main Configuration* window, shown on the left,
 greets you each time
 you start Multi-Timer. From here you can change the
-configuration. 
+configuration.
 
 When done click <kbd>OK</kbd> to begin running timers
 or, click <kbd>Cancel</kbd> to exit Multi-Timer.
@@ -114,19 +114,19 @@ The changeable options on this window are:
 - **Icon image filename** - Choose the Icon which appears on windows and the task bar of running applicadtions.
 - **Lock screen** - Choose whether or not the screen should lock. Generally this should be set to "Never".
 - **Ask to begin each timer** - When checked, Multi-Timer prompts to start each timer. Usually, you want this checked.
-- **Pop-up message when each timer ends** - When checked, a notification message (pop-up bubble message) is displayed. Usually, you leave this un-checked because an alarm already sounds. 
+- **Pop-up message when each timer ends** - When checked, a notification message (pop-up bubble message) is displayed. Usually, you leave this un-checked because an alarm already sounds.
 - **Sound alarm when each timer ends** - When checked, the alarm sound specified above is played. Usually, you want this checked.
 - **Ask to begin each set (all timers)** - When checked, Multi-Timer prompts to start each set of timers. Usually, you want this un-checked.
-- **Pop-up message when each set ends** - When checked, a notification message (pop-up bubble message) is displayed. Usually, you leave this un-checked. 
+- **Pop-up message when each set ends** - When checked, a notification message (pop-up bubble message) is displayed. Usually, you leave this un-checked.
 - **Sound alarm when each set ends** - When checked, the alarm sound specified above is played. Usually, you want this checked.
-- **Interface to Sysmonitor Indicator** - When checked, Multi-Timer records time remaining to the `~/.lock-screen-timer-remaining` file. See interface to Sysmonitor Indicator below. 
-- **Auto close progress bar display when all sets end** - When checked, Multi-Timer simply disappears when all timers end. If un-checked, the progress display remains on-screen at 100% until manually closed. 
+- **Interface to Sysmonitor Indicator** - When checked, Multi-Timer records time remaining to the `~/.lock-screen-timer-remaining` file. See interface to Sysmonitor Indicator below.
+- **Auto close progress bar display when all sets end** - When checked, Multi-Timer simply disappears when all timers end. If un-checked, the progress display remains on-screen at 100% until manually closed.
 
 
 ---
 
 <a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 
 {% include image.html src="/assets/img/mt/mt Timers Configuration.png"
@@ -141,7 +141,7 @@ When you click the *Timers Tab* a window similar to the
 one on the left appears.
 
 Initially all the *Aliases* are set to "Timer 1", "Timer 2",
-"Timer 3", etc., all the way up to the Maximum Number of 
+"Timer 3", etc., all the way up to the Maximum Number of
 Timers.
 
 The Alias that you enter is used in the Progress Display.
@@ -153,7 +153,7 @@ least one non-zero duration to make up a valid set of timers.
 Any timers with a duration of "`0`" will not be displayed in
 the progress bars.
 
-You can key in the Duration number directly. Or, click 
+You can key in the Duration number directly. Or, click
 <kbd>+</kbd> to increment by a value of 1 and, click
 <kbd>-</kbd> to decrement by a value of 1.
 
@@ -168,14 +168,14 @@ Next is the "`Rinse`" timer at 13 minutes. Finally, the
 ---
 
 <a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 # Installing Multi-Timer
 
-You can download the [Source Code](https://github.com/pippim/multi-timer) 
+You can download the [Source Code](https://github.com/pippim/multi-timer)
 from GitHub but that is a complicated process for a single file.
 
-The easiest way is to 
+The easiest way is to
 [open the raw code](https://raw.githubusercontent.com/pippim/multi-timer/main/src/mt)
 on GitHub.
 
@@ -191,29 +191,29 @@ Then use:
 
 Voila! You have just installed `mt` to your home directory.
 
-Now to run Multi-Timer you need to always specify the program 
+Now to run Multi-Timer you need to always specify the program
 is located in your home directory. See the next section to move
 Multi-Timer to a directory in your path so you do not have to
-specify where `mt` is located. 
+specify where `mt` is located.
 
 
 ---
 
 
 <a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 ## Move Multi-Timer into PATH
 
 In order to call Multi-Timer from any directory with the `mt` command
 you will want to move the program into your path.
 
-A good place for all users is `/usr/bin`. 
+A good place for all users is `/usr/bin`.
 
 A good place to use Multi-Timer just for yourself
-is `~/bin`. Because `~` is shorthand for `/home/<YOUR USER NAME>`, 
-the `bin` directory under your home user name. By default
-you do not have a `bin` directory under your home user name. So you
+is `~/bin`. Because `~` is shorthand for `/home/<YOUR USER NAME>`,
+the `~/bin` directory under your home user name. By default,
+you do not have a `~/bin` directory under your home user name. So you
 will need to use:
 
 ```shell
@@ -221,10 +221,10 @@ mkdir ~/bin
 ```
 
 > NOTE:
->   
+>
 > After creating the `~/bin` directory you will need to
 > close the terminal and reopen it.
- 
+
 To verify the new directory is in your path use:
 
 ```shell
@@ -239,13 +239,13 @@ Now move the `mt` program from `~/mt` to `~/bin/mt` using:
 mv ~/mt ~/bin/mt
 ```
 
-Now you are all set to call `mt` from any directory.
+Now you are all set to call `mt` from any directory!
 
 ----
 
 
 <a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 # Optionally Modify Multi-Timer Source Code
 
@@ -276,7 +276,7 @@ MAX_TIMERS=10                   # Default when creating configuration
 ```
 
 > **IMPORTANT NOTE:**
->   
+>
 > Version 0.2.0 was released on
 > February 19, 2022 and not tested with WSL
 > (Windows Subsystem for Linux).
@@ -285,7 +285,7 @@ MAX_TIMERS=10                   # Default when creating configuration
 
 
 <a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 # Dependencies
 
@@ -301,7 +301,7 @@ sudo apt install libnotify-bin
 
 
 <a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 
 
@@ -313,7 +313,7 @@ comments are not necessary but will not effect operations):
 
 ```shell
 cd ~/.config                  # Go to user's configuration directory
-cp mt.conf mt_laundry.conf    # Copy Multi-Timer configuration file 
+cp mt.conf mt_laundry.conf    # Copy Multi-Timer configuration file
 rm mt.conf                    # Remove Multi-Timer configuration file
 mt                            # Run Multi-Timer as if first time
 ```
@@ -331,9 +331,9 @@ mv mt.conf mt_laundry.conf    # Rename Multi-Timer configuration file
 ---
 
 <a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
 ---
 
 <a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a></div>

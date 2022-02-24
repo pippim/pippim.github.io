@@ -5,37 +5,37 @@ layout: default
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr6">ToC</a>  <a href="#hdr2">Skip</a></div>
 
 {% include image.html src="/assets/img/pngwing.com.png"
    alt="GitHub Octocat Mascot by pngwing.com"
    style="float: left; width: 45%; margin: 2em 1em 0px 0px;"
-   caption="GitHub's Octocat Mascot image credit: 
+   caption="GitHub's Octocat Mascot image credit:
       <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING  🔗</a>"
 %}
 
 # Introduction
 
-Welcome to {{ site.title }}'s website. 
+Welcome to {{ site.title }}'s website.
 
-A ***different kind*** of site search engine greets you. Others 
-operate at an average speed of 2.5 MB/s (Megabytes per second) 
-over the internet. This one runs at the speed of RAM; about 
+A ***different kind*** of site search engine greets you. Others
+operate at an average speed of 2.5 MB/s (Megabytes per second)
+over the internet. This one runs at the speed of RAM; about
 19,200 MB/s!
 
 [Convert](https://pippim.github.io/stack.html "Convert Stack Exchange Posts to Your Own Website") your popular *Stack Exchange
-Posts* to **your own website** with additional features like; 
-Table of Contents, Section Navigation buttons, Copy code 
+Posts* to **your own website** with additional features like;
+Table of Contents, Section Navigation buttons, Copy code
 blocks to clipboard and Show summary statistics.
 
-There are **no ads** on {{ site.title }}. You don't need to buy 
+There are **no ads** on {{ site.title }}. You don't need to buy
 {{ site.title }} a coffee (it's already free at work!).
 
 ## Navigation Buttons
 
-This section discusses the *Page Navigation 
-Buttons* that appear on the top of each page. Then 
-we will discuss the *Section Navigation Buttons* 
+This section discusses the *Page Navigation
+Buttons* that appear on the top of each page. Then
+we will discuss the *Section Navigation Buttons*
 that can appear at the top of major sections.
 
 ### Page Navigation Buttons
@@ -69,11 +69,11 @@ The top of major sections contain navigation buttons to take you to other sectio
 
 ---
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr3">Skip</a></div>
 ## Get in Touch
 
-There are many ways of getting in touch with {{ site.title }}. 
-The conventional way via email and on other websites. The direct 
+There are many ways of getting in touch with {{ site.title }}.
+The conventional way via email and on other websites. The direct
 method on Stack Exchange Answers or GitHub Repos.
 
 ### The Conventional Way of Getting in Touch
@@ -88,15 +88,15 @@ the other pippim.com website on Google Sites.
 
 ### Leave a Comment / Question at The Source
 
-Leaving a comment or question at the source such as 
-Stack Exchange answer or GitHub Repo saves you from 
+Leaving a comment or question at the source such as
+Stack Exchange answer or GitHub Repo saves you from
 specifying what your communication is referring to.
 
 #### Stack Exchange Answers (Ask Ubuntu)
 
 ![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: style="float: left" height="20%" width="20%"}
 
-You can leave a comment or question where the Stack Exchange 
+You can leave a comment or question where the Stack Exchange
 answer appears. Each answer on this website here has a direct
 link to the original answer on Stack Exchange.
 <br clear="left"/>
@@ -107,18 +107,18 @@ link to the original answer on Stack Exchange.
 
 For {{ site.title }} programs on GitHub Repos, you can go directly
 to the repository and post a new issue. Issues can be bug reports,
-questions, requests for new features or enhancements to existing 
+questions, requests for new features or enhancements to existing
 functions.
 <br clear="left"/>
 
 ---
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr4">Skip</a></div>
 
 {% include image.html src="/assets/img/cookie-clicker.png"
    alt="Cookie image by cookie-clicker.co"
    style="float: left; width: 40%; margin: 2em 1em 0px 0px;"
-   caption="Cookie image credit  🔗: 
+   caption="Cookie image credit  🔗:
       <a href='https://cookie-clicker.co/'>Cookie-Clicker.co</a>"
 %}
 
@@ -139,7 +139,7 @@ for blog posts. You can disable the cookie using links below.
 {% include image.html src="/assets/img/Octocat.png"
    alt="Octocat image by GitHub.com"
    style="float: right; width: 40%; margin: 2em 0px 0px 1em;"
-   caption="Octocat image credit 🔗: 
+   caption="Octocat image credit 🔗:
       <a href='https://github.com/logos'>github.com logos</a>"
 %}
 
@@ -147,14 +147,14 @@ for blog posts. You can disable the cookie using links below.
 # GitHub Pages
 
 The {{ site.title }} website is hosted on **GitHub Pages**.
-You can download (or simply view) the {{ site.title }} 
+You can download (or simply view) the {{ site.title }}
 website markdown files. For example, `index.md` is the markdown
-file for the page you are reading now and available 
+file for the page you are reading now and available
 [here 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this page's markdown code in GitHub Pages 🔗").
 
 Get your own website up and running in a weekend by picking
 from a collection of website designs called themes. Then
-type your information into markdown files. 
+type your information into markdown files.
 
 GitHub Pages is free. Change your website from a MAC,
 a PC running Windows or Linux, and even a smart phone.
@@ -162,7 +162,7 @@ a PC running Windows or Linux, and even a smart phone.
 ## **TL;DR**
 
 "**TL;DR**" stands for "**Too Long, Didn't Read**". So unless you
-are truly interested in the technology of websites and how this website 
+are truly interested in the technology of websites and how this website
 in particular was created, you will probably want to stop reading
 the rest of this page.
 
@@ -170,20 +170,20 @@ Whenever you commit to a website repository, GitHub Pages will run
 [Jekyll 🔗](https://jekyllrb.com/ "See how Jekyll rebuilds GitHub Pages websites 🔗")
 to rebuild the pages in your site, from the content in your Markdown files.
 
-The {{ site.title }} website is based on the GitHub Pages Jekyll theme called 
+The {{ site.title }} website is based on the GitHub Pages Jekyll theme called
 [Cayman 🔗](https://pages-themes.github.io/cayman/ "Visit the Cayman Theme for GitHub Pages website 🔗").
-Initial setup was straight forward and very quick. However adding custom buttons 
-becomes more complicated as you need to learn 
-[HTML 🔗](https://blog.webjeda.com/new-page-jekyll/ "See how HTML is used in Jekyll 🔗") 
+Initial setup was straight forward and very quick. However adding custom buttons
+becomes more complicated as you need to learn
+[HTML 🔗](https://blog.webjeda.com/new-page-jekyll/ "See how HTML is used in Jekyll 🔗")
 and [Sass/SCSS 🔗](https://jekyllrb.com/docs/configuration/sass/ "See how Sass is used in Jekyll 🔗").
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr5">Skip</a></div>
 
 ## Markdown
 
 GitHub Pages and many other websites use a language called Markdown.
-Markdown is a lightweight and easy-to-use syntax for styling your 
+Markdown is a lightweight and easy-to-use syntax for styling your
 writing. It includes conventions for:
 
 ```
@@ -204,11 +204,11 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-For more details see 
+For more details see
 [GitHub Flavored Markdown 🔗](https://guides.github.com/features/mastering-markdown/ "See how GitHub converts markdown with kramdown 🔗").
 
 <a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 ## How the Table of Contents is Generated
 
@@ -235,8 +235,8 @@ Another one-time setup is the file `_includes/toc.md` containing the markdown fo
 {:toc}
 ```
 
-To get a Table of Contents (TOC) in any website page, insert a 
-liquid tag where you want the TOC to appear. For example on this 
+To get a Table of Contents (TOC) in any website page, insert a
+liquid tag where you want the TOC to appear. For example on this
 page you are reading, `index.md`, is the following markdown code:
 
 ``` html
@@ -251,14 +251,14 @@ page you are reading, `index.md`, is the following markdown code:
 The TOC command is used in real markdown below and generates the actual TOC:
 
 <a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr7">Skip</a></div>
 
 {% include toc.md %}
 
 ---
 
 <a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr6" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 {% include image.html src="/assets/img/github pages themes.png"
    alt="GitHub Pages Themes.png"
@@ -274,31 +274,31 @@ you can pick from for your website. Spend some time reviewing your options
 before committing to one.
 
 Initially the {{ site.title }} website used the Cayman Theme for a day. Then the
-Merlot Theme was used for a week and, then it came back full circle to the 
+Merlot Theme was used for a week and, then it came back full circle to the
 Cayman Theme again.
 
-At first the Cayman Theme 
+At first the Cayman Theme
 [didn't display the page title properly 🔗](https://github.com/pages-themes/cayman/issues/134 "View the issue on Cayman Theme GitHub Repository 🔗").
 Consequently, the Merlot theme was used. However, problems arose
 with the Merlot banner on the left not rendering properly on small
-screens. So it was back to Cayman and after changing the theme, 
-the page title worked properly. New problems arose with the page 
-buttons, <kbd>Home</kbd>, <kbd>About</kbd>, etc. With trial 
+screens. So it was back to Cayman and after changing the theme,
+the page title worked properly. New problems arose with the page
+buttons, <kbd>Home</kbd>, <kbd>About</kbd>, etc. With trial
 and error however those problems were solved too.
 
 This is the first website {{ site.title }} created. The somewhat naive initial estimate
-was it would take a weekend to create. That estimate was back on 
-October 16, 2021 and today is January 9 2022. The 
+was it would take a weekend to create. That estimate was back on
+October 16, 2021 and today is January 9 2022. The
 moral of the story is: *"It may take longer than expected
 to set up your first website but, don't give up."* &ensp; **You can do it!** 😄
 
 Your GitHub Pages site will use the layout and styles from the Jekyll
-theme you have selected in your 
+theme you have selected in your
 [repository settings 🔗](https://github.com/pippim/pippim.github.io/settings/pages "View {{ site.title }} GitHub Pages repository settings 🔗").
 The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 
-**GitHub Pages** maintains a real-time listing of 
+**GitHub Pages** maintains a real-time listing of
 [version numbers 🔗](https://pages.github.com/versions/ "View current GitHub Pages application version numbers 🔗")
 for Jekyll, Sass, kramdown, Rouge, etc..
 
@@ -314,12 +314,12 @@ There are many open-source providers involved in the {{ site.title }} website:
 - **kramdown** - [converting a superset of Markdown 🔗](https://kramdown.gettalong.org/ "(sic, not Kramdown or KramDown, just kramdown) 🔗")
 
 <a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 ## Images, Javascript, CSS and HTML
 
 It is important to follow these instructions to setup your site:
-[Adding a theme to your GitHub Pages site using Jekyll 🔗](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). 
+[Adding a theme to your GitHub Pages site using Jekyll 🔗](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll).
 For example, `_layouts/default.html` probably needs to be copied from the
 theme website to your own website in order to make significant changes.
 
@@ -337,35 +337,35 @@ locations:
 
 
 <a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 ## {{ site.title }} Website Directory Tree
 
-The directory tree will help you get a better understanding 
-of the Pippim website at `pippim.github.io`. As of 
-{{ site.refreshed | date: "%B %e, %Y" }}, the directory tree 
+The directory tree will help you get a better understanding
+of the Pippim website at `pippim.github.io`. As of
+{{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
 for {{ site.title }} on GitHub Pages looked like this:
 
 ``` terminal
 {% include website_tree.txt %}
 ```
 
-**NOTE:** The `_posts` directory contains {{ site.post_count }} posts 
+**NOTE:** The `_posts` directory contains {{ site.post_count }} posts
 which are not displayed above.
 
 <a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 ## Daily Backup
 
 Normally you will `git pull` all the directories and files from your website
-to your local drive. If you plan on developing locally, you probably want 
-to save your daily work. This script is what {{ site.title }} uses for 
+to your local drive. If you plan on developing locally, you probably want
+to save your daily work. This script is what {{ site.title }} uses for
 daily backup to gmail.com (in the cloud, so it should be safe):
 
 ``` bash
 # WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
-tar -rpf "$Filename" website/*.md       # about.md, answers.md, programs.md   
+tar -rpf "$Filename" website/*.md       # about.md, answers.md, programs.md
 tar -rpf "$Filename" website/*.yml      # _config.yml
 tar -rpf "$Filename" website/_includes  # copyHeader.html, image.html & toc.md
 tar -rpf "$Filename" website/_layouts   # default.html & post.html
@@ -378,33 +378,33 @@ tar -rpf "$Filename" website/sede/*.py  # stack-to-blog.py and SEDE query below
 tar -rpf "$Filename" website/sede/StackQuery
 ```
 
-<h3><b> IMPORTANT NOTE: </b></h3> 
+<h3><b> IMPORTANT NOTE: </b></h3>
 
 > Images are ***NOT*** included in the daily backup.  This is because this is a small subset of my daily backup script that is called from `cron` every morning.
->   
+>
 > The full script compresses files and emails to gmail.com. Including images would make the backup exceed Google quotas of 20 MB per backup and 15 GB for all backups.
->   
->  If you want to include images  in your own backup, add the following to the daily backup script:  
->    ``` bash  
->    tar -rpf "$Filename" website/assets/img # Image files  
->    ````  
+>
+>  If you want to include images  in your own backup, add the following to the daily backup script:
+>    ``` bash
+>    tar -rpf "$Filename" website/assets/img # Image files
+>    ````
 
 <a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr12">Skip</a></div>
 
 ## Convert Stack Exchange to GitHub Pages
 
 {% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
    alt="stack-to-blog.py"
    style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
-   caption="Progress Display Bar used by <b>stack-to-blog.py</b>" 
+   caption="Progress Display Bar used by <b>stack-to-blog.py</b>"
 %}
 
-Converting thousands of Stack Exchange Q&A in MarkDown format isn't as easy 
-as simply copying them over to GitHub Pages. The python program 
+Converting thousands of Stack Exchange Q&A in MarkDown format isn't as easy
+as simply copying them over to GitHub Pages. The python program
 `stack-to-blog.py` was used to convert Stack Exchange posts to
 GitHub Pages Posts.
-The complete `stack-to-blog.py` program can be accessed on the 
+The complete `stack-to-blog.py` program can be accessed on the
 [Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py "View source code for stack-to-blog.py").
 
 The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](https://pippim.github.io/stack.html "Convert Stack Exchange Posts to Your Own Website")
@@ -412,4 +412,4 @@ for `stack-to-blog.py` used to create
 the posts on this {{ site.title }} website will help you create your own website.
 
 <a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr6" class="hdr-btn">ToC</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr6">ToC</a></div>

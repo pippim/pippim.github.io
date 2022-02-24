@@ -5,7 +5,7 @@ layout: program
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr2" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
 # Introduction
 
@@ -14,23 +14,23 @@ It includes functions to encode CDs with track titles using MusicBrainz database
 It will get lyrics from the internet and let you synchronize them in real time
 by simply clicking each line as it is sung.
 
-The `mserve.py` Music Player program can be accessed on the 
+The `mserve.py` Music Player program can be accessed on the
 [Pippim mserve Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py).
 
-`mserve.py` is called with `m` from the command line or a desktop shortcut. 
+`mserve.py` is called with `m` from the command line or a desktop shortcut.
 
 > **IMPORTANT NOTE:** Only tested with Linux, specifically Ubuntu 16.04 LTS
 
 ---
 
 <a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr1" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr3" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
 ---
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr4" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
 # Synchronized Lyrics
 
@@ -44,11 +44,11 @@ on your screen:
 - At 360 degrees it slides up, pixelates, then the process repeats
 
 > **IMPORTANT:** Un-mute video to hear song
- 
 
-<video src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4" 
+
+<video src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4"
-controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
 
@@ -83,23 +83,23 @@ Additional notes:
 ---
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr3" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr5" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-# Automatic Skin Color Based on Artwork 
+# Automatic Skin Color Based on Artwork
 
 This video shows how the skin changes color:
 
 <video src="https://user-images.githubusercontent.com/92641463/149242688-5cde502e-1025-4237-9e22-af9af3b2d93a.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149242688-5cde502e-1025-4237-9e22-af9af3b2d93a.mp4"
-controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
 
-The album artwork is automatically downloaded from the internet 
-when the CD is encoded. You can also choose artwork from any 
+The album artwork is automatically downloaded from the internet
+when the CD is encoded. You can also choose artwork from any
 website and use that instead.
 
-The third pixel to the right and third pixel down set the 
+The third pixel to the right and third pixel down set the
 skin tone when you resize the window that could yield a
 different skin tone!
 
@@ -116,7 +116,7 @@ Additional Notes:
 ---
 
 <a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr4" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr6" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 # CD Encoding
 
@@ -125,7 +125,7 @@ lag while a CD is being encoded:
 
 <video src="https://user-images.githubusercontent.com/92641463/149241934-99d01df8-2cbf-4488-aa14-efe9e4d4f3aa.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149241934-99d01df8-2cbf-4488-aa14-efe9e4d4f3aa.mp4"
-controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" 
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
 
@@ -146,7 +146,7 @@ supported.
 ---
 
 <a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr5" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr7" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 # Programs At a Glance
 
@@ -235,7 +235,7 @@ script that installs all dependencies automatically.
 ---
 
 <a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr2" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr8" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 # SQL Tables
 
@@ -251,7 +251,7 @@ def open_db():
     # print('FNAME_LIBRARY:',FNAME_LIBRARY)
 
     # MUSIC TABLE
-    
+
     # Create the table (key must be INTEGER not just INT !
     # See https://stackoverflow.com/a/7337945/6929343 for explanation
     con.execute("create table IF NOT EXISTS Music(Id INTEGER PRIMARY KEY, \
@@ -318,7 +318,7 @@ def open_db():
 ---
 
 <a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr7" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr9" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 # Reopen Windows on Same Monitor with Same Size
 
@@ -360,7 +360,7 @@ def save_window_geom(name, geom):
 ---
 
 <a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr8" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr10" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 # Tooltips
 
@@ -379,8 +379,8 @@ Key features of tooltips:
 - They appear after a delay
 - They fade in
 - The stay visible for a short time based on word count
-- They move instep with mouse movements 
-- They fade out 
+- They move instep with mouse movements
+- They fade out
 
 Here is the key code:
 
@@ -597,7 +597,7 @@ class ToolTips(CommonTip):
 
     def delete_older_for_widget(self, stop_index):
         """ Process log list forwards from 0 deleting matching widget
-            Requires specialized testing using manual calls to 
+            Requires specialized testing using manual calls to
             log_event(action, widget, x, y) followed by process_log_list()
             Intention is to delete <enter> event if there is a <leave> event
             in the queue. Problem is the <leave> event is getting deleted
@@ -639,13 +639,13 @@ class ToolTips(CommonTip):
             # TODO: This will spam at 30 fps
             print('self.log_nt NOT FOUND!:', self.log_nt)
             return
-        
+
         self.dict_to_fields()               # Dictionary to easy names
         self.current_mouse_xy = (self.log_nt.x, self.log_nt.y)
 
         ''' OVERVIEW:
-            Enter, wait, create, fade in, wait, fade out, destroy.  
-            self.window_fading_in and self.window_fading_out already 
+            Enter, wait, create, fade in, wait, fade out, destroy.
+            self.window_fading_in and self.window_fading_out already
             setup so just need self.wait_time.
         '''
         if self.log_nt.action == 'leave':
@@ -1030,7 +1030,7 @@ class ToolTips(CommonTip):
                 # TODO: When text expands/shrinks line count
                 #       we need to
                 return
-            
+
         print('ERROR: set_text(): tip not found')
 
     def enter(self, _event):
@@ -1078,7 +1078,7 @@ class ToolTips(CommonTip):
         for self.dict in self.tips_list:
             if not str(self.dict['widget']).startswith(str(widget)):
                 new_list.append(self.dict)
-                
+
         diff = len(self.tips_list) - len(new_list)
         print(diff, 'Tooltips removed on close')
         self.tips_list = []
@@ -1096,7 +1096,7 @@ def d_print(*args):
 ---
 
 <a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr9" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr11" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 # Lyrics Synchronization
 
@@ -1122,11 +1122,11 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 ---
 
 <a id="hdr11"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr10" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr12" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
 ## Basic Time Synchronization
 
-Basic Time Synchronization is fairly straight forward. You start playing 
+Basic Time Synchronization is fairly straight forward. You start playing
 the song and then click each line as it is sung.
 
 <video src="https://user-images.githubusercontent.com/92641463/149671978-18e1a98f-3a55-472c-9de2-ae3246ee3969.mp4"
@@ -1146,7 +1146,7 @@ This video shows:
 ---
 
 <a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr11" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr13" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
 
 ## Fine-tune Time Synchronization
 
@@ -1174,13 +1174,13 @@ This video shows:
 4. The *Fine-tune time-index* window opens up and pauses the regular music player
 5. Select lyric lines in the lyrics score
 6. Begin sync button. As music plays you can click the line as it is sung
-7. Clicking each line as it is sung is the same behavior as the *Basic time index* function except that additional details are displayed 
+7. Clicking each line as it is sung is the same behavior as the *Basic time index* function except that additional details are displayed
 8. Finally, the *Fine-tune time index* window is closed and regular music player resumes where it was interrupted
 
 ---
 
 <a id="hdr13"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr14">Skip</a></div>
 
 ### Sample All option
 
@@ -1191,7 +1191,7 @@ mouse outside the video. This way you can see the entire contents underneath the
 control bar.
 
 <video src="https://user-images.githubusercontent.com/92641463/149672896-ed6b96ac-9c1f-4017-9b15-e41adac8126b.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/149672896-ed6b96ac-9c1f-4017-9b15-e41adac8126b.mp4" 
+data-canonical-src="https://user-images.githubusercontent.com/92641463/149672896-ed6b96ac-9c1f-4017-9b15-e41adac8126b.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
@@ -1211,7 +1211,7 @@ This also video shows:
 ---
 
 <a id="hdr14"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr15" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr13">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr15">Skip</a></div>
 
 # Hide Chronology
 
@@ -1234,7 +1234,7 @@ skin background color can change depending on the color of the pixel at
 ---
 
 <a id="hdr15"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr14" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr16" class="hdr-btn">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr14">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr16">Skip</a></div>
 
 # Locations
 
@@ -1248,4 +1248,4 @@ filename on the server.
 
 
 <a id="hdr16"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr54" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr15">ToS</a>  <a href="#hdr2">ToC</a></div>
