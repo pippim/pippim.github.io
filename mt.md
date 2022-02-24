@@ -333,6 +333,54 @@ mv mt.conf mt_laundry.conf    # Rename Multi-Timer configuration file
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
+# Increasing Maximum Number of Timers
+
+Lets say you created your configuration with the 
+*Maximum Number of Timers* for your laundry job set to 3 for:
+
+- Wash
+- Rinse
+- Dry
+
+Then you decided you wanted to add another timer for folding
+your clothes. The conventional method is to simply delete the
+configuration file (as described in the previous section) and
+create a new configuration.
+
+There is another option though. YOu can actually edit the
+configuration file using `gedit` or another editor. For example,
+type `gedit ~/.config/mt.conf` and you will see:
+
+0.2.0|Minutes|1|1|/usr/bin/paplay|/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga|/usr/share/icons/gnome/48x48/status/appointment-soon.png|Each set end|TRUE|FALSE|TRUE|FALSE|FALSE|FALSE|TRUE|TRUE|3|Wash|Rinse|Dry|16|13|58
+
+The pipe character (`|`) separates fields in the configuration file.
+
+Notice the end of the line contains:
+
+    TRUE|3|Wash|Rinse|Dry|16|13|58
+
+The `3` indicates the maximum number of timers. This is followed 
+by the timer aliases: `Wash`, `Rinse` and `Dry`. Next comes
+the timer durations in minutes: `16`, `13` and `58`.
+
+To change to four timers you would change them to:
+
+    TRUE|4|Wash|Rinse|Dry|Fold|16|13|58|10
+
+The `4` indicates the maximum number of timers. This is followed
+by the timer aliases: `Wash`, `Rinse`, `Dry` and `Fold`. Next comes
+the timer durations in minutes: `16`, `13`, `58` and `10`.
+
+But while you are add it why not add some extra spare fields?
+
+    TRUE|6|Timer 1|Wash|Rinse|Dry|Fold|Timer 6|0|16|13|58|10|0
+
+You've just successfully created timer aliases `Timer 1` and 
+`Timer 6` with a duration of `0` minutes which means they
+will never display and never get executed. If you ever want to
+activate them just use the regular Main Configuration Tab in
+Multi-Timer program.
+
 ---
 
 <a id="hdr12"></a>
