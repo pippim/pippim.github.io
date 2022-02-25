@@ -84,14 +84,14 @@ $lavender: #E6E6FA !default; // lavender
   }
 
   @include medium {
-    padding: 0.9rem 0.9rem;
+    padding: .4rem 0.9rem;
     font-size: 0.8rem;
   }
 
   @include small {
     display: block;
     width: 100%;
-    padding: 0.75rem;
+    padding: .3 .75rem;
     font-size: 0.7rem;
 
     + .button {
