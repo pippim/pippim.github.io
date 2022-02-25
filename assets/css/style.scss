@@ -91,7 +91,7 @@ $lavender: #E6E6FA !default; // lavender
   @include small {
     display: block;
     width: 100%;
-    padding: .3 .75rem;
+    padding: .3rem .75rem;
     font-size: 0.7rem;
 
     + .button {
