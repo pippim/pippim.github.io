@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
 
 <!-- comment out Feb 24/22   {% seo %}    -->
-    <!-- comment out Feb 24/22   <link rel="preconnect" href="https://fonts.gstatic.com">   -->
-    <!-- Comment out Feb 1/22
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    -->
+    <!-- comment out Feb 24/22  <link rel="preconnect" href="https://fonts.gstatic.com">   -->
+    <!-- Comment out Feb 1/22   <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>   -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <!--  - Comment out Feb 5/22
-    <link rel="stylesheet" href="/assets/css/syntax.scss">
-    -->
+    <!--  Comment out Feb 5/22   <link rel="stylesheet" href="/assets/css/syntax.scss">   -->
 
     {% include head-custom.html %}
 
@@ -32,14 +28,19 @@
       <!-- javascript for search bar -->
       <script type="text/javascript" src="/assets/js/search.js" ></script>
 
-      <!-- Removing email button from current blog page, as separate button bar provided for it -->
+      <!-- Removing email button from current blog page, as separate button bar provided for it
       <a href="/index.html" style="display: inline" class="button">⌂ Home</a>
       <a href="/about.html" style="display: inline" class="button">❓ About</a>
       <a href="/answers.html" style="display: inline" class="button">✅ Answers</a>
       <a href="/programs.html" style="display: inline" class="button">💻 Programs</a>
+      -->
+      <a href="/index.html" class="button">⌂ Home</a>
+      <a href="/about.html" class="button">❓ About</a>
+      <a href="/answers.html" class="button">✅ Answers</a>
+      <a href="/programs.html" class="button">💻 Programs</a>
 
       <!-- The Cookie Machine - Hidden Button -->
-      <a href="#0" class="cm-btn">CM</a>
+      <a href="#0" class="tcm-btn">tCM</a>
 
     </header>
 
