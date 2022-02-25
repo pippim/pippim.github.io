@@ -121,7 +121,7 @@ a {
   }
 
   @include medium {
-    padding: 3rem 4rem;
+    padding: 2rem 3rem;  // Feb 24, 2022 - Was 3rem 4rem
   }
 
   @include small {
