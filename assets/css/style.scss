@@ -27,7 +27,7 @@ $lavender: #E6E6FA !default; // lavender
   // padding: .3rem 1rem .3rem 1rem;
   // border-radius: 10rem;
   // border-radius: 3rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   margin: -.5rem 1rem -.5rem .5rem;
   padding: 0px 1rem;
   color: #fff;
@@ -49,7 +49,7 @@ $lavender: #E6E6FA !default; // lavender
     background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
     // border-radius: 10rem;
     // border-radius: 3rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     z-index: -2;
   }
   &:before {
@@ -64,7 +64,7 @@ $lavender: #E6E6FA !default; // lavender
     transition: all .3s;
     // border-radius: 10rem;
     // border-radius: 3rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     z-index: -1;
   }
   &:hover {
@@ -79,7 +79,7 @@ $lavender: #E6E6FA !default; // lavender
   }
 
   @include large {
-    padding: 1.1rem 1rem;
+    padding: .5rem 1rem;
     top: 1rem;  // Force buttons down a bit for vertical centering
   }
 
