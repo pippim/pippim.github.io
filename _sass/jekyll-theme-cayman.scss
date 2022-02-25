@@ -117,15 +117,15 @@ a {
   background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
 
   @include large {
-    padding: 3rem 4rem;  // Feb 24, 2022 - Was 5rem 6rem;
+    padding: 3rem 4rem;    // Feb 24, 2022 - Was 5rem 6rem;
   }
 
   @include medium {
-    padding: 2rem 3rem;  // Feb 24, 2022 - Was 3rem 4rem
+    padding: 1.7rem 3rem;  // Feb 24, 2022 - Was 3rem 4rem
   }
 
   @include small {
-    padding: .2rem .5rem; // Feb 24, 2022 - Was 2rem 1rem
+    padding: .5rem .2rem;  // Feb 24, 2022 - Was 2rem 1rem
   }
 }
 
