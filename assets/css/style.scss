@@ -21,17 +21,11 @@ $lavender: #E6E6FA !default; // lavender
 
 .button {
   display: inline-block;
-  // padding: .5rem 1rem;
-  // line-height: 3rem;
-  // nargin: 1rem 0;
-  // padding: .3rem 1rem .3rem 1rem;
-  // border-radius: 10rem;
-  // border-radius: 3rem;
   border-radius: 2rem;
   margin: -.5rem 1rem -.5rem .5rem;
   padding: 0px 1rem;
   color: #fff;
-  border: 2px solid white;  // Added for Cayman
+  border: 2px solid white;
   transition: all .3s;
   position: relative;
   overflow: hidden;
@@ -99,6 +93,21 @@ $lavender: #E6E6FA !default; // lavender
       margin-left: 0;
     }
   }
+}
+
+.cm-btn {
+  // Hidden button
+  // position:absolute;
+  // top:0;
+  // right:0;
+  display: block;
+  position: absolute;
+  right: 0;
+  padding: 0px 1rem;
+  color: #fff;
+  border: 2px solid white;
+  // overflow: hidden;
+  // z-index: 1;
 }
 
 .hdr-bar {
@@ -568,14 +577,4 @@ details[open] > summary {
       background-position: 200% center;
     }
   }
-}
-
-.cm-btn {
-  // position:absolute;
-  // top:0;
-  // right:0;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
 }
