@@ -26,7 +26,6 @@
   <body>
     <header class="page-header" role="banner">
       <h1 class="project-name linear-wipe">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <a href="#0" style="display: inline" class="cm-btn">CM</a>
 
       {% include search.html %}
 
@@ -38,6 +37,9 @@
       <a href="/about.html" style="display: inline" class="button">❓ About</a>
       <a href="/answers.html" style="display: inline" class="button">✅ Answers</a>
       <a href="/programs.html" style="display: inline" class="button">💻 Programs</a>
+
+      <!-- The Cookie Machine - Hidden Button -->
+      <a href="#0" class="cm-btn">CM</a>
 
     </header>
 
