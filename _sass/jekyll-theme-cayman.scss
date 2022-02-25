@@ -3,7 +3,7 @@
  * Source code version: January 2021
  */
 
-@import "normalize";
+@import "normalize";    // NOTE: This generates error message in FireFox: -webkit-text-size-adjust ...
 @import "rouge-github";
 @import "variables";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
