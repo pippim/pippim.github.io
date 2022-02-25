@@ -396,33 +396,28 @@ details[open] > summary {
   height: 100%;
   width: 100%;
   padding: .5rem .8rem;
-  @include large {
-    padding: .5rem 1rem;
-    top: 1rem;  // Force buttons down a bit for vertical centering
-  }
 
   @include medium {
     font-size: 1rem;
   }
 
   @include small {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 
 #search-utf8-mag-glass {
-  // font-size: 2rem;
   font-size: 1rem;
   background-color: yellow;
   border-radius: .5rem;
   margin: .15rem;
 
   @include medium {
-    font-size: .8rem;
+    font-size: .9rem;
   }
 
   @include small {
-    font-size: .6rem;
+    font-size: .8rem;
   }
 }
 
