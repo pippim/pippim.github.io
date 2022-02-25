@@ -574,5 +574,8 @@ details[open] > summary {
   // position:absolute;
   // top:0;
   // right:0;
-  float: right;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
