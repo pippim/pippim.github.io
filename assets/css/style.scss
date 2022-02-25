@@ -96,18 +96,23 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 .cm-btn {
-  // Hidden button
-  // position:absolute;
-  // top:0;
-  // right:0;
+  // The Cookie Machine Hidden button after regular buttons
   display: block;
   position: absolute;
   right: 0;
-  padding: 0px 1rem;
+  margin: -.5rem 1rem -.5rem .5rem;
   color: #fff;
   border: 2px solid white;
   // overflow: hidden;
   // z-index: 1;
+
+  @include medium {
+    font-size: 0.8rem;
+  }
+
+  @include small {
+    font-size: 0.7rem;
+  }
 }
 
 .hdr-bar {
