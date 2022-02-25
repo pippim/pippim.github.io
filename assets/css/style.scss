@@ -101,12 +101,12 @@ $lavender: #E6E6FA !default; // lavender
   // z-index: 1;
 
   @include medium {
-    top: -1rem;  // Force buttons up a bit for vertical centering
+    margin-top: -1rem;  // Force buttons up a bit for vertical centering
     font-size: 0.8rem;
   }
 
   @include small {
-    top: -1rem;  // Force buttons up a bit for vertical centering
+    margin-top: -1rem;  // Force buttons up a bit for vertical centering
     font-size: 0.7rem;
   }
 }
