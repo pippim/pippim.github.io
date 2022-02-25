@@ -571,7 +571,8 @@ details[open] > summary {
 }
 
 .cm-btn {
-  position:absolute;
-  top:0;
-  right:0;
+  // position:absolute;
+  // top:0;
+  // right:0;
+  float: right;
 }
