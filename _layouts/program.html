@@ -25,9 +25,9 @@
   </head>
   <body>
     <header class="page-header" role="banner">
-      <div><input id="cm-btn" type="button" value="CM"></div>
       <h1 class="project-name linear-wipe">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <!-- <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
+      <button type="button" class="cm-btn">CM</button> 
+
       {% include search.html %}
 
       <!-- javascript for search bar -->
