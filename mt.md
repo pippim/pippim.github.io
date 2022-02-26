@@ -111,7 +111,7 @@ The changeable options on this window are:
 - **Progress Bar update every x seconds** - Number of seconds between updating timer progress bars. The default "`1`" is appropriate in most circumstances.
 - **Sound Player filename** - Enter the command to play sounds. The default is `paplay` (PulseAudio) which is suitable for most Linux systems. On some Linux systems PulseAudio isn't installed so use the `aplay` command.
 - **Alarm sound filename** - Choose a sound file at least 5 seconds long. About 7 seconds is best.
-- **Icon image filename** - Choose the Icon which appears on windows and the task bar of running applicadtions.
+- **Icon image filename** - Choose the Icon which appears on windows and the task bar of running applications.
 - **Lock screen** - Choose whether or not the screen should lock. Generally this should be set to "Never".
 - **Ask to begin each timer** - When checked, Multi-Timer prompts to start each timer. Usually, you want this checked.
 - **Pop-up message when each timer ends** - When checked, a notification message (pop-up bubble message) is displayed. Usually, you leave this un-checked because an alarm already sounds.
@@ -325,6 +325,7 @@ The copy command (`cp`) and remove command (`rm`) can be combined into
 a single move command (`mv`) to rename the configuration file:
 
 ```shell
+cd ~/.config                  # Go to user's configuration directory
 mv mt.conf mt_laundry.conf    # Rename Multi-Timer configuration file
 ```
 
