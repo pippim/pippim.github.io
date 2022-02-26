@@ -273,7 +273,7 @@ a.button:visited {
    color: inherit;  // Use color white, not purple, for buttons
 }
 
-a.hdr-bar:visited {
+a.hdr-bar:visited > * {
    color: inherit;  // Use color white, not purple, for buttons
 }
 
