@@ -22,7 +22,7 @@ $lavender: #E6E6FA !default; // lavender
 .button {
   display: inline-block;
   border-radius: 2rem;
-  margin: -.5rem 0px -.5rem 0px;
+  margin: -.5rem 1rem -.5rem 0px;
   padding: 0px 1rem;
   color: #fff;
   border: 2px solid white;
@@ -94,7 +94,8 @@ $lavender: #E6E6FA !default; // lavender
   display: block;
   position: absolute;
   right: 0;
-  margin: -.5rem 1rem -.5rem .5rem;
+  margin-top: -1rem;
+  padding: .5rem .5rem;
   color: #fff;
   border: 2px solid white;
   // overflow: hidden;
