@@ -282,9 +282,6 @@ a.tcm-btn:visited {
 details {
   // font-size: 1.3rem;
   // width: 80%;
-  > a:visited {
-    color: purple;
-  }
 }
 
 details > summary {
@@ -329,17 +326,13 @@ details > p {
   border-radius: 0 0 10px 10px;
   background-color: $honeydew;
   color: $header-bg-color;
-  // padding: 2px 6px;
   margin-left: 1.3em;
-  // Hanging indent: https://stackoverflow.com/a/2833097/6929343
-  // margin-left: 4em;
-  // text-indent: -2em;
-  // margin: 0;
   box-shadow: 3px 3px 4px black;
-  // Below copied from .front_matter:
-  // line-height: 1.75;  // line height 1.75 too greedy
   padding: 4px 4px 4px 4px;
+}
 
+details > a:visited {
+    color: purple;
 }
 
 details[open] > summary {
@@ -367,47 +360,11 @@ details[open] > summary {
 }
 
 /* search.html styling */
-#org-form {
-  background-color: #4654e1;
-  // width: 300px;  // Use full width
-  // height: 44px;
-  height: 2rem;
-  margin: 1rem;     // New - space above and below
-  border-radius: 5px;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-}
-
-#org-query {
-  all: unset;
-  // font: 16px system-ui;
-  font: 1.5rem;
-  height: 100%;
-  width: 100%;
-  // padding: 6px 10px;
-  padding: .5rem .8rem;
-}
 
 ::placeholder {
   // color: #fff;  // White doesn't work with background: $honeydew;
   color: $header-bg-color;
   opacity: 0.7;
-}
-
-#org-svg {
-  color: #fff;
-  fill: currentColor;
-  width: 24px;
-  height: 24px;
-  padding: 10px;
-}
-
-#org-search-button {
-  all: unset;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
 }
 
 /* Text version (UTF-8) of magnifying glass */
