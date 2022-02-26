@@ -145,7 +145,7 @@ $lavender: #E6E6FA !default; // lavender
 
   &:visited {
     background-position:bottom;
-    color: inherit;
+    color: $header-bg-color;
   }
 }
 
