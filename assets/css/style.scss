@@ -260,7 +260,7 @@ mark {
   }
 }
 
-/*
+/* */
 // Visited links in purple
 //a:visited:not(.button),
 //a:visited:not(.tcm-btn),
@@ -276,7 +276,10 @@ a.button:visited {
 a.tcm-btn:visited {
    color: inherit;  // Use color white, not purple, for buttons
 }
-*/
+
+a#markdown-toc:visited {
+   color: inherit;  // Use color white, not purple, for TOC
+}
 
 // Details styling: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
 details {
@@ -488,6 +491,10 @@ details[open] > summary {
 }
 
 // Search Result links that have been visited in purple
+// From: https://stackoverflow.com/questions/10845517/
+// how-to-change-the-link-color-in-a-specific-class-for-a-div-css/30296997#30296997
+
+// But none of the answers are working???
 a.search-results:visited {
     color: purple;
 }
