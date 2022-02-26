@@ -487,6 +487,13 @@ details[open] > summary {
     //border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px;
 }
 
+// Search Result links that have been visited in purple
+a.search-results:visited {
+    color: purple;
+}
+
+
+//  OLD STUFF BELOW? CHECK AND DELETE IT
 /* From: https://stackoverflow.com/a/34393664/6929343 */
 #header-search, #search-button {
     display: inline-block;
