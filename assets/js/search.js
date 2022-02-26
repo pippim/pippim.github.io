@@ -126,8 +126,8 @@ function submitted(event) {
         var html = "<h2>" + results.length.toString() + " results found.</h2>\n"
     }
 
-    // Process all results
-    html += "<ol>\n"
+    // Process all results. Use class 'search-results' to style purple for visited links
+    html += '<ol class="search-results">\n'
 
     for (var i = 0; i < results.length; i++) {
         const [key, value] = results[i].toString().split(',');
