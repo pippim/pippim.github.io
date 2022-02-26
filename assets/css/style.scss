@@ -145,8 +145,12 @@ $lavender: #E6E6FA !default; // lavender
 
   &:visited {
     background-position:bottom;
-    color: purple;
+    color: inherit;
   }
+}
+
+a#markdown-toc:visited {
+    color: purple;
 }
 
 /* OLD class to be deprecated after check-html-ids.py does away with.
