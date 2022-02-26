@@ -19,19 +19,19 @@ $salmon: #FA8072 !default; // salmon
 $lavender: #E6E6FA !default; // lavender
 
 // Visited links in purple
-//a:visited:not(.button),
-//a:visited:not(.tcm-btn) {
+a:visited:not(.button),
+a:visited:not(.tcm-btn),
 a:visited {
   color: purple;
 }
 
-a.button:visited {
-   color: #fff;
-}
+//a.button:visited {
+//   color: #fff;
+//}
 
-a.tcm-btn:visited {
-   color: #fff;
-}
+//a.tcm-btn:visited {
+//   color: #fff;
+//}
 
 .button {
   display: inline-block;
