@@ -143,10 +143,7 @@ $lavender: #E6E6FA !default; // lavender
     color:#F0FFF0;
   }
 
-  &:visited {
-    background-position:bottom;
-    color: $header-bg-color;
-  }
+  &:visited { color: $header-bg-color; }
 }
 
 a.no_toc:visited > *  {
@@ -358,8 +355,10 @@ details > p {
   padding: 4px 4px 4px 4px;
 }
 
-details > a:visited {
+details > a {
+  &:visited {
     color: purple;
+  }
 }
 
 details[open] > summary {
