@@ -149,6 +149,10 @@ $lavender: #E6E6FA !default; // lavender
   }
 }
 
+a.no_toc:visited > *  {
+    color: purple;
+}
+
 #markdown-toc > a:visited {
     color: purple;
 }
