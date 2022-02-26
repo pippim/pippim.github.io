@@ -18,6 +18,11 @@ $honeydew: #F0FFF0 !default; // Honeydew
 $salmon: #FA8072 !default; // salmon
 $lavender: #E6E6FA !default; // lavender
 
+// Visited links in purple
+a:visited {
+  color: purple;
+}
+
 
 .button {
   display: inline-block;
