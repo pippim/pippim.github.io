@@ -260,7 +260,7 @@ mark {
   }
 }
 
-/* */
+/*
 // Visited links in purple
 //a:visited:not(.button),
 //a:visited:not(.tcm-btn),
@@ -273,6 +273,8 @@ a.button:visited {
    color: inherit;  // Use color white, not purple, for buttons
 }
 
+// > * { should be getting all descendants but it not...
+// https://stackoverflow.com/a/26353906/6929343
 a.hdr-bar:visited > * {
    color: inherit;  // Use color white, not purple, for buttons
 }
@@ -288,6 +290,7 @@ a#markdown-toc:visited {
 a#TOC:visited {
    color: inherit;  // Use color white, not purple, for TOC
 }
+*/
 
 // Details styling: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
 details {
