@@ -18,20 +18,6 @@ $honeydew: #F0FFF0 !default; // Honeydew
 $salmon: #FA8072 !default; // salmon
 $lavender: #E6E6FA !default; // lavender
 
-// Visited links in purple
-//a:visited:not(.button),
-//a:visited:not(.tcm-btn),
-a:visited {
-  color: purple;
-}
-
-a.button:visited {
-   color: inherit;
-}
-
-a.tcm-btn:visited {
-   color: inherit;
-}
 
 .button {
   display: inline-block;
@@ -274,10 +260,31 @@ mark {
   }
 }
 
-// Details syling: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
+/*
+// Visited links in purple
+//a:visited:not(.button),
+//a:visited:not(.tcm-btn),
+// THERE ARE TOO Many to skip: Table of Contents
+a:visited {
+  color: purple;
+}
+
+a.button:visited {
+   color: inherit;  // Use color white, not purple, for buttons
+}
+
+a.tcm-btn:visited {
+   color: inherit;  // Use color white, not purple, for buttons
+}
+*/
+
+// Details styling: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
 details {
   // font-size: 1.3rem;
   // width: 80%;
+  > a:visited {
+    color: purple;
+  }
 }
 
 details > summary {
