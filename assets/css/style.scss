@@ -613,6 +613,10 @@ a.search-results:visited {
   border: 1px solid #d3d3d3;
   color: black;
   text-align: center;
+  // From: https://stackoverflow.com/a/63479151/6929343
+  left: 100%;                   /**Important*/
+  transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
+  width: max-content;           /**Important: prevents element from shrinking*/
 }
 
 #tcm_window_header {
