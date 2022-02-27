@@ -89,31 +89,6 @@ $lavender: #E6E6FA !default; // lavender
   }
 }
 
-.tcm-btn {
-  // The Cookie Machine Hidden button after regular buttons
-  display: block;
-  position: absolute;
-  right: 0;
-  margin-top: -1.3rem;
-  padding: .5rem .5rem;
-  // Make color transparent: https://stackoverflow.com/a/21917994/6929343
-  color: #ffffff00;
-  background: transparent;
-  border: none !important;
-  // border: 2px solid white;
-
-  @include medium {
-    margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
-    font-size: 0.8rem;
-  }
-
-  @include small {
-    display: none;      // Deactivated on the small screen
-    // margin-top: -1.2rem;
-    // font-size: 0.7rem;
-  }
-}
-
 .hdr-bar {
   display: block;
   position: relative;
@@ -611,9 +586,9 @@ a.search-results:visited {
   // margin-top: -1.5rem;
   z-index: 9;
   background-color: #f1f1f1;
-  border: 1px solid #d3d3d3;
+  border: .2rem solid #d3d3d3;
   color: black;
-  text-align: center;
+  padding: 1rem;
   // From: https://stackoverflow.com/a/63479151/6929343
   left: 100%;                   /**Important*/
   transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
@@ -647,5 +622,10 @@ a.search-results:visited {
   @include medium {
     margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
     font-size: 0.8rem;
+  }
+
+  @include medium {
+    margin-top: -2rem;  // Force buttons up a bit for vertical centering
+    font-size: 0.6rem;
   }
 }
