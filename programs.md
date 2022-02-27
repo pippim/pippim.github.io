@@ -2,9 +2,9 @@
 title: Free Programs From Pippim
 layout: default
 ---
-# Pippim Programs
+# {{ site.title }} Programs
 
-This page lists Linux programs written in Bash and Python by Pippim. 
+This page lists Linux programs written in Bash and Python by {{ site.title }}. 
 You can use them free of charge and change them however you like.
 
 ---
