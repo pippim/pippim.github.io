@@ -54,9 +54,11 @@ function dragElement(elmnt) {
 }
 
 document.querySelector('#tcm_window_close').addEventListener('click', () => {
+  // Hide tcm_window
   document.querySelector('#tcm_window').style.display = "none";
+  // Make tcm_button visible
   document.querySelector('#tcm_button').style.cssText = `
-    color: #FFFFFF
+    color: #FFFFFF;
     border: 2px solid white;`;
 });
 
