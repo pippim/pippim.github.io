@@ -640,7 +640,7 @@ a.search-results:visited {
   // Make color transparent: https://stackoverflow.com/a/21917994/6929343
   color: #ffffff00;
   background: transparent;
-  border: none !important;
+  border: none;
   // border: 2px solid white;
 
   @include medium {
