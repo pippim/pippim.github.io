@@ -593,6 +593,13 @@ a.search-results:visited {
   left: 100%;                   /**Important*/
   transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
   width: max-content;           /**Important: prevents element from shrinking*/
+
+  @include medium {
+    font-size: 0.8rem;
+  }
+  @include small {
+    font-size: 0.7rem;
+  }
 }
 
 #tcm_window_header {
