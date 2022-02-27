@@ -55,6 +55,9 @@ function dragElement(elmnt) {
 
 document.querySelector('#tcm_window_close').addEventListener('click', () => {
   document.querySelector('#tcm_window').style.display = "none";
+  document.querySelector('#tcm_button').style.cssText = `
+    color: #FFFFFF
+    border: 2px solid white;`;
 });
 
 // global variables
