@@ -81,10 +81,10 @@ the remote drives as local partitions.
 
 ## The Cookie Machine
 
-{% include image.html src="/assets/img/mt/mt progress bars.gif"
-   alt="Multi-Timer Progress Bars.gif"
+{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
+   alt="TCM transparent button.gif"
    style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
-   caption="Multi-Timer Application Indicator and Progress Bars"
+   caption="The Cookie Machine Transparent Button"
 %}
 
 *The Cookie Machine*, commonly abbreviated as **TCM**,

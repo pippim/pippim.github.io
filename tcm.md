@@ -9,19 +9,24 @@ layout: program
 
 # Introduction
 
-{% include image.html src="/assets/img/mt/mt progress bars.gif"
-   alt="Multi-Timer Progress Bars.gif"
+{% include image.html src="/assets/img/tcm/Pippm TCM transparent button.gif"
+   alt="Pippm TCM transparent button.gif"
    style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
-   caption="Multi-Timer Application Indicator and Progress Bars"
+   caption="The Cookie Machine Transparent Button"
 %}
 
-The Cookie Machine (TCM for short), is accessed using a transparent button.
+*The Cookie Machine*, commonly abbreviated as **TCM**,
+is accessed using a transparent button at the top of
+every {{ site.title }} web page.
 
-It is new technology that repurposes "Cookies", that historically tracked
-your activity on the internet, into tools you can use.
+TCM is new technology that repurposes "Cookies". Cookies
+were historically used to track your activity on the
+the internet. With TCM they are now tools you can use to
+save, share and quickly import configurations from other
+browsers and other devices.
 
-Development began on February 25, 2022 and should take about six months
-to complete.
+Development began on February 25, 2022 and should take 
+about six months to complete.
 
 ---
 
@@ -47,10 +52,10 @@ characters wide.
 
 ## Configuration Window
 
-{% include image.html src="/assets/img/mt/mt maximum number of timers.png"
-   alt="Multi-Timer Maximum Number of Timers.png"
+{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
+   alt="TCM transparent button.gif"
    style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
-   caption="Multi-Timer Maximum Number of Timers"
+   caption="The Cookie Machine Transparent Button"
 %}
 
 After selecting the transparent button, the window on the left appears.
@@ -62,10 +67,10 @@ You can drag the window around on your screen.
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-{% include image.html src="/assets/img/mt/mt Main Configuration.png"
-   alt="Multi-Timer Main Configuration.png"
-   style="float: left; width: 65%; margin: 0px 1rem 0px 0px;"
-   caption="Multi-Timer Main Configuration"
+{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
+   alt="TCM transparent button.gif"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   caption="The Cookie Machine Transparent Button"
 %}
 
 ## Main Configuration
@@ -118,10 +123,10 @@ The changeable options on this window are:
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 
-{% include image.html src="/assets/img/mt/mt Timers Configuration.png"
-   alt="Multi-Timer Timers Configuration.png"
-   style="float: left; width: 65%; margin: 0px 1rem 1rem 0px;"
-   caption="Multi-Timer Timers Configuration"
+{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
+   alt="TCM transparent button.gif"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   caption="The Cookie Machine Transparent Button"
 %}
 
 ## Timers Configuration
