@@ -636,6 +636,7 @@ a.search-results:visited {
   }
 
   @include small {
+    display: none;
     margin-top: -2rem;  // Force buttons up a bit for vertical centering
     font-size: 0.6rem;
   }
