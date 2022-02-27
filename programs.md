@@ -79,6 +79,31 @@ the remote drives as local partitions.
 
 ---
 
+## The Cookie Machine
+
+{% include image.html src="/assets/img/mt/mt progress bars.gif"
+   alt="Multi-Timer Progress Bars.gif"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   caption="Multi-Timer Application Indicator and Progress Bars"
+%}
+
+*The Cookie Machine*, commonly abbreviated as **TCM**,
+is accessed using a transparent button at the top of
+every {{ site.title }} web page.
+
+TCM is new technology that repurposes "Cookies". Cookies
+were historically used to track your activity on the
+the internet. With TCM they are now tools you can use to
+save, share and quickly import configurations from other
+browsers and other devices.
+
+Development began on February 25, 2022 and should take 
+about six months to complete.
+
+<a href="tcm.html" style="font-size: 20px;">Read More...</a>
+
+---
+
 ## Coming soon to this page
 
 - `eyesome` [Multi-monitor brightness and color temperature based on sun times](https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime)
