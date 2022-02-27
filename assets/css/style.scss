@@ -147,7 +147,7 @@ $lavender: #E6E6FA !default; // lavender
   &:visited { color: $header-bg-color; }
 }
 
-#markdown-toc a:visited { color: inherit; }
+#markdown-toc a:visited { color: blue; }
 // This makes visited links black too?  #markdown-toc a:hover { color: black; }
 
 /* OLD class to be deprecated after check-html-ids.py does away with.
@@ -359,7 +359,8 @@ details > a {
 
 details a:visited { color: purple; }
 details a:hover { color: black; }
-
+#top-ten-answers-by-votes a:visited { color: purple; }
+#top-ten-answers-by-votes a:hover { color: black; }
 
 details[open] > summary {
   background-color: $honeydew;
@@ -521,6 +522,9 @@ details[open] > summary {
 a.search-results:visited {
     color: purple;
 }
+
+.search-results a:visited { color: purple; }
+.search-results a:hover { color: black; }
 
 
 //  OLD STUFF BELOW? CHECK AND DELETE IT
