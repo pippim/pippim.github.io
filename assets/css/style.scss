@@ -605,9 +605,11 @@ a.search-results:visited {
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 #mydiv {
   position: absolute;
+  float: right;
   z-index: 9;
   background-color: #f1f1f1;
   border: 1px solid #d3d3d3;
+  color: black;
   text-align: center;
 }
 
