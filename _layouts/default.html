@@ -31,16 +31,6 @@
       <!-- javascript for search bar -->
       <script type="text/javascript" src="/assets/js/search.js" ></script>
 
-      <!--- Original Cayman buttons not used anymore
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
-      -->
-
       <!-- Reduce number of buttons by suppressing button for current page -->
       {% unless page.path == "index.md" %}
         <a href="https://pippim.github.io/" style="display: inline" class="button">⌂ Home</a>
@@ -55,6 +45,9 @@
         <a href="programs.html" style="display: inline" class="button">💻 Programs</a>
       {% endunless %}
       <a href="mailto:pippim.com@gmail.com" style="display: inline" class="button">📧 Email</a>
+
+      <!-- The Cookie Machine - Transparent Button -->
+      <a href="#0" class="tcm-btn">TCM</a>
 
     </header>
 
