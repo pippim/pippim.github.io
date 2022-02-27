@@ -604,7 +604,8 @@ a.search-results:visited {
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 #mydiv {
-  position: absolute;
+  // position: absolute;
+  position: fixed;
   // right: 2rem;  NOT WORKING, sets anchor and window resizes
   // margin-top: -1.5rem;
   z-index: 9;
@@ -622,5 +623,5 @@ a.search-results:visited {
 }
 
 .mydiv_close {
-    display: none;
+    // display: none;
 }
