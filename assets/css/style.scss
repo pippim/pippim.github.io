@@ -605,7 +605,7 @@ a.search-results:visited {
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 #mydiv {
   position: absolute;
-  right: 2rem;
+  // right: 2rem;  NOT WORKING, sets anchor and window resizes
   // margin-top: -1.5rem;
   z-index: 9;
   background-color: #f1f1f1;
@@ -619,4 +619,8 @@ a.search-results:visited {
   cursor: move;  z-index: 10;
   background-color: #2196F3;
   color: #fff;
+}
+
+.mydiv_close {
+    display: none;
 }
