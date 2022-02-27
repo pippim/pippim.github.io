@@ -143,12 +143,12 @@ $lavender: #E6E6FA !default; // lavender
     background-position: bottom;
     color: $lavender;       // WAS F0FFF0 or something like that Grayish
   }
-
-  &:visited { color: $header-bg-color; }
 }
 
+/* Causing problems where visited gets hover property ...
 #markdown-toc a:visited { color: blue; }
-// This makes visited links black too?  #markdown-toc a:hover { color: black; }
+#markdown-toc a:hover { color:black; }
+*/
 
 /* OLD class to be deprecated after check-html-ids.py does away with.
 .hdr-btn {
@@ -358,9 +358,9 @@ details > a {
 }
 
 details a:visited { color:purple; }
-details a:hover { color:black; font-weight:bold; }
-#top-ten-answers-by-votes > a:visited { color: purple; }
-#top-ten-answers-by-votes > a:hover { color: black; }
+details a:hover { color:black; }
+.top-ten a:visited { color:purple; }
+.top-ten a:hover { color:black; }
 
 details[open] > summary {
   background-color: $honeydew;
@@ -523,8 +523,8 @@ a.search-results:visited {
     color: purple;
 }
 
-.search-results a:visited { color: purple; }
-.search-results a:hover { color: black; }
+.search-results a:visited { color:purple; }
+.search-results a:hover { color:black; }
 
 
 //  OLD STUFF BELOW? CHECK AND DELETE IT
