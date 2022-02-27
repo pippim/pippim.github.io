@@ -606,6 +606,7 @@ a.search-results:visited {
 #tcm_window {
   // position: absolute;
   position: fixed;
+  display: none;
   // right: 2rem;  // NOT WORKING, sets anchor and window resizes
   // margin-top: -1.5rem;
   z-index: 9;
