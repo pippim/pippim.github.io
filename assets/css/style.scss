@@ -98,7 +98,9 @@ $lavender: #E6E6FA !default; // lavender
   padding: .5rem .5rem;
   // Make color transparent: https://stackoverflow.com/a/21917994/6929343
   color: #ffffff00;
-  border: 2px solid white;
+  background: transparent;
+  border: none !important;
+  // border: 2px solid white;
 
   @include medium {
     margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
@@ -138,8 +140,8 @@ $lavender: #E6E6FA !default; // lavender
   background-color: $honeydew; // Honeydew
 
   &:hover {
-    background-position:bottom;
-    color:#F0FFF0;
+    background-position: bottom;
+    color: $lavender;
   }
 
   &:visited { color: $header-bg-color; }
