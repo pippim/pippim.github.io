@@ -50,13 +50,16 @@ located to the far right of the regular buttons. It is
 the same height as the regular buttons and about 5
 characters wide.
 
-## Configuration Window
+## Draggable Window
 
-{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
-   alt="TCM transparent button.gif"
-   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
-   caption="The Cookie Machine Transparent Button"
-%}
+<!-- Draggable DIV -->
+<div id="mydiv">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div id="mydivheader">Click here to move</div>
+  <p>Move</p>
+  <p>this</p>
+  <p>DIV</p>
+</div>
 
 After selecting the transparent button, the window on the left appears.
 
