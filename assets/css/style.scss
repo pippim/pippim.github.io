@@ -603,7 +603,7 @@ a.search-results:visited {
 }
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
-#mydiv {
+#tcm_window {
   // position: absolute;
   position: fixed;
   right: 2rem;  // NOT WORKING, sets anchor and window resizes
@@ -615,13 +615,13 @@ a.search-results:visited {
   text-align: center;
 }
 
-#mydivheader {
+#tcm_window_header {
   padding: 10px;
   cursor: move;  z-index: 10;
   background-color: #2196F3;
   color: #fff;
 }
 
-.mydiv_close {
+#tcm_window_close {
     // display: none;
 }
