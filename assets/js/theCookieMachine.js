@@ -53,6 +53,15 @@ function dragElement(elmnt) {
   }
 }
 
+document.querySelector('#tcm_button').addEventListener('click', () => {
+  // Hide tcm_window
+  document.querySelector('#tcm_window').style.display = "block";
+  // Make tcm_button invisible
+  document.querySelector('#tcm_button').style.cssText = `
+    color: #FFFFFF00;
+    border: none;`;
+});
+
 document.querySelector('#tcm_window_close').addEventListener('click', () => {
   // Hide tcm_window
   document.querySelector('#tcm_window').style.display = "none";
