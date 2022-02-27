@@ -635,7 +635,7 @@ a.search-results:visited {
     font-size: 0.8rem;
   }
 
-  @include medium {
+  @include small {
     margin-top: -2rem;  // Force buttons up a bit for vertical centering
     font-size: 0.6rem;
   }
