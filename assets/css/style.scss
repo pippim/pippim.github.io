@@ -141,7 +141,7 @@ $lavender: #E6E6FA !default; // lavender
 
   &:hover {
     background-position: bottom;
-    color: $lavender;
+    color: $lavender;       // WAS F0FFF0 or something like that Grayish
   }
 
   &:visited { color: $header-bg-color; }
