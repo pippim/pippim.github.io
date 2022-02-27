@@ -589,15 +589,18 @@ a.search-results:visited {
   border: .2rem solid #d3d3d3;
   color: black;
   padding: 1rem;
+  text-align: left;
   // From: https://stackoverflow.com/a/63479151/6929343
   left: 100%;                   /**Important*/
   transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
   width: max-content;           /**Important: prevents element from shrinking*/
 
   @include medium {
+    padding: 0.8rem;
     font-size: 0.8rem;
   }
   @include small {
+    padding: 0.7rem;
     font-size: 0.7rem;
   }
 }
@@ -624,6 +627,7 @@ a.search-results:visited {
   color: #ffffff00;
   background: transparent;
   border: none;
+
   // border: 2px solid white;
 
   @include medium {
