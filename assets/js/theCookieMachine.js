@@ -10,6 +10,10 @@ function dragElement(elmnt) {
     console.log('elmnt is null');
     return
   }
+  // Reset right property to allow window moving
+  elmnt.style.right = ""
+  elmnt.style.margin-top = ""
+
   if (document.getElementById(elmnt.id + "header")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
