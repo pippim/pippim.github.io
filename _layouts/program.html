@@ -41,16 +41,9 @@
       <!-- Draggable DIV 
       // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
       -->
-      <div id="mydiv">
-        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-        <div id="mydivheader">TCM - Click here to move
-         <span class="mydiv_close">&ensp; ❌ &ensp;</span>
-        </div>
-        <p>Future Checklist Window</p>
-      </div>
-    </header>
+      {% include tcm-window.html %}
 
-    <main id="content" class="main-content" role="main">
+      <main id="content" class="main-content" role="main">
 
       {{ content }}
 
