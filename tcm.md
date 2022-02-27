@@ -52,18 +52,11 @@ characters wide.
 
 ## Draggable Window
 
-<!-- Draggable DIV -->
-<div id="mydiv">
-  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-  <div id="mydivheader">Click here to move</div>
-  <p>Move</p>
-  <p>this</p>
-  <p>DIV</p>
-</div>
+When you open *The Cookie Machine* (TCM for short), a draggable
+window appears:
 
-After selecting the transparent button, the window on the left appears.
+Click the title line and drag the window anywhere on your screen.
 
-You can drag the window around on your screen.
 
 ---
 
