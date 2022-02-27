@@ -606,8 +606,8 @@ a.search-results:visited {
 #mydiv {
   // position: absolute;
   position: fixed;
-  // right: 2rem;  NOT WORKING, sets anchor and window resizes
-  // margin-top: -1.5rem;
+  right: 2rem;  // NOT WORKING, sets anchor and window resizes
+  margin-top: -1.5rem;
   z-index: 9;
   background-color: #f1f1f1;
   border: 1px solid #d3d3d3;
