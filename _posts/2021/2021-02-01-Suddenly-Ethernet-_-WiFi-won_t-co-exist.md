@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "59 "
 accepted:     
-uploaded:     2022-02-22 04:32:56
+uploaded:     2022-02-27 06:48:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-02-01-Suddenly-Ethernet-_-WiFi-won_t-co-exist.md
 toc:          false
 navigation:   false

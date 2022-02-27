@@ -10,9 +10,9 @@ created_date: 2016-11-13 03:10:08
 edit_date:    2017-04-13 12:23:38
 votes:        "2 "
 favorites:    
-views:        "1,183 "
+views:        "1,187 "
 accepted:     Accepted
-uploaded:     2022-02-22 04:32:56
+uploaded:     2022-02-27 06:57:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-13-How-can-Bash-script-kill-_sleeping_-version-of-itself-already-running_.md
 toc:          false
 navigation:   false

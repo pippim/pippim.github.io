@@ -2233,7 +2233,7 @@ def gen_top_posts():
         vote, title, our_url = top_posts[i]
         #print('our_url:', our_url)  # Debugging stuff
         html += html_post_line(str(vote), our_url, title,
-                               post_url_done=True)
+                               post_url_done=True, class_name="top-ten")
 
     html_write_top_posts(html)
 
@@ -2835,7 +2835,7 @@ def html_tag_line(start, end, count, details=None):
     return t_line
 
 
-def html_post_line(mark_value, post_filename, title, post_url_done=False):
+def html_post_line(mark_value, post_filename, title, post_url_done=False, class_name=None):
     """ Build post reference line
         See: https://jekyllrb.com/docs/liquid/tags/#link
         Called by gen_posts_by_vote() directly
@@ -2852,7 +2852,11 @@ def html_post_line(mark_value, post_filename, title, post_url_done=False):
     else:
         html_href = "{% post_url " + post_filename + " %}"
     title = title.replace('<', "&lt;").replace('>', "&gt;")
-    return opt_tag + '<a href="' + html_href + '">' + title + '</a><br />\n'
+    if class_name is None:
+        return opt_tag + '<a href="' + html_href + '">' + title + '</a><br />\n'
+    else:
+        return opt_tag + '<a href="' + html_href + '" class="' + class_name + \
+               '">' + title + '</a><br />\n'
 
 
 def html_details_start(summary):

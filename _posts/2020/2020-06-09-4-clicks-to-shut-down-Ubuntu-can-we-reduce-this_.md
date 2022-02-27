@@ -7,21 +7,21 @@ stack_url:    https://askubuntu.com/q/1248665
 type:         Answer
 tags:         20.04 shutdown gnome-shell
 created_date: 2020-06-09 23:16:55
-edit_date:    2020-12-31 17:51:16
+edit_date:    2022-02-23 11:57:02
 votes:        "2 "
 favorites:    
-views:        "16,078 "
+views:        "16,160 "
 accepted:     
-uploaded:     2022-02-22 04:32:56
+uploaded:     2022-02-27 06:57:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-09-4-clicks-to-shut-down-Ubuntu-can-we-reduce-this_.md
-toc:          false
+toc:          true
 navigation:   true
 clipboard:    true
 ---
 
 
 <a id="hdr1"></a>
-<div class="hdr-bar">  <a href="#hdr2">Skip</a></div>
+<div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
 # Sony TV remote suspends laptop via network control
 
@@ -40,6 +40,12 @@ Please note this **only works with Sony Bravia TVs**.
 
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
+
+{% include toc.md %}
+
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
 ## Overview
 
@@ -74,8 +80,8 @@ Jun 11 18:12:26 tvpowered[31672]: TV is powered on. 'tvpowered' is now waiting f
 
 
 
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr4">Skip</a></div>
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
 ## `tvpowered` script
 
@@ -98,8 +104,8 @@ PWRD=123            # Password for Sony TV IP Connect
 ```
 
 
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr5">Skip</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 ## `tvpowered` complete bash script
 
@@ -408,8 +414,8 @@ Main "$@"
 ----------
 
 
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr6">Skip</a></div>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 ## Summary
 
@@ -424,7 +430,46 @@ I was inspired by OP's question and never realized how cumbersome and time-consu
 
 `tvpowered` has eliminated time consuming steps 1. through 4.
 
+---
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a></div>
+
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+
+## Bonus - Turn of Light Behind TV
+
+For nighttime viewing, there is a light behind the TV. Whenever the laptop goes to sleep, it first shuts off the light.
+
+Create the script `/etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off` and place into it:
+
+{% include copyHeader.html %}
+``` bash
+#!/bin/bash
+
+# NAME: smartplug_off
+# PATH: /etc/NetworkManager/dispatcher.d/pre-down.d
+# DESC: Turn off smartplug light power for TV light
+# DATE: March 7, 2020.
+
+# CALL: Called by Network Manager before going down. Network manager in turn
+#       is called by systemd during suspend/hibernate/shutdown
+
+# NOTE: myisp.sh and hs100.sh must be installed for hs100 tp-link power plug.
+#       https://developer.gnome.org/NetworkManager/stable/NetworkManager.html
+
+PlugName="192.168.0.15"
+
+status=$(hs100.sh -i "$PlugName" check | cut -f2)
+if [ $status == "OFF" ] ; then
+    : # Nothing to do already off
+elif [ $status == "ON" ] ; then
+    hs100.sh -i "$PlugName" off
+else
+    echo Error hs100.sh not responding check connection and IP "$PlugName".
+fi
+```
+
+
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a></div>
 

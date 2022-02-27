@@ -20,11 +20,13 @@
 │   ├── js
 │   │   ├── copyCode.js
 │   │   ├── post_fm.js
-│   │   └── search.js
-│   └── json
-│       ├── search_exclude.json
-│       ├── search_url.json
-│       └── search_words.json
+│   │   ├── search.js
+│   │   └── theCookieMachine.js
+│   ├── json
+│   │   ├── search_exclude.json
+│   │   ├── search_url.json
+│   │   └── search_words.json
+│   └── style.scss
 ├── _includes
 │   ├── copyHeader.html
 │   ├── head-custom.html
@@ -41,18 +43,20 @@
 ├── _posts
 │   ├── 2016 [175 entries exceeds filelimit, not opening dir]
 │   ├── 2017 [153 entries exceeds filelimit, not opening dir]
-│   ├── 2018 [434 entries exceeds filelimit, not opening dir]
-│   ├── 2019 [262 entries exceeds filelimit, not opening dir]
+│   ├── 2018 [435 entries exceeds filelimit, not opening dir]
+│   ├── 2019 [263 entries exceeds filelimit, not opening dir]
 │   ├── 2020 [58 entries exceeds filelimit, not opening dir]
 │   ├── 2021 [31 entries exceeds filelimit, not opening dir]
 │   └── 2022
 │       ├── 2022-01-05-Python-to-print-out-status-bar-and-percentage.md
 │       ├── 2022-02-12-How-to-change-_lsblk_-sort-order_.md
-│       └── 2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
+│       ├── 2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
+│       └── 2022-02-18-Unable-to-lock-screen-with-Cron-or-Settings.md
 ├── _sass
 │   ├── jekyll-theme-cayman.scss
 │   └── toc.scss
 ├── sede
+│   ├── check-html-ids.py
 │   ├── QueryResults.csv
 │   ├── refresh.sh
 │   ├── rouge_languages.txt
@@ -62,6 +66,7 @@
 ├── about.md
 ├── answers.md
 ├── _config.yml
+├── favicon.png
 ├── index.md
 ├── LICENSE
 ├── mserve.md
@@ -71,4 +76,4 @@
 ├── tree.work
 └── wc
 
-20 directories, 52 files
+20 directories, 57 files

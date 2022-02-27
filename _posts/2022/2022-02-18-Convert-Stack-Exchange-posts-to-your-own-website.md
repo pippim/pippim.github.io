@@ -8,11 +8,11 @@ type:         Question
 tags:         app
 created_date: 2022-02-18 02:52:22
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "16 "
+views:        "26 "
 accepted:     
-uploaded:     2022-02-22 04:32:56
+uploaded:     2022-02-27 06:57:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
 toc:          false
 navigation:   false
