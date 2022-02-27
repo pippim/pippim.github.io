@@ -6,13 +6,13 @@ dragElement(document.getElementById("mydiv"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  // Reset right property to allow window moving
+  elmnt.style.removeProperty('right')
+  elmnt.style.removeProperty('margin-top')
   if (elmnt == null) {
     console.log('elmnt is null');
     return
   }
-  // Reset right property to allow window moving
-  elmnt.style.right = ""
-  elmnt.style.margin-top = ""
 
   if (document.getElementById(elmnt.id + "header")) {
     // if present, the header is where you move the DIV from:
