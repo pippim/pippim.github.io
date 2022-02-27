@@ -359,8 +359,8 @@ details > a {
 
 details a:visited { color: purple; }
 details a:hover { color: black; }
-#top-ten-answers-by-votes a:visited { color: purple; }
-#top-ten-answers-by-votes a:hover { color: black; }
+#top-ten-answers-by-votes * a:visited { color: purple; }
+#top-ten-answers-by-votes * a:hover { color: black; }
 
 details[open] > summary {
   background-color: $honeydew;
