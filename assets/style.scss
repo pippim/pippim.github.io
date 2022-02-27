@@ -99,12 +99,14 @@ $lavender: #E6E6FA !default; // lavender
   color: #fff;
   border: 2px solid white;
   font-size: 0;
-  height: 3rem;
-  width: 5rem;
+  height: 40px;
+  width: 60px;
 
   @include medium {
     margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
     font-size: 0.8rem;
+    height: 32px;
+    width: 48px;
   }
 
   @include small {
