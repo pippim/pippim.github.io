@@ -147,11 +147,7 @@ $lavender: #E6E6FA !default; // lavender
   &:visited { color: $header-bg-color; }
 }
 
-a.no_toc:visited > *  {
-    color: purple;
-}
-
-#markdown-toc > a:visited {
+#markdown-toc a:visited {
     color: purple;
 }
 
