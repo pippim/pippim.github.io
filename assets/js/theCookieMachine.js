@@ -2,11 +2,11 @@
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
-dragElement(document.getElementById("mydiv"));
+dragElement(document.getElementById("tcm_window"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  // Reset right property to allow window moving
+  // Reset right property to allow window moving NOT WORKING
   elmnt.style.removeProperty('right')
   elmnt.style.removeProperty('margin-top')
   if (elmnt == null) {
@@ -52,6 +52,10 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+document.querySelector('#tcm_window_close').addEventListener('click', () => {
+  document.querySelector('#tcm_window').style.display = "none";
+});
 
 // global variables
 var fm_state = "None";
