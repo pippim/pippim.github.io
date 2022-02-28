@@ -612,6 +612,11 @@ a.search-results:visited {
   color: #fff;
 }
 
+#tcm_window_buttons {
+  padding: .5rem;
+  font-size: 3rem;      // Initially UTF-8 symbols are being used.
+}
+
 #tcm_window_close {
   float: right;
 }
