@@ -75,7 +75,7 @@ var website_tree = []
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // TODO: rename search_url.json to search_urls.json
-    load_website_tree();
+    await this.load_website_tree();
     console.log('load_website_tree: ' + website_tree)
 });
 
