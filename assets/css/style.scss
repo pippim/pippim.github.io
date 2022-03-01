@@ -630,6 +630,10 @@ a.search-results:visited {
 
 #tcm_display_cloud {
   font-size: 3rem;      // Initially UTF-8 symbols are being used.
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 }
 
 #tcm_display_local {
