@@ -633,6 +633,7 @@ a.search-results:visited {
   padding: 0px 0px 1rem;
   &:hover {
     background-color: black;
+    outline: black;  // Prevent button shrinking
     color: white;
     // Button shrinks on hover: https://stackoverflow.com/a/21683772/6929343
     &:before {
