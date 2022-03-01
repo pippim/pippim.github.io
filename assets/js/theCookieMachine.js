@@ -86,7 +86,7 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
 
 const h = document.getElementById('tcm_window')  // Website tree entries html codes
 
-website_tree_to_html() {
+function website_tree_to_html() {
     if (website_tree.length == 0) {
         html = "<h2> 🔍 &emsp; No website_tree found!</h2>\n";
         html += "<p>An error has occurred.<br><br>\n"
