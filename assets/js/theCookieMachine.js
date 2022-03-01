@@ -77,7 +77,9 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // TODO: rename search_url.json to search_urls.json
     // load_website_tree();
     getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
-      .then(console.log('load_website_tree: ' + website_tree);
+      .then({
+        console.log('load_website_tree: ' + website_tree);
+      });
 });
 
 async function load_website_tree() {
