@@ -12,7 +12,7 @@ votes:        "60 "
 favorites:    
 views:        "78,212 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:40:03
+uploaded:     2022-02-28 18:43:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-23-How-can-I-send-mobile-text-message-from-terminal_.md
 toc:          false
 navigation:   true

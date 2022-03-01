@@ -138,8 +138,13 @@ if [ $retVal -ne 0 ]; then
 fi
 
 # Convert tree listing to json format
-jq -Rsc 'split("\n")' ../_includes/website_tree.txt > ../assets/json/website_tree.json
+jq -Rsc 'split("\n")' _includes/website_tree.txt > assets/json/website_tree.json
 git add assets/json/website_tree.json
+retVal=$?
+if [ $retVal -ne 0 ]; then
+    echo "git add assets/json/website_tree.json FAILED with code: $retVal"
+    exit $retVal
+fi
 
 # Refresh stack-to-blog and rouge_languages.txt
 cp ~/website/sede/refresh.sh sede/

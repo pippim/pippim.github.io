@@ -12,7 +12,7 @@ votes:        "29 "
 favorites:    
 views:        "15,344 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:40:03
+uploaded:     2022-02-28 18:43:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition.md
 toc:          true
 navigation:   true
