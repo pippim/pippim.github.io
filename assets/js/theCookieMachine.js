@@ -84,7 +84,7 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
       });
 });
 
-const h = document.getElementById('tcm_window')  // Website tree entries html codes
+const h = document.getElementById('tcm_window_body')  // Website tree entries html codes
 
 function website_tree_to_html() {
     if (website_tree.length == 0) {
@@ -100,7 +100,7 @@ function website_tree_to_html() {
     }
 
     for (var i = 0; i < website_tree.length; i++) {
-        html += "<p>" + website_tree[i] " "</p>\n"
+        html += "<p>" + website_tree[i] + "</p>\n"
     }
     html += "</ol>\n";
 
