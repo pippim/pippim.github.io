@@ -84,14 +84,14 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
       });
 });
 
-const h = document.getElementById('tcm_window_body')  // Website tree entries html codes
+const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 
 function website_tree_to_html() {
     if (website_tree.length == 0) {
         html = "<h2> 🔍 &emsp; No website_tree found!</h2>\n";
         html += "<p>An error has occurred.<br><br>\n"
         html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n"
-        h.innerHTML = html;
+        b.innerHTML = html;
         return
     } else if (website_tree.length == 1) {
         var html = "<h2>1 entry found.</h2>\n"
@@ -102,9 +102,8 @@ function website_tree_to_html() {
     for (var i = 0; i < website_tree.length; i++) {
         html += "<p>" + website_tree[i] + "</p>\n"
     }
-    html += "</ol>\n";
 
-    h.innerHTML = html;              // Put search results into modal box
+    b.innerHTML = html;              // Update TCM Window body
 
 }
 
