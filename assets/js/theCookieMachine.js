@@ -99,9 +99,9 @@ function website_tree_to_html(results) {
         b.innerHTML = html;
         return
     } else if (results.length == 1) {
-        var html = "<h2>1 entry found.</h2>\n"
+        var html = "<h2>1 {{ site.title }} website entry found.</h2>\n"
     } else {
-        var html = "<h2>" + results.length.toString() + " entries found.</h2>\n"
+        var html = "<h2>" + results.length.toString() + " {{ site.title }} website entries found.</h2>\n"
     }
 
     html += "<p>\n"
