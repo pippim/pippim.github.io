@@ -90,6 +90,7 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
 });
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
+var saved_font =
 
 function website_tree_to_html(results) {
     if (results.length == 0) {
@@ -101,9 +102,11 @@ function website_tree_to_html(results) {
     } else if (results.length == 1) {
         var html = "<h2>1 {{ site.title }} website entry found.</h2>\n"
     } else {
-        var html = "<h2>" + results.length.toString() + " {{ site.title }} website entries found.</h2>\n"
+        var html = "<h2>" + results.length.toString() +
+                   " {{ site.title }} website entries found.</h2>\n"
     }
 
+    setLineDrawFont(b)
     html += "<p>\n"
     for (var i = 0; i < results.length; i++) {
         html += results[i] + "<br>\n"
@@ -112,6 +115,15 @@ function website_tree_to_html(results) {
 
     b.innerHTML = html;              // Update TCM Window body
 
+}
+
+function setLineDrawFont(elmnt) {
+    fontSize = window.getComputedStyle(elmnt).fontSize;
+    console.log("Font size: " + fontsize);
+    elemnt.style.cssText = `
+      font-family: courier, courier new, monospace;
+      line-height: 1.0;
+    `;
 }
 
 /* End of /assets/js/theCookieMachine.js */
