@@ -17,6 +17,11 @@
 #       Username: <type your username>
 #       Password: <type your password>
 
+# Must have the jq package.
+command -v jq >/dev/null 2>&1 || { echo >&2 \
+        "jq package required but it is not installed.  Aborting."; \
+        exit 99; }
+
 QUERY=~/Downloads/QueryResults.csv
 
 if [ ! -d ~/website ] ; then 
@@ -131,6 +136,10 @@ if [ $retVal -ne 0 ]; then
     echo "git add _includes/ FAILED with code: $retVal"
     exit $retVal
 fi
+
+# Convert tree listing to json format
+jq -Rsc 'split("\n")' ../_includes/website_tree.txt > ../assets/json/website_tree.json
+git add assets/json/website_tree.json
 
 # Refresh stack-to-blog and rouge_languages.txt
 cp ~/website/sede/refresh.sh sede/

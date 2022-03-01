@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,558 "
 accepted:     
-uploaded:     2022-02-27 06:57:25
+uploaded:     2022-02-28 18:40:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-27-Samsung-M2-NVME-enters-read-only-on-linux-every-day_-not-on-Windows.md
 toc:          false
 navigation:   false
