@@ -2,6 +2,9 @@
 ---
 // The Cookie Machine (TCM for short)
 
+// Note: Requires search.js to be loaded first for getJSON function.
+//       search.js defines global variables
+
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
 dragElement(document.getElementById("tcm_window"));
@@ -101,9 +104,11 @@ function website_tree_to_html(results) {
         var html = "<h2>" + results.length.toString() + " entries found.</h2>\n"
     }
 
+    html += "<p>\n"
     for (var i = 0; i < results.length; i++) {
-        html += "<p>" + results[i] + "</p>\n"
+        html += results[i] + "<br>\n"
     }
+    html += "</p>"
 
     b.innerHTML = html;              // Update TCM Window body
 
