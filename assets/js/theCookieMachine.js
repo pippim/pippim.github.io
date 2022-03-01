@@ -80,7 +80,7 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
 });
 
 async function load_website_tree() {
-    website_tree = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/_includes/website_tree.txt');
+    website_tree = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json');
 }
 // global variables
 var fm_state = "None";
