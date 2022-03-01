@@ -613,8 +613,9 @@ a.search-results:visited {
 }
 
 #tcm_window_buttons {
-  padding: .5rem;
+  margin-left: .5rem;
   font-size: 3rem;      // Initially UTF-8 symbols are being used.
+  line-height: 1.5rem;
 }
 
 #tcm_window_close {
