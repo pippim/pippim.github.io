@@ -624,6 +624,14 @@ a.search-results:visited {
     &:hover {
       background-color: black;
       color: white;
+      &:before {
+        content: "";
+        display: block;
+      }
+      &:after {
+        content: "";
+        display: block;
+      }
     }
   }
 }
