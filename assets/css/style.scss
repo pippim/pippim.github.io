@@ -639,9 +639,9 @@ a.search-results:visited {
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
-    &:before {
-      width: 100%;
-    }
+  }
+  &:before {
+    width: 100%;
   }
 }
 
