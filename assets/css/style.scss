@@ -590,6 +590,8 @@ a.search-results:visited {
   color: black;
   padding: .5rem;
   text-align: left;
+  overflow: auto;
+  max-height: 20rem;     // After 20 lines, scroll bar appears
   // From: https://stackoverflow.com/a/63479151/6929343
   left: 100%;                   /**Important*/
   transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
