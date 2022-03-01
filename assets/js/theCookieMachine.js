@@ -71,6 +71,17 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
     border: 2px solid white;`;
 });
 
+var website_tree = []
+
+document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
+    // TODO: rename search_url.json to search_urls.json
+    load_website_tree();
+    console.log('load_website_tree: ' + website_tree)
+});
+
+async function load_website_tree() {
+    website_tree = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/_includes/website_tree.txt');
+}
 // global variables
 var fm_state = "None";
 var fm_button = "None";
