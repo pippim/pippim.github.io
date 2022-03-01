@@ -78,19 +78,34 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // load_website_tree();
     fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
       .then((response) => response.json())
-      .then((myJson) => {
-        console.log('Here is the json!', myJson);
+      .then((website_tree) => {
+        website_tree_to_html();
+        console.log('Here is the json!', website_tree);
       });
-    /*  OLD FORMAT
-    getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
-      .then({
-        console.log('load_website_tree: ' + website_tree);
-      });
-    */
 });
 
-async function load_website_tree() {
-    website_tree = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json');
+const h = document.getElementById('tcm_window')  // Website tree entries html codes
+
+website_tree_to_html() {
+    if (website_tree.length == 0) {
+        html = "<h2> 🔍 &emsp; No website_tree found!</h2>\n";
+        html += "<p>An error has occurred.<br><br>\n"
+        html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n"
+        h.innerHTML = html;
+        return
+    } else if (website_tree.length == 1) {
+        var html = "<h2>1 entry found.</h2>\n"
+    } else {
+        var html = "<h2>" + website_tree.length.toString() + " entries found.</h2>\n"
+    }
+
+    for (var i = 0; i < website_tree.length; i++) {
+        html += "<p>" + website_tree[i] " "</p>\n"
+    }
+    html += "</ol>\n";
+
+    h.innerHTML = html;              // Put search results into modal box
+
 }
 
 /* End of /assets/js/theCookieMachine.js */
