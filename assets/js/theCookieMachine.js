@@ -76,10 +76,17 @@ var website_tree = []
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // TODO: rename search_url.json to search_urls.json
     // load_website_tree();
+    fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
+      .then((response) => response.json())
+      .then((myJson) => {
+        console.log('Here is the json!', myJson);
+      });
+    /*  OLD FORMAT
     getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
       .then({
         console.log('load_website_tree: ' + website_tree);
       });
+    */
 });
 
 async function load_website_tree() {
