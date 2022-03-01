@@ -635,13 +635,14 @@ a.search-results:visited {
     background-color: black;
     color: white;
     // Button shrinks on hover: https://stackoverflow.com/a/21683772/6929343
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  &:before {
-    width: 100%;
+    &:before {
+      content: "";
+      display: block;
+    }
+    &:after {
+      content: "";
+      display: block;
+    }
   }
 }
 
