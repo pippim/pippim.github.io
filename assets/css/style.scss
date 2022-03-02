@@ -539,8 +539,8 @@ a.search-results:visited {
   // position: absolute;
   position: fixed;
   display: none;
-  top: 20;
-  right: 20;
+  top: -100px;
+  right: -20px;
   z-index: 9;
   background-color: #f1f1f1;
   border: .2rem solid #d3d3d3;
