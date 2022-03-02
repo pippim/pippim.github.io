@@ -121,7 +121,7 @@ function setLineDrawFont(elmnt) {
     let oldSize = compStyles.getPropertyValue('font-size');
     let oldHeight = compStyles.getPropertyValue('line-height');
     console.log("Font size: " + oldSize + " Line height: " + oldHeight);
-    elemnt.style.cssText = `
+    elmnt.style.cssText = `
       font-family: courier, courier new, monospace;
       line-height: 1.0;
     `;
