@@ -581,6 +581,8 @@ a.search-results:visited {
     margin-left: .5rem;
     margin-bottom: -.5rem;
     padding: 0px 0px 1rem 0px;
+    overflow: auto;
+    max-height: 30rem;     // After 20 lines, scroll bar appears
     &:hover {
       background-color: black;
       color: white;
