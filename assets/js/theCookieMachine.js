@@ -80,7 +80,6 @@ var website_tree = []
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // TODO: rename search_url.json to search_urls.json
-    // load_website_tree();
     fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
       .then((response) => response.json())
       .then((website_tree) => {
@@ -102,38 +101,38 @@ var oldFontSize = null      // Save for when LineDraw changes
 var oldLineHeight = null
 
 function home_page_to_html() {
-    restoreOldFont(b)
-    html = "<p>"
-    html += "The Cookie Machine (TCM) Future Applications:<br><br>\n"
-    html += "  ☑ View cookies used on the {{ site.title }} website.<br>\n"
-    html += "  ☑ Send cookie via mail. For backup or sharing.<br>\n"
-    html += "  ☑ Receive cookie via mail. From yourself or colleague.<br>\n"
-    html += "  ☑ Countdown Timers. For multi-phase time sensitive missions.<br>\n"
-    html += "  ☑ And in the future... Other ways of sharing/using Cookies.\n"
-    html += "</p>"
+    restoreOldFont(b);
+    html = "<p>";
+    html += "The Cookie Machine (TCM) Future Applications:<br><br>\n";
+    html += "  ☑ View cookies used on the {{ site.title }} website.<br>\n";
+    html += "  ☑ Send cookie via mail. For backup or sharing.<br>\n";
+    html += "  ☑ Receive cookie via mail. From yourself or colleague.<br>\n";
+    html += "  ☑ Countdown Timers. For multi-phase time sensitive missions.<br>\n";
+    html += "  ☑ And in the future... Other ways of sharing/using Cookies.\n";
+    html += "</p>";
     b.innerHTML = html;              // Update TCM Window body
 }
 
 function website_tree_to_html(results) {
     if (results.length == 0) {
         html = "<h2> 🔍 &emsp; No website_tree found!</h2>\n";
-        html += "<p>An error has occurred.<br><br>\n"
-        html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n"
+        html += "<p>An error has occurred.<br><br>\n";
+        html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n";
         b.innerHTML = html;
         return
     } else if (results.length == 1) {
-        var html = "<h2>1 {{ site.title }} website entry found.</h2>\n"
+        var html = "<h2>1 {{ site.title }} website entry found.</h2>\n";
     } else {
         var html = "<h2>" + results.length.toString() +
-                   " {{ site.title }} website entries found.</h2>\n"
+                   " {{ site.title }} website entries found.</h2>\n";
     }
 
-    setLineDrawFont(b)
-    html += "<p>\n"
+    setLineDrawFont(b);
+    html += "<p>\n";
     for (var i = 0; i < results.length; i++) {
-        html += results[i] + "<br>\n"
+        html += results[i] + "<br>\n";
     }
-    html += "</p>"
+    html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
 
@@ -152,9 +151,9 @@ font-family
 */
 
 function setLineDrawFont(elmnt) {
-    let compStyles = window.getComputedStyle(elmnt)
+    let compStyles = window.getComputedStyle(elmnt);
     let test = elmnt.style.font();
-    console.log('test: ' + test)
+    console.log('test: ' + test);
     // Old font size and line height declared globally so they can be restore by Home button
     oldFontSize = compStyles.getPropertyValue('font-size');
     oldLineHeight = compStyles.getPropertyValue('line-height');
@@ -168,8 +167,8 @@ function setLineDrawFont(elmnt) {
 
 function restoreOldFont(elmnt) {
     if (oldFontSize != null) {
+        // From _sass/jekyll-theme-cayman.scss line 227
         elmnt.style.cssText = `
-          // From _sass/jekyll-theme-cayman.scss line 227
           font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-size: 16px;
           line-height: 1.5;
