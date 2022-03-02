@@ -539,6 +539,7 @@ a.search-results:visited {
   // position: absolute;
   position: fixed;
   display: none;
+  top: 0;           // right: 0; already inherited from TCM button?
   // right: 2rem;  // NOT WORKING, sets anchor and window resizes
   // margin-top: -1.5rem;
   z-index: 9;
@@ -633,7 +634,7 @@ a.search-results:visited {
 }
 
 #tcm_button {
-  // The Cookie Machine Hidden button after regular buttons
+  // The Cookie Machine HIDDEN button after regular buttons
   display: block;
   position: absolute;
   right: 0;
