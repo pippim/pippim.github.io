@@ -548,8 +548,8 @@ a.search-results:visited {
   padding: .5rem;
   text-align: left;
   // Set start position of draggable div From: https://stackoverflow.com/a/63479151/6929343
-  left: 100%;                   /**Important*/
-  transform: translateX(-95%); /**Important: offsets based on the element's width and not its parent*/
+  left: 95%;                   /**Important*/
+  transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
   width: max-content;           /**Important: prevents element from shrinking*/
 
   @include medium {
