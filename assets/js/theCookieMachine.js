@@ -139,13 +139,27 @@ function website_tree_to_html(results) {
 
 }
 
+/* Further research
+
+document.getElementById("demo").style.font = "italic bold 20px arial,serif";
+
+font-style
+font-variant
+font-weight
+font-size
+line-height
+font-family
+*/
+
 function setLineDrawFont(elmnt) {
     let compStyles = window.getComputedStyle(elmnt)
+    let test = elmnt.style.font;
+    console.log('test: ' + test)
     // Old font size and line height declared globally so they can be restore by Home button
     oldFontSize = compStyles.getPropertyValue('font-size');
     oldLineHeight = compStyles.getPropertyValue('line-height');
     // console.log("Font size: " + oldFontSize + " Line height: " + oldLineHeight);
-    // font-family from: _sass/jeckyll-theme-cayman.scss line 36
+    // font-family from: _sass/jekyll-theme-cayman.scss line 36
     elmnt.style.cssText = `
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
       line-height: 1.163;
@@ -155,7 +169,7 @@ function setLineDrawFont(elmnt) {
 function restoreOldFont(elmnt) {
     if (oldFontSize != null) {
         elmnt.style.cssText = `
-          // From _sass/jeckyll-theme-cayman.scss line 227
+          // From _sass/jekyll-theme-cayman.scss line 227
           font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-size: 16px;
           line-height: 1.5;
