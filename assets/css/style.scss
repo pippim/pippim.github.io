@@ -539,8 +539,8 @@ a.search-results:visited {
   // position: absolute;
   position: fixed;
   display: none;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 10px;  // Has no effect due to left: 100% below
   z-index: 9;
   background-color: #f1f1f1;
   border: .2rem solid #d3d3d3;
@@ -549,7 +549,7 @@ a.search-results:visited {
   text-align: left;
   // Set start position of draggable div From: https://stackoverflow.com/a/63479151/6929343
   left: 100%;                   /**Important*/
-  transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
+  transform: translateX(-95%); /**Important: offsets based on the element's width and not its parent*/
   width: max-content;           /**Important: prevents element from shrinking*/
 
   @include medium {
