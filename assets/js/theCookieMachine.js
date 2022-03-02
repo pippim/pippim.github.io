@@ -5,9 +5,6 @@
 // Note: Requires search.js to be loaded first for getJSON function.
 //       search.js defines global variables
 
-// Setup The Cookie Machine Window's home page
-home_page_to_html();
-
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
 dragElement(document.getElementById("tcm_window"));
@@ -157,5 +154,8 @@ function restoreOldFont(elmnt) {
         `;
     }
 }
+
+// Setup The Cookie Machine Window's home page
+home_page_to_html();
 
 /* End of /assets/js/theCookieMachine.js */
