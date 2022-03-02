@@ -59,12 +59,18 @@ function dragElement(elmnt) {
 }
 
 document.querySelector('#tcm_button').addEventListener('click', () => {
-  // Hide tcm_window
-  document.querySelector('#tcm_window').style.display = "block";
+  // Reveal tcm_window and move to top right
+  document.querySelector('#tcm_window').style.cssText = `
+    display: block;
+    top: 20;
+    right: 20;
+  `;
+  // document.querySelector('#tcm_window').style.display = "block";
   // Make tcm_button invisible
   document.querySelector('#tcm_button').style.cssText = `
     color: #FFFFFF00;
-    border: none;`;
+    border: none;
+  `;
 });
 
 document.querySelector('#tcm_window_close').addEventListener('click', () => {
