@@ -153,7 +153,7 @@ font-family
 
 function setLineDrawFont(elmnt) {
     let compStyles = window.getComputedStyle(elmnt)
-    let test = elmnt.style.font;
+    let test = elmnt.style.font();
     console.log('test: ' + test)
     // Old font size and line height declared globally so they can be restore by Home button
     oldFontSize = compStyles.getPropertyValue('font-size');
