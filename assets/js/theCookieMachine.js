@@ -85,12 +85,11 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
       .then((response) => response.json())
       .then((website_tree) => {
         website_tree_to_html(website_tree);
-        console.log('Here is the json!', website_tree);
+        // console.log('Here is the json!', website_tree);
       });
 });
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
-var saved_font =
 
 function website_tree_to_html(results) {
     if (results.length == 0) {
