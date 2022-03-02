@@ -105,7 +105,7 @@ function home_page_to_html() {
     html += "  ☑ Receive cookie via mail. From yourself or colleague.<br>\n"
     html += "  ☑ Countdown Timers. For multi-phase time sensitive missions.<br>\n"
     html += "  ☑ And in the future... Other ways of sharing/using Cookies.\n"
-    html += ""</p>"
+    html += "</p>"
     b.innerHTML = html;              // Update TCM Window body
 }
 
@@ -143,7 +143,7 @@ function setLineDrawFont(elmnt) {
     elmnt.style.cssText = `
       // From _sass/jeckyll-theme-cayman.scss line 36
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New"", monospace;
-      line-height: 1.0;
+      line-height: 1.1;
     `;
 }
 
