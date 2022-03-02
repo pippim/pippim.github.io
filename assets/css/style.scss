@@ -547,8 +547,9 @@ a.search-results:visited {
   color: black;
   padding: .5rem;
   text-align: left;
-  overflow: auto;
-  max-height: 30rem;     // After 20 lines, scroll bar appears
+  // Move next two lines to
+  //overflow: auto;
+  //max-height: 30rem;     // After 20 lines, scroll bar appears
   // Set start position of draggable div From: https://stackoverflow.com/a/63479151/6929343
   left: 100%;                   /**Important*/
   transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
@@ -598,6 +599,8 @@ a.search-results:visited {
 #stcm_display_cloud {
   font-size: 3rem;      // Initially UTF-8 symbols are being used.
   padding: 0px 0px 1rem;
+  overflow: auto;
+  max-height: 30rem;     // After 20 lines, scroll bar appears
   &:hover {
     background-color: black;
     border: .2rem solid black;  // Prevent button shrinking
