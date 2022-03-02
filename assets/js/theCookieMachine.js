@@ -89,6 +89,14 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
       });
 });
 
+document.querySelector('#tcm_display_home').addEventListener('click', () => {
+    home_page_to_html();
+});
+
+document.querySelector('#tcm_display_local').addEventListener('click', () => {
+    console.log('display local storage');
+});
+
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 var oldFontSize = null      // Save for when LineDraw changes
 var oldLineHeight = null
@@ -140,7 +148,7 @@ function setLineDrawFont(elmnt) {
     // font-family from: _sass/jeckyll-theme-cayman.scss line 36
     elmnt.style.cssText = `
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
-      line-height: 1.2;
+      line-height: 1.18;
     `;
 }
 
