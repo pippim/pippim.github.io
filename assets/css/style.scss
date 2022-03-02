@@ -539,18 +539,14 @@ a.search-results:visited {
   // position: absolute;
   position: fixed;
   display: none;
-  top: 0;           // right: 0; already inherited from TCM button?
-  // right: 2rem;  // NOT WORKING, sets anchor and window resizes
-  // margin-top: -1.5rem;
+  top: 20;
+  right: 20;
   z-index: 9;
   background-color: #f1f1f1;
   border: .2rem solid #d3d3d3;
   color: black;
   padding: .5rem;
   text-align: left;
-  // Move next two lines to
-  //overflow: auto;
-  //max-height: 30rem;     // After 20 lines, scroll bar appears
   // Set start position of draggable div From: https://stackoverflow.com/a/63479151/6929343
   left: 100%;                   /**Important*/
   transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
