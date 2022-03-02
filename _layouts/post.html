@@ -46,7 +46,7 @@
       <div class="front-matter">
 
         <button class="hidden-child"
-          id="hidden_button"
+          id="more_less_button"
           onclick="fm_toggle();"
           >Toggle details
         </button>
@@ -62,7 +62,7 @@
 
         <!-- Less / More button hidden until hover
                 class="hidden-child"        /assets/css/style.scss
-                id="hidden_button"          /assets/css/style.scss
+                id="more_less_button"       /assets/css/style.scss
                 onclick="fm_toggle();"      /assets/js/post_fm.js
         -->
         <style>
@@ -210,7 +210,7 @@
 
         <script>
           fm_button = checkCookie();
-          document.querySelector('#hidden_button').textContent = fm_button
+          document.querySelector('#more_less_button').textContent = fm_button
           showHide(fm_state);  // fm_state is a global var set by checkCookie()
         </script>
       </h4>
@@ -247,8 +247,10 @@
       </footer>
       -->
     </main>
+
     <!-- Recommended location is at end of body -->
     <script src="{{ site.url }}/assets/js/copyCode.js"></script>
+
   </body>
 </html>
 
