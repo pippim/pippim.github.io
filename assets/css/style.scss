@@ -591,18 +591,18 @@ a.search-results:visited {
   padding: .5rem;
   text-align: left;
   overflow: auto;
-  max-height: 20rem;     // After 20 lines, scroll bar appears
-  // From: https://stackoverflow.com/a/63479151/6929343
+  max-height: 30rem;     // After 20 lines, scroll bar appears
+  // Set start position of draggable div From: https://stackoverflow.com/a/63479151/6929343
   left: 100%;                   /**Important*/
   transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
   width: max-content;           /**Important: prevents element from shrinking*/
 
   @include medium {
-    padding: 0.8rem;
+    padding: 0.4rem;
     font-size: 0.8rem;
   }
   @include small {
-    padding: 0.7rem;
+    padding: 0.3rem;
     font-size: 0.7rem;
   }
 }
@@ -663,6 +663,7 @@ a.search-results:visited {
 
 #tcm_window_close {
   float: right;
+  cursor: pointer;
 }
 
 #tcm_button {
