@@ -599,6 +599,7 @@ a.search-results:visited {
 #tcm_window_body {
   overflow: auto;
   max-height: 25rem;     // After 20 lines, scroll bar appears
+  white-space: nowrap;
 }
 
 #OLD_tcm_display_cloud {
