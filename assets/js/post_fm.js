@@ -2,11 +2,11 @@
 var fm_state = "None";
 var fm_button = "None";
 
-function setCookie(cname,cvalue,exdays) {
+function setCookie(cname, value,exp_days) {
   const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  d.setTime(d.getTime() + (exp_days * 24*60*60*1000));
   let expires = "expires=" + d.toGMTString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  document.cookie = cname + "=" + value + ";" + expires + ";path=/";
 }
 
 function getCookie(cname) {
@@ -73,8 +73,9 @@ function fm_toggle() {
     fm_button = "More";
     // $('#hidden_front_matter').hide();
   }
-  document.querySelector('#hidden_button').textContent = fm_button
+  document.querySelector('#more_less_button').textContent = fm_button
   showHide(fm_state);
+    // Above two commands are being done inside _layouts/post.html on document load
   window.location.reload();  // Activated Jan 15/22 because hdr-btn used
   // If we needed to force the document to be fetched from the
   // web server again (such as where the document contents
