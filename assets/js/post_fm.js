@@ -6,7 +6,9 @@ function setCookie(cname, value,exp_days) {
   const d = new Date();
   d.setTime(d.getTime() + (exp_days * 24*60*60*1000));
   let expires = "expires=" + d.toGMTString();
-  document.cookie = cname + "=" + value + ";" + expires + ";path=/";
+  document.cookie = cname + "=" + value + ";" + expires + ";path=/" +
+                    ";SameSite=Strict";
+  console.log("document.cookie: " + document.cookie)
 }
 
 function getCookie(cname) {
