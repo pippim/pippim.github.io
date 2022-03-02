@@ -117,8 +117,10 @@ function website_tree_to_html(results) {
 }
 
 function setLineDrawFont(elmnt) {
-    fontSize = window.getComputedStyle(elmnt).fontSize;
-    console.log("Font size: " + fontsize);
+    let compStyles = window.getComputedStyle(elmnt)
+    let oldSize = compStyles.getPropertyValue('font-size');
+    let oldHeight = compStyles.getPropertyValue('line-height');
+    console.log("Font size: " + oldSize + " Line height: " + oldHeight);
     elemnt.style.cssText = `
       font-family: courier, courier new, monospace;
       line-height: 1.0;
