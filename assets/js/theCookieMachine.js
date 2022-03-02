@@ -148,7 +148,7 @@ function setLineDrawFont(elmnt) {
     // font-family from: _sass/jeckyll-theme-cayman.scss line 36
     elmnt.style.cssText = `
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
-      line-height: 1.17;
+      line-height: 1.163;
     `;
 }
 
