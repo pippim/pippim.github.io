@@ -137,8 +137,8 @@ function setLineDrawFont(elmnt) {
     oldFontSize = compStyles.getPropertyValue('font-size');
     oldLineHeight = compStyles.getPropertyValue('line-height');
     console.log("Font size: " + oldFontSize + " Line height: " + oldLineHeight);
+    // font-family from: _sass/jeckyll-theme-cayman.scss line 36
     elmnt.style.cssText = `
-      // From _sass/jeckyll-theme-cayman.scss line 36
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New"", monospace;
       line-height: 1.1;
     `;
