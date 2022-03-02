@@ -60,12 +60,12 @@ function dragElement(elmnt) {
 
 document.querySelector('#tcm_button').addEventListener('click', () => {
   // Reveal tcm_window and move to top right
-  document.querySelector('#tcm_window').style.cssText = `
-    display: block;
-    top: 20;
-    right: 20;
-  `;
-  // document.querySelector('#tcm_window').style.display = "block";
+  //document.querySelector('#tcm_window').style.cssText = `
+  //  display: block;
+  //  top: 20;
+  //  right: 20;
+  //`;  // top & right have no effect here, do in style.scss instead
+   document.querySelector('#tcm_window').style.display = "block";
   // Make tcm_button invisible
   document.querySelector('#tcm_button').style.cssText = `
     color: #FFFFFF00;
@@ -99,6 +99,8 @@ document.querySelector('#tcm_display_home').addEventListener('click', () => {
 });
 
 document.querySelector('#tcm_display_local').addEventListener('click', () => {
+    // fm_var cookie, search_url.json and search_words.json must already be
+    // globally defined.
     console.log('display local storage');
 });
 
