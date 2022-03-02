@@ -5,6 +5,9 @@
 // Note: Requires search.js to be loaded first for getJSON function.
 //       search.js defines global variables
 
+// Setup The Cookie Machine Window's home page
+home_page_to_html();
+
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
 dragElement(document.getElementById("tcm_window"));
@@ -90,6 +93,21 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
 });
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
+var oldFontSize = null      // Save for when LineDraw changes
+var oldLineHeight = null
+
+function home_page_to_html() {
+    restoreOldFont(b)
+    html = "<p>"
+    html += "The Cookie Machine (TCM) Future Applications:<br><br>\n"
+    html += "  ☑ View cookies used on the {{ site.title }} website.<br>\n"
+    html += "  ☑ Send cookie via mail. For backup or sharing.<br>\n"
+    html += "  ☑ Receive cookie via mail. From yourself or colleague.<br>\n"
+    html += "  ☑ Countdown Timers. For multi-phase time sensitive missions.<br>\n"
+    html += "  ☑ And in the future... Other ways of sharing/using Cookies.\n"
+    html += ""</p>"
+    b.innerHTML = html;              // Update TCM Window body
+}
 
 function website_tree_to_html(results) {
     if (results.length == 0) {
@@ -118,13 +136,26 @@ function website_tree_to_html(results) {
 
 function setLineDrawFont(elmnt) {
     let compStyles = window.getComputedStyle(elmnt)
-    let oldSize = compStyles.getPropertyValue('font-size');
-    let oldHeight = compStyles.getPropertyValue('line-height');
-    console.log("Font size: " + oldSize + " Line height: " + oldHeight);
+    // Old font size and line height declared globally so they can be restore by Home button
+    oldFontSize = compStyles.getPropertyValue('font-size');
+    oldLineHeight = compStyles.getPropertyValue('line-height');
+    console.log("Font size: " + oldFontSize + " Line height: " + oldLineHeight);
     elmnt.style.cssText = `
-      font-family: courier, courier new, monospace;
+      // From _sass/jeckyll-theme-cayman.scss line 36
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New"", monospace;
       line-height: 1.0;
     `;
+}
+
+function restoreOldFont(elmnt) {
+    if (oldFontSize != null) {
+        elmnt.style.cssText = `
+          // From _sass/jeckyll-theme-cayman.scss line 227
+          font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 16px;
+          line-height: 1.5;
+        `;
+    }
 }
 
 /* End of /assets/js/theCookieMachine.js */
