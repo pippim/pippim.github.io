@@ -199,7 +199,23 @@ function set_hdr_tooltips () {
         var h = anchors[i].attributes.href;  // Get href ID
         console.log("href: " + anchors[i].href);
         var t = anchors[i].text;
-        console.log("text: " + text);
+        console.log("text: " + t);
+        var title = ""
+        if (t == 'Top') {
+            title = "Go to top of page"
+        }
+        else if (t == 'ToS') {
+            title = "Go to top of section"
+        }
+        else if (t == 'Toc') {
+            title = "Go to Table of Contents"
+        }
+        else if (t == 'Skip') {
+            title = "Skip this section and go to next"
+        }
+        else  {
+            console.log("Unknown link text: " + t)
+        }
     }
 }
 
