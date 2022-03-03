@@ -184,22 +184,21 @@ function restoreOldFont(elmnt) {
     }
 }
 
-// Setup The Cookie Machine Window's home page
+// Setup The Cookie Machine Window's home page text inner HTML
 home_page_to_html();
 
 // Test hdr-bar
 function set_hdr_tooltips () {
     var hdr_bars = document.getElementsByClassName('hdr-bar');
     var hdr_bars_cnt = hdr_bars.length;
-    console.log("hdr_bars_cnt: " + hdr_bars_cnt);
+    // console.log("hdr_bars_cnt: " + hdr_bars_cnt);
     // var newTextForNotesClass = "This is the new title text for the notes-class-name group.";
 
     var anchors = document.querySelectorAll('.hdr-bar > a');
     for (var i = 0; i < anchors.length; i++) {
         var itm = anchors[i]
-        var h = anchors[i].href;  // Get href ID
-        // console.log("href: " + anchors[i].href);
-        var t = itm.text;            // Get link text
+        var h = itm.href;           // Get href ID
+        var t = itm.text;           // Get link text
         // console.log("text: " + t);
         var title = "";
         if (t == 'Top') {
@@ -223,6 +222,7 @@ function set_hdr_tooltips () {
     }
 }
 
+// Assign tooltip (title=) to section navigation bar buttons
 set_hdr_tooltips();
 
 /* End of /assets/js/theCookieMachine.js */
