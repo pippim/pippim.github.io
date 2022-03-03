@@ -136,6 +136,19 @@ for blog posts. You can disable the cookie using links below.
 
 [Block websites from storing cookies in Firefox 🔗](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox "How to clear cookies with Chrome Browser 🔗")
 
+To protect your More/Less cookie setting (not that it would
+do a spy any good), `SameSite` policy is set to "Strict" so
+you know no one else can read it. Also it is stored on your
+local browser and not sent to any file server or the cloud.
+You can view this in the file `assets/js/post_fm.js`:
+
+``` javascript
+document.cookie = cname + "=" + value + ";" + expires + ";path=/" +
+                    ";SameSite=Strict";
+```
+
+The above is code from line 9 of the file.
+
 {% include image.html src="/assets/img/Octocat.png"
    alt="Octocat image by GitHub.com"
    style="float: right; width: 40%; margin: 2em 0px 0px 1em;"
