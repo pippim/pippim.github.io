@@ -197,24 +197,27 @@ function set_hdr_tooltips () {
     var anchors = document.querySelectorAll('.hdr-bar > a');
     for (var i = 0; i < anchors.length; i++) {
         var h = anchors[i].attributes.href;  // Get href ID
-        console.log("href: " + anchors[i].href);
-        var t = anchors[i].text;
+        // console.log("href: " + anchors[i].href);
+        var t = anchors[i].getAttribute('text');            // Get link text
         console.log("text: " + t);
-        var title = ""
+        var title = "";
         if (t == 'Top') {
-            title = "Go to top of page"
+            title = "Go to top of page";
         }
         else if (t == 'ToS') {
-            title = "Go to top of section"
+            title = "Go to top of section";
         }
         else if (t == 'Toc') {
-            title = "Go to Table of Contents"
+            title = "Go to Table of Contents";
         }
         else if (t == 'Skip') {
-            title = "Skip this section and go to next"
+            title = "Skip this section and go to next";
         }
         else  {
-            console.log("Unknown link text: " + t)
+            console.log("Unknown link text: " + t);
+        }
+        if (title != ""){
+            anchors[i].setAttribute('title', title);
         }
     }
 }
