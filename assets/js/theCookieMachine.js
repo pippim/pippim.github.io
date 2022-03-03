@@ -189,13 +189,13 @@ home_page_to_html();
 
 // Test hdr-bar
 function set_hdr_tooltips () {
-    var hdr_btns = document.getElementsByClassName('hdr-bar');
-    var hdr_btnsNum = hdr_btns.length;
-    console.log("hdr_btnsNum: " + hdr_btnsNum);
+    var hdr_bars = document.getElementsByClassName('hdr-bar');
+    var hdr_bars_cnt = hdr_bars.length;
+    console.log("hdr_bars_cnt: " + hdr_bars_cnt);
     // var newTextForNotesClass = "This is the new title text for the notes-class-name group.";
 
-    for (i=0; i<hdr_btnsNum; i++){
-        console.log(hdr_btns[i].text);
+    for (i=0; i<hdr_bars_cnt; i++){
+        console.log(hdr_bars[i].text);
     }
 }
 
