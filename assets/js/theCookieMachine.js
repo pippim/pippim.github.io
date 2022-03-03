@@ -198,8 +198,8 @@ function set_hdr_tooltips () {
     for (var i = 0; i < anchors.length; i++) {
         var h = anchors[i].attributes.href;
         console.log("href: " + h);
-        var text = document.getElementById(h).text;
-        console.log("text: " + text);
+        //var text = document.getElementById(h).text;
+        //console.log("text: " + text);
     }
 }
 
