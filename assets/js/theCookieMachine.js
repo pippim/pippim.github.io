@@ -197,10 +197,10 @@ function set_hdr_tooltips () {
     var anchors = document.querySelectorAll('.hdr-bar > a');
     for (var i = 0; i < anchors.length; i++) {
         var itm = anchors[i]
-        var h = anchors[i].attributes.href;  // Get href ID
-        console.log("href: " + anchors[i].href);
+        var h = anchors[i].href;  // Get href ID
+        // console.log("href: " + anchors[i].href);
         var t = itm.text;            // Get link text
-        console.log("text: " + t);
+        // console.log("text: " + t);
         var title = "";
         if (t == 'Top') {
             title = "Go to top of page";
@@ -208,14 +208,14 @@ function set_hdr_tooltips () {
         else if (t == 'ToS') {
             title = "Go to top of section";
         }
-        else if (t == 'Toc') {
+        else if (t == 'ToC') {
             title = "Go to Table of Contents";
         }
         else if (t == 'Skip') {
-            title = "Skip this section and go to next";
+            title = "Skip this section and go to next section";
         }
         else  {
-            console.log("Unknown link text: " + t);
+            console.log("Unknown link text: " + t " href: " + h);
         }
         if (title != ""){
             itm.title = title;
