@@ -198,7 +198,7 @@ function set_hdr_tooltips () {
     for (var i = 0; i < anchors.length; i++) {
         var h = anchors[i].attributes.href;  // Get href ID
         // console.log("href: " + anchors[i].href);
-        var t = anchors[i].getAttribute('text');            // Get link text
+        var t = anchors[i].attributes.text;            // Get link text
         console.log("text: " + t);
         var title = "";
         if (t == 'Top') {
@@ -217,7 +217,7 @@ function set_hdr_tooltips () {
             console.log("Unknown link text: " + t);
         }
         if (title != ""){
-            anchors[i].setAttribute('title', title);
+            anchors[i].attributes.title = title;
         }
     }
 }
