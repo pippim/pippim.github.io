@@ -196,8 +196,10 @@ function set_hdr_tooltips () {
 
     var anchors = document.querySelectorAll('.hdr-bar > a');
     for (var i = 0; i < anchors.length; i++) {
-        console.log(anchors[i].attributes.href);
-        console.log(anchors[i].attributes.text);
+        var href = anchors[i].attributes.href;
+        console.log(href);
+        var text = document.getElementById(h).text;
+        console.log(text);
     }
 }
 
