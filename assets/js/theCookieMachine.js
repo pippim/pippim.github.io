@@ -188,12 +188,16 @@ function restoreOldFont(elmnt) {
 home_page_to_html();
 
 // Test hdr-bar
-var hdr_btns = document.getElementsByClassName('hdr-bar');
-var hdr_btnsNum = hdr_btns.length;
-var newTextForNotesClass = "This is the new title text for the notes-class-name group.";
+function set_hdr_tooltips () {
+    var hdr_btns = document.getElementsByClassName('hdr-bar');
+    var hdr_btnsNum = hdr_btns.length;
+    var newTextForNotesClass = "This is the new title text for the notes-class-name group.";
 
-for (i=0; i<hdr_btnsNum; i++){
-    console.log(hdr_btns[i].text);
+    for (i=0; i<hdr_btnsNum; i++){
+        console.log(hdr_btns[i].text);
+    }
 }
+
+set_hdr_tooltips();
 
 /* End of /assets/js/theCookieMachine.js */
