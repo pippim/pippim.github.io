@@ -1,12 +1,30 @@
 ---
 ---
-// The Cookie Machine (TCM for short)
+/* hyperlinkRecipe.js - Create hyperlinks from Clipboard pastes (at least two).
+                        Export hyperlinks to Clipboard
+                            Recipe 1 = HTML format
+                            Recipe 2 = Markdown format
 
-// Note: Requires search.js to be loaded first for getJSON function.
-//       search.js defines global variables
+   Note:    Uses export processHyperlinkRecipe(className) so parent Javascript
+            function uses:
 
-// imported functions
-import processHyperlinkRecipe from 'hyperlinkRecipe.js'
+                import processHyperLinkRecipe from 'hyperlinkRecipe.js';
+
+*/
+
+export function processHyperlinkRecipe(b) {
+    // b = TCM Window Body
+    html = "<p>";
+    html += "The Hyperlink Recipe Baker:<br><br>\n";
+    html += "  ☑ Paste URL (href) from clipboard. *<br>\n";
+    html += "  ☑ Paste Name (text) from clipboard. *<br>\n";
+    html += "  ☑ Paste Tooltip (title) from clipboard.<br>\n";
+    html += "  ☑ Specify external link icon.<br>\n";
+    html += "  ☑ Specify open in new window/tab.\n";
+    html += "</p>";
+    b.innerHTML = html;              // Update TCM Window body
+
+}
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
@@ -87,10 +105,6 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
 
 var website_tree = []
 
-const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
-var oldFontSize = null      // Save for when LineDraw changes
-var oldLineHeight = null
-
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // TODO: rename search_url.json to search_urls.json
     fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
@@ -111,12 +125,9 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
     console.log('display local storage');
 });
 
-document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
-    // fm_var cookie, search_url.json and search_words.json must already be
-    // globally defined.
-    restoreOldFont(b);
-    processHyperlinkRecipe(b)
-});
+const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
+var oldFontSize = null      // Save for when LineDraw changes
+var oldLineHeight = null
 
 function home_page_to_html() {
     restoreOldFont(b);
