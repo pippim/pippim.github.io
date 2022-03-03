@@ -78,7 +78,7 @@ function fm_toggle() {
   document.querySelector('#more_less_button').textContent = fm_button
   showHide(fm_state);
     // Above two commands are being done inside _layouts/post.html on document load
-  window.location.reload();  // Activated Jan 15/22 because hdr-btn used
+  //window.location.reload();  // Activated Jan 15/22 because hdr-btn used
   // If we needed to force the document to be fetched from the
   // web server again (such as where the document contents
   // change dynamically but cache control headers are not
