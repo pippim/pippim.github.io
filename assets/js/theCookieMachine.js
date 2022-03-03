@@ -215,7 +215,7 @@ function set_hdr_tooltips () {
             title = "Skip this section and go to next section";
         }
         else  {
-            console.log("Unknown link text: " + t " href: " + h);
+            console.log("Unknown link text: " + t + " href: " + h);
         }
         if (title != ""){
             itm.title = title;
