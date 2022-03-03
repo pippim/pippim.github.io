@@ -194,8 +194,9 @@ function set_hdr_tooltips () {
     console.log("hdr_bars_cnt: " + hdr_bars_cnt);
     // var newTextForNotesClass = "This is the new title text for the notes-class-name group.";
 
-    for (i=0; i<hdr_bars_cnt; i++){
-        console.log(hdr_bars[i]);
+    var anchors = document.querySelectorAll('.hdr-bar > a');
+    for (var i = 0; i < anchors.length; i++) {
+        console.log(anchors[i].attributes.href);
     }
 }
 
