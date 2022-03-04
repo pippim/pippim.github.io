@@ -601,7 +601,8 @@ a.search-results:visited {
 
 #tcm_window_body {
   overflow: auto;
-  max-height: 25rem;     // After 20 lines, scroll bar appears
+  max-height: 80%;         // After 80%, scroll bar appears
+  max-width: 80%;          // After 80%, scroll bar appears
   // white-space: nowrap;  // Causing 2022 blog posts to move left
 }
 
