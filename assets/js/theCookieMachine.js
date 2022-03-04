@@ -146,12 +146,12 @@ function website_tree_to_html(results) {
                    " {{ site.title }} website entries found.</h2>\n";
     }
 
-    setLineDrawFont(b);
-    html += "<p>\n";
+    // setLineDrawFont(b);  // Not needed with <code>
+    html += "<p><code>\n";
     for (var i = 0; i < results.length; i++) {
         html += results[i] + "<br>\n";
     }
-    html += "</p>";
+    html += "</code></p>";
 
     b.innerHTML = html;              // Update TCM Window body
 
@@ -198,7 +198,7 @@ function restoreOldFont(elmnt) {
 // Setup The Cookie Machine Window's home page text inner HTML
 home_page_to_html();
 
-// Test hdr-bar
+// Setup hdr-bar buttons with tooltips
 function set_hdr_tooltips () {
     var hdr_bars = document.getElementsByClassName('hdr-bar');
     var hdr_bars_cnt = hdr_bars.length;
