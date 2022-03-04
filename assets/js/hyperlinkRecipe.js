@@ -32,16 +32,16 @@ export function processHyperlinkRecipe(b) {
     //console.log("b2: " + b2)
     html = "<p>";
     html += "<h3>Hyperlink Recipe Baker</h3>\n";
-    html += "Ingredients - Get from clipboard. '*' = Mandatory<br>\n";
-    html += "&ensp;URL (href) *<br>\n";
-    html += "&ensp;Name (text) *<br>\n";
-    html += "&ensp;Tooltip (title)<br>\n";
+    html += "Ingredients - From clipboard. '*' = Mandatory<br>\n";
+    html += "&emsp;URL (href) *<br>\n";
+    html += "&emsp;Name (text) *<br>\n";
+    html += "&emsp;Tooltip (title)<br>\n";
     html += "Options - On/Off<br>\n";
-    html += "&ensp;External Icon.<br>\n";
-    html += "&ensp;New Window/Tab.\n";
-    html += "Recipes - Put into clipboard<br>\n";
-    html += "  ☑ Specify external link icon.<br>\n";
-    html += "  ☑ Specify open in new window/tab.\n";
+    html += "&emsp;External Icon.<br>\n";
+    html += "&emsp;New Window/Tab.<br>\n";
+    html += "Recipes - To clipboard<br>\n";
+    html += "&emsp;HTML<br>\n";
+    html += "&emsp;Markdown\n";
     html += "</p>";
     b.innerHTML = html;              // Update TCM Window body
 }
