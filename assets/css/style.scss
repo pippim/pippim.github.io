@@ -573,11 +573,12 @@ a.search-results:visited {
 
 #tcm_window_buttons {
   // Display - Cloud Storage and Local Storage
-  font-size: 3rem;      // Initially UTF-8 symbols are being used.
-  line-height: 4rem;    // Was 2 rem Mar 3/3/22
+  font-size: 2.53rem;   // Initially UTF-8 symbols are being used.
+  line-height: 5;       // 5 times rem. Was 2 rem Mar 3/3/22
   > button {
     // Display - Home, Cloud and Local Storage
-    margin-left: .5rem;
+    margin-top: .5rem;
+    margin-right: 1rem;
     // margin-bottom: -.5rem;
     // padding: 0px 0px 1rem 0px;
     &:hover {
@@ -592,8 +593,8 @@ a.search-results:visited {
         content: "";
         display: block;
       }
-    }
     */
+    }
   }
 }
 
