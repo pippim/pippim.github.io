@@ -6,7 +6,7 @@
 //       search.js defines global variables
 
 // imported functions
-import processHyperlinkRecipe from './hyperlinkRecipe.js'
+import {processHyperlinkRecipe} from './hyperlinkRecipe.js'
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
