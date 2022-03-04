@@ -583,6 +583,7 @@ a.search-results:visited {
     &:hover {
       background-color: black;
       color: white;
+      /*
       &:before {
         content: "";
         display: block;
@@ -592,13 +593,14 @@ a.search-results:visited {
         display: block;
       }
     }
+    */
   }
 }
 
 #tcm_window_body {
   overflow: auto;
   max-height: 25rem;     // After 20 lines, scroll bar appears
-  white-space: nowrap;
+  // white-space: nowrap;  // Causing 2022 blog posts to move left
 }
 
 #OLD_tcm_display_cloud {
