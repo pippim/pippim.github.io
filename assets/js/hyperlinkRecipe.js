@@ -8,13 +8,14 @@
    Note:    Uses export processHyperlinkRecipe(className) so parent Javascript
             function uses:
 
-                import processHyperLinkRecipe from 'hyperlinkRecipe.js';
+                import processHyperlinkRecipe from 'hyperlinkRecipe.js';
 
 */
 
 export function processHyperlinkRecipe(b) {
     // b = TCM Window Body
-    html = "<p>";
+
+    var html = "<p>";
     html += "The Hyperlink Recipe Baker:<br><br>\n";
     html += "  ☑ Paste URL (href) from clipboard. *<br>\n";
     html += "  ☑ Paste Name (text) from clipboard. *<br>\n";
