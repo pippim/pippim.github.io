@@ -31,10 +31,15 @@ export function processHyperlinkRecipe(b) {
     //const b2 = document.getElementById('tcm_window_body')
     //console.log("b2: " + b2)
     html = "<p>";
-    html += "<h3>The Hyperlink Recipe Baker:</h3><br><br>\n";
+    html += "<h3>Hyperlink Recipe Baker</h3>\n";
+    html += "Ingredients - Get from clipboard. '*' = Mandatory<br>\n";
     html += "  ☑ Paste URL (href) from clipboard. *<br>\n";
     html += "  ☑ Paste Name (text) from clipboard. *<br>\n";
     html += "  ☑ Paste Tooltip (title) from clipboard.<br>\n";
+    html += "Click for optional properties<br>\n";
+    html += "  ☑ Specify external link icon.<br>\n";
+    html += "  ☑ Specify open in new window/tab.\n";
+    html += "Recipes - Put into clipboard<br>\n";
     html += "  ☑ Specify external link icon.<br>\n";
     html += "  ☑ Specify open in new window/tab.\n";
     html += "</p>";
