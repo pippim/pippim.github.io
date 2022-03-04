@@ -176,11 +176,13 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter .hidden-child{
     visibility: hidden;
+    //transition: visibility .5s;  // Mar 2/22
     display: none;
 }
 
 .front-matter:hover .hidden-child{
     visibility: visible;
+    transition: visibility .5s;  // Mar 2/22
     display: inline-block;  // Jan 14/22
 
     // Copy from hdr-btn:
@@ -572,12 +574,12 @@ a.search-results:visited {
 #tcm_window_buttons {
   // Display - Cloud Storage and Local Storage
   font-size: 3rem;      // Initially UTF-8 symbols are being used.
-  line-height: 2rem;
+  line-height: 4rem;    // Was 2 rem Mar 3/3/22
   > button {
     // Display - Home, Cloud and Local Storage
     margin-left: .5rem;
-    margin-bottom: -.5rem;
-    padding: 0px 0px 1rem 0px;
+    // margin-bottom: -.5rem;
+    // padding: 0px 0px 1rem 0px;
     &:hover {
       background-color: black;
       color: white;
