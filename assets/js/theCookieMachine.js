@@ -5,7 +5,7 @@
 // Note: Requires search.js to be loaded first for getJSON function.
 //       search.js defines global variables
 
-// imported functions
+// imported functions.  Parent needs <script type="module"...
 import {processHyperlinkRecipe} from './hyperlinkRecipe.js'
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
@@ -90,6 +90,7 @@ var website_tree = []
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 var oldFontSize = null      // Save for when LineDraw changes
 var oldLineHeight = null
+var html = null
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // TODO: rename search_url.json to search_urls.json
@@ -211,24 +212,14 @@ function set_hdr_tooltips () {
         var t = itm.text;           // Get link text
         // console.log("text: " + t);
         var title = "";
-        if (t == 'Top') {
-            title = "Go to top of page";
-        }
-        else if (t == 'ToS') {
-            title = "Go to top of section";
-        }
-        else if (t == 'ToC') {
-            title = "Go to Table of Contents";
-        }
-        else if (t == 'Skip') {
-            title = "Skip this section and go to next section";
-        }
-        else  {
-            console.log("Unknown link text: " + t + " href: " + h);
-        }
-        if (title != ""){
-            itm.title = title;
-        }
+
+        if      (t == 'Top')  { title = "Go to top of page"; }
+        else if (t == 'ToS')  { title = "Go to top of section"; }
+        else if (t == 'ToC')  { title = "Go to Table of Contents"; }
+        else if (t == 'Skip') { title = "Skip this section and go to next section"; }
+        else    { console.log("Unknown link text: " + t + " href: " + h); }
+
+        if (title != "") { itm.title = title; }
     }
 }
 
