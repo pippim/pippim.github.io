@@ -90,7 +90,7 @@ var website_tree = []
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 var oldFontSize = null      // Save for when LineDraw changes
 var oldLineHeight = null
-var html = null
+var html = null             // Late declaration for html not defined error popping up
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // TODO: rename search_url.json to search_urls.json
@@ -146,7 +146,7 @@ function website_tree_to_html(results) {
                    " {{ site.title }} website entries found.</h2>\n";
     }
 
-    // setLineDrawFont(b);  // Not needed with <code>
+    setLineDrawFont(b);  // Not needed with <code> but need line-height
     html += "<p><code>\n";
     for (var i = 0; i < results.length; i++) {
         html += results[i] + "<br>\n";
