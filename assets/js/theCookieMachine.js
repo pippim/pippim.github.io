@@ -10,24 +10,24 @@ import {processHyperlinkRecipe} from './hyperlinkRecipe.js'
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
-dragElement(document.getElementById("tcm_window"));
+dragElement(document.getElementById("tcm_window_header"));
 
-function dragElement(elmnt) {
+function dragElement(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   // Reset right property to allow window moving NOT WORKING
-  elmnt.style.removeProperty('right')
-  elmnt.style.removeProperty('margin-top')
-  if (elmnt == null) {
-    console.log('elmnt is null');
+  elm.style.removeProperty('right')
+  elm.style.removeProperty('margin-top')
+  if (elm == null) {
+    console.log('elm is null');
     return
   }
 
-  if (document.getElementById(elmnt.id + "header")) {
+  if (document.getElementById(elm.id + "header")) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    document.getElementById(elm.id + "header").onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
+    elm.onmousedown = dragMouseDown;
   }
 
   function dragMouseDown(e) {
@@ -50,8 +50,8 @@ function dragElement(elmnt) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    elm.style.top = (elm.offsetTop - pos2) + "px";
+    elm.style.left = (elm.offsetLeft - pos1) + "px";
   }
 
   function closeDragElement() {
@@ -169,23 +169,23 @@ line-height
 font-family
 */
 
-function setLineDrawFont(elmnt) {
-    let compStyles = window.getComputedStyle(elmnt);
+function setLineDrawFont(elm) {
+    let compStyles = window.getComputedStyle(elm);
     // Old font size and line height declared globally so they can be restore by Home button
     oldFontSize = compStyles.getPropertyValue('font-size');
     oldLineHeight = compStyles.getPropertyValue('line-height');
     // console.log("Font size: " + oldFontSize + " Line height: " + oldLineHeight);
     // font-family from: _sass/jekyll-theme-cayman.scss line 36
-    elmnt.style.cssText = `
+    elm.style.cssText = `
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
       line-height: 1.163;
     `;
 }
 
-function restoreOldFont(elmnt) {
+function restoreOldFont(elm) {
     if (oldFontSize != null) {
         // From _sass/jekyll-theme-cayman.scss line 227
-        elmnt.style.cssText = `
+        elm.style.cssText = `
           font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-size: 16px;
           line-height: 1.5;
