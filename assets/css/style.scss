@@ -572,29 +572,15 @@ a.search-results:visited {
 }
 
 #tcm_window_buttons {
-  // Display - Cloud Storage and Local Storage
-  font-size: 2rem;   // Initially UTF-8 symbols are being used.
-  //line-height: 5;       // 5 times rem. Was 2 rem Mar 3/3/22
+  // Buttons - Home, Cloud Storage, Local Storage and Hyperlink Recipe Baker
+  font-size: 1.8rem;   // Initially UTF-8 symbols are being used.
   > button {
     // Display - Home, Cloud and Local Storage
     margin: .5rem .5rem .5rem;
     border: .2rem solid #d3d3d3;
-
-    // margin-bottom: -.5rem;
-    // padding: 0px 0px 1rem 0px;
     &:hover {
       background-color: black;
       color: white;
-      /*
-      &:before {
-        content: "";
-        display: block;
-      }
-      &:after {
-        content: "";
-        display: block;
-      }
-    */
     }
   }
 }
@@ -602,33 +588,8 @@ a.search-results:visited {
 #tcm_window_body {
   overflow: auto;
   max-height: 22rem;       // After 22rem, scroll bar appears
-  // max-width: 80%;          // After 80%, scroll bar appears
-  // white-space: nowrap;  // Causing 2022 blog posts to move left
-}
-
-#OLD_tcm_display_cloud {
-  font-size: 3rem;      // Initially UTF-8 symbols are being used.
-  padding: 0px 0px 1rem;
-  overflow: auto;
-  max-height: 30rem;     // After 20 lines, scroll bar appears
-  &:hover {
-    background-color: black;
-    border: .2rem solid black;  // Prevent button shrinking
-    color: white;
-    // Button shrinks on hover: https://stackoverflow.com/a/21683772/6929343
-    &:before {
-      content: "";
-      display: block;
-    }
-    &:after {
-      content: "";
-      display: block;
-    }
-  }
-}
-
-#OLD_tcm_display_local {
-  font-size: 3rem;      // Initially UTF-8 symbols are being used.
+  max-width: 800px;          // After 80%, scroll bar appears
+  white-space: nowrap;  // TESTED and NOT causing 2022 blog posts to move left
 }
 
 #tcm_window_close {
