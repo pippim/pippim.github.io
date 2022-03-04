@@ -12,7 +12,7 @@
 
                 Then to call use:
 
-                    const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
+                    const b = document.getElementById('tcm_window_body')
                     document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
                         processHyperlinkRecipe(b)
                     });
@@ -27,6 +27,9 @@
 export function processHyperlinkRecipe(b) {
     // b = TCM Window Body
 
+    console.log("b: " + b)
+    const b2 = document.getElementById('tcm_window_body')
+    console.log("b2: " + b2)
     html = "<p>";
     html += "The Hyperlink Recipe Baker:<br><br>\n";
     html += "  ☑ Paste URL (href) from clipboard. *<br>\n";
@@ -35,7 +38,7 @@ export function processHyperlinkRecipe(b) {
     html += "  ☑ Specify external link icon.<br>\n";
     html += "  ☑ Specify open in new window/tab.\n";
     html += "</p>";
-    b.innerHTML = html;              // Update TCM Window body
+    b2.innerHTML = html;              // Update TCM Window body
 }
 
 /* End of /assets/js/hyperlinkRecipe.js */
