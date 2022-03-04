@@ -33,12 +33,12 @@ export function processHyperlinkRecipe(b) {
     html = "<p>";
     html += "<h3>Hyperlink Recipe Baker</h3>\n";
     html += "Ingredients - Get from clipboard. '*' = Mandatory<br>\n";
-    html += "  ☑ Paste URL (href) from clipboard. *<br>\n";
-    html += "  ☑ Paste Name (text) from clipboard. *<br>\n";
-    html += "  ☑ Paste Tooltip (title) from clipboard.<br>\n";
-    html += "Click for optional properties<br>\n";
-    html += "  ☑ Specify external link icon.<br>\n";
-    html += "  ☑ Specify open in new window/tab.\n";
+    html += "&ensp;URL (href) *<br>\n";
+    html += "&ensp;Name (text) *<br>\n";
+    html += "&ensp;Tooltip (title)<br>\n";
+    html += "Options - On/Off<br>\n";
+    html += "&ensp;External Icon.<br>\n";
+    html += "&ensp;New Window/Tab.\n";
     html += "Recipes - Put into clipboard<br>\n";
     html += "  ☑ Specify external link icon.<br>\n";
     html += "  ☑ Specify open in new window/tab.\n";
