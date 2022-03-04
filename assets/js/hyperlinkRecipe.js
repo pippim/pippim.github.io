@@ -31,7 +31,7 @@ export function processHyperlinkRecipe(b) {
     //const b2 = document.getElementById('tcm_window_body')
     //console.log("b2: " + b2)
     html = "<p>";
-    html += "The Hyperlink Recipe Baker:<br><br>\n";
+    html += "<h3>The Hyperlink Recipe Baker:</h3><br><br>\n";
     html += "  ☑ Paste URL (href) from clipboard. *<br>\n";
     html += "  ☑ Paste Name (text) from clipboard. *<br>\n";
     html += "  ☑ Paste Tooltip (title) from clipboard.<br>\n";
