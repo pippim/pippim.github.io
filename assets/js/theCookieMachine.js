@@ -116,7 +116,7 @@ document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => 
     // fm_var cookie, search_url.json and search_words.json must already be
     // globally defined.
     restoreOldFont(b);
-    hyperlinkRecipe.processHyperlinkRecipe(b)
+    processHyperlinkRecipe(b)
 });
 
 function home_page_to_html() {
