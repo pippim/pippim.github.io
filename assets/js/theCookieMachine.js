@@ -147,11 +147,11 @@ function website_tree_to_html(results) {
     }
 
     setLineDrawFont(b);  // Not needed with <code> but need line-height
-    html += "<p><code>\n";
+    html += "<p>\n";
     for (var i = 0; i < results.length; i++) {
         html += results[i] + "<br>\n";
     }
-    html += "</code></p>";
+    html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
 
@@ -171,8 +171,6 @@ font-family
 
 function setLineDrawFont(elmnt) {
     let compStyles = window.getComputedStyle(elmnt);
-    let test = elmnt.style.font;
-    console.log('test: ' + test);
     // Old font size and line height declared globally so they can be restore by Home button
     oldFontSize = compStyles.getPropertyValue('font-size');
     oldLineHeight = compStyles.getPropertyValue('line-height');

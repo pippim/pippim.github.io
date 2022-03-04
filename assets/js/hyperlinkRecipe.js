@@ -10,15 +10,24 @@
 
                 import processHyperlinkRecipe from 'hyperlinkRecipe.js';
 
+                Then to call use:
+
+                    const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
+                    document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
+                        processHyperlinkRecipe(b)
+                    });
+
             Assuming this module is called from TCM, the Top level HTML must be using:
                  <script type="module" src="/assets/js/theCookieMachine.js" ></script>
 
 */
 
+// var html = null
+
 export function processHyperlinkRecipe(b) {
     // b = TCM Window Body
 
-    var html = "<p>";
+    html = "<p>";
     html += "The Hyperlink Recipe Baker:<br><br>\n";
     html += "  ☑ Paste URL (href) from clipboard. *<br>\n";
     html += "  ☑ Paste Name (text) from clipboard. *<br>\n";
