@@ -6,7 +6,7 @@
 //       search.js defines global variables
 
 // imported functions
-import processHyperlinkRecipe from 'hyperlinkRecipe.js'
+import processHyperlinkRecipe from './hyperlinkRecipe.js'
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
@@ -115,7 +115,7 @@ document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => 
     // fm_var cookie, search_url.json and search_words.json must already be
     // globally defined.
     restoreOldFont(b);
-    processHyperlinkRecipe(b)
+    hyperlinkRecipe.processHyperlinkRecipe(b)
 });
 
 function home_page_to_html() {
