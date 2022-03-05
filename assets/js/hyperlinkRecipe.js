@@ -188,7 +188,7 @@ function doHref () {
     // hrHref.select();
     // document.execCommand("paste");
     // var clip = ClipboardEvent.clipboardData.getData("text/plain");
-    console.log('clip: ' + clip)
+    // console.log('clip: ' + clip)
 }
 
 
@@ -203,7 +203,7 @@ function handlePaste(e) {
   clipboardData = e.clipboardData || window.clipboardData;
   pastedData = clipboardData.getData('Text');
 
-  // Do whatever with pasteddata
+  // Do whatever with pastedData
   alert(pastedData);
 }
 
