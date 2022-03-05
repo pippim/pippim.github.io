@@ -14,14 +14,6 @@ dragElement(document.getElementById("tcm_window"));
 
 function dragElement(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  // Reset right property to allow window moving NOT WORKING
-  // elm.style.removeProperty('right')
-  // elm.style.removeProperty('margin-top')
-  if (elm == null) {
-    console.log('elm is null');
-    return
-  }
-
   if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
