@@ -164,7 +164,7 @@ function paintTable (b) {
 
     /* Clipboard functions */
     btnHref.addEventListener('click', () => {
-        var text = window.navigator.clipboard.readText('Text');
+        var text = window.navigator.clipboard.readText;
         alert('Trapped text: ' + text)
     });
     /* assign element names by id */
@@ -229,8 +229,8 @@ function doTitle () {
     hrText.focus();
     // hrText.select();
     // alert('in doTitle() last text: ' + text)
-    const text2 = window.clipboardData.getData('Text')
-    alert('in doTitle() text2: ' + text2)
+    // const text2 = window.clipboardData.getData('Text')
+    // alert('in doTitle() text2: ' + text2)
     document.execCommand("paste");
 }
 
