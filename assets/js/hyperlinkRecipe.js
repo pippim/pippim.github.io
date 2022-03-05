@@ -1,5 +1,3 @@
----
----
 /* hyperlinkRecipe.js - Create hyperlinks from Clipboard pastes (at least two).
                         Export hyperlinks to Clipboard
                             Recipe 1 = HTML format
@@ -156,9 +154,13 @@ var strNewWindow = document.getElementById('hrNewWindow');
 var strRecipeHtml = document.getElementById('hrRecipeHtml');
 var strRecipeMd = document.getElementById('hrRecipeMd');
 
-document.getElementById("btnHref").onclick = doHref;
+// document.getElementById("btnHref").onclick = doHref;
 document.getElementById("btnText").onclick = doText;
 document.getElementById("btnTitle").onclick = doTitle;
+document.getElementById("btnExternal").onclick = doExternal;
+document.getElementById("btnNewWindow").onclick = doNewWindow;
+document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
+document.getElementById("btnRecipeMd").onclick = doRecipeMd;
 
 /* Functions called on button click */
 function doHref () {
@@ -172,7 +174,7 @@ function doTitle () {}
 function doExternal () {}
 function doNewWindow () {}
 function doRecipeHtml () {}
-function doRecipeMarkdown () {}
+function doRecipeMd () {}
 function doReset () {}
 
 /* Not supported in firefox
