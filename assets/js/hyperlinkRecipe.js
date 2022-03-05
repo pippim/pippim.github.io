@@ -97,7 +97,7 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doRecipeHtml()"' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
             '>HTML</button></td>\n'
-    html += '<td id="hrRecipeHtml" class="hr_recipe_html>\n'
+    html += '<td id="hrRecipeHtml" class="hr_recipe_html">\n'
     html += '<input type="text" placeholder="HTML Recipe will be built here"></td>\n'
     html += '</tr>\n'
 
@@ -105,7 +105,7 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doRecipeMarkdown()"' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"' +
             '>Markdown</button></td>\n'
-    html += '<td><div id="hrRecipeMd" class="hr_recipe_md>\n'
+    html += '<td><div id="hrRecipeMd" class="hr_recipe_md">\n'
     html += '<input type="text" placeholder="Markdown Recipe will be built here">\n'
     html += '</div></td>\n'
     html += '</tr>\n'
