@@ -182,7 +182,7 @@ function doHref () {
     // URL (href) button has been clicked. Get clipboard contents
     console.log('in doHref()')
     hrHref.focus();
-    hrHref.select();
+    // hrHref.select();
     document.execCommand("paste");
     var clip = document.execCommand("paste");
     console.log('clip: ' + clip)
@@ -191,16 +191,16 @@ function doHref () {
 function doText () {
     // Name (text) button has been clicked. Get clipboard contents
     hrText.focus();
-    hrText.select();
-    alert('in doText()')
+    // hrText.select();
+    console.log('in doText()')
     document.execCommand("paste");
 }
 
 function doTitle () {
     // Name (text) button has been clicked. Get clipboard contents
     hrText.focus();
-    hrText.select();
-    alert('in doText()')
+    // hrText.select();
+    alert('in doTitle()')
     document.execCommand("paste");
 }
 
