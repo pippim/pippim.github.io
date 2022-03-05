@@ -168,12 +168,15 @@ function doHref () {
     // URL (href) button has been clicked. Get clipboard contents
     console.log('in doHref()')
     hrRef.focus();
+    hrHref.select();
     document.execCommand("paste");
 }
 
 function doText () {
-    // URL (href) button has been clicked. Get clipboard contents
+    // Name (text) button has been clicked. Get clipboard contents
     hrText.focus();
+    hrText.select();
+    alert('in doText()')
     document.execCommand("paste");
 }
 function doTitle () {}
