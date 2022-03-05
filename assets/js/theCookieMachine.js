@@ -10,7 +10,7 @@ import {processHyperlinkRecipe} from './hyperlinkRecipe.js'
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
-dragElement(document.getElementById("tcm_window_header"));
+dragElement(document.getElementById("tcm_window"));
 
 function dragElement(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -22,13 +22,9 @@ function dragElement(elm) {
     return
   }
 
-  if (document.getElementById(elm.id + "header")) {
+  if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elm.id + "header").onmousedown = dragMouseDown;
-  else if (document.getElementById(elm.id)) {
-    // We've now added _header to id
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elm.id).onmousedown = dragMouseDown;
+    document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elm.onmousedown = dragMouseDown;
