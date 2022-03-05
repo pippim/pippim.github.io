@@ -24,6 +24,15 @@ var html = null
 var hrClass = "<style>"
 var hrClass = "<style>"
 
+/* assign element names by id */
+var strHref = null
+var strText = null
+var strTitle = null
+var strExternal = null
+var strNewWindow = null
+var strRecipeHtml = null
+var strRecipeMd = null
+
 export function processHyperlinkRecipe(id) {
     const b = document.getElementById(id)  // div body id where html codes go
     doReset();      // Reset all button colors and empty strings
@@ -140,6 +149,7 @@ function paintTable (b) {
     b.innerHTML = html;             // Update TCM Window body
     document.getElementById("hrTable").style.borderSpacing = ".3rem";
 
+    /* Define functions on button clicks */
     document.getElementById("btnHref").onclick = doHref;
     document.getElementById("btnText").onclick = doText;
     document.getElementById("btnTitle").onclick = doTitle;
@@ -148,20 +158,20 @@ function paintTable (b) {
     document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
     document.getElementById("btnRecipeMd").onclick = doRecipeMd;
 
+    /* assign element names by id */
+    strHref = document.getElementById('hrHref');
+    strText = document.getElementById('hrText');
+    strTitle = document.getElementById('hrTitle');
+    strExternal = document.getElementById('hrExternal');
+    strNewWindow = document.getElementById('hrNewWindow');
+    strRecipeHtml = document.getElementById('hrRecipeHtml');
+    strRecipeMd = document.getElementById('hrRecipeMd');
+
     setButtonStyles();
 }
 
 function setButtonStyles () {
 }
-
-/* assign element names by id */
-var strHref = document.getElementById('hrHref');
-var strText = document.getElementById('hrText');
-var strTitle = document.getElementById('hrTitle');
-var strExternal = document.getElementById('hrExternal');
-var strNewWindow = document.getElementById('hrNewWindow');
-var strRecipeHtml = document.getElementById('hrRecipeHtml');
-var strRecipeMd = document.getElementById('hrRecipeMd');
 
 /* Functions called on button click */
 function doHref () {
@@ -179,7 +189,15 @@ function doText () {
     alert('in doText()')
     document.execCommand("paste");
 }
-function doTitle () {}
+
+function doTitle () {
+    // Name (text) button has been clicked. Get clipboard contents
+    hrText.focus();
+    hrText.select();
+    alert('in doText()')
+    document.execCommand("paste");
+}
+
 function doExternal () {}
 function doNewWindow () {}
 function doRecipeHtml () {}
