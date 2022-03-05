@@ -134,7 +134,7 @@ function paintTable (b) {
     html += '.hrBtn:hover {\n'
     html += '    color: #fff;\n'
     html += '    background-color: DarkGreen;\n'
-    html += '    border: .175rem solid Black;\n'
+    html += '    border: .163rem solid Black;\n'
     html += '  }\n'                 // End of button hover styling
 
     html += '</style>\n'            // End of all styles
@@ -146,6 +146,25 @@ function paintTable (b) {
 
 function setButtonStyles () {
 }
+
+var writePermission = navigator.permissions.query({name: "clipboard-write"}).then(result => {
+  if (result.state == "granted" || result.state == "prompt") {
+    return true
+  } else {
+    return false
+  }
+});
+
+var readPermission = navigator.permissions.query({name: "clipboard-read"}).then(result => {
+  if (result.state == "granted" || result.state == "prompt") {
+    return true
+  } else {
+    return false
+  }
+});
+
+console.log("writePermission: " + writePermission)
+console.log("readPermission: " + readPermission)
 
 function doHref () {}
 function doText () {}
