@@ -54,7 +54,7 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" id="btnHref" ' +
             'title="Insert browser address bar string (from the clipboard)"' +
             '>URL (href)</button></td>\n'
-    html += '<td id="hrRef" class="hrInput">\n'
+    html += '<td id="hrHref" class="hrInput">\n'
     html += '<input type="text" placeholder="Mandatory. URL from clipboard will go here"></td>\n'
     html += '</tr>\n'
 
@@ -119,6 +119,10 @@ function paintTable (b) {
     html += 'h3 {\n'                // "Hyperlink Recipe Baker" <h3> styling
     html += '  margin-top: .5rem;\n'
     html += '  margin-bottom: .5rem;\n'
+    html += '}\n'
+
+    html += '.hrTable {\n'          // Table details
+    html += '  width: 100%;\n'      // Use max allowed space
     html += '}\n'
 
     html += 'td {\n'                // Table details
