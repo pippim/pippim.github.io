@@ -112,7 +112,13 @@ function paintTable (b) {
 
     html += '</table>\n'            // End of our table
 
+    /* Set styling for table elements */
     html += '<style>\n'             // Styling for Hyperlink Recipe table
+
+    html += 'h3 {\n'                // "Hyperlink Recipe Baker" <h3> styling
+    html += '  margin-top: .5rem;\n'
+    html += '  margin-bottom: .5rem;\n'
+    html += '}\n'
 
     html += 'td {\n'                // Table details
     html += '  padding: 0 1rem;\n'  // Space between columns
