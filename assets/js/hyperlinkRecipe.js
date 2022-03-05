@@ -52,7 +52,7 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doText()"' +
+    html += '<td><button class="hrBtn" id="btnText"' +
             'title="Insert name of link to appear in document (from the clipboard)"' +
             '>Name (text)</button></td>\n'
     html += '<td id="hrText" class="hrInput">\n'
@@ -60,7 +60,7 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doTitle()"' +
+    html += '<td><button class="hrBtn" id="btnTitle"' +
             'title="Insert optional tooltip details about link (from the clipboard)"' +
             '>Tooltip (title)</button></td>\n'
     html += '<td id="hrTitle" class="hrInput">\n'
@@ -68,23 +68,19 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doExternal()"' +
+    html += '<td><button class="hrBtn" id="btnExternal"' +
             'title="Use optional UTF-8 icon to show link is an external website"' +
             '>External link</button></td>\n'
-
-    html += '<td><div id="hrExternal" class="hr_external>\n'
-    html += '<input type="string">Append external link icon after Name (text)\n'
-    html += '</div></td>\n'
+    html += '<td id="hrExternal" class="hrInput">\n'
+    html += '<input type="text" placeholder="Optional. Append external link icon after Name (text)"></td>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doNewWindow()"' +
+    html += '<tr>\n'  // Open link in New Window/Tab
+    html += '<td><button class="hrBtn" id="btnNewWindow"' +
             'title="When link is clicked, it will be opened in a new Browser Window or Tab"' +
             '>New Window</button></td>\n'
-
-    html += '<td><div id="hrNewWindow" class="hr_new_window>\n'
-    html += '<input type="string">Open link in New Browser Window or Tab\n'
-    html += '</div></td>\n'
+    html += '<td id="hrNewWindow" class="hrInput">\n'
+    html += '<input type="text" placeholder="Optional. Open link in New Browser Window or Tab"></td>\n'
     html += '</tr>\n'
 
     html += '<tr id="recipes">\n'
@@ -92,23 +88,20 @@ function paintTable (b) {
     html += '<th>String sent to the clipboard</th>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doRecipeHtml()"' +
+    html += '<tr>\n'  // HTML Recipe
+    html += '<td><button class="hrBtn" id="btnRecipeHtml"' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
             '>HTML</button></td>\n'
-
     html += '<td id="hrRecipeHtml" class="hrInput">\n'
     html += '<input type="text" placeholder="HTML Recipe will be built here"></td>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doRecipeMarkdown()"' +
+    html += '<tr>\n'  // Markdown Recipe
+    html += '<td><button class="hrBtn" id="btnRecipeMd"' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"' +
             '>Markdown</button></td>\n'
-
-    html += '<td><div id="hrRecipeMd" class="hrInput">\n'
-    html += '<input type="text" placeholder="Markdown Recipe will be built here">\n'
-    html += '</div></td>\n'
+    html += '<td id="hrRecipeMd" class="hrInput">\n'
+    html += '<input type="text" placeholder="Markdown Recipe will be built here"></td>\n'
     html += '</tr>\n'
 
     html += '</table></form>\n'     // End of our table and form
@@ -164,6 +157,8 @@ var strRecipeHtml = document.getElementById('hrRecipeHtml');
 var strRecipeMd = document.getElementById('hrRecipeMd');
 
 document.getElementById("btnHref").onclick = doHref;
+document.getElementById("btnText").onclick = doText;
+document.getElementById("btnTitle").onclick = doTitle;
 
 /* Functions called on button click */
 function doHref () {
