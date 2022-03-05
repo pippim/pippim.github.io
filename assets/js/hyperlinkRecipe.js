@@ -98,7 +98,7 @@ function paintTable (b) {
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
             '>HTML</button></td>\n'
     html += '<td><div id="hrRecipeHtml" class="hr_recipe_html>\n'
-    html += '<input type="string">Copy HTML Hyperlink Recipe to clipboard\n'
+    html += '<form><input type="text" placeholder="Results built here"</form>\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
@@ -107,7 +107,7 @@ function paintTable (b) {
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"' +
             '>Markdown</button></td>\n'
     html += '<td><div id="hrRecipeMd" class="hr_recipe_md>\n'
-    html += '<input type="string">Copy Markdown Hyperlink Recipe to clipboard\n'
+    html += '<form><input type="text" placeholder="Results built here"</form>\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
@@ -147,6 +147,26 @@ function paintTable (b) {
 function setButtonStyles () {
 }
 
+/* assign element names by id */
+var strHref = document.getElementById('hrHref');
+var strText = document.getElementById('hrText');
+var strTitle = document.getElementById('hrTitle');
+var strExternal = document.getElementById('hrExternal');
+var strNewWindow = document.getElementById('hrNewWindow');
+var strRecipeHtml = document.getElementById('hrRecipeHtml');
+var strRecipeMd = document.getElementById('hrRecipeMd');
+
+/* Functions called on button click */
+function doHref () {}
+function doText () {}
+function doTitle () {}
+function doExternal () {}
+function doNewWindow () {}
+function doRecipeHtml () {}
+function doRecipeMarkdown () {}
+function doReset () {}
+
+/* Not supported in firefox
 var writePermission = navigator.permissions.query({name: "clipboard-write"}).then(result => {
   if (result.state == "granted" || result.state == "prompt") {
     return true
@@ -165,14 +185,6 @@ var readPermission = navigator.permissions.query({name: "clipboard-read"}).then(
 
 console.log("writePermission: " + writePermission)
 console.log("readPermission: " + readPermission)
-
-function doHref () {}
-function doText () {}
-function doTitle () {}
-function doExternal () {}
-function doNewWindow () {}
-function doRecipeHtml () {}
-function doRecipeMarkdown () {}
-function doReset () {}
+*/
 
 /* End of /assets/js/hyperlinkRecipe.js */
