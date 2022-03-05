@@ -33,7 +33,7 @@ export function processHyperlinkRecipe(b) {
     //const b2 = document.getElementById('tcm_window_body')
     //console.log("b2: " + b2)
     paintTable(b);
-    return
+
     html += "<p>";
     html += "<h3>Hyperlink Recipe Baker</h3>\n";
     html += "Ingredients - From clipboard. '*' = Mandatory<br>\n";
@@ -66,8 +66,15 @@ function paintTable (b) {
 
     html += '<tr>\n'
     html += '<td><button onclick="click_text()">Name (text)</button></td>\n'
-    html += '<td><div id="hrHref" class="hr_href>\n'
-    html += '<input type="string">https://pippim.github.io\n'
+    html += '<td><div id="hrText" class="hr_text>\n'
+    html += '<input type="string">This is a very long name for the website description\n'
+    html += '</div></td>\n'
+    html += '</tr>\n'
+
+    html += '<tr>\n'
+    html += '<td><button onclick="click_title()">Tooltip (title)</button></td>\n'
+    html += '<td><div id="hrTitle" class="hr_title>\n'
+    html += '<input type="string">Hover mouse over link and get this tooltip\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
@@ -78,5 +85,6 @@ function paintTable (b) {
 
 function click_href () {}
 function click_text () {}
+function click_title () {}
 
 /* End of /assets/js/hyperlinkRecipe.js */
