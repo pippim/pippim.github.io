@@ -134,7 +134,7 @@ function paintTable (b) {
     html += '.hrBtn:hover {\n'
     html += '    color: #fff;\n'
     html += '    background-color: DarkGreen;\n'
-    html += '    border: 1.75rem solid Black;\n'
+    html += '    border: .175rem solid Black;\n'
     html += '  }\n'                 // End of button hover styling
 
     html += '</style>\n'            // End of all styles
