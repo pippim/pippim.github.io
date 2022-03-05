@@ -181,9 +181,11 @@ function setButtonStyles () {
 function doHref () {
     // URL (href) button has been clicked. Get clipboard contents
     console.log('in doHref()')
-    hrRef.focus();
+    hrHref.focus();
     hrHref.select();
     document.execCommand("paste");
+    var clip = document.execCommand("paste");
+    console.log('clip: ' + clip)
 }
 
 function doText () {
