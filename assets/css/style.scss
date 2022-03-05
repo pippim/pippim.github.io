@@ -582,21 +582,16 @@ a.search-results:visited {
 }
 
 #tcm_window_body {
+  overflow: auto;           // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
+  max-width: 800px;          // After 80%, scroll bar appears
+  max-height: 22rem;       // After 22rem, scroll bar appears
+  white-space: nowrap;  // TESTED and NOT causing 2022 blog posts to move left
   @-moz-document url-prefix() {
     // bug fix: https://stackoverflow.com/a/39738403/6929343
     .moz-div { padding-right: 1rem; }
     // Place before overflow?
   }
   padding-right: 1rem;
-  overflow: auto;           // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
-  // overflow-y: auto;           // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
-  // overflow-x: hidden;           // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
-  max-width: 800px;          // After 80%, scroll bar appears
-  max-height: 22rem;       // After 22rem, scroll bar appears
-  white-space: nowrap;  // TESTED and NOT causing 2022 blog posts to move left
-  // Make unneeded horizontal scroll bar disappear
-  // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
-
 }
 
 #tcm_window_close {
