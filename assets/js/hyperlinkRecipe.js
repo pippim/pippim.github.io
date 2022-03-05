@@ -162,6 +162,11 @@ function paintTable (b) {
     document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
     document.getElementById("btnRecipeMd").onclick = doRecipeMd;
 
+    /* Clipboard functions */
+    btnHref.addEventListener('click', () => {
+        var text = window.navigator.clipboard.readText('Text');
+        alert('Trapped text: ' + text)
+    });
     /* assign element names by id */
     strHref = document.getElementById('hrHref');
     strText = document.getElementById('hrText');
