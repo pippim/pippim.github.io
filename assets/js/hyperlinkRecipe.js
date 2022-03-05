@@ -42,7 +42,7 @@ function paintTable (b) {
 
     html += '<tr>\n'
     html += '<td><button class="hrBtn" onclick="doHref()" ' +
-            'title="Insert browser address bar residing in clipboard"' +
+            'title="Insert browser address bar string from the clipboard"' +
             '>URL (href)</button></td>\n'
     html += '<td><div id="hrHref" class="hr_href>\n'
     html += '<input type="string">https://pippim.github.io\n'
@@ -50,21 +50,27 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doText()">Name (text)</button></td>\n'
+    html += '<td><button class="hrBtn" onclick="doText()"' +
+            'title="Insert name of link to appear in document from the clipboard"' +
+            '>Name (text)</button></td>\n'
     html += '<td><div id="hrText" class="hr_text>\n'
     html += '<input type="string">This is a very long name for the website description\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doTitle()">Tooltip (title)</button></td>\n'
+    html += '<td><button class="hrBtn" onclick="doTitle()"' +
+            'title="Insert optional tooltip details about link from the clipboard"' +
+            '>Tooltip (title)</button></td>\n'
     html += '<td><div id="hrTitle" class="hr_title>\n'
     html += '<input type="string">Hover mouse over link and get this tooltip\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doExternal()">External link</button></td>\n'
+    html += '<td><button class="hrBtn" onclick="doExternal()"' +
+            'title="Insert optional tooltip details about link from the clipboard"' +
+            '>External link</button></td>\n'
     html += '<td><div id="hrExternal" class="hr_external>\n'
     html += '<input type="string">Append external link icon after Name (text)\n'
     html += '</div></td>\n'
@@ -108,8 +114,8 @@ function paintTable (b) {
     html += '  background-color: YellowGreen;\n'
     html += '  width: 100%;\n'
     html += '  border-radius: 1rem;\n'
-    html += '  margin: .25rem;\n'
-    html += '  padding: 0px;\n'     // For centering to work!
+    html += '  // margin: .25rem;\n'  // Override, too much left-ness going on
+    html += '  // padding: 0px;\n'     // For centering to work!
     html += '  text-align: center;\n'
     html += '}\n'                   // End of button styling
     html += '.hrBtn:hover {\n'
