@@ -166,11 +166,16 @@ var strRecipeMd = document.getElementById('hrRecipeMd');
 /* Functions called on button click */
 function doHref () {
     // URL (href) button has been clicked. Get clipboard contents
+    console.log('in doHref()')
     hrRef.focus();
     document.execCommand("paste");
 }
 
-function doText () {}
+function doText () {
+    // URL (href) button has been clicked. Get clipboard contents
+    hrText.focus();
+    document.execCommand("paste");
+}
 function doTitle () {}
 function doExternal () {}
 function doNewWindow () {}
