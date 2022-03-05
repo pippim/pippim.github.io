@@ -99,15 +99,16 @@ function paintTable (b) {
     html += '<style>\n'
     html += '.hrBtn {\n'            // Don't use ".button" which parent may have!!!
     html += '  background-color: YellowGreen;\n'
-    html += '  border-radius: 2rem;\n'
+    html += '  width: 100%;\n'
+    html += '  border-radius: 1rem;\n'
     html += '  margin: .25rem;\n'
-    html += '  padding: .25rem .25rem;\n'
+    html += '  padding: 0px;\n'     // For centering to work!
     html += '  text-align: center;\n'
-    html += '  &:hover {\n'
+    html += '}\n'                   // End of button styling
+    html += '.hrBtn:hover {\n'
     html += '    color: #fff;\n'
     html += '    background-color: DarkGreen;\n'
     html += '  }\n'                 // End of button hover styling
-    html += '}\n'                   // End of button styling
     html += '</style>\n'            // End of all styles
 
     b.innerHTML = html;             // Update TCM Window body
