@@ -97,7 +97,7 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doRecipeHtml()"' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
             '>HTML</button></td>\n'
-    html += '<td id="hrRecipeHtml" class="hr_recipe_html">\n'
+    html += '<td id="hrRecipeHtml" class="hrInput">\n'
     html += '<input type="text" placeholder="HTML Recipe will be built here"></td>\n'
     html += '</tr>\n'
 
@@ -105,7 +105,7 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doRecipeMarkdown()"' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"' +
             '>Markdown</button></td>\n'
-    html += '<td><div id="hrRecipeMd" class="hr_recipe_md">\n'
+    html += '<td><div id="hrRecipeMd" class="hrInput">\n'
     html += '<input type="text" placeholder="Markdown Recipe will be built here">\n'
     html += '</div></td>\n'
     html += '</tr>\n'
@@ -124,7 +124,7 @@ function paintTable (b) {
     html += '  padding: 0 1rem;\n'  // Space between columns
     html += '}\n'
 
-    html += '.hrBtn {\n'            // Don't use ".button" which parent may have!!!
+    html += '.hrBtn {\n'            // Buttons in the first column
     html += '  background-color: YellowGreen;\n'
     html += '  width: 100%;\n'
     html += '  border-radius: .5rem;\n'
@@ -135,6 +135,10 @@ function paintTable (b) {
     html += '    background-color: DarkGreen;\n'
     html += '    border: .163rem solid Black;\n'
     html += '  }\n'                 // End of button hover styling
+
+    html += '.hrInput {\n'          // Input fields
+    html += '  width: 100%;\n'
+    html += '}\n'                   // End of Input fields styling
 
     html += '</style>\n'            // End of all styles
 
