@@ -36,7 +36,7 @@ function paintTable (b) {
 
     html = '<h3>Hyperlink Recipe Baker</h3>\n'
 
-    html += '<table id="hrTable" class="hr_table">\n'
+    html += '<form><table id="hrTable" class="hr_table">\n'
     html += '<tr id="ingredients">\n'
     html += '<th>Ingredients</th>\n'
     html += '<th>From the clipboard or set options</th>\n'
@@ -97,9 +97,8 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doRecipeHtml()"' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
             '>HTML</button></td>\n'
-    html += '<td><div id="hrRecipeHtml" class="hr_recipe_html>\n'
-    html += '<form><input type="text" placeholder="Results built here"</form>\n'
-    html += '</div></td>\n'
+    html += '<td id="hrRecipeHtml" class="hr_recipe_html>\n'
+    html += '<input type="text" placeholder="HTML Recipe will be built here"></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
@@ -107,11 +106,11 @@ function paintTable (b) {
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"' +
             '>Markdown</button></td>\n'
     html += '<td><div id="hrRecipeMd" class="hr_recipe_md>\n'
-    html += '<form><input type="text" placeholder="Results built here"</form>\n'
+    html += '<input type="text" placeholder="Markdown Recipe will be built here">\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
-    html += '</table>\n'            // End of our table
+    html += '</table></form>\n'     // End of our table and form
 
     /* Set styling for table elements */
     html += '<style>\n'             // Styling for Hyperlink Recipe table
