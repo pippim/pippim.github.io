@@ -136,11 +136,8 @@ function paintTable (b) {
     html += '    border: .163rem solid Black;\n'
     html += '  }\n'                 // End of button hover styling
 
-    html += '.hrInput {\n'          // Input fields
-    html += '  width: 100%;\n'
-    html += '}\n'                   // End of Input fields styling
     html += 'input[type="text"] {\n'
-    html += '     width: 100%;\n'
+    html += '     width: 100%;\n'   // Set to full width of column 2
     html += '     box-sizing: border-box;\n'
     html += '     -webkit-box-sizing:border-box;\n'
     html += '     -moz-box-sizing: border-box;\n'
@@ -166,7 +163,9 @@ var strRecipeHtml = document.getElementById('hrRecipeHtml');
 var strRecipeMd = document.getElementById('hrRecipeMd');
 
 /* Functions called on button click */
-function doHref () {}
+function doHref () {
+    // URL (href) button has been clicked. Get clipboard contents
+}
 function doText () {}
 function doTitle () {}
 function doExternal () {}
@@ -175,6 +174,23 @@ function doRecipeHtml () {}
 function doRecipeMarkdown () {}
 function doReset () {}
 
+
+navigator.clipboard.readText()
+  .then(text => {
+    console.log('Pasted content: ', text);
+  })
+  .catch(err => {
+    console.error('Failed to read clipboard contents: ', err);
+  });
+
+function updateClipboard(newClip) {
+  /* Write text to the clipboard */
+  navigator.clipboard.writeText(newClip).then(function() {
+    /* clipboard successfully set */
+  }, function() {
+    /* clipboard write failed */
+  });
+}
 /* Not supported in firefox
 var writePermission = navigator.permissions.query({name: "clipboard-write"}).then(result => {
   if (result.state == "granted" || result.state == "prompt") {
