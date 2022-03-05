@@ -42,7 +42,7 @@ function paintTable (b) {
 
     html += '<tr>\n'
     html += '<td><button class="hrBtn" onclick="doHref()" ' +
-            'title="Insert browser address bar string from the clipboard"' +
+            'title="Insert browser address bar string (from the clipboard)"' +
             '>URL (href)</button></td>\n'
     html += '<td><div id="hrHref" class="hr_href>\n'
     html += '<input type="string">https://pippim.github.io\n'
@@ -51,7 +51,7 @@ function paintTable (b) {
 
     html += '<tr>\n'
     html += '<td><button class="hrBtn" onclick="doText()"' +
-            'title="Insert name of link to appear in document from the clipboard"' +
+            'title="Insert name of link to appear in document (from the clipboard)"' +
             '>Name (text)</button></td>\n'
     html += '<td><div id="hrText" class="hr_text>\n'
     html += '<input type="string">This is a very long name for the website description\n'
@@ -60,7 +60,7 @@ function paintTable (b) {
 
     html += '<tr>\n'
     html += '<td><button class="hrBtn" onclick="doTitle()"' +
-            'title="Insert optional tooltip details about link from the clipboard"' +
+            'title="Insert optional tooltip details about link (from the clipboard)"' +
             '>Tooltip (title)</button></td>\n'
     html += '<td><div id="hrTitle" class="hr_title>\n'
     html += '<input type="string">Hover mouse over link and get this tooltip\n'
@@ -69,7 +69,7 @@ function paintTable (b) {
 
     html += '<tr>\n'
     html += '<td><button class="hrBtn" onclick="doExternal()"' +
-            'title="Insert optional tooltip details about link from the clipboard"' +
+            'title="Use optional UTF-8 icon to show link is an external website"' +
             '>External link</button></td>\n'
     html += '<td><div id="hrExternal" class="hr_external>\n'
     html += '<input type="string">Append external link icon after Name (text)\n'
@@ -77,7 +77,9 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doNewWindow()">New Window</button></td>\n'
+    html += '<td><button class="hrBtn" onclick="doNewWindow()"' +
+            'title="When link is clicked, it will be opened in a new Browser Window or Tab"' +
+            '>New Window</button></td>\n'
     html += '<td><div id="hrNewWindow" class="hr_new_window>\n'
     html += '<input type="string">Open link in New Browser Window or Tab\n'
     html += '</div></td>\n'
@@ -89,14 +91,18 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doRecipeHtml()">HTML</button></td>\n'
+    html += '<td><button class="hrBtn" onclick="doRecipeHtml()"' +
+            'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
+            '>HTML</button></td>\n'
     html += '<td><div id="hrRecipeHtml" class="hr_recipe_html>\n'
     html += '<input type="string">Copy HTML Hyperlink Recipe to clipboard\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doRecipeMarkdown()">Markdown</button></td>\n'
+    html += '<td><button class="hrBtn" onclick="doRecipeMarkdown()"' +
+            'title="Copy Markdown recipe to the clipboard. Then you can paste in document"' +
+            '>Markdown</button></td>\n'
     html += '<td><div id="hrRecipeMd" class="hr_recipe_md>\n'
     html += '<input type="string">Copy Markdown Hyperlink Recipe to clipboard\n'
     html += '</div></td>\n'
@@ -114,8 +120,8 @@ function paintTable (b) {
     html += '  background-color: YellowGreen;\n'
     html += '  width: 100%;\n'
     html += '  border-radius: 1rem;\n'
-    html += '  // margin: .25rem;\n'  // Override, too much left-ness going on
-    html += '  // padding: 0px;\n'     // For centering to work!
+    // html += '  margin: .25rem;\n'  // Override, too much left-ness going on
+    // html += '  padding: 0px;\n'     // For centering to work!
     html += '  text-align: center;\n'
     html += '}\n'                   // End of button styling
     html += '.hrBtn:hover {\n'
