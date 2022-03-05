@@ -595,8 +595,8 @@ a.search-results:visited {
 
 #tcm_window_body {
   overflow: auto;
-  max-height: 22rem;       // After 22rem, scroll bar appears
   max-width: 800px;          // After 80%, scroll bar appears
+  max-height: 22rem;       // After 22rem, scroll bar appears
   white-space: nowrap;  // TESTED and NOT causing 2022 blog posts to move left
 }
 
