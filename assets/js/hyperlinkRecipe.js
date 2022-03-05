@@ -101,7 +101,7 @@ function paintTable (b) {
     html += '  background-color: YellowGreen;\n'
     html += '  width: 100%;\n'
     html += '  border-radius: 1rem;\n'
-    html += '  margin: .25rem;\n'
+    html += '  margin: .25rem .5rem;\n'
     html += '  padding: 0px;\n'     // For centering to work!
     html += '  text-align: center;\n'
     html += '}\n'                   // End of button styling
