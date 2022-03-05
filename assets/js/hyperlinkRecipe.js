@@ -51,6 +51,7 @@ export function processHyperlinkRecipe(b) {
 }
 
 function paintTable (b) {
+
     html = '<table id="hrTable" class="hr_table">\n'
     html += '<tr>\n'
     html += '<th>From Clipboard</th>\n'
@@ -86,7 +87,7 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button onclick="click_new_window()"New Window/Tab</button></td>\n'
+    html += '<td><button onclick="click_new_window()">New Window/Tab</button></td>\n'
     html += '<td><div id="hrNewWindow" class="hr_new_window>\n'
     html += '<input type="string">Open link in New Browser Window or Tab\n'
     html += '</div></td>\n'
@@ -96,6 +97,8 @@ function paintTable (b) {
     b.innerHTML = html;              // Update TCM Window body
 
 }
+
+document.getElementById("hrTable").style.borderSpacing = "5px";
 
 function click_href () {}
 function click_text () {}
