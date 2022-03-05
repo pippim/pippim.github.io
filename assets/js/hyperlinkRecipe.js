@@ -95,10 +95,10 @@ function paintTable (b) {
 
     html += '</table>'
     b.innerHTML = html;              // Update TCM Window body
+    document.getElementById("hrTable").style.borderSpacing = "5px";
 
 }
 
-document.getElementById("hrTable").style.borderSpacing = "5px";
 
 function click_href () {}
 function click_text () {}
