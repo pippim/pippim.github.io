@@ -101,7 +101,7 @@ document.querySelector('#tcm_display_home').addEventListener('click', () => {
 document.querySelector('#tcm_display_local').addEventListener('click', () => {
     // fm_var cookie, search_url.json and search_words.json must already be
     // globally defined.
-    console.log('display local storage');
+    local_storage_to_html();
 });
 
 document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
@@ -114,7 +114,7 @@ document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => 
 function home_page_to_html() {
     restoreOldFont(b);
     html = "<p>";
-    html += "The Cookie Machine (TCM) Future Applications:<br><br>\n";
+    html += "<h3>The Cookie Machine (TCM) Future Applications:</h3>\n";
     html += "  ☑ View cookies used on the {{ site.title }} website.<br>\n";
     html += "  ☑ Send cookie via mail. For backup or sharing.<br>\n";
     html += "  ☑ Receive cookie via mail. From yourself or colleague.<br>\n";
@@ -147,6 +147,16 @@ function website_tree_to_html(results) {
 
     b.innerHTML = html;              // Update TCM Window body
 
+}
+
+function local_storage_to_html() {
+    restoreOldFont(b);
+    html = "<p>";
+    html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
+    html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
+    html += "  ☑ Display cache usage.<br>\n";
+    html += "</p>";
+    b.innerHTML = html;              // Update TCM Window body
 }
 
 /* Further research
