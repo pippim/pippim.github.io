@@ -94,12 +94,25 @@ function paintTable (b) {
     html += '</div></td>\n'
     html += '</tr>\n'
 
-    html += '</table>'
-    b.innerHTML = html;              // Update TCM Window body
-    document.getElementById("hrTable").style.borderSpacing = "5px";
+    html += '</table>\n'            // End of our table
 
+    html += '<style>\n'
+    html += '#button {\n'
+    html += 'background-color: YellowGreen;'
+    html += '}\n'                   // End of button styling
+    html += '</style>\n'            // End of all styles
+
+    b.innerHTML = html;             // Update TCM Window body
+    document.getElementById("hrTable").style.borderSpacing = "5px";
+    setButtonStyles();
 }
 
+function setButtonStyles () {
+    const elm = document.getElementById('button')
+    const elms = document.getElementsByTagName('button')
+    const btn = document.querySelector('button')
+    var els = document.getElementsByClassName("hrTable")
+}
 
 function doHref () {}
 function doText () {}
