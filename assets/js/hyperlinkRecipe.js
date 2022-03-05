@@ -32,7 +32,7 @@ export function processHyperlinkRecipe(b) {
     //console.log("b: " + b)
     //const b2 = document.getElementById('tcm_window_body')
     //console.log("b2: " + b2)
-    paintTable();
+    paintTable(b);
     return
     html += "<p>";
     html += "<h3>Hyperlink Recipe Baker</h3>\n";
@@ -50,7 +50,7 @@ export function processHyperlinkRecipe(b) {
     b.innerHTML = html;              // Append extra html to TCM Window body
 }
 
-function paintTable () {
+function paintTable (b) {
     html = '<table id="hrTable" class="hr_table">\n'
     html += '<tr>\n'
     html += '<th>Get from Clipboard</th>\n'
