@@ -588,10 +588,11 @@ a.search-results:visited {
   white-space: nowrap;  // TESTED and NOT causing 2022 blog posts to move left
   @-moz-document url-prefix() {
     // bug fix: https://stackoverflow.com/a/39738403/6929343
-    .moz-div { padding-right: 1rem; }
+    // .moz-div { padding-right: 1rem; }
+    padding-right: 1rem;
     // Place before overflow?
   }
-  padding-right: 1rem;
+  // padding-right: 1rem;
 }
 
 #tcm_window_close {
