@@ -43,6 +43,7 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
+    // Button class = "hrBtn". Don't use "button" which parent may have!!!
     html += '<td><button class="hrBtn" onclick="doHref()" ' +
             'title="Insert browser address bar string (from the clipboard)"' +
             '>URL (href)</button></td>\n'
@@ -128,14 +129,12 @@ function paintTable (b) {
     html += '  background-color: YellowGreen;\n'
     html += '  width: 100%;\n'
     html += '  border-radius: .5rem;\n'
-    // html += '  margin: .25rem;\n'  // Override, too much left-ness going on
-    // html += '  padding: 0px;\n'     // For centering to work!
     html += '  text-align: center;\n'
     html += '}\n'                   // End of button styling
     html += '.hrBtn:hover {\n'
     html += '    color: #fff;\n'
     html += '    background-color: DarkGreen;\n'
-    html += '    border: .2rem solid Black;\n'
+    html += '    border: 1.75rem solid Black;\n'
     html += '  }\n'                 // End of button hover styling
 
     html += '</style>\n'            // End of all styles
