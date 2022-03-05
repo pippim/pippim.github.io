@@ -34,10 +34,12 @@ export function processHyperlinkRecipe(id) {
 
 function paintTable (b) {
 
-    html = '<table id="hrTable" class="hr_table">\n'
+    html = '<h3>Hyperlink Recipe Baker</h3>\n'
+
+    html += '<table id="hrTable" class="hr_table">\n'
     html += '<tr id="ingredients">\n'
-    html += '<th>Get Clipboard</th>\n'
-    html += '<th>Clipboard Results</th>\n'
+    html += '<th>Ingredients</th>\n'
+    html += '<th>From the clipboard or set options</th>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
@@ -86,8 +88,8 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr id="recipes">\n'
-    html += '<th>Set Clipboard</th>\n'
-    html += '<th>Recipe</th>\n'
+    html += '<th>Recipes</th>\n'
+    html += '<th>String sent to the clipboard</th>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
@@ -119,7 +121,7 @@ function paintTable (b) {
     html += '.hrBtn {\n'            // Don't use ".button" which parent may have!!!
     html += '  background-color: YellowGreen;\n'
     html += '  width: 100%;\n'
-    html += '  border-radius: 1rem;\n'
+    html += '  border-radius: .5rem;\n'
     // html += '  margin: .25rem;\n'  // Override, too much left-ness going on
     // html += '  padding: 0px;\n'     // For centering to work!
     html += '  text-align: center;\n'
@@ -127,7 +129,9 @@ function paintTable (b) {
     html += '.hrBtn:hover {\n'
     html += '    color: #fff;\n'
     html += '    background-color: DarkGreen;\n'
+    html += '    border: .2rem solid Black;\n'
     html += '  }\n'                 // End of button hover styling
+
     html += '</style>\n'            // End of all styles
 
     b.innerHTML = html;             // Update TCM Window body
