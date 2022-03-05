@@ -47,9 +47,8 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doHref()" ' +
             'title="Insert browser address bar string (from the clipboard)"' +
             '>URL (href)</button></td>\n'
-    html += '<td><div id="hrHref" class="hr_href>\n'
-    html += '<input type="string">https://pippim.github.io\n'
-    html += '</div></td>\n'
+    html += '<td id="hrHref" class="hrInput">\n'
+    html += '<input type="text" placeholder="Mandatory. Pasted clipboard contents go here"></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
@@ -165,6 +164,8 @@ var strRecipeMd = document.getElementById('hrRecipeMd');
 /* Functions called on button click */
 function doHref () {
     // URL (href) button has been clicked. Get clipboard contents
+    hrRef.focus();
+    document.execCommand("paste");
 }
 function doText () {}
 function doTitle () {}
