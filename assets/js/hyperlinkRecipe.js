@@ -163,7 +163,7 @@ var strNewWindow = document.getElementById('hrNewWindow');
 var strRecipeHtml = document.getElementById('hrRecipeHtml');
 var strRecipeMd = document.getElementById('hrRecipeMd');
 
-document.getElementById("btnHef").onclick = doHref;
+document.getElementById("btnHref").onclick = doHref;
 
 /* Functions called on button click */
 function doHref () {
