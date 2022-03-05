@@ -216,13 +216,14 @@ function doText () {
     document.execCommand("paste");
 }
 
-const text = await navigator.clipboard.readText();
+// top level await isn't currently supported in Firefox
+// const text = await navigator.clipboard.readText();
 
 function doTitle () {
     // Name (text) button has been clicked. Get clipboard contents
     hrText.focus();
     // hrText.select();
-    alert('in doTitle() last text: ' + text)
+    // alert('in doTitle() last text: ' + text)
     const text2 = window.clipboardData.getData('Text')
     alert('in doTitle() text2: ' + text2)
     document.execCommand("paste");
