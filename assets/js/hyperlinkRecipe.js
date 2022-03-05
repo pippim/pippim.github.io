@@ -41,35 +41,35 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button id="button" onclick="doHref()">URL (href)</button></td>\n'
+    html += '<td><button class="button" onclick="doHref()">URL (href)</button></td>\n'
     html += '<td><div id="hrHref" class="hr_href>\n'
     html += '<input type="string">https://pippim.github.io\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button id="button" onclick="doText()">Name (text)</button></td>\n'
+    html += '<td><button class="button" onclick="doText()">Name (text)</button></td>\n'
     html += '<td><div id="hrText" class="hr_text>\n'
     html += '<input type="string">This is a very long name for the website description\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button id="button" onclick="doTitle()">Tooltip (title)</button></td>\n'
+    html += '<td><button class="button" onclick="doTitle()">Tooltip (title)</button></td>\n'
     html += '<td><div id="hrTitle" class="hr_title>\n'
     html += '<input type="string">Hover mouse over link and get this tooltip\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button id="button" onclick="doExternal()">External link</button></td>\n'
+    html += '<td><button class="button" onclick="doExternal()">External link</button></td>\n'
     html += '<td><div id="hrExternal" class="hr_external>\n'
     html += '<input type="string">Append external link icon after Name (text)\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button id="button" onclick="doNewWindow()">New Window</button></td>\n'
+    html += '<td><button class="button" onclick="doNewWindow()">New Window</button></td>\n'
     html += '<td><div id="hrNewWindow" class="hr_new_window>\n'
     html += '<input type="string">Open link in New Browser Window or Tab\n'
     html += '</div></td>\n'
@@ -81,14 +81,14 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button id="button" onclick="doRecipeHtml()">HTML</button></td>\n'
+    html += '<td><button class="button" onclick="doRecipeHtml()">HTML</button></td>\n'
     html += '<td><div id="hrRecipeHtml" class="hr_recipe_html>\n'
     html += '<input type="string">Copy HTML Hyperlink Recipe to clipboard\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button id="button" onclick="doRecipeMarkdown()">Markdown</button></td>\n'
+    html += '<td><button class="button" onclick="doRecipeMarkdown()">Markdown</button></td>\n'
     html += '<td><div id="hrRecipeMd" class="hr_recipe_md>\n'
     html += '<input type="string">Copy Markdown Hyperlink Recipe to clipboard\n'
     html += '</div></td>\n'
@@ -97,8 +97,12 @@ function paintTable (b) {
     html += '</table>\n'            // End of our table
 
     html += '<style>\n'
-    html += '#button {\n'
+    html += '.button {\n'
     html += '  background-color: YellowGreen;\n'
+    html += '  border-radius: 2rem;\n'
+    html += '  margin: .25rem;\n'
+    html += '  padding: .25rem .25rem;\n'
+    html += '  text-align: center;\n'
     html += '  &:hover {\n'
     html += '    color: #fff;\n'
     html += '    background-color: DarkGreen;\n'
@@ -112,10 +116,6 @@ function paintTable (b) {
 }
 
 function setButtonStyles () {
-    const elm = document.getElementById('button')
-    const elms = document.getElementsByTagName('button')
-    const btn = document.querySelector('button')
-    var els = document.getElementsByClassName("hrTable")
 }
 
 function doHref () {}
