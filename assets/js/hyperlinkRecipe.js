@@ -171,6 +171,9 @@ function paintTable (b) {
     strRecipeHtml = document.getElementById('hrRecipeHtml');
     strRecipeMd = document.getElementById('hrRecipeMd');
 
+    /* Paste event handlers */
+    hrHref.addEventListener('paste', handlePaste);
+
     setButtonStyles();
 }
 
@@ -204,7 +207,6 @@ function handlePaste(e) {
   alert(pastedData);
 }
 
-hrHref.addEventListener('paste', handlePaste);
 
 function doText () {
     // Name (text) button has been clicked. Get clipboard contents
