@@ -163,14 +163,6 @@ var strNewWindow = document.getElementById('hrNewWindow');
 var strRecipeHtml = document.getElementById('hrRecipeHtml');
 var strRecipeMd = document.getElementById('hrRecipeMd');
 
-document.getElementById("btnHref").onclick = doHref;
-document.getElementById("btnText").onclick = doText;
-document.getElementById("btnTitle").onclick = doTitle;
-document.getElementById("btnExternal").onclick = doExternal;
-document.getElementById("btnNewWindow").onclick = doNewWindow;
-document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
-document.getElementById("btnRecipeMd").onclick = doRecipeMd;
-
 /* Functions called on button click */
 function doHref () {
     // URL (href) button has been clicked. Get clipboard contents
