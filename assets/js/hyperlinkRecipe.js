@@ -188,11 +188,23 @@ function doHref () {
     console.log('clip: ' + clip)
 }
 
-document.addEventListener('paste', pasteEvent);
 
-private pasteEvent(e): void {
-  console.log(e.clipboardData.getData("text/plain");
+function handlePaste(e) {
+  var clipboardData, pastedData;
+
+  // Stop data actually being pasted into div
+  e.stopPropagation();
+  e.preventDefault();
+
+  // Get pasted data via clipboard API
+  clipboardData = e.clipboardData || window.clipboardData;
+  pastedData = clipboardData.getData('Text');
+
+  // Do whatever with pasteddata
+  alert(pastedData);
 }
+
+hrHref.addEventListener('paste', handlePaste);
 
 function doText () {
     // Name (text) button has been clicked. Get clipboard contents
