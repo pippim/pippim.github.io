@@ -53,8 +53,8 @@ export function processHyperlinkRecipe(b) {
 function paintTable (b) {
     html = '<table id="hrTable" class="hr_table">\n'
     html += '<tr>\n'
-    html += '<th>Get from Clipboard</th>\n'
-    html += '<th>Or type/paste manually</th>\n'
+    html += '<th>From Clipboard</th>\n'
+    html += '<th>Type manually</th>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
@@ -78,6 +78,20 @@ function paintTable (b) {
     html += '</div></td>\n'
     html += '</tr>\n'
 
+    html += '<tr>\n'
+    html += '<td><button onclick="click_external()">External link</button></td>\n'
+    html += '<td><div id="hrExternal" class="hr_external>\n'
+    html += '<input type="string">Append external link icon after Name (text)\n'
+    html += '</div></td>\n'
+    html += '</tr>\n'
+
+    html += '<tr>\n'
+    html += '<td><button onclick="click_new_window()"New Window/Tab</button></td>\n'
+    html += '<td><div id="hrNewWindow" class="hr_new_window>\n'
+    html += '<input type="string">Open link in New Browser Window or Tab\n'
+    html += '</div></td>\n'
+    html += '</tr>\n'
+
     html += '</table>'
     b.innerHTML = html;              // Update TCM Window body
 
@@ -86,5 +100,6 @@ function paintTable (b) {
 function click_href () {}
 function click_text () {}
 function click_title () {}
+function click_external () {}
 
 /* End of /assets/js/hyperlinkRecipe.js */
