@@ -548,6 +548,8 @@ a.search-results:visited {
   color: black;
   padding: .5rem;
   text-align: left;
+  // Make unneeded horizontal scroll bar disappear
+  overflow: hidden;
   // Set start position of draggable div From: https://stackoverflow.com/a/63479151/6929343
   // left: 95%;                    /**Important*/
   // transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
