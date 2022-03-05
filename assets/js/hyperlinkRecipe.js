@@ -26,13 +26,9 @@ var html = null
 var hrClass = "<style>"
 var hrClass = "<style>"
 
-export function processHyperlinkRecipe(b) {
-    // b = TCM Window Body
-
-    //console.log("b: " + b)
-    //const b2 = document.getElementById('tcm_window_body')
-    //console.log("b2: " + b2)
-    paintTable(b);
+export function processHyperlinkRecipe(id) {
+    const b = document.getElementById(id)  // div body id where html codes go
+    paintTable(b);  // display <table>
 
     html += "<p>";
     html += "<h3>Hyperlink Recipe Baker</h3>\n";
@@ -54,8 +50,8 @@ function paintTable (b) {
 
     html = '<table id="hrTable" class="hr_table">\n'
     html += '<tr>\n'
-    html += '<th>From Clipboard</th>\n'
-    html += '<th>Type manually</th>\n'
+    html += '<th>Get Clipboard</th>\n'
+    html += '<th>Clipboard Results</th>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
@@ -87,9 +83,28 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button onclick="click_new_window()">New Window/Tab</button></td>\n'
+    html += '<td><button onclick="click_new_window()">New Window</button></td>\n'
     html += '<td><div id="hrNewWindow" class="hr_new_window>\n'
     html += '<input type="string">Open link in New Browser Window or Tab\n'
+    html += '</div></td>\n'
+    html += '</tr>\n'
+
+    html += '<tr>\n'
+    html += '<th>Set Clipboard</th>\n'
+    html += '<th>Recipe</th>\n'
+    html += '</tr>\n'
+
+    html += '<tr>\n'
+    html += '<td><button onclick="click_recipe_html()">HTML</button></td>\n'
+    html += '<td><div id="hrRecipeHtml" class="hr_recipe_html>\n'
+    html += '<input type="string">Copy HTML Hyperlink Recipe to clipboard\n'
+    html += '</div></td>\n'
+    html += '</tr>\n'
+
+    html += '<tr>\n'
+    html += '<td><button onclick="click_recipe_md()">Markdown</button></td>\n'
+    html += '<td><div id="hrRecipeMd" class="hr_recipe_md>\n'
+    html += '<input type="string">Copy Markdown Hyperlink Recipe to clipboard\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
@@ -104,5 +119,9 @@ function click_href () {}
 function click_text () {}
 function click_title () {}
 function click_external () {}
+function click_new_window () {}
+function click_recipe_html () {}
+function click_recipe_md () {}
+function click_reset () {}
 
 /* End of /assets/js/hyperlinkRecipe.js */
