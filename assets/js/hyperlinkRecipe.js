@@ -183,9 +183,15 @@ function doHref () {
     console.log('in doHref()')
     hrHref.focus();
     // hrHref.select();
-    document.execCommand("paste");
-    var clip = ClipboardEvent.clipboardData.getData("text/plain");
+    // document.execCommand("paste");
+    // var clip = ClipboardEvent.clipboardData.getData("text/plain");
     console.log('clip: ' + clip)
+}
+
+document.addEventListener('paste', pasteEvent);
+
+private pasteEvent(e): void {
+  console.log(e.clipboardData.getData("text/plain");
 }
 
 function doText () {
