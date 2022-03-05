@@ -98,7 +98,11 @@ function paintTable (b) {
 
     html += '<style>\n'
     html += '#button {\n'
-    html += 'background-color: YellowGreen;'
+    html += '  background-color: YellowGreen;\n'
+    html += '  &:hover {\n'
+    html += '    color: #fff;\n'
+    html += '    background-color: DarkGreen;\n'
+    html += '  }\n'                 // End of button hover styling
     html += '}\n'                   // End of button styling
     html += '</style>\n'            // End of all styles
 
