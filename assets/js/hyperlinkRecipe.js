@@ -28,22 +28,8 @@ var hrClass = "<style>"
 
 export function processHyperlinkRecipe(id) {
     const b = document.getElementById(id)  // div body id where html codes go
+    doReset();      // Reset all button colors and empty strings
     paintTable(b);  // display <table>
-
-    html += "<p>";
-    html += "<h3>Hyperlink Recipe Baker</h3>\n";
-    html += "Ingredients - From clipboard. '*' = Mandatory<br>\n";
-    html += "&emsp;href (href) *<br>\n";
-    html += "&emsp;Name (text) *<br>\n";
-    html += "&emsp;Tooltip (title)<br>\n";
-    html += "Options - On/Off<br>\n";
-    html += "&emsp;External Icon.<br>\n";
-    html += "&emsp;New Window/Tab.<br>\n";
-    html += "Recipes - To clipboard<br>\n";
-    html += "&emsp;HTML<br>\n";
-    html += "&emsp;Markdown\n";
-    html += "</p>";
-    b.innerHTML = html;              // Append extra html to TCM Window body
 }
 
 function paintTable (b) {
@@ -55,35 +41,35 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button onclick="click_href()">URL (href)</button></td>\n'
+    html += '<td><button onclick="doHref()">URL (href)</button></td>\n'
     html += '<td><div id="hrHref" class="hr_href>\n'
     html += '<input type="string">https://pippim.github.io\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button onclick="click_text()">Name (text)</button></td>\n'
+    html += '<td><button onclick="doText()">Name (text)</button></td>\n'
     html += '<td><div id="hrText" class="hr_text>\n'
     html += '<input type="string">This is a very long name for the website description\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button onclick="click_title()">Tooltip (title)</button></td>\n'
+    html += '<td><button onclick="doTitle()">Tooltip (title)</button></td>\n'
     html += '<td><div id="hrTitle" class="hr_title>\n'
     html += '<input type="string">Hover mouse over link and get this tooltip\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button onclick="click_external()">External link</button></td>\n'
+    html += '<td><button onclick="doExternal()">External link</button></td>\n'
     html += '<td><div id="hrExternal" class="hr_external>\n'
     html += '<input type="string">Append external link icon after Name (text)\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button onclick="click_new_window()">New Window</button></td>\n'
+    html += '<td><button onclick="doNewWindow()">New Window</button></td>\n'
     html += '<td><div id="hrNewWindow" class="hr_new_window>\n'
     html += '<input type="string">Open link in New Browser Window or Tab\n'
     html += '</div></td>\n'
@@ -95,14 +81,14 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button onclick="click_recipe_html()">HTML</button></td>\n'
+    html += '<td><button onclick="doRecipeHtml()">HTML</button></td>\n'
     html += '<td><div id="hrRecipeHtml" class="hr_recipe_html>\n'
     html += '<input type="string">Copy HTML Hyperlink Recipe to clipboard\n'
     html += '</div></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button onclick="click_recipe_md()">Markdown</button></td>\n'
+    html += '<td><button onclick="doRecipeMarkdown()">Markdown</button></td>\n'
     html += '<td><div id="hrRecipeMd" class="hr_recipe_md>\n'
     html += '<input type="string">Copy Markdown Hyperlink Recipe to clipboard\n'
     html += '</div></td>\n'
@@ -115,13 +101,13 @@ function paintTable (b) {
 }
 
 
-function click_href () {}
-function click_text () {}
-function click_title () {}
-function click_external () {}
-function click_new_window () {}
-function click_recipe_html () {}
-function click_recipe_md () {}
-function click_reset () {}
+function doHref () {}
+function doText () {}
+function doTitle () {}
+function doExternal () {}
+function doNewWindow () {}
+function doRecipeHtml () {}
+function doRecipeMarkdown () {}
+function doReset () {}
 
 /* End of /assets/js/hyperlinkRecipe.js */
