@@ -32,6 +32,21 @@ export function processHyperlinkRecipe(id) {
     paintTable(b);  // display <table>
 }
 
+/* Functions called on button click */
+function doHref () {
+    // URL (href) button has been clicked. Get clipboard contents
+    hrRef.focus();
+    document.execCommand("paste");
+}
+
+function doText () {}
+function doTitle () {}
+function doExternal () {}
+function doNewWindow () {}
+function doRecipeHtml () {}
+function doRecipeMarkdown () {}
+function doReset () {}
+
 function paintTable (b) {
 
     html = '<h3>Hyperlink Recipe Baker</h3>\n'
@@ -47,9 +62,8 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doHref()" ' +
             'title="Insert browser address bar string (from the clipboard)"' +
             '>URL (href)</button></td>\n'
-
-    html += '<td id="hrRecipeHtml" class="hrInput">\n'
-    html += '<input type="text" placeholder="HTML Recipe will be built here"></td>\n'
+    html += '<td id="hrRef" class="hrInput">\n'
+    html += '<input type="text" placeholder="Mandatory. URL from clipboard will go here"></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
@@ -167,20 +181,6 @@ var strExternal = document.getElementById('hrExternal');
 var strNewWindow = document.getElementById('hrNewWindow');
 var strRecipeHtml = document.getElementById('hrRecipeHtml');
 var strRecipeMd = document.getElementById('hrRecipeMd');
-
-/* Functions called on button click */
-function doHref () {
-    // URL (href) button has been clicked. Get clipboard contents
-    hrRef.focus();
-    document.execCommand("paste");
-}
-function doText () {}
-function doTitle () {}
-function doExternal () {}
-function doNewWindow () {}
-function doRecipeHtml () {}
-function doRecipeMarkdown () {}
-function doReset () {}
 
 /* Not supported in firefox
 var writePermission = navigator.permissions.query({name: "clipboard-write"}).then(result => {
