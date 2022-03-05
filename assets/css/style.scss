@@ -565,6 +565,13 @@ a.search-results:visited {
   }
 }
 
+@-moz-document url-prefix() {
+    // Make unneeded horizontal scroll bar disappear
+    // See: https://stackoverflow.com/a/59385952/6929343
+    // And: https://stackoverflow.com/a/5454906/6929343
+    html,body{overflow: hidden !important;}
+}
+
 #tcm_window_header {
   padding: .5rem;
   cursor: move;  z-index: 10;
