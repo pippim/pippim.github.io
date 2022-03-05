@@ -32,21 +32,6 @@ export function processHyperlinkRecipe(id) {
     paintTable(b);  // display <table>
 }
 
-/* Functions called on button click */
-function doHref () {
-    // URL (href) button has been clicked. Get clipboard contents
-    hrRef.focus();
-    document.execCommand("paste");
-}
-
-function doText () {}
-function doTitle () {}
-function doExternal () {}
-function doNewWindow () {}
-function doRecipeHtml () {}
-function doRecipeMarkdown () {}
-function doReset () {}
-
 function paintTable (b) {
 
     html = '<h3>Hyperlink Recipe Baker</h3>\n'
@@ -59,7 +44,7 @@ function paintTable (b) {
 
     html += '<tr>\n'
     // Button class = "hrBtn". Don't use "button" which parent may have!!!
-    html += '<td><button class="hrBtn" onclick="doHref()" ' +
+    html += '<td><button class="hrBtn" id="btnHref" ' +
             'title="Insert browser address bar string (from the clipboard)"' +
             '>URL (href)</button></td>\n'
     html += '<td id="hrRef" class="hrInput">\n'
@@ -70,20 +55,16 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doText()"' +
             'title="Insert name of link to appear in document (from the clipboard)"' +
             '>Name (text)</button></td>\n'
-
-    html += '<td><div id="hrText" class="hr_text>\n'
-    html += '<input type="string">This is a very long name for the website description\n'
-    html += '</div></td>\n'
+    html += '<td id="hrText" class="hrInput">\n'
+    html += '<input type="text" placeholder="Mandatory. Link name from clipboard will go here"></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
     html += '<td><button class="hrBtn" onclick="doTitle()"' +
             'title="Insert optional tooltip details about link (from the clipboard)"' +
             '>Tooltip (title)</button></td>\n'
-
-    html += '<td><div id="hrTitle" class="hr_title>\n'
-    html += '<input type="string">Hover mouse over link and get this tooltip\n'
-    html += '</div></td>\n'
+    html += '<td id="hrTitle" class="hrInput">\n'
+    html += '<input type="text" placeholder="Optional. Hover mouse over link and get this tooltip"></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
@@ -181,6 +162,23 @@ var strExternal = document.getElementById('hrExternal');
 var strNewWindow = document.getElementById('hrNewWindow');
 var strRecipeHtml = document.getElementById('hrRecipeHtml');
 var strRecipeMd = document.getElementById('hrRecipeMd');
+
+document.getElementById("btnHef").onclick = doHref;
+
+/* Functions called on button click */
+function doHref () {
+    // URL (href) button has been clicked. Get clipboard contents
+    hrRef.focus();
+    document.execCommand("paste");
+}
+
+function doText () {}
+function doTitle () {}
+function doExternal () {}
+function doNewWindow () {}
+function doRecipeHtml () {}
+function doRecipeMarkdown () {}
+function doReset () {}
 
 /* Not supported in firefox
 var writePermission = navigator.permissions.query({name: "clipboard-write"}).then(result => {
