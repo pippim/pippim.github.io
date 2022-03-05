@@ -41,7 +41,9 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'
-    html += '<td><button class="hrBtn" onclick="doHref()">URL (href)</button></td>\n'
+    html += '<td><button class="hrBtn" onclick="doHref()" ' +
+            'title="Insert browser address bar residing in clipboard"' +
+            '>URL (href)</button></td>\n'
     html += '<td><div id="hrHref" class="hr_href>\n'
     html += '<input type="string">https://pippim.github.io\n'
     html += '</div></td>\n'
@@ -96,12 +98,17 @@ function paintTable (b) {
 
     html += '</table>\n'            // End of our table
 
-    html += '<style>\n'
+    html += '<style>\n'             // Styling for Hyperlink Recipe table
+
+    html += 'td {\n'                // Table details
+    html += '  padding: 0 1rem;\n'  // Space between columns
+    html += '}\n'
+
     html += '.hrBtn {\n'            // Don't use ".button" which parent may have!!!
     html += '  background-color: YellowGreen;\n'
     html += '  width: 100%;\n'
     html += '  border-radius: 1rem;\n'
-    html += '  margin: .25rem .5rem;\n'
+    html += '  margin: .25rem;\n'
     html += '  padding: 0px;\n'     // For centering to work!
     html += '  text-align: center;\n'
     html += '}\n'                   // End of button styling
