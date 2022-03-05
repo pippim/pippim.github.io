@@ -47,14 +47,16 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doHref()" ' +
             'title="Insert browser address bar string (from the clipboard)"' +
             '>URL (href)</button></td>\n'
-    html += '<td id="hrHref" class="hrInput">\n'
-    html += '<input type="text" placeholder="Mandatory. Pasted clipboard contents go here"></td>\n'
+
+    html += '<td id="hrRecipeHtml" class="hrInput">\n'
+    html += '<input type="text" placeholder="HTML Recipe will be built here"></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
     html += '<td><button class="hrBtn" onclick="doText()"' +
             'title="Insert name of link to appear in document (from the clipboard)"' +
             '>Name (text)</button></td>\n'
+
     html += '<td><div id="hrText" class="hr_text>\n'
     html += '<input type="string">This is a very long name for the website description\n'
     html += '</div></td>\n'
@@ -64,6 +66,7 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doTitle()"' +
             'title="Insert optional tooltip details about link (from the clipboard)"' +
             '>Tooltip (title)</button></td>\n'
+
     html += '<td><div id="hrTitle" class="hr_title>\n'
     html += '<input type="string">Hover mouse over link and get this tooltip\n'
     html += '</div></td>\n'
@@ -73,6 +76,7 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doExternal()"' +
             'title="Use optional UTF-8 icon to show link is an external website"' +
             '>External link</button></td>\n'
+
     html += '<td><div id="hrExternal" class="hr_external>\n'
     html += '<input type="string">Append external link icon after Name (text)\n'
     html += '</div></td>\n'
@@ -82,6 +86,7 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doNewWindow()"' +
             'title="When link is clicked, it will be opened in a new Browser Window or Tab"' +
             '>New Window</button></td>\n'
+
     html += '<td><div id="hrNewWindow" class="hr_new_window>\n'
     html += '<input type="string">Open link in New Browser Window or Tab\n'
     html += '</div></td>\n'
@@ -96,6 +101,7 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doRecipeHtml()"' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
             '>HTML</button></td>\n'
+
     html += '<td id="hrRecipeHtml" class="hrInput">\n'
     html += '<input type="text" placeholder="HTML Recipe will be built here"></td>\n'
     html += '</tr>\n'
@@ -104,6 +110,7 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" onclick="doRecipeMarkdown()"' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"' +
             '>Markdown</button></td>\n'
+
     html += '<td><div id="hrRecipeMd" class="hrInput">\n'
     html += '<input type="text" placeholder="Markdown Recipe will be built here">\n'
     html += '</div></td>\n'
@@ -175,23 +182,6 @@ function doRecipeHtml () {}
 function doRecipeMarkdown () {}
 function doReset () {}
 
-
-navigator.clipboard.readText()
-  .then(text => {
-    console.log('Pasted content: ', text);
-  })
-  .catch(err => {
-    console.error('Failed to read clipboard contents: ', err);
-  });
-
-function updateClipboard(newClip) {
-  /* Write text to the clipboard */
-  navigator.clipboard.writeText(newClip).then(function() {
-    /* clipboard successfully set */
-  }, function() {
-    /* clipboard write failed */
-  });
-}
 /* Not supported in firefox
 var writePermission = navigator.permissions.query({name: "clipboard-write"}).then(result => {
   if (result.state == "granted" || result.state == "prompt") {
