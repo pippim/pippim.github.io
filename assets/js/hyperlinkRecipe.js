@@ -139,6 +139,12 @@ function paintTable (b) {
     html += '.hrInput {\n'          // Input fields
     html += '  width: 100%;\n'
     html += '}\n'                   // End of Input fields styling
+    html += 'input[type="text"] {\n'
+    html += '     width: 100%;\n'
+    html += '     box-sizing: border-box;\n'
+    html += '     -webkit-box-sizing:border-box;\n'
+    html += '     -moz-box-sizing: border-box;\n'
+    html += '}\n'
 
     html += '</style>\n'            // End of all styles
 
