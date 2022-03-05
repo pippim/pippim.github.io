@@ -546,15 +546,9 @@ a.search-results:visited {
   background-color: #f1f1f1;
   border: .2rem solid #d3d3d3;
   color: black;
-  padding: .5rem;
+  // padding: .5rem;
+  padding: .5rem 1rem;  // Try to fix 17 y/o bug
   text-align: left;
-  // Make unneeded horizontal scroll bar disappear
-  // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
-  overflow: hidden;
-  // Set start position of draggable div From: https://stackoverflow.com/a/63479151/6929343
-  // left: 95%;                    /**Important*/
-  // transform: translateX(-100%); /**Important: offsets based on the element's width and not its parent*/
-  width: max-content;           /**Important: prevents element from shrinking*/
 
   @include medium {
     padding: 0.4rem;
@@ -564,14 +558,6 @@ a.search-results:visited {
     padding: 0.3rem;
     font-size: 0.7rem;
   }
-}
-
-@-moz-document url-prefix() {
-    // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
-    // Make unneeded horizontal scroll bar disappear
-    // See: https://stackoverflow.com/a/59385952/6929343
-    // And: https://stackoverflow.com/a/5454906/6929343
-    html,body{overflow: hidden !important;}
 }
 
 #tcm_window_header {
@@ -596,10 +582,21 @@ a.search-results:visited {
 }
 
 #tcm_window_body {
-  overflow: auto;           // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
+  @-moz-document url-prefix() {
+    // bug fix: https://stackoverflow.com/a/39738403/6929343
+    .moz-div { padding-right: 1rem; }
+    // Place before overflow?
+  }
+  padding-right: 16px;
+  //overflow: auto;           // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
+  overflow-y: auto;           // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
+  overflow-x: hidden;           // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
   max-width: 800px;          // After 80%, scroll bar appears
   max-height: 22rem;       // After 22rem, scroll bar appears
   white-space: nowrap;  // TESTED and NOT causing 2022 blog posts to move left
+  // Make unneeded horizontal scroll bar disappear
+  // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
+
 }
 
 #tcm_window_close {
