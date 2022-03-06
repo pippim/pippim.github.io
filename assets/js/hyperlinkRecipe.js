@@ -37,81 +37,62 @@ export function processHyperlinkRecipe(id) {
 }
 
 function paintTable (b) {
-
-    html = '<h3>Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
-
-    html += '<form><table id="hrTable" class="hr_table">\n'  // Ingredients heading
-    html += '<tr id="ingredients">\n'
-    html += '<th>Ingredients</th>\n'
-    html += '<th>From the clipboard or set options</th>\n'
-    html += '</tr>\n'
-
-    html += '<tr>\n'                // Button and Input for URL (href)
     // Button class = "hrBtn". Don't use "button" which parent may have!!!
     // NOTE: onclick is not supported: https://stackoverflow.com/a/17378538/6929343
-    html += '<td><button class="hrBtn" id="btnHref"\n' +
+
+    html = '<h3>Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
+    // Table must be created wrapped inside form for <input variables
+    html += '<form><table id="hrTable" class="hr_table">\n'
+    // Ingredients heading
+    html += '<tr><th>Ingredients</th>\n' +
+            '<th>From the clipboard or set options</th></tr>\n'
+    // Button and Input for URL (href) Must be https?//:
+    html += '<tr><td><button class="hrBtn" id="btnHref"\n' +
             'title="Insert browser address bar string (from the clipboard)"\n' +
-            '>URL (href)</button></td>\n'
-    html += '<td class="hrInput">\n'
-    html += '<input id="hrHref" type="url" pattern="https?://.+" required\n' +
-            'placeholder="Mandatory. URL from clipboard will go here" /></td>\n'
-    html += '</tr>\n'
-
-    html += '<tr>\n'                // Link Name (text)
-    html += '<td><button class="hrBtn" id="btnText"\n' +
+            '>URL (href)</button></td>\n' +
+            '<td><input id="hrHref" class="hrInput" type="url" pattern="https?://.+" required\n' +
+            'placeholder="Mandatory. URL from clipboard will go here" /></td></tr>\n'
+    // Link Name (text)
+    html += '<tr><td><button class="hrBtn" id="btnText"\n' +
             'title="Insert name of link to appear in document (from the clipboard)"\n' +
-            '>Name (text)</button></td>\n'
-    html += '<td class="hrInput">\n'
-    html += '<input type="text" id="hrText" required\n' +
-            'placeholder="Mandatory. Link name from clipboard will go here" /></td>\n'
-    html += '</tr>\n'
-
-    html += '<tr>\n'                // Tooltip on Hover (title)
-    html += '<td><button class="hrBtn" id="btnTitle"\n' +
+            '>Name (text)</button></td>\n' +
+            '<td><input id="hrText" class="hrInput" type="text" required\n' +
+            'placeholder="Mandatory. Link name from clipboard will go here" /></td></tr>\n'
+    // Tooltip on Hover (title)
+    html += '<tr><td><button class="hrBtn" id="btnTitle"\n' +
             'title="Insert optional tooltip details about link (from the clipboard)"\n' +
-            '>Tooltip (title)</button></td>\n'
-    html += '<td class="hrInput">\n'
-    html += '<input type="text" id="hrTitle" placeholder="Optional. Hover mouse over link and get this tooltip"></td>\n'
-    html += '</tr>\n'
-
-    html += '<tr>\n'                // UTF-8 Symbol for external links
-    html += '<td><button class="hrBtn" id="btnExternal"\n' +
+            '>Tooltip (title)</button></td>\n' +
+            '<td><input id="hrTitle" class="hrInput" type="text" \n' +
+            'placeholder="Optional. Hover mouse over link and get this tooltip"></td></tr>\n'
+    // UTF-8 Symbol for external links
+    html += '<tr><td><button class="hrBtn" id="btnExternal"\n' +
             'title="Use optional UTF-8 symbol to show link is an external website"\n' +
-            '>External link</button></td>\n'
-    html += '<td class="hrInput">\n'
-    html += '<input id="hrExternal" type="text" placeholder="Optional. Append external link symbol to Name (text)"></td>\n'
-    html += '</tr>\n'
-
-    html += '<tr>\n'                // Open link in New Window/Tab
-    html += '<td><button class="hrBtn" id="btnNewWindow"\n' +
+            '>External link</button></td>\n' +
+            '<td><input id="hrExternal" class="hrInput" type="text" \n' +
+            'placeholder="Optional. Append external link symbol to Name (text)"></td></tr>\n'
+    // Open link in New Window/Tab
+    html += '<tr><td><button class="hrBtn" id="btnNewWindow"\n' +
             'title="When link is clicked, it will be opened in a new Browser Window or Tab"\n' +
-            '>New Window</button></td>\n'
-    html += '<td class="hrInput">\n'
-    html += '<input id="hrNewWindow" type="text" placeholder="Optional. Open link in New Browser Window or Tab"></td>\n'
-    html += '</tr>\n'
-
-    html += '<tr id="recipes">\n'   // Recipe Heading
-    html += '<th>Recipes</th>\n'
-    html += '<th>Baked into the clipboard</th>\n'
-    html += '</tr>\n'
-
-    html += '<tr>\n'                // HTML Recipe
-    html += '<td><button class="hrBtn" id="btnRecipeHtml"' +
+            '>New Window</button></td>\n' +
+            '<td><input id="hrNewWindow" class="hrInput" type="text"\n' +
+            'placeholder="Optional. Open link in New Browser Window or Tab"></td></tr>\n'
+    // Recipe Heading
+    html += '<tr><th>Recipes</th>\n' +
+            '<th>Baked into the clipboard</th></tr>\n'
+    // HTML Recipe
+    html += '<tr><td><button class="hrBtn" id="btnRecipeHtml"' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
-            '>HTML</button></td>\n'
-    html += '<td class="hrInput">\n'
-    html += '<input id="hrRecipeHtml" type="text" placeholder="HTML Recipe will be built here"></td>\n'
-    html += '</tr>\n'
-
-    html += '<tr>\n'                // Markdown Recipe
-    html += '<td><button class="hrBtn" id="btnRecipeMd"' +
+            '>HTML</button></td>\n' +
+            '<td><input id="hrRecipeHtml" class="hrInput" type="text"\n' +
+            'placeholder="HTML Recipe will be built here"></td></tr>\n'
+    // Markdown Recipe
+    html += '<tr><td><button class="hrBtn" id="btnRecipeMd"' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"' +
-            '>Markdown</button></td>\n'
-    html += '<td class="hrInput">\n'
-    html += '<input id="hrRecipeMd" type="text" placeholder="Markdown Recipe will be built here"></td>\n'
-    html += '</tr>\n'
-
-    html += '</table></form>\n'     // End of our table and form
+            '>Markdown</button></td>\n' +
+            '<td><input id="hrRecipeMd" class="hrInput" type="text"\n' +
+            'placeholder="Markdown Recipe will be built here"></td></tr>\n'
+    // End of our table and form
+    html += '</table></form>\n'
 
     /* Set styling for table elements */
     html += '<style>\n'             // Styling for Hyperlink Recipe table
@@ -132,10 +113,10 @@ function paintTable (b) {
     // Column 2 minimum width to give lots of room for URL
     // Box sizing takes full column width not varying by text length
     html += '.hrInput {\n'
-    html += '     min-width: 600px;\n'
-    html += '     box-sizing: border-box;\n'
-    html += '     -webkit-box-sizing:border-box;\n'
-    html += '     -moz-box-sizing: border-box;\n'
+    html += '  min-width: 600px;\n'
+    html += '  box-sizing: border-box;\n'
+    html += '  -webkit-box-sizing:border-box;\n'
+    html += '  -moz-box-sizing: border-box;\n'
     html += '}\n'
 
     html += '.hrBtn {\n'            // Buttons in the first column
@@ -144,6 +125,7 @@ function paintTable (b) {
     html += '  border-radius: .5rem;\n'
     html += '  text-align: center;\n'
     html += '}\n'                   // End of button styling
+
     html += '.hrBtn:hover {\n'
     html += '    color: #fff;\n'
     html += '    background-color: DarkGreen;\n'
