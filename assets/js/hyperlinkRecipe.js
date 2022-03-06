@@ -63,7 +63,7 @@ function paintTable (b) {
             'title="Insert name of link to appear in document (from the clipboard)"' +
             '>Name (text)</button></td>\n'
     html += '<td id="hrText" class="hrInput">\n'
-    html += '<input type="text" placeholder="Mandatory. Link name from clipboard will go here"></td>\n'
+    html += '<input type="text" placeholder="Mandatory. Link name from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
@@ -179,9 +179,6 @@ function paintTable (b) {
     inputRecipeMd = document.getElementById('hrRecipeMd');
 
     btnHref.addEventListener('click', () => {
-        //var text = window.navigator.clipboard.readText;
-        //alert('Trapped text: ' + text)
-        //navigator.clipboard.readText().then(
         window.navigator.clipboard.readText().then(
             clipText => updateInput (inputHref, clipText));
     });
