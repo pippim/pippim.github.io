@@ -45,7 +45,7 @@ function paintTable (b) {
     html += '<form><table id="hrTable" class="hr_table">\n'
     // Ingredients heading
     html += '<tr><th>Ingredients</th>\n' +
-            '<th>From the clipboard or set options</th></tr>\n'
+            '<th>Button inserts the clipboard contents</th></tr>\n'
     // Button and Input for URL (href) Must be https?//:
     html += '<tr><td><button class="hrBtn" id="btnHref"\n' +
             'title="Insert browser address bar string (from the clipboard)"\n' +
@@ -64,6 +64,10 @@ function paintTable (b) {
             '>Tooltip (title)</button></td>\n' +
             '<td><input id="hrTitle" class="hrInput" type="text" \n' +
             'placeholder="Optional. Hover mouse over link and get this tooltip"></td></tr>\n'
+    // Options Heading
+    html += '<tr><th>Toggles</th>\n' +
+            '<th>Button toggles options on and off</th></tr>\n'
+    // HTML Recipe
     // UTF-8 Symbol for external links
     html += '<tr><td><button class="hrBtn" id="btnExternal"\n' +
             'title="Use optional UTF-8 symbol to show link is an external website"\n' +
@@ -97,14 +101,10 @@ function paintTable (b) {
     /* Set styling for table elements */
     html += '<style>\n'             // Styling for Hyperlink Recipe table
 
-    html += 'h3 {\n'                // "Hyperlink Recipe Baker" <h3> styling
+    html += 'h3 {\n'                // Heading: "Hyperlink Recipe Baker" <h3> styling
     html += '  margin-top: .5rem;\n'
     html += '  margin-bottom: .5rem;\n'
     html += '}\n'
-
-    //html += '.hrTable {\n'          // Table details
-    //html += '  width: 100%;\n'      // Use max allowed space
-    //html += '}\n'
 
     html += 'td {\n'                // Table details
     html += '  padding: 0 1rem;\n'  // Space between columns
