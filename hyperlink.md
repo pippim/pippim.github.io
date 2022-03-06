@@ -35,14 +35,17 @@ Then simply paste the "baked recipe" into your document with
 <div id="hrb_body">
 <p> DUMMY TEXT - Real text set in User Script</p>
 </div>
-<!--  Your top level layout must contain the following  
+
+<!--  Top level (E.G. /_layouts/default.html) must contain:  -->
 <script type="module" src="{{ site.url }}/assets/js/hyperlinkRecipe.js">
     import {processHyperlinkRecipe} from '/assets/js/hyperlinkRecipe.js';
+    processHyperlinkRecipe('hrb_body');
 </script>
--->
+<!--
 <script>
 processHyperlinkRecipe('hrb_body');
 </script>
+-->
 
 1. Right-click on your target address bar and select "copy".
 2. Click <kbd>URL (href)</kbd> above to paste.
