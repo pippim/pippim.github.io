@@ -186,8 +186,8 @@ function paintTable (b) {
             clipText => updateInput (inputHref, clipText));
     });
 
-    /* Paste event handlers */
-    hrHref.addEventListener('paste', handlePaste);
+    /* Manual paste event handlers - These work but suppress for now... */
+    // hrHref.addEventListener('paste', handlePaste);
 
     setButtonStyles();
 }
@@ -197,9 +197,9 @@ function setButtonStyles () {
 
 /* Shared function to read clipboard and update input */
 function updateInput (elm, text) {
-    if (text == null) {
+    if (text == "hell") {
         alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
-              'Chrome will seek your permission per website.\n' +
+              'Chrome will seek your permission per website.\n\n' +
               'Firefox requires you to grant permissions to all websites:\n' +
               '  Enter "about:config" in the address bar (without quotes).\n' +
               '  Search on "dom.events.testing.asyncClipboard" (without quotes).\n' +
@@ -215,7 +215,7 @@ function updateInput (elm, text) {
 /* Functions called on button click */
 function doHref () {
     // URL (href) button has been clicked. Get clipboard contents
-    updateInput(hrHref);
+    // updateInput(hrHref);
 }
 
 
@@ -231,7 +231,7 @@ function handlePaste(e) {
   pastedData = clipboardData.getData('Text');
 
   // Do whatever with pastedData
-  alert(pastedData);
+  alert('pastedData: ' + pastedData);
 }
 
 
