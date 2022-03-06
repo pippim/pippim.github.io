@@ -145,10 +145,10 @@ function website_tree_to_html(results) {
     }
     html += "</p>";
 
-    html += 'h3 {\n'    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style> h3 {\n'    // Heading: "999 Pippim website entries found." <h3> styling
     html += '  margin-top: .5rem;\n'
     html += '  margin-bottom: .5rem;\n'
-    html += '}\n'
+    html += '} </style>\n'
 
     b.innerHTML = html; // Update TCM Window body
 
