@@ -209,16 +209,16 @@ function updateInput (elm, text) {
 }
 
 /* Non-clipboard reading functions called on button click */
-var useExternal = false
-var symbolExternal = " 🔗"
+var useExternal = false;
+var symbolExternal = " 🔗";
 
 function doExternal () {
     // If external off turn on, if on then turn off
     useExternal = !useExternal;
     if (useExternal) {
-        inputExternal.value = symbolExternal
+        inputExternal.value = symbolExternal;
     } else {
-        inputExternal.value = ""
+        inputExternal.value = "";
     }
 }
 
@@ -232,14 +232,23 @@ var recipeMd = null
 
 buildRecipes () {
     // Create HTML & Markdown recipes using ingredients
-    const href = inputHref.value
-    const text = inputText.value
-    const title = inputTitle.value
+    const href = sanitizeValue(inputHref.value)
+    const text = sanitizeValue(inputText.value)
+    const title = sanitizeValue(inputTitle.value)
 
-    
-    recipeHTML = "<a href="
-    recipeMd = "("
+
+    recipeHTML = "<a href=" + href + '" title="' + title + '">'
+    recipeMd = "[" + text + inputExternal.value + "]{" + href + ' "' + title + '")'
 }
+
+function sanitizeValue (value) {
+    // Replace special characters in href, text and title attributes with HTML code
+    value = value.replace('<', '&lt;')
+    value = value.replace('>', '&gt;')
+    value = value.replace("'", "&apos;")  // Just to be safe don't see need though...
+    return value.replace('"', '&quot;')
+}
+
 /* Future use? */
 function handlePaste(e) {
   var clipboardData, pastedData;
