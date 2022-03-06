@@ -33,6 +33,20 @@ The Multi-Timer program (`mt`) can be downloaded from the
 
 ---
 
+## Hyperlink Recipe Baker
+
+Just click a few buttons to paste clipboard contents and select "Bake"
+option for a Hyperlink in HTML format or a Hyperlink in Markdown
+format copied to your clipboard.
+
+Then simply paste the "baked recipe" into your document with
+<kbd>Ctrl</kbd> + <kbd>V</kbd>.
+
+<a href="hyperlink.html" style="font-size: 20px;">Read More...</a>
+
+
+---
+
 ## Convert Stack Exchange Posts to Your Own Website
 
 {% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
