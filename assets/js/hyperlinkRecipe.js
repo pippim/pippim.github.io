@@ -166,6 +166,8 @@ function paintTable (b) {
     btnHref.addEventListener('click', () => {
         var text = window.navigator.clipboard.readText;
         alert('Trapped text: ' + text)
+        navigator.clipboard.readText().then(
+            clipText => document.querySelector("#hrRef").innerText += clipText);
     });
     /* assign element names by id */
     strHref = document.getElementById('hrHref');
