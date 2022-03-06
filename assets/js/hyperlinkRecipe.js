@@ -206,6 +206,7 @@ function updateInput (elm, text) {
     oldClip = elm.value
     elm.value = text            // Set value of Input to clipboard contents
     newClip = text
+    buildRecipes();
 }
 
 /* Non-clipboard reading functions called on button click */
@@ -220,6 +221,7 @@ function doExternal () {
     } else {
         inputExternal.value = "";
     }
+    buildRecipes();
 }
 
 function doNewWindow () {}
