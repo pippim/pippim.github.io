@@ -126,26 +126,31 @@ function home_page_to_html() {
 
 function website_tree_to_html(results) {
     if (results.length == 0) {
-        html = "<h2> 🔍 &emsp; No website_tree found!</h2>\n";
+        html = "<h3> 🔍 &emsp; No website_tree found!</h3>\n";
         html += "<p>An error has occurred.<br><br>\n";
         html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n";
         b.innerHTML = html;
         return
     } else if (results.length == 1) {
-        var html = "<h2>1 {{ site.title }} website entry found.</h2>\n";
+        var html = "<h3>1 {{ site.title }} website entry found.</h3>\n";
     } else {
-        var html = "<h2>" + results.length.toString() +
-                   " {{ site.title }} website entries found.</h2>\n";
+        var html = "<h3>" + results.length.toString() +
+                   " {{ site.title }} website entries found.</h3>\n";
     }
 
-    setLineDrawFont(b);  // Not needed with <code> but need line-height
+    setLineDrawFont(b); // Not needed with <code> but need line-height
     html += "<p>\n";
     for (var i = 0; i < results.length; i++) {
         html += results[i] + "<br>\n";
     }
     html += "</p>";
 
-    b.innerHTML = html;              // Update TCM Window body
+    html += 'h3 {\n'    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '  margin-top: .5rem;\n'
+    html += '  margin-bottom: .5rem;\n'
+    html += '}\n'
+
+    b.innerHTML = html; // Update TCM Window body
 
 }
 
