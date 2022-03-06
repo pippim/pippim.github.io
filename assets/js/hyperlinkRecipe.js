@@ -213,8 +213,10 @@ function updateInput (elm, text) {
 
 /* Functions called on button click */
 function doHref () {
-    // URL (href) button has been clicked. Get clipboard contents
-    // updateInput(hrHref);
+    var Myelement = document.getElementById("123");
+    console.log(Myelement.value);
+    Myelement.value = "New value";
+    console.log(Myelement.value);
 }
 
 
