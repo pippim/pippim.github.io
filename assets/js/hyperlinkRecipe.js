@@ -49,16 +49,17 @@ function paintTable (b) {
     html += '<th>From the clipboard or set options</th>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'  // URL (href)
+    html += '<tr>\n'                // Button and Input for URL (href)
     // Button class = "hrBtn". Don't use "button" which parent may have!!!
+    // NOTE: onclick is not supported: https://stackoverflow.com/a/17378538/6929343
     html += '<td><button class="hrBtn" id="btnHref"\n' +
             'title="Insert browser address bar string (from the clipboard)"\n' +
             '>URL (href)</button></td>\n'
     html += '<td class="hrInput">\n'
-    html += '<input id="hrHref" type="text" value="Mandatory. URL from clipboard will go here" /></td>\n'
+    html += '<input id="hrHref" type="text" placeholder="Mandatory. URL from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'  // Link Name (text)
+    html += '<tr>\n'                // Link Name (text)
     html += '<td><button class="hrBtn" id="btnText"\n' +
             'title="Insert name of link to appear in document (from the clipboard)"\n' +
             '>Name (text)</button></td>\n'
@@ -66,7 +67,7 @@ function paintTable (b) {
     html += '<input type="text" id="hrText" placeholder="Mandatory. Link name from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'  // Tooltip on Hover (title)
+    html += '<tr>\n'                // Tooltip on Hover (title)
     html += '<td><button class="hrBtn" id="btnTitle"\n' +
             'title="Insert optional tooltip details about link (from the clipboard)"\n' +
             '>Tooltip (title)</button></td>\n'
@@ -74,7 +75,7 @@ function paintTable (b) {
     html += '<input type="text" id="hrTitle" placeholder="Optional. Hover mouse over link and get this tooltip"></td>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'  // UTF-8 Symbol for external links
+    html += '<tr>\n'                // UTF-8 Symbol for external links
     html += '<td><button class="hrBtn" id="btnExternal"\n' +
             'title="Use optional UTF-8 icon to show link is an external website"\n' +
             '>External link</button></td>\n'
@@ -82,7 +83,7 @@ function paintTable (b) {
     html += '<input id="hrExternal" type="text" placeholder="Optional. Append external link icon after Name (text)"></td>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'  // Open link in New Window/Tab
+    html += '<tr>\n'                // Open link in New Window/Tab
     html += '<td><button class="hrBtn" id="btnNewWindow"\n' +
             'title="When link is clicked, it will be opened in a new Browser Window or Tab"\n' +
             '>New Window</button></td>\n'
@@ -90,12 +91,12 @@ function paintTable (b) {
     html += '<input id="hrNewWindow" type="text" placeholder="Optional. Open link in New Browser Window or Tab"></td>\n'
     html += '</tr>\n'
 
-    html += '<tr id="recipes">\n'  // Recipe row heading
+    html += '<tr id="recipes">\n'   // Recipe Heading
     html += '<th>Recipes</th>\n'
     html += '<th>string sent to the clipboard</th>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'  // HTML Recipe
+    html += '<tr>\n'                // HTML Recipe
     html += '<td><button class="hrBtn" id="btnRecipeHtml"' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
             '>HTML</button></td>\n'
@@ -103,7 +104,7 @@ function paintTable (b) {
     html += '<input id="hrRecipeHtml" type="text" placeholder="HTML Recipe will be built here"></td>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'  // Markdown Recipe
+    html += '<tr>\n'                // Markdown Recipe
     html += '<td><button class="hrBtn" id="btnRecipeMd"' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"' +
             '>Markdown</button></td>\n'
@@ -121,12 +122,21 @@ function paintTable (b) {
     html += '  margin-bottom: .5rem;\n'
     html += '}\n'
 
-    html += '.hrTable {\n'          // Table details
-    html += '  width: 100%;\n'      // Use max allowed space
-    html += '}\n'
+    //html += '.hrTable {\n'          // Table details
+    //html += '  width: 100%;\n'      // Use max allowed space
+    //html += '}\n'
 
     html += 'td {\n'                // Table details
     html += '  padding: 0 1rem;\n'  // Space between columns
+    html += '}\n'
+
+    // Column 2 minimum width to give lots of room for URL
+    // Box sizing takes full column width not varying by text length
+    html += 'input[type="text"] {\n'
+    html += '     min-width: 600px;\n'
+    html += '     box-sizing: border-box;\n'
+    html += '     -webkit-box-sizing:border-box;\n'
+    html += '     -moz-box-sizing: border-box;\n'
     html += '}\n'
 
     html += '.hrBtn {\n'            // Buttons in the first column
@@ -141,35 +151,14 @@ function paintTable (b) {
     html += '    border: .163rem solid Black;\n'
     html += '  }\n'                 // End of button hover styling
 
-    html += 'input[type="text"] {\n'
-    html += '     min-width: 400px;\n'   // Set to full width of column 2
-    html += '     box-sizing: border-box;\n'
-    html += '     -webkit-box-sizing:border-box;\n'
-    html += '     -moz-box-sizing: border-box;\n'
-    html += '}\n'
-
     html += '</style>\n'            // End of all styles
 
     b.innerHTML = html;             // Update TCM Window body
+
+    // Some space between columns
     document.getElementById("hrTable").style.borderSpacing = ".3rem";
 
-    /* Define functions on button clicks */
-    //document.getElementById("btnHref").onclick = doHref;
-    //document.getElementById("btnText").onclick = doText;
-    //document.getElementById("btnTitle").onclick = doTitle;
-    document.getElementById("btnExternal").onclick = doExternal;
-    document.getElementById("btnNewWindow").onclick = doNewWindow;
-    document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
-    document.getElementById("btnRecipeMd").onclick = doRecipeMd;
-
-    /* Clipboard functions
-
-    Enter about:config in navigation bar
-    Click "Accept the Risk and Continue"
-    Search dom.events.testing.asyncClipboard and set true
-
-    */
-    /* assign element names by id */
+    /* Set input elements by id */
     inputHref = document.getElementById('hrHref');
     inputText = document.getElementById('hrText');
     inputTitle = document.getElementById('hrTitle');
@@ -178,26 +167,23 @@ function paintTable (b) {
     inputRecipeHtml = document.getElementById('hrRecipeHtml');
     inputRecipeMd = document.getElementById('hrRecipeMd');
 
+    /* Clipboard read functions (HIGH SECURITY) for href, text and title */
     btnHref.addEventListener( 'click', () => { navigator.clipboard.readText().then(
-            clipText => updateInput ('hrHref', clipText)); });
+            clipText => updateInput (inputHref, clipText)); });
     btnText.addEventListener( 'click', () => { navigator.clipboard.readText().then(
-            clipText => updateInput ('hrText', clipText)); });
+            clipText => updateInput (inputText, clipText)); });
     btnTitle.addEventListener('click', () => { navigator.clipboard.readText().then(
-            clipText => updateInput ('hrTitle', clipText)); });
+            clipText => updateInput (inputTitle, clipText)); });
 
-    // Original:  clipText => updateInput ('hrHref', clipText));
+    /* Functions to format recipe & put into clipboard (low security) */
+    document.getElementById("btnExternal").onclick = doExternal;
+    document.getElementById("btnNewWindow").onclick = doNewWindow;
+    document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
+    document.getElementById("btnRecipeMd").onclick = doRecipeMd;
 
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
-    setButtonStyles();
-}
-
-function doOption(id) {
-    alert('doOption called with id: ' + id);
-}
-
-function setButtonStyles () {
 }
 
 /* Shared function to read clipboard and update input */
@@ -205,8 +191,7 @@ function setButtonStyles () {
 var oldClip = null
 var newClip = null
 
-function updateInput (id, text) {
-    const elm = document.getElementById(id)
+function updateInput (elm, text) {
     if (text == "hell") {
         alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
               'Chrome will seek your permission per website.\n\n' +
@@ -223,11 +208,14 @@ function updateInput (id, text) {
     newClip = text
 }
 
-/* Functions called on button click */
-function doHref () {
-}
+/* Non-clipboard reading functions called on button click */
+function doExternal () {}
+function doNewWindow () {}
+function doRecipeHtml () {}
+function doRecipeMd () {}
+function doReset () {}
 
-
+/* Future use? */
 function handlePaste(e) {
   var clipboardData, pastedData;
 
@@ -243,33 +231,6 @@ function handlePaste(e) {
   alert('pastedData: ' + pastedData);
 }
 
-
-function doText () {
-    // Name (text) button has been clicked. Get clipboard contents
-    hrText.focus();
-    // hrText.select();
-    console.log('in doText()')
-    document.execCommand("paste");
-}
-
-// top level await isn't currently supported in Firefox
-// const text = await navigator.clipboard.readText();
-
-function doTitle () {
-    // Name (text) button has been clicked. Get clipboard contents
-    hrText.focus();
-    // hrText.select();
-    // alert('in doTitle() last text: ' + text)
-    // const text2 = window.clipboardData.getData('Text')
-    // alert('in doTitle() text2: ' + text2)
-    document.execCommand("paste");
-}
-
-function doExternal () {}
-function doNewWindow () {}
-function doRecipeHtml () {}
-function doRecipeMd () {}
-function doReset () {}
 
 /* Not supported in firefox
 var writePermission = navigator.permissions.query({name: "clipboard-write"}).then(result => {
