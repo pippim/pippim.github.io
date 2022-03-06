@@ -250,9 +250,9 @@ function buildRecipes () {
     /* Create HTML & Markdown recipes using ingredients */
 
     // Convert special characters to HTML &code; values
-    const href = sanitizeValue(inputHref.value)
-    const text = sanitizeValue(inputText.value)
-    const title = sanitizeValue(inputTitle.value)
+    var href = sanitizeValue(inputHref.value)
+    var text = sanitizeValue(inputText.value)
+    var title = sanitizeValue(inputTitle.value)
 
     // Add UTF-8 external link symbol to link name (text)
     if (useExternal) { text += inputExternal.value; }
@@ -268,8 +268,8 @@ function buildRecipes () {
     }
 
     // Assume no tooltip - use endings to terminate href attribute
-    titleHtml = '">';
-    TitleMd = ')';
+    var titleHtml = '">';
+    var TitleMd = ')';
     // Add optional hover tooltip (title)
     if (title !== "") {
         // Format title string that follows URL address (href)
