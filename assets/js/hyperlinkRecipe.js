@@ -55,7 +55,7 @@ function paintTable (b) {
             'title="Insert browser address bar string (from the clipboard)"' +
             '>URL (href)</button></td>\n'
     html += '<td id="hrHref" class="hrInput">\n'
-    html += '<input type="text" placeholder="Mandatory. URL from clipboard will go here"></td>\n'
+    html += '<input type="text" placeholder="Mandatory. URL from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
