@@ -41,9 +41,9 @@ export function processHyperlinkRecipe(id) {
 
 function paintTable (b) {
 
-    html = '<h3>Hyperlink Recipe Baker</h3>\n'
+    html = '<h3>Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
 
-    html += '<form><table id="hrTable" class="hr_table">\n'
+    html += '<form><table id="hrTable" class="hr_table">\n'  // Ingredients heading
     html += '<tr id="ingredients">\n'
     html += '<th>Ingredients</th>\n'
     html += '<th>From the clipboard or set options</th>\n'
@@ -51,40 +51,40 @@ function paintTable (b) {
 
     html += '<tr>\n'  // URL (href)
     // Button class = "hrBtn". Don't use "button" which parent may have!!!
-    html += '<td><button class="hrBtn" id="btnHref" ' +
-            'title="Insert browser address bar string (from the clipboard)"' +
+    html += '<td><button class="hrBtn" id="btnHref"\n' +
+            'title="Insert browser address bar string (from the clipboard)"\n' +
             '>URL (href)</button></td>\n'
     html += '<td class="hrInput">\n'
     html += '<input id="hrHref" type="text" value="Mandatory. URL from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'  // Link Name (text)
-    html += '<td><button class="hrBtn" id="btnText"' +
-            'title="Insert name of link to appear in document (from the clipboard)"' +
+    html += '<td><button class="hrBtn" id="btnText"\n' +
+            'title="Insert name of link to appear in document (from the clipboard)"\n' +
             '>Name (text)</button></td>\n'
     html += '<td class="hrInput">\n'
     html += '<input type="text" id="hrText" placeholder="Mandatory. Link name from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'  // Tooltip on Hover (title)
-    html += '<td><button class="hrBtn" id="btnTitle"' +
-            'title="Insert optional tooltip details about link (from the clipboard)"' +
+    html += '<td><button class="hrBtn" id="btnTitle"\n' +
+            'title="Insert optional tooltip details about link (from the clipboard)"\n' +
             '>Tooltip (title)</button></td>\n'
     html += '<td class="hrInput">\n'
     html += '<input type="text" id="hrTitle" placeholder="Optional. Hover mouse over link and get this tooltip"></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'  // UTF-8 Symbol for external links
-    html += '<td><button class="hrBtn" id="btnExternal" onclick="doOption(\'hrExternal\')" ' +
-            'title="Use optional UTF-8 icon to show link is an external website"' +
+    html += '<td><button class="hrBtn" id="btnExternal"\n' +
+            'title="Use optional UTF-8 icon to show link is an external website"\n' +
             '>External link</button></td>\n'
     html += '<td class="hrInput">\n'
     html += '<input id="hrExternal" type="text" placeholder="Optional. Append external link icon after Name (text)"></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'  // Open link in New Window/Tab
-    html += '<td><button class="hrBtn" id="btnNewWindow"' +
-            'title="When link is clicked, it will be opened in a new Browser Window or Tab"' +
+    html += '<td><button class="hrBtn" id="btnNewWindow"\n' +
+            'title="When link is clicked, it will be opened in a new Browser Window or Tab"\n' +
             '>New Window</button></td>\n'
     html += '<td class="hrInput">\n'
     html += '<input id="hrNewWindow" type="text" placeholder="Optional. Open link in New Browser Window or Tab"></td>\n'
@@ -157,7 +157,7 @@ function paintTable (b) {
     document.getElementById("btnHref").onclick = doHref;
     document.getElementById("btnText").onclick = doText;
     document.getElementById("btnTitle").onclick = doTitle;
-    //document.getElementById("btnExternal").onclick = doExternal;
+    document.getElementById("btnExternal").onclick = doExternal;
     document.getElementById("btnNewWindow").onclick = doNewWindow;
     document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
     document.getElementById("btnRecipeMd").onclick = doRecipeMd;
