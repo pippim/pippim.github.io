@@ -299,7 +299,7 @@ function sanitizeValue (value) {
     value = value.replace(/\</g, '&lt;')
     value = value.replace(/\>/g, '&gt;')
     value = value.replace(/\'/g, '&apos;')
-    return value.replace(/\"/g, "&quot;"")
+    return value.replace(/\"/g, "&quot;")
 }
 
 /* Future use? */
