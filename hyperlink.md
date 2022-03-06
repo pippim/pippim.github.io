@@ -37,15 +37,15 @@ Then simply paste the "baked recipe" into your document with
 </div>
 
 <!--  Top level (E.G. /_layouts/default.html) must contain:  -->
-<script type="module" src="{{ site.url }}/assets/js/hyperlinkRecipe.js">
+<script  type="module" src="{{ site.url }}/assets/js/hyperlinkRecipe.js">
     import {processHyperlinkRecipe} from '/assets/js/hyperlinkRecipe.js';
-    processHyperlinkRecipe('hrb_body');
+    document.addEventListener('DOMContentLoaded', function() {
+       processHyperlinkRecipe('hrb_body');
+    }, false);
 </script>
-<!--
+
 <script>
-processHyperlinkRecipe('hrb_body');
 </script>
--->
 
 1. Right-click on your target address bar and select "copy".
 2. Click <kbd>URL (href)</kbd> above to paste.
