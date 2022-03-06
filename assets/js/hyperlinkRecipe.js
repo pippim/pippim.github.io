@@ -206,17 +206,10 @@ function updateInput (elm, text) {
         return
     }
     elm.value = text            // Set value of Input to clipboard contents
-    alert('elm.value set to: ' + text)
-    elm.value = text            // Is it available after a short pause?
-    // document.querySelector("#inputHref").value='fudge it'
 }
 
 /* Functions called on button click */
 function doHref () {
-    var Myelement = document.getElementById("hrHref");
-    console.log(Myelement.value);
-    Myelement.value = "New value";
-    console.log(Myelement.value);
 }
 
 
