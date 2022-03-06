@@ -246,6 +246,12 @@ function doReset () {}
 var recipeHTML = null
 var recipeMd = null
 
+/* old and new not used yet... */
+var oldRecipeHtml = ""
+var oldRecipeMd = ""
+var newRecipeHtml = ""
+var newRecipeMd = ""
+
 function buildRecipes () {
     /* Create HTML & Markdown recipes using ingredients */
 
@@ -263,7 +269,7 @@ function buildRecipes () {
     var newHtml = ""
     var newMd = ""
     if (useNewWindow) {
-        newHtml = inputNewWindow.value + ' '
+        newHtml = ' ' + inputNewWindow.value + ' '
         newMd = '{:' + inputNewWindow.value + '}'
     }
 
@@ -277,11 +283,17 @@ function buildRecipes () {
         titleMd = ' "' + title + ')';
     }
 
+    /* Try alternative forms
     recipeHTML = '<a href="' + href + newHtml + titleHtml + text + '</a>'
     recipeMd = "[" + text + inputExternal.value + "]{" + href + titleMd + newMd
     // Update table column on screen
     inputRecipeHtml.value = recipeHTML
     inputRecipeMd.value = recipeMd
+    */
+    inputRecipeHtml.value =
+        '<a href="' + href + newHtml + titleHtml + text + '</a>'
+    inputRecipeMd.value =
+        "[" + text + inputExternal.value + "](" + href + titleMd + newMd
 }
 
 function sanitizeValue (value) {
