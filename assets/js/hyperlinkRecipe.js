@@ -204,7 +204,7 @@ function updateInput (elm) {
               '  Enter "about:config" in the address bar (without quotes).\n' +
               '  Search on "dom.events.testing.asyncClipboard" (without quotes).\n' +
               '  Click the toggle icon to switch "False" to "True".\n\n'
-              'Or you can use "CTRL" + "V" to paste manually and then click button.'+)
+              'Or you can use "CTRL" + "V" to paste manually and then click button.')
         return
     }
     elm.value = text            // Set value of Input to clipboard contents
