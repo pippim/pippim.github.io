@@ -40,7 +40,7 @@ function paintTable (b) {
     // Button class = "hrBtn". Don't use "button" which parent may have!!!
     // NOTE: onclick is not supported: https://stackoverflow.com/a/17378538/6929343
 
-    html = '<h3>Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
+    html = '<h3 id="hrHdr">Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
     // Table must be created wrapped inside form for <input variables
     html += '<form><table id="hrTable" class="hr_table">\n'
     // Ingredients heading
@@ -101,7 +101,7 @@ function paintTable (b) {
     /* Set styling for table elements */
     html += '<style>\n'             // Styling for Hyperlink Recipe table
 
-    html += 'h3 {\n'                // Heading: "Hyperlink Recipe Baker" <h3> styling
+    html += '#hrHdr {\n'            // Heading: "Hyperlink Recipe Baker" <h3> styling
     html += '  margin-top: .5rem;\n'
     html += '  margin-bottom: .5rem;\n'
     html += '}\n'
@@ -277,12 +277,8 @@ function buildRecipes () {
 
 function sanitizeValue (value) {
     // Special characters in href, text and title attributes need HTML &code;
-    /* Old style only replaces once. Use Regex instead
-    value = value.replace('<', '&lt;')
-    value = value.replace('>', '&gt;')
-    value = value.replace("'", "&apos;") */
-
-    // Regex method. See: https://stackoverflow.com/a/3971261/6929343
+    // Regex method for multiples: https://stackoverflow.com/a/3971261/6929343
+    value = value.replace(/\&/g, '&amp;')  // Must be the first one!
     value = value.replace(/\</g, '&lt;')
     value = value.replace(/\>/g, '&gt;')
     value = value.replace(/\'/g, '&apos;')

@@ -132,10 +132,10 @@ function website_tree_to_html(results) {
         b.innerHTML = html;
         return
     } else if (results.length == 1) {
-        var html = "<h3>1 {{ site.title }} website entry found.</h3>";  // Try no \n
+        var html = "<h3 id="tcmHdr">1 {{ site.title }} website entry found.</h3>\n";
     } else {
-        var html = "<h3>" + results.length.toString() +
-                   " {{ site.title }} website entries found.</h3>";
+        var html = "<h3 id="tcmHdr">" + results.length.toString() +
+                   " {{ site.title }} website entries found.</h3>\n";
     }
 
     setLineDrawFont(b); // Not needed with <code> but need line-height
@@ -145,9 +145,9 @@ function website_tree_to_html(results) {
     }
     html += "</p>";
 
-    html += '<style> h3 {\n'    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style> #tcmHdr {\n'    // Heading: "999 Pippim website entries found." <h3> styling
     html += '  margin-top: .5rem;\n'
-    html += '  margin-bottom: .5rem;\n'
+    html += '  margin-bottom: 0px;\n'
     html += '} </style>\n'
 
     b.innerHTML = html; // Update TCM Window body
