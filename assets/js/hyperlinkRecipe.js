@@ -157,10 +157,10 @@ function paintTable (b) {
     //document.getElementById("btnHref").onclick = doHref;
     //document.getElementById("btnText").onclick = doText;
     //document.getElementById("btnTitle").onclick = doTitle;
-    //document.getElementById("btnExternal").onclick = doExternal;
-    //document.getElementById("btnNewWindow").onclick = doNewWindow;
-    //document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
-    //document.getElementById("btnRecipeMd").onclick = doRecipeMd;
+    document.getElementById("btnExternal").onclick = doExternal;
+    document.getElementById("btnNewWindow").onclick = doNewWindow;
+    document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
+    document.getElementById("btnRecipeMd").onclick = doRecipeMd;
 
     /* Clipboard functions
 
@@ -178,10 +178,10 @@ function paintTable (b) {
     inputRecipeHtml = document.getElementById('hrRecipeHtml');
     inputRecipeMd = document.getElementById('hrRecipeMd');
 
-    btnHref.addEventListener('click', () => {
-        window.navigator.clipboard.readText().then(
-            clipText => { updateInput ('hrHref', clipText)); }
-    });
+    btnHref.addEventListener('click', () => { navigator.clipboard.readText().then(
+            clipText => updateInput ('hrHref', clipText)); });
+
+    // Original:  clipText => updateInput ('hrHref', clipText));
 
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
