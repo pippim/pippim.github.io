@@ -273,19 +273,19 @@ function buildRecipes () {
     }
 
     // Assume no tooltip - use endings to terminate href attribute
-    var titleHtml = '">';
+    var titleHtml = '>';
     var titleMd = ')';
     // Add optional hover tooltip (title)
     if (title !== "") {
         // Format title string that follows URL address (href)
-        titleHtml = '" title="' + title + '">';
-        titleMd = ' "' + title + ')';
+        titleHtml = ' title="' + title + '">';
+        titleMd = ' ' + title + ')';
     }
 
     inputRecipeHtml.value =
-        '<a href="' + href + newHtml + titleHtml + text + '</a>'
+        '<a href="' + href + '"' + newHtml + titleHtml + text + '</a>'
     inputRecipeMd.value =
-        "[" + text + inputExternal.value + "](" + href + titleMd + newMd
+        "[" + text + "](" + href + '"' + titleMd + newMd
 }
 
 function sanitizeValue (value) {
