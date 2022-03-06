@@ -157,7 +157,7 @@ function paintTable (b) {
     document.getElementById("btnHref").onclick = doHref;
     document.getElementById("btnText").onclick = doText;
     document.getElementById("btnTitle").onclick = doTitle;
-    document.getElementById("btnExternal").onclick = doExternal;
+    //document.getElementById("btnExternal").onclick = doExternal;
     document.getElementById("btnNewWindow").onclick = doNewWindow;
     document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
     document.getElementById("btnRecipeMd").onclick = doRecipeMd;
