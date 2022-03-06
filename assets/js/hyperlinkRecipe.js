@@ -49,7 +49,7 @@ function paintTable (b) {
     html += '<th>From the clipboard or set options</th>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'
+    html += '<tr>\n'  // URL (href)
     // Button class = "hrBtn". Don't use "button" which parent may have!!!
     html += '<td><button class="hrBtn" id="btnHref" ' +
             'title="Insert browser address bar string (from the clipboard)"' +
@@ -58,7 +58,7 @@ function paintTable (b) {
     html += '<input id="hrHref" type="text" value="Mandatory. URL from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'
+    html += '<tr>\n'  // Link Name (text)
     html += '<td><button class="hrBtn" id="btnText"' +
             'title="Insert name of link to appear in document (from the clipboard)"' +
             '>Name (text)</button></td>\n'
@@ -66,7 +66,7 @@ function paintTable (b) {
     html += '<input type="text" id="hrText" placeholder="Mandatory. Link name from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'
+    html += '<tr>\n'  // Tooltip on Hover (title)
     html += '<td><button class="hrBtn" id="btnTitle"' +
             'title="Insert optional tooltip details about link (from the clipboard)"' +
             '>Tooltip (title)</button></td>\n'
@@ -74,8 +74,8 @@ function paintTable (b) {
     html += '<input type="text" id="hrTitle" placeholder="Optional. Hover mouse over link and get this tooltip"></td>\n'
     html += '</tr>\n'
 
-    html += '<tr>\n'
-    html += '<td><button class="hrBtn" id="btnExternal"' +
+    html += '<tr>\n'  // UTF-8 Symbol for external links
+    html += '<td><button class="hrBtn" id="btnExternal" onclick="doOption(\"hrExternal\")"' +
             'title="Use optional UTF-8 icon to show link is an external website"' +
             '>External link</button></td>\n'
     html += '<td class="hrInput">\n'
@@ -187,6 +187,10 @@ function paintTable (b) {
     // hrHref.addEventListener('paste', handlePaste);
 
     setButtonStyles();
+}
+
+function doOption(id) {
+    alert('doOption called with id: ' + id)
 }
 
 function setButtonStyles () {
