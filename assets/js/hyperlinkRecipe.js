@@ -172,8 +172,8 @@ function paintTable (b) {
     btnHref.addEventListener('click', () => {
         var text = window.navigator.clipboard.readText;
         alert('Trapped text: ' + text)
-        navigator.clipboard.readText().then(
-            clipText => document.querySelector("#hrRef").innerText += clipText);
+        //navigator.clipboard.readText().then(
+        //    clipText => document.querySelector("#hrRef").innerText += clipText);
     });
     /* assign element names by id */
     strHref = document.getElementById('hrHref');
@@ -198,6 +198,8 @@ function doHref () {
     // URL (href) button has been clicked. Get clipboard contents
     console.log('in doHref()')
     hrHref.focus();
+    var text = window.navigator.clipboard.readText;
+    alert('Text in doHref: ' + text)
     // hrHref.select();
     // document.execCommand("paste");
     // var clip = ClipboardEvent.clipboardData.getData("text/plain");
