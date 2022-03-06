@@ -6,7 +6,7 @@
 //       search.js defines global variables
 
 // imported functions.  Parent needs <script type="module"...
-import {processHyperlinkRecipe} from './hyperlinkRecipe.js'
+import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
@@ -130,7 +130,7 @@ function website_tree_to_html(results) {
         html += "<p>An error has occurred.<br><br>\n";
         html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n";
         b.innerHTML = html;
-        return
+        return;
     } else if (results.length == 1) {
         var html = "<h3 id="tcmHdr">1 {{ site.title }} website entry found.</h3>\n";
     } else {
