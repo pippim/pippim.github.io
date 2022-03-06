@@ -196,7 +196,6 @@ function setButtonStyles () {
 /* Shared function to read clipboard and update input */
 function updateInput (elm) {
     const text = window.navigator.clipboard.readText;
-    text = null
     if (text == null) {
         alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
               'Chrome will seek your permission per website.\n' +
