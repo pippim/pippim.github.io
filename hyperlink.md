@@ -35,12 +35,12 @@ Then simply paste the "baked recipe" into your document with
 <div id="hrb_body">
 <p> DUMMY TEXT - Real text set in User Script</p>
 </div>
-<!--  
-<script type="module" src="{{ site.url }}/assets/js/hyperlinkRecipe.js"></script>
-<script>
+<!--  Your top level layout must contain the following  
+<script type="module" src="{{ site.url }}/assets/js/hyperlinkRecipe.js">
+    import {processHyperlinkRecipe} from '/assets/js/hyperlinkRecipe.js';
+</script>
 -->
 <script>
-import {processHyperlinkRecipe} from '/assets/js/hyperlinkRecipe.js';
 processHyperlinkRecipe('hrb_body');
 </script>
 
