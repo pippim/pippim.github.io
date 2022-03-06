@@ -269,7 +269,7 @@ function buildRecipes () {
 
     // Assume no tooltip - use endings to terminate href attribute
     var titleHtml = '">';
-    var TitleMd = ')';
+    var titleMd = ')';
     // Add optional hover tooltip (title)
     if (title !== "") {
         // Format title string that follows URL address (href)
