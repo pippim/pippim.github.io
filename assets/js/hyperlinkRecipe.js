@@ -33,6 +33,7 @@ var inputRecipeMd = null
 
 export function processHyperlinkRecipe(id) {
     const b = document.getElementById(id)  // div body id where html codes go
+    alert('processHyperlinkRecipe(id) called with: ' + id)
     paintTable(b);
 }
 
@@ -46,50 +47,49 @@ function paintTable (b) {
     // Ingredients heading
     html += '<tr><th>Ingredients</th>\n' +
             '<th>Button inserts the clipboard contents</th></tr>\n'
-    // Button and Input for URL (href) Must be https?//:
+    // Button and Input for URL (href) Must be https?//:  Note glitch with "required"
     html += '<tr><td><button class="hrBtn" id="btnHref"\n' +
             'title="Insert browser address bar string (from the clipboard)"\n' +
             '>URL (href)</button></td>\n' +
-            '<td><input id="hrHref" class="hrInput" type="url" pattern="https?://.+" required\n' +
+            '<td><input id="hrHref" class="hrInput" type="url" pattern="https?://.+"\n' +
             'placeholder="Mandatory. URL from clipboard will go here" /></td></tr>\n'
     // Link Name (text)
     html += '<tr><td><button class="hrBtn" id="btnText"\n' +
             'title="Insert name of link to appear in document (from the clipboard)"\n' +
             '>Name (text)</button></td>\n' +
-            '<td><input id="hrText" class="hrInput" type="text" required\n' +
+            '<td><input id="hrText" class="hrInput" type="text"\n' +
             'placeholder="Mandatory. Link name from clipboard will go here" /></td></tr>\n'
     // Tooltip on Hover (title)
     html += '<tr><td><button class="hrBtn" id="btnTitle"\n' +
             'title="Insert optional tooltip details about link (from the clipboard)"\n' +
             '>Tooltip (title)</button></td>\n' +
-            '<td><input id="hrTitle" class="hrInput" type="text" \n' +
+            '<td><input id="hrTitle" class="hrInput" type="text"\n' +
             'placeholder="Optional. Hover mouse over link and get this tooltip"></td></tr>\n'
-    // Options Heading
+    // Variations Heading
     html += '<tr><th>Variations</th>\n' +
             '<th>Button toggles options on and off</th></tr>\n'
-    // HTML Recipe
-    // UTF-8 Symbol for external links
+    // Toggle UTF-8 Symbol for external links
     html += '<tr><td><button class="hrBtn" id="btnExternal"\n' +
             'title="Use optional UTF-8 symbol to show link is an external website"\n' +
             '>External link</button></td>\n' +
-            '<td><input id="hrExternal" class="hrInput" type="text" \n' +
+            '<td><input id="hrExternal" class="hrInput" type="text"\n' +
             'placeholder="Optional. Append external link symbol to Name (text)"></td></tr>\n'
-    // Open link in New Window/Tab
+    // Toggle Open link in New Window/Tab
     html += '<tr><td><button class="hrBtn" id="btnNewWindow"\n' +
             'title="When link is clicked, it will be opened in a new Browser Window or Tab"\n' +
             '>New Window</button></td>\n' +
             '<td><input id="hrNewWindow" class="hrInput" type="text"\n' +
             'placeholder="Optional. Open link in New Browser Window or Tab"></td></tr>\n'
-    // Recipe Heading
+    // Bake Heading
     html += '<tr><th>Bake</th>\n' +
             '<th>Button puts the recipe into the clipboard</th></tr>\n'
-    // HTML Recipe
+    // Bake HTML Recipe
     html += '<tr><td><button class="hrBtn" id="btnRecipeHtml"' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
             '>HTML</button></td>\n' +
             '<td><input id="hrRecipeHtml" class="hrInput" type="text"\n' +
             'placeholder="HTML Recipe will be built here"></td></tr>\n'
-    // Markdown Recipe
+    // Bake Markdown Recipe
     html += '<tr><td><button class="hrBtn" id="btnRecipeMd"' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"' +
             '>Markdown</button></td>\n' +
@@ -139,7 +139,7 @@ function paintTable (b) {
     // Some space between columns
     document.getElementById("hrTable").style.borderSpacing = ".3rem";
 
-    /* Set input elements by id */
+    /* Set easier to use element names for inputs by id */
     inputHref = document.getElementById('hrHref');
     inputText = document.getElementById('hrText');
     inputTitle = document.getElementById('hrTitle');
