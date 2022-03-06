@@ -274,7 +274,7 @@ function buildRecipes () {
     if (title !== "") {
         // Format title string that follows URL address (href)
         titleHtml = '" title="' + title + '">';
-        titleMd = ' "' + title + '");
+        titleMd = ' "' + title + ')';
     }
 
     recipeHTML = '<a href="' + href + newHtml + titleHtml + text + '</a>'
