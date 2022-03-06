@@ -204,10 +204,11 @@ function updateInput (elm) {
               '  Search on "dom.events.testing.asyncClipboard" (without quotes).\n' +
               '  Click the toggle icon to switch "False" to "True".\n\n' +
               'Or use "CTRL" + "V" or "Right-Click" then "Paste" to paste manually.\n' +
-              'and then click button to add ingredient to recipe.')
+              'Then click button to add ingredient to recipe.')
         return
     }
     elm.value = text            // Set value of Input to clipboard contents
+    alert('elm.value set to: ' + text)
 }
 
 /* Functions called on button click */
