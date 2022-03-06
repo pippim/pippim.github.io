@@ -132,10 +132,10 @@ function website_tree_to_html(results) {
         b.innerHTML = html;
         return
     } else if (results.length == 1) {
-        var html = "<h3>1 {{ site.title }} website entry found.</h3>\n";
+        var html = "<h3>1 {{ site.title }} website entry found.</h3>";  // Try no \n
     } else {
         var html = "<h3>" + results.length.toString() +
-                   " {{ site.title }} website entries found.</h3>\n";
+                   " {{ site.title }} website entries found.</h3>";
     }
 
     setLineDrawFont(b); // Not needed with <code> but need line-height
