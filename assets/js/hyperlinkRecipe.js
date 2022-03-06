@@ -178,8 +178,12 @@ function paintTable (b) {
     inputRecipeHtml = document.getElementById('hrRecipeHtml');
     inputRecipeMd = document.getElementById('hrRecipeMd');
 
-    btnHref.addEventListener('click', () => { navigator.clipboard.readText().then(
+    btnHref.addEventListener( 'click', () => { navigator.clipboard.readText().then(
             clipText => updateInput ('hrHref', clipText)); });
+    btnText.addEventListener( 'click', () => { navigator.clipboard.readText().then(
+            clipText => updateInput ('hrText', clipText)); });
+    btnTitle.addEventListener('click', () => { navigator.clipboard.readText().then(
+            clipText => updateInput ('hrTitle', clipText)); });
 
     // Original:  clipText => updateInput ('hrHref', clipText));
 
@@ -202,7 +206,7 @@ var oldClip = null
 var newClip = null
 
 function updateInput (id, text) {
-    elm = document.getElementById(id)
+    const elm = document.getElementById(id)
     if (text == "hell") {
         alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
               'Chrome will seek your permission per website.\n\n' +
