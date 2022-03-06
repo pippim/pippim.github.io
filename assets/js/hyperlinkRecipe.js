@@ -77,10 +77,10 @@ function paintTable (b) {
 
     html += '<tr>\n'                // UTF-8 Symbol for external links
     html += '<td><button class="hrBtn" id="btnExternal"\n' +
-            'title="Use optional UTF-8 icon to show link is an external website"\n' +
+            'title="Use optional UTF-8 symbol to show link is an external website"\n' +
             '>External link</button></td>\n'
     html += '<td class="hrInput">\n'
-    html += '<input id="hrExternal" type="text" placeholder="Optional. Append external link icon after Name (text)"></td>\n'
+    html += '<input id="hrExternal" type="text" placeholder="Optional. Append external link symbol to Name (text)"></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'                // Open link in New Window/Tab
@@ -93,7 +93,7 @@ function paintTable (b) {
 
     html += '<tr id="recipes">\n'   // Recipe Heading
     html += '<th>Recipes</th>\n'
-    html += '<th>string sent to the clipboard</th>\n'
+    html += '<th>Baked into the clipboard</th>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'                // HTML Recipe
@@ -243,9 +243,6 @@ function doRecipeHtml () {}
 function doRecipeMd () {}
 function doReset () {}
 
-var recipeHTML = null
-var recipeMd = null
-
 /* old and new not used yet... */
 var oldRecipeHtml = ""
 var oldRecipeMd = ""
@@ -260,12 +257,14 @@ function buildRecipes () {
     var text = sanitizeValue(inputText.value)
     var title = sanitizeValue(inputTitle.value)
 
-    // Add UTF-8 external link symbol to link name (text)
+    // OPTIONAL - UTF-8 external link symbol appended to link name (text)
     if (useExternal) { text += inputExternal.value; }
 
-    // Add optional open in new window / tab of browser
+    // OPTIONAL - open in new browser window / tab
     // NOTES: Doesn't work in regular markdown, insert HTML Recipe instead
     //        Markdown Recipe does work for Kramdown (in Jekyll anyway)
+    //        Stack Exchange strips it out of HTML along with other attributes
+    //          See: https://meta.stackexchange.com/a/135909/366359
     var newHtml = ""
     var newMd = ""
     if (useNewWindow) {
@@ -283,13 +282,6 @@ function buildRecipes () {
         titleMd = ' "' + title + ')';
     }
 
-    /* Try alternative forms
-    recipeHTML = '<a href="' + href + newHtml + titleHtml + text + '</a>'
-    recipeMd = "[" + text + inputExternal.value + "]{" + href + titleMd + newMd
-    // Update table column on screen
-    inputRecipeHtml.value = recipeHTML
-    inputRecipeMd.value = recipeMd
-    */
     inputRecipeHtml.value =
         '<a href="' + href + newHtml + titleHtml + text + '</a>'
     inputRecipeMd.value =
@@ -298,10 +290,16 @@ function buildRecipes () {
 
 function sanitizeValue (value) {
     // Special characters in href, text and title attributes need HTML &code;
+    /* Old style only replaces once. Use Regex instead
     value = value.replace('<', '&lt;')
     value = value.replace('>', '&gt;')
-    value = value.replace("'", "&apos;")
-    return value.replace('"', '&quot;')
+    value = value.replace("'", "&apos;") */
+
+    // Regex method. See: https://stackoverflow.com/a/3971261/6929343
+    value = value.replace(/\</g, '&lt;')
+    value = value.replace(/\>/g, '&gt;')
+    value = value.replace(/\'/g, '&apos;')
+    return value.replace(/\"/g, "&quot;"")
 }
 
 /* Future use? */
