@@ -40,13 +40,14 @@ Then simply paste the "baked recipe" into your document with
 <script  type="module" src="{{ site.url }}/assets/js/hyperlinkRecipe.js">
     import {processHyperlinkRecipe} from '/assets/js/hyperlinkRecipe.js';
     document.addEventListener('DOMContentLoaded', function() {
-       processHyperlinkRecipe('hrb_body');
+        processHyperlinkRecipe('hrb_body');
     }, false);
 </script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-       processHyperlinkRecipe('hrb_body');
+        import {processHyperlinkRecipe} from '/assets/js/hyperlinkRecipe.js';
+        processHyperlinkRecipe('hrb_body');
     }, false);
 </script>
 
