@@ -21,8 +21,6 @@
 */
 
 var html = null
-var hrClass = "<style>"
-var hrClass = "<style>"
 
 /* assign element names by id */
 var inputHref = null
@@ -35,8 +33,7 @@ var inputRecipeMd = null
 
 export function processHyperlinkRecipe(id) {
     const b = document.getElementById(id)  // div body id where html codes go
-    doReset();      // Reset all button colors and empty strings
-    paintTable(b);  // display <table>
+    paintTable(b);
 }
 
 function paintTable (b) {
@@ -56,7 +53,8 @@ function paintTable (b) {
             'title="Insert browser address bar string (from the clipboard)"\n' +
             '>URL (href)</button></td>\n'
     html += '<td class="hrInput">\n'
-    html += '<input id="hrHref" type="text" placeholder="Mandatory. URL from clipboard will go here" /></td>\n'
+    html += '<input id="hrHref" type="url" pattern="https?://.+" required\n' +
+            'placeholder="Mandatory. URL from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'                // Link Name (text)
@@ -239,9 +237,15 @@ function doNewWindow () {
     buildRecipes();
 }
 
-function doRecipeHtml () {}
-function doRecipeMd () {}
-function doReset () {}
+function doRecipeHtml () {
+    buildRecipes();
+    // TODO: check mandatory fields href and text are non-blank
+}
+
+function doRecipeMd () {
+    // TODO: Can RecipeHtml and RecipeMd be combined into single function?
+    buildRecipes();
+}
 
 /* old and new not used yet... */
 var oldRecipeHtml = ""
