@@ -25,13 +25,13 @@ var hrClass = "<style>"
 var hrClass = "<style>"
 
 /* assign element names by id */
-var strHref = null
-var strText = null
-var strTitle = null
-var strExternal = null
-var strNewWindow = null
-var strRecipeHtml = null
-var strRecipeMd = null
+var inputHref = null
+var inputText = null
+var inputTitle = null
+var inputExternal = null
+var inputNewWindow = null
+var inputRecipeHtml = null
+var inputRecipeMd = null
 
 export function processHyperlinkRecipe(id) {
     const b = document.getElementById(id)  // div body id where html codes go
@@ -92,7 +92,7 @@ function paintTable (b) {
 
     html += '<tr id="recipes">\n'
     html += '<th>Recipes</th>\n'
-    html += '<th>String sent to the clipboard</th>\n'
+    html += '<th>string sent to the clipboard</th>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'  // HTML Recipe
@@ -169,20 +169,22 @@ function paintTable (b) {
     Search dom.events.testing.asyncClipboard and set true
 
     */
+    /* assign element names by id */
+    inputHref = document.getElementById('hrHref');
+    inputText = document.getElementById('hrText');
+    inputTitle = document.getElementById('hrTitle');
+    inputExternal = document.getElementById('hrExternal');
+    inputNewWindow = document.getElementById('hrNewWindow');
+    inputRecipeHtml = document.getElementById('hrRecipeHtml');
+    inputRecipeMd = document.getElementById('hrRecipeMd');
+
     btnHref.addEventListener('click', () => {
         //var text = window.navigator.clipboard.readText;
         //alert('Trapped text: ' + text)
-        navigator.clipboard.readText().then(
-            clipText => alert('clipText: ' + clipText));
+        //navigator.clipboard.readText().then(
+        window.navigator.clipboard.readText().then(
+            clipText => updateInput (inputHref, clipText));
     });
-    /* assign element names by id */
-    strHref = document.getElementById('hrHref');
-    strText = document.getElementById('hrText');
-    strTitle = document.getElementById('hrTitle');
-    strExternal = document.getElementById('hrExternal');
-    strNewWindow = document.getElementById('hrNewWindow');
-    strRecipeHtml = document.getElementById('hrRecipeHtml');
-    strRecipeMd = document.getElementById('hrRecipeMd');
 
     /* Paste event handlers */
     hrHref.addEventListener('paste', handlePaste);
@@ -194,8 +196,7 @@ function setButtonStyles () {
 }
 
 /* Shared function to read clipboard and update input */
-function updateInput (elm) {
-    const text = window.navigator.clipboard.readText();
+function updateInput (elm, text) {
     if (text == null) {
         alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
               'Chrome will seek your permission per website.\n' +
