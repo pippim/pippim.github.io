@@ -65,7 +65,7 @@ function paintTable (b) {
             '<td><input id="hrTitle" class="hrInput" type="text" \n' +
             'placeholder="Optional. Hover mouse over link and get this tooltip"></td></tr>\n'
     // Options Heading
-    html += '<tr><th>Toggles</th>\n' +
+    html += '<tr><th>Variations</th>\n' +
             '<th>Button toggles options on and off</th></tr>\n'
     // HTML Recipe
     // UTF-8 Symbol for external links
@@ -81,8 +81,8 @@ function paintTable (b) {
             '<td><input id="hrNewWindow" class="hrInput" type="text"\n' +
             'placeholder="Optional. Open link in New Browser Window or Tab"></td></tr>\n'
     // Recipe Heading
-    html += '<tr><th>Recipes</th>\n' +
-            '<th>Baked into the clipboard</th></tr>\n'
+    html += '<tr><th>Bake</th>\n' +
+            '<th>Button puts the recipe into the clipboard</th></tr>\n'
     // HTML Recipe
     html += '<tr><td><button class="hrBtn" id="btnRecipeHtml"' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"' +
