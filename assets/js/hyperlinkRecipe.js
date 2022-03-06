@@ -162,7 +162,13 @@ function paintTable (b) {
     document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
     document.getElementById("btnRecipeMd").onclick = doRecipeMd;
 
-    /* Clipboard functions */
+    /* Clipboard functions
+
+    Enter about:config in navigation bar
+    Click "Accept the Risk and Continue"
+    Search dom.events.testing.asyncClipboard and set true
+
+    */
     btnHref.addEventListener('click', () => {
         var text = window.navigator.clipboard.readText;
         alert('Trapped text: ' + text)
