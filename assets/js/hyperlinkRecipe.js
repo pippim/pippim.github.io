@@ -170,10 +170,10 @@ function paintTable (b) {
 
     */
     btnHref.addEventListener('click', () => {
-        var text = window.navigator.clipboard.readText;
-        alert('Trapped text: ' + text)
-        //navigator.clipboard.readText().then(
-        //    clipText => document.querySelector("#hrRef").innerText += clipText);
+        //var text = window.navigator.clipboard.readText;
+        //alert('Trapped text: ' + text)
+        navigator.clipboard.readText().then(
+            clipText => alert('clipText: ' + clipText);
     });
     /* assign element names by id */
     strHref = document.getElementById('hrHref');
