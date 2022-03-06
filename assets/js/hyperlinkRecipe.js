@@ -208,8 +208,7 @@ function updateInput (elm, text) {
     elm.value = text            // Set value of Input to clipboard contents
     alert('elm.value set to: ' + text)
     elm.value = text            // Is it available after a short pause?
-    document.querySelector("#inputHref").value=text
-    alert('Direct inputHref update to: ' + text)
+    // document.querySelector("#inputHref").value='fudge it'
 }
 
 /* Functions called on button click */
