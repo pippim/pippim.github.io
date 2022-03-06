@@ -154,13 +154,13 @@ function paintTable (b) {
     document.getElementById("hrTable").style.borderSpacing = ".3rem";
 
     /* Define functions on button clicks */
-    document.getElementById("btnHref").onclick = doHref;
-    document.getElementById("btnText").onclick = doText;
-    document.getElementById("btnTitle").onclick = doTitle;
-    document.getElementById("btnExternal").onclick = doExternal;
-    document.getElementById("btnNewWindow").onclick = doNewWindow;
-    document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
-    document.getElementById("btnRecipeMd").onclick = doRecipeMd;
+    //document.getElementById("btnHref").onclick = doHref;
+    //document.getElementById("btnText").onclick = doText;
+    //document.getElementById("btnTitle").onclick = doTitle;
+    //document.getElementById("btnExternal").onclick = doExternal;
+    //document.getElementById("btnNewWindow").onclick = doNewWindow;
+    //document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
+    //document.getElementById("btnRecipeMd").onclick = doRecipeMd;
 
     /* Clipboard functions
 
@@ -180,7 +180,7 @@ function paintTable (b) {
 
     btnHref.addEventListener('click', () => {
         window.navigator.clipboard.readText().then(
-            clipText => updateInput (inputHref, clipText));
+            clipText => { updateInput ('hrHref', clipText)); }
     });
 
     /* Manual paste event handlers - These work but suppress for now... */
@@ -197,7 +197,12 @@ function setButtonStyles () {
 }
 
 /* Shared function to read clipboard and update input */
-function updateInput (elm, text) {
+
+var oldClip = null
+var newClip = null
+
+function updateInput (id, text) {
+    elm = document.getElementById(id)
     if (text == "hell") {
         alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
               'Chrome will seek your permission per website.\n\n' +
@@ -209,7 +214,9 @@ function updateInput (elm, text) {
               'Then click button to add ingredient to recipe.')
         return
     }
+    oldClip = elm.value
     elm.value = text            // Set value of Input to clipboard contents
+    newClip = text
 }
 
 /* Functions called on button click */
