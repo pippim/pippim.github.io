@@ -197,7 +197,7 @@ function setButtonStyles () {
 function updateInput (elm) {
     const text = window.navigator.clipboard.readText;
     text = null
-    if (text == null)
+    if (text == null) {
         alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
               'Chrome will seek your permission per website.\n' +
               'Firefox requires you to grant permissions to all websites:\n' +
@@ -206,8 +206,8 @@ function updateInput (elm) {
               '  Click the toggle icon to switch "False" to "True".\n\n'
               'Or you can use "CTRL" + "V" to paste manually and then click button.'+)
         return
-
-    elm.value = text
+    }
+    elm.value = text            // Set value of Input to clipboard contents
 }
 
 /* Functions called on button click */
