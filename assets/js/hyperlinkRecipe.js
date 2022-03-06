@@ -209,12 +209,37 @@ function updateInput (elm, text) {
 }
 
 /* Non-clipboard reading functions called on button click */
-function doExternal () {}
+var useExternal = false
+var symbolExternal = " 🔗"
+
+function doExternal () {
+    // If external off turn on, if on then turn off
+    useExternal = !useExternal;
+    if (useExternal) {
+        inputExternal.value = symbolExternal
+    } else {
+        inputExternal.value = ""
+    }
+}
+
 function doNewWindow () {}
 function doRecipeHtml () {}
 function doRecipeMd () {}
 function doReset () {}
 
+var recipeHTML = null
+var recipeMd = null
+
+buildRecipes () {
+    // Create HTML & Markdown recipes using ingredients
+    const href = inputHref.value
+    const text = inputText.value
+    const title = inputTitle.value
+
+    
+    recipeHTML = "<a href="
+    recipeMd = "("
+}
 /* Future use? */
 function handlePaste(e) {
   var clipboardData, pastedData;
