@@ -193,17 +193,27 @@ function paintTable (b) {
 function setButtonStyles () {
 }
 
+/* Shared function to read clipboard and update input */
+function updateInput (elm) {
+    const text = window.navigator.clipboard.readText;
+    text = null
+    if (text == null)
+        alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
+              'Chrome will seek your permission per website.\n' +
+              'Firefox requires you to grant permissions to all websites:\n' +
+              '  Enter "about:config" in the address bar (without quotes).\n' +
+              '  Search on "dom.events.testing.asyncClipboard" (without quotes).\n' +
+              '  Click the toggle icon to switch "False" to "True".\n\n'
+              'Or you can use "CTRL" + "V" to paste manually and then click button.'+)
+        return
+
+    elm.value = text
+}
+
 /* Functions called on button click */
 function doHref () {
     // URL (href) button has been clicked. Get clipboard contents
-    console.log('in doHref()')
-    hrHref.focus();
-    var text = window.navigator.clipboard.readText;
-    alert('Text in doHref: ' + text)
-    // hrHref.select();
-    // document.execCommand("paste");
-    // var clip = ClipboardEvent.clipboardData.getData("text/plain");
-    // console.log('clip: ' + clip)
+    updateInput(hrHref);
 }
 
 
