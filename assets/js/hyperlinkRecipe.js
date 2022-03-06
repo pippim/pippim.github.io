@@ -211,20 +211,34 @@ function updateInput (elm, text) {
 
 /* Non-clipboard reading functions called on button click */
 var useExternal = false;
-var symbolExternal = " 🔗";
+var stringExternal = " 🔗";
 
 function doExternal () {
     // If external off turn on, if on then turn off
     useExternal = !useExternal;
     if (useExternal) {
-        inputExternal.value = symbolExternal;
+        inputExternal.value = stringExternal;
     } else {
+        // TODO: If value not blank, save as stringExternal?
         inputExternal.value = "";
     }
     buildRecipes();
 }
 
-function doNewWindow () {}
+var useNewWindow = false;
+var stringNewWindow = 'target="_blank"';
+
+function doNewWindow () {
+    // If external off turn on, if on then turn off
+    useNewWindow = !useNewWindow;
+    if (useNewWindow) {
+        inputNewWindow.value = stringNewWindow;
+    } else {
+        inputNewWindow.value = "";
+    }
+    buildRecipes();
+}
+
 function doRecipeHtml () {}
 function doRecipeMd () {}
 function doReset () {}
@@ -233,23 +247,48 @@ var recipeHTML = null
 var recipeMd = null
 
 function buildRecipes () {
-    // Create HTML & Markdown recipes using ingredients
+    /* Create HTML & Markdown recipes using ingredients */
+
+    // Convert special characters to HTML &code; values
     const href = sanitizeValue(inputHref.value)
     const text = sanitizeValue(inputText.value)
     const title = sanitizeValue(inputTitle.value)
 
-    recipeHTML = "<a href=" + href + '" title="' + title + '">'
-    recipeMd = "[" + text + inputExternal.value + "]{" + href + ' "' + title + '")'
+    // Add UTF-8 external link symbol to link name (text)
+    if (useExternal) { text += inputExternal.value; }
 
+    // Add optional open in new window / tab of browser
+    // NOTES: Doesn't work in regular markdown, insert HTML Recipe instead
+    //        Markdown Recipe does work for Kramdown (in Jekyll anyway)
+    var newHtml = ""
+    var newMd = ""
+    if (useNewWindow) {
+        newHtml = inputNewWindow.value + ' '
+        newMd = '{:' + inputNewWindow.value + '}'
+    }
+
+    // Assume no tooltip - use endings to terminate href attribute
+    titleHtml = '">';
+    TitleMd = ')';
+    // Add optional hover tooltip (title)
+    if (title !== "") {
+        // Format title string that follows URL address (href)
+        titleHtml = '" title="' + title + '">';
+        titleMd = ' "' + title + '");
+    }
+
+    recipeHTML = '<a href="' + href + newHtml + titleHtml + text + '</a>'
+    recipeMd = "[" + text + inputExternal.value + "]{" + href + titleMd + newMd
+    // Update table column on screen
     inputRecipeHtml.value = recipeHTML
     inputRecipeMd.value = recipeMd
 }
 
 function sanitizeValue (value) {
-    // Replace special characters in href, text and title attributes with HTML code
+    // Special characters in href, text and title attributes need HTML &code;
     value = value.replace('<', '&lt;')
     value = value.replace('>', '&gt;')
-    value = value.replace("'", "&apos;")  // Just to be safe don't see need though...
+    value = value.replace("'", "&apos;")
     return value.replace('"', '&quot;')
 }
 
