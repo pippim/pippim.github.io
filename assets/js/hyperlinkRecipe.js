@@ -62,7 +62,8 @@ function paintTable (b) {
             'title="Insert name of link to appear in document (from the clipboard)"\n' +
             '>Name (text)</button></td>\n'
     html += '<td class="hrInput">\n'
-    html += '<input type="text" id="hrText" placeholder="Mandatory. Link name from clipboard will go here" /></td>\n'
+    html += '<input type="text" id="hrText" required\n' +
+            'placeholder="Mandatory. Link name from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'                // Tooltip on Hover (title)
@@ -130,7 +131,7 @@ function paintTable (b) {
 
     // Column 2 minimum width to give lots of room for URL
     // Box sizing takes full column width not varying by text length
-    html += 'input[type="text"] {\n'
+    html += '.hrInput {\n'
     html += '     min-width: 600px;\n'
     html += '     box-sizing: border-box;\n'
     html += '     -webkit-box-sizing:border-box;\n'
