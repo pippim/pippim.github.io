@@ -33,7 +33,7 @@ Then simply paste the "baked recipe" into your document with
 # Using Hyperlink Recipe Builder (HRB)
 
 <div id="hrb_body">
-<p> DUMMY TEXT - Real text set in User Script</p>
+<p> DUMMY TEXT - Real text set in User Script </p>
 </div>
 
 <!--  Top level (E.G. /_layouts/default.html) must contain:  -->
@@ -45,6 +45,9 @@ Then simply paste the "baked recipe" into your document with
 </script>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+       processHyperlinkRecipe('hrb_body');
+    }, false);
 </script>
 
 1. Right-click on your target address bar and select "copy".
