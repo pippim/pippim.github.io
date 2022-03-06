@@ -230,15 +230,17 @@ function doReset () {}
 var recipeHTML = null
 var recipeMd = null
 
-buildRecipes () {
+function buildRecipes () {
     // Create HTML & Markdown recipes using ingredients
     const href = sanitizeValue(inputHref.value)
     const text = sanitizeValue(inputText.value)
     const title = sanitizeValue(inputTitle.value)
 
-
     recipeHTML = "<a href=" + href + '" title="' + title + '">'
     recipeMd = "[" + text + inputExternal.value + "]{" + href + ' "' + title + '")'
+
+    inputRecipeHtml.value = recipeHTML
+    inputRecipeMd.value = recipeMd
 }
 
 function sanitizeValue (value) {
