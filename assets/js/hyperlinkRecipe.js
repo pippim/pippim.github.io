@@ -203,8 +203,9 @@ function updateInput (elm) {
               'Firefox requires you to grant permissions to all websites:\n' +
               '  Enter "about:config" in the address bar (without quotes).\n' +
               '  Search on "dom.events.testing.asyncClipboard" (without quotes).\n' +
-              '  Click the toggle icon to switch "False" to "True".\n\n'
-              'Or you can use "CTRL" + "V" to paste manually and then click button.')
+              '  Click the toggle icon to switch "False" to "True".\n\n' +
+              'Or use "CTRL" + "V" or "Right-Click" then "Paste" to paste manually.\n' +
+              'and then click button to add ingredient to recipe.')
         return
     }
     elm.value = text            // Set value of Input to clipboard contents
