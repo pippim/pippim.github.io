@@ -75,7 +75,7 @@ function paintTable (b) {
     html += '</tr>\n'
 
     html += '<tr>\n'  // UTF-8 Symbol for external links
-    html += '<td><button class="hrBtn" id="btnExternal" onclick="doOption(\"hrExternal\")"' +
+    html += '<td><button class="hrBtn" id="btnExternal" onclick="doOption(\'hrExternal\')" ' +
             'title="Use optional UTF-8 icon to show link is an external website"' +
             '>External link</button></td>\n'
     html += '<td class="hrInput">\n'
@@ -90,7 +90,7 @@ function paintTable (b) {
     html += '<input id="hrNewWindow" type="text" placeholder="Optional. Open link in New Browser Window or Tab"></td>\n'
     html += '</tr>\n'
 
-    html += '<tr id="recipes">\n'
+    html += '<tr id="recipes">\n'  // Recipe row heading
     html += '<th>Recipes</th>\n'
     html += '<th>string sent to the clipboard</th>\n'
     html += '</tr>\n'
@@ -142,7 +142,7 @@ function paintTable (b) {
     html += '  }\n'                 // End of button hover styling
 
     html += 'input[type="text"] {\n'
-    html += '     width: 100%;\n'   // Set to full width of column 2
+    html += '     min-width: 400px;\n'   // Set to full width of column 2
     html += '     box-sizing: border-box;\n'
     html += '     -webkit-box-sizing:border-box;\n'
     html += '     -moz-box-sizing: border-box;\n'
@@ -190,7 +190,7 @@ function paintTable (b) {
 }
 
 function doOption(id) {
-    alert('doOption called with id: ' + id)
+    alert('doOption called with id: ' + id);
 }
 
 function setButtonStyles () {
