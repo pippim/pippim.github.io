@@ -54,8 +54,8 @@ function paintTable (b) {
     html += '<td><button class="hrBtn" id="btnHref" ' +
             'title="Insert browser address bar string (from the clipboard)"' +
             '>URL (href)</button></td>\n'
-    html += '<td id="hrHref" class="hrInput">\n'
-    html += '<input type="text" placeholder="Mandatory. URL from clipboard will go here" /></td>\n'
+    html += '<td class="hrInput">\n'
+    html += '<input id="hrHref" type="text" value="Mandatory. URL from clipboard will go here" /></td>\n'
     html += '</tr>\n'
 
     html += '<tr>\n'
@@ -213,7 +213,7 @@ function updateInput (elm, text) {
 
 /* Functions called on button click */
 function doHref () {
-    var Myelement = document.getElementById("123");
+    var Myelement = document.getElementById("hrHref");
     console.log(Myelement.value);
     Myelement.value = "New value";
     console.log(Myelement.value);
