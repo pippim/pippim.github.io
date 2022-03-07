@@ -132,7 +132,8 @@ function paintTable (b) {
     html += '.hrBtn:hover {\n'
     html += '    color: #fff;\n'
     html += '    background-color: DarkGreen;\n'
-    html += '    border: .163rem solid Black;\n'
+    // border .163rem works ok in Firefox but grows button in Chrome
+    html += '    border: .12rem solid Black;\n'
     html += '  }\n'                 // End of button hover styling
 
     html += '</style>\n'            // End of all styles
@@ -275,8 +276,8 @@ function buildRecipes () {
     }
 
     // Sample Recipes created:
-    // <a href="https://pippim.github.io/hyperlink.html?#" title="easily drop into your own webpage">Hyperlink Recipe Baker 🔗</a>
-    // [Hyperlink Recipe Baker 🔗](https://pippim.github.io/hyperlink.html "easily drop into your own webpage")
+    // <a href="https://github.com/microsoft/monaco-editor/issues/2183" target="_blank"  title="Chrome security prompt to allow reading clipboard">Paste shows warning in Google Chrome#2183  🔗</a>
+    // [Paste shows warning in Google Chrome#2183  🔗](https://github.com/microsoft/monaco-editor/issues/2183 "Chrome security prompt to allow reading clipboard"){:target="_blank"}
 
     inputRecipeHtml.value =
         '<a href="' + href + '"' + newHtml + titleHtml + text + '</a>'
