@@ -206,8 +206,7 @@ function doExternal () {
         // TODO: If value not blank, save as stringExternal?
         inputExternal.value = "";
     }
-    //buildRecipes();
-    alert("do External finished")
+    buildRecipes();
 }
 
 var useNewWindow = false;
@@ -283,7 +282,6 @@ function buildRecipes () {
         '<a href="' + href + '"' + newHtml + titleHtml + text + '</a>'
     inputRecipeMd.value =
         "[" + text + "](" + href + titleMd + newMd
-    alert("end of Build. Check console.log")
 }
 
 function sanitizeValue (value) {
