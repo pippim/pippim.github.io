@@ -226,11 +226,13 @@ function doNewWindow () {
 function doRecipeHtml () {
     buildRecipes();
     // TODO: check mandatory fields href and text are non-blank
+    window.navigator.clipboard.writeText(inputRecipeHtml.value)
 }
 
 function doRecipeMd () {
     // TODO: Can RecipeHtml and RecipeMd be combined into single function?
     buildRecipes();
+    window.navigator.clipboard.writeText(inputRecipeMd.value)
 }
 
 /* old and new not used yet... */
