@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         processHyperlinkRecipe('hrb_body');
     }
 }, false);
-*/
+
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
