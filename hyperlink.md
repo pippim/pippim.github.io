@@ -146,6 +146,19 @@ That JavaScript file imports the source:
     }, false);
 ```
 
+## CSS
+
+In your `/assets/css/style.scss` file (or whatever it is named), add the following:
+
+``` scss
+#hrb_body {
+    border: .3rem solid;  // let color default to text color
+}
+```
+
+Above is optional if you would like a border around the Hyperlink Recipe Builder.
+
+
 ---
 
 <a id="hdr6"></a>
