@@ -1,4 +1,7 @@
-/* hyperlinkRecipe.js - Create hyperlinks from Clipboard pastes (at least two).
+/*
+    Hyperlink Recipe Baker (HRM for short)
+
+    hyperlinkRecipe.js - Create hyperlinks from Clipboard pastes (at least two).
                         Export hyperlinks to Clipboard
                             Recipe 1 = HTML format
                             Recipe 2 = Markdown format
@@ -10,14 +13,15 @@
 
                 Then to call use:
 
-                    const b = document.getElementById('tcm_window_body')
+                    <div id="tcm_window_body"<p> Empty paragraph </p></div>
                     document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
-                        processHyperlinkRecipe(b)
+                        processHyperlinkRecipe('tcm_window_body')
                     });
 
             Assuming this module is called from TCM, the Top level HTML must be using:
                  <script type="module" src="/assets/js/theCookieMachine.js" ></script>
 
+            See: https://pippim.github.io/hyperlink.html
 */
 
 var html = null
@@ -112,7 +116,7 @@ function paintTable (b) {
     // Column 2 minimum width to give lots of room for URL
     // Box sizing takes full column width not varying by text length
     html += '.hrInput {\n'
-    html += '  min-width: 500px;\n' // 600 is ok for modal, too wide for cayman page
+    html += '  min-width: 563px;\n' // 600 is ok for modal, too wide for cayman page
     html += '  box-sizing: border-box;\n'
     html += '  -webkit-box-sizing:border-box;\n'
     html += '  -moz-box-sizing: border-box;\n'
