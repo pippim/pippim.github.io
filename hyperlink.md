@@ -36,20 +36,27 @@ Then simply paste the "baked recipe" into your document with
 <p> DUMMY TEXT - Real text set in User Script </p>
 </div>
 
-<!--  Top level (E.G. /_layouts/default.html) must contain:  -->
-<script  type="module" src="{{ site.url }}/assets/js/hyperlinkRecipe.js">
-    import {processHyperlinkRecipe} from '/assets/js/hyperlinkRecipe.js';
-    //document.addEventListener('DOMContentLoaded', function() {
-    //    processHyperlinkRecipe('hrb_body');
-    //}, false);
-</script>
+<!-- NOTE: <script type="module" replaces the optional type="application/javascript"  
 
-<script type="module">
+Top level (E.G. /_layouts/default.html) must contain a javascript file:
+
+    <script type="module" src="/assets/js/theCookieMachine.js" ></script>
+
+That JavaScript file imports the source:
+
+    // imported functions.  Parent needs <script type="module"...
+    // See: /_layouts/program.html, etc.
+    import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
+    
+    // Webpage may have <div id="hrb_body" defined. If so populate it
     document.addEventListener('DOMContentLoaded', function() {
-        import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
-        processHyperlinkRecipe('hrb_body');
+        // https://stackoverflow.com/a/42526074/6929343
+        var myEle = document.getElementById("hrb_body");
+        if(myEle){
+            processHyperlinkRecipe('hrb_body');
+        }
     }, false);
-</script>
+-->
 
 1. Right-click on your target address bar and select "copy".
 2. Click <kbd>URL (href)</kbd> above to paste.
