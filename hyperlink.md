@@ -38,6 +38,9 @@ Below is the Hyperlink Recipe Baker which you can easily drop into your own webp
 <p> DUMMY TEXT - Real text set in User Script </p>
 </div>
 
+<script>
+    processHyperlinkRecipe('hrb_body')
+</script>
 
 ## Usage
 
