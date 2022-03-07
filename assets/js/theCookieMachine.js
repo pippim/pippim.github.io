@@ -6,7 +6,21 @@
 //       search.js defines global variables
 
 // imported functions.  Parent needs <script type="module"...
+// See: /_layouts/program.html, etc.
 import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
+
+// Webpage may have <div id="hrb_body" defined. If so populate it
+document.addEventListener('DOMContentLoaded', function() {
+    // https://stackoverflow.com/a/42526074/6929343
+    var myEle = document.getElementById("hrb_body");
+    if(myEle){
+        processHyperlinkRecipe('hrb_body');
+    } else {
+        alert('hrb_body not defined.')
+    }
+}, false);
+
+
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
