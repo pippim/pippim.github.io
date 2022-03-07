@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(myEle){
         processHyperlinkRecipe('hrb_body');
         // Optional border in parent to make it stand out
-        myEle.style.border = "thick solid #f1f1f1;"
+        myEle.style.border = "2px solid";
     }
 }, false);
 

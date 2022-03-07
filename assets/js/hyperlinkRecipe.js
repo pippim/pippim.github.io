@@ -169,7 +169,7 @@ function paintTable (b) {
     var myEle = document.getElementById("hrb_body");
     if(myEle){
         // Tried this in theCookieMachine.js and it doesn't work there???
-        myEle.style.border = "thick solid #f1f1f1;"
+        myEle.style.border = "thick solid";
     }
 
     /* Manual paste event handlers - These work but suppress for now... */
