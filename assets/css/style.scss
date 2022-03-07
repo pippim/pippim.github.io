@@ -538,7 +538,7 @@ a.search-results:visited {
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 #tcm_window {
-  // position: absolute;
+  // assets/js/theCookieMachine.js
   position: fixed;
   display: none;
   top: 20px;
@@ -624,3 +624,9 @@ a.search-results:visited {
     font-size: 0.6rem;
   }
 }
+
+#hrb_body {
+    // assets/js/hyperlinkRecipe.js
+    border: .3rem solid;  // let color default to text color
+}
+/* end of /assets/css/style.scss
