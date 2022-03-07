@@ -282,6 +282,7 @@ function buildRecipes () {
         '<a href="' + href + '"' + newHtml + titleHtml + text + '</a>'
     inputRecipeMd.value =
         "[" + text + "](" + href + titleMd + newMd
+    alert("end of Build. Check console.log")
 }
 
 function sanitizeValue (value) {
