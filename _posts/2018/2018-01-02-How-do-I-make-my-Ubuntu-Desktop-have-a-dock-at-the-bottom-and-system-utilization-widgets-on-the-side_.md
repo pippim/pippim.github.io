@@ -10,9 +10,9 @@ created_date: 2018-01-02 11:50:18
 edit_date:    2020-06-12 14:37:07
 votes:        "8 "
 favorites:    
-views:        "2,808 "
+views:        "2,813 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-02-How-do-I-make-my-Ubuntu-Desktop-have-a-dock-at-the-bottom-and-system-utilization-widgets-on-the-side_.md
 toc:          false
 navigation:   false

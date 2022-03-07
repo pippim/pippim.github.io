@@ -10,9 +10,9 @@ created_date: 2019-10-26 01:57:15
 edit_date:    2019-10-26 02:38:49
 votes:        "3 "
 favorites:    
-views:        "261 "
+views:        "262 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-26-software-to-switch-from-AC-to-battery.md
 toc:          false
 navigation:   false

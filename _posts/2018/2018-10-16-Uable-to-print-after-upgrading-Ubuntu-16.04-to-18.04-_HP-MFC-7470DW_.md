@@ -10,9 +10,9 @@ created_date: 2018-10-16 00:34:32
 edit_date:    2018-10-21 17:18:14
 votes:        "2 "
 favorites:    
-views:        "1,542 "
+views:        "1,543 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-16-Uable-to-print-after-upgrading-Ubuntu-16.04-to-18.04-_HP-MFC-7470DW_.md
 toc:          false
 navigation:   false

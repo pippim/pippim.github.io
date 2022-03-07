@@ -10,9 +10,9 @@ created_date: 2019-05-21 23:02:30
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "365 "
+views:        "367 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-21-How-can-I-increase-screen-resolution_.md
 toc:          false
 navigation:   false

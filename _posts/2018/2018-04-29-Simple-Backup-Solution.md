@@ -10,9 +10,9 @@ created_date: 2018-04-29 23:22:32
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "3,827 "
+views:        "3,845 "
 accepted:     
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Simple-Backup-Solution.md
 toc:          false
 navigation:   false
@@ -82,5 +82,5 @@ find $BACKUP_DIR -maxdepth 1 -mtime +"$DAYS_TO_KEEP" -exec rm -rf {} \;
 
 
   [1]: {% post_url /2017/2017-06-06-Backup-Linux-configuration_-scripts-and-documents-to-Gmail %}
-  [2]: {% post_url /2018/2018-01-20-Is-it-necessary-to-keep-records-of-my-backups_ %}
+  [2]: https://askubuntu.com/questions/998082/is-it-necessary-to-keep-records-of-my-backups/998121#998121
   [3]: https://askubuntu.com/questions/553628/find-not-removing-files-in-folders-through-bash-script

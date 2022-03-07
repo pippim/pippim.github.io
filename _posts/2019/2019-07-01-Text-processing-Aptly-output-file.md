@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "171 "
 accepted:     
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Text-processing-Aptly-output-file.md
 toc:          false
 navigation:   true

@@ -8,11 +8,11 @@ type:         Answer
 tags:         bash grep iconic
 created_date: 2020-07-04 02:21:41
 edit_date:    2021-09-04 07:23:11
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "238,728 "
+views:        "239,456 "
 accepted:     
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-07-04-Grep-characters-before-and-after-match_.md
 toc:          false
 navigation:   false

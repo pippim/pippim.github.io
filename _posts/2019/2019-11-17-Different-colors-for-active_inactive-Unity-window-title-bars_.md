@@ -10,9 +10,9 @@ created_date: 2019-11-17 16:53:51
 edit_date:    2019-11-20 00:56:28
 votes:        "4 "
 favorites:    
-views:        "977 "
+views:        "980 "
 accepted:     
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-17-Different-colors-for-active_inactive-Unity-window-title-bars_.md
 toc:          false
 navigation:   true

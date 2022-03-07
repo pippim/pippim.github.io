@@ -80,6 +80,7 @@ html
 http
 hylang
 idlang
+idris
 igorpro
 ini
 io
@@ -100,6 +101,7 @@ jsx
 julia
 kotlin
 lasso
+lean
 liquid
 literate_coffeescript
 literate_haskell
@@ -179,6 +181,8 @@ stata
 supercollider
 swift
 systemd
+syzlang
+syzprog
 tap
 tcl
 terraform

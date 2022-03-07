@@ -10,9 +10,9 @@ created_date: 2016-11-06 17:55:18
 edit_date:    2017-03-20 10:18:11
 votes:        "0 "
 favorites:    
-views:        "1,342 "
+views:        "1,346 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-06-How-to-override-grub-and-boot-to-Ubuntu-directly-_from-UEFI-or-windows__.md
 toc:          false
 navigation:   false

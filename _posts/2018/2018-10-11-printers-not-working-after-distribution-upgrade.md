@@ -10,9 +10,9 @@ created_date: 2018-10-11 01:57:43
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,734 "
+views:        "2,739 "
 accepted:     
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-11-printers-not-working-after-distribution-upgrade.md
 toc:          false
 navigation:   false

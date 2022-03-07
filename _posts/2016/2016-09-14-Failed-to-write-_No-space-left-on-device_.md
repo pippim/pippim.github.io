@@ -10,9 +10,9 @@ created_date: 2016-09-14 10:27:12
 edit_date:    2017-04-13 12:23:12
 votes:        "5 "
 favorites:    
-views:        "31,947 "
+views:        "32,013 "
 accepted:     
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-14-Failed-to-write-_No-space-left-on-device_.md
 toc:          false
 navigation:   false

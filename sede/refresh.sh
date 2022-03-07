@@ -126,9 +126,9 @@ cp ~/website/_includes/posts_by_tag.html _includes/
 cp ~/website/_includes/posts_by_vote.html _includes/
 
 # Add tree listing
-tree -L 3 --dirsfirst --filelimit 20 > tree.work
-tail -n +2 tree.work > _includes/website_tree.txt
-rm tree.work
+tree -L 3 --dirsfirst --filelimit 20 > /tmp/tree.work
+tail -n +2 /tmp/tree.work > _includes/website_tree.txt
+rm /tmp/tree.work
 
 git add _includes/
 retVal=$?
@@ -181,7 +181,7 @@ git add assets/json/search_words.json
 git add assets/json/search_exclude.json
 retVal=$?
 if [ $retVal -ne 0 ]; then
-    echo "git add /assets/json/search_exclude.jsonl FAILED with code: $retVal"
+    echo "git add /assets/json/search_exclude.json FAILED with code: $retVal"
     exit $retVal
 fi
 

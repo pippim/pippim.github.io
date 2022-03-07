@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1164880
 type:         Answer
 tags:         command-line gnome-terminal titlebar
 created_date: 2019-08-11 00:45:50
-edit_date:    2021-04-07 01:20:21
+edit_date:    2022-02-27 14:23:21
 votes:        "12 "
 favorites:    
-views:        "250,941 "
+views:        "251,358 "
 accepted:     
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-11-How-to-change-Gnome-Terminal-title_.md
 toc:          false
 navigation:   false
@@ -20,11 +20,17 @@ clipboard:    false
 ---
 
 
-# Without any 3rd party apps
+# Works on Ubuntu 16.04 to 20.04
 
-## Use: `title "My new title"`
+This answer is simpler than most others. To use it, you would simply type:
 
-Easier to remember than most other answers. Additionally the accepted answer and others do not work on modern versions of Ubuntu (from **16.04** on up). Finally, this answer doesn't require 3rd party packages like `wmctrl` and `xdotool`.
+## `title "My new title"`
+
+- Easier to remember than most other answers.
+- The accepted answer and others do not work on modern versions of Ubuntu (from **16.04** on up).
+- This answer doesn't require 3rd party packages like `wmctrl` and `xdotool`.
+- Version 2 allows running multiple times in the same session.
+
 
 ----------
 

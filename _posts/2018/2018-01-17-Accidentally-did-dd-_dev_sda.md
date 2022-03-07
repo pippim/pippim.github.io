@@ -10,9 +10,9 @@ created_date: 2018-01-17 03:10:04
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "22,059 "
+views:        "22,090 "
 accepted:     
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-17-Accidentally-did-dd-_dev_sda.md
 toc:          false
 navigation:   false

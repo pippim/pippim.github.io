@@ -10,9 +10,9 @@ created_date: 2018-12-07 14:42:32
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "3,964 "
+views:        "3,987 "
 accepted:     
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Nautilus_-Show-image-thumbnails-at-more-than-200_-size.md
 toc:          false
 navigation:   false

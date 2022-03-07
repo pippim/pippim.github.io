@@ -10,9 +10,9 @@ created_date: 2018-08-19 04:06:00
 edit_date:    2018-08-19 14:01:57
 votes:        "3 "
 favorites:    
-views:        "1,638 "
+views:        "1,655 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-How-to-edit-target-path-of-broken-symbolic-link-from-GUI_.md
 toc:          false
 navigation:   false

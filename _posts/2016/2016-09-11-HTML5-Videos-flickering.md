@@ -10,9 +10,9 @@ created_date: 2016-09-11 16:21:55
 edit_date:    2016-09-11 16:30:57
 votes:        "2 "
 favorites:    
-views:        "1,784 "
+views:        "1,786 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-11-HTML5-Videos-flickering.md
 toc:          false
 navigation:   false

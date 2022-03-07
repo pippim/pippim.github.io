@@ -10,9 +10,9 @@ created_date: 2019-06-26 00:44:37
 edit_date:    2019-06-27 23:20:51
 votes:        "4 "
 favorites:    
-views:        "7,216 "
+views:        "7,247 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-26-Copy-group-of-files-_Filename*_-to-backup-_Filename*.bak_.md
 toc:          false
 navigation:   false

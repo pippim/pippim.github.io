@@ -20,14 +20,15 @@
 │   │   └── pngwing.com.png
 │   ├── js
 │   │   ├── copyCode.js
+│   │   ├── hyperlinkRecipe.js
 │   │   ├── post_fm.js
 │   │   ├── search.js
 │   │   └── theCookieMachine.js
-│   ├── json
-│   │   ├── search_exclude.json
-│   │   ├── search_url.json
-│   │   └── search_words.json
-│   └── style.scss
+│   └── json
+│       ├── search_exclude.json
+│       ├── search_url.json
+│       ├── search_words.json
+│       └── website_tree.json
 ├── _includes
 │   ├── copyHeader.html
 │   ├── head-custom.html
@@ -53,7 +54,9 @@
 │       ├── 2022-01-05-Python-to-print-out-status-bar-and-percentage.md
 │       ├── 2022-02-12-How-to-change-_lsblk_-sort-order_.md
 │       ├── 2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
-│       └── 2022-02-18-Unable-to-lock-screen-with-Cron-or-Settings.md
+│       ├── 2022-02-18-Unable-to-lock-screen-with-Cron-or-Settings.md
+│       ├── 2022-02-23-Frequent-switches-between-Ethernet-and-Wifi.md
+│       └── 2022-02-24-stdin_-invalid-argument.md
 ├── _sass
 │   ├── jekyll-theme-cayman.scss
 │   └── toc.scss
@@ -69,14 +72,13 @@
 ├── answers.md
 ├── _config.yml
 ├── favicon.png
+├── hyperlink.md
 ├── index.md
 ├── LICENSE
 ├── mserve.md
 ├── mt.md
 ├── programs.md
 ├── stack.md
-├── tcm.md
-├── tree.work
-└── wc
+└── tcm.md
 
-21 directories, 59 files
+21 directories, 61 files

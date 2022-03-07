@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot dual-boot grub2 windows-10 reboot
 created_date: 2017-02-22 18:18:04
 edit_date:    2017-02-22 20:19:24
-votes:        "22 "
+votes:        "23 "
 favorites:    
-views:        "28,046 "
+views:        "28,213 "
 accepted:     Accepted
-uploaded:     2022-02-28 18:43:56
+uploaded:     2022-03-06 19:51:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-22-How-to-turn-off-the-computer-from-the-GRUB-screen-in-dual-boot.md
 toc:          false
 navigation:   false
