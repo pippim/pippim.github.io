@@ -109,32 +109,28 @@ contents directly in the input field instead of using the button.
 
 # Installing Hyperlink Recipe Builder on your own website
 
-The easiest way is highlight the code in the repo and paste into a new
-file in your website.
+The easiest way is highlight the code in the the GitHub Repository 
+and paste into a new file in your website.
 
 Follow these steps:
 
-- Go to: the GitHub Repository
+- Go to the [repo](https://raw.githubusercontent.com/pippim/hrb/main/hyperlinkRecipe.js "Pippim Hyperlink Recipe Baker GitHub Repository"){:target="_blank"} 
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> to select all text
 - <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy all text to clipboard
-- Go to your own website repo and create a new file
+- Go to your own website repo and create a new file called `/assets/js/hyperlinkRecipe.js`
 - <kbd>Ctrl</kbd> + <kbd>V</kbd> to paste text from clipboard
 - Save the new file
 
-Voila! You have just installed `mt` to your home directory.
-
-Now add it to your GitHub Pages. E.G. `/assets/js/hyerlinkRecipe.js`
-
-Then on your webpage markdown file insert the following:
+On one of your webpage markdown files insert the following:
 
 ``` html
-<!-- The div below is populated by /assets/js/theCookieMachine.js -->
+<!-- The div below is populated by /assets/js/main.js -->
 <div id="hrb_body">
 <p> DUMMY TEXT - Real text set in User Script</p>
 </div>
 ```
 
-Then add the javaScript hooks:
+Then in one of your javaScript files (in this case we used `main.js` enter:
 
 ``` javascript
 /* NOTE: <script type="module" replaces the optional type="application/javascript"
@@ -159,6 +155,9 @@ That JavaScript file imports the source:
     }, false);
 ```
 
+**NOTE:** The javascript file must be called by your toplevel markdown file such
+as `_layouts/default.html`, `_layouts/post.html`, etc.
+
 ## CSS
 
 In your `/assets/css/style.scss` file (or whatever it is named), add the following:
@@ -168,6 +167,9 @@ In your `/assets/css/style.scss` file (or whatever it is named), add the followi
     border: .3rem solid;  // let color default to text color
 }
 ```
+
+You can add more styling into your main CSS file if you like but, keep in mind
+there is a lot of CSS styling done in `hyperlinkRecipe.js`
 
 Above is optional if you would like a border around the Hyperlink Recipe Builder.
 
