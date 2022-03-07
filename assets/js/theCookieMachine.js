@@ -15,12 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var myEle = document.getElementById("hrb_body");
     if(myEle){
         processHyperlinkRecipe('hrb_body');
-    } else {
-        alert('hrb_body not defined.')
+        // Optional border in parent to make it stand out
+        myEle.style.border = "thick solid #f1f1f1;"
     }
 }, false);
-
-
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
