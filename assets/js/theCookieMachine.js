@@ -10,7 +10,7 @@
 import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
 
 // Webpage may have <div id="hrb_body" defined. If so populate it
-/* Test if this is breaking stuff.
+/* Test if this is breaking stuff. */
 //document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', (event) => {
     // https://stackoverflow.com/a/42526074/6929343
@@ -19,7 +19,6 @@ window.addEventListener('load', (event) => {
         processHyperlinkRecipe('hrb_body');
     }
 });
-*/
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
