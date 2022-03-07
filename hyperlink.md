@@ -50,6 +50,16 @@ Below is the Hyperlink Recipe Baker which you can easily drop into your own webp
 7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to copy Hyperlink into clipboard.
 8. Insert the clipboard containing hyperlink into your document.
 
+### Samples
+
+Below is sample HTML recipe created:
+
+- <a href="https://pippim.github.io/hyperlink.html?#" title="easily drop into your own webpage">Hyperlink Recipe Baker 🔗</a>
+
+Below is sample Markdown recipe created:
+
+- [Hyperlink Recipe Baker 🔗](https://pippim.github.io/hyperlink.html?#" easily drop into your own webpage) 
+
 ---
 
 <a id="hdr4"></a>
