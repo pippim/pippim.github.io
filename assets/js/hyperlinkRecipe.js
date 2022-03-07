@@ -33,7 +33,6 @@ var inputRecipeMd = null
 
 export function processHyperlinkRecipe(id) {
     const b = document.getElementById(id)  // div body id where html codes go
-    alert('processHyperlinkRecipe(id) called with: ' + id)
     paintTable(b);
 }
 
