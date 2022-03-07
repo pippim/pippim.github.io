@@ -206,7 +206,8 @@ function doExternal () {
         // TODO: If value not blank, save as stringExternal?
         inputExternal.value = "";
     }
-    buildRecipes();
+    //buildRecipes();
+    alert("do External finished")
 }
 
 var useNewWindow = false;
@@ -226,13 +227,13 @@ function doNewWindow () {
 function doRecipeHtml () {
     buildRecipes();
     // TODO: check mandatory fields href and text are non-blank
-    // window.navigator.clipboard.writeText(inputRecipeHtml.value)
+    window.navigator.clipboard.writeText(inputRecipeHtml.value)
 }
 
 function doRecipeMd () {
     // TODO: Can RecipeHtml and RecipeMd be combined into single function?
     buildRecipes();
-    //window.navigator.clipboard.writeText(inputRecipeMd.value)
+    window.navigator.clipboard.writeText(inputRecipeMd.value)
 }
 
 /* old and new not used yet... */
