@@ -71,6 +71,41 @@ That JavaScript file imports the source:
 7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to copy Hyperlink into clipboard.
 8. Insert the clipboard containing hyperlink into your document.
 
+## Read Clipboard Special Permissions
+
+Modern browsers will let anyone and anything write to the clipboard.
+Reading from the clipboard is a high security function requiring
+explicit permission.
+
+> **Reason for high security to read the Clipboard**
+>   
+> A user may have a document with their passwords in it. When they need
+> to sign on they may open the document, copy their password and paste
+> it into the sign on screen. If you do that remember to immediately
+> copy some random sentence into your clipboard immediately after
+> pasting your password.
+
+### Chrome
+
+Chrome will ask you for permission to allow the copied; URL, Name and 
+Tooltip to be read. 
+
+### Firefox
+
+Firefox requires you to grant
+permission with these steps:
+
+- Enter "about:config" in the address bar (without quotes).
+- Acknowledge the "scary" message.
+- Search on "dom.events.testing.asyncClipboard" (without quotes).
+- Click the toggle icon to switch "False" to "True".
+
+### If You Don't Want to Give Special Permission
+
+If you don't want to grant permissions you can still use HRB by
+using <kbd>Control</kbd> + <kbd>V</kbd> to paste clipboard
+contents directly in the input field instead of using the button.
+
 ---
 
 <a id="hdr4"></a>
