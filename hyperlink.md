@@ -32,6 +32,8 @@ Then simply paste the "baked recipe" into your document with
 
 # Using Hyperlink Recipe Builder (HRB)
 
+Below is the Hyperlink Recipe Baker which you can easily drop into your own webpage.
+
 <div id="hrb_body">
 <p> DUMMY TEXT - Real text set in User Script </p>
 </div>
@@ -58,6 +60,8 @@ That JavaScript file imports the source:
     }, false);
 -->
 
+## Usage
+
 1. Right-click on your target address bar and select "copy".
 2. Click <kbd>URL (href)</kbd> above to paste.
 3. Highlight title from target. Right-click and select "copy".
@@ -74,18 +78,17 @@ That JavaScript file imports the source:
 
 # Installing Hyperlink Recipe Builder on your own website
 
-The easiest way is to
-[open the raw code](https://raw.githubusercontent.com/pippim/multi-timer/main/src/mt)
-on GitHub.
+The easiest way is highlight the code in the repo and paste into a new
+file in your website.
 
-Then use:
+Follow these steps:
 
+- Go to: the GitHub Repository
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> to select all text
 - <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy all text to clipboard
-- Open the terminal with <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>
-- Run `gedit mt`
+- Go to your own website repo and create a new file
 - <kbd>Ctrl</kbd> + <kbd>V</kbd> to paste text from clipboard
-- Save the file and exit gedit.
+- Save the new file
 
 Voila! You have just installed `mt` to your home directory.
 
@@ -97,10 +100,31 @@ Then on your webpage markdown file insert the following:
 <div id="hrb_body">
 <p> DUMMY TEXT - Real text set in User Script</p>
 </div>
-<script>
-import {processHyperlinkRecipe} from '/assets/js/hyperlinkRecipe.js'
-processHyperlinkRecipe('hrb_body')
-</script>
+```
+
+Then add the javaScript hooks:
+
+``` javascript
+/* NOTE: <script type="module" replaces the optional type="application/javascript"  
+
+Top level (E.G. /_layouts/default.html) must contain a javascript file:
+
+    <script type="module" src="/assets/js/theCookieMachine.js" ></script>
+
+That JavaScript file imports the source:
+*/
+    // imported functions.  Parent needs <script type="module"...
+    // See: /_layouts/program.html, etc.
+    import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
+    
+    // Webpage may have <div id="hrb_body" defined. If so populate it
+    document.addEventListener('DOMContentLoaded', function() {
+        // https://stackoverflow.com/a/42526074/6929343
+        var myEle = document.getElementById("hrb_body");
+        if(myEle){
+            processHyperlinkRecipe('hrb_body');
+        }
+    }, false);
 ```
 
 ---
