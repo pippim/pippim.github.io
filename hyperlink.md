@@ -52,13 +52,15 @@ Below is the Hyperlink Recipe Baker which you can easily drop into your own webp
 
 ### Samples
 
-Below is sample HTML recipe created:
+Below is sample HTML baked recipe:
 
-- <a href="https://pippim.github.io/hyperlink.html" title="easily drop into your own webpage">Hyperlink Recipe Baker 🔗</a>
+- <a href="https://github.com/microsoft/monaco-editor/issues/2183" target="_blank"  title="Chrome security prompt to allow reading clipboard">Paste shows warning in Google Chrome#2183  🔗</a>
 
-Below is sample Markdown recipe created:
+Below is sample Markdown baked recipe:
 
-- [Hyperlink Recipe Baker 🔗](https://pippim.github.io/hyperlink.html "easily drop into your own webpage") 
+- [Paste shows warning in Google Chrome#2183  🔗](https://github.com/microsoft/monaco-editor/issues/2183 "Chrome security prompt to allow reading clipboard"){:target="_blank"} 
+
+Voila! You are now a master baker.
 
 ---
 
