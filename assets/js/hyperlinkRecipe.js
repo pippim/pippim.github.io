@@ -100,41 +100,39 @@ function paintTable (b) {
             'placeholder="Markdown Recipe will be built here"></td></tr>\n'
     // End of our table and form
     html += '</table></form>\n'
-
     /* Set styling for table elements */
     html += '<style>\n'             // Styling for Hyperlink Recipe table
-
-    html += '#hrHdr {\n'            // Heading: "Hyperlink Recipe Baker" <h3> styling
-    html += '  margin-top: .5rem;\n'
-    html += '  margin-bottom: .5rem;\n'
-    html += '}\n'
-
-    html += 'td {\n'                // Table details
-    html += '  padding: 0 1rem;\n'  // Space between columns
-    html += '}\n'
-
+    // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
+    html += '#hrHdr {\n' +
+            '  margin: .5rem;\n' +
+            '}\n'
+    // Table details: Space between columns
+    html += 'td {\n' +
+            '  padding: 0 1rem;\n' +
+            '}\n'
     // Column 2 minimum width to give lots of room for URL
+    // width and height = 100% for <textarea> draggable corner to resize
     // Box sizing takes full column width not varying by text length
-    html += '.hrInput {\n'
-    html += '  min-width: 550px;\n' // 600 is ok for modal, too wide for webpage
-    html += '  box-sizing: border-box;\n'
-    html += '  -webkit-box-sizing:border-box;\n'
-    html += '  -moz-box-sizing: border-box;\n'
-    html += '}\n'
-
-    html += '.hrBtn {\n'            // Buttons in the first column
-    html += '  background-color: YellowGreen;\n'
-    html += '  width: 100%;\n'
-    html += '  border-radius: .5rem;\n'
-    html += '  text-align: center;\n'
-    html += '}\n'                   // End of button styling
-
-    html += '.hrBtn:hover {\n'
-    html += '    color: #fff;\n'
-    html += '    background-color: DarkGreen;\n'
-    // border .163rem works ok in Firefox but grows button in Chrome
-    html += '    border: .12rem solid Black;\n'
-    html += '  }\n'                 // End of button hover styling
+    html += '.hrInput {\n' +
+            '  min-width: 550px;\n' +
+            '  width: 100%x; height: 100%;\n' +
+            '  box-sizing: border-box;\n' +
+            '  -webkit-box-sizing:border-box;\n' +
+            '  -moz-box-sizing: border-box;\n' +
+            '}\n'
+    // Buttons in the first column
+    html += '.hrBtn {\n' +
+            '  background-color: YellowGreen;\n' +
+            '  width: 100%;\n' +
+            '  border-radius: .5rem;\n' +
+            '  text-align: center;\n' +
+            '}\n' +
+    // Button Hover: border .163rem ok in Firefox but grows in Chrome
+    html += '.hrBtn:hover {\n' +
+            '    color: #fff;\n' +
+            '    background-color: DarkGreen;\n' +
+            '    border: .12rem solid Black;\n' +
+            '  }\n'
 
     html += '</style>\n'            // End of all styles
 
