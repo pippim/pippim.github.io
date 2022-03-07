@@ -116,7 +116,7 @@ function paintTable (b) {
     // Column 2 minimum width to give lots of room for URL
     // Box sizing takes full column width not varying by text length
     html += '.hrInput {\n'
-    html += '  min-width: 563px;\n' // 600 is ok for modal, too wide for cayman page
+    html += '  min-width: 550px;\n' // 600 is ok for modal, too wide for webpage
     html += '  box-sizing: border-box;\n'
     html += '  -webkit-box-sizing:border-box;\n'
     html += '  -moz-box-sizing: border-box;\n'
@@ -164,6 +164,13 @@ function paintTable (b) {
     document.getElementById("btnNewWindow").onclick = doNewWindow;
     document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
     document.getElementById("btnRecipeMd").onclick = doRecipeMd;
+
+    /* Style the parent division ONLY if it's a web page */
+    var myEle = document.getElementById("hrb_body");
+    if(myEle){
+        // Tried this in theCookieMachine.js and it doesn't work there???
+        myEle.style.border = "thick solid #f1f1f1;"
+    }
 
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
