@@ -626,8 +626,7 @@ a.search-results:visited {
 }
 
 #hrb_body {
-    // border: .3rem solid;  // let color default to text color
-    // Is border causing scroll to top of page after clipboard copy/paste?
+    border: .2rem solid;  // let color default to text color
 }
 
 /* end of /assets/css/style.scss */
