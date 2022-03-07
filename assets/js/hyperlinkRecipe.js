@@ -165,13 +165,6 @@ function paintTable (b) {
     document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
     document.getElementById("btnRecipeMd").onclick = doRecipeMd;
 
-    /* Style the parent division ONLY if it's a web page */
-    var myEle = document.getElementById("hrb_body");
-    if(myEle){
-        // Tried this in theCookieMachine.js and it doesn't work there???
-        myEle.style.border = "thick solid";
-    }
-
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
