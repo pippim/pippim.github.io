@@ -14,7 +14,7 @@ import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
 document.addEventListener('DOMContentLoaded', function() {
     // https://stackoverflow.com/a/42526074/6929343
     var myEle = document.getElementById("hrb_body");
-    if(myEle){
+    if(myEle != null){
         processHyperlinkRecipe('hrb_body');
     }
 }, false);
