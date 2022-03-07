@@ -38,27 +38,6 @@ Below is the Hyperlink Recipe Baker which you can easily drop into your own webp
 <p> DUMMY TEXT - Real text set in User Script </p>
 </div>
 
-<!-- NOTE: <script type="module" replaces the optional type="application/javascript"  
-
-Top level (E.G. /_layouts/default.html) must contain a javascript file:
-
-    <script type="module" src="/assets/js/theCookieMachine.js" ></script>
-
-That JavaScript file imports the source:
-
-    // imported functions.  Parent needs <script type="module"...
-    // See: /_layouts/program.html, etc.
-    import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
-    
-    // Webpage may have <div id="hrb_body" defined. If so populate it
-    document.addEventListener('DOMContentLoaded', function() {
-        // https://stackoverflow.com/a/42526074/6929343
-        var myEle = document.getElementById("hrb_body");
-        if(myEle){
-            processHyperlinkRecipe('hrb_body');
-        }
-    }, false);
--->
 
 ## Usage
 
