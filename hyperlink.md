@@ -34,13 +34,10 @@ Then simply paste the "baked recipe" into your document with
 
 Below is the Hyperlink Recipe Baker which you can easily drop into your own webpage.
 
+<!-- The div below is populated by /assets/js/theCookieMachine.js -->
 <div id="hrb_body">
 <p> DUMMY TEXT - Real text set in User Script </p>
 </div>
-
-<script>
-    processHyperlinkRecipe('hrb_body')
-</script>
 
 ## Usage
 
@@ -129,6 +126,7 @@ Now add it to your GitHub Pages. E.G. `/assets/js/hyerlinkRecipe.js`
 Then on your webpage markdown file insert the following:
 
 ``` html
+<!-- The div below is populated by /assets/js/theCookieMachine.js -->
 <div id="hrb_body">
 <p> DUMMY TEXT - Real text set in User Script</p>
 </div>
