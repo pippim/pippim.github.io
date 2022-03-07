@@ -271,13 +271,17 @@ function buildRecipes () {
     if (title !== "") {
         // Format title string that follows URL address (href)
         titleHtml = ' title="' + title + '">';
-        titleMd = ' ' + title + ')';
+        titleMd = ' "' + title + '")';
     }
+
+    // Sample Recipes created:
+    // <a href="https://pippim.github.io/hyperlink.html?#" title="easily drop into your own webpage">Hyperlink Recipe Baker 🔗</a>
+    // [Hyperlink Recipe Baker 🔗](https://pippim.github.io/hyperlink.html?#" easily drop into your own webpage)
 
     inputRecipeHtml.value =
         '<a href="' + href + '"' + newHtml + titleHtml + text + '</a>'
     inputRecipeMd.value =
-        "[" + text + "](" + href + '"' + titleMd + newMd
+        "[" + text + "](" + href + titleMd + newMd
 }
 
 function sanitizeValue (value) {
