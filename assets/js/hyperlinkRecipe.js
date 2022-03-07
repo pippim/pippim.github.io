@@ -113,7 +113,7 @@ function paintTable (b) {
     // Column 2 minimum width to give lots of room for URL
     // Box sizing takes full column width not varying by text length
     html += '.hrInput {\n'
-    html += '  min-width: 600px;\n'
+    html += '  min-width: 500px;\n' // 600 is ok for modal, too wide for cayman page
     html += '  box-sizing: border-box;\n'
     html += '  -webkit-box-sizing:border-box;\n'
     html += '  -moz-box-sizing: border-box;\n'
