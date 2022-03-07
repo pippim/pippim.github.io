@@ -54,11 +54,11 @@ Below is the Hyperlink Recipe Baker which you can easily drop into your own webp
 
 Below is sample HTML recipe created:
 
-- <a href="https://pippim.github.io/hyperlink.html?#" title="easily drop into your own webpage">Hyperlink Recipe Baker 🔗</a>
+- <a href="https://pippim.github.io/hyperlink.html" title="easily drop into your own webpage">Hyperlink Recipe Baker 🔗</a>
 
 Below is sample Markdown recipe created:
 
-- [Hyperlink Recipe Baker 🔗](https://pippim.github.io/hyperlink.html?#" easily drop into your own webpage) 
+- [Hyperlink Recipe Baker 🔗](https://pippim.github.io/hyperlink.html "easily drop into your own webpage") 
 
 ---
 
