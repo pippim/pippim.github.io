@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var myEle = document.getElementById("hrb_body");
     if(myEle){
         processHyperlinkRecipe('hrb_body');
-        // Optional border in parent to make it stand out
-        myEle.style.border = "2px solid";
     }
 }, false);
 
