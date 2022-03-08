@@ -91,6 +91,21 @@ function paintTable (b) {
     html += 'td {\n' +
             '  padding: 0 1rem;\n' +
             '}\n'
+    // Buttons in the first column. Tiny bit of left & right padding
+    // Because Chrome and Firefox vary between shrinking & expanding on hover
+    html += '.hrBtn {\n' +
+            '  background-color: YellowGreen;\n' +
+            '  width: 100%;\n' +
+            '  padding: 0 .1rem;\n' +
+            '  border-radius: .5rem;\n' +
+            '  text-align: center;\n' +
+            '}\n'
+    // Button Hover: border .163rem ok in Firefox but grows in Chrome
+    html += '.hrBtn:hover {\n' +
+            '    color: #fff;\n' +
+            '    background-color: DarkGreen;\n' +
+            '    border: .12rem solid Black;\n' +
+            '  }\n'
     // Column 2 minimum width to give lots of room for URL
     // width and height = 100% for <textarea> draggable corner to resize
     // Box sizing takes full column width not varying by text length
@@ -101,19 +116,6 @@ function paintTable (b) {
             '  -webkit-box-sizing:border-box;\n' +
             '  -moz-box-sizing: border-box;\n' +
             '}\n'
-    // Buttons in the first column
-    html += '.hrBtn {\n' +
-            '  background-color: YellowGreen;\n' +
-            '  width: 100%;\n' +
-            '  border-radius: .5rem;\n' +
-            '  text-align: center;\n' +
-            '}\n'
-    // Button Hover: border .163rem ok in Firefox but grows in Chrome
-    html += '.hrBtn:hover {\n' +
-            '    color: #fff;\n' +
-            '    background-color: DarkGreen;\n' +
-            '    border: .12rem solid Black;\n' +
-            '  }\n'
 
     html += '</style>\n'            // End of all styles
 
