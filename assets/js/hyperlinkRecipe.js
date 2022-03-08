@@ -86,7 +86,7 @@ function paintTable (b) {
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrHdr { margin: .5rem; }\n'
     // No borders in table
-    html += 'table { border-collapse: collapse; }\n'
+    html += 'table { border: none; }\n'
     // No borders in table
     html += '#hrTable { border-collapse: collapse; }\n'
     // Table details: Space between columns
