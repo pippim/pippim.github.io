@@ -87,7 +87,7 @@ function paintTable (b) {
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrHdr { margin: .5rem; }\n'
     // No borders in table
-    html += 'table, th, tr, td { border: none ! important; }\n'
+    html += '.hrBtn, .hrInput { border: none ! important; }\n'
     // Table details: Space between columns
     html += 'td { padding: 0 1rem; border-collapse: collapse; }\n'
     // Buttons in the first column. Tiny bit of left & right padding
@@ -146,7 +146,7 @@ function paintTable (b) {
     document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
     document.getElementById("btnRecipeMd").onclick = doRecipeMd;
 
-    /* Functions when user types or pastes directly */
+    /* When user changes a character or pastes directly */
     inputHref.oninput = function() {buildRecipes()};
     inputText.oninput = function() {buildRecipes()};
     inputTitle.oninput = function() {buildRecipes()};
