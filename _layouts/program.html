@@ -17,7 +17,7 @@
     <script src="{{ site.url }}/assets/js/post_fm.js"></script>
 
     <!--  <link rel="shortcut icon" type="image/jpg" href="/assets/img/earth-from-space.jpg"> -->
-    <link rel="shortcut icon" type="image/jpg" href="/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
   
   </head>
   <body>
@@ -29,20 +29,13 @@
       <!-- javascript for search bar -->
       <script type="text/javascript" src="/assets/js/search.js" ></script>
 
-      <!-- javascript for Hyperlink Recipe Baker -->
-      <script type="module" src="/assets/js/hyperlinkRecipe.js" >
-        import {processHyperlinkRecipe} from '/assets/js/hyperlinkRecipe.js';
-      </script>
-      
       <!-- Removing email button from current blog page, as separate button bar provided for it  -->
       <a href="/index.html" style="display: inline" class="button">⌂ Home</a>
       <a href="/about.html" style="display: inline" class="button">❓ About</a>
       <a href="/answers.html" style="display: inline" class="button">✅ Answers</a>
       <a href="/programs.html" style="display: inline" class="button">💻 Programs</a>
 
-      <!-- Draggable DIV 
-      // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
-      -->
+      <!-- Draggable DIV -->
       {% include tcm-window.html %}
 
       <main id="content" class="main-content" role="main">
