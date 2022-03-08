@@ -83,14 +83,12 @@ function paintTable (b) {
     html += '</table></form>\n'
     /* Set styling for table elements */
     html += '<style>\n'             // Styling for Hyperlink Recipe table
+    // No borders in table
+    html += '#hrTable { border-collapse: collapse; }\n'
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
-    html += '#hrHdr {\n' +
-            '  margin: .5rem;\n' +
-            '}\n'
+    html += '#hrHdr { margin: .5rem; }\n'
     // Table details: Space between columns
-    html += 'td {\n' +
-            '  padding: 0 1rem;\n' +
-            '}\n'
+    html += 'td { padding: 0 1rem; }\n'
     // Buttons in the first column. Tiny bit of left & right padding
     // Because Chrome and Firefox vary between shrinking & expanding on hover
     html += '.hrBtn {\n' +
@@ -102,7 +100,6 @@ function paintTable (b) {
             '  text-align: center;\n' +
             '}\n'
     // Button Hover: border .163rem ok in Firefox but grows in Chrome
-    // Mar 7/22 remove: border: .12rem solid Black;
     html += '.hrBtn:hover {\n' +
             '  color: #fff;\n' +
             '  background-color: DarkGreen;\n' +
