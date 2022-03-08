@@ -35,8 +35,8 @@ function paintTable (b) {
     html += '<tr><td><button class="hrBtn" id="btnHref" type="button"\n' +
             'title="Insert browser address bar string (from the clipboard)"\n' +
             '>URL (href)</button></td>\n' +
-            '<td><input id="hrHref" class="hrInput" type="url" pattern="https?://.+" \n' +
-            'placeholder="Mandatory. URL from clipboard will go here" /></td></tr>\n'
+            '<td><textarea id="hrHref" class="hrInput" cols="45" rows="1"" \n' +
+            'placeholder="Mandatory. URL from clipboard will go here"></textarea></td></tr>\n'
     // Link Name (text)
     html += '<tr><td><button class="hrBtn" id="btnText" type="button"\n' +
             'title="Insert name of link to appear in document (from the clipboard)"\n' +
@@ -71,8 +71,8 @@ function paintTable (b) {
     html += '<tr><td><button class="hrBtn" id="btnRecipeHtml" type="button"\n' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"\n' +
             '>HTML</button></td>\n' +
-            '<td><input id="hrRecipeHtml" class="hrInput" type="text"\n' +
-            'placeholder="HTML Recipe will be built here"></td></tr>\n'
+            '<td><textarea id="hrRecipeHtml" class="hrInput" cols="45" rows="1"\n' +
+            'placeholder="HTML Recipe will be built here"></textarea></td></tr>\n'
     // Bake Markdown Recipe
     html += '<tr><td><button class="hrBtn" id="btnRecipeMd" type="button"\n' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"\n' +
