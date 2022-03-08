@@ -101,10 +101,11 @@ function paintTable (b) {
             '  text-align: center;\n' +
             '}\n'
     // Button Hover: border .163rem ok in Firefox but grows in Chrome
+    // Mar 7/22 remove: border: .12rem solid Black;
+
     html += '.hrBtn:hover {\n' +
             '    color: #fff;\n' +
             '    background-color: DarkGreen;\n' +
-            '    border: .12rem solid Black;\n' +
             '  }\n'
     // Column 2 minimum width to give lots of room for URL
     // width and height = 100% for <textarea> draggable corner to resize
