@@ -79,14 +79,15 @@ function paintTable (b) {
             '>Markdown</button></td>\n' +
             '<td><textarea id="hrRecipeMd" class="hrInput" cols="45" rows="1"\n' +
             'placeholder="Markdown Recipe will be built here"></textarea></td></tr>\n'
-    // End of our table and form
-    html += '</table></form>\n'
-    /* Set styling for table elements */
-    html += '<style>\n'             // Styling for Hyperlink Recipe table
+    html += '</table></form>\n'     // End of our table and form
+
+
+    // Styling for Hyperlink Recipe table
+    html += '<style>\n'
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrHdr { margin: .5rem; }\n'
     // No borders in table
-    html += 'table, th, tr, td { border: none; }\n'
+    html += 'table, th, tr, td { border: none ! important; }\n'
     // Table details: Space between columns
     html += 'td { padding: 0 1rem; border-collapse: collapse; }\n'
     // Buttons in the first column. Tiny bit of left & right padding
