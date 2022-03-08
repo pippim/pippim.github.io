@@ -147,11 +147,11 @@ function paintTable (b) {
     document.getElementById("btnRecipeMd").onclick = doRecipeMd;
 
     /* Functions when user types or pastes directly */
-    inputHref.oninput = buildRecipes();
-    inputText.oninput = buildRecipes();
-    inputTitle.oninput = buildRecipes();
-    inputExternal.oninput = buildRecipes();
-    inputNewWindow.oninput = buildRecipes();
+    inputHref.oninput = function() {buildRecipes()};
+    inputText.oninput = function() {buildRecipes()};
+    inputTitle.oninput = function() {buildRecipes()};
+    inputExternal.oninput = function() {buildRecipes()};
+    inputNewWindow.oninput = function() {buildRecipes()};
 
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
