@@ -96,7 +96,7 @@ function paintTable (b) {
     html += '.hrBtn {\n' +
             '  background-color: YellowGreen;\n' +
             '  width: 100%;\n' +
-            '  padding: 0 .3rem;\n' +
+            '  padding: 0 .4rem;\n' +
             '  border-radius: .5rem;\n' +
             '  text-align: center;\n' +
             '}\n'
