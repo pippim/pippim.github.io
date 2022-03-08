@@ -83,12 +83,14 @@ function paintTable (b) {
     html += '</table></form>\n'
     /* Set styling for table elements */
     html += '<style>\n'             // Styling for Hyperlink Recipe table
-    // No borders in table
-    html += '#hrTable { border-collapse: collapse; }\n'
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrHdr { margin: .5rem; }\n'
+    // No borders in table
+    html += 'table { border-collapse: collapse; }\n'
+    // No borders in table
+    html += '#hrTable { border-collapse: collapse; }\n'
     // Table details: Space between columns
-    html += 'td { padding: 0 1rem; }\n'
+    html += 'td { padding: 0 1rem; border-collapse: collapse; }\n'
     // Buttons in the first column. Tiny bit of left & right padding
     // Because Chrome and Firefox vary between shrinking & expanding on hover
     html += '.hrBtn {\n' +
