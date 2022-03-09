@@ -84,6 +84,8 @@ function paintTable (b) {
 
     // Styling for Hyperlink Recipe table
     html += '<style>\n'
+    // Parent <div> should have border for better looks
+    html += '#hrb_body { border: .2rem solid; }\n'
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrHdr { margin: .5rem; }\n'
     // No borders in table
@@ -299,7 +301,7 @@ function validateUrl(Url) {
     validUrlSyntax = isValidUrl(Url)
     if (validUrlSyntax == false){
         validUrlExists = false
-        alert('The URL(href) entered has an invalid syntax:\n\n' + Url)
+        alert('The website address (URL) has invalid format:\n\n' + Url)
         return  // No point getting an error message in developer tools
     }
 
@@ -307,11 +309,11 @@ function validateUrl(Url) {
     var performance = window.performance
     var startTime = performance.now()
     validUrlExists = UrlExists(Url)
-    if (validUrlExists == false){
-        alert('The URL(href) entered has is 404 (does NOT exist):\n\n' + Url)
-    }
     var endTime = performance.now()
     var elapsedTime = endTime - startTime
+    if (validUrlExists == false){
+        alert('The website address (URL) does not exist (404 error):\n\n' + Url)
+    }
     alert('validUrlSyntax: ' + validUrlSyntax +
           ' validUrlExists: ' + validUrlExists +
           ' time to check: ' + elapsedTime + ' milliseconds')
@@ -321,7 +323,7 @@ function validateUrl(Url) {
 export function isValidUrl(Url) {
     // See:  https://stackoverflow.com/a/49849482
     var res = Url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-    // return (res !== null)
+    // return (res !== null)  // Fails on URL: &&
     return (res != null)
 }
 
