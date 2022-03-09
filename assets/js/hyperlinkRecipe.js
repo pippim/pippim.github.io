@@ -295,16 +295,20 @@ function validateUrl(Url) {
         return validUrlExists  // Same URL would be same 404 status
     }
     validUrlSyntax = isValidUrl(Url)
+    var startTime = performance.now()
     validUrlExists = UrlExists(Url)
+    var endTime = performance.now()
     alert('validUrlSyntax: ' + validUrlSyntax +
-          'validUrlExists: ' + validUrlExists)
+          'validUrlExists: ' + validUrlExists +
+          'time to check: ' + ${endTime - startTime} + ' milliseconds`)
     lastUrl = Url
 }
 
 export function isValidUrl(Url) {
     // See:  https://stackoverflow.com/a/49849482
     var res = Url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-    return (res !== null)
+    // return (res !== null)
+    return (res != null)
 }
 
 export function UrlExists(Url) {
