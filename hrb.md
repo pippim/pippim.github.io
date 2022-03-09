@@ -20,5 +20,11 @@ layout: hrb
 8. Insert the clipboard containing hyperlink into your document.
 
 For more details, including dropping this page into your own
-website, see the [complete instructions](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
+website, see the 
+[complete instructions](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
 
+> **Important note for Stack Exchange Users**
+>  
+> Do **NOT** use the *New Window/Tab* option. Stack Exchange will 
+> not render the final HTML whatsoever. Even the link name and
+> href will be lost. 

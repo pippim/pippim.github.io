@@ -50,6 +50,12 @@ Below is the Hyperlink Recipe Baker which you can easily drop into your own webp
 7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to copy Hyperlink into clipboard.
 8. Insert the clipboard containing hyperlink into your document.
 
+> **Important note for Stack Exchange Users**
+>  
+> Do **NOT** use the *New Window/Tab* option. Stack Exchange will 
+> not render the final HTML whatsoever. Even the link name and
+> href will be lost.
+
 ### Samples
 
 Below is sample HTML baked recipe:
@@ -260,7 +266,8 @@ layout: hrb
 8. Insert the clipboard containing hyperlink into your document.
 
 For more details, including dropping this page into your own
-website, see the [complete instructions](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
+website, see the 
+[complete instructions](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
 ```
 
 If you have cloned the entire {{ site.title }} website, edit the
@@ -273,7 +280,7 @@ hyperlink with your own website address.
 
 
 {% include copyHeader.html %}
-```javascript
+``` javascript
 /*
     /assets/js/hyperlinkRecipe.js - Hyperlink Recipe Baker (HRM for short)
 
@@ -306,7 +313,7 @@ function paintTable (b) {
     html += '<form><table id="hrTable" class="hr_table">\n'
     // Ingredients heading
     html += '<tr><th>Ingredients</th>\n' +
-            '<th>Button inserts the clipboard contents</th></tr>\n'
+            '<th>Button inserts the clipboard contents, or type below</th></tr>\n'
     // Button and Input for URL (href) Must be https?//:  Note glitch with "required"
     html += '<tr><td><button class="hrBtn" id="btnHref" type="button"\n' +
             'title="Insert browser address bar string (from the clipboard)"\n' +
@@ -590,9 +597,6 @@ function validateUrl(Url) {
     if (validUrlExists == false){
         alert('The website address (URL) does not exist (404 error):\n\n' + Url)
     }
-    alert('validUrlSyntax: ' + validUrlSyntax +
-          ' validUrlExists: ' + validUrlExists +
-          ' time to check: ' + elapsedTime + ' milliseconds')
     lastUrl = Url
 }
 
