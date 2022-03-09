@@ -180,7 +180,7 @@ function updateInput (elm, text) {
     newClip = text
     buildRecipes();
     if (elm == inputHref) {
-        alert('inputHref passed')
+        validateUrl(text);
     }
 }
 
@@ -285,7 +285,14 @@ function sanitizeValue (value) {
     return value.replace(/\"/g, "&quot;")
 }
 
-validateURL () {
+var lastUrl = null
+var validUrlSyntax = null
+var validUrlRequest = null
+
+validateUrl(Url) {
+    if (Url == lastUrl) {
+        return validUrlRequest  // Same URL would be same 404 status
+    }
 }
 
 /* Future use? */
