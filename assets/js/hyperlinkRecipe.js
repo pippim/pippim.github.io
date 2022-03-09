@@ -287,13 +287,22 @@ function sanitizeValue (value) {
 
 var lastUrl = null
 var validUrlSyntax = null
-var validUrlRequest = null
+var validUrlExists = null
 
-validateUrl(Url) {
+function validateUrl(Url) {
     if (Url == lastUrl) {
-        return validUrlRequest  // Same URL would be same 404 status
+        return validUrlExists  // Same URL would be same 404 status
     }
 }
+
+export function UrlExists(Url) {
+    // See: https://stackoverflow.com/a/31936894
+    var http = new XMLHttpRequest();
+    http.open('HEAD', Url, false);
+    http.send();
+    return http.status!=404;
+}
+
 
 /* Future use? */
 function handlePaste(e) {
