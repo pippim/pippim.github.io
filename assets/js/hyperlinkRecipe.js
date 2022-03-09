@@ -164,7 +164,7 @@ var oldClip = null
 var newClip = null
 
 function updateInput (elm, text) {
-    if (text == "hell") {
+    if (text == null) {
         alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
               'Chrome will seek your permission per website.\n\n' +
               'Firefox requires you to grant permissions to all websites:\n' +
@@ -179,6 +179,9 @@ function updateInput (elm, text) {
     elm.value = text            // Set value of Input to clipboard contents
     newClip = text
     buildRecipes();
+    if (elm == inputHref) {
+        alert('inputHref passed')
+    }
 }
 
 /* Non-clipboard reading functions called on button click */
