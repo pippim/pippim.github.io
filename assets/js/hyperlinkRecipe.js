@@ -295,10 +295,19 @@ function validateUrl(Url) {
         return validUrlExists  // Same URL would be same 404 status
     }
     validUrlSyntax = isValidUrl(Url)
+    if (validUrlSyntax == false){
+        validUrlExists = false
+        alert('The URL(href) entered has an invalid syntax:\n\n' + Url)
+        return  // No point getting an error message in developer tools
+    }
+
     // https://stackoverflow.com/a/28747321/6929343
     var performance = window.performance
     var startTime = performance.now()
     validUrlExists = UrlExists(Url)
+    if (validUrlExists == false){
+        alert('The URL(href) entered has is 404 (does NOT exist):\n\n' + Url)
+    }
     var endTime = performance.now()
     var elapsedTime = endTime - startTime
     alert('validUrlSyntax: ' + validUrlSyntax +
