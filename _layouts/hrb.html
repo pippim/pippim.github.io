@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--  https://github.com/pippim/pippim.github.io/new/main/_layhouts/hrb.html
+
+      Stripped down default.html version without searchbar, buttons and tcm.
+ 
+      Requires:
+        hrb.js (Stub JavaScript that imports hyperlinkRecipe.js
+        hyperlinkRecipe.js (imported by hrb.js)
+        hrb.md (Stub markdown that renders to https://pippim.github.io/hrb.html
+-->
+
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--   -->
+    <link rel="stylesheet" 
+          href="{{ '/assets/css/style.css?v=' | 
+                append: site.github.build_revision | relative_url }}">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name"
+        >{{ page.title | default: site.title |
+         default: site.github.repository_name }}</h1>
+
+      <!-- javascript for Hyperlink Recipe Baker -->
+      <script type="module" src="/assets/js/hrb.js"></script>
+
+      {{ content }}
+
+    </main>
+  </body>
+</html>
