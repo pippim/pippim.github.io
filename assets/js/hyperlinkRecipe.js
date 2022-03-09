@@ -314,9 +314,9 @@ function validateUrl(Url) {
     if (validUrlExists == false){
         alert('The website address (URL) does not exist (404 error):\n\n' + Url)
     }
-    alert('validUrlSyntax: ' + validUrlSyntax +
-          ' validUrlExists: ' + validUrlExists +
-          ' time to check: ' + elapsedTime + ' milliseconds')
+    //alert('validUrlSyntax: ' + validUrlSyntax +
+    //      ' validUrlExists: ' + validUrlExists +
+    //      ' time to check: ' + elapsedTime + ' milliseconds')
     lastUrl = Url
 }
 
