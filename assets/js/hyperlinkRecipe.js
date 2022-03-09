@@ -30,25 +30,25 @@ function paintTable (b) {
     html += '<form><table id="hrTable" class="hr_table">\n'
     // Ingredients heading
     html += '<tr><th>Ingredients</th>\n' +
-            '<th>Button inserts the clipboard contents</th></tr>\n'
+            '<th>Button inserts the clipboard contents, or type below</th></tr>\n'
     // Button and Input for URL (href) Must be https?//:  Note glitch with "required"
     html += '<tr><td><button class="hrBtn" id="btnHref" type="button"\n' +
-            'title="Insert browser address bar string (from the clipboard)"\n' +
+            'title="Browser address bar (paste from the clipboard)"\n' +
             '>URL (href)</button></td>\n' +
             '<td><textarea id="hrHref" class="hrInput" cols="45" rows="1"" \n' +
             'placeholder="Mandatory. URL from clipboard will go here"></textarea></td></tr>\n'
     // Link Name (text)
     html += '<tr><td><button class="hrBtn" id="btnText" type="button"\n' +
-            'title="Insert name of link to appear in document (from the clipboard)"\n' +
+            'title="Name of link to appear in document. Paste or type in."\n' +
             '>Name (text)</button></td>\n' +
             '<td><input id="hrText" class="hrInput" type="text" type="button"\n' +
             'placeholder="Mandatory. Link name from clipboard will go here" /></td></tr>\n'
     // Tooltip on Hover (title)
     html += '<tr><td><button class="hrBtn" id="btnTitle" type="button"\n' +
-            'title="Insert optional tooltip details about link (from the clipboard)"\n' +
+            'title="Optional tooltip when hovering over link name"\n' +
             '>Tooltip (title)</button></td>\n' +
             '<td><input id="hrTitle" class="hrInput" type="text"\n' +
-            'placeholder="Optional. Hover mouse over link and get this tooltip"></td></tr>\n'
+            'placeholder="Optional. Hovering mouse over link displays tooltip"></td></tr>\n'
     // Variations Heading
     html += '<tr><th>Variations</th>\n' +
             '<th>Button toggles options on and off</th></tr>\n'
