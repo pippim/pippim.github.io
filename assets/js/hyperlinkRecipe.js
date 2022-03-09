@@ -296,14 +296,14 @@ function validateUrl(Url) {
     }
     validUrlSyntax = isValidUrl(Url)
     // https://stackoverflow.com/a/28747321/6929343
-    var performance = window.performance;
+    var performance = window.performance
     var startTime = performance.now()
     validUrlExists = UrlExists(Url)
     var endTime = performance.now()
     var elapsedTime = endTime - StartTime
     alert('validUrlSyntax: ' + validUrlSyntax +
-          'validUrlExists: ' + validUrlExists +
-          'time to check: ' + elapsedTime + ' milliseconds`)
+          ' validUrlExists: ' + validUrlExists +
+          ' time to check: ' + elapsedTime + ' milliseconds')
     lastUrl = Url
 }
 
