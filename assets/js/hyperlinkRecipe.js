@@ -164,7 +164,7 @@ var oldClip = null
 var newClip = null
 
 function updateInput (elm, text) {
-    if (text == null) {
+    if (text == null || text == "") {
         alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
               'Chrome will seek your permission per website.\n\n' +
               'Firefox requires you to grant permissions to all websites:\n' +
@@ -283,6 +283,9 @@ function sanitizeValue (value) {
     value = value.replace(/\>/g, '&gt;')
     value = value.replace(/\'/g, '&apos;')
     return value.replace(/\"/g, "&quot;")
+}
+
+validateURL () {
 }
 
 /* Future use? */
