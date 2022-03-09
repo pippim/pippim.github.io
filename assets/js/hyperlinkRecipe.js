@@ -226,14 +226,15 @@ function doRecipeMd () {
     window.navigator.clipboard.writeText(inputRecipeMd.value)
 }
 
-/* old and new not used yet... */
-var oldRecipeHtml = ""
-var oldRecipeMd = ""
-var newRecipeHtml = ""
-var newRecipeMd = ""
-
 function buildRecipes () {
     /* Create HTML & Markdown recipes using ingredients */
+
+    // If both mandatory fields are empty then do nothing
+    if (inputHref === "" and inputText === "" ) {
+        inputRecipeHtml.value = ""
+        inputRecipeMd.value = ""
+        return
+    }
 
     // Convert special characters to HTML &code; values
     var href = sanitizeValue(inputHref.value)
@@ -293,6 +294,15 @@ function validateUrl(Url) {
     if (Url == lastUrl) {
         return validUrlExists  // Same URL would be same 404 status
     }
+    validUrlSyntax = isValidUrl(Url)
+    validUrlExists = UrlExists(Url)
+    alert('validUrlSyntax: ' + validUrlSyntax +
+          'validUrlExists: ' + validUrlExists)
+}
+
+export function isValidUrl(string) {
+  var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+  return (res !== null)
 }
 
 export function UrlExists(Url) {
