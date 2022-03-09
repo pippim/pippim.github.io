@@ -18,3 +18,6 @@ layout: hrb
 6. Click <kbd>Tooltip (title)</kbd> above to paste.
 7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to copy Hyperlink into clipboard.
 8. Insert the clipboard containing hyperlink into your document.
+
+For more details, including dropping this page into your own
+website, see the [complete instructions](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
