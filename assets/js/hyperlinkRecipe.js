@@ -300,7 +300,7 @@ function validateUrl(Url) {
     var startTime = performance.now()
     validUrlExists = UrlExists(Url)
     var endTime = performance.now()
-    var elapsedTime = endTime - StartTime
+    var elapsedTime = endTime - startTime
     alert('validUrlSyntax: ' + validUrlSyntax +
           ' validUrlExists: ' + validUrlExists +
           ' time to check: ' + elapsedTime + ' milliseconds')
