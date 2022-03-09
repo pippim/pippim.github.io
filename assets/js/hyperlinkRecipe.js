@@ -230,7 +230,7 @@ function buildRecipes () {
     /* Create HTML & Markdown recipes using ingredients */
 
     // If both mandatory fields are empty then do nothing
-    if (inputHref === "" and inputText === "" ) {
+    if (inputHref === "" && inputText === "") {
         inputRecipeHtml.value = ""
         inputRecipeMd.value = ""
         return
@@ -298,11 +298,13 @@ function validateUrl(Url) {
     validUrlExists = UrlExists(Url)
     alert('validUrlSyntax: ' + validUrlSyntax +
           'validUrlExists: ' + validUrlExists)
+    lastUrl = Url
 }
 
-export function isValidUrl(string) {
-  var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-  return (res !== null)
+export function isValidUrl(Url) {
+    // See:  https://stackoverflow.com/a/49849482
+    var res = Url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    return (res !== null)
 }
 
 export function UrlExists(Url) {
