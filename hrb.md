@@ -13,9 +13,9 @@ layout: hrb
 1. Right-click on your target address bar and select "copy".
 2. Click <kbd>URL (href)</kbd> above to paste.
 3. Highlight title from target. Right-click and select "copy".
-4. Click <kbd>Name (text)</kbd> above to paste.
+4. Click <kbd>Name (text)</kbd> above to paste. Or, type in a name.
 5. Highlight excerpt from target. Right-click and select "copy".
-6. Click <kbd>Tooltip (title)</kbd> above to paste.
+6. Click <kbd>Tooltip (title)</kbd> above to paste. Or, type in a name.
 7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to copy Hyperlink into clipboard.
 8. Insert the clipboard containing hyperlink into your document.
 

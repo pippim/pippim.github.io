@@ -17,7 +17,7 @@ Then simply paste the "baked recipe" into your document with
 <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 
 
-> **NOTE:** The Hyperlink Recipe Builder is not suitable for small screens (E.G. Smart Phones).
+> **NOTE:** The Hyperlink Recipe Baker is not suitable for small screens (E.G. Smart Phones).
 
 ---
 
@@ -30,7 +30,7 @@ Then simply paste the "baked recipe" into your document with
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
-# Using Hyperlink Recipe Builder (HRB)
+# Using Hyperlink Recipe Baker (HRB)
 
 Below is the Hyperlink Recipe Baker which you can easily drop into your own webpage.
 
@@ -44,9 +44,9 @@ Below is the Hyperlink Recipe Baker which you can easily drop into your own webp
 1. Right-click on your target address bar and select "copy".
 2. Click <kbd>URL (href)</kbd> above to paste.
 3. Highlight title from target. Right-click and select "copy".
-4. Click <kbd>Name (text)</kbd> above to paste.
+4. Click <kbd>Name (text)</kbd> above to paste. Or, type in a name.
 5. Highlight excerpt from target. Right-click and select "copy".
-6. Click <kbd>Tooltip (title)</kbd> above to paste.
+6. Click <kbd>Tooltip (title)</kbd> above to paste. Or, type in a name.
 7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to copy Hyperlink into clipboard.
 8. Insert the clipboard containing hyperlink into your document.
 
@@ -107,7 +107,12 @@ contents directly in the input field instead of using the button.
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
-# Install Hyperlink Recipe Builder on a Website
+# Install Hyperlink Recipe Baker on a Website
+
+You can install *Hyperlink Recipe Baker*, **HRB** for short, 
+on your own website. For this purpose a 
+[scaled down version](https://pippim.github.io/hrb.html "Specially designed webpage easier to understand"){:target="_blank"}
+
 
 The easiest way is highlight the code in the the GitHub Repository
 and paste into a new file in your website.
@@ -121,12 +126,14 @@ Follow these steps:
 - <kbd>Ctrl</kbd> + <kbd>V</kbd> to paste text from clipboard
 - Save the new file
 
-A scaled down version of your webpage top level `_layout` files:
-
 ---
 
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+
+## Add JavaScript Filename to TOp Level HTML
+
+A scaled down version of your webpage top level `_layout` file:
 
 {% include copyHeader.html %}
 ``` html
@@ -172,7 +179,7 @@ A scaled down version of your webpage top level `_layout` files:
 <!-- End of _layouts/hrb.html -->
 ```
 
-The only lines of particular interest are:
+For HRB installation, The only lines of particular interest are:
 
 {% include copyHeader.html %}
 ```html
@@ -180,12 +187,20 @@ The only lines of particular interest are:
 <script type="module" src="/assets/js/hrb.js"></script>
 ```
 
+You may already have a JavaScript file setup in your top
+level HTML. In this case simply change the `type` from
+`applicatdion/javascript` to `module`. Then proceed to the next
+section.
+
 ---
 
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-Then in one of your javaScript files (in this case we used `hrb.js` enter:
+## Modify JavaScript File to Import `hyperlinkRecipe.js`
+
+Then in one of your javaScript files (in this case we used `hrb.js`)
+setup the code to invoke HRB:
 
 {% include copyHeader.html %}
 ``` javascript
@@ -217,7 +232,9 @@ as `_layouts/default.html`, `_layouts/post.html`, etc.
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
-The markdown file that is rendered to HTML:
+## Sample Markdown File with HRB Body
+
+The `hrb.html` markdown file is rendered to HTML:
 
 {% include copyHeader.html %}
 ```html
@@ -245,6 +262,9 @@ layout: hrb
 For more details, including dropping this page into your own
 website, see the [complete instructions](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
 ```
+
+If you have cloned the entire {{ site.title }} website, edit the
+hyperlink with your own website address.
 
 ---
 
