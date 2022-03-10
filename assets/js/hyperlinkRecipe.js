@@ -347,8 +347,9 @@ export function UrlExists(Url) {
 }
 
 export function setTextAreaRows (textarea) {
-    // var minRows = Number(textarea.attr('rows'));  // .attr is not a function error...
-    var maxRows = 5;
+    var minRows = Number(textarea.rows);
+    var maxRows = Number(textarea.rows);
+    console.log(textarea.id + " min: " + minRows + " max: " + maxRows);
     /* https://stackoverflow.com/questions/13591339/html2canvas-offscreen
 
         Using // as comment above makes code run instead with error:
@@ -365,14 +366,14 @@ export function setTextAreaRows (textarea) {
     // var maxRows = Number(textarea.attr('max-rows'));
     let elm_clone = elm.cloneNode(true) // true makes deep clone
 
-    elm_clone.id = “cloned-textarea”      // Must have unique id
+    elm_clone.id = "“cloned-textarea"      // Must have unique id
     // alternate method:
-    elm_clone.setAttribute(‘id’, ‘cloned-textarea’)
+    elm_clone.setAttribute('id', 'cloned-textarea')
 
     // turn on scroll bar
-    elm_clone.setAttribute(‘resize’, ‘vertical’)
+    elm_clone.setAttribute('resize', 'vertical')
 
-    elm_clone.setAttribute(‘overflow:’, ‘auto’)
+    elm_clone.setAttribute('overflow:', 'auto')
     // clone the textarea and hide it off screen
     // TODO: copy all the styles
     var textareaClone = $('<textarea/>', {
