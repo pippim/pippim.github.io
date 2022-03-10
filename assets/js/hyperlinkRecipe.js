@@ -380,9 +380,7 @@ export function setTextAreaRows (textarea) {
 
         // copy the rows value back to the real textarea
         textarea.attr('rows', textareaClone.attr('rows'));
-    }).trigger('input');
 	});
-});
 }
 
 /* Future use? */
