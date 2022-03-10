@@ -342,7 +342,16 @@ export function UrlExists(Url) {
 export function setTextAreaRows (textarea) {
     // var minRows = Number(textarea.attr('rows'));  // .attr is not a function error...
     var maxRows = 5;
-    // https://stackoverflow.com/questions/13591339/html2canvas-offscreen
+    /* https://stackoverflow.com/questions/13591339/html2canvas-offscreen
+
+        Using // as comment above makes code run instead with error:
+
+            Cross-Origin Request Blocked: The Same Origin Policy disallows reading
+             the remote resource at
+             https://stackoverflow.com/questions/13591339/html2canvas-offscreen.
+             (Reason: CORS header “Access-Control-Allow-Origin” missing).
+
+    */
     var clone = textarea.cloneNode(true);
     return  // Stuff below will fail until ported
 
