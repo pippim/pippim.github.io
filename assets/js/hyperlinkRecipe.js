@@ -73,11 +73,11 @@ function paintTable (b) {
             '>HTML</button></td>\n' +
             '<td><textarea id="hrRecipeHtml" class="hrInput" cols="45" rows="1"\n' +
             'placeholder="HTML Recipe will be built here"></textarea></td></tr>\n'
-    // Bake Markdown Recipe
+    // Bake Markdown Recipe. Text max="5" for errors
     html += '<tr><td><button class="hrBtn" id="btnRecipeMd" type="button"\n' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"\n' +
             '>Markdown</button></td>\n' +
-            '<td><textarea id="hrRecipeMd" class="hrInput" cols="45" rows="1"\n' +
+            '<td><textarea id="hrRecipeMd" class="hrInput" cols="45" rows="1" max="5"\n' +
             'placeholder="Markdown Recipe will be built here"></textarea></td></tr>\n'
     html += '</table></form>\n'     // End of our table and form
 
@@ -337,6 +337,13 @@ export function UrlExists(Url) {
     http.open('HEAD', Url, false);
     http.send();
     return http.status!=404;
+    /* https://stackoverflow.com/questions/24371734/firefox-cross-origin-request-blocked-despite-headers
+
+         Cross-Origin Request Blocked: The Same Origin Policy
+         disallows reading the remote resource at
+         https://stackoverflow.com/questions/13591339/html2canvas-offscreen.
+         (Reason: CORS header “Access-Control-Allow-Origin” missing).
+    */
 }
 
 export function setTextAreaRows (textarea) {
@@ -356,7 +363,16 @@ export function setTextAreaRows (textarea) {
     return  // Stuff below will fail until ported
 
     // var maxRows = Number(textarea.attr('max-rows'));
+    let elm_clone = elm.cloneNode(true) // true makes deep clone
 
+    elm_clone.id = “cloned-textarea”      // Must have unique id
+    // alternate method:
+    elm_clone.setAttribute(‘id’, ‘cloned-textarea’)
+
+    // turn on scroll bar
+    elm_clone.setAttribute(‘resize’, ‘vertical’)
+
+    elm_clone.setAttribute(‘overflow:’, ‘auto’)
     // clone the textarea and hide it off screen
     // TODO: copy all the styles
     var textareaClone = $('<textarea/>', {
