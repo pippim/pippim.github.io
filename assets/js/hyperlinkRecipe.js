@@ -180,6 +180,7 @@ function updateInput (elm, text) {
     oldClip = elm.value
     elm.value = text            // Set value of Input to clipboard contents
     newClip = text
+    setTextAreaRows(elm)        // Adjust <textarea> rows=x
     buildRecipes();
     if (elm == inputHref) {
         validateUrl(text);
@@ -276,8 +277,11 @@ function buildRecipes () {
 
     inputRecipeHtml.value =
         '<a href="' + href + '"' + newHtml + titleHtml + text + '</a>'
+    setTextAreaRows(inputRecipeHtml)        // Adjust <textarea> rows=x
+
     inputRecipeMd.value =
         "[" + text + "](" + href + titleMd + newMd
+    setTextAreaRows(inputRecipeMd)        // Adjust <textarea> rows=x
 }
 
 function sanitizeValue (value) {
@@ -335,6 +339,51 @@ export function UrlExists(Url) {
     return http.status!=404;
 }
 
+export function setTextAreaRows (textarea) {
+    var minRows = Number(textarea.attr('rows'));
+    var maxRows = 5;
+    return  // Stuff below will fail until ported
+
+    // var maxRows = Number(textarea.attr('max-rows'));
+
+    // clone the textarea and hide it off screen
+    // TODO: copy all the styles
+    var textareaClone = $('<textarea/>', {
+        rows: minRows,
+        maxRows: maxRows,
+        class: textarea.attr('class')
+    }).css({
+        position: 'absolute',
+        left: -$(document).width() * 2
+    }).insertAfter(textarea);
+
+    var textareaCloneNode = textareaClone.get(0);
+
+    textarea.on('input', function () {
+        // copy the input from the real textarea
+        textareaClone.val(textarea.val());
+
+        // set as small as possible to get the real scroll height
+        textareaClone.attr('rows', 1);
+
+        // save the real scroll height
+        var scrollHeight = textareaCloneNode.scrollHeight;
+
+        // increase the number of rows until the content fits
+        for (var rows = minRows; rows < maxRows; rows++) {
+            textareaClone.attr('rows', rows);
+
+            if (textareaClone.height() > scrollHeight) {
+                break;
+            }
+        }
+
+        // copy the rows value back to the real textarea
+        textarea.attr('rows', textareaClone.attr('rows'));
+    }).trigger('input');
+	});
+});
+}
 
 /* Future use? */
 function handlePaste(e) {
