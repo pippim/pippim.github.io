@@ -347,13 +347,18 @@ export function UrlExists(Url) {
 }
 
 export function setTextAreaRows (textarea) {
+
+    /* To avoid resizing box set the textarea to correct number of rows
+       to fit data. Should really be built into HTML but it's not today
+       March 10, 2022.
+    */
     var minRows = Number(textarea.rows);
-    // Custom attribute defined?
+    // Custom attribute for maximum number of rows defined?
     if (!textarea.hasOwnProperty('data-max')) {
-        maxRows = 5  // HTML doesn't specify data-max="99"
+        var maxRows = 5  // HTML doesn't specify data-max="99"
         console.log('dataset.max undefined. Using 5 for maximum rows')
     } else {
-        maxRows = Number(textarea.dataset.max)
+        var maxRows = Number(textarea.dataset.max)
     }
     console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
     /* https://stackoverflow.com/questions/13591339/html2canvas-offscreen
