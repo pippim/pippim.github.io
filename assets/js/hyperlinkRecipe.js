@@ -185,6 +185,7 @@ function updateInput (elm, text) {
     setTextAreaRows(elm)        // Adjust <textarea> rows=x
     buildRecipes();
     if (elm == inputHref) {
+        // Below causing warning because it is synchronous
         validateUrl(text);
     }
 }
@@ -370,6 +371,7 @@ export function setTextAreaRows (textarea) {
     // get width: https://stackoverflow.com/a/36711188/6929343
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     w = w * -2  // To set left off of screen
+
     console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows +
                 " clone.id: " + clone.id + " clone.rows: " + clone.rows + " w: " + w);
     /* Below has wrong syntax ?
@@ -395,7 +397,9 @@ export function setTextAreaRows (textarea) {
 
     clone.setAttribute('overflow-y', 'scroll')
     clone.position = 'absolute';
-    clone.left = toString(w) + "px";
+    left = toString(w) + "px";
+    console.log('left: ' + left)
+    clone.left = left;
     console.log("clone left: " + clone.left + " resize: " + clone.resize +
                 " clone.position: " + clone.position);
     return  // Stuff below will fail until ported
