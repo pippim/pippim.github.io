@@ -353,7 +353,7 @@ export function setTextAreaRows (textarea) {
         maxRows = 5  // HTML doesn't specify data-max="99"
         console.log('dataset.max undefined. Using 5 for maximum rows')
     } else {
-        maxRows = Number(textarea.dataset.max}
+        maxRows = Number(textarea.dataset.max)
     }
     console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
     /* https://stackoverflow.com/questions/13591339/html2canvas-offscreen
