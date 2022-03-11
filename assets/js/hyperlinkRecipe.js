@@ -77,7 +77,7 @@ function paintTable (b) {
     html += '<tr><td><button class="hrBtn" id="btnRecipeMd" type="button"\n' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"\n' +
             '>Markdown</button></td>\n' +
-            '<td><textarea id="hrRecipeMd" class="hrInput" cols="45" rows="1" max="5"\n' +
+            '<td><textarea id="hrRecipeMd" class="hrInput" cols="45" rows="1" data-max="5"\n' +
             'placeholder="Markdown Recipe will be built here"></textarea></td></tr>\n'
     html += '</table></form>\n'     // End of our table and form
 
@@ -348,8 +348,8 @@ export function UrlExists(Url) {
 
 export function setTextAreaRows (textarea) {
     var minRows = Number(textarea.rows);
-    var maxRows = Number(textarea.max);
-    console.log(textarea.id + " min: " + minRows + " max: " + maxRows);
+    var maxRows = textarea.data-max;
+    console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
     /* https://stackoverflow.com/questions/13591339/html2canvas-offscreen
 
         Using // as comment above makes code run instead with error:
