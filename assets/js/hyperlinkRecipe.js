@@ -348,7 +348,13 @@ export function UrlExists(Url) {
 
 export function setTextAreaRows (textarea) {
     var minRows = Number(textarea.rows);
-    var maxRows = textarea.dataset.max;
+    // Custom attribute
+    if (textarea.dataset.max === undefined) {
+        maxRows = 5  // HTML doesn't specify data-max="99"
+        console.log('dataset.max undefined. Using 5 for maximum rows')
+    } else {
+        maxRows = Number(textarea.dataset.max}
+    }
     console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
     /* https://stackoverflow.com/questions/13591339/html2canvas-offscreen
 
