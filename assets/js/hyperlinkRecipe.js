@@ -382,7 +382,7 @@ export function setTextAreaRows (textarea) {
     */
     clone.rows = "1";               // clone.style.cssText not working
     clone.resize = 'vertical';
-    clone.overflow-y = 'scroll';
+    clone.setAttribute('overflow-y', 'scroll')
     clone.position = 'absolute';
     clone.left = toString((w * -2)) + "px";
     console.log("clone left: " + clone.left + " resize: " + clone.resize +
