@@ -391,8 +391,6 @@ export function setTextAreaRows (textarea) {
     // Uncaught (in promise) DOMException: String contains an invalid character
     //clone.setAttribute('-webkit-box-sizing', 'content-box')
     //clone.setAttribute('-moz-box-sizing', 'content-box')
-    clone.setAttribute('webkit-box-sizing', 'content-box')
-    clone.setAttribute('moz-box-sizing', 'content-box')
     clone.setAttribute('overflow-y', 'scroll')
 
     clone.setAttribute('overflow-y', 'scroll')
