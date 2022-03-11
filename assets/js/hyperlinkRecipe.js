@@ -374,11 +374,11 @@ export function setTextAreaRows (textarea) {
 
     */
     var clone = textarea.cloneNode(true);
-    elm_clone.id = "cloned-textarea"      // Must have unique id
-    elm_clone.setAttribute('rows', '1')  // Reset to 1 row to get scroll bar
+    clone.id = "cloned-textarea"      // Must have unique id
+    clone.setAttribute('rows', '1')  // Reset to 1 row to get scroll bar
     // get width: https://stackoverflow.com/a/36711188/6929343
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    elm_clone.cssText = `
+    clone.style.cssText = `
         rows: "1";
         resize: 'vertical';
         overflow-y: 'scroll';
