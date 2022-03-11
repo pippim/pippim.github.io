@@ -369,6 +369,7 @@ export function setTextAreaRows (textarea) {
     clone.setAttribute('rows', '1')  // Reset to 1 row to get scroll bar
     // get width: https://stackoverflow.com/a/36711188/6929343
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    w = w * -2  // To set left off of screen
     console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows +
                 " clone.id: " + clone.id + " clone.rows: " + clone.rows + " w: " + w);
     /* Below has wrong syntax ?
@@ -381,13 +382,21 @@ export function setTextAreaRows (textarea) {
     `;
     */
     clone.rows = "1";               // clone.style.cssText not working
-    clone.resize = 'vertical';
+    // clone.resize = 'vertical';
     // Uncaught (in promise) ReferenceError: y is not defined
     // clone.setAttribute('overflow-y', 'scroll')
+    clone.resize = 'none';
+    // Remove box-sizing: border-box;
+    clone.setAttribute('box-sizing', 'content-box')
+    clone.setAttribute('-webkit-box-sizing', 'content-box')
+    clone.setAttribute('-moz-box-sizing', 'content-box')
+    clone.setAttribute('overflow-y', 'scroll')
+
+    clone.setAttribute('overflow-y', 'scroll')
     clone.position = 'absolute';
-    clone.left = toString((w * -2)) + "px";
+    clone.left = toString(w) + "px";
     console.log("clone left: " + clone.left + " resize: " + clone.resize +
-                " overflow-y: " + 'clone.overflow-y' + " clone.position: " + clone.position);
+                " clone.position: " + clone.position);
     return  // Stuff below will fail until ported
 
     console.log("elm.left: " + elm.left)
