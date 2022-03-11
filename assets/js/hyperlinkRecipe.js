@@ -166,6 +166,8 @@ var oldClip = null
 var newClip = null
 
 function updateInput (elm, text) {
+    // Pasting from clipboard could have line break at end of string
+    var text = text.replace(/\n$/, '');
     if (text == null || text == "") {
         alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
               'Chrome will seek your permission per website.\n\n' +
@@ -372,21 +374,15 @@ export function setTextAreaRows (textarea) {
 
     */
     var clone = textarea.cloneNode(true);
+    elm_clone.id = "cloned-textarea"      // Must have unique id
+    elm_clone.setAttribute('rows', '1')  // Reset to 1 row to get scroll bar
     return  // Stuff below will fail until ported
 
-    // var maxRows = Number(textarea.attr('max-rows'));
-    let elm_clone = elm.cloneNode(true) // true makes deep clone
-
-    elm_clone.id = "“cloned-textarea"      // Must have unique id
-    // alternate method:
-    elm_clone.setAttribute('id', 'cloned-textarea')
-
-    elm_clone.setAttribute('rows', '1')  // Reset to 1 row to get scroll bar
 
     // turn on scroll bar
     elm_clone.setAttribute('resize', 'vertical')
 
-    elm_clone.setAttribute('overflow:', 'auto')
+    elm_clone.setAttribute('overflow-y:', 'scroll')
     // clone the textarea and hide it off screen
     // TODO: copy all the styles
     var textareaClone = $('<textarea/>', {
