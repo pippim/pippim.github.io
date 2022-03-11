@@ -397,7 +397,7 @@ export function setTextAreaRows (textarea) {
 
     clone.setAttribute('overflow-y', 'scroll')
     clone.position = 'absolute';
-    left = toString(w) + "px";
+    var left = toString(w) + "px";
     console.log('left: ' + left)
     clone.left = left;
     console.log("clone left: " + clone.left + " resize: " + clone.resize +
