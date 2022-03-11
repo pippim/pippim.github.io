@@ -371,6 +371,7 @@ export function setTextAreaRows (textarea) {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows +
                 " clone.id: " + clone.id + " clone.rows: " + clone.rows + " w: " + w);
+    /* Below has wrong syntax ?
     clone.style.cssText = `
         rows: "1";
         resize: 'vertical';
@@ -378,6 +379,14 @@ export function setTextAreaRows (textarea) {
         position: 'absolute';
         left: -($w * 2) + 0px;
     `;
+    */
+    clone.rows = "1";               // clone.style.cssText not working
+    clone.resize = 'vertical';
+    clone.overflow-y = 'scroll';
+    clone.position = 'absolute';
+    clone.left = toString((w * -2)) + "px";
+    console.log("clone left: " + clone.left + " resize: " + clone.resize +
+                " overflow-y: " + clone.overflow-y + " clone.position: " + clone.position);
     return  // Stuff below will fail until ported
 
     console.log("elm.left: " + elm.left)
