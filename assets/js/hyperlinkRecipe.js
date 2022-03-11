@@ -349,7 +349,7 @@ export function UrlExists(Url) {
 export function setTextAreaRows (textarea) {
     var minRows = Number(textarea.rows);
     // Custom attribute defined?
-    if (!textarea.hasOwnProperty(dataset.max)) {
+    if (!textarea.hasOwnProperty('data-max')) {
         maxRows = 5  // HTML doesn't specify data-max="99"
         console.log('dataset.max undefined. Using 5 for maximum rows')
     } else {
@@ -375,6 +375,8 @@ export function setTextAreaRows (textarea) {
     elm_clone.id = "“cloned-textarea"      // Must have unique id
     // alternate method:
     elm_clone.setAttribute('id', 'cloned-textarea')
+
+    elm_clone.setAttribute('rows', '1')  // Reset to 1 row to get scroll bar
 
     // turn on scroll bar
     elm_clone.setAttribute('resize', 'vertical')
