@@ -348,8 +348,8 @@ export function UrlExists(Url) {
 
 export function setTextAreaRows (textarea) {
     var minRows = Number(textarea.rows);
-    // Custom attribute
-    if (textarea.dataset.max === undefined) {
+    // Custom attribute defined?
+    if (!textarea.hasOwnProperty(dataset.max)) {
         maxRows = 5  // HTML doesn't specify data-max="99"
         console.log('dataset.max undefined. Using 5 for maximum rows')
     } else {
