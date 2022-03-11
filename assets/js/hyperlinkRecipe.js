@@ -363,21 +363,14 @@ export function setTextAreaRows (textarea) {
         var maxRows = Number(textarea.dataset.max)
     }
     console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
-    /* https://stackoverflow.com/questions/13591339/html2canvas-offscreen
 
-        Using // as comment above makes code run instead with error:
-
-            Cross-Origin Request Blocked: The Same Origin Policy disallows reading
-             the remote resource at
-             https://stackoverflow.com/questions/13591339/html2canvas-offscreen.
-             (Reason: CORS header “Access-Control-Allow-Origin” missing).
-
-    */
     var clone = textarea.cloneNode(true);
     clone.id = "cloned-textarea"      // Must have unique id
     clone.setAttribute('rows', '1')  // Reset to 1 row to get scroll bar
     // get width: https://stackoverflow.com/a/36711188/6929343
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows +
+                " clone.id: " + clone.id + " clone.rows: " + clone.rows + " w: " + w);
     clone.style.cssText = `
         rows: "1";
         resize: 'vertical';
