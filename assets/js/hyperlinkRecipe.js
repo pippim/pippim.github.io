@@ -121,6 +121,8 @@ function paintTable (b) {
     html += '.hrInput {\n' +
             '  min-width: 550px;\n' +
             '  width: 100%; height: 100%;\n' +
+            '  resize: none;\n' +
+            '  overflow-y: scroll;\n' +
             '}\n'
             //'  box-sizing: border-box;\n' +
             //'  -webkit-box-sizing: border-box;\n' +
@@ -396,13 +398,13 @@ export function setTextAreaRows (textarea) {
     // clone.resize = 'vertical';
     // Uncaught (in promise) ReferenceError: y is not defined
     // clone.setAttribute('overflow-y', 'scroll')
-    clone.resize = 'none';
     // Remove box-sizing: border-box;
-    clone.setAttribute('box-sizing', 'content-box')
     // Uncaught (in promise) DOMException: String contains an invalid character
     //clone.setAttribute('-webkit-box-sizing', 'content-box')
     //clone.setAttribute('-moz-box-sizing', 'content-box')
 
+    // clone.resize = 'none';
+    // clone.setAttribute('box-sizing', 'content-box')
     clone.setAttribute('overflow-y', 'scroll')
     clone.position = 'absolute';
     //var left = w.toString() + "px";
