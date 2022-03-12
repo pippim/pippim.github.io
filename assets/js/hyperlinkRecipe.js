@@ -81,7 +81,7 @@ function paintTable (b) {
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"\n' +
             '>HTML</button></td>\n' +
             '<td><textarea id="hrRecipeHtml" class="hrInput" cols="45" rows="1"\n' +
-            ' data-min="1" data-max="8"\n' +
+            ' data-min="1" data-max="6"\n' +
             'placeholder="HTML Recipe will be built here"></textarea></td></tr>\n'
     // Bake Markdown Recipe
     html += '<tr><td><button class="hrBtn" id="btnRecipeMd" type="button"\n' +
@@ -373,7 +373,6 @@ export function setTextAreaRows (textarea) {
     clone.left = String(w * -2) + "px";     // Set clone position left off of screen
     clone.style.width = textarea.offsetWidth.toString() + 'px';
     clone.rows = minRows.toString();        // Set clone # of rows to minimum required
-    //clone.position = 'absolute';            // Anchors to point left of screen
     document.body.appendChild(clone);       // Add clone to webpage but it's out of view
     if (clone.offsetHeight < clone.scrollHeight) {
         for (var rows = minRows; rows <= maxRows; rows++) {
