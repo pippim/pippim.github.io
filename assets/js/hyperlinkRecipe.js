@@ -382,13 +382,15 @@ export function setTextAreaRows (textarea) {
     //console.log("clone.scrollHeight: " + clone.scrollHeight)
     //console.log("textarea.scrollHeight: " + textarea.scrollHeight)
     console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-                ' clone.height: ' + clone.height +
+                " textarea.offsetHeight: " + textarea.offsetHeight +
                 ' clone.scrollHeight: ' + clone.scrollHeight +
-                " textarea.scrollHeight: " + textarea.scrollHeight)
+                " textarea.scrollHeight: " + textarea.scrollHeight +
+                ' clone.offsetWidth: ' + clone.offsetWidth +
+                " textarea.offsetWidth: " + textarea.offsetWidth )
 
     if (clone.offsetHeight < clone.scrollHeight) {
         // increase the number of rows until the content fits
-        for (var rows = minRows; rows < maxRows; rows++) {
+        for (var rows = minRows; rows <= maxRows; rows++) {
             clone.rows = rows.toString();
             console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
                         ' clone.height: ' + clone.height +
