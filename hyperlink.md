@@ -284,7 +284,7 @@ hyperlink with your own website address.
 
 # Customizing Hyperlink Recipe Baker
 
-"out of the box", HRB will automatically resize <textarea>
+"out of the box", HRB will automatically resize `<textarea>`
 fields for *URL (href)*, *Recipe HTML* and *Recipe Markdown*. That
 is to say, as the text grows, so does the size of the box it is in. 
 As the text shrinks, so does the size of the box they it is in.
@@ -306,7 +306,7 @@ var autoMinRows = "1";  // Override using -data-min="1"
 
 If you wish to have manually resize the <textare> element,
 then set `autoRows = '0'`. If you are interested, here is
-the function called to automatically resize <textarea>:
+the function called to automatically resize `<textarea>`:
 
 {% include copyHeader.html %}
 ``` javascript
@@ -335,7 +335,7 @@ export function setTextAreaRows (textarea) {
 
 Notice `maxRows = Number(textarea.dataset.max`. You can have 
 `autoRows = "5"` defined which causes scroll bars to
-appear when <textarea> fields hit maximum of 5 rows.
+appear when `<textarea>` fields hit maximum of 5 rows.
 Using `.dataset.max` though you can override a given
 <textarea> for fewer or more rows as the maximum. That
 is controlled in the CSS:
