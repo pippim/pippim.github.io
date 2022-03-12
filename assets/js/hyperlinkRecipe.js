@@ -366,7 +366,7 @@ export function setTextAreaRows (textarea) {
     // Override from css for: inputHref, inputRecipeHtml, inputRecipeMd
     if (textarea.hasOwnProperty('data-min')) { minRows = Number(textarea.dataset.min) }
     if (textarea.hasOwnProperty('data-max')) { maxRows = Number(textarea.dataset.max) }
-    //console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
+    console.log(textarea.id + " min: " + minRows + " max: " + maxRows);
 
     var clone = textarea.cloneNode(true);
     clone.id = "cloned-textarea"      // Must have unique id
@@ -386,9 +386,10 @@ export function setTextAreaRows (textarea) {
         // increase the number of rows until the content fits
         for (var rows = minRows; rows < maxRows; rows++) {
             clone.rows = rows.toString();
-            //console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-            //            ' clone.scrollHeight: ' + clone.scrollHeight +
-            //            " textarea.scrollHeight: " + textarea.scrollHeight)
+            console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
+                        ' clone.Height: ' + clone.Height +
+                        ' clone.scrollHeight: ' + clone.scrollHeight +
+                        " textarea.scrollHeight: " + textarea.scrollHeight)
             if (clone.offsetHeight >= clone.scrollHeight) { break; }
         }
     }
