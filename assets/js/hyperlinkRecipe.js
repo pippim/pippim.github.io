@@ -4,11 +4,13 @@
     Instructions: https://pippim.github.io/hyperlink.html
 
     TODO: Need cookies for:
-        max_rows: 0 = 1 row using resize grabber
-                  not 0 = maximum number of auto-resized rows (no resizer).
-                          after maximum scroll bar appears for overflow-y
+        auto_rows: 0 = 1 row using resize grabber
+                   >0 = maximum number of auto-resized rows (no resizer).
+                        after maximum scroll bar appears for overflow-y
 
 */
+
+var autoRows = true  // Temporary until cookie sets resize mode
 
 var html = null
 
@@ -115,13 +117,14 @@ function paintTable (b) {
     // Column 2 minimum width to give lots of room for URL
     // width and height = 100% for <textarea> draggable corner to resize
     // Box sizing takes full column width not varying by text length
+    // if (autoRows == true) {}  WHAT DO DO HERE?
     html += '.hrInput {\n' +
             '  min-width: 550px;\n' +
             '  width: 100%; height: 100%;\n' +
-            '  box-sizing: border-box;\n' +
-            '  -webkit-box-sizing:border-box;\n' +
-            '  -moz-box-sizing: border-box;\n' +
             '}\n'
+            //'  box-sizing: border-box;\n' +
+            //'  -webkit-box-sizing: border-box;\n' +
+            //'  -moz-box-sizing: border-box;\n' +
 
     html += '</style>\n'            // End of all styles
 
