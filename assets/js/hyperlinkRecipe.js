@@ -448,9 +448,9 @@ export function setTextAreaRows (textarea) {
     // increase the number of rows until the content fits
     for (var rows = minRows; rows < maxRows; rows++) {
         clone.rows = rows;
-        console.log(clone.id + ' clone.height: ' + clone.height +
+        console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
                     ' scrollHeight: ' + scrollHeight)
-        if (clone.height > scrollHeight) {
+        if (clone.offsetHeight > scrollHeight) {
             break;
         }
     }
