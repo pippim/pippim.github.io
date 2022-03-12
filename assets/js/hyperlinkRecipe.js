@@ -9,7 +9,7 @@
 
 */
 
-var autoRows = '5';     // Override using -data-max="5"
+var autoRows = '0';     // Override using -data-max="5"
 var autoMinRows = "1";  // Override using -data-min="1"
 
 var html = null
@@ -38,7 +38,7 @@ function paintTable (b) {
     // Ingredients heading
     html += '<tr><th>Ingredients</th>\n' +
             '<th>Button inserts the clipboard contents, or type below</th></tr>\n'
-    // Button and Input for URL (href) Must be https?//:  Note glitch with "required"
+    // Button and textarea for URL (href)
     html += '<tr><td><button class="hrBtn" id="btnHref" type="button"\n' +
             'title="Browser address bar (paste from the clipboard)"\n' +
             '>URL (href)</button></td>\n' +
@@ -74,19 +74,18 @@ function paintTable (b) {
     // Bake Heading
     html += '<tr><th>Bake</th>\n' +
             '<th>Button puts the recipe into the clipboard</th></tr>\n'
-    // Bake HTML Recipe
+    // Bake HTML Recipe. Optional data-min and data-max used here.
     html += '<tr><td><button class="hrBtn" id="btnRecipeHtml" type="button"\n' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"\n' +
             '>HTML</button></td>\n' +
             '<td><textarea id="hrRecipeHtml" class="hrInput" cols="45" rows="1"\n' +
-            ' data-min="2" data-max="8"\n' +
+            ' data-min="1" data-max="8"\n' +
             'placeholder="HTML Recipe will be built here"></textarea></td></tr>\n'
-    // Bake Markdown Recipe. Text max="5" for errors
+    // Bake Markdown Recipe
     html += '<tr><td><button class="hrBtn" id="btnRecipeMd" type="button"\n' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"\n' +
             '>Markdown</button></td>\n' +
             '<td><textarea id="hrRecipeMd" class="hrInput" cols="45" rows="1"\n' +
-            ' data-min="2" data-max="7"\n' +
             'placeholder="Markdown Recipe will be built here"></textarea></td></tr>\n'
     html += '</table></form>\n'     // End of our table and form
 
@@ -97,7 +96,7 @@ function paintTable (b) {
     html += '#hrb_body { border: .2rem solid; }\n'
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrHdr { margin: .5rem; }\n'
-    // No borders in table
+    // No borders inside the table
     html += 'table, tr, th, td { border: none ! important; }\n'
     // Table details: Space between columns
     html += 'td { padding: 0 1rem; border-collapse: collapse; }\n'
@@ -117,18 +116,13 @@ function paintTable (b) {
             '  background-color: DarkGreen;\n' +
             '}\n'
     // Column 2 minimum width to give lots of room for URL
-    // width and height = 100% for <textarea> draggable corner to resize
-    // Box sizing takes full column width not varying by text length
-    // TODO: if (autoRows != "0")...  WHAT DO DO HERE?
+    // width and height = 100% for <textarea> if draggable corner resizes
     html += '.hrInput {\n' +
             '  min-width: 550px;\n' +
             '  width: 100%; height: 100%;\n' +
             '  resize: none;\n' +
             '  overflow-y: auto;\n' +
             '}\n'
-            //'  box-sizing: border-box;\n' +
-            //'  -webkit-box-sizing: border-box;\n' +
-            //'  -moz-box-sizing: border-box;\n' +
 
     html += '</style>\n'            // End of all styles
 
