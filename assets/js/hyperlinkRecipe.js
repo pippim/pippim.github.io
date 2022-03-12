@@ -361,34 +361,29 @@ export function UrlExists(Url) {
 
 export function setTextAreaRows (textarea) {
 
-    var minRows = Number(autoMinRows)
-    var maxRows = Number(autoRows)
-    // Override from css for: inputHref, inputRecipeHtml, inputRecipeMd
+    var minRows = Number(autoMinRows)       // autoMinRows must be declared globally above
+    var maxRows = Number(autoRows)          // E.G. var autoRows = "5"; sets 5 maximum rows
+    // CSS overrides 'data-min = "_"' or 'data-max = "_"'.  Where _ = number of rows.
     if (textarea.dataset.hasOwnProperty('min')) { minRows = Number(textarea.dataset.min) }
     if (textarea.dataset.hasOwnProperty('max')) { maxRows = Number(textarea.dataset.max) }
-    console.log(textarea.id + " min: " + minRows + " max: " + maxRows);
 
-    // textarea.setAttribute('overflow-y', 'auto')  // Hide scrollbar and set later if needed
-    var clone = textarea.cloneNode(true);
-    clone.id = "cloned-textarea"      // Must have unique id
+    var clone = textarea.cloneNode(true);   // Make clone of <textarea> element
+    // clone.id = "cloned-textarea"            // The clone must have a unique id
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    w = w * -2  // Set left off of screen
-    clone.left = w.toString() + "px";
+    w = w * -2                              // Calculate one window width position left
+    clone.left = w.toString() + "px";       // Set clone position left off of screen
     clone.style.width = textarea.offsetWidth.toString() + 'px';
-    clone.rows = minRows.toString();
-    clone.position = 'absolute';
-
-    const element = document.getElementById("hrb_body");
-    // element.appendChild(clone);
-    document.body.appendChild(clone);  // Add clone to webpage but it's out of view
+    clone.rows = minRows.toString();        // Set clone # of rows to minimum required
+    clone.position = 'absolute';            // Anchors to point left of screen
+    document.body.appendChild(clone);       // Add clone to webpage but it's out of view
 
     if (clone.offsetHeight < clone.scrollHeight) {
         for (var rows = minRows; rows <= maxRows; rows++) {
-            clone.rows = rows.toString();
+            clone.rows = rows.toString();   // Set new number of rows and text height
             if (clone.offsetHeight >= clone.scrollHeight) { break; }}}
 
-    textarea.rows = clone.rows;     // Update real <textarea>
-    clone.remove();                 // Remove cloned <textarea>
+    textarea.rows = clone.rows;             // Update real <textarea>
+    clone.remove();                         // Remove cloned <textarea>
 }
 
 /* Future use? */
