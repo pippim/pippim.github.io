@@ -3,6 +3,11 @@
 
     Instructions: https://pippim.github.io/hyperlink.html
 
+    TODO: Need cookies for:
+        max_rows: 0 = 1 row using resize grabber
+                  not 0 = maximum number of auto-resized rows (no resizer).
+                          after maximum scroll bar appears for overflow-y
+
 */
 
 var html = null
@@ -430,20 +435,21 @@ export function setTextAreaRows (textarea) {
     var scrollHeight = clone.scrollHeight;
     console.log("clone.scrollHeight: " + clone.scrollHeight)
     console.log("textarea.scrollHeight: " + textarea.scrollHeight)
-    return  // Stuff below will fail until ported
 
     // increase the number of rows until the content fits
     for (var rows = minRows; rows < maxRows; rows++) {
-        textareaClone.attr('rows', rows);
-
-        if (textareaClone.height() > scrollHeight) {
+        clone.rows = rows;
+        if (clone.height() > scrollHeight) {
             break;
         }
     }
 
+    console.log("clone.rows: " + clone.rows)
+    clone.remove();
+    return  // Stuff below will fail until ported
+
     // copy the rows value back to the real textarea
     textarea.rows = clone.rows;
-    clone.remove();
 	// });
 }
 
