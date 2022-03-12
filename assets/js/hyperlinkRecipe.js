@@ -375,7 +375,7 @@ export function setTextAreaRows (textarea) {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     w = w * -2  // To set left off of screen
     clone.left = w.toString() + "px";
-    clone.style.width = textarea.offsetWidth;
+    clone.style.width = textarea.offsetWidth.toString() + 'px';
     clone.rows = minRows.toString();
     clone.position = 'absolute';
 
