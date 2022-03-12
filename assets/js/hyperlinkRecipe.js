@@ -364,8 +364,8 @@ export function setTextAreaRows (textarea) {
     var minRows = Number(autoMinRows)
     var maxRows = Number(autoRows)
     // Override from css for: inputHref, inputRecipeHtml, inputRecipeMd
-    if (textarea.hasOwnProperty('data-min')) { minRows = Number(textarea.dataset.min) }
-    if (textarea.hasOwnProperty('data-max')) { maxRows = Number(textarea.dataset.max) }
+    if (textarea.dataset.hasOwnProperty('min')) { minRows = Number(textarea.dataset.min) }
+    if (textarea.dataset.hasOwnProperty('max')) { maxRows = Number(textarea.dataset.max) }
     console.log(textarea.id + " min: " + minRows + " max: " + maxRows);
 
     var clone = textarea.cloneNode(true);
@@ -381,6 +381,10 @@ export function setTextAreaRows (textarea) {
     element.appendChild(clone);
     //console.log("clone.scrollHeight: " + clone.scrollHeight)
     //console.log("textarea.scrollHeight: " + textarea.scrollHeight)
+    console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
+                ' clone.Height: ' + clone.Height +
+                ' clone.scrollHeight: ' + clone.scrollHeight +
+                " textarea.scrollHeight: " + textarea.scrollHeight)
 
     if (clone.offsetHeight < clone.scrollHeight) {
         // increase the number of rows until the content fits
