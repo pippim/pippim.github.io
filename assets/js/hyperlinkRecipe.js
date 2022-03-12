@@ -9,7 +9,8 @@
 
 */
 
-var autoRows = '5';   // Temporary until cookie sets resize mode
+var autoRows = '5';     // Override using -data-max="5"
+var autoMinRows = "1";  // Override using -data-min="1"
 
 var html = null
 
@@ -78,12 +79,14 @@ function paintTable (b) {
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"\n' +
             '>HTML</button></td>\n' +
             '<td><textarea id="hrRecipeHtml" class="hrInput" cols="45" rows="1"\n' +
+            ' data-min="2" data-max="8"\n' +
             'placeholder="HTML Recipe will be built here"></textarea></td></tr>\n'
     // Bake Markdown Recipe. Text max="5" for errors
     html += '<tr><td><button class="hrBtn" id="btnRecipeMd" type="button"\n' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"\n' +
             '>Markdown</button></td>\n' +
-            '<td><textarea id="hrRecipeMd" class="hrInput" cols="45" rows="1" data-max="5"\n' +
+            '<td><textarea id="hrRecipeMd" class="hrInput" cols="45" rows="1"\n' +
+            ' data-min="2" data-max="7"\n' +
             'placeholder="Markdown Recipe will be built here"></textarea></td></tr>\n'
     html += '</table></form>\n'     // End of our table and form
 
@@ -358,49 +361,37 @@ export function UrlExists(Url) {
 
 export function setTextAreaRows (textarea) {
 
-    /* To avoid resizing box set the textarea to correct number of rows
-       to fit data. Should really be built into HTML but it's not today
-       March 10, 2022.
-    */
-    var minRows = Number(textarea.rows);  // Doesn't allow shrinkage!
-    minRows = 1
-    // Custom attribute for maximum number of rows defined?
-    if (textarea.hasOwnProperty('data-max')) {
-        var maxRows = Number(textarea.dataset.max)
-    } else {
-        var maxRows = Number(autoRows)  // HTML doesn't specify data-max="99"
-        // console.log('dataset.max undefined. Using 5 for maximum rows')
-    }
+    var minRows = Number(autoMinRows)
+    var maxRows = Number(autoRows)
+    // Override from css for: inputHre, inputRecipeHtml, inputRecipeMd
+    if (textarea.hasOwnProperty('data-min')) { minRows = Number(textarea.dataset.min) }
+    if (textarea.hasOwnProperty('data-max')) { maxRows = Number(textarea.dataset.max) }
     //console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
 
-    // Do deep clone (true)
     var clone = textarea.cloneNode(true);
     clone.id = "cloned-textarea"      // Must have unique id
     // get width: https://stackoverflow.com/a/36711188/6929343
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     w = w * -2  // To set left off of screen
     clone.left = w.toString() + "px";
-    clone.rows = "1";               // clone.style.cssText not working
+    clone.rows = "1";
     clone.position = 'absolute';
+
     const element = document.getElementById("hrb_body");
     element.appendChild(clone);
-    // var scrollHeight = clone.scrollHeight;  // Seems backwards?
-    var scrollHeight = textarea.scrollHeight;  // This is always larger of two???
-    console.log("clone.scrollHeight: " + clone.scrollHeight)
-    console.log("textarea.scrollHeight: " + textarea.scrollHeight)
+    //console.log("clone.scrollHeight: " + clone.scrollHeight)
+    //console.log("textarea.scrollHeight: " + textarea.scrollHeight)
 
     // increase the number of rows until the content fits
     for (var rows = minRows; rows < maxRows; rows++) {
         clone.rows = rows;
-        console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-                    ' clone.scrollHeight: ' + clone.scrollHeight +
-                    " textarea.scrollHeight: " + textarea.scrollHeight)
-        if (clone.offsetHeight > scrollHeight) {
-            break;
-        }
+        //console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
+        //            ' clone.scrollHeight: ' + clone.scrollHeight +
+        //            " textarea.scrollHeight: " + textarea.scrollHeight)
+        if (clone.offsetHeight >= clone.scrollHeight) { break; }
     }
 
-    console.log("clone.rows: " + clone.rows)
+    // console.log("clone.rows: " + clone.rows)
     textarea.rows = clone.rows;
     clone.remove();
 }
