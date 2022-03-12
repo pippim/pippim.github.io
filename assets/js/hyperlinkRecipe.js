@@ -363,7 +363,7 @@ export function setTextAreaRows (textarea) {
 
     var minRows = Number(autoMinRows)
     var maxRows = Number(autoRows)
-    // Override from css for: inputHre, inputRecipeHtml, inputRecipeMd
+    // Override from css for: inputHref, inputRecipeHtml, inputRecipeMd
     if (textarea.hasOwnProperty('data-min')) { minRows = Number(textarea.dataset.min) }
     if (textarea.hasOwnProperty('data-max')) { maxRows = Number(textarea.dataset.max) }
     //console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
@@ -374,7 +374,7 @@ export function setTextAreaRows (textarea) {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     w = w * -2  // To set left off of screen
     clone.left = w.toString() + "px";
-    clone.rows = "1";
+    clone.rows = minRows.toString();
     clone.position = 'absolute';
 
     const element = document.getElementById("hrb_body");
@@ -382,18 +382,19 @@ export function setTextAreaRows (textarea) {
     //console.log("clone.scrollHeight: " + clone.scrollHeight)
     //console.log("textarea.scrollHeight: " + textarea.scrollHeight)
 
-    // increase the number of rows until the content fits
-    for (var rows = minRows; rows < maxRows; rows++) {
-        clone.rows = rows;
-        //console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-        //            ' clone.scrollHeight: ' + clone.scrollHeight +
-        //            " textarea.scrollHeight: " + textarea.scrollHeight)
-        if (clone.offsetHeight >= clone.scrollHeight) { break; }
+    if (clone.offsetHeight < clone.scrollHeight) {
+        // increase the number of rows until the content fits
+        for (var rows = minRows; rows < maxRows; rows++) {
+            clone.rows = rows.toString();
+            //console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
+            //            ' clone.scrollHeight: ' + clone.scrollHeight +
+            //            " textarea.scrollHeight: " + textarea.scrollHeight)
+            if (clone.offsetHeight >= clone.scrollHeight) { break; }
+        }
     }
-
     // console.log("clone.rows: " + clone.rows)
-    textarea.rows = clone.rows;
-    clone.remove();
+    textarea.rows = clone.rows;     // Update real <textarea>
+    clone.remove();                 // Remove cloned <textarea>
 }
 
 /* Future use? */
