@@ -4,12 +4,12 @@
     Instructions: https://pippim.github.io/hyperlink.html
 
     TODO: Need cookies for:
-        auto_rows:   "0" = No auto resizing
-                   > "0" = maximum number of auto-resized rows
+        autoRows:   "0" = No auto resizing
+                  > "0" = maximum number of auto-resized rows
 
 */
 
-var autoRows = '0';     // Override using -data-max="5"
+var autoRows = '5';     // Override using -data-max="5"
 var autoMinRows = "1";  // Override using -data-min="1"
 
 var html = null
