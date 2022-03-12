@@ -124,7 +124,7 @@ function paintTable (b) {
             '  min-width: 550px;\n' +
             '  width: 100%; height: 100%;\n' +
             '  resize: none;\n' +
-            '  overflow-y: scroll;\n' +
+            '  overflow-y: auto;\n' +
             '}\n'
             //'  box-sizing: border-box;\n' +
             //'  -webkit-box-sizing: border-box;\n' +
@@ -368,7 +368,7 @@ export function setTextAreaRows (textarea) {
     if (textarea.dataset.hasOwnProperty('max')) { maxRows = Number(textarea.dataset.max) }
     console.log(textarea.id + " min: " + minRows + " max: " + maxRows);
 
-    textarea.setAttribute('overflow', 'hidden')  // Hide scrollbar and set later if needed
+    // textarea.setAttribute('overflow-y', 'auto')  // Hide scrollbar and set later if needed
     var clone = textarea.cloneNode(true);
     clone.id = "cloned-textarea"      // Must have unique id
     // get width: https://stackoverflow.com/a/36711188/6929343
@@ -383,21 +383,21 @@ export function setTextAreaRows (textarea) {
     element.appendChild(clone);
     //console.log("clone.scrollHeight: " + clone.scrollHeight)
     //console.log("textarea.scrollHeight: " + textarea.scrollHeight)
-    console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-                " textarea.offsetHeight: " + textarea.offsetHeight +
-                ' clone.scrollHeight: ' + clone.scrollHeight +
-                " textarea.scrollHeight: " + textarea.scrollHeight +
-                ' clone.offsetWidth: ' + clone.offsetWidth +
-                " textarea.offsetWidth: " + textarea.offsetWidth )
+    //console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
+    //            " textarea.offsetHeight: " + textarea.offsetHeight +
+    //            ' clone.scrollHeight: ' + clone.scrollHeight +
+    //            " textarea.scrollHeight: " + textarea.scrollHeight +
+    //            ' clone.offsetWidth: ' + clone.offsetWidth +
+    //            " textarea.offsetWidth: " + textarea.offsetWidth )
 
     if (clone.offsetHeight < clone.scrollHeight) {
         // increase the number of rows until the content fits
         for (var rows = minRows; rows <= maxRows; rows++) {
             clone.rows = rows.toString();
-            console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-                        ' clone.height: ' + clone.height +
-                        ' clone.scrollHeight: ' + clone.scrollHeight +
-                        " textarea.scrollHeight: " + textarea.scrollHeight)
+            //console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
+            //            ' clone.height: ' + clone.height +
+            //            ' clone.scrollHeight: ' + clone.scrollHeight +
+            //            " textarea.scrollHeight: " + textarea.scrollHeight)
             if (clone.offsetHeight >= clone.scrollHeight) { break; }
             if (rows == maxRows) { textarea.setAttribute('overflow-y', 'scroll'); break; }
         }
