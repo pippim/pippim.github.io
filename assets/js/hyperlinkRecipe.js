@@ -382,66 +382,16 @@ export function setTextAreaRows (textarea) {
     // Do deep clone (true)
     var clone = textarea.cloneNode(true);
     clone.id = "cloned-textarea"      // Must have unique id
-    clone.setAttribute('rows', '1')  // Reset to 1 row to get scroll bar
     // get width: https://stackoverflow.com/a/36711188/6929343
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     w = w * -2  // To set left off of screen
-
-    //console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows +
-    //            " clone.id: " + clone.id + " clone.rows: " + clone.rows + " w: " + w);
-    /* Below has wrong syntax ?
-    clone.style.cssText = `
-        rows: "1";
-        resize: 'vertical';
-        overflow-y: 'scroll';
-        position: 'absolute';
-        left: -($w * 2) + 0px;
-    `;
-    */
-    clone.rows = "1";               // clone.style.cssText not working
-    // clone.resize = 'vertical';
-    // Uncaught (in promise) ReferenceError: y is not defined
-    // clone.setAttribute('overflow-y', 'scroll')
-    // Remove box-sizing: border-box;
-    // Uncaught (in promise) DOMException: String contains an invalid character
-    //clone.setAttribute('-webkit-box-sizing', 'content-box')
-    //clone.setAttribute('-moz-box-sizing', 'content-box')
-
-    // clone.resize = 'none';
-    // clone.setAttribute('box-sizing', 'content-box')
-    clone.setAttribute('overflow-y', 'scroll')
-    clone.position = 'absolute';
-    //var left = w.toString() + "px";
-    //console.log('left: ' + left)
     clone.left = w.toString() + "px";
-    //console.log("clone left: " + clone.left + " resize: " + clone.resize +
-    //            " clone.position: " + clone.position);
-
-    // clone the textarea and hide it off screen
-    /*
-    var textareaClone = $('<textarea/>', {
-        rows: minRows,
-        maxRows: maxRows,
-        class: textarea.attr('class')
-    }).css({
-        position: 'absolute',
-        left: -$(document).width() * 2
-    }).insertAfter(textarea);
-
-    var textareaCloneNode = textareaClone.get(0);
-
-    textarea.on('input', function () {
-        // copy the input from the real textarea
-        textareaClone.val(textarea.val());
-
-        // set as small as possible to get the real scroll height
-        textareaClone.attr('rows', 1);
-    */
-    // save the real scroll height
-    //var scrollHeight = textareaCloneNode.scrollHeight;
+    clone.rows = "1";               // clone.style.cssText not working
+    clone.position = 'absolute';
     const element = document.getElementById("hrb_body");
     element.appendChild(clone);
-    var scrollHeight = clone.scrollHeight;
+    // var scrollHeight = clone.scrollHeight;  // Seems backwards?
+    var scrollHeight = textarea.scrollHeight;  // This is always larger of two???
     console.log("clone.scrollHeight: " + clone.scrollHeight)
     console.log("textarea.scrollHeight: " + textarea.scrollHeight)
 
@@ -449,7 +399,8 @@ export function setTextAreaRows (textarea) {
     for (var rows = minRows; rows < maxRows; rows++) {
         clone.rows = rows;
         console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-                    ' scrollHeight: ' + scrollHeight)
+                    ' clone.scrollHeight: ' + clone.scrollHeight +
+                    " textarea.scrollHeight: " + textarea.scrollHeight)
         if (clone.offsetHeight > scrollHeight) {
             break;
         }
