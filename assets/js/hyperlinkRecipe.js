@@ -368,18 +368,18 @@ export function setTextAreaRows (textarea) {
     if (textarea.dataset.hasOwnProperty('max')) { maxRows = Number(textarea.dataset.max) }
 
     var clone = textarea.cloneNode(true);   // Make clone of <textarea> element
-    // clone.id = "cloned-textarea"            // The clone must have a unique id
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     w = w * -2                              // Calculate one window width position left
     clone.left = w.toString() + "px";       // Set clone position left off of screen
-    clone.style.width = textarea.offsetWidth.toString() + 'px';
+    width = textarea.offsetWidth.toString() + 'px';
+    clone.style.width = width;              // Force clone width to original <textarea> width
     clone.rows = minRows.toString();        // Set clone # of rows to minimum required
     clone.position = 'absolute';            // Anchors to point left of screen
     document.body.appendChild(clone);       // Add clone to webpage but it's out of view
 
     if (clone.offsetHeight < clone.scrollHeight) {
         for (var rows = minRows; rows <= maxRows; rows++) {
-            clone.rows = rows.toString();   // Set new number of rows and text height
+            clone.rows = rows.toString();   // Set new number of rows then test height
             if (clone.offsetHeight >= clone.scrollHeight) { break; }}}
 
     textarea.rows = clone.rows;             // Update real <textarea>
