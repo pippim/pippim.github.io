@@ -4,13 +4,12 @@
     Instructions: https://pippim.github.io/hyperlink.html
 
     TODO: Need cookies for:
-        auto_rows: 0 = 1 row using resize grabber
-                   >0 = maximum number of auto-resized rows (no resizer).
-                        after maximum scroll bar appears for overflow-y
+        auto_rows:   "0" = No auto resizing
+                   > "0" = maximum number of auto-resized rows
 
 */
 
-var autoRows = true  // Temporary until cookie sets resize mode
+var autoRows = '5';   // Temporary until cookie sets resize mode
 
 var html = null
 
@@ -117,7 +116,7 @@ function paintTable (b) {
     // Column 2 minimum width to give lots of room for URL
     // width and height = 100% for <textarea> draggable corner to resize
     // Box sizing takes full column width not varying by text length
-    // if (autoRows == true) {}  WHAT DO DO HERE?
+    // TODO: if (autoRows != "0")...  WHAT DO DO HERE?
     html += '.hrInput {\n' +
             '  min-width: 550px;\n' +
             '  width: 100%; height: 100%;\n' +
@@ -192,27 +191,21 @@ function updateInput (elm, text) {
     oldClip = elm.value
     elm.value = text            // Set value of Input to clipboard contents
     newClip = text
-    setTextAreaRows(elm)        // Adjust <textarea> rows=x
+    if (autoRows != "0") { setTextAreaRows(elm) }
     buildRecipes();
-    if (elm == inputHref) {
-        // Below causing warning because it is synchronous
-        validateUrl(text);
-    }
+    if (elm == inputHref) { validateUrl(text); }
 }
 
 /* Non-clipboard reading functions called on button click */
 var useExternal = false;
-var stringExternal = " 🔗";
+var stringExternal = " 🔗";  // TODO: Make into cookie
 
 function doExternal () {
     // If external off turn on, if on then turn off
     useExternal = !useExternal;
-    if (useExternal) {
-        inputExternal.value = stringExternal;
-    } else {
-        // TODO: If value not blank, save as stringExternal?
-        inputExternal.value = "";
-    }
+    if (useExternal) { inputExternal.value = stringExternal; }
+                else { inputExternal.value = ""; }
+    // TODO: If value not blank, save as stringExternal?
     buildRecipes();
 }
 
@@ -290,11 +283,11 @@ function buildRecipes () {
 
     inputRecipeHtml.value =
         '<a href="' + href + '"' + newHtml + titleHtml + text + '</a>'
-    setTextAreaRows(inputRecipeHtml)        // Adjust <textarea> rows=x
+    if (autoRows != "0") { setTextAreaRows(inputRecipeHtml) }
 
     inputRecipeMd.value =
         "[" + text + "](" + href + titleMd + newMd
-    setTextAreaRows(inputRecipeMd)        // Adjust <textarea> rows=x
+    if (autoRows != "0") { setTextAreaRows(inputRecipeMd) }
 }
 
 function sanitizeValue (value) {
@@ -372,11 +365,11 @@ export function setTextAreaRows (textarea) {
     var minRows = Number(textarea.rows);  // Doesn't allow shrinkage!
     minRows = 1
     // Custom attribute for maximum number of rows defined?
-    if (!textarea.hasOwnProperty('data-max')) {
-        var maxRows = 5  // HTML doesn't specify data-max="99"
-        // console.log('dataset.max undefined. Using 5 for maximum rows')
-    } else {
+    if (textarea.hasOwnProperty('data-max')) {
         var maxRows = Number(textarea.dataset.max)
+    } else {
+        var maxRows = Number(autoRows)  // HTML doesn't specify data-max="99"
+        // console.log('dataset.max undefined. Using 5 for maximum rows')
     }
     //console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
 
