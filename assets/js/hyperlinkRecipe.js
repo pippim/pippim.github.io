@@ -456,12 +456,8 @@ export function setTextAreaRows (textarea) {
     }
 
     console.log("clone.rows: " + clone.rows)
-    clone.remove();
-    return  // Stuff below will fail until ported
-
-    // copy the rows value back to the real textarea
     textarea.rows = clone.rows;
-	// });
+    clone.remove();
 }
 
 /* Future use? */
