@@ -371,38 +371,22 @@ export function setTextAreaRows (textarea) {
     // textarea.setAttribute('overflow-y', 'auto')  // Hide scrollbar and set later if needed
     var clone = textarea.cloneNode(true);
     clone.id = "cloned-textarea"      // Must have unique id
-    // get width: https://stackoverflow.com/a/36711188/6929343
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    w = w * -2  // To set left off of screen
+    w = w * -2  // Set left off of screen
     clone.left = w.toString() + "px";
     clone.style.width = textarea.offsetWidth.toString() + 'px';
     clone.rows = minRows.toString();
     clone.position = 'absolute';
 
     const element = document.getElementById("hrb_body");
-    element.appendChild(clone);
-    //console.log("clone.scrollHeight: " + clone.scrollHeight)
-    //console.log("textarea.scrollHeight: " + textarea.scrollHeight)
-    //console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-    //            " textarea.offsetHeight: " + textarea.offsetHeight +
-    //            ' clone.scrollHeight: ' + clone.scrollHeight +
-    //            " textarea.scrollHeight: " + textarea.scrollHeight +
-    //            ' clone.offsetWidth: ' + clone.offsetWidth +
-    //            " textarea.offsetWidth: " + textarea.offsetWidth )
+    // element.appendChild(clone);
+    document.body.appendChild(clone);  // Add clone to webpage but it's out of view
 
     if (clone.offsetHeight < clone.scrollHeight) {
-        // increase the number of rows until the content fits
         for (var rows = minRows; rows <= maxRows; rows++) {
             clone.rows = rows.toString();
-            //console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-            //            ' clone.height: ' + clone.height +
-            //            ' clone.scrollHeight: ' + clone.scrollHeight +
-            //            " textarea.scrollHeight: " + textarea.scrollHeight)
-            if (clone.offsetHeight >= clone.scrollHeight) { break; }
-            if (rows == maxRows) { textarea.setAttribute('overflow-y', 'scroll'); break; }
-        }
-    }
-    // console.log("clone.rows: " + clone.rows)
+            if (clone.offsetHeight >= clone.scrollHeight) { break; }}}
+
     textarea.rows = clone.rows;     // Update real <textarea>
     clone.remove();                 // Remove cloned <textarea>
 }
