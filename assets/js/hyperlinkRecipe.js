@@ -369,7 +369,8 @@ export function setTextAreaRows (textarea) {
        to fit data. Should really be built into HTML but it's not today
        March 10, 2022.
     */
-    var minRows = Number(textarea.rows);
+    var minRows = Number(textarea.rows);  // Doesn't allow shrinkage!
+    minRows = "1"
     // Custom attribute for maximum number of rows defined?
     if (!textarea.hasOwnProperty('data-max')) {
         var maxRows = 5  // HTML doesn't specify data-max="99"
