@@ -402,7 +402,7 @@ export function setTextAreaRows (textarea) {
     clone.left = w.toString() + "px";
     console.log("clone left: " + clone.left + " resize: " + clone.resize +
                 " clone.position: " + clone.position);
-    clone.val(textarea.val);
+    clone.val = textarea.val;
     console.log("clone.val: " + clone.val)
     console.log("textarea.val: " + textarea.val)
     return  // Stuff below will fail until ported
