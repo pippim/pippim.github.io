@@ -425,6 +425,8 @@ export function setTextAreaRows (textarea) {
     */
     // save the real scroll height
     //var scrollHeight = textareaCloneNode.scrollHeight;
+    const element = document.getElementById("hrb_body");
+    element.appendChild(clone);
     var scrollHeight = clone.scrollHeight;
     console.log("clone.scrollHeight: " + clone.scrollHeight)
     console.log("textarea.scrollHeight: " + textarea.scrollHeight)
@@ -439,8 +441,9 @@ export function setTextAreaRows (textarea) {
         }
     }
 
-        // copy the rows value back to the real textarea
-        textarea.attr('rows', textareaClone.attr('rows'));
+    // copy the rows value back to the real textarea
+    textarea.rows = clone.rows;
+    clone.remove();
 	// });
 }
 
