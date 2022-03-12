@@ -402,6 +402,7 @@ export function setTextAreaRows (textarea) {
     clone.left = left;
     console.log("clone left: " + clone.left + " resize: " + clone.resize +
                 " clone.position: " + clone.position);
+    console.log("clone.val: " + clone.val)
     return  // Stuff below will fail until ported
 
     console.log("elm.left: " + elm.left)
