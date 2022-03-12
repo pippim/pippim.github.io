@@ -303,6 +303,10 @@ function sanitizeValue (value) {
     value = value.replace(/\&/g, '&amp;')  // Must be the first one!
     value = value.replace(/\</g, '&lt;')
     value = value.replace(/\>/g, '&gt;')
+    value = value.replace(/\(/g, '&lpar;')
+    value = value.replace(/\)/g, '&rpar;')
+    value = value.replace(/\[/g, '&lbrack;')
+    value = value.replace(/\]/g, '&rbrack;')
     value = value.replace(/\'/g, '&apos;')
     return value.replace(/\"/g, "&quot;")
 }
@@ -444,6 +448,8 @@ export function setTextAreaRows (textarea) {
     // increase the number of rows until the content fits
     for (var rows = minRows; rows < maxRows; rows++) {
         clone.rows = rows;
+        console.log(clone.id + ' clone.height: ' + clone.height +
+                    ' scrollHeight: ' + scrollHeight)
         if (clone.height > scrollHeight) {
             break;
         }
