@@ -11,6 +11,8 @@
 
 var autoRows = '5';     // Override using -data-max="5"
 var autoMinRows = "1";  // Override using -data-min="1"
+// For timing commands. https://stackoverflow.com/a/28747321/6929343
+var performance = window.performance
 
 var html = null
 
@@ -303,6 +305,7 @@ function sanitizeValue (value) {
 }
 
 var lastUrl = null
+var lastTime = null
 var validUrlSyntax = null
 var validUrlExists = null
 
@@ -317,8 +320,15 @@ function validateUrl(Url) {
         return  // No point getting an error message in developer tools
     }
 
-    // https://stackoverflow.com/a/28747321/6929343
-    var performance = window.performance
+    if (lastTime == null) {
+        // TODO: This is only being called during paste inputHref, not typing
+        //       This is also called when Baking Recipes to clipboard
+        //       If we were validating whilst typing though we would only do
+        //       so after a few seconds since last key or when focus moves
+        //       out of field or when mouse moves out of bounding box.
+        lastTime = performance.now()
+    }
+
     var startTime = performance.now()
     validUrlExists = UrlExists(Url)
     var endTime = performance.now()
@@ -326,10 +336,8 @@ function validateUrl(Url) {
     if (validUrlExists == false){
         alert('The website address (URL) does not exist (404 error):\n\n' + Url)
     }
-    //alert('validUrlSyntax: ' + validUrlSyntax +
-    //      ' validUrlExists: ' + validUrlExists +
-    //      ' time to check: ' + elapsedTime + ' milliseconds')
-    lastUrl = Url
+
+    lastUrl = Url   // If next time same URL we can skip the tests for 404.
 }
 
 export function isValidUrl(Url) {
@@ -355,28 +363,24 @@ export function UrlExists(Url) {
 }
 
 export function setTextAreaRows (textarea) {
-
     var minRows = Number(autoMinRows)       // autoMinRows must be declared globally above
     var maxRows = Number(autoRows)          // E.G. var autoRows = "5"; sets 5 maximum rows
     // CSS overrides 'data-min = "_"' or 'data-max = "_"'.  Where _ = number of rows.
     if (textarea.dataset.hasOwnProperty('min')) { minRows = Number(textarea.dataset.min) }
     if (textarea.dataset.hasOwnProperty('max')) { maxRows = Number(textarea.dataset.max) }
-
     var clone = textarea.cloneNode(true);   // Make clone of <textarea> element
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    w = w * -2                              // Calculate one window width position left
-    clone.left = w.toString() + "px";       // Set clone position left off of screen
-    width = textarea.offsetWidth.toString() + 'px';
-    clone.style.width = width;              // Force clone width to original <textarea> width
+    //w = w * -2                              // Calculate one window width position left
+    //clone.left = w.toString() + "px";       // Set clone position left off of screen
+    clone.left = String(w * -2) + "px";     // Set clone position left off of screen
+    clone.style.width = textarea.offsetWidth.toString() + 'px';
     clone.rows = minRows.toString();        // Set clone # of rows to minimum required
     clone.position = 'absolute';            // Anchors to point left of screen
     document.body.appendChild(clone);       // Add clone to webpage but it's out of view
-
     if (clone.offsetHeight < clone.scrollHeight) {
         for (var rows = minRows; rows <= maxRows; rows++) {
             clone.rows = rows.toString();   // Set new number of rows then test height
             if (clone.offsetHeight >= clone.scrollHeight) { break; }}}
-
     textarea.rows = clone.rows;             // Update real <textarea>
     clone.remove();                         // Remove cloned <textarea>
 }
