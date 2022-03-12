@@ -365,7 +365,7 @@ export function setTextAreaRows (textarea) {
     }
     console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
 
-    // Do deep clone, but this doesn't capture .val
+    // Do deep clone (true)
     var clone = textarea.cloneNode(true);
     clone.id = "cloned-textarea"      // Must have unique id
     clone.setAttribute('rows', '1')  // Reset to 1 row to get scroll bar
@@ -402,18 +402,9 @@ export function setTextAreaRows (textarea) {
     clone.left = w.toString() + "px";
     console.log("clone left: " + clone.left + " resize: " + clone.resize +
                 " clone.position: " + clone.position);
-    clone.val = textarea.val;
-    console.log("clone.value: " + clone.value)
-    console.log("textarea.value: " + textarea.value)
-    return  // Stuff below will fail until ported
 
-    console.log("elm.left: " + elm.left)
-    // turn on scroll bar
-    clone.setAttribute('resize', 'vertical')
-
-    clone.setAttribute('overflow-y:', 'scroll')
     // clone the textarea and hide it off screen
-    // TODO: copy all the styles
+    /*
     var textareaClone = $('<textarea/>', {
         rows: minRows,
         maxRows: maxRows,
@@ -431,18 +422,21 @@ export function setTextAreaRows (textarea) {
 
         // set as small as possible to get the real scroll height
         textareaClone.attr('rows', 1);
+    */
+    // save the real scroll height
+    //var scrollHeight = textareaCloneNode.scrollHeight;
+    var scrollHeight = clone.scrollHeight;
+    console.log("clone.scrollHeight: " + clone.scrollHeight)
+    return  // Stuff below will fail until ported
 
-        // save the real scroll height
-        var scrollHeight = textareaCloneNode.scrollHeight;
+    // increase the number of rows until the content fits
+    for (var rows = minRows; rows < maxRows; rows++) {
+        textareaClone.attr('rows', rows);
 
-        // increase the number of rows until the content fits
-        for (var rows = minRows; rows < maxRows; rows++) {
-            textareaClone.attr('rows', rows);
-
-            if (textareaClone.height() > scrollHeight) {
-                break;
-            }
+        if (textareaClone.height() > scrollHeight) {
+            break;
         }
+    }
 
         // copy the rows value back to the real textarea
         textarea.attr('rows', textareaClone.attr('rows'));
