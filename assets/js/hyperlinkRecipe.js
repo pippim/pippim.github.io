@@ -365,6 +365,7 @@ export function setTextAreaRows (textarea) {
     }
     console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
 
+    // Do deep clone, but this doesn't capture .val
     var clone = textarea.cloneNode(true);
     clone.id = "cloned-textarea"      // Must have unique id
     clone.setAttribute('rows', '1')  // Reset to 1 row to get scroll bar
@@ -402,6 +403,7 @@ export function setTextAreaRows (textarea) {
     clone.left = left;
     console.log("clone left: " + clone.left + " resize: " + clone.resize +
                 " clone.position: " + clone.position);
+    clone.val(elm.val);
     console.log("clone.val: " + clone.val)
     return  // Stuff below will fail until ported
 
