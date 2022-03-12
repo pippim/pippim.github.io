@@ -363,7 +363,7 @@ export function setTextAreaRows (textarea) {
     } else {
         var maxRows = Number(textarea.dataset.max)
     }
-    console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
+    //console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows);
 
     // Do deep clone (true)
     var clone = textarea.cloneNode(true);
@@ -373,8 +373,8 @@ export function setTextAreaRows (textarea) {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     w = w * -2  // To set left off of screen
 
-    console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows +
-                " clone.id: " + clone.id + " clone.rows: " + clone.rows + " w: " + w);
+    //console.log(textarea.id + " min: " + minRows + " data-max: " + maxRows +
+    //            " clone.id: " + clone.id + " clone.rows: " + clone.rows + " w: " + w);
     /* Below has wrong syntax ?
     clone.style.cssText = `
         rows: "1";
@@ -400,8 +400,8 @@ export function setTextAreaRows (textarea) {
     //var left = w.toString() + "px";
     //console.log('left: ' + left)
     clone.left = w.toString() + "px";
-    console.log("clone left: " + clone.left + " resize: " + clone.resize +
-                " clone.position: " + clone.position);
+    //console.log("clone left: " + clone.left + " resize: " + clone.resize +
+    //            " clone.position: " + clone.position);
 
     // clone the textarea and hide it off screen
     /*
@@ -427,6 +427,7 @@ export function setTextAreaRows (textarea) {
     //var scrollHeight = textareaCloneNode.scrollHeight;
     var scrollHeight = clone.scrollHeight;
     console.log("clone.scrollHeight: " + clone.scrollHeight)
+    console.log("textarea.scrollHeight: " + textarea.scrollHeight)
     return  // Stuff below will fail until ported
 
     // increase the number of rows until the content fits
