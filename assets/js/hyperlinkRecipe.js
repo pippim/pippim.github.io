@@ -382,7 +382,7 @@ export function setTextAreaRows (textarea) {
     //console.log("clone.scrollHeight: " + clone.scrollHeight)
     //console.log("textarea.scrollHeight: " + textarea.scrollHeight)
     console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-                ' clone.Height: ' + clone.Height +
+                ' clone.height: ' + clone.height +
                 ' clone.scrollHeight: ' + clone.scrollHeight +
                 " textarea.scrollHeight: " + textarea.scrollHeight)
 
@@ -391,7 +391,7 @@ export function setTextAreaRows (textarea) {
         for (var rows = minRows; rows < maxRows; rows++) {
             clone.rows = rows.toString();
             console.log(clone.id + ' clone.offsetHeight: ' + clone.offsetHeight +
-                        ' clone.Height: ' + clone.Height +
+                        ' clone.height: ' + clone.height +
                         ' clone.scrollHeight: ' + clone.scrollHeight +
                         " textarea.scrollHeight: " + textarea.scrollHeight)
             if (clone.offsetHeight >= clone.scrollHeight) { break; }
