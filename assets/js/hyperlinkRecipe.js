@@ -368,12 +368,14 @@ export function setTextAreaRows (textarea) {
     if (textarea.dataset.hasOwnProperty('max')) { maxRows = Number(textarea.dataset.max) }
     console.log(textarea.id + " min: " + minRows + " max: " + maxRows);
 
+    textarea.setAttribute('overflow', 'hidden')  // Hide scrollbar and set later if needed
     var clone = textarea.cloneNode(true);
     clone.id = "cloned-textarea"      // Must have unique id
     // get width: https://stackoverflow.com/a/36711188/6929343
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     w = w * -2  // To set left off of screen
     clone.left = w.toString() + "px";
+    clone.style.width = textarea.offsetWidth;
     clone.rows = minRows.toString();
     clone.position = 'absolute';
 
@@ -397,6 +399,7 @@ export function setTextAreaRows (textarea) {
                         ' clone.scrollHeight: ' + clone.scrollHeight +
                         " textarea.scrollHeight: " + textarea.scrollHeight)
             if (clone.offsetHeight >= clone.scrollHeight) { break; }
+            if (rows == maxRows) { textarea.setAttribute('overflow-y', 'scroll'); break; }
         }
     }
     // console.log("clone.rows: " + clone.rows)
