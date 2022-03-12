@@ -370,11 +370,11 @@ export function setTextAreaRows (textarea) {
     if (textarea.dataset.hasOwnProperty('max')) { maxRows = Number(textarea.dataset.max) }
     var clone = textarea.cloneNode(true);   // Make clone of <textarea> element
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    var left = String(w * -2) + "px";
-    console.log('left: ' + left)
-    w = w * -2                              // Calculate one window width position left
-    clone.left = w.toString() + "px";       // Set clone position left off of screen
-    //clone.left = String(w * -2) + "px";     // Set clone position left off of screen
+    //var left = String(w * -2) + "px";
+    //console.log('left: ' + left)
+    //w = w * -2                              // Calculate one window width position left
+    //clone.left = w.toString() + "px";       // Set clone position left off of screen
+    clone.left = String(w * -2) + "px";     // Set clone position left off of screen
     clone.style.width = textarea.offsetWidth.toString() + 'px';
     clone.rows = minRows.toString();        // Set clone # of rows to minimum required
     clone.position = 'absolute';            // Anchors to point left of screen
