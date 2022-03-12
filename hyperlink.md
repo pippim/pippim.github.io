@@ -304,7 +304,7 @@ var autoRows = '5';     // Override using -data-max="5"
 var autoMinRows = "1";  // Override using -data-min="1"
 ```
 
-If you wish to have manually resize the <textare> element,
+If you wish to have manually resize the `<textare>` element,
 then set `autoRows = '0'`. If you are interested, here is
 the function called to automatically resize `<textarea>`:
 
@@ -337,7 +337,7 @@ Notice `maxRows = Number(textarea.dataset.max`. You can have
 `autoRows = "5"` defined which causes scroll bars to
 appear when `<textarea>` fields hit maximum of 5 rows.
 Using `.dataset.max` though you can override a given
-<textarea> for fewer or more rows as the maximum. That
+`<textarea>` for fewer or more rows as the maximum. That
 is controlled in the CSS:
 
 ``` scss
