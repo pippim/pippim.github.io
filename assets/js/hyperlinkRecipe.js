@@ -364,7 +364,7 @@ export function setTextAreaRows (textarea) {
     // Custom attribute for maximum number of rows defined?
     if (!textarea.hasOwnProperty('data-max')) {
         var maxRows = 5  // HTML doesn't specify data-max="99"
-        console.log('dataset.max undefined. Using 5 for maximum rows')
+        // console.log('dataset.max undefined. Using 5 for maximum rows')
     } else {
         var maxRows = Number(textarea.dataset.max)
     }
@@ -439,7 +439,7 @@ export function setTextAreaRows (textarea) {
     // increase the number of rows until the content fits
     for (var rows = minRows; rows < maxRows; rows++) {
         clone.rows = rows;
-        if (clone.height() > scrollHeight) {
+        if (clone.height > scrollHeight) {
             break;
         }
     }
