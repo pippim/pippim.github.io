@@ -121,8 +121,10 @@ function paintTable (b) {
             '  min-width: 550px;\n' +
             '  width: 100%; height: 100%;\n' +
             '  resize: none;\n' +
-            '  overflow-y: auto;\n' +
-            '}\n'
+            '  overflow-y: auto;\n'
+    if (autoRows == "0") { html += '  resize: vertical;\n '}
+                    else { html += '  resize: none;\n '}
+    html += '}\n'                   // End of .hrInput class styling
 
     html += '</style>\n'            // End of all styles
 
