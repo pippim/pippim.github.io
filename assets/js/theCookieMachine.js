@@ -149,7 +149,7 @@ function introduction_to_html() {
 introduction_to_html()  // Load immediately as it needs to wait for nothing
 
 function home_page_to_html(results) {
-    alert('results: ' + results)
+
     results = results.split("\n")  // Convert string into array
     if (results.length == 0) {
         var html = "<h3> 🔍 &emsp; No _config.yml found!</h3>\n";
@@ -165,21 +165,21 @@ function home_page_to_html(results) {
     }
 
     html += '<table id="ymlTable" class="yml_table">\n' +
-            '<caption>_config.yml Key/Value Pairs</caption>\n'
+            '<caption>_config.yml Key/Value Pairs</caption>\n';
     // YAML heading
     html += '<tr><th>YAML Key</th>\n' +
-            '<th>YAML Value</th></tr>\n'
+            '<th>YAML Value</th></tr>\n';
 
     var validYamlCount = 0;
     for (var i = 0; i < results.length; i++) {
-        ymlKeyValue = results[i].split(':')
+        var ymlKeyValue = results[i].split(':');
         if (ymlKeyValue.length == 2) {
             html += '<tr><td>' + ymlKeyValue[0] + '</td>\n' +
                     '    <td>' + ymlKeyValue[1] + '</td></tr>\n';
             validYamlCount++;
         }
     }
-    html += '</table>\n'     // End of our table and form
+    html += '</table>\n';     // End of our table and form
 
     // TODO: Make next four lines common function
     html += '<style> #tcmHdr {\n'    // Heading: "999 Pippim website entries found." <h3> styling
