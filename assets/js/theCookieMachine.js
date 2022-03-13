@@ -91,8 +91,8 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
     border: 2px solid white;`;
 });
 
-var website_tree = []
-var config_yml = []
+//var website_tree = []
+//var config_yml = [] // test if needed
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 var oldFontSize = null      // Save for when LineDraw changes
