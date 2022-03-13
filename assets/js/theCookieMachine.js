@@ -199,7 +199,7 @@ function setLineDrawFont(elm) {
     // font-family from: _sass/jekyll-theme-cayman.scss line 36
     elm.style.cssText = `
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
-      line-height: .5;
+      line-height: .63;
     `;
     // line-height: 1.163; <-- this was above
 }
