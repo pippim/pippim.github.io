@@ -164,7 +164,8 @@ function home_page_to_html(results) {
                    ' {{ site.title }} website _config.yml lines found.</h3>\n';
     }
 
-    html += '<table id="ymlTable" class="yml_table">\n'
+    html += '<table id="ymlTable" class="yml_table">\n' +
+            '<caption>_config.yml Key/Value Pairs</caption>\n'
     // YAML heading
     html += '<tr><th>YAML Key</th>\n' +
             '<th>YAML Value</th></tr>\n'
@@ -173,8 +174,8 @@ function home_page_to_html(results) {
     for (var i = 0; i < results.length; i++) {
         ymlKeyValue = results[i].split(':')
         if (ymlKeyValue.length == 2) {
-            html += '<tr><td>value="' + ymlKeyValue[0] + '"</td>\n' +
-                    '    <td>value="' + ymlKeyValue[1] + '"</td></tr?\n';
+            html += '<tr><td>' + ymlKeyValue[0] + '</td>\n' +
+                    '    <td>' + ymlKeyValue[1] + '</td></tr>\n';
             validYamlCount++;
         }
     }
