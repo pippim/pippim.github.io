@@ -221,7 +221,7 @@ function website_tree_to_html(results) {
             '  margin-top: .5rem;\n' +
             '  margin-bottom: 0px;\n' +
             '}\n'
-    html += '#tcm_window_body {\n' +
+    html += '#tcm_window, #tcm_window_body {\n' +
             '  margin: 0;' +
             '}\n'
     html += '</style>\n'
