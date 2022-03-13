@@ -576,6 +576,8 @@ a.search-results:visited {
     // border: .2rem solid #d3d3d3;
     background-image: url(../img/icons/button_background.png);
     background-repeat: no-repeat;
+    // https://stackoverflow.com/a/37001921/6929343
+    background-position: left;
     // background-size: 50px;
     background-size: cover;
     width: 63px;
