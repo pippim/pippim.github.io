@@ -210,7 +210,8 @@ function website_tree_to_html(results) {
     setLineDrawFont(b); // Not needed with <code> but need line-height
     html += "<p>\n";
     for (var i = 0; i < results.length; i++) {
-        html += results[i] + "<br>\n";
+        html += results[i];
+        if (i != results.length ) { html += "<br>\n"; }
     }
     html += "</p>";
 
