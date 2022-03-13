@@ -91,19 +91,16 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
     border: 2px solid white;`;
 });
 
-//var website_tree = []
-//var config_yml = [] // test if needed
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 var oldFontSize = null      // Save for when LineDraw changes
 var oldLineHeight = null
-var html = null             // Late declaration for html not defined error popping up
+var html = null
 
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
     // raw_url set in search.js loaded before us
-    // fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
     fetch(raw_url + '/_config.yml')
       .then((response) => response.text())
       .then((config_yml) => {
@@ -115,7 +112,6 @@ document.querySelector('#tcm_display_home').addEventListener('click', () => {
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // This function changes system font so others call restoreOldFont(b); to restore
     // raw_url set in search.js loaded before us
-    // fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
     fetch(raw_url + '/assets/json/website_tree.json')
       .then((response) => response.json())
       .then((website_tree) => {
@@ -139,7 +135,7 @@ document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => 
 });
 
 function introduction_to_html() {
-    html = "<p>";
+    var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Applications:</h3>\n";
     html += "  ☑ View cookies used on the {{ site.title }} website.<br>\n";
     html += "  ☑ Send cookie via mail. For backup or sharing.<br>\n";
@@ -156,7 +152,7 @@ function home_page_to_html(results) {
     alert('results: ' + results)
     results = results.split("\n")  // Convert string into array
     if (results.length == 0) {
-        html = "<h3> 🔍 &emsp; No _config.yml found!</h3>\n";
+        var html = "<h3> 🔍 &emsp; No _config.yml found!</h3>\n";
         html += "<p>An error has occurred.<br><br>\n";
         html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n";
         b.innerHTML = html;
@@ -168,11 +164,21 @@ function home_page_to_html(results) {
                    ' {{ site.title }} website _config.yml lines found.</h3>\n';
     }
 
-    html += "<p>\n";
+    html += '<table id="ymlTable" class="yml_table">\n'
+    // YAML heading
+    html += '<tr><th>YAML Key</th>\n' +
+            '<th>YAML Value</th></tr>\n'
+
+    var validYamlCount = 0;
     for (var i = 0; i < results.length; i++) {
-        html += results[i] + "<br>\n";
+        ymlKeyValue = results[i].split(':')
+        if (ymlKeyValue.length == 2) {
+            html += '<tr><td>value="' + ymlKeyValue[0] + '"</td>\n' +
+                    '    <td>value="' + ymlKeyValue[1] + '"</td></tr?\n';
+            validYamlCount++;
+        }
     }
-    html += "</p>";
+    html += '</table>\n'     // End of our table and form
 
     // TODO: Make next four lines common function
     html += '<style> #tcmHdr {\n'    // Heading: "999 Pippim website entries found." <h3> styling
