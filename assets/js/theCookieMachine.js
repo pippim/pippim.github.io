@@ -233,7 +233,7 @@ function local_storage_to_html() {
     html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
     html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
-    html += "  ☑ Display cache usage.<br>\n";
+    html += "  ☑ Display cache usage.";
     html += "</p>";
     b.innerHTML = html;              // Update TCM Window body
 }
