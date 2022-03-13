@@ -189,7 +189,7 @@ function home_page_to_html(results) {
     html += '#tcm_window_body {\n' +
             '  margin: 0;' +
             '}\n'
-    html += '</style>\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
     b.innerHTML = html; // Update TCM Window body
 }
 
@@ -217,14 +217,15 @@ function website_tree_to_html(results) {
 
     // TODO: Move next 9 lines to a shared function
     // Heading: "999 Pippim website entries found." <h3> styling
-    html += '<style> #tcmHdr {\n' +
+    html += '<style>'
+    html += '#tcmHdr {\n' +
             '  margin-top: .5rem;\n' +
             '  margin-bottom: 0px;\n' +
             '}\n'
     html += '#tcm_window, #tcm_window_body {\n' +
             '  margin: 0;' +
             '}\n'
-    html += '</style>\n'
+    html += '</style>'
 
     b.innerHTML = html; // Update TCM Window body
 
