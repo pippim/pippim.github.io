@@ -105,6 +105,7 @@ document.querySelector('#tcm_display_home').addEventListener('click', () => {
     // raw_url set in search.js loaded before us
     // fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
     fetch(raw_url + '/_config.yml')
+      .then((response) => response.text())
       .then((config_yml) => {
         home_page_to_html(config_yml);
         // console.log('Here is the text file:\n' + config_yml);
