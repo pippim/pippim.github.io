@@ -10,9 +10,9 @@ created_date: 2018-03-12 15:17:34
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "5,932 "
+views:        "5,956 "
 accepted:     Accepted
-uploaded:     2022-03-06 17:39:07
+uploaded:     2022-03-13 13:23:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-how-to-make-conky-true-transparent_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-05-13 14:46:09
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "1,198 "
+views:        "1,199 "
 accepted:     Accepted
-uploaded:     2022-03-06 17:39:07
+uploaded:     2022-03-13 13:23:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Uninstalling-netspeed-indicator.md
 toc:          false
 navigation:   false

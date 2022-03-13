@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    1
 views:        "194 "
 accepted:     Accepted
-uploaded:     2022-03-06 19:51:02
+uploaded:     2022-03-13 13:23:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-09-How-do-I-add-up-file-sizes-in-Bash-by-pattern-into-array-_-list_.md
 toc:          false
 navigation:   false

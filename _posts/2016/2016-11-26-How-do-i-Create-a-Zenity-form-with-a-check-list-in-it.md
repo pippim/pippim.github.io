@@ -10,9 +10,9 @@ created_date: 2016-11-26 02:07:07
 edit_date:    2017-04-13 12:37:16
 votes:        "1 "
 favorites:    
-views:        "11,217 "
+views:        "11,264 "
 accepted:     Accepted
-uploaded:     2022-03-06 17:39:07
+uploaded:     2022-03-13 13:23:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-do-i-Create-a-Zenity-form-with-a-check-list-in-it.md
 toc:          false
 navigation:   false

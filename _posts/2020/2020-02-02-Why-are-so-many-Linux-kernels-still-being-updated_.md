@@ -10,9 +10,9 @@ created_date: 2020-02-02 12:49:19
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "1,384 "
+views:        "1,389 "
 accepted:     
-uploaded:     2022-03-06 19:51:02
+uploaded:     2022-03-13 13:23:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-02-02-Why-are-so-many-Linux-kernels-still-being-updated_.md
 toc:          false
 navigation:   false
@@ -51,7 +51,7 @@ Even though my Alienware laptop is two years old I would like to have this bug f
 
 Besides bug fixes there are security fixes to consider:
 
-- [Secondary monitor not recognized under Ubuntu 16.04 with kernel 4.7.4](Secondary monitor not recognized under Ubuntu 16.04 with kernel 4.7.4)
+- [Secondary monitor not recognized under Ubuntu 16.04 with kernel 4.7.4]({% post_url /2016/2016-09-20-Secondary-monitor-not-recognized-under-Ubuntu-16.04-with-kernel-4.7.4 %})
 - [What is Ubuntu&#39;s status on the Meltdown and Spectre vulnerabilities?](What is Ubuntu&#39;s status on the Meltdown and Spectre vulnerabilities?)
 
 In the last security fix the problem was with Intel chips predictive branching technology and was around for many years. Besides Linux, ***Windows and Mac were effected as well***.

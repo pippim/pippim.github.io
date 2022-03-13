@@ -10,9 +10,9 @@ created_date: 2018-06-10 14:44:30
 edit_date:    2022-01-02 20:37:14
 votes:        "3 "
 favorites:    
-views:        "6,462 "
+views:        "6,468 "
 accepted:     Accepted
-uploaded:     2022-03-06 19:51:02
+uploaded:     2022-03-13 13:23:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-10-I-cannot-use-MySql-as-normal-user-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false
