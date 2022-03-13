@@ -149,17 +149,34 @@ function introduction_to_html() {
 
 introduction_to_html()  // Load immediately as it needs to wait for nothing
 
-function home_page_to_html(config_yml) {
+function home_page_to_html(results) {
     restoreOldFont(b);
-    html = "<p>";
-    html += "<h3>Site Statistics (Jekyll Front Matter)</h3>\n";
-    html += "  ☑ View cookies used on the {{ site.title }} website.<br>\n";
-    html += "  ☑ Send cookie via mail. For backup or sharing.<br>\n";
-    html += "  ☑ Receive cookie via mail. From yourself or colleague.<br>\n";
-    html += "  ☑ Countdown Timers. For multi-phase time sensitive missions.<br>\n";
-    html += "  ☑ And in the future... Other ways of sharing/using Cookies.\n";
+    if (results.length == 0) {
+        html = "<h3> 🔍 &emsp; No _config.yml found!</h3>\n";
+        html += "<p>An error has occurred.<br><br>\n";
+        html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n";
+        b.innerHTML = html;
+        return;
+    } else if (results.length == 1) {
+        var html = '<h3 id="tcmHdr">1 {{ site.title }} website _config.yml line found.</h3>\n';
+    } else {
+        var html = '<h3 id="tcmHdr">' + results.length.toString() +
+                   ' {{ site.title }} website _config.yml lines found.</h3>\n';
+    }
+
+    html += "<p>\n";
+    for (var i = 0; i < results.length; i++) {
+        html += results[i] + "<br>\n";
+    }
     html += "</p>";
-    b.innerHTML = html;              // Update TCM Window body
+
+    // TODO: Make next four lines common function
+    html += '<style> #tcmHdr {\n'    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '  margin-top: .5rem;\n'
+    html += '  margin-bottom: 0px;\n'
+    html += '} </style>\n'
+
+    b.innerHTML = html; // Update TCM Window body
 }
 
 function website_tree_to_html(results) {
@@ -183,6 +200,7 @@ function website_tree_to_html(results) {
     }
     html += "</p>";
 
+    // TODO: Make next four lines common function
     html += '<style> #tcmHdr {\n'    // Heading: "999 Pippim website entries found." <h3> styling
     html += '  margin-top: .5rem;\n'
     html += '  margin-bottom: 0px;\n'
