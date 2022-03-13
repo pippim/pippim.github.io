@@ -100,38 +100,40 @@ var oldLineHeight = null
 var html = null             // Late declaration for html not defined error popping up
 
 
+document.querySelector('#tcm_display_home').addEventListener('click', () => {
+    restoreOldFont(b);
+    // raw_url set in search.js loaded before us
+    // fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
+    fetch(raw_url + '/_config.yml')
+      .then((config_yml) => {
+        home_page_to_html(config_yml);
+        // console.log('Here is the text file:\n' + config_yml);
+      });
+});
+
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
+    // This function changes system font so others call restoreOldFont(b); to restore
     // raw_url set in search.js loaded before us
     // fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
     fetch(raw_url + '/assets/json/website_tree.json')
       .then((response) => response.json())
       .then((website_tree) => {
         website_tree_to_html(website_tree);
-        // console.log('Here is the json!', website_tree);
-      });
-});
-
-document.querySelector('#tcm_display_home').addEventListener('click', () => {
-    // raw_url set in search.js loaded before us
-    // fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
-    fetch(raw_url + '/_config.yml')
-      .then((response) => response.json())
-      .then((config_yml) => {
-        home_page_to_html(config_yml);
-        // console.log('Here is the json!', website_tree);
+        // console.log('Here is the json:\n' + website_tree);
       });
 });
 
 document.querySelector('#tcm_display_local').addEventListener('click', () => {
+    restoreOldFont(b);
     // fm_var cookie, search_url.json and search_words.json must already be
     // globally defined.
     local_storage_to_html();
 });
 
 document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
+    restoreOldFont(b);
     // fm_var cookie, search_url.json and search_words.json must already be
     // globally defined.
-    restoreOldFont(b);
     processHyperlinkRecipe('tcm_window_body')
 });
 
@@ -150,7 +152,6 @@ function introduction_to_html() {
 introduction_to_html()  // Load immediately as it needs to wait for nothing
 
 function home_page_to_html(results) {
-    restoreOldFont(b);
     if (results.length == 0) {
         html = "<h3> 🔍 &emsp; No _config.yml found!</h3>\n";
         html += "<p>An error has occurred.<br><br>\n";
@@ -211,7 +212,6 @@ function website_tree_to_html(results) {
 }
 
 function local_storage_to_html() {
-    restoreOldFont(b);
     html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
     html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
