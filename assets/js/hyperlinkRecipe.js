@@ -99,9 +99,9 @@ function paintTable (b) {
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrHdr { margin: .5rem; }\n'
     // No borders inside the table
-    html += 'table, tr, th, td { border: none ! important; }\n'
+    html += '#hrb_body table, tr, th, td { border: none ! important; }\n'
     // Table details: Space between columns
-    html += 'td { padding: 0 1rem; }\n'
+    html += '#hrb_body td { padding: 0 1rem; }\n'
     // Buttons in the first column. Tiny bit of left & right padding
     // Because Chrome and Firefox vary between shrinking & expanding on hover
     html += '.hrBtn {\n' +
