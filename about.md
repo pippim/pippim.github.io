@@ -64,6 +64,7 @@ is simply a labour of love.
    caption="Image Credit: Apple's DarkSky.net"
 %}
 
+<a id="where-is-pippim?"></a>
 ## Where is Pippim located?
 
 Figuratively speaking, Pippim is located in "the clouds" on 
