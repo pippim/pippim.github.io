@@ -152,6 +152,7 @@ function introduction_to_html() {
 introduction_to_html()  // Load immediately as it needs to wait for nothing
 
 function home_page_to_html(results) {
+    alert('results: ' + results)
     results = results.split("\n")  // Convert string into array
     if (results.length == 0) {
         html = "<h3> 🔍 &emsp; No _config.yml found!</h3>\n";
