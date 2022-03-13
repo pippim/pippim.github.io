@@ -39,7 +39,7 @@ function paintTable (b) {
     html += '<form><table id="hrTable" class="hr_table">\n'
     // Ingredients heading
     html += '<tr><th>Ingredients</th>\n' +
-            '<th>Button inserts the clipboard contents, or type below</th></tr>\n'
+            '<th>Ingredient button inserts the clipboard contents, or type below</th></tr>\n'
     // Button and textarea for URL (href)
     html += '<tr><td><button class="hrBtn" id="btnHref" type="button"\n' +
             'title="Browser address bar (paste from the clipboard)"\n' +
@@ -60,7 +60,7 @@ function paintTable (b) {
             'placeholder="Optional. Hovering mouse over link displays tooltip"></td></tr>\n'
     // Variations Heading
     html += '<tr><th>Variations</th>\n' +
-            '<th>Button toggles options on and off</th></tr>\n'
+            '<th>Variation button toggles options on and off</th></tr>\n'
     // Toggle UTF-8 Symbol for external links
     html += '<tr><td><button class="hrBtn" id="btnExternal" type="button"\n' +
             'title="Use optional UTF-8 symbol to show link is an external website"\n' +
@@ -75,7 +75,7 @@ function paintTable (b) {
             'placeholder="Optional. Open link in New Browser Window or Tab"></td></tr>\n'
     // Bake Heading
     html += '<tr><th>Bake</th>\n' +
-            '<th>Button puts the recipe into the clipboard</th></tr>\n'
+            '<th>Bake button puts the recipe into the clipboard</th></tr>\n'
     // Bake HTML Recipe. Optional data-min and data-max used here.
     html += '<tr><td><button class="hrBtn" id="btnRecipeHtml" type="button"\n' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"\n' +
