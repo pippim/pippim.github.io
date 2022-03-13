@@ -20,38 +20,10 @@ var raw_url = raw_url.replace('/blob/', '/');
 // Note: On older non-pc systems, 'main' was called 'master'
 
 async function load_search_objects() {
-    /*
-    search_words = await this.getJSON(raw_url + '/assets/json/search_words.json');
     // TODO: rename search_url.json to search_urls.json
-    search_urls  = await this.getJSON(raw_url + '/assets/json/search_url.json');
-    */
     [search_words, search_urls] =
         await Promise.all([getJSON(raw_url + '/assets/json/search_words.json'),
                            getJSON(raw_url + '/assets/json/search_url.json')]);
-    /* Following doesn't work when search_include is still a promise and not yet an array....
-    if (search_include typeof !== Promise) && (search_include.length === 0) {
-        search_include = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
-    } else {
-        console.log('Using preloaded search_include object')
-    }
-    if (search_urls typeof !== Promise) && (search_urls.length === 0) {
-        search_urls  = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json')
-    } else {
-        console.log('Using preloaded search_urls object')
-    }
-    */
-}
-
-async function load(url) {
-    let obj = null;
-
-    try {
-        obj = await (await fetch(url)).json();
-    } catch(e) {
-        console.log("load(url) error: 'obj' could not be fetched.");
-    }
-
-    return obj;
 }
 
 // https://stackoverflow.com/a/51992739/6929343
@@ -61,11 +33,10 @@ async function getJSON(url) {
         .then((responseJson)=>{return responseJson});
 }
 
-
 // Preload search objects
 load_search_objects();
 
-// Note theCokkieMachine.js is already using b:
+// Note theCookieMachine.js is already using b:
 // const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
