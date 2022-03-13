@@ -572,7 +572,7 @@ a.search-results:visited {
   font-size: 1.5rem;
   > button {
     display: inline-block;
-    margin: .5rem .5rem .5rem;
+    margin: .5rem .5rem;
     border: .2rem solid #d3d3d3;
     background-image: url(../img/icons/button_background.png);
     background-repeat: no-repeat;
@@ -584,15 +584,6 @@ a.search-results:visited {
     }
   }
 }
-
-/*
-#tcm_dispaly_home {
-    // image can be 1200x1200 px
-    //display: inline-block;
-    height: 50px;
-    width: 50px;
-}
-*/
 
 #tcm_window_body {
   overflow: auto;
