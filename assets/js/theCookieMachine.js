@@ -172,7 +172,7 @@ function home_page_to_html(results) {
     var validYamlCount = 0;
     for (var i = 0; i < results.length; i++) {
         var ymlKeyValue = results[i].split(':');
-        if (ymlKeyValue.length == 2) {
+        if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
             html += '<tr><td>' + ymlKeyValue[0] + '</td>\n' +
                     '    <td>' + ymlKeyValue[1] + '</td></tr>\n';
             validYamlCount++;
