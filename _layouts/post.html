@@ -34,7 +34,7 @@
       <a href="/answers.html" style="display: inline" class="button">✅ Answers</a>
       <a href="{{ site.baseurl }}/programs.html" style="display: inline" class="button">💻 Programs</a>
 
-      <!-- Draggable DIV 
+      <!-- Draggable DIV
       // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
       -->
       {% include tcm-window.html %}
@@ -56,7 +56,7 @@
           onclick="window.open('{{ page.git_md_url }}','_blank')"
           >View markdown on GitHub Pages 🔗
         </button>
-          
+
       <!-- LESS FRONT MATTER -->
       <h4 id="minimal_front_matter" style="margin-top: .1rem;">
 
@@ -73,7 +73,7 @@
                 padding-right: .5em;
             }
         </style>
-        
+
         {% if page.views and page.views != "" and page.views != nil %}
           <fmVar>Views:</fmVar>
             <mark>{{ page.views }}</mark>
@@ -219,7 +219,7 @@
       {{ content }}
 
       <!-- From: https://www.bytedude.com/jekyll-previous-and-next-posts/ -->
-      <div class="post-nav" style="display: flex; justify-content: space-between; 
+      <div class="post-nav" style="display: flex; justify-content: space-between;
                                    flex-wrap: wrap; align-content: stretch;
                                    margin-top: 2em; background-color: #F0FFF0;">
         <span style="flex: 1 1 0; width: 45%; padding-right: 0.5em;">
