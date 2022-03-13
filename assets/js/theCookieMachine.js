@@ -247,15 +247,15 @@ function setLineDrawFont(elm) {
 }
 
 function restoreOldFont(elm) {
-    if (oldFontSize != null) {
+    //if (oldFontSize != null) {
         // From _sass/jekyll-theme-cayman.scss line 227
         elm.style.cssText = `
           font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-size: 16px;
-          line-height: 1;
+          line-height: 1.2;
         `;
         //  line-height: 1.5; <-- Old before white-space: pre;
-    }
+    //}
 }
 
 // Setup hdr-bar buttons with tooltips
