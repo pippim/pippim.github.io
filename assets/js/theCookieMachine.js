@@ -92,19 +92,18 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
 });
 
 var website_tree = []
+var config_yml = []
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 var oldFontSize = null      // Save for when LineDraw changes
 var oldLineHeight = null
 var html = null             // Late declaration for html not defined error popping up
 
-// search.js has read _config.yml to get code_url and used it to build raw_url
-// alert('raw_url: ' + raw_url);
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
-    // TODO: rename search_url.json to search_urls.json
-    //yml: https://       github.com        /pippim/pippim.github.io/blob/main
-    fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
+    // raw_url set in search.js loaded before us
+    // fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
+    fetch(raw_url + '/assets/json/website_tree.json')
       .then((response) => response.json())
       .then((website_tree) => {
         website_tree_to_html(website_tree);
@@ -113,7 +112,14 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
 });
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
-    home_page_to_html();
+    // raw_url set in search.js loaded before us
+    // fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
+    fetch(raw_url + '/_config.yml')
+      .then((response) => response.json())
+      .then((config_yml) => {
+        home_page_to_html(config_yml);
+        // console.log('Here is the json!', website_tree);
+      });
 });
 
 document.querySelector('#tcm_display_local').addEventListener('click', () => {
@@ -129,10 +135,24 @@ document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => 
     processHyperlinkRecipe('tcm_window_body')
 });
 
-function home_page_to_html() {
-    restoreOldFont(b);
+function introduction_to_html() {
     html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Applications:</h3>\n";
+    html += "  ☑ View cookies used on the {{ site.title }} website.<br>\n";
+    html += "  ☑ Send cookie via mail. For backup or sharing.<br>\n";
+    html += "  ☑ Receive cookie via mail. From yourself or colleague.<br>\n";
+    html += "  ☑ Countdown Timers. For multi-phase time sensitive missions.<br>\n";
+    html += "  ☑ And in the future... Other ways of sharing/using Cookies.\n";
+    html += "</p>";
+    b.innerHTML = html;              // Update TCM Window body
+}
+
+introduction_to_html()  // Load immediately as it needs to wait for nothing
+
+function home_page_to_html(config_yml) {
+    restoreOldFont(b);
+    html = "<p>";
+    html += "<h3>Site Statistics (Jekyll Front Matter)</h3>\n";
     html += "  ☑ View cookies used on the {{ site.title }} website.<br>\n";
     html += "  ☑ Send cookie via mail. For backup or sharing.<br>\n";
     html += "  ☑ Receive cookie via mail. From yourself or colleague.<br>\n";
@@ -219,9 +239,6 @@ function restoreOldFont(elm) {
         //  line-height: 1.5; <-- Old before white-space: pre;
     }
 }
-
-// Setup The Cookie Machine Window's home page text inner HTML
-home_page_to_html();
 
 // Setup hdr-bar buttons with tooltips
 function set_hdr_tooltips () {
