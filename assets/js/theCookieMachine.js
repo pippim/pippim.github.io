@@ -189,7 +189,12 @@ function home_page_to_html(results) {
     html += '#tcm_window_body {\n' +
             '  margin: 0;' +
             '}\n'
-    html += '#tcm_window_body table { border-collapse: collapse ! important; }'
+    // No borders inside the table
+    // html += '#hrb_body table, tr, th, td { border: none ! important; }\n'
+    // Table details: Space between columns
+    // html += '#hrb_body td { padding: 0 1rem; }\n'
+    html += '#tcm_window_body table { border-collapse: collapse ! important; }\n'
+    html += '#tcm_window_body td { padding: 0 1rem; }\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     b.innerHTML = html; // Update TCM Window body
 }
