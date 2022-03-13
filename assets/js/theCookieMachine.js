@@ -210,7 +210,7 @@ function restoreOldFont(elm) {
         elm.style.cssText = `
           font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-size: 16px;
-          line-height: .55;
+          line-height: 1;
         `;
         //  line-height: 1.5; <-- Old before white-space: pre;
     }
