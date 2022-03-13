@@ -211,7 +211,7 @@ function website_tree_to_html(results) {
     html += "<p>\n";
     for (var i = 0; i < results.length; i++) {
         html += results[i];
-        if (i != results.length ) { html += "<br>\n"; }
+        if (i != results.length - 1) { html += "<br>\n"; }
     }
     html += "</p>";
 
