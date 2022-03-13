@@ -1,11 +1,25 @@
-// From: https://stackoverflow.com/a/12393346/6929343
+---
+---
+/* TODO: Get Server/Local storage:  https://stackoverflow.com/a/23516713/6929343
+         Page refreshed date/time:  https://stackoverflow.com/a/47145745/6929343
+         Reload Window if obsolete, flag all cached pages as dirty so they reload:
+                                    https://stackoverflow.com/a/28041336/6929343
+                                    https://stackoverflow.com/a/118886/6929343
+*/
 window.MyLib = {}; // global Object container; don't use var
 
 var search_words = null           // global context new format as dictionary of points
 var search_urls = null            //   "      "
 
+var code_url = "{{ site.code_url }}";
+// code_yml: https://       github.com        /pippim/pippim.github.io/blob/main
+// raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
+var raw_url = code_url.replace('github.com', 'raw.githubusercontent.com');
+var raw_url = raw_url.replace('/blob/', '/');
+
 async function load_search_objects() {
     search_words = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_words.json');
+    // TODO: rename search_url.json to search_urls.json
     search_urls  = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json');
 
     /* Following doesn't work when search_include is still a promise and not yet an array....
@@ -45,6 +59,8 @@ async function getJSON(url) {
 // Preload search objects
 load_search_objects();
 
+// Note theCokkieMachine.js is already using b:
+// const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const c = document.getElementsByClassName("close")[0];  // Both 'X' close classes
