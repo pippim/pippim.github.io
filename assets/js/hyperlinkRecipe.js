@@ -101,7 +101,7 @@ function paintTable (b) {
     // No borders inside the table
     html += 'table, tr, th, td { border: none ! important; }\n'
     // Table details: Space between columns
-    html += 'td { padding: 0 1rem; border-collapse: collapse; }\n'
+    html += 'td { padding: 0 1rem; }\n'
     // Buttons in the first column. Tiny bit of left & right padding
     // Because Chrome and Firefox vary between shrinking & expanding on hover
     html += '.hrBtn {\n' +
