@@ -20,10 +20,14 @@ var raw_url = raw_url.replace('/blob/', '/');
 // Note: On older non-pc systems, 'main' was called 'master'
 
 async function load_search_objects() {
+    /*
     search_words = await this.getJSON(raw_url + '/assets/json/search_words.json');
     // TODO: rename search_url.json to search_urls.json
     search_urls  = await this.getJSON(raw_url + '/assets/json/search_url.json');
-
+    */
+    [search_words, search_urls] =
+        await Promise.all([getJSON(raw_url + '/assets/json/search_words.json'),
+                           getJSON(raw_url + '/assets/json/search_url.json')]);
     /* Following doesn't work when search_include is still a promise and not yet an array....
     if (search_include typeof !== Promise) && (search_include.length === 0) {
         search_include = await load('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json')
