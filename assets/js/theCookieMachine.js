@@ -199,7 +199,7 @@ function setLineDrawFont(elm) {
     // font-family from: _sass/jekyll-theme-cayman.scss line 36
     elm.style.cssText = `
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
-      line-height: .63;
+      line-height: .55;
     `;
     // line-height: 1.163; <-- this was above
 }
@@ -210,8 +210,9 @@ function restoreOldFont(elm) {
         elm.style.cssText = `
           font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-size: 16px;
-          line-height: 1.5;
+          line-height: .55;
         `;
+        //  line-height: 1.5; <-- Old before white-space: pre;
     }
 }
 
