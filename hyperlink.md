@@ -122,6 +122,7 @@ contents directly in the input field instead of using the button.
 You can install *Hyperlink Recipe Baker*, **HRB** for short, 
 on your own website. For this purpose a 
 [scaled down version](https://pippim.github.io/hrb.html "Specially designed webpage easier to understand"){:target="_blank"}
+has been created for you to include on your own website.
 
 
 The easiest way is highlight the code in the the GitHub Repository
@@ -129,7 +130,7 @@ and paste into a new file in your website.
 
 Follow these steps:
 
-- Go to the [repo](https://raw.githubusercontent.com/pippim/hrb/main/hyperlinkRecipe.js "Pippim Hyperlink Recipe Baker GitHub Repository"){:target="_blank"}
+- Go to the [repo](https://github.com/pippim/hrb/blob/main/assets/js/hyperlinkRecipe.js "Pippim Hyperlink Recipe Baker GitHub Repository"){:target="_blank"}
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> to select all text
 - <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy all text to clipboard
 - Go to your own website repo and create a new file called `/assets/js/hyperlinkRecipe.js`
@@ -141,7 +142,7 @@ Follow these steps:
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
-## Add JavaScript Filename to TOp Level HTML
+## Add JavaScript Filename to Top Level HTML
 
 A scaled down version of your webpage top level `_layout` file:
 
