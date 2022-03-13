@@ -195,7 +195,7 @@ function home_page_to_html(results) {
     // Table details: Space between columns
     // html += '#hrb_body td { padding: 0 1rem; }\n'
     html += '#tcm_window_body table { border-collapse: collapse ! important; }\n'
-    html += '#tcm_window_body th, td { padding: 1px 1rem; }\n'
+    html += '#tcm_window_body th, td { padding: .05rem 1rem; }\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     b.innerHTML = html; // Update TCM Window body
 }
