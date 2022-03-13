@@ -98,8 +98,8 @@ var oldFontSize = null      // Save for when LineDraw changes
 var oldLineHeight = null
 var html = null             // Late declaration for html not defined error popping up
 
-// Note: On older non-pc systems, 'main' was called 'master'
-alert('raw_url: ' + raw_url);
+// search.js has read _config.yml to get code_url and used it to build raw_url
+// alert('raw_url: ' + raw_url);
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // TODO: rename search_url.json to search_urls.json

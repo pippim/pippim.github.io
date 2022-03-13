@@ -11,16 +11,18 @@ window.MyLib = {}; // global Object container; don't use var
 var search_words = null           // global context new format as dictionary of points
 var search_urls = null            //   "      "
 
+// Read _config.yml to get code_url and use it to build raw_url
 var code_url = "{{ site.code_url }}";
 // code_yml: https://       github.com        /pippim/pippim.github.io/blob/main
 // raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
-var raw_url = code_url.replace('github.com', 'raw.githubusercontent.com');
+var raw_url = code_url.replace('github', 'raw.githubusercontent');
 var raw_url = raw_url.replace('/blob/', '/');
+// Note: On older non-pc systems, 'main' was called 'master'
 
 async function load_search_objects() {
-    search_words = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_words.json');
+    search_words = await this.getJSON(raw_url + '/assets/json/search_words.json');
     // TODO: rename search_url.json to search_urls.json
-    search_urls  = await this.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json');
+    search_urls  = await this.getJSON(raw_url + '/assets/json/search_url.json');
 
     /* Following doesn't work when search_include is still a promise and not yet an array....
     if (search_include typeof !== Promise) && (search_include.length === 0) {
