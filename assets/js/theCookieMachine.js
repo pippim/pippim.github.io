@@ -189,6 +189,7 @@ function home_page_to_html(results) {
     html += '#tcm_window_body {\n' +
             '  margin: 0;' +
             '}\n'
+    html += 'td { border-collapse: collapse; }'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     b.innerHTML = html; // Update TCM Window body
 }
