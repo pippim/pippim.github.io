@@ -4,6 +4,9 @@
 
 // Note: Requires search.js to be loaded first for getJSON function.
 //       search.js defines global variables
+//       tcm_window defined in _includes/tcm-window.html
+
+// Button Image source: https://www.cleanpng.com/free/
 
 // imported functions.  Parent needs <script type="module"...
 // See: /_layouts/program.html, etc.
@@ -196,8 +199,9 @@ function setLineDrawFont(elm) {
     // font-family from: _sass/jekyll-theme-cayman.scss line 36
     elm.style.cssText = `
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
-      line-height: 1.163;
+      line-height: .8;
     `;
+    // line-height: 1.163; <-- this was above
 }
 
 function restoreOldFont(elm) {
