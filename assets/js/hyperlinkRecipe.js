@@ -127,7 +127,7 @@ function paintTable (b) {
                     else { html += '  resize: none;\n '}
     html += '}\n'                   // End of .hrInput class styling
 
-    html += '</style>\n'            // End of all styles
+    html += '</style>'              // End of all styles
 
     b.innerHTML = html;             // Update TCM Window body
 
