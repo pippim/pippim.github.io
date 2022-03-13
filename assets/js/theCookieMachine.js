@@ -164,8 +164,7 @@ function home_page_to_html(results) {
                    ' {{ site.title }} website _config.yml lines found.</h3>\n';
     }
 
-    html += '<table id="ymlTable" class="yml_table">\n' +
-            '<caption>_config.yml Key/Value Pairs</caption>\n';
+    html += '<table id="ymlTable" class="yml_table">\n' ;
     // YAML heading
     html += '<tr><th>YAML Key</th>\n' +
             '<th>YAML Value</th></tr>\n';
@@ -181,12 +180,16 @@ function home_page_to_html(results) {
     }
     html += '</table>\n';     // End of our table and form
 
-    // TODO: Make next four lines common function
-    html += '<style> #tcmHdr {\n'    // Heading: "999 Pippim website entries found." <h3> styling
-    html += '  margin-top: .5rem;\n'
-    html += '  margin-bottom: 0px;\n'
-    html += '} </style>\n'
-
+    // TODO: Move next 9 lines to a shared function
+    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style> #tcmHdr {\n' +
+            '  margin-top: .5rem;\n' +
+            '  margin-bottom: 0px;\n' +
+            '}\n'
+    html += '#tcm_window_body {\n' +
+            '  margin: 0;' +
+            '}\n'
+    html += '</style>\n'
     b.innerHTML = html; // Update TCM Window body
 }
 
@@ -211,11 +214,16 @@ function website_tree_to_html(results) {
     }
     html += "</p>";
 
-    // TODO: Make next four lines common function
-    html += '<style> #tcmHdr {\n'    // Heading: "999 Pippim website entries found." <h3> styling
-    html += '  margin-top: .5rem;\n'
-    html += '  margin-bottom: 0px;\n'
-    html += '} </style>\n'
+    // TODO: Move next 9 lines to a shared function
+    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style> #tcmHdr {\n' +
+            '  margin-top: .5rem;\n' +
+            '  margin-bottom: 0px;\n' +
+            '}\n'
+    html += '#tcm_window_body {\n' +
+            '  margin: 0;' +
+            '}\n'
+    html += '</style>\n'
 
     b.innerHTML = html; // Update TCM Window body
 
@@ -268,7 +276,7 @@ function restoreOldFont(elm) {
     //}
 }
 
-// Setup hdr-bar buttons with tooltips
+// Add tooltips to hdr-bar buttons
 function set_hdr_tooltips () {
     var hdr_bars = document.getElementsByClassName('hdr-bar');
     var hdr_bars_cnt = hdr_bars.length;
