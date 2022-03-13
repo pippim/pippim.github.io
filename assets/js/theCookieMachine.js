@@ -98,8 +98,17 @@ var oldFontSize = null      // Save for when LineDraw changes
 var oldLineHeight = null
 var html = null             // Late declaration for html not defined error popping up
 
+var code_url = {{ site.code_url}};
+// code_yml: https://       github.com        /pippim/pippim.github.io/blob/main
+// raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
+var raw_url = code_url.replace('github.com', 'raw.githubusercontent.com');
+var raw_url = raw_url.replace('/blob/', '/');
+// Note: On older non-pc systems, 'main' was called 'master'
+alert('raw_url: ' + raw_url);
+
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // TODO: rename search_url.json to search_urls.json
+    //yml: https://       github.com        /pippim/pippim.github.io/blob/main
     fetch('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/website_tree.json')
       .then((response) => response.json())
       .then((website_tree) => {
