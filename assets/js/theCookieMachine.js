@@ -195,7 +195,7 @@ function home_page_to_html(results) {
     // Table details: Space between columns
     // html += '#hrb_body td { padding: 0 1rem; }\n'
     html += '#tcm_window_body table { border-collapse: collapse ! important; }\n'
-    html += '#tcm_window_body th, td { padding: .0163rem 1rem; }\n'
+    html += '#tcm_window_body th, td { padding: .018rem 1rem; }\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     b.innerHTML = html; // Update TCM Window body
 }
@@ -239,6 +239,9 @@ function website_tree_to_html(results) {
 }
 
 function local_storage_to_html() {
+    if ('caches' in window){
+        alert('caches found in window');
+    }
     html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
     html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
