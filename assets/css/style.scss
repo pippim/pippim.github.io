@@ -570,6 +570,7 @@ a.search-results:visited {
 #tcm_window_buttons {
   // Buttons - Home, Cloud Storage, Local Storage and Hyperlink Recipe Baker
   // font-size: 1.5rem;   // Initially UTF-8 symbols are being used.
+  display: block;
   > button {
     display: inline-block;
     margin: .5rem .5rem .5rem;
