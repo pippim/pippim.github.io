@@ -255,10 +255,11 @@ function local_storage_to_html() {
 }
 
 function webpage_info_to_html() {
-    var filenameHref = location.href
-    var filenamePath = location.href
-    var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1)
-    var filenameMark = raw_url + filenameRoot.replace('.html', '.md')
+    var filenameHref = location.href;
+    var filenamePath = location.href;
+    var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
+    var markdownName = filenameRoot.replace('.html', '.md');
+    var filenameMark = raw_url + markdownName;
     html = "<p>";
     html += "<h3>Webpage Information:</h3>\n";
     html += "Href: " + filenameHref + "<br>\n";
