@@ -9,11 +9,10 @@
 // Button Image source: https://www.cleanpng.com/free/
 
 // imported functions.  Parent needs <script type="module"...
-// See: /_layouts/program.html, etc.
+// See: /_layouts +> /default.html, / hrb.html, /program.html, etc.
 import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
 
-// Webpage may have <div id="hrb_body" defined. If so populate it
-/* Test if this is breaking stuff. */
+// Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
 window.addEventListener('DOMContentLoaded', (event) => {
     // https://stackoverflow.com/a/42526074/6929343
     var myEle = document.getElementById("hrb_body");
@@ -122,8 +121,7 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
 
 document.querySelector('#tcm_display_local').addEventListener('click', () => {
     restoreOldFont(b);
-    // fm_var cookie, search_url.json and search_words.json must already be
-    // globally defined.
+    // Display cookies and cache (WIP)
     local_storage_to_html();
 });
 
@@ -131,7 +129,13 @@ document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => 
     restoreOldFont(b);
     // fm_var cookie, search_url.json and search_words.json must already be
     // globally defined.
-    processHyperlinkRecipe('tcm_window_body')
+    processHyperlinkRecipe('tcm_window_body');
+});
+
+document.querySelector('#tcm_webpage_info').addEventListener('click', () => {
+    restoreOldFont(b);
+    // Display webpage info - filename, front matter and text (WIP)
+    webpage_info_to_html();
 });
 
 function introduction_to_html() {
@@ -246,6 +250,17 @@ function local_storage_to_html() {
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
     html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
     html += "  ☑ Display cache usage.";
+    html += "</p>";
+    b.innerHTML = html;              // Update TCM Window body
+}
+
+function webpage_info_to_html() {
+    var filenameHref = location.href
+    var filenamePath = location.href
+    html = "<p>";
+    html += "<h3>Webpage Information:</h3>\n";
+    html += "Href: " + filenameHref + "<br>\n";
+    html += "Path: " + filenamePath + "<br>\n";
     html += "</p>";
     b.innerHTML = html;              // Update TCM Window body
 }
