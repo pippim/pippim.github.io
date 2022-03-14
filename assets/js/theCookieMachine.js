@@ -257,10 +257,14 @@ function local_storage_to_html() {
 function webpage_info_to_html() {
     var filenameHref = location.href
     var filenamePath = location.href
+    var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1)
+    var filenameMark = raw_url + filenameRoot.replace('.html', '.md')
     html = "<p>";
     html += "<h3>Webpage Information:</h3>\n";
     html += "Href: " + filenameHref + "<br>\n";
     html += "Path: " + filenamePath + "<br>\n";
+    html += "Root: " + filenameRoot + "<br>\n";
+    html += "Mark: " + filenameMark + "<br>\n";
     html += "</p>";
     b.innerHTML = html;              // Update TCM Window body
 }
