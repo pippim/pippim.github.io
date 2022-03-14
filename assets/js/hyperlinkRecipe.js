@@ -224,17 +224,17 @@ function doNewWindow () {
 }
 
 function doRecipeHtml () {
-    validateUrl(inputHref.value)
     buildRecipes();
     // TODO: check mandatory fields href and text are non-blank
     window.navigator.clipboard.writeText(inputRecipeHtml.value)
+    validateUrl(inputHref.value)  // Validate can crash with Cross-Origin
 }
 
 function doRecipeMd () {
     // TODO: Can RecipeHtml and RecipeMd be combined into single function?
-    validateUrl(inputHref.value)
     buildRecipes();
     window.navigator.clipboard.writeText(inputRecipeMd.value)
+    validateUrl(inputHref.value)  // Validate can crash with Cross-Origin
 }
 
 function buildRecipes () {
@@ -317,7 +317,7 @@ function validateUrl(Url) {
     if (validUrlSyntax == false){
         validUrlExists = false
         alert('The website address (URL) has invalid format:\n\n' + Url)
-        return  // No point getting an error message in developer tools
+        return  false // No point getting an error message in developer tools
     }
 
     if (lastTime == null) {
@@ -338,6 +338,7 @@ function validateUrl(Url) {
     }
 
     lastUrl = Url   // If next time same URL we can skip the tests for 404.
+    return validUrlExists
 }
 
 export function isValidUrl(Url) {
