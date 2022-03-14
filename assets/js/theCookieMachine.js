@@ -258,8 +258,7 @@ function webpage_info_to_html() {
     var filenameHref = location.href;
     var filenamePath = location.href;
     var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
-    var markdownName = filenameRoot.replace('.html', '.md');
-    var filenameMark = raw_url + markdownName;
+    var filenameMark = raw_url + filenameRoot.toString().replace('.html', '.md');
     html = "<p>";
     html += "<h3>Webpage Information:</h3>\n";
     html += "Href: " + filenameHref + "<br>\n";
