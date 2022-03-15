@@ -264,6 +264,7 @@ function webpage_info_to_html() {
     var filenameHref = location.href;
     var filenamePath = location.href;
     var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
+    // TODO: Replace '/yyyy/mm/dd' with '_posts/yyyy/yyyy-mm-dd-' if posts by year
     var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
     html = "<p>";
     html += "<h3>Webpage Information</h3>\n";
@@ -276,8 +277,8 @@ function webpage_info_to_html() {
     // fetch(filenameMark) test good filename
     fetch(raw_url + '/_config.yml')
       .then((response) => response.text())
-      .then((markdown) => {
-        var results = markdown.split("\n")  // Convert string into array
+      .then((results) => {
+        var results = results.split("\n")  // Convert string into array
         alert('results.length: ' + results.length)
         var front_yml = getFrontMatter(results)
         alert(front_yml)
