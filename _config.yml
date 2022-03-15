@@ -2,7 +2,11 @@ theme: jekyll-theme-cayman
 # The title: appears frequently on my pages. It's your company / personal name
 title: Pippim
 description: Free Open-Source Software for the World. Free of Ads Too!
-# Link to content on the repo
+# posts_by_year must be true or false. When true subdirectory by year for posts
+# Needed for GitHub when more than 1,000 posts in total.
+# Used by stack-to-blog.py and theCookieMachine.js
+posts_by_year: true
+# Link to content on the GitHub Repository. Used by stack-to-blog.py
 code_url: https://github.com/pippim/pippim.github.io/blob/main
 
 # Following site-wide values automatically set by sede/refresh.sh script
