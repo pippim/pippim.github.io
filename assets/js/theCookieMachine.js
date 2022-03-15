@@ -103,7 +103,6 @@ var oldFontSize = null      // Save for when LineDraw changes
 var oldLineHeight = null
 var html = null
 
-
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
     // raw_url set in search.js loaded before us
@@ -273,7 +272,29 @@ function webpage_info_to_html() {
     html += "Root: " + filenameRoot + "<br>\n";
     html += "Mark: " + filenameMark + "<br>\n";
     html += "</p>";
+
+    fetch(raw_url + '/_config.yml')
+      .then((response) => response.text())
+      .then((markdown) => {
+        results = markdown.split("\n")  // Convert string into array
+        var front_yml = getFrontMatter(results)
+        alert(front_yml)
+        // console.log('Here is the text file:\n' + config_yml);
+      });
+
     b.innerHTML = html;              // Update TCM Window body
+}
+
+function getFrontMatter(txtArr){
+    var frontMatter = []
+    if (txtArr[0] == "---") {
+        for (var i = 1; i < txtArr.length; i++) {
+            var line = txtArr[i];
+            if (line == "---") { break } // End of the line ;)
+            txtArr.push(line)
+        }
+    }
+    return frontMatter
 }
 
 /* Further research
