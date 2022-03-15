@@ -224,8 +224,8 @@ function doNewWindow () {
 }
 
 function doRecipeHtml () {
-    buildRecipes();
     // TODO: check mandatory fields href and text are non-blank
+    buildRecipes();
     window.navigator.clipboard.writeText(inputRecipeHtml.value)
     validateUrl(inputHref.value)  // Validate can crash with Cross-Origin
 }
@@ -351,9 +351,12 @@ export function isValidUrl(Url) {
 export function UrlExists(Url) {
     // See: https://stackoverflow.com/a/31936894
     var http = new XMLHttpRequest();
+    return true;
+    /* The rest of this is hopeless
     http.open('HEAD', Url, false);
     http.send();
     return http.status!=404;
+    */
     /* https://stackoverflow.com/questions/24371734/firefox-cross-origin-request-blocked-despite-headers
 
          Cross-Origin Request Blocked: The Same Origin Policy
