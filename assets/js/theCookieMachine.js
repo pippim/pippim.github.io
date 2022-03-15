@@ -262,10 +262,17 @@ function local_storage_to_html() {
 
 function webpage_info_to_html() {
     var filenameHref = location.href;
-    var filenamePath = location.href;
+    var filenamePath = location.pathname;
     var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
     // TODO: Replace '/yyyy/mm/dd' with '_posts/yyyy/yyyy-mm-dd-' if posts by year
+    // Add to config.yml and have stack-to-blog read to setup
     var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
+    // See: https://stackoverflow.com/a/36638153/6929343
+    // s = s.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
+    // See: https://stackoverflow.com/a/42517570/6929343
+    // var pattern = /(0\d{1}|1[0-2])\/([0-2]\d{1}|3[0-1])\/(19|20)\d{2}/
+
+
     html = "<p>";
     html += "<h3>Webpage Information</h3>\n";
     html += "Href: " + filenameHref + "<br>\n";
@@ -286,6 +293,18 @@ function webpage_info_to_html() {
       });
 
     b.innerHTML = html;              // Update TCM Window body
+}
+
+function getFrontMatter(txtArr){
+    var frontMatter = []
+    if (txtArr[0] == "---") {
+        for (var i = 1; i < txtArr.length; i++) {
+            var line = txtArr[i];
+            if (line == "---") { break } // End of the line ;)
+            txtArr.push(line)
+        }
+    }
+    return frontMatter
 }
 
 function getFrontMatter(txtArr){
