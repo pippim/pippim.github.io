@@ -273,7 +273,8 @@ function webpage_info_to_html() {
     html += "Mark: " + filenameMark + "<br>\n";
     html += "</p>";
 
-    fetch(filenameMark)
+    // fetch(filenameMark) test good filename
+    fetch(raw_url + '/_config.yml')
       .then((response) => response.text())
       .then((markdown) => {
         var results = markdown.split("\n")  // Convert string into array
