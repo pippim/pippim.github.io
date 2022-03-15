@@ -303,8 +303,10 @@ function getMarkdownFilename() {
     var urlPath = location.pathname;
     var urlParts = location.pathname.split("/");
     alert('urlProtocol: ' + urlProtocol +
-          'urlHost: ' + urlHost +
-          'urlPath: ' + urlPath)
+          ' | urlHost: ' + urlHost +
+          ' | urlPath: ' + urlPath +
+          ' | urlParts.length: ' + urlParts.length +
+          ' | urlParts[0]: ' + urlParts[0])
     // TODO: Replace '/yyyy/mm/dd' with '_posts/yyyy/yyyy-mm-dd-' if posts by year
     // Add to config.yml and have stack-to-blog read to setup
     // var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
