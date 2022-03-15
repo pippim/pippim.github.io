@@ -101,14 +101,18 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 var oldFontSize = null      // Save for when LineDraw changes
 var oldLineHeight = null
-var html = null
+var configYml = []          // Array containing _config.yml
+var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
-    // raw_url set in search.js loaded before us
+    // raw_url set in search.js loaded before us. Older sites user master instead of main
+    // code_yml: https://       github.com        /pippim/pippim.github.io/blob/main
+    // raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
     fetch(raw_url + '/_config.yml')
       .then((response) => response.text())
       .then((config_yml) => {
+        configYml = config_yml.split("\n")  // Convert string into array
         home_page_to_html(config_yml);
         // console.log('Here is the text file:\n' + config_yml);
       });
@@ -212,7 +216,7 @@ function home_page_to_html(results) {
 
 function website_tree_to_html(results) {
     if (results.length == 0) {
-        html = "<h3> 🔍 &emsp; No website_tree found!</h3>\n";
+        var html = "<h3> 🔍 &emsp; No website_tree found!</h3>\n";
         html += "<p>An error has occurred.<br><br>\n";
         html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n";
         b.innerHTML = html;
@@ -252,7 +256,7 @@ function local_storage_to_html() {
     if ('caches' in window){
         alert('caches found in window');
     }
-    html = "<p>";
+    var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
     html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
     html += "  ☑ Display cache usage.";
@@ -265,7 +269,6 @@ function webpage_info_to_html() {
     var filenamePath = location.pathname;
     var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
     // TODO: Replace '/yyyy/mm/dd' with '_posts/yyyy/yyyy-mm-dd-' if posts by year
-    // Add to config.yml and have stack-to-blog read to setup
     var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
     // See: https://stackoverflow.com/a/36638153/6929343
     // s = s.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
@@ -273,7 +276,7 @@ function webpage_info_to_html() {
     // var pattern = /(0\d{1}|1[0-2])\/([0-2]\d{1}|3[0-1])\/(19|20)\d{2}/
 
 
-    html = "<p>";
+    var html = "<p>";
     html += "<h3>Webpage Information</h3>\n";
     html += "Href: " + filenameHref + "<br>\n";
     html += "Path: " + filenamePath + "<br>\n";
@@ -297,17 +300,22 @@ function webpage_info_to_html() {
 }
 
 function getMarkdownFilename() {
-    var urlHref = location.href;
-    var urlProtocol = location.protocol;
-    var urlHost = location.hostname;
-    var urlPath = location.pathname;
+    loadConfigYml();
+    var urlHref = location.href;            // https://pipp... #...
+    var urlProtocol = location.protocol;    // https:
+    var urlHost = location.hostname;        // pippim.github.io
+    var urlPath = location.pathname;        // /yyyy/mm/dd/
     var urlParts = location.pathname.split("/");
     alert('urlProtocol: ' + urlProtocol +
           ' | urlHost: ' + urlHost +
           ' | urlPath: ' + urlPath +
           ' | urlParts.length: ' + urlParts.length +
-          ' | urlParts[0]: ' + urlParts[0])
-    // TODO: Replace '/yyyy/mm/dd' with '_posts/yyyy/yyyy-mm-dd-' if posts by year
+          ' | urlParts[1]: ' + urlParts[1])
+    // If length of parts > 2 then we know it's a post
+    if (urlParts.length == 5) {
+        // if posts by year
+        // TODO: Replace '/yyyy/mm/dd/Title' with '_posts/yyyy/yyyy-mm-dd-Title' if posts by year
+    }
     // Add to config.yml and have stack-to-blog read to setup
     // var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
 }
@@ -323,6 +331,25 @@ function getFrontMatter(txtArr) {
     }
     return frontMatter
 }
+
+function loadConfigYml () {
+    // Sets global array configYml and flagPostsByYear used by two functions
+
+    fetch(raw_url + '/_config.yml')
+      .then((response) => response.text())
+      .then((config_yml) => {
+        configYml = config_yml.split("\n")  // Convert string into array
+        for (var i = 0; i < configYml.length; i++) {
+            var ymlKeyValue = configYml[i].split(':');
+            if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
+                if (ymlKeyValue[0] == "posts_by_year") {
+                    flagPostsByYear = ymlKeyValue[1];
+                    alert("flagPostsByYear: " + "'" + flagPostsByYear + "'")
+            }
+        }
+      });
+}
+
 
 function ymlToHtmlTable (yml) {
 
