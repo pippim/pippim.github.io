@@ -77,6 +77,7 @@ document.querySelector('#tcm_button').addEventListener('click', () => {
   // Make tcm_button invisible
   document.querySelector('#tcm_button').style.cssText = `
     color: #FFFFFF00;
+    background: transparent;
     background-image: none;
     border: none;
   `;
@@ -87,11 +88,12 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
   document.querySelector('#tcm_window').style.display = "none";
   // Make tcm_button visible
   document.querySelector('#tcm_button').style.cssText = `
-      color: #000000;
+      color: black;
+      border: 2px solid black;
+      border-radius: .5rem;
       background-image: url({{ site.url }}/assets/img/icons/button_background.png);
       background-repeat: no-repeat;
       background-size: cover;
-      border: 2px solid white;
    `;
 });
 
