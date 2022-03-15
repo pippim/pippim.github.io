@@ -77,7 +77,7 @@ document.querySelector('#tcm_button').addEventListener('click', () => {
   // Make tcm_button invisible
   document.querySelector('#tcm_button').style.cssText = `
     color: #FFFFFF00;
-    background-image: '';
+    background-image: none;
     border: none;
   `;
 });
