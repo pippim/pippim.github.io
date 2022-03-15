@@ -345,6 +345,7 @@ function loadConfigYml () {
                 if (ymlKeyValue[0] == "posts_by_year") {
                     flagPostsByYear = ymlKeyValue[1];
                     alert("flagPostsByYear: " + "'" + flagPostsByYear + "'")
+                }
             }
         }
       });
