@@ -607,18 +607,14 @@ a.search-results:visited {
 
 /* On the MAIN window NOT the tcm window! */
 #tcm_button {
-  // The Cookie Machine HIDDEN button after regular buttons
+  // The Cookie Machine HIDDEN button positioned after regular buttons
   display: block;
   position: absolute;
   right: 0;
-  margin-top: -1.3rem;
+  margin-top: -1.2rem;
   padding: .5rem .5rem;
   // Make color transparent: https://stackoverflow.com/a/21917994/6929343
-  color: #00000000;
-  background: transparent;
-  background-image: url({{ site.url }}/assets/img/icons/button_background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  color: #ffffff00;
   border: none;
 
   // border: 2px solid white;
