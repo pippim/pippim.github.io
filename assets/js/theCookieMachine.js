@@ -286,9 +286,10 @@ function webpage_info_to_html() {
       .then((response) => response.text())
       .then((results) => {
         var results = results.split("\n")  // Convert string into array
-        alert('results.length: ' + results.length)
+        // alert('results.length: ' + results.length)
+        var markdownFilename = getMarkdownFilename();
         var front_yml = getFrontMatter(results)
-        alert(front_yml)
+        // alert(front_yml)
         // console.log('Here is the text file:\n' + config_yml);
       });
 
@@ -296,22 +297,17 @@ function webpage_info_to_html() {
 }
 
 function getMarkdownFilename() {
-        var filenameHref = location.href;
-    var filenamePath = location.pathname;
-    var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
+    var urlHref = location.href;
+    var urlProtocol = location.protocol;
+    var urlHost = location.hostname;
+    var urlPath = location.pathname;
+    var urlParts = location.pathname.split("/");
+    alert('urlProtocol: ' + urlProtocol +
+          'urlHost: ' + urlHost +
+          'urlPath: ' + urlPath)
     // TODO: Replace '/yyyy/mm/dd' with '_posts/yyyy/yyyy-mm-dd-' if posts by year
     // Add to config.yml and have stack-to-blog read to setup
-    var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
-
-    var frontMatter = []
-    if (txtArr[0] == "---") {
-        for (var i = 1; i < txtArr.length; i++) {
-            var line = txtArr[i];
-            if (line == "---") { break } // End of the line ;)
-            txtArr.push(line)
-        }
-    }
-    return frontMatter
+    // var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
 }
 
 function getFrontMatter(txtArr) {
