@@ -77,6 +77,7 @@ document.querySelector('#tcm_button').addEventListener('click', () => {
   // Make tcm_button invisible
   document.querySelector('#tcm_button').style.cssText = `
     color: #FFFFFF00;
+    background-image: '';
     border: none;
   `;
 });
@@ -86,8 +87,12 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
   document.querySelector('#tcm_window').style.display = "none";
   // Make tcm_button visible
   document.querySelector('#tcm_button').style.cssText = `
-    color: #FFFFFF;
-    border: 2px solid white;`;
+      color: #000000;
+      background-image: url({{ site.url }}/assets/img/icons/button_background.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 2px solid white;
+   `;
 });
 
 
@@ -258,9 +263,9 @@ function webpage_info_to_html() {
     var filenameHref = location.href;
     var filenamePath = location.href;
     var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
-    var filenameMark = raw_url + filenameRoot.toString().replace('.html', '.md');
+    var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
     html = "<p>";
-    html += "<h3>Webpage Information:</h3>\n";
+    html += "<h3>Webpage Information</h3>\n";
     html += "Href: " + filenameHref + "<br>\n";
     html += "Path: " + filenamePath + "<br>\n";
     html += "Root: " + filenameRoot + "<br>\n";
