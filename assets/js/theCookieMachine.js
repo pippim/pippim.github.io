@@ -295,7 +295,14 @@ function webpage_info_to_html() {
     b.innerHTML = html;              // Update TCM Window body
 }
 
-function getFrontMatter(txtArr){
+function getMarkdownFilename() {
+        var filenameHref = location.href;
+    var filenamePath = location.pathname;
+    var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
+    // TODO: Replace '/yyyy/mm/dd' with '_posts/yyyy/yyyy-mm-dd-' if posts by year
+    // Add to config.yml and have stack-to-blog read to setup
+    var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
+
     var frontMatter = []
     if (txtArr[0] == "---") {
         for (var i = 1; i < txtArr.length; i++) {
@@ -307,7 +314,7 @@ function getFrontMatter(txtArr){
     return frontMatter
 }
 
-function getFrontMatter(txtArr){
+function getFrontMatter(txtArr) {
     var frontMatter = []
     if (txtArr[0] == "---") {
         for (var i = 1; i < txtArr.length; i++) {
