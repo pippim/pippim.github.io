@@ -190,7 +190,8 @@ function home_page_to_html(results) {
         var ymlKeyValue = results[i].split(':');
         if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
             html += '<tr><td>' + ymlKeyValue[0] + '</td>\n' +
-                    '    <td>' + ymlKeyValue[1] + '</td></tr>\n';
+                    '    <td>' + ymlKeyValue[1].trim() + '</td></tr>\n';
+            // TODO: If 
             validYamlCount++;
         }
     }
