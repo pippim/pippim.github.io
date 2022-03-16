@@ -189,9 +189,10 @@ function home_page_to_html(results) {
     for (var i = 0; i < results.length; i++) {
         var ymlKeyValue = results[i].split(':');
         if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
-            html += '<tr><td>' + ymlKeyValue[0] + '</td>\n' +
-                    '    <td>' + ymlKeyValue[1].trim() + '</td></tr>\n';
-            // TODO: If 
+            html += '<tr><td>' + ymlKeyValue[0] + '</td>\n'
+            var value = ymlKeyValue[1].trim();  // YAML continuation line?
+            if (value == ">") { value = results[i+1]; }
+            html += '<td>' + value + '</td></tr>\n';
             validYamlCount++;
         }
     }
