@@ -106,9 +106,11 @@ var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
+    home_page_to_html(config_yml);
     // raw_url set in search.js loaded before us. Older sites user master instead of main
     // code_yml: https://       github.com        /pippim/pippim.github.io/blob/main
     // raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
+    /*
     fetch(raw_url + '/_config.yml')
       .then((response) => response.text())
       .then((config_yml) => {
@@ -116,6 +118,7 @@ document.querySelector('#tcm_display_home').addEventListener('click', () => {
         home_page_to_html(config_yml);
         // console.log('Here is the text file:\n' + config_yml);
       });
+    */
 });
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
