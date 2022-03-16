@@ -348,7 +348,7 @@ function getFrontMatter(txtArr) {
         for (var i = 1; i < txtArr.length; i++) {
             var line = txtArr[i];
             if (line == "---") { break } // End of the line ;)
-            txtArr.push(line)
+            frontMatter.push(line)
         }
     }
     return frontMatter
