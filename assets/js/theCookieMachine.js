@@ -279,6 +279,7 @@ function webpage_info_to_html() {
 
 
     var html = "<p>";
+    /*
     html += "<h3>Webpage Information</h3>\n";
     html += "Href: " + filenameHref + "<br>\n";
     html += "Path: " + filenamePath + "<br>\n";
@@ -287,7 +288,7 @@ function webpage_info_to_html() {
     html += "</p>";
     b.innerHTML = html;              // Update TCM Window body
     prompt('Press Enter to continue for next display');
-
+    */
     var urlMarkdown = getMarkdownFilename();
     // alert("fnMarkdown: " + fnMarkdown)
     // fetch(filenameMark) test good filename
@@ -346,9 +347,8 @@ function getFrontMatter(txtArr) {
     var frontMatter = []
     if (txtArr[0] == "---") {
         for (var i = 1; i < txtArr.length; i++) {
-            var line = txtArr[i];
-            if (line == "---") { break } // End of the line ;)
-            frontMatter.push(line)
+            if (txtArr[i] == "---") { break } // End of the line ;)
+            frontMatter.push(txtArr[i])
         }
     }
     return frontMatter
