@@ -336,7 +336,8 @@ function getMarkdownFilename() {
 
     // TODO: Test if toString() is still required
     // filename = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
-    return raw_url + full.toString().replace('.html', '.md');
+    // return raw_url + full.toString().replace('.html', '.md');
+    return raw_url + full.replace('.html', '.md');
 }
 
 function getFrontMatter(txtArr) {
