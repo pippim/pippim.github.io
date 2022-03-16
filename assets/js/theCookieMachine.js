@@ -106,7 +106,7 @@ var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
-    home_page_to_html(configYml);
+    front_matter_to_html(configYml, "Site Front Matter ('_config.yml')");
     // raw_url set in search.js loaded before us. Older sites user master instead of main
     // code_yml: https://       github.com        /pippim/pippim.github.io/blob/main
     // raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
@@ -115,7 +115,7 @@ document.querySelector('#tcm_display_home').addEventListener('click', () => {
       .then((response) => response.text())
       .then((config_yml) => {
         configYml = config_yml.split("\n")  // Convert string into array
-        home_page_to_html(config_yml);
+        front_matter_to_html(config_yml);
         // console.log('Here is the text file:\n' + config_yml);
       });
     */
@@ -163,9 +163,9 @@ function introduction_to_html() {
     b.innerHTML = html;              // Update TCM Window body
 }
 
-introduction_to_html()  // Load immediately as it needs to wait for nothing
+introduction_to_html()  // Load immediately
 
-function home_page_to_html(results) {
+function front_matter_to_html(results, name) {
 
     if (results.length == 0) {
         var html = "<h3> 🔍 &emsp; No _config.yml found!</h3>\n";
@@ -174,10 +174,10 @@ function home_page_to_html(results) {
         b.innerHTML = html;
         return;
     } else if (results.length == 1) {
-        var html = '<h3 id="tcmHdr">1 {{ site.title }} website _config.yml line found.</h3>\n';
+        var html = '<h3 id="tcmHdr">1 ' + mame + ' line found.</h3>\n';
     } else {
         var html = '<h3 id="tcmHdr">' + results.length.toString() +
-                   ' {{ site.title }} website _config.yml lines found.</h3>\n';
+                   ' ' + mame + ' lines found.</h3>\n';
     }
 
     html += '<table id="ymlTable" class="yml_table">\n' ;
@@ -302,7 +302,7 @@ function webpage_info_to_html() {
         var front_yml = getFrontMatter(results)
         // alert(front_yml)
         // console.log('Here is the text file:\n' + config_yml);
-        home_page_to_html(front_yml);
+        front_matter_to_html(front_yml, "Current Page Front Matter");
       });
 
 }
