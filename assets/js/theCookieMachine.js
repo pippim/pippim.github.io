@@ -319,19 +319,19 @@ function getMarkdownFilename() {
 
     // If length of parts = 5 then we know it's a post
     if (urlParts.length == 5) {
+        // NOTE: parts[0] is always empty field before leading /
         // Replace '/yyyy/mm/dd/Title' with 'yyyy-mm-dd-Title'
-        // urlParts[1] = yyyy
         const root = "/" + urlParts[1] + "-" + urlParts[2] + "-" +
                      urlParts[3] + "-" + urlParts[4]
         // if posts by year
         if (flagPostsByYear.toLowerCase() == "true") {
             // Replace '/yyyy/mm/dd/Title.html' with '_posts/yyyy/yyyy-mm-dd-Title.html'
+            // urlParts[1] = yyyy
             full = "/_posts/" + urlParts[1] + "/" + root;
         } else {
-            // urlParts[1] = yyyy
+            // All posts are in /_posts/ subdirectory regardless of year
             full = "/_posts/" + root;
         }
-    } else {
     }
 
     // TODO: Test if toString() is still required
