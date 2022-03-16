@@ -284,6 +284,7 @@ function webpage_info_to_html() {
     html += "Mark: " + filenameMark + "<br>\n";
     html += "</p>";
 
+    var fnMarkdown = getMarkdownFilename();
     // fetch(filenameMark) test good filename
     fetch(raw_url + '/_config.yml')
       .then((response) => response.text())
@@ -300,6 +301,7 @@ function webpage_info_to_html() {
 }
 
 function getMarkdownFilename() {
+    // WARNING: Extremely Jekyll Dependent
     loadConfigYml();
     var urlHref = location.href;            // https://pipp... #...
     var urlProtocol = location.protocol;    // https:
@@ -311,13 +313,25 @@ function getMarkdownFilename() {
           ' | urlPath: ' + urlPath +
           ' | urlParts.length: ' + urlParts.length +
           ' | urlParts[1]: ' + urlParts[1])
-    // If length of parts > 2 then we know it's a post
+    // If length of parts = 5 then we know it's a post
     if (urlParts.length == 5) {
+        // Replace '/yyyy/mm/dd/Title' with 'yyyy-mm-dd-Title'
+        const root = "/" + urlParts[1] + "-" + urlParts[2] + "-" +
+                     urlParts[3] + "-" + urlParts[4]
         // if posts by year
-        // TODO: Replace '/yyyy/mm/dd/Title' with '_posts/yyyy/yyyy-mm-dd-Title' if posts by year
+        if (flagPostsByYear.toLowerCase() == "true") {
+            // Replace '/yyyy/mm/dd/Title.html' with '_posts/yyyy/yyyy-mm-dd-Title.html'
+            const full = "/_posts/" + urlParts[1] + "/" + root;
+        } else {
+            const full = "/_posts/" + root;
+        }
+    } else {
+        // It's simply Title.html
+        const full = "/" + urlParts[1]
     }
-    // Add to config.yml and have stack-to-blog read to setup
-    // var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
+    // TODO: Test if toString() is still required
+    // filename = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
+    return raw_url + full.toString().replace('.html', '.md');
 }
 
 function getFrontMatter(txtArr) {
@@ -343,7 +357,7 @@ function loadConfigYml () {
             var ymlKeyValue = configYml[i].split(':');
             if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
                 if (ymlKeyValue[0] == "posts_by_year") {
-                    flagPostsByYear = ymlKeyValue[1];
+                    flagPostsByYear = ymlKeyValue[1].trim();
                     alert("flagPostsByYear: " + "'" + flagPostsByYear + "'")
                 }
             }
