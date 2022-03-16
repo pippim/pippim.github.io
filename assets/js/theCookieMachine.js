@@ -284,15 +284,14 @@ function webpage_info_to_html() {
     html += "Mark: " + filenameMark + "<br>\n";
     html += "</p>";
 
-    var fnMarkdown = getMarkdownFilename();
-    alert("fnMarkdown: " + fnMarkdown)
+    var urlMarkdown = getMarkdownFilename();
+    // alert("fnMarkdown: " + fnMarkdown)
     // fetch(filenameMark) test good filename
-    fetch(raw_url + '/_config.yml')
+    fetch(urlMarkdown)
       .then((response) => response.text())
       .then((results) => {
         var results = results.split("\n")  // Convert string into array
         // alert('results.length: ' + results.length)
-        var markdownFilename = getMarkdownFilename();
         var front_yml = getFrontMatter(results)
         // alert(front_yml)
         // console.log('Here is the text file:\n' + config_yml);
@@ -309,11 +308,13 @@ function getMarkdownFilename() {
     var urlHost = location.hostname;        // pippim.github.io
     var urlPath = location.pathname;        // /yyyy/mm/dd/
     var urlParts = location.pathname.split("/");
+    /*
     alert('urlProtocol: ' + urlProtocol +
           ' | urlHost: ' + urlHost +
           ' | urlPath: ' + urlPath +
           ' | urlParts.length: ' + urlParts.length +
           ' | urlParts[1]: ' + urlParts[1])
+    */
     // Assume it's simply Title.html
     var full = "/" + urlParts[1];
 
@@ -334,9 +335,6 @@ function getMarkdownFilename() {
         }
     }
 
-    // TODO: Test if toString() is still required
-    // filename = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
-    // return raw_url + full.toString().replace('.html', '.md');
     return raw_url + full.replace('.html', '.md');
 }
 
@@ -359,18 +357,17 @@ function loadConfigYml () {
       .then((response) => response.text())
       .then((config_yml) => {
         configYml = config_yml.split("\n")  // Convert string into array
+        flagPostsByYear = null;
         for (var i = 0; i < configYml.length; i++) {
             var ymlKeyValue = configYml[i].split(':');
             if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
                 if (ymlKeyValue[0] == "posts_by_year") {
-                    flagPostsByYear = ymlKeyValue[1].trim();
-                    alert("flagPostsByYear: " + "'" + flagPostsByYear + "'")
-                }
-            }
-        }
+                    flagPostsByYear = ymlKeyValue[1].trim(); } } }
+        if (flagPostsByYear == null) { flagPostsByYear = "false"; }
       });
 }
 
+loadConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
 
 function ymlToHtmlTable (yml) {
 
