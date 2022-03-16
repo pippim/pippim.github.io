@@ -299,7 +299,7 @@ function webpage_info_to_html() {
         var front_yml = getFrontMatter(results)
         // alert(front_yml)
         // console.log('Here is the text file:\n' + config_yml);
-        home_page_to_html(results);
+        home_page_to_html(front_yml);
       });
 
 }
