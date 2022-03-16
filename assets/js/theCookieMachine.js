@@ -314,6 +314,9 @@ function getMarkdownFilename() {
           ' | urlPath: ' + urlPath +
           ' | urlParts.length: ' + urlParts.length +
           ' | urlParts[1]: ' + urlParts[1])
+    // Assume it's simply Title.html
+    var full = "/" + urlParts[1];
+
     // If length of parts = 5 then we know it's a post
     if (urlParts.length == 5) {
         // Replace '/yyyy/mm/dd/Title' with 'yyyy-mm-dd-Title'
@@ -323,14 +326,12 @@ function getMarkdownFilename() {
         // if posts by year
         if (flagPostsByYear.toLowerCase() == "true") {
             // Replace '/yyyy/mm/dd/Title.html' with '_posts/yyyy/yyyy-mm-dd-Title.html'
-            const full = "/_posts/" + urlParts[1] + "/" + root;
+            full = "/_posts/" + urlParts[1] + "/" + root;
         } else {
             // urlParts[1] = yyyy
-            const full = "/_posts/" + root;
+            full = "/_posts/" + root;
         }
     } else {
-        // It's simply Title.html
-        const full = "/" + urlParts[1];
     }
 
     // TODO: Test if toString() is still required
