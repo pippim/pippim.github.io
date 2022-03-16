@@ -91,7 +91,8 @@ export function processHyperlinkRecipe(id) {
     // Styling for Hyperlink Recipe table
     html += '<style>\n'
     // Parent <div> should have border for better looks
-    html += '#' + id + ' { border: .2rem solid; }\n'
+    // ONLY for hrb_body, not for tcm_window_body!
+    html += '#hrb_body' + ' { border: .2rem solid; }\n'
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrbHdr { margin: .5rem; }\n'
     // No borders inside the table
