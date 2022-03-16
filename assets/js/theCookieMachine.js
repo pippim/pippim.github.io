@@ -106,7 +106,7 @@ var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
-    home_page_to_html(config_yml);
+    home_page_to_html(configYml);
     // raw_url set in search.js loaded before us. Older sites user master instead of main
     // code_yml: https://       github.com        /pippim/pippim.github.io/blob/main
     // raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
@@ -167,7 +167,6 @@ introduction_to_html()  // Load immediately as it needs to wait for nothing
 
 function home_page_to_html(results) {
 
-    results = results.split("\n")  // Convert string into array
     if (results.length == 0) {
         var html = "<h3> 🔍 &emsp; No _config.yml found!</h3>\n";
         html += "<p>An error has occurred.<br><br>\n";
