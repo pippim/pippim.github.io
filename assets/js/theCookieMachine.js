@@ -191,7 +191,7 @@ function home_page_to_html(results) {
         if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
             html += '<tr><td>' + ymlKeyValue[0] + '</td>\n'
             var value = ymlKeyValue[1].trim();  // YAML continuation line?
-            if (value == ">") { value = results[i+1]; }
+            if (value == ">") { value = results[i+1].trim(); }
             html += '<td>' + value + '</td></tr>\n';
             validYamlCount++;
         }
