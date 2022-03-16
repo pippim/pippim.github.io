@@ -285,6 +285,8 @@ function webpage_info_to_html() {
     html += "Root: " + filenameRoot + "<br>\n";
     html += "Mark: " + filenameMark + "<br>\n";
     html += "</p>";
+    b.innerHTML = html;              // Update TCM Window body
+    prompt('Press Enter to continue for next display');
 
     var urlMarkdown = getMarkdownFilename();
     // alert("fnMarkdown: " + fnMarkdown)
@@ -297,9 +299,9 @@ function webpage_info_to_html() {
         var front_yml = getFrontMatter(results)
         // alert(front_yml)
         // console.log('Here is the text file:\n' + config_yml);
+        home_page_to_html(results);
       });
 
-    b.innerHTML = html;              // Update TCM Window body
 }
 
 function getMarkdownFilename() {
