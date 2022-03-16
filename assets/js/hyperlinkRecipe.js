@@ -14,7 +14,7 @@ var autoMinRows = "1";  // Override using -data-min="1"
 // For timing commands. https://stackoverflow.com/a/28747321/6929343
 var performance = window.performance
 
-var html = null
+// var html = null
 
 /* assign element names by id */
 var inputHref = null
@@ -27,67 +27,63 @@ var inputRecipeMd = null
 
 export function processHyperlinkRecipe(id) {
     const b = document.getElementById(id)  // div body id where html codes go
-    paintTable(b);
-}
-
-function paintTable (b) {
-    // Button class = "hrBtn". Don't use "button" which parent may have!!!
+    // Button class = "hrbBtn". Don't use "button" which parent may have!!!
     // NOTE: onclick is not supported: https://stackoverflow.com/a/17378538/6929343
 
-    html = '<h3 id="hrHdr">Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
+    var html = '<h3 id="hrbHdr">Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
     // Table must be created wrapped inside form for <input variables
-    html += '<form><table id="hrTable" class="hr_table">\n'
+    html += '<form><table id="hrbTable" class="hrb_table">\n'
     // Ingredients heading
     html += '<tr><th>Ingredients</th>\n' +
             '<th>Ingredient button inserts the clipboard contents, or type below</th></tr>\n'
     // Button and textarea for URL (href)
-    html += '<tr><td><button class="hrBtn" id="btnHref" type="button"\n' +
+    html += '<tr><td><button class="hrbBtn" id="btnHref" type="button"\n' +
             'title="Browser address bar (paste from the clipboard)"\n' +
             '>URL (href)</button></td>\n' +
-            '<td><textarea id="hrHref" class="hrInput" cols="45" rows="1"" \n' +
+            '<td><textarea id="hrHref" class="hrbInput" cols="45" rows="1"\n' +
             'placeholder="Mandatory. URL from clipboard will go here"></textarea></td></tr>\n'
     // Link Name (text)
-    html += '<tr><td><button class="hrBtn" id="btnText" type="button"\n' +
+    html += '<tr><td><button class="hrbBtn" id="btnText" type="button"\n' +
             'title="Name of link to appear in document. Paste or type in."\n' +
             '>Name (text)</button></td>\n' +
-            '<td><input id="hrText" class="hrInput" type="text" type="button"\n' +
+            '<td><input id="hrText" class="hrbInput" type="text" type="button"\n' +
             'placeholder="Mandatory. Link name from clipboard will go here" /></td></tr>\n'
     // Tooltip on Hover (title)
-    html += '<tr><td><button class="hrBtn" id="btnTitle" type="button"\n' +
+    html += '<tr><td><button class="hrbBtn" id="btnTitle" type="button"\n' +
             'title="Optional tooltip when hovering over link name"\n' +
             '>Tooltip (title)</button></td>\n' +
-            '<td><input id="hrTitle" class="hrInput" type="text"\n' +
+            '<td><input id="hrTitle" class="hrbInput" type="text"\n' +
             'placeholder="Optional. Hovering mouse over link displays tooltip"></td></tr>\n'
     // Variations Heading
     html += '<tr><th>Variations</th>\n' +
             '<th>Variation button toggles options on and off</th></tr>\n'
     // Toggle UTF-8 Symbol for external links
-    html += '<tr><td><button class="hrBtn" id="btnExternal" type="button"\n' +
+    html += '<tr><td><button class="hrbBtn" id="btnExternal" type="button"\n' +
             'title="Use optional UTF-8 symbol to show link is an external website"\n' +
             '>External link</button></td>\n' +
-            '<td><input id="hrExternal" class="hrInput" type="text"\n' +
+            '<td><input id="hrExternal" class="hrbInput" type="text"\n' +
             'placeholder="Optional. Append external link symbol to Name (text)"></td></tr>\n'
     // Toggle Open link in New Window/Tab
-    html += '<tr><td><button class="hrBtn" id="btnNewWindow" type="button"\n' +
+    html += '<tr><td><button class="hrbBtn" id="btnNewWindow" type="button"\n' +
             'title="When link is clicked, it will be opened in a new Browser Window or Tab"\n' +
             '>New Window</button></td>\n' +
-            '<td><input id="hrNewWindow" class="hrInput" type="text"\n' +
+            '<td><input id="hrNewWindow" class="hrbInput" type="text"\n' +
             'placeholder="Optional. Open link in New Browser Window or Tab"></td></tr>\n'
     // Bake Heading
     html += '<tr><th>Bake</th>\n' +
             '<th>Bake button puts the recipe into the clipboard</th></tr>\n'
     // Bake HTML Recipe. Optional data-min and data-max used here.
-    html += '<tr><td><button class="hrBtn" id="btnRecipeHtml" type="button"\n' +
+    html += '<tr><td><button class="hrbBtn" id="btnRecipeHtml" type="button"\n' +
             'title="Copy HTML recipe to the clipboard. Then you can paste in document"\n' +
             '>HTML</button></td>\n' +
-            '<td><textarea id="hrRecipeHtml" class="hrInput" cols="45" rows="1"\n' +
+            '<td><textarea id="hrRecipeHtml" class="hrbInput" cols="45" rows="1"\n' +
             ' data-min="1" data-max="6"\n' +
             'placeholder="HTML Recipe will be built here"></textarea></td></tr>\n'
     // Bake Markdown Recipe
-    html += '<tr><td><button class="hrBtn" id="btnRecipeMd" type="button"\n' +
+    html += '<tr><td><button class="hrbBtn" id="btnRecipeMd" type="button"\n' +
             'title="Copy Markdown recipe to the clipboard. Then you can paste in document"\n' +
             '>Markdown</button></td>\n' +
-            '<td><textarea id="hrRecipeMd" class="hrInput" cols="45" rows="1"\n' +
+            '<td><textarea id="hrRecipeMd" class="hrbInput" cols="45" rows="1"\n' +
             'placeholder="Markdown Recipe will be built here"></textarea></td></tr>\n'
     html += '</table></form>\n'     // End of our table and form
 
@@ -95,16 +91,16 @@ function paintTable (b) {
     // Styling for Hyperlink Recipe table
     html += '<style>\n'
     // Parent <div> should have border for better looks
-    html += '#hrb_body { border: .2rem solid; }\n'
+    html += '#' + id + ' { border: .2rem solid; }\n'
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
-    html += '#hrHdr { margin: .5rem; }\n'
+    html += '#hrbHdr { margin: .5rem; }\n'
     // No borders inside the table
-    html += '#hrb_body table, tr, th, td { border: none ! important; }\n'
+    html += '#' + id + ' table, tr, th, td { border: none ! important; }\n'
     // Table details: Space between columns
-    html += '#hrb_body td { padding: 0 1rem; }\n'
+    html += '#' + id + ' td { padding: 0 1rem; }\n'
     // Buttons in the first column. Tiny bit of left & right padding
     // Because Chrome and Firefox vary between shrinking & expanding on hover
-    html += '.hrBtn {\n' +
+    html += '.hrbBtn {\n' +
             '  color: #000;\n' +
             '  background-color: YellowGreen;\n' +
             '  width: 100%;\n' +
@@ -113,26 +109,26 @@ function paintTable (b) {
             '  text-align: center;\n' +
             '}\n'
     // Button Hover: border .163rem ok in Firefox but grows in Chrome
-    html += '.hrBtn:hover {\n' +
+    html += '.hrbBtn:hover {\n' +
             '  color: #fff;\n' +
             '  background-color: DarkGreen;\n' +
             '}\n'
     // Column 2 minimum width to give lots of room for URL
     // width and height = 100% for <textarea> if draggable corner resizes
-    html += '.hrInput {\n' +
+    html += '.hrbInput {\n' +
             '  min-width: 550px;\n' +
             '  width: 100%; height: 100%;\n' +
             '  overflow-y: auto;\n'
     if (autoRows == "0") { html += '  resize: vertical;\n '}
                     else { html += '  resize: none;\n '}
-    html += '}\n'                   // End of .hrInput class styling
+    html += '}\n'                   // End of .hrbInput class styling
 
     html += '</style>'              // End of all styles
 
     b.innerHTML = html;             // Update TCM Window body
 
     // Some space between columns
-    document.getElementById("hrTable").style.borderSpacing = ".3rem";
+    document.getElementById("hrbTable").style.borderSpacing = ".3rem";
 
     /* Set easier to use element names for inputs by id */
     inputHref = document.getElementById('hrHref');
