@@ -285,6 +285,7 @@ function webpage_info_to_html() {
     html += "</p>";
 
     var fnMarkdown = getMarkdownFilename();
+    alert("fnMarkdown: " + fnMarkdown)
     // fetch(filenameMark) test good filename
     fetch(raw_url + '/_config.yml')
       .then((response) => response.text())
@@ -316,6 +317,7 @@ function getMarkdownFilename() {
     // If length of parts = 5 then we know it's a post
     if (urlParts.length == 5) {
         // Replace '/yyyy/mm/dd/Title' with 'yyyy-mm-dd-Title'
+        // urlParts[1] = yyyy
         const root = "/" + urlParts[1] + "-" + urlParts[2] + "-" +
                      urlParts[3] + "-" + urlParts[4]
         // if posts by year
@@ -323,12 +325,14 @@ function getMarkdownFilename() {
             // Replace '/yyyy/mm/dd/Title.html' with '_posts/yyyy/yyyy-mm-dd-Title.html'
             const full = "/_posts/" + urlParts[1] + "/" + root;
         } else {
+            // urlParts[1] = yyyy
             const full = "/_posts/" + root;
         }
     } else {
         // It's simply Title.html
-        const full = "/" + urlParts[1]
+        const full = "/" + urlParts[1];
     }
+
     // TODO: Test if toString() is still required
     // filename = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
     return raw_url + full.toString().replace('.html', '.md');
