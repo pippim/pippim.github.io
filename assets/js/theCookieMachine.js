@@ -397,14 +397,14 @@ function loadConfigYml () {
 
 loadConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
 
-var getCookies = function(){
-  var pairs = document.cookie.split(";");
-  var cookies = {};
-  for (var i=0; i<pairs.length; i++){
-    var pair = pairs[i].split("=");
-    cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
-  }
-  return cookies;
+function getCookies(){
+    var pairs = document.cookie.split(";");
+    var cookies = {};
+    for (var i=0; i<pairs.length; i++){
+        var pair = pairs[i].split("=");
+        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
+    }
+    return cookies;
 }
 
 /* Further research
