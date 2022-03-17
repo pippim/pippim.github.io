@@ -387,9 +387,11 @@ function ymlToHtmlTable (yml) {
     var validYamlCount = 0;
     for (var i = 0; i < results.length; i++) {
         var ymlKeyValue = results[i].split(':');
-        if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
-            table += '<tr><td>' + ymlKeyValue[0] + '</td>\n' +
-                    '    <td>' + ymlKeyValue[1] + '</td></tr>\n';
+        var ymlKey = a.shift()      // https://stackoverflow.com/a/5746883/6929343
+        var ymlValue = a.join(':')  // Some values have : in them
+        if (ymlValue.length > 0 && !ymlKey.startsWith('#')) {
+            table += '<tr><td>' + ymlKey + '</td>\n' +
+                    '    <td>' + ymlValue + '</td></tr>\n';
             validYamlCount++;
         }
     }
@@ -481,7 +483,7 @@ function set_hdr_tooltips () {
 // Assign tooltip (title=) to section navigation bar buttons
 set_hdr_tooltips();
 
-/* Future use 
+/* Future use */
 
 var getCookies = function(){
   var pairs = document.cookie.split(";");
@@ -492,8 +494,8 @@ var getCookies = function(){
   }
   return cookies;
 }
-// var myCookies = getCookies();
+
+var myCookies = getCookies();
 // alert(myCookies[0]);
-*/
 
 /* End of /assets/js/theCookieMachine.js */
