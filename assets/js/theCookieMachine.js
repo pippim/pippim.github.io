@@ -386,7 +386,7 @@ function ymlToHtmlTable (yml) {
 
     var validYamlCount = 0;
     for (var i = 0; i < results.length; i++) {
-        var ymlKeyValue = results[i].split(':');
+        var a = results[i].split(':');
         var ymlKey = a.shift()      // https://stackoverflow.com/a/5746883/6929343
         var ymlValue = a.join(':')  // Some values have : in them
         if (ymlValue.length > 0 && !ymlKey.startsWith('#')) {
