@@ -191,7 +191,7 @@ function front_matter_to_html(results, name) {
         var ymlKey = a.shift()      // https://stackoverflow.com/a/5746883/6929343
         var ymlValue = a.join(':')  // Some values have : in them
         if (ymlValue.length > 0 && !ymlKey.startsWith('#')) {
-            table += '<tr><td>' + ymlKey + '</td>\n' ;
+            html += '<tr><td>' + ymlKey + '</td>\n' ;
             var value = ymlValue.trim();  // YAML continuation line?
             if (value == ">") { value = results[i+1].trim(); }
             html += '<td>' + value + '</td></tr>\n';
