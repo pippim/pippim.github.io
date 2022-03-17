@@ -262,6 +262,26 @@ function local_storage_to_html() {
     if ('caches' in window){
         alert('caches found in window');
     }
+
+    /* Future use */
+
+    var myCookies = getCookies();
+    Object.keys(myCookies).forEach(prop => console.log(prop))
+    // https://stackoverflow.com/a/921808/6929343
+    for (var key in myCookies) {
+        // skip loop if the property is from prototype
+        if (!validation_messages.hasOwnProperty(key)) continue;
+
+        var obj = myCookies[key];
+        for (var prop in obj) {
+            // skip loop if the property is from prototype
+            if (!obj.hasOwnProperty(prop)) continue;
+
+            // your code
+            alert(prop + " = " + obj[prop]);
+        }
+    }
+    // alert(myCookies[0]);
     var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
     html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
@@ -271,7 +291,6 @@ function local_storage_to_html() {
 }
 
 function webpage_info_to_html() {
-    Object.keys(myCookies).forEach(prop => console.log(prop))
     var filenameHref = location.href;
     var filenamePath = location.pathname;
     var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
@@ -378,6 +397,16 @@ function loadConfigYml () {
 
 loadConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
 
+var getCookies = function(){
+  var pairs = document.cookie.split(";");
+  var cookies = {};
+  for (var i=0; i<pairs.length; i++){
+    var pair = pairs[i].split("=");
+    cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
+  }
+  return cookies;
+}
+
 /* Further research
 
 document.getElementById("demo").style.font = "italic bold 20px arial,serif";
@@ -443,20 +472,5 @@ function set_hdr_tooltips () {
 
 // Assign tooltip (title=) to section navigation bar buttons
 set_hdr_tooltips();
-
-/* Future use */
-
-var getCookies = function(){
-  var pairs = document.cookie.split(";");
-  var cookies = {};
-  for (var i=0; i<pairs.length; i++){
-    var pair = pairs[i].split("=");
-    cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
-  }
-  return cookies;
-}
-
-var myCookies = getCookies();
-// alert(myCookies[0]);
 
 /* End of /assets/js/theCookieMachine.js */
