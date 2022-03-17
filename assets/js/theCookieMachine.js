@@ -168,16 +168,16 @@ introduction_to_html()  // Load immediately
 function front_matter_to_html(results, name) {
 
     if (results.length == 0) {
-        var html = "<h3> 🔍 &emsp; No _config.yml found!</h3>\n";
+        var html = "<h3> 🔍 &emsp; No " + name + " found!</h3>\n";
         html += "<p>An error has occurred.<br><br>\n";
         html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n";
         b.innerHTML = html;
         return;
     } else if (results.length == 1) {
-        var html = '<h3 id="tcmHdr">1 ' + mame + ' line found.</h3>\n';
+        var html = '<h3 id="tcmHdr">1 ' + name + ' line found.</h3>\n';
     } else {
         var html = '<h3 id="tcmHdr">' + results.length.toString() +
-                   ' ' + mame + ' lines found.</h3>\n';
+                   ' ' + name + ' lines found.</h3>\n';
     }
 
     html += '<table id="ymlTable" class="yml_table">\n' ;
