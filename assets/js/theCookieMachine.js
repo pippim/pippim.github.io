@@ -481,4 +481,19 @@ function set_hdr_tooltips () {
 // Assign tooltip (title=) to section navigation bar buttons
 set_hdr_tooltips();
 
+/* Future use */
+
+var getCookies = function(){
+  var pairs = document.cookie.split(";");
+  var cookies = {};
+  for (var i=0; i<pairs.length; i++){
+    var pair = pairs[i].split("=");
+    cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
+  }
+  return cookies;
+}
+
+var MyCookies = getCookies();
+alert(myCookies);
+
 /* End of /assets/js/theCookieMachine.js */
