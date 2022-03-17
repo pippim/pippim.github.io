@@ -267,10 +267,11 @@ function local_storage_to_html() {
 
     var myCookies = getCookies();
     Object.keys(myCookies).forEach(prop => console.log(prop))
+
     // https://stackoverflow.com/a/921808/6929343
     for (var key in myCookies) {
         // skip loop if the property is from prototype
-        if (!validation_messages.hasOwnProperty(key)) continue;
+        if (!myCookies.hasOwnProperty(key)) continue;
 
         var obj = myCookies[key];
         for (var prop in obj) {
@@ -281,7 +282,11 @@ function local_storage_to_html() {
             alert(prop + " = " + obj[prop]);
         }
     }
-    // alert(myCookies[0]);
+
+    const items = { ...localStorage };
+    console.log("items: " + items)
+
+
     var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
     html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
