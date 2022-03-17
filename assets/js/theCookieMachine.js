@@ -271,6 +271,7 @@ function local_storage_to_html() {
 }
 
 function webpage_info_to_html() {
+    Object.keys(myCookies).forEach(prop => console.log(prop))
     var filenameHref = location.href;
     var filenamePath = location.pathname;
     var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
@@ -376,48 +377,6 @@ function loadConfigYml () {
 }
 
 loadConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
-
-function ymlToHtmlTable (yml) {
-
-    var table = ""
-
-    table += '<table id="ymlTable" class="yml_table">\n' ;
-    // YAML heading
-    table += '<tr><th>YAML Key</th>\n' +
-            '<th>YAML Value</th></tr>\n';
-
-    var validYamlCount = 0;
-    for (var i = 0; i < results.length; i++) {
-        var a = results[i].split(':');
-        var ymlKey = a.shift()      // https://stackoverflow.com/a/5746883/6929343
-        var ymlValue = a.join(':')  // Some values have : in them
-        if (ymlValue.length > 0 && !ymlKey.startsWith('#')) {
-            table += '<tr><td>' + ymlKey + '</td>\n' +
-                    '    <td>' + ymlValue + '</td></tr>\n';
-            validYamlCount++;
-        }
-    }
-    table += '</table>\n';     // End of our table and form
-
-    // TODO: Move next 9 lines to a shared function
-    // Heading: "999 Pippim website entries found." <h3> styling
-    table += '<style> #tcmHdr {\n' +
-            '  margin-top: .5rem;\n' +
-            '  margin-bottom: 0px;\n' +
-            '}\n'
-    table += '#tcm_window_body {\n' +
-            '  margin: 0;' +
-            '}\n'
-
-    // NOTE: Setup in hyperlinkRecipe.js - No borders inside the table
-    // table += '#hrb_body table, tr, th, td { border: none ! important; }\n'
-    // Table details: Space between columns
-    // table += '#hrb_body td { padding: 0 1rem; }\n'
-    table += '#tcm_window_body table { border-collapse: collapse ! important; }\n'
-    table += '#tcm_window_body th, td { padding: .018rem 1rem; }\n'
-    table += '</style>'  // Was extra \n causing empty space at bottom?
-
-}
 
 /* Further research
 
