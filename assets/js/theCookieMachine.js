@@ -492,8 +492,7 @@ var getCookies = function(){
   }
   return cookies;
 }
-
-var myCookies = getCookies();
+// ar myCookies = getCookies();
 // alert(myCookies[0]);
 
 /* End of /assets/js/theCookieMachine.js */
