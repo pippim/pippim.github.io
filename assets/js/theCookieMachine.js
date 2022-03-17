@@ -492,7 +492,7 @@ var getCookies = function(){
   }
   return cookies;
 }
-// ar myCookies = getCookies();
+// var myCookies = getCookies();
 // alert(myCookies[0]);
 */
 
