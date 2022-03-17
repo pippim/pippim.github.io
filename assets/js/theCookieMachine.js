@@ -493,7 +493,7 @@ var getCookies = function(){
   return cookies;
 }
 
-var MyCookies = getCookies();
+var myCookies = getCookies();
 alert(myCookies);
 
 /* End of /assets/js/theCookieMachine.js */
