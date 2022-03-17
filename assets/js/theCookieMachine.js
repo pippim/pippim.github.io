@@ -494,6 +494,6 @@ var getCookies = function(){
 }
 
 var myCookies = getCookies();
-alert(myCookies);
+alert(myCookies[0]);
 
 /* End of /assets/js/theCookieMachine.js */
