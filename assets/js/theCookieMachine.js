@@ -170,7 +170,7 @@ function front_matter_to_html(results, name) {
     if (results.length == 0) {
         var html = "<h3> 🔍 &emsp; No " + name + " found!</h3>\n";
         html += "<p>An error has occurred.<br><br>\n";
-        html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n";
+        html += "Try again later. If error continues contact {{ site.title }}.<br><br>\n";
         b.innerHTML = html;
         return;
     } else if (results.length == 1) {
@@ -187,10 +187,12 @@ function front_matter_to_html(results, name) {
 
     var validYamlCount = 0;
     for (var i = 0; i < results.length; i++) {
-        var ymlKeyValue = results[i].split(':');
-        if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
-            html += '<tr><td>' + ymlKeyValue[0] + '</td>\n'
-            var value = ymlKeyValue[1].trim();  // YAML continuation line?
+        var a = results[i].split(':');
+        var ymlKey = a.shift()      // https://stackoverflow.com/a/5746883/6929343
+        var ymlValue = a.join(':')  // Some values have : in them
+        if (ymlValue.length > 0 && !ymlKey.startsWith('#')) {
+            table += '<tr><td>' + ymlKey + '</td>\n' ;
+            var value = ymlValue.trim();  // YAML continuation line?
             if (value == ">") { value = results[i+1].trim(); }
             html += '<td>' + value + '</td></tr>\n';
             validYamlCount++;
@@ -222,7 +224,7 @@ function website_tree_to_html(results) {
     if (results.length == 0) {
         var html = "<h3> 🔍 &emsp; No website_tree found!</h3>\n";
         html += "<p>An error has occurred.<br><br>\n";
-        html += "Try again later. If error continues contact {{ site.tittle }}.<br><br>\n";
+        html += "Try again later. If error continues contact {{ site.title }}.<br><br>\n";
         b.innerHTML = html;
         return;
     } else if (results.length == 1) {
