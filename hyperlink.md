@@ -20,9 +20,6 @@ format copied to your clipboard.
 Then simply paste the "baked recipe" into your document with
 <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 
-
-> **NOTE:** The Hyperlink Recipe Baker is not suitable for small screens (E.G. Smart Phones).
-
 ---
 
 <a id="hdr2"></a>
