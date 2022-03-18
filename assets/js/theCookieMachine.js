@@ -392,6 +392,7 @@ function getCookies(){
     return cookies;
 }
 
+/*
 function allStorage() {
     // https://stackoverflow.com/a/17748203/6929343
     var archive = {}, // Notice change here
@@ -404,7 +405,7 @@ function allStorage() {
 
     return archive;
 }
-
+*/
 
 /* Further research
 
