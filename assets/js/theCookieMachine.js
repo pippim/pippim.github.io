@@ -250,7 +250,11 @@ function local_storage_to_html() {
     // if ('caches' in window){
     //    alert('caches found in window');
     // }
-    console.log("get myCaches")
+    var cntCaches = 0
+    caches.keys().then(function(keyList) {
+        cntCaches++;
+    });
+    console.log("cntCaches: " + cntCaches)
 
     /* Future use */
 
@@ -268,7 +272,7 @@ function local_storage_to_html() {
             // skip loop if the property is from prototype
             if (!obj.hasOwnProperty(prop)) continue;
 
-            // your code
+            // Key=Prop: 0=M 1=o 2=r 3=e spells out "More"
             // alert(prop + " = " + obj[prop]);
             value += obj[prop];
         }
@@ -375,6 +379,7 @@ function loadConfigYml () {
 loadConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
 
 function getCookies() {
+    // https://stackoverflow.com/a/252959/6929343
     var pairs = document.cookie.split(";");
     var cookies = {};
     for (var i=0; i<pairs.length; i++){
@@ -384,7 +389,21 @@ function getCookies() {
     return cookies;
 }
 
-/*
+
+function getStorage() {
+    // https://stackoverflow.com/a/17748203/6929343
+    var archive = {}, // Notice change here
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        archive[ keys[i] ] = localStorage.getItem( keys[i] );
+    }
+
+    return archive;
+}
+
+
 function allStorage() {
     // https://stackoverflow.com/a/17748203/6929343
     var archive = {}, // Notice change here
@@ -397,7 +416,7 @@ function allStorage() {
 
     return archive;
 }
-*/
+
 
 /* Further research
 
