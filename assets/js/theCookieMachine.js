@@ -286,6 +286,8 @@ function local_storage_to_html() {
     const items = { ...localStorage };
     console.log("items: " + items)
 
+    var archive = allStorage();
+    console.log("archive: " + archive)
 
     var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
@@ -296,31 +298,9 @@ function local_storage_to_html() {
 }
 
 function webpage_info_to_html() {
-    var filenameHref = location.href;
-    var filenamePath = location.pathname;
-    var filenameRoot = location.href.split("#")[0].split("?")[0].split("/").slice(-1);
-    // TODO: Replace '/yyyy/mm/dd' with '_posts/yyyy/yyyy-mm-dd-' if posts by year
-    var filenameMark = raw_url + "/" + filenameRoot.toString().replace('.html', '.md');
-    // See: https://stackoverflow.com/a/36638153/6929343
-    // s = s.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3');
-    // See: https://stackoverflow.com/a/42517570/6929343
-    // var pattern = /(0\d{1}|1[0-2])\/([0-2]\d{1}|3[0-1])\/(19|20)\d{2}/
 
-
-    var html = "<p>";
-    /*
-    html += "<h3>Webpage Information</h3>\n";
-    html += "Href: " + filenameHref + "<br>\n";
-    html += "Path: " + filenamePath + "<br>\n";
-    html += "Root: " + filenameRoot + "<br>\n";
-    html += "Mark: " + filenameMark + "<br>\n";
-    html += "</p>";
-    b.innerHTML = html;              // Update TCM Window body
-    prompt('Press Enter to continue for next display');
-    */
     var urlMarkdown = getMarkdownFilename();
-    // alert("fnMarkdown: " + fnMarkdown)
-    // fetch(filenameMark) test good filename
+
     fetch(urlMarkdown)
       .then((response) => response.text())
       .then((results) => {
@@ -411,6 +391,20 @@ function getCookies(){
     }
     return cookies;
 }
+
+function allStorage() {
+    // https://stackoverflow.com/a/17748203/6929343
+    var archive = {}, // Notice change here
+        var keys = Object.keys(localStorage),
+        var i = keys.length;
+
+    while ( i-- ) {
+        archive[ keys[i] ] = localStorage.getItem( keys[i] );
+    }
+
+    return archive;
+}
+
 
 /* Further research
 
