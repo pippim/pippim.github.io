@@ -255,7 +255,7 @@ function local_storage_to_html() {
     /* Future use */
 
     var myCookies = getCookies();
-    Object.keys(myCookies).forEach(prop => console.log(prop))
+    // Object.keys(myCookies).forEach(prop => console.log(prop))
 
     // https://stackoverflow.com/a/921808/6929343
     for (var key in myCookies) {
@@ -263,13 +263,16 @@ function local_storage_to_html() {
         if (!myCookies.hasOwnProperty(key)) continue;
 
         var obj = myCookies[key];
+        var value = ""
         for (var prop in obj) {
             // skip loop if the property is from prototype
             if (!obj.hasOwnProperty(prop)) continue;
 
             // your code
-            alert(prop + " = " + obj[prop]);
+            // alert(prop + " = " + obj[prop]);
+            value += prop
         }
+        alert("key: " + key + " | value: " + value)
     }
 
     // const items = { ...localStorage };
