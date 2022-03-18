@@ -13,7 +13,8 @@ layout: program
 
 # Introduction
 
-Just click a few buttons to paste clipboard contents and select "Bake"
+Just click a few buttons to paste clipboard contents into Hyperlink Recipe Baker
+ingredient fields. Then select "Bake"
 option for a Hyperlink in HTML format or a Hyperlink in Markdown
 format copied to your clipboard.
 
