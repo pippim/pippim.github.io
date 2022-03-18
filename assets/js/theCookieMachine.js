@@ -107,18 +107,6 @@ var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
     front_matter_to_html(configYml, "Site Front Matter ('_config.yml')");
-    // raw_url set in search.js loaded before us. Older sites user master instead of main
-    // code_yml: https://       github.com        /pippim/pippim.github.io/blob/main
-    // raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
-    /*
-    fetch(raw_url + '/_config.yml')
-      .then((response) => response.text())
-      .then((config_yml) => {
-        configYml = config_yml.split("\n")  // Convert string into array
-        front_matter_to_html(config_yml);
-        // console.log('Here is the text file:\n' + config_yml);
-      });
-    */
 });
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
@@ -259,9 +247,10 @@ function website_tree_to_html(results) {
 }
 
 function local_storage_to_html() {
-    if ('caches' in window){
-        alert('caches found in window');
-    }
+    // if ('caches' in window){
+    //    alert('caches found in window');
+    // }
+    console.log("get myCaches")
 
     /* Future use */
 
@@ -283,8 +272,8 @@ function local_storage_to_html() {
         }
     }
 
-    const items = { ...localStorage };
-    console.log("items: " + items)
+    // const items = { ...localStorage };
+    // console.log("items: " + items)
 
     // var archive = allStorage();
     // console.log("archive: " + archive)
@@ -382,7 +371,7 @@ function loadConfigYml () {
 
 loadConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
 
-function getCookies(){
+function getCookies() {
     var pairs = document.cookie.split(";");
     var cookies = {};
     for (var i=0; i<pairs.length; i++){
