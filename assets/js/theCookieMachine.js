@@ -328,7 +328,7 @@ function getMarkdownFilename() {
     if (urlParts.length == 5) {
         // NOTE: parts[0] is always empty field before leading /
         // Replace '/yyyy/mm/dd/Title' with 'yyyy-mm-dd-Title'
-        const root = "/" + urlParts[1] + "-" + urlParts[2] + "-" +
+        const root = urlParts[1] + "-" + urlParts[2] + "-" +
                      urlParts[3] + "-" + urlParts[4]
         // if posts by year
         if (flagPostsByYear.toLowerCase() == "true") {
