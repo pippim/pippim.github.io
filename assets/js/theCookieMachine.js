@@ -407,8 +407,8 @@ function getStorage() {
 function allStorage() {
     // https://stackoverflow.com/a/17748203/6929343
     var archive = {}, // Notice change here
-        var keys = Object.keys(localStorage),
-        var i = keys.length;
+        keys = Object.keys(localStorage),
+        i = keys.length;
 
     while ( i-- ) {
         archive[ keys[i] ] = localStorage.getItem( keys[i] );
