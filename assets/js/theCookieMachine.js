@@ -270,7 +270,7 @@ function local_storage_to_html() {
 
             // your code
             // alert(prop + " = " + obj[prop]);
-            value += prop
+            value += obj[prop];
         }
         alert("key: " + key + " | value: " + value)
     }
