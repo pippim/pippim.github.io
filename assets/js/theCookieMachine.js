@@ -286,8 +286,8 @@ function local_storage_to_html() {
     const items = { ...localStorage };
     console.log("items: " + items)
 
-    var archive = allStorage();
-    console.log("archive: " + archive)
+    // var archive = allStorage();
+    // console.log("archive: " + archive)
 
     var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
