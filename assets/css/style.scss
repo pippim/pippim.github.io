@@ -576,6 +576,7 @@ a.search-results:visited {
 
 #tcm_window_close:hover {
   opacity: 1.0;
+  background-color: #777;
 }
 
 #tcm_window_buttons {
@@ -622,6 +623,7 @@ a.search-results:visited {
   margin-right: .2rem;
   padding: .5rem .5rem;
   // Make color transparent: https://stackoverflow.com/a/21917994/6929343
+  opacity: 0.0;
   color: #ffffff00;
   background: transparent;
   border: none;
