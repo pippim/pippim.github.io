@@ -317,7 +317,7 @@ function getMarkdownFilename() {
     var urlProtocol = location.protocol;    // https:
     var urlHost = location.hostname;        // pippim.github.io
     var urlPath = location.pathname;        // /yyyy/mm/dd/
-    console.log('urlPath: ' + urlPath + "urlPath.length: " + urlPath.length)
+    console.log("urlPath: '" + urlPath + "'  | urlPath.length: " + urlPath.length)
     var urlParts = location.pathname.split("/");
     /*
     alert('urlProtocol: ' + urlProtocol +
@@ -326,8 +326,13 @@ function getMarkdownFilename() {
           ' | urlParts.length: ' + urlParts.length +
           ' | urlParts[1]: ' + urlParts[1])
     */
-    // Assume it's simply Title.html
-    var full = "/" + urlParts[1];
+    if (urlPath == "/") {
+        // Has no .html at all
+        var full = "/index.html"
+    } else {
+        // Assume it's simply Title.html
+        var full = "/" + urlParts[1];
+    }
 
     // If length of parts = 5 then we know it's a post
     if (urlParts.length == 5) {
