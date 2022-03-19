@@ -572,11 +572,13 @@ a.search-results:visited {
   opacity: 0.5;
   float: right;
   cursor: pointer;
+  background: transparent;
+
 }
 
 #tcm_window_close:hover {
   opacity: 1.0;
-  background-color: #777;
+  //background-color: #777;  // Causing slight shift upper right?
 }
 
 #tcm_window_buttons {
