@@ -74,11 +74,12 @@ document.querySelector('#tcm_button').addEventListener('click', () => {
   //  right: 20;
   //`;  // top & right effect here is to move to TCM Button position
   document.querySelector('#tcm_window').style.cssText = `
-    display: block;
+    display: "block";
     opacity: 1.0;
   `;
   // Make tcm_button invisible
   document.querySelector('#tcm_button').style.cssText = `
+    opacity: 0.0;
     color: #FFFFFF00;
     background: transparent;
     background-image: none;
