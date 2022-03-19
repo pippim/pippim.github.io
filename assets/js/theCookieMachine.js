@@ -95,8 +95,8 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
   document.querySelector('#tcm_window').style.display = "none";
   // Make tcm_button visible
   document.querySelector('#tcm_button').style.cssText = `
-      opacity: 0.0;
-      color: black;
+      opacity: 1.0;
+      // color: black;
       border: 2px solid black;
       border-radius: .5rem;
       background-image: url({{ site.url }}/assets/img/icons/button_background.png);
