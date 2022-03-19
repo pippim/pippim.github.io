@@ -317,6 +317,7 @@ function getMarkdownFilename() {
     var urlProtocol = location.protocol;    // https:
     var urlHost = location.hostname;        // pippim.github.io
     var urlPath = location.pathname;        // /yyyy/mm/dd/
+    console.log('urlPath: ' + urlPath + "urlPath.length: " + urlPath.length)
     var urlParts = location.pathname.split("/");
     /*
     alert('urlProtocol: ' + urlProtocol +
