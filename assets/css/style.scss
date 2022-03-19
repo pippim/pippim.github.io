@@ -567,6 +567,17 @@ a.search-results:visited {
   color: #fff;
 }
 
+#tcm_window_close {
+  padding: 0px;
+  opacity: 0.5;
+  float: right;
+  cursor: pointer;
+}
+
+#tcm_window_close:hover {
+  opacity: 1.0;
+}
+
 #tcm_window_buttons {
   // Buttons - Home, Cloud Storage, Local Storage and Hyperlink Recipe Baker
   font-size: 1.5rem;
@@ -598,11 +609,6 @@ a.search-results:visited {
     // bug fix: https://stackoverflow.com/a/39738403/6929343
     padding-right: 1rem;
   }
-}
-
-#tcm_window_close {
-  float: right;
-  cursor: pointer;
 }
 
 /* On the MAIN window NOT the tcm window! */
