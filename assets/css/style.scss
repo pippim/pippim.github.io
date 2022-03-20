@@ -543,6 +543,7 @@ a.search-results:visited {
   display: none;
   max-width: 80%;         // After 800px, scroll bar appears
   max-height: 80vh;     // Scroll after 80% of view height (80% would be document)
+  overflow: hidden;
   top: 20px;
   z-index: 9;
   background-color: #f1f1f1;
