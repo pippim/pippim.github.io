@@ -642,8 +642,18 @@ a.search-results:visited {
     background-position: left;  // Has no effect, break image link to view problem
     // background-size: 50px;
     background-size: cover;
-    width: 63px;
-    height: 50px;
+    @include large {
+        width: 63px;
+        height: 50px;
+    }
+    @include medium {
+        width: 53px;
+        height: 40px;
+    }
+    @include small {
+        width: 43px;
+        height: 30px;
+    }
     &:hover {
       filter: brightness(150%);
     }
@@ -669,7 +679,7 @@ a.search-results:visited {
   position: absolute;
   right: 0;
   //font-weight: 900;
-  margin-top: -1.2rem;
+  margin-top: -1.1rem;
   margin-right: .2rem;
   //padding: .5rem .5rem;
   // Make color transparent: https://stackoverflow.com/a/21917994/6929343
@@ -681,7 +691,7 @@ a.search-results:visited {
   // border: 2px solid white;
 
   @include medium {
-    //margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
+    margin-top: -1.0rem;  // Force buttons up a bit for vertical centering
     font-size: 0.8rem;
   }
 
