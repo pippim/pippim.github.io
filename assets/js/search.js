@@ -78,7 +78,7 @@ q.addEventListener('cut', function() {
     check_q_values();
 });
 
-// Handle multiple query input actions at cne time
+// NOT WORKING - Handle multiple query input actions at cne time
 // ['keydown', 'paste', 'cut'].forEach( function(evt) {
 //     q.addEventListener(evt, check_q_values(), false);
 // });
@@ -93,12 +93,10 @@ function check_q_values() {
     if (q.value !== "") {
         // i.style.display = "block";
         i.style.cssText = `
-          display: inline-block; // https://stackoverflow.com/a/9577070/6929343
-          // margin: .5rem .5rem;
+          display: inline-block;
           background-repeat: no-repeat;
           background-size: cover;
           border: none;
-          // background: transparent;
           opacity: 0.5;
           float: right;
           cursor: pointer;
