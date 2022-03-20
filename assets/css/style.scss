@@ -401,6 +401,7 @@ details[open] > summary {
   }
 }
 
+/*
 #search-utf8-mag-glass {
   font-size: 1rem;
   background-color: yellow;
@@ -422,6 +423,11 @@ details[open] > summary {
     text-decoration: none;
     cursor: pointer;
 }
+*/
+#search-utf8-mag-glass {
+    background-image: url({{ site.url }}/assets/img/icons//search_symbol.png);
+}
+
 
 // From: https://stackoverflow.com/a/46296164/692934
 .search-modal {
@@ -468,10 +474,11 @@ details[open] > summary {
 #search-clear-input,
 .close {
     // position: fixed;  // Try to keep in place when scrolling
-    color: #aaaaaa;
-    float: right;
-    font-weight: bold;
-    border-radius: .5rem;
+    background-image: url({{ site.url }}/assets/img/icons/x.png);
+    // color: #aaaaaa;
+    // float: right;
+    // font-weight: bold;
+    // border-radius: .5rem;
     // Will appear to be invisible background
     //background-color: $honeydew;
     // Below is creating box too tall and too narrow
@@ -485,10 +492,10 @@ details[open] > summary {
 #search-clear-input:focus,
 .close:hover,
 .close:focus {
-    color: #000;
-    background-color: #DDD;
-    text-decoration: none;
-    cursor: pointer;
+    //color: #000;
+    //background-color: #DDD;
+    //text-decoration: none;
+    //cursor: pointer;
     //border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px;
 }
 
