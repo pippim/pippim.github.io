@@ -577,7 +577,7 @@ a.search-results:visited {
 }
 
 .size100 img {
-    /* as Screen size shrinks so does icon size */
+    // as Screen size shrinks so does icon size
     @include large {
         width: 18px;
         height: 18px;
@@ -595,13 +595,12 @@ a.search-results:visited {
 }
 
 .size120 img {
-    /* as Screen size shrinks so does icon size */
+    // as Screen size shrinks so does icon size
     @include large {
         width: 24px;
         height: 24px;
     }
     @include medium {
-        // transform: scale(0.7); // No effect
         width: 18px !important;
         height: 18px !important;
     }
@@ -612,7 +611,7 @@ a.search-results:visited {
 }
 
 .size300 img {
-    /* as Screen size shrinks so does icon size */
+    // 3 times normal height
     @include large {
         width: 45px;
         height: 45px;
