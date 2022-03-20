@@ -48,9 +48,9 @@ Below is the Hyperlink Recipe Baker which you can easily drop into your own webp
 3. Highlight title from target. Right-click and select "copy".
 4. Click <kbd>Name (text)</kbd> above to paste. Or, type in a name.
 5. Highlight excerpt from target. Right-click and select "copy".
-6. Click <kbd>Tooltip (title)</kbd> above to paste. Or, type in a name.
-7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to copy Hyperlink into clipboard.
-8. Insert the clipboard containing hyperlink into your document.
+6. Click <kbd>Tooltip (title)</kbd> above to paste. Or, type in tooltip.
+7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to "bake" Hyperlink Recipe into clipboard.
+8. Go to your document, and insert the hyperlink using <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 
 > **Important note for Stack Exchange Users**
 >  
@@ -128,12 +128,20 @@ and paste into a new file in your website.
 
 Follow these steps:
 
-- Go to the [repo](https://github.com/pippim/hrb/blob/main/assets/js/hyperlinkRecipe.js "Pippim Hyperlink Recipe Baker GitHub Repository"){:target="_blank"}
-- <kbd>Ctrl</kbd> + <kbd>A</kbd> to select all text
-- <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy all text to clipboard
+- Go to {{ site.title }}'s [GitHub Repository](https://github.com/pippim/hrb/blob/main/assets/js/hyperlinkRecipe.js "Pippim Hyperlink Recipe Baker GitHub Repository"){:target="_blank"}
+- Select the <kbd>Raw</kbd> button in GitHub
+- Use <kbd>Ctrl</kbd> + <kbd>A</kbd> to select all text
+- Use <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy all text to clipboard
 - Go to your own website repo and create a new file called `/assets/js/hyperlinkRecipe.js`
-- <kbd>Ctrl</kbd> + <kbd>V</kbd> to paste text from clipboard
+- Use <kbd>Ctrl</kbd> + <kbd>V</kbd> to paste text from clipboard
 - Save the new file
+
+Now modify your Jekyll layout, or use stub program `_layouts/hrb.html` in the above repo.
+
+Also modify your JavaScript, or use the stub program `assets/js/hrb.js` in the above repo.
+
+Finally create a markdown document with the HRB, or use the stub markdown
+`hrb.md` in the above repo.
 
 ---
 

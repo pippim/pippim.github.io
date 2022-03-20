@@ -1,7 +1,11 @@
 ---
-title: Hyperlink Recipe Baker
+title: Hyperlink Recipe Baker (Diet)
 layout: hrb
 ---
+
+<!-- Diet version - hrb.md - No buttons, search bar, footer, TCM or notes 
+     Full version - hyperlink.md - All the bells and whistles
+-->
 
 <!-- The div below is populated by /assets/js/hrb.js -->
 <div id="hrb_body">
@@ -15,13 +19,14 @@ layout: hrb
 3. Highlight title from target. Right-click and select "copy".
 4. Click <kbd>Name (text)</kbd> above to paste. Or, type in a name.
 5. Highlight excerpt from target. Right-click and select "copy".
-6. Click <kbd>Tooltip (title)</kbd> above to paste. Or, type in a name.
-7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to copy Hyperlink into clipboard.
-8. Insert the clipboard containing hyperlink into your document.
+6. Click <kbd>Tooltip (title)</kbd> above to paste. Or, type in tooltip.
+7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to "bake" Hyperlink Recipe into clipboard.
+8. Go to your document, and insert the hyperlink using <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 
-For more details, including dropping this page into your own
-website, see the 
-[complete instructions](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
+This is the "Diet" version for Hyperlink Recipe Baker (HRB). See the
+[Full Version](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
+for more details. You will also find instructions for creating
+an HRB version on your own website.
 
 > **Important note for Stack Exchange Users**
 >  
