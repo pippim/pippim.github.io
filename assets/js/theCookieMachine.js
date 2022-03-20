@@ -79,7 +79,7 @@ document.querySelector('#tcm_button').addEventListener('click', () => {
   /* https://stackoverflow.com/a/38066257/6929343  added*/
   document.querySelector('#tcm_window').style.cssText = `
     display: flex;
-    flex-direction: column; /*added*/
+    flex-direction: column;
   `;
   // Make tcm_button invisible
   document.querySelector('#tcm_button').style.cssText = `
@@ -99,7 +99,8 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
       opacity: 1.0;
       border: thin solid black;
       border-radius: .5rem;
-      background-image: url({{ site.url }}/assets/img/icons/button_background.png);
+      background-image: url({{ site.url }}/assets/img/icons/cookies.png),
+                        url({{ site.url }}/assets/img/icons/button_background.png);
       background-repeat: no-repeat;
       background-size: cover;
    `;
