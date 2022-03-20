@@ -364,7 +364,7 @@ details[open] > summary {
   text-align:center;
 }
 
-/* search.html styling */
+/* MAJOR SECTION ======== search.html styling */
 
 ::placeholder {
   // color: #fff;  // White doesn't work with background: $honeydew;
@@ -445,6 +445,11 @@ details[open] > summary {
     display: none;
     cursor: pointer;
     margin-right: .7rem;
+    // &:hover already defined in .icon_back{} class but seems to be overridden here
+    &:hover {
+    opacity: 1.0;
+    filter: brightness(150%);
+      }
 }
 
 // The Close Button
@@ -481,7 +486,9 @@ a.search-results:visited {
 .search-results a:hover { color:black; }
 
 
-/* From: https://gist.github.com/CodeMyUI/530e25ec020cfbfc68526a2a56cb0247
+/* MAJOR SECTION ======== .linear-wipe {}
+
+   From: https://gist.github.com/CodeMyUI/530e25ec020cfbfc68526a2a56cb0247
    Note: No license or copyright found?
 */
 .linear-wipe {
@@ -503,14 +510,16 @@ a.search-results:visited {
   }
 }
 
-// Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
+/* MAJOR SECTION ======== The Cookie Machine (TCM)
+    Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
+*/
 #tcm_window {
   // assets/js/theCookieMachine.js
   position: fixed;
   display: none;
-  max-width: 80vw;      // After 80% of view, scroll bar appears
-  max-height: 95vh;     // Scroll after 95% of view height (80% would be document)
-  // overflow: hidden;
+  max-width: 80vw;      // After 80% of view width, scroll bar appears on bottom
+  max-height: 95vh;     // Scroll after 95% of view height, scroll bar appears on right
+  // overflow: hidden;  // overflow set in #tcm_window_body {}
   top: 20px;
   z-index: 9;
   background-color: #f1f1f1;
@@ -536,6 +545,7 @@ a.search-results:visited {
 #tcm_window_icon {
   // The Cookie Machine Window Icon in header gingerbread needs .icon_back{} class
   display: inline-block;
+  float: left;
   opacity: 1.0;
   border: thin solid black;
   // border-radius: .5rem;
