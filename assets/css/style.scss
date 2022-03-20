@@ -579,18 +579,18 @@ a.search-results:visited {
 .size100 img {
     // as Screen size shrinks so does icon size
     @include large {
-        width: 18px;
-        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
         background-color: yellow;
     }
     @include medium {
-        width: 12px !important;
-        height: 12px !important;
+        max-width: 12px !important;
+        max-height: 12px !important;
         background-color: red;
     }
     @include small {
-        width: 9px !important;
-        height: 9px !important;
+        max-width: 9px !important;
+        max-height: 9px !important;
         background-color: green;
     }
 }
