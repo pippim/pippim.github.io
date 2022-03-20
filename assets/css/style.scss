@@ -672,7 +672,7 @@ a.search-results:visited {
   position: absolute;
   right: 0;
   //font-weight: 900;
-  margin-top: -1.2rem;
+  //margin-top: -1.2rem;
   margin-right: .2rem;
   //padding: .5rem .5rem;
   // Make color transparent: https://stackoverflow.com/a/21917994/6929343
@@ -684,7 +684,7 @@ a.search-results:visited {
   // border: 2px solid white;
 
   @include medium {
-    margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
+    //margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
     font-size: 0.8rem;
   }
 
