@@ -593,20 +593,21 @@ a.search-results:visited {
     // background-position: left;  // Has no effect, break image link to view problem
     // background-size: 50px;
     background-size: cover;
+    border: none;
     &:hover {
       filter: brightness(150%);
     }
     @include large {
-        width: 63px;
-        height: 63px;
+        width: 55px;
+        height: 55px;
     }
     @include medium {
-        width: 53px;
-        height: 53px;
+        width: 45px;
+        height: 45px;
     }
     @include small {
-        width: 43px;
-        height: 43px;
+        width: 35px;
+        height: 35px;
     }
   }
 }
@@ -688,15 +689,15 @@ a.search-results:visited {
     margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
     height: 38px;
     width: 38px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   @include small {
-    display: none;
+    // display: none;   // March 20/22 more attempts at working with small screen
     margin-top: -2rem;  // Force buttons up a bit for vertical centering
     height: 32px;
     width: 32px;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 
   &:hover {
