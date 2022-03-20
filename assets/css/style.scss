@@ -489,6 +489,7 @@ details[open] > summary {
     //padding: -.5rem .5rem -.5rem .5rem;
 }
 
+/*
 #search-clear-input:hover,
 #search-clear-input:focus,
 .close:hover,
@@ -499,6 +500,7 @@ details[open] > summary {
     //cursor: pointer;
     //border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px;
 }
+*/
 
 // Search Result links that have been visited in purple
 // From: https://stackoverflow.com/questions/10845517/
@@ -604,16 +606,16 @@ a.search-results:visited {
     filter: brightness(150%);
   }
   @include large {
-    width: 20px;
-    height: 20px;
-  }
-  @include medium {
     width: 18px;
     height: 18px;
   }
-  @include small {
+  @include medium {
     width: 16px;
     height: 16px;
+  }
+  @include small {
+    width: 14px;
+    height: 14px;
   }
 }
 
