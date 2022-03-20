@@ -599,15 +599,15 @@ a.search-results:visited {
     opacity: 1.0;
   }
   @include large {
-    width: 20px;
+    width: auto;
     height: 20px;
   }
   @include medium {
-    width: 16px;
+    width: auto;
     height: 16px;
   }
   @include small {
-    width: 14px;
+    width: auto;
     height: 14px;
   }
 }
