@@ -1,0 +1,34 @@
+<!-- The Cookie Machine (TCM) - Transparent Button -->
+<button id="tcm_button" title="The Cookie Machine, not-so-secret, popup, draggable window">
+  <!--  https://stackoverflow.com/a/10270112/6929343
+  <img src="{{ site.url }}/assets/img/icons/cookies.png" class="size120" height="24" width="24"> -->
+  <img src="{{ site.url }}/assets/img/icons/cookies.png" class="size120" style="height: 24px; width: 24px;">
+</button>
+
+<!-- TCM Window - Fixed, draggable and dynamically expands -->
+<div id="tcm_window">
+  <div id="tcm_window_header">The Cookie Machine - Click and drag anywhere
+    <!-- Try new X close icon
+    <span id="tcm_window_close" title="Close the Cookie Machine Window">&ensp; ❌ &ensp;</span>
+    -->
+    <button id="tcm_window_close"  title="Close the Cookie Machine Window">
+      <img src="{{ site.url }}/assets/img/icons/x.png" class="size100" height="18" width="18">
+    </button>
+  </div>
+  <div id="tcm_window_buttons"> <!-- Buttons: /⌂ /☁ / 🖴 / 🔗 / i -->
+    <button id="tcm_display_home" title="The Cookie Machine Home Page">
+      <img src="{{ site.url }}/assets/img/icons/home_simple.png" class="size300" height="45" width="45"></button>
+    <button id="tcm_display_cloud" title="Cloud storage - Display website tree">
+      <img src="{{ site.url }}/assets/img/icons/cloud_dark.png" class="size300" height="45" width="45"></button>
+    <button id="tcm_display_local" title="Local storage - Display cookies and cache">
+      <img src="{{ site.url }}/assets/img/icons/laptop_2.png" class="size300" height="45" width="45"></button>
+    <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker">
+      <img src="{{ site.url }}/assets/img/icons/chain_simple.png" class="size300" height="45" width="45"></button>
+    <button id="tcm_webpage_info" title="Webpage Name and Front Matter">
+      <img src="{{ site.url }}/assets/img/icons/webpage_info.png" class="size300" height="45" width="45"></button>
+
+  </div>
+  <div id="tcm_window_body">
+    <p> DUMMY TEXT - Real text set in assets/js/theCookieMachine.js</p>
+  </div>
+</div>
