@@ -84,7 +84,6 @@ document.querySelector('#tcm_button').addEventListener('click', () => {
   // Make tcm_button invisible
   document.querySelector('#tcm_button').style.cssText = `
     opacity: 0.0;
-    color: #FFFFFF00;
     background: transparent;
     background-image: none;
     border: none;

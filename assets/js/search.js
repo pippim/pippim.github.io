@@ -92,9 +92,26 @@ i.onclick = function(){
 
 function check_q_values() {
     if (q.value !== "") {
-        i.style.display = "block";
+        // i.style.display = "block";
+        i.style.cssText = `
+          display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+          // margin: .5rem .5rem;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border: none;
+          // background: transparent;
+          opacity: 0.5;
+          float: right;
+          cursor: pointer;
+        `;
     } else {
-        i.style.display = "none";
+        //i.style.display = "none";
+        i.style.cssText = `
+          opacity: 0.0;
+          background: transparent;
+          background-image: none;
+          border: none;
+        `;
     }
 }
 
@@ -137,7 +154,6 @@ function submitted(event) {
     m.style.display = "block";       // Display search results by revealing modal
 }
 
-/* NEW format using object of posts and points */
 function get_hits(submit_str) {
     // Build object key/value pairs of url index found and total points
     const url_ndx_points = {};
@@ -149,24 +165,8 @@ function get_hits(submit_str) {
         if (!(check_word(l_word, url_ndx_points))) {
             check_root_word(l_word, url_ndx_points);
         }
-        /* end of NEW style */
-
-        /* OLD Style
-        if (l_word in search_words) {
-            let result_indices = search_words[l_word]
-            let url_points = Object.entries(result_indices);
-
-            for (var i = 0; i < url_points.length; i++) {
-                const [key, value] = url_points[i].toString().split(',');
-                if (key in url_ndx_points) {
-                    url_ndx_points[key] += parseFloat(value);
-                } else {
-                    url_ndx_points[key] = parseFloat(value);
-                }
-            }
-        }
-        End of OLD style */
     }
+    // Sort by points highest to lowest
     let sorted = Object.entries(url_ndx_points).sort((a, b) => b[1] - a[1])
     return sorted
 }
@@ -209,22 +209,19 @@ function check_root_word(word, url_ndx_points) {
     const last_3 = word.slice(-3);
     if (last_3 == "ing" || last_3 == "n't") {
         if (check_word(word.slice(0, -3), url_ndx_points)) {
-            return true;
-        }
-    }
+            return true; }}
+
     const last_2 = word.slice(-2);
     if (last_2 == "ly" || last_2 == "ed" || last_2 == "'s" || last_2 == "es") {
         if (check_word(word.slice(0, -2), url_ndx_points)) {
-            return true;
-        }
-    }
+            return true; }}
+
     const last_1 = word.slice(-1);
     if (last_1 == "s") {
         if (check_word(word.slice(0, -1), url_ndx_points)) {
-            return true;
-        }
-    }
-    return false;
+            return true; }}
+
+    return false;  // After subtracting suffixes, no root word was found
 }
 
 /* End of /assets/js/search.js */
