@@ -675,7 +675,8 @@ a.search-results:visited {
 #tcm_window_body {
   max-width: 100%;
   max-height: 100%;
-  overflow: auto;
+  // overflow: auto;       // vertical scroll not appearing???
+  overflow-y: scroll;
   //max-height: 24.57rem;     // Scroll after 24.55rem (Hyperlink Recipe Baker size)
   white-space: pre;         // 2022-03-12 will this restore spacing in website_tree.json
   // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
