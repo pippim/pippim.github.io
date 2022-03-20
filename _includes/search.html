@@ -9,21 +9,9 @@
    aria-label="Search through site content">
   <!-- Try UTF-8 u+274c cross mark  <span id="search-clear-input">&times;</span> ❌🗙XX╳ -->
   <span id="search-clear-input" class="icon_back" title="Clear search words"></span>
-  <!-- Make close button from X icon
-  <button id="search-clear-input-button" title="Clear search">
-    <img src="{{ site.url }}/assets/img/icons/x.png" height="16" width="16">
-  </button>
-  -->
   <button id="search-utf8-mag-glass" class="icon_back" type="submit"
     title="Search {{ site.title }} Website">
-    <!-- Try new search icon
-    <img src="{{ site.url }}/assets/img/icons/search_symbol.png" height="16" width="16">
-    -->
   </button>
-  <!-- Old search symbol
-   >🔍
-  </button>
-  -->
 </form>
 
 <!-- The Modal: https://stackoverflow.com/a/46296164/6929343 -->
@@ -32,8 +20,8 @@
     <!-- Modal content -->
     <div class="search-modal-content">
         <!-- Try UTF-8 u+274c cross mark  <span class="close">&times;</span> ❌🗙XX╳ Tall ╳ causes extra line -->
-        <span class="close">&ensp; ❌ &ensp;</span>
-        <p id="search-modal-text">Some text in the Modal..</p>
+        <span id="search-modal-close" class="icon_back"></span>
+        <p id="search-modal-text">/assets/js/search.js will update text..</p>
     </div>
 
 </div>
