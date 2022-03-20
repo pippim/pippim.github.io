@@ -532,7 +532,20 @@ a.search-results:visited {
   }
 }
 
+/* Button in the MAIN window NOT in the tcm window! */
+#tcm_window_icon {
+  // The Cookie Machine Window Icon in header gingerbread needs .icon_back{} class
+  display: inline-block;
+  opacity: 1.0;
+  border: thin solid black;
+  // border-radius: .5rem;
+  background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
+                    url({{ site.url }}/assets/img/icons/button_background.png);
+  cursor: move;
+}
+
 #tcm_window_header {
+  display: inline-block;
   padding: .5rem;
   cursor: move;  z-index: 10;
   background-color: #2196F3;
