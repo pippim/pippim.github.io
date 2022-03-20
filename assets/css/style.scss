@@ -584,13 +584,13 @@ a.search-results:visited {
         background: yellow;
     }
     @include medium {
-        width: 12px;
-        height: 12px;
+        width: 12px !important;
+        height: 12px !important;
         background: red;
     }
     @include small {
-        width: 9px;
-        height: 9px;
+        width: 9px !important;
+        height: 9px !important;
     }
 }
 
@@ -602,12 +602,12 @@ a.search-results:visited {
     }
     @include medium {
         // transform: scale(0.7); // No effect
-        width: 18px;
-        height: 18px;
+        width: 18px !important;
+        height: 18px !important;
     }
     @include small {
-        width: 12px;
-        height: 12px;
+        width: 12px !important;
+        height: 12px !important;
     }
 }
 
@@ -618,12 +618,12 @@ a.search-results:visited {
         height: 45px;
     }
     @include medium {
-        width: 30px;
-        height: 30px;
+        width: 30px !important;
+        height: 30px !important;
     }
     @include small {
-        width: 18px;
-        height: 18px;
+        width: 18px !important;
+        height: 18px !important;
     }
 }
 
