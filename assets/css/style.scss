@@ -572,6 +572,7 @@ a.search-results:visited {
   color: #fff;
 }
 
+/*
 #tcm_window_close {
   padding: 0;
   border: 0;
@@ -579,6 +580,36 @@ a.search-results:visited {
   opacity: 0.5;
   float: right;
   cursor: pointer;
+}
+*/
+
+#tcm_window_close {
+  display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+  margin: .5rem .5rem;
+  background-image: url({{ site.url }}/assets/img/icons/x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  background: transparent;
+  opacity: 0.5;
+  float: right;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1.0;
+  }
+  @include large {
+    width: 1rem;
+    height: 1rem;
+  }
+  @include medium {
+    width: .9rem;
+    height: .9rem;
+  }
+  @include small {
+    width: .8rem;
+    height: .8rem;
+  }
 }
 
 #tcm_window_buttons {
@@ -600,12 +631,12 @@ a.search-results:visited {
       filter: brightness(150%);
     }
     @include large {
-        width: 55px;
-        height: 55px;
-    }
-    @include medium {
         width: 45px;
         height: 45px;
+    }
+    @include medium {
+        width: 40px;
+        height: 40px;
     }
     @include small {
         width: 35px;
