@@ -570,7 +570,7 @@ a.search-results:visited {
 #tcm_window_close {
   padding: 0;
   border: 0;
-  //background: transparent;
+  background: transparent;
   opacity: 0.5;
   float: right;
   cursor: pointer;
@@ -581,17 +581,14 @@ a.search-results:visited {
     @include large {
         max-width: 18px;
         max-height: 18px;
-        background-color: yellow;
     }
     @include medium {
         max-width: 12px !important;
         max-height: 12px !important;
-        background-color: red;
     }
     @include small {
         max-width: 9px !important;
         max-height: 9px !important;
-        background-color: green;
     }
 }
 
@@ -634,7 +631,7 @@ a.search-results:visited {
 
 #tcm_window_buttons {
   // Buttons - Home, Cloud Storage, Local Storage and Hyperlink Recipe Baker
-  font-size: 1.5rem;
+  // font-size: 1.5rem;
   > button {
     // display: inline-block;
     margin: .5rem .5rem;
@@ -672,7 +669,7 @@ a.search-results:visited {
   position: absolute;
   right: 0;
   //font-weight: 900;
-  //margin-top: -1.2rem;
+  margin-top: -1.2rem;
   margin-right: .2rem;
   //padding: .5rem .5rem;
   // Make color transparent: https://stackoverflow.com/a/21917994/6929343
@@ -693,6 +690,11 @@ a.search-results:visited {
     margin-top: -2rem;  // Force buttons up a bit for vertical centering
     font-size: 0.6rem;
   }
+
+  &:hover {
+    filter: brightness(150%);
+  }
+
 }
 
 /* end of /assets/css/style.scss */
