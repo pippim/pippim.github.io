@@ -581,16 +581,17 @@ a.search-results:visited {
     @include large {
         width: 18px;
         height: 18px;
-        background: yellow;
+        background-color: yellow;
     }
     @include medium {
         width: 12px !important;
         height: 12px !important;
-        background: red;
+        background-color: red;
     }
     @include small {
         width: 9px !important;
         height: 9px !important;
+        background-color: green;
     }
 }
 
