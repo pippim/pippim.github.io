@@ -512,21 +512,12 @@ a.search-results:visited {
   text-align: center;
 
   background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
- //background: linear-gradient(to left, #FFF 80%, #FF0 60%, #FF0 40%, #FFF 20%);
   background-size: 200% auto;
 
   color: #000;
   background-clip: text;
-  // text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  // Jan 31/22 error: Unknown property “text-fill-color”.  Declaration dropped.
-
-  // animation: shine 3s linear infinite;
-  // animation: shine 3s 9s linear;
-  //animation: shine 3s 9s linear infinite;
-  // animation: shine 3s linear 9s;
-  // animation: shine 3s ease-in-out;
   animation: shine 3s 3 ease-in-out;
   
   @keyframes shine {
@@ -602,6 +593,7 @@ a.search-results:visited {
 
   &:hover {
     opacity: 1.0;
+    filter: brightness(150%);
   }
   @include large {
     width: 20px;
