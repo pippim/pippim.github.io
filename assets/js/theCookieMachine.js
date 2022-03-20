@@ -99,7 +99,7 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
       opacity: 1.0;
       border: thin solid black;
       border-radius: .5rem;
-      background-image: url({{ site.url }}/assets/img/icons/cookies.png),
+      background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
                         url({{ site.url }}/assets/img/icons/button_background.png);
       background-repeat: no-repeat;
       background-size: cover;
