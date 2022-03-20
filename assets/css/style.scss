@@ -541,7 +541,7 @@ a.search-results:visited {
   // assets/js/theCookieMachine.js
   position: fixed;
   display: none;
-  max-width: 80vw;         // After 80% of view, scroll bar appears
+  max-width: 80vw;      // After 80% of view, scroll bar appears
   max-height: 95vh;     // Scroll after 95% of view height (80% would be document)
   // overflow: hidden;
   top: 20px;
@@ -549,17 +549,19 @@ a.search-results:visited {
   background-color: #f1f1f1;
   border: .2rem solid #d3d3d3;
   color: black;
-  padding: .5rem;
-  //padding: .5rem 1rem;  // Try to fix 17 y/o bug
   text-align: left;
 
+  @include large {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
   @include medium {
     padding: 0.4rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   @include small {
     padding: 0.3rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
