@@ -545,9 +545,9 @@ a.search-results:visited {
 #tcm_window_icon {
   // The Cookie Machine Window Icon in header gingerbread needs .icon_back{} class
   display: inline-block;
-  float: left;
-  opacity: 1.0;
-  border: thin solid black;
+  margin-right: .5rem;
+  //opacity: 1.0;
+  //border: thin solid black;
   // border-radius: .5rem;
   background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
                     url({{ site.url }}/assets/img/icons/button_background.png);
@@ -678,7 +678,8 @@ a.search-results:visited {
   // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
   @-moz-document url-prefix() {
     // bug fix: https://stackoverflow.com/a/39738403/6929343
-    padding-right: 1rem;
+    padding-right: 1rem;  // March 20, 2022 suddenly 1rem isn't enough?
+    padding-right: 2rem;  // March 20, 2022 suddenly 1rem isn't enough?
   }
 }
 
