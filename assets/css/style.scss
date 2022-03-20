@@ -577,6 +577,8 @@ a.search-results:visited {
 }
 
 .size100 img {
+    float: left;  // https://stackoverflow.com/a/9577070/6929343
+    margin-right: 0.5em;
     // as Screen size shrinks so does icon size
     @include large {
         max-width: 18px;
@@ -593,6 +595,9 @@ a.search-results:visited {
 }
 
 .size120 img {
+    float: left;  // https://stackoverflow.com/a/9577070/6929343
+    margin-right: 0.5em;
+
     // as Screen size shrinks so does icon size
     @include large {
         width: 24px;
@@ -609,6 +614,9 @@ a.search-results:visited {
 }
 
 .size300 img {
+    float: left;  // https://stackoverflow.com/a/9577070/6929343
+    margin-right: 0.5em;
+
     // 3 times normal height
     @include large {
         width: 45px;
