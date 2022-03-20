@@ -583,10 +583,15 @@ a.search-results:visited {
 }
 */
 
+
 #tcm_window_close {
+  // Works in conjunction with class name .icon_back
+  background-image: url({{ site.url }}/assets/img/icons/x.png);
+}
+
+.icon_back {
   display: inline-block; // https://stackoverflow.com/a/9577070/6929343
   // margin: .5rem .5rem;
-  background-image: url({{ site.url }}/assets/img/icons/x.png);
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
