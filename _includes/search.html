@@ -1,5 +1,5 @@
 <!-- Search bar and search results. NOTE: Autocomplete turned off because Google Chrome
-     (but not Firefox) makes input bar extra tall when inserting automcomplete results from
+     (but not Firefox) makes input bar extra tall when inserting autocomplete results from
      drop down list
 -->
 <!-- class clearable-input from: https://stackoverflow.com/a/33683886/6929343 -->
@@ -8,7 +8,7 @@
    placeholder="Search... {{ page.description | default: site.description | default: site.github.project_tagline }}"
    aria-label="Search through site content">
   <!-- Try UTF-8 u+274c cross mark  <span id="search-clear-input">&times;</span> ❌🗙XX╳ -->
-  <button id="search-clear-input" class="icon_back" title="Clear search words"></button>
+  <span id="search-clear-input" class="icon_back" title="Clear search words"></span>
   <!-- Make close button from X icon
   <button id="search-clear-input-button" title="Clear search">
     <img src="{{ site.url }}/assets/img/icons/x.png" height="16" width="16">
