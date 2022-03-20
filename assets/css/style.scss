@@ -633,7 +633,7 @@ a.search-results:visited {
   // Buttons - Home, Cloud Storage, Local Storage and Hyperlink Recipe Baker
   // font-size: 1.5rem;
   > button {
-    // display: inline-block;
+    display: inline-block; // https://stackoverflow.com/a/9577070/6929343
     margin: .5rem .5rem;
     // border: .2rem solid #d3d3d3;
     background-image: url({{ site.url }}/assets/img/icons/button_background.png);
@@ -642,6 +642,10 @@ a.search-results:visited {
     background-position: left;  // Has no effect, break image link to view problem
     // background-size: 50px;
     background-size: cover;
+    &:hover {
+      filter: brightness(150%);
+    }
+    // Below shrinks the box appropriately but image overflows
     @include large {
         width: 63px;
         height: 50px;
@@ -654,16 +658,14 @@ a.search-results:visited {
         width: 43px;
         height: 30px;
     }
-    &:hover {
-      filter: brightness(150%);
-    }
   }
 }
 
 #tcm_window_body {
   overflow: auto;
-  max-width: 800px;         // After 800px, scroll bar appears
-  max-height: 24.57rem;     // Scroll after 24.55rem (Hyperlink Recipe Baker size)
+  max-width: 80%;         // After 800px, scroll bar appears
+  max-height: 80%;     // Scroll after 24.55rem (Hyperlink Recipe Baker size)
+  //max-height: 24.57rem;     // Scroll after 24.55rem (Hyperlink Recipe Baker size)
   white-space: pre;         // 2022-03-12 will this restore spacing in website_tree.json
   // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
   @-moz-document url-prefix() {
@@ -683,15 +685,15 @@ a.search-results:visited {
   margin-right: .2rem;
   //padding: .5rem .5rem;
   // Make color transparent: https://stackoverflow.com/a/21917994/6929343
-  opacity: 0.0;
-  color: #ffffff00;
+  //color: #ffffff00;
   background: transparent;
   border: none;
+  opacity: 0.0;  // Make image invisible
 
   // border: 2px solid white;
 
   @include medium {
-    margin-top: -1.5rem;  // Force buttons up a bit for vertical centering
+    margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
     font-size: 0.8rem;
   }
 
