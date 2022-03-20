@@ -599,32 +599,26 @@ a.search-results:visited {
     opacity: 1.0;
   }
   @include large {
-    width: auto;
+    width: 24px;
     height: 20px;
   }
   @include medium {
-    width: auto;
-    height: 16px;
+    width: 21px;
+    height: 18px;
   }
   @include small {
-    width: auto;
-    height: 14px;
+    width: 18px;
+    height: 16px;
   }
 }
 
 #tcm_window_buttons {
-  // Buttons - Home, Cloud Storage, Local Storage and Hyperlink Recipe Baker
+  // TCM Buttons - Home, Cloud Storage, Local Storage, HRB and Webpage Info
   // font-size: 1.5rem;
   > button {
     display: inline-block; // https://stackoverflow.com/a/9577070/6929343
     margin: .5rem .5rem;
-    // border: .2rem solid #d3d3d3;
-    // March 20/22 background-image now set by ID
-    // background-image: url({{ site.url }}/assets/img/icons/button_background.png);
     background-repeat: no-repeat;
-    // https://stackoverflow.com/a/37001921/6929343
-    // background-position: left;  // Has no effect, break image link to view problem
-    // background-size: 50px;
     background-size: cover;
     border: none;
     &:hover {
