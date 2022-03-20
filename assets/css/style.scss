@@ -541,6 +541,8 @@ a.search-results:visited {
   // assets/js/theCookieMachine.js
   position: fixed;
   display: none;
+  max-width: 80%;         // After 800px, scroll bar appears
+  max-height: 80vh;     // Scroll after 80% of view height (80% would be document)
   top: 20px;
   z-index: 9;
   background-color: #f1f1f1;
@@ -671,8 +673,6 @@ a.search-results:visited {
 
 #tcm_window_body {
   overflow: auto;
-  max-width: 80%;         // After 800px, scroll bar appears
-  max-height: 80%;     // Scroll after 24.55rem (Hyperlink Recipe Baker size)
   //max-height: 24.57rem;     // Scroll after 24.55rem (Hyperlink Recipe Baker size)
   white-space: pre;         // 2022-03-12 will this restore spacing in website_tree.json
   // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
