@@ -595,20 +595,47 @@ a.search-results:visited {
     &:hover {
       filter: brightness(150%);
     }
-    // Below shrinks the box appropriately but image overflows
     @include large {
         width: 63px;
-        height: 50px;
+        height: 63px;
     }
     @include medium {
         width: 53px;
-        height: 40px;
+        height: 53px;
     }
     @include small {
         width: 43px;
-        height: 30px;
+        height: 43px;
     }
   }
+}
+
+/* TCM Window buttons are two background images, first over second. It is not
+   possible to style within HTML and must be done within CSS
+*/
+#tcm_display_home {
+    background-image: url({{ site.url }}/assets/img/icons/home_simple.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_display_cloud {
+    background-image: url({{ site.url }}/assets/img/icons/cloud_dark.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_display_local {
+    background-image: url({{ site.url }}/assets/img/icons/laptop_2.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_hyperlink_recipe {
+    background-image: url({{ site.url }}/assets/img/icons/chain_simple.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_webpage_info {
+    background-image: url({{ site.url }}/assets/img/icons/webpage_info.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
 }
 
 .size100 img {
