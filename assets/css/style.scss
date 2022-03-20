@@ -543,7 +543,9 @@ a.search-results:visited {
   display: none;
   max-width: 80%;         // After 800px, scroll bar appears
   max-height: 80vh;     // Scroll after 80% of view height (80% would be document)
-  overflow: hidden;
+  // overflow: hidden;
+  display: flex;  /* https://stackoverflow.com/a/38066257/6929343  added*/
+  flex-direction: column; /*added*/
   top: 20px;
   z-index: 9;
   background-color: #f1f1f1;
@@ -577,6 +579,38 @@ a.search-results:visited {
   opacity: 0.5;
   float: right;
   cursor: pointer;
+}
+
+#tcm_window_buttons {
+  // Buttons - Home, Cloud Storage, Local Storage and Hyperlink Recipe Baker
+  // font-size: 1.5rem;
+  > button {
+    display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+    margin: .5rem .5rem;
+    // border: .2rem solid #d3d3d3;
+    background-image: url({{ site.url }}/assets/img/icons/button_background.png);
+    background-repeat: no-repeat;
+    // https://stackoverflow.com/a/37001921/6929343
+    background-position: left;  // Has no effect, break image link to view problem
+    // background-size: 50px;
+    background-size: cover;
+    &:hover {
+      filter: brightness(150%);
+    }
+    // Below shrinks the box appropriately but image overflows
+    @include large {
+        width: 63px;
+        height: 50px;
+    }
+    @include medium {
+        width: 53px;
+        height: 40px;
+    }
+    @include small {
+        width: 43px;
+        height: 30px;
+    }
+  }
 }
 
 .size100 img {
@@ -640,43 +674,11 @@ a.search-results:visited {
   //background-color: #777;  // Causing slight shift upper right?
 }
 
-#tcm_window_buttons {
-  // Buttons - Home, Cloud Storage, Local Storage and Hyperlink Recipe Baker
-  // font-size: 1.5rem;
-  > button {
-    display: inline-block; // https://stackoverflow.com/a/9577070/6929343
-    margin: .5rem .5rem;
-    // border: .2rem solid #d3d3d3;
-    background-image: url({{ site.url }}/assets/img/icons/button_background.png);
-    background-repeat: no-repeat;
-    // https://stackoverflow.com/a/37001921/6929343
-    background-position: left;  // Has no effect, break image link to view problem
-    // background-size: 50px;
-    background-size: cover;
-    &:hover {
-      filter: brightness(150%);
-    }
-    // Below shrinks the box appropriately but image overflows
-    @include large {
-        width: 63px;
-        height: 50px;
-    }
-    @include medium {
-        width: 53px;
-        height: 40px;
-    }
-    @include small {
-        width: 43px;
-        height: 30px;
-    }
-  }
-}
-
 #tcm_window_body {
   max-width: 100%;
   max-height: 100%;
-  // overflow: auto;       // vertical scroll not appearing???
-  overflow-y: scroll;
+  overflow: auto;       // vertical scroll not appearing???
+  // overflow-y: auto;
   //max-height: 24.57rem;     // Scroll after 24.55rem (Hyperlink Recipe Baker size)
   white-space: pre;         // 2022-03-12 will this restore spacing in website_tree.json
   // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
