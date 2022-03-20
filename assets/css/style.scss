@@ -401,34 +401,10 @@ details[open] > summary {
   }
 }
 
-/*
-#search-utf8-mag-glass {
-  font-size: 1rem;
-  background-color: yellow;
-  border-radius: .5rem;
-  margin: .15rem;
-
-  @include medium {
-    font-size: .9rem;
-  }
-
-  @include small {
-    font-size: .8rem;
-  }
-}
-
-#search-utf8-mag-glass:hover,
-#search-utf8-mag-glass:focus {
-    background-color: #DDD;
-    text-decoration: none;
-    cursor: pointer;
-}
-*/
-#search-utf8-mag-glass {
+#search-search-symbol {
     background-image: url({{ site.url }}/assets/img/icons//search_symbol.png);
     margin-right: .5rem;
 }
-
 
 // From: https://stackoverflow.com/a/46296164/692934
 .search-modal {
@@ -453,15 +429,13 @@ details[open] > summary {
     border-radius: .5rem;
     width: 80%;
     overflow: auto;
-    // left: 8px;    // left: 8px; goes over page title far left gutter
+    // top: 90px;    // top: 90px; goes over page title beginning of text
+    // left: 8px; goes over page title far left gutter
     position: absolute;
     text-align: start;  // parent flex box is centering text
     max-height: 30rem;     // After 30 lines, scroll bar appears
-    // border-radius: 25% 10%;  // curvy borders
     -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
-
-    // top: 90px;    // top: 90px; goes over page title beginning of text
     z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
 }
 
@@ -473,20 +447,8 @@ details[open] > summary {
 
 // The Close Button
 #search-clear-input,
-.close {
-    // position: fixed;  // Try to keep in place when scrolling
+#search-modal-close {
     background-image: url({{ site.url }}/assets/img/icons/x.png);
-    // color: #aaaaaa;
-    // float: right;
-    // font-weight: bold;
-    // border-radius: .5rem;
-    // Will appear to be invisible background
-    //background-color: $honeydew;
-    // Below is creating box too tall and too narrow
-    //border: .0625rem solid $honeydew;  // 1px equivalent when when 1rem = 16px;
-    //margin: .25rem 1rem .25rem .25rem;
-    //border-radius: .5rem;
-    //padding: -.5rem .5rem -.5rem .5rem;
 }
 
 /*
