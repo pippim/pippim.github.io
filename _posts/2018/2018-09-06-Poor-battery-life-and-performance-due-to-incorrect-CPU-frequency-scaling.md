@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,123 "
 accepted:     
-uploaded:     2022-03-13 13:23:56
+uploaded:     2022-03-20 10:46:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-06-Poor-battery-life-and-performance-due-to-incorrect-CPU-frequency-scaling.md
 toc:          false
 navigation:   false

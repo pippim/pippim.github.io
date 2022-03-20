@@ -8,11 +8,11 @@ type:         Answer
 tags:         nautilus samba file-sharing sharing
 created_date: 2020-06-01 01:32:39
 edit_date:    2020-06-01 01:37:56
-votes:        "0 "
+votes:        "1 "
 favorites:    
-views:        "1,700 "
+views:        "1,728 "
 accepted:     Accepted
-uploaded:     2022-03-13 13:23:56
+uploaded:     2022-03-20 10:46:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-01-How-to-*STOP*-sharing-a-folder.md
 toc:          false
 navigation:   false

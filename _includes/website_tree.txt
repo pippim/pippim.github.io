@@ -38,6 +38,7 @@
 │   ├── posts_by_tag.html
 │   ├── posts_by_vote.html
 │   ├── search.html
+│   ├── style.scss
 │   ├── tcm-window.html
 │   ├── toc.md
 │   └── website_tree.txt
@@ -45,13 +46,14 @@
 │   ├── default.html
 │   ├── hrb.html
 │   ├── post.html
-│   └── program.html
+│   ├── program.html
+│   └── tcm-window.html
 ├── _posts
 │   ├── 2016 [175 entries exceeds filelimit, not opening dir]
 │   ├── 2017 [153 entries exceeds filelimit, not opening dir]
 │   ├── 2018 [435 entries exceeds filelimit, not opening dir]
 │   ├── 2019 [264 entries exceeds filelimit, not opening dir]
-│   ├── 2020 [58 entries exceeds filelimit, not opening dir]
+│   ├── 2020 [59 entries exceeds filelimit, not opening dir]
 │   ├── 2021 [31 entries exceeds filelimit, not opening dir]
 │   └── 2022
 │       ├── 2022-01-05-Python-to-print-out-status-bar-and-percentage.md
@@ -59,7 +61,9 @@
 │       ├── 2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
 │       ├── 2022-02-18-Unable-to-lock-screen-with-Cron-or-Settings.md
 │       ├── 2022-02-23-Frequent-switches-between-Ethernet-and-Wifi.md
-│       └── 2022-02-24-stdin_-invalid-argument.md
+│       ├── 2022-02-24-stdin_-invalid-argument.md
+│       ├── 2022-03-13-Temporarily-disable-distracting-software.md
+│       └── 2022-03-14-How-to-adjust-Trackpad-_Tap-Sensitivity_-without-adjusting-mouse-speed.md
 ├── _sass
 │   ├── jekyll-theme-cayman.scss
 │   └── toc.scss
@@ -85,4 +89,4 @@
 ├── stack.md
 └── tcm.md
 
-22 directories, 64 files
+22 directories, 68 files

@@ -10,9 +10,9 @@ created_date: 2018-10-21 14:06:29
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "251 "
+views:        "252 "
 accepted:     
-uploaded:     2022-03-13 13:23:56
+uploaded:     2022-03-20 10:46:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-21-I-find-GNOME-desktop-slower-and-less-suited-to-my-needs-than-Unity.-What-can-I-do-about-it_.md
 toc:          false
 navigation:   false

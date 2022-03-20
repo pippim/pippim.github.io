@@ -10,9 +10,9 @@ created_date: 2021-04-26 10:50:53
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "153 "
+views:        "156 "
 accepted:     
-uploaded:     2022-03-13 13:23:56
+uploaded:     2022-03-20 10:46:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-04-26-How-to-change-the-IP-address-of-an-installed-printer_.md
 toc:          false
 navigation:   false

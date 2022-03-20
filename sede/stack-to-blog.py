@@ -6,24 +6,25 @@
 #       stack-to-blog.py - Convert Stack Exchange Answers with a score >= 2 or
 #           accepted into a Jekyll blog post.
 #
-#       Oct. 24 2021 - Initial version.
-#       Nov. 06 2021 - Two passes to count number of #, ##, etc. in first pass.
-#       Nov. 13 2021 - Add TOC support and SE "<!-- language" conversion.
-#       Nov. 17 2021 - Support for Pseudo-tags from keywords in answers.
-#       Nov. 24 2021 - Check self-answered questions and not accepted yet.
-#       Dec. 04 2021 - Copy fenced code block to clipboard.
-#       Dec. 07 2021 - Support 4 space indented code. Convert to fenced block.
-#       Dec. 09 2021 - Change SE half-links [https://..] to [link name].
-#       Dec. 11 2021 - Minimum number of words since last Navigation Bar.
-#       Dec. 18 2021 - posts_by_tag.html generation.
-#       Dec. 26 2021 - create_speed_search() development.
-#       Dec. 29 2021 - Update <a href= to use {% post_url %}.
-#       Dec. 31 2021 - Add site wide variables to CONFIG_YML
-#       Jan. 01 2022 - Resurrect check_full_links(), add check_no_links()
-#       Jan. 26 2022 - Don't include self-answered with low votes
-#       Jan. 28 2022 - Website Search
-#       Feb. 08 2022 - EXTRA_SEARCH_FILES - ADD .md files to search dictionary
-#       Feb. 14 2022 - WORD_SEARCH_POINTS - Weighting system where word appears
+#       Oct 24 2021 - Initial version.
+#       Nov 06 2021 - Two passes to count number of #, ##, etc. in first pass.
+#       Nov 13 2021 - Add TOC support and SE "<!-- language" conversion.
+#       Nov 17 2021 - Support for Pseudo-tags from keywords in answers.
+#       Nov 24 2021 - Check self-answered questions and not accepted yet.
+#       Dec 04 2021 - Copy fenced code block to clipboard.
+#       Dec 07 2021 - Support 4 space indented code. Convert to fenced block.
+#       Dec 09 2021 - Change SE half-links [https://..] to [link name].
+#       Dec 11 2021 - Minimum number of words since last Navigation Bar.
+#       Dec 18 2021 - posts_by_tag.html generation.
+#       Dec 26 2021 - create_speed_search() development.
+#       Dec 29 2021 - Update <a href= to use {% post_url %}.
+#       Dec 31 2021 - Add site wide variables to CONFIG_YML
+#       Jan 01 2022 - Resurrect check_full_links(), add check_no_links()
+#       Jan 26 2022 - Don't include self-answered with low votes
+#       Jan 28 2022 - Website Search
+#       Feb 08 2022 - EXTRA_SEARCH_FILES - ADD .md files to search dictionary
+#       Feb 14 2022 - WORD_SEARCH_POINTS - Weighting system where word appears
+#       Mar 14 2022 - Add hrb.md and hyperlink.md to EXTRA_SEARCH_FILES.
 #
 # ==============================================================================
 
@@ -176,9 +177,9 @@ TAG_SEARCH_POINTS = 5.0     # ws.parse(tags, TAG_SEARCH_POINTS)
 # List depending on: Line  H1   H2   H3   H4    H5   H6
 WORD_SEARCH_POINTS = [0.5, 2.0, 1.5, 1.0, 0.75, 0.5, 0.5]
 # All saved posts are indexed for searching but, add files below too:
-EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../hyperlink.md',
-                      '../index.md', '../mserve.md', '../mt.md',
-                      '../programs.md', '../stack.md']
+EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../hrb.md',
+                      '../hyperlink.md', '../index.md', '../mserve.md',
+                      '../mt.md', '../programs.md', '../stack.md']
 
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 # If not desired, set `CONFIG_YML = None`
@@ -1998,6 +1999,7 @@ def make_output_year_dir(post_date):
         "/_posts/2022/2022-01-14-How-can-I-do-that?.md".
 
     """
+    # TODO: Get this value from configuration _config.yml
     if OUTPUT_BY_YEAR_DIR is None or False or OUTPUT_BY_YEAR_DIR == "":
         return ""  # Will be concatenated into string making up blog_filename
 

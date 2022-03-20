@@ -8,11 +8,11 @@ type:         Answer
 tags:         hardware hdmi adapter usb-c
 created_date: 2018-10-30 10:56:10
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "12,786 "
+views:        "12,878 "
 accepted:     
-uploaded:     2022-03-13 13:23:56
+uploaded:     2022-03-20 10:46:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-30-USB-C-to-HDMI-adapter-that-works-with-Ubuntu_.md
 toc:          false
 navigation:   false

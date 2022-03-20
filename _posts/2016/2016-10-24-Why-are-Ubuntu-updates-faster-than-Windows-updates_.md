@@ -10,9 +10,9 @@ created_date: 2016-10-24 11:41:17
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "373 "
+views:        "375 "
 accepted:     
-uploaded:     2022-03-13 13:23:56
+uploaded:     2022-03-20 10:46:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-24-Why-are-Ubuntu-updates-faster-than-Windows-updates_.md
 toc:          false
 navigation:   false

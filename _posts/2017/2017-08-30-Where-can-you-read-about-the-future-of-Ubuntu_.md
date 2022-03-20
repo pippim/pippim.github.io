@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    1
 views:        "170 "
 accepted:     Accepted
-uploaded:     2022-03-13 13:23:56
+uploaded:     2022-03-20 10:46:14
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-30-Where-can-you-read-about-the-future-of-Ubuntu_.md
 toc:          false
 navigation:   false
