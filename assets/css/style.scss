@@ -541,11 +541,9 @@ a.search-results:visited {
   // assets/js/theCookieMachine.js
   position: fixed;
   display: none;
-  max-width: 80%;         // After 800px, scroll bar appears
-  max-height: 80vh;     // Scroll after 80% of view height (80% would be document)
+  max-width: 80vw;         // After 80% of view, scroll bar appears
+  max-height: 95vh;     // Scroll after 95% of view height (80% would be document)
   // overflow: hidden;
-  display: flex;  /* https://stackoverflow.com/a/38066257/6929343  added*/
-  flex-direction: column; /*added*/
   top: 20px;
   z-index: 9;
   background-color: #f1f1f1;
