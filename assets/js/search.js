@@ -40,7 +40,7 @@ load_search_objects();
 // const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
-const c = document.getElementsByClassName("close")[0];  // Both 'X' close classes
+const c = document.getElementById('search-modal-close');    // 'X' close search results
 const f = document.getElementById('search-form');
 const q = document.getElementById('search-query');      // Search words input by user
 const h = document.getElementById('search-modal-text')  // Search results html codes
@@ -52,7 +52,6 @@ check_q_values();  // Initial 'X' (close on input bar) status when page refreshe
 // When the user clicks on <span> (x), close the modal
 c.onclick = function () {
     m.style.display = "none";   // Turn off display for search results
-    // Also called when X clicked in input bar, but handled in i.onclick listen
 }
 
 // When the user clicks anywhere outside of the modal, close it
