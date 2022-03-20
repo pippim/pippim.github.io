@@ -7,9 +7,9 @@
   <input type="search" class="clearable-input" id="search-query" name="search-q" autocomplete="off"
    placeholder="Search... {{ page.description | default: site.description | default: site.github.project_tagline }}"
    aria-label="Search through site content">
-  <!-- Try UTF-8 u+274c cross mark  <span id="search-clear-input">&times;</span> ❌🗙XX╳ -->
+  <!-- class name "icon_back" formats x.png background image as close button -->
   <span id="search-clear-input" class="icon_back" title="Clear search words"></span>
-  <button id="search-utf8-mag-glass" class="icon_back" type="submit"
+  <button id="search-symbol" class="icon_back" type="submit"
     title="Search {{ site.title }} Website">
   </button>
 </form>
@@ -19,7 +19,6 @@
 
     <!-- Modal content -->
     <div class="search-modal-content">
-        <!-- Try UTF-8 u+274c cross mark  <span class="close">&times;</span> ❌🗙XX╳ Tall ╳ causes extra line -->
         <span id="search-modal-close" class="icon_back"></span>
         <p id="search-modal-text">/assets/js/search.js will update text..</p>
     </div>
