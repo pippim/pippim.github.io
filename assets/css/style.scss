@@ -435,12 +435,13 @@ details[open] > summary {
     // left: 8px; goes over page title far left gutter
     position: absolute;
     text-align: start;  // parent flex box is centering text
-    max-height: 30rem;     // After 30 lines, scroll bar appears
+    max-height: 80vh;     // After 80% of viewport height, scroll bar appears on right
     -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
 }
 
+/* Is this overriding search.js?
 #search-clear-input {
     // Partially overrides class name .icon_back{}
     display: none;
@@ -452,6 +453,7 @@ details[open] > summary {
         filter: brightness(150%);
     }
 }
+*/
 
 // The Close Button
 #search-clear-input,
