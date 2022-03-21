@@ -404,7 +404,7 @@ details[open] > summary {
 #search-symbol {
     background-image: url({{ site.url }}/assets/img/icons//search_symbol.png);
     margin-right: .5rem;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    box-shadow: inset 0 0 0 1000px rgba(255,255,255,.2);
       // https://stackoverflow.com/a/24084708/6929343
 }
 
@@ -481,19 +481,6 @@ details[open] > summary {
     }
 }
 
-/*
-#search-clear-input:hover,
-#search-clear-input:focus,
-.close:hover,
-.close:focus {
-    //color: #000;
-    //background-color: #DDD;
-    //text-decoration: none;
-    //cursor: pointer;
-    //border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px;
-}
-*/
-
 // Search Result links that have been visited in purple
 // From: https://stackoverflow.com/questions/10845517/
 // how-to-change-the-link-color-in-a-specific-class-for-a-div-css/30296997#30296997
@@ -535,58 +522,59 @@ a.search-results:visited {
     Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 */
 #tcm_window {
-  // assets/js/theCookieMachine.js
-  position: fixed;
-  display: none;
-  max-width: 90vw;      // After 90% of view width, scroll bar appears on bottom
-  max-height: 95vh;     // Scroll after 95% of view height, scroll bar appears on right
-  // overflow: hidden;  // overflow set in #tcm_window_body {}
-  top: 20px;
-  z-index: 9;
-  background-color: #f1f1f1;
-  border: .2rem solid #d3d3d3;
-  color: black;
-  text-align: left;
+    // assets/js/theCookieMachine.js
+    position: fixed;
+    display: none;
+    max-width: 90vw;      // After 90% of view width, scroll bar appears on bottom
+    max-height: 95vh;     // Scroll after 95% of view height, scroll bar appears on right
+    // overflow: hidden;  // overflow set in #tcm_window_body {}
+    top: 20px;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: .2rem solid #d3d3d3;
+    color: black;
+    text-align: left;
 
-  @include large {
-    padding: 0.5rem;
-    font-size: 1rem;
-  }
-  @include medium {
-    padding: 0.4rem;
-    font-size: 0.9rem;
-  }
-  @include small {
-    padding: 0.3rem;
-    font-size: 0.8rem;
-  }
+    @include large {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    @include medium {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+    @include small {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
 }
 
 /* Button in the MAIN window NOT in the tcm window! */
 #tcm_window_icon {
-  // The Cookie Machine Window Icon in #tcm_window_header uses .icon_back{} class
-  display: inline-block;
-  float: left;
-  margin-right: .5rem;
-  opacity: 1.0;
-  //border: thin solid black;
-  // border-radius: .5rem;
-  background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
-                    url({{ site.url }}/assets/img/icons/button_background.png);
-  cursor: move;
+    // The Cookie Machine Window Icon in #tcm_window_header uses .icon_back{} class
+    display: inline-block;
+    float: left;
+    margin-right: .5rem;
+    opacity: 1.0;
+    //border: thin solid black;
+    // border-radius: .5rem;
+    background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+    cursor: move;
 }
 
 #tcm_window_header {
-  display: inline-block;
-  padding: .5rem;
-  cursor: move;  z-index: 10;
-  background-color: #2196F3;
-  color: #fff;
+    display: inline-block;
+    padding: .5rem;
+    cursor: move;  z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
 }
 
 #tcm_window_close {
-  // Works in conjunction with class name .icon_back
-  background-image: url({{ site.url }}/assets/img/icons/x.png);
+    // Works in conjunction with class name .icon_back
+    background-image: url({{ site.url }}/assets/img/icons/x.png);
+    box-shadow: inset 0 0 0 1000px rgba(255,255,255,.2);
 }
 
 #tcm_window_buttons {
