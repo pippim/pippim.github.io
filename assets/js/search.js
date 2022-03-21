@@ -63,31 +63,19 @@ window.onclick = function (event) {
 }
 
 f.addEventListener('submit', submitted);
-/*
-q.addEventListener('keyup', function() {
-    // 'keyup' Fired on every key press & release
-    check_q_values();
-});
 
-q.addEventListener('paste', function() {
-    // 'paste' Fired when pasting from clipboard
-    check_q_values();
-});
-
-q.addEventListener('cut', function() {
-    // 'cut' Fired when cutting text
-    check_q_values();
-});
-*/
-// https://stackoverflow.com/a/43021296/6929343
-['keyup', 'paste', 'cut'].forEach( function(evt) {
+/* https://stackoverflow.com/a/43021296/6929343
+    'keyup': Fired on key press & release
+    'paste': Fired when pasting from clipboard CTRL+V
+    'cut'  : Fired when cutting text CTRL+X */
+['keyup', 'paste', 'cut', 'input'].forEach( function(evt) {
     q.addEventListener(evt, check_q_values, false);
 });
 
 // Close ('X') clicked on search input bar
 i.onclick = function(){
-    q.value = "";
-    check_q_values();
+    q.value = "";           // Clear all search words
+    check_q_values();       // Turn off 'X' (Close) icon
 };
 
 function check_q_values() {
