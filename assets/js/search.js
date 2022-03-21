@@ -38,7 +38,7 @@ async function getJSON(url) {
 load_search_objects();
 
 // Note theCookieMachine.js is already using b:
-// const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
+//   const b = document.getElementById('tcm_window_body')
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const c = document.getElementById('search-modal-close');    // 'X' close search results
@@ -63,26 +63,26 @@ window.onclick = function (event) {
 }
 
 f.addEventListener('submit', submitted);
-
+/*
 q.addEventListener('keyup', function() {
-    /* Fired on every key press */
+    // 'keyup' Fired on every key press & release
     check_q_values();
 });
 
 q.addEventListener('paste', function() {
-    /* Fired when pasting from clipboard */
+    // 'paste' Fired when pasting from clipboard
     check_q_values();
 });
 
 q.addEventListener('cut', function() {
-    /* Fired when cutting text */
+    // 'cut' Fired when cutting text
     check_q_values();
 });
-
-// NOT WORKING - Handle multiple query input actions at cne time
-// ['keydown', 'paste', 'cut'].forEach( function(evt) {
-//     q.addEventListener(evt, check_q_values(), false);
-// });
+*/
+// https://stackoverflow.com/a/43021296/6929343
+['keyup', 'paste', 'cut'].forEach( function(evt) {
+    q.addEventListener(evt, check_q_values, false);
+});
 
 // Close ('X') clicked on search input bar
 i.onclick = function(){
