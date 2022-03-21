@@ -67,10 +67,12 @@ f.addEventListener('submit', submitted);
 /* https://stackoverflow.com/a/43021296/6929343
     'keyup': Fired on key press & release
     'paste': Fired when pasting from clipboard CTRL+V
-    'cut'  : Fired when cutting text CTRL+X */
+    'cut'  : Fired when cutting text CTRL+X
 ['keyup', 'paste', 'cut', 'input'].forEach( function(evt) {
     q.addEventListener(evt, check_q_values, false);
 });
+*/
+f.addEventListener('input', check_q_values);
 
 // Close ('X') clicked on search input bar
 i.onclick = function(){
