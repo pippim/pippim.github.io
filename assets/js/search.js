@@ -28,6 +28,7 @@ async function load_search_objects() {
 
 // https://stackoverflow.com/a/51992739/6929343
 async function getJSON(url) {
+    // Also used by /assets/js/theCookieMachine.js
     return fetch(url)
         .then((response)=>response.json())
         .then((responseJson)=>{return responseJson});
@@ -92,31 +93,36 @@ i.onclick = function(){
 function check_q_values() {
     // When search words typed, turn on "X" image to clear the words
     if (q.value !== "") {
-        // i.style.display = "block";
+        // const i = document.getElementById('search-clear-input');
+        // 'X' to clear search words. Comments not allowed between `` backticks
         i.style.cssText = `
-          display: inline-block;
-          margin-right: .7rem;
-          background-repeat: no-repeat;
-          background-size: cover;
-          box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
-          border: none;
-          opacity: 0.5;
-          float: right;
-          cursor: pointer;
-          &:hover {
-            opacity: 1.0;
-            filter: brightness(150%);
-            }
+            display: inline-block;
         `;
+        /* OLD
+            margin-right: .7rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+            border: none;
+            opacity: 0.5;
+            float: right;
+            cursor: pointer;
+            &:hover {
+                opacity: 1.0;
+                filter: brightness(150%);
+            }
+        */
     } else {
         //i.style.display = "none";
         i.style.cssText = `
-          display: none;
-          opacity: 0.0;
-          background: transparent;
-          background-image: none;
-          border: none;
+            display: none;
         `;
+        /* OLD
+            opacity: 0.0;
+            background: transparent;
+            background-image: none;
+            border: none;
+        */
     }
 }
 
