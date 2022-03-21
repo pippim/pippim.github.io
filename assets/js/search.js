@@ -41,11 +41,11 @@ load_search_objects();
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const c = document.getElementById('search-modal-close');    // 'X' close search results
-const f = document.getElementById('search-form');
-const q = document.getElementById('search-query');      // Search words input by user
-const h = document.getElementById('search-modal-text')  // Search results html codes
-const i = document.getElementById('search-clear-input');
-const m = document.getElementById('search-modal');
+const f = document.getElementById('search-form');           // Wrapper around query & close button
+const q = document.getElementById('search-query');          // Search words input by user
+const h = document.getElementById('search-modal-text')      // Search results html codes
+const i = document.getElementById('search-clear-input');    // 'X' to clear search words
+const m = document.getElementById('search-modal');          // Where search results appear
 
 check_q_values();  // Initial 'X' (close on input bar) status when page refreshed
 
@@ -95,8 +95,10 @@ function check_q_values() {
         // i.style.display = "block";
         i.style.cssText = `
           display: inline-block;
+          margin-right: .7rem;
           background-repeat: no-repeat;
           background-size: cover;
+          box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
           border: none;
           opacity: 0.5;
           float: right;
@@ -109,6 +111,7 @@ function check_q_values() {
     } else {
         //i.style.display = "none";
         i.style.cssText = `
+          display: none;
           opacity: 0.0;
           background: transparent;
           background-image: none;
