@@ -90,6 +90,7 @@ i.onclick = function(){
 };
 
 function check_q_values() {
+    // When search words typed, turn on "X" image to clear the words
     if (q.value !== "") {
         // i.style.display = "block";
         i.style.cssText = `
@@ -100,6 +101,10 @@ function check_q_values() {
           opacity: 0.5;
           float: right;
           cursor: pointer;
+          &:hover {
+            opacity: 1.0;
+            filter: brightness(150%);
+            }
         `;
     } else {
         //i.style.display = "none";
