@@ -255,6 +255,16 @@ function website_tree_to_html(results) {
 }
 
 function local_storage_to_html() {
+    /*
+        Downloaded cookies location:
+            https://stackoverflow.com/a/18678698/6929343
+        Upload (drag & drop):
+            https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/
+        Caching (local storage) in browser:
+            https://jonmeyers.io/blog/simple-caching-with-local-storagejav
+        Convert to base64 and back again for email attachments:
+            https://stackoverflow.com/a/38134374/6929343
+    */
     // if ('caches' in window){
     //    alert('caches found in window');
     // }
