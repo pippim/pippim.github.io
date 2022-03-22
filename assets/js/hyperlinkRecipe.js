@@ -98,7 +98,7 @@ export function processHyperlinkRecipe(id) {
     // Table 100% width, fixed layout
     html += '#' + id + ' table { table-layout: fixed; width: 100%; }\n'
     // Buttons in the first column have fixed width, other column auto.
-    html += '#' + id + ' table tr th:nth-child(1){ width: 10rem; }\n''
+    html += '#' + id + ' table tr th:nth-child(1){ width: 10rem; }\n'
     // No borders inside the table
     html += '#' + id + ' table, tr, th, td { border: none ! important; }\n'
     // Table details: Space between columns
