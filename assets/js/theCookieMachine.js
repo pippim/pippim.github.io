@@ -264,6 +264,8 @@ function local_storage_to_html() {
             https://jonmeyers.io/blog/simple-caching-with-local-storagejav
         Convert to base64 and back again for email attachments:
             https://stackoverflow.com/a/38134374/6929343
+        Get and set list of links visited:
+            https://stackoverflow.com/a/9970626/6929343
     */
     // if ('caches' in window){
     //    alert('caches found in window');
