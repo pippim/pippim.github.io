@@ -92,7 +92,7 @@ export function processHyperlinkRecipe(id) {
     html += '<style>\n'
     // Parent <div> should have border for better looks
     // ONLY for hrb_body, not for tcm_window_body!
-    html += '#hrb_body' + ' { border: .2rem solid; }\n'
+    html += '#hrb_body' + ' { border: .2rem solid; padding-bottom: .5rem; }\n'
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrbHdr { margin: .5rem; }\n'
     // Table 100% width, fixed layout
@@ -130,7 +130,7 @@ export function processHyperlinkRecipe(id) {
     // Give resizing grabber if textarea doesn't auto-expand with data overflow
     if (autoRows == "0") { html += '  resize: vertical;\n '}
                     else { html += '  resize: none;\n '}
-    html += '}\n'                   // End of .hrbInput class styling
+    html += '}'                     // End of .hrbInput class styling
 
     html += '</style>'              // End of all styles
 
