@@ -550,7 +550,7 @@ function setToggle(id, state) {
             '  box-shadow: 0 0 1px #2196F3;\n' +
             '}\n'
 
-    html += 'input:checked + .slider:before {
+    html += 'input:checked + .slider:before {\n' +
             '  -webkit-transform: translateX(26px);\n' +
             '  -ms-transform: translateX(26px);\n' +
             '  transform: translateX(26px);\n' +
