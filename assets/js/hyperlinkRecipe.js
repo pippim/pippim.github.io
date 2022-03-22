@@ -95,11 +95,14 @@ export function processHyperlinkRecipe(id) {
     html += '#hrb_body' + ' { border: .2rem solid; }\n'
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrbHdr { margin: .5rem; }\n'
+    // Table 100% width, fixed layout
+    html += '#' + id + ' table { table-layout: fixed; width: 100%; }\n'
     // No borders inside the table
     html += '#' + id + ' table, tr, th, td { border: none ! important; }\n'
     // Table details: Space between columns
-    html += '#' + id + ' td { padding: 0 1rem; }\n'
-    // Buttons in the first column. Tiny bit of left & right padding
+    html += '#' + id + ' td { padding: 0 1rem; width: 20rem; }\n'
+    // Buttons in the first column have fixed width, other column auto.
+    html += '#' + id + ' td+td { width: auto; }\n'
     // Because Chrome and Firefox vary between shrinking & expanding on hover
     html += '.hrbBtn {\n' +
             '  color: #000;\n' +
@@ -116,10 +119,13 @@ export function processHyperlinkRecipe(id) {
             '}\n'
     // Column 2 minimum width to give lots of room for URL
     // width and height = 100% for <textarea> if draggable corner resizes
+    // TAKE OUT March 22/22:
+    //             '  min-width: 550px;\n' +
+    //            '  width: 100%; height: 100%;\n' +
+
     html += '.hrbInput {\n' +
-            '  min-width: 550px;\n' +
-            '  width: 100%; height: 100%;\n' +
             '  overflow-y: auto;\n'
+    // Give resizing grabber if textarea doesn't auto-expand with data overflow
     if (autoRows == "0") { html += '  resize: vertical;\n '}
                     else { html += '  resize: none;\n '}
     html += '}\n'                   // End of .hrbInput class styling
