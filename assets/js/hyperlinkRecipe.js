@@ -92,7 +92,7 @@ export function processHyperlinkRecipe(id) {
     html += '<style>\n'
     // Parent <div> should have border for better looks
     // ONLY for hrb_body, not for tcm_window_body!
-    html += '#hrb_body' + ' { border: .2rem solid; padding-bottom: .5rem; }\n'
+    html += '#hrb_body' + ' { border: .2rem solid; padding-bottom: 1rem; }\n'
     // Heading: "Hyperlink Recipe Baker" <h3> styling: .5rem margins all around
     html += '#hrbHdr { margin: .5rem; }\n'
     // Table 100% width, fixed layout
@@ -120,10 +120,6 @@ export function processHyperlinkRecipe(id) {
             '}\n'
     // Column 2 minimum width to give lots of room for URL
     // width and height = 100% for <textarea> if draggable corner resizes
-    // TAKE OUT March 22/22:
-    //             '  min-width: 550px;\n' +
-    //            '  width: 100%; height: 100%;\n' +
-
     html += '.hrbInput {\n' +
             '  width: 100%; height: 100%;\n' +
             '  overflow-y: auto;\n'

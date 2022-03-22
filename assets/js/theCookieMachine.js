@@ -254,168 +254,6 @@ function website_tree_to_html(results) {
 
 }
 
-function local_storage_to_html() {
-    /*
-        Downloaded cookies location:
-            https://stackoverflow.com/a/18678698/6929343
-        Upload (drag & drop):
-            https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/
-        Caching (local storage) in browser:
-            https://jonmeyers.io/blog/simple-caching-with-local-storagejav
-        Convert to base64 and back again for email attachments:
-            https://stackoverflow.com/a/38134374/6929343
-        Get and set list of links visited:
-            https://stackoverflow.com/a/9970626/6929343
-
-        Optional information for posting comments / sending emails:
-
-            Name
-            Address
-            Phone Number
-
-        System generated information:
-
-            Browser Version
-            IP address
-            Last website
-
-Base64 would allow emailing?
-
-
-
-Initially just support stringify and parse
-
-
-
-Top level container:
-
-
-
-    Pippim Website Payload Version 1.0
-
-
-
-Second level container
-
-
-
-    Local Storage Version 1.0
-
-
-
-Third Level containers
-
-
-
-    Payload headers Version 1.0
-
-
-
-Fourth Level containers (Payload headers Version 1.0)
-
-
-
-    User Configuration Version 1.0
-    Local Cookies Version 1.0
-    Sites Visited Version 1.0
-    Multi-Timer Version 1.0
-
-
-
-Sample Payload:
-
-
-
-    Timer Version, Timer Name,
-
-
-
-What are extn-utils.js?
-    */
-
-    // if ('caches' in window){
-    //    alert('caches found in window');
-    // }
-    var cntCaches = 0
-    caches.keys().then(function(keyList) {
-        cntCaches++;
-    });
-    //console.log("cntCaches: " + cntCaches)
-
-    /* Future use */
-
-    var myCookies = getCookies();
-    // Object.keys(myCookies).forEach(prop => console.log(prop))
-
-    // https://stackoverflow.com/a/921808/6929343
-    for (var key in myCookies) {
-        // skip loop if the property is from prototype
-        if (!myCookies.hasOwnProperty(key)) continue;
-
-        var obj = myCookies[key];
-        var value = ""
-        for (var prop in obj) {
-            // skip loop if the property is from prototype
-            if (!obj.hasOwnProperty(prop)) continue;
-
-            // Key=Prop: 0=M 1=o 2=r 3=e spells out "More"
-            // alert(prop + " = " + obj[prop]);
-            value += obj[prop];
-        }
-        //alert("key: " + key + " | value: " + value)
-    }
-
-    // const items = { ...localStorage };
-    // console.log("items: " + items)
-
-    // var archive = allStorage();
-    // console.log("archive: " + archive)
-
-    var html = "<p>";
-    html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
-    html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
-    html += "  ☑ Display cache usage.";
-    html += "</p>";
-    b.innerHTML = html;              // Update TCM Window body
-}
-
-function getCookies() {
-    // https://stackoverflow.com/a/252959/6929343
-    var pairs = document.cookie.split(";");
-    var cookies = {};
-    for (var i=0; i<pairs.length; i++){
-        var pair = pairs[i].split("=");
-        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
-    }
-    return cookies;
-}
-
-function getStorage() {
-    // https://stackoverflow.com/a/17748203/6929343
-    var archive = {}, // Notice change here
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    while ( i-- ) {
-        archive[ keys[i] ] = localStorage.getItem( keys[i] );
-    }
-
-    return archive;
-}
-
-function allStorage() {
-    // https://stackoverflow.com/a/17748203/6929343
-    var archive = {}, // Notice change here
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    while ( i-- ) {
-        archive[ keys[i] ] = localStorage.getItem( keys[i] );
-    }
-
-    return archive;
-}
-
 function webpage_info_to_html() {
 
     var urlMarkdown = getMarkdownFilename();
@@ -518,6 +356,211 @@ font-size
 line-height
 font-family
 */
+
+function local_storage_to_html() {
+    /*
+        Downloaded cookies location:
+            https://stackoverflow.com/a/18678698/6929343
+        Upload (drag & drop):
+            https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/
+        Caching (local storage) in browser:
+            https://jonmeyers.io/blog/simple-caching-with-local-storagejav
+        Convert to base64 and back again for email attachments:
+            https://stackoverflow.com/a/38134374/6929343
+        Get and set list of links visited:
+            https://stackoverflow.com/a/9970626/6929343
+
+        Optional information for posting comments / sending emails:
+
+            Name
+            Address
+            Phone Number
+
+        System generated information:
+
+            Browser Version
+            IP address
+            Last website
+
+        Base64 would allow emailing?
+
+        Initially just support stringify and parse
+
+        Top level container:
+
+            Pippim Website Payload Version 1.0
+
+        Second level container
+
+            Local Storage Version 1.0
+
+        Third Level containers
+
+            Payload headers Version 1.0
+
+        Fourth Level containers (Payload headers Version 1.0)
+
+            User Configuration Version 1.0
+            Local Cookies Version 1.0
+            Sites Visited Version 1.0
+            Multi-Timer Version 1.0
+
+        Sample Payload:
+
+            Timer Version, Timer Name,
+
+    */
+
+    // if ('caches' in window){
+    //    alert('caches found in window');
+    // }
+    var cntCaches = 0
+    caches.keys().then(function(keyList) {
+        cntCaches++;
+    });
+    //console.log("cntCaches: " + cntCaches)
+
+    /* Future use */
+
+    var myCookies = getCookies();
+    // Object.keys(myCookies).forEach(prop => console.log(prop))
+
+    // https://stackoverflow.com/a/921808/6929343
+    for (var key in myCookies) {
+        // skip loop if the property is from prototype
+        if (!myCookies.hasOwnProperty(key)) continue;
+
+        var obj = myCookies[key];
+        var value = ""
+        for (var prop in obj) {
+            // skip loop if the property is from prototype
+            if (!obj.hasOwnProperty(prop)) continue;
+
+            // Key=Prop: 0=M 1=o 2=r 3=e spells out "More"
+            // alert(prop + " = " + obj[prop]);
+            value += obj[prop];
+        }
+        //alert("key: " + key + " | value: " + value)
+    }
+
+    // const items = { ...localStorage };
+    // console.log("items: " + items)
+
+    // var archive = allStorage();
+    // console.log("archive: " + archive)
+
+    var html = "<p>";
+    html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
+    html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
+    html += "  ☑ Display cache usage.";
+    html += "</p>";
+    html += setToggle('toggle_switch', 'checked')
+    b.innerHTML = html;              // Update TCM Window body
+}
+
+function getCookies() {
+    // https://stackoverflow.com/a/252959/6929343
+    var pairs = document.cookie.split(";");
+    var cookies = {};
+    for (var i=0; i<pairs.length; i++){
+        var pair = pairs[i].split("=");
+        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
+    }
+    return cookies;
+}
+
+function getStorage() {
+    // https://stackoverflow.com/a/17748203/6929343
+    var archive = {}, // Notice change here
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        archive[ keys[i] ] = localStorage.getItem( keys[i] );
+    }
+
+    return archive;
+}
+
+function allStorage() {
+    // https://stackoverflow.com/a/17748203/6929343
+    var archive = {}, // Notice change here
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        archive[ keys[i] ] = localStorage.getItem( keys[i] );
+    }
+
+    return archive;
+}
+
+function setToggle(id, state) {
+    // id = name to assign, state = "checked" (ON) or "" (OFF)
+    var html = '<label class="switch">\n' +
+               '  <input type="checkbox" ' + checked + '>\n' +
+               '  <span class="slider"></span>\n' +
+               '</label>\n'
+
+    // CSS
+    html += '<style>\n'
+
+    html += '.switch {\n' +
+            '  position: relative;\n' +
+            '  display: inline-block;\n' +
+            '  width: 60px;\n' +
+            '  height: 34px;\n' +
+            '}\n'
+
+    html += '.switch input {\n' +
+            '  opacity: 0;\n' +
+            '  width: 0;\n' +
+            '  height: 0;\n' +
+            '}\n'
+
+    html += '.slider {\n' +
+            '  position: absolute;\n' +
+            '  cursor: pointer;\n' +
+            '  top: 0;\n' +
+            '  left: 0;\n' +
+            '  right: 0;\n' +
+            '  bottom: 0;\n' +
+            '  background-color: #ccc;\n' +
+            '  -webkit-transition: .4s;\n' +
+            '  transition: .4s;\n' +
+            '}\n'
+
+    html += '.slider:before {\n' +
+            '  position: absolute;\n' +
+            '  content: "";\n' +
+            '  height: 26px;\n' +
+            '  width: 26px;\n' +
+            '  left: 4px;\n' +
+            '  bottom: 4px;\n' +
+            '  background-color: white;\n' +
+            '  -webkit-transition: .4s;\n' +
+            '  transition: .4s;\n' +
+            '}\n'
+
+    html += 'input:checked + .slider {\n' +
+            '  background-color: #2196F3;\n' +
+            '}\n'
+
+    html += 'input:focus + .slider {\n' +
+            '  box-shadow: 0 0 1px #2196F3;\n' +
+            '}\n'
+
+    html += 'input:checked + .slider:before {
+            '  -webkit-transform: translateX(26px);\n' +
+            '  -ms-transform: translateX(26px);\n' +
+            '  transform: translateX(26px);\n' +
+            '}\n'
+
+    html += '</style>\n'
+
+    return html
+}
+
 
 function setLineDrawFont(elm) {
     let compStyles = window.getComputedStyle(elm);
