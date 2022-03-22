@@ -97,12 +97,13 @@ export function processHyperlinkRecipe(id) {
     html += '#hrbHdr { margin: .5rem; }\n'
     // Table 100% width, fixed layout
     html += '#' + id + ' table { table-layout: fixed; width: 100%; }\n'
+    // Buttons in the first column have fixed width, other column auto.
+    html += '#' + id + ' table tr th:nth-child(1){ width: 10rem; }\n''
     // No borders inside the table
     html += '#' + id + ' table, tr, th, td { border: none ! important; }\n'
     // Table details: Space between columns
-    html += '#' + id + ' td { padding: 0 1rem; width: 20rem; }\n'
-    // Buttons in the first column have fixed width, other column auto.
-    html += '#' + id + ' td+td { width: auto; }\n'
+    html += '#' + id + ' td { padding: 0 1rem; }\n'
+    // html += '#' + id + ' td+td { width: auto; }\n'
     // Because Chrome and Firefox vary between shrinking & expanding on hover
     html += '.hrbBtn {\n' +
             '  color: #000;\n' +
