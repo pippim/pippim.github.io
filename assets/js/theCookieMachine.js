@@ -266,7 +266,73 @@ function local_storage_to_html() {
             https://stackoverflow.com/a/38134374/6929343
         Get and set list of links visited:
             https://stackoverflow.com/a/9970626/6929343
+
+        Optional information for posting comments / sending emails:
+
+            Name
+            Address
+            Phone Number
+
+        System generated information:
+
+            Browser Version
+            IP address
+            Last website
+
+Base64 would allow emailing?
+
+
+
+Initially just support stringify and parse
+
+
+
+Top level container:
+
+
+
+    Pippim Website Payload Version 1.0
+
+
+
+Second level container
+
+
+
+    Local Storage Version 1.0
+
+
+
+Third Level containers
+
+
+
+    Payload headers Version 1.0
+
+
+
+Fourth Level containers (Payload headers Version 1.0)
+
+
+
+    User Configuration Version 1.0
+    Local Cookies Version 1.0
+    Sites Visited Version 1.0
+    Multi-Timer Version 1.0
+
+
+
+Sample Payload:
+
+
+
+    Timer Version, Timer Name,
+
+
+
+What are extn-utils.js?
     */
+
     // if ('caches' in window){
     //    alert('caches found in window');
     // }
