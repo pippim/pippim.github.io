@@ -124,6 +124,7 @@ export function processHyperlinkRecipe(id) {
     //            '  width: 100%; height: 100%;\n' +
 
     html += '.hrbInput {\n' +
+            '  width: 100%; height: 100%;\n' +
             '  overflow-y: auto;\n'
     // Give resizing grabber if textarea doesn't auto-expand with data overflow
     if (autoRows == "0") { html += '  resize: vertical;\n '}
