@@ -119,7 +119,6 @@ document.querySelector('#tcm_display_home').addEventListener('click', () => {
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
     // This function changes system font so others call restoreOldFont(b); to restore
-    // raw_url set in search.js loaded before us
     fetch(raw_url + '/assets/json/website_tree.json')
       .then((response) => response.json())
       .then((website_tree) => {
@@ -129,21 +128,22 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
 });
 
 document.querySelector('#tcm_display_local').addEventListener('click', () => {
-    restoreOldFont(b);
     // Display cookies and cache (WIP)
+    restoreOldFont(b);
+    // fm_var cookie, search_url.json and search_words.json must already be
+    // globally defined.
     local_storage_to_html();
 });
 
 document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
     restoreOldFont(b);
-    // fm_var cookie, search_url.json and search_words.json must already be
-    // globally defined.
     processHyperlinkRecipe('tcm_window_body');
 });
 
 document.querySelector('#tcm_webpage_info').addEventListener('click', () => {
     restoreOldFont(b);
     // Display webpage info - filename, front matter and text (WIP)
+    // raw_url set in search.js loaded before us
     webpage_info_to_html();
 });
 
@@ -262,7 +262,7 @@ function local_storage_to_html() {
     caches.keys().then(function(keyList) {
         cntCaches++;
     });
-    console.log("cntCaches: " + cntCaches)
+    //console.log("cntCaches: " + cntCaches)
 
     /* Future use */
 
@@ -284,7 +284,7 @@ function local_storage_to_html() {
             // alert(prop + " = " + obj[prop]);
             value += obj[prop];
         }
-        alert("key: " + key + " | value: " + value)
+        //alert("key: " + key + " | value: " + value)
     }
 
     // const items = { ...localStorage };
@@ -301,20 +301,57 @@ function local_storage_to_html() {
     b.innerHTML = html;              // Update TCM Window body
 }
 
+function getCookies() {
+    // https://stackoverflow.com/a/252959/6929343
+    var pairs = document.cookie.split(";");
+    var cookies = {};
+    for (var i=0; i<pairs.length; i++){
+        var pair = pairs[i].split("=");
+        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
+    }
+    return cookies;
+}
+
+function getStorage() {
+    // https://stackoverflow.com/a/17748203/6929343
+    var archive = {}, // Notice change here
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        archive[ keys[i] ] = localStorage.getItem( keys[i] );
+    }
+
+    return archive;
+}
+
+function allStorage() {
+    // https://stackoverflow.com/a/17748203/6929343
+    var archive = {}, // Notice change here
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        archive[ keys[i] ] = localStorage.getItem( keys[i] );
+    }
+
+    return archive;
+}
+
 function webpage_info_to_html() {
 
     var urlMarkdown = getMarkdownFilename();
 
     fetch(urlMarkdown)
-      .then((response) => response.text())
-      .then((results) => {
-        var results = results.split("\n")  // Convert string into array
-        // alert('results.length: ' + results.length)
-        var front_yml = getFrontMatter(results)
-        // alert(front_yml)
-        // console.log('Here is the text file:\n' + config_yml);
-        front_matter_to_html(front_yml, "Current Page Front Matter");
-      });
+        .then((response) => response.text())
+        .then((results) => {
+            var results = results.split("\n")  // Convert string into array
+            // alert('results.length: ' + results.length)
+            var front_yml = getFrontMatter(results)
+            // alert(front_yml)
+            // console.log('Here is the text file:\n' + config_yml);
+            front_matter_to_html(front_yml, "Current Page Front Matter");
+        });
 
 }
 
@@ -377,60 +414,20 @@ function loadConfigYml () {
     // Sets global array configYml and flagPostsByYear used by two functions
 
     fetch(raw_url + '/_config.yml')
-      .then((response) => response.text())
-      .then((config_yml) => {
-        configYml = config_yml.split("\n")  // Convert string into array
-        flagPostsByYear = null;
-        for (var i = 0; i < configYml.length; i++) {
-            var ymlKeyValue = configYml[i].split(':');
-            if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
-                if (ymlKeyValue[0] == "posts_by_year") {
-                    flagPostsByYear = ymlKeyValue[1].trim(); } } }
-        if (flagPostsByYear == null) { flagPostsByYear = "false"; }
-      });
+        .then((response) => response.text())
+        .then((config_yml) => {
+            configYml = config_yml.split("\n")  // Convert string into array
+            // Set flagPostsByYear flag
+            flagPostsByYear = "false";
+            for (var i = 0; i < configYml.length; i++) {
+                var ymlKeyValue = configYml[i].split(':');
+                if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
+                    if (ymlKeyValue[0] == "posts_by_year") {
+                        flagPostsByYear = ymlKeyValue[1].trim(); } } }
+        });
 }
 
 loadConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
-
-function getCookies() {
-    // https://stackoverflow.com/a/252959/6929343
-    var pairs = document.cookie.split(";");
-    var cookies = {};
-    for (var i=0; i<pairs.length; i++){
-        var pair = pairs[i].split("=");
-        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
-    }
-    return cookies;
-}
-
-
-function getStorage() {
-    // https://stackoverflow.com/a/17748203/6929343
-    var archive = {}, // Notice change here
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    while ( i-- ) {
-        archive[ keys[i] ] = localStorage.getItem( keys[i] );
-    }
-
-    return archive;
-}
-
-
-function allStorage() {
-    // https://stackoverflow.com/a/17748203/6929343
-    var archive = {}, // Notice change here
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    while ( i-- ) {
-        archive[ keys[i] ] = localStorage.getItem( keys[i] );
-    }
-
-    return archive;
-}
-
 
 /* Further research
 
