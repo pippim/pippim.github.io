@@ -463,6 +463,10 @@ function local_storage_to_html() {
         "/assets/img/icons/switch_on_right.png")
     b.innerHTML = html;              // Update TCM Window body
 
+    window.onload = function () {
+        var el = document.getElementById("toggle_image");
+        el.onclick = sayHello;
+    }
     // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
     window.addEventListener('DOMContentLoaded', (event) => {
         // https://stackoverflow.com/a/42526074/6929343
@@ -470,6 +474,10 @@ function local_storage_to_html() {
         document.getElementById("toggle_image").onclick = clickImageToggle;
     });
 
+}
+
+function sayHello() {
+    console.log("Hello");
 }
 
 function getCookies() {
@@ -552,6 +560,7 @@ function setImageToggle(id, checked, width, height, off_image, on_image) {
 
 /*
 ADD : https://stackoverflow.com/a/29979795/6929343
+<script>
 $(document).ready(function() {
   $("#cf_onclick").click(function() {
     var current = $("#cf2 img.top").removeClass('top');
@@ -561,6 +570,7 @@ $(document).ready(function() {
     next.addClass('top');
   });
 });
+</script>
 */
     return html
 }
