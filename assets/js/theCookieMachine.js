@@ -468,6 +468,7 @@ function local_storage_to_html() {
         var el = document.getElementById("toggle_image");
         el.onclick = sayHello;
     }
+        alert('innerHTML changed')
         var el = document.getElementById("toggle_image");
         el.onclick = sayHello;
     // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
