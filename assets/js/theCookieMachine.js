@@ -469,6 +469,7 @@ function local_storage_to_html() {
         el.onclick = sayHello;
     }
         alert('innerHTML changed')
+        setTimeout(callback, 0)
         var el = document.getElementById("toggle_image");
         el.onclick = sayHello;
     // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
@@ -482,43 +483,6 @@ function local_storage_to_html() {
 
 function sayHello() {
     console.log("Hello");
-}
-
-function getCookies() {
-    // https://stackoverflow.com/a/252959/6929343
-    var pairs = document.cookie.split(";");
-    var cookies = {};
-    for (var i=0; i<pairs.length; i++){
-        var pair = pairs[i].split("=");
-        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
-    }
-    return cookies;
-}
-
-function getStorage() {
-    // https://stackoverflow.com/a/17748203/6929343
-    var archive = {}, // Notice change here
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    while ( i-- ) {
-        archive[ keys[i] ] = localStorage.getItem( keys[i] );
-    }
-
-    return archive;
-}
-
-function allStorage() {
-    // https://stackoverflow.com/a/17748203/6929343
-    var archive = {}, // Notice change here
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    while ( i-- ) {
-        archive[ keys[i] ] = localStorage.getItem( keys[i] );
-    }
-
-    return archive;
 }
 
 
@@ -557,7 +521,7 @@ function setImageToggle(id, checked, width, height, off_image, on_image) {
             '}\n'
 
     html += '#cf2 img.top:hover {\n' +
-            '  filter: brightness(150%);\n' +
+            '  filter: brightness(75%);\n' +
             '}\n'
 
     html += '</style>\n'
@@ -581,6 +545,43 @@ $(document).ready(function() {
 
 function clickImageToggle() {
     alert('clickImageToggle()')
+}
+
+function getCookies() {
+    // https://stackoverflow.com/a/252959/6929343
+    var pairs = document.cookie.split(";");
+    var cookies = {};
+    for (var i=0; i<pairs.length; i++){
+        var pair = pairs[i].split("=");
+        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
+    }
+    return cookies;
+}
+
+function getStorage() {
+    // https://stackoverflow.com/a/17748203/6929343
+    var archive = {}, // Notice change here
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        archive[ keys[i] ] = localStorage.getItem( keys[i] );
+    }
+
+    return archive;
+}
+
+function allStorage() {
+    // https://stackoverflow.com/a/17748203/6929343
+    var archive = {}, // Notice change here
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        archive[ keys[i] ] = localStorage.getItem( keys[i] );
+    }
+
+    return archive;
 }
 
 function setToggle(id, checked) {
