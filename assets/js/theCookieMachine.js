@@ -463,7 +463,12 @@ function local_storage_to_html() {
         "/assets/img/icons/switch_on_right.png")
     b.innerHTML = html;              // Update TCM Window body
 
-    document.getElementById("toggle_image").onclick = clickImageToggle;
+    // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // https://stackoverflow.com/a/42526074/6929343
+        document.getElementById("toggle_image").onclick = clickImageToggle;
+    });
+
 }
 
 function clickImageToggle() {
