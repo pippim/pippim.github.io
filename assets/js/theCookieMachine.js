@@ -544,8 +544,24 @@ function setImageToggle(id, checked, width, height, off_image, on_image) {
             '  cursor: pointer;\n' +
             '}\n'
 
+    html += '#cf2 img.top:hover {\n' +
+            '  filter: brightness(150%);\n' +
+            '}\n'
+
     html += '</style>\n'
 
+/*
+ADD : https://stackoverflow.com/a/29979795/6929343
+$(document).ready(function() {
+  $("#cf_onclick").click(function() {
+    var current = $("#cf2 img.top").removeClass('top');
+
+    var next = current.next();
+    next = next.length ? next : current.siblings().first();
+    next.addClass('top');
+  });
+});
+*/
     return html
 }
 
