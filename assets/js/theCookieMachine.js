@@ -466,6 +466,7 @@ function local_storage_to_html() {
     // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
     window.addEventListener('DOMContentLoaded', (event) => {
         // https://stackoverflow.com/a/42526074/6929343
+        alert('event listener')
         document.getElementById("toggle_image").onclick = clickImageToggle;
     });
 
@@ -529,6 +530,8 @@ function setImageToggle(id, checked, width, height, off_image, on_image) {
     html += '#cf2 img {\n' +
             '  position: absolute;\n' +
             '  left: 0;\n' +
+            '  max-width: ' + width + ';\n' +
+            '  max-height: ' + height + ';\n' +
             '  -webkit-transition: opacity 1s ease-in-out;\n' +
             '  -moz-transition: opacity 1s ease-in-out;\n' +
             '  -o-transition: opacity 1s ease-in-out;\n' +
