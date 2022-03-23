@@ -369,6 +369,8 @@ function local_storage_to_html() {
             https://stackoverflow.com/a/38134374/6929343
         Get and set list of links visited:
             https://stackoverflow.com/a/9970626/6929343
+        Cross fading images:
+            http://css3.bradshawenterprises.com/cfimg/
 
         Optional information for posting comments / sending emails:
 
@@ -455,7 +457,17 @@ function local_storage_to_html() {
     html += "  ☑ Display cache usage.";
     html += "</p>";
     html += setToggle('toggle_switch', 'checked')
+    // image is square but contents are rectangular wide
+    html += setImageToggle('toggle_image', 'checked', "30px", "30px",
+        "/assets/img/icons/switch_off_left.png",
+        "/assets/img/icons/switch_on_right.png")
     b.innerHTML = html;              // Update TCM Window body
+
+    document.getElementById("toggle_image").onclick = clickImageToggle;
+}
+
+function clickImageToggle() {
+    alert('clickImageToggle()')
 }
 
 function getCookies() {
@@ -493,6 +505,44 @@ function allStorage() {
     }
 
     return archive;
+}
+
+
+function setImageToggle(id, checked, width, height, off_image, on_image) {
+    // From: http://css3.bradshawenterprises.com/cfimg/
+    var html = '<div id="cf2" class="shadow" id="' + id + '">\n'
+
+    html += '  <img class="bottom" src="' + '{{ site.url }}' + off_image + '" />\n' +
+            '  <img class="top" src="' + '{{ site.url }}' + on_image + '" />\n' +
+            '</div>\n'
+
+    // CSS
+    html += '<style>\n'
+
+    html += '#cf2 {\n' +
+            '  position: relative;\n' +
+            '  width: ' + width + '\n' +
+            '  height: ' + height + '\n' +
+            '  margin: 0 auto;\n' +
+            '}\n'
+    html += '#cf2 img {\n' +
+            '  position: absolute;\n' +
+            '  left: 0;\n' +
+            '  -webkit-transition: opacity 1s ease-in-out;\n' +
+            '  -moz-transition: opacity 1s ease-in-out;\n' +
+            '  -o-transition: opacity 1s ease-in-out;\n' +
+            '  transition: opacity 1s ease-in-out;\n' +
+            '}\n'
+    html += '#cf2 img.transparent {\n' +
+            '  opacity: 0;\n' +
+            '}\n'
+    html += '#cf_onclick {\n' +
+            '  cursor: pointer;\n' +
+            '}\n'
+
+    html += '</style>\n'
+
+    return html
 }
 
 function setToggle(id, checked) {
