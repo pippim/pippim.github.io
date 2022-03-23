@@ -495,8 +495,9 @@ function allStorage() {
     return archive;
 }
 
-function setToggle(id, state) {
+function setToggle(id, checked) {
     // id = name to assign, state = "checked" (ON) or "" (OFF)
+    // From: https://www.w3schools.com/howto/howto_css_switch.asp
     var html = '<label class="switch">\n' +
                '  <input type="checkbox" ' + checked + '>\n' +
                '  <span class="slider"></span>\n' +
