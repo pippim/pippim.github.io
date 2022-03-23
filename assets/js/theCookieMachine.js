@@ -527,8 +527,8 @@ function setToggle(id, checked) {
             '  right: 0;\n' +
             '  bottom: 0;\n' +
             '  background-color: #ccc;\n' +
-            '  -webkit-transition: .4s;\n' +
-            '  transition: .4s;\n' +
+            '  -webkit-transition: .2s;\n' +
+            '  transition: .2s;\n' +
             '}\n'
 
     html += '.slider:before {\n' +
@@ -539,8 +539,8 @@ function setToggle(id, checked) {
             '  left: 4px;\n' +
             '  bottom: 4px;\n' +
             '  background-color: white;\n' +
-            '  -webkit-transition: .4s;\n' +
-            '  transition: .4s;\n' +
+            '  -webkit-transition: .2s;\n' +
+            '  transition: .2s;\n' +
             '}\n'
 
     html += 'input:checked + .slider {\n' +
