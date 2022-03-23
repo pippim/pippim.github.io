@@ -458,7 +458,7 @@ function local_storage_to_html() {
     html += "</p>";
     html += setToggle('toggle_switch', 'checked')
     // image is square but contents are rectangular wide
-    html += setImageToggle('toggle_image', 'checked', "30px", "30px",
+    html += setImageToggle('toggle_image', 'checked', "30px", "20px",
         "/assets/img/icons/switch_off_left.png",
         "/assets/img/icons/switch_on_right.png")
     b.innerHTML = html;              // Update TCM Window body
@@ -520,8 +520,6 @@ function setImageToggle(id, checked, width, height, off_image, on_image) {
     // CSS
     html += '<style>\n'
 
-//            '  width: ' + width + '\n' +
-//            '  height: ' + height + '\n' +
     html += '#cf2 {\n' +
             '  position: relative;\n' +
             '  width: ' + width + ';\n' +
