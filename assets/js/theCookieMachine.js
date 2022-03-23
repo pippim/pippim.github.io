@@ -471,10 +471,6 @@ function local_storage_to_html() {
 
 }
 
-function clickImageToggle() {
-    alert('clickImageToggle()')
-}
-
 function getCookies() {
     // https://stackoverflow.com/a/252959/6929343
     var pairs = document.cookie.split(";");
@@ -524,10 +520,12 @@ function setImageToggle(id, checked, width, height, off_image, on_image) {
     // CSS
     html += '<style>\n'
 
+//            '  width: ' + width + '\n' +
+//            '  height: ' + height + '\n' +
     html += '#cf2 {\n' +
             '  position: relative;\n' +
-            '  width: ' + width + '\n' +
-            '  height: ' + height + '\n' +
+            '  width: ' + width + ';\n' +
+            '  height: ' + height + ';\n' +
             '  margin: 0 auto;\n' +
             '}\n'
     html += '#cf2 img {\n' +
@@ -548,6 +546,10 @@ function setImageToggle(id, checked, width, height, off_image, on_image) {
     html += '</style>\n'
 
     return html
+}
+
+function clickImageToggle() {
+    alert('clickImageToggle()')
 }
 
 function setToggle(id, checked) {
