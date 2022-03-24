@@ -112,10 +112,6 @@ The buttons brighten as you hover over them.
   #tcm_window_buttons table, tr, th, td { border: none ! important; }\n'
   #tcm_window_buttons td { padding: 0 1rem; }\n'
   #tcm_window_buttons td+td { width: auto; }\n'
-  .hrbInput {
-    width: 100%; height: 100%;
-    overflow-y: auto;
-  }
 </style>
 
 
