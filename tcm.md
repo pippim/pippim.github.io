@@ -75,7 +75,13 @@ Click the title line and drag the window anywhere on your screen.
 
 The *On/Off Slider Switch* control
 
+ID switch1 follows:
+
 <input type="checkbox" id="switch1" class="switch"/>
+
+ID switch2 follows:
+
+<input type="checkbox" id="switch2" class="switch"/>
 
 When done click <kbd>OK</kbd> to begin running timers
 or, click <kbd>Cancel</kbd> to exit Multi-Timer.
