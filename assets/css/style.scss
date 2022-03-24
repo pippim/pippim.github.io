@@ -516,9 +516,47 @@ a.search-results:visited {
   }
 }
 
+/* MAJOR SECTION ======== On/Off Slider Switches
+*/
+
+.switch {
+    // Style background image for switches
+    display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    float: right;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(75%);
+    }
+    @include large {
+        width: 18px;
+        height: 8px;
+    }
+    @include medium {
+        width: 16px;
+        height: 6px;
+    }
+    @include small {
+        width: 14px;
+        height: 4px;
+    }
+}
+
+.switch input[type="checkbox"] {
+    appearance: none;
+    background-image: url({{ site.url }}/assets/img/icons/switch_off_left.png);
+}
+
+.switch input[type="checkbox"]:checked {
+    background-image: url({{ site.url }}/assets/img/icons/switch_on_right.png);
+}
 /* MAJOR SECTION ======== The Cookie Machine (TCM)
     Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 */
+
 #tcm_window {
     // assets/js/theCookieMachine.js
     position: fixed;
