@@ -503,6 +503,7 @@ function setOnOff(id, checked, width, height, on_image, off_image) {
             '  background-color: green;\n' +
             '}\n' +
             '</script>\n' +
+            '<p>End of script, start of HTML</p>\n' +
             '<input type="checkbox" />\n'
 
     return html
