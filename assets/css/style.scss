@@ -521,7 +521,8 @@ a.search-results:visited {
 
 .switch {
     // Style background image for switches
-    display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+    // https://stackoverflow.com/a/44842552/6929343
+    display: inline-block;
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
@@ -546,6 +547,8 @@ a.search-results:visited {
 }
 
 .switch input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     background-image: url({{ site.url }}/assets/img/icons/switch_off_left.png);
 }
