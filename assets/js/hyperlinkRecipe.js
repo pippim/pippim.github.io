@@ -46,7 +46,7 @@ export function processHyperlinkRecipe(id) {
     html += '<tr><td><button class="hrbBtn" id="btnText" type="button"\n' +
             'title="Name of link to appear in document. Paste or type in."\n' +
             '>Name (text)</button></td>\n' +
-            '<td><input id="hrText" class="hrbInput" type="text" type="button"\n' +
+            '<td><input id="hrText" class="hrbInput" type="text"\n' +
             'placeholder="Mandatory. Link name from clipboard will go here" /></td></tr>\n'
     // Tooltip on Hover (title)
     html += '<tr><td><button class="hrbBtn" id="btnTitle" type="button"\n' +
