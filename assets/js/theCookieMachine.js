@@ -487,7 +487,7 @@ function local_storage_to_html() {
 function setOnOff(id, checked, width, height, on_image, off_image) {
    // From: https://stackoverflow.com/a/44842552/6929343
 
-    var html = '<script>\n''
+    var html = '<script>\n'
 
     html += 'input[type="checkbox"] {\n' +
             '  width: 16px;\n' +
