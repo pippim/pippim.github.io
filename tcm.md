@@ -21,14 +21,12 @@ every {{ site.title }} web page.
 
 TCM is new technology that repurposes "Cookies". Cookies
 were historically used to track your activity on the
-the internet. With TCM they are now tools you can use to
+the internet. With TCM, cookies are used to
 save, share and quickly import configurations from other
-browsers and other devices.
+browsers, users and devices.
 
 Development began on February 25, 2022 and should take 
 about six months to complete.
-
-> **NOTE:** The Cookie Machine is disabled on small screens (EG Smart Phones).
 
 ---
 
@@ -57,7 +55,68 @@ characters wide.
 When you open *The Cookie Machine* (TCM for short), a draggable
 window appears:
 
-Click the title line and drag the window anywhere on your screen.
+Click and hold the title bar and drag the window anywhere on your screen.
+
+---
+
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
+
+{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
+   alt="TCM transparent button.gif"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   caption="The Cookie Machine Transparent Button"
+%}
+
+## TCM Window Buttons
+
+The buttons brighten as you hover over them.
+
+### TCM Window Buttons
+
+<table id="tcm_window_buttons" class="hrb_table">
+   <tr><th>Buttons</th>
+       <th>Usage</th>
+   </tr>
+
+   <tr><td><button id="tcm_display_home" type="button" 
+   title="The Cookie Machine Home Page" ></button></td>
+   <td>Displays site wide global Jekyll Front Matter such as; 
+   URLs, number of views, number of posts, etc.</td></tr> 
+   
+   <tr><td><button id="tcm_display_cloud" type="button" 
+   title="Cloud storage - Display website tree" ></button></td> 
+   <td>Displays {{ site.title }} website directory tree></td></tr> 
+   
+   <tr><td><button id="tcm_display_local" type="button" 
+   title="Local storage - Display cookies and cache" ></button></td> 
+   <td>Change cookies used for option settings such as;
+   Less/More front matter and TCM Button.</td></tr>
+   
+   <tr><td><button id="tcm_hyperlink_recipe" type="button" 
+   title="Hyperlink Recipe Baker" ></button></td> 
+   <td>Used to create hyperlinks in HTML or Markdown format></td></tr>
+   
+   <tr><td><button id="tcm_webpage_info" type="button" 
+   title="Webpage Name and Front Matter" ></button></td>
+   <td>Display Jekyll Front Matter for current webpage></td></tr>
+
+</table>
+
+
+<style>
+  #tcm_window_buttons table { table-layout: fixed; width: 100%; }
+
+  <!-- Buttons in the first column have fixed width, other column auto. -->
+  #tcm_window_buttons table tr th:nth-child(1){ width: 10rem; }
+  #tcm_window_buttons table, tr, th, td { border: none ! important; }\n'
+  #tcm_window_buttons td { padding: 0 1rem; }\n'
+  #tcm_window_buttons td+td { width: auto; }\n'
+  .hrbInput {
+    width: 100%; height: 100%;
+    overflow-y: auto;
+  }
+</style>
 
 
 ---
