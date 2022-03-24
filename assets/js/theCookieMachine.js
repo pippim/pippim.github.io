@@ -505,7 +505,8 @@ function setOnOff(id, checked, width, height, on_image, off_image) {
     '</script>\n'
 
     html += '<p>End of script, start of HTML</p>\n' +
-    '<input type="checkbox" />\n'
+    '<input type="checkbox" />\n' +
+    '<p>End of HTML</p>\n'
 
     return html
 }
