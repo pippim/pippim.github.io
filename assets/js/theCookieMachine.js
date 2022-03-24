@@ -461,6 +461,11 @@ function local_storage_to_html() {
     html += setImageToggle('toggle_image', 'checked', "60px", "40px",
         "/assets/img/icons/switch_off_left.png",
         "/assets/img/icons/switch_on_right.png")
+
+    html += setOnOff('toggle_image', 'checked', "60px", "40px",
+        "/assets/img/icons/switch_on_right.png",
+        "/assets/img/icons/switch_off_left.png")
+
     b.innerHTML = html;              // Update TCM Window body
 
     window.onload = function () {
@@ -479,12 +484,33 @@ function local_storage_to_html() {
 
 }
 
+function setOnOff(id, checked, width, height, on_image, off_image) {
+   // From: https://stackoverflow.com/a/44842552/6929343
+
+    var html = '<script>\n''
+
+    html += 'input[type="checkbox"] {\n' +
+            '  width: 16px;\n' +
+            '  height: 16px;\n' +
+            '  -webkit-appearance: none;\n' +
+            '  -moz-appearance: none;\n' +
+            '  appearance: none;\n' +
+            '  background-color: red;\n' +
+            '}\n' +
+            'input[type="checkbox"]:checked {\n' +
+            '  background-color: green;\n' +
+            '}\n' +
+            '</script>\n' +
+            '<input type="checkbox" />\n'
+
+    return html
+}
+
 function sayHello() {
         var el = document.getElementById("toggle_image");
         el.onclick = clickImageToggle;
     console.log("Hello");
 }
-
 
 function setImageToggle(id, checked, width, height, off_image, on_image) {
     // From: http://css3.bradshawenterprises.com/cfimg/
@@ -545,43 +571,6 @@ $(document).ready(function() {
 
 function clickImageToggle() {
     alert('clickImageToggle()')
-}
-
-function getCookies() {
-    // https://stackoverflow.com/a/252959/6929343
-    var pairs = document.cookie.split(";");
-    var cookies = {};
-    for (var i=0; i<pairs.length; i++){
-        var pair = pairs[i].split("=");
-        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
-    }
-    return cookies;
-}
-
-function getStorage() {
-    // https://stackoverflow.com/a/17748203/6929343
-    var archive = {}, // Notice change here
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    while ( i-- ) {
-        archive[ keys[i] ] = localStorage.getItem( keys[i] );
-    }
-
-    return archive;
-}
-
-function allStorage() {
-    // https://stackoverflow.com/a/17748203/6929343
-    var archive = {}, // Notice change here
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    while ( i-- ) {
-        archive[ keys[i] ] = localStorage.getItem( keys[i] );
-    }
-
-    return archive;
 }
 
 function setToggle(id, checked) {
@@ -649,6 +638,43 @@ function setToggle(id, checked) {
     html += '</style>\n'
 
     return html
+}
+
+function getCookies() {
+    // https://stackoverflow.com/a/252959/6929343
+    var pairs = document.cookie.split(";");
+    var cookies = {};
+    for (var i=0; i<pairs.length; i++){
+        var pair = pairs[i].split("=");
+        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
+    }
+    return cookies;
+}
+
+function getStorage() {
+    // https://stackoverflow.com/a/17748203/6929343
+    var archive = {}, // Notice change here
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        archive[ keys[i] ] = localStorage.getItem( keys[i] );
+    }
+
+    return archive;
+}
+
+function allStorage() {
+    // https://stackoverflow.com/a/17748203/6929343
+    var archive = {}, // Notice change here
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        archive[ keys[i] ] = localStorage.getItem( keys[i] );
+    }
+
+    return archive;
 }
 
 
