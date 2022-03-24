@@ -491,20 +491,22 @@ function setOnOff(id, checked, width, height, on_image, off_image) {
 
     var html = '<script>\n'
 
-    html += 'input[type="checkbox"] {\n' +
-            '  width: 16px;\n' +
-            '  height: 16px;\n' +
-            '  -webkit-appearance: none;\n' +
-            '  -moz-appearance: none;\n' +
-            '  appearance: none;\n' +
-            '  background-color: red;\n' +
-            '}\n' +
-            'input[type="checkbox"]:checked {\n' +
-            '  background-color: green;\n' +
-            '}\n' +
-            '</script>\n' +
-            '<p>End of script, start of HTML</p>\n' +
-            '<input type="checkbox" />\n'
+    html += \
+    'input[type="checkbox"] {\n' +
+    '  width: 16px;\n' +
+    '  height: 16px;\n' +
+    '  -webkit-appearance: none;\n' +
+    '  -moz-appearance: none;\n' +
+    '  appearance: none;\n' +
+    '  background-color: red;\n' +
+    '}\n' +
+    'input[type="checkbox"]:checked {\n' +
+    '  background-color: green;\n' +
+    '}\n' +
+    '</script>\n'
+    html += \
+    '<p>End of script, start of HTML</p>\n' +
+    '<input type="checkbox" />\n'
 
     return html
 }
