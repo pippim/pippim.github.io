@@ -251,7 +251,7 @@ function buildRecipes () {
     // Convert special characters to HTML &code; values
     var href = sanitizeValue(inputHref.value)
     var text = sanitizeValue(inputText.value)
-    var title = sanitizeValue(inputTitle.value)
+    var title = sanitizeQuote(inputTitle.value)
 
     // OPTIONAL - UTF-8 external link symbol appended to link name (text)
     if (useExternal) { text += inputExternal.value; }
@@ -294,14 +294,22 @@ function buildRecipes () {
 function sanitizeValue (value) {
     // Special characters in href, text and title attributes need HTML &code;
     // Regex method for multiples: https://stackoverflow.com/a/3971261/6929343
+    // Can be enhanced. See:
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
     value = value.replace(/\&/g, '&amp;')  // Must be the first one!
     value = value.replace(/\</g, '&lt;')
     value = value.replace(/\>/g, '&gt;')
-    value = value.replace(/\(/g, '&lpar;')
-    value = value.replace(/\)/g, '&rpar;')
+    // value = value.replace(/\(/g, '&lpar;')  // Not needed in Name(text)
+    // value = value.replace(/\)/g, '&rpar;')  // Irrelevant in other two fields
     value = value.replace(/\[/g, '&lbrack;')
     value = value.replace(/\]/g, '&rbrack;')
     value = value.replace(/\'/g, '&apos;')
+    return value.replace(/\"/g, "&quot;")
+}
+
+function sanitizeQuote (value) {
+    // Special characters in title attributes requiring HTML &code;
+    // Regex method for multiples: https://stackoverflow.com/a/3971261/6929343
     return value.replace(/\"/g, "&quot;")
 }
 
