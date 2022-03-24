@@ -9,8 +9,8 @@ layout: program
 
 # Introduction
 
-{% include image.html src="/assets/img/tcm/Pippm TCM transparent button.gif"
-   alt="Pippm TCM transparent button.gif"
+{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
+   alt="TCM transparent button.gif"
    style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
    caption="The Cookie Machine Transparent Button"
 %}
@@ -27,6 +27,8 @@ browsers and other devices.
 
 Development began on February 25, 2022 and should take 
 about six months to complete.
+
+> **NOTE:** The Cookie Machine is disabled on small screens (EG Smart Phones).
 
 ---
 
@@ -69,12 +71,11 @@ Click the title line and drag the window anywhere on your screen.
    caption="The Cookie Machine Transparent Button"
 %}
 
-## Main Configuration
+## On/Off Slider Switch
 
-The *Main Configuration* window, shown on the left,
-greets you each time
-you start Multi-Timer. From here you can change the
-configuration.
+The *On/Off Slider Switch* control
+
+<input type="checkbox" id="switch1" class="switch"/>
 
 When done click <kbd>OK</kbd> to begin running timers
 or, click <kbd>Cancel</kbd> to exit Multi-Timer.
