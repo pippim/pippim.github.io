@@ -468,6 +468,7 @@ function local_storage_to_html() {
 
     b.innerHTML = html;              // Update TCM Window body
 
+/*
     window.onload = function () {
         // Below not executed???
         var el = document.getElementById("toggle_image");
@@ -481,7 +482,7 @@ function local_storage_to_html() {
         alert('event listener')
         document.getElementById("toggle_image").onclick = clickImageToggle;
     });
-
+*/
 }
 
 function setOnOff(id, checked, width, height, on_image, off_image) {
