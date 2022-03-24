@@ -74,7 +74,8 @@ The buttons brighten as you hover over them.
 
 ### TCM Window Buttons
 
-<table id="tcm_window_buttons" class="hrb_table">
+<div id="tcm_window_buttons">
+ <table id="tcm_window_table" class="hrb_table">
    <tr><th>Buttons</th>
        <th>Usage</th>
    </tr>
@@ -86,7 +87,7 @@ The buttons brighten as you hover over them.
    
    <tr><td><button id="tcm_display_cloud" type="button" 
    title="Cloud storage - Display website tree" ></button></td> 
-   <td>Displays {{ site.title }} website directory tree></td></tr> 
+   <td>Displays {{ site.title }} website directory tree</td></tr> 
    
    <tr><td><button id="tcm_display_local" type="button" 
    title="Local storage - Display cookies and cache" ></button></td> 
@@ -95,23 +96,23 @@ The buttons brighten as you hover over them.
    
    <tr><td><button id="tcm_hyperlink_recipe" type="button" 
    title="Hyperlink Recipe Baker" ></button></td> 
-   <td>Used to create hyperlinks in HTML or Markdown format></td></tr>
+   <td>Used to create hyperlinks in HTML or Markdown format</td></tr>
    
    <tr><td><button id="tcm_webpage_info" type="button" 
    title="Webpage Name and Front Matter" ></button></td>
-   <td>Display Jekyll Front Matter for current webpage></td></tr>
+   <td>Display Jekyll Front Matter for current webpage</td></tr>
 
-</table>
-
+ </table>
+</div>
 
 <style>
-  #tcm_window_buttons table { table-layout: fixed; width: 100%; }
+  #tcm_window_table table { table-layout: fixed; width: 100%; }
 
   <!-- Buttons in the first column have fixed width, other column auto. -->
-  #tcm_window_buttons table tr th:nth-child(1){ width: 10rem; }
-  #tcm_window_buttons table, tr, th, td { border: none ! important; }\n'
-  #tcm_window_buttons td { padding: 0 1rem; }\n'
-  #tcm_window_buttons td+td { width: auto; }\n'
+  #tcm_window_table table tr th:nth-child(1){ width: 10rem; }
+  #tcm_window_table table, tr, th, td { border: none ! important; }
+  #tcm_window_table td { padding: 0 1rem; }
+  #tcm_window_table td+td { width: auto; }
 </style>
 
 
