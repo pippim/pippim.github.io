@@ -75,34 +75,37 @@ The buttons brighten as you hover over them.
 ### TCM Window Buttons
 
 <div id="tcm_window_buttons">
- <table id="tcm_window_table" class="hrb_table">
+  <table id="tcm_window_table" class="hrb_table">
    <tr><th>Buttons</th>
        <th>Usage</th>
    </tr>
 
-   <tr><td><button id="tcm_display_home" type="button" 
+   <tr><td><button id="tcm_display_home" class="tcm_documentation" type="button" 
    title="The Cookie Machine Home Page" ></button></td>
    <td>Displays site wide global Jekyll Front Matter such as; 
    URLs, number of views, number of posts, etc.</td></tr> 
    
-   <tr><td><button id="tcm_display_cloud" type="button" 
+   <tr><td><button id="tcm_display_cloud" class="tcm_documentation" type="button" 
    title="Cloud storage - Display website tree" ></button></td> 
    <td>Displays {{ site.title }} website directory tree</td></tr> 
    
-   <tr><td><button id="tcm_display_local" type="button" 
+   <tr><td><button id="tcm_display_local" class="tcm_documentation" type="button" 
    title="Local storage - Display cookies and cache" ></button></td> 
    <td>Change cookies used for option settings such as;
    Less/More front matter and TCM Button.</td></tr>
    
-   <tr><td><button id="tcm_hyperlink_recipe" type="button" 
+   <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" type="button" 
    title="Hyperlink Recipe Baker" ></button></td> 
-   <td>Used to create hyperlinks in HTML or Markdown format</td></tr>
+   <td>Used to create hyperlinks in HTML or Markdown format
+   See the
+   [complete documentation](https://pippim.github.io/hyperlink.html# "Hyperlink Recipe Baker Complete Instructions").
+   </td></tr>
    
-   <tr><td><button id="tcm_webpage_info" type="button" 
+   <tr><td><button id="tcm_webpage_info" class="tcm_documentation" type="button" 
    title="Webpage Name and Front Matter" ></button></td>
    <td>Display Jekyll Front Matter for current webpage</td></tr>
 
- </table>
+  </table>
 </div>
 
 <style>
