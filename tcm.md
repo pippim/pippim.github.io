@@ -81,35 +81,44 @@ The buttons brighten as you hover over them.
 
    <tr><td><button id="tcm_window_icon" class="tcm_documentation" 
    title="The Cookie Machine Window Icon" ></button></td>
-   <td><em>The Cookie Machine</em> (<b>TCM</b>) Window Icon appears in the title bar.
+   <td><em>The Cookie Machine</em> (<b>TCM</b>) Window Icon - 
+   appears in the title bar.
    It also appears in the webpage header after you close TCM.
    Clicking the TCM icon in the webpage header reopens TCM. In other words,
    the button is no longer hidden!</td></tr> 
 
    <tr><td><button id="tcm_display_home" class="tcm_documentation" 
    title="The Cookie Machine Home Page" ></button></td>
-   <td>Displays site wide global Jekyll Front Matter such as; 
+   <td><b>Home Page</b> - Displays site wide global Jekyll Front Matter such as; 
    URLs, number of views, number of posts, etc.</td></tr> 
    
    <tr><td><button id="tcm_display_cloud" class="tcm_documentation" 
    title="Cloud storage - Display website tree" ></button></td> 
-   <td>Displays {{ site.title }} website directory tree</td></tr> 
+   <td><b>Cloud Storage</b> - Displays {{ site.title }} website directory tree</td></tr> 
    
    <tr><td><button id="tcm_display_local" class="tcm_documentation" 
    title="Local storage - Display cookies and cache" > </button></td> 
-   <td>Change cookies used for option settings such as;
+   <td><b>Local Storage</b> - Change cookies used for option settings such as;
    Less/More front matter and TCM Button.</td></tr>
    
    <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" 
    title="Hyperlink Recipe Baker" > </button></td> 
-   <td>Used to create hyperlinks in HTML or Markdown format
-   See the
+   <td><b>Hyperlink Recipe Baker (HRB)</b> - Used to create hyperlinks 
+   in HTML or Markdown format See the
    [complete documentation](https://pippim.github.io/hyperlink.html# "Hyperlink Recipe Baker Complete Instructions").
    </td></tr>
    
    <tr><td><button id="tcm_webpage_info" class="tcm_documentation" 
    title="Webpage Name and Front Matter" ></button></td>
-   <td>Display Jekyll Front Matter for current webpage</td></tr>
+   <td><b>Webpage Information</b> - Display Jekyll Front Matter 
+   for current webpage</td></tr>
+
+   <tr><td><button id="tcm_window_icon" class="tcm_documentation" 
+   title="The Cookie Jar" ></button></td>
+   <td><b>Cookie Jar</b> - 
+   The Cookie jar is for file uploads and downloads.
+   Cookies and local storage is saved and retrieved
+   from the Cookie Jar. </td></tr> 
 
 </table>
 
