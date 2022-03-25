@@ -166,7 +166,7 @@ The buttons brighten as you hover over them.
 
 <style>
 .with-action {
-  width: 20px;
+  width: 40px;
   height: auto;
 }</style>
 
