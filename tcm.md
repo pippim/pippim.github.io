@@ -175,6 +175,7 @@ Keep TCM Window Button on Header active for session?
 .with-action {
   width: 40px;
   height: auto;
+  // Next lines aren't working...
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -185,9 +186,9 @@ Keep TCM Window Button on Header active for session?
 var gStorage = {};
 
 function toogle(anImage, anAltSrcArr) {
-    if (typeof(anImage) === "undefined" || typeof(anAltSrcArr) === "undefined" || anAltSrcArr.length === 0) {
-        return;
-    }
+    //if (typeof(anImage) === "undefined" || typeof(anAltSrcArr) === "undefined" || anAltSrcArr.length === 0) {
+    //    return;
+    //}
 
     var id = anImage.id;
     var oldSrc = anImage.src;
