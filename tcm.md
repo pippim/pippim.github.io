@@ -74,8 +74,7 @@ The buttons brighten as you hover over them.
 
 ### TCM Window Buttons
 
-<div id="tcm_window_buttons">
-  <table id="tcm_window_table" class="hrb_table">
+<table id="tcm_window_table" class="hrb_table">
    <tr><th>Buttons</th>
        <th>Usage</th>
    </tr>
@@ -105,8 +104,7 @@ The buttons brighten as you hover over them.
    title="Webpage Name and Front Matter" ></button></td>
    <td>Display Jekyll Front Matter for current webpage</td></tr>
 
-  </table>
-</div>
+</table>
 
 <style>
   #tcm_window_table table { table-layout: fixed; width: 100%; }
