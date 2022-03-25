@@ -79,14 +79,20 @@ The buttons brighten as you hover over them.
        <th>Usage</th>
    </tr>
 
-   <tr><td><button id="tcm_display_home" class="button-td tcm_documentation" type="button" 
-   height="50px" 
-   title="The Cookie Machine Home Page" > &ensp; </button></td>
+   <tr><td><button id="tcm_window_icon" class="tcm_documentation" type="button" 
+   title="The Cookie Machine Window Icon" ></button></td>
+   <td>*The Cookie Machine* (**TCM**) Window Icon appears in the title bar.
+   It also appears in the webpage header after you close **TCM**.
+   Clicking the **TCM** icon in the webpage header reopens **TCM**. E.G.
+   the button is no longer hidden!</td></tr> 
+
+   <tr><td><button id="tcm_display_home" class="tcm_documentation" type="button" 
+   title="The Cookie Machine Home Page" ></button></td>
    <td>Displays site wide global Jekyll Front Matter such as; 
    URLs, number of views, number of posts, etc.</td></tr> 
    
    <tr><td><button id="tcm_display_cloud" class="tcm_documentation" type="button" 
-   title="Cloud storage - Display website tree" > &emsp; </button></td> 
+   title="Cloud storage - Display website tree" ></button></td> 
    <td>Displays {{ site.title }} website directory tree</td></tr> 
    
    <tr><td><button id="tcm_display_local" class="tcm_documentation" type="button" 
@@ -119,7 +125,11 @@ The buttons brighten as you hover over them.
     margin: .5rem .5rem;
     background-repeat: no-repeat;
     background-size: cover;
-    border: none;  }
+    border: none;  
+    &:hover {
+      filter: brightness(150%);
+    }
+  }
 </style>
 
 
