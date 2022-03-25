@@ -86,34 +86,36 @@ The buttons brighten as you hover over them.
    Clicking the TCM icon in the webpage header reopens TCM. In other words,
    the button is no longer hidden!</td></tr> 
 
-   <tr><td><button id="tcm_display_home" class="tcm_documentation" type="button" 
+   <tr><td><button id="tcm_display_home" class="tcm_documentation" 
    title="The Cookie Machine Home Page" ></button></td>
    <td>Displays site wide global Jekyll Front Matter such as; 
    URLs, number of views, number of posts, etc.</td></tr> 
    
-   <tr><td><button id="tcm_display_cloud" class="tcm_documentation" type="button" 
+   <tr><td><button id="tcm_display_cloud" class="tcm_documentation" 
    title="Cloud storage - Display website tree" ></button></td> 
    <td>Displays {{ site.title }} website directory tree</td></tr> 
    
-   <tr><td><button id="tcm_display_local" class="tcm_documentation" type="button" 
+   <tr><td><button id="tcm_display_local" class="tcm_documentation" 
    title="Local storage - Display cookies and cache" > </button></td> 
    <td>Change cookies used for option settings such as;
    Less/More front matter and TCM Button.</td></tr>
    
-   <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" type="button" 
+   <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" 
    title="Hyperlink Recipe Baker" > </button></td> 
    <td>Used to create hyperlinks in HTML or Markdown format
    See the
    [complete documentation](https://pippim.github.io/hyperlink.html# "Hyperlink Recipe Baker Complete Instructions").
    </td></tr>
    
-   <tr><td><button id="tcm_webpage_info" class="tcm_documentation" type="button" 
+   <tr><td><button id="tcm_webpage_info" class="tcm_documentation" 
    title="Webpage Name and Front Matter" ></button></td>
    <td>Display Jekyll Front Matter for current webpage</td></tr>
 
 </table>
 
 <style>
+  // NOTE: #tcm_window_icon through #tcm_webpage_info defined in /assets/css/style.scss
+
   #tcm_window_table table { table-layout: fixed; width: 100%; border: 3px solid black; }
   #tcm_window_table table tr th:nth-child(1){ width: 10rem; }
   #tcm_window_table td { padding: 0 1rem; }
