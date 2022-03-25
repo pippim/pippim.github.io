@@ -81,21 +81,21 @@ The buttons brighten as you hover over them.
 
    <tr><td><button id="tcm_display_home" class="tcm_documentation" type="button" 
    height="50px" 
-   title="The Cookie Machine Home Page" ></button></td>
+   title="The Cookie Machine Home Page" > &ensp; </button></td>
    <td>Displays site wide global Jekyll Front Matter such as; 
    URLs, number of views, number of posts, etc.</td></tr> 
    
    <tr><td><button id="tcm_display_cloud" class="tcm_documentation" type="button" 
-   title="Cloud storage - Display website tree" ></button></td> 
+   title="Cloud storage - Display website tree" > &emsp; </button></td> 
    <td>Displays {{ site.title }} website directory tree</td></tr> 
    
    <tr><td><button id="tcm_display_local" class="tcm_documentation" type="button" 
-   title="Local storage - Display cookies and cache" ></button></td> 
+   title="Local storage - Display cookies and cache" > </button></td> 
    <td>Change cookies used for option settings such as;
    Less/More front matter and TCM Button.</td></tr>
    
    <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" type="button" 
-   title="Hyperlink Recipe Baker" ></button></td> 
+   title="Hyperlink Recipe Baker" > </button></td> 
    <td>Used to create hyperlinks in HTML or Markdown format
    See the
    [complete documentation](https://pippim.github.io/hyperlink.html# "Hyperlink Recipe Baker Complete Instructions").
