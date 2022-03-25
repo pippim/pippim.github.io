@@ -108,12 +108,10 @@ The buttons brighten as you hover over them.
 
 <style>
   #tcm_window_table table { table-layout: fixed; width: 100%; }
-
-  <!-- Buttons in the first column have fixed width, other column auto. -->
   #tcm_window_table table tr th:nth-child(1){ width: 10rem; }
   #tcm_window_table table, tr, th, td { border: none ! important; }
   #tcm_window_table td { padding: 0 1rem; }
-  #tcm_window_table td+td { width: auto; }
+  #tcm_window_table td+td { width: auto; height: auto; }
 </style>
 
 
