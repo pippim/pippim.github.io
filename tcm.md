@@ -159,6 +159,49 @@ The buttons brighten as you hover over them.
 
 ## On/Off Slider Switch
 
+<p>Click on an image</p>
+<img class="with-action" id="image1" name="image1" src="/assets/img/icons/switch_off_left.png" onclick='toogle(this, ["assets/img/icons/switch_on_right.png"]);' />
+<br>
+<img class="with-action" id="image2" name="image2" src="assets/img/icons/switch_on_right.png" onclick='toogle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
+
+<style>
+.with-action {
+  width: 20px;
+  height: auto;
+}</style>
+
+<script>
+// https://stackoverflow.com/a/7950833/6929343
+var gStorage = {};
+
+function toogle(anImage, anAltSrcArr) {
+    if (typeof(anImage) === "undefined" || typeof(anAltSrcArr) === "undefined" || anAltSrcArr.length === 0) {
+        return;
+    }
+
+    var id = anImage.id;
+    var oldSrc = anImage.src;
+
+    if (typeof(gStorage[id]) === "undefined") {
+        gStorage[id] = {
+            'id': id,
+            'origSrc': oldSrc,
+            'i': 0
+        };
+    }
+
+    gStorage[id].i += 1;
+    if (gStorage[id].i > anAltSrcArr.length) {
+        gStorage[id].i = 0;
+    }
+
+    if (gStorage[id].i === 0) {
+        anImage.src = gStorage[id].origSrc;
+    } else {
+        anImage.src = anAltSrcArr[gStorage[id].i - 1];
+    }
+}</script>
+
 The *On/Off Slider Switch* control
 
 ID switch1 follows:
