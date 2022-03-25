@@ -615,6 +615,11 @@ a.search-results:visited {
     background-image: url({{ site.url }}/assets/img/icons/x.png);
 }
 
+.tcm_documentation {
+   width: 100%;       /* set to 100% */
+   height: 100%;      /* set to 100% */
+}
+
 .tcm_documentation,
 #tcm_window_buttons {
   // TCM Buttons - Home, Cloud Storage, Local Storage, HRB and Webpage Info
