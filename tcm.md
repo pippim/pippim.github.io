@@ -113,10 +113,13 @@ The buttons brighten as you hover over them.
   #tcm_window_table td { padding: 0 1rem; }
   #tcm_window_table td+td { width: auto; }
   .tcm_documentation {
-     display:block;
-     width:45px;
-     height: 45px;
-  }
+    display:block;
+    width:45px;
+    height: 45px;
+    margin: .5rem .5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;  }
 </style>
 
 
