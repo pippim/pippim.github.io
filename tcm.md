@@ -79,7 +79,7 @@ The buttons brighten as you hover over them.
        <th>Usage</th>
    </tr>
 
-   <tr><td><button id="tcm_display_home" class="tcm_documentation" type="button" 
+   <tr><td><button id="tcm_display_home" class="button-td tcm_documentation" type="button" 
    height="50px" 
    title="The Cookie Machine Home Page" > &ensp; </button></td>
    <td>Displays site wide global Jekyll Front Matter such as; 
@@ -108,10 +108,15 @@ The buttons brighten as you hover over them.
 </table>
 
 <style>
-  #tcm_window_table table { table-layout: fixed; width: 100%; border: 2px solid; }
+  #tcm_window_table table { table-layout: fixed; width: 100%; border: 3px solid black; }
   #tcm_window_table table tr th:nth-child(1){ width: 10rem; }
   #tcm_window_table td { padding: 0 1rem; }
   #tcm_window_table td+td { width: auto; }
+  .tcm_documentation {
+     display:block;
+     width:45px;
+     height: 45px;
+  }
 </style>
 
 
