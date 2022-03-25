@@ -108,7 +108,7 @@ The buttons brighten as you hover over them.
 </table>
 
 <style>
-  #tcm_window_table table { table-layout: fixed; width: 100%; }
+  #tcm_window_table table { table-layout: fixed; width: 100%; border: 2px solid; }
   #tcm_window_table table tr th:nth-child(1){ width: 10rem; }
   #tcm_window_table td { padding: 0 1rem; }
   #tcm_window_table td+td { width: auto; }
