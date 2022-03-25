@@ -79,11 +79,11 @@ The buttons brighten as you hover over them.
        <th>Usage</th>
    </tr>
 
-   <tr><td><button id="tcm_window_icon" class="tcm_documentation" type="button" 
+   <tr><td><button id="tcm_window_icon" class="tcm_documentation" 
    title="The Cookie Machine Window Icon" ></button></td>
-   <td>*The Cookie Machine* (**TCM**) Window Icon appears in the title bar.
-   It also appears in the webpage header after you close **TCM**.
-   Clicking the **TCM** icon in the webpage header reopens **TCM**. E.G.
+   <td><em>The Cookie Machine</em> (<b>TCM</b>) Window Icon appears in the title bar.
+   It also appears in the webpage header after you close TCM.
+   Clicking the TCM icon in the webpage header reopens TCM. In other words,
    the button is no longer hidden!</td></tr> 
 
    <tr><td><button id="tcm_display_home" class="tcm_documentation" type="button" 
