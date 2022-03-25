@@ -153,11 +153,16 @@ The buttons brighten as you hover over them.
 
 {% include image.html src="/assets/img/tcm/TCM transparent button.gif"
    alt="TCM transparent button.gif"
-   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
    caption="The Cookie Machine Transparent Button"
 %}
 
 ## On/Off Slider Switch
+
+The On/Off Slider switch is used primarily for User Options
+that are stored in cookies. Generally speaking red is for "off"
+and green is for "on". Sometimes it is repurposed. For example,
+Displaying Front Matter choices are "Less" (off) or "More" (on).
 
 <p>Click on an image</p>
 <img class="with-action" id="image1" name="image1" src="/assets/img/icons/switch_off_left.png" onclick='toogle(this, ["assets/img/icons/switch_on_right.png"]);' />
