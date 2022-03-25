@@ -80,6 +80,7 @@ The buttons brighten as you hover over them.
    </tr>
 
    <tr><td><button id="tcm_display_home" class="tcm_documentation" type="button" 
+   height="50px" 
    title="The Cookie Machine Home Page" ></button></td>
    <td>Displays site wide global Jekyll Front Matter such as; 
    URLs, number of views, number of posts, etc.</td></tr> 
@@ -111,7 +112,7 @@ The buttons brighten as you hover over them.
   #tcm_window_table table tr th:nth-child(1){ width: 10rem; }
   #tcm_window_table table, tr, th, td { border: none ! important; }
   #tcm_window_table td { padding: 0 1rem; }
-  #tcm_window_table td+td { width: auto; height: auto; }
+  #tcm_window_table td+td { width: auto; }
 </style>
 
 
