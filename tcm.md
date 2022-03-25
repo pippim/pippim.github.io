@@ -128,9 +128,9 @@ The buttons brighten as you hover over them.
     background-repeat: no-repeat;
     background-size: cover;
     border: none;  
-    &:hover {
-      filter: brightness(150%);
-    }
+  }
+  .tcm_documentation:hover {
+    filter: brightness(150%);
   }
 </style>
 
