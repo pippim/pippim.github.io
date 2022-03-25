@@ -164,15 +164,20 @@ that are stored in cookies. Generally speaking red is for "off"
 and green is for "on". Sometimes it is repurposed. For example,
 Displaying Front Matter choices are "Less" (off) or "More" (on).
 
-<p>Click on an image</p>
+<p>Click on an On/Off Slider Switch below<br>
+Display More Jekyll Front Matter?
 <img class="with-action" id="image1" name="image1" src="/assets/img/icons/switch_off_left.png" onclick='toogle(this, ["assets/img/icons/switch_on_right.png"]);' />
 <br>
+Keep TCM Window Button on Header active for session?
 <img class="with-action" id="image2" name="image2" src="assets/img/icons/switch_on_right.png" onclick='toogle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
-
+</p>
 <style>
 .with-action {
   width: 40px;
   height: auto;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }</style>
 
 <script>
