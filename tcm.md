@@ -105,7 +105,9 @@ The buttons brighten as you hover over them.
    title="Hyperlink Recipe Baker" > </button></td> 
    <td><b>Hyperlink Recipe Baker (HRB)</b> - Used to create hyperlinks 
    in HTML or Markdown format See the
-   [complete documentation](https://pippim.github.io/hyperlink.html# "Hyperlink Recipe Baker Complete Instructions").
+   <a href="https://pippim.github.io/hyperlink.html#" target="_blank" 
+   title="Complete instructions for using Hyperlink Recipe Baker"
+   >full documentation</a>.
    </td></tr>
    
    <tr><td><button id="tcm_webpage_info" class="tcm_documentation" 
