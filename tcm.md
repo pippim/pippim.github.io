@@ -107,7 +107,8 @@ The buttons brighten as you hover over them.
    in HTML or Markdown format See the
    <a href="https://pippim.github.io/hyperlink.html#" target="_blank" 
    title="Complete instructions for using Hyperlink Recipe Baker"
-   >full documentation</a>.
+   >full documentation</a>. Very handy for creating hyperlinks to
+   the current webpage, without having to switch to another browser tab.
    </td></tr>
    
    <tr><td><button id="tcm_webpage_info" class="tcm_documentation" 
@@ -142,8 +143,7 @@ The buttons brighten as you hover over them.
   }
   .tcm_documentation:hover {
     filter: brightness(150%);
-  }
-</style>
+  }</style>
 
 
 ---
