@@ -30,6 +30,8 @@ function dragElement(elm) {
   if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
+    // https://stackoverflow.com/a/52554777/6929343
+
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elm.onmousedown = dragMouseDown;
@@ -458,8 +460,13 @@ function local_storage_to_html() {
 
     var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
-    html += "  ☑ Display cookies used on the {{ site.title }} website.<br>\n";
-    html += "  ☑ Display cache usage.";
+    html += "TCM button visible after closing window:" +
+            '"<img class="with-action" id="switch_2" data-state="true" ' +
+            'src="assets/img/icons/switch_on_right.png" ' +
+            'onclick=''toggle(this, ["/assets/img/icons/switch_off_left.png"]);''/><br>\n'
+    html += "&emsp; TCM button visible on page?<br>\n";
+    html += "&emsp; TCM button visible on all pages?<br>";
+    html += "&emsp; TCM button visible on all sessions?<br>";
     html += "</p>";
     html += setToggle('toggle_switch', 'checked')
     // image is square but contents are rectangular wide
@@ -489,6 +496,36 @@ function local_storage_to_html() {
         document.getElementById("toggle_image").onclick = clickImageToggle;
     });
 */
+}
+
+var gStorage = {};
+
+function toggle(anImage, anAltSrcArr) {
+    var id = anImage.id;
+    var oldSrc = anImage.src;
+    var oldState = (anImage.dataset.state === 'true');
+
+    if (typeof(gStorage[id]) === "undefined") {
+        gStorage[id] = {
+            'id': id,
+            'origSrc': oldSrc,
+            'i': 0,
+            'origState': oldState
+        };
+    }
+
+    gStorage[id].i += 1;
+    if (gStorage[id].i > anAltSrcArr.length) {
+        gStorage[id].i = 0;
+    }
+
+    if (gStorage[id].i === 0) {
+        anImage.src = gStorage[id].origSrc;
+        anImage.dataset.state = gStorage[id].origState;
+      } else {
+        anImage.src = anAltSrcArr[gStorage[id].i - 1];
+        anImage.dataset.state = !gStorage[id].origState
+      }
 }
 
 function setOnOff(id, checked, width, height, on_image, off_image) {
