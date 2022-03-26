@@ -169,12 +169,12 @@ Displaying Front Matter choices are "Less" (off) or "More" (on).
 Display More Jekyll Front Matter?
 <img class="with-action" id="image1" data-state="false" 
 src="/assets/img/icons/switch_off_left.png" 
-onclick='toogle(this, ["assets/img/icons/switch_on_right.png"]);' />
+onclick='toggle(this, ["assets/img/icons/switch_on_right.png"]);' />
 <br>
 Keep TCM Window Button on Header active for session?
 <img class="with-action" id="image2" data-state="true" 
 src="assets/img/icons/switch_on_right.png" 
-onclick='toogle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
+onclick='toggle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
 </p>
 <style>
 .with-action {
@@ -198,12 +198,7 @@ Then go into toggle mode
 <script>
 var gStorage = {};
 
-function toogle(anImage, anAltSrcArr) {
-    /* if (typeof(anImage) === "undefined" || typeof(anAltSrcArr) === "undefined" || anAltSrcArr.length === 0) {
-    //    return;
-    //} */
-
-    // anImage.dataset.state = !anImage.dataset.state;
+function toggle(anImage, anAltSrcArr) {
     var id = anImage.id;
     var oldSrc = anImage.src;
     var oldState = (anImage.dataset.state === 'true');
@@ -226,14 +221,10 @@ function toogle(anImage, anAltSrcArr) {
     if (gStorage[id].i === 0) {
         anImage.src = gStorage[id].origSrc;
         anImage.dataset.state = gStorage[id].origState;
-        //console.log('gStorage[id].origState: ' + gStorage[id].origState)
       } else {
         anImage.src = anAltSrcArr[gStorage[id].i - 1];
-        //console.log('gStorage[id].origState: ' + !gStorage[id].origState)
         anImage.dataset.state = !gStorage[id].origState
       }
-
-   console.log('anImage.dataset.state: ' + anImage.dataset.state)
 }</script>
 
 The *On/Off Slider Switch* control
