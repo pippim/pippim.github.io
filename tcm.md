@@ -206,16 +206,17 @@ function toogle(anImage, anAltSrcArr) {
     anImage.dataset.state = !anImage.dataset.state;
     var id = anImage.id;
     var oldSrc = anImage.src;
-    //var oldState = new Boolean (anImage.dataset.state);
+    var oldState = new Boolean (anImage.dataset.state);
 
     if (typeof(gStorage[id]) === "undefined") {
+        console.log('oldState: ' + oldState)
         gStorage[id] = {
             'id': id,
             'origSrc': oldSrc,
-            'i': 0
+            'i': 0,
+            'origState': oldState
         };
     }
-            //'origState': oldState
 
     gStorage[id].i += 1;
     if (gStorage[id].i > anAltSrcArr.length) {
