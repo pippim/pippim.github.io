@@ -364,7 +364,9 @@ var gStorage = {};
 function switch_click(anImage, anAltSrcArr) {
     var id = anImage.id;
     var oldSrc = anImage.src;
-    var oldState = (anImage.dataset.state === 'true');
+    //var oldState = (anImage.dataset.state === 'true');
+    // dataset undefined inside user script
+    var oldState = new Boolean("true")
 
     if (typeof(gStorage[id]) === "undefined") {
         gStorage[id] = {
@@ -382,10 +384,10 @@ function switch_click(anImage, anAltSrcArr) {
 
     if (gStorage[id].i === 0) {
         anImage.src = gStorage[id].origSrc;
-        anImage.dataset.state = gStorage[id].origState;
+        //anImage.dataset.state = gStorage[id].origState;
       } else {
         anImage.src = anAltSrcArr[gStorage[id].i - 1];
-        anImage.dataset.state = !gStorage[id].origState
+        //anImage.dataset.state = !gStorage[id].origState
       }
 }
 
@@ -496,8 +498,7 @@ function local_storage_to_html() {
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
     html += "&emsp; TCM button visible on all pages? " +
             '<img class="with-action" id="switch_2" data-state="true" ' +
-            'src="assets/img/icons/switch_on_right.png" ' +
-            'onclick=\'switch_click(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
+            'src="assets/img/icons/switch_on_right.png" /><br>\n'
     html += "&emsp; TCM button visible on all sessions? " +
             '<img class="with-action" id="switch_3" data-state="true" ' +
             'src="assets/img/icons/switch_on_right.png" ' +
@@ -509,6 +510,12 @@ function local_storage_to_html() {
     document.querySelector('#switch_1').addEventListener('click', () => {
         console.log('switch_1 clicked');
         var elm = document.getElementById("switch_1");
+        switch_click(elm, ["/assets/img/icons/switch_off_left.png"]);
+    });
+
+    var elm = document.getElementById("switch_2");
+    elm.addEventListener('click', () => {
+        console.log('switch_2 clicked');
         switch_click(elm, ["/assets/img/icons/switch_off_left.png"]);
     });
 
