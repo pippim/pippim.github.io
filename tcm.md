@@ -178,7 +178,7 @@ onclick='toggle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
 </p>
 <style>
 .with-action {
-  display: inline-block;
+  vertical-align: middle;
   width: 40px;
   height: auto;
   // Next lines aren't working...
