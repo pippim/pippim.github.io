@@ -461,28 +461,16 @@ details[open] > summary {
     vertical-align: middle;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     border: none;
     opacity: 0.5;
     float: right;
     cursor: pointer;
 
-    &:hover {
-        opacity: 1.0;
-        filter: brightness(150%);
-    }
-    @include large {
-        width: 20px;
-        height: 20px;
-    }
-    @include medium {
-        width: 18px;
-        height: 18px;
-    }
-    @include small {
-        width: 16px;
-        // width: auto;    // Loosing right portion of X
-        height: 16px;
-    }
+    &:hover { opacity: 1.0; filter: brightness(150%); }
+    @include large { height: 20px; width: 20px; }
+    @include medium { height: 18px; width: 18px; }
+    @include small { height: 16px; width: 16px; }
 }
 
 // Search Result links that have been visited in purple
