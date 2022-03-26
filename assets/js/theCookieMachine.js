@@ -361,7 +361,7 @@ font-family
 
 var gStorage = {};
 
-function toggle(anImage, anAltSrcArr) {
+function switch_click(anImage, anAltSrcArr) {
     var id = anImage.id;
     var oldSrc = anImage.src;
     var oldState = (anImage.dataset.state === 'true');
@@ -494,34 +494,18 @@ function local_storage_to_html() {
     html += "&emsp; TCM button visible on page? " +
             '<img class="with-action" id="switch_1" data-state="true" ' +
             'src="assets/img/icons/switch_on_right.png" ' +
-            'onclick=\'toggle(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
+            'onclick=\'switch_click(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
     html += "&emsp; TCM button visible on all pages? " +
             '<img class="with-action" id="switch_2" data-state="true" ' +
             'src="assets/img/icons/switch_on_right.png" ' +
-            'onclick=\'toggle(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
+            'onclick=\'switch_click(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
     html += "&emsp; TCM button visible on all sessions? " +
             '<img class="with-action" id="switch_3" data-state="true" ' +
             'src="assets/img/icons/switch_on_right.png" ' +
-            'onclick=\'toggle(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
+            'onclick=\'switch_click(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
     html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
-
-/*
-    window.onload = function () {
-        // Below not executed???
-        var el = document.getElementById("toggle_image");
-        el.onclick = sayHello;
-    }
-        // alert('innerHTML changed')
-        setTimeout(sayHello, 0)
-    // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
-    window.addEventListener('DOMContentLoaded', (event) => {
-        // https://stackoverflow.com/a/42526074/6929343
-        alert('event listener')
-        document.getElementById("toggle_image").onclick = clickImageToggle;
-    });
-*/
 }
 
 
