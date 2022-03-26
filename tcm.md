@@ -203,18 +203,19 @@ function toogle(anImage, anAltSrcArr) {
     //    return;
     //} */
 
+    anImage.dataset.state = anImage.dataset.state !== true;
     var id = anImage.id;
     var oldSrc = anImage.src;
-    var oldState = anImage.dataset.state;
+    //var oldState = new Boolean (anImage.dataset.state);
 
     if (typeof(gStorage[id]) === "undefined") {
         gStorage[id] = {
             'id': id,
             'origSrc': oldSrc,
-            'i': 0,
-            'origState': oldState
+            'i': 0
         };
     }
+            //'origState': oldState
 
     gStorage[id].i += 1;
     if (gStorage[id].i > anAltSrcArr.length) {
@@ -223,10 +224,10 @@ function toogle(anImage, anAltSrcArr) {
 
     if (gStorage[id].i === 0) {
         anImage.src = gStorage[id].origSrc;
-        anImage.dataset.state = gStorage[id].origState;
+        //anImage.dataset.state = gStorage[id].origState;
       } else {
         anImage.src = anAltSrcArr[gStorage[id].i - 1];
-        anImage.dataset.state = !gStorage[id].origState
+        //anImage.dataset.state = !gStorage[id].origState
       }
 
    console.log('anImage.dataset.state: ' + anImage.dataset.state)
@@ -242,41 +243,6 @@ ID switch2 follows:
 
 <input type="checkbox" id="switch2" class="switch"/>
 
-When done click <kbd>OK</kbd> to begin running timers
-or, click <kbd>Cancel</kbd> to exit Multi-Timer.
-
-To switch to the Timers
-tab, click it at the top right. The Timers tab is
-discussed in detail in the next section.
-
-Although there are many options on the Main Configuration tab,
-don't be intimidated. The options are pretty straight forward.
-
-It is important to note two options are "greyed out"
-and, cannot be changed. Those two options are;
-*Multi-Timer Version Number* and *Maximum number of timers*.
-
-As mentioned in the *One-Time Configuration* section above,
-the only way to change the Maximum Number of Timers is to
-erase the configuration file and start again.
-
-The changeable options on this window are:
-
-- **Timer duration units** - Choose between "Minutes" and "Seconds" as the unit of measure for timers.
-- **Number of times to run set (all timers)** - Normally you just want to run a job once in a session. But you can repeat the same job multiple times with this option.
-- **Progress Bar update every x seconds** - Number of seconds between updating timer progress bars. The default "`1`" is appropriate in most circumstances.
-- **Sound Player filename** - Enter the command to play sounds. The default is `paplay` (PulseAudio) which is suitable for most Linux systems. On some Linux systems PulseAudio isn't installed so use the `aplay` command.
-- **Alarm sound filename** - Choose a sound file at least 5 seconds long. About 7 seconds is best.
-- **Icon image filename** - Choose the Icon which appears on windows and the task bar of running applications.
-- **Lock screen** - Choose whether or not the screen should lock. Generally this should be set to "Never".
-- **Ask to begin each timer** - When checked, Multi-Timer prompts to start each timer. Usually, you want this checked.
-- **Pop-up message when each timer ends** - When checked, a notification message (pop-up bubble message) is displayed. Usually, you leave this un-checked because an alarm already sounds.
-- **Sound alarm when each timer ends** - When checked, the alarm sound specified above is played. Usually, you want this checked.
-- **Ask to begin each set (all timers)** - When checked, Multi-Timer prompts to start each set of timers. Usually, you want this un-checked.
-- **Pop-up message when each set ends** - When checked, a notification message (pop-up bubble message) is displayed. Usually, you leave this un-checked.
-- **Sound alarm when each set ends** - When checked, the alarm sound specified above is played. Usually, you want this checked.
-- **Interface to Sysmonitor Indicator** - When checked, Multi-Timer records time remaining to the `~/.lock-screen-timer-remaining` file. See interface to Sysmonitor Indicator below.
-- **Auto close progress bar display when all sets end** - When checked, Multi-Timer simply disappears when all timers end. If un-checked, the progress display remains on-screen at 100% until manually closed.
 
 
 ---
