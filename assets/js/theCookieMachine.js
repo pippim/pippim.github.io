@@ -460,13 +460,19 @@ function local_storage_to_html() {
 
     var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
-    html += "TCM button visible after closing window:" +
-            '"<img class="with-action" id="switch_2" data-state="true" ' +
+    html += "TCM button visible after closing window:<br>\n"
+    html += "&emsp; TCM button visible on page? " +
+            '<img class="with-action" id="switch_1" data-state="true" ' +
             'src="assets/img/icons/switch_on_right.png" ' +
             'onclick=\'toggle(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
-    html += "&emsp; TCM button visible on page?<br>\n";
-    html += "&emsp; TCM button visible on all pages?<br>";
-    html += "&emsp; TCM button visible on all sessions?<br>";
+    html += "&emsp; TCM button visible on all pages? " +
+            '<img class="with-action" id="switch_2" data-state="true" ' +
+            'src="assets/img/icons/switch_on_right.png" ' +
+            'onclick=\'toggle(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
+    html += "&emsp; TCM button visible on all sessions? " +
+            '<img class="with-action" id="switch_3" data-state="true" ' +
+            'src="assets/img/icons/switch_on_right.png" ' +
+            'onclick=\'toggle(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
     html += "</p>";
     html += setToggle('toggle_switch', 'checked')
     // image is square but contents are rectangular wide
