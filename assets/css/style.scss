@@ -704,15 +704,14 @@ a.search-results:visited {
   vertical-align: middle;
   position: absolute;
   right: 0;
-  margin-top: .3rem;
   margin-right: .2rem;
   background: transparent;
   border: none;
   opacity: 0.0;  // Make image invisible
 
-  @include large { height: 38px; width: 38px; }
-  @include medium { height: 32px; width: 32px; }
-  @include small { height: 26px; width: 26px; }
+  @include large { height: 38px; width: 38px; top: 1.25rem; }
+  @include medium { height: 32px; width: 32px; top: .75rem; }
+  @include small { height: 26px; width: 26px; top: .25rem; }
 
   &:hover {
     filter: brightness(150%);
