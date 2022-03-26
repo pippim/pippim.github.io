@@ -506,6 +506,11 @@ function local_storage_to_html() {
     html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
+
+    document.querySelector('#switch_1').addEventListener('click', () => {
+        console.log('switch_1 clicked')
+    });
+
 }
 
 
