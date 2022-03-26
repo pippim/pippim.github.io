@@ -126,7 +126,7 @@ The buttons brighten as you hover over them.
 </table>
 
 <style>
-  // NOTE: #tcm_window_icon through #tcm_webpage_info defined in /assets/css/style.scss
+  /* NOTE: #tcm_window_icon through #tcm_webpage_info defined in /assets/css/style.scss */
 
   #tcm_window_table table { table-layout: fixed; width: 100%; border: 3px solid black; }
   #tcm_window_table table tr th:nth-child(1){ width: 10rem; }
@@ -134,7 +134,7 @@ The buttons brighten as you hover over them.
   #tcm_window_table td+td { width: auto; }
   .tcm_documentation {
     display:block;
-    width:45px;
+    width: 45px;
     height: 45px;
     margin: .5rem .5rem;
     background-repeat: no-repeat;
@@ -143,7 +143,8 @@ The buttons brighten as you hover over them.
   }
   .tcm_documentation:hover {
     filter: brightness(150%);
-  }</style>
+  }
+</style>
 
 
 ---
@@ -186,13 +187,13 @@ onclick='toogle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
 }</style>
 
 <script>
-// https://stackoverflow.com/a/7950833/6929343
+/* https://stackoverflow.com/a/7950833/6929343 */
 var gStorage = {};
 
 function toogle(anImage, anAltSrcArr) {
-    //if (typeof(anImage) === "undefined" || typeof(anAltSrcArr) === "undefined" || anAltSrcArr.length === 0) {
+    /* if (typeof(anImage) === "undefined" || typeof(anAltSrcArr) === "undefined" || anAltSrcArr.length === 0) {
     //    return;
-    //}
+    //} */
 
     var id = anImage.id;
     var oldSrc = anImage.src;
@@ -204,6 +205,7 @@ function toogle(anImage, anAltSrcArr) {
             'id': id,
             'origSrc': oldSrc,
             'i': 0
+            'state': oldState == "on"
         };
     }
 
