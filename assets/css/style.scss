@@ -394,7 +394,7 @@ details[open] > summary {
   width: 100%;
   padding: .5rem .8rem;
 
-  @include large { font-size: 1.5rem; }
+  @include large { font-size: 1.2rem; }
   @include medium { font-size: 1rem; }
   @include small { font-size: 0.9rem; }
 }
@@ -476,7 +476,8 @@ details[open] > summary {
         height: 16px;
     }
     @include small {
-        width: 12px;
+        // width: 12px;
+        width: auto;    // Loosing right portion of X
         height: 12px;
     }
 }
