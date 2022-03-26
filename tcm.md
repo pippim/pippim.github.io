@@ -167,12 +167,12 @@ Displaying Front Matter choices are "Less" (off) or "More" (on).
 
 <p>Click on an On/Off Slider Switch below<br>
 Display More Jekyll Front Matter?
-<img class="with-action" id="image1" name="image1" data-state=false 
+<img class="with-action" id="image1"data-state=false 
 src="/assets/img/icons/switch_off_left.png" 
 onclick='toogle(this, ["assets/img/icons/switch_on_right.png"]);' />
 <br>
 Keep TCM Window Button on Header active for session?
-<img class="with-action" id="image2" name="image2" data-state=true 
+<img class="with-action" id="image2" data-state=true 
 src="assets/img/icons/switch_on_right.png" 
 onclick='toogle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
 </p>
@@ -186,7 +186,14 @@ onclick='toogle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
   transition: all .3s ease-in-out;
 }</style>
 
-<!-- https://stackoverflow.com/a/7950833/6929343 -->
+<!-- https://stackoverflow.com/a/7950833/6929343 
+
+REVISIONS:
+
+First define the class images
+Then set the current image
+Then go into toggle mode
+-->
 
 <script>
 var gStorage = {};
