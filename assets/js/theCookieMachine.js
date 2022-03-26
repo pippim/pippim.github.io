@@ -501,22 +501,26 @@ function local_storage_to_html() {
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
     html += "&emsp; TCM button visible on all sessions? " +
             '<img class="with-action" id="switch_3" data-state="true" ' +
-            'src="assets/img/icons/switch_on_right.png" ' +
-            'onclick=\'switch_click(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
+            'src="assets/img/icons/switch_on_right.png" /><br>\n'
     html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
 
-    document.querySelector('#switch_1').addEventListener('click', () => {
-        console.log('switch_1 clicked');
-        var elm = document.getElementById("switch_1");
-        switch_click(elm, ["/assets/img/icons/switch_off_left.png"]);
+    var sel_1 = document.getElementById("switch_1");
+    var sel_2 = document.getElementById("switch_2");
+    var sel_3 = document.getElementById("switch_3");
+    var off = "/assets/img/icons/switch_off_left.png"
+
+    sel_1.addEventListener('click', () => {
+        switch_click(sel_1, [ off ]);
     });
 
-    var elm = document.getElementById("switch_2");
-    elm.addEventListener('click', () => {
-        console.log('switch_2 clicked');
-        switch_click(elm, ["/assets/img/icons/switch_off_left.png"]);
+    sel_2.addEventListener('click', () => {
+        switch_click(sel_2, [ off ]);
+    });
+
+    sel_3.addEventListener('click', () => {
+        switch_click(sel_3, [ off ]);
     });
 
 }
