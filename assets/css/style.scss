@@ -21,8 +21,8 @@ $lavender: #E6E6FA !default; // lavender
 
 .button {
   display: inline-block;
-  vertical-align: middle;
   border-radius: 2rem;
+  vertical-align: middle;
   // margin: -.5rem .5rem -.5rem .5rem;
   padding: 0px 1rem;
   color: #fff;
@@ -426,9 +426,6 @@ details[open] > summary {
     width: 100%;
     height: 100%;
     overflow: auto;
-    @include large { font-size: 1rem; }
-    @include medium { font-size: 0.9rem; }
-    @include small { font-size: 0.7rem; }
 }
 
 // Modal Content
@@ -452,6 +449,9 @@ details[open] > summary {
     -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
+    @include large { font-size: 1rem; }
+    @include medium { font-size: 0.9rem; }
+    @include small { font-size: 0.7rem; }
 }
 
 #search-clear-input {
