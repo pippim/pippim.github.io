@@ -125,9 +125,9 @@ The buttons brighten as you hover over them.
 
 </table>
 
-<style>
-  /* NOTE: #tcm_window_icon through #tcm_webpage_info defined in /assets/css/style.scss */
+<!-- NOTE: #tcm_window_icon through #tcm_webpage_info defined in /assets/css/style.scss -->
 
+<style>
   #tcm_window_table table { table-layout: fixed; width: 100%; border: 3px solid black; }
   #tcm_window_table table tr th:nth-child(1){ width: 10rem; }
   #tcm_window_table td { padding: 0 1rem; }
@@ -167,12 +167,12 @@ Displaying Front Matter choices are "Less" (off) or "More" (on).
 
 <p>Click on an On/Off Slider Switch below<br>
 Display More Jekyll Front Matter?
-<img class="with-action" id="image1" name="image1" data-state="off" 
+<img class="with-action" id="image1" name="image1" data-state=false 
 src="/assets/img/icons/switch_off_left.png" 
 onclick='toogle(this, ["assets/img/icons/switch_on_right.png"]);' />
 <br>
 Keep TCM Window Button on Header active for session?
-<img class="with-action" id="image2" name="image2" data-state="off" 
+<img class="with-action" id="image2" name="image2" data-state=true 
 src="assets/img/icons/switch_on_right.png" 
 onclick='toogle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
 </p>
@@ -186,8 +186,9 @@ onclick='toogle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
   transition: all .3s ease-in-out;
 }</style>
 
+<!-- https://stackoverflow.com/a/7950833/6929343 -->
+
 <script>
-/* https://stackoverflow.com/a/7950833/6929343 */
 var gStorage = {};
 
 function toogle(anImage, anAltSrcArr) {
@@ -205,7 +206,7 @@ function toogle(anImage, anAltSrcArr) {
             'id': id,
             'origSrc': oldSrc,
             'i': 0,
-            'state': oldState == "on"
+            'state': oldState
         };
     }
 
