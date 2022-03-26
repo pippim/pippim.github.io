@@ -709,9 +709,9 @@ a.search-results:visited {
   border: none;
   opacity: 0.0;  // Make image invisible
 
-  @include large { height: 38px; width: 38px; top: 1.25rem; }
-  @include medium { height: 32px; width: 32px; top: .75rem; }
-  @include small { height: 26px; width: 26px; top: .25rem; }
+  @include large { height: 38px; width: 38px; margin-top: 1.25rem; }
+  @include medium { height: 32px; width: 32px; margin-top: .75rem; }
+  @include small { height: 26px; width: 26px; margin-top: .25rem; }
 
   &:hover {
     filter: brightness(150%);
