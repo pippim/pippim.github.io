@@ -23,6 +23,7 @@ $lavender: #E6E6FA !default; // lavender
   display: inline-block;
   border-radius: 2rem;
   vertical-align: middle;
+  margin-top: .4rem;
   // margin: -.5rem .5rem -.5rem .5rem;
   padding: 0px 1rem;
   color: #fff;
@@ -476,8 +477,8 @@ details[open] > summary {
         height: 16px;
     }
     @include small {
-        // width: 12px;
-        width: auto;    // Loosing right portion of X
+        width: 12px;
+        // width: auto;    // Loosing right portion of X
         height: 12px;
     }
 }
@@ -701,6 +702,7 @@ a.search-results:visited {
   vertical-align: middle;
   position: absolute;
   right: 0;
+  margin-top: .3rem;
   margin-right: .2rem;
   background: transparent;
   border: none;
