@@ -503,55 +503,22 @@ a.search-results:visited {
   -webkit-text-fill-color: transparent;
   animation: shine 3s 3 ease-in-out;
   
-  @keyframes shine {
-    to {
-      background-position: 200% center;
-    }
-  }
+  @keyframes shine { to { background-position: 200% center; } }
 }
 
 /* MAJOR SECTION ======== On/Off Slider Switches
 */
-
-.switch {
-    // Style background image for switches
-    // https://stackoverflow.com/a/44842552/6929343
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: none;
-    float: right;
-    cursor: pointer;
-
-    &:hover {
-        filter: brightness(75%);
-    }
-    @include large {
-        width: 18px;
-        height: 8px;
-    }
-    @include medium {
-        width: 16px;
-        height: 6px;
-    }
-    @include small {
-        width: 14px;
-        height: 4px;
-    }
+.with-action {
+  vertical-align: middle;
+  width: 40px;
+  height: auto;
+  // Next lines aren't working...
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.switch input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url({{ site.url }}/assets/img/icons/switch_off_left.png);
-}
-
-.switch input[type="checkbox"]:checked {
-    background-image: url({{ site.url }}/assets/img/icons/switch_on_right.png);
-}
 /* MAJOR SECTION ======== The Cookie Machine (TCM)
-    Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 */
 
 #tcm_window {
