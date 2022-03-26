@@ -166,10 +166,14 @@ Displaying Front Matter choices are "Less" (off) or "More" (on).
 
 <p>Click on an On/Off Slider Switch below<br>
 Display More Jekyll Front Matter?
-<img class="with-action" id="image1" name="image1" src="/assets/img/icons/switch_off_left.png" onclick='toogle(this, ["assets/img/icons/switch_on_right.png"]);' />
+<img class="with-action" id="image1" name="image1" data-state="off" 
+src="/assets/img/icons/switch_off_left.png" 
+onclick='toogle(this, ["assets/img/icons/switch_on_right.png"]);' />
 <br>
 Keep TCM Window Button on Header active for session?
-<img class="with-action" id="image2" name="image2" src="assets/img/icons/switch_on_right.png" onclick='toogle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
+<img class="with-action" id="image2" name="image2" data-state="off" 
+src="assets/img/icons/switch_on_right.png" 
+onclick='toogle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
 </p>
 <style>
 .with-action {
@@ -192,6 +196,8 @@ function toogle(anImage, anAltSrcArr) {
 
     var id = anImage.id;
     var oldSrc = anImage.src;
+    var oldState = anImage.dataset.state
+    console.log('oldState: ' + oldState)
 
     if (typeof(gStorage[id]) === "undefined") {
         gStorage[id] = {
