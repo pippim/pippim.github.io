@@ -203,7 +203,7 @@ function toogle(anImage, anAltSrcArr) {
     //    return;
     //} */
 
-    anImage.dataset.state = anImage.dataset.state !== true;
+    anImage.dataset.state = !anImage.dataset.state;
     var id = anImage.id;
     var oldSrc = anImage.src;
     //var oldState = new Boolean (anImage.dataset.state);
