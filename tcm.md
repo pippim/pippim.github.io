@@ -206,7 +206,7 @@ function toogle(anImage, anAltSrcArr) {
     // anImage.dataset.state = !anImage.dataset.state;
     var id = anImage.id;
     var oldSrc = anImage.src;
-    var oldState = new Boolean (anImage.dataset.state);
+    var oldState = (anImage.dataset.state === 'true');
 
     if (typeof(gStorage[id]) === "undefined") {
         console.log('oldState: ' + oldState)
@@ -225,12 +225,12 @@ function toogle(anImage, anAltSrcArr) {
 
     if (gStorage[id].i === 0) {
         anImage.src = gStorage[id].origSrc;
-        //anImage.dataset.state = gStorage[id].origState;
-        console.log('gStorage[id].origState: ' + gStorage[id].origState)
+        anImage.dataset.state = gStorage[id].origState;
+        //console.log('gStorage[id].origState: ' + gStorage[id].origState)
       } else {
         anImage.src = anAltSrcArr[gStorage[id].i - 1];
-        console.log('gStorage[id].origState: ' + !gStorage[id].origState)
-        //anImage.dataset.state = !gStorage[id].origState
+        //console.log('gStorage[id].origState: ' + !gStorage[id].origState)
+        anImage.dataset.state = !gStorage[id].origState
       }
 
    console.log('anImage.dataset.state: ' + anImage.dataset.state)
