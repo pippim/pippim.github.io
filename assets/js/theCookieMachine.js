@@ -493,8 +493,7 @@ function local_storage_to_html() {
     html += "TCM button visible after closing window:<br>\n"
     html += "&emsp; TCM button visible on page? " +
             '<img class="with-action" id="switch_1" data-state="true" ' +
-            'src="assets/img/icons/switch_on_right.png" ' +
-            'onclick=\'switch_click(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
+            'src="assets/img/icons/switch_on_right.png" /><br>\n'
     html += "&emsp; TCM button visible on all pages? " +
             '<img class="with-action" id="switch_2" data-state="true" ' +
             'src="assets/img/icons/switch_on_right.png" ' +
@@ -508,7 +507,8 @@ function local_storage_to_html() {
     b.innerHTML = html;              // Update TCM Window body
 
     document.querySelector('#switch_1').addEventListener('click', () => {
-        console.log('switch_1 clicked')
+        console.log('switch_1 clicked');
+        switch_click(this, ["/assets/img/icons/switch_off_left.png"]);
     });
 
 }
