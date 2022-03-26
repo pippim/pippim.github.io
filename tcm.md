@@ -226,10 +226,10 @@ function toogle(anImage, anAltSrcArr) {
         anImage.dataset.state = gStorage[id].origSrc;
       } else {
         anImage.src = anAltSrcArr[gStorage[id].i - 1];
-        anImage.dataset.state = !gStorage[id].state
+        anImage.dataset.state = !gStorage[id].origState
       }
 
-   console.log('oldState: ' + oldState)
+   console.log('anImage.dataset.state: ' + anImage.dataset.state)
 }</script>
 
 The *On/Off Slider Switch* control
