@@ -697,7 +697,7 @@ a.search-results:visited {
 /* Button in the MAIN window NOT in the tcm window! */
 #tcm_button {
   // The Cookie Machine HIDDEN button positioned after regular buttons
-  display: block;
+  display: inline-block;
   // vertical-align: middle;
   position: absolute;
   right: 0;
