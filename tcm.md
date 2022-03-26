@@ -204,7 +204,7 @@ function toogle(anImage, anAltSrcArr) {
         gStorage[id] = {
             'id': id,
             'origSrc': oldSrc,
-            'i': 0
+            'i': 0,
             'state': oldState == "on"
         };
     }
@@ -214,6 +214,7 @@ function toogle(anImage, anAltSrcArr) {
         gStorage[id].i = 0;
     }
 
+    anImage.dataset.state = !anImage.dataset.state
     if (gStorage[id].i === 0) {
         anImage.src = gStorage[id].origSrc;
     } else {
