@@ -69,11 +69,12 @@ $lavender: #E6E6FA !default; // lavender
   }
 
   @include large {
-    padding: .5rem 1rem;
     top: 1rem;  // Force buttons down a bit for vertical centering
+    padding: .5rem 1rem;
   }
 
   @include medium {
+    top: .75rem;
     padding: .4rem 0.9rem;
     font-size: 0.8rem;
   }
