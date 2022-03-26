@@ -627,6 +627,7 @@ a.search-results:visited {
 #tcm_window_close {
     // Works in conjunction with class name .icon_back
     background-image: url({{ site.url }}/assets/img/icons/x.png);
+    vertical-align: middle;
 }
 
 #tcm_window_buttons {
@@ -707,7 +708,7 @@ a.search-results:visited {
 #tcm_button {
   // The Cookie Machine HIDDEN button positioned after regular buttons
   display: block;
-  vertical-align: middle;
+  // vertical-align: middle;
   position: absolute;
   right: 0;
   margin-right: .2rem;
