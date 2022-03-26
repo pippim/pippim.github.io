@@ -69,7 +69,7 @@ $lavender: #E6E6FA !default; // lavender
   }
 
   @include large {
-    top: 1.3rem;  // Force buttons down a bit for vertical centering
+    top: 1.5rem;  // Force buttons down a bit for vertical centering
     padding: .5rem 1rem;
   }
 
@@ -697,7 +697,7 @@ a.search-results:visited {
   }
 }
 
-/* Button in the MAIN window NOT in the tcm window! */
+/* Button in the MAIN window's header NOT in the tcm window! */
 #tcm_button {
   // The Cookie Machine HIDDEN button positioned after regular buttons
   display: inline-block;
@@ -711,7 +711,7 @@ a.search-results:visited {
 
   @include large { height: 38px; width: 38px; margin-top: 1.25rem; }
   @include medium { height: 32px; width: 32px; margin-top: .75rem; }
-  @include small { height: 26px; width: 26px; margin-top: .25rem; }
+  @include small { height: 26px; width: 26px; margin-top: .5rem; }
 
   &:hover {
     filter: brightness(150%);
