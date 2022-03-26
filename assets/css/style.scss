@@ -698,7 +698,7 @@ a.search-results:visited {
 #tcm_button {
   // The Cookie Machine HIDDEN button positioned after regular buttons
   display: block;
-  vertical-align: middle;
+  // vertical-align: middle;
   position: absolute;
   right: 0;
   margin-right: .2rem;
@@ -706,22 +706,9 @@ a.search-results:visited {
   border: none;
   opacity: 0.0;  // Make image invisible
 
-  @include large {
-    height: 38px;
-    width: 38px;
-  }
-
-  @include medium {
-    height: 32px;
-    width: 32px;
-    font-size: 0.9rem;
-  }
-
-  @include small {
-    height: 26px;
-    width: 26px;
-    font-size: 0.8rem;
-  }
+  @include large { height: 38px; width: 38px; margin-top: -.1 rem; }
+  @include medium { height: 32px; width: 32px; margin-top: -.2 rem; }
+  @include small { height: 26px; width: 26px; margin-top: -.3 rem; }
 
   &:hover {
     filter: brightness(150%);
