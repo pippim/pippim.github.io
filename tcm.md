@@ -167,7 +167,7 @@ Displaying Front Matter choices are "Less" (off) or "More" (on).
 
 <p>Click on an On/Off Slider Switch below<br>
 Display More Jekyll Front Matter?
-<img class="with-action" id="image1"data-state=false 
+<img class="with-action" id="image1" data-state=false 
 src="/assets/img/icons/switch_off_left.png" 
 onclick='toogle(this, ["assets/img/icons/switch_on_right.png"]);' />
 <br>
@@ -205,15 +205,14 @@ function toogle(anImage, anAltSrcArr) {
 
     var id = anImage.id;
     var oldSrc = anImage.src;
-    var oldState = anImage.dataset.state
-    console.log('oldState: ' + oldState)
+    var oldState = anImage.dataset.state;
 
     if (typeof(gStorage[id]) === "undefined") {
         gStorage[id] = {
             'id': id,
             'origSrc': oldSrc,
             'i': 0,
-            'state': oldState
+            'origState': oldState
         };
     }
 
@@ -222,12 +221,15 @@ function toogle(anImage, anAltSrcArr) {
         gStorage[id].i = 0;
     }
 
-    anImage.dataset.state = !anImage.dataset.state
     if (gStorage[id].i === 0) {
         anImage.src = gStorage[id].origSrc;
-    } else {
+        anImage.dataset.state = gStorage[id].origSrc;
+      } else {
         anImage.src = anAltSrcArr[gStorage[id].i - 1];
-    }
+        anImage.dataset.state = !gStorage[id].state
+      }
+
+   console.log('oldState: ' + oldState)
 }</script>
 
 The *On/Off Slider Switch* control
