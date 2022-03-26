@@ -359,6 +359,36 @@ line-height
 font-family
 */
 
+var gStorage = {};
+
+function toggle(anImage, anAltSrcArr) {
+    var id = anImage.id;
+    var oldSrc = anImage.src;
+    var oldState = (anImage.dataset.state === 'true');
+
+    if (typeof(gStorage[id]) === "undefined") {
+        gStorage[id] = {
+            'id': id,
+            'origSrc': oldSrc,
+            'i': 0,
+            'origState': oldState
+        };
+    }
+
+    gStorage[id].i += 1;
+    if (gStorage[id].i > anAltSrcArr.length) {
+        gStorage[id].i = 0;
+    }
+
+    if (gStorage[id].i === 0) {
+        anImage.src = gStorage[id].origSrc;
+        anImage.dataset.state = gStorage[id].origState;
+      } else {
+        anImage.src = anAltSrcArr[gStorage[id].i - 1];
+        anImage.dataset.state = !gStorage[id].origState
+      }
+}
+
 function local_storage_to_html() {
     /*
         Downloaded cookies location:
@@ -474,16 +504,6 @@ function local_storage_to_html() {
             'src="assets/img/icons/switch_on_right.png" ' +
             'onclick=\'toggle(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
     html += "</p>";
-    html += setToggle('toggle_switch', 'checked')
-    // image is square but contents are rectangular wide
-/*
-    html += setImageToggle('toggle_image', 'checked', "60px", "40px",
-        "/assets/img/icons/switch_off_left.png",
-        "/assets/img/icons/switch_on_right.png")
-*/
-    html += setOnOff('toggle_image', 'checked', "60px", "40px",
-        "/assets/img/icons/switch_on_right.png",
-        "/assets/img/icons/switch_off_left.png")
 
     b.innerHTML = html;              // Update TCM Window body
 
@@ -504,194 +524,6 @@ function local_storage_to_html() {
 */
 }
 
-var gStorage = {};
-
-function toggle(anImage, anAltSrcArr) {
-    var id = anImage.id;
-    var oldSrc = anImage.src;
-    var oldState = (anImage.dataset.state === 'true');
-
-    if (typeof(gStorage[id]) === "undefined") {
-        gStorage[id] = {
-            'id': id,
-            'origSrc': oldSrc,
-            'i': 0,
-            'origState': oldState
-        };
-    }
-
-    gStorage[id].i += 1;
-    if (gStorage[id].i > anAltSrcArr.length) {
-        gStorage[id].i = 0;
-    }
-
-    if (gStorage[id].i === 0) {
-        anImage.src = gStorage[id].origSrc;
-        anImage.dataset.state = gStorage[id].origState;
-      } else {
-        anImage.src = anAltSrcArr[gStorage[id].i - 1];
-        anImage.dataset.state = !gStorage[id].origState
-      }
-}
-
-function setOnOff(id, checked, width, height, on_image, off_image) {
-   // From: https://stackoverflow.com/a/44842552/6929343
-
-    var html = '<script>\n'
-
-    html += 'input[type="checkbox"] {\n' +
-    '  width: 16px;\n' +
-    '  height: 16px;\n' +
-    '  -webkit-appearance: none;\n' +
-    '  -moz-appearance: none;\n' +
-    '  appearance: none;\n' +
-    '  background-color: red;\n' +
-    '}\n' +
-    'input[type="checkbox"]:checked {\n' +
-    '  background-color: green;\n' +
-    '}\n' +
-    '</script>\n'
-
-    html += '<p>End of script, start of HTML</p>\n' +
-    '<input type="checkbox" />\n' +
-    '<p>End of HTML</p>\n'
-
-    return html
-}
-
-function sayHello() {
-        var el = document.getElementById("toggle_image");
-        el.onclick = clickImageToggle;
-    console.log("Hello");
-}
-
-function setImageToggle(id, checked, width, height, off_image, on_image) {
-    // From: http://css3.bradshawenterprises.com/cfimg/
-    var html = '<div id="cf2" class="shadow" id="' + id + '">\n'
-
-    html += '  <img class="bottom" src="' + '{{ site.url }}' + off_image + '" />\n' +
-            '  <img class="top" src="' + '{{ site.url }}' + on_image + '" />\n' +
-            '</div>\n'
-
-    // CSS
-    html += '<style>\n'
-
-    html += '#cf2 {\n' +
-            '  position: relative;\n' +
-            '  width: ' + width + ';\n' +
-            '  height: ' + height + ';\n' +
-            '  margin: 0 auto;\n' +
-            '}\n'
-    html += '#cf2 img {\n' +
-            '  position: absolute;\n' +
-            '  left: 0;\n' +
-            '  max-width: ' + width + ';\n' +
-            '  max-height: ' + height + ';\n' +
-            '  -webkit-transition: opacity 1s ease-in-out;\n' +
-            '  -moz-transition: opacity 1s ease-in-out;\n' +
-            '  -o-transition: opacity 1s ease-in-out;\n' +
-            '  transition: opacity 1s ease-in-out;\n' +
-            '}\n'
-    html += '#cf2 img.transparent {\n' +
-            '  opacity: 0;\n' +
-            '}\n'
-    html += '#cf_onclick {\n' +
-            '  cursor: pointer;\n' +
-            '}\n'
-
-    html += '#cf2 img.top:hover {\n' +
-            '  filter: brightness(75%);\n' +
-            '}\n'
-
-    html += '</style>\n'
-
-/*
-ADD : https://stackoverflow.com/a/29979795/6929343
-<script>
-$(document).ready(function() {
-  $("#cf_onclick").click(function() {
-    var current = $("#cf2 img.top").removeClass('top');
-
-    var next = current.next();
-    next = next.length ? next : current.siblings().first();
-    next.addClass('top');
-  });
-});
-</script>
-*/
-    return html
-}
-
-function clickImageToggle() {
-    alert('clickImageToggle()')
-}
-
-function setToggle(id, checked) {
-    // id = name to assign, state = "checked" (ON) or "" (OFF)
-    // From: https://www.w3schools.com/howto/howto_css_switch.asp
-    var html = '<label class="switch">\n' +
-               '  <input type="checkbox" ' + checked + '>\n' +
-               '  <span class="slider"></span>\n' +
-               '</label>\n'
-
-    // CSS
-    html += '<style>\n'
-
-    html += '.switch {\n' +
-            '  position: relative;\n' +
-            '  display: inline-block;\n' +
-            '  width: 60px;\n' +
-            '  height: 34px;\n' +
-            '}\n'
-
-    html += '.switch input {\n' +
-            '  opacity: 0;\n' +
-            '  width: 0;\n' +
-            '  height: 0;\n' +
-            '}\n'
-
-    html += '.slider {\n' +
-            '  position: absolute;\n' +
-            '  cursor: pointer;\n' +
-            '  top: 0;\n' +
-            '  left: 0;\n' +
-            '  right: 0;\n' +
-            '  bottom: 0;\n' +
-            '  background-color: #ccc;\n' +
-            '  -webkit-transition: .2s;\n' +
-            '  transition: .2s;\n' +
-            '}\n'
-
-    html += '.slider:before {\n' +
-            '  position: absolute;\n' +
-            '  content: "";\n' +
-            '  height: 26px;\n' +
-            '  width: 26px;\n' +
-            '  left: 4px;\n' +
-            '  bottom: 4px;\n' +
-            '  background-color: white;\n' +
-            '  -webkit-transition: .2s;\n' +
-            '  transition: .2s;\n' +
-            '}\n'
-
-    html += 'input:checked + .slider {\n' +
-            '  background-color: #2196F3;\n' +
-            '}\n'
-
-    html += 'input:focus + .slider {\n' +
-            '  box-shadow: 0 0 1px #2196F3;\n' +
-            '}\n'
-
-    html += 'input:checked + .slider:before {\n' +
-            '  -webkit-transform: translateX(26px);\n' +
-            '  -ms-transform: translateX(26px);\n' +
-            '  transform: translateX(26px);\n' +
-            '}\n'
-
-    html += '</style>\n'
-
-    return html
-}
 
 function getCookies() {
     // https://stackoverflow.com/a/252959/6929343
