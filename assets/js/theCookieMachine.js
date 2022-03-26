@@ -508,7 +508,8 @@ function local_storage_to_html() {
 
     document.querySelector('#switch_1').addEventListener('click', () => {
         console.log('switch_1 clicked');
-        switch_click(switch_1.src, ["/assets/img/icons/switch_off_left.png"]);
+        var elm = document.getElementById("switch_1");
+        switch_click(elm, ["/assets/img/icons/switch_off_left.png"]);
     });
 
 }
