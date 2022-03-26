@@ -435,7 +435,7 @@ details[open] > summary {
     color: $header-bg-color;
 
     // margin: auto;  // too far down and too far to the left
-    margin: -1rem 0 0 1rem;
+    // margin: -1rem 0 0 1rem;
     padding: 1rem 1rem 1.5rem 1rem;
     border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
     border-radius: .5rem;
@@ -451,7 +451,7 @@ details[open] > summary {
     z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
     @include large { font-size: 1.1rem; }
     @include medium { font-size: 1rem; }
-    @include small { font-size: 0.8rem; }
+    @include small { font-size: 0.9rem; }
 }
 
 #search-clear-input {
@@ -490,8 +490,8 @@ details[open] > summary {
         height: 16px;
     }
     @include small {
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
     }
 }
 
