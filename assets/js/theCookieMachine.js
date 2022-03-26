@@ -371,6 +371,11 @@ function local_storage_to_html() {
             https://stackoverflow.com/a/9970626/6929343
         Cross fading images:
             http://css3.bradshawenterprises.com/cfimg/
+        Cross fading checkbox:
+            https://stackoverflow.com/a/17795397/6929343
+        Shortest code switching images:
+            https://stackoverflow.com/a/43661406/6929343
+
 
         Optional information for posting comments / sending emails:
 
