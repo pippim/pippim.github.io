@@ -463,7 +463,7 @@ function local_storage_to_html() {
     html += "TCM button visible after closing window:" +
             '"<img class="with-action" id="switch_2" data-state="true" ' +
             'src="assets/img/icons/switch_on_right.png" ' +
-            'onclick=''toggle(this, ["/assets/img/icons/switch_off_left.png"]);''/><br>\n'
+            'onclick=\'toggle(this, ["/assets/img/icons/switch_off_left.png"]);\'/><br>\n'
     html += "&emsp; TCM button visible on page?<br>\n";
     html += "&emsp; TCM button visible on all pages?<br>";
     html += "&emsp; TCM button visible on all sessions?<br>";
