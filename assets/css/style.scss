@@ -21,8 +21,9 @@ $lavender: #E6E6FA !default; // lavender
 
 .button {
   display: inline-block;
+  vertical-align: middle;
   border-radius: 2rem;
-  margin: -.5rem .5rem -.5rem .5rem;
+  // margin: -.5rem .5rem -.5rem .5rem;
   padding: 0px 1rem;
   color: #fff;
   border: 2px solid white;
@@ -83,7 +84,7 @@ $lavender: #E6E6FA !default; // lavender
     font-size: 0.7rem;
 
     + .button {
-      margin-top: 1rem;
+      // margin-top: 1rem;
       margin-left: 0;
     }
   }
@@ -377,7 +378,8 @@ details[open] > summary {
   background-color: $honeydew;
   color: $header-bg-color;
   height: 2.2rem;
-  margin: 1rem;     // New - space above and below
+  vertical-align: middle;
+  // margin: 1rem;     // New - space above and below
   border-radius: .5rem;
   display:flex;
   flex-direction:row;
@@ -454,6 +456,7 @@ details[open] > summary {
 .icon_back {
     // Used by #tcm_window_close, #search-modal-close & #search-clear-input
     display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+    vertical-align: middle;
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
@@ -588,10 +591,11 @@ a.search-results:visited {
     }
 }
 
-/* Button in the MAIN window NOT in the tcm window! */
+/* Icon in in the tcm window header NOT the MAIN window! */
 #tcm_window_icon {
     // The Cookie Machine Window Icon in #tcm_window_header uses .icon_back{} class
     display: inline-block;
+    vertical-align: middle;
     float: left;
     margin-right: .5rem;
     opacity: 1.0;
@@ -693,38 +697,26 @@ a.search-results:visited {
 #tcm_button {
   // The Cookie Machine HIDDEN button positioned after regular buttons
   display: block;
+  vertical-align: middle;
   position: absolute;
   right: 0;
-  //margin-top: -1.1rem;
-  //height: 24px;
-  //width: 24px;
-  //font-weight: 900;
   margin-right: .2rem;
-  //padding: .5rem .5rem;
-  // Make color transparent: https://stackoverflow.com/a/21917994/6929343
-  //color: #ffffff00;
   background: transparent;
   border: none;
   opacity: 0.0;  // Make image invisible
 
-  // border: 2px solid white;
-
   @include large {
-    margin-top: -1.1rem;
     height: 38px;
     width: 38px;
   }
 
   @include medium {
-    margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
     height: 32px;
     width: 32px;
     font-size: 0.9rem;
   }
 
   @include small {
-    // display: none;   // March 20/22 more attempts at working with small screen
-    margin-top: -1.75rem;  // Force buttons up a bit for vertical centering
     height: 26px;
     width: 26px;
     font-size: 0.8rem;
