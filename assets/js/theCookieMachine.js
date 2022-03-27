@@ -359,37 +359,23 @@ line-height
 font-family
 */
 
-var gStorage = {};
+/* Whether the TCM button (on the main page header) is visible or not
+    When set/get vis_this_page the current global variable suffices
+    When set/get vis_all_pages a session cookie is necessary
+    When set/get vis_all_sessions a local cookie is necessary
 
-function switch_click(anImage, anAltSrcArr) {
-    var id = anImage.id;
-    var oldSrc = anImage.src;
-    //var oldState = (anImage.dataset.state === 'true');
-    // dataset undefined inside user script
-    var oldState = new Boolean("true")
+    Turning on vis_all_sessions forces on this_page and all_pages
+    Turning off vis_this_page forces off all_pages and all_sessions
+    Turning off vis_all_pages forces off vis_all_sessions
+*/ 
+var vis_this_page = true;
+var vis_all_pages = false;
+var vis_all_sessions = false;
 
-    if (typeof(gStorage[id]) === "undefined") {
-        gStorage[id] = {
-            'id': id,
-            'origSrc': oldSrc,
-            'i': 0,
-            'origState': oldState
-        };
-    }
-
-    gStorage[id].i += 1;
-    if (gStorage[id].i > anAltSrcArr.length) {
-        gStorage[id].i = 0;
-    }
-
-    if (gStorage[id].i === 0) {
-        anImage.src = gStorage[id].origSrc;
-        //anImage.dataset.state = gStorage[id].origState;
-      } else {
-        anImage.src = anAltSrcArr[gStorage[id].i - 1];
-        //anImage.dataset.state = !gStorage[id].origState
-      }
-}
+var sel_this_page = null;   // Initialized in local_storage_to_html()
+var sel_all_pages = null;
+var sel_all_sessions = null;
+var off = "/assets/img/icons/switch_off_left.png"
 
 function local_storage_to_html() {
     /*
@@ -492,39 +478,69 @@ function local_storage_to_html() {
 
     var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
-    html += "TCM button visible after closing window:<br>\n"
-    html += "&emsp; TCM button visible on page? " +
+    html += "After closing this window, the TCM button will be:<br>\n"
+    html += "&emsp; Visible on this webpage? " +
             '<img class="with-action" id="switch_1" data-state="true" ' +
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
-    html += "&emsp; TCM button visible on all pages? " +
+    html += "&emsp; Visible on all webpages? " +
             '<img class="with-action" id="switch_2" data-state="true" ' +
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
-    html += "&emsp; TCM button visible on all sessions? " +
+    html += "&emsp; Visible on all sessions? " +
             '<img class="with-action" id="switch_3" data-state="true" ' +
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
     html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
 
-    var sel_1 = document.getElementById("switch_1");
-    var sel_2 = document.getElementById("switch_2");
-    var sel_3 = document.getElementById("switch_3");
-    var off = "/assets/img/icons/switch_off_left.png"
+    sel_this_page = document.getElementById("switch_1");
+    sel_all_pages = document.getElementById("switch_2");
+    sel_all_sessions = document.getElementById("switch_3");
 
-    sel_1.addEventListener('click', () => {
-        switch_click(sel_1, [ off ]);
+    sel_this_page.addEventListener('click', () => {
+        switch_click(sel_this_page, [ off ]);
     });
 
-    sel_2.addEventListener('click', () => {
-        switch_click(sel_2, [ off ]);
+    sel_all_pages.addEventListener('click', () => {
+        switch_click(sel_all_pages, [ off ]);
     });
 
-    sel_3.addEventListener('click', () => {
-        switch_click(sel_3, [ off ]);
+    sel_all_sessions.addEventListener('click', () => {
+        switch_click(sel_all_sessions, [ off ]);
     });
 
 }
 
+var gStorage = {};
+
+function switch_click(anImage, anAltSrcArr) {
+    var id = anImage.id;
+    var oldSrc = anImage.src;
+    //var oldState = (anImage.dataset.state === 'true');
+    // dataset undefined inside user script
+    var oldState = new Boolean("true")
+
+    if (typeof(gStorage[id]) === "undefined") {
+        gStorage[id] = {
+            'id': id,
+            'origSrc': oldSrc,
+            'i': 0,
+            'origState': oldState
+        };
+    }
+
+    gStorage[id].i += 1;
+    if (gStorage[id].i > anAltSrcArr.length) {
+        gStorage[id].i = 0;
+    }
+
+    if (gStorage[id].i === 0) {
+        anImage.src = gStorage[id].origSrc;
+        //anImage.dataset.state = gStorage[id].origState;
+      } else {
+        anImage.src = anAltSrcArr[gStorage[id].i - 1];
+        //anImage.dataset.state = !gStorage[id].origState
+      }
+}
 
 function getCookies() {
     // https://stackoverflow.com/a/252959/6929343
