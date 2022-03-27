@@ -96,7 +96,8 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
   // Hide tcm_window
   document.querySelector('#tcm_window').style.display = "none";
   // Make tcm_button visible
-  document.querySelector('#tcm_button').style.cssText = `
+  if (vis_this_page) {
+      document.querySelector('#tcm_button').style.cssText = `
       opacity: 1.0;
       border: thin solid black;
       border-radius: .5rem;
@@ -104,7 +105,8 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
                         url({{ site.url }}/assets/img/icons/button_background.png);
       background-repeat: no-repeat;
       background-size: cover;
-   `;
+      `;
+   }
 });
 
 
@@ -368,9 +370,11 @@ font-family
     Turning off vis_this_page forces off all_pages and all_sessions
     Turning off vis_all_pages forces off vis_all_sessions
 */ 
-var vis_this_page = "true";
-var vis_all_pages = "false";
-var vis_all_sessions = "false";
+var vis_this_page = "true";     // Globally set this .js for this html
+var vis_all_pages = sessionStorage.vis_all_pages;
+console.log("vis_all_pages: " + vis_all_pages)
+// Stored in session storage: tcm_button
+var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
 
 var sel_this_page = null;   // Initialized in local_storage_to_html()
 var sel_all_pages = null;
