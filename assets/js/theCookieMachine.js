@@ -478,6 +478,12 @@ function local_storage_to_html() {
         switch_click(sel_all_pages, [ switch_on_image ]);
         check_all_switches();
         // Was this just switched on or off?
+        if (vis_all_pages == "true") {
+            switch_set(sel_this_page, "true");
+        }
+        if (vis_all_pages == "false") {
+            switch_set(sel_all_sessions, "false");
+        }
     });
 
     sel_all_sessions.addEventListener('click', () => {
