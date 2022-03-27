@@ -182,6 +182,7 @@ var switch_on_image = "assets/img/icons/switch_on_right.png"
 var switch_off_image = "/assets/img/icons/switch_off_left.png"
 
 var gStorage = {};  // Stores current image (on or off) by id
+var dummy = gStorage.length;
 // console.log("gStorage defined: " + gStorage.length);
 </script>
 
