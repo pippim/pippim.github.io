@@ -10,9 +10,9 @@ created_date: 2019-04-09 02:09:57
 edit_date:    2019-04-28 11:46:52
 votes:        "2 "
 favorites:    
-views:        "17,046 "
+views:        "17,068 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-09-What_s-a-good-back-up-strategy-for-1-desktop-PC_.md
 toc:          false
 navigation:   false
@@ -41,6 +41,6 @@ If you are interested in my daily backup to gmail.com script, you can see it her
 
 You can buy cheap 16 GB, 32 GB or 64 GB USB flash drives (aka thumb drives) and copy your whole Ubuntu image and data files to it.
 
-If you have a 500 GB hard drive or SSD and Ubuntu only takes up 25 to 50 GB you can create a backup partition to store backups. Note these will not be offsite backups nor will they save you if your hard drive crashes. These backup partitions are helpful when you shoot yourself in the foot and delete a whole bunch of files or directories. To clone your Ubuntu partition to another backup partition I wrote this script: [Bash script to backup/clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition %})
+If you have a 500 GB hard drive or SSD and Ubuntu only takes up 25 to 50 GB you can create a backup partition to store backups. Note these will not be offsite backups nor will they save you if your hard drive crashes. These backup partitions are helpful when you shoot yourself in the foot and delete a whole bunch of files or directories. To clone your Ubuntu partition to another backup partition I wrote this script: [Backup/clone live to a new partition which can be booted]({% post_url /2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted %})
 
 Additionally there are backup programs you can use but I can't vouch for them.

@@ -10,9 +10,9 @@ created_date: 2017-05-28 13:19:25
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "73 "
+views:        "74 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-28-Changing-processor.md
 toc:          false
 navigation:   false

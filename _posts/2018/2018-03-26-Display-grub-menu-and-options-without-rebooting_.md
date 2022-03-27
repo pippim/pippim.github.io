@@ -10,9 +10,9 @@ created_date: 2018-03-26 04:05:58
 edit_date:    2018-05-08 00:32:11
 votes:        "18 "
 favorites:    
-views:        "8,515 "
+views:        "8,576 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Display-grub-menu-and-options-without-rebooting_.md
 toc:          true
 navigation:   true
@@ -21,7 +21,7 @@ clipboard:    true
 
 ### Updated May 7, 2018
 
-Developing the script: [Bash script to backup/clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition %})e I discovered you get some ridiculously long menu options that causes the menu to malign:
+Developing the script: [Backup/clone live to a new partition which can be booted]({% post_url /2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted %})e I discovered you get some ridiculously long menu options that causes the menu to malign:
 
 ``` 
 4>8  Ubuntu, with Linux 4.14.30-041430-generic (recovery mode) (on /dev/nvme0n1p8)

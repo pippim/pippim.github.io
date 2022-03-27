@@ -10,9 +10,9 @@ created_date: 2019-11-23 23:25:05
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "1,401 "
+views:        "1,405 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-23-Does-rsync-requires-changing-UUID-after-copying-a-partition_.md
 toc:          false
 navigation:   false
@@ -23,7 +23,7 @@ clipboard:    false
 
 But with both `rsync` and `dd` or another cloning method you must change `/etc/fstab` and `/etc/default/grub` and by extension `/boot/grub/grub.cfg` for Ubuntu to work properly.
 
-From this script: [Bash script to backup/clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition %})
+From this script: [Backup/clone live to a new partition which can be booted]({% post_url /2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted %})
 
 `rsync` is called like this:
 

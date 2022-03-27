@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,184 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Upgrade-Ubuntu-16.04-LTS-to-18.04-LTS-_-5-desktop-environments.md
 toc:          false
 navigation:   false
@@ -37,4 +37,4 @@ I would first click the gear to select the Desktop environment and then enter my
 
 
   [1]: https://i.stack.imgur.com/dNXhZ.jpg
-  [2]: {% post_url /2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition %}
+  [2]: {% post_url /2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted %}

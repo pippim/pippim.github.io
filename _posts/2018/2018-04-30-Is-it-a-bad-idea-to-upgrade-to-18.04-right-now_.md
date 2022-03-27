@@ -10,9 +10,9 @@ created_date: 2018-04-30 10:18:33
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "52,619 "
+views:        "52,623 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-30-Is-it-a-bad-idea-to-upgrade-to-18.04-right-now_.md
 toc:          false
 navigation:   false
@@ -28,5 +28,5 @@ You can boot with a Live USB and manually clone your Ubuntu 16.04 partition or y
 You can also create a **test plan** for what you need to test after upgrading your cloned 16.04 to 18.04: [Is 18.04 already somewhat safe for installing?][2]
 
 
-  [1]: {% post_url /2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition %}
+  [1]: {% post_url /2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted %}
   [2]: {% post_url /2018/2018-03-01-Is-18.04-already-somewhat-safe-for-installing_ %}

@@ -10,9 +10,9 @@ created_date: 2019-12-15 19:02:15
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "863 "
+views:        "865 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-15-Upgrade-or-Fresh-Install-to-Ubuntu-16.04-if-I-currently-have-Ubuntu-14.04.md
 toc:          false
 navigation:   false
@@ -48,4 +48,4 @@ Please note an upgrade can take 40 minutes (in my case) to a few hours (reported
 A few times a day, a few times a week, month and year I will change different system settings. Over the course of five years I forget all that I've changed. The advantage of upgrading is none get lost. The disadvantage of reinstalling is all get lost.
 
   [1]: https://help.ubuntu.com/community/EOLUpgrades
-  [2]: {% post_url /2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition %}
+  [2]: {% post_url /2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted %}

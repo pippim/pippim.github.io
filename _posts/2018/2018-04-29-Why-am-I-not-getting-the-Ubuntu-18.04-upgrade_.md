@@ -10,9 +10,9 @@ created_date: 2018-04-29 20:51:34
 edit_date:    2018-05-03 22:59:55
 votes:        "25 "
 favorites:    
-views:        "54,310 "
+views:        "54,463 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Why-am-I-not-getting-the-Ubuntu-18.04-upgrade_.md
 toc:          false
 navigation:   false
@@ -97,4 +97,4 @@ All the more reason for cloning is you can test what happens when you accept def
 Because your original Ubuntu version is left intact you can run the `diff` command against the new 18.04 configuration files if you chose to install them.
 
   [1]: https://help.ubuntu.com/community/Upgrades
-  [2]: {% post_url /2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition %}
+  [2]: {% post_url /2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted %}

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "213 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-02-Is-it-safe-to-apt-get-upgrade-an-all-default-LEMP_.md
 toc:          false
 navigation:   false
@@ -38,4 +38,4 @@ I think you get the picture. To assist in the cloning process you can refer to t
 
 **Note:** The linked script was written on April 28 and works fine. I'm revising it with extra tests to validate the correct test partition is selected as a clone. Another revision is to display Source and Target partition OS version details. The final revision is to display `rsync` stats for deleted files which are relevant when re-cloning over top of a clone.
 
-  [1]: {% post_url /2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition %}
+  [1]: {% post_url /2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted %}

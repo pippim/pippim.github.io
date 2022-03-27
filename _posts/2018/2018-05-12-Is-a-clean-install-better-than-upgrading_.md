@@ -10,9 +10,9 @@ created_date: 2018-05-12 15:22:51
 edit_date:    
 votes:        "11 "
 favorites:    
-views:        "42,139 "
+views:        "42,195 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-Is-a-clean-install-better-than-upgrading_.md
 toc:          false
 navigation:   false
@@ -47,7 +47,7 @@ Running the upgrade on May 6, 2018 I was told that **203 packages** will be remo
 
 Backing up and restoring is a pain. It's time consuming and often times your restore doesn't proceed as planned. An alternative is to clone your 16.04 LTS (or whichever version) to a new test partition and upgrade to 18.04 LTS (or whichever version) there.
 
-I use a script to clone Ubuntu to a test partition for upgrading: [Bash script to backup/clone Ubuntu to another partition]({% post_url /2018/2018-04-27-Bash-script-to-backup_clone-Ubuntu-to-another-partition %})
+I use a script to clone Ubuntu to a test partition for upgrading: [Backup/clone live to a new partition which can be booted]({% post_url /2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted %})
 
 The script will:
 

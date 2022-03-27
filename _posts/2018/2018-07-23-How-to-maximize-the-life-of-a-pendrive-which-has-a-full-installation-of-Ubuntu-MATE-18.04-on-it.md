@@ -8,11 +8,11 @@ type:         Answer
 tags:         18.04 live-usb usb-drive ubuntu-mate
 created_date: 2018-07-23 10:55:49
 edit_date:    2020-06-12 14:37:07
-votes:        "6 "
+votes:        "7 "
 favorites:    
-views:        "4,599 "
+views:        "4,619 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-23-How-to-maximize-the-life-of-a-pendrive-which-has-a-full-installation-of-Ubuntu-MATE-18.04-on-it.md
 toc:          false
 navigation:   false

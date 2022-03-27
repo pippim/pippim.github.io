@@ -179,7 +179,7 @@ WORD_SEARCH_POINTS = [0.5, 2.0, 1.5, 1.0, 0.75, 0.5, 0.5]
 # All saved posts are indexed for searching but, add files below too:
 EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../hrb.md',
                       '../hyperlink.md', '../index.md', '../mserve.md',
-                      '../mt.md', '../programs.md', '../stack.md']
+                      '../mt.md', '../programs.md', '../stack.md', '../tcm.md']
 
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 # If not desired, set `CONFIG_YML = None`

@@ -10,9 +10,9 @@ created_date: 2018-05-11 03:31:29
 edit_date:    2018-05-12 02:22:49
 votes:        "2 "
 favorites:    
-views:        "266 "
+views:        "267 "
 accepted:     
-uploaded:     2022-03-20 10:46:14
+uploaded:     2022-03-27 10:04:10
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-11-Unable-to-read-files-between-two-distros.md
 toc:          false
 navigation:   true
