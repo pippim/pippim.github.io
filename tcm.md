@@ -167,6 +167,23 @@ Displaying Front Matter choices are "Less" (off) or "More" (on).
 
 TCM window, local storage button shows:
 
+<script>
+var vis_this_page = "true";     // Globally set this .js for this html
+var vis_all_pages = sessionStorage.vis_all_pages;
+if (vis_all_pages === undefined) { vis_all_pages = "false" }
+if (vis_all_pages == "true") { makeTcmButtonVisible() }
+// Stored in session storage
+var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
+
+var sel_this_page = null;   // Initialized in local_storage_to_html()
+var sel_all_pages = null;
+var sel_all_sessions = null;
+var switch_on_image = "assets/img/icons/switch_on_right.png"
+var switch_off_image = "/assets/img/icons/switch_off_left.png"
+
+var gStorage = {};  // Stores current image (on or off) by id
+</script>
+
 <h3>Local Storage and Cookies:</h3>
 
 After closing this window, the TCM button will be:<br>
@@ -184,19 +201,6 @@ After closing this window, the TCM button will be:<br>
    src="/assets/img/icons/switch_off_left.png" />
 
 <script>
-var vis_this_page = "true";     // Globally set this .js for this html
-var vis_all_pages = sessionStorage.vis_all_pages;
-if (vis_all_pages === undefined) { vis_all_pages = "false" }
-if (vis_all_pages == "true") { makeTcmButtonVisible() }
-// Stored in session storage
-var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
-
-var sel_this_page = null;   // Initialized in local_storage_to_html()
-var sel_all_pages = null;
-var sel_all_sessions = null;
-var switch_on_image = "assets/img/icons/switch_on_right.png"
-var switch_off_image = "/assets/img/icons/switch_off_left.png"
-
     sel_this_page = document.getElementById("switch_this_page");
     sel_all_pages = document.getElementById("switch_all_pages");
     sel_all_sessions = document.getElementById("switch_all_sessions");
@@ -240,8 +244,6 @@ var switch_off_image = "/assets/img/icons/switch_off_left.png"
         }
     });
 
-
-var gStorage = {};  // Stores current image (on or off) by id
 
 function switch_init(switchElm, bool) {
     var id = switchElm.id;
