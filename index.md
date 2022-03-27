@@ -84,8 +84,6 @@ the other pippim.com website on Google Sites.
 <!-- Change Pippim to your contact info below -->
 - [📧 Send an Email to Pippim 🔗](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com 🔗")
 
-- Visit the Pippim website on [Google Sites 🔗](https://pippim.com "Visit www.pippim.com 🔗")
-
 ### Leave a Comment / Question at The Source
 
 Leaving a comment or question at the source such as
