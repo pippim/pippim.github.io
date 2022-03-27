@@ -551,7 +551,7 @@ function switch_check(switchElm) {
     if (last_part == switch_off_image) {
         return "false"
     } else {
-        console.log("last_part: " + last_part;
+        console.log("last_part: " + last_part);
         return "true"
     }
 }
