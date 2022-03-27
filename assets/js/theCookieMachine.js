@@ -504,16 +504,19 @@ function local_storage_to_html() {
     sel_this_page.addEventListener('click', () => {
         switch_click(sel_this_page, [ switch_off_image ]);
         check_all_switches();
+        // Was this just switched on or off?
     });
 
     sel_all_pages.addEventListener('click', () => {
         switch_click(sel_all_pages, [ switch_off_image ]);
         check_all_switches();
+        // Was this just switched on or off?
     });
 
     sel_all_sessions.addEventListener('click', () => {
         switch_click(sel_all_sessions, [ switch_off_image ]);
         check_all_switches();
+        // Was this just switched on or off?
     });
 
 }
@@ -539,9 +542,6 @@ function check_all_switches() {
     vis_this_page = switch_check(sel_this_page);
     vis_all_pages = switch_check(sel_all_pages);
     vis_all_sessions = switch_check(sel_all_sessions);
-    console.log("vis_this_page: " + vis_this_page)
-    console.log("vis_all_pages: " + vis_all_pages)
-    console.log("vis_all_sessions: " + vis_all_sessions)
 }
 
 function switch_check(switchElm) {
