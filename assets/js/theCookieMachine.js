@@ -480,13 +480,13 @@ function local_storage_to_html() {
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
     html += "After closing this window, the TCM button will be:<br>\n"
     html += "&emsp; Visible on this webpage? " +
-            '<img class="with-action" id="switch_1" data-state="true" ' +
+            '<img class="with-action" id="switch_1" ' +
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
     html += "&emsp; Visible on all webpages? " +
-            '<img class="with-action" id="switch_2" data-state="true" ' +
+            '<img class="with-action" id="switch_2" ' +
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
     html += "&emsp; Visible on all sessions? " +
-            '<img class="with-action" id="switch_3" data-state="true" ' +
+            '<img class="with-action" id="switch_3" ' +
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
     html += "</p>";
 
@@ -495,6 +495,10 @@ function local_storage_to_html() {
     sel_this_page = document.getElementById("switch_1");
     sel_all_pages = document.getElementById("switch_2");
     sel_all_sessions = document.getElementById("switch_3");
+
+    switch_init(sel_this_page);
+    switch_init(sel_all_pages);
+    switch_init(sel_all_sessions);
 
     sel_this_page.addEventListener('click', () => {
         switch_click(sel_this_page, [ off ]);
@@ -510,21 +514,27 @@ function local_storage_to_html() {
 
 }
 
-var gStorage = {};
+var gStorage = {};  // Stores current image (on or off) by id
+
+function switch_init(anImage) {
+    var id = anImage.id;
+    var oldSrc = anImage.src;
+    gStorage[id] = {
+        'id': id,
+        'origSrc': oldSrc,
+        'i': 0
+    };
+}
 
 function switch_click(anImage, anAltSrcArr) {
     var id = anImage.id;
     var oldSrc = anImage.src;
-    //var oldState = (anImage.dataset.state === 'true');
-    // dataset undefined inside user script
-    var oldState = new Boolean("true")
 
     if (typeof(gStorage[id]) === "undefined") {
         gStorage[id] = {
             'id': id,
             'origSrc': oldSrc,
-            'i': 0,
-            'origState': oldState
+            'i': 0
         };
     }
 
@@ -535,10 +545,8 @@ function switch_click(anImage, anAltSrcArr) {
 
     if (gStorage[id].i === 0) {
         anImage.src = gStorage[id].origSrc;
-        //anImage.dataset.state = gStorage[id].origState;
       } else {
         anImage.src = anAltSrcArr[gStorage[id].i - 1];
-        //anImage.dataset.state = !gStorage[id].origState
       }
 }
 
