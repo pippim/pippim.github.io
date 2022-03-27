@@ -168,10 +168,23 @@ Displaying Front Matter choices are "Less" (off) or "More" (on).
 TCM window, local storage button shows:
 
 <script>
+
+function makeTcmButtonVisible () {
+  document.querySelector('#tcm_button').style.cssText = `
+    opacity: 1.0;
+    border: thin solid black;
+    border-radius: .5rem;
+    background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  `;
+}
+
 var vis_this_page = "true";     // Globally set this .js for this html
 var vis_all_pages = sessionStorage.vis_all_pages;
 if (vis_all_pages === undefined) { vis_all_pages = "false" }
-// Breaks tcm.md if (vis_all_pages == "true") { makeTcmButtonVisible() }
+if (vis_all_pages == "true") { makeTcmButtonVisible() }
 // Stored in session storage
 var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
 
