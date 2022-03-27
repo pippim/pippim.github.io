@@ -182,7 +182,7 @@ var switch_on_image = "assets/img/icons/switch_on_right.png"
 var switch_off_image = "/assets/img/icons/switch_off_left.png"
 
 var gStorage = {};  // Stores current image (on or off) by id
-console.log("gStorage defined: " + gStorage.length);
+// console.log("gStorage defined: " + gStorage.length);
 </script>
 
 <h3>Local Storage and Cookies:</h3>
@@ -202,7 +202,7 @@ After closing this window, the TCM button will be:<br>
    src="/assets/img/icons/switch_off_left.png" />
 
 <script>
-console.log("gStorage checked later: " + gStorage.length);
+// console.log("gStorage checked later: " + gStorage.length);
     sel_this_page = document.getElementById("switch_this_page");
     sel_all_pages = document.getElementById("switch_all_pages");
     sel_all_sessions = document.getElementById("switch_all_sessions");
