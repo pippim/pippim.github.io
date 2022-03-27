@@ -368,9 +368,9 @@ font-family
     Turning off vis_this_page forces off all_pages and all_sessions
     Turning off vis_all_pages forces off vis_all_sessions
 */ 
-var vis_this_page = true;
-var vis_all_pages = false;
-var vis_all_sessions = false;
+var vis_this_page = new Boolean(true);
+var vis_all_pages = new Boolean(false);
+var vis_all_sessions = new Boolean(false);
 
 var sel_this_page = null;   // Initialized in local_storage_to_html()
 var sel_all_pages = null;
@@ -496,9 +496,9 @@ function local_storage_to_html() {
     sel_all_pages = document.getElementById("switch_2");
     sel_all_sessions = document.getElementById("switch_3");
 
-    switch_init(sel_this_page);
-    switch_init(sel_all_pages);
-    switch_init(sel_all_sessions);
+    switch_init(sel_this_page, vis_this_page);
+    switch_init(sel_all_pages, vis_all_pages);
+    switch_init(sel_all_sessions, vis_all_sessions);
 
     sel_this_page.addEventListener('click', () => {
         switch_click(sel_this_page, [ off ]);
@@ -516,20 +516,32 @@ function local_storage_to_html() {
 
 var gStorage = {};  // Stores current image (on or off) by id
 
-function switch_init(anImage) {
+function switch_init(anImage, bool) {
     var id = anImage.id;
     var oldSrc = anImage.src;
+    /* Default image is "on" at index value 0 */
     gStorage[id] = {
         'id': id,
         'origSrc': oldSrc,
         'i': 0
     };
+    if (!bool) {
+        gStorage[id].i = 1;  /* Set to off image, index value 1 */
+        anImage.src = off;
+    }
+}
+
+function switch_check(anImage) {
+    var id = anImage.id;
+    var currentSrc = anImage.src;
+    return (currentSrc != off)
 }
 
 function switch_click(anImage, anAltSrcArr) {
     var id = anImage.id;
     var oldSrc = anImage.src;
 
+/*
     if (typeof(gStorage[id]) === "undefined") {
         gStorage[id] = {
             'id': id,
@@ -537,7 +549,7 @@ function switch_click(anImage, anAltSrcArr) {
             'i': 0
         };
     }
-
+*/
     gStorage[id].i += 1;
     if (gStorage[id].i > anAltSrcArr.length) {
         gStorage[id].i = 0;
