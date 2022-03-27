@@ -372,6 +372,7 @@ font-family
 */ 
 var vis_this_page = "true";     // Globally set this .js for this html
 var vis_all_pages = sessionStorage.vis_all_pages;
+if (vis_all_pages === "undefined") { vis_all_pages = "false" }
 console.log("vis_all_pages: " + vis_all_pages)
 // Stored in session storage: tcm_button
 var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
