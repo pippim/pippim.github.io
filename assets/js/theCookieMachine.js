@@ -483,7 +483,11 @@ function local_storage_to_html() {
     sel_all_sessions.addEventListener('click', () => {
         switch_click(sel_all_sessions, [ switch_on_image ]);
         check_all_switches();
-        // Was this just switched on or off?
+        // If visible all sessions then visible everywhere
+        if (vis_all_sessions == "true") {
+            switch_set(sel_this_page, "true");
+            switch_set(sel_all_pages, "true");
+        }
     });
 
 }
