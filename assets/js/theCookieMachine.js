@@ -547,7 +547,8 @@ function check_all_switches() {
 function switch_check(switchElm) {
     // switchElm>src has protocol and website prefixes
     var parts = switchElm.src.split('/');
-    var last_part = parts[-1];
+    console.log("parts: " + parts);
+    var last_part = parts[parts.length - 1];
     if (last_part == switch_off_image) {
         return "false"
     } else {
