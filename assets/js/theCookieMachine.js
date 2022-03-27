@@ -525,7 +525,7 @@ function switch_init(anImage, bool) {
         'origSrc': oldSrc,
         'i': 0
     };
-    if (!bool) {
+    if (bool === false ) {
         gStorage[id].i = 1;  /* Set to off image, index value 1 */
         anImage.src = off;
         console.log("bool is false")
