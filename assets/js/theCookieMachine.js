@@ -479,10 +479,10 @@ function local_storage_to_html() {
 
     var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
-    html += "After closing this window, the TCM button will be:<br>\n"
+    html += "After closing this window, the TCM button will be:\n"
     html += "&emsp; Visible on this webpage? " +
             '<img class="with-action" id="switch_1" ' +
-            'src="assets/img/icons/switch_on_right.png" /><br>\n'
+            'src="assets/img/icons/switch_on_right.png" />\n'
     html += "&emsp; Visible on all webpages? " +
             '<img class="with-action" id="switch_2" ' +
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
@@ -548,12 +548,9 @@ function switch_check(switchElm) {
     // switchElm>src has protocol and website prefixes
     var parts = switchElm.src.split('/');
     var parts2 = switch_off_image.split('/');
-    console.log("parts: " + parts);
-    var last_part = parts[parts.length - 1];
-    if (last_part == parts2[parts2.length - 1]) {
+    if (parts[parts.length - 1] == parts2[parts2.length - 1]) {
         return "false"
     } else {
-        console.log("last_part: " + last_part);
         return "true"
     }
 }
