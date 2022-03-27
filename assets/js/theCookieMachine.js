@@ -285,7 +285,7 @@ function getMarkdownFilename() {
     var urlProtocol = location.protocol;    // https:
     var urlHost = location.hostname;        // pippim.github.io
     var urlPath = location.pathname;        // /yyyy/mm/dd/
-    console.log("urlPath: '" + urlPath + "'  | urlPath.length: " + urlPath.length)
+    // console.log("urlPath: '" + urlPath + "'  | urlPath.length: " + urlPath.length)
     var urlParts = location.pathname.split("/");
     /*
     alert('urlProtocol: ' + urlProtocol +
@@ -383,8 +383,8 @@ var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
 var sel_this_page = null;   // Initialized in local_storage_to_html()
 var sel_all_pages = null;
 var sel_all_sessions = null;
-var switch_on_image = "assets/img/icons/switch_on_right.png"
-var switch_off_image = "/assets/img/icons/switch_off_left.png"
+var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
+var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
 
 function local_storage_to_html() {
     /*
@@ -451,13 +451,13 @@ function local_storage_to_html() {
     html += "After closing this window, the TCM button will be:<br>\n"
     html += "&emsp; Visible on this webpage? " +
             '<img class="with-action" id="switch_this_page" ' +
-            'src="/assets/img/icons/switch_off_left.png" /><br>'
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
     html += "&emsp; Visible on all webpages? " +
             '<img class="with-action" id="switch_all_pages" ' +
-            'src="/assets/img/icons/switch_off_left.png" /><br>'
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
     html += "&emsp; Visible on all sessions? " +
             '<img class="with-action" id="switch_all_sessions" ' +
-            'src="/assets/img/icons/switch_off_left.png" />'
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" />'
     html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
