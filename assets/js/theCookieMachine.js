@@ -545,7 +545,7 @@ function check_all_switches() {
 }
 
 function switch_check(switchElm) {
-    if switchElm.src == switch_off_image {
+    if (switchElm.src == switch_off_image) {
         return "false"
     } else {
         return "true"
