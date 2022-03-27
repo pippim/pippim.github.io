@@ -368,9 +368,9 @@ font-family
     Turning off vis_this_page forces off all_pages and all_sessions
     Turning off vis_all_pages forces off vis_all_sessions
 */ 
-var vis_this_page = new Boolean(true);
-var vis_all_pages = new Boolean(false);
-var vis_all_sessions = new Boolean(false);
+var vis_this_page = "true";
+var vis_all_pages = "false";
+var vis_all_sessions = "false";
 
 var sel_this_page = null;   // Initialized in local_storage_to_html()
 var sel_all_pages = null;
@@ -525,7 +525,7 @@ function switch_init(anImage, bool) {
         'origSrc': oldSrc,
         'i': 0
     };
-    if (bool === false ) {
+    if (bool !== "true" ) {
         gStorage[id].i = 1;  /* Set to off image, index value 1 */
         anImage.src = off;
         console.log("bool is false")
