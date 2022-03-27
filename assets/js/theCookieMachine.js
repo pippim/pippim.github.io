@@ -375,6 +375,7 @@ var vis_all_sessions = "false";
 var sel_this_page = null;   // Initialized in local_storage_to_html()
 var sel_all_pages = null;
 var sel_all_sessions = null;
+var switch_on_image = "assets/img/icons/switch_on_right.png"
 var off = "/assets/img/icons/switch_off_left.png"
 
 function local_storage_to_html() {
@@ -481,7 +482,7 @@ function local_storage_to_html() {
     html += "After closing this window, the TCM button will be:<br>\n"
     html += "&emsp; Visible on this webpage? " +
             '<img class="with-action" id="switch_1" ' +
-            'src="assets/img/icons/switch_on_right.png" /><br>\n'
+            'src=switch_on_image /><br>\n'
     html += "&emsp; Visible on all webpages? " +
             '<img class="with-action" id="switch_2" ' +
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
@@ -527,10 +528,7 @@ function switch_init(anImage, bool) {
     };
     if (bool !== "true" ) {
         gStorage[id].i = 1;  /* Set to off image, index value 1 */
-        anImage.src = off;
-        console.log("bool is false")
-    } else {
-        console.log("bool is true")
+        anImage.src = off;   // Use switched off image
     }
 }
 
