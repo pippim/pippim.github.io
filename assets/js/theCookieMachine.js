@@ -468,6 +468,10 @@ function local_storage_to_html() {
         switch_click(sel_this_page, [ switch_on_image ]);
         check_all_switches();
         // If visible this page is off, turn off others
+        if (vis_this_page == "false") {
+            switch_set(sel_all_pages, "false");
+            switch_set(sel_all_sessions, "false");
+        }
     });
 
     sel_all_pages.addEventListener('click', () => {
@@ -520,7 +524,7 @@ function check_all_switches() {
 function switch_check(switchElm) {
     // switchElm>src has protocol and website prefixes
     var parts = switchElm.src.split('/');
-    var parts2 = switch_off_image.split('/');
+    var parts2 = switch_on_image.split('/');
     if (parts[parts.length - 1] == parts2[parts2.length - 1]) {
         return "true"
     } else {
@@ -539,9 +543,9 @@ function switch_click(switchElm, anAltSrcArr) {
 
     if (gStorage[id].i === 0) {
         switchElm.src = gStorage[id].origSrc;
-      } else {
+    } else {
         switchElm.src = anAltSrcArr[gStorage[id].i - 1];
-      }
+    }
 }
 
 function getCookies() {
