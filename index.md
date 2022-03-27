@@ -81,7 +81,7 @@ method on Stack Exchange Answers or GitHub Repos.
 Get in touch with pippim by sending an email. You can also visit
 the other pippim.com website on Google Sites.
 
-<-- Change Pippim to your contact info below -->
+<!-- Change Pippim to your contact info below -->
 - [📧 Send an Email to Pippim 🔗](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com 🔗")
 
 - Visit the Pippim website on [Google Sites 🔗](https://pippim.com "Visit www.pippim.com 🔗")
