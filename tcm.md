@@ -171,7 +171,7 @@ TCM window, local storage button shows:
 var vis_this_page = "true";     // Globally set this .js for this html
 var vis_all_pages = sessionStorage.vis_all_pages;
 if (vis_all_pages === undefined) { vis_all_pages = "false" }
-if (vis_all_pages == "true") { makeTcmButtonVisible() }
+// Breaks tcm.md if (vis_all_pages == "true") { makeTcmButtonVisible() }
 // Stored in session storage
 var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
 
