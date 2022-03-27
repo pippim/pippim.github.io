@@ -398,45 +398,6 @@ function local_storage_to_html() {
             https://stackoverflow.com/a/43661406/6929343
 
 
-        Optional information for posting comments / sending emails:
-
-            Name
-            Address
-            Phone Number
-
-        System generated information:
-
-            Browser Version
-            IP address
-            Last website
-
-        Base64 would allow emailing?
-
-        Initially just support stringify and parse
-
-        Top level container:
-
-            Pippim Website Payload Version 1.0
-
-        Second level container
-
-            Local Storage Version 1.0
-
-        Third Level containers
-
-            Payload headers Version 1.0
-
-        Fourth Level containers (Payload headers Version 1.0)
-
-            User Configuration Version 1.0
-            Local Cookies Version 1.0
-            Sites Visited Version 1.0
-            Multi-Timer Version 1.0
-
-        Sample Payload:
-
-            Timer Version, Timer Name,
-
     */
 
     // if ('caches' in window){
@@ -481,40 +442,42 @@ function local_storage_to_html() {
     html += "<h3>Local Storage and Cookies:</h3>";
     html += "After closing this window, the TCM button will be:<br>\n"
     html += "&emsp; Visible on this webpage? " +
-            '<img class="with-action" id="switch_1" ' +
-            'src="assets/img/icons/switch_on_right.png" /><br>'
+            '<img class="with-action" id="switch_this_page" ' +
+            'src="/assets/img/icons/switch_off_left.png" /><br>'
     html += "&emsp; Visible on all webpages? " +
-            '<img class="with-action" id="switch_2" ' +
-            'src="assets/img/icons/switch_on_right.png" /><br>'
+            '<img class="with-action" id="switch_all_pages" ' +
+            'src="/assets/img/icons/switch_off_left.png" /><br>'
     html += "&emsp; Visible on all sessions? " +
-            '<img class="with-action" id="switch_3" ' +
-            'src="assets/img/icons/switch_on_right.png" />'
+            '<img class="with-action" id="switch_all_sessions" ' +
+            'src="/assets/img/icons/switch_off_left.png" />'
     html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
 
-    sel_this_page = document.getElementById("switch_1");
-    sel_all_pages = document.getElementById("switch_2");
-    sel_all_sessions = document.getElementById("switch_3");
+    sel_this_page = document.getElementById("switch_this_page");
+    sel_all_pages = document.getElementById("switch_all_pages");
+    sel_all_sessions = document.getElementById("switch_all_sessions");
 
+    // Initialize with cookie values
     switch_init(sel_this_page, vis_this_page);
     switch_init(sel_all_pages, vis_all_pages);
     switch_init(sel_all_sessions, vis_all_sessions);
 
+    // Toggle switch on/off with button click
     sel_this_page.addEventListener('click', () => {
-        switch_click(sel_this_page, [ switch_off_image ]);
+        switch_click(sel_this_page, [ switch_on_image ]);
         check_all_switches();
-        // Was this just switched on or off?
+        // If visible this page is off, turn off others
     });
 
     sel_all_pages.addEventListener('click', () => {
-        switch_click(sel_all_pages, [ switch_off_image ]);
+        switch_click(sel_all_pages, [ switch_on_image ]);
         check_all_switches();
         // Was this just switched on or off?
     });
 
     sel_all_sessions.addEventListener('click', () => {
-        switch_click(sel_all_sessions, [ switch_off_image ]);
+        switch_click(sel_all_sessions, [ switch_on_image ]);
         check_all_switches();
         // Was this just switched on or off?
     });
@@ -532,12 +495,22 @@ function switch_init(switchElm, bool) {
         'origSrc': oldSrc,
         'i': 0
     };
-    if (bool !== "true" ) {
+    if (bool == "true" ) {
         gStorage[id].i = 1;  /* Set to off image, index value 1 */
-        switchElm.src = switch_off_image;   // Use switched off image
+        switchElm.src = switch_on_image;   // Use switched off image
     }
 }
 
+function switch_set(switchElm, bool) {
+    var id = switchElm.id;
+    if (bool == "true" ) {
+        gStorage[id].i = 1;  /* Set to off image, index value 1 */
+        switchElm.src = switch_on_image;   // Use switched off image
+    } else {
+        gStorage[id].i = 0;  /* Set to on image, index value 1 */
+        switchElm.src = switch_off_image;   // Use switched off image
+    }
+}
 function check_all_switches() {
     vis_this_page = switch_check(sel_this_page);
     vis_all_pages = switch_check(sel_all_pages);
@@ -549,9 +522,9 @@ function switch_check(switchElm) {
     var parts = switchElm.src.split('/');
     var parts2 = switch_off_image.split('/');
     if (parts[parts.length - 1] == parts2[parts2.length - 1]) {
-        return "false"
-    } else {
         return "true"
+    } else {
+        return "false"
     }
 }
 
