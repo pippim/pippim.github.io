@@ -478,17 +478,17 @@ function local_storage_to_html() {
     // console.log("archive: " + archive)
 
     var html = "<p>";
-    html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>\n";
-    html += "After closing this window, the TCM button will be:\n"
+    html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>";
+    html += "After closing this window, the TCM button will be:<br>"
     html += "&emsp; Visible on this webpage? " +
             '<img class="with-action" id="switch_1" ' +
-            'src="assets/img/icons/switch_on_right.png" />\n'
+            'src="assets/img/icons/switch_on_right.png" /><br>'
     html += "&emsp; Visible on all webpages? " +
             '<img class="with-action" id="switch_2" ' +
-            'src="assets/img/icons/switch_on_right.png" /><br>\n'
+            'src="assets/img/icons/switch_on_right.png" /><br>'
     html += "&emsp; Visible on all sessions? " +
             '<img class="with-action" id="switch_3" ' +
-            'src="assets/img/icons/switch_on_right.png" /><br>\n'
+            'src="assets/img/icons/switch_on_right.png" />'
     html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
