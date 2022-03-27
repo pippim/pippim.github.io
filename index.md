@@ -100,7 +100,7 @@ link to the original answer on Stack Exchange.
 
 #### GitHub Repos
 
-![Inspector cat detective with magnifying glass](/assets/img/Inspectocadt.jpeg){: style="float: left" width="20%"}
+![Inspector cat detective with magnifying glass](/assets/img/Inspectocat.jpeg){: style="float: left" width="20%"}
 
 For {{ site.title }} programs on GitHub Repos, you can go directly
 to the repository and post a new issue. Issues can be bug reports,
