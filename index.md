@@ -78,8 +78,7 @@ method on Stack Exchange Answers or GitHub Repos.
 
 ### The Conventional Way of Getting in Touch
 
-Get in touch with pippim by sending an email. You can also visit
-the other pippim.com website on Google Sites.
+Get in touch with {{ site.title }} by sending an email.
 
 <!-- Change Pippim to your contact info below -->
 - [📧 Send an Email to Pippim 🔗](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com 🔗")
