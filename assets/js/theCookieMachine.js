@@ -503,23 +503,26 @@ function local_storage_to_html() {
 
     sel_this_page.addEventListener('click', () => {
         switch_click(sel_this_page, [ switch_off_image ]);
+        check_all_switches();
     });
 
     sel_all_pages.addEventListener('click', () => {
         switch_click(sel_all_pages, [ switch_off_image ]);
+        check_all_switches();
     });
 
     sel_all_sessions.addEventListener('click', () => {
         switch_click(sel_all_sessions, [ switch_off_image ]);
+        check_all_switches();
     });
 
 }
 
 var gStorage = {};  // Stores current image (on or off) by id
 
-function switch_init(anImage, bool) {
-    var id = anImage.id;
-    var oldSrc = anImage.src;
+function switch_init(switchElm, bool) {
+    var id = switchElm.id;
+    var oldSrc = switchElm.src;
     /* Default image is "on" at index value 0 */
     gStorage[id] = {
         'id': id,
@@ -528,38 +531,40 @@ function switch_init(anImage, bool) {
     };
     if (bool !== "true" ) {
         gStorage[id].i = 1;  /* Set to off image, index value 1 */
-        anImage.src = switch_off_image;   // Use switched off image
+        switchElm.src = switch_off_image;   // Use switched off image
     }
 }
 
-function switch_check(anImage) {
-    var id = anImage.id;
-    var currentSrc = anImage.src;
-    return (currentSrc != switch_off_image)
+function check_all_switches() {
+    vis_this_page = switch_check(sel_this_page);
+    vis_all_pages = switch_check(sel_all_pages);
+    vis_all_sessions = switch_check(sel_all_sessions);
+    console.log("vis_this_page: " + vis_this_page)
+    console.log("vis_all_pages: " + vis_all_pages)
+    console.log("vis_all_sessions: " + vis_all_sessions)
 }
 
-function switch_click(anImage, anAltSrcArr) {
-    var id = anImage.id;
-    var oldSrc = anImage.src;
-
-/*
-    if (typeof(gStorage[id]) === "undefined") {
-        gStorage[id] = {
-            'id': id,
-            'origSrc': oldSrc,
-            'i': 0
-        };
+function switch_check(switchElm) {
+    if switchElm.src == switch_off_image {
+        return "false"
+    } else {
+        return "true"
     }
-*/
+}
+
+function switch_click(switchElm, anAltSrcArr) {
+    var id = switchElm.id;
+    var oldSrc = switchElm.src;
+
     gStorage[id].i += 1;
     if (gStorage[id].i > anAltSrcArr.length) {
         gStorage[id].i = 0;
     }
 
     if (gStorage[id].i === 0) {
-        anImage.src = gStorage[id].origSrc;
+        switchElm.src = gStorage[id].origSrc;
       } else {
-        anImage.src = anAltSrcArr[gStorage[id].i - 1];
+        switchElm.src = anAltSrcArr[gStorage[id].i - 1];
       }
 }
 
