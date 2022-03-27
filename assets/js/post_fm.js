@@ -15,11 +15,11 @@
         recreate on refresh, recreate on page load, time to keep, auto renew,
 */
 
+import { getCookie , setCookie } from './theCookieJar.js';
+
 // global variables
 var fm_state = "None";
 var fm_button = "None";
-
-import { getCookie , setCookie } from './theCookieJar.js';
 
 function showHide(state){
   var x = document.getElementById("hidden_front_matter");
