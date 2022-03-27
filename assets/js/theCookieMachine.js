@@ -548,6 +548,7 @@ function switch_check(switchElm) {
     if (switchElm.src == switch_off_image) {
         return "false"
     } else {
+        console.log("switchElm.src: " + switchElm.src);
         return "true"
     }
 }
