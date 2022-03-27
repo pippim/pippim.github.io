@@ -545,10 +545,13 @@ function check_all_switches() {
 }
 
 function switch_check(switchElm) {
-    if (switchElm.src == switch_off_image) {
+    // switchElm>src has protocol and website prefixes
+    var parts = switchElm.split('/');
+    var last_part = parts[-1];
+    if (last_part == switch_off_image) {
         return "false"
     } else {
-        console.log("switchElm.src: " + switchElm.src);
+        console.log("last_part: " + last_part;
         return "true"
     }
 }
