@@ -99,7 +99,7 @@ The buttons brighten as you hover over them.
    <tr><td><button id="tcm_display_local" class="tcm_documentation" 
    title="Local storage - Display cookies and cache" > </button></td> 
    <td><b>Local Storage</b> - Change cookies used for option settings such as;
-   Less/More front matter and TCM Button.</td></tr>
+   Less/More front matter and TCM Button visibility on page header.</td></tr>
    
    <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" 
    title="Hyperlink Recipe Baker" > </button></td> 
@@ -165,79 +165,19 @@ that are stored in cookies. Generally speaking red is for "off"
 and green is for "on". Sometimes it is repurposed. For example,
 Displaying Front Matter choices are "Less" (off) or "More" (on).
 
-<p>Click on an On/Off Slider Switch below<br>
-Display More Jekyll Front Matter?
-<img class="with-action" id="switch_1" data-state="false" 
-src="/assets/img/icons/switch_off_left.png" 
-onclick='toggle(this, ["assets/img/icons/switch_on_right.png"]);' />
-<br>
-Keep TCM Window Button on Header active for session?
-<img class="with-action" id="switch_2" data-state="true" 
-src="assets/img/icons/switch_on_right.png" 
-onclick='toggle(this, ["/assets/img/icons/switch_off_left.png"]);'/>
-</p>
-<style>
-.with-action {
-  vertical-align: middle;
-  width: 40px;
-  height: auto;
-  // Next lines aren't working...
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}</style>
+TCM window, local storage button shows:
 
-<!-- https://stackoverflow.com/a/7950833/6929343 
-
-REVISIONS:
-
-First define the class images
-Then set the current image
-Then go into toggle mode
--->
-
-<script>
-var gStorage = {};
-
-function toggle(anImage, anAltSrcArr) {
-    var id = anImage.id;
-    var oldSrc = anImage.src;
-    var oldState = (anImage.dataset.state === 'true');
-
-    if (typeof(gStorage[id]) === "undefined") {
-        gStorage[id] = {
-            'id': id,
-            'origSrc': oldSrc,
-            'i': 0,
-            'origState': oldState
-        };
-    }
-
-    gStorage[id].i += 1;
-    if (gStorage[id].i > anAltSrcArr.length) {
-        gStorage[id].i = 0;
-    }
-
-    if (gStorage[id].i === 0) {
-        anImage.src = gStorage[id].origSrc;
-        anImage.dataset.state = gStorage[id].origState;
-      } else {
-        anImage.src = anAltSrcArr[gStorage[id].i - 1];
-        anImage.dataset.state = !gStorage[id].origState
-      }
-}</script>
-
-The *On/Off Slider Switch* control
-
-ID switch1 follows:
-
-<input type="checkbox" id="switch1" class="switch"/>
-
-ID switch2 follows:
-
-<input type="checkbox" id="switch2" class="switch"/>
-
-
+<h3>Local Storage and Cookies:</h3>";
+After closing this window, the TCM button will be:<br>
+&emsp; Visible on this webpage?
+            <img class="with-action" id="switch_this_page" 
+            src="/assets/img/icons/switch_off_left.png" /><br>
+&emsp; Visible on all webpages? 
+            <img class="with-action" id="switch_all_pages" 
+            src="/assets/img/icons/switch_off_left.png" /><br>
+&emsp; Visible on all sessions? 
+            <img class="with-action" id="switch_all_sessions" 
+            src="/assets/img/icons/switch_off_left.png" />
 
 ---
 
