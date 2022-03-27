@@ -95,10 +95,8 @@ document.querySelector('#tcm_button').addEventListener('click', () => {
 document.querySelector('#tcm_window_close').addEventListener('click', () => {
   // Hide tcm_window
   document.querySelector('#tcm_window').style.display = "none";
-  // Make tcm_button visible
-  if (vis_this_page) {
-    makeTcmButtonVisible()
-  }
+  // Make tcm_button (main page header) visible?
+  if (vis_this_page == "true") { makeTcmButtonVisible() }
 });
 
 function makeTcmButtonVisible () {
