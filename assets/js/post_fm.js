@@ -15,11 +15,36 @@
         recreate on refresh, recreate on page load, time to keep, auto renew,
 */
 
-import { getCookie , setCookie } from './theCookieJar.js';
+// import { getCookie , setCookie } from './theCookieJar.js';
 
 // global variables
 var fm_state = "None";
 var fm_button = "None";
+
+function setCookie(cname, value, exp_days) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exp_days * 24*60*60*1000));
+  let expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + value + ";" + expires + ";path=/" +
+                    ";SameSite=Strict";
+  // console.log("document.cookie: " + document.cookie)
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
 
 function showHide(state){
   var x = document.getElementById("hidden_front_matter");
