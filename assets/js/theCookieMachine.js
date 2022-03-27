@@ -376,7 +376,7 @@ var sel_this_page = null;   // Initialized in local_storage_to_html()
 var sel_all_pages = null;
 var sel_all_sessions = null;
 var switch_on_image = "assets/img/icons/switch_on_right.png"
-var off = "/assets/img/icons/switch_off_left.png"
+var switch_off_image = "/assets/img/icons/switch_off_left.png"
 
 function local_storage_to_html() {
     /*
@@ -482,7 +482,7 @@ function local_storage_to_html() {
     html += "After closing this window, the TCM button will be:<br>\n"
     html += "&emsp; Visible on this webpage? " +
             '<img class="with-action" id="switch_1" ' +
-            'src=switch_on_image /><br>\n'
+            'src="assets/img/icons/switch_on_right.png" /><br>\n'
     html += "&emsp; Visible on all webpages? " +
             '<img class="with-action" id="switch_2" ' +
             'src="assets/img/icons/switch_on_right.png" /><br>\n'
@@ -502,15 +502,15 @@ function local_storage_to_html() {
     switch_init(sel_all_sessions, vis_all_sessions);
 
     sel_this_page.addEventListener('click', () => {
-        switch_click(sel_this_page, [ off ]);
+        switch_click(sel_this_page, [ switch_off_image ]);
     });
 
     sel_all_pages.addEventListener('click', () => {
-        switch_click(sel_all_pages, [ off ]);
+        switch_click(sel_all_pages, [ switch_off_image ]);
     });
 
     sel_all_sessions.addEventListener('click', () => {
-        switch_click(sel_all_sessions, [ off ]);
+        switch_click(sel_all_sessions, [ switch_off_image ]);
     });
 
 }
@@ -528,14 +528,14 @@ function switch_init(anImage, bool) {
     };
     if (bool !== "true" ) {
         gStorage[id].i = 1;  /* Set to off image, index value 1 */
-        anImage.src = off;   // Use switched off image
+        anImage.src = switch_off_image;   // Use switched off image
     }
 }
 
 function switch_check(anImage) {
     var id = anImage.id;
     var currentSrc = anImage.src;
-    return (currentSrc != off)
+    return (currentSrc != switch_off_image)
 }
 
 function switch_click(anImage, anAltSrcArr) {
