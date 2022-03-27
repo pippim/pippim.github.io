@@ -372,8 +372,9 @@ font-family
 */ 
 var vis_this_page = "true";     // Globally set this .js for this html
 var vis_all_pages = sessionStorage.vis_all_pages;
-if (vis_all_pages === "undefined") { vis_all_pages = "false" }
-console.log("vis_all_pages: " + vis_all_pages)
+console.log("sessionStorage.vis_all_pages: " + sessionStorage.vis_all_pages);
+if (vis_all_pages === undefined) { vis_all_pages = "false" }
+console.log("vis_all_pages: " + vis_all_pages);
 // Stored in session storage: tcm_button
 var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
 
@@ -529,7 +530,13 @@ function switch_set(switchElm, bool) {
         gStorage[id].i = 0;  /* Set to on image, index value 1 */
         switchElm.src = switch_off_image;   // Use switched off image
     }
+    // Setting sessionStorage variable?
+    if (switchElm == sel_all_pages) {
+        sessionStorage.vis_all_pages = vis_all_pages;
+        console.log("sessionStorage.vis_all_pages: " + sessionStorage.vis_all_pages)
+    }
 }
+
 function check_all_switches() {
     vis_this_page = switch_check(sel_this_page);
     vis_all_pages = switch_check(sel_all_pages);
