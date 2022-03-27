@@ -97,18 +97,21 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
   document.querySelector('#tcm_window').style.display = "none";
   // Make tcm_button visible
   if (vis_this_page) {
-      document.querySelector('#tcm_button').style.cssText = `
-      opacity: 1.0;
-      border: thin solid black;
-      border-radius: .5rem;
-      background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
-                        url({{ site.url }}/assets/img/icons/button_background.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      `;
-   }
+    makeTcmButtonVisible()
+  }
 });
 
+function makeTcmButtonVisible () {
+  document.querySelector('#tcm_button').style.cssText = `
+    opacity: 1.0;
+    border: thin solid black;
+    border-radius: .5rem;
+    background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  `;
+}
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 var oldFontSize = null      // Save for when LineDraw changes
@@ -363,7 +366,7 @@ font-family
 
 /* Whether the TCM button (on the main page header) is visible or not
     When set/get vis_this_page the current global variable suffices
-    When set/get vis_all_pages a session cookie is necessary
+    When set/get vis_all_pages a sessionStorage is necessary
     When set/get vis_all_sessions a local cookie is necessary
 
     Turning on vis_all_sessions forces on this_page and all_pages
@@ -372,9 +375,8 @@ font-family
 */ 
 var vis_this_page = "true";     // Globally set this .js for this html
 var vis_all_pages = sessionStorage.vis_all_pages;
-console.log("sessionStorage.vis_all_pages: " + sessionStorage.vis_all_pages);
 if (vis_all_pages === undefined) { vis_all_pages = "false" }
-console.log("vis_all_pages: " + vis_all_pages);
+if (vis_all_pages == "true") { makeTcmButtonVisible() }
 // Stored in session storage
 var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
 
@@ -483,6 +485,7 @@ function local_storage_to_html() {
     sel_all_pages.addEventListener('click', () => {
         switch_click(sel_all_pages, [ switch_on_image ]);
         check_all_switches();
+        sessionStorage.vis_all_pages = vis_all_pages;
         // Was this just switched on or off?
         if (vis_all_pages == "true") {
             switch_set(sel_this_page, "true");
@@ -524,17 +527,14 @@ function switch_init(switchElm, bool) {
 function switch_set(switchElm, bool) {
     var id = switchElm.id;
     if (bool == "true" ) {
-        gStorage[id].i = 1;  /* Set to on image, index value 1 */
-        switchElm.src = switch_on_image;   // Use switched on image
+        gStorage[id].i = 1;                 // Set to on image, index value 1
+        switchElm.src = switch_on_image;    // Use switched on image
     } else {
-        gStorage[id].i = 0;  /* Set to off image, index value 1 */
+        gStorage[id].i = 0;                 // Set to off image, index value 0
         switchElm.src = switch_off_image;   // Use switched off image
     }
-    // Setting sessionStorage variable?
-    if (id == "switch_all_pages") {
-        sessionStorage.vis_all_pages = bool;
-        console.log("sessionStorage.vis_all_pages: " + sessionStorage.vis_all_pages)
-    }
+    // Setting the sessionStorage variable?
+    if (id == "switch_all_pages") { sessionStorage.vis_all_pages = bool; }
 }
 
 function check_all_switches() {
