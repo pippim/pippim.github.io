@@ -184,6 +184,19 @@ After closing this window, the TCM button will be:<br>
    src="/assets/img/icons/switch_off_left.png" />
 
 <script>
+var vis_this_page = "true";     // Globally set this .js for this html
+var vis_all_pages = sessionStorage.vis_all_pages;
+if (vis_all_pages === undefined) { vis_all_pages = "false" }
+if (vis_all_pages == "true") { makeTcmButtonVisible() }
+// Stored in session storage
+var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
+
+var sel_this_page = null;   // Initialized in local_storage_to_html()
+var sel_all_pages = null;
+var sel_all_sessions = null;
+var switch_on_image = "assets/img/icons/switch_on_right.png"
+var switch_off_image = "/assets/img/icons/switch_off_left.png"
+
     sel_this_page = document.getElementById("switch_this_page");
     sel_all_pages = document.getElementById("switch_all_pages");
     sel_all_sessions = document.getElementById("switch_all_sessions");
@@ -226,6 +239,72 @@ After closing this window, the TCM button will be:<br>
             switch_set(sel_all_pages, "true");
         }
     });
+
+
+var gStorage = {};  // Stores current image (on or off) by id
+
+function switch_init(switchElm, bool) {
+    var id = switchElm.id;
+    var oldSrc = switchElm.src;
+    /* Default image is "on" at index value 0 */
+    gStorage[id] = {
+        'id': id,
+        'origSrc': oldSrc,
+        'i': 0
+    };
+    if (bool == "true" ) {
+        gStorage[id].i = 1;  /* Set to off image, index value 1 */
+        switchElm.src = switch_on_image;   // Use switched off image
+    }
+}
+
+function switch_set(switchElm, bool) {
+    var id = switchElm.id;
+    if (bool == "true" ) {
+        gStorage[id].i = 1;                 // Set to on image, index value 1
+        switchElm.src = switch_on_image;    // Use switched on image
+    } else {
+        gStorage[id].i = 0;                 // Set to off image, index value 0
+        switchElm.src = switch_off_image;   // Use switched off image
+    }
+    // Setting the sessionStorage variable?
+    if (id == "switch_all_pages") { sessionStorage.vis_all_pages = bool; }
+}
+
+function check_all_switches() {
+    vis_this_page = switch_check(sel_this_page);
+    vis_all_pages = switch_check(sel_all_pages);
+    vis_all_sessions = switch_check(sel_all_sessions);
+}
+
+function switch_check(switchElm) {
+    // switchElm>src has protocol and website prefixes
+    var parts = switchElm.src.split('/');
+    var parts2 = switch_on_image.split('/');
+    if (parts[parts.length - 1] == parts2[parts2.length - 1]) {
+        return "true"
+    } else {
+        return "false"
+    }
+}
+
+function switch_click(switchElm, anAltSrcArr) {
+    var id = switchElm.id;
+    var oldSrc = switchElm.src;
+
+    gStorage[id].i += 1;
+    if (gStorage[id].i > anAltSrcArr.length) {
+        gStorage[id].i = 0;
+    }
+
+    if (gStorage[id].i === 0) {
+        switchElm.src = gStorage[id].origSrc;
+    } else {
+        switchElm.src = anAltSrcArr[gStorage[id].i - 1];
+    }
+}
+
+
 </script>
 
 ---
