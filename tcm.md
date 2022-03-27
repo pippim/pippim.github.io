@@ -167,17 +167,66 @@ Displaying Front Matter choices are "Less" (off) or "More" (on).
 
 TCM window, local storage button shows:
 
-<h3>Local Storage and Cookies:</h3>";
+<h3>Local Storage and Cookies:</h3>
+
 After closing this window, the TCM button will be:<br>
+
 &emsp; Visible on this webpage?
-            <img class="with-action" id="switch_this_page" 
-            src="/assets/img/icons/switch_off_left.png" /><br>
+   <img class="with-action" id="switch_this_page" 
+   src="/assets/img/icons/switch_off_left.png" /><br>
+
 &emsp; Visible on all webpages? 
-            <img class="with-action" id="switch_all_pages" 
-            src="/assets/img/icons/switch_off_left.png" /><br>
+   <img class="with-action" id="switch_all_pages" 
+   src="/assets/img/icons/switch_off_left.png" /><br>
+
 &emsp; Visible on all sessions? 
-            <img class="with-action" id="switch_all_sessions" 
-            src="/assets/img/icons/switch_off_left.png" />
+   <img class="with-action" id="switch_all_sessions" 
+   src="/assets/img/icons/switch_off_left.png" />
+
+<script>
+    sel_this_page = document.getElementById("switch_this_page");
+    sel_all_pages = document.getElementById("switch_all_pages");
+    sel_all_sessions = document.getElementById("switch_all_sessions");
+
+    // Initialize with cookie values
+    switch_init(sel_this_page, vis_this_page);
+    switch_init(sel_all_pages, vis_all_pages);
+    switch_init(sel_all_sessions, vis_all_sessions);
+
+    // Toggle switch on/off with button click
+    sel_this_page.addEventListener('click', () => {
+        switch_click(sel_this_page, [ switch_on_image ]);
+        check_all_switches();
+        // If visible this page is off, turn off others
+        if (vis_this_page == "false") {
+            switch_set(sel_all_pages, "false");
+            switch_set(sel_all_sessions, "false");
+        }
+    });
+
+    sel_all_pages.addEventListener('click', () => {
+        switch_click(sel_all_pages, [ switch_on_image ]);
+        check_all_switches();
+        sessionStorage.vis_all_pages = vis_all_pages;
+        // Was this just switched on or off?
+        if (vis_all_pages == "true") {
+            switch_set(sel_this_page, "true");
+        }
+        if (vis_all_pages == "false") {
+            switch_set(sel_all_sessions, "false");
+        }
+    });
+
+    sel_all_sessions.addEventListener('click', () => {
+        switch_click(sel_all_sessions, [ switch_on_image ]);
+        check_all_switches();
+        // If visible all sessions then visible everywhere
+        if (vis_all_sessions == "true") {
+            switch_set(sel_this_page, "true");
+            switch_set(sel_all_pages, "true");
+        }
+    });
+</script>
 
 ---
 
