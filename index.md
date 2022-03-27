@@ -146,6 +146,10 @@ document.cookie = cname + "=" + value + ";" + expires + ";path=/" +
 
 The above is code from line 9 of the file.
 
+The same code can be found in `/assets/js/theCookieJar.js`. Here
+a cookie is created to remember the Cookie Machine button's
+visibility on all pages.
+
 {% include image.html src="/assets/img/Octocat.png"
    alt="Octocat image by GitHub.com"
    style="float: right; width: 40%; margin: 2em 0px 0px 1em;"
