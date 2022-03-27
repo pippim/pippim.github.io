@@ -375,7 +375,7 @@ var vis_all_pages = sessionStorage.vis_all_pages;
 console.log("sessionStorage.vis_all_pages: " + sessionStorage.vis_all_pages);
 if (vis_all_pages === undefined) { vis_all_pages = "false" }
 console.log("vis_all_pages: " + vis_all_pages);
-// Stored in session storage: tcm_button
+// Stored in session storage
 var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
 
 var sel_this_page = null;   // Initialized in local_storage_to_html()
@@ -524,15 +524,15 @@ function switch_init(switchElm, bool) {
 function switch_set(switchElm, bool) {
     var id = switchElm.id;
     if (bool == "true" ) {
-        gStorage[id].i = 1;  /* Set to off image, index value 1 */
-        switchElm.src = switch_on_image;   // Use switched off image
+        gStorage[id].i = 1;  /* Set to on image, index value 1 */
+        switchElm.src = switch_on_image;   // Use switched on image
     } else {
-        gStorage[id].i = 0;  /* Set to on image, index value 1 */
+        gStorage[id].i = 0;  /* Set to off image, index value 1 */
         switchElm.src = switch_off_image;   // Use switched off image
     }
     // Setting sessionStorage variable?
-    if (switchElm == sel_all_pages) {
-        sessionStorage.vis_all_pages = vis_all_pages;
+    if (id == "switch_all_pages") {
+        sessionStorage.vis_all_pages = bool;
         console.log("sessionStorage.vis_all_pages: " + sessionStorage.vis_all_pages)
     }
 }
