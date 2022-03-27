@@ -11,6 +11,7 @@
 // imported functions.  Parent needs <script type="module"...
 // See: /_layouts +> /default.html, / hrb.html, /program.html, etc.
 import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
+import { getCookie , setCookie } from './theCookieJar.js';
 
 // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
 window.addEventListener('DOMContentLoaded', (event) => {

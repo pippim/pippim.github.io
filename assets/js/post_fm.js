@@ -19,30 +19,7 @@
 var fm_state = "None";
 var fm_button = "None";
 
-export function setCookie(cname, value,exp_days) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exp_days * 24*60*60*1000));
-  let expires = "expires=" + d.toGMTString();
-  document.cookie = cname + "=" + value + ";" + expires + ";path=/" +
-                    ";SameSite=Strict";
-  // console.log("document.cookie: " + document.cookie)
-}
-
-export function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
+import { getCookie , setCookie } from './theCookieJar.js';
 
 function showHide(state){
   var x = document.getElementById("hidden_front_matter");
@@ -104,3 +81,5 @@ function fm_toggle() {
   // parameter that can be set to true to bypass the cache:
   //window.location.reload(true);
 }
+
+/* End of /assets/js/post_fm.js */
