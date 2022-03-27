@@ -478,8 +478,8 @@ function local_storage_to_html() {
     // console.log("archive: " + archive)
 
     var html = "<p>";
-    html += "<h3>The Cookie Machine (TCM) Future Local Storage:</h3>";
-    html += "After closing this window, the TCM button will be:<br>"
+    html += "<h3>Local Storage and Cookies:</h3>";
+    html += "After closing this window, the TCM button will be:<br>\n"
     html += "&emsp; Visible on this webpage? " +
             '<img class="with-action" id="switch_1" ' +
             'src="assets/img/icons/switch_on_right.png" /><br>'
