@@ -190,7 +190,7 @@ After closing this window, the TCM button will be:<br>
     /tcm.md - The Cookie Machine documentation webpage
 */
 {% include tcmButtonVisibility.js %}
-
+tcmButtonVisibility()
 
 </script>
 
