@@ -101,17 +101,6 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
   // else { console.log("vis_this_page: " + vis_this_page) }
 });
 
-function makeTcmButtonVisible () {
-  document.querySelector('#tcm_button').style.cssText = `
-    opacity: 1.0;
-    border: thin solid black;
-    border-radius: .5rem;
-    background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
-                      url({{ site.url }}/assets/img/icons/button_background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-  `;
-}
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 var oldFontSize = null      // Save for when LineDraw changes
@@ -373,18 +362,6 @@ font-family
     Turning off vis_this_page forces off all_pages and all_sessions
     Turning off vis_all_pages forces off vis_all_sessions
 */ 
-var vis_this_page = "true";     // Globally set this .js for this html
-var vis_all_pages = sessionStorage.vis_all_pages;
-if (vis_all_pages === undefined) { vis_all_pages = "false" }
-if (vis_all_pages == "true") { makeTcmButtonVisible() }
-// Stored in session storage
-var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
-
-var sel_this_page = null;   // Initialized in local_storage_to_html()
-var sel_all_pages = null;
-var sel_all_sessions = null;
-var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
-var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
 
 function local_storage_to_html() {
     /*
@@ -505,6 +482,31 @@ function local_storage_to_html() {
         }
     });
 
+}
+
+var vis_this_page = "true";     // Globally set this .js for this html
+var vis_all_pages = sessionStorage.vis_all_pages;
+if (vis_all_pages === undefined) { vis_all_pages = "false" }
+if (vis_all_pages == "true") { makeTcmButtonVisible() }
+// Stored in session storage
+var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
+
+var sel_this_page = null;   // Initialized in local_storage_to_html()
+var sel_all_pages = null;
+var sel_all_sessions = null;
+var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
+var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
+
+function makeTcmButtonVisible () {
+  document.querySelector('#tcm_button').style.cssText = `
+    opacity: 1.0;
+    border: thin solid black;
+    border-radius: .5rem;
+    background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  `;
 }
 
 var gStorage = {};  // Stores current image (on or off) by id
