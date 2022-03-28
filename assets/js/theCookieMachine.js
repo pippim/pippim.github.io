@@ -439,6 +439,12 @@ function local_storage_to_html() {
 
     b.innerHTML = html;              // Update TCM Window body
 
+    /* Call shared routines with /tcm.md */
+    tcmButtonVisibility()
+}
+
+function tcmButtonVisibility() {
+    // Functions shared by /assets/js/theCookieMachine.js and /tcm.md
     sel_this_page = document.getElementById("switch_this_page");
     sel_all_pages = document.getElementById("switch_all_pages");
     sel_all_sessions = document.getElementById("switch_all_sessions");
@@ -498,6 +504,7 @@ var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
 var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
 
 function makeTcmButtonVisible () {
+  // Make #tcm_button at Top of Page (header section) visible
   document.querySelector('#tcm_button').style.cssText = `
     opacity: 1.0;
     border: thin solid black;
