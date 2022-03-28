@@ -64,15 +64,14 @@ Click and hold the title bar and drag the window anywhere on your screen.
 
 {% include image.html src="/assets/img/tcm/TCM transparent button.gif"
    alt="TCM transparent button.gif"
-   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
    caption="The Cookie Machine Transparent Button"
 %}
 
-## TCM Window Buttons
+# TCM Window Buttons
 
 The buttons brighten as you hover over them.
 
-### TCM Window Buttons
 
 <table id="tcm_window_table" class="hrb_table">
    <tr><th>Buttons</th>
@@ -153,7 +152,40 @@ The buttons brighten as you hover over them.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
 
-# TCM Top of Page Button Visibility
+---
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+
+
+# Home Button
+
+Displays Jekyll Front Matter for the website. This
+is formatted as YAML key/value pairs in `_config.yml`.
+
+Comments and blank lines are not displayed.
+
+---
+
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+
+# Cloud Button
+
+Displays website tree.
+
+---
+
+
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+
+# Local Storage Button
+
+The local storage section is used to control cookie settings.
+
+The TCM Top of Page Button's visibility is controlled by 
+cookies described below.
 
 On/Off slider switches are used to control when the
 TCM Button is visible at the top of webpages. When the
@@ -192,37 +224,6 @@ tcmButtonVisibility()
 
 </script>
 
----
-
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
-
-
-# Home Button
-
-Displays Jekyll Front Matter for the website. This
-is formatted as YAML key/value pairs in `_config.yml`.
-
-Comments and blank lines are not displayed.
-
----
-
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
-
-# Cloud Button
-
-Displays website tree.
-
----
-
-
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
-
-# Local Storage Button
-
-Described above
 
 ----
 
