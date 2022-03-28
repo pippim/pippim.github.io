@@ -172,9 +172,9 @@ $lavender: #E6E6FA !default; // lavender
 
   &:hover {
     background-color: $lavender;
-    &:before {
-      width: 100%;
-    }
+//    &:before {        // Mar 28/22 Not sure why this is here?
+//      width: 100%;
+//    }
   }
 }
 
@@ -194,9 +194,7 @@ $lavender: #E6E6FA !default; // lavender
     background-color: $honeydew; // Honeydew
 
     &:hover {
-      //background-position: bottom;  // Mar 28 22 - for images, not sure why here?
-      // background-position: top;
-       color:#F0FFF0;
+       color: blue;
     }
     // End copy hdr-btn
 
@@ -204,7 +202,7 @@ $lavender: #E6E6FA !default; // lavender
 
 #view_button:hover {
     background-color: $honeydew ! important; // Honeydew
-    color: blue;
+    // color: blue;
     text-decoration: underline;
 }
 
