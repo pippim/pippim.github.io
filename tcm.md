@@ -152,20 +152,14 @@ The buttons brighten as you hover over them.
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
-   alt="TCM transparent button.gif"
-   style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
-   caption="The Cookie Machine Transparent Button"
-%}
 
-## On/Off Slider Switch
+# TCM Top of Page Button Visibility
 
-The On/Off Slider switch is used primarily for User Options
-that are stored in cookies. Generally speaking red is for "off"
-and green is for "on". Sometimes it is repurposed. For example,
-Displaying Front Matter choices are "Less" (off) or "More" (on).
+On/Off slider switches are used to control when the
+TCM Button is visible at the top of webpages. When the
+switch is red it "off" and when it is green it is "on".
 
-TCM window, local storage button shows:
+In the TCM window's local storage section you will see:
 
 <h3>Local Storage and Cookies:</h3>
 
@@ -182,6 +176,10 @@ After closing this window, the TCM button will be:<br>
 &emsp; Visible on all sessions? 
    <img class="with-action" id="switch_all_sessions" 
    src="/assets/img/icons/switch_off_left.png" />
+
+> **NOTE:** The slider switches above are live and will
+> effect TCM Button visibility as if you had set them
+> in the Cookie Machine directly.
 
 <script>
 
@@ -200,73 +198,21 @@ tcmButtonVisibility()
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 
-{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
-   alt="TCM transparent button.gif"
-   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
-   caption="The Cookie Machine Transparent Button"
-%}
+# Home Button
 
-## Timers Configuration
+Displays Jekyll Front Matter for the website. This
+is formatted as YAML key/value pairs in `_config.yml`.
 
-When you click the *Timers Tab* a window similar to the
-one on the left appears.
-
-Initially all the *Aliases* are set to "Timer 1", "Timer 2",
-"Timer 3", etc., all the way up to the Maximum Number of
-Timers.
-
-The Alias that you enter is used in the Progress Display.
-
-Initially, all the *Durations* are set to `0`. You can have
-as many `0` durations as you like. However, there must be at
-least one non-zero duration to make up a valid set of timers.
-
-Any timers with a duration of "`0`" will not be displayed in
-the progress bars.
-
-You can key in the Duration number directly. Or, click
-<kbd>+</kbd> to increment by a value of 1 and, click
-<kbd>-</kbd> to decrement by a value of 1.
-
-In this example the first Alias is "`Wash`" and the Duration is
-set to "`16`". In the Configuration Tab the units of measure
-were set to "`Minutes`" so the duration of the "`Wash`" timer
-is 16 minutes.
-
-Next is the "`Rinse`" timer at 13 minutes. Finally, the
-"`Dry`" timer is set to 58 minutes.
+Comments and blank lines are not displayed.
 
 ---
 
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
-# Installing Multi-Timer
+# Cloud Button
 
-You can download the [Source Code](https://github.com/pippim/multi-timer)
-from GitHub but that is a complicated process for a single file.
-
-The easiest way is to
-[open the raw code](https://raw.githubusercontent.com/pippim/multi-timer/main/src/mt)
-on GitHub.
-
-Then use:
-
-- <kbd>Ctrl</kbd> + <kbd>A</kbd> to select all text
-- <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy all text to clipboard
-- Open the terminal with <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>
-- Run `gedit mt`
-- <kbd>Ctrl</kbd> + <kbd>V</kbd> to paste text from clipboard
-- Save the file and exit gedit.
-- Flag the file as executable using `chmod a+x mt`
-
-Voila! You have just installed `mt` to your home directory.
-
-Now to run Multi-Timer you need to always specify the program
-is located in your home directory. See the next section to move
-Multi-Timer to a directory in your path so you do not have to
-specify where `mt` is located.
-
+Displays website tree.
 
 ---
 
@@ -274,106 +220,33 @@ specify where `mt` is located.
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-## Move Multi-Timer into PATH
+# Local Storage Button
 
-In order to call Multi-Timer from any directory with the `mt` command
-you will want to move the program into your path.
-
-A good place for all users is `/usr/bin`.
-
-A good place to use Multi-Timer just for yourself
-is `~/bin`. Because `~` is shorthand for `/home/<YOUR USER NAME>`,
-the `~/bin` directory under your home user name. By default,
-you do not have a `~/bin` directory under your home user name. So you
-will need to use:
-
-```shell
-mkdir ~/bin
-```
-
-> NOTE:
->
-> After creating the `~/bin` directory you will need to
-> close the terminal and reopen it.
-
-To verify the new directory is in your path use:
-
-```shell
-echo $PATH
-```
-
-The very first directory will be `/home/<YOUR USER NAME>/bin`.
-
-Now move the `mt` program from `~/mt` to `~/bin/mt` using:
-
-``` shell
-mv ~/mt ~/bin/mt
-```
-
-Now you are all set to call `mt` from any directory!
+Described above
 
 ----
-
 
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
-# Optionally Modify Multi-Timer Source Code
+# Hyperlink Button
 
-The source code (Bash Script) can easily be changed by anyone with
-moderate knowledge of the Linux Shell.  You can view the full
-source code [here](https://github.com/pippim/multi-timer/blob/main/src/mt),
+Spins up an instance of the Hyperlink Recipe Baker.
 
-If you wish to change the source code, here are the likely places you
-want to change:
-
-``` bash
-# Running under WSL (Windows Subsystem for Linux)?
-if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null ; then
-    fWindows10=TRUE
-    SoundPlayer=""
-    DefaultSound="C:\Windows\media\Ring05.wav"
-    TitlePrefix="Windows 10"
-else
-    fWindows10=FALSE
-    SoundPlayer="/usr/bin/paplay"
-    DefaultSound="/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga"
-    TitlePrefix="Linux"
-fi
-
-DefaultIcon="/usr/share/icons/gnome/48x48/status/appointment-soon.png"
-sIconFilename="$DefaultIcon"    # Give default until configuration read in
-MAX_TIMERS=10                   # Default when creating configuration
-```
-
-> **IMPORTANT NOTE:**
->
-> Version 0.2.0 was released on
-> February 19, 2022 and not tested with WSL
-> (Windows Subsystem for Linux).
-
----
+This allows you to quickly create hyperlinks on any website page
+without having to switch browser tabs.
 
 
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+# Webpage Information Button
 
-# Dependencies
-
-Here are the dependencies you ned to install for `mt`.
-
-``` shell
-sudo apt update
-sudo apt install yad
-sudo apt install libnotify-bin
-```
+Displays Jekyll Front Matter for the current webpage. This
+is formatted as YAML key/value pairs.
 
 ---
 
 
 <a id="hdr10"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
-
 
 
 # Create a Second Configuration File
