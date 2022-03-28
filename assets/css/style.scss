@@ -202,6 +202,12 @@ $lavender: #E6E6FA !default; // lavender
 
 }
 
+#view_button:hover {
+    background-color: $honeydew; // Honeydew
+    color: blue;
+    text-decoration: underline;
+}
+
 // Yellow highlighter pen
 mark {
   // total new style: https://www.abeautifulsite.net/posts/a-clever-way-to-style-the-mark-element/
