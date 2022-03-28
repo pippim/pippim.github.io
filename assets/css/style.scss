@@ -194,7 +194,7 @@ $lavender: #E6E6FA !default; // lavender
     background-color: $honeydew; // Honeydew
 
     &:hover {
-      background-position: bottom;
+      //background-position: bottom;  // Mar 28 22 - for images, not sure why here?
       // background-position: top;
        color:#F0FFF0;
     }
@@ -203,7 +203,7 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 #view_button:hover {
-    background-color: $honeydew; // Honeydew
+    background-color: $honeydew ! important; // Honeydew
     color: blue;
     text-decoration: underline;
 }
