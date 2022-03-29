@@ -41,27 +41,30 @@ function tcmButtonVisibility() {
     sel_all_sessions.addEventListener('click', () => {
         switch_click(sel_all_sessions, [ switch_on_image ]);
         check_all_switches();
-        // If visible all sessions then visible everywhere
+        /*  Set switch directly because another won't turn it
+            and it must be saved to cookie for other to see. */
+        switch_set(sel_all_sessions, vis_all_sessions);
+
+        // If visible all sessions then force visible everywhere
         if (vis_all_sessions == "true") {
             switch_set(sel_this_page, "true");
             switch_set(sel_all_pages, "true");
-            switch_set(sel_all_sessions, "true");
-        } else {
-            switch_set(sel_all_sessions, "false");
-        }
     });
 
 }
 
-var vis_this_page = "true";     // Globally set this .js for this html
+var vis_this_page = "true";     // Global default for all pages opened.
+// Get whatever we've setup in session storage
 var vis_all_pages = sessionStorage.vis_all_pages;
 if (vis_all_pages === undefined) { vis_all_pages = "false" }
 if (vis_all_pages == "true") { makeTcmButtonVisible() }
-// Stored in session storage
+// Stored in cookie to apply to all sessions
 var vis_all_sessions_cname = "vis_all_sessions";
 var vis_all_sessions = getCookie(vis_all_sessions_cname)
+// getCookie() will return "" if cookie is undefined.
 if (vis_all_sessions == "") { vis_all_sessions = "false" }
-// var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
+// if All sessions were forced on by another session, set our session "true"
+if (vis_all_sessions == "true") { vis_all_pages = "true"}
 
 var sel_this_page = null;   // Initialized in local_storage_to_html()
 var sel_all_pages = null;
