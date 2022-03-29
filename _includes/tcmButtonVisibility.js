@@ -108,7 +108,7 @@ function switch_set(switchElm, bool) {
     // Setting the sessionStorage variable?
     if (id == "switch_all_pages") { sessionStorage.vis_all_pages = bool; }
     // Setting the cookie variable?
-    if (id == "switch_all_sessions") { setCookie(vis_all_sessions_cname, bool, 30 }
+    if (id == "switch_all_sessions") { setCookie(vis_all_sessions_cname, bool, 30) }
 }
 
 function check_all_switches() {
