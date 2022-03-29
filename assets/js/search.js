@@ -17,14 +17,14 @@ var raw_url = raw_url.replace('/blob/', '/');
 // Preload search objects
 var search_words = sessionStorage.search_words;
 var search_url = sessionStorage.search_url;
-if (search_words === undefined || search_url === undefined) {
+if (typeof search_words === "undefined" || typeof search_url === "undefined") {
     /* Load from internet if not in sessionStorage */
     load_search_objects();
     console.log("OUT async = search_words: " + search_words +
               " | search_url: " + search_url);
     sessionStorage.search_words = search_words;
     sessionStorage.search_url = search_url;
-    if (search_words == undefined || search_url == undefined) {
+    if (typeof search_words === "undefined" || typeof search_url === "undefined") {
         alert("sessionStorage.search_words: " + sessionStorage.search_words +
               " | sessionStorage.search_url: " + sessionStorage.search_url)
         sessionStorage.search_words = undefined;
@@ -33,6 +33,7 @@ if (search_words === undefined || search_url === undefined) {
 }
 console.log("OUT undefined = search_words: " + search_words +
           " | search_url: " + search_url);
+// DISPLAYS: OUT undefined = search_words: undefined | search_url: undefined
 
 async function load_search_objects() {
     // TODO: rename search_url.json to search_urls.json
@@ -41,7 +42,7 @@ async function load_search_objects() {
                            getJSON(raw_url + '/assets/json/search_url.json')]);
     console.log("IN async = search_words: " + search_words +
               " | search_url: " + search_url);
-   // DISPLAY: IN async = search_words: [object Object] | search_url: undefined
+    // DISPLAY: IN async = search_words: [object Object] | search_url: undefined
 }
 
 // https://stackoverflow.com/a/51992739/6929343
