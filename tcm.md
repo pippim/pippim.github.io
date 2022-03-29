@@ -115,8 +115,8 @@ The buttons brighten as you hover over them.
    <td><b>Webpage Information</b> - Display Jekyll Front Matter 
    for current webpage</td></tr>
 
-   <tr><td><button id="tcm_window_icon" class="tcm_documentation" 
-   title="The Cookie Jar" ></button></td>
+   <tr><td><button id="tcm_cookie_jar" class="tcm_documentation" 
+   title="The Cookie Jar - Import/Export cookies" ></button></td>
    <td><b>Cookie Jar</b> - 
    The Cookie jar is for file uploads and downloads.
    Cookies and local storage is saved and retrieved
@@ -219,7 +219,7 @@ After closing this window, the TCM button will be:<br>
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
-// { % include tcmButtonVisibility.js %}
+{% include tcmButtonVisibility.js %}
 tcmButtonVisibility()
 
 </script>
