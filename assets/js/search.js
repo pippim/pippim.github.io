@@ -23,7 +23,7 @@ if (search_words === undefined || search_url === undefined) {
     sessionStorage.search_words = search_words;
     sessionStorage.search_url = search_url;
     if (search_words == "undefined" || search_url == "undefined") {
-        alert("sessionStorage.search_words: " + sessionStorage.search_words
+        alert("sessionStorage.search_words: " + sessionStorage.search_words +
               "sessionStorage.search_url: " + sessionStorage.search_url)
         sessionStorage.search_words = undefined;
         sessionStorage.search_url = undefined;
