@@ -151,54 +151,26 @@ $lavender: #E6E6FA !default; // lavender
 
 // Blog post front matter
 .front-matter {
-  // line-height: 1.75;
   padding: 4px 4px 0 4px;
   border-color: $header-bg-color-secondary;  // Cayman blue DOESN'T WORK :(
-  // border-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
-  // above removes border and puts dots on corners
   border-top: 1px solid #999;
   border-right: 2px solid #555;
   border-bottom: 2px solid #555;
   border-left: 1px solid #999;
 
-  // Try to avoid hdr-bar which requires page refresh to update fm_state. Copy from hdr-bar:
-  //display: block;
-  //position: relative;
-  //&:before {
-  //  content: "";
-  //  display: block;
-  //}
-  // End of copy from hdr-bar
-
-  &:hover {
-    background-color: $lavender;
-//    &:before {        // Mar 28/22 Not sure why this is here?
-//      width: 100%;
-//    }
-  }
+  &:hover { background-color: $lavender; }
 }
 
-.front-matter .hidden-child{
-    // visibility: hidden;  // Mar 28/22 is this needed?
-    display: none;  // Mar 28/22 - Confirm this is needed, else space is reserved
-}
+.front-matter .hidden-child { display: none; }
 
 .front-matter:hover .hidden-child{
-    // visibility: visible;
-    // transition: visibility .5s;  // Mar 2/22
-    display: inline-block;  // Jan 14/22
-
-    // Copy from hdr-btn:  Mar 28/22 not sure why here?
-    // background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
+    display: inline-block;
     background-color: $honeydew; // Honeydew
-
     &:hover { color: blue; }
-
 }
 
 #view_button:hover {
-    background-color: $honeydew ! important; // Honeydew
-    // color: blue;
+    // background-color: $honeydew ! important; // Honeydew
     text-decoration: underline;
 }
 
