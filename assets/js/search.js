@@ -6,10 +6,6 @@
                                     https://stackoverflow.com/a/28041336/6929343
                                     https://stackoverflow.com/a/118886/6929343
 */
-window.MyLib = {}; // global Object container; don't use var
-
-var search_words = null           // global context new format as dictionary of points
-var search_urls = null            //   "      "
 
 // Use site.code from _config.yml to build raw_url
 var code_url = "{{ site.code_url }}";
@@ -26,6 +22,12 @@ if (search_words === undefined || search_url === undefined) {
     load_search_objects();
     sessionStorage.search_words = search_words;
     sessionStorage.search_url = search_url;
+    if (search_words == "undefined" || search_url == "undefined") {
+        alert("sessionStorage.search_words: " + sessionStorage.search_words
+              "sessionStorage.search_url: " + sessionStorage.search_url)
+        sessionStorage.search_words = undefined;
+        sessionStorage.search_url = undefined;
+    }
 }
 
 async function load_search_objects() {
