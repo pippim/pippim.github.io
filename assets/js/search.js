@@ -21,7 +21,7 @@ if (search_words === undefined || search_url === undefined) {
     /* Load from internet if not in sessionStorage */
     load_search_objects();
     console.log("OUT async = search_words: " + search_words +
-              " | search_url: " + search_url))
+              " | search_url: " + search_url);
     sessionStorage.search_words = search_words;
     sessionStorage.search_url = search_url;
     if (search_words == "undefined" || search_url == "undefined") {
@@ -38,7 +38,7 @@ async function load_search_objects() {
         await Promise.all([getJSON(raw_url + '/assets/json/search_words.json'),
                            getJSON(raw_url + '/assets/json/search_url.json')]);
     console.log("IN async = search_words: " + search_words +
-              " | search_url: " + search_url))
+              " | search_url: " + search_url);
 }
 
 // https://stackoverflow.com/a/51992739/6929343
