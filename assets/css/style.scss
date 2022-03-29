@@ -171,6 +171,7 @@ $lavender: #E6E6FA !default; // lavender
 
 
     // https://stackoverflow.com/a/17260048/6929343
+    height: 0;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.26s ease;
