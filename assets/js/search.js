@@ -31,6 +31,8 @@ if (search_words === undefined || search_url === undefined) {
         sessionStorage.search_url = undefined;
     }
 }
+console.log("OUT undefined = search_words: " + search_words +
+          " | search_url: " + search_url);
 
 async function load_search_objects() {
     // TODO: rename search_url.json to search_urls.json
