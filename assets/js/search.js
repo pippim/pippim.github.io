@@ -24,7 +24,7 @@ if (search_words === undefined || search_url === undefined) {
               " | search_url: " + search_url);
     sessionStorage.search_words = search_words;
     sessionStorage.search_url = search_url;
-    if (search_words == "undefined" || search_url == "undefined") {
+    if (search_words == undefined || search_url == undefined) {
         alert("sessionStorage.search_words: " + sessionStorage.search_words +
               " | sessionStorage.search_url: " + sessionStorage.search_url)
         sessionStorage.search_words = undefined;
@@ -41,6 +41,7 @@ async function load_search_objects() {
                            getJSON(raw_url + '/assets/json/search_url.json')]);
     console.log("IN async = search_words: " + search_words +
               " | search_url: " + search_url);
+   // DISPLAY: IN async = search_words: [object Object] | search_url: undefined
 }
 
 // https://stackoverflow.com/a/51992739/6929343
