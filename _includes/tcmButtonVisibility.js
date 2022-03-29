@@ -49,6 +49,7 @@ function tcmButtonVisibility() {
         if (vis_all_sessions == "true") {
             switch_set(sel_this_page, "true");
             switch_set(sel_all_pages, "true");
+        }
     });
 
 }
@@ -64,7 +65,7 @@ var vis_all_sessions = getCookie(vis_all_sessions_cname)
 // getCookie() will return "" if cookie is undefined.
 if (vis_all_sessions == "") { vis_all_sessions = "false" }
 // if All sessions were forced on by another session, set our session "true"
-if (vis_all_sessions == "true") { vis_all_pages = "true"}
+if (vis_all_sessions == "true") { vis_all_pages = "true" }
 
 var sel_this_page = null;   // Initialized in local_storage_to_html()
 var sel_all_pages = null;
