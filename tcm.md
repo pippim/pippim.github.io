@@ -219,7 +219,7 @@ After closing this window, the TCM button will be:<br>
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
-{% include tcmButtonVisibility.js %}
+// { % include tcmButtonVisibility.js %}
 tcmButtonVisibility()
 
 </script>
