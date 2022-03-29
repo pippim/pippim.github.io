@@ -11,13 +11,22 @@ window.MyLib = {}; // global Object container; don't use var
 var search_words = null           // global context new format as dictionary of points
 var search_urls = null            //   "      "
 
-// Read _config.yml to get code_url and use it to build raw_url
+// Use site.code from _config.yml to build raw_url
 var code_url = "{{ site.code_url }}";
 // code_yml: https://       github.com        /pippim/pippim.github.io/blob/main
 // raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
 var raw_url = code_url.replace('github', 'raw.githubusercontent');
 var raw_url = raw_url.replace('/blob/', '/');
-// Note: On older non-pc systems, 'main' was called 'master'
+
+// Preload search objects
+var search_words = sessionStorage.search_words;
+var search_url = sessionStorage.search_url;
+if (search_words === undefined) || (search_url === undefined) {
+    /* Load from internet if not in sessionStorage */
+    load_search_objects();
+    sessionStorage.search_words = search_words;
+    sessionStorage.search_url = search_url;
+}
 
 async function load_search_objects() {
     // TODO: rename search_url.json to search_urls.json
@@ -34,8 +43,7 @@ async function getJSON(url) {
         .then((responseJson)=>{return responseJson});
 }
 
-// Preload search objects
-load_search_objects();
+
 
 // Note theCookieMachine.js is already using b:
 //   const b = document.getElementById('tcm_window_body')
@@ -64,14 +72,6 @@ window.onclick = function (event) {
 
 f.addEventListener('submit', submitted);
 
-/* https://stackoverflow.com/a/43021296/6929343
-    'keyup': Fired on key press & release
-    'paste': Fired when pasting from clipboard CTRL+V
-    'cut'  : Fired when cutting text CTRL+X
-['keyup', 'paste', 'cut', 'input'].forEach( function(evt) {
-    q.addEventListener(evt, check_q_values, false);
-});
-*/
 f.addEventListener('input', check_q_values);
 
 // Close ('X') clicked on search input bar
