@@ -179,13 +179,13 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 .front-matter .hidden-child{
-    visibility: hidden;
-    // display: none;  // Mar 28/22 Not sure if needed?
+    // visibility: hidden;  // Mar 28/22 is this needed?
+    display: none;  // Mar 28/22 - Confirm this is needed, else space is reserved
 }
 
 .front-matter:hover .hidden-child{
-    visibility: visible;
-    transition: visibility .5s;  // Mar 2/22
+    // visibility: visible;
+    // transition: visibility .5s;  // Mar 2/22
     display: inline-block;  // Jan 14/22
 
     // Copy from hdr-btn:  Mar 28/22 not sure why here?
