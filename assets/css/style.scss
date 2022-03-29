@@ -162,14 +162,6 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 .front-matter .hidden-child {
-    // display: none;
-
-    // https://stackoverflow.com/a/8331169/6929343
-    // max-height: 0;
-    // transition: max-height 0.15s ease-out;
-    // overflow: hidden;
-
-
     // https://stackoverflow.com/a/17260048/6929343
     max-height: 0;
     transform: scaleY(0);
@@ -178,13 +170,7 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 .front-matter:hover .hidden-child{
-    // display: inline-block;
     background-color: $honeydew; // Honeydew
-
-    // https://stackoverflow.com/a/8331169/6929343
-    // max-height: 50px;  // More than it will ever be
-    // transition: max-height 0.25s ease-in;
-
     // https://stackoverflow.com/a/17260048/6929343
     max-height: 500px;
     transform: scaleY(1);
@@ -530,18 +516,9 @@ a.search-results:visited {
     color: black;
     text-align: left;
 
-    @include large {
-        padding: 0.5rem;
-        font-size: 1rem;
-    }
-    @include medium {
-        padding: 0.4rem;
-        font-size: 0.9rem;
-    }
-    @include small {
-        padding: 0.3rem;
-        font-size: 0.8rem;
-    }
+    @include large { padding: 0.5rem; font-size: 1rem; }
+    @include medium { padding: 0.4rem; font-size: 0.9rem; }
+    @include small { padding: 0.3rem; font-size: 0.8rem; }
 }
 
 /* Icon in in the tcm window header NOT the MAIN window! */
@@ -582,21 +559,10 @@ a.search-results:visited {
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
-    &:hover {
-      filter: brightness(150%);
-    }
-    @include large {
-        width: 45px;
-        height: 45px;
-    }
-    @include medium {
-        width: 40px;
-        height: 40px;
-    }
-    @include small {
-        width: 35px;
-        height: 35px;
-    }
+    &:hover { filter: brightness(150%); }
+    @include large { width: 45px; height: 45px; }
+    @include medium { width: 40px; height: 40px; }
+    @include small { width: 35px; height: 35px; }
   }
 }
 
@@ -625,6 +591,11 @@ a.search-results:visited {
 
 #tcm_webpage_info {
     background-image: url({{ site.url }}/assets/img/icons/webpage_info.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_cookie_jar {
+    background-image: url({{ site.url }}/assets/img/icons/cookie_jar.png),
                       url({{ site.url }}/assets/img/icons/button_background.png);
 }
 
@@ -666,7 +637,6 @@ a.search-results:visited {
   &:hover {
     filter: brightness(150%);
   }
-
 }
 
 /* end of /assets/css/style.scss */
