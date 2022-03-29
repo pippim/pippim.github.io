@@ -21,7 +21,7 @@ var raw_url = raw_url.replace('/blob/', '/');
 // Preload search objects
 var search_words = sessionStorage.search_words;
 var search_url = sessionStorage.search_url;
-if (search_words === undefined) || (search_url === undefined) {
+if (search_words === undefined || search_url === undefined) {
     /* Load from internet if not in sessionStorage */
     load_search_objects();
     sessionStorage.search_words = search_words;
