@@ -163,17 +163,30 @@ $lavender: #E6E6FA !default; // lavender
 
 .front-matter .hidden-child {
     // display: none;
-    max-height: 0;
-    transition: max-height 0.15s ease-out;
-    overflow: hidden;
+
+    // https://stackoverflow.com/a/8331169/6929343
+    // max-height: 0;
+    // transition: max-height 0.15s ease-out;
+    // overflow: hidden;
+
+
+    // https://stackoverflow.com/a/17260048/6929343
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.26s ease;
 }
 
 .front-matter:hover .hidden-child{
     // display: inline-block;
     background-color: $honeydew; // Honeydew
+
     // https://stackoverflow.com/a/8331169/6929343
-    max-height: 50px;  // More than it will ever be
-    transition: max-height 0.25s ease-in;
+    // max-height: 50px;  // More than it will ever be
+    // transition: max-height 0.25s ease-in;
+
+    // https://stackoverflow.com/a/17260048/6929343
+    transform: scaleY(1);
+
     &:hover { color: blue; }
 }
 
