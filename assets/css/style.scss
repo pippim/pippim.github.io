@@ -161,11 +161,19 @@ $lavender: #E6E6FA !default; // lavender
   &:hover { background-color: $lavender; }
 }
 
-.front-matter .hidden-child { display: none; }
+.front-matter .hidden-child {
+    // display: none;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+}
 
 .front-matter:hover .hidden-child{
-    display: inline-block;
+    // display: inline-block;
     background-color: $honeydew; // Honeydew
+    // https://stackoverflow.com/a/8331169/6929343
+    max-height: 50px;  // More than it will ever be
+    transition: max-height 0.25s ease-in;
     &:hover { color: blue; }
 }
 
