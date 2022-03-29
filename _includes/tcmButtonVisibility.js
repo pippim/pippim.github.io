@@ -45,6 +45,9 @@ function tcmButtonVisibility() {
         if (vis_all_sessions == "true") {
             switch_set(sel_this_page, "true");
             switch_set(sel_all_pages, "true");
+            switch_set(sel_all_sessions, "true");
+        } else {
+            switch_set(sel_all_sessions, "false");
         }
     });
 
