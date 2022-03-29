@@ -1,4 +1,4 @@
-/* include tcm_button_visibility.js code shared by:
+/* /_includes/tcmButtonVisibility.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
@@ -55,7 +55,10 @@ var vis_all_pages = sessionStorage.vis_all_pages;
 if (vis_all_pages === undefined) { vis_all_pages = "false" }
 if (vis_all_pages == "true") { makeTcmButtonVisible() }
 // Stored in session storage
-var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
+var vis_all_sessions_cname = "vis_all_sessions";
+var vis_all_sessions = getCookie(vis_all_sessions_cname)
+if (vis_all_sessions == "") { vis_all_sessions = "false" }
+// var vis_all_sessions = "false"; // Stored in local cookie: tcm_button
 
 var sel_this_page = null;   // Initialized in local_storage_to_html()
 var sel_all_pages = null;
