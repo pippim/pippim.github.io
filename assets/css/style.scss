@@ -171,7 +171,7 @@ $lavender: #E6E6FA !default; // lavender
 
 
     // https://stackoverflow.com/a/17260048/6929343
-    height: 0;
+    max-height: 0;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.26s ease;
@@ -186,6 +186,7 @@ $lavender: #E6E6FA !default; // lavender
     // transition: max-height 0.25s ease-in;
 
     // https://stackoverflow.com/a/17260048/6929343
+    max-height: 500px;
     transform: scaleY(1);
 
     &:hover { color: blue; }
