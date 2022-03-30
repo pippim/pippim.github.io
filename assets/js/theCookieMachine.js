@@ -269,7 +269,7 @@ function webpage_info_to_html() {
 
 function getMarkdownFilename() {
     // WARNING: Extremely Jekyll Dependent
-    loadConfigYml();
+    // loadConfigYml();  // Already called in mainline
     var urlHref = location.href;            // https://pipp... #...
     var urlProtocol = location.protocol;    // https:
     var urlHost = location.hostname;        // pippim.github.io
@@ -439,11 +439,11 @@ function local_storage_to_html() {
 
     b.innerHTML = html;              // Update TCM Window body
 
-    /* Call shared routines with /tcm.md */
+    /* PProcess slider switches - shared  with ~/tcm.md */
     tcmButtonVisibility()
 }
 
-/* include tcm_button_visibility.js code shared by:
+/* include tcmButtonVisibility.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
