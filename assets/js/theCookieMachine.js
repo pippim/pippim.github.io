@@ -109,7 +109,7 @@ var configYml = []          // Array containing _config.yml
 var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
 
 // Fetch config.yml from internet or session Storage
-var config_yml = null;
+var config_yml = [];
 if (sessionStorage.config_yml === undefined) { load_config_yml(); }
 else { var config_yml = JSON.parse(sessionStorage.getItem('config_yml')); }
 
@@ -163,7 +163,8 @@ function introduction_to_html() {
 introduction_to_html()  // Load immediately
 
 function front_matter_to_html(results, name) {
-
+    // home button
+    buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
     if (results.length == 0) {
         var html = "<h3> 🔍 &emsp; No " + name + " found!</h3>\n";
         html += "<p>An error has occurred.<br><br>\n";
