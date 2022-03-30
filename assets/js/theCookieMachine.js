@@ -345,7 +345,7 @@ function buildConfigYml () {
 
     fetch(raw_url + '/_config.yml')
         .then((response) => response.text())
-        .then((config_yml) => { */
+        .then((config_yml) => {
             configYml = config_yml.split("\n")  // Convert string into array
             // Set flagPostsByYear flag
             flagPostsByYear = "false";
