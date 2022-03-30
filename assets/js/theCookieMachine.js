@@ -115,7 +115,7 @@ else { var config_yml = JSON.parse(sessionStorage.getItem('config_yml')); }
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
-    buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
+    //buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
     front_matter_to_html(configYml, "Site Front Matter ('_config.yml')");
 });
 
@@ -257,7 +257,7 @@ function website_tree_to_html(results) {
 }
 
 function webpage_info_to_html() {
-    buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
+    // buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
     var urlMarkdown = getMarkdownFilename();
 
     fetch(urlMarkdown)
@@ -342,7 +342,7 @@ async function load_config_yml() {
 
 function buildConfigYml () {
     // Sets global array configYml and flagPostsByYear used by two functions
-/*
+
     fetch(raw_url + '/_config.yml')
         .then((response) => response.text())
         .then((config_yml) => { */
@@ -354,9 +354,9 @@ function buildConfigYml () {
                 if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
                     if (ymlKeyValue[0] == "posts_by_year") {
                         flagPostsByYear = ymlKeyValue[1].trim(); } } }
-//        });
+        });
 }
-
+buildConfigYml();  // Temporary
 
 
 /* Further research
