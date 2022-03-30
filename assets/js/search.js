@@ -20,6 +20,8 @@ var search_url = sessionStorage.search_url;
 if (typeof search_words === "undefined" || typeof search_url === "undefined") {
     /* Load from internet if not in sessionStorage */
     load_search_objects();
+    if (search_words === "undefined" || search_url === "undefined") {
+    }
     console.log("AFTER async = search_words: " + search_words +
               " | search_url: " + search_url);
     sessionStorage.search_words = search_words;
@@ -56,7 +58,31 @@ async function getJSON(url) {
         .then((responseJson)=>{return responseJson});
 }
 
+/* Full results available on New Session:
 
+AFTER async = search_words: undefined | search_url: undefined
+CHECK undefined search_words: undefined | search_url: undefined
+OUTSIDE undefined contents = search_words: undefined | search_url: undefined
+OUTSIDE undefined = typeof search_words: undefined | typeof search_url: undefined
+XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json
+XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_words.json
+[HTTP/2 200 OK 0ms]
+XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/_config.yml
+[HTTP/2 200 OK 0ms]
+INSIDE async = search_words: [object Object] | search_url: undefined
+
+*/
+
+/* Results when refreshing page on existing sessions:
+
+contentscript.js: https://www.pippim.com/ <empty string>
+OUTSIDE undefined contents = search_words: undefined | search_url: undefined
+OUTSIDE undefined = typeof search_words: string | typeof search_url: string
+XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/_config.yml
+*/
+
+// Fudge it all anyways...
+load_search_objects();
 
 // Note theCookieMachine.js is already using b:
 //   const b = document.getElementById('tcm_window_body')
