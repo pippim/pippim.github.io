@@ -31,9 +31,12 @@ if (typeof search_words === "undefined" || typeof search_url === "undefined") {
         sessionStorage.search_url = undefined;
     }
 }
+console.log("OUTSIDE undefined contents = search_words: " + search_words +
+          " | search_url: " + search_url);
 // OLD: OUTSIDE undefined = search_words: undefined | search_url: undefined
 console.log("OUTSIDE undefined = typeof search_words: " + typeof search_words +
           " | typeof search_url: " + typeof search_url);
+// NEW: OUTSIDE undefined = typeof search_words: string | typeof search_url: string
 
 async function load_search_objects() {
     // TODO: rename search_url.json to search_urls.json
