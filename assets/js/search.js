@@ -16,29 +16,9 @@ var raw_url = raw_url.replace('/blob/', '/');
 
 // Preload search objects
 var search_words = sessionStorage.search_words;
+if (typeof search_words === "undefined") { load_search_words(); }
 var search_url = sessionStorage.search_url;
-if (typeof search_words === "undefined" || typeof search_url === "undefined") {
-    /* Load from internet if not in sessionStorage */
-    load_search_objects();
-    if (search_words === "undefined" || search_url === "undefined") {
-    }
-    console.log("AFTER async = search_words: " + search_words +
-              " | search_url: " + search_url);
-    sessionStorage.search_words = search_words;
-    sessionStorage.search_url = search_url;
-    if (typeof search_words === "undefined" || typeof search_url === "undefined") {
-        console.log("CHECK undefined search_words: " + search_words +
-              " | search_url: " + search_url)
-        sessionStorage.search_words = undefined;
-        sessionStorage.search_url = undefined;
-    }
-}
-console.log("OUTSIDE undefined contents = search_words: " + search_words +
-          " | search_url: " + search_url);
-// OLD: OUTSIDE undefined = search_words: undefined | search_url: undefined
-console.log("OUTSIDE undefined = typeof search_words: " + typeof search_words +
-          " | typeof search_url: " + typeof search_url);
-// NEW: OUTSIDE undefined = typeof search_words: string | typeof search_url: string
+if (typeof search_url === "undefined") { load_search_url(); }
 
 async function load_search_objects() {
     // TODO: rename search_url.json to search_urls.json
@@ -57,6 +37,28 @@ async function getJSON(url) {
         .then((response)=>response.json())
         .then((responseJson)=>{return responseJson});
 }
+
+async function load_search_words() {
+    // Also used by /assets/js/theCookieMachine.js
+    fetch(raw_url + '/assets/json/search_words.json')
+        .then((response)=>response.json())
+        .then((responseJson)=>{
+            search_words = responseJson;
+            sessionStorage.search_words = search_words;
+        });
+}
+
+
+async function load_search_url() {
+    // Also used by /assets/js/theCookieMachine.js
+    fetch(raw_url + '/assets/json/search_url.json')
+        .then((response)=>response.json())
+        .then((responseJson)=>{
+            search_url = responseJson;
+            sessionStorage.search_url = search_url;
+        });
+}
+
 
 /* Full results available on New Session:
 
@@ -82,7 +84,7 @@ XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/_config.yml
 */
 
 // Fudge it all anyways...
-load_search_objects();
+// load_search_objects();
 
 // Note theCookieMachine.js is already using b:
 //   const b = document.getElementById('tcm_window_body')
