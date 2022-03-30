@@ -15,21 +15,35 @@ var raw_url = code_url.replace('github', 'raw.githubusercontent');
 var raw_url = raw_url.replace('/blob/', '/');
 
 // Preload search objects
-// var search_words = JSON.parse(sessionStorage.search_words);
-// var search_words = sessionStorage.search_words;
-if (sessionStorage.search_words === undefined) {
-    load_search_words();
-} else {
-    var search_words = JSON.parse(sessionStorage.getItem('search_words'));
-}
-// var search_urls = JSON.parse(sessionStorage.search_urls);
-// var search_urls = sessionStorage.search_urls;
-if (sessionStorage.search_urls === undefined) {
-    load_search_urls();
-} else {
-    var search_urls = JSON.parse(sessionStorage.getItem('search_urls'));
+if (sessionStorage.search_words === undefined) { load_search_words(); }
+else { var search_words = JSON.parse(sessionStorage.getItem('search_words')); }
+
+if (sessionStorage.search_urls === undefined) { load_search_urls(); }
+else { var search_urls = JSON.parse(sessionStorage.getItem('search_urls')); }
+
+async function load_search_words() {
+    // Also used by /assets/js/theCookieMachine.js
+    fetch(raw_url + '/assets/json/search_words.json')
+        .then((response)=>response.json())
+        .then((responseJson)=>{
+            search_words = responseJson;
+            // https://stackoverflow.com/a/32905820/6929343
+            sessionStorage.setItem('search_words', JSON.stringify(search_words));
+        });
 }
 
+async function load_search_urls() {
+    // Also used by /assets/js/theCookieMachine.js
+    fetch(raw_url + '/assets/json/search_url.json')
+        .then((response)=>response.json())
+        .then((responseJson)=>{
+            search_urls = responseJson;
+            // https://stackoverflow.com/a/32905820/6929343
+            sessionStorage.setItem('search_urls', JSON.stringify(search_urls));
+        });
+}
+
+// OLD function below not used after March 29, 2022 to speed things up
 async function load_search_objects() {
     // TODO: rename search_url.json to search_urls.json
     [search_words, search_urls] =
@@ -40,6 +54,7 @@ async function load_search_objects() {
     // DISPLAY: IN async = search_words: [object Object] | search_urls: undefined
 }
 
+// OLD function below not used after March 29, 2022 to speed things up
 // https://stackoverflow.com/a/51992739/6929343
 async function getJSON(url) {
     // Also used by /assets/js/theCookieMachine.js
@@ -48,60 +63,8 @@ async function getJSON(url) {
         .then((responseJson)=>{return responseJson});
 }
 
-async function load_search_words() {
-    // Also used by /assets/js/theCookieMachine.js
-    fetch(raw_url + '/assets/json/search_words.json')
-        .then((response)=>response.json())
-        .then((responseJson)=>{
-            search_words = responseJson;
-            alert("search_words loaded: " + search_words.length)
-            sessionStorage.setItem('search_words', JSON.stringify(search_words));
-            // sessionStorage.setItem('search_words', search_words);
-        });
-}
-
-
-async function load_search_urls() {
-    // Also used by /assets/js/theCookieMachine.js
-    fetch(raw_url + '/assets/json/search_url.json')
-        .then((response)=>response.json())
-        .then((responseJson)=>{
-            search_urls = responseJson;
-            // https://stackoverflow.com/a/32905820/6929343
-            sessionStorage.setItem('search_urls', JSON.stringify(search_urls));
-            // sessionStorage.setItem('search_urls', search_urls);
-        });
-}
-
-
-/* Full results available on New Session:
-
-AFTER async = search_words: undefined | search_urls: undefined
-CHECK undefined search_words: undefined | search_urls: undefined
-OUTSIDE undefined contents = search_words: undefined | search_urls: undefined
-OUTSIDE undefined = typeof search_words: undefined | typeof search_urls: undefined
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_urls.json
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_words.json
-[HTTP/2 200 OK 0ms]
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/_config.yml
-[HTTP/2 200 OK 0ms]
-INSIDE async = search_words: [object Object] | search_urls: undefined
-
-*/
-
-/* Results when refreshing page on existing sessions:
-
-contentscript.js: https://www.pippim.com/ <empty string>
-OUTSIDE undefined contents = search_words: undefined | search_urls: undefined
-OUTSIDE undefined = typeof search_words: string | typeof search_urls: string
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/_config.yml
-*/
-
-// Fudge it all anyways...
-//load_search_objects();
-
-// Note theCookieMachine.js is already using b:
-//   const b = document.getElementById('tcm_window_body')
+/*  NOTE: theCookieMachine.js is already using b:
+    const b = document.getElementById('tcm_window_body') */
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const c = document.getElementById('search-modal-close');    // 'X' close search results
