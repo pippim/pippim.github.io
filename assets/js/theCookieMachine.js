@@ -115,6 +115,7 @@ else { var config_yml = JSON.parse(sessionStorage.getItem('config_yml')); }
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
+    buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
     front_matter_to_html(configYml, "Site Front Matter ('_config.yml')");
 });
 
@@ -163,11 +164,10 @@ function introduction_to_html() {
 introduction_to_html()  // Load immediately
 
 function front_matter_to_html(results, name) {
-    // home button
-    buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
+    // home button & webpage info button uses
     if (results.length == 0) {
         var html = "<h3> 🔍 &emsp; No " + name + " found!</h3>\n";
-        html += "<p>An error has occurred.<br><br>\n";
+        html += "<p>A network error has occurred.<br><br>\n";
         html += "Try again later. If error continues contact {{ site.title }}.<br><br>\n";
         b.innerHTML = html;
         return;
