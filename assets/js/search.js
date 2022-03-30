@@ -32,8 +32,8 @@ async function load_search_words() {
             // https://stackoverflow.com/a/32905820/6929343
             var search_words_store = JSON.stringify(search_words)
             sessionStorage.setItem('search_words', search_words_store);
-            buildStats('search words count', search_words.length)
-            buildStats('search words size', search_words_store.length)
+            buildStats('Search Words Count', search_words.length);
+            buildStats('Search Words Size', search_words_store.length);
         });
 }
 
@@ -44,8 +44,10 @@ async function load_search_urls() {
         .then((responseJson)=>{
             search_urls = responseJson;
             // https://stackoverflow.com/a/32905820/6929343
-            var search_urls_store = JSON.stringify(search_urls)
-            sessionStorage.setItem('search_urls', JSON.stringify(search_urls_store));
+            var search_urls_store = JSON.stringify(search_urls);
+            sessionStorage.setItem('search_urls', search_urls_store);
+            buildStats('Search URLs Count', search_urls.length);
+            buildStats('Search URLs Size', search_urls_store.length);
         });
 }
 
