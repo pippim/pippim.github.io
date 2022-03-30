@@ -109,9 +109,9 @@ var configYml = []          // Array containing _config.yml
 var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
 
 // Fetch config.yml from internet or session Storage
-var config_yml = [];
+var config_yml2 = [];  // config_yml is raw whilst configYml is massaged
 if (sessionStorage.config_yml === undefined) { load_config_yml(); }
-else { var config_yml = JSON.parse(sessionStorage.getItem('config_yml')); }
+else { config_yml2 = JSON.parse(sessionStorage.getItem('config_yml')); }
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
@@ -334,9 +334,9 @@ async function load_config_yml() {
     fetch(raw_url + '/_config.yml')
         .then((response)=>response.json())
         .then((responseJson)=>{
-            config_yml = responseJson;
+            config_yml2 = responseJson;
             // https://stackoverflow.com/a/32905820/6929343
-            sessionStorage.setItem('config_yml', JSON.stringify(config_yml));
+            sessionStorage.setItem('config_yml', JSON.stringify(config_yml2));
         });
 }
 
