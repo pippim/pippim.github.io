@@ -19,17 +19,17 @@ var raw_url = raw_url.replace('/blob/', '/');
 var search_words = sessionStorage.search_words;
 if (typeof search_words === "undefined") { load_search_words(); }
 // var search_url = JSON.parse(sessionStorage.search_url);
-var search_url = sessionStorage.search_url;
-if (typeof search_url === "undefined") { load_search_url(); }
+var search_urls = sessionStorage.search_urls;
+if (typeof search_urls === "undefined") { load_search_urls(); }
 
 async function load_search_objects() {
     // TODO: rename search_url.json to search_urls.json
     [search_words, search_urls] =
         await Promise.all([getJSON(raw_url + '/assets/json/search_words.json'),
-                           getJSON(raw_url + '/assets/json/search_url.json')]);
+                           getJSON(raw_url + '/assets/json/search_urls.json')]);
     console.log("INSIDE async = search_words: " + search_words +
-              " | search_url: " + search_url);
-    // DISPLAY: IN async = search_words: [object Object] | search_url: undefined
+              " | search_urls: " + search_urls);
+    // DISPLAY: IN async = search_words: [object Object] | search_urls: undefined
 }
 
 // https://stackoverflow.com/a/51992739/6929343
@@ -52,39 +52,39 @@ async function load_search_words() {
 }
 
 
-async function load_search_url() {
+async function load_search_urls() {
     // Also used by /assets/js/theCookieMachine.js
     fetch(raw_url + '/assets/json/search_url.json')
         .then((response)=>response.json())
         .then((responseJson)=>{
-            search_url = responseJson;
+            search_urls = responseJson;
             // https://stackoverflow.com/a/32905820/6929343
-            sessionStorage.setItem('search_url', JSON.stringify(search_url));
-            // sessionStorage.setItem('search_url', search_url);
+            sessionStorage.setItem('search_urls', JSON.stringify(search_urls));
+            // sessionStorage.setItem('search_urls', search_urls);
         });
 }
 
 
 /* Full results available on New Session:
 
-AFTER async = search_words: undefined | search_url: undefined
-CHECK undefined search_words: undefined | search_url: undefined
-OUTSIDE undefined contents = search_words: undefined | search_url: undefined
-OUTSIDE undefined = typeof search_words: undefined | typeof search_url: undefined
-XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_url.json
+AFTER async = search_words: undefined | search_urls: undefined
+CHECK undefined search_words: undefined | search_urls: undefined
+OUTSIDE undefined contents = search_words: undefined | search_urls: undefined
+OUTSIDE undefined = typeof search_words: undefined | typeof search_urls: undefined
+XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_urls.json
 XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_words.json
 [HTTP/2 200 OK 0ms]
 XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/_config.yml
 [HTTP/2 200 OK 0ms]
-INSIDE async = search_words: [object Object] | search_url: undefined
+INSIDE async = search_words: [object Object] | search_urls: undefined
 
 */
 
 /* Results when refreshing page on existing sessions:
 
 contentscript.js: https://www.pippim.com/ <empty string>
-OUTSIDE undefined contents = search_words: undefined | search_url: undefined
-OUTSIDE undefined = typeof search_words: string | typeof search_url: string
+OUTSIDE undefined contents = search_words: undefined | search_urls: undefined
+OUTSIDE undefined = typeof search_words: string | typeof search_urls: string
 XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/_config.yml
 */
 
