@@ -108,6 +108,11 @@ var oldLineHeight = null
 var configYml = []          // Array containing _config.yml
 var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
 
+// Fetch config.yml from internet or session Storage
+var config_yml = null;
+if (sessionStorage.config_yml === undefined) { load_config_yml(); }
+else { var config_yml = JSON.parse(sessionStorage.getItem('config_yml')); }
+
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
     front_matter_to_html(configYml, "Site Front Matter ('_config.yml')");
@@ -269,7 +274,7 @@ function webpage_info_to_html() {
 
 function getMarkdownFilename() {
     // WARNING: Extremely Jekyll Dependent
-    // loadConfigYml();  // Already called in mainline
+    // buildConfigYml();  // Already called in mainline
     var urlHref = location.href;            // https://pipp... #...
     var urlProtocol = location.protocol;    // https:
     var urlHost = location.hostname;        // pippim.github.io
@@ -322,12 +327,24 @@ function getFrontMatter(txtArr) {
     return frontMatter
 }
 
-function loadConfigYml () {
-    // Sets global array configYml and flagPostsByYear used by two functions
 
+async function load_config_yml() {
+    // Get from internet and store in session
+    fetch(raw_url + '/_config.yml')
+        .then((response)=>response.json())
+        .then((responseJson)=>{
+            config_yml = responseJson;
+            // https://stackoverflow.com/a/32905820/6929343
+            sessionStorage.setItem('config_yml', JSON.stringify(config_yml));
+        });
+}
+
+function buildConfigYml () {
+    // Sets global array configYml and flagPostsByYear used by two functions
+/*
     fetch(raw_url + '/_config.yml')
         .then((response) => response.text())
-        .then((config_yml) => {
+        .then((config_yml) => { */
             configYml = config_yml.split("\n")  // Convert string into array
             // Set flagPostsByYear flag
             flagPostsByYear = "false";
@@ -336,10 +353,10 @@ function loadConfigYml () {
                 if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
                     if (ymlKeyValue[0] == "posts_by_year") {
                         flagPostsByYear = ymlKeyValue[1].trim(); } } }
-        });
+//        });
 }
 
-loadConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
+buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
 
 /* Further research
 
