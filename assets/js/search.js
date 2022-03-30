@@ -17,15 +17,18 @@ var raw_url = raw_url.replace('/blob/', '/');
 // Preload search objects
 // var search_words = JSON.parse(sessionStorage.search_words);
 // var search_words = sessionStorage.search_words;
-var search_words = JSON.parse(sessionStorage.getItem('search_words'));
-// if (typeof search_words === "undefined") { load_search_words(); }
-if (search_words === undefined) { load_search_words(); }
-load_search_words();
+if (sessionStorage.search_words === undefined) {
+    load_search_words();
+} else {
+    var search_words = JSON.parse(sessionStorage.getItem('search_words'));
+}
 // var search_urls = JSON.parse(sessionStorage.search_urls);
 // var search_urls = sessionStorage.search_urls;
-var search_urls = JSON.parse(sessionStorage.getItem('search_urls'));
-// if (typeof search_urls === "undefined") { load_search_urls(); }
-if (search_urls === undefined) { load_search_urls(); }
+if (sessionStorage.search_urls === undefined) {
+    load_search_urls();
+} else {
+    var search_urls = JSON.parse(sessionStorage.getItem('search_urls'));
+}
 
 async function load_search_objects() {
     // TODO: rename search_url.json to search_urls.json
