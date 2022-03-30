@@ -44,7 +44,8 @@ async function load_search_words() {
         .then((response)=>response.json())
         .then((responseJson)=>{
             search_words = responseJson;
-            sessionStorage.setItem('search_words', JSON.stringify(search_words));
+            // sessionStorage.setItem('search_words', JSON.stringify(search_words));
+            sessionStorage.setItem('search_words', search_words);
         });
 }
 
@@ -56,7 +57,8 @@ async function load_search_url() {
         .then((responseJson)=>{
             search_url = responseJson;
             // https://stackoverflow.com/a/32905820/6929343
-            sessionStorage.setItem('search_url', JSON.stringify(search_url));
+            // sessionStorage.setItem('search_url', JSON.stringify(search_url));
+            sessionStorage.setItem('search_url', search_url);
         });
 }
 
