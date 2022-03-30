@@ -52,7 +52,7 @@ async function load_search_urls() {
 objStats = {}
 function buildStats (key, value) {
     objStats[key] = value
-    console.log('adding key/value: ' + key " / " + value)
+    console.log('adding key/value: ' + key + " / " + value);
 }
 
 // OLD function below not used after March 29, 2022 to speed things up
