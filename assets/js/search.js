@@ -84,7 +84,7 @@ XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/_config.yml
 */
 
 // Fudge it all anyways...
-// load_search_objects();
+load_search_objects();
 
 // Note theCookieMachine.js is already using b:
 //   const b = document.getElementById('tcm_window_body')
