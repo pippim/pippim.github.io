@@ -19,9 +19,9 @@ var raw_url = raw_url.replace('/blob/', '/');
 // var search_words = sessionStorage.search_words;
 var search_words = JSON.parse(sessionStorage.getItem('search_words'));
 if (typeof search_words === "undefined") { load_search_words(); }
-// var search_url = JSON.parse(sessionStorage.search_url);
+// var search_urls = JSON.parse(sessionStorage.search_urls);
 // var search_urls = sessionStorage.search_urls;
-var search_url = JSON.parse(sessionStorage.getItem('search_url'));
+var search_urls = JSON.parse(sessionStorage.getItem('search_urls'));
 if (typeof search_urls === "undefined") { load_search_urls(); }
 
 async function load_search_objects() {
