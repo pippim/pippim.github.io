@@ -49,6 +49,7 @@ async function load_search_words() {
         .then((response)=>response.json())
         .then((responseJson)=>{
             search_words = responseJson;
+            alert("search_words loaded: " + search_words.length)
             sessionStorage.setItem('search_words', JSON.stringify(search_words));
             // sessionStorage.setItem('search_words', search_words);
         });
