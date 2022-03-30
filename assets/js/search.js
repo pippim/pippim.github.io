@@ -20,18 +20,18 @@ var search_url = sessionStorage.search_url;
 if (typeof search_words === "undefined" || typeof search_url === "undefined") {
     /* Load from internet if not in sessionStorage */
     load_search_objects();
-    console.log("OUT async = search_words: " + search_words +
+    console.log("AFTER async = search_words: " + search_words +
               " | search_url: " + search_url);
     sessionStorage.search_words = search_words;
     sessionStorage.search_url = search_url;
     if (typeof search_words === "undefined" || typeof search_url === "undefined") {
-        alert("sessionStorage.search_words: " + sessionStorage.search_words +
-              " | sessionStorage.search_url: " + sessionStorage.search_url)
+        console.log("CHECK undefined search_words: " + search_words +
+              " | search_url: " + search_url)
         sessionStorage.search_words = undefined;
         sessionStorage.search_url = undefined;
     }
 }
-console.log("OUT undefined = search_words: " + search_words +
+console.log("OUTSIDE undefined = search_words: " + search_words +
           " | search_url: " + search_url);
 // DISPLAYS: OUT undefined = search_words: undefined | search_url: undefined
 
@@ -40,7 +40,7 @@ async function load_search_objects() {
     [search_words, search_urls] =
         await Promise.all([getJSON(raw_url + '/assets/json/search_words.json'),
                            getJSON(raw_url + '/assets/json/search_url.json')]);
-    console.log("IN async = search_words: " + search_words +
+    console.log("INSIDE async = search_words: " + search_words +
               " | search_url: " + search_url);
     // DISPLAY: IN async = search_words: [object Object] | search_url: undefined
 }
