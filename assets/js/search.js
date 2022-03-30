@@ -32,7 +32,8 @@ async function load_search_words() {
             // https://stackoverflow.com/a/32905820/6929343
             var search_words_store = JSON.stringify(search_words)
             sessionStorage.setItem('search_words', search_words_store);
-            buildStats('Search Words Count', Object.keys(search_words_store).length);
+            //buildStats('Search Words Count', Object.keys(search_words).length);
+            buildStats('Search Words Count', Object.keys(search_words).length);
             buildStats('Search Words Size', search_words_store.length);
         });
 }
@@ -55,26 +56,6 @@ objStats = {}
 function buildStats (key, value) {
     objStats[key] = value
     console.log('adding key/value: ' + key + " / " + value);
-}
-
-// OLD function below not used after March 29, 2022 to speed things up
-async function load_search_objects() {
-    // TODO: rename search_url.json to search_urls.json
-    [search_words, search_urls] =
-        await Promise.all([getJSON(raw_url + '/assets/json/search_words.json'),
-                           getJSON(raw_url + '/assets/json/search_urls.json')]);
-    console.log("INSIDE async = search_words: " + search_words +
-              " | search_urls: " + search_urls);
-    // DISPLAY: IN async = search_words: [object Object] | search_urls: undefined
-}
-
-// OLD function below not used after March 29, 2022 to speed things up
-// https://stackoverflow.com/a/51992739/6929343
-async function getJSON(url) {
-    // Also used by /assets/js/theCookieMachine.js
-    return fetch(url)
-        .then((response)=>response.json())
-        .then((responseJson)=>{return responseJson});
 }
 
 /*  NOTE: theCookieMachine.js is already using b:
