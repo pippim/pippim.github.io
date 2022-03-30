@@ -54,7 +54,7 @@ function tcmButtonVisibility() {
 
 }
 
-var vis_this_page = "true";     // Global default for all pages opened.
+var vis_this_page = "true";     // Global default for exiting TCM Window.
 // Get whatever we've setup in session storage
 var vis_all_pages = sessionStorage.vis_all_pages;
 if (vis_all_pages === undefined) { vis_all_pages = "false" }
@@ -66,6 +66,7 @@ var vis_all_sessions = getCookie(vis_all_sessions_cname)
 if (vis_all_sessions == "") { vis_all_sessions = "false" }
 // if All sessions were forced on by another session, set our session "true"
 if (vis_all_sessions == "true") { vis_all_pages = "true" }
+if (vis_all_pages == "true" ) { makeTcmButtonVisible() }
 
 var sel_this_page = null;   // Initialized in local_storage_to_html()
 var sel_all_pages = null;
