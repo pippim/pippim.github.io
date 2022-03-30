@@ -30,7 +30,10 @@ async function load_search_words() {
         .then((responseJson)=>{
             search_words = responseJson;
             // https://stackoverflow.com/a/32905820/6929343
-            sessionStorage.setItem('search_words', JSON.stringify(search_words));
+            var search_words_store = JSON.stringify(search_words)
+            sessionStorage.setItem('search_words', search_words_store);
+            buildStats('search words count', search_words.length)
+            buildStats('search words size', search_words_store.length)
         });
 }
 
@@ -41,8 +44,15 @@ async function load_search_urls() {
         .then((responseJson)=>{
             search_urls = responseJson;
             // https://stackoverflow.com/a/32905820/6929343
-            sessionStorage.setItem('search_urls', JSON.stringify(search_urls));
+            var search_urls_store = JSON.stringify(search_urls)
+            sessionStorage.setItem('search_urls', JSON.stringify(search_urls_store));
         });
+}
+
+objStats = {}
+function buildStats (key, value) {
+    objStats[key] = value
+    console.log('adding key/value: ' + key " / " + value)
 }
 
 // OLD function below not used after March 29, 2022 to speed things up
