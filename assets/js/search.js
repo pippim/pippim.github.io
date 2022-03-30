@@ -15,11 +15,13 @@ var raw_url = code_url.replace('github', 'raw.githubusercontent');
 var raw_url = raw_url.replace('/blob/', '/');
 
 // Preload search objects
+var search_words = {}
 if (sessionStorage.search_words === undefined) { load_search_words(); }
-else { var search_words = JSON.parse(sessionStorage.getItem('search_words')); }
+else { search_words = JSON.parse(sessionStorage.getItem('search_words')); }
 
+var search_urls = []
 if (sessionStorage.search_urls === undefined) { load_search_urls(); }
-else { var search_urls = JSON.parse(sessionStorage.getItem('search_urls')); }
+else { search_urls = JSON.parse(sessionStorage.getItem('search_urls')); }
 
 async function load_search_words() {
     // Also used by /assets/js/theCookieMachine.js
