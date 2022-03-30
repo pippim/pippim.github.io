@@ -115,7 +115,7 @@ else { config_yml = sessionStorage.getItem('config_yml'); }
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
-    //buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
+    buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
     front_matter_to_html(configYml, "Site Front Matter ('_config.yml')");
 });
 
@@ -275,7 +275,6 @@ function webpage_info_to_html() {
 
 function getMarkdownFilename() {
     // WARNING: Extremely Jekyll Dependent
-    buildConfigYml();  // Already called in mainline
     var urlHref = location.href;            // https://pipp... #...
     var urlProtocol = location.protocol;    // https:
     var urlHost = location.hostname;        // pippim.github.io
@@ -348,14 +347,14 @@ function buildConfigYml () {
         .then((response) => response.text())
         .then((config_yml) => {
 */
-            configYml = config_yml.split("\n")  // Convert string into array
-            // Set flagPostsByYear flag
-            flagPostsByYear = "false";
-            for (var i = 0; i < configYml.length; i++) {
-                var ymlKeyValue = configYml[i].split(':');
-                if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
-                    if (ymlKeyValue[0] == "posts_by_year") {
-                        flagPostsByYear = ymlKeyValue[1].trim(); } } }
+    configYml = config_yml.split("\n")  // Convert string into array
+    // Set flagPostsByYear flag
+    flagPostsByYear = "false";
+    for (var i = 0; i < configYml.length; i++) {
+        var ymlKeyValue = configYml[i].split(':');
+        if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
+            if (ymlKeyValue[0] == "posts_by_year") {
+                flagPostsByYear = ymlKeyValue[1].trim(); } } }
 //        });
 }
 // buildConfigYml();  // Temporary
