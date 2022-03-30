@@ -256,7 +256,7 @@ function website_tree_to_html(results) {
 }
 
 function webpage_info_to_html() {
-
+    buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
     var urlMarkdown = getMarkdownFilename();
 
     fetch(urlMarkdown)
@@ -356,7 +356,7 @@ function buildConfigYml () {
 //        });
 }
 
-buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
+
 
 /* Further research
 
