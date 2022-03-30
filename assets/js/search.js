@@ -15,9 +15,9 @@ var raw_url = code_url.replace('github', 'raw.githubusercontent');
 var raw_url = raw_url.replace('/blob/', '/');
 
 // Preload search objects
-var search_words = sessionStorage.search_words;
+var search_words = JSON.parse(sessionStorage.search_words);
 if (typeof search_words === "undefined") { load_search_words(); }
-var search_url = sessionStorage.search_url;
+var search_url = JSON.parse(sessionStorage.search_url);
 if (typeof search_url === "undefined") { load_search_url(); }
 
 async function load_search_objects() {
@@ -44,7 +44,7 @@ async function load_search_words() {
         .then((response)=>response.json())
         .then((responseJson)=>{
             search_words = responseJson;
-            sessionStorage.search_words = search_words;
+            sessionStorage.setItem('search_words', JSON.stringify(search_words));
         });
 }
 
@@ -55,7 +55,8 @@ async function load_search_url() {
         .then((response)=>response.json())
         .then((responseJson)=>{
             search_url = responseJson;
-            sessionStorage.search_url = search_url;
+            // https://stackoverflow.com/a/32905820/6929343
+            sessionStorage.setItem('search_url', JSON.stringify(search_url));
         });
 }
 
@@ -84,7 +85,7 @@ XHRGEThttps://raw.githubusercontent.com/pippim/pippim.github.io/main/_config.yml
 */
 
 // Fudge it all anyways...
-load_search_objects();
+//load_search_objects();
 
 // Note theCookieMachine.js is already using b:
 //   const b = document.getElementById('tcm_window_body')
