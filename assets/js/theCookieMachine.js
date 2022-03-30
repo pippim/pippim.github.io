@@ -257,7 +257,7 @@ function website_tree_to_html(results) {
 }
 
 function webpage_info_to_html() {
-    // buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
+    buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
     var urlMarkdown = getMarkdownFilename();
 
     fetch(urlMarkdown)
@@ -275,7 +275,7 @@ function webpage_info_to_html() {
 
 function getMarkdownFilename() {
     // WARNING: Extremely Jekyll Dependent
-    // buildConfigYml();  // Already called in mainline
+    buildConfigYml();  // Already called in mainline
     var urlHref = location.href;            // https://pipp... #...
     var urlProtocol = location.protocol;    // https:
     var urlHost = location.hostname;        // pippim.github.io
@@ -358,7 +358,7 @@ function buildConfigYml () {
                         flagPostsByYear = ymlKeyValue[1].trim(); } } }
 //        });
 }
-buildConfigYml();  // Temporary
+// buildConfigYml();  // Temporary
 
 
 /* Further research
