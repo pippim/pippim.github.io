@@ -443,7 +443,7 @@ function local_storage_to_html() {
     // console.log("archive: " + archive)
 
     var html = "<p>";
-    html += "<h3>Local Storage and Cookies:</h3>";
+    html += "<h3>Local Storage and Cookies</h3>";
     html += "After closing this window, the TCM button will be:<br>\n"
     html += "&emsp; Visible on this webpage? " +
             '<img class="with-action" id="switch_this_page" ' +
@@ -453,12 +453,13 @@ function local_storage_to_html() {
             'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
     html += "&emsp; Visible on all sessions? " +
             '<img class="with-action" id="switch_all_sessions" ' +
-            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" />'
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
+    html += "Search Statistics<br>\n"
     html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
 
-    /* PProcess slider switches - shared  with ~/tcm.md */
+    /* Process slider switches - shared  with ~/tcm.md */
     tcmButtonVisibility()
 }
 
