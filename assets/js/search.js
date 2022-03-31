@@ -32,10 +32,7 @@ async function load_search_words() {
             // https://stackoverflow.com/a/32905820/6929343
             var search_words_store = JSON.stringify(search_words)
             sessionStorage.setItem('search_words', search_words_store);
-            //buildStats('Search Words Count', Object.keys(search_words_store).length);
-            // above gives same result 1,509,592 as search_words_store.length
             buildStats('Search Words Count', Object.keys(search_words).length);
-            alert("Object.keys(search_words).length: " + Object.keys(search_words).length)
             buildStats('Search Words Size', search_words_store.length);
         });
 }
