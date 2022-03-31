@@ -54,8 +54,12 @@ async function load_search_urls() {
 objStats = {}
 function buildStats (key, value) {
     objStats[key] = value
-    console.log('adding key/value: ' + key + " / " + value +
-                " | length: " + Object.keys(objStats).length);
+    // console.log('adding key/value: ' + key + " / " + value +
+    //            " | length: " + Object.keys(objStats).length);
+    // After 4 stats have been collected we are all done
+    if (Object.keys(objStats).length = 4) {
+        sessionStorage.setItem('search_stats', JSON.stringify(objStats));
+    }
 }
 
 /*  NOTE: theCookieMachine.js is already using b:
