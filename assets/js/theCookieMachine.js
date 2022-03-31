@@ -253,7 +253,6 @@ function website_tree_to_html(results) {
     html += '</style>'
 
     b.innerHTML = html; // Update TCM Window body
-
 }
 
 function webpage_info_to_html() {
@@ -270,7 +269,6 @@ function webpage_info_to_html() {
             // console.log('Here is the text file:\n' + config_yml);
             front_matter_to_html(front_yml, "Current Page Front Matter");
         });
-
 }
 
 function getMarkdownFilename() {
@@ -317,6 +315,7 @@ function getMarkdownFilename() {
 }
 
 function getFrontMatter(txtArr) {
+    // Extract front matter at top of text file
     var frontMatter = []
     if (txtArr[0] == "---") {
         for (var i = 1; i < txtArr.length; i++) {
@@ -326,7 +325,6 @@ function getFrontMatter(txtArr) {
     }
     return frontMatter
 }
-
 
 async function load_config_yml() {
     // Get from internet and store in session

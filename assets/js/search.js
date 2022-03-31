@@ -14,6 +14,11 @@ var code_url = "{{ site.code_url }}";
 var raw_url = code_url.replace('github', 'raw.githubusercontent');
 var raw_url = raw_url.replace('/blob/', '/');
 
+// Search statistics
+search_stats = {}
+if (sessionStorage.search_stats === undefined) { /* Built below */ }
+else { search_stats = JSON.parse(sessionStorage.getItem('search_stats')); }
+
 // Preload search objects
 var search_words = {}
 if (sessionStorage.search_words === undefined) { load_search_words(); }
@@ -51,14 +56,13 @@ async function load_search_urls() {
         });
 }
 
-objStats = {}
 function buildStats (key, value) {
-    objStats[key] = value
+    search_stats[key] = value
     // console.log('adding key/value: ' + key + " / " + value +
-    //            " | length: " + Object.keys(objStats).length);
+    //            " | length: " + Object.keys(search_stats).length);
     // After 4 stats have been collected we are all done
-    if (Object.keys(objStats).length = 4) {
-        sessionStorage.setItem('search_stats', JSON.stringify(objStats));
+    if (Object.keys(search_stats).length = 4) {
+        sessionStorage.setItem('search_stats', JSON.stringify(search_stats));
     }
 }
 
