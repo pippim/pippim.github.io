@@ -74,14 +74,14 @@ The buttons brighten as you hover over them.
 
 
 <table id="tcm_window_table" class="hrb_table">
-   <tr><th>Buttons</th>
-       <th>Usage</th>
+   <tr><th>Button</th>
+       <th>Description</th>
    </tr>
 
    <tr><td><button id="tcm_window_icon" class="tcm_documentation" 
    title="The Cookie Machine Window Icon" ></button></td>
-   <td><em>The Cookie Machine</em> (<b>TCM</b>) Window Icon - 
-   appears in the title bar.
+   <td><b>TCM Icon</b> - <em>The Cookie Machine</em> (<b>TCM</b>)
+   Icon appears in the TCM Window title bar.
    It also appears in the webpage header after you close TCM.
    Clicking the TCM icon in the webpage header reopens TCM. In other words,
    the button is no longer hidden!</td></tr> 
@@ -215,7 +215,7 @@ After closing this window, the TCM button will be:<br>
 
 <script>
 
-/* include tcm_button_visibility.js code shared by:
+/* include tcmButtonVisibility.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
