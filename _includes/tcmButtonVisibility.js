@@ -23,6 +23,7 @@ function tcmButtonVisibility() {
             switch_set(sel_all_pages, "false");
             switch_set(sel_all_sessions, "false");
         }
+        check_all_switches();
     });
 
     sel_all_pages.addEventListener('click', () => {
@@ -36,6 +37,7 @@ function tcmButtonVisibility() {
         if (vis_all_pages == "false") {
             switch_set(sel_all_sessions, "false");
         }
+        check_all_switches();
     });
 
     sel_all_sessions.addEventListener('click', () => {
@@ -50,6 +52,7 @@ function tcmButtonVisibility() {
             switch_set(sel_this_page, "true");
             switch_set(sel_all_pages, "true");
         }
+        check_all_switches();
     });
 
 }
