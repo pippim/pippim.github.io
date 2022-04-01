@@ -44,8 +44,8 @@ var vis_all_sessions = getCookie("vis_all_sessions")
 // getCookie() will return "" when cookie is undefined.
 if (vis_all_sessions == "") { vis_all_sessions = "false" }
 // if All sessions were forced on by another session, set our session "true"
-if (vis_all_sessions == "true" && vis_all_pages == "false") {
-    vis_all_pages = "true"
+if (vis_all_sessions == "true") {
+    vis_all_pages = "true"  // Force to "true" just in case it was "false"
     sessionStorage.vis_all_pages = vis_all_pages;
     makeTcmButtonVisible();
 }
