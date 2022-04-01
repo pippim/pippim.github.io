@@ -218,9 +218,9 @@ After closing this window, the TCM button will be:<br>
 
 <style>
 #tcm_switches {
-   width: 40rem;
+   max-width: 40rem;
    border: 3px solid grey;
-   margin-left: .5em;
+   margin-left: 1em;
    padding: .5rem;
 }
 </style>
