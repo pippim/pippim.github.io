@@ -70,16 +70,7 @@ function dragElement(elm) {
 }
 
 document.querySelector('#tcm_button').addEventListener('click', () => {
-  // Reveal tcm_window and move to top right
-  // document.querySelector('#tcm_window').style.cssText = `
-  //  display: block;
-  //  top: 20;
-  //  right: 20;
-  //`;  // top & right effect here is to move to TCM Button position
-  /*
-  document.querySelector('#tcm_window').style.display = "block";
-  */
-  /* https://stackoverflow.com/a/38066257/6929343  added*/
+  // TCM button click on webpage header
   document.querySelector('#tcm_window').style.cssText = `
     display: flex;
     flex-direction: column;
@@ -98,13 +89,10 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
   document.querySelector('#tcm_window').style.display = "none";
   // Make tcm_button (main page header) visible?
   if (vis_this_page == "true") { makeTcmButtonVisible() }
-  // else { console.log("vis_this_page: " + vis_this_page) }
 });
 
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
-var oldFontSize = null      // Save for when LineDraw changes
-var oldLineHeight = null
 var configYml = []          // Array containing _config.yml
 var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
 
@@ -452,7 +440,7 @@ function local_storage_to_html() {
     html += "&emsp; Visible on all sessions? " +
             '<img class="with-action" id="switch_all_sessions" ' +
             'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
-    html += "Search Statistics<br>\n"
+    html += "Search Engine Statistics<br>\n"
     html += "</p>";
 
     b.innerHTML = html;              // Update TCM Window body
@@ -507,12 +495,13 @@ function allStorage() {
 
 
 function setLineDrawFont(elm) {
+    /* Saving old font is overridden if button clicked twice
     let compStyles = window.getComputedStyle(elm);
     // Old font size and line height declared globally so they can be restore by Home button
     oldFontSize = compStyles.getPropertyValue('font-size');
     oldLineHeight = compStyles.getPropertyValue('line-height');
-    // console.log("Font size: " + oldFontSize + " Line height: " + oldLineHeight);
-    // font-family from: _sass/jekyll-theme-cayman.scss line 36
+    */
+    // From _sass/jekyll-theme-cayman.scss line 227
     elm.style.cssText = `
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
       line-height: .55;
@@ -521,15 +510,12 @@ function setLineDrawFont(elm) {
 }
 
 function restoreOldFont(elm) {
-    //if (oldFontSize != null) {
-        // From _sass/jekyll-theme-cayman.scss line 227
-        elm.style.cssText = `
-          font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-          font-size: 16px;
-          line-height: 1.2;
-        `;
-        //  line-height: 1.5; <-- Old before white-space: pre;
-    //}
+    // font-family from: _sass/jekyll-theme-cayman.scss line 36
+    elm.style.cssText = `
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.2;
+    `;
+    //       font-size: 16px;  <- This was above but let default prevail
 }
 
 // Add tooltips to hdr-bar buttons
