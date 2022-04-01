@@ -495,18 +495,11 @@ function allStorage() {
 
 
 function setLineDrawFont(elm) {
-    /* Saving old font is overridden if button clicked twice
-    let compStyles = window.getComputedStyle(elm);
-    // Old font size and line height declared globally so they can be restore by Home button
-    oldFontSize = compStyles.getPropertyValue('font-size');
-    oldLineHeight = compStyles.getPropertyValue('line-height');
-    */
     // From _sass/jekyll-theme-cayman.scss line 227
     elm.style.cssText = `
       font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
       line-height: .55;
     `;
-    // line-height: 1.163; <-- this was above
 }
 
 function restoreOldFont(elm) {
@@ -515,10 +508,11 @@ function restoreOldFont(elm) {
       font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height: 1.2;
     `;
-    //       font-size: 16px;  <- This was above but let default prevail
 }
 
-// Add tooltips to hdr-bar buttons
+// Assign tooltip (title=) to section navigation bar buttons
+set_hdr_tooltips();
+// Add tooltips to hdr-bar buttons on all blog post pages with navigation buttons
 function set_hdr_tooltips () {
     var hdr_bars = document.getElementsByClassName('hdr-bar');
     var hdr_bars_cnt = hdr_bars.length;
@@ -543,7 +537,5 @@ function set_hdr_tooltips () {
     }
 }
 
-// Assign tooltip (title=) to section navigation bar buttons
-set_hdr_tooltips();
 
 /* End of /assets/js/theCookieMachine.js */
