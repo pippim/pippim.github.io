@@ -84,24 +84,24 @@ The buttons brighten as you hover over them.
    Icon appears in the TCM Window title bar.
    It also appears in the webpage header after you close TCM.
    Clicking the TCM icon in the webpage header reopens TCM. 
-   [Read more...](#tcm_icon)</td></tr> 
+   <a href="#tcm_icon">Read more...</a></td></tr> 
 
    <tr><td><button id="tcm_display_home" class="tcm_documentation" 
    title="The Cookie Machine Home Page" ></button></td>
    <td><b>Home Page</b> - Displays site wide global Jekyll Front Matter such as; 
    URLs, number of views, number of posts, etc.
-   [Read more...](#home_button)</td></tr> 
+   <a href="#home_button">Read more...</a></td></tr> 
    
    <tr><td><button id="tcm_display_cloud" class="tcm_documentation" 
    title="Cloud storage - Display website tree" ></button></td> 
    <td><b>Cloud Storage</b> - Displays {{ site.title }} website directory tree
-   [Read more...](#cloud_button)</td></tr> 
+   <a href="#cloud_button">Read more...</a></td></tr> 
    
    <tr><td><button id="tcm_display_local" class="tcm_documentation" 
    title="Local storage - Display cookies and cache" > </button></td> 
    <td><b>Local Storage</b> - Change cookies used for option settings such as;
    Less/More front matter and TCM Button visibility on page header.
-   [Read more...](#local_button)</td></tr>
+   <a href="#local_button">Read more...</a></td></tr>
    
    <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" 
    title="Hyperlink Recipe Baker" > </button></td> 
@@ -111,19 +111,19 @@ The buttons brighten as you hover over them.
    title="Complete instructions for using Hyperlink Recipe Baker"
    >full documentation</a>. Very handy for creating hyperlinks to
    the current webpage, without having to switch to another browser tab.
-   [Read more...](#hyperlink_button)</td></tr>
+   <a href="#hyperlink_button">Read more...</a></td></tr>
    
    <tr><td><button id="tcm_webpage_info" class="tcm_documentation" 
    title="Webpage Name and Front Matter" ></button></td>
    <td><b>Webpage Information</b> - Display Jekyll Front Matter 
-   for current webpage [Read more...](#webpage_button)</td></tr>
+   for current webpage <a href="#webpage_button">Read more...</a></td></tr>
 
    <tr><td><button id="tcm_cookie_jar" class="tcm_documentation" 
    title="The Cookie Jar - Import/Export cookies" ></button></td>
    <td><b>Cookie Jar</b> - 
    The Cookie jar is for file uploads and downloads.
    Cookies and local storage is saved and retrieved
-   from the Cookie Jar. [Read more...](#cookie_jar_button)</td></tr> 
+   from the Cookie Jar. <a href="#cookie_jar_button">Read more...</a></td></tr> 
 
 </table>
 
