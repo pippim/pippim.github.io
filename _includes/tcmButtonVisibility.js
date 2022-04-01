@@ -71,21 +71,18 @@ function makeTcmButtonVisible () {
 var objTcmVisById = {};  // Current state (on/"true" or off/"false") by id
 
 function switch_init(id, bool) {
-    /* Default HTML image src is "off" so setting will be "false" */
+    /* Each switch in object dictionary with element and true/false setting */
     objTcmVisById[id] = {
-        'id': id,
+        'element': document.getElementById(id);
         'setting': "false"
     };
-    if (bool == "true" ) {
-        objTcmVisById[id].setting = "true";
-        document.getElementById(id).src = switch_on_image;   // Use switched off image
-    }
+    switch_set(id, bool);
 }
 
 function switch_set(id, bool) {
     objTcmVisById[id].setting = bool; 
-    if (bool == "true" ) { document.getElementById(id).src = switch_on_image; }
-                    else { document.getElementById(id).src = switch_off_image; }
+    if (bool == "true" ) { objTcmVisById[id].element.src = switch_on_image; }
+                    else { objTcmVisById[id].element.src = switch_off_image; }
     if (id == "switch_this_page") { vis_this_page = bool; }
     if (id == "switch_all_pages") { vis_all_pages = bool; }
     if (id == "switch_all_sessions") { vis_all_sessions = bool; }
