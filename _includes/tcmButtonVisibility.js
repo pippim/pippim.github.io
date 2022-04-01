@@ -21,7 +21,6 @@ function tcmButtonVisibility() {
 
     document.getElementById("switch_all_pages").addEventListener('click', () => {
         switch_toggle("switch_all_pages");
-        sessionStorage.vis_all_pages = vis_all_pages;
         // switched on force page visible or off force sessions invisible
         if (vis_all_pages == "true") { switch_set("switch_this_page", "true"); }
         if (vis_all_pages == "false") { switch_set("switch_all_sessions", "false"); }
@@ -29,7 +28,6 @@ function tcmButtonVisibility() {
 
     document.getElementById("switch_all_sessions").addEventListener('click', () => {
         switch_toggle("switch_all_sessions");
-        setCookie("vis_all_sessions", vis_all_sessions, 30);
         // If visible all sessions then force visible all pages
         if (vis_all_sessions == "true") {
             switch_set("switch_this_page", "true");
@@ -84,8 +82,14 @@ function switch_set(id, bool) {
     if (bool == "true" ) { objTcmVisById[id].element.src = switch_on_image; }
                     else { objTcmVisById[id].element.src = switch_off_image; }
     if (id == "switch_this_page") { vis_this_page = bool; }
-    if (id == "switch_all_pages") { vis_all_pages = bool; }
-    if (id == "switch_all_sessions") { vis_all_sessions = bool; }
+    if (id == "switch_all_pages") {
+        vis_all_pages = bool;
+        sessionStorage.vis_all_pages = vis_all_pages;
+    }
+    if (id == "switch_all_sessions") {
+        vis_all_sessions = bool;
+        setCookie("vis_all_sessions", vis_all_sessions, 30);
+    }
 }
 
 function check_all_switches() {
