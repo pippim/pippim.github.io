@@ -133,7 +133,7 @@ The buttons brighten as you hover over them.
     margin: .5rem .5rem;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 3px solid black;  
+    border: none;  
   }
   .tcm_documentation:hover {
     filter: brightness(150%);
@@ -194,6 +194,7 @@ switch is red it "off" and when it is green it is "on".
 
 In the TCM window's local storage section you will see:
 
+<div id="tcm_switches">
 <h3>Local Storage and Cookies:</h3>
 
 After closing this window, the TCM button will be:<br>
@@ -209,11 +210,17 @@ After closing this window, the TCM button will be:<br>
 &emsp; Visible on all sessions? 
    <img class="with-action" id="switch_all_sessions" 
    src="/assets/img/icons/switch_off_left.png" />
+</div>
 
 > **NOTE:** The slider switches above are live and will
 > effect TCM Button visibility as if you had set them
 > in the Cookie Machine directly.
 
+<style>
+#tcm_switches {
+    border: 3px solid grey;  
+}
+</style>
 <script>
 
 /* include tcmButtonVisibility.js code shared by:
