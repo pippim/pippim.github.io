@@ -83,22 +83,25 @@ The buttons brighten as you hover over them.
    <td><b>TCM Icon</b> - <em>The Cookie Machine</em> (<b>TCM</b>)
    Icon appears in the TCM Window title bar.
    It also appears in the webpage header after you close TCM.
-   Clicking the TCM icon in the webpage header reopens TCM. In other words,
-   the button is no longer hidden!</td></tr> 
+   Clicking the TCM icon in the webpage header reopens TCM. 
+   [Read more...](#tcm_icon)</td></tr> 
 
    <tr><td><button id="tcm_display_home" class="tcm_documentation" 
    title="The Cookie Machine Home Page" ></button></td>
    <td><b>Home Page</b> - Displays site wide global Jekyll Front Matter such as; 
-   URLs, number of views, number of posts, etc.</td></tr> 
+   URLs, number of views, number of posts, etc.
+   [Read more...](#home_button)</td></tr> 
    
    <tr><td><button id="tcm_display_cloud" class="tcm_documentation" 
    title="Cloud storage - Display website tree" ></button></td> 
-   <td><b>Cloud Storage</b> - Displays {{ site.title }} website directory tree</td></tr> 
+   <td><b>Cloud Storage</b> - Displays {{ site.title }} website directory tree
+   [Read more...](#cloud_button)</td></tr> 
    
    <tr><td><button id="tcm_display_local" class="tcm_documentation" 
    title="Local storage - Display cookies and cache" > </button></td> 
    <td><b>Local Storage</b> - Change cookies used for option settings such as;
-   Less/More front matter and TCM Button visibility on page header.</td></tr>
+   Less/More front matter and TCM Button visibility on page header.
+   [Read more...](#local_button)</td></tr>
    
    <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" 
    title="Hyperlink Recipe Baker" > </button></td> 
@@ -108,19 +111,19 @@ The buttons brighten as you hover over them.
    title="Complete instructions for using Hyperlink Recipe Baker"
    >full documentation</a>. Very handy for creating hyperlinks to
    the current webpage, without having to switch to another browser tab.
-   </td></tr>
+   [Read more...](#hyperlink_button)</td></tr>
    
    <tr><td><button id="tcm_webpage_info" class="tcm_documentation" 
    title="Webpage Name and Front Matter" ></button></td>
    <td><b>Webpage Information</b> - Display Jekyll Front Matter 
-   for current webpage</td></tr>
+   for current webpage [Read more...](#webpage_button)</td></tr>
 
    <tr><td><button id="tcm_cookie_jar" class="tcm_documentation" 
    title="The Cookie Jar - Import/Export cookies" ></button></td>
    <td><b>Cookie Jar</b> - 
    The Cookie jar is for file uploads and downloads.
    Cookies and local storage is saved and retrieved
-   from the Cookie Jar. </td></tr> 
+   from the Cookie Jar. [Read more...](#cookie_jar_button)</td></tr> 
 
 </table>
 
@@ -151,13 +154,17 @@ The buttons brighten as you hover over them.
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
+<a id="tcm_icon"></a>
+# TCM Icon
+
+The Cookie Machine (TCM) icon is a Gingerbread Man.
 
 ---
 
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
-
+<a id="home_button"></a>
 # Home Button
 
 Displays Jekyll Front Matter for the website. This
@@ -170,6 +177,7 @@ Comments and blank lines are not displayed.
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
+<a id="cloud_button"></a>
 # Cloud Button
 
 Displays website tree.
@@ -180,6 +188,7 @@ Displays website tree.
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
+<a id="local_button"></a>
 # Local Storage Button
 
 The local storage section is used to control cookie settings.
@@ -230,6 +239,7 @@ tcmButtonVisibility()
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
+<a id="hyperlink_button"></a>
 # Hyperlink Button
 
 Spins up an instance of the Hyperlink Recipe Baker.
@@ -238,6 +248,7 @@ This allows you to quickly create hyperlinks on any website page
 without having to switch browser tabs.
 
 
+<a id="webpage_button"></a>
 # Webpage Information Button
 
 Displays Jekyll Front Matter for the current webpage. This
@@ -249,83 +260,15 @@ is formatted as YAML key/value pairs.
 <a id="hdr10"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
+<a id="cookie_jar_button"></a>
+# Cookie Jar Button
 
-# Create a Second Configuration File
-
-Lets say you want a second Multi-Timer Configuration file
-for another project.  Enter these commands from the terminal (The `#`
-comments are not necessary but will not effect operations):
-
-```shell
-cd ~/.config                  # Go to user's configuration directory
-cp mt.conf mt_laundry.conf    # Copy Multi-Timer configuration file
-rm mt.conf                    # Remove Multi-Timer configuration file
-mt                            # Run Multi-Timer as if first time
-```
-
-This saves the current configuration as `mt_laundry.conf` and runs
-Multi-Timer as if it were the first time.
-
-The copy command (`cp`) and remove command (`rm`) can be combined into
-a single move command (`mv`) to rename the configuration file:
-
-```shell
-cd ~/.config                  # Go to user's configuration directory
-mv mt.conf mt_laundry.conf    # Rename Multi-Timer configuration file
-```
 
 ---
 
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
-# Increasing Maximum Number of Timers
-
-Lets say you created your configuration with the
-*Maximum Number of Timers* for your laundry job set to 3 for:
-
-- Wash
-- Rinse
-- Dry
-
-Then you decided you wanted to add another timer for folding
-your clothes. The conventional method is to simply delete the
-configuration file (as described in the previous section) and
-create a new configuration.
-
-There is another option though. YOu can actually edit the
-configuration file using `gedit` or another editor. For example,
-type `gedit ~/.config/mt.conf` and you will see:
-
-0.2.0|Minutes|1|1|/usr/bin/paplay|/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga|/usr/share/icons/gnome/48x48/status/appointment-soon.png|Each set end|TRUE|FALSE|TRUE|FALSE|FALSE|FALSE|TRUE|TRUE|3|Wash|Rinse|Dry|16|13|58
-
-The pipe character (`|`) separates fields in the configuration file.
-
-Notice the end of the line contains:
-
-    TRUE|3|Wash|Rinse|Dry|16|13|58
-
-The `3` indicates the maximum number of timers. This is followed
-by the timer aliases: `Wash`, `Rinse` and `Dry`. Next comes
-the timer durations in minutes: `16`, `13` and `58`.
-
-To change to four timers you would change them to:
-
-    TRUE|4|Wash|Rinse|Dry|Fold|16|13|58|10
-
-The `4` indicates the maximum number of timers. This is followed
-by the timer aliases: `Wash`, `Rinse`, `Dry` and `Fold`. Next comes
-the timer durations in minutes: `16`, `13`, `58` and `10`.
-
-But while you are add it why not add some extra spare fields?
-
-    TRUE|6|Timer 1|Wash|Rinse|Dry|Fold|Timer 6|0|16|13|58|10|0
-
-You've just successfully created timer aliases `Timer 1` and
-`Timer 6` with a duration of `0` minutes which means they
-will never display and never get executed. If you ever want to
-activate them just use the regular Main Configuration Tab in
-Multi-Timer program.
 
 ---
 
@@ -336,31 +279,6 @@ Multi-Timer program.
 
 A web version where you can run Multi-Timer on any web browser on any
 platform anywhere in the world.
-
-The configuration file is stored on your web browser local storage in
-the form of a Cookie.
-
-A function to copy and paste your cookie into an email. Then send it
-to yourself and receive it. Then paste the cookie onto another web
-browser on your device. Or paste the cookie into a different device.
-Or share your e-amil cookie with a friend / colleague and they can
-run your Set of Timers.
-
-Perhaps some day {{ site.title }} will have a special page of the
-most popular Multi-Timer cookies that people can run.
-
-Gone will be the notion of *Maximum Number of Timers*. You can have
-an infinite amount depending on RAM. You can scroll and insert a
-new timer anywhere in the set. You can highlight a timer and click
-the Trash Bin. After confirmation all timers below simply move up
-the list.
-
-It will be easier to let you link the timer alarm to a YouTube
-video instead of just a simple audio file.
-
-The future can be revolutionary... or at the vary least evolutionary
-because Cookies have existed for a long time, just never something
-end-users were allowed to use for their own personal gain.
 
 ---
 
