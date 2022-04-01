@@ -73,7 +73,7 @@ var objTcmVisById = {};  // Current state (on/"true" or off/"false") by id
 function switch_init(id, bool) {
     /* Each switch in object dictionary with element and true/false setting */
     objTcmVisById[id] = {
-        'element': document.getElementById(id);
+        'element': document.getElementById(id),
         'setting': "false"
     };
     switch_set(id, bool);
