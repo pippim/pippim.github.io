@@ -77,54 +77,46 @@ The buttons brighten as you hover over them.
    <tr><th>Button</th>
        <th>Description</th>
    </tr>
-
    <tr><td><button id="tcm_window_icon" class="tcm_documentation" 
-   title="The Cookie Machine Window Icon" ></button></td>
+      title="The Cookie Machine Window Icon" ></button></td>
    <td><b>TCM Icon</b> - <em>The Cookie Machine</em> (<b>TCM</b>)
-   Icon appears in the TCM Window title bar.
-   It also appears in the webpage header after you close TCM.
-   Clicking the TCM icon in the webpage header reopens TCM. 
-   <a href="#tcm_icon">Read more...</a></td></tr> 
-
+      Icon appears in the TCM Window title bar.
+      It also appears in the webpage header after you close TCM.
+      Clicking the TCM icon in the webpage header reopens TCM. 
+      <a href="#tcm_icon">Read more...</a></td></tr> 
    <tr><td><button id="tcm_display_home" class="tcm_documentation" 
-   title="The Cookie Machine Home Page" ></button></td>
+      title="The Cookie Machine Home Page" ></button></td>
    <td><b>Home Page</b> - Displays site wide global Jekyll Front Matter such as; 
-   URLs, number of views, number of posts, etc.
-   <a href="#home_button">Read more...</a></td></tr> 
-   
+      URLs, number of views, number of posts, etc.
+      <a href="#home_button">Read more...</a></td></tr> 
    <tr><td><button id="tcm_display_cloud" class="tcm_documentation" 
-   title="Cloud storage - Display website tree" ></button></td> 
+      title="Cloud storage - Display website tree" ></button></td> 
    <td><b>Cloud Storage</b> - Displays {{ site.title }} website directory tree
-   <a href="#cloud_button">Read more...</a></td></tr> 
-   
+      <a href="#cloud_button">Read more...</a></td></tr> 
    <tr><td><button id="tcm_display_local" class="tcm_documentation" 
-   title="Local storage - Display cookies and cache" > </button></td> 
+      title="Local storage - Display cookies and cache" > </button></td> 
    <td><b>Local Storage</b> - Change cookies used for option settings such as;
-   Less/More front matter and TCM Button visibility on page header.
-   <a href="#local_button">Read more...</a></td></tr>
-   
+      Less/More front matter and TCM Button visibility on page header.
+      <a href="#local_button">Read more...</a></td></tr>
    <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" 
-   title="Hyperlink Recipe Baker" > </button></td> 
+      title="Hyperlink Recipe Baker" > </button></td> 
    <td><b>Hyperlink Recipe Baker (HRB)</b> - Used to create hyperlinks 
-   in HTML or Markdown format See the
-   <a href="https://pippim.github.io/hyperlink.html#" target="_blank" 
-   title="Complete instructions for using Hyperlink Recipe Baker"
-   >full documentation</a>. Very handy for creating hyperlinks to
-   the current webpage, without having to switch to another browser tab.
-   <a href="#hyperlink_button">Read more...</a></td></tr>
-   
+      in HTML or Markdown format See the
+      <a href="https://pippim.github.io/hyperlink.html#" target="_blank" 
+      title="Complete instructions for using Hyperlink Recipe Baker"
+      >full documentation</a>. Very handy for creating hyperlinks to
+      the current webpage, without having to switch to another browser tab.
+      <a href="#hyperlink_button">Read more...</a></td></tr>
    <tr><td><button id="tcm_webpage_info" class="tcm_documentation" 
-   title="Webpage Name and Front Matter" ></button></td>
+      title="Webpage Name and Front Matter" ></button></td>
    <td><b>Webpage Information</b> - Display Jekyll Front Matter 
-   for current webpage <a href="#webpage_button">Read more...</a></td></tr>
-
+      for current webpage <a href="#webpage_button">Read more...</a></td></tr>
    <tr><td><button id="tcm_cookie_jar" class="tcm_documentation" 
-   title="The Cookie Jar - Import/Export cookies" ></button></td>
+      title="The Cookie Jar - Import/Export cookies" ></button></td>
    <td><b>Cookie Jar</b> - 
-   The Cookie jar is for file uploads and downloads.
-   Cookies and local storage is saved and retrieved
-   from the Cookie Jar. <a href="#cookie_jar_button">Read more...</a></td></tr> 
-
+      The Cookie jar is for file uploads and downloads.
+      Cookies and local storage is saved and retrieved
+      from the Cookie Jar. <a href="#cookie_jar_button">Read more...</a></td></tr> 
 </table>
 
 <!-- NOTE: #tcm_window_icon through #tcm_webpage_info defined in /assets/css/style.scss -->
@@ -141,7 +133,7 @@ The buttons brighten as you hover over them.
     margin: .5rem .5rem;
     background-repeat: no-repeat;
     background-size: cover;
-    border: none;  
+    border: 3px solid black;  
   }
   .tcm_documentation:hover {
     filter: brightness(150%);
