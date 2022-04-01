@@ -166,8 +166,8 @@ $lavender: #E6E6FA !default; // lavender
     max-height: 0;
     transform: scaleY(0);
     transform-origin: top;
-    // transition: transform 0.26s ease;
-    transition: all 0.26s ease;
+    transition: transform 0.26s ease;
+    // transition: all 0.26s ease;  // transition colors too, but like way before
 }
 
 .front-matter:hover .hidden-child{
