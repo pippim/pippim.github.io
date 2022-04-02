@@ -240,9 +240,17 @@ tcmButtonVisibility()
 
 Spins up an instance of the Hyperlink Recipe Baker.
 
-This allows you to quickly create hyperlinks on any website page
+This allows you to quickly create hyperlinks on any 
+{{ site.title }} website page
 without having to switch browser tabs.
 
+<div id="hrb_body"></div>
+<script>
+processHyperlinkRecipe("hrb_body")
+</script>
+
+Instructions for using the Hyperlink Recipe Baker can be found 
+here.
 
 <a id="webpage_button"></a>
 # Webpage Information Button
