@@ -431,7 +431,7 @@ function local_storage_to_html() {
     var html = htmlVisibilitySwitches();
 
     // Function shared with tcm.md in _includes/tcmButtonVisibility.js
-    html += htmlSearchStats(search_stats);
+    html += htmlSearchStats();
     b.innerHTML = html;              // Update TCM Window body
 
     /*  Process slider switches - shared  with ~/tcm.md
