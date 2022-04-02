@@ -13,13 +13,24 @@ var code_url = "{{ site.code_url }}";
 // raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
 var raw_url = code_url.replace('github', 'raw.githubusercontent');
 var raw_url = raw_url.replace('/blob/', '/');
+var timeNow = new Date().getTime();
+var oneDay= 1000 * 60 * 60 * 24;
 
 // Search statistics
-search_stats = {}
-if (sessionStorage.search_stats === undefined) { /* Built below */ }
+var search_stats = {}
+if (sessionStorage.search_stats === undefined) { newStats(); }
 else { search_stats = JSON.parse(sessionStorage.getItem('search_stats')); }
 
-// Preload search objects
+// if search_stats["timeCreated"] > 24 hours old, erase sessionStorage
+// Don't use sessionStorage.clear() because we loose TCM Window Visibility
+if (search_stats["timeCreated"] < timeNow - oneDay) {
+    newStats(); // Wipe out previous stats
+    sessionStorage.removeItem("search_stats");
+    sessionStorage.removeItem("search_words");
+    sessionStorage.removeItem("search_urls");
+}
+
+// Get sessionStorage search objects: search_words & search_urls
 var search_words = {}
 if (sessionStorage.search_words === undefined) { load_search_words(); }
 else { search_words = JSON.parse(sessionStorage.getItem('search_words')); }
@@ -56,11 +67,12 @@ async function load_search_urls() {
         });
 }
 
+function newStats () {
+    search_stats = {} // Wipe out previous stats
+    search_stats["timeCreated"] = timeNow;
+}
+
 function buildStats (key, value) {
-    if (Object.keys(search_stats).length = 0) {
-        // TODO: var timeNow = new Date().getTime();
-        search_stats["timeCreated"] = new Date().getTime();
-    }
     search_stats[key] = value
     // console.log('adding key/value: ' + key + " / " + value +
     //            " | length: " + Object.keys(search_stats).length);
@@ -159,7 +171,7 @@ function get_hits(submit_str) {
 
     for (const word of words) {
         l_word = word.toLowerCase();
-        /* NEW style */
+        /* If word not found, subtract "es", "s", 'ed", etc and check again */
         if (!(check_word(l_word, url_ndx_points))) {
             check_root_word(l_word, url_ndx_points);
         }
