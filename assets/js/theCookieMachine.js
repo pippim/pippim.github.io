@@ -473,9 +473,7 @@ function htmlSearchStats(stats) {
         html += '  <tr><td>' + key + '</td>\n' ;
         // TODO: Need database of object keys and their value format
         // If greater than 123 MB it's a Unix Date in Epoch
-        var d = new Date(value); // The 0 there is the key, which sets the date to the epoch
-        //d.setUTCSeconds(value/1000);
-        console.log("date: " + d.toLocaleDateString() +  '  time: ' + d.toLocaleTimeString());
+        var d = new Date(value);
         html += '  <td>';  // Start of table cell
         // html += value.toLocaleString();
         if (value < 123456789) { html += value.toLocaleString(); }
