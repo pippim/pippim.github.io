@@ -473,10 +473,12 @@ function htmlSearchStats(stats) {
         html += '  <tr><td>' + key + '</td>\n' ;
         // TODO: Need database of object keys and their value format
         // If greater than 123 MB it's a Unix Date in Epoch
+        var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+        d.setUTCSeconds(value);
         html += '  <td>';  // Start of table cell
-        html += value.toLocaleString();
-        //if (value < 123456789) { html += value.toLocaleString(); }
-        //else { html += value.toLocaleDateString(); +  ' ' + value.toLocaleTimeString(); }
+        // html += value.toLocaleString();
+        if (value < 123456789) { html += value.toLocaleString(); }
+        else { html += d.toLocaleDateString(); +  ' ' + d.toLocaleTimeString(); }
         html += '</td></tr>\n';  // End of table cell and table row
     }
     html += '</table>\n';     // End of our table and form
