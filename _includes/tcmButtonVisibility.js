@@ -103,4 +103,40 @@ function switch_toggle(id) {
                                         else { switch_set(id, "true"); }
 }
 
+/* Display search statistics */
+
+function htmlSearchStats(stats) {
+    /* return html code <table> <td> for:
+        Statistic Key       Statistic Value
+        timeCreated         999999?
+        Search Words Count  888,888
+    */
+    var html = '<table id="statTable">\n' ;
+    // Statistics Table heading
+    html += '  <tr><th>Statistic Key</th>\n' +
+            '  <th>Statistic Value</th></tr>\n';
+
+    for (const [key, value] of Object.entries(stats)) {
+        html += '  <tr><td>' + key + '</td>\n' ;
+        // TODO: Need database of object keys and their value format
+        // If greater than 123 MB it's a Unix Date in Epoch
+        var d = new Date(value);
+        html += '  <td>';  // Start of table cell
+        // html += value.toLocaleString();
+        if (value < 123456789) { html += value.toLocaleString(); }
+        else { html += d.toLocaleDateString() +  ' ' + d.toLocaleTimeString() }
+        html += '</td></tr>\n';  // End of table cell and table row
+    }
+    html += '</table>\n';     // End of our table and form
+
+    // TODO: Move next 9 lines to a shared function
+    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style>\n#statTable th, #statTable td {\n' +
+            '  padding: 0 .5rem;\n' +
+            '}\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    return html; // Update TCM Window body
+}
+
+
 /* End of /_includes/tcm_button_visibility.js */
