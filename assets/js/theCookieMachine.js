@@ -440,7 +440,7 @@ function local_storage_to_html() {
     html += "&emsp; Visible on all sessions? " +
             '<img class="with-action" id="switch_all_sessions" ' +
             'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
-    html += "Search Engine Statistics<br>\n"
+    html += "Search Engine Statistics:<br>"
     html += "</p>";
 
     html += htmlSearchStats(search_stats);
@@ -465,19 +465,24 @@ function htmlSearchStats(stats) {
         Search Words Count  888,888
     */
     var html = '<table id="statTable" class="yml_table">\n' ;
-    // YAML heading
+    // Statistics Table heading
     html += '  <tr><th>Statistic Key</th>\n' +
             '  <th>Statistic Value</th></tr>\n';
 
     for (const [key, value] of Object.entries(stats)) {
         html += '  <tr><td>' + key + '</td>\n' ;
-        html += '  <td>' + value.toLocaleString() + '</td></tr>\n';
+        // TODO: Need database of object keys and their value format
+        // If greater than 123 MB it's a Unix Date in Epoch
+        html += '  <td>';  // Start of table cell
+        if (value < 123456789) { html += value.toLocaleString(); }
+        else { html += value.toLocaleDateString() +  ' ' + value.toLocaleTimeString() }
+        html += '</td></tr>\n';  // End of table cell and table row
     }
     html += '</table>\n';     // End of our table and form
 
     // TODO: Move next 9 lines to a shared function
     // Heading: "999 Pippim website entries found." <h3> styling
-    html += '<style> #statTable td {\n' +
+    html += '<style> #statTable th td {\n' +
             '  padding: 0 .5rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
