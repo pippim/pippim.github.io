@@ -8,13 +8,13 @@
 */
 
 // Use site.code from _config.yml to build raw_url
-var code_url = "{{ site.code_url }}";
-// code_yml: https://       github.com        /pippim/pippim.github.io/blob/main
-// raw_yml:  https://raw.githubusercontent.com/pippim/pippim.github.io/main
+const code_url = "{{ site.code_url }}";
+// code_url: https://       github.com        /pippim/pippim.github.io/blob/main
+//  raw_url: https://raw.githubusercontent.com/pippim/pippim.github.io/main
 var raw_url = code_url.replace('github', 'raw.githubusercontent');
-var raw_url = raw_url.replace('/blob/', '/');
-var timeNow = new Date().getTime();
-var oneDay= 1000 * 60 * 60 * 24;
+raw_url = raw_url.replace('/blob/', '/');
+const timeNow = new Date().getTime();
+const oneDay= 1000 * 60 * 60 * 24;
 
 // Search statistics
 var search_stats = {}
@@ -102,9 +102,7 @@ c.onclick = function () {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (!m.contains(event.target)) {
-        m.style.display = "none";   // Turn off display for search results
-    }
+    if (!m.contains(event.target)) { m.style.display = "none"; }
 }
 
 f.addEventListener('submit', submitted);
