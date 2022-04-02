@@ -194,27 +194,13 @@ switch is red it "off" and when it is green it is "on".
 
 In the TCM window's local storage section you will see:
 
-<div id="tcm_switches">
-<h3>Local Storage and Cookies:</h3>
-
-After closing this window, the TCM button will be:<br>
-
-&emsp; Visible on this webpage?
-   <img class="with-action" id="switch_this_page" 
-   src="/assets/img/icons/switch_off_left.png" /><br>
-
-&emsp; Visible on all webpages? 
-   <img class="with-action" id="switch_all_pages" 
-   src="/assets/img/icons/switch_off_left.png" /><br>
-
-&emsp; Visible on all sessions? 
-   <img class="with-action" id="switch_all_sessions" 
-   src="/assets/img/icons/switch_off_left.png" />
-</div>
+<div id="tcm_switches"></div>
 
 > **NOTE:** The slider switches above are live and will
 > effect TCM Button visibility as if you had set them
 > in the Cookie Machine directly.
+
+<div id="tcm_search_stats"></div>
 
 <style>
 #tcm_switches {
@@ -225,6 +211,8 @@ After closing this window, the TCM button will be:<br>
 }
 </style>
 <script>
+document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches;
+document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats;
 
 /* include tcmButtonVisibility.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
