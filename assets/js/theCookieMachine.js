@@ -443,9 +443,12 @@ function local_storage_to_html() {
     html += "Search Engine Statistics<br>\n"
     html += "</p>";
 
+    html += htmlSearchStats(search_stats);
     b.innerHTML = html;              // Update TCM Window body
 
-    /* Process slider switches - shared  with ~/tcm.md */
+    /*  Process slider switches - shared  with ~/tcm.md
+        USE: % include tcmButtonVisibility.js %}
+    */
     tcmButtonVisibility()
 }
 
@@ -455,6 +458,32 @@ function local_storage_to_html() {
 */
 {% include tcmButtonVisibility.js %}
 
+function htmlSearchStats(stats) {
+    /* return html code <table> <td> for:
+        Statistic Key       Statistic Value
+        timeCreated         999999?
+        Search Words Count  888,888
+    */
+    var html = '<table id="statTable" class="yml_table">\n' ;
+    // YAML heading
+    html += '  <tr><th>Statistic Key</th>\n' +
+            '  <th>Statistic Value</th></tr>\n';
+
+    for (const [key, value] of Object.entries(stats)) {
+        html += '  <tr><td>' + key + '</td>\n' ;
+        html += '  <td>' + value + '</td></tr>\n';
+    }
+    html += '</table>\n';     // End of our table and form
+
+    // TODO: Move next 9 lines to a shared function
+    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style> #statTable {\n' +
+            '  margin-top: .5rem;\n' +
+            '  margin-bottom: 0px;\n' +
+            '}\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    return html; // Update TCM Window body
+}
 
 function getCookies() {
     // https://stackoverflow.com/a/252959/6929343
