@@ -103,7 +103,23 @@ function switch_toggle(id) {
                                         else { switch_set(id, "true"); }
 }
 
-/* Display search statistics */
+/* Display visibility switches and search statistics */
+
+function htmlVisibilitySwitches () {
+    var html = "<h3>Local Storage and Cookies</h3>";
+    html += "After closing this window, the TCM button will be:<br>"
+    html += "&emsp; Visible on this webpage? " +
+            '<img class="with-action" id="switch_this_page" ' +
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
+    html += "&emsp; Visible on all webpages? " +
+            '<img class="with-action" id="switch_all_pages" ' +
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
+    html += "&emsp; Visible on all sessions? " +
+            '<img class="with-action" id="switch_all_sessions" ' +
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
+    html += "Search Engine Statistics:<br>"
+    return html
+}
 
 function htmlSearchStats(stats) {
     /* return html code <table> <td> for:
