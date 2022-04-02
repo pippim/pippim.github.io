@@ -14,7 +14,8 @@ const code_url = "{{ site.code_url }}";
 var raw_url = code_url.replace('github', 'raw.githubusercontent');
 raw_url = raw_url.replace('/blob/', '/');
 const timeNow = new Date().getTime();
-const oneDay= 1000 * 60 * 60 * 24;
+// const oneDay= 1000 * 60 * 60 * 24;
+const oneDay= 1;  // Force rebuild each time.
 
 // Search statistics
 var search_stats = {}
@@ -93,7 +94,7 @@ const h = document.getElementById('search-modal-text')      // Search results ht
 const i = document.getElementById('search-clear-input');    // 'X' to clear search words
 const m = document.getElementById('search-modal');          // Where search results appear
 
-check_q_values();  // Initial 'X' (close on input bar) status when page refreshed
+set_x_to_close();  // Initial 'X' (close on input bar) status when page refreshed
 
 // When the user clicks on <span> (x), close the modal
 c.onclick = function () {
@@ -107,18 +108,18 @@ window.onclick = function (event) {
 
 f.addEventListener('submit', submitted);
 
-f.addEventListener('input', check_q_values);
+f.addEventListener('input', set_x_to_close);
 
 // Close ('X') clicked on search input bar
 i.onclick = function(){
     q.value = "";           // Clear all search words
-    check_q_values();       // Turn off 'X' (Close) icon
+    set_x_to_close();       // Turn off 'X' (Close) icon
 };
 
-function check_q_values() {
+function set_x_to_close() {
     // When search words typed, turn on "X" image to clear the words
+    // const q = document.getElementById('search-query');
     // const i = document.getElementById('search-clear-input');
-    // 'X' to clear search words. Comments not allowed between `` backticks
     if (q.value !== "") { i.style.display = "inline-block"; }
                    else { i.style.display = "none"; }
 }
@@ -180,7 +181,7 @@ function get_hits(submit_str) {
 }
 
 function check_word(l_word, url_ndx_points) {
-
+    // If search word not in database, exit
     if (!(l_word in search_words)) return false;
 
     let result_indices = search_words[l_word]
@@ -188,15 +189,11 @@ function check_word(l_word, url_ndx_points) {
 
     for (var i = 0; i < url_points.length; i++) {
         const [key, value] = url_points[i].toString().split(',');
-        if (key in url_ndx_points) {
-            url_ndx_points[key] += parseFloat(value);
-        } else {
-            url_ndx_points[key] = parseFloat(value);
-        }
+        if (key in url_ndx_points) { url_ndx_points[key] += parseFloat(value); }
+                              else { url_ndx_points[key] = parseFloat(value); }
     }
     return true;
 }
-
 
 function check_root_word(word, url_ndx_points) {
 
