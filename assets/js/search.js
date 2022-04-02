@@ -57,11 +57,15 @@ async function load_search_urls() {
 }
 
 function buildStats (key, value) {
+    if (Object.keys(search_stats).length = 0) {
+        // TODO: var timeNow = new Date().getTime();
+        search_stats["timeCreated"] = new Date().getTime();
+    }
     search_stats[key] = value
     // console.log('adding key/value: ' + key + " / " + value +
     //            " | length: " + Object.keys(search_stats).length);
-    // After 4 stats have been collected we are all done
-    if (Object.keys(search_stats).length = 4) {
+    // After 4 stats (plus timestamp) we are done
+    if (Object.keys(search_stats).length = 5) {
         sessionStorage.setItem('search_stats', JSON.stringify(search_stats));
     }
 }
@@ -103,38 +107,10 @@ i.onclick = function(){
 
 function check_q_values() {
     // When search words typed, turn on "X" image to clear the words
-    if (q.value !== "") {
-        // const i = document.getElementById('search-clear-input');
-        // 'X' to clear search words. Comments not allowed between `` backticks
-        i.style.cssText = `
-            display: inline-block;
-        `;
-        /* OLD
-            margin-right: .7rem;
-            background-repeat: no-repeat;
-            background-size: cover;
-            box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
-            border: none;
-            opacity: 0.5;
-            float: right;
-            cursor: pointer;
-            &:hover {
-                opacity: 1.0;
-                filter: brightness(150%);
-            }
-        */
-    } else {
-        //i.style.display = "none";
-        i.style.cssText = `
-            display: none;
-        `;
-        /* OLD
-            opacity: 0.0;
-            background: transparent;
-            background-image: none;
-            border: none;
-        */
-    }
+    // const i = document.getElementById('search-clear-input');
+    // 'X' to clear search words. Comments not allowed between `` backticks
+    if (q.value !== "") { i.style.display = "inline-block"; }
+                   else { i.style.display = "none"; }
 }
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
