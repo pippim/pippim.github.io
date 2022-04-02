@@ -202,6 +202,12 @@ In the TCM window's local storage section you will see:
 
 <div id="tcm_search_stats"></div>
 
+The Search Engine Statistics are kept in Session Storage
+to save page load times. Once every 24 hours the Session
+Storage is refreshed from the internet. When this happens
+an extra couple of seconds delay will occur on the first
+webpage read.
+
 <style>
 #tcm_switches {
    max-width: 40rem;
