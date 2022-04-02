@@ -211,8 +211,8 @@ In the TCM window's local storage section you will see:
 }
 </style>
 <script>
-document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches;
-document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats;
+document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches();
+document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats();
 
 /* include tcmButtonVisibility.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
