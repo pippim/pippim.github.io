@@ -471,7 +471,7 @@ function htmlSearchStats(stats) {
 
     for (const [key, value] of Object.entries(stats)) {
         html += '  <tr><td>' + key + '</td>\n' ;
-        html += '  <td>' + value + '</td></tr>\n';
+        html += '  <td>' + value.toLocaleString() + '</td></tr>\n';
     }
     html += '</table>\n';     // End of our table and form
 
