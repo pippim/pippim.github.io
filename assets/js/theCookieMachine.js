@@ -483,7 +483,7 @@ function htmlSearchStats(stats) {
 
     // TODO: Move next 9 lines to a shared function
     // Heading: "999 Pippim website entries found." <h3> styling
-    html += '<style> #statTable th td {\n' +
+    html += '<style>\n#statTable th td {\n' +
             '  padding: 0 .5rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
