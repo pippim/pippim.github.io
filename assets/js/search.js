@@ -14,8 +14,7 @@ const code_url = "{{ site.code_url }}";
 var raw_url = code_url.replace('github', 'raw.githubusercontent');
 raw_url = raw_url.replace('/blob/', '/');
 const timeNow = new Date().getTime();
-// const oneDay= 1000 * 60 * 60 * 24;
-const oneDay= 1;  // Force rebuild each time.
+const oneDay= 1000 * 60 * 60 * 24;
 
 // Search statistics
 var search_stats = {}
