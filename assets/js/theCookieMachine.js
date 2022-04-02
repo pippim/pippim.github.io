@@ -475,7 +475,7 @@ function htmlSearchStats(stats) {
         // If greater than 123 MB it's a Unix Date in Epoch
         html += '  <td>';  // Start of table cell
         if (value < 123456789) { html += value.toLocaleString(); }
-        else { html += value.toLocaleDateString() +  ' ' + value.toLocaleTimeString() }
+        else { html += value.toLocaleDateString(); +  ' ' + value.toLocaleTimeString(); }
         html += '</td></tr>\n';  // End of table cell and table row
     }
     html += '</table>\n';     // End of our table and form
