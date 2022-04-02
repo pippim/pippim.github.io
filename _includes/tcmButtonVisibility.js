@@ -3,6 +3,57 @@
     /tcm.md - The Cookie Machine documentation webpage
 */
 
+/* Display visibility switches and search statistics */
+
+function htmlVisibilitySwitches () {
+    var html = "<h3>Local Storage and Cookies</h3>";
+    html += "After closing this window, the TCM button will be:<br>"
+    html += "&emsp; Visible on this webpage? " +
+            '<img class="with-action" id="switch_this_page" ' +
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
+    html += "&emsp; Visible on all webpages? " +
+            '<img class="with-action" id="switch_all_pages" ' +
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
+    html += "&emsp; Visible on all sessions? " +
+            '<img class="with-action" id="switch_all_sessions" ' +
+            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
+    return html
+}
+
+function htmlSearchStats() {
+    /* return html code <table> <td> for:
+        Statistic Key       Statistic Value
+        timeCreated         999999?
+        Search Words Count  888,888
+    */
+    var html = "<h3>Search Engine Statistics</h3>"
+    html += '<table id="statTable">\n' ;
+    // Statistics Table heading
+    html += '  <tr><th>Statistic Key</th>\n' +
+            '  <th>Statistic Value</th></tr>\n';
+
+    for (const [key, value] of Object.entries(search_stats)) {
+        html += '  <tr><td>' + key + '</td>\n' ;
+        // TODO: Need database of object keys and their value format
+        // If greater than 123 MB it's a Unix Date in Epoch
+        var d = new Date(value);
+        html += '  <td>';  // Start of table cell
+        // html += value.toLocaleString();
+        if (value < 123456789) { html += value.toLocaleString(); }
+        else { html += d.toLocaleDateString() +  ' ' + d.toLocaleTimeString() }
+        html += '</td></tr>\n';  // End of table cell and table row
+    }
+    html += '</table>\n';     // End of our table and form
+
+    // TODO: Move next 9 lines to a shared function
+    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style>\n#statTable th, #statTable td {\n' +
+            '  padding: 0 .5rem;\n' +
+            '}\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    return html; // Update TCM Window body
+}
+
 function tcmButtonVisibility() {
     // Initialize switches with values after HTML declared with IDs
     switch_init("switch_this_page", vis_this_page);
@@ -103,56 +154,6 @@ function switch_toggle(id) {
                                         else { switch_set(id, "true"); }
 }
 
-/* Display visibility switches and search statistics */
-
-function htmlVisibilitySwitches () {
-    var html = "<h3>Local Storage and Cookies</h3>";
-    html += "After closing this window, the TCM button will be:<br>"
-    html += "&emsp; Visible on this webpage? " +
-            '<img class="with-action" id="switch_this_page" ' +
-            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
-    html += "&emsp; Visible on all webpages? " +
-            '<img class="with-action" id="switch_all_pages" ' +
-            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
-    html += "&emsp; Visible on all sessions? " +
-            '<img class="with-action" id="switch_all_sessions" ' +
-            'src="{{ site.url }}/assets/img/icons/switch_off_left.png" /><br>'
-    html += "Search Engine Statistics:<br>"
-    return html
-}
-
-function htmlSearchStats(stats) {
-    /* return html code <table> <td> for:
-        Statistic Key       Statistic Value
-        timeCreated         999999?
-        Search Words Count  888,888
-    */
-    var html = '<table id="statTable">\n' ;
-    // Statistics Table heading
-    html += '  <tr><th>Statistic Key</th>\n' +
-            '  <th>Statistic Value</th></tr>\n';
-
-    for (const [key, value] of Object.entries(stats)) {
-        html += '  <tr><td>' + key + '</td>\n' ;
-        // TODO: Need database of object keys and their value format
-        // If greater than 123 MB it's a Unix Date in Epoch
-        var d = new Date(value);
-        html += '  <td>';  // Start of table cell
-        // html += value.toLocaleString();
-        if (value < 123456789) { html += value.toLocaleString(); }
-        else { html += d.toLocaleDateString() +  ' ' + d.toLocaleTimeString() }
-        html += '</td></tr>\n';  // End of table cell and table row
-    }
-    html += '</table>\n';     // End of our table and form
-
-    // TODO: Move next 9 lines to a shared function
-    // Heading: "999 Pippim website entries found." <h3> styling
-    html += '<style>\n#statTable th, #statTable td {\n' +
-            '  padding: 0 .5rem;\n' +
-            '}\n'
-    html += '</style>'  // Was extra \n causing empty space at bottom?
-    return html; // Update TCM Window body
-}
 
 
 /* End of /_includes/tcm_button_visibility.js */
