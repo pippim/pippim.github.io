@@ -78,7 +78,7 @@ function buildStats (key, value) {
     //            " | length: " + Object.keys(search_stats).length);
     // After 4 stats (plus timestamp) we are done
     if (Object.keys(search_stats).length = 5) {
-        alert("5 search stats created")
+        // alert("5 search stats created");
         sessionStorage.setItem('search_stats', JSON.stringify(search_stats));
     }
 }
