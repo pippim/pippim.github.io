@@ -464,7 +464,7 @@ function htmlSearchStats(stats) {
         timeCreated         999999?
         Search Words Count  888,888
     */
-    var html = '<table id="statTable" class="yml_table">\n' ;
+    var html = '<table id="statTable">\n' ;
     // Statistics Table heading
     html += '  <tr><th>Statistic Key</th>\n' +
             '  <th>Statistic Value</th></tr>\n';
