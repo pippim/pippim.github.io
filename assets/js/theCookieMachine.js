@@ -260,58 +260,36 @@ function webpage_info_to_html() {
 }
 
 function getMarkdownFilename() {
-    // WARNING: Extremely Jekyll Dependent
-    var urlHref = location.href;            // https://pipp... #...
-    var urlProtocol = location.protocol;    // https:
-    var urlHost = location.hostname;        // pippim.github.io
-    var urlPath = location.pathname;        // /yyyy/mm/dd/
-    // console.log("urlPath: '" + urlPath + "'  | urlPath.length: " + urlPath.length)
+    // WARNING: Extremely Jekyll Dependent for posts directory structure
+    var urlPath = location.pathname;
     var urlParts = location.pathname.split("/");
-    /*
-    alert('urlProtocol: ' + urlProtocol +
-          ' | urlHost: ' + urlHost +
-          ' | urlPath: ' + urlPath +
-          ' | urlParts.length: ' + urlParts.length +
-          ' | urlParts[1]: ' + urlParts[1])
-    */
-    if (urlPath == "/") {
-        // Has no .html at all
-        var full = "/index.html"
-    } else {
-        // Assume it's simply Title.html
-        var full = "/" + urlParts[1];
-    }
+    // if urlPath is simply / it's the root /index.html, else assume no suffixes
+    if (urlPath == "/") { var full = "/index.html" }
+                   else { var full = "/" + urlParts[1]; }
 
-    // If length of parts = 5 then we know it's a post
+    // If length of parts = 5 then we know it's a post using subdirectories
     if (urlParts.length == 5) {
         // NOTE: parts[0] is always empty field before leading /
         // Replace '/yyyy/mm/dd/Title' with 'yyyy-mm-dd-Title'
         const root = urlParts[1] + "-" + urlParts[2] + "-" +
                      urlParts[3] + "-" + urlParts[4]
-        // if posts by year
-        if (flagPostsByYear.toLowerCase() == "true") {
-            // Replace '/yyyy/mm/dd/Title.html' with '_posts/yyyy/yyyy-mm-dd-Title.html'
-            // urlParts[1] = yyyy
-            full = "/_posts/" + urlParts[1] + "/" + root;
-        } else {
-            // All posts are in /_posts/ subdirectory regardless of year
-            full = "/_posts/" + root;
-        }
+        // prepend /_posts/ unless by year use '_posts/yyyy/'
+        if (flagPostsByYear.toLowerCase() != "true") { full = "/_posts/" + root; }
+        else { full = "/_posts/" + urlParts[1] + "/" + root; }
     }
 
     return raw_url + full.replace('.html', '.md');
 }
 
-function getFrontMatter(txtArr) {
+function getFrontMatter(arrText) {
     // Extract front matter at top of text file
-    var frontMatter = []
-    if (txtArr[0] == "---") {
-        for (var i = 1; i < txtArr.length; i++) {
-            if (txtArr[i] == "---") { break } // End of the line ;)
-            frontMatter.push(txtArr[i])
-        }
-    }
-    return frontMatter
+    var arrFrontMatter = []
+    if (arrText[0].trim() == "---") {
+        for (var i = 1; i < arrText.length; i++) {
+            if (arrText[i].trim() == "---") { break }
+            arrFrontMatter.push(arrText[i]) } }
+
+    return arrFrontMatter
 }
 
 async function load_config_yml() {
@@ -327,12 +305,7 @@ async function load_config_yml() {
 
 function buildConfigYml () {
     // Sets global array configYml and flagPostsByYear used by two functions
-
-/*
-    fetch(raw_url + '/_config.yml')
-        .then((response) => response.text())
-        .then((config_yml) => {
-*/
+    // NOTE: Cannot call on page load because fetch is running asynchronously
     configYml = config_yml.split("\n")  // Convert string into array
     // Set flagPostsByYear flag
     flagPostsByYear = "false";
@@ -340,33 +313,9 @@ function buildConfigYml () {
         var ymlKeyValue = configYml[i].split(':');
         if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
             if (ymlKeyValue[0] == "posts_by_year") {
-                flagPostsByYear = ymlKeyValue[1].trim(); } } }
-//        });
+                flagPostsByYear = ymlKeyValue[1].trim();
+                break } } }
 }
-// buildConfigYml();  // Temporary
-
-
-/* Further research
-
-document.getElementById("demo").style.font = "italic bold 20px arial,serif";
-
-font-style
-font-variant
-font-weight
-font-size
-line-height
-font-family
-*/
-
-/* Whether the TCM button (on the main page header) is visible or not
-    When set/get vis_this_page the current global variable suffices
-    When set/get vis_all_pages a sessionStorage is necessary
-    When set/get vis_all_sessions a local cookie is necessary
-
-    Turning on vis_all_sessions forces on this_page and all_pages
-    Turning off vis_this_page forces off all_pages and all_sessions
-    Turning off vis_all_pages forces off vis_all_sessions
-*/ 
 
 function local_storage_to_html() {
     /*
