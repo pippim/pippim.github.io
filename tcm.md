@@ -147,7 +147,7 @@ The buttons brighten as you hover over them.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
 <a id="tcm_icon"></a>
-# TCM Icon
+## TCM Icon
 
 The Cookie Machine (TCM) icon is a Gingerbread Man.
 
@@ -157,7 +157,7 @@ The Cookie Machine (TCM) icon is a Gingerbread Man.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 <a id="home_button"></a>
-# Home Button
+## Home Button
 
 Displays Jekyll Front Matter for the website. This
 is formatted as YAML key/value pairs in `_config.yml`.
@@ -170,7 +170,7 @@ Comments and blank lines are not displayed.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 <a id="cloud_button"></a>
-# Cloud Button
+## Cloud Button
 
 Displays website tree.
 
@@ -181,7 +181,7 @@ Displays website tree.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 <a id="local_button"></a>
-# Local Storage Button
+## Local Storage Button
 
 The local storage section is used to control cookie settings.
 
@@ -236,7 +236,7 @@ tcmButtonVisibility()
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 <a id="hyperlink_button"></a>
-# Hyperlink Button
+## Hyperlink Recipe Baker Button
 
 Spins up an instance of the Hyperlink Recipe Baker.
 
