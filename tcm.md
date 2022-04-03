@@ -253,7 +253,7 @@ Instructions for using the Hyperlink Recipe Baker can be found
 [here](https://www.pippim.com/hyperlink.html "Hyperlink Recipe Baker").
 
 <a id="webpage_button"></a>
-# Webpage Information Button
+## Webpage Information Button
 
 Displays Jekyll Front Matter for the current webpage. This
 is formatted as YAML key/value pairs.
@@ -265,7 +265,7 @@ is formatted as YAML key/value pairs.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 <a id="cookie_jar_button"></a>
-# Cookie Jar Button
+## Cookie Jar Button
 
 
 ---
