@@ -104,7 +104,8 @@ else { config_yml = sessionStorage.getItem('config_yml'); }
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
     buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
-    front_matter_to_html(configYml, "Site Front Matter ('_config.yml')");
+    var html = htmlFrontMatter(configYml, "Site Front Matter ('_config.yml')");
+    b.innerHTML = html; // Update TCM Window body
 });
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
@@ -151,7 +152,7 @@ function introduction_to_html() {
 
 introduction_to_html()  // Load immediately
 
-function front_matter_to_html(results, name) {
+function htmlFrontMatter(results, name) {
     // home button & webpage info button uses
     if (results.length == 0) {
         var html = "<h3> 🔍 &emsp; No " + name + " found!</h3>\n";
@@ -203,7 +204,7 @@ function front_matter_to_html(results, name) {
     html += '#tcm_window_body table { border-collapse: collapse ! important; }\n'
     html += '#tcm_window_body th, td { padding: .018rem 1rem; }\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
-    b.innerHTML = html; // Update TCM Window body
+    return html
 }
 
 function website_tree_to_html(results) {
@@ -255,7 +256,8 @@ function webpage_info_to_html() {
             var front_yml = getFrontMatter(results)
             // alert(front_yml)
             // console.log('Here is the text file:\n' + config_yml);
-            front_matter_to_html(front_yml, "Current Page Front Matter");
+            var html = htmlFrontMatter(front_yml, "Current Page Front Matter");
+            b.innerHTML = html; // Update TCM Window body
         });
 }
 
