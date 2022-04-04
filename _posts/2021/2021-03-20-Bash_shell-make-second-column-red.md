@@ -10,9 +10,9 @@ created_date: 2021-03-20 19:59:18
 edit_date:    2021-03-20 20:07:07
 votes:        "2 "
 favorites:    
-views:        "40 "
+views:        "41 "
 accepted:     
-uploaded:     2022-03-27 10:04:10
+uploaded:     2022-04-03 19:52:48
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-03-20-Bash_shell-make-second-column-red.md
 toc:          false
 navigation:   false
