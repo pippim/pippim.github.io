@@ -101,37 +101,33 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
-    restoreOldFont(b);
     buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
     var html = htmlFrontMatter(configYml, "Site Front Matter ('_config.yml')");
     b.innerHTML = html; // Update TCM Window body
 });
 
 document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
-    // This function changes system font so others call restoreOldFont(b); to restore
+    // Display Website Tree
     fetch(raw_url + '/assets/json/website_tree.json')
       .then((response) => response.json())
       .then((website_tree) => {
-        website_tree_to_html(website_tree);
-        // console.log('Here is the json:\n' + website_tree);
+        var html = htmlWebsiteTree(website_tree);
+        b.innerHTML = html; // Update TCM Window body
       });
 });
 
 document.querySelector('#tcm_display_local').addEventListener('click', () => {
     // Display cookies and cache (WIP)
-    restoreOldFont(b);
     // fm_var cookie, search_url.json and search_words.json must already be
     // globally defined.
     local_storage_to_html();
 });
 
 document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
-    restoreOldFont(b);
     processHyperlinkRecipe('tcm_window_body');
 });
 
 document.querySelector('#tcm_webpage_info').addEventListener('click', () => {
-    restoreOldFont(b);
     // Display webpage info - filename, front matter and text (WIP)
     // raw_url set in search.js loaded before us
     webpage_info_to_html();
@@ -151,48 +147,6 @@ function introduction_to_html() {
 
 introduction_to_html()  // Load immediately
 
-function website_tree_to_html(results) {
-    if (results.length == 0) {
-        var html = "<h3> 🔍 &emsp; No website_tree found!</h3>\n";
-        html += "<p>An error has occurred.<br><br>\n";
-        html += "Try again later. If error continues contact {{ site.title }}.<br><br>\n";
-        b.innerHTML = html;
-        return;
-    } else if (results.length == 1) {
-        var html = '<h3 id="tcmHdr">1 {{ site.title }} website entry found.</h3>\n';
-    } else {
-        var html = '<h3 id="tcmHdr">' + results.length.toString() +
-                   ' {{ site.title }} website entries found.</h3>\n';
-    }
-
-    // setLineDrawFont(b); // Not needed with <code> but need line-height
-    html += '"<div id="tcmLineDraw">\n';
-    for (var i = 0; i < results.length; i++) {
-        html += results[i];
-        if (i != results.length - 1) { html += "<br>\n"; }
-    }
-    html += "</div>";
-
-    // TODO: Move next 9 lines to a shared function
-    // Heading: "999 Pippim website entries found." <h3> styling
-    html += '<style>'
-    html += '#tcmHdr {\n' +
-            '  margin-top: .5rem;\n' +
-            '  margin-bottom: 0px;\n' +
-            '}\n'
-    html += '#tcm_window, #tcm_window_body {\n' +
-            '  margin: 0;' +
-            '}\n'
-    html += '#tcmLineDraw {\n' +
-            'font-family: Consolas, "Liberation Mono", Menlo, Courier, ' +
-                       ' "Courier New", monospace;\n' +
-            'line-height: .55;\n' +
-            '}\n'
-    html += '</style>'
-
-    b.innerHTML = html; // Update TCM Window body
-    return html
-}
 
 function webpage_info_to_html() {
     buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
@@ -362,23 +316,6 @@ function allStorage() {
     }
 
     return archive;
-}
-
-
-function setLineDrawFont(elm) {
-    // From _sass/jekyll-theme-cayman.scss line 227
-    elm.style.cssText = `
-      font-family: Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
-      line-height: .55;
-    `;
-}
-
-function restoreOldFont(elm) {
-    // font-family from: _sass/jekyll-theme-cayman.scss line 36
-    elm.style.cssText = `
-      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      line-height: 1.2;
-    `;
 }
 
 // Assign tooltip (title=) to section navigation bar buttons
