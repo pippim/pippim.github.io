@@ -79,7 +79,8 @@ for {{ site.title }} on GitHub Pages looked like this:
 </code>
 </div>
 <style> #stack_line_draw { 
-   line-height: 1;
+   line-height: .9;
+   max-height: 90vh;
    white-space: pre;
    overflow: auto;
 } </style>
