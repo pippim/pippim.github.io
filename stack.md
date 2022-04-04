@@ -74,14 +74,14 @@ of the Pippim website at `pippim.github.io`. As of
 for {{ site.title }} on GitHub Pages looked like this:
 
 <div id="stack_line_draw">
-<code>
+{% highlight text %}
 {% include website_tree.txt %}
-</code>
+{% endhighlight %}
 </div>
 <style> #stack_line_draw { 
    line-height: .9;
    max-height: 90vh;
-   white-space: pre;
+   // white-space: pre;
    overflow: auto;
 } </style>
 
