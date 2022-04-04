@@ -205,8 +205,9 @@ Displays {{ site.title }} website tree.
 
 <div id="tcm_website_tree"></div>
 
-Notice the total number of lines includes comments and blank lines
-which are not displayed in the window.
+> **NOTE:** Directory level depth is suppressed for `/assets/img/icons`
+> subdirectory through `/assets/img/stack/` subdirectory. This keeps the
+> number of lines down.
 
 <style>
 #tcm_website_tree {
@@ -215,17 +216,21 @@ which are not displayed in the window.
    padding: .5rem;
    max-height: 90vh;
    overflow: auto;
-   line-height: .75 ! important;
+   line-height: 1 ! important;
 }
 </style>
 
 <script>
-    fetch(raw_url + '/assets/json/website_tree.json')
-      .then((response) => response.json())
-      .then((website_tree) => {
-        var html = htmlWebsiteTree(website_tree);
-        document.getElementById("tcm_website_tree").innerHTML = html;
-      });
+fetch(raw_url + '/assets/json/website_tree.json')
+   .then((response) => response.json())
+   .then((website_tree) => {
+      var html = htmlWebsiteTree(website_tree);
+      html += '<style>#tcmLineDraw {\n' +
+         'line-height: 1;\n' +
+         '}\n'
+      html += '</style>';
+   document.getElementById("tcm_website_tree").innerHTML = html;
+});
 </script>
 
 
