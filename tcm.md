@@ -181,7 +181,7 @@ which are not displayed in the window.
 <script>
 buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
 var html = htmlFrontMatter(configYml, "Site Front Matter ('_config.yml')");
-document.getElementById("tcm_switches").innerHTML = html;
+document.getElementById("tcm_home").innerHTML = html;
 </script>
 
 ---
