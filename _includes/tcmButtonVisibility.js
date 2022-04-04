@@ -130,8 +130,10 @@ function switch_init(id, bool) {
 
 function switch_set(id, bool) {
     objTcmVisById[id].setting = bool; 
-    if (bool == "true" ) { objTcmVisById[id].element.src = switch_on_image; }
-                    else { objTcmVisById[id].element.src = switch_off_image; }
+    if (bool == "true" ) { objTcmVisById[id].element.src = switch_on_image;
+                           objTcmVisById[id].element.title = "Click to switch off"; }
+                    else { objTcmVisById[id].element.src = switch_off_image;
+                           objTcmVisById[id].element.title = "Click to switch on"; }
     if (id == "switch_this_page") { vis_this_page = bool; }
     if (id == "switch_all_pages") {
         vis_all_pages = bool;
