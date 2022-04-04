@@ -5,6 +5,20 @@
 
 /* Display visibility switches and search statistics */
 
+function buildConfigYml () {
+    // Sets global array configYml and flagPostsByYear used by two functions
+    // NOTE: Cannot call on page load because fetch is running asynchronously
+    configYml = config_yml.split("\n")  // Convert string into array
+    // Set flagPostsByYear flag
+    flagPostsByYear = "false";
+    for (var i = 0; i < configYml.length; i++) {
+        var ymlKeyValue = configYml[i].split(':');
+        if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
+            if (ymlKeyValue[0] == "posts_by_year") {
+                flagPostsByYear = ymlKeyValue[1].trim();
+                break } } }
+}
+
 function htmlVisibilitySwitches () {
     var html = "<h3>Local Storage and Cookies</h3>";
     html += "After closing this window, the TCM button will be:<br>"
