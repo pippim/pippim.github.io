@@ -200,7 +200,31 @@ document.getElementById("tcm_home").innerHTML = html;
 <a id="cloud_button"></a>
 ## Cloud Button
 
-Displays website tree.
+Displays {{ site.title }} website tree.
+
+
+<div id="tcm_website_tree"></div>
+
+Notice the total number of lines includes comments and blank lines
+which are not displayed in the window.
+
+<style>
+#tcm_home {
+   border: 3px solid grey;
+   margin-left: 1em;
+   padding: .5rem;
+}
+</style>
+
+<script>
+    fetch(raw_url + '/assets/json/website_tree.json')
+      .then((response) => response.json())
+      .then((website_tree) => {
+        var html = htmlWebsiteTree(website_tree);
+        document.getElementById("tcm_website_tree").innerHTML = html;
+      });
+</script>
+
 
 ---
 
