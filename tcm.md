@@ -171,24 +171,17 @@ Notice the total number of lines includes comments and blank lines
 which are not displayed in the window.
 
 <style>
-#tcm_switches #tcm_search_stats {
-   max-width: 30rem;
+#tcm_home {
    border: 3px solid grey;
    margin-left: 1em;
    padding: .5rem;
 }
 </style>
+
 <script>
-document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches();
-document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats();
-
-/* include tcmButtonVisibility.js code shared by:
-    /assets/js/theCookieMachine.js - Draggable Modal Dialog
-    /tcm.md - The Cookie Machine documentation webpage
-*/
-{% include tcmButtonVisibility.js %}
-tcmButtonVisibility()
-
+buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
+var html = htmlFrontMatter(configYml, "Site Front Matter ('_config.yml')");
+document.getElementById("tcm_switches").innerHTML = html;
 </script>
 
 ---
