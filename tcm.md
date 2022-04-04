@@ -7,8 +7,11 @@ layout: program
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
-<!-- javascript for TCM that also exposes HRB -->
-<script type="module" src="/assets/js/theCookieMachine.js" ></script>
+/* include tcmButtonVisibility.js code shared by:
+    /assets/js/theCookieMachine.js - Draggable Modal Dialog
+    /tcm.md - The Cookie Machine documentation webpage
+*/
+{% include tcmButtonVisibility.js %}
 
 # Introduction
 
@@ -243,11 +246,6 @@ webpage read.
 document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches();
 document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats();
 
-/* include tcmButtonVisibility.js code shared by:
-    /assets/js/theCookieMachine.js - Draggable Modal Dialog
-    /tcm.md - The Cookie Machine documentation webpage
-*/
-{% include tcmButtonVisibility.js %}
 tcmButtonVisibility()
 
 </script>
