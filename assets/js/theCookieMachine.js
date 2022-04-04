@@ -133,6 +133,14 @@ document.querySelector('#tcm_webpage_info').addEventListener('click', () => {
     webpage_info_to_html();
 });
 
+document.querySelector('#tcm_cookie_jar').addEventListener('click', () => {
+    // Display webpage info - filename, front matter and text (WIP)
+    // raw_url set in search.js loaded before us
+    // https://www.javascripttutorial.net/web-apis/javascript-notification/
+    const greeting = new Notification('Multi-Timer is running');
+    setTimeout(() => greeting.close(), 10*1000);
+});
+
 function introduction_to_html() {
     var html = "<p>";
     html += "<h3>The Cookie Machine (TCM) Future Applications:</h3>\n";
