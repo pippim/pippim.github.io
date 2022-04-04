@@ -3,6 +3,8 @@ title: The Cookie Machine
 layout: program
 ---
 
+      <!-- javascript for TCM that also exposes HRB -->
+      <script type="module" src="/assets/js/theCookieMachine.js" ></script>
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
