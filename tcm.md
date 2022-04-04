@@ -7,11 +7,13 @@ layout: program
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
+<script>
 /* include tcmButtonVisibility.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
 {% include tcmButtonVisibility.js %}
+</script>
 
 # Introduction
 
