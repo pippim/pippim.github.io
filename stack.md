@@ -78,10 +78,8 @@ for {{ site.title }} on GitHub Pages looked like this:
 {% include website_tree.txt %}
 {% endhighlight %}
 </div>
-<style> #line_draw { 
+<style> .highlight { 
    line-height: .55 ! important;
-   // max-height: 90vh;
-   // overflow: auto;
 } </style>
 
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts
