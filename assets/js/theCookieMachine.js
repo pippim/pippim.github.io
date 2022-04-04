@@ -13,6 +13,12 @@
 import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
 import { getCookie , setCookie } from './theCookieJar.js';
 
+/* include tcmButtonVisibility.js code shared by:
+    /assets/js/theCookieMachine.js - Draggable Modal Dialog
+    /tcm.md - The Cookie Machine documentation webpage
+*/
+{% include tcmButtonVisibility.js %}
+
 // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
 window.addEventListener('DOMContentLoaded', (event) => {
     // https://stackoverflow.com/a/42526074/6929343
@@ -390,12 +396,6 @@ function local_storage_to_html() {
     */
     tcmButtonVisibility()
 }
-
-/* include tcmButtonVisibility.js code shared by:
-    /assets/js/theCookieMachine.js - Draggable Modal Dialog
-    /tcm.md - The Cookie Machine documentation webpage
-*/
-{% include tcmButtonVisibility.js %}
 
 function getCookies() {
     // https://stackoverflow.com/a/252959/6929343
