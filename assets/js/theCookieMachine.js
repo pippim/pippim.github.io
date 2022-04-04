@@ -99,13 +99,6 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
 
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
-var configYml = []          // Array containing _config.yml
-var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
-
-// Fetch config.yml from internet or session Storage
-var config_yml = [];  // config_yml is raw text and configYml is an array
-if (sessionStorage.config_yml === undefined) { load_config_yml(); }
-else { config_yml = sessionStorage.getItem('config_yml'); }
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
     restoreOldFont(b);
@@ -309,20 +302,6 @@ async function load_config_yml() {
             // https://stackoverflow.com/a/32905820/6929343
             sessionStorage.setItem('config_yml', config_yml);
         });
-}
-
-function buildConfigYml () {
-    // Sets global array configYml and flagPostsByYear used by two functions
-    // NOTE: Cannot call on page load because fetch is running asynchronously
-    configYml = config_yml.split("\n")  // Convert string into array
-    // Set flagPostsByYear flag
-    flagPostsByYear = "false";
-    for (var i = 0; i < configYml.length; i++) {
-        var ymlKeyValue = configYml[i].split(':');
-        if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
-            if (ymlKeyValue[0] == "posts_by_year") {
-                flagPostsByYear = ymlKeyValue[1].trim();
-                break } } }
 }
 
 function local_storage_to_html() {
