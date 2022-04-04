@@ -151,61 +151,6 @@ function introduction_to_html() {
 
 introduction_to_html()  // Load immediately
 
-function htmlFrontMatter(results, name) {
-    // home button & webpage info button uses
-    if (results.length == 0) {
-        var html = "<h3> 🔍 &emsp; No " + name + " found!</h3>\n";
-        html += "<p>A network error has occurred.<br><br>\n";
-        html += "Try again later. If error continues contact {{ site.title }}.<br><br>\n";
-        b.innerHTML = html;
-        return;
-    } else if (results.length == 1) {
-        var html = '<h3 id="tcmHdr">1 ' + name + ' line found.</h3>\n';
-    } else {
-        var html = '<h3 id="tcmHdr">' + results.length.toString() +
-                   ' ' + name + ' lines found.</h3>\n';
-    }
-
-    html += '<table id="ymlTable" class="yml_table">\n' ;
-    // YAML heading
-    html += '<tr><th>YAML Key</th>\n' +
-            '<th>YAML Value</th></tr>\n';
-
-    var validYamlCount = 0;
-    for (var i = 0; i < results.length; i++) {
-        var a = results[i].split(':');
-        var ymlKey = a.shift()      // https://stackoverflow.com/a/5746883/6929343
-        var ymlValue = a.join(':')  // Some values have : in them
-        if (ymlValue.length > 0 && !ymlKey.startsWith('#')) {
-            html += '<tr><td>' + ymlKey + '</td>\n' ;
-            var value = ymlValue.trim();  // YAML continuation line?
-            if (value == ">") { value = results[i+1].trim(); }
-            html += '<td>' + value + '</td></tr>\n';
-            validYamlCount++;
-        }
-    }
-    html += '</table>\n';     // End of our table and form
-
-    // TODO: Move next 9 lines to a shared function
-    // Heading: "999 Pippim website entries found." <h3> styling
-    html += '<style> #tcmHdr {\n' +
-            '  margin-top: .5rem;\n' +
-            '  margin-bottom: 0px;\n' +
-            '}\n'
-    html += '#tcm_window_body {\n' +
-            '  margin: 0;' +
-            '}\n'
-
-    // NOTE: Setup in hyperlinkRecipe.js - No borders inside the table
-    // html += '#hrb_body table, tr, th, td { border: none ! important; }\n'
-    // Table details: Space between columns
-    // html += '#hrb_body td { padding: 0 1rem; }\n'
-    html += '#tcm_window_body table { border-collapse: collapse ! important; }\n'
-    html += '#tcm_window_body th, td { padding: .018rem 1rem; }\n'
-    html += '</style>'  // Was extra \n causing empty space at bottom?
-    return html
-}
-
 function website_tree_to_html(results) {
     if (results.length == 0) {
         var html = "<h3> 🔍 &emsp; No website_tree found!</h3>\n";
