@@ -209,10 +209,13 @@ Notice the total number of lines includes comments and blank lines
 which are not displayed in the window.
 
 <style>
-#tcm_home {
+#tcm_website_tree {
    border: 3px solid grey;
    margin-left: 1em;
    padding: .5rem;
+   max-height: 90vh;
+   overflow: auto;
+   line-height: .75 ! important;
 }
 </style>
 
