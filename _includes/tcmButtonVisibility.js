@@ -4,6 +4,13 @@
 */
 
 /* Display visibility switches and search statistics */
+var configYml = []          // Array containing _config.yml
+var flagPostsByYear = null  // true or false from _config.yml key posts_by_year
+
+// Fetch config.yml from internet or session Storage
+var config_yml = [];  // config_yml is raw text and configYml is an array
+if (sessionStorage.config_yml === undefined) { load_config_yml(); }
+else { config_yml = sessionStorage.getItem('config_yml'); }
 
 function buildConfigYml () {
     // Sets global array configYml and flagPostsByYear used by two functions
