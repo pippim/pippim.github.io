@@ -95,7 +95,7 @@ function htmlWebsiteTree(results) {
                    ' {{ site.title }} website entries found.</h3>\n';
     }
 
-    html += '"<div id="tcmLineDraw">\n';
+    html += '<div id="tcmLineDraw">\n';
     for (var i = 0; i < results.length; i++) {
         html += results[i];
         if (i != results.length - 1) { html += "<br>\n"; }
