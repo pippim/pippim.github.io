@@ -365,11 +365,7 @@ for {{ site.title }} on GitHub Pages looked like this:
 {% include website_tree.txt %}
 {% endhighlight %}
 </div>
-<style> #line_draw { 
-   line-height: .55 ! important;
-   // max-height: 90vh;
-   // overflow: auto;
-} </style>
+<style> #line_draw.highlight pre, pre { line-height: 1; } </style>
 
 
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts
