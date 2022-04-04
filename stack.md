@@ -78,9 +78,7 @@ for {{ site.title }} on GitHub Pages looked like this:
 {% include website_tree.txt %}
 {% endhighlight %}
 </div>
-<style> .highlight { 
-   line-height: .55 ! important;
-} </style>
+<style> .highlight pre, pre { line-height: 1 ! important; } </style>
 
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts
 which are not displayed above.
