@@ -157,12 +157,39 @@ The Cookie Machine (TCM) icon is a Gingerbread Man.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 <a id="home_button"></a>
+
 ## Home Button
 
-Displays Jekyll Front Matter for the website. This
+Displays Jekyll Front Matter for the {{ site.title }} website. This
 is formatted as YAML key/value pairs in `_config.yml`.
 
 Comments and blank lines are not displayed.
+
+<div id="tcm_home"></div>
+
+Notice the total number of lines includes comments and blank lines
+which are not displayed in the window.
+
+<style>
+#tcm_switches #tcm_search_stats {
+   max-width: 30rem;
+   border: 3px solid grey;
+   margin-left: 1em;
+   padding: .5rem;
+}
+</style>
+<script>
+document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches();
+document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats();
+
+/* include tcmButtonVisibility.js code shared by:
+    /assets/js/theCookieMachine.js - Draggable Modal Dialog
+    /tcm.md - The Cookie Machine documentation webpage
+*/
+{% include tcmButtonVisibility.js %}
+tcmButtonVisibility()
+
+</script>
 
 ---
 
@@ -209,7 +236,7 @@ an extra couple of seconds delay will occur on the first
 webpage read.
 
 <style>
-#tcm_switches #tcm_search_stats {
+#tcm_switches, #tcm_search_stats {
    max-width: 30rem;
    border: 3px solid grey;
    margin-left: 1em;
