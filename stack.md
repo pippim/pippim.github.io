@@ -78,7 +78,11 @@ for {{ site.title }} on GitHub Pages looked like this:
 {% include website_tree.txt %}
 </code>
 </div>
-<style> #stack_line_draw { line-height: 1; } </style>
+<style> #stack_line_draw { 
+   line-height: 1;
+   white-space: pre;
+   overflow: auto;
+} </style>
 
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts
 which are not displayed above.
