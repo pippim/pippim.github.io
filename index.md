@@ -360,9 +360,13 @@ of the Pippim website at `pippim.github.io`. As of
 {{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
 for {{ site.title }} on GitHub Pages looked like this:
 
+
+<div>id="stack_line_draw">
 ``` terminal
 {% include website_tree.txt %}
 ```
+</div>
+<style> #stack_line_draw { line-height: 1; } </style>
 
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts
 which are not displayed above.

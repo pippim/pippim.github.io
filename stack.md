@@ -73,9 +73,12 @@ of the Pippim website at `pippim.github.io`. As of
 {{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
 for {{ site.title }} on GitHub Pages looked like this:
 
+<div>id="stack_line_draw">
 ``` terminal
 {% include website_tree.txt %}
 ```
+</div>
+<style> #stack_line_draw { line-height: 1; } </style>
 
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts
 which are not displayed above.
@@ -1935,7 +1938,7 @@ The `code-header` and `copy-code-button` classes are kept in `assets/css/style.s
 
 ### Copy Code Block Javascript
 
-Javascript Query is used to copy a Fenced Code Block
+JavaScript is used to copy a Fenced Code Block
 to the System Clipboard. The code is located in `assets/js/copyCode.js`:
 
 ``` js
