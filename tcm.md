@@ -209,8 +209,8 @@ an extra couple of seconds delay will occur on the first
 webpage read.
 
 <style>
-#tcm_switches {
-   max-width: 40rem;
+#tcm_switches #tcm_search_stats {
+   max-width: 30rem;
    border: 3px solid grey;
    margin-left: 1em;
    padding: .5rem;
