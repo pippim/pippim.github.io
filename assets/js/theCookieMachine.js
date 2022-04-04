@@ -165,13 +165,13 @@ function website_tree_to_html(results) {
                    ' {{ site.title }} website entries found.</h3>\n';
     }
 
-    setLineDrawFont(b); // Not needed with <code> but need line-height
-    html += "<p>\n";
+    // setLineDrawFont(b); // Not needed with <code> but need line-height
+    html += '"<div id="tcmLineDraw">\n';
     for (var i = 0; i < results.length; i++) {
         html += results[i];
         if (i != results.length - 1) { html += "<br>\n"; }
     }
-    html += "</p>";
+    html += "</div>";
 
     // TODO: Move next 9 lines to a shared function
     // Heading: "999 Pippim website entries found." <h3> styling
@@ -183,9 +183,15 @@ function website_tree_to_html(results) {
     html += '#tcm_window, #tcm_window_body {\n' +
             '  margin: 0;' +
             '}\n'
+    html += '#tcmLineDraw {\n' +
+            'font-family: Consolas, "Liberation Mono", Menlo, Courier, ' +
+                       ' "Courier New", monospace;\n' +
+            'line-height: .55;\n' +
+            '}\n'
     html += '</style>'
 
     b.innerHTML = html; // Update TCM Window body
+    return html
 }
 
 function webpage_info_to_html() {
