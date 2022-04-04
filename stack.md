@@ -136,7 +136,7 @@ as simply copying them over to GitHub Pages. The python program
 `stack-to-blog.py` was used to convert Stack Exchange posts to
 GitHub Pages Posts.
 The full `stack-to-blog.py` program can be accessed on the
-[Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
+[Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py){:target="_blank"}.
 
 The program automatically:
 
@@ -316,7 +316,7 @@ change the CSV fields in the `sede/stack-to-blog.py`
 python program.
 
 Many thanks to the Stack Exchange Data Explorer Query's
-[Modifier 🔗](https://meta.stackexchange.com/a/371435/366359).
+[Modifier 🔗](https://meta.stackexchange.com/a/371435/366359){:target="_blank"}.
 
 ---
 
@@ -329,7 +329,7 @@ The `refresh.sh` bash script will both **pull** and **push** your
 GitHub Repo (Repository). The script will update your blog posts
 using Stack Exchange posts inbetween the **pull** and **push**.
 
-You can view the [`refresh.sh` script here 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/refresh.sh).
+You can view the [`refresh.sh` script here 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/refresh.sh){:target="_blank"}.
 
 {% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
    alt="stack-to-blog.py"
@@ -437,7 +437,7 @@ directory with the name `website` (used for development).
 Another local copy is required in your home directory with the name
 `website2` (production clone) . You can generate a local
 copy with the
-[`git pull 🔗`](https://opensource.com/article/18/2/how-clone-modify-add-delete-git-files)
+[`git pull 🔗`](https://opensource.com/article/18/2/how-clone-modify-add-delete-git-files){:target="_blank"}
 command.
 
 The two `website` directory setup allows you to use `website`
@@ -457,7 +457,7 @@ You can set many options in the program.
 It's a good idea to set the record limit to 10 or so
 for your first few trials.
 
-You can view the [`stack-to-blog.py` script here 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
+You can view the [`stack-to-blog.py` script here 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py){:target="_blank"}.
 
 Review the subsections below for fine-tuning your
 Stack Exchange to Jekyll Blog Post conversion. They are:
@@ -580,7 +580,7 @@ the post with a More/Less details button.
 ### Control Jekyll Front Matter in `stack-to-blog.py`
 
 This python code shows how
-[Jekyll front matter 🔗](https://jekyllrb.com/docs/front-matter/)
+[Jekyll front matter 🔗](https://jekyllrb.com/docs/front-matter/){:target="_blank"}
 is controlled inside `stack-to-blog.py`:
 
 {% include copyHeader.html %}
@@ -695,7 +695,7 @@ Next you see one of the most powerful
 features of {{ site.title }}'s automated blog pages:
 
 [🔍 See Original Answer on Ask Ubuntu 🔗](https://askubuntu.com/q/882420
-"Read original Answer on Stack Exchange website but, you might see subtle ads.")
+"Read original Answer on Stack Exchange website but, you might see subtle ads."){:target="_blank"}
 
 This Stack Exchange post link is generated
 by three front matter variables:
@@ -1333,7 +1333,7 @@ python program performs:
 
 15. When a post contains a link to a Stack Exchange post which is also saved on the {{ site.title }} website, that link is converted to internal links. This minimizes clicks away from the {{ site.title }} website and presents the post in the same uncluttered format the {{ site.title }} website provides.
 
-The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py).
+The full `stack-to-blog.py` program can be accessed on the [Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py){:target="_blank"}.
 
 <a id="hdr26"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr25">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr27">Skip</a></div>
