@@ -81,6 +81,47 @@ function htmlFrontMatter(results, name) {
     return html
 }
 
+function htmlWebsiteTree(results) {
+    if (results.length == 0) {
+        var html = "<h3> 🔍 &emsp; No website_tree found!</h3>\n";
+        html += "<p>An error has occurred.<br><br>\n";
+        html += "Try again later. If error continues contact {{ site.title }}.<br><br>\n";
+        b.innerHTML = html;
+        return;
+    } else if (results.length == 1) {
+        var html = '<h3 id="tcmHdr">1 {{ site.title }} website entry found.</h3>\n';
+    } else {
+        var html = '<h3 id="tcmHdr">' + results.length.toString() +
+                   ' {{ site.title }} website entries found.</h3>\n';
+    }
+
+    html += '"<div id="tcmLineDraw">\n';
+    for (var i = 0; i < results.length; i++) {
+        html += results[i];
+        if (i != results.length - 1) { html += "<br>\n"; }
+    }
+    html += "</div>";
+
+    // TODO: Move next 9 lines to a shared function
+    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style>'
+    html += '#tcmHdr {\n' +
+            '  margin-top: .5rem;\n' +
+            '  margin-bottom: 0px;\n' +
+            '}\n'
+    html += '#tcm_window, #tcm_window_body {\n' +
+            '  margin: 0;' +
+            '}\n'
+    html += '#tcmLineDraw {\n' +
+            'font-family: Consolas, "Liberation Mono", Menlo, Courier, ' +
+                       ' "Courier New", monospace;\n' +
+            'line-height: .55;\n' +
+            '}\n'
+    html += '</style>'
+
+    return html
+}
+
 function htmlVisibilitySwitches () {
     var html = "<h3>Local Storage and Cookies</h3>";
     html += "After closing this window, the TCM button will be:<br>"
