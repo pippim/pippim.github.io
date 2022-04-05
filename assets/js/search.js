@@ -67,6 +67,49 @@ async function load_search_urls() {
         });
 }
 
+/* Display visibility switches and search statistics */
+var arrConfigYml = []           // Array containing _config.yml
+var flagPostsByYear = null      // true or false from _config.yml key posts_by_year
+var timeSiteRefreshed = null    // Time website was last refreshed
+
+// Fetch config.yml from internet or session Storage
+var config_yml = [];  // config_yml is raw text and arrConfigYml is an array
+if (sessionStorage.config_yml === undefined) { load_config_yml(); }
+else { config_yml = sessionStorage.getItem('config_yml'); }
+
+async function load_config_yml() {
+    // Get from internet and store in session
+    fetch(raw_url + '/_config.yml')
+        .then((response)=>response.text())
+        .then((responseJson)=>{
+            config_yml = responseJson;
+            buildConfigYml()
+            sessionStorage.setItem('config_yml', config_yml);
+            search_stats["timeSiteRefreshed"] = timeSiteRefreshed;
+            buildStats('_config.yml Count', arrConfigYml.length);
+            buildStats('_config.yml Size', config_yml.length);
+        });
+}
+
+function buildConfigYml () {
+    // Sets global array arrConfigYml and flagPostsByYear used by two functions
+    // NOTE: Cannot call on page load because fetch is running asynchronously
+    arrConfigYml = config_yml.split("\n")  // Convert string into array
+    // Set flagPostsByYear flag
+    flagPostsByYear = "false";
+    for (var i = 0; i < arrConfigYml.length; i++) {
+        var ymlKeyValue = arrConfigYml[i].split(':');
+        if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
+            if (ymlKeyValue[0] == "posts_by_year") {
+                flagPostsByYear = ymlKeyValue[1].trim();
+            }
+            if (ymlKeyValue[0] == "refreshed") {
+                timeSiteRefreshed = Date.parse(ymlKeyValue[1].trim());
+            }
+        }
+    }
+}
+
 function newStats () {
     search_stats = {} // Wipe out previous stats
     search_stats["timeCreated"] = timeNow;
@@ -76,8 +119,8 @@ function buildStats (key, value) {
     search_stats[key] = value
     // console.log('adding key/value: ' + key + " / " + value +
     //            " | length: " + Object.keys(search_stats).length);
-    // After 4 stats (plus timestamp) we are done
-    if (Object.keys(search_stats).length = 5) {
+    // After 7 stats (plus timestamp) we are done
+    if (Object.keys(search_stats).length = 8) {
         // alert("5 search stats created");
         sessionStorage.setItem('search_stats', JSON.stringify(search_stats));
     }

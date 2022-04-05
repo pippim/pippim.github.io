@@ -101,8 +101,8 @@ document.querySelector('#tcm_window_close').addEventListener('click', () => {
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 
 document.querySelector('#tcm_display_home').addEventListener('click', () => {
-    buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
-    var html = htmlFrontMatter(configYml, "Site Front Matter ('_config.yml')");
+    // arrConfigYml in search.js required by two TCM Window Buttons - Home & Webpage Info
+    var html = htmlFrontMatter(arrConfigYml, "Site Front Matter ('_config.yml')");
     b.innerHTML = html; // Update TCM Window body
 });
 
@@ -202,7 +202,6 @@ introduction_to_html()  // Load immediately
 
 
 function webpage_info_to_html() {
-    buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
     var urlMarkdown = getMarkdownFilename();
 
     fetch(urlMarkdown)
@@ -212,17 +211,6 @@ function webpage_info_to_html() {
             var front_yml = getFrontMatter(results)
             var html = htmlFrontMatter(front_yml, "Current Page Front Matter");
             b.innerHTML = html; // Update TCM Window body
-        });
-}
-
-async function load_config_yml() {
-    // Get from internet and store in session
-    fetch(raw_url + '/_config.yml')
-        .then((response)=>response.text())
-        .then((responseJson)=>{
-            config_yml = responseJson;
-            // https://stackoverflow.com/a/32905820/6929343
-            sessionStorage.setItem('config_yml', config_yml);
         });
 }
 
