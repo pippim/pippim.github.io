@@ -13,11 +13,11 @@
 import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
 import { getCookie , setCookie } from './theCookieJar.js';
 
-/* include tcmButtonVisibility.js code shared by:
+/* include tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
-{% include tcmButtonVisibility.js %}
+{% include tcm-common-code.js %}
 
 // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
 window.addEventListener('DOMContentLoaded', (event) => {
@@ -276,12 +276,12 @@ function local_storage_to_html() {
 
     var html = htmlVisibilitySwitches();
 
-    // Function shared with tcm.md in _includes/tcmButtonVisibility.js
+    // Function shared with tcm.md in _includes/tcm-common-code.js
     html += htmlSearchStats();
     b.innerHTML = html;              // Update TCM Window body
 
     /*  Process slider switches - shared  with ~/tcm.md
-        USE: % include tcmButtonVisibility.js %}
+        USE: % include tcm-common-code.js %}
     */
     tcmButtonVisibility()
 }
