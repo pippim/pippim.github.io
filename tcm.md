@@ -188,7 +188,7 @@ which are not displayed in the window.
     border-spacing: 0;
     border-collapse: collapse;
 }
-#tcm_home tr, th, td { padding: .018rem 1rem; }
+#tcm_home table th, table td { padding: .018rem 1rem; }
 </style>
 
 <script>
