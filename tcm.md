@@ -184,10 +184,6 @@ which are not displayed in the window.
    margin-left: 1em;
    padding: .5rem;
 }
-//#tcm_home table { 
-//    border-spacing: 0;
-//    border-collapse: collapse ! important;
-//}
 #tcm_home table th, table td { padding: .018rem 1rem ! important; }
 </style>
 
@@ -317,6 +313,34 @@ Instructions for using the Hyperlink Recipe Baker can be found
 
 Displays Jekyll Front Matter for the current webpage. This
 is formatted as YAML key/value pairs.
+
+<div id="tcm_doc_webpage"></div>
+
+Notice the total number of lines includes comments and blank lines
+which are not displayed in the window.
+
+<style>
+#tcm_doc_webpage {
+   border: 3px solid grey;
+   margin-left: 1em;
+   padding: .5rem;
+}
+#tcm_doc_webpage table th, table td { padding: .018rem 1rem ! important; }
+</style>
+
+<script>
+buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
+var urlMarkdown = getMarkdownFilename();
+fetch(urlMarkdown)
+  .then((response) => response.text())
+  .then((results) => {
+      var results = results.split("\n")  // Convert string into array
+      var front_yml = getFrontMatter(results)
+      var html = htmlFrontMatter(front_yml, "Current Page Front Matter");
+      document.getElementById("tcm_doc_webpage").innerHTML = html;
+  });
+</script>
+
 
 ---
 
