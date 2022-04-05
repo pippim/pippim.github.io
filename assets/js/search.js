@@ -28,6 +28,7 @@ if (search_stats["timeCreated"] < timeNow - oneDay) {
     sessionStorage.removeItem("search_stats");
     sessionStorage.removeItem("search_words");
     sessionStorage.removeItem("search_urls");
+    sessionStorage.removeItem("config_yml");
 }
 
 // Get sessionStorage search objects: search_words & search_urls
