@@ -178,24 +178,24 @@ Comments and blank lines are not displayed.
 Notice the total number of lines includes comments and blank lines
 which are not displayed in the window.
 
+<script>
+buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
+var html = htmlFrontMatter(configYml, "Site Front Matter ('_config.yml')");
+document.getElementById("tcm_home").innerHTML = html;
+</script>
+
 <style>
 #tcm_home {
    border: 3px solid grey;
    margin-left: 1em;
    padding: .5rem;
 }
-div#tcm_home table { 
+#tcm_home table { 
     border-spacing: 0;
     border-collapse: collapse;
 }
-div#tcm_home table th, table td { padding: .018rem 1rem; }
+#tcm_home table th, table td { padding: .018rem 1rem; }
 </style>
-
-<script>
-buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
-var html = htmlFrontMatter(configYml, "Site Front Matter ('_config.yml')");
-document.getElementById("tcm_home").innerHTML = html;
-</script>
 
 ---
 
