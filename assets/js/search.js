@@ -75,7 +75,7 @@ var timeSiteRefreshed = null    // Time website was last refreshed
 // Fetch config.yml from internet or session Storage
 var config_yml = [];  // config_yml is raw text and arrConfigYml is an array
 if (sessionStorage.config_yml === undefined) { load_config_yml(); }
-else { config_yml = sessionStorage.getItem('config_yml'); }
+else { config_yml = sessionStorage.getItem('config_yml'); buildConfigYml(); }
 
 async function load_config_yml() {
     // Get from internet and store in session
