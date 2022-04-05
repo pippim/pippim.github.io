@@ -188,8 +188,8 @@ which are not displayed in the window.
 </style>
 
 <script>
-buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
-var html = htmlFrontMatter(configYml, "Site Front Matter ('_config.yml')");
+// arrConfigYml defined in search.js
+var html = htmlFrontMatter(arrConfigYml, "Site Front Matter ('_config.yml')");
 document.getElementById("tcm_home").innerHTML = html;
 </script>
 
@@ -308,6 +308,12 @@ processHyperlinkRecipe("hrb_body")
 Instructions for using the Hyperlink Recipe Baker can be found 
 [here](https://www.pippim.com/hyperlink.html "Hyperlink Recipe Baker").
 
+---
+
+
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
+
 <a id="webpage_button"></a>
 ## Webpage Information Button
 
@@ -329,9 +335,8 @@ which are not displayed in the window.
 </style>
 
 <script>
-buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
 var urlMarkdown = getMarkdownFilename();
-var html = "<sub>" + urlMarkdown + "</sub><br>\n";
+var html = "<p>Filename: " + urlMarkdown + "</p><br>\n";
 fetch(urlMarkdown)
   .then((response) => response.text())
   .then((results) => {
@@ -345,19 +350,13 @@ fetch(urlMarkdown)
 
 ---
 
-
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
-
-<a id="cookie_jar_button"></a>
-## Cookie Jar Button
-
-
----
-
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
+
+
+<a id="cookie_jar_button"></a>
+## Cookie Jar Button
 
 ---
 
