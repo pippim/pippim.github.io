@@ -184,11 +184,11 @@ which are not displayed in the window.
    margin-left: 1em;
    padding: .5rem;
 }
-#tcm_home table { 
+div#tcm_home table { 
     border-spacing: 0;
     border-collapse: collapse;
 }
-#tcm_home table th, table td { padding: .018rem 1rem; }
+div#tcm_home table th, table td { padding: .018rem 1rem; }
 </style>
 
 <script>
