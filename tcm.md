@@ -331,12 +331,13 @@ which are not displayed in the window.
 <script>
 buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
 var urlMarkdown = getMarkdownFilename();
+var html = "<sub>" + urlMarkDown + "</sub><br>\n";
 fetch(urlMarkdown)
   .then((response) => response.text())
   .then((results) => {
       var results = results.split("\n")  // Convert string into array
       var front_yml = getFrontMatter(results)
-      var html = htmlFrontMatter(front_yml, "Current Page Front Matter");
+      html += htmlFrontMatter(front_yml, "Current Page Front Matter");
       document.getElementById("tcm_doc_webpage").innerHTML = html;
   });
 </script>
