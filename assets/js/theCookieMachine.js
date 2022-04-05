@@ -137,6 +137,11 @@ document.querySelector('#tcm_cookie_jar').addEventListener('click', () => {
     // Display webpage info - filename, front matter and text (WIP)
     // raw_url set in search.js loaded before us
     // https://www.javascripttutorial.net/web-apis/javascript-notification/
+    var html = '<div class="container">\n' +
+               '<h1>JavaScript Notification API Demo</h1>\n' +
+                '<div class="error"></div>\n' +
+                '</div>'
+    b.innerHTML = html;
 (async () => {
     // create and show the notification
     const showNotification = () => {
