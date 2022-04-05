@@ -184,6 +184,10 @@ which are not displayed in the window.
    margin-left: 1em;
    padding: .5rem;
 }
+#tcm_home table { 
+    border-spacing: 0;
+    border-collapse: collapse;
+}
 #tcm_home tr, th, td { padding: .018rem 1rem; }
 </style>
 
