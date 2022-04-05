@@ -209,46 +209,10 @@ function webpage_info_to_html() {
         .then((response) => response.text())
         .then((results) => {
             var results = results.split("\n")  // Convert string into array
-            // alert('results.length: ' + results.length)
             var front_yml = getFrontMatter(results)
-            // alert(front_yml)
-            // console.log('Here is the text file:\n' + config_yml);
             var html = htmlFrontMatter(front_yml, "Current Page Front Matter");
             b.innerHTML = html; // Update TCM Window body
         });
-}
-
-function getMarkdownFilename() {
-    // WARNING: Extremely Jekyll Dependent for posts directory structure
-    var urlPath = location.pathname;
-    var urlParts = location.pathname.split("/");
-    // if urlPath is simply / it's the root /index.html, else assume no suffixes
-    if (urlPath == "/") { var full = "/index.html" }
-                   else { var full = "/" + urlParts[1]; }
-
-    // If length of parts = 5 then we know it's a post using subdirectories
-    if (urlParts.length == 5) {
-        // NOTE: parts[0] is always empty field before leading /
-        // Replace '/yyyy/mm/dd/Title' with 'yyyy-mm-dd-Title'
-        const root = urlParts[1] + "-" + urlParts[2] + "-" +
-                     urlParts[3] + "-" + urlParts[4]
-        // prepend /_posts/ unless by year use '_posts/yyyy/'
-        if (flagPostsByYear.toLowerCase() != "true") { full = "/_posts/" + root; }
-        else { full = "/_posts/" + urlParts[1] + "/" + root; }
-    }
-
-    return raw_url + full.replace('.html', '.md');
-}
-
-function getFrontMatter(arrText) {
-    // Extract front matter at top of text file
-    var arrFrontMatter = []
-    if (arrText[0].trim() == "---") {
-        for (var i = 1; i < arrText.length; i++) {
-            if (arrText[i].trim() == "---") { break }
-            arrFrontMatter.push(arrText[i]) } }
-
-    return arrFrontMatter
 }
 
 async function load_config_yml() {
