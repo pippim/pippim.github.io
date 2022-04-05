@@ -331,7 +331,7 @@ which are not displayed in the window.
 <script>
 buildConfigYml();    // Required by two TCM Window Buttons - Home & Webpage Info
 var urlMarkdown = getMarkdownFilename();
-var html = "<sub>" + urlMarkDown + "</sub><br>\n";
+var html = "<sub>" + urlMarkdown + "</sub><br>\n";
 fetch(urlMarkdown)
   .then((response) => response.text())
   .then((results) => {
