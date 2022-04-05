@@ -184,7 +184,7 @@ which are not displayed in the window.
    margin-left: 1em;
    padding: .5rem;
 }
-#tcm_home th, td { padding: .018rem 1rem; }
+#tcm_home th, td { padding: .018rem 1rem 0 0; }
 </style>
 
 <script>
