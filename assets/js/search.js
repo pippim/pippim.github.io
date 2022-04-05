@@ -106,6 +106,7 @@ function buildConfigYml () {
             }
             if (ymlKeyValue[0] == "refreshed") {
                 timeSiteRefreshed = Date.parse(ymlKeyValue[1].trim());
+                alert("timeSiteRefreshed: " + timeSiteRefreshed);
             }
         }
     }
