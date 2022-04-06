@@ -64,12 +64,18 @@ located to the far right of the regular buttons. It is
 the same height as the regular buttons and about 5
 characters wide.
 
-## Draggable Window
+# TCM Draggable Window
+
+{% include image.html src="/assets/img/tcm/TCM Draggable Window.gif"
+   alt="TCM Draggable Window"
+   caption="The Cookie Machine Draggable Window"
+%}
 
 When you open *The Cookie Machine* (TCM for short), a draggable
-window appears:
-
-Click and hold the title bar and drag the window anywhere on your screen.
+window appears. As show above, click and hold the title bar 
+to drag the window anywhere on your screen.  If you drag it so
+far off the screen you can't access the title bar anymore,
+simply refresh the screen and no work is lost.
 
 ---
 
