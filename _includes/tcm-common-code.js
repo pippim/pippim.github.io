@@ -9,8 +9,7 @@ function htmlFrontMatter(results, name) {
         var html = "<h3> 🔍 &emsp; No " + name + " found!</h3>\n";
         html += "<p>A network error has occurred.<br><br>\n";
         html += "Try again later. If error continues contact {{ site.title }}.<br><br>\n";
-        b.innerHTML = html;
-        return;
+        return html;
     } else if (results.length == 1) {
         var html = '<h3 id="tcmHdr">1 ' + name + ' line found.</h3>\n';
     } else {
