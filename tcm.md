@@ -86,7 +86,8 @@ The buttons brighten as you hover over them.
        <th>Description</th>
    </tr>
    <tr><td><button id="tcm_window_icon" class="tcm_documentation" 
-      title="The Cookie Machine Window Icon" ></button></td>
+      title="The Cookie Machine Window Icon" ><a href="#tcm_icon">
+   </button></td>
    <td><b>TCM Icon</b> - <em>The Cookie Machine</em> (<b>TCM</b>)
       Icon appears in the TCM Window title bar.
       It also appears in the webpage header after you close TCM.
