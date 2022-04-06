@@ -86,7 +86,8 @@ async function load_config_yml() {
             config_yml = responseJson;
             buildConfigYml()
             sessionStorage.setItem('config_yml', config_yml);
-            search_stats["timeSiteRefreshed"] = timeSiteRefreshed;
+            // search_stats["timeSiteRefreshed"] = timeSiteRefreshed;
+            search_stats["timeSiteRefreshed"] = 16930518;
             buildStats('_config.yml Count', arrConfigYml.length);
             buildStats('_config.yml Size', config_yml.length);
         });
@@ -105,6 +106,7 @@ function buildConfigYml () {
                 flagPostsByYear = ymlKeyValue[1].trim();
             }
             if (ymlKeyValue[0] == "refreshed") {
+                alert("ymlKeyValue[1].trim(): " + ymlKeyValue[1].trim());
                 timeSiteRefreshed = Date.parse(ymlKeyValue[1].trim());
                 alert("timeSiteRefreshed: " + timeSiteRefreshed);
             }
@@ -122,7 +124,7 @@ function buildStats (key, value) {
     // console.log('adding key/value: ' + key + " / " + value +
     //            " | length: " + Object.keys(search_stats).length);
     // After 7 stats (plus timestamp) we are done
-    if (Object.keys(search_stats).length = 7) {
+    if (Object.keys(search_stats).length = 8) {
         // alert("5 search stats created");
         sessionStorage.setItem('search_stats', JSON.stringify(search_stats));
     }
