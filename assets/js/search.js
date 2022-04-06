@@ -23,7 +23,7 @@ else { search_stats = JSON.parse(sessionStorage.getItem('search_stats')); }
 
 // if search_stats["timeCreated"] > 24 hours old, erase sessionStorage
 // Don't use sessionStorage.clear() because we loose TCM Window Visibility
-if (search_stats["timeCreated"] < timeNow - oneDay || true == true) {
+if (search_stats["timeCreated"] < timeNow - oneDay) {
     newStats(); // Wipe out previous stats
     sessionStorage.removeItem("search_stats");
     sessionStorage.removeItem("search_words");
