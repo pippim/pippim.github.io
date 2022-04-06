@@ -87,7 +87,6 @@ async function load_config_yml() {
             buildConfigYml()
             sessionStorage.setItem('config_yml', config_yml);
             // search_stats["timeSiteRefreshed"] = timeSiteRefreshed;
-            alert("timeSiteRefreshed: " + timeSiteRefreshed)
             search_stats["timeSiteRefreshed"] = 16930518;
             buildStats('_config.yml Count', arrConfigYml.length);
             buildStats('_config.yml Size', config_yml.length);
@@ -107,6 +106,7 @@ function buildConfigYml () {
                 flagPostsByYear = ymlKeyValue[1].trim();
             }
             if (ymlKeyValue[0] == "refreshed") {
+                alert("ymlKeyValue[1].trim(): " + ymlKeyValue[1].trim());
                 timeSiteRefreshed = Date.parse(ymlKeyValue[1].trim());
                 alert("timeSiteRefreshed: " + timeSiteRefreshed);
             }
