@@ -102,15 +102,21 @@ function buildConfigYml () {
     timeSiteRefreshed = timeNow;  // Give default if not found
     for (var i = 0; i < arrConfigYml.length; i++) {
         //var ymlKeyValue = arrConfigYml[i].split(':');
-        var ymlKeyValue = arrConfigYml[i].split(/:/).slice(1).join(':')
-        if (i == 14) {alert(ymlKeyValue[0] +" ymlKeyValue[1].trim(): " + ymlKeyValue[1].trim());}
-        if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
+        // Also in tcm-common-code.js consider glob
+        var a = arrConfigYml[i].split(':');
+        var ymlKey = a.shift()      // https://stackoverflow.com/a/5746883/6929343
+        var ymlValue = a.join(':')  // Some values have : in them
+
+        var ymlKeyValue = arrConfigYml[i].split(':')
+        if (i == 14) {alert(ymlKey +" ymlValue.trim(): " + ymlValue.trim());}
+        //if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
+        if (ymlValue.length > 0 && !ymlKey.startsWith('#')) {
             if (ymlKeyValue[0] == "posts_by_year") {
                 flagPostsByYear = ymlKeyValue[1].trim();
             }
-            if (ymlKeyValue[0] == "refreshed") {
-                alert("ymlKeyValue[1].trim(): " + ymlKeyValue[1].trim());
-                timeSiteRefreshed = Date.parse(ymlKeyValue[1].trim());
+            if (ymlKey == "refreshed") {
+                alert("ymlValue.trim(): " + ymlValue.trim());
+                timeSiteRefreshed = Date.parse(ymlValue.trim());
                 //alert("timeSiteRefreshed: " + timeSiteRefreshed);
             }
         }
