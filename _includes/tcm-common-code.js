@@ -152,7 +152,7 @@ function htmlSearchStats() {
         timeCreated         999999?
         Search Words Count  888,888
     */
-    var html = "<h3>Search Engine Statistics</h3>"
+    var html = "<h3>Session Storage</h3>"
     html += '<table id="statTable">\n' ;
     // Statistics Table heading
     html += '  <tr><th>Statistic Key</th>\n' +
