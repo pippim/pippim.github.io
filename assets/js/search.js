@@ -86,7 +86,8 @@ async function load_config_yml() {
             config_yml = responseJson;
             buildConfigYml()
             sessionStorage.setItem('config_yml', config_yml);
-            search_stats["timeSiteRefreshed"] = timeSiteRefreshed;
+            // search_stats["timeSiteRefreshed"] = timeSiteRefreshed;
+            search_stats["timeSiteRefreshed"] = 16930518;
             buildStats('_config.yml Count', arrConfigYml.length);
             buildStats('_config.yml Size', config_yml.length);
         });
