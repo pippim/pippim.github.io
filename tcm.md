@@ -78,14 +78,22 @@ Click and hold the title bar and drag the window anywhere on your screen.
 
 # TCM Window Buttons
 
-The buttons brighten as you hover over them.
+The buttons brighten as you hover over them. You can click the button
+to jump to that section. You can also click the "Read more..." link.
 
+<script>
+   // https://stackoverflow.com/questions/10657908/html-onclick-go-to-another-div
+   function mylinkfunction(e) {
+      window.location.href="#targetDiv";
+   }
+</script>
 
 <table id="tcm_window_table" class="hrb_table">
    <tr><th>Button</th>
        <th>Description</th>
    </tr>
    <tr><td><button id="tcm_window_icon" class="tcm_documentation" 
+      onClick='window.location="#tcm_icon"'
       title="The Cookie Machine Window Icon" ></button></td>
    <td><b>TCM Icon</b> - <em>The Cookie Machine</em> (<b>TCM</b>)
       Icon appears in the TCM Window title bar.
