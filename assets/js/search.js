@@ -87,7 +87,7 @@ async function load_config_yml() {
             buildConfigYml()
             sessionStorage.setItem('config_yml', config_yml);
             search_stats["timeSiteRefreshed"] = timeSiteRefreshed;
-            search_stats["timeSiteRefreshed"] = 16930518;
+            //search_stats["timeSiteRefreshed"] = 16930518;
             buildStats('_config.yml Count', arrConfigYml.length);
             buildStats('_config.yml Size', config_yml.length);
         });
@@ -108,14 +108,14 @@ function buildConfigYml () {
         var ymlValue = a.join(':')  // Some values have : in them
 
         var ymlKeyValue = arrConfigYml[i].split(':')
-        if (i == 14) {alert(ymlKey +" ymlValue.trim(): " + ymlValue.trim());}
+        // if (i == 14) {alert(ymlKey +" ymlValue.trim(): " + ymlValue.trim());}
         //if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
         if (ymlValue.length > 0 && !ymlKey.startsWith('#')) {
             if (ymlKeyValue[0] == "posts_by_year") {
                 flagPostsByYear = ymlKeyValue[1].trim();
             }
             if (ymlKey == "refreshed") {
-                alert("ymlValue.trim(): " + ymlValue.trim());
+                //alert("ymlValue.trim(): " + ymlValue.trim());
                 timeSiteRefreshed = Date.parse(ymlValue.trim());
                 //alert("timeSiteRefreshed: " + timeSiteRefreshed);
             }
