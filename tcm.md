@@ -8,11 +8,11 @@ layout: program
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
 <script>
-/* include tcmButtonVisibility.js code shared by:
+/* include tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
-{% include tcmButtonVisibility.js %}
+{% include tcm-common-code.js %}
 </script>
 
 # Introduction
@@ -336,7 +336,7 @@ which are not displayed in the window.
 
 <script>
 var urlMarkdown = getMarkdownFilename();
-var html = "<p>Filename: " + urlMarkdown + "</p><br>\n";
+var html = "<p><b>Filename: </b>" + urlMarkdown + "</p>\n";
 fetch(urlMarkdown)
   .then((response) => response.text())
   .then((results) => {
