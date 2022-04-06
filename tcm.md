@@ -49,7 +49,7 @@ about six months to complete.
 
 {% include image.html src="/assets/img/tcm/TCM transparent button.gif"
    alt="TCM transparent button.gif"
-   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
    caption="The Cookie Machine Transparent Button"
 %}
 
@@ -76,16 +76,17 @@ Click and hold the title bar and drag the window anywhere on your screen.
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
-   alt="TCM transparent button.gif"
-   style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
-   caption="The Cookie Machine Transparent Button"
-%}
-
 # TCM Window Buttons
 
-The buttons brighten as you hover over them. You can click the button
-to jump to that section. You can also click the "Read more..." link.
+{% include image.html src="/assets/img/tcm/TCM Window Buttons.gif"
+   alt="TCM Window Buttons"
+   caption="The Cookie Machine Buttons"
+%}
+
+The buttons brighten as you hover over them. The buttons are
+described in the table below. You can click the button in the
+table to jump to that section. You can also click the "Read more..." 
+link to jump to the same section.
 
 <table id="tcm_window_table" class="hrb_table">
    <tr><th>Button</th>
