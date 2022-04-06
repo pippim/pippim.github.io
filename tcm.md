@@ -47,6 +47,12 @@ about six months to complete.
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
+{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
+   alt="TCM transparent button.gif"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   caption="The Cookie Machine Transparent Button"
+%}
+
 # Accessing The Cookie Machine (TCM)
 
 There is a transparent button you can click to access 
@@ -81,13 +87,6 @@ Click and hold the title bar and drag the window anywhere on your screen.
 The buttons brighten as you hover over them. You can click the button
 to jump to that section. You can also click the "Read more..." link.
 
-<script>
-   // https://stackoverflow.com/questions/10657908/html-onclick-go-to-another-div
-   function mylinkfunction(e) {
-      window.location.href="#targetDiv";
-   }
-</script>
-
 <table id="tcm_window_table" class="hrb_table">
    <tr><th>Button</th>
        <th>Description</th>
@@ -101,20 +100,24 @@ to jump to that section. You can also click the "Read more..." link.
       Clicking the TCM icon in the webpage header reopens TCM. 
       <a href="#tcm_icon">Read more...</a></td></tr> 
    <tr><td><button id="tcm_display_home" class="tcm_documentation" 
+      onClick='window.location="#home_button"'
       title="The Cookie Machine Home Page" ></button></td>
    <td><b>Home Page</b> - Displays site wide global Jekyll Front Matter such as; 
       URLs, number of views, number of posts, etc.
       <a href="#home_button">Read more...</a></td></tr> 
    <tr><td><button id="tcm_display_cloud" class="tcm_documentation" 
+      onClick='window.location="#cloud_button"'
       title="Cloud storage - Display website tree" ></button></td> 
    <td><b>Cloud Storage</b> - Displays {{ site.title }} website directory tree
       <a href="#cloud_button">Read more...</a></td></tr> 
    <tr><td><button id="tcm_display_local" class="tcm_documentation" 
+      onClick='window.location="#local_button"'
       title="Local storage - Display cookies and cache" > </button></td> 
    <td><b>Local Storage</b> - Change cookies used for option settings such as;
       Less/More front matter and TCM Button visibility on page header.
       <a href="#local_button">Read more...</a></td></tr>
    <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" 
+      onClick='window.location="#hyperlink_button"'
       title="Hyperlink Recipe Baker" > </button></td> 
    <td><b>Hyperlink Recipe Baker (HRB)</b> - Used to create hyperlinks 
       in HTML or Markdown format See the
@@ -124,10 +127,12 @@ to jump to that section. You can also click the "Read more..." link.
       the current webpage, without having to switch to another browser tab.
       <a href="#hyperlink_button">Read more...</a></td></tr>
    <tr><td><button id="tcm_webpage_info" class="tcm_documentation" 
+      onClick='window.location="#webpage_button"'
       title="Webpage Name and Front Matter" ></button></td>
    <td><b>Webpage Information</b> - Display Jekyll Front Matter 
       for current webpage <a href="#webpage_button">Read more...</a></td></tr>
    <tr><td><button id="tcm_cookie_jar" class="tcm_documentation" 
+      onClick='window.location="#cookie_jar_button"'
       title="The Cookie Jar - Import/Export cookies" ></button></td>
    <td><b>Cookie Jar</b> - 
       The Cookie jar is for file uploads and downloads.
@@ -135,7 +140,9 @@ to jump to that section. You can also click the "Read more..." link.
       from the Cookie Jar. <a href="#cookie_jar_button">Read more...</a></td></tr> 
 </table>
 
-<!-- NOTE: #tcm_window_icon through #tcm_webpage_info defined in /assets/css/style.scss -->
+<!-- NOTE: Button image IDs for  #tcm_window_icon through #tcm_cookie_jar
+           are defined in /assets/css/style.scss 
+-->
 
 <style>
   #tcm_window_table table { table-layout: fixed; width: 100%; border: 3px solid black; }
