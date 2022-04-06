@@ -100,15 +100,16 @@ function buildConfigYml () {
     // Set flagPostsByYear flag
     flagPostsByYear = "false";
     for (var i = 0; i < arrConfigYml.length; i++) {
-        var ymlKeyValue = arrConfigYml[i].split(':');
+        //var ymlKeyValue = arrConfigYml[i].split(':');
+        var ymlKeyValue = arrConfigYml[i].split(/:/).slice(1).join()
         if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
             if (ymlKeyValue[0] == "posts_by_year") {
                 flagPostsByYear = ymlKeyValue[1].trim();
             }
             if (ymlKeyValue[0] == "refreshed") {
-                alert("ymlKeyValue[1].trim(): " + ymlKeyValue[1].trim());
+                //alert("ymlKeyValue[1].trim(): " + ymlKeyValue[1].trim());
                 timeSiteRefreshed = Date.parse(ymlKeyValue[1].trim());
-                alert("timeSiteRefreshed: " + timeSiteRefreshed);
+                //alert("timeSiteRefreshed: " + timeSiteRefreshed);
             }
         }
     }
@@ -124,7 +125,7 @@ function buildStats (key, value) {
     // console.log('adding key/value: ' + key + " / " + value +
     //            " | length: " + Object.keys(search_stats).length);
     // After 7 stats (plus timestamp) we are done
-    if (Object.keys(search_stats).length = 5) {
+    if (Object.keys(search_stats).length = 8) {
         // alert("5 search stats created");
         sessionStorage.setItem('search_stats', JSON.stringify(search_stats));
     }
