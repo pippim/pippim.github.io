@@ -16,7 +16,7 @@ raw_url = raw_url.replace('/blob/', '/');
 const timeNow = new Date().getTime();
 const oneDay= 1000 * 60 * 60 * 24;
 
-// Search statistics
+// Session Storage statistics
 var search_stats = {}
 if (sessionStorage.search_stats === undefined) { newStats(); }
 else { search_stats = JSON.parse(sessionStorage.getItem('search_stats')); }
@@ -31,6 +31,30 @@ if (search_stats["timeCreated"] < timeNow - oneDay || true == true) {
     sessionStorage.removeItem("config_yml");
 }
 
+/* Display visibility switches and search statistics */
+var arrConfigYml = []           // Array containing _config.yml
+var flagPostsByYear = null      // true or false from _config.yml key posts_by_year
+var timeSiteRefreshed = null    // Time website was last refreshed
+
+// Fetch config.yml from internet or session Storage
+var config_yml = [];  // config_yml is raw text and arrConfigYml is an array
+if (sessionStorage.config_yml === undefined) { load_config_yml(); }
+else { config_yml = sessionStorage.getItem('config_yml'); buildConfigYml(); }
+
+async function load_config_yml() {
+    // Get from internet and store in session
+    fetch(raw_url + '/_config.yml')
+        .then((response)=>response.text())
+        .then((responseJson)=>{
+            config_yml = responseJson;
+            buildConfigYml()
+            sessionStorage.setItem('config_yml', config_yml);
+            search_stats["timeSiteRefreshed"] = timeSiteRefreshed;
+            //search_stats["timeSiteRefreshed"] = 16930518;
+            buildStats('_config.yml Count', arrConfigYml.length);
+            buildStats('_config.yml Size', config_yml.length);
+        });
+}
 // Get sessionStorage search objects: search_words & search_urls
 var search_words = {}
 if (sessionStorage.search_words === undefined) { load_search_words(); }
@@ -65,31 +89,6 @@ async function load_search_urls() {
             sessionStorage.setItem('search_urls', search_urls_store);
             buildStats('Search URLs Count', search_urls.length);
             buildStats('Search URLs Size', search_urls_store.length);
-        });
-}
-
-/* Display visibility switches and search statistics */
-var arrConfigYml = []           // Array containing _config.yml
-var flagPostsByYear = null      // true or false from _config.yml key posts_by_year
-var timeSiteRefreshed = null    // Time website was last refreshed
-
-// Fetch config.yml from internet or session Storage
-var config_yml = [];  // config_yml is raw text and arrConfigYml is an array
-if (sessionStorage.config_yml === undefined) { load_config_yml(); }
-else { config_yml = sessionStorage.getItem('config_yml'); buildConfigYml(); }
-
-async function load_config_yml() {
-    // Get from internet and store in session
-    fetch(raw_url + '/_config.yml')
-        .then((response)=>response.text())
-        .then((responseJson)=>{
-            config_yml = responseJson;
-            buildConfigYml()
-            sessionStorage.setItem('config_yml', config_yml);
-            search_stats["timeSiteRefreshed"] = timeSiteRefreshed;
-            //search_stats["timeSiteRefreshed"] = 16930518;
-            buildStats('_config.yml Count', arrConfigYml.length);
-            buildStats('_config.yml Size', config_yml.length);
         });
 }
 
