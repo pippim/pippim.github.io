@@ -99,10 +99,11 @@ function buildConfigYml () {
     arrConfigYml = config_yml.split("\n")  // Convert string into array
     // Set flagPostsByYear flag
     flagPostsByYear = "false";
+    timeSiteRefreshed = timeNow;  // Give default if not found
     for (var i = 0; i < arrConfigYml.length; i++) {
         //var ymlKeyValue = arrConfigYml[i].split(':');
         var ymlKeyValue = arrConfigYml[i].split(/:/).slice(1).join()
-        if (i == 1) {alert("ymlKeyValue[1].trim(): " + ymlKeyValue[1].trim());}
+        if (i == 14) {alert(ymlKeyValue[0] +" ymlKeyValue[1].trim(): " + ymlKeyValue[1].trim());}
         if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
             if (ymlKeyValue[0] == "posts_by_year") {
                 flagPostsByYear = ymlKeyValue[1].trim();
