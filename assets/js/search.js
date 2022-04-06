@@ -102,6 +102,7 @@ function buildConfigYml () {
     for (var i = 0; i < arrConfigYml.length; i++) {
         //var ymlKeyValue = arrConfigYml[i].split(':');
         var ymlKeyValue = arrConfigYml[i].split(/:/).slice(1).join()
+        if (i == 1) {alert("ymlKeyValue[1].trim(): " + ymlKeyValue[1].trim());}
         if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
             if (ymlKeyValue[0] == "posts_by_year") {
                 flagPostsByYear = ymlKeyValue[1].trim();
