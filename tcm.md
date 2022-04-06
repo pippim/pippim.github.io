@@ -67,6 +67,7 @@ characters wide.
 # TCM Draggable Window
 
 {% include image.html src="/assets/img/tcm/TCM Draggable Window.gif"
+   style="width: 100%; margin: 0;"
    alt="TCM Draggable Window"
    caption="The Cookie Machine Draggable Window"
 %}
