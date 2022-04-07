@@ -499,12 +499,21 @@ fetch(urlMarkdown)
 The ***Cookie Jar*** Button allows you to see, download/export,
 upload/import, create and delete Cookies.
 
-You may need to do this to:
+The Cookie Jar wsa created because Cookies, Session Storage,
+Local Storage and Indexed DB are tightly controlled by
+Web Browsers.
+
+You can use the Cookie Jar to:
 
 - Transfer cookies to another Web Browser
 - Transfer cookies to another Device
 - Transfer cookies to another User
 
+Although the Cookie Jar can be set to the conventional
+folder name `Donwloads`, a separate folder can be used.
+
+For example, a folder named `Cookie Jar` could be
+created in your home directory.
 
 
 ---
