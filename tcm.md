@@ -91,6 +91,7 @@ simply refresh the screen and no work is lost.
 # TCM Window Buttons
 
 {% include image.html src="/assets/img/tcm/TCM Window Buttons.gif"
+   style="width: 100%; margin: 0;"
    alt="TCM Window Buttons"
    caption="The Cookie Machine Buttons"
 %}
@@ -100,7 +101,10 @@ described in the table below. You can click the button in the
 table to jump to that section. You can also click the "Read more..." 
 link to jump to the same section.
 
+### TCM Window Button Icons Large View
+
 <div class="tcm_doc_window_button">
+    <button id="tcm_doc_window_icon" title="TCM Window Icon"></button>
     <button id="tcm_display_home" title="Home Page - Site summary"></button>
     <button id="tcm_display_cloud" title="Cloud storage - Site website tree"></button>
     <button id="tcm_display_local" title="Local storage - Cookies and cache"></button>
@@ -108,6 +112,8 @@ link to jump to the same section.
     <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
     <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
 </div>
+
+### TCM Window Button Summary Description
 
 <table id="tcm_window_table" class="hrb_table">
    <tr><th>Button</th>
@@ -194,6 +200,10 @@ link to jump to the same section.
 <a id="tcm_icon"></a>
 ## TCM Icon
 
+<div class="tcm_doc_window_button">
+    <button id="tcm_doc_window_icon" title="TCM Window Icon"></button>
+</div>
+Displays {{ site.title }} website tree.
 The Cookie Machine (TCM) icon is a Gingerbread Man.
 
 ---
