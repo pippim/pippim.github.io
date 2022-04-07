@@ -215,11 +215,15 @@ The Cookie Machine (TCM) icon is a Gingerbread Man.
 
 ## Home Button
 
-<div class="tcm_doc_window_button">
+<div class="tcm_doc_window_button" 
+   style="float: left; margin: 0 2rem 2rem 0px;">
     <button id="tcm_display_home" title="Home Page - Site summary"></button>
 &emsp; The Home Button displays Jekyll Front Matter for the {{ site.title }} website. This is formatted as YAML key/value pairs in `_config.yml`. Comments and blank lines are not displayed. Notice the total number of lines includes comments and blank lines which are not displayed in the window.
 </div>
 <br>
+
+
+
 <div id="tcm_home"></div>
 
 <style>
