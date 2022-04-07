@@ -209,7 +209,7 @@ function webpage_info_to_html() {
         .then((results) => {
             var results = results.split("\n")  // Convert string into array
             var front_yml = getFrontMatter(results)
-            var html = htmlFrontMatter(front_yml, "Current Page Front Matter");
+            var html = htmlFrontMatter(front_yml, "Current Webpage Front Matter");
             b.innerHTML = html; // Update TCM Window body
         });
 }
