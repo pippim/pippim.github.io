@@ -20,13 +20,13 @@ layout: program
 {% include image.html src="/assets/img/tcm/TCM Header with Gingerbread Man.png"
    alt="TCM Header with Gingerbread Man.png"
    style="float: none; width: 100%; margin: .25rem 0 1rem 0px;"
-   caption="The Cookie Machine Transparent Button"
+   caption="The Cookie Machine's Gingerbread Man Button on far right."
 %}
 
 *The Cookie Machine*, commonly abbreviated as **TCM**,
-is shown above with the normally transparent button 
-"Gingerbread Man" button visible. When visible it will
-always appear in the same spot at the top of
+webpage heading is shown above. The normally transparent 
+"Gingerbread Man" button visible. When visible, it
+always appears in the same spot at the top of
 the {{ site.title }} webpage.
 
 TCM is new technology that repurposes "Cookies". Cookies
@@ -91,12 +91,11 @@ simply refresh the screen and no work is lost.
    caption="The Cookie Machine Buttons"
 %}
 
-The TCM Window Buttons brighten as you hover over them. The buttons are
-described in the table below. You can click the button in the
-table to jump to that section. You can also click the "Read more..." 
-link to jump to the same section.
+The TCM Window Buttons brighten as you hover over them. Selecting
+a button instantly changes the window's content. In the above
+animation however, each button is merely hovered over.
 
-### TCM Window Button Icons Large View
+## TCM Window Button Icons
 
 <div class="tcm_doc_window_button">
     <button id="tcm_doc_window_icon" title="TCM Window Icon"></button>
@@ -108,7 +107,12 @@ link to jump to the same section.
     <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
 </div>
 
-### TCM Window Button Summary Description
+Here are all the TCM Window Buttons at twice their normal size.
+In the next section a brief table summary of what each button
+does is presented. Click on the button or click "Read more..."
+to get more details.
+
+## TCM Window Button Summary Description
 
 <table id="tcm_window_table" class="hrb_table">
    <tr><th>Button</th>
