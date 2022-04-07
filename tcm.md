@@ -201,10 +201,25 @@ link to jump to the same section.
 ## TCM Icon
 
 <div class="tcm_doc_window_button">
+   style="float: left; margin: 0 2rem 2rem 0px;">
     <button id="tcm_doc_window_icon" title="TCM Window Icon"></button>
-Displays {{ site.title }} website tree.
-The Cookie Machine (TCM) icon is a Gingerbread Man.
 </div>
+
+The Cookie Machine (TCM) icon, ***TCM Icon*** is a Gingerbread Man.
+
+When a {{ site.title }} webpage loads the Icon is in a transparent
+button you cannot see. If you position your mouse to the right after
+the "normal" buttons in the page header, the cursor changes shape.
+The cursor changing shape indicates you can now select the TCM
+Window button.
+
+After selecting and then closing the TCM Window, the TCM Icon will
+appear in the webpage header. It will remain visible until a new
+webpage is loaded.
+
+You can change the rules for TCM Icon visibility in the 
+<a href="#tcm_icon" title="Change TCM Button visibility 
+rules" >Local Storage</a> section. 
 
 ---
 
@@ -220,12 +235,14 @@ The Cookie Machine (TCM) icon is a Gingerbread Man.
     <button id="tcm_display_home" title="Home Page - Site summary"></button>
 </div>
 
-The Home Button displays Jekyll Front Matter for the 
-{{ site.title }} website. This is formatted as 
-YAML key/value pairs in `_config.yml`. Comments and 
-blank lines are not displayed. Notice the total number 
-of lines includes comments and blank lines which are not
-displayed in the window.
+The ***Home Button*** displays Jekyll Front Matter for the 
+{{ site.title }} website. Front matter is stored as 
+YAML key/value pairs in `_config.yml`. 
+
+Comments and 
+blank lines are not displayed. The total number 
+of lines count will includes comments and blank 
+lines which are not displayed in the window.
 
 The Home Button window contents are displayed below: 
 
