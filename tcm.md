@@ -197,10 +197,11 @@ The Cookie Machine (TCM) icon is a Gingerbread Man.
 ## Home Button
 
 <p>
-  <button id="tcm_display_home" class="tcm_doc_window_buttons" 
-  title="Home Page - Site summary"></button>
-  The Home Button displays Jekyll Front Matter for the {{ site.title }} website. This
-  is formatted as YAML key/value pairs in `_config.yml`.
+   <button id="tcm_display_home" class="tcm_doc_window_buttons" 
+      title="Home Page - Site summary">
+   </button>
+   The Home Button displays Jekyll Front Matter for the {{ site.title }} website. This
+   is formatted as YAML key/value pairs in `_config.yml`.
 </p>
 
 Comments and blank lines are not displayed.
@@ -231,16 +232,11 @@ document.getElementById("tcm_home").innerHTML = html;
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 <a id="cloud_button"></a>
+
 ## Cloud Button
 
-
-<div id="tcm_window_buttons"> <!-- Buttons: /⌂ /☁ / 🖴 / 🔗 / i -->
-    <button id="tcm_display_home" title="Home Page - Site summary"></button>
+<div id="tcm_doc_window_button">
     <button id="tcm_display_cloud" title="Cloud storage - Site website tree"></button>
-    <button id="tcm_display_local" title="Local storage - Cookies and cache"></button>
-    <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker"></button>
-    <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
-    <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
 </div>
 Displays {{ site.title }} website tree.
 
@@ -284,6 +280,15 @@ fetch(raw_url + '/assets/json/website_tree.json')
 
 <a id="local_button"></a>
 ## Local Storage Button
+
+
+<div id="tcm_doc_window_button"> <!-- Buttons: /⌂ /☁ / 🖴 / 🔗 / i -->
+    <button id="tcm_display_cloud" title="Cloud storage - Site website tree"></button>
+    <button id="tcm_display_local" title="Local storage - Cookies and cache"></button>
+    <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker"></button>
+    <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
+    <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
+</div>
 
 The local storage section is used to control cookie settings.
 
