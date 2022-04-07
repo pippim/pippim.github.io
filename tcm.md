@@ -402,11 +402,19 @@ tcmButtonVisibility()
     <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker"></button>
 </div>
 
-Spins up an instance of the Hyperlink Recipe Baker.
+The ***Hyperlink Recipe Baker*** Button spins up an instance of the
+Hyperlink Recipe Baker or, **HRB** for short.
 
 This allows you to quickly create hyperlinks on any 
 {{ site.title }} website page
 without having to switch browser tabs.
+
+There are actually four instances of HRB available:
+
+- In the Cookie Machine (TCM)
+- On the main HRB webpage
+- On the "Diet" HRB webpage
+- Immediately below
 
 <div id="hrb_body"></div>
 <script>
@@ -431,13 +439,23 @@ Instructions for using the Hyperlink Recipe Baker can be found
     <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
 </div>
 
-Displays Jekyll Front Matter for the current webpage. This
-is formatted as YAML key/value pairs.
+The ***Webpage Information*** Button displays
+Jekyll Front Matter for the current webpage on the 
+{{ site.title }} website. Front matter is internally
+stored as YAML key/value pairs at the top of each page.
+
+Comments and 
+blank lines are not displayed. The total number 
+of lines count *may* include comments and blank 
+lines which are not displayed in the window.
+
+The Webpage Information window contents are displayed below: 
 
 <div id="tcm_doc_webpage"></div>
 
-Notice the total number of lines includes comments and blank lines
-which are not displayed in the window.
+There is not much information on this current page window.
+If you were to navigate to a blog post (in the "Answers"
+section), then you would see a lot more Front Matter.
 
 <style>
 #tcm_doc_webpage {
