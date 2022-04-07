@@ -300,6 +300,7 @@ The {{ site.title }} website tree is displayed below:
    margin-left: 1em;
    padding: .5rem;
    max-height: 90vh;
+   max-width: 100%;
    overflow: auto;
    line-height: 1 ! important;
 }
