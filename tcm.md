@@ -474,7 +474,7 @@ fetch(urlMarkdown)
   .then((results) => {
       var results = results.split("\n")  // Convert string into array
       var front_yml = getFrontMatter(results)
-      html += htmlFrontMatter(front_yml, "Current Page Front Matter");
+      html += htmlFrontMatter(front_yml, "Current Webpage Front Matter");
       document.getElementById("tcm_doc_webpage").innerHTML = html;
   });
 </script>
@@ -495,6 +495,16 @@ fetch(urlMarkdown)
     style="float: left; margin: 0 2rem 2rem 0px;">
     <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
 </div>
+
+The ***Cookie Jar*** Button allows you to see, download/export,
+upload/import, create and delete Cookies.
+
+You may need to do this to:
+
+- Transfer cookies to another Web Browser
+- Transfer cookies to another Device
+- Transfer cookies to another User
+
 
 
 ---
