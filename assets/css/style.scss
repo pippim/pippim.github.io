@@ -569,6 +569,9 @@ a.search-results:visited {
 .tcm_doc_window_button {
     // Buttons double the size for documentation in /tcm.md
     // TCM Buttons - Home, Cloud Storage, Local Storage, HRB, Webpage Info & Cookie Jar
+    float: left;
+    margin: .5rem 2rem 1rem 0px;
+
     > button {
         //display: inline-block; // https://stackoverflow.com/a/9577070/6929343
         //margin: .5rem .5rem;
