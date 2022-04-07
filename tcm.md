@@ -64,6 +64,11 @@ located to the far right of the regular buttons. It is
 the same height as the regular buttons and about 5
 characters wide.
 
+---
+
+<a id="hdr3"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
+
 # TCM Draggable Window
 
 {% include image.html src="/assets/img/tcm/TCM Draggable Window.gif"
@@ -191,8 +196,12 @@ The Cookie Machine (TCM) icon is a Gingerbread Man.
 
 ## Home Button
 
-Displays Jekyll Front Matter for the {{ site.title }} website. This
-is formatted as YAML key/value pairs in `_config.yml`.
+<p>
+  <button id="tcm_display_home" class="tcm_doc_window_buttons" 
+  title="Home Page - Site summary"></button>
+  The Home Button displays Jekyll Front Matter for the {{ site.title }} website. This
+  is formatted as YAML key/value pairs in `_config.yml`.
+</p>
 
 Comments and blank lines are not displayed.
 
@@ -224,6 +233,15 @@ document.getElementById("tcm_home").innerHTML = html;
 <a id="cloud_button"></a>
 ## Cloud Button
 
+
+<div id="tcm_window_buttons"> <!-- Buttons: /⌂ /☁ / 🖴 / 🔗 / i -->
+    <button id="tcm_display_home" title="Home Page - Site summary"></button>
+    <button id="tcm_display_cloud" title="Cloud storage - Site website tree"></button>
+    <button id="tcm_display_local" title="Local storage - Cookies and cache"></button>
+    <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker"></button>
+    <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
+    <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
+</div>
 Displays {{ site.title }} website tree.
 
 
