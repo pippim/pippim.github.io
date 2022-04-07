@@ -200,8 +200,8 @@ link to jump to the same section.
 <a id="tcm_icon"></a>
 ## TCM Icon
 
-<div class="tcm_doc_window_button">
-   style="float: left; margin: 0 2rem 2rem 0px;">
+<div class="tcm_doc_window_button"
+    style="float: left; margin: 0 2rem 2rem 0px;">
     <button id="tcm_doc_window_icon" title="TCM Window Icon"></button>
 </div>
 
@@ -219,7 +219,7 @@ webpage is loaded.
 
 You can change the rules for TCM Icon visibility in the 
 <a href="#tcm_icon" title="Change TCM Button visibility 
-rules" >Local Storage</a> section. 
+rules" >Local Storage</a> section.
 
 ---
 
@@ -274,11 +274,15 @@ document.getElementById("tcm_home").innerHTML = html;
 
 ## Cloud Button
 
-<div class="tcm_doc_window_button">
+<div class="tcm_doc_window_button"
+    style="float: left; margin: 0 2rem 2rem 0px;">
     <button id="tcm_doc_display_cloud" title="Cloud storage - Site website tree"></button>
 </div>
-Displays {{ site.title }} website tree.
+The ***Cloud Button*** displays the {{ site.title }} website tree.
+This is useful information If you are a web developer. For the
+average user though, it has little value.
 
+The {{ site.title }} website tree is displayed below:
 
 <div id="tcm_website_tree"></div>
 
