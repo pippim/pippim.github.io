@@ -197,7 +197,7 @@ The Cookie Machine (TCM) icon is a Gingerbread Man.
 ## Home Button
 
 <p>
-   <button id="tcm_display_home" class="tcm_doc_window_buttons" 
+   <button id="tcm_display_home" class="tcm_doc_window_button" 
       title="Home Page - Site summary">
    </button>
    The Home Button displays Jekyll Front Matter for the {{ site.title }} website. This
@@ -235,7 +235,7 @@ document.getElementById("tcm_home").innerHTML = html;
 
 ## Cloud Button
 
-<div id="tcm_doc_window_button">
+<div class="tcm_doc_window_button">
     <button id="tcm_display_cloud" title="Cloud storage - Site website tree"></button>
 </div>
 Displays {{ site.title }} website tree.
@@ -282,7 +282,7 @@ fetch(raw_url + '/assets/json/website_tree.json')
 ## Local Storage Button
 
 
-<div id="tcm_doc_window_button"> <!-- Buttons: /⌂ /☁ / 🖴 / 🔗 / i -->
+<div class="tcm_doc_window_button"> <!-- Buttons: /⌂ /☁ / 🖴 / 🔗 / i -->
     <button id="tcm_display_cloud" title="Cloud storage - Site website tree"></button>
     <button id="tcm_display_local" title="Local storage - Cookies and cache"></button>
     <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker"></button>
