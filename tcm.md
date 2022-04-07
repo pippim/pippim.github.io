@@ -100,6 +100,15 @@ described in the table below. You can click the button in the
 table to jump to that section. You can also click the "Read more..." 
 link to jump to the same section.
 
+<div class="tcm_doc_window_button">
+    <button id="tcm_display_home" title="Home Page - Site summary"></button>
+    <button id="tcm_display_cloud" title="Cloud storage - Site website tree"></button>
+    <button id="tcm_display_local" title="Local storage - Cookies and cache"></button>
+    <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker"></button>
+    <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
+    <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
+</div>
+
 <table id="tcm_window_table" class="hrb_table">
    <tr><th>Button</th>
        <th>Description</th>
@@ -236,7 +245,7 @@ document.getElementById("tcm_home").innerHTML = html;
 ## Cloud Button
 
 <div class="tcm_doc_window_button">
-    <button id="tcm_display_cloud" title="Cloud storage - Site website tree"></button>
+    <button id="tcm_doc_display_cloud" title="Cloud storage - Site website tree"></button>
 </div>
 Displays {{ site.title }} website tree.
 
