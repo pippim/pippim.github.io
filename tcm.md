@@ -338,10 +338,18 @@ fetch(raw_url + '/assets/json/website_tree.json')
     <button id="tcm_display_local" title="Local storage - Cookies and cache"></button>
 </div>
 
-The local storage section is used to control cookie settings.
+The **Local Storage*** Button is used to view and control
+cookie settings.
 
-The TCM Top of Page Button's visibility is controlled by 
-cookies described below.
+Cookies are stored locally within your Web Browser client
+settings. They cannot be viewed/changed by another webpage
+or webserver. They cannot be used by another Web Browser.
+
+See the Cookie Jar if you wish to share cookies with
+another Web Browser, or another device, or another user.
+
+The TCM Icon at the top of each webpage visibility is
+controlled by cookies described below.
 
 On/Off slider switches are used to control when the
 TCM Button is visible at the top of webpages. When the
