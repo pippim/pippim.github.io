@@ -282,6 +282,14 @@ The ***Cloud Button*** displays the {{ site.title }} website tree.
 This is useful information If you are a web developer. For the
 average user though, it has little value.
 
+The website tree is not displayed in real time. Contents are
+taken from teh file `_include/website_tree.txt` which is
+manually uploaded from time to time. The file contents can
+be generated using the Linux `tree` command. See the
+`refresh.sh` bash script for an 
+[example 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/refresh.sh 
+"Using the `tree` command to generate website_tree.txt"){:target="_blank"}.
+
 The {{ site.title }} website tree is displayed below:
 
 <div id="tcm_website_tree"></div>
@@ -322,15 +330,12 @@ fetch(raw_url + '/assets/json/website_tree.json')
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 <a id="local_button"></a>
+
 ## Local Storage Button
 
-
-<div class="tcm_doc_window_button"> <!-- Buttons: /⌂ /☁ / 🖴 / 🔗 / i -->
-    <button id="tcm_display_cloud" title="Cloud storage - Site website tree"></button>
+<div class="tcm_doc_window_button"
+    style="float: left; margin: 0 2rem 2rem 0px;">
     <button id="tcm_display_local" title="Local storage - Cookies and cache"></button>
-    <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker"></button>
-    <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
-    <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
 </div>
 
 The local storage section is used to control cookie settings.
@@ -381,7 +386,13 @@ tcmButtonVisibility()
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 <a id="hyperlink_button"></a>
+
 ## Hyperlink Recipe Baker Button
+
+<div class="tcm_doc_window_button"
+    style="float: left; margin: 0 2rem 2rem 0px;">
+    <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker"></button>
+</div>
 
 Spins up an instance of the Hyperlink Recipe Baker.
 
@@ -404,7 +415,13 @@ Instructions for using the Hyperlink Recipe Baker can be found
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 <a id="webpage_button"></a>
+
 ## Webpage Information Button
+
+<div class="tcm_doc_window_button"
+    style="float: left; margin: 0 2rem 2rem 0px;">
+    <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
+</div>
 
 Displays Jekyll Front Matter for the current webpage. This
 is formatted as YAML key/value pairs.
@@ -445,7 +462,14 @@ fetch(urlMarkdown)
 
 
 <a id="cookie_jar_button"></a>
+
 ## Cookie Jar Button
+
+<div class="tcm_doc_window_button"
+    style="float: left; margin: 0 2rem 2rem 0px;">
+    <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
+</div>
+
 
 ---
 
