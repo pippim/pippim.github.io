@@ -511,7 +511,6 @@ You can use the Cookie Jar to:
 
 Although the Cookie Jar can be set to the conventional
 folder name `Donwloads`, a separate folder can be used.
-
 For example, a folder named `Cookie Jar` could be
 created in your home directory.
 
