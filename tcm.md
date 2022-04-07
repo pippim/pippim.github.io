@@ -17,15 +17,17 @@ layout: program
 
 # Introduction
 
-{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
-   alt="TCM transparent button.gif"
-   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+{% include image.html src="/assets/img/tcm/TCM Header with Gingerbread Man.png"
+   alt="TCM Header with Gingerbread Man.png"
+   style="float: none; width: 100%; margin: .25rem 0 1rem 0px;"
    caption="The Cookie Machine Transparent Button"
 %}
 
 *The Cookie Machine*, commonly abbreviated as **TCM**,
-is accessed using a transparent button at the top of
-every {{ site.title }} web page.
+is shown above with the normally transparent button 
+"Gingerbread Man" button visible. When visible it will
+always appear in the same spot at the top of
+the {{ site.title }} webpage.
 
 TCM is new technology that repurposes "Cookies". Cookies
 were historically used to track your activity on the
@@ -42,27 +44,20 @@ about six months to complete.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
----
-
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
-
 {% include image.html src="/assets/img/tcm/TCM transparent button.gif"
    alt="TCM transparent button.gif"
    style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
    caption="The Cookie Machine Transparent Button"
 %}
 
-# Accessing The Cookie Machine (TCM)
+# How to Open The Cookie Machine (TCM)
 
-There is a transparent button you can click to access 
-*The Cookie Machine* (TCM). This button is not available
-on Smart Phones because the screen size is too small.
+There is a transparent button you can select to open 
+*The Cookie Machine* (TCM).
 
-As the `.gif` animation shows the transparent button is
+As the `.gif` animation above shows, the transparent button is
 located to the far right of the regular buttons. It is
-the same height as the regular buttons and about 5
-characters wide.
+the same height as the regular buttons.
 
 ---
 
@@ -96,7 +91,7 @@ simply refresh the screen and no work is lost.
    caption="The Cookie Machine Buttons"
 %}
 
-The buttons brighten as you hover over them. The buttons are
+The TCM Window Buttons brighten as you hover over them. The buttons are
 described in the table below. You can click the button in the
 table to jump to that section. You can also click the "Read more..." 
 link to jump to the same section.
@@ -200,8 +195,7 @@ link to jump to the same section.
 <a id="tcm_icon"></a>
 ## TCM Icon
 
-<div class="tcm_doc_window_button"
-    style="float: left; margin: 0 2rem 2rem 0px;">
+<div class="tcm_doc_window_button">
     <button id="tcm_doc_window_icon" title="TCM Window Icon"></button>
 </div>
 
@@ -230,8 +224,7 @@ rules" >Local Storage</a> section.
 
 ## Home Button
 
-<div class="tcm_doc_window_button" 
-   style="float: left; margin: 0 2rem 2rem 0px;">
+<div class="tcm_doc_window_button">
     <button id="tcm_display_home" title="Home Page - Site summary"></button>
 </div>
 
@@ -274,8 +267,7 @@ document.getElementById("tcm_home").innerHTML = html;
 
 ## Cloud Button
 
-<div class="tcm_doc_window_button"
-    style="float: left; margin: 0 2rem 2rem 0px;">
+<div class="tcm_doc_window_button">
     <button id="tcm_doc_display_cloud" title="Cloud storage - Site website tree"></button>
 </div>
 The ***Cloud Button*** displays the {{ site.title }} website tree.
@@ -283,7 +275,7 @@ This is useful information If you are a web developer. For the
 average user though, it has little value.
 
 The website tree is not displayed in real time. Contents are
-taken from teh file `_include/website_tree.txt` which is
+taken from the file `_includes/website_tree.txt` which is
 manually uploaded from time to time. The file contents can
 be generated using the Linux `tree` command. See the
 `refresh.sh` bash script for an 
@@ -333,8 +325,7 @@ fetch(raw_url + '/assets/json/website_tree.json')
 
 ## Local Storage Button
 
-<div class="tcm_doc_window_button"
-    style="float: left; margin: 0 2rem 2rem 0px;">
+<div class="tcm_doc_window_button">
     <button id="tcm_display_local" title="Local storage - Cookies and cache"></button>
 </div>
 
@@ -397,8 +388,7 @@ tcmButtonVisibility()
 
 ## Hyperlink Recipe Baker Button
 
-<div class="tcm_doc_window_button"
-    style="float: left; margin: 0 2rem 2rem 0px;">
+<div class="tcm_doc_window_button">
     <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker"></button>
 </div>
 
@@ -434,8 +424,7 @@ Instructions for using the Hyperlink Recipe Baker can be found
 
 ## Webpage Information Button
 
-<div class="tcm_doc_window_button"
-    style="float: left; margin: 0 2rem 2rem 0px;">
+<div class="tcm_doc_window_button">
     <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
 </div>
 
@@ -491,8 +480,7 @@ fetch(urlMarkdown)
 
 ## Cookie Jar Button
 
-<div class="tcm_doc_window_button"
-    style="float: left; margin: 0 2rem 2rem 0px;">
+<div class="tcm_doc_window_button">
     <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
 </div>
 
