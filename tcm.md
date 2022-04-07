@@ -202,9 +202,9 @@ link to jump to the same section.
 
 <div class="tcm_doc_window_button">
     <button id="tcm_doc_window_icon" title="TCM Window Icon"></button>
-</div>
 Displays {{ site.title }} website tree.
 The Cookie Machine (TCM) icon is a Gingerbread Man.
+</div>
 
 ---
 
@@ -215,20 +215,16 @@ The Cookie Machine (TCM) icon is a Gingerbread Man.
 
 ## Home Button
 
-<p>
-   <button id="tcm_display_home" class="tcm_doc_window_button" 
-      title="Home Page - Site summary">
-   </button>
-   The Home Button displays Jekyll Front Matter for the {{ site.title }} website. This
-   is formatted as YAML key/value pairs in `_config.yml`.
-</p>
-
-Comments and blank lines are not displayed.
+<div class="tcm_doc_window_button">
+    <button id="tcm_display_home" title="Home Page - Site summary"></button>
+    The Home Button displays Jekyll Front Matter for the {{ site.title }} website. This
+    is formatted as YAML key/value pairs in `_config.yml`.
+    Comments and blank lines are not displayed.
+    Notice the total number of lines includes comments and blank lines
+    which are not displayed in the window.
+</div>
 
 <div id="tcm_home"></div>
-
-Notice the total number of lines includes comments and blank lines
-which are not displayed in the window.
 
 <style>
 #tcm_home {
