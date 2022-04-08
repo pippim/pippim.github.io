@@ -144,23 +144,17 @@ function calcTotalHits(words) {
     var total_hits = 0 ;
     var total_points = 0 ;
 
+    // For every word in search_words
     for (const [word, results] of Object.entries(words)) {
-        total_hits += 1;
-    }
-/*
-    const results = get_hits(q.value);      // URLS matching search words into array
+        let url_points = Object.entries(results);
+        // For every URL/Points pair in word results
+        for (var i = 0; i < url_points.length; i++) {
+            total_hits += 1;
+            const [key, value] = url_points[i].toString().split(',');
+            // DISCARD key, (URL index number) not needed at this time
+            total_points += parseFloat(value); } }
 
-    for (var i = 0; i < results.length; i++) {
-        const [key, value] = results[i].toString().split(',');
-        const arr = search_urls[key].split(' | ', 1);
-        hyper_link = arr[0];
-        hyper_title = search_urls[key].substring(hyper_link.length + 3);
-        html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n"
-        //html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a>" +
-        //         " <badge> " + value.toString() + " </badge> points." + "</li>\n";
-    }
-*/
-    return [ total_hits, total_points ];
+    return [total_hits, total_points];
 }
 
 /*  NOTE: theCookieMachine.js is already using b:
