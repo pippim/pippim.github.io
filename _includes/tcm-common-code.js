@@ -91,8 +91,9 @@ function htmlWebsiteTree(results) {
     html += '#tcmLineDraw {\n' +
             'font-family: Consolas, "Liberation Mono", Menlo, Courier, ' +
                        ' "Courier New", monospace;\n' +
-            'line-height: .55;\n' +
+            'line-height: .75;\n' +
             '}\n'
+    // Note .55 line-height is for normal Cayman, must be overridden in tcm_doc (tcm.md)
     html += '</style>'
 
     return html
@@ -281,7 +282,5 @@ function switch_toggle(id) {
     if (objTcmVisById[id].setting == "true") { switch_set(id, "false"); }
                                         else { switch_set(id, "true"); }
 }
-
-
 
 /* End of /_includes/tcm_button_visibility.js */
