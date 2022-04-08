@@ -302,7 +302,7 @@ The {{ site.title }} website tree is displayed below:
    max-height: 90vh;
    max-width: 100vw;
    overflow: auto;
-   //line-height: 1 ! important;
+   line-height: 1 ! important;
 }
 </style>
 
