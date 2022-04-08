@@ -300,9 +300,8 @@ The {{ site.title }} website tree is displayed below:
    margin-left: 1em;
    padding: .5rem;
    max-height: 90vh;
-   //max-width: 100%;
    overflow: auto;
-   white-space: pre;         // 2022-03-12 will this restore spacing in website_tree.json
+   white-space: pre;         // 2022-03-12 Proper spacing in website_tree.json
 }
 </style>
 
@@ -357,9 +356,10 @@ In the TCM window's local storage section you will see:
 
 <div id="tcm_search_stats"></div>
 
-The Search Engine Statistics are kept in Session Storage
-to save page load times. Once every 24 hours the Session
-Storage is refreshed from the internet. When this happens
+The Search Engine Statistics will list the objects that
+are kept in Session Storage in order to save webpage load
+times. Once every 24 hours, Session Storage objects are 
+refreshed from the internet. When a refresh occurs,
 an extra couple of seconds delay will occur on the first
 webpage read.
 
