@@ -72,7 +72,7 @@ async function load_search_words() {
             search_words = responseJson;
             // https://stackoverflow.com/a/32905820/6929343
             var search_words_store = JSON.stringify(search_words)
-            const [ total_hits, total_points ] = calcTotalHits(search_words_store);
+            const [ total_hits, total_points ] = calcTotalHits(search_words);
             sessionStorage.setItem('search_words', search_words_store);
             buildStats('Search Word Count', Object.keys(search_words).length);
             buildStats('Search Word Size', search_words_store.length);
