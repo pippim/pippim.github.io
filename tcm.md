@@ -302,7 +302,7 @@ The {{ site.title }} website tree is displayed below:
    max-height: 90vh;
    max-width: 100vw;
    overflow: auto;
-   line-height: 1 ! important;
+   //line-height: 1 ! important;
 }
 </style>
 
@@ -311,9 +311,9 @@ fetch(raw_url + '/assets/json/website_tree.json')
    .then((response) => response.json())
    .then((website_tree) => {
       var html = htmlWebsiteTree(website_tree);
-      //html += '<style>#tcmLineDraw {\n' +
-      //   'line-height: 1;\n' +
-      //   '}\n'
+      html += '<style>#tcmLineDraw {\n' +
+         'line-height: 1;\n' +
+         '}\n'
       html += '</style>';
    document.getElementById("tcm_website_tree").innerHTML = html;
 });
