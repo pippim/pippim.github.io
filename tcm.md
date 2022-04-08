@@ -300,9 +300,9 @@ The {{ site.title }} website tree is displayed below:
    margin-left: 1em;
    padding: .5rem;
    max-height: 90vh;
-   max-width: 100vw;
+   max-width: 100%;
    overflow: auto;
-   //line-height: 1 ! important;
+   white-space: pre;         // 2022-03-12 will this restore spacing in website_tree.json
 }
 </style>
 
