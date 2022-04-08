@@ -144,11 +144,9 @@ function calcTotalHits(words) {
     var total_hits = 0 ;
     var total_points = 0 ;
 
-
     for (const [word, results] of Object.entries(words)) {
         total_hits += 1;
     }
-    console.log("total_hits: " + total_hits)
 /*
     const results = get_hits(q.value);      // URLS matching search words into array
 
