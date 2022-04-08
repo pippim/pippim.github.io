@@ -300,7 +300,7 @@ The {{ site.title }} website tree is displayed below:
    margin-left: 1em;
    padding: .5rem;
    max-height: 90vh;
-   max-width: 100%;
+   //max-width: 100%;
    overflow: auto;
    white-space: pre;         // 2022-03-12 will this restore spacing in website_tree.json
 }
@@ -311,11 +311,7 @@ fetch(raw_url + '/assets/json/website_tree.json')
    .then((response) => response.json())
    .then((website_tree) => {
       var html = htmlWebsiteTree(website_tree);
-      //html += '<style>#tcmLineDraw {\n' +
-      //   'line-height: 1;\n' +
-      //   '}\n'
-      html += '</style>';
-   document.getElementById("tcm_website_tree").innerHTML = html;
+      document.getElementById("tcm_website_tree").innerHTML = html;
 });
 </script>
 
