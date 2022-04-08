@@ -91,7 +91,7 @@ function htmlWebsiteTree(results) {
     html += '#tcmLineDraw {\n' +
             'font-family: Consolas, "Liberation Mono", Menlo, Courier, ' +
                        ' "Courier New", monospace;\n' +
-            'line-height: .75;\n' +
+            'line-height: .55;\n' +
             '}\n'
     // Note .55 line-height is for normal Cayman, must be overridden in tcm_doc (tcm.md)
     html += '</style>'
