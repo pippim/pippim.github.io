@@ -145,7 +145,7 @@ function calcTotalHits(words) {
     var total_points = 0 ;
 
 
-    for (const word of words) {
+    for (const [word, results] of Object.entries(words)) {
         total_hits += 1;
     }
     console.log("total_hits: " + total_hits)
