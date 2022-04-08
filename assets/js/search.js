@@ -72,9 +72,12 @@ async function load_search_words() {
             search_words = responseJson;
             // https://stackoverflow.com/a/32905820/6929343
             var search_words_store = JSON.stringify(search_words)
+            const [ total_hits, total_points ] = calcTotalHits(search_words_store);
             sessionStorage.setItem('search_words', search_words_store);
-            buildStats('Search Words Count', Object.keys(search_words).length);
-            buildStats('Search Words Size', search_words_store.length);
+            buildStats('Search Word Count', Object.keys(search_words).length);
+            buildStats('Search Word Size', search_words_store.length);
+            buildStats('Search Word Hits', total_hits);
+            buildStats('Search Word Points', total_points);
         });
 }
 
@@ -87,8 +90,8 @@ async function load_search_urls() {
             // https://stackoverflow.com/a/32905820/6929343
             var search_urls_store = JSON.stringify(search_urls);
             sessionStorage.setItem('search_urls', search_urls_store);
-            buildStats('Search URLs Count', search_urls.length);
-            buildStats('Search URLs Size', search_urls_store.length);
+            buildStats('Search URL Count', search_urls.length);
+            buildStats('Search URL Size', search_urls_store.length);
         });
 }
 
@@ -129,13 +132,37 @@ function newStats () {
 
 function buildStats (key, value) {
     search_stats[key] = value
-    // console.log('adding key/value: ' + key + " / " + value +
-    //            " | length: " + Object.keys(search_stats).length);
-    // After 7 stats (plus timestamp) we are done
-    if (Object.keys(search_stats).length = 8) {
+    // After 8 stats (plus 2 timestamps) we are done
+    if (Object.keys(search_stats).length = 10) {
         // alert("5 search stats created");
         sessionStorage.setItem('search_stats', JSON.stringify(search_stats));
     }
+}
+
+function calcTotalHits(words) {
+    // returns total search words hits and points for stats
+    var total_hits = 0 ;
+    var total_points = 0 ;
+
+
+    for (const word of words) {
+        total_hits += 1;
+    }
+    console.log("total_hits: " + total_hits)
+/*
+    const results = get_hits(q.value);      // URLS matching search words into array
+
+    for (var i = 0; i < results.length; i++) {
+        const [key, value] = results[i].toString().split(',');
+        const arr = search_urls[key].split(' | ', 1);
+        hyper_link = arr[0];
+        hyper_title = search_urls[key].substring(hyper_link.length + 3);
+        html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n"
+        //html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a>" +
+        //         " <badge> " + value.toString() + " </badge> points." + "</li>\n";
+    }
+*/
+    return [ total_hits, total_points ];
 }
 
 /*  NOTE: theCookieMachine.js is already using b:
