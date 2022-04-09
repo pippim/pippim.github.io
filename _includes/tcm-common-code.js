@@ -207,28 +207,10 @@ if (orientation === "landscape-primary") {
     html += '  <tr><th>Screen Key</th>\n' +
             '  <th>Screen Value</th></tr>\n';
 
-    arrScreenProp = ["availTop", "availLeft", "availHeight", "availWidth",
-                     "top", "left", "height", "width", "colorDepth",
-                     "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
-    var myScreen = window.screen;
-    //console.log("myScreen.length: " + myScreen.length)
-    //console.log("Object.keys(window.screen): " + Object.keys(window.screen))
-    // window has tons of keys, EXCEPT 'screen' !!!
-    //console.log("Object.keys(window): " + Object.keys(window))
-    //console.log("Object.keys(screen): " + Object.keys(screen))
-    for (var i=100; i<arrScreenProp.length; i++){
-        var key = arrScreenProp[i];
-        html += '  <tr><td>' + key + '</td>\n' ;
-        html += '  <td>';  // Start of table cell
-        if (!window.screen.hasOwnProperty(key)) { html += "N/A"; }
-        else { html += window.screen[key].toLocaleString(); }
-        // Not working
-        //if(!myScreen.hasOwnProperty(key)) { html += "N/A"; }
-        //else { html += myScreen[key].toLocaleString(); }
-        //if(!screen.hasOwnProperty(key)) { html += "undefined"; }
-        //else { html += arrScreenProp[key].toLocaleString(); }
-        html += '</td></tr>\n';  // End of table cell and table row
-    }  // Not working. Everything is undefined!
+    arrProp = ["availTop", "availLeft", "availHeight", "availWidth",
+               "top", "left", "height", "width", "colorDepth",
+               "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
+    for (var i=0; i<arrProp.length; i++){ html += buildEval(arrProp[i]) ; }
     // Test single screen property
     html += '  <tr><td>screen.availTop</td>\n' ;
     html += '  <td>' + screen.availTop.toLocaleString(); + '</td></tr>\n';
@@ -295,7 +277,8 @@ function buildEval(prop) {
     instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; }" ;
     instructions += "else { html += " + command + ".toLocaleString(); }" ;
     instructions += "html += '</td></tr>\n';" ;
-    return eval(instructions)
+    eval(instructions)
+    return html
 }
 
 // From: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
