@@ -250,6 +250,10 @@ function htmlScreenInfo() {
     html += '  <tr><td>screen.pixelDepth</td>\n' ;
     html += '  <td>' + screen.pixelDepth.toLocaleString(); + '</td></tr>\n';
     // mozEnabled is undefined, User must enable manually
+    html += '  <tr><td>screen.mozEnabled</td>\n' ;
+    if (typeof screen.mozEnabled === 'undefined') {
+        html += '  <td>undefined'</td></tr>\n';
+    }
     //html += '  <tr><td>screen.mozEnabled</td>\n' ;
     //html += '  <td>' + screen.mozEnabled.toLocaleString(); + '</td></tr>\n';
     // mozBrightness is undefined, User must enable manually
