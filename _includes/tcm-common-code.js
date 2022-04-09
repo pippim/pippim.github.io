@@ -204,9 +204,11 @@ function htmlScreenInfo() {
         var key = arrScreenProp[i];
         html += '  <tr><td>' + key + '</td>\n' ;
         html += '  <td>';  // Start of table cell
-        if(!myScreen.hasOwnProperty(key)) { html += "N/A"; }
-        else { html += myScreen[key].toLocaleString(); }
+        if(!window.screen.hasOwnProperty(key)) { html += "N/A"; }
+        else { html += window.screen[key].toLocaleString(); }
         // Not working
+        //if(!myScreen.hasOwnProperty(key)) { html += "N/A"; }
+        e//lse { html += myScreen[key].toLocaleString(); }
         //if(!screen.hasOwnProperty(key)) { html += "undefined"; }
         //else { html += arrScreenProp[key].toLocaleString(); }
         html += '</td></tr>\n';  // End of table cell and table row
