@@ -198,7 +198,7 @@ function htmlScreenInfo() {
     arrScreenProp = ["availTop", "availLeft", "availHeight", "availWidth",
                      "top", "left", "height", "width", "colorDepth",
                      "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
-    var myScreen = window.screen();
+    var myScreen = window.screen;
     console.log("myScreen.length: " + myScreen.length)
     for (var i=0; i<arrScreenProp.length; i++){
         var key = arrScreenProp[i];
