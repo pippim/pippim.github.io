@@ -195,6 +195,10 @@ function htmlScreenInfo() {
     html += '  <tr><th>Screen Key</th>\n' +
             '  <th>Screen Value</th></tr>\n';
 
+    // Test single screen property
+    html += '  <tr><td>screen.availTop</td>\n' ;
+    html += '  <td>' + screen.availTop.toLocaleString(); + '</td></tr>\n';
+    // Loop through all properties
     for (const [key, value] of Object.entries(screen)) {
         html += '  <tr><td>' + key + '</td>\n' ;
         // TODO: Need database of object keys and their value format
