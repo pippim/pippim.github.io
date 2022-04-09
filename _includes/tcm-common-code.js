@@ -204,6 +204,7 @@ function htmlScreenInfo() {
     html += '</table>\n';     // End of our table and form
 
     html += '<style>\n#screenTable th, #screenTable td {\n' +
+            '  textAlign: left;;\n' +
             '  padding: 0 .5rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
@@ -219,7 +220,7 @@ function buildEval(prop, orientation) {
     else if (result == '[object ScreenOrientation]') { value = orientation; }
     else { value = result }  // "undefined"
 
-    var instructions = "var html += '<tr><td>screen." + prop + "</td><td> ';";
+    var instructions = "var html = '<tr><td>screen." + prop + "</td><td> ';";
     instructions += "html += '" + value + "</td></tr>'";
     eval(instructions);
     return html
