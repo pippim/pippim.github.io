@@ -65,10 +65,10 @@ function htmlWebsiteTree(results) {
         b.innerHTML = html;
         return;
     } else if (results.length == 1) {
-        var html = '<h3 id="tcmHdr">1 {{ site.title }} website entry found.</h3>\n';
+        var html = '<h3 id="tcmHdr">1 {{ site.title }} website tree entry found.</h3>\n';
     } else {
         var html = '<h3 id="tcmHdr">' + results.length.toString() +
-                   ' {{ site.title }} website entries found.</h3>\n';
+                   ' {{ site.title }} website tree entries found.</h3>\n';
     }
 
     html += '<div id="tcmLineDraw">\n';
@@ -175,6 +175,41 @@ function htmlSearchStats() {
     // TODO: Move next 9 lines to a shared function
     // Heading: "999 Pippim website entries found." <h3> styling
     html += '<style>\n#statTable th, #statTable td {\n' +
+            '  padding: 0 .5rem;\n' +
+            '}\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    return html; // Update TCM Window body
+}
+
+function htmlScreenInfo() {
+    /* return html code <table> <td> for:
+        Statistic Key       Statistic Value
+        screen.availTop     999999?
+        screen.availLeft    9999999
+    */
+    var html = "<h3>Screen Info</h3>"
+    html += '<table id="screenTable">\n' ;
+    // Statistics Table heading
+    html += '  <tr><th>Screen Key</th>\n' +
+            '  <th>Screen Value</th></tr>\n';
+
+    for (const [key, value] of Object.entries(screen)) {
+        html += '  <tr><td>' + key + '</td>\n' ;
+        // TODO: Need database of object keys and their value format
+        // If greater than 123 MB it's a Unix Date in Epoch
+        //var d = new Date(value);
+        html += '  <td>';  // Start of table cell
+        // html += value.toLocaleString();
+        //if (value < 123456789) { html += value.toLocaleString(); }
+        //else { html += d.toLocaleDateString() +  ' ' + d.toLocaleTimeString() }
+        html += value.toLocaleString();
+        html += '</td></tr>\n';  // End of table cell and table row
+    }
+    html += '</table>\n';     // End of our table and form
+
+    // TODO: Move next 9 lines to a shared function
+    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style>\n#screenTable th, #screenTable td {\n' +
             '  padding: 0 .5rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
