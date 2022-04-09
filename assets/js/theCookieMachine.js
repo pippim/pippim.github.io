@@ -214,33 +214,6 @@ function introduction_to_html() {
 
 introduction_to_html()  // Load immediately
 
-
-function webpage_info_to_html() {
-    var urlMarkdown = getMarkdownFilename();
-
-    fetch(urlMarkdown)
-        .then((response) => response.text())
-        .then((results) => {
-            var results = results.split("\n")  // Convert string into array
-            var front_yml = getFrontMatter(results)
-            var html = htmlFrontMatter(front_yml, "Current Webpage Front Matter");
-            b.innerHTML = html; // Update TCM Window body
-        });
-}
-
-function local_storage_to_html() {
-    // Function shared with tcm.md in _includes/tcm-common-code.js
-    var html = htmlVisibilitySwitches();
-    html += htmlSearchStats();
-    html += htmlScreenInfo();
-    b.innerHTML = html;              // Update TCM Window body
-
-    /*  Process slider switches - shared  with ~/tcm.md
-        USE: % include tcm-common-code.js %}
-    */
-    tcmButtonVisibility()
-}
-
 // Assign tooltip (title=) to section navigation bar buttons
 set_hdr_tooltips();
 // Add tooltips to hdr-bar buttons on all blog post pages with navigation buttons
