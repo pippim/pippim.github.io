@@ -198,16 +198,14 @@ function htmlScreenInfo() {
     arrScreenProp = ["availTop", "availLeft", "availHeight", "availWidth",
                      "top", "left", "height", "width", "colorDepth",
                      "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
-    for (var i=0; i<arrScreenProp.length; i++){
+    for (var i=1000; i<arrScreenProp.length; i++){
         var key = arrScreenProp[i];
         html += '  <tr><td>' + key + '</td>\n' ;
         html += '  <td>';  // Start of table cell
-        if(!screen.hasOwnProperty(key)) {
-            html += "undefined";
-        } else {
-            html += arrScreenProp[key].toLocaleString();
-        }
-    }
+        if(!screen.hasOwnProperty(key)) { html += "undefined"; }
+        else { html += arrScreenProp[key].toLocaleString(); }
+        html += '</td></tr>\n';  // End of table cell and table row
+    }  // Not working. Everything is undefined!
     // Test single screen property
     html += '  <tr><td>screen.availTop</td>\n' ;
     html += '  <td>' + screen.availTop.toLocaleString(); + '</td></tr>\n';
@@ -221,26 +219,26 @@ function htmlScreenInfo() {
     html += '  <tr><td>screen.availWidth</td>\n' ;
     html += '  <td>' + screen.availWidth.toLocaleString(); + '</td></tr>\n';
     // Test single screen property
-    html += '  <tr><td>screen.colorDepth</td>\n' ;
-    html += '  <td>' + screen.colorDepth.toLocaleString(); + '</td></tr>\n';
+    html += '  <tr><td>screen.top</td>\n' ;
+    html += '  <td>' + screen.top.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.left</td>\n' ;
+    html += '  <td>' + screen.left.toLocaleString(); + '</td></tr>\n';
     // Test single screen property
     html += '  <tr><td>screen.height</td>\n' ;
     html += '  <td>' + screen.height.toLocaleString(); + '</td></tr>\n';
     // Test single screen property
-    html += '  <tr><td>screen.left</td>\n' ;
-    html += '  <td>' + screen.left.toLocaleString(); + '</td></tr>\n';
+    html += '  <tr><td>screen.width</td>\n' ;
+    html += '  <td>' + screen.width.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.colorDepth</td>\n' ;
+    html += '  <td>' + screen.colorDepth.toLocaleString(); + '</td></tr>\n';
     // Test single screen property
     html += '  <tr><td>screen.orientation</td>\n' ;
     html += '  <td>' + screen.orientation.toLocaleString(); + '</td></tr>\n';
     // Test single screen property
     html += '  <tr><td>screen.pixelDepth</td>\n' ;
     html += '  <td>' + screen.pixelDepth.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.top</td>\n' ;
-    html += '  <td>' + screen.top.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.width</td>\n' ;
-    html += '  <td>' + screen.width.toLocaleString(); + '</td></tr>\n';
     // mozEnabled is undefined, User must enable manually
     //html += '  <tr><td>screen.mozEnabled</td>\n' ;
     //html += '  <td>' + screen.mozEnabled.toLocaleString(); + '</td></tr>\n';
