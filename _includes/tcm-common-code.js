@@ -276,7 +276,7 @@ if (orientation === "landscape-primary") {
 function buildEval(prop, orientation) {
     // Build html using eval() of screen.availTop
     command = "screen." + prop;
-    var instructions = "var html = '  <tr><td>" + command + "</td>\n  <td>';\n";
+    var instructions = "var html = '  <tr><td>" + command + "</td>  <td>' ";
     instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; }\n";
     instructions += "else { html += " + command + ".toLocaleString(); }\n";
     instructions += "html += '</td></tr>\n';";
