@@ -252,12 +252,12 @@ function htmlScreenInfo() {
     html += '  <td>' + screen.pixelDepth.toLocaleString(); + '</td></tr>\n';
 
     // mozEnabled is undefined, User must enable manually
-    html += '  <tr><td>screen.mozEnabled</td>\n' ;
+    html += '  <tr><td>screen.mozEnabled</td>\n  <td>' ;
     if (typeof screen.mozEnabled === 'undefined') { html += 'N/A'; }
     else { html += screen.mozEnabled.toLocaleString(); }
     html += '</td></tr>\n';
 
-    html += '  <tr><td>screen.mozBrightness</td>\n' ;
+    html += '  <tr><td>screen.mozBrightness</td>\n  <td>' ;
     if (typeof screen.mozBrightness === 'undefined') { html += 'N/A'; }
     else { html += screen.mozBrightness.toLocaleString(); }
     html += '</td></tr>\n';
