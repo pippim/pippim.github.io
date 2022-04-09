@@ -187,6 +187,8 @@ function htmlScreenInfo() {
         screen.availTop     999999?
         screen.availLeft    9999999
     */
+    console.log(Object.getOwnPropertyNames(screen));
+    console.log(Object.getOwnPropertyNames(window.screen));
     var html = "<h3>Screen Info</h3>"
     html += '<table id="screenTable">\n' ;
     // Statistics Table heading
