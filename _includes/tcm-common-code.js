@@ -183,93 +183,31 @@ function htmlSearchStats() {
 
 function htmlScreenInfo() {
     /* return html code <table> <td> for:
-        Statistic Key       Statistic Value
-        screen.availTop     999999?
-        screen.availLeft    9999999
+        Screen Property     Value
+        screen.availTop     9,999
+        screen.availLeft    9,999
+        ETC.
     */
-    //console.log(Object.getOwnPropertyNames(screen));
-    //console.log(Object.getOwnPropertyNames(window.screen));
-    var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
-    console.log("typeof screen.orientation: " + typeof screen.orientation)
-if (orientation === "landscape-primary") {
-  console.log("That looks good.");
-} else if (orientation === "landscape-secondary") {
-  console.log("Mmmh... the screen is upside down!");
-} else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
-  console.log("Mmmh... you should rotate your device to landscape");
-} else if (orientation === undefined) {
-  console.log("The orientation API isn't supported in this browser :(");
-}
-
-    var html = "<h3>Screen Info</h3>"
+    var html = "<h3>Screen Interface</h3>"
     html += '<table id="screenTable">\n' ;
     // Statistics Table heading
-    html += '  <tr><th>Screen Key</th>\n' +
-            '  <th>Screen Value</th></tr>\n';
+    html += '  <tr><th>Screen Property</th>\n' +
+            '  <th>Value</th></tr>\n';
 
     arrProp = ["availTop", "availLeft", "availHeight", "availWidth",
                "top", "left", "height", "width", "colorDepth",
                "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
     var o = (screen.orientation || {}).type ||
              screen.mozOrientation || screen.msOrientation;
-    console.log("o: " + o)
     for (var i=0; i<arrProp.length; i++){ html += buildEval(arrProp[i], o) ; }
-    // Test single screen property
-    html += '  <tr><td>screen.availTop</td>\n' ;
-    html += '  <td>' + screen.availTop.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.availLeft</td>\n' ;
-    html += '  <td>' + screen.availLeft.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.availHeight</td>\n' ;
-    html += '  <td>' + screen.availHeight.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.availWidth</td>\n' ;
-    html += '  <td>' + screen.availWidth.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.top</td>\n' ;
-    html += '  <td>' + screen.top.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.left</td>\n' ;
-    html += '  <td>' + screen.left.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.height</td>\n' ;
-    html += '  <td>' + screen.height.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.width</td>\n' ;
-    html += '  <td>' + screen.width.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.colorDepth</td>\n' ;
-    html += '  <td>' + screen.colorDepth.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.pixelDepth</td>\n' ;
-    html += '  <td>' + screen.pixelDepth.toLocaleString(); + '</td></tr>\n';
-
-    // Test single screen property
-    html += '  <tr><td>screen.orientation</td>\n  <td>' ;
-    if (typeof screen.orientation === 'undefined') { html += 'undefined'; }
-    else { html += screen.orientation; }
-    html += '</td></tr>\n';
-
-    // mozEnabled is undefined, User must enable manually
-    html += '  <tr><td>screen.mozEnabled</td>\n  <td>' ;
-    if (typeof screen.mozEnabled === 'undefined') { html += 'undefined'; }
-    else { html += screen.mozEnabled.toLocaleString(); }
-    html += '</td></tr>\n';
-
-    html += '  <tr><td>screen.mozBrightness</td>\n  <td>' ;
-    if (typeof screen.mozBrightness === 'undefined') { html += 'undefined'; }
-    else { html += screen.mozBrightness.toLocaleString(); }
-    html += '</td></tr>\n';
 
     html += '</table>\n';     // End of our table and form
 
-    // TODO: Move next 9 lines to a shared function
-    // Heading: "999 Pippim website entries found." <h3> styling
     html += '<style>\n#screenTable th, #screenTable td {\n' +
             '  padding: 0 .5rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
+
     return html; // Update TCM Window body
 }
 
@@ -280,17 +218,9 @@ function buildEval(prop, orientation) {
     if (typeof result === 'number') { value = result.toLocaleString(); }
     else if (result == '[object ScreenOrientation]') { value = orientation; }
     else { value = result }  // "undefined"
-    console.log("result: " + result)
-    console.log("value: " + value)
-    var html = ""
-    //var instructions = "html += '  <tr><td>screen.availTop</td>  <td> '; ";
-    var instructions = "html += '  <tr><td>screen." + prop + "</td>  <td> '; ";
-    //instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; } ";
-    //instructions += "else { html += " + command + ".toLocaleString(); } ";
-    //instructions += "html += '</td></tr> '; ";
-    //instructions += "html += " + value + "</td></tr> ';";
-    //instructions += "html += '" + value + "'</td></tr> ';";
-    instructions += "html += '" + value + "</td></tr> ';";
+
+    var instructions = "var html += '<tr><td>screen." + prop + "</td><td> ';";
+    instructions += "html += '" + value + "</td></tr>'";
     eval(instructions);
     return html
 }
