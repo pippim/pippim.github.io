@@ -274,10 +274,10 @@ function local_storage_to_html() {
     // var archive = allStorage();
     // console.log("archive: " + archive)
 
-    var html = htmlVisibilitySwitches();
-
     // Function shared with tcm.md in _includes/tcm-common-code.js
+    var html = htmlVisibilitySwitches();
     html += htmlSearchStats();
+    html += htmScreenInfo();
     b.innerHTML = html;              // Update TCM Window body
 
     /*  Process slider switches - shared  with ~/tcm.md
