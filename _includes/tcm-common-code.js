@@ -187,8 +187,8 @@ function htmlScreenInfo() {
         screen.availTop     999999?
         screen.availLeft    9999999
     */
-    console.log(Object.getOwnPropertyNames(screen));
-    console.log(Object.getOwnPropertyNames(window.screen));
+    //console.log(Object.getOwnPropertyNames(screen));
+    //console.log(Object.getOwnPropertyNames(window.screen));
     var html = "<h3>Screen Info</h3>"
     html += '<table id="screenTable">\n' ;
     // Statistics Table heading
@@ -250,12 +250,14 @@ function htmlScreenInfo() {
     // Test single screen property
     html += '  <tr><td>screen.pixelDepth</td>\n' ;
     html += '  <td>' + screen.pixelDepth.toLocaleString(); + '</td></tr>\n';
+
     // mozEnabled is undefined, User must enable manually
     html += '  <tr><td>screen.mozEnabled</td>\n' ;
     if (typeof screen.mozEnabled === 'undefined') { html += 'undefined'; }
     else { html += screen.mozEnabled.toLocaleString(); }
     html += '</td></tr>\n';
-    html += '  <tr><td>screen.mozEnabled</td>\n' ;
+
+    html += '  <tr><td>screen.mozBrightness</td>\n' ;
     if (typeof screen.mozBrightness === 'undefined') { html += 'undefined'; }
     else { html += screen.mozBrightness.toLocaleString(); }
     html += '</td></tr>\n';
