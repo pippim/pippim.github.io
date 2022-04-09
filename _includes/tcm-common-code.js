@@ -201,6 +201,8 @@ function htmlScreenInfo() {
     var myScreen = window.screen;
     console.log("myScreen.length: " + myScreen.length)
     console.log("Object.keys(window.screen): " + Object.keys(window.screen))
+    console.log("Object.keys(window): " + Object.keys(window))
+    console.log("Object.keys(screen): " + Object.keys(screen))
     for (var i=0; i<arrScreenProp.length; i++){
         var key = arrScreenProp[i];
         html += '  <tr><td>' + key + '</td>\n' ;
