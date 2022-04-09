@@ -190,7 +190,7 @@ function htmlScreenInfo() {
     //console.log(Object.getOwnPropertyNames(screen));
     //console.log(Object.getOwnPropertyNames(window.screen));
     var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
-
+    console.log("typeof screen.orientation: " + typeof screen.orientation)
 if (orientation === "landscape-primary") {
   console.log("That looks good.");
 } else if (orientation === "landscape-secondary") {
@@ -274,9 +274,10 @@ function buildEval(prop) {
     // Build html using eval() of screen.availTop
     command = "screen." + prop ;
     instructions = "var html = '  <tr><td>'" + command +  "'</td>\n  <td>' ;" ;
-    instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; }" ;
-    instructions += "else { html += " + command + ".toLocaleString(); }" ;
-    instructions += "html += '</td></tr>\n';" ;
+    //instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; }" ;
+    //instructions += "else { html += " + command + ".toLocaleString(); }" ;
+    //instructions += "html += '</td></tr>\n';" ;
+    instructions += "html += 'TEST</td></tr>\n';" ;
     eval(instructions)
     return html
 }
