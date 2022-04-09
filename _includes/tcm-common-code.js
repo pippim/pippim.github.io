@@ -200,7 +200,7 @@ function htmlScreenInfo() {
                      "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
     var myScreen = window.screen;
     console.log("myScreen.length: " + myScreen.length)
-    for (var i=000; i<arrScreenProp.length; i++){
+    for (var i=0; i<arrScreenProp.length; i++){
         var key = arrScreenProp[i];
         html += '  <tr><td>' + key + '</td>\n' ;
         html += '  <td>';  // Start of table cell
