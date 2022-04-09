@@ -374,6 +374,7 @@ webpage read.
 <script>
 document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches();
 document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats();
+document.getElementById("tcm_search_stats").innerHTML = htmlScreenInfo();
 
 tcmButtonVisibility()
 
