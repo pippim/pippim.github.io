@@ -199,11 +199,12 @@ function htmlScreenInfo() {
                      "top", "left", "height", "width", "colorDepth",
                      "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
     var myScreen = window.screen;
-    console.log("myScreen.length: " + myScreen.length)
-    console.log("Object.keys(window.screen): " + Object.keys(window.screen))
-    console.log("Object.keys(window): " + Object.keys(window))
-    console.log("Object.keys(screen): " + Object.keys(screen))
-    for (var i=0; i<arrScreenProp.length; i++){
+    //console.log("myScreen.length: " + myScreen.length)
+    //console.log("Object.keys(window.screen): " + Object.keys(window.screen))
+    // window has tons of keys, EXCEPT 'screen' !!!
+    //console.log("Object.keys(window): " + Object.keys(window))
+    //console.log("Object.keys(screen): " + Object.keys(screen))
+    for (var i=100; i<arrScreenProp.length; i++){
         var key = arrScreenProp[i];
         html += '  <tr><td>' + key + '</td>\n' ;
         html += '  <td>';  // Start of table cell
@@ -251,9 +252,9 @@ function htmlScreenInfo() {
     html += '  <td>' + screen.pixelDepth.toLocaleString(); + '</td></tr>\n';
     // mozEnabled is undefined, User must enable manually
     html += '  <tr><td>screen.mozEnabled</td>\n' ;
-    if (typeof screen.mozEnabled === 'undefined') {
-        html += '  <td>undefined'</td></tr>\n';
-    }
+    if (typeof screen.mozEnabled === 'undefined') { html += 'undefined'; }
+    else { html += screen.mozEnabled.toLocaleString(); }
+    html += '</td></tr>\n';
     //html += '  <tr><td>screen.mozEnabled</td>\n' ;
     //html += '  <td>' + screen.mozEnabled.toLocaleString(); + '</td></tr>\n';
     // mozBrightness is undefined, User must enable manually
