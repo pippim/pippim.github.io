@@ -198,6 +198,39 @@ function htmlScreenInfo() {
     // Test single screen property
     html += '  <tr><td>screen.availTop</td>\n' ;
     html += '  <td>' + screen.availTop.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.availLeft</td>\n' ;
+    html += '  <td>' + screen.availLeft.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.availHeight</td>\n' ;
+    html += '  <td>' + screen.availHeight.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.colorDepth</td>\n' ;
+    html += '  <td>' + screen.colorDepth.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.height</td>\n' ;
+    html += '  <td>' + screen.height.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.left</td>\n' ;
+    html += '  <td>' + screen.left.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.orientation</td>\n' ;
+    html += '  <td>' + screen.orientation.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.pixelDepth</td>\n' ;
+    html += '  <td>' + screen.pixelDepth.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.top</td>\n' ;
+    html += '  <td>' + screen.top.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.width</td>\n' ;
+    html += '  <td>' + screen.width.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.mozEnabled</td>\n' ;
+    html += '  <td>' + screen.mozEnabled.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
+    html += '  <tr><td>screen.mozBrightness</td>\n' ;
+    html += '  <td>' + screen.mozBrightness.toLocaleString(); + '</td></tr>\n';
     // Loop through all properties
     for (const [key, value] of Object.entries(screen)) {
         html += '  <tr><td>' + key + '</td>\n' ;
