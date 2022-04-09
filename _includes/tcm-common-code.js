@@ -205,6 +205,9 @@ function htmlScreenInfo() {
     html += '  <tr><td>screen.availHeight</td>\n' ;
     html += '  <td>' + screen.availHeight.toLocaleString(); + '</td></tr>\n';
     // Test single screen property
+    html += '  <tr><td>screen.availWidth</td>\n' ;
+    html += '  <td>' + screen.availWidth.toLocaleString(); + '</td></tr>\n';
+    // Test single screen property
     html += '  <tr><td>screen.colorDepth</td>\n' ;
     html += '  <td>' + screen.colorDepth.toLocaleString(); + '</td></tr>\n';
     // Test single screen property
