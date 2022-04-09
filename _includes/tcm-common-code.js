@@ -198,12 +198,17 @@ function htmlScreenInfo() {
     arrScreenProp = ["availTop", "availLeft", "availHeight", "availWidth",
                      "top", "left", "height", "width", "colorDepth",
                      "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
-    for (var i=1000; i<arrScreenProp.length; i++){
+    for (var i=000; i<arrScreenProp.length; i++){
         var key = arrScreenProp[i];
         html += '  <tr><td>' + key + '</td>\n' ;
         html += '  <td>';  // Start of table cell
+        var myScreen = window.screen;
+        console.log("myScreen: " + myScreen)
         if(!screen.hasOwnProperty(key)) { html += "undefined"; }
-        else { html += arrScreenProp[key].toLocaleString(); }
+        else { html += screen[key].toLocaleString(); }
+        // Not working
+        //if(!screen.hasOwnProperty(key)) { html += "undefined"; }
+        //else { html += arrScreenProp[key].toLocaleString(); }
         html += '</td></tr>\n';  // End of table cell and table row
     }  // Not working. Everything is undefined!
     // Test single screen property
