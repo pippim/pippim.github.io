@@ -133,7 +133,7 @@ function getFrontMatter(arrText) {
 }
 
 function htmlVisibilitySwitches () {
-    var html = "<h3>Local Storage and Cookies</h3>";
+    var html = "<h3>TCM Window Button Visibility</h3>";
     html += "After closing this window, the TCM button will be:<br>"
     html += "&emsp; Visible on this webpage? " +
             '<img class="with-action" id="switch_this_page" ' +
@@ -208,7 +208,7 @@ function htmlScreenInfo() {
         var key = arrScreenProp[i];
         html += '  <tr><td>' + key + '</td>\n' ;
         html += '  <td>';  // Start of table cell
-        if(!window.screen.hasOwnProperty(key)) { html += "N/A"; }
+        if (!window.screen.hasOwnProperty(key)) { html += "N/A"; }
         else { html += window.screen[key].toLocaleString(); }
         // Not working
         //if(!myScreen.hasOwnProperty(key)) { html += "N/A"; }
