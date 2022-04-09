@@ -195,6 +195,19 @@ function htmlScreenInfo() {
     html += '  <tr><th>Screen Key</th>\n' +
             '  <th>Screen Value</th></tr>\n';
 
+    arrScreenProp = ["availTop", "availLeft", "availHeight", "availWidth",
+                     "top", "left", "height", "width", "colorDepth",
+                     "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
+    for (var i=0; i<arrScreenProp.length; i++){
+        var key = arrScreenProp[i];
+        html += '  <tr><td>' + key + '</td>\n' ;
+        html += '  <td>';  // Start of table cell
+        if(!screen.hasOwnProperty(key)) {
+            html += "undefined";
+        } else {
+            html += arrScreenProp[key].toLocaleString();
+        }
+    }
     // Test single screen property
     html += '  <tr><td>screen.availTop</td>\n' ;
     html += '  <td>' + screen.availTop.toLocaleString(); + '</td></tr>\n';
