@@ -289,7 +289,8 @@ function buildEval(prop, orientation) {
     //instructions += "else { html += " + command + ".toLocaleString(); } ";
     //instructions += "html += '</td></tr> '; ";
     //instructions += "html += " + value + "</td></tr> ';";
-    instructions += "html += '" + value + "'</td></tr> ';";
+    //instructions += "html += '" + value + "'</td></tr> ';";
+    instructions += "html += '" + value + "</td></tr> ';";
     eval(instructions);
     return html
 }
