@@ -189,6 +189,18 @@ function htmlScreenInfo() {
     */
     //console.log(Object.getOwnPropertyNames(screen));
     //console.log(Object.getOwnPropertyNames(window.screen));
+    var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+
+if (orientation === "landscape-primary") {
+  console.log("That looks good.");
+} else if (orientation === "landscape-secondary") {
+  console.log("Mmmh... the screen is upside down!");
+} else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
+  console.log("Mmmh... you should rotate your device to landscape");
+} else if (orientation === undefined) {
+  console.log("The orientation API isn't supported in this browser :(");
+}
+
     var html = "<h3>Screen Info</h3>"
     html += '<table id="screenTable">\n' ;
     // Statistics Table heading
@@ -276,12 +288,14 @@ function htmlScreenInfo() {
     return html; // Update TCM Window body
 }
 
-function buildEval(i) {
+function buildEval(prop) {
     // Build html using eval() of screen.availTop
-    arrScreenProp = ["availTop", "availLeft", "availHeight", "availWidth",
-                     "top", "left", "height", "width", "colorDepth",
-                     "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
-
+    command = "screen." + prop ;
+    instructions = "var html = '  <tr><td>'" + command +  "'</td>\n  <td>' ;" ;
+    instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; }" ;
+    instructions += "else { html += " + command + ".toLocaleString(); }" ;
+    instructions += "html += '</td></tr>\n';" ;
+    return eval(instructions)
 }
 
 // From: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
