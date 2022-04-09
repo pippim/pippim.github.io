@@ -279,7 +279,7 @@ function buildEval(prop, orientation) {
     result = eval(command);
     console.log("result: " + result)
     var html = ""
-    var instructions = "html += '  <tr><td>" + command + "</td>  <td> ' ";
+    var instructions = "html += '  <tr><td>screen." + prop + "</td>  <td> ' ";
     //instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; } ";
     //instructions += "else { html += " + command + ".toLocaleString(); } ";
     //instructions += "html += '</td></tr> '; ";
