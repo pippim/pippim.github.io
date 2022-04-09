@@ -356,7 +356,7 @@ In the TCM window's local storage section you will see:
 
 <div id="tcm_search_stats"></div>
 
-The Search Storage Statistics will list the objects that
+The Session Storage Statistics will list the objects that
 are kept in Session Storage in order to save webpage load
 times. Once every 24 hours, Session Storage objects are 
 refreshed from the internet. When a refresh occurs,
