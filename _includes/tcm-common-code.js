@@ -272,13 +272,13 @@ if (orientation === "landscape-primary") {
 
 function buildEval(prop) {
     // Build html using eval() of screen.availTop
-    command = "screen." + prop ;
-    instructions = "var html = '  <tr><td>'" + command +  "'</td>\n  <td>';\n" ;
-    instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; }\n" ;
-    instructions += "else { html += " + command + ".toLocaleString(); }\n" ;
-    instructions += "html += '</td></tr>\n';" ;
-    instructions += "html += 'TEST</td></tr>\n';" ;
-    eval(instructions.toString())
+    command = "screen." + prop;
+    var instructions = "var html = '  <tr><td>'" + command +  "'</td>\n  <td>';\n";
+    instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; }\n";
+    instructions += "else { html += " + command + ".toLocaleString(); }\n";
+    instructions += "html += '</td></tr>\n';";
+    instructions += "html += 'TEST</td></tr>\n';";
+    eval(instructions);
     return html
 }
 
