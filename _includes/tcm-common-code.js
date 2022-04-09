@@ -251,7 +251,7 @@ function htmlScreenInfo() {
     // Test single screen property
     html += '  <tr><td>screen.orientation</td>\n  <td>' ;
     if (typeof screen.orientation === 'undefined') { html += 'undefined'; }
-    else { html += Object.keys(screen.orientation); }
+    else { html += screen.orientation; }
     html += '</td></tr>\n';
 
     // mozEnabled is undefined, User must enable manually
@@ -261,7 +261,7 @@ function htmlScreenInfo() {
     html += '</td></tr>\n';
 
     html += '  <tr><td>screen.mozBrightness</td>\n  <td>' ;
-    if (typeof screen.mozBrightness === 'undefined') { html += 'N/A'; }
+    if (typeof screen.mozBrightness === 'undefined') { html += 'undefined'; }
     else { html += screen.mozBrightness.toLocaleString(); }
     html += '</td></tr>\n';
 
@@ -274,6 +274,14 @@ function htmlScreenInfo() {
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     return html; // Update TCM Window body
+}
+
+function buildEval(i) {
+    // Build html using eval() of screen.availTop
+    arrScreenProp = ["availTop", "availLeft", "availHeight", "availWidth",
+                     "top", "left", "height", "width", "colorDepth",
+                     "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
+
 }
 
 // From: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
