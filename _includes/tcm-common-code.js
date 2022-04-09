@@ -225,9 +225,9 @@ function htmlScreenInfo() {
     // Test single screen property
     html += '  <tr><td>screen.width</td>\n' ;
     html += '  <td>' + screen.width.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
-    html += '  <tr><td>screen.mozEnabled</td>\n' ;
-    html += '  <td>' + screen.mozEnabled.toLocaleString(); + '</td></tr>\n';
+    // mozEnabled is undefined, User must enable manually
+    //html += '  <tr><td>screen.mozEnabled</td>\n' ;
+    //html += '  <td>' + screen.mozEnabled.toLocaleString(); + '</td></tr>\n';
     // Test single screen property
     html += '  <tr><td>screen.mozBrightness</td>\n' ;
     html += '  <td>' + screen.mozBrightness.toLocaleString(); + '</td></tr>\n';
