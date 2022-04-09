@@ -245,15 +245,18 @@ function htmlScreenInfo() {
     html += '  <tr><td>screen.colorDepth</td>\n' ;
     html += '  <td>' + screen.colorDepth.toLocaleString(); + '</td></tr>\n';
     // Test single screen property
-    html += '  <tr><td>screen.orientation</td>\n' ;
-    html += '  <td>' + screen.orientation.toLocaleString(); + '</td></tr>\n';
-    // Test single screen property
     html += '  <tr><td>screen.pixelDepth</td>\n' ;
     html += '  <td>' + screen.pixelDepth.toLocaleString(); + '</td></tr>\n';
 
+    // Test single screen property
+    html += '  <tr><td>screen.orientation</td>\n  <td>' ;
+    if (typeof screen.orientation === 'undefined') { html += 'undefined'; }
+    else { html += Object.keys(screen.orientation)); }
+    html += '</td></tr>\n';
+
     // mozEnabled is undefined, User must enable manually
     html += '  <tr><td>screen.mozEnabled</td>\n  <td>' ;
-    if (typeof screen.mozEnabled === 'undefined') { html += 'N/A'; }
+    if (typeof screen.mozEnabled === 'undefined') { html += 'undefined'; }
     else { html += screen.mozEnabled.toLocaleString(); }
     html += '</td></tr>\n';
 
