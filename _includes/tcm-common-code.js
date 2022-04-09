@@ -198,14 +198,14 @@ function htmlScreenInfo() {
     arrScreenProp = ["availTop", "availLeft", "availHeight", "availWidth",
                      "top", "left", "height", "width", "colorDepth",
                      "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
+    var myScreen = window.screen;
+    console.log("myScreen: " + myScreen)
     for (var i=000; i<arrScreenProp.length; i++){
         var key = arrScreenProp[i];
         html += '  <tr><td>' + key + '</td>\n' ;
         html += '  <td>';  // Start of table cell
-        var myScreen = window.screen;
-        console.log("myScreen: " + myScreen)
-        if(!screen.hasOwnProperty(key)) { html += "undefined"; }
-        else { html += screen[key].toLocaleString(); }
+        if(!myScreen.hasOwnProperty(key)) { html += "N/A"; }
+        else { html += myScreen[key].toLocaleString(); }
         // Not working
         //if(!screen.hasOwnProperty(key)) { html += "undefined"; }
         //else { html += arrScreenProp[key].toLocaleString(); }
@@ -272,6 +272,18 @@ function htmlScreenInfo() {
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     return html; // Update TCM Window body
+}
+
+// From: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
+function showProps(obj, objName) {
+  let result = '';
+  for (let i in obj) {
+    // obj.hasOwnProperty() is used to filter out properties from the object's prototype chain
+    if (obj.hasOwnProperty(i)) {
+      result += `${objName}.${i} = ${obj[i]}\n`;
+    }
+  }
+  console.log(result);
 }
 
 function tcmButtonVisibility() {
