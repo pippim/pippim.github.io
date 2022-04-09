@@ -118,10 +118,14 @@ document.querySelector('#tcm_display_cloud').addEventListener('click', () => {
 
 document.querySelector('#tcm_display_local').addEventListener('click', () => {
     // Display cookies and cache (WIP)
-    // fm_var cookie, search_url.json and search_words.json must already be
-    // globally defined.
-    local_storage_to_html();
-});
+    var html = htmlVisibilitySwitches();
+    html += htmlSearchStats();
+    html += htmlScreenInfo();
+    b.innerHTML = html;
+
+    /*  Process TCM Window Button Visibility slider switches - shared  with ~/tcm.md
+        USE: % include tcm-common-code.js %} */
+    tcmButtonVisibility()});
 
 document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
     processHyperlinkRecipe('tcm_window_body');
@@ -130,7 +134,17 @@ document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => 
 document.querySelector('#tcm_webpage_info').addEventListener('click', () => {
     // Display webpage info - filename, front matter and text (WIP)
     // raw_url set in search.js loaded before us
-    webpage_info_to_html();
+    var urlMarkdown = getMarkdownFilename();
+
+    fetch(urlMarkdown)
+        .then((response) => response.text())
+        .then((results) => {
+            var results = results.split("\n")  // Convert string into array
+            var front_yml = getFrontMatter(results)
+            var html = htmlFrontMatter(front_yml, "Current Webpage Front Matter");
+            b.innerHTML = html; // Update TCM Window body
+        });
+
 });
 
 document.querySelector('#tcm_cookie_jar').addEventListener('click', () => {
@@ -215,65 +229,6 @@ function webpage_info_to_html() {
 }
 
 function local_storage_to_html() {
-    /*
-        Downloaded cookies location:
-            https://stackoverflow.com/a/18678698/6929343
-        Upload (drag & drop):
-            https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/
-        Caching (local storage) in browser:
-            https://jonmeyers.io/blog/simple-caching-with-local-storagejav
-        Convert to base64 and back again for email attachments:
-            https://stackoverflow.com/a/38134374/6929343
-        Get and set list of links visited:
-            https://stackoverflow.com/a/9970626/6929343
-        Cross fading images:
-            http://css3.bradshawenterprises.com/cfimg/
-        Cross fading checkbox:
-            https://stackoverflow.com/a/17795397/6929343
-        Shortest code switching images:
-            https://stackoverflow.com/a/43661406/6929343
-
-
-    */
-
-    // if ('caches' in window){
-    //    alert('caches found in window');
-    // }
-    var cntCaches = 0
-    caches.keys().then(function(keyList) {
-        cntCaches++;
-    });
-    //console.log("cntCaches: " + cntCaches)
-
-    /* Future use */
-
-    var myCookies = getCookies();
-    // Object.keys(myCookies).forEach(prop => console.log(prop))
-
-    // https://stackoverflow.com/a/921808/6929343
-    for (var key in myCookies) {
-        // skip loop if the property is from prototype
-        if (!myCookies.hasOwnProperty(key)) continue;
-
-        var obj = myCookies[key];
-        var value = ""
-        for (var prop in obj) {
-            // skip loop if the property is from prototype
-            if (!obj.hasOwnProperty(prop)) continue;
-
-            // Key=Prop: 0=M 1=o 2=r 3=e spells out "More"
-            // alert(prop + " = " + obj[prop]);
-            value += obj[prop];
-        }
-        //alert("key: " + key + " | value: " + value)
-    }
-
-    // const items = { ...localStorage };
-    // console.log("items: " + items)
-
-    // var archive = allStorage();
-    // console.log("archive: " + archive)
-
     // Function shared with tcm.md in _includes/tcm-common-code.js
     var html = htmlVisibilitySwitches();
     html += htmlSearchStats();
@@ -284,43 +239,6 @@ function local_storage_to_html() {
         USE: % include tcm-common-code.js %}
     */
     tcmButtonVisibility()
-}
-
-function getCookies() {
-    // https://stackoverflow.com/a/252959/6929343
-    var pairs = document.cookie.split(";");
-    var cookies = {};
-    for (var i=0; i<pairs.length; i++){
-        var pair = pairs[i].split("=");
-        cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
-    }
-    return cookies;
-}
-
-function getStorage() {
-    // https://stackoverflow.com/a/17748203/6929343
-    var archive = {}, // Notice change here
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    while ( i-- ) {
-        archive[ keys[i] ] = localStorage.getItem( keys[i] );
-    }
-
-    return archive;
-}
-
-function allStorage() {
-    // https://stackoverflow.com/a/17748203/6929343
-    var archive = {}, // Notice change here
-        keys = Object.keys(localStorage),
-        i = keys.length;
-
-    while ( i-- ) {
-        archive[ keys[i] ] = localStorage.getItem( keys[i] );
-    }
-
-    return archive;
 }
 
 // Assign tooltip (title=) to section navigation bar buttons
