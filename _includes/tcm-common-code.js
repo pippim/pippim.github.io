@@ -274,20 +274,22 @@ if (orientation === "landscape-primary") {
 }
 
 function buildEval(prop, orientation) {
-    // Build html using eval() of screen.availTop
+    // Build html using eval() of screen.availTop, etc.
     command = "screen." + prop;
     result = eval(command);
     if (typeof result === 'number') { value = result.toLocaleString(); }
     else if (result == '[object ScreenOrientation]') { value = orientation; }
-    else { value = result }  // Never happens
+    else { value = result }  // "undefined"
     console.log("result: " + result)
+    console.log("value: " + value)
     var html = ""
     //var instructions = "html += '  <tr><td>screen.availTop</td>  <td> '; ";
     var instructions = "html += '  <tr><td>screen." + prop + "</td>  <td> '; ";
     //instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; } ";
     //instructions += "else { html += " + command + ".toLocaleString(); } ";
     //instructions += "html += '</td></tr> '; ";
-    instructions += "html += " + value + "</td></tr> ';";
+    //instructions += "html += " + value + "</td></tr> ';";
+    instructions += "html += '" + value + "'</td></tr> ';";
     eval(instructions);
     return html
 }
