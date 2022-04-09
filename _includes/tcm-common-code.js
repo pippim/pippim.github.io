@@ -255,24 +255,11 @@ function htmlScreenInfo() {
     if (typeof screen.mozEnabled === 'undefined') { html += 'undefined'; }
     else { html += screen.mozEnabled.toLocaleString(); }
     html += '</td></tr>\n';
-    //html += '  <tr><td>screen.mozEnabled</td>\n' ;
-    //html += '  <td>' + screen.mozEnabled.toLocaleString(); + '</td></tr>\n';
-    // mozBrightness is undefined, User must enable manually
-    //html += '  <tr><td>screen.mozBrightness</td>\n' ;
-    //html += '  <td>' + screen.mozBrightness.toLocaleString(); + '</td></tr>\n';
-    // Loop through all properties
-    for (const [key, value] of Object.entries(screen)) {
-        html += '  <tr><td>' + key + '</td>\n' ;
-        // TODO: Need database of object keys and their value format
-        // If greater than 123 MB it's a Unix Date in Epoch
-        //var d = new Date(value);
-        html += '  <td>';  // Start of table cell
-        // html += value.toLocaleString();
-        //if (value < 123456789) { html += value.toLocaleString(); }
-        //else { html += d.toLocaleDateString() +  ' ' + d.toLocaleTimeString() }
-        html += value.toLocaleString();
-        html += '</td></tr>\n';  // End of table cell and table row
-    }
+    html += '  <tr><td>screen.mozEnabled</td>\n' ;
+    if (typeof screen.mozBrightness === 'undefined') { html += 'undefined'; }
+    else { html += screen.mozBrightness.toLocaleString(); }
+    html += '</td></tr>\n';
+
     html += '</table>\n';     // End of our table and form
 
     // TODO: Move next 9 lines to a shared function
