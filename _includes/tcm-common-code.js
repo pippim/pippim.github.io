@@ -208,7 +208,7 @@ function htmlScreenInfo() {
         else { html += window.screen[key].toLocaleString(); }
         // Not working
         //if(!myScreen.hasOwnProperty(key)) { html += "N/A"; }
-        e//lse { html += myScreen[key].toLocaleString(); }
+        //else { html += myScreen[key].toLocaleString(); }
         //if(!screen.hasOwnProperty(key)) { html += "undefined"; }
         //else { html += arrScreenProp[key].toLocaleString(); }
         html += '</td></tr>\n';  // End of table cell and table row
