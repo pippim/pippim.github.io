@@ -363,8 +363,10 @@ refreshed from the internet. When a refresh occurs,
 an extra couple of seconds delay will occur on the first
 webpage read.
 
+<div id="tcm_screen_info"></div>
+
 <style>
-#tcm_switches, #tcm_search_stats {
+#tcm_switches, #tcm_search_stats, #tcm_screen_info {
    max-width: 30rem;
    border: 3px solid grey;
    margin-left: 1em;
@@ -374,7 +376,7 @@ webpage read.
 <script>
 document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches();
 document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats();
-document.getElementById("tcm_search_stats").innerHTML = htmlScreenInfo();
+document.getElementById("tcm_screen_info").innerHTML = htmlScreenInfo();
 
 tcmButtonVisibility()
 
