@@ -210,7 +210,10 @@ if (orientation === "landscape-primary") {
     arrProp = ["availTop", "availLeft", "availHeight", "availWidth",
                "top", "left", "height", "width", "colorDepth",
                "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
-    for (var i=0; i<arrProp.length; i++){ html += buildEval(arrProp[i]) ; }
+    var o = (screen.orientation || {}).type ||
+             screen.mozOrientation || screen.msOrientation;
+    console.log("o: " + o)
+    for (var i=0; i<arrProp.length; i++){ html += buildEval(arrProp[i], o) ; }
     // Test single screen property
     html += '  <tr><td>screen.availTop</td>\n' ;
     html += '  <td>' + screen.availTop.toLocaleString(); + '</td></tr>\n';
@@ -270,10 +273,10 @@ if (orientation === "landscape-primary") {
     return html; // Update TCM Window body
 }
 
-function buildEval(prop) {
+function buildEval(prop, orientation) {
     // Build html using eval() of screen.availTop
     command = "screen." + prop;
-    var instructions = "var html = '  <tr><td>'" + command +  "'</td>\n  <td>';\n";
+    var instructions = "var html = '  <tr><td>" + command + "</td>\n  <td>';\n";
     instructions += "if (typeof " + command + " === 'undefined') { html += 'undefined'; }\n";
     instructions += "else { html += " + command + ".toLocaleString(); }\n";
     instructions += "html += '</td></tr>\n';";
