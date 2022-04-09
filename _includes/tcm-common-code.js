@@ -251,7 +251,7 @@ function htmlScreenInfo() {
     // Test single screen property
     html += '  <tr><td>screen.orientation</td>\n  <td>' ;
     if (typeof screen.orientation === 'undefined') { html += 'undefined'; }
-    else { html += Object.keys(screen.orientation)); }
+    else { html += Object.keys(screen.orientation); }
     html += '</td></tr>\n';
 
     // mozEnabled is undefined, User must enable manually
