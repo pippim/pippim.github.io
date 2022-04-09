@@ -204,7 +204,7 @@ function htmlScreenInfo() {
     html += '</table>\n';     // End of our table and form
 
     html += '<style>\n#screenTable th, #screenTable td {\n' +
-            '  textAlign: left;;\n' +
+            '  text-align: left;\n' +
             '  padding: 0 .5rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
