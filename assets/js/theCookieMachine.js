@@ -121,6 +121,7 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
     var html = htmlVisibilitySwitches();
     html += htmlSearchStats();
     html += htmlScreenInfo();
+    html += htmlWindowInfo();
     b.innerHTML = html;
 
     /*  Process TCM Window Button Visibility slider switches - shared  with ~/tcm.md
