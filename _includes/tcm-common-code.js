@@ -194,9 +194,9 @@ function htmlScreenInfo() {
     html += '  <tr><th>Screen Property</th>\n' +
             '  <th>Value</th></tr>\n';
 
-    arrProp = ["availTop", "availLeft", "availHeight", "availWidth",
-               "top", "left", "height", "width", "colorDepth",
-               "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
+    var arrProp = ["availTop", "availLeft", "availHeight", "availWidth",
+                   "top", "left", "height", "width", "colorDepth",
+                   "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
     var o = (screen.orientation || {}).type ||
              screen.mozOrientation || screen.msOrientation;
     for (var i=0; i<arrProp.length; i++){ html += buildEval(arrProp[i], o) ; }
@@ -224,13 +224,6 @@ function htmlWindowInfo() {
     // Screen Table heading
     html += '  <tr><th>Window Property</th>\n' +
             '  <th>Value</th></tr>\n';
-
-    arrProp = ["availTop", "availLeft", "availHeight", "availWidth",
-               "top", "left", "height", "width", "colorDepth",
-               "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
-    var o = (screen.orientation || {}).type ||
-             screen.mozOrientation || screen.msOrientation;
-    //    for (var i=0; i<arrProp.length; i++){ html += buildEval(arrProp[i], o) ; }
 
     for (const [key, value] of Object.entries(window)) {
         html += '  <tr><td>' + key + '</td>\n' ;
