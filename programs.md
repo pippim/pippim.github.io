@@ -18,12 +18,16 @@ You can use them free of charge and change them however you like.
 %}
 
 Just click a few buttons to paste clipboard contents into the 
-*Hyperlink Recipe Baker*, or **HRB** for short. The select one of
-the "Bake" options for a Hyperlink in HTML format or a Hyperlink 
-in Markdown format. The "baked recipe" is copied to your clipboard.
+*Hyperlink Recipe Baker*, or **HRB** for short, ingredient fields.
 
-Then simply paste the clipboard contents into your document with
-<kbd>Ctrl</kbd> + <kbd>V</kbd>. Each time you use it, **HRB** saves you from 
+Then select one of
+the "Bake" options for a Hyperlink in ***HTML*** or  ***Markdown*** 
+format. The "baked recipe" is put into your clipboard.
+
+Then switch to your document and paste the clipboard contents with
+<kbd>Ctrl</kbd> + <kbd>V</kbd>. 
+
+Each time you use it, **HRB** saves you from 
 googling the hyperlink syntax, typing text and confused head scratching.
 
 <a href="hyperlink.html" style="font-size: 20px;">Read More...</a>
