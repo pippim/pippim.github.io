@@ -230,7 +230,8 @@ function htmlWindowInfo() {
         html += '  <td>';  // Start of table cell
         var display = value;
         if (display === null) { display = "undefined" };
-        if (display.startsWith("function")) { display = "function() { ... }"}
+        display = display.toString();
+        if (display.startsWith("function")) { display = "function() { ... }" };
         html += display.toString();
         // If greater than 123 MB it's a Unix Date in Epoch
         //var d = new Date(value);
