@@ -237,8 +237,8 @@ function htmlWindowInfo() {
         if (display.endsWith("BarProp]")) {
             if (eval("window." + key + ".visible")) { display = "Visible"}
             else { display = "Invisible" }
-            var return_eval = eval("window." + key + ".visible");
-            console.log("return_eval: " + return_eval.toString())
+            //var return_eval = eval("window." + key + ".visible");
+            //console.log("return_eval: " + return_eval.toString())
         }
         html += display.toString();
         html += '</td></tr>\n';  // End of table cell and table row
