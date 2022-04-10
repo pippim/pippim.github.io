@@ -250,8 +250,8 @@ function htmlWindowInfo() {
 
 function buildEval(prop, orientation) {
     // Build html using eval() of screen.availTop, etc.
-    command = "screen." + prop;
-    result = eval(command);
+    var command = "screen." + prop;
+    var result = eval(command);
     if (typeof result === 'number') { value = result.toLocaleString(); }
     else if (result == '[object ScreenOrientation]') { value = orientation; }
     else { value = result }  // "undefined"
