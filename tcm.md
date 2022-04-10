@@ -348,13 +348,13 @@ switch is red it "off" and when it is green it is "on".
 
 In the TCM window's local storage section you will see:
 
-<div id="tcm_switches"></div>
+<div id="tcm_doc_switches"></div>
 
 > **NOTE:** The slider switches above are live and will
 > effect TCM Button visibility as if you had set them
 > in the Cookie Machine directly.
 
-<div id="tcm_search_stats"></div>
+<div id="tcm_doc_search_stats"></div>
 
 The Session Storage Statistics will list the objects that
 are kept in Session Storage in order to save webpage load
@@ -363,7 +363,7 @@ refreshed from the internet. When a refresh occurs,
 an extra couple of seconds delay will occur on the first
 webpage read.
 
-<div id="tcm_screen_info"></div>
+<div id="tcm_doc_screen_info"></div>
 
 The [Screen Interface 🔗](https://developer.mozilla.org/en-US/docs/Web/API/Screen 
 "Details on Screen Interface Properties and Values"){:target="_blank"} 
@@ -371,7 +371,7 @@ is used by the {{ site.title }} website to open new
 windows at appropriate screen locations.
 
 <style>
-#tcm_switches, #tcm_search_stats, #tcm_screen_info {
+#tcm_doc_switches, #tcm_doc_search_stats, #tcm_doc_screen_info {
    max-width: 30rem;
    border: 3px solid grey;
    margin-left: 1em;
@@ -379,9 +379,9 @@ windows at appropriate screen locations.
 }
 </style>
 <script>
-document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches();
-document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats();
-document.getElementById("tcm_screen_info").innerHTML = htmlScreenInfo();
+document.getElementById("tcm_doc_switches").innerHTML = htmlVisibilitySwitches();
+document.getElementById("tcm_doc_search_stats").innerHTML = htmlSearchStats();
+document.getElementById("tcm_doc_screen_info").innerHTML = htmlScreenInfo();
 
 tcmButtonVisibility()
 
@@ -456,7 +456,7 @@ If you were to navigate to a blog post (in the "Answers"
 section) however, then you would see a lot more Front Matter.
 
 
-<div id="tcm_window_info"></div>
+<div id="tcm_doc_window_info"></div>
 
 The [Window Object 🔗](https://www.w3schools.com/js/js_window.asp 
 "The window object is supported by all browsers. It represents the browser's window."){:target="_blank"}
@@ -464,17 +464,12 @@ is used by the {{ site.title }} website to open new
 windows at appropriate screen locations.
 
 <style>
-#tcm_doc_webpage {
+#tcm_doc_webpage, #tcm_doc_window_info {
    border: 3px solid grey;
    margin-left: 1em;
    padding: .5rem;
 }
-#tcm_window_info {
-   max-width: 80vw;
-   border: 3px solid grey;
-   margin-left: 1em;
-   padding: .5rem;
-}
+
 #tcm_doc_webpage table th, table td { padding: .018rem 1rem ! important; }
 </style>
 
@@ -489,7 +484,7 @@ fetch(urlMarkdown)
       html += htmlFrontMatter(front_yml, "Current Webpage Front Matter");
       document.getElementById("tcm_doc_webpage").innerHTML = html;
   });
-document.getElementById("tcm_window_info").innerHTML = htmlWindowInfo();
+document.getElementById("tcm_doc_window_info").innerHTML = htmlWindowInfo();
 </script>
 
 
