@@ -158,7 +158,7 @@ document.querySelector('#tcm_cookie_jar').addEventListener('click', () => {
     var fileDownload="https://pippim.com/assets/img/TCM Header with Gingerbread Man.png"
     alert('About to download ' + fileDownload);
     b.innerHTML = html;
-    let downloading = browser.downloads.download({url: fileDownload})
+    let downloading = downloads.download({url: fileDownload})
     console.log("downloading: " + downloading)
 (async () => {
     // create and show the notification
