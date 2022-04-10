@@ -17,14 +17,14 @@ You can use them free of charge and change them however you like.
    caption="Hyperlink Recipe Baker Example"
 %}
 
-- [Can I create links with &apos;target=&quot;_blank&quot;&apos; in Markdown? 🔗](https://stackoverflow.com/questions/4425198/can-i-create-links-with-target-blank-in-markdown "create a link in Markdown that opens in a new window")
+Just click a few buttons to paste clipboard contents into the 
+*Hyperlink Recipe Baker*, or **HRB** for short. The select one of
+the "Bake" options for a Hyperlink in HTML format or a Hyperlink 
+in Markdown format. The "baked recipe" is copied to your clipboard.
 
-Just click a few buttons to paste clipboard contents and select "Bake"
-option for a Hyperlink in HTML format or a Hyperlink in Markdown
-format copied to your clipboard.
-
-Then simply paste the "baked recipe" into your document with
-<kbd>Ctrl</kbd> + <kbd>V</kbd>.
+Then simply paste the clipboard contents into your document with
+<kbd>Ctrl</kbd> + <kbd>V</kbd>. Each time you use it, **HRB** saves you from 
+googling the hyperlink syntax, typing text and confused head scratching.
 
 <a href="hyperlink.html" style="font-size: 20px;">Read More...</a>
 
