@@ -378,7 +378,7 @@ is used by the {{ site.title }} website to open new
 windows at appropriate screen locations.
 
 <style>
-#tcm_switches, #tcm_search_stats, #tcm_screen_info {
+#tcm_switches, #tcm_search_stats, #tcm_screen_info, #tcm_window_info {
    max-width: 30rem;
    border: 3px solid grey;
    margin-left: 1em;
