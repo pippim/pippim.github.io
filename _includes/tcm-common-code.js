@@ -190,7 +190,7 @@ function htmlScreenInfo() {
     */
     var html = "<h3>Screen Interface</h3>"
     html += '<table id="screenTable">\n' ;
-    // Statistics Table heading
+    // Screen Table heading
     html += '  <tr><th>Screen Property</th>\n' +
             '  <th>Value</th></tr>\n';
 
@@ -209,7 +209,50 @@ function htmlScreenInfo() {
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
-    return html; // Update TCM Window body
+    return html;  // Update TCM Window body
+}
+
+function htmlWindowInfo() {
+    /* return html code <table> <td> for:
+        Screen Property     Value
+        screen.availTop     9,999
+        screen.availLeft    9,999
+        ETC.
+    */
+    var html = "<h3>Window Object</h3>"
+    html += '<table id="windowTable">\n' ;
+    // Screen Table heading
+    html += '  <tr><th>Window Property</th>\n' +
+            '  <th>Value</th></tr>\n';
+
+    arrProp = ["availTop", "availLeft", "availHeight", "availWidth",
+               "top", "left", "height", "width", "colorDepth",
+               "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
+    var o = (screen.orientation || {}).type ||
+             screen.mozOrientation || screen.msOrientation;
+    //    for (var i=0; i<arrProp.length; i++){ html += buildEval(arrProp[i], o) ; }
+
+    for (const [key, value] of Object.entries(window)) {
+        html += '  <tr><td>' + key + '</td>\n' ;
+        html += '  <td>';  // Start of table cell
+        html += value.toString();
+        // If greater than 123 MB it's a Unix Date in Epoch
+        //var d = new Date(value);
+        // html += value.toLocaleString();
+        //if (value < 123456789) { html += value.toLocaleString(); }
+        //else { html += d.toLocaleDateString() +  ' ' + d.toLocaleTimeString() }
+        html += '</td></tr>\n';  // End of table cell and table row
+    }
+
+    html += '</table>\n';     // End of our table and form
+
+    html += '<style>\n#windowTable th, #windowTable td {\n' +
+            '  text-align: left;\n' +
+            '  padding: 0 .5rem;\n' +
+            '}\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+
+    return html;  // Update TCM Window body
 }
 
 function buildEval(prop, orientation) {
