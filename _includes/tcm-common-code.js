@@ -252,6 +252,11 @@ function htmlWindowInfo() {
             '  text-align: left;\n' +
             '  padding: 0 .5rem;\n' +
             '}\n'
+    html += '#windowTable {\n' +
+            '  max-width: 100vw;\n' +
+            '  max-height: 90vh;\n' +
+            '  overflow: auto;\n' +
+            '}\n''
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
     // Browser information
