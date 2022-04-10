@@ -155,17 +155,18 @@ document.querySelector('#tcm_cookie_jar').addEventListener('click', () => {
                '<h1>JavaScript Notification API Demo</h1>\n' +
                 '<div class="error"></div>\n' +
                 '</div>'
-    downloadFilename="https://pippim.com/assets/img/TCM Header with Gingerbread Man.png"
-    alert('About to download ' + downloadFilename);
-    let downloading = browser.downloads.download({url: downloadFilename})
+    var fileDownload="https://pippim.com/assets/img/TCM Header with Gingerbread Man.png"
+    alert('About to download ' + fileDownload);
     b.innerHTML = html;
+    let downloading = browser.downloads.download({url: fileDownload})
+    console.log("downloading: " + downloading)
 (async () => {
     // create and show the notification
     const showNotification = () => {
         // create a new notification
         const notification = new Notification('JavaScript Notification API', {
-            body: 'This is a JavaScript Notification API demo',
-            icon: '{{ site.url }}/assets/img/earth-from-space.jpg'
+            body: 'File has been downloaded.',
+            icon: '{{ site.url }}/favicon.png'
         });
 
         // close the notification after 10 seconds
