@@ -370,15 +370,8 @@ The [Screen Interface 🔗](https://developer.mozilla.org/en-US/docs/Web/API/Scr
 is used by the {{ site.title }} website to open new 
 windows at appropriate screen locations.
 
-<div id="tcm_window_info"></div>
-
-The [Window Object 🔗](https://www.w3schools.com/js/js_window.asp 
-"The window object is supported by all browsers. It represents the browser's window."){:target="_blank"}
-is used by the {{ site.title }} website to open new 
-windows at appropriate screen locations.
-
 <style>
-#tcm_switches, #tcm_search_stats, #tcm_screen_info, #tcm_window_info {
+#tcm_switches, #tcm_search_stats, #tcm_screen_info {
    max-width: 30rem;
    border: 3px solid grey;
    margin-left: 1em;
@@ -389,7 +382,6 @@ windows at appropriate screen locations.
 document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches();
 document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats();
 document.getElementById("tcm_screen_info").innerHTML = htmlScreenInfo();
-document.getElementById("tcm_window_info").innerHTML = htmlWindowInfo();
 
 tcmButtonVisibility()
 
@@ -459,12 +451,26 @@ The Webpage Information window contents are displayed below:
 
 <div id="tcm_doc_webpage"></div>
 
-There is not much information on this current page window.
+There is little Jekyll Front Matter on the **TCM** webpage window.
 If you were to navigate to a blog post (in the "Answers"
-section), then you would see a lot more Front Matter.
+section) however, then you would see a lot more Front Matter.
+
+
+<div id="tcm_window_info"></div>
+
+The [Window Object 🔗](https://www.w3schools.com/js/js_window.asp 
+"The window object is supported by all browsers. It represents the browser's window."){:target="_blank"}
+is used by the {{ site.title }} website to open new 
+windows at appropriate screen locations.
 
 <style>
 #tcm_doc_webpage {
+   border: 3px solid grey;
+   margin-left: 1em;
+   padding: .5rem;
+}
+#tcm_window_info {
+   max-width: 80vw;
    border: 3px solid grey;
    margin-left: 1em;
    padding: .5rem;
@@ -483,6 +489,7 @@ fetch(urlMarkdown)
       html += htmlFrontMatter(front_yml, "Current Webpage Front Matter");
       document.getElementById("tcm_doc_webpage").innerHTML = html;
   });
+document.getElementById("tcm_window_info").innerHTML = htmlWindowInfo();
 </script>
 
 
