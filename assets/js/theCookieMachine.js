@@ -121,7 +121,6 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
     var html = htmlVisibilitySwitches();
     html += htmlSearchStats();
     html += htmlScreenInfo();
-    html += htmlWindowInfo();
     b.innerHTML = html;
 
     /*  Process TCM Window Button Visibility slider switches - shared  with ~/tcm.md
@@ -143,6 +142,7 @@ document.querySelector('#tcm_webpage_info').addEventListener('click', () => {
             var results = results.split("\n")  // Convert string into array
             var front_yml = getFrontMatter(results)
             var html = htmlFrontMatter(front_yml, "Current Webpage Front Matter");
+            html += htmlWindowInfo();
             b.innerHTML = html; // Update TCM Window body
         });
 
