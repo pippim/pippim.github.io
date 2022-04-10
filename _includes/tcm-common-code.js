@@ -252,9 +252,10 @@ function buildEval(prop, orientation) {
     // Build html using eval() of screen.availTop, etc.
     var command = "screen." + prop;
     var result = eval(command);
+    var value = null;
     if (typeof result === 'number') { value = result.toLocaleString(); }
     else if (result == '[object ScreenOrientation]') { value = orientation; }
-    else { value = result }  // "undefined"
+    else { value = result }  // Assume result is "undefined"
 
     var instructions = "var html = '<tr><td>screen." + prop + "</td><td> ';";
     instructions += "html += '" + value + "</td></tr>'";
