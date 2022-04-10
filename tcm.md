@@ -389,7 +389,7 @@ windows at appropriate screen locations.
 document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches();
 document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats();
 document.getElementById("tcm_screen_info").innerHTML = htmlScreenInfo();
-document.getElementById("tcm_window_info").innerHTML = htmlScreenInfo();
+document.getElementById("tcm_window_info").innerHTML = htmlWindowInfo();
 
 tcmButtonVisibility()
 
