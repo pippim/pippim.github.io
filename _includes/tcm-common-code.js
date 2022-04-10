@@ -256,7 +256,7 @@ function htmlWindowInfo() {
             '  max-width: 100vw;\n' +
             '  max-height: 90vh;\n' +
             '  overflow: auto;\n' +
-            '}\n''
+            '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
     // Browser information
