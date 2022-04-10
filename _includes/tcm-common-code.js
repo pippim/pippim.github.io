@@ -233,7 +233,7 @@ function htmlWindowInfo() {
         if (display === null) { display = "Null" };
         display = display.toString();  // Needed for test if startsWith "function"
         // We don't want to list HUGE session storage strings
-        if (display == "search_words") { break } ;
+        if (key == "search_words") { break } ;
         if (display.startsWith("function")) { display = "function() { ... }" };
         html += display.toString();
         // If greater than 123 MB it's a Unix Date in Epoch
