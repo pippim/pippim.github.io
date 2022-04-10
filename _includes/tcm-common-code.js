@@ -228,6 +228,7 @@ function htmlWindowInfo() {
     for (const [key, value] of Object.entries(window)) {
         html += '  <tr><td>' + key + '</td>\n' ;
         html += '  <td>';  // Start of table cell
+        if (value === null) { value = "undefined" };
         html += value.toString();
         // If greater than 123 MB it's a Unix Date in Epoch
         //var d = new Date(value);
