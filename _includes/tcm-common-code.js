@@ -230,7 +230,9 @@ function htmlWindowInfo() {
         html += '  <td>';  // Start of table cell
         var display = value;
         if (display === null) { display = "undefined" };
-        display = display.toString();
+        display = display.toString();  // Needed for test if startsWith "function"
+        // We don't want to list HUGE session storage strings
+        if (display == "search_words") { break } ;
         if (display.startsWith("function")) { display = "function() { ... }" };
         html += display.toString();
         // If greater than 123 MB it's a Unix Date in Epoch
