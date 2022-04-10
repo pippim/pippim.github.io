@@ -229,7 +229,7 @@ function htmlWindowInfo() {
         html += '  <tr><td>' + key + '</td>\n' ;
         html += '  <td>';  // Start of table cell
         var display = value;
-        if (typeof display === undefined) { var display = "Undefined" }
+        if (typeof display === 'undefined') { var display = "Undefined" }
         if (display === null) { display = "Null" };
         display = display.toString();  // Needed for test if startsWith "function"
         // We don't want to list HUGE session storage strings
