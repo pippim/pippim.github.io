@@ -95,7 +95,7 @@ The TCM Window Buttons brighten as you hover over them. Selecting
 a button instantly changes the window's content. In the above
 animation however, each button is merely hovered over.
 
-## TCM Window Button Icons
+## TCM Window Button Large Icons
 
 <div class="tcm_doc_window_button">
     <button id="tcm_doc_window_icon" title="TCM Window Icon"></button>
@@ -365,6 +365,18 @@ webpage read.
 
 <div id="tcm_screen_info"></div>
 
+The [Screen Interface 🔗](https://developer.mozilla.org/en-US/docs/Web/API/Screen 
+"Details on Screen Interface Properties and Values"){:target="_blank"} 
+is used by the {{ site.title }} website to open new 
+windows at appropriate screen locations.
+
+<div id="tcm_window_info"></div>
+
+The [Window Object 🔗](https://www.w3schools.com/js/js_window.asp 
+"The window object is supported by all browsers. It represents the browser's window."){:target="_blank"}
+is used by the {{ site.title }} website to open new 
+windows at appropriate screen locations.
+
 <style>
 #tcm_switches, #tcm_search_stats, #tcm_screen_info {
    max-width: 30rem;
@@ -377,6 +389,7 @@ webpage read.
 document.getElementById("tcm_switches").innerHTML = htmlVisibilitySwitches();
 document.getElementById("tcm_search_stats").innerHTML = htmlSearchStats();
 document.getElementById("tcm_screen_info").innerHTML = htmlScreenInfo();
+document.getElementById("tcm_window_info").innerHTML = htmlScreenInfo();
 
 tcmButtonVisibility()
 
