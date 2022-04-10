@@ -235,9 +235,9 @@ function htmlWindowInfo() {
         else { display = display.toString(); }
         if (display.startsWith("function")) { display = "function() { ... }" };
         if (display.endsWith("BarProp]")) {
-            if (eval(key.toString())) { display = "Visible"}
+            if (eval("window." + key + ".visible")) { display = "Visible"}
             else { display = "Invisible" }
-            var return_eval = eval(key.toString());
+            var return_eval = eval("window." + key + ".visible");
             console.log("return_eval: " + return_eval.toString())
         }
         html += display.toString();
