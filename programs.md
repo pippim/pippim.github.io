@@ -11,6 +11,14 @@ You can use them free of charge and change them however you like.
 
 ## Hyperlink Recipe Baker
 
+{% include image.html src="/assets/img/hrb/HRB Example.gif"
+   alt="TCM transparent button.gif"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   caption="Hyperlink Recipe Baker Example"
+%}
+
+- [Can I create links with &apos;target=&quot;_blank&quot;&apos; in Markdown? 🔗](https://stackoverflow.com/questions/4425198/can-i-create-links-with-target-blank-in-markdown "create a link in Markdown that opens in a new window")
+
 Just click a few buttons to paste clipboard contents and select "Bake"
 option for a Hyperlink in HTML format or a Hyperlink in Markdown
 format copied to your clipboard.
