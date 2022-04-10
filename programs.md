@@ -9,6 +9,62 @@ You can use them free of charge and change them however you like.
 
 ---
 
+## Hyperlink Recipe Baker
+
+Just click a few buttons to paste clipboard contents and select "Bake"
+option for a Hyperlink in HTML format or a Hyperlink in Markdown
+format copied to your clipboard.
+
+Then simply paste the "baked recipe" into your document with
+<kbd>Ctrl</kbd> + <kbd>V</kbd>.
+
+<a href="hyperlink.html" style="font-size: 20px;">Read More...</a>
+
+
+---
+
+## The Cookie Machine
+
+{% include image.html src="/assets/img/tcm/TCM Window Buttons.gif"
+   alt="TCM transparent button.gif"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   caption="The Cookie Machine Buttons"
+%}
+
+*The Cookie Machine*, commonly abbreviated as **TCM**,
+is accessed using a transparent button at the top of
+every {{ site.title }} web page.
+
+TCM is new technology that repurposes "Cookies". Cookies
+were historically used to track your activity on the
+the internet. With TCM they are now tools you can use to
+save, share and quickly import configurations from other
+browsers and other devices.
+
+Development began on February 25, 2022 and should take 
+about six months to complete.
+
+<a href="tcm.html" style="font-size: 20px;">Read More...</a>
+
+---
+
+## Convert Stack Exchange Posts to Your Own Website
+
+{% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
+   alt="stack-to-blog.py"
+   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+%}
+
+The {{ site.title }} Website's *Answers* page was created automatically
+by converting Stack Exchange Posts to GitHub Pages Jekyll Posts. That
+includes the Top Ten Answers and the Posts by Tag nested accordion with
+{{ site.post_count }} posts. The site search engine is generated at
+the same time.
+
+<a href="stack.html" style="font-size: 20px;">Read More...</a>
+
+---
+
 ## Multi-Timer - Run Set of Alarms Consecutively
 
 {% include image.html src="/assets/img/mt/mt progress bars.gif"
@@ -30,37 +86,6 @@ The Multi-Timer program (`mt`) can be downloaded from the
 
 
 <a href="mt.html" style="font-size: 20px;">Read More...</a>
-
----
-
-## Hyperlink Recipe Baker
-
-Just click a few buttons to paste clipboard contents and select "Bake"
-option for a Hyperlink in HTML format or a Hyperlink in Markdown
-format copied to your clipboard.
-
-Then simply paste the "baked recipe" into your document with
-<kbd>Ctrl</kbd> + <kbd>V</kbd>.
-
-<a href="hyperlink.html" style="font-size: 20px;">Read More...</a>
-
-
----
-
-## Convert Stack Exchange Posts to Your Own Website
-
-{% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
-   alt="stack-to-blog.py"
-   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
-%}
-
-The {{ site.title }} Website's *Answers* page was created automatically
-by converting Stack Exchange Posts to GitHub Pages Jekyll Posts. That
-includes the Top Ten Answers and the Posts by Tag nested accordion with
-{{ site.post_count }} posts. The site search engine is generated at
-the same time.
-
-<a href="stack.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
@@ -90,31 +115,6 @@ the remote drives as local partitions.
 > Some dependency examples are: `tk`, `ttkwidgets`, `pil`, `ffmpeg`, `libdiscid`, `musicbrainzngs`, `requests`, `magic`, `mutagen` and `beautifulsoup`.
 
 <a href="mserve.html" style="font-size: 20px;">Read More...</a>
-
----
-
-## The Cookie Machine
-
-{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
-   alt="TCM transparent button.gif"
-   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
-   caption="The Cookie Machine Transparent Button"
-%}
-
-*The Cookie Machine*, commonly abbreviated as **TCM**,
-is accessed using a transparent button at the top of
-every {{ site.title }} web page.
-
-TCM is new technology that repurposes "Cookies". Cookies
-were historically used to track your activity on the
-the internet. With TCM they are now tools you can use to
-save, share and quickly import configurations from other
-browsers and other devices.
-
-Development began on February 25, 2022 and should take 
-about six months to complete.
-
-<a href="tcm.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
