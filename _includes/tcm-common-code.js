@@ -231,9 +231,13 @@ function htmlWindowInfo() {
         var display = value;
         if (typeof display === 'undefined') { var display = "Undefined" }
         if (display === null) { display = "Null" };
-        if (typeof display === 'number')  { display = display.toLocaleString(); }
+        if (typeof display === 'number') { display = display.toLocaleString(); }
         else { display = display.toString(); }
         if (display.startsWith("function")) { display = "function() { ... }" };
+        if (display.endsWith("BarProp]")) {
+            if (eval(key.toString())) { display = "Visible"}
+            else { display = "Invisible" }
+        }
         html += display.toString();
         html += '</td></tr>\n';  // End of table cell and table row
         // We don't want to list HUGE session storage strings
