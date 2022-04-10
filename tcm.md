@@ -24,10 +24,10 @@ layout: program
 %}
 
 *The Cookie Machine*, commonly abbreviated as **TCM**,
-webpage heading is shown above. The normally transparent 
-"Gingerbread Man" button visible. When visible, it
-always appears in the same spot at the top of
-the {{ site.title }} webpage.
+button is on the webpage header as shown above. The normally
+transparent "Gingerbread Man" icon, is now visible. 
+When visible, it always appears in the same spot at 
+the top of the {{ site.title }} webpage.
 
 TCM is new technology that repurposes "Cookies". Cookies
 were historically used to track your activity on the
