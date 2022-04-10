@@ -254,6 +254,9 @@ function htmlWindowInfo() {
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
+    // Browser information
+    console.log(navigator)
+
     return html;  // Update TCM Window body
 }
 
