@@ -156,10 +156,11 @@ document.querySelector('#tcm_cookie_jar').addEventListener('click', () => {
                 '<div class="error"></div>\n' +
                 '</div>'
     var fileDownload="https://pippim.com/assets/img/TCM Header with Gingerbread Man.png"
-    alert('About to download ' + fileDownload);
+    //alert('About to download ' + fileDownload);
     b.innerHTML = html;
-    let downloading = downloads.download({url: fileDownload})
-    console.log("downloading: " + downloading)
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes
+    //let downloading = downloads.download({url: fileDownload})
+    //console.log("downloading: " + downloading)
 (async () => {
     // create and show the notification
     const showNotification = () => {
