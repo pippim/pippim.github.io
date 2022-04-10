@@ -231,17 +231,13 @@ function htmlWindowInfo() {
         var display = value;
         if (typeof display === 'undefined') { var display = "Undefined" }
         if (display === null) { display = "Null" };
-        display = display.toString();  // Needed for test if startsWith "function"
-        // We don't want to list HUGE session storage strings
-        if (key == "search_words") { break } ;
+        if (typeof display === 'number')  { display = display.toLocaleString(); }
+        else { display = display.toString(); }
         if (display.startsWith("function")) { display = "function() { ... }" };
         html += display.toString();
-        // If greater than 123 MB it's a Unix Date in Epoch
-        //var d = new Date(value);
-        // html += value.toLocaleString();
-        //if (value < 123456789) { html += value.toLocaleString(); }
-        //else { html += d.toLocaleDateString() +  ' ' + d.toLocaleTimeString() }
         html += '</td></tr>\n';  // End of table cell and table row
+        // We don't want to list HUGE session storage strings
+        if (key == "search_words") { break } ;
     }
 
     html += '</table>\n';     // End of our table and form
