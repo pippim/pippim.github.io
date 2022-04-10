@@ -145,7 +145,6 @@ document.querySelector('#tcm_webpage_info').addEventListener('click', () => {
             html += htmlWindowInfo();
             b.innerHTML = html; // Update TCM Window body
         });
-
 });
 
 document.querySelector('#tcm_cookie_jar').addEventListener('click', () => {
@@ -156,6 +155,9 @@ document.querySelector('#tcm_cookie_jar').addEventListener('click', () => {
                '<h1>JavaScript Notification API Demo</h1>\n' +
                 '<div class="error"></div>\n' +
                 '</div>'
+    downloadFilename="https://pippim.com/assets/img/TCM Header with Gingerbread Man.png"
+    alert('About to download ' + downloadFilename);
+    let downloading = browser.downloads.download({url: downloadFilename})
     b.innerHTML = html;
 (async () => {
     // create and show the notification
