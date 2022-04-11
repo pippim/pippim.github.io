@@ -199,7 +199,7 @@ function htmlScreenInfo() {
                    "pixelDepth", "orientation", "mozEnabled", "mozBrightness"]
     var o = (screen.orientation || {}).type ||
              screen.mozOrientation || screen.msOrientation;
-    for (var i=0; i<arrProp.length; i++){ html += buildEval(arrProp[i], o) ; }
+    for (var i=0; i<arrProp.length; i++){ html += buildScreenEval(arrProp[i], o) ; }
 
     html += '</table>\n';     // End of our table and form
 
@@ -213,12 +213,6 @@ function htmlScreenInfo() {
 }
 
 function htmlWindowInfo() {
-    /* return html code <table> <td> for:
-        Screen Property     Value
-        screen.availTop     9,999
-        screen.availLeft    9,999
-        ETC.
-    */
     var html = "<h3>Window Object</h3>"
     html += '<table id="windowTable">\n' ;
     // Screen Table heading
@@ -269,28 +263,17 @@ function htmlNavigatorInfo() {
     html += '  <tr><th>Navigator Property</th>\n' +
             '  <th>Value</th></tr>\n';
 
-    var nav = window.navigator;
+    console.log("navigator: " + navigator);
 
-    for (const [key, value] of Object.entries(nav)) {
-        html += '  <tr><td>' + key + '</td>\n' ;
-        html += '  <td>';  // Start of table cell
-        var display = value;
-        if (typeof display === 'undefined') { var display = "Undefined" }
-        if (display === null) { display = "Null" };
-        if (typeof display === 'number') { display = display.toLocaleString(); }
-        else { display = display.toString(); }
-        if (display.startsWith("function")) { display = "function() { ... }" };
-        if (display.endsWith("BarProp]")) {
-            if (eval("window." + key + ".visible")) { display = "Visible"}
-            else { display = "Invisible" }
-            //var return_eval = eval("window." + key + ".visible");
-            //console.log("return_eval: " + return_eval.toString())
-        }
-        html += display.toString();
-        html += '</td></tr>\n';  // End of table cell and table row
-        // We don't want to list HUGE session storage strings
-        if (key == "search_words") { break } ;
-    }
+    var arrProp = ["connection", "cookieEnabled", "credentials",
+                   "deviceMemory", "geolocation", "hid", "hardwareConcurrency",
+                   "keyboard", "language", "languages", "locks",
+                   "maxTouchPoints", "mediaCapabilities", "mediaDevices",
+                   "mediaSession", "onLine", "pdViewerEnabled", "permissions",
+                   "presentation", "serial", "serviceWorker", "storage",
+                   "userAgent", "userAgentData", "webDriver",
+                   "windowControlsOverlay", "xr"];
+    for (var i=0; i<arrProp.length; i++){ html += buildNavigatorEval(arrProp[i]) ; }
 
     html += '</table>\n';     // End of our table and form
 
@@ -308,7 +291,7 @@ function htmlNavigatorInfo() {
     return html;
 }
 
-function buildEval(prop, orientation) {
+function buildScreenEval(prop, orientation) {
     // Build html using eval() of screen.availTop, etc.
     var command = "screen." + prop;
     var result = eval(command);
@@ -324,6 +307,20 @@ function buildEval(prop, orientation) {
     return html
 }
 
+function buildNavgatorEval(prop) {
+    // Build html using eval() of screen.availTop, etc.
+    var command = "navigator." + prop;
+    var result = eval(command);
+    var value = null;
+    var html = "";
+    if (typeof result === 'number') { value = result.toLocaleString(); }
+    else { value = result }  // Assume result is "undefined"
+
+    var instructions = "html = '<tr><td>screen." + prop + "</td><td> ';";
+    instructions += "html += '" + value + "</td></tr>'";
+    eval(instructions);
+    return html
+}
 // From: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 function showProps(obj, objName) {
   let result = '';
