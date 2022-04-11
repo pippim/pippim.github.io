@@ -143,6 +143,7 @@ document.querySelector('#tcm_webpage_info').addEventListener('click', () => {
             var front_yml = getFrontMatter(results)
             var html = htmlFrontMatter(front_yml, "Current Webpage Front Matter");
             html += htmlWindowInfo();
+            html += htmlNavigatorInfo();
             b.innerHTML = html; // Update TCM Window body
         });
 });
@@ -153,56 +154,58 @@ document.querySelector('#tcm_cookie_jar').addEventListener('click', () => {
     // https://www.javascripttutorial.net/web-apis/javascript-notification/
     var html = '<div class="container">\n' +
                '<h1>JavaScript Notification API Demo</h1>\n' +
-                '<div class="error"></div>\n' +
-                '</div>'
+               '<div class="error"></div>\n' +
+               '</div>'
     var fileDownload="https://pippim.com/assets/img/TCM Header with Gingerbread Man.png"
     //alert('About to download ' + fileDownload);
     b.innerHTML = html;
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes
     //let downloading = downloads.download({url: fileDownload})
     //console.log("downloading: " + downloading)
-(async () => {
-    // create and show the notification
-    const showNotification = () => {
-        // create a new notification
-        const notification = new Notification('JavaScript Notification API', {
-            body: 'File has been downloaded.',
-            icon: '{{ site.url }}/favicon.png'
-        });
 
-        // close the notification after 10 seconds
-        setTimeout(() => {
-            notification.close();
-        }, 10 * 1000);
+    // Notifications
+    (async () => {
+        // create and show the notification
+        const showNotification = () => {
+            // create a new notification
+            const notification = new Notification('{{ site.title }} Timed Tasks', {
+                body: 'File has been downloaded.',
+                icon: '{{ site.url }}/favicon.png'
+            });
 
-        // navigate to a URL when clicked
-        notification.addEventListener('click', () => {
+            // close the notification after 10 seconds
+            setTimeout(() => {
+                notification.close();
+            }, 10 * 1000);
 
-            window.open('https://www.javascripttutorial.net/web-apis/javascript-notification/', '_blank');
-        });
-    }
+            // navigate to a URL when clicked
+            notification.addEventListener('click', () => {
 
-    // show an error message
-    const showError = () => {
-        const error = document.querySelector('.error');
-        error.style.display = 'block';
-        error.textContent = 'You blocked the notifications';
-    }
+                window.open('https://www.javascripttutorial.net/web-apis/javascript-notification/', '_blank');
+            });
+        }
 
-    // check notification permission
-    let granted = false;
+        // show an error message
+        const showError = () => {
+            const error = document.querySelector('.error');
+            error.style.display = 'block';
+            error.textContent = 'You blocked the notifications';
+        }
 
-    if (Notification.permission === 'granted') {
-        granted = true;
-    } else if (Notification.permission !== 'denied') {
-        let permission = await Notification.requestPermission();
-        granted = permission === 'granted' ? true : false;
-    }
+        // check notification permission
+        let granted = false;
 
-    // show notification or error
-    granted ? showNotification() : showError();
+        if (Notification.permission === 'granted') {
+            granted = true;
+        } else if (Notification.permission !== 'denied') {
+            let permission = await Notification.requestPermission();
+            granted = permission === 'granted' ? true : false;
+        }
 
-})();
+        // show notification or error
+        granted ? showNotification() : showError();
+
+    })();
 });
 
 function introduction_to_html() {
