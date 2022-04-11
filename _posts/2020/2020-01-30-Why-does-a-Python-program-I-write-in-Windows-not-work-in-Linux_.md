@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,991 "
 accepted:     
-uploaded:     2022-04-11 04:33:50
+uploaded:     2022-04-11 05:56:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-30-Why-does-a-Python-program-I-write-in-Windows-not-work-in-Linux_.md
 toc:          false
 navigation:   false

@@ -2,6 +2,8 @@
 
 # refresh.sh
 
+# BUG: April 11, 2022 - _includes/website_tree.txt is empty!!!
+
 # Pass commit message as first parameter (referenced as "$1")
 
 # First time usage:

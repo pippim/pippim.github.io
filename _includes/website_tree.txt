@@ -1,7 +1,26 @@
 ├── assets
 │   ├── css
 │   │   └── style.scss
-│   ├── img [23 entries exceeds filelimit, not opening dir]
+│   ├── img
+│   │   ├── hrb
+│   │   ├── icons
+│   │   ├── mserve
+│   │   ├── mt
+│   │   ├── stack
+│   │   ├── tcm
+│   │   ├── ask_ubuntu.png
+│   │   ├── Ask Ubuntu profile.png
+│   │   ├── Blog_Project-Management-101.png
+│   │   ├── cookie-clicker.png
+│   │   ├── earth-from-space.jpg
+│   │   ├── Edm Temp 2022-01-26.png
+│   │   ├── Edm temperature April 7, 2022.png
+│   │   ├── Edm Temperature December 7, 2021.png
+│   │   ├── github pages themes.png
+│   │   ├── inspectocat.jpg
+│   │   ├── Octocat.png
+│   │   ├── octojekyll-opt.jpg
+│   │   └── pngwing.com.png
 │   ├── js
 │   │   ├── copyCode.js
 │   │   ├── hrb.js
@@ -29,11 +48,9 @@
 ├── _layouts
 │   ├── default.html
 │   ├── hrb.html
-│   ├── page.html
 │   ├── post.html
-│   └── program.html
-├── _plugins
-│   └── insert_git_code.rb
+│   ├── program.html
+│   └── tcm-window.html
 ├── _posts
 │   ├── 2016 [175 entries exceeds filelimit, not opening dir]
 │   ├── 2017 [153 entries exceeds filelimit, not opening dir]
@@ -56,16 +73,15 @@
 │   └── toc.scss
 ├── sede
 │   ├── check-html-ids.py
-│   ├── languages
 │   ├── QueryResults.csv
 │   ├── refresh.sh
 │   ├── rouge_languages.txt
 │   ├── StackQuery
 │   ├── stack-to-blog.py
-│   ├── website_search.py
-│   └── website_search.pyc
+│   └── website_search.py
 ├── about.md
 ├── answers.md
+├── CNAME
 ├── _config.yml
 ├── favicon.png
 ├── hrb.md
@@ -78,4 +94,4 @@
 ├── stack.md
 └── tcm.md
 
-18 directories, 61 files
+23 directories, 72 files
