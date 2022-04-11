@@ -10,9 +10,9 @@ created_date: 2019-08-10 23:13:16
 edit_date:    2019-08-11 00:24:52
 votes:        "3 "
 favorites:    
-views:        "35,015 "
+views:        "35,041 "
 accepted:     
-uploaded:     2022-04-03 19:52:48
+uploaded:     2022-04-11 04:33:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-10-How-to-change-Terminal-Title-in-ubuntu-16.04.md
 toc:          false
 navigation:   false

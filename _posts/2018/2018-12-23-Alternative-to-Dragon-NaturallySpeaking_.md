@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1104075
 type:         Answer
 tags:         software-recommendation alternative speech-recognition
 created_date: 2018-12-23 19:49:39
-edit_date:    2020-06-12 14:37:07
-votes:        "6 "
+edit_date:    2022-04-09 06:36:58
+votes:        "7 "
 favorites:    
-views:        "32,677 "
+views:        "32,695 "
 accepted:     
-uploaded:     2022-04-03 19:52:48
+uploaded:     2022-04-11 04:33:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-23-Alternative-to-Dragon-NaturallySpeaking_.md
 toc:          false
 navigation:   false
@@ -39,18 +39,25 @@ For an updated answer, here is an article from March 2018: [Best Free Linux Spee
 
 ## Open Source Speech Recognition Tools
 
-- [DeepSpeech][2]   TensorFlow implementation of Baidu's DeepSpeech architecture.
-- [Julius][3]   Two-pass large vocabulary continuous speech recognition engine
-- [Simon][4]    Flexible speech recognition software
-- [CMUSphinx][5]    Speech recognition system for mobile and server applications
-- [deepspeech.pytorch][6]   Implementation of DeepSpeech2 using Baidu Warp-CTC.
-- [Kaldi][7]    C++ toolkit designed for speech recognition researchers.
+- [Mozilla DeepSpeech][2]: TensorFlow implementation of Baidu's DeepSpeech architecture ([website/source][3]).
+- [Kaldi][12]: C++ toolkit designed for speech recognition researchers ([website][13]/[source][14]).
+- [CMUSphinx][7]: Speech recognition system for mobile and server applications ([website][8]/[source][9]).
+- [deepspeech.pytorch][10]: Implementation of DeepSpeech2 using Baidu Warp-CTC ([website/source][11]).
+- [Julius][4]: Two-pass large vocabulary continuous speech recognition engine ([website/source][5]).
+- [Simon][6]: Flexible speech recognition software.
 
 
   [1]: https://www.linuxlinks.com/best-free-linux-speech-recognition-tools-open-source-software/
   [2]: https://www.linuxlinks.com/deepspeech-tensorflow-implementation-baidus-deepspeech-architecture/
-  [3]: https://www.linuxlinks.com/Julius/
-  [4]: https://www.linuxlinks.com/Simon/
-  [5]: https://www.linuxlinks.com/cmusphinx-open-source-speech-recognition-system-for-mobile-and-server-applications/
-  [6]: https://www.linuxlinks.com/deepspeech-pytorch-implementation-of-deepspeech2-using-baidu-warp-ctc/
-  [7]: https://www.linuxlinks.com/kaldi-speech-recognition-toolkit-designed-for-speech-recognition-researchers/
+  [3]: https://github.com/mozilla/DeepSpeech
+  [4]: https://www.linuxlinks.com/Julius/
+  [5]: https://github.com/julius-speech/julius
+  [6]: https://www.linuxlinks.com/Simon/
+  [7]: https://www.linuxlinks.com/cmusphinx-open-source-speech-recognition-system-for-mobile-and-server-applications/
+  [8]: https://cmusphinx.github.io/
+  [9]: https://github.com/cmusphinx/pocketsphinx
+  [10]: https://www.linuxlinks.com/deepspeech-pytorch-implementation-of-deepspeech2-using-baidu-warp-ctc/
+  [11]: https://github.com/SeanNaren/deepspeech.pytorch
+  [12]: https://www.linuxlinks.com/kaldi-speech-recognition-toolkit-designed-for-speech-recognition-researchers/
+  [13]: https://kaldi-asr.org/
+  [14]: https://github.com/kaldi-asr/kaldi

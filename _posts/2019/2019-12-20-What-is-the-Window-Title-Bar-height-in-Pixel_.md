@@ -10,9 +10,9 @@ created_date: 2019-12-20 12:03:51
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "539 "
+views:        "544 "
 accepted:     
-uploaded:     2022-04-03 19:52:48
+uploaded:     2022-04-11 04:33:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-20-What-is-the-Window-Title-Bar-height-in-Pixel_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2020-08-26 11:02:45
 edit_date:    2020-08-26 22:41:40
 votes:        "4 "
 favorites:    
-views:        "1,889 "
+views:        "1,894 "
 accepted:     
-uploaded:     2022-04-03 19:52:48
+uploaded:     2022-04-11 04:33:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-26-What-does-the-indicator-icon-with-three-dots-over-a-power-plug-mean-in-Ubuntu-20.04_.md
 toc:          false
 navigation:   false

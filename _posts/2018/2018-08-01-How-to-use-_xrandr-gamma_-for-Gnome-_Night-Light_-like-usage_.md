@@ -8,11 +8,11 @@ type:         Answer
 tags:         ubuntu-gnome xrandr redshift f.lux gamma eyesome
 created_date: 2018-08-01 04:12:55
 edit_date:    2021-12-17 11:59:38
-votes:        "24 "
+votes:        "25 "
 favorites:    
-views:        "15,834 "
+views:        "15,912 "
 accepted:     Accepted
-uploaded:     2022-04-03 19:52:48
+uploaded:     2022-04-11 04:33:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-01-How-to-use-_xrandr-gamma_-for-Gnome-_Night-Light_-like-usage_.md
 toc:          false
 navigation:   false
