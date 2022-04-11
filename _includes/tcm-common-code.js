@@ -263,7 +263,8 @@ function htmlNavigatorInfo() {
     html += '  <tr><th>Navigator Property</th>\n' +
             '  <th>Value</th></tr>\n';
 
-    console.log("navigator.geolocation: " + Object.keys(navigator.geolocation));
+    loc = navigator.geolocation.getCurrentPosition()
+    console.log("loc = navigator.geolocation.getCurrentPosition(): " + Object.keys(loc));
 
     var arrProp = ["connection", "cookieEnabled", "credentials",
                    "deviceMemory", "geolocation", "hid", "hardwareConcurrency",
