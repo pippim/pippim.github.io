@@ -455,13 +455,22 @@ There is little Jekyll Front Matter on the **TCM** webpage window.
 If you were to navigate to a blog post (in the "Answers"
 section) however, then you would see a lot more Front Matter.
 
-
 <div id="tcm_doc_window_info"></div>
 
 The [Window Object 🔗](https://www.w3schools.com/js/js_window.asp 
 "The window object is supported by all browsers. It represents the browser's window."){:target="_blank"}
 is used by the {{ site.title }} website to open new 
 windows at appropriate screen locations.
+
+<div id="tcm_doc_navigator_info"></div>
+
+The Navigator interface represents the state and the 
+identity of the user agent. It allows scripts to query
+it and to register themselves to carry on some activities.
+
+See [Navigator object 🔗](https://developer.mozilla.org/en-US/docs/Web/API/Navigator 
+"A Navigator object can be retrieved using the read-only window.navigator property."){:target="_blank"}
+on MDN.
 
 <style>
 #tcm_doc_webpage, #tcm_doc_window_info {
@@ -485,6 +494,7 @@ fetch(urlMarkdown)
       document.getElementById("tcm_doc_webpage").innerHTML = html;
   });
 document.getElementById("tcm_doc_window_info").innerHTML = htmlWindowInfo();
+document.getElementById("tcm_doc_navigator_info").innerHTML = htmlNavigatorInfo();
 </script>
 
 
