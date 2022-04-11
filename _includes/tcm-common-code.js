@@ -209,7 +209,7 @@ function htmlScreenInfo() {
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
-    return html;  // Update TCM Window body
+    return html;
 }
 
 function htmlWindowInfo() {
@@ -254,15 +254,58 @@ function htmlWindowInfo() {
             '}\n'
     html += '#windowTable {\n' +
             '  max-width: 100vw;\n' +
-            '  max-height: 90vh;\n' +
+            '  max-height: 80vh;\n' +
             '  overflow: auto;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
-    // Browser information
-    console.log(navigator)
+    return html;
+}
 
-    return html;  // Update TCM Window body
+function htmlNavigatorInfo() {
+    var html = "<h3>Navigator Object</h3>"
+    html += '<table id="navigatorTable">\n' ;
+    // Screen Table heading
+    html += '  <tr><th>Navigator Property</th>\n' +
+            '  <th>Value</th></tr>\n';
+
+    var nav = window.navigator;
+
+    for (const [key, value] of Object.entries(nav)) {
+        html += '  <tr><td>' + key + '</td>\n' ;
+        html += '  <td>';  // Start of table cell
+        var display = value;
+        if (typeof display === 'undefined') { var display = "Undefined" }
+        if (display === null) { display = "Null" };
+        if (typeof display === 'number') { display = display.toLocaleString(); }
+        else { display = display.toString(); }
+        if (display.startsWith("function")) { display = "function() { ... }" };
+        if (display.endsWith("BarProp]")) {
+            if (eval("window." + key + ".visible")) { display = "Visible"}
+            else { display = "Invisible" }
+            //var return_eval = eval("window." + key + ".visible");
+            //console.log("return_eval: " + return_eval.toString())
+        }
+        html += display.toString();
+        html += '</td></tr>\n';  // End of table cell and table row
+        // We don't want to list HUGE session storage strings
+        if (key == "search_words") { break } ;
+    }
+
+    html += '</table>\n';     // End of our table and form
+
+    html += '<style>\n#navigatorTable th, #navigatorTable td {\n' +
+            '  text-align: left;\n' +
+            '  padding: 0 .5rem;\n' +
+            '}\n'
+    html += '#navigatorTable {\n' +
+            '  max-width: 100vw;\n' +
+            '  max-height: 80vh;\n' +
+            '  overflow: auto;\n' +
+            '}\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+
+    return html;
 }
 
 function buildEval(prop, orientation) {
