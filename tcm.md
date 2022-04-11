@@ -473,7 +473,7 @@ See [Navigator object 🔗](https://developer.mozilla.org/en-US/docs/Web/API/Nav
 on MDN.
 
 <style>
-#tcm_doc_webpage, #tcm_doc_window_info {
+#tcm_doc_webpage, #tcm_doc_window_info #tcm_doc_navigator_info {
    border: 3px solid grey;
    margin-left: 1em;
    padding: .5rem;
