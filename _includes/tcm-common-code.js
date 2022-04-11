@@ -316,7 +316,7 @@ function buildNavigatorEval(prop) {
     if (typeof result === 'number') { value = result.toLocaleString(); }
     else { value = result }  // Assume result is "undefined"
 
-    var instructions = "html = '<tr><td>screen." + prop + "</td><td> ';";
+    var instructions = "html = '<tr><td>navigator." + prop + "</td><td> ';";
     instructions += "html += '" + value + "</td></tr>'";
     eval(instructions);
     return html
