@@ -307,7 +307,7 @@ function buildScreenEval(prop, orientation) {
     return html
 }
 
-function buildNavgatorEval(prop) {
+function buildNavigatorEval(prop) {
     // Build html using eval() of screen.availTop, etc.
     var command = "navigator." + prop;
     var result = eval(command);
