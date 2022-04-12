@@ -148,7 +148,7 @@ to get more details.
       title="Hyperlink Recipe Baker" > </button></td> 
    <td><b>Hyperlink Recipe Baker (HRB)</b> - Used to create hyperlinks 
       in HTML or Markdown format See the
-      <a href="https://pippim.github.io/hyperlink.html#" target="_blank" 
+      <a href="https://pippim.github.io/programs/hyperlink.html#" target="_blank" 
       title="Complete instructions for using Hyperlink Recipe Baker"
       >full documentation</a>. Very handy for creating hyperlinks to
       the current webpage, without having to switch to another browser tab.
