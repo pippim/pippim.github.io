@@ -278,7 +278,7 @@ layout: hrb
 
 For more details, including dropping this page into your own
 website, see the 
-[complete instructions](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
+[complete instructions](https://pippim.github.io/programs/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
 ```
 
 If you have cloned the entire {{ site.title }} website, edit the
