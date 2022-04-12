@@ -421,7 +421,7 @@ processHyperlinkRecipe("hrb_body")
 </script>
 
 Instructions for using the Hyperlink Recipe Baker can be found 
-[here](https://www.pippim.com/hyperlink.html "Hyperlink Recipe Baker").
+[here](https://www.pippim.com/programs/hyperlink.html "Hyperlink Recipe Baker").
 
 ---
 
