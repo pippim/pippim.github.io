@@ -270,8 +270,6 @@ function htmlNavigatorInfo() {
         navigator.geolocation.getCurrentPosition(success, error);
     }
 
-    console.log("loc = navigator.geolocation.getCurrentPosition(): " + Object.keys(loc));
-
     var arrProp = ["connection", "cookieEnabled", "credentials",
                    "deviceMemory", "geolocation", "hid", "hardwareConcurrency",
                    "keyboard", "language", "languages", "locks",
