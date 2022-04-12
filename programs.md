@@ -30,7 +30,7 @@ Then switch to your document and paste the clipboard contents with
 Each time you use it, **HRB** saves you from 
 googling the hyperlink syntax, typing text and confused head scratching.
 
-<a href="hyperlink.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/hyperlink.html" style="font-size: 20px;">Read More...</a>
 
 
 ---
@@ -56,7 +56,7 @@ browsers and other devices.
 Development began on February 25, 2022 and should take 
 about six months to complete.
 
-<a href="tcm.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/tcm.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
@@ -114,7 +114,7 @@ The Multi-Timer program (`mt`) can be downloaded from the
 
 
 
-<a href="mt.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/mt.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
@@ -143,7 +143,7 @@ the remote drives as local partitions.
 >  
 > Some dependency examples are: `tk`, `ttkwidgets`, `pil`, `ffmpeg`, `libdiscid`, `musicbrainzngs`, `requests`, `magic`, `mutagen` and `beautifulsoup`.
 
-<a href="mserve.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/mserve.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
