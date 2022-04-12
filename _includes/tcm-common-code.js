@@ -263,7 +263,13 @@ function htmlNavigatorInfo() {
     html += '  <tr><th>Navigator Property</th>\n' +
             '  <th>Value</th></tr>\n';
 
-    loc = navigator.geolocation.getCurrentPosition()
+    var position;
+    function success(p) { position = p; console.log(Object.keys(position))}
+    function error(msg) { console.log (msg); }
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(success, error);
+    }
+
     console.log("loc = navigator.geolocation.getCurrentPosition(): " + Object.keys(loc));
 
     var arrProp = ["connection", "cookieEnabled", "credentials",
