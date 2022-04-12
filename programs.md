@@ -90,7 +90,7 @@ Do you have a job with a fixed set of tasks and, each task always takes the same
 Then ***Timta*** (**Tim**ed **ta**sks) will help you get
 the job done without any missed appointments!
 
-<a href="timta.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/timta.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
