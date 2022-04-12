@@ -3,7 +3,7 @@ title: Hyperlink Recipe Baker
 layout: program
 ---
 
-<!-- Full version - hyperlink.md - All the bells and whistles
+<!-- Full version - programs/hyperlink.md - All the bells and whistles
      Diet version - hrb.md - No buttons, search bar, footer, TCM or notes 
 -->
 
@@ -275,14 +275,6 @@ layout: hrb
 6. Click <kbd>Tooltip (title)</kbd> above to paste.
 7. Click <kbd>HTML</kbd> or <kbd>Markdown</kbd> to copy Hyperlink into clipboard.
 8. Insert the clipboard containing hyperlink into your document.
-
-For more details, including dropping this page into your own
-website, see the 
-[complete instructions](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
-```
-
-If you have cloned the entire {{ site.title }} website, edit the
-hyperlink with your own website address.
 
 ---
 
