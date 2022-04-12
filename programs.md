@@ -77,6 +77,23 @@ the same time.
 
 ---
 
+## Timta (Timed Tasks) - Run Set of Alarms Consecutively
+
+{% include image.html src="/assets/img/mt/mt progress bars.gif"
+   alt="Multi-Timer Progress Bars.gif"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   caption="Multi-Timer Application Indicator and Progress Bars"
+%}
+
+Do you have a job with a fixed set of tasks and, each task always takes the same amount of time?
+
+Then ***Timta*** (**Tim**ed **ta**sks) will help you get
+the job done without any missed appointments!
+
+<a href="timta.html" style="font-size: 20px;">Read More...</a>
+
+---
+
 ## Multi-Timer - Run Set of Alarms Consecutively
 
 {% include image.html src="/assets/img/mt/mt progress bars.gif"
