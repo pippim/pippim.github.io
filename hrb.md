@@ -24,7 +24,7 @@ layout: hrb
 8. Go to your document, and insert the hyperlink using <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 
 This is the "Diet" version for Hyperlink Recipe Baker (HRB). See the
-[Full Version](https://pippim.github.io/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
+[Full Version](https://pippim.github.io/programs/hyperlink.html# "Complete guide for using and installing Hyperlink Recipe Baker"){:target="_blank"}.
 for more details. You will also find instructions for creating
 an HRB version on your own website.
 
