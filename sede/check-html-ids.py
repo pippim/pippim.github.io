@@ -7,7 +7,7 @@
 #           inserting new Navigation Bars without having to renumber dozens of
 #           existing sections below.
 #
-#       Feb. 21 2022 - Initial version.
+#       Feb 21 2022 - Initial version.
 #
 # ==============================================================================
 
@@ -25,9 +25,11 @@ import os                   # Test if directory exists
 import shutil               # Make backup files to .bak extension
 
 # Filenames are relative to program directory "/website/sede"
-# answers.md, about.md and programs.md have no section navigation bars
-EXTRA_SEARCH_FILES = ['../index.md', '../mserve.md', '../mt.md',
-                      '../stack.md']
+# answers.md, about.md, hrb.md and programs.md have no section navigation bars
+EXTRA_SEARCH_FILES = ['../programs/hyperlink.md', '../index.md',
+                      '../programs/mserve.md', '../programs/mt.md',
+                      '../programs/stack.md', '../programs/tcm.md',
+                      '../programs/timta.md']
 
 CONTENTS = "{% include toc.md %}"
 
