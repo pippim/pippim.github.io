@@ -25,6 +25,7 @@
 #       Feb 08 2022 - EXTRA_SEARCH_FILES - ADD .md files to search dictionary
 #       Feb 14 2022 - WORD_SEARCH_POINTS - Weighting system where word appears
 #       Mar 14 2022 - Add hrb.md and hyperlink.md to EXTRA_SEARCH_FILES.
+#       Apr 13 2022 - Add tim-ta.md (Timed Tasks)
 #
 # ==============================================================================
 
@@ -107,6 +108,7 @@ INPUT_FILE = 'QueryResults.csv'
 RANDOM_LIMIT = None         # On initial trials limit the number of blog posts to 10
 PRINT_RANDOM = False        # Print out matching random records found
 OUTPUT_DIR = "../_posts/"   # Must match G-H Pages / Jekyll name
+''' TODO: Replace below with _config.yml front matter: posts_by_year '''
 OUTPUT_BY_YEAR_DIR = True   # When more than 1,000 posts set to True for GitHub
 QUESTIONS_QUALIFIER = True  # Convert questions to blog posts
 VOTE_QUALIFIER = 2          # Posts need at least 2 votes to qualify
@@ -181,7 +183,7 @@ EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../hrb.md',
                       '../programs/hyperlink.md', '../index.md',
                       '../programs/mserve.md', '../programs/mt.md',
                       '../programs.md', '../programs/stack.md',
-                      '../programs/tcm.md', '../programs/timta.md']
+                      '../programs/tcm.md', '../programs/tim-ta.md']
 
 # See: /website/sede/refresh.sh for how file is updated on GitHub Pages
 # If not desired, set `CONFIG_YML = None`

@@ -29,7 +29,7 @@ import shutil               # Make backup files to .bak extension
 EXTRA_SEARCH_FILES = ['../programs/hyperlink.md', '../index.md',
                       '../programs/mserve.md', '../programs/mt.md',
                       '../programs/stack.md', '../programs/tcm.md',
-                      '../programs/timta.md']
+                      '../programs/tim-ta.md']
 
 CONTENTS = "{% include toc.md %}"
 
