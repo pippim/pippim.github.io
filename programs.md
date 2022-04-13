@@ -73,7 +73,7 @@ includes the Top Ten Answers and the Posts by Tag nested accordion with
 {{ site.post_count }} posts. The site search engine is generated at
 the same time.
 
-<a href="stack.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/stack.html" style="font-size: 20px;">Read More...</a>
 
 ---
 

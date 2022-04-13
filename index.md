@@ -23,7 +23,7 @@ operate at an average speed of 2.5 MB/s (Megabytes per second)
 over the internet. This one runs at the speed of RAM; about
 19,200 MB/s!
 
-[Convert](https://pippim.github.io/stack.html "Convert Stack Exchange Posts to Your Own Website") your popular *Stack Exchange
+[Convert](https://pippim.github.io/programs/stack.html "Convert Stack Exchange Posts to Your Own Website") your popular *Stack Exchange
 Posts* to **your own website** with additional features like;
 Table of Contents, Section Navigation buttons, Copy code
 blocks to clipboard and Show summary statistics.
@@ -425,7 +425,7 @@ GitHub Pages Posts.
 The complete `stack-to-blog.py` program can be accessed on the
 [Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py "View source code for stack-to-blog.py").
 
-The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](https://pippim.github.io/stack.html "Convert Stack Exchange Posts to Your Own Website")
+The [**FULL DOCUMENTATION** to Convert Stack Exchange Posts to Your Own Website](https://pippim.github.io/programs/stack.html "Convert Stack Exchange Posts to Your Own Website")
 for `stack-to-blog.py` used to create
 the posts on this {{ site.title }} website will help you create your own website.
 
