@@ -1132,11 +1132,12 @@
   "https://pippim.github.io/about.html | The 5 W's of Pippim", 
   "https://pippim.github.io/answers.html | Stack Exchange Answers", 
   "https://pippim.github.io/hrb.html | Hyperlink Recipe Baker (Diet)", 
-  "https://pippim.github.io/hyperlink.html | Hyperlink Recipe Baker", 
+  "https://pippim.github.io/programs/hyperlink.html | Hyperlink Recipe Baker", 
   "https://pippim.github.io/index.html | Welcome to Pippim", 
-  "https://pippim.github.io/mserve.html | Music Player with CD Encoding, Lyrics Scraping and Synchronizing", 
-  "https://pippim.github.io/mt.html | Multi-Timer - Run Set of Alarms Consecutively", 
+  "https://pippim.github.io/programs/mserve.html | Music Player with CD Encoding, Lyrics Scraping and Synchronizing", 
+  "https://pippim.github.io/programs/mt.html | Multi-Timer - Run Set of Alarms Consecutively", 
   "https://pippim.github.io/programs.html | Free Programs From Pippim", 
-  "https://pippim.github.io/stack.html | Convert Stack Exchange Posts to Your Own Website", 
-  "https://pippim.github.io/tcm.html | The Cookie Machine"
+  "https://pippim.github.io/programs/stack.html | Convert Stack Exchange Posts to Your Own Website", 
+  "https://pippim.github.io/programs/tcm.html | The Cookie Machine", 
+  "https://pippim.github.io/programs/timta.html | Timta - Timed Tasks"
 ]
