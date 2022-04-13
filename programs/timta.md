@@ -68,7 +68,7 @@ the same height as the regular buttons.
 <script>
 // Code goes here
 
-var audioFileUrl = 'https://github.com/pippim/pippim.github.io/blob/main/assets/sound/Alarm_03.mp3';
+var audioFileUrl = '{{ site.url }}/assets/sound/Alarm_03.mp3';
 window.onload = function() {
   var downloadButton = document.getElementById('download');
   var audioControl = document.getElementById('audio');
