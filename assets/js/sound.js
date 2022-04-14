@@ -22,8 +22,6 @@ async function load_sound(name) {
     fetch(audioFileUrl)
       .then(function(res) {
         res.blob().then(function(blob) {
-          //var size = blob.size;
-          //var type = blob.type;
           var reader = new FileReader();
 
           reader.addEventListener("loadend", function() {
@@ -68,15 +66,12 @@ loadStockNames();
 async function fetch_sound(name) {
     // Get from internet and store in localStorage
     fetch(name)
-      .then((response)=>response.blob())
-      .then((results)=>{
+     .then(function(response) {
+      response.blob().then(function(blob) {
 /*
-     .then(function(res) {
-        res.blob().then(function(blob) {
-
+      .then((response)=>response.blob())
+      .then((blob)=>{
 */
-        var size = results.size;
-        var type = results.type;
         var reader = new FileReader();
 
         reader.addEventListener("loadend", function() {
@@ -94,6 +89,7 @@ async function fetch_sound(name) {
         // Above listener is executed when below reader completes
         reader.readAsDataURL(blob);
       });
+     });
     console.log('fetch_sound() STARTED: ' + name);
 }
 
