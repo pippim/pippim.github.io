@@ -4,8 +4,10 @@ layout: default
 ---
 # {{ site.title }} Programs
 
-This page lists Linux programs written in Bash and Python by {{ site.title }}. 
-You can use them free of charge and change them however you like.
+This page lists programs you can run on your browser from any 
+device and Linux programs by {{ site.title }}.  Use them free 
+of charge and free of Ads too!. No need to buy {{ site.title }}
+a coffee because too much is consumed whilst working already!
 
 ---
 
@@ -90,7 +92,7 @@ Do you have a job with a fixed set of tasks and, each task always takes the same
 Then ***Timta*** (**Tim**ed **ta**sks) will help you get
 the job done without any missed appointments!
 
-<a href="programs/timta.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/tim-ta.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
@@ -102,7 +104,8 @@ the job done without any missed appointments!
    caption="Multi-Timer Application Indicator and Progress Bars"
 %}
 
-Do you have a job with a fixed set of tasks and, each task always takes the same amount of time?
+Do you have a job with a fixed set of tasks and, each task always
+takes the same amount of time?
 
 Then ***Multi-Timer*** will help you get the job done with no wasted time!
 
