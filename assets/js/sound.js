@@ -50,15 +50,15 @@ async function load_sound(name) {
       });
 }
 
-var stockNames = ["Alarm_03.mp3", "Alarm_10.mp3", "Alarm_12.mp3"];
-var stockPrefix = raw_url + "/assets/sound/";
+const stockNames = ["Alarm_03.mp3", "Alarm_10.mp3", "Alarm_12.mp3"];
+const stockPrefix = "{{ site.title }}/assets/sound/";
 
 function loadStockNames () {
     // If stock name isn't in local storage, fetch it from website
     for (var i = 0; i < stockNames.length; i++) {
-        console.log('stockNames[i]: ' + stockNames[i])
+        console.log('stockNames[i]: ' + stockPrefix + stockNames[i])
         if (localStorage.getItem(stockNames[i]) === undefined) {
-            fetch_sound(stockNames[i]);
+            fetch_sound(stockPrefix + stockNames[i]);
         }
     }
 }
@@ -67,8 +67,7 @@ loadStockNames();
 
 async function fetch_sound(name) {
     // Get from internet and store in localStorage
-    var audioFileUrl = stockPrefix + name
-    fetch(audioFileUrl)
+    fetch(name)
       .then((response)=>response.blob())
       .then((blob)=>{
 
@@ -79,19 +78,19 @@ async function fetch_sound(name) {
         reader.addEventListener("loadend", function() {
             var base64FileData = reader.result.toString();
             var mediaFile = {
-              fileUrl: audioFileUrl,
+              fileUrl: name,
               size: blob.size,
               type: blob.type,
               src: base64FileData
             };
             // save the file info to localStorage
             localStorage.setItem(name, JSON.stringify(mediaFile));
-            console.log('fetch_sound() COMPLETE: ' + audioFileUrl);
+            console.log('fetch_sound() COMPLETE: ' + name);
         });
         // Above listener is executed when below reader completes
         reader.readAsDataURL(blob);
       });
-    console.log('fetch_sound() STARTED: ' + audioFileUrl);
+    console.log('fetch_sound() STARTED: ' + name);
 }
 
 
