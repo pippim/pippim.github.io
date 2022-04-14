@@ -57,6 +57,7 @@ function loadStockNames () {
     // If stock name isn't in local storage, fetch it from website
     for (var i = 0; i < stockNames.length; i++) {
         console.log('stockNames[i]: ' + stockPrefix + stockNames[i])
+        console.log(localStorage.getItem(stockNames[i]))
         if (localStorage.getItem(stockNames[i]) === undefined) {
             fetch_sound(stockPrefix + stockNames[i]);
         }
