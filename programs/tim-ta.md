@@ -1,10 +1,10 @@
 ---
-title: Tim-ta - Timed Tasks
+title: Tim-ta (Timed Tasks) - Run Set of Alarms Consecutively
 layout: program
 ---
 
 <!-- javascript for Tim-ta Sounds -->
-<script type="text/javascript" src="/assets/js/sounds.js" ></script>
+<script type="text/javascript" src="/assets/js/sound.js" ></script>
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
