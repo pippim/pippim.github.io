@@ -47,7 +47,6 @@ async function load_sound(name) {
           reader.readAsDataURL(blob);
         });
       });
-  });
 };
 
 /* End of /assets/js/sound.js */
