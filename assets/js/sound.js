@@ -67,13 +67,10 @@ loadStockNames();
 
 async function fetch_sound(name) {
     // Get from internet and store in localStorage
+    console.log('fetch_sound() PRE-FETCH: ' + name);
     fetch(name)
-     .then(function(response) {
-      response.blob().then(function(blob) {
-/*
       .then((response)=>response.blob())
       .then((blob)=>{
-*/
         var reader = new FileReader();
 
         reader.addEventListener("loadend", function() {
@@ -90,7 +87,6 @@ async function fetch_sound(name) {
         });
         // Above listener is executed when below reader completes
         reader.readAsDataURL(blob);
-      });
      });
     console.log('fetch_sound() STARTED: ' + name);
 }
