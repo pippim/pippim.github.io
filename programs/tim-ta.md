@@ -109,7 +109,7 @@ window.onload = function() {
 
 <button id="download">Run Example</button>
 <br />
-<audio controls="true" id="audio" src=""></audio>
+<audio controls="true" id="audio"></audio>
 
 ---
 
