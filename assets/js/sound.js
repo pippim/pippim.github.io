@@ -40,8 +40,9 @@ async function load_sound(name) {
             };
             // save the file info to localStorage
             localStorage.setItem(name, JSON.stringify(mediaFile));
-            var reReadItem = JSON.parse(localStorage.getItem(name));
-            audioControl.src = reReadItem.src;
+            // Move below to new control
+            //var reReadItem = JSON.parse(localStorage.getItem(name));
+            //audioControl.src = reReadItem.src;
           });
           // Appears below is executed first, then above runs...
           reader.readAsDataURL(blob);
