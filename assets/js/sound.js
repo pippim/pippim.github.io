@@ -1,10 +1,10 @@
 ---
 ---
-/* ============================================================================
+/*
 
     /assets/js/sound.js
 
-============================================================================ */
+*/
 
 // Session Storage statistics
 var stock_sounds = {}  // FUTURE
@@ -81,12 +81,12 @@ async function fetch_sound(name) {
             };
             // save the file info to localStorage
             localStorage.setItem(name, JSON.stringify(mediaFile));
-            console.log('fetch_sound() COMPLETE: ' + audioFileUrl)
+            console.log('fetch_sound() COMPLETE: ' + audioFileUrl);
         });
-        // Appears below is executed first, then above runs...
+        // Above listener is executed when below reader completes
         reader.readAsDataURL(blob);
       });
-    console.log('fetch_sound() STARTED: ' + audioFileUrl)
+    console.log('fetch_sound() STARTED: ' + audioFileUrl);
 }
 
 
