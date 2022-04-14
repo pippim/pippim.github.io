@@ -1,10 +1,10 @@
 ---
 ---
-/*
+/* ============================================================================
 
     /assets/js/sound.js
 
-*/
+============================================================================ */
 
 // Session Storage statistics
 var stock_sounds = {}  // FUTURE
@@ -53,12 +53,16 @@ async function load_sound(name) {
 var stockNames = ["Alarm_03.mp3", "Alarm_10.mp3", "Alarm_12.mp3"];
 var stockPrefix = "{{ site.url }}/assets/sound/";
 
-// If stock name isn't in local storage, fetch it from website
-for (var i = 0; i < stockNames.length; i++) {
-    if (localStorage.getItem(stockNames[i]) === undefined) {
-        fetch_sound(stockNames[i]);
+function loadStockNames () {
+    // If stock name isn't in local storage, fetch it from website
+    for (var i = 0; i < stockNames.length; i++) {
+        if (localStorage.getItem(stockNames[i]) === undefined) {
+            fetch_sound(stockNames[i]);
+        }
     }
 }
+
+loadStockNames();
 
 async function fetch_sound(name) {
     // Get from internet and store in localStorage
