@@ -41,9 +41,11 @@ async function load_sound(name) {
             // Move below to new control
             //var reReadItem = JSON.parse(localStorage.getItem(name));
             //audioControl.src = reReadItem.src;
+            console.log('load_sound() COMPLETE: ' + audioFileUrl);
           });
           // Appears below is executed first, then above runs...
           reader.readAsDataURL(blob);
+          console.log('load_sound() STARTED: ' + audioFileUrl);
         });
       });
 }
