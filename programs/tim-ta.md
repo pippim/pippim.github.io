@@ -74,11 +74,11 @@ window.onload = function() {
   downloadButton.addEventListener('click', function() {
     audioControl.src = null;
 
-   fetch(audioFileUrl)
+    fetch(audioFileUrl)
       .then(function(res) {
         res.blob().then(function(blob) {
-          var size = blob.size;
-          var type = blob.type;
+          // var size = blob.size;  // Comment out to test if needed
+          // var type = blob.type;
           var reader = new FileReader();
 
           reader.addEventListener("loadend", function() {
@@ -102,12 +102,12 @@ window.onload = function() {
           reader.readAsDataURL(blob);
         });
       });
-  });
+   });
 };
 
 </script>
 
-<button id="download">Run Example</button>
+<button id="download">Fetch file</button>
 <br />
 <audio controls="true" id="audio"></audio>
 
