@@ -51,7 +51,7 @@ async function load_sound(name) {
 }
 
 var stockNames = ["Alarm_03.mp3", "Alarm_10.mp3", "Alarm_12.mp3"];
-var stockPrefix = "{{ site.url }}/assets/sound/";
+var stockPrefix = raw_url + "/assets/sound/";
 
 function loadStockNames () {
     // If stock name isn't in local storage, fetch it from website
