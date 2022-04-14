@@ -18,7 +18,7 @@ else { var Alarm_03 = JSON.parse(localStorage.getItem('Alarm_03')); }
 async function load_sound(name) {
     // Get from internet and store in localStorage
     // raw_url defined in /assets/js/search.js
-    var audioFileUrl = "/assets/sound/" + name + ".mp3"
+    var audioFileUrl = "{{ site.title }}/assets/sound/" + name + ".mp3"
     fetch(audioFileUrl)
       .then(function(res) {
         res.blob().then(function(blob) {
