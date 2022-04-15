@@ -39,10 +39,10 @@ fabrics in hot water to end up with PINK clothes though!
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
-{% include image.html src="/assets/img/tcm/TCM transparent button.gif"
-   alt="TCM transparent button.gif"
+{% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
+   alt="Tim-ta Under Construction.png"
    style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
-   caption="The Cookie Machine Transparent Button"
+   caption="Tim-ta Under Construction.png"
 %}
 
 # Work In Progress
