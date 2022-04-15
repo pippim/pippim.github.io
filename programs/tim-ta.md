@@ -67,6 +67,10 @@ you have uploaded
 
 ## Stock Sound Files
 
+<style>
+audio { vertical-align:middle }
+<style>
+
 These are Tim-ta stock sound files you can use when a timer task ends:
 <br>
 - **Alarm_03.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_03.mp3"></audio>
