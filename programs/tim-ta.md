@@ -44,7 +44,12 @@ fabrics in hot water to end up with PINK clothes though!
    style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
    caption="Tim-ta Under Construction.png"
 %}
-
+<style>
+.img-class {
+   background-color: $header-bg-color;  // For Cayman
+   background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color)
+}
+</style>
 # Work In Progress
 
 Tim-ta development started April 11, 2022. A budget of two months
@@ -52,15 +57,17 @@ has been given to this project.
 
 Initially all the features in 
 [Multi-Timer](https://www.pippim.com/programs/mt.html)
-will be provided. Some features such as locking the screen
-cannot be done from a browser though.
+will be provided. After that, new features will be added. 
 
-Then new features will be added.
+> NOTE: Some Multi-timer features such as locking the screen
+> cannot be done from a web browser.
 
-As of April 15, 2022 these task are finished:
+As of April 14, 2022 these features have been developed:
 
 - Three Sound files are saved to local storage. This saves bandwidth when they are played.
 
+As a four day week-end starts on April 15, 2022, lots
+of development should occur!
 
 ---
 
