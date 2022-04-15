@@ -119,7 +119,7 @@ function getMarkdownFilename() {
         else { full = "/_posts/" + urlParts[1] + "/" + root; }
     }
 
-    // If part is "programs" then drill down for name
+    // If part[1] is "programs" then drill down for name
     if (urlParts[1] == "programs") { full = "/programs/" + urlParts[2]; }
 
     return raw_url + full.replace('.html', '.md');
@@ -268,7 +268,7 @@ function htmlNavigatorInfo() {
             '  <th>Value</th></tr>\n';
 
     var position;
-    function success(p) { position = p; console.log(Object.keys(position))}
+    function success(p) { position = p; /* console.log(Object.keys(position)) */ }
     function error(msg) { console.log (msg); }
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(success, error);
