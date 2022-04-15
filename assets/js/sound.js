@@ -18,14 +18,16 @@ function loadStockNames () {
         if (localItem === null) { fetch_sound(stockNames[i]); }
                            else { setSoundSource (name, localItem); } } }
 
-loadStockNames();
+document.addEventListener("DOMContentLoaded", function(event){
+    loadStockNames();
+});
 
 async function fetch_sound(name) {
     // Get sound file from website and add to localStorage
-    console.log('fetch_sound() PRE-FETCH: ' + name);
     fetch(stockPrefix + name)
     .then((response)=>response.blob())
     .then((results)=>{
+        // Create asynchronous 'reader' and listen for it to finish
         var reader = new FileReader();
         reader.addEventListener("loadend", function() {
             var base64FileData = reader.result.toString();
