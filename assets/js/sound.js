@@ -14,13 +14,9 @@ const stockPrefix = "{{ site.url }}/assets/sound/";
 function loadStockNames () {
     // If stock name isn't in local storage, fetch it from website
     for (var i = 0; i < stockNames.length; i++) {
-        console.log('stockNames[i]: ' + stockPrefix + stockNames[i])
-        // console.log(localStorage.getItem(stockNames[i]))
-        if (localStorage.getItem(stockNames[i]) === null) {
-            fetch_sound(stockNames[i]);
-        }
-    }
-}
+        var localItem = localStorage.getItem(stockNames[i]);
+        if (localItem === null) { fetch_sound(stockNames[i]); }
+                           else { setSoundSource (name, localItem); } } }
 
 loadStockNames();
 
@@ -40,11 +36,17 @@ async function fetch_sound(name) {
               src: base64FileData
             };
             localStorage.setItem(name, JSON.stringify(mediaFile));
+            var reReadItem = JSON.parse(localStorage.getItem(name));
+            setSoundSource(name, reReadItem)
         });
         // Above listener is executed when below reader completes
         reader.readAsDataURL(results);
     });
 }
 
+function setSoundSource (name, localItem) {
+    audioControl = document.getElementById(name);
+    audioControl.src = localItem.src;
+}
 
 /* End of /assets/js/sound.js */
