@@ -79,18 +79,19 @@ the same time.
 
 ---
 
-## Timta (Timed Tasks) - Run Set of Alarms Consecutively
+## Tim-ta (Timed Tasks) - Run Set of Alarms Consecutively
 
-{% include image.html src="/assets/img/mt/mt progress bars.gif"
-   alt="Multi-Timer Progress Bars.gif"
+{% include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
+   alt="Tim-ta Introduction.png"
    style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
-   caption="Multi-Timer Application Indicator and Progress Bars"
+   caption="Tim-ta webpage header"
 %}
 
-Do you have a job with a fixed set of tasks and, each task always takes the same amount of time?
+Do you have a project with a fixed set of tasks and, each task 
+always takes the same amount of time?
 
-Then ***Timta*** (**Tim**ed **ta**sks) will help you get
-the job done without any missed appointments!
+Then ***Tim-ta*** (**Tim**ed-**ta**sks) will help you get
+the job done with each task started at the exact second!
 
 <a href="programs/tim-ta.html" style="font-size: 20px;">Read More...</a>
 
