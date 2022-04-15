@@ -5,6 +5,8 @@ layout: program
 
 <!-- javascript for Tim-ta Sounds -->
 <script type="text/javascript" src="/assets/js/sound.js" ></script>
+<!-- javascript for Tim-ta -->
+<script type="text/javascript" src="/assets/js/tim-ta.js" ></script>
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
