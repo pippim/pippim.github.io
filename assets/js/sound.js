@@ -16,15 +16,15 @@ const stockPrefix = "{{ site.url }}/assets/sound/";
 function loadStockNames () {
     // If stock name isn't in local storage, fetch it from website
     for (var i = 0; i < stockNames.length; i++) {
-        var localItem = localStorage.getItem(stockNames[i]);
+        var localItem = JSON.parse(localStorage.getItem(stockNames[i]));
         if (localItem === null) { fetch_sound(stockNames[i]); }
         else {
          console.log("localItem: " + localItem)
          setSoundSource(stockNames[i], localItem); } } }
 
-document.addEventListener("DOMContentLoaded", function(event){
+// document.addEventListener("DOMContentLoaded", function(event){
     loadStockNames();
-});
+// });
 
 async function fetch_sound(name) {
     // Get sound file from website and add to localStorage
