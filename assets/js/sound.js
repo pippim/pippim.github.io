@@ -7,6 +7,12 @@
     ONLY for webpages that need it, include this script to preload (fetch)
     sound files (audio files).
 
+    Source Code Credit (heavily modified after copying though):
+
+        https://staxmanade.com/2015/11/
+            how-to-base64-and-save-a-binary-audio-file-to-local-storage-and-
+            play-it-back-in-the-browser/
+
     Temporary usage as BBC commercial license investigated. May be easier to
     simply record a Dollar-rama alarm clock from China. In the meantime,
     here is credit to the BBC (British Broadcasting Corporation):
