@@ -417,7 +417,10 @@ There are actually four instances of HRB available:
 
 <div id="hrb_body"></div>
 <script>
-processHyperlinkRecipe("hrb_body")
+// wait until DOM loaded before Hyperlink call
+document.addEventListener("DOMContentLoaded", function(event){
+   processHyperlinkRecipe("hrb_body")
+});
 </script>
 
 Instructions for using the Hyperlink Recipe Baker can be found 
