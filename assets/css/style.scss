@@ -20,134 +20,114 @@ $lavender: #E6E6FA !default; // lavender
 
 
 .button {
-  display: inline-block;
-  border-radius: 2rem;
-  //vertical-align: middle;
-  margin-top: .4rem;
-  // margin: -.5rem .5rem -.5rem .5rem;
-  padding: 0px 1rem;
-  color: #fff;
-  border: 2px solid white;
-  transition: all .3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $header-bg-color;  // For Cayman
-    background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+    display: inline-block;
     border-radius: 2rem;
-    z-index: -2;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
-    transition: all .3s;
-    border-radius: 2rem;
-    z-index: -1;
-  }
-  &:hover {
+    //vertical-align: middle;
+    margin-top: .4rem;
+    // margin: -.5rem .5rem -.5rem .5rem;
+    padding: 0px 1rem;
     color: #fff;
-    &:before {
-      width: 100%;
+    border: 2px solid white;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $header-bg-color;  // For Cayman
+        background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+        border-radius: 2rem;
+        z-index: -2;
     }
-  }
-
-  + .button {
-    margin-left: 1rem;
-  }
-
-  @include large {
-    top: 1.5rem;  // Force buttons down a bit for vertical centering
-    padding: .5rem 1rem;
-  }
-
-  @include medium {
-    top: .75rem;
-    padding: .4rem 0.9rem;
-    font-size: 0.8rem;
-  }
-
-  @include small {
-    top: .25rem;
-    display: block;
-    width: 100%;
-    padding: .3rem .75rem;
-    font-size: 0.7rem;
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
+        transition: all .3s;
+        border-radius: 2rem;
+        z-index: -1;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+            width: 100%;
+        }
+    }
 
     + .button {
-      // margin-top: 1rem;
-      margin-left: 0;
+        margin-left: 1rem;
     }
-  }
+
+    @include large {
+        top: 1.5rem;  // Force buttons down a bit for vertical centering
+        padding: .5rem 1rem;
+    }
+
+    @include medium {
+        top: .75rem;
+        padding: .4rem 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    @include small {
+        top: .25rem;
+        display: block;
+        width: 100%;
+        padding: .3rem .75rem;
+        font-size: 0.7rem;
+
+        + .button {
+            // margin-top: 1rem;
+            margin-left: 0;
+        }
+    }
 }
 
 .hdr-bar {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: .5rem;            // Allow bit extra for button box height
-  text-align: right;        // Don't use "float: right;" that breaks rendering order
-  &:before {
-    content: "";
     display: block;
-  }
+    position: relative;
+    width: 100%;
+    height: .5rem;            // Allow bit extra for button box height
+    text-align: right;        // Don't use "float: right;" that breaks rendering order
+    &:before {
+        content: "";
+        display: block;
+    }
 }
 
 /* here! from: https://stackoverflow.com/a/71213971/6929343 */
 .hdr-btn,
 .hdr-bar > a {
-  display: inline-block;
-  position: relative;
-  color: $header-bg-color;  // Cayman green
-  padding: 5px 15px;        // vertical, horizontal padding around button text
-  font-size:0.75em;         // 75% of normal font for button text
-  margin-left: 10px;        // Now that right aligned, switch margin side
-  // From: https://stackoverflow.com/questions/65297617
-  background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
-  background-color: $honeydew; // Honeydew
+    display: inline-block;
+    position: relative;
+    color: $header-bg-color;  // Cayman green
+    padding: 5px 15px;        // vertical, horizontal padding around button text
+    font-size:0.75em;         // 75% of normal font for button text
+    margin-left: 10px;        // Now that right aligned, switch margin side
+    // From: https://stackoverflow.com/questions/65297617
+    background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
+    background-color: $honeydew; // Honeydew
 
-  &:hover {
-    background-position: bottom;
-    color: $lavender;       // WAS F0FFF0 or something like that Grayish
-  }
+    &:hover {
+        background-position: bottom;
+        color: $lavender;       // WAS F0FFF0 or something like that Grayish
+    }
 }
 
 /* Causing problems where visited gets hover property ...
 #markdown-toc a:visited { color: blue; }
 */
 #markdown-toc a:hover { color:black; }
-
-
-/* OLD class to be deprecated after check-html-ids.py does away with.
-.hdr-btn {
-  display: inline-block;
-  position: relative;
-  color: $header-bg-color;  // Cayman green
-  padding: 5px 15px;        // vertical, horizontal padding around button text
-  font-size:0.75em;         // 75% of normal font for button text
-  margin-left: 10px;        // Now that right aligned, switch margin side
-  // From: https://stackoverflow.com/questions/65297617
-  background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
-  background-color: $honeydew; // Honeydew
-
-  &:hover {
-    background-position:bottom;
-    color:#F0FFF0;
-  }
-}
-*/
 
 // Blog post front matter
 .front-matter {
@@ -220,13 +200,8 @@ mark {
 
     // This class will be toggled via JavaScript
     &.copied {
-        &::before {
-            content: "Copied!";
-        }
-
-        &::after {
-            content: "✔️";
-        }
+        &::before { content: "Copied!"; }
+        &::after { content: "✔️"; }
     }
 }
 
@@ -509,7 +484,6 @@ a.search-results:visited {
     display: none;
     max-width: 90vw;      // After 90% of view width, scroll bar appears on bottom
     max-height: 95vh;     // Scroll after 95% of view height, scroll bar appears on right
-    // overflow: hidden;  // overflow set in #tcm_window_body {}
     top: 20px;
     z-index: 9;
     background-color: #f1f1f1;
@@ -624,43 +598,42 @@ a.search-results:visited {
 }
 
 #tcm_window_close:hover {
-  opacity: 1.0;
-  //background-color: #777;  // Causing slight shift upper right?
+    opacity: 1.0;
+    //background-color: #777;  // Causing slight shift upper right?
 }
 
 #tcm_window_body {
-  max-width: 100%;
-  max-height: 100%;
-  overflow: auto;       // vertical scroll not appearing???
-  // overflow-y: auto;
-  //max-height: 24.57rem;     // Scroll after 24.55rem (Hyperlink Recipe Baker size)
-  white-space: pre;         // 2022-03-12 will this restore spacing in website_tree.json
-  // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
-  @-moz-document url-prefix() {
-    // bug fix: https://stackoverflow.com/a/39738403/6929343
-    padding-right: 1rem;
-  }
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    white-space: pre;         // 2022-03-12 will this restore spacing in website_tree.json
+
+    // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
+    @-moz-document url-prefix() {
+        // bug fix: https://stackoverflow.com/a/39738403/6929343
+        padding-right: 1rem;
+    }
 }
 
 /* Button in the MAIN window's header NOT in the tcm window! */
 #tcm_button {
-  // The Cookie Machine HIDDEN button positioned after regular buttons
-  display: inline-block;
-  vertical-align: middle;
-  position: absolute;
-  right: 0;
-  margin-right: .2rem;
-  background: transparent;
-  border: none;
-  opacity: 0.0;  // Make image invisible
+    // The Cookie Machine HIDDEN button positioned after regular buttons
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    margin-right: .2rem;
+    background: transparent;
+    border: none;
+    opacity: 0.0;  // Make image invisible
 
-  @include large { height: 38px; width: 38px; margin-top: 1.25rem; }
-  @include medium { height: 32px; width: 32px; margin-top: .75rem; }
-  @include small { height: 26px; width: 26px; margin-top: .5rem; }
+    @include large { height: 38px; width: 38px; margin-top: 1.25rem; }
+    @include medium { height: 32px; width: 32px; margin-top: .75rem; }
+    @include small { height: 26px; width: 26px; margin-top: .5rem; }
 
-  &:hover {
-    filter: brightness(150%);
-  }
+    &:hover {
+        filter: brightness(150%);
+    }
 }
 
 /* end of /assets/css/style.scss */
