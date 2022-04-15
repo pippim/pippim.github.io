@@ -16,7 +16,7 @@ const stockPrefix = "{{ site.url }}/assets/sound/";
 function loadStockNames () {
     // If stock name isn't in local storage, fetch it from website
     for (var i = 0; i < stockNames.length; i++) {
-        const name = StockNames[i];
+        const name = stockNames[i];
         const localItem = localStorage.getItem(name);
         if (localItem === null) { fetch_sound(name); }
         else { setSoundSource(name, localItem); } } }
