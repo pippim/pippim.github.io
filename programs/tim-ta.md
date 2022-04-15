@@ -67,11 +67,17 @@ you have uploaded
 
 ## Stock Sound Files
 
+Below are stock sound files built into {{ site.title }} website.
+
 <b>Alarm_03.mp3</b> <audio controls="true" id="Alarm_03.mp3"></audio>
 
-<b>Alarm_10.mp3</b> <audio controls="true" id="Alarm_10.mp3"></audio>
+<b>Alarm_05.mp3</b> <audio controls="true" id="Alarm_05.mp3"></audio>
 
 <b>Alarm_12.mp3</b> <audio controls="true" id="Alarm_12.mp3"></audio>
+
+
+## Custom Stock Files
+
 
 Alarm_03.mp3
 
