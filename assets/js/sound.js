@@ -4,19 +4,22 @@
 
     /assets/js/sound.js
 
+    ONLY for webpages that need it, include this script to preload (fetch)
+    sound files (audio files).
+
 ============================================================================ */
 
 // Session Storage statistics
-var stock_sounds = {}  // FUTURE
 const stockNames = ["Alarm_03.mp3", "Alarm_10.mp3", "Alarm_12.mp3"];
 const stockPrefix = "{{ site.url }}/assets/sound/";
 
 function loadStockNames () {
     // If stock name isn't in local storage, fetch it from website
     for (var i = 0; i < stockNames.length; i++) {
-        var localItem = localStorage.getItem(stockNames[i]);
-        if (localItem === null) { fetch_sound(stockNames[i]); }
-                           else { setSoundSource (name, localItem); } } }
+        const name = StockNames[i];
+        const localItem = localStorage.getItem(name);
+        if (localItem === null) { fetch_sound(name); }
+        else { setSoundSource(name, localItem); } } }
 
 document.addEventListener("DOMContentLoaded", function(event){
     loadStockNames();
