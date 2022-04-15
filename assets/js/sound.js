@@ -7,6 +7,21 @@
     ONLY for webpages that need it, include this script to preload (fetch)
     sound files (audio files).
 
+    Temporary usage as BBC commercial license investigated. May be easier to
+    simply record a Dollar-rama alarm clock from China. In the meantime,
+    here is credit to the BBC (British Broadcasting Corporation):
+
+    SOURCE: https://sound-effects.bbcrewind.co.uk/search?q=alarm%20clock&resultSize=40
+
+    Alarm_03.mp3 = Clocks - Domestic clock striking three o'clock.
+                            (Domestic clock with bell.)
+                 Filename - bbc_clocks---d_07022030.mp3
+    Alarm_05.mp3 = Clocks - Domestic clock striking five o'clock.
+                            (Domestic clock with bell.)
+                 Filename - bbc_clocks---d_07022056.mp3
+    Alarm_12.mp3 = Clocks - Domestic clock striking twelve o'clock.
+                            (Domestic clock with bell.)
+                 Filename - bbc_clocks---d_07022051.mp3
 ============================================================================ */
 
 // Session Storage statistics
