@@ -22,9 +22,9 @@ function loadStockNames () {
          console.log("localItem: " + localItem)
          setSoundSource(stockNames[i], localItem); } } }
 
-// document.addEventListener("DOMContentLoaded", function(event){
+document.addEventListener("DOMContentLoaded", function(event){
     loadStockNames();
-// });
+});
 
 async function fetch_sound(name) {
     // Get sound file from website and add to localStorage
