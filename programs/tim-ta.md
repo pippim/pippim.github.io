@@ -59,7 +59,24 @@ the same height as the regular buttons.
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
-# Alarm_03.mp3
+# Test Sound Files
+
+Click the filenames below to hear their sound. The first section
+lists stock sound files. The second section lists sound files
+you have uploaded
+
+## Stock Sound Files
+
+Alarm_03.mp3
+<audio controls="true" id="Alarm_03.mp3"></audio>
+
+Alarm_10.mp3
+<audio controls="true" id="Alarm_10.mp3"></audio>
+
+Alarm_12.mp3
+<audio controls="true" id="Alarm_12.mp3"></audio>
+
+Alarm_03.mp3
 
 <script>
 // Code goes here
