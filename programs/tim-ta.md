@@ -48,7 +48,7 @@ fabrics in hot water to end up with PINK clothes though!
 %}
 <style>
 .img-class {
-   background-color: #159957;  // For Cayman
+   background-color: #159957;  /* For Cayman (don't use //) */
    background-image: linear-gradient(120deg, #155799, #159957)
 }
 </style>
