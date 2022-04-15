@@ -12,10 +12,10 @@ layout: program
 
 # Introduction
 
-{% include image.html src="/assets/img/tcm/TCM Header with Gingerbread Man.png"
-   alt="TCM Header with Gingerbread Man.png"
-   style="float: none; width: 100%; margin: .25rem 0 1rem 0px;"
-   caption="The Cookie Machine's Gingerbread Man Button on far right."
+{% include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
+   alt="Tim-ta Introduction.png"
+   style="float: none; width: 100%; margin: 1rem 0 1rem;"
+   caption="Tim-ta webpage header"
 %}
 
 *Tim-ta* (**Tim**ed-**ta**sks) gives a countdown timer
@@ -45,14 +45,15 @@ fabrics in hot water to end up with PINK clothes though!
    caption="The Cookie Machine Transparent Button"
 %}
 
-# How to Open The Cookie Machine (TCM)
+# Work In Progress
 
-There is a transparent button you can select to open 
-*The Cookie Machine* (TCM).
+Tim-ta development started April 11, 2022. A budget of two months
+has been given to this project.
 
-As the `.gif` animation above shows, the transparent button is
-located to the far right of the regular buttons. It is
-the same height as the regular buttons.
+As of April 15, 2022 these task are finished:
+
+- Sound files saved to local storage to save bandwidth each time the are played.
+
 
 ---
 
@@ -67,9 +68,7 @@ you have uploaded
 
 ## Stock Sound Files
 
-<style>
-audio { vertical-align:middle }
-</style>
+<style> audio { vertical-align:middle } </style>
 
 These are Tim-ta stock sound files you can use when a timer task ends:
 <br>
@@ -79,60 +78,9 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 <br><br>
 - **Alarm_12.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_12.mp3"></audio>
 
-## Custom Stock Files
+## Uploaded Sound Files
 
-
-Alarm_03.mp3
-
-<script>
-// Code goes here
-
-var audioFileUrl = '{{ site.url }}/assets/sound/Alarm_03.mp3';
-window.onload = function() {
-  var downloadButton = document.getElementById('download');
-  var audioControl = document.getElementById('audio');
-  audioControl.onerror = function(){
-    console.log(audioControl.error);
-  };
-  downloadButton.addEventListener('click', function() {
-    audioControl.src = null;
-
-    fetch(audioFileUrl)
-      .then(function(res) {
-        res.blob().then(function(blob) {
-          // var size = blob.size;  // Comment out to test if needed
-          // var type = blob.type;
-          var reader = new FileReader();
-
-          reader.addEventListener("loadend", function() {
-            // console.log('reader.result:', reader.result);
-            // 1: play the base64 encoded data directly works
-            // audioControl.src = reader.result;
-            // 2: Serialize the data to localStorage and read it back then play...
-            var base64FileData = reader.result.toString();
-            var mediaFile = {
-              fileUrl: audioFileUrl,
-              size: blob.size,
-              type: blob.type,
-              src: base64FileData
-            };
-            // save the file info to localStorage
-            localStorage.setItem('myTest', JSON.stringify(mediaFile));
-            // read out the file info from localStorage again
-            var reReadItem = JSON.parse(localStorage.getItem('myTest'));
-            audioControl.src = reReadItem.src;
-          });
-          reader.readAsDataURL(blob);
-        });
-      });
-   });
-};
-
-</script>
-
-<button id="download">Fetch file</button>
-<br />
-<audio controls="true" id="audio"></audio>
+Future placeholder to drag and drop your own sound files here.
 
 ---
 
