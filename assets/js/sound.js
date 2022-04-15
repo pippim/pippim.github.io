@@ -20,9 +20,10 @@ function loadStockNames () {
         if (localItem === null) { fetch_sound(stockNames[i]); }
         else { setSoundSource(stockNames[i], localItem); } } }
 
-// document.addEventListener("DOMContentLoaded", function(event){
+document.addEventListener("DOMContentLoaded", function(event){
+    // Must wait due to error: Uncaught TypeError: audioControl is null
     loadStockNames();
-// });
+});
 
 async function fetch_sound(name) {
     // Get sound file from website and add to localStorage
