@@ -69,7 +69,7 @@ you have uploaded
 
 <style>
 audio { vertical-align:middle }
-<style>
+</style>
 
 These are Tim-ta stock sound files you can use when a timer task ends:
 <br>
