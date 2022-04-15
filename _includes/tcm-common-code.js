@@ -101,6 +101,7 @@ function htmlWebsiteTree(results) {
 
 function getMarkdownFilename() {
     // WARNING: Extremely Jekyll Dependent for posts directory structure
+    // If part = "programs" then go down another directory level
     var urlPath = location.pathname;
     var urlParts = location.pathname.split("/");
     // if urlPath is simply / it's the root /index.html, else assume no suffixes
@@ -117,6 +118,9 @@ function getMarkdownFilename() {
         if (flagPostsByYear.toLowerCase() != "true") { full = "/_posts/" + root; }
         else { full = "/_posts/" + urlParts[1] + "/" + root; }
     }
+
+    // If part is "programs" then drill down for name
+    if (urlParts[1] == "programs") { full = "/programs/" + urlParts[2]; }
 
     return raw_url + full.replace('.html', '.md');
 }
