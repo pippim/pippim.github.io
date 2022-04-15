@@ -50,9 +50,16 @@ fabrics in hot water to end up with PINK clothes though!
 Tim-ta development started April 11, 2022. A budget of two months
 has been given to this project.
 
+Initially all the features in 
+[Multi-Timer](https://www.pippim.com/programs/mt.html)
+will be provided. Some features such as locking the screen
+cannot be done from a browser though.
+
+Then new features will be added.
+
 As of April 15, 2022 these task are finished:
 
-- Sound files saved to local storage to save bandwidth each time the are played.
+- Three Sound files are saved to local storage. This saves bandwidth when they are played.
 
 
 ---
