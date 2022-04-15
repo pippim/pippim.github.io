@@ -39,6 +39,8 @@ fabrics in hot water to end up with PINK clothes though!
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
+---
+
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Tim-ta Under Construction.png"
    style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
@@ -46,8 +48,8 @@ fabrics in hot water to end up with PINK clothes though!
 %}
 <style>
 .img-class {
-   background-color: $header-bg-color;  // For Cayman
-   background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color)
+   background-color: #159957;  // For Cayman
+   background-image: linear-gradient(120deg, #155799, #159957)
 }
 </style>
 # Work In Progress
