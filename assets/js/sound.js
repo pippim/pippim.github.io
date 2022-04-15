@@ -18,7 +18,9 @@ function loadStockNames () {
     for (var i = 0; i < stockNames.length; i++) {
         var localItem = localStorage.getItem(stockNames[i]);
         if (localItem === null) { fetch_sound(stockNames[i]); }
-        else { setSoundSource(stockNames[i], localItem); } } }
+        else {
+         console.log("localItem: " + localItem)
+         setSoundSource(stockNames[i], localItem); } } }
 
 document.addEventListener("DOMContentLoaded", function(event){
     loadStockNames();
