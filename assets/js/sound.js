@@ -10,7 +10,7 @@
 ============================================================================ */
 
 // Session Storage statistics
-const stockNames = ["Alarm_03.mp3", "Alarm_10.mp3", "Alarm_12.mp3"];
+const stockNames = ["Alarm_03.mp3", "Alarm_05.mp3", "Alarm_12.mp3"];
 const stockPrefix = "{{ site.url }}/assets/sound/";
 
 function loadStockNames () {
@@ -18,9 +18,7 @@ function loadStockNames () {
     for (var i = 0; i < stockNames.length; i++) {
         var localItem = JSON.parse(localStorage.getItem(stockNames[i]));
         if (localItem === null) { fetch_sound(stockNames[i]); }
-        else {
-         console.log("localItem: " + localItem)
-         setSoundSource(stockNames[i], localItem); } } }
+        else { setSoundSource(stockNames[i], localItem); } } }
 
 document.addEventListener("DOMContentLoaded", function(event){
     loadStockNames();
