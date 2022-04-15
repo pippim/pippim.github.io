@@ -301,7 +301,7 @@ The {{ site.title }} website tree is displayed below:
    padding: .5rem;
    max-height: 90vh;
    overflow: auto;
-   white-space: pre;         // 2022-03-12 Proper spacing in website_tree.json
+   white-space: pre;         /* 2022-03-12 Proper spacing in website_tree.json */
 }
 </style>
 
