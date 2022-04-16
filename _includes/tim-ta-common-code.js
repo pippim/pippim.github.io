@@ -2,8 +2,6 @@
 https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-building-todo-app/
 -->
 
-Start of include file tim-ta-common-code.js
-
 <div class="tta">
 <div class="app">
   <h4 class="mb-3">Laundry App</h4>
@@ -77,8 +75,8 @@ Start of include file tim-ta-common-code.js
     justify-content: center;
     align-items: center;
     height: 80vh;
-    nax-height: 90vh;
-    nax-width: 90vw;
+    max-height: 90vh;
+    max-width: 90vw;
 }
 .app {
     background-color: #fff;
@@ -92,6 +90,9 @@ Start of include file tim-ta-common-code.js
     text-align: center;
 }
 
+#form {
+    visibility: hidden;
+}
 #addNew {
     display: flex;
     justify-content: space-between;
