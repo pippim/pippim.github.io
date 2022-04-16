@@ -88,9 +88,6 @@ https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-buildin
     border-radius: 8px;
     padding: 15px;
 }
-.text-center {
-    text-align: center;
-}
 
 #form {
     visibility: hidden;
