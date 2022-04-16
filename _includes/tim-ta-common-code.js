@@ -2,13 +2,15 @@
 https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-building-todo-app/
 -->
 
+<h2>Tim-ta Project</h2>
+
 <div class="tta">
 <div class="app">
   <h4 class="mb-3">Laundry App</h4>
 
   <div id="addNew" data-bs-toggle="modal" data-bs-target="#form">
     <span>Add New Task</span>
-    <i class="fas fa-plus">&#x2B;</i>
+    <span class="fas fa-plus">&#x2B;</span>
   </div>
 </div>
 
@@ -80,8 +82,8 @@ https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-buildin
 }
 .app {
     background-color: #fff;
-    width: 300px;
-    height: 500px;
+    //width: 300px;
+    //height: 500px;
     border: 5px solid #abcea1;
     border-radius: 8px;
     padding: 15px;
@@ -104,6 +106,7 @@ https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-buildin
 }
 .fa-plus {
     background-color: #abcea1;
+    font-size: 25px;
     padding: 3px;
     border-radius: 3px;
 }
@@ -238,10 +241,5 @@ let editTask = (e) => {
 })();
 
 </script>
-
-
-End of include file tim-ta-common-code.js
-
-
 
 /* End of /_includes/tim-ta-common-code.js */
