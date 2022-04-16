@@ -44,7 +44,7 @@ fabrics in hot water to end up with PINK clothes though!
 ---
 
 <a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Tim-ta Under Construction.png"
@@ -79,7 +79,7 @@ of development should occur!
 ---
 
 <a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
 # Test Sound Files
 
@@ -110,7 +110,7 @@ Future placeholder to drag and drop your own sound files here.
 ---
 
 <a id='hdr5'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 # Tim-ta Projects
 
@@ -215,6 +215,14 @@ Cancel symbol 2.
 Cancel</span>
 
 ---
+
+<a id='hdr6'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
+
+{% include tim-ta-common-code.js %}
+
+---
+
 
 <a id="hdr13"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a></div>
