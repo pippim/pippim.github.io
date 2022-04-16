@@ -12,11 +12,9 @@ https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-buildin
     <span>Add New Task</span>
     <span class="fas fa-plus">&#x2B;</span>
   </div>
+  <h5 class="text-center my-3">Tasks</h5>
+  <div id="tasks"></div>
 </div>
-
-<h5 class="text-center my-3">Tasks</h5>
-
-<div id="tasks"></div>
 
 <form
   class="modal fade"
