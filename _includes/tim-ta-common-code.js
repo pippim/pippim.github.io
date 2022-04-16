@@ -83,7 +83,7 @@ https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-buildin
 .app {
     background-color: #fff;
     width: 80vw;
-    height: 80vw;
+    height: 80vh;
     border: 5px solid #abcea1;
     border-radius: 8px;
     padding: 15px;
