@@ -28,7 +28,8 @@ var timer_set = {
     notification_all_sets_end: true,
     progress_bar_update_seconds: 1,
     window_position: null,
-    ask_save_window_position: true
+    ask_save_window_position: true,
+    project_source: "Here"
 }
 
 var single_timer = {
