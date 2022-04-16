@@ -13,6 +13,8 @@
             how-to-base64-and-save-a-binary-audio-file-to-local-storage-and-
             play-it-back-in-the-browser/
 
+    Sound file: Alarm_01.wav from Scorpion2185. GPL3 license.
+
     Temporary usage as BBC commercial license investigated. May be easier to
     simply record a Dollar-rama alarm clock from China. In the meantime,
     here is credit to the BBC (British Broadcasting Corporation):
@@ -31,7 +33,7 @@
 ============================================================================ */
 
 // Session Storage statistics
-const stockNames = ["Alarm_03.mp3", "Alarm_05.mp3", "Alarm_12.mp3"];
+const stockNames = ["Alarm_01.wav", "Alarm_03.mp3", "Alarm_05.mp3", "Alarm_12.mp3"];
 const stockPrefix = "{{ site.url }}/assets/sound/";
 
 function loadStockNames () {
