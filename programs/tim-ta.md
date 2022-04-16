@@ -140,13 +140,13 @@ Trash symbol. Unicode #x1f5d1
 
 ---
 
-Run symbol. Unicode #127939 (Decimal)
+Run symbol 1. Unicode #127939 (Decimal)
 &emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#127939;</span>
 
 ---
 
 Run symbol 2. (Refresh) Could be used to "run" project. Unicode #x1f5d8
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#xx1f5d8;</span>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x1f5d8;</span>
 
 ---
 
