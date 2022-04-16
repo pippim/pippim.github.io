@@ -282,6 +282,7 @@ let acceptData = () => {
   localStorage.setItem("data", JSON.stringify(data));
 
   console.log(data);
+  createTasks();
 };
 
 let createTasks = () => {
@@ -302,12 +303,6 @@ let createTasks = () => {
   });
 
   resetForm();
-};
-
-let acceptData = () => {
-  // Other codes are here
-
-  createTasks();
 };
 
 let resetForm = () => {
