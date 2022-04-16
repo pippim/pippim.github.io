@@ -7,12 +7,14 @@
 // dragElement defined in /assets/js/theCookieMachine.js
 // dragElement(document.getElementById("tim-ta_window"));
 
-var tim-ta_sets = {
+// Global to all Tim-ta Projects
+var tim-ta_projects = {
     arrNames: [],
     confirm_delete_phrase: "delete"
 }
 
-var timer_set = {
+// Global to SINGLE Tim-ta Project
+var tim-ta_project = {
     name: "",
     default_ask_to_begin_timer: true,
     ask_to_begin_set: true,
@@ -32,7 +34,8 @@ var timer_set = {
     project_source: "Here"
 }
 
-var single_timer = {
+// Global to SINGLE Timer within a Tim-ta Project
+var tim-ta_timer = {
     name: "",
     hours: 0,
     minutes: 0,
