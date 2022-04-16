@@ -4,15 +4,7 @@
 
 // Button Image source: https://www.cleanpng.com/free/
 
-/* include tcm-common-code.js code shared by:
-    /assets/js/theCookieMachine.js - Draggable Modal Dialog
-    /tcm.md - The Cookie Machine documentation webpage
-*/
-// { % include tcm-common-code.js %}
-
-// Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // dragElement defined in /assets/js/theCookieMachine.js
-// Make the DIV element draggable:
 // dragElement(document.getElementById("tim-ta_window"));
 
 var tim-ta_sets = {
