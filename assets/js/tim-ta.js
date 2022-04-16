@@ -17,6 +17,7 @@
 
 var tim-ta_sets = {
     arrNames: [],
+    confirm_delete_phrase: "delete"
 }
 
 var timer_set = {
