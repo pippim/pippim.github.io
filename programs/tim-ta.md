@@ -186,5 +186,35 @@ Move Down List symbol 2. Unicode #x21A7
 
 ---
 
+OK symbol 1. Unicode #x2713
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x2713;</span>
+
+---
+
+OK symbol 2. Unicode #x2714
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x2714;</span>
+
+---
+
+OK symbol 3.
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+OK</span>
+
+---
+
+Cancel symbol 1. Unicode #x1f5d9
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x1f5d9;</span>
+
+---
+
+Cancel symbol 2.
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+Cancel</span>
+
+---
+
 <a id="hdr13"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a></div>
