@@ -5,16 +5,16 @@
 // Button Image source: https://www.cleanpng.com/free/
 
 // dragElement defined in /assets/js/theCookieMachine.js
-// dragElement(document.getElementById("tim-ta_window"));
+// dragElement(document.getElementById("tta_window"));
 
 // Global to all Tim-ta Projects
-var tim-ta_projects = {
+var tta_projects = {
     arrNames: [],
     confirm_delete_phrase: "delete"
 }
 
 // Global to SINGLE Tim-ta Project
-var tim-ta_project = {
+var tta_project = {
     name: "",
     default_ask_to_begin_timer: true,
     ask_to_begin_set: true,
@@ -35,7 +35,7 @@ var tim-ta_project = {
 }
 
 // Global to SINGLE Timer within a Tim-ta Project
-var tim-ta_timer = {
+var tta_timer = {
     name: "",
     hours: 0,
     minutes: 0,
@@ -47,14 +47,14 @@ var tim-ta_timer = {
     timer_sound_filename: null,
 }
 
-document.querySelector('#tim-ta_button').addEventListener('click', () => {
+document.querySelector('#tta_button').addEventListener('click', () => {
   // TCM button click on webpage header
-  document.querySelector('#tim-ta_window').style.cssText = `
+  document.querySelector('#tta_window').style.cssText = `
     display: flex;
     flex-direction: column;
   `;
-  // Make tim-ta_button invisible
-  document.querySelector('#tim-ta_button').style.cssText = `
+  // Make tta_button invisible
+  document.querySelector('#tta_button').style.cssText = `
     opacity: 0.0;
     background: transparent;
     background-image: none;
@@ -62,48 +62,48 @@ document.querySelector('#tim-ta_button').addEventListener('click', () => {
   `;
 });
 
-document.querySelector('#tim-ta_window_close').addEventListener('click', () => {
-  // Hide tim-ta_window
-  document.querySelector('#tim-ta_window').style.display = "none";
-  // Make tim-ta_button (main page header) visible?
+document.querySelector('#tta_window_close').addEventListener('click', () => {
+  // Hide tta_window
+  document.querySelector('#tta_window').style.display = "none";
+  // Make tta_button (main page header) visible?
   if (vis_this_page == "true") { makeTcmButtonVisible() }
 });
 
 
-const b = document.getElementById('tim-ta_window_body')  // Website tree entries html codes
+const tta_body = document.getElementById('tta_window_body')  // Website tree entries html codes
 
-document.querySelector('#tim-ta_display_home').addEventListener('click', () => {
+document.querySelector('#tta_display_home').addEventListener('click', () => {
     // arrConfigYml in search.js required by two TCM Window Buttons - Home & Webpage Info
     var html = htmlFrontMatter(arrConfigYml, "Site Front Matter ('_config.yml')");
-    b.innerHTML = html; // Update TCM Window body
+    tta_body.innerHTML = html; // Update TCM Window body
 });
 
-document.querySelector('#tim-ta_display_cloud').addEventListener('click', () => {
+document.querySelector('#tta_display_cloud').addEventListener('click', () => {
     // Display Website Tree
     fetch(raw_url + '/assets/json/website_tree.json')
       .then((response) => response.json())
       .then((website_tree) => {
         var html = htmlWebsiteTree(website_tree);
-        b.innerHTML = html; // Update TCM Window body
+        tta_body.innerHTML = html; // Update TCM Window body
       });
 });
 
-document.querySelector('#tim-ta_display_local').addEventListener('click', () => {
+document.querySelector('#tta_display_local').addEventListener('click', () => {
     // Display cookies and cache (WIP)
     var html = htmlVisibilitySwitches();
     html += htmlSearchStats();
     html += htmlScreenInfo();
-    b.innerHTML = html;
+    tta_body.innerHTML = html;
 
     /*  Process TCM Window Button Visibility slider switches - shared  with ~/tcm.md
         USE: % include tcm-common-code.js %} */
     tcmButtonVisibility()});
 
-document.querySelector('#tim-ta_hyperlink_recipe').addEventListener('click', () => {
-    processHyperlinkRecipe('tim-ta_window_body');
+document.querySelector('#tta_hyperlink_recipe').addEventListener('click', () => {
+    processHyperlinkRecipe('tta_window_body');
 });
 
-document.querySelector('#tim-ta_webpage_info').addEventListener('click', () => {
+document.querySelector('#tta_webpage_info').addEventListener('click', () => {
     // Display webpage info - filename, front matter and text (WIP)
     // raw_url set in search.js loaded before us
     var urlMarkdown = getMarkdownFilename();
@@ -116,11 +116,11 @@ document.querySelector('#tim-ta_webpage_info').addEventListener('click', () => {
             var html = htmlFrontMatter(front_yml, "Current Webpage Front Matter");
             html += htmlWindowInfo();
             html += htmlNavigatorInfo();
-            b.innerHTML = html; // Update TCM Window body
+            tta_body.innerHTML = html; // Update TCM Window body
         });
 });
 
-document.querySelector('#tim-ta_cookie_jar').addEventListener('click', () => {
+document.querySelector('#tta_cookie_jar').addEventListener('click', () => {
     // Display webpage info - filename, front matter and text (WIP)
     // raw_url set in search.js loaded before us
     // https://www.javascripttutorial.net/web-apis/javascript-notification/
@@ -130,7 +130,7 @@ document.querySelector('#tim-ta_cookie_jar').addEventListener('click', () => {
                '</div>'
     var fileDownload="https://pippim.com/assets/img/TCM Header with Gingerbread Man.png"
     //alert('About to download ' + fileDownload);
-    b.innerHTML = html;
+    tta_body.innerHTML = html;
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes
     //let downloading = downloads.download({url: fileDownload})
     //console.log("downloading: " + downloading)
@@ -190,7 +190,7 @@ function introduction_to_html() {
     html += "  ☑ Countdown Timers. For multi-phase time sensitive missions.<br>\n";
     html += "  ☑ And in the future... Other ways of sharing/using Cookies.\n";
     html += "</p>";
-    b.innerHTML = html;              // Update TCM Window body
+    tta_body.innerHTML = html;              // Update TCM Window body
 }
 
 introduction_to_html()  // Load immediately
