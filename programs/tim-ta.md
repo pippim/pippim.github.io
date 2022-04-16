@@ -260,6 +260,13 @@ let formValidation = () => {
   } else {
     console.log("success");
     msg.innerHTML = "";
+    acceptData();
+    add.setAttribute("data-bs-dismiss", "modal");
+    add.click();
+
+    (() => {
+      add.setAttribute("data-bs-dismiss", "");
+    })();
   }
 };
 
@@ -277,24 +284,7 @@ let acceptData = () => {
   console.log(data);
 };
 
-let formValidation = () => {
-
-  // Other codes are here
-   else {
-
-    // Other codes are here
-
-    acceptData();
-    add.setAttribute("data-bs-dismiss", "modal");
-    add.click();
-
-    (() => {
-      add.setAttribute("data-bs-dismiss", "");
-    })();
-  }
-};
-
-et createTasks = () => {
+let createTasks = () => {
   tasks.innerHTML = "";
   data.map((x, y) => {
     return (tasks.innerHTML += `
