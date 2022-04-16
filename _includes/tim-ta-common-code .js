@@ -1,6 +1,9 @@
 <!-- Modal from:
 https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-building-todo-app/
 -->
+
+Start of include file tim-ta-common-code.js
+
 <div class="app">
   <h4 class="mb-3">Laundry App</h4>
 
@@ -232,5 +235,10 @@ let editTask = (e) => {
 })();
 
 </script>
+
+
+End of include file tim-ta-common-code.js
+
+
 
 /* End of /_includes/tim-ta-common-code.js */
