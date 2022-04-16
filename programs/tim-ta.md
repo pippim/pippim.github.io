@@ -123,20 +123,26 @@ A project is a set of tasks (countdown timers). You
 can create as many projects as you like. Each project
 can have as many timers needed.
 
+---
+
 Plus symbol. Unicode #x2B
-&emsp;<span class='hdr-btn' style='font-size:50px;'>&#x2B;</span>
+&emsp;<span class='hdr-btn' style='font-size:40px;'>&#x2B;</span>
+---
 
 Edit symbol. Unicode #x270D
-&emsp;<span class='hdr-btn' style='font-size:50px;'>&#x270D;</span>
+&emsp;<span class='hdr-btn' style='font-size:40px;'>&#x270D;</span>
+---
 
 Trash symbol. Unicode #x1f5d1
-&emsp;<span class='hdr-btn' style='font-size:50px;'>&#x1f5d1;</span>
+&emsp;<span class='hdr-btn' style='font-size:40px;'>&#x1f5d1;</span>
+---
 
 Run symbol. Unicode #127939 (Decimal)
-&emsp;<span class='hdr-btn' style='font-size:50px;'>&#127939;</span>
+&emsp;<span class='hdr-btn' style='font-size:40px;'>&#127939;</span>
+---
 
 Refresh symbol. Could be used to "run" project. Unicode #x1f5d8
-&emsp;<span class='hdr-btn' style='font-size:50px;'>&#x1f5d8;</span>
+&emsp;<span class='hdr-btn' style='font-size:40px;'>&#x1f5d8;</span>
 
 ---
 
