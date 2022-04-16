@@ -71,8 +71,8 @@ https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-buildin
 .tta {
     font-family: sans-serif;
     margin: 0 50px;
-    background-color: #e5e5e5;
-    overflow: auto;
+    /* background-color: #e5e5e5; */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
