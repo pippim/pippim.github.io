@@ -168,17 +168,25 @@ White Up Arrow from Bar symbol. Move task up project. Unicode #x21ea
 ---
 
 White Down Arrow from Bar symbol. Move task down project. Unicode #x21ea + flip
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle; transform: scale(-1, 1);'>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle; 
+-moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+-ms-transform: scale(-1, 1);
+transform: scale(-1, 1);'>
 &#x21ea;</span>
+
 ---
 
 Move Up List symbol 2. Unicode #x21A5
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x21A5;</span>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x21A5;</span>
 
 ---
 
 Move Down List symbol 2. Unicode #x21A7
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x21A7;</span>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x21A7;</span>
 
 ---
 
