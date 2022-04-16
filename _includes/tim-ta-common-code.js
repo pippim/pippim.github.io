@@ -71,8 +71,8 @@ https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-buildin
 .tta {
     font-family: sans-serif;
     margin: 0 50px;
-    background-color: #e5e5e5;
-    overflow: auto;
+    /* background-color: #e5e5e5; */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,8 +82,8 @@ https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-buildin
 }
 .app {
     background-color: #fff;
-    //width: 300px;
-    //height: 500px;
+    width: 80vw;
+    height: 80vw;
     border: 5px solid #abcea1;
     border-radius: 8px;
     padding: 15px;
@@ -242,4 +242,4 @@ let editTask = (e) => {
 
 </script>
 
-/* End of /_includes/tim-ta-common-code.js */
+<!-- End of /_includes/tim-ta-common-code.js -->
