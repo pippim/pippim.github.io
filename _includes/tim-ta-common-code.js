@@ -4,6 +4,7 @@ https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-buildin
 
 Start of include file tim-ta-common-code.js
 
+<div class="tta">
 <div class="app">
   <h4 class="mb-3">Laundry App</h4>
 
@@ -61,12 +62,13 @@ Start of include file tim-ta-common-code.js
     </div>
   </div>
 </form>
+</div>
 
 <!-- Style from: https://www.freecodecamp.org/news/
                  learn-crud-operations-in-javascript-by-building-todo-app/
 -->
 <style>
-.mb-3 {
+.tta {
     font-family: sans-serif;
     margin: 0 50px;
     background-color: #e5e5e5;
