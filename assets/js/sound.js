@@ -33,7 +33,8 @@
 ============================================================================ */
 
 // Session Storage statistics
-const stockNames = ["Alarm_01.wav", "Alarm_03.mp3", "Alarm_05.mp3", "Alarm_12.mp3"];
+const stockNames = ["Alarm_01.wav", "Alarm_01.mp3",
+                    "Alarm_03.mp3", "Alarm_05.mp3", "Alarm_12.mp3"];
 const stockPrefix = "{{ site.url }}/assets/sound/";
 
 function loadStockNames () {
