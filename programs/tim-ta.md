@@ -145,17 +145,27 @@ Run symbol. Unicode #127939 (Decimal)
 
 ---
 
-Refresh symbol. Could be used to "run" project. Unicode #x21ea
+Run symbol 2. (Refresh) Could be used to "run" project. Unicode #x1f5d8
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#xx1f5d8;</span>
+
+---
+
+Run symbol 3. Could be used to "run" project. Unicode #x27f3
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x27f3;</span>
+
+---
+
+White Up Arrow from Bar symbol. Move task up project. Unicode #x21ea
 &emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x21ea;</span>
 
 ---
 
-Move Up List symbol. Unicode #x21A5
+Move Up List symbol 2. Unicode #x21A5
 &emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x21A5;</span>
 
 ---
 
-Move Down List symbol. Unicode #x21A7
+Move Down List symbol 2. Unicode #x21A7
 &emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x21A7;</span>
 
 ---
