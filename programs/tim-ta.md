@@ -145,8 +145,18 @@ Run symbol. Unicode #127939 (Decimal)
 
 ---
 
-Refresh symbol. Could be used to "run" project. Unicode #x1f5d8
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x1f5d8;</span>
+Refresh symbol. Could be used to "run" project. Unicode #x21ea
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x21ea;</span>
+
+---
+
+Move Up List symbol. Unicode #x21A5
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x21A5;</span>
+
+---
+
+Move Down List symbol. Unicode #x21A7
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x21A7;</span>
 
 ---
 
