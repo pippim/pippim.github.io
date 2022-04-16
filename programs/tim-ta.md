@@ -93,6 +93,8 @@ you have uploaded
 
 These are Tim-ta stock sound files you can use when a timer task ends:
 <br>
+- **Alarm_01.wav** &emsp;&emsp;<audio controls="true" id="Alarm_01.wav"></audio>
+<br><br>
 - **Alarm_03.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_03.mp3"></audio>
 <br><br>
 - **Alarm_05.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_05.mp3"></audio>
@@ -108,10 +110,16 @@ Future placeholder to drag and drop your own sound files here.
 <a id='hdr5'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
 
-# Tim-ta Set Configuration
+# Tim-ta Projects
 
-Here you define a set of tasks (countdown timers)
-that form a project.
+Here you can Create, Run, Update and Delete Tim-ta projects.
+Generically, these actions are grouped together under the
+name **CRUD** (**C**reate **R**ead
+**U**pdate **D**elete).
+
+A project is a set of tasks (countdown timers). You
+can create as many projects as you like. Each project
+can have as many timers needed.
 
 <form id="regForm" action="">
 
