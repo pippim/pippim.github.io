@@ -125,23 +125,23 @@ can have as many timers needed.
 
 Plus symbol. Unicode #x2B
 
-<span style='font-size:60px;'>&#x2B;</span>
+<span style='font-size:50px;'>&#x2B;</span>
 
 Edit symbol. Unicode #x270D
 
-<span style='font-size:60px;'>&#x270D;</span>
+<span style='font-size:50px;'>&#x270D;</span>
 
 Trash symbol. Unicode #x1f5d1
 
-<span style='font-size:60px;'>&#x1f5d1;</span>
+<span style='font-size:50px;'>&#x1f5d1;</span>
 
 Run symbol. Unicode #127939 (Decimal)
 
-<span style='font-size:60px;'>&#127939;</span>
+<span style='font-size:50px;'>&#127939;</span>
 
-Refresh symbol. Could be used to "run" project. Unicode #27F3
+Refresh symbol. Could be used to "run" project. Unicode #27F2
 
-<span style='font-size:60px;'>&#27F3;</span>
+<span style='font-size:50px;'>&#27F2;</span>
 
 ---
 
