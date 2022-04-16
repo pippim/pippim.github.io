@@ -6,7 +6,7 @@ layout: program
 <!-- javascript for Tim-ta Sounds -->
 <script type="text/javascript" src="/assets/js/sound.js" ></script>
 <!-- javascript for Tim-ta -->
-<script type="text/javascript" src="/assets/js/tim-ta.js?version=1.001" ></script>
+<script type="text/javascript" src="/assets/js/tim-ta.js" ></script>
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
@@ -123,6 +123,25 @@ A project is a set of tasks (countdown timers). You
 can create as many projects as you like. Each project
 can have as many timers needed.
 
+Plus symbol. Unicode #x2B
+
+<span style='font-size:20px;'>&#x2B;</span>
+
+Edit symbol. Unicode #x270D
+
+<span style='font-size:20px;'>&#x270D;</span>
+
+Trash symbol. Unicode #x1f5d1
+
+<span style='font-size:20px;'>&#x1f5d1;</span>
+
+Run symbol. Unicode #127939 (Decimal)
+
+<span style='font-size:20px;'>&#127939;</span>
+
+Refresh symbol. Unicode #1F5D8 (Decimal)
+
+<span style='font-size:20px;'>&#1F5D8;</span>
 
 ---
 
