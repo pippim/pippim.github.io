@@ -126,38 +126,50 @@ can have as many timers needed.
 ---
 
 Plus symbol. Unicode #x2B
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x2B;</span>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x2B;</span>
 
 ---
 
 Edit symbol. Unicode #x270D
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x270D;</span>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x270D;</span>
 
 ---
 
 Trash symbol. Unicode #x1f5d1
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x1f5d1;</span>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x1f5d1;</span>
 
 ---
 
 Run symbol 1. Unicode #127939 (Decimal)
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#127939;</span>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#127939;</span>
 
 ---
 
 Run symbol 2. (Refresh) Could be used to "run" project. Unicode #x1f5d8
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x1f5d8;</span>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x1f5d8;</span>
 
 ---
 
 Run symbol 3. Could be used to "run" project. Unicode #x27f3
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x27f3;</span>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x27f3;</span>
 
 ---
 
 White Up Arrow from Bar symbol. Move task up project. Unicode #x21ea
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>&#x21ea;</span>
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x21ea;</span>
 
+---
+
+White Down Arrow from Bar symbol. Move task down project. Unicode #x21ea + flip
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle; transform: scale(-1, 1);'>
+&#x21ea;</span>
 ---
 
 Move Up List symbol 2. Unicode #x21A5
