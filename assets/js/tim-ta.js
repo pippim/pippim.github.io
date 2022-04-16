@@ -8,7 +8,7 @@
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
-// {% include tcm-common-code.js %}
+// { % include tcm-common-code.js %}
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
 // dragElement defined in /assets/js/theCookieMachine.js
