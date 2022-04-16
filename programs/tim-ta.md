@@ -123,174 +123,235 @@ A project is a set of tasks (countdown timers). You
 can create as many projects as you like. Each project
 can have as many timers needed.
 
-<form id="regForm" action="">
-
-<h1>Create Tim-ta Set of Tasks:</h1>
-
-<!-- One "tab" for each step in the form: -->
-<div class="tab">Name:
-  <p><input placeholder="First name..." oninput="this.className = ''"></p>
-  <p><input placeholder="Last name..." oninput="this.className = ''"></p>
-</div>
-
-<div class="tab">Contact Info:
-  <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
-  <p><input placeholder="Phone..." oninput="this.className = ''"></p>
-</div>
-
-<div class="tab">Birthday:
-  <p><input placeholder="dd" oninput="this.className = ''"></p>
-  <p><input placeholder="mm" oninput="this.className = ''"></p>
-  <p><input placeholder="yyyy" oninput="this.className = ''"></p>
-</div>
-
-<div class="tab">Login Info:
-  <p><input placeholder="Username..." oninput="this.className = ''"></p>
-  <p><input placeholder="Password..." oninput="this.className = ''"></p>
-</div>
-
-<div style="overflow:auto;">
-  <div style="float:right;">
-    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+<!-- Modal from: https://www.freecodecamp.org/news/
+                 learn-crud-operations-in-javascript-by-building-todo-app/
+-->
+<form
+  class="modal fade"
+  id="form"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p>Task Title</p>
+        <input type="text" class="form-control" name="" id="textInput" />
+        <div id="msg"></div>
+        <br />
+        <p>Due Date</p>
+        <input type="date" class="form-control" name="" id="dateInput" />
+        <br />
+        <p>Description</p>
+        <textarea
+          name=""
+          class="form-control"
+          id="textarea"
+          cols="30"
+          rows="5"
+        ></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="submit" id="add" class="btn btn-primary">Add</button>
+      </div>
+    </div>
   </div>
-</div>
-
-<!-- Circles which indicates the steps of the form: -->
-<div style="text-align:center;margin-top:40px;">
-  <span class="step"></span>
-  <span class="step"></span>
-  <span class="step"></span>
-  <span class="step"></span>
-</div>
-
 </form>
 
+<!-- Style from: https://www.freecodecamp.org/news/
+                 learn-crud-operations-in-javascript-by-building-todo-app/
+-->
 <style>
- /* Style the form */
-#regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
+body {
+  font-family: sans-serif;
+  margin: 0 50px;
+  background-color: #e5e5e5;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.app {
+  background-color: #fff;
+  width: 300px;
+  height: 500px;
+  border: 5px solid #abcea1;
+  border-radius: 8px;
+  padding: 15px;
+}
+#addNew {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(171, 206, 161, 0.35);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.fa-plus {
+  background-color: #abcea1;
+  padding: 3px;
+  border-radius: 3px;
+}
+#msg {
+  color: red;
+}
+#tasks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
-/* Style the input fields */
-input {
-  padding: 10px;
-  width: 100%;
-  font-size: 17px;
-  font-family: Raleway;
-  border: 1px solid #aaaaaa;
+#tasks div {
+  border: 3px solid #abcea1;
+  background-color: #e2eede;
+  border-radius: 6px;
+  padding: 5px;
+  display: grid;
+  gap: 4px;
+}
+#tasks div .options {
+  justify-self: center;
+  display: flex;
+  gap: 20px;
 }
 
-/* Mark input boxes that gets an error on validation: */
-input.invalid {
-  background-color: #ffdddd;
+#tasks div .options i {
+  cursor: pointer;
 }
 
-/* Hide all steps by default: */
-.tab {
-  display: none;
-}
-
-/* Make circles that indicate the steps of the form: */
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbbbbb;
-  border: none;
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5;
-}
-
-/* Mark the active step: */
-.step.active {
-  opacity: 1;
-}
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-  background-color: #04AA6D;
-} 
 </style>
 
+<!-- Script from: https://www.freecodecamp.org/news/
+                  learn-crud-operations-in-javascript-by-building-todo-app/
+-->
 <script>
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
+let form = document.getElementById("form");
+let textInput = document.getElementById("textInput");
+let dateInput = document.getElementById("dateInput");
+let textarea = document.getElementById("textarea");
+let msg = document.getElementById("msg");
+let tasks = document.getElementById("tasks");
+let add = document.getElementById("add");
 
-function showTab(n) {
-  // This function will display the specified tab of the form ...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  // ... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formValidation();
+});
+
+let formValidation = () => {
+  if (textInput.value === "") {
+    console.log("failure");
+    msg.innerHTML = "Task cannot be blank";
   } else {
-    document.getElementById("prevBtn").style.display = "inline";
+    console.log("success");
+    msg.innerHTML = "";
   }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-  // ... and run a function that displays the correct step indicator:
-  fixStepIndicator(n)
-}
+};
 
-function nextPrev(n) {
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form... :
-  if (currentTab >= x.length) {
-    //...the form gets submitted:
-    document.getElementById("regForm").submit();
-    return false;
-  }
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
+let data = [];
 
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false:
-      valid = false;
-    }
-  }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-  return valid; // return the valid status
-}
+let acceptData = () => {
+  data.push({
+    text: textInput.value,
+    date: dateInput.value,
+    description: textarea.value,
+  });
 
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
+  localStorage.setItem("data", JSON.stringify(data));
+
+  console.log(data);
+};
+
+let formValidation = () => {
+
+  // Other codes are here
+   else {
+
+    // Other codes are here
+
+    acceptData();
+    add.setAttribute("data-bs-dismiss", "modal");
+    add.click();
+
+    (() => {
+      add.setAttribute("data-bs-dismiss", "");
+    })();
   }
-  //... and adds the "active" class to the current step:
-  x[n].className += " active";
-}
+};
+
+et createTasks = () => {
+  tasks.innerHTML = "";
+  data.map((x, y) => {
+    return (tasks.innerHTML += `
+    <div id=${y}>
+          <span class="fw-bold">${x.text}</span>
+          <span class="small text-secondary">${x.date}</span>
+          <p>${x.description}</p>
+  
+          <span class="options">
+            <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
+            <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
+          </span>
+        </div>
+    `);
+  });
+
+  resetForm();
+};
+
+let acceptData = () => {
+  // Other codes are here
+
+  createTasks();
+};
+
+let resetForm = () => {
+  textInput.value = "";
+  dateInput.value = "";
+  textarea.value = "";
+};
+
+let deleteTask = (e) => {
+  e.parentElement.parentElement.remove();
+
+  data.splice(e.parentElement.parentElement.id, 1);
+
+  localStorage.setItem("data", JSON.stringify(data));
+
+  console.log(data);
+};
+
+let editTask = (e) => {
+  let selectedTask = e.parentElement.parentElement;
+
+  textInput.value = selectedTask.children[0].innerHTML;
+  dateInput.value = selectedTask.children[1].innerHTML;
+  textarea.value = selectedTask.children[2].innerHTML;
+
+  deleteTask(e);
+};
+
+(() => {
+  data = JSON.parse(localStorage.getItem("data")) || [];
+  console.log(data);
+  createTasks();
+})();
+
 </script>
 
 ---
