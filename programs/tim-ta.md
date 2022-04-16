@@ -121,7 +121,7 @@ name **CRUD** (**C**reate **R**ead
 
 A project is a set of tasks (countdown timers). You
 can create as many projects as you like. Each project
-can have as many timers needed.
+can have as many tasks (timers) as needed.
 
 ---
 
@@ -158,6 +158,14 @@ Run symbol 2. (Refresh) Could be used to "run" project. Unicode #x1f5d8
 Run symbol 3. Could be used to "run" project. Unicode #x27f3
 &emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
 &#x27f3;</span>
+
+---
+
+Run symbol 4. Traditional "Play" button. Unicode #x25b6
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#x25b6;</span>
+Advantage of this symbol is common audio control button. Plus transition to future
+buttons for: pause, rewind x seconds, fast forward x seconds, restart and skip to end.
 
 ---
 
