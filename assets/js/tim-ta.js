@@ -103,6 +103,7 @@ localStorage.setItem('ttaStore', ttaStore)
 function ttaNewConfig() {
     ttaStore = tta_store;
     ttaProject = tta_project;
+    logAllTasks("Nothing Added Yet, just skeleton record")
     ttaProject.project_name = "Laundry";
 
     ttaTask = ttaNewTask("Wash Cycle");
@@ -123,12 +124,12 @@ function ttaNewConfig() {
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
     logAllTasks("Added Rinse Cycle Task")
 
-    ttaTask = ttaNewTask("Dryer");
+    ttaTask = ttaNewTask("Dryer Cycle");
     //console.log("After ttaNewTask()", ttaTask.task_name);
     ttaTaskDuration(0, 58, 0);
     //console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
-    ttaTask = ttaProject.objTasks["Dryer"];
+    ttaTask = ttaProject.objTasks["Dryer Cycle"];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
     logAllTasks("Added Dryer Task")
 
@@ -149,9 +150,9 @@ function logAllTasks(str) {
     //if ("Rinse Cycle" in Object.keys(ttaProject.objTasks)) {
         console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
     }
-    if (ttaProject.arrTasks.includes("Dryer")) {
+    if (ttaProject.arrTasks.includes("Dryer Cycle")) {
     //if ("Dryer" in Object.keys(ttaProject.objTasks)) {
-        console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
+        console.log("3. ", ttaProject.objTasks["Dryer Cycle"].task_name);
     }
 }
 
