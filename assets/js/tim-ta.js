@@ -85,14 +85,17 @@ function ttaNewConfig() {
     ttaProject.project_name = "Laundry";
 
     ttaTask = ttaNewTask("Wash Cycle");
+    console.log(ttaTask.task_name);
     ttaTaskDuration(0, 16, 30);
     ttaAddTask(ttaTask);
 
     ttaTask = ttaNewTask("Rinse Cycle");
+    console.log(ttaTask.task_name);
     ttaTaskDuration(0, 13, 15);
     ttaAddTask(ttaTask);
 
     ttaTask = ttaNewTask("Dryer");
+    console.log(ttaTask.task_name);
     ttaTaskDuration(0, 58, 0);
     ttaAddTask(ttaTask);
 
@@ -102,7 +105,7 @@ function ttaNewConfig() {
 }
 
 function ttaNewTask (name) {
-    var new_task = tta_task;
+    var new_task = tta_task; // This will be last one saved... don't want!
     new_task.task_index = ttaProject.cntTasks;
     new_task.task_name = name;
     new_task.hours = new_task.minutes = new_task.seconds = 0;
