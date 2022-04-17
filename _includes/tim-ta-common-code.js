@@ -127,36 +127,16 @@ function show_hide_column(col_no, do_show) {
 
 var scrWidth, scrSmall, scrMedium, scrLarge;
 function scrSetSize() {
-    var scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    // cell phones don't have window.innerWidth
+    scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     scrSmall = scrMedium = scrLarge = false;
     if (scrWidth < 640) { scrSmall = true; }
     else if (scrWidth > 1007) { scrLarge = true; }
     else { scrMedium = true; }
-    console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
+    //console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
 }
-scrSetSize();
+scrSetSize();  // Call on document load
 window.addEventListener("resize", () => { scrSetSize(); });
-
-/* Duplicate @large, @medium and @small
-
-@mixin large {
-  @media screen and (min-width: #{$large-breakpoint}) {
-    @content;
-  }
-}
-
-@mixin medium {
-  @media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
-    @content;
-  }
-}
-
-@mixin small {
-  @media screen and (max-width: #{$medium-breakpoint}) {
-    @content;
-  }
-}
-*/
 
 function paintProjectsTable(id) {
 }
