@@ -128,13 +128,14 @@ function show_hide_column(col_no, do_show) {
 var [ scrSmall, scrMedium, scrLarge ] = Array(3).fill(false);
 function scrSetSize() {
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    [ scrSmall, scrMedium, scrLarge ] = Array(3).fill(false);
     if (width < 640) { scrSmall = true; }
     else if (width > 1007) { scrLarge = true; }
     else { scrMedium = true; }
     console.log("scr Small Medium Large: ", scrSmall, scrMedium, scrLarge)
 }
 scrSetSize();
-window.addEventListener("resize", function(){ scrSetSize(); });
+window.addEventListener("resize", () => { scrSetSize(); }
 
 /* Duplicate @large, @medium and @small
 
