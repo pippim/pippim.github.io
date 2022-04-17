@@ -58,6 +58,7 @@ function htmlFrontMatter(results, name) {
             'position: sticky;\n' +
             'top: 0;\n' +
             'z-index: 1;\n' +
+            'background: #f1f1f1;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     return html
@@ -192,6 +193,7 @@ function htmlSearchStats() {
             'position: sticky;\n' +
             'top: 0;\n' +
             'z-index: 1;\n' +
+            'background: #f1f1f1;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     return html; // Update TCM Window body
@@ -228,7 +230,7 @@ function htmlScreenInfo() {
             'position: sticky;\n' +
             'top: 0;\n' +
             'z-index: 1;\n' +
-            'background: #fff;\n' +
+            'background: #f1f1f1;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
@@ -279,7 +281,7 @@ function htmlWindowInfo() {
             'position: sticky;\n' +
             'top: 0;\n' +
             'z-index: 1;\n' +
-            'background: #fff;\n' +
+            'background: #f1f1f1;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
@@ -326,7 +328,7 @@ function htmlNavigatorInfo() {
             'position: sticky;\n' +
             'top: 0;\n' +
             'z-index: 1;\n' +
-            'background: #fff;\n' +
+            'background: #f1f1f1;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
