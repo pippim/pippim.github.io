@@ -169,6 +169,8 @@ function paintTasksTable(id) {
     for (var i = 0; i < ttaProject.arrTasks.length; i++) {
         ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
         console.log(ttaProject.arrTasks[i], ttaTask.task_name);
+        console.log("Detail loop - name:", ttaTask.task_name);
+        console.log("Detail loop - minutes:", ttaTask.minutes);
         html += tabTaskDetail();
     }
     html += '</table>\n';     // End of our table and form
