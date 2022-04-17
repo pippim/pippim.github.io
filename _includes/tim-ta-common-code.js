@@ -140,7 +140,7 @@ window.onresize = function() {
     // Can be called many times during a real window resize
     clearTimeout(scrResizeDelay);  // Reset window resize counter to zero
     scrResizeDelay = setTimeout(scrSetSize, 500);  // After 500 ms set screen size
-});
+}
 
 function paintProjectsTable(id) {
 }
