@@ -128,6 +128,7 @@ function ttaNewConfig() {
     ttaAddTask(ttaTask);
     ttaTask = ttaProject.objTasks["Dryer"];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
+    logAllTasks("Added last task")
 
     ttaStore.arrProjects = [ttaProject.project_name];
     ttaStore.objProjects[ttaProject.project_name] = ttaProject;
@@ -147,7 +148,8 @@ function ttaAddTask (obj) {
     ttaProject.arrTasks.push(obj.task_name);
     ttaProject.objTasks[obj.task_name] = obj;
     ttaProject.cntTasks += 1;
-    //console.log(ttaProject.cntTasks, obj.task_name);
+    console.log("ttaAddTask() 1:", ttaProject.objTasks[obj.task_name].task_name);
+    console.log("ttaAddTask() 2:", ttaProject.cntTasks, obj.task_name);
 }
 
 function ttaTaskDuration (hours, minutes, seconds) {
@@ -161,6 +163,7 @@ function paintProjectsTable(id) {
     // If only one Project defined, skip and paintTasksTable
     // Grab the first (and only) Project at array offset 0
     console.log("ttaStore.arrProjects:", ttaStore.arrProjects);
+    logAllTasks("paintProjectsTable START")
     // ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
     // Use default ttaProject in buffer!
     paintTasksTable(id);
@@ -175,9 +178,7 @@ function paintTasksTable(id) {
     // Statistics Table heading
     html += tabTasksHeading();
 
-    console.log(ttaProject.objTasks["Wash Cycle"].task_name);
-    console.log(ttaProject.objTasks["Rinse Cycle"].task_name);
-    console.log(ttaProject.objTasks["Dryer"].task_name);
+    logAllTasks("paintTasksTable START")
 
     for (var i = 0; i < ttaProject.arrTasks.length; i++) {
         var task_name = ttaProject.arrTasks[i]; // Get into field for debugging
@@ -213,6 +214,13 @@ function paintTasksTable(id) {
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
+}
+
+function logAllTasks(str) {
+    console.log(str);
+    console.log(ttaProject.objTasks["Wash Cycle"].task_name);
+    console.log(ttaProject.objTasks["Rinse Cycle"].task_name);
+    console.log(ttaProject.objTasks["Dryer"].task_name);
 }
 
 function tabTasksHeading() {
