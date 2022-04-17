@@ -64,11 +64,7 @@ Tasks Table (Small Screen)
 
 -->
 
-+=====================================================================+<br>
-| Run | Up | Down | Edit | Delete | Project Name | # Tasks | Duration |<br>
-+-----+----+------+------+--------+--------------+---------+----------+<br>
-
-<table id='projects' border=0>
+<table id='projects' border="collapse">
   <col class="col0"/>
   <col class="col1"/>
   <col class="col2"/>
@@ -78,7 +74,7 @@ Tasks Table (Small Screen)
   <col class="col6"/>
   <col class="col7"/>
   <col class="col8"/>
-  <tr><th>Run</th><th>Up</th><th>Down</th><th>Edit</hd><th>Delete</th><th>Controls</td>
+  <tr><th>Run</th><th>Up</th><th>Down</th><th>Edit</th><th>Delete</th><th>Controls</th>
   <th>Project Name</th><th># Tasks</th><th>Duration</th></tr>
   <tr><td colspan="9"><table><tr><td>Why is this here?</td></tr></table></td></tr>
   <tr><td>Run</td><td>Up</td><td>Down</td><td>Edit</td><td>Delete</td><td>Controls</td>
