@@ -181,6 +181,13 @@ function htmlSearchStats() {
     html += '<style>\n#statTable th, #statTable td {\n' +
             '  padding: 0 .5rem;\n' +
             '}\n'
+    html += '#statTable th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #fff;\n' +
+            '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     return html; // Update TCM Window body
 }
@@ -210,6 +217,13 @@ function htmlScreenInfo() {
     html += '<style>\n#screenTable th, #screenTable td {\n' +
             '  text-align: left;\n' +
             '  padding: 0 .5rem;\n' +
+            '}\n'
+    html += '#screenTable th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #fff;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
@@ -255,6 +269,13 @@ function htmlWindowInfo() {
             '  max-height: 80vh;\n' +
             '  overflow: auto;\n' +
             '}\n'
+    html += '#windowTable th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #fff;\n' +
+            '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
     return html;
@@ -294,6 +315,13 @@ function htmlNavigatorInfo() {
             '  max-width: 100vw;\n' +
             '  max-height: 80vh;\n' +
             '  overflow: auto;\n' +
+            '}\n'
+    html += '#navigatorTable th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #fff;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
