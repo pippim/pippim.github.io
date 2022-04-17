@@ -97,7 +97,7 @@ function ttaNewConfig() {
     ttaTaskDuration(0, 13, 15);
     //console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
-    ttaTask = ttaProject.objTasks["Rinse Cycle"];
+    ttaTask = ttaProject.objTasks[ttaTask.task_name];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
 
     ttaTask = ttaNewTask("Dryer");
