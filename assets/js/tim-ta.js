@@ -141,15 +141,15 @@ function ttaNewConfig() {
 function logAllTasks(str) {
     console.log("========", str, "========");
     console.log("Object.keys(ttaProject.objTasks):" ,Object.keys(ttaProject.objTasks))
-    if (ttaProject.arrTasks.contains("Wash Cycle")) {
+    if (ttaProject.arrTasks.includes("Wash Cycle")) {
     //if ("Wash Cycle" in Object.keys(ttaProject.objTasks)) {
         console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
     }
-    if (ttaProject.arrTasks.contains("Rinse Cycle")) {
+    if (ttaProject.arrTasks.includes("Rinse Cycle")) {
     //if ("Rinse Cycle" in Object.keys(ttaProject.objTasks)) {
         console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
     }
-    if (ttaProject.arrTasks.contains("Dryer")) {
+    if (ttaProject.arrTasks.includes("Dryer")) {
     //if ("Dryer" in Object.keys(ttaProject.objTasks)) {
         console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
     }
