@@ -53,6 +53,12 @@ function htmlFrontMatter(results, name) {
     // html += '#hrb_body td { padding: 0 1rem; }\n'
     html += '#tcm_window_body table { border-collapse: collapse ! important; }\n'
     html += '#tcm_window_body th, td { padding: .018rem 1rem; }\n'
+    html += '#tcm_window_body th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     return html
 }
@@ -186,7 +192,6 @@ function htmlSearchStats() {
             'position: sticky;\n' +
             'top: 0;\n' +
             'z-index: 1;\n' +
-            'background: #fff;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     return html; // Update TCM Window body
