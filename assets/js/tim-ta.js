@@ -16,11 +16,12 @@ function scrSetSize() {
     // cell phones don't have window.innerWidth
     scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     scrSmall = scrMedium = scrLarge = false;
-    if (scrWidth < 640) { scrSmall = true; }
+    if (scrWidth < 641) { scrSmall = true; }
     else if (scrWidth > 1007) { scrLarge = true; }
     else { scrMedium = true; }
     console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
 }
+
 // window.addEventListener('resize', () => { func1(); func2(); });
 window.onresize = function() {
     // Can be called many times during a real window resize
@@ -103,29 +104,22 @@ localStorage.setItem('ttaStore', ttaStore)
 function ttaNewConfig() {
     ttaStore = tta_store;
     ttaProject = tta_project;
-    logAllTasks("Nothing Added Yet, just skeleton record")
     ttaProject.project_name = "Laundry";
 
     ttaNewTask("Wash Cycle");
     ttaTaskDuration(0, 16, 30);
     ttaAddTask(ttaTask);
-    logAllTasks("Added Wash Cycle Task")
 
     ttaNewTask("Rinse Cycle");
-    logAllTasks("Adding Rise Cycle ttaNewTask")
     ttaTaskDuration(0, 13, 15);
     ttaAddTask(ttaTask);
-    logAllTasks("Added Rinse Cycle Task")
 
     ttaNewTask("Dryer");
-    logAllTasks("Adding Dryer ttaNewTask")
     ttaTaskDuration(0, 58, 0);
     ttaAddTask(ttaTask);
-    logAllTasks("Added Dryer Task")
 
     ttaStore.arrProjects = [ttaProject.project_name];
     ttaStore.objProjects[ttaProject.project_name] = ttaProject;
-    // console.log("object:", ttaTask.task_name, ttaTask.minutes);
     ttaStore.cntProjects = 1;
 }
 
@@ -179,11 +173,7 @@ function ttaTaskDuration (hours, minutes, seconds) {
 function paintProjectsTable(id) {
     // If only one Project defined, skip and paintTasksTable
     // Grab the first (and only) Project at array offset 0
-    console.log("ttaStore.arrProjects:", ttaStore.arrProjects);
-    console.log("ttaStore.objProjects:", ttaStore.objProjects);
-    logAllTasks("paintProjectsTable START")
-    // ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
-    // Use default ttaProject in buffer!
+    ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
     paintTasksTable(id);
 }
 
@@ -200,22 +190,6 @@ function paintTasksTable(id) {
 
     for (var i = 0; i < ttaProject.arrTasks.length; i++) {
         ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-        html += tabTaskDetail();
-        /* var task_name = ttaProject.arrTasks[i]; // Get into field for debugging
-        var work_task = ttaProject.objTasks[task_name];
-        if (work_task.task_name != task_name) {
-            console.log("Names Differ:", work_task.task_name, task_name)
-            ttaTask = ttaProject.objTasks[task_name];
-            if (ttaTask.task_name != task_name) {
-                console.log("Names Differ AGAIN!:", ttaTask.task_name, task_name)
-            }
-        }
-        console.log("Detail loop - i:", i, ttaProject.arrTasks[i]);
-        ttaTask = ttaProject.objTasks["Wash Cycle"];
-        console.log("ttaTask - name:", ttaTask.task_name);
-        console.log("work_task - name:", work_task.task_name);
-        console.log("Detail loop - minutes:", ttaTask.minutes);
-        */
         html += tabTaskDetail();
     }
     html += '</table>\n';     // End of our table and form
@@ -272,6 +246,7 @@ function hmsToString(hours, minutes, seconds) {
     if (hours > 0) { str += hours.toString(); + "Hr." }
     if (minutes > 0) { str += minutes.toString(); + "Min" }
     if (seconds > 0) { str += seconds.toString(); + "Sec" }
+    return str;
 }
 
 /* End of /assets/js/tim-ta.js */
