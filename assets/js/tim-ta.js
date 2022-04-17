@@ -89,6 +89,7 @@ function ttaNewConfig() {
     ttaTaskDuration(0, 16, 30);
     console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
+    ttaTask = ttaProject.objTasks["Wash Cycle"];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
 
     ttaTask = ttaNewTask("Rinse Cycle");
@@ -96,6 +97,7 @@ function ttaNewConfig() {
     ttaTaskDuration(0, 13, 15);
     console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
+    ttaTask = ttaProject.objTasks["Rinse Cycle"];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
 
     ttaTask = ttaNewTask("Dryer");
@@ -103,6 +105,7 @@ function ttaNewConfig() {
     ttaTaskDuration(0, 58, 0);
     console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
+    ttaTask = ttaProject.objTasks["Dryer"];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
 
     ttaStore.arrProjects = [ttaProject.project_name];
