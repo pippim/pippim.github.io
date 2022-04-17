@@ -141,15 +141,29 @@ function ttaNewConfig() {
 function logAllTasks(str) {
     console.log("========", str, "========");
     console.log("Object.keys(ttaProject.objTasks):" ,Object.keys(ttaProject.objTasks))
-    if ("Wash Cycle" in Object.keys(ttaProject.objTasks)) {
+    if (ttaProject.arrTasks.contains("Wash Cycle")) {
+    //if ("Wash Cycle" in Object.keys(ttaProject.objTasks)) {
         console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
     }
-    if ("Rinse Cycle" in Object.keys(ttaProject.objTasks)) {
+    if (ttaProject.arrTasks.contains("Rinse Cycle")) {
+    //if ("Rinse Cycle" in Object.keys(ttaProject.objTasks)) {
         console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
     }
-    if ("Dryer" in Object.keys(ttaProject.objTasks)) {
+    if (ttaProject.arrTasks.contains("Dryer")) {
+    //if ("Dryer" in Object.keys(ttaProject.objTasks)) {
         console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
     }
+}
+
+// https://stackoverflow.com/a/237176/6929343
+Array.prototype.contains = function(obj) {
+    var i = this.length;
+    while (i--) {
+        if (this[i] === obj) {
+            return true;
+        }
+    }
+    return false;
 }
 
 function ttaNewTask (name) {
