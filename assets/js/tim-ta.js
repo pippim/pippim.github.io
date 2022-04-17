@@ -7,6 +7,27 @@
 // dragElement defined in /assets/js/theCookieMachine.js
 // dragElement(document.getElementById("tta_window"));
 
+
+var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
+
+scrSetSize();  // Call on document load
+
+function scrSetSize() {
+    // cell phones don't have window.innerWidth
+    scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    scrSmall = scrMedium = scrLarge = false;
+    if (scrWidth < 640) { scrSmall = true; }
+    else if (scrWidth > 1007) { scrLarge = true; }
+    else { scrMedium = true; }
+    console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
+}
+// window.addEventListener('resize', () => { func1(); func2(); });
+window.onresize = function() {
+    // Can be called many times during a real window resize
+    clearTimeout(scrTimeout);  // Reset window resize delay to zero
+    scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
+}
+
 // Configuration & Container for all Tim-ta Projects
 // Default below for creation, overwritten when retrieved from localStorage
 // The order arrProjects names appear is order they are displayed
@@ -136,30 +157,10 @@ function ttaTaskDuration (hours, minutes, seconds) {
 }
 
 
-var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
-
-scrSetSize();  // Call on document load
-
-function scrSetSize() {
-    // cell phones don't have window.innerWidth
-    scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    scrSmall = scrMedium = scrLarge = false;
-    if (scrWidth < 640) { scrSmall = true; }
-    else if (scrWidth > 1007) { scrLarge = true; }
-    else { scrMedium = true; }
-    console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
-}
-// window.addEventListener('resize', () => { func1(); func2(); });
-window.onresize = function() {
-    // Can be called many times during a real window resize
-    clearTimeout(scrTimeout);  // Reset window resize delay to zero
-    scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
-}
-
-
 function paintProjectsTable(id) {
     // If only one Project defined, skip and paintTasksTable
     // Grab the first (and only) Project at array offset 0
+    console.log("ttaStore.arrProjects:", ttaStore.arrProjects);
     ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
     paintTasksTable(id);
 }
