@@ -155,7 +155,6 @@ Array.prototype.contains = function(obj) {
 }
 
 function ttaNewTask (name) {
-    //ttaTask = {};
     ttaTask = Object.assign({}, tta_task);
     ttaTask_index = ttaProject.cntTasks;
     ttaTask.task_name = name;
@@ -272,7 +271,7 @@ function hmsToString(hours, minutes, seconds) {
     var str = "";
     if (hours > 0) { str += hours.toString(); + "Hr." }
     if (minutes > 0) { str += minutes.toString(); + "Min" }
-    if (seconds > 0) { str += seconds.tString(); + "Sec" }
+    if (seconds > 0) { str += seconds.toString(); + "Sec" }
 }
 
 /* End of /assets/js/tim-ta.js */
