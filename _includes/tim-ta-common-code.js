@@ -73,9 +73,8 @@ Tasks Table (Small Screen)
   <col class="col5"/>
   <col class="col6"/>
   <col class="col7"/>
-  <tr><th>colspan="5" Controls</th>
+  <tr><th>colspan="5"Controls</th>
   <th>Project Name</th><th>#</th><th>Duration</th></tr>
-  <!-- <tr><td colspan="9"><table><tr><td>Optional Heading</td></tr></table></td></tr> -->
   <tr><td>Run</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
   <td>Laundry</td><td>3</td><td>1 hour, 40 minutes, 10 seconds</td></tr>
   <tr><td>Run</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
@@ -83,7 +82,7 @@ Tasks Table (Small Screen)
   <tr><td>Run</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
   <td>Work Out</td><td>7</td><td>45 minutes</td></tr>
   <tr><td>Run</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
-  <td>Project Name</td><td># Tasks</td><td>Duration</td></tr>
+  <td>Project Name</td><td>#</td><td>Duration</td></tr>
 </table>
 <form>
   Enter zero index based column no: <input type='text' name=col_no><br>
