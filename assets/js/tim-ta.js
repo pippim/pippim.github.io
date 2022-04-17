@@ -112,6 +112,7 @@ function ttaNewConfig() {
     ttaAddTask(ttaTask);
     ttaTask = ttaProject.objTasks["Wash Cycle"];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
+    logAllTasks("Added Wash Cycle Task")
 
     ttaTask = ttaNewTask("Rinse Cycle");
     //console.log("After ttaNewTask()", ttaTask.task_name);
@@ -120,6 +121,7 @@ function ttaNewConfig() {
     ttaAddTask(ttaTask);
     ttaTask = ttaProject.objTasks[ttaTask.task_name];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
+    logAllTasks("Added Rinse Cycle Task")
 
     ttaTask = ttaNewTask("Dryer");
     //console.log("After ttaNewTask()", ttaTask.task_name);
@@ -128,12 +130,25 @@ function ttaNewConfig() {
     ttaAddTask(ttaTask);
     ttaTask = ttaProject.objTasks["Dryer"];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
-    logAllTasks("Added last task")
+    logAllTasks("Added Dryer Task")
 
     ttaStore.arrProjects = [ttaProject.project_name];
     ttaStore.objProjects[ttaProject.project_name] = ttaProject;
     // console.log("object:", ttaTask.task_name, ttaTask.minutes);
     ttaStore.cntProjects = 1;
+}
+
+function logAllTasks(str) {
+    console.log("========", str, "========");
+    if ("Wash Cycle" in Object.keys(ttaProject.objTasks)) {
+        console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
+    }
+    if ("Rinse Cycle" in Object.keys(ttaProject.objTasks)) {
+        console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
+    }
+    if ("Dryer" in Object.keys(ttaProject.objTasks)) {
+        console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
+    }
 }
 
 function ttaNewTask (name) {
@@ -174,7 +189,7 @@ function paintProjectsTable(id) {
 function paintTasksTable(id) {
     // Assumes ttaStore and ttaProject are populated
     // Button at bottom allows calling paintProjectsTable(id)
-    var html = "<h3>" + ttaProject.project_name + "</h3>"
+    var html = "<h3>" + ttaProject.project_name + " Project Tasks</h3>"
     html += '<table id="tabTasks">\n' ;
     // Statistics Table heading
     html += tabTasksHeading();
@@ -219,13 +234,6 @@ function paintTasksTable(id) {
     id.innerHTML = html;
 }
 
-function logAllTasks(str) {
-    console.log("========", str, "========");
-    console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
-    console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
-    console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
-}
-
 function tabTasksHeading() {
     var html = "<tr><th colspan='";
     if (scrSmall) { html += "2"; }  // Two columns of buttons
@@ -252,6 +260,7 @@ function tabTaskDetail() {
     html += "<td>" + ttaTask.task_name + "</td>\n";
     var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
     console.log("Duration:", ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
+    console.log("strDuration:", strDuration);
     if (!scrSmall) { html += "<td>" + strDuration + "</td>\n"; }
     return html += "</tr>\n";
 }
