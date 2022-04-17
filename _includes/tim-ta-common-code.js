@@ -95,7 +95,7 @@ function show_hide_column(col_no, do_show) {
    var tbl = document.getElementById('projects');
    var col = tbl.getElementsByTagName('col')[col_no];
    if (col) {
-     col.style.display=do_show ? "block" : "none";
+     col.style.visibility=do_show?"":"collapse";
    }
 }
 </script>
