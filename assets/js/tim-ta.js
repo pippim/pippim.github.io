@@ -176,7 +176,7 @@ function paintTasksTable(id) {
     for (var i = 0; i < ttaProject.arrTasks.length; i++) {
         var task_name = ttaProject.arrTasks[i]; // Get into field for debugging
         ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-        var work_task = ttaProject.objTasks[ttaProject.arrTasks[i]];
+        var work_task = ttaProject.objTasks[task_name];
         if (work_task.task_name != task_name) {
             console.log("Names Differ:", work_task.task_name, task_name)
             ttaTask = ttaProject.objTasks[task_name];
