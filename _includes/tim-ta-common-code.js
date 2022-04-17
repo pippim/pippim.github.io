@@ -126,6 +126,7 @@ function show_hide_column(col_no, do_show) {
 }
 
 var scrResizeDelay, scrWidth, scrSmall, scrMedium, scrLarge;
+scrSetSize();  // Call on document load
 function scrSetSize() {
     // cell phones don't have window.innerWidth
     scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -135,11 +136,10 @@ function scrSetSize() {
     else { scrMedium = true; }
     console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
 }
-scrSetSize();  // Call on document load
 window.onresize = function() {
     // Can be called many times during a real window resize
-    clearTimeout(scrResizeDelay);  // Reset window resize counter to zero
-    scrResizeDelay = setTimeout(scrSetSize, 500);  // After 500 ms set screen size
+    clearTimeout(scrResizeDelay);  // Reset window resize delay to zero
+    scrResizeDelay = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
 }
 
 function paintProjectsTable(id) {
