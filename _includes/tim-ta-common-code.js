@@ -124,6 +124,42 @@ function show_hide_column(col_no, do_show) {
      col.style.visibility=do_show?"":"collapse";
    }
 }
+
+var [ scrSmall, scrMedium, scrLarge ] = Array(3).fill(false);
+function scrSetSize() {
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    if (width < 640) { scrSmall = true; }
+    else if (width > 1007) { scrLarge = true; }
+    else { scrMedium = true; }
+    console.log("scr Small Medium Large: ", scrSmall, scrMedium, scrLarge)
+}
+scrSetSize();
+window.addEventListener("resize", function(){ scrSetSize(); });
+
+/* Duplicate @large, @medium and @small
+
+@mixin large {
+  @media screen and (min-width: #{$large-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: #{$medium-breakpoint}) {
+    @content;
+  }
+}
+*/
+
+function paintProjectsTable(id) {
+}
+
 </script>
 
 <!-- End of /_includes/tim-ta-common-code.js -->
