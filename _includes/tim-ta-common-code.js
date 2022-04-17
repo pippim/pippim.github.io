@@ -135,7 +135,7 @@ function scrSetSize() {
     console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
 }
 scrSetSize();
-window.addEventListener("resize", () => { scrSetSize(); }
+window.addEventListener("resize", () => { scrSetSize(); });
 
 /* Duplicate @large, @medium and @small
 
