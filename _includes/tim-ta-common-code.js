@@ -36,9 +36,9 @@ Up, Down, Edit and Delete columns are invisible on small screen
 
 Tasks Table (Large Screen)
 
-+===================================================================+
-| Up | Down | Edit | Delete | Task Name | Hours | Minutes | Seconds |
-+----+------+------+--------+-----------+-------+---------+---------+
++===========================================================+
+| Listen | Up | Down | Edit | Delete | Task Name | Duration |
++--------+----+------+------+--------+-----------+----------+
 
 + Add new task
 
@@ -53,7 +53,7 @@ Tasks Table (Small Screen)
 | Controls | Task Name |
 +----------+-----------+
 
-+ Add new task
++ New task + New Project > run
 
     When you click Controls a draggable popup window appears with:
 
@@ -125,8 +125,11 @@ function show_hide_column(col_no, do_show) {
    }
 }
 
-var scrResizeDelay, scrWidth, scrSmall, scrMedium, scrLarge;
+
+var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
+
 scrSetSize();  // Call on document load
+
 function scrSetSize() {
     // cell phones don't have window.innerWidth
     scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -136,13 +139,86 @@ function scrSetSize() {
     else { scrMedium = true; }
     console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
 }
+// window.addEventListener('resize', () => { func1(); func2(); });
 window.onresize = function() {
     // Can be called many times during a real window resize
-    clearTimeout(scrResizeDelay);  // Reset window resize delay to zero
-    scrResizeDelay = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
+    clearTimeout(scrTimeout);  // Reset window resize delay to zero
+    scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
 }
 
+
 function paintProjectsTable(id) {
+    // If only one Project defined, skip and paintTasksTable
+    // Grab the first (and only) Project at array offset 0
+    ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
+    paintTasksTable(id);
+}
+
+
+function paintTasksTable(id) {
+    // Assumes ttaStore and ttaProject are populated
+    // Button at bottom allows calling paintProjectsTable(id)
+    var html = "<h3>" + ttaProject.project_name + "</h3>"
+    html += '<table id="tabTasks">\n' ;
+    // Statistics Table heading
+    html += tabTasksHeading();
+
+    for (const [key, value] of Object.entries(ttaProject.objTasks)) {
+        ttaTask = value;
+        html += tabTaskDetail();
+    }
+    html += '</table>\n';     // End of our table and form
+
+    // TODO: Move next 9 lines to a shared function
+    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style>\n#tabTasks th, #tabTasks td {\n' +
+            '  padding: 0 .5rem;\n' +
+            '}\n'
+    html += '#tabTasks th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #f1f1f1;\n' +
+            '}\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    id.innerHTML = html;
+}
+
+function tabTasksHeading() {
+    var html = "<tr><th colspan='";
+    if (scrSmall) { html += "2"; }  // Two columns of buttons
+    else { html += "5"; }           // Five columns of buttons
+    html += "'>Controls</th><th>Task Name</th>";
+    if (!scrSmall) { html += "<th>Duration</th>"; }
+    return html += "</tr>\n";
+}
+
+// +===========================================================+
+// | Listen | Up | Down | Edit | Delete | Task Name | Duration |
+// +--------+----+------+------+--------+-----------+----------+
+
+function tabTaskDetail() {
+    var html = "<tr>\n";
+    if (scrSmall) {
+        html += "<td>Listen</td><td>Edit</td>\n";
+    }           // Two columns of buttons
+    else {
+        html += "<td>Listen</td><td>Up</td>\n" +
+                "<td>Dn</td><td>Edit</td>\n" +
+                "<td>Delete</td>\n"
+    }           // Five columns of buttons
+    html += "<td>" + ttaTask.task_name + "</td>\n";
+    var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
+    if (!scrSmall) { html += "<td>" + strDuration + "</td>\n"; }
+    return html += "</tr>\n";
+}
+
+function hmsToString(hours, minutes, seconds) {
+    var str = "";
+    if (hours > 0) { str += hours.toString(); + "Hr." }
+    if (minutes > 0) { str += minutes.toString(); + "Min" }
+    if (seconds > 0) { str += seconds.tString(); + "Sec" }
 }
 
 </script>
