@@ -73,7 +73,7 @@ Tasks Table (Small Screen)
   <col class="col5"/>
   <col class="col6"/>
   <col class="col7"/>
-  <tr><th>colspan="5">Controls</th>
+  <tr><th colspan="5">Controls</th>
   <th>Project Name</th><th>#</th><th>Duration</th></tr>
   <tr><td>Run</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
   <td>Laundry</td><td>3</td><td>1 Hr. 40 Min 10 Sec</td></tr>
