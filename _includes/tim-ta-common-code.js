@@ -64,11 +64,12 @@ Tasks Table (Small Screen)
 
 -->
 
-+=====================================================================+
-| Run | Up | Down | Edit | Delete | Project Name | # Tasks | Duration |
-+-----+----+------+------+--------+--------------+---------+----------+
++=====================================================================+<br>
+| Run | Up | Down | Edit | Delete | Project Name | # Tasks | Duration |<br>
++-----+----+------+------+--------+--------------+---------+----------+<br>
 
 <table id='projects' border=0>
+  <col class="col0"/>
   <col class="col1"/>
   <col class="col2"/>
   <col class="col3"/>
@@ -77,7 +78,8 @@ Tasks Table (Small Screen)
   <col class="col6"/>
   <col class="col7"/>
   <col class="col8"/>
-  <col class="col9"/>
+  <tr><th>Run</th><th>Up</th><th>Down</th><th>Edit</hd><th>Delete</th><th>Controls</td>
+  <th>Project Name</th><th># Tasks</th><th>Duration</th></tr>
   <tr><td colspan="9"><table><tr><td>Why is this here?</td></tr></table></td></tr>
   <tr><td>Run</td><td>Up</td><td>Down</td><td>Edit</td><td>Delete</td><td>Controls</td>
   <td>Laundry</td><td># Tasks</td><td>Duration</td></tr>
@@ -87,11 +89,9 @@ Tasks Table (Small Screen)
   <td>Work Out</td><td># Tasks</td><td>Duration</td></tr>
   <tr><td>Run</td><td>Up</td><td>Down</td><td>Edit</td><td>Delete</td><td>Controls</td>
   <td>Project Name</td><td># Tasks</td><td>Duration</td></tr>
-  <tr><td>Run</td><td>Up</td><td>Down</td><td>Edit</td><td>Delete</td><td>Controls</td>
-  <td>Project Name</td><td># Tasks</td><td>Duration</td></tr>
 </table>
 <form>
-  Enter column no: <input type='text' name=col_no><br>
+  Enter zero index based column no: <input type='text' name=col_no><br>
   <input type='button' onClick='javascript:show_hide_column(col_no.value,  true);' value='show'>
   <input type='button' onClick='javascript:show_hide_column(col_no.value, false);' value='hide'>
 </form>
