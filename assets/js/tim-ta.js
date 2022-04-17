@@ -111,7 +111,7 @@ function ttaNewTask (name) {
 function ttaAddTask (obj) {
     ttaProject.objTasks[obj.task_name] = obj;
     ttaProject.cntTasks += 1;
-    console.log(ttaProjects.cntTasks, obj.task_name);
+    console.log(ttaProject.cntTasks, obj.task_name);
 }
 
 function ttaTaskDuration (hours, minutes, seconds) {
