@@ -161,7 +161,8 @@ function paintProjectsTable(id) {
     // If only one Project defined, skip and paintTasksTable
     // Grab the first (and only) Project at array offset 0
     console.log("ttaStore.arrProjects:", ttaStore.arrProjects);
-    ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
+    // ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
+    // Use default ttaProject in buffer!
     paintTasksTable(id);
 }
 
