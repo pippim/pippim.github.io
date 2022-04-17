@@ -64,17 +64,31 @@ Tasks Table (Small Screen)
 
 -->
 
-<table id='projects' border=1>
++=====================================================================+
+| Run | Up | Down | Edit | Delete | Project Name | # Tasks | Duration |
++-----+----+------+------+--------+--------------+---------+----------+
+
+<table id='projects' border=0>
   <col class="col1"/>
   <col class="col2"/>
   <col class="col3"/>
   <col class="col4"/>
-  <tr><td colspan="4"><table><tr><td></td></tr></table></td></tr>
-  <tr><td>  2</td><td>   two</td><td>   deux</td><td>     zwei</td></tr>
-  <tr><td>  3</td><td> three</td><td>  trois</td><td>     drei</td></tr>
-  <tr><td>  4</td><td>  four</td><td>quattre</td><td>     vier</td></tr>
-  <tr><td>  5</td><td>  five</td><td>   cinq</td><td>fÜnf</td></tr>
-  <tr><td>  6</td><td>   six</td><td>    six</td><td>    sechs</td></tr>
+  <col class="col5"/>
+  <col class="col6"/>
+  <col class="col7"/>
+  <col class="col8"/>
+  <col class="col9"/>
+  <tr><td colspan="9"><table><tr><td>Why is this here?</td></tr></table></td></tr>
+  <tr><td>Run</td><td>Up</td><td>Down</td><td>Edit</td><td>Delete</td><td>Controls</td>
+  <td>Laundry</td><td># Tasks</td><td>Duration</td></tr>
+  <tr><td>Run</td><td>Up</td><td>Down</td><td>Edit</td><td>Delete</td><td>Controls</td>
+  <td>Chili</td><td># Tasks</td><td>Duration</td></tr>
+  <tr><td>Run</td><td>Up</td><td>Down</td><td>Edit</td><td>Delete</td><td>Controls</td>
+  <td>Work Out</td><td># Tasks</td><td>Duration</td></tr>
+  <tr><td>Run</td><td>Up</td><td>Down</td><td>Edit</td><td>Delete</td><td>Controls</td>
+  <td>Project Name</td><td># Tasks</td><td>Duration</td></tr>
+  <tr><td>Run</td><td>Up</td><td>Down</td><td>Edit</td><td>Delete</td><td>Controls</td>
+  <td>Project Name</td><td># Tasks</td><td>Duration</td></tr>
 </table>
 <form>
   Enter column no: <input type='text' name=col_no><br>
