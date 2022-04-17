@@ -85,18 +85,21 @@ function ttaNewConfig() {
     ttaProject.project_name = "Laundry";
 
     ttaTask = ttaNewTask("Wash Cycle");
-    console.log(ttaTask.task_name);
+    console.log("After ttaNewTask()", ttaTask.task_name);
     ttaTaskDuration(0, 16, 30);
+    console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
 
     ttaTask = ttaNewTask("Rinse Cycle");
-    console.log(ttaTask.task_name);
+    console.log("After ttaNewTask()", ttaTask.task_name);
     ttaTaskDuration(0, 13, 15);
+    console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
 
     ttaTask = ttaNewTask("Dryer");
-    console.log(ttaTask.task_name);
+    console.log("After ttaNewTask()", ttaTask.task_name);
     ttaTaskDuration(0, 58, 0);
+    console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
 
     ttaStore.arrProjects = [ttaProject.project_name];
