@@ -13,7 +13,6 @@ var tta_store = {
     arrProjects: [],
     objProjects: {},
     cntProjects: 0,
-    confirm_delete_phrase: "y"
     timer_prompt: "true",
     timer_end_alarm: "true",
     timer_end_filename: "Alarm_03.mp3",
@@ -27,7 +26,8 @@ var tta_store = {
     all_sets_end_alarm: "false",
     all_sets_end_filename: "Alarm_12.mp3",
     all_sets_end_notification: "false",
-    progress_bar_update_seconds: 1
+    progress_bar_update_seconds: 1,
+    confirm_delete_phrase: "y"
 }
 
 // SINGLE Tim-ta Project
@@ -50,7 +50,8 @@ var tta_project = {
     all_sets_end_alarm: "default",
     all_sets_end_filename: "default",
     all_sets_end_notification: "default",
-    progress_bar_update_seconds: "default"
+    progress_bar_update_seconds: "default",
+    confirm_delete_phrase: "default"
 }
 
 // SINGLE Timer within a Tim-ta Project
@@ -65,7 +66,8 @@ var tta_timer = {
     timer_end_alarm: "default",
     timer_end_filename: "default",
     timer_end_notification: "default",
-    progress_bar_update_seconds: "default"
+    progress_bar_update_seconds: "default",
+    confirm_delete_phrase: "default"
 }
 
 // Get variable values and source.
