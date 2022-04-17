@@ -8,11 +8,11 @@ type:         Answer
 tags:         cpu temperature
 created_date: 2018-10-13 14:31:58
 edit_date:    2018-10-13 14:51:57
-votes:        "11 "
+votes:        "12 "
 favorites:    
-views:        "20,453 "
+views:        "20,575 "
 accepted:     
-uploaded:     2022-04-12 18:17:38
+uploaded:     2022-04-17 17:56:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-13-What-is-the-meaning-of-the-output-of-the-command-_sensors__.md
 toc:          false
 navigation:   false

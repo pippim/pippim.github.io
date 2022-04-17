@@ -10,9 +10,9 @@ created_date: 2016-09-01 23:26:02
 edit_date:    2017-04-13 12:24:03
 votes:        "2 "
 favorites:    
-views:        "5,968 "
+views:        "5,971 "
 accepted:     Accepted
-uploaded:     2022-04-12 18:17:38
+uploaded:     2022-04-17 17:56:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-01-How-to-automatically-fix-fileystem_.md
 toc:          false
 navigation:   false

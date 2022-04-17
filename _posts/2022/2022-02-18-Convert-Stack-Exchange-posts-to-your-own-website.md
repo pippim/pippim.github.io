@@ -7,12 +7,12 @@ stack_url:    https://stackapps.com/q/9329
 type:         Question
 tags:         app
 created_date: 2022-02-18 02:52:22
-edit_date:    
+edit_date:    2022-04-13 22:12:21
 votes:        "3 "
 favorites:    
-views:        "77 "
+views:        "87 "
 accepted:     
-uploaded:     2022-04-12 18:17:38
+uploaded:     2022-04-17 17:56:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
 toc:          false
 navigation:   false
@@ -74,9 +74,9 @@ Create a copy of `~/website2` (using `cp` command not `git pull` or `git clone`!
 
 Run the Stack Exchange Data Explorer query: [All my posts on the SE network (with Markdown and HTML content plus editors and status)](https://data.stackexchange.com/stackoverflow/query/1529864/all-my-posts-on-the-se-network-with-markdown-and-html-content-plus-editors-and-s)
 
-Change to the directory `~/website/sede` and run the script `rerefresh.sh`.
+Change to the directory `~/website/sede` and run the script `rerfresh.sh`.
 
-More elaborate instructions with screenshots are documented on the [Pippim Website](https://pippim.github.io/stack.html#)
+More elaborate instructions with screenshots are documented on the [Pippim Website](https://pippim.github.io/programs/stack.html)
 
 ### Platform
 
@@ -99,7 +99,7 @@ The languages are Git, Jekyll, Liquid, Ruby, Kramdown, Rouge, SE Markdown, Stack
 
 All the source code is on the [Pippim Website](https://github.com/pippim/pippim.github.io)
 
-No one is needed to contribute to the code at this time. But if you have any suggestions please leave one below. You can also [open an issue](https://github.com/pippim/pippim.github.io/issues) on the GitHub Pages repo.
+No one is needed to contribute to the code at this time. But if you have any suggestions please leave one below. You can also [open an issue](https://github.com/pippim/pippim.github.io/issues) on the GitHub Pages Repository.
 
 
 ## Summary
