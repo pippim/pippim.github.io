@@ -140,6 +140,7 @@ function ttaNewConfig() {
 
 function logAllTasks(str) {
     console.log("========", str, "========");
+    console.log("Object.keys(ttaProject.objTasks):" ,Object.keys(ttaProject.objTasks))
     if ("Wash Cycle" in Object.keys(ttaProject.objTasks)) {
         console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
     }
