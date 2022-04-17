@@ -85,25 +85,25 @@ function ttaNewConfig() {
     ttaProject.project_name = "Laundry";
 
     ttaTask = ttaNewTask("Wash Cycle");
-    console.log("After ttaNewTask()", ttaTask.task_name);
+    //console.log("After ttaNewTask()", ttaTask.task_name);
     ttaTaskDuration(0, 16, 30);
-    console.log("After ttaTaskDuration()", ttaTask.minutes);
+    //console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
     ttaTask = ttaProject.objTasks["Wash Cycle"];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
 
     ttaTask = ttaNewTask("Rinse Cycle");
-    console.log("After ttaNewTask()", ttaTask.task_name);
+    //console.log("After ttaNewTask()", ttaTask.task_name);
     ttaTaskDuration(0, 13, 15);
-    console.log("After ttaTaskDuration()", ttaTask.minutes);
+    //console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
     ttaTask = ttaProject.objTasks["Rinse Cycle"];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
 
     ttaTask = ttaNewTask("Dryer");
-    console.log("After ttaNewTask()", ttaTask.task_name);
+    //console.log("After ttaNewTask()", ttaTask.task_name);
     ttaTaskDuration(0, 58, 0);
-    console.log("After ttaTaskDuration()", ttaTask.minutes);
+    //console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
     ttaTask = ttaProject.objTasks["Dryer"];
     console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
@@ -126,7 +126,7 @@ function ttaAddTask (obj) {
     ttaProject.arrTasks.push(obj.task_name);
     ttaProject.objTasks[obj.task_name] = obj;
     ttaProject.cntTasks += 1;
-    console.log(ttaProject.cntTasks, obj.task_name);
+    //console.log(ttaProject.cntTasks, obj.task_name);
 }
 
 function ttaTaskDuration (hours, minutes, seconds) {
