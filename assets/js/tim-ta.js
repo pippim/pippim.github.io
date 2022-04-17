@@ -148,8 +148,8 @@ function ttaAddTask (obj) {
     ttaProject.arrTasks.push(obj.task_name);
     ttaProject.objTasks[obj.task_name] = obj;
     ttaProject.cntTasks += 1;
-    console.log("ttaAddTask() 1:", ttaProject.objTasks[obj.task_name].task_name);
-    console.log("ttaAddTask() 2:", ttaProject.cntTasks, obj.task_name);
+    //console.log("ttaAddTask() 1:", ttaProject.objTasks[obj.task_name].task_name);
+    //console.log("ttaAddTask() 2:", ttaProject.cntTasks, obj.task_name);
 }
 
 function ttaTaskDuration (hours, minutes, seconds) {
@@ -163,6 +163,7 @@ function paintProjectsTable(id) {
     // If only one Project defined, skip and paintTasksTable
     // Grab the first (and only) Project at array offset 0
     console.log("ttaStore.arrProjects:", ttaStore.arrProjects);
+    console.log("ttaStore.objProjects:", ttaStore.objProjects);
     logAllTasks("paintProjectsTable START")
     // ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
     // Use default ttaProject in buffer!
