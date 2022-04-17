@@ -82,7 +82,7 @@ Tasks Table (Small Screen)
   <tr><td>Run</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
   <td>Work Out</td><td>7</td><td>45 Min</td></tr>
   <tr><td>Run</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
-  <td>Project Name</td><td>#</td><td>Duration</td></tr>
+  <td>A VERY Long Project Name</td><td>#</td><td>A longer duration</td></tr>
 </table>
 <form>
   Enter zero index based column no: <input type='text' name=col_no><br>
