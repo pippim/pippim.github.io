@@ -164,8 +164,10 @@ Run symbol 3. Could be used to "run" project. Unicode #x27f3
 Run symbol 4. Traditional "Play" button. Unicode #x25b6
 &emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
 &#x25b6;</span>
-Advantage of this symbol is common audio control button. Plus transition to future
-buttons for: pause, rewind x seconds, fast forward x seconds, restart and skip to end.
+<br>
+Advantage of this symbol is common audio control button. Also eases
+transition to future buttons for: Pause, Rewind x seconds, 
+Fast forward x seconds, Restart and Skip to end.
 
 ---
 
