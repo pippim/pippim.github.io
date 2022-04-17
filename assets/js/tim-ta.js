@@ -225,6 +225,7 @@ function tabTasksHeading() {
 
 function tabTaskDetail() {
     var html = "<tr>\n";
+
     if (scrSmall) {
         html += "<td>Listen</td><td>Edit</td>\n";
     }           // Two columns of buttons
@@ -233,19 +234,21 @@ function tabTaskDetail() {
                 "<td>Dn</td><td>Edit</td>\n" +
                 "<td>Delete</td>\n"
     }           // Five columns of buttons
+
     html += "<td>" + ttaTask.task_name + "</td>\n";
-    var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
-    console.log("Duration:", ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
-    console.log("strDuration:", strDuration);
-    if (!scrSmall) { html += "<td>" + strDuration + "</td>\n"; }
+
+    if (!scrSmall) {
+        var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
+        html += "<td>" + strDuration + "</td>\n";
+    }
     return html += "</tr>\n";
 }
 
 function hmsToString(hours, minutes, seconds) {
     var str = "";
-    if (hours > 0) { str += hours.toString(); + "Hr." }
-    if (minutes > 0) { str += minutes.toString(); + "Min" }
-    if (seconds > 0) { str += seconds.toString(); + "Sec" }
+    if (hours > 0) { str += hours.toString() + " Hr. " }
+    if (minutes > 0) { str += minutes.toString() + " Min " }
+    if (seconds > 0) { str += seconds.toString() + " Sec" }
     return str;
 }
 
