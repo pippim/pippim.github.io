@@ -90,6 +90,32 @@ Tasks Table (Small Screen)
   <input type='button' onClick='javascript:show_hide_column(col_no.value, false);' value='hide'>
 </form>
 
+<table id='tasks' border="collapse">
+  <col class="col0"/>
+  <col class="col1"/>
+  <col class="col2"/>
+  <col class="col3"/>
+  <col class="col4"/>
+  <col class="col5"/>
+  <col class="col6"/>
+  <col class="col7"/>
+  <tr><th colspan="5">Controls</th>
+  <th>Task Name</th><th>#</th><th>Duration</th></tr>
+  <tr><td>Listen</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
+  <td>Wash</td><td>3</td><td>16 Min 30 Sec</td></tr>
+  <tr><td>Listen</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
+  <td>Rinse</td><td>3</td><td>13 Min</td></tr>
+  <tr><td>Listen</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
+  <td>Dryer</td><td>7</td><td>58 Min 15 Sec</td></tr>
+  <tr><td>Listen</td><td>Up</td><td>Dn</td><td>Edit</td><td>Del</td>
+  <td>A VERY Long Task Name</td><td>#</td><td>A longer duration</td></tr>
+</table>
+<form>
+  Enter zero index based column number: <input type='text' name=col_no><br>
+  <input type='button' onClick='javascript:show_hide_column(col_no.value,  true);' value='show'>
+  <input type='button' onClick='javascript:show_hide_column(col_no.value, false);' value='hide'>
+</form>
+
 <script>
 function show_hide_column(col_no, do_show) {
    var tbl = document.getElementById('projects');
