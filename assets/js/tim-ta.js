@@ -56,7 +56,7 @@ var tta_project = {
 
 // SINGLE Timer within a Tim-ta Project
 // When value is "default" it is inherited from Project 
-var tta_timer = {
+var tta_task = {
     timer_index: null,
     timer_name: null,
     hours: null,
