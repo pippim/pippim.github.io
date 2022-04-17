@@ -125,14 +125,14 @@ function show_hide_column(col_no, do_show) {
    }
 }
 
-var [ scrSmall, scrMedium, scrLarge ] = Array(3).fill(false);
+var scrWidth, scrSmall, scrMedium, scrLarge;
 function scrSetSize() {
-    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    [ scrSmall, scrMedium, scrLarge ] = Array(3).fill(false);
-    if (width < 640) { scrSmall = true; }
-    else if (width > 1007) { scrLarge = true; }
+    var scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    scrSmall = scrMedium = scrLarge = false;
+    if (scrWidth < 640) { scrSmall = true; }
+    else if (scrWidth > 1007) { scrLarge = true; }
     else { scrMedium = true; }
-    console.log("scr Small Medium Large: ", scrSmall, scrMedium, scrLarge)
+    console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
 }
 scrSetSize();
 window.addEventListener("resize", () => { scrSetSize(); }
