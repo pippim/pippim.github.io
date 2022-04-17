@@ -179,6 +179,9 @@ function paintTasksTable(id) {
         if (ttaTask.task_name != task_name) {
             console.log("Names Differ:", ttaTask.task_name, task_name)
             ttaTask = ttaProject.objTasks[task_name];
+            if (ttaTask.task_name != task_name) {
+                console.log("Names Differ AGAIN!:", ttaTask.task_name, task_name)
+            }
         }
         console.log("Detail loop - i:", i, ttaProject.arrTasks[i]);
         console.log("Detail loop - name:", ttaTask.task_name);
