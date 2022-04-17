@@ -234,6 +234,7 @@ function tabTaskDetail() {
     }           // Five columns of buttons
     html += "<td>" + ttaTask.task_name + "</td>\n";
     var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
+    console.log("Duration:", ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
     if (!scrSmall) { html += "<td>" + strDuration + "</td>\n"; }
     return html += "</tr>\n";
 }
