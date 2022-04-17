@@ -112,16 +112,9 @@ Future placeholder to drag and drop your own sound files here.
 <a id='hdr5'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
-# Tim-ta Projects
+# Future Buttons of Tim-ta
 
-Here you can Create, Run, Update and Delete Tim-ta projects.
-Generically, these actions are grouped together under the
-name **CRUD** (**C**reate **R**ead
-**U**pdate **D**elete).
-
-A project is a set of tasks (countdown timers). You
-can create as many projects as you like. Each project
-can have as many tasks (timers) as needed.
+Below are proposed buttons for Tim-ta.
 
 ---
 
@@ -231,7 +224,23 @@ Cancel</span>
 
 # Tim-ta Projects
 
+Here you can Create, Run, Update and Delete Tim-ta projects.
+Generically, these actions are grouped together under the
+name **CRUD** (**C**reate **R**un
+**U**pdate **D**elete).
+
+A project is a set of tasks (countdown timers). You
+can create as many projects as you like. Each project
+can have as many tasks (timers) as needed.
+
 {% include tim-ta-common-code.js %}
+
+<div id="PaintedTable"></div>
+
+<script>
+   id = document.getElementById("PaintedTable");
+   paintProjectsTable(id);
+</script>
 
 ---
 
