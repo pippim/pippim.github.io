@@ -181,8 +181,9 @@ function paintTasksTable(id) {
     logAllTasks("paintTasksTable START")
 
     for (var i = 0; i < ttaProject.arrTasks.length; i++) {
-        var task_name = ttaProject.arrTasks[i]; // Get into field for debugging
         ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
+        html += tabTaskDetail();
+        /* var task_name = ttaProject.arrTasks[i]; // Get into field for debugging
         var work_task = ttaProject.objTasks[task_name];
         if (work_task.task_name != task_name) {
             console.log("Names Differ:", work_task.task_name, task_name)
@@ -196,6 +197,7 @@ function paintTasksTable(id) {
         console.log("ttaTask - name:", ttaTask.task_name);
         console.log("work_task - name:", work_task.task_name);
         console.log("Detail loop - minutes:", ttaTask.minutes);
+        */
         html += tabTaskDetail();
     }
     html += '</table>\n';     // End of our table and form
@@ -217,10 +219,10 @@ function paintTasksTable(id) {
 }
 
 function logAllTasks(str) {
-    console.log(str);
-    console.log(ttaProject.objTasks["Wash Cycle"].task_name);
-    console.log(ttaProject.objTasks["Rinse Cycle"].task_name);
-    console.log(ttaProject.objTasks["Dryer"].task_name);
+    console.log("========", str, "========");
+    console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
+    console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
+    console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
 }
 
 function tabTasksHeading() {
