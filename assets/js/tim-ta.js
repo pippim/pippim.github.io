@@ -176,15 +176,17 @@ function paintTasksTable(id) {
     for (var i = 0; i < ttaProject.arrTasks.length; i++) {
         var task_name = ttaProject.arrTasks[i]; // Get into field for debugging
         ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-        if (ttaTask.task_name != task_name) {
-            console.log("Names Differ:", ttaTask.task_name, task_name)
+        var work_task = ttaProject.objTasks[ttaProject.arrTasks[i]];
+        if (work_task.task_name != task_name) {
+            console.log("Names Differ:", work_task.task_name, task_name)
             ttaTask = ttaProject.objTasks[task_name];
             if (ttaTask.task_name != task_name) {
                 console.log("Names Differ AGAIN!:", ttaTask.task_name, task_name)
             }
         }
         console.log("Detail loop - i:", i, ttaProject.arrTasks[i]);
-        console.log("Detail loop - name:", ttaTask.task_name);
+        console.log("ttaTask - name:", ttaTask.task_name);
+        console.log("work_task - name:", work_task.task_name);
         console.log("Detail loop - minutes:", ttaTask.minutes);
         html += tabTaskDetail();
     }
