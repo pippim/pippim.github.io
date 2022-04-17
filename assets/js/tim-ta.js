@@ -173,6 +173,10 @@ function paintTasksTable(id) {
     // Statistics Table heading
     html += tabTasksHeading();
 
+    console.log(ttaProject.objTasks["Wash Cycle"].task_name);
+    console.log(ttaProject.objTasks["Rinse Cycle"].task_name);
+    console.log(ttaProject.objTasks["Dryer"].task_name);
+
     for (var i = 0; i < ttaProject.arrTasks.length; i++) {
         var task_name = ttaProject.arrTasks[i]; // Get into field for debugging
         ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
