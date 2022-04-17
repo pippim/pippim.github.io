@@ -160,8 +160,8 @@ function paintTasksTable(id) {
     // Statistics Table heading
     html += tabTasksHeading();
 
-    for (const [key, value] of Object.entries(ttaProject.objTasks)) {
-        ttaTask = value;
+    for (var i = 0; i < ttaProject.arrTasks.length; i++) {
+        ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
         html += tabTaskDetail();
     }
     html += '</table>\n';     // End of our table and form
