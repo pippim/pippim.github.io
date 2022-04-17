@@ -185,6 +185,7 @@ function paintTasksTable(id) {
             }
         }
         console.log("Detail loop - i:", i, ttaProject.arrTasks[i]);
+        ttaTask = ttaProject.objTasks["Wash Cycle"];
         console.log("ttaTask - name:", ttaTask.task_name);
         console.log("work_task - name:", work_task.task_name);
         console.log("Detail loop - minutes:", ttaTask.minutes);
