@@ -106,33 +106,21 @@ function ttaNewConfig() {
     logAllTasks("Nothing Added Yet, just skeleton record")
     ttaProject.project_name = "Laundry";
 
-    ttaTask = ttaNewTask("Wash Cycle");
-    //console.log("After ttaNewTask()", ttaTask.task_name);
+    ttaNewTask("Wash Cycle");
     ttaTaskDuration(0, 16, 30);
-    //console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
-    //ttaTask = ttaProject.objTasks["Wash Cycle"];
-    //console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
     logAllTasks("Added Wash Cycle Task")
 
-    ttaTask = ttaNewTask("Rinse Cycle");
+    ttaNewTask("Rinse Cycle");
     logAllTasks("Adding Rise Cycle ttaNewTask")
-    //console.log("After ttaNewTask()", ttaTask.task_name);
     ttaTaskDuration(0, 13, 15);
-    //console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
-    //ttaTask = ttaProject.objTasks[ttaTask.task_name];
-    //console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
     logAllTasks("Added Rinse Cycle Task")
 
-    ttaTask = ttaNewTask("Dryer");
+    ttaNewTask("Dryer");
     logAllTasks("Adding Dryer ttaNewTask")
-    //console.log("After ttaNewTask()", ttaTask.task_name);
     ttaTaskDuration(0, 58, 0);
-    //console.log("After ttaTaskDuration()", ttaTask.minutes);
     ttaAddTask(ttaTask);
-    //ttaTask = ttaProject.objTasks["Dryer"];
-    //console.log("Read back:", ttaTask.task_name, ttaTask.minutes);
     logAllTasks("Added Dryer Task")
 
     ttaStore.arrProjects = [ttaProject.project_name];
@@ -145,15 +133,12 @@ function logAllTasks(str) {
     console.log("========", str, "========");
     console.log("Object.keys(ttaProject.objTasks):" ,Object.keys(ttaProject.objTasks))
     if (ttaProject.arrTasks.includes("Wash Cycle")) {
-    //if ("Wash Cycle" in Object.keys(ttaProject.objTasks)) {
         console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
     }
     if (ttaProject.arrTasks.includes("Rinse Cycle")) {
-    //if ("Rinse Cycle" in Object.keys(ttaProject.objTasks)) {
         console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
     }
     if (ttaProject.arrTasks.includes("Dryer")) {
-    //if ("Dryer" in Object.keys(ttaProject.objTasks)) {
         console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
     }
 }
@@ -170,11 +155,11 @@ Array.prototype.contains = function(obj) {
 }
 
 function ttaNewTask (name) {
-    var new_task = tta_task; // This will be last one saved... don't want!
-    new_task.task_index = ttaProject.cntTasks;
-    new_task.task_name = name;
-    new_task.hours = new_task.minutes = new_task.seconds = 0;
-    return new_task;
+    //ttaTask = {};
+    ttaTask = Object.assign({}, tta_task);
+    ttaTask_index = ttaProject.cntTasks;
+    ttaTask.task_name = name;
+    ttaTask.hours = ttaTask.minutes = ttaTask.seconds = 0;
 }
 
 function ttaAddTask (obj) {
