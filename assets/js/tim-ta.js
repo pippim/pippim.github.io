@@ -76,6 +76,7 @@ var tta_task = {
 var ttaStore, ttaProject, ttaTask;
 
 ttaNewConfig();  // Always new until localStorage setup
+localStorage.setItem('ttaStore', ttaStore)
 
 function ttaNewConfig() {
     ttaStore = tta_store;
