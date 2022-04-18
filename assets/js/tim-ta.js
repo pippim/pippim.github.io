@@ -200,7 +200,7 @@ function paintTasksTable(id) {
             'background: #f1f1f1;\n' +
             '}\n'
     html += '.tta-btn {\n' +
-            'font-size: 25px;\n' +
+            'font-size: 20px;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
@@ -257,7 +257,7 @@ function tabTaskDetail(i) {
         html += tabButton(tabDeleteSym, tabDeleteTitle, clickDelete);
     }           // Five columns of buttons
 
-    html += "<td>" + ttaTask.task_name + "</td>\n";
+    html += "<td><h4>" + ttaTask.task_name + "</h4></td>\n";
 
     if (!scrSmall) {
         var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
