@@ -355,7 +355,7 @@ function paintTaskWindow(mode) {
     html += inpSelect("seconds", "Seconds", mode);
     html += inpSelect("task_prompt", "Prompt to begin countdown?", mode);
     html += inpSelect("task_end_alarm", "Sound alarm when task ends?", mode);
-    html += inpSelect("task_end_filename", "If yes, the sound filename", mode);
+    html += inpSelect("task_end_filename", "If true, the sound filename", mode);
     html += inpSelect("task_end_notification", "Notification when task ends?", mode);
     html += inpSelect("progress_bar_update_seconds",
                       "Seconds interval between progress bar updates", mode);
@@ -366,7 +366,7 @@ function paintTaskWindow(mode) {
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n';
     html += '#tabTasks th, #tabTasks td {\n' +
-            '  padding: 0 .5rem;\n' +
+            '  padding: .25rem .25rem;\n' +
             '}\n'
     html += '#tabTasks th {\n' +
             'position: -webkit-sticky;\n' +
@@ -378,7 +378,6 @@ function paintTaskWindow(mode) {
     html += '.tta-btn {\n' +
             'font-size: 25px;\n' +
             'border-radius: 1rem;\n' +
-            'margin: .25rem 0 .25rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
@@ -405,6 +404,9 @@ function inpSelect(key, label, mode, options) {
 </select>
 */
 }
+
+// ERROR: Task Name must be unique and cannot be blank
+
 
 /* Functions NOT USED */
 
