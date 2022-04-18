@@ -19,7 +19,7 @@ function scrSetSize() {
     if (scrWidth < 641) { scrSmall = true; }
     else if (scrWidth > 1007) { scrLarge = true; }
     else { scrMedium = true; }
-    console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
+    //console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
 }
 
 // window.addEventListener('resize', () => { func1(); func2(); });
@@ -124,22 +124,6 @@ function ttaNewConfig() {
     ttaStore.cntProjects = 1;
 }
 
-function logAllTasks(str) {
-    // Apr 17, 2022 - Created to debug objA = objB not shallow copying.
-    console.log("========", str, "========");
-    console.log("Object.keys(ttaProject.objTasks):" ,Object.keys(ttaProject.objTasks))
-    // .includes() from: https://stackoverflow.com/a/1473742/6929343
-    if (ttaProject.arrTasks.includes("Wash Cycle")) {
-        console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
-    }
-    if (ttaProject.arrTasks.includes("Rinse Cycle")) {
-        console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
-    }
-    if (ttaProject.arrTasks.includes("Dryer")) {
-        console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
-    }
-}
-
 function ttaNewTask (name) {
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     ttaTask_index = ttaProject.cntTasks;
@@ -170,7 +154,6 @@ function paintProjectsTable(id) {
     ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
     paintTasksTable(id);
 }
-
 
 function paintTasksTable(id) {
     // Assumes ttaStore and ttaProject are populated
@@ -235,9 +218,7 @@ var tabEditTitle = "Edit";
 var tabDeleteSym = "&#x1f5d1";
 var tabDeleteTitle = "Delete";
 var tabControlsSym = "&#x2699";
-var tabControlsTitle = "Buttons for: Listen, Move up, Move down, Edit and Delete";
-
-var clickPlay, clickListen, clickUp, clickDown, clickEdit, clickDelete, clickControls;
+var tabControlsTitle = "Buttons for: Move up, Move down, Edit and Delete";
 
 function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
@@ -277,19 +258,56 @@ function hmsToString(hours, minutes, seconds) {
 
 function tabButton(button_code, title, callback) {
     // Add button to table detail. Return HTML with <button> code
-    // code is the HTML code, E.G.&#x25b6 for Play button.
-    /*  CODES:
-        var ttaPlaySym = "&#x25b6";
-        var ttaListenSym = "#9835";
-        var ttaUpSym = "&#x21E7";
-        var ttaDownSym = "&#x21e9";
-        var ttaEditSym = "&#x270D";
-        var ttaTrashSym = "&#x270D";
-    */
-    var html = '<td><button class="hdr-btn tta-btn" id="' + callback +
-                '" type="button"\n' +
-                'title="' + title + '">' + button_code + '</button></td>\n';
+    // code is the HTML code, E.G.&#x25b6; for Play button.
+    var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
+               '" type="button" \n' +
+               'title="' + title + '">' + button_code + '</button></td>\n';
     return html;
 }
 
+function clickCommon() {
+    // currentTable will contain "Projects" or "Tasks".
+    // Get the row index we are on when clicked.
+    // Using the index get the Project Name or Task Name.
+    // Using name lookup, get ttaProject or ttaTask into memory.
+    // Return?
+    console.log("Table Button Clicked")
+}
+
+function clickListen() { clickCommon(); }
+function clickPlay() { clickCommon(); }
+function clickUp() { clickCommon(); }
+function clickDown() { clickCommon(); }
+function clickEdit() { clickCommon(); }
+function clickDelete() { clickCommon(); }
+function clickControls() { clickCommon(); }
+
+window.addEventListener("click", processClick);
+// On initial load classes haven't been defined yet as HTML is dynamic
+function processClick(event) {
+    var element = event.target;
+    if element.classList.contains("clickListen") { clickListen() } ;
+    if element.classList.contains("clickPlay") { clickPlay() } ;
+    if element.classList.contains("clickUp") { clickUp() } ;
+    if element.classList.contains("clickDown") { clickDown() } ;
+    if element.classList.contains("clickEdit") { clickEdit() } ;
+    if element.classList.contains("clickDelete") { clickDelete() } ;
+    if element.classList.contains("clickControls") { clickControls() } ;
+}
+
+function logAllTasks(str) {
+    // Apr 17, 2022 - Created to debug objA = objB not shallow copying.
+    console.log("========", str, "========");
+    console.log("Object.keys(ttaProject.objTasks):" ,Object.keys(ttaProject.objTasks))
+    // .includes() from: https://stackoverflow.com/a/1473742/6929343
+    if (ttaProject.arrTasks.includes("Wash Cycle")) {
+        console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
+    }
+    if (ttaProject.arrTasks.includes("Rinse Cycle")) {
+        console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
+    }
+    if (ttaProject.arrTasks.includes("Dryer")) {
+        console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
+    }
+}
 /* End of /assets/js/tim-ta.js */
