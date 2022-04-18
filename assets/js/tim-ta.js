@@ -102,8 +102,9 @@ ttaNewConfig();  // Always new until localStorage setup
 localStorage.setItem('ttaStore', ttaStore)
 
 function ttaNewConfig() {
-    ttaStore = tta_store;
-    ttaProject = tta_project;
+    // Object.assign: https://stackoverflow.com/a/34294740/6929343
+    ttaStore = Object.assign({}, tta_store);
+    ttaProject = Object.assign({}, tta_project);
     ttaProject.project_name = "Laundry";
 
     ttaNewTask("Wash Cycle");
@@ -124,8 +125,10 @@ function ttaNewConfig() {
 }
 
 function logAllTasks(str) {
+    // Apr 17, 2022 - Created to debug objA = objB not shallow copying.
     console.log("========", str, "========");
     console.log("Object.keys(ttaProject.objTasks):" ,Object.keys(ttaProject.objTasks))
+    // .includes() from: https://stackoverflow.com/a/1473742/6929343
     if (ttaProject.arrTasks.includes("Wash Cycle")) {
         console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
     }
@@ -138,6 +141,7 @@ function logAllTasks(str) {
 }
 
 // https://stackoverflow.com/a/237176/6929343
+// Doesn't seem to work? Use .includes() builtin instead
 Array.prototype.contains = function(obj) {
     var i = this.length;
     while (i--) {
@@ -149,7 +153,7 @@ Array.prototype.contains = function(obj) {
 }
 
 function ttaNewTask (name) {
-    ttaTask = Object.assign({}, tta_task);
+    ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     ttaTask_index = ttaProject.cntTasks;
     ttaTask.task_name = name;
     ttaTask.hours = ttaTask.minutes = ttaTask.seconds = 0;
@@ -177,13 +181,21 @@ function paintProjectsTable(id) {
     paintTasksTable(id);
 }
 
+// HTML Codes for buttons
+
+var ttaPlaySym "&#x25b6";
+var ttaListenSym "#x1F50A";
+var ttaUpSym "&#x21E7";
+var ttaDownSym "&#x21e9";
+var ttaEditSym "&#x270D";
+var ttaTrashSym "&#x270D";
 
 function paintTasksTable(id) {
     // Assumes ttaStore and ttaProject are populated
     // Button at bottom allows calling paintProjectsTable(id)
     var cnt = ttaProject.arrTasks.length;
-    var html = "<h3>" + ttaProject.project_name + " Project - " +
-                cnt.toString() + " Tasks</h3>"
+    var html = "<h2>" + ttaProject.project_name + " Project - " +
+                cnt.toString() + " Tasks</h2>"
 
     html += '<table id="tabTasks">\n' ;
     html += tabTasksHeading();
@@ -252,8 +264,9 @@ function hmsToString(hours, minutes, seconds) {
     return str;
 }
 
-function ttaAddButton () {
+function ttaAddButton (code, index, callback) {
     // Add button to table detail. Return HTML with <button> code
+    // code is the HTML code, E.G.&#x25b6 for Play button.
 }
 
 /* End of /assets/js/tim-ta.js */
