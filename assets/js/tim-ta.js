@@ -261,7 +261,7 @@ function tabButton(button_code, title, callback) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
     var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
-               'type="button" onclick="' + callback + '" \n' +
+               'type="button" onclick="' + callback + '()" \n' +
                'title="' + title + '">' + button_code + '</button></td>\n';
     return html;
 }
