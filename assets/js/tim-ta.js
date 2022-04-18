@@ -273,12 +273,13 @@ function clickCommon(x) {
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
     // tabSetRow(x);
+    currentRow = x + 1;
     console.log(currentTable, "Table Button Clicked on row NUMBER:", x)
 }
 
 function tabSetRow(x) {
-    console.log("typeof x", typeof x)
-    currentRow = x.rowIndex;
+    //console.log("typeof x", typeof x)
+    //currentRow = x.rowIndex;
     //console.log("Row index is: " + currentRow);
 }
 
