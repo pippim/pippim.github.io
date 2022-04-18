@@ -280,12 +280,17 @@ function clickCommon(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
 }
 
-
 function clickListen(i) {
     clickCommon(i);
     sound = getTaskValue("task_end_filename");
     playSoundSource(sound);     // From: sound.js
     console.log("sound:", sound)
+}
+
+function playSoundSource (name) {
+    // Copied from sound.js because it isn't included yet...
+    audioControl = document.getElementById(name);
+    audioControl.play();
 }
 
 function getTaskValue(key) {
