@@ -156,6 +156,10 @@ function paintProjectsTable(id) {
     paintTasksTable(id);
 }
 
+function paintProjectsFooter(id) {
+    // If only one Project defined, skip and paintTasksTable
+    // Grab the first (and only) Project at array offset 0
+}
 function paintTasksTable(id) {
     // Assumes ttaStore and ttaProject are populated
     // Button at bottom allows calling paintProjectsTable(id)
