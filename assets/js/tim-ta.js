@@ -277,7 +277,7 @@ function clickCommon() {
 
 function tabSetRow(x) {
     currentRow = x.rowIndex;
-    console.log("Row index is: " + currentRow);
+    //console.log("Row index is: " + currentRow);
 }
 
 function clickListen() { clickCommon(); }
@@ -293,7 +293,7 @@ window.addEventListener("click", processClick);
 function processClick(event) {
     var elm = event.target;
     //console.log("elm.classList:", elm.classList)
-    console.log("elm:", elm)
+    //console.log("elm:", elm)
     if (elm.classList.contains("clickListen()")) { clickListen() } ;
     if (elm.classList.contains("clickPlay()")) { clickPlay() } ;
     if (elm.classList.contains("clickUp()")) { clickUp() } ;
