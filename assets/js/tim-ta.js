@@ -282,14 +282,6 @@ function tabButton(code, index, callback) {
         var ttaEditSym = "&#x270D";
         var ttaTrashSym = "&#x270D";
     */
-        var ttaPlaySym "&#x25b6";
-        var ttaListenSym "#9835";
-        var ttaUpSym "&#x21E7";
-        var ttaDownSym "&#x21e9";
-        var ttaEditSym "&#x270D";
-        var ttaTrashSym "&#x270D";
-    */
-
 }
 
 /* End of /assets/js/tim-ta.js */
