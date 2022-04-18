@@ -184,7 +184,7 @@ function paintProjectsTable(id) {
 // HTML Codes for buttons
 
 var ttaPlaySym "&#x25b6";
-var ttaListenSym "#x1F50A";
+var ttaListenSym "#9835";
 var ttaUpSym "&#x21E7";
 var ttaDownSym "&#x21e9";
 var ttaEditSym "&#x270D";
@@ -237,7 +237,14 @@ function tabTasksHeading() {
 function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
     var html = "<tr>\n";
-
+    /*  tabButton(ttaPlaySym, index, callback)
+        var ttaPlaySym "&#x25b6";
+        var ttaListenSym "#9835";
+        var ttaUpSym "&#x21E7";
+        var ttaDownSym "&#x21e9";
+        var ttaEditSym "&#x270D";
+        var ttaTrashSym "&#x270D";
+    */
     if (scrSmall) {
         html += "<td>Listen</td><td>Edit</td>\n";
     }           // Two columns of buttons
@@ -264,9 +271,18 @@ function hmsToString(hours, minutes, seconds) {
     return str;
 }
 
-function ttaAddButton (code, index, callback) {
+function tabButton (code, index, callback) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6 for Play button.
+    /*  CODES:
+        var ttaPlaySym "&#x25b6";
+        var ttaListenSym "#9835";
+        var ttaUpSym "&#x21E7";
+        var ttaDownSym "&#x21e9";
+        var ttaEditSym "&#x270D";
+        var ttaTrashSym "&#x270D";
+    */
+
 }
 
 /* End of /assets/js/tim-ta.js */
