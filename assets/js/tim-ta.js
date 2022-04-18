@@ -286,13 +286,13 @@ window.addEventListener("click", processClick);
 // On initial load classes haven't been defined yet as HTML is dynamic
 function processClick(event) {
     var element = event.target;
-    if element.classList.contains("clickListen") { clickListen() } ;
-    if element.classList.contains("clickPlay") { clickPlay() } ;
-    if element.classList.contains("clickUp") { clickUp() } ;
-    if element.classList.contains("clickDown") { clickDown() } ;
-    if element.classList.contains("clickEdit") { clickEdit() } ;
-    if element.classList.contains("clickDelete") { clickDelete() } ;
-    if element.classList.contains("clickControls") { clickControls() } ;
+    if (element.classList.contains("clickListen")) { clickListen() } ;
+    if (element.classList.contains("clickPlay")) { clickPlay() } ;
+    if (element.classList.contains("clickUp")) { clickUp() } ;
+    if (element.classList.contains("clickDown")) { clickDown() } ;
+    if (element.classList.contains("clickEdit")) { clickEdit() } ;
+    if (element.classList.contains("clickDelete")) { clickDelete() } ;
+    if (element.classList.contains("clickControls")) { clickControls() } ;
 }
 
 function logAllTasks(str) {
