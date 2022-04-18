@@ -115,7 +115,7 @@ $lavender: #E6E6FA !default; // lavender
     font-size:0.75em;         // 75% of normal font for button text
     margin-left: 10px;        // Now that right aligned, switch margin side
     // From: https://stackoverflow.com/questions/65297617
-    background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
+    // background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
     background-color: $honeydew; // Honeydew
 
     &:hover {
