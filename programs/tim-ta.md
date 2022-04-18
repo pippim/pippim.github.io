@@ -118,9 +118,15 @@ Below are proposed buttons for Tim-ta.
 
 ---
 
-Listen symbol. Unicode #x1F50A
+Listen symbol 1. Unicode #x1F50A
 &emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
-&#x1F50A</span>
+&#x1F50A;</span>
+
+---
+
+Listen symbol 2. Unicode #9835 (Decimal)
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&#9835;</span>
 
 ---
 
