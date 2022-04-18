@@ -306,26 +306,28 @@ function getProjectValue(key) {
 function clickPlay(i) { clickCommon(i); }
 function clickUp(i) {
     clickCommon(i);
-    if (i == 0) {
-        alert("Already at top, can't move up")
-        return
-    }
+    if (i == 0) { alert("Already at top, can't move up"); return; }
     swapTask(i, i - 1);
 }
 function clickDown(i) {
+    // TODO: After moving, update & save localStorage
     clickCommon(i);
-    if (i == ttaProject.arrTasks.length - 1) {
-        alert("Already at bottom, can't move down")
-        return
-    }
+    const cnt = ttaProject.arrTasks.length;
+    if (i == cnt) { alert("Already at bottom, can't move down"); return; }
     swapTask(i, i + 1);
 }
 function clickEdit(i) {
     clickCommon(i);
     paintTaskWindow("Edit");
 }
-function clickDelete(i) { clickCommon(i); }
-function clickControls(i) { clickCommon(i); }
+function clickDelete(i) {
+    clickCommon(i);
+    paintTaskWindow("Delete");
+}
+function clickControls(i) {
+    // Popup buttons for small screens
+    clickCommon(i);
+}
 
 function swapTask(source, target) {
     hold = ttaProject.arrTasks[target];
