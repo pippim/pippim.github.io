@@ -145,7 +145,7 @@ function ttaTaskDuration (hours, minutes, seconds) {
     ttaTask.seconds = seconds;
 }
 
-var currentTable, currentWindow;
+var currentTable, currentRow, currentWindow;
 
 function paintProjectsTable(id) {
     // If only one Project defined, skip and paintTasksTable
@@ -266,26 +266,27 @@ function tabButton(button_code, title, callback) {
     return html;
 }
 
-function clickCommon(elm) {
+function clickCommon() {
     // currentTable will contain "Projects" or "Tasks".
     // Get the row index we are on when clicked.
     // Using the index get the Project Name or Task Name.
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
-    console.log("Table Button Clicked", elm.cellIndex, elm.parentNode.rowIndex)
+    console.log(currentTable, "Table Button Clicked on row NUMBER:", currentRow)
 }
 
 function tabSetRow(x) {
-    console.log("Row index is: " + x.rowIndex);
+    currentRow = x.rowIndex;
+    console.log("Row index is: " + currentRow);
 }
 
-function clickListen(elm) { clickCommon(elm); }
-function clickPlay(elm) { clickCommon(elm); }
-function clickUp(elm) { clickCommon(elm); }
-function clickDown(elm) { clickCommon(elm); }
-function clickEdit(elm) { clickCommon(elm); }
-function clickDelete(elm) { clickCommon(elm); }
-function clickControls(elm) { clickCommon(elm); }
+function clickListen() { clickCommon(); }
+function clickPlay() { clickCommon(); }
+function clickUp() { clickCommon(); }
+function clickDown() { clickCommon(); }
+function clickEdit() { clickCommon(); }
+function clickDelete() { clickCommon(); }
+function clickControls() { clickCommon(); }
 
 window.addEventListener("click", processClick);
 // On initial load classes haven't been defined yet as HTML is dynamic
@@ -293,13 +294,13 @@ function processClick(event) {
     var elm = event.target;
     //console.log("elm.classList:", elm.classList)
     console.log("elm:", elm)
-    if (elm.classList.contains("clickListen(elm)")) { clickListen(elm) } ;
-    if (elm.classList.contains("clickPlay(elm)")) { clickPlay(elm) } ;
-    if (elm.classList.contains("clickUp(elm)")) { clickUp(elm) } ;
-    if (elm.classList.contains("clickDown(elm)")) { clickDown(elm) } ;
-    if (elm.classList.contains("clickEdit(elm)")) { clickEdit(elm) } ;
-    if (elm.classList.contains("clickDelete(elm)")) { clickDelete(elm) } ;
-    if (elm.classList.contains("clickControls(elm)")) { clickControls(elm) } ;
+    if (elm.classList.contains("clickListen()")) { clickListen() } ;
+    if (elm.classList.contains("clickPlay()")) { clickPlay() } ;
+    if (elm.classList.contains("clickUp()")) { clickUp() } ;
+    if (elm.classList.contains("clickDown()")) { clickDown() } ;
+    if (elm.classList.contains("clickEdit()")) { clickEdit() } ;
+    if (elm.classList.contains("clickDelete()")) { clickDelete() } ;
+    if (elm.classList.contains("clickControls()")) { clickControls() } ;
 }
 
 function logAllTasks(str) {
