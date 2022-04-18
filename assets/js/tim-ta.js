@@ -377,7 +377,7 @@ function inpSelect(key, label, mode, options) {
     var html = "<tr><td>\n";
     html += label + '</td>\n'
     html += '<td><input id="hrNewWindow" class="hrbInput" type="text"\n' +
-        'placeholder="Enter ' + label +"></td></tr>\n'
+        'placeholder="Enter ' + label + '"></td></tr>\n'
 
     return html;
     /*
