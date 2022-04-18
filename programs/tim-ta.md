@@ -254,24 +254,27 @@ Cancel</span>
 
 # Tim-ta Projects
 
-Here you can Create, Run, Update and Delete Tim-ta projects.
-Generically, these actions are grouped together under the
-name **CRUD** (**C**reate **R**un
-**U**pdate **D**elete).
-
-A project is a set of tasks (countdown timers). You
-can create as many projects as you like. Each project
+A project is a set of tasks (countdown timers). Each project
 can have as many tasks (timers) as needed.
 
 <div id="PaintedTable"></div>
 
+<div id="PaintedFooter"></div>
+
 <script>
    id = document.getElementById("PaintedTable");
    paintProjectsTable(id);
+   id2 = document.getElementById("PaintedFooter");
+   // paintProjectsTable(id);
 </script>
 
----
+Here you can Create, Run, Update and Delete Tim-ta projects.
+Generically, these actions are grouped together under the
+name **CRUD** (**C**reate **R**un
+**U**pdate **D**elete). You
+can create as many projects as you like. 
 
+---
 
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a></div>
