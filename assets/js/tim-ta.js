@@ -181,21 +181,18 @@ function paintProjectsTable(id) {
 function paintTasksTable(id) {
     // Assumes ttaStore and ttaProject are populated
     // Button at bottom allows calling paintProjectsTable(id)
-    var html = "<h3>" + ttaProject.project_name + " Project Tasks</h3>"
+    var cnt = ttaProject.arrTasks.length;
+    var html = "<h3>" + ttaProject.project_name + " Project - " +
+                cnt.toString() + " Tasks</h3>"
+
     html += '<table id="tabTasks">\n' ;
-    // Statistics Table heading
     html += tabTasksHeading();
+    //logAllTasks("paintTasksTable START")
 
-    logAllTasks("paintTasksTable START")
-
-    for (var i = 0; i < ttaProject.arrTasks.length; i++) {
-        ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-        html += tabTaskDetail();
-    }
+    for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
     html += '</table>\n';     // End of our table and form
 
-    // TODO: Move next 9 lines to a shared function
-    // Heading: "999 Pippim website entries found." <h3> styling
+    // TODO: Move next 9 lines to class name: tabClass inside TCM
     html += '<style>\n#tabTasks th, #tabTasks td {\n' +
             '  padding: 0 .5rem;\n' +
             '}\n'
@@ -223,7 +220,10 @@ function tabTasksHeading() {
 // | Listen | Up | Down | Edit | Delete | Task Name | Duration |
 // +--------+----+------+------+--------+-----------+----------+
 
-function tabTaskDetail() {
+// SMALL VERSION only Listen & Edit controls AND drop Duration
+
+function tabTaskDetail(i) {
+    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
     var html = "<tr>\n";
 
     if (scrSmall) {
@@ -250,6 +250,10 @@ function hmsToString(hours, minutes, seconds) {
     if (minutes > 0) { str += minutes.toString() + " Min " }
     if (seconds > 0) { str += seconds.toString() + " Sec" }
     return str;
+}
+
+function ttaAddButton () {
+    // Add button to table detail. Return HTML with <button> code
 }
 
 /* End of /assets/js/tim-ta.js */
