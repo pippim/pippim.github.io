@@ -187,6 +187,7 @@ function paintTasksTable(id) {
     html += '.tta-btn {\n' +
             'font-size: 25px;\n' +
             'border-radius: 1rem;\n' +
+            'margin: .25rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
