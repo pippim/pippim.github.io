@@ -200,9 +200,9 @@ function paintTasksTable(id) {
     for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
     html += '</table>\n';     // End of our table and form
 
-    html += taskButton(tabAddSym, tabAdd, "clickAddTask");
+    html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
     html += "Add new Task"
-    html += taskButton(tabAddSym, tabAdd, "clickAddProject");
+    html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
     html += "Add new Project"
 
     // TODO: Move next lines to class name: tabClass inside TCM
@@ -324,12 +324,10 @@ function clickDelete(i) {
     paintTaskWindow("Delete");
 }
 function clickAddTask() {
-    // Popup buttons for small screens
-    clickCommon(0); // Doesn't matter which is active when adding
+    ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
 }
 function clickAddProject() {
-    // Popup buttons for small screens
-    clickCommon(0); // Doesn't matter which is active when adding
+    ttaProject = Object.assign({}, tta_project);
 }
 function clickControls(i) {
     // Popup buttons for small screens
