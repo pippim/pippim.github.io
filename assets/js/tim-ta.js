@@ -282,6 +282,8 @@ function clickCommon(i) {
 
 function clickListen(i) {
     clickCommon(i);
+    end_alarm = getTaskValue("task_end_alarm");
+    if (end_alarm == "false") { alert("Alarm turned off for this task."); return; }
     sound = getTaskValue("task_end_filename");
     playSoundSource(sound);     // From: sound.js
 }
@@ -336,7 +338,7 @@ function swapTask(source, target) {
     paintTasksTable(currentId);
 }
 
-paintTaskWindow(mode) {
+function paintTaskWindow(mode) {
     // mode can be "Add", "Edit" or "Delete"
     // Button at bottom allows calling paintProjectsTable(id)
     currentWindow = mode;
