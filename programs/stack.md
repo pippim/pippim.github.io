@@ -963,7 +963,7 @@ EXTRA_SEARCH_FILES = ['../about.md', '../answers.md', '../hrb.md',
                       '../programs/hyperlink.md', '../index.md',
                       '../programs/mserve.md', '../programs/mt.md',
                       '../programs.md', '../programs/stack.md',
-                      '../programs/tcm.md', '../programs/timta.md']
+                      '../programs/tcm.md', '../programs/tim-ta.md']
 ```
 
 Using the above global variable values the following points are
