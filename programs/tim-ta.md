@@ -265,7 +265,6 @@ can have as many tasks (timers) as needed.
    id = document.getElementById("PaintedTable");
    paintProjectsTable(id);
    id2 = document.getElementById("PaintedFooter");
-   // paintProjectsTable(id);
 </script>
 
 Here you can Create, Run, Update and Delete Tim-ta projects.
