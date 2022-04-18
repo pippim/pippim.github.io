@@ -234,7 +234,7 @@ function tabTaskDetail(i) {
         //       "<td>Dn</td><td>Edit</td>\n" +
         //        "<td>Delete</td>\n"
         html += tabButton(tabListenSym, tabListenTitle, "clickListen");
-        html += tabButton(tabUpSym, tabUpTitle, "clickUp"");
+        html += tabButton(tabUpSym, tabUpTitle, "clickUp");
         html += tabButton(tabDownSym, tabDownTitle, "clickDown");
         html += tabButton(tabEditSym, tabEditTitle, "clickEdit");
         html += tabButton(tabDeleteSym, tabDeleteTitle, "clickDelete");
