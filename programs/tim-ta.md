@@ -12,11 +12,6 @@ layout: program
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
-# Tim-ta
-
-A project is a set of tasks (countdown timers). Each project
-can have as many tasks (timers) as needed.
-
 <div id="PaintedTable"></div>
 
 <div id="PaintedFooter"></div>
@@ -25,6 +20,7 @@ can have as many tasks (timers) as needed.
    id = document.getElementById("PaintedTable");
    paintProjectsTable(id);
    id2 = document.getElementById("PaintedFooter");
+   paintProjectsFooter(id2);
 </script>
 
 Here you can Create, Run, Update and Delete Tim-ta projects.
@@ -41,8 +37,8 @@ can create as many projects as you like.
 
 ---
 
-<a id='hdr7'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+<a id='hdr3'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
 # Introduction
 
