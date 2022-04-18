@@ -228,14 +228,10 @@ function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
     var html = '<tr onclick="tabSetRow(this)">\n';
     if (scrSmall) {
-        // html += "<td>Listen</td><td>Edit</td>\n";
         html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
         html += tabButton(i, tabControlsSym, tabControlsTitle, "clickControls");
     }           // Two columns of buttons
     else {
-        //html += "<td>Listen</td><td>Up</td>\n" +
-        //       "<td>Dn</td><td>Edit</td>\n" +
-        //        "<td>Delete</td>\n"
         html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
         html += tabButton(i, tabUpSym, tabUpTitle, "clickUp");
         html += tabButton(i, tabDownSym, tabDownTitle, "clickDown");
@@ -270,17 +266,9 @@ function tabButton(i, button_code, title, callback) {
 }
 
 function clickCommon(i) {
-    // currentTable will contain "Projects" or "Tasks".
-    // Get the row index we are on when clicked.
-    // Using the index get the Project Name or Task Name.
-    // Using name lookup, get ttaProject or ttaTask into memory.
-    // Return?
-    // tabSetRow(i);
     currentRow = i + 1;
-    //console.log(currentTable, "Table Button Clicked on row NUMBER:", currentRow)
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
 }
-
 function clickListen(i) {
     clickCommon(i);
     end_alarm = getTaskValue("task_end_alarm");
@@ -288,25 +276,14 @@ function clickListen(i) {
     sound = getTaskValue("task_end_filename");
     playSoundSource(sound);     // From: sound.js
 }
-
 function playSoundSource (name) {
     // Copied from sound.js because it isn't included yet...
     audioControl = document.getElementById(name);
     audioControl.play();
 }
-
-function getTaskValue(key) {
-    value = ttaTask[key];
-    if (value == "default") { return getProjectValue(key); }
-    return value;
+function clickPlay(i) {
+    clickCommon(i);
 }
-function getProjectValue(key) {
-    value = ttaProject[key];
-    if (value == "default") { return ttaStore[key]; }
-    return value;
-}
-
-function clickPlay(i) { clickCommon(i); }
 function clickUp(i) {
     clickCommon(i);
     if (i == 0) { alert("Already at top, can't move up"); return; }
@@ -315,7 +292,7 @@ function clickUp(i) {
 function clickDown(i) {
     // TODO: After moving, update & save localStorage
     clickCommon(i);
-    const cnt = ttaProject.arrTasks.length;
+    var cnt = ttaProject.arrTasks.length;
     if (i == cnt) { alert("Already at bottom, can't move down"); return; }
     swapTask(i, i + 1);
 }
@@ -330,6 +307,17 @@ function clickDelete(i) {
 function clickControls(i) {
     // Popup buttons for small screens
     clickCommon(i);
+}
+
+function getTaskValue(key) {
+    value = ttaTask[key];
+    if (value == "default") { return getProjectValue(key); }
+    return value;
+}
+function getProjectValue(key) {
+    value = ttaProject[key];
+    if (value == "default") { return ttaStore[key]; }
+    return value;
 }
 
 function swapTask(source, target) {
