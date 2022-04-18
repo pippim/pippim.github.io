@@ -282,13 +282,13 @@ function tabSetRow(x) {
     //console.log("Row index is: " + currentRow);
 }
 
-function clickListen(x) { clickCommon(x); }
+function clickListen(x) { console.log(x.rowIndex); clickCommon(x); }
 function clickPlay(x) { clickCommon(x); }
-function clickUp(X) { clickCommon(X); }
-function clickDown(X) { clickCommon(X); }
-function clickEdit(X) { clickCommon(X); }
-function clickDelete(X) { clickCommon(X); }
-function clickControls(X) { clickCommon(X); }
+function clickUp(x) { clickCommon(x); }
+function clickDown(x) { clickCommon(x); }
+function clickEdit(x) { clickCommon(x); }
+function clickDelete(x) { clickCommon(x); }
+function clickControls(x) { clickCommon(x); }
 
 // window.addEventListener("click", processClick);
 // On initial load classes haven't been defined yet as HTML is dynamic
