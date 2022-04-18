@@ -119,55 +119,61 @@ Below are proposed buttons for Tim-ta.
 ---
 
 Listen symbol 1. Unicode #x1F50A
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x1F50A;</span>
 
 ---
 
 Listen symbol 2. Unicode #9835 (Decimal)
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#9835;</span>
 
 ---
 
+Settings symbol. Unicode #x2699
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x2699;</span>
+
+---
+
 Plus symbol. Unicode #x2B
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2B;</span>
 
 ---
 
 Edit symbol. Unicode #x270D
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x270D;</span>
 
 ---
 
 Trash symbol. Unicode #x1f5d1
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x1f5d1;</span>
 
 ---
 
 Run symbol 1. Unicode #127939 (Decimal)
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#127939;</span>
 
 ---
 
 Run symbol 2. (Refresh) Could be used to "run" project. Unicode #x1f5d8
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x1f5d8;</span>
 
 ---
 
 Run symbol 3. Could be used to "run" project. Unicode #x27f3
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x27f3;</span>
 
 ---
 
 Run symbol 4. Traditional "Play" button. Unicode #x25b6
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x25b6;</span>
 <br>
 Advantage of this symbol is common audio control button. Also eases
@@ -177,68 +183,68 @@ Fast forward x seconds, Restart and Skip to end.
 ---
 
 White Up Arrow from Bar symbol. Move task up project. Unicode #x21ea
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x21ea;</span>
 
 ---
 
 White Down Arrow from Bar symbol. Move task down project. Unicode #x21ea + flip
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;
 transform: scale(1, -1);'>
 &#x21ea;</span>
 
 ---
 
 White Up Arrow. Move task up project. Unicode #x21E7
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x21E7;</span>
 
 ---
 
 White Down Arrow. Move task down project. Unicode #x21e9
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x21e9;</span>
 
 ---
 
 Move Up List symbol 2. Unicode #x21A5
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x21A5;</span>
 
 ---
 
 Move Down List symbol 2. Unicode #x21A7
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x21A7;</span>
 
 ---
 
 OK symbol 1. Unicode #x2713
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2713;</span>
 
 ---
 
 OK symbol 2. Unicode #x2714
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2714;</span>
 
 ---
 
 OK symbol 3.
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 OK</span>
 
 ---
 
 Cancel symbol 1. Unicode #x1f5d9
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x1f5d9;</span>
 
 ---
 
 Cancel symbol 2.
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 Cancel</span>
 
 ---
