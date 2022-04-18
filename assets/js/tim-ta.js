@@ -234,6 +234,7 @@ var tabEditSym = "&#x270D;";
 var tabEditTitle = "Edit";
 var tabDeleteSym = "&#x1f5d1";
 var tabDeleteTitle = "Delete";
+var tabControlsSym = "&#x2699";
 var tabControlsTitle = "Buttons for: Listen, Move up, Move down, Edit and Delete";
 
 var clickPlay, clickListen, clickUp, clickDown, clickEdit, clickDelete, clickControls;
@@ -244,7 +245,7 @@ function tabTaskDetail(i) {
     if (scrSmall) {
         // html += "<td>Listen</td><td>Edit</td>\n";
         html += tabButton(tabListenSym, tabListenTitle, clickListen);
-        html += tabButton(tabEditSym, tabControlsTitle, clickControls);
+        html += tabButton(tabControlsSym, tabControlsTitle, clickControls);
     }           // Two columns of buttons
     else {
         //html += "<td>Listen</td><td>Up</td>\n" +
