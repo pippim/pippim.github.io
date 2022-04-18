@@ -261,7 +261,7 @@ function tabButton(button_code, title, callback) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
     var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
-               '" type="button" \n' +
+               'type="button" onclick="' + callback + '" \n' +
                'title="' + title + '">' + button_code + '</button></td>\n';
     return html;
 }
@@ -288,7 +288,7 @@ function clickEdit() { clickCommon(); }
 function clickDelete() { clickCommon(); }
 function clickControls() { clickCommon(); }
 
-window.addEventListener("click", processClick);
+// window.addEventListener("click", processClick);
 // On initial load classes haven't been defined yet as HTML is dynamic
 function processClick(event) {
     var elm = event.target;
