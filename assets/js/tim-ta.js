@@ -173,7 +173,7 @@ function paintTasksTable(id) {
     for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
     html += '</table>\n';     // End of our table and form
 
-    // TODO: Move next 9 lines to class name: tabClass inside TCM
+    // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n#tabTasks th, #tabTasks td {\n' +
             '  padding: 0 .5rem;\n' +
             '}\n'
@@ -284,7 +284,6 @@ function clickListen(i) {
     clickCommon(i);
     sound = getTaskValue("task_end_filename");
     playSoundSource(sound);     // From: sound.js
-    console.log("sound:", sound)
 }
 
 function playSoundSource (name) {
@@ -321,7 +320,10 @@ function clickDown(i) {
     }
     swapTask(i, i + 1);
 }
-function clickEdit(i) { clickCommon(i); }
+function clickEdit(i) {
+    clickCommon(i);
+    paintTaskWindow("Edit");
+}
 function clickDelete(i) { clickCommon(i); }
 function clickControls(i) { clickCommon(i); }
 
@@ -330,6 +332,77 @@ function swapTask(source, target) {
     ttaProject.arrTasks[target] = ttaProject.arrTasks[source];
     ttaProject.arrTasks[source] = hold;
     paintTasksTable(currentId);
+}
+
+paintTaskWindow(mode) {
+    // mode can be "Add", "Edit" or "Delete"
+    // Button at bottom allows calling paintProjectsTable(id)
+    currentWindow = mode;
+    var id = currentId;
+
+    var cnt = ttaProject.arrTasks.length;
+    var html = "<h2>" + ttaProject.project_name + " Project - " +
+                mode + " Task</h2>"
+
+    html += '<form id="form' + mode + '"><table id="tabInput" class="tta-table">\n' ;
+    html += inpSelect("task_name", "Task Name", mode);
+    html += '</table></form>\n' ;
+
+    // TODO: Move next lines to class name: tabClass inside TCM
+    html += '<style>\n';
+    html += '#tabTasks th, #tabTasks td {\n' +
+            '  padding: 0 .5rem;\n' +
+            '}\n'
+    html += '#tabTasks th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #f1f1f1;\n' +
+            '}\n'
+    html += '.tta-btn {\n' +
+            'font-size: 25px;\n' +
+            'border-radius: 1rem;\n' +
+            '}\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    id.innerHTML = html;
+
+}
+
+function inpSelect(key, label, mode, options) {
+    var html = "<tr><td>\n";
+    html += label + '</td>\n'
+    html += '<td><input id="hrNewWindow" class="hrbInput" type="text"\n' +
+        'placeholder="Enter ' + label +"></td></tr>\n'
+
+    return html;
+    /*
+    <label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+*/
+}
+
+/* Functions NOT USED */
+
+function logAllTasks(str) {
+    // Apr 17, 2022 - Created to debug objA = objB not shallow copying.
+    console.log("========", str, "========");
+    console.log("Object.keys(ttaProject.objTasks):", Object.keys(ttaProject.objTasks))
+    // .includes() from: https://stackoverflow.com/a/1473742/6929343
+    if (ttaProject.arrTasks.includes("Wash Cycle")) {
+        console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
+    }
+    if (ttaProject.arrTasks.includes("Rinse Cycle")) {
+        console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
+    }
+    if (ttaProject.arrTasks.includes("Dryer")) {
+        console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
+    }
 }
 
 // DEPRECATED - window.addEventListener("click", processClick);
@@ -353,19 +426,4 @@ function tabSetRow(x) {
     //console.log("Row index is: " + currentRow);
 }
 
-function logAllTasks(str) {
-    // Apr 17, 2022 - Created to debug objA = objB not shallow copying.
-    console.log("========", str, "========");
-    console.log("Object.keys(ttaProject.objTasks):", Object.keys(ttaProject.objTasks))
-    // .includes() from: https://stackoverflow.com/a/1473742/6929343
-    if (ttaProject.arrTasks.includes("Wash Cycle")) {
-        console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
-    }
-    if (ttaProject.arrTasks.includes("Rinse Cycle")) {
-        console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
-    }
-    if (ttaProject.arrTasks.includes("Dryer")) {
-        console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
-    }
-}
 /* End of /assets/js/tim-ta.js */
