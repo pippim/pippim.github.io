@@ -140,18 +140,6 @@ function logAllTasks(str) {
     }
 }
 
-// https://stackoverflow.com/a/237176/6929343
-// Doesn't seem to work? Use .includes() builtin instead
-Array.prototype.contains = function(obj) {
-    var i = this.length;
-    while (i--) {
-        if (this[i] === obj) {
-            return true;
-        }
-    }
-    return false;
-}
-
 function ttaNewTask (name) {
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     ttaTask_index = ttaProject.cntTasks;
@@ -173,26 +161,22 @@ function ttaTaskDuration (hours, minutes, seconds) {
     ttaTask.seconds = seconds;
 }
 
+var currentTable, currentWindow;
 
 function paintProjectsTable(id) {
     // If only one Project defined, skip and paintTasksTable
     // Grab the first (and only) Project at array offset 0
+    currentTable = "Projects";
     ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
     paintTasksTable(id);
 }
 
-// HTML Codes for buttons
-
-var ttaPlaySym = "&#x25b6";
-var ttaListenSym = "#9835";
-var ttaUpSym = "&#x21E7";
-var ttaDownSym = "&#x21e9";
-var ttaEditSym = "&#x270D";
-var ttaTrashSym = "&#x270D";
 
 function paintTasksTable(id) {
     // Assumes ttaStore and ttaProject are populated
     // Button at bottom allows calling paintProjectsTable(id)
+    currentTable = "Tasks";
+
     var cnt = ttaProject.arrTasks.length;
     var html = "<h2>" + ttaProject.project_name + " Project - " +
                 cnt.toString() + " Tasks</h2>"
@@ -233,25 +217,39 @@ function tabTasksHeading() {
 // +--------+----+------+------+--------+-----------+----------+
 
 // SMALL VERSION only Listen & Edit controls AND drop Duration
+// HTML Codes for buttons
+
+var tabPlaySym = "&#x25b6";
+var tabPlayTitle = "Start countdown timers";
+var tabListenSym = "#9835";
+var tabListenTitle = "Listen to task end alarm";
+var tabUpSym = "&#x21E7";
+var tabUpTitle = "Move up list";
+var tabDownSym = "&#x21e9";
+var tabDownTitle = "Move down list";
+var tabEditSym = "&#x270D";
+var tabEditTitle = "Edit";
+var tabTrashSym = "&#x270D";
+var tabTrashTitle = "Delete";
+var tabControlsTitle = "Controls popup with Listen, Up, Down, Edit, Delete buttons";
 
 function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
     var html = "<tr>\n";
-    /*  tabButton(ttaPlaySym, index, callback)
-        var ttaPlaySym = "&#x25b6";
-        var ttaListenSym = "#9835";
-        var ttaUpSym = "&#x21E7";
-        var ttaDownSym = "&#x21e9";
-        var ttaEditSym = "&#x270D";
-        var ttaTrashSym = "&#x270D";
-    */
     if (scrSmall) {
         html += "<td>Listen</td><td>Edit</td>\n";
+        tabButton(tabListenSym, tabListenTitle, clickListen);
+        tabButton(tabEditSym, tabControlsTitle, clickControls);
     }           // Two columns of buttons
     else {
         html += "<td>Listen</td><td>Up</td>\n" +
                 "<td>Dn</td><td>Edit</td>\n" +
                 "<td>Delete</td>\n"
+        tabButton(tabListenSym, tabListenTitle, clickListen);
+        tabButton(tabUpSym, tabUpTitle, clickUp);
+        tabButton(tabDownSym, tabDownTitle, clickDown);
+        tabButton(tabEditSym, tabEditTitle, clickEdit);
+        tabButton(tabDeleteSym, tabDeleteTitle, clickDelete);
     }           // Five columns of buttons
 
     html += "<td>" + ttaTask.task_name + "</td>\n";
@@ -271,7 +269,7 @@ function hmsToString(hours, minutes, seconds) {
     return str;
 }
 
-function tabButton(code, index, callback) {
+function tabButton(button_code, title, callback) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6 for Play button.
     /*  CODES:
@@ -282,6 +280,10 @@ function tabButton(code, index, callback) {
         var ttaEditSym = "&#x270D";
         var ttaTrashSym = "&#x270D";
     */
+    var html = '<td><button class="hdr-btn tta-btn" id="' + callback +
+                '" type="button"\n' +
+                'title="' + title + '">' + button_code + '</button></td>\n';
+    //
 }
 
 /* End of /assets/js/tim-ta.js */
