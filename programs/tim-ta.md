@@ -12,6 +12,38 @@ layout: program
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
+# Tim-ta
+
+A project is a set of tasks (countdown timers). Each project
+can have as many tasks (timers) as needed.
+
+<div id="PaintedTable"></div>
+
+<div id="PaintedFooter"></div>
+
+<script>
+   id = document.getElementById("PaintedTable");
+   paintProjectsTable(id);
+   id2 = document.getElementById("PaintedFooter");
+</script>
+
+Here you can Create, Run, Update and Delete Tim-ta projects.
+Generically, these actions are grouped together under the
+name **CRUD** (**C**reate **R**un
+**U**pdate **D**elete). You
+can create as many projects as you like.
+
+---
+
+<a id="hdr2"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
+{% include toc.md %}
+
+---
+
+<a id='hdr7'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+
 # Introduction
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
@@ -34,12 +66,6 @@ cycle fabric softener to eliminate static cling. You'll
 never have wrinkled clothes from being left overnight in
 the dryer. It doesn't stop you from mixing red and white
 fabrics in hot water to end up with PINK clothes though!
-
----
-
-<a id="hdr2"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
-{% include toc.md %}
 
 ---
 
@@ -250,30 +276,7 @@ Cancel</span>
 ---
 
 <a id='hdr6'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
-
-# Tim-ta Projects
-
-A project is a set of tasks (countdown timers). Each project
-can have as many tasks (timers) as needed.
-
-<div id="PaintedTable"></div>
-
-<div id="PaintedFooter"></div>
-
-<script>
-   id = document.getElementById("PaintedTable");
-   paintProjectsTable(id);
-   id2 = document.getElementById("PaintedFooter");
-</script>
-
-Here you can Create, Run, Update and Delete Tim-ta projects.
-Generically, these actions are grouped together under the
-name **CRUD** (**C**reate **R**un
-**U**pdate **D**elete). You
-can create as many projects as you like. 
-
----
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 # localStorage Object
 
@@ -328,7 +331,7 @@ var tta_project = {
 }
 
 // SINGLE Timer within a Tim-ta Project
-// When value is "default" it is inherited from Project 
+// When value is "default" it is inherited from Project
 var tta_task = {
     task_name: null,
     hours: null,
