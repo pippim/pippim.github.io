@@ -265,35 +265,35 @@ function tabButton(button_code, title, callback) {
     return html;
 }
 
-function clickCommon() {
+function clickCommon(elm) {
     // currentTable will contain "Projects" or "Tasks".
     // Get the row index we are on when clicked.
     // Using the index get the Project Name or Task Name.
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
-    console.log("Table Button Clicked", closest('tr').index())
+    console.log("Table Button Clicked", elm.closest('tr').index())
 }
 
-function clickListen() { clickCommon(); }
-function clickPlay() { clickCommon(); }
-function clickUp() { clickCommon(); }
-function clickDown() { clickCommon(); }
-function clickEdit() { clickCommon(); }
-function clickDelete() { clickCommon(); }
-function clickControls() { clickCommon(); }
+function clickListen(elm) { clickCommon(elm); }
+function clickPlay(elm) { clickCommon(elm); }
+function clickUp(elm) { clickCommon(elm); }
+function clickDown(elm) { clickCommon(elm); }
+function clickEdit(elm) { clickCommon(elm); }
+function clickDelete(elm) { clickCommon(elm); }
+function clickControls(elm) { clickCommon(elm); }
 
 window.addEventListener("click", processClick);
 // On initial load classes haven't been defined yet as HTML is dynamic
 function processClick(event) {
-    var element = event.target;
-    //console.log("element.classList:", element.classList)
-    if (element.classList.contains("clickListen()")) { clickListen() } ;
-    if (element.classList.contains("clickPlay()")) { clickPlay() } ;
-    if (element.classList.contains("clickUp()")) { clickUp() } ;
-    if (element.classList.contains("clickDown()")) { clickDown() } ;
-    if (element.classList.contains("clickEdit()")) { clickEdit() } ;
-    if (element.classList.contains("clickDelete()")) { clickDelete() } ;
-    if (element.classList.contains("clickControls()")) { clickControls() } ;
+    var elm = event.target;
+    //console.log("elm.classList:", elm.classList)
+    if (elm.classList.contains("clickListen()")) { clickListen(elm) } ;
+    if (elm.classList.contains("clickPlay()")) { clickPlay(elm) } ;
+    if (elm.classList.contains("clickUp()")) { clickUp(elm) } ;
+    if (elm.classList.contains("clickDown()")) { clickDown(elm) } ;
+    if (elm.classList.contains("clickEdit()")) { clickEdit(elm) } ;
+    if (elm.classList.contains("clickDelete()")) { clickDelete(elm) } ;
+    if (elm.classList.contains("clickControls()")) { clickControls(elm) } ;
 }
 
 function logAllTasks(str) {
