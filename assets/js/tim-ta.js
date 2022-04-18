@@ -277,6 +277,7 @@ function clickCommon(x) {
 }
 
 function tabSetRow(x) {
+    console.log("typeof x", typeof x)
     currentRow = x.rowIndex;
     //console.log("Row index is: " + currentRow);
 }
