@@ -116,11 +116,13 @@ $lavender: #E6E6FA !default; // lavender
     margin-left: 10px;        // Now that right aligned, switch margin side
     // From: https://stackoverflow.com/questions/65297617
     // background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
-    background-color: $honeydew; // Honeydew
+    //background-color: $honeydew; // Honeydew
 
     &:hover {
+        background-color: DodgerBlue;
         background-position: bottom;
-        color: $lavender;       // WAS F0FFF0 or something like that Grayish
+        //color: $lavender;       // WAS F0FFF0 or something like that Grayish
+        color: black;       // WAS F0FFF0 or something like that Grayish
     }
 }
 
