@@ -221,6 +221,7 @@ function tabTasksHeading() {
 
 var tabPlaySym = "&#x25b6";
 var tabPlayTitle = "Start countdown timers";
+var clickPlay, clickListen, clickUp, clickDown, clickEdit, clickDelete, clickControls;
 var tabListenSym = "#9835";
 var tabListenTitle = "Listen to task end alarm";
 var tabUpSym = "&#x21E7";
@@ -229,8 +230,8 @@ var tabDownSym = "&#x21e9";
 var tabDownTitle = "Move down list";
 var tabEditSym = "&#x270D";
 var tabEditTitle = "Edit";
-var tabTrashSym = "&#x270D";
-var tabTrashTitle = "Delete";
+var tabDeleteSym = "&#x270D";
+var tabDeleteTitle = "Delete";
 var tabControlsTitle = "Controls popup with Listen, Up, Down, Edit, Delete buttons";
 
 function tabTaskDetail(i) {
