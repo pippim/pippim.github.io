@@ -271,7 +271,7 @@ function hmsToString(hours, minutes, seconds) {
     return str;
 }
 
-function tabButton (code, index, callback) {
+function tabButton(code, index, callback) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6 for Play button.
     /*  CODES:
