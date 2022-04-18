@@ -276,17 +276,19 @@ function clickCommon(i) {
     // Return?
     // tabSetRow(i);
     currentRow = i + 1;
-    console.log(currentTable, "Table Button Clicked on row NUMBER:", currentRow)
+    //console.log(currentTable, "Table Button Clicked on row NUMBER:", currentRow)
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
 }
 
-function tabSetRow(x) {
-    //console.log("typeof x", typeof x)
-    //currentRow = x.rowIndex;
-    //console.log("Row index is: " + currentRow);
+
+function clickListen(i) {
+    clickCommon(i);
+    sound = ttaTask.task_end_filename;
+    console.log("sound:", sound)
+}
+function getTaskValue(key) {
 }
 
-function clickListen(i) { clickCommon(i); }
 function clickPlay(i) { clickCommon(i); }
 function clickUp(i) {
     clickCommon(i);
@@ -328,6 +330,12 @@ function processClick(event) {
     if (elm.classList.contains("clickEdit()")) { clickEdit() } ;
     if (elm.classList.contains("clickDelete()")) { clickDelete() } ;
     if (elm.classList.contains("clickControls()")) { clickControls() } ;
+}
+
+function tabSetRow(x) {
+    //console.log("typeof x", typeof x)
+    //currentRow = x.rowIndex;
+    //console.log("Row index is: " + currentRow);
 }
 
 function logAllTasks(str) {
