@@ -293,7 +293,7 @@ function clickDown(i) {
     // TODO: After moving, update & save localStorage
     clickCommon(i);
     var cnt = ttaProject.arrTasks.length;
-    if (i == cnt) { alert("Already at bottom, can't move down"); return; }
+    if (i == cnt - 1) { alert("Already at bottom, can't move down"); return; }
     swapTask(i, i + 1);
 }
 function clickEdit(i) {
