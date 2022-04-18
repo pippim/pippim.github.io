@@ -199,6 +199,9 @@ function paintTasksTable(id) {
             'z-index: 1;\n' +
             'background: #f1f1f1;\n' +
             '}\n'
+    html += '.tta-btn {\n' +
+            'font-size: 25px;\n' +
+            '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
 }
@@ -221,7 +224,7 @@ function tabTasksHeading() {
 
 var tabPlaySym = "&#x25b6;";
 var tabPlayTitle = "Start countdown timers";
-var tabListenSym = "#9835;";
+var tabListenSym = "&#9835;"; // options x1f50a (speaker) 9835 (notes)
 var tabListenTitle = "Listen to task end alarm";
 var tabUpSym = "&#x21E7;";
 var tabUpTitle = "Move up list";
