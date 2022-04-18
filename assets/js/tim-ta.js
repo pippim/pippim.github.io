@@ -350,6 +350,17 @@ function paintTaskWindow(mode) {
 
     html += '<form id="form' + mode + '"><table id="tabInput" class="tta-table">\n' ;
     html += inpSelect("task_name", "Task Name", mode);
+    html += inpSelect("hours", "Hours", mode);
+    html += inpSelect("minutes", "Minutes", mode);
+    html += inpSelect("seconds", "Seconds", mode);
+    html += inpSelect("task_prompt", "Prompt to begin countdown?", mode);
+    html += inpSelect("task_end_alarm", "Sound alarm when task ends?", mode);
+    html += inpSelect("task_end_filename", "If yes, the sound filename", mode);
+    html += inpSelect("task_end_notification", "Notification when task ends?", mode);
+    html += inpSelect("progress_bar_update_seconds",
+                      "Seconds interval between progress bar updates", mode);
+    html += inpSelect("confirm_delete_phrase",
+                      "Phrase to confirm delete choice", mode);
     html += '</table></form>\n' ;
 
     // TODO: Move next lines to class name: tabClass inside TCM
@@ -374,10 +385,11 @@ function paintTaskWindow(mode) {
 }
 
 function inpSelect(key, label, mode, options) {
+    value = getTaskValue(key);
     var html = "<tr><td>\n";
     html += label + '</td>\n'
-    html += '<td><input id="hrNewWindow" class="hrbInput" type="text"\n' +
-        'placeholder="Enter ' + label + '"></td></tr>\n'
+    html += '<td><input id="' + key + '" class="tabInput" type="text"\n' +
+        'placeholder="Enter ' + label + '" value="' + value + '"></td></tr>\n'
 
     return html;
     /*
