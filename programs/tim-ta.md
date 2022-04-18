@@ -275,5 +275,75 @@ can create as many projects as you like.
 
 ---
 
+# localStorage Object
+
+``` javascript
+// Configuration & Container for all Tim-ta Projects
+// Default below for creation, overwritten when retrieved from localStorage
+// The order arrProjects names appear is order they are displayed
+var tta_store = {
+    arrProjects: [],
+    objProjects: {},
+    cntProjects: 0,
+    task_prompt: "true",
+    task_end_alarm: "true",
+    task_end_filename: "Alarm_03.mp3",
+    task_end_notification: "false",
+    run_set_times: 1,
+    set_prompt: "false",
+    set_end_alarm: "false",
+    set_end_filename: "Alarm_05.mp3",
+    set_end_notification: "false",
+    all_sets_prompt: "false",
+    all_sets_end_alarm: "false",
+    all_sets_end_filename: "Alarm_12.mp3",
+    all_sets_end_notification: "false",
+    progress_bar_update_seconds: 1,
+    confirm_delete_phrase: "y"
+}
+
+// SINGLE Tim-ta Project
+// When value is "default" it is inherited from Configuration
+// The order arrTasks names appear is order they are displayed
+var tta_project = {
+    project_name: null,
+    arrTasks: [],
+    objTasks: {},
+    cntTasks: 0,
+    task_prompt: "default",
+    task_end_alarm: "default",
+    task_end_filename: "default",
+    task_end_notification: "default",
+    run_set_times: "default",
+    set_prompt: "default",
+    set_end_alarm: "default",
+    set_end_filename: "default",
+    set_end_notification: "default",
+    all_sets_prompt: "default",
+    all_sets_end_alarm: "default",
+    all_sets_end_filename: "default",
+    all_sets_end_notification: "default",
+    progress_bar_update_seconds: "default",
+    confirm_delete_phrase: "default"
+}
+
+// SINGLE Timer within a Tim-ta Project
+// When value is "default" it is inherited from Project 
+var tta_task = {
+    task_name: null,
+    hours: null,
+    minutes: null,
+    seconds: null,
+    task_prompt: "default",
+    task_end_alarm: "default",
+    task_end_filename: "default",
+    task_end_notification: "default",
+    progress_bar_update_seconds: "default",
+    confirm_delete_phrase: "default"
+}
+```
+
+---
+
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a></div>
