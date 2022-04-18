@@ -285,7 +285,7 @@ function tabButton(button_code, title, callback) {
     var html = '<td><button class="hdr-btn tta-btn" id="' + callback +
                 '" type="button"\n' +
                 'title="' + title + '">' + button_code + '</button></td>\n';
-    //
+    return html;
 }
 
 /* End of /assets/js/tim-ta.js */
