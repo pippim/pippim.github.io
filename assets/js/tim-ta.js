@@ -283,10 +283,19 @@ function clickCommon(i) {
 
 function clickListen(i) {
     clickCommon(i);
-    sound = ttaTask.task_end_filename;
+    sound = getTaskValue("task_end_filename");
     console.log("sound:", sound)
 }
+
 function getTaskValue(key) {
+    value = ttaTask[key];
+    if (value == "default") { return getProjectValue(key); }
+    return value;
+}
+function getProjectValue(key) {
+    value = ttaProject[key];
+    if (value == "default") { return ttaStore[key]; }
+    return value;
 }
 
 function clickPlay(i) { clickCommon(i); }
