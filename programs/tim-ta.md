@@ -189,6 +189,18 @@ transform: scale(1, -1);'>
 
 ---
 
+White Up Arrow. Move task up project. Unicode #x21E7
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;
+&#x21E7;</span>
+
+---
+
+White Down Arrow. Move task down project. Unicode #x21e9
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;
+&#x21e9;</span>
+
+---
+
 Move Up List symbol 2. Unicode #x21A5
 &emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;'>
 &#x21A5;</span>
