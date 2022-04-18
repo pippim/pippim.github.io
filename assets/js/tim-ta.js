@@ -378,6 +378,7 @@ function paintTaskWindow(mode) {
     html += '.tta-btn {\n' +
             'font-size: 25px;\n' +
             'border-radius: 1rem;\n' +
+            'margin: .25rem 0 .25rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
@@ -389,7 +390,9 @@ function inpSelect(key, label, mode, options) {
     var html = "<tr><td>\n";
     html += label + '</td>\n'
     html += '<td><input id="' + key + '" class="tabInput" type="text"\n' +
-        'placeholder="Enter ' + label + '" value="' + value + '"></td></tr>\n'
+        'placeholder="Enter ' + label + '" value="' + value + '"'
+    if(mode == "Delete") { html += ' readonly'; }
+    html += '></td></tr>\n'
 
     return html;
     /*
