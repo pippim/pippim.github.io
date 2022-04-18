@@ -284,6 +284,7 @@ function clickCommon(i) {
 function clickListen(i) {
     clickCommon(i);
     sound = getTaskValue("task_end_filename");
+    playSoundSource(sound);     // From: sound.js
     console.log("sound:", sound)
 }
 
