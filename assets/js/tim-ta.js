@@ -145,6 +145,30 @@ function ttaTaskDuration (hours, minutes, seconds) {
     ttaTask.seconds = seconds;
 }
 
+// +===========================================================+
+// | Listen | Up | Down | Edit | Delete | Task Name | Duration |
+// +--------+----+------+------+--------+-----------+----------+
+
+// SMALL VERSION only Listen & Edit controls AND drop Duration
+// HTML Codes for buttons
+
+var tabListenSym = "&#9835;"; // options x1f50a (speaker) 9835 (notes)
+var tabListenTitle = "Listen to task end alarm";
+var tabUpSym = "&#x21E7;";
+var tabUpTitle = "Move up list";
+var tabDownSym = "&#x21e9;";
+var tabDownTitle = "Move down list";
+var tabEditSym = "&#x270D;";
+var tabEditTitle = "Edit";
+var tabDeleteSym = "&#x1f5d1";
+var tabDeleteTitle = "Delete";
+var tabControlsSym = "&#x2699";
+var tabControlsTitle = "Buttons for: Move up, Move down, Edit and Delete";
+var tabPlaySym = "&#x25b6;";
+var tabPlayTitle = "Countdown each task";
+var tabAddSym = "&#x2b;";
+var tabAddTitle = "Add new ";
+
 var currentTable, currentId, currentRow, currentWindow;
 
 function paintProjectsTable(id) {
@@ -157,8 +181,7 @@ function paintProjectsTable(id) {
 }
 
 function paintProjectsFooter(id) {
-    // If only one Project defined, skip and paintTasksTable
-    // Grab the first (and only) Project at array offset 0
+    // DON'T NEED - the table painter can mount a footer too.
 }
 function paintTasksTable(id) {
     // Assumes ttaStore and ttaProject are populated
@@ -176,6 +199,11 @@ function paintTasksTable(id) {
 
     for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
     html += '</table>\n';     // End of our table and form
+
+    html += taskButton(tabAddSym, tabAdd, "clickAddTask");
+    html += "Add new Task"
+    html += taskButton(tabAddSym, tabAdd, "clickAddProject");
+    html += "Add new Project"
 
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n#tabTasks th, #tabTasks td {\n' +
@@ -205,28 +233,6 @@ function tabTasksHeading() {
     if (!scrSmall) { html += "<th>Duration</th>"; }
     return html += "</tr>\n";
 }
-
-// +===========================================================+
-// | Listen | Up | Down | Edit | Delete | Task Name | Duration |
-// +--------+----+------+------+--------+-----------+----------+
-
-// SMALL VERSION only Listen & Edit controls AND drop Duration
-// HTML Codes for buttons
-
-var tabPlaySym = "&#x25b6;";
-var tabPlayTitle = "Start countdown timers";
-var tabListenSym = "&#9835;"; // options x1f50a (speaker) 9835 (notes)
-var tabListenTitle = "Listen to task end alarm";
-var tabUpSym = "&#x21E7;";
-var tabUpTitle = "Move up list";
-var tabDownSym = "&#x21e9;";
-var tabDownTitle = "Move down list";
-var tabEditSym = "&#x270D;";
-var tabEditTitle = "Edit";
-var tabDeleteSym = "&#x1f5d1";
-var tabDeleteTitle = "Delete";
-var tabControlsSym = "&#x2699";
-var tabControlsTitle = "Buttons for: Move up, Move down, Edit and Delete";
 
 function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
@@ -269,6 +275,15 @@ function tabButton(i, button_code, title, callback) {
     return html;
 }
 
+function taskButton(button_code, title, callback) {
+    // Add button to table detail. Return HTML with <button> code
+    // code is the HTML code, E.G.&#x25b6; for Play button.
+    var html = '<button class="hdr-btn tta-btn ' + callback + '" \n' +
+               'type="button" onclick="' + callback + '(' + i + ')" \n' +
+               'title="' + title + '">' + button_code + '</button>\n';
+    return html;
+}
+
 function clickCommon(i) {
     currentRow = i + 1;
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
@@ -307,6 +322,14 @@ function clickEdit(i) {
 function clickDelete(i) {
     clickCommon(i);
     paintTaskWindow("Delete");
+}
+function clickAddTask() {
+    // Popup buttons for small screens
+    clickCommon(0); // Doesn't matter which is active when adding
+}
+function clickAddProject() {
+    // Popup buttons for small screens
+    clickCommon(0); // Doesn't matter which is active when adding
 }
 function clickControls(i) {
     // Popup buttons for small screens
