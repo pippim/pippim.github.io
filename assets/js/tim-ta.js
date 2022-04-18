@@ -271,7 +271,7 @@ function clickCommon() {
     // Using the index get the Project Name or Task Name.
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
-    console.log("Table Button Clicked")
+    console.log("Table Button Clicked", $(this).closest('tr').index())
 }
 
 function clickListen() { clickCommon(); }
