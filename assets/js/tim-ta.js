@@ -286,14 +286,14 @@ window.addEventListener("click", processClick);
 // On initial load classes haven't been defined yet as HTML is dynamic
 function processClick(event) {
     var elm = event.target;
-    console.log("elm.classList:", elm.classList)
-    if (elm.classList.contains("clickListen()")) { clickListen(elm) } ;
-    if (elm.classList.contains("clickPlay()")) { clickPlay(elm) } ;
-    if (elm.classList.contains("clickUp()")) { clickUp(elm) } ;
-    if (elm.classList.contains("clickDown()")) { clickDown(elm) } ;
-    if (elm.classList.contains("clickEdit()")) { clickEdit(elm) } ;
-    if (elm.classList.contains("clickDelete()")) { clickDelete(elm) } ;
-    if (elm.classList.contains("clickControls()")) { clickControls(elm) } ;
+    //console.log("elm.classList:", elm.classList)
+    if (elm.classList.contains("clickListen(elm)")) { clickListen(elm) } ;
+    if (elm.classList.contains("clickPlay(elm)")) { clickPlay(elm) } ;
+    if (elm.classList.contains("clickUp(elm)")) { clickUp(elm) } ;
+    if (elm.classList.contains("clickDown(elm)")) { clickDown(elm) } ;
+    if (elm.classList.contains("clickEdit(elm)")) { clickEdit(elm) } ;
+    if (elm.classList.contains("clickDelete(elm)")) { clickDelete(elm) } ;
+    if (elm.classList.contains("clickControls(elm)")) { clickControls(elm) } ;
 }
 
 function logAllTasks(str) {
