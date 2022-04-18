@@ -184,6 +184,7 @@ function paintTasksTable(id) {
             '}\n'
     html += '.tta-btn {\n' +
             'font-size: 20px;\n' +
+            'border-radius: 50%;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
@@ -271,7 +272,7 @@ function clickCommon(elm) {
     // Using the index get the Project Name or Task Name.
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
-    console.log("Table Button Clicked", elm.closest('tr').index())
+    console.log("Table Button Clicked", elm.cellIndex, elm.parentNode.rowIndex)
 }
 
 function clickListen(elm) { clickCommon(elm); }
