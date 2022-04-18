@@ -286,6 +286,7 @@ window.addEventListener("click", processClick);
 // On initial load classes haven't been defined yet as HTML is dynamic
 function processClick(event) {
     var element = event.target;
+    console.log("element.classList:", element.classList)
     if (element.classList.contains("clickListen")) { clickListen() } ;
     if (element.classList.contains("clickPlay")) { clickPlay() } ;
     if (element.classList.contains("clickUp")) { clickUp() } ;
