@@ -145,12 +145,13 @@ function ttaTaskDuration (hours, minutes, seconds) {
     ttaTask.seconds = seconds;
 }
 
-var currentTable, currentRow, currentWindow;
+var currentTable, currentId, currentRow, currentWindow;
 
 function paintProjectsTable(id) {
     // If only one Project defined, skip and paintTasksTable
     // Grab the first (and only) Project at array offset 0
     currentTable = "Projects";
+    currentId = id;
     ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
     paintTasksTable(id);
 }
@@ -159,6 +160,7 @@ function paintTasksTable(id) {
     // Assumes ttaStore and ttaProject are populated
     // Button at bottom allows calling paintProjectsTable(id)
     currentTable = "Tasks";
+    currentId = id;
 
     var cnt = ttaProject.arrTasks.length;
     var html = "<h2>" + ttaProject.project_name + " Project - " +
@@ -266,15 +268,16 @@ function tabButton(i, button_code, title, callback) {
     return html;
 }
 
-function clickCommon(x) {
+function clickCommon(i) {
     // currentTable will contain "Projects" or "Tasks".
     // Get the row index we are on when clicked.
     // Using the index get the Project Name or Task Name.
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
-    // tabSetRow(x);
+    // tabSetRow(i);
     currentRow = x + 1;
-    console.log(currentTable, "Table Button Clicked on row NUMBER:", x)
+    console.log(currentTable, "Table Button Clicked on row NUMBER:", currentRow)
+    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
 }
 
 function tabSetRow(x) {
@@ -283,15 +286,36 @@ function tabSetRow(x) {
     //console.log("Row index is: " + currentRow);
 }
 
-function clickListen(x) { clickCommon(x); }
-function clickPlay(x) { clickCommon(x); }
-function clickUp(x) { clickCommon(x); }
-function clickDown(x) { clickCommon(x); }
-function clickEdit(x) { clickCommon(x); }
-function clickDelete(x) { clickCommon(x); }
-function clickControls(x) { clickCommon(x); }
+function clickListen(i) { clickCommon(i); }
+function clickPlay(i) { clickCommon(i); }
+function clickUp(i) {
+    clickCommon(i);
+    if (i == 0) {
+        alert("Already at top, can't move up")
+        return
+    }
+    swapTask(i, i - 1);
+}
+function clickDown(i) {
+    clickCommon(i);
+    if (i == ttaProject.arrTasks.length - 1) {
+        alert("Already at bottom, can't move down")
+        return
+    }
+    swapTask(i, i + 1);
+}
+function clickEdit(i) { clickCommon(i); }
+function clickDelete(i) { clickCommon(i); }
+function clickControls(i) { clickCommon(i); }
 
-// window.addEventListener("click", processClick);
+function swapTask(source, target) {
+    hold = ttaProject.arrTasks[target];
+    ttaProject.arrTasks[target] = ttaProject.arrTasks[source];
+    ttaProject.arrTasks[source] = hold;
+    paintTasksTable(currentId);
+}
+
+// DEPRECATED - window.addEventListener("click", processClick);
 // On initial load classes haven't been defined yet as HTML is dynamic
 function processClick(event) {
     var elm = event.target;
