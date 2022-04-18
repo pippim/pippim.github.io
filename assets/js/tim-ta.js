@@ -261,17 +261,18 @@ function tabButton(button_code, title, callback) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
     var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
-               'type="button" onclick="' + callback + '()" \n' +
+               'type="button" onclick="' + callback + '(this)" \n' +
                'title="' + title + '">' + button_code + '</button></td>\n';
     return html;
 }
 
-function clickCommon() {
+function clickCommon(x) {
     // currentTable will contain "Projects" or "Tasks".
     // Get the row index we are on when clicked.
     // Using the index get the Project Name or Task Name.
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
+    tabSetRow(x);
     console.log(currentTable, "Table Button Clicked on row NUMBER:", currentRow)
 }
 
@@ -280,13 +281,13 @@ function tabSetRow(x) {
     //console.log("Row index is: " + currentRow);
 }
 
-function clickListen() { clickCommon(); }
-function clickPlay() { clickCommon(); }
-function clickUp() { clickCommon(); }
-function clickDown() { clickCommon(); }
-function clickEdit() { clickCommon(); }
-function clickDelete() { clickCommon(); }
-function clickControls() { clickCommon(); }
+function clickListen(x) { clickCommon(x); }
+function clickPlay(x) { clickCommon(x); }
+function clickUp(X) { clickCommon(X); }
+function clickDown(X) { clickCommon(X); }
+function clickEdit(X) { clickCommon(X); }
+function clickDelete(X) { clickCommon(X); }
+function clickControls(X) { clickCommon(X); }
 
 // window.addEventListener("click", processClick);
 // On initial load classes haven't been defined yet as HTML is dynamic
