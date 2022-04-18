@@ -257,7 +257,7 @@ function tabTaskDetail(i) {
         html += tabButton(tabDeleteSym, tabDeleteTitle, clickDelete);
     }           // Five columns of buttons
 
-    html += "<td><font size='+2'" + ttaTask.task_name + "</font></td>\n";
+    html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
     if (!scrSmall) {
         var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
