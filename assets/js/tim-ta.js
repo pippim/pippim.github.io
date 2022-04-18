@@ -183,8 +183,8 @@ function paintTasksTable(id) {
             'background: #f1f1f1;\n' +
             '}\n'
     html += '.tta-btn {\n' +
-            'font-size: 20px;\n' +
-            'border-radius: 50%;\n' +
+            'font-size: 25px;\n' +
+            'border-radius: 1rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
@@ -288,6 +288,7 @@ window.addEventListener("click", processClick);
 function processClick(event) {
     var elm = event.target;
     //console.log("elm.classList:", elm.classList)
+    console.log("elm:", elm)
     if (elm.classList.contains("clickListen(elm)")) { clickListen(elm) } ;
     if (elm.classList.contains("clickPlay(elm)")) { clickPlay(elm) } ;
     if (elm.classList.contains("clickUp(elm)")) { clickUp(elm) } ;
