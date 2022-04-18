@@ -221,7 +221,6 @@ function tabTasksHeading() {
 
 var tabPlaySym = "&#x25b6";
 var tabPlayTitle = "Start countdown timers";
-var clickPlay, clickListen, clickUp, clickDown, clickEdit, clickDelete, clickControls;
 var tabListenSym = "#9835";
 var tabListenTitle = "Listen to task end alarm";
 var tabUpSym = "&#x21E7";
@@ -234,23 +233,25 @@ var tabDeleteSym = "&#x270D";
 var tabDeleteTitle = "Delete";
 var tabControlsTitle = "Controls popup with Listen, Up, Down, Edit, Delete buttons";
 
+var clickPlay, clickListen, clickUp, clickDown, clickEdit, clickDelete, clickControls;
+
 function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
     var html = "<tr>\n";
     if (scrSmall) {
-        html += "<td>Listen</td><td>Edit</td>\n";
-        tabButton(tabListenSym, tabListenTitle, clickListen);
-        tabButton(tabEditSym, tabControlsTitle, clickControls);
+        // html += "<td>Listen</td><td>Edit</td>\n";
+        html += tabButton(tabListenSym, tabListenTitle, clickListen);
+        html += tabButton(tabEditSym, tabControlsTitle, clickControls);
     }           // Two columns of buttons
     else {
-        html += "<td>Listen</td><td>Up</td>\n" +
-                "<td>Dn</td><td>Edit</td>\n" +
-                "<td>Delete</td>\n"
-        tabButton(tabListenSym, tabListenTitle, clickListen);
-        tabButton(tabUpSym, tabUpTitle, clickUp);
-        tabButton(tabDownSym, tabDownTitle, clickDown);
-        tabButton(tabEditSym, tabEditTitle, clickEdit);
-        tabButton(tabDeleteSym, tabDeleteTitle, clickDelete);
+        //html += "<td>Listen</td><td>Up</td>\n" +
+        //       "<td>Dn</td><td>Edit</td>\n" +
+        //        "<td>Delete</td>\n"
+        html += tabButton(tabListenSym, tabListenTitle, clickListen);
+        html += tabButton(tabUpSym, tabUpTitle, clickUp);
+        html += tabButton(tabDownSym, tabDownTitle, clickDown);
+        html += tabButton(tabEditSym, tabEditTitle, clickEdit);
+        html += tabButton(tabDeleteSym, tabDeleteTitle, clickDelete);
     }           // Five columns of buttons
 
     html += "<td>" + ttaTask.task_name + "</td>\n";
