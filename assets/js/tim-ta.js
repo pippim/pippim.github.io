@@ -271,7 +271,7 @@ function clickCommon() {
     // Using the index get the Project Name or Task Name.
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
-    console.log("Table Button Clicked", $(this).closest('tr').index())
+    console.log("Table Button Clicked", closest('tr').index())
 }
 
 function clickListen() { clickCommon(); }
@@ -299,7 +299,7 @@ function processClick(event) {
 function logAllTasks(str) {
     // Apr 17, 2022 - Created to debug objA = objB not shallow copying.
     console.log("========", str, "========");
-    console.log("Object.keys(ttaProject.objTasks):" ,Object.keys(ttaProject.objTasks))
+    console.log("Object.keys(ttaProject.objTasks):", Object.keys(ttaProject.objTasks))
     // .includes() from: https://stackoverflow.com/a/1473742/6929343
     if (ttaProject.arrTasks.includes("Wash Cycle")) {
         console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
