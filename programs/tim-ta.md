@@ -30,7 +30,7 @@ For example, when doing the laundry it might be:
 
 With Tim-ta you arrive at the washer and dryer the exact
 second you need to be there. You'll Never miss the rinse
-cycle fabric softener to eliminate static cling. You'll 
+cycle fabric softener to eliminate static cling. You'll
 never have wrinkled clothes from being left overnight in
 the dryer. It doesn't stop you from mixing red and white
 fabrics in hot water to end up with PINK clothes though!
@@ -62,9 +62,9 @@ fabrics in hot water to end up with PINK clothes though!
 Tim-ta development started April 11, 2022. A budget of two months
 has been given to this project.
 
-Initially all the features in 
+Initially all the features in
 [Multi-Timer](https://www.pippim.com/programs/mt.html)
-will be provided. After that, new features will be added. 
+will be provided. After that, new features will be added.
 
 > NOTE: Some Multi-timer features such as locking the screen
 > cannot be done from a web browser.
@@ -159,7 +159,7 @@ Run symbol 4. Traditional "Play" button. Unicode #x25b6
 &#x25b6;</span>
 <br>
 Advantage of this symbol is common audio control button. Also eases
-transition to future buttons for: Pause, Rewind x seconds, 
+transition to future buttons for: Pause, Rewind x seconds,
 Fast forward x seconds, Restart and Skip to end.
 
 ---
@@ -171,7 +171,7 @@ White Up Arrow from Bar symbol. Move task up project. Unicode #x21ea
 ---
 
 White Down Arrow from Bar symbol. Move task down project. Unicode #x21ea + flip
-&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle; 
+&emsp;<span class='hdr-btn' style='font-size:35px; vertical-align:middle;
 transform: scale(1, -1);'>
 &#x21ea;</span>
 
@@ -233,8 +233,6 @@ A project is a set of tasks (countdown timers). You
 can create as many projects as you like. Each project
 can have as many tasks (timers) as needed.
 
-{% include tim-ta-common-code.js %}
-
 <div id="PaintedTable"></div>
 
 <script>
@@ -245,5 +243,5 @@ can have as many tasks (timers) as needed.
 ---
 
 
-<a id="hdr13"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a></div>
