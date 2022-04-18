@@ -219,19 +219,19 @@ function tabTasksHeading() {
 // SMALL VERSION only Listen & Edit controls AND drop Duration
 // HTML Codes for buttons
 
-var tabPlaySym = "&#x25b6";
+var tabPlaySym = "&#x25b6;";
 var tabPlayTitle = "Start countdown timers";
-var tabListenSym = "#9835";
+var tabListenSym = "#9835;";
 var tabListenTitle = "Listen to task end alarm";
-var tabUpSym = "&#x21E7";
+var tabUpSym = "&#x21E7;";
 var tabUpTitle = "Move up list";
-var tabDownSym = "&#x21e9";
+var tabDownSym = "&#x21e9;";
 var tabDownTitle = "Move down list";
-var tabEditSym = "&#x270D";
+var tabEditSym = "&#x270D;";
 var tabEditTitle = "Edit";
-var tabDeleteSym = "&#x270D";
+var tabDeleteSym = "&#x1f5d1";
 var tabDeleteTitle = "Delete";
-var tabControlsTitle = "Controls popup with Listen, Up, Down, Edit, Delete buttons";
+var tabControlsTitle = "Buttons for: Listen, Move up, Move down, Edit and Delete";
 
 var clickPlay, clickListen, clickUp, clickDown, clickEdit, clickDelete, clickControls;
 
