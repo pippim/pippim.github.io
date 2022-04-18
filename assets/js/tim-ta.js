@@ -275,7 +275,7 @@ function clickCommon(i) {
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
     // tabSetRow(i);
-    currentRow = x + 1;
+    currentRow = i + 1;
     console.log(currentTable, "Table Button Clicked on row NUMBER:", currentRow)
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
 }
