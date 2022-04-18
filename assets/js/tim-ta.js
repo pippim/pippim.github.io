@@ -226,18 +226,18 @@ function tabTaskDetail(i) {
     var html = '<tr onclick="tabSetRow(this)">\n';
     if (scrSmall) {
         // html += "<td>Listen</td><td>Edit</td>\n";
-        html += tabButton(tabListenSym, tabListenTitle, clickListen);
-        html += tabButton(tabControlsSym, tabControlsTitle, clickControls);
+        html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
+        html += tabButton(i, tabControlsSym, tabControlsTitle, "clickControls");
     }           // Two columns of buttons
     else {
         //html += "<td>Listen</td><td>Up</td>\n" +
         //       "<td>Dn</td><td>Edit</td>\n" +
         //        "<td>Delete</td>\n"
-        html += tabButton(tabListenSym, tabListenTitle, "clickListen");
-        html += tabButton(tabUpSym, tabUpTitle, "clickUp");
-        html += tabButton(tabDownSym, tabDownTitle, "clickDown");
-        html += tabButton(tabEditSym, tabEditTitle, "clickEdit");
-        html += tabButton(tabDeleteSym, tabDeleteTitle, "clickDelete");
+        html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
+        html += tabButton(i, tabUpSym, tabUpTitle, "clickUp");
+        html += tabButton(i, tabDownSym, tabDownTitle, "clickDown");
+        html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
+        html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
     }           // Five columns of buttons
 
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
@@ -257,11 +257,11 @@ function hmsToString(hours, minutes, seconds) {
     return str;
 }
 
-function tabButton(button_code, title, callback) {
+function tabButton(i, button_code, title, callback) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
     var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
-               'type="button" onclick="' + callback + '(this)" \n' +
+               'type="button" onclick="' + callback + '(' + i + ')" \n' +
                'title="' + title + '">' + button_code + '</button></td>\n';
     return html;
 }
@@ -272,8 +272,8 @@ function clickCommon(x) {
     // Using the index get the Project Name or Task Name.
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
-    tabSetRow(x);
-    console.log(currentTable, "Table Button Clicked on row NUMBER:", currentRow)
+    // tabSetRow(x);
+    console.log(currentTable, "Table Button Clicked on row NUMBER:", x)
 }
 
 function tabSetRow(x) {
@@ -282,7 +282,7 @@ function tabSetRow(x) {
     //console.log("Row index is: " + currentRow);
 }
 
-function clickListen(x) { console.log(x.rowIndex); clickCommon(x); }
+function clickListen(x) { clickCommon(x); }
 function clickPlay(x) { clickCommon(x); }
 function clickUp(x) { clickCommon(x); }
 function clickDown(x) { clickCommon(x); }
