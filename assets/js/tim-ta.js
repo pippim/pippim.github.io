@@ -223,7 +223,7 @@ var tabControlsTitle = "Buttons for: Move up, Move down, Edit and Delete";
 
 function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-    var html = "<tr>\n";
+    var html = '<tr onclick="tabSetRow(this)">\n';
     if (scrSmall) {
         // html += "<td>Listen</td><td>Edit</td>\n";
         html += tabButton(tabListenSym, tabListenTitle, clickListen);
@@ -273,6 +273,10 @@ function clickCommon(elm) {
     // Using name lookup, get ttaProject or ttaTask into memory.
     // Return?
     console.log("Table Button Clicked", elm.cellIndex, elm.parentNode.rowIndex)
+}
+
+function tabSetRow(x) {
+    console.log("Row index is: " + x.rowIndex);
 }
 
 function clickListen(elm) { clickCommon(elm); }
