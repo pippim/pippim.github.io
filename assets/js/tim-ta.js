@@ -200,10 +200,12 @@ function paintTasksTable(id) {
     for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
     html += '</table>\n';     // End of our table and form
 
+    html += '<div class="bigFoot">\n';
     html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
-    html += "Add new Task"
+    html += "<font size='+2'>Add new Task &emsp; &emsp; </font>"
     html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
-    html += "Add new Project"
+    html += "<font size='+2'>Add new Project</font>"
+    html += '</div>\n';
 
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n#tabTasks th, #tabTasks td {\n' +
@@ -220,6 +222,12 @@ function paintTasksTable(id) {
             'font-size: 25px;\n' +
             'border-radius: 1rem;\n' +
             'margin: .5rem;\n' +
+            '}\n'
+    html += '.bigFoot {\n' +
+            'margin: 1rem;\n' +
+            'padding: 1rem;\n' +
+            'border: thick solid;\n' +
+            'border-radius: 2rem;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
