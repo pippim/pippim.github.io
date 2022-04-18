@@ -233,11 +233,11 @@ function tabTaskDetail(i) {
         //html += "<td>Listen</td><td>Up</td>\n" +
         //       "<td>Dn</td><td>Edit</td>\n" +
         //        "<td>Delete</td>\n"
-        html += tabButton(tabListenSym, tabListenTitle, clickListen);
-        html += tabButton(tabUpSym, tabUpTitle, clickUp);
-        html += tabButton(tabDownSym, tabDownTitle, clickDown);
-        html += tabButton(tabEditSym, tabEditTitle, clickEdit);
-        html += tabButton(tabDeleteSym, tabDeleteTitle, clickDelete);
+        html += tabButton(tabListenSym, tabListenTitle, "clickListen");
+        html += tabButton(tabUpSym, tabUpTitle, "clickUp"");
+        html += tabButton(tabDownSym, tabDownTitle, "clickDown");
+        html += tabButton(tabEditSym, tabEditTitle, "clickEdit");
+        html += tabButton(tabDeleteSym, tabDeleteTitle, "clickDelete");
     }           // Five columns of buttons
 
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
