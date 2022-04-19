@@ -420,9 +420,10 @@ function inpSelect(key, label, mode, options) {
     value = getTaskValue(key);
     var html = "<tr><td>\n";
     html += label + '</td>\n'
+    // TODO: type="text" changed for numeric fields?
     html += '<td><input id="' + key + '" class="tabInput" type="text" \n' +
         'placeholder="Enter ' + label + '" value="' + value + '" \n' +
-        'name="' + key + '" \n';'
+        'name="' + key + '" \n';
     if(mode == "Delete") { html += ' readonly'; }
     html += '></td></tr>\n'
 
