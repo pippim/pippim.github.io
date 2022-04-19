@@ -227,8 +227,8 @@ function paintTasksTable() {
 function bigFoot() {
     return  '.bigFoot {\n' +
             'margin: 1rem;\n' +
-            'padding: .5rem 1rem;\n' +
-            'border: thick solid;\n' +
+            'padding: .4rem .8rem;\n' +
+            'border: 4px solid;\n' +
             'border-radius: 2rem;\n' +
             '}\n'
 }
