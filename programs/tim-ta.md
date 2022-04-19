@@ -19,14 +19,11 @@ layout: program
 <script>
    id = document.getElementById("PaintedTable");
    paintProjectsTable(id);
-   id2 = document.getElementById("PaintedFooter");
-   paintProjectsFooter(id2);
 </script>
 
 Here you can Create, Run, Update and Delete Tim-ta projects.
 Generically, these actions are grouped together under the
-name **CRUD** (**C**reate **R**un
-**U**pdate **D**elete). You
+name **CRUD** (**C**reate **R**un **U**pdate **D**elete). You
 can create as many projects as you like.
 
 ---
