@@ -447,7 +447,7 @@ function clickUpdateTask() {
         alert(ttaTask.task_name, "Not found in ttaProject.arrTasks")
         return false
     }
-    if (currentWindow == "Delete) {
+    if (currentWindow == "Delete") {
         if (confirmDelete()) {
             delete ttaProject.objTasks[ttaTask.task_name];
             ttaProject.arrTasks.splice(original_index, 1);
