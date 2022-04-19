@@ -381,7 +381,7 @@ function paintTaskWindow(mode) {
     var html = "<h2>" + ttaProject.project_name + " Project - " +
                 mode + " Task</h2>"
 
-    html += '<form id="formTask' + mode + '"><table id="tabTask" class="tta-table">\n' ;
+    html += '<form id="formTask"><table id="tabTask" class="tta-table">\n' ;
     html += inpSelect("task_name", "Task Name", mode);
     html += inpSelect("hours", "Hours", mode);
     html += inpSelect("minutes", "Minutes", mode);
