@@ -35,7 +35,6 @@ window.onresize = function() {
 var tta_store = {
     arrProjects: [],
     objProjects: {},
-    cntProjects: 0,
     task_prompt: "true",
     task_end_alarm: "true",
     task_end_filename: "Alarm_03.mp3",
@@ -57,10 +56,9 @@ var tta_store = {
 // When value is "default" it is inherited from Configuration
 // The order arrTasks names appear is order they are displayed
 var tta_project = {
-    project_name: null,
+    project_name: "",
     arrTasks: [],
     objTasks: {},
-    cntTasks: 0,
     task_prompt: "default",
     task_end_alarm: "default",
     task_end_filename: "default",
@@ -177,17 +175,17 @@ function paintProjectsTable(id) {
     currentTable = "Projects";
     currentId = id;
     ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
-    paintTasksTable(id);
+    paintTasksTable();
 }
 
 function paintProjectsFooter(id) {
     // DON'T NEED - the table painter can mount a footer too.
 }
-function paintTasksTable(id) {
+function paintTasksTable() {
     // Assumes ttaStore and ttaProject are populated
     // Button at bottom allows calling paintProjectsTable(id)
     currentTable = "Tasks";
-    currentId = id;
+    id = currentId;
 
     var cnt = ttaProject.arrTasks.length;
     var html = "<h2>" + ttaProject.project_name + " Project - " +
@@ -220,19 +218,27 @@ function paintTasksTable(id) {
             'z-index: 1;\n' +
             'background: #f1f1f1;\n' +
             '}\n'
-    html += '.tta-btn {\n' +
-            'font-size: 25px;\n' +
-            'border-radius: 1rem;\n' +
-            'margin: .5rem;\n' +
-            '}\n'
-    html += '.bigFoot {\n' +
+    html += ttaBtn();
+    html += bigFoot();
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    id.innerHTML = html;
+}
+
+function bigFoot() {
+    return  '.bigFoot {\n' +
             'margin: 1rem;\n' +
             'padding: .5rem 1rem;\n' +
             'border: thick solid;\n' +
             'border-radius: 2rem;\n' +
             '}\n'
-    html += '</style>'  // Was extra \n causing empty space at bottom?
-    id.innerHTML = html;
+}
+
+function ttaBtn() {
+    return  '.tta-btn {\n' +
+            'font-size: 25px;\n' +
+            'border-radius: 1rem;\n' +
+            'margin: .5rem;\n' +
+            '}\n'
 }
 
 function tabTasksHeading() {
@@ -331,6 +337,11 @@ function clickAddTask() {
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     paintTaskWindow("Add");
 }
+function clickUpdateTask() {
+    alert("Clicked Add/Save/Delete Task but not implemented yet")
+    // Check mode and then Add, Save or Delete record.
+    paintTasksTable()
+}
 function clickAddProject() {
     alert("Clicked Add Project but not implemented yet")
     ttaProject = Object.assign({}, tta_project);
@@ -359,7 +370,7 @@ function swapTask(source, target) {
     hold = ttaProject.arrTasks[target];
     ttaProject.arrTasks[target] = ttaProject.arrTasks[source];
     ttaProject.arrTasks[source] = hold;
-    paintTasksTable(currentId);
+    paintTasksTable();
 }
 
 function paintTaskWindow(mode) {
@@ -387,6 +398,15 @@ function paintTaskWindow(mode) {
                       "Phrase to confirm delete choice", mode);
     html += '</table></form>\n' ;
 
+    html += '<div class="bigFoot">\n';
+    html += taskButton("Cancel", "Cancel changes", "paintTasksTable");
+    html += "<font size='+2'>Run &emsp; &emsp; </font>"
+    var textMode = mode;
+    if (mod == "Edit") { textMode = "Save" }
+    html += taskButton(textMode, textMode + " Task", "clickUpdateTask");
+    html += "<font size='+2'>Add new Project</font>"
+    html += '</div>\n';
+
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n';
     html += '#tabTasks th, #tabTasks td {\n' +
@@ -399,10 +419,8 @@ function paintTaskWindow(mode) {
             'z-index: 1;\n' +
             'background: #f1f1f1;\n' +
             '}\n'
-    html += '.tta-btn {\n' +
-            'font-size: 25px;\n' +
-            'border-radius: 1rem;\n' +
-            '}\n'
+    html += ttaBtn();
+    html += bigFoot();
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
 
