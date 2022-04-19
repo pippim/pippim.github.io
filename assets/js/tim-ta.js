@@ -91,6 +91,66 @@ var tta_task = {
     confirm_delete_phrase: "default"
 }
 
+var data_dictionary = {
+    project_name: "Project Name|text|non-blank",
+    task_name: "Task Name|text|non-blank",
+    hours: "Hours|number|0|1000",
+    minutes: "Minutes|number|0|1000",
+    seconds: "Seconds|number|0|1000",
+    task_prompt: "Prompt to begin Task?|radio|true|false",
+    task_end_alarm: "Play sound when Task ends?|radio|true|false",
+    task_end_filename: "Task ending sound filename|radio|sound_filenames",
+    task_end_notification: "Desktop notification when Task ends?|radio|true|false",
+    run_set_times: "Number of times to run Set|number|1|1000",
+    set_prompt: "Prompt to begin Set?|radio|true|false",
+    set_end_alarm: "Play sound when Set ends?|radio|true|false",
+    set_end_filename: "Set ending sound filename|radio|sound_filenames",
+    set_end_notification: "Desktop notification when Set ends?|radio|true|false",
+    all_sets_prompt: "Prompt to begin All Sets?|radio|true|false",
+    all_sets_end_alarm: "Play sound when All Sets end?|radio|true|false,
+    all_sets_end_filename: "All Sets ending sound filename|radio|sound_filenames",
+    all_sets_end_notification: "Desktop notification when All Sets end?|radio|true|false",
+    progress_bar_update_seconds: "Seconds interval between progress bar updates|number|1|1000",
+    confirm_delete_phrase: "Text to confirm delete action|text"
+}
+
+var dd_field = {
+    name: "",
+    label: "",
+    type: "",
+    lower: "",
+    upper: ""
+}
+
+function get_dd_field (name) {
+    /* Extract dd_field from data_dictionary for easier referencing
+       NOTE: lower is generic term, it can be "non-blank" for keys and
+             there is no upper. If numeric and lower or upper is blank
+             they are converted to 0.
+    */
+    const raw = data_dictionary[name];
+    if (raw == null) {
+        alert("Critical Error. Data dictionary field doesn't exist:", name)
+        return
+    }
+    const arr = raw.split('|')
+    if (arr.length < 3) {
+        alert("Critical Error. Data dictionary field has < 3 parts:", name)
+        return
+    }
+    dd_field.name = arr[0];
+    dd_field.label = arr[1];
+    dd_field.type = arr[2];
+    if (arr.length >= 4) { dd_field.lower = arr[3]; |
+    else dd_field.lower = "";
+    if (arr.length >= 5) { dd_field.upper = arr[4]; |
+    else dd_field.upper = "";
+    if (arr.length > 5) {
+        alert("Critical Error. Data dictionary field has > 5 parts:", name)
+        return
+    }
+}    
+
 // Get variable values and source.
 // EG task_prompt value & source can be "true", "Manual Override"
 // "true", "Project Default", "true", "Configuration Default"
@@ -119,22 +179,19 @@ function ttaNewConfig() {
 
     ttaStore.arrProjects = [ttaProject.project_name];
     ttaStore.objProjects[ttaProject.project_name] = ttaProject;
-    ttaStore.cntProjects = 1;
 }
 
 function ttaNewTask (name) {
+    // Only used for creating test data from above. Not used in real life below
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
-    ttaTask_index = ttaProject.cntTasks;
     ttaTask.task_name = name;
     ttaTask.hours = ttaTask.minutes = ttaTask.seconds = 0;
 }
 
 function ttaAddTask (obj) {
+    // Used for creating test data above and in real life below
     ttaProject.arrTasks.push(obj.task_name);
     ttaProject.objTasks[obj.task_name] = obj;
-    ttaProject.cntTasks += 1;
-    //console.log("ttaAddTask() 1:", ttaProject.objTasks[obj.task_name].task_name);
-    //console.log("ttaAddTask() 2:", ttaProject.cntTasks, obj.task_name);
 }
 
 function ttaTaskDuration (hours, minutes, seconds) {
@@ -382,18 +439,16 @@ function paintTaskWindow(mode) {
                 mode + " Task</h2>"
 
     html += '<form id="formTask"><table id="tabTask" class="tta-table">\n' ;
-    html += inpSelect("task_name", "Task Name", mode);
-    html += inpSelect("hours", "Hours", mode);
-    html += inpSelect("minutes", "Minutes", mode);
-    html += inpSelect("seconds", "Seconds", mode);
-    html += inpSelect("task_prompt", "Prompt to begin countdown?", mode);
-    html += inpSelect("task_end_alarm", "Sound alarm when task ends?", mode);
-    html += inpSelect("task_end_filename", "If true, the sound filename will be", mode);
-    html += inpSelect("task_end_notification", "Notification when task ends?", mode);
-    html += inpSelect("progress_bar_update_seconds",
-                      "Seconds interval between progress bar updates", mode);
-    html += inpSelect("confirm_delete_phrase",
-                      "Phrase to confirm delete choice", mode);
+    html += buildInput("task_name", mode);
+    html += buildInput("hours", mode);
+    html += buildInput("minutes", mode);
+    html += buildInput("seconds", mode);
+    html += buildInput("task_prompt", mode);
+    html += buildInput("task_end_alarm", mode);
+    html += buildInput("task_end_filename", mode);
+    html += buildInput("task_end_notification", mode);
+    html += buildInput("progress_bar_update_seconds", mode);
+    html += buildInput("confirm_delete_phrase", mode);
     html += '</table></form>\n' ;
 
     html += '<div class="bigFoot">\n';
@@ -416,19 +471,26 @@ function paintTaskWindow(mode) {
 
 }
 
-function inpSelect(key, label, mode, options) {
-    value = getTaskValue(key);
+function buildInput(key, mode) {
+    /*  When building input field the "default" value is replaced with
+        actual value for input. When saving, the default is obtained and
+        if it matches user input then "default" phrase is saved.
+    */
+    get_dd_field(key);
+    value = getTaskValue(key);  // Translates "default" to real value
     var html = "<tr><td>\n";
-    html += label + '</td>\n'
+    html += dd_field.label + '</td>\n'
     // TODO: type="text" changed for numeric fields?
     html += '<td><input id="' + key + '" class="tabInput" type="text" \n' +
-        'placeholder="Enter ' + label + '" value="' + value + '" \n' +
+        'placeholder="Enter ' + dd_field.label + '" value="' + value + '" \n' +
         'name="' + key + '" \n';
     if(mode == "Delete") { html += ' readonly'; }
     html += '></td></tr>\n'
 
     return html;
-    /*
+
+    /* Copied for FUTURE drop box input fields
+
     <label for="cars">Choose a car:</label>
 <select id="cars" name="cars">
   <option value="volvo">Volvo</option>
@@ -440,13 +502,16 @@ function inpSelect(key, label, mode, options) {
 }
 
 function clickUpdateTask() {
+    /* Process all updates - Add, Edit and Delete Task
+    */
     alert("WARNING: Add/Save/Delete Task NOT fully implemented yet")
-    // currentWindow will contain "Add", "Edit" or "Delete"
+    // For Save Edit and Delete original index must exist.
     const original_index = ttaProject.arrTasks.indexOf(ttaTask.task_name);
     if (!currentWindow == "Add" && original_index < 0) {
         alert(ttaTask.task_name, "Not found in ttaProject.arrTasks")
         return false
     }
+    // Check for delete first and exit.
     if (currentWindow == "Delete") {
         if (confirmDelete()) {
             delete ttaProject.objTasks[ttaTask.task_name];
@@ -458,18 +523,20 @@ function clickUpdateTask() {
         else { return false; }
     }
 
-    // At this point we are adding new or saving changes. Get field values
+    // Adding new or saving changes. Get input field values
     var elements = document.getElementById("formTask").elements;
-    var obj ={};
+    var newTask ={};
     for(var i = 0 ; i < elements.length ; i++){
         var item = elements.item(i);
-        obj[item.name] = item.value;
+        newTask[item.name] = item.value;
     }
 
-    var arrChangedFields = [];
+    // Validation - Unique Task name, numeric fields, "true" or "false"
+    // Assign "default" to newTask fields if they match default
+    // What's changed from original Task to new Task?
     for(var i = 0 ; i < elements.length ; i++){
         var item = elements.item(i);
-        if (obj[item.name] != ttaTask[item.name]){
+        if (newTask[item.name] != ttaTask[item.name]){
             console.log('Item:', item.name, 'changed to:', item.value)
         }
     }
