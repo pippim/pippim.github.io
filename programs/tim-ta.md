@@ -21,13 +21,13 @@ layout: program
    paintProjectsTable(id);
 </script>
 
-Here you can Create, Run, Update and Delete Tim-ta projects.
-
+<div id="sample_laundry_div">
 Above is a sample project for doing Laundry. After adding
 your own projects you can delete the sample project.
+</div>
 
 You can have an unlimited number of projects.
-Each projects can have an unlimited number of Tasks.
+Each project can have an unlimited number of Tasks.
 
 ---
 
