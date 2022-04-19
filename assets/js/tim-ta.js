@@ -400,11 +400,11 @@ function paintTaskWindow(mode) {
 
     html += '<div class="bigFoot">\n';
     html += taskButton("Cancel", "Cancel changes", "paintTasksTable");
-    html += "<font size='+2'>Run &emsp; &emsp; </font>"
+    html += "<font size='+2'>Cancel changes &emsp; &emsp; </font>"
     var textMode = mode;
     if (textMode == "Edit") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Task", "clickUpdateTask");
-    html += "<font size='+2'>Add new Project</font>"
+    html += "<font size='+2'>" + TextMode + "</font>"
     html += '</div>\n';
 
     // TODO: Move next lines to class name: tabClass inside TCM
