@@ -208,7 +208,9 @@ function paintTasksTable() {
     html += '</div>\n';
 
     // TODO: Move next lines to class name: tabClass inside TCM
-    html += '<style>\n#tabTasks th, #tabTasks td {\n' +
+    html += '<style>\n';
+    html += '#tabTasks table { table-layout: fixed; width: 100%; }\n';
+    html += '#tabTasks th, #tabTasks td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
     html += '#tabTasks th {\n' +
@@ -227,8 +229,8 @@ function paintTasksTable() {
 function bigFoot() {
     return  '.bigFoot {\n' +
             'margin: 1rem;\n' +
-            'padding: .3rem .6rem;\n' +
-            'border: 4px solid;\n' +
+            'padding: .25rem .5rem;\n' +
+            'border: 3px solid;\n' +
             'border-radius: 2rem;\n' +
             '}\n'
 }
