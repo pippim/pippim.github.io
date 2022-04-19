@@ -420,8 +420,9 @@ function inpSelect(key, label, mode, options) {
     value = getTaskValue(key);
     var html = "<tr><td>\n";
     html += label + '</td>\n'
-    html += '<td><input id="' + key + '" class="tabInput" type="text"\n' +
-        'placeholder="Enter ' + label + '" value="' + value + '"'
+    html += '<td><input id="' + key + '" class="tabInput" type="text" \n' +
+        'placeholder="Enter ' + label + '" value="' + value + '" \n' +
+        'name="' + key + '" \n';'
     if(mode == "Delete") { html += ' readonly'; }
     html += '></td></tr>\n'
 
@@ -450,7 +451,7 @@ function clickUpdateTask() {
             delete ttaProject.objTasks[ttaTask.task_name];
             ttaProject.arrTasks.splice(original_index, 1);
             // 2nd parameter means remove one item only
-            paintTasksTable();
+            paintTasksTable();  // What if there are no tasks left?
             return true;
         }
         else { return false; }
@@ -464,6 +465,13 @@ function clickUpdateTask() {
         obj[item.name] = item.value;
     }
 
+    var arrChangedFields = [];
+    for(var i = 0 ; i < elements.length ; i++){
+        var item = elements.item(i);
+        if (obj[item.name] != ttaTask[item.name]){
+            console.log('Item:', item.name, 'changed to:', item.value)
+        }
+    }
     paintTasksTable()
 }
 function confirmDelete() { return true };
