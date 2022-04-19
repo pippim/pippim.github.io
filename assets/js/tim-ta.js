@@ -328,7 +328,7 @@ function clickDelete(i) {
     paintTaskWindow("Delete");
 }
 function clickAddTask() {
-    //ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
+    ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     paintTaskWindow("Add");
 }
 function clickAddProject() {
