@@ -209,7 +209,7 @@ function paintTasksTable() {
 
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n#tabTasks th, #tabTasks td {\n' +
-            '  padding: 0 .5rem;\n' +
+            '  padding: .25rem .25rem;\n' +
             '}\n'
     html += '#tabTasks th {\n' +
             'position: -webkit-sticky;\n' +
@@ -410,14 +410,6 @@ function paintTaskWindow(mode) {
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n';
     html += '#tabTasks th, #tabTasks td {\n' +
-            '  padding: .25rem .25rem;\n' +
-            '}\n'
-    html += '#tabTasks th {\n' +
-            'position: -webkit-sticky;\n' +
-            'position: sticky;\n' +
-            'top: 0;\n' +
-            'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
             '}\n'
     html += ttaBtn();
     html += bigFoot();
