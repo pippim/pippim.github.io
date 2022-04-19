@@ -192,13 +192,11 @@ function paintTasksTable() {
                 cnt.toString() + " Tasks</h2>"
 
     html += '<table id="tabTasks">\n' ;
-    html += tabTasksHeading();
-    //logAllTasks("paintTasksTable START")
+        html += tabTasksHeading();
+        for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
+    html += '</table>\n';
 
-    for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
-    html += '</table>\n';     // End of our table and form
-
-    html += '<div class="bigFoot">\n';
+    html += '<div class="bigFoot">\n';  // Start footer buttons
     html += taskButton(tabPlaySym, tabPlayTitle, "clickPlay");
     html += "<font size='+2'>Run &emsp; &emsp; </font>"
     html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
@@ -207,7 +205,6 @@ function paintTasksTable() {
     html += "<font size='+2'>Add new Project</font>"
     html += '</div>\n';
 
-    // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n';
     html += '#tabTasks table { table-layout: fixed; width: 100%; }\n';
     html += '#tabTasks th, #tabTasks td {\n' +
@@ -224,7 +221,7 @@ function paintTasksTable() {
     html += bigFoot();
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
-}
+}  // End of paintTasksTable()
 
 function bigFoot() {
     return  '.bigFoot {\n' +
@@ -327,8 +324,10 @@ function clickDown(i) {
     if (i == cnt - 1) { alert("Already at bottom, can't move down"); return; }
     swapTask(i, i + 1);
 }
+var oldTask;
 function clickEdit(i) {
     clickCommon(i);
+    oldTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     paintTaskWindow("Edit");
 }
 function clickDelete(i) {
@@ -336,13 +335,10 @@ function clickDelete(i) {
     paintTaskWindow("Delete");
 }
 function clickAddTask() {
+    // Create empty record for add
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
+    oldTask = Object.assign({}, tta_task);
     paintTaskWindow("Add");
-}
-function clickUpdateTask() {
-    alert("Clicked Add/Save/Delete Task but not implemented yet")
-    // Check mode and then Add, Save or Delete record.
-    paintTasksTable()
 }
 function clickAddProject() {
     alert("Clicked Add Project but not implemented yet")
@@ -385,7 +381,7 @@ function paintTaskWindow(mode) {
     var html = "<h2>" + ttaProject.project_name + " Project - " +
                 mode + " Task</h2>"
 
-    html += '<form id="form' + mode + '"><table id="tabInput" class="tta-table">\n' ;
+    html += '<form id="formTask' + mode + '"><table id="tabTask" class="tta-table">\n' ;
     html += inpSelect("task_name", "Task Name", mode);
     html += inpSelect("hours", "Hours", mode);
     html += inpSelect("minutes", "Minutes", mode);
@@ -440,6 +436,37 @@ function inpSelect(key, label, mode, options) {
 </select>
 */
 }
+
+function clickUpdateTask() {
+    alert("WARNING: Add/Save/Delete Task NOT fully implemented yet")
+    // currentWindow will contain "Add", "Edit" or "Delete"
+    const original_index = ttaProject.arrTasks.indexOf(ttaTask.task_name);
+    if (!currentWindow == "Add" && original_index < 0) {
+        alert(ttaTask.task_name, "Not found in ttaProject.arrTasks")
+        return false
+    }
+    if (currentWindow == "Delete) {
+        if (confirmDelete()) {
+            delete ttaProject.objTasks[ttaTask.task_name];
+            ttaProject.arrTasks.splice(original_index, 1);
+            // 2nd parameter means remove one item only
+            paintTasksTable();
+            return true;
+        }
+        else { return false; }
+    }
+
+    // At this point we are adding new or saving changes. Get field values
+    var elements = document.getElementById("formTask").elements;
+    var obj ={};
+    for(var i = 0 ; i < elements.length ; i++){
+        var item = elements.item(i);
+        obj[item.name] = item.value;
+    }
+
+    paintTasksTable()
+}
+function confirmDelete() { return true };
 
 // ERROR: Task Name must be unique and cannot be blank
 
