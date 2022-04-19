@@ -303,6 +303,7 @@ function clickListen(i) {
     end_alarm = getTaskValue("task_end_alarm");
     if (end_alarm == "false") { alert("Alarm turned off for this task."); return; }
     sound = getTaskValue("task_end_filename");
+    // <audio> tags buried on the page with ID name same as sound filename.
     audioControl = document.getElementById(sound);
     audioControl.play();
 }
@@ -327,14 +328,16 @@ function clickDelete(i) {
     paintTaskWindow("Delete");
 }
 function clickAddTask() {
-    ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
+    //ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     paintTaskWindow("Add");
 }
 function clickAddProject() {
+    alert("Clicked Add Project but not implemented yet")
     ttaProject = Object.assign({}, tta_project);
 }
 function clickPlay() {
     // Run Project - Countdown all tasks
+    alert("Clicked Run but not implemented yet")
 }
 function clickControls(i) {
     // Popup buttons for small screens
