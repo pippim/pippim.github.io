@@ -22,9 +22,12 @@ layout: program
 </script>
 
 Here you can Create, Run, Update and Delete Tim-ta projects.
-Generically, these actions are grouped together under the
-name **CRUD** (**C**reate **R**un **U**pdate **D**elete). You
-can create as many projects as you like.
+
+Above is a sample project for doing Laundry. After adding
+your own projects you can delete the sample project.
+
+You can have an unlimited number of projects.
+Each projects can have an unlimited number of Tasks.
 
 ---
 
