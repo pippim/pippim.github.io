@@ -402,7 +402,7 @@ function paintTaskWindow(mode) {
     html += taskButton("Cancel", "Cancel changes", "paintTasksTable");
     html += "<font size='+2'>Run &emsp; &emsp; </font>"
     var textMode = mode;
-    if (mod == "Edit") { textMode = "Save" }
+    if (textMode == "Edit") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Task", "clickUpdateTask");
     html += "<font size='+2'>Add new Project</font>"
     html += '</div>\n';
