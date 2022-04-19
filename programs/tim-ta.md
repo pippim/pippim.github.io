@@ -1,5 +1,5 @@
 ---
-title: Tim-ta (Timed Tasks) - Run Set of Alarms Consecutively
+title: Tim-ta (Timed Tasks)
 layout: program
 ---
 
