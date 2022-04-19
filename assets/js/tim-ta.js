@@ -138,12 +138,12 @@ function get_dd_field (name) {
         alert("Critical Error. Data dictionary field has < 3 parts:", name)
         return
     }
-    dd_field.name = arr[0];
-    dd_field.label = arr[1];
-    dd_field.type = arr[2];
-    if (arr.length >= 4) { dd_field.lower = arr[3]; |
+    dd_field.name = arr[0];     // Used programmatically as field name
+    dd_field.label = arr[1];    // Used for labels on forms & tables
+    dd_field.type = arr[2];     // Used for <table> <input> type="dd_field.type"
+    if (arr.length >= 4) { dd_field.lower = arr[3]; }
     else dd_field.lower = "";
-    if (arr.length >= 5) { dd_field.upper = arr[4]; |
+    if (arr.length >= 5) { dd_field.upper = arr[4]; }
     else dd_field.upper = "";
     if (arr.length > 5) {
         alert("Critical Error. Data dictionary field has > 5 parts:", name)
