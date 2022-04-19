@@ -107,7 +107,7 @@ var data_dictionary = {
     set_end_filename: "Set ending sound filename|radio|sound_filenames",
     set_end_notification: "Desktop notification when Set ends?|radio|true|false",
     all_sets_prompt: "Prompt to begin All Sets?|radio|true|false",
-    all_sets_end_alarm: "Play sound when All Sets end?|radio|true|false,
+    all_sets_end_alarm: "Play sound when All Sets end?|radio|true|false",
     all_sets_end_filename: "All Sets ending sound filename|radio|sound_filenames",
     all_sets_end_notification: "Desktop notification when All Sets end?|radio|true|false",
     progress_bar_update_seconds: "Seconds interval between progress bar updates|number|1|1000",
