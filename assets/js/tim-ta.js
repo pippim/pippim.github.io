@@ -201,6 +201,8 @@ function paintTasksTable(id) {
     html += '</table>\n';     // End of our table and form
 
     html += '<div class="bigFoot">\n';
+    html += taskButton(tabPlaySym, tabPlayTitle, "clickPlay");
+    html += "<font size='+2'>Run &emsp; &emsp; </font>"
     html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
     html += "<font size='+2'>Add new Task &emsp; &emsp; </font>"
     html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
@@ -225,7 +227,7 @@ function paintTasksTable(id) {
             '}\n'
     html += '.bigFoot {\n' +
             'margin: 1rem;\n' +
-            'padding: 1rem;\n' +
+            'padding: .5rem 1rem;\n' +
             'border: thick solid;\n' +
             'border-radius: 2rem;\n' +
             '}\n'
@@ -301,15 +303,8 @@ function clickListen(i) {
     end_alarm = getTaskValue("task_end_alarm");
     if (end_alarm == "false") { alert("Alarm turned off for this task."); return; }
     sound = getTaskValue("task_end_filename");
-    playSoundSource(sound);     // From: sound.js
-}
-function playSoundSource (name) {
-    // Copied from sound.js because it isn't included yet...
     audioControl = document.getElementById(name);
     audioControl.play();
-}
-function clickPlay(i) {
-    clickCommon(i);
 }
 function clickUp(i) {
     clickCommon(i);
@@ -333,9 +328,13 @@ function clickDelete(i) {
 }
 function clickAddTask() {
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
+    paintTaskWindow("Add");
 }
 function clickAddProject() {
     ttaProject = Object.assign({}, tta_project);
+}
+function clickPlay() {
+    // Run Project - Countdown all tasks
 }
 function clickControls(i) {
     // Popup buttons for small screens
