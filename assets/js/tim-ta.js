@@ -390,7 +390,7 @@ function paintTaskWindow(mode) {
     html += inpSelect("seconds", "Seconds", mode);
     html += inpSelect("task_prompt", "Prompt to begin countdown?", mode);
     html += inpSelect("task_end_alarm", "Sound alarm when task ends?", mode);
-    html += inpSelect("task_end_filename", "If true, the sound filename", mode);
+    html += inpSelect("task_end_filename", "If true, the sound filename will be", mode);
     html += inpSelect("task_end_notification", "Notification when task ends?", mode);
     html += inpSelect("progress_bar_update_seconds",
                       "Seconds interval between progress bar updates", mode);
@@ -404,7 +404,7 @@ function paintTaskWindow(mode) {
     var textMode = mode;
     if (textMode == "Edit") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Task", "clickUpdateTask");
-    html += "<font size='+2'>" + textMode + "</font>"
+    html += "<font size='+2'>" + textMode + " Task</font>";
     html += '</div>\n';
 
     // TODO: Move next lines to class name: tabClass inside TCM
