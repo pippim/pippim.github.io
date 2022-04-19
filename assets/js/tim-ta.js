@@ -303,7 +303,7 @@ function clickListen(i) {
     end_alarm = getTaskValue("task_end_alarm");
     if (end_alarm == "false") { alert("Alarm turned off for this task."); return; }
     sound = getTaskValue("task_end_filename");
-    audioControl = document.getElementById(name);
+    audioControl = document.getElementById(sound);
     audioControl.play();
 }
 function clickUp(i) {
