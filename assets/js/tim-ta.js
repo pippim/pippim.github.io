@@ -404,7 +404,7 @@ function paintTaskWindow(mode) {
     var textMode = mode;
     if (textMode == "Edit") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Task", "clickUpdateTask");
-    html += "<font size='+2'>" + TextMode + "</font>"
+    html += "<font size='+2'>" + textMode + "</font>"
     html += '</div>\n';
 
     // TODO: Move next lines to class name: tabClass inside TCM
