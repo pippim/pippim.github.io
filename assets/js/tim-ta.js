@@ -81,10 +81,10 @@ var tta_project = {
 // SINGLE Timer within a Tim-ta Project
 // When value is "default" it is inherited from Project 
 var tta_task = {
-    task_name: null,
-    hours: null,
-    minutes: null,
-    seconds: null,
+    task_name: undefined,
+    hours: undefined,
+    minutes: undefined,
+    seconds: undefined,
     task_prompt: "default",
     task_end_alarm: "default",
     task_end_filename: "default",
