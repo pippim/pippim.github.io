@@ -590,7 +590,7 @@ function validateNonBlank(value) {
 
 function validateNumber(value) {
     if (dd_field.type != "number") { return true; } // Not "number" type
-    // console.log("dd_field.name:", dd_field.name, "dd_field.type:", dd_field.type)
+     console.log("value: '" + value + "' typeof:", typeof value)
     // From: https://stackoverflow.com/a/175787/6929343
     if (isNaN(value) || // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
     isNaN(parseFloat(value))) { // ...and ensure strings of whitespace fail
