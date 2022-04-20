@@ -469,13 +469,17 @@ function paintTaskWindow(mode) {
     html += buildInput("confirm_delete_phrase", mode);
     html += '</table></form>\n' ;
 
-    html += '<div class="bigFoot">\n';
+    html += '<div class="bigFoot">\n';  // Start footer buttons
+    html += '<div class="centerFoot">\n';
     html += taskButton("Cancel", "Cancel changes", "paintTasksTable");
-    html += "<font size='+2'>Cancel changes &emsp; &emsp; </font>"
+    html += "<font size='+2'>Cancel changes</font>"
+    html += '</div>\n';
     var textMode = mode;
+    html += '<div class="rightFoot">\n';
     if (textMode == "Edit") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Task", "clickUpdateTask");
     html += "<font size='+2'>" + textMode + " Task</font>";
+    html += '</div>\n';
     html += '</div>\n';
 
     // TODO: Move next lines to class name: tabClass inside TCM
@@ -520,7 +524,7 @@ function buildInput(key, mode) {
 }
 
 function clickUpdateTask() {
-    /* Process all updates - Add, Edit and Delete Task
+    /* Process Task updates - Add, Edit and Delete Task
     */
     alert("WARNING: Add/Save/Delete Task NOT fully implemented yet")
     // For Save Edit and Delete original index must exist.
@@ -543,7 +547,7 @@ function clickUpdateTask() {
 
     // Adding new or saving changes. Get input field values
     var elements = document.getElementById("formTask").elements;
-    var newTask ={};
+    var newTask = {};
     for(var i = 0 ; i < elements.length ; i++){
         var item = elements.item(i);
         newTask[item.name] = item.value;
@@ -552,15 +556,27 @@ function clickUpdateTask() {
     // Validation - Unique Task name, numeric fields, "true" or "false"
     // Assign "default" to newTask fields if they match default
     // What's changed from original Task to new Task?
-    for(var i = 0 ; i < elements.length ; i++){
-        var item = elements.item(i);
-        if (newTask[item.name] != ttaTask[item.name]){
+    for (var i = 0 ; i < elements.length ; i++) {
+        var item = elements.item(i);  // Why not [i]
+        // Check if non-blank first
+        get_dd_field(item.name);
+        if (dd_field.lower == "non-blank") {
+            if (item.name == "") {
+                alert(dd_field.label + " cannot be blank");
+                return
+            }
+        }
+        // Get default value
+        value = getProjectValue(key);  // Get parents value
+        if (item.value == value) { newTask[item.name] = "default" }
+        if (newTask[item.name] != ttaTask[item.name]) {
             console.log('Item:', item.name, 'changed to:', item.value)
         }
     }
     paintTasksTable()
 }
-function confirmDelete() { return true };
+
+function confirmDelete() { return true }
 
 // ERROR: Task Name must be unique and cannot be blank
 
