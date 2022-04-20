@@ -512,8 +512,8 @@ function buildInput(key, mode) {
     value = getTaskValue(key);  // Translates "default" to real value
     var html = "<tr><td>\n";
     html += dd_field.label + '</td>\n'
-    if (dd_field.type == "switch") { html += buildSwitch(key, value) }
-    else { html += buildText(key, value) }
+    if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
+    else { html += buildText(key, value, mode) }
     html += '></td></tr>\n'
     return html;
 }
@@ -633,16 +633,18 @@ function buildInit() {
     inpSwitches = {};
 }
 
-function buildSwitch(name, bool) {
+function buildSwitch(name, bool, mode) {
     // get_dd_field() must have been called before us
     // Must initialize switches with images after HTML declared with IDs
+    const fullId = "inpSwitch-" + name
     inpSwitches[name] = {
-        id: "inpSwitch-" + name,
+        id: fullId,
         elm: "Pippim Promise",
-        value: bool
+        value: bool,
+        mode: mode
     };
     // Below src doesn't matter because it is reset after DOM load
-    var html = '<td><img class="inpOnOffSwitch" id="inpSwitch-' + name + '"  \n' +
+    var html = '<td><img class="inpOnOffSwitch" id="' + fullId + '"  \n' +
                'src="{{ site.url }}/assets/img/icons/switch_off_left.png /></td>\n'
     return html;
 }
@@ -667,6 +669,7 @@ function setSwitch(name, bool) {
 }
 
 function toggleSwitch(name) {
+    if (inpSwitches[name].mode == "Delete") { return; }  // readonly mode
     if (inpSwitches[name].value == "true") { setSwitch(name, "false"); }
                                       else { setSwitch(name, "true"); }
 }
