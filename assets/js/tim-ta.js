@@ -301,9 +301,10 @@ function bigFootStyle() {
             'border: 3px solid;\n' +
             'border-radius: 2rem;\n' +
             '}\n' +
-            '.leftFoot, .middleFoot, .rightFoot {\n' +
+            '.leftFoot, .rightFoot {\n' +
             'flex: 1;\n';
             '}\n'
+    // Flex from: https://stackoverflow.com/a/44348868/6929343
 }
 
 function ttaBtnStyle() {
