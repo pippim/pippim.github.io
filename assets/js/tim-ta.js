@@ -291,6 +291,7 @@ function paintTasksTable() {
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
+    document.getElementById(id).scrollIntoView();
 }  // End of paintTasksTable()
 
 function bigFootStyle() {
