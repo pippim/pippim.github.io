@@ -147,7 +147,7 @@ function get_dd_field (name) {
     else dd_field.lower = "";   // See top of function comments
     if (arr.length >= 4) { dd_field.upper = arr[3]; }
     else dd_field.upper = "";
-    if (arr.length > 4) {       // See top of function comments
+    if (arr.length > 4 && arr[2] != "radio") {       // See top of function comments
         alert("Critical Error. Data dictionary field has > 4 parts: " + name);
         return false;
     }
@@ -560,21 +560,55 @@ function clickUpdateTask() {
         var item = elements.item(i);  // Why not [i]
         // Check if non-blank first
         get_dd_field(item.name);
-        if (dd_field.lower == "non-blank") {
-            console.log("found non-blank", item.name, "value:", item.value)
-            if (item.value == "") {
-                alert(dd_field.label + " cannot be blank");
-                return
-            }
-        }
+        if (!validateNonBlank(item.value)) { return false; }
+        if (!validateNumeric(item.value)) { return false; }
+        if (!dd_field.type == "number") { item.value = 0 + item.value } // If ''
+        if (!validateRange(item.value)) { return false; }
+        if (!validateRadioButton(item.value)) { return false; }
         // Get default value
         value = getProjectValue(item.name);  // Get parents value
         if (item.value == value) { newTask[item.name] = "default" }
+        // Log value change
         if (newTask[item.name] != ttaTask[item.name]) {
-            console.log('Item:', item.name, 'changed to:', item.value)
+            console.log('Item.name:', item.name, 'changed to:', item.value)
         }
     }
     paintTasksTable()
+    return true;
+}
+
+function validateNonBlank(value) {
+    // NOTE: get_dd_field must be called first.
+    if (dd_field.lower == "non-blank") {
+        if (value == "") {
+            alert(dd_field.label + " cannot be blank");
+            return false;
+        }
+    }
+    return true;
+}
+
+function validateNumeric(value) {
+    if (!dd_field.type == "number") { return true; } // Not "number" type
+    // From: https://stackoverflow.com/a/175787/6929343
+    if (isNaN(value) || // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+        isNaN(parseFloat(value)) { // ...and ensure strings of whitespace fail
+         alert(dd_field.label + " must be a number");
+         return false;
+    }
+    return true;
+}
+
+function validateRange(value) {
+    if (!dd_field.type == "number") { return true; } // Not "number" type
+    return true;
+}
+
+function validateRadioButton(value) {
+    // SHORT TERM (I think?)
+    // LONG TERM still needed for sound filenames if user deleted one?
+    if (!dd_field.type == "radio") { return true; } // Not "number" type
+    return true;
 }
 
 function confirmDelete() { return true }
