@@ -452,6 +452,7 @@ function paintTaskWindow(mode) {
     // Button at bottom allows calling paintProjectsTable(id)
     currentWindow = mode;
     var id = currentId;
+    buildInit();
 
     var cnt = ttaProject.arrTasks.length;
     var html = "<h2>" + ttaProject.project_name + " Project - " +
@@ -492,6 +493,14 @@ function paintTaskWindow(mode) {
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
 
+}
+
+var inpSwitches;
+
+function buildInit() {
+    /*  Initialize custom objects used on form
+    */
+    inpSwitches = {}
 }
 
 function buildInput(key, mode) {
@@ -625,7 +634,9 @@ function buildSwitch(name, value) {
 }
 /* Setup RADIO switches
 
-    switch_init(name, value);
+function tcmButtonVisibility() {
+    // Initialize switches with values after HTML declared with IDs
+    switch_init("switch_this_page", vis_this_page);
     switch_init("switch_all_pages", vis_all_pages);
     switch_init("switch_all_sessions", vis_all_sessions);
 
@@ -639,19 +650,13 @@ function buildSwitch(name, value) {
         }
     });
 
-    document.getElementById("switch_all_pages").addEventListener('click', () => {
-        switch_toggle("switch_all_pages");
-        // switched on force page visible or off force sessions invisible
-        if (vis_all_pages == "true") { switch_set("switch_this_page", "true"); }
-        if (vis_all_pages == "false") { switch_set("switch_all_sessions", "false"); }
-    });
-
-    document.getElementById("switch_all_sessions").addEventListener('click', () => {
-        switch_toggle("switch_all_sessions");
-        // If visible all sessions then force visible all pages
-        if (vis_all_sessions == "true") {
-            switch_set("switch_this_page", "true");
-            switch_set("switch_all_pages", "true");
+    // Toggle switch on/off with button click
+    document.getElementById("switch_this_page").addEventListener('click', () => {
+        switch_toggle("switch_this_page");
+        // If invisible this page, then invisible everywhere
+        if (vis_this_page == "false") {
+            switch_set("switch_all_pages", "false");
+            switch_set("switch_all_sessions", "false");
         }
     });
 
