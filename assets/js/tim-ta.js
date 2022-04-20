@@ -302,7 +302,7 @@ function bigFootStyle() {
             'border-radius: 2rem;\n' +
             '}\n' +
             '.leftFoot, .centerFoot, .rightFoot {\n' +
-            'flex: 1;\n'; +
+            'flex-grow: 1;\n'; +
             '}\n'
     // Flex from: https://stackoverflow.com/a/44348868/6929343
 }
