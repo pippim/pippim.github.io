@@ -592,7 +592,7 @@ function validateNumeric(value) {
     if (!dd_field.type == "number") { return true; } // Not "number" type
     // From: https://stackoverflow.com/a/175787/6929343
     if (isNaN(value) || // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
-        isNaN(parseFloat(value)) { // ...and ensure strings of whitespace fail
+        isNaN(parseFloat(value))) { // ...and ensure strings of whitespace fail
          alert(dd_field.label + " must be a number");
          return false;
     }
