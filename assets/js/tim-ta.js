@@ -111,9 +111,9 @@ var data_dictionary = {
     all_sets_end_filename: "All Sets ending sound filename|radio|sound_filenames",
     all_sets_end_notification: "Desktop notification when All Sets end?|radio|true|false",
     progress_bar_update_seconds: "Seconds interval between progress bar updates|number|1|1000",
+    fail_test_1: "Hello World",
+    fail_test_2: "Good-bye Cruel World, I'm leaving you today, ...|text|lower|upper|No such place!",
     confirm_delete_phrase: "Text to confirm delete action|text"
-    fail_test_1: "Hello World"
-    fail_test_2: "Hello World|text|lower|upper|No such place!"
 }
 
 var dd_field = {
@@ -132,13 +132,13 @@ function get_dd_field (name) {
     */
     const raw = data_dictionary[name];
     if (raw == null) {
-        alert("Critical Error. Data dictionary field doesn't exist:", name)
-        return
+        alert("Critical Error. Data dictionary field doesn't exist:", name);
+        return false;
     }
     const arr = raw.split('|')
     if (arr.length < 2) {
-        alert("Critical Error. Data dictionary field has < 3 parts:", name)
-        return
+        alert("Critical Error. Data dictionary field has < 3 parts:", name);
+        return false;
     }
     dd_field.name = name;     // Used programmatically as field name
     dd_field.label = arr[0];    // Used for labels on forms & tables
@@ -148,10 +148,11 @@ function get_dd_field (name) {
     if (arr.length >= 4) { dd_field.upper = arr[3]; }
     else dd_field.upper = "";
     if (arr.length > 4) {       // See top of function comments
-        alert("Critical Error. Data dictionary field has > 4 parts:", name)
-        return
+        alert("Critical Error. Data dictionary field has > 4 parts:", name);
+        return false;
     }
-}    
+    return true;
+}
 
 // UNIT TESTING
 get_dd_field("haha")
