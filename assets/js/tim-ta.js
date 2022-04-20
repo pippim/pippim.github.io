@@ -140,15 +140,15 @@ function get_dd_field (name) {
         alert("Critical Error. Data dictionary field has < 3 parts: " + name);
         return false;
     }
-    dd_field.name = name;     // Used programmatically as field name
+    dd_field.name = name;       // Used programmatically as field name
     dd_field.label = arr[0];    // Used for labels on forms & tables
     dd_field.type = arr[1];     // Used for <table> <input> type="dd_field.type"
     if (arr.length >= 3) { dd_field.lower = arr[2]; }
     else dd_field.lower = "";   // See top of function comments
     if (arr.length >= 4) { dd_field.upper = arr[3]; }
     else dd_field.upper = "";
-    if (arr.length > 4 && arr[2] != "radio") {       // See top of function comments
-        alert("Critical Error. Data dictionary field has > 4 parts: " + name);
+    if (arr.length > 4 && dd_field.type != "radio") {       // See top of function comments
+        alert("Critical Error. Non-Radio Button field has > 4 parts: " + name);
         return false;
     }
     return true;
@@ -590,11 +590,12 @@ function validateNonBlank(value) {
 
 function validateNumeric(value) {
     if (!dd_field.type == "number") { return true; } // Not "number" type
+    console.log("dd_field.name:", dd_field.name, "dd_field.type:", dd_field.type)
     // From: https://stackoverflow.com/a/175787/6929343
     if (isNaN(value) || // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
-        isNaN(parseFloat(value))) { // ...and ensure strings of whitespace fail
-         alert(dd_field.label + " must be a number");
-         return false;
+    isNaN(parseFloat(value))) { // ...and ensure strings of whitespace fail
+        alert(dd_field.label + " must be a number");
+        return false;
     }
     return true;
 }
