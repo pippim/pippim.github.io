@@ -112,6 +112,8 @@ var data_dictionary = {
     all_sets_end_notification: "Desktop notification when All Sets end?|radio|true|false",
     progress_bar_update_seconds: "Seconds interval between progress bar updates|number|1|1000",
     confirm_delete_phrase: "Text to confirm delete action|text"
+    fail_test_1: "Hello World"
+    fail_test_2: "Hello World|text|lower|upper|No such place!"
 }
 
 var dd_field = {
@@ -134,22 +136,27 @@ function get_dd_field (name) {
         return
     }
     const arr = raw.split('|')
-    if (arr.length < 3) {
+    if (arr.length < 2) {
         alert("Critical Error. Data dictionary field has < 3 parts:", name)
         return
     }
-    dd_field.name = arr[0];     // Used programmatically as field name
-    dd_field.label = arr[1];    // Used for labels on forms & tables
-    dd_field.type = arr[2];     // Used for <table> <input> type="dd_field.type"
-    if (arr.length >= 4) { dd_field.lower = arr[3]; }
-    else dd_field.lower = "";
-    if (arr.length >= 5) { dd_field.upper = arr[4]; }
+    dd_field.name = name;     // Used programmatically as field name
+    dd_field.label = arr[0];    // Used for labels on forms & tables
+    dd_field.type = arr[1];     // Used for <table> <input> type="dd_field.type"
+    if (arr.length >= 3) { dd_field.lower = arr[2]; }
+    else dd_field.lower = "";   // See top of function comments
+    if (arr.length >= 4) { dd_field.upper = arr[3]; }
     else dd_field.upper = "";
-    if (arr.length > 5) {
-        alert("Critical Error. Data dictionary field has > 5 parts:", name)
+    if (arr.length > 4) {       // See top of function comments
+        alert("Critical Error. Data dictionary field has > 4 parts:", name)
         return
     }
 }    
+
+// UNIT TESTING
+get_dd_field("haha")
+get_dd_field("fail_test_1")
+get_dd_field("fail_test_2")
 
 // Get variable values and source.
 // EG task_prompt value & source can be "true", "Manual Override"
