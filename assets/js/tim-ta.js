@@ -605,9 +605,59 @@ function validateRange(value) {
 function validateRadioButton(value) {
     // SHORT TERM (I think?)
     // LONG TERM still needed for sound filenames if user deleted one?
+    // Thorough Doc: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
     if (!dd_field.type == "radio") { return true; } // Not "number" type
     return true;
 }
+
+function validateDropdownButton(value) {
+    // SO Example: https://stackoverflow.com/a/44736840/6929343
+    // Thorough Doc: https://www.w3schools.com/howto/howto_js_dropdown.asp
+    if (!dd_field.type == "radio") { return true; } // Not "number" type
+    return true;
+}
+
+// Test if visible
+objTcmVisById = {}; // Will this destroy TCM or does it reinit each time?
+buildSwitch("task_prompt", "true");
+
+function buildSwitch(name, value) {
+    // Initialize switches with values after HTML declared with IDs
+    switch_init(name, value);
+}
+/* Setup RADIO switches
+    switch_init("switch_all_pages", vis_all_pages);
+    switch_init("switch_all_sessions", vis_all_sessions);
+
+    // Toggle switch on/off with button click
+    document.getElementById("switch_this_page").addEventListener('click', () => {
+        switch_toggle("switch_this_page");
+        // If invisible this page, then invisible everywhere
+        if (vis_this_page == "false") {
+            switch_set("switch_all_pages", "false");
+            switch_set("switch_all_sessions", "false");
+        }
+    });
+
+    document.getElementById("switch_all_pages").addEventListener('click', () => {
+        switch_toggle("switch_all_pages");
+        // switched on force page visible or off force sessions invisible
+        if (vis_all_pages == "true") { switch_set("switch_this_page", "true"); }
+        if (vis_all_pages == "false") { switch_set("switch_all_sessions", "false"); }
+    });
+
+    document.getElementById("switch_all_sessions").addEventListener('click', () => {
+        switch_toggle("switch_all_sessions");
+        // If visible all sessions then force visible all pages
+        if (vis_all_sessions == "true") {
+            switch_set("switch_this_page", "true");
+            switch_set("switch_all_pages", "true");
+        }
+    });
+
+}
+
+*/
 
 function confirmDelete() { return true }
 
