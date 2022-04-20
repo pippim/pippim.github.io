@@ -452,7 +452,7 @@ function paintTaskWindow(mode) {
     // Button at bottom allows calling paintProjectsTable(id)
     currentWindow = mode;
     var id = currentId;
-    buildInit();
+    buildInit();  // Reset data dictionary input field controls
 
     var cnt = ttaProject.arrTasks.length;
     var html = "<h2>" + ttaProject.project_name + " Project - " +
@@ -492,7 +492,7 @@ function paintTaskWindow(mode) {
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
-
+    initSwitchesAfterDOM();
 }
 
 var inpSwitches;
@@ -512,25 +512,20 @@ function buildInput(key, mode) {
     value = getTaskValue(key);  // Translates "default" to real value
     var html = "<tr><td>\n";
     html += dd_field.label + '</td>\n'
-    // TODO: type="text" changed for numeric fields?
+    if (dd_field.type == "switch") { html += buildSwitch(key, value) }
+    else { html += buildText(key, value) }
+    html += '></td></tr>\n'
+    return html;
+}
+
+function buildText(key, value) {
+    // get_dd_field() must have been called before us
+    var html = "";
     html += '<td><input id="' + key + '" class="tabInput" type="text" \n' +
         'placeholder="Enter ' + dd_field.label + '" value="' + value + '" \n' +
         'name="' + key + '" \n';
     if(mode == "Delete") { html += ' readonly'; }
-    html += '></td></tr>\n'
-
     return html;
-
-    /* Copied for FUTURE drop box input fields
-
-    <label for="cars">Choose a car:</label>
-<select id="cars" name="cars">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-</select>
-*/
 }
 
 function clickUpdateTask() {
@@ -626,62 +621,55 @@ function validateDropdownButton(value) {
     return true;
 }
 
-// Test if visible
-buildSwitch("task_prompt", "true");
+// =================================  SWITCHES  ===============================
+var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
+var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
 
-function buildSwitch(name, value) {
+var inpSwitches;
+
+function buildInit() {
+    /*  Initialize custom objects used on form
+    */
+    inpSwitches = {};
+}
+
+function buildSwitch(name, bool) {
+    // get_dd_field() must have been called before us
+    // Must initialize switches with images after HTML declared with IDs
+    inpSwitches[name] = {
+        id: "inpSwitch-" + name,
+        elm: "Pippim Promise",
+        value: bool
+    };
+    // Below src doesn't matter because it is reset after DOM load
+    var html = '<td><img class="inpOnOffSwitch" id="inpSwitch-' + name + '"  \n' +
+               'src="{{ site.url }}/assets/img/icons/switch_off_left.png /></td>\n'
+    return html;
+}
+
+function initSwitchesAfterDOM() {
+    // After innerHTML is set we can bet the elements and set sources
+    for (const name in Object.keys(inpSwitches)) {
+        element = document.getElementById(name);
+        inpSwitches[name].elm = element;
+        element.addEventListener('click', () => { switch_toggle(name); }
+        setSwitch(name, inpSwitches[name].value);
+    }
+}
+
+function setSwitch(name, bool) {
     // Initialize switches with values after HTML declared with IDs
-}
-/* Setup RADIO switches
-
-function tcmButtonVisibility() {
-    // Initialize switches with values after HTML declared with IDs
-    switch_init("switch_this_page", vis_this_page);
-    switch_init("switch_all_pages", vis_all_pages);
-    switch_init("switch_all_sessions", vis_all_sessions);
-
-    // Toggle switch on/off with button click
-    document.getElementById("switch_this_page").addEventListener('click', () => {
-        switch_toggle("switch_this_page");
-        // If invisible this page, then invisible everywhere
-        if (vis_this_page == "false") {
-            switch_set("switch_all_pages", "false");
-            switch_set("switch_all_sessions", "false");
-        }
-    });
-
-    // Toggle switch on/off with button click
-    document.getElementById("switch_this_page").addEventListener('click', () => {
-        switch_toggle("switch_this_page");
-        // If invisible this page, then invisible everywhere
-        if (vis_this_page == "false") {
-            switch_set("switch_all_pages", "false");
-            switch_set("switch_all_sessions", "false");
-        }
-    });
-
-function switch_set(id, bool) {
-    objTcmVisById[id].setting = bool;
-    if (bool == "true" ) { objTcmVisById[id].element.src = switch_on_image;
-                           objTcmVisById[id].element.title = "Click to switch off"; }
-                    else { objTcmVisById[id].element.src = switch_off_image;
-                           objTcmVisById[id].element.title = "Click to switch on"; }
-    if (id == "switch_this_page") { vis_this_page = bool; }
-
-
-function check_all_switches() {
-    vis_this_page = objTcmVisById["switch_this_page"].setting;
-    vis_all_pages = objTcmVisById["switch_all_pages"].setting;
-    vis_all_sessions = objTcmVisById["switch_all_sessions"].setting;
+    inpSwitches[name].value = bool;
+    if (bool == "true" ) { inpSwitches[name].elm.src = switch_on_image;
+                           inpSwitches[name].elm.title = "Click to switch off"; }
+                    else { inpSwitches[name].elm.src = switch_off_image;
+                           inpSwitches[name].elm.title = "Click to switch on"; }
 }
 
-function switch_toggle(id) {
-    if (objTcmVisById[id].setting == "true") { switch_set(id, "false"); }
-                                        else { switch_set(id, "true"); }
+function toggleSwitch(name) {
+    if (inpSwitches[name].value == "true") { setSwitch(name, "false"); }
+                                      else { setSwitch(name, "true"); }
 }
-}
-
-*/
 
 function confirmDelete() { return true }
 
