@@ -154,18 +154,17 @@ function get_dd_field (name) {
     return true;
 }
 
-// UNIT TESTING
-get_dd_field("haha")
-get_dd_field("fail_test_1")
-get_dd_field("fail_test_2")
+/* UNIT TESTING
+    get_dd_field("haha")
+    get_dd_field("fail_test_1")
+    get_dd_field("fail_test_2")
+*/
 
-// Get variable values and source.
-// EG task_prompt value & source can be "true", "Manual Override"
-// "true", "Project Default", "true", "Configuration Default"
+// Global Names
 var ttaStore, ttaProject, ttaTask;
 
 ttaNewConfig();  // Always new until localStorage setup
-localStorage.setItem('ttaStore', ttaStore)
+localStorage.setItem('ttaStore', ttaStore);
 
 function ttaNewConfig() {
     // Object.assign: https://stackoverflow.com/a/34294740/6929343
