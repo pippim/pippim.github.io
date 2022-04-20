@@ -302,8 +302,8 @@ function bigFootStyle() {
             'border-radius: 2rem;\n' +
             '}\n' +
             '.leftFoot, .centerFoot, .rightFoot {\n' +
-            'flex-grow: 1;\n'; +
-            '}\n'
+            'flex-grow: 1;\n' +
+            '}\n';
     // Flex from: https://stackoverflow.com/a/44348868/6929343
 }
 
@@ -567,7 +567,7 @@ function clickUpdateTask() {
             }
         }
         // Get default value
-        value = getProjectValue(key);  // Get parents value
+        value = getProjectValue(item.name);  // Get parents value
         if (item.value == value) { newTask[item.name] = "default" }
         if (newTask[item.name] != ttaTask[item.name]) {
             console.log('Item:', item.name, 'changed to:', item.value)
