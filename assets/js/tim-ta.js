@@ -561,7 +561,8 @@ function clickUpdateTask() {
         // Check if non-blank first
         get_dd_field(item.name);
         if (dd_field.lower == "non-blank") {
-            if (item.name == "") {
+            console.log("found non-blank", item.name, "value:", item.value)
+            if (item.value == "") {
                 alert(dd_field.label + " cannot be blank");
                 return
             }
