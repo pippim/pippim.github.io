@@ -618,14 +618,14 @@ function validateDropdownButton(value) {
 }
 
 // Test if visible
-objTcmVisById = {}; // Will this destroy TCM or does it reinit each time?
 buildSwitch("task_prompt", "true");
 
 function buildSwitch(name, value) {
     // Initialize switches with values after HTML declared with IDs
-    switch_init(name, value);
 }
 /* Setup RADIO switches
+
+    switch_init(name, value);
     switch_init("switch_all_pages", vis_all_pages);
     switch_init("switch_all_sessions", vis_all_sessions);
 
@@ -655,6 +655,25 @@ function buildSwitch(name, value) {
         }
     });
 
+function switch_set(id, bool) {
+    objTcmVisById[id].setting = bool;
+    if (bool == "true" ) { objTcmVisById[id].element.src = switch_on_image;
+                           objTcmVisById[id].element.title = "Click to switch off"; }
+                    else { objTcmVisById[id].element.src = switch_off_image;
+                           objTcmVisById[id].element.title = "Click to switch on"; }
+    if (id == "switch_this_page") { vis_this_page = bool; }
+
+
+function check_all_switches() {
+    vis_this_page = objTcmVisById["switch_this_page"].setting;
+    vis_all_pages = objTcmVisById["switch_all_pages"].setting;
+    vis_all_sessions = objTcmVisById["switch_all_sessions"].setting;
+}
+
+function switch_toggle(id) {
+    if (objTcmVisById[id].setting == "true") { switch_set(id, "false"); }
+                                        else { switch_set(id, "true"); }
+}
 }
 
 */
