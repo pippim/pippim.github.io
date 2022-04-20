@@ -652,7 +652,7 @@ function initSwitchesAfterDOM() {
     for (const name in Object.keys(inpSwitches)) {
         element = document.getElementById(name);
         inpSwitches[name].elm = element;
-        element.addEventListener('click', () => { switch_toggle(name); }
+        element.addEventListener('click', () => { switch_toggle(name); });
         setSwitch(name, inpSwitches[name].value);
     }
 }
