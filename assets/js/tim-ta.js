@@ -261,12 +261,18 @@ function paintTasksTable() {
     html += '</table>\n';
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
+    html += '<div class="leftFoot">\n';
     html += taskButton(tabPlaySym, tabPlayTitle, "clickPlay");
-    html += "<font size='+2'>Run &emsp; &emsp; </font>"
+    html += "<font size='+2'>Run</font>"
+    html += '</div>\n';
+    html += '<div class="middleFoot">\n';
     html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
-    html += "<font size='+2'>Add new Task &emsp; &emsp; </font>"
+    html += "<font size='+2'>Add new Task</font>"
+    html += '</div>\n';
+    html += '<div class="rightFoot">\n';
     html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
     html += "<font size='+2'>Add new Project</font>"
+    html += '</div>\n';
     html += '</div>\n';
 
     html += '<style>\n';
@@ -281,22 +287,26 @@ function paintTasksTable() {
             'z-index: 1;\n' +
             'background: #f1f1f1;\n' +
             '}\n'
-    html += ttaBtn();
-    html += bigFoot();
+    html += ttaBtnStyle();
+    html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
 }  // End of paintTasksTable()
 
-function bigFoot() {
+function bigFootStyle() {
     return  '.bigFoot {\n' +
+            'display: flex;\n+'
             'margin: 1rem;\n' +
             'padding: .25rem .5rem;\n' +
             'border: 3px solid;\n' +
             'border-radius: 2rem;\n' +
+            '}\n' +
+            '.leftFoot, .middleFoot, .rightFoot {\n' +
+            'flex: 1;\n';
             '}\n'
 }
 
-function ttaBtn() {
+function ttaBtnStyle() {
     return  '.tta-btn {\n' +
             'font-size: 25px;\n' +
             'border-radius: 1rem;\n' +
@@ -471,8 +481,8 @@ function paintTaskWindow(mode) {
     html += '<style>\n';
     html += '#tabTasks th, #tabTasks td {\n' +
             '}\n'
-    html += ttaBtn();
-    html += bigFoot();
+    html += ttaBtnStyle();
+    html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
 
