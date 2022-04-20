@@ -518,7 +518,7 @@ function buildInput(key, mode) {
     return html;
 }
 
-function buildText(key, value) {
+function buildText(key, value, mode) {
     // get_dd_field() must have been called before us
     var html = "";
     html += '<td><input id="' + key + '" class="tabInput" type="text" \n' +
