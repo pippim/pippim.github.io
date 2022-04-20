@@ -132,12 +132,12 @@ function get_dd_field (name) {
     */
     const raw = data_dictionary[name];
     if (raw == null) {
-        alert("Critical Error. Data dictionary field doesn't exist:", name);
+        alert("Critical Error. Data dictionary field doesn't exist: " + name);
         return false;
     }
     const arr = raw.split('|')
     if (arr.length < 2) {
-        alert("Critical Error. Data dictionary field has < 3 parts:", name);
+        alert("Critical Error. Data dictionary field has < 3 parts: " + name);
         return false;
     }
     dd_field.name = name;     // Used programmatically as field name
@@ -148,7 +148,7 @@ function get_dd_field (name) {
     if (arr.length >= 4) { dd_field.upper = arr[3]; }
     else dd_field.upper = "";
     if (arr.length > 4) {       // See top of function comments
-        alert("Critical Error. Data dictionary field has > 4 parts:", name);
+        alert("Critical Error. Data dictionary field has > 4 parts: " + name);
         return false;
     }
     return true;
