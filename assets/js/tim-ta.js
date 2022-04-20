@@ -561,7 +561,7 @@ function clickUpdateTask() {
         // Check if non-blank first
         get_dd_field(item.name);
         if (!validateNonBlank(item.value)) { return false; }
-        if (!validateNumeric(item.value)) { return false; }
+        if (!validateNumber(item.value)) { return false; }
         if (!dd_field.type == "number") { item.value = 0 + item.value } // If ''
         if (!validateRange(item.value)) { return false; }
         if (!validateRadioButton(item.value)) { return false; }
@@ -588,9 +588,9 @@ function validateNonBlank(value) {
     return true;
 }
 
-function validateNumeric(value) {
-    if (!dd_field.type == "number") { return true; } // Not "number" type
-    console.log("dd_field.name:", dd_field.name, "dd_field.type:", dd_field.type)
+function validateNumber(value) {
+    if (dd_field.type != "number") { return true; } // Not "number" type
+    // console.log("dd_field.name:", dd_field.name, "dd_field.type:", dd_field.type)
     // From: https://stackoverflow.com/a/175787/6929343
     if (isNaN(value) || // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
     isNaN(parseFloat(value))) { // ...and ensure strings of whitespace fail
