@@ -554,7 +554,7 @@ function clickUpdateTask() {
         else { return false; }
     }
 
-    // Get form input field values
+    // Validate input field values
     var elements = document.getElementById("formTask").elements;
     var newTask = {};
     for (var i = 0; i < elements.length; i++) {
@@ -563,18 +563,12 @@ function clickUpdateTask() {
     }
 
     // Get switch values and add to newTask
-    //const arrNames = Object.keys(inpSwitches);
-    //for (i=0; i<arrNames.length; i++) {
-    //    const name = arrNames[i];
     for (const name of Object.keys(inpSwitches)) {
         newTask[name] = inpSwitches[name].value
     }
 
     // Validation - Non-blank Task name, numeric fields, "true" or "false"
     // Assign "default" to fields if they match parent
-    //const arrTaskKeys = Object.keys(newTask);
-    //for (i = 0 ; i < arrTaskKeys.length ; i++) {
-    //    var name = arrTaskKeys[i];
     for (const name of Object.keys(newTask)) {
         var value = newTask[name];
         get_dd_field(name);
@@ -596,6 +590,30 @@ function clickUpdateTask() {
     }
     paintTasksTable()
     return true;
+}
+
+function validateInput() {
+    // Validate input fields
+    var elements = document.getElementById("formTask").elements;
+    var newTask = {}
+    //for (var i = 0; i < elements.length; i++) {
+    //    var item = elements.item(i);
+    for (const item of Object.keys(elements)) {
+        newTask[item.name] = item.value;
+    }
+
+    // Validation - Non-blank Task name, numeric fields, "true" or "false"
+    // Assign "default" to fields if they match parent
+    for (const name of Object.keys(newTask)) {
+        var value = newTask[name];
+        get_dd_field(name);
+
+        if (!validateNonBlank(value)) { return false; }
+        if (!validateNumber(value)) { return false; }
+        if (!dd_field.type == "number") { value = 0 + value } // '' to 0
+        if (!validateRange(value)) { return false; }
+        if (!validateRadioButton(value)) { return false; }
+    }
 }
 
 function validateNonBlank(value) {
@@ -675,13 +693,12 @@ function buildSwitch(name, bool, mode) {
 
 function initSwitchesAfterDOM() {
     // After innerHTML is set we can bet the elements and set sources
-    //const arrNames = Object.keys(inpSwitches);
-    //for (var i=0; i<arrNames.length; i++) {
-    //    const name = arrNames[i];
     for (const name of Object.keys(inpSwitches)) {
         element = document.getElementById(inpSwitches[name].id);
         inpSwitches[name].elm = element;
         element.addEventListener('click', () => { toggleSwitch(name); });
+        // TODO hook to validation listener oninput
+        element.oninput = function() { validateInput() };
         setSwitch(name, inpSwitches[name].value);
     }
 }
