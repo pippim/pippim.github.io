@@ -660,7 +660,7 @@ function buildSwitch(name, bool, mode) {
     var html = '<img class="inpOnOffSwitch" id="' + fullId + '"  \n' +
                'src="{{ site.url }}/assets/img/icons/switch_off_left.png" \n';
     // NOTE: parent provides > at end
-    console.log("html:", html)
+    //console.log("html:", html)
     return html;
 }
 
@@ -669,11 +669,11 @@ function initSwitchesAfterDOM() {
     const arrNames = Object.keys(inpSwitches);
     for (var i=0; i<arrNames.length; i++) {
         const name = arrNames[i];
-        console.log("current name/id:", name, inpSwitches[name].id);
+        //console.log("current name/id:", name, inpSwitches[name].id);
         element = document.getElementById(inpSwitches[name].id);
 
         //if (typeof element !== null && element !== 'undefined' ) {
-            console.log("initSwitchesAfterDOM element:", element);
+            //console.log("initSwitchesAfterDOM element:", element);
             inpSwitches[name].elm = element;
             element.addEventListener('click', () => { toggleSwitch(name); });
             setSwitch(name, inpSwitches[name].value);
@@ -682,7 +682,7 @@ function initSwitchesAfterDOM() {
         //    console.log("element is null/undefined");
         //}
 
-        console.log("initSwitchesAfterDOM name.id:", inpSwitches[name].id);
+        //console.log("initSwitchesAfterDOM name.id:", inpSwitches[name].id);
     }
 }
 
