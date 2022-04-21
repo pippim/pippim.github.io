@@ -630,9 +630,9 @@ var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
 var inpSwitches;
 
 function inpSwitchStyle() {
-    return "vertical-align: middle;\n" +
+    return ".inpOnOffSwitch { vertical-align: middle;\n" +
            "width: 40px;\n" +
-           "height: auto;\n";
+           "height: auto; }\n";
 }
 
 function buildInit() {
