@@ -526,6 +526,7 @@ function buildText(key, value, mode) {
     // get_dd_field() must have been called before us
     var html = "";
     html += '<input id="' + key + '" class="tabInput" type="text" \n' +
+        'oninput="validateInput()" \n' +
         'placeholder="Enter ' + dd_field.label + '" value="' + value + '" \n' +
         'name="' + key + '" \n';
     if(mode == "Delete") { html += ' readonly'; }
@@ -594,6 +595,8 @@ function clickUpdateTask() {
 
 function validateInput() {
     // Validate input fields
+    // Call with: element.oninput = function() { validateInput() };
+
     var elements = document.getElementById("formTask").elements;
     var newTask = {}
     for (var i = 0; i < elements.length; i++) {
@@ -697,8 +700,6 @@ function initSwitchesAfterDOM() {
         element = document.getElementById(inpSwitches[name].id);
         inpSwitches[name].elm = element;
         element.addEventListener('click', () => { toggleSwitch(name); });
-        // TODO hook to validation listener oninput
-        element.oninput = function() { validateInput() };
         setSwitch(name, inpSwitches[name].value);
     }
 }
