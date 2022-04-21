@@ -160,6 +160,18 @@ function get_dd_field (name) {
     get_dd_field("fail_test_2")
 */
 
+function updateRadioSounds () {
+    /* Called on load and after drag & drop sound files */
+    for (const key of Object.keys(data_dictionary)) {
+        get_dd_field(key);
+        if (dd_field.type == "radio" && dd_field.lower == "sound_filenames") {
+            alert("About to replace sound_filenames for field: " + key)
+        }
+    }
+}
+
+updateRadioSounds();
+
 // Global Names
 var ttaStore, ttaProject, ttaTask;
 
@@ -499,9 +511,8 @@ function paintTaskWindow(mode) {
 var inpSwitches;
 
 function buildInit() {
-    /*  Initialize custom objects used on form
-    */
-    inpSwitches = {}
+    /*  Initialize custom objects used on form */
+    inpSwitches = {};  // Reset any switches last used
 }
 
 function buildInput(key, mode) {
@@ -534,14 +545,13 @@ function buildText(key, value, mode) {
 }
 
 function clickUpdateTask() {
-    /* Process Task updates - Add, Edit and Delete Task
-    */
-    // alert("WARNING: Add/Save/Delete Task NOT fully implemented yet")
-    // For Save Edit and Delete original index must exist.
+    /* Process Task updates - Add, Edit and Delete Task */
     const original_index = ttaProject.arrTasks.indexOf(ttaTask.task_name);
+    // When original index is < 0 it means we are adding new task
     if (!currentWindow == "Add" && original_index < 0) {
-        alert(ttaTask.task_name, "Not found in ttaProject.arrTasks")
-        return false
+        // Sanity check failed
+        alert(ttaTask.task_name + " Not found in ttaProject.arrTasks");
+        return false;
     }
     // Check for delete first and exit.
     if (currentWindow == "Delete") {
@@ -571,6 +581,7 @@ function clickUpdateTask() {
         // If new Task value same as Project's value it is a "default".
         if (value == old_value) { newTask[name] = "default" }
     }
+
     // Save changes or Add new ttaTask
     if (original_index < 0) {
         // Add mode, push new key onto array
@@ -581,8 +592,8 @@ function clickUpdateTask() {
         if (original_index != new_index) {
             // Replace old key with new at same spot
             ttaProject.arrTasks[original_index] = newTask.task_name;
-        }
-    } // At this point it's Edit mode and key hasn't changed.
+        } // At this point it's Edit mode and key hasn't changed.
+    }
 
     // Update object values
     ttaProject.objTasks[newTask.task_name] = newTask;
