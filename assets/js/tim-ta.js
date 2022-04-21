@@ -564,19 +564,26 @@ function clickUpdateTask() {
 
     // Get switch values and add to newTask
     const arrNames = Object.keys(inpSwitches);
-    for (var i=0; i<arrNames.length; i++) {
+    for (i=0; i<arrNames.length; i++) {
         const name = arrNames[i];
-        // setSwitch(name, inpSwitches[name].value);
+        newTask[name] = inpSwitches[name].value
     }
     console.log("arrNames.length:", arrNames.length)
+
+    const arrTaskKeys = Object.keys(newTask);
 
     // Validation - Unique Task name, numeric fields, "true" or "false"
     // Assign "default" to newTask fields if they match default
     // What's changed from original Task to new Task?
-    for (var i = 0 ; i < elements.length ; i++) {
-        var item = elements.item(i);  // Why not [i]
+    //for (i = 0 ; i < elements.length ; i++) {
+    for (i = 0 ; i < arrTasks.length ; i++) {
+        //var item = elements.item(i);  // Why not [i]
+        var name = arrTaskKeys[i];
+        var value = newTask[name];
         // Check if non-blank first
-        get_dd_field(item.name);
+        //get_dd_field(item.name);
+        get_dd_field(name);
+        /*
         if (!validateNonBlank(item.value)) { return false; }
         if (!validateNumber(item.value)) { return false; }
         if (!dd_field.type == "number") { item.value = 0 + item.value } // If ''
@@ -588,6 +595,19 @@ function clickUpdateTask() {
         // Log value change
         if (newTask[item.name] != ttaTask[item.name]) {
             console.log('Item.name:', item.name, 'changed to:', item.value)
+        }
+        */
+        if (!validateNonBlank(value)) { return false; }
+        if (!validateNumber(value)) { return false; }
+        if (!dd_field.type == "number") { value = 0 + value } // If ''
+        if (!validateRange(value)) { return false; }
+        if (!validateRadioButton(value)) { return false; }
+        // Get default value
+        old_value = getProjectValue(name);  // Get parents value
+        if (value == old_value) { newTask[name] = "default" }
+        // Log value change
+        if (newTask[name] != ttaTask[name]) {
+            console.log('name:', name, 'changed to:', value)
         }
     }
     paintTasksTable()
@@ -636,8 +656,6 @@ function validateDropdownButton(value) {
 // =================================  SWITCHES  ===============================
 var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
 var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
-
-var inpSwitches;
 
 function inpSwitchStyle() {
     return ".inpOnOffSwitch { vertical-align: middle;\n" +
