@@ -665,12 +665,13 @@ function initSwitchesAfterDOM() {
     for (var i=0; i<arrNames.length; i++) {
         const name = arrNames[i];
         element = document.getElementById(inpSwitches[name].id);
+        console.log("initSwitchesAfterDOM element:", element)
         //element = document.getElementById(name.id);
         inpSwitches[name].elm = element;
         //name.elm = element;
         element.addEventListener('click', () => { toggleSwitch(name); });
         setSwitch(name, inpSwitches[name].value);
-        console.log("initSwitchesAfterDOM:", inpSwitches[name])
+        console.log("initSwitchesAfterDOM name.id:", inpSwitches[name].id)
     }
 }
 
