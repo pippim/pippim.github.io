@@ -555,13 +555,8 @@ function clickUpdateTask() {
         else { return false; }
     }
 
-    // Validate input field values
-    var elements = document.getElementById("formTask").elements;
-    var newTask = {};
-    for (var i = 0; i < elements.length; i++) {
-        var item = elements.item(i);
-        newTask[item.name] = item.value;
-    }
+    /* Validate input field values and switches */
+    var newTask = getInputValues();
 
     // Get switch values and add to newTask
     for (const name of Object.keys(inpSwitches)) {
@@ -595,15 +590,7 @@ function clickUpdateTask() {
 
 function validateInput() {
     // Validate input fields
-    // Call with: element.oninput = function() { validateInput() };
-
-    var elements = document.getElementById("formTask").elements;
-    var newTask = {}
-    for (var i = 0; i < elements.length; i++) {
-        var item = elements.item(i);
-    //for (const item of Object.keys(elements)) {
-        newTask[item.name] = item.value;
-    }
+    var newTask = getInputValues();
 
     // Validation - Non-blank Task name, numeric fields, "true" or "false"
     // Assign "default" to fields if they match parent
@@ -617,6 +604,17 @@ function validateInput() {
         if (!validateRange(value)) { return false; }
         if (!validateRadioButton(value)) { return false; }
     }
+}
+
+function getInputValues() {
+    // Get input field values
+    var elements = document.getElementById("formTask").elements;
+    var newTask = {}
+    for (var i = 0; i < elements.length; i++) {
+        var item = elements.item(i);
+        newTask[item.name] = item.value;
+    }
+    return newTask;
 }
 
 function validateNonBlank(value) {
