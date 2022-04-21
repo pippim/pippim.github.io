@@ -576,7 +576,7 @@ function clickUpdateTask() {
     // Assign "default" to newTask fields if they match default
     // What's changed from original Task to new Task?
     //for (i = 0 ; i < elements.length ; i++) {
-    for (i = 0 ; i < newTask.length ; i++) {
+    for (i = 0 ; i < arrTaskKeys.length ; i++) {
         //var item = elements.item(i);  // Why not [i]
         var name = arrTaskKeys[i];
         var value = newTask[name];
