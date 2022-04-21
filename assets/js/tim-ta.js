@@ -515,17 +515,18 @@ function buildInput(key, mode) {
     var html = "<tr><td>\n";
     html += dd_field.label + '</td>\n'
 
+    html += '<td>\n';
     if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
     else { html += buildText(key, value, mode) }
-
     html += '></td></tr>\n'
+
     return html;
 }
 
 function buildText(key, value, mode) {
     // get_dd_field() must have been called before us
     var html = "";
-    html += '<td><input id="' + key + '" class="tabInput" type="text" \n' +
+    html += '<input id="' + key + '" class="tabInput" type="text" \n' +
         'placeholder="Enter ' + dd_field.label + '" value="' + value + '" \n' +
         'name="' + key + '" \n';
     if(mode == "Delete") { html += ' readonly'; }
@@ -648,7 +649,7 @@ function buildSwitch(name, bool, mode) {
     // Must initialize switches with images after HTML declared with IDs
     //const fullId = "inp_switch_" + name;
     const fullId = name;  // https://www.impressivewebs.com/avoiding-problems-with-javascript-getelementbyid-method-in-internet-explorer-7/
-    console.log("name passed to buildSwitch:", name, bool, mode);
+    // console.log("name passed to buildSwitch:", name, bool, mode);
     inpSwitches[name] = {
         id: fullId,
         elm: "Pippim Promise",
