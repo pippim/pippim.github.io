@@ -118,7 +118,8 @@ $lavender: #E6E6FA !default; // lavender
     // background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
     background-color: $honeydew; // Honeydew
 
-    &:hover {
+    // Below used to be &:hover only, Chrome Android ws leaving button highlighted
+    &:hover, &focus {
         background-color: DodgerBlue;
         background-position: bottom;
         //color: $lavender;       // WAS F0FFF0 or something like that Grayish
@@ -466,6 +467,7 @@ a.search-results:visited {
 }
 
 /* MAJOR SECTION ======== On/Off Slider Switches
+    Note: .with-action copied to inpSwitchStyle() in tim-ta.js
 */
 .with-action {
     vertical-align: middle;
