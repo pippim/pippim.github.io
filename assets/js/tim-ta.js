@@ -535,7 +535,7 @@ function buildText(key, value, mode) {
 function clickUpdateTask() {
     /* Process Task updates - Add, Edit and Delete Task
     */
-    alert("WARNING: Add/Save/Delete Task NOT fully implemented yet")
+    // alert("WARNING: Add/Save/Delete Task NOT fully implemented yet")
     // For Save Edit and Delete original index must exist.
     const original_index = ttaProject.arrTasks.indexOf(ttaTask.task_name);
     if (!currentWindow == "Add" && original_index < 0) {
@@ -557,10 +557,18 @@ function clickUpdateTask() {
     // Adding new or saving changes. Get input field values
     var elements = document.getElementById("formTask").elements;
     var newTask = {};
-    for(var i = 0 ; i < elements.length ; i++){
+    for (var i = 0; i < elements.length; i++) {
         var item = elements.item(i);
         newTask[item.name] = item.value;
     }
+
+    // Get switch values and add to newTask
+    const arrNames = Object.keys(inpSwitches);
+    for (var i=0; i<arrNames.length; i++) {
+        const name = arrNames[i];
+        // setSwitch(name, inpSwitches[name].value);
+    }
+    console.log("arrNames.length:", arrNames.length)
 
     // Validation - Unique Task name, numeric fields, "true" or "false"
     // Assign "default" to newTask fields if they match default
@@ -668,20 +676,10 @@ function initSwitchesAfterDOM() {
     const arrNames = Object.keys(inpSwitches);
     for (var i=0; i<arrNames.length; i++) {
         const name = arrNames[i];
-        //console.log("current name/id:", name, inpSwitches[name].id);
         element = document.getElementById(inpSwitches[name].id);
-
-        //if (typeof element !== null && element !== 'undefined' ) {
-            //console.log("initSwitchesAfterDOM element:", element);
-            inpSwitches[name].elm = element;
-            element.addEventListener('click', () => { toggleSwitch(name); });
-            setSwitch(name, inpSwitches[name].value);
-        //}
-        //else {
-        //    console.log("element is null/undefined");
-        //}
-
-        //console.log("initSwitchesAfterDOM name.id:", inpSwitches[name].id);
+        inpSwitches[name].elm = element;
+        element.addEventListener('click', () => { toggleSwitch(name); });
+        setSwitch(name, inpSwitches[name].value);
     }
 }
 
