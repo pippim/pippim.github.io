@@ -644,7 +644,8 @@ function buildInit() {
 function buildSwitch(name, bool, mode) {
     // get_dd_field() must have been called before us
     // Must initialize switches with images after HTML declared with IDs
-    const fullId = "inp_switch_" + name;
+    //const fullId = "inp_switch_" + name;
+    const fullId = name;  // https://www.impressivewebs.com/avoiding-problems-with-javascript-getelementbyid-method-in-internet-explorer-7/
     console.log("name passed to buildSwitch:", name, bool, mode);
     inpSwitches[name] = {
         id: fullId,
@@ -664,11 +665,14 @@ function initSwitchesAfterDOM() {
     const arrNames = Object.keys(inpSwitches);
     for (var i=0; i<arrNames.length; i++) {
         const name = arrNames[i];
-        console.log("current name:", name);
+        console.log("current name/id:", name, inpSwitches[name].id);
         element = document.getElementById(inpSwitches[name].id);
         console.log("initSwitchesAfterDOM element:", element);
         //element = document.getElementById(name.id);
-        inpSwitches[name].elm = element;
+        if(typeof element !== null && element !== 'undefined' ) {
+            inpSwitches[name].elm = element;
+        }
+        else { console.log("element is null/undefined"); }
         //name.elm = element;
         element.addEventListener('click', () => { toggleSwitch(name); });
         setSwitch(name, inpSwitches[name].value);
