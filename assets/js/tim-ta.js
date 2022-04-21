@@ -514,8 +514,10 @@ function buildInput(key, mode) {
     value = getTaskValue(key);  // Translates "default" to real value
     var html = "<tr><td>\n";
     html += dd_field.label + '</td>\n'
+
     if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
     else { html += buildText(key, value, mode) }
+
     html += '></td></tr>\n'
     return html;
 }
@@ -655,7 +657,8 @@ function buildSwitch(name, bool, mode) {
     };
     // Below src doesn't matter because it is reset after DOM load
     var html = '<img class="inpOnOffSwitch" id="' + fullId + '"  \n' +
-               'src="{{ site.url }}/assets/img/icons/switch_off_left.png />\n'
+               'src="{{ site.url }}/assets/img/icons/switch_off_left.png" \n';
+    // NOTE: parent provides > at end
     console.log("html:", html)
     return html;
 }
@@ -667,15 +670,17 @@ function initSwitchesAfterDOM() {
         const name = arrNames[i];
         console.log("current name/id:", name, inpSwitches[name].id);
         element = document.getElementById(inpSwitches[name].id);
-        console.log("initSwitchesAfterDOM element:", element);
-        //element = document.getElementById(name.id);
-        if(typeof element !== null && element !== 'undefined' ) {
+
+        if (typeof element !== null && element !== 'undefined' ) {
+            console.log("initSwitchesAfterDOM element:", element);
             inpSwitches[name].elm = element;
+            element.addEventListener('click', () => { toggleSwitch(name); });
+            setSwitch(name, inpSwitches[name].value);
         }
-        else { console.log("element is null/undefined"); }
-        //name.elm = element;
-        element.addEventListener('click', () => { toggleSwitch(name); });
-        setSwitch(name, inpSwitches[name].value);
+        else {
+            console.log("element is null/undefined");
+        }
+
         console.log("initSwitchesAfterDOM name.id:", inpSwitches[name].id);
     }
 }
