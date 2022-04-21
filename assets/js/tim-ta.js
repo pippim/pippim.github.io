@@ -655,6 +655,7 @@ function buildSwitch(name, bool, mode) {
     // Below src doesn't matter because it is reset after DOM load
     var html = '<td><img class="inpOnOffSwitch" id="' + fullId + '"  \n' +
                'src="{{ site.url }}/assets/img/icons/switch_off_left.png /></td>\n'
+    console.log("html:", html)
     return html;
 }
 
