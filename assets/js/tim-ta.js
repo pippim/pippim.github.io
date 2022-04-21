@@ -563,17 +563,19 @@ function clickUpdateTask() {
     }
 
     // Get switch values and add to newTask
-    const arrNames = Object.keys(inpSwitches);
-    for (i=0; i<arrNames.length; i++) {
-        const name = arrNames[i];
+    //const arrNames = Object.keys(inpSwitches);
+    //for (i=0; i<arrNames.length; i++) {
+    //    const name = arrNames[i];
+    for (const name of Object.keys(inpSwitches)) {
         newTask[name] = inpSwitches[name].value
     }
 
     // Validation - Non-blank Task name, numeric fields, "true" or "false"
     // Assign "default" to fields if they match parent
-    const arrTaskKeys = Object.keys(newTask);
-    for (i = 0 ; i < arrTaskKeys.length ; i++) {
-        var name = arrTaskKeys[i];
+    //const arrTaskKeys = Object.keys(newTask);
+    //for (i = 0 ; i < arrTaskKeys.length ; i++) {
+    //    var name = arrTaskKeys[i];
+    for (const name of Object.keys(newTask)) {
         var value = newTask[name];
         get_dd_field(name);
 
@@ -673,9 +675,10 @@ function buildSwitch(name, bool, mode) {
 
 function initSwitchesAfterDOM() {
     // After innerHTML is set we can bet the elements and set sources
-    const arrNames = Object.keys(inpSwitches);
-    for (var i=0; i<arrNames.length; i++) {
-        const name = arrNames[i];
+    //const arrNames = Object.keys(inpSwitches);
+    //for (var i=0; i<arrNames.length; i++) {
+    //    const name = arrNames[i];
+    for (const name of Object.keys(inpSwitches)) {
         element = document.getElementById(inpSwitches[name].id);
         inpSwitches[name].elm = element;
         element.addEventListener('click', () => { toggleSwitch(name); });
