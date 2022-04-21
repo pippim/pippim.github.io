@@ -644,7 +644,7 @@ function buildInit() {
 function buildSwitch(name, bool, mode) {
     // get_dd_field() must have been called before us
     // Must initialize switches with images after HTML declared with IDs
-    const fullId = "inpSwitch_" + name;
+    const fullId = "inp_switch_" + name;
     console.log("name passed to buildSwitch:", name, bool, mode);
     inpSwitches[name] = {
         id: fullId,
@@ -664,14 +664,15 @@ function initSwitchesAfterDOM() {
     const arrNames = Object.keys(inpSwitches);
     for (var i=0; i<arrNames.length; i++) {
         const name = arrNames[i];
+        console.log("current name:", name);
         element = document.getElementById(inpSwitches[name].id);
-        console.log("initSwitchesAfterDOM element:", element)
+        console.log("initSwitchesAfterDOM element:", element);
         //element = document.getElementById(name.id);
         inpSwitches[name].elm = element;
         //name.elm = element;
         element.addEventListener('click', () => { toggleSwitch(name); });
         setSwitch(name, inpSwitches[name].value);
-        console.log("initSwitchesAfterDOM name.id:", inpSwitches[name].id)
+        console.log("initSwitchesAfterDOM name.id:", inpSwitches[name].id);
     }
 }
 
