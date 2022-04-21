@@ -663,13 +663,13 @@ function initSwitchesAfterDOM() {
     const arrNames = Object.keys(inpSwitches);
     for (var i=0; i<arrNames.length; i++) {
         const name = arrNames[i];
-        console.log("initSwitchesAfterDOM:", inpSwitches[name])
         element = document.getElementById(inpSwitches[name].id);
         //element = document.getElementById(name.id);
         inpSwitches[name].elm = element;
         //name.elm = element;
-        element.addEventListener('click', () => { switch_toggle(name); });
+        element.addEventListener('click', () => { toggleSwitch(name); });
         setSwitch(name, inpSwitches[name].value);
+        console.log("initSwitchesAfterDOM:", inpSwitches[name])
     }
 }
 
