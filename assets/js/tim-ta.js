@@ -596,9 +596,9 @@ function validateInput() {
     // Validate input fields
     var elements = document.getElementById("formTask").elements;
     var newTask = {}
-    //for (var i = 0; i < elements.length; i++) {
-    //    var item = elements.item(i);
-    for (const item of Object.keys(elements)) {
+    for (var i = 0; i < elements.length; i++) {
+        var item = elements.item(i);
+    //for (const item of Object.keys(elements)) {
         newTask[item.name] = item.value;
     }
 
