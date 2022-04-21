@@ -555,35 +555,37 @@ function clickUpdateTask() {
         else { return false; }
     }
 
-    /* Validate input field values and switches */
-    var newTask = getInputValues();
+    /* Validate input field values for Save/Add */
+    if (!validateInput()) { return false; }
 
     // Get switch values and add to newTask
+    var newTask = getInputValues();
     for (const name of Object.keys(inpSwitches)) {
         newTask[name] = inpSwitches[name].value
     }
 
-    // Validation - Non-blank Task name, numeric fields, "true" or "false"
-    // Assign "default" to fields if they match parent
+    // Assign "default" to fields if they match parent(s)
     for (const name of Object.keys(newTask)) {
-        var value = newTask[name];
-        get_dd_field(name);
-
-        if (!validateNonBlank(value)) { return false; }
-        if (!validateNumber(value)) { return false; }
-        if (dd_field.type == "number") { value = 0 + value } // '' to 0
-        if (!validateRange(value)) { return false; }
-        if (!validateRadioButton(value)) { return false; }
-
-        // Get default value
-        old_value = getProjectValue(name);  // Get parents value
+        var value = newTask[name];  // Current Task value
+        old_value = getProjectValue(name);  // Get project's value
+        // If new Task value same as Project's value it is a "default".
         if (value == old_value) { newTask[name] = "default" }
-
-        // Log value change
-        if (newTask[name] != ttaTask[name]) {
-            console.log('name:', name, 'changed to:', value)
-        }
     }
+    // Save changes or Add new ttaTask
+    if (original_index < 0) {
+        // Add mode, push new key onto array
+        ttaProject.arrTasks.push(newTask.task_name);
+    } else {
+        const new_index = ttaProject.arrTasks.indexOf(newTask.task_name);
+        // The original key existed (Edit mode). Has it been changed?
+        if (original_index != new_index) {
+            // Replace old key with new at same spot
+            ttaProject.arrTasks[original_index] = newTask.task_name;
+        }
+    } // At this point it's Edit mode and key hasn't changed.
+
+    // Update object values
+    ttaProject.objTasks[newTask.task_name] = newTask;
     paintTasksTable()
     return true;
 }
@@ -599,6 +601,8 @@ function validateInput() {
         get_dd_field(name);
 
         if (!validateNonBlank(value)) { return false; }
+        // task_name can't be duplicates
+        if (name == "task_name" && !validateTaskName (value)) { return false; }
         if (!validateNumber(value)) { return false; }
         if (dd_field.type == "number") { value = 0 + value } // '' to 0
         if (!validateRange(value)) { return false; }
@@ -608,7 +612,7 @@ function validateInput() {
 }
 
 function getInputValues() {
-    // Get input field values
+    // Get input field values from <form>
     var elements = document.getElementById("formTask").elements;
     var newTask = {}
     for (var i = 0; i < elements.length; i++) {
@@ -616,6 +620,19 @@ function getInputValues() {
         newTask[item.name] = item.value;
     }
     return newTask;
+}
+
+function validateTaskName(value) {
+    // The task_name key must be unique
+    const new_index = ttaProject.arrTasks.indexOf(value);
+    if (new_index < 0) { return true; }  // New key wasn't found
+
+    const original_index = ttaProject.arrTasks.indexOf(ttaTask.task_name);
+    if (original_index == new_index) { return true; }  // Key hasn't changed
+
+    // We have a new key that already exists
+    alert(dd_field.label + " must be unique");
+    return false;
 }
 
 function validateNonBlank(value) {
