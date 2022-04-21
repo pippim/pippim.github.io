@@ -571,7 +571,7 @@ function clickUpdateTask() {
 
         if (!validateNonBlank(value)) { return false; }
         if (!validateNumber(value)) { return false; }
-        if (!dd_field.type == "number") { value = 0 + value } // '' to 0
+        if (dd_field.type == "number") { value = 0 + value } // '' to 0
         if (!validateRange(value)) { return false; }
         if (!validateRadioButton(value)) { return false; }
 
@@ -600,10 +600,11 @@ function validateInput() {
 
         if (!validateNonBlank(value)) { return false; }
         if (!validateNumber(value)) { return false; }
-        if (!dd_field.type == "number") { value = 0 + value } // '' to 0
+        if (dd_field.type == "number") { value = 0 + value } // '' to 0
         if (!validateRange(value)) { return false; }
         if (!validateRadioButton(value)) { return false; }
     }
+    return true;
 }
 
 function getInputValues() {
