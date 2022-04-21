@@ -491,6 +491,7 @@ function paintTaskWindow(mode) {
             '}\n'
     html += ttaBtnStyle();
     html += bigFootStyle();
+    html += inpSwitchStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
     initSwitchesAfterDOM();
@@ -628,6 +629,12 @@ var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
 
 var inpSwitches;
 
+function inpSwitchStyle() {
+    return "vertical-align: middle; \n" +"
+           "width: 40px;\n" +
+           "height: auto;\n";
+}
+
 function buildInit() {
     /*  Initialize custom objects used on form
     */
@@ -637,7 +644,8 @@ function buildInit() {
 function buildSwitch(name, bool, mode) {
     // get_dd_field() must have been called before us
     // Must initialize switches with images after HTML declared with IDs
-    const fullId = "inpSwitch-" + name
+    const fullId = "inpSwitch-" + name;
+    console.log("name passed to buildSwitch:", name, bool, mode);
     inpSwitches[name] = {
         id: fullId,
         elm: "Pippim Promise",
