@@ -644,7 +644,7 @@ function buildInit() {
 function buildSwitch(name, bool, mode) {
     // get_dd_field() must have been called before us
     // Must initialize switches with images after HTML declared with IDs
-    const fullId = "inpSwitch-" + name;
+    const fullId = "inpSwitch_" + name;
     console.log("name passed to buildSwitch:", name, bool, mode);
     inpSwitches[name] = {
         id: fullId,
@@ -653,8 +653,8 @@ function buildSwitch(name, bool, mode) {
         mode: mode
     };
     // Below src doesn't matter because it is reset after DOM load
-    var html = '<td><img class="inpOnOffSwitch" id="' + fullId + '"  \n' +
-               'src="{{ site.url }}/assets/img/icons/switch_off_left.png /></td>\n'
+    var html = '<img class="inpOnOffSwitch" id="' + fullId + '"  \n' +
+               'src="{{ site.url }}/assets/img/icons/switch_off_left.png />\n'
     console.log("html:", html)
     return html;
 }
