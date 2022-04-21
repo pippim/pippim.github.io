@@ -110,8 +110,7 @@ var data_dictionary = {
     all_sets_end_alarm: "Play sound when All Sets end?|switch",
     all_sets_end_filename: "All Sets ending sound filename|radio|sound_filenames",
     all_sets_end_notification: "Desktop notification when All Sets end?|switch",
-    progress_bar_update_seconds: "Seconds interval between progress " +
-                                 "bar updates|number|1|1000",
+    progress_bar_update_seconds: "Seconds between countdown updates|number|1|1000",
     fail_test_1: "Hello World",
     fail_test_2: "Good-bye Cruel World...|text|lower|upper|No such place!",
     confirm_delete_phrase: "Text to confirm delete action|text"
