@@ -181,7 +181,9 @@ function updateRadioSounds () {
         get_dd_field(key);
         if (dd_field.type == "select" && dd_field.lower == "sound_filenames") {
             // Replace "sound_filenames" with actual names
+            console.log(dd_field.name, "BEFORE - dd_field.lower:", dd_field.lower);
             dd_field.lower = replaceString;
+            console.log(dd_field.name, "AFTER - dd_field.lower:", dd_field.lower);
          }
     }
 }
