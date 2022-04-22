@@ -135,7 +135,8 @@ function get_dd_field (name) {
     /* Extract dd_field from data_dictionary for easier referencing
        NOTE: lower is generic term, it can be "non-blank" for keys and
              there is no upper. If numeric and lower or upper is blank
-             they are converted to 0.
+             they are converted to 0. If select it contains all the
+             possible values.
     */
     const raw = data_dictionary[name];
     if (raw == null) {
@@ -154,8 +155,8 @@ function get_dd_field (name) {
     else dd_field.lower = "";   // See top of function comments
     if (arr.length >= 4) { dd_field.upper = arr[3]; }
     else dd_field.upper = "";
-    if (arr.length > 4 && dd_field.type != "radio") {       // See top of function comments
-        alert("Critical Error. Non-Radio Button field has > 4 parts: " + name);
+    if (arr.length > 4 && dd_field.type != "select") {       // See top of function comments
+        alert("Critical Error. Non-Select field has > 4 parts: " + name);
         return false;
     }
     return true;
@@ -184,7 +185,7 @@ function updateRadioSounds () {
             console.log(dd_field.name, "BEFORE - dd_field.lower:", dd_field.lower);
             dd_field.lower = replaceString;
             console.log(dd_field.name, "AFTER - dd_field.lower:", dd_field.lower);
-            // Update data dictionary key with new .lower value
+            // Update data dictionary key with list of REAL filenames
             data_dictionary[key] = dd_field.name + "|select|" + replaceString;
          }
     }
@@ -746,7 +747,7 @@ function validateRadioButton(value) {
 function validateDropdownButton(value) {
     // SO Example: https://stackoverflow.com/a/44736840/6929343
     // Thorough Doc: https://www.w3schools.com/howto/howto_js_dropdown.asp
-    if (!dd_field.type == "radio") { return true; } // Not "number" type
+    if (!dd_field.type == "select") { return true; } // Not "number" type
     return true;
 }
 
