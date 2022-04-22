@@ -173,10 +173,9 @@ function updateRadioSounds () {
         if ( key.startsWith("fail_test") ) { continue; }
         get_dd_field(key);
         if (dd_field.type == "radio" && dd_field.lower == "sound_filenames") {
+            // Replace "sound_filenames" with actual names
             dd_field.lower = replaceString;
-            console.log("new dd_field:", dd_field);
          }
-        // Replace "sound_filenames" with actual names
     }
 }
 
