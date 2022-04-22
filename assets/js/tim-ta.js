@@ -178,13 +178,11 @@ function updateRadioSounds () {
     }
 
     for (const key of Object.keys(data_dictionary)) {
-        if ( key.startsWith("fail_test") ) { continue; }
+        if (key.startsWith("fail_test")) { continue; }
         get_dd_field(key);
         if (dd_field.type == "select" && dd_field.lower == "sound_filenames") {
             // Update data dictionary key with list of REAL filenames
-            console.log(dd_field.name, "BEFORE - ", data_dictionary[key]);
             data_dictionary[key] = dd_field.name + "|select|" + replaceString;
-            console.log(dd_field.name, "AFTER - ", data_dictionary[key]);
          }
     }
 }
