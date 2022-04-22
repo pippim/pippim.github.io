@@ -173,7 +173,7 @@ function updateRadioSounds () {
     // Convert array of sound filenames to string delineated by |
     var replaceString = "";
     for (var i = 0; i < stockNames.length; i++) {
-        if (i != 0) { replaceString += "|"; }  // Add | if not first in array
+        if (i != 0) { replaceString += "/"; }  // Add | if not first in array
         replaceString += stockNames[i];
     }
 
@@ -421,6 +421,7 @@ function clickCommon(i) {
     currentRow = i + 1;
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
 }
+
 function clickListen(i) {
     clickCommon(i);
     end_alarm = getTaskValue("task_end_alarm");
@@ -586,7 +587,7 @@ function buildSelect(key, value, mode) {
     //    'name="' + key + '" >\n';
     html += buildSelectOption("", "Please Choose...")
     console.log("dd_field.lower:", dd_field.lower);
-    var options = dd_field.lower.split('|');
+    var options = dd_field.lower.split('/');
     console.log("options:", options);
     // TODO: Ensure Sound filenames don't contain "|"
     for (var i=0; i<options.length; i++) {
