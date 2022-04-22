@@ -184,6 +184,8 @@ function updateRadioSounds () {
             console.log(dd_field.name, "BEFORE - dd_field.lower:", dd_field.lower);
             dd_field.lower = replaceString;
             console.log(dd_field.name, "AFTER - dd_field.lower:", dd_field.lower);
+            // Update data dictionary key with new .lower value
+            data_dictionary[key] = dd_field.name + "|select|" + replaceString;
          }
     }
 }
