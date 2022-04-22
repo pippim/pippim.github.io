@@ -165,11 +165,14 @@ function updateRadioSounds () {
     for (const key of Object.keys(data_dictionary)) {
         if ( key.startsWith("fail_test") ) { continue; }
         get_dd_field(key);
-        //console.log("key:", key, ".name:", dd_field.name, "type:", dd_field.type,
-        //            "lower:", dd_field.lower);
-        if (dd_field.type == "radio" && dd_field.lower == "sound_filenames") {
-            console.log("+++ About to replace sound_filenames for field: " + key);
+        if (dd_field.type != "radio" || dd_field.lower != "sound_filenames") { continue; }
+        // Replace "sound_filenames" with actual names
+        var replaceString = "";
+        for (var i=0, i<stockNames.length, i++) {
+            if (i != 0) { replaceString += "|"; }  // Add | if not first in array
+            replaceString += stockNames[i];
         }
+        console.log("replaceString:", replaceString);
     }
 }
 
