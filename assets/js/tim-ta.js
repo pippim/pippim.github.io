@@ -163,7 +163,7 @@ function get_dd_field (name) {
 function updateRadioSounds () {
     /* Called on load and after drag & drop sound files */
     for (const key of Object.keys(data_dictionary)) {
-        if key.startsWith("test_fail") { continue; }
+        if ( key.startsWith("test_fail") ) { continue; }
         get_dd_field(key);
         console.log("key:", key, ".name:", dd_field.name, "type:", dd_file.type,
                     "lower:", dd_field.lower)
