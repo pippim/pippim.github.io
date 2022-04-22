@@ -430,8 +430,13 @@ function clickListen(i) {
     sound = getTaskValue("task_end_filename");
     // <audio> tags buried on the page with ID name same as sound filename.
     audioControl = document.getElementById(sound);
-    audioControl.play();
+    // If already playing then stop it
+    if (audioControl.currentTime > 0) {
+        audioControl.pause();
+        audioControl.currentTime = 0;
+    } else { audioControl.play(); }
 }
+
 function clickUp(i) {
     clickCommon(i);
     if (i == 0) { alert("Already at top, can't move up"); return; }
