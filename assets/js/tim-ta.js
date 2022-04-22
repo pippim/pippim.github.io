@@ -583,6 +583,10 @@ function buildText(key, value, mode) {
 }
 
 function buildSelect(key, value, mode) {
+    // get_dd_field() must have been called before us
+    // Must initialize switches with images after HTML declared with IDs
+    //const fullId = "inp_switch_" + name;
+    const fullId = name;  // https://www.impressivewebs.com/avoiding-problems-with-javascript-getelementbyid-method-in-internet-explorer-7/
     inpSelects[name] = {
         id: fullId,
         elm: "Pippim Promise",
@@ -781,12 +785,6 @@ function validateSelect(value) {
 // =================================  SWITCHES  ===============================
 var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
 var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
-
-function buildInit() {
-    /*  Initialize custom objects used on form
-    */
-    inpSwitches = {};
-}
 
 function buildSwitch(name, bool, mode) {
     // get_dd_field() must have been called before us
