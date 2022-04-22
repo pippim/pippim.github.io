@@ -587,15 +587,15 @@ function buildSelect(key, value, mode) {
         'value="' + value + '">\n' ;
     //    'name="' + key + '" >\n';
     html += buildSelectOption("", "Please Choose...");
-    console.log("dd_field.lower:", dd_field.lower);
+    // console.log("dd_field.lower:", dd_field.lower);
     var options = dd_field.lower.split('/');
-    console.log("options:", options);
+    // console.log("options:", options);
     // TODO: Ensure Sound filenames don't contain "|"
     for (var i=0; i<options.length; i++) {
         html += buildSelectOption(i.toString(), options[i]);
     }
     html += '</select>\n';
-    console.log("select html:", html);
+    // console.log("select html:", html);
     return html;
 }
 
@@ -677,6 +677,7 @@ function validateInput() {
     // Assign "default" to fields if they match parent
     for (const name of Object.keys(newTask)) {
         var value = newTask[name];
+        console.log("Failing dd_field.name:", name)
         get_dd_field(name);
 
         if (!validateNonBlank(value)) { return false; }
