@@ -168,7 +168,7 @@ function updateRadioSounds () {
         if (dd_field.type != "radio" || dd_field.lower != "sound_filenames") { continue; }
         // Replace "sound_filenames" with actual names
         var replaceString = "";
-        for (var i=0, i<stockNames.length, i++) {
+        for (var i = 0; i < stockNames.length; i++) {
             if (i != 0) { replaceString += "|"; }  // Add | if not first in array
             replaceString += stockNames[i];
         }
