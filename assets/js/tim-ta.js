@@ -7,6 +7,13 @@
 // dragElement defined in /assets/js/theCookieMachine.js
 // dragElement(document.getElementById("tta_window"));
 
+/* TODO: Multiple Browser tabs concurrency.
+
+    Before any update, reread ttaStore, ttaProject and
+    ttaTask into "check Buffers". If they are different
+    then advise user and force reread.
+
+*/
 
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
 
@@ -99,16 +106,16 @@ var data_dictionary = {
     seconds: "Seconds|number|0|1000",
     task_prompt: "Prompt to begin Task?|switch",
     task_end_alarm: "Play sound when Task ends?|switch",
-    task_end_filename: "Task ending sound filename|radio|sound_filenames",
+    task_end_filename: "Task ending sound filename|select|sound_filenames",
     task_end_notification: "Desktop notification when Task ends?|switch",
     run_set_times: "Number of times to run Set|number|1|1000",
     set_prompt: "Prompt to begin Set?|switch",
     set_end_alarm: "Play sound when Set ends?|switch",
-    set_end_filename: "Set ending sound filename|radio|sound_filenames",
+    set_end_filename: "Set ending sound filename|select|sound_filenames",
     set_end_notification: "Desktop notification when Set ends?|switch",
     all_sets_prompt: "Prompt to begin All Sets?|switch",
     all_sets_end_alarm: "Play sound when All Sets end?|switch",
-    all_sets_end_filename: "All Sets ending sound filename|radio|sound_filenames",
+    all_sets_end_filename: "All Sets ending sound filename|select|sound_filenames",
     all_sets_end_notification: "Desktop notification when All Sets end?|switch",
     progress_bar_update_seconds: "Seconds between countdown updates|number|1|1000",
     fail_test_1: "Hello World",
@@ -337,6 +344,17 @@ function ttaBtnStyle() {
             '}\n'
 }
 
+function inpSwitchStyle() {
+    return ".inpOnOffSwitch { vertical-align: middle;\n" +
+           "width: 40px;\n" +
+           "height: auto; }\n";
+}
+
+function inpSelectStyle() {
+    // https://stackoverflow.com/a/8442831/6929343
+    return ' select:invalid { color: gray; }'
+}
+
 function tabTasksHeading() {
     var html = "<tr><th colspan='";
     if (scrSmall) { html += "2"; }  // Two columns of buttons
@@ -512,6 +530,7 @@ function paintTaskWindow(mode) {
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += inpSwitchStyle();
+    html += inpSelectStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
     initSwitchesAfterDOM();
@@ -536,8 +555,9 @@ function buildInput(key, mode) {
 
     html += '<td>\n';
     if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
-    else { html += buildText(key, value, mode) }
-    html += '></td></tr>\n'
+    else if (dd_field.type == "select") { html += buildSelect(key, value, mode) }
+    else { html += buildText(key, value, mode) }  // type == "text"
+    html += '</td></tr>\n'
 
     return html;
 }
@@ -548,9 +568,39 @@ function buildText(key, value, mode) {
     html += '<input id="' + key + '" class="tabInput" type="text" \n' +
         'oninput="validateInput()" \n' +
         'placeholder="Enter ' + dd_field.label + '" value="' + value + '" \n' +
-        'name="' + key + '" \n';
+        'name="' + key + '" ';
     if(mode == "Delete") { html += ' readonly'; }
+    html += "> \n";
     return html;
+}
+
+function buildSelect(key, value, mode) {
+    // dd_file.lower contains "file A|file B|file C| file D"
+    var html = "";
+    html += '<select id="' + key + '" class="tabInput" required \n' +
+        'onchange="setSelectInput(this)" \n' +
+        'value="' + value + '" \n' +
+        'name="' + key + '" >\n';
+    html += buildSelectOption("", "Please Choose...")
+    var options = dd_field.lower.split('|');
+    // TODO: Ensure Sound filenames don't contain "|"
+    for (var i=0; i<options.length; i++) {
+        html += buildSelectOption(i.toString(), options[i]);
+    }
+    html += '</select>\n';
+    return html;
+}
+
+function buildSelectOption(value, name) {
+    var html="";
+    html += '  <option value="' + value + '">' + name +
+            '</option>\n' ;
+}
+
+function setSelectInput(data) {
+    //var myDiv = document.getElementById( data.id + '-value' );
+    //myDiv.innerHTML = data.value;
+    console.log("setSelectInput(data):", data)
 }
 
 function clickUpdateTask() {
@@ -698,12 +748,6 @@ function validateDropdownButton(value) {
 var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
 var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
 
-function inpSwitchStyle() {
-    return ".inpOnOffSwitch { vertical-align: middle;\n" +
-           "width: 40px;\n" +
-           "height: auto; }\n";
-}
-
 function buildInit() {
     /*  Initialize custom objects used on form
     */
@@ -724,7 +768,7 @@ function buildSwitch(name, bool, mode) {
     };
     // Below src doesn't matter because it is reset after DOM load
     var html = '<img class="inpOnOffSwitch" id="' + fullId + '"  \n' +
-               'src="{{ site.url }}/assets/img/icons/switch_off_left.png" \n';
+               'src="{{ site.url }}/assets/img/icons/switch_off_left.png" >\n';
     // NOTE: parent provides > at end
     //console.log("html:", html)
     return html;
