@@ -583,6 +583,7 @@ function buildSelect(key, value, mode) {
     //    'name="' + key + '" >\n';
     html += buildSelectOption("", "Please Choose...")
     var options = dd_field.lower.split('|');
+    console.log("options:", options);
     // TODO: Ensure Sound filenames don't contain "|"
     for (var i=0; i<options.length; i++) {
         html += buildSelectOption(i.toString(), options[i]);
