@@ -118,13 +118,42 @@ $lavender: #E6E6FA !default; // lavender
     // background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
     background-color: $honeydew; // Honeydew
 
-    // Below used to be &:hover only, Chrome Android ws leaving button highlighted
+    // Apr 20/22 Below used to be &:hover only, Chrome Android ws leaving button highlighted
     &:hover, &focus {
         background-color: DodgerBlue;
         background-position: bottom;
         //color: $lavender;       // WAS F0FFF0 or something like that Grayish
         color: #fff;       // WAS F0FFF0 or something like that Grayish
     }
+}
+
+/* Alerts - https://www.w3schools.com/howto/howto_js_alert.asp */
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }
 
 /* Causing problems where visited gets hover property ...
