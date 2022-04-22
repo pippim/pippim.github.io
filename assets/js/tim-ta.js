@@ -641,6 +641,7 @@ function clickUpdateTask() {
     for (const name of Object.keys(inpSwitches)) {
         newTask[name] = inpSwitches[name].value
     }
+    // TODO: Add select values to newTask
 
     // Assign "default" to fields if they match parent(s)
     for (const name of Object.keys(newTask)) {
@@ -676,6 +677,7 @@ function validateInput() {
     // Validation - Non-blank Task name, numeric fields, "true" or "false"
     // Assign "default" to fields if they match parent
     for (const name of Object.keys(newTask)) {
+        if (name == "") { console.log("empty name"); continue;}
         var value = newTask[name];
         console.log("Failing dd_field.name:", name)
         get_dd_field(name);
