@@ -579,8 +579,8 @@ function buildSelect(key, value, mode) {
     var html = "";
     html += '<select id="' + key + '" class="tabInput" required \n' +
         'onchange="setSelectInput(this)" \n' +
-        'value="' + value + '" \n' +
-        'name="' + key + '" >\n';
+        'value="' + value + '">\n' ;
+    //    'name="' + key + '" >\n';
     html += buildSelectOption("", "Please Choose...")
     var options = dd_field.lower.split('|');
     // TODO: Ensure Sound filenames don't contain "|"
