@@ -163,14 +163,13 @@ function get_dd_field (name) {
 function updateRadioSounds () {
     /* Called on load and after drag & drop sound files */
     for (const key of Object.keys(data_dictionary)) {
-        if ( key.startsWith("test_fail") ) { continue; }
+        if ( key.startsWith("fail_test") ) { continue; }
         get_dd_field(key);
         console.log("key:", key, ".name:", dd_field.name, "type:", dd_field.type,
-                    "lower:", dd_field.lower)
-        console.log("key:", key)
-        //if (dd_field.type == "radio" && dd_field.lower == "sound_filenames") {
-        //    alert("About to replace sound_filenames for field: " + key)
-        //}
+                    "lower:", dd_field.lower);
+        if (dd_field.type == "radio" && dd_field.lower == "sound_filenames") {
+            console.log("+++ About to replace sound_filenames for field: " + key);
+        }
     }
 }
 
