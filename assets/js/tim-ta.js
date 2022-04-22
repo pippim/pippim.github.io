@@ -165,7 +165,7 @@ function updateRadioSounds () {
     for (const key of Object.keys(data_dictionary)) {
         if ( key.startsWith("test_fail") ) { continue; }
         get_dd_field(key);
-        console.log("key:", key, ".name:", dd_field.name, "type:", dd_file.type,
+        console.log("key:", key, ".name:", dd_field.name, "type:", dd_field.type,
                     "lower:", dd_field.lower)
         console.log("key:", key)
         //if (dd_field.type == "radio" && dd_field.lower == "sound_filenames") {
