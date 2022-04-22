@@ -141,11 +141,13 @@ function get_dd_field (name) {
     const raw = data_dictionary[name];
     if (raw == null) {
         alert("Critical Error. Data dictionary field doesn't exist: " + name);
+        console.trace();
         return false;
     }
     const arr = raw.split('|')
     if (arr.length < 2) {
         alert("Critical Error. Data dictionary field has < 3 parts: " + name);
+        console.trace();
         return false;
     }
     dd_field.name = name;       // Used programmatically as field name
@@ -157,6 +159,7 @@ function get_dd_field (name) {
     else dd_field.upper = "";
     if (arr.length > 4 && dd_field.type != "select") {       // See top of function comments
         alert("Critical Error. Non-Select field has > 4 parts: " + name);
+        console.trace();
         return false;
     }
     return true;
