@@ -162,17 +162,21 @@ function get_dd_field (name) {
 
 function updateRadioSounds () {
     /* Called on load and after drag & drop sound files */
+    // Convert array of sound filenames to string delineated by |
+    var replaceString = "";
+    for (var i = 0; i < stockNames.length; i++) {
+        if (i != 0) { replaceString += "|"; }  // Add | if not first in array
+        replaceString += stockNames[i];
+    }
+
     for (const key of Object.keys(data_dictionary)) {
         if ( key.startsWith("fail_test") ) { continue; }
         get_dd_field(key);
-        if (dd_field.type != "radio" || dd_field.lower != "sound_filenames") { continue; }
+        if (dd_field.type == "radio" && dd_field.lower == "sound_filenames") {
+            dd_field.lower = replaceString;
+            console.log("new dd_field:", dd_field);
+         }
         // Replace "sound_filenames" with actual names
-        var replaceString = "";
-        for (var i = 0; i < stockNames.length; i++) {
-            if (i != 0) { replaceString += "|"; }  // Add | if not first in array
-            replaceString += stockNames[i];
-        }
-        console.log("replaceString:", replaceString);
     }
 }
 
