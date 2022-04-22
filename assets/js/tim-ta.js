@@ -181,12 +181,10 @@ function updateRadioSounds () {
         if ( key.startsWith("fail_test") ) { continue; }
         get_dd_field(key);
         if (dd_field.type == "select" && dd_field.lower == "sound_filenames") {
-            // Replace "sound_filenames" with actual names
-            console.log(dd_field.name, "BEFORE - dd_field.lower:", dd_field.lower);
-            dd_field.lower = replaceString;
-            console.log(dd_field.name, "AFTER - dd_field.lower:", dd_field.lower);
             // Update data dictionary key with list of REAL filenames
+            console.log(dd_field.name, "BEFORE - ", data_dictionary[key]);
             data_dictionary[key] = dd_field.name + "|select|" + replaceString;
+            console.log(dd_field.name, "AFTER - ", data_dictionary[key]);
          }
     }
 }
