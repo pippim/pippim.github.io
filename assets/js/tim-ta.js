@@ -600,6 +600,7 @@ function buildSelectOption(value, name) {
     var html="";
     html += '  <option value="' + value + '">' + name +
             '</option>\n' ;
+    return html;
 }
 
 function setSelectInput(data) {
