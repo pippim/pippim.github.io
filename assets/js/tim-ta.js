@@ -660,7 +660,10 @@ function clickUpdateTask() {
     for (const name of Object.keys(inpSwitches)) {
         newTask[name] = inpSwitches[name].value
     }
-    // TODO: Add select values to newTask
+    // Add select values to newTask
+    for (const name of Object.keys(inpSelects)) {
+        newTask[name] = inpSelects[name].value
+    }
 
     // Assign "default" to fields if they match parent(s)
     for (const name of Object.keys(newTask)) {
@@ -768,7 +771,7 @@ function validateRadioButton(value) {
     return true;
 }
 
-function validateDropdownButton(value) {
+function validateSelect(value) {
     // SO Example: https://stackoverflow.com/a/44736840/6929343
     // Thorough Doc: https://www.w3schools.com/howto/howto_js_dropdown.asp
     if (!dd_field.type == "select") { return true; } // Not "number" type
