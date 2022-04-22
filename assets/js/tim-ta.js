@@ -586,8 +586,8 @@ function buildSelect(key, value, mode) {
     // get_dd_field() must have been called before us
     // Must initialize switches with images after HTML declared with IDs
     //const fullId = "inp_switch_" + name;
-    const fullId = name;  // https://www.impressivewebs.com/avoiding-problems-with-javascript-getelementbyid-method-in-internet-explorer-7/
-    inpSelects[name] = {
+    const fullId = key;  // https://www.impressivewebs.com/avoiding-problems-with-javascript-getelementbyid-method-in-internet-explorer-7/
+    inpSelects[key] = {
         id: fullId,
         elm: "Pippim Promise",
         value: value,
