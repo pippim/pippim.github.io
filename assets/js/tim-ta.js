@@ -613,8 +613,9 @@ function buildSelect(key, value, mode) {
 }
 
 function buildSelectOption(value, name) {
+    // Value is index (i) which has no purpose at this time.
     var html="";
-    html += '  <option value="' + value + '">' + name +
+    html += '  <option value="' + name + '">' + name +
             '</option>\n' ;
     return html;
 }
