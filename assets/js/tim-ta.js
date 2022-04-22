@@ -623,6 +623,8 @@ function setSelectInput(data) {
     //var myDiv = document.getElementById( data.id + '-value' );
     //myDiv.innerHTML = data.value;
     console.log("setSelectInput(data):", data)
+    // Set chosen value in inpSelects
+    inpSelects[data.id] = data.value;
 }
 
 function initSelectsAfterDOM() {
