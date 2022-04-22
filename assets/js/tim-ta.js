@@ -179,7 +179,7 @@ function updateRadioSounds () {
     for (const key of Object.keys(data_dictionary)) {
         if ( key.startsWith("fail_test") ) { continue; }
         get_dd_field(key);
-        if (dd_field.type == "radio" && dd_field.lower == "sound_filenames") {
+        if (dd_field.type == "select" && dd_field.lower == "sound_filenames") {
             // Replace "sound_filenames" with actual names
             dd_field.lower = replaceString;
          }
@@ -582,6 +582,7 @@ function buildSelect(key, value, mode) {
         'value="' + value + '">\n' ;
     //    'name="' + key + '" >\n';
     html += buildSelectOption("", "Please Choose...")
+    console.log("dd_field.lower:", dd_field.lower);
     var options = dd_field.lower.split('|');
     console.log("options:", options);
     // TODO: Ensure Sound filenames don't contain "|"
