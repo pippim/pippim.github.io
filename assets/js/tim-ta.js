@@ -598,12 +598,9 @@ function buildSelect(key, value, mode) {
     html += '<select id="' + key + '" class="tabInput" required \n' +
         'onchange="setSelectInput(this)" \n' +
         'value="' + value + '">\n' ;
-    //    'name="' + key + '" >\n';
-    html += buildSelectOption("", "Please Choose...");
-    // console.log("dd_field.lower:", dd_field.lower);
+    // Below is for ttaStore configuration
+    // html += buildSelectOption("", "Please Choose...");
     var options = dd_field.lower.split('/');
-    // console.log("options:", options);
-    // TODO: Ensure Sound filenames don't contain "|"
     for (var i=0; i<options.length; i++) {
         html += buildSelectOption(i.toString(), options[i]);
     }
