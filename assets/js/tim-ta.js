@@ -539,13 +539,16 @@ function paintTaskWindow(mode) {
     html += '</style>'  // Was extra \n causing empty space at bottom?
     id.innerHTML = html;
     initSwitchesAfterDOM();
+    initSelectsAfterDOM();
 }
 
 var inpSwitches;
+var inpSelects;
 
 function buildInit() {
     /*  Initialize custom objects used on form */
     inpSwitches = {};  // Reset any switches last used
+    inpSelects = {};  // AKA dropdown lists
 }
 
 function buildInput(key, mode) {
@@ -580,7 +583,13 @@ function buildText(key, value, mode) {
 }
 
 function buildSelect(key, value, mode) {
-    // dd_file.lower contains "file A|file B|file C| file D"
+    inpSelects[name] = {
+        id: fullId,
+        elm: "Pippim Promise",
+        value: value,
+        mode: mode
+    };
+
     var html = "";
     html += '<select id="' + key + '" class="tabInput" required \n' +
         'onchange="setSelectInput(this)" \n' +
@@ -610,6 +619,16 @@ function setSelectInput(data) {
     //var myDiv = document.getElementById( data.id + '-value' );
     //myDiv.innerHTML = data.value;
     console.log("setSelectInput(data):", data)
+}
+
+function initSelectsAfterDOM() {
+    // After innerHTML is set we can bet the elements and set sources
+    for (const name of Object.keys(inpSelects)) {
+        element = document.getElementById(inpSelects[name].id);
+        inpSelects[name].elm = element;
+        //element.addEventListener('click', () => { clickSelect(name); });
+        //setSelect(name, inpSelects[name].value);
+    }
 }
 
 function clickUpdateTask() {
@@ -677,9 +696,8 @@ function validateInput() {
     // Validation - Non-blank Task name, numeric fields, "true" or "false"
     // Assign "default" to fields if they match parent
     for (const name of Object.keys(newTask)) {
-        if (name == "") { console.log("empty name"); continue;}
+        if (name == "") { console.log("empty name"); continue; }
         var value = newTask[name];
-        console.log("Failing dd_field.name:", name)
         get_dd_field(name);
 
         if (!validateNonBlank(value)) { return false; }
@@ -694,7 +712,8 @@ function validateInput() {
 }
 
 function getInputValues() {
-    // Get input field values from <form>
+    // Get input field values from <form> for "text" ONLY
+    // Separate functions required for "switch" and "select"
     var elements = document.getElementById("formTask").elements;
     var newTask = {}
     for (var i = 0; i < elements.length; i++) {
