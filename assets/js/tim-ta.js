@@ -810,12 +810,14 @@ function buildInput(key, mode) {
         actual value for input. When saving, the default is obtained and
         if it matches user input then "default" phrase is saved.
     */
+    var html = "<tr><td>\n";
     get_dd_field(key);
+    html += dd_field.label + '</td>\n'
+
     // Translate value of "default" to real value in parent(s)
+    var value;
     if (currentTable == "Projects") { value = getProjectValue(key); }
     else { value = getTaskValue(key); }
-    var html = "<tr><td>\n";
-    html += dd_field.label + '</td>\n'
 
     html += '<td>\n';
     if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
@@ -869,6 +871,7 @@ function buildSelect(key, value, mode) {
 }
 
 function buildSelectOption(name, value) {
+    get_dd_field(name);
     var html="";
     if (name == value) {}
     html += '  <option value="' + name + '" '
