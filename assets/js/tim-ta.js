@@ -441,19 +441,20 @@ function clickListen(i) {
     */
 
     clickCommon(i);
-    const btnId = "tabBtnId_clickListen" + i ;
+    const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
     var btnElm = document.getElementById(btnId);
-    console.log("btnElm:", btnElm);
     end_alarm = getTaskValue("task_end_alarm");
     if (end_alarm == "false") { alert("Alarm turned off for this task."); return; }
+
     sound = getTaskValue("task_end_filename");
     // <audio> tags buried on the page with ID name same as sound filename.
     audioControl = document.getElementById(sound);
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
-        audioControl.pause();
-        audioControl.currentTime = 0;  // Does this invoke onended? NO!
-        resetListen(btnElm);
+        btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
+        btnElm.title = tabListenTitle;
+        audioControl.pause();  // There is no "stop()" function
+        audioControl.currentTime = 0;  // Works but doesn't invoke onended event
     } else {
         // Set icon to "Stop" and schedule "Listen" icon when sound ends
         // Sound has start, set Stop Symbol into button text
@@ -461,25 +462,7 @@ function clickListen(i) {
         btnElm.title = tabStopTitle;
         audioControl.play();
         audioControl.onended = function() { resetListen (btnElm) };
-        //setTimeout(function() { delayListenReset (btnElm, audioControl); }, 100);
     }
-}
-
-function delayListenReset (btnElm, audioControl) {
-    // DEPRECATED but save for future use
-    // Would be simpler with object.onended = function(){myScript};
-    if (audioControl.currentTime > 0) {
-        setTimeout(function() { delayListenReset (btnElm, audioControl); }, 100);
-        return
-    }
-    // Sound has ended, reset Listen Symbol into button text
-    resetListen(btnElm)
-}
-
-function resetListen(btnElm) {
-    // Reset listen button to normal when sound finishes
-    btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
-    btnElm.title = tabListenTitle;
 }
 
 function clickUp(i) {
@@ -535,9 +518,12 @@ function getProjectValue(key) {
 }
 
 function swapTask(source, target) {
+    // Task parameter source index and target index
     hold = ttaProject.arrTasks[target];
     ttaProject.arrTasks[target] = ttaProject.arrTasks[source];
     ttaProject.arrTasks[source] = hold;
+    ttaStore.objProjects[ttaProject.project_name]] = ttaProject;
+    // TODO update ttaProject within ttaStore.objProjects
     paintTasksTable();
 }
 
@@ -699,6 +685,7 @@ function clickUpdateTask() {
         if (confirmDelete()) {
             delete ttaProject.objTasks[ttaTask.task_name];
             ttaProject.arrTasks.splice(original_index, 1);
+            ttaStore.objProjects[ttaProject.project_name]] = ttaProject;
             // 2nd parameter means remove one item only
             paintTasksTable();  // What if there are no tasks left?
             return true;
@@ -742,6 +729,7 @@ function clickUpdateTask() {
 
     // Update object values
     ttaProject.objTasks[newTask.task_name] = newTask;
+    ttaStore.objProjects[ttaProject.project_name]] = ttaProject;
     paintTasksTable()
     return true;
 }
