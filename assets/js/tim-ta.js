@@ -270,30 +270,21 @@ var tabPlayTitle = "Countdown each task";
 var tabAddSym = "&#x2b;";
 var tabAddTitle = "Add new ";
 
-var id, currentTable, currentRow, currentWindow;
+var ttaDiv, currentTable, currentRow, currentWindow;
 
-function ttaRunConfiguration (parentId) {
-    id = parentId;
+function ttaRunConfiguration (parentDiv) {
+    ttaDiv = parentDiv;
+    ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
     const cnt = ttaConfig.arrProjects.length;
     if (cnt == 1) { paintTasksTable(); }
     if (cnt > 1) { paintProjectsTable(); }
     if (cnt < 1) { alert("INVALID ttaConfig.arrProjects.length: " + cnt.toString()); }
 }
 
-function paintProjectsTable(id) {
-    // If only one Project defined, skip and paintTasksTable
-    // Grab the first (and only) Project at array offset 0
-    currentTable = "Projects";
-    currentId = id;
-    ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
-    paintTasksTable();
-}
-
-function paintProjectsTable2(id) {
+function paintProjectsTable() {
     // Assumes ttaConfig and ttaProject are populated
     // Button at bottom allows calling paintConfig(id)
     currentTable = "Projects";
-    currentId = id;
 
     var cnt = ttaConfig.arrProjects.length;
     var html = "<h2>Tim-ta - " +
@@ -334,7 +325,7 @@ function paintProjectsTable2(id) {
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
-    id.innerHTML = html;
+    ttaDiv.innerHTML = html;
     id.scrollIntoView();
 }  // End of paintProjectsTable()
 
@@ -374,9 +365,8 @@ function tabProjectDetail(i) {
 
 function paintTasksTable() {
     // Assumes ttaConfig and ttaProject are populated
-    // Button at bottom allows calling paintProjectsTable(id)
+    // Button at bottom allows calling paintProjectsTable()
     currentTable = "Tasks";
-    id = currentId;
 
     var cnt = ttaProject.arrTasks.length;
     var html = "<h2>" + ttaProject.project_name + " - " +
@@ -417,7 +407,7 @@ function paintTasksTable() {
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
-    id.innerHTML = html;
+    ttaDiv.innerHTML = html;
     id.scrollIntoView();
 }  // End of paintTasksTable()
 
@@ -648,9 +638,9 @@ function swapTask(source, target) {
 
 function paintTaskWindow(mode) {
     // mode can be "Add", "Edit" or "Delete"
-    // Button at bottom allows calling paintProjectsTable(id)
+    // Button at bottom allows calling paintProjectsTable()
     currentWindow = mode;
-    var id = currentId;
+    var id = ttaDiv;
     buildInit();  // Reset data dictionary input field controls
 
     var cnt = ttaProject.arrTasks.length;
@@ -692,7 +682,7 @@ function paintTaskWindow(mode) {
     html += inpSwitchStyle();
     html += inpSelectStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
-    id.innerHTML = html;
+    ttaDiv.innerHTML = html;
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
 }
