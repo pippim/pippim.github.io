@@ -326,7 +326,7 @@ function paintProjectsTable() {
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
     ttaDiv.innerHTML = html;
-    id.scrollIntoView();
+    ttaDiv.scrollIntoView();
 }  // End of paintProjectsTable()
 
 function tabProjectsHeading() {
@@ -408,7 +408,7 @@ function paintTasksTable() {
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
     ttaDiv.innerHTML = html;
-    id.scrollIntoView();
+    ttaDiv.scrollIntoView();
 }  // End of paintTasksTable()
 
 function bigFootStyle() {
