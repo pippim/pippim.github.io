@@ -273,6 +273,9 @@ var tabAddSym = "&#x2b;";
 var tabAddTitle = "Add new ";
 var tabBackSym = "&#x232B;";
 var tabBackTitle = "View/Add/Edit/Delete Projects";
+var tabListSym = "&#x2630;";
+var tabProjectsTitle = "View/Add/Edit/Delete Projects";
+var tabTasksTitle = "View/Add/Edit/Delete Tasks";
 
 var ttaDiv, currentTable, currentRow, currentWindow;
 
@@ -348,7 +351,7 @@ function cntHuman(cnt, name) {
 function tabProjectsHeading() {
     var html = "<tr><th colspan='";
     if (scrSmall) { html += "2"; }  // Two columns of buttons
-    else { html += "5"; }           // Five columns of buttons
+    else { html += "6"; }           // Six columns of buttons
     html += "'>Controls</th><th>Project Name</th>";
     if (!scrSmall) { html += "<th># Tasks</th>"; }
     return html += "</tr>\n";
@@ -366,6 +369,7 @@ function tabProjectDetail(i) {
         html += tabButton(i, tabUpSym, tabUpTitle, "clickUp");
         html += tabButton(i, tabDownSym, tabDownTitle, "clickDown");
         html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
+        html += tabButton(i, tabListSym, tabTasksTitle, "clickTasks");
         html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
     }           // Five columns of buttons
 
@@ -402,7 +406,7 @@ function paintTasksTable() {
     html += "<font size='+2'>New Task</font>";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
-    html += taskButton(tabBackSym, tabBackTitle, "paintProjectsTable");
+    html += taskButton(tabListSym, tabProjectsTitle, "paintProjectsTable");
     html += "<font size='+2'>All Projects</font>";
     html += '</div>\n';
     html += '</div>\n';
@@ -601,6 +605,11 @@ function clickEdit(i) {
     oldTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     if (currentTable == "Projects") { paintTasksTable(); }
     else { paintTaskWindow("Edit"); }
+}
+function clickTasks() {
+    // Called from Projects Table to display Tasks Table
+    clickCommon(i);
+    paintTasksTable();
 }
 function clickDelete(i) {
     clickCommon(i);
