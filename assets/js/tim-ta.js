@@ -195,8 +195,11 @@ updateRadioSounds();
 // Global Names
 var ttaConfig, ttaProject, ttaTask;
 
-ttaNewConfig();  // Always new until localStorage setup
-localStorage.setItem('ttaConfig', ttaConfig);
+ttaConfig = localStorage.getItem('ttaConfig');
+if (ttaConfig == null) {
+    ttaNewConfig();  // Create new config
+    localStorage.setItem('ttaConfig', ttaConfig);
+}
 
 function ttaNewConfig() {
     // Object.assign: https://stackoverflow.com/a/34294740/6929343
@@ -218,6 +221,7 @@ function ttaNewConfig() {
 
     ttaConfig.arrProjects = [ttaProject.project_name];
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
+    localStorage.setItem('ttaConfig', ttaConfig);
 }
 
 function ttaNewTask (name) {
@@ -523,6 +527,7 @@ function swapTask(source, target) {
     ttaProject.arrTasks[target] = ttaProject.arrTasks[source];
     ttaProject.arrTasks[source] = hold;
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
+    localStorage.setItem('ttaConfig', ttaConfig);
     // TODO update ttaProject within ttaConfig.objProjects
     paintTasksTable();
 }
@@ -686,6 +691,7 @@ function clickUpdateTask() {
             delete ttaProject.objTasks[ttaTask.task_name];
             ttaProject.arrTasks.splice(original_index, 1);
             ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
+            localStorage.setItem('ttaConfig', ttaConfig);
             // 2nd parameter means remove one item only
             paintTasksTable();  // What if there are no tasks left?
             return true;
@@ -730,6 +736,7 @@ function clickUpdateTask() {
     // Update object values
     ttaProject.objTasks[newTask.task_name] = newTask;
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
+    localStorage.setItem('ttaConfig', ttaConfig);
     paintTasksTable()
     return true;
 }
