@@ -14,8 +14,6 @@ layout: program
 
 <div id="PaintedTable"></div>
 
-<div id="PaintedFooter"></div>
-
 <script>
    id = document.getElementById("PaintedTable");
    paintProjectsTable(id);
@@ -113,6 +111,8 @@ you have uploaded
 
 <style> audio { vertical-align:middle } </style>
 
+<!-- WARNING: Do not delete these <audio> tags, simply hide them -->
+
 These are Tim-ta stock sound files you can use when a timer task ends:
 <br>
 - **Alarm_01.wav** &emsp;&emsp;<audio controls="true" id="Alarm_01.wav"></audio>
@@ -202,6 +202,12 @@ Advantage of this symbol is common audio control button. Also eases
 transition to future buttons for: Pause, Rewind x seconds,
 Fast forward x seconds, Restart and Skip to end.
 
+---
+
+Stop symbol 4. Unicode #x23F9
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x23F9;</span>
+ 
 ---
 
 White Up Arrow from Bar symbol. Move task up project. Unicode #x21ea
@@ -340,6 +346,100 @@ var tta_task = {
     progress_bar_update_seconds: "default",
     confirm_delete_phrase: "default"
 }
+
+var data_dictionary = {
+    project_name: "Project Name|text|non-blank",
+    task_name: "Task Name|text|non-blank",
+    hours: "Hours|number|0|1000",
+    minutes: "Minutes|number|0|1000",
+    seconds: "Seconds|number|0|1000",
+    task_prompt: "Prompt to begin Task?|switch",
+    task_end_alarm: "Play sound when Task ends?|switch",
+    task_end_filename: "Task ending sound filename|select|sound_filenames",
+    task_end_notification: "Desktop notification when Task ends?|switch",
+    run_set_times: "Number of times to run Set|number|1|1000",
+    set_prompt: "Prompt to begin Set?|switch",
+    set_end_alarm: "Play sound when Set ends?|switch",
+    set_end_filename: "Set ending sound filename|select|sound_filenames",
+    set_end_notification: "Desktop notification when Set ends?|switch",
+    all_sets_prompt: "Prompt to begin All Sets?|switch",
+    all_sets_end_alarm: "Play sound when All Sets end?|switch",
+    all_sets_end_filename: "All Sets ending sound filename|select|sound_filenames",
+    all_sets_end_notification: "Desktop notification when All Sets end?|switch",
+    progress_bar_update_seconds: "Seconds between countdown updates|number|1|1000",
+    fail_test_1: "Hello World",
+    fail_test_2: "Good-bye Cruel World...|text|lower|upper|No such place!",
+    confirm_delete_phrase: "Text to confirm delete action|text"
+}
+
+var dd_field = {
+    name: "",
+    label: "",
+    type: "",
+    lower: "",
+    upper: ""
+}
+
+function get_dd_field (name) {
+    /* Extract dd_field from data_dictionary for easier referencing
+       NOTE: lower is generic term, it can be "non-blank" for keys and
+             there is no upper. If numeric and lower or upper is blank
+             they are converted to 0. If select it contains all the
+             possible values.
+    */
+    const raw = data_dictionary[name];
+    if (raw == null) {
+        alert("Critical Error. Data dictionary field doesn't exist: " + name);
+        console.trace();
+        return false;
+    }
+    const arr = raw.split('|')
+    if (arr.length < 2) {
+        alert("Critical Error. Data dictionary field has < 3 parts: " + name);
+        console.trace();
+        return false;
+    }
+    dd_field.name = name;       // Used programmatically as field name
+    dd_field.label = arr[0];    // Used for labels on forms & tables
+    dd_field.type = arr[1];     // Used for <table> <input> type="dd_field.type"
+    if (arr.length >= 3) { dd_field.lower = arr[2]; }
+    else dd_field.lower = "";   // See top of function comments
+    if (arr.length >= 4) { dd_field.upper = arr[3]; }
+    else dd_field.upper = "";
+    if (arr.length > 4 && dd_field.type != "select") {       // See top of function comments
+        alert("Critical Error. Non-Select field has > 4 parts: " + name);
+        console.trace();
+        return false;
+    }
+    return true;
+}
+
+/* UNIT TESTING
+    get_dd_field("haha")
+    get_dd_field("fail_test_1")
+    get_dd_field("fail_test_2")
+*/
+
+function updateRadioSounds () {
+    /* Called on load and after drag & drop sound files */
+    // Convert array of sound filenames to string delineated by |
+    var replaceString = "";
+    for (var i = 0; i < stockNames.length; i++) {
+        if (i != 0) { replaceString += "/"; }  // Add | if not first in array
+        replaceString += stockNames[i];
+    }
+
+    for (const key of Object.keys(data_dictionary)) {
+        if (key.startsWith("fail_test")) { continue; }
+        get_dd_field(key);
+        if (dd_field.type == "select" && dd_field.lower == "sound_filenames") {
+            // Update data dictionary key with list of REAL filenames
+            data_dictionary[key] = dd_field.name + "|select|" + replaceString;
+         }
+    }
+}
+
+updateRadioSounds();
 ```
 
 ---
