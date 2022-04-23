@@ -202,7 +202,7 @@ if (ttaConfig == null) {
 }
 
 // TODO: Bug must call for software to work???
-    ttaNewConfig();  // Create new config
+//    ttaNewConfig();  // Create new config
 
 function ttaNewConfig() {
     // Object.assign: https://stackoverflow.com/a/34294740/6929343
