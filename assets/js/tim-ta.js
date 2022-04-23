@@ -289,7 +289,7 @@ function paintProjectsTable() {
     currentTable = "Projects";
 
     // Just in case another browser tab changed configuration...
-    ttaConfig = localStorage.getItem('ttaConfig');
+    ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
     var cnt = ttaConfig.arrProjects.length;
     var html = "<h2>Tim-ta - " +
                 cnt.toString() + " Projects</h2>"
