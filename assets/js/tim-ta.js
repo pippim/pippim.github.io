@@ -454,11 +454,11 @@ function clickListen(i) {
         audioControl.pause();
         audioControl.currentTime = 0;  // Does this invoke onended?
         // Sound has ended, reset Listen Symbol into button text
-        resetListen(btnElm);
+        // resetListen(btnElm);
     } else {
         // Set icon to "Stop" and schedule "Listen" icon when sound ends
         // Sound has start, set Stop Symbol into button text
-        btnElm.innerHTML = tabStopSym;
+        btnElm.innerHTML = tabStopSym;  // textContent can't be used because entity code
         btnElm.title = tabStopTitle;
         audioControl.play();
         audioControl.onended = function() { resetListen (btnElm) };
@@ -479,7 +479,7 @@ function delayListenReset (btnElm, audioControl) {
 
 function resetListen(btnElm) {
     // Reset listen button to normal when sound finishes
-    btnElm.textContent = htmlDecode(tabListenSym);
+    btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
     btnElm.title = tabListenTitle;
 }
 
