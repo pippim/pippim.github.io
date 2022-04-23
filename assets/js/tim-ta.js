@@ -671,7 +671,7 @@ function paintProjectWindow(mode) {
     var html = "<h2>" + ttaProject.project_name + " - " +
                 mode + " Task</h2>"
 
-    html += '<form id="formTask"><table id="tabTask" class="tta-table">\n' ;
+    html += '<form id="formProject"><table id="tabTask" class="tta-table">\n' ;
     // TODO: Why not just loop through all keys? - Because order is random!
     html += buildInput("project_name", mode);
     html += buildInput("task_prompt", mode);
@@ -693,14 +693,14 @@ function paintProjectWindow(mode) {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
-    html += taskButton("Cancel", "Cancel changes", "paintTasksTable");
+    html += taskButton("Cancel", "Cancel changes", "paintProjectsTable");
     html += "<font size='+2'>Cancel changes</font>"
     html += '</div>\n';
     var textMode = mode;
     html += '<div class="rightFoot">\n';
     if (textMode == "Edit") { textMode = "Save" }
-    html += taskButton(textMode, textMode + " Task", "clickUpdateTask");
-    html += "<font size='+2'>" + textMode + " Task</font>";
+    html += taskButton(textMode, textMode + " Project", "clickUpdateTask");
+    html += "<font size='+2'>" + textMode + " Project</font>";
     html += '</div>\n';
     html += '</div>\n';
 
@@ -946,7 +946,9 @@ function validateInput() {
 function getInputValues() {
     // Get input field values from <form> for "text" ONLY
     // Separate functions required for "switch" and "select"
-    var elements = document.getElementById("formTask").elements;
+    if (currentTable == "Projects") { var form = "formProject" }
+    if (currentTable == "Tasks") { var form = "formTask" }
+    var elements = document.getElementById(form).elements;
     var newTask = {}
     for (var i = 0; i < elements.length; i++) {
         var item = elements.item(i);
