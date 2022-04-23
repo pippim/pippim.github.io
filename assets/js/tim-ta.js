@@ -278,6 +278,8 @@ function ttaRunConfiguration (parentDiv) {
     const cnt = ttaConfig.arrProjects.length;
     if (cnt == 1) { paintTasksTable(); }
     if (cnt > 1) { paintProjectsTable(); }
+    // Below shouldn't be an error, simply paint empty table...
+    // Consider alert to add projects with + button
     if (cnt < 1) { alert("INVALID ttaConfig.arrProjects.length: " + cnt.toString()); }
 }
 
@@ -286,6 +288,8 @@ function paintProjectsTable() {
     // Button at bottom allows calling paintConfig(id)
     currentTable = "Projects";
 
+    // Just in case another browser tab changed configuration...
+    ttaConfig = localStorage.getItem('ttaConfig');
     var cnt = ttaConfig.arrProjects.length;
     var html = "<h2>Tim-ta - " +
                 cnt.toString() + " Projects</h2>"
@@ -330,17 +334,16 @@ function paintProjectsTable() {
 }  // End of paintProjectsTable()
 
 function tabProjectsHeading() {
-    // Identical to tabTasksHeading() except the word "Project"
     var html = "<tr><th colspan='";
     if (scrSmall) { html += "2"; }  // Two columns of buttons
     else { html += "5"; }           // Five columns of buttons
     html += "'>Controls</th><th>Project Name</th>";
-    if (!scrSmall) { html += "<th>Duration</th>"; }
+    if (!scrSmall) { html += "<th># Tasks</th>"; }
     return html += "</tr>\n";
 }
 
 function tabProjectDetail(i) {
-    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
+    ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[i]];
     var html = '<tr onclick="tabSetRow(this)">\n'; // Currently does nothing
     if (scrSmall) {
         html += tabButton(i, tabPlaySym, tabPlayTitle, "clickPlay");
@@ -354,11 +357,11 @@ function tabProjectDetail(i) {
         html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
     }           // Five columns of buttons
 
-    html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
+    html += "<td><font size='+2'>" + ttaConfig.project_name + "</font></td>\n";
 
     if (!scrSmall) {
-        var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
-        html += "<td>" + strDuration + "</td>\n";
+        const strTaskCount = ttaProject.arrTasks.length.toString();
+        html += "<td>" + strTaskCount + "</td>\n";
     }
     return html += "</tr>\n";
 }
@@ -601,7 +604,9 @@ function clickAddTask() {
     paintTaskWindow("Add");
 }
 function clickAddProject() {
-    alert("Clicked Add Project but not implemented yet")
+    // Temporary load Projects Table
+    paintProjectsTable();
+    // alert("Clicked Add Project but not implemented yet")
 }
 function clickPlay() {
     // Run Project - Countdown all tasks
