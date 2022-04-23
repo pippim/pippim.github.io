@@ -175,7 +175,7 @@ Back symbol. Unicode #x232B
 
 Hamburger symbol. Unicode #x2630
 &emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#xx2630;</span>
+&#x2630;</span>
 
 ---
 
