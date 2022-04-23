@@ -265,6 +265,8 @@ var tabDeleteSym = "&#x1f5d1";
 var tabDeleteTitle = "Delete";
 var tabControlsSym = "&#x2699";
 var tabControlsTitle = "Buttons for: Move up, Move down, Edit and Delete";
+var tabConfigSym = "&#x2699";
+var tabConfigTitle = "Set defaults for all Projects and Tasks";
 var tabPlaySym = "&#x25b6;";
 var tabPlayTitle = "Countdown each task";
 var tabAddSym = "&#x2b;";
@@ -290,7 +292,8 @@ function paintProjectsTable() {
 
     // Just in case another browser tab changed configuration...
     ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
-    var strHuman = cntHuman(ttaConfig.arrProjects.length, "Project");
+    const cnt = ttaConfig.arrProjects.length;
+    const strHuman = cntHuman(cnt, "Project");
     var html = "<h2>Tim-ta - " + strHuman + "</h2>"
 
     html += '<table id="tabProjects">\n' ;
@@ -299,14 +302,14 @@ function paintProjectsTable() {
     html += '</table>\n';
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
-    html += '<div class="leftFoot">\n';
-    html += taskButton(tabPlaySym, tabPlayTitle, "clickPlay");
-    html += "<font size='+2'>Run</font>";
+    html += '<div class="leftFoot">\n';  // tabControl
+    html += taskButton(tabConfigSym, tabConfigTitle, "clickFuture");
+    html += "<font size='+2'>Configuration</font>";
     html += '</div>\n';
-    html += '<div class="middleFoot">\n';
-    html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
-    html += "<font size='+2'>Add new Task</font>";
-    html += '</div>\n';
+    //html += '<div class="middleFoot">\n';
+    //html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
+    //html += "<font size='+2'>Add new Task</font>";
+    //html += '</div>\n';
     html += '<div class="rightFoot">\n';
     html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
     html += "<font size='+2'>Add new Project</font>";
@@ -378,7 +381,8 @@ function paintTasksTable() {
     // Button at bottom allows calling paintProjectsTable()
     currentTable = "Tasks";
 
-    var strHuman = cntHuman(ttaProject.arrTasks.length, "Task");
+    const cnt = ttaProject.arrTasks.length;
+    const strHuman = cntHuman(cnt, "Task");
     var html = "<h2>" + ttaProject.project_name + " - " + strHuman + "</h2>"
 
     html += '<table id="tabTasks">\n' ;
