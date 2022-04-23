@@ -449,7 +449,7 @@ function ttaBtnStyle() {
     return  '.tta-btn {\n' +
             'font-size: 25px;\n' +
             'border-radius: 1rem;\n' +
-            'margin: .5rem;\n' +
+            // 'margin: .5rem;\n' +
             '}\n'
 }
 
@@ -615,8 +615,8 @@ function clickTasks(i) {
 }
 function clickDelete(i) {
     clickCommon(i);
-    if (currentTable == "Projects") { alert("clickDelete incomplete"); return; }
-    paintTaskWindow("Delete");
+    if (currentTable == "Projects") { paintProjectWindow("Delete"); }
+    else { paintTaskWindow("Delete"); }
 }
 function clickAddTask() {
     // Create empty record for add
