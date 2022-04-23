@@ -290,9 +290,8 @@ function paintProjectsTable() {
 
     // Just in case another browser tab changed configuration...
     ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
-    var cnt = ttaConfig.arrProjects.length;
-    var html = "<h2>Tim-ta - " +
-                cnt.toString() + " Projects</h2>"
+    var strHuman = cntHuman(ttaConfig.arrProjects.length, "Project");
+    var html = "<h2>Tim-ta - " + strHuman + "</h2>"
 
     html += '<table id="tabProjects">\n' ;
         html += tabProjectsHeading();
@@ -333,6 +332,14 @@ function paintProjectsTable() {
     ttaDiv.scrollIntoView();
 }  // End of paintProjectsTable()
 
+function cntHuman(cnt, name) {
+    var plural = name;
+    if (cnt != 1) { plural += "s"; }
+    if (cnt == 0) { var str = "No"; }
+    if (cnt != 0) { var str = cnt.toString(); }
+    return str + " " + plural;
+}
+
 function tabProjectsHeading() {
     var html = "<tr><th colspan='";
     if (scrSmall) { html += "2"; }  // Two columns of buttons
@@ -357,7 +364,7 @@ function tabProjectDetail(i) {
         html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
     }           // Five columns of buttons
 
-    html += "<td><font size='+2'>" + ttaConfig.project_name + "</font></td>\n";
+    html += "<td><font size='+2'>" + ttaProject.project_name + "</font></td>\n";
 
     if (!scrSmall) {
         const strTaskCount = ttaProject.arrTasks.length.toString();
@@ -371,9 +378,8 @@ function paintTasksTable() {
     // Button at bottom allows calling paintProjectsTable()
     currentTable = "Tasks";
 
-    var cnt = ttaProject.arrTasks.length;
-    var html = "<h2>" + ttaProject.project_name + " - " +
-                cnt.toString() + " Tasks</h2>"
+    var strHuman = cntHuman(ttaProject.arrTasks.length, "Task");
+    var html = "<h2>" + ttaProject.project_name + " - " + strHuman + "</h2>"
 
     html += '<table id="tabTasks">\n' ;
         html += tabTasksHeading();
