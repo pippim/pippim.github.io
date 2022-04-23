@@ -841,7 +841,6 @@ function buildText(key, value, mode) {
 }
 
 function buildSelect(key, value, mode) {
-    // get_dd_field() must have been called before us
     // Can only initialize select elements after HTML declared with IDs
     inpSelects[key] = {
         id: key,
@@ -870,12 +869,11 @@ function buildSelect(key, value, mode) {
     return html;
 }
 
-function buildSelectOption(name, value) {
-    get_dd_field(name);
+function buildSelectOption(name, default_name) {
+    // name = Option, value = Default Option
     var html="";
-    if (name == value) {}
     html += '  <option value="' + name + '" '
-    if (name == value) { html += 'selected ' }  // Default option
+    if (name == default_name) { html += 'selected ' }
     html += '>' + name + '</option>\n' ;
     return html;
 }
