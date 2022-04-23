@@ -608,7 +608,7 @@ function clickEdit(i) {
     if (currentTable == "Projects") { paintProjectWindow("Edit"); }
                                else { paintTaskWindow("Edit"); }
 }
-function clickTasks() {
+function clickTasks(i) {
     // Called from Projects Table to display Tasks Table
     clickCommon(i);
     paintTasksTable();
@@ -654,8 +654,7 @@ function getProjectValue(key) {
 }
 
 function swapRows(source, target) {
-    // TODO rename to swapItem and call swapRows
-    // Task parameter source index and target index
+    // Called from clickUp() and clickDown()
     if (currentTable == "Projects") { swapProject(source, target); }
                                else { swapTask(source, target); }
 }
@@ -717,7 +716,7 @@ function paintProjectWindow(mode) {
     var textMode = mode;
     html += '<div class="rightFoot">\n';
     if (textMode == "Edit") { textMode = "Save" }
-    html += taskButton(textMode, textMode + " Project", "clickUpdateTask");
+    html += taskButton(textMode, textMode + " Project", "clickUpdateProject");
     html += "<font size='+2'>" + textMode + " Project</font>";
     html += '</div>\n';
     html += '</div>\n';
@@ -908,31 +907,88 @@ function clickUpdateTask() {
     if (!validateInput()) { return false; }
 
     // Get form input values including switches and selects
-    var newTask = getInputValues();
+    var formValues = getInputValues();
 
     // Change field values to "default" if they match parent(s) value
-    for (const name of Object.keys(newTask)) {
-        var value = newTask[name];  // Current Task value
+    for (const name of Object.keys(formValues)) {
+        var value = formValues[name];  // Current Task value
         old_value = getProjectValue(name);  // Get project's value
         // If new Task value same as Project's value it is a "default".
-        if (value == old_value) { newTask[name] = "default" }
+        if (value == old_value) { formValues[name] = "default" }
     }
 
     // Save changes or Add new ttaTask
     if (original_index < 0) {
         // Add mode, push new key onto array
-        ttaProject.arrTasks.push(newTask.task_name);
+        ttaProject.arrTasks.push(formValues.task_name);
     } else {
-        const new_index = ttaProject.arrTasks.indexOf(newTask.task_name);
+        const new_index = ttaProject.arrTasks.indexOf(formValues.task_name);
         // The original key existed (Edit mode). Has it been changed?
         if (original_index != new_index) {
             // Replace old key with new at same spot
-            ttaProject.arrTasks[original_index] = newTask.task_name;
+            ttaProject.arrTasks[original_index] = formValues.task_name;
         } // At this point it's Edit mode and key hasn't changed.
     }
 
     // Update object values
-    ttaProject.objTasks[newTask.task_name] = newTask;
+    ttaProject.objTasks[formValues.task_name] = formValues;
+    ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
+    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+    paintTasksTable()
+    return true;
+}
+
+function clickUpdateProject() {
+    /* Process Task updates - Add, Edit and Delete Task */
+    const original_index = ttaConfig.arrProjects.indexOf(ttaProject.project_name);
+    // When original index is < 0 it means we are adding new task
+    if (!currentWindow == "Add" && original_index < 0) {
+        // Sanity check failed
+        alert(ttaProject.project_name + " Not found in ttaConfig.arrProjects");
+        return false;
+    }
+    // Check for delete first and exit.
+    if (currentWindow == "Delete") {
+        if (confirmDelete()) {
+            delete ttaConfig.objProjects[ttaProject.project_name];
+            ttaConfig.arrProjects.splice(original_index, 1);
+            localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+            paintProjectsTable();  // What if there are no Projects left?
+            return true;
+        }
+        else { return false; }
+    }
+
+    /* Validate input field values for Save/Add */
+    if (!validateInput()) { return false; }
+
+    // Get form input values including switches and selects
+    // NOTE formValues is really formValues
+    var formValues = getInputValues();
+
+    // Change field values to "default" if they match parent(s) value
+    for (const name of Object.keys(formValues)) {
+        var value = formValues[name];  // Current value
+        old_value = ttaConfig[name];  // Get Config's value
+        // If new Task value same as Project's value it is a "default".
+        if (value == old_value) { formValues[name] = "default" }
+    }
+
+    // Save changes or Add new ttaTask
+    if (original_index < 0) {
+        // Add mode, push new key onto array
+        ttaProject.arrTasks.push(formValues.task_name);
+    } else {
+        const new_index = ttaProject.arrTasks.indexOf(formValues.task_name);
+        // The original key existed (Edit mode). Has it been changed?
+        if (original_index != new_index) {
+            // Replace old key with new at same spot
+            ttaProject.arrTasks[original_index] = formValues.task_name;
+        } // At this point it's Edit mode and key hasn't changed.
+    }
+
+    // Update object values
+    ttaProject.objTasks[formValues.task_name] = formValues;
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
     paintTasksTable()
@@ -941,13 +997,13 @@ function clickUpdateTask() {
 
 function validateInput() {
     // Validate input fields
-    var newTask = getInputValues();
+    var formValues = getInputValues();
 
     // Validation - Non-blank Task name, numeric fields, "true" or "false"
     // Assign "default" to fields if they match parent
-    for (const name of Object.keys(newTask)) {
+    for (const name of Object.keys(formValues)) {
         if (name == "") { console.log("empty name"); continue; }
-        var value = newTask[name];
+        var value = formValues[name];
         get_dd_field(name);
 
         if (!validateNonBlank(value)) { return false; }
@@ -967,22 +1023,22 @@ function getInputValues() {
     if (currentTable == "Projects") { var form = "formProject" }
     if (currentTable == "Tasks") { var form = "formTask" }
     var elements = document.getElementById(form).elements;
-    var newTask = {}
+    var formValues = {}
     for (var i = 0; i < elements.length; i++) {
         var item = elements.item(i);
-        newTask[item.name] = item.value;
+        formValues[item.name] = item.value;
     }
 
-    // Get switch values and add to newTask
+    // Get switch values and add to formValues
     for (const name of Object.keys(inpSwitches)) {
-        newTask[name] = inpSwitches[name].value
+        formValues[name] = inpSwitches[name].value
     }
-    // Add select values to newTask
+    // Add select values to formValues
     for (const name of Object.keys(inpSelects)) {
-        newTask[name] = inpSelects[name].value
+        formValues[name] = inpSelects[name].value
     }
 
-    return newTask;
+    return formValues;
 }
 
 function validateTaskName(value) {
