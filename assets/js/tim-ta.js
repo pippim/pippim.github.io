@@ -633,7 +633,7 @@ function buildSelect(key, value, mode) {
         value: value,
         mode: mode
     };
-    console.log("key/value:", key, value);
+
     var html = "";
     // TODO: When mode is delete make Select display only
     // See: inpSelects[data.id] = data.value;
@@ -644,17 +644,21 @@ function buildSelect(key, value, mode) {
     // html += buildSelectOption("", "Please Choose...");
     var options = dd_field.lower.split('/');
     for (var i=0; i<options.length; i++) {
-        html += buildSelectOption(options[i]);
+        if ( mode != "Delete" || options[i] == value) {
+            html += buildSelectOption(options[i], value);
+        }
     }
     html += '</select>\n';
     // console.log("select html:", html);
     return html;
 }
 
-function buildSelectOption(name) {
+function buildSelectOption(name, value) {
     var html="";
-    html += '  <option value="' + name + '">' + name +
-            '</option>\n' ;
+    if (name == value) {}
+    html += '  <option value="' + name + '" '
+    if (name == value) { html += 'selected ' }  // Default option
+    html += '>' + name + '</option>\n' ;
     return html;
 }
 
