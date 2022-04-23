@@ -441,7 +441,8 @@ function clickListen(i) {
     */
 
     clickCommon(i);
-    const btnId = "btnId_clickListen" + i;
+    const btnId = "btnId_clickListen" + i ;
+    console.log("btnId:", btnId);
     var btnElm = document.getElementById(btnId); 
     end_alarm = getTaskValue("task_end_alarm");
     if (end_alarm == "false") { alert("Alarm turned off for this task."); return; }
@@ -451,7 +452,7 @@ function clickListen(i) {
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
         audioControl.pause();
-        audioControl.currentTime = 0;
+        audioControl.currentTime = 0;  // Does this invoke onended?
         // Sound has ended, reset Listen Symbol into button text
         resetListen(btnElm);
     } else {
