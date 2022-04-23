@@ -670,7 +670,14 @@ function swapRows(source, target) {
     if (currentTable == "Projects") { swapProject(source, target); }
                                else { swapTask(source, target); }
 }
-
+function swapProject(source, target) {
+    // Project parameter source index and target index
+    hold = ttaConfig.arrProjects[target];
+    ttaConfig.arrProjects[target] = ttaConfig.arrProjects[source];
+    ttaConfig.arrProjects[source] = hold;
+    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+    paintProjectsTable();
+}
 function swapTask(source, target) {
     // Task parameter source index and target index
     hold = ttaProject.arrTasks[target];
@@ -679,15 +686,6 @@ function swapTask(source, target) {
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
     paintTasksTable();
-}
-
-function swapProject(source, target) {
-    // Project parameter source index and target index
-    hold = ttaConfig.arrProjects[target];
-    ttaConfig.arrProjects[target] = ttaConfig.arrProjects[source];
-    ttaConfig.arrProjects[source] = hold;
-    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
-    paintProjectsTable();
 }
 
 function paintProjectForm(mode) {
@@ -701,6 +699,7 @@ function paintProjectForm(mode) {
 
     html += '<form id="formProject"><table id="tabProject" class="tta-table">\n' ;
     // TODO: Why not just loop through all keys? - Because order is random!
+
     html += buildInput("project_name", mode);
     html += buildInput("task_prompt", mode);
     html += buildInput("task_end_alarm", mode);
@@ -724,8 +723,8 @@ function paintProjectForm(mode) {
     html += taskButton("Cancel", "Cancel changes", "paintProjectsTable");
     html += "<font size='+2'>Cancel changes</font>"
     html += '</div>\n';
-    var textMode = mode;
     html += '<div class="rightFoot">\n';
+    var textMode = mode;
     if (textMode == "Edit") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Project", "clickUpdateProject");
     html += "<font size='+2'>" + textMode + " Project</font>";
@@ -951,7 +950,7 @@ function clickUpdateTask() {
 }
 
 function clickUpdateProject() {
-    /* Process Task updates - Add, Edit and Delete Task */
+    /* Process Project updates - Add, Edit and Delete Project */
     const original_index = ttaConfig.arrProjects.indexOf(ttaProject.project_name);
     // When original index is < 0 it means we are adding new task
     if (!currentMode == "Add" && original_index < 0) {
@@ -986,24 +985,24 @@ function clickUpdateProject() {
         if (value == old_value) { formValues[name] = "default" }
     }
 
-    // Save changes or Add new ttaTask
+    // Save changes or Add new ttaProject
     if (original_index < 0) {
         // Add mode, push new key onto array
-        ttaProject.arrTasks.push(formValues.task_name);
+        ttaConfig.arrProjects.push(formValues.project_name);
     } else {
-        const new_index = ttaProject.arrTasks.indexOf(formValues.task_name);
+        const new_index = ttaConfig.arrProjects.indexOf(formValues.project_name);
         // The original key existed (Edit mode). Has it been changed?
         if (original_index != new_index) {
             // Replace old key with new at same spot
-            ttaProject.arrTasks[original_index] = formValues.task_name;
+            ttaConfig.arrProjects[original_index] = formValues.project_name;
         } // At this point it's Edit mode and key hasn't changed.
     }
 
-    // Update object values
-    ttaProject.objTasks[formValues.task_name] = formValues;
+    // Update Project values
+    ttaProject = Object.assign({}, formValues);
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
-    paintTasksTable()
+    paintProjectsTable();
     return true;
 }
 
