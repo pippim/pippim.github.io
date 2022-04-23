@@ -406,6 +406,7 @@ function tabButton(i, button_code, title, callback) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
     var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
+               'id="tabBtnId_' + callback + i + '" \n' + 
                'type="button" onclick="' + callback + '(' + i + ')" \n' +
                'title="' + title + '">' + button_code + '</button></td>\n';
     return html;
@@ -415,7 +416,6 @@ function taskButton(button_code, title, callback) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
     var html = '<button class="hdr-btn tta-btn ' + callback + '" \n' +
-               'id="btnId_' + callback + i + '" \n' + 
                'type="button" onclick="' + callback + '()" \n' +
                'title="' + title + '">' + button_code + '</button>\n';
     return html;
@@ -433,7 +433,7 @@ function clickListen(i) {
         // Add button to table detail. Return HTML with <button> code
         // code is the HTML code, E.G. &#x25b6; for Play button.
         var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
-                   'id="btnId_' + callback + i + '" \n' + 
+                   'id="tabBtnId_' + callback + i + '" \n' + 
                    'type="button" onclick="' + callback + '(' + i + ')" \n' +
                    'title="' + title + '">' + button_code + '</button></td>\n';
         return html;
@@ -441,7 +441,7 @@ function clickListen(i) {
     */
 
     clickCommon(i);
-    const btnId = "btnId_clickListen" + i ;
+    const btnId = "tabBtnId_clickListen" + i ;
     console.log("btnId:", btnId);
     var btnElm = document.getElementById(btnId); 
     end_alarm = getTaskValue("task_end_alarm");
