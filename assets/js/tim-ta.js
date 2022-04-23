@@ -395,11 +395,11 @@ function paintTasksTable() {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
     html += taskButton(tabPlaySym, tabPlayTitle, "clickPlay");
-    html += "<font size='+2'>Run</font>";
+    html += "<font size='+2'>Run Project</font>";
     html += '</div>\n';
     html += '<div class="middleFoot">\n';
     html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
-    html += "<font size='+2'>Add new Task</font>";
+    html += "<font size='+2'>New Task</font>";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
     html += taskButton(tabBackSym, tabBackTitle, "paintProjectsTable");
