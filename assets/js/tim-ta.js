@@ -201,6 +201,9 @@ if (ttaConfig == null) {
     localStorage.setItem('ttaConfig', ttaConfig);
 }
 
+// TODO: Bug must call for software to work???
+    ttaNewConfig();  // Create new config
+
 function ttaNewConfig() {
     // Object.assign: https://stackoverflow.com/a/34294740/6929343
     ttaConfig = Object.assign({}, tta_config);
