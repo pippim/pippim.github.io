@@ -442,8 +442,8 @@ function clickListen(i) {
 
     clickCommon(i);
     const btnId = "tabBtnId_clickListen" + i ;
-    console.log("btnId:", btnId);
-    var btnElm = document.getElementById(btnId); 
+    var btnElm = document.getElementById(btnId);
+    console.log("btnElm:", btnElm);
     end_alarm = getTaskValue("task_end_alarm");
     if (end_alarm == "false") { alert("Alarm turned off for this task."); return; }
     sound = getTaskValue("task_end_filename");
@@ -458,14 +458,16 @@ function clickListen(i) {
     } else {
         // Set icon to "Stop" and schedule "Listen" icon when sound ends
         // Sound has start, set Stop Symbol into button text
-        btnElm.textContent = tabStopSym;
+        btnElm.textContent = htmlDecode(tabStopSym);
         btnElm.title = tabStopTitle;
         audioControl.play();
-        setTimeout(function() { delayListenReset (btnElm, audioControl); }, 100);
+        audioControl.onended = function() { resetListen (btnElm) };
+        //setTimeout(function() { delayListenReset (btnElm, audioControl); }, 100);
     }
 }
 
 function delayListenReset (btnElm, audioControl) {
+    // DEPRECATED but save for future use
     // Would be simpler with object.onended = function(){myScript};
     if (audioControl.currentTime > 0) {
         setTimeout(function() { delayListenReset (btnElm, audioControl); }, 100);
@@ -477,7 +479,7 @@ function delayListenReset (btnElm, audioControl) {
 
 function resetListen(btnElm) {
     // Reset listen button to normal when sound finishes
-    btnElm.textContent = tabListenSym;
+    btnElm.textContent = htmlDecode(tabListenSym);
     btnElm.title = tabListenTitle;
 }
 
