@@ -453,26 +453,31 @@ function clickListen(i) {
         audioControl.pause();
         audioControl.currentTime = 0;
         // Sound has ended, reset Listen Symbol into button text
-        btnElm.value = tabListenSym;
-        btnElm.value = tabListenTitle;
+        resetListen(btnElm);
     } else {
         // Set icon to "Stop" and schedule "Listen" icon when sound ends
         // Sound has start, set Stop Symbol into button text
         btnElm.value = tabStopSym;
-        btnElm.value = tabStopTitle;
+        btnElm.title = tabStopTitle;
         audioControl.play();
         setTimeout(function() { delayListenReset (btnElm, audioControl); }, 100);
     }
 }
 
 function delayListenReset (btnElm, audioControl) {
+    // Would be simpler with object.onended = function(){myScript};
     if (audioControl.currentTime > 0) {
         setTimeout(function() { delayListenReset (btnElm, audioControl); }, 100);
         return
     }
     // Sound has ended, reset Listen Symbol into button text
+    resetListen(btnElm)
+}
+
+function resetListen(btnElm) {
+    // Reset listen button to normal when sound finishes
     btnElm.value = tabListenSym;
-    btnElm.value = tabListenTitle;
+    btnElm.title = tabListenTitle;
 }
 
 function clickUp(i) {
