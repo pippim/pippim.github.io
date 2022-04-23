@@ -277,7 +277,7 @@ var tabListSym = "&#x2630;";
 var tabProjectsTitle = "View/Add/Edit/Delete Projects";
 var tabTasksTitle = "View/Add/Edit/Delete Tasks";
 
-var ttaDiv, currentTable, currentRow, currentWindow;
+var ttaDiv, currentTable, currentRow, currentMode;
 
 function ttaRunConfiguration (parentDiv) {
     ttaDiv = parentDiv;
@@ -322,11 +322,11 @@ function paintProjectsTable() {
     html += '</div>\n';
 
     html += '<style>\n';
-    html += '#tabTasks table { table-layout: fixed; width: 100%; }\n';
-    html += '#tabTasks th, #tabTasks td {\n' +
+    html += '#tabProjects table { table-layout: fixed; width: 100%; }\n';
+    html += '#tabProjects th, #tabProjects td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
-    html += '#tabTasks th {\n' +
+    html += '#tabProjectss th {\n' +
             'position: -webkit-sticky;\n' +
             'position: sticky;\n' +
             'top: 0;\n' +
@@ -605,8 +605,8 @@ function clickEdit(i) {
     clickCommon(i);
     oldTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     oldProject = Object.assign({}, ttaProject);
-    if (currentTable == "Projects") { paintProjectWindow("Edit"); }
-                               else { paintTaskWindow("Edit"); }
+    if (currentTable == "Projects") { paintProjectForm("Edit"); }
+                               else { paintTaskForm("Edit"); }
 }
 function clickTasks(i) {
     // Called from Projects Table to display Tasks Table
@@ -615,21 +615,21 @@ function clickTasks(i) {
 }
 function clickDelete(i) {
     clickCommon(i);
-    if (currentTable == "Projects") { paintProjectWindow("Delete"); }
-    else { paintTaskWindow("Delete"); }
+    if (currentTable == "Projects") { paintProjectForm("Delete"); }
+    else { paintTaskForm("Delete"); }
 }
 function clickAddTask() {
     // Create empty record for add
     if (currentTable == "Projects") { alert("clickAddTask incomplete"); return; }
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     oldTask = Object.assign({}, tta_task);
-    paintTaskWindow("Add");
+    paintTaskForm("Add");
 }
 function clickAddProject() {
     // Create empty record for add
     ttaProject = Object.assign({}, tta_project); // https://stackoverflow.com/a/34294740/6929343
     oldProject = Object.assign({}, tta_project);
-    paintProjectWindow("Add");
+    paintProjectForm("Add");
     // alert("Clicked Add Project but not implemented yet")
 }
 function clickPlay() {
@@ -678,17 +678,17 @@ function swapProject(source, target) {
     paintProjectsTable();
 }
 
-function paintProjectWindow(mode) {
+function paintProjectForm(mode) {
     // mode can be "Add", "Edit" or "Delete"
     // Button at bottom allows calling paintConfiguration()
-    currentWindow = mode;
+    currentMode = mode;
     buildInit();  // Reset data dictionary input field controls
 
     var cnt = ttaProject.arrTasks.length;
     var html = "<h2>" + ttaProject.project_name + " - " +
                 mode + " Project</h2>"
 
-    html += '<form id="formProject"><table id="tabTask" class="tta-table">\n' ;
+    html += '<form id="formProject"><table id="tabProject" class="tta-table">\n' ;
     // TODO: Why not just loop through all keys? - Because order is random!
     html += buildInput("project_name", mode);
     html += buildInput("task_prompt", mode);
@@ -723,7 +723,7 @@ function paintProjectWindow(mode) {
 
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n';
-    html += '#tabTasks th, #tabTasks td {\n' +
+    html += '#tabProject th, #tabProject td {\n' +
             '}\n'
     html += ttaBtnStyle();
     html += bigFootStyle();
@@ -735,11 +735,10 @@ function paintProjectWindow(mode) {
     initSelectsAfterDOM();
 }
 
-function paintTaskWindow(mode) {
+function paintTaskForm(mode) {
     // mode can be "Add", "Edit" or "Delete"
     // Button at bottom allows calling paintProjectsTable()
-    currentWindow = mode;
-    var id = ttaDiv;
+    currentMode = mode;
     buildInit();  // Reset data dictionary input field controls
 
     var cnt = ttaProject.arrTasks.length;
@@ -774,7 +773,7 @@ function paintTaskWindow(mode) {
 
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n';
-    html += '#tabTasks th, #tabTasks td {\n' +
+    html += '#tabTask th, #tabTask td {\n' +
             '}\n'
     html += ttaBtnStyle();
     html += bigFootStyle();
@@ -884,13 +883,13 @@ function clickUpdateTask() {
     /* Process Task updates - Add, Edit and Delete Task */
     const original_index = ttaProject.arrTasks.indexOf(ttaTask.task_name);
     // When original index is < 0 it means we are adding new task
-    if (!currentWindow == "Add" && original_index < 0) {
+    if (!currentMode == "Add" && original_index < 0) {
         // Sanity check failed
         alert(ttaTask.task_name + " Not found in ttaProject.arrTasks");
         return false;
     }
     // Check for delete first and exit.
-    if (currentWindow == "Delete") {
+    if (currentMode == "Delete") {
         if (confirmDelete()) {
             delete ttaProject.objTasks[ttaTask.task_name];
             ttaProject.arrTasks.splice(original_index, 1);
@@ -942,13 +941,13 @@ function clickUpdateProject() {
     /* Process Task updates - Add, Edit and Delete Task */
     const original_index = ttaConfig.arrProjects.indexOf(ttaProject.project_name);
     // When original index is < 0 it means we are adding new task
-    if (!currentWindow == "Add" && original_index < 0) {
+    if (!currentMode == "Add" && original_index < 0) {
         // Sanity check failed
         alert(ttaProject.project_name + " Not found in ttaConfig.arrProjects");
         return false;
     }
     // Check for delete first and exit.
-    if (currentWindow == "Delete") {
+    if (currentMode == "Delete") {
         if (confirmDelete()) {
             delete ttaConfig.objProjects[ttaProject.project_name];
             ttaConfig.arrProjects.splice(original_index, 1);
