@@ -247,7 +247,9 @@ function ttaTaskDuration (hours, minutes, seconds) {
 // HTML Codes for buttons
 
 var tabListenSym = "&#9835;"; // options x1f50a (speaker) 9835 (notes)
-var tabListenTitle = "Listen to task end alarm";
+var tabListenTitle = "Listen to task ending alarm";
+var tabStopSym = "&#x23F9;"; // options x1f50a (speaker) 9835 (notes)
+var tabStopTitle = "Stop sound now";
 var tabUpSym = "&#x21E7;";
 var tabUpTitle = "Move up list";
 var tabDownSym = "&#x21e9;";
@@ -413,6 +415,7 @@ function taskButton(button_code, title, callback) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
     var html = '<button class="hdr-btn tta-btn ' + callback + '" \n' +
+               'id="btnId_' + callback + i + '" \n' + 
                'type="button" onclick="' + callback + '()" \n' +
                'title="' + title + '">' + button_code + '</button>\n';
     return html;
@@ -424,17 +427,52 @@ function clickCommon(i) {
 }
 
 function clickListen(i) {
+    // i is the row number being processed
+    /* From above: tabButton(i, tabListenSym, tabListenTitle, "clickListen");
+    tabButton(i, button_code, title, callback) {
+        // Add button to table detail. Return HTML with <button> code
+        // code is the HTML code, E.G. &#x25b6; for Play button.
+        var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
+                   'id="btnId_' + callback + i + '" \n' + 
+                   'type="button" onclick="' + callback + '(' + i + ')" \n' +
+                   'title="' + title + '">' + button_code + '</button></td>\n';
+        return html;
+    }
+    */
+
     clickCommon(i);
+    const btnId = "btnId_clickListen" + i;
+    var btnElm = document.getElementById(btnId); 
     end_alarm = getTaskValue("task_end_alarm");
     if (end_alarm == "false") { alert("Alarm turned off for this task."); return; }
     sound = getTaskValue("task_end_filename");
     // <audio> tags buried on the page with ID name same as sound filename.
     audioControl = document.getElementById(sound);
-    // If already playing then stop it
     if (audioControl.currentTime > 0) {
+        // If already playing then stop it and reset icon to "Listen"
         audioControl.pause();
         audioControl.currentTime = 0;
-    } else { audioControl.play(); }
+        // Sound has ended, reset Listen Symbol into button text
+        btnElm.value = tabListenSym;
+        btnElm.value = tabListenTitle;
+    } else {
+        // Set icon to "Stop" and schedule "Listen" icon when sound ends
+        // Sound has start, set Stop Symbol into button text
+        btnElm.value = tabLStopSym;
+        btnElm.value = tabStopTitle;
+        audioControl.play();
+        setTimeout(function() { delayListenReset (btnElm, audioControl); }, 100);
+    }
+}
+
+function delayListenReset (btnElm, audioControl) {
+    if (audioControl.currentTime > 0) {
+        setTimeout(function() { delayListenReset (btnElm, audioControl); }, 100);
+        return
+    }
+    // Sound has ended, reset Listen Symbol into button text
+    btnElm.value = tabListenSym;
+    btnElm.value = tabListenTitle;
 }
 
 function clickUp(i) {
