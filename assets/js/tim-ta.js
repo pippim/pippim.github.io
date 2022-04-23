@@ -271,6 +271,8 @@ var tabPlaySym = "&#x25b6;";
 var tabPlayTitle = "Countdown each task";
 var tabAddSym = "&#x2b;";
 var tabAddTitle = "Add new ";
+var tabBackSym = "&#x232B;";
+var tabBackTitle = "View/Add/Edit/Delete Projects";
 
 var ttaDiv, currentTable, currentRow, currentWindow;
 
@@ -400,8 +402,8 @@ function paintTasksTable() {
     html += "<font size='+2'>Add new Task</font>";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
-    html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
-    html += "<font size='+2'>Add new Project</font>";
+    html += taskButton(tabBackSym, tabBackTitle, "paintProjectsTable");
+    html += "<font size='+2'>All Projects</font>";
     html += '</div>\n';
     html += '</div>\n';
 
@@ -647,6 +649,63 @@ function swapTask(source, target) {
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
     // TODO update ttaProject within ttaConfig.objProjects
     paintTasksTable();
+}
+
+function paintProjectWindow(mode) {
+    // mode can be "Add", "Edit" or "Delete"
+    // Button at bottom allows calling paintConfiguration()
+    currentWindow = mode;
+    buildInit();  // Reset data dictionary input field controls
+
+    var cnt = ttaProject.arrTasks.length;
+    var html = "<h2>" + ttaProject.project_name + " - " +
+                mode + " Task</h2>"
+
+    html += '<form id="formTask"><table id="tabTask" class="tta-table">\n' ;
+    // TODO: Why not just loop through all keys? - Because order is random!
+    html += buildInput("project_name", mode);
+    html += buildInput("task_prompt", mode);
+    html += buildInput("task_end_alarm", mode);
+    html += buildInput("task_end_filename", mode);
+    html += buildInput("task_end_notification", mode);
+    html += buildInput("run_set_times", mode);
+    html += buildInput("set_prompt", mode);
+    html += buildInput("set_end_alarm", mode);
+    html += buildInput("set_end_filename", mode);
+    html += buildInput("set_end_notification", mode);
+    html += buildInput("all_sets_prompt", mode);
+    html += buildInput("all_sets_end_alarm", mode);
+    html += buildInput("all_sets_end_filename", mode);
+    html += buildInput("all_sets_end_notification", mode);
+    html += buildInput("progress_bar_update_seconds", mode);
+    html += buildInput("confirm_delete_phrase", mode);
+    html += '</table></form>\n' ;
+
+    html += '<div class="bigFoot">\n';  // Start footer buttons
+    html += '<div class="centerFoot">\n';
+    html += taskButton("Cancel", "Cancel changes", "paintTasksTable");
+    html += "<font size='+2'>Cancel changes</font>"
+    html += '</div>\n';
+    var textMode = mode;
+    html += '<div class="rightFoot">\n';
+    if (textMode == "Edit") { textMode = "Save" }
+    html += taskButton(textMode, textMode + " Task", "clickUpdateTask");
+    html += "<font size='+2'>" + textMode + " Task</font>";
+    html += '</div>\n';
+    html += '</div>\n';
+
+    // TODO: Move next lines to class name: tabClass inside TCM
+    html += '<style>\n';
+    html += '#tabTasks th, #tabTasks td {\n' +
+            '}\n'
+    html += ttaBtnStyle();
+    html += bigFootStyle();
+    html += inpSwitchStyle();
+    html += inpSelectStyle();
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    ttaDiv.innerHTML = html;
+    initSwitchesAfterDOM();
+    initSelectsAfterDOM();
 }
 
 function paintTaskWindow(mode) {
