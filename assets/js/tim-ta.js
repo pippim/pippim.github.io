@@ -428,15 +428,15 @@ function paintTasksTable() {
 
 function bigFootStyle() {
     return  '.bigFoot {\n' +
-            'display: flex;\n' +
-            'justify-content: space-around;\n' +
-            'margin: 1rem;\n' +
-            'padding: .25rem .5rem;\n' +
-            'border: 3px solid;\n' +
-            'border-radius: 2rem;\n' +
+            '  display: flex;\n' +
+            '  justify-content: space-around;\n' +
+            '  margin: 1rem;\n' +
+            '  padding: .25rem .5rem;\n' +
+            '  border: 3px solid;\n' +
+            '  border-radius: 2rem;\n' +
             '}\n' +
             '.leftFoot, .centerFoot, .rightFoot {\n' +
-            'flex-grow: 1;\n' +
+            //'  flex-grow: 1;\n' +
             '}\n';
     // Flex from: https://stackoverflow.com/a/44348868/6929343
 }
