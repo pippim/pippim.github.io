@@ -593,13 +593,11 @@ function clickDown(i) {
 }
 
 var oldTask;
-var oldProject;
 function clickEdit(i) {
     clickCommon(i);
     oldTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
-    oldProject = Object.assign({}, ttaProject); // https://stackoverflow.com/a/34294740/6929343
-    if (currentTable == "Projects") { alert("clickEdit incomplete"); return; }
-    paintTaskWindow("Edit");
+    if (currentTable == "Projects") { paintTasksTable(); }
+    else { paintTaskWindow("Edit"); }
 }
 function clickDelete(i) {
     clickCommon(i);
