@@ -603,7 +603,7 @@ var oldTask;
 function clickEdit(i) {
     clickCommon(i);
     oldTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
-    if (currentTable == "Projects") { paintTasksTable(); }
+    if (currentTable == "Projects") { paintProjectWindow("Edit"); }
     else { paintTaskWindow("Edit"); }
 }
 function clickTasks() {
