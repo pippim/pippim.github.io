@@ -322,7 +322,7 @@ function paintProjectsTable() {
     html += '</div>\n';
 
     html += '<style>\n';
-    html += '#tabProjects table { table-layout: fixed; width: 100%; }\n';
+    html += '#tabProjects table { table-layout: auto; width: 100%; }\n';
     html += '#tabProjects th, #tabProjects td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
@@ -412,7 +412,7 @@ function paintTasksTable() {
     html += '</div>\n';
 
     html += '<style>\n';
-    html += '#tabTasks table { table-layout: fixed; width: 100%; }\n';
+    html += '#tabTasks table { table-layout: auto; width: 100%; }\n';
     html += '#tabTasks th, #tabTasks td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
