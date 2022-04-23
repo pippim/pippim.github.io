@@ -195,7 +195,7 @@ updateRadioSounds();
 // Global Names
 var ttaConfig, ttaProject, ttaTask;
 
-//ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
+ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
 if (ttaConfig == null) {
     ttaNewConfig();  // Create new config
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
