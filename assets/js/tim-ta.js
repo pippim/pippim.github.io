@@ -429,6 +429,7 @@ function paintTasksTable() {
 function bigFootStyle() {
     return  '.bigFoot {\n' +
             'display: flex;\n' +
+            'justify-content: space-around;\n' +
             'margin: 1rem;\n' +
             'padding: .25rem .5rem;\n' +
             'border: 3px solid;\n' +
