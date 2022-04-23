@@ -626,17 +626,17 @@ function buildText(key, value, mode) {
 
 function buildSelect(key, value, mode) {
     // get_dd_field() must have been called before us
-    // Must initialize switches with images after HTML declared with IDs
-    //const fullId = "inp_switch_" + name;
-    const fullId = key;  // https://www.impressivewebs.com/avoiding-problems-with-javascript-getelementbyid-method-in-internet-explorer-7/
+    // Can only initialize select elements after HTML declared with IDs
     inpSelects[key] = {
-        id: fullId,
+        id: key,
         elm: "Pippim Promise",
         value: value,
         mode: mode
     };
-
+    console.log("key/value:", key, value);
     var html = "";
+    // TODO: When mode is delete make Select display only
+    // See: inpSelects[data.id] = data.value;
     html += '<select id="' + key + '" class="tabInput" required \n' +
         'onchange="setSelectInput(this)" \n' +
         'value="' + value + '">\n' ;
@@ -659,7 +659,7 @@ function buildSelectOption(name) {
 }
 
 function setSelectInput(data) {
-    // Set chosen value in inpSelects
+    // screen callback to Set chosen option value in inpSelects
     inpSelects[data.id] = data.value;
 }
 
@@ -769,6 +769,16 @@ function getInputValues() {
         var item = elements.item(i);
         newTask[item.name] = item.value;
     }
+
+    // Get switch values and add to newTask
+    for (const name of Object.keys(inpSwitches)) {
+        newTask[name] = inpSwitches[name].value
+    }
+    // Add select values to newTask
+    for (const name of Object.keys(inpSelects)) {
+        newTask[name] = inpSelects[name].value
+    }
+
     return newTask;
 }
 
