@@ -337,7 +337,7 @@ function bigFootStyle() {
     return  '.bigFoot {\n' +
             'display: flex;\n' +
             'margin: 1rem;\n' +
-            'padding: .25rem .5rem;\n' +
+            'padding: .25rem .5rem .25rem;\n' +
             'border: 3px solid;\n' +
             'border-radius: 2rem;\n' +
             '}\n' +
@@ -644,6 +644,7 @@ function buildSelect(key, value, mode) {
     // html += buildSelectOption("", "Please Choose...");
     var options = dd_field.lower.split('/');
     for (var i=0; i<options.length; i++) {
+        // When delete mode only option is the stored option
         if ( mode != "Delete" || options[i] == value) {
             html += buildSelectOption(options[i], value);
         }
@@ -703,17 +704,10 @@ function clickUpdateTask() {
     /* Validate input field values for Save/Add */
     if (!validateInput()) { return false; }
 
-    // Get switch values and add to newTask
+    // Get form input values including switches and selects
     var newTask = getInputValues();
-    for (const name of Object.keys(inpSwitches)) {
-        newTask[name] = inpSwitches[name].value
-    }
-    // Add select values to newTask
-    for (const name of Object.keys(inpSelects)) {
-        newTask[name] = inpSelects[name].value
-    }
 
-    // Assign "default" to fields if they match parent(s)
+    // Change field values to "default" if they match parent(s) value
     for (const name of Object.keys(newTask)) {
         var value = newTask[name];  // Current Task value
         old_value = getProjectValue(name);  // Get project's value
