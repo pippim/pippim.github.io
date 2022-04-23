@@ -136,7 +136,10 @@ Future placeholder to drag and drop your own sound files here.
 
 # Future Buttons of Tim-ta
 
-Below are proposed buttons for Tim-ta.
+Below are proposed buttons for Tim-ta. Some are already in use. 
+
+An option may provided in future for user to pick which button is more
+suitable for device/web browser in use.
 
 ---
 
@@ -167,6 +170,12 @@ Plus symbol. Unicode #x2B
 Back symbol. Unicode #x232B
 &emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x232B;</span>
+
+---
+
+Hamburger symbol. Unicode #x2630
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#xx2630;</span>
 
 ---
 
