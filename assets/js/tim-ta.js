@@ -981,11 +981,13 @@ function clickUpdateProject() {
     for (const name of Object.keys(formValues)) {
         var value = formValues[name];  // Current value
         old_value = ttaConfig[name];  // Get Config's value
-        // If new Task value same as Project's value it is a "default".
+        // If new Project value same as Config's value it is a "default".
         if (value == old_value) { formValues[name] = "default" }
+        // Below is different than updateTask
+        ttaProject[name] = formValues[name];
     }
 
-    // Save changes or Add new ttaProject
+    // taaConfig - Add new project name, or save changed name
     if (original_index < 0) {
         // Add mode, push new key onto array
         ttaConfig.arrProjects.push(formValues.project_name);
@@ -999,7 +1001,6 @@ function clickUpdateProject() {
     }
 
     // Update Project values
-    ttaProject = Object.assign({}, formValues);
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
     paintProjectsTable();
