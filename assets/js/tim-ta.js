@@ -590,13 +590,13 @@ function clickFuture(i) {
 function clickUp(i) {
     clickCommon(i);
     if (i == 0) { alert("Already at top, can't move up"); return; }
-    swapTask(i, i - 1);
+    swapRows(i, i - 1);
 }
 function clickDown(i) {
     // TODO: After moving, update & save localStorage
     clickCommon(i);
     if (i == cntTable - 1) { alert("Already at bottom, can't move down"); return; }
-    swapTask(i, i + 1);
+    swapRows(i, i + 1);
 }
 
 var oldTask;
@@ -653,27 +653,30 @@ function getProjectValue(key) {
     return value;
 }
 
-function swapTask(source, target) {
-    // TODO rename to swapItem and call swapTask
+function swapRows(source, target) {
+    // TODO rename to swapItem and call swapRows
     // Task parameter source index and target index
-    if (currentTable == "Projects") { swapProject(source, target); return; }
+    if (currentTable == "Projects") { swapProject(source, target); }
+                               else { swapTask(source, target); }
+}
+
+function swapTask(source, target) {
+    // Task parameter source index and target index
     hold = ttaProject.arrTasks[target];
     ttaProject.arrTasks[target] = ttaProject.arrTasks[source];
     ttaProject.arrTasks[source] = hold;
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
-    // TODO update ttaProject within ttaConfig.objProjects
     paintTasksTable();
 }
 
 function swapProject(source, target) {
-    // Task parameter source index and target index
+    // Project parameter source index and target index
     hold = ttaConfig.arrProjects[target];
     ttaConfig.arrProjects[target] = ttaConfig.arrProjects[source];
     ttaConfig.arrProjects[source] = hold;
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
-    // TODO update ttaProject within ttaConfig.objProjects
-    paintTasksTable();
+    paintProjectsTable();
 }
 
 function paintProjectWindow(mode) {
