@@ -430,6 +430,19 @@ function paintTasksTable() {
     ttaDiv.scrollIntoView();
 }  // End of paintTasksTable()
 
+function tableStyle() {
+    return  '.tta-table table { table-layout: auto; width: 100%; }\n' +
+            '.tta-table th, .tta-table td {\n' +
+            '  padding: .25rem .25rem;\n' +
+            '}\n' +
+            '.tta-table th {\n' +
+            '  position: -webkit-sticky;\n' +
+            '  position: sticky;\n' +
+            '  top: 0;\n' +
+            '  z-index: 1;\n' +
+            '  background: #f1f1f1;\n' +
+            '}\n'
+}
 function bigFootStyle() {
     return  '.bigFoot {\n' +
             '  display: flex;\n' +
@@ -447,9 +460,9 @@ function bigFootStyle() {
 
 function ttaBtnStyle() {
     return  '.tta-btn {\n' +
-            'font-size: 25px;\n' +
-            'border-radius: 1rem;\n' +
-            // 'margin: .5rem;\n' +
+            '  font-size: 25px;\n' +
+            '  border-radius: 1rem;\n' +
+            // '  margin: .5rem;\n' +
             '}\n'
 }
 
@@ -684,7 +697,6 @@ function paintProjectForm(mode) {
     currentMode = mode;
     buildInit();  // Reset data dictionary input field controls
 
-    var cnt = ttaProject.arrTasks.length;
     var html = "<h2>" + ttaProject.project_name + " - " +
                 mode + " Project</h2>"
 
@@ -741,7 +753,6 @@ function paintTaskForm(mode) {
     currentMode = mode;
     buildInit();  // Reset data dictionary input field controls
 
-    var cnt = ttaProject.arrTasks.length;
     var html = "<h2>" + ttaProject.project_name + " - " +
                 mode + " Task</h2>"
 
@@ -800,7 +811,9 @@ function buildInput(key, mode) {
         if it matches user input then "default" phrase is saved.
     */
     get_dd_field(key);
-    value = getTaskValue(key);  // Translates "default" to real value
+    // Translate value of "default" to real value in parent(s)
+    if (currentTable == "Projects") { value = getProjectValue(key); }
+    else { value = getTaskValue(key); }
     var html = "<tr><td>\n";
     html += dd_field.label + '</td>\n'
 
