@@ -164,6 +164,12 @@ Plus symbol. Unicode #x2B
 
 ---
 
+Back symbol. Unicode #x232B
+&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x232B;</span>
+
+---
+
 Edit symbol. Unicode #x270D
 &emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x270D;</span>
