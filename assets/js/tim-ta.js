@@ -317,7 +317,7 @@ function paintProjectsTable() {
     //html += '</div>\n';
     html += '<div class="rightFoot">\n';
     html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
-    html += "<font size='+2'>Add new Project</font>";
+    html += "<font size='+2'>New Project</font>";
     html += '</div>\n';
     html += '</div>\n';
 
@@ -600,11 +600,13 @@ function clickDown(i) {
 }
 
 var oldTask;
+var oldProject;
 function clickEdit(i) {
     clickCommon(i);
     oldTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
+    oldProject = Object.assign({}, ttaProject);
     if (currentTable == "Projects") { paintProjectWindow("Edit"); }
-    else { paintTaskWindow("Edit"); }
+                               else { paintTaskWindow("Edit"); }
 }
 function clickTasks() {
     // Called from Projects Table to display Tasks Table
@@ -624,8 +626,10 @@ function clickAddTask() {
     paintTaskWindow("Add");
 }
 function clickAddProject() {
-    // Temporary load Projects Table
-    paintProjectsTable();
+    // Create empty record for add
+    ttaProject = Object.assign({}, tta_project); // https://stackoverflow.com/a/34294740/6929343
+    oldProject = Object.assign({}, tta_project);
+    paintProjectWindow("Add");
     // alert("Clicked Add Project but not implemented yet")
 }
 function clickPlay() {
@@ -650,12 +654,23 @@ function getProjectValue(key) {
 }
 
 function swapTask(source, target) {
+    // TODO rename to swapItem and call swapTask
     // Task parameter source index and target index
-    if (currentTable == "Projects") { alert("swapTask incomplete"); return; }
+    if (currentTable == "Projects") { swapProject(source, target); return; }
     hold = ttaProject.arrTasks[target];
     ttaProject.arrTasks[target] = ttaProject.arrTasks[source];
     ttaProject.arrTasks[source] = hold;
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
+    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+    // TODO update ttaProject within ttaConfig.objProjects
+    paintTasksTable();
+}
+
+function swapProject(source, target) {
+    // Task parameter source index and target index
+    hold = ttaConfig.arrProjects[target];
+    ttaConfig.arrProjects[target] = ttaConfig.arrProjects[source];
+    ttaConfig.arrProjects[source] = hold;
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
     // TODO update ttaProject within ttaConfig.objProjects
     paintTasksTable();
@@ -669,7 +684,7 @@ function paintProjectWindow(mode) {
 
     var cnt = ttaProject.arrTasks.length;
     var html = "<h2>" + ttaProject.project_name + " - " +
-                mode + " Task</h2>"
+                mode + " Project</h2>"
 
     html += '<form id="formProject"><table id="tabTask" class="tta-table">\n' ;
     // TODO: Why not just loop through all keys? - Because order is random!
