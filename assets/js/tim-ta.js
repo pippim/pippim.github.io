@@ -285,9 +285,8 @@ function ttaRunConfiguration (parentDiv) {
     const cnt = ttaConfig.arrProjects.length;
     if (cnt == 1) { paintTasksTable(); }
     if (cnt > 1) { paintProjectsTable(); }
-    // Below shouldn't be an error, simply paint empty table...
-    // Consider alert to add projects with + button
-    if (cnt < 1) { alert("INVALID ttaConfig.arrProjects.length: " + cnt.toString()); }
+    // When no projects exist, create Sample Laundry Project
+    if (cnt < 1) { ttaNewConfig(); paintTasksTable(); }
 }
 
 function paintProjectsTable() {
