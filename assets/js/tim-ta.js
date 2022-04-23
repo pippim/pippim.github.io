@@ -452,9 +452,8 @@ function clickListen(i) {
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
         audioControl.pause();
-        audioControl.currentTime = 0;  // Does this invoke onended?
-        // Sound has ended, reset Listen Symbol into button text
-        // resetListen(btnElm);
+        audioControl.currentTime = 0;  // Does this invoke onended? NO!
+        resetListen(btnElm);
     } else {
         // Set icon to "Stop" and schedule "Listen" icon when sound ends
         // Sound has start, set Stop Symbol into button text
