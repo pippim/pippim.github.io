@@ -9,7 +9,7 @@
 
 /* TODO: Multiple Browser tabs concurrency.
 
-    Before any update, reread ttaStore, ttaProject and
+    Before any update, reread ttaConfig, ttaProject and
     ttaTask into "check Buffers". If they are different
     then advise user and force reread.
 
@@ -39,7 +39,7 @@ window.onresize = function() {
 // Configuration & Container for all Tim-ta Projects
 // Default below for creation, overwritten when retrieved from localStorage
 // The order arrProjects names appear is order they are displayed
-var tta_store = {
+var tta_config = {
     arrProjects: [],
     objProjects: {},
     task_prompt: "true",
@@ -193,14 +193,14 @@ function updateRadioSounds () {
 updateRadioSounds();
 
 // Global Names
-var ttaStore, ttaProject, ttaTask;
+var ttaConfig, ttaProject, ttaTask;
 
 ttaNewConfig();  // Always new until localStorage setup
-localStorage.setItem('ttaStore', ttaStore);
+localStorage.setItem('ttaConfig', ttaConfig);
 
 function ttaNewConfig() {
     // Object.assign: https://stackoverflow.com/a/34294740/6929343
-    ttaStore = Object.assign({}, tta_store);
+    ttaConfig = Object.assign({}, tta_config);
     ttaProject = Object.assign({}, tta_project);
     ttaProject.project_name = "Laundry";
 
@@ -216,8 +216,8 @@ function ttaNewConfig() {
     ttaTaskDuration(0, 58, 0);
     ttaAddTask(ttaTask);
 
-    ttaStore.arrProjects = [ttaProject.project_name];
-    ttaStore.objProjects[ttaProject.project_name] = ttaProject;
+    ttaConfig.arrProjects = [ttaProject.project_name];
+    ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
 }
 
 function ttaNewTask (name) {
@@ -272,7 +272,7 @@ function paintProjectsTable(id) {
     // Grab the first (and only) Project at array offset 0
     currentTable = "Projects";
     currentId = id;
-    ttaProject = ttaStore.objProjects[ttaStore.arrProjects[0]];
+    ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
     paintTasksTable();
 }
 
@@ -280,7 +280,7 @@ function paintProjectsFooter(id) {
     // DON'T NEED - the table painter can mount a footer too.
 }
 function paintTasksTable() {
-    // Assumes ttaStore and ttaProject are populated
+    // Assumes ttaConfig and ttaProject are populated
     // Button at bottom allows calling paintProjectsTable(id)
     currentTable = "Tasks";
     id = currentId;
@@ -513,7 +513,7 @@ function getTaskValue(key) {
 }
 function getProjectValue(key) {
     value = ttaProject[key];
-    if (value == "default") { return ttaStore[key]; }
+    if (value == "default") { return ttaConfig[key]; }
     return value;
 }
 
@@ -522,8 +522,8 @@ function swapTask(source, target) {
     hold = ttaProject.arrTasks[target];
     ttaProject.arrTasks[target] = ttaProject.arrTasks[source];
     ttaProject.arrTasks[source] = hold;
-    ttaStore.objProjects[ttaProject.project_name]] = ttaProject;
-    // TODO update ttaProject within ttaStore.objProjects
+    ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
+    // TODO update ttaProject within ttaConfig.objProjects
     paintTasksTable();
 }
 
@@ -634,7 +634,7 @@ function buildSelect(key, value, mode) {
     html += '<select id="' + key + '" class="tabInput" required \n' +
         'onchange="setSelectInput(this)" \n' +
         'value="' + value + '">\n' ;
-    // Below is for ttaStore configuration
+    // Below is for ttaConfig configuration
     // html += buildSelectOption("", "Please Choose...");
     var options = dd_field.lower.split('/');
     for (var i=0; i<options.length; i++) {
@@ -685,7 +685,7 @@ function clickUpdateTask() {
         if (confirmDelete()) {
             delete ttaProject.objTasks[ttaTask.task_name];
             ttaProject.arrTasks.splice(original_index, 1);
-            ttaStore.objProjects[ttaProject.project_name]] = ttaProject;
+            ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
             // 2nd parameter means remove one item only
             paintTasksTable();  // What if there are no tasks left?
             return true;
@@ -729,7 +729,7 @@ function clickUpdateTask() {
 
     // Update object values
     ttaProject.objTasks[newTask.task_name] = newTask;
-    ttaStore.objProjects[ttaProject.project_name]] = ttaProject;
+    ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
     paintTasksTable()
     return true;
 }
