@@ -458,7 +458,7 @@ function clickListen(i) {
     } else {
         // Set icon to "Stop" and schedule "Listen" icon when sound ends
         // Sound has start, set Stop Symbol into button text
-        btnElm.textContent = htmlDecode(tabStopSym);
+        btnElm.textContent = htmlEncode(tabStopSym);
         btnElm.title = tabStopTitle;
         audioControl.play();
         audioControl.onended = function() { resetListen (btnElm) };
