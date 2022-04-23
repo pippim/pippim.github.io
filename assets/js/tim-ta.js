@@ -270,7 +270,15 @@ var tabPlayTitle = "Countdown each task";
 var tabAddSym = "&#x2b;";
 var tabAddTitle = "Add new ";
 
-var currentTable, currentId, currentRow, currentWindow;
+var id, currentTable, currentRow, currentWindow;
+
+function ttaRunConfiguration (parentId) {
+    id = parentId;
+    const cnt = ttaConfig.arrProjects.length;
+    if (cnt == 1) { paintTasksTable(); }
+    if (cnt > 1) { paintProjectsTable(); }
+    if (cnt < 1) { alert("INVALID ttaConfig.arrProjects.length: " + cnt.toString()); }
+}
 
 function paintProjectsTable(id) {
     // If only one Project defined, skip and paintTasksTable
@@ -281,9 +289,89 @@ function paintProjectsTable(id) {
     paintTasksTable();
 }
 
-function paintProjectsFooter(id) {
-    // DON'T NEED - the table painter can mount a footer too.
+function paintProjectsTable2(id) {
+    // Assumes ttaConfig and ttaProject are populated
+    // Button at bottom allows calling paintConfig(id)
+    currentTable = "Projects";
+    currentId = id;
+
+    var cnt = ttaConfig.arrProjects.length;
+    var html = "<h2>Tim-ta - " +
+                cnt.toString() + " Projects</h2>"
+
+    html += '<table id="tabProjects">\n' ;
+        html += tabProjectsHeading();
+        for (var i = 0; i < cnt; i++) { html += tabProjectDetail(i); }
+    html += '</table>\n';
+
+    html += '<div class="bigFoot">\n';  // Start footer buttons
+    html += '<div class="leftFoot">\n';
+    html += taskButton(tabPlaySym, tabPlayTitle, "clickPlay");
+    html += "<font size='+2'>Run</font>";
+    html += '</div>\n';
+    html += '<div class="middleFoot">\n';
+    html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
+    html += "<font size='+2'>Add new Task</font>";
+    html += '</div>\n';
+    html += '<div class="rightFoot">\n';
+    html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
+    html += "<font size='+2'>Add new Project</font>";
+    html += '</div>\n';
+    html += '</div>\n';
+
+    html += '<style>\n';
+    html += '#tabTasks table { table-layout: fixed; width: 100%; }\n';
+    html += '#tabTasks th, #tabTasks td {\n' +
+            '  padding: .25rem .25rem;\n' +
+            '}\n'
+    html += '#tabTasks th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #f1f1f1;\n' +
+            '}\n'
+    html += ttaBtnStyle();
+    html += bigFootStyle();
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    id.innerHTML = html;
+    id.scrollIntoView();
+}  // End of paintProjectsTable()
+
+function tabProjectsHeading() {
+    // Identical to tabTasksHeading() except the word "Project"
+    var html = "<tr><th colspan='";
+    if (scrSmall) { html += "2"; }  // Two columns of buttons
+    else { html += "5"; }           // Five columns of buttons
+    html += "'>Controls</th><th>Project Name</th>";
+    if (!scrSmall) { html += "<th>Duration</th>"; }
+    return html += "</tr>\n";
 }
+
+function tabProjectDetail(i) {
+    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
+    var html = '<tr onclick="tabSetRow(this)">\n'; // Currently does nothing
+    if (scrSmall) {
+        html += tabButton(i, tabPlaySym, tabPlayTitle, "clickPlay");
+        html += tabButton(i, tabControlsSym, tabControlsTitle, "clickFuture");
+    }           // Two columns of buttons
+    else {
+        html += tabButton(i, tabPlaySym, tabPlayTitle, "clickPlay");
+        html += tabButton(i, tabUpSym, tabUpTitle, "clickUp");
+        html += tabButton(i, tabDownSym, tabDownTitle, "clickDown");
+        html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
+        html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
+    }           // Five columns of buttons
+
+    html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
+
+    if (!scrSmall) {
+        var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
+        html += "<td>" + strDuration + "</td>\n";
+    }
+    return html += "</tr>\n";
+}
+
 function paintTasksTable() {
     // Assumes ttaConfig and ttaProject are populated
     // Button at bottom allows calling paintProjectsTable(id)
@@ -337,7 +425,7 @@ function bigFootStyle() {
     return  '.bigFoot {\n' +
             'display: flex;\n' +
             'margin: 1rem;\n' +
-            'padding: .25rem .5rem .25rem;\n' +
+            'padding: .25rem .5rem;\n' +
             'border: 3px solid;\n' +
             'border-radius: 2rem;\n' +
             '}\n' +
@@ -367,6 +455,7 @@ function inpSelectStyle() {
 }
 
 function tabTasksHeading() {
+    // Identical to tabProjectsHeading() except the word "Task"
     var html = "<tr><th colspan='";
     if (scrSmall) { html += "2"; }  // Two columns of buttons
     else { html += "5"; }           // Five columns of buttons
@@ -377,10 +466,10 @@ function tabTasksHeading() {
 
 function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-    var html = '<tr onclick="tabSetRow(this)">\n';
+    var html = '<tr onclick="tabSetRow(this)">\n'; // Currently does nothing
     if (scrSmall) {
         html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
-        html += tabButton(i, tabControlsSym, tabControlsTitle, "clickControls");
+        html += tabButton(i, tabControlsSym, tabControlsTitle, "clickFuture");
     }           // Two columns of buttons
     else {
         html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
@@ -426,9 +515,22 @@ function taskButton(button_code, title, callback) {
     return html;
 }
 
+var cntTable;
 function clickCommon(i) {
     currentRow = i + 1;
-    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
+    if (currentTable == "Projects") {
+        ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[i]];
+        cntTable = ttaConfig.arrProjects.length;
+    }
+    else if (currentTable == "Tasks") {
+        ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
+        cntTable = ttaProject.arrTasks.length;
+    }
+    else {
+        alert("CRITICAL ERROR: clickCommon called with index: " + i.toString())
+        console.trace()
+        cntTable = 0;
+    }
 }
 
 function clickListen(i) {
@@ -470,6 +572,11 @@ function clickListen(i) {
     }
 }
 
+function clickFuture(i) {
+    clickCommon(i);
+    alert("Future feature not implemented yet")
+}
+
 function clickUp(i) {
     clickCommon(i);
     if (i == 0) { alert("Already at top, can't move up"); return; }
@@ -478,29 +585,33 @@ function clickUp(i) {
 function clickDown(i) {
     // TODO: After moving, update & save localStorage
     clickCommon(i);
-    var cnt = ttaProject.arrTasks.length;
-    if (i == cnt - 1) { alert("Already at bottom, can't move down"); return; }
+    if (i == cntTable - 1) { alert("Already at bottom, can't move down"); return; }
     swapTask(i, i + 1);
 }
+
 var oldTask;
+var oldProject;
 function clickEdit(i) {
     clickCommon(i);
     oldTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
+    oldProject = Object.assign({}, ttaProject); // https://stackoverflow.com/a/34294740/6929343
+    if (currentTable == "Projects") { alert("clickEdit incomplete"); return; }
     paintTaskWindow("Edit");
 }
 function clickDelete(i) {
     clickCommon(i);
+    if (currentTable == "Projects") { alert("clickDelete incomplete"); return; }
     paintTaskWindow("Delete");
 }
 function clickAddTask() {
     // Create empty record for add
+    if (currentTable == "Projects") { alert("clickAddTask incomplete"); return; }
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     oldTask = Object.assign({}, tta_task);
     paintTaskWindow("Add");
 }
 function clickAddProject() {
     alert("Clicked Add Project but not implemented yet")
-    ttaProject = Object.assign({}, tta_project);
 }
 function clickPlay() {
     // Run Project - Countdown all tasks
@@ -509,6 +620,7 @@ function clickPlay() {
 function clickControls(i) {
     // Popup buttons for small screens
     clickCommon(i);
+    alert("Clicked Controls but not implemented yet")
 }
 
 function getTaskValue(key) {
@@ -524,6 +636,7 @@ function getProjectValue(key) {
 
 function swapTask(source, target) {
     // Task parameter source index and target index
+    if (currentTable == "Projects") { alert("swapTask incomplete"); return; }
     hold = ttaProject.arrTasks[target];
     ttaProject.arrTasks[target] = ttaProject.arrTasks[source];
     ttaProject.arrTasks[source] = hold;
