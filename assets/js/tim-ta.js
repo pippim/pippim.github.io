@@ -171,7 +171,7 @@ function get_dd_field (name) {
     get_dd_field("fail_test_2")
 */
 
-function updateRadioSounds () {
+function initSelectFiles () {
     /* Called on load and after drag & drop sound files */
     // Convert array of sound filenames to string delineated by |
     var replaceString = "";
@@ -185,12 +185,12 @@ function updateRadioSounds () {
         get_dd_field(key);
         if (dd_field.type == "select" && dd_field.lower == "sound_filenames") {
             // Update data dictionary key with list of REAL filenames
-            data_dictionary[key] = dd_field.name + "|select|" + replaceString;
+            data_dictionary[key] = dd_field.label + "|select|" + replaceString;
          }
     }
 }
 
-updateRadioSounds();
+initSelectFiles();
 
 // Global Names
 var ttaConfig, ttaProject, ttaTask;
