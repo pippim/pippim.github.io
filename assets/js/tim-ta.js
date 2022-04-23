@@ -195,14 +195,12 @@ updateRadioSounds();
 // Global Names
 var ttaConfig, ttaProject, ttaTask;
 
+// Read localStorage copy of tta
 ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
 if (ttaConfig == null) {
     ttaNewConfig();  // Create new config
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
 }
-
-// TODO: Bug must call for software to work???
-//    ttaNewConfig();  // Create new config
 
 function ttaNewConfig() {
     // Object.assign: https://stackoverflow.com/a/34294740/6929343
@@ -293,7 +291,7 @@ function paintTasksTable() {
     id = currentId;
 
     var cnt = ttaProject.arrTasks.length;
-    var html = "<h2>" + ttaProject.project_name + " Project - " +
+    var html = "<h2>" + ttaProject.project_name + " - " +
                 cnt.toString() + " Tasks</h2>"
 
     html += '<table id="tabTasks">\n' ;
@@ -543,7 +541,7 @@ function paintTaskWindow(mode) {
     buildInit();  // Reset data dictionary input field controls
 
     var cnt = ttaProject.arrTasks.length;
-    var html = "<h2>" + ttaProject.project_name + " Project - " +
+    var html = "<h2>" + ttaProject.project_name + " - " +
                 mode + " Task</h2>"
 
     html += '<form id="formTask"><table id="tabTask" class="tta-table">\n' ;
@@ -646,15 +644,14 @@ function buildSelect(key, value, mode) {
     // html += buildSelectOption("", "Please Choose...");
     var options = dd_field.lower.split('/');
     for (var i=0; i<options.length; i++) {
-        html += buildSelectOption(i.toString(), options[i]);
+        html += buildSelectOption(options[i]);
     }
     html += '</select>\n';
     // console.log("select html:", html);
     return html;
 }
 
-function buildSelectOption(value, name) {
-    // Value is index (i) which has no purpose at this time.
+function buildSelectOption(name) {
     var html="";
     html += '  <option value="' + name + '">' + name +
             '</option>\n' ;
@@ -662,9 +659,6 @@ function buildSelectOption(value, name) {
 }
 
 function setSelectInput(data) {
-    //var myDiv = document.getElementById( data.id + '-value' );
-    //myDiv.innerHTML = data.value;
-    console.log("setSelectInput(data):", data)
     // Set chosen value in inpSelects
     inpSelects[data.id] = data.value;
 }
