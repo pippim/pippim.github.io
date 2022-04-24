@@ -1174,8 +1174,7 @@ function validateNumber(value) {
 }
 
 function validateRange(value) {
-    if (!dd_field.type == "number") { return true; } // Not "number" type
-    return true;  // It's trying to validate project_name ???
+    if (dd_field.type != "number") { return true; } // Not "number" type
     lower = parseInt(dd_field.lower, 10);  // base 10
     upper = parseInt(dd_field.upper, 10);  // base 10
     if (value >= lower && value <= upper) { return true; }
@@ -1188,14 +1187,14 @@ function validateRadioButton(value) {
     // SHORT TERM (I think?)
     // LONG TERM still needed for sound filenames if user deleted one?
     // Thorough Doc: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
-    if (!dd_field.type == "radio") { return true; } // Not "number" type
+    if (dd_field.type != "radio") { return true; } // Not "number" type
     return true;
 }
 
 function validateSelect(value) {
     // SO Example: https://stackoverflow.com/a/44736840/6929343
     // Thorough Doc: https://www.w3schools.com/howto/howto_js_dropdown.asp
-    if (!dd_field.type == "select") { return true; } // Not "number" type
+    if (dd_field.type != "select") { return true; } // Not "number" type
     return true;
 }
 
