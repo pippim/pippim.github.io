@@ -608,16 +608,14 @@ function clickListen(i) {
         fAllSetsEndNotify = getProjectValue("all_sets_end_notification");
     }
 
+    console.log("Flags:", fTaskEndAlarm, fTaskEndNotify, fSetEndAlarm,
+                fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify);
     if (fTaskEndAlarm == fTaskEndNotify == fSetEndAlarm ==
     fSetEndNotify == fAllSetsEndAlarm == fAllSetsEndNotify == "false") {
         alert("Alarm and Notification turned off for this task.");
         return;
     }
 
-    console.log("ttaProject.project_name:", ttaProject.project_name);
-    console.log("ttaTask.task_name:", ttaTask.task_name);
-    console.log("Flags:", fTaskEndAlarm, fTaskEndNotify, fSetEndAlarm,
-                fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify);
     // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
     sound = getTaskValue("task_end_filename");
     // <audio> tags buried on the page with ID name same as sound filename.
