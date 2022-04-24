@@ -196,15 +196,21 @@ initSelectFiles();
 var ttaConfig, ttaProject, ttaTask;
 
 // Read localStorage copy of tta
-ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
+readConfig();
 if (ttaConfig == null) {
     ttaNewConfig();  // Create new config
-    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+    saveConfig();
 }
 
+function readConfig() {
+    ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
+}
+function saveConfig() {
+    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+}
 // Temporary to replace bad configuration
-ttaNewConfig();
-localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+// ttaNewConfig();
+// saveConfig();
 
 function ttaNewConfig() {
     // Object.assign: https://stackoverflow.com/a/34294740/6929343
@@ -226,7 +232,7 @@ function ttaNewConfig() {
 
     ttaConfig.arrProjects = [ttaProject.project_name];
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
-    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+    saveConfig();
 }
 
 function ttaNewTask (name) {
@@ -299,7 +305,8 @@ function paintProjectsTable() {
     currentTable = "Projects";
 
     // Just in case another browser tab changed configuration...
-    ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
+    readConfig();
+    //ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
     const cnt = ttaConfig.arrProjects.length;
     const strHuman = cntHuman(cnt, "Project");
     var html = "<h2>Tim-ta - " + strHuman + "</h2>"
@@ -679,7 +686,7 @@ function swapProject(source, target) {
     hold = ttaConfig.arrProjects[target];
     ttaConfig.arrProjects[target] = ttaConfig.arrProjects[source];
     ttaConfig.arrProjects[source] = hold;
-    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+    saveConfig();
     paintProjectsTable();
 }
 function swapTask(source, target) {
@@ -688,7 +695,7 @@ function swapTask(source, target) {
     ttaProject.arrTasks[target] = ttaProject.arrTasks[source];
     ttaProject.arrTasks[source] = hold;
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
-    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+    saveConfig();
     paintTasksTable();
 }
 
@@ -910,7 +917,8 @@ function clickUpdateTask() {
             delete ttaProject.objTasks[ttaTask.task_name];
             ttaProject.arrTasks.splice(original_index, 1);
             ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
-            localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+            saveConfig();
+
             // 2nd parameter means remove one item only
             paintTasksTable();  // What if there are no tasks left?
             return true;
@@ -948,7 +956,7 @@ function clickUpdateTask() {
     // Update object values
     ttaProject.objTasks[formValues.task_name] = formValues;
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
-    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+    saveConfig();
     paintTasksTable()
     return true;
 }
@@ -967,7 +975,7 @@ function clickUpdateProject() {
         if (confirmDelete()) {
             delete ttaConfig.objProjects[ttaProject.project_name];
             ttaConfig.arrProjects.splice(original_index, 1);
-            localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+            saveConfig();
             paintProjectsTable();  // What if there are no Projects left?
             return true;
         }
@@ -1006,7 +1014,7 @@ function clickUpdateProject() {
 
     // Update Project values
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
-    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+    saveConfig();
     paintProjectsTable();
     return true;
 }
