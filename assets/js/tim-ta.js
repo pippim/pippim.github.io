@@ -287,7 +287,7 @@ var tabListSym = "&#x2630;";
 var tabProjectsTitle = "View/Add/Edit/Delete Projects";
 var tabTasksTitle = "View/Add/Edit/Delete Tasks";
 
-var ttaDiv, currentTable, currentRow, currentMode;
+var ttaDiv, currentTable, currentRow, currentMode, currentForm;
 
 function ttaRunConfiguration (parentDiv) {
     ttaDiv = parentDiv;
@@ -700,6 +700,7 @@ function paintConfigForm() {
     var mode = "Edit";
     currentMode = mode;
     currentTable == "Config" // Wipe out where ever we came from
+    currentForm = "formConfig";
     buildInit();  // Reset data dictionary input field controls
 
     var html = "<h2>Tim-ta - Edit Configuration</h2>"
@@ -753,6 +754,7 @@ function paintProjectForm(mode) {
     // mode can be "Add", "Edit" or "Delete"
     // Button at bottom allows calling paintConfiguration()
     currentMode = mode;
+    currentForm = "formProject";
     buildInit();  // Reset data dictionary input field controls
 
     var html = "<h2>" + ttaProject.project_name + " - " +
@@ -810,6 +812,7 @@ function paintTaskForm(mode) {
     // mode can be "Add", "Edit" or "Delete"
     // Button at bottom allows calling paintProjectsTable()
     currentMode = mode;
+    currentForm = "formTask";
     buildInit();  // Reset data dictionary input field controls
 
     var html = "<h2>" + ttaProject.project_name + " - " +
@@ -1116,10 +1119,7 @@ function validateInput() {
 function getInputValues() {
     // Get input field values from <form> for "text" ONLY
     // Separate functions required for "switch" and "select"
-    if (currentTable == "Projects") { var form = "formProject" }
-    if (currentTable == "Tasks") { var form = "formTask" }
-    if (currentTable == "Config") { var form = "formConfig" }
-    var elements = document.getElementById(form).elements;
+    var elements = document.getElementById(currentForm).elements;
     var formValues = {}
     for (var i = 0; i < elements.length; i++) {
         var item = elements.item(i);
@@ -1239,7 +1239,10 @@ function toggleSwitch(name) {
                                       else { setSwitch(name, "true"); }
 }
 
-function confirmDelete() { return true }
+function confirmDelete(text) {
+    value = prompt("Enter '" + text "' (without the quotes) to confirm:")
+    return (value == text);
+}
 
 // ERROR: Task Name must be unique and cannot be blank
 
