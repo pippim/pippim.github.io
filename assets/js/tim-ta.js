@@ -610,9 +610,16 @@ function clickListen(i) {
 
     console.log("Flags:", fTaskEndAlarm, fTaskEndNotify, fSetEndAlarm,
                 fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify);
+    /*
     if (fTaskEndAlarm == "false" && fTaskEndNotify =="false" &&
         fSetEndAlarm == "false" && fSetEndNotify =="false" &&
         fAllSetsEndAlarm == "false" && fAllSetsEndNotify "false") {
+    */
+    if (
+        fTaskEndAlarm == "false" && fTaskEndNotify =="false" &&
+        fSetEndAlarm == "false" && fSetEndNotify =="false" &&
+        fAllSetsEndAlarm == "false" && fAllSetsEndNotify "false"
+        ) {
             alert("Alarm and Notification turned off for this task.");
             return;
     }
