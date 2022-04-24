@@ -1029,7 +1029,7 @@ function buildSelectOption(name, default_name) {
 
 function setSelectInput(data) {
     // screen callback to Set chosen option value in inpSelects
-    inpSelects[data.id] = data.value;
+    inpSelects[data.id].value = data.value;
 }
 
 function initSelectsAfterDOM() {
@@ -1219,14 +1219,11 @@ function getInputValues() {
     // Get switch values and add to formValues
     for (const name of Object.keys(inpSwitches)) {
         if (name == null) { alert ("inpSwitches undefined!"); continue; }
-        // console.log("inpSwitches[nane]:", JSON.stringify(inpSwitches));
         formValues[name] = inpSwitches[name].value;
     }
     // Add select values to formValues
     for (const name of Object.keys(inpSelects)) {
-        console.log("name", name, name.value);
-        if (inpSelects[name] == null) { alert ("inpSelects undefined!"); continue; }
-        // console.log("inpSelects[nane].id:", inpSelects[nane.id], inpSelects[nane.value]);
+        console.log("Select name/value", name, name.value);
         formValues[name] = inpSelects[name].value;
     }
 
