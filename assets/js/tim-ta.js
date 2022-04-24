@@ -879,8 +879,9 @@ function buildInput(key, mode) {
     // Translate value of "default" to real value in parent(s)
     var value;
     if (currentTable == "Projects") { value = getProjectValue(key); }
-    if (currentTable == "Tasks") { value = getTaskValue(key); }
-    else { value = ttaConfig[key]; }
+    else if (currentTable == "Tasks") { value = getTaskValue(key); }
+    else if (currentTable == "Config")  { value = ttaConfig[key]; }
+    else { alert ("INVALID currentTable:", currentTable); console.trace(); }
 
     html += '<td>\n';
     if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
