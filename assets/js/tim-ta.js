@@ -967,7 +967,7 @@ function clickUpdateTask() {
     }
     // Check for delete first and exit.
     if (currentMode == "Delete") {
-        if (confirmDelete()) {
+        if (confirmDelete(ttaTask.confirm_delete_phrase)) {
             delete ttaProject.objTasks[ttaTask.task_name];
             ttaProject.arrTasks.splice(original_index, 1);
             ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
@@ -1026,7 +1026,7 @@ function clickUpdateProject() {
     }
     // Check for delete first and exit.
     if (currentMode == "Delete") {
-        if (confirmDelete()) {
+        if (confirmDelete(ttaProject.confirm_delete_phrase)) {
             delete ttaConfig.objProjects[ttaProject.project_name];
             ttaConfig.arrProjects.splice(original_index, 1);
             saveConfig();
@@ -1120,7 +1120,7 @@ function getInputValues() {
     // Get input field values from <form> for "text" ONLY
     // Separate functions required for "switch" and "select"
     var elements = document.getElementById(currentForm).elements;
-    var formValues = {}
+    var formValues = {};
     for (var i = 0; i < elements.length; i++) {
         var item = elements.item(i);
         formValues[item.name] = item.value;
@@ -1240,7 +1240,8 @@ function toggleSwitch(name) {
 }
 
 function confirmDelete(text) {
-    value = prompt("Enter '" + text "' (without the quotes) to confirm:")
+    if (text == "") { return true; }
+    let value = prompt('Enter "' + text + '" (without the quotes) to confirm:');
     return (value == text);
 }
 
