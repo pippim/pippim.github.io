@@ -636,8 +636,7 @@ function clickListen(i) {
     audioControl = document.getElementById(sound);
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
-        btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
-        btnElm.title = tabListenTitle;
+        resetListen (btnElm);
         audioControl.pause();  // There is no "stop()" function
         audioControl.currentTime = 0;  // Works but doesn't invoke onended event
     } else {
@@ -646,8 +645,13 @@ function clickListen(i) {
         btnElm.innerHTML = tabStopSym;  // textContent can't be used because entity code
         btnElm.title = tabStopTitle;
         audioControl.play();
-        audioControl.onended = function() { resetListen (btnElm) };
+        audioControl.onended = function() { resetListen (btnElm); };
     }
+}
+
+function resetListen (btnElm) {
+    btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
+    btnElm.title = tabListenTitle;
 }
 
 function sendNotification(body, header, icon) {
@@ -1237,7 +1241,7 @@ function getInputValues() {
 
     // Get switch values and add to formValues
     for (const name of Object.keys(inpSwitches)) {
-        if (name == null) { alert ("inpSwitches undefined!"); continue; }
+        if (name == "") { console.log("inpSwitches empty name:", inpSwitches); continue; }
         /* SWITCH
             inpSwitches[name] = {
                                     id: fullId,
@@ -1248,8 +1252,9 @@ function getInputValues() {
         formValues[name] = inpSwitches[name].value;
     }
     // Add select values to formValues
-    console.log("inpSelects:", inpSelects)
+    console.log("getInputValues() inpSelects:", inpSelects)
     for (const name of Object.keys(inpSelects)) {
+        if (name == "") { console.log("inpSelects empty name:", inpSelects); continue; }
         /* SELECT
             inpSelects[key] = {
                 id: key,
