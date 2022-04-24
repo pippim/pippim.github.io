@@ -563,7 +563,9 @@ function clickCommon(i) {
 }
 
 function clickListen(i) {
-    // i is the row number being processed
+    // i is the row number being processed. First click plays sound, second
+    // click stops the sound. Notifications are also sent if applicable.
+
     /* From above: tabButton(i, tabListenSym, tabListenTitle, "clickListen");
     tabButton(i, button_code, title, callback) {
         // Add button to table detail. Return HTML with <button> code
@@ -579,9 +581,28 @@ function clickListen(i) {
     clickCommon(i);
     const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
     var btnElm = document.getElementById(btnId);
-    end_alarm = getTaskValue("task_end_alarm");
-    if (end_alarm == "false") { alert("Alarm turned off for this task."); return; }
 
+    /* prefix "f" short for "flag" where variable can contain "true" or "false" */
+    fTaskEndAlarm = getTaskValue("task_end_alarm");
+    fTaskEndNotify = getTaskValue("task_end_notification");
+    var fSetEndAlarm, fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify;
+    fSetEndAlarm = fSetEndNotify = fAllSetsEndAlarm = fAllSetsEndNotify = "false" ;    
+
+    // If this is the last task in the list, retrieve SetEnd and AllSetsEnd
+    if (i == cntTable - 1) {
+        fSetEndAlarm = getProjectValue("set_end_alarm");
+        fSetEndNotify = getProjectValue("set_end_notification");
+        fAllSetsEndAlarm = getProjectValue("all_sets_end_alarm");
+        fAllSetsEndNotify = getProjectValue("all_sets_end_notification");
+    }
+
+    if (fTaskEndAlarm == fTaskEndNotify == fSetEndAlarm ==
+    fSetEndNotify == fAllSetsEndAlarm == fAllSetsEndNotify == "false") {
+        alert("Alarm and Notification turned off for this task.");
+        return;
+    }
+
+    // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
     sound = getTaskValue("task_end_filename");
     // <audio> tags buried on the page with ID name same as sound filename.
     audioControl = document.getElementById(sound);
