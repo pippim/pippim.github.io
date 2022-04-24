@@ -1175,7 +1175,12 @@ function validateNumber(value) {
 
 function validateRange(value) {
     if (!dd_field.type == "number") { return true; } // Not "number" type
-    return true;
+    lower = parseInt(dd_field.lower, 10);  // base 10
+    upper = parseInt(dd_field.upper, 10);  // base 10
+    if (value >= lower && value <= upper) { return true; }
+    alert(dd_field.label + " must be between " + lower.toString() + " and " +
+          upper.toString());
+    return false;
 }
 
 function validateRadioButton(value) {
@@ -1247,9 +1252,6 @@ function confirmDelete(text) {
     let value = prompt('Enter "' + text + '" (without the quotes) to confirm:');
     return (value.toLowerCase() == text.toLowerCase());
 }
-
-// ERROR: Task Name must be unique and cannot be blank
-
 
 /* Functions NOT USED */
 
