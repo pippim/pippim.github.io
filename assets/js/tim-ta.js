@@ -107,16 +107,16 @@ var data_dictionary = {
     task_prompt: "Prompt to begin Task?|switch",
     task_end_alarm: "Play sound when Task ends?|switch",
     task_end_filename: "Task ending sound filename|select|sound_filenames",
-    task_end_notification: "Desktop notification when Task ends?|switch",
+    task_end_notification: "Notification when Task ends?|switch",
     run_set_times: "Number of times to run Set|number|1|1000",
     set_prompt: "Prompt to begin Set?|switch",
     set_end_alarm: "Play sound when Set ends?|switch",
     set_end_filename: "Set ending sound filename|select|sound_filenames",
-    set_end_notification: "Desktop notification when Set ends?|switch",
+    set_end_notification: "Notification when Set ends?|switch",
     all_sets_prompt: "Prompt to begin All Sets?|switch",
     all_sets_end_alarm: "Play sound when All Sets end?|switch",
     all_sets_end_filename: "All Sets ending sound filename|select|sound_filenames",
-    all_sets_end_notification: "Desktop notification when All Sets end?|switch",
+    all_sets_end_notification: "Notification when All Sets end?|switch",
     progress_bar_update_seconds: "Seconds between countdown updates|number|1|1000",
     fail_test_1: "Hello World",
     fail_test_2: "Good-bye Cruel World...|text|lower|upper|No such place!",
@@ -309,7 +309,8 @@ function paintProjectsTable() {
     //ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
     const cnt = ttaConfig.arrProjects.length;
     const strHuman = cntHuman(cnt, "Project");
-    var html = "<h2>Tim-ta - " + strHuman + "</h2>"
+    var html = "<h2>Tim-ta - " + strHuman + "</h2>";
+    html = htmlSetContainer(html);
 
     html += '<table id="tabProjects">\n' ;
         html += tabProjectsHeading();
@@ -347,11 +348,20 @@ function paintProjectsTable() {
 }  // End of paintProjectsTable()
 
 function cntHuman(cnt, name) {
+    // Returns: "No names", "1 name", "2 names"...
     var plural = name;
     if (cnt != 1) { plural += "s"; }
     if (cnt == 0) { var str = "No"; }
     if (cnt != 0) { var str = cnt.toString(); }
     return str + " " + plural;
+}
+
+function htmlSetContainer(html) {
+    // Table / Form heading where error message appear underneath
+    var container = '<div class="container">\n' + html +
+                    '<div class="error"></div>\n' +
+                    '</div>'
+    return container;
 }
 
 function tabProjectsHeading() {
@@ -396,6 +406,7 @@ function paintTasksTable() {
     const cnt = ttaProject.arrTasks.length;
     const strHuman = cntHuman(cnt, "Task");
     var html = "<h2>" + ttaProject.project_name + " - " + strHuman + "</h2>"
+    html = htmlSetContainer(html);
 
     html += '<table id="tabTasks">\n' ;
         html += tabTasksHeading();
@@ -622,6 +633,56 @@ function clickListen(i) {
     }
 }
 
+function sendNotification(body, header, icon) {
+    // Provide default positional arguments for those not passed
+    if (arguments.length < 3) { icon = '{{ site.url }}/favicon.png' }
+    if (arguments.length < 2) { header = 'Tim-ta ' +  ttaProject.project_name }
+    if (arguments.length < 1) { msg = ttaTask.task_name + ' has ended.' }
+
+    (async () => {
+        // create and show the notification
+        const showNotification = () => {
+            // create a new notification
+            const notification = new Notification(header, {
+                body: body,
+                icon: icon
+            });
+
+            // close the notification after 10 seconds
+            setTimeout(() => {
+                notification.close();
+            }, 10 * 1000);
+
+            // navigate to a URL when clicked
+            notification.addEventListener('click', () => {
+                console.log("Notification clicked")
+                // window.open('https://www.javascripttutorial.net/web-apis/javascript-notification/', '_blank');
+            });
+        }
+
+        // show an error message
+        const showError = () => {
+            const error = document.querySelector('.error');
+            error.style.display = 'block';
+            error.textContent = 'You blocked the notifications';
+        }
+
+        // check notification permission
+        let granted = false;
+
+        if (Notification.permission === 'granted') {
+            granted = true;
+        } else if (Notification.permission !== 'denied') {
+            let permission = await Notification.requestPermission();
+            granted = permission === 'granted' ? true : false;
+        }
+
+        // show notification or error
+        granted ? showNotification() : showError();
+
+    })();
+}
+
 function clickFuture(i) {
     clickCommon(i);
     alert("Future feature not implemented yet")
@@ -725,6 +786,7 @@ function paintConfigForm() {
     buildInit();  // Reset data dictionary input field controls
 
     var html = "<h2>Tim-ta - Edit Configuration</h2>"
+    html = htmlSetContainer(html);
 
     html += '<form id="formConfig"><table id="tabConfig" class="tta-table">\n' ;
     html += buildInput("task_prompt", mode);
@@ -780,6 +842,7 @@ function paintProjectForm(mode) {
 
     var html = "<h2>" + ttaProject.project_name + " - " +
                 mode + " Project</h2>"
+    html = htmlSetContainer(html);
 
     html += '<form id="formProject"><table id="tabProject" class="tta-table">\n' ;
     // TODO: Why not just loop through all keys? - Because order is random!
@@ -838,6 +901,7 @@ function paintTaskForm(mode) {
 
     var html = "<h2>" + ttaProject.project_name + " - " +
                 mode + " Task</h2>"
+    html += htmlSetContainer(html);
 
     html += '<form id="formTask"><table id="tabTask" class="tta-table">\n' ;
     html += buildInput("task_name", mode);
@@ -1154,11 +1218,13 @@ function getInputValues() {
 
     // Get switch values and add to formValues
     for (const name of Object.keys(inpSwitches)) {
-        formValues[name] = inpSwitches[name].value
+        console.log("inpSwitches[nane]:", name, inpSwitches[nane]);
+        formValues[name] = inpSwitches[name].value;
     }
     // Add select values to formValues
     for (const name of Object.keys(inpSelects)) {
-        formValues[name] = inpSelects[name].value
+        console.log("inpSelects[nane]:", name, inpSelects[nane]);
+        formValues[name] = inpSelects[name].value;
     }
 
     return formValues;
