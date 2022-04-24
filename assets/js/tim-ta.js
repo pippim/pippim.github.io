@@ -1118,6 +1118,7 @@ function getInputValues() {
     // Separate functions required for "switch" and "select"
     if (currentTable == "Projects") { var form = "formProject" }
     if (currentTable == "Tasks") { var form = "formTask" }
+    if (currentTable == "Config") { var form = "formConfig" }
     var elements = document.getElementById(form).elements;
     var formValues = {}
     for (var i = 0; i < elements.length; i++) {
