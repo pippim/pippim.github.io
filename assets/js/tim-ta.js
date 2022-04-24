@@ -1224,10 +1224,10 @@ function getInputValues() {
     }
     // Add select values to formValues
     for (const name of Object.keys(inpSelects)) {
-        console.log("name", name);
+        console.log("name", name, name.value);
         if (inpSelects[name] == null) { alert ("inpSelects undefined!"); continue; }
         // console.log("inpSelects[nane].id:", inpSelects[nane.id], inpSelects[nane.value]);
-        formValues[name.id] = inpSelects[name].value;
+        formValues[name] = inpSelects[name].value;
     }
 
     return formValues;
