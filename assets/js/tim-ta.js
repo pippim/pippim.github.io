@@ -1245,7 +1245,7 @@ function toggleSwitch(name) {
 function confirmDelete(text) {
     if (text == "") { return true; }
     let value = prompt('Enter "' + text + '" (without the quotes) to confirm:');
-    return (value == text);
+    return (value.toLowerCase() == text.toLowerCase());
 }
 
 // ERROR: Task Name must be unique and cannot be blank
