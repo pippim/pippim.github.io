@@ -1264,7 +1264,7 @@ function getInputValues() {
             };
         */
         console.log("Select name/value", name, inpSelects[name].value);
-        formValues[inpSelects[name]] = inpSelects[name].value;
+        formValues[inpSelects[name].id] = inpSelects[name].value;
     }
 
     return formValues;
