@@ -1325,12 +1325,13 @@ function buildSwitch(name, bool, mode) {
 
 function initSwitchesAfterDOM() {
     // After innerHTML is set we can bet the elements and set sources
+    console.log("initSwitchesAfterDOM()");
     for (const name of Object.keys(inpSwitches)) {
         element = document.getElementById(inpSwitches[name].id);
         inpSwitches[name].elm = element;
         element.addEventListener('click', () => { toggleSwitch(name); });
         setSwitch(name, inpSwitches[name].value);
-        console.log("switch name:", name)
+        console.log("switch name:", name);
     }
 }
 
