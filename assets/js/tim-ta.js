@@ -608,20 +608,19 @@ function clickListen(i) {
         fAllSetsEndNotify = getProjectValue("all_sets_end_notification");
     }
 
-    console.log("Flags:", fTaskEndAlarm, fTaskEndNotify, fSetEndAlarm,
-                fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify);
-    /* TRY various techniques
+    //console.log("Flags:", fTaskEndAlarm, fTaskEndNotify, fSetEndAlarm,
+    //            fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify);
     if (fTaskEndAlarm == "false" && fTaskEndNotify == "false" &&
         fSetEndAlarm == "false" && fSetEndNotify == "false" &&
         fAllSetsEndAlarm == "false" && fAllSetsEndNotify == "false") {
+    /* TRY various techniques
     if (
         fTaskEndAlarm == "false" && fTaskEndNotify == "false" &&
         fSetEndAlarm == "false" && fSetEndNotify == "false" &&
         fAllSetsEndAlarm == "false" && fAllSetsEndNotify == "false"
         ) {
-*/    if (fTaskEndAlarm == fTaskEndNotify == fSetEndAlarm ==
+    if (fTaskEndAlarm == fTaskEndNotify == fSetEndAlarm ==
         fSetEndNotify == fAllSetsEndAlarm == fAllSetsEndNotify == "false") {
-    /* TRY various techniques
     if (
         fTaskEndAlarm == fTaskEndNotify == fSetEndAlarm ==
         fSetEndNotify ==  fAllSetsEndAlarm == fAllSetsEndNotify == "false"
