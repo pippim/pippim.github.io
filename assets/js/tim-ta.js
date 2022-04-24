@@ -384,9 +384,9 @@ function tabProjectDetail(i) {
         html += tabButton(i, tabPlaySym, tabPlayTitle, "clickPlay");
         html += tabButton(i, tabUpSym, tabUpTitle, "clickUp");
         html += tabButton(i, tabDownSym, tabDownTitle, "clickDown");
-        html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
-        html += tabButton(i, tabListSym, tabTasksTitle, "clickTasks");
         html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
+        html += tabButton(i, tabListSym, tabTasksTitle, "clickTasks");
+        html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
     }           // Five columns of buttons
 
     html += "<td><font size='+2'>" + ttaProject.project_name + "</font></td>\n";
@@ -515,8 +515,8 @@ function tabTaskDetail(i) {
         html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
         html += tabButton(i, tabUpSym, tabUpTitle, "clickUp");
         html += tabButton(i, tabDownSym, tabDownTitle, "clickDown");
-        html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
         html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
+        html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
     }           // Five columns of buttons
 
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
