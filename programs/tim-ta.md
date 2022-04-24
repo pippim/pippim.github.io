@@ -20,8 +20,9 @@ layout: program
 </script>
 
 <div id="sample_laundry_div">
-Above is a sample project for doing Laundry. After adding
-your own projects you can delete the sample project.
+A sample project for doing Laundry appears when you have
+no projects defined. After adding
+your own project(s), you can delete the sample project.
 </div>
 
 You can have an unlimited number of projects.
