@@ -358,8 +358,8 @@ function cntHuman(cnt, name) {
 
 function htmlSetContainer(html) {
     // Table / Form heading where error message appear underneath
-    var container = '<div class="container">\n' + html +
-                    '<div class="error"></div>\n' +
+    var container = '<div class="ttaContainer">\n' + html +
+                    '<div class="ttaModal"></div>\n' +
                     '</div>'
     return container;
 }
@@ -667,7 +667,7 @@ function sendNotification(body, header, icon) {
 
         // show an error message
         const showError = () => {
-            const error = document.querySelector('.error');
+            const error = document.querySelector('.ttaModal');
             error.style.display = 'block';
             error.textContent = 'You blocked the notifications';
         }
@@ -1333,6 +1333,7 @@ function initSwitchesAfterDOM() {
         setSwitch(name, inpSwitches[name].value);
         console.log("switch name/value:", name, inpSwitches[name].value);
     }
+    console.log("inpSwitches:", inpSwitches);
 }
 
 function setSwitch(name, bool) {
