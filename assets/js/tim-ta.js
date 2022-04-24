@@ -968,7 +968,8 @@ function clickUpdateTask() {
     }
     // Check for delete first and exit.
     if (currentMode == "Delete") {
-        if (confirmDelete(ttaTask.confirm_delete_phrase)) {
+        var confirm = getTaskValue('confirm_delete_phrase');
+        if (confirmDelete(confirm)) {
             delete ttaProject.objTasks[ttaTask.task_name];
             ttaProject.arrTasks.splice(original_index, 1);
             ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
@@ -1027,7 +1028,8 @@ function clickUpdateProject() {
     }
     // Check for delete first and exit.
     if (currentMode == "Delete") {
-        if (confirmDelete(ttaProject.confirm_delete_phrase)) {
+        var confirm = getProjectValue('confirm_delete_phrase');
+        if (confirmDelete(confirm)) {
             delete ttaConfig.objProjects[ttaProject.project_name];
             ttaConfig.arrProjects.splice(original_index, 1);
             saveConfig();
