@@ -1035,6 +1035,7 @@ function buildSelectOption(name, default_name) {
 function setSelectInput(data) {
     // screen callback to Set chosen option value in inpSelects
     inpSelects[data.id].value = data.value;
+    console.log("setSelectInput(data) data.id, data.value:", data.id, data.value)
 }
 
 function initSelectsAfterDOM() {
@@ -1235,6 +1236,8 @@ function getInputValues() {
     }
     // Add select values to formValues
     for (const name of Object.keys(inpSelects)) {
+        /* SELECT
+        */
         console.log("Select name/value", name, name.value);
         formValues[name] = inpSelects[name].value;
     }
