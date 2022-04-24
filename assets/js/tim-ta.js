@@ -1218,15 +1218,15 @@ function getInputValues() {
 
     // Get switch values and add to formValues
     for (const name of Object.keys(inpSwitches)) {
-        if (name.id == null) { alert ("inpSwitches undefined!"); continue; }
-        console.log("inpSwitches[nane]:", JSON.stringify(inpSwitches));
+        if (name == null) { alert ("inpSwitches undefined!"); continue; }
+        // console.log("inpSwitches[nane]:", JSON.stringify(inpSwitches));
         formValues[name] = inpSwitches[name].value;
     }
     // Add select values to formValues
     for (const name of Object.keys(inpSelects)) {
-        if (name.id == null) { alert ("inpSelects undefined!"); continue; }
+        if (inpSelects[name.id] == null) { alert ("inpSelects undefined!"); continue; }
         console.log("inpSelects[nane].id:", inpSelects[nane].id);
-        formValues[name.id] = inpSelects[name].value;
+        formValues[name.id] = inpSelects[name.id].value;
     }
 
     return formValues;
