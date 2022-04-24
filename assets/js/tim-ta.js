@@ -1104,7 +1104,7 @@ function validateInput() {
     // Validation - Non-blank Task name, numeric fields, "true" or "false"
     // Assign "default" to fields if they match parent
     for (const name of Object.keys(formValues)) {
-        if (name == "") { console.log("empty name"); continue; }
+        if (name == "") { console.log("empty name on:", currentForm); continue; }
         var value = formValues[name];
         get_dd_field(name);
 
