@@ -1045,6 +1045,7 @@ function initSelectsAfterDOM() {
         inpSelects[name].elm = element;
         //element.addEventListener('click', () => { clickSelect(name); });
         //setSelect(name, inpSelects[name].value);
+        console.log("inpSelects{} name/value:", name, inpSelects[name].value)
     }
 }
 
@@ -1235,8 +1236,15 @@ function getInputValues() {
         formValues[name] = inpSwitches[name].value;
     }
     // Add select values to formValues
+    console.log("inpSelects:", inpSelects)
     for (const name of Object.keys(inpSelects)) {
         /* SELECT
+            inpSelects[key] = {
+                id: key,
+                elm: "Pippim Promise",
+                value: value,
+                mode: mode
+            };
         */
         console.log("Select name/value", name, name.value);
         formValues[name] = inpSelects[name].value;
