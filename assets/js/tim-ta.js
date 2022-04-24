@@ -1224,6 +1224,13 @@ function getInputValues() {
     // Get switch values and add to formValues
     for (const name of Object.keys(inpSwitches)) {
         if (name == null) { alert ("inpSwitches undefined!"); continue; }
+        /* SWITCH
+            inpSwitches[name] = {
+                                    id: fullId,
+                                    elm: "Pippim Promise",
+                                    value: bool,
+                                    mode: mode
+        */
         formValues[name] = inpSwitches[name].value;
     }
     // Add select values to formValues
@@ -1323,6 +1330,7 @@ function initSwitchesAfterDOM() {
         inpSwitches[name].elm = element;
         element.addEventListener('click', () => { toggleSwitch(name); });
         setSwitch(name, inpSwitches[name].value);
+        console.log("switch name:", name)
     }
 }
 
