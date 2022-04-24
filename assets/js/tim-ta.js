@@ -613,9 +613,10 @@ function clickListen(i) {
         return;
     }
 
-    // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
+    console.log("ttaProject.project_name:", ttaProject.project_name);
     console.log("Flags:", fTaskEndAlarm, fTaskEndNotify, fSetEndAlarm,
-                fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify)
+                fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify);
+    // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
     sound = getTaskValue("task_end_filename");
     // <audio> tags buried on the page with ID name same as sound filename.
     audioControl = document.getElementById(sound);
