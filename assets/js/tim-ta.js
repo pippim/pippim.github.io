@@ -610,10 +610,11 @@ function clickListen(i) {
 
     console.log("Flags:", fTaskEndAlarm, fTaskEndNotify, fSetEndAlarm,
                 fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify);
-    if (fTaskEndAlarm == fTaskEndNotify == fSetEndAlarm ==
-    fSetEndNotify == fAllSetsEndAlarm == fAllSetsEndNotify == "false") {
-        alert("Alarm and Notification turned off for this task.");
-        return;
+    if (fTaskEndAlarm == "false" && fTaskEndNotify =="false" &&
+        fSetEndAlarm == "false" && fSetEndNotify =="false" &&
+        fAllSetsEndAlarm == "false" && fAllSetsEndNotify "false") {
+            alert("Alarm and Notification turned off for this task.");
+            return;
     }
 
     // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
