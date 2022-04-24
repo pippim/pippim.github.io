@@ -202,6 +202,10 @@ if (ttaConfig == null) {
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
 }
 
+// Temporary to replace bad configuration
+ttaNewConfig();
+localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+
 function ttaNewConfig() {
     // Object.assign: https://stackoverflow.com/a/34294740/6929343
     ttaConfig = Object.assign({}, tta_config);
@@ -923,12 +927,12 @@ function clickUpdateTask() {
     // Change field values to "default" if they match parent(s) value
     for (const name of Object.keys(formValues)) {
         var value = formValues[name];  // Current Task value
-        old_value = getProjectValue(name);  // Get project's value
+        var parent_value = getProjectValue(name);  // Get project's value
         // If new Task value same as Project's value it is a "default".
-        if (value == old_value) { formValues[name] = "default" }
+        if (value == parent_value) { formValues[name] = "default" }
     }
 
-    // Save changes or Add new ttaTask
+    // ttaProject.arrTasks - Add new ttaTask.task_name or rename
     if (original_index < 0) {
         // Add mode, push new key onto array
         ttaProject.arrTasks.push(formValues.task_name);
@@ -980,9 +984,9 @@ function clickUpdateProject() {
     // Change field values to "default" if they match parent(s) value
     for (const name of Object.keys(formValues)) {
         var value = formValues[name];  // Current value
-        old_value = ttaConfig[name];  // Get Config's value
+        var parent_value = ttaConfig[name];  // Get Config's value
         // If new Project value same as Config's value it is a "default".
-        if (value == old_value) { formValues[name] = "default" }
+        if (value == parent_value) { formValues[name] = "default" }
         // Below is different than updateTask
         ttaProject[name] = formValues[name];
     }
