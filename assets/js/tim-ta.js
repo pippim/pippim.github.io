@@ -1210,7 +1210,7 @@ function validateInput() {
     var no = 0;
     for (const name of Object.keys(formValues)) {
         no += 1;
-        if (name == "") { console.log("empty name on:", currentForm, "no:", no); continue; }
+        if (name == "") { console.log("empty name on:", currentForm, formValues); continue; }
         var value = formValues[name];
         get_dd_field(name);
 
