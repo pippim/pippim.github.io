@@ -1175,6 +1175,7 @@ function validateNumber(value) {
 
 function validateRange(value) {
     if (!dd_field.type == "number") { return true; } // Not "number" type
+    return true;  // It's trying to validate project_name ???
     lower = parseInt(dd_field.lower, 10);  // base 10
     upper = parseInt(dd_field.upper, 10);  // base 10
     if (value >= lower && value <= upper) { return true; }
