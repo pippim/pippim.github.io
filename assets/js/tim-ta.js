@@ -614,6 +614,8 @@ function clickListen(i) {
     }
 
     // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
+    console.log("Flags:", fTaskEndAlarm, fTaskEndNotify, fSetEndAlarm,
+                fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify)
     sound = getTaskValue("task_end_filename");
     // <audio> tags buried on the page with ID name same as sound filename.
     audioControl = document.getElementById(sound);
@@ -901,7 +903,7 @@ function paintTaskForm(mode) {
 
     var html = "<h2>" + ttaProject.project_name + " - " +
                 mode + " Task</h2>"
-    html += htmlSetContainer(html);
+    html = htmlSetContainer(html);
 
     html += '<form id="formTask"><table id="tabTask" class="tta-table">\n' ;
     html += buildInput("task_name", mode);
@@ -1223,7 +1225,7 @@ function getInputValues() {
     }
     // Add select values to formValues
     for (const name of Object.keys(inpSelects)) {
-        console.log("Select name/value", name, name.value);
+        // console.log("Select name/value", name, name.value);
         formValues[name] = inpSelects[name].value;
     }
 
