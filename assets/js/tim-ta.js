@@ -1331,7 +1331,7 @@ function initSwitchesAfterDOM() {
         inpSwitches[name].elm = element;
         element.addEventListener('click', () => { toggleSwitch(name); });
         setSwitch(name, inpSwitches[name].value);
-        console.log("switch name:", name);
+        console.log("switch name/value:", name, name.value);
     }
 }
 
