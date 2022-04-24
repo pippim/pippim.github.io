@@ -318,13 +318,9 @@ function paintProjectsTable() {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';  // tabControl
-    html += taskButton(tabConfigSym, tabConfigTitle, "clickFuture");
+    html += taskButton(tabConfigSym, tabConfigTitle, "paintConfigForm");
     html += "<font size='+2'>Configuration</font>";
     html += '</div>\n';
-    //html += '<div class="middleFoot">\n';
-    //html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
-    //html += "<font size='+2'>Add new Task</font>";
-    //html += '</div>\n';
     html += '<div class="rightFoot">\n';
     html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
     html += "<font size='+2'>New Project</font>";
@@ -699,6 +695,60 @@ function swapTask(source, target) {
     paintTasksTable();
 }
 
+function paintConfigForm() {
+    // Button at bottom allows calling paintProjectTasks()
+    var mode = "Edit";
+    currentMode = mode;
+    currentTable == "Config" // Wipe out where ever we came from
+    buildInit();  // Reset data dictionary input field controls
+
+    var html = "<h2>Tim-ta - Edit Configuration</h2>"
+
+    html += '<form id="formConfig"><table id="tabConfig" class="tta-table">\n' ;
+    html += buildInput("task_prompt", mode);
+    html += buildInput("task_end_alarm", mode);
+    html += buildInput("task_end_filename", mode);
+    html += buildInput("task_end_notification", mode);
+    html += buildInput("run_set_times", mode);
+    html += buildInput("set_prompt", mode);
+    html += buildInput("set_end_alarm", mode);
+    html += buildInput("set_end_filename", mode);
+    html += buildInput("set_end_notification", mode);
+    html += buildInput("all_sets_prompt", mode);
+    html += buildInput("all_sets_end_alarm", mode);
+    html += buildInput("all_sets_end_filename", mode);
+    html += buildInput("all_sets_end_notification", mode);
+    html += buildInput("progress_bar_update_seconds", mode);
+    html += buildInput("confirm_delete_phrase", mode);
+    html += '</table></form>\n' ;
+
+    html += '<div class="bigFoot">\n';  // Start footer buttons
+    html += '<div class="centerFoot">\n';
+    html += taskButton("Cancel", "Cancel changes", "paintProjectsTable");
+    html += "<font size='+2'>Cancel changes</font>"
+    html += '</div>\n';
+    html += '<div class="rightFoot">\n';
+    var textMode = mode;
+    if (textMode == "Edit") { textMode = "Save" }
+    html += taskButton(textMode, textMode + " Configuration", "clickUpdateConfig");
+    html += "<font size='+2'>" + textMode + " Configuration</font>";
+    html += '</div>\n';
+    html += '</div>\n';
+
+    // TODO: Move next lines to class name: tabClass inside TCM
+    html += '<style>\n';
+    html += '#tabProject th, #tabProject td {\n' +
+            '}\n'
+    html += ttaBtnStyle();
+    html += bigFootStyle();
+    html += inpSwitchStyle();
+    html += inpSelectStyle();
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    ttaDiv.innerHTML = html;
+    initSwitchesAfterDOM();
+    initSelectsAfterDOM();
+}
+
 function paintProjectForm(mode) {
     // mode can be "Add", "Edit" or "Delete"
     // Button at bottom allows calling paintConfiguration()
@@ -826,7 +876,8 @@ function buildInput(key, mode) {
     // Translate value of "default" to real value in parent(s)
     var value;
     if (currentTable == "Projects") { value = getProjectValue(key); }
-    else { value = getTaskValue(key); }
+    if (currentTable == "Tasks") { value = getTaskValue(key); }
+    else { value = ttaConfig[key]; }
 
     html += '<td>\n';
     if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
@@ -1014,6 +1065,27 @@ function clickUpdateProject() {
 
     // Update Project values
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
+    saveConfig();
+    paintProjectsTable();
+    return true;
+}
+
+function clickUpdateConfig() {
+    /* Update Configuration - currentMode will always be "Edit" */
+
+    /* Validate input field values before Saving */
+    if (!validateInput()) { return false; }
+
+    // Get form input values including switches and selects
+    // NOTE formValues is really formValues
+    var formValues = getInputValues();
+
+    // Copy new values from Form into Config
+    for (const name of Object.keys(formValues)) {
+        ttaConfig[name] = formValues[name];
+    }
+
+    // Update Config values
     saveConfig();
     paintProjectsTable();
     return true;
