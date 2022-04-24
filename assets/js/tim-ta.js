@@ -614,6 +614,7 @@ function clickListen(i) {
     }
 
     console.log("ttaProject.project_name:", ttaProject.project_name);
+    console.log("ttaTask.task_name:", ttaTask.task_name);
     console.log("Flags:", fTaskEndAlarm, fTaskEndNotify, fSetEndAlarm,
                 fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify);
     // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
