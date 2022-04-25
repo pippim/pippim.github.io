@@ -843,13 +843,6 @@ function clickPlay() {
     ttaDiv.scrollIntoView();
 
     pollCloseBtn();
-    return
-
-    alert("Sample form shown.");
-
-    if (calledFromTable == "Projects") { paintProjectsTable(); return; }
-    if (calledFromTable == "Tasks") { paintTasksTable(); return; }
-    alert("ClickPlay() Unknown currentTable:", currentTable)
 }
 
 function clickControls(i) {
