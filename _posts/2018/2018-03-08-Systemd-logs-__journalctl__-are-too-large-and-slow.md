@@ -7,19 +7,19 @@ stack_url:    https://askubuntu.com/q/1012913
 type:         Answer
 tags:         command-line performance disk-usage systemd systemd-journald
 created_date: 2018-03-08 01:13:36
-edit_date:    2022-03-16 16:06:55
+edit_date:    2022-04-19 16:32:58
 votes:        "90 "
 favorites:    
-views:        "48,492 "
+views:        "48,835 "
 accepted:     Accepted
-uploaded:     2022-04-17 17:56:59
+uploaded:     2022-04-24 19:32:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Systemd-logs-__journalctl__-are-too-large-and-slow.md
 toc:          false
 navigation:   false
 clipboard:    true
 ---
 
-# `systemd` comes with a nifty vacuum cleaner
+## `systemd` comes with a nifty vacuum cleaner
 
 To limit log files to a specific size `systemd` provides a `vacuum` feature to "suck out" older information from log files. The parameters allowed are:
 
@@ -40,7 +40,7 @@ Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/user-
 Vacuuming done, freed 176.0M of archived journals on disk.
 ```
 
-# Disk Space saved
+## Disk Space saved
 
 The `journalctl` size is reduced substantially:
 
@@ -51,7 +51,7 @@ Archived and active journals take up 136.0M on disk.
 
 Size has dropped from 312 MB to 136 MB a savings of 176 MB and 64 MB more than expected. This is probably a one time anomaly due to an extraordinary large single log file. I'll revise this answer after a month if new info arises.
 
-# Boot Logs reduced
+## Boot Logs reduced
 
 The number of `journalctl` boot logs was 32 but now it is reduced to 26:
 
@@ -87,7 +87,7 @@ $ journalctl --list-boots
   0 6a105af650d5442a9b03004165e58adf Tue 2018-03-06 17:42:45 MST—Wed 2018-03-07 
 ```
 
-# Performance improved
+## Performance improved
 
 The time to verify `journalctl` integrity is noticeably quicker:
 
@@ -95,10 +95,7 @@ The time to verify `journalctl` integrity is noticeably quicker:
 
 Time has reduced from 10 seconds down to 4 seconds.
 
-## Credit to this [Source][2]
-
-
-----------
+Credit to this [Source][2].
 
 # Long Term Solutions
 

@@ -10,9 +10,9 @@ created_date: 2018-12-12 05:06:26
 edit_date:    2018-12-16 16:51:49
 votes:        "2 "
 favorites:    
-views:        "248 "
+views:        "249 "
 accepted:     
-uploaded:     2022-04-17 17:56:59
+uploaded:     2022-04-24 19:32:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-12-Cannot-connect-to-g_n-wifi-networks-is-my-driver-the-issue_.md
 toc:          false
 navigation:   false

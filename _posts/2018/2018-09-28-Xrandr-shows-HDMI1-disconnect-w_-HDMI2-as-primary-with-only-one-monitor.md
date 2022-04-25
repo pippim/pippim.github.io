@@ -10,9 +10,9 @@ created_date: 2018-09-28 23:01:36
 edit_date:    2022-03-21 02:17:41
 votes:        "0 "
 favorites:    
-views:        "2,318 "
+views:        "2,324 "
 accepted:     Accepted
-uploaded:     2022-04-17 17:56:59
+uploaded:     2022-04-24 19:32:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-28-Xrandr-shows-HDMI1-disconnect-w_-HDMI2-as-primary-with-only-one-monitor.md
 toc:          false
 navigation:   false

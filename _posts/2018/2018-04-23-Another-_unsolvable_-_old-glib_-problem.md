@@ -10,9 +10,9 @@ created_date: 2018-04-23 03:50:29
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "884 "
+views:        "890 "
 accepted:     
-uploaded:     2022-04-17 17:56:59
+uploaded:     2022-04-24 19:32:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-23-Another-_unsolvable_-_old-glib_-problem.md
 toc:          false
 navigation:   false
