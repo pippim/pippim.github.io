@@ -794,7 +794,7 @@ function clickPlay() {
     // Back to same Table
     const cnt = ttaProject.arrTasks.length;
     const strHuman = cntHuman(cnt, "Task");
-    var html = "<h2>" + ttaProject.project_name + " - " + strHuman + "</h2>"
+    var html = "<h2>" + ttaProject.project_name + " - Run timer for " + strHuman + "</h2>"
     // html = htmlSetContainer(html);
 
     // alertError Message override
@@ -841,6 +841,8 @@ function clickPlay() {
     html += '</style>'  // Was extra \n causing empty space at bottom?
     ttaDiv.innerHTML = html;
     ttaDiv.scrollIntoView();
+
+    return
 
     alert("Sample form shown.");
 
