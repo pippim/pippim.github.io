@@ -359,7 +359,7 @@ function cntHuman(cnt, name) {
 function htmlSetContainer(html) {
     // Table / Form heading where error message appear underneath
     var container = '<div class="ttaContainer">\n' + html +
-                    '<div class="ttaModal"></div>\n' +
+                    '<div id="ttaModal"></div>\n' +
                     '</div>'
     return container;
 }
@@ -686,7 +686,7 @@ function sendNotification(body, header, icon) {
 
         // show an error message
         const showError = () => {
-            const error = document.querySelector('.ttaModal');
+            const error = document.getElementById('ttaModal');
             error.style.display = 'block';
             error.textContent = 'You blocked the notifications';
         }
@@ -1427,12 +1427,12 @@ function confirmDelete(text) {
 function alertError (msg) {
     /*  Assumes DOM is loaded and innerHTML is already set with:
             '<div class="ttaContainer">\n' + html +
-            '<div class="ttaModal"></div>\n' +
+            '<div id="ttaModal"></div>\n' +
             '</div>'
 
         "html" above would contain "<h2>Title blah blah</h2>\n"
     */
-    var id = document.getElementsById("ttaModal");
+    var id = document.getElementById("ttaModal");
     var html = "";
     html += '<div class="alert">\n' +
             '<span class="closebtn">&times;</span>\n' +
@@ -1443,7 +1443,7 @@ function alertError (msg) {
 }
 
 function alertWarning (msg) {
-    var id = document.getElementsById("ttaModal");
+    var id = document.getElementById("ttaModal");
     var html = "";
     html += '<div class="alert warning">\n' +
             '<span class="closebtn">&times;</span>\n' +
@@ -1454,7 +1454,7 @@ function alertWarning (msg) {
 }
 
 function alertInfo (msg) {
-    var id = document.getElementsById("ttaModal");
+    var id = document.getElementById("ttaModal");
     var html = "";
     html += '<div class="alert info">\n' +
             '<span class="closebtn">&times;</span>\n' +
@@ -1465,7 +1465,7 @@ function alertInfo (msg) {
 }
 
 function alertSuccess (msg) {
-    var id = document.getElementsById("ttaModal");
+    var id = document.getElementById("ttaModal");
     var html = "";
     html += '<div class="alert success">\n' +
             '<span class="closebtn">&times;</span>\n' +
