@@ -810,6 +810,7 @@ function paintConfigForm() {
     html = htmlSetContainer(html);
 
     html += '<form id="formConfig"><table id="tabConfig" class="tta-table">\n' ;
+    // TODO: Put these in a loop
     html += buildInput("task_prompt", mode);
     html += buildInput("task_end_alarm", mode);
     html += buildInput("task_end_filename", mode);
@@ -868,6 +869,7 @@ function paintProjectForm(mode) {
     html += '<form id="formProject"><table id="tabProject" class="tta-table">\n' ;
     // TODO: Why not just loop through all keys? - Because order is random!
 
+    // TODO: Put these in a loop
     html += buildInput("project_name", mode);
     html += buildInput("task_prompt", mode);
     html += buildInput("task_end_alarm", mode);
@@ -925,6 +927,7 @@ function paintTaskForm(mode) {
     html = htmlSetContainer(html);
 
     html += '<form id="formTask"><table id="tabTask" class="tta-table">\n' ;
+    // TODO: Put these in a loop
     html += buildInput("task_name", mode);
     html += buildInput("hours", mode);
     html += buildInput("minutes", mode);
@@ -1217,7 +1220,10 @@ function validateInput() {
     for (const name of Object.keys(formValues)) {
         no += 1;
         if (name == "") { console.log("validateInput() empty name on:",
-                                      currentForm, formValues); continue;
+                                      currentForm, formValues);
+                          console.log("inpSelects[name].id:",
+                                      inpSelects[name].id, inpSelects[name].value);
+                          continue;
         }
         var value = formValues[name];
         get_dd_field(name);
