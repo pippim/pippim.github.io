@@ -314,6 +314,7 @@ function paintProjectsTable() {
 
     html += '<div style="max-height: 75vh; overflow-y: auto; overflow-x: hidden;">\n' ;
     html += '<table id="tabProjects" class="tta-table">\n' ;
+//    html += '<table id="tabProjects" class="tta-table">\n' ;
         html += tabProjectsHeading();
         for (var i = 0; i < cnt; i++) { html += tabProjectDetail(i); }
     html += '</table>\n';
@@ -332,11 +333,13 @@ function paintProjectsTable() {
 
     html += '<style>\n';
     // TODO: Redo using: https://stackoverflow.com/a/58563703/6929343
-    /*
+
     html += '#tabProjects table { table-layout: auto; width: 100%; }\n';
     html += '#tabProjects th, #tabProjects td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
+
+    /*
         table {
           text-align: left;
           position: relative;
