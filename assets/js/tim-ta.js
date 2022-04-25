@@ -312,7 +312,7 @@ function paintProjectsTable() {
     var html = "<h2>Tim-ta - " + strHuman + "</h2>";
     html = htmlSetContainer(html);
 
-    html += '<div style="max-height: 75vh; overflow: auto;">\n' ;
+    html += '<div style="max-height: 75vh; overflow-y: auto; overflow-x: hidden;">\n' ;
     html += '<table id="tabProjects" class="tta-table">\n' ;
         html += tabProjectsHeading();
         for (var i = 0; i < cnt; i++) { html += tabProjectDetail(i); }
