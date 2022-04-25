@@ -842,6 +842,7 @@ function clickPlay() {
     ttaDiv.innerHTML = html;
     ttaDiv.scrollIntoView();
 
+    pollCloseBtn();
     return
 
     alert("Sample form shown.");
