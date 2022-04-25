@@ -628,7 +628,7 @@ function clickListen(i) {
 
     // <audio> tags buried on the page with ID name same as sound filename.
     if (sound !== null) { soundAlarm (sound); }
-    if (notify !== null) { soundNotify (notify); }
+    if (notify !== null) { sendNotify (notify); }
 }
 
 function soundAlarm(sound) {
