@@ -1216,7 +1216,9 @@ function validateInput() {
     var no = 0;
     for (const name of Object.keys(formValues)) {
         no += 1;
-        if (name == "") { console.log("empty name on:", currentForm, formValues); continue; }
+        if (name == "") { console.log("validateInput() empty name on:",
+                                      currentForm, formValues); continue;
+        }
         var value = formValues[name];
         get_dd_field(name);
 
@@ -1265,7 +1267,7 @@ function getInputValues() {
                 mode: mode
             };
         */
-        console.log("Select name/value", name, inpSelects[name].value);
+        console.log("getInputValues() name/value", name, inpSelects[name].value);
         formValues[inpSelects[name].id] = inpSelects[name].value;
     }
 
