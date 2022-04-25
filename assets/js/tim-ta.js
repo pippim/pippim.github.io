@@ -1439,6 +1439,9 @@ function alertError (msg) {
             '<strong>ERROR:</strong> ' + msg +
             '</div>' ;
     id.innerHTML = html;
+            const error = document.getElementById('ttaModal');
+            error.style.display = 'block';
+            error.textContent = 'Error message test';
     pollCloseBtn();
 }
 
