@@ -375,7 +375,7 @@ function tabProjectsHeading() {
 
 function tabProjectDetail(i) {
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[i]];
-    var html = '<tr onclick="tabSetRow(this)">\n'; // Currently does nothing
+    var html = '<tr>\n';
     if (scrSmall) {
         html += tabButton(i, tabPlaySym, tabPlayTitle, "clickPlay");
         html += tabButton(i, tabControlsSym, tabControlsTitle, "clickFuture");
@@ -506,7 +506,7 @@ function tabTasksHeading() {
 
 function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-    var html = '<tr onclick="tabSetRow(this)">\n'; // Currently does nothing
+    var html = '<tr">\n';
     if (scrSmall) {
         html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
         html += tabButton(i, tabControlsSym, tabControlsTitle, "clickFuture");
@@ -577,18 +577,6 @@ function clickListen(i) {
     // i is the row number being processed. First click plays sound, second
     // click stops the sound. Notifications are also sent if applicable.
 
-    /* From above: tabButton(i, tabListenSym, tabListenTitle, "clickListen");
-    tabButton(i, button_code, title, callback) {
-        // Add button to table detail. Return HTML with <button> code
-        // code is the HTML code, E.G. &#x25b6; for Play button.
-        var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
-                   'id="tabBtnId_' + callback + i + '" \n' + 
-                   'type="button" onclick="' + callback + '(' + i + ')" \n' +
-                   'title="' + title + '">' + button_code + '</button></td>\n';
-        return html;
-    }
-    */
-
     clickCommon(i);
     /* prefix "f" short for "flag" where variable can contain "true" or "false" */
     fTaskEndAlarm = getTaskValue("task_end_alarm");
@@ -619,9 +607,9 @@ function clickListen(i) {
     else if (fAllSetsEndAlarm == "true") { sound = getProjectValue("all_sets_end_filename"); }
 
     var notify;
-    if (fTaskEndNotify == "true") { notify = "Task"; }
-    else if (fSetEndNotify == "true") { notify = "Set"; }
-    else if (fAllSetsEndNotify == "true") { notify = "All Sets"; }
+    if (fTaskEndNotify == "true") { notify = "Task " + ttaTask.task_name; }
+    else if (fSetEndNotify == "true") { notify = "Set " + ttaProject.project_name; }
+    else if (fAllSetsEndNotify == "true") { notify = "All Sets " + ttaProject.project_name; }
 
     // <audio> tags buried on the page with ID name same as sound filename.
     if (sound !== null) { soundAlarm (i, sound); }
@@ -629,6 +617,17 @@ function clickListen(i) {
 }
 
 function soundAlarm(i, sound) {
+    /* From above: tabButton(i, tabListenSym, tabListenTitle, "clickListen");
+    tabButton(i, button_code, title, callback) {
+        // Add button to table detail. Return HTML with <button> code
+        // code is the HTML code, E.G. &#x25b6; for Play button.
+        var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
+                   'id="tabBtnId_' + callback + i + '" \n' +
+                   'type="button" onclick="' + callback + '(' + i + ')" \n' +
+                   'title="' + title + '">' + button_code + '</button></td>\n';
+        return html;
+    }
+    */
     const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
     var btnElm = document.getElementById(btnId);
     audioControl = document.getElementById(sound);
@@ -647,15 +646,15 @@ function soundAlarm(i, sound) {
     }
 }
 
+function resetListen(btnElm) {
+    btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
+    btnElm.title = tabListenTitle;
+}
+
 function sendNotify(i, notify) {
     // i not used. Added for consistency...
     let msg = notify + " has ended.";
     sendNotification(msg);
-}
-
-function resetListen(btnElm) {
-    btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
-    btnElm.title = tabListenTitle;
 }
 
 function sendNotification(body, header, icon) {
@@ -1226,6 +1225,7 @@ function validateInput() {
         if (name == "") { console.log("validateInput() empty name on:",
                                       currentForm, "formValues:", formValues);
                           console.log("Current field Number:", no);
+                          alertError("validateInput() empty nam");
                           continue;
         }
         var value = formValues[name];
@@ -1400,41 +1400,100 @@ function confirmDelete(text) {
 
 /* Functions NOT USED */
 
-function logAllTasks(str) {
-    // Apr 17, 2022 - Created to debug objA = objB not shallow copying.
-    console.log("========", str, "========");
-    console.log("Object.keys(ttaProject.objTasks):", Object.keys(ttaProject.objTasks))
-    // .includes() from: https://stackoverflow.com/a/1473742/6929343
-    if (ttaProject.arrTasks.includes("Wash Cycle")) {
-        console.log("1. ", ttaProject.objTasks["Wash Cycle"].task_name);
-    }
-    if (ttaProject.arrTasks.includes("Rinse Cycle")) {
-        console.log("2. ", ttaProject.objTasks["Rinse Cycle"].task_name);
-    }
-    if (ttaProject.arrTasks.includes("Dryer")) {
-        console.log("3. ", ttaProject.objTasks["Dryer"].task_name);
-    }
+/*
+<h2>Alert Messages</h2>
+<p>Click on the "x" symbol to close the alert message.</p>
+
+
+<div class="alert success">
+  <span class="closebtn">&times;</span>
+  <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+
+<div class="alert info">
+  <span class="closebtn">&times;</span>
+  <strong>Info!</strong> Indicates a neutral informative change or action.
+</div>
+
+<div class="alert warning">
+  <span class="closebtn">&times;</span>
+  <strong>Warning!</strong> Indicates a warning that might need attention.
+</div>
+
+
+*/
+
+/* WARNING: These alerts can only be sent after innerHTML has been set */
+function alertError (msg) {
+    /*  Assumes DOM is loaded and innerHTML is already set with:
+            '<div class="ttaContainer">\n' + html +
+            '<div class="ttaModal"></div>\n' +
+            '</div>'
+
+        "html" above would contain "<h2>Title blah blah</h2>\n"
+    */
+    var id = document.getElementsById("ttaModal");
+    var html = "";
+    html += '<div class="alert">\n' +
+            '<span class="closebtn">&times;</span>\n' +
+            '<strong>ERROR:</strong> ' + msg +
+            '</div>' ;
+    id.innerHTML = html;
+    pollCloseBtn();
 }
 
-// DEPRECATED - window.addEventListener("click", processClick);
-// On initial load classes haven't been defined yet as HTML is dynamic
-function processClick(event) {
-    var elm = event.target;
-    //console.log("elm.classList:", elm.classList)
-    //console.log("elm:", elm)
-    if (elm.classList.contains("clickListen()")) { clickListen() } ;
-    if (elm.classList.contains("clickPlay()")) { clickPlay() } ;
-    if (elm.classList.contains("clickUp()")) { clickUp() } ;
-    if (elm.classList.contains("clickDown()")) { clickDown() } ;
-    if (elm.classList.contains("clickEdit()")) { clickEdit() } ;
-    if (elm.classList.contains("clickDelete()")) { clickDelete() } ;
-    if (elm.classList.contains("clickControls()")) { clickControls() } ;
+function alertWarning (msg) {
+    var id = document.getElementsById("ttaModal");
+    var html = "";
+    html += '<div class="alert warning">\n' +
+            '<span class="closebtn">&times;</span>\n' +
+            '<strong>WARNING:</strong> ' + msg +
+            '</div>' ;
+    id.innerHTML = html;
+    pollCloseBtn();
 }
 
-function tabSetRow(x) {
-    //console.log("typeof x", typeof x)
-    //currentRow = x.rowIndex;
-    //console.log("Row index is: " + currentRow);
+function alertInfo (msg) {
+    var id = document.getElementsById("ttaModal");
+    var html = "";
+    html += '<div class="alert info">\n' +
+            '<span class="closebtn">&times;</span>\n' +
+            '<strong>Information:</strong> ' + msg +
+            '</div>' ;
+    id.innerHTML = html;
+    pollCloseBtn();
 }
 
+function alertSuccess (msg) {
+    var id = document.getElementsById("ttaModal");
+    var html = "";
+    html += '<div class="alert success">\n' +
+            '<span class="closebtn">&times;</span>\n' +
+            '<strong>Success!</strong> ' + msg +
+            '</div>' ;
+    id.innerHTML = html;
+    pollCloseBtn();
+}
+
+function pollCloseBtn() {
+    // Get all elements with class="closebtn"
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    // Loop through all close buttons
+    for (i = 0; i < close.length; i++) {
+        // When someone clicks on a close button
+        close[i].onclick = function(){
+
+            // Get the parent of <span class="closebtn"> (<div class="alert">)
+            var div = this.parentElement;
+
+            // Set the opacity of div to 0 (transparent)
+            div.style.opacity = "0";
+
+            // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+    }
+}
 /* End of /assets/js/tim-ta.js */
