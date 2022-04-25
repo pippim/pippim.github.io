@@ -790,7 +790,7 @@ function clickPlay() {
     currentForm = "formPlay"
     var calledFromTable = currentTable;
     currentTable = "Tasks"
-    alert("Clicked Run but not implemented yet")
+
     // Back to same Table
     const cnt = ttaProject.arrTasks.length;
     const strHuman = cntHuman(cnt, "Task");
