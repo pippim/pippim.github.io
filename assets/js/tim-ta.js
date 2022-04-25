@@ -488,9 +488,10 @@ function ttaTableStyle() {
 
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
+            '  border-collapse: collapse;\n' +
             '}\n' +
             '.tta-table th, .tta-table td {\n' +
-            '  padding: .25rem .25rem;\n' +
+            '  padding: 5px;\n' +
             '}\n' +
             '.tta-table th {\n' +
             '  position: -webkit-sticky;\n' +
