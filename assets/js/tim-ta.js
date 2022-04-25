@@ -1220,9 +1220,8 @@ function validateInput() {
     for (const name of Object.keys(formValues)) {
         no += 1;
         if (name == "") { console.log("validateInput() empty name on:",
-                                      currentForm, formValues);
-                          console.log("inpSelects[name].id:",
-                                      inpSelects[name].id, inpSelects[name].value);
+                                      currentForm, "formValues:", formValues);
+                          console.log("Current field Number:", no);
                           continue;
         }
         var value = formValues[name];
