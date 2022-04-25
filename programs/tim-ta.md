@@ -148,23 +148,23 @@ suitable for device/web browser in use.
 
 From: https://stackoverflow.com/a/27053825/6929343
 
-23E9 ⏩︎ fast forward
-23EA ⏪︎ rewind, fast backwards
-23EB ⏫︎ fast increase
-23EC ⏬︎ fast decrease
-23ED ⏭︎ skip to end, next
-23EE ⏮︎ skip to start, previous
-23EF ⏯︎ play/pause toggle
-23F1 ⏱︎ stopwatch
-23F2 ⏲︎ timer clock
-23F3 ⏳︎ hourglass
-23F4 ⏴︎ reverse, back
-23F5 ⏵︎ forward, next, play
-23F6 ⏶︎ increase
-23F7 ⏷︎ decrease
-23F8 ⏸︎ pause
-23F9 ⏹︎ stop
-23FA ⏺︎ record 
+- 23E9 ⏩︎ fast forward
+- 23EA ⏪︎ rewind, fast backwards
+- 23EB ⏫︎ fast increase
+- 23EC ⏬︎ fast decrease
+- 23ED ⏭︎ skip to end, next
+- 23EE ⏮︎ skip to start, previous
+- 23EF ⏯︎ play/pause toggle
+- 23F1 ⏱︎ stopwatch
+- 23F2 ⏲︎ timer clock
+- 23F3 ⏳︎ hourglass
+- 23F4 ⏴︎ reverse, back
+- 23F5 ⏵︎ forward, next, play
+- 23F6 ⏶︎ increase
+- 23F7 ⏷︎ decrease
+- 23F8 ⏸︎ pause
+- 23F9 ⏹︎ stop
+- 23FA ⏺︎ record 
 
 ---
 
