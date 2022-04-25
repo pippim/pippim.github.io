@@ -333,6 +333,33 @@ function paintProjectsTable() {
     html += '#tabProjects th, #tabProjects td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
+    // TODO: Redo using: https://stackoverflow.com/a/58563703/6929343
+    /*
+        table {
+          text-align: left;
+          position: relative;
+        }
+
+        th {
+          background: white;
+          position: sticky;
+          top: 0;
+        }
+
+        NOTE: It's necessary to wrap the table with a div with max-height:
+
+        <div id="managerTable" >
+        ...
+        </div>
+
+        WHERE:
+
+        #managerTable {
+            max-height: 500px;
+            overflow: auto;
+        }
+
+    */
     html += '#tabProjectss th {\n' +
             'position: -webkit-sticky;\n' +
             'position: sticky;\n' +
@@ -757,10 +784,71 @@ function clickAddProject() {
     paintProjectForm("Add");
     // alert("Clicked Add Project but not implemented yet")
 }
+
 function clickPlay() {
-    // Run Project - Countdown all tasks
+    // Run Project - Countdown all tasks. Scroll as needed.
+    currentForm = "formPlay"
+    var calledFromTable = currentTable;
+    currentTable = "Tasks"
     alert("Clicked Run but not implemented yet")
+    // Back to same Table
+    const cnt = ttaProject.arrTasks.length;
+    const strHuman = cntHuman(cnt, "Task");
+    var html = "<h2>" + ttaProject.project_name + " - " + strHuman + "</h2>"
+    // html = htmlSetContainer(html);
+
+    // alertError Message override
+    var msg = "Run Task Timers is a Work In Progress";
+    html += '<div class="alert">\n' +
+            '<span class="closebtn">&times;</span>\n' +
+            '<strong>ERROR:</strong> ' + msg +
+            '</div>' ;
+
+    html += '<table id="tabTasks">\n' ;
+        html += tabTasksHeading();
+        for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
+    html += '</table>\n';
+
+    html += '<div class="bigFoot">\n';  // Start footer buttons
+    html += '<div class="leftFoot">\n';
+    html += taskButton(tabPlaySym, tabPlayTitle, "clickPlay");
+    html += "<font size='+2'>Run Project</font>";
+    html += '</div>\n';
+    html += '<div class="middleFoot">\n';
+    html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
+    html += "<font size='+2'>New Task</font>";
+    html += '</div>\n';
+    html += '<div class="rightFoot">\n';
+    html += taskButton(tabListSym, tabProjectsTitle, "paintProjectsTable");
+    html += "<font size='+2'>All Projects</font>";
+    html += '</div>\n';
+    html += '</div>\n';
+
+    html += '<style>\n';
+    html += '#tabTasks table { table-layout: auto; width: 100%; }\n';
+    html += '#tabTasks th, #tabTasks td {\n' +
+            '  padding: .25rem .25rem;\n' +
+            '}\n'
+    html += '#tabTasks th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #f1f1f1;\n' +
+            '}\n'
+    html += ttaBtnStyle();
+    html += bigFootStyle();
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    ttaDiv.innerHTML = html;
+    ttaDiv.scrollIntoView();
+
+    alert("Sample form shown.");
+
+    if (calledFromTable == "Projects") { paintProjectsTable(); return; }
+    if (calledFromTable == "Tasks") { paintTasksTable(); return; }
+    alert("ClickPlay() Unknown currentTable:", currentTable)
 }
+
 function clickControls(i) {
     // Popup buttons for small screens
     clickCommon(i);
@@ -1433,6 +1521,7 @@ function alertError (msg) {
         "html" above would contain "<h2>Title blah blah</h2>\n"
     */
     var id = document.getElementById("ttaModal");
+    id.classList.add("alert");
     var html = "";
     html += '<div class="alert">\n' +
             '<span class="closebtn">&times;</span>\n' +
@@ -1443,10 +1532,12 @@ function alertError (msg) {
             error.style.display = 'block';
             error.textContent = 'Error message test';
     pollCloseBtn();
+    id.classList.remove("alert");
 }
 
 function alertWarning (msg) {
     var id = document.getElementById("ttaModal");
+    id.classList.add("alert", "warning");
     var html = "";
     html += '<div class="alert warning">\n' +
             '<span class="closebtn">&times;</span>\n' +
@@ -1454,27 +1545,32 @@ function alertWarning (msg) {
             '</div>' ;
     id.innerHTML = html;
     pollCloseBtn();
+    id.classList.remove("alert", "warning");
 }
 
 function alertInfo (msg) {
     var id = document.getElementById("ttaModal");
+    id.classList.add("alert", "info");
     var html = "";
     html += '<div class="alert info">\n' +
             '<span class="closebtn">&times;</span>\n' +
             '<strong>Information:</strong> ' + msg +
             '</div>' ;
     id.innerHTML = html;
+    id.classList.remove("alert", "info");
     pollCloseBtn();
 }
 
 function alertSuccess (msg) {
     var id = document.getElementById("ttaModal");
+    id.classList.add("alert", "success");
     var html = "";
     html += '<div class="alert success">\n' +
             '<span class="closebtn">&times;</span>\n' +
             '<strong>Success!</strong> ' + msg +
             '</div>' ;
     id.innerHTML = html;
+    id.classList.remove("alert", "success");
     pollCloseBtn();
 }
 
