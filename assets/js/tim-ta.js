@@ -330,11 +330,11 @@ function paintProjectsTable() {
 
     html += '<style>\n';
     // TODO: Redo using: https://stackoverflow.com/a/58563703/6929343
+    /*
     html += '#tabProjects table { table-layout: auto; width: 100%; }\n';
     html += '#tabProjects th, #tabProjects td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
-    /*
         table {
           text-align: left;
           position: relative;
@@ -483,6 +483,7 @@ function ttaTableStyle() {
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
             '  width: 100%;\n' +
+            '  max-width: 100vw;\n' +
             '  max-height: 85vh;\n' +
             '  overflow: auto;\n' +
             '}\n' +
