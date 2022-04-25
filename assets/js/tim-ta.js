@@ -488,6 +488,7 @@ function ttaTableStyle() {
 
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
+            '  width: 100%;\n' +
             '  border-collapse: collapse;\n' +
             '}\n' +
             '.tta-table th, .tta-table td {\n' +
