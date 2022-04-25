@@ -482,7 +482,7 @@ function paintTasksTable() {
 function ttaTableStyle() {
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
-            '  width: 100%;\n' +
+            '  width: 100% - 1em;\n' +
             '  max-width: 100vw;\n' +
             '  max-height: 85vh;\n' +
             '  overflow: auto;\n' +
