@@ -435,7 +435,7 @@ function paintTasksTable() {
     var html = "<h2>" + ttaProject.project_name + " - " + strHuman + "</h2>"
     html = htmlSetContainer(html);
 
-    html += '<table id="tabTasks">\n' ;
+    html += '<table id="tabTasks class="tta-table">\n' ;
         html += tabTasksHeading();
         for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
     html += '</table>\n';
@@ -456,6 +456,8 @@ function paintTasksTable() {
     html += '</div>\n';
 
     html += '<style>\n';
+
+/* Try tta-table styling only
     html += '#tabTasks table { table-layout: auto; width: 100%; }\n';
     html += '#tabTasks th, #tabTasks td {\n' +
             '  padding: .25rem .25rem;\n' +
@@ -467,6 +469,7 @@ function paintTasksTable() {
             'z-index: 1;\n' +
             'background: #f1f1f1;\n' +
             '}\n'
+*/
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
@@ -475,7 +478,12 @@ function paintTasksTable() {
 }  // End of paintTasksTable()
 
 function tableStyle() {
-    return  '.tta-table table { table-layout: auto; width: 100%; }\n' +
+    return  '.tta-table table {\n' +
+            '  table-layout: auto;\n' +
+            '  width: 100%;\n' +
+            '  max-height: 85vh;\n' +
+            '  overflow: auto;\n' +
+            '}\n' +
             '.tta-table th, .tta-table td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n' +
