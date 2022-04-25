@@ -590,9 +590,6 @@ function clickListen(i) {
     */
 
     clickCommon(i);
-    const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
-    var btnElm = document.getElementById(btnId);
-
     /* prefix "f" short for "flag" where variable can contain "true" or "false" */
     fTaskEndAlarm = getTaskValue("task_end_alarm");
     fTaskEndNotify = getTaskValue("task_end_notification");
@@ -627,11 +624,13 @@ function clickListen(i) {
     else if (fAllSetsEndNotify == "true") { notify = "All Sets"; }
 
     // <audio> tags buried on the page with ID name same as sound filename.
-    if (sound !== null) { soundAlarm (sound); }
-    if (notify !== null) { sendNotify (notify); }
+    if (sound !== null) { soundAlarm (i, sound); }
+    if (notify !== null) { sendNotify (i, notify); }
 }
 
-function soundAlarm(sound) {
+function soundAlarm(i, sound) {
+    const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
+    var btnElm = document.getElementById(btnId);
     audioControl = document.getElementById(sound);
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
@@ -648,7 +647,8 @@ function soundAlarm(sound) {
     }
 }
 
-function sendNotify(notify) {
+function sendNotify(i, notify) {
+    // i not used. Added for consistency...
     let msg = notify + " has ended.";
     sendNotification(msg);
 }
