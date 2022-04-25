@@ -631,8 +631,33 @@ function clickListen(i) {
     }
 
     // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
-    sound = getTaskValue("task_end_filename");
+    var sound;
+    if (task_end_alarm == "true") {
+        sound = getTaskValue("task_end_filename");
+    }
+    else if (set_end_alarm == "true") {
+        sound = getProjectValue("set_end_filename");
+    }
+    else if (all_sets_end_alarm == "true") {
+        sound = getProjectValue("set_end_filename");
+    }
+
+    var notify;
+    if (task_end_notification == "true") {
+        notify = "Task";
+    }
+    else if (set_end_notification == "true") {
+        notify = "Set";
+    }
+    else if (all_sets_end_notification == "true") {
+        notify = "All Sets";
+    }
     // <audio> tags buried on the page with ID name same as sound filename.
+    if (sound !== null) { soundAlarm (sound); }
+    if (notify !== null) { soundNotify (notify); }
+}
+
+function soundAlarm(sound) {
     audioControl = document.getElementById(sound);
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
@@ -649,7 +674,12 @@ function clickListen(i) {
     }
 }
 
-function resetListen (btnElm) {
+function sendNotify(notify) {
+    let msg = notify + " has ended.";
+    sendNotification(msg);
+}
+
+function resetListen(btnElm) {
     btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
     btnElm.title = tabListenTitle;
 }
