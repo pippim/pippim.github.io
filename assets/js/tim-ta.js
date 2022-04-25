@@ -312,7 +312,7 @@ function paintProjectsTable() {
     var html = "<h2>Tim-ta - " + strHuman + "</h2>";
     html = htmlSetContainer(html);
 
-    html += '<div style="max-height: 85vh; overflow: auto;">\n' ;
+    html += '<div style="max-height: 75vh; overflow: auto;">\n' ;
     html += '<table id="tabProjects" class="tta-table">\n' ;
         html += tabProjectsHeading();
         for (var i = 0; i < cnt; i++) { html += tabProjectDetail(i); }
@@ -438,7 +438,7 @@ function paintTasksTable() {
     var html = "<h2>" + ttaProject.project_name + " - " + strHuman + "</h2>"
     html = htmlSetContainer(html);
 
-    html += '<div style="max-height: 85vh; overflow: auto;">\n' ;
+    html += '<div style="max-height: 75vh; overflow: auto;">\n' ;
     html += '<table class="tta-table">\n' ;
         html += tabTasksHeading();
         for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
@@ -817,7 +817,7 @@ function clickPlay() {
             '<strong>ERROR:</strong> ' + msg +
             '</div>' ;
 
-    html += '<div style="max-height: 85vh; overflow: auto;">\n' ;
+    html += '<div style="max-height: 75vh; overflow: auto;">\n' ;
     html += '<table id="tabPlay" class="tta-table">\n' ;
         html += tabTasksHeading();
         for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
@@ -914,7 +914,7 @@ function paintConfigForm() {
     var html = "<h2>Tim-ta - Edit Configuration</h2>"
     html = htmlSetContainer(html);
 
-    html += '<div style="max-height: 85vh; overflow: auto;">\n' ;
+    html += '<div style="max-height: 75vh; overflow: auto;">\n' ;
     html += '<form id="formConfig"><table id="tabConfig" class="tta-table">\n' ;
     // TODO: Put these in a loop
     html += buildInput("task_prompt", mode);
@@ -974,7 +974,7 @@ function paintProjectForm(mode) {
                 mode + " Project</h2>"
     html = htmlSetContainer(html);
 
-    html += '<div style="max-height: 85vh; overflow: auto;">\n' ;
+    html += '<div style="max-height: 75vh; overflow: auto;">\n' ;
     html += '<form id="formProject"><table id="tabProject" class="tta-table">\n' ;
     // TODO: Why not just loop through all keys? - Because order is random!
 
@@ -1035,7 +1035,7 @@ function paintTaskForm(mode) {
                 mode + " Task</h2>"
     html = htmlSetContainer(html);
 
-    html += '<div style="max-height: 85vh; overflow: auto;">\n' ;
+    html += '<div style="max-height: 75vh; overflow: auto;">\n' ;
     html += '<form id="formTask"><table id="tabTask" class="tta-table">\n' ;
     // TODO: Put these in a loop
     html += buildInput("task_name", mode);
