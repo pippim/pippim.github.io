@@ -480,12 +480,14 @@ function paintTasksTable() {
 }  // End of paintTasksTable()
 
 function ttaTableStyle() {
+//            '  max-width: 100vw;\n' +
+
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
-            '  width: 100% - 1em;\n' +
-            '  max-width: 100vw;\n' +
+            '  width: 100%;\n' +
             '  max-height: 85vh;\n' +
-            '  overflow: auto;\n' +
+            '  display: block;\n' +
+            '  overflow-y: scroll;\n' +
             '}\n' +
             '.tta-table th, .tta-table td {\n' +
             '  padding: .25rem .25rem;\n' +
@@ -815,7 +817,7 @@ function clickPlay() {
             '<strong>ERROR:</strong> ' + msg +
             '</div>' ;
 
-    html += '<table id="tabTasks">\n' ;
+    html += '<table id="tabPlay" class="tta-table">\n' ;
         html += tabTasksHeading();
         for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
     html += '</table>\n';
@@ -836,6 +838,7 @@ function clickPlay() {
     html += '</div>\n';
 
     html += '<style>\n';
+/*
     html += '#tabTasks table { table-layout: auto; width: 100%; }\n';
     html += '#tabTasks th, #tabTasks td {\n' +
             '  padding: .25rem .25rem;\n' +
@@ -847,6 +850,8 @@ function clickPlay() {
             'z-index: 1;\n' +
             'background: #f1f1f1;\n' +
             '}\n'
+*/
+    html += ttaTableStyle();
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
