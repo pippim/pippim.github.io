@@ -608,50 +608,24 @@ function clickListen(i) {
         fAllSetsEndNotify = getProjectValue("all_sets_end_notification");
     }
 
-    //console.log("Flags:", fTaskEndAlarm, fTaskEndNotify, fSetEndAlarm,
-    //            fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify);
     if (fTaskEndAlarm == "false" && fTaskEndNotify == "false" &&
         fSetEndAlarm == "false" && fSetEndNotify == "false" &&
         fAllSetsEndAlarm == "false" && fAllSetsEndNotify == "false") {
-    /* TRY various techniques
-    if (
-        fTaskEndAlarm == "false" && fTaskEndNotify == "false" &&
-        fSetEndAlarm == "false" && fSetEndNotify == "false" &&
-        fAllSetsEndAlarm == "false" && fAllSetsEndNotify == "false"
-        ) {
-    if (fTaskEndAlarm == fTaskEndNotify == fSetEndAlarm ==
-        fSetEndNotify == fAllSetsEndAlarm == fAllSetsEndNotify == "false") {
-    if (
-        fTaskEndAlarm == fTaskEndNotify == fSetEndAlarm ==
-        fSetEndNotify ==  fAllSetsEndAlarm == fAllSetsEndNotify == "false"
-        ) {
-    */
             alert("Alarm and Notification turned off for this task.");
             return;
     }
 
     // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
     var sound;
-    if (fTaskEndAlarm == "true") {
-        sound = getTaskValue("task_end_filename");
-    }
-    else if (fSetEndAlarm == "true") {
-        sound = getProjectValue("set_end_filename");
-    }
-    else if (fAllSetsEndAlarm == "true") {
-        sound = getProjectValue("set_end_filename");
-    }
+    if (fTaskEndAlarm == "true") { sound = getTaskValue("task_end_filename"); }
+    else if (fSetEndAlarm == "true") { sound = getProjectValue("set_end_filename"); }
+    else if (fAllSetsEndAlarm == "true") { sound = getProjectValue("all_sets_end_filename"); }
 
     var notify;
-    if (fTaskEndNotify == "true") {
-        notify = "Task";
-    }
-    else if (fSetEndNotify == "true") {
-        notify = "Set";
-    }
-    else if (fAllSetsEndNotify == "true") {
-        notify = "All Sets";
-    }
+    if (fTaskEndNotify == "true") { notify = "Task"; }
+    else if (fSetEndNotify == "true") { notify = "Set"; }
+    else if (fAllSetsEndNotify == "true") { notify = "All Sets"; }
+
     // <audio> tags buried on the page with ID name same as sound filename.
     if (sound !== null) { soundAlarm (sound); }
     if (notify !== null) { soundNotify (notify); }
