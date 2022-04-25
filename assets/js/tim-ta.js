@@ -632,24 +632,24 @@ function clickListen(i) {
 
     // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
     var sound;
-    if (task_end_alarm == "true") {
+    if (fTaskEndAlarm == "true") {
         sound = getTaskValue("task_end_filename");
     }
-    else if (set_end_alarm == "true") {
+    else if (fSetEndAlarm == "true") {
         sound = getProjectValue("set_end_filename");
     }
-    else if (all_sets_end_alarm == "true") {
+    else if (fAllSetsEndAlarm == "true") {
         sound = getProjectValue("set_end_filename");
     }
 
     var notify;
-    if (task_end_notification == "true") {
+    if (fTaskEndNotify == "true") {
         notify = "Task";
     }
-    else if (set_end_notification == "true") {
+    else if (fSetEndNotify == "true") {
         notify = "Set";
     }
-    else if (all_sets_end_notification == "true") {
+    else if (fAllSetsEndNotify == "true") {
         notify = "All Sets";
     }
     // <audio> tags buried on the page with ID name same as sound filename.
