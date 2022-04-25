@@ -984,10 +984,12 @@ function buildInput(key, mode) {
 
     // Translate value of "default" to real value in parent(s)
     var value;
-    if (currentTable == "Projects") { value = getProjectValue(key); }
-    else if (currentTable == "Tasks") { value = getTaskValue(key); }
-    else if (currentTable == "Config")  { value = ttaConfig[key]; }
-    else { alert ("INVALID currentTable:", currentTable); console.trace(); }
+    if (currentForm == "Project") { value = getProjectValue(key); }
+    else if (currentForm == "Task") { value = getTaskValue(key); }
+    else if (currentForm == "Config")  { value = ttaConfig[key]; }
+    else { alert ("INVALID currentForm:", currentForm); console.trace(); }
+
+    if (value == null) { console.log ("buildInput():", currentForm); console.trace(); }
 
     html += '<td>\n';
     if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
@@ -1061,7 +1063,7 @@ function initSelectsAfterDOM() {
         inpSelects[name].elm = element;
         //element.addEventListener('click', () => { clickSelect(name); });
         //setSelect(name, inpSelects[name].value);
-        console.log("inpSelects{} name/value:", name, inpSelects[name].value)
+        console.log("initSelectsAfterDOM() name/value:", name, inpSelects[name].value)
     }
 }
 
