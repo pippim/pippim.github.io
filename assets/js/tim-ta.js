@@ -984,9 +984,9 @@ function buildInput(key, mode) {
 
     // Translate value of "default" to real value in parent(s)
     var value;
-    if (currentForm == "Project") { value = getProjectValue(key); }
-    else if (currentForm == "Task") { value = getTaskValue(key); }
-    else if (currentForm == "Config")  { value = ttaConfig[key]; }
+    if (currentForm == "formProject") { value = getProjectValue(key); }
+    else if (currentForm == "formTask") { value = getTaskValue(key); }
+    else if (currentForm == "formConfig")  { value = ttaConfig[key]; }
     else { alert ("INVALID currentForm:", currentForm); console.trace(); }
 
     if (value == null) { console.log ("buildInput():", currentForm); console.trace(); }
