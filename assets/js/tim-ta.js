@@ -312,7 +312,7 @@ function paintProjectsTable() {
     var html = "<h2>Tim-ta - " + strHuman + "</h2>";
     html = htmlSetContainer(html);
 
-    html += '<table id="tabProjects">\n' ;
+    html += '<table id="tabProjects" class="tta-table">\n' ;
         html += tabProjectsHeading();
         for (var i = 0; i < cnt; i++) { html += tabProjectDetail(i); }
     html += '</table>\n';
@@ -329,11 +329,11 @@ function paintProjectsTable() {
     html += '</div>\n';
 
     html += '<style>\n';
+    // TODO: Redo using: https://stackoverflow.com/a/58563703/6929343
     html += '#tabProjects table { table-layout: auto; width: 100%; }\n';
     html += '#tabProjects th, #tabProjects td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
-    // TODO: Redo using: https://stackoverflow.com/a/58563703/6929343
     /*
         table {
           text-align: left;
@@ -359,7 +359,6 @@ function paintProjectsTable() {
             overflow: auto;
         }
 
-    */
     html += '#tabProjectss th {\n' +
             'position: -webkit-sticky;\n' +
             'position: sticky;\n' +
@@ -367,6 +366,8 @@ function paintProjectsTable() {
             'z-index: 1;\n' +
             'background: #f1f1f1;\n' +
             '}\n'
+    */
+    html += ttaTableStyle();
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
@@ -435,7 +436,7 @@ function paintTasksTable() {
     var html = "<h2>" + ttaProject.project_name + " - " + strHuman + "</h2>"
     html = htmlSetContainer(html);
 
-    html += '<table id="tabTasks class="tta-table">\n' ;
+    html += '<table class="tta-table">\n' ;
         html += tabTasksHeading();
         for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
     html += '</table>\n';
@@ -470,6 +471,7 @@ function paintTasksTable() {
             'background: #f1f1f1;\n' +
             '}\n'
 */
+    html += ttaTableStyle();
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
@@ -477,7 +479,7 @@ function paintTasksTable() {
     ttaDiv.scrollIntoView();
 }  // End of paintTasksTable()
 
-function tableStyle() {
+function ttaTableStyle() {
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
             '  width: 100%;\n' +
@@ -940,6 +942,7 @@ function paintConfigForm() {
     html += '<style>\n';
     html += '#tabProject th, #tabProject td {\n' +
             '}\n'
+    html += ttaTableStyle();
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += inpSwitchStyle();
@@ -998,8 +1001,7 @@ function paintProjectForm(mode) {
 
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n';
-    html += '#tabProject th, #tabProject td {\n' +
-            '}\n'
+    html += ttaTableStyle();
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += inpSwitchStyle();
@@ -1050,8 +1052,7 @@ function paintTaskForm(mode) {
 
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n';
-    html += '#tabTask th, #tabTask td {\n' +
-            '}\n'
+    html += ttaTableStyle();
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += inpSwitchStyle();
