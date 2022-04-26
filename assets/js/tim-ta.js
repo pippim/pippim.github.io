@@ -1107,7 +1107,7 @@ function buildInit() {
 function buildLine() {
     var html = "";
     html += '<tr style="border-bottom: 1px solid black;">\n';
-    html += '<td> colspan="100%"></td>Options for Set of tasks</tr>\n';
+    html += '<td colspan="100%"></td>Options for Set of tasks</tr>\n';
     return html;
 }
 
@@ -1127,7 +1127,7 @@ function buildInput(key, mode) {
     else if (currentForm == "formConfig")  { value = ttaConfig[key]; }
     else { alert ("INVALID currentForm:", currentForm); console.trace(); }
 
-    if (value == null) { console.log ("buildInput():", currentForm); console.trace(); }
+    if (value == null) { console.log ("buildInput() null value:", currentForm); console.trace(); }
 
     html += '<td>\n';
     if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
