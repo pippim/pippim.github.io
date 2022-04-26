@@ -940,7 +940,7 @@ function paintConfigForm() {
     html += buildInput("task_end_alarm", mode);
     html += buildInput("task_end_filename", mode);
     html += buildInput("task_end_notification", mode);
-    html += buildLine();
+    html += buildLine("Options for Set of tasks");
     html += buildInput("run_set_times", mode);
     html += buildInput("set_prompt", mode);
     html += buildInput("set_end_alarm", mode);
@@ -1104,10 +1104,10 @@ function buildInit() {
     inpSelects = {};  // AKA dropdown lists
 }
 
-function buildLine() {
+function buildLine(text) {
     var html = "";
     html += '<tr style="border-bottom: 1px solid black;">\n';
-    html += '<td colspan="100%"></td>Options for Set of tasks</tr>\n';
+    html += '<td colspan="100%">' + text + '</td></tr>\n';
     return html;
 }
 
