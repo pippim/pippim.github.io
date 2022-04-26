@@ -482,6 +482,7 @@ function paintTasksTable() {
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
+
     ttaDiv.innerHTML = html;
     ttaDiv.scrollIntoView();
 }  // End of paintTasksTable()
@@ -1001,7 +1002,7 @@ function paintProjectForm(mode) {
     html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
     html += '</table></form>\n' ;
-    html += '</div\n';
+    html += '</div>\n';
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
