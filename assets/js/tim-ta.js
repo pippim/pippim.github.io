@@ -496,9 +496,9 @@ function ttaTableStyle() {
     // On tabTasks 6th column
     // On small screen 3rd column
     var col;
-    if (scrSmall) { col = 3; }  // 
-    else if (currentTable = "Projects") { col = 7; }
-    else if (currentTable = "Tasks") { col = 6; }
+    if (scrSmall) { col = 3; }  // The column to receive extra padding
+    else if (currentTable == "Projects") { col = 7; }
+    else if (currentTable == "Tasks") { col = 6; }
     if (scrSmall) { col = 3; }
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
