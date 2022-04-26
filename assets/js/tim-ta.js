@@ -314,7 +314,6 @@ function paintProjectsTable() {
 
     html += '<div style="max-height: 75vh; overflow-y: auto; overflow-x: hidden;">\n' ;
     html += '<table id="tabProjects" class="tta-table">\n' ;
-//    html += '<table id="tabProjects" class="tta-table">\n' ;
         html += tabProjectsHeading();
         for (var i = 0; i < cnt; i++) { html += tabProjectDetail(i); }
     html += '</table>\n';
@@ -334,6 +333,8 @@ function paintProjectsTable() {
     html += '<style>\n';
     // TODO: Redo using: https://stackoverflow.com/a/58563703/6929343
 
+    // Note sure why #tabProjects is required for proper column width only
+    // in this case is .tta-table styling failing...
     html += '#tabProjects table { table-layout: auto; width: 100%; }\n';
     html += '#tabProjects th, #tabProjects td {\n' +
             '  padding: .25rem .25rem;\n' +
@@ -523,7 +524,7 @@ function bigFootStyle() {
 
 function ttaBtnStyle() {
     return  '.tta-btn {\n' +
-            '  font-size: 25px;\n' +
+            '  font-size: 22px;\n' +
             '  border-radius: 1rem;\n' +
             // '  margin: .5rem;\n' +
             '}\n'
