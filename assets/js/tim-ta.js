@@ -1110,7 +1110,8 @@ function buildInit() {
 function buildLine(text) {
     var html = "";
     html += '<tr style="border-bottom: 1px solid black;">\n';
-    html += '<td colspan="100%"><strong>' + text + '</strong></td></tr>\n';
+    //html += '<td colspan="100%"><strong>' + text + '</strong></td></tr>\n';
+    html += '<th colspan="100%">' + text + '</th></tr>\n';
     return html;
 }
 
