@@ -499,6 +499,9 @@ function ttaTableStyle() {
             'table.tta-table th, table.tta-table td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n' +
+            'table.tta-table td:nth-child(6) {\n' +
+            '  padding: .25rem 3rem;\n' +
+            '}\n' +
             'table.tta-table th {\n' +
             '  position: -webkit-sticky;\n' +
             '  position: sticky;\n' +
