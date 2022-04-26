@@ -335,10 +335,10 @@ function paintProjectsTable() {
 
     // Note sure why #tabProjects is required for proper column width only
     // in this case is .tta-table styling failing...
-    html += '#tabProjects table { table-layout: auto; width: 100%; }\n';
-//    html += '#tabProjects th, #tabProjects td {\n' +
-//            '  padding: .25rem .25rem;\n' +
-//            '}\n'
+    //html += '#tabProjects table { table-layout: auto; width: 100%; }\n';
+    html += '#tabProjects th, #tabProjects td {\n' +
+            '  padding: .25rem .25rem;\n' +
+            '}\n'
 
     /*
         table {
@@ -466,8 +466,9 @@ function paintTasksTable() {
 
     html += '<style>\n';
 
-    html += '#tabTasks table { table-layout: auto; width: 100%; }\n';
 /* Try tta-table styling only
+    html += '#tabTasks table { table-layout: auto; width: 100%; }\n';
+*/
     html += '#tabTasks th, #tabTasks td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
@@ -478,7 +479,6 @@ function paintTasksTable() {
             'z-index: 1;\n' +
             'background: #f1f1f1;\n' +
             '}\n'
-*/
     html += ttaTableStyle();
     html += ttaBtnStyle();
     html += bigFootStyle();
