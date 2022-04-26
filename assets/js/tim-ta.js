@@ -491,6 +491,15 @@ function paintTasksTable() {
 function ttaTableStyle() {
 //            '  max-width: 100vw;\n' +
 
+    // project_name or task_name get extra padding.
+    // On tabProjects 7th column
+    // On tabTasks 6th column
+    // On small screen 3rd column
+    var col;
+    if (scrSmall) { col = 3; }  // 
+    else if (currentTable = "Projects") { col = 7; }
+    else if (currentTable = "Tasks") { col = 6; }
+    if (scrSmall) { col = 3; }
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
             '  width: 100%;\n' +
@@ -499,8 +508,8 @@ function ttaTableStyle() {
             'table.tta-table th, table.tta-table td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n' +
-            'table.tta-table td:nth-child(6) {\n' +
-            '  padding: .25rem 3rem;\n' +
+            'table.tta-table td:nth-child(' + col + ') {\n' +
+            '  padding: .25rem 2rem;\n' +
             '}\n' +
             'table.tta-table th {\n' +
             '  position: -webkit-sticky;\n' +
