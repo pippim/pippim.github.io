@@ -1067,7 +1067,7 @@ function paintTaskForm(mode) {
     html += buildInput("hours", mode);
     html += buildInput("minutes", mode);
     html += buildInput("seconds", mode);
-    html += buildLine("This Task only (inherited from Project)");
+    html += buildLine("Begin and End Task Options");
     html += buildInput("task_prompt", mode);
     html += buildInput("task_end_alarm", mode);
     html += buildInput("task_end_filename", mode);
@@ -1538,6 +1538,92 @@ function confirmDelete(text) {
     return (value.toLowerCase() == text.toLowerCase());
 }
 
+/* CONTROLS and MESSAGES boxes
+
+    WARNING: These alerts can only be sent after innerHTML has been set
+
+    When mounting a table or form, clear existing queue with msgqClear();
+    pasted containing "ABCD". As user backspaces over D, then C, B and A
+    we don't want message to reappear.
+
+    After backspacing is completed the error message is removed.
+
+    User can click "X" to clear the error message
+
+    The error message appears just below the top of the line Project X
+    or Task X. The <div> ID is ttaModal. The error message is appended
+    child <div> with class name "alert <qualifier>".
+
+
+*/
+
+var msgq = {};
+var msgDiv;
+
+function msgqClear(parent_div) {
+    // When mounting new screen clear old messages. Also clear control box which
+    // resides in msgq too.
+    msgq = {};
+}
+
+function msgqCreate(parent_div_id) {
+    // After DOM is ready create the message queue's parent div element
+    // resides in msgq too.
+    msgDiv = document.getElementById(parent_div_id);
+}
+
+function msgClear(msgqEntry) {
+    // After DOM is ready create the message queue's parent div element
+    // resides in msgq too.
+    msgDiv = document.getElementById(parent_div_id);
+}
+
+function msgAlert(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
+    /*  PRIMARY FUNCTION to display error messages (and control boxes)
+        msg_type = "e" red error message
+                   "w" orange warning message
+                   "i" blue information message
+                   "s" green success message
+        msg = message text where <br> will start a new line.
+        id_elm_type = "id" a ID is passed in next field
+                      "elm" an element is passed in next field.
+        elm = an ID or an element. If an ID convert it to an element.
+        error_id = optional error number or name. If already displayed
+                   then it isn't displayed again.
+        clear_flag = optional flag ("true") to clear error number or name.
+                     Automatically closes message box as well.
+
+        RETURNS the msgqEntry number which is used to clear message manually
+    */
+    // Sanity checks - After writing your development code you can delete
+    // these prior to migration to production environment.
+    if (arguments.length < 2) {
+        alert("msgAlert() minimum of 2 arguments required:\n" +
+              "msg_type, msg, id_elm_type, elm, error_id, clear_flag");
+        console.trace();
+        return false;
+    }
+    if (msg_type != "e" && msg_type != "w" &&
+        msg_type != "i" msg_type != "s" ) {
+            alert("msgAlert() msg_type must be 'e', 'w', 'i' or 's'.");
+            console.trace();
+            return false;
+    }
+    var elm = id_elm; // May be undefined
+    if (arguments.length > 2 && id_elm_type == "id") {
+        if (arguments.length < 4) {
+            alert("msgAlert() when 'id_elm_type' = 'id', next argument required.");
+            console.trace();
+            return false;
+        }
+        // Rewrite id in elm parameter with actual element.
+        elm = document.getElementById(id_elm);
+    }
+
+    // TODO: Test clear flag and close messages
+
+    // Create new msgq entry
+}
 /* Functions NOT USED */
 
 /*
