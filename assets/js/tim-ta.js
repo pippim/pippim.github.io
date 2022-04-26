@@ -336,9 +336,9 @@ function paintProjectsTable() {
     // Note sure why #tabProjects is required for proper column width only
     // in this case is .tta-table styling failing...
     html += '#tabProjects table { table-layout: auto; width: 100%; }\n';
-    html += '#tabProjects th, #tabProjects td {\n' +
-            '  padding: .25rem .25rem;\n' +
-            '}\n'
+//    html += '#tabProjects th, #tabProjects td {\n' +
+//            '  padding: .25rem .25rem;\n' +
+//            '}\n'
 
     /*
         table {
@@ -443,7 +443,7 @@ function paintTasksTable() {
     html = htmlSetContainer(html);
 
     html += '<div style="max-height: 75vh; overflow: auto;">\n' ;
-    html += '<table class="tta-table">\n' ;
+    html += '<table id="tabTasks" class="tta-table">\n' ;
         html += tabTasksHeading();
         for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
     html += '</table>\n';
@@ -466,8 +466,8 @@ function paintTasksTable() {
 
     html += '<style>\n';
 
-/* Try tta-table styling only
     html += '#tabTasks table { table-layout: auto; width: 100%; }\n';
+/* Try tta-table styling only
     html += '#tabTasks th, #tabTasks td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
@@ -957,8 +957,6 @@ function paintConfigForm() {
 
     // TODO: Move next lines to class name: tabClass inside TCM
     html += '<style>\n';
-    html += '#tabProject th, #tabProject td {\n' +
-            '}\n'
     html += ttaTableStyle();
     html += ttaBtnStyle();
     html += bigFootStyle();
