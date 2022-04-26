@@ -936,6 +936,7 @@ function paintConfigForm() {
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
     html += '<form id="formConfig"><table id="tabConfig" class="tta-table">\n' ;
     // TODO: Put these in a loop
+    html += buildLine("Default Options for Tasks");
     html += buildInput("task_prompt", mode);
     html += buildInput("task_end_alarm", mode);
     html += buildInput("task_end_filename", mode);
@@ -946,10 +947,12 @@ function paintConfigForm() {
     html += buildInput("set_end_alarm", mode);
     html += buildInput("set_end_filename", mode);
     html += buildInput("set_end_notification", mode);
+    html += buildLine("Default Options for All Sets of Tasks");
     html += buildInput("all_sets_prompt", mode);
     html += buildInput("all_sets_end_alarm", mode);
     html += buildInput("all_sets_end_filename", mode);
     html += buildInput("all_sets_end_notification", mode);
+    html += buildLine("Default Options");
     html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
     html += '</table></form>\n' ;
@@ -1107,7 +1110,7 @@ function buildInit() {
 function buildLine(text) {
     var html = "";
     html += '<tr style="border-bottom: 1px solid black;">\n';
-    html += '<td colspan="100%">' + text + '</td></tr>\n';
+    html += '<td colspan="100%"><strong>' + text + '</strong></td></tr>\n';
     return html;
 }
 
