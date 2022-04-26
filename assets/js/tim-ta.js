@@ -339,6 +339,13 @@ function paintProjectsTable() {
     html += '#tabProjects th, #tabProjects td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n'
+    html += '#tabProjectss th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #f1f1f1;\n' +
+            '}\n'
 
     /*
         table {
