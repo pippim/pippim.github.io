@@ -952,7 +952,7 @@ function paintConfigForm() {
     html += buildInput("all_sets_end_alarm", mode);
     html += buildInput("all_sets_end_filename", mode);
     html += buildInput("all_sets_end_notification", mode);
-    html += buildLine("Default Options");
+    html += buildLine("Default Options for all Projects and Tasks");
     html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
     html += '</table></form>\n' ;
@@ -1001,10 +1001,12 @@ function paintProjectForm(mode) {
 
     // TODO: Put these in a loop
     html += buildInput("project_name", mode);
+    html += buildLine("Default Options for Tasks");
     html += buildInput("task_prompt", mode);
     html += buildInput("task_end_alarm", mode);
     html += buildInput("task_end_filename", mode);
     html += buildInput("task_end_notification", mode);
+    html += buildLine("Current Project Options inherited from Configuration");
     html += buildInput("run_set_times", mode);
     html += buildInput("set_prompt", mode);
     html += buildInput("set_end_alarm", mode);
@@ -1063,6 +1065,7 @@ function paintTaskForm(mode) {
     html += buildInput("hours", mode);
     html += buildInput("minutes", mode);
     html += buildInput("seconds", mode);
+    html += buildLine("Current Task Options inherited from Project");
     html += buildInput("task_prompt", mode);
     html += buildInput("task_end_alarm", mode);
     html += buildInput("task_end_filename", mode);
