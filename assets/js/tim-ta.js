@@ -509,7 +509,7 @@ function ttaTableStyle() {
             '  padding: .25rem .25rem;\n' +
             '}\n' +
             'table.tta-table td:nth-child(' + col + ') {\n' +
-            '  padding: .25rem 2rem;\n' +
+            '  padding: .25rem 1rem;\n' +
             '}\n' +
             'table.tta-table th {\n' +
             '  position: -webkit-sticky;\n' +
@@ -940,6 +940,7 @@ function paintConfigForm() {
     html += buildInput("task_end_alarm", mode);
     html += buildInput("task_end_filename", mode);
     html += buildInput("task_end_notification", mode);
+    html += buildLine();
     html += buildInput("run_set_times", mode);
     html += buildInput("set_prompt", mode);
     html += buildInput("set_end_alarm", mode);
@@ -1101,6 +1102,12 @@ function buildInit() {
     /*  Initialize custom objects used on form */
     inpSwitches = {};  // Reset any switches last used
     inpSelects = {};  // AKA dropdown lists
+}
+
+function buildLine() {
+    var html = "<tr style="border-bottom:1px solid black">\n';
+    var html += '<td> colspan="100%"></td></tr>\n";
+    return html;
 }
 
 function buildInput(key, mode) {
@@ -1544,10 +1551,39 @@ function confirmDelete(text) {
   <strong>Warning!</strong> Indicates a warning that might need attention.
 </div>
 
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
 
 */
 
-/* WARNING: These alerts can only be sent after innerHTML has been set */
+/* WARNING: These alerts can only be sent after innerHTML has been set
+
+    There is an error on a variable. Say a numeric field had clipboard
+    pasted containing "ABCD". As user backspaces over D, then C, B and A
+    we don't want message to reappear.
+
+    After backspacing is completed the error message is removed.
+
+    User can click "X" to clear the error message
+
+    The error message appears just below the top of the line Project X
+    or Task X. The <div> ID is ttaModal. The error message is appended
+    child <div> with class name "alert <qualifier>".
+
+
+*/
+
 function alertError (msg) {
     /*  Assumes DOM is loaded and innerHTML is already set with:
             '<div class="ttaContainer">\n' + html +
@@ -1555,6 +1591,13 @@ function alertError (msg) {
             '</div>'
 
         "html" above would contain "<h2>Title blah blah</h2>\n"
+
+this.mainCanvasDiv = document.createElement("div");
+this.mainCanvasDiv.id = "mainCanvas";
+this.mainCanvasDiv.style.width = "600px";
+this.mainCanvasDiv.style.height = "400px";
+this.mainCanvasDiv.style.border = "thin black solid";
+this.mainAppDiv.appendChild(this.mainCanvasDiv);
     */
     var id = document.getElementById("ttaModal");
     id.classList.add("alert");
