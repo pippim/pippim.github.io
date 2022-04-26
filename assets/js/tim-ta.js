@@ -1107,7 +1107,7 @@ function buildInit() {
 function buildLine() {
     var html = "";
     html += '<tr style="border-bottom: 1px solid black;">\n';
-    html += '<td> colspan="100%"></td></tr>\n';
+    html += '<td> colspan="100%"></td>Options for Set of tasks</tr>\n';
     return html;
 }
 
@@ -1199,9 +1199,7 @@ function initSelectsAfterDOM() {
     for (const name of Object.keys(inpSelects)) {
         element = document.getElementById(inpSelects[name].id);
         inpSelects[name].elm = element;
-        //element.addEventListener('click', () => { clickSelect(name); });
-        //setSelect(name, inpSelects[name].value);
-        console.log("initSelectsAfterDOM() name/value:", name, inpSelects[name].value)
+        //console.log("initSelectsAfterDOM() name/value:", name, inpSelects[name].value)
     }
 }
 
