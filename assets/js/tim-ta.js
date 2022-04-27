@@ -287,10 +287,10 @@ var tabListSym = "&#x2630;";
 var tabProjectsTitle = "View/Add/Edit/Delete Projects";
 var tabTasksTitle = "View/Add/Edit/Delete Tasks";
 
-var ttaDiv, currentTable, currentRow, currentMode, currentForm;
+var ttaElm, currentTable, currentRow, currentMode, currentForm;
 
-function ttaRunConfiguration (parentDiv) {
-    ttaDiv = parentDiv;
+function ttaRunConfiguration (parentElm) {
+    ttaElm = parentElm;
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
     const cnt = ttaConfig.arrProjects.length;
     if (cnt == 1) { paintTasksTable(); }
@@ -302,6 +302,7 @@ function ttaRunConfiguration (parentDiv) {
 function paintProjectsTable() {
     // Assumes ttaConfig and ttaProject are populated
     // Button at bottom allows calling paintConfig(id)
+    msgqClear();
     currentTable = "Projects";
 
     // Just in case another browser tab changed configuration...
@@ -377,8 +378,8 @@ function paintProjectsTable() {
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
-    ttaDiv.innerHTML = html;
-    ttaDiv.scrollIntoView();
+    ttaElm.innerHTML = html;  // Set top-level's element with new HTML
+    ttaElm.scrollIntoView();
 }  // End of paintProjectsTable()
 
 function cntHuman(cnt, name) {
@@ -435,6 +436,7 @@ function tabProjectDetail(i) {
 function paintTasksTable() {
     // Assumes ttaConfig and ttaProject are populated
     // Button at bottom allows calling paintProjectsTable()
+    msgqClear();
     currentTable = "Tasks";
 
     const cnt = ttaProject.arrTasks.length;
@@ -484,8 +486,8 @@ function paintTasksTable() {
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
-    ttaDiv.innerHTML = html;
-    ttaDiv.scrollIntoView();
+    ttaElm.innerHTML = html;  // Set top-level's element with new HTML
+    ttaElm.scrollIntoView();
 }  // End of paintTasksTable()
 
 function ttaTableStyle() {
@@ -818,7 +820,8 @@ function clickAddProject() {
 }
 
 function clickPlay() {
-    // Run Project - Countdown all tasks. Scroll as needed.
+    // Run Project - Countdown all tasks. Scroll into view as needed.
+    msgqClear();
     currentForm = "formPlay"
     var calledFromTable = currentTable;
     currentTable = "Tasks"
@@ -876,8 +879,8 @@ function clickPlay() {
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
-    ttaDiv.innerHTML = html;
-    ttaDiv.scrollIntoView();
+    ttaElm.innerHTML = html;  // Set top-level's element with new HTML
+    ttaElm.scrollIntoView();
 
     pollCloseBtn();
 }
@@ -924,6 +927,7 @@ function swapTask(source, target) {
 
 function paintConfigForm() {
     // Button at bottom allows calling paintProjectTasks()
+    msgqClear();
     var mode = "Edit";
     currentMode = mode;
     currentTable == "Config" // Wipe out where ever we came from
@@ -979,7 +983,7 @@ function paintConfigForm() {
     html += inpSwitchStyle();
     html += inpSelectStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
-    ttaDiv.innerHTML = html;
+    ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
 }
@@ -987,6 +991,7 @@ function paintConfigForm() {
 function paintProjectForm(mode) {
     // mode can be "Add", "Edit" or "Delete"
     // Button at bottom allows calling paintConfiguration()
+    msgqClear();
     currentMode = mode;
     currentForm = "formProject";
     buildInit();  // Reset data dictionary input field controls
@@ -1044,7 +1049,7 @@ function paintProjectForm(mode) {
     html += inpSwitchStyle();
     html += inpSelectStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
-    ttaDiv.innerHTML = html;
+    ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
 }
@@ -1052,6 +1057,7 @@ function paintProjectForm(mode) {
 function paintTaskForm(mode) {
     // mode can be "Add", "Edit" or "Delete"
     // Button at bottom allows calling paintProjectsTable()
+    msgqClear();
     currentMode = mode;
     currentForm = "formTask";
     buildInit();  // Reset data dictionary input field controls
@@ -1099,7 +1105,7 @@ function paintTaskForm(mode) {
     html += inpSwitchStyle();
     html += inpSelectStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
-    ttaDiv.innerHTML = html;
+    ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
 }
@@ -1557,18 +1563,40 @@ function confirmDelete(text) {
 
 */
 
-var msgq = {};
+var msgq = {};  // Data struction below
+var btnBox = {};  // Extra buttons boxed up for small screen which is <= 640 px wide.
 var msgDiv;
 
-function msgqClear(parent_div) {
+function msgqClear() {
     // When mounting new screen clear old messages. Also clear control box which
     // resides in msgq too.
     msgq = {};
+    btnBox = ();
 }
 
 function msgqCreate(parent_div_id) {
-    // After DOM is ready create the message queue's parent div element
-    // resides in msgq too.
+    /* After DOM is ready create the message queue's parent div element
+       resides in msgq too.
+        FORMAT:
+        msgq[key] =
+            {
+                typeMsg: msg_type,
+                elmThisBox: new_elm,
+                elmInError: elm,
+                typeIdOrElm: id_elm_type,
+                errorId: error_id,
+                rectMounted: xy_wh,
+                rectTarget: xy_wh,
+                cntRepeats: repeated_warnings,
+                objButtons: {}
+            }
+
+        WHERE:  key is auto assigned and returned to parent as msgqEntry
+
+        NOTE:   rectMounted has to be recalculated each time object is
+                evaluated because user may have dragged window on screen.
+
+    */
     msgDiv = document.getElementById(parent_div_id);
 }
 
@@ -1624,6 +1652,12 @@ function msgAlert(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
 
     // Create new msgq entry
 }
+
+function msgAddButton(msgqEntry, elm, callback) {
+
+}
+
+
 /* Functions NOT USED */
 
 /*
