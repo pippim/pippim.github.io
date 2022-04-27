@@ -916,24 +916,25 @@ function tabRunTimersDetail(i) {
     // var html = '<tr">\n';  // This shouldn't have worked before???
 
     var id = "tabTimer" + i;
-    return htmlRunTimersDetail(id, secondsTask);
+    return htmlRunTimersDetail(id, ttaTask.task_name secondsTask);
 }
 
 function htmlRunTimersSet() {
     var id = "tabTimerSet";
-    return htmlRunTimersDetail(id, secondsSet);
+    return htmlRunTimersDetail(id, "All Timers (Set)", secondsSet);
 }
 
 function htmlRunTimersAllSets() {
     var id = "tabTimerAllSets";
-    return htmlRunTimersDetail(id, secondsAllSets);
+    return htmlRunTimersDetail(id, "All Sets of Timers", secondsAllSets);
 }
 
-function htmlRunTimersDetail(id, seconds) {
+function htmlRunTimersDetail(id, name, seconds) {
 
     entryTimer = {};
     entryTimer["id"] = id;
     entryTimer["elm"] = "Pippim Promise";
+    entryTimer["name"] = name;
     entryTimer["seconds"] = seconds;
     entryTimer["remaining"] = seconds;
     entryTimer["progress"] = 0;
@@ -970,13 +971,16 @@ function oneTimerRun(name) {
     // Run one timer
     //console.log("initSwitchesAfterDOM()");
     entry = allTimers[name];
-    if (entry.progress >= entry.seconds) { return; }  // All done
+    if (entry.progress >= entry.seconds) {
+        clearTimeout(oneTimeout);  // Reset one timer
+        return;  // All done
+    }
 
     entry.progress += 1
     entry.remaining -= 1
     entry.elm.value = entry.progress.toString()
     allTimers[name] = entry;  // Is this necessary???
-    clearTimeout(oneTimeout);  // Reset one timer
+
     oneTimeout = setTimeout(oneTimerRun(name), 1000);  // After 1 second
 }
 
