@@ -910,9 +910,9 @@ function tabRunTaskDetail(i) {
     secondsAllSets += secondsTask * run_set_times;
     console.log("secondsAllSets:", secondsAllSets);
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
-    // hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
-    // hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
-    console.log("hhmmssTask:", hhmmssTask)
+    hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
+    hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
+    console.log("hhmmssTask:", hhmmssTask, "hhmmssSet", hhmmssSet)
     // var html = '<tr">\n';  // This shouldn't have worked before???
     var html = '<tr>\n';
     if (scrSmall) {
