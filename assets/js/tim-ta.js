@@ -889,11 +889,7 @@ function paintRunTimers(i) {
 
     // Run through all timers
     //for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
-    runAllTimers();
-    alert("About to return")
-    if (calledFromTable == "Projects") { paintProjectsTable(); }
-    else if (calledFromTable == "Tasks") { paintTasksTable(); }
-    else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
+    runAllTimers(calledFromTable);
 }
 
 function tabRunTimersHeading() {
@@ -941,7 +937,7 @@ function htmlRunTimersAllSets() {
 }
 
 function htmlRunTimersDetail(id, name, index, seconds) {
-
+    // Return html for new Run Timers Table entry
     entryTimer = {};
     entryTimer["id"] = id;
     entryTimer["elm"] = "Pippim Promise";
@@ -979,7 +975,7 @@ function progressTouched(name) {
 }
 
 var oneTimeout;
-async function runAllTimers() {
+async function runAllTimers(calledFromTable) {
     // Run one timer
     //console.log("initSwitchesAfterDOM()");
     var names = Object.keys(allTimers);
@@ -995,7 +991,12 @@ async function runAllTimers() {
             // Timer has ended, sound alarm and start next timer
             oneTimerEnd(name);
             currentIndex += 1;
-            if (currentIndex >= names.length) { return; }
+            if (currentIndex >= names.length) {
+                if (calledFromTable == "Projects") { paintProjectsTable(); }
+                else if (calledFromTable == "Tasks") { paintTasksTable(); }
+                else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
+                return;
+            }
             name = names[currentIndex];
             entry = allTimers[name];
             console.log("new name:", name)
