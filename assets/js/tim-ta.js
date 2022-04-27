@@ -883,7 +883,7 @@ function paintRunTimers(i) {
 
 function tabRunTimersHeading() {
     var html = "<tr><th>Progress</th>";
-    if (!scrSmall) { html += "<th>(hh:mm:ss)</th>"; }
+    if (!scrSmall) { html += "<th>hh:mm:ss</th>"; }
     html += "<th>Task Name</th>";
     return html += "</tr>\n";
 }
@@ -894,8 +894,8 @@ function tabRunTimersDetail(i) {
     var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
     if (strDuration == "") { return ""; }  // No duration = no timer displayed
 
-    var sec = +ttaTask.seconds;
-    sec += +ttaTask.minutes * 60;        // Tricky you can multiply a string
+    var sec = +ttaTask.seconds;  // TODO: Test convertNumber(ttaTask.seconds);
+    sec += +ttaTask.minutes * 60;  // Tricky you can multiply a +String
     sec += +ttaTask.hours * 60 * 60;
     secondsTask = parseInt(sec, 10);
     secondsSet += secondsTask;
@@ -908,7 +908,7 @@ function tabRunTimersDetail(i) {
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
     hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
     hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
-    console.log("hhmmssTask:", hhmmssTask, "hhmmssSet", hhmmssSet)
+    //console.log("hhmmssTask:", hhmmssTask, "hhmmssSet", hhmmssSet)
     // var html = '<tr">\n';  // This shouldn't have worked before???
 
     var html = '<tr>\n';
