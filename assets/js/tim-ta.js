@@ -900,12 +900,14 @@ function tabRunTaskDetail(i) {
     secondsTask += ttaTask.minutes * 60;
     secondsTask += ttaTask.hours * 60 * 60;
     secondsSet += secondsTask;
-    console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
+    //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
     run_set_times = getProjectValue('run_set_times');
+    console_log("run_set_times:", run_set_times);
+    run_set_times = 0 + run_set_times;  // convert string to int
     secondsAllSets += secondsTask * run_set_times;
     console.log("secondsAllSets:", secondsAllSets);
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
-    hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
+    // hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
     // hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
     console.log("hhmmssTask:", hhmmssTask)
     // var html = '<tr">\n';  // This shouldn't have worked before???
