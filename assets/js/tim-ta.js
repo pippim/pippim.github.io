@@ -975,7 +975,7 @@ function oneTimerRun(name) {
     entry.progress += 1
     entry.remaining -= 1
     entry.elm.value = entry.progress.toString()
-    allTimers[id] = entry;  // Is this necessary???
+    allTimers[name] = entry;  // Is this necessary???
     clearTimeout(oneTimeout);  // Reset one timer
     oneTimeout = setTimeout(oneTimerRun(name), 1000);  // After 1 second
 }
