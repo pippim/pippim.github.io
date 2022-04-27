@@ -822,13 +822,13 @@ function clickAddProject() {
 function paintRunTasks(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
     msgqClear();
+    if (i !== null) { clickCommon(i); }  // load selected ttaProject
     currentForm = "formRunTasks"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
     var calledFromTable = currentTable;
     console.log("currentTable, i:", currentTable, i)
     currentTable = "RunTasks"
-    if (i !== null) { clickCommon(i); }  // load selected ttaProject
 
     // Back to same Table
     const cnt = ttaProject.arrTasks.length;
