@@ -902,7 +902,7 @@ function tabRunTaskDetail(i) {
     secondsSet += secondsTask;
     //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
     run_set_times = getProjectValue('run_set_times');
-    console_log("run_set_times:", run_set_times);
+    console.log("run_set_times:", run_set_times, typeof run_set_times);
     run_set_times = 0 + run_set_times;  // convert string to int
     secondsAllSets += secondsTask * run_set_times;
     console.log("secondsAllSets:", secondsAllSets);
