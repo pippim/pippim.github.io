@@ -873,14 +873,16 @@ function paintRunTimers(i) {
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
-    ttaElm.scrollIntoView();
+    initTimersAfterDOM();  // Initialize elements for table row IDs
+    ttaElm.scrollIntoView();  // Scroll top level element into view
 
     // Test window create shell
     popCreate("e", "Run Tasks is still a Work in Progress", 'id', "tabRunTimers");
     var popEntry = msgq[popIndex - 1];
     console.log("popEntry:", popEntry);
 
-    /*    pollCloseBtn(); */
+    // Run through all timers
+    for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
 }
 
 function tabRunTimersHeading() {
@@ -946,6 +948,33 @@ function htmlRunTimersDetail(id, seconds) {
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
     return html += "</tr>\n";
+}
+
+function initTimersAfterDOM() {
+    // After innerHTML is set we can bet the elements and set sources
+    //console.log("initSwitchesAfterDOM()");
+    for (const name of Object.keys(allTimers)) {
+        var element = document.getElementById(allTimers[name].id);
+        allTimers[name].elm = element;
+        element.addEventListener('click', () => { progressTouched(name); });
+    }
+}
+
+function progressTouched(name) {
+    console.log("Progress bar touched:", name)
+}
+
+var oneTimeout;
+function oneTimerRun(name) {
+    // Run one timer
+    //console.log("initSwitchesAfterDOM()");
+    entry = allTimers[name];
+    if (entry.progress > entry.seconds) { return; }  // All done
+
+    allTimers[name].progress += 1
+    entry.elm.progress.value = entry.progress.toString()
+    clearTimeout(oneTimeout);  // Reset one timer
+    oneTimeout = setTimeout(oneTimerRun(name), 1000);  // After 1 second
 }
 
 /* NOT USED for now
