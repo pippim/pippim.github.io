@@ -883,7 +883,7 @@ function paintRunTimers(i) {
 
 function tabRunTimersHeading() {
     var html = "<tr><th>Progress</th>";
-    if (!scrSmall) { html += "<th>hh:mm:ss</th>"; }
+    if (!scrSmall) { html += "<th>Remaining</th>"; }
     html += "<th>Task Name</th>";
     return html += "</tr>\n";
 }
@@ -912,8 +912,9 @@ function tabRunTimersDetail(i) {
     // var html = '<tr">\n';  // This shouldn't have worked before???
 
     var html = '<tr>\n';
-    html += '<td><progress id="file' + i +
-            '" value="32" max="100"> 32% </progress></td>\n';
+    html += '<td><progress id="file' + i + '" value="15000" max="' +
+    secondsTask.toString() + '"> 32% </progress></td>\n';
+
     if (!scrSmall) { html += "<td>" + hhmmssTask + "</td>\n"; }
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
