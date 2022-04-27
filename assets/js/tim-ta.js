@@ -819,13 +819,13 @@ function clickAddProject() {
     // alert("Clicked Add Project but not implemented yet")
 }
 
-var secondsSet, secondsAllSets, hhmmssSet, hhmmssAllSets;
+var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets;
 
 function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
     msgqClear();
     if (i !== null) { clickCommon(i); }  // load selected ttaProject
-    secondsSet = secondsAllSets = 0;
+    secondsTask = secondsSet = secondsAllSets = 0;
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
@@ -892,19 +892,20 @@ function tabRunTimersHeading() {
 
 function tabRunTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
+    secondsTask = 0;  // Abundant caution.
     var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
     if (strDuration == "") { return ""; }  // No duration = no timer displayed
 
-    var seconds = ttaTask.seconds;
-    seconds += ttaTask.minutes * 60;
-    seconds += ttaTask.hours * 60 * 60;
-    console.log("seconds:", seconds);
-    secondsSet += seconds;
-    secondsAllSets = seconds * ttaProject.run_set_times;
-    var hhmmss = new Date(seconds * 1000).toISOString().substr(11, 8);
+    secondsTask = ttaTask.seconds;
+    secondsTask += ttaTask.minutes * 60;
+    secondsTask += ttaTask.hours * 60 * 60;
+    console.log("secondsTask:", secondsTask);
+    secondsSet += secondsTask;
+    secondsAllSets = secondsTask * ttaProject.run_set_times;
+    hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
     hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
     hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
-    console.log("hhmmss:", hhmmss)
+    console.log("hhmmssTask:", hhmmssTask)
     // var html = '<tr">\n';  // This shouldn't have worked before???
     var html = '<tr>\n';
     if (scrSmall) {
