@@ -901,7 +901,8 @@ function tabRunTaskDetail(i) {
     secondsTask += ttaTask.hours * 60 * 60;
     secondsSet += secondsTask;
     console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
-    secondsAllSets += secondsTask * parseInt(ttaProject.run_set_times, 10);
+    run_set_times = getProjectValue('run_set_times');
+    secondsAllSets += secondsTask * run_set_times;
     console.log("secondsAllSets:", secondsAllSets);
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
     hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
