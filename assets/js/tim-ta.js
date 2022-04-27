@@ -820,12 +820,14 @@ function clickAddProject() {
 }
 
 var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets;
+var allTimers;
 
 function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
     msgqClear();
     if (i !== null) { clickCommon(i); }  // load selected ttaProject
     secondsTask = secondsSet = secondsAllSets = 0;
+    allTimers = {};
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
@@ -890,10 +892,10 @@ function tabRunTimersHeading() {
 
 function tabRunTimersDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-    secondsTask = 0;  // Abundant caution.
     var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
     if (strDuration == "") { return ""; }  // No duration = no timer displayed
 
+    secondsTask = 0;  // Abundant caution.
     var sec = +ttaTask.seconds;  // TODO: Test convertNumber(ttaTask.seconds);
     sec += +ttaTask.minutes * 60;  // Tricky you can multiply a +String
     sec += +ttaTask.hours * 60 * 60;
@@ -911,10 +913,35 @@ function tabRunTimersDetail(i) {
     //console.log("hhmmssTask:", hhmmssTask, "hhmmssSet", hhmmssSet)
     // var html = '<tr">\n';  // This shouldn't have worked before???
 
+    var id = "tabTimer" + i;
+    return htmlRunTimersDetail(id, secondsTask);
+}
+
+function htmlRunTimersSet() {
+    var id = "tabTimerSet";
+    return htmlRunTimersDetail(id, secondsSet);
+}
+
+function htmlRunTimersAllSets() {
+    var id = "tabTimerAllSets";
+    return htmlRunTimersDetail(id, secondsAllSets);
+}
+
+function htmlRunTimersDetail(id, seconds) {
+
+    entryTimer = {};
+    entryTimer["id"] = id;
+    entryTimer["elm"] = "Pippim Promise";
+    entryTimer["seconds"] = secondsTask;
+    entryTimer["remaining"] = secondsTask;
+    entryTimer["progress"] = 0;
+    allTimers[id] = entryTimer;
+
     var html = '<tr>\n';
-    html += '<td><progress id="tabTimer' + i + '" value="1500" max="' +
-    secondsTask.toString() + '"> 32% </progress></td>\n';
-    console.log("secondsTask.toString():", secondsTask.toString())
+
+    html += '<td><progress id="' + id + '" value="0" max="' +
+    secondsTask.toString() + '"></progress></td>\n';  // > 32% < possible??
+
     if (!scrSmall) { html += "<td>" + hhmmssTask + "</td>\n"; }
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
