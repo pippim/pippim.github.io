@@ -306,7 +306,7 @@ function paintProjectsTable() {
     currentTable = "Projects";
 
     // Test window create shell
-    popCreate("e", "Just a test", 'elm', parentElement);
+    popCreate("e", "Just a test", 'elm', parentElm);
     var popEntry = msgq[popIndex - 1];
     console.log("popEntry:", popEntry);
 
@@ -1666,6 +1666,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     // Create new msgq entry
     var popEntry = msgq[popIndex];  // We don't want copy, direct reference
     popEntry.index = popIndex;  // Keep key in value for handy reference
+    popEntry.elmWindow = document.createElement('div');
     popEntry.msg_type = msg_type;  // e, w, i or s
     popEntry.msg = msg;  // Might contain HTML
     popEntry.id_elm_type = id_elm_type;
