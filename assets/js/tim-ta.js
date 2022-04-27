@@ -822,17 +822,13 @@ function clickAddProject() {
 function paintRunTasks(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
     msgqClear();
-    currentForm = "formPlay"
+    currentForm = "formRunTasks"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
     var calledFromTable = currentTable;
     console.log("currentTable, i:", currentTable, i)
-    currentTable = "Tasks"
-
-    // Test window create shell
-    popCreate("e", "Just a test", 'elm', parentElm);
-    var popEntry = msgq[popIndex - 1];
-    console.log("popEntry:", popEntry);
+    currentTable = "RunTasks"
+    if (i !== null) { clickCommon(i); }  // load selected ttaProject
 
     // Back to same Table
     const cnt = ttaProject.arrTasks.length;
@@ -842,27 +838,21 @@ function paintRunTasks(i) {
 
     // alertError Message override
     var msg = "Run Task Timers is a Work In Progress";
+    /*
     html += '<div class="alert">\n' +
             '<span class="closebtn">&times;</span>\n' +
             '<strong>ERROR:</strong> ' + msg +
             '</div>' ;
+    */
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
-    html += '<table id="tabPlay" class="tta-table">\n' ;
-        html += tabTasksHeading();
-        for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
+    html += '<table id="tabRunTasks" class="tta-table">\n' ;
+    html += tabRunTasksHeading();
+        for (var i = 0; i < cnt; i++) { html += tabRunTaskDetail(i); }
     html += '</table>\n';
     html += '</div>\n';
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
-    html += '<div class="leftFoot">\n';
-    html += taskButton(tabPlaySym, tabPlayTitle, "paintRunTasks");
-    html += "<font size='+2'>Run Project</font>";
-    html += '</div>\n';
-    html += '<div class="middleFoot">\n';
-    html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
-    html += "<font size='+2'>New Task</font>";
-    html += '</div>\n';
     html += '<div class="rightFoot">\n';
     html += taskButton(tabListSym, tabProjectsTitle, "paintProjectsTable");
     html += "<font size='+2'>All Projects</font>";
@@ -870,27 +860,54 @@ function paintRunTasks(i) {
     html += '</div>\n';
 
     html += '<style>\n';
-/*
-    html += '#tabTasks table { table-layout: auto; width: 100%; }\n';
-    html += '#tabTasks th, #tabTasks td {\n' +
-            '  padding: .25rem .25rem;\n' +
-            '}\n'
-    html += '#tabTasks th {\n' +
-            'position: -webkit-sticky;\n' +
-            'position: sticky;\n' +
-            'top: 0;\n' +
-            'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
-            '}\n'
-*/
     html += ttaTableStyle();
     html += ttaBtnStyle();
     html += bigFootStyle();
     html += '</style>'  // Was extra \n causing empty space at bottom?
+
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     ttaElm.scrollIntoView();
 
-    pollCloseBtn();
+    // Test window create shell
+    popCreate("e", "Run Tasks is still a Work in Progress", 'id', "tabRunTasks");
+    var popEntry = msgq[popIndex - 1];
+    console.log("popEntry:", popEntry);
+
+    /*    pollCloseBtn(); */
+}
+
+function tabRunTasksHeading() {
+    // Identical to tabProjectsHeading() except the word "Task"
+    var html = "<tr><th colspan='";
+    if (scrSmall) { html += "2"; }  // Two columns of buttons
+    else { html += "5"; }           // Five columns of buttons
+    html += "'>Controls</th><th>Task Name</th>";
+    if (!scrSmall) { html += "<th>Duration</th>"; }
+    return html += "</tr>\n";
+}
+
+function tabRunTaskDetail(i) {
+    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
+    var html = '<tr">\n';
+    if (scrSmall) {
+        html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
+        html += tabButton(i, tabControlsSym, tabControlsTitle, "clickFuture");
+    }           // Two columns of buttons
+    else {
+        html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
+        html += tabButton(i, tabUpSym, tabUpTitle, "clickUp");
+        html += tabButton(i, tabDownSym, tabDownTitle, "clickDown");
+        html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
+        html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
+    }           // Five columns of buttons
+
+    html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
+
+    if (!scrSmall) {
+        var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
+        html += "<td>" + strDuration + "</td>\n";
+    }
+    return html += "</tr>\n";
 }
 
 function clickControls(i) {
