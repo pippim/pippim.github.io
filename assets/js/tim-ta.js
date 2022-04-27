@@ -956,6 +956,7 @@ function initTimersAfterDOM() {
     for (const name of Object.keys(allTimers)) {
         var element = document.getElementById(allTimers[name].id);
         allTimers[name].elm = element;
+        console.log('timer progress element:', element);
         element.addEventListener('click', () => { progressTouched(name); });
     }
 }
