@@ -981,7 +981,7 @@ function oneTimerRun(name) {
     entry.elm.value = entry.progress.toString()
     allTimers[name] = entry;  // Is this necessary???
 
-    oneTimeout = setTimeout(oneTimerRun(name), 1000);  // After 1 second
+    oneTimeout = setTimeout(() => {oneTimerRun(name)}, 1000);  // After 1 second
 }
 
 /* NOT USED for now
