@@ -305,6 +305,12 @@ function paintProjectsTable() {
     msgqClear();
     currentTable = "Projects";
 
+    // Test window create shell
+    popCreate("e", "Just a test", 'elm', parentElement);
+    var popEntry = msgq[popIndex - 1];
+    console.log("popEntry:", popEntry);
+
+
     // Just in case another browser tab changed configuration...
     readConfig();
     //ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
@@ -1565,31 +1571,40 @@ function confirmDelete(text) {
 
 var msgq = {};  // Data struction below
 var btnBox = {};  // Extra buttons boxed up for small screen which is <= 640 px wide.
-var msgDiv;
+var popIndex = 0;  // Key into msgq returned from popCreate() and passed to popClear()
 
 function msgqClear() {
     // When mounting new screen clear old messages. Also clear control box which
     // resides in msgq too.
     msgq = {};
     btnBox = {};
+    popIndex = 0;
 }
 
-function msgqCreate(parent_div_id) {
+function msgqCreate() {
     /* After DOM is ready create the message queue's parent div element
        resides in msgq too.
         FORMAT:
-        msgq[key] =
+        popEntry = msgq[i];
+        msgq[popIndex] =
             {
+                index: ,
+                elmWindow: ,
                 typeMsg: msg_type,
-                elmThisBox: new_elm,
-                elmInError: elm,
+                elmLink: elm,
                 typeIdOrElm: id_elm_type,
                 errorId: error_id,
                 rectMounted: xy_wh,
                 rectTarget: xy_wh,
                 cntRepeats: repeated_warnings,
-                objButtons: {}
+                html: ,
+                style: ,
+                buttons: {}
             }
+
+        popEntry.popIndex = i = msgq[i].popIndex
+        popEntry.elmWindow = msgq[i].elmWindow
+        ETC.
 
         WHERE:  key is auto assigned and returned to parent as msgqEntry
 
@@ -1597,16 +1612,14 @@ function msgqCreate(parent_div_id) {
                 evaluated because user may have dragged window on screen.
 
     */
-    msgDiv = document.getElementById(parent_div_id);
 }
 
-function msgClear(msgqEntry) {
+function popClear(msgqEntry) {
     // After DOM is ready create the message queue's parent div element
     // resides in msgq too.
-    msgDiv = document.getElementById(parent_div_id);
 }
 
-function msgAlert(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
+function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     /*  PRIMARY FUNCTION to display error messages (and control boxes)
         msg_type = "e" red error message
                    "w" orange warning message
@@ -1651,7 +1664,23 @@ function msgAlert(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     // TODO: Test clear flag and close messages
 
     // Create new msgq entry
+    var popEntry = msgq[popIndex];  // We don't want copy, direct reference
+    popEntry.index = popIndex;  // Keep key in value for handy reference
+    popEntry.msg_type = msg_type;  // e, w, i or s
+    popEntry.msg = msg;  // Might contain HTML
+    popEntry.id_elm_type = id_elm_type;
+    popEntry.id_elm = id_elm;
+    popEntry.elmLink = elm;
+    popEntry.error_id = error_id;
+    popEntry.clear_flag = clear_flag;
+    popEntry.html = popBuildHtml();
+    popEntry.html = popBuildStyle();
+
+    popIndex += 1;  // Our new entry count and the next index to add
 }
+
+function popBuildHtml() {}
+function popBuildStyle() {}
 
 function msgAddButton(msgqEntry, elm, callback) {
 
