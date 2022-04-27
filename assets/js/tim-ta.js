@@ -853,7 +853,7 @@ function paintRunTimers(i) {
     // If All Sets used, insert it first. Then insert Set total duration
     html += tabRunTimersHeading();
         // NOTE: Timers of zero duration are omitted from list
-        for (var i = 0; i < cnt; i++) { html += tabRunTaskDetail(i); }
+        for (var i = 0; i < cnt; i++) { html += tabRunTimersDetail(i); }
     html += '</table>\n';
     html += '</div>\n';
 
@@ -882,15 +882,13 @@ function paintRunTimers(i) {
 }
 
 function tabRunTimersHeading() {
-    var html = "<tr><th colspan='";
-    if (scrSmall) { html += "2"; }  // Two columns of buttons
-    else { html += "5"; }           // Five columns of buttons
-    html += "'>Controls</th><th>Task Name</th>";
-    if (!scrSmall) { html += "<th>Duration</th>"; }
+    var html = "<tr><th>Progress</th>";
+    if (!scrSmall) { html += "<th>HH:MM:SS</th>"; }
+    html += "<th>Task Name</th>";
     return html += "</tr>\n";
 }
 
-function tabRunTaskDetail(i) {
+function tabRunTimersDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
     secondsTask = 0;  // Abundant caution.
     var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
@@ -908,27 +906,28 @@ function tabRunTaskDetail(i) {
                 "secondsSet:", secondsSet, typeof secondsSet,
                 "secondsAllSets:", secondsAllSets, typeof secondsAllSets);
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
-    //hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
-    //hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
+    hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
+    hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
     console.log("hhmmssTask:", hhmmssTask, "hhmmssSet", hhmmssSet)
     // var html = '<tr">\n';  // This shouldn't have worked before???
     var html = '<tr>\n';
-    if (scrSmall) {
-        html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
-        html += tabButton(i, tabControlsSym, tabControlsTitle, "clickFuture");
-    }           // Two columns of buttons
-    else {
-        html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
-        html += tabButton(i, tabUpSym, tabUpTitle, "clickUp");
-        html += tabButton(i, tabDownSym, tabDownTitle, "clickDown");
-        html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
-        html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
-    }           // Five columns of buttons
-
+    html += "<td><font size='+2'>" + "FUTURE PROGRESS BAR" + "</font></td>\n";
+    if (!scrSmall) { html += "<td>" + hhmmss + "</td>\n"; }
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
-    if (!scrSmall) { html += "<td>" + strDuration + "</td>\n"; }
     return html += "</tr>\n";
+}
+
+function convertNumber (value) {
+    if (isNan(value)) {
+        if (typeof value != "string") { return 0; }
+        var value2 = Number(value);  // blank becomes 0
+        if (isNan(value2)) { return 0; // string not a number }
+        return value2;
+    }
+    else {
+        return value; // Already a number
+    }
 }
 
 function clickControls(i) {
