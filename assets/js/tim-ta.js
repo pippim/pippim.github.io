@@ -990,11 +990,13 @@ async function runAllTimers() {
     {
         await sleep(1000);
         if (entry.progress >= entry.seconds) {
-            // clearTimeout(oneTimeout);  // Reset one timer
+            // Timer has ended, sound alarm and start next timer
+            oneTimerEnd(name);
             currentIndex += 1;
             if (currentIndex >= names.length) { return; }
             name = names[currentIndex];
             entry = allTimers[name];
+            console.log("new name:", name)
             continue;  // Wait for first second.
         }
         entry.progress += 1
