@@ -986,12 +986,12 @@ async function runAllTimers(calledFromTable) {
     for (var i=0; i<secondsAllSets; i++)
     {
         await sleep(1000);
-        console.log("Wakeup i:", i)
+        //console.log("Wakeup i:", i)
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             oneTimerEnd(name);
             currentIndex += 1;
-            if (currentIndex >= names.length) {
+            if (currentIndex > names.length) {
                 if (calledFromTable == "Projects") { paintProjectsTable(); }
                 else if (calledFromTable == "Tasks") { paintTasksTable(); }
                 else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
@@ -1006,7 +1006,6 @@ async function runAllTimers(calledFromTable) {
         entry.progress += 1
         entry.remaining -= 1
         entry.elm.value = entry.progress.toString()
-        // allTimers[name] = entry;  // Is this necessary???
     }
 }
 
