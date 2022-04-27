@@ -819,10 +819,13 @@ function clickAddProject() {
     // alert("Clicked Add Project but not implemented yet")
 }
 
+var secondsSet, secondsAllSets, hhmmssSet, hhmmssAllSets;
+
 function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
     msgqClear();
     if (i !== null) { clickCommon(i); }  // load selected ttaProject
+    secondsSet = secondsAllSets = 0;
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
@@ -886,8 +889,6 @@ function tabRunTimersHeading() {
     if (!scrSmall) { html += "<th>Duration</th>"; }
     return html += "</tr>\n";
 }
-
-var secondsSet, secondsAllSets, hhmmssSet, hhmmssAllSets;
 
 function tabRunTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
