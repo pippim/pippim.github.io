@@ -566,7 +566,8 @@ function tabTasksHeading() {
 
 function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-    var html = '<tr">\n';
+    // var html = '<tr">\n';  // This shouldn't have worked before???
+    var html = '<tr>\n';
     if (scrSmall) {
         html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
         html += tabButton(i, tabControlsSym, tabControlsTitle, "clickFuture");
@@ -846,6 +847,7 @@ function paintRunTimers(i) {
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
     html += '<table id="tabRunTimers" class="tta-table">\n' ;
+    // If All Sets used, insert it first. Then insert Set total duration
     html += tabRunTimersHeading();
         // NOTE: Timers of zero duration are omitted from list
         for (var i = 0; i < cnt; i++) { html += tabRunTaskDetail(i); }
@@ -885,12 +887,24 @@ function tabRunTimersHeading() {
     return html += "</tr>\n";
 }
 
+var secondsSet, secondsAllSets, hhmmssSet, hhmmssAllSets;
+
 function tabRunTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
     var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
     if (strDuration == "") { return ""; }  // No duration = no timer displayed
 
-    var html = '<tr">\n';
+    var seconds = ttaTask.seconds;
+    var seconds += ttaTask.minutes * 60;
+    var seconds += ttaTask.hours * 60 * 60;
+    secondsSet += seconds;
+    secondsAllSets = seconds * ttaProject.run_set_times;
+    var hhmmss = new Date(seconds * 1000).toISOString().substr(11, 8);
+    hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
+    hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
+    console.log("hhmmss:", hhmmss)
+    // var html = '<tr">\n';  // This shouldn't have worked before???
+    var html = '<tr>\n';
     if (scrSmall) {
         html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
         html += tabButton(i, tabControlsSym, tabControlsTitle, "clickFuture");
