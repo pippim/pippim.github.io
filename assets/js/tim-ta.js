@@ -882,7 +882,7 @@ function paintRunTimers(i) {
     console.log("popEntry:", popEntry);
 
     // Run through all timers
-    for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
+    for (const name of Object.keys(allTimers)) { await oneTimerRun(name); }
 }
 
 function tabRunTimersHeading() {
@@ -967,9 +967,10 @@ function progressTouched(name) {
 }
 
 var oneTimeout;
-function oneTimerRun(name) {
+const oneTimerRun(name) = async () ==> {
     // Run one timer
     //console.log("initSwitchesAfterDOM()");
+    await sleep(1000);
     entry = allTimers[name];
     if (entry.progress >= entry.seconds) {
         // clearTimeout(oneTimeout);  // Reset one timer
@@ -981,8 +982,7 @@ function oneTimerRun(name) {
     entry.elm.value = entry.progress.toString()
     allTimers[name] = entry;  // Is this necessary???
 
-    await sleep(1000);
-    oneTimerRun(name);
+    await oneTimerRun(name);
     // oneTimeout = setTimeout(() => {oneTimerRun(name)}, 1000);  // After 1 second
 }
 
