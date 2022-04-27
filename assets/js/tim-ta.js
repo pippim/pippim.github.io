@@ -962,7 +962,7 @@ function initTimersAfterDOM() {
 }
 
 function progressTouched(name) {
-    console.log("Progress bar touched:", name)
+    console.log("Progress bar touched:", name);
 }
 
 var oneTimeout;
@@ -974,7 +974,7 @@ function oneTimerRun(name) {
 
     entry.progress += 1
     entry.remaining -= 1
-    entry.elm.progress.value = entry.progress.toString()
+    entry.elm.value = entry.progress.toString()
     allTimers[id] = entry;  // Is this necessary???
     clearTimeout(oneTimeout);  // Reset one timer
     oneTimeout = setTimeout(oneTimerRun(name), 1000);  // After 1 second
