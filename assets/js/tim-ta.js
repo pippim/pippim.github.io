@@ -896,9 +896,9 @@ function tabRunTaskDetail(i) {
     var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
     if (strDuration == "") { return ""; }  // No duration = no timer displayed
 
-    var sec = ttaTask.seconds;
-    sec += ttaTask.minutes * 60;        // Tricky you can multiply a string
-    sec += ttaTask.hours * 60 * 60;
+    var sec = +ttaTask.seconds;
+    sec += +ttaTask.minutes * 60;        // Tricky you can multiply a string
+    sec += +ttaTask.hours * 60 * 60;
     secondsTask = parseInt(sec, 10);
     secondsSet += secondsTask;
     //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
