@@ -1678,6 +1678,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     // TODO: Test clear flag and close messages
 
     // Create new msgq entry
+    /*
     msgq[popIndex] = popEntry; // Create empty entry
     msgq[popIndex].index = popIndex;  // Keep key in value for handy reference
     msgq[popIndex].elmWindow = document.createElement('div');
@@ -1690,6 +1691,21 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     msgq[popIndex].clear_flag = clear_flag;
     msgq[popIndex].html = popBuildHtml();
     msgq[popIndex].style = popBuildStyle();
+    */
+
+    var p = {};
+    p['index'] = popIndex;  // Keep key in value for handy reference
+    p['elmWindow'] = document.createElement('div');
+    p['msg_type'] = msg_type;  // e, w, i or s
+    p['msg'] = msg;  // Might contain HTML
+    p['id_elm_type'] = id_elm_type;
+    p['id_elm'] = id_elm;
+    p['elmLink'] = elm;
+    p['error_id'] = error_id;
+    p['clear_flag'] = clear_flag;
+    p['html'] = popBuildHtml();
+    p['style'] = popBuildStyle();
+    msgq[popIndex.toString()] = p;
 
     popIndex += 1;  // Our new entry count and the next index to add
 }
