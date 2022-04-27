@@ -890,7 +890,7 @@ function paintRunTimers(i) {
     // Run through all timers
     //for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
     runAllTimers();
-
+    alert("About to return")
     if (calledFromTable == "Projects") { paintProjectsTable(); }
     else if (calledFromTable == "Tasks") { paintTasksTable(); }
     else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
@@ -990,6 +990,7 @@ async function runAllTimers() {
     for (var i=0; i<secondsAllSets; i++)
     {
         await sleep(1000);
+        console.log("Wakeup i:", i)
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             oneTimerEnd(name);
@@ -1000,6 +1001,7 @@ async function runAllTimers() {
             console.log("new name:", name)
             continue;  // Wait for first second.
         }
+        // Below should probably be in else side
         entry.progress += 1
         entry.remaining -= 1
         entry.elm.value = entry.progress.toString()
