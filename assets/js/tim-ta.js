@@ -1572,6 +1572,20 @@ function confirmDelete(text) {
 var msgq = {};  // Data struction below
 var btnBox = {};  // Extra buttons boxed up for small screen which is <= 640 px wide.
 var popIndex = 0;  // Key into msgq returned from popCreate() and passed to popClear()
+var popEntry = {
+        index: ,
+        elmWindow: ,
+        typeMsg: ,
+        elmLink: ,
+        typeIdOrElm: ,
+        errorId: ,
+        rectMounted: ,
+        rectTarget: ,
+        cntRepeats: ,
+        html: ,
+        style: ,
+        buttons: {}
+    };
 
 function msgqClear() {
     // When mounting new screen clear old messages. Also clear control box which
@@ -1664,6 +1678,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     // TODO: Test clear flag and close messages
 
     // Create new msgq entry
+    msgq[popIndex] = popEntry; // Create empty entry
     msgq[popIndex].index = popIndex;  // Keep key in value for handy reference
     msgq[popIndex].elmWindow = document.createElement('div');
     msgq[popIndex].msg_type = msg_type;  // e, w, i or s
