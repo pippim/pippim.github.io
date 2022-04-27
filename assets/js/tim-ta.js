@@ -897,6 +897,7 @@ function tabRunTaskDetail(i) {
     var seconds = ttaTask.seconds;
     seconds += ttaTask.minutes * 60;
     seconds += ttaTask.hours * 60 * 60;
+    console.log("seconds:", seconds);
     secondsSet += seconds;
     secondsAllSets = seconds * ttaProject.run_set_times;
     var hhmmss = new Date(seconds * 1000).toISOString().substr(11, 8);
