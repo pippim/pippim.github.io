@@ -412,11 +412,11 @@ function tabProjectDetail(i) {
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[i]];
     var html = '<tr>\n';
     if (scrSmall) {
-        html += tabButton(i, tabPlaySym, tabPlayTitle, "paintRunTasks");
+        html += tabButton(i, tabPlaySym, tabPlayTitle, "paintRunTimers");
         html += tabButton(i, tabControlsSym, tabControlsTitle, "clickFuture");
     }           // Two columns of buttons
     else {
-        html += tabButton(i, tabPlaySym, tabPlayTitle, "paintRunTasks");
+        html += tabButton(i, tabPlaySym, tabPlayTitle, "paintRunTimers");
         html += tabButton(i, tabUpSym, tabUpTitle, "clickUp");
         html += tabButton(i, tabDownSym, tabDownTitle, "clickDown");
         html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
@@ -453,7 +453,7 @@ function paintTasksTable() {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
-    html += taskButton(tabPlaySym, tabPlayTitle, "paintRunTasks");
+    html += taskButton(tabPlaySym, tabPlayTitle, "paintRunTimers");
     html += "<font size='+2'>Run Project</font>";
     html += '</div>\n';
     html += '<div class="middleFoot">\n';
@@ -556,7 +556,6 @@ function inpSelectStyle() {
 }
 
 function tabTasksHeading() {
-    // Identical to tabProjectsHeading() except the word "Task"
     var html = "<tr><th colspan='";
     if (scrSmall) { html += "2"; }  // Two columns of buttons
     else { html += "5"; }           // Five columns of buttons
@@ -819,16 +818,16 @@ function clickAddProject() {
     // alert("Clicked Add Project but not implemented yet")
 }
 
-function paintRunTasks(i) {
+function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
     msgqClear();
     if (i !== null) { clickCommon(i); }  // load selected ttaProject
-    currentForm = "formRunTasks"
+    currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
     var calledFromTable = currentTable;
     console.log("currentTable, i:", currentTable, i)
-    currentTable = "RunTasks"
+    currentTable = "RunTimers"
 
     // Back to same Table
     const cnt = ttaProject.arrTasks.length;
@@ -846,8 +845,9 @@ function paintRunTasks(i) {
     */
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
-    html += '<table id="tabRunTasks" class="tta-table">\n' ;
-    html += tabRunTasksHeading();
+    html += '<table id="tabRunTimers" class="tta-table">\n' ;
+    html += tabRunTimersHeading();
+        // NOTE: Timers of zero duration are omitted from list
         for (var i = 0; i < cnt; i++) { html += tabRunTaskDetail(i); }
     html += '</table>\n';
     html += '</div>\n';
@@ -869,15 +869,14 @@ function paintRunTasks(i) {
     ttaElm.scrollIntoView();
 
     // Test window create shell
-    popCreate("e", "Run Tasks is still a Work in Progress", 'id', "tabRunTasks");
+    popCreate("e", "Run Tasks is still a Work in Progress", 'id', "tabRunTimers");
     var popEntry = msgq[popIndex - 1];
     console.log("popEntry:", popEntry);
 
     /*    pollCloseBtn(); */
 }
 
-function tabRunTasksHeading() {
-    // Identical to tabProjectsHeading() except the word "Task"
+function tabRunTimersHeading() {
     var html = "<tr><th colspan='";
     if (scrSmall) { html += "2"; }  // Two columns of buttons
     else { html += "5"; }           // Five columns of buttons
@@ -888,6 +887,9 @@ function tabRunTasksHeading() {
 
 function tabRunTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
+    var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
+    if (strDuration == "") { return ""; }  // No duration = no timer displayed
+
     var html = '<tr">\n';
     if (scrSmall) {
         html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
@@ -903,10 +905,7 @@ function tabRunTaskDetail(i) {
 
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
-    if (!scrSmall) {
-        var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
-        html += "<td>" + strDuration + "</td>\n";
-    }
+    if (!scrSmall) { html += "<td>" + strDuration + "</td>\n"; }
     return html += "</tr>\n";
 }
 
