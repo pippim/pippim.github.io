@@ -972,7 +972,7 @@ function oneTimerRun(name) {
     //console.log("initSwitchesAfterDOM()");
     entry = allTimers[name];
     if (entry.progress >= entry.seconds) {
-        clearTimeout(oneTimeout);  // Reset one timer
+        // clearTimeout(oneTimeout);  // Reset one timer
         return;  // All done
     }
 
@@ -981,7 +981,13 @@ function oneTimerRun(name) {
     entry.elm.value = entry.progress.toString()
     allTimers[name] = entry;  // Is this necessary???
 
-    oneTimeout = setTimeout(() => {oneTimerRun(name)}, 1000);  // After 1 second
+    await sleep(1000);
+    oneTimerRun(name);
+    // oneTimeout = setTimeout(() => {oneTimerRun(name)}, 1000);  // After 1 second
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 /* NOT USED for now
