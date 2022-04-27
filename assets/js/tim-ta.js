@@ -912,7 +912,8 @@ function tabRunTimersDetail(i) {
     // var html = '<tr">\n';  // This shouldn't have worked before???
 
     var html = '<tr>\n';
-    html += "<td><font size='+1'>" + "FUTURE PROGRESS BAR" + "</font></td>\n";
+    html += '<td><progress id="file' + i +
+            '" value="32" max="100"> 32% </progress>/td>\n';
     if (!scrSmall) { html += "<td>" + hhmmssTask + "</td>\n"; }
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
