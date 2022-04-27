@@ -983,7 +983,8 @@ async function runAllTimers(calledFromTable) {
     var name = names[currentIndex];
     var entry = allTimers[name];
     console.log("runAllTimers() for:", secondsAllSets)
-    for (var i=0; i<secondsAllSets; i++)
+    //for (var i=0; i<secondsAllSets; i++)
+    for (var i = 0; i < Infinity; i++)
     {
         await sleep(1000);
         //console.log("Wakeup i:", i)
@@ -992,6 +993,7 @@ async function runAllTimers(calledFromTable) {
             oneTimerEnd(name);
             currentIndex += 1;
             if (currentIndex > names.length) {
+                // Not working, simply returning without painting new table
                 if (calledFromTable == "Projects") { paintProjectsTable(); }
                 else if (calledFromTable == "Tasks") { paintTasksTable(); }
                 else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
