@@ -1571,7 +1571,7 @@ function msgqClear() {
     // When mounting new screen clear old messages. Also clear control box which
     // resides in msgq too.
     msgq = {};
-    btnBox = ();
+    btnBox = {};
 }
 
 function msgqCreate(parent_div_id) {
