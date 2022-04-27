@@ -1632,7 +1632,7 @@ function msgAlert(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
         return false;
     }
     if (msg_type != "e" && msg_type != "w" &&
-        msg_type != "i" msg_type != "s" ) {
+        msg_type != "i" && msg_type != "s") {
             alert("msgAlert() msg_type must be 'e', 'w', 'i' or 's'.");
             console.trace();
             return false;
