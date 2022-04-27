@@ -913,7 +913,7 @@ function tabRunTimersDetail(i) {
 
     var html = '<tr>\n';
     html += "<td><font size='+1'>" + "FUTURE PROGRESS BAR" + "</font></td>\n";
-    if (!scrSmall) { html += "<td>" + hhmmss + "</td>\n"; }
+    if (!scrSmall) { html += "<td>" + hhmmssTask + "</td>\n"; }
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
     return html += "</tr>\n";
