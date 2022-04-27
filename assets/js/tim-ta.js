@@ -305,12 +305,6 @@ function paintProjectsTable() {
     msgqClear();
     currentTable = "Projects";
 
-    // Test window create shell
-    popCreate("e", "Just a test", 'elm', parentElm);
-    var popEntry = msgq[popIndex - 1];
-    console.log("popEntry:", popEntry);
-
-
     // Just in case another browser tab changed configuration...
     readConfig();
     //ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
@@ -418,11 +412,11 @@ function tabProjectDetail(i) {
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[i]];
     var html = '<tr>\n';
     if (scrSmall) {
-        html += tabButton(i, tabPlaySym, tabPlayTitle, "clickPlay");
+        html += tabButton(i, tabPlaySym, tabPlayTitle, "paintRunTasks");
         html += tabButton(i, tabControlsSym, tabControlsTitle, "clickFuture");
     }           // Two columns of buttons
     else {
-        html += tabButton(i, tabPlaySym, tabPlayTitle, "clickPlay");
+        html += tabButton(i, tabPlaySym, tabPlayTitle, "paintRunTasks");
         html += tabButton(i, tabUpSym, tabUpTitle, "clickUp");
         html += tabButton(i, tabDownSym, tabDownTitle, "clickDown");
         html += tabButton(i, tabDeleteSym, tabDeleteTitle, "clickDelete");
@@ -459,7 +453,7 @@ function paintTasksTable() {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
-    html += taskButton(tabPlaySym, tabPlayTitle, "clickPlay");
+    html += taskButton(tabPlaySym, tabPlayTitle, "paintRunTasks");
     html += "<font size='+2'>Run Project</font>";
     html += '</div>\n';
     html += '<div class="middleFoot">\n';
@@ -825,12 +819,19 @@ function clickAddProject() {
     // alert("Clicked Add Project but not implemented yet")
 }
 
-function clickPlay() {
+function paintRunTasks(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
     msgqClear();
     currentForm = "formPlay"
+    // Can be called from Projects Table so need to retrieve ttaProject for i
+    // Can be called from Projects Tasks Table so ttaProject is current
     var calledFromTable = currentTable;
     currentTable = "Tasks"
+
+    // Test window create shell
+    popCreate("e", "Just a test", 'elm', parentElm);
+    var popEntry = msgq[popIndex - 1];
+    console.log("popEntry:", popEntry);
 
     // Back to same Table
     const cnt = ttaProject.arrTasks.length;
@@ -854,7 +855,7 @@ function clickPlay() {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
-    html += taskButton(tabPlaySym, tabPlayTitle, "clickPlay");
+    html += taskButton(tabPlaySym, tabPlayTitle, "paintRunTasks");
     html += "<font size='+2'>Run Project</font>";
     html += '</div>\n';
     html += '<div class="middleFoot">\n';
@@ -1590,7 +1591,7 @@ var popEntry = {
 function msgqClear() {
     // When mounting new screen clear old messages. Also clear control box which
     // resides in msgq too.
-    msgq = {};
+    msgq = {};  // TODO: First loop through and delete created elements
     btnBox = {};
     popIndex = 0;
 }
@@ -1628,9 +1629,9 @@ function msgqCreate() {
     */
 }
 
-function popClear(msgqEntry) {
-    // After DOM is ready create the message queue's parent div element
-    // resides in msgq too.
+function popClear(key) {
+    // Reverse document.create - NO NEED, GC (garbage collector will remove)
+    msgq[key].elmWindow.remove();  // should remove child be used?
 }
 
 function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
@@ -1674,24 +1675,6 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
         // Rewrite id in elm parameter with actual element.
         elm = document.getElementById(id_elm);
     }
-
-    // TODO: Test clear flag and close messages
-
-    // Create new msgq entry
-    /*
-    msgq[popIndex] = popEntry; // Create empty entry
-    msgq[popIndex].index = popIndex;  // Keep key in value for handy reference
-    msgq[popIndex].elmWindow = document.createElement('div');
-    msgq[popIndex].msg_type = msg_type;  // e, w, i or s
-    msgq[popIndex].msg = msg;  // Might contain HTML
-    msgq[popIndex].id_elm_type = id_elm_type;
-    msgq[popIndex].id_elm = id_elm;
-    msgq[popIndex].elmLink = elm;
-    msgq[popIndex].error_id = error_id;
-    msgq[popIndex].clear_flag = clear_flag;
-    msgq[popIndex].html = popBuildHtml();
-    msgq[popIndex].style = popBuildStyle();
-    */
 
     var p = {};
     p['index'] = popIndex;  // Keep key in value for handy reference
