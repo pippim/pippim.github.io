@@ -901,7 +901,7 @@ function tabRunTaskDetail(i) {
     secondsTask += ttaTask.hours * 60 * 60;
     secondsSet += secondsTask;
     //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
-    run_set_times = getProjectValue('run_set_times');
+    run_set_times = parseInt(getProjectValue('run_set_times'), 10);
     console.log("BEFORE run_set_times:", run_set_times, typeof run_set_times);
     run_set_times = 0 + run_set_times;  // convert string to int
     console.log("AFTER run_set_times:", run_set_times, typeof run_set_times);
