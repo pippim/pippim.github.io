@@ -991,7 +991,6 @@ async function runAllTimers() {
         await sleep(1000);
         if (entry.progress >= entry.seconds) {
             // clearTimeout(oneTimeout);  // Reset one timer
-            oneTimerEnd(name);
             currentIndex += 1;
             if (currentIndex >= names.length) { return; }
             name = names[currentIndex];
