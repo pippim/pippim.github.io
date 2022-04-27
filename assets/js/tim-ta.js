@@ -692,7 +692,7 @@ function soundAlarm(i, sound) {
     const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
     var BtnElm;
     if (currentTable != "RunTasks") { btnElm = document.getElementById(btnId); }
-    audioControl = document.getElementById(sound);
+    var audioControl = document.getElementById(sound);
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
         resetListen(btnElm);
@@ -1035,7 +1035,7 @@ function sleep(ms) {
 function oneTimerEnd(name) {
     // Based on clickListen(
     var i = allTimers[name].index
-    clickListen(i);  // Will this screw up our outer loop?
+    // clickListen(i);  // Will this screw up our outer loop?
 }
 
 /* NOT USED for now
