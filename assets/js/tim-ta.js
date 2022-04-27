@@ -623,7 +623,7 @@ function clickCommon(i) {
         ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[i]];
         cntTable = ttaConfig.arrProjects.length;
     }
-    else if (currentTable == "Tasks") {
+    else if (currentTable == "Tasks" || currentTable == "RunTimers") {
         ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
         cntTable = ttaProject.arrTasks.length;
     }
@@ -708,6 +708,7 @@ function soundAlarm(i, sound) {
 }
 
 function resetListen(btnElm) {
+    // Set button symbol (text) back to Song Notes
     btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
     btnElm.title = tabListenTitle;
 }
@@ -916,24 +917,25 @@ function tabRunTimersDetail(i) {
     // var html = '<tr">\n';  // This shouldn't have worked before???
 
     var id = "tabTimer" + i;
-    return htmlRunTimersDetail(id, ttaTask.task_name, secondsTask);
+    return htmlRunTimersDetail(id, i, ttaTask.task_name, secondsTask);
 }
 
 function htmlRunTimersSet() {
     var id = "tabTimerSet";
-    return htmlRunTimersDetail(id, "All Timers (Set)", secondsSet);
+    return htmlRunTimersDetail(id, "Set of Timers", cntTable, secondsSet);
 }
 
 function htmlRunTimersAllSets() {
     var id = "tabTimerAllSets";
-    return htmlRunTimersDetail(id, "All Sets of Timers", secondsAllSets);
+    return htmlRunTimersDetail(id, "All Sets of Timers", cntTable + 1, secondsAllSets);
 }
 
-function htmlRunTimersDetail(id, name, seconds) {
+function htmlRunTimersDetail(id, name, index, seconds) {
 
     entryTimer = {};
     entryTimer["id"] = id;
     entryTimer["elm"] = "Pippim Promise";
+    entryTimer["index"] = index;
     entryTimer["name"] = name;
     entryTimer["seconds"] = seconds;
     entryTimer["remaining"] = seconds;
@@ -974,13 +976,15 @@ async function oneTimerRun(name) {
     entry = allTimers[name];
     if (entry.progress >= entry.seconds) {
         // clearTimeout(oneTimeout);  // Reset one timer
+        oneTimerEnd(name);
+        // TODO: Set next name in call stack and call it.
         return;  // All done
     }
 
     entry.progress += 1
     entry.remaining -= 1
     entry.elm.value = entry.progress.toString()
-    allTimers[name] = entry;  // Is this necessary???
+    // allTimers[name] = entry;  // Is this necessary???
 
     oneTimerRun(name);
     // oneTimeout = setTimeout(() => {oneTimerRun(name)}, 1000);  // After 1 second
@@ -988,6 +992,12 @@ async function oneTimerRun(name) {
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function oneTimerEnd(name) {
+    // Based on clickListen(
+    var i = allTimers[name].index
+    clickListen(i);  // Will this screw up our outer loop?
 }
 
 /* NOT USED for now
