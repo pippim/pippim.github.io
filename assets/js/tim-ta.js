@@ -826,6 +826,7 @@ function paintRunTasks(i) {
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
     var calledFromTable = currentTable;
+    console.log("currentTable, i:", currentTable, i)
     currentTable = "Tasks"
 
     // Test window create shell
