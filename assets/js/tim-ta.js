@@ -992,7 +992,7 @@ async function runAllTimers(calledFromTable) {
             // Timer has ended, sound alarm and start next timer
             oneTimerEnd(name);
             currentIndex += 1;
-            if (currentIndex > names.length) {
+            if (currentIndex >= names.length) {
                 // Not working, simply returning without painting new table
                 if (calledFromTable == "Projects") { paintProjectsTable(); }
                 else if (calledFromTable == "Tasks") { paintTasksTable(); }
