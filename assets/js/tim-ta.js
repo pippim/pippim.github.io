@@ -883,7 +883,7 @@ function paintRunTimers(i) {
 
 function tabRunTimersHeading() {
     var html = "<tr><th>Progress</th>";
-    if (!scrSmall) { html += "<th>HH:MM:SS</th>"; }
+    if (!scrSmall) { html += "<th>(hh:mm:ss)</th>"; }
     html += "<th>Task Name</th>";
     return html += "</tr>\n";
 }
