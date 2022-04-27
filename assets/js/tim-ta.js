@@ -1573,17 +1573,17 @@ var msgq = {};  // Data struction below
 var btnBox = {};  // Extra buttons boxed up for small screen which is <= 640 px wide.
 var popIndex = 0;  // Key into msgq returned from popCreate() and passed to popClear()
 var popEntry = {
-        index: ,
-        elmWindow: ,
-        typeMsg: ,
-        elmLink: ,
-        typeIdOrElm: ,
-        errorId: ,
-        rectMounted: ,
-        rectTarget: ,
-        cntRepeats: ,
-        html: ,
-        style: ,
+        index: undefined,
+        elmWindow: undefined,
+        typeMsg: undefined,
+        elmLink: undefined,
+        typeIdOrElm: undefined,
+        errorId: undefined,
+        rectMounted: undefined,
+        rectTarget: undefined,
+        cntRepeats: undefined,
+        html: undefined,
+        style: undefined,
         buttons: {}
     };
 
