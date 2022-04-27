@@ -934,8 +934,8 @@ function htmlRunTimersDetail(id, seconds) {
     entryTimer = {};
     entryTimer["id"] = id;
     entryTimer["elm"] = "Pippim Promise";
-    entryTimer["seconds"] = secondsTask;
-    entryTimer["remaining"] = secondsTask;
+    entryTimer["seconds"] = seconds;
+    entryTimer["remaining"] = seconds;
     entryTimer["progress"] = 0;
     allTimers[id] = entryTimer;
 
@@ -969,10 +969,12 @@ function oneTimerRun(name) {
     // Run one timer
     //console.log("initSwitchesAfterDOM()");
     entry = allTimers[name];
-    if (entry.progress > entry.seconds) { return; }  // All done
+    if (entry.progress >= entry.seconds) { return; }  // All done
 
-    allTimers[name].progress += 1
+    entry.progress += 1
+    entry.remaining -= 1
     entry.elm.progress.value = entry.progress.toString()
+    allTimers[id] = entry;  // Is this necessary???
     clearTimeout(oneTimeout);  // Reset one timer
     oneTimeout = setTimeout(oneTimerRun(name), 1000);  // After 1 second
 }
