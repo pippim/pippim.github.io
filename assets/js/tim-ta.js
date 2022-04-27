@@ -986,6 +986,7 @@ async function runAllTimers() {
     var currentIndex = 0;
     var name = names[currentIndex];
     var entry = allTimers[name];
+    console.log("runAllTimers() for:", secondsAllSets)
     for (var i=0; i<secondsAllSets; i++)
     {
         await sleep(1000);
