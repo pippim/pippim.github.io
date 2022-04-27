@@ -895,8 +895,8 @@ function tabRunTaskDetail(i) {
     if (strDuration == "") { return ""; }  // No duration = no timer displayed
 
     var seconds = ttaTask.seconds;
-    var seconds += ttaTask.minutes * 60;
-    var seconds += ttaTask.hours * 60 * 60;
+    seconds += ttaTask.minutes * 60;
+    seconds += ttaTask.hours * 60 * 60;
     secondsSet += seconds;
     secondsAllSets = seconds * ttaProject.run_set_times;
     var hhmmss = new Date(seconds * 1000).toISOString().substr(11, 8);
