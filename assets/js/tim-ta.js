@@ -690,27 +690,32 @@ function soundAlarm(i, sound) {
     }
     */
     const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
-    var btnElm = document.getElementById(btnId);
+    var BtnElm;
+    if (currentTable != "RunTasks") { btnElm = document.getElementById(btnId); }
     audioControl = document.getElementById(sound);
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
-        resetListen (btnElm);
+        resetListen(btnElm);
         audioControl.pause();  // There is no "stop()" function
         audioControl.currentTime = 0;  // Works but doesn't invoke onended event
     } else {
         // Set icon to "Stop" and schedule "Listen" icon when sound ends
         // Sound has start, set Stop Symbol into button text
-        btnElm.innerHTML = tabStopSym;  // textContent can't be used because entity code
-        btnElm.title = tabStopTitle;
+        if (btnElm !== null) {
+            btnElm.innerHTML = tabStopSym;  // textContent can't be used because entity code
+            btnElm.title = tabStopTitle;
+        }
         audioControl.play();
-        audioControl.onended = function() { resetListen (btnElm); };
+        audioControl.onended = function() { resetListen(btnElm); };
     }
 }
 
 function resetListen(btnElm) {
     // Set button symbol (text) back to Song Notes
-    btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
-    btnElm.title = tabListenTitle;
+    if (btnElm !== null) {
+        btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
+        btnElm.title = tabListenTitle;
+    }
 }
 
 function sendNotify(i, notify) {
@@ -883,7 +888,12 @@ function paintRunTimers(i) {
     console.log("popEntry:", popEntry);
 
     // Run through all timers
-    for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
+    //for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
+    runAllTimers();
+
+    if (calledFromTable == "Projects") { paintProjectsTable(); }
+    else if (calledFromTable == "Tasks") { paintTasksTable(); }
+    else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
 }
 
 function tabRunTimersHeading() {
@@ -966,6 +976,33 @@ function initTimersAfterDOM() {
 
 function progressTouched(name) {
     console.log("Progress bar touched:", name);
+}
+
+var oneTimeout;
+async function runAllTimers() {
+    // Run one timer
+    //console.log("initSwitchesAfterDOM()");
+    var names = Object.keys(allTimers);
+    var currentIndex = 0;
+    var name = names[currentIndex];
+    var entry = allTimers[name];
+    for (var i=0; i<secondsAllSets; i++)
+    {
+        await sleep(1000);
+        if (entry.progress >= entry.seconds) {
+            // clearTimeout(oneTimeout);  // Reset one timer
+            oneTimerEnd(name);
+            currentIndex += 1;
+            if (currentIndex >= names.length) { return; }
+            name = names[currentIndex];
+            entry = allTimers[name];
+            continue;  // Wait for first second.
+        }
+        entry.progress += 1
+        entry.remaining -= 1
+        entry.elm.value = entry.progress.toString()
+        // allTimers[name] = entry;  // Is this necessary???
+    }
 }
 
 var oneTimeout;
