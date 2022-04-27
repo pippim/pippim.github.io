@@ -912,9 +912,9 @@ function tabRunTimersDetail(i) {
     // var html = '<tr">\n';  // This shouldn't have worked before???
 
     var html = '<tr>\n';
-    html += '<td><progress id="file' + i + '" value="15000" max="' +
+    html += '<td><progress id="tabTimer' + i + '" value="1500" max="' +
     secondsTask.toString() + '"> 32% </progress></td>\n';
-
+    console.log("secondsTask.toString():", secondsTask.toString())
     if (!scrSmall) { html += "<td>" + hhmmssTask + "</td>\n"; }
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
