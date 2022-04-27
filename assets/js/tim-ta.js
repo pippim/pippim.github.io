@@ -902,8 +902,11 @@ function tabRunTaskDetail(i) {
     secondsSet += secondsTask;
     //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
     run_set_times = getProjectValue('run_set_times');
-    console.log("run_set_times:", run_set_times, typeof run_set_times);
+    console.log("BEFORE run_set_times:", run_set_times, typeof run_set_times);
     run_set_times = 0 + run_set_times;  // convert string to int
+    console.log("AFTER run_set_times:", run_set_times, typeof run_set_times);
+    var run_times = 0 + run_set_times;  // convert string to int
+    console.log("NEW run_times:", run_times, typeof run_times);
     secondsAllSets += secondsTask * run_set_times;
     console.log("secondsAllSets:", secondsAllSets);
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
