@@ -15,8 +15,8 @@ layout: program
 <div id="PaintedTable"></div>
 
 <script>
-   parentDiv = document.getElementById("PaintedTable");
-   ttaRunConfiguration(parentDiv);
+   parentElm = document.getElementById("PaintedTable");
+   ttaRunConfiguration(parentElm);
 </script>
 
 <div id="sample_laundry_div">
