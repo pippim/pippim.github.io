@@ -963,10 +963,12 @@ function htmlRunTimersDetail(id, name, index, seconds) {
     var html = '<tr>\n';
 
     html += '<td><progress id="' + id + '" value="0" max="' +
-    secondsTask.toString() + '"></progress></td>\n';  // > 32% < possible??
+    seconds.toString() + '"></progress></td>\n';  // > 32% < possible??
 
-    if (!scrSmall) { html += "<td>" + hhmmssTask + "</td>\n"; }
-    html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
+    var hhmmss = new Date(seconds * 1000).toISOString().substr(11, 8);
+    var strDuration = hhmmssShorten(hhmmss);
+    if (!scrSmall) { html += "<td>" + strDuration + "</td>\n"; }
+    html += "<td><font size='+2'>" + name + "</font></td>\n";
 
     return html += "</tr>\n";
 }
@@ -1026,13 +1028,24 @@ async function runAllTimers(calledFromTable) {
         entry.remaining -= 1
         entry.elm.value = entry.progress.toString()
         var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
-        var parts = hhmmss.split(":")
-        var strDuration = hmsToString(parts[0], parts[1], parts[2]);
+        //var parts = hhmmss.split(":")
+        //var strDuration = hmsToString(parts[0], parts[1], parts[2]);
+        var strDuration = hhmmssShorten(hhmmss);
         if (strDuration == "") { strDuration = "Done"}
         myTable.rows[currentIndex + 1].cells[1].innerHTML = strDuration;
 
         // TODO: Save entry, get AllSets and update it. Then restore saved entry.
     }
+}
+
+function hhmmssShorten(hhmmss){
+    var short = hhmmss;
+    while(true) {
+        if (short.charAt(0) === '0' || short.charAt(0) === ':' ) {
+            short = short.substring(1);
+        } else { break; }
+    }
+    return short;
 }
 
 function sleep(ms) {
