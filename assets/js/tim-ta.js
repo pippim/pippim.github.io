@@ -1678,8 +1678,8 @@ function validateTaskName(value) {
     // We have a new key that already exists
     // TODO: Create global with element being validated
     popCreate("e", dd_field.label + " must be unique");
-    var popEntry = msgq[popIndex - 1];
-    console.log("popEntry:", popEntry);
+    //var popEntry = msgq[popIndex - 1];
+    //console.log("popEntry:", popEntry);
 
     alert(dd_field.label + " must be unique");
     return false;
@@ -1928,13 +1928,13 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     p['style'] = popBuildStyle();
     msgq[popIndex.toString()] = p;
 
-    var html = popBuildHtml();
+    var html = popBuildHtml(msg_type, msg);
     html += popBuildStyle();
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);
     alert("pause before dragElement(p['elmWindow']);")
     dragElement(p['elmWindow']);  // see assets/js/theCookieMachine.js
-    console.log("pop created:", p)
+    //console.log("pop created:", p)
 
     // TODO: activate close button
 
@@ -1944,15 +1944,21 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     popIndex += 1;  // Our new entry count and the next index to add
 }
 
-function popBuildHtml() {
+function popBuildHtml(msg_type, msg) {
+    var msg_head = "";
+    if (msg_type == "e") { msg_head = "ERROR"; }
+    if (msg_type == "w") { msg_head = "WARNING"; }
+    if (msg_type == "i") { msg_head = "Info"; }
+    if (msg_type == "s") { msg_head = "Success"; }
     var html = "";
     html += '<div class="msgq-window">\n';
     // For historical reasons must be "_header" not "-header" to drag window
-    html += '  <div class="msgq-window_header">Click here to drag\n';
+    html += '  <div class="msgq-window_header">' + msg_head +
+                    '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closebtn">&times;</span>\n';
     html += '  </div>\n';
     html += '  <div class="msq-window-body">\n';
-    html += '    <p> DUMMY TEXT - Real text needs to be set</p>\n';
+    html += '    <p>' + msg + '</p>\n';
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     html += '    <button class="msq-button-ok" title="Click to proceed">OK</button>\n';
@@ -1967,6 +1973,7 @@ function popBuildStyle() {
 
     html += '.msgq-window {\n';
     html += 'position: fixed;\n';
+    //html += 'display: none;\n';
     html += 'display: block;\n';
     html += 'max-width: 90vw;\n';
     html += 'max-height: 95vh;\n';
@@ -1984,7 +1991,8 @@ function popBuildStyle() {
     html += '}\n';
 
     html += '.msgq-window_header {\n';
-    html += 'display: inline-block;\n';
+    //html += 'display: inline-block;\n';
+    html += 'display: block;\n';
     html += 'padding: .5rem;\n';
     html += 'cursor: move;  z-index: 10;\n';
     html += 'background-color: #2196F3;\n';
