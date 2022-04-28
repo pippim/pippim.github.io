@@ -1681,7 +1681,7 @@ function validateTaskName(value) {
     //var popEntry = msgq[popIndex - 1];
     //console.log("popEntry:", popEntry);
 
-    alert(dd_field.label + " must be unique");
+    //alert(dd_field.label + " must be unique");  // replace with popCreate
     return false;
 }
 
@@ -1958,14 +1958,14 @@ function popBuildHtml(msg_type, msg) {
     html += '  <div class="msgq-window-header">' + msg_head +
                     '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closebtn" \n';
-    html += '    onclick="this.parentElement.style.display = \'none\';">&times;</span>\n';
+    html += '    onclick="this.parent.parentElement.style.display = \'none\';">&times;</span>\n';
     html += '  </div>\n';
     html += '  <div class="msq-window-body">\n';
     html += '    <p>' + msg + '</p>\n';
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     html += '    <button class="msq-button-ok" title="Click to close" \n';
-    html += '    onclick="this.parentElement.style.display = \'none\';" \n';
+    html += '    onclick="this.parent.parentElement.style.display = \'none\';" \n';
     html += '       >OK</button>\n';
     html += '  </div>\n';
     html += '</div>\n';
