@@ -2083,6 +2083,7 @@ function dragElement2(elm) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     console.log("elementDrag(e) - pos3, pos4:", pos3, pos4)
+    console.log("elm.offsetTop, elm.offsetLeft:", elm.offsetTop, elm.offsetLeft)
     // set the element's new position:
     elm.style.top = (elm.offsetTop - pos2) + "px";
     elm.style.left = (elm.offsetLeft - pos1) + "px";
