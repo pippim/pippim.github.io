@@ -1930,9 +1930,11 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
 
     var html = popBuildHtml(msg_type, msg);
     html += popBuildStyle(msg_type);
+    html += popBuildScript();
+
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);
-    alert("pause before dragElement(p['elmWindow']);")
+    //alert("pause before dragElement(p['elmWindow']);")
     dragElement(p['elmWindow']);  // see assets/js/theCookieMachine.js
     //console.log("pop created:", p)
 
@@ -1953,7 +1955,7 @@ function popBuildHtml(msg_type, msg) {
     var html = "";
     html += '<div class="msgq-window">\n';
     // For historical reasons must be "_header" not "-header" to drag window
-    html += '  <div class="msgq-window_header">' + msg_head +
+    html += '  <div class="msgq-window-header">' + msg_head +
                     '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closebtn">&times;</span>\n';
     html += '  </div>\n';
@@ -1980,7 +1982,9 @@ function popBuildStyle(msg_type) {
     html += '.msgq-window {\n';
     html += 'position: fixed;\n';
     //html += 'display: none;\n';
-    html += 'display: block;\n';
+    // html += 'display: block;\n';  // block is default anyway!
+    html += 'opacity: 1;\n';
+    html += 'transition: opacity 0.6s;\n';
     html += 'max-width: 90vw;\n';
     html += 'max-height: 95vh;\n';
     html += 'top: 20px;\n';
@@ -1997,13 +2001,34 @@ function popBuildStyle(msg_type) {
     //html += '@include small { padding: 0.3rem; font-size: 0.8rem; }\n';
     html += '}\n';
 
-    html += '.msgq-window_header {\n';
+    html += '.msgq-window-header {\n';
     //html += 'display: inline-block;\n';
-    html += 'display: block;\n';
+    // html += 'display: block;\n';  // Default anyway !
     html += 'padding: .5rem;\n';
     html += 'cursor: move;  z-index: 10;\n';
     html += 'background-color: ' + msg_head + ';\n';
     html += 'color: #fff;\n';
+    html += '}\n';
+
+    html += "</style>\n";
+
+    return html;
+}
+
+function popBuildScript() {
+    // NOTE: closebtn defined in /assets/css/style.scss
+    // Apply 600ms close time when close button clicked. Matches
+    // 0.3 s fade out applied by .closebtn {} style
+    var html = "<script>\n";
+    html += 'var close = document.getElementsByClassName("closebtn");\n';
+    html += 'var i;\n';
+
+    html += 'for (i = 0; i < close.length; i++) {\n';
+    html += '  close[i].onclick = function(){\n';
+    html += '    var div = this.parentElement;\n';
+    html += '    div.style.opacity = "0";\n';
+    html += '    setTimeout(function(){ div.style.display = "none"; }, 600);\n';
+    html += '  }\n';
     html += '}\n';
 
     html += "</style>\n";
