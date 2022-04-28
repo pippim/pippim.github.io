@@ -988,7 +988,7 @@ async function runAllTimers(calledFromTable) {
     var id = "tabTimer" + currentIndex
     var entry = allTimers[id];  // A variable name easier to read
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
-    console.log("ttaTask.task_name:", ttaTask.task_name)
+    //console.log("ttaTask.task_name:", ttaTask.task_name)
 
     while (true) {
         if (entry.progress == 0) {
@@ -998,10 +998,10 @@ async function runAllTimers(calledFromTable) {
             }
         }
         await sleep(1000);
-        console.log("entry.progress:", entry.progress);
+        //console.log("entry.progress:", entry.progress);
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
-            //oneTimerEnd(currentIndex);
+            clickListen(currentIndex);
             currentIndex += 1;
             if (currentIndex >= ttaProject.arrTasks.length) {
                 if (calledFromTable == "Projects") { paintProjectsTable(); }
@@ -1013,7 +1013,7 @@ async function runAllTimers(calledFromTable) {
             entry = allTimers[id];
             name = ttaProject.arrTasks[currentIndex];
             ttaTask = ttaProject.objTasks[name];
-            console.log("new id/name:", id, name);
+            //console.log("new id/name:", id, name);
             continue;  // Wait for first second.
         }
         // Below should probably be in else side
