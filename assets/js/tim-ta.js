@@ -1984,7 +1984,7 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
-    html += 'position: fixed;\n';
+    html += 'position: absolute;\n';
     //html += 'display: none;\n';
     // html += 'display: block;\n';  // block is default anyway!
     html += 'opacity: 1;\n';
