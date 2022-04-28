@@ -1044,9 +1044,9 @@ async function runAllTimers(calledFromTable) {
     }
 }
 
-async function updateRunTimer(myTable, broken, index) {
+async function updateRunTimer(myTable, entry, index) {
     var id = "tabTimer" + index
-    var entry = allTimers[id];
+    var broken = allTimers[id];
     console.log("broken:", broken);
     console.log("entry:", entry);
     if (entry == null) { return; }
