@@ -996,7 +996,7 @@ async function runAllTimers(calledFromTable) {
     var index = 0;
     var id = "tabTimer" + index
     var entry = allTimers[id];  // A variable name easier to read
-    var entrySet = allTimers[cntTable];
+    var entrySet = allTimers[ttaProject.arrTasks.length];
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[index]];
     //console.log("ttaTask.task_name:", ttaTask.task_name)
 
