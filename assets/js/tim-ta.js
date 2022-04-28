@@ -623,8 +623,12 @@ function clickCommon(i) {
         ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[i]];
         cntTable = ttaConfig.arrProjects.length;
     }
-    else if (currentTable == "Tasks" || currentTable == "RunTimers") {
+    else if (currentTable == "Tasks") {
         ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
+        cntTable = ttaProject.arrTasks.length;
+    }
+    else if (currentTable == "RunTimers") {
+        // ttaTask is already current because it is set in runAllTimers
         cntTable = ttaProject.arrTasks.length;
     }
     else {
@@ -691,7 +695,7 @@ function soundAlarm(i, sound) {
     */
     const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
     var BtnElm;
-    if (currentTable != "RunTasks") { btnElm = document.getElementById(btnId); }
+    if (currentTable != "RunTimers") { btnElm = document.getElementById(btnId); }
     var audioControl = document.getElementById(sound);
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
@@ -990,7 +994,7 @@ async function runAllTimers(calledFromTable) {
         if (entry.progress == 0) {
             var value = getTaskValue('task_prompt');
             if (getTaskValue('task_prompt') == "true") {
-                prompt("Press Enter to begin timer " + ttaTask.task_name)
+                alert("Press Enter to begin timer " + ttaTask.task_name)
             }
         }
         await sleep(1000);
@@ -1018,28 +1022,6 @@ async function runAllTimers(calledFromTable) {
         entry.elm.value = entry.progress.toString()
         // TODO: Save entry, get AllSets and update it. Then restore saved entry.
     }
-}
-
-var oneTimeout;
-async function oneTimerRun(name) {
-    // Run one timer
-    //console.log("initSwitchesAfterDOM()");
-    await sleep(1000);
-    entry = allTimers[name];
-    if (entry.progress >= entry.seconds) {
-        // clearTimeout(oneTimeout);  // Reset one timer
-        oneTimerEnd(currentIndex);
-        // TODO: Set next name in call stack and call it.
-        return;  // All done
-    }
-
-    entry.progress += 1
-    entry.remaining -= 1
-    entry.elm.value = entry.progress.toString()
-    // allTimers[name] = entry;  // Is this necessary???
-
-    oneTimerRun(name);
-    // oneTimeout = setTimeout(() => {oneTimerRun(name)}, 1000);  // After 1 second
 }
 
 function sleep(ms) {
