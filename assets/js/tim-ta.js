@@ -1536,7 +1536,7 @@ function validateInput() {
     for (const name of Object.keys(formValues)) {
         no += 1;
         if (name == "") { console.log("validateInput() empty name on:",
-                                      currentForm, "formValues:", formValues);
+                                      currentForm, "formValues:", formValues[""]);
                           console.log("Current field Number:", no);
                           alertError("validateInput() empty nam");
                           continue;
@@ -1593,7 +1593,7 @@ function getInputValues() {
         if (inpSelects[name].id != name) {
             console.log("names differ:", inpSelects[name].id, name)
         }
-        formValues[inpSelects[name].id] = inpSelects[name].value;
+        formValues[name] = inpSelects[name].value;
     }
 
     return formValues;
