@@ -661,7 +661,10 @@ function clickListen(i) {
     if (fTaskEndAlarm == "false" && fTaskEndNotify == "false" &&
         fSetEndAlarm == "false" && fSetEndNotify == "false" &&
         fAllSetsEndAlarm == "false" && fAllSetsEndNotify == "false") {
-            alert("Alarm and Notification turned off for this task.");
+            if (currentTable != "RunTimers") {
+                // If Run Timers is active, no alarm was defined in the first place
+                alert("Alarm and Notification turned off for this task.");
+            }
             return;
     }
 
@@ -670,7 +673,7 @@ function clickListen(i) {
     if (fTaskEndAlarm == "true") { sound = getTaskValue("task_end_filename"); }
     else if (fSetEndAlarm == "true") { sound = getProjectValue("set_end_filename"); }
     else if (fAllSetsEndAlarm == "true") { sound = getProjectValue("all_sets_end_filename"); }
-
+    console.log("sound:", sound)
     var notify;
     if (fTaskEndNotify == "true") { notify = "Task " + ttaTask.task_name; }
     else if (fSetEndNotify == "true") { notify = "Set " + ttaProject.project_name; }
@@ -694,9 +697,9 @@ function soundAlarm(i, sound) {
     }
     */
     const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
-    var BtnElm;
+    var BtnElm;  // Only used by currentTable == "Tasks"
     if (currentTable != "RunTimers") { btnElm = document.getElementById(btnId); }
-    console.log("sound:", sound)
+    console.log("sound:", sound);
     var audioControl = document.getElementById(sound);
     if (audioControl == null) { return; }
     if (audioControl.currentTime > 0) {
@@ -707,7 +710,7 @@ function soundAlarm(i, sound) {
     } else {
         // Set icon to "Stop" and schedule "Listen" icon when sound ends
         // Sound has start, set Stop Symbol into button text
-        if (btnElm !== null) {
+        if (btnElm != null) {
             btnElm.innerHTML = tabStopSym;  // textContent can't be used because entity code
             btnElm.title = tabStopTitle;
         }
@@ -718,7 +721,7 @@ function soundAlarm(i, sound) {
 
 function resetListen(btnElm) {
     // Set button symbol (text) back to Song Notes
-    if (btnElm !== null) {
+    if (btnElm != null) {
         btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
         btnElm.title = tabListenTitle;
     }
@@ -838,7 +841,7 @@ function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
     // When i null called from Tasks Table footer, else called from Projects Table.
     msgqClear();
-    if (i !== null) { clickCommon(i); }  // load selected ttaProject
+    if (i != null) { clickCommon(i); }  // load selected ttaProject
     secondsTask = secondsSet = secondsAllSets = 0;
     allTimers = {};
     currentForm = "formRunTimers"
