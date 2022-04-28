@@ -940,13 +940,13 @@ function tabRunTimersDetail(i) {
 }
 
 function htmlRunTimersSet() {
-    var id = "tabTimerSet";
-    return htmlRunTimersDetail(id, "Set of Timers", cntTable, secondsSet);
+    return htmlRunTimersDetail("tabTimerSet", "Set of Timers",
+                               ttaProject.arrTasks.length, secondsSet);
 }
 
 function htmlRunTimersAllSets() {
-    var id = "tabTimerAllSets";
-    return htmlRunTimersDetail(id, "All Sets of Timers", cntTable + 1, secondsAllSets);
+    return htmlRunTimersDetail("tabTimerAllSets", "All Sets of Timers",
+                               ttaProject.arrTasks.length + 1, secondsAllSets);
 }
 
 function htmlRunTimersDetail(id, name, index, seconds) {
@@ -997,15 +997,13 @@ async function runAllTimers(calledFromTable) {
     var entry = allTimers[id];  // A variable name easier to read
     var entrySet = allTimers["tabTimerSet"];
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[index]];
-    console.log("allTimers:", cntTable, allTimers)
+    //console.log("allTimers:", cntTable, allTimers)
 
     while (true) {
-        if (entry.progress == 0) {
-            var value = getTaskValue('task_prompt');
-            if (getTaskValue('task_prompt') == "true") {
-                alert("Press Enter to begin timer " + ttaTask.task_name)
-            }
+        if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
+            alert("Press Enter to begin timer " + ttaTask.task_name)
         }
+
         await sleep(1000);
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
@@ -1025,8 +1023,8 @@ async function runAllTimers(calledFromTable) {
             continue;  // Wait for first second.
         }
         // Below should probably be in else side
-        updateRunTimer(myTable, entry, index);
-        updateRunTimer(myTable, entrySet, cntTable);
+        updateRunTimer(myTable, entry);
+        updateRunTimer(myTable, entrySet);
         /* TEST Shorter code
         entry.progress += 1
         entry.remaining -= 1
@@ -1043,7 +1041,7 @@ async function runAllTimers(calledFromTable) {
     }
 }
 
-function updateRunTimer(myTable, entry, index) {
+function updateRunTimer(myTable, entry) {
     //var id = "tabTimer" + index
     //var broken = allTimers[id];
     //console.log("broken:", broken);
@@ -1057,7 +1055,7 @@ function updateRunTimer(myTable, entry, index) {
     //var strDuration = hmsToString(parts[0], parts[1], parts[2]);
     var strDuration = hhmmssShorten(hhmmss);
     if (strDuration == "") { strDuration = "Done"}
-    myTable.rows[index + 1].cells[1].innerHTML = strDuration;
+    myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration;
 }
 
 function hhmmssShorten(hhmmss){
