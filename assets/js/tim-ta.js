@@ -1963,9 +1963,10 @@ function popBuildHtml() {
 function popBuildStyle() {
     // NOTE: .msq-xxx styles identical to #tcm-xxx styles in /assets/css/style.scss
     var html = "<style>\n";
+
     html += '.msgq-window {\n';
     html += 'position: fixed;\n';
-    html += 'display: none;\n';
+    html += 'display: block;\n';
     html += 'max-width: 90vw;\n';
     html += 'max-height: 95vh;\n';
     html += 'top: 20px;\n';
