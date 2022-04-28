@@ -2043,6 +2043,13 @@ function popBuildScript() {
     return html;
 }
 
+function popClose() {
+    // Called from msgq-button-ok onclick="popClose()" in HTML
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+}
+
 function msgAddButton(msgqEntry, elm, callback) {
 
 }
