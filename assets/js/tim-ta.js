@@ -1374,6 +1374,7 @@ function setSelectInput(data) {
     // screen callback to Set chosen option value in inpSelects
     inpSelects[data.id].value = data.value;
     console.log("setSelectInput(data) data.id, data.value:", data.id, data.value)
+    console.log("inpSelects:", inpSelects)
 }
 
 function initSelectsAfterDOM() {
