@@ -1029,7 +1029,7 @@ async function runAllTimers(calledFromTable) {
         var parts = hhmmss.split(":")
         var strDuration = hmsToString(parts[0], parts[1], parts[2]);
         if (strDuration == "") { strDuration = "Done"}
-        myTable.rows[currentIndex].cells[1].innerHTML = strDuration;
+        myTable.rows[currentIndex + 1].cells[1].innerHTML = strDuration;
 
         // TODO: Save entry, get AllSets and update it. Then restore saved entry.
     }
