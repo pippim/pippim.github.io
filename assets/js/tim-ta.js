@@ -1562,6 +1562,7 @@ function getInputValues() {
     var formValues = {};
     for (var i = 0; i < elements.length; i++) {
         var item = elements.item(i);
+        if(item.name == "") { console.log("blank item.name:", item.value)}
         formValues[item.name] = item.value;
     }
 
@@ -1580,7 +1581,7 @@ function getInputValues() {
     // Add select values to formValues
     console.log("getInputValues() inpSelects:", inpSelects)
     for (const name of Object.keys(inpSelects)) {
-        if (name == "") { console.log("inpSelects empty name:", inpSelects); continue; }
+        if (name == "") { console.log("getInputValues() inpSelects empty name:", inpSelects); continue; }
         /* SELECT
             inpSelects[key] = {
                 id: key,
@@ -1594,6 +1595,7 @@ function getInputValues() {
             console.log("names differ:", inpSelects[name].id, name)
         }
         formValues[name] = inpSelects[name].value;
+        console.log("getInputValues() read back name:", formValues[name])
     }
 
     return formValues;
