@@ -1012,7 +1012,7 @@ async function runAllTimers(calledFromTable) {
         var timeElapsed = timeCurrent - timeLast
         timeLast = timeCurrent
         console.log("timeElapsed:", timeElapsed)
-        await sleep(1000);
+        await sleep(100);
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             clickListen(index);
@@ -1415,8 +1415,8 @@ function buildSelectOption(name, default_name) {
 function setSelectInput(data) {
     // screen callback to Set chosen option value in inpSelects
     inpSelects[data.id].value = data.value;
-    console.log("setSelectInput(data) data.id, data.value:", data.id, data.value)
-    console.log("inpSelects:", inpSelects)
+    //console.log("setSelectInput(data) data.id, data.value:", data.id, data.value)
+    //console.log("inpSelects:", inpSelects)
 }
 
 function initSelectsAfterDOM() {
