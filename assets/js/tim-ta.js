@@ -1935,8 +1935,8 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);
     //alert("pause before dragElement(p['elmWindow']);")
-    dragElement(p['elmWindow'], '-header');  // see assets/js/theCookieMachine.js
-    //console.log("pop created:", p)
+    var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
+    dragElement(elmHead);
 
     // TODO: activate close button
 
@@ -2057,17 +2057,17 @@ function msgAddButton(msgqEntry, elm, callback) {
 }
 
 // Below copied from theCookieMachine.js
-function dragElement(elm, optional_header) {
+function dragElement(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elm.id + optional_header)) {
+/*  if (document.getElementById(elm.id + optional_header)) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elm.id + optional_header).onmousedown = dragMouseDown;
     // https://stackoverflow.com/a/52554777/6929343
 
   } else {
-    // otherwise, grab & move from anywhere inside the DIV:
+*/    // otherwise, grab & move from anywhere inside the DIV:
     elm.onmousedown = dragMouseDown;
-  }
+  //}
 
   function dragMouseDown(e) {
     e = e || window.event;
