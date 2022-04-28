@@ -1021,7 +1021,7 @@ async function runAllTimers(calledFromTable) {
         timeLast = timeCurrent
         // console.log("timeElapsed:", timeElapsed)
         // Could make 999 to 980 sleep but override needed for prompt wait time
-        await sleep(100);
+        await sleep(1000);
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             clickListen(index);
