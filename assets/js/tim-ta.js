@@ -1708,7 +1708,7 @@ function validateRange(value) {
     if (value >= lower && value <= upper) { return true; }
 
     var msg = dd_field.label + " must be between " + lower.toString() + " and " +
-          upper.toString());
+          upper.toString();
     popCreate("e", msg);
 
     return false;
