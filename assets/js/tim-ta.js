@@ -889,7 +889,12 @@ function paintRunTimers(i) {
 
     // Run through all timers
     //for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
-    runAllTimers(calledFromTable);
+    runAllTimers();
+
+    if (calledFromTable == "Projects") { paintProjectsTable(); }
+    else if (calledFromTable == "Tasks") { paintTasksTable(); }
+    else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
+
 }
 
 function tabRunTimersHeading() {
@@ -975,7 +980,7 @@ function progressTouched(name) {
 }
 
 var oneTimeout;
-async function runAllTimers(calledFromTable) {
+async function runAllTimers() {
     // Run one timer
     //console.log("initSwitchesAfterDOM()");
     //var names = Object.keys(allTimers);
@@ -983,29 +988,26 @@ async function runAllTimers(calledFromTable) {
     var id = "tabTimer" + currentIndex
     var entry = allTimers[id];  // A variable name easier to read
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
+    console.log("ttaTask.task_name:", ttaTask.task_name)
 
     while (true) {
         //if (entry.progress = 0 && getTaskValue('task_prompt') == "true") {
         //    prompt("Press Enter to begin timer " + ttaTask.task_name)
         //}
         await sleep(1000);
-        console.log("Wakeup i:", i, ttaTask.task_name)
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             //oneTimerEnd(currentIndex);
             currentIndex += 1;
             if (currentIndex >= ttaProject.arrTasks.length) {
                 // Not working, simply returning without painting new table
-                if (calledFromTable == "Projects") { paintProjectsTable(); }
-                else if (calledFromTable == "Tasks") { paintTasksTable(); }
-                else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
                 return;
             }
             id = "tabTimer" + currentIndex
             entry = allTimers[id];
             name = ttaProject.arrTasks[currentIndex];
             ttaTask = ttaProject.objTasks[name];
-            console.log("new id/name:", id, name)
+            console.log("new id/name:", id, name);
             continue;  // Wait for first second.
         }
         // Below should probably be in else side
