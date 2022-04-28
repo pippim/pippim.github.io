@@ -1027,7 +1027,7 @@ async function runAllTimers(calledFromTable) {
         }
         // Below should probably be in else side
         updateRunTimer(myTable, entry, index);
-        updateRunTime(myTable, entrySet, cntTable);
+        updateRunTimer(myTable, entrySet, cntTable);
         /*
         entry.progress += 1
         entry.remaining -= 1
@@ -1044,15 +1044,15 @@ async function runAllTimers(calledFromTable) {
 }
 
 function updateRunTimer(myTable, entry, index) {
-        entry.progress += 1
-        entry.remaining -= 1
-        entry.elm.value = entry.progress.toString()
-        var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
-        //var parts = hhmmss.split(":")
-        //var strDuration = hmsToString(parts[0], parts[1], parts[2]);
-        var strDuration = hhmmssShorten(hhmmss);
-        if (strDuration == "") { strDuration = "Done"}
-        myTable.rows[index + 1].cells[1].innerHTML = strDuration;
+    entry.progress += 1
+    entry.remaining -= 1
+    entry.elm.value = entry.progress.toString()
+    var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
+    //var parts = hhmmss.split(":")
+    //var strDuration = hmsToString(parts[0], parts[1], parts[2]);
+    var strDuration = hhmmssShorten(hhmmss);
+    if (strDuration == "") { strDuration = "Done"}
+    myTable.rows[index + 1].cells[1].innerHTML = strDuration;
 }
 
 function hhmmssShorten(hhmmss){
