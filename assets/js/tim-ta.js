@@ -1929,7 +1929,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     msgq[popIndex.toString()] = p;
 
     var html = popBuildHtml(msg_type, msg);
-    html += popBuildStyle();
+    html += popBuildStyle(msg_type);
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);
     alert("pause before dragElement(p['elmWindow']);")
@@ -1967,8 +1967,14 @@ function popBuildHtml(msg_type, msg) {
     return html;
 }
 
-function popBuildStyle() {
+function popBuildStyle(msg_type) {
     // NOTE: .msq-xxx styles identical to #tcm-xxx styles in /assets/css/style.scss
+    var msg_head = "#2196F3";  // Baby blue
+    if (msg_type == "e") { msg_head = "#f44336"; }  // red
+    if (msg_type == "w") { msg_head = "#ff9800"; }  // orange
+    if (msg_type == "i") { msg_head = "#2196F3"; }  // light blue
+    if (msg_type == "s") { msg_head = "#04AA6D"; }  // green
+
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
@@ -1995,7 +2001,7 @@ function popBuildStyle() {
     html += 'display: block;\n';
     html += 'padding: .5rem;\n';
     html += 'cursor: move;  z-index: 10;\n';
-    html += 'background-color: #2196F3;\n';
+    html += 'background-color: ' + msg_head + ';\n';
     html += 'color: #fff;\n';
     html += '}\n';
 
@@ -2009,11 +2015,11 @@ function msgAddButton(msgqEntry, elm, callback) {
 }
 
 // Below copied from theCookieMachine.js
-function dragElement(elm) {
+function dragElement(elm, optional_header) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elm.id + "_header")) {
+  if (document.getElementById(elm.id + optional_header)) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
+    document.getElementById(elm.id + optional_header).onmousedown = dragMouseDown;
     // https://stackoverflow.com/a/52554777/6929343
 
   } else {
