@@ -874,6 +874,7 @@ function paintRunTimers(i) {
     html += tabRunTimersHeading();
         // NOTE: Timers of zero duration are omitted from list
         for (var i = 0; i < cnt; i++) { html += tabRunTimersDetail(i); }
+    if (secondsSet != 0) { html += htmlRunTimersSet(); }
     html += '</table>\n';
     html += '</div>\n';
 
