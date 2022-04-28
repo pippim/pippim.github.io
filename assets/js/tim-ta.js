@@ -1929,6 +1929,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     msgq[popIndex.toString()] = p;
 
     var html = popBuildHtml();
+    html += popBuildStyle();
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);
     dragElement(p['elmWindow']);  // see assets/js/theCookieMachine.js
@@ -1949,29 +1950,42 @@ function popBuildHtml() {
     html += '  <div class="msgq-window_header">Click here to drag\n';
     html += '    <span class="msgq-window-close closebtn">&times;</span>\n';
     html += '  </div>\n';
-    html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
-    html += '    <button class="msq-button-ok" title="Click to proceed">OK</button>\n';
-    html += '  </div>\n';
     html += '  <div class="msq-window-body">\n';
     html += '    <p> DUMMY TEXT - Real text needs to be set</p>\n';
+    html += '  </div>\n';
+    html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
+    html += '    <button class="msq-button-ok" title="Click to proceed">OK</button>\n';
     html += '  </div>\n';
     html += '</div>\n';
     return html;
 }
 
 function popBuildStyle() {
+    // NOTE: .msq-xxx styles identical to #tcm-xxx styles in /assets/css/style.scss
     var html = "";
     html += '.msgq-window {\n';
-    html += '  display: fixed;\n';
-    html += '    <span class="msgq-window-close closebtn">&times;</span>\n';
-    html += '  </div>\n';
-    html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
-    html += '    <button class="msq-button-ok" title="Click to proceed">OK</button>\n';
-    html += '  </div>\n';
-    html += '  <div class="msq-window-body">\n';
-    html += '    <p> DUMMY TEXT - Real text needs to be set</p>\n';
-    html += '  </div>\n';
-    html += '</div>\n';
+    html += 'position: fixed;\n';
+    html += 'display: none;\n';
+    html += 'max-width: 90vw;\n';
+    html += 'max-height: 95vh;\n';
+    html += 'top: 20px;\n';
+    html += 'z-index: 9;\n';
+    html += 'background-color: #f1f1f1;\n';
+    html += 'border: .2rem solid #d3d3d3;\n';
+    html += 'color: black;\n';
+    html += 'text-align: left;\n';
+    html += '@include large { padding: 0.5rem; font-size: 1rem; }\n';
+    html += '@include medium { padding: 0.4rem; font-size: 0.9rem; }\n';
+    html += '@include small { padding: 0.3rem; font-size: 0.8rem; }\n';
+    html += '}\n';
+
+    html += '.msgq-window_header {\n';
+    html += 'display: inline-block;\n';
+    html += 'padding: .5rem;\n';
+    html += 'cursor: move;  z-index: 10;\n';
+    html += 'background-color: #2196F3;\n';
+    html += 'color: #fff;\n';
+    html += '}\n';
     return html;
 }
 
@@ -1979,11 +1993,7 @@ function msgAddButton(msgqEntry, elm, callback) {
 
 }
 
-
-// Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
-// Make the DIV element draggable:
-dragElement(document.getElementById("tcm_window"));
-
+// Below copied from theCookieMachine.js
 function dragElement(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elm.id + "_header")) {
