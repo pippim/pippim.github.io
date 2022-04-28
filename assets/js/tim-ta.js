@@ -1004,8 +1004,8 @@ async function runAllTimers(calledFromTable) {
                 alert("Press Enter to begin timer " + ttaTask.task_name)
             }
         }
-        await sleep(1000);
-        //console.log("entry.progress:", entry.progress);
+        await var sleepId = sleep(1000);
+        // Can you use clearTimeout(sleepId) to end it immediately?
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             clickListen(currentIndex);
@@ -1027,17 +1027,17 @@ async function runAllTimers(calledFromTable) {
         entry.progress += 1
         entry.remaining -= 1
         entry.elm.value = entry.progress.toString()
+        var hhmmss = new Date(secondsTask * 1000).toISOString().substr(11, 8);
+        var parts = hhmmss.split(":")
+        var strDuration = hmsToString(parts[0], parts[1], parts[2]);
+        console.log("getInput")
+
         // TODO: Save entry, get AllSets and update it. Then restore saved entry.
     }
 }
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function oneTimerEnd(i) {
-    // Based on clickListen(
-    clickListen(i);  // Will this screw up our outer loop?
 }
 
 /* NOT USED for now
@@ -1564,7 +1564,11 @@ function getInputValues() {
     var formValues = {};
     for (var i = 0; i < elements.length; i++) {
         var item = elements.item(i);
-        if (item.name == "") { console.log("getInputValues() blank item.name:", item.value); continue; }
+        if (item.name == "") {
+            //console.log("getInputValues() blank item.name:", item.value);
+            // You can see when select use it's value is returned but it has no key
+            continue;
+        }
         formValues[item.name] = item.value;
     }
 
@@ -1581,7 +1585,7 @@ function getInputValues() {
         formValues[name] = inpSwitches[name].value;
     }
     // Add select values to formValues
-    console.log("getInputValues() inpSelects:", inpSelects)
+    // console.log("getInputValues() inpSelects:", inpSelects)
     for (const name of Object.keys(inpSelects)) {
         if (name == "") { console.log("getInputValues() inpSelects empty name:", inpSelects); continue; }
         /* SELECT
@@ -1592,12 +1596,12 @@ function getInputValues() {
                 mode: mode
             };
         */
-        console.log("getInputValues() name/value", name, inpSelects[name].value);
+        //console.log("getInputValues() name/value", name, inpSelects[name].value);
         if (inpSelects[name].id != name) {
             console.log("names differ:", inpSelects[name].id, name)
         }
         formValues[name] = inpSelects[name].value;
-        console.log("getInputValues() read back name:", formValues[name])
+        //console.log("getInputValues() read back name:", formValues[name])
     }
 
     return formValues;
