@@ -987,11 +987,11 @@ async function runAllTimers(calledFromTable) {
     console.log("ttaTask.task_name:", ttaTask.task_name)
 
     while (true) {
-        console.log("entry.progress:", entry.progress);
         if (entry.progress == 0) {
-            var value = getTaskValue('task_prompt')
-            console.log("task_prompt:", value)
-            prompt("Press Enter to begin timer " + ttaTask.task_name, value)
+            var value = getTaskValue('task_prompt');
+            if (getTaskValue('task_prompt') == "true") {
+                prompt("Press Enter to begin timer " + ttaTask.task_name)
+            }
         }
         await sleep(1000);
         console.log("entry.progress:", entry.progress);
