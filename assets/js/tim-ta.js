@@ -1590,6 +1590,9 @@ function getInputValues() {
             };
         */
         console.log("getInputValues() name/value", name, inpSelects[name].value);
+        if (inpSelects[name].id != name) {
+            console.log("names differ:", inpSelects[name].id, name)
+        }
         formValues[inpSelects[name].id] = inpSelects[name].value;
     }
 
