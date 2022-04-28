@@ -1029,7 +1029,7 @@ async function runAllTimers(calledFromTable) {
         var hhmmss = new Date(secondsTask * 1000).toISOString().substr(11, 8);
         var parts = hhmmss.split(":")
         var strDuration = hmsToString(parts[0], parts[1], parts[2]);
-        console.log("getInput")
+        console.log("strDuration:", strDuration)
 
         // TODO: Save entry, get AllSets and update it. Then restore saved entry.
     }
