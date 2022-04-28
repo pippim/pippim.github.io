@@ -978,33 +978,34 @@ var oneTimeout;
 async function runAllTimers(calledFromTable) {
     // Run one timer
     //console.log("initSwitchesAfterDOM()");
-    var names = Object.keys(allTimers);
+    //var names = Object.keys(allTimers);
     var currentIndex = 0;
-    var name = ttaProject.arrTasks[currentIndex];
+    var id = "tabTimer" + currentIndex
     var entry = allTimers[name];  // A variable name easier to read
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
 
     while (true) {
-        //if (entry.progress = 0 && getTaskValue('task_prompt') == "true") {
-        //    prompt("Press Enter to begin timer " + ttaTask.task_name)
-        //}
+        if (entry.progress = 0 && getTaskValue('task_prompt') == "true") {
+            prompt("Press Enter to begin timer " + ttaTask.task_name)
+        }
         await sleep(1000);
         //console.log("Wakeup i:", i)
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
-            oneTimerEnd(name);
+            oneTimerEnd(currentIndex);
             currentIndex += 1;
-            name = ttaProject.arrTasks[currentIndex];
-            if (currentIndex >= names.length) {
+            if (currentIndex >= ttaProject.arrTasks.length) {
                 // Not working, simply returning without painting new table
                 if (calledFromTable == "Projects") { paintProjectsTable(); }
                 else if (calledFromTable == "Tasks") { paintTasksTable(); }
                 else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
                 return;
             }
-            entry = allTimers[name];
-            ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
-            console.log("new name:", name)
+            id = "tabTimer" + currentIndex
+            entry = allTimers[id];
+            name = ttaProject.arrTasks[currentIndex];
+            ttaTask = ttaProject.objTasks[name];
+            console.log("new id/name:", id, name)
             continue;  // Wait for first second.
         }
         // Below should probably be in else side
@@ -1023,7 +1024,7 @@ async function oneTimerRun(name) {
     entry = allTimers[name];
     if (entry.progress >= entry.seconds) {
         // clearTimeout(oneTimeout);  // Reset one timer
-        oneTimerEnd(name);
+        oneTimerEnd(currentIndex);
         // TODO: Set next name in call stack and call it.
         return;  // All done
     }
@@ -1041,10 +1042,9 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function oneTimerEnd(name) {
+function oneTimerEnd(i) {
     // Based on clickListen(
-    var i = allTimers[name].index
-    // clickListen(i);  // Will this screw up our outer loop?
+    clickListen(i);  // Will this screw up our outer loop?
 }
 
 /* NOT USED for now
