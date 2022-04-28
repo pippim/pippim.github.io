@@ -680,7 +680,14 @@ function clickListen(i) {
     else if (fAllSetsEndNotify == "true") { notify = "All Sets " + ttaProject.project_name; }
 
     // <audio> tags buried on the page with ID name same as sound filename.
-    if (sound != null) { soundAlarm (i, sound); }
+    if (sound != null) {
+        if (currentTable != "RunTimers") { soundAlarm (i, sound); }
+        else {
+            var audioControl = document.getElementById(sound);
+            audioControl.play();
+        }
+    }
+
     if (notify != null) { sendNotify (i, notify); }
 }
 
@@ -698,10 +705,9 @@ function soundAlarm(i, sound) {
     */
     const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
     var BtnElm;  // Only used by currentTable == "Tasks"
-    if (currentTable != "RunTimers") { btnElm = document.getElementById(btnId); }
+    btnElm = document.getElementById(btnId);
     console.log("sound:", sound);
     var audioControl = document.getElementById(sound);
-    if (audioControl == null) { return; }
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
         resetListen(btnElm);
@@ -710,10 +716,8 @@ function soundAlarm(i, sound) {
     } else {
         // Set icon to "Stop" and schedule "Listen" icon when sound ends
         // Sound has start, set Stop Symbol into button text
-        if (btnElm !== null) {
-            btnElm.innerHTML = tabStopSym;  // textContent can't be used because entity code
-            btnElm.title = tabStopTitle;
-        }
+        btnElm.innerHTML = tabStopSym;  // textContent can't be used because entity code
+        btnElm.title = tabStopTitle;
         audioControl.play();
         audioControl.onended = function() { resetListen(btnElm); };
     }
@@ -721,10 +725,8 @@ function soundAlarm(i, sound) {
 
 function resetListen(btnElm) {
     // Set button symbol (text) back to Song Notes
-    if (btnElm !== null) {
-        btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
-        btnElm.title = tabListenTitle;
-    }
+    btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
+    btnElm.title = tabListenTitle;
 }
 
 function sendNotify(i, notify) {
