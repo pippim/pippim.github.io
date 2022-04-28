@@ -980,12 +980,13 @@ async function runAllTimers(calledFromTable) {
     //console.log("initSwitchesAfterDOM()");
     var names = Object.keys(allTimers);
     var currentIndex = 0;
-    var name = names[currentIndex];
-    var entry = allTimers[name];
-    console.log("runAllTimers() for:", secondsAllSets)
-    //for (var i=0; i<secondsAllSets; i++)
-    for (var i = 0; i < Infinity; i++)
-    {
+    var entry = allTimers[names[currentIndex]];  // A variable name easier to read
+    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
+
+    while (true) {
+        if (entry.progress = 0 && getTaskValue('task_prompt') == "true") {
+            prompt("Ready to begin timer " + ttaTask.task_name)
+        }
         await sleep(1000);
         //console.log("Wakeup i:", i)
         if (entry.progress >= entry.seconds) {
@@ -999,8 +1000,8 @@ async function runAllTimers(calledFromTable) {
                 else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
                 return;
             }
-            name = names[currentIndex];
-            entry = allTimers[name];
+            entry = allTimers[names[currentIndex]];
+            ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
             console.log("new name:", name)
             continue;  // Wait for first second.
         }
@@ -1008,6 +1009,7 @@ async function runAllTimers(calledFromTable) {
         entry.progress += 1
         entry.remaining -= 1
         entry.elm.value = entry.progress.toString()
+        // TODO: Save entry, get AllSets and update it. Then restore saved entry.
     }
 }
 
