@@ -1974,9 +1974,10 @@ function popBuildStyle() {
     html += 'border: .2rem solid #d3d3d3;\n';
     html += 'color: black;\n';
     html += 'text-align: left;\n';
-    html += '@include large { padding: 0.5rem; font-size: 1rem; }\n';
-    html += '@include medium { padding: 0.4rem; font-size: 0.9rem; }\n';
-    html += '@include small { padding: 0.3rem; font-size: 0.8rem; }\n';
+    // ERROR: Expected declaration but found “@include”.  Skipped to next declaration.
+    //html += '@include large { padding: 0.5rem; font-size: 1rem; }\n';
+    //html += '@include medium { padding: 0.4rem; font-size: 0.9rem; }\n';
+    //html += '@include small { padding: 0.3rem; font-size: 0.8rem; }\n';
     html += '}\n';
 
     html += '.msgq-window_header {\n';
