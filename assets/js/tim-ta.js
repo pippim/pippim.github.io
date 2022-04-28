@@ -1989,7 +1989,8 @@ function popBuildStyle(msg_type) {
     html += 'background-color: #f1f1f1;\n';
     html += 'border: .2rem solid #d3d3d3;\n';
     html += 'color: black;\n';
-    html += 'text-align: left;\n';
+    //html += 'text-align: left;\n';
+    html += 'text-align: center;\n';
     // ERROR: Expected declaration but found “@include”.  Skipped to next declaration.
     //html += '@include large { padding: 0.5rem; font-size: 1rem; }\n';
     //html += '@include medium { padding: 0.4rem; font-size: 0.9rem; }\n';
@@ -2023,7 +2024,7 @@ function dragElement(elm, optional_header) {
     // https://stackoverflow.com/a/52554777/6929343
 
   } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
+    // otherwise, grab & move from anywhere inside the DIV:
     elm.onmousedown = dragMouseDown;
   }
 
