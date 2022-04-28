@@ -980,7 +980,8 @@ async function runAllTimers(calledFromTable) {
     //console.log("initSwitchesAfterDOM()");
     var names = Object.keys(allTimers);
     var currentIndex = 0;
-    var entry = allTimers[names[currentIndex]];  // A variable name easier to read
+    var name = ttaProject.arrTasks[currentIndex];
+    var entry = allTimers[name];  // A variable name easier to read
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
 
     while (true) {
@@ -993,6 +994,7 @@ async function runAllTimers(calledFromTable) {
             // Timer has ended, sound alarm and start next timer
             oneTimerEnd(name);
             currentIndex += 1;
+            name = ttaProject.arrTasks[currentIndex];
             if (currentIndex >= names.length) {
                 // Not working, simply returning without painting new table
                 if (calledFromTable == "Projects") { paintProjectsTable(); }
@@ -1000,7 +1002,7 @@ async function runAllTimers(calledFromTable) {
                 else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
                 return;
             }
-            entry = allTimers[names[currentIndex]];
+            entry = allTimers[name];
             ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
             console.log("new name:", name)
             continue;  // Wait for first second.
