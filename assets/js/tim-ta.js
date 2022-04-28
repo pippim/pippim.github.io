@@ -890,7 +890,7 @@ function paintRunTimers(i) {
 
     // Run through all timers
     //for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
-    runAllTimers();
+    runAllTimers(calledFromTable);
 }
 
 function tabRunTimersHeading() {
@@ -976,7 +976,7 @@ function progressTouched(name) {
 }
 
 var oneTimeout;
-async function runAllTimers() {
+async function runAllTimers(calledFromTable) {
     // Run one timer
     //console.log("initSwitchesAfterDOM()");
     //var names = Object.keys(allTimers);
@@ -989,6 +989,7 @@ async function runAllTimers() {
     while (true) {
         if (entry.progress = 0) {
             var value = getTaskValue('task_prompt')
+            console.log("task_prompt:", value)
             prompt("Press Enter to begin timer " + ttaTask.task_name, value)
         }
         await sleep(1000);
