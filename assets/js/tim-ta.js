@@ -696,7 +696,9 @@ function soundAlarm(i, sound) {
     const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
     var BtnElm;
     if (currentTable != "RunTimers") { btnElm = document.getElementById(btnId); }
+    console.log("sound:", sound)
     var audioControl = document.getElementById(sound);
+    if (audioControl == null) { return; }
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
         resetListen(btnElm);
