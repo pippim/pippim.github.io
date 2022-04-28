@@ -1004,8 +1004,7 @@ async function runAllTimers(calledFromTable) {
                 alert("Press Enter to begin timer " + ttaTask.task_name)
             }
         }
-        await var sleepId = sleep(1000);
-        // Can you use clearTimeout(sleepId) to end it immediately?
+        await sleep(1000);
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             clickListen(currentIndex);
