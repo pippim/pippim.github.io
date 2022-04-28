@@ -993,10 +993,11 @@ var oneTimeout;
 async function runAllTimers(calledFromTable) {
     // Run all timers
     var myTable = document.getElementById("tabRunTimers")
-    var currentIndex = 0;
-    var id = "tabTimer" + currentIndex
+    var index = 0;
+    var id = "tabTimer" + index
     var entry = allTimers[id];  // A variable name easier to read
-    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
+    var entrySet = allTimers[cntTable];
+    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[index]];
     //console.log("ttaTask.task_name:", ttaTask.task_name)
 
     while (true) {
@@ -1009,22 +1010,25 @@ async function runAllTimers(calledFromTable) {
         await sleep(1000);
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
-            clickListen(currentIndex);
-            currentIndex += 1;
-            if (currentIndex >= ttaProject.arrTasks.length) {
+            clickListen(index);
+            index += 1;
+            if (index >= ttaProject.arrTasks.length) {
                 if (calledFromTable == "Projects") { paintProjectsTable(); }
                 else if (calledFromTable == "Tasks") { paintTasksTable(); }
                 else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
                 return;
             }
-            id = "tabTimer" + currentIndex
+            id = "tabTimer" + index
             entry = allTimers[id];
-            name = ttaProject.arrTasks[currentIndex];
+            name = ttaProject.arrTasks[index];
             ttaTask = ttaProject.objTasks[name];
             //console.log("new id/name:", id, name);
             continue;  // Wait for first second.
         }
         // Below should probably be in else side
+        updateRunTimer(entry, index);
+        updateRunTime(entrySet, cntTable);
+        /*
         entry.progress += 1
         entry.remaining -= 1
         entry.elm.value = entry.progress.toString()
@@ -1034,9 +1038,21 @@ async function runAllTimers(calledFromTable) {
         var strDuration = hhmmssShorten(hhmmss);
         if (strDuration == "") { strDuration = "Done"}
         myTable.rows[currentIndex + 1].cells[1].innerHTML = strDuration;
-
+        */
         // TODO: Save entry, get AllSets and update it. Then restore saved entry.
     }
+}
+
+function updateRunTimer(entry, index) {
+        entry.progress += 1
+        entry.remaining -= 1
+        entry.elm.value = entry.progress.toString()
+        var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
+        //var parts = hhmmss.split(":")
+        //var strDuration = hmsToString(parts[0], parts[1], parts[2]);
+        var strDuration = hhmmssShorten(hhmmss);
+        if (strDuration == "") { strDuration = "Done"}
+        myTable.rows[index + 1].cells[1].innerHTML = strDuration;
 }
 
 function hhmmssShorten(hhmmss){
