@@ -988,9 +988,8 @@ function progressTouched(name) {
 
 var oneTimeout;
 async function runAllTimers(calledFromTable) {
-    // Run one timer
-    //console.log("initSwitchesAfterDOM()");
-    //var names = Object.keys(allTimers);
+    // Run all timers
+    var myTable = document.getElementById("tabRunTimers")
     var currentIndex = 0;
     var id = "tabTimer" + currentIndex
     var entry = allTimers[id];  // A variable name easier to read
@@ -1029,7 +1028,8 @@ async function runAllTimers(calledFromTable) {
         var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
         var parts = hhmmss.split(":")
         var strDuration = hmsToString(parts[0], parts[1], parts[2]);
-        console.log("strDuration:", strDuration)
+        if (strDuration == "") { strDuration = "Done"}
+        myTable.rows[currentIndex].cells[1].innerHTML = strDuration;
 
         // TODO: Save entry, get AllSets and update it. Then restore saved entry.
     }
