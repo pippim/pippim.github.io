@@ -2043,7 +2043,7 @@ function popBuildScript() {
     return html;
 }
 
-function popClose() {
+function popClose(this) {
     // Called from msgq-button-ok onclick="popClose()" in HTML
     var div = this.parentElement;
     div.style.opacity = "0";
