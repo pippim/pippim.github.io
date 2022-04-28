@@ -935,7 +935,7 @@ function tabRunTimersDetail(i) {
     // var html = '<tr">\n';  // This shouldn't have worked before???
 
     var id = "tabTimer" + i;
-    return htmlRunTimersDetail(id, i, ttaTask.task_name, secondsTask);
+    return htmlRunTimersDetail(id, ttaTask.task_name, i, secondsTask);
 }
 
 function htmlRunTimersSet() {
