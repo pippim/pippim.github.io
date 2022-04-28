@@ -1562,7 +1562,7 @@ function getInputValues() {
     var formValues = {};
     for (var i = 0; i < elements.length; i++) {
         var item = elements.item(i);
-        if(item.name == "") { console.log("blank item.name:", item.value)}
+        if (item.name == "") { console.log("getInputValues() blank item.name:", item.value); continue; }
         formValues[item.name] = item.value;
     }
 
