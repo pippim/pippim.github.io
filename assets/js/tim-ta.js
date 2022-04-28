@@ -1026,8 +1026,8 @@ async function runAllTimers(calledFromTable) {
             continue;  // Wait for first second.
         }
         // Below should probably be in else side
-        updateRunTimer(entry, index);
-        updateRunTime(entrySet, cntTable);
+        updateRunTimer(myTable, entry, index);
+        updateRunTime(myTable, entrySet, cntTable);
         /*
         entry.progress += 1
         entry.remaining -= 1
@@ -1043,7 +1043,7 @@ async function runAllTimers(calledFromTable) {
     }
 }
 
-function updateRunTimer(entry, index) {
+function updateRunTimer(myTable, entry, index) {
         entry.progress += 1
         entry.remaining -= 1
         entry.elm.value = entry.progress.toString()
