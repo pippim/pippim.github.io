@@ -1933,7 +1933,8 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     html += popBuildScript();
 
     p['elmWindow'].innerHTML = html;
-    document.body.appendChild(p['elmWindow']);
+    //document.body.appendChild(p['elmWindow']);
+    ttaElm.appendChild(p['elmWindow']);
     //alert("pause before dragElement(p['elmWindow']);")
     var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
     console.log("elmHead: " + elmHead);
