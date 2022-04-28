@@ -1026,9 +1026,9 @@ async function runAllTimers(calledFromTable) {
             continue;  // Wait for first second.
         }
         // Below should probably be in else side
-        updateRunTimer(myTable, entry, index);
-        updateRunTimer(myTable, entrySet, cntTable);
-        /*
+        //updateRunTimer(myTable, entry, index);
+        //updateRunTimer(myTable, entrySet, cntTable);
+        //
         entry.progress += 1
         entry.remaining -= 1
         entry.elm.value = entry.progress.toString()
@@ -1038,7 +1038,7 @@ async function runAllTimers(calledFromTable) {
         var strDuration = hhmmssShorten(hhmmss);
         if (strDuration == "") { strDuration = "Done"}
         myTable.rows[currentIndex + 1].cells[1].innerHTML = strDuration;
-        */
+        //
         // TODO: Save entry, get AllSets and update it. Then restore saved entry.
     }
 }
