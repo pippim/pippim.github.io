@@ -1984,7 +1984,8 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
-    html += 'position: fixed;\n';  // fixed breaks drag
+    html += 'position: absolute;\n';  // fixed breaks drag
+    //html += 'position: fixed;\n';  // fixed breaks drag
     //html += 'position: sticky;\n';  // goes to bottom of document
     //html += 'display: none;\n';
     // html += 'display: block;\n';  // block is default anyway!
