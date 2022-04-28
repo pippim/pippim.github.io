@@ -646,7 +646,7 @@ function clickListen(i) {
     /* prefix "f" short for "flag" where variable can contain "true" or "false" */
     fTaskEndAlarm = getTaskValue("task_end_alarm");
     fTaskEndNotify = getTaskValue("task_end_notification");
-    console.log("ttaTask:", ttaTask);
+    console.log("ttaTask:", ttaTask, "fTaskEndAlarm:", fTaskEndAlarm);
     var fSetEndAlarm, fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify;
     fSetEndAlarm = fSetEndNotify = fAllSetsEndAlarm = fAllSetsEndNotify = "false" ;    
 
