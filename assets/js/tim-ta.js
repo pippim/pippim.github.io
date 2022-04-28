@@ -1932,6 +1932,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);
     dragElement(p['elmWindow']);  // see assets/js/theCookieMachine.js
+    console.log("pop created:", p)
 
     // TODO: activate close button
 
