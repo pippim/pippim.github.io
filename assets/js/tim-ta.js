@@ -981,7 +981,7 @@ async function runAllTimers(calledFromTable) {
     //var names = Object.keys(allTimers);
     var currentIndex = 0;
     var id = "tabTimer" + currentIndex
-    var entry = allTimers[name];  // A variable name easier to read
+    var entry = allTimers[id];  // A variable name easier to read
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
 
     while (true) {
