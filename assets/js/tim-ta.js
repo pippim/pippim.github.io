@@ -1048,7 +1048,7 @@ function updateRunTimer(myTable, broken, index) {
     var entry = allTimers[id];
     console.log("broken:", broken);
     console.log("entry:", entry);
-    return;
+    if (entry == null) { return; }
     entry.progress += 1
     entry.remaining -= 1
     entry.elm.value = entry.progress.toString()
