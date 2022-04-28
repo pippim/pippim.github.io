@@ -875,6 +875,9 @@ function paintRunTimers(i) {
         // NOTE: Timers of zero duration are omitted from list
         for (var i = 0; i < cnt; i++) { html += tabRunTimersDetail(i); }
     if (secondsSet != 0) { html += htmlRunTimersSet(); }
+
+    // TODO: Add AllSets
+
     html += '</table>\n';
     html += '</div>\n';
 
@@ -991,6 +994,7 @@ function progressTouched(name) {
 
 async function runAllTimers(calledFromTable) {
     // Run all timers
+    var timeLast = new Date().getTime();
     var myTable = document.getElementById("tabRunTimers")
     var index = 0;
     var id = "tabTimer" + index
@@ -1004,6 +1008,10 @@ async function runAllTimers(calledFromTable) {
             alert("Press Enter to begin timer " + ttaTask.task_name)
         }
 
+        var timeCurrent = new Date().getTime();
+        var timeElapsed = timeCurrent - timeLast
+        timeLast = timeCurrent
+        console.log("timeElapsed:", timeElapsed)
         await sleep(1000);
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
