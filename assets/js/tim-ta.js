@@ -989,7 +989,7 @@ async function runAllTimers(calledFromTable) {
         //    prompt("Press Enter to begin timer " + ttaTask.task_name)
         //}
         await sleep(1000);
-        //console.log("Wakeup i:", i)
+        console.log("Wakeup i:", i, ttaTask.task__name)
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             oneTimerEnd(currentIndex);
