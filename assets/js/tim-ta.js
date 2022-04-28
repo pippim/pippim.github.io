@@ -1937,7 +1937,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     //alert("pause before dragElement(p['elmWindow']);")
     var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
     console.log("elmHead: " + elmHead);
-    dragElement2(elmHead);
+    dragElement2(elmHead, 20, 20);  // top=20, left = 20
 
     // TODO: activate close button
 
@@ -1984,8 +1984,8 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
-    //html += 'position: fixed;\n';  // fixed breaks drag
-    html += 'position: sticky;\n';
+    html += 'position: fixed;\n';  // fixed breaks drag
+    //html += 'position: sticky;\n';  // goes to bottom of document
     //html += 'display: none;\n';
     // html += 'display: block;\n';  // block is default anyway!
     html += 'opacity: 1;\n';
@@ -2059,8 +2059,9 @@ function msgAddButton(msgqEntry, elm, callback) {
 }
 
 // Below copied from theCookieMachine.js
-function dragElement2(elm) {
+function dragElement2(elm, x, y) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  var left = x, top = y;
   elm.onmousedown = dragMouseDown;
 
   function dragMouseDown(e) {
@@ -2086,8 +2087,14 @@ function dragElement2(elm) {
     console.log("elementDrag(e) - pos3, pos4:", pos3, pos4)
     console.log("elm.offsetTop, elm.offsetLeft:", elm.offsetTop, elm.offsetLeft)
     // set the element's new position:
-    elm.style.top = (elm.offsetTop - pos2) + "px";
-    elm.style.left = (elm.offsetLeft - pos1) + "px";
+    top = top - pos2;
+    if (top < 0) { top = 0; }
+    left = left - pos1;
+    if (left < 0) { left = 0; }
+    //elm.style.top = (elm.offsetTop - pos2) + "px";
+    //elm.style.left = (elm.offsetLeft - pos1) + "px";
+    elm.style.top = top + "px";
+    elm.style.left = left + "px";
   }
 
   function closeDragElement() {
