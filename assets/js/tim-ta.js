@@ -393,6 +393,7 @@ function cntHuman(cnt, name) {
 
 function htmlSetContainer(html) {
     // Table / Form heading where error message appear underneath
+    // Methodology abandoned in favor of popCreate()
     var container = '<div class="ttaContainer">\n' + html +
                     '<div id="ttaModal"></div>\n' +
                     '</div>'
@@ -663,7 +664,8 @@ function clickListen(i) {
         fAllSetsEndAlarm == "false" && fAllSetsEndNotify == "false") {
             if (currentTable != "RunTimers") {
                 // If Run Timers is active, no alarm was defined in the first place
-                alert("Alarm and Notification turned off for this task.");
+                // alert("Alarm and Notification turned off for this task.");
+                popCreate("w", "Alarm and Notification turned off for this task.");
             }
             return;
     }
@@ -787,18 +789,18 @@ function sendNotification(body, header, icon) {
 
 function clickFuture(i) {
     clickCommon(i);
-    alert("Future feature not implemented yet")
+    popCreate('i', "Future feature not implemented yet");
 }
 
 function clickUp(i) {
     clickCommon(i);
-    if (i == 0) { alert("Already at top, can't move up"); return; }
+    if (i == 0) { popCreate('w', "Already at top, can't move up"); return; }
     swapRows(i, i - 1);
 }
 function clickDown(i) {
     // TODO: After moving, update & save localStorage
     clickCommon(i);
-    if (i == cntTable - 1) { alert("Already at bottom, can't move down"); return; }
+    if (i == cntTable - 1) { popCreate('w', "Already at bottom, can't move down"); return; }
     swapRows(i, i + 1);
 }
 
@@ -823,7 +825,6 @@ function clickDelete(i) {
 }
 function clickAddTask() {
     // Create empty record for add
-    if (currentTable == "Projects") { alert("clickAddTask incomplete"); return; }
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     oldTask = Object.assign({}, tta_task);
     paintTaskForm("Add");
@@ -833,7 +834,6 @@ function clickAddProject() {
     ttaProject = Object.assign({}, tta_project); // https://stackoverflow.com/a/34294740/6929343
     oldProject = Object.assign({}, tta_project);
     paintProjectForm("Add");
-    // alert("Clicked Add Project but not implemented yet")
 }
 
 var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets;
@@ -858,15 +858,6 @@ function paintRunTimers(i) {
     const strHuman = cntHuman(cnt, "Task");
     var html = "<h2>" + ttaProject.project_name + " - Run timer for " + strHuman + "</h2>"
     // html = htmlSetContainer(html);
-
-    // alertError Message override
-    var msg = "Run Task Timers is a Work In Progress";
-    /*
-    html += '<div class="alert">\n' +
-            '<span class="closebtn">&times;</span>\n' +
-            '<strong>ERROR:</strong> ' + msg +
-            '</div>' ;
-    */
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
     html += '<table id="tabRunTimers" class="tta-table">\n' ;
@@ -1032,7 +1023,8 @@ async function runAllTimers(calledFromTable) {
                     // The last timer has finished, back to calling program
                     if (calledFromTable == "Projects") { paintProjectsTable(); }
                     else if (calledFromTable == "Tasks") { paintTasksTable(); }
-                    else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
+                    else { popCreate('e', "Unknown caller to paintRunTimers(): " +
+                                     calledFromTable)}
                     return;
                 }
                 index = 0;
@@ -1112,7 +1104,7 @@ function convertNumber(value) {
 function clickControls(i) {
     // Popup buttons for small screens
     clickCommon(i);
-    alert("Clicked Controls but not implemented yet")
+    popCreate('i', "Controls Feature not implemented yet")
 }
 
 function getTaskValue(key) {
@@ -1454,7 +1446,7 @@ function clickUpdateTask() {
     // When original index is < 0 it means we are adding new task
     if (!currentMode == "Add" && original_index < 0) {
         // Sanity check failed
-        alert(ttaTask.task_name + " Not found in ttaProject.arrTasks");
+        popCreate('e', ttaTask.task_name + " Not found in ttaProject.arrTasks");
         return false;
     }
     // Check for delete first and exit.
@@ -1514,7 +1506,7 @@ function clickUpdateProject() {
     // When original index is < 0 it means we are adding new task
     if (!currentMode == "Add" && original_index < 0) {
         // Sanity check failed
-        alert(ttaProject.project_name + " Not found in ttaConfig.arrProjects");
+        popCreate('e', ttaProject.project_name + " Not found in ttaConfig.arrProjects");
         return false;
     }
     // Check for delete first and exit.
@@ -1689,7 +1681,8 @@ function validateNonBlank(value) {
     // NOTE: get_dd_field must be called first.
     if (dd_field.lower == "non-blank") {
         if (value == "") {
-            alert(dd_field.label + " cannot be blank");
+            //alert(dd_field.label + " cannot be blank");
+            popCreate("e", dd_field.label + " cannot be blank");
             return false;
         }
     }
@@ -1700,7 +1693,11 @@ function validateNumber(value) {
     if (dd_field.type != "number") { return true; } // Not "number" type
     // console.log("value: '" + value + "' typeof:", typeof value)
     // From: https://stackoverflow.com/a/175787/6929343
-    if (isNaN(value)) { alert(dd_field.label + " must be a number"); return false; }
+    if (isNaN(value)) {
+        //alert(dd_field.label + " must be a number");
+        popCreate("e", dd_field.label + " must be a number");
+        return false;
+    }
     return true;
 }
 
@@ -1709,8 +1706,11 @@ function validateRange(value) {
     lower = parseInt(dd_field.lower, 10);  // base 10
     upper = parseInt(dd_field.upper, 10);  // base 10
     if (value >= lower && value <= upper) { return true; }
-    alert(dd_field.label + " must be between " + lower.toString() + " and " +
+
+    var msg = dd_field.label + " must be between " + lower.toString() + " and " +
           upper.toString());
+    popCreate("e", msg);
+
     return false;
 }
 
@@ -1892,21 +1892,21 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     // Sanity checks - After writing your development code you can delete
     // these prior to migration to production environment.
     if (arguments.length < 2) {
-        alert("msgAlert() minimum of 2 arguments required:\n" +
+        popCreate('e', "msgAlert() minimum of 2 arguments required:\n" +
               "msg_type, msg, id_elm_type, elm, error_id, clear_flag");
         console.trace();
         return false;
     }
     if (msg_type != "e" && msg_type != "w" &&
         msg_type != "i" && msg_type != "s") {
-            alert("msgAlert() msg_type must be 'e', 'w', 'i' or 's'.");
+            popCreate('e', "msgAlert() msg_type must be 'e', 'w', 'i' or 's'.");
             console.trace();
             return false;
     }
     var elm = id_elm; // May be undefined
     if (arguments.length > 2 && id_elm_type == "id") {
         if (arguments.length < 4) {
-            alert("msgAlert() when 'id_elm_type' = 'id', next argument required.");
+            popCreate('e', "msgAlert() when 'id_elm_type' = 'id', next argument required.");
             console.trace();
             return false;
         }
@@ -1936,6 +1936,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     document.body.appendChild(p['elmWindow']);
     //alert("pause before dragElement(p['elmWindow']);")
     var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
+    popCreate('i', "elmHead: " + elmHead);
     dragElement(elmHead);
 
     // TODO: activate close button
