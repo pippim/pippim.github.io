@@ -1934,9 +1934,9 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
 
     p['elmWindow'].innerHTML = html;
     //document.body.appendChild(p['elmWindow']);
-    //ttaElm.appendChild(p['elmWindow']);
-    tcmElm = document.getElementById("tcm_window");
-    tcmElm.appendChild(p['elmWindow']);
+    ttaElm.appendChild(p['elmWindow']);
+    //tcmElm = document.getElementById("tcm_window");
+    //tcmElm.appendChild(p['elmWindow']);  // nothing happens
     //alert("pause before dragElement(p['elmWindow']);")
     var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
     console.log("elmHead: " + elmHead);
