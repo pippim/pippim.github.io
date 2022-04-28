@@ -1985,11 +1985,13 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
-    html += 'position: absolute;\n';  // fixed breaks drag
-    //html += 'position: fixed;\n';  // fixed breaks drag
+    //html += 'position: absolute;\n';  // goes to top of docu,emt
+    html += 'position: fixed;\n';  // fixed breaks drag
     //html += 'position: sticky;\n';  // goes to bottom of document
     //html += 'display: none;\n';
     // html += 'display: block;\n';  // block is default anyway!
+    //html += 'display: flex;\n';  // Used in TCM, just experiment here too then
+    //html += 'flex-direction: column;\n';
     html += 'opacity: 1;\n';
     html += 'transition: opacity 0.6s;\n';
     html += 'max-width: 90vw;\n';
