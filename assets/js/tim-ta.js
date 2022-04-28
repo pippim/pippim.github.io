@@ -1043,7 +1043,9 @@ async function runAllTimers(calledFromTable) {
     }
 }
 
-function updateRunTimer(myTable, entry, index) {
+function updateRunTimer(myTable, broken, index) {
+    var id = "tabTimer" + index
+    var entry = allTimers[id];
     entry.progress += 1
     entry.remaining -= 1
     entry.elm.value = entry.progress.toString()
