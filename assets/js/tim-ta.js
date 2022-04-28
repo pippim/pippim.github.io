@@ -646,7 +646,7 @@ function clickListen(i) {
     /* prefix "f" short for "flag" where variable can contain "true" or "false" */
     fTaskEndAlarm = getTaskValue("task_end_alarm");
     fTaskEndNotify = getTaskValue("task_end_notification");
-    console.log("ttaTask:", ttaTask, "fTaskEndAlarm:", fTaskEndAlarm);
+    //console.log("ttaTask:", ttaTask, "fTaskEndAlarm:", fTaskEndAlarm);
     var fSetEndAlarm, fSetEndNotify, fAllSetsEndAlarm, fAllSetsEndNotify;
     fSetEndAlarm = fSetEndNotify = fAllSetsEndAlarm = fAllSetsEndNotify = "false" ;    
 
@@ -673,7 +673,7 @@ function clickListen(i) {
     if (fTaskEndAlarm == "true") { sound = getTaskValue("task_end_filename"); }
     else if (fSetEndAlarm == "true") { sound = getProjectValue("set_end_filename"); }
     else if (fAllSetsEndAlarm == "true") { sound = getProjectValue("all_sets_end_filename"); }
-    console.log("sound:", sound)
+
     var notify;
     if (fTaskEndNotify == "true") { notify = "Task " + ttaTask.task_name; }
     else if (fSetEndNotify == "true") { notify = "Set " + ttaProject.project_name; }
@@ -977,7 +977,7 @@ function initTimersAfterDOM() {
     for (const name of Object.keys(allTimers)) {
         var element = document.getElementById(allTimers[name].id);
         allTimers[name].elm = element;
-        console.log('timer progress element:', element);
+        // console.log('timer progress element:', element);
         element.addEventListener('click', () => { progressTouched(name); });
     }
 }
