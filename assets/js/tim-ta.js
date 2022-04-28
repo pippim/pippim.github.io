@@ -1945,7 +1945,8 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
 function popBuildHtml() {
     var html = "";
     html += '<div class="msgq-window">\n';
-    html += '  <div class="msgq-window-header">Click here to drag\n';
+    // For historical reasons must be "_header" not "-header" to drag window
+    html += '  <div class="msgq-window_header">Click here to drag\n';
     html += '    <span class="msgq-window-close closebtn">&times;</span>\n';
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
@@ -1958,10 +1959,72 @@ function popBuildHtml() {
     return html;
 }
 
-function popBuildStyle() {}
+function popBuildStyle() {
+    var html = "";
+    html += '.msgq-window {\n';
+    html += '  display: fixed;\n';
+    html += '    <span class="msgq-window-close closebtn">&times;</span>\n';
+    html += '  </div>\n';
+    html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
+    html += '    <button class="msq-button-ok" title="Click to proceed">OK</button>\n';
+    html += '  </div>\n';
+    html += '  <div class="msq-window-body">\n';
+    html += '    <p> DUMMY TEXT - Real text needs to be set</p>\n';
+    html += '  </div>\n';
+    html += '</div>\n';
+    return html;
+}
 
 function msgAddButton(msgqEntry, elm, callback) {
 
+}
+
+
+// Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
+// Make the DIV element draggable:
+dragElement(document.getElementById("tcm_window"));
+
+function dragElement(elm) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elm.id + "_header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
+    // https://stackoverflow.com/a/52554777/6929343
+
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elm.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elm.style.top = (elm.offsetTop - pos2) + "px";
+    elm.style.left = (elm.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
 }
 
 
