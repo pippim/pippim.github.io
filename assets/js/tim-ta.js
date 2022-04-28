@@ -998,7 +998,7 @@ async function runAllTimers(calledFromTable) {
     var entry = allTimers[id];  // A variable name easier to read
     var entrySet = allTimers["tabTimer" + cntTable];
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[index]];
-    //console.log("ttaTask.task_name:", ttaTask.task_name)
+    console.log("allTimers:", cntTable, allTimers)
 
     while (true) {
         if (entry.progress == 0) {
@@ -1045,10 +1045,10 @@ async function runAllTimers(calledFromTable) {
 }
 
 function updateRunTimer(myTable, entry, index) {
-    var id = "tabTimer" + index
-    var broken = allTimers[id];
-    console.log("broken:", broken);
-    console.log("entry:", entry);
+    //var id = "tabTimer" + index
+    //var broken = allTimers[id];
+    //console.log("broken:", broken);
+    //console.log("entry:", entry);
     if (entry == null) { return; }
     entry.progress += 1
     entry.remaining -= 1
