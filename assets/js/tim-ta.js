@@ -989,7 +989,6 @@ function progressTouched(name) {
     console.log("Progress bar touched:", name);
 }
 
-var oneTimeout;
 async function runAllTimers(calledFromTable) {
     // Run all timers
     var myTable = document.getElementById("tabRunTimers")
@@ -998,7 +997,7 @@ async function runAllTimers(calledFromTable) {
     var entry = allTimers[id];  // A variable name easier to read
     var entrySet = allTimers["tabTimerSet"];
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[index]];
-    //console.log("allTimers:", cntTable, allTimers)
+    console.log("allTimers:", cntTable, allTimers)
 
     while (true) {
         if (entry.progress == 0) {
