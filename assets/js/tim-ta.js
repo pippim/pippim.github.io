@@ -1037,7 +1037,7 @@ async function runAllTimers(calledFromTable) {
         //var strDuration = hmsToString(parts[0], parts[1], parts[2]);
         var strDuration = hhmmssShorten(hhmmss);
         if (strDuration == "") { strDuration = "Done"}
-        myTable.rows[currentIndex + 1].cells[1].innerHTML = strDuration;
+        myTable.rows[index + 1].cells[1].innerHTML = strDuration;
         //
         // TODO: Save entry, get AllSets and update it. Then restore saved entry.
     }
