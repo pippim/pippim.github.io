@@ -850,7 +850,7 @@ function paintRunTimers(i) {
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
     var calledFromTable = currentTable;
-    console.log("currentTable / i:", currentTable, i)
+    // console.log("currentTable / i:", currentTable, i)
     currentTable = "RunTimers"
 
     // Back to same Table
@@ -897,7 +897,7 @@ function paintRunTimers(i) {
     // Test window create shell
     popCreate("e", "Run Tasks is still a Work in Progress", 'id', "tabRunTimers");
     var popEntry = msgq[popIndex - 1];
-    console.log("popEntry:", popEntry);
+    // console.log("popEntry:", popEntry);
 
     // Run through all timers
     //for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
@@ -1026,7 +1026,7 @@ async function runAllTimers(calledFromTable) {
         entry.progress += 1
         entry.remaining -= 1
         entry.elm.value = entry.progress.toString()
-        var hhmmss = new Date(secondsTask * 1000).toISOString().substr(11, 8);
+        var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
         var parts = hhmmss.split(":")
         var strDuration = hmsToString(parts[0], parts[1], parts[2]);
         console.log("strDuration:", strDuration)
