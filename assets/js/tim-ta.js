@@ -1984,7 +1984,8 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
-    html += 'position: fixed;\n';  // fixed breaks drag
+    //html += 'position: fixed;\n';  // fixed breaks drag
+    html += 'position: sticky;\n';
     //html += 'display: none;\n';
     // html += 'display: block;\n';  // block is default anyway!
     html += 'opacity: 1;\n';
@@ -2096,112 +2097,4 @@ function dragElement2(elm) {
   }
 }
 
-
-/* Functions NOT USED */
-
-/*
-<div class="msgq-window">
-  <div class="msgq-window-header">Click here to drag
-    <span class="msgq-window-close closebtn">&times;</span>
-  </div>
-  <div class="msgq-window-buttons"> <!-- Buttons: OK -->
-    <button class="msq-button-ok" title="Click to proceed">OK</button>
-  </div>
-  <div class="msq-window-body">
-    <p> DUMMY TEXT - Real text needs to be set</p>
-  </div>
-</div>
-
-*/
-
-function alertError (msg) {
-    /*  Assumes DOM is loaded and innerHTML is already set with:
-            '<div class="ttaContainer">\n' + html +
-            '<div id="ttaModal"></div>\n' +
-            '</div>'
-
-        "html" above would contain "<h2>Title blah blah</h2>\n"
-
-this.mainCanvasDiv = document.createElement("div");
-this.mainCanvasDiv.id = "mainCanvas";
-this.mainCanvasDiv.style.width = "600px";
-this.mainCanvasDiv.style.height = "400px";
-this.mainCanvasDiv.style.border = "thin black solid";
-this.mainAppDiv.appendChild(this.mainCanvasDiv);
-    */
-    var id = document.getElementById("ttaModal");
-    id.classList.add("alert");
-    var html = "";
-    html += '<div class="alert">\n' +
-            '<span class="closebtn">&times;</span>\n' +
-            '<strong>ERROR:</strong> ' + msg +
-            '</div>' ;
-    id.innerHTML = html;
-            const error = document.getElementById('ttaModal');
-            error.style.display = 'block';
-            error.textContent = 'Error message test';
-    pollCloseBtn();
-    id.classList.remove("alert");
-}
-
-function alertWarning (msg) {
-    var id = document.getElementById("ttaModal");
-    id.classList.add("alert", "warning");
-    var html = "";
-    html += '<div class="alert warning">\n' +
-            '<span class="closebtn">&times;</span>\n' +
-            '<strong>WARNING:</strong> ' + msg +
-            '</div>' ;
-    id.innerHTML = html;
-    pollCloseBtn();
-    id.classList.remove("alert", "warning");
-}
-
-function alertInfo (msg) {
-    var id = document.getElementById("ttaModal");
-    id.classList.add("alert", "info");
-    var html = "";
-    html += '<div class="alert info">\n' +
-            '<span class="closebtn">&times;</span>\n' +
-            '<strong>Information:</strong> ' + msg +
-            '</div>' ;
-    id.innerHTML = html;
-    id.classList.remove("alert", "info");
-    pollCloseBtn();
-}
-
-function alertSuccess (msg) {
-    var id = document.getElementById("ttaModal");
-    id.classList.add("alert", "success");
-    var html = "";
-    html += '<div class="alert success">\n' +
-            '<span class="closebtn">&times;</span>\n' +
-            '<strong>Success!</strong> ' + msg +
-            '</div>' ;
-    id.innerHTML = html;
-    id.classList.remove("alert", "success");
-    pollCloseBtn();
-}
-
-function pollCloseBtn() {
-    // Get all elements with class="closebtn"
-    var close = document.getElementsByClassName("closebtn");
-    var i;
-
-    // Loop through all close buttons
-    for (i = 0; i < close.length; i++) {
-        // When someone clicks on a close button
-        close[i].onclick = function(){
-
-            // Get the parent of <span class="closebtn"> (<div class="alert">)
-            var div = this.parentElement;
-
-            // Set the opacity of div to 0 (transparent)
-            div.style.opacity = "0";
-
-            // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
-            setTimeout(function(){ div.style.display = "none"; }, 600);
-        }
-    }
-}
 /* End of /assets/js/tim-ta.js */
