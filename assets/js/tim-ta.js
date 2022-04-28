@@ -1935,7 +1935,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);
     //alert("pause before dragElement(p['elmWindow']);")
-    dragElement(p['elmWindow']);  // see assets/js/theCookieMachine.js
+    dragElement(p['elmWindow'], '-header');  // see assets/js/theCookieMachine.js
     //console.log("pop created:", p)
 
     // TODO: activate close button
@@ -1963,7 +1963,8 @@ function popBuildHtml(msg_type, msg) {
     html += '    <p>' + msg + '</p>\n';
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
-    html += '    <button class="msq-button-ok" title="Click to proceed">OK</button>\n';
+    html += '    <button class="msq-button-ok" title="Click to close" onclick="popClose()"\n';
+    html += '       >OK</button>\n';
     html += '  </div>\n';
     html += '</div>\n';
     return html;
@@ -2031,7 +2032,13 @@ function popBuildScript() {
     html += '  }\n';
     html += '}\n';
 
-    html += "</style>\n";
+    html += 'function popClose() {\n';
+    html += '  var div = this.parentElement;\n';
+    html += '  div.style.opacity = "0";\n';
+    html += '  setTimeout(function(){ div.style.display = "none"; }, 600);\n';
+    html += '}\n';
+
+    html += "</script>\n";
 
     return html;
 }
