@@ -902,8 +902,8 @@ function paintRunTimers(i) {
     ttaElm.scrollIntoView();  // Scroll top level element into view
 
     // Test window create shell
-    popCreate("e", "Run Tasks is still a Work in Progress", 'id', "tabRunTimers");
-    var popEntry = msgq[popIndex - 1];
+    // popCreate("e", "Run Tasks is still a Work in Progress", 'id', "tabRunTimers");
+    // var popEntry = msgq[popIndex - 1];
     // console.log("popEntry:", popEntry);
 
     // Run through all timers
@@ -1058,14 +1058,7 @@ function updateRunTimer(myTable, entry) {
     entry.progress += 1
     entry.remaining -= 1
     entry.elm.value = entry.progress.toString();
-    // Below is DRY
     updateRunTimerDuration(myTable, entry);
-    /*
-    var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
-    var strDuration = hhmmssShorten(hhmmss);
-    if (strDuration == "") { strDuration = "Done"}
-    myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration;
-    */
 }
 
 function updateRunTimerDuration(myTable, entry) {
@@ -1084,14 +1077,7 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
             entry.progress = 0;
             entry.remaining = entry.seconds;
             entry.elm.value = entry.progress.toString();
-            // Below is DRY
             updateRunTimerDuration(myTable, entry);
-            /*
-            var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
-            var strDuration = hhmmssShorten(hhmmss);
-            if (strDuration == "") { strDuration = "Done"}
-            myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration;
-            */
         }
     }
 }
@@ -1358,6 +1344,7 @@ function buildInit() {
 }
 
 function buildLine(text) {
+    // WIP - line not appearing but heading does get grey background
     var html = "";
     html += '<tr style="border-bottom: 1px solid black;">\n';
     //html += '<td colspan="100%"><strong>' + text + '</strong></td></tr>\n';
@@ -1374,7 +1361,7 @@ function buildInput(key, mode) {
     get_dd_field(key);
     html += dd_field.label + '</td>\n'
 
-    // Translate value of "default" to real value in parent(s)
+    // Translate value of "default" to real value from parent(s)
     var value;
     if (currentForm == "formProject") { value = getProjectValue(key); }
     else if (currentForm == "formTask") { value = getTaskValue(key); }
@@ -1393,6 +1380,7 @@ function buildInput(key, mode) {
 }
 
 function buildText(key, value, mode) {
+    // Build text type input field
     // get_dd_field() must have been called before us
     var html = "";
     html += '<input id="' + key + '" class="tabInput" type="text" \n' +
@@ -1405,6 +1393,7 @@ function buildText(key, value, mode) {
 }
 
 function buildSelect(key, value, mode) {
+    // Build drop down input field. elm must be set after DOM loaded
     // Can only initialize select elements after HTML declared with IDs
     inpSelects[key] = {
         id: key,
@@ -1434,6 +1423,7 @@ function buildSelect(key, value, mode) {
 }
 
 function buildSelectOption(name, default_name) {
+    // Build one dropdown option
     // name = Option, value = Default Option
     var html="";
     html += '  <option value="' + name + '" '
@@ -1459,7 +1449,7 @@ function initSelectsAfterDOM() {
 }
 
 function clickUpdateTask() {
-    /* Process Task updates - Add, Edit and Delete Task */
+    /* Process Task updates - Add, Edit and Delete Task has been requested */
     const original_index = ttaProject.arrTasks.indexOf(ttaTask.task_name);
     // When original index is < 0 it means we are adding new task
     if (!currentMode == "Add" && original_index < 0) {
@@ -1519,7 +1509,7 @@ function clickUpdateTask() {
 }
 
 function clickUpdateProject() {
-    /* Process Project updates - Add, Edit and Delete Project */
+    /* Process Project updates - Add, Edit or Delete Project requested */
     const original_index = ttaConfig.arrProjects.indexOf(ttaProject.project_name);
     // When original index is < 0 it means we are adding new task
     if (!currentMode == "Add" && original_index < 0) {
@@ -1594,6 +1584,7 @@ function clickUpdateConfig() {
 
     // Update Config values
     saveConfig();
+    // Configuration only called from Projects Table so go back to it.
     paintProjectsTable();
     return true;
 }
@@ -1647,10 +1638,10 @@ function getInputValues() {
         if (name == "") { console.log("inpSwitches empty name:", inpSwitches); continue; }
         /* SWITCH
             inpSwitches[name] = {
-                                    id: fullId,
-                                    elm: "Pippim Promise",
-                                    value: bool,
-                                    mode: mode
+                id: fullId,
+                elm: "Pippim Promise",
+                value: bool,
+                mode: mode
         */
         formValues[name] = inpSwitches[name].value;
     }
@@ -1664,7 +1655,6 @@ function getInputValues() {
                 elm: "Pippim Promise",
                 value: value,
                 mode: mode
-            };
         */
         //console.log("getInputValues() name/value", name, inpSelects[name].value);
         if (inpSelects[name].id != name) {
@@ -1686,6 +1676,11 @@ function validateTaskName(value) {
     if (original_index == new_index) { return true; }  // Key hasn't changed
 
     // We have a new key that already exists
+    // TODO: Create global with element being validated
+    popCreate("e", dd_field.label + " must be unique");
+    var popEntry = msgq[popIndex - 1];
+    console.log("popEntry:", popEntry);
+
     alert(dd_field.label + " must be unique");
     return false;
 }
@@ -1794,24 +1789,26 @@ function confirmDelete(text) {
 
 /* CONTROLS and MESSAGES boxes
 
-    WARNING: These alerts can only be sent after innerHTML has been set
+    WARNING: These messages work after innerHTML has been set
 
-    When mounting a table or form, clear existing queue with msgqClear();
+    NOTE: Click on title bar to drag message.
+
+    When mounting new table or form, clear existing queue with msgqClear();
+
     pasted containing "ABCD". As user backspaces over D, then C, B and A
-    we don't want message to reappear.
-
-    After backspacing is completed the error message is removed.
+    we don't want message to reappear. After backspacing is completed the
+    error message is removed.
 
     User can click "X" to clear the error message
 
-    The error message appears just below the top of the line Project X
+    A reference ID or element can be passed to make Window position mount
+    relative to it. Otherwise, just below the "heading" line Project X
     or Task X. The <div> ID is ttaModal. The error message is appended
     child <div> with class name "alert <qualifier>".
 
-
 */
 
-var msgq = {};  // Data struction below
+var msgq = {};  // Message Queue. Data struction is popEntry
 var btnBox = {};  // Extra buttons boxed up for small screen which is <= 640 px wide.
 var popIndex = 0;  // Key into msgq returned from popCreate() and passed to popClear()
 var popEntry = {
@@ -1931,10 +1928,35 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     p['style'] = popBuildStyle();
     msgq[popIndex.toString()] = p;
 
+    var html = popBuildHtml();
+    p['elmWindow'].innerHTML = html;
+    document.body.appendChild(p['elmWindow']);
+    dragElement(p['elmWindow']);  // see assets/js/theCookieMachine.js
+
+    // TODO: activate close button
+
+    // TODO: How to test? Create option in Cookie Machine?
+    //       Use Cookie Machine to speed test timers at 10x speed?
+
     popIndex += 1;  // Our new entry count and the next index to add
 }
 
-function popBuildHtml() {}
+function popBuildHtml() {
+    var html = "";
+    html += '<div class="msgq-window">\n';
+    html += '  <div class="msgq-window-header">Click here to drag\n';
+    html += '    <span class="msgq-window-close closebtn">&times;</span>\n';
+    html += '  </div>\n';
+    html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
+    html += '    <button class="msq-button-ok" title="Click to proceed">OK</button>\n';
+    html += '  </div>\n';
+    html += '  <div class="msq-window-body">\n';
+    html += '    <p> DUMMY TEXT - Real text needs to be set</p>\n';
+    html += '  </div>\n';
+    html += '</div>\n';
+    return html;
+}
+
 function popBuildStyle() {}
 
 function msgAddButton(msgqEntry, elm, callback) {
@@ -1945,55 +1967,17 @@ function msgAddButton(msgqEntry, elm, callback) {
 /* Functions NOT USED */
 
 /*
-<h2>Alert Messages</h2>
-<p>Click on the "x" symbol to close the alert message.</p>
-
-
-<div class="alert success">
-  <span class="closebtn">&times;</span>
-  <strong>Success!</strong> Indicates a successful or positive action.
+<div class="msgq-window">
+  <div class="msgq-window-header">Click here to drag
+    <span class="msgq-window-close closebtn">&times;</span>
+  </div>
+  <div class="msgq-window-buttons"> <!-- Buttons: OK -->
+    <button class="msq-button-ok" title="Click to proceed">OK</button>
+  </div>
+  <div class="msq-window-body">
+    <p> DUMMY TEXT - Real text needs to be set</p>
+  </div>
 </div>
-
-<div class="alert info">
-  <span class="closebtn">&times;</span>
-  <strong>Info!</strong> Indicates a neutral informative change or action.
-</div>
-
-<div class="alert warning">
-  <span class="closebtn">&times;</span>
-  <strong>Warning!</strong> Indicates a warning that might need attention.
-</div>
-
-.alert {
-    padding: 20px;
-    background-color: #f44336;
-    color: white;
-    opacity: 1;
-    transition: opacity 0.6s;
-    margin-bottom: 15px;
-}
-
-.alert.success {background-color: #04AA6D;}
-.alert.info {background-color: #2196F3;}
-.alert.warning {background-color: #ff9800;}
-
-
-*/
-
-/* WARNING: These alerts can only be sent after innerHTML has been set
-
-    There is an error on a variable. Say a numeric field had clipboard
-    pasted containing "ABCD". As user backspaces over D, then C, B and A
-    we don't want message to reappear.
-
-    After backspacing is completed the error message is removed.
-
-    User can click "X" to clear the error message
-
-    The error message appears just below the top of the line Project X
-    or Task X. The <div> ID is ttaModal. The error message is appended
-    child <div> with class name "alert <qualifier>".
-
 
 */
 
