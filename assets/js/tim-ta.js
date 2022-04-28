@@ -874,9 +874,12 @@ function paintRunTimers(i) {
     html += tabRunTimersHeading();
         // NOTE: Timers of zero duration are omitted from list
         for (var i = 0; i < cnt; i++) { html += tabRunTimersDetail(i); }
-    if (secondsSet != 0) { html += htmlRunTimersSet(); }
-
-    // TODO: Add AllSets
+    if (secondsSet > 0) {
+        // Passed sanity check to make sure there is time for set...
+        html += htmlRunTimersSet();  // Paint line for Total Tasks
+        // Paint extra line for Total All Sets
+        if (getProjectValue('run_set_times') > 1) { html += htmlRunTimersAllSets(); }
+    }
 
     html += '</table>\n';
     html += '</div>\n';
@@ -999,10 +1002,13 @@ async function runAllTimers(calledFromTable) {
     var index = 0;
     var id = "tabTimer" + index
     var entry = allTimers[id];  // A variable name easier to read
-    var entrySet = allTimers["tabTimerSet"];
+    var entrySet = allTimers["tabTimerSet"];  // Total Tasks
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[index]];
-    var run_times = getProjectValue('set_run_times');
+    var run_times = getProjectValue('run_set_times');
     var remaining_run_times = run_times;
+    // Setup Total All Sets entry if required
+    if (run_times > 1) { var entryAllSets = allTimers["tabTimerAllSets"]; }
+
     console.log("run_times:", run_times);
 
     while (true) {
@@ -1043,6 +1049,7 @@ async function runAllTimers(calledFromTable) {
 
         updateRunTimer(myTable, entry);
         updateRunTimer(myTable, entrySet);
+        if (run_times > 1) { updateRunTimer(myTable, entryAllSets); }
         // TODO: AllSets update
     }
 }
@@ -1050,8 +1057,18 @@ async function runAllTimers(calledFromTable) {
 function updateRunTimer(myTable, entry) {
     entry.progress += 1
     entry.remaining -= 1
-    entry.elm.value = entry.progress.toString()
+    entry.elm.value = entry.progress.toString();
     // Below is DRY
+    updateRunTimerDuration(myTable, entry);
+    /*
+    var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
+    var strDuration = hhmmssShorten(hhmmss);
+    if (strDuration == "") { strDuration = "Done"}
+    myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration;
+    */
+}
+
+function updateRunTimerDuration(myTable, entry) {
     var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
     var strDuration = hhmmssShorten(hhmmss);
     if (strDuration == "") { strDuration = "Done"}
@@ -1066,12 +1083,15 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
         } else {
             entry.progress = 0;
             entry.remaining = entry.seconds;
-            entry.elm.value = entry.progress.toString()
+            entry.elm.value = entry.progress.toString();
             // Below is DRY
+            updateRunTimerDuration(myTable, entry);
+            /*
             var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
             var strDuration = hhmmssShorten(hhmmss);
             if (strDuration == "") { strDuration = "Done"}
             myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration;
+            */
         }
     }
 }
