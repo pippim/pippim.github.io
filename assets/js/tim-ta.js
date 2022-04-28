@@ -677,8 +677,8 @@ function clickListen(i) {
     else if (fAllSetsEndNotify == "true") { notify = "All Sets " + ttaProject.project_name; }
 
     // <audio> tags buried on the page with ID name same as sound filename.
-    if (sound !== null) { soundAlarm (i, sound); }
-    if (notify !== null) { sendNotify (i, notify); }
+    if (sound != null) { soundAlarm (i, sound); }
+    if (notify != null) { sendNotify (i, notify); }
 }
 
 function soundAlarm(i, sound) {
