@@ -987,9 +987,10 @@ async function runAllTimers() {
     console.log("ttaTask.task_name:", ttaTask.task_name)
 
     while (true) {
-        //if (entry.progress = 0 && getTaskValue('task_prompt') == "true") {
-        //    prompt("Press Enter to begin timer " + ttaTask.task_name)
-        //}
+        if (entry.progress = 0) {
+            var value = getTaskValue('task_prompt')
+            prompt("Press Enter to begin timer " + ttaTask.task_name, value)
+        }
         await sleep(1000);
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
