@@ -1985,8 +1985,9 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
+    html += 'position: relative;\n';  // Used with ttaElm as parent
     //html += 'position: absolute;\n';  // goes to top of docu,emt
-    html += 'position: fixed;\n';  // fixed breaks drag
+    //html += 'position: fixed;\n';  // fixed breaks drag
     //html += 'position: sticky;\n';  // goes to bottom of document
     //html += 'display: none;\n';
     // html += 'display: block;\n';  // block is default anyway!
