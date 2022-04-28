@@ -89,12 +89,11 @@ will be provided. After that, new features will be added.
 > NOTE: Some Multi-timer features such as locking the screen
 > cannot be done from a web browser.
 
-As of April 14, 2022 these features have been developed:
+As of April 28, 2022, these features have been developed:
 
-- Three Sound files are saved to local storage. This saves bandwidth when they are played.
-
-As a four day week-end starts on April 15, 2022, lots
-of development should occur!
+- Sound files are saved to local storage. This saves bandwidth when they are played.
+- Configuration, Projects, Tasks and Run Timers tables / forms are complete.
+- Work has begun on advanced window alert/prompt system. It should take 2 weeks to complete.
 
 ---
 
