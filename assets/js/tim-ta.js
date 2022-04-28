@@ -830,6 +830,7 @@ var allTimers;
 
 function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
+    // When i null called from Tasks Table footer, else called from Projects Table.
     msgqClear();
     if (i !== null) { clickCommon(i); }  // load selected ttaProject
     secondsTask = secondsSet = secondsAllSets = 0;
@@ -838,7 +839,7 @@ function paintRunTimers(i) {
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
     var calledFromTable = currentTable;
-    console.log("currentTable, i:", currentTable, i)
+    console.log("currentTable / i:", currentTable, i)
     currentTable = "RunTimers"
 
     // Back to same Table
@@ -890,11 +891,6 @@ function paintRunTimers(i) {
     // Run through all timers
     //for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
     runAllTimers();
-
-    if (calledFromTable == "Projects") { paintProjectsTable(); }
-    else if (calledFromTable == "Tasks") { paintTasksTable(); }
-    else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
-
 }
 
 function tabRunTimersHeading() {
@@ -1000,7 +996,9 @@ async function runAllTimers() {
             //oneTimerEnd(currentIndex);
             currentIndex += 1;
             if (currentIndex >= ttaProject.arrTasks.length) {
-                // Not working, simply returning without painting new table
+                if (calledFromTable == "Projects") { paintProjectsTable(); }
+                else if (calledFromTable == "Tasks") { paintTasksTable(); }
+                else { alert("Unknown caller to paintRunTimers():", calledFromTable)}
                 return;
             }
             id = "tabTimer" + currentIndex
