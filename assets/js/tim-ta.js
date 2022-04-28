@@ -1957,13 +1957,15 @@ function popBuildHtml(msg_type, msg) {
     // For historical reasons must be "_header" not "-header" to drag window
     html += '  <div class="msgq-window-header">' + msg_head +
                     '&emsp; (Click here to drag)\n';
-    html += '    <span class="msgq-window-close closebtn">&times;</span>\n';
+    html += '    <span class="msgq-window-close closebtn" \n';
+    html += '    onclick="this.parentElement.style.display = \'none\';">&times;</span>\n';
     html += '  </div>\n';
     html += '  <div class="msq-window-body">\n';
     html += '    <p>' + msg + '</p>\n';
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
-    html += '    <button class="msq-button-ok" title="Click to close" onclick="popClose()"\n';
+    html += '    <button class="msq-button-ok" title="Click to close" \n';
+    html += '    onclick="this.parentElement.style.display = \'none\';" \n';
     html += '       >OK</button>\n';
     html += '  </div>\n';
     html += '</div>\n';
@@ -2043,7 +2045,7 @@ function popBuildScript() {
     return html;
 }
 
-function popClose(this) {
+function popClose() {
     // Called from msgq-button-ok onclick="popClose()" in HTML
     var div = this.parentElement;
     div.style.opacity = "0";
