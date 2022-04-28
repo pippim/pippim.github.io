@@ -1962,7 +1962,7 @@ function popBuildHtml() {
 
 function popBuildStyle() {
     // NOTE: .msq-xxx styles identical to #tcm-xxx styles in /assets/css/style.scss
-    var html = "";
+    var html = "<style>\n";
     html += '.msgq-window {\n';
     html += 'position: fixed;\n';
     html += 'display: none;\n';
@@ -1986,6 +1986,9 @@ function popBuildStyle() {
     html += 'background-color: #2196F3;\n';
     html += 'color: #fff;\n';
     html += '}\n';
+
+    html += "</style>\n";
+
     return html;
 }
 
