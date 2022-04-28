@@ -985,9 +985,9 @@ async function runAllTimers(calledFromTable) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[currentIndex]];
 
     while (true) {
-        if (entry.progress = 0 && getTaskValue('task_prompt') == "true") {
-            prompt("Press Enter to begin timer " + ttaTask.task_name)
-        }
+        //if (entry.progress = 0 && getTaskValue('task_prompt') == "true") {
+        //    prompt("Press Enter to begin timer " + ttaTask.task_name)
+        //}
         await sleep(1000);
         //console.log("Wakeup i:", i)
         if (entry.progress >= entry.seconds) {
