@@ -1934,7 +1934,9 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
 
     p['elmWindow'].innerHTML = html;
     //document.body.appendChild(p['elmWindow']);
-    ttaElm.appendChild(p['elmWindow']);
+    //ttaElm.appendChild(p['elmWindow']);
+    tcmElm = document.getElementById("tcm_window");
+    tcmElm.appendChild(p['elmWindow']);
     //alert("pause before dragElement(p['elmWindow']);")
     var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
     console.log("elmHead: " + elmHead);
@@ -1985,7 +1987,9 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
-    html += 'position: relative;\n';  // Used with ttaElm as parent
+    html += 'position: fixed;\n';  // fixed breaks drag
+    //html += 'position: relative;\n';  // Used with ttaElm as parent, bottom of element
+                                        // Goes to full width
     //html += 'position: absolute;\n';  // goes to top of docu,emt
     //html += 'position: fixed;\n';  // fixed breaks drag
     //html += 'position: sticky;\n';  // goes to bottom of document
