@@ -1936,7 +1936,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     document.body.appendChild(p['elmWindow']);
     //alert("pause before dragElement(p['elmWindow']);")
     var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
-    popCreate('i', "elmHead: " + elmHead);
+    console.log("elmHead: " + elmHead);
     dragElement(elmHead);
 
     // TODO: activate close button
