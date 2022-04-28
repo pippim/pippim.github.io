@@ -710,7 +710,7 @@ function soundAlarm(i, sound) {
     } else {
         // Set icon to "Stop" and schedule "Listen" icon when sound ends
         // Sound has start, set Stop Symbol into button text
-        if (btnElm != null) {
+        if (btnElm !== null) {
             btnElm.innerHTML = tabStopSym;  // textContent can't be used because entity code
             btnElm.title = tabStopTitle;
         }
@@ -721,7 +721,7 @@ function soundAlarm(i, sound) {
 
 function resetListen(btnElm) {
     // Set button symbol (text) back to Song Notes
-    if (btnElm != null) {
+    if (btnElm !== null) {
         btnElm.innerHTML = tabListenSym;  // textContent can't be used because entity code
         btnElm.title = tabListenTitle;
     }
