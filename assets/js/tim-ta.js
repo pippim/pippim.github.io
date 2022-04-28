@@ -1937,7 +1937,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     //alert("pause before dragElement(p['elmWindow']);")
     var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
     console.log("elmHead: " + elmHead);
-    dragElement(elmHead);
+    dragElement2(elmHead);
 
     // TODO: activate close button
 
@@ -2058,17 +2058,9 @@ function msgAddButton(msgqEntry, elm, callback) {
 }
 
 // Below copied from theCookieMachine.js
-function dragElement(elm) {
+function dragElement2(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-/*  if (document.getElementById(elm.id + optional_header)) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elm.id + optional_header).onmousedown = dragMouseDown;
-    // https://stackoverflow.com/a/52554777/6929343
-
-  } else {
-*/    // otherwise, grab & move from anywhere inside the DIV:
-    elm.onmousedown = dragMouseDown;
-  //}
+  elm.onmousedown = dragMouseDown;
 
   function dragMouseDown(e) {
     e = e || window.event;
@@ -2076,6 +2068,7 @@ function dragElement(elm) {
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
+    console.log("dragMouseDown(e) - pos3, pos4:", pos3, pos4)
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
