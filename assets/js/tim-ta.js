@@ -2106,10 +2106,10 @@ function dragElement2(elm, x, y) {
     console.log("top, left:", top, left)
     var offset = elm.getBoundingClientRect();
     console.log("offset.top, offset.left:", offset.top, offset.left)
-    //elm.style.top = (elm.offsetTop - pos2) + "px";
-    //elm.style.left = (elm.offsetLeft - pos1) + "px";
-    elm.style.top = top + "px";
-    elm.style.left = left + "px";
+    elm.style.top = (elm.offsetTop - pos2) + "px";
+    elm.style.left = (elm.offsetLeft - pos1) + "px";
+    //elm.style.top = top + "px";
+    //elm.style.left = left + "px";
   }
 
   function closeDragElement() {
