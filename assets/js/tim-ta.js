@@ -801,8 +801,8 @@ function clickUp(i) {
         return;
     }
     swapRows(i, i - 1);
-    popClearByError(at_top');
-    popClearByError(at_bottom');
+    popClearByError('at_top');
+    popClearByError('at_bottom');
 }
 function clickDown(i) {
     // TODO: After moving, update & save localStorage
@@ -812,8 +812,8 @@ function clickDown(i) {
         return;
     }
     swapRows(i, i + 1);
-    popClearByError(at_top');
-    popClearByError(at_bottom');
+    popClearByError('at_top');
+    popClearByError('at_bottom');
 }
 
 var oldTask;
@@ -2114,12 +2114,12 @@ function popClearByError(error_id) {
     // TODO: Rename to popClearByErrorId
     for (const key of Object.keys(msgq)) {
         entry = msgq[key];
-        if (entry.error_id != error_id) { continue; }
-        if (document.contains(entry.elmWindow)) { entry.elmWindow.remove(); }
+        if (entry.error_id == error_id) { popClearByEntry(entry); }
     }
-    var div = this.parentElement;
-    div.style.opacity = "0";
-    setTimeout(function(){ div.style.display = "none"; }, 600);
+}
+
+function popClearByEntry(entry) {
+    if (document.contains(entry.elmWindow)) { entry.elmWindow.remove(); }
 }
 
 function popClose() {
