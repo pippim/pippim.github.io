@@ -1,0 +1,703 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+
+// Smooth scrolling
+html { scroll-behavior: smooth; }
+
+//                    Pure CSS Button Hover effect
+// From: https://www.sliderrevolution.com/resources/css-button-hover-effects/
+
+// Headers (From: https://github.com/pages-themes/cayman/blob/master/_sass/variables.scss)
+$header-heading-color: #fff !default;
+$header-bg-color: #159957 !default;  // Cayman green
+$header-bg-color-secondary: #155799 !default;  // Cayman blue
+$honeydew: #F0FFF0 !default; // Honeydew
+$salmon: #FA8072 !default; // salmon
+$lavender: #E6E6FA !default; // lavender
+
+
+.button {
+    display: inline-block;
+    border-radius: 2rem;
+    //vertical-align: middle;
+    margin-top: .4rem;
+    // margin: -.5rem .5rem -.5rem .5rem;
+    padding: 0px 1rem;
+    color: #fff;
+    border: 2px solid white;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $header-bg-color;  // For Cayman
+        background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+        border-radius: 2rem;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
+        transition: all .3s;
+        border-radius: 2rem;
+        z-index: -1;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+            width: 100%;
+        }
+    }
+
+    + .button {
+        margin-left: 1rem;
+    }
+
+    @include large {
+        top: 1.5rem;  // Force buttons down a bit for vertical centering
+        padding: .5rem 1rem;
+    }
+
+    @include medium {
+        top: .75rem;
+        padding: .4rem 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    @include small {
+        top: .25rem;
+        display: block;
+        width: 100%;
+        padding: .3rem .75rem;
+        font-size: 0.7rem;
+
+        + .button {
+            // margin-top: 1rem;
+            margin-left: 0;
+        }
+    }
+}
+
+.hdr-bar {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: .5rem;            // Allow bit extra for button box height
+    text-align: right;        // Don't use "float: right;" that breaks rendering order
+    &:before {
+        content: "";
+        display: block;
+    }
+}
+
+/* here! from: https://stackoverflow.com/a/71213971/6929343 */
+.hdr-btn,
+.hdr-bar > a {
+    display: inline-block;
+    position: relative;
+    color: $header-bg-color;  // Cayman green
+    padding: 5px 15px;        // vertical, horizontal padding around button text
+    font-size:0.75em;         // 75% of normal font for button text
+    margin-left: 10px;        // Now that right aligned, switch margin side
+    // From: https://stackoverflow.com/questions/65297617
+    // background: linear-gradient(transparent,rgba(0, 0, 0, 0.4)) top/100% 800%;
+    background-color: $honeydew; // Honeydew
+
+    // Apr 20/22 Below used to be &:hover only, Chrome Android ws leaving button highlighted
+    &:hover, &focus {
+        background-color: DodgerBlue;
+        background-position: bottom;
+        //color: $lavender;       // WAS F0FFF0 or something like that Grayish
+        color: #fff;       // WAS F0FFF0 or something like that Grayish
+    }
+}
+
+// From: https://stackoverflow.com/questions/17233804/ho
+// DOESN'T work!
+@media (hover: hover) {
+    button:hover {
+        background-color: DodgerBlue;
+    }
+}
+
+/* Alerts - https://www.w3schools.com/howto/howto_js_alert.asp
+
+    USAGE:
+        <h2>Alert Messages</h2>
+        <p>Click on the "x" symbol to close the alert message.</p>
+        <div class="alert">
+          <span class="closebtn">&times;</span>
+          <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div>
+
+        <script>
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+          }
+        }
+        </script>
+
+*/
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 32px;  // Was 22
+    line-height: 29px;  // Was 20
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/* Causing problems where visited gets hover property ...
+#markdown-toc a:visited { color: blue; }
+*/
+#markdown-toc a:hover { color:black; }
+
+// Blog post front matter
+.front-matter {
+    padding: 4px 4px 0 4px;
+    border-color: $header-bg-color-secondary;  // Cayman blue DOESN'T WORK :(
+    border-top: 1px solid #999;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+    border-left: 1px solid #999;
+
+    &:hover { background-color: $lavender; }
+}
+
+.front-matter .hidden-child {
+    // https://stackoverflow.com/a/17260048/6929343
+    max-height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.26s ease;
+    // transition: all 0.26s ease;  // transition colors too, but like way before
+}
+
+.front-matter:hover .hidden-child{
+    background-color: $honeydew; // Honeydew
+    // https://stackoverflow.com/a/17260048/6929343
+    max-height: 500px;
+    transform: scaleY(1);
+
+    &:hover { color: blue; }
+}
+
+#view_button:hover {
+    // background-color: $honeydew ! important; // Honeydew
+    text-decoration: underline;
+}
+
+// Yellow highlighter pen
+mark {
+    // total new style: https://www.abeautifulsite.net/posts/a-clever-way-to-style-the-mark-element/
+    background: linear-gradient(-100deg, hsla(48,92%,75%,.3), hsla(48,92%,75%,.7) 95%, hsla(48,92%,75%,.1));
+    border-radius: 1em 0;
+    padding: .2rem .5rem .2rem .5rem;
+}
+
+// Copy code block contents to clipboard
+// See: _includes/copyHeader.html for credit
+.code-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.copy-code-button {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-column-gap: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 4px 8px;
+
+    &::before {
+        content: "Copy";
+    }
+
+    &::after {
+        content: "📋";
+        display: block;
+    }
+
+    // This class will be toggled via JavaScript
+    &.copied {
+        &::before { content: "Copied!"; }
+        &::after { content: "✔️"; }
+    }
+}
+
+/*
+// Visited links in purple
+//a:visited:not(.button),
+//a:visited:not(.tcm-btn),
+// THERE ARE TOO Many to skip: Table of Contents
+a:visited {
+  color: purple;
+}
+
+a.button:visited {
+   color: inherit;  // Use color white, not purple, for buttons
+}
+
+// > * { should be getting all descendants but it not...
+// https://stackoverflow.com/a/26353906/6929343
+a.hdr-bar:visited > * {
+   color: inherit;  // Use color white, not purple, for buttons
+}
+
+a.tcm-btn:visited {
+   color: inherit;  // Use color white, not purple, for buttons
+}
+
+a#markdown-toc:visited {
+   color: inherit;  // Use color white, not purple, for TOC
+}
+
+a#TOC:visited {
+   color: inherit;  // Use color white, not purple, for TOC
+}
+*/
+
+// Details styling: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#customizing_the_disclosure_widget
+details {
+    // font-size: 1.3rem;
+    // width: 80%;
+}
+
+details > summary {
+    // Chevron from https://stackoverflow.com/a/10813665/6929343
+    list-style-type: none;
+    margin-bottom: .6em;     // some spacing between groups
+    padding: 2px 6px;
+    width: 35em;          // 60% no good for cell phone
+    background-color: $honeydew;
+    color: $header-bg-color;
+    border: none;
+    box-shadow: 3px 3px 4px black;
+
+    &:hover {
+        // background-position:bottom;
+        background-color: #ddd;
+    }
+}
+
+details > summary::-webkit-details-marker {
+    // Fringe browsers from https://stackoverflow.com/a/10813665/6929343
+    display: none;
+}
+
+details > summary {
+    cursor: s-resize;
+}
+
+details[open] > summary {
+    cursor: n-resize;
+}
+
+details > summary::before {
+    content: '▶️ ';
+}
+
+details[open] > summary::before {
+    content: '🔽 ';
+}
+
+details > p {
+    border-radius: 0 0 10px 10px;
+    background-color: $honeydew;
+    color: $header-bg-color;
+    margin-left: 1.3em;
+    box-shadow: 3px 3px 4px black;
+    padding: 4px 4px 4px 4px;
+}
+
+details > a {
+    &:visited {
+        color: purple;
+    }
+}
+
+details a:visited { color:purple; }
+details a:hover { color:black; }
+.top-ten a:visited { color:purple; }
+.top-ten a:hover { color:black; }
+
+details[open] > summary {
+    background-color: $honeydew;
+    color: $header-bg-color;
+    transition: transform 250ms ease;
+}
+
+.dtl {
+    margin-left: 1.3em;
+}
+
+// From: https://stackoverflow.com/a/29064517/6929343
+.badge {
+    // width:20px;
+    width: auto;
+    padding: .1rem .25rem .1rem .25rem;
+    height: 1rem;
+    font-size: .9rem;
+    border-radius: .25rem; //modify it according to your needs.
+    -webkit-border-radius: .25rem;
+    background:red;
+    color:white;
+    text-align:center;
+}
+
+/* MAJOR SECTION ======== search.html styling */
+
+::placeholder {
+    // color: #fff;  // White doesn't work with background: $honeydew;
+    color: $header-bg-color;
+    opacity: 0.7;
+}
+
+/* Text version (UTF-8) of magnifying glass */
+#search-form {
+    background-color: $honeydew;
+    color: $header-bg-color;
+    vertical-align: middle;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include large { height: 2rem; }
+    @include medium { height: 1.6rem; }
+    @include small { height: 1.2rem; }
+}
+
+#search-query {
+    // could be called `search-input` as that is the process being styled
+    all: unset;
+    height: 100%;
+    width: 100%;
+    padding: .5rem .8rem;
+
+    @include large { font-size: 1.2rem; }
+    @include medium { font-size: 1rem; }
+    @include small { font-size: 0.9rem; }
+}
+
+#search-symbol {
+    background-image: url({{ site.url }}/assets/img/icons//search_symbol.png);
+    margin-right: .5rem;
+}
+
+// From: https://stackoverflow.com/a/46296164/692934
+.search-modal {
+    display: none;  // Hidden by default
+    position: fixed;  // Stay in place
+    z-index: 2;  // Place over header buttons appearing top of every page
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+// Modal Content
+.search-modal-content {
+    // background-color: #fefefe;
+    background-color: $honeydew;
+    color: $header-bg-color;
+
+    // margin: auto;  // too far down and too far to the left
+    // margin: -1rem 0 0 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+    border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
+    border-radius: .5rem;
+    width: 80%;
+    overflow: auto;
+    // top: 90px;    // top: 90px; goes over page title beginning of text
+    // left: 8px; goes over page title far left gutter
+    position: absolute;
+    text-align: start;  // parent flex box is centering text
+    max-height: 80vh;     // After 80% of viewport height, scroll bar appears on right
+    -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
+    box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
+    z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
+    @include large { font-size: 1.1rem; }
+    @include medium { font-size: 1rem; }
+    @include small { font-size: 0.9rem; }
+}
+
+#search-clear-input {
+    margin-right: .7rem;
+}
+
+#search-clear-input,
+#search-modal-close {
+    // Requires class name .icon_back{}
+    background-image: url({{ site.url }}/assets/img/icons/x.png);
+    box-shadow: inset 0 0 0 1000px rgba(255,255,255,.2);
+      // https://stackoverflow.com/a/24084708/6929343
+}
+
+.icon_back {
+    // Used by #tcm_window_close, #search-modal-close & #search-clear-input
+    display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border: none;
+    opacity: 0.5;
+    float: right;
+    cursor: pointer;
+
+    &:hover { opacity: 1.0; filter: brightness(150%); }
+    @include large { height: 20px; width: 20px; }
+    @include medium { height: 18px; width: 18px; }
+    @include small { height: 16px; width: 16px; }
+}
+
+// Search Result links that have been visited in purple
+// From: https://stackoverflow.com/questions/10845517/
+// how-to-change-the-link-color-in-a-specific-class-for-a-div-css/30296997#30296997
+
+// But none of the answers are working???
+a.search-results:visited {
+    color: purple;
+}
+
+.search-results a:visited { color:purple; }
+.search-results a:hover { color:black; }
+
+
+/* MAJOR SECTION ======== .linear-wipe {}
+
+   From: https://gist.github.com/CodeMyUI/530e25ec020cfbfc68526a2a56cb0247
+   Note: No license or copyright found?
+*/
+.linear-wipe {
+    text-align: center;
+
+    background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
+    background-size: 200% auto;
+
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s 3 ease-in-out;
+  
+    @keyframes shine { to { background-position: 200% center; } }
+}
+
+/* MAJOR SECTION ======== On/Off Slider Switches
+    Note: .with-action copied to inpSwitchStyle() in tim-ta.js
+*/
+.with-action {
+    vertical-align: middle;
+    width: 40px;
+    height: auto;
+    // Next lines aren't working...
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+/* MAJOR SECTION ======== The Cookie Machine (TCM)
+*/
+
+#tcm_window {
+    // assets/js/theCookieMachine.js
+    position: fixed;
+    display: none;
+    max-width: 90vw;      // After 90% of view width, scroll bar appears on bottom
+    max-height: 95vh;     // Scroll after 95% of view height, scroll bar appears on right
+    top: 20px;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: .2rem solid #d3d3d3;
+    color: black;
+    text-align: left;
+
+    @include large { padding: 0.5rem; font-size: 1rem; }
+    @include medium { padding: 0.4rem; font-size: 0.9rem; }
+    @include small { padding: 0.3rem; font-size: 0.8rem; }
+}
+
+/* Icon in in the tcm window header NOT the MAIN window! */
+#tcm_window_icon {
+    // The Cookie Machine Window Icon in #tcm_window_header uses .icon_back{} class
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin-right: .5rem;
+    opacity: 1.0;
+    //border: thin solid black;
+    // border-radius: .5rem;
+    background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+    cursor: move;
+}
+
+#tcm_window_header {
+    display: inline-block;
+    padding: .5rem;
+    cursor: move;  z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+}
+
+#tcm_window_close {
+    // Works in conjunction with class name .icon_back
+    background-image: url({{ site.url }}/assets/img/icons/x.png);
+    vertical-align: middle;
+}
+
+#tcm_window_buttons {
+    // TCM Buttons - Home, Cloud Storage, Local Storage, HRB, Webpage Info & Cookie Jar
+    > button {
+        display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+        margin: .5rem .5rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        &:hover { filter: brightness(150%); }
+        @include large { width: 45px; height: 45px; }
+        @include medium { width: 40px; height: 40px; }
+        @include small { width: 35px; height: 35px; }
+    }
+}
+
+.tcm_doc_window_button {
+    // Buttons double the size for documentation in /tcm.md
+    // TCM Buttons - Home, Cloud Storage, Local Storage, HRB, Webpage Info & Cookie Jar
+    float: left;
+    margin: .5rem 2rem .5rem 0px;
+
+    > button {
+        //display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+        //margin: .5rem .5rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        &:hover { filter: brightness(150%); }
+        @include large { width: 90px; height: 90px; }
+        @include medium { width: 80px; height: 80px; }
+        @include small { width: 70px; height: 70px; }
+    }
+}
+
+/* TCM Window buttons are two background images, first over second. It is not
+   possible to style within HTML and must be done within CSS
+*/
+#tcm_display_home, #tcm_doc_display_home {
+    background-image: url({{ site.url }}/assets/img/icons/home_simple.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_display_cloud, #tcm_doc_display_cloud {
+    background-image: url({{ site.url }}/assets/img/icons/cloud_dark.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_display_local, #tcm_doc_display_local {
+    background-image: url({{ site.url }}/assets/img/icons/laptop_2.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_hyperlink_recipe, #tcm_doc_hyperlink_recipe {
+    background-image: url({{ site.url }}/assets/img/icons/chain_simple.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_webpage_info, #tcm_doc_hyperlink_recipe {
+    background-image: url({{ site.url }}/assets/img/icons/webpage_info.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_cookie_jar, #tcm_doc_cookie_jar {
+    background-image: url({{ site.url }}/assets/img/icons/download_2.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_doc_window_icon {
+    background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
+#tcm_window_close:hover {
+    opacity: 1.0;
+    //background-color: #777;  // Causing slight shift upper right?
+}
+
+#tcm_window_body {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    white-space: pre;         // 2022-03-12 will this restore spacing in website_tree.json
+
+    // 17 y/o bug: https://bugzilla.mozilla.org/show_bug.cgi?id=307158
+    @-moz-document url-prefix() {
+        // bug fix: https://stackoverflow.com/a/39738403/6929343
+        padding-right: 1rem;
+    }
+}
+
+/* Button in the MAIN window's header NOT in the tcm window! */
+#tcm_button {
+    // The Cookie Machine HIDDEN button positioned after regular buttons
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    margin-right: .2rem;
+    background: transparent;
+    border: none;
+    opacity: 0.0;  // Make image invisible
+
+    @include large { height: 38px; width: 38px; margin-top: 1.25rem; }
+    @include medium { height: 32px; width: 32px; margin-top: .75rem; }
+    @include small { height: 26px; width: 26px; margin-top: .5rem; }
+
+    &:hover {
+        filter: brightness(150%);
+    }
+}
+
+/* end of /assets/css/style.scss */
