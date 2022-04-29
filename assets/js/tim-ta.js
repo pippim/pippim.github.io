@@ -2097,8 +2097,8 @@ function dragElement2(elm, x, y) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    console.log("elementDrag(e) - pos3, pos4:", pos3, pos4)
-    console.log("elm.offsetTop, elm.offsetLeft:", elm.offsetTop, elm.offsetLeft)
+    //console.log("elementDrag(e) - pos3, pos4:", pos3, pos4)
+    //console.log("elm.offsetTop, elm.offsetLeft:", elm.offsetTop, elm.offsetLeft)
     // set the element's new position:
     top = top - pos2;
     if (top < 0) { top = 0; }
@@ -2109,13 +2109,13 @@ function dragElement2(elm, x, y) {
     //console.log("offset.top, offset.left:", offset.top, offset.left)
     var newTop = elm.offsetTop - pos2;
     var newLeft = elm.offsetLeft - pos1;
-    console.log("newTop, newLeft:", newTop, newLeft);
-    //elm.style.top = (elm.offsetTop - pos2) + "px";
-    //elm.style.left = (elm.offsetLeft - pos1) + "px";
-    elm.style.top = top + "px";
-    elm.style.left = left + "px";
-    elm.style.top = "100px";
-    elm.style.left = "100px";
+    //console.log("newTop, newLeft:", newTop, newLeft);
+    elm.style.top = (elm.offsetTop - pos2) + "px";
+    elm.style.left = (elm.offsetLeft - pos1) + "px";
+    //elm.style.top = top + "px";
+    //elm.style.left = left + "px";
+    //elm.style.top = "100px";
+    //elm.style.left = "100px";
   }
 
   function closeDragElement() {
