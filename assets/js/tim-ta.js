@@ -1961,7 +1961,8 @@ function popBuildHtml(msg_type, msg) {
     html += '<div class="msgq-window">\n';
     // For historical reasons must be "_header" not "-header" to drag window
     html += '  <div class="msgq-window-header">' + msg_head +
-                    '&emsp; (Click here to drag)\n';
+                    //'&emsp; (Click here to drag)\n'; // Suspend until working
+                    '\n';
     html += '    <span class="msgq-window-close closebtn" \n';
     html += '    onclick="this.parentNode.parentElement.style.display = \'none\';">&times;</span>\n';
     html += '  </div>\n';
