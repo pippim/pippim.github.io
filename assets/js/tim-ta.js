@@ -1125,7 +1125,7 @@ function exitAllTimers() {
     }
 }
 
-function WakeLockOn() {
+async function wakeLockOn() {
     wakeLock = null;
     if ('wakeLock' in navigator) {
         wakeLock = await navigator.wakeLock.request('screen');
@@ -1134,7 +1134,7 @@ function WakeLockOn() {
     }
 }
 
-function WakeLockOff() {
+async function wakeLockOff() {
     if (wakeLock == null || wakeLock == false) { return; }
     wakeLock.release()
         .then(() => {
