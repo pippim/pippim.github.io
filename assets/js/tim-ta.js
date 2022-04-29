@@ -997,7 +997,7 @@ function initTimersAfterDOM() {
 }
 
 function progressTouched(name) {
-    // Future use to pro
+    // Future use to pop controls when progress bar touched
     console.log("Progress bar touched:", name);
 }
 
@@ -1019,6 +1019,7 @@ async function runAllTimers(calledFromTable) {
 
     while (true) {
         if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
+            // Prompt to begin timer, replace with popCreate()
             alert("Press Enter to begin timer " + ttaTask.task_name)
         }
 
@@ -1028,38 +1029,44 @@ async function runAllTimers(calledFromTable) {
         // console.log("timeElapsed:", timeElapsed)
         // Could make 999 to 980 sleep but override needed for prompt wait time
         await sleep(1000);
+
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             var audioControl = clickListen(index);
-            // TODO green success message while alarm sounds, then clear if stopped
+            if (audioControl !== null) {
+                console.log("audioControl time:", audioControl.currentTime);
+                // TODO green success message while alarm sounds, then clear if stopped
+            }
+            // Grab next task in project array
             index += 1;
             if (index >= ttaProject.arrTasks.length) {
+                // The last task has ended, is it the last set too?
                 remaining_run_times -= 1;
                 if (remaining_run_times <= 0) {
-                    // The last timer has finished, back to calling program
+                    // The last set has ended, back to calling program
                     if (calledFromTable == "Projects") { paintProjectsTable(); }
                     else if (calledFromTable == "Tasks") { paintTasksTable(); }
                     else { popCreate('e', "Unknown caller to paintRunTimers(): " +
                                      calledFromTable)}
                     return;
                 }
+                // Rebuild allTimers to fresh state for new set
                 index = 0;
-                // Rebuild allTimers to fresh state
                 resetTimersSet(myTable, run_times, remaining_run_times);
             }
+            // Grab next task in projects array
             id = "tabTimer" + index
             entry = allTimers[id];
             name = ttaProject.arrTasks[index];
             ttaTask = ttaProject.objTasks[name];
-            //console.log("new id/name:", id, name);
-            continue;  // Wait for first second.
+            continue;  // Wait for first second to expire
         }
 
         updateRunTimer(myTable, entry);
         updateRunTimer(myTable, entrySet);
         if (run_times > 1) { updateRunTimer(myTable, entryAllSets); }
-        // TODO: AllSets update
-    }
+
+    }  // End of forever while(true) loop
 }
 
 function updateRunTimer(myTable, entry) {
