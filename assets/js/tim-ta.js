@@ -1032,7 +1032,7 @@ async function runAllTimers() {
         if (cancelAllTimers) { return; }  // cancel button picked in footer
         if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
             // Prompt to begin timer, replace with popCreate()
-            //alert("Press Enter to begin timer " + ttaTask.task_name)
+            // alert("Press Enter to begin timer " + ttaTask.task_name)
             msg = "Click to begin timer " + ttaTask.task_name;
             // popPrompt('i', msg);  // without "await" function returns immediately
             await popPrompt('i', msg);  // with "await" function never returns
@@ -1923,8 +1923,8 @@ async function popPrompt(msg_type, msg, error_id) {
             console.log("popPrompt() loops:", sleepCount, elmWindow);
         }
         await sleep(50);
-        if (document.contains(elmWindow)) { continue; }
-        else { return; }
+        // if (document.contains(elmWindow)) { continue; }  // DOESN'T WORK
+        if (window.getComputedStyle(elmWindow).display === "none") { return; }
     }
 }
 
