@@ -2007,14 +2007,15 @@ function popBuildHtml(msg_type, msg) {
                     //'&emsp; (Click here to drag)\n'; // Suspend until working
                     '\n';
     html += '    <span class="msgq-window-close closebtn" \n';
-    html += '    onclick="this.parentNode.parentElement.style.display = \'none\';">&times;</span>\n';
+    html += '      onclick="popClose(this.parentNode.parentElement)" \n';
+    html += '      >&times;\n';
+    html += '    </span>\n';
     html += '  </div>\n';
     html += '  <div class="msq-window-body">\n';
     html += '    <p>' + msg + '</p>\n';
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     html += '    <button class="msq-button-ok" title="Click to close" \n';
-    //html += '    onclick="this.parentNode.parentElement.style.display = \'none\';" \n';
     html += '    onclick="popClose(this.parentNode.parentElement)" \n';
     html += '       >OK</button>\n';
     html += '  </div>\n';
@@ -2058,6 +2059,7 @@ function popBuildStyle(msg_type) {
     html += 'color: black;\n';
     //html += 'text-align: left;\n';
     html += 'text-align: center;\n';
+    html += 'padding: .5rem;\n';
     // ERROR: Expected declaration but found “@include”.  Skipped to next declaration.
     //html += '@include large { padding: 0.5rem; font-size: 1rem; }\n';
     //html += '@include medium { padding: 0.4rem; font-size: 0.9rem; }\n';
@@ -2079,6 +2081,8 @@ function popBuildStyle(msg_type) {
 }
 
 function popBuildScript() {
+    // BROKEN
+
     // NOTE: closebtn defined in /assets/css/style.scss
     // Apply 600ms close time when close button clicked. Matches
     // 0.3 s fade out applied by .closebtn {} style
