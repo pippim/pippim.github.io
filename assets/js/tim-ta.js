@@ -933,21 +933,25 @@ function tabRunTimersDetail(i) {
     // var html = '<tr">\n';  // This shouldn't have worked before???
 
     var id = "tabTimer" + i;
-    return htmlRunTimersDetail(id, ttaTask.task_name, i, secondsTask);
+    var sound = getTaskValue("task_end_filename");
+    return htmlRunTimersDetail(id, ttaTask.task_name, i, secondsTask, sound);
 }
 
 function htmlRunTimersSet() {
+    var sound = getProjectValue("set_end_filename");
     return htmlRunTimersDetail("tabTimerSet", "Tasks Total",
-                               ttaProject.arrTasks.length, secondsSet);
+                               ttaProject.arrTasks.length, secondsSet, sound);
 }
 
 function htmlRunTimersAllSets() {
+    var sound = getProjectValue("all_sets_end_filename");
     return htmlRunTimersDetail("tabTimerAllSets", "All Sets Total",
-                               ttaProject.arrTasks.length + 1, secondsAllSets);
+                               ttaProject.arrTasks.length + 1, secondsAllSets, sound);
 }
 
-function htmlRunTimersDetail(id, name, index, seconds) {
+function htmlRunTimersDetail(id, name, index, seconds, sound) {
     // Return html for new Run Timers Table entry
+    var audioControl = document.getElementById(sound);
     entryTimer = {};
     entryTimer["id"] = id;
     entryTimer["elm"] = "Pippim Promise";
@@ -956,6 +960,7 @@ function htmlRunTimersDetail(id, name, index, seconds) {
     entryTimer["seconds"] = seconds;
     entryTimer["remaining"] = seconds;
     entryTimer["progress"] = 0;
+    entryTimer["sound"] = audioControl;
     allTimers[id] = entryTimer;
 
     var html = '<tr>\n';
@@ -1680,7 +1685,7 @@ function validateTaskName(value) {
 function validateNonBlank(value) {
     // NOTE: get_dd_field must be called first.
     if (dd_field.lower == "non-blank") {
-        if (value == "") {
+        if (value.trim() == "") {
             //alert(dd_field.label + " cannot be blank");
             popCreate("e", dd_field.label + " cannot be blank");
             return false;
@@ -1833,7 +1838,7 @@ function msgqClear() {
         entry = msgq[key];
         if (document.contains(entry.elmWindow)) { entry.elmWindow.remove(); }
     }
-    msgq = {};  // TODO: First loop through and delete created elements
+    msgq = {};
     btnBox = {};
     popIndex = 0;
 }
