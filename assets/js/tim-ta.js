@@ -664,13 +664,12 @@ function clickListen(i) {
         fAllSetsEndAlarm == "false" && fAllSetsEndNotify == "false") {
             if (currentTable != "RunTimers") {
                 // If Run Timers is active, no alarm was defined in the first place
-                // alert("Alarm and Notification turned off for this task.");
                 popCreate("w", "Alarm and Notification turned off for this task.");
             }
             return;
     }
 
-    // TODO: Cycle through filenames - TaskEnd, SetEnd, AllSetsEnd
+    // Get first sounds/notifications from lowest to highest level
     var sound;
     if (fTaskEndAlarm == "true") { sound = getTaskValue("task_end_filename"); }
     else if (fSetEndAlarm == "true") { sound = getProjectValue("set_end_filename"); }
@@ -682,15 +681,18 @@ function clickListen(i) {
     else if (fAllSetsEndNotify == "true") { notify = "All Sets " + ttaProject.project_name; }
 
     // <audio> tags buried on the page with ID name same as sound filename.
+    var audioControl;
     if (sound != null) {
         if (currentTable != "RunTimers") { soundAlarm (i, sound); }
         else {
-            var audioControl = document.getElementById(sound);
+            audioControl = document.getElementById(sound);
             audioControl.play();
         }
     }
 
     if (notify != null) { sendNotify (i, notify); }
+
+    return audioControl;  // Used by runAllTimers to early end alarm sound
 }
 
 function soundAlarm(i, sound) {
@@ -794,14 +796,24 @@ function clickFuture(i) {
 
 function clickUp(i) {
     clickCommon(i);
-    if (i == 0) { popCreate('w', "Already at top, can't move up"); return; }
+    if (i == 0) {
+        popCreate('w', "Already at top, can't move up", 'at_top');
+        return;
+    }
     swapRows(i, i - 1);
+    popClear('at_top');
+    popClear('at_bottom');
 }
 function clickDown(i) {
     // TODO: After moving, update & save localStorage
     clickCommon(i);
-    if (i == cntTable - 1) { popCreate('w', "Already at bottom, can't move down"); return; }
+    if (i == cntTable - 1) {
+        popCreate('w', "Already at bottom, can't move down", 'at_bottom');
+        return;
+    }
     swapRows(i, i + 1);
+    popClear('at_top');
+    popClear('at_bottom');
 }
 
 var oldTask;
@@ -892,17 +904,12 @@ function paintRunTimers(i) {
     initTimersAfterDOM();  // Initialize elements for table row IDs
     ttaElm.scrollIntoView();  // Scroll top level element into view
 
-    // Test window create shell
-    // popCreate("e", "Run Tasks is still a Work in Progress", 'id', "tabRunTimers");
-    // var popEntry = msgq[popIndex - 1];
-    // console.log("popEntry:", popEntry);
-
-    // Run through all timers
-    //for (const name of Object.keys(allTimers)) { oneTimerRun(name); }
-    runAllTimers(calledFromTable);
+    runAllTimers(calledFromTable);  // Run through all timers
+    // Get to this point instantly while runAllTimers() runs asynchronously
 }
 
 function tabRunTimersHeading() {
+    // Format table heading for RunTimers form
     var html = "<tr><th>Progress</th>";
     if (!scrSmall) { html += "<th>Remaining</th>"; }
     html += "<th>Task Name</th>";
@@ -910,6 +917,7 @@ function tabRunTimersHeading() {
 }
 
 function tabRunTimersDetail(i) {
+    // Format table detail line for RunTimers form
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
     var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
     if (strDuration == "") { return ""; }  // No duration = no timer displayed
@@ -938,12 +946,14 @@ function tabRunTimersDetail(i) {
 }
 
 function htmlRunTimersSet() {
+    // Format table detail Tasks Total line for RunTimers form
     var sound = getProjectValue("set_end_filename");
     return htmlRunTimersDetail("tabTimerSet", "Tasks Total",
                                ttaProject.arrTasks.length, secondsSet, sound);
 }
 
 function htmlRunTimersAllSets() {
+    // Format table detail All Sets Total line for RunTimers form
     var sound = getProjectValue("all_sets_end_filename");
     return htmlRunTimersDetail("tabTimerAllSets", "All Sets Total",
                                ttaProject.arrTasks.length + 1, secondsAllSets, sound);
@@ -951,7 +961,6 @@ function htmlRunTimersAllSets() {
 
 function htmlRunTimersDetail(id, name, index, seconds, sound) {
     // Return html for new Run Timers Table entry
-    var audioControl = document.getElementById(sound);
     entryTimer = {};
     entryTimer["id"] = id;
     entryTimer["elm"] = "Pippim Promise";
@@ -960,7 +969,7 @@ function htmlRunTimersDetail(id, name, index, seconds, sound) {
     entryTimer["seconds"] = seconds;
     entryTimer["remaining"] = seconds;
     entryTimer["progress"] = 0;
-    entryTimer["sound"] = audioControl;
+    entryTimer["sound"] = sound;  // Not used!
     allTimers[id] = entryTimer;
 
     var html = '<tr>\n';
@@ -988,6 +997,7 @@ function initTimersAfterDOM() {
 }
 
 function progressTouched(name) {
+    // Future use to provide controls when progress bar is touched/clicked
     console.log("Progress bar touched:", name);
 }
 
@@ -1018,37 +1028,46 @@ async function runAllTimers(calledFromTable) {
         // console.log("timeElapsed:", timeElapsed)
         // Could make 999 to 980 sleep but override needed for prompt wait time
         await sleep(1000);
-        if (entry.progress >= entry.seconds) {
-            // Timer has ended, sound alarm and start next timer
-            clickListen(index);
-            index += 1;
-            if (index >= ttaProject.arrTasks.length) {
-                remaining_run_times -= 1;
-                if (remaining_run_times <= 0) {
-                    // The last timer has finished, back to calling program
-                    if (calledFromTable == "Projects") { paintProjectsTable(); }
-                    else if (calledFromTable == "Tasks") { paintTasksTable(); }
-                    else { popCreate('e', "Unknown caller to paintRunTimers(): " +
-                                     calledFromTable)}
-                    return;
-                }
-                index = 0;
-                // Rebuild allTimers to fresh state
-                resetTimersSet(myTable, run_times, remaining_run_times);
-            }
-            id = "tabTimer" + index
-            entry = allTimers[id];
-            name = ttaProject.arrTasks[index];
-            ttaTask = ttaProject.objTasks[name];
-            //console.log("new id/name:", id, name);
-            continue;  // Wait for first second.
+
+        if (entry.progress < entry.seconds) {
+            // Countdown still progressing. Update display and continue
+            updateRunTimer(myTable, entry);
+            updateRunTimer(myTable, entrySet);
+            if (run_times > 1) { updateRunTimer(myTable, entryAllSets); }
+            continue;
         }
 
-        updateRunTimer(myTable, entry);
-        updateRunTimer(myTable, entrySet);
-        if (run_times > 1) { updateRunTimer(myTable, entryAllSets); }
-        // TODO: AllSets update
-    }
+        // Timer has ended, sound alarm (only if defined)
+        var audioControl = clickListen(index);  // If audioControl undefined no sound
+        if (audioControl !== null) {
+            console.log("playing audioControl for:", audioControl.currentTime )
+            // TODO green success message while alarm sounds, then clear if stopped
+        }
+
+        index += 1;  // Grab the next task index in list
+
+        if (index >= ttaProject.arrTasks.length) {
+            // LAST task in project
+            remaining_run_times -= 1;
+            if (remaining_run_times <= 0) {
+                // LAST set in sets, back to calling program
+                if (calledFromTable == "Projects") { paintProjectsTable(); }
+                else if (calledFromTable == "Tasks") { paintTasksTable(); }
+                else { popCreate('e', "Unknown caller to paintRunTimers(): " +
+                                 calledFromTable)}
+                return;
+            }
+            index = 0;
+            // Rebuild allTimers to fresh state
+            resetTimersSet(myTable, run_times, remaining_run_times);
+        }
+        id = "tabTimer" + index
+        entry = allTimers[id];
+        name = ttaProject.arrTasks[index];
+        ttaTask = ttaProject.objTasks[name];
+        //console.log("new id/name:", id, name);
+        continue;  // Wait for first second.
+    }  // End of forever while(true) loop
 }
 
 function updateRunTimer(myTable, entry) {
@@ -1069,7 +1088,7 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
     for (const key of Object.keys(allTimers)) {
         var entry = allTimers[key];
         if (key == "tabTimerAllSets") {
-            // TODO, massage description with remaining run times
+            // TODO, massage description with "Set Number x of y"
         } else {
             entry.progress = 0;
             entry.remaining = entry.seconds;
@@ -1881,7 +1900,7 @@ function popClear(key) {
     msgq[key].elmWindow.remove();  // should remove child be used?
 }
 
-function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
+function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     /*  PRIMARY FUNCTION to display error messages (and control boxes)
         msg_type = "e" red error message
                    "w" orange warning message
@@ -1930,9 +1949,9 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     p['msg_type'] = msg_type;  // e, w, i or s
     p['msg'] = msg;  // Might contain HTML
     p['id_elm_type'] = id_elm_type;
+    p['error_id'] = error_id;
     p['id_elm'] = id_elm;
     p['elmLink'] = elm;
-    //p['error_id'] = error_id;
     //p['clear_flag'] = clear_flag;
     //p['html'] = popBuildHtml(msg_type, msg);
     //p['style'] = popBuildStyle(msg_type);
@@ -2072,7 +2091,16 @@ function popBuildScript() {
     return html;
 }
 
+function popClear(error_id) {
+    // Clear a specific error_id from document
+    // The error may have occurred multiple times during validation
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+}
+
 function popClose() {
+    // NOT WORKING
     // Called from msgq-button-ok onclick="popClose()" in HTML
     var div = this.parentElement;
     div.style.opacity = "0";
