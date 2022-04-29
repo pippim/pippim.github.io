@@ -850,7 +850,7 @@ function clickAddProject() {
 
 // Global variables for Task countdown timers
 var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets;
-var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime;
+var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock;
 
 function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
@@ -862,6 +862,7 @@ function paintRunTimers(i) {
     sleepMillis = 1000;
     cancelAllTimers = false;
     totalAllTimersTime = 0 ;
+    wakeLock = null;  // Force mobile screen to stay on
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
@@ -912,6 +913,7 @@ function paintRunTimers(i) {
     initTimersAfterDOM();  // Initialize elements for table row IDs
     ttaElm.scrollIntoView();  // Scroll top level element into view
 
+    // TODO: prompt to begin running
     runAllTimers();  // Run through all timers
     // Get to this point instantly while runAllTimers() runs asynchronously
 }
@@ -1023,7 +1025,8 @@ async function runAllTimers() {
     // Setup Total All Sets entry if required
     if (run_times > 1) { var entryAllSets = allTimers["tabTimerAllSets"]; }
 
-    console.log("run_times:", run_times);
+    //console.log("run_times:", run_times);
+    wakeLockOn();  // Keep mobile screen turned on
 
     while (true) {
         if (cancelAllTimers) { return; }  // cancel button picked in footer
@@ -1113,11 +1116,30 @@ function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
     // TODO: If totalAllTimersTime more than 1 minute, confirm exit
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
+    wakeLockOff();  // Allow mobile screen to sleep again
+
     if (calledFromTable == "Projects") { paintProjectsTable(); }
     else if (calledFromTable == "Tasks") { paintTasksTable(); }
     else {
         popCreate('e', "Unknown caller to exitAllTimers(): " + calledFromTable);
     }
+}
+
+function WakeLockOn() {
+    wakeLock = null;
+    if ('wakeLock' in navigator) {
+        wakeLock = await navigator.wakeLock.request('screen');
+    } else {
+        wakeLock = false;  // Not supported
+    }
+}
+
+function WakeLockOff() {
+    if (wakeLock == null || wakeLock == false) { return; }
+    wakeLock.release()
+        .then(() => {
+          wakeLock = null;
+        })
 }
 
 function hhmmssShorten(hhmmss){
@@ -1873,12 +1895,9 @@ var popEntry = {
     };
 
 function msgqClear() {
-    // When mounting new screen clear old messages. Also clear control box which
-    // resides in msgq too.
-    for (const key of Object.keys(msgq)) {
-        entry = msgq[key];
-        if (document.contains(entry.elmWindow)) { entry.elmWindow.remove(); }
-    }
+    // Clear existing messages and control box from document
+    for (const key of Object.keys(msgq)) { popClearByEntry(msgq[key]); }
+    // Reset objects and counters
     msgq = {};
     btnBox = {};
     popIndex = 0;
