@@ -1910,11 +1910,48 @@ async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for response.
     */
     elmWindow = popCreate(msg_type, msg, error_id);
+    var sleepCount = 0;
     while(true) {
+        sleepCount += 1;
+        var rem = sleepCount % 1000;
+        if (rem == 0) { console.log("popPrompt() loops:", sleepCount); }
         await sleep(50)
         if (document.contains(elmWindow)) { continue; }
         else { break; }
     }
+}
+
+function popClearByError(error_id) {
+    // Clear a specific error_id from document
+    // The error may have occurred multiple times during validation
+    // TODO: Rename to popClearByErrorId
+    for (const key of Object.keys(msgq)) {
+        entry = msgq[key];
+        if (entry.error_id == error_id) { popClearByEntry(entry); }
+    }
+}
+
+function popClearByElmWindow(ElmWindow) {
+    // Clear a specific error_id from document
+    // The error may have occurred multiple times during validation
+    // TODO: Rename to popClearByErrorId
+    for (const key of Object.keys(msgq)) {
+        entry = msgq[key];
+        if (entry.elmWindow == elmWindow) { popClearByEntry(entry); }
+    }
+}
+
+function popClearByEntry(entry) {
+    if (document.contains(entry.elmWindow)) { entry.elmWindow.remove(); }
+}
+
+function popClose(elmWindow) {
+    // Parent HTML: onclick="popClose(this.parentNode.parentElement)"
+    elmWindow.style.opacity = "0";
+    setTimeout(function(){
+        elmWindow.style.display = "none";
+        popClearByElmWindow(ElmWindow);
+    }, 600);
 }
 
 function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
@@ -2107,39 +2144,6 @@ function popBuildScript() {
     html += "</script>\n";
 
     return html;
-}
-
-function popClearByError(error_id) {
-    // Clear a specific error_id from document
-    // The error may have occurred multiple times during validation
-    // TODO: Rename to popClearByErrorId
-    for (const key of Object.keys(msgq)) {
-        entry = msgq[key];
-        if (entry.error_id == error_id) { popClearByEntry(entry); }
-    }
-}
-
-function popClearByElmWindow(ElmWindow) {
-    // Clear a specific error_id from document
-    // The error may have occurred multiple times during validation
-    // TODO: Rename to popClearByErrorId
-    for (const key of Object.keys(msgq)) {
-        entry = msgq[key];
-        if (entry.elmWindow == elmWindow) { popClearByEntry(entry); }
-    }
-}
-
-function popClearByEntry(entry) {
-    if (document.contains(entry.elmWindow)) { entry.elmWindow.remove(); }
-}
-
-function popClose(elmWindow) {
-    // Parent HTML: onclick="popClose(this.parentNode.parentElement)"
-    elmWindow.style.opacity = "0";
-    setTimeout(function(){
-        elmWindow.style.display = "none";
-        popClearByElmWindow(ElmWindow);
-    }, 600);
 }
 
 // Below copied from theCookieMachine.js - Spent WHOLE NIGHT TRYING TO FIX :(
