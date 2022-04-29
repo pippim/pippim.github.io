@@ -849,7 +849,7 @@ function clickAddProject() {
 }
 
 var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets;
-var allTimers, sleepMillis, cancelAllTimers;
+var calledFromTable, sleepMillis, cancelAllTimers;
 
 function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
@@ -863,7 +863,7 @@ function paintRunTimers(i) {
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
-    var calledFromTable = currentTable;
+    calledFromTable = currentTable;
     // console.log("currentTable / i:", currentTable, i)
     currentTable = "RunTimers"
 
@@ -893,6 +893,7 @@ function paintRunTimers(i) {
     html += '<div class="leftFoot">\n';
     html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
     html += "<font size='+2'>Preview</font>";
+    html += '</div>\n';
     html += '<div class="rightFoot">\n';
     html += taskButton(tabBackSym, tabBackTitle, "exitAllTimers(calledFromTable)");
     html += "<font size='+2'>Cancel</font>";
