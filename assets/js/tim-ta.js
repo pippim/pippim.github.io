@@ -2103,6 +2103,8 @@ function dragElement2(elm, x, y) {
     left = left - pos1;
     if (left < 0) { left = 0; }
     console.log("top, left:", top, left)
+    var offset = elm.getBoundingClientRect();
+    console.log("offset.top, offset.left:", offset.top, offset.left)
     //elm.style.top = (elm.offsetTop - pos2) + "px";
     //elm.style.left = (elm.offsetLeft - pos1) + "px";
     elm.style.top = top + "px";
