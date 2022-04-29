@@ -173,13 +173,13 @@ $lavender: #E6E6FA !default; // lavender
 .alert.warning {background-color: #ff9800;}
 
 .closebtn {
-    margin-left: 15px;
+    //margin-left: 15px;
     color: white;
-    vertical-align: middle;
+    //vertical-align: middle;
     font-weight: bold;
     float: right;
-    font-size: 32px;  // Was 22
-    line-height: 29px;  // Was 20
+    //font-size: 32px;    // Was 22 then 32
+    //line-height: 29px;  // Was 20 then 29
     cursor: pointer;
     transition: 0.3s;
 }
