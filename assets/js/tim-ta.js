@@ -1032,9 +1032,9 @@ async function runAllTimers() {
         if (cancelAllTimers) { return; }  // cancel button picked in footer
         if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
             // Prompt to begin timer, replace with popCreate()
-            alert("Press Enter to begin timer " + ttaTask.task_name)
+            //alert("Press Enter to begin timer " + ttaTask.task_name)
             msg = "Click to begin timer " + ttaTask.task_name;
-            await popPrompt('i', msg);  // Waits until prompt closed
+            popPrompt('i', msg);  // Waits until prompt closed
         }
 
         var timeCurrent = new Date().getTime();
