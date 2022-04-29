@@ -1082,6 +1082,7 @@ function updateRunTimerDuration(myTable, entry) {
     var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
     var strDuration = hhmmssShorten(hhmmss);
     if (strDuration == "") { strDuration = "Done"}
+    if (scrSmall) { return; }  // Duration doesn't display on small screen
     myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration;
 }
 
