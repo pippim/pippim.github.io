@@ -1951,7 +1951,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
         clear_flag = optional flag ("true") to clear error number or name.
                      Automatically closes message box as well.
 
-        RETURNS the msgqEntry number which is used to clear message manually
+        RETURNS the window element created
     */
     // Sanity checks - After writing your development code you can delete
     // these prior to migration to production environment.
@@ -2015,6 +2015,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     //       Use Cookie Machine to speed test timers at 10x speed?
 
     popIndex += 1;  // Our new entry count and the next index to add
+    return p['elmWindow'];
 }
 
 function popBuildHtml(msg_type, msg) {
