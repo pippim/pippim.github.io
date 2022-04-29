@@ -1988,7 +1988,8 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
-    html += 'position: fixed;\n';  // fixed breaks drag
+    //html += 'position: fixed;\n';  // fixed breaks drag
+    html += 'position: static;\n';  // fixed breaks drag
     html += 'z-index: 9;\n';
 
     //html += 'position: relative;\n';  // Used with ttaElm as parent, bottom of element
