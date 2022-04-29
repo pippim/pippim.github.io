@@ -1938,9 +1938,10 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     //tcmElm = document.getElementById("tcm_window");
     //tcmElm.appendChild(p['elmWindow']);  // nothing happens
     //alert("pause before dragElement(p['elmWindow']);")
-    var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
+    //var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
     console.log("elmHead: " + elmHead);
-    dragElement2(elmHead, 20, 20);  // top=20, left = 20
+    //dragElement2(elmHead, 20, 20);  // top=20, left = 20
+    dragElement2(p['elmWindow'], 20, 20);  // top=20, left = 20
 
     // TODO: activate close button
 
