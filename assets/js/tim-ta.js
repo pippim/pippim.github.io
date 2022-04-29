@@ -1916,8 +1916,8 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
 
     var p = {};
     p['index'] = popIndex;  // Keep key in value for handy reference
-    //p['elmWindow'] = document.createElement('div');
-    p['elmWindow'] = document.createElement('template');
+    p['elmWindow'] = document.createElement('div');
+    //p['elmWindow'] = document.createElement('template');
     p['msg_type'] = msg_type;  // e, w, i or s
     p['msg'] = msg;  // Might contain HTML
     p['id_elm_type'] = id_elm_type;
