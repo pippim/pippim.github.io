@@ -1919,7 +1919,9 @@ async function popPrompt(msg_type, msg, error_id) {
     while(true) {
         sleepCount += 1;
         var rem = sleepCount % 1000;
-        if (rem == 0) { console.log("popPrompt() loops:", sleepCount); }
+        if (rem == 0) {
+            console.log("popPrompt() loops:", sleepCount, elmWindow);
+        }
         await sleep(50);
         if (document.contains(elmWindow)) { continue; }
         else { return; }
