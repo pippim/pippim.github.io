@@ -849,7 +849,7 @@ function clickAddProject() {
 }
 
 var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets;
-var allTimers;
+var allTimers, sleepMillis, cancelAllTimers;
 
 function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
@@ -858,6 +858,8 @@ function paintRunTimers(i) {
     if (i != null) { clickCommon(i); }  // load selected ttaProject
     secondsTask = secondsSet = secondsAllSets = 0;
     allTimers = {};
+    sleepMillis = 1000;
+    cancelAllTimers = false;
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
@@ -888,8 +890,11 @@ function paintRunTimers(i) {
     html += '</div>\n';
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
+    html += '<div class="leftFoot">\n';
+    html += taskButton("10x", "Speed Test", "testAllTimers");
+    html += "<font size='+2'>All Projects</font>";
     html += '<div class="rightFoot">\n';
-    html += taskButton(tabListSym, tabProjectsTitle, "paintProjectsTable");
+    html += taskButton(tabBackSym, tabBackTitle, "exitAllTimers(calledFromTable");
     html += "<font size='+2'>All Projects</font>";
     html += '</div>\n';
     html += '</div>\n';
@@ -1002,7 +1007,7 @@ function progressTouched(name) {
 }
 
 async function runAllTimers(calledFromTable) {
-    // Run all timers
+    // TODO: When cancelling, reset all timers to zero
     var timeLast = new Date().getTime();
     var myTable = document.getElementById("tabRunTimers")
     var index = 0;
@@ -1018,6 +1023,7 @@ async function runAllTimers(calledFromTable) {
     console.log("run_times:", run_times);
 
     while (true) {
+        if (cancelAllTimers) { return; // cancel button picked in footer }
         if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
             // Prompt to begin timer, replace with popCreate()
             alert("Press Enter to begin timer " + ttaTask.task_name)
@@ -1029,7 +1035,7 @@ async function runAllTimers(calledFromTable) {
         // console.log("timeElapsed:", timeElapsed) // 1 to 12 milliseconds LOST
         // TODO: If update interval every two seconds and only one second left
         //       on timer then massaging is required.
-        await sleep(1000);
+        await sleep(sleepMillis);
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
@@ -1046,10 +1052,7 @@ async function runAllTimers(calledFromTable) {
                 remaining_run_times -= 1;
                 if (remaining_run_times <= 0) {
                     // The last set has ended, back to calling program
-                    if (calledFromTable == "Projects") { paintProjectsTable(); }
-                    else if (calledFromTable == "Tasks") { paintTasksTable(); }
-                    else { popCreate('e', "Unknown caller to paintRunTimers(): " +
-                                     calledFromTable)}
+                    exitAllTimers(calledFromTable);
                     return;
                 }
                 // Rebuild allTimers to fresh state for new set
@@ -1097,6 +1100,20 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
             updateRunTimerDuration(myTable, entry);
         }
     }
+}
+
+function testAllTimers() {
+    // Speed up 10 times for previewing.
+    sleepMillis = 100;
+}
+
+function exitAllTimers(calledFromTable) {
+    cancelAllTimers = true;  // Force loop to exit if running
+    if (calledFromTable == "Projects") { paintProjectsTable(); }
+    else if (calledFromTable == "Tasks") { paintTasksTable(); }
+    else { popCreate('e', "Unknown caller to exitAllTimers(): " +
+                     calledFromTable)}
+
 }
 
 function hhmmssShorten(hhmmss){
