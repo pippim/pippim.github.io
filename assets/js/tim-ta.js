@@ -1026,14 +1026,16 @@ async function runAllTimers(calledFromTable) {
         var timeCurrent = new Date().getTime();
         var timeElapsed = timeCurrent - timeLast
         timeLast = timeCurrent
-        // console.log("timeElapsed:", timeElapsed)
-        // Could make 999 to 980 sleep but override needed for prompt wait time
+        // console.log("timeElapsed:", timeElapsed) // 1 to 12 milliseconds LOST
+        // TODO: If update interval every two seconds and only one second left
+        //       on timer then massaging is required.
         await sleep(1000);
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             var audioControl = clickListen(index);
-            if (audioControl !== null) {
+            if (audioControl != null) {
+                // When !== null used, "TypeError: audioControl is undefined"
                 console.log("audioControl time:", audioControl.currentTime);
                 // TODO green success message while alarm sounds, then clear if stopped
             }
