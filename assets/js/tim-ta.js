@@ -1023,7 +1023,7 @@ async function runAllTimers(calledFromTable) {
     console.log("run_times:", run_times);
 
     while (true) {
-        if (cancelAllTimers) { return; // cancel button picked in footer }
+        if (cancelAllTimers) { return; }  // cancel button picked in footer
         if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
             // Prompt to begin timer, replace with popCreate()
             alert("Press Enter to begin timer " + ttaTask.task_name)
@@ -1050,12 +1050,8 @@ async function runAllTimers(calledFromTable) {
             if (index >= ttaProject.arrTasks.length) {
                 // The last task has ended, is it the last set too?
                 remaining_run_times -= 1;
-                if (remaining_run_times <= 0) {
-                    // The last set has ended, back to calling program
-                    exitAllTimers(calledFromTable);
-                    return;
-                }
-                // Rebuild allTimers to fresh state for new set
+                if (remaining_run_times <= 0) { exitAllTimers(calledFromTable); }
+                // Rebuild allTimers{} to fresh state for new set
                 index = 0;
                 resetTimersSet(myTable, run_times, remaining_run_times);
             }
@@ -1111,9 +1107,9 @@ function exitAllTimers(calledFromTable) {
     cancelAllTimers = true;  // Force loop to exit if running
     if (calledFromTable == "Projects") { paintProjectsTable(); }
     else if (calledFromTable == "Tasks") { paintTasksTable(); }
-    else { popCreate('e', "Unknown caller to exitAllTimers(): " +
-                     calledFromTable)}
-
+    else {
+        popCreate('e', "Unknown caller to exitAllTimers(): " + calledFromTable);
+    }
 }
 
 function hhmmssShorten(hhmmss){
