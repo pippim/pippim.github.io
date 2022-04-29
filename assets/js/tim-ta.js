@@ -1909,7 +1909,12 @@ function msgqClear() {
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for response.
     */
-    sleep(100)
+    elmWindow = popCreate(msg_type, msg, error_id);
+    while(true) {
+        await sleep(50)
+        if (document.contains(elmWindow)) { continue; }
+        else { break; }
+    }
 }
 
 function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
@@ -1957,7 +1962,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     var p = {};
     p['index'] = popIndex;  // Keep key in value for handy reference
     p['elmWindow'] = document.createElement('div');
-    //p['elmWindow'] = document.createElement('template');
+    //p['elmWindow'] = document.createElement('template');  // BROKEN
     p['msg_type'] = msg_type;  // e, w, i or s
     p['msg'] = msg;  // Might contain HTML
     p['id_elm_type'] = id_elm_type;
@@ -1971,7 +1976,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
 
     var html = popBuildHtml(msg_type, msg);
     html += popBuildStyle(msg_type);
-    html += popBuildScript();
+    //html += popBuildScript();  // BROKEN
+
     html = html.trim(); // Never return a text node of whitespace as the result
 
     p['elmWindow'].innerHTML = html;
@@ -2008,7 +2014,7 @@ function popBuildHtml(msg_type, msg) {
                     '\n';
     html += '    <span class="msgq-window-close closebtn" \n';
     html += '      onclick="popClose(this.parentNode.parentElement)" \n';
-    html += '      >&times;\n';
+    html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
     html += '    </span>\n';
     html += '  </div>\n';
     html += '  <div class="msq-window-body">\n';
@@ -2134,10 +2140,6 @@ function popClose(elmWindow) {
         elmWindow.style.display = "none";
         popClearByElmWindow(ElmWindow);
     }, 600);
-}
-
-function msgAddButton(msgqEntry, elm, callback) {
-
 }
 
 // Below copied from theCookieMachine.js - Spent WHOLE NIGHT TRYING TO FIX :(
