@@ -1916,7 +1916,8 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
 
     var p = {};
     p['index'] = popIndex;  // Keep key in value for handy reference
-    p['elmWindow'] = document.createElement('div');
+    //p['elmWindow'] = document.createElement('div');
+    p['elmWindow'] = document.createElement('template');
     p['msg_type'] = msg_type;  // e, w, i or s
     p['msg'] = msg;  // Might contain HTML
     p['id_elm_type'] = id_elm_type;
@@ -1931,6 +1932,7 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     var html = popBuildHtml(msg_type, msg);
     html += popBuildStyle(msg_type);
     html += popBuildScript();
+    html = html.trim(); // Never return a text node of whitespace as the result
 
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);
