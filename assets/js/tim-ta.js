@@ -2113,6 +2113,8 @@ function dragElement2(elm, x, y) {
     //elm.style.left = (elm.offsetLeft - pos1) + "px";
     elm.style.top = top + "px";
     elm.style.left = left + "px";
+    elm.style.top = "100px";
+    elm.style.left = "100px";
   }
 
   function closeDragElement() {
