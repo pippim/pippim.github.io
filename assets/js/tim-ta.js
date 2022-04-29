@@ -891,11 +891,11 @@ function paintRunTimers(i) {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
-    html += taskButton("10x", "Speed Test", "testAllTimers");
-    html += "<font size='+2'>All Projects</font>";
+    html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
+    html += "<font size='+2'>Preview</font>";
     html += '<div class="rightFoot">\n';
-    html += taskButton(tabBackSym, tabBackTitle, "exitAllTimers(calledFromTable");
-    html += "<font size='+2'>All Projects</font>";
+    html += taskButton(tabBackSym, tabBackTitle, "exitAllTimers(calledFromTable)");
+    html += "<font size='+2'>Cancel</font>";
     html += '</div>\n';
     html += '</div>\n';
 
