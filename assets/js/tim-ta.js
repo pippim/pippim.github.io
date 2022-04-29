@@ -1923,10 +1923,10 @@ function popCreate(msg_type, msg, id_elm_type, id_elm, error_id, clear_flag) {
     p['id_elm_type'] = id_elm_type;
     p['id_elm'] = id_elm;
     p['elmLink'] = elm;
-    p['error_id'] = error_id;
-    p['clear_flag'] = clear_flag;
-    p['html'] = popBuildHtml();
-    p['style'] = popBuildStyle();
+    //p['error_id'] = error_id;
+    //p['clear_flag'] = clear_flag;
+    //p['html'] = popBuildHtml(msg_type, msg);
+    //p['style'] = popBuildStyle(msg_type);
     msgq[popIndex.toString()] = p;
 
     var html = popBuildHtml(msg_type, msg);
