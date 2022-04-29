@@ -1034,7 +1034,8 @@ async function runAllTimers() {
             // Prompt to begin timer, replace with popCreate()
             //alert("Press Enter to begin timer " + ttaTask.task_name)
             msg = "Click to begin timer " + ttaTask.task_name;
-            popPrompt('i', msg);  // Waits until prompt closed
+            // popPrompt('i', msg);  // without "await" function returns immediately
+            await popPrompt('i', msg);  // with "await" function waits
         }
 
         var timeCurrent = new Date().getTime();
