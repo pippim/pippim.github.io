@@ -1910,12 +1910,16 @@ async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for response.
     */
     elmWindow = popCreate(msg_type, msg, error_id);
+    if (elmWindow == null) {
+        alert("popPrompt(elmWindow) received bad elmWindow:", elmWindow);
+        return;
+    }
     var sleepCount = 0;
     while(true) {
         sleepCount += 1;
         var rem = sleepCount % 1000;
         if (rem == 0) { console.log("popPrompt() loops:", sleepCount); }
-        await sleep(50)
+        await sleep(50);
         if (document.contains(elmWindow)) { continue; }
         else { break; }
     }
@@ -1931,7 +1935,7 @@ function popClearByError(error_id) {
     }
 }
 
-function popClearByElmWindow(ElmWindow) {
+function popClearByElmWindow(elmWindow) {
     // Clear a specific error_id from document
     // The error may have occurred multiple times during validation
     // TODO: Rename to popClearByErrorId
@@ -1947,10 +1951,14 @@ function popClearByEntry(entry) {
 
 function popClose(elmWindow) {
     // Parent HTML: onclick="popClose(this.parentNode.parentElement)"
+    if (elmWindow == null) {
+        alert("popClose(elmWindow) received bad elmWindow:", elmWindow);
+        return;
+    }
     elmWindow.style.opacity = "0";
     setTimeout(function(){
         elmWindow.style.display = "none";
-        popClearByElmWindow(ElmWindow);
+        popClearByElmWindow(elmWindow);
     }, 600);
 }
 
