@@ -862,7 +862,7 @@ function paintRunTimers(i) {
     sleepMillis = 1000;
     cancelAllTimers = false;
     totalAllTimersTime = 0 ;
-    wakeLock = null;  // Force mobile screen to stay on
+    wakeLock = false;  // Force mobile screen to stay on
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
@@ -1034,7 +1034,7 @@ async function runAllTimers() {
             // Prompt to begin timer, replace with popCreate()
             alert("Press Enter to begin timer " + ttaTask.task_name)
             msg = "Click to begin timer " + ttaTask.task_name;
-            // await popPrompt('i', msg);
+            await popPrompt('i', msg);  // Waits until prompt closed
         }
 
         var timeCurrent = new Date().getTime();
@@ -1129,7 +1129,7 @@ function exitAllTimers() {
 }
 
 async function wakeLockOn() {
-    wakeLock = null;
+    wakeLock = false;
     if ('wakeLock' in navigator) {
         wakeLock = await navigator.wakeLock.request('screen');
     } else {
@@ -1138,10 +1138,10 @@ async function wakeLockOn() {
 }
 
 async function wakeLockOff() {
-    if (wakeLock == null || wakeLock == false) { return; }
+    if (!wakeLock) { return; }
     wakeLock.release()
         .then(() => {
-          wakeLock = null;
+          wakeLock = false;
         })
 }
 
