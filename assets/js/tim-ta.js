@@ -801,8 +801,8 @@ function clickUp(i) {
         return;
     }
     swapRows(i, i - 1);
-    popClear('at_top');
-    popClear('at_bottom');
+    popClearByError(at_top');
+    popClearByError(at_bottom');
 }
 function clickDown(i) {
     // TODO: After moving, update & save localStorage
@@ -812,8 +812,8 @@ function clickDown(i) {
         return;
     }
     swapRows(i, i + 1);
-    popClear('at_top');
-    popClear('at_bottom');
+    popClearByError(at_top');
+    popClearByError(at_bottom');
 }
 
 var oldTask;
@@ -848,8 +848,9 @@ function clickAddProject() {
     paintProjectForm("Add");
 }
 
+// Global variables for Task countdown timers
 var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets;
-var calledFromTable, sleepMillis, cancelAllTimers;
+var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime;
 
 function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
@@ -860,6 +861,7 @@ function paintRunTimers(i) {
     allTimers = {};
     sleepMillis = 1000;
     cancelAllTimers = false;
+    totalAllTimersTime = 0 ;
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
@@ -1037,6 +1039,7 @@ async function runAllTimers() {
         // TODO: If update interval every two seconds and only one second left
         //       on timer then massaging is required.
         await sleep(sleepMillis);
+        totalAllTimersTime += 1;  // Total seconds, not including pauses
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
@@ -1102,13 +1105,13 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
 
 function testAllTimers() {
     // Speed up 10 times for previewing.
-    // TODO: If timer has been running for more than 1 minute, confirm exit
+    // TODO: If totalAllTimersTime for more than 1 minute, confirm exit
     sleepMillis = 100;
 }
 
 function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
-    // TODO: If timer has been running for more than 1 minute, confirm exit
+    // TODO: If totalAllTimersTime more than 1 minute, confirm exit
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
     if (calledFromTable == "Projects") { paintProjectsTable(); }
     else if (calledFromTable == "Tasks") { paintTasksTable(); }
@@ -1853,7 +1856,7 @@ function confirmDelete(text) {
 
 var msgq = {};  // Message Queue. Data struction is popEntry
 var btnBox = {};  // Extra buttons boxed up for small screen which is <= 640 px wide.
-var popIndex = 0;  // Key into msgq returned from popCreate() and passed to popClear()
+var popIndex = 0;  // Key into msgq returned from popCreate()
 var popEntry = {
         index: undefined,
         elmWindow: undefined,
@@ -1912,11 +1915,6 @@ function msgqCreate() {
                 evaluated because user may have dragged window on screen.
 
     */
-}
-
-function popClear(key) {
-    // Reverse document.create - NO NEED, GC (garbage collector will remove)
-    msgq[key].elmWindow.remove();  // should remove child be used?
 }
 
 function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
@@ -2110,9 +2108,15 @@ function popBuildScript() {
     return html;
 }
 
-function popClear(error_id) {
+function popClearByError(error_id) {
     // Clear a specific error_id from document
     // The error may have occurred multiple times during validation
+    // TODO: Rename to popClearByErrorId
+    for (const key of Object.keys(msgq)) {
+        entry = msgq[key];
+        if (entry.error_id != error_id) { continue; }
+        if (document.contains(entry.elmWindow)) { entry.elmWindow.remove(); }
+    }
     var div = this.parentElement;
     div.style.opacity = "0";
     setTimeout(function(){ div.style.display = "none"; }, 600);
@@ -2130,7 +2134,7 @@ function msgAddButton(msgqEntry, elm, callback) {
 
 }
 
-// Below copied from theCookieMachine.js
+// Below copied from theCookieMachine.js - Spent WHOLE NIGHT TRYING TO FIX :(
 function dragElement2(elm, x, y) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   var left = x, top = y;
@@ -2152,7 +2156,7 @@ function dragElement2(elm, x, y) {
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
+    pos1 = pos3 - e.clientX;  // Change since last time here
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
