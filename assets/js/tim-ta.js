@@ -895,7 +895,7 @@ function paintRunTimers(i) {
     html += "<font size='+2'>Preview</font>";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
-    html += taskButton(tabBackSym, tabBackTitle, "exitAllTimers(calledFromTable)");
+    html += taskButton(tabBackSym, "Go back to last table", "exitAllTimers");
     html += "<font size='+2'>Cancel</font>";
     html += '</div>\n';
     html += '</div>\n';
@@ -910,7 +910,7 @@ function paintRunTimers(i) {
     initTimersAfterDOM();  // Initialize elements for table row IDs
     ttaElm.scrollIntoView();  // Scroll top level element into view
 
-    runAllTimers(calledFromTable);  // Run through all timers
+    runAllTimers();  // Run through all timers
     // Get to this point instantly while runAllTimers() runs asynchronously
 }
 
@@ -1007,7 +1007,7 @@ function progressTouched(name) {
     console.log("Progress bar touched:", name);
 }
 
-async function runAllTimers(calledFromTable) {
+async function runAllTimers() {
     // TODO: When cancelling, reset all timers to zero
     var timeLast = new Date().getTime();
     var myTable = document.getElementById("tabRunTimers")
@@ -1051,7 +1051,7 @@ async function runAllTimers(calledFromTable) {
             if (index >= ttaProject.arrTasks.length) {
                 // The last task has ended, is it the last set too?
                 remaining_run_times -= 1;
-                if (remaining_run_times <= 0) { exitAllTimers(calledFromTable); }
+                if (remaining_run_times <= 0) { exitAllTimers(); }
                 // Rebuild allTimers{} to fresh state for new set
                 index = 0;
                 resetTimersSet(myTable, run_times, remaining_run_times);
@@ -1101,11 +1101,14 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
 
 function testAllTimers() {
     // Speed up 10 times for previewing.
+    // TODO: If timer has been running for more than 1 minute, confirm exit
     sleepMillis = 100;
 }
 
-function exitAllTimers(calledFromTable) {
-    cancelAllTimers = true;  // Force loop to exit if running
+function exitAllTimers() {
+    // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
+    // TODO: If timer has been running for more than 1 minute, confirm exit
+    cancelAllTimers = true;  // Force runAllTimers() to exit if running
     if (calledFromTable == "Projects") { paintProjectsTable(); }
     else if (calledFromTable == "Tasks") { paintTasksTable(); }
     else {
