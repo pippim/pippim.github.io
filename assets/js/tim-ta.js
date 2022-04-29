@@ -1035,7 +1035,7 @@ async function runAllTimers() {
             //alert("Press Enter to begin timer " + ttaTask.task_name)
             msg = "Click to begin timer " + ttaTask.task_name;
             // popPrompt('i', msg);  // without "await" function returns immediately
-            await popPrompt('i', msg);  // with "await" function waits
+            await popPrompt('i', msg);  // with "await" function never returns
         }
 
         var timeCurrent = new Date().getTime();
@@ -1922,7 +1922,7 @@ async function popPrompt(msg_type, msg, error_id) {
         if (rem == 0) { console.log("popPrompt() loops:", sleepCount); }
         await sleep(50);
         if (document.contains(elmWindow)) { continue; }
-        else { break; }
+        else { return; }
     }
 }
 
