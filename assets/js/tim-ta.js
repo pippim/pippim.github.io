@@ -1033,6 +1033,8 @@ async function runAllTimers() {
         if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
             // Prompt to begin timer, replace with popCreate()
             alert("Press Enter to begin timer " + ttaTask.task_name)
+            msg = "Click to begin timer " + ttaTask.task_name;
+            // await popPrompt('i', msg);
         }
 
         var timeCurrent = new Date().getTime();
@@ -1051,6 +1053,7 @@ async function runAllTimers() {
                 // When !== null used, "TypeError: audioControl is undefined"
                 console.log("audioControl time:", audioControl.currentTime);
                 // TODO green success message while alarm sounds, then clear if stopped
+                // currentTime is always 0 as if "await clickListen()" was used?
             }
             // Grab next task in project array
             index += 1;
@@ -1903,37 +1906,10 @@ function msgqClear() {
     popIndex = 0;
 }
 
-function msgqCreate() {
-    /* After DOM is ready create the message queue's parent div element
-       resides in msgq too.
-        FORMAT:
-        popEntry = msgq[i];
-        msgq[popIndex] =
-            {
-                index: ,
-                elmWindow: ,
-                typeMsg: msg_type,
-                elmLink: elm,
-                typeIdOrElm: id_elm_type,
-                errorId: error_id,
-                rectMounted: xy_wh,
-                rectTarget: xy_wh,
-                cntRepeats: repeated_warnings,
-                html: ,
-                style: ,
-                buttons: {}
-            }
-
-        popEntry.popIndex = i = msgq[i].popIndex
-        popEntry.elmWindow = msgq[i].elmWindow
-        ETC.
-
-        WHERE:  key is auto assigned and returned to parent as msgqEntry
-
-        NOTE:   rectMounted has to be recalculated each time object is
-                evaluated because user may have dragged window on screen.
-
+async function popPrompt(msg_type, msg, error_id) {
+    /* Display message and wait for response.
     */
+    sleep(100)
 }
 
 function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
@@ -2038,7 +2014,8 @@ function popBuildHtml(msg_type, msg) {
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     html += '    <button class="msq-button-ok" title="Click to close" \n';
-    html += '    onclick="this.parentNode.parentElement.style.display = \'none\';" \n';
+    //html += '    onclick="this.parentNode.parentElement.style.display = \'none\';" \n';
+    html += '    onclick="popClose(this.parentNode.parentElement)" \n';
     html += '       >OK</button>\n';
     html += '  </div>\n';
     html += '</div>\n';
@@ -2117,12 +2094,6 @@ function popBuildScript() {
     html += '  }\n';
     html += '}\n';
 
-    html += 'function popClose() {\n';
-    html += '  var div = this.parentElement;\n';
-    html += '  div.style.opacity = "0";\n';
-    html += '  setTimeout(function(){ div.style.display = "none"; }, 600);\n';
-    html += '}\n';
-
     html += "</script>\n";
 
     return html;
@@ -2138,16 +2109,27 @@ function popClearByError(error_id) {
     }
 }
 
+function popClearByElmWindow(ElmWindow) {
+    // Clear a specific error_id from document
+    // The error may have occurred multiple times during validation
+    // TODO: Rename to popClearByErrorId
+    for (const key of Object.keys(msgq)) {
+        entry = msgq[key];
+        if (entry.elmWindow == elmWindow) { popClearByEntry(entry); }
+    }
+}
+
 function popClearByEntry(entry) {
     if (document.contains(entry.elmWindow)) { entry.elmWindow.remove(); }
 }
 
-function popClose() {
-    // NOT WORKING
-    // Called from msgq-button-ok onclick="popClose()" in HTML
-    var div = this.parentElement;
-    div.style.opacity = "0";
-    setTimeout(function(){ div.style.display = "none"; }, 600);
+function popClose(elmWindow) {
+    // Parent HTML: onclick="popClose(this.parentNode.parentElement)"
+    elmWindow.style.opacity = "0";
+    setTimeout(function(){
+        elmWindow.style.display = "none";
+        popClearByElmWindow(ElmWindow);
+    }, 600);
 }
 
 function msgAddButton(msgqEntry, elm, callback) {
