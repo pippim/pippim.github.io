@@ -2004,8 +2004,8 @@ function popBuildStyle(msg_type) {
     html += 'transition: opacity 0.6s;\n';
     html += 'max-width: 90vw;\n';
     html += 'max-height: 95vh;\n';
-    html += 'top: 20px;\n';
-    html += 'left: 20px;\n';
+    //html += 'top: 20px;\n';
+    //html += 'left: 20px;\n';
     html += 'z-index: 9;\n';
     html += 'background-color: #f1f1f1;\n';
     html += 'border: .2rem solid #d3d3d3;\n';
