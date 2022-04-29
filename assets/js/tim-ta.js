@@ -1829,6 +1829,10 @@ var popEntry = {
 function msgqClear() {
     // When mounting new screen clear old messages. Also clear control box which
     // resides in msgq too.
+    for (const key of Object.keys(msgq)) {
+        entry = msgq[key];
+        if (document.contains(entry.elmWindow)) { entry.elmWindow.remove(); }
+    }
     msgq = {};  // TODO: First loop through and delete created elements
     btnBox = {};
     popIndex = 0;
