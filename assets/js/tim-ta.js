@@ -1987,7 +1987,7 @@ function popClearByEntry(entry) {
 function popClose(idWindow) {
     // See: https://stackoverflow.com/a/21116897/6929343
     elmWindow = idWindow.getElementsByClassName("msgq-window")[0];
-    elmWindow = document.getElementById("popIndex1")
+    elmWindow = document.getElementById("popIndex0")
     if (elmWindow == null) {
         alert("popClose(elmWindow) received bad idWindow: " + idWindow +
               "\nelmWindow is: " + elmWindow);
