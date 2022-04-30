@@ -1934,7 +1934,7 @@ async function popPrompt(msg_type, msg, error_id) {
     elmWindow = popCreate(msg_type, msg, error_id);
 
     while(true) {
-        await sleep(5000);
+        await sleep(1000);
         // When a popCreate(d) window is closed, it disappears after 600ms
         var comp = window.getComputedStyle(elmWindow);
         console.log("comp.display:", comp.display, comp.opacity)
@@ -1945,6 +1945,9 @@ async function popPrompt(msg_type, msg, error_id) {
             console.log("comp.display:", comp.display, comp.opacity)
             return;
         }
+        var newTop = elmWindow.offsetTop;
+        var newLeft = elmWindow.offsetLeft;
+        console.log("newTop, newLeft:", newTop, newLeft)
     }
 }
 
