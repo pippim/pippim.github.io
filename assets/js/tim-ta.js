@@ -1003,7 +1003,7 @@ function initTimersAfterDOM() {
         var element = document.getElementById(allTimers[name].id);
         allTimers[name].elm = element;
         // console.log('timer progress element:', element);
-        i = allTimers[name].id.replace("tabTimer", "");
+        var i = allTimers[name].id.replace("tabTimer", "");
         // i = 0, 1...length -1, then "Set" or "AllSets"
         element.addEventListener('click', () => { progressTouched(i, element); });
     }
