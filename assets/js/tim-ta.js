@@ -998,30 +998,14 @@ function htmlRunTimersDetail(id, name, index, seconds, sound) {
 
 function initTimersAfterDOM() {
     // After innerHTML is set we can bet the elements and set sources
-    //console.log("initSwitchesAfterDOM()");
     for (const name of Object.keys(allTimers)) {
         //var element = document.getElementById(allTimers[name].id);
-        var element = document.getElementById(name);
-        if (element == null) {
-            console.log("initTimersAfterDOM(): element is null");
-        }
+        let element = document.getElementById(name);
+        if (element == null) {  console.log("initTimersAfterDOM(): element null"); }
         allTimers[name].elm = element;
-        // console.log('timer progress element:', element);
-        //var i = name.replace("tabTimer", "");
-        let i = allTimers[name].index
-        console.log("allTimers[name]:", i, name, allTimers[name]);
-        // i = 0, 1...length -1, then "Set" or "AllSets"
-        element.addEventListener('click', () => { progressTouched(i, element); });
-    }
-
-    // https://stackoverflow.com/a/36946222/6929343
-    return;
-    for (const name of Object.keys(allTimers)) {
-        //var element = document.getElementById(allTimers[name].id);
-        var i = allTimers[name].index
-        var element = allTimers[name].elm
-        console.log("allTimers[name]:", i, name, allTimers[name]);
-        // i = 0, 1...length -1, then "Set" or "AllSets"
+        //var i = allTimers[name].index; // var assigns last value to all occurrences
+        // https://stackoverflow.com/a/36946222/6929343
+        let i = allTimers[name].index;  // Must use "let" and not "var"
         element.addEventListener('click', () => { progressTouched(i, element); });
     }
 }
