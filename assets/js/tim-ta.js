@@ -1003,11 +1003,13 @@ function initTimersAfterDOM() {
         var element = document.getElementById(allTimers[name].id);
         allTimers[name].elm = element;
         // console.log('timer progress element:', element);
-        element.addEventListener('click', () => { progressTouched(name); });
+        i = allTimers[name].id.replace("tabTimer", "");
+        // i = 0, 1...length -1, then "Set" or "AllSets"
+        element.addEventListener('click', () => { progressTouched(i, element); });
     }
 }
 
-function progressTouched(name) {
+function progressTouched(i, element) {
     /* Pop up control box for Task Name progress bar with:
         - 23E9 ⏩︎ fast forward
         - 23EA ⏪︎ rewind, fast backwards
@@ -1020,7 +1022,7 @@ function progressTouched(name) {
         Every action (except close) clears control and
         mounts a new one.
     */
-    console.log("Progress bar touched:", name);
+    console.log("Progress bar touched index:", i);
     popClearByError("task_progress");
     currentTimers = allTimers;  // LOTS TO DO YET!
 }
@@ -2199,7 +2201,7 @@ function popBuildScript() {
     return html;
 }
 
-// Below copied from theCookieMachine.js - Spent WHOLE NIGHT TRYING TO FIX :(
+// Below copied from theCookieMachine.js
 function dragElement(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elm.id + "_header")) {
