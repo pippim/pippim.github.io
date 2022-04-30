@@ -1023,9 +1023,27 @@ function progressTouched(i, element) {
         Every action (except close) clears control and
         mounts a new one.
     */
-    console.log("Progress bar touched index:", i);
     popClearByError("task_progress");
+    // Was a total progress bar clicked?
+    const cntIndexTasks = ttaProject.arrTasks.length - 1
+    const boolTotalBar = i > cntIndexTasks ? true : false;
+    // What is the running ones-based progress bar number?
+    const activeBarNo = getActiveTimerNo();
+    console.log("Clicked on a boolTotalBar?:", boolTotalBar);
+    console.log("Active Progress Bar number:", activeBarNo);
+
     currentTimers = allTimers;  // LOTS TO DO YET!
+}
+
+function getActiveTimerNo() {
+    for (const key of Object.keys(AllTimers)) {
+        var entry = AllTimers[key];
+        if (entry.seconds != entry.progress && entry.seconds != entry.remaining) {
+            return entry.index + 1
+        }
+    }
+
+    return 0;   /* No active timers */
 }
 
 async function runAllTimers() {
