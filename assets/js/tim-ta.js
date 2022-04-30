@@ -2088,8 +2088,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
 
     var elmDraggable = document.getElementById(p['idWindow']);  // ID inside <div>
     var elmHeader = document.getElementById(p['idWindow'] + "_header");
-    var pos3 = p['elmLink'].clientX;  // Get link (anchor reference point)
-    var pos4 = p['elmLink'].clientY;  //  x (left) and y (top
+    var pos3 = elmDraggable.clientX;  // Get link (anchor reference point)
+    var pos4 = elmDraggable.clientY;  //  x (left) and y (top
     // BELOW two errors: Error in parsing value for “top”.  Declaration dropped.
     console.log("elmDraggable.style.top =", pos3 + 20, "px");
     console.log("elmDraggable.style.left =", pos4 + 20, "px");
