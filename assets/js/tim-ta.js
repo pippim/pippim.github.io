@@ -1918,16 +1918,18 @@ async function popPrompt(msg_type, msg, error_id) {
     var sleepCount = 0;
     var style;
     while(true) {
-        sleepCount += 1;
-        var rem = sleepCount % 1000;
-        if (rem == 0) {
-            console.log("popPrompt() loops:", sleepCount, elmWindow);
-            console.log("style.display:", style.display, style.opacity);
-        }
         await sleep(50);
         // if (document.contains(elmWindow)) { continue; }  // DOESN'T WORK
         style = window.getComputedStyle(elmWindow);
         if (window.getComputedStyle(elmWindow).display === "none") { return; }
+
+        // Debugging stuff
+        sleepCount += 1;
+        var rem = sleepCount % 1000;
+        if (rem == 0) {
+            console.log("popPrompt() loops:", sleepCount, elmWindow);
+            console.log("style.display:", elmWindow.style.display, elmWindow.style.opacity);
+        }
     }
 }
 
