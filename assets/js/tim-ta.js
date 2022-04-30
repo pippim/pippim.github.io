@@ -1935,20 +1935,10 @@ async function popPrompt(msg_type, msg, error_id) {
     var elmWindow = document.getElementById(idWindow)
 
     while(true) {
-        await sleep(1000);
-        // When a popCreate(d) window is closed, it disappears after 600ms
-        var comp = window.getComputedStyle(elmWindow);
-        console.log("comp.display:", comp.display, comp.opacity)
-        if (document.body.contains(elmWindow)) { console.log("exists"); }
-        else { console.log("not found"); }
-
-        if (comp.display !== "block") {
-            console.log("comp.display:", comp.display, comp.opacity)
-            return;
-        }
-        var newTop = elmWindow.offsetTop;
-        var newLeft = elmWindow.offsetLeft;
-        console.log("newTop, newLeft:", newTop, newLeft)
+        await sleep(50);
+        // When a popCreate window is closed, it disappears after 600ms
+        if (document.body.contains(elmWindow)) { continue; }
+        return;
     }
 }
 
