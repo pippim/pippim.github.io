@@ -1023,7 +1023,7 @@ function progressTouched(i, element) {
         Every action (except close) clears control and
         mounts a new one.
     */
-    popClearByError("task_progress");
+    popClearByError("task_progress");  // Clear control box, not an error
     // Was a total progress bar clicked?
     const cntIndexTasks = ttaProject.arrTasks.length - 1
     const boolTotalBar = i > cntIndexTasks ? true : false;
@@ -1054,6 +1054,22 @@ function progressTouched(i, element) {
         return;
     }
 
+    // Create our control box
+    msg = buildProgressControlBoxBody(i);
+    popCreate("i", msg, "elm", element);
+}
+
+function buildProgressControlBoxBody(i) {
+    // Get task details into work buffer
+    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
+    var msg = "";
+    msg += ttaProject.project_name + " - " + workTask.task_name;
+    return msg;
+}
+
+function clickAddProject() {
+    // Create empty record for add
+    ttaProject = Object.assign({}, tta_project); // https://stackoverflow.com/a/34294740/6929343
 }
 
 function getActiveTimerNo() {
