@@ -1006,10 +1006,10 @@ function initTimersAfterDOM() {
             console.log("initTimersAfterDOM(): element is null");
         }
         allTimers[name].elm = element;
-        console.log("allTimers[name]:", name, allTimers[name]);
         // console.log('timer progress element:', element);
         //var i = name.replace("tabTimer", "");
         var i = allTimers[name].index
+        console.log("allTimers[name]:", i, name, allTimers[name]);
         // i = 0, 1...length -1, then "Set" or "AllSets"
         element.addEventListener('click', () => { progressTouched(i, element); });
     }
