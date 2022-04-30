@@ -2004,6 +2004,13 @@ function popClose(idWindow) {
     }, 600);
 }
 
+function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm) {
+    var existingIds = popGetIdsByError(error_id);
+    if (existingIds.length = 0) {
+        popCreate(msg_type, msg, error_id, id_elm_type, id_elm);
+    }
+}
+
 function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
     /*  PRIMARY FUNCTION to display error messages (and control boxes)
         msg_type = "e" red error message
