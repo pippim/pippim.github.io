@@ -1065,9 +1065,11 @@ async function runAllTimers() {
                     cancelAllTimers = true;
                     await popPrompt("s", "Run Project " +
                                     ttaProject.project_name + " completed.");
-                    alert("Double check popPrompt appears.")
-                    exitAllTimers();
-                }
+/*                    .then(() => {
+                        alert("Double check popPrompt appears.")
+                        exitAllTimers();
+                    } );
+*/                }
                 // Rebuild allTimers{} to fresh state for new set
                 index = 0;
                 resetTimersSet(myTable, run_times, remaining_run_times);
@@ -1934,7 +1936,10 @@ async function popPrompt(msg_type, msg, error_id) {
     while(true) {
         await sleep(50);
         // When a popCreate(d) window is closed, it disappears after 600ms
-        if (elmWindow.style.display == "") { return; }
+        if (elmWindow.style.display == "") {
+            console.log("elmWindow.style:", elmWindow.style)
+            return;
+        }
     }
 }
 
