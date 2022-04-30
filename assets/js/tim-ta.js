@@ -1029,7 +1029,7 @@ function progressTouched(i, element) {
     const boolTotalBar = i > cntIndexTasks ? true : false;
     // What is the running ones-based progress bar number?
     const activeBarNo = getActiveTimerNo();
-    const boolTouchedActive = i + 1 = activeBarNo ? true : false;
+    const boolTouchedActive = i + 1 === activeBarNo ? true : false;
     console.log("Clicked on a boolTotalBar?:", boolTotalBar);
     console.log("Active Progress Bar number:", activeBarNo);
     console.log("boolTouchedActive?:", boolTouchedActive);
