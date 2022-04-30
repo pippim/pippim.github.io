@@ -1065,6 +1065,7 @@ async function runAllTimers() {
                     cancelAllTimers = true;
                     await popPrompt("s", "Run Project " +
                                     ttaProject.project_name + " completed.");
+                    alert("Double check popPrompt appears.")
                     exitAllTimers();
                 }
                 // Rebuild allTimers{} to fresh state for new set
