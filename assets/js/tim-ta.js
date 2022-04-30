@@ -2083,7 +2083,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
 
     if (p['elmLink'] == null) {
         console.log("p['elmLink'] not passed. Setting to ttaElm");
-        p['elmLink'] = ttaElm;
+        p['elmLink'] = document.getElementById("ttaModal");
     }
 
     var elmDraggable = document.getElementById(p['idWindow']);  // ID inside <div>
