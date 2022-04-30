@@ -2087,9 +2087,12 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
     }
 
     var elmDraggable = document.getElementById(p['idWindow']);  // ID inside <div>
+    var elmHeader = document.getElementById(p['idWindow'] + "_header");
     var pos3 = p['elmLink'].clientX;  // Get link (anchor reference point)
     var pos4 = p['elmLink'].clientY;  //  x (left) and y (top
     // BELOW two errors: Error in parsing value for “top”.  Declaration dropped.
+    console.log("elmDraggable.style.top =", pos3 + 20, "px");
+    console.log("elmDraggable.style.left =", pos4 + 20, "px");
     elmDraggable.style.top = (pos3 + 20) + "px";
     elmDraggable.style.left = (pos4 + 20) + "px";
 
@@ -2147,13 +2150,12 @@ function popBuildStyle(msg_type) {
     html += 'transition: opacity 0.6s;\n';
     html += 'max-width: 90vw;\n';
     html += 'max-height: 95vh;\n';
-    html += 'top: 220px;\n';
+    html += 'top: 263px;\n';
     html += 'left: 20px;\n';
     html += 'overflow: auto;\n';
     html += 'background-color: #f1f1f1;\n';
     html += 'border: .2rem solid #d3d3d3;\n';
     html += 'color: black;\n';
-    //html += 'text-align: left;\n';
     html += 'text-align: center;\n';
     html += 'padding: .5rem;\n';
     // ERROR: Expected declaration but found “@include”.  Skipped to next declaration.
@@ -2163,8 +2165,6 @@ function popBuildStyle(msg_type) {
     html += '}\n';
 
     html += '.msgq-window-header {\n';
-    //html += 'display: inline-block;\n';
-    // html += 'display: block;\n';  // Default anyway !
     html += 'padding: .5rem;\n';
     html += 'cursor: move;  z-index: 10;\n';
     html += 'background-color: ' + msg_color + ';\n';
