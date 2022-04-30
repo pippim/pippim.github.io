@@ -1052,7 +1052,6 @@ function progressTouched(i, element) {
         return;
     }
 
-    currentTimers = allTimers;  // LOTS TO DO YET!
 }
 
 function getActiveTimerNo() {
