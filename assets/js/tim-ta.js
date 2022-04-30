@@ -1000,7 +1000,11 @@ function initTimersAfterDOM() {
     // After innerHTML is set we can bet the elements and set sources
     //console.log("initSwitchesAfterDOM()");
     for (const name of Object.keys(allTimers)) {
-        var element = document.getElementById(allTimers[name].id);
+        //var element = document.getElementById(allTimers[name].id);
+        var element = document.getElementById(name);
+        if (element == null) {
+            console.log("initTimersAfterDOM(): element is null");
+        }
         allTimers[name].elm = element;
         console.log("allTimers[name]:", name, allTimers[name]);
         // console.log('timer progress element:', element);
