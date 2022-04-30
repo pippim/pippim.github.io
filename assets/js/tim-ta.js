@@ -2088,7 +2088,7 @@ function popBuildHtml(msg_type, msg, index) {
                     //'&emsp; (Click here to drag)\n'; // Suspend until working
                     '\n';
     html += '    <span class="msgq-window-close closebtn" \n';
-    html += '      onclick="popClose(popIndex' + inddex + ')" \n';
+    html += '      onclick="popClose(popIndex' + index + ')" \n';
     html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
     html += '    </span>\n';
     html += '  </div>\n';
@@ -2097,7 +2097,7 @@ function popBuildHtml(msg_type, msg, index) {
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     html += '    <button class="msq-button-ok" title="Click to close" \n';
-    html += '      onclick="popClose(popIndex' + inddex + ')" \n';
+    html += '      onclick="popClose(popIndex' + index + ')" \n';
     html += '       >OK</button>\n';
     html += '  </div>\n';
     html += '</div>\n';
