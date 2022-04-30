@@ -1041,14 +1041,16 @@ function progressTouched(i, element) {
     }
 
     popClearByError("total_task_clicked");
-    if (activeBarNo == 0) {
-        popCreate("e", "Cannot select a total progress bar", "total_task_clicked");
+    if (boolTotalBar) {
+        popCreate("e", "Cannot select a total progress bar", "total_task_clicked",
+                  "elm", element);
         return;
     }
 
     popClearByError("task_not_running");
-    if (activeBarNo == 0) {
-        popCreate("e", "Can only select a running progress bar", "task_not_running");
+    if (!boolTouchedActive == 0) {
+        popCreate("e", "Can only select a running progress bar", "task_not_running"
+                  "elm", element);
         return;
     }
 
