@@ -1932,6 +1932,7 @@ function msgqClear() {
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for response. */
     var idWindow = popCreate(msg_type, msg, error_id);
+    var elmWindow = document.getElementById(idWindow)
 
     while(true) {
         await sleep(1000);
@@ -1976,6 +1977,10 @@ function popClearById(idWindow) {
 
 function popClearByEntry(entry) {
     var elm = entry.elmWindow;
+    var elm2 = document.getElementById(entry.idWindow)
+    if (elm != elm2) {
+        console.log('elm2 != elm', elm2.length, elm.length)
+    }
     if (document.contains(elm)) {
         elm.remove();  // Moves below bottom of document but still there
     }
@@ -1987,7 +1992,7 @@ function popClearByEntry(entry) {
 function popClose(idWindow) {
     // Close window by ID name
     // elmWindow = idWindow.getElementsByClassName("msgq-window")[0];
-    elmWindow = document.getElementById(idWindow)
+    elmWindow = document.getElementById(idWindow);
     if (elmWindow == null) {
         alert("popClose() received bad idWindow: " + idWindow);
         return;
