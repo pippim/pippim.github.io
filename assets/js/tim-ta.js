@@ -1988,7 +1988,8 @@ function popClose(idWindow) {
     // Parent HTML: onclick="popClose(this.parentNode.parentElement)"
     elmWindow = document.getElementById(idWindow);
     if (elmWindow == null) {
-        alert("popClose(elmWindow) received bad elmWindow:", elmWindow);
+        alert("popClose(elmWindow) received bad idWindow: " + idWindow +
+              "\nelmWindow is: " + elmWindow);
         return;
     }
     elmWindow.style.opacity = "0";
