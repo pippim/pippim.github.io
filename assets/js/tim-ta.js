@@ -1931,7 +1931,7 @@ function msgqClear() {
 
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for response. */
-    var elmWindow = popCreate(msg_type, msg, error_id);
+    var idWindow = popCreate(msg_type, msg, error_id);
 
     while(true) {
         await sleep(1000);
@@ -1962,15 +1962,16 @@ function popClearByError(error_id) {
     console.log("popClearByError() not found:", error_id);
 }
 
-function popClearByWindow(elmWindow) {
+function popClearById(idWindow) {
     // Clear a specific error_id from document
     // The error may have occurred multiple times during validation
     // TODO: Rename to popClearByErrorId
     for (const key of Object.keys(msgq)) {
         entry = msgq[key];
-        if (entry.elmWindow == elmWindow) { popClearByEntry(entry); return; }
+        if (entry.idWindow == idWindow) { popClearByEntry(entry); return; }
+        console.log("Invalid pop:", entry.idWindow)
     }
-    console.log("popClearByWindow() not found:", elmWindow)
+    console.log("popClearByWindow() not found:", idWindow)
 }
 
 function popClearByEntry(entry) {
@@ -1983,8 +1984,9 @@ function popClearByEntry(entry) {
     }
 }
 
-function popClose(elmWindow) {
+function popClose(idWindow) {
     // Parent HTML: onclick="popClose(this.parentNode.parentElement)"
+    elmWindow = document.getElementById(idWindow);
     if (elmWindow == null) {
         alert("popClose(elmWindow) received bad elmWindow:", elmWindow);
         return;
@@ -1992,7 +1994,7 @@ function popClose(elmWindow) {
     elmWindow.style.opacity = "0";
     setTimeout(function(){
         elmWindow.style.display = "none";
-        popClearByWindow(elmWindow);
+        popClearById(idWindow);
     }, 600);
 }
 
@@ -2041,7 +2043,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     }
 
     var p = {};
-    p['index'] = popIndex;  // Keep key in value for handy reference
+    p['idWindow'] = "popIndex" + popIndex;
     p['elmWindow'] = document.createElement('div');
     //p['elmWindow'] = document.createElement('template');  // BROKEN
     p['msg_type'] = msg_type;  // e, w, i or s
@@ -2050,9 +2052,9 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     p['error_id'] = error_id;
     p['id_elm'] = id_elm;
     p['elmLink'] = elm;
-    msgq[popIndex.toString()] = p;
+    msgq[p['idWindow']] = p;
 
-    var html = popBuildHtml(msg_type, msg);
+    var html = popBuildHtml(msg_type, msg, popIndex);
     html += popBuildStyle(msg_type);
     //html += popBuildScript();  // BROKEN
 
@@ -2070,23 +2072,23 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     dragElement2(p['elmWindow'], 20, 20);  // top=20, left = 20
 
     popIndex += 1;  // Our new entry count and the next index to add
-    return p['elmWindow'];
+    return p['idWindow'];
 }
 
-function popBuildHtml(msg_type, msg) {
+function popBuildHtml(msg_type, msg, index) {
     var msg_head = "";
     if (msg_type == "e") { msg_head = "ERROR"; }
     if (msg_type == "w") { msg_head = "WARNING"; }
     if (msg_type == "i") { msg_head = "Info"; }
     if (msg_type == "s") { msg_head = "Success"; }
     var html = "";
-    html += '<div class="msgq-window">\n';
+    html += '<div id="popIndex' + index + '" class="msgq-window">\n';
     // For historical reasons must be "_header" not "-header" to drag window
     html += '  <div class="msgq-window-header">' + msg_head +
                     //'&emsp; (Click here to drag)\n'; // Suspend until working
                     '\n';
     html += '    <span class="msgq-window-close closebtn" \n';
-    html += '      onclick="popClose(this.parentNode.parentElement)" \n';
+    html += '      onclick="popClose(popIndex' + inddex + ')" \n';
     html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
     html += '    </span>\n';
     html += '  </div>\n';
@@ -2095,7 +2097,7 @@ function popBuildHtml(msg_type, msg) {
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     html += '    <button class="msq-button-ok" title="Click to close" \n';
-    html += '    onclick="popClose(this.parentNode.parentElement)" \n';
+    html += '      onclick="popClose(popIndex' + inddex + ')" \n';
     html += '       >OK</button>\n';
     html += '  </div>\n';
     html += '</div>\n';
