@@ -2002,7 +2002,7 @@ function popClose(idWindow) {
 
 function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm) {
     var existingIds = popGetIdsByError(error_id);
-    console.log("existingIds:", existingIds)
+    console.log("existingIds.length:", existingIds.length)
     if (existingIds.length = 0) {
         popCreate(msg_type, msg, error_id, id_elm_type, id_elm);
     }
