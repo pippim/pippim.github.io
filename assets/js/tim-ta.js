@@ -1967,10 +1967,6 @@ function popClearById(idWindow) {
 
 function popClearByEntry(entry) {
     var elm = entry.elmWindow;
-    var elm2 = document.getElementById(entry.idWindow)
-    if (elm != elm2) {
-        console.log('elm2 != elm', elm2.length, elm.length)
-    }
     if (document.contains(elm)) {
         elm.remove();  // Moves below bottom of document but still there
     }
@@ -2065,9 +2061,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
     //console.log("elmHead: " + elmHead);
     //dragElement2(elmHead, 20, 20);  // top=20, left = 20
-    inner = document.getElementById(p['idWindow']);
-    var elmMsg = inner.getElementsByClassName("msgq-window");
-    dragElement2(elmMsg, 20, 20);  // top=20, left = 20
+    var elm = document.getElementById(p['idWindow']);
+    dragElement2(elm, 20, 20);  // top=20, left = 20
 
     popIndex += 1;  // Our new entry count and the next index to add
     return p['idWindow'];
@@ -2186,7 +2181,15 @@ function popBuildScript() {
 function dragElement2(elm, x, y) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   var left = x, top = y;
-  elm.onmousedown = dragMouseDown;
+  if (document.getElementById(elm.id + "-header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elm.id + "-header").onmousedown = dragMouseDown;
+    // https://stackoverflow.com/a/52554777/6929343
+
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elm.onmousedown = dragMouseDown;
+  }
 
   function dragMouseDown(e) {
     e = e || window.event;
