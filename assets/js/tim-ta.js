@@ -2077,9 +2077,9 @@ function popBuildHtml(msg_type, msg, index) {
     var html = "";
     html += '<div id="popIndex' + index + '" class="msgq-window">\n';
     // For historical reasons must be "_header" not "-header" to drag window
-    html += '  <div class="msgq-window-header">' + msg_head +
-                    //'&emsp; (Click here to drag)\n'; // Suspend until working
-                    '\n';
+    html += '  <div id="popIndex' + index + '_header" \n';
+    html += '       class="msgq-window-header">' + msg_head +
+                    '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closebtn" \n';
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
@@ -2108,19 +2108,8 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
-    html += 'position: fixed;\n';  // fixed breaks drag
-    //html += 'position: static;\n';  // Default
+    html += 'position: fixed;\n';
     html += 'z-index: 9;\n';
-
-    //html += 'position: relative;\n';  // Used with ttaElm as parent, bottom of element
-                                        // Goes to full width
-    //html += 'position: absolute;\n';  // goes to top of document
-    //html += 'position: fixed;\n';  // fixed breaks drag
-    //html += 'position: sticky;\n';  // goes to bottom of document
-    //html += 'display: none;\n';
-    // html += 'display: block;\n';  // block is default anyway!
-    //html += 'display: flex;\n';  // Used in TCM, just experiment here too then
-    //html += 'flex-direction: column;\n';
     html += 'opacity: 1;\n';
     html += 'transition: opacity 0.6s;\n';
     html += 'max-width: 90vw;\n';
@@ -2180,10 +2169,9 @@ function popBuildScript() {
 // Below copied from theCookieMachine.js - Spent WHOLE NIGHT TRYING TO FIX :(
 function dragElement2(elm, x, y) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  var left = x, top = y;
-  if (document.getElementById(elm.id + "-header")) {
+  if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elm.id + "-header").onmousedown = dragMouseDown;
+    document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
     // https://stackoverflow.com/a/52554777/6929343
 
   } else {
@@ -2197,7 +2185,6 @@ function dragElement2(elm, x, y) {
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
-    console.log("dragMouseDown(e) - pos3, pos4:", pos3, pos4)
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
@@ -2207,29 +2194,13 @@ function dragElement2(elm, x, y) {
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;  // Change since last time here
+    pos1 = pos3 - e.clientX;
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    //console.log("elementDrag(e) - pos3, pos4:", pos3, pos4)
-    //console.log("elm.offsetTop, elm.offsetLeft:", elm.offsetTop, elm.offsetLeft)
     // set the element's new position:
-    top = top - pos2;
-    if (top < 0) { top = 0; }
-    left = left - pos1;
-    if (left < 0) { left = 0; }
-    //console.log("top, left:", top, left)
-    var offset = elm.getBoundingClientRect();
-    //console.log("offset.top, offset.left:", offset.top, offset.left)
-    var newTop = elm.offsetTop - pos2;
-    var newLeft = elm.offsetLeft - pos1;
-    //console.log("newTop, newLeft:", newTop, newLeft);
     elm.style.top = (elm.offsetTop - pos2) + "px";
     elm.style.left = (elm.offsetLeft - pos1) + "px";
-    //elm.style.top = top + "px";
-    //elm.style.left = left + "px";
-    //elm.style.top = "100px";
-    //elm.style.left = "100px";
   }
 
   function closeDragElement() {
