@@ -2106,8 +2106,8 @@ function popBuildHtml(msg_type, msg, index) {
     if (msg_type == "i") { msg_head = "Info"; }
     if (msg_type == "s") { msg_head = "Success"; }
     var html = "";
-    html += '<div id="popIndex' + index + '" class="msgq-window">\n';
     // For historical reasons must be "_header" not "-header" to drag window
+    html += '<div id="popIndex' + index + '" class="msgq-window">\n';
     html += '  <div id="popIndex' + index + '_header" \n';
     html += '       class="msgq-window-header">' + msg_head +
                     '&emsp; (Click here to drag)\n';
@@ -2146,7 +2146,7 @@ function popBuildStyle(msg_type) {
     html += 'transition: opacity 0.6s;\n';
     html += 'max-width: 90vw;\n';
     html += 'max-height: 95vh;\n';
-    html += 'top: 20px;\n';
+    html += 'top: 120px;\n';
     html += 'left: 20px;\n';
     html += 'overflow: auto;\n';
     html += 'background-color: #f1f1f1;\n';
