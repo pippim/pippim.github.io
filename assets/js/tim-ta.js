@@ -1908,31 +1908,13 @@ function msgqClear() {
 }
 
 async function popPrompt(msg_type, msg, error_id) {
-    /* Display message and wait for response.
-    */
+    /* Display message and wait for response. */
     elmWindow = popCreate(msg_type, msg, error_id);
-    if (elmWindow == null) {
-        alert("popPrompt(elmWindow) received bad elmWindow:", elmWindow);
-        return;
-    }
-    var sleepCount = 0;
-    var style;
+
     while(true) {
         await sleep(50);
-        // if (document.contains(elmWindow)) { continue; }  // DOESN'T WORK
-        // style = window.getComputedStyle(elmWindow);
-        // After window closes, style.display still "block" and opacity still "1"
-        // if (window.getComputedStyle(elmWindow).display === "none") { return; }
+        // When a popCreate(d) window is closed, it disappears after 600ms
         if (elmWindow.style.display == "") { return; }
-
-        // Debugging stuff
-        sleepCount += 1;
-        var rem = sleepCount % 100;
-        if (rem == 0) {  // Force exit after
-            console.log("popPrompt() loops:", sleepCount, elmWindow);
-            console.log("style.display:", elmWindow.style.display, elmWindow.style.opacity);
-            return;
-        }
     }
 }
 
