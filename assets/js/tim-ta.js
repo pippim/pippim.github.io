@@ -1063,7 +1063,8 @@ function buildProgressControlBoxBody(i) {
     // Get task details into work buffer
     workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     var msg = "";
-    msg += ttaProject.project_name + " - " + workTask.task_name;
+    msg += "<b>Progress Controls</b><br>\n";
+    msg += ttaProject.project_name + " - " + workTask.task_name + "<br>";
     return msg;
 }
 
