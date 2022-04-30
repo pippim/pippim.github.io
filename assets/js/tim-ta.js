@@ -1001,7 +1001,7 @@ function initTimersAfterDOM() {
     for (const name of Object.keys(allTimers)) {
         //var element = document.getElementById(allTimers[name].id);
         let element = document.getElementById(name);
-        if (element == null) {  console.log("initTimersAfterDOM(): element null"); }
+        if (element == null) {  alert("initTimersAfterDOM(): element null"); }
         allTimers[name].elm = element;
         //var i = allTimers[name].index; // var assigns last value to all occurrences
         // https://stackoverflow.com/a/36946222/6929343
@@ -1029,8 +1029,10 @@ function progressTouched(i, element) {
     const boolTotalBar = i > cntIndexTasks ? true : false;
     // What is the running ones-based progress bar number?
     const activeBarNo = getActiveTimerNo();
+    const boolTouchedActive = i + 1 = activeBarNo ? true : false;
     console.log("Clicked on a boolTotalBar?:", boolTotalBar);
     console.log("Active Progress Bar number:", activeBarNo);
+    console.log("boolTouchedActive?:", boolTouchedActive);
 
     currentTimers = allTimers;  // LOTS TO DO YET!
 }
