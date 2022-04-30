@@ -1061,7 +1061,12 @@ async function runAllTimers() {
             if (index >= ttaProject.arrTasks.length) {
                 // The last task has ended, is it the last set too?
                 remaining_run_times -= 1;
-                if (remaining_run_times <= 0) { exitAllTimers(); }
+                if (remaining_run_times <= 0) {
+                    cancelAllTimers = true;
+                    popPrompt("s", "Run Project " + ttaProject.project_name +
+                              " completed.");
+                    exitAllTimers();
+                }
                 // Rebuild allTimers{} to fresh state for new set
                 index = 0;
                 resetTimersSet(myTable, run_times, remaining_run_times);
@@ -1112,14 +1117,27 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
 
 function testAllTimers() {
     // Speed up 10 times for previewing.
-    // TODO: If totalAllTimersTime for more than 1 minute, confirm exit
+    // TODO: If totalAllTimersTime for more than 1 minute, confirm intent
+    if (cancelAllTimers == false && totalAllTimersTime > 30) {
+      /* var confirm = popYesNo('w', "More than 30 seconds has already run.\n" +
+                                 "Are you sure you want to exit?");
+        if (!confirm) { return; }
+      */
+    }
+
     sleepMillis = sleepMillis / 10;
-    if (sleepMillis < 10) { sleeMillis = 10; }
+    if (sleepMillis < 1) { sleeMillis = 1; }
 }
 
 function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
-    // TODO: If totalAllTimersTime more than 1 minute, confirm exit
+    // TODO: If called from Footer (not normal end) totalAllTimersTime more than 1 minute, confirm exit
+    if (cancelAllTimers == false && totalAllTimersTime > 30) {
+      /* var confirm = popYesNo('w', "More than 30 seconds has already run.\n" +
+                                 "Are you sure you want to exit?");
+        if (!confirm) { return; }
+      */
+    }
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
     wakeLockOff();  // Allow mobile screen to sleep again
 
@@ -1983,14 +2001,16 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     }
     if (msg_type != "e" && msg_type != "w" &&
         msg_type != "i" && msg_type != "s") {
-            popCreate('e', "msgAlert() msg_type must be 'e', 'w', 'i' or 's'.");
+            //popCreate('e', "msgAlert() msg_type must be 'e', 'w', 'i' or 's'.");
+            // Catastrophe when you call popCreate from itself (CPU burn out)
+            alert('e', "msgAlert() msg_type must be 'e', 'w', 'i' or 's'.");
             console.trace();
             return false;
     }
     var elm = id_elm; // May be undefined
-    if (arguments.length > 2 && id_elm_type == "id") {
-        if (arguments.length < 4) {
-            popCreate('e', "msgAlert() when 'id_elm_type' = 'id', next argument required.");
+    if (arguments.length >= 4 && id_elm_type == "id") {
+        if (arguments.length < 5) {
+            alert('e', "msgAlert() when 'id_elm_type' = 'id', next argument required.");
             console.trace();
             return false;
         }
@@ -2008,9 +2028,6 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     p['error_id'] = error_id;
     p['id_elm'] = id_elm;
     p['elmLink'] = elm;
-    //p['clear_flag'] = clear_flag;
-    //p['html'] = popBuildHtml(msg_type, msg);
-    //p['style'] = popBuildStyle(msg_type);
     msgq[popIndex.toString()] = p;
 
     var html = popBuildHtml(msg_type, msg);
@@ -2029,11 +2046,6 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     //console.log("elmHead: " + elmHead);
     //dragElement2(elmHead, 20, 20);  // top=20, left = 20
     dragElement2(p['elmWindow'], 20, 20);  // top=20, left = 20
-
-    // TODO: activate close button
-
-    // TODO: How to test? Create option in Cookie Machine?
-    //       Use Cookie Machine to speed test timers at 10x speed?
 
     popIndex += 1;  // Our new entry count and the next index to add
     return p['elmWindow'];
@@ -2070,11 +2082,11 @@ function popBuildHtml(msg_type, msg) {
 
 function popBuildStyle(msg_type) {
     // NOTE: .msq-xxx styles identical to #tcm-xxx styles in /assets/css/style.scss
-    var msg_head = "#2196F3";  // Baby blue
-    if (msg_type == "e") { msg_head = "#f44336"; }  // red
-    if (msg_type == "w") { msg_head = "#ff9800"; }  // orange
-    if (msg_type == "i") { msg_head = "#2196F3"; }  // light blue
-    if (msg_type == "s") { msg_head = "#04AA6D"; }  // green
+    var msg_color = "#2196F3";  // Baby blue
+    if (msg_type == "e") { msg_color = "#f44336"; }  // red
+    if (msg_type == "w") { msg_color = "#ff9800"; }  // orange
+    if (msg_type == "i") { msg_color = "#2196F3"; }  // light blue
+    if (msg_type == "s") { msg_color = "#04AA6D"; }  // green
 
     var html = "<style>\n";
 
@@ -2085,7 +2097,7 @@ function popBuildStyle(msg_type) {
 
     //html += 'position: relative;\n';  // Used with ttaElm as parent, bottom of element
                                         // Goes to full width
-    //html += 'position: absolute;\n';  // goes to top of docu,emt
+    //html += 'position: absolute;\n';  // goes to top of document
     //html += 'position: fixed;\n';  // fixed breaks drag
     //html += 'position: sticky;\n';  // goes to bottom of document
     //html += 'display: none;\n';
@@ -2116,7 +2128,7 @@ function popBuildStyle(msg_type) {
     // html += 'display: block;\n';  // Default anyway !
     html += 'padding: .5rem;\n';
     html += 'cursor: move;  z-index: 10;\n';
-    html += 'background-color: ' + msg_head + ';\n';
+    html += 'background-color: ' + msg_color + ';\n';
     html += 'color: #fff;\n';
     html += '}\n';
 
