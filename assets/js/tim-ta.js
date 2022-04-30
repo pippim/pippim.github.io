@@ -1920,15 +1920,18 @@ async function popPrompt(msg_type, msg, error_id) {
     while(true) {
         await sleep(50);
         // if (document.contains(elmWindow)) { continue; }  // DOESN'T WORK
-        style = window.getComputedStyle(elmWindow);
-        if (window.getComputedStyle(elmWindow).display === "none") { return; }
+        // style = window.getComputedStyle(elmWindow);
+        // After window closes, style.display still "block" and opacity still "1"
+        // if (window.getComputedStyle(elmWindow).display === "none") { return; }
+        if (elmWindow.style.display == "") { return; }
 
         // Debugging stuff
         sleepCount += 1;
-        var rem = sleepCount % 1000;
-        if (rem == 0) {
+        var rem = sleepCount % 100;
+        if (rem == 0) {  // Force exit after
             console.log("popPrompt() loops:", sleepCount, elmWindow);
             console.log("style.display:", elmWindow.style.display, elmWindow.style.opacity);
+            return;
         }
     }
 }
