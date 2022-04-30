@@ -1002,6 +1002,7 @@ function initTimersAfterDOM() {
     for (const name of Object.keys(allTimers)) {
         var element = document.getElementById(allTimers[name].id);
         allTimers[name].elm = element;
+        console.log("allTimers[name]:", name, allTimers[name]);
         // console.log('timer progress element:', element);
         var i = allTimers[name].id.replace("tabTimer", "");
         // i = 0, 1...length -1, then "Set" or "AllSets"
