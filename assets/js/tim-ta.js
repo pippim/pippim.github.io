@@ -2088,20 +2088,13 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
     }
 
     var elmDraggable = document.getElementById(p['idWindow']);  // ID inside <div>
-    // .getBoundingClientRect()
-    // .getClientRect
-    // window.scrollY
     let rect = p['elmLink'].getBoundingClientRect();
     var pos3 = parseInt(rect.left + window.scrollX);  // Get link (anchor reference point)
     var pos4 = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
-    var elmHeader = document.getElementById(p['idWindow'] + "_header");
-    //var pos3 = p['elmLink'].style.left;  // Get link (anchor reference point)
-    //var pos4 = p['elmLink'].style.top;  //  x (left) and y (top
-    // BELOW two errors: Error in parsing value for “top”.  Declaration dropped.
-    console.log("window.scrollX:", window.scrollX, "pos3 =", pos3, "px");
-    console.log("window.scrollY:", window.scrollY, "pos4 =", pos4, "px");
-    elmDraggable.style.left = (pos3 + 20) + "px";
-    elmDraggable.style.top = (pos4 + 20) + "px";
+    //console.log("window.scrollX:", window.scrollX, "pos3 =", pos3, "px");
+    //console.log("window.scrollY:", window.scrollY, "pos4 =", pos4, "px");
+    elmDraggable.style.left = (pos3) + "px";
+    elmDraggable.style.top = (pos4 + 40) + "px";
 
     dragElement(elmDraggable);  // Hooks to make window draggable by title bar
 
