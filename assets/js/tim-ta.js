@@ -1113,7 +1113,8 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
 function testAllTimers() {
     // Speed up 10 times for previewing.
     // TODO: If totalAllTimersTime for more than 1 minute, confirm exit
-    sleepMillis = 100;
+    sleepMillis = sleepMillis / 10;
+    if (sleepMillis < 10) { sleeMillis = 10; }
 }
 
 function exitAllTimers() {
