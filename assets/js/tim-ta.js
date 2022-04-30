@@ -2002,8 +2002,7 @@ function popClose(idWindow) {
 
 function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm) {
     var existingIds = popGetIdsByError(error_id);
-    console.log("existingIds.length:", existingIds.length)
-    if (existingIds.length = 0) {
+    if (existingIds.length == 0) {
         popCreate(msg_type, msg, error_id, id_elm_type, id_elm);
     }
 }
@@ -2066,20 +2065,12 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
     var html = popBuildHtml(msg_type, msg, popIndex);
     html += popBuildStyle(msg_type);
     //html += popBuildScript();  // BROKEN
-
     html = html.trim(); // Never return a text node of whitespace as the result
-
     p['elmWindow'].innerHTML = html;
-    document.body.appendChild(p['elmWindow']);
-    //ttaElm.appendChild(p['elmWindow']);
-    //tcmElm = document.getElementById("tcm_window");
-    //tcmElm.appendChild(p['elmWindow']);  // nothing happens
-    //alert("pause before dragElement(p['elmWindow']);")
-    var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
-    //console.log("elmHead: " + elmHead);
-    //dragElement2(elmHead, 20, 20);  // top=20, left = 20
-    var elm = document.getElementById(p['idWindow']);
-    dragElement2(elm, 20, 20);  // top=20, left = 20
+    document.body.appendChild(p['elmWindow']);  // Created <div> element
+
+    var elm = document.getElementById(p['idWindow']);  // ID inside <div>
+    dragElement2(elm);
 
     popIndex += 1;  // Our new entry count and the next index to add
     return p['idWindow'];
