@@ -1016,8 +1016,13 @@ function progressTouched(name) {
         - 23ED ⏭︎ skip to end, next
         - 23EE ⏮︎ skip to start, previous
         - 23EF ⏯︎ play/pause toggle
+
+        Every action (except close) clears control and
+        mounts a new one.
     */
     console.log("Progress bar touched:", name);
+    popClearByError("task_progress");
+    currentTimers = allTimers;  // LOTS TO DO YET!
 }
 
 async function runAllTimers() {
@@ -2009,6 +2014,8 @@ function popClose(idWindow) {
 }
 
 function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm) {
+    // Create window if same error isn't displayed yet. Prevents multiple
+    // windows for same thing, E.G. "Name cannot be blank".
     var existingIds = popGetIdsByError(error_id);
     if (existingIds.length == 0) {
         popCreate(msg_type, msg, error_id, id_elm_type, id_elm);
@@ -2016,14 +2023,13 @@ function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm) {
 }
 
 function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
-    /*  PRIMARY FUNCTION to display error messages (and control boxes)
+    /*  MAJOR FUNCTION to display error messages (and control boxes)
         msg_type = "e" red error message
                    "w" orange warning message
                    "i" blue information message
                    "s" green success message
         msg = message text where <br> will start a new line.
-        error_id = optional error number or name. If already displayed
-                   then it isn't displayed again.
+        error_id = optional error number or name.
         id_elm_type = "id" a ID is passed in next field
                       "elm" an element is passed in next field.
         elm = an ID or an element. If an ID convert it to an element.
@@ -2070,15 +2076,20 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
     p['active'] = "true";
     msgq[p['idWindow']] = p;
 
-    var html = popBuildHtml(msg_type, msg, popIndex);
+    var html = "";
+    html += popBuildHtml(msg_type, msg, popIndex);
     html += popBuildStyle(msg_type);
-    //html += popBuildScript();  // BROKEN
-    html = html.trim(); // Never return a text node of whitespace as the result
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);  // Created <div> element
 
-    var elm = document.getElementById(p['idWindow']);  // ID inside <div>
-    dragElement2(elm);
+    if (p['elmLink'] == null) {
+        console.log("p['elmLink'] not passed. Setting to ttaElm");
+        p['elmLink'] = ttaElm;
+        msgq[p['idWindow']] = p;
+    }
+
+    var elmDraggable = document.getElementById(p['idWindow']);  // ID inside <div>
+    dragElement2(elmDraggable);
 
     popIndex += 1;  // Our new entry count and the next index to add
     return p['idWindow'];
