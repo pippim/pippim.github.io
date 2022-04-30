@@ -1985,12 +1985,11 @@ function popClearByEntry(entry) {
 }
 
 function popClose(idWindow) {
-    // See: https://stackoverflow.com/a/21116897/6929343
-    elmWindow = idWindow.getElementsByClassName("msgq-window")[0];
-    elmWindow = document.getElementById("popIndex0")
+    // Close window by ID name
+    // elmWindow = idWindow.getElementsByClassName("msgq-window")[0];
+    elmWindow = document.getElementById(idWindow)
     if (elmWindow == null) {
-        alert("popClose(elmWindow) received bad idWindow: " + idWindow +
-              "\nelmWindow is: " + elmWindow);
+        alert("popClose() received bad idWindow: " + idWindow);
         return;
     }
     elmWindow.style.opacity = "0";
@@ -2092,7 +2091,7 @@ function popBuildHtml(msg_type, msg, index) {
                     //'&emsp; (Click here to drag)\n'; // Suspend until working
                     '\n';
     html += '    <span class="msgq-window-close closebtn" \n';
-    html += '      onclick="popClose(popIndex' + index + ')" \n';
+    html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
     html += '    </span>\n';
     html += '  </div>\n';
@@ -2101,7 +2100,7 @@ function popBuildHtml(msg_type, msg, index) {
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     html += '    <button class="msq-button-ok" title="Click to close" \n';
-    html += '      onclick="popClose(popIndex' + index + ')" \n';
+    html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '       >OK</button>\n';
     html += '  </div>\n';
     html += '</div>\n';
@@ -2138,7 +2137,7 @@ function popBuildStyle(msg_type) {
     html += 'max-height: 95vh;\n';
     html += 'top: 20px;\n';
     html += 'left: 20px;\n';
-    html += 'z-index: 9;\n';
+    html += 'overflow: auto;\n';
     html += 'background-color: #f1f1f1;\n';
     html += 'border: .2rem solid #d3d3d3;\n';
     html += 'color: black;\n';
