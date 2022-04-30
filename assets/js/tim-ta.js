@@ -1063,8 +1063,8 @@ async function runAllTimers() {
                 remaining_run_times -= 1;
                 if (remaining_run_times <= 0) {
                     cancelAllTimers = true;
-                    popPrompt("s", "Run Project " + ttaProject.project_name +
-                              " completed.");
+                    await popPrompt("s", "Run Project " +
+                                    ttaProject.project_name + " completed.");
                     exitAllTimers();
                 }
                 // Rebuild allTimers{} to fresh state for new set
@@ -1120,8 +1120,8 @@ function testAllTimers() {
     // TODO: If totalAllTimersTime for more than 1 minute, confirm intent
     if (cancelAllTimers == false && totalAllTimersTime > 30) {
       /* var confirm = popYesNo('w', "More than 30 seconds has already run.\n" +
-                                 "Are you sure you want to exit?");
-        if (!confirm) { return; }
+                              "Are you sure you want to exit?");
+      if (!confirm) { return; }
       */
     }
 
@@ -1133,9 +1133,9 @@ function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
     // TODO: If called from Footer (not normal end) totalAllTimersTime more than 1 minute, confirm exit
     if (cancelAllTimers == false && totalAllTimersTime > 30) {
-      /* var confirm = popYesNo('w', "More than 30 seconds has already run.\n" +
-                                 "Are you sure you want to exit?");
-        if (!confirm) { return; }
+      /* var confirm = popYesNo('w', "More than 30 REAL seconds has already run.\n" +
+                              "Are you sure you want to increase speed?");
+      if (!confirm) { return; }
       */
     }
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
