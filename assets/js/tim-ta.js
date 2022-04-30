@@ -1945,6 +1945,16 @@ async function popPrompt(msg_type, msg, error_id) {
     }
 }
 
+function popGetIdsByError(error_id) {
+    // Returns array of idWindow matching error ID
+    var idWindows = [];
+    for (const key of Object.keys(msgq)) {
+        entry = msgq[key];
+        if (entry.error_id == error_id) { idWindows.push(entry.idWindow); }
+    }
+    return idWindows;
+}
+
 function popClearByError(error_id) {
     // Clear a specific error_id from document
     // The error may have occurred multiple times during validation
@@ -1957,25 +1967,26 @@ function popClearByError(error_id) {
 }
 
 function popClearById(idWindow) {
-    // Clear a specific error_id from document
+    // Clear a specific window id from document
     // The error may have occurred multiple times during validation
     // TODO: Rename to popClearByErrorId
     for (const key of Object.keys(msgq)) {
         entry = msgq[key];
         if (entry.idWindow == idWindow) { popClearByEntry(entry); return; }
-        console.log("Invalid pop:", entry.idWindow)
     }
     console.log("popClearByWindow() not found:", idWindow)
 }
 
 function popClearByEntry(entry) {
+    /* Delete element from document, set to active to "false" */
     var elm = entry.elmWindow;
     if (document.contains(elm)) {
-        elm.remove();  // Moves below bottom of document but still there
+        elm.remove();  // Might move below bottom of document but still there
     }
     if (elm.parentNode) {
-        elm.parentNode.removeChild(elm);  // Now it's really gone!
+        elm.parentNode.removeChild(elm);  // Now it's really gone from document
     }
+    delete msgq[entry.idWindow];  // Remove from msgq {}
 }
 
 function popClose(idWindow) {
@@ -1993,20 +2004,18 @@ function popClose(idWindow) {
     }, 600);
 }
 
-function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
+function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
     /*  PRIMARY FUNCTION to display error messages (and control boxes)
         msg_type = "e" red error message
                    "w" orange warning message
                    "i" blue information message
                    "s" green success message
         msg = message text where <br> will start a new line.
+        error_id = optional error number or name. If already displayed
+                   then it isn't displayed again.
         id_elm_type = "id" a ID is passed in next field
                       "elm" an element is passed in next field.
         elm = an ID or an element. If an ID convert it to an element.
-        error_id = optional error number or name. If already displayed
-                   then it isn't displayed again.
-        clear_flag = optional flag ("true") to clear error number or name.
-                     Automatically closes message box as well.
 
         RETURNS the window element created
     */
@@ -2047,6 +2056,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     p['error_id'] = error_id;
     p['id_elm'] = id_elm;
     p['elmLink'] = elm;
+    p['active'] = "true";
     msgq[p['idWindow']] = p;
 
     var html = popBuildHtml(msg_type, msg, popIndex);
