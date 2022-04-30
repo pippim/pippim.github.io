@@ -2070,7 +2070,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
     //console.log("elmHead: " + elmHead);
     //dragElement2(elmHead, 20, 20);  // top=20, left = 20
-    inner = document.getElementById((p['idWindow']);
+    inner = document.getElementById(p['idWindow']);
     var elmMsg = inner.getElementsByClassName("msgq-window");
     dragElement2(elmMsg, 20, 20);  // top=20, left = 20
 
