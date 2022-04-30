@@ -1036,8 +1036,8 @@ function progressTouched(i, element) {
 }
 
 function getActiveTimerNo() {
-    for (const key of Object.keys(AllTimers)) {
-        var entry = AllTimers[key];
+    for (const key of Object.keys(allTimers)) {
+        var entry = allTimers[key];
         if (entry.seconds != entry.progress && entry.seconds != entry.remaining) {
             return entry.index + 1
         }
