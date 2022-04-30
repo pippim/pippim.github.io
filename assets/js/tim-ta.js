@@ -2074,7 +2074,6 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
     p['id_elm'] = id_elm;
     p['elmLink'] = elm;
     p['active'] = "true";
-    msgq[p['idWindow']] = p;
 
     var html = "";
     html += popBuildHtml(msg_type, msg, popIndex);
@@ -2085,14 +2084,19 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
     if (p['elmLink'] == null) {
         console.log("p['elmLink'] not passed. Setting to ttaElm");
         p['elmLink'] = ttaElm;
-        msgq[p['idWindow']] = p;
     }
 
     var elmDraggable = document.getElementById(p['idWindow']);  // ID inside <div>
-    dragElement2(elmDraggable);
+    var pos3 = p['elmLink'].clientX;  // Get link (anchor reference point)
+    var pos4 = p['elmLink'].clientY;  //  x (left) and y (top
+    elmDraggable.style.top = (pos3 + 20) + "px";
+    elmDraggable.style.left = (pos4 + 20) + "px";
+
+    dragElement(elmDraggable);  // Hooks to make window draggable by title bar
 
     popIndex += 1;  // Our new entry count and the next index to add
-    return p['idWindow'];
+    msgq[p['idWindow']] = p;  // Add entry to msgq object
+    return p['idWindow'];  // Return key to caller
 }
 
 function popBuildHtml(msg_type, msg, index) {
@@ -2135,8 +2139,8 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
-    html += 'position: fixed;\n';  // Doesn't move starts on viewport top
-    //html += 'position: absolute;\n';  // Scrolls with document starts top doc
+    //html += 'position: fixed;\n';  // Doesn't move starts on viewport top
+    html += 'position: absolute;\n';  // Scrolls with document starts top doc
     html += 'z-index: 9;\n';
     html += 'opacity: 1;\n';
     html += 'transition: opacity 0.6s;\n';
@@ -2195,7 +2199,7 @@ function popBuildScript() {
 }
 
 // Below copied from theCookieMachine.js - Spent WHOLE NIGHT TRYING TO FIX :(
-function dragElement2(elm, x, y) {
+function dragElement(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
