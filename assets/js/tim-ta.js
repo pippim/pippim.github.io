@@ -1008,7 +1008,18 @@ function initTimersAfterDOM() {
         allTimers[name].elm = element;
         // console.log('timer progress element:', element);
         //var i = name.replace("tabTimer", "");
+        let i = allTimers[name].index
+        console.log("allTimers[name]:", i, name, allTimers[name]);
+        // i = 0, 1...length -1, then "Set" or "AllSets"
+        element.addEventListener('click', () => { progressTouched(i, element); });
+    }
+
+    // https://stackoverflow.com/a/36946222/6929343
+    return;
+    for (const name of Object.keys(allTimers)) {
+        //var element = document.getElementById(allTimers[name].id);
         var i = allTimers[name].index
+        var element = allTimers[name].elm
         console.log("allTimers[name]:", i, name, allTimers[name]);
         // i = 0, 1...length -1, then "Set" or "AllSets"
         element.addEventListener('click', () => { progressTouched(i, element); });
@@ -1054,7 +1065,7 @@ async function runAllTimers() {
         if (cancelAllTimers) { return; }  // cancel button picked in footer
         if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
             // Prompt to begin timer
-            msg = "Reddy to begin Timed Task " + ttaTask.task_name;
+            msg = "Ready to begin Timed Task " + ttaTask.task_name;
             await popPrompt('i', msg);  // Blocking function, we wait...
         }
 
