@@ -2100,8 +2100,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
     // BELOW two errors: Error in parsing value for “top”.  Declaration dropped.
     console.log("window.scrollX:", window.scrollX, "pos3 =", pos3, "px");
     console.log("window.scrollY:", window.scrollY, "pos4 =", pos4, "px");
-    elmDraggable.style.top = (pos3 + 20) + "px";
-    elmDraggable.style.left = (pos4 + 20) + "px";
+    elmDraggable.style.left = (pos3 + 20) + "px";
+    elmDraggable.style.top = (pos4 + 20) + "px";
 
     dragElement(elmDraggable);  // Hooks to make window draggable by title bar
 
