@@ -1931,7 +1931,7 @@ function msgqClear() {
 
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for response. */
-    elmWindow = popCreate(msg_type, msg, error_id);
+    var elmWindow = popCreate(msg_type, msg, error_id);
 
     while(true) {
         await sleep(1000);
@@ -1972,7 +1972,13 @@ function popClearByWindow(elmWindow) {
 }
 
 function popClearByEntry(entry) {
-    if (document.contains(entry.elmWindow)) { entry.elmWindow.remove(); }
+    var elm = entry.elmWindow
+    if (document.contains(elm)) {
+        elm.remove();  // Moves below bottom of document but still there
+    }
+    if (elm.parentNode) {
+        elm.parentNode.removeChild(elm);  // Now it's really gone!
+    }
 }
 
 function popClose(elmWindow) {
