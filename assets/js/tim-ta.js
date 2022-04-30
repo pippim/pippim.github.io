@@ -1008,7 +1008,15 @@ function initTimersAfterDOM() {
 }
 
 function progressTouched(name) {
-    // Future use to pop controls when progress bar touched
+    /* Pop up control box for Task Name progress bar with:
+        - 23E9 ⏩︎ fast forward
+        - 23EA ⏪︎ rewind, fast backwards
+        - 23EB ⏫︎ fast increase
+        - 23EC ⏬︎ fast decrease
+        - 23ED ⏭︎ skip to end, next
+        - 23EE ⏮︎ skip to start, previous
+        - 23EF ⏯︎ play/pause toggle
+    */
     console.log("Progress bar touched:", name);
 }
 
@@ -1960,7 +1968,7 @@ function popClearByError(error_id) {
         entry = msgq[key];
         if (entry.error_id == error_id) { popClearByEntry(entry); return; }
     }
-    console.log("popClearByError() not found:", error_id);
+    // console.log("popClearByError() not found:", error_id);  // Normal event
 }
 
 function popClearById(idWindow) {
