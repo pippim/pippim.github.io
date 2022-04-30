@@ -1957,8 +1957,9 @@ function popClearByError(error_id) {
     // TODO: Rename to popClearByErrorId
     for (const key of Object.keys(msgq)) {
         entry = msgq[key];
-        if (entry.error_id == error_id) { popClearByEntry(entry); }
+        if (entry.error_id == error_id) { popClearByEntry(entry); return; }
     }
+    console.log("popClearByError() not found:", error_id);
 }
 
 function popClearByWindow(elmWindow) {
@@ -1967,12 +1968,13 @@ function popClearByWindow(elmWindow) {
     // TODO: Rename to popClearByErrorId
     for (const key of Object.keys(msgq)) {
         entry = msgq[key];
-        if (entry.elmWindow == elmWindow) { popClearByEntry(entry); }
+        if (entry.elmWindow == elmWindow) { popClearByEntry(entry); return; }
     }
+    console.log("popClearByWindow() not found:", elmWindow)
 }
 
 function popClearByEntry(entry) {
-    var elm = entry.elmWindow
+    var elm = entry.elmWindow;
     if (document.contains(elm)) {
         elm.remove();  // Moves below bottom of document but still there
     }
