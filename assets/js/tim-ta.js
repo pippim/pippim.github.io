@@ -2111,7 +2111,8 @@ function popBuildStyle(msg_type) {
     var html = "<style>\n";
 
     html += '.msgq-window {\n';
-    html += 'position: fixed;\n';
+    //html += 'position: fixed;\n';
+    html += 'position: absolute;\n';
     html += 'z-index: 9;\n';
     html += 'opacity: 1;\n';
     html += 'transition: opacity 0.6s;\n';
