@@ -1034,6 +1034,24 @@ function progressTouched(i, element) {
     console.log("Active Progress Bar number:", activeBarNo);
     console.log("boolTouchedActive?:", boolTouchedActive);
 
+    popClearByError("no_tasks_running");
+    if (activeBarNo == 0) {
+        proCreate("e", "No timers are running yet", "no_tasks_running");
+        return;
+    }
+
+    popClearByError("total_task_clicked");
+    if (activeBarNo == 0) {
+        proCreate("e", "Cannot select a total progress bar", "total_task_clicked");
+        return;
+    }
+
+    popClearByError("task_not_running");
+    if (activeBarNo == 0) {
+        proCreate("e", "Can only select a running progress bar", "task_not_running");
+        return;
+    }
+
     currentTimers = allTimers;  // LOTS TO DO YET!
 }
 
