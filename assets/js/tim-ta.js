@@ -664,10 +664,11 @@ function clickListen(i) {
         fAllSetsEndAlarm == "false" && fAllSetsEndNotify == "false") {
             if (currentTable != "RunTimers") {
                 // If Run Timers is active, no alarm was defined in the first place
-                popCreate("w", "Alarm and Notification turned off for this task.");
+                popCreateUniqueError("w",
+                "Alarm and Notification turned off for this task.", "no_task_end");
             }
             return;
-    }
+    } else { popClearByError("no_task_end"); }  // Clear any previous errors
 
     // Get first sounds/notifications from lowest to highest level
     var sound;
@@ -791,13 +792,13 @@ function sendNotification(body, header, icon) {
 
 function clickFuture(i) {
     clickCommon(i);
-    popCreate('i', "Future feature not implemented yet");
+    popCreateUniqueError('i', "Future feature not implemented yet", "future");
 }
 
 function clickUp(i) {
     clickCommon(i);
     if (i == 0) {
-        popCreate('w', "Already at top, can't move up", 'at_top');
+        popCreateUniqueError('w', "Already at top, can't move up", 'at_top');
         return;
     }
     swapRows(i, i - 1);
@@ -808,7 +809,7 @@ function clickDown(i) {
     // TODO: After moving, update & save localStorage
     clickCommon(i);
     if (i == cntTable - 1) {
-        popCreate('w', "Already at bottom, can't move down", 'at_bottom');
+        popCreateUniqueError('w', "Already at bottom, can't move down", 'at_bottom');
         return;
     }
     swapRows(i, i + 1);
@@ -1031,11 +1032,9 @@ async function runAllTimers() {
     while (true) {
         if (cancelAllTimers) { return; }  // cancel button picked in footer
         if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
-            // Prompt to begin timer, replace with popCreate()
-            // alert("Press Enter to begin timer " + ttaTask.task_name)
+            // Prompt to begin timer
             msg = "Reddy to begin Timed Task " + ttaTask.task_name;
-            // popPrompt('i', msg);  // without "await" function returns immediately
-            await popPrompt('i', msg);  // with "await" function never returns
+            await popPrompt('i', msg);  // Blocking function, we wait...
         }
 
         var timeCurrent = new Date().getTime();
@@ -1155,9 +1154,9 @@ async function wakeLockOn() {
     wakeLock = false;
     if ('wakeLock' in navigator) {
         wakeLock = await navigator.wakeLock.request('screen');
-        popCreate('w', "Do not leave this screen while\n" +
-                       "Timers are running. They can be\n" +
-                       "shutdown by power saving mode.");
+        popCreate('w', "Do NOT leave this screen while\n" +
+                       "Timers are running! They can be\n" +
+                       "suspended by power saving mode.");
     } else {
         wakeLock = false;  // Not supported
     }
@@ -1201,7 +1200,7 @@ function convertNumber(value) {
 function clickControls(i) {
     // Popup buttons for small screens
     clickCommon(i);
-    popCreate('i', "Controls Feature not implemented yet")
+    popCreateUniqueError('i', "Controls Feature not implemented yet", "controls")
 }
 
 function getTaskValue(key) {
@@ -1758,6 +1757,7 @@ function getInputValues() {
 
 function validateTaskName(value) {
     // The task_name key must be unique
+    popClearByError("task_name")
     const new_index = ttaProject.arrTasks.indexOf(value);
     if (new_index < 0) { return true; }  // New key wasn't found
 
@@ -1765,12 +1765,7 @@ function validateTaskName(value) {
     if (original_index == new_index) { return true; }  // Key hasn't changed
 
     // We have a new key that already exists
-    // TODO: Create global with element being validated
-    popCreate("e", dd_field.label + " must be unique");
-    //var popEntry = msgq[popIndex - 1];
-    //console.log("popEntry:", popEntry);
-
-    //alert(dd_field.label + " must be unique");  // replace with popCreate
+    popCreateUniqueError("e", dd_field.label + " must be unique", "task_name");
     return false;
 }
 
@@ -1779,10 +1774,11 @@ function validateNonBlank(value) {
     if (dd_field.lower == "non-blank") {
         if (value.trim() == "") {
             //alert(dd_field.label + " cannot be blank");
-            popCreate("e", dd_field.label + " cannot be blank");
+            popCreateUniqueError("e", dd_field.label + " cannot be blank", "blank");
             return false;
         }
     }
+    popClearByError("blank")
     return true;
 }
 
@@ -1792,13 +1788,15 @@ function validateNumber(value) {
     // From: https://stackoverflow.com/a/175787/6929343
     if (isNaN(value)) {
         //alert(dd_field.label + " must be a number");
-        popCreate("e", dd_field.label + " must be a number");
+        popCreateUniqueError("e", dd_field.label + " must be a number", "number");
         return false;
     }
+    popClearByError("number")
     return true;
 }
 
 function validateRange(value) {
+    popClearByError("range")
     if (dd_field.type != "number") { return true; } // Not "number" type
     lower = parseInt(dd_field.lower, 10);  // base 10
     upper = parseInt(dd_field.upper, 10);  // base 10
@@ -1806,7 +1804,7 @@ function validateRange(value) {
 
     var msg = dd_field.label + " must be between " + lower.toString() + " and " +
           upper.toString();
-    popCreate("e", msg);
+    popCreateUniqueError("e", msg, "range");
 
     return false;
 }
@@ -1958,7 +1956,6 @@ function popGetIdsByError(error_id) {
 function popClearByError(error_id) {
     // Clear a specific error_id from document
     // The error may have occurred multiple times during validation
-    // TODO: Rename to popClearByErrorId
     for (const key of Object.keys(msgq)) {
         entry = msgq[key];
         if (entry.error_id == error_id) { popClearByEntry(entry); return; }
@@ -1969,12 +1966,11 @@ function popClearByError(error_id) {
 function popClearById(idWindow) {
     // Clear a specific window id from document
     // The error may have occurred multiple times during validation
-    // TODO: Rename to popClearByErrorId
     for (const key of Object.keys(msgq)) {
         entry = msgq[key];
         if (entry.idWindow == idWindow) { popClearByEntry(entry); return; }
     }
-    console.log("popClearByWindow() not found:", idWindow)
+    console.log("popClearById() not found:", idWindow)
 }
 
 function popClearByEntry(entry) {
@@ -2008,6 +2004,7 @@ function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm) {
     var existingIds = popGetIdsByError(error_id);
     if (existingIds.length = 0) {
         popCreate(msg_type, msg, error_id, id_elm_type, id_elm);
+        console.log("existingIds:", existingIds)
     }
 }
 
