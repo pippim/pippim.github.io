@@ -1033,7 +1033,7 @@ async function runAllTimers() {
         if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
             // Prompt to begin timer, replace with popCreate()
             // alert("Press Enter to begin timer " + ttaTask.task_name)
-            msg = "Click to begin timer " + ttaTask.task_name;
+            msg = "Reddy to begin Timed Task " + ttaTask.task_name;
             // popPrompt('i', msg);  // without "await" function returns immediately
             await popPrompt('i', msg);  // with "await" function never returns
         }
@@ -1155,6 +1155,9 @@ async function wakeLockOn() {
     wakeLock = false;
     if ('wakeLock' in navigator) {
         wakeLock = await navigator.wakeLock.request('screen');
+        popCreate('w', "Do not leave this screen while\n" +
+                       "Timers are running. They can be\n" +
+                       "shutdown by power saving mode.");
     } else {
         wakeLock = false;  // Not supported
     }
