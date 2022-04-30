@@ -1938,7 +1938,7 @@ async function popPrompt(msg_type, msg, error_id) {
         // When a popCreate(d) window is closed, it disappears after 600ms
         var comp = window.getComputedStyle(elmWindow);
         if (elmWindow.style.display == "") {
-            console.log("comp.style.display:", comp.style.display, comp)
+            console.log("comp.display:", comp.display, comp)
             return;
         }
     }
