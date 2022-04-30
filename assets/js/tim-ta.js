@@ -1938,6 +1938,9 @@ async function popPrompt(msg_type, msg, error_id) {
         // When a popCreate(d) window is closed, it disappears after 600ms
         var comp = window.getComputedStyle(elmWindow);
         console.log("comp.display:", comp.display, comp.opacity)
+        if (document.body.contains(elmWindow)) { console.log("exists"); }
+        else { console.log("not found"); }
+
         if (comp.display !== "block") {
             console.log("comp.display:", comp.display, comp.opacity)
             return;
@@ -1955,7 +1958,7 @@ function popClearByError(error_id) {
     }
 }
 
-function popClearByElmWindow(elmWindow) {
+function popClearByWindow(elmWindow) {
     // Clear a specific error_id from document
     // The error may have occurred multiple times during validation
     // TODO: Rename to popClearByErrorId
@@ -1978,7 +1981,7 @@ function popClose(elmWindow) {
     elmWindow.style.opacity = "0";
     setTimeout(function(){
         elmWindow.style.display = "none";
-        popClearByElmWindow(elmWindow);
+        popClearByWindow(elmWindow);
     }, 600);
 }
 
