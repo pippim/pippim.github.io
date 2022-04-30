@@ -1986,7 +1986,7 @@ function popClearByEntry(entry) {
 
 function popClose(idWindow) {
     // Parent HTML: onclick="popClose(this.parentNode.parentElement)"
-    elmWindow = document.getElementById(idWindow);
+    elmWindow = idWindow.getElementsByClassName("msgq-window");
     if (elmWindow == null) {
         alert("popClose(elmWindow) received bad idWindow: " + idWindow +
               "\nelmWindow is: " + elmWindow);
@@ -2070,7 +2070,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, clear_flag) {
     var elmHead = p['elmWindow'].querySelector('.msgq-window-header');
     //console.log("elmHead: " + elmHead);
     //dragElement2(elmHead, 20, 20);  // top=20, left = 20
-    dragElement2(p['elmWindow'], 20, 20);  // top=20, left = 20
+    var elmMsg = getElementById(p['idWindow']);
+    dragElement2(elmMsg, 20, 20);  // top=20, left = 20
 
     popIndex += 1;  // Our new entry count and the next index to add
     return p['idWindow'];
