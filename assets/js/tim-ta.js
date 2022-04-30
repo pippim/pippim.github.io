@@ -2000,7 +2000,7 @@ function popGetIdsByError(error_id) {
     // Returns array of idWindow matching error ID
     var idWindows = [];
     for (const key of Object.keys(msgq)) {
-        entry = msgq[key];
+        let entry = msgq[key];
         if (entry.error_id == error_id) { idWindows.push(entry.idWindow); }
     }
     return idWindows;
@@ -2010,7 +2010,7 @@ function popClearByError(error_id) {
     // Clear a specific error_id from document
     // The error may have occurred multiple times during validation
     for (const key of Object.keys(msgq)) {
-        entry = msgq[key];
+        let entry = msgq[key];
         if (entry.error_id == error_id) { popClearByEntry(entry); return; }
     }
     // console.log("popClearByError() not found:", error_id);  // Normal event
@@ -2020,7 +2020,7 @@ function popClearById(idWindow) {
     // Clear a specific window id from document
     // The error may have occurred multiple times during validation
     for (const key of Object.keys(msgq)) {
-        entry = msgq[key];
+        let entry = msgq[key];
         if (entry.idWindow == idWindow) { popClearByEntry(entry); return; }
     }
     console.log("popClearById() not found:", idWindow)
