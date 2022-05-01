@@ -2281,13 +2281,15 @@ function popBuildStyle(msg_type) {
             '  display: flex;\n' +
             '  justify-content: space-around;\n' +
             '  margin: 1rem;\n' +
-            '  padding: .25rem .5rem;\n' +
+            '  padding: .5rem;\n' +
             '  border: 3px solid;\n' +
             '  border-radius: 2rem;\n' +
             '}\n';
 
     html += '.msgq-window-button {\n' +
             '  font-size: 22px;\n' +
+            '  padding: .25rem;\n' +
+            '  margin: .25rem;\n' +
             '  border-radius: 1rem;\n' +
             '}\n';
 
