@@ -2093,12 +2093,12 @@ function popClose(idWindow) {
     }, 600);
 }
 
-function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm) {
+function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     // Create window if same error isn't displayed yet. Prevents multiple
     // windows for same thing, E.G. "Name cannot be blank".
     var existingIds = popGetIdsByError(error_id);
     if (existingIds.length == 0) {
-        popCreate(msg_type, msg, error_id, id_elm_type, id_elm);
+        popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons);
     }
 }
 
@@ -2113,6 +2113,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
         id_elm_type = "id" a ID is passed in next field
                       "elm" an element is passed in next field.
         elm = an ID or an element. If an ID convert it to an element.
+        buttons = array of 5 fields per button:
+            "name", "text", "title", "callback(arg)"
 
         RETURNS the window element created
     */
@@ -2141,7 +2143,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
         }
         // Rewrite id in elm parameter with actual element.
         elm = document.getElementById(id_elm);
-        console.log("elm assigned by getElementById:", id_elm_type)
+        //console.log("elm assigned by getElementById:", id_elm_type)
     }
 
     console.log("elm:", elm, "buttons:", buttons)
@@ -2158,14 +2160,13 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     p['active'] = "true";
 
     var html = "";
-    html += popBuildHtml(msg_type, msg, popIndex);
+    html += popBuildHtml(msg_type, msg, popIndex, buttons);
     html += popBuildStyle(msg_type);
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);  // Created <div> element
 
     if (p['elmLink'] == null) {
-        console.log("p['elmLink'] not passed. Setting to ttaElm");
-        // p['elmLink'] = document.getElementById("ttaModal");
+        //console.log("p['elmLink'] not passed. Setting to ttaElm");
         p['elmLink'] = ttaElm;
     }
 
@@ -2185,7 +2186,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     return p['idWindow'];  // Return key to caller
 }
 
-function popBuildHtml(msg_type, msg, index) {
+function popBuildHtml(msg_type, msg, index, buttons) {
     var msg_head = "";
     if (msg_type == "e") { msg_head = "ERROR"; }
     if (msg_type == "w") { msg_head = "WARNING"; }
@@ -2206,9 +2207,13 @@ function popBuildHtml(msg_type, msg, index) {
     html += '    <p>' + msg + '</p>\n';
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
+    if (buttons == null) {
     html += '    <button class="msq-button-ok" title="Click to close" \n';
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '       >OK</button>\n';
+    } else {
+    html += '    <p>place holder for buttons array</p>\n';
+    }
     html += '  </div>\n';
     html += '</div>\n';
     return html;
