@@ -913,7 +913,8 @@ function paintRunTimers(i) {
 function tabRunTimersHeading() {
     // Format table heading for RunTimers form
     var html = "<tr><th>Progress</th>";
-    if (!scrSmall) { html += "<th>Remaining</th>"; }
+    //if (!scrSmall) { html += "<th>Remaining</th>"; }
+    if (true) { html += "<th>Remaining</th>"; }
     html += "<th>Task Name</th>";
     return html += "</tr>\n";
 }
@@ -981,7 +982,8 @@ function htmlRunTimersDetail(id, name, index, seconds, sound) {
 
     var hhmmss = new Date(seconds * 1000).toISOString().substr(11, 8);
     var strDuration = hhmmssShorten(hhmmss);
-    if (!scrSmall) { html += "<td>" + strDuration + "</td>\n"; }
+    //if (!scrSmall) { html += "<td>" + strDuration + "</td>\n"; }
+    if (true) { html += "<td>" + strDuration + "</td>\n"; }
     html += "<td><font size='+2'>" + name + "</font></td>\n";
 
     return html += "</tr>\n";
@@ -1060,7 +1062,8 @@ function progressTouched(i, element) {
     // Create our control box
     let msg = buildProgressControlBoxBody(i);
     let btn = buildProgressControlButtons(i);
-    popCreate("i", msg, "task_progress", "elm", element, btn);
+    var popId = popCreate("i", msg, "task_progress", "elm", element, btn);
+    popRegisterClose(popId, pcbClose)
 }
 
 function buildProgressControlBoxBody(i) {
@@ -1101,9 +1104,9 @@ function buildProgressControlButtons(i) {
     workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
-        "rewind", "&#x2BEC;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
         "play_toggle", "&#x23EF;︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
-        "forward", "&#x2BEE;", "Fast forward", "pcbClickForward(" + i +")",
+        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
         "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
     ]
 
@@ -1113,7 +1116,7 @@ function buildProgressControlButtons(i) {
 function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
 function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
 function pcbClickPlayPause(i) {
-    pcbClickCommon(i, "play_pause");
+    pcbClickCommon(i, "play_toggle");
     pauseAllTimers = !pauseAllTimers;
 }
 function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
@@ -1123,6 +1126,10 @@ function pcbClickCommon(i, caller) {
     console.log("pcbClickCommon(i) called from:", caller)
 }
 
+function pcbClose() {
+    // Called from popClose() using preset callback msgq[idWindow] = pcbClose();
+    pauseAllTimers = false;
+}
 function clickAddProject() {
     // Create empty record for add
     ttaProject = Object.assign({}, tta_project); // https://stackoverflow.com/a/34294740/6929343
@@ -1378,6 +1385,28 @@ function flashGrey(table, target) {
     // Flash grey for row just moved then remove after 600ms
     // TODO, each row in tabTasks and tabProjects has ID to assign .flashGrey {}
     // myTable.rows[target].cells[1].innerHTML = strDuration;
+    /*
+        from: https://stackoverflow.com/a/14608431/6929343
+        <table>
+            <tr>
+                <td>true</td>
+                <td class="flash">false</td>
+                <td>true</td>
+                <td>true</td>
+            </tr>
+        </table>
+
+        CSS
+
+        @keyframes flash {
+          from { background-color: red; }
+          to { background-color: inherit; }
+        }
+        .flash {
+          animation:         flash 1s infinite;
+        }
+
+    */
 }
 
 function paintConfigForm() {
@@ -2127,11 +2156,15 @@ function popClearByEntry(entry) {
     }
     delete msgq[entry.idWindow];  // Remove from msgq {}
 }
+function popRegisterClose(idWindow, callback) {
+    msgq[idWindow].callbackClose = callback;
+}
 
 function popClose(idWindow) {
     // Close window by ID name
     // elmWindow = idWindow.getElementsByClassName("msgq-window")[0];
     elmWindow = document.getElementById(idWindow);
+    // TODO: Grab entry for idWindow and check for popClose call back
     if (elmWindow == null) {
         alert("popClose() received bad idWindow: " + idWindow);
         return;
@@ -2139,6 +2172,7 @@ function popClose(idWindow) {
     elmWindow.style.opacity = "0";
     setTimeout(function(){
         elmWindow.style.display = "none";
+        if (msgq[idWindow].callbackClose !== null) { msgq[idWindow].callbackClose();
         popClearById(idWindow);
     }, 600);
 }
