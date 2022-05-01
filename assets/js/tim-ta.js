@@ -2209,7 +2209,8 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     if (buttons == null) {
-    html += '    <button class="msgq-window-button" title="Click to close" \n';
+    html += '    <button class="hdr-btn tta-btn msgq-window-button"\n';
+    html += '      title="Click to close" \n';
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '       >OK</button>\n';
     } else {
@@ -2237,7 +2238,8 @@ function htmlButtons(buttons) {
         let title = buttons[i+2];
         let onclick = buttons[i+3];
         html += '    <button id="'+ id + '" \n';
-        html += '      class="msq-window-button" title="' + title + '" \n';
+        html += '      class="hdr-btn tta-btn msq-window-button" \n';
+        html += '      title="' + title + '" \n';
         html += '      onclick="' + onclick + '" \n';
         html += '      >' + text + '</button>\n';
     }
