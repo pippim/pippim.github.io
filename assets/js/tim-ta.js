@@ -529,7 +529,7 @@ function bigFootStyle() {
             '  margin: 1rem;\n' +
             '  padding: .25rem .5rem;\n' +
             '  border: 3px solid;\n' +
-            '  border-radius: 2rem;\n' +
+            '  border-radius: 1rem;\n' +
             '}\n' +
             '.leftFoot, .centerFoot, .rightFoot {\n' +
             //'  flex-grow: 1;\n' +
@@ -2334,7 +2334,7 @@ function popBuildStyle(msg_type) {
             '  margin: 1rem;\n' +
             '  padding: .5rem;\n' +
             '  border: 3px solid;\n' +
-            '  border-radius: 2rem;\n' +
+            '  border-radius: 1rem;\n' +
             '}\n';
 
     html += '.msgq-window-button {\n' +
