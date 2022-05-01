@@ -2283,7 +2283,7 @@ function popBuildStyle(msg_type) {
     html += 'color: #fff;\n';
     html += '}\n';
 
-    html += '.msgq-window-buttons" {\n' +
+    html += '.msgq-window-buttons {\n' +
             '  display: flex;\n' +
             '  justify-content: space-around;\n' +
             '  margin: 1rem;\n' +
