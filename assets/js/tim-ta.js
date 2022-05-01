@@ -2156,8 +2156,8 @@ function popClearByEntry(entry) {
     }
     delete msgq[entry.idWindow];  // Remove from msgq {}
 }
-function popRegisterClose(idWindow, callback) {
-    msgq[idWindow].callbackClose = callback;
+function popRegisterClose(idWindow, callbackClose) {
+    msgq[idWindow].callbackClose = callbackClose;
 }
 
 function popClose(idWindow) {
