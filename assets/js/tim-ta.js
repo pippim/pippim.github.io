@@ -2162,6 +2162,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     var html = "";
     html += popBuildHtml(msg_type, msg, popIndex, buttons);
     html += popBuildStyle(msg_type);
+    console.log("html:", html);
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);  // Created <div> element
 
@@ -2276,7 +2277,7 @@ function popBuildStyle(msg_type) {
     html += '}\n';
 
     html += '.msgq-window-header {\n';
-    html += 'padding: .5rem;\n';
+    //html += 'padding: .5rem;\n';
     html += 'cursor: move;  z-index: 10;\n';
     html += 'background-color: ' + msg_color + ';\n';
     html += 'color: #fff;\n';
