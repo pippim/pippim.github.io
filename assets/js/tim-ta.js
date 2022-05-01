@@ -2171,7 +2171,6 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     var html = "";
     html += popBuildHtml(msg_type, msg, popIndex, buttons);
     html += popBuildStyle(msg_type);
-    console.log("html:", html);
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);  // Created <div> element
 
