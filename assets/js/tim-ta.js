@@ -2208,7 +2208,7 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     if (buttons == null) {
-    html += '    <button class="msq-button" title="Click to close" \n';
+    html += '    <button class="msgq-window-button" title="Click to close" \n';
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '       >OK</button>\n';
     } else {
@@ -2279,6 +2279,9 @@ function popBuildStyle(msg_type) {
     html += 'cursor: move;  z-index: 10;\n';
     html += 'background-color: ' + msg_color + ';\n';
     html += 'color: #fff;\n';
+    html += '}\n';
+
+    html += '.msgq-window-buttons" {\n';
     html += '}\n';
 
     html += '.msgq-window-button {\n';
