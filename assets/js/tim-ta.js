@@ -1123,7 +1123,10 @@ function buildProgressControlButtons(i) {
 
 function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
 function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
-function pcbClickPlayPause(i) { pcbClickCommon(i, "play_pause"); }
+function pcbClickPlayPause(i) {
+    pcbClickCommon(i, "play_pause");
+    pauseAllTimers = !pauseAllTimers;
+}
 function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
 function pcbClickEnd(i) { pcbClickCommon(i, "end"); }
 
