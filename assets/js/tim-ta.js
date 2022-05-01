@@ -2240,6 +2240,7 @@ function htmlButtons(buttons) {
         html += '      onclick="' + callback + '" \n';
         html += '       >' + text +'</button>\n';
     }
+    console.log("html:", html)
     return html;
 }
 
