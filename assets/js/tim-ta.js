@@ -2239,7 +2239,6 @@ function htmlButtons(buttons) {
         html += '      onclick="' + callback + '" \n';
         html += '       >' + text +'</button>\n';
     }
-    console.log("html:", html)
     return html;
 }
 
@@ -2280,6 +2279,11 @@ function popBuildStyle(msg_type) {
     html += 'cursor: move;  z-index: 10;\n';
     html += 'background-color: ' + msg_color + ';\n';
     html += 'color: #fff;\n';
+    html += '}\n';
+
+    html += '.msgq-button {\n';
+    html += 'width: 20px;\n';
+    html += 'height: 20px;\n';
     html += '}\n';
 
     html += "</style>\n";
