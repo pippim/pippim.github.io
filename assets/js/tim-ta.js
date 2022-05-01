@@ -2281,7 +2281,7 @@ function popBuildStyle(msg_type) {
     html += 'color: #fff;\n';
     html += '}\n';
 
-    html += '.msgq-button {\n';
+    html += '.msgq-window-button {\n';
     html += 'width: 20px;\n';
     html += 'height: 20px;\n';
     html += '}\n';
