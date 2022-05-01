@@ -1023,6 +1023,19 @@ function progressTouched(i, element) {
 
         Every action (except close) clears control and
         mounts a new one.
+
+        From: https://www.w3.org/TR/WD-wwwicn.html
+
+         [test: &play.start;]
+    &play.start; - play. Play button for starting a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.fast.forward, play.fast.reverse).
+[test: &play.stop;]
+    &play.stop; - stop play. Stop button for stopping a movie or sound, as on cassette or CD player (cf. play.start, play.pause, play.fast.forward, play.fast.reverse).
+[test: &play.pause;]
+    &play.pause; - pause. Pause button for pausing a movie or sound, as on cassette or CD player (cf. play.start, play.stop, play.fast.forward, play.fast.reverse).
+[test: &play.fast.forward;]
+    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
+[test: &play.fast.reverse;]
+    &play.fast.reverse; - fast reverse. fast reverse button for going back in a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
     */
     popClearByError("task_progress");  // Clear control box, not an error
     // Was a total progress bar clicked?
@@ -1079,14 +1092,19 @@ function buildProgressControlButtons(i) {
         - 23E9 ⏩︎ fast forward
         - 23ED ⏭︎ skip to end, next
         }
+    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
+        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
+[test: &play.fast.reverse;]
+        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+
     */
 
     workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
-        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        "rewind", "&play.fast.reverse;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
         "play_toggle", "&#x23EF;︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
+        "forward", "&play.fast.forward;", "Fast forward", "pcbClickForward(" + i +")",
         "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
     ]
 
