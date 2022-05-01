@@ -1092,25 +1092,29 @@ function buildProgressControlButtons(i) {
         - 23E9 ⏩︎ fast forward
         - 23ED ⏭︎ skip to end, next
         }
-    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
-        "forward", "&play.fast.forward;", "Fast forward", "pcbClickForward(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
-        DOUBLE RIGHT ARROW:
-        "forward", "&#xBB;", "Fast forward", "pcbClickForward(" + i +")",
 [test: &play.fast.reverse;]
         "rewind", "&play.fast.reverse;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
         "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
         DOUBLE LEFT ARROW:
         "rewind", "&#xAB;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        DOUBLE LEFT ARROW:
+        "rewind", "&#x2BEC;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
+        "forward", "&play.fast.forward;", "Fast forward", "pcbClickForward(" + i +")",
+        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
+        DOUBLE RIGHT ARROW:
+        "forward", "&#xBB;", "Fast forward", "pcbClickForward(" + i +")",
+        DOUBLE RIGHT ARROW:
+        "forward", "&#x2BEE;", "Fast forward", "pcbClickForward(" + i +")",
 
     */
 
     workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
-        "rewind", "&#xAB;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        "rewind", "&#x2BEC;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
         "play_toggle", "&#x23EF;︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
-        "forward", "&#xBB;", "Fast forward", "pcbClickForward(" + i +")",
+        "forward", "&#x2BEE;", "Fast forward", "pcbClickForward(" + i +")",
         "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
     ]
 
