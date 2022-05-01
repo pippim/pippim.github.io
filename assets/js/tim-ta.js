@@ -2254,34 +2254,28 @@ function popBuildStyle(msg_type) {
 
     var html = "<style>\n";
 
-    html += '.msgq-window {\n';
-    //html += 'position: fixed;\n';  // Doesn't move starts on viewport top
-    html += 'position: absolute;\n';  // Scrolls with document starts top doc
-    html += 'z-index: 9;\n';
-    html += 'opacity: 1;\n';
-    html += 'transition: opacity 0.6s;\n';
-    html += 'max-width: 90vw;\n';
-    html += 'max-height: 95vh;\n';
-    html += 'top: 263px;\n';
-    html += 'left: 20px;\n';
-    html += 'overflow: auto;\n';
-    html += 'background-color: #f1f1f1;\n';
-    html += 'border: .2rem solid #d3d3d3;\n';
-    html += 'color: black;\n';
-    html += 'text-align: center;\n';
-    html += 'padding: .5rem;\n';
-    // ERROR: Expected declaration but found “@include”.  Skipped to next declaration.
-    //html += '@include large { padding: 0.5rem; font-size: 1rem; }\n';
-    //html += '@include medium { padding: 0.4rem; font-size: 0.9rem; }\n';
-    //html += '@include small { padding: 0.3rem; font-size: 0.8rem; }\n';
-    html += '}\n';
+    html += '.msgq-window {\n' +
+            '  position: absolute;\n' +
+            '  z-index: 9;\n' +
+            '  opacity: 1;\n' +
+            '  transition: opacity 0.6s;\n' +
+            '  max-width: 90vw;\n' +
+            '  max-height: 95vh;\n' +
+            '  top: 263px;\n' +
+            '  left: 20px;\n' +
+            '  overflow: auto;\n' +
+            '  background-color: #f1f1f1;\n' +
+            '  border: .2rem solid #d3d3d3;\n' +
+            '  color: black;\n' +
+            '  text-align: center;\n' +
+            '  padding: .5rem;\n' +
+            '}\n';
 
-    html += '.msgq-window-header {\n';
-    //html += 'padding: .5rem;\n';
-    html += 'cursor: move;  z-index: 10;\n';
-    html += 'background-color: ' + msg_color + ';\n';
-    html += 'color: #fff;\n';
-    html += '}\n';
+    html += '.msgq-window-header {\n' +
+            '  cursor: move;  z-index: 10;\n' +
+            '  background-color: ' + msg_color + ';\n' +
+            '  color: #fff;\n' +
+            '}\n';
 
     html += '.msgq-window-buttons {\n' +
             '  display: flex;\n' +
