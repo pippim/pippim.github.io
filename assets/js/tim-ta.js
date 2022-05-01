@@ -20,7 +20,7 @@ var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
 scrSetSize();  // Call on document load
 
 function scrSetSize() {
-    // cell phones don't have window.innerWidth
+    // mobiles don't have window.innerWidth
     scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     scrSmall = scrMedium = scrLarge = false;
     if (scrWidth < 641) { scrSmall = true; }
@@ -425,6 +425,7 @@ function tabProjectDetail(i) {
         html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
     }           // Five columns of buttons
 
+    // TODO, each row in tabTasks and tabProjects has ID to assign .flashGrey {}
     html += "<td><font size='+2'>" + ttaProject.project_name + "</font></td>\n";
 
     if (!scrSmall) {
@@ -447,7 +448,7 @@ function paintTasksTable() {
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
     html += '<table id="tabTasks" class="tta-table">\n' ;
-        html += tabTasksHeading();
+    html += tabTasksHeading();
         for (var i = 0; i < cnt; i++) { html += tabTaskDetail(i); }
     html += '</table>\n';
     html += '</div>\n';
@@ -469,19 +470,6 @@ function paintTasksTable() {
 
     html += '<style>\n';
 
-/* Try tta-table styling only
-    html += '#tabTasks table { table-layout: auto; width: 100%; }\n';
-    html += '#tabTasks th, #tabTasks td {\n' +
-            '  padding: .25rem .25rem;\n' +
-            '}\n'
-    html += '#tabTasks th {\n' +
-            'position: -webkit-sticky;\n' +
-            'position: sticky;\n' +
-            'top: 0;\n' +
-            'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
-            '}\n'
-*/
     html += ttaTableStyle();
     html += ttaBtnStyle();
     html += bigFootStyle();
@@ -581,6 +569,7 @@ function tabTaskDetail(i) {
         html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
     }           // Five columns of buttons
 
+    // TODO, each row in tabTasks and tabProjects has ID to assign .flashGrey {}
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
     if (!scrSmall) {
@@ -1367,8 +1356,11 @@ function swapProject(source, target) {
     hold = ttaConfig.arrProjects[target];
     ttaConfig.arrProjects[target] = ttaConfig.arrProjects[source];
     ttaConfig.arrProjects[source] = hold;
+    // How to stick in .classGrey
     saveConfig();
     paintProjectsTable();
+    // Flash grey for row just moved then remove after 600ms
+    flashGrey("tabProjects", target)
 }
 function swapTask(source, target) {
     // Task parameter source index and target index
@@ -1378,6 +1370,14 @@ function swapTask(source, target) {
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
     saveConfig();
     paintTasksTable();
+    // Flash grey for row just moved then remove after 600ms
+    flashGrey("tabTasks", target)
+}
+
+function flashGrey(table, target) {
+    // Flash grey for row just moved then remove after 600ms
+    // TODO, each row in tabTasks and tabProjects has ID to assign .flashGrey {}
+    // myTable.rows[target].cells[1].innerHTML = strDuration;
 }
 
 function paintConfigForm() {
