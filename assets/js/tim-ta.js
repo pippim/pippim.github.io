@@ -1077,7 +1077,7 @@ function buildProgressControlButtons(i) {
         - 23ED ⏭︎ skip to end, next
         }
     */
-    D;"&#x270D;"
+
     workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
