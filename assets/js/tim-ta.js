@@ -1146,7 +1146,9 @@ async function runAllTimers() {
             var audioControl = clickListen(index);
             if (audioControl != null) {
                 // When !== null used, "TypeError: audioControl is undefined"
-                console.log("audioControl time:", audioControl.currentTime);
+                // Zero time is always appears so sleep 1/10th second for it to start.
+                await sleep(100);
+                console.log("audioControl.currentTime:", audioControl.currentTime);
                 // TODO green success message while alarm sounds, then clear if stopped
                 // currentTime is always 0 as if "await clickListen()" was used?
             }
