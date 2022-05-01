@@ -2230,8 +2230,7 @@ function htmlButtons(buttons) {
     ]
     */
     var html = "";
-    var loops = buttons.length / 4;
-    for (var i = 0; i < loops; i += 4) {
+    for (var i = 0; i < buttons.length; i += 4) {
         let id = buttons[i];
         let text = buttons[i+1];
         let title = buttons[i+2];
