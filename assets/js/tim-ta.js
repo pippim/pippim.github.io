@@ -2235,9 +2235,10 @@ function htmlButtons(buttons) {
         let text = buttons[i+1];
         let title = buttons[i+2];
         let callback = buttons[i+3];
-        html += '    <button id="'+ id +'" class="msq-button" title="' + title + '" \n';
-        html += '      onclick="' + callback + '" \n';
-        html += '       >' + text +'</button>\n';
+        html += '<button id="'+ id + '" \n';
+        html += 'class="msq-window-button" title="' + title + '" \n';
+        html += 'onclick="' + callback + '" \n';
+        html += '>' + text + '</button>\n';
     }
     return html;
 }
