@@ -1070,22 +1070,21 @@ function buildProgressControlBoxBody(i) {
 
 function buildProgressControlButtons(i) {
     /*  list of buttons for popCreate to use:
-        buttons[id] = {
-            id: id,
-            text: text,
-            title: title,
-            clicks: count,
-            opposing_clicks: count,
-            onclick: pcbClickXxxx(i)
+        - 23EE ⏮︎ skip to start, previous
+        - 23EA ⏪︎ rewind, fast backwards
+        - 23EF ⏯︎ play/pause toggle
+        - 23E9 ⏩︎ fast forward
+        - 23ED ⏭︎ skip to end, next
         }
     */
+    D;"&#x270D;"
     workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     var arrButtons = [
-        "begin", "⏮", "Skip to start, Previous", "pcbClickBegin(" + i +")",
-        "rewind", "⏪︎", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        "play_toggle", "⏯︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
-        "forward", "⏩",︎" fast forward", "pcbClickForward(" + i +")",
-        "end", "⏭", "Skip to end, Next", "pcbClickEnd(" + i +")"
+        "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
+        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        "play_toggle", "&#x23EF;︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
+        "forward", "&#x23E9;",︎" fast forward", "pcbClickForward(" + i +")",
+        "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
     ]
 
     return arrButtons;
