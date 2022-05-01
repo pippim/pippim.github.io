@@ -852,6 +852,7 @@ function clickAddProject() {
 // Global variables for Task countdown timers
 var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets;
 var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock;
+var pauseAllTimers;
 
 function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
@@ -862,6 +863,7 @@ function paintRunTimers(i) {
     allTimers = {};
     sleepMillis = 1000;
     cancelAllTimers = false;
+    pauseAllTimers = false;
     totalAllTimersTime = 0 ;
     wakeLock = false;  // Force mobile screen to stay on
     currentForm = "formRunTimers"
@@ -1096,6 +1098,7 @@ function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
 function pcbClickPlayPause(i) { pcbClickCommon(i, "play_pause"); }
 function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
 function pcbClickEnd(i) { pcbClickCommon(i, "end"); }
+
 function pcbClickCommon(i, caller) {
     console.log("pcbClickCommon(i) called from:", caller)
 }
@@ -1135,10 +1138,15 @@ async function runAllTimers() {
 
     while (true) {
         if (cancelAllTimers) { return; }  // cancel button picked in footer
-        if (entry.progress == 0 && getTaskValue('task_prompt') == "true") {
-            // Prompt to begin timer
-            msg = "Ready to begin Timed Task " + ttaTask.task_name;
-            await popPrompt('i', msg);  // Blocking function, we wait...
+        if (entry.progress == 0) {
+            // A timer is ready to start
+            popClearByError("task_progress");  // Clear Progress Control Box
+            pauseAllTimers = false;  // Progress Control Box can pause. But not now
+            if (getTaskValue('task_prompt') == "true") {
+                // Prompt to begin timer
+                msg = "Ready to begin Timed Task " + ttaTask.task_name;
+                await popPrompt('i', msg);  // Blocking function, we wait...
+            }
         }
 
         var timeCurrent = new Date().getTime();
@@ -1167,9 +1175,10 @@ async function runAllTimers() {
                 // The last task has ended, is it the last set too?
                 remaining_run_times -= 1;
                 if (remaining_run_times <= 0) {
-                    cancelAllTimers = true;
+                    cancelAllTimers = true;  // Exit from while(true) & updates
                     await popPrompt("s", "Run Project " +
                                     ttaProject.project_name + " completed.");
+                    exitAllTimers();  // Go back to calling table
                 }
                 // Rebuild allTimers{} to fresh state for new set
                 index = 0;
@@ -1191,6 +1200,7 @@ async function runAllTimers() {
 }
 
 function updateRunTimer(myTable, entry) {
+    if (pauseAllTimers) { return; }
     entry.progress += 1
     entry.remaining -= 1
     entry.elm.value = entry.progress.toString();
