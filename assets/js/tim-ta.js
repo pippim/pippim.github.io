@@ -1091,6 +1091,15 @@ function buildProgressControlButtons(i) {
     return arrButtons;
 }
 
+function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
+function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
+function pcbClickPlayPause(i) { pcbClickCommon(i, "play_pause"); }
+function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
+function pcbClickEnd(i) { pcbClickCommon(i, "end"); }
+function pcbClickCommon(i) {
+    console.log("pcbClickCommon(i) called from:", parent)
+}
+
 function clickAddProject() {
     // Create empty record for add
     ttaProject = Object.assign({}, tta_project); // https://stackoverflow.com/a/34294740/6929343
@@ -2222,7 +2231,7 @@ function popBuildHtml(msg_type, msg, index, buttons) {
 }
 
 function htmlButtons(buttons) {
-    /* ABOVE:
+    /* DECLARED ABOVE:
         var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
         "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
