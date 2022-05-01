@@ -1012,13 +1012,12 @@ function initTimersAfterDOM() {
 
 function progressTouched(i, element) {
     /* Pop up control box for Task Name progress bar with:
-        - 23E9 ⏩︎ fast forward
-        - 23EA ⏪︎ rewind, fast backwards
-        - 23EB ⏫︎ fast increase
-        - 23EC ⏬︎ fast decrease
-        - 23ED ⏭︎ skip to end, next
+
         - 23EE ⏮︎ skip to start, previous
+        - 23EA ⏪︎ rewind, fast backwards
         - 23EF ⏯︎ play/pause toggle
+        - 23E9 ⏩︎ fast forward
+        - 23ED ⏭︎ skip to end, next
 
         Every action (except close) clears control and
         mounts a new one.
@@ -1055,8 +1054,9 @@ function progressTouched(i, element) {
     }
 
     // Create our control box
-    msg = buildProgressControlBoxBody(i);
-    popCreate("i", msg, "task_progress", "elm", element);
+    let msg = buildProgressControlBoxBody(i);
+    let btn =  buildProgressControlButtons(i);
+    popCreate("i", msg, "task_progress", "elm", element, btn);
 }
 
 function buildProgressControlBoxBody(i) {
@@ -1071,17 +1071,24 @@ function buildProgressControlBoxBody(i) {
 function buildProgressControlButtons(i) {
     /*  list of buttons for popCreate to use:
         buttons[id] = {
-            id: id
-            text: text
-            title: title
+            id: id,
+            text: text,
+            title: title,
+            clicks: count,
+            opposing_clicks: count,
             onclick: pcbClickXxxx(i)
         }
     */
     workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
-    var msg = "";
-    msg += "<b>Progress Controls</b><br>\n";
-    msg += ttaProject.project_name + " - " + workTask.task_name + "<br>";
-    return msg;
+    var arrButtons = [
+        "begin", "⏮", "Skip to start, Previous", "pcbClickBegin(" + i +")",
+        "rewind", "⏪︎", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        "play_toggle", "⏯︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
+        "forward", "⏩",︎" fast forward", "pcbClickForward(" + i +")",
+        "end", "⏭", "Skip to end, Next", "pcbClickEnd(" + i +")"
+    ]
+
+    return arrButtons;
 }
 
 function clickAddProject() {
