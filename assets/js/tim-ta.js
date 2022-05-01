@@ -1083,7 +1083,7 @@ function buildProgressControlButtons(i) {
         "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
         "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
         "play_toggle", "&#x23EF;︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
-        "forward", "&#x23E9;",︎" fast forward", "pcbClickForward(" + i +")",
+        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
         "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
     ]
 
