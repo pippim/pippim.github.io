@@ -2281,13 +2281,19 @@ function popBuildStyle(msg_type) {
     html += 'color: #fff;\n';
     html += '}\n';
 
-    html += '.msgq-window-buttons" {\n';
-    html += '}\n';
+    html += '.msgq-window-buttons" {\n' +
+            '  display: flex;\n' +
+            '  justify-content: space-around;\n' +
+            '  margin: 1rem;\n' +
+            '  padding: .25rem .5rem;\n' +
+            '  border: 3px solid;\n' +
+            '  border-radius: 2rem;\n' +
+            '}\n';
 
-    html += '.msgq-window-button {\n';
-    html += 'width: 20px;\n';
-    html += 'height: 20px;\n';
-    html += '}\n';
+    html += '.msgq-window-button {\n' +
+            '  font-size: 22px;\n' +
+            '  border-radius: 1rem;\n' +
+            '}\n';
 
     html += "</style>\n";
 
