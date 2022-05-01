@@ -1068,6 +1068,22 @@ function buildProgressControlBoxBody(i) {
     return msg;
 }
 
+function buildProgressControlButtons(i) {
+    /*  list of buttons for popCreate to use:
+        buttons[id] = {
+            id: id
+            text: text
+            title: title
+            onclick: pcbClickXxxx(i)
+        }
+    */
+    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
+    var msg = "";
+    msg += "<b>Progress Controls</b><br>\n";
+    msg += ttaProject.project_name + " - " + workTask.task_name + "<br>";
+    return msg;
+}
+
 function clickAddProject() {
     // Create empty record for add
     ttaProject = Object.assign({}, tta_project); // https://stackoverflow.com/a/34294740/6929343
@@ -1136,11 +1152,7 @@ async function runAllTimers() {
                     cancelAllTimers = true;
                     await popPrompt("s", "Run Project " +
                                     ttaProject.project_name + " completed.");
-/*                    .then(() => {
-                        alert("Double check popPrompt appears.")
-                        exitAllTimers();
-                    } );
-*/                }
+                }
                 // Rebuild allTimers{} to fresh state for new set
                 index = 0;
                 resetTimersSet(myTable, run_times, remaining_run_times);
@@ -2081,7 +2093,7 @@ function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm) {
     }
 }
 
-function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
+function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     /*  MAJOR FUNCTION to display error messages (and control boxes)
         msg_type = "e" red error message
                    "w" orange warning message
@@ -2111,7 +2123,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
             console.trace();
             return false;
     }
-    var elm = id_elm; // May be undefined
+    var elm = id_elm; // May be undefined, an element or an ID
     if (arguments.length >= 4 && id_elm_type == "id") {
         if (arguments.length < 5) {
             alert('e', "msgAlert() when 'id_elm_type' = 'id', next argument required.");
@@ -2120,8 +2132,10 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm) {
         }
         // Rewrite id in elm parameter with actual element.
         elm = document.getElementById(id_elm);
+        console.log("elm assigned by getElementById:", id_elm_type)
     }
 
+    console.log("elm:", elm, "buttons:", buttons)
     var p = {};
     p['idWindow'] = "popIndex" + popIndex;
     p['elmWindow'] = document.createElement('div');
