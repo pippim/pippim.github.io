@@ -1096,8 +1096,8 @@ function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
 function pcbClickPlayPause(i) { pcbClickCommon(i, "play_pause"); }
 function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
 function pcbClickEnd(i) { pcbClickCommon(i, "end"); }
-function pcbClickCommon(i) {
-    console.log("pcbClickCommon(i) called from:", parent)
+function pcbClickCommon(i, caller) {
+    console.log("pcbClickCommon(i) called from:", caller)
 }
 
 function clickAddProject() {
