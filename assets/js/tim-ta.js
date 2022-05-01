@@ -598,21 +598,21 @@ function hmsToString(hours, minutes, seconds) {
     return str;
 }
 
-function tabButton(i, button_code, title, callback) {
+function tabButton(i, button_code, title, onclick) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
-    var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
-               'id="tabBtnId_' + callback + i + '" \n' + 
-               'type="button" onclick="' + callback + '(' + i + ')" \n' +
+    var html = '<td><button class="hdr-btn tta-btn ' + onclick + '" \n' +
+               'id="tabBtnId_' + onclick + i + '" \n' +
+               'type="button" onclick="' + onclick + '(' + i + ')" \n' +
                'title="' + title + '">' + button_code + '</button></td>\n';
     return html;
 }
 
-function taskButton(button_code, title, callback) {
+function taskButton(button_code, title, onclick) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
-    var html = '<button class="hdr-btn tta-btn ' + callback + '" \n' +
-               'type="button" onclick="' + callback + '()" \n' +
+    var html = '<button class="hdr-btn tta-btn ' + onclick + '" \n' +
+               'type="button" onclick="' + onclick + '()" \n' +
                'title="' + title + '">' + button_code + '</button>\n';
     return html;
 }
@@ -698,12 +698,12 @@ function clickListen(i) {
 
 function soundAlarm(i, sound) {
     /* From above: tabButton(i, tabListenSym, tabListenTitle, "clickListen");
-    tabButton(i, button_code, title, callback) {
+    tabButton(i, button_code, title, onclick) {
         // Add button to table detail. Return HTML with <button> code
         // code is the HTML code, E.G. &#x25b6; for Play button.
-        var html = '<td><button class="hdr-btn tta-btn ' + callback + '" \n' +
-                   'id="tabBtnId_' + callback + i + '" \n' +
-                   'type="button" onclick="' + callback + '(' + i + ')" \n' +
+        var html = '<td><button class="hdr-btn tta-btn ' + onclick + '" \n' +
+                   'id="tabBtnId_' + onclick + i + '" \n' +
+                   'type="button" onclick="' + onclick + '(' + i + ')" \n' +
                    'title="' + title + '">' + button_code + '</button></td>\n';
         return html;
     }
@@ -1614,7 +1614,7 @@ function buildSelectOption(name, default_name) {
 }
 
 function setSelectInput(data) {
-    // screen callback to Set chosen option value in inpSelects
+    // screen onclick to Set chosen option value in inpSelects
     inpSelects[data.id].value = data.value;
     //console.log("setSelectInput(data) data.id, data.value:", data.id, data.value)
     //console.log("inpSelects:", inpSelects)
@@ -2114,7 +2114,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
                       "elm" an element is passed in next field.
         elm = an ID or an element. If an ID convert it to an element.
         buttons = array of 5 fields per button:
-            "name", "text", "title", "callback(arg)"
+            "name", "text", "title", "onclick(arg)"
 
         RETURNS the window element created
     */
@@ -2235,11 +2235,11 @@ function htmlButtons(buttons) {
         let id = buttons[i];
         let text = buttons[i+1];
         let title = buttons[i+2];
-        let callback = buttons[i+3];
-        html += '<button id="'+ id + '" \n';
-        html += 'class="msq-window-button" title="' + title + '" \n';
-        html += 'onclick="' + callback + '" \n';
-        html += '>' + text + '</button>\n';
+        let onclick = buttons[i+3];
+        html += '    <button id="'+ id + '" \n';
+        html += '      class="msq-window-button" title="' + title + '" \n';
+        html += '      onclick="' + onclick + '" \n';
+        html += '      >' + text + '</button>\n';
     }
     return html;
 }
