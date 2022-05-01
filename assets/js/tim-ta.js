@@ -1029,9 +1029,9 @@ function progressTouched(i, element) {
     // What is the running ones-based progress bar number?
     const activeBarNo = getActiveTimerNo();
     const boolTouchedActive = i + 1 === activeBarNo ? true : false;
-    console.log("Clicked on a boolTotalBar?:", boolTotalBar);
-    console.log("Active Progress Bar number:", activeBarNo);
-    console.log("boolTouchedActive?:", boolTouchedActive);
+    //console.log("Clicked on a boolTotalBar?:", boolTotalBar);
+    //console.log("Active Progress Bar number:", activeBarNo);
+    //console.log("boolTouchedActive?:", boolTouchedActive);
 
     popClearByError("no_tasks_running");
     if (activeBarNo == 0) {
@@ -1055,7 +1055,7 @@ function progressTouched(i, element) {
 
     // Create our control box
     let msg = buildProgressControlBoxBody(i);
-    let btn =  buildProgressControlButtons(i);
+    let btn = buildProgressControlButtons(i);
     popCreate("i", msg, "task_progress", "elm", element, btn);
 }
 
@@ -1063,9 +1063,9 @@ function buildProgressControlBoxBody(i) {
     // Get task details into work buffer
     workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     var msg = "";
-    msg += "<b><font size='+2'>Progress Controls</font></b><br>\n";
-    msg += "Project: " + ttaProject.project_name +
-           " - Task: " + workTask.task_name + "<br>";
+    msg += "<b><font size='+2'>Timed Task Overrides</font></b><br><br>\n";
+    msg += "Project: <b>" + ttaProject.project_name +
+           "</b> - Task: <b>" + workTask.task_name + "</b><br>";
     return msg;
 }
 
@@ -2146,7 +2146,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
         //console.log("elm assigned by getElementById:", id_elm_type)
     }
 
-    console.log("elm:", elm, "buttons:", buttons)
+    //console.log("elm:", elm, "buttons:", buttons)
     var p = {};
     p['idWindow'] = "popIndex" + popIndex;
     p['elmWindow'] = document.createElement('div');
@@ -2212,11 +2212,23 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '       >OK</button>\n';
     } else {
-    html += '    <p>place holder for buttons array</p>\n';
+    html += htmlButtons(buttons);
     }
     html += '  </div>\n';
     html += '</div>\n';
     return html;
+}
+
+function htmlButtons(buttons) {
+    /* ABOVE:
+        var arrButtons = [
+        "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
+        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        "play_toggle", "&#x23EF;︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
+        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
+        "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
+    ]
+    */
 }
 
 function popBuildStyle(msg_type) {
