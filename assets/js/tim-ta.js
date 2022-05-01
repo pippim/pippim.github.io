@@ -2208,7 +2208,7 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     if (buttons == null) {
-    html += '    <button class="msq-button-ok" title="Click to close" \n';
+    html += '    <button class="msq-button" title="Click to close" \n';
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '       >OK</button>\n';
     } else {
@@ -2229,6 +2229,18 @@ function htmlButtons(buttons) {
         "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
     ]
     */
+    var html = "";
+    var loops = buttons.length / 4;
+    for (const i = 0; i < loops; i++) {
+        let id = buttons[i];
+        let text = buttons[i+1];
+        let title = buttons[i+2];
+        let callback = buttons[i+3];
+        html += '    <button id="'+ id +'" class="msq-button" title="' + title + '" \n';
+        html += '      onclick="' + callback + '" \n';
+        html += '       >' + text +'</button>\n';
+    }
+    return html;
 }
 
 function popBuildStyle(msg_type) {
