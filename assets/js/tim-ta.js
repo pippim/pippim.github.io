@@ -2231,7 +2231,7 @@ function htmlButtons(buttons) {
     */
     var html = "";
     var loops = buttons.length / 4;
-    for (const i = 0; i < loops; i++) {
+    for (var i = 0; i < loops; i++) {
         let id = buttons[i];
         let text = buttons[i+1];
         let title = buttons[i+2];
