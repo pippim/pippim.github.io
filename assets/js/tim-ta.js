@@ -1056,7 +1056,7 @@ function progressTouched(i, element) {
 
     // Create our control box
     msg = buildProgressControlBoxBody(i);
-    popCreate("i", msg, "elm", element);
+    popCreate("i", msg, "task_progress", "elm", element);
 }
 
 function buildProgressControlBoxBody(i) {
