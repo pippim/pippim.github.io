@@ -2172,7 +2172,7 @@ function popClose(idWindow) {
     elmWindow.style.opacity = "0";
     setTimeout(function(){
         elmWindow.style.display = "none";
-        if (msgq[idWindow].callbackClose !== null) { msgq[idWindow].callbackClose();
+        if (msgq[idWindow].callbackClose !== null) { msgq[idWindow].callbackClose(); }
         popClearById(idWindow);
     }, 600);
 }
