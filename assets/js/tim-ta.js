@@ -171,7 +171,7 @@ function get_dd_field (name) {
     get_dd_field("fail_test_2")
 */
 
-function initSelectFiles () {
+function initSelectFiles() {
     /* Called on load and after drag & drop sound files */
     // Convert array of sound filenames to string delineated by |
     var replaceString = "";
@@ -208,7 +208,7 @@ function readConfig() {
 function saveConfig() {
     localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
 }
-// Temporary to replace bad configuration
+// Uncomment below to erase corrupted configuration
 // ttaNewConfig();
 // saveConfig();
 
@@ -219,15 +219,15 @@ function ttaNewConfig() {
     ttaProject.project_name = "Laundry";
 
     ttaNewTask("Wash Cycle");
-    ttaTaskDuration(0, 16, 30);
+    ttaTaskDuration(0, 16, 15);
     ttaAddTask(ttaTask);
 
     ttaNewTask("Rinse Cycle");
-    ttaTaskDuration(0, 13, 15);
+    ttaTaskDuration(0, 13);
     ttaAddTask(ttaTask);
 
     ttaNewTask("Dryer");
-    ttaTaskDuration(0, 58, 0);
+    ttaTaskDuration(0, 58, 30);
     ttaAddTask(ttaTask);
 
     ttaConfig.arrProjects = [ttaProject.project_name];
