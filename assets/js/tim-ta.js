@@ -436,7 +436,7 @@ function tabProjectDetail(i) {
 }
 
 /* These buttons are for actions/controls box used on mobiles */
-var tabProjectButtons [
+var tabProjectButtons = [
     "project_up", tabUpSym, tabUpTitle, "clickUp",
     "project_down", tabDownSym, tabDownTitle, "clickDown",
     "project_delete", tabDeleteSym, tabDeleteTitle, "clickDelete",
@@ -589,7 +589,7 @@ function tabTaskDetail(i) {
 }
 
 /* These buttons are for actions/controls box used on mobiles */
-var tabTaskButtons [
+var tabTaskButtons = [
     "task_listen", tabListenSym, tabListenTitle, "clickListen",
     "task_up", tabUpSym, tabUpTitle, "clickUp",
     "task_down", tabDownSym, tabDownTitle, "clickDown",
@@ -795,11 +795,6 @@ function sendNotification(body, header, icon) {
         granted ? showNotification() : showError();
 
     })();
-}
-
-function clickFuture(i) {
-    clickCommon(i);
-    popCreateUniqueError('i', "Future feature not implemented yet", "future");
 }
 
 function clickUp(i) {
