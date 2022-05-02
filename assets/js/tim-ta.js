@@ -1488,11 +1488,17 @@ function clickControls(i) {
     popClearByError("action_controls");  // Clear control box, not an error
     // Was a total progress bar clicked?
     var btn;
-    if (currentTable == "Projects") { btn = tabProjectButtons; }
-    else if (currentTable == "Tasks") { btn = tabTaskButtons; }
+    if (currentTable == "Projects") {
+        id = "tabProject" + i;
+        btn = tabProjectButtons;
+    }
+    else if (currentTable == "Tasks") {
+        id = "tabTask" + i;
+        btn = tabTaskButtons;
+    }
     else { popCreate ("e", 'currentTable not "Projects" or "Tasks":', currentTable); }
     msg = "Test Actions/Controls Box" ;
-    var popId = popCreate("i", msg, "action_controls", "elm", element, btn);
+    var popId = popCreate("i", msg, "action_controls", "id", id, btn);
     popRegisterClose(popId, ctlClose)
 }
 
