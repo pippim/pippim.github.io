@@ -1585,7 +1585,7 @@ function flashGrey(id) {
     elm.classList.add("flash");
     setTimeout(function(){
         elm.classList.remove("flash");
-    }, 3000);
+    }, 2000);
 }
 
 function paintConfigForm() {
