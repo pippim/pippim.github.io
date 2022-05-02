@@ -521,7 +521,16 @@ function ttaTableStyle() {
             '  z-index: 1;\n' +
             '  background: #f1f1f1;\n' +
             '}\n'
+            '@keyframes flash {\n'
+            '  from { background-color: grey; }\n'
+            '  to { background-color: inherit; }\n'
+            '}\n'
+            '.flash {\n'
+            '  animation:         flash 1s infinite;\n'
+            '}\n'
+
 }
+
 function bigFootStyle() {
     return  '.bigFoot {\n' +
             '  display: flex;\n' +
@@ -1571,7 +1580,7 @@ function swapTask(source, target) {
 }
 
 function flashGrey(table, target) {
-    // Flash grey for row just moved then remove after 600ms
+    // Flash grey for row just moved then remove after 600ms  jump
     // TODO, each row in tabTasks and tabProjects has ID to assign .flashGrey {}
     // myTable.rows[target].cells[1].innerHTML = strDuration;
     /*
@@ -1588,7 +1597,7 @@ function flashGrey(table, target) {
         CSS
 
         @keyframes flash {
-          from { background-color: red; }
+          from { background-color: grey; }
           to { background-color: inherit; }
         }
         .flash {
