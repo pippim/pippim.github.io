@@ -520,13 +520,13 @@ function ttaTableStyle() {
             '  top: 0;\n' +
             '  z-index: 1;\n' +
             '  background: #f1f1f1;\n' +
-            '}\n'
-            '@keyframes flash {\n'
-            '  from { background-color: grey; }\n'
-            '  to { background-color: inherit; }\n'
-            '}\n'
-            '.flash {\n'
-            '  animation:         flash 1s infinite;\n'
+            '}\n' +
+            '@keyframes flash {\n' +
+            '  from { background-color: grey; }\n' +
+            '  to { background-color: inherit; }\n' +
+            '}\n' +
+            '.flash {\n' +
+            '  animation:         flash 1s infinite;\n' +
             '}\n'
 
 }
