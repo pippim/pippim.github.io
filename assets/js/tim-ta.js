@@ -411,7 +411,7 @@ function tabProjectsHeading() {
 
 function tabProjectDetail(i) {
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[i]];
-    var html = '<tr>\n';
+    var html = '<tr id="tabProject' + i + '">\n';
     if (scrSmall) {
         html += tabButton(i, tabPlaySym, tabPlayTitle, "paintRunTimers");
         html += tabButton(i, tabControlsSym, tabControlsTitle, "clickControls");
@@ -564,8 +564,8 @@ function tabTasksHeading() {
 
 function tabTaskDetail(i) {
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-    // var html = '<tr">\n';  // This shouldn't have worked before???
-    var html = '<tr>\n';
+
+    var html = '<tr id="tabTask' + i + '">\n';
     if (scrSmall) {
         html += tabButton(i, tabListenSym, tabListenTitle, "clickListen");
         html += tabButton(i, tabControlsSym, tabControlsTitle, "clickControls");
