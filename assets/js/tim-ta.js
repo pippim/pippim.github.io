@@ -2593,11 +2593,13 @@ function dragElement(elm) {
   if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
+    document.getElementById(elm.id + "_header").touchstart = dragTouchStart;
     // https://stackoverflow.com/a/52554777/6929343
 
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elm.onmousedown = dragMouseDown;
+    elm.touchstart = dragTouchStart;
   }
 
   function dragMouseDown(e) {
@@ -2609,6 +2611,17 @@ function dragElement(elm) {
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
+  }
+
+  function dragTouchStart(e) {
+    e = e || window.event;
+    e.preventDefault();  // Prevents text highlighting while dragging header
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.touchend = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.ontouchmove = elementDrag;
   }
 
   function elementDrag(e) {
@@ -2628,6 +2641,8 @@ function dragElement(elm) {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
+    document.ontouchend = null;
+    document.ontouchmove = null;
   }
 }
 
