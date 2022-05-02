@@ -2549,8 +2549,8 @@ function popBuildStyle(msg_type) {
             '  justify-content: space-around;\n' +
             '  width: 100%;\n' +
             //'  margin: .25rem;\n' +
-            //'  padding: .5rem;\n' +
-            '  border: 3px solid;\n' +
+            '  padding: .25rem;\n' +
+            '  border: 2px solid grey;\n' +
             '  border-radius: 1rem;\n' +
             '}\n';
 
