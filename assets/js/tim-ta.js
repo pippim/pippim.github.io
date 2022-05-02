@@ -1519,7 +1519,7 @@ function buildActionControlBoxBody(i) {
     msg += "<b><font size='+2'>Actions/Controls Box</font></b><br><br>\n";
     msg += "Project: <b>" + ttaProject.project_name + "</b>\n";
     if (currentTable == "Tasks") {
-    msg += " - Task: <b>" + workTask.task_name + "</b>\n";
+    msg += " - Task: <b>" + ttaTask.task_name + "</b>\n";
     }
     msg += "<br>";
     return msg;
