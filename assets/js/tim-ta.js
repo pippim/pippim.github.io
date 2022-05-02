@@ -1521,7 +1521,7 @@ function buildActionControlBoxBody(i) {
     if (currentTable == Tasks) {
     msg += " - Task: <b>" + workTask.task_name + "</b>\n";
     }
-    msg += """<br>";
+    msg += "<br>";
     return msg;
 }
 
