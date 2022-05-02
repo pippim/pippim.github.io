@@ -2548,8 +2548,8 @@ function popBuildStyle(msg_type) {
             '  display: flex;\n' +
             '  justify-content: space-around;\n' +
             '  width: 100%;\n' +
-            '  margin: .25rem;\n' +
-            '  padding: .5rem;\n' +
+            //'  margin: .25rem;\n' +
+            //'  padding: .5rem;\n' +
             '  border: 3px solid;\n' +
             '  border-radius: 1rem;\n' +
             '}\n';
