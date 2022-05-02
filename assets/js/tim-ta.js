@@ -502,7 +502,7 @@ function ttaTableStyle() {
     if (scrSmall) { col = 3; }  // The column to receive extra padding
     else if (currentTable == "Projects") { col = 7; }
     else if (currentTable == "Tasks") { col = 6; }
-    if (scrSmall) { col = 3; }
+    //if (scrSmall) { col = 3; }
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
             '  width: 100%;\n' +
@@ -1386,7 +1386,7 @@ function updateRunTimerDuration(myTable, entry) {
     var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
     var strDuration = hhmmssShorten(hhmmss);
     if (strDuration == "") { strDuration = "Done"}
-    if (scrSmall) { return; }  // Duration doesn't display on small screen
+    //if (scrSmall) { return; }  // Duration doesn't display on small screen
     myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration;
 }
 
@@ -1519,7 +1519,7 @@ function buildActionControlBoxBody(i) {
     msg += "<b><font size='+2'>Actions/Controls Box</font></b><br><br>\n";
     msg += "Project: <b>" + ttaProject.project_name + "</b>\n";
     if (currentTable == "Tasks") {
-    msg += " - Task: <b>" + ttaTask.task_name + "</b>\n";
+        msg += " - Task: <b>" + ttaTask.task_name + "</b>\n";
     }
     msg += "<br>";
     return msg;
