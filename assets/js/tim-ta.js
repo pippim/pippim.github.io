@@ -547,10 +547,11 @@ function bigFootStyle() {
 }
 
 function ttaBtnStyle() {
+    // Override margin-left from /assets/js/css/style.scss: .hdr-btn{}
     return  '.tta-btn {\n' +
             '  font-size: 22px;\n' +
             '  border-radius: 1rem;\n' +
-            // '  margin: .5rem;\n' +
+            '  margin-left: 0px ! important;\n' +
             '}\n'
 }
 
