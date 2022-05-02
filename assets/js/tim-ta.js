@@ -435,14 +435,17 @@ function tabProjectDetail(i) {
     return html += "</tr>\n";
 }
 
-/* These buttons are for actions/controls box used on mobiles */
-var tabProjectButtons = [
-    "project_up", tabUpSym, tabUpTitle, "clickUp",
-    "project_down", tabDownSym, tabDownTitle, "clickDown",
-    "project_delete", tabDeleteSym, tabDeleteTitle, "clickDelete",
-    "project_tasks", tabListSym, tabTasksTitle, "clickTasks",
-    "project_edit", tabEditSym, tabEditTitle, "clickEdit"
-]
+/* These buttons are for actions/controls box used on mobiles  jump */
+function buildProjectButtons (i) {
+    var tabProjectButtons = [
+        "project_up", tabUpSym, tabUpTitle, "clickUp(" + i + ")",
+        "project_down", tabDownSym, tabDownTitle, "clickDown(" + i + ")",
+        "project_delete", tabDeleteSym, tabDeleteTitle, "clickDelete(" + i + ")",
+        "project_tasks", tabListSym, tabTasksTitle, "clickTasks(" + i + ")",
+        "project_edit", tabEditSym, tabEditTitle, "clickEdit(" + i + ")"
+    ]
+    return tabProjectButtons;
+}
 
 function paintTasksTable() {
     // Assumes ttaConfig and ttaProject are populated
@@ -588,14 +591,17 @@ function tabTaskDetail(i) {
     return html += "</tr>\n";
 }
 
-/* These buttons are for actions/controls box used on mobiles */
-var tabTaskButtons = [
-    "task_listen", tabListenSym, tabListenTitle, "clickListen",
-    "task_up", tabUpSym, tabUpTitle, "clickUp",
-    "task_down", tabDownSym, tabDownTitle, "clickDown",
-    "task_delete", tabDeleteSym, tabDeleteTitle, "clickDelete",
-    "task_edit", tabEditSym, tabEditTitle, "clickEdit"
-]
+/* These buttons are for actions/controls box used on mobiles  jump */
+function buildTaskButtons(i) {
+    var tabTaskButtons = [
+        "task_listen", tabListenSym, tabListenTitle, "clickListen(" + i + ")",
+        "task_up", tabUpSym, tabUpTitle, "clickUp(" + i + ")",
+        "task_down", tabDownSym, tabDownTitle, "clickDown(" + i + ")",
+        "task_delete", tabDeleteSym, tabDeleteTitle, "clickDelete(" + i + ")",
+        "task_edit", tabEditSym, tabEditTitle, "clickEdit(" + i + ")"
+    ]
+    return tabTaskButtons
+}
 
 function hmsToString(hours, minutes, seconds) {
     var str = "";
@@ -1145,7 +1151,7 @@ function pcbClose() {
 }
 
 function progressTouched(i, element) {
-    /* Pop up control box for Task Name progress bar with:
+    /* Pop up control box for Task Name progress bar with:  jump
 
         - 23EE ⏮︎ skip to start, previous
         - 23EA ⏪︎ rewind, fast backwards
@@ -1479,7 +1485,7 @@ function convertNumber(value) {
 */
 
 function clickControls(i) {
-    // Popup actions/control buttons box for small screens
+    // Popup actions/control buttons box for small screens   jump
     // TODO: Separate functions for Projects Table and Tasks Table.
     clickCommon(i);
     /* Pop up control box for Projects Table and Tasks Table mobile screen
@@ -1487,28 +1493,35 @@ function clickControls(i) {
     */
     popClearByError("action_controls");  // Clear control box, not an error
     // Was a total progress bar clicked?
-    var btn;
+    var id, btn;
     if (currentTable == "Projects") {
         id = "tabProject" + i;
-        btn = tabProjectButtons;
+        btn = buildProjectButtons(i);
     }
     else if (currentTable == "Tasks") {
         id = "tabTask" + i;
-        btn = tabTaskButtons;
+        btn = buildTaskButtons(i);
     }
-    else { popCreate ("e", 'currentTable not "Projects" or "Tasks":', currentTable); }
-    msg = "Test Actions/Controls Box" ;
+    else {
+        popCreate ("e", 'currentTable not "Projects" or "Tasks":', currentTable);
+        return
+    }
+
+    // Create our control box
+    msg = buildActionControlBoxBody(i);
     var popId = popCreate("i", msg, "action_controls", "id", id, btn);
-    popRegisterClose(popId, ctlClose)
+    popRegisterClose(popId, ctlClose);
 }
 
 function buildActionControlBoxBody(i) {
     // Get task details into work buffer
-    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
     var msg = "";
-    msg += "<b><font size='+2'>Timed Task Overrides</font></b><br><br>\n";
-    msg += "Project: <b>" + ttaProject.project_name +
-           "</b> - Task: <b>" + workTask.task_name + "</b><br>";
+    msg += "<b><font size='+2'>Actions/Controls Box</font></b><br><br>\n";
+    msg += "Project: <b>" + ttaProject.project_name + "</b>\n";
+    if (currentTable == Tasks) {
+    msg += " - Task: <b>" + workTask.task_name + "</b>\n";
+    }
+    msg += """<br>";
     return msg;
 }
 
@@ -1661,7 +1674,8 @@ function paintProjectForm(mode) {
     html = htmlSetContainer(html);
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
-    html += '<form id="formProject"><table id="tabProject" class="tta-table">\n' ;
+    // May 1/22 remove below: <table id="tabProject" class="tta-table">\n' ;
+    html += '<form id="formProject"><table class="tta-table">\n' ;
     // TODO: Why not just loop through all keys? - Because order is random!
 
     // TODO: Put these in a loop
@@ -1727,7 +1741,8 @@ function paintTaskForm(mode) {
     html = htmlSetContainer(html);
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
-    html += '<form id="formTask"><table id="tabTask" class="tta-table">\n' ;
+    // May 1/22 remove below: <table id="tabTask" class="tta-table">\n' ;
+    html += '<form id="formTask"><table class="tta-table">\n' ;
     // TODO: Put these in a loop
     html += buildInput("task_name", mode);
     html += buildInput("hours", mode);
