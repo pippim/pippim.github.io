@@ -600,7 +600,7 @@ function tabTaskDetail(i) {
     return html += "</tr>\n";
 }
 
-/* These buttons are for actions/controls box used on mobiles  jump */
+/* These buttons are for actions/controls box used on mobiles */
 function buildTaskButtons(i) {
     var tabTaskButtons = [
         "task_listen", tabListenSym, tabListenTitle, "clickListen(" + i + ")",
@@ -1160,7 +1160,7 @@ function pcbClose() {
 }
 
 function progressTouched(i, element) {
-    /* Pop up control box for Task Name progress bar with:  jump
+    /* Pop up control box for Task Name progress bar with:
 
         - 23EE ⏮︎ skip to start, previous
         - 23EA ⏪︎ rewind, fast backwards
@@ -1494,7 +1494,7 @@ function convertNumber(value) {
 */
 
 function clickControls(i) {
-    // Popup actions/control buttons box for small screens   jump
+    // Popup actions/control buttons box for small screens
     // TODO: Separate functions for Projects Table and Tasks Table.
     clickCommon(i);
     /* Pop up control box for Projects Table and Tasks Table mobile screen
@@ -1564,8 +1564,8 @@ function swapProject(source, target) {
     // How to stick in .classGrey
     saveConfig();
     paintProjectsTable();
-    // Flash grey for row just moved then remove after 600ms
-    flashGrey("tabProjects", target)
+    // Flash grey for row just moved then remove after 3 seconds
+    flashGrey("tabProject" + target);
 }
 function swapTask(source, target) {
     // Task parameter source index and target index
@@ -1575,36 +1575,17 @@ function swapTask(source, target) {
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
     saveConfig();
     paintTasksTable();
-    // Flash grey for row just moved then remove after 600ms
-    flashGrey("tabTasks", target)
+    // Flash grey for row just moved then remove after 3 seconds
+    flashGrey("tabTask" + target);
 }
 
-function flashGrey(table, target) {
-    // Flash grey for row just moved then remove after 600ms  jump
-    // TODO, each row in tabTasks and tabProjects has ID to assign .flashGrey {}
-    // myTable.rows[target].cells[1].innerHTML = strDuration;
-    /*
-        from: https://stackoverflow.com/a/14608431/6929343
-        <table>
-            <tr>
-                <td>true</td>
-                <td class="flash">false</td>
-                <td>true</td>
-                <td>true</td>
-            </tr>
-        </table>
-
-        CSS
-
-        @keyframes flash {
-          from { background-color: grey; }
-          to { background-color: inherit; }
-        }
-        .flash {
-          animation:         flash 1s infinite;
-        }
-
-    */
+function flashGrey(id) {
+    // Flash grey for row just moved then remove after 3 seconds  jump
+    var elm = document.getElementById(id);
+    elm.classList.add("flash");
+    setTimeout(function(){
+        elm.classList.remove("flash");
+    }, 3000);
 }
 
 function paintConfigForm() {
@@ -2311,7 +2292,7 @@ async function popPrompt(msg_type, msg, error_id) {
         await sleep(50);
         // When a popCreate window is closed, it disappears after 600ms
         if (document.body.contains(elmWindow)) { continue; }
-        return;
+        return;  // Clicked X to close, or clicked "OK" & element removed
     }
 }
 
