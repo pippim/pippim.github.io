@@ -2602,7 +2602,7 @@ function dragElement(elm) {
 
   function dragMouseDown(e) {
     e = e || window.event;
-    // e.preventDefault();  // Comment to see if this is stopping touch screen?
+    e.preventDefault();  // Prevents text highlighting while dragging header
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
@@ -2613,7 +2613,7 @@ function dragElement(elm) {
 
   function elementDrag(e) {
     e = e || window.event;
-    // e.preventDefault();  // Comment to see if this is stopping touch screen?
+    e.preventDefault();  // Prevents text highlighting while dragging header
     // calculate the new cursor position:
     pos1 = pos3 - e.clientX;
     pos2 = pos4 - e.clientY;
