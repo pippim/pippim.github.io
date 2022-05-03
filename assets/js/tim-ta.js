@@ -2448,7 +2448,6 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
 
     window.addEventListener('DOMContentLoaded', (event) => {
             dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
-        }
     });
 
     //dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
