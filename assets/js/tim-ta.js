@@ -2618,12 +2618,16 @@ function dragElement2(elm) {
 
   if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elm.id + "_header").touchstart = dragTouchStart;
+    //document.getElementById(elm.id + "_header").touchstart = dragTouchStart;
+    document.getElementById(elm.id + "_header").addEventListener('touchstart', function(e){
+         dragTouchStart(e);
+    }, false);
     document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
     // https://stackoverflow.com/a/52554777/6929343
 
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
+    // elm.touchstart = dragTouchStart;
     elm.addEventListener('touchstart', function(e){
          dragTouchStart(e);
     }, false);
