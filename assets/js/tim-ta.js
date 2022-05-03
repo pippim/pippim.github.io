@@ -1297,11 +1297,6 @@ function pcbClose() {
     pauseAllTimers = false;
 }
 
-function clickAddProject() {
-    // Create empty record for add
-    ttaProject = Object.assign({}, tta_project); // https://stackoverflow.com/a/34294740/6929343
-}
-
 function getActiveTimerNo() {
     for (const key of Object.keys(allTimers)) {
         var entry = allTimers[key];
