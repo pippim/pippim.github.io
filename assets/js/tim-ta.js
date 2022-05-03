@@ -540,7 +540,7 @@ function bigFootStyle() {
     return  '.bigFoot {\n' +
             '  display: flex;\n' +
             '  justify-content: space-around;\n' +
-            '  margin: 0 1rem;\n' +
+            '  margin: 1rem 0px;\n' +
             '  padding: .25rem .5rem;\n' +
             //'  border: 3px solid grey;\n' +
             '  border-radius: 1rem;\n' +
