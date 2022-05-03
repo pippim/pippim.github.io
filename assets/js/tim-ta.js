@@ -2,11 +2,6 @@
 ---
 // Tim-ta (Timed Tasks)
 
-// Button Image source: https://www.cleanpng.com/free/
-
-// dragElement defined in /assets/js/theCookieMachine.js
-// dragElement(document.getElementById("tta_window"));
-
 /* TODO: Multiple Browser tabs concurrency.
 
     Before any update, reread ttaConfig, ttaProject and
@@ -1814,7 +1809,8 @@ function buildInput(key, mode) {
     else if (currentForm == "formConfig")  { value = ttaConfig[key]; }
     else { alert ("INVALID currentForm:", currentForm); console.trace(); }
 
-    if (value == null) { console.log ("buildInput() null value:", currentForm); console.trace(); }
+    //if (value == null) { console.log ("buildInput() null value:", currentForm); console.trace(); }
+    if (value == null) { console.log ("buildInput() null value:", dd_field.type); console.trace(); }
 
     html += '<td>\n';
     if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
