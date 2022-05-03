@@ -1632,14 +1632,14 @@ function paintConfigForm() {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
-    html += taskButton(tabBackSym, "Back", "paintProjectsTable");
-    html += "<font size='+2'>Cancel changes</font>"
+    html += taskButton(tabBackSym, "Cancel changes", "paintProjectsTable");
+    html += "<font size='+2'>Back</font>"
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
     var textMode = mode;
     if (textMode == "Edit") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Settings", "clickUpdateConfig");
-    html += "<font size='+2'>" + textMode + " Settings</font>";
+    html += "<font size='+2'>Settings</font>";
     html += '</div>\n';
     html += '</div>\n';
 
@@ -1699,14 +1699,14 @@ function paintProjectForm(mode) {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
-    html += taskButton(tabBackSym, "Back", "paintProjectsTable");
-    html += "<font size='+2'>Cancel changes</font>"
+    html += taskButton(tabBackSym, "Cancel changes", "paintProjectsTable");
+    html += "<font size='+2'>Back</font>"
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
     var textMode = mode;
     if (textMode == "Edit") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Project", "clickUpdateProject");
-    html += "<font size='+2'>" + textMode + " Project</font>";
+    html += "<font size='+2'>Project</font>";
     html += '</div>\n';
     html += '</div>\n';
 
@@ -1756,14 +1756,14 @@ function paintTaskForm(mode) {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
-    html += taskButton(tabBackSym, "Back", "paintTasksTable");
-    html += "<font size='+2'>Cancel changes</font>"
+    html += taskButton(tabBackSym, "Cancel changes", "paintTasksTable");
+    html += "<font size='+2'>Back</font>"
     html += '</div>\n';
     var textMode = mode;
     html += '<div class="rightFoot">\n';
     if (textMode == "Edit") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Task", "clickUpdateTask");
-    html += "<font size='+2'>" + textMode + " Task</font>";
+    html += "<font size='+2'>Task</font>";
     html += '</div>\n';
     html += '</div>\n';
 
