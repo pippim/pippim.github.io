@@ -540,9 +540,9 @@ function bigFootStyle() {
     return  '.bigFoot {\n' +
             '  display: flex;\n' +
             '  justify-content: space-around;\n' +
-            '  margin: 1rem;\n' +
+            '  margin: 0 1rem;\n' +
             '  padding: .25rem .5rem;\n' +
-            '  border: 3px solid;\n' +
+            //'  border: 3px solid grey;\n' +
             '  border-radius: 1rem;\n' +
             '  color: yellow;\n' +
             '  background-color: ' + header_bg_color + ';\n' +
@@ -2560,7 +2560,7 @@ function popBuildStyle(msg_type) {
             '  width: 100%;\n' +
             //'  margin: .25rem;\n' +
             '  padding: .25rem;\n' +
-            '  border: 2px solid grey;\n' +
+            //'  border: 2px solid grey;\n' +
             '  border-radius: 1rem;\n' +
             '  color: yellow;\n' +
             '  background-color: ' + header_bg_color + ';\n' +
