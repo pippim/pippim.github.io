@@ -2654,7 +2654,7 @@ function dragElement2(elm) {
     pos4 = e.clientY;
     document.ontouchend = closeDragElement;
     // call a function whenever the cursor moves:
-    document.ontouchmove = elementDrag;
+    document.ontouchmove = elementTouchDrag;
   }
 
   function elementDrag(e) {
@@ -2665,6 +2665,24 @@ function dragElement2(elm) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
+    // set the element's new position:
+    elm.style.top = (elm.offsetTop - pos2) + "px";
+    elm.style.left = (elm.offsetLeft - pos1) + "px";
+  }
+
+  function elementTouchDrag(e) {
+    e = e || window.event;
+    e.preventDefault();  // Prevents text highlighting while dragging header
+
+    var bcr = e.target.getBoundingClientRect();
+    var x = e.targetTouches[0].clientX - bcr.x;
+    var y = e.targetTouches[0].clientY - bcr.y;
+
+    // calculate the new cursor position:
+    pos1 = pos3 - x;
+    pos2 = pos4 - y;
+    pos3 = x;
+    pos4 = y;
     // set the element's new position:
     elm.style.top = (elm.offsetTop - pos2) + "px";
     elm.style.left = (elm.offsetLeft - pos1) + "px";
