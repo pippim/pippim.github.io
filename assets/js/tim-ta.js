@@ -1810,7 +1810,8 @@ function buildInput(key, mode) {
     else { alert ("INVALID currentForm:", currentForm); console.trace(); }
 
     //if (value == null) { console.log ("buildInput() null value:", currentForm); console.trace(); }
-    if (value == null) { console.log ("buildInput() null value:", dd_field.type); console.trace(); }
+    //if (value == null) { console.log ("buildInput() null value:", dd_field.type); console.trace(); }
+    // select field types will not have initial value, set separately
 
     html += '<td>\n';
     if (dd_field.type == "switch") { html += buildSwitch(key, value, mode) }
@@ -2542,6 +2543,13 @@ function popBuildStyle(msg_type) {
             '  cursor: move;  z-index: 10;\n' +
             '  background-color: ' + msg_color + ';\n' +
             '  color: #fff;\n' +
+            '  -webkit-touch-callout: none;\n' +
+            '  -webkit-user-select: none;\n' +
+            '  -khtml-user-select: none;\n' +
+            '  -moz-user-select: none;\n' +
+            '  -ms-user-select: none;\n' +
+            '  user-select: none;\n' +
+            '  -webkit-tap-highlight-color:rgba(0,0,0,0);\n' +
             '}\n';
 
     html += '.msgq-window-buttons {\n' +
