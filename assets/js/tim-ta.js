@@ -2449,7 +2449,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     elmDraggable.style.left = (pos3) + "px";
     elmDraggable.style.top = (pos4 + 40) + "px";
 
-    dragElement(elmDraggable);  // Hooks to make window draggable by title bar
+    dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
 
     popIndex += 1;  // Our new entry count and the next index to add
     msgq[p['idWindow']] = p;  // Add entry to msgq object
@@ -2600,7 +2600,7 @@ function popBuildScript() {
 }
 
 // Below copied from theCookieMachine.js
-function dragElement(elm) {
+function dragElement2(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
