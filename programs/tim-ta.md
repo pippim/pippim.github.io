@@ -327,7 +327,6 @@ Cancel</span>
 var tta_store = {
     arrProjects: [],
     objProjects: {},
-    cntProjects: 0,
     task_prompt: "true",
     task_end_alarm: "true",
     task_end_filename: "Alarm_03.mp3",
@@ -352,7 +351,6 @@ var tta_project = {
     project_name: null,
     arrTasks: [],
     objTasks: {},
-    cntTasks: 0,
     task_prompt: "default",
     task_end_alarm: "default",
     task_end_filename: "default",
