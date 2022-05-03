@@ -2624,7 +2624,9 @@ function dragElement2(elm) {
 
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
-    elm.touchstart = dragTouchStart;
+    elm.addEventListener('touchstart', function(e){
+         dragTouchStart(e);
+    }, false);
     elm.onmousedown = dragMouseDown;
   }
 
