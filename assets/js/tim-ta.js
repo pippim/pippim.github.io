@@ -2446,7 +2446,12 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     elmDraggable.style.left = (pos3) + "px";
     elmDraggable.style.top = (pos4 + 40) + "px";
 
-    dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
+    window.addEventListener('DOMContentLoaded', (event) => {
+            dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
+        }
+    });
+
+    //dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
 
     popIndex += 1;  // Our new entry count and the next index to add
     msgq[p['idWindow']] = p;  // Add entry to msgq object
