@@ -1632,7 +1632,7 @@ function paintConfigForm() {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
-    html += taskButton("Cancel", "Cancel changes", "paintProjectsTable");
+    html += taskButton(tabBackSym, "Back", "paintProjectsTable");
     html += "<font size='+2'>Cancel changes</font>"
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
@@ -1699,7 +1699,7 @@ function paintProjectForm(mode) {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
-    html += taskButton("Cancel", "Cancel changes", "paintProjectsTable");
+    html += taskButton(tabBackSym, "Back", "paintProjectsTable");
     html += "<font size='+2'>Cancel changes</font>"
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
@@ -1756,7 +1756,7 @@ function paintTaskForm(mode) {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
-    html += taskButton("Cancel", "Cancel changes", "paintTasksTable");
+    html += taskButton(tabBackSym, "Back", "paintTasksTable");
     html += "<font size='+2'>Cancel changes</font>"
     html += '</div>\n';
     var textMode = mode;
