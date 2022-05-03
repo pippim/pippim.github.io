@@ -16,9 +16,9 @@
 */
 
 // Not very pretty redefinition of style.scss colors:
-var $header-bg-color = '#159957';               // Cayman green
-var $header-bg-color-secondary = '#155799';     // Cayman blue
-var $honeydew = '#F0FFF0' ;                     // Honeydew
+var header_bg_color = '#159957';               // Cayman green
+var header_bg_color_secondary = '#155799';     // Cayman blue
+var honeydew = '#F0FFF0' ;                     // Honeydew
 
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
 
