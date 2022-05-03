@@ -2444,11 +2444,11 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     //console.log("window.scrollX:", window.scrollX, "pos3 =", pos3, "px");
     //console.log("window.scrollY:", window.scrollY, "pos4 =", pos4, "px");
     elmDraggable.style.left = (pos3) + "px";
-    elmDraggable.style.top = (pos4 + 40) + "px";
+    elmDraggable.style.top = (pos4 + 40) + "px";  // target line visible
 
     //window.addEventListener('DOMContentLoaded', (event) => {
             dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
-    //});
+    //});  // Breaks android, works on desktop, but drag is now broken.
 
     //dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
 
@@ -2607,9 +2607,15 @@ function popBuildScript() {
     return html;
 }
 
+// Debugging
+var onceStart, onceMove, onceEnd;
+onceStart = onceMove = onceEnd = false;
+
+
 // Below copied from theCookieMachine.js
 function dragElement2(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
   if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elm.id + "_header").touchstart = dragTouchStart;
@@ -2636,6 +2642,13 @@ function dragElement2(elm) {
   function dragTouchStart(e) {
     e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
+
+    // Debugging
+    if (!onceStart) {
+        onceStart = true;
+        alert("onceStart")
+    }
+
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
@@ -2655,6 +2668,14 @@ function dragElement2(elm) {
     // set the element's new position:
     elm.style.top = (elm.offsetTop - pos2) + "px";
     elm.style.left = (elm.offsetLeft - pos1) + "px";
+
+    // Debugging
+    if (onceStart && !onceMove) {
+        onceMove = true;
+        alert("onceMove")
+    }
+
+
   }
 
   function closeDragElement() {
@@ -2663,6 +2684,12 @@ function dragElement2(elm) {
     document.onmousemove = null;
     document.ontouchend = null;
     document.ontouchmove = null;
+
+    // Debugging
+    if (onceStart && !onceEnd) {
+        onceEnd = true;
+        alert("onceEnd")
+    }
   }
 }
 
