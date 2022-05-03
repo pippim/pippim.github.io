@@ -2646,7 +2646,7 @@ function dragElement2(elm) {
     // Debugging
     if (!onceStart) {
         onceStart = true;
-        alert("onceStart")
+        // alert("onceStart")  // Works good now, don't need alert
     }
 
     // get the mouse cursor position at startup:
@@ -2674,9 +2674,15 @@ function dragElement2(elm) {
     e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
 
-    var bcr = e.target.getBoundingClientRect();
-    var x = e.targetTouches[0].clientX - bcr.x;
-    var y = e.targetTouches[0].clientY - bcr.y;
+    // https://stackoverflow.com/a/33756703/6929343
+    var rect = e.target.getBoundingClientRect();
+    var x = e.targetTouches[0].pageX - rect.left;
+    var y = e.targetTouches[0].pageY - rect.top;
+
+    // https://stackoverflow.com/a/60517092/6929343
+    //var bcr = e.target.getBoundingClientRect();
+    //var x = e.targetTouches[0].clientX - bcr.x;
+    //var y = e.targetTouches[0].clientY - bcr.y;
 
     // calculate the new cursor position:
     pos1 = pos3 - x;
@@ -2690,7 +2696,7 @@ function dragElement2(elm) {
     // Debugging
     if (onceStart && !onceMove) {
         onceMove = true;
-        alert("onceMove")
+        // alert("onceMove")  // Works good now, don't need alert
     }
   }
 
@@ -2704,7 +2710,7 @@ function dragElement2(elm) {
     // Debugging
     if (onceStart && !onceEnd) {
         onceEnd = true;
-        alert("onceEnd")
+        // alert("onceEnd")  // Works good now, don't need alert
     }
   }
 }
