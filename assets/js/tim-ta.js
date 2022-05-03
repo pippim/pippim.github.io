@@ -544,7 +544,7 @@ function bigFootStyle() {
             '  padding: .25rem .5rem;\n' +
             '  border: 3px solid;\n' +
             '  border-radius: 1rem;\n' +
-            '  color: white;\n' +
+            '  color: yellow;\n' +
             '  background-color: ' + header_bg_color + ';\n' +
             '  background-image: linear-gradient(120deg, \n' +
             '    ' + header_bg_color_secondary + ', ' + header_bg_color + ');\n' +
@@ -2562,7 +2562,7 @@ function popBuildStyle(msg_type) {
             '  padding: .25rem;\n' +
             '  border: 2px solid grey;\n' +
             '  border-radius: 1rem;\n' +
-            '  color: white;\n' +
+            '  color: yellow;\n' +
             '  background-color: ' + header_bg_color + ';\n' +
             '  background-image: linear-gradient(120deg, \n' +
             '    ' + header_bg_color_secondary + ', ' + header_bg_color + ');\n' +
