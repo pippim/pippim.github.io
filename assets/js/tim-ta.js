@@ -15,6 +15,11 @@
 
 */
 
+// Not very pretty redefinition of style.scss colors:
+var $header-bg-color = '#159957';               // Cayman green
+var $header-bg-color-secondary = '#155799';     // Cayman blue
+var $honeydew = '#F0FFF0' ;                     // Honeydew
+
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
 
 scrSetSize();  // Call on document load
@@ -2548,6 +2553,7 @@ function popBuildStyle(msg_type) {
             '  display: flex;\n' +
             '  justify-content: space-around;\n' +
             '  min-width: 350px;\n' +
+            '  width: 100%;\n' +
             //'  margin: .25rem;\n' +
             '  padding: .25rem;\n' +
             '  border: 2px solid grey;\n' +
