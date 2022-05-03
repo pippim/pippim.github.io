@@ -328,7 +328,7 @@ function paintProjectsTable() {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';  // tabControl
     html += taskButton(tabConfigSym, tabConfigTitle, "paintConfigForm");
-    html += "<font size='+2'>Configuration</font>";
+    html += "<font size='+2'>Settings</font>";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
     html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
@@ -1607,7 +1607,7 @@ function paintConfigForm() {
     currentForm = "formConfig";
     buildInit();  // Reset data dictionary input field controls
 
-    var html = "<h2>Tim-ta - Edit Configuration</h2>"
+    var html = "<h2>Tim-ta - Settings</h2>"
     html = htmlSetContainer(html);
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
@@ -1643,8 +1643,8 @@ function paintConfigForm() {
     html += '<div class="rightFoot">\n';
     var textMode = mode;
     if (textMode == "Edit") { textMode = "Save" }
-    html += taskButton(textMode, textMode + " Configuration", "clickUpdateConfig");
-    html += "<font size='+2'>" + textMode + " Configuration</font>";
+    html += taskButton(textMode, textMode + " Settings", "clickUpdateConfig");
+    html += "<font size='+2'>" + textMode + " Settings</font>";
     html += '</div>\n';
     html += '</div>\n';
 
