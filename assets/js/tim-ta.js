@@ -2609,110 +2609,109 @@ function popBuildScript() {
 
 // dragElement() copied from theCookieMachine.js
 function dragElement2(elm) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, x = 0, y = 0, useTouch = false;
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, x = 0, y = 0, useTouch = false;
 
-  if (document.getElementById(elm.id + "_header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elm.id + "_header").ontouchstart = dragTouchStart;
-    document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
+    if (document.getElementById(elm.id + "_header")) {
+        // if present, the header is where you move the DIV from:
+        document.getElementById(elm.id + "_header").ontouchstart = dragTouchStart;
+        document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
 
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elm.ontouchstart = dragTouchStart;
-    elm.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e.preventDefault();  // Prevents text highlighting while dragging header
-    // get the mouse cursor position at startup:
-    setXY(e);
-    setCommonStart();
-    //pos3 = e.clientX;
-    //pos4 = e.clientY;
-    //document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    //document.onmousemove = elementMouseDrag;
-  }
-
-  function setXY(e) {
-    if(useTouch) {
-      x = e.targetTouches[0].clientX;
-      y = e.targetTouches[0].clientY;
+    } else {
+        // otherwise, move the DIV from anywhere inside the DIV:
+        elm.ontouchstart = dragTouchStart;
+        elm.onmousedown = dragMouseDown;
     }
-    else {
-      x = e.clientX;
-      y = e.clientY;
+
+    function dragMouseDown(e) {
+        e.preventDefault();  // Prevents text highlighting while dragging header
+        // get the mouse cursor position at startup:
+        setXY(e);
+        setCommonStart();
+        //pos3 = e.clientX;
+        //pos4 = e.clientY;
+        //document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        //document.onmousemove = elementMouseDrag;
     }
-  }
 
-  function setCommonStart() {
-    pos3 = x;
-    pos4 = y;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
+    function setXY(e) {
+        if(useTouch) {
+            x = e.targetTouches[0].clientX;
+            y = e.targetTouches[0].clientY;
+        } else {
+            x = e.clientX;
+            y = e.clientY;
+        }
+    }
 
-  function dragTouchStart(e) {
-    e.preventDefault();  // Prevents text highlighting while dragging header
-    useTouch = true;
-    setXY();
-    setCommonStart();
-    //var x = e.targetTouches[0].clientX;
-    //var y = e.targetTouches[0].clientY;
-    //pos3 = x;
-    //pos4 = y;
-    //document.ontouchend = closeDragElement;
-    // call a function whenever the cursor moves:
-    //document.ontouchmove = elementTouchDrag;
-  }
+    function setCommonStart() {
+        pos3 = x;
+        pos4 = y;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+    }
 
-  function elementDrag(e) {
-    e.preventDefault();  // Prevents text highlighting while dragging header
-    // calculate the new cursor position:
-    setXY()
-    pos1 = pos3 - x;
-    pos2 = pos4 - y;
-    pos3 = x;
-    pos4 = y;
-    //pos1 = pos3 - e.clientX;
-    //pos2 = pos4 - e.clientY;
-    //pos3 = e.clientX;
-    //pos4 = e.clientY;
-    // set the element's new position:
-    elm.style.left = (elm.offsetLeft - pos1) + "px";
-    elm.style.top = (elm.offsetTop - pos2) + "px";
-  }
+    function dragTouchStart(e) {
+        e.preventDefault();  // Prevents text highlighting while dragging header
+        useTouch = true;
+        setXY();
+        setCommonStart();
+        //var x = e.targetTouches[0].clientX;
+        //var y = e.targetTouches[0].clientY;
+        //pos3 = x;
+        //pos4 = y;
+        //document.ontouchend = closeDragElement;
+        // call a function whenever the cursor moves:
+        //document.ontouchmove = elementTouchDrag;
+    }
 
-  function elementTouchDrag(e) {
-    e.preventDefault();  // Prevents text highlighting while dragging header
+    function elementDrag(e) {
+        e.preventDefault();  // Prevents text highlighting while dragging header
+        // calculate the new cursor position:
+        setXY()
+        pos1 = pos3 - x;
+        pos2 = pos4 - y;
+        pos3 = x;
+        pos4 = y;
+        //pos1 = pos3 - e.clientX;
+        //pos2 = pos4 - e.clientY;
+        //pos3 = e.clientX;
+        //pos4 = e.clientY;
+        // set the element's new position:
+        elm.style.left = (elm.offsetLeft - pos1) + "px";
+        elm.style.top = (elm.offsetTop - pos2) + "px";
+    }
 
-    // https://stackoverflow.com/a/60517092/6929343
-    var bcr = e.target.getBoundingClientRect();
-    //var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
-    //var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
-    //var x = Math.abs(e.targetTouches[0].clientX - bcr.x + window.scrollX);
-    //var y = Math.abs(e.targetTouches[0].clientY - bcr.y + window.scrollY);
-    var x = e.targetTouches[0].clientX;
-    var y = e.targetTouches[0].clientY;
+    function elementTouchDrag(e) {
+        e.preventDefault();  // Prevents text highlighting while dragging header
 
-    // calculate the new cursor position:
-    pos1 = pos3 - x;
-    pos2 = pos4 - y;
-    pos3 = x;
-    pos4 = y;
-    // set the element's new position:
-    elm.style.left = (elm.offsetLeft - pos1) + "px";
-    elm.style.top = (elm.offsetTop - pos2) + "px";
-  }
+        // https://stackoverflow.com/a/60517092/6929343
+        var bcr = e.target.getBoundingClientRect();
+        //var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
+        //var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
+        //var x = Math.abs(e.targetTouches[0].clientX - bcr.x + window.scrollX);
+        //var y = Math.abs(e.targetTouches[0].clientY - bcr.y + window.scrollY);
+        var x = e.targetTouches[0].clientX;
+        var y = e.targetTouches[0].clientY;
 
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-    document.ontouchend = null;
-    document.ontouchmove = null;
-  }
+        // calculate the new cursor position:
+        pos1 = pos3 - x;
+        pos2 = pos4 - y;
+        pos3 = x;
+        pos4 = y;
+        // set the element's new position:
+        elm.style.left = (elm.offsetLeft - pos1) + "px";
+        elm.style.top = (elm.offsetTop - pos2) + "px";
+    }
+
+    function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+        document.ontouchend = null;
+        document.ontouchmove = null;
+    }
 }
 
 /* End of /assets/js/tim-ta.js */
