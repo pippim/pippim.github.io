@@ -2668,7 +2668,6 @@ function dragElement2(elm) {
     //var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
     var x = Math.abs(e.targetTouches[0].clientX - bcr.x) + window.scrollX;
     var y = Math.abs(e.targetTouches[0].clientY - bcr.y) + window.scrollY;
-    var pos4 = parseInt(rect.top +
     pos3 = x;
     pos4 = y;
     document.ontouchend = closeDragElement;
