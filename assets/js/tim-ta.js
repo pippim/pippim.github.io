@@ -2623,7 +2623,7 @@ function dragElement2(elm) {
   }
 
   function dragMouseDown(e) {
-    e = e || window.event;  // if the parameter e not passed, default to after the ||"
+    // e = e || window.event;  // if the parameter e not passed, default to after the ||"
     e.preventDefault();  // Prevents text highlighting while dragging header
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
@@ -2634,7 +2634,7 @@ function dragElement2(elm) {
   }
 
   function dragTouchStart(e) {
-    e = e || window.event;
+    // e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
     // get the touch position at startup:
     var bcr = e.target.getBoundingClientRect();
@@ -2648,7 +2648,7 @@ function dragElement2(elm) {
   }
 
   function elementMouseDrag(e) {
-    e = e || window.event;
+    // e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
     // calculate the new cursor position:
     pos1 = pos3 - e.clientX;
@@ -2656,12 +2656,12 @@ function dragElement2(elm) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     // set the element's new position:
-    elm.style.top = (elm.offsetTop - pos2) + "px";
     elm.style.left = (elm.offsetLeft - pos1) + "px";
+    elm.style.top = (elm.offsetTop - pos2) + "px";
   }
 
   function elementTouchDrag(e) {
-    e = e || window.event;
+    // e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
 
     // https://stackoverflow.com/a/60517092/6929343
@@ -2675,8 +2675,8 @@ function dragElement2(elm) {
     pos3 = x;
     pos4 = y;
     // set the element's new position:
-    elm.style.top = (elm.offsetTop - pos2) + "px";
     elm.style.left = (elm.offsetLeft - pos1) + "px";
+    elm.style.top = (elm.offsetTop - pos2) + "px";
   }
 
   function closeDragElement() {
