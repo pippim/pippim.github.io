@@ -2606,7 +2606,7 @@ var once = false ;
 
 // dragElement() copied from theCookieMachine.js
 function dragElement2(elm) {
-    var newX = 0, newY = 0, oldX = 0, oldY = 0, x = 0, y = 0, useTouch = false;
+    var offX = 0, offY = 0, oldX = 0, oldY = 0, x = 0, y = 0, useTouch = false;
 
     if (document.getElementById(elm.id + "_header")) {
         // if present, the header is where you move the DIV from:
@@ -2662,17 +2662,17 @@ function dragElement2(elm) {
         e.preventDefault();  // Prevents text highlighting while dragging header
         // calculate the new cursor position:
         setXY(e);
-        newX = oldX - x;
-        newY = oldY - y;
+        offX = oldX - x;
+        offY = oldY - y;
         oldX = x;
         oldY = y;
-        //newX = oldX - e.clientX;
-        //newY = oldY - e.clientY;
+        //offX = oldX - e.clientX;
+        //offY = oldY - e.clientY;
         //oldX = e.clientX;
         //oldY = e.clientY;
         // set the element's new position:
-        elm.style.left = (elm.offsetLeft - newX) + "px";
-        elm.style.top = (elm.offsetTop - newY) + "px";
+        elm.style.left = (elm.offsetLeft - offX) + "px";
+        elm.style.top = (elm.offsetTop - offY) + "px";
     }
 
     function elementTouchDrag(e) {
@@ -2688,13 +2688,13 @@ function dragElement2(elm) {
         var y = e.targetTouches[0].clientY;
 
         // calculate the new cursor position:
-        newX = oldX - x;
-        newY = oldY - y;
+        offX = oldX - x;
+        offY = oldY - y;
         oldX = x;
         oldY = y;
         // set the element's new position:
-        elm.style.left = (elm.offsetLeft - newX) + "px";
-        elm.style.top = (elm.offsetTop - newY) + "px";
+        elm.style.left = (elm.offsetLeft - offX) + "px";
+        elm.style.top = (elm.offsetTop - offY) + "px";
     }
 
     function closeDragElement() {
@@ -2703,8 +2703,8 @@ function dragElement2(elm) {
         document.onmousemove = null;
         document.ontouchend = null;
         document.ontouchmove = null;
-        console.log("END oldX:", oldX, "oldY:", oldY, " | newX:", newX, "newY:", newY);
-        alert("END oldX: " + oldX + " oldY: " + oldY + " | newX: " + newX + " newY: ", newY);
+        console.log("END oldX:", oldX, "oldY:", oldY, " | offX:", offX, "offY:", offY);
+        alert("END oldX: " + oldX + " oldY: " + oldY + " | offX: " + offX + " offY: " + offY);
     }
 }
 
