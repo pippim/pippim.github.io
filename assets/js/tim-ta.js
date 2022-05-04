@@ -2662,10 +2662,13 @@ function dragElement2(elm) {
 
   function dragTouchStart(e) {
     e.preventDefault();  // Prevents text highlighting while dragging header
-    // get the touch position at startup:
+    // get the touch position at startup: scrollY
     var bcr = e.target.getBoundingClientRect();
-    var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
-    var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
+    //var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
+    //var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
+    var x = Math.abs(e.targetTouches[0].clientX - bcr.x + window.scrollX);
+    var y = Math.abs(e.targetTouches[0].clientY - bcr.y + window.scrollY);
+    var pos4 = parseInt(rect.top +
     pos3 = x;
     pos4 = y;
     document.ontouchend = closeDragElement;
@@ -2690,8 +2693,10 @@ function dragElement2(elm) {
 
     // https://stackoverflow.com/a/60517092/6929343
     var bcr = e.target.getBoundingClientRect();
-    var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
-    var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
+    //var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
+    //var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
+    var x = Math.abs(e.targetTouches[0].clientX - bcr.x + window.scrollX);
+    var y = Math.abs(e.targetTouches[0].clientY - bcr.y + window.scrollY);
 
     // calculate the new cursor position:
     pos1 = pos3 - x;
