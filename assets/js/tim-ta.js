@@ -2704,7 +2704,7 @@ function dragElement2(elm) {
         document.ontouchend = null;
         document.ontouchmove = null;
         console.log("END oldX:", oldX, "oldY:", oldY, " | newX:", newX, "newY:", newY);
-        alert("END oldX: " + oldX + " oldY: " + oldY, " | newX: " + newX + " newY: ", newY);
+        alert("END oldX: " + oldX + " oldY: " + oldY + " | newX: " + newX + " newY: ", newY);
     }
 }
 
