@@ -2607,35 +2607,7 @@ function popBuildScript() {
     return html;
 }
 
-// Below copied from theCookieMachine.js
-/*
-    From: https://stackoverflow.com/a/16495630/6929343
-
-    var prevPos = null, diffX, diffY, maxDiff;
-
-$( '#draggable' ).draggable( {
-    ...,
-    ...,
-    drag: function ( event, ui ) {
-
-        if ( prevPos ) {
-            diffX = Math.abs( prevPos.left - ui.position.left );
-            diffY = Math.abs( prevPos.top - ui.position.top );
-            maxDiff = Math.max( diffX, diffY );
-            if ( maxDiff > 60 ) {
-                ui.position = prevPos;
-            }
-        }
-
-        prevPos = ui.position;
-    },
-    stop: function ( event, ui ) {
-        prevPos = null;
-    }
-} );
-
-*/
-
+// dragElement() copied from theCookieMachine.js
 function dragElement2(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, x = 0, y = 0, useTouch = false;
 
@@ -2664,12 +2636,12 @@ function dragElement2(elm) {
 
   function setXY(e) {
     if(useTouch) {
-      x = e.clientX;
-      y = e.clientY;
-    }
-    else {
       x = e.targetTouches[0].clientX;
       y = e.targetTouches[0].clientY;
+    }
+    else {
+      x = e.clientX;
+      y = e.clientY;
     }
   }
 
