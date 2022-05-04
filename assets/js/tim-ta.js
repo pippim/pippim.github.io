@@ -2445,12 +2445,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     //console.log("window.scrollY:", window.scrollY, "oldY =", oldY, "px");
     elmDraggable.style.left = (oldX) + "px";
     elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
-
-    //window.addEventListener('DOMContentLoaded', (event) => {
-            dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
-    //});  // Breaks android, works on desktop, but drag is now broken.
-
-    //dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
+    dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
 
     popIndex += 1;  // Our new entry count and the next index to add
     msgq[p['idWindow']] = p;  // Add entry to msgq object
@@ -2641,8 +2636,8 @@ function dragElement2(elm) {
 
     function setXY(e) {
         if(useTouch) {
-            x = e.targetTouches[0].clientX;
-            y = e.targetTouches[0].clientY;
+            x = parseInt(e.targetTouches[0].clientX);
+            y = parseInt(e.targetTouches[0].clientY);
         } else {
             x = e.clientX;
             y = e.clientY;
