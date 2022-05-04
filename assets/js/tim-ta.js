@@ -2703,7 +2703,7 @@ function dragElement2(elm) {
         document.onmousemove = null;
         document.ontouchend = null;
         document.ontouchmove = null;
-        console.log("END oldX:", oldX, "oldY:", oldY, " | newX:", newX, "newY:", newY");
+        console.log("END oldX:", oldX, "oldY:", oldY, " | newX:", newX, "newY:", newY);
     }
 }
 
