@@ -2655,7 +2655,7 @@ function dragElement2(elm) {
     function dragTouchStart(e) {
         e.preventDefault();  // Prevents text highlighting while dragging header
         useTouch = true;
-        setXY();
+        setXY(e);
         setCommonStart();
         //var x = e.targetTouches[0].clientX;
         //var y = e.targetTouches[0].clientY;
