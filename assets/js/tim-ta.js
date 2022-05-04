@@ -2637,7 +2637,7 @@ $( '#draggable' ).draggable( {
 */
 
 function dragElement2(elm) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, x = 0, y = 0,  useTouch = false;
 
   if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
@@ -2653,35 +2653,60 @@ function dragElement2(elm) {
   function dragMouseDown(e) {
     e.preventDefault();  // Prevents text highlighting while dragging header
     // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
+    setXY();
+    setCommonStart();
+    //pos3 = e.clientX;
+    //pos4 = e.clientY;
+    //document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    //document.onmousemove = elementMouseDrag;
+  }
+
+  function setXY() {
+    if(useTouch) {
+      x = e.clientX;
+      y = e.clientY;
+    }
+    else {
+      x = e.targetTouches[0].clientX;
+      y = e.targetTouches[0].clientY;
+    }
+  }
+
+  function setCommonStart() {
+    pos3 = x;
+    pos4 = y;
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
-    document.onmousemove = elementMouseDrag;
+    document.onmousemove = elementDrag;
   }
 
   function dragTouchStart(e) {
     e.preventDefault();  // Prevents text highlighting while dragging header
-    // get the touch position at startup: scrollY
-    var bcr = e.target.getBoundingClientRect();
-    //var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
-    //var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
-    var x = e.targetTouches[0].clientX;
-    var y = e.targetTouches[0].clientY;
-    pos3 = x;
-    pos4 = y;
-    document.ontouchend = closeDragElement;
+    useTouch = true;
+    setXY();
+    setCommonStart();
+    //var x = e.targetTouches[0].clientX;
+    //var y = e.targetTouches[0].clientY;
+    //pos3 = x;
+    //pos4 = y;
+    //document.ontouchend = closeDragElement;
     // call a function whenever the cursor moves:
-    document.ontouchmove = elementTouchDrag;
+    //document.ontouchmove = elementTouchDrag;
   }
 
-  function elementMouseDrag(e) {
+  function elementDrag(e) {
     e.preventDefault();  // Prevents text highlighting while dragging header
     // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
+    setXY()
+    pos1 = pos3 - x;
+    pos2 = pos4 - y;
+    pos3 = x;
+    pos4 = y;
+    //pos1 = pos3 - e.clientX;
+    //pos2 = pos4 - e.clientY;
+    //pos3 = e.clientX;
+    //pos4 = e.clientY;
     // set the element's new position:
     elm.style.left = (elm.offsetLeft - pos1) + "px";
     elm.style.top = (elm.offsetTop - pos2) + "px";
