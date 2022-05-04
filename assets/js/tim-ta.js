@@ -2602,6 +2602,8 @@ function popBuildScript() {
     return html;
 }
 
+var once = false ;
+
 // dragElement() copied from theCookieMachine.js
 function dragElement2(elm) {
     var newX = 0, newY = 0, oldX = 0, oldY = 0, x = 0, y = 0, useTouch = false;
@@ -2630,16 +2632,19 @@ function dragElement2(elm) {
         useTouch = true;
         setXY(e);
         setCommonStart();
-        alert("START oldX: " + oldX + " | oldY: " + oldY);
+        if (!once) {
+            alert("START oldX: " + oldX + " | oldY: " + oldY);
+            once = true;
+        }
 
     }
 
     function setXY(e) {
         if(useTouch) {
-            x = parseInt(e.targetTouches[0].clientX);
+            x = parseInt(e.targetTouches[0].clientX);  // bunch of decimals
             y = parseInt(e.targetTouches[0].clientY);
         } else {
-            x = e.clientX;
+            x = e.clientX;  // already int for mouse click
             y = e.clientY;
         }
     }
@@ -2699,6 +2704,7 @@ function dragElement2(elm) {
         document.ontouchend = null;
         document.ontouchmove = null;
         console.log("END oldX:", oldX, "oldY:", oldY, " | newX:", newX, "newY:", newY);
+        alert("END oldX: " + oldX + " oldY: " + oldY, " | newX: " + newX + " newY: ", newY);
     }
 }
 
