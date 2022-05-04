@@ -2607,11 +2607,6 @@ function popBuildScript() {
     return html;
 }
 
-// Debugging
-var onceStart, onceMove, onceEnd;
-onceStart = onceMove = onceEnd = false;
-
-
 // Below copied from theCookieMachine.js
 function dragElement2(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -2620,7 +2615,6 @@ function dragElement2(elm) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elm.id + "_header").ontouchstart = dragTouchStart;
     document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
-    // https://stackoverflow.com/a/52554777/6929343
 
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
@@ -2636,20 +2630,13 @@ function dragElement2(elm) {
     pos4 = e.clientY;
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
+    document.onmousemove = elementMouseDrag;
   }
 
   function dragTouchStart(e) {
     e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
-
-    // Debugging
-    if (!onceStart) {
-        onceStart = true;
-        // alert("onceStart")  // Works good now, don't need alert
-    }
-
-    // get the mouse cursor position at startup:
+    // get the touch position at startup:
     var bcr = e.target.getBoundingClientRect();
     var x = e.targetTouches[0].clientX - bcr.x;
     var y = e.targetTouches[0].clientY - bcr.y;
@@ -2660,7 +2647,7 @@ function dragElement2(elm) {
     document.ontouchmove = elementTouchDrag;
   }
 
-  function elementDrag(e) {
+  function elementMouseDrag(e) {
     e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
     // calculate the new cursor position:
@@ -2677,12 +2664,7 @@ function dragElement2(elm) {
     e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
 
-    // https://stackoverflow.com/a/33756703/6929343
-    //var rect = e.target.getBoundingClientRect();
-    //var x = e.targetTouches[0].pageX - rect.left;
-    //var y = e.targetTouches[0].pageY - rect.top;
-
-    // https://stackoverflow.com/a/60517092/6929343 - Scrolling immunity
+    // https://stackoverflow.com/a/60517092/6929343
     var bcr = e.target.getBoundingClientRect();
     var x = e.targetTouches[0].clientX - bcr.x;
     var y = e.targetTouches[0].clientY - bcr.y;
@@ -2695,12 +2677,6 @@ function dragElement2(elm) {
     // set the element's new position:
     elm.style.top = (elm.offsetTop - pos2) + "px";
     elm.style.left = (elm.offsetLeft - pos1) + "px";
-
-    // Debugging
-    if (onceStart && !onceMove) {
-        onceMove = true;
-        // alert("onceMove")  // Works good now, don't need alert
-    }
   }
 
   function closeDragElement() {
@@ -2709,12 +2685,6 @@ function dragElement2(elm) {
     document.onmousemove = null;
     document.ontouchend = null;
     document.ontouchmove = null;
-
-    // Debugging
-    if (onceStart && !onceEnd) {
-        onceEnd = true;
-        // alert("onceEnd")  // Works good now, don't need alert
-    }
   }
 }
 
