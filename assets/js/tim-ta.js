@@ -2623,15 +2623,20 @@ function dragElement2(elm) {
     }
 
     function dragMouseDown(e) {
+        // get the mouse cursor position at startup
         e.preventDefault();  // Prevents text highlighting while dragging header
-        // get the mouse cursor position at startup:
         setXY(e);
         setCommonStart();
-        //oldX = e.clientX;
-        //oldY = e.clientY;
-        //document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        //document.onmousemove = elementMouseDrag;
+    }
+
+    function dragTouchStart(e) {
+        // get the touch position at startup
+        e.preventDefault();  // Prevents text highlighting while dragging header
+        useTouch = true;
+        setXY(e);
+        setCommonStart();
+        alert("START oldX: " + oldX + " | oldY: " + oldY);
+
     }
 
     function setXY(e) {
@@ -2650,20 +2655,7 @@ function dragElement2(elm) {
         document.onmouseup = closeDragElement;
         // call a function whenever the cursor moves:
         document.onmousemove = elementDrag;
-    }
-
-    function dragTouchStart(e) {
-        e.preventDefault();  // Prevents text highlighting while dragging header
-        useTouch = true;
-        setXY(e);
-        setCommonStart();
-        //var x = e.targetTouches[0].clientX;
-        //var y = e.targetTouches[0].clientY;
-        //oldX = x;
-        //oldY = y;
-        //document.ontouchend = closeDragElement;
-        // call a function whenever the cursor moves:
-        //document.ontouchmove = elementTouchDrag;
+        console.log("START oldX:", oldX, "oldY:", oldY);
     }
 
     function elementDrag(e) {
@@ -2711,6 +2703,7 @@ function dragElement2(elm) {
         document.onmousemove = null;
         document.ontouchend = null;
         document.ontouchmove = null;
+        console.log("END oldX:", oldX, "oldY:", oldY, " | newX:", newX, "newY:", newY");
     }
 }
 
