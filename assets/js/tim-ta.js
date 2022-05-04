@@ -2637,7 +2637,7 @@ $( '#draggable' ).draggable( {
 */
 
 function dragElement2(elm) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, x = 0, y = 0,  useTouch = false;
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, x = 0, y = 0, useTouch = false;
 
   if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:
@@ -2653,7 +2653,7 @@ function dragElement2(elm) {
   function dragMouseDown(e) {
     e.preventDefault();  // Prevents text highlighting while dragging header
     // get the mouse cursor position at startup:
-    setXY();
+    setXY(e);
     setCommonStart();
     //pos3 = e.clientX;
     //pos4 = e.clientY;
@@ -2662,7 +2662,7 @@ function dragElement2(elm) {
     //document.onmousemove = elementMouseDrag;
   }
 
-  function setXY() {
+  function setXY(e) {
     if(useTouch) {
       x = e.clientX;
       y = e.clientY;
