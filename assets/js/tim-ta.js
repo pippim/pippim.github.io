@@ -2608,6 +2608,34 @@ function popBuildScript() {
 }
 
 // Below copied from theCookieMachine.js
+/*
+    From: https://stackoverflow.com/a/16495630/6929343
+
+    var prevPos = null, diffX, diffY, maxDiff;
+
+$( '#draggable' ).draggable( {
+    ...,
+    ...,
+    drag: function ( event, ui ) {
+
+        if ( prevPos ) {
+            diffX = Math.abs( prevPos.left - ui.position.left );
+            diffY = Math.abs( prevPos.top - ui.position.top );
+            maxDiff = Math.max( diffX, diffY );
+            if ( maxDiff > 60 ) {
+                ui.position = prevPos;
+            }
+        }
+
+        prevPos = ui.position;
+    },
+    stop: function ( event, ui ) {
+        prevPos = null;
+    }
+} );
+
+*/
+
 function dragElement2(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
@@ -2623,7 +2651,6 @@ function dragElement2(elm) {
   }
 
   function dragMouseDown(e) {
-    // e = e || window.event;  // if the parameter e not passed, default to after the ||"
     e.preventDefault();  // Prevents text highlighting while dragging header
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
@@ -2634,12 +2661,11 @@ function dragElement2(elm) {
   }
 
   function dragTouchStart(e) {
-    // e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
     // get the touch position at startup:
     var bcr = e.target.getBoundingClientRect();
-    var x = e.targetTouches[0].clientX - bcr.x;
-    var y = e.targetTouches[0].clientY - bcr.y;
+    var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
+    var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
     pos3 = x;
     pos4 = y;
     document.ontouchend = closeDragElement;
@@ -2648,7 +2674,6 @@ function dragElement2(elm) {
   }
 
   function elementMouseDrag(e) {
-    // e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
     // calculate the new cursor position:
     pos1 = pos3 - e.clientX;
@@ -2661,13 +2686,12 @@ function dragElement2(elm) {
   }
 
   function elementTouchDrag(e) {
-    // e = e || window.event;
     e.preventDefault();  // Prevents text highlighting while dragging header
 
     // https://stackoverflow.com/a/60517092/6929343
     var bcr = e.target.getBoundingClientRect();
-    var x = e.targetTouches[0].clientX - bcr.x;
-    var y = e.targetTouches[0].clientY - bcr.y;
+    var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
+    var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
 
     // calculate the new cursor position:
     pos1 = pos3 - x;
