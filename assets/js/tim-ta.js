@@ -2439,12 +2439,12 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
 
     var elmDraggable = document.getElementById(p['idWindow']);  // ID inside <div>
     let rect = p['elmLink'].getBoundingClientRect();
-    var pos3 = parseInt(rect.left + window.scrollX);  // Get link (anchor reference point)
-    var pos4 = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
-    //console.log("window.scrollX:", window.scrollX, "pos3 =", pos3, "px");
-    //console.log("window.scrollY:", window.scrollY, "pos4 =", pos4, "px");
-    elmDraggable.style.left = (pos3) + "px";
-    elmDraggable.style.top = (pos4 + 40) + "px";  // target line visible
+    var oldX = parseInt(rect.left + window.scrollX);  // Get link (anchor reference point)
+    var oldY = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
+    //console.log("window.scrollX:", window.scrollX, "oldX =", oldX, "px");
+    //console.log("window.scrollY:", window.scrollY, "oldY =", oldY, "px");
+    elmDraggable.style.left = (oldX) + "px";
+    elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
 
     //window.addEventListener('DOMContentLoaded', (event) => {
             dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
@@ -2609,7 +2609,7 @@ function popBuildScript() {
 
 // dragElement() copied from theCookieMachine.js
 function dragElement2(elm) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, x = 0, y = 0, useTouch = false;
+    var newX = 0, newY = 0, oldX = 0, oldY = 0, x = 0, y = 0, useTouch = false;
 
     if (document.getElementById(elm.id + "_header")) {
         // if present, the header is where you move the DIV from:
@@ -2627,8 +2627,8 @@ function dragElement2(elm) {
         // get the mouse cursor position at startup:
         setXY(e);
         setCommonStart();
-        //pos3 = e.clientX;
-        //pos4 = e.clientY;
+        //oldX = e.clientX;
+        //oldY = e.clientY;
         //document.onmouseup = closeDragElement;
         // call a function whenever the cursor moves:
         //document.onmousemove = elementMouseDrag;
@@ -2645,8 +2645,8 @@ function dragElement2(elm) {
     }
 
     function setCommonStart() {
-        pos3 = x;
-        pos4 = y;
+        oldX = x;
+        oldY = y;
         document.onmouseup = closeDragElement;
         // call a function whenever the cursor moves:
         document.onmousemove = elementDrag;
@@ -2659,8 +2659,8 @@ function dragElement2(elm) {
         setCommonStart();
         //var x = e.targetTouches[0].clientX;
         //var y = e.targetTouches[0].clientY;
-        //pos3 = x;
-        //pos4 = y;
+        //oldX = x;
+        //oldY = y;
         //document.ontouchend = closeDragElement;
         // call a function whenever the cursor moves:
         //document.ontouchmove = elementTouchDrag;
@@ -2669,18 +2669,18 @@ function dragElement2(elm) {
     function elementDrag(e) {
         e.preventDefault();  // Prevents text highlighting while dragging header
         // calculate the new cursor position:
-        setXY()
-        pos1 = pos3 - x;
-        pos2 = pos4 - y;
-        pos3 = x;
-        pos4 = y;
-        //pos1 = pos3 - e.clientX;
-        //pos2 = pos4 - e.clientY;
-        //pos3 = e.clientX;
-        //pos4 = e.clientY;
+        setXY(e);
+        newX = oldX - x;
+        newY = oldY - y;
+        oldX = x;
+        oldY = y;
+        //newX = oldX - e.clientX;
+        //newY = oldY - e.clientY;
+        //oldX = e.clientX;
+        //oldY = e.clientY;
         // set the element's new position:
-        elm.style.left = (elm.offsetLeft - pos1) + "px";
-        elm.style.top = (elm.offsetTop - pos2) + "px";
+        elm.style.left = (elm.offsetLeft - newX) + "px";
+        elm.style.top = (elm.offsetTop - newY) + "px";
     }
 
     function elementTouchDrag(e) {
@@ -2696,13 +2696,13 @@ function dragElement2(elm) {
         var y = e.targetTouches[0].clientY;
 
         // calculate the new cursor position:
-        pos1 = pos3 - x;
-        pos2 = pos4 - y;
-        pos3 = x;
-        pos4 = y;
+        newX = oldX - x;
+        newY = oldY - y;
+        oldX = x;
+        oldY = y;
         // set the element's new position:
-        elm.style.left = (elm.offsetLeft - pos1) + "px";
-        elm.style.top = (elm.offsetTop - pos2) + "px";
+        elm.style.left = (elm.offsetLeft - newX) + "px";
+        elm.style.top = (elm.offsetTop - newY) + "px";
     }
 
     function closeDragElement() {
