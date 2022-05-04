@@ -2666,8 +2666,8 @@ function dragElement2(elm) {
     var bcr = e.target.getBoundingClientRect();
     //var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
     //var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
-    var x = Math.abs(e.targetTouches[0].clientX - bcr.x + window.scrollX);
-    var y = Math.abs(e.targetTouches[0].clientY - bcr.y + window.scrollY);
+    var x = Math.abs(e.targetTouches[0].clientX - bcr.x) + window.scrollX;
+    var y = Math.abs(e.targetTouches[0].clientY - bcr.y) + window.scrollY;
     var pos4 = parseInt(rect.top +
     pos3 = x;
     pos4 = y;
@@ -2695,8 +2695,8 @@ function dragElement2(elm) {
     var bcr = e.target.getBoundingClientRect();
     //var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
     //var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
-    var x = Math.abs(e.targetTouches[0].clientX - bcr.x + window.scrollX);
-    var y = Math.abs(e.targetTouches[0].clientY - bcr.y + window.scrollY);
+    var x = Math.abs(e.targetTouches[0].clientX - bcr.x) + window.scrollX;
+    var y = Math.abs(e.targetTouches[0].clientY - bcr.y )+ window.scrollY;
 
     // calculate the new cursor position:
     pos1 = pos3 - x;
