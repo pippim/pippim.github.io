@@ -2288,7 +2288,7 @@ function msgqClear() {
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for response. */
     var idWindow = popCreate(msg_type, msg, error_id);
-    var elmWindow = document.getElementById(idWindow)
+    var elmWindow = document.getElementById(idWindow);
 
     while(true) {
         await sleep(50);
@@ -2542,13 +2542,13 @@ function popBuildStyle(msg_type) {
             '  cursor: move;  z-index: 10;\n' +
             '  background-color: ' + msg_color + ';\n' +
             '  color: #fff;\n' +
-            '  -webkit-touch-callout: none;\n' +
-            '  -webkit-user-select: none;\n' +
-            '  -khtml-user-select: none;\n' +
-            '  -moz-user-select: none;\n' +
-            '  -ms-user-select: none;\n' +
+//            '  -webkit-touch-callout: none;\n' +
+//            '  -webkit-user-select: none;\n' +
+//            '  -khtml-user-select: none;\n' +
+//            '  -moz-user-select: none;\n' +
+//            '  -ms-user-select: none;\n' +
             '  user-select: none;\n' +
-            '  -webkit-tap-highlight-color:rgba(0,0,0,0);\n' +
+//            '  -webkit-tap-highlight-color:rgba(0,0,0,0);\n' +
             '}\n';
 
     html += '.msgq-window-buttons {\n' +
@@ -2602,17 +2602,13 @@ function popBuildScript() {
     return html;
 }
 
-var once = false ;
-
 // dragElement() copied from theCookieMachine.js
 function dragElement2(elm) {
     var offX = 0, offY = 0, oldX = 0, oldY = 0, x = 0, y = 0, useTouch = false;
-
     if (document.getElementById(elm.id + "_header")) {
         // if present, the header is where you move the DIV from:
         document.getElementById(elm.id + "_header").ontouchstart = dragTouchStart;
         document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
-
     } else {
         // otherwise, move the DIV from anywhere inside the DIV:
         elm.ontouchstart = dragTouchStart;
@@ -2623,7 +2619,7 @@ function dragElement2(elm) {
         // get the mouse cursor position at startup
         e.preventDefault();  // Prevents text highlighting while dragging header
         setXY(e);
-        setOldXY();
+        saveXY();
         document.onmouseup = closeDragElement;
         document.onmousemove = elementDrag;
     }
@@ -2633,14 +2629,9 @@ function dragElement2(elm) {
         e.preventDefault();  // Prevents text highlighting while dragging header
         useTouch = true;
         setXY(e);
-        setOldXY();
+        saveXY();
         document.ontouchend = closeDragElement;
         document.ontouchmove = elementDrag;
-        if (!once) {
-            //alert("START oldX: " + oldX + " | oldY: " + oldY);
-            once = true;
-        }
-
     }
 
     function setXY(e) {
@@ -2648,15 +2639,14 @@ function dragElement2(elm) {
             x = parseInt(e.targetTouches[0].clientX);  // bunch of decimals
             y = parseInt(e.targetTouches[0].clientY);
         } else {
-            x = e.clientX;  // already int for mouse click
+            x = e.clientX;  // already integer for mouse down
             y = e.clientY;
         }
     }
 
-    function setOldXY() {
+    function saveXY() {
         oldX = x;
         oldY = y;
-        //console.log("START oldX:", oldX, "oldY:", oldY);
     }
 
     function elementDrag(e) {
@@ -2665,43 +2655,17 @@ function dragElement2(elm) {
         setXY(e);
         offX = oldX - x;
         offY = oldY - y;
-        setOldXY();
-        //oldX = x;
-        //oldY = y;
-        elm.style.left = (elm.offsetLeft - offX) + "px";
-        elm.style.top = (elm.offsetTop - offY) + "px";
-    }
-
-    function elementTouchDrag(e) {
-        e.preventDefault();  // Prevents text highlighting while dragging header
-
-        // https://stackoverflow.com/a/60517092/6929343
-        var bcr = e.target.getBoundingClientRect();
-        //var x = Math.abs(e.targetTouches[0].clientX - bcr.x);
-        //var y = Math.abs(e.targetTouches[0].clientY - bcr.y);
-        //var x = Math.abs(e.targetTouches[0].clientX - bcr.x + window.scrollX);
-        //var y = Math.abs(e.targetTouches[0].clientY - bcr.y + window.scrollY);
-        var x = e.targetTouches[0].clientX;
-        var y = e.targetTouches[0].clientY;
-
-        // calculate the new cursor position:
-        offX = oldX - x;
-        offY = oldY - y;
-        oldX = x;
-        oldY = y;
-        // set the element's new position:
+        saveXY();
         elm.style.left = (elm.offsetLeft - offX) + "px";
         elm.style.top = (elm.offsetTop - offY) + "px";
     }
 
     function closeDragElement() {
-        // stop moving when mouse button is released:
+        // stop moving when mouse button is released or touch ends:
         document.onmouseup = null;
         document.onmousemove = null;
         document.ontouchend = null;
         document.ontouchmove = null;
-        //console.log("END oldX:", oldX, "oldY:", oldY, " | offX:", offX, "offY:", offY);
-        //alert("END oldX: " + oldX + " oldY: " + oldY + " | offX: " + offX + " offY: " + offY);
     }
 }
 
