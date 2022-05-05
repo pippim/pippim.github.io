@@ -128,6 +128,11 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 
 Future placeholder to drag and drop your own sound files here.
 
+<form method="post" action="http://example.com/">
+  <input type="file"><input id="fileDragName"><input id="fileDragSize"><input id="fileDragType"><input id="fileDragData">
+  <div id="holder" style="width:200px; height:200px; border: 10px dashed #ccc"></div>
+</form>
+
 ---
 
 <a id='hdr5'></a>
