@@ -287,7 +287,7 @@ var tabListSym = "&#x2630;";
 var tabProjectsTitle = "View/Add/Edit/Delete Projects";
 var tabTasksTitle = "View/Add/Edit/Delete Tasks";
 
-var ttaElm, currentTable, currentRow, currentMode, currentForm;
+var ttaElm, currentTable, currentRoot, currentRow, currentMode, currentForm;
 
 function ttaRunConfiguration (parentElm) {
     ttaElm = parentElm;
@@ -304,6 +304,7 @@ function paintProjectsTable() {
     // Button at bottom allows calling paintConfig(id)
     msgqClear();
     currentTable = "Projects";
+    currentRoot = "tabProject";
 
     // Just in case another browser tab changed configuration...
     readConfig();
@@ -452,6 +453,7 @@ function paintTasksTable() {
     // Button at bottom allows calling paintProjectsTable()
     msgqClear();
     currentTable = "Tasks";
+    currentRoot = "tabTask";
 
     const cnt = ttaProject.arrTasks.length;
     const strHuman = cntHuman(cnt, "Task");
@@ -825,7 +827,8 @@ function sendNotification(body, header, icon) {
 function clickUp(i) {
     clickCommon(i);
     if (i == 0) {
-        popCreateUniqueError('w', "Already at top, can't move up", 'at_top');
+        popCreateUniqueError('w', "Already at top, can't move up", 'at_top',
+                             "id", currentRoot + i);
         return;
     }
     swapRows(i, i - 1);
@@ -836,7 +839,8 @@ function clickDown(i) {
     // TODO: After moving, update & save localStorage
     clickCommon(i);
     if (i == cntTable - 1) {
-        popCreateUniqueError('w', "Already at bottom, can't move down", 'at_bottom');
+        popCreateUniqueError('w', "Already at bottom, can't move down", 'at_bottom',
+                             "id", currentRoot + i);
         return;
     }
     swapRows(i, i + 1);
@@ -899,6 +903,8 @@ function paintRunTimers(i) {
     calledFromTable = currentTable;
     // console.log("currentTable / i:", currentTable, i)
     currentTable = "RunTimers"
+    currentRoot = "tabTimer";
+
 
     // Back to same Table
     const cnt = ttaProject.arrTasks.length;
