@@ -2566,8 +2566,6 @@ function popBuildStyle(msg_type) {
     html += '.msgq-window-header {\n' +
             '  cursor: move;  z-index: 10;\n' +
             '  color: #fff;\n' +
-            // Is this causing the error: "Ruleset ignored due to bad selector." NO
-
             '  -webkit-touch-callout: none;\n' +
             '  -webkit-user-select: none;\n' +
             '  -khtml-user-select: none;\n' +
@@ -2577,10 +2575,10 @@ function popBuildStyle(msg_type) {
             '  -webkit-tap-highlight-color:rgba(0,0,0,0);\n' +
             '}\n';
 
-    html += '.msgq-window-header .msgq-error { background-color: #f44336 }\n';
-    html += '.msgq-window-header .msgq-warning { background-color: #ff9800 }\n';
-    html += '.msgq-window-header .msgq-info { background-color: #2196F3 }\n';
-    html += '.msgq-window-header .msgq-success { background-color: #04AA6D }\n';
+    html += '.msgq-window-header .msgq-error { background-color: #f44336; }\n';
+    html += '.msgq-window-header .msgq-warning { background-color: #ff9800; }\n';
+    html += '.msgq-window-header .msgq-info { background-color: #2196F3; }\n';
+    html += '.msgq-window-header .msgq-success { background-color: #04AA6D; }\n';
 
     html += '.msgq-window-buttons {\n' +
             '  display: flex;\n' +
