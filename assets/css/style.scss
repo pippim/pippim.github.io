@@ -129,11 +129,12 @@ $lavender: #E6E6FA !default; // lavender
 
 // From: https://stackoverflow.com/questions/17233804/ho
 // DOESN'T work!
-@media (hover: hover) {
-    button:hover {
-        background-color: DodgerBlue;
-    }
-}
+// Is this causing the error: Ruleset ignored due to bad selector.
+//@media (hover: hover) {
+//    button:hover {
+//        background-color: DodgerBlue;
+//    }
+//}
 
 /* Alerts - https://www.w3schools.com/howto/howto_js_alert.asp
 
