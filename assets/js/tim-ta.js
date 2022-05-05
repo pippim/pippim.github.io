@@ -2152,7 +2152,8 @@ function validateNonBlank(value) {
     if (dd_field.lower == "non-blank") {
         if (value.trim() == "") {
             //alert(dd_field.label + " cannot be blank");
-            popCreateUniqueError("e", dd_field.label + " cannot be blank", "blank");
+            popCreateUniqueError("e", dd_field.label + " cannot be blank", "blank",
+                                 "id", dd_field.name);
             return false;
         }
     }
@@ -2166,7 +2167,8 @@ function validateNumber(value) {
     // From: https://stackoverflow.com/a/175787/6929343
     if (isNaN(value)) {
         //alert(dd_field.label + " must be a number");
-        popCreateUniqueError("e", dd_field.label + " must be a number", "number");
+        popCreateUniqueError("e", dd_field.label + " must be a number", "number",
+                             "id", dd_field.name);
         return false;
     }
     popClearByError("number")
@@ -2182,7 +2184,7 @@ function validateRange(value) {
 
     var msg = dd_field.label + " must be between " + lower.toString() + " and " +
           upper.toString();
-    popCreateUniqueError("e", msg, "range");
+    popCreateUniqueError("e", msg, "range", "id", dd_field.name);
 
     return false;
 }
