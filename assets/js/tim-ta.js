@@ -2565,7 +2565,6 @@ function popBuildStyle(msg_type) {
 
     html += '.msgq-window-header {\n' +
             '  cursor: move;  z-index: 10;\n' +
-            '  background-color: ' + msg_color + ';\n' +
             '  color: #fff;\n' +
             // Is this causing the error: "Ruleset ignored due to bad selector." NO
 
