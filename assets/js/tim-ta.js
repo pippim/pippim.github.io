@@ -495,27 +495,27 @@ function ttaTableStyle() {
 //            '  max-width: 100vw;\n' +
 
     // project_name or task_name get extra padding.
-    // On tabProjects 7th column
-    // On tabTasks 6th column
-    // On small screen 3rd column
     var col;
-    if (scrSmall) { col = 3; }  // The column to receive extra padding
+    if (scrSmall) { col = 3; }  // The "name" column to receive extra padding
     else if (currentTable == "Projects") { col = 7; }
     else if (currentTable == "Tasks") { col = 6; }
     else if (currentTable == "RunTimers") { col = 3; }
-    else { console.log("currentTable not handled:", currentTable); }
-    //if (scrSmall) { col = 3; }
+    else { console.log("ttaTableStyle() - currentTable not handled:", currentTable); }
+
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
             '  width: 100%;\n' +
             '  border-collapse: collapse;\n' +
             '}\n' +
+
             'table.tta-table th, table.tta-table td {\n' +
             '  padding: .25rem .25rem;\n' +
             '}\n' +
+
             'table.tta-table td:nth-child(' + col + ') {\n' +
             '  padding: .25rem 1rem;\n' +
             '}\n' +
+
             'table.tta-table th {\n' +
             '  position: -webkit-sticky;\n' +
             '  position: sticky;\n' +
@@ -523,14 +523,15 @@ function ttaTableStyle() {
             '  z-index: 1;\n' +
             '  background: #f1f1f1;\n' +
             '}\n' +
+
             '@keyframes flash {\n' +
             '  from { background-color: grey; }\n' +
             '  to { background-color: inherit; }\n' +
             '}\n' +
+
             '.flash {\n' +
             '  animation:         flash 1s infinite;\n' +
             '}\n'
-
 }
 
 function bigFootStyle() {
@@ -2124,7 +2125,9 @@ function validateTaskName(value) {
     if (original_index == new_index) { return true; }  // Key hasn't changed
 
     // We have a new key that already exists
-    popCreateUniqueError("e", dd_field.label + " must be unique", "task_name");
+    popCreateUniqueError("e", dd_field.label + " must be unique", "task_name",
+                         "id", dd_field.name);
+    // "id", dd_field.name
     return false;
 }
 
