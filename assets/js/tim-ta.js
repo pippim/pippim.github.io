@@ -502,6 +502,8 @@ function ttaTableStyle() {
     if (scrSmall) { col = 3; }  // The column to receive extra padding
     else if (currentTable == "Projects") { col = 7; }
     else if (currentTable == "Tasks") { col = 6; }
+    else if (currentTable == "RunTimers") { col = 3; }
+    else { console.log("currentTable not handled:", currentTable); }
     //if (scrSmall) { col = 3; }
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
@@ -560,14 +562,16 @@ function ttaBtnStyle() {
 }
 
 function inpSwitchStyle() {
-    return ".inpOnOffSwitch { vertical-align: middle;\n" +
-           "width: 40px;\n" +
-           "height: auto; }\n";
+    return '.inpOnOffSwitch {\n' +
+           '  vertical-align: middle;\n' +
+           '  width: 40px;\n' +
+           '  height: auto;\n' +
+           '}\n';
 }
 
 function inpSelectStyle() {
     // https://stackoverflow.com/a/8442831/6929343
-    return ' select:invalid { color: gray; }'
+    return 'select:invalid { color: gray; }';
 }
 
 function tabTasksHeading() {
@@ -2542,13 +2546,15 @@ function popBuildStyle(msg_type) {
             '  cursor: move;  z-index: 10;\n' +
             '  background-color: ' + msg_color + ';\n' +
             '  color: #fff;\n' +
-//            '  -webkit-touch-callout: none;\n' +
-//            '  -webkit-user-select: none;\n' +
-//            '  -khtml-user-select: none;\n' +
-//            '  -moz-user-select: none;\n' +
-//            '  -ms-user-select: none;\n' +
+            // Is this causing the error: "Ruleset ignored due to bad selector." NO
+
+            '  -webkit-touch-callout: none;\n' +
+            '  -webkit-user-select: none;\n' +
+            '  -khtml-user-select: none;\n' +
+            '  -moz-user-select: none;\n' +
+            '  -ms-user-select: none;\n' +
             '  user-select: none;\n' +
-//            '  -webkit-tap-highlight-color:rgba(0,0,0,0);\n' +
+            '  -webkit-tap-highlight-color:rgba(0,0,0,0);\n' +
             '}\n';
 
     html += '.msgq-window-buttons {\n' +
