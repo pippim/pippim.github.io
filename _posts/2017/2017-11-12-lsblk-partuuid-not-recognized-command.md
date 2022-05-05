@@ -10,9 +10,9 @@ created_date: 2017-11-12 15:15:48
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "3,146 "
+views:        "3,160 "
 accepted:     
-uploaded:     2022-04-24 19:32:42
+uploaded:     2022-05-05 04:39:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-12-lsblk-partuuid-not-recognized-command.md
 toc:          false
 navigation:   false

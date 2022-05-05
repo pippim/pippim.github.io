@@ -138,6 +138,7 @@ perl
 php
 plaintext
 plist
+plsql
 pony
 postscript
 powershell

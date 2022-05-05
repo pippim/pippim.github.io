@@ -37,13 +37,12 @@
 │   │   ├── search_url.json
 │   │   ├── search_words.json
 │   │   └── website_tree.json
-│   ├── sound
-│   │   ├── Alarm_01.mp3
-│   │   ├── Alarm_01.wav
-│   │   ├── Alarm_03.mp3
-│   │   ├── Alarm_05.mp3
-│   │   └── Alarm_12.mp3
-│   └── tim-ta.js
+│   └── sound
+│       ├── Alarm_01.mp3
+│       ├── Alarm_01.wav
+│       ├── Alarm_03.mp3
+│       ├── Alarm_05.mp3
+│       └── Alarm_12.mp3
 ├── _includes
 │   ├── copyHeader.html
 │   ├── head-custom.html
@@ -90,10 +89,10 @@
 ├── _sass
 │   ├── jekyll-theme-cayman.scss
 │   ├── normalize.scss
+│   ├── style.scss
 │   └── toc.scss
 ├── sede
 │   ├── check-html-ids.py
-│   ├── QueryResults.csv
 │   ├── refresh.sh
 │   ├── rouge_languages.txt
 │   ├── StackQuery
@@ -107,6 +106,7 @@
 ├── hrb.md
 ├── index.md
 ├── LICENSE
-└── programs.md
+├── programs.md
+└── tim-ta.js
 
 26 directories, 84 files

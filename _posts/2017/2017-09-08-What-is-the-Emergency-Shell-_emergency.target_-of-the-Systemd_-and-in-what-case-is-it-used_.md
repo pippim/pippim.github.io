@@ -10,9 +10,9 @@ created_date: 2017-09-08 23:54:30
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "3,111 "
+views:        "3,113 "
 accepted:     
-uploaded:     2022-04-24 19:32:42
+uploaded:     2022-05-05 04:39:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-08-What-is-the-Emergency-Shell-_emergency.target_-of-the-Systemd_-and-in-what-case-is-it-used_.md
 toc:          false
 navigation:   false

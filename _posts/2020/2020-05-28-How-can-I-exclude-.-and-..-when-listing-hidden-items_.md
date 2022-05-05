@@ -10,9 +10,9 @@ created_date: 2020-05-28 10:53:24
 edit_date:    2020-05-28 12:31:35
 votes:        "4 "
 favorites:    
-views:        "753 "
+views:        "772 "
 accepted:     Accepted
-uploaded:     2022-04-24 19:32:42
+uploaded:     2022-05-05 04:39:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-28-How-can-I-exclude-.-and-..-when-listing-hidden-items_.md
 toc:          false
 navigation:   false
