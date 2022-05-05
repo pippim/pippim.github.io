@@ -2485,7 +2485,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
 }
 
 function popBuildHtml(msg_type, msg, index, buttons) {
-    var msg_head = "", msgq_class="";
+    var msg_head = "", msgq_class = "";
     if (msg_type == "e") { msg_head = "ERROR"; msgq_class = "msgq-error"; }
     if (msg_type == "w") { msg_head = "WARNING"; msgq_class = "msgq-warning"; }
     if (msg_type == "i") { msg_head = "Info"; msgq_class = "msgq-info"; }
@@ -2566,19 +2566,20 @@ function popBuildStyle(msg_type) {
     html += '.msgq-window-header {\n' +
             '  cursor: move;  z-index: 10;\n' +
             '  color: #fff;\n' +
-            '  -webkit-touch-callout: none;\n' +
-            '  -webkit-user-select: none;\n' +
-            '  -khtml-user-select: none;\n' +
-            '  -moz-user-select: none;\n' +
-            '  -ms-user-select: none;\n' +
-            '  user-select: none;\n' +
-            '  -webkit-tap-highlight-color:rgba(0,0,0,0);\n' +
+            // Prevent touch move from highlighting text
+            //'  -webkit-touch-callout: none;\n' +
+            //'  -webkit-user-select: none;\n' +
+            //'  -khtml-user-select: none;\n' +
+            //'  -moz-user-select: none;\n' +
+            //'  -ms-user-select: none;\n' +
+            //'  user-select: none;\n' +
+            //'  -webkit-tap-highlight-color:rgba(0,0,0,0);\n' +
             '}\n';
 
-    html += '.msgq-window-header .msgq-error { background-color: #f44336; }\n';
-    html += '.msgq-window-header .msgq-warning { background-color: #ff9800; }\n';
-    html += '.msgq-window-header .msgq-info { background-color: #2196F3; }\n';
-    html += '.msgq-window-header .msgq-success { background-color: #04AA6D; }\n';
+    html += '.msgq-window-header.msgq-error { background-color: #f44336; }\n';
+    html += '.msgq-window-header.msgq-warning { background-color: #ff9800; }\n';
+    html += '.msgq-window-header.msgq-info { background-color: #2196F3; }\n';
+    html += '.msgq-window-header.msgq-success { background-color: #04AA6D; }\n';
 
     html += '.msgq-window-buttons {\n' +
             '  display: flex;\n' +
