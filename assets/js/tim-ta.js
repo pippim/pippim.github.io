@@ -1414,7 +1414,8 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
     for (const key of Object.keys(allTimers)) {
         var entry = allTimers[key];
         if (key == "tabTimerAllSets") {
-            // TODO, massage description with "Set Number x of y"
+            // NOTE: AllSets NEVER gets reset when an old set ends
+            // TODO, Timer description with "Set Number x of y"
         } else {
             entry.progress = 0;
             entry.remaining = entry.seconds;
@@ -2484,16 +2485,16 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
 }
 
 function popBuildHtml(msg_type, msg, index, buttons) {
-    var msg_head = "";
-    if (msg_type == "e") { msg_head = "ERROR"; }
-    if (msg_type == "w") { msg_head = "WARNING"; }
-    if (msg_type == "i") { msg_head = "Info"; }
-    if (msg_type == "s") { msg_head = "Success"; }
+    var msg_head = "", msgq_class="";
+    if (msg_type == "e") { msg_head = "ERROR"; msgq_class = "msgq-error"; }
+    if (msg_type == "w") { msg_head = "WARNING"; msgq_class = "msgq-warning"; }
+    if (msg_type == "i") { msg_head = "Info"; msgq_class = "msgq-info"; }
+    if (msg_type == "s") { msg_head = "Success"; msgq_class = "msgq-success"; }
     var html = "";
     // For historical reasons must be "_header" not "-header" to drag window
     html += '<div id="popIndex' + index + '" class="msgq-window">\n';
     html += '  <div id="popIndex' + index + '_header" \n';
-    html += '       class="msgq-window-header">' + msg_head +
+    html += '       class="msgq-window-header ' + msgq_class + '">' + msg_head +
                     '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closebtn" \n';
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
@@ -2543,13 +2544,6 @@ function htmlButtons(buttons) {
 }
 
 function popBuildStyle(msg_type) {
-    // NOTE: .msq-xxx styles identical to #tcm-xxx styles in /assets/css/style.scss
-    var msg_color = "#2196F3";  // Baby blue
-    if (msg_type == "e") { msg_color = "#f44336"; }  // red
-    if (msg_type == "w") { msg_color = "#ff9800"; }  // orange
-    if (msg_type == "i") { msg_color = "#2196F3"; }  // light blue
-    if (msg_type == "s") { msg_color = "#04AA6D"; }  // green
-
     var html = "<style>\n";
 
     html += '.msgq-window {\n' +
@@ -2583,6 +2577,11 @@ function popBuildStyle(msg_type) {
             '  user-select: none;\n' +
             '  -webkit-tap-highlight-color:rgba(0,0,0,0);\n' +
             '}\n';
+
+    html += '.msgq-window-header .msgq-error { background-color: #f44336 }\n';
+    html += '.msgq-window-header .msgq-warning { background-color: #ff9800 }\n';
+    html += '.msgq-window-header .msgq-info { background-color: #2196F3 }\n';
+    html += '.msgq-window-header .msgq-success { background-color: #04AA6D }\n';
 
     html += '.msgq-window-buttons {\n' +
             '  display: flex;\n' +
