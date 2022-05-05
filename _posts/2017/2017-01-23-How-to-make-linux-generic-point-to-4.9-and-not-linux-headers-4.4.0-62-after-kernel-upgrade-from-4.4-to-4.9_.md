@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,523 "
 accepted:     Accepted
-uploaded:     2022-05-05 04:39:28
+uploaded:     2022-05-05 04:52:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-23-How-to-make-linux-generic-point-to-4.9-and-not-linux-headers-4.4.0-62-after-kernel-upgrade-from-4.4-to-4.9_.md
 toc:          false
 navigation:   false

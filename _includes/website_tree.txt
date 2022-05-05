@@ -89,7 +89,6 @@
 ├── _sass
 │   ├── jekyll-theme-cayman.scss
 │   ├── normalize.scss
-│   ├── style.scss
 │   └── toc.scss
 ├── sede
 │   ├── check-html-ids.py
@@ -106,7 +105,6 @@
 ├── hrb.md
 ├── index.md
 ├── LICENSE
-├── programs.md
-└── tim-ta.js
+└── programs.md
 
-26 directories, 84 files
+26 directories, 82 files

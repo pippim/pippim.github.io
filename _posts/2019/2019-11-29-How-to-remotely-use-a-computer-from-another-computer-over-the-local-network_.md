@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "287 "
 accepted:     Accepted
-uploaded:     2022-05-05 04:39:28
+uploaded:     2022-05-05 04:52:17
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-29-How-to-remotely-use-a-computer-from-another-computer-over-the-local-network_.md
 toc:          false
 navigation:   false
