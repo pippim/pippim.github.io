@@ -2058,6 +2058,7 @@ function validateInput() {
         if (!validateNonBlank(value)) { return false; }
         // task_name can't be duplicates
         if (name == "task_name" && !validateTaskName (value)) { return false; }
+        if (name == "project_name" && !validateProjectName (value)) { return false; }
         if (!validateNumber(value)) { return false; }
         if (dd_field.type == "number") { value = 0 + value } // '' to 0
         if (!validateRange(value)) { return false; }
@@ -2113,6 +2114,21 @@ function getInputValues() {
     }
 
     return formValues;
+}
+
+function validateProjectName(value) {
+    // The task_name key must be unique
+    popClearByError("project_name")
+    const new_index = ttaConfig.arrProjects.indexOf(value);
+    if (new_index < 0) { return true; }  // New key wasn't found
+
+    const original_index = ttaConfig.arrProjects.indexOf(ttaProject.project_name);
+    if (original_index == new_index) { return true; }  // Key hasn't changed
+
+    // We have a new key that already exists
+    popCreateUniqueError("e", dd_field.label + " must be unique", "project_name",
+                         "id", dd_field.name);
+    return false;
 }
 
 function validateTaskName(value) {
