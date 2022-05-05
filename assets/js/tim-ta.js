@@ -2623,7 +2623,9 @@ function dragElement2(elm) {
         // get the mouse cursor position at startup
         e.preventDefault();  // Prevents text highlighting while dragging header
         setXY(e);
-        setCommonStart();
+        setOldXY();
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
     }
 
     function dragTouchStart(e) {
@@ -2631,9 +2633,11 @@ function dragElement2(elm) {
         e.preventDefault();  // Prevents text highlighting while dragging header
         useTouch = true;
         setXY(e);
-        setCommonStart();
+        setOldXY();
+        document.ontouchend = closeDragElement;
+        document.ontouchmove = elementDrag;
         if (!once) {
-            alert("START oldX: " + oldX + " | oldY: " + oldY);
+            //alert("START oldX: " + oldX + " | oldY: " + oldY);
             once = true;
         }
 
@@ -2649,13 +2653,10 @@ function dragElement2(elm) {
         }
     }
 
-    function setCommonStart() {
+    function setOldXY() {
         oldX = x;
         oldY = y;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-        console.log("START oldX:", oldX, "oldY:", oldY);
+        //console.log("START oldX:", oldX, "oldY:", oldY);
     }
 
     function elementDrag(e) {
@@ -2664,13 +2665,9 @@ function dragElement2(elm) {
         setXY(e);
         offX = oldX - x;
         offY = oldY - y;
-        oldX = x;
-        oldY = y;
-        //offX = oldX - e.clientX;
-        //offY = oldY - e.clientY;
-        //oldX = e.clientX;
-        //oldY = e.clientY;
-        // set the element's new position:
+        setOldXY();
+        //oldX = x;
+        //oldY = y;
         elm.style.left = (elm.offsetLeft - offX) + "px";
         elm.style.top = (elm.offsetTop - offY) + "px";
     }
@@ -2703,8 +2700,8 @@ function dragElement2(elm) {
         document.onmousemove = null;
         document.ontouchend = null;
         document.ontouchmove = null;
-        console.log("END oldX:", oldX, "oldY:", oldY, " | offX:", offX, "offY:", offY);
-        alert("END oldX: " + oldX + " oldY: " + oldY + " | offX: " + offX + " offY: " + offY);
+        //console.log("END oldX:", oldX, "oldY:", oldY, " | offX:", offX, "offY:", offY);
+        //alert("END oldX: " + oldX + " oldY: " + oldY + " | offX: " + offX + " offY: " + offY);
     }
 }
 
