@@ -1428,11 +1428,11 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
 function testAllTimers() {
     // Speed up 10 times for previewing.
     // TODO: If totalAllTimersTime for more than 1 minute, confirm intent
-    if (cancelAllTimers == false && totalAllTimersTime > 30) {
-      /* var confirm = popYesNo('w', "More than 30 seconds has already run.\n" +
-                              "Are you sure you want to exit?");
-      if (!confirm) { return; }
-      */
+    if (sleepMillis == 1000 && totalAllTimersTime > 30) {
+        var msg = "More than 30 seconds elapsed.<br>";
+        msg += "Are you sure you want to 10x speed?";
+        var response = await popYesNo("w", msg, "timer_override");
+        if (!response) { return }
     }
 
     sleepMillis = sleepMillis / 10;
@@ -1443,6 +1443,10 @@ function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
     // TODO: If called from Footer (not normal end) totalAllTimersTime more than 1 minute, confirm exit
     if (cancelAllTimers == false && totalAllTimersTime > 30) {
+        var msg = "More than 30 seconds elapsed.<br>";
+        msg += "Are you sure you want to exit?";
+        var response = await popYesNo("w", msg, "timer_override");
+        if (!response) { return }
       /* var confirm = popYesNo('w', "More than 30 REAL seconds has already run.\n" +
                               "Are you sure you want to increase speed?");
       if (!confirm) { return; }
@@ -2321,13 +2325,13 @@ var popResponse;
 
 async function popYesNo(msg_type, msg, error_id) {
     /* Prompt with Yes/No buttons, return true if Yes. */
-    popResponse = null;
+    popResponse = false;
     var arrBtn = [
         "response_no", "No", "Don't do it", "popNo",
         "response_yes", "Yes", "Proceed", "popYes"
     ]
 
-    // Create our control box
+    // Create our prompt window with two buttons
     var popId = popCreateUniqueError(msg_type, msg, error_id, "elm", ttaElm, arrBtn);
     if (popId == null) { return false; }
 
