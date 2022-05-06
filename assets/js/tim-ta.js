@@ -2420,7 +2420,9 @@ function popClose(idWindow) {
     setTimeout(function(){
         elmWindow.style.display = "none";
         console.log("idWindow:", idWindow)
-        if (msgq[idWindow].callbackClose != null) { msgq[idWindow].callbackClose(); }
+        if (idWindow in msgq) {
+            if (msgq[idWindow].callbackClose != null) { msgq[idWindow].callbackClose(); }
+        }
         popClearById(idWindow);
     }, 600);
 }
