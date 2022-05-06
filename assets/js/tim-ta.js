@@ -1425,7 +1425,7 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
     }
 }
 
-function testAllTimers() {
+async function testAllTimers() {
     // Speed up 10 times for previewing.
     // TODO: If totalAllTimersTime for more than 1 minute, confirm intent
     if (sleepMillis == 1000 && totalAllTimersTime > 30) {
@@ -1439,7 +1439,7 @@ function testAllTimers() {
     if (sleepMillis < 1) { sleeMillis = 1; }
 }
 
-function exitAllTimers() {
+async function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
     // TODO: If called from Footer (not normal end) totalAllTimersTime more than 1 minute, confirm exit
     if (cancelAllTimers == false && totalAllTimersTime > 30) {
