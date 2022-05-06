@@ -2317,8 +2317,35 @@ function msgqClear() {
     popIndex = 0;
 }
 
+var popResponse;
+
+async function popYesNo(msg_type, msg, error_id) {
+    /* Prompt with Yes/No buttons, return true if Yes. */
+    popResponse = null;
+    var arrBtn = [
+        "response_no", "No", "Don't do it", "popNo",
+        "response_yes", "Yes", "Proceed", "popYes"
+    ]
+
+    // Create our control box
+    var popId = popCreateUniqueError(msg_type, msg, error_id, "elm", ttaElm, arrBtn);
+    if (popId == null) { return false; }
+
+    popRegisterClose(popId, popNo);
+    while(true) {
+        await sleep(50);
+        // When a popCreate window is closed, it disappears after 600ms
+        if (document.body.contains(elmWindow)) { continue; }
+        return popResponse;
+    }
+}
+
+function popYes() { popResponse = true; }
+function popNo() { popResponse = false; }
+
+
 async function popPrompt(msg_type, msg, error_id) {
-    /* Display message and wait for response. */
+    /* Display message and wait for acknowledgement. */
     var idWindow = popCreate(msg_type, msg, error_id);
     var elmWindow = document.getElementById(idWindow);
 
@@ -2395,10 +2422,12 @@ function popClose(idWindow) {
 function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     // Create window if same error isn't displayed yet. Prevents multiple
     // windows for same thing, E.G. "Name cannot be blank".
+    var popId;
     var existingIds = popGetIdsByError(error_id);
     if (existingIds.length == 0) {
-        popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons);
+        popId = popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons);
     }
+    return popId;
 }
 
 function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
@@ -2423,7 +2452,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
         popCreate('e', "msgAlert() minimum of 2 arguments required:\n" +
               "msg_type, msg, id_elm_type, elm, error_id, clear_flag");
         console.trace();
-        return false;
+        return;
     }
     if (msg_type != "e" && msg_type != "w" &&
         msg_type != "i" && msg_type != "s") {
@@ -2431,14 +2460,14 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
             // Catastrophe when you call popCreate from itself (CPU burn out)
             alert('e', "msgAlert() msg_type must be 'e', 'w', 'i' or 's'.");
             console.trace();
-            return false;
+            return;
     }
     var elm = id_elm; // May be undefined, an element or an ID
     if (arguments.length >= 4 && id_elm_type == "id") {
         if (arguments.length < 5) {
             alert('e', "msgAlert() when 'id_elm_type' = 'id', next argument required.");
             console.trace();
-            return false;
+            return;
         }
         // Rewrite id in elm parameter with actual element.
         elm = document.getElementById(id_elm);
