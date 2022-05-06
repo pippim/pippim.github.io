@@ -132,7 +132,7 @@ Future placeholder to drag and drop your own sound files here.
 <form>
   <input type="file"><input id="fileDragName"><input id="fileDragSize"><input id="fileDragType"><input id="fileDragData">
   <br><p>Sound Screening Drop Zone</p><br>
-  <div id="holder" style="width:200px; height:100vw; border: 10px dashed #ccc"></div>
+  <div id="holder" style="width: 100vw; height: 200px; border: 10px dashed #ccc"></div>
 </form>
 
 ---
