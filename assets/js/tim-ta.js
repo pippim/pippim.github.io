@@ -2345,8 +2345,8 @@ async function popYesNo(msg_type, msg, error_id) {
     }
 }
 
-function popYes() { popResponse = true; }
-function popNo() { popResponse = false; }
+function popYes() { popResponse = true; console.log("popYes"); }
+function popNo() { popResponse = false; console.log("popNo"); }
 
 
 async function popPrompt(msg_type, msg, error_id) {
