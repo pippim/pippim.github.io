@@ -2334,6 +2334,7 @@ async function popYesNo(msg_type, msg, error_id) {
 
     // Create our prompt window with two buttons
     popYesNoId = popCreateUniqueError(msg_type, msg, error_id, "elm", ttaElm, arrBtn);
+    var elmWindow = document.getElementById(popYesNoId);
     if (popYesNoId == null) { return false; }
 
     popRegisterClose(popYesNoId, popNo);
@@ -2352,7 +2353,6 @@ function popNo() { popResponse = false; popClose(popYesNoId); }
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for acknowledgement. */
     var idWindow = popCreate(msg_type, msg, error_id);
-    await sleep(50);
     var elmWindow = document.getElementById(idWindow);
 
     while(true) {
