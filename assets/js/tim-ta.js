@@ -2352,6 +2352,7 @@ function popNo() { popResponse = false; popClose(popYesNoId); }
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for acknowledgement. */
     var idWindow = popCreate(msg_type, msg, error_id);
+    await sleep(50);
     var elmWindow = document.getElementById(idWindow);
 
     while(true) {
@@ -2389,7 +2390,8 @@ function popClearById(idWindow) {
         let entry = msgq[key];
         if (entry.idWindow == idWindow) { popClearByEntry(entry); return; }
     }
-    console.log("popClearById() not found:", idWindow)
+    //console.log("popClearById() not found:", idWindow)
+    // When window closed by popYesNo we get here.
 }
 
 function popClearByEntry(entry) {
