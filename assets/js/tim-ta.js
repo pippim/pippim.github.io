@@ -2341,6 +2341,7 @@ async function popYesNo(msg_type, msg, error_id) {
         await sleep(50);
         // When a popCreate window is closed, it disappears after 600ms
         if (document.body.contains(elmWindow)) { continue; }
+        console.log("popYesNo() is returning:", popResponse);
         return popResponse;
     }
 }
