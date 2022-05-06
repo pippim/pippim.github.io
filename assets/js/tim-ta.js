@@ -2347,8 +2347,8 @@ async function popYesNo(msg_type, msg, error_id) {
     }
 }
 
-function popYes() { popResponse = true; popClose(popYesNoId); }
-function popNo() { popResponse = false; popClose(popYesNoId); }
+function popYes() { popResponse = true; popClose("popYes:", popYesNoId); }
+function popNo() { popResponse = false; popClose("popNo:", popYesNoId); }
 
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for acknowledgement. */
@@ -2421,7 +2421,6 @@ function popClose(idWindow) {
     elmWindow.style.opacity = "0";
     setTimeout(function(){
         elmWindow.style.display = "none";
-        console.log("idWindow:", idWindow)
         if (idWindow in msgq) {
             if (msgq[idWindow].callbackClose != null) { msgq[idWindow].callbackClose(); }
         }
@@ -2436,10 +2435,8 @@ function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm, butt
     var existingIds = popGetIdsByError(error_id);
     if (existingIds.length == 0) {
         popId = popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons);
-        console.log('popId:', popId)
         return popId;
     } else {
-        console.log("existingIds[0]:", existingIds[0])
         return existingIds[0];  /* Hopefully there is only 1. TODO: List when > 1 */
     }
 
