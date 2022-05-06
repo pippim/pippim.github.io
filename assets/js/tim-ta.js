@@ -2328,8 +2328,8 @@ async function popYesNo(msg_type, msg, error_id) {
     /* Prompt with Yes/No buttons, return true if Yes. */
     popResponse = false;
     var arrBtn = [
-        "response_no", "No", "Don't do it", "popNo",
-        "response_yes", "Yes", "Proceed", "popYes"
+        "response_no", "No", "Don't do it", "popNo()",
+        "response_yes", "Yes", "Proceed", "popYes()"
     ]
 
     // Create our prompt window with two buttons
