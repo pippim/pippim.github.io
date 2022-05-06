@@ -2345,9 +2345,8 @@ async function popYesNo(msg_type, msg, error_id) {
     }
 }
 
-function popYes() { popResponse = true; console.log("popYes"); }
-function popNo() { popResponse = false; console.log("popNo"); }
-
+function popYes() { popResponse = true; popClose(popYesNoId); }
+function popNo() { popResponse = false; popClose(popYesNoId); }
 
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for acknowledgement. */
