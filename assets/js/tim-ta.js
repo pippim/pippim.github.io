@@ -1339,7 +1339,7 @@ async function runAllTimers() {
             pauseAllTimers = false;  // Progress Control Box can pause. But not now
             if (getTaskValue('task_prompt') == "true") {
                 // Prompt to begin timer
-                msg = "Ready to begin Timed Task " + ttaTask.task_name;
+                msg = "Ready to begin Task: <b>" + ttaTask.task_name; + "</b>";
                 await popPrompt('i', msg);  // Blocking function, we wait...
             }
         }
@@ -2419,6 +2419,7 @@ function popClose(idWindow) {
     elmWindow.style.opacity = "0";
     setTimeout(function(){
         elmWindow.style.display = "none";
+        console.log("idWindow:", idWindow)
         if (msgq[idWindow].callbackClose != null) { msgq[idWindow].callbackClose(); }
         popClearById(idWindow);
     }, 600);
