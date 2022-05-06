@@ -2431,8 +2431,11 @@ function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm, butt
     var existingIds = popGetIdsByError(error_id);
     if (existingIds.length == 0) {
         popId = popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons);
+        return popId;
+    } else {
+        return existingIds[0];  /* Hopefully there is only 1. TODO: List when > 1 */
     }
-    return popId;
+
 }
 
 function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
