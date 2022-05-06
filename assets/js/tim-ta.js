@@ -2322,6 +2322,7 @@ function msgqClear() {
 }
 
 var popResponse;
+var popYesNoId;
 
 async function popYesNo(msg_type, msg, error_id) {
     /* Prompt with Yes/No buttons, return true if Yes. */
@@ -2332,8 +2333,8 @@ async function popYesNo(msg_type, msg, error_id) {
     ]
 
     // Create our prompt window with two buttons
-    var popId = popCreateUniqueError(msg_type, msg, error_id, "elm", ttaElm, arrBtn);
-    if (popId == null) { return false; }
+    popYesNoId = popCreateUniqueError(msg_type, msg, error_id, "elm", ttaElm, arrBtn);
+    if (popYesNoId == null) { return false; }
 
     popRegisterClose(popId, popNo);
     while(true) {
@@ -2344,8 +2345,8 @@ async function popYesNo(msg_type, msg, error_id) {
     }
 }
 
-function popYes() { popResponse = true; }
-function popNo() { popResponse = false; }
+function popYes() { popResponse = true; popClose(popYesNoId); }
+function popNo() { popResponse = false; popClose(popYesNoId); }
 
 
 async function popPrompt(msg_type, msg, error_id) {
