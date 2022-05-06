@@ -2321,8 +2321,8 @@ function msgqClear() {
     popIndex = 0;
 }
 
-var popResponse;
-var popYesNoId;
+var popResponse;    // true/false value
+var popYesNoId;     // Assumes only 1 yes/no window appears at a time...
 
 async function popYesNo(msg_type, msg, error_id) {
     /* Prompt with Yes/No buttons, return true if Yes. */
@@ -2345,8 +2345,8 @@ async function popYesNo(msg_type, msg, error_id) {
     }
 }
 
-function popYes() { popResponse = true; popClose(popYesNoId); }
-function popNo() { popResponse = false; popClose(popYesNoId); }
+function popYes() { popResponse = true; }
+function popNo() { popResponse = false; }
 
 
 async function popPrompt(msg_type, msg, error_id) {
