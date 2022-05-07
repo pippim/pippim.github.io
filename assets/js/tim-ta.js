@@ -321,6 +321,20 @@ function ttaApplyGlobalStyles() {
             --bg_color_secondary: #155799;
             --honeydew: #F0FFF0;
         }
+        .bigFoot {
+            display: flex;
+            justify-content: space-around;
+            margin: 1rem 0px 0px;
+            padding: .25rem .5rem;
+            border-radius: 0 0 1rem 1rem;
+            color: yellow;
+            background-color: var(--bg_color);
+            background-image: linear-gradient(120deg,
+              var(--bg_color_secondary), var(--bg_color));
+        }
+        .leftFoot, .centerFoot, .rightFoot {
+        }
+
     `
 
     var styleSheet = document.createElement("style");
@@ -566,25 +580,23 @@ function ttaTableStyle() {
 }  // End of ttaTableStyle()
 
 function bigFootStyle() {
+    return "";
+    /*
     return  '.bigFoot {\n' +
             '  display: flex;\n' +
             '  justify-content: space-around;\n' +
             '  margin: 1rem 0px 0px;\n' +
             '  padding: .25rem .5rem;\n' +
-            //'  border: 3px solid grey;\n' +
             '  border-radius: 0 0 1rem 1rem;\n' +
             '  color: yellow;\n' +
-            //'  background-color: ' + header_bg_color + ';\n' +
-            //'  background-image: linear-gradient(120deg, \n' +
-            //'    ' + header_bg_color_secondary + ', ' + header_bg_color + ');\n' +
             '  background-color: var(--bg_color);\n' +
             '  background-image: linear-gradient(120deg, \n' +
             '    var(--bg_color_secondary), var(--bg_color));\n' +
             '}\n' +
             '.leftFoot, .centerFoot, .rightFoot {\n' +
-            //'  flex-grow: 1;\n' +
             '}\n';
     // Flex from: https://stackoverflow.com/a/44348868/6929343
+    */
 }
 
 function ttaBtnStyle() {
