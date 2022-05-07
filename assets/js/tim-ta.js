@@ -291,12 +291,12 @@ var ttaElm, currentTable, currentRoot, currentRow, currentMode, currentForm;
 
 function ttaRunConfiguration (parentElm) {
     ttaElm = parentElm;
-    // Setup border
+    // Setup border color #155799 is Cayman Blue
     ttaElm.style.cssText = `
         border-style: solid;
         border-width: 2px;
         border-radius: 1rem;
-        border-color: header_bg_color_secondary;
+        border-color: #155799;
         padding: .5rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
