@@ -1432,6 +1432,7 @@ async function testAllTimers() {
         var msg = "More than 30 seconds elapsed.<br>";
         msg += "Are you sure you want to 10x speed?";
         var response = await popYesNo("w", msg, "timer_override");
+        console.log("testAllTimers() response:", response)
         if (!response) { return }
     }
 
