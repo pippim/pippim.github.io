@@ -1432,7 +1432,6 @@ async function testAllTimers() {
         var msg = "More than 30 seconds elapsed.<br>";
         msg += "Are you sure you want to 10x speed?";
         var response = await popYesNo("w", msg, "timer_override");
-        console.log("testAllTimers() response:", response)
         if (!response) { return }
     }
 
@@ -1550,7 +1549,7 @@ function buildActionControlBoxBody(i) {
 function ctlClose() {
     // Called from popClose() using preset callback msgq[idWindow] = ctlClose();
     var ctlActionsBoxActive = false;
-    console.log("ctlClose() successfully reached.")
+    // console.log("ctlClose() successfully reached.")
 }
 
 function getTaskValue(key) {
