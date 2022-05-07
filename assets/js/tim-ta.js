@@ -307,7 +307,7 @@ function ttaRunConfiguration (parentElm) {
     if (cnt < 1) { ttaNewConfig(); paintTasksTable(); }
 }
 
-var ttaStyleSheet = document.createElement("ttaStyleSheet");
+var ttaStyleSheet;
 
 function ttaApplyGlobalStyles() {
     // Your CSS as text: https://stackoverflow.com/a/707580/6929343
@@ -346,6 +346,7 @@ function ttaApplyGlobalStyles() {
         select:invalid { color: grey; }
     `
 
+    ttaStyleSheet = document.createElement("ttaStyleSheet");
     ttaStyleSheet.innerText = styles;
     document.head.appendChild(ttaStyleSheet);
 }  // End of ttaApplyGlobalStyles()
