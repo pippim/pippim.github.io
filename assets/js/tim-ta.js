@@ -330,11 +330,21 @@ function ttaApplyGlobalStyles() {
             color: yellow;
             background-color: var(--bg_color);
             background-image: linear-gradient(120deg,
-              var(--bg_color_secondary), var(--bg_color));
+                var(--bg_color_secondary), var(--bg_color));
         }
         .leftFoot, .centerFoot, .rightFoot {
         }
-
+        .tta-btn {
+            font-size: 22px;
+            border-radius: 1rem;
+            margin-left: 0px ! important;
+        }
+        .inpOnOffSwitch {
+            vertical-align: middle;
+            width: 40px;
+            height: auto;
+        }
+        select:invalid { color: gray; }
     `
 
     var styleSheet = document.createElement("style");
@@ -601,24 +611,33 @@ function bigFootStyle() {
 
 function ttaBtnStyle() {
     // Override margin-left from /assets/js/css/style.scss: .hdr-btn{}
+    return "";
+    /*
     return  '.tta-btn {\n' +
             '  font-size: 22px;\n' +
             '  border-radius: 1rem;\n' +
             '  margin-left: 0px ! important;\n' +
             '}\n'
+    */
 }
 
 function inpSwitchStyle() {
+    return "";
+    /*
     return '.inpOnOffSwitch {\n' +
            '  vertical-align: middle;\n' +
            '  width: 40px;\n' +
            '  height: auto;\n' +
            '}\n';
+    */
 }
 
 function inpSelectStyle() {
+    return "";
+    /*
     // https://stackoverflow.com/a/8442831/6929343
     return 'select:invalid { color: gray; }';
+    */
 }
 
 function tabTasksHeading() {
