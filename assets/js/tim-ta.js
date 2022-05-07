@@ -346,7 +346,7 @@ function ttaApplyGlobalStyles() {
         select:invalid { color: grey; }
     `
 
-    ttaStyleSheet = document.createElement("ttaStyleSheet");
+    ttaStyleSheet = document.createElement("style");
     ttaStyleSheet.innerText = styles;
     document.head.appendChild(ttaStyleSheet);
 }  // End of ttaApplyGlobalStyles()
