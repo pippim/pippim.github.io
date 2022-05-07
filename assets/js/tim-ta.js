@@ -302,6 +302,8 @@ function ttaRunConfiguration (parentElm) {
         margin-bottom: 1rem;
     `;
 
+    ttaApplyGlobalStyles();  // Styles for ttaTable, ttaBtn, bigFoot, etc.
+
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
     const cnt = ttaConfig.arrProjects.length;
     if (cnt == 1) { paintTasksTable(); }
@@ -309,6 +311,31 @@ function ttaRunConfiguration (parentElm) {
     // When no projects exist, create Sample Laundry Project
     if (cnt < 1) { ttaNewConfig(); paintTasksTable(); }
 }
+
+function ttaApplyGlobalStyles() {
+    // Your CSS as text: https://stackoverflow.com/a/707580/6929343
+    var styles = `
+
+    .qwebirc-qui .ircwindow div {
+        font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+        margin: 26px auto 0 auto;
+        max-width: 650px;
+    }
+    .qwebirc-qui .lines {
+        font-size: 18px;
+        line-height: 1.58;
+        letter-spacing: -.004em;
+    }
+
+    .qwebirc-qui .nicklist a {
+        margin: 6px;
+    }
+    `
+
+    var styleSheet = document.createElement("style")
+    styleSheet.innerText = styles
+    document.head.appendChild(styleSheet)
+}  // End of ttaApplyGlobalStyles()
 
 function paintProjectsTable() {
     // Assumes ttaConfig and ttaProject are populated
@@ -445,7 +472,7 @@ function tabProjectDetail(i) {
         html += "<td>" + strTaskCount + "</td>\n";
     }
     return html += "</tr>\n";
-}
+}  // End of tabProjectDetail(i)
 
 /* These buttons are for actions/controls box used on mobiles  jump */
 function buildProjectButtons (i) {
@@ -545,7 +572,7 @@ function ttaTableStyle() {
             '.flash {\n' +
             '  animation:         flash 1s infinite;\n' +
             '}\n'
-}
+}  // End of ttaTableStyle()
 
 function bigFootStyle() {
     return  '.bigFoot {\n' +
@@ -621,7 +648,7 @@ function tabTaskDetail(i) {
         html += "<td>" + strDuration + "</td>\n";
     }
     return html += "</tr>\n";
-}
+}  // End of tabTaskDetail(i)
 
 /* These buttons are for actions/controls box used on mobiles */
 function buildTaskButtons(i) {
@@ -682,7 +709,7 @@ function clickCommon(i) {
         console.trace()
         cntTable = 0;
     }
-}
+}  // End of clickCommon(i)
 
 function clickListen(i) {
     // i is the row number being processed. First click plays sound, second
@@ -739,7 +766,7 @@ function clickListen(i) {
     if (notify != null) { sendNotify (i, notify); }
 
     return audioControl;  // Used by runAllTimers to early end alarm sound
-}
+}  // End of clickListen(i)
 
 function soundAlarm(i, sound) {
     /* From above: tabButton(i, tabListenSym, tabListenTitle, "clickListen");
@@ -771,7 +798,7 @@ function soundAlarm(i, sound) {
         audioControl.play();
         audioControl.onended = function() { resetListen(btnElm); };
     }
-}
+}  // End of soundAlarm(i, sound)
 
 function resetListen(btnElm) {
     // Set button symbol (text) back to Song Notes
@@ -833,7 +860,7 @@ function sendNotification(body, header, icon) {
         granted ? showNotification() : showError();
 
     })();
-}
+}  // End of sendNotification(body, header, icon)
 
 function clickUp(i) {
     clickCommon(i);
@@ -846,6 +873,7 @@ function clickUp(i) {
     popClearByError('at_top');
     popClearByError('at_bottom');
 }
+
 function clickDown(i) {
     // TODO: After moving, update & save localStorage
     clickCommon(i);
@@ -868,22 +896,26 @@ function clickEdit(i) {
     if (currentTable == "Projects") { paintProjectForm("Edit"); }
                                else { paintTaskForm("Edit"); }
 }
+
 function clickTasks(i) {
     // Called from Projects Table to display Tasks Table
     clickCommon(i);
     paintTasksTable();
 }
+
 function clickDelete(i) {
     clickCommon(i);
     if (currentTable == "Projects") { paintProjectForm("Delete"); }
     else { paintTaskForm("Delete"); }
 }
+
 function clickAddTask() {
     // Create empty record for add
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     oldTask = Object.assign({}, tta_task);
     paintTaskForm("Add");
 }
+
 function clickAddProject() {
     // Create empty record for add
     ttaProject = Object.assign({}, tta_project); // https://stackoverflow.com/a/34294740/6929343
@@ -963,7 +995,7 @@ function paintRunTimers(i) {
     // TODO: prompt to begin running
     runAllTimers();  // Run through all timers
     // Get to this point instantly while runAllTimers() runs asynchronously
-}
+}  // End of paintRunTimers(i)
 
 function tabRunTimersHeading() {
     // Format table heading for RunTimers form
@@ -1001,7 +1033,7 @@ function tabRunTimersDetail(i) {
     var id = "tabTimer" + i;
     var sound = getTaskValue("task_end_filename");
     return htmlRunTimersDetail(id, ttaTask.task_name, i, secondsTask, sound);
-}
+}  // End of tabRunTimersDetail(i)
 
 function htmlRunTimersSet() {
     // Format table detail Tasks Total line for RunTimers form
@@ -1042,7 +1074,7 @@ function htmlRunTimersDetail(id, name, index, seconds, sound) {
     html += "<td><font size='+2'>" + name + "</font></td>\n";
 
     return html += "</tr>\n";
-}
+}  // End of htmlRunTimersDetail(id, name, index, seconds, sound)
 
 function initTimersAfterDOM() {
     // After innerHTML is set we can bet the elements and set sources
@@ -1058,6 +1090,140 @@ function initTimersAfterDOM() {
     }
 }
 
+/* START OF DUPLICATE CODE
+
+function progressTouched(i, element) {
+    /* Pop up control box for Task Name progress bar with:
+
+        - 23EE ⏮︎ skip to start, previous
+        - 23EA ⏪︎ rewind, fast backwards
+        - 23EF ⏯︎ play/pause toggle
+        - 23E9 ⏩︎ fast forward
+        - 23ED ⏭︎ skip to end, next
+
+        Every action (except close) clears control and
+        mounts a new one.
+
+        From: https://www.w3.org/TR/WD-wwwicn.html
+
+         [test: &play.start;]
+    &play.start; - play. Play button for starting a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.fast.forward, play.fast.reverse).
+[test: &play.stop;]
+    &play.stop; - stop play. Stop button for stopping a movie or sound, as on cassette or CD player (cf. play.start, play.pause, play.fast.forward, play.fast.reverse).
+[test: &play.pause;]
+    &play.pause; - pause. Pause button for pausing a movie or sound, as on cassette or CD player (cf. play.start, play.stop, play.fast.forward, play.fast.reverse).
+[test: &play.fast.forward;]
+    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
+[test: &play.fast.reverse;]
+    &play.fast.reverse; - fast reverse. fast reverse button for going back in a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
+    * /
+    popClearByError("task_progress");  // Clear control box, not an error
+    // Was a total progress bar clicked?
+    const cntIndexTasks = ttaProject.arrTasks.length - 1
+    const boolTotalBar = i > cntIndexTasks ? true : false;
+    // What is the running ones-based progress bar number?
+    const activeBarNo = getActiveTimerNo();
+    const boolTouchedActive = i + 1 === activeBarNo ? true : false;
+    //console.log("Clicked on a boolTotalBar?:", boolTotalBar);
+    //console.log("Active Progress Bar number:", activeBarNo);
+    //console.log("boolTouchedActive?:", boolTouchedActive);
+
+    popClearByError("no_tasks_running");
+    if (activeBarNo == 0) {
+        popCreate("e", "No timers are running yet", "no_tasks_running");
+        return;
+    }
+
+    popClearByError("total_task_clicked");
+    if (boolTotalBar) {
+        popCreate("e", "Cannot select a total progress bar",
+                  "total_task_clicked", "elm", element);
+        return;
+    }
+
+    popClearByError("task_not_running");
+    if (!boolTouchedActive) {
+        popCreate("e", "Can only select a running progress bar",
+                  "task_not_running", "elm", element);
+        return;
+    }
+
+    // Create our control box
+    let msg = buildProgressControlBoxBody(i);
+    let btn = buildProgressControlButtons(i);
+    var popId = popCreate("i", msg, "task_progress", "elm", element, btn);
+    popRegisterClose(popId, pcbClose)
+}  // End of progressTouched(i, element)
+
+function buildProgressControlBoxBody(i) {
+    // Get task details into work buffer
+    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
+    var msg = "";
+    msg += "<b><font size='+2'>Timed Task Overrides</font></b><br><br>\n";
+    msg += "Project: <b>" + ttaProject.project_name +
+           "</b> - Task: <b>" + workTask.task_name + "</b><br>";
+    return msg;
+}
+
+function buildProgressControlButtons(i) {
+    /*  list of buttons for popCreate to use:
+        - 23EE ⏮︎ skip to start, previous
+        - 23EA ⏪︎ rewind, fast backwards
+        - 23EF ⏯︎ play/pause toggle
+        - 23E9 ⏩︎ fast forward
+        - 23ED ⏭︎ skip to end, next
+        }
+[test: &play.fast.reverse;]
+        "rewind", "&play.fast.reverse;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        DOUBLE LEFT ARROW:
+        "rewind", "&#xAB;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        DOUBLE LEFT ARROW:
+        "rewind", "&#x2BEC;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
+        "forward", "&play.fast.forward;", "Fast forward", "pcbClickForward(" + i +")",
+        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
+        DOUBLE RIGHT ARROW:
+        "forward", "&#xBB;", "Fast forward", "pcbClickForward(" + i +")",
+        DOUBLE RIGHT ARROW:
+        "forward", "&#x2BEE;", "Fast forward", "pcbClickForward(" + i +")",
+
+    * /
+
+    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
+    var arrButtons = [
+        "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
+        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
+        "play_toggle", "&#x23EF;︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
+        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
+        "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
+    ]
+
+    return arrButtons;
+}  // End of buildProgressControlButtons(i)
+
+function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
+function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
+
+function pcbClickPlayPause(i) {
+    pcbClickCommon(i, "play_toggle");
+    pauseAllTimers = !pauseAllTimers;
+}
+
+function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
+function pcbClickEnd(i) { pcbClickCommon(i, "end"); }
+
+function pcbClickCommon(i, caller) {
+    console.log("pcbClickCommon(i) called from:", caller)
+}
+
+function pcbClose() {
+    // Called from popClose() using preset callback msgq[idWindow] = pcbClose();
+    pauseAllTimers = false;
+}
+
+END OF DUPLICATE CODE */
+
 function progressTouched(i, element) {
     /* Pop up control box for Task Name progress bar with:
 
@@ -1119,7 +1285,7 @@ function progressTouched(i, element) {
     let btn = buildProgressControlButtons(i);
     var popId = popCreate("i", msg, "task_progress", "elm", element, btn);
     popRegisterClose(popId, pcbClose)
-}
+}  // End of progressTouched(i, element)
 
 function buildProgressControlBoxBody(i) {
     // Get task details into work buffer
@@ -1186,133 +1352,7 @@ function pcbClose() {
     pauseAllTimers = false;
 }
 
-function progressTouched(i, element) {
-    /* Pop up control box for Task Name progress bar with:
-
-        - 23EE ⏮︎ skip to start, previous
-        - 23EA ⏪︎ rewind, fast backwards
-        - 23EF ⏯︎ play/pause toggle
-        - 23E9 ⏩︎ fast forward
-        - 23ED ⏭︎ skip to end, next
-
-        Every action (except close) clears control and
-        mounts a new one.
-
-        From: https://www.w3.org/TR/WD-wwwicn.html
-
-         [test: &play.start;]
-    &play.start; - play. Play button for starting a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.fast.forward, play.fast.reverse).
-[test: &play.stop;]
-    &play.stop; - stop play. Stop button for stopping a movie or sound, as on cassette or CD player (cf. play.start, play.pause, play.fast.forward, play.fast.reverse).
-[test: &play.pause;]
-    &play.pause; - pause. Pause button for pausing a movie or sound, as on cassette or CD player (cf. play.start, play.stop, play.fast.forward, play.fast.reverse).
-[test: &play.fast.forward;]
-    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
-[test: &play.fast.reverse;]
-    &play.fast.reverse; - fast reverse. fast reverse button for going back in a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
-    */
-    popClearByError("task_progress");  // Clear control box, not an error
-    // Was a total progress bar clicked?
-    const cntIndexTasks = ttaProject.arrTasks.length - 1
-    const boolTotalBar = i > cntIndexTasks ? true : false;
-    // What is the running ones-based progress bar number?
-    const activeBarNo = getActiveTimerNo();
-    const boolTouchedActive = i + 1 === activeBarNo ? true : false;
-    //console.log("Clicked on a boolTotalBar?:", boolTotalBar);
-    //console.log("Active Progress Bar number:", activeBarNo);
-    //console.log("boolTouchedActive?:", boolTouchedActive);
-
-    popClearByError("no_tasks_running");
-    if (activeBarNo == 0) {
-        popCreate("e", "No timers are running yet", "no_tasks_running");
-        return;
-    }
-
-    popClearByError("total_task_clicked");
-    if (boolTotalBar) {
-        popCreate("e", "Cannot select a total progress bar",
-                  "total_task_clicked", "elm", element);
-        return;
-    }
-
-    popClearByError("task_not_running");
-    if (!boolTouchedActive) {
-        popCreate("e", "Can only select a running progress bar",
-                  "task_not_running", "elm", element);
-        return;
-    }
-
-    // Create our control box
-    let msg = buildProgressControlBoxBody(i);
-    let btn = buildProgressControlButtons(i);
-    var popId = popCreate("i", msg, "task_progress", "elm", element, btn);
-    popRegisterClose(popId, pcbClose)
-}
-
-function buildProgressControlBoxBody(i) {
-    // Get task details into work buffer
-    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
-    var msg = "";
-    msg += "<b><font size='+2'>Timed Task Overrides</font></b><br><br>\n";
-    msg += "Project: <b>" + ttaProject.project_name +
-           "</b> - Task: <b>" + workTask.task_name + "</b><br>";
-    return msg;
-}
-
-function buildProgressControlButtons(i) {
-    /*  list of buttons for popCreate to use:
-        - 23EE ⏮︎ skip to start, previous
-        - 23EA ⏪︎ rewind, fast backwards
-        - 23EF ⏯︎ play/pause toggle
-        - 23E9 ⏩︎ fast forward
-        - 23ED ⏭︎ skip to end, next
-        }
-[test: &play.fast.reverse;]
-        "rewind", "&play.fast.reverse;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        DOUBLE LEFT ARROW:
-        "rewind", "&#xAB;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        DOUBLE LEFT ARROW:
-        "rewind", "&#x2BEC;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
-        "forward", "&play.fast.forward;", "Fast forward", "pcbClickForward(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
-        DOUBLE RIGHT ARROW:
-        "forward", "&#xBB;", "Fast forward", "pcbClickForward(" + i +")",
-        DOUBLE RIGHT ARROW:
-        "forward", "&#x2BEE;", "Fast forward", "pcbClickForward(" + i +")",
-
-    */
-
-    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
-    var arrButtons = [
-        "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
-        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        "play_toggle", "&#x23EF;︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
-        "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
-    ]
-
-    return arrButtons;
-}
-
-function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
-function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
-function pcbClickPlayPause(i) {
-    pcbClickCommon(i, "play_toggle");
-    pauseAllTimers = !pauseAllTimers;
-}
-function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
-function pcbClickEnd(i) { pcbClickCommon(i, "end"); }
-
-function pcbClickCommon(i, caller) {
-    console.log("pcbClickCommon(i) called from:", caller)
-}
-
-function pcbClose() {
-    // Called from popClose() using preset callback msgq[idWindow] = pcbClose();
-    pauseAllTimers = false;
-}
+/* START OF CODE NEVER DUPLICATED */
 
 function getActiveTimerNo() {
     for (const key of Object.keys(allTimers)) {
