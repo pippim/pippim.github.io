@@ -554,8 +554,7 @@ function bigFootStyle() {
             '  margin: 1rem 0px 0px;\n' +
             '  padding: .25rem .5rem;\n' +
             //'  border: 3px solid grey;\n' +
-            '  border-bottom-left-radius:: 1rem;\n' +
-            '  border-bottom-right-radius:: 1rem;\n' +
+            '  border-radius:: 0 0 1rem 1rem;\n' +
             '  color: yellow;\n' +
             '  background-color: ' + header_bg_color + ';\n' +
             '  background-image: linear-gradient(120deg, \n' +
