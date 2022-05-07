@@ -1448,10 +1448,6 @@ async function exitAllTimers() {
         msg += "Are you sure you want to exit?";
         var response = await popYesNo("w", msg, "timer_override");
         if (!response) { return }
-      /* var confirm = popYesNo('w', "More than 30 REAL seconds has already run.\n" +
-                              "Are you sure you want to increase speed?");
-      if (!confirm) { return; }
-      */
     }
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
     wakeLockOff();  // Allow mobile screen to sleep again
@@ -2338,7 +2334,8 @@ async function popYesNo(msg_type, msg, error_id) {
     var elmWindow = document.getElementById(popYesNoId);
     if (popYesNoId == null) { return false; }
 
-    popRegisterClose(popYesNoId, popNo);
+    // popRegisterClose(popYesNoId, popNo);
+    // Aha don't want above! after "Yes" window closes and response is "No"
     while(true) {
         await sleep(50);
         // When a popCreate window is closed, it disappears after 600ms
