@@ -515,7 +515,7 @@ function paintTasksTable() {
     html += "<font size='+2'>New Task</font>";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
-    html += taskButton(tabListSym, tabProjectsTitle, "paintProjectsTable");
+    html += taskButton(tabBackSym, tabProjectsTitle, "paintProjectsTable");
     html += "<font size='+2'>All Projects</font>";
     html += '</div>\n';
     html += '</div>\n';
@@ -2558,8 +2558,6 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     let rect = p['elmLink'].getBoundingClientRect();
     var oldX = parseInt(rect.left + window.scrollX);  // Get link (anchor reference point)
     var oldY = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
-    //console.log("window.scrollX:", window.scrollX, "oldX =", oldX, "px");
-    //console.log("window.scrollY:", window.scrollY, "oldY =", oldY, "px");
     elmDraggable.style.left = (oldX + 20) + "px";
     elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
     dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
@@ -2567,6 +2565,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     popIndex += 1;  // Our new entry count and the next index to add
     msgq[p['idWindow']] = p;  // Add entry to msgq object
     return p['idWindow'];  // Return key to caller
+
 }  // End of popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons)
 
 function popBuildHtml(msg_type, msg, index, buttons) {
