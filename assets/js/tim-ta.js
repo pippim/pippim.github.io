@@ -314,27 +314,18 @@ function ttaRunConfiguration (parentElm) {
 
 function ttaApplyGlobalStyles() {
     // Your CSS as text: https://stackoverflow.com/a/707580/6929343
+    // root colors: Cayman green, Cayman blue, Honeydew
     var styles = `
-
-    .qwebirc-qui .ircwindow div {
-        font-family: Georgia,Cambria,"Times New Roman",Times,serif;
-        margin: 26px auto 0 auto;
-        max-width: 650px;
-    }
-    .qwebirc-qui .lines {
-        font-size: 18px;
-        line-height: 1.58;
-        letter-spacing: -.004em;
-    }
-
-    .qwebirc-qui .nicklist a {
-        margin: 6px;
-    }
+        :root {
+            --bg_color: #159957;
+            --bg_color_secondary: #155799;
+            --honeydew: #F0FFF0;
+        }
     `
 
-    var styleSheet = document.createElement("style")
-    styleSheet.innerText = styles
-    document.head.appendChild(styleSheet)
+    var styleSheet = document.createElement("style");
+    styleSheet.innerText = styles;
+    document.head.appendChild(styleSheet);
 }  // End of ttaApplyGlobalStyles()
 
 function paintProjectsTable() {
@@ -583,9 +574,12 @@ function bigFootStyle() {
             //'  border: 3px solid grey;\n' +
             '  border-radius: 0 0 1rem 1rem;\n' +
             '  color: yellow;\n' +
-            '  background-color: ' + header_bg_color + ';\n' +
+            //'  background-color: ' + header_bg_color + ';\n' +
+            //'  background-image: linear-gradient(120deg, \n' +
+            //'    ' + header_bg_color_secondary + ', ' + header_bg_color + ');\n' +
+            '  background-color: var(--bg_color);\n' +
             '  background-image: linear-gradient(120deg, \n' +
-            '    ' + header_bg_color_secondary + ', ' + header_bg_color + ');\n' +
+            '    var(--bg_color_secondary), var(--bg_color));\n' +
             '}\n' +
             '.leftFoot, .centerFoot, .rightFoot {\n' +
             //'  flex-grow: 1;\n' +
