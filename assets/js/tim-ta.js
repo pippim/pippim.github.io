@@ -295,8 +295,9 @@ function ttaRunConfiguration (parentElm) {
     ttaElm.style.cssText = `
         border-style: solid;
         border-width: 2px;
-        border-block-start-color: header_bg_color_secondary;
-        border-block-end-color: header_bg_color;
+        border-radius: 1rem;
+        border-inline-start-color: header_bg_color_secondary;
+        border-inline-end-color: header_bg_color;
         padding: .5rem;
     `;
 
