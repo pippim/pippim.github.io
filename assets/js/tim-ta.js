@@ -2340,13 +2340,12 @@ async function popYesNo(msg_type, msg, error_id) {
         await sleep(50);
         // When a popCreate window is closed, it disappears after 600ms
         if (document.body.contains(elmWindow)) { continue; }
-        console.log("popYesNo() is returning:", popResponse);
         return popResponse;
     }
 }
 
-function popYes() { popResponse = true; popClose(popYesNoId); console.log("popYes:", popResponse) }
-function popNo() { popResponse = false; popClose(popYesNoId); console.log("popNo:", popResponse) }
+function popYes() { popResponse = true; popClose(popYesNoId); }
+function popNo() { popResponse = false; popClose(popYesNoId); }
 
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for acknowledgement. */
@@ -2378,7 +2377,6 @@ function popClearByError(error_id) {
         let entry = msgq[key];
         if (entry.error_id == error_id) { popClearByEntry(entry); return; }
     }
-    // console.log("popClearByError() not found:", error_id);  // Normal event
 }
 
 function popClearById(idWindow) {
@@ -2481,10 +2479,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
         }
         // Rewrite id in elm parameter with actual element.
         elm = document.getElementById(id_elm);
-        //console.log("elm assigned by getElementById:", id_elm_type)
     }
 
-    //console.log("elm:", elm, "buttons:", buttons)
     var p = {};
     p['idWindow'] = "popIndex" + popIndex;
     p['elmWindow'] = document.createElement('div');
