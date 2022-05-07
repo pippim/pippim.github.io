@@ -2560,7 +2560,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     var oldY = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
     //console.log("window.scrollX:", window.scrollX, "oldX =", oldX, "px");
     //console.log("window.scrollY:", window.scrollY, "oldY =", oldY, "px");
-    elmDraggable.style.left = (oldX) + "px";
+    elmDraggable.style.left = (oldX + 20) + "px";
     elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
     dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
 
@@ -2638,8 +2638,8 @@ function popBuildStyle(msg_type) {
             '  transition: opacity 0.6s;\n' +
             '  max-width: 90vw;\n' +
             '  max-height: 95vh;\n' +
-            '  top: 263px;\n' +
-            '  left: 20px;\n' +
+            // '  top: 263px;\n' +
+            // '  left: 20px;\n' +
             '  overflow: auto;\n' +
             '  background-color: #f1f1f1;\n' +
             '  border: .2rem solid #d3d3d3;\n' +
