@@ -1443,7 +1443,7 @@ async function runAllTimers() {
         if (run_times > 1) { updateRunTimer(myTable, entryAllSets); }
 
     }  // End of forever while(true) loop
-}
+}  // End of async function runAllTimers()
 
 function updateRunTimer(myTable, entry) {
     if (pauseAllTimers) { return; }
@@ -1583,7 +1583,7 @@ function clickControls(i) {
     msg = buildActionControlBoxBody(i);
     var popId = popCreate("i", msg, "action_controls", "id", id, btn);
     popRegisterClose(popId, ctlClose);
-}
+}  // End of clickControls(i)
 
 function buildActionControlBoxBody(i) {
     // Get task details into work buffer
@@ -1712,7 +1712,7 @@ function paintConfigForm() {
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
-}
+}  // End of paintConfigForm()
 
 function paintProjectForm(mode) {
     // mode can be "Add", "Edit" or "Delete"
@@ -1836,7 +1836,7 @@ function paintTaskForm(mode) {
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
-}
+}  // End of paintTaskForm(mode)
 
 var inpSwitches;
 var inpSelects;
@@ -1883,7 +1883,7 @@ function buildInput(key, mode) {
     html += '</td></tr>\n'
 
     return html;
-}
+}  // End of buildInput(key, mode)
 
 function buildText(key, value, mode) {
     // Build text type input field
@@ -1926,7 +1926,7 @@ function buildSelect(key, value, mode) {
     html += '</select>\n';
     // console.log("select html:", html);
     return html;
-}
+}  // End of buildSelect(key, value, mode)
 
 function buildSelectOption(name, default_name) {
     // Build one dropdown option
@@ -2012,7 +2012,7 @@ function clickUpdateTask() {
     saveConfig();
     paintTasksTable()
     return true;
-}
+}  // End of clickUpdateTask()
 
 function clickUpdateProject() {
     /* Process Project updates - Add, Edit or Delete Project requested */
@@ -2071,7 +2071,7 @@ function clickUpdateProject() {
     saveConfig();
     paintProjectsTable();
     return true;
-}
+}  // End of clickUpdateProject()
 
 function clickUpdateConfig() {
     /* Update Configuration - currentMode will always be "Edit" */
@@ -2093,7 +2093,7 @@ function clickUpdateConfig() {
     // Configuration only called from Projects Table so go back to it.
     paintProjectsTable();
     return true;
-}
+}  // End of clickUpdateConfig()
 
 function validateInput() {
     // Validate input fields
@@ -2123,7 +2123,7 @@ function validateInput() {
         if (!validateRadioButton(value)) { return false; }
     }
     return true;
-}
+}  // End of validateInput()
 
 function getInputValues() {
     // Get input field values from <form> for "text" ONLY
@@ -2172,7 +2172,7 @@ function getInputValues() {
     }
 
     return formValues;
-}
+}  // End of getInputValues()
 
 function validateProjectName(value) {
     // The task_name key must be unique
@@ -2284,7 +2284,7 @@ function buildSwitch(name, bool, mode) {
     // NOTE: parent provides > at end
     //console.log("html:", html)
     return html;
-}
+}  // End of buildSwitch(name, bool, mode)
 
 function initSwitchesAfterDOM() {
     // After innerHTML is set we can bet the elements and set sources
@@ -2392,7 +2392,7 @@ async function popYesNo(msg_type, msg, error_id) {
         if (document.body.contains(elmWindow)) { continue; }
         return popResponse;
     }
-}
+}  // End of async function popYesNo(msg_type, msg, error_id)
 
 function popYes() { popResponse = true; popClose(popYesNoId); }
 function popNo() { popResponse = false; popClose(popYesNoId); }
@@ -2408,7 +2408,7 @@ async function popPrompt(msg_type, msg, error_id) {
         if (document.body.contains(elmWindow)) { continue; }
         return;  // Clicked X to close, or clicked "OK" & element removed
     }
-}
+}  // End of async function popPrompt(msg_type, msg, error_id)
 
 function popGetIdsByError(error_id) {
     // Returns array of idWindow matching error ID
@@ -2567,7 +2567,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     popIndex += 1;  // Our new entry count and the next index to add
     msgq[p['idWindow']] = p;  // Add entry to msgq object
     return p['idWindow'];  // Return key to caller
-}
+}  // End of popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons)
 
 function popBuildHtml(msg_type, msg, index, buttons) {
     var msg_head = "", msgq_class = "";
@@ -2601,7 +2601,7 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '  </div>\n';
     html += '</div>\n';
     return html;
-}
+}  // Ebd if popBuildHtml(msg_type, msg, index, buttons)
 
 function htmlButtons(buttons) {
     /* DECLARED ABOVE:
@@ -2626,7 +2626,7 @@ function htmlButtons(buttons) {
         html += '      >' + text + '</button>\n';
     }
     return html;
-}
+}  // End of htmlButtons(buttons)
 
 function popBuildStyle(msg_type) {
     var html = "<style>\n";
@@ -2692,7 +2692,7 @@ function popBuildStyle(msg_type) {
     html += "</style>\n";
 
     return html;
-}
+}  // End of popBuildStyle(msg_type)
 
 function popBuildScript() {
     // BROKEN
@@ -2782,6 +2782,6 @@ function dragElement2(elm) {
         document.ontouchend = null;
         document.ontouchmove = null;
     }
-}
+}  // End of dragElement2(elm)
 
 /* End of /assets/js/tim-ta.js */
