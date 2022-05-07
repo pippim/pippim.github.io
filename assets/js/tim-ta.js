@@ -296,9 +296,10 @@ function ttaRunConfiguration (parentElm) {
         border-style: solid;
         border-width: 2px;
         border-radius: 1rem;
-        border-inline-start-color: header_bg_color_secondary;
-        border-inline-end-color: header_bg_color;
+        border-color: header_bg_color_secondary;
         padding: .5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     `;
 
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
@@ -550,10 +551,11 @@ function bigFootStyle() {
     return  '.bigFoot {\n' +
             '  display: flex;\n' +
             '  justify-content: space-around;\n' +
-            '  margin: 1rem 0px;\n' +
+            '  margin: 1rem 0px 0px;\n' +
             '  padding: .25rem .5rem;\n' +
             //'  border: 3px solid grey;\n' +
-            '  border-radius: 1rem;\n' +
+            '  border-bottom-left-radius:: 1rem;\n' +
+            '  border-bottom-right-radius:: 1rem;\n' +
             '  color: yellow;\n' +
             '  background-color: ' + header_bg_color + ';\n' +
             '  background-image: linear-gradient(120deg, \n' +
