@@ -291,6 +291,15 @@ var ttaElm, currentTable, currentRoot, currentRow, currentMode, currentForm;
 
 function ttaRunConfiguration (parentElm) {
     ttaElm = parentElm;
+    // Setup border
+    ttaElm.style.cssText = `
+        border-style: solid;
+        border-width: 2px;
+        border-block-start-color: header_bg_color_secondary;
+        border-block-end-color: header_bg_color;
+        padding: .5rem;
+    `;
+
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
     const cnt = ttaConfig.arrProjects.length;
     if (cnt == 1) { paintTasksTable(); }
