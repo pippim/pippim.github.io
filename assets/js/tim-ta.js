@@ -10,11 +10,6 @@
 
 */
 
-// Not very pretty redefinition of style.scss colors:
-var header_bg_color = '#159957';               // Cayman green
-var header_bg_color_secondary = '#155799';     // Cayman blue
-var honeydew = '#F0FFF0' ;                     // Honeydew
-
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
 
 scrSetSize();  // Call on document load
@@ -312,14 +307,18 @@ function ttaRunConfiguration (parentElm) {
     if (cnt < 1) { ttaNewConfig(); paintTasksTable(); }
 }
 
+var ttaStyleSheet = document.createElement("ttaStyleSheet");
+
 function ttaApplyGlobalStyles() {
     // Your CSS as text: https://stackoverflow.com/a/707580/6929343
     // root colors: Cayman green, Cayman blue, Honeydew
+    // name-column fluctuates based on currentTable and scrSize
     var styles = `
         :root {
-            --bg_color: #159957;
-            --bg_color_secondary: #155799;
+            --bg-color: #159957;
+            --bg-color-secondary: #155799;
             --honeydew: #F0FFF0;
+            --name-column: 3;
         }
         .bigFoot {
             display: flex;
@@ -328,9 +327,9 @@ function ttaApplyGlobalStyles() {
             padding: .25rem .5rem;
             border-radius: 0 0 1rem 1rem;
             color: yellow;
-            background-color: var(--bg_color);
+            background-color: var(--bg-color);
             background-image: linear-gradient(120deg,
-                var(--bg_color_secondary), var(--bg_color));
+                var(--bg-color-secondary), var(--bg-color));
         }
         .leftFoot, .centerFoot, .rightFoot {
         }
@@ -344,12 +343,11 @@ function ttaApplyGlobalStyles() {
             width: 40px;
             height: auto;
         }
-        select:invalid { color: gray; }
+        select:invalid { color: grey; }
     `
 
-    var styleSheet = document.createElement("style");
-    styleSheet.innerText = styles;
-    document.head.appendChild(styleSheet);
+    ttaStyleSheet.innerText = styles;
+    document.head.appendChild(ttaStyleSheet);
 }  // End of ttaApplyGlobalStyles()
 
 function paintProjectsTable() {
@@ -550,12 +548,16 @@ function ttaTableStyle() {
 //            '  max-width: 100vw;\n' +
 
     // project_name or task_name get extra padding.
-    var col;
+    var col = 99;
     if (scrSmall) { col = 3; }  // The "name" column to receive extra padding
     else if (currentTable == "Projects") { col = 7; }
     else if (currentTable == "Tasks") { col = 6; }
     else if (currentTable == "RunTimers") { col = 3; }
     else { console.log("ttaTableStyle() - currentTable not handled:", currentTable); }
+    ttaStyleSheet.style.setProperty("--name-column", col);
+    // get variable from inline style
+    var display_col = ttaStyleSheet.style.getPropertyValue("--name-column");
+    console.log("css variable --name-column:", display_col)
 
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
@@ -589,56 +591,10 @@ function ttaTableStyle() {
             '}\n'
 }  // End of ttaTableStyle()
 
-function bigFootStyle() {
-    return "";
-    /*
-    return  '.bigFoot {\n' +
-            '  display: flex;\n' +
-            '  justify-content: space-around;\n' +
-            '  margin: 1rem 0px 0px;\n' +
-            '  padding: .25rem .5rem;\n' +
-            '  border-radius: 0 0 1rem 1rem;\n' +
-            '  color: yellow;\n' +
-            '  background-color: var(--bg_color);\n' +
-            '  background-image: linear-gradient(120deg, \n' +
-            '    var(--bg_color_secondary), var(--bg_color));\n' +
-            '}\n' +
-            '.leftFoot, .centerFoot, .rightFoot {\n' +
-            '}\n';
-    // Flex from: https://stackoverflow.com/a/44348868/6929343
-    */
-}
-
-function ttaBtnStyle() {
-    // Override margin-left from /assets/js/css/style.scss: .hdr-btn{}
-    return "";
-    /*
-    return  '.tta-btn {\n' +
-            '  font-size: 22px;\n' +
-            '  border-radius: 1rem;\n' +
-            '  margin-left: 0px ! important;\n' +
-            '}\n'
-    */
-}
-
-function inpSwitchStyle() {
-    return "";
-    /*
-    return '.inpOnOffSwitch {\n' +
-           '  vertical-align: middle;\n' +
-           '  width: 40px;\n' +
-           '  height: auto;\n' +
-           '}\n';
-    */
-}
-
-function inpSelectStyle() {
-    return "";
-    /*
-    // https://stackoverflow.com/a/8442831/6929343
-    return 'select:invalid { color: gray; }';
-    */
-}
+function bigFootStyle() { return ""; }
+function ttaBtnStyle() { return ""; }
+function inpSwitchStyle() { return ""; }
+function inpSelectStyle() { return ""; }
 
 function tabTasksHeading() {
     var html = "<tr><th colspan='";
@@ -2662,8 +2618,6 @@ function popBuildStyle(msg_type) {
             '  transition: opacity 0.6s;\n' +
             '  max-width: 90vw;\n' +
             '  max-height: 95vh;\n' +
-            // '  top: 263px;\n' +
-            // '  left: 20px;\n' +
             '  overflow: auto;\n' +
             '  background-color: #f1f1f1;\n' +
             '  border: .2rem solid #d3d3d3;\n' +
@@ -2700,9 +2654,9 @@ function popBuildStyle(msg_type) {
             //'  border: 2px solid grey;\n' +
             '  border-radius: 1rem;\n' +
             '  color: yellow;\n' +
-            '  background-color: ' + header_bg_color + ';\n' +
+            '  background-color: var(--bg-color);\n' +
             '  background-image: linear-gradient(120deg, \n' +
-            '    ' + header_bg_color_secondary + ', ' + header_bg_color + ');\n' +
+            '    var(--bg-color-secondary), var(--bg-color));\n' +
             '}\n';
 
     html += '.msgq-window-button {\n' +
