@@ -133,7 +133,7 @@ These are Tim-ta stock sound files you can use when a timer task ends:
         <p>Sound Screening in Memory (not saved yet)</p>
         <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
         <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
-        <label class="drag-button" for="fileElem">Select some files</label>
+        <label class="button" for="fileElem">Select some files</label>
     </form>
     <div id="gallery"></div>
     <progress id="progress-bar" max=100 value=0></progress>
