@@ -347,7 +347,7 @@ function ttaApplyGlobalStyles() {
 .leftFoot, .centerFoot, .rightFoot { }
 
 .tta-btn {
-    font-size: 22px;
+    font-size: x-large;
     border-radius: 1rem;
     margin-left: 0px ! important;
 }
