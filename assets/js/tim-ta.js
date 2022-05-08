@@ -346,11 +346,18 @@ function ttaApplyGlobalStyles() {
 
 .leftFoot, .centerFoot, .rightFoot { }
 
-/* .tta-btn styled with hdr-btn that has left margin */
+/* .tta-btn WAS styled with hdr-btn that has left margin */
 .tta-btn {
+    color: var(--bg-color);
+    padding: 0px 5px;
+    background-color: var(--honeydew);
     font-size: x-large;
     border-radius: 1rem;
-    margin-left: 0px ! important;
+
+    &:hover, &focus {
+        background-color: DodgerBlue;
+        color: #fff;
+    }
 }
 
 .inpOnOffSwitch {
@@ -664,7 +671,7 @@ function hmsToString(hours, minutes, seconds) {
 function tabButton(i, button_code, title, onclick) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
-    var html = '<td><button class="hdr-btn tta-btn ' + onclick + '" \n' +
+    var html = '<td><button class="tta-btn ' + onclick + '" \n' +
                'id="tabBtnId_' + onclick + i + '" \n' +
                'type="button" onclick="' + onclick + '(' + i + ')" \n' +
                'title="' + title + '">' + button_code + '</button></td>\n';
@@ -674,7 +681,7 @@ function tabButton(i, button_code, title, onclick) {
 function taskButton(button_code, title, onclick) {
     // Add button to table detail. Return HTML with <button> code
     // code is the HTML code, E.G.&#x25b6; for Play button.
-    var html = '<button class="hdr-btn tta-btn ' + onclick + '" \n' +
+    var html = '<button class="tta-btn ' + onclick + '" \n' +
                'type="button" onclick="' + onclick + '()" \n' +
                'title="' + title + '">' + button_code + '</button>\n';
     return html;
@@ -764,7 +771,7 @@ function soundAlarm(i, sound) {
     tabButton(i, button_code, title, onclick) {
         // Add button to table detail. Return HTML with <button> code
         // code is the HTML code, E.G. &#x25b6; for Play button.
-        var html = '<td><button class="hdr-btn tta-btn ' + onclick + '" \n' +
+        var html = '<td><button class="tta-btn ' + onclick + '" \n' +
                    'id="tabBtnId_' + onclick + i + '" \n' +
                    'type="button" onclick="' + onclick + '(' + i + ')" \n' +
                    'title="' + title + '">' + button_code + '</button></td>\n';
@@ -2562,7 +2569,7 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     if (buttons == null) {
-    html += '    <button class="hdr-btn tta-btn msgq-window-button"\n';
+    html += '    <button class="tta-btn msgq-window-button"\n';
     html += '      title="Click to close" \n';
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '       >OK</button>\n';
@@ -2591,7 +2598,7 @@ function htmlButtons(buttons) {
         let title = buttons[i+2];
         let onclick = buttons[i+3];
         html += '    <button id="'+ id + '" \n';
-        html += '      class="hdr-btn tta-btn msq-window-button" \n';
+        html += '      class="tta-btn msq-window-button" \n';
         html += '      title="' + title + '" \n';
         html += '      onclick="' + onclick + '" \n';
         html += '      >' + text + '</button>\n';
