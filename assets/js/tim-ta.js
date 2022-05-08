@@ -335,7 +335,7 @@ function ttaApplyGlobalStyles() {
     border-radius: 0 0 1rem 1rem;
 }
 
-.ttaContainer, .bigfoot {
+.ttaContainer, .bigFoot {
     padding: .25rem .5rem;
     font-size: x-large;
     color: var(--highlight-color);
@@ -425,11 +425,11 @@ function paintProjectsTable() {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';  // tabControl
     html += taskButton(tabConfigSym, tabConfigTitle, "paintConfigForm");
-    html += "<font size='+2'>Settings</font>";
+    html += "Settings";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
     html += taskButton(tabAddSym, tabAddTitle, "clickAddProject");
-    html += "<font size='+2'>New Project</font>";
+    html += "New Project";
     html += '</div>\n';
     html += '</div>\n';
 
@@ -523,7 +523,6 @@ function tabProjectDetail(i) {
         html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
     }           // Five columns of buttons
 
-    // TODO, each row in tabTasks and tabProjects has ID to assign .flashGrey {}
     html += "<td><font size='+2'>" + ttaProject.project_name + "</font></td>\n";
 
     if (!scrSmall) {
@@ -567,15 +566,15 @@ function paintTasksTable() {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
     html += taskButton(tabPlaySym, tabPlayTitle, "paintRunTimers");
-    html += "<font size='+2'>Run Project</font>";
+    html += "Run Project";
     html += '</div>\n';
     html += '<div class="middleFoot">\n';
     html += taskButton(tabAddSym, tabAddTitle, "clickAddTask");
-    html += "<font size='+2'>New Task</font>";
+    html += "New Task";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
     html += taskButton(tabBackSym, tabProjectsTitle, "paintProjectsTable");
-    html += "<font size='+2'>All Projects</font>";
+    html += "All Projects";
     html += '</div>\n';
     html += '</div>\n';
 
@@ -973,11 +972,11 @@ function paintRunTimers(i) {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
     html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
-    html += "<font size='+2'>Preview</font>";
+    html += "Testing";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
     html += taskButton(tabBackSym, "Go back to last table", "exitAllTimers");
-    html += "<font size='+2'>Cancel</font>";
+    html += "Cancel";
     html += '</div>\n';
     html += '</div>\n';
 
@@ -1686,13 +1685,13 @@ function paintConfigForm() {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
     html += taskButton(tabBackSym, "Cancel changes", "paintProjectsTable");
-    html += "<font size='+2'>Back</font>"
+    html += "Back";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
     var textMode = mode;
-    if (textMode == "Edit") { textMode = "Save" }
+    if (textMode == "Edit" || textMode == "Add") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Settings", "clickUpdateConfig");
-    html += "<font size='+2'>Settings</font>";
+    html += "Settings";
     html += '</div>\n';
     html += '</div>\n';
 
@@ -1745,13 +1744,13 @@ function paintProjectForm(mode) {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
     html += taskButton(tabBackSym, "Cancel changes", "paintProjectsTable");
-    html += "<font size='+2'>Back</font>"
+    html += "Back";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
     var textMode = mode;
-    if (textMode == "Edit") { textMode = "Save" }
+    if (textMode == "Edit" || textMode == "Add") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Project", "clickUpdateProject");
-    html += "<font size='+2'>Project</font>";
+    html += "Project";
     html += '</div>\n';
     html += '</div>\n';
 
@@ -1794,13 +1793,13 @@ function paintTaskForm(mode) {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="centerFoot">\n';
     html += taskButton(tabBackSym, "Cancel changes", "paintTasksTable");
-    html += "<font size='+2'>Back</font>"
+    html += "Back"
     html += '</div>\n';
     var textMode = mode;
     html += '<div class="rightFoot">\n';
-    if (textMode == "Edit") { textMode = "Save" }
+    if (textMode == "Edit" || textMode == "Add") { textMode = "Save" }
     html += taskButton(textMode, textMode + " Task", "clickUpdateTask");
-    html += "<font size='+2'>Task</font>";
+    html += "Task";
     html += '</div>\n';
     html += '</div>\n';
 
