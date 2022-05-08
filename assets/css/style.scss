@@ -129,7 +129,6 @@ $lavender: #E6E6FA !default; // lavender
 
 // From: https://stackoverflow.com/questions/17233804/ho
 // DOESN'T work!
-// Is this causing the error: Ruleset ignored due to bad selector.
 //@media (hover: hover) {
 //    button:hover {
 //        background-color: DodgerBlue;
@@ -159,7 +158,6 @@ $lavender: #E6E6FA !default; // lavender
         }
         </script>
 
-*/
 .alert {
     padding: 20px;
     background-color: #f44336;
@@ -188,6 +186,7 @@ $lavender: #E6E6FA !default; // lavender
 .closebtn:hover {
     color: black;
 }
+*/
 
 /* Causing problems where visited gets hover property ...
 #markdown-toc a:visited { color: blue; }
