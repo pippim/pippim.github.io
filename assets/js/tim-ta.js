@@ -567,11 +567,12 @@ function ttaTableStyle() {
             '}\n' +
 
             'table.tta-table th, table.tta-table td {\n' +
-            '  padding: .25rem .25rem;\n' +
+            //'  padding: .25rem .25rem;\n' +
+            '  padding: var(--name-column)px .25rem;\n' +
             '}\n' +
 
-            'table.tta-table td:nth-child(' + col + ') {\n' +
-            //'table.tta-table td:nth-child(var(--name-column)) {\n' +
+            //'table.tta-table td:nth-child(' + col + ') {\n' +
+            'table.tta-table td:nth-child(var(--name-column)) {\n' +
             '  padding: .25rem 1rem;\n' +
             '}\n' +
 
