@@ -133,8 +133,9 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 <div id="drop-area">
     <form class="my-form">
         <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
-        <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
-        <label class="button" for="fileElem">Select some files</label><br>
+        <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)" value="">
+        <label class="button" for="fileElem">Select some files</label>
+        <p> </p><br>
     </form>
     <div id="gallery"></div>
     <progress id="progress-bar" max=100 value=0></progress>
@@ -167,11 +168,6 @@ These are Tim-ta stock sound files you can use when a timer task ends:
   margin-bottom: .5rem;
   margin-right: .5rem;
   vertical-align: middle;
-}
-
-.button {
-   /* Override margins in style.scss
-   margin: 0 0 1rem 0 ! important;
 }
 
 .drag-button {
