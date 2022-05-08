@@ -347,7 +347,7 @@ function ttaApplyGlobalStyles() {
 .leftFoot, .centerFoot, .rightFoot { }
 
 /* .tta-btn WAS styled with hdr-btn that has left margin */
-.tta-btn > a {
+.tta-btn {
     color: var(--bg-color);
     padding: 0px 10px;
     background-color: var(--honeydew);
