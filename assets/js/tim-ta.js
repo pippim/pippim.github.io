@@ -567,8 +567,8 @@ function ttaTableStyle() {
             '}\n' +
 
             'table.tta-table th, table.tta-table td {\n' +
-            //'  padding: .25rem .25rem;\n' +
-            '  padding: var(--name-column)px .25rem;\n' +
+            '  padding: .25rem .25rem;\n' +
+            //'  padding: var(--name-column)px .25rem;\n' +
             '}\n' +
 
             //'table.tta-table td:nth-child(' + col + ') {\n' +
