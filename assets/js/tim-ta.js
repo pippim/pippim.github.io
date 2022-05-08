@@ -346,6 +346,7 @@ function ttaApplyGlobalStyles() {
 
 .leftFoot, .centerFoot, .rightFoot { }
 
+/* .tta-btn styled with hdr-btn that has left margin */
 .tta-btn {
     font-size: x-large;
     border-radius: 1rem;
