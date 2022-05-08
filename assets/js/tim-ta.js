@@ -230,20 +230,21 @@ function ttaNewConfig() {
     saveConfig();
 }
 
-function ttaNewTask (name) {
-    // Only used for creating test data from above. Not used in real life below
+function ttaNewTask(name) {
+    // Only used for creating test data
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     ttaTask.task_name = name;
     ttaTask.hours = ttaTask.minutes = ttaTask.seconds = 0;
 }
 
-function ttaAddTask (obj) {
-    // Used for creating test data above and in real life below
+function ttaAddTask(obj) {
+    // Only used for creating test data
     ttaProject.arrTasks.push(obj.task_name);
     ttaProject.objTasks[obj.task_name] = obj;
 }
 
-function ttaTaskDuration (hours, minutes, seconds) {
+function ttaTaskDuration(hours, minutes, seconds) {
+    // Only used for creating test data
     ttaTask.hours = hours;
     ttaTask.minutes = minutes;
     ttaTask.seconds = seconds;
@@ -355,18 +356,10 @@ function ttaApplyGlobalStyles() {
     border-radius: 1rem;
 }
 
-/* Not sure why hover not working above. Copy below from style.scss */
+/* Not sure why hover not working like hdr-btn does. So make separate below. */
 .tta-btn:hover, .tta-btn:focus {
     background-color: DodgerBlue;
     color: #fff;
-}
-/* Not sure why hover not working above. Copy below from style.scss */
-
-.tta-btn > a {
-    &:hover, &focus {
-        background-color: DodgerBlue;
-        color: #fff;
-    }
 }
 
 .inpOnOffSwitch {
