@@ -318,8 +318,18 @@ function ttaApplyGlobalStyles() {
 :root {
     --bg-color: #159957;
     --bg-color-secondary: #155799;
+    --highlight-color: yellow;
     --honeydew: #F0FFF0;
     --name-column: 3;
+}
+
+.ttaContainer {
+    padding: .25rem .5rem;
+    border-radius: 1rem 1rem 0 0;
+    color: var(--highlight-color);
+    background-color: var(--bg-color);
+    background-image: linear-gradient(120deg,
+        var(--bg-color-secondary), var(--bg-color));
 }
 
 .bigFoot {
@@ -328,7 +338,7 @@ function ttaApplyGlobalStyles() {
     margin: 1rem 0px 0px;
     padding: .25rem .5rem;
     border-radius: 0 0 1rem 1rem;
-    color: yellow;
+    color: var(--highlight-color);
     background-color: var(--bg-color);
     background-image: linear-gradient(120deg,
         var(--bg-color-secondary), var(--bg-color));
