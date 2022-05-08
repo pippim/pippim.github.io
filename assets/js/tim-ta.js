@@ -556,7 +556,7 @@ function ttaTableStyle() {
     else if (currentTable == "RunTimers") { col = 3; }
     else { console.log("ttaTableStyle() - currentTable not handled:", currentTable); }
     ttaStyleSheet.style.setProperty("--name-column", col);
-    // get variable from inline style
+    // get variable from inline style like bg-color
     var display_col = ttaStyleSheet.style.getPropertyValue("--name-column");
     console.log("css variable --name-column:", display_col)
 
@@ -570,7 +570,8 @@ function ttaTableStyle() {
             '  padding: .25rem .25rem;\n' +
             '}\n' +
 
-            'table.tta-table td:nth-child(' + col + ') {\n' +
+            //'table.tta-table td:nth-child(' + col + ') {\n' +
+            'table.tta-table td:nth-child('var(--name-column)') {\n' +
             '  padding: .25rem 1rem;\n' +
             '}\n' +
 
