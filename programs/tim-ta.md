@@ -168,7 +168,7 @@ p {
 }
 
 #gallery img {
-  width: 150px;
+  width: 50px;
   margin-bottom: 10px;
   margin-right: 10px;
   vertical-align: middle;
