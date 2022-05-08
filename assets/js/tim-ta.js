@@ -353,9 +353,11 @@ function ttaApplyGlobalStyles() {
     background-color: var(--honeydew);
     font-size: x-large;
     border-radius: 1rem;
-    &:hover, &focus {
-        background-color: DodgerBlue;
-        color: #fff;
+    > a {
+        &:hover, &focus {
+            background-color: DodgerBlue;
+            color: #fff;
+        }
     }
 }
 
