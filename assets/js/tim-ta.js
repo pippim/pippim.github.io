@@ -353,11 +353,11 @@ function ttaApplyGlobalStyles() {
     background-color: var(--honeydew);
     font-size: x-large;
     border-radius: 1rem;
+}
 
-    &:hover, &focus {
-        background-color: DodgerBlue;
-        color: #fff;
-    }
+.tta-btn:hover, .tta-btn:focus {
+    background-color: DodgerBlue;
+    color: #fff;
 }
 
 .inpOnOffSwitch {
@@ -393,6 +393,19 @@ table.tta-table th {
 
 .flash {
     animation:         flash 1s infinite;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
 }
 
     `  /* End of block: var styles =
