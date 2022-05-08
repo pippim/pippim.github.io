@@ -128,13 +128,13 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 
 <!-- From: https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/  -->
 
-<font size='x-large'>Sound Screening in Memory (not saved yet)</font>
+<font size='+3'>Sound Screening in Memory (not saved yet)</font>
 
 <div id="drop-area">
     <form class="my-form">
-        <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
+        <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
         <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
-        <label class="button" for="fileElem">Select some files</label>
+        <label class="button" for="fileElem">Select some files</label><br>
     </form>
     <div id="gallery"></div>
     <progress id="progress-bar" max=100 value=0></progress>
@@ -146,7 +146,7 @@ These are Tim-ta stock sound files you can use when a timer task ends:
   border-radius: 20px;
   width: 480px;
   font-family: sans-serif;
-  margin: 100px auto;
+  margin: 2rem auto;
   padding: 20px;
 }
 
@@ -159,13 +159,13 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 }
 
 #gallery {
-  margin-top: 10px;
+  margin-top: .5rem;
 }
 
-#gallery audio {
-  width: 50px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+#gallery img {
+  width: 3rem;
+  margin-bottom: .5rem;
+  margin-right: .5rem;
   vertical-align: middle;
 }
 
