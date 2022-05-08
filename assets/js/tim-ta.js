@@ -347,26 +347,31 @@ function ttaApplyGlobalStyles() {
 .leftFoot, .centerFoot, .rightFoot { }
 
 /* .tta-btn WAS styled with hdr-btn that has left margin */
-.tta-btn {
+.tta-btn > a {
     color: var(--bg-color);
-    padding: 0px 5px;
+    padding: 0px 10px;
     background-color: var(--honeydew);
     font-size: x-large;
     border-radius: 1rem;
+    &:hover, &focus {
+        background-color: DodgerBlue;
+        color: #fff;
+    }
 }
 
+/* Not sure why hover not working above. Copy below from style.scss
 .tta-btn:hover, .tta-btn:focus {
     background-color: DodgerBlue;
     color: #fff;
 }
 
-/* Not sure why hover not working above. Copy below from style.scss */
 .tta-btn > a {
     &:hover, &focus {
         background-color: DodgerBlue;
         color: #fff;
     }
 }
+Not sure why hover not working above. Copy below from style.scss */
 
 .inpOnOffSwitch {
     vertical-align: middle;
