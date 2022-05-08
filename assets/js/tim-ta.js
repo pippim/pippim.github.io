@@ -297,7 +297,7 @@ function ttaRunConfiguration (parentElm) {
         margin-bottom: 1rem;
     `;
 
-    ttaApplyGlobalStyles();  // Styles for ttaTable, ttaBtn, bigFoot, etc.
+    ttaApplyGlobalStyles();  // Styles for tta-table, tta-btn, .big-foot, etc.
 
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
     const cnt = ttaConfig.arrProjects.length;
@@ -423,7 +423,6 @@ function paintProjectsTable() {
     html += '</div>\n';
     html += '</div>\n';
 
-    //html += '<style>\n';
     // TODO: Redo using: https://stackoverflow.com/a/58563703/6929343
 
     // Note sure why #tabProjects is required for proper column width only
@@ -466,10 +465,7 @@ function paintProjectsTable() {
             'background: #f1f1f1;\n' +
             '}\n'
     */
-    html += ttaTableStyle();
-    //html += ttaBtnStyle();
-    //html += bigFootStyle();
-    //html += '</style>'  // Was extra \n causing empty space at bottom?
+    html += ttaNameColumnStyle();  // Set name column width
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     ttaElm.scrollIntoView();
 }  // End of paintProjectsTable()
@@ -573,27 +569,20 @@ function paintTasksTable() {
     html += '</div>\n';
     html += '</div>\n';
 
-    //html += '<style>\n';
-
-    html += ttaTableStyle();
-    //html += ttaBtnStyle();
-    //html += bigFootStyle();
-    //html += '</style>'  // Was extra \n causing empty space at bottom?
+    html += ttaNameColumnStyle();  // Set name column width
 
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     ttaElm.scrollIntoView();
 }  // End of paintTasksTable()
 
-function ttaTableStyle() {
-//            '  max-width: 100vw;\n' +
-
+function ttaNameColumnStyle() {
     // project_name or task_name get extra padding.
     var col = 99;
     if (scrSmall) { col = 3; }  // The "name" column to receive extra padding
     else if (currentTable == "Projects") { col = 7; }
     else if (currentTable == "Tasks") { col = 6; }
     else if (currentTable == "RunTimers") { col = 3; }
-    else { console.log("ttaTableStyle() - currentTable not handled:", currentTable); }
+    else { console.log("ttaNameColumnStyle() - currentTable not handled:", currentTable); }
     ttaStyleSheet.style.setProperty("--name-column", col);
     // get variable from inline style - NOT WORKING
     var display_col = ttaStyleSheet.style.getPropertyValue("--name-column");
@@ -605,46 +594,7 @@ function ttaTableStyle() {
             '}\n'
     html += "</style>\n";
     return html;
-
-    /*
-    return  '.tta-table table {\n' +
-            '  table-layout: auto;\n' +
-            '  width: 100%;\n' +
-            '  border-collapse: collapse;\n' +
-            '}\n' +
-
-            'table.tta-table th, table.tta-table td {\n' +
-            '  padding: .25rem .25rem;\n' +
-            '}\n' +
-
-            'table.tta-table td:nth-child(' + col + ') {\n' +
-            //'table.tta-table td:nth-child(var(--name-column)) {\n' +
-            '  padding: .25rem 1rem;\n' +
-            '}\n' +
-
-            'table.tta-table th {\n' +
-            '  position: -webkit-sticky;\n' +
-            '  position: sticky;\n' +
-            '  top: 0;\n' +
-            '  z-index: 1;\n' +
-            '  background: #f1f1f1;\n' +
-            '}\n' +
-
-            '@keyframes flash {\n' +
-            '  from { background-color: grey; }\n' +
-            '  to { background-color: inherit; }\n' +
-            '}\n' +
-
-            '.flash {\n' +
-            '  animation:         flash 1s infinite;\n' +
-            '}\n'
-*/
-}  // End of ttaTableStyle()
-
-function bigFootStyle() { return ""; }
-function ttaBtnStyle() { return ""; }
-function inpSwitchStyle() { return ""; }
-function inpSelectStyle() { return ""; }
+}  // End of ttaNameColumnStyle()
 
 function tabTasksHeading() {
     var html = "<tr><th colspan='";
@@ -1013,11 +963,7 @@ function paintRunTimers(i) {
     html += '</div>\n';
     html += '</div>\n';
 
-    //html += '<style>\n';
-    html += ttaTableStyle();
-    //html += ttaBtnStyle();
-    //html += bigFootStyle();
-    //html += '</style>'  // Was extra \n causing empty space at bottom?
+    html += ttaNameColumnStyle();  // Set name column width
 
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initTimersAfterDOM();  // Initialize elements for table row IDs
@@ -1732,14 +1678,7 @@ function paintConfigForm() {
     html += '</div>\n';
     html += '</div>\n';
 
-    // TODO: Move next lines to class name: tabClass inside TCM
-    //html += '<style>\n';
-    html += ttaTableStyle();
-    //html += ttaBtnStyle();
-    //html += bigFootStyle();
-    //html += inpSwitchStyle();
-    //html += inpSelectStyle();
-    //html += '</style>'  // Was extra \n causing empty space at bottom?
+    html += ttaNameColumnStyle();  // Set name column width
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
@@ -1799,14 +1738,7 @@ function paintProjectForm(mode) {
     html += '</div>\n';
     html += '</div>\n';
 
-    // TODO: Move next lines to class name: tabClass inside TCM
-    //html += '<style>\n';
-    html += ttaTableStyle();
-    //html += ttaBtnStyle();
-    //html += bigFootStyle();
-    //html += inpSwitchStyle();
-    //html += inpSelectStyle();
-    //html += '</style>'  // Was extra \n causing empty space at bottom?
+    html += ttaNameColumnStyle();  // Set name column width
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
@@ -1856,14 +1788,7 @@ function paintTaskForm(mode) {
     html += '</div>\n';
     html += '</div>\n';
 
-    // TODO: Move next lines to class name: tabClass inside TCM
-    //html += '<style>\n';
-    html += ttaTableStyle();
-    //html += ttaBtnStyle();
-    //html += bigFootStyle();
-    //html += inpSwitchStyle();
-    //html += inpSelectStyle();
-    //html += '</style>'  // Was extra \n causing empty space at bottom?
+    html += ttaNameColumnStyle();  // Set name column width
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
