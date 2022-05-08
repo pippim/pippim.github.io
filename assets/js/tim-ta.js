@@ -326,7 +326,7 @@ function ttaApplyGlobalStyles() {
 .ttaContainer {
     padding: .25rem .5rem;
     border-radius: 1rem 1rem 0 0;
-    color: var(--highlight-color);
+    color: var(--highlight-color) ! important;
     background-color: var(--bg-color);
     background-image: linear-gradient(120deg,
         var(--bg-color-secondary), var(--bg-color));
