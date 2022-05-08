@@ -140,7 +140,7 @@ Future placeholder to drag and drop your own sound files here.
         <p>Sound Screening in Memory (not saved yet)</p>
         <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
         <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
-        <label class="button" for="fileElem">Select some files</label>
+        <label class="drag-button" for="fileElem">Select some files</label>
     </form>
     <div id="gallery"></div>
     <progress id="progress-bar" max=100 value=0></progress>
@@ -182,7 +182,7 @@ p {
   vertical-align: middle;
 }
 
-.button {
+.drag-button {
   display: inline-block;
   padding: 10px;
   background: #ccc;
@@ -191,7 +191,7 @@ p {
   border: 1px solid #ccc;
 }
 
-.button:hover {
+.drag-button:hover {
   background: #ddd;
 }
 
