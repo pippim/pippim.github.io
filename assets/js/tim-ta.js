@@ -353,12 +353,6 @@ function ttaApplyGlobalStyles() {
     background-color: var(--honeydew);
     font-size: x-large;
     border-radius: 1rem;
-    > a {
-        &:hover, &focus {
-            background-color: DodgerBlue;
-            color: #fff;
-        }
-    }
 }
 
 /* Not sure why hover not working above. Copy below from style.scss
@@ -366,6 +360,7 @@ function ttaApplyGlobalStyles() {
     background-color: DodgerBlue;
     color: #fff;
 }
+Not sure why hover not working above. Copy below from style.scss */
 
 .tta-btn > a {
     &:hover, &focus {
@@ -373,7 +368,6 @@ function ttaApplyGlobalStyles() {
         color: #fff;
     }
 }
-Not sure why hover not working above. Copy below from style.scss */
 
 .inpOnOffSwitch {
     vertical-align: middle;
