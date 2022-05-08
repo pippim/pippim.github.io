@@ -355,12 +355,12 @@ function ttaApplyGlobalStyles() {
     border-radius: 1rem;
 }
 
-/* Not sure why hover not working above. Copy below from style.scss
+/* Not sure why hover not working above. Copy below from style.scss */
 .tta-btn:hover, .tta-btn:focus {
     background-color: DodgerBlue;
     color: #fff;
 }
-Not sure why hover not working above. Copy below from style.scss */
+/* Not sure why hover not working above. Copy below from style.scss */
 
 .tta-btn > a {
     &:hover, &focus {
