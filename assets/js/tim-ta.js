@@ -314,41 +314,80 @@ function ttaApplyGlobalStyles() {
     // root colors: Cayman green, Cayman blue, Honeydew
     // name-column fluctuates based on currentTable and scrSize
     var styles = `
-        :root {
-            --bg-color: #159957;
-            --bg-color-secondary: #155799;
-            --honeydew: #F0FFF0;
-            --name-column: 3;
-        }
-        .bigFoot {
-            display: flex;
-            justify-content: space-around;
-            margin: 1rem 0px 0px;
-            padding: .25rem .5rem;
-            border-radius: 0 0 1rem 1rem;
-            color: yellow;
-            background-color: var(--bg-color);
-            background-image: linear-gradient(120deg,
-                var(--bg-color-secondary), var(--bg-color));
-        }
-        .leftFoot, .centerFoot, .rightFoot {
-        }
-        .tta-btn {
-            font-size: 22px;
-            border-radius: 1rem;
-            margin-left: 0px ! important;
-        }
-        .inpOnOffSwitch {
-            vertical-align: middle;
-            width: 40px;
-            height: auto;
-        }
-        select:invalid { color: grey; }
-    `
+
+:root {
+    --bg-color: #159957;
+    --bg-color-secondary: #155799;
+    --honeydew: #F0FFF0;
+    --name-column: 3;
+}
+
+.bigFoot {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0px 0px;
+    padding: .25rem .5rem;
+    border-radius: 0 0 1rem 1rem;
+    color: yellow;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(120deg,
+        var(--bg-color-secondary), var(--bg-color));
+}
+
+.leftFoot, .centerFoot, .rightFoot { }
+
+.tta-btn {
+    font-size: 22px;
+    border-radius: 1rem;
+    margin-left: 0px ! important;
+}
+
+.inpOnOffSwitch {
+    vertical-align: middle;
+    width: 40px;
+    height: auto;
+}
+
+select:invalid { color: grey; }
+
+.tta-table table {
+    table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.tta-table th, table.tta-table td {
+    padding: .25rem .25rem;
+}
+
+table.tta-table th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #f1f1f1;
+}
+
+@keyframes flash {
+    from { background-color: grey; }
+    to { background-color: inherit; }
+}
+
+.flash {
+    animation:         flash 1s infinite;
+}
+
+    `  /* End of block: var styles =
+
+    /* --name-column is NOT WORKING so that style omitted
+          'table.tta-table td:nth-child(' + col + ') {\n' +
+          'table.tta-table td:nth-child(var(--name-column)) {\n' +
+    */
 
     ttaStyleSheet = document.createElement("style");
     ttaStyleSheet.innerText = styles;
     document.head.appendChild(ttaStyleSheet);
+
 }  // End of ttaApplyGlobalStyles()
 
 function paintProjectsTable() {
@@ -384,7 +423,7 @@ function paintProjectsTable() {
     html += '</div>\n';
     html += '</div>\n';
 
-    html += '<style>\n';
+    //html += '<style>\n';
     // TODO: Redo using: https://stackoverflow.com/a/58563703/6929343
 
     // Note sure why #tabProjects is required for proper column width only
@@ -428,9 +467,9 @@ function paintProjectsTable() {
             '}\n'
     */
     html += ttaTableStyle();
-    html += ttaBtnStyle();
-    html += bigFootStyle();
-    html += '</style>'  // Was extra \n causing empty space at bottom?
+    //html += ttaBtnStyle();
+    //html += bigFootStyle();
+    //html += '</style>'  // Was extra \n causing empty space at bottom?
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     ttaElm.scrollIntoView();
 }  // End of paintProjectsTable()
@@ -534,12 +573,12 @@ function paintTasksTable() {
     html += '</div>\n';
     html += '</div>\n';
 
-    html += '<style>\n';
+    //html += '<style>\n';
 
     html += ttaTableStyle();
-    html += ttaBtnStyle();
-    html += bigFootStyle();
-    html += '</style>'  // Was extra \n causing empty space at bottom?
+    //html += ttaBtnStyle();
+    //html += bigFootStyle();
+    //html += '</style>'  // Was extra \n causing empty space at bottom?
 
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     ttaElm.scrollIntoView();
@@ -556,10 +595,18 @@ function ttaTableStyle() {
     else if (currentTable == "RunTimers") { col = 3; }
     else { console.log("ttaTableStyle() - currentTable not handled:", currentTable); }
     ttaStyleSheet.style.setProperty("--name-column", col);
-    // get variable from inline style like bg-color
+    // get variable from inline style - NOT WORKING
     var display_col = ttaStyleSheet.style.getPropertyValue("--name-column");
     console.log("css variable --name-column:", display_col)
 
+    var html = "<style>\n";
+    html += 'table.tta-table td:nth-child(' + col + ') {\n' +
+            '  padding: .25rem 1rem;\n' +
+            '}\n'
+    html += "</style>\n";
+    return html;
+
+    /*
     return  '.tta-table table {\n' +
             '  table-layout: auto;\n' +
             '  width: 100%;\n' +
@@ -568,7 +615,6 @@ function ttaTableStyle() {
 
             'table.tta-table th, table.tta-table td {\n' +
             '  padding: .25rem .25rem;\n' +
-            //'  padding: var(--name-column)px .25rem;\n' +
             '}\n' +
 
             'table.tta-table td:nth-child(' + col + ') {\n' +
@@ -592,6 +638,7 @@ function ttaTableStyle() {
             '.flash {\n' +
             '  animation:         flash 1s infinite;\n' +
             '}\n'
+*/
 }  // End of ttaTableStyle()
 
 function bigFootStyle() { return ""; }
@@ -966,11 +1013,11 @@ function paintRunTimers(i) {
     html += '</div>\n';
     html += '</div>\n';
 
-    html += '<style>\n';
+    //html += '<style>\n';
     html += ttaTableStyle();
-    html += ttaBtnStyle();
-    html += bigFootStyle();
-    html += '</style>'  // Was extra \n causing empty space at bottom?
+    //html += ttaBtnStyle();
+    //html += bigFootStyle();
+    //html += '</style>'  // Was extra \n causing empty space at bottom?
 
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initTimersAfterDOM();  // Initialize elements for table row IDs
@@ -1686,13 +1733,13 @@ function paintConfigForm() {
     html += '</div>\n';
 
     // TODO: Move next lines to class name: tabClass inside TCM
-    html += '<style>\n';
+    //html += '<style>\n';
     html += ttaTableStyle();
-    html += ttaBtnStyle();
-    html += bigFootStyle();
-    html += inpSwitchStyle();
-    html += inpSelectStyle();
-    html += '</style>'  // Was extra \n causing empty space at bottom?
+    //html += ttaBtnStyle();
+    //html += bigFootStyle();
+    //html += inpSwitchStyle();
+    //html += inpSelectStyle();
+    //html += '</style>'  // Was extra \n causing empty space at bottom?
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
@@ -1753,13 +1800,13 @@ function paintProjectForm(mode) {
     html += '</div>\n';
 
     // TODO: Move next lines to class name: tabClass inside TCM
-    html += '<style>\n';
+    //html += '<style>\n';
     html += ttaTableStyle();
-    html += ttaBtnStyle();
-    html += bigFootStyle();
-    html += inpSwitchStyle();
-    html += inpSelectStyle();
-    html += '</style>'  // Was extra \n causing empty space at bottom?
+    //html += ttaBtnStyle();
+    //html += bigFootStyle();
+    //html += inpSwitchStyle();
+    //html += inpSelectStyle();
+    //html += '</style>'  // Was extra \n causing empty space at bottom?
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
@@ -1810,13 +1857,13 @@ function paintTaskForm(mode) {
     html += '</div>\n';
 
     // TODO: Move next lines to class name: tabClass inside TCM
-    html += '<style>\n';
+    //html += '<style>\n';
     html += ttaTableStyle();
-    html += ttaBtnStyle();
-    html += bigFootStyle();
-    html += inpSwitchStyle();
-    html += inpSelectStyle();
-    html += '</style>'  // Was extra \n causing empty space at bottom?
+    //html += ttaBtnStyle();
+    //html += bigFootStyle();
+    //html += inpSwitchStyle();
+    //html += inpSelectStyle();
+    //html += '</style>'  // Was extra \n causing empty space at bottom?
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initSwitchesAfterDOM();
     initSelectsAfterDOM();
