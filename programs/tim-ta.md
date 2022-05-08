@@ -167,11 +167,16 @@ p {
   margin-top: 10px;
 }
 
-#gallery img {
+#gallery audio {
   width: 50px;
   margin-bottom: 10px;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+.button {
+   /* Override margins in style.scss
+   margin: 0 0 1rem;
 }
 
 .drag-button {
