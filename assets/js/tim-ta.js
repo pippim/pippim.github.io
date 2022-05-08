@@ -324,20 +324,20 @@ function ttaApplyGlobalStyles() {
 }
 
 .ttaContainer {
-    padding: .25rem .5rem;
+    margin: 0px 0px 1rem;
     border-radius: 1rem 1rem 0 0;
-    color: var(--highlight-color) ! important;
-    background-color: var(--bg-color);
-    background-image: linear-gradient(120deg,
-        var(--bg-color-secondary), var(--bg-color));
 }
 
 .bigFoot {
     display: flex;
     justify-content: space-around;
     margin: 1rem 0px 0px;
-    padding: .25rem .5rem;
     border-radius: 0 0 1rem 1rem;
+}
+
+.ttaContainer, .bigfoot {
+    padding: .25rem .5rem;
+    font-size: x-large;
     color: var(--highlight-color);
     background-color: var(--bg-color);
     background-image: linear-gradient(120deg,
@@ -412,7 +412,7 @@ function paintProjectsTable() {
     //ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
     const cnt = ttaConfig.arrProjects.length;
     const strHuman = cntHuman(cnt, "Project");
-    var html = "<h2>Tim-ta - " + strHuman + "</h2>";
+    var html = "Tim-ta - " + strHuman;
     html = htmlSetContainer(html);
 
     html += '<div style="max-height: 70vh; overflow-y: auto; overflow-x: hidden;">\n' ;
@@ -554,7 +554,7 @@ function paintTasksTable() {
 
     const cnt = ttaProject.arrTasks.length;
     const strHuman = cntHuman(cnt, "Task");
-    var html = "<h2>" + ttaProject.project_name + " - " + strHuman + "</h2>"
+    var html = ttaProject.project_name + " - " + strHuman
     html = htmlSetContainer(html);
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
@@ -939,12 +939,18 @@ function paintRunTimers(i) {
     currentTable = "RunTimers"
     currentRoot = "tabTimer";
 
+    /* TODO:
+        When early exit (cancel) a bogus warning message comes up:
+
+            "Alarm and Notification turned off for this task."
+    */
 
     // Back to same Table
     const cnt = ttaProject.arrTasks.length;
     const strHuman = cntHuman(cnt, "Task");
-    var html = "<h2>" + ttaProject.project_name + " - Run timer for " + strHuman + "</h2>"
-    // html = htmlSetContainer(html);
+    var html = ttaProject.project_name + " - Run timer for " + strHuman
+    // html = htmlSetContainer(html);  // Why was this working commented out???
+    html = htmlSetContainer(html);
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
     html += '<table id="tabRunTimers" class="tta-table">\n' ;
@@ -952,6 +958,8 @@ function paintRunTimers(i) {
     html += tabRunTimersHeading();
         // NOTE: Timers of zero duration are omitted from list
         for (var i = 0; i < cnt; i++) { html += tabRunTimersDetail(i); }
+
+    /* Add progress for tasks total and All sets totals */
     if (secondsSet > 0) {
         // Passed sanity check to make sure there is time for set...
         html += htmlRunTimersSet();  // Paint line for Total Tasks
@@ -1647,7 +1655,7 @@ function paintConfigForm() {
     currentForm = "formConfig";
     buildInit();  // Reset data dictionary input field controls
 
-    var html = "<h2>Tim-ta - Settings</h2>"
+    var html = "Tim-ta - Settings"
     html = htmlSetContainer(html);
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
@@ -1702,8 +1710,7 @@ function paintProjectForm(mode) {
     currentForm = "formProject";
     buildInit();  // Reset data dictionary input field controls
 
-    var html = "<h2>" + ttaProject.project_name + " - " +
-                mode + " Project</h2>"
+    var html = ttaProject.project_name + " - " + mode + " Project"
     html = htmlSetContainer(html);
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
@@ -1762,8 +1769,7 @@ function paintTaskForm(mode) {
     currentForm = "formTask";
     buildInit();  // Reset data dictionary input field controls
 
-    var html = "<h2>" + ttaProject.project_name + " - " +
-                mode + " Task</h2>"
+    var html = ttaProject.project_name + " - " + mode + " Task"
     html = htmlSetContainer(html);
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
