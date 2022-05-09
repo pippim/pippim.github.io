@@ -85,9 +85,13 @@ Each project can have an unlimited number of Tasks.
 }
 
 #gallery audio {
-    margin-bottom: .5rem;
-    margin-right: .5rem;
+    margin-top: .5rem;
+    margin-left: .5rem;
     vertical-align: middle;
+}
+
+#gallery p {
+    margin-left: 1rem;
 }
 
 #progress-bar {
@@ -167,16 +171,20 @@ function previewFile(file) {
         console.log("audio:", audio) 
         audio.controls="true"
         document.getElementById('gallery').appendChild(audio)
-        var par = document.createElement("p");
-        var text = document.createTextNode(file.name);
-        par.appendChild(text);
-        document.getElementById('gallery').appendChild(par);
-        /*
-        document.getElementById('gallery').appendChild(file.name)
-        document.getElementById('gallery').appendChild(file.size)
-        document.getElementById('gallery').appendChild(file.type)
-        */
+
+        var html = "<b>Filename:</b> " + file.name
+        fileInfo(html)
+        html = "<b>Size:</b> " + file.size + "&emsp;<b>Type:</b> " + file.type
+        fileInfo(html)
     }
+}
+
+function fileInfo(info) {
+    /* Add single text line (paragraph) to gallery */
+    var par = document.createElement("p");
+    var text = document.createTextNode(info);
+    par.appendChild(text);
+    document.getElementById('gallery').appendChild(par);
 }
 
 let filesDone = 0
