@@ -77,7 +77,7 @@ Each project can have an unlimited number of Tasks.
     margin-top: .5rem;
 }
 
-#gallery img {
+#gallery audio {
     width: 3rem;
     margin-bottom: .5rem;
     margin-right: .5rem;
@@ -98,6 +98,7 @@ Each project can have an unlimited number of Tasks.
 }
 
 #fileElem {
+    /* Prevents default "BROWSE" button and last filename(s) appearing */
     display: none;
 }
 </style>
@@ -143,9 +144,14 @@ function previewFile(file) {
     let reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = function() {
+        /*
         let img = document.createElement('img')
         img.src = reader.result
         document.getElementById('gallery').appendChild(img)
+        */
+        let audio = document.createElement('audio')
+        audio.src = reader.result
+        document.getElementById('gallery').appendChild(audio)
     }
 }
 
@@ -189,7 +195,14 @@ function updateProgress(fileNumber, percent) {
 }
 
 function uploadFile(file, i) { // <- Add `i` parameter
-    console.log("file:",file) 
+    console.log("file:",file);
+    /*
+         lastModified: 1652040795348
+         name: "mixkit-short-rooster-crowing-2470.wav"
+         size: 577166
+         type: "audio/x-wav"
+         webkitRelativePath: ""
+    */
     var url = 'YOUR URL HERE'
     var xhr = new XMLHttpRequest()
     var formData = new FormData()
