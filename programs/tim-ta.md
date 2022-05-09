@@ -139,44 +139,6 @@ function handleDrop(e) {
     handleFiles(files)
 }
 
-function handleFiles(files) {
-    ([...files]).forEach(uploadFile)
-}
-
-function uploadFile(file) {
-    console.log("file:",file) 
-    let url = 'YOUR URL HERE'
-    let formData = new FormData()
-   
-    formData.append('file', file)
-   
-    fetch(url, {
-        method: 'POST',
-        body: formData
-    })
-    .then(() => { /* Done. Inform the user */ })
-    .catch(() => { /* Error. Inform the user */ })
-}
-
-function uploadFile(file) {
-    var url = 'YOUR URL HERE'
-    var xhr = new XMLHttpRequest()
-    var formData = new FormData()
-    xhr.open('POST', url, true)
-   
-    xhr.addEventListener('readystatechange', function(e) {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            // Done. Inform the user
-        }
-        else if (xhr.readyState == 4 && xhr.status != 200) {
-            // Error. Inform the user
-        }
-    })
-   
-    formData.append('file', file)
-    xhr.send(formData)
-}
-
 function previewFile(file) {
     let reader = new FileReader()
     reader.readAsDataURL(file)
@@ -185,12 +147,6 @@ function previewFile(file) {
         img.src = reader.result
         document.getElementById('gallery').appendChild(img)
     }
-}
-
-function handleFiles(files) {
-    files = [...files]
-    files.forEach(uploadFile)
-    files.forEach(previewFile)
 }
 
 let filesDone = 0
@@ -210,23 +166,9 @@ function progressDone() {
 
 function handleFiles(files) {
     files = [...files]
-    initializeProgress(files.length) // <- Add this line
+    initializeProgress(files.length)
     files.forEach(uploadFile)
     files.forEach(previewFile)
-}
-
-function uploadFile(file) {
-    let url = 'YOUR URL HERE'
-    let formData = new FormData()
-   
-    formData.append('file', file)
-   
-    fetch(url, {
-        method: 'POST',
-        body: formData
-    })
-    .then(progressDone) // <- Add `progressDone` call here
-    .catch(() => { /* Error. Inform the user */ })
 }
 
 let uploadProgress = []
@@ -247,6 +189,7 @@ function updateProgress(fileNumber, percent) {
 }
 
 function uploadFile(file, i) { // <- Add `i` parameter
+    console.log("file:",file) 
     var url = 'YOUR URL HERE'
     var xhr = new XMLHttpRequest()
     var formData = new FormData()
