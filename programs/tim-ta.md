@@ -77,7 +77,7 @@ Each project can have an unlimited number of Tasks.
     margin-top: .5rem;
 }
 
-#gallery audio {
+#gallery img {
     width: 3rem;
     margin-bottom: .5rem;
     margin-right: .5rem;
