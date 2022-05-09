@@ -91,8 +91,10 @@ Each project can have an unlimited number of Tasks.
 }
 
 #gallery p {
-    margin-left: 1rem;
-    margin-bottom: 0px ! important;
+    /* margin-left: 1rem; */
+    /* margin-bottom: 0px ! important; */
+    margin: 0rem ! important;
+    /* line-height: 1 ! important; */
 }
 
 #progress-bar {
