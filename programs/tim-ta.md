@@ -84,7 +84,13 @@ Each project can have an unlimited number of Tasks.
     vertical-align: middle;
 }
 
+#progress-bar {
+    // from original code, not used
+    display: none;
+}
+
 .drag-button {
+    // from original code, not used
     display: inline-block;
     padding: 10px;
     background: #ccc;
@@ -94,6 +100,7 @@ Each project can have an unlimited number of Tasks.
 }
 
 .drag-button:hover {
+    // from original code, not used
     background: #ddd;
 }
 
@@ -151,6 +158,7 @@ function previewFile(file) {
         
         let audio = document.createElement('audio')
         audio.src = reader.result
+        console.log("audio:", audio) 
         audio.controls="true"
         document.getElementById('gallery').appendChild(audio)
     }
