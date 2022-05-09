@@ -173,20 +173,21 @@ function previewFile(file) {
         audio.controls="true"
         document.getElementById('gallery').appendChild(audio)
 
-        var html = "Filename: " + file.name
-        fileInfo(html)
-        html = "Size: " + file.size.toLocaleString() + 
-               "   Type: " + file.type
+        // var html = "Filename: " + file.name
+        fileInfo(file.name)
+        html = "<b>Size:</b> " + file.size.toLocaleString() + 
+               "&emsp;&emsp;<b>Type:</b> " + file.type
         fileInfo(html)
     }
 }
 
 function fileInfo(info) {
     /* Add single text line (paragraph) to gallery */
-    var par = document.createElement("p");
-    var text = document.createTextNode(info);
-    par.appendChild(text);
-    document.getElementById('gallery').appendChild(par);
+    var par = document.createElement("p")
+    // var text = document.createTextNode(info)
+    par.innerHTML = info
+    // par.appendChild(text)
+    document.getElementById('gallery').appendChild(par)
 }
 
 let filesDone = 0
