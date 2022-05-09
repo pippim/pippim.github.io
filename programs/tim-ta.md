@@ -85,13 +85,13 @@ Each project can have an unlimited number of Tasks.
 }
 
 #gallery audio {
-    margin-top: .5rem;
-    margin-left: .5rem;
+    margin-top: 1rem;
     vertical-align: middle;
 }
 
 #gallery p {
-    margin-left: 1rem;
+    margin-left: 2rem;
+    line-height: .8rem;
 }
 
 #progress-bar {
