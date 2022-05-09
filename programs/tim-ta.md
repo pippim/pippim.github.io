@@ -49,10 +49,8 @@ Each project can have an unlimited number of Tasks.
         <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
         <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
         <label class="button" for="fileElem">Select some files</label>
-        <p> </p><br>
     </form>
     <div id="gallery"></div>
-    <progress id="progress-bar" max=100 value=0></progress>
 </div>
 
 <style>
@@ -60,8 +58,6 @@ Each project can have an unlimited number of Tasks.
     border: 2px dashed #ccc;
     border-radius: 2rem;
     min-width: 50%;
-    /* font-family: sans-serif; */
-    /* margin: 2rem auto; - Breaks on mobile */
     margin: 2rem 0px;
     padding: 1rem;
 }
@@ -74,47 +70,13 @@ Each project can have an unlimited number of Tasks.
     margin-bottom: 10px;
 }
 
-#gallery {
-    /* margin-top: .5rem; */
-}
-
-#gallery img {
-    width: 3rem;
-    margin-bottom: .5rem;
-    margin-right: .5rem;
-    vertical-align: middle;
-}
-
 #gallery audio {
-    margin-top: 1rem;
-    vertical-align: middle;
+    margin-top: 3rem;
 }
 
 #gallery p {
-    /* margin-left: 1rem; */
-    /* margin-bottom: 0px ! important; */
     margin: 0rem ! important;
-    /* line-height: 1 ! important; */
-}
-
-#progress-bar {
-    /* from original code, not used */
-    display: none;
-}
-
-.drag-button {
-    /* from original code, not used */
-    display: inline-block;
-    padding: 10px;
-    background: #ccc;
-    cursor: pointer;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.drag-button:hover {
-    /* from original code, not used */
-    background: #ddd;
+    margin-left: 1rem;
 }
 
 #fileElem {
@@ -192,43 +154,10 @@ function fileInfo(info) {
     document.getElementById('gallery').appendChild(par)
 }
 
-let filesDone = 0
-let filesToDo = 0
-let progressBar = document.getElementById('progress-bar')
-
-function initializeProgress(numfiles) {
-    progressBar.value = 0
-    filesDone = 0
-    filesToDo = numfiles
-}
-
-function progressDone() {
-    filesDone++
-    progressBar.value = filesDone / filesToDo * 100
-}
-
 function handleFiles(files) {
     files = [...files]
-    initializeProgress(files.length)
-    files.forEach(uploadFile)
+    /* files.forEach(uploadFile) */
     files.forEach(previewFile)
-}
-
-let uploadProgress = []
-
-function initializeProgress(numFiles) {
-    progressBar.value = 0
-    uploadProgress = []
-   
-    for(let i = numFiles; i > 0; i--) {
-        uploadProgress.push(0)
-    }
-}
-
-function updateProgress(fileNumber, percent) {
-    uploadProgress[fileNumber] = percent
-    let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
-    progressBar.value = total
 }
 
 function uploadFile(file, i) { // <- Add `i` parameter
