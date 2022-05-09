@@ -151,6 +151,7 @@ function previewFile(file) {
         
         let audio = document.createElement('audio')
         audio.src = reader.result
+        audio.controls="true"
         document.getElementById('gallery').appendChild(audio)
     }
 }
