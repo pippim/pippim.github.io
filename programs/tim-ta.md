@@ -38,93 +38,7 @@ Each project can have an unlimited number of Tasks.
 <a id='hdr3'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
-# Introduction
-
-{% include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
-   alt="Tim-ta Introduction.png"
-   style="float: none; width: 100%; margin: 1rem 0 1rem;"
-   caption="Tim-ta webpage header"
-%}
-
-*Tim-ta* (**Tim**ed-**ta**sks) gives a countdown timer
-where each task is always a predetermined amount of time.
-For example, when doing the laundry it might be:
-
-- 16 minutes and 30 seconds for the wash cycle
-- 13 minutes and 15 seconds for the rinse cycle
-- 58 minutes and 40 seconds for the dryer
-
-With Tim-ta you arrive at the washer and dryer the exact
-second you need to be there. You'll Never miss the rinse
-cycle fabric softener to eliminate static cling. You'll
-never have wrinkled clothes from being left overnight in
-the dryer. It doesn't stop you from mixing red and white
-fabrics in hot water to end up with PINK clothes though!
-
----
-
-<a id="hdr3"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
-
-{% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
-   alt="Tim-ta Under Construction.png"
-   style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
-   caption="Tim-ta Under Construction.png"
-%}
-<style>
-.img-class {
-   background-color: #159957;  /* For Cayman (don't use //) */
-   background-image: linear-gradient(120deg, #155799, #159957)
-}
-</style>
-# Work In Progress
-
-Tim-ta development started April 11, 2022. A budget of two months
-has been given to this project.
-
-Initially all the features in
-[Multi-Timer](https://www.pippim.com/programs/mt.html)
-will be provided. After that, new features will be added.
-
-> NOTE: Some Multi-timer features such as locking the screen
-> cannot be done from a web browser.
-
-As of April 28, 2022, these features have been developed:
-
-- Sound files are saved to local storage. This saves bandwidth when they are played.
-- Configuration, Projects, Tasks and Run Timers tables / forms are complete.
-- Work has begun on advanced window alert/prompt system. It should take 2 weeks to complete.
-
----
-
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
-
-# Test Sound Files
-
-Click the filenames below to hear their sound. The first section
-lists stock sound files. The second section lists sound files
-you have uploaded
-
-## Stock Sound Files
-
-<style> audio { vertical-align:middle } </style>
-
-<!-- WARNING: Do not delete these <audio> tags, simply hide them -->
-
-These are Tim-ta stock sound files you can use when a timer task ends:
-<br>
-- **Alarm_01.wav** &emsp;&emsp;<audio controls="true" id="Alarm_01.wav"></audio>
-<br><br>
-- **Alarm_01.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_01.mp3"></audio>
-<br><br>
-- **Alarm_03.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_03.mp3"></audio>
-<br><br>
-- **Alarm_05.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_05.mp3"></audio>
-<br><br>
-- **Alarm_12.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_12.mp3"></audio>
-
-## Uploaded Sound Files
+# Upload Alarm Sound Files
 
 <!-- From: https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/  -->
 
@@ -364,11 +278,86 @@ function uploadFile(file, i) { // <- Add `i` parameter
 </script>
 
 
+---
+
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
+
+# Stock Sound Files
+
+The following sound files are always available direct from
+the {{ site.title }} Website.
+
+<style>
+audio { vertical-align:middle }
+</style>
+
+<!-- WARNING: Do not delete these <audio> tags, simply hide them if you don't
+want them visible to user. This is because the ID is referenced by javascript. -->
+
+These are Tim-ta stock sound files you can use when a timer task ends:
+<br>
+- **Alarm_01.wav** &emsp;&emsp;<audio controls="true" id="Alarm_01.wav"></audio>
+<br><br>
+- **Alarm_01.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_01.mp3"></audio>
+<br><br>
+- **Alarm_03.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_03.mp3"></audio>
+<br><br>
+- **Alarm_05.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_05.mp3"></audio>
+<br><br>
+- **Alarm_12.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_12.mp3"></audio>
+
+---
+
+# Work In Progress
+
+Tim-ta development started April 11, 2022. A budget of two months
+has been given to this project.
+
+Initially all the features in
+[Multi-Timer](https://www.pippim.com/programs/mt.html)
+will be provided. After that, new features will be added.
+
+> NOTE: Some Multi-timer features such as locking the screen
+> cannot be done from a web browser.
+
+As of May 8, 2022, these features have been developed:
+
+- Sound files are saved to local storage. This saves bandwidth when they are played.
+- Configuration, Projects, Tasks and Run Timers tables / forms are complete.
+- Advanced draggable window alert/prompt technology is complete.
+- Upload Alarm Sound Files has begun.
 
 ---
 
 <a id='hdr5'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+
+# Introduction
+
+{% include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
+   alt="Tim-ta Introduction.png"
+   style="float: none; width: 100%; margin: 1rem 0 1rem;"
+   caption="Tim-ta webpage header"
+%}
+
+*Tim-ta* (**Tim**ed-**ta**sks) gives a countdown timer
+where each task is always a predetermined amount of time.
+For example, when doing the laundry it might be:
+
+- 16 minutes and 30 seconds for the wash cycle
+- 13 minutes and 15 seconds for the rinse cycle
+- 58 minutes and 40 seconds for the dryer
+
+With Tim-ta you arrive at the washer and dryer the exact
+second you need to be there. You'll Never miss the rinse
+cycle fabric softener to eliminate static cling. You'll
+never have wrinkled clothes from being left overnight in
+the dryer. It doesn't stop you from mixing red and white
+fabrics in hot water to end up with PINK clothes though!
+
+
+---
 
 # Future Buttons of Tim-ta
 
@@ -717,5 +706,5 @@ updateRadioSounds();
 
 ---
 
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a></div>
