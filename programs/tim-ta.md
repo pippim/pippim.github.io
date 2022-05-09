@@ -144,11 +144,11 @@ function previewFile(file) {
     let reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = function() {
-        /*
+        /* Old img format, replaced by audio format */
         let img = document.createElement('img')
         img.src = reader.result
         document.getElementById('gallery').appendChild(img)
-        */
+        
         let audio = document.createElement('audio')
         audio.src = reader.result
         document.getElementById('gallery').appendChild(audio)
