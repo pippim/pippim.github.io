@@ -98,18 +98,12 @@ Each project can have an unlimited number of Tasks.
 }
 
 #fileElem {
-  display: none;
+    //display: none;
 }
 </style>
 
 <script>
 let dropArea = document.getElementById('drop-area')
-/*
-  dropArea.addEventListener('dragenter', handlerFunction, false)
-  dropArea.addEventListener('dragleave', handlerFunction, false)
-  dropArea.addEventListener('dragover', handlerFunction, false)
-  dropArea.addEventListener('drop', handlerFunction, false)
-*/
 
 ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
   dropArea.addEventListener(eventName, preventDefaults, false)
@@ -150,6 +144,7 @@ function handleFiles(files) {
 }
 
 function uploadFile(file) {
+    console.log("file:",file) 
   let url = 'YOUR URL HERE'
   let formData = new FormData()
 
