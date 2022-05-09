@@ -269,6 +269,21 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 
 ---
 
+<a id='hdr5'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+
+{% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
+   alt="Tim-ta Under Construction.png"
+   style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
+   caption="Tim-ta Under Construction.png"
+%}
+<style>
+.img-class {
+   background-color: #159957;  /* For Cayman (don't use //) */
+   background-image: linear-gradient(120deg, #155799, #159957)
+}
+</style>
+
 # Work In Progress
 
 Tim-ta development started April 11, 2022. A budget of two months
@@ -290,8 +305,8 @@ As of May 8, 2022, these features have been developed:
 
 ---
 
-<a id='hdr5'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+<a id='hdr6'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 # Introduction
 
@@ -319,6 +334,11 @@ fabrics in hot water to end up with PINK clothes though!
 
 ---
 
+
+<a id='hdr7'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+
+
 # Future Buttons of Tim-ta
 
 Below are proposed buttons for Tim-ta. Some are already in use. 
@@ -327,6 +347,11 @@ An option may provided in future for user to pick which button is more
 suitable for device/web browser in use.
 
 ---
+
+
+<a id='hdr8'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+
 
 ## Media Player Buttons
 
@@ -501,8 +526,10 @@ Cancel</span>
 
 ---
 
-<a id='hdr6'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+
+<a id='hdr9'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+
 
 # localStorage Object
 
@@ -666,5 +693,5 @@ updateRadioSounds();
 
 ---
 
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a></div>
