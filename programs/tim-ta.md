@@ -59,7 +59,7 @@ Each project can have an unlimited number of Tasks.
 #drop-area {
     border: 2px dashed #ccc;
     border-radius: 2rem;
-    width: 70vw;
+    min-width: 50%;
     /* font-family: sans-serif; */
     margin: 2rem auto;
     padding: 2rem;
