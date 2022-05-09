@@ -58,11 +58,11 @@ Each project can have an unlimited number of Tasks.
 <style>
 #drop-area {
     border: 2px dashed #ccc;
-    border-radius: 20px;
-    width: 480px;
+    border-radius: 2rem;
+    width: 90vw;
     font-family: sans-serif;
     margin: 2rem auto;
-    padding: 20px;
+    padding: 2rem;
 }
 
 #drop-area.highlight {
@@ -91,7 +91,7 @@ Each project can have an unlimited number of Tasks.
 
 #gallery p {
     margin-left: 2rem;
-    line-height: .8rem;
+    margin-bottom: 0px ! important;
 }
 
 #progress-bar {
