@@ -98,7 +98,7 @@ Each project can have an unlimited number of Tasks.
 }
 
 #fileElem {
-    /* display: none; */
+    display: none;
 }
 </style>
 
