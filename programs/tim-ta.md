@@ -201,6 +201,15 @@ function uploadFile(file, i) { // <- Add `i` parameter
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
+# Custom Sound Files (Uploaded)
+
+These are all the custom sound files that have been uploaded so far.
+
+---
+
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+
 # Stock Sound Files
 
 The following sound files are always available direct from
@@ -242,6 +251,11 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 }
 </style>
 
+---
+
+<a id='hdr6'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+
 # Work In Progress
 
 Tim-ta development started April 11, 2022. A budget of two months
@@ -263,8 +277,8 @@ As of May 8, 2022, these features have been developed:
 
 ---
 
-<a id='hdr6'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+<a id='hdr7'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 # Introduction
 
@@ -292,201 +306,105 @@ fabrics in hot water to end up with PINK clothes though!
 
 ---
 
-
-<a id='hdr7'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
-
-
-# Future Buttons of Tim-ta
-
-Below are proposed buttons for Tim-ta. Some are already in use. 
-
-An option may provided in future for user to pick which button is more
-suitable for device/web browser in use.
-
----
-
-
 <a id='hdr8'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
+# Tim-ta Buttons
 
-## Media Player Buttons
-
-From: https://stackoverflow.com/a/27053825/6929343
-
-- 23E9 ⏩︎ fast forward
-- 23EA ⏪︎ rewind, fast backwards
-- 23EB ⏫︎ fast increase
-- 23EC ⏬︎ fast decrease
-- 23ED ⏭︎ skip to end, next
-- 23EE ⏮︎ skip to start, previous
-- 23EF ⏯︎ play/pause toggle
-- 23F1 ⏱︎ stopwatch
-- 23F2 ⏲︎ timer clock
-- 23F3 ⏳︎ hourglass
-- 23F4 ⏴︎ reverse, back
-- 23F5 ⏵︎ forward, next, play
-- 23F6 ⏶︎ increase
-- 23F7 ⏷︎ decrease
-- 23F8 ⏸︎ pause
-- 23F9 ⏹︎ stop
-- 23FA ⏺︎ record 
+These are the buttons used in Tim-ta.
 
 ---
 
-Listen symbol 1. Unicode #x1F50A
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x1F50A;</span>
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#9835;</span>&emsp; Listen to sound file.
 
 ---
 
-Listen symbol 2. Unicode #9835 (Decimal)
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#9835;</span>
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x2699;</span>&emsp; Edit configuration settings.
 
 ---
 
-Settings symbol. Unicode #x2699
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x2699;</span>
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x2B;</span>&emsp; Add a new project or new task.
 
 ---
 
-Plus symbol. Unicode #x2B
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x2B;</span>
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x232B;</span>&emsp; Go back one screen or cancel operation.
 
 ---
 
-Back symbol. Unicode #x232B
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x232B;</span>
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x2630;</span>&emsp; Display list of projects or list of tasks.
 
 ---
 
-Hamburger symbol. Unicode #x2630
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x2630;</span>
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x270D;</span>&emsp; Edit Configuration, Project or Task.
 
 ---
 
-Edit symbol. Unicode #x270D
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x270D;</span>
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x1f5d1;</span>&emsp; Delete project or task.
 
 ---
 
-Trash symbol. Unicode #x1f5d1
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x1f5d1;</span>
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x25b6;</span>&emsp; Run project timed tasks.
 
 ---
 
-Run symbol 1. Unicode #127939 (Decimal)
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#127939;</span>
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x21E7;</span>&emsp; Move project or task up in list.
 
 ---
 
-Run symbol 2. (Refresh) Could be used to "run" project. Unicode #x1f5d8
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x1f5d8;</span>
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x21e9;</span>&emsp; Move project or task down in list.
 
 ---
-
-Run symbol 3. Could be used to "run" project. Unicode #x27f3
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x27f3;</span>
-
----
-
-Run symbol 4. Traditional "Play" button. Unicode #x25b6
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x25b6;</span>
-<br>
-Advantage of this symbol is common audio control button. Also eases
-transition to future buttons for: Pause, Rewind x seconds,
-Fast forward x seconds, Restart and Skip to end.
-
----
-
-Stop symbol 4. Unicode #x23F9
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x23F9;</span>
- 
----
-
-White Up Arrow from Bar symbol. Move task up project. Unicode #x21ea
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x21ea;</span>
-
----
-
-White Down Arrow from Bar symbol. Move task down project. Unicode #x21ea + flip
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;
-transform: scale(1, -1);'>
-&#x21ea;</span>
-
----
-
-White Up Arrow. Move task up project. Unicode #x21E7
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x21E7;</span>
-
----
-
-White Down Arrow. Move task down project. Unicode #x21e9
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x21e9;</span>
-
----
-
-Move Up List symbol 2. Unicode #x21A5
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x21A5;</span>
-
----
-
-Move Down List symbol 2. Unicode #x21A7
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x21A7;</span>
-
----
-
-OK symbol 1. Unicode #x2713
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x2713;</span>
-
----
-
-OK symbol 2. Unicode #x2714
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x2714;</span>
-
----
-
-OK symbol 3.
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-OK</span>
-
----
-
-Cancel symbol 1. Unicode #x1f5d9
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x1f5d9;</span>
-
----
-
-Cancel symbol 2.
-&emsp;<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-Cancel</span>
-
----
-
 
 <a id='hdr9'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+
+## Task Timer Override Controls
+
+While a Task Timer is counting down, you can click on the
+progress bar and an action/controls override box appears. 
+
+---
+
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#23EE;</span>&emsp; skip to Task start. If at start, go to previous Task.
+
+---
+
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#23EA;</span>&emsp; If last button fast forward, fast backwards half
+that amount. Otherwise, fast backwards 10% 
+
+---
+
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x23EF;</span>&emsp; If playing, then pause. If paused, then play.
+
+---
+
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x23E9;</span>&emsp; If last button fast backwards, then fast forward 
+half that amount. Otherwise, fast forward 10%
+
+---
+
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x23ED;</span>&emsp; Skip to next Task.
+
+---
+
+
+<a id='hdr11'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
 
 # localStorage Object
@@ -651,5 +569,5 @@ updateRadioSounds();
 
 ---
 
-<a id="hdr10"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a></div>
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a></div>
