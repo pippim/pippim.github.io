@@ -61,8 +61,9 @@ Each project can have an unlimited number of Tasks.
     border-radius: 2rem;
     min-width: 50%;
     /* font-family: sans-serif; */
-    margin: 2rem auto;
-    padding: 2rem;
+    /* margin: 2rem auto; - Breaks on mobile */
+    margin: 2rem 0px;
+    padding: 1rem;
 }
 
 #drop-area.highlight {
@@ -74,7 +75,7 @@ Each project can have an unlimited number of Tasks.
 }
 
 #gallery {
-    margin-top: .5rem;
+    /* margin-top: .5rem; */
 }
 
 #gallery img {
@@ -90,7 +91,7 @@ Each project can have an unlimited number of Tasks.
 }
 
 #gallery p {
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-bottom: 0px ! important;
 }
 
