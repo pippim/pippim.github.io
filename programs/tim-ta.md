@@ -151,16 +151,19 @@ function previewFile(file) {
     let reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = function() {
-        /* Old img format, replaced by audio format */
+        /* Old img format, replaced by audio format
         let img = document.createElement('img')
         img.src = reader.result
         document.getElementById('gallery').appendChild(img)
-        
+        */ 
         let audio = document.createElement('audio')
         audio.src = reader.result
         console.log("audio:", audio) 
         audio.controls="true"
         document.getElementById('gallery').appendChild(audio)
+        document.getElementById('gallery').appendChild(file.name)
+        document.getElementById('gallery').appendChild(file.size)
+        document.getElementById('gallery').appendChild(file.type)
     }
 }
 
