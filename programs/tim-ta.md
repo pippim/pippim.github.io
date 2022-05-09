@@ -84,6 +84,12 @@ Each project can have an unlimited number of Tasks.
     vertical-align: middle;
 }
 
+#gallery audio {
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
 #progress-bar {
     /* from original code, not used */
     display: none;
@@ -161,9 +167,15 @@ function previewFile(file) {
         console.log("audio:", audio) 
         audio.controls="true"
         document.getElementById('gallery').appendChild(audio)
+        var par = document.createElement("p");
+        var text = document.createTextNode(file.name);
+        par.appendChild(text);
+        document.getElementById('gallery').appendChild(par);
+        /*
         document.getElementById('gallery').appendChild(file.name)
         document.getElementById('gallery').appendChild(file.size)
         document.getElementById('gallery').appendChild(file.type)
+        */
     }
 }
 
