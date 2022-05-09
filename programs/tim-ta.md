@@ -58,6 +58,7 @@ Each project can have an unlimited number of Tasks.
     border: 2px dashed #ccc;
     border-radius: 2rem;
     min-width: 50%;
+    max-width: 500px;
     margin: 2rem 0px;
     padding: 1rem;
 }
@@ -72,10 +73,11 @@ Each project can have an unlimited number of Tasks.
 
 #gallery audio {
     margin-top: 2rem;
+    margin-bottom: .5rem;
 }
 
 #gallery p {
-    margin: 0rem 0 0 2rem ! important;
+    margin: 0rem 0 0 1rem ! important;
 }
 
 #fileElem {
@@ -137,9 +139,9 @@ function previewFile(file) {
         document.getElementById('gallery').appendChild(audio)
 
         // var html = "Filename: " + file.name
-        fileInfo(file.name)
-        html = "<b>Size:</b> " + file.size.toLocaleString() + 
-               "&emsp;&emsp;<b>Type:</b> " + file.type
+        fileInfo("<b>" + file.name + "</b>")
+        html = "Size: <b>" + file.size.toLocaleString() + 
+               "</b>&emsp;&emsp;Type: <b>" + file.type + "</b>"
         fileInfo(html)
     }
 }
