@@ -71,12 +71,11 @@ Each project can have an unlimited number of Tasks.
 }
 
 #gallery audio {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 #gallery p {
-    margin: 0rem ! important;
-    margin-left: 1rem;
+    margin: 0rem 0 0 2rem ! important;
 }
 
 #fileElem {
