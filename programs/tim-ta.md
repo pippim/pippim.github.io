@@ -47,7 +47,7 @@ Each project can have an unlimited number of Tasks.
 <div id="drop-area">
     <form class="my-form">
         <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
-        <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)" value="">
+        <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
         <label class="button" for="fileElem">Select some files</label>
         <p> </p><br>
     </form>
