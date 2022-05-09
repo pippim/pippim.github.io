@@ -172,9 +172,10 @@ function previewFile(file) {
         audio.controls="true"
         document.getElementById('gallery').appendChild(audio)
 
-        var html = "<b>Filename:</b> " + file.name
+        var html = "Filename: " + file.name
         fileInfo(html)
-        html = "<b>Size:</b> " + file.size + "&emsp;<b>Type:</b> " + file.type
+        html = "Size: " + file.size.toLocaleString() + 
+               "   Type: " + file.type
         fileInfo(html)
     }
 }
