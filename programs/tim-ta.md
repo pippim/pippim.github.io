@@ -85,12 +85,12 @@ Each project can have an unlimited number of Tasks.
 }
 
 #progress-bar {
-    // from original code, not used
+    /* from original code, not used */
     display: none;
 }
 
 .drag-button {
-    // from original code, not used
+    /* from original code, not used */
     display: inline-block;
     padding: 10px;
     background: #ccc;
@@ -100,7 +100,7 @@ Each project can have an unlimited number of Tasks.
 }
 
 .drag-button:hover {
-    // from original code, not used
+    /* from original code, not used */
     background: #ddd;
 }
 
