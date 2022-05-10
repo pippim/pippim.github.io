@@ -54,12 +54,12 @@ Each project can have an unlimited number of Tasks.
     <div id="buttonGroup" >
         <div class="leftFoot">
             <button id="btnCancel" class="tta-btn" title="Clear list of files" 
-                oncclick="clickCancel" >&#x232B;</button>
+                type="button" onclick="clickCancel" >&#x232B;</button>
             Remove files
         </div>
         <div class="rightFoot">
             <button id="btnUpload" class="tta-btn" title="Upload to local storage" 
-                oncclick="clickUpload" >&#x2b;</button>
+                type="button" onclick="clickUpload" >&#x2b;</button>
             Upload files
         </div>
     </div>
@@ -350,53 +350,53 @@ These are the buttons used in Tim-ta.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23F9;</span>&emsp; Stop listening to sound file.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2699;</span>&emsp; In the footer, edit configuration settings. On
 detail line for small screen, open more buttons control box.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2B;</span>&emsp; Add a new project or a new task.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x232B;</span>&emsp; Go back one screen or cancel operation.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x2630;</span>&emsp; Display list of projects or list of tasks.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x270D;</span>&emsp; Edit a Project or Task.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x1f5d1;</span>&emsp; Delete a Project or Task.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x25b6;</span>&emsp; Run Project's Timed Tasks.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x21E7;</span>&emsp; Move a Project or Task up in list.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x21e9;</span>&emsp; Move a Project or Task down in list.
 
 ---
@@ -411,29 +411,29 @@ progress bar and an action/controls override box appears.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23EE;</span>&emsp; skip to Task start. If at start, go to previous Task.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23EA;</span>&emsp; If last button fast forward, fast backwards half
 the fast forward amount. Otherwise, fast backwards 10%.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23EF;</span>&emsp; If playing, then pause. If paused, then play.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23E9;</span>&emsp; If last button fast backwards, then fast forward 
 half the fast backwards amount. Otherwise, fast forward 10%
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23ED;</span>&emsp; Skip to next Task.
 
 ---
