@@ -82,7 +82,7 @@ $lavender: #E6E6FA !default; // lavender
     @include small {
         top: .25rem;
         display: block;
-        width: 100%;
+        /* width: 100%;  WHY IS THIS HERE? */
         padding: .3rem .75rem;
         font-size: 0.7rem;
 
