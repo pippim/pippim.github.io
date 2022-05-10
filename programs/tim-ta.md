@@ -54,12 +54,12 @@ Each project can have an unlimited number of Tasks.
     <div id="buttonGroup" >
         <div class="leftFoot">
             <button id="btnCancel" class="tta-btn" title="Clear list of files" 
-                onclick="clickCancel" >&#x232B;</button>
+                type="button" onclick="clickCancel" >&#x232B;</button>
             Remove files
         </div>
         <div class="rightFoot">
             <button id="btnUpload" class="tta-btn" title="Upload to local storage" 
-                onclick="clickUpload" >&#x2b;</button>
+                type="button" onclick="clickUpload" >&#x2b;</button>
             Upload files
         </div>
     </div>
