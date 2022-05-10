@@ -236,8 +236,8 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 
 ---
 
-<a id='hdr5'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+<a id='hdr6'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Tim-ta Under Construction.png"
@@ -250,11 +250,6 @@ These are Tim-ta stock sound files you can use when a timer task ends:
    background-image: linear-gradient(120deg, #155799, #159957)
 }
 </style>
-
----
-
-<a id='hdr6'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 # Work In Progress
 
@@ -409,6 +404,7 @@ half that amount. Otherwise, fast forward 10%
 
 # localStorage Object
 
+{% include copyHeader.html %}
 ``` javascript
 // Configuration & Container for all Tim-ta Projects
 // Default below for creation, overwritten when retrieved from localStorage
