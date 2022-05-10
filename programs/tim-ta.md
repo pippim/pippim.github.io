@@ -98,7 +98,7 @@ Each project can have an unlimited number of Tasks.
 }
 
 #buttonGroup {
-    display: flex;
+    display: none;
     justify-content: space-around;
     margin-top: 2rem;
     border-radius: 1rem;
@@ -147,27 +147,20 @@ function handleDrop(e) {
     let files = dt.files
 
     handleFiles(files)
-    document.getElementById('buttonGroup').style.display = "flex"
 }
 
 function previewFile(file) {
     let reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = function() {
-        /* Old img format, replaced by audio format
-        let img = document.createElement('img')
-        img.src = reader.result
-        document.getElementById('gallery').appendChild(img)
-        */ 
         let audio = document.createElement('audio')
         audio.src = reader.result
         console.log("audio:", audio) 
         audio.controls="true"
         document.getElementById('gallery').appendChild(audio)
 
-        // var html = "Filename: " + file.name
         fileInfo("<b>" + file.name + "</b>")
-        html = "Size: <b>" + file.size.toLocaleString() + 
+        let html = "Size: <b>" + file.size.toLocaleString() + 
                "</b>&emsp;&emsp;Type: <b>" + file.type + "</b>"
         fileInfo(html)
     }
@@ -176,24 +169,30 @@ function previewFile(file) {
 function fileInfo(info) {
     /* Add single text line (paragraph) to gallery */
     var par = document.createElement("p")
-    // var text = document.createTextNode(info)
     par.innerHTML = info
-    // par.appendChild(text)
     document.getElementById('gallery').appendChild(par)
 }
 
 function clickCancel() {
     console.log("clickCancel")
+    removeFiles()
 }
 
 function clickUpload() {
     console.log("clickUpload")
+    removeFiles()
+}
+
+function removeFiles() {
+    console.log("removeFiles")
+    document.getElementById('gallery').textContent = ""
+    document.getElementById('buttonGroup').style.display = "none"
 }
 
 function handleFiles(files) {
     files = [...files]
-    /* files.forEach(uploadFile) */
     files.forEach(previewFile)
+    document.getElementById('buttonGroup').style.display = "flex"
 }
 
 function uploadFile(file, i) { // <- Add `i` parameter
