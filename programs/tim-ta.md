@@ -54,12 +54,12 @@ Each project can have an unlimited number of Tasks.
     <div id="buttonGroup" >
         <div class="leftFoot">
             <button id="btnCancel" class="tta-btn" title="Clear list of files" 
-                type="button" onclick="clickCancel" >&#x232B;</button>
+                onclick="clickCancel" >&#x232B;</button>
             Remove files
         </div>
         <div class="rightFoot">
             <button id="btnUpload" class="tta-btn" title="Upload to local storage" 
-                type="button" onclick="clickUpload" >&#x2b;</button>
+                onclick="clickUpload" >&#x2b;</button>
             Upload files
         </div>
     </div>
@@ -198,13 +198,6 @@ function handleFiles(files) {
 
 function uploadFile(file, i) { // <- Add `i` parameter
     console.log("file:",file);
-    /*
-         lastModified: 1652040795348
-         name: "mixkit-short-rooster-crowing-2470.wav"
-         size: 577166
-         type: "audio/x-wav"
-         webkitRelativePath: ""
-    */
     var url = 'YOUR URL HERE'
     var xhr = new XMLHttpRequest()
     var formData = new FormData()
