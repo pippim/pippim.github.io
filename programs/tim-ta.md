@@ -51,7 +51,7 @@ Each project can have an unlimited number of Tasks.
         <label class="button" for="fileElem">Select some files</label>
     </form>
     <div id="gallery"></div>
-    <div id="buttonGroup" style="display: none;" >
+    <div id="buttonGroup" >
         <div class="leftFoot">
             <button id="btnCancel" class="tta-btn" title="Clear list of files"
                 oncclick="clickCancel" >&#x232B;</button>
@@ -98,7 +98,7 @@ Each project can have an unlimited number of Tasks.
 }
 
 #buttonGroup {
-    display: none;
+    display: flex;
     justify-content: space-around;
     margin-top: 2rem;
     border-radius: 1rem;
