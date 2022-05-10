@@ -59,7 +59,7 @@ Each project can have an unlimited number of Tasks.
         </div>
         <div class="rightFoot">
             <button id="btnUpload" class="tta-btn" title="Upload to local storage"
-                oncclick="clickUpload" >&#x232B;</button>
+                oncclick="clickUpload" >&#x2b;</button>
             Upload files
         </div>
     </div>
@@ -337,8 +337,13 @@ These are the buttons used in Tim-ta.
 
 ---
 
-<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#9835;</span>&emsp; Listen to sound file.
+
+---
+
+<span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
+&#x23F9;</span>&emsp; Stop listening to sound file.
 
 ---
 
@@ -391,7 +396,7 @@ detail line for small screen, open more buttons control box.
 <a id='hdr9'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
-## Task Timer Override Controls
+## Timer Countdown Override Buttons
 
 While a Task Timer is counting down, you can click on the
 progress bar and an action/controls override box appears. 
