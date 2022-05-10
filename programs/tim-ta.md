@@ -53,12 +53,12 @@ Each project can have an unlimited number of Tasks.
     <div id="gallery"></div>
     <div id="buttonGroup" >
         <div class="leftFoot">
-            <button id="btnCancel" class="tta-btn" title="Clear list of files"
+            <button id="btnCancel" class="tta-btn" title="Clear list of files" 
                 oncclick="clickCancel" >&#x232B;</button>
             Remove files
         </div>
         <div class="rightFoot">
-            <button id="btnUpload" class="tta-btn" title="Upload to local storage"
+            <button id="btnUpload" class="tta-btn" title="Upload to local storage" 
                 oncclick="clickUpload" >&#x2b;</button>
             Upload files
         </div>
@@ -180,6 +180,14 @@ function fileInfo(info) {
     par.innerHTML = info
     // par.appendChild(text)
     document.getElementById('gallery').appendChild(par)
+}
+
+function clickCancel() {
+    console.log("clickCancel")
+}
+
+function clickUpload() {
+    console.log("clickUpload")
 }
 
 function handleFiles(files) {
