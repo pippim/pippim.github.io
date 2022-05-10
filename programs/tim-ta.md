@@ -42,7 +42,7 @@ Each project can have an unlimited number of Tasks.
 
 <!-- From: https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/  -->
 
-<span id="soundTitle"><font size='+3'>Sound Screening in Memory (not saved yet)</font></span>
+<span id="customSelect"><font size='+3'>Sound Screening in Memory (not saved yet)</font></span>
 
 <div id="drop-area">
     <form class="my-form">
@@ -176,18 +176,19 @@ function fileInfo(info) {
 function clickCancel() {
     console.log("clickCancel")
     removeFiles()
+    document.getElementById('customSelect').scrollIntoView();
 }
 
 function clickUpload() {
     console.log("clickUpload")
     removeFiles()
+    document.getElementById('customSounds').scrollIntoView();
 }
 
 function removeFiles() {
     console.log("removeFiles")
     document.getElementById('gallery').textContent = ""
     document.getElementById('buttonGroup').style.display = "none"
-    document.getElementById('soundTitle').scrollIntoView();
 }
 
 function handleFiles(files) {
@@ -231,7 +232,8 @@ function uploadFile(file, i) { // <- Add `i` parameter
 
 # Custom Sound Files (Uploaded)
 
-These are all the custom sound files that have been uploaded so far.
+<span id="customSounds">These are all the custom sound files that 
+have been uploaded so far.</span>
 
 ---
 
