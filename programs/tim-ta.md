@@ -316,12 +316,13 @@ These are the buttons used in Tim-ta.
 ---
 
 <span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x2699;</span>&emsp; Edit configuration settings.
+&#x2699;</span>&emsp; In the footer, edit configuration settings. On
+detail line for small screen, open more buttons control box.
 
 ---
 
 <span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x2B;</span>&emsp; Add a new project or new task.
+&#x2B;</span>&emsp; Add a new project or a new task.
 
 ---
 
@@ -336,27 +337,27 @@ These are the buttons used in Tim-ta.
 ---
 
 <span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x270D;</span>&emsp; Edit Configuration, Project or Task.
+&#x270D;</span>&emsp; Edit a Project or Task.
 
 ---
 
 <span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x1f5d1;</span>&emsp; Delete project or task.
+&#x1f5d1;</span>&emsp; Delete a Project or Task.
 
 ---
 
 <span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x25b6;</span>&emsp; Run project timed tasks.
+&#x25b6;</span>&emsp; Run Project's Timed Tasks.
 
 ---
 
 <span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x21E7;</span>&emsp; Move project or task up in list.
+&#x21E7;</span>&emsp; Move a Project or Task up in list.
 
 ---
 
 <span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#x21e9;</span>&emsp; Move project or task down in list.
+&#x21e9;</span>&emsp; Move a Project or Task down in list.
 
 ---
 
@@ -371,13 +372,13 @@ progress bar and an action/controls override box appears.
 ---
 
 <span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#23EE;</span>&emsp; skip to Task start. If at start, go to previous Task.
+&#x23EE;</span>&emsp; skip to Task start. If at start, go to previous Task.
 
 ---
 
 <span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
-&#23EA;</span>&emsp; If last button fast forward, fast backwards half
-that amount. Otherwise, fast backwards 10% 
+&#x23EA;</span>&emsp; If last button fast forward, fast backwards half
+the fast forward amount. Otherwise, fast backwards 10%.
 
 ---
 
@@ -388,7 +389,7 @@ that amount. Otherwise, fast backwards 10%
 
 <span class='hdr-btn' style='font-size:25px; vertical-align:middle;'>
 &#x23E9;</span>&emsp; If last button fast backwards, then fast forward 
-half that amount. Otherwise, fast forward 10%
+half the fast backwards amount. Otherwise, fast forward 10%
 
 ---
 
@@ -397,10 +398,20 @@ half that amount. Otherwise, fast forward 10%
 
 ---
 
+A note about alternating fast backward and fast forward button clicks:
+
+- Assume you are at 50% progress
+- You click fast forward and now you are at 60% because the default step amount is 10%.
+- You click fast backward and now you are 55% (half the last fast forward is 5%).
+- You click fast forward and now you are at 57.5% (half the last fast backward is 2.5%).
+- You click fast backward and now you are at 56.25% (half the last fast forward is 1.25%).
+- You click fast backward and now you are at 46.25% because the default step amount is 10%.
+- You click fast backward and now you are at 36.25% because the default step amount is 10%.
+
+---
 
 <a id='hdr11'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
-
 
 # localStorage Object
 
