@@ -42,7 +42,7 @@ Each project can have an unlimited number of Tasks.
 
 <!-- From: https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/  -->
 
-<font size='+3'>Sound Screening in Memory (not saved yet)</font>
+<span id="soundTitle"><font size='+3'>Sound Screening in Memory (not saved yet)</font></span>
 
 <div id="drop-area">
     <form class="my-form">
@@ -187,6 +187,7 @@ function removeFiles() {
     console.log("removeFiles")
     document.getElementById('gallery').textContent = ""
     document.getElementById('buttonGroup').style.display = "none"
+    document.getElementById('soundTitle').scrollIntoView();
 }
 
 function handleFiles(files) {
