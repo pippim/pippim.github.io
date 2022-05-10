@@ -51,6 +51,18 @@ Each project can have an unlimited number of Tasks.
         <label class="button" for="fileElem">Select some files</label>
     </form>
     <div id="gallery"></div>
+    <div id="buttonGroup" style="display: none;" >
+        <div class="leftFoot">
+            <button id="btnCancel" class="tta-btn" title="Clear list of files"
+                oncclick="clickCancel" >&#x232B;</button>
+            Remove files
+        </div>
+        <div class="rightFoot">
+            <button id="btnUpload" class="tta-btn" title="Upload to local storage"
+                oncclick="clickUpload" >&#x232B;</button>
+            Upload files
+        </div>
+    </div>
 </div>
 
 <style>
@@ -84,6 +96,20 @@ Each project can have an unlimited number of Tasks.
     /* Prevents default "BROWSE" button and last filename(s) appearing */
     display: none;
 }
+
+#buttonGroup {
+    display: none;
+    justify-content: space-around;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: .25rem .5rem;
+    font-size: x-large;
+    color: var(--highlight-color);
+    background-color: var(--bg-color);
+    background-image: linear-gradient(120deg,
+        var(--bg-color-secondary), var(--bg-color));
+}
+
 </style>
 
 <script>
@@ -121,6 +147,7 @@ function handleDrop(e) {
     let files = dt.files
 
     handleFiles(files)
+    document.getElementById('buttonGroup').style.display = "flex"
 }
 
 function previewFile(file) {
