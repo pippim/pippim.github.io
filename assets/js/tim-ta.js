@@ -354,6 +354,7 @@ function ttaApplyGlobalStyles() {
     background-color: var(--honeydew);
     font-size: x-large;
     border-radius: 1rem;
+    outline: none;  /* creates shadow effect */
 }
 
 /* Not sure why hover not working like hdr-btn does. So make separate below. */
