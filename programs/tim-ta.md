@@ -114,6 +114,7 @@ Each project can have an unlimited number of Tasks.
 
 <script>
 let dropArea = document.getElementById('drop-area')
+var uploadNames = []
 
 ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, preventDefaults, false)
@@ -171,12 +172,12 @@ function previewFile(file) {
             type: file.type,
             src: base64FileData
         }
+        uploadNames.push(file.name)
         /* Wrong time to update... 
         localStorage.setItem(name, JSON.stringify(mediaFile))
         var reReadItem = JSON.parse(localStorage.getItem(name))
         setSoundSource(name, reReadItem)  // Function in sound.js
         */
-        console.log("mediaFile created:", mediaFile) 
     }
 }
 
@@ -188,19 +189,19 @@ function fileInfo(info) {
 }
 
 function clickCancel() {
-    console.log("clickCancel")
+    console.log("clickCancel() TODO: loop through and removeItem")
     removeFiles()
     document.getElementById('customSelect').scrollIntoView();
 }
 
 function clickUpload() {
-    console.log("clickUpload")
+    console.log("clickCancel() TODO: Call read storage function")
     removeFiles()
     document.getElementById('customSounds').scrollIntoView();
 }
 
 function removeFiles() {
-    console.log("removeFiles")
+    uploadNames = []
     document.getElementById('gallery').textContent = ""
     document.getElementById('buttonGroup').style.display = "none"
 }
@@ -209,6 +210,7 @@ function handleFiles(files) {
     files = [...files]
     files.forEach(previewFile)
     document.getElementById('buttonGroup').style.display = "flex"
+    console.log("uploadNames:", uploadNames) 
 }
 
 function uploadFile(file, i) { // <- Add `i` parameter
