@@ -57,10 +57,10 @@ var customSoundControl = {
     cscNextNumber: 1,
     cscFirstKey: "Custom_000",
     cscLastKey: "Custom_000",
-    cscData: {}
+    cscRecords: {}
 }
 
-var cscDataRecord = {
+var cscRecord = {
     cscKey: "Custom_000",
     cscFilename: "Some alarm filename.wav",
     cscSize: 0,
@@ -69,17 +69,20 @@ var cscDataRecord = {
 }
 
 function loadCustomNames () {
-    var customSoundControl = JSON.parse(localStorage.getItem(CUSTOM_SOUND_CONTROL));
-    if (customSoundControl === null) {
-        // First time on this browser
+    var stored = JSON.parse(localStorage.getItem(CUSTOM_SOUND_CONTROL));
+    if (stored === null) {
+        // First time on this browser, create new Custom Sound Controls
         localStorage.setItem(CUSTOM_SOUND_CONTROL, JSON.stringify(customSoundControl));
-        var customSoundControl = JSON.parse(localStorage.getItem(CUSTOM_SOUND_CONTROL));
+        customSoundControl = JSON.parse(localStorage.getItem(CUSTOM_SOUND_CONTROL));
+    } else {
+        customSoundControl = Object.assign({}, stored);
     }
 
+
     // Read csc data record and initialize document body
-    cscData = customSoundControl.cscData;
-    for (const key of Object.keys(cscData)) {
-        cscDataRecord = cscData[key];
+    cscRecords = customSoundControl.cscRecords;
+    for (const key of Object.keys(cscRecords)) {
+        cscRecord = cscRecords[key];
     }
 }
 
