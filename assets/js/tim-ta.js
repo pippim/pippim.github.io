@@ -354,7 +354,7 @@ function ttaApplyGlobalStyles() {
     background-color: var(--honeydew);
     font-size: x-large;
     border-radius: 1rem;
-    outline: none;  /* creates shadow effect */
+    outline: none;  /* Remove shadow effect? NOPE :( */
 }
 
 /* Not sure why hover not working like hdr-btn does. So make separate below. */
@@ -409,6 +409,50 @@ table.tta-table th {
 
 .closebtn:hover {
     color: black;
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 2rem;
+    min-width: 50%;
+    max-width: 500px;
+    margin: 2rem 0px;
+    padding: 1rem;
+}
+
+#drop-area.highlight {
+    border-color: purple;
+}
+
+.my-form {
+    margin-bottom: 10px;
+}
+
+#gallery audio {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+#gallery p {
+    margin: 0rem 0 0 1rem ! important;
+}
+
+#fileElem {
+    /* Prevents default "BROWSE" button and last filename(s) appearing */
+    display: none;
+}
+
+#buttonGroup {
+    display: none;
+    justify-content: space-around;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: .25rem .5rem;
+    font-size: x-large;
+    color: var(--highlight-color);
+    background-color: var(--bg-color);
+    background-image: linear-gradient(120deg,
+        var(--bg-color-secondary), var(--bg-color));
 }
 
     `  /* End of block: var styles =
