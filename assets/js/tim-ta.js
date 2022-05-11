@@ -2372,13 +2372,13 @@ document.addEventListener("DOMContentLoaded", function(event){
     ;['dragenter', 'dragover'].forEach(eventName => {
         dropArea.addEventListener(eventName, highlight, false)
     })
-
     ;['dragleave', 'drop'].forEach(eventName => {
         dropArea.addEventListener(eventName, unhighlight, false)
     })
+    dropArea.addEventListener('drop', handleDrop, false)
 });
-var uploadNames = []
 
+var uploadNames = []
 
 function preventDefaults (e) {
     e.preventDefault()
@@ -2392,8 +2392,6 @@ function highlight(e) {
 function unhighlight(e) {
     dropArea.classList.remove('highlight')
 }
-
-dropArea.addEventListener('drop', handleDrop, false)
 
 function handleDrop(e) {
     let dt = e.dataTransfer
