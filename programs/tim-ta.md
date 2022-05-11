@@ -66,49 +66,6 @@ Each project can have an unlimited number of Tasks.
 </div>
 
 <style>
-#drop-area {
-    border: 2px dashed #ccc;
-    border-radius: 2rem;
-    min-width: 50%;
-    max-width: 500px;
-    margin: 2rem 0px;
-    padding: 1rem;
-}
-
-#drop-area.highlight {
-    border-color: purple;
-}
-
-.my-form {
-    margin-bottom: 10px;
-}
-
-#gallery audio {
-    margin-top: 2rem;
-    margin-bottom: .5rem;
-}
-
-#gallery p {
-    margin: 0rem 0 0 1rem ! important;
-}
-
-#fileElem {
-    /* Prevents default "BROWSE" button and last filename(s) appearing */
-    display: none;
-}
-
-#buttonGroup {
-    display: none;
-    justify-content: space-around;
-    margin-top: 2rem;
-    border-radius: 1rem;
-    padding: .25rem .5rem;
-    font-size: x-large;
-    color: var(--highlight-color);
-    background-color: var(--bg-color);
-    background-image: linear-gradient(120deg,
-        var(--bg-color-secondary), var(--bg-color));
-}
 
 </style>
 
@@ -166,8 +123,15 @@ function previewFile(file) {
         fileInfo(html)
 
         var base64FileData = reader.result.toString()
+        /*  TODO: Cannot assign just any name because it might match ID
+                  Must use "Custom_999.ext" as new fileURL name.
+                  Can register Custom_999.ext at time of reading localStorage.
+                  If a file is deleted, then another takes its place automatically.
+                  An object tracks custom[key]=filenameCustomSound
+        */
         var mediaFile = {
             fileUrl: file.name,
+            desc: file.name,
             size: file.size,
             type: file.type,
             src: base64FileData
