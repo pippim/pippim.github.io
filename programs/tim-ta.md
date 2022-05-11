@@ -70,7 +70,7 @@ Each project can have an unlimited number of Tasks.
 </style>
 
 <script>
-var dropArea = document.getElementById('drop-area')
+
 </script>
 
 
