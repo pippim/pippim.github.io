@@ -173,6 +173,7 @@ function previewFile(file) {
             src: base64FileData
         }
         uploadNames.push(file.name)
+        console.log("uploadNames:", uploadNames) 
         /* Wrong time to update... 
         localStorage.setItem(name, JSON.stringify(mediaFile))
         var reReadItem = JSON.parse(localStorage.getItem(name))
@@ -210,7 +211,6 @@ function handleFiles(files) {
     files = [...files]
     files.forEach(previewFile)
     document.getElementById('buttonGroup').style.display = "flex"
-    console.log("uploadNames:", uploadNames) 
 }
 
 function uploadFile(file, i) { // <- Add `i` parameter
