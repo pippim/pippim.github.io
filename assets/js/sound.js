@@ -32,7 +32,9 @@
                  Filename - bbc_clocks---d_07022051.mp3
 ============================================================================ */
 
-// Session Storage statistics
+// TODO: Ensure Sound filenames don't contain "|"
+
+// Session Storage statistics. stockNames match ID Name on screen
 const stockNames = ["Alarm_01.wav", "Alarm_01.mp3",
                     "Alarm_03.mp3", "Alarm_05.mp3", "Alarm_12.mp3"];
 const stockPrefix = "{{ site.url }}/assets/sound/";
@@ -42,11 +44,49 @@ function loadStockNames () {
     for (var i = 0; i < stockNames.length; i++) {
         var localItem = JSON.parse(localStorage.getItem(stockNames[i]));
         if (localItem === null) { fetch_sound(stockNames[i]); }
-        else { setSoundSource(stockNames[i], localItem); } } }
+        else { setSoundSource(stockNames[i], localItem); }
+    }
+}
+
+const CUSTOM_SOUND_CONTROL = "custom_sound_control";
+const CUSTOM_SOUND_ROOT = "Custom";
+const CUSTOM_SOUND_SEP = "_";
+const CUSTOM_SOUND_DIGITS = 3;  // E.G. "Custom_001" to "Custom_999"
+var customSoundControl = {
+    cscCount: 0,
+    cscNextNumber: 1,
+    cscFirstKey: "Custom_000",
+    cscLastKey: "Custom_000",
+    cscData: {}
+}
+
+var cscDataRecord = {
+    cscKey: "Custom_000",
+    cscFilename: "Some alarm filename.wav",
+    cscSize: 0,
+    cscType: "audio/x-wav",
+    cscTimeAdded: 0
+}
+
+function loadCustomNames () {
+    var customSoundControl = JSON.parse(localStorage.getItem(CUSTOM_SOUND_CONTROL));
+    if (customSoundControl === null) {
+        // First time on this browser
+        localStorage.setItem(CUSTOM_SOUND_CONTROL, JSON.stringify(customSoundControl));
+        var customSoundControl = JSON.parse(localStorage.getItem(CUSTOM_SOUND_CONTROL));
+    }
+
+    // Read csc data record and initialize document body
+    cscData = customSoundControl.cscData;
+    for (const key of Object.keys(cscData)) {
+        cscDataRecord = cscData[key];
+    }
+}
 
 document.addEventListener("DOMContentLoaded", function(event){
     // Must wait due to error: Uncaught TypeError: audioControl is null
     loadStockNames();
+    loadCustomNames();
 });
 
 async function fetch_sound(name) {
@@ -76,6 +116,12 @@ async function fetch_sound(name) {
 function setSoundSource (name, localItem) {
     audioControl = document.getElementById(name);
     audioControl.src = localItem.src;
+}
+
+function playSoundSource (name) {
+    // Called by tim-ta.js
+    audioControl = document.getElementById(name);
+    audioControl.play();
 }
 
 /* End of /assets/js/sound.js */
