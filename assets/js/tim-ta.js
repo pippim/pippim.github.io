@@ -2359,6 +2359,144 @@ function confirmDelete(text) {
     return (value.toLowerCase() == text.toLowerCase());
 }
 
+/* Drop area for Custom Sound Files
+
+*/
+
+let dropArea = document.getElementById('drop-area')
+var uploadNames = []
+
+;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, preventDefaults, false)
+})
+
+function preventDefaults (e) {
+    e.preventDefault()
+    e.stopPropagation()
+}
+
+;['dragenter', 'dragover'].forEach(eventName => {
+    dropArea.addEventListener(eventName, highlight, false)
+})
+
+;['dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, unhighlight, false)
+})
+
+function highlight(e) {
+    dropArea.classList.add('highlight')
+}
+
+function unhighlight(e) {
+    dropArea.classList.remove('highlight')
+}
+
+dropArea.addEventListener('drop', handleDrop, false)
+
+function handleDrop(e) {
+    let dt = e.dataTransfer
+    let files = dt.files
+
+    handleFiles(files)
+}
+
+function previewFile(file) {
+    let reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onloadend = function() {
+        let audio = document.createElement('audio')
+        audio.src = reader.result
+        console.log("audio:", audio)
+        audio.controls="true"
+        document.getElementById('gallery').appendChild(audio)
+
+        fileInfo("<b>" + file.name + "</b>")
+        let html = "Size: <b>" + file.size.toLocaleString() +
+               "</b>&emsp;&emsp;Type: <b>" + file.type + "</b>"
+        fileInfo(html)
+
+        var base64FileData = reader.result.toString()
+        /*  TODO: Cannot assign just any name because it might match ID
+                  Must use "Custom_999.ext" as new fileURL name.
+                  Can register Custom_999.ext at time of reading localStorage.
+                  If a file is deleted, then another takes its place automatically.
+                  An object tracks custom[key]=filenameCustomSound
+        */
+        var mediaFile = {
+            fileUrl: file.name,
+            desc: file.name,
+            size: file.size,
+            type: file.type,
+            src: base64FileData
+        }
+        uploadNames.push(file.name)
+        console.log("uploadNames:", uploadNames)
+        /* Wrong time to update...
+        localStorage.setItem(name, JSON.stringify(mediaFile))
+        var reReadItem = JSON.parse(localStorage.getItem(name))
+        setSoundSource(name, reReadItem)  // Function in sound.js
+        */
+    }
+}
+
+function fileInfo(info) {
+    /* Add single text line (paragraph) to gallery */
+    var par = document.createElement("p")
+    par.innerHTML = info
+    document.getElementById('gallery').appendChild(par)
+}
+
+function clickCancel() {
+    console.log("clickCancel() TODO: loop through and removeItem")
+    removeFiles()
+    document.getElementById('customSelect').scrollIntoView();
+}
+
+function clickUpload() {
+    console.log("clickCancel() TODO: Call read storage function")
+    removeFiles()
+    document.getElementById('customSounds').scrollIntoView();
+}
+
+function removeFiles() {
+    uploadNames = []
+    document.getElementById('gallery').textContent = ""
+    document.getElementById('buttonGroup').style.display = "none"
+}
+
+function handleFiles(files) {
+    files = [...files]
+    files.forEach(previewFile)
+    document.getElementById('buttonGroup').style.display = "flex"
+}
+
+function uploadFile(file, i) { // <- Add `i` parameter
+    console.log("file:",file);
+    var url = 'YOUR URL HERE'
+    var xhr = new XMLHttpRequest()
+    var formData = new FormData()
+    xhr.open('POST', url, true)
+
+    // Add following event listener
+    xhr.upload.addEventListener("progress", function(e) {
+        updateProgress(i, (e.loaded * 100.0 / e.total) || 100)
+    })
+
+    xhr.addEventListener('readystatechange', function(e) {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Done. Inform the user
+        }
+        else if (xhr.readyState == 4 && xhr.status != 200) {
+            // Error. Inform the user
+        }
+    })
+
+    formData.append('file', file)
+    xhr.send(formData)
+}
+
+
+
 /* CONTROLS and MESSAGES boxes
 
     WARNING: These messages work after innerHTML has been set
