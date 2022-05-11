@@ -2362,8 +2362,11 @@ function confirmDelete(text) {
 /* Drop area for Custom Sound Files
 
 */
-
-let dropArea = document.getElementById('drop-area')
+var dropArea;
+document.addEventListener("DOMContentLoaded", function(event){
+    // Must wait due to error: Uncaught TypeError: dropArea is null
+    dropArea = document.getElementById('drop-area')
+});
 var uploadNames = []
 
 ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
