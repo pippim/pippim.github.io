@@ -164,7 +164,7 @@ function previewFile(file) {
                "</b>&emsp;&emsp;Type: <b>" + file.type + "</b>"
         fileInfo(html)
 
-        var base64FileData = reader.result.toString();
+        var base64FileData = reader.result.toString()
         var mediaFile = {
             fileUrl: file.name,
             size: file.size,
@@ -174,7 +174,7 @@ function previewFile(file) {
         /* Wrong time to update... 
         localStorage.setItem(name, JSON.stringify(mediaFile))
         var reReadItem = JSON.parse(localStorage.getItem(name))
-        setSoundSource(name, reReadItem)  /* Function in sound.js */
+        setSoundSource(name, reReadItem)  // Function in sound.js
         */
         console.log("mediaFile created:", mediaFile) 
     }
