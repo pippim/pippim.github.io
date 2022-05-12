@@ -2560,7 +2560,7 @@ function clickCancel() {
     }
     // Restore hold before files selected for uploading
     customSoundControl = Object.assign({}, customSoundControlHold)
-    // removeFiles()  // Override for testing existing key search
+    removeFiles()  // Override for testing existing key search
     document.getElementById('customSelect').scrollIntoView();
 }
 
@@ -2572,7 +2572,7 @@ function clickUpload() {
 
 function removeFiles() {
     uploadNames = []
-    customSoundControlHold = Object.assign({}, customSoundControl)
+    //customSoundControlHold = Object.assign({}, customSoundControl)
     document.getElementById('gallery').textContent = ""
     document.getElementById('buttonGroup').style.display = "none"
 }
