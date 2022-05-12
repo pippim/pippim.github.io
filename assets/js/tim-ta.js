@@ -2463,18 +2463,18 @@ function previewFile(file) {
             type: file.type,
             src: base64FileData
         }
-        uploadNames.push(file.name)
-        console.log("uploadNames:", uploadNames)
         /* Wrong time to update...
         localStorage.setItem(name, JSON.stringify(mediaFile))
         var reReadItem = JSON.parse(localStorage.getItem(name))
         setSoundSource(name, reReadItem)  // Function in sound.js
         */
+        uploadNames.push(file.name)
+        console.log("uploadNames:", uploadNames)
     }
 }
 
 function makeSoundFilename(name, size, type) {
-    /*  From: sound.js
+    /*  From: sound.js (EVENTUALLY MOVE THIS FUNCTION THERE)
 
         const CUSTOM_SOUND_CONTROL = "custom_sound_control";
         const CUSTOM_SOUND_ROOT = "Custom";
@@ -2535,6 +2535,10 @@ function fileInfo(info) {
 function clickCancel() {
     // Restore hold before files selected for uploading
     console.log("clickCancel() TODO: remove sound files from local storage")
+    for (const i; i < uploadNames.length, i++) {
+        // Need to get Custom_999 by cscName matching uploadNames[i]
+        console.log("removing localStorage sound file:", uploadNames[i])
+    }
     customSoundControl = Object.assign({}, customSoundControlHold)
     removeFiles()
     document.getElementById('customSelect').scrollIntoView();
