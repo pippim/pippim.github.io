@@ -2495,8 +2495,8 @@ function makeSoundFilename(name, size, type) {
             cscTimeAdded: 0
         }
     */
-
-    if (const existing = checkSoundFilename(name)) {
+    const existing = checkSoundFilename(name)
+    if (existing) {
         // Only thing to change is cscRecord['cscTimeAdded']
         var cscRecords = customSoundControl['cscRecords']
         console.log("existing:", existing)
