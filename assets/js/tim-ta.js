@@ -2426,27 +2426,28 @@ function handleDrop(e) {
     handleFiles(files)
 }
 
+/* Create hold for when Cancel clicked */
+var customSoundControlHold = Object.assign({}, customSoundControl)
+
 function previewFile(file) {
     /*  Firefox will let you drop the same filename twice. Chrome will not.
         Therefore if filename already exists, skip adding.
     */
     if (uploadNames.includes(file.name)) {
-        console.log("Preventing duplicate name:", file.name)
-        return
+        return  // Already selected at least once before
     }
     let reader = new FileReader()
-    reader.readAsDataURL(file)
-    reader.onloadend = function() {
-        let audio = document.createElement('audio')
-        audio.src = reader.result
-        console.log("audio:", audio)
-        audio.controls="true"
-        document.getElementById('gallery').appendChild(audio)
+    reader.readAsDataURL(file)  // Asynchronous function
+    reader.onloadend = function() {  // Wait until async loaded
+        let audio = document.createElement('audio')  // audio element
+        audio.src = reader.result  // set audio source
+        audio.controls="true"  // Paints control box
+        document.getElementById('gallery').appendChild(audio)  // stick it in
 
-        fileInfo("<b>" + file.name + "</b>")
+        fileInfo("<b>" + file.name + "</b>")  // Add name to gallery
         let html = "Size: <b>" + file.size.toLocaleString() +
                "</b>&emsp;&emsp;Type: <b>" + file.type + "</b>"
-        fileInfo(html)
+        fileInfo(html)  // add size and type to gallery
 
         var base64FileData = reader.result.toString()
         /*  TODO: Cannot assign just any name because it might match ID
@@ -2481,6 +2482,8 @@ function fileInfo(info) {
 
 function clickCancel() {
     console.log("clickCancel() TODO: loop through and removeItem")
+    // Write back hold before files selected for uploading
+    customSoundControl = Object.assign({}, customSoundControlHold)
     removeFiles()
     document.getElementById('customSelect').scrollIntoView();
 }
@@ -2493,6 +2496,7 @@ function clickUpload() {
 
 function removeFiles() {
     uploadNames = []
+    customSoundControlHold = Object.assign({}, customSoundControl)
     document.getElementById('gallery').textContent = ""
     document.getElementById('buttonGroup').style.display = "none"
 }
