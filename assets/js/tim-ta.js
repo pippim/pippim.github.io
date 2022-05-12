@@ -2499,6 +2499,7 @@ function makeSoundFilename(name, size, type) {
     if (existing !== null) {
         // Only thing to change is cscRecord['cscTimeAdded']
         var cscRecords = customSoundControl['cscRecords']
+        console.log("existing:", existing)
         var cscRecord = cscRecords[existing]
         console.log("key found:", existing, "timeDateAdded:", cscRecord['cscTimeAdded'])
         cscRecord['cscTimeAdded'] = new Date().getTime()
