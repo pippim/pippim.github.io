@@ -65,15 +65,6 @@ Each project can have an unlimited number of Tasks.
     </div>
 </div>
 
-<style>
-
-</style>
-
-<script>
-
-</script>
-
-
 ---
 
 <a id="hdr4"></a>
@@ -120,7 +111,7 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Tim-ta Under Construction.png"
-   style="float: left; width: 75%; margin: 2rem 1rem 1rem 0px;"
+   style="float: none; width: 100%; margin: 2rem 0px 1rem 0px;"
    caption="Tim-ta Under Construction.png"
 %}
 <style>
