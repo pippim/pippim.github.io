@@ -2497,6 +2497,8 @@ function makeSoundFilename(name, size, type) {
     */
     var key =  CUSTOM_SOUND_ROOT + CUSTOM_SOUND_SEP +
                pad(customSoundControl['cscNextNumber'], CUSTOM_SOUND_DIGITS)
+    // If key already in csc then return because it will be updated.
+    // Only thing to change is cscRecord['cscTimeAdded']
     if (key < customSoundControl['cscFirstKey']) {
         customSoundControl['cscFirstKey'] = key
     }
@@ -2535,7 +2537,7 @@ function fileInfo(info) {
 function clickCancel() {
     // Restore hold before files selected for uploading
     console.log("clickCancel() TODO: remove sound files from local storage")
-    for (const i; i < uploadNames.length, i++) {
+    for (const i; i < uploadNames.length; i++) {
         // Need to get Custom_999 by cscName matching uploadNames[i]
         console.log("removing localStorage sound file:", uploadNames[i])
     }
