@@ -2537,7 +2537,7 @@ function fileInfo(info) {
 function clickCancel() {
     // Restore hold before files selected for uploading
     console.log("clickCancel() TODO: remove sound files from local storage")
-    for (const i = 0; i < uploadNames.length; i++) {
+    for (var i = 0; i < uploadNames.length; i++) {
         // Need to get Custom_999 by cscName matching uploadNames[i]
         console.log("removing localStorage sound file:", uploadNames[i])
     }
