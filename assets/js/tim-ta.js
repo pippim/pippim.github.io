@@ -2497,7 +2497,14 @@ function makeSoundFilename(name, size, type) {
     */
     var key =  CUSTOM_SOUND_ROOT + CUSTOM_SOUND_SEP +
                pad(customSoundControl['cscNextNumber'], CUSTOM_SOUND_DIGITS)
+    /*
     // If key already in csc then return because it will be updated.
+        var cscRecords = customSoundControl['cscRecords']
+        var cscRecord = cscRecords[key]
+        cscRecord['cscTimeAdded'] = new Date().getTime()
+        return
+
+    */
     // Only thing to change is cscRecord['cscTimeAdded']
     if (key < customSoundControl['cscFirstKey']) {
         customSoundControl['cscFirstKey'] = key
@@ -2516,8 +2523,8 @@ function makeSoundFilename(name, size, type) {
     record['cscTimeAdded'] = new Date().getTime()
     var cscRecords = customSoundControl['cscRecords']
     cscRecords[key] = record
-    console.log("new record:", record)
-    console.log("all records:", customSoundControl['cscRecords'])
+    //console.log("new record:", record)
+    //console.log("all records:", customSoundControl['cscRecords'])
     return(key)
 }
 
@@ -2536,11 +2543,11 @@ function fileInfo(info) {
 
 function clickCancel() {
     // Restore hold before files selected for uploading
-    console.log("clickCancel() TODO: remove sound files from local storage")
     for (var i = 0; i < uploadNames.length; i++) {
         // Need to get Custom_999 by cscName matching uploadNames[i]
-        console.log("removing localStorage sound file:", uploadNames[i])
+        console.log("clickCancel() TODO removing localStorage sound file:", uploadNames[i])
     }
+    // Restore hold before files selected for uploading
     customSoundControl = Object.assign({}, customSoundControlHold)
     removeFiles()
     document.getElementById('customSelect').scrollIntoView();
