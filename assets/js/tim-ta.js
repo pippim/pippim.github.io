@@ -2433,9 +2433,8 @@ function previewFile(file) {
     /*  Firefox will let you drop the same filename twice. Chrome will not.
         Therefore if filename already exists, skip adding.
     */
-    if (uploadNames.includes(file.name)) {
-        return  // Already selected at least once before
-    }
+    if (uploadNames.includes(file.name)) { return }
+
     let reader = new FileReader()
     reader.readAsDataURL(file)  // Asynchronous function
     reader.onloadend = function() {  // Wait until async loaded
@@ -2456,9 +2455,10 @@ function previewFile(file) {
                   If a file is deleted, then another takes its place automatically.
                   An object tracks custom[key]=filenameCustomSound
         */
+        var customSoundFilename = makeSoundFilename(file.name, file.size, file.type)
         var mediaFile = {
-            fileUrl: file.name,
-            desc: file.name,
+            fileUrl: customSoundFilename,
+            name: file.name,
             size: file.size,
             type: file.type,
             src: base64FileData
@@ -2473,6 +2473,57 @@ function previewFile(file) {
     }
 }
 
+function makeSoundFilename(name, size, type) {
+    /*  From: sound.js
+
+        const CUSTOM_SOUND_CONTROL = "custom_sound_control";
+        const CUSTOM_SOUND_ROOT = "Custom";
+        const CUSTOM_SOUND_SEP = "_";
+        const CUSTOM_SOUND_DIGITS = 3;  // E.G. "Custom_001" to "Custom_999"
+        var customSoundControl = {
+            cscCount: 0,
+            cscNextNumber: 1,
+            cscFirstKey: "Custom_999",
+            cscLastKey: "Custom_000",
+            cscRecords: {}
+        }
+        ar cscRecord = {
+            cscKey: "Custom_000",
+            cscName: "Some alarm filename.wav",
+            cscSize: 0,
+            cscType: "audio/x-wav",
+            cscTimeAdded: 0
+        }
+    */
+    var key =  CUSTOM_SOUND_ROOT + CUSTOM_SOUND_SEP +
+               pad(cscNextNumber, CUSTOM_SOUND_DIGITS)
+    if (key < customSoundControl[cscFirstKey]) {
+        customSoundControl[cscFirstKey] = key
+    }
+    if (key > customSoundControl[cscFirstKey]) {
+        customSoundControl[cscLastKey] = key
+    }
+    customSoundControl[cscCount] += 1
+    customSoundControl[cscNextNumber] += 1
+    // Create short hand reference allRecords
+    var record = {}
+    record['cscKey'] = key
+    record['cscName'] = name
+    record['cscSize'] = size
+    record['cscType'] = type
+    record['cscTimeAdded'] = new Date().getTime()
+    customSoundControl['cscRecords'].key = record
+    console.log("new record:", record)
+    console.log("all records:", customSoundControl['cscRecords'])
+    return(key)
+}
+
+function pad(num, size) {
+    num = num.toString();
+    while (num.length < size) num = "0" + num;
+    return num;
+}
+
 function fileInfo(info) {
     /* Add single text line (paragraph) to gallery */
     var par = document.createElement("p")
@@ -2481,8 +2532,8 @@ function fileInfo(info) {
 }
 
 function clickCancel() {
-    console.log("clickCancel() TODO: loop through and removeItem")
-    // Write back hold before files selected for uploading
+    // Restore hold before files selected for uploading
+    console.log("clickCancel() TODO: remove sound files from local storage")
     customSoundControl = Object.assign({}, customSoundControlHold)
     removeFiles()
     document.getElementById('customSelect').scrollIntoView();
