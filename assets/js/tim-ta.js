@@ -2495,7 +2495,7 @@ function makeSoundFilename(name, size, type) {
             cscTimeAdded: 0
         }
     */
-    var existing = checkSoundFilename(file.name)
+    const existing = checkSoundFilename(name)
     if (existing !== null) {
         // Only thing to change is cscRecord['cscTimeAdded']
         var cscRecords = customSoundControl['cscRecords']
@@ -2505,8 +2505,8 @@ function makeSoundFilename(name, size, type) {
         return
     }
 
-    var key =  CUSTOM_SOUND_ROOT + CUSTOM_SOUND_SEP +
-               pad(customSoundControl['cscNextNumber'], CUSTOM_SOUND_DIGITS)
+    var key = CUSTOM_SOUND_ROOT + CUSTOM_SOUND_SEP +
+              pad(customSoundControl['cscNextNumber'], CUSTOM_SOUND_DIGITS)
     if (key < customSoundControl['cscFirstKey']) {
         customSoundControl['cscFirstKey'] = key
     }
