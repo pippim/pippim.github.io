@@ -2430,7 +2430,7 @@ function previewFile(file) {
     /*  Firefox will let you drop the same filename twice. Chrome will not.
         Therefore if filename already exists, skip adding.
     */
-    if (file.name in UploadNames) {
+    if (file.name in uploadNames) {
         console.log("Preventing duplicate name:", file.name)
     }
     let reader = new FileReader()
