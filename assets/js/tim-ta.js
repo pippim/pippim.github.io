@@ -2495,17 +2495,18 @@ function makeSoundFilename(name, size, type) {
             cscTimeAdded: 0
         }
     */
-    var key =  CUSTOM_SOUND_ROOT + CUSTOM_SOUND_SEP +
-               pad(customSoundControl['cscNextNumber'], CUSTOM_SOUND_DIGITS)
-    /*
-    // If key already in csc then return because it will be updated.
+    var existing = checkSoundFilename(file.name)
+    if (existing !== null) {
+        // Only thing to change is cscRecord['cscTimeAdded']
         var cscRecords = customSoundControl['cscRecords']
-        var cscRecord = cscRecords[key]
+        var cscRecord = cscRecords[existing]
+        console.log("key found:", existing, "timeDateAdded:", cscRecord['cscTimeAdded'])
         cscRecord['cscTimeAdded'] = new Date().getTime()
         return
+    }
 
-    */
-    // Only thing to change is cscRecord['cscTimeAdded']
+    var key =  CUSTOM_SOUND_ROOT + CUSTOM_SOUND_SEP +
+               pad(customSoundControl['cscNextNumber'], CUSTOM_SOUND_DIGITS)
     if (key < customSoundControl['cscFirstKey']) {
         customSoundControl['cscFirstKey'] = key
     }
@@ -2526,6 +2527,15 @@ function makeSoundFilename(name, size, type) {
     //console.log("new record:", record)
     //console.log("all records:", customSoundControl['cscRecords'])
     return(key)
+}
+
+function checkSoundFilename(name) {
+    // If audio filename exists return the custom key, else return undefined
+    var cscRecords = customSoundControl['cscRecords']
+    for (const key of Object.keys(cscRecords)) {
+        var cscRecord = cscRecords[key]
+        if (cscRecord['cscName'] == name) { return cscRecord['cscKey'] }
+    }
 }
 
 function pad(num, size) {
@@ -2549,7 +2559,7 @@ function clickCancel() {
     }
     // Restore hold before files selected for uploading
     customSoundControl = Object.assign({}, customSoundControlHold)
-    removeFiles()
+    // removeFiles()  // Override for testing existing key search
     document.getElementById('customSelect').scrollIntoView();
 }
 
