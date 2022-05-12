@@ -2445,7 +2445,7 @@ function previewFile(file) {
 
         fileInfo("<b>" + file.name + "</b>")  // Add name to gallery
         let html = "Size: <b>" + file.size.toLocaleString() +
-               "</b>&emsp;&emsp;Type: <b>" + file.type + "</b>"
+               "</b>&emsp;&emsp;Type:&nbsp;<b>" + file.type + "</b>"
         fileInfo(html)  // add size and type to gallery
 
         var base64FileData = reader.result.toString()
