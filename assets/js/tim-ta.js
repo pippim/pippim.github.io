@@ -2361,7 +2361,33 @@ function confirmDelete(text) {
 
 /* Drop area for Custom Sound Files
 
+    tim-ta.md contains:
+
+<span id="customSelect"><font size='+3'>Sound Screening in Memory (not saved yet)</font></span>
+
+<div id="drop-area">
+    <form class="my-form">
+        <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
+        <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
+        <label class="button" for="fileElem">Select some files</label>
+    </form>
+    <div id="gallery"></div>
+    <div id="buttonGroup" >
+        <div class="leftFoot">
+            <button id="btnCancel" class="tta-btn" title="Clear list of files"
+                type="button" onclick="clickCancel()" >&#x232B;</button>
+            Remove files
+        </div>
+        <div class="rightFoot">
+            <button id="btnUpload" class="tta-btn" title="Upload to local storage"
+                type="button" onclick="clickUpload()" >&#x2b;</button>
+            Upload files
+        </div>
+    </div>
+</div>
+
 */
+
 var dropArea;
 document.addEventListener("DOMContentLoaded", function(event){
     // Must wait due to error: Uncaught TypeError: dropArea is null
@@ -2401,6 +2427,12 @@ function handleDrop(e) {
 }
 
 function previewFile(file) {
+    /*  Firefox will let you drop the same filename twice. Chrome will not.
+        Therefore if filename already exists, skip adding.
+    */
+    if (file.name in UploadNames) {
+        console.log("Preventing duplicate name:", file.name)
+    }
     let reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = function() {
