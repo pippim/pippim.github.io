@@ -2432,6 +2432,7 @@ function previewFile(file) {
     */
     if (uploadNames.includes(file.name)) {
         console.log("Preventing duplicate name:", file.name)
+        return
     }
     let reader = new FileReader()
     reader.readAsDataURL(file)
