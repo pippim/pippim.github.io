@@ -2512,7 +2512,8 @@ function makeSoundFilename(name, size, type) {
     record['cscSize'] = size
     record['cscType'] = type
     record['cscTimeAdded'] = new Date().getTime()
-    customSoundControl['cscRecords'].key = record
+    var cscRecords = customSoundControl['cscRecords']
+    cscRecords[key] = record
     console.log("new record:", record)
     console.log("all records:", customSoundControl['cscRecords'])
     return(key)
