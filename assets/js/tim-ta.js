@@ -2496,15 +2496,15 @@ function makeSoundFilename(name, size, type) {
         }
     */
     var key =  CUSTOM_SOUND_ROOT + CUSTOM_SOUND_SEP +
-               pad(cscNextNumber, CUSTOM_SOUND_DIGITS)
-    if (key < customSoundControl[cscFirstKey]) {
-        customSoundControl[cscFirstKey] = key
+               pad(customSoundControl['cscNextNumber'], CUSTOM_SOUND_DIGITS)
+    if (key < customSoundControl['cscFirstKey']) {
+        customSoundControl['cscFirstKey'] = key
     }
-    if (key > customSoundControl[cscFirstKey]) {
-        customSoundControl[cscLastKey] = key
+    if (key > customSoundControl['cscFirstKey']) {
+        customSoundControl['cscLastKey'] = key
     }
-    customSoundControl[cscCount] += 1
-    customSoundControl[cscNextNumber] += 1
+    customSoundControl['cscCount'] += 1
+    customSoundControl['cscNextNumber'] += 1
     // Create short hand reference allRecords
     var record = {}
     record['cscKey'] = key
