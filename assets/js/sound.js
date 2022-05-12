@@ -55,29 +55,30 @@ const CUSTOM_SOUND_DIGITS = 3;  // E.G. "Custom_001" to "Custom_999"
 var customSoundControl = {
     cscCount: 0,
     cscNextNumber: 1,
-    cscFirstKey: "Custom_000",
+    cscFirstKey: "Custom_999",
     cscLastKey: "Custom_000",
     cscRecords: {}
 }
 
+/*  The key "Custom_999" has to be used instead of the audio filename.
+    There is no guarantee the filename doesn't match an internal HTML ID tag.
+    ID tags must always be unique so a custom key is used.
+*/
 var cscRecord = {
     cscKey: "Custom_000",
-    cscFilename: "Some alarm filename.wav",
+    cscName: "Some alarm filename.wav",
     cscSize: 0,
     cscType: "audio/x-wav",
     cscTimeAdded: 0
 }
 
 function loadCustomNames () {
-    var stored = JSON.parse(localStorage.getItem(CUSTOM_SOUND_CONTROL));
+    let stored = JSON.parse(localStorage.getItem(CUSTOM_SOUND_CONTROL));
     if (stored === null) {
         // First time on this browser, create new Custom Sound Controls
         localStorage.setItem(CUSTOM_SOUND_CONTROL, JSON.stringify(customSoundControl));
         customSoundControl = JSON.parse(localStorage.getItem(CUSTOM_SOUND_CONTROL));
-    } else {
-        customSoundControl = Object.assign({}, stored);
-    }
-
+    } else { customSoundControl = Object.assign({}, stored); }
 
     // Read csc data record and initialize document body
     cscRecords = customSoundControl.cscRecords;
