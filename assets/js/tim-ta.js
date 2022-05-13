@@ -2476,19 +2476,8 @@ function makeSoundFilename(name, size, type) {
     */
     const existing = checkSoundFilename(name)
     if (existing) {
-        console.log("existing:", existing)
         // Only thing to change is cscRecord['cscTimeAdded']
-        /*
-        var records = customSoundControl['cscRecords']
-        var record = records[existing]
-        console.log("makeSoundFilename() key found:", existing,
-                    "timeDateAdded:", record['cscTimeAdded'])
-        console.log("makeSoundFilename() shorthand test:",
-                     customSoundControl.cscRecords[existing].cscTimeAdded)
-        */
         customSoundControl.cscRecords[existing].cscTimeAdded = new Date().getTime()
-        console.log("makeSoundFilename() shorthand test:",
-                     customSoundControl.cscRecords[existing].cscTimeAdded)
         return
     }
 
@@ -2509,27 +2498,15 @@ function makeSoundFilename(name, size, type) {
     record['cscSize'] = size
     record['cscType'] = type
     record['cscTimeAdded'] = new Date().getTime()
-    //var records = customSoundControl['cscRecords']
-    //records[key] = record
+
     customSoundControl['cscRecords'].key = record
-    //console.log("new record:", record)
-    //console.log("all records:", customSoundControl['cscRecords'])
+
     return(key)
 }
 
 function checkSoundFilename(name) {
     // If audio filename exists return the custom key, else return undefined
-    /* Long form */
-    var records = customSoundControl['cscRecords']
-    for (const key of Object.keys(records)) {
-        var record = records[key]
-        console.log("checkSoundFilename() record['cscName']:", record['cscName'])
-        //if (record['cscName'] == name) { return record['cscKey'] }
-    }
-    /* Short form */
     for (const key of Object.keys(customSoundControl.cscRecords)) {
-        console.log("checkSoundFilename() customSoundControl.cscRecords[key].cscName:",
-                    customSoundControl.cscRecords[key].cscName)
         if (customSoundControl.cscRecords[key].cscName == name) { return key }
     }
 }
@@ -2555,7 +2532,9 @@ function clickCancel() {
         const existing = checkSoundFilename(uploadNames[i])
         if (existing) {
             console.log("clickCancel() existing:", existing)
-            // Only thing to change is cscRecord['cscTimeAdded']
+            // The only way to delete existing sound files is to select them
+            // again and then click cancel. Leaves wholes in key range and
+            // pollutes cscFirstKey and cscLastKey
             localStorage.removeItem(existing)
         } else {
             popCreate("e", "clickCancel() filename key is missing:", uploadNames[i])
