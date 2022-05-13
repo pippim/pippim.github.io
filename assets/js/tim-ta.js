@@ -2577,7 +2577,7 @@ function handleFiles(files) {
 
 function paintCustomSounds() {
     var html = "<ul>"
-    for (const key of Object.keys(customSoundControl.cssRecords)) {
+    for (const key of Object.keys(customSoundControl['cssRecords'])) {
         var record = customSoundControl.cssRecords[key]
         html += "<li><b>" + key
         html += '</b>&emsp;&emsp;<audio controls="true" id="'
