@@ -2431,7 +2431,7 @@ var customSoundControlHold = Object.assign({}, customSoundControl)
 
 function previewFile(file) {
     /*  Firefox will let you drop the same filename twice. Chrome will not.
-        Therefore if filename already exists, skip adding.
+        For consistency then, if filename already exists, skip adding.
     */
     if (uploadNames.includes(file.name)) { return }
 
@@ -2463,11 +2463,9 @@ function previewFile(file) {
             type: file.type,
             src: base64FileData
         }
-        /* Wrong time to update...
         localStorage.setItem(name, JSON.stringify(mediaFile))
         var reReadItem = JSON.parse(localStorage.getItem(name))
         setSoundSource(name, reReadItem)  // Function in sound.js
-        */
         uploadNames.push(file.name)
         console.log("uploadNames:", uploadNames)
     }
@@ -2497,12 +2495,15 @@ function makeSoundFilename(name, size, type) {
     */
     const existing = checkSoundFilename(name)
     if (existing) {
-        // Only thing to change is cscRecord['cscTimeAdded']
-        var cscRecords = customSoundControl['cscRecords']
         console.log("existing:", existing)
-        var cscRecord = cscRecords[existing]
-        console.log("key found:", existing, "timeDateAdded:", cscRecord['cscTimeAdded'])
-        cscRecord['cscTimeAdded'] = new Date().getTime()
+        // Only thing to change is cscRecord['cscTimeAdded']
+        var records = customSoundControl['cscRecords']
+        var record = records[existing]
+        console.log("makeSoundFilename() key found:", existing,
+                    "timeDateAdded:", record['cscTimeAdded'])
+        console.log("makeSoundFilename() shorthand test:",
+                     customSoundControl.cscRecords[existing].cscKey)
+        record['cscTimeAdded'] = new Date().getTime()
         return
     }
 
@@ -2523,8 +2524,8 @@ function makeSoundFilename(name, size, type) {
     record['cscSize'] = size
     record['cscType'] = type
     record['cscTimeAdded'] = new Date().getTime()
-    var cscRecords = customSoundControl['cscRecords']
-    cscRecords[key] = record
+    var records = customSoundControl['cscRecords']
+    records[key] = record
     //console.log("new record:", record)
     //console.log("all records:", customSoundControl['cscRecords'])
     return(key)
@@ -2532,11 +2533,16 @@ function makeSoundFilename(name, size, type) {
 
 function checkSoundFilename(name) {
     // If audio filename exists return the custom key, else return undefined
-    var cscRecords = customSoundControl['cscRecords']
-    for (const key of Object.keys(cscRecords)) {
-        var cscRecord = cscRecords[key]
-        console.log("cscRecord['cscName']:", cscRecord['cscName'])
-        if (cscRecord['cscName'] == name) { return cscRecord['cscKey'] }
+    /* Long form */
+    var records = customSoundControl['cscRecords']
+    for (const key of Object.keys(records)) {
+        var record = records[key]
+        console.log("checkSoundFilename() record['cscName']:", record['cscName'])
+        if (record['cscName'] == name) { return record['cscKey'] }
+    }
+    /* Short form */
+    for (const key of Object.keys(customSoundControl.cscRecords)) {
+        if (customSoundControl.cscRecords[key].cscName == name) { return key }
     }
 }
 
@@ -2558,6 +2564,16 @@ function clickCancel() {
     for (var i = 0; i < uploadNames.length; i++) {
         // Need to get Custom_999 by cscName matching uploadNames[i]
         console.log("clickCancel() TODO removing localStorage sound file:", uploadNames[i])
+        const existing = checkSoundFilename(uploadNames[i])
+        if (existing) {
+            console.log("clickCancel() existing:", existing)
+            // Only thing to change is cscRecord['cscTimeAdded']
+            var cscRecords = customSoundControl['cscRecords']
+            var cscRecord = cscRecords[existing]
+            cscRecord.removeItem(existing)
+        } else {
+            popCreate("e", "clickCancel() file is missing:", uploadNames[i])
+        }
     }
     // Restore hold before files selected for uploading
     customSoundControl = Object.assign({}, customSoundControlHold)
