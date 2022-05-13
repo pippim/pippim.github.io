@@ -75,6 +75,9 @@ Each project can have an unlimited number of Tasks.
 <span id="customSounds">These are all the custom sound files that 
 have been uploaded so far.</span>
 
+<div id="PaintedSounds"></div>
+<script> paintCustomSounds() </script>
+
 ---
 
 <a id="hdr5"></a>
