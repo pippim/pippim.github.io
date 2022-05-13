@@ -2473,25 +2473,6 @@ function previewFile(file) {
 
 function makeSoundFilename(name, size, type) {
     /*  From: sound.js (EVENTUALLY MOVE THIS FUNCTION THERE)
-
-        const CUSTOM_SOUND_CONTROL = "custom_sound_control";
-        const CUSTOM_SOUND_ROOT = "Custom";
-        const CUSTOM_SOUND_SEP = "_";
-        const CUSTOM_SOUND_DIGITS = 3;  // E.G. "Custom_001" to "Custom_999"
-        var customSoundControl = {
-            cscCount: 0,
-            cscNextNumber: 1,
-            cscFirstKey: "Custom_999",
-            cscLastKey: "Custom_000",
-            cscRecords: {}
-        }
-        ar cscRecord = {
-            cscKey: "Custom_000",
-            cscName: "Some alarm filename.wav",
-            cscSize: 0,
-            cscType: "audio/x-wav",
-            cscTimeAdded: 0
-        }
     */
     const existing = checkSoundFilename(name)
     if (existing) {
@@ -2568,9 +2549,7 @@ function clickCancel() {
         if (existing) {
             console.log("clickCancel() existing:", existing)
             // Only thing to change is cscRecord['cscTimeAdded']
-            var records = customSoundControl['cscRecords']
-            var record = records[existing]
-            record.removeItem(existing)
+            localStorage.removeItem(existing)
         } else {
             popCreate("e", "clickCancel() filename key is missing:", uploadNames[i])
         }
