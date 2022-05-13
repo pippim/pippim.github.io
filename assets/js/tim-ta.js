@@ -2502,11 +2502,11 @@ function makeSoundFilename(name, size, type) {
     //customSoundControl.cscRecords[key] = record
     // above displays "key:Object" and not "Custom_001:Object"
     // yet customSoundControl.cscRecords[key].cssKey displays "Custom_001.wav"
-    //customSoundControl.cscRecords.key = record
+    customSoundControl.cscRecords.key = record
     // above gives NOTHING
     console.log("key:", key)
-    var records = customSoundControl.cssRecords
-    records[key] = record
+    //var records = customSoundControl.cscRecords
+    //records[key] = record
 
     return(key)
 }
