@@ -398,7 +398,7 @@ table.tta-table th {
     animation:         flash 1s infinite;
 }
 
-.closebtn {
+.closeBtn {
     margin-left: 15px;
     color: white;
     font-weight: bold;
@@ -407,7 +407,7 @@ table.tta-table th {
     transition: 0.3s;
 }
 
-.closebtn:hover {
+.closeBtn:hover {
     color: black;
 }
 
@@ -2586,7 +2586,7 @@ function paintCustomSounds() {
     var html = "<ul>"
     console.log("customSoundControl:", customSoundControl)
     for (const key of Object.keys(customSoundControl.cscRecords)) {
-        var record = customSoundControl.cssRecords[key]
+        var record = customSoundControl.cscRecords[key]
         html += "<li><b>" + key
         html += '</b>&emsp;&emsp;<audio controls="true" id="'
         html += key + '"></audio><&emsp;&emsp; Size: &nbsp;'
@@ -2859,7 +2859,7 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '  <div id="popIndex' + index + '_header" \n';
     html += '       class="msgq-window-header ' + msgq_class + '">' + msg_head +
                     '&emsp; (Click here to drag)\n';
-    html += '    <span class="msgq-window-close closebtn" \n';
+    html += '    <span class="msgq-window-close closeBtn" \n';
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
     html += '    </span>\n';
@@ -2973,11 +2973,11 @@ function popBuildStyle(msg_type) {
 function popBuildScript() {
     // BROKEN
 
-    // NOTE: closebtn defined in /assets/css/style.scss
+    // NOTE: closeBtn defined in /assets/css/style.scss
     // Apply 600ms close time when close button clicked. Matches
-    // 0.3 s fade out applied by .closebtn {} style
+    // 0.3 s fade out applied by .closeBtn {} style
     var html = "<script>\n";
-    html += 'var close = document.getElementsByClassName("closebtn");\n';
+    html += 'var close = document.getElementsByClassName("closeBtn");\n';
     html += 'var i;\n';
 
     html += 'for (i = 0; i < close.length; i++) {\n';
