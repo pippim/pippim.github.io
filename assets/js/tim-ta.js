@@ -2455,17 +2455,17 @@ function previewFile(file) {
                   If a file is deleted, then another takes its place automatically.
                   An object tracks custom[key]=filenameCustomSound
         */
-        var customSoundFilename = makeSoundFilename(file.name, file.size, file.type)
+        var key = makeSoundFilename(file.name, file.size, file.type)
         var mediaFile = {
-            fileUrl: customSoundFilename,
+            fileUrl: key,
             name: file.name,
             size: file.size,
             type: file.type,
             src: base64FileData
         }
-        localStorage.setItem(name, JSON.stringify(mediaFile))
-        var reReadItem = JSON.parse(localStorage.getItem(name))
-        setSoundSource(name, reReadItem)  // Function in sound.js
+        localStorage.setItem(key, JSON.stringify(mediaFile))
+        var reReadItem = JSON.parse(localStorage.getItem(key))
+        setSoundSource(key, reReadItem)  // Function in sound.js
         uploadNames.push(file.name)
         console.log("uploadNames:", uploadNames)
     }
