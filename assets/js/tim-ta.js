@@ -2404,6 +2404,7 @@ document.addEventListener("DOMContentLoaded", function(event){
     dropArea.addEventListener('drop', handleDrop, false)
 });
 
+var uploadKeys = []
 var uploadNames = []
 
 function preventDefaults (e) {
@@ -2463,9 +2464,8 @@ function previewFile(file) {
             type: file.type,
             src: base64FileData
         }
-        localStorage.setItem(key, JSON.stringify(mediaFile))
-        var reReadItem = JSON.parse(localStorage.getItem(key))
-        // setSoundSource(key, reReadItem)  // Function in sound.js
+        localStorage.setItem("x" + key, JSON.stringify(mediaFile))
+        uploadKeys.push(key)
         uploadNames.push(file.name)
         console.log("uploadNames:", uploadNames)
     }
@@ -2525,36 +2525,30 @@ function fileInfo(info) {
 }
 
 function clickCancel() {
-    // Restore hold before files selected for uploading
-    for (var i = 0; i < uploadNames.length; i++) {
-        // Need to get Custom_999 by cscName matching uploadNames[i]
-        console.log("clickCancel() TODO removing localStorage sound file:", uploadNames[i])
-        const existing = checkSoundFilename(uploadNames[i])
-        if (existing) {
-            console.log("clickCancel() existing:", existing)
-            // The only way to delete existing sound files is to select them
-            // again and then click cancel. Leaves wholes in key range and
-            // pollutes cscFirstKey and cscLastKey
-            localStorage.removeItem(existing)
-        } else {
-            popCreate("e", "clickCancel() filename key is missing:", uploadNames[i])
-        }
+    // Remove temp files
+    for (var i = 0; i < uploadKeys.length; i++) {
+        localStorage.removeItem("x" + uploadKeys[i])
     }
     // Restore hold before files selected for uploading
     customSoundControl = Object.assign({}, customSoundControlHold)
-    removeFiles()  // Override for testing existing key search
+    initializeFiles()
     document.getElementById('customSelect').scrollIntoView()
 }
 
 function clickUpload() {
-    console.log("clickUpload() TODO: Call read storage function")
+    // Rename temp files to real files
+    for (var i = 0; i < uploadKeys.length; i++) {
+        localStorage.setItem(uploadKeys[i], localStorage.getItem("x" + uploadKeys[i]))
+        localStorage.removeItem("x" + uploadKeys[i])
+    }
     localStorage.setItem(CUSTOM_SOUND_CONTROL,
                          JSON.stringify(customSoundControl))
-    removeFiles()
+    initializeFiles()
     document.getElementById('customSounds').scrollIntoView()
 }
 
-function removeFiles() {
+function initializeFiles() {
+    uploadKeys = []
     uploadNames = []
     customSoundControlHold = Object.assign({}, customSoundControl)
     document.getElementById('gallery').textContent = ""
@@ -2566,33 +2560,6 @@ function handleFiles(files) {
     files.forEach(previewFile)
     document.getElementById('buttonGroup').style.display = "flex"
 }
-
-function uploadFile(file, i) { // <- Add `i` parameter
-    console.log("file:",file);
-    var url = 'YOUR URL HERE'
-    var xhr = new XMLHttpRequest()
-    var formData = new FormData()
-    xhr.open('POST', url, true)
-
-    // Add following event listener
-    xhr.upload.addEventListener("progress", function(e) {
-        updateProgress(i, (e.loaded * 100.0 / e.total) || 100)
-    })
-
-    xhr.addEventListener('readystatechange', function(e) {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            // Done. Inform the user
-        }
-        else if (xhr.readyState == 4 && xhr.status != 200) {
-            // Error. Inform the user
-        }
-    })
-
-    formData.append('file', file)
-    xhr.send(formData)
-}
-
-
 
 /* CONTROLS and MESSAGES boxes
 
