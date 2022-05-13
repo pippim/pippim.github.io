@@ -2535,6 +2535,7 @@ function checkSoundFilename(name) {
     var cscRecords = customSoundControl['cscRecords']
     for (const key of Object.keys(cscRecords)) {
         var cscRecord = cscRecords[key]
+        console.log("cscRecord['cscName']:", cscRecord['cscName'])
         if (cscRecord['cscName'] == name) { return cscRecord['cscKey'] }
     }
 }
@@ -2572,7 +2573,7 @@ function clickUpload() {
 
 function removeFiles() {
     uploadNames = []
-    //customSoundControlHold = Object.assign({}, customSoundControl)
+    customSoundControlHold = Object.assign({}, customSoundControl)
     document.getElementById('gallery').textContent = ""
     document.getElementById('buttonGroup').style.display = "none"
 }
