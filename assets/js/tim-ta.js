@@ -2544,6 +2544,7 @@ function clickUpload() {
     localStorage.setItem(CUSTOM_SOUND_CONTROL,
                          JSON.stringify(customSoundControl))
     initializeFiles()
+    paintCustomSounds()
     document.getElementById('customSounds').scrollIntoView()
 }
 
@@ -2559,6 +2560,34 @@ function handleFiles(files) {
     files = [...files]
     files.forEach(previewFile)
     document.getElementById('buttonGroup').style.display = "flex"
+}
+
+/*  Build Custom Sounds div
+
+    Parent contains: <div id="PaintedSounds"></div>
+
+    This function updates HTML with:
+    <ul>
+    <li><b>Custom_001.wav</b>
+    &emsp;&emsp;<audio controls="true" id="Alarm_01.wav"></audio><br>
+    &emsp;&emsp;Size:&nbsp;<b>999,999</b>&emsp;Type:&nbsp;<b>type_str</b>
+    <br><br>
+    </ul>
+ */
+
+function paintCustomSounds() {
+    var html = "<ul>"
+    for (const key of Object.keys(customSoundControl.cssRecords)) {
+        var record = customSoundControl.cssRecords[key]
+        html += "<li><b>" + key
+        html += '</b>&emsp;&emsp;<audio controls="true" id="'
+        html += key + '"></audio><&emsp;&emsp; Size: &nbsp;'
+        html += record.size.toLocaleString()
+        html += "</b>&emsp;&emsp;Type:&nbsp;<b>" + record.type + "</b></li>"
+    }
+    html += "</ul>"
+
+    document.getElementById("PaintedSounds").innerHTML = html
 }
 
 /* CONTROLS and MESSAGES boxes
