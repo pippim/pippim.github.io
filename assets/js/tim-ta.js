@@ -2588,6 +2588,7 @@ function paintCustomSounds() {
     }
     html += "</ul>"
 
+    console.log("html:", html)
     document.getElementById("PaintedSounds").innerHTML = html
 }
 
