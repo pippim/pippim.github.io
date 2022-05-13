@@ -2519,10 +2519,12 @@ function checkSoundFilename(name) {
     for (const key of Object.keys(records)) {
         var record = records[key]
         console.log("checkSoundFilename() record['cscName']:", record['cscName'])
-        if (record['cscName'] == name) { return record['cscKey'] }
+        //if (record['cscName'] == name) { return record['cscKey'] }
     }
     /* Short form */
     for (const key of Object.keys(customSoundControl.cscRecords)) {
+        console.log("checkSoundFilename() customSoundControl.cscRecords[key].cscName:",
+                    customSoundControl.cscRecords[key].cscName)
         if (customSoundControl.cscRecords[key].cscName == name) { return key }
     }
 }
@@ -2562,7 +2564,8 @@ function clickCancel() {
 
 function clickUpload() {
     console.log("clickUpload() TODO: Call read storage function")
-    localStorage.setItem(CUSTOM_SOUND_CONTROL, customSoundControl)
+    localStorage.setItem(CUSTOM_SOUND_CONTROL,
+                         JSON.stringify(customSoundControl))
     removeFiles()
     document.getElementById('customSounds').scrollIntoView()
 }
