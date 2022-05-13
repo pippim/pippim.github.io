@@ -2499,7 +2499,10 @@ function makeSoundFilename(name, size, type) {
     record['cscType'] = type
     record['cscTimeAdded'] = new Date().getTime()
 
-    customSoundControl.cscRecords[key] = record
+    //customSoundControl.cscRecords[key] = record
+    // above gives key:Object and not Custom_001:Object
+    var records = customSoundControl.cssRecords
+    records[key] = record
 
     return(key)
 }
