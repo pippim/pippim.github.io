@@ -2500,7 +2500,11 @@ function makeSoundFilename(name, size, type) {
     record['cscTimeAdded'] = new Date().getTime()
 
     //customSoundControl.cscRecords[key] = record
-    // above gives key:Object and not Custom_001:Object
+    // above displays "key:Object" and not "Custom_001:Object"
+    // yet customSoundControl.cscRecords[key].cssKey displays "Custom_001.wav"
+    //customSoundControl.cscRecords.key = record
+    // above gives NOTHING
+    console.log("key:", key)
     var records = customSoundControl.cssRecords
     records[key] = record
 
