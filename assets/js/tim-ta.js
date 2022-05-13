@@ -2557,13 +2557,14 @@ function clickCancel() {
     // Restore hold before files selected for uploading
     customSoundControl = Object.assign({}, customSoundControlHold)
     removeFiles()  // Override for testing existing key search
-    document.getElementById('customSelect').scrollIntoView();
+    document.getElementById('customSelect').scrollIntoView()
 }
 
 function clickUpload() {
-    console.log("clickCancel() TODO: Call read storage function")
+    console.log("clickUpload() TODO: Call read storage function")
+    localStorage.setItem(CUSTOM_SOUND_CONTROL, customSoundControl)
     removeFiles()
-    document.getElementById('customSounds').scrollIntoView();
+    document.getElementById('customSounds').scrollIntoView()
 }
 
 function removeFiles() {
