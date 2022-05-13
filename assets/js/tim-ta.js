@@ -2465,7 +2465,7 @@ function previewFile(file) {
         }
         localStorage.setItem(key, JSON.stringify(mediaFile))
         var reReadItem = JSON.parse(localStorage.getItem(key))
-        setSoundSource(key, reReadItem)  // Function in sound.js
+        // setSoundSource(key, reReadItem)  // Function in sound.js
         uploadNames.push(file.name)
         console.log("uploadNames:", uploadNames)
     }
@@ -2568,11 +2568,11 @@ function clickCancel() {
         if (existing) {
             console.log("clickCancel() existing:", existing)
             // Only thing to change is cscRecord['cscTimeAdded']
-            var cscRecords = customSoundControl['cscRecords']
-            var cscRecord = cscRecords[existing]
-            cscRecord.removeItem(existing)
+            var records = customSoundControl['cscRecords']
+            var record = records[existing]
+            record.removeItem(existing)
         } else {
-            popCreate("e", "clickCancel() file is missing:", uploadNames[i])
+            popCreate("e", "clickCancel() filename key is missing:", uploadNames[i])
         }
     }
     // Restore hold before files selected for uploading
