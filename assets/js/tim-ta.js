@@ -2478,13 +2478,17 @@ function makeSoundFilename(name, size, type) {
     if (existing) {
         console.log("existing:", existing)
         // Only thing to change is cscRecord['cscTimeAdded']
+        /*
         var records = customSoundControl['cscRecords']
         var record = records[existing]
         console.log("makeSoundFilename() key found:", existing,
                     "timeDateAdded:", record['cscTimeAdded'])
         console.log("makeSoundFilename() shorthand test:",
-                     customSoundControl.cscRecords[existing].cscKey)
-        record['cscTimeAdded'] = new Date().getTime()
+                     customSoundControl.cscRecords[existing].cscTimeAdded)
+        */
+        customSoundControl.cscRecords[existing].cscTimeAdded = new Date().getTime()
+        console.log("makeSoundFilename() shorthand test:",
+                     customSoundControl.cscRecords[existing].cscTimeAdded)
         return
     }
 
@@ -2493,7 +2497,7 @@ function makeSoundFilename(name, size, type) {
     if (key < customSoundControl['cscFirstKey']) {
         customSoundControl['cscFirstKey'] = key
     }
-    if (key > customSoundControl['cscFirstKey']) {
+    if (key > customSoundControl['cscLastKey']) {
         customSoundControl['cscLastKey'] = key
     }
     customSoundControl['cscCount'] += 1
