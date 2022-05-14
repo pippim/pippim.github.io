@@ -42,7 +42,7 @@ Each project can have an unlimited number of Tasks.
 
 <!-- From: https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/  -->
 
-<span id="customSelect"><font size='+3'>Sound Screening in Memory (not saved yet)</font></span>
+<span id="customSelect"><font size='+2'>Selected Sounds in Memory</font></span>
 
 <div id="drop-area">
     <form class="my-form">
@@ -75,8 +75,21 @@ Each project can have an unlimited number of Tasks.
 <span id="customSounds">These are all the custom sound files that 
 have been uploaded so far.</span>
 
+Enter "about:config" in the address bar -> search for 
+"dom.storage.default_quota" -> edit value and enter larger 
+value (e.g. 25120) (default is 5120).
+
+If you select some files and click the refresh button then
+`xCustom_999.ext` files will be left in local storage. Ensure
+you click either "Cancel" or "Upload" buttons after selecting
+sound files.
+
 <div id="PaintedSounds"></div>
-<script> paintCustomSounds() </script>
+<script>
+document.addEventListener("DOMContentLoaded", function(event){
+   paintCustomSounds() 
+});
+</script>
 
 ---
 
