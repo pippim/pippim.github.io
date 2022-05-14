@@ -2502,11 +2502,11 @@ function makeSoundFilename(name, size, type) {
     //customSoundControl.cscRecords[key] = record
     // above displays "key:Object" and not "Custom_001:Object"
     // yet customSoundControl.cscRecords[key].cssKey displays "Custom_001.wav"
-    customSoundControl.cscRecords.key = record
-    // above gives NOTHING
+    //customSoundControl.cscRecords.key = record
+    // above displays "key:Object" and not "Custom_001:Object"
     console.log("key:", key)
-    //var records = customSoundControl.cscRecords
-    //records[key] = record
+    var records = customSoundControl.cscRecords
+    records[key] = record
 
     return(key)
 }
@@ -2588,8 +2588,8 @@ function paintCustomSounds() {
     for (const key of Object.keys(customSoundControl.cscRecords)) {
         var record = customSoundControl.cscRecords[key]
         html += "<li><b>" + key
-        html += '</b>&emsp;&emsp;<audio controls="true" id="'
-        html += key + '"></audio><&emsp;&emsp; Size: &nbsp;'
+        html += '</b>&emsp;<audio controls="true" id="'
+        html += key + '"></audio>&emsp; Size:&nbsp;<b>'
         html += record.cscSize.toLocaleString()
         html += "</b>&emsp;&emsp;Type:&nbsp;<b>" + record.cscType + "</b></li>"
     }
