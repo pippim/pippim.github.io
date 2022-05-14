@@ -166,19 +166,16 @@ function get_dd_field (name) {
     get_dd_field("fail_test_2")
 */
 
-function initSelectFiles() {
-    /* Called on load and after drag & drop sound files */
-    // Convert array of stock sound filenames to string delineated by /
-    var replaceString = "";
-    for (var i = 0; i < stockNames.length; i++) {
-        if (i != 0) { replaceString += "/"; }  // Add / if not first in array
-        replaceString += stockNames[i];
-    }
+var savedSelectStockNames;
 
-    console.log("initSelectFiles() customNames.length:", customNames.length)
-    for (var i = 0; i < customNames.length; i++) {
-        replaceString += "/"  // Add / if not first in array
-        replaceString += customNames[i];
+function initSelectFiles() {
+    /* Called on javascript load, DOM not loaded yet */
+
+    // Convert array of stock sound filenames to string delineated by '/'
+    savedSelectStockNames = "";
+    for (var i = 0; i < stockNames.length; i++) {
+        if (i != 0) { savedSelectStockNames += "/"; }  // Add / if not first in array
+        savedSelectStockNames += stockNames[i];
     }
 
     for (const key of Object.keys(data_dictionary)) {
@@ -186,12 +183,38 @@ function initSelectFiles() {
         get_dd_field(key);
         if (dd_field.type == "select" && dd_field.lower == "sound_filenames") {
             // Update data dictionary key with list of REAL filenames
-            data_dictionary[key] = dd_field.label + "|select|" + replaceString;
+            data_dictionary[key] = dd_field.label + "|select|" + savedSelectStockNames;
          }
     }
 }
 
 initSelectFiles();
+
+function updateSelectFiles() {
+    /*  Called after custom sound files added after drag & drop sound files
+        DOM must be loaded before calling.
+    */
+
+    // Convert array of stock sound filenames to string delineated by '/'
+    console.log("updateSelectFiles() customNames.length:", customNames.length)
+    var custom = ""
+    for (var i = 0; i < customNames.length; i++) {
+        custom += "/"  // Add / if not first in array
+        custom += customNames[i];
+    }
+
+    for (const key of Object.keys(data_dictionary)) {
+        if (key.startsWith("fail_test")) { continue; }
+        get_dd_field(key);
+        if (dd_field.type == "select" &&
+            dd_field.lower.startsWith(savedSelectStockNames)) {
+                // Update data dictionary key with list of REAL filenames
+                data_dictionary[key] = dd_field.label + "|select|" +
+                                       savedSelectStockNames + custom
+                console.log("data_dictionary[key]:", data_dictionary[key])
+         }
+    }
+}
 
 // Global Names
 var ttaConfig, ttaProject, ttaTask;
@@ -2614,6 +2637,7 @@ function paintCustomSounds() {
 
     // console.log("html:", html)
     document.getElementById("PaintedSounds").innerHTML = html
+    updateSelectFiles()
 
     /* Console log below never displays, so this is never run???
 
@@ -2628,7 +2652,7 @@ function paintCustomSounds() {
         console.log("DOMContentLoaded{} customNames.length:", customNames.length)
     });
     */
-    
+
 }
 
 /* CONTROLS and MESSAGES boxes
