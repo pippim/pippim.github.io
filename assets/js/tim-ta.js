@@ -347,6 +347,9 @@ function ttaApplyGlobalStyles() {
 
 .leftFoot, .centerFoot, .rightFoot { }
 
+/* Audio control sinks to bottom of baseline */
+audio { vertical-align:middle }
+
 /* .tta-btn WAS styled with hdr-btn that has left margin */
 .tta-btn {
     color: var(--bg-color);
@@ -2576,7 +2579,7 @@ function handleFiles(files) {
     This function updates HTML with:
     <ul>
     <li><b>Custom_001.wav</b>
-    &emsp;&emsp;<audio controls="true" id="Alarm_01.wav"></audio><br>
+    &emsp;&emsp;<audio controls="true" id="Custom_001.wav"></audio><br>
     &emsp;&emsp;Size:&nbsp;<b>999,999</b>&emsp;Type:&nbsp;<b>type_str</b>
     <br><br>
     </ul>
@@ -2587,13 +2590,16 @@ function paintCustomSounds() {
     console.log("customSoundControl:", customSoundControl)
     for (const key of Object.keys(customSoundControl.cscRecords)) {
         var record = customSoundControl.cscRecords[key]
-        html += "<li>Key:<b>" + key
+        html += "<li>Key:&nbsp;<b>" + key
         html += '</b>&emsp;<audio controls="true" id="'
         html += key + '"></audio>'
         html += '&emsp; Size:&nbsp;<b>' + record.cscSize.toLocaleString() + '</b>'
         html += "&emsp; Type:&nbsp;<b>" + record.cscType + '</b>'
         html += '&emsp; Name:&nbsp;<b>' + record.cscName + '</b>'
         html += "</li><br>"
+        // audioControl
+        var localItem = JSON.parse(localStorage.getItem(key))
+        setSoundSource(key, localItem)
     }
     html += "</ul>"
 
