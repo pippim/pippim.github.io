@@ -81,20 +81,17 @@ function loadCustomNames () {
         customSounds = JSON.parse(localStorage.getItem(CUSTOM_SOUNDS));
     } else { customSounds = Object.assign({}, stored); }
 
-    // Read csc data record and initialize document body
     customNames = []
     for (const key of Object.keys(customSounds.sounds)) {
         customNames.push(key)
-        //var localItem = JSON.parse(localStorage.getItem(key))
-        // uncaught TypeError: audioControl is null
-        //setSoundSource(key, localItem)
     }
 }
+
+loadCustomNames();
 
 document.addEventListener("DOMContentLoaded", function(event){
     // Must wait due to error: Uncaught TypeError: audioControl is null
     loadStockNames();
-    loadCustomNames();
 });
 
 async function fetch_sound(name) {
