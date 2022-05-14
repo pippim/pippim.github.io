@@ -2598,8 +2598,8 @@ function paintCustomSounds() {
         html += '</b>&emsp;<audio controls="true" id="'
         html += key + '"></audio>'
         html += '&emsp; Size:&nbsp;<b>' + record.size.toLocaleString() + '</b>'
-        html += "<nobr>&emsp; Type:&nbsp;<b>" + record.type + '</b></nobr>'
-        html += '<nobr>&emsp; Name:&nbsp;<b>' + record.name + '</b></nobr>'
+        html += "&emsp; Type:&nbsp;<nobr><b>" + record.type + '</b></nobr>'
+        html += '&emsp; Name:&nbsp;<nobr><b>' + record.name + '</b></nobr>'
         html += "</li><br>"
     }
     html += "</ul>"
