@@ -175,6 +175,7 @@ function initSelectFiles() {
         replaceString += stockNames[i];
     }
 
+    console.log("customNames.length:", customNames.length)
     for (var i = 0; i < customNames.length; i++) {
         replaceString += "/"  // Add / if not first in array
         replaceString += customNames[i];
