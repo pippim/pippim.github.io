@@ -196,23 +196,23 @@ function updateSelectFiles() {
     */
 
     // Convert array of stock sound filenames to string delineated by '/'
-    console.log("updateSelectFiles() customNames.length:", customNames.length)
+    //console.log("updateSelectFiles() customNames.length:", customNames.length)
     var custom = ""
     for (var i = 0; i < customNames.length; i++) {
-        custom += "/"  // Add / if not first in array
-        custom += customNames[i];
+        custom += "/"  // Add '/' delimiter
+        custom += customNames[i]
     }
 
     for (const key of Object.keys(data_dictionary)) {
-        if (key.startsWith("fail_test")) { continue; }
-        get_dd_field(key);
+        if (key.startsWith("fail_test")) { continue }
+        get_dd_field(key)
         if (dd_field.type == "select" &&
             dd_field.lower.startsWith(savedSelectStockNames)) {
                 // Update data dictionary key with list of REAL filenames
                 data_dictionary[key] = dd_field.label + "|select|" +
                                        savedSelectStockNames + custom
-                console.log("data_dictionary[key]:", data_dictionary[key])
-         }
+                //console.log("data_dictionary[key]:", data_dictionary[key])
+        }
     }
 }
 
@@ -2620,8 +2620,8 @@ function handleFiles(files) {
 
 function paintCustomSounds() {
     var html = "<ul>"
-    console.log("customSounds:", customSounds)
-    console.log("paintCustomSounds() customNames.length:", customNames.length)
+    //console.log("customSounds:", customSounds)
+    //console.log("paintCustomSounds() customNames.length:", customNames.length)
 
     for (const key of Object.keys(customSounds.sounds)) {
         var record = customSounds.sounds[key]
