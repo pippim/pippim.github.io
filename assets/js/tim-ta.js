@@ -2598,8 +2598,10 @@ function paintCustomSounds() {
         html += '&emsp; Name:&nbsp;<b>' + record.cscName + '</b>'
         html += "</li><br>"
         // audioControl
+        /* Can't do this until after innerHTML is set
         var localItem = JSON.parse(localStorage.getItem(key))
-        setSoundSource(key, localItem)
+        setSoundSource(key, localItem)  // From sound.js
+        */
     }
     html += "</ul>"
 
