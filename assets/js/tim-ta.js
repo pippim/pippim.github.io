@@ -2643,15 +2643,15 @@ function paintCustomSounds() {
     /* Console log below never displays, so this is never run??? */
 
     // Below not needed because in parent <div id="PaintedSounds"
-    document.addEventListener("DOMContentLoaded", function(event){
+    //document.addEventListener("DOMContentLoaded", function(event){
         // Must wait due to error: Uncaught TypeError: audioControl is null
         for (const key of Object.keys(customSounds.sounds)) {
             // audioControl
             var localItem = JSON.parse(localStorage.getItem(key))
             setSoundSource(key, localItem)  // From sound.js
         }
-        console.log("DOMContentLoaded{} customNames.length:", customNames.length)
-    });
+        //console.log("DOMContentLoaded{} customNames.length:", customNames.length)
+    //});
 
 
 }
