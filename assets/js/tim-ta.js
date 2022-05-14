@@ -2597,16 +2597,17 @@ function paintCustomSounds() {
         html += "&emsp; Type:&nbsp;<b>" + record.cscType + '</b>'
         html += '&emsp; Name:&nbsp;<b>' + record.cscName + '</b>'
         html += "</li><br>"
-        // audioControl
-        /* Can't do this until after innerHTML is set
-        var localItem = JSON.parse(localStorage.getItem(key))
-        setSoundSource(key, localItem)  // From sound.js
-        */
     }
     html += "</ul>"
 
     console.log("html:", html)
     document.getElementById("PaintedSounds").innerHTML = html
+
+    for (const key of Object.keys(customSoundControl.cscRecords)) {
+        // audioControl
+        var localItem = JSON.parse(localStorage.getItem(key))
+        setSoundSource(key, localItem)  // From sound.js
+    }
 }
 
 /* CONTROLS and MESSAGES boxes
