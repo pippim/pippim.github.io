@@ -2615,6 +2615,8 @@ function paintCustomSounds() {
     // console.log("html:", html)
     document.getElementById("PaintedSounds").innerHTML = html
 
+    /* Console log below never displays, so this is never run???
+
     // Below not needed because in parent <div id="PaintedSounds"
     document.addEventListener("DOMContentLoaded", function(event){
         // Must wait due to error: Uncaught TypeError: audioControl is null
@@ -2625,7 +2627,8 @@ function paintCustomSounds() {
         }
         console.log("DOMContentLoaded{} customNames.length:", customNames.length)
     });
-
+    */
+    
 }
 
 /* CONTROLS and MESSAGES boxes
