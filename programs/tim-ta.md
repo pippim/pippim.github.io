@@ -78,9 +78,9 @@ have been uploaded so far.</span>
 
 <div id="PaintedSounds"></div>
 <script>
-document.addEventListener("DOMContentLoaded", function(event){
+// document.addEventListener("DOMContentLoaded", function(event){
    paintCustomSounds() 
-})
+// })
 </script>
 
 > **NOTE:** The Firefox Web Browser limits localStorage to
