@@ -82,7 +82,8 @@ function loadCustomNames () {
 
     // Read csc data record and initialize document body
     for (const key of Object.keys(customSounds.sounds)) {
-        // Cannot setSoundSource until document loaded. See /programs/tim-ta.md
+        var localItem = JSON.parse(localStorage.getItem(key))
+        setSoundSource(key, localItem)
     }
 }
 

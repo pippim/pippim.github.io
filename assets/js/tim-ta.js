@@ -2605,8 +2605,8 @@ function paintCustomSounds() {
 
     for (const key of Object.keys(customSounds.sounds)) {
         // audioControl
-        var localItem = JSON.parse(localStorage.getItem(key))
-        setSoundSource(key, localItem)  // From sound.js
+        //var localItem = JSON.parse(localStorage.getItem(key))
+        //setSoundSource(key, localItem)  // From sound.js
     }
 }
 
