@@ -175,7 +175,7 @@ function initSelectFiles() {
         replaceString += stockNames[i];
     }
 
-    console.log("customNames.length:", customNames.length)
+    console.log("initSelectFiles() customNames.length:", customNames.length)
     for (var i = 0; i < customNames.length; i++) {
         replaceString += "/"  // Add / if not first in array
         replaceString += customNames[i];
@@ -2598,6 +2598,8 @@ function handleFiles(files) {
 function paintCustomSounds() {
     var html = "<ul>"
     console.log("customSounds:", customSounds)
+    console.log("paintCustomSounds() customNames.length:", customNames.length)
+
     for (const key of Object.keys(customSounds.sounds)) {
         var record = customSounds.sounds[key]
         html += "<li>Key:&nbsp;<b>" + key
@@ -2621,6 +2623,7 @@ function paintCustomSounds() {
             var localItem = JSON.parse(localStorage.getItem(key))
             setSoundSource(key, localItem)  // From sound.js
         }
+        console.log("DOMContentLoaded{} customNames.length:", customNames.length)
     });
 
 }
