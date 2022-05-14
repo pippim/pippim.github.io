@@ -2431,7 +2431,7 @@ function handleDrop(e) {
 }
 
 /* Create hold for when Cancel clicked */
-var customSoundControlHold = Object.assign({}, customSoundControl)
+var customSoundsHold = Object.assign({}, customSounds)
 
 function previewFile(file) {
     /*  Firefox will let you drop the same filename twice. Chrome will not.
@@ -2479,36 +2479,36 @@ function makeSoundFilename(name, size, type) {
     */
     const existing = checkSoundFilename(name)
     if (existing) {
-        // Only thing to change is cscRecord['cscTimeAdded']
-        customSoundControl.cscRecords[existing].cscTimeAdded = new Date().getTime()
+        // Only thing to change is sound['timeAdded']
+        customSounds.sounds[existing].timeAdded = new Date().getTime()
         return
     }
 
     var key = CUSTOM_SOUND_ROOT + CUSTOM_SOUND_SEP +
-              pad(customSoundControl['cscNextNumber'], CUSTOM_SOUND_DIGITS)
-    if (key < customSoundControl['cscFirstKey']) {
-        customSoundControl['cscFirstKey'] = key
+              pad(customSounds['nextNumber'], CUSTOM_SOUND_DIGITS)
+    if (key < customSounds['firstKey']) {
+        customSounds['firstKey'] = key
     }
-    if (key > customSoundControl['cscLastKey']) {
-        customSoundControl['cscLastKey'] = key
+    if (key > customSounds['lastKey']) {
+        customSounds['lastKey'] = key
     }
-    customSoundControl['cscCount'] += 1
-    customSoundControl['cscNextNumber'] += 1
+    customSounds['count'] += 1
+    customSounds['nextNumber'] += 1
     // Create short hand reference allRecords
     var record = {}
-    record['cscKey'] = key
-    record['cscName'] = name
-    record['cscSize'] = size
-    record['cscType'] = type
-    record['cscTimeAdded'] = new Date().getTime()
+    record['key'] = key
+    record['name'] = name
+    record['size'] = size
+    record['type'] = type
+    record['timeAdded'] = new Date().getTime()
 
-    //customSoundControl.cscRecords[key] = record
+    //customSounds.sounds[key] = record
     // above displays "key:Object" and not "Custom_001:Object"
-    // yet customSoundControl.cscRecords[key].cssKey displays "Custom_001.wav"
-    //customSoundControl.cscRecords.key = record
+    // yet customSounds.sounds[key].cssKey displays "Custom_001.wav"
+    //customSounds.sounds.key = record
     // above displays "key:Object" and not "Custom_001:Object"
     console.log("key:", key)
-    var records = customSoundControl.cscRecords
+    var records = customSounds.sounds
     records[key] = record
 
     return(key)
@@ -2516,8 +2516,8 @@ function makeSoundFilename(name, size, type) {
 
 function checkSoundFilename(name) {
     // If audio filename exists return the custom key, else return undefined
-    for (const key of Object.keys(customSoundControl.cscRecords)) {
-        if (customSoundControl.cscRecords[key].cscName == name) { return key }
+    for (const key of Object.keys(customSounds.sounds)) {
+        if (customSounds.sounds[key].name == name) { return key }
     }
 }
 
@@ -2540,7 +2540,7 @@ function clickCancel() {
         localStorage.removeItem("x" + uploadKeys[i])
     }
     // Restore hold before files selected for uploading
-    customSoundControl = Object.assign({}, customSoundControlHold)
+    customSounds = Object.assign({}, customSoundsHold)
     initializeFiles()
     document.getElementById('customSelect').scrollIntoView()
 }
@@ -2551,8 +2551,8 @@ function clickUpload() {
         localStorage.setItem(uploadKeys[i], localStorage.getItem("x" + uploadKeys[i]))
         localStorage.removeItem("x" + uploadKeys[i])
     }
-    localStorage.setItem(CUSTOM_SOUND_CONTROL,
-                         JSON.stringify(customSoundControl))
+    localStorage.setItem(CUSTOM_SOUNDS,
+                         JSON.stringify(customSounds))
     initializeFiles()
     paintCustomSounds()
     document.getElementById('customSounds').scrollIntoView()
@@ -2561,7 +2561,7 @@ function clickUpload() {
 function initializeFiles() {
     uploadKeys = []
     uploadNames = []
-    customSoundControlHold = Object.assign({}, customSoundControl)
+    customSoundsHold = Object.assign({}, customSounds)
     document.getElementById('gallery').textContent = ""
     document.getElementById('buttonGroup').style.display = "none"
 }
@@ -2587,15 +2587,15 @@ function handleFiles(files) {
 
 function paintCustomSounds() {
     var html = "<ul>"
-    console.log("customSoundControl:", customSoundControl)
-    for (const key of Object.keys(customSoundControl.cscRecords)) {
-        var record = customSoundControl.cscRecords[key]
+    console.log("customSounds:", customSounds)
+    for (const key of Object.keys(customSounds.sounds)) {
+        var record = customSounds.sounds[key]
         html += "<li>Key:&nbsp;<b>" + key
         html += '</b>&emsp;<audio controls="true" id="'
         html += key + '"></audio>'
-        html += '&emsp; Size:&nbsp;<b>' + record.cscSize.toLocaleString() + '</b>'
-        html += "&emsp; Type:&nbsp;<b>" + record.cscType + '</b>'
-        html += '&emsp; Name:&nbsp;<b>' + record.cscName + '</b>'
+        html += '&emsp; Size:&nbsp;<b>' + record.size.toLocaleString() + '</b>'
+        html += "&emsp; Type:&nbsp;<b>" + record.type + '</b>'
+        html += '&emsp; Name:&nbsp;<b>' + record.name + '</b>'
         html += "</li><br>"
     }
     html += "</ul>"
@@ -2603,7 +2603,7 @@ function paintCustomSounds() {
     console.log("html:", html)
     document.getElementById("PaintedSounds").innerHTML = html
 
-    for (const key of Object.keys(customSoundControl.cscRecords)) {
+    for (const key of Object.keys(customSounds.sounds)) {
         // audioControl
         var localItem = JSON.parse(localStorage.getItem(key))
         setSoundSource(key, localItem)  // From sound.js
@@ -2941,7 +2941,7 @@ function popBuildStyle(msg_type) {
             // Prevent touch move from highlighting text
             //'  -webkit-touch-callout: none;\n' +
             //'  -webkit-user-select: none;\n' +
-            //'  -khtml-user-select: none;\n' +
+            //'  -k html-user-select: none;\n' +
             //'  -moz-user-select: none;\n' +
             //'  -ms-user-select: none;\n' +
             //'  user-select: none;\n' +
