@@ -2597,9 +2597,9 @@ function paintCustomSounds() {
         html += "<li>Key:&nbsp;<b>" + key
         html += '</b>&emsp;<audio controls="true" id="'
         html += key + '"></audio>'
-        html += '&emsp; Size:&nbsp;<b>' + record.size.toLocaleString() + '</b>'
-        html += "&emsp; Type:&nbsp;<b>" + record.type + '</b>'
-        html += '&emsp; Name:&nbsp;<b>' + record.name + '</b>'
+        html += '<nobr>&emsp; Size:&nbsp;<b>' + record.size.toLocaleString() + '</b></nobr>'
+        html += "<nobr>&emsp; Type:&nbsp;<b>" + record.type + '</b></nobr>'
+        html += '<nobr>&emsp; Name:&nbsp;<b>' + record.name + '</b></nobr>'
         html += "</li><br>"
     }
     html += "</ul>"
@@ -2607,6 +2607,7 @@ function paintCustomSounds() {
     // console.log("html:", html)
     document.getElementById("PaintedSounds").innerHTML = html
 
+    // Below not needed because in parent <div id="PaintedSounds"
     document.addEventListener("DOMContentLoaded", function(event){
         // Must wait due to error: Uncaught TypeError: audioControl is null
         for (const key of Object.keys(customSounds.sounds)) {
