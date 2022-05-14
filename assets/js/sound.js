@@ -82,8 +82,9 @@ function loadCustomNames () {
 
     // Read csc data record and initialize document body
     for (const key of Object.keys(customSounds.sounds)) {
-        var localItem = JSON.parse(localStorage.getItem(key))
-        setSoundSource(key, localItem)
+        //var localItem = JSON.parse(localStorage.getItem(key))
+        // uncaught TypeError: audioControl is null
+        //setSoundSource(key, localItem)
     }
 }
 
