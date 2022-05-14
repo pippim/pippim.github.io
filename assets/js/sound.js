@@ -118,11 +118,14 @@ async function fetch_sound(name) {
     });
 }
 
-function setSoundSource (name, localItem) {
+function setSoundSource (name, item) {
     audioControl = document.getElementById(name);
-    audioControl.src = localItem.src;
+    audioControl.src = item.src;
     // May 14, 2022, random wav files getting 6 hours, 45 minutes and 48 seconds
-    audioControl.type = localItem.type;
+    // So hard code the audio type in hopes it fixes this random error
+    audioControl.type = item.type
+    // https://stackoverflow.com/a/51745288/6929343
+    audioControl.preload = "none"
 }
 
 function playSoundSource (name) {
