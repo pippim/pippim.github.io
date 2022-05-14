@@ -2470,7 +2470,7 @@ function previewFile(file) {
         localStorage.setItem("x" + key, JSON.stringify(mediaFile))
         uploadKeys.push(key)
         uploadNames.push(file.name)
-        console.log("uploadNames:", uploadNames)
+        // console.log("uploadNames:", uploadNames)
     }
 }
 
@@ -2502,12 +2502,16 @@ function makeSoundFilename(name, size, type) {
     record['type'] = type
     record['timeAdded'] = new Date().getTime()
 
-    //customSounds.sounds[key] = record
-    // above displays "key:Object" and not "Custom_001:Object"
-    // yet customSounds.sounds[key].cssKey displays "Custom_001.wav"
-    //customSounds.sounds.key = record
-    // above displays "key:Object" and not "Custom_001:Object"
-    console.log("key:", key)
+    /*  TODO: Find out why shorthand is broken:
+
+        customSounds.sounds[key] = record
+            above displays "key:Object" and not "Custom_001:Object"
+            yet customSounds.sounds[key].key displays "Custom_001.wav"
+
+        customSounds.sounds.key = record
+            above displays "key:Object" and not "Custom_001:Object"
+    */
+    // console.log("key:", key)
     var records = customSounds.sounds
     records[key] = record
 
@@ -2600,14 +2604,18 @@ function paintCustomSounds() {
     }
     html += "</ul>"
 
-    console.log("html:", html)
+    // console.log("html:", html)
     document.getElementById("PaintedSounds").innerHTML = html
 
-    for (const key of Object.keys(customSounds.sounds)) {
-        // audioControl
-        //var localItem = JSON.parse(localStorage.getItem(key))
-        //setSoundSource(key, localItem)  // From sound.js
-    }
+    document.addEventListener("DOMContentLoaded", function(event){
+        // Must wait due to error: Uncaught TypeError: audioControl is null
+        for (const key of Object.keys(customSounds.sounds)) {
+            // audioControl
+            var localItem = JSON.parse(localStorage.getItem(key))
+            setSoundSource(key, localItem)  // From sound.js
+        }
+    });
+
 }
 
 /* CONTROLS and MESSAGES boxes
