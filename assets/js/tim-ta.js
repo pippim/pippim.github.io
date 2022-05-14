@@ -2639,7 +2639,7 @@ function paintCustomSounds() {
     document.getElementById("PaintedSounds").innerHTML = html
     updateSelectFiles()
 
-    /* Console log below never displays, so this is never run???
+    /* Console log below never displays, so this is never run??? */
 
     // Below not needed because in parent <div id="PaintedSounds"
     document.addEventListener("DOMContentLoaded", function(event){
@@ -2651,7 +2651,7 @@ function paintCustomSounds() {
         }
         console.log("DOMContentLoaded{} customNames.length:", customNames.length)
     });
-    */
+
 
 }
 
