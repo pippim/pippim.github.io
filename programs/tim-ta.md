@@ -83,9 +83,10 @@ document.addEventListener("DOMContentLoaded", function(event){
 })
 </script>
 
-> **NOTE:** Firefox limits localStorage to 5MB which doesn't
-> allow for many custom sound files. To increase this limit
-> to 25M perform these steps:
+> **NOTE:** The Firefox Web Browser limits localStorage to
+> 5MB. This doesn't allow for many custom sound files. 
+> The other web browsers have a larger quota. To increase quota
+> in Firefox, follow these steps:
 >   
 > Enter "about:config" in the address bar -> search for 
 > "dom.storage.default_quota" -> edit value and enter larger 
