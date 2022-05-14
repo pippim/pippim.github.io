@@ -2589,9 +2589,10 @@ function paintCustomSounds() {
         var record = customSoundControl.cscRecords[key]
         html += "<li><b>" + key
         html += '</b>&emsp;<audio controls="true" id="'
-        html += key + '"></audio>&emsp; Size:&nbsp;<b>'
+        html += key + '"></audio>&emsp; Name:&nbsp;<b>'
+        html += record.cssName + '</b>&emsp; Size:&nbsp;<b>'
         html += record.cscSize.toLocaleString()
-        html += "</b>&emsp;&emsp;Type:&nbsp;<b>" + record.cscType + "</b></li>"
+        html += "</b>&emsp;&emsp;Type:&nbsp;<b>" + record.cscType + "</b></li><br>"
     }
     html += "</ul>"
 
