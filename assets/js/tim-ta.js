@@ -2587,7 +2587,7 @@ function clickUpload() {
     localStorage.setItem(CUSTOM_SOUNDS,
                          JSON.stringify(customSounds))
     initializeFiles()
-    paintCustomSounds()
+    paintCustomSounds()  // Update display with custom sound files
     document.getElementById('customSounds').scrollIntoView()
 }
 
@@ -2637,6 +2637,7 @@ function paintCustomSounds() {
 
     // console.log("html:", html)
     document.getElementById("PaintedSounds").innerHTML = html
+    loadCustomNames()
     updateSelectFiles()
 
     /* Console log below never displays, so this is never run??? */

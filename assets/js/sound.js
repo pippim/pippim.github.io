@@ -49,7 +49,7 @@ function loadStockNames () {
     }
 }
 
-const CUSTOM_SOUNDS = "CUSTOM_SOUNDS";
+const CUSTOM_SOUNDS = "custom_sounds";
 const CUSTOM_SOUND_ROOT = "Custom";
 const CUSTOM_SOUND_SEP = "_";
 const CUSTOM_SOUND_DIGITS = 3;  // E.G. "Custom_001" to "Custom_999"
