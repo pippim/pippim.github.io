@@ -82,7 +82,7 @@ function loadCustomNames () {
 
     // Read csc data record and initialize document body
     for (const key of Object.keys(customSounds.sounds)) {
-        if (customSounds.sounds[key].name == name) { return key }
+        // Cannot setSoundSource until document loaded. See /programs/tim-ta.md
     }
 }
 
