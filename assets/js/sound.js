@@ -38,6 +38,7 @@
 const stockNames = ["Alarm_01.wav", "Alarm_01.mp3",
                     "Alarm_03.mp3", "Alarm_05.mp3", "Alarm_12.mp3"];
 const stockPrefix = "{{ site.url }}/assets/sound/";
+var customNames = []
 
 function loadStockNames () {
     // If stock name isn't in local storage, fetch it from website
@@ -81,7 +82,9 @@ function loadCustomNames () {
     } else { customSounds = Object.assign({}, stored); }
 
     // Read csc data record and initialize document body
+    customNames = []
     for (const key of Object.keys(customSounds.sounds)) {
+        customNames.push(key)
         //var localItem = JSON.parse(localStorage.getItem(key))
         // uncaught TypeError: audioControl is null
         //setSoundSource(key, localItem)

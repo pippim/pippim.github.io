@@ -168,11 +168,16 @@ function get_dd_field (name) {
 
 function initSelectFiles() {
     /* Called on load and after drag & drop sound files */
-    // Convert array of sound filenames to string delineated by |
+    // Convert array of stock sound filenames to string delineated by /
     var replaceString = "";
     for (var i = 0; i < stockNames.length; i++) {
-        if (i != 0) { replaceString += "/"; }  // Add | if not first in array
+        if (i != 0) { replaceString += "/"; }  // Add / if not first in array
         replaceString += stockNames[i];
+    }
+
+    for (var i = 0; i < customNames.length; i++) {
+        replaceString += "/"  // Add / if not first in array
+        replaceString += customNames[i];
     }
 
     for (const key of Object.keys(data_dictionary)) {
