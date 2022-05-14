@@ -38,7 +38,7 @@ Each project can have an unlimited number of Tasks.
 <a id='hdr3'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
-# Upload Alarm Sound Files
+# Upload Custom Sound Files
 
 <!-- From: https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/  -->
 
@@ -92,6 +92,15 @@ have been uploaded so far.</span>
 > Enter "about:config" in the address bar -> search for 
 > "dom.storage.default_quota" -> edit value and enter larger 
 > value (e.g. 25120) (default is 5120).
+
+
+**WARNING:**
+> Firefox doesn't support `.wav` files very well. It is recommended
+> you convert them to `.mp3` or similar format before uploading.
+>  
+> `ffmpeg -i track01.wav -acodec mp3 track01.mp3`
+>   
+> Or use an free online conversion service.  
 
 ---
 
@@ -157,6 +166,13 @@ As of May 8, 2022, these features have been developed:
 - Configuration, Projects, Tasks and Run Timers tables / forms are complete.
 - Advanced draggable window alert/prompt technology is complete.
 - Upload Alarm Sound Files has begun.
+
+May 14, 2022 update:
+
+- Upload Custom Sound Files has been completed.
+- Global Pippim Website redesign for mobile screens begins shortly.
+- Then media controls for running timers will be moved from separate window to the footer section of Run Project. 
+- Then a mechanism for exporting and importing Tim-ta Projects will be started. 
 
 ---
 
