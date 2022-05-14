@@ -78,10 +78,10 @@ have been uploaded so far.</span>
 
 <div id="PaintedSounds"></div>
 <script>
-document.addEventListener("DOMContentLoaded", function(event){
-   // Without delay, sound file duration is 6 hours 45 minutes 48 seconds
+// document.addEventListener("DOMContentLoaded", function(event){
+   // With or Without delay, random sound file duration is 6 hours 45 minutes 48 seconds
    paintCustomSounds() 
-})
+// })
 </script>
 
 > **NOTE:** The Firefox Web Browser limits localStorage to
