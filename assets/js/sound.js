@@ -122,10 +122,12 @@ function setSoundSource (name, item) {
     audioControl = document.getElementById(name);
     audioControl.src = item.src;
     // May 14, 2022, random wav files getting 6 hours, 45 minutes and 48 seconds
+    // Each page refresh cycles between correct duration and bogus duration.
     // So hard code the audio type in hopes it fixes this random error
     audioControl.type = item.type
     // https://stackoverflow.com/a/51745288/6929343
-    audioControl.preload = "none"
+    // Below simply sets known duration to 0:0:0 and doesn't change behavior
+    //audioControl.preload = "none"
 }
 
 function playSoundSource (name) {
