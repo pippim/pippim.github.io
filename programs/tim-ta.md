@@ -75,21 +75,21 @@ Each project can have an unlimited number of Tasks.
 <span id="customSounds">These are all the custom sound files that 
 have been uploaded so far.</span>
 
-Enter "about:config" in the address bar -> search for 
-"dom.storage.default_quota" -> edit value and enter larger 
-value (e.g. 25120) (default is 5120).
-
-If you select some files and click the refresh button then
-`xCustom_999.ext` files will be left in local storage. Ensure
-you click either "Cancel" or "Upload" buttons after selecting
-sound files.
 
 <div id="PaintedSounds"></div>
 <script>
 document.addEventListener("DOMContentLoaded", function(event){
    paintCustomSounds() 
-});
+})
 </script>
+
+> **NOTE:** Firefox limits localStorage to 5MB which doesn't
+> allow for many custom sound files. To increase this limit
+> to 25M perform these steps:
+>   
+> Enter "about:config" in the address bar -> search for 
+> "dom.storage.default_quota" -> edit value and enter larger 
+> value (e.g. 25120) (default is 5120).
 
 ---
 
