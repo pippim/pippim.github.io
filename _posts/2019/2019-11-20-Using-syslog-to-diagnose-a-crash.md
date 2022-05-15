@@ -10,9 +10,9 @@ created_date: 2019-11-20 04:32:51
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "380 "
+views:        "386 "
 accepted:     Accepted
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-20-Using-syslog-to-diagnose-a-crash.md
 toc:          false
 navigation:   false

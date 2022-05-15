@@ -8,11 +8,11 @@ type:         Answer
 tags:         bash
 created_date: 2018-12-10 18:12:47
 edit_date:    2018-12-10 18:18:35
-votes:        "1 "
+votes:        "2 "
 favorites:    
-views:        "736 "
+views:        "760 "
 accepted:     Accepted
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-10-Output-the-current-PATH-to-text-file-using-BASH-script.md
 toc:          false
 navigation:   false

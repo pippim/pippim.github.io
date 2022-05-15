@@ -10,9 +10,9 @@ created_date: 2016-11-07 04:50:28
 edit_date:    2017-10-31 23:50:16
 votes:        "65 "
 favorites:    
-views:        "96,923 "
+views:        "97,284 "
 accepted:     
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-How-can-you-monitor-total-internet-data-usage-across-reboots_.md
 toc:          false
 navigation:   false

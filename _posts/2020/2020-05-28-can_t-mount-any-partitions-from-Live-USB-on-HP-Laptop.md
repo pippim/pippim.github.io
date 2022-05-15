@@ -10,9 +10,9 @@ created_date: 2020-05-28 22:49:39
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "263 "
+views:        "269 "
 accepted:     Accepted
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-28-can_t-mount-any-partitions-from-Live-USB-on-HP-Laptop.md
 toc:          false
 navigation:   false

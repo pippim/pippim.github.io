@@ -8,11 +8,11 @@ type:         Answer
 tags:         power-management performance conky vnstat
 created_date: 2018-06-19 02:14:50
 edit_date:    2020-10-06 13:31:29
-votes:        "49 "
+votes:        "50 "
 favorites:    
-views:        "95,892 "
+views:        "97,264 "
 accepted:     
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-19-Setting-to-High-Performance.md
 toc:          false
 navigation:   false

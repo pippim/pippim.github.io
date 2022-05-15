@@ -10,9 +10,9 @@ created_date: 2018-05-17 04:06:39
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "723 "
+views:        "724 "
 accepted:     Accepted
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Don_t-see-new-kernel-after-upgrade.md
 toc:          false
 navigation:   false

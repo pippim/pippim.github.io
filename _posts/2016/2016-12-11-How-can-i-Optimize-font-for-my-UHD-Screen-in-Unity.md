@@ -10,9 +10,9 @@ created_date: 2016-12-11 19:40:19
 edit_date:    2016-12-11 20:27:09
 votes:        "2 "
 favorites:    
-views:        "398 "
+views:        "402 "
 accepted:     Accepted
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-11-How-can-i-Optimize-font-for-my-UHD-Screen-in-Unity.md
 toc:          false
 navigation:   false

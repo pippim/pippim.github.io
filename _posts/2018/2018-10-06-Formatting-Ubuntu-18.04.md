@@ -10,9 +10,9 @@ created_date: 2018-10-06 16:40:44
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "9,299 "
+views:        "9,327 "
 accepted:     
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-06-Formatting-Ubuntu-18.04.md
 toc:          false
 navigation:   false

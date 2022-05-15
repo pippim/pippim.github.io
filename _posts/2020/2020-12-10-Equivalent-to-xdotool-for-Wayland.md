@@ -10,9 +10,9 @@ created_date: 2020-12-10 12:00:19
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "6,904 "
+views:        "7,024 "
 accepted:     
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-10-Equivalent-to-xdotool-for-Wayland.md
 toc:          false
 navigation:   false

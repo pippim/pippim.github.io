@@ -8,11 +8,11 @@ type:         Answer
 tags:         python
 created_date: 2022-01-05 00:33:35
 edit_date:    2022-01-30 19:39:30
-votes:        "4 "
+votes:        "6 "
 favorites:    
-views:        "241,258 "
+views:        "242,643 "
 accepted:     
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-01-05-Python-to-print-out-status-bar-and-percentage.md
 toc:          false
 navigation:   true

@@ -37,13 +37,12 @@
 │   │   ├── search_url.json
 │   │   ├── search_words.json
 │   │   └── website_tree.json
-│   ├── sound
-│   │   ├── Alarm_01.mp3
-│   │   ├── Alarm_01.wav
-│   │   ├── Alarm_03.mp3
-│   │   ├── Alarm_05.mp3
-│   │   └── Alarm_12.mp3
-│   └── tim-ta.js
+│   └── sound
+│       ├── Alarm_01.mp3
+│       ├── Alarm_01.wav
+│       ├── Alarm_03.mp3
+│       ├── Alarm_05.mp3
+│       └── Alarm_12.mp3
 ├── _includes
 │   ├── copyHeader.html
 │   ├── head-custom.html
@@ -108,4 +107,4 @@
 ├── LICENSE
 └── programs.md
 
-26 directories, 83 files
+26 directories, 82 files

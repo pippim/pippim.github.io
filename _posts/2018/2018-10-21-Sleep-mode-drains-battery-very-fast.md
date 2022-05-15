@@ -8,11 +8,11 @@ type:         Answer
 tags:         18.04 suspend battery
 created_date: 2018-10-21 17:30:14
 edit_date:    2018-10-21 20:25:21
-votes:        "8 "
+votes:        "9 "
 favorites:    
-views:        "14,276 "
+views:        "14,346 "
 accepted:     Accepted
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-21-Sleep-mode-drains-battery-very-fast.md
 toc:          false
 navigation:   false

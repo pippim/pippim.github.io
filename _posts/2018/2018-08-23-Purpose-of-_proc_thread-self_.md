@@ -8,11 +8,11 @@ type:         Question
 tags:         linux multithreading linux-kernel proc
 created_date: 2018-08-23 00:59:48
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "1,493 "
+views:        "1,517 "
 accepted:     
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-Purpose-of-_proc_thread-self_.md
 toc:          false
 navigation:   false

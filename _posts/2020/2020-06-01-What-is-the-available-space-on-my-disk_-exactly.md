@@ -10,9 +10,9 @@ created_date: 2020-06-01 00:55:34
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "421 "
+views:        "430 "
 accepted:     
-uploaded:     2022-05-08 09:37:50
+uploaded:     2022-05-15 07:50:38
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-01-What-is-the-available-space-on-my-disk_-exactly.md
 toc:          false
 navigation:   false
