@@ -179,7 +179,8 @@ c.onclick = function () {
 
 // When the user clicks on page-header-hamburger button
 d.onclick = function () {
-    document.getElementById("dropdown-content").style.display = "block";
+    console.log("d.onclick")
+    e.style.display = "block";
 }
 
 // When the user clicks anywhere outside of the modal(m)
