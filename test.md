@@ -1,5 +1,5 @@
 ---
-title: Test New page-header-buttons
+title: Test New page-header-buttons and New page-header-hamburger menu
 layout: test
 ---
 
