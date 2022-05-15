@@ -35,27 +35,27 @@
       <!-- javascript for search bar -->
       <script type="text/javascript" src="/assets/js/search.js" ></script>
 
-      <div id="page-header-buttons">
+      <div id="page-header-buttons" style="display: none;">
         <!-- Reduce number of buttons by suppressing button for current page -->
         {% unless page.path == "index.md" %}
-          <a href="https://pippim.github.io/" style="display: inline" class="button">⌂ Home</a>
+          <a href="https://pippim.github.io/" class="button">⌂ Home</a>
         {% endunless %}
         {% unless page.path == "about.md" %}
-          <a href="about.html" style="display: inline" class="button">❓ About</a>
+          <a href="about.html" class="button">❓ About</a>
         {% endunless %}
         {% unless page.path == "answers.md" %}
-          <a href="answers.html" style="display: inline" class="button">✅ Answers</a>
+          <a href="answers.html" class="button">✅ Answers</a>
         {% endunless %}
         {% unless page.path == "programs.md" %}
-          <a href="programs.html" style="display: inline" class="button">💻 Programs</a>
+          <a href="programs.html" class="button">💻 Programs</a>
         {% endunless %}
-        <a href="mailto:pippim.com@gmail.com" style="display: inline" class="button">📧 Email</a>
+        <a href="mailto:pippim.com@gmail.com" class="button">📧 Email</a>
 
         <!-- Draggable DIV -->
         {% include tcm-window.html %}
       </div>
-      <div id="page-header-hamburger" style="display: none">
-        <a href="about.html" style="display: inline" class="button">&#x2630;</a>
+      <div id="page-header-hamburger" style="display: none;">
+        <a href="about.html" class="button">&#x2630;</a>
       </div>
     </header>
 
