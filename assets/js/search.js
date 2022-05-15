@@ -177,24 +177,19 @@ c.onclick = function () {
     m.style.display = "none";   // Turn off display for search results
 }
 
-// When the user clicks on page-header-hamburger button
-e.style.display = "none";  // Set default in js, doesn't work in css styling?
+// When the user clicks on page-header-hamburger button, display mobile dropdown list
+// e.style.display = "none";  // Set default in js, doesn't work in css styling?
 var boolDropdown = false
 d.onclick = function () {
     boolDropdown = !boolDropdown
-    if (boolDropdown) { e.style.display = "block"; }
-                else  { e.style.display = "none"; }
+    if (boolDropdown) { e.style.display = "block" }
+                else  { e.style.display = "none" }
     console.log("d.onclick boolDropdown:", boolDropdown)
 }
 
-// When the user clicks anywhere outside of the modal(m)
-// or the the hamburger dropdown menu list(e), close it
+// When the user clicks anywhere outside of the modal(m) close it
 window.onclick = function (event) {
     if (!m.contains(event.target)) { m.style.display = "none"; }
-    // If not clicking dropdown button, or child buttons, hide the children
-    //if (!e.contains(event.target) && !d.contains(event.target)) {
-    //    e.style.display = "none";
-    //}
 }
 
 f.addEventListener('submit', submitted);
