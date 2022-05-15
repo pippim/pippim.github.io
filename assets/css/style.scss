@@ -418,7 +418,7 @@ details[open] > summary {
     flex-direction: row;
     align-items: center;
     @include large {
-        max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
+        max-width: 56rem;  // From: /_sass/jekyll-theme-cayman.scss
         height: 2rem;
     }
     @include medium { height: 1.6rem; }
@@ -433,7 +433,7 @@ details[open] > summary {
     padding: .5rem .8rem;
 
     @include large {
-        max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
+        max-width: 56rem;  // From: /_sass/jekyll-theme-cayman.scss
         font-size: 1.2rem;
     }
     @include medium { font-size: 1rem; }
