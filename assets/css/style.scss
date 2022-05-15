@@ -91,9 +91,8 @@ $lavender: #E6E6FA !default; // lavender
     }
 
     @include small {
+        // No longer relevant with new '#page-header-hamburger' menu
         top: .25rem;
-        /* display: block;  WHY IS THIS HERE? */
-        /* width: 100%;  WHY IS THIS HERE? */
         padding: .3rem .75rem;
         font-size: 0.7rem;
 
@@ -426,12 +425,12 @@ details[open] > summary {
     // could be called `search-input` as that is the process being styled
     all: unset;
     height: 100%;
-    width: 100%;
+    width: 90%;     // May 15/22 was 100% but too wide
     padding: .5rem .8rem;
 
     @include large { font-size: 1.2rem; }
     @include medium { font-size: 1rem; }
-    @include small { font-size: 0.9rem; }
+    @include small { font-size: 0.9rem; }  // May 15/22 TODO: Eventually remove
 }
 
 #search-symbol {
@@ -461,6 +460,7 @@ details[open] > summary {
     border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
     border-radius: .5rem;
     width: 80%;
+    margin-left: 5%;    // Added May 15/22 as search-input is now width: 90%;
     overflow: auto;
     // top: 90px;    // top: 90px; goes over page title beginning of text
     // left: 8px; goes over page title far left gutter
