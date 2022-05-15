@@ -84,7 +84,8 @@ have been uploaded so far.</span>
 // })
 </script>
 
-> **NOTE:** The Firefox Web Browser limits localStorage to
+**NOTE:** 
+> The Firefox Web Browser limits localStorage to
 > 5MB. This doesn't allow for many custom sound files. 
 > The other web browsers have a larger quota. To increase quota
 > in Firefox, follow these steps:
@@ -113,7 +114,7 @@ The following sound files are always available direct from
 the {{ site.title }} Website.
 
 <style>
-audio { vertical-align:middle }
+/* audio { vertical-align:middle } */
 </style>
 
 <!-- WARNING: Do not delete these <audio> tags, simply hide them if you don't
