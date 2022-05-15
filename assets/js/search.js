@@ -178,6 +178,7 @@ c.onclick = function () {
 }
 
 // When the user clicks on page-header-hamburger button
+e.style.display = "none";  // Set default in js, doesn't work in css styling?
 d.onclick = function () {
     console.log("d.onclick")
     e.style.display = "block";
@@ -187,7 +188,10 @@ d.onclick = function () {
 // or the the hamburger dropdown menu list(e), close it
 window.onclick = function (event) {
     if (!m.contains(event.target)) { m.style.display = "none"; }
-    if (!e.contains(event.target)) { e.style.display = "none"; }
+    // If not clicking dropdown button, or child buttons, hide the children
+    if (!e.contains(event.target) && !d.contains(event.target)) {
+        e.style.display = "none";
+    }
 }
 
 f.addEventListener('submit', submitted);
