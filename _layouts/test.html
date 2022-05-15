@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Used by about.md, answers.md, index.md and programs.md -->
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
     <meta charset="UTF-8">
 
@@ -35,7 +35,7 @@
       <!-- javascript for search bar -->
       <script type="text/javascript" src="/assets/js/search.js" ></script>
 
-      <div id="page-header-buttons" style="display: none;">
+      <div id="page-header-buttons">
         <!-- Reduce number of buttons by suppressing button for current page -->
         {% unless page.path == "index.md" %}
           <a href="https://pippim.github.io/" class="button">⌂ Home</a>
@@ -54,7 +54,7 @@
         <!-- Draggable DIV -->
         {% include tcm-window.html %}
       </div>
-      <div id="page-header-hamburger" style="display: none;">
+      <div id="page-header-hamburger">
         <a href="about.html" class="button">&#x2630;</a>
       </div>
     </header>
