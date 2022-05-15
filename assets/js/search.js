@@ -179,9 +179,12 @@ c.onclick = function () {
 
 // When the user clicks on page-header-hamburger button
 e.style.display = "none";  // Set default in js, doesn't work in css styling?
+var boolDropdown = false
 d.onclick = function () {
-    console.log("d.onclick")
-    e.style.display = "block";
+    boolDropdown = !boolDropdown
+    if (boolDropdown) { e.style.display = "block"; }
+                else  { e.style.display = "none"; }
+    console.log("d.onclick boolDropdown:", boolDropdown)
 }
 
 // When the user clicks anywhere outside of the modal(m)
@@ -189,9 +192,9 @@ d.onclick = function () {
 window.onclick = function (event) {
     if (!m.contains(event.target)) { m.style.display = "none"; }
     // If not clicking dropdown button, or child buttons, hide the children
-    if (!e.contains(event.target) && !d.contains(event.target)) {
-        e.style.display = "none";
-    }
+    //if (!e.contains(event.target) && !d.contains(event.target)) {
+    //    e.style.display = "none";
+    //}
 }
 
 f.addEventListener('submit', submitted);
