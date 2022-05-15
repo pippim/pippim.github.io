@@ -21,13 +21,13 @@ $lavender: #E6E6FA !default; // lavender
 #page-header-buttons {
     @include large { display: block; }
     @include medium { display: block; }
-    @include small {display: none; }
+    @include small { display: none; }
 }
 
 #page-header-hamburger {
     @include large { display: none; }
     @include medium { display: none; }
-    @include small {display: block; }
+    @include small { display: block; }
 }
 
 .button {
@@ -428,7 +428,10 @@ details[open] > summary {
     width: 90%;     // May 15/22 was 100% but too wide
     padding: .5rem .8rem;
 
-    @include large { font-size: 1.2rem; }
+    @include large {
+        max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
+        font-size: 1.2rem;
+    }
     @include medium { font-size: 1rem; }
     @include small { font-size: 0.9rem; }  // May 15/22 TODO: Eventually remove
 }
