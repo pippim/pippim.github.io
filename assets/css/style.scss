@@ -415,17 +415,18 @@ details[open] > summary {
 #search-form {
     background-color: $honeydew;
     color: $header-bg-color;
-    // vertical-align: middle;
+    vertical-align: middle;
     margin: auto;
     border-radius: .5rem;
     display: flex;
     flex-direction: row;
-    align: center;
+    //align: center;
+    margin: 0 auto;
     align-items: center;
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
-        margin: 0 6rem 0 6rem;  // Too radical on resize
-        //padding: 0 6rem 0 6rem;
+        //margin: 0 6rem 0 6rem;  // Too radical on resize
+        padding: 0 6rem 0 6rem;
         height: 2rem; }
     @include medium {
         padding: 0 4rem 0 4rem;
