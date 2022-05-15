@@ -32,9 +32,6 @@
       <!-- <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
       {% include search.html %}
 
-      <!-- javascript for search bar -->
-      <script type="text/javascript" src="/assets/js/search.js" ></script>
-
       <div id="page-header-buttons">
         <!-- Reduce number of buttons by suppressing button for current page -->
         {% unless page.path == "index.md" %}
@@ -50,7 +47,6 @@
           <a href="programs.html" class="button">💻 Programs</a>
         {% endunless %}
         <a href="mailto:pippim.com@gmail.com" class="button">📧 Email</a>
-
         <!-- Draggable DIV -->
         {% include tcm-window.html %}
       </div>
@@ -65,6 +61,9 @@
         </div>
       </div>
     </header>
+
+    <!-- javascript for search bar -->
+    <script type="text/javascript" src="/assets/js/search.js" ></script>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
