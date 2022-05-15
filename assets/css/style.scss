@@ -416,7 +416,10 @@ details[open] > summary {
     display: flex;
     flex-direction: row;
     align-items: center;
-    @include large { height: 2rem; }
+    @include large {
+        max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
+        height: 2rem;
+    }
     @include medium { height: 1.6rem; }
     @include small { height: 1.2rem; }
 }
