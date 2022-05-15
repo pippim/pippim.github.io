@@ -408,6 +408,10 @@ details[open] > summary {
 }
 
 /* Text version (UTF-8) of magnifying glass */
+.normalised:first-line {
+    // Override <input> line-height problems: https://stackoverflow.com/a/26103611/6929343
+    display: inline-block;
+}
 #search-form {
     background-color: $honeydew;
     color: $header-bg-color;
@@ -419,8 +423,8 @@ details[open] > summary {
     align-items: center;
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
-        // margin: 0 6rem 0 6rem;  // Too radical on resize
-        padding: 0 6rem 0 6rem;
+        margin: 0 6rem 0 6rem;  // Too radical on resize
+        //padding: 0 6rem 0 6rem;
         height: 2rem; }
     @include medium {
         padding: 0 4rem 0 4rem;
