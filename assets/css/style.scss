@@ -30,8 +30,8 @@ $lavender: #E6E6FA !default; // lavender
     @include small { display: block; }
 }
 
-.dropdown-content {
-    // display: none;
+#dropdown-content {
+    display: none;
     position: absolute;
     background-color: #fff;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -40,7 +40,7 @@ $lavender: #E6E6FA !default; // lavender
     margin-top: 1px;
 }
 
-.dropdown-content a {
+#dropdown-content a {
     color: black;
     padding: 6px;
     font-size: 1rem;
@@ -48,9 +48,9 @@ $lavender: #E6E6FA !default; // lavender
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+#dropdown-content a:hover {background-color: #f1f1f1}
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover #dropdown-content {
     display: block;
 }
 
