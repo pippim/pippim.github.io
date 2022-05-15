@@ -420,6 +420,7 @@ details[open] > summary {
     border-radius: .5rem;
     display: flex;
     flex-direction: row;
+    align: center;
     align-items: center;
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
