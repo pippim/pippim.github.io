@@ -72,12 +72,12 @@ async function load_search_words() {
             search_words = responseJson;
             // https://stackoverflow.com/a/32905820/6929343
             var search_words_store = JSON.stringify(search_words)
-            const [ total_hits, total_points ] = calcTotalHits(search_words);
+            const [total_hits, total_points] = calcTotalHits(search_words);
             sessionStorage.setItem('search_words', search_words_store);
             buildStats('Search Word Count', Object.keys(search_words).length);
-            buildStats('Search Word Size', search_words_store.length);
             buildStats('Search Word Hits', total_hits);
             buildStats('Search Word Points', total_points);
+            buildStats('Search Word Size', search_words_store.length);
         });
 }
 
@@ -162,6 +162,8 @@ function calcTotalHits(words) {
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 const c = document.getElementById('search-modal-close');    // 'X' close search results
+const d = document.getElementById('page-header-dropdown');  // The hamburger menu
+const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
 const f = document.getElementById('search-form');           // Wrapper around query & close button
 const q = document.getElementById('search-query');          // Search words input by user
 const h = document.getElementById('search-modal-text')      // Search results html codes
@@ -175,9 +177,16 @@ c.onclick = function () {
     m.style.display = "none";   // Turn off display for search results
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// When the user clicks on page-header-hamburger button
+d.onclick = function () {
+    document.getElementById("dropdown-content").style.display = "block";
+}
+
+// When the user clicks anywhere outside of the modal(m)
+// or the the hamburger dropdown menu list(e), close it
 window.onclick = function (event) {
     if (!m.contains(event.target)) { m.style.display = "none"; }
+    if (!e.contains(event.target)) { e.style.display = "none"; }
 }
 
 f.addEventListener('submit', submitted);
