@@ -180,13 +180,13 @@ May 14, 2022 update:
 <a id='hdr7'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-# Introduction
-
-{% include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
+{% include image.html src="/assets/img/tim-ta/cartoon-alarm-clock.jpg"
    alt="Tim-ta Introduction.png"
-   style="float: none; width: 100%; margin: 1rem 0 1rem;"
+   style="float: left; width: 50%; margin: 2rem 1rem; 1rem;"
    caption="Tim-ta webpage header"
 %}
+
+# Introduction
 
 *Tim-ta* (**Tim**ed-**ta**sks) gives a countdown timer
 where each task is always a predetermined amount of time.
