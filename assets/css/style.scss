@@ -419,7 +419,7 @@ details[open] > summary {
     align-items: center;
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
-        // margin: 0 6rem 0 6rem;  // Too radical on resize
+        margin: 0 6rem 0 6rem;  // Too radical on resize
         padding: 0 6rem 0 6rem;
         height: 2rem; }
     @include medium {
