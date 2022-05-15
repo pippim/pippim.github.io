@@ -419,7 +419,7 @@ details[open] > summary {
     align-items: center;
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
-        margin: 0 6rem 0 6rem;  // Too radical on resize
+        // margin: 0 6rem 0 6rem;  // Too radical on resize
         padding: 0 6rem 0 6rem;
         height: 2rem; }
     @include medium {
@@ -436,7 +436,7 @@ details[open] > summary {
     height: 100%;
     width: 100%;
     max-width: 100%;  // https://stackoverflow.com/a/54336954/6929343
-    // box-sizing: border-box;  // https://stackoverflow.com/a/54336954/6929343
+    box-sizing: border-box;  // https://stackoverflow.com/a/54336954/6929343
     //width: 90%;     // May 15/22 was 100% but too wide
     padding: .5rem .8rem;
 
