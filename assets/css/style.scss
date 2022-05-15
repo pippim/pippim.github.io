@@ -30,6 +30,29 @@ $lavender: #E6E6FA !default; // lavender
     @include small { display: block; }
 }
 
+.dropdown-content {
+    // display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%;
+    margin-top: 2px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .button {
     display: inline-block;
     border-radius: 2rem;
