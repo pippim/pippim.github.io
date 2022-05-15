@@ -6,6 +6,8 @@ layout: test
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
 
+# Introduction
+
 This is `test.md` rendered as `/test.html`.
 
 It uses `/_layouts/test.html` layout file.
@@ -28,6 +30,10 @@ contains Cayman Theme defaults for historical reference purposes.
 
 <a id='hdr3'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
+
+# Override buttons
+
+Use these buttons to force screen size 
 
 ---
 
