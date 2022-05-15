@@ -411,7 +411,8 @@ details[open] > summary {
 #search-form {
     background-color: $honeydew;
     color: $header-bg-color;
-    vertical-align: middle;
+    // vertical-align: middle;
+    margin: auto;
     border-radius: .5rem;
     display: flex;
     flex-direction: row;
