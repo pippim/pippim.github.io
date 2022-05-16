@@ -180,7 +180,8 @@ c.onclick = function () {
 // When the user clicks on page-header-hamburger button, display mobile dropdown list
 // e.style.display = "none";  // Set default in js, doesn't work in css styling?
 var boolDropdown = false
-d.onclick = function () {
+d.onclick = function (event) {
+    event.preventDefault()  // Don't let window.onclick see this click
     boolDropdown = !boolDropdown
     if (boolDropdown) { e.style.display = "block" }
                 else  { e.style.display = "none" }
@@ -190,6 +191,7 @@ d.onclick = function () {
 // When the user clicks anywhere outside of the modal(m) close it
 window.onclick = function (event) {
     if (!m.contains(event.target)) { m.style.display = "none"; }
+    e.style.display = "none";
 }
 
 f.addEventListener('submit', submitted);
@@ -213,7 +215,7 @@ function set_x_to_close() {
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
 function submitted(event) {
 
-    event.preventDefault();                 // Not sure what this does?
+    event.preventDefault();                 // Stop other events from receiving signal
     const results = get_hits(q.value);      // URLS matching search words into array
 
     if (results.length == 0) {
