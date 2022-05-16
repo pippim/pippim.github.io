@@ -184,9 +184,14 @@ var boolDropdown = false
 d.onclick = function (event) {
     event.stopPropagation()  // Don't let window.onclick see this click
     boolDropdown = !boolDropdown
-    if (boolDropdown) { e.style.display = "block" }
-                else  { e.style.display = "none" }
-    //console.log("d.onclick boolDropdown:", boolDropdown)
+    if (boolDropdown) {
+        e.style.display = "block"
+        // Search form may be open and stopPropagation stops window.click() running
+        f.style.display = "none";  // Close search form
+        boolSearchForm = false
+    }
+    else  { e.style.display = "none" }
+    //console.log("d.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
 
 // When the user clicks on page-header-search button, display mobile search-form
@@ -194,9 +199,15 @@ var boolSearchForm = false
 p.onclick = function (event) {
     event.stopPropagation()  // Don't let window.onclick see this click
     boolSearchForm = !boolSearchForm
-    if (boolSearchForm) { f.style.display = "block" }
-                else  { f.style.display = "none" }
-    //console.log("d.onclick boolDropdown:", boolDropdown)
+    if (boolSearchForm) {
+        f.style.display = "block"
+        f.insertAfter('#search-form-location')
+        // Hamburger dropdown may be open and stopPropagation stops window.click() running
+        e.style.display = "none";  // Close dropdown menu options
+        boolDropdown = false
+    }
+    else  { f.style.display = "none" }
+    //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
 
 // When the user clicks anywhere outside of the modal(m) close it
