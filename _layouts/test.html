@@ -33,24 +33,18 @@
       {% include search.html %}
 
       <div id="page-header-buttons">
-        <!-- Reduce number of buttons by suppressing button for current page -->
-        {% unless page.path == "index.md" %}
-          <a href="https://pippim.github.io/" class="button">⌂ Home</a>
-        {% endunless %}
-        {% unless page.path == "about.md" %}
-          <a href="about.html" class="button">❓ About</a>
-        {% endunless %}
-        {% unless page.path == "answers.md" %}
-          <a href="answers.html" class="button">✅ Answers</a>
-        {% endunless %}
-        {% unless page.path == "programs.md" %}
-          <a href="programs.html" class="button">💻 Programs</a>
-        {% endunless %}
+        <a href="https://pippim.github.io/" class="button">⌂ Home</a>
+        <a href="about.html" class="button">❓ About</a>
+        <a href="answers.html" class="button">✅ Answers</a>
+        <a href="programs.html" class="button">💻 Programs</a>
         <a href="mailto:pippim.com@gmail.com" class="button">📧 Email</a>
       </div>
       <div id="page-header-hamburger">
         <span id="page-header-dropdown" class="button"
               >&#x2630;
+        </span>
+        <span id="page-header-search" class="button"
+              >&#x1F50D;
         </span>
         <div id="dropdown-content">
           <a href="https://pippim.github.io/" class="button">⌂ Home</a>
