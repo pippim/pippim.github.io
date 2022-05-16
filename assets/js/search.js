@@ -200,7 +200,7 @@ p.onclick = function (event) {
     event.stopPropagation()  // Don't let window.onclick see this click
     boolSearchForm = !boolSearchForm
     if (boolSearchForm) {
-        f.style.display = "block"
+        f.style.display = "flex"
         f.insertAfter('#search-form-location')
         // Hamburger dropdown may be open and stopPropagation stops window.click() running
         e.style.display = "none";  // Close dropdown menu options
