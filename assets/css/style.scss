@@ -458,7 +458,8 @@ details[open] > summary {
         height: 1.6rem; }
     @include small {
         //padding: 0 2rem 0 2rem;  // causing search-query to shrink inside
-        height: 1.2rem; }
+        height: 1.2rem;
+        display: none; }  // May 16/22 - use page-header-search magnifying glass
 }
 
 #search-query {
