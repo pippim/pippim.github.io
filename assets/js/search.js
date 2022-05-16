@@ -184,7 +184,7 @@ d.onclick = function () {
     boolDropdown = !boolDropdown
     if (boolDropdown) { e.style.display = "block" }
                 else  { e.style.display = "none" }
-    console.log("d.onclick boolDropdown:", boolDropdown)
+    //console.log("d.onclick boolDropdown:", boolDropdown)
 }
 
 // When the user clicks anywhere outside of the modal(m) close it
