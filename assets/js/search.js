@@ -176,6 +176,7 @@ set_x_to_close();  // Initial 'X' (close on input bar) status when page refreshe
 
 // When the user clicks on <span> (x), close the modal
 c.onclick = function () {
+    event.stopPropagation()  // Don't let window.onclick see this click
     m.style.display = "none";   // Turn off display for search results
 }
 
@@ -189,6 +190,7 @@ d.onclick = function (event) {
         // Search form may be open and stopPropagation stops window.click() running
         f.style.display = "none";  // Close search form
         boolSearchForm = false
+        m.style.display = "none";  // close search results modal
     }
     else  { e.style.display = "none" }
     //console.log("d.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
