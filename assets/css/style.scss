@@ -27,12 +27,11 @@ $lavender: #E6E6FA !default; // lavender
 #page-header-hamburger {
     @include large { display: none; }
     @include medium { display: none; }
-    @include small { display: block; font-size: 1rem ! important; }
+    @include small { display: block; }
 }
 
 #page-header-search {
     margin-left: 2rem;
-    font-size: 1rem;
 }
 
 #dropdown-content {
@@ -117,10 +116,10 @@ $lavender: #E6E6FA !default; // lavender
     }
 
     @include small {
-        // No longer relevant with new '#page-header-hamburger' menu
+        // No longer relevant for new '#page-header-hamburger' menu
         top: .25rem;
         padding: .3rem .75rem;
-        font-size: 0.7rem;
+        //font-size: 0.7rem; // Override for hamburger menu
 
         + .button {
             // margin-top: 1rem;
