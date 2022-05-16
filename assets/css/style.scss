@@ -32,21 +32,20 @@ $lavender: #E6E6FA !default; // lavender
 
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown
-    color: black;
     position: absolute;
     width: 100%;
-    margin-top: .6rem;
+    margin-top: .7rem;
 }
 
 #dropdown-content a {
-    //color: black;
+    color: black;
     padding: 6px;
     font-size: 1rem;
     text-decoration: none;
     display: block;
 }
 
-#dropdown-content a:hover {background-color: #f1f1f1}
+#dropdown-content a:hover { color: yellow }
 
 .dropdown:hover #dropdown-content {
     display: block;
