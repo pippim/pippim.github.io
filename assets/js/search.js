@@ -165,10 +165,11 @@ const c = document.getElementById('search-modal-close');    // 'X' close search 
 const d = document.getElementById('page-header-dropdown');  // The hamburger menu
 const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
 const f = document.getElementById('search-form');           // Wrapper around query & close button
-const q = document.getElementById('search-query');          // Search words input by user
 const h = document.getElementById('search-modal-text')      // Search results html codes
 const i = document.getElementById('search-clear-input');    // 'X' to clear search words
 const m = document.getElementById('search-modal');          // Where search results appear
+const p = document.getElementById('page-header-search');    // page search beside hamburger
+const q = document.getElementById('search-query');          // Search words input by user
 
 set_x_to_close();  // Initial 'X' (close on input bar) status when page refreshed
 
@@ -189,11 +190,25 @@ d.onclick = function (event) {
     //console.log("d.onclick boolDropdown:", boolDropdown)
 }
 
+// When the user clicks on page-header-search button, display mobile search-form
+var boolSearchForm = false
+p.onclick = function (event) {
+    // event.preventDefault()  // Don't let window.onclick see this click
+    event.stopPropagation()  // Don't let window.onclick see this click
+    //event.stopImmediatePropagation()  // Don't let window.onclick see this click
+    boolSearchForm = !boolSearchForm
+    if (boolSearchForm) { f.style.display = "block" }
+                else  { f.style.display = "none" }
+    //console.log("d.onclick boolDropdown:", boolDropdown)
+}
+
 // When the user clicks anywhere outside of the modal(m) close it
 window.onclick = function (event) {
     if (!m.contains(event.target)) { m.style.display = "none"; }
     e.style.display = "none";  // Close dropdown menu options
     boolDropdown = false
+    f.style.display = "none";  // Close search form
+    boolSearchForm = false
     //console.log("window.onclick: boolDropdown:", boolDropdown)
 }
 
