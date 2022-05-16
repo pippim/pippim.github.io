@@ -178,10 +178,9 @@ c.onclick = function () {
 }
 
 // When the user clicks on page-header-hamburger button, display mobile dropdown list
-// e.style.display = "none";  // Set default in js, doesn't work in css styling?
 var boolDropdown = false
 d.onclick = function (event) {
-    event.preventDefault()  // Don't let window.onclick see this click
+    event.stopImmediatePropagation()  // Don't let window.onclick see this click
     boolDropdown = !boolDropdown
     if (boolDropdown) { e.style.display = "block" }
                 else  { e.style.display = "none" }
@@ -191,7 +190,7 @@ d.onclick = function (event) {
 // When the user clicks anywhere outside of the modal(m) close it
 window.onclick = function (event) {
     if (!m.contains(event.target)) { m.style.display = "none"; }
-    e.style.display = "none";
+    e.style.display = "none";  // Close dropdown menu options
 }
 
 f.addEventListener('submit', submitted);
