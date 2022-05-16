@@ -177,7 +177,7 @@ set_x_to_close();  // Initial 'X' (close on input bar) status when page refreshe
 // When the user clicks on <span> (x), close the modal
 c.onclick = function () {
     event.stopPropagation()  // Don't let window.onclick see this click
-    m.style.display = "none";   // Turn off display for search results
+    m.style.display = "none";   // Turn off display for search results modal
 }
 
 // When the user clicks on page-header-hamburger button, display mobile dropdown list
@@ -203,7 +203,7 @@ p.onclick = function (event) {
     boolSearchForm = !boolSearchForm
     if (boolSearchForm) {
         f.style.display = "flex"
-        f.insertAfter('#search-form-location')
+        // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
         // Hamburger dropdown may be open and stopPropagation stops window.click() running
         e.style.display = "none";  // Close dropdown menu options
         boolDropdown = false
