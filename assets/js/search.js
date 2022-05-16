@@ -180,6 +180,8 @@ c.onclick = function () {
 // When the user clicks on page-header-hamburger button, display mobile dropdown list
 var boolDropdown = false
 d.onclick = function (event) {
+    event.preventDefault()  // Don't let window.onclick see this click
+    event.stopPropagation()  // Don't let window.onclick see this click
     event.stopImmediatePropagation()  // Don't let window.onclick see this click
     boolDropdown = !boolDropdown
     if (boolDropdown) { e.style.display = "block" }
