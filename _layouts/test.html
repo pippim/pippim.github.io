@@ -47,11 +47,11 @@
           <a href="programs.html" class="button">💻 Programs</a>
         {% endunless %}
         <a href="mailto:pippim.com@gmail.com" class="button">📧 Email</a>
-        <!-- Draggable DIV -->
-        {% include tcm-window.html %}
-      </div>
+      </span>
       <div id="page-header-hamburger">
-        <button id="page-header-dropdown" class="button">&#x2630;</button>
+        <span id="page-header-dropdown" class="button"
+              >&#x2630;
+        </span>
         <div id="dropdown-content">
           <a href="https://pippim.github.io/" class="button">⌂ Home</a>
           <a href="about.html" class="button">❓ About</a>
@@ -60,6 +60,8 @@
           <a href="mailto:pippim.com@gmail.com" class="button">📧 Email</a>
         </div>
       </div>
+      <!-- Draggable DIV -->
+      {% include tcm-window.html %}
     </header>
 
     <!-- javascript for search bar -->
