@@ -193,8 +193,8 @@ d.onclick = function (event) {
 window.onclick = function (event) {
     if (!m.contains(event.target)) { m.style.display = "none"; }
     e.style.display = "none";  // Close dropdown menu options
-    console.log("window.onclick:", event)
     boolDropdown = false
+    console.log("window.onclick:", event)
 }
 
 f.addEventListener('submit', submitted);
