@@ -182,17 +182,19 @@ var boolDropdown = false
 d.onclick = function (event) {
     event.preventDefault()  // Don't let window.onclick see this click
     event.stopPropagation()  // Don't let window.onclick see this click
-    event.stopImmediatePropagation()  // Don't let window.onclick see this click
+    //event.stopImmediatePropagation()  // Don't let window.onclick see this click
     boolDropdown = !boolDropdown
     if (boolDropdown) { e.style.display = "block" }
                 else  { e.style.display = "none" }
-    //console.log("d.onclick boolDropdown:", boolDropdown)
+    console.log("d.onclick boolDropdown:", boolDropdown)
 }
 
 // When the user clicks anywhere outside of the modal(m) close it
 window.onclick = function (event) {
     if (!m.contains(event.target)) { m.style.display = "none"; }
     e.style.display = "none";  // Close dropdown menu options
+    console.log("window.onclick:", event)
+    boolDropdown = false
 }
 
 f.addEventListener('submit', submitted);
