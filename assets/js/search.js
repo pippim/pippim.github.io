@@ -183,6 +183,10 @@ c.onclick = function () {
 // When the user clicks on page-header-hamburger button, display mobile dropdown list
 var boolDropdown = false
 d.onclick = function (event) {
+    //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
+    //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
+    //const f = document.getElementById('search-form');           // Wrapper around query & close button
+    //const m = document.getElementById('search-modal');          // Where search results appear
     event.stopPropagation()  // Don't let window.onclick see this click
     boolDropdown = !boolDropdown
     if (boolDropdown) {
@@ -199,6 +203,11 @@ d.onclick = function (event) {
 // When the user clicks on page-header-search button, display mobile search-form
 var boolSearchForm = false
 p.onclick = function (event) {
+    //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
+    //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
+    //const f = document.getElementById('search-form');           // Wrapper around query & close button
+    //const m = document.getElementById('search-modal');          // Where search results appear
+    //const p = document.getElementById('page-header-search');    // page search beside hamburger
     event.stopPropagation()  // Don't let window.onclick see this click
     boolSearchForm = !boolSearchForm
     if (boolSearchForm) {
@@ -214,12 +223,24 @@ p.onclick = function (event) {
 
 // When the user clicks anywhere outside of the modal(m) close it
 window.onclick = function (event) {
-    if (!m.contains(event.target)) { m.style.display = "none"; }
-    e.style.display = "none";  // Close dropdown menu options
-    boolDropdown = false
-    if (!f.contains(event.target)) {
-        f.style.display = "none";  // Close search form
+    //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
+    //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
+    //const f = document.getElementById('search-form');           // Wrapper around query & close button
+    //const m = document.getElementById('search-modal');          // Where search results appear
+    //const p = document.getElementById('page-header-search');    // page search beside hamburger
+    if (!m.contains(event.target) && m.style.display == "block") {
+        m.style.display = "none"
+        return
+    }
+    if (!f.contains(event.target) && f.style.display == "flex") {
+        f.style.display = "none"  // Close search form
         boolSearchForm = false
+        return
+    }
+    if (e.style.display == "block") {
+        e.style.display = "none"  // Close dropdown menu options
+        boolDropdown = false
+        return
     }
     //console.log("window.onclick: boolDropdown:", boolDropdown)
 }
