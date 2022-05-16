@@ -447,13 +447,13 @@ details[open] > summary {
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
         //margin: 0 6rem 0 6rem;  // Too radical on resize
-        padding: 0 6rem 0 6rem;
+        //padding: 0 6rem 0 6rem;  // causing search-query to shrink inside
         height: 2rem; }
     @include medium {
-        padding: 0 4rem 0 4rem;
+        //padding: 0 4rem 0 4rem;  // causing search-query to shrink inside
         height: 1.6rem; }
     @include small {
-        padding: 0 2rem 0 2rem;
+        //padding: 0 2rem 0 2rem;  // causing search-query to shrink inside
         height: 1.2rem; }
 }
 
