@@ -170,6 +170,7 @@ const i = document.getElementById('search-clear-input');    // 'X' to clear sear
 const m = document.getElementById('search-modal');          // Where search results appear
 const p = document.getElementById('page-header-search');    // page search beside hamburger
 const q = document.getElementById('search-query');          // Search words input by user
+const s = document.getElementById('search-symbol');         // Mag glass beside search-query
 
 set_x_to_close();  // Initial 'X' (close on input bar) status when page refreshed
 
@@ -181,9 +182,7 @@ c.onclick = function () {
 // When the user clicks on page-header-hamburger button, display mobile dropdown list
 var boolDropdown = false
 d.onclick = function (event) {
-    // event.preventDefault()  // Don't let window.onclick see this click
     event.stopPropagation()  // Don't let window.onclick see this click
-    //event.stopImmediatePropagation()  // Don't let window.onclick see this click
     boolDropdown = !boolDropdown
     if (boolDropdown) { e.style.display = "block" }
                 else  { e.style.display = "none" }
@@ -193,9 +192,7 @@ d.onclick = function (event) {
 // When the user clicks on page-header-search button, display mobile search-form
 var boolSearchForm = false
 p.onclick = function (event) {
-    // event.preventDefault()  // Don't let window.onclick see this click
     event.stopPropagation()  // Don't let window.onclick see this click
-    //event.stopImmediatePropagation()  // Don't let window.onclick see this click
     boolSearchForm = !boolSearchForm
     if (boolSearchForm) { f.style.display = "block" }
                 else  { f.style.display = "none" }
@@ -207,8 +204,10 @@ window.onclick = function (event) {
     if (!m.contains(event.target)) { m.style.display = "none"; }
     e.style.display = "none";  // Close dropdown menu options
     boolDropdown = false
-    f.style.display = "none";  // Close search form
-    boolSearchForm = false
+    if (!f.contains(event.target)) {
+        f.style.display = "none";  // Close search form
+        boolSearchForm = false
+    }
     //console.log("window.onclick: boolDropdown:", boolDropdown)
 }
 
