@@ -27,11 +27,12 @@ $lavender: #E6E6FA !default; // lavender
 #page-header-hamburger {
     @include large { display: none; }
     @include medium { display: none; }
-    @include small { display: block; }
+    @include small { display: block; font-size: 1rem; }
 }
 
-page-header-search {
+#page-header-search {
     margin-left: 2rem;
+    font-size: 1rem;
 }
 
 #dropdown-content {
