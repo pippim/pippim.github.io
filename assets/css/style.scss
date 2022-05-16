@@ -27,7 +27,7 @@ $lavender: #E6E6FA !default; // lavender
 #page-header-hamburger {
     @include large { display: none; }
     @include medium { display: none; }
-    @include small { display: block; font-size: 1rem; }
+    @include small { display: block; font-size: 1rem ! important; }
 }
 
 #page-header-search {
