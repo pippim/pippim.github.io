@@ -257,13 +257,16 @@ window.onclick = function (event) {
 }
 
 var saveBackgroundColor;
+window.addEventListener('DOMContentLoaded', (event) => {
+    // https://stackoverflow.com/a/42526074/6929343
+    saveBackgroundColor = document.getElementById('content').style.backgroundColor
+});
 
 function restoreContentBackground() {
     document.getElementById('content').style.backgroundColor=saveBackgroundColor
 }
 function setContentBackground() {
-    saveBackgroundColor = document.getElementById('content').style.backgroundColor
-    document.getElementById('content').style.backgroundColor="grey"
+    document.getElementById('content').style.backgroundColor="#f1f1f1"
 }
 
 f.addEventListener('submit', submitted);
