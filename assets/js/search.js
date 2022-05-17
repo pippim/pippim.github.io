@@ -268,15 +268,15 @@ function restoreContentBackground() {
     //document.getElementById('content').style.backgroundColor = saveBackgroundColor
     var elm = document.getElementById('content')
     elm.style.filter = "brightness(1)"
-    elm.backgroundColor = "white"
-    elm.opacity = 1
+    elm.style.backgroundColor = "white"
+    elm.style.opacity = 1
     elm.overflow = auto
 }
 function setContentBackground() {
     var elm = document.getElementById('content')
     elm.style.filter = "brightness(.3)"
-    elm.backgroundColor = "#333333"
-    elm.opacity = .3
+    elm.style.backgroundColor = "#333333"
+    elm.style.opacity = .3
     elm.overflow = hidden
 }
 
