@@ -31,26 +31,35 @@
       <h1 class="project-name linear-wipe">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <!-- <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
 
-      <div id="page-header-buttons">
+      <div id="page-header-buttons" style="display: inline-block">
         <a href="https://pippim.github.io/" class="button">⌂ Home</a>
         <a href="about.html" class="button">❓ About</a>
         <a href="answers.html" class="button">✅ Answers</a>
         <a href="programs.html" class="button">💻 Programs</a>
         <a href="mailto:pippim.com@gmail.com" class="button">📧 Email</a>
         <span class="page-header-search button"
-              title="Search {{ site.title }} Website"
-              >&#x1F50D;
+          title="Search {{ site.title }} Website"
+          >&#x1F50D;
         </span>
+        <!-- The Cookie Machine (TCM) - Transparent Button -->
+        <button class="tcm-button"
+          title="The Cookie Machine, not-so-secret, popup, draggable window">
+        </button>
+
       </div>
-      <div id="page-header-hamburger">
+      <div id="page-header-hamburger" style="display: inline-block">
         <span id="page-header-dropdown" class="button"
-              title="Navigation buttons"
-              >&#x2630;
+          title="Navigation buttons"
+          >&#x2630;
         </span>
         <span id="page-header-search" class="button"
-              title="Search {{ site.title }} Website"
-              >&#x1F50D;
+          title="Search {{ site.title }} Website"
+          >&#x1F50D;
         </span>
+        <!-- The Cookie Machine (TCM) - Transparent Button -->
+        <button class="tcm-button"
+          title="The Cookie Machine, not-so-secret, popup, draggable window">
+        </button>
         <div id="dropdown-content">
           <a href="https://pippim.github.io/" class="button">⌂ Home</a>
           <a href="about.html" class="button">❓ About</a>
@@ -59,17 +68,16 @@
           <a href="mailto:pippim.com@gmail.com" class="button">📧 Email</a>
         </div>
       </div>
-
-      <!-- Draggable DIV -->
-      {% include tcm-window.html %}
     </header>
 
     <!-- For mobile, search form below page header -->
-    <div id="search-form-location"></div>
+    <!-- <div id="search-form-location"></div> -->
     {% include search.html %}
 
     <!-- javascript for search bar -->
     <script type="text/javascript" src="/assets/js/search.js" ></script>
+
+    {% include tcm-window-main.html %}
 
     <main id="content" class="main-content" role="main">
       {{ content }}
