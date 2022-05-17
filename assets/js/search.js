@@ -260,8 +260,8 @@ var saveBackgroundColor;
 window.addEventListener('DOMContentLoaded', (event) => {
     // https://stackoverflow.com/a/42526074/6929343
     saveBackgroundColor = document.getElementById('content').style.backgroundColor
-    var brightness = document.getElementById('content').style.brightness
-    console.log("brightness:", brightness)
+    var filter = document.getElementById('content').style.filter
+    console.log("filter.brightness:", filter)
 });
 
 function restoreContentBackground() {
