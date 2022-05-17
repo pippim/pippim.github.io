@@ -76,25 +76,68 @@ function dragElement(elm) {
 }
 
 document.querySelector('#tcm_button').addEventListener('click', () => {
-  // TCM button click on webpage header
-  document.querySelector('#tcm_window').style.cssText = `
-    display: flex;
-    flex-direction: column;
-  `;
-  // Make tcm_button invisible
-  document.querySelector('#tcm_button').style.cssText = `
-    opacity: 0.0;
-    background: transparent;
-    background-image: none;
-    border: none;
-  `;
+    // TCM button click on webpage header
+    document.querySelector('#tcm_window').style.cssText = `
+        display: flex;
+        flex-direction: column;
+    `;
+    // Make tcm_button invisible
+    document.querySelector('#tcm_button').style.cssText = `
+        opacity: 0.0;
+        background: transparent;
+        background-image: none;
+        border: none;
+    `;
 });
 
+
+// Get all .tcm-button class instances `/_layouts/default.html`
+var tcmButtonClasses = document.getElementsByClassName("tcm-button");
+
+var tcmButtonClick = function() {
+    // TCM button was clicked on one of page header <div>s
+    console.log("tcmButtonClick:")
+    document.querySelector('#tcm_window').style.cssText = `
+        display: flex;
+        flex-direction: column;
+    `;
+    // Make tcm-button class invisible
+    for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+        tcmButtonClasses[ndx].style.cssText = `
+            opacity: 0.0;
+            background: transparent;
+            background-image: none;
+            border: none;
+        `;
+    }
+};
+
+for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+    tcmButtonClasses[ndx].addEventListener('click', tcmButtonClick, false);
+}
+
+
+/* TODO: listen for class: https://stackoverflow.com/q/19655189/6929343
+
+    var elements = document.getElementsByClassName("className");
+
+    var myFunction = function() {
+        var attribute = this.getAttribute("data-myattribute");
+        alert(attribute);
+    };
+
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('click', myFunction, false);
+    }
+
+*/
+
+
 document.querySelector('#tcm_window_close').addEventListener('click', () => {
-  // Hide tcm_window
-  document.querySelector('#tcm_window').style.display = "none";
-  // Make tcm_button (main page header) visible?
-  if (vis_this_page == "true") { makeTcmButtonVisible() }
+    // Hide tcm_window
+    document.querySelector('#tcm_window').style.display = "none";
+    // Make tcm_button (main page header) visible?
+    if (vis_this_page == "true") { makeTcmButtonVisible() }
 });
 
 
