@@ -268,7 +268,7 @@ function restoreContentBackground() {
     document.getElementById('content').style.backgroundColor=saveBackgroundColor
 }
 function setContentBackground() {
-    document.getElementById('content').style.backgroundColor="#f1f1f1"
+    document.getElementById('content').style.backgroundColor="#f7f7f7"
 }
 
 f.addEventListener('submit', submitted);
