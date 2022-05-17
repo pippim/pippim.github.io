@@ -195,11 +195,11 @@ d.onclick = function (event) {
         f.style.display = "none";  // Close search form
         boolSearchForm = false
         m.style.display = "none";  // close search results modal
-        setContentBackground)
+        setContentBackground()
     }
     else  {
         e.style.display = "none"
-        restoreContentBackground)
+        restoreContentBackground()
     }
     //console.log("d.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
@@ -220,11 +220,11 @@ p.onclick = function (event) {
         // Hamburger dropdown may be open and stopPropagation stops window.click() running
         e.style.display = "none";  // Close dropdown menu options
         boolDropdown = false
-        setContentBackground)
+        setContentBackground()
     }
     else  {
         f.style.display = "none"
-        restoreContentBackground)
+        restoreContentBackground()
     }
     //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
@@ -244,13 +244,13 @@ window.onclick = function (event) {
     if (!f.contains(event.target) && f.style.display == "flex") {
         f.style.display = "none"  // Close search form
         boolSearchForm = false
-        restoreContentBackground)
+        restoreContentBackground()
         return
     }
     if (e.style.display == "block") {
         e.style.display = "none"  // Close dropdown menu options
         boolDropdown = false
-        restoreContentBackground)
+        restoreContentBackground()
         return
     }
     //console.log("window.onclick: boolDropdown:", boolDropdown)
@@ -258,10 +258,10 @@ window.onclick = function (event) {
 
 var saveBackgroundColor();
 
-function restoreContentBackground) {
+function restoreContentBackground() {
     document.getElementById('content').style.backgroundColor=saveBackgroundColor
 }
-function setContentBackground) {
+function setContentBackground() {
     saveBackgroundColor = document.getElementById('content').style.backgroundColor
     document.getElementById('content').style.backgroundColor="grey"
 }
