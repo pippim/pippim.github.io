@@ -265,10 +265,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function restoreContentBackground() {
-    document.getElementById('content').style.backgroundColor=saveBackgroundColor
+    document.getElementById('content').style.backgroundColor = saveBackgroundColor
 }
 function setContentBackground() {
-    document.getElementById('content').style.backgroundColor="#f7f7f7"
+    document.getElementById('content').style.backgroundColor = "#313131"
 }
 
 f.addEventListener('submit', submitted);
