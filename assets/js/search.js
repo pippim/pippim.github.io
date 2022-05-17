@@ -195,11 +195,11 @@ d.onclick = function (event) {
         f.style.display = "none";  // Close search form
         boolSearchForm = false
         m.style.display = "none";  // close search results modal
-        setContentOpacity()
+        setContentBackground)
     }
     else  {
         e.style.display = "none"
-        restoreContentOpacity()
+        restoreContentBackground)
     }
     //console.log("d.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
@@ -220,11 +220,11 @@ p.onclick = function (event) {
         // Hamburger dropdown may be open and stopPropagation stops window.click() running
         e.style.display = "none";  // Close dropdown menu options
         boolDropdown = false
-        setContentOpacity()
+        setContentBackground)
     }
     else  {
         f.style.display = "none"
-        restoreContentOpacity()
+        restoreContentBackground)
     }
     //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
@@ -244,23 +244,26 @@ window.onclick = function (event) {
     if (!f.contains(event.target) && f.style.display == "flex") {
         f.style.display = "none"  // Close search form
         boolSearchForm = false
-        restoreContentOpacity()
+        restoreContentBackground)
         return
     }
     if (e.style.display == "block") {
         e.style.display = "none"  // Close dropdown menu options
         boolDropdown = false
-        restoreContentOpacity()
+        restoreContentBackground)
         return
     }
     //console.log("window.onclick: boolDropdown:", boolDropdown)
 }
 
-function restoreContentOpacity() {
-    document.getElementById('content').style.opacity="1"
+var saveBackgroundColor();
+
+function restoreContentBackground) {
+    document.getElementById('content').style.backgroundColor=saveBackgroundColor
 }
-function setContentOpacity() {
-    document.getElementById('content').style.opacity="0.25"
+function setContentBackground) {
+    saveBackgroundColor = document.getElementById('content').style.backgroundColor
+    document.getElementById('content').style.backgroundColor="grey"
 }
 
 f.addEventListener('submit', submitted);
