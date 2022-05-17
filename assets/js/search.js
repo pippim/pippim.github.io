@@ -260,7 +260,7 @@ function restoreContentOpacity() {
     document.getElementById('content').style.opacity="1"
 }
 function setContentOpacity() {
-    document.getElementById('content').style.opacity="0.5"
+    document.getElementById('content').style.opacity="0.25"
 }
 
 f.addEventListener('submit', submitted);
