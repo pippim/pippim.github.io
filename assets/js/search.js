@@ -270,12 +270,14 @@ function restoreContentBackground() {
     elm.style.filter = "brightness(1)"
     elm.backgroundColor = "white"
     elm.opacity = 1
+    elm.overflow = auto
 }
 function setContentBackground() {
     var elm = document.getElementById('content')
     elm.style.filter = "brightness(.3)"
-    elm.backgroundColor = "grey"
-    elm.opacity = .5
+    elm.backgroundColor = "#333333"
+    elm.opacity = .3
+    elm.overflow = hidden
 }
 
 f.addEventListener('submit', submitted);
