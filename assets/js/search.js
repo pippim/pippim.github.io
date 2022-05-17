@@ -256,7 +256,7 @@ window.onclick = function (event) {
     //console.log("window.onclick: boolDropdown:", boolDropdown)
 }
 
-var saveBackgroundColor();
+var saveBackgroundColor;
 
 function restoreContentBackground() {
     document.getElementById('content').style.backgroundColor=saveBackgroundColor
