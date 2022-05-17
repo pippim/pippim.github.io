@@ -266,13 +266,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 function restoreContentBackground() {
     //document.getElementById('content').style.backgroundColor = saveBackgroundColor
-    document.getElementById('content').style.filter = "brightness(1)"
+    var elm = document.getElementById('content')
+    elm.style.filter = "brightness(1)"
+    elm.backgroundColor = "white"
+    elm.opacity = 1
 }
 function setContentBackground() {
-    var old = document.getElementById('content').style.opacity
-    console.log("opacity:", old)
-    //document.getElementById('content').style.backgroundColor = "#313131"
-    document.getElementById('content').style.filter = "brightness(.3)"
+    var elm = document.getElementById('content')
+    elm.style.filter = "brightness(.3)"
+    elm.backgroundColor = "grey"
+    elm.opacity = .5
 }
 
 f.addEventListener('submit', submitted);
