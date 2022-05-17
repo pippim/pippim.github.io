@@ -195,8 +195,12 @@ d.onclick = function (event) {
         f.style.display = "none";  // Close search form
         boolSearchForm = false
         m.style.display = "none";  // close search results modal
+        setContentOpacity()
     }
-    else  { e.style.display = "none" }
+    else  {
+        e.style.display = "none"
+        restoreContentOpacity()
+    }
     //console.log("d.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
 
@@ -216,33 +220,47 @@ p.onclick = function (event) {
         // Hamburger dropdown may be open and stopPropagation stops window.click() running
         e.style.display = "none";  // Close dropdown menu options
         boolDropdown = false
+        setContentOpacity()
     }
-    else  { f.style.display = "none" }
+    else  {
+        f.style.display = "none"
+        restoreContentOpacity()
+    }
     //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
 
 // When the user clicks anywhere outside of the modal(m) close it
 window.onclick = function (event) {
+    /* We only get clicks not handled by above functions that stopPropagation */
     //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
     //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
     //const m = document.getElementById('search-modal');          // Where search results appear
     //const p = document.getElementById('page-header-search');    // page search beside hamburger
     if (!m.contains(event.target) && m.style.display == "block") {
-        m.style.display = "none"
+        m.style.display = "none"  // Close search results modal
         return
     }
     if (!f.contains(event.target) && f.style.display == "flex") {
         f.style.display = "none"  // Close search form
         boolSearchForm = false
+        restoreContentOpacity()
         return
     }
     if (e.style.display == "block") {
         e.style.display = "none"  // Close dropdown menu options
         boolDropdown = false
+        restoreContentOpacity()
         return
     }
     //console.log("window.onclick: boolDropdown:", boolDropdown)
+}
+
+function restoreContentOpacity() {
+    document.getElementById('content').style.opacity="1"
+}
+function setContentOpacity() {
+    document.getElementById('content').style.opacity="0.5"
 }
 
 f.addEventListener('submit', submitted);
