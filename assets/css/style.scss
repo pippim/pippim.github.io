@@ -546,7 +546,7 @@ details[open] > summary {
     &:hover { opacity: 1.0; filter: brightness(150%); }
     @include large { height: 20px; width: 20px; }
     @include medium { height: 18px; width: 18px; }
-    @include small { height: 16px; width: 16px; }
+    @include small { height: 20px; width: 20px; }  // May 16/22 Was 16/16
 }
 
 // Search Result links that have been visited in purple
@@ -620,7 +620,7 @@ a.search-results:visited {
 #tcm_window_icon {
     // The Cookie Machine Window Icon in #tcm_window_header uses .icon_back{} class
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: middle;style="display: inline-block
     float: left;
     margin-right: .5rem;
     opacity: 1.0;
