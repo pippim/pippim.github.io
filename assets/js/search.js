@@ -191,11 +191,11 @@ d.onclick = function (event) {
     boolDropdown = !boolDropdown
     if (boolDropdown) {
         e.style.display = "block"
+        setContentBackground()
         // Search form may be open and stopPropagation stops window.click() running
         f.style.display = "none";  // Close search form
         boolSearchForm = false
         m.style.display = "none";  // close search results modal
-        setContentBackground()
     }
     else  {
         e.style.display = "none"
@@ -216,11 +216,11 @@ p.onclick = function (event) {
     boolSearchForm = !boolSearchForm
     if (boolSearchForm) {
         f.style.display = "flex"
+        setContentBackground()
         // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
         // Hamburger dropdown may be open and stopPropagation stops window.click() running
         e.style.display = "none";  // Close dropdown menu options
         boolDropdown = false
-        setContentBackground()
     }
     else  {
         f.style.display = "none"
@@ -268,6 +268,8 @@ function restoreContentBackground() {
     document.getElementById('content').style.backgroundColor = saveBackgroundColor
 }
 function setContentBackground() {
+    var old = document.getElementById('content').style.filter
+    console.log("filter.brightness:", old)
     document.getElementById('content').style.backgroundColor = "#313131"
 }
 
