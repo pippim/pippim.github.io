@@ -462,16 +462,34 @@ var switch_on_image = "{{ site.url }}/assets/img/icons/switch_on_right.png"
 var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
 
 function makeTcmButtonVisible () {
-  // Make #tcm_button at Top of Page (header section) visible
-  document.getElementById('tcm_button').style.cssText = `
-    opacity: 1.0;
-    border: thin solid black;
-    border-radius: .5rem;
-    background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
-                      url({{ site.url }}/assets/img/icons/button_background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-  `;
+    // Make #tcm_button at Top of Page (header section) visible
+    // Can be ID #tcm_button or multiple classes .tcm-button
+    if (tcmButtonId !== null) {
+        tcmButtonId.style.cssText = cssTcmButton()
+    }
+    /*
+    document.getElementById('tcm_button').style.cssText = `
+        opacity: 1.0;
+        border: thin solid black;
+        border-radius: .5rem;
+        background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
+                          url({{ site.url }}/assets/img/icons/button_background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    `;
+    */
+}
+
+function cssTcmButton () {
+    return `
+        opacity: 1.0;
+        border: thin solid black;
+        border-radius: .5rem;
+        background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
+                          url({{ site.url }}/assets/img/icons/button_background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    `;
 }
 
 var objTcmVisById = {};  // Current state (on/"true" or off/"false") by id
