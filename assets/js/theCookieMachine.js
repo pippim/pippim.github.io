@@ -103,6 +103,7 @@ for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
         `;
         // Remove the TCM Button so it can't be clicked again
         // ERROR: Uncaught TypeError: tcmButtonClasses[ndx] is undefined
+        console.log("tcmButtonClasses[ndx]:", tcmButtonClasses[ndx])
         tcmButtonClasses[ndx].style.cssText = cssTcmButtonHide()
     });
 }
