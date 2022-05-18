@@ -467,6 +467,9 @@ function makeTcmButtonVisible () {
     if (tcmButtonId !== null) {
         tcmButtonId.style.cssText = cssTcmButton()
     }
+    for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+        tcmButtonClasses[ndx].style.cssText = cssTcmButton()
+    }
     /*
     document.getElementById('tcm_button').style.cssText = `
         opacity: 1.0;
