@@ -42,14 +42,14 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 #dropdown-content a {
-    color: yellow;
+    color: white;
     padding: 6px;
     font-size: 1rem;
     text-decoration: none;
     display: block;
 }
 
-#dropdown-content a:hover { color: white; }
+#dropdown-content a:hover { color: yellow; }
 
 .dropdown:hover #dropdown-content {
     display: block;
