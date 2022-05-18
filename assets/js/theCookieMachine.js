@@ -77,37 +77,31 @@ function dragElementOld(elm) {
 }
 
 if (tcmButtonId !== null) {
+    // TCM button ID click on webpage header (being phased out)
     document.querySelector('#tcm_button').addEventListener('click', () => {
-        // TCM button click on webpage header
+        // Display the TCM draggable window
         document.querySelector('#tcm_window').style.cssText = `
             display: flex;
             flex-direction: column;
         `;
-        // TODO style like makeTcmVisible in tcm-common-code.js
-        /*
-        document.querySelector('#tcm_button').style.cssText = `
-            opacity: 0.0;
-            background: transparent;
-            background-image: none;
-            border: none;
-        `;
-        */
-        // Make #tcm_button invisible
+        // Remove the TCM Button so it can't be clicked again
         tcmButtonId.style.cssText = cssTcmButtonHide()
-        // May 18/22 - Support multiple class definitions of .tcm-button
-        for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
-            tcmButtonClasses[ndx].style.cssText = cssTcmButtonHide()
-        }
     });
 }
 
+// Copy from tcm-common-code.js because it's undefined for some reason??
+var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
+
 for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+    // Listen for TCM button click on webpage header by tcm-button class
     tcmButtonClasses[ndx].addEventListener('click', () => {
-        // TCM button click on webpage header
+        // Display the TCM draggable window
         document.querySelector('#tcm_window').style.cssText = `
             display: flex;
             flex-direction: column;
         `;
+        // Remove the TCM Button so it can't be clicked again
+        // ERROR: Uncaught TypeError: tcmButtonClasses[ndx] is undefined
         tcmButtonClasses[ndx].style.cssText = cssTcmButtonHide()
     });
 }
