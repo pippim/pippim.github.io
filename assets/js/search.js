@@ -276,7 +276,7 @@ function reverseContentDimmed() {
 function setContentDimmed() {
     var elm = document.getElementById('content')
     //elm.style.filter = "brightness(.7)"
-    //elm.style.backgroundColor = "silver"
+    elm.style.backgroundColor = "silver"
     elm.style.opacity = .6
     document.getElementById('body').style.overflow = "hidden"
 
