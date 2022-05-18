@@ -94,7 +94,7 @@ if (tcmButtonId !== null) {
 
 for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
     // Listen for TCM button click on webpage header by tcm-button class
-    if (tcmButtonClasses.length == 0) { return }
+    if (tcmButtonClasses.length == 0) { break }
     tcmButtonClasses[ndx].addEventListener('click', () => {
         // Display the TCM draggable window
         document.querySelector('#tcm_window').style.cssText = `
