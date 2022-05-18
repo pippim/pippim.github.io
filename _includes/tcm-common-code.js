@@ -10,7 +10,7 @@
 // only class used. In the meantime both are supported.
 
 var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
-var tcmButtonId = document.getElementsById("tcm_button");  // Old method < May 18/22
+var tcmButtonId = document.getElementById("tcm_button");  // Old method < May 18/22
 
 var tcmButtonClick = function() {
     // TCM button was clicked on one of page header <div>s
