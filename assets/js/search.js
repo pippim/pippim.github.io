@@ -256,7 +256,7 @@ window.onclick = function (event) {
     //console.log("window.onclick: boolDropdown:", boolDropdown)
 }
 
-var saveBackgroundColor;
+var saveBackgroundColor;  // May 18/22 - New code not working
 window.addEventListener('DOMContentLoaded', (event) => {
     // https://stackoverflow.com/a/42526074/6929343
     saveBackgroundColor = document.getElementById('content').style.backgroundColor

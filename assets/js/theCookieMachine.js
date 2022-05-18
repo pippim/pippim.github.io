@@ -110,7 +110,7 @@ function cssTcmButtonHide () {
         background: transparent;
         background-image: none;
         border: none;
-    `;
+    `
 }
 
 document.querySelector('#tcm_window_close').addEventListener('click', () => {
