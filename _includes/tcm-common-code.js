@@ -481,6 +481,7 @@ function makeTcmButtonVisible () {
 }
 
 function cssTcmButton () {
+    // Return the CSS text that makes a TCM Button visible on page header
     return `
         opacity: 1.0;
         border: thin solid black;
