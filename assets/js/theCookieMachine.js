@@ -76,31 +76,41 @@ function dragElementOld(elm) {
   }
 }
 
-document.querySelector('#tcm_button').addEventListener('click', () => {
-    // TCM button click on webpage header
-    document.querySelector('#tcm_window').style.cssText = `
-        display: flex;
-        flex-direction: column;
-    `;
-    // TODO style like makeTcmVisible in tcm-common-code.js
-    /*
-    document.querySelector('#tcm_button').style.cssText = `
-        opacity: 0.0;
-        background: transparent;
-        background-image: none;
-        border: none;
-    `;
-    */
-    // Make #tcm_button invisible
-    if (tcmButtonId !== null) {
+if (tcmButtonId !== null) {
+    document.querySelector('#tcm_button').addEventListener('click', () => {
+        // TCM button click on webpage header
+        document.querySelector('#tcm_window').style.cssText = `
+            display: flex;
+            flex-direction: column;
+        `;
+        // TODO style like makeTcmVisible in tcm-common-code.js
+        /*
+        document.querySelector('#tcm_button').style.cssText = `
+            opacity: 0.0;
+            background: transparent;
+            background-image: none;
+            border: none;
+        `;
+        */
+        // Make #tcm_button invisible
         tcmButtonId.style.cssText = cssTcmButtonHide()
-    }
-    // May 18/22 - Support multiple class definitions of .tcm-button
-    for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
-        tcmButtonClasses[ndx].style.cssText = cssTcmButtonHide()
-    }
-});
+        // May 18/22 - Support multiple class definitions of .tcm-button
+        for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+            tcmButtonClasses[ndx].style.cssText = cssTcmButtonHide()
+        }
+    });
+}
 
+for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+    tcmButtonClasses[ndx].addEventListener('click', () => {
+        // TCM button click on webpage header
+        document.querySelector('#tcm_window').style.cssText = `
+            display: flex;
+            flex-direction: column;
+        `;
+        tcmButtonClasses[ndx].style.cssText = cssTcmButtonHide()
+    });
+}
 
 function cssTcmButtonHide () {
     // TCM Page Header TCM Button CSS text set by /assets/css/style.scss .tcm-button {}
