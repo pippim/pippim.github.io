@@ -81,43 +81,37 @@ document.querySelector('#tcm_button').addEventListener('click', () => {
         display: flex;
         flex-direction: column;
     `;
-    // Make tcm_button invisible
+    // TODO style like makeTcmVisible in tcm-common-code.js
+    /*
     document.querySelector('#tcm_button').style.cssText = `
         opacity: 0.0;
         background: transparent;
         background-image: none;
         border: none;
     `;
+    */
+    // Make #tcm_button invisible
+    if (tcmButtonId !== null) {
+        tcmButtonId.style.cssText = cssTcmButtonHide()
+    }
+    // May 18/22 - Support multiple class definitions of .tcm-button
+    for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+        tcmButtonClasses[ndx].style.cssText = cssTcmButtonHide()
+    }
 });
 
-/* MOVE TO tcm-common-code.js
 
-// Get all .tcm-button class instances `/_layouts/default.html`
-var tcmButtonClasses = document.getElementsByClassName("tcm-button");
-
-var tcmButtonClick = function() {
-    // TCM button was clicked on one of page header <div>s
-    console.log("tcmButtonClick:")
-    document.querySelector('#tcm_window').style.cssText = `
-        display: flex;
-        flex-direction: column;
+function cssTcmButtonHide () {
+    // TCM Page Header TCM Button CSS text set by /assets/css/style.scss .tcm-button {}
+    // and /_includes/tcm-common-code.js/cssTextButtonShow()
+    return `
+        opacity: 1.0;
+        opacity: 0.0;
+        background: transparent;
+        background-image: none;
+        border: none;
     `;
-    // Make tcm-button class invisible
-    for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
-        tcmButtonClasses[ndx].style.cssText = `
-            opacity: 0.0;
-            background: transparent;
-            background-image: none;
-            border: none;
-        `;
-    }
-};
-
-for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
-    tcmButtonClasses[ndx].addEventListener('click', tcmButtonClick, false);
 }
-*/
-
 
 document.querySelector('#tcm_window_close').addEventListener('click', () => {
     // Hide tcm_window
