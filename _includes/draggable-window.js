@@ -5,7 +5,7 @@
 */
 
 // dragElement() copied from theCookieMachine.js
-function dragElement2(elm) {
+function dragElement(elm) {
     var offX = 0, offY = 0, oldX = 0, oldY = 0, x = 0, y = 0, useTouch = false;
     if (document.getElementById(elm.id + "_header")) {
         // if present, the header is where you move the DIV from:
