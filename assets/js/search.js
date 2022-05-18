@@ -208,29 +208,31 @@ if (d !== null) {
 
 // When the user clicks on page-header-search button, display mobile search-form
 var boolSearchForm = false
-p.onclick = function (event) {
-    //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
-    //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
-    //const f = document.getElementById('search-form');           // Wrapper around query & close button
-    //const m = document.getElementById('search-modal');          // Where search results appear
-    //const p = document.getElementById('page-header-search');    // page search beside hamburger
-    event.stopPropagation()  // Don't let window.onclick see this click
-    boolSearchForm = !boolSearchForm
-    if (boolSearchForm) {
-        f.style.display = "flex"
-        setContentDimmed()
-        // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
-        // Hamburger dropdown may be open and stopPropagation stops window.click() running
-        if (e !== null) {
-            e.style.display = "none";  // Close dropdown menu options
-            boolDropdown = false
+if (p !== null) {
+    p.onclick = function (event) {
+        //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
+        //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
+        //const f = document.getElementById('search-form');           // Wrapper around query & close button
+        //const m = document.getElementById('search-modal');          // Where search results appear
+        //const p = document.getElementById('page-header-search');    // page search beside hamburger
+        event.stopPropagation()  // Don't let window.onclick see this click
+        boolSearchForm = !boolSearchForm
+        if (boolSearchForm) {
+            f.style.display = "flex"
+            setContentDimmed()
+            // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
+            // Hamburger dropdown may be open and stopPropagation stops window.click() running
+            if (e !== null) {
+                e.style.display = "none";  // Close dropdown menu options
+                boolDropdown = false
+            }
         }
+        else  {
+            f.style.display = "none"
+            reverseContentDimmed()
+        }
+        //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
     }
-    else  {
-        f.style.display = "none"
-        reverseContentDimmed()
-    }
-    //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
 
 // When the user clicks anywhere outside of the modal(m) close it
