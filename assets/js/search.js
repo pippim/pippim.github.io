@@ -271,13 +271,13 @@ function reverseContentDimmed() {
     elm.style.filter = "brightness(1)"
     elm.style.backgroundColor = "white"
     elm.style.opacity = 1
-   document.getElementById('body').style.overflow = "auto"
+    document.getElementById('body').style.overflow = "auto"
 }
 function setContentDimmed() {
     var elm = document.getElementById('content')
-    elm.style.filter = "brightness(.7)"
-    elm.style.backgroundColor = "silver"
-    elm.style.opacity = .7
+    //elm.style.filter = "brightness(.7)"
+    //elm.style.backgroundColor = "silver"
+    elm.style.opacity = .6
     document.getElementById('body').style.overflow = "hidden"
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
