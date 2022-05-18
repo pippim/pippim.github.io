@@ -9,7 +9,8 @@
 // ID in only one place. Gradual transition will have removal of ID and
 // only class used. In the meantime both are supported.
 
-var tcmButtonClasses = document.getElementsByClassName("tcm-button");
+var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
+var tcmButtonId = document.getElementsById("tcm_button");  // Old method < May 18/22
 
 var tcmButtonClick = function() {
     // TCM button was clicked on one of page header <div>s
@@ -32,6 +33,9 @@ var tcmButtonClick = function() {
 for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
     tcmButtonClasses[ndx].addEventListener('click', tcmButtonClick, false);
 }
+
+console.log("/_includes/tcm-common-code.js tcm-button classes found:",
+            tcmButtonClasses.length, "tcm_button ID:", tcmButtonId)
 
 function htmlFrontMatter(results, name) {
     // home button & webpage info button uses
