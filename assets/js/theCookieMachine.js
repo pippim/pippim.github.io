@@ -90,10 +90,11 @@ if (tcmButtonId !== null) {
 }
 
 // Copy from tcm-common-code.js because it's undefined for some reason??
-var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
+// var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
 
 for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
     // Listen for TCM button click on webpage header by tcm-button class
+    if (tcmButtonClasses.length == 0) { return }
     tcmButtonClasses[ndx].addEventListener('click', () => {
         // Display the TCM draggable window
         document.querySelector('#tcm_window').style.cssText = `
