@@ -90,6 +90,7 @@ document.querySelector('#tcm_button').addEventListener('click', () => {
     `;
 });
 
+/* MOVE TO tcm-common-code.js
 
 // Get all .tcm-button class instances `/_layouts/default.html`
 var tcmButtonClasses = document.getElementsByClassName("tcm-button");
@@ -115,21 +116,6 @@ var tcmButtonClick = function() {
 for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
     tcmButtonClasses[ndx].addEventListener('click', tcmButtonClick, false);
 }
-
-
-/* TODO: listen for class: https://stackoverflow.com/q/19655189/6929343
-
-    var elements = document.getElementsByClassName("className");
-
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        alert(attribute);
-    };
-
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].addEventListener('click', myFunction, false);
-    }
-
 */
 
 
