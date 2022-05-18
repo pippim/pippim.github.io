@@ -271,14 +271,14 @@ function restoreContentBackground() {
     elm.style.filter = "brightness(1)"
     elm.style.backgroundColor = "white"
     elm.style.opacity = 1
-    elm.style.overflow = "auto"
+    document.style.overflow = "auto"
 }
 function setContentBackground() {
     var elm = document.getElementById('content')
     elm.style.filter = "brightness(.8)"
-    elm.style.backgroundColor = "LightGray"
+    elm.style.backgroundColor = "#D3D3D3"
     elm.style.opacity = .8
-    elm.style.overflow = "hidden"
+    document.style.overflow = "hidden"
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
     console.log("Current marginRight: " + style.marginRight);
