@@ -750,7 +750,7 @@ a.search-results:visited {
 
     @include large { height: 38px; width: 38px; margin-top: 1.25rem; }
     @include medium { height: 32px; width: 32px; margin-top: .75rem; }
-    @include small { height: 26px; width: 26px; margin-top: .5rem; }
+    @include small { height: 38px; width: 38px; margin-top: 1.25rem; }  // May 18/22-was 26x26x.5
 
     &:hover {
         filter: brightness(150%);
