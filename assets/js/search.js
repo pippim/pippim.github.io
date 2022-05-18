@@ -191,7 +191,7 @@ d.onclick = function (event) {
     boolDropdown = !boolDropdown
     if (boolDropdown) {
         e.style.display = "block"
-        setContentBackground()
+        setContentDimmed()
         // Search form may be open and stopPropagation stops window.click() running
         f.style.display = "none";  // Close search form
         boolSearchForm = false
@@ -199,7 +199,7 @@ d.onclick = function (event) {
     }
     else  {
         e.style.display = "none"
-        restoreContentBackground()
+        reverseContentDimmed()
     }
     //console.log("d.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
@@ -216,7 +216,7 @@ p.onclick = function (event) {
     boolSearchForm = !boolSearchForm
     if (boolSearchForm) {
         f.style.display = "flex"
-        setContentBackground()
+        setContentDimmed()
         // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
         // Hamburger dropdown may be open and stopPropagation stops window.click() running
         e.style.display = "none";  // Close dropdown menu options
@@ -224,7 +224,7 @@ p.onclick = function (event) {
     }
     else  {
         f.style.display = "none"
-        restoreContentBackground()
+        reverseContentDimmed()
     }
     //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
@@ -244,13 +244,13 @@ window.onclick = function (event) {
     if (!f.contains(event.target) && f.style.display == "flex") {
         f.style.display = "none"  // Close search form
         boolSearchForm = false
-        restoreContentBackground()
+        reverseContentDimmed()
         return
     }
     if (e.style.display == "block") {
         e.style.display = "none"  // Close dropdown menu options
         boolDropdown = false
-        restoreContentBackground()
+        reverseContentDimmed()
         return
     }
     //console.log("window.onclick: boolDropdown:", boolDropdown)
@@ -265,20 +265,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // <empty string>> is being returned for both vars??
 });
 
-function restoreContentBackground() {
+function reverseContentDimmed() {
     //document.getElementById('content').style.backgroundColor = saveBackgroundColor
     var elm = document.getElementById('content')
     elm.style.filter = "brightness(1)"
     elm.style.backgroundColor = "white"
     elm.style.opacity = 1
-   window.style.overflow = "auto"
+   document.getElementById('body').style.overflow = "auto"
 }
-function setContentBackground() {
+function setContentDimmed() {
     var elm = document.getElementById('content')
     elm.style.filter = "brightness(.7)"
     elm.style.backgroundColor = "silver"
     elm.style.opacity = .7
-    window.style.overflow = "hidden"
+    document.getElementById('body').style.overflow = "hidden"
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
     console.log("Current marginRight: " + style.marginRight);
