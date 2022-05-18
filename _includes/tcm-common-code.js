@@ -1,7 +1,37 @@
-/* /_includes/tcmButtonVisibility.js code shared by:
+/* /_includes/tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
+
+
+// Get all .tcm-button class instances `/_layouts/default.html` has
+// .tcm-button in two different place. Old format was to have #tcm_button
+// ID in only one place. Gradual transition will have removal of ID and
+// only class used. In the meantime both are supported.
+
+var tcmButtonClasses = document.getElementsByClassName("tcm-button");
+
+var tcmButtonClick = function() {
+    // TCM button was clicked on one of page header <div>s
+    console.log("tcmButtonClick:")
+    document.querySelector('#tcm_window').style.cssText = `
+        display: flex;
+        flex-direction: column;
+    `;
+    // Make tcm-button class invisible
+    for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+        tcmButtonClasses[ndx].style.cssText = `
+            opacity: 0.0;
+            background: transparent;
+            background-image: none;
+            border: none;
+        `;
+    }
+};
+
+for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+    tcmButtonClasses[ndx].addEventListener('click', tcmButtonClick, false);
+}
 
 function htmlFrontMatter(results, name) {
     // home button & webpage info button uses
