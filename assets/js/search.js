@@ -182,26 +182,28 @@ c.onclick = function () {
 
 // When the user clicks on page-header-hamburger button, display mobile dropdown list
 var boolDropdown = false
-d.onclick = function (event) {
-    //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
-    //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
-    //const f = document.getElementById('search-form');           // Wrapper around query & close button
-    //const m = document.getElementById('search-modal');          // Where search results appear
-    event.stopPropagation()  // Don't let window.onclick see this click
-    boolDropdown = !boolDropdown
-    if (boolDropdown) {
-        e.style.display = "block"
-        setContentDimmed()
-        // Search form may be open and stopPropagation stops window.click() running
-        f.style.display = "none";  // Close search form
-        boolSearchForm = false
-        m.style.display = "none";  // close search results modal
+if (d !== null) {
+    d.onclick = function (event) {
+        //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
+        //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
+        //const f = document.getElementById('search-form');           // Wrapper around query & close button
+        //const m = document.getElementById('search-modal');          // Where search results appear
+        event.stopPropagation()  // Don't let window.onclick see this click
+        boolDropdown = !boolDropdown
+        if (boolDropdown) {
+            e.style.display = "block"
+            setContentDimmed()
+            // Search form may be open and stopPropagation stops window.click() running
+            f.style.display = "none";  // Close search form
+            boolSearchForm = false
+            m.style.display = "none";  // close search results modal
+        }
+        else  {
+            e.style.display = "none"
+            reverseContentDimmed()
+        }
+        //console.log("d.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
     }
-    else  {
-        e.style.display = "none"
-        reverseContentDimmed()
-    }
-    //console.log("d.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
 }
 
 // When the user clicks on page-header-search button, display mobile search-form
@@ -219,8 +221,10 @@ p.onclick = function (event) {
         setContentDimmed()
         // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
         // Hamburger dropdown may be open and stopPropagation stops window.click() running
-        e.style.display = "none";  // Close dropdown menu options
-        boolDropdown = false
+        if (e !== null) {
+            e.style.display = "none";  // Close dropdown menu options
+            boolDropdown = false
+        }
     }
     else  {
         f.style.display = "none"
@@ -237,17 +241,17 @@ window.onclick = function (event) {
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
     //const m = document.getElementById('search-modal');          // Where search results appear
     //const p = document.getElementById('page-header-search');    // page search beside hamburger
-    if (!m.contains(event.target) && m.style.display == "block") {
+    if (!m.contains(event.target) && m.style.display != "none") {
         m.style.display = "none"  // Close search results modal
         return
     }
-    if (!f.contains(event.target) && f.style.display == "flex") {
+    if (!f.contains(event.target) && f.style.display != "none") {
         f.style.display = "none"  // Close search form
         boolSearchForm = false
         reverseContentDimmed()
         return
     }
-    if (e.style.display == "block") {
+    if (e !== null & e.style.display != "none") {
         e.style.display = "none"  // Close dropdown menu options
         boolDropdown = false
         reverseContentDimmed()
