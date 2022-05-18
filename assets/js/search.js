@@ -261,7 +261,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // https://stackoverflow.com/a/42526074/6929343
     saveBackgroundColor = document.getElementById('content').style.backgroundColor
     var filter = document.getElementById('content').style.filter
-    console.log("filter.brightness:", filter, "saveBackgroundColor:", saveBackgroundColor)
+    //console.log("filter.brightness:", filter, "saveBackgroundColor:", saveBackgroundColor)
+    // <empty string>> is being returned for both vars??
 });
 
 function restoreContentBackground() {
@@ -274,10 +275,14 @@ function restoreContentBackground() {
 }
 function setContentBackground() {
     var elm = document.getElementById('content')
-    elm.style.filter = "brightness(.9)"
-    elm.style.backgroundColor = "light-gray"
+    elm.style.filter = "brightness(.8)"
+    elm.style.backgroundColor = "LightGray"
     elm.style.opacity = .8
     elm.style.overflow = "hidden"
+
+    var style = elm.currentStyle || window.getComputedStyle(elm);
+    console.log("Current marginRight: " + style.marginRight);
+
 }
 
 f.addEventListener('submit', submitted);
