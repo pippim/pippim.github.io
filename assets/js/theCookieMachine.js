@@ -18,6 +18,7 @@ import { getCookie , setCookie } from './theCookieJar.js';
     /tcm.md - The Cookie Machine documentation webpage
 */
 {% include tcm-common-code.js %}
+{% include draggable-window.js %}
 
 // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
 window.addEventListener('DOMContentLoaded', (event) => {
@@ -32,7 +33,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 // Make the DIV element draggable:
 dragElement(document.getElementById("tcm_window"));
 
-function dragElement(elm) {
+function dragElementOld(elm) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elm.id + "_header")) {
     // if present, the header is where you move the DIV from:

@@ -10,6 +10,8 @@
 
 */
 
+{% include draggable-window.js %}
+
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
 
 scrSetSize();  // Call on document load
@@ -2896,7 +2898,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
     var oldY = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
     elmDraggable.style.left = (oldX + 20) + "px";
     elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
-    dragElement2(elmDraggable);  // Hooks to make window draggable by title bar
+    dragElement(elmDraggable);  // Hooks to make window draggable by title bar
 
     popIndex += 1;  // Our new entry count and the next index to add
     msgq[p['idWindow']] = p;  // Add entry to msgq object
