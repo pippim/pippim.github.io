@@ -253,7 +253,7 @@ window.onclick = function (event) {
         reverseContentDimmed()
         return
     }
-    if (e !== null & e.style.display != "none") {
+    if (e !== null && e.style.display != "none") {
         e.style.display = "none"  // Close dropdown menu options
         boolDropdown = false
         reverseContentDimmed()
