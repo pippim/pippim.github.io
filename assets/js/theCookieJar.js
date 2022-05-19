@@ -41,4 +41,14 @@ export function getCookie(cname) {
   return "";
 }
 
+// Tip of the Iceberg: https://stackoverflow.com/a/51853700/6929343
+window.addEventListener('beforeunload', () => {
+  localStorage.windowSize = JSON.stringify({
+    left: window.screenX,
+    top: window.screenY,
+    width: window.outerWidth,
+    height: window.outerHeight,
+  });
+});
+
 /* End of /assets/js/theCookieJar.js */
