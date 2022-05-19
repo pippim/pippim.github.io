@@ -99,7 +99,7 @@ var tcmButtonClassNdx; // Global variable
         //if (tcmButtonClasses[ndx] == null) { continue }
         //if (tcmButtonClasses[ndx] === null) { continue }
         tcmButtonClassNdx = ndx
-        if (tcmButtonClasses[ndx] == undefined) { continue }
+        //if (tcmButtonClasses[ndx] == undefined) { continue }
         tcmButtonClasses[ndx].addEventListener('click', () => {
             // Display the TCM draggable window
             document.querySelector('#tcm_window').style.cssText = `
