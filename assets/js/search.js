@@ -165,6 +165,7 @@ const c = document.getElementById('search-modal-close');    // 'X' close search 
 const d = document.getElementById('page-header-dropdown');  // The hamburger menu
 const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
 const f = document.getElementById('search-form');           // Wrapper around query & close button
+const g = document.getElementsByClassName('page-header-search-button');
 const h = document.getElementById('search-modal-text')      // Search results html codes
 const i = document.getElementById('search-clear-input');    // 'X' to clear search words
 const m = document.getElementById('search-modal');          // Where search results appear
