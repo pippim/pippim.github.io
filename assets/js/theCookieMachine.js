@@ -91,8 +91,8 @@ if (tcmButtonId !== null) {
 
 // Copy from tcm-common-code.js because it's undefined for some reason?? DOM not loaded?
 var tcmButtonClassNdx; // Global variable
-window.addEventListener('DOMContentLoaded', (event) => {
-    tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
+//window.addEventListener('DOMContentLoaded', (event) => {
+//    tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
 
     for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
         // Listen for TCM button click on webpage header by tcm-button class
@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             tcmButtonClasses[tcmButtonClassNdx].style.cssText = cssTcmButtonHide()
         });
     }
-});
+//});
 
 function cssTcmButtonHide () {
     // TCM Page Header TCM Button CSS text set by /assets/css/style.scss .tcm-button {}
