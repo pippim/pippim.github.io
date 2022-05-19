@@ -85,7 +85,8 @@ ws_DEBUG = False  # Don't print debug events
             
     Get object: https://stackoverflow.com/questions/12460378/how-to-get-json-from-url-in-javascript
     
-        $.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main/assets/json/search_include.json', function(data) {
+        $.getJSON('https://raw.githubusercontent.com/pippim/pippim.github.io/main
+        /assets/json/search_include.json', function(data) {
             // JSON result in `data` variable
         });
 
@@ -160,11 +161,12 @@ exclude_word_list = [
     'said', 'script', 'searching', 'seems', 'set', 'she', 'should', 'side',
     'so', 'solution', 'soon', 'someone', 'something', 'sometime',
     'strange', 'suggest', 'suggestion', 'sure',
-    'thank', 'the', 'them', 'then', 'they', 'think', 'thought', 'through',
-    'time', 'tired', 'to', 'today', 'tomorrow', 'tonight', 'tried', 'try',
+    'thank', 'that', 'the', 'them', 'then', 'they', 'think', 'this',
+    'though', 'thought', 'through', 'time', 'tired', 'to', 'today',
+    'tomorrow', 'tonight', 'tried', 'try',
     'ubuntu', 'unknown', 'until', 'unless', 'us',
     'very', 'vex', 'verify',
-    'who', 'what', 'where', 'when', 'why', 'want', 'way', 'we', 'whenever',
+    'want', 'way', 'we', 'what', 'when', 'whenever', 'where', 'who', 'why',
     'which', 'whichever', 'windows', 'weird', 'will',  'willing', 'wish',
     'wonder', "won't", 'work', 'working', 'would', 'wrong',
     'yes', 'you', 'your', 'yourself', "you're",
@@ -233,9 +235,13 @@ class WebsiteSearch(InitCommonVars):
             return
 
         # remove links so they don't show up in site search dictionary
-        ln = re.sub(r'\[!\[.*?\]\[\d+\]\]\[\d+\]', '', ln)  # [![Image][2][2]
-        ln = re.sub(r'\[.*?\]\[\d+\]', '', ln)              # [Link name][3]
-        ln = re.sub(r'\[.*?\]\(.*?\)', '', ln)              # [Name](https://...)
+        ln = re.sub(r'\[!\[.*?]\[\d+]]\[\d+]', '', ln)  # [![Image][2][2]
+        ln = re.sub(r'\[.*?]\[\d+]', '', ln)            # [Link name][3]
+        ln = re.sub(r'\[.*?]\(.*?\)', '', ln)           # [Name](https://...)
+        # May 18/22 ERROR: Redundant character escape '\]' in RegExp
+        #ln = re.sub(r'\[!\[.*?\]\[\d+\]\]\[\d+\]', '', ln)  # [![Image][2][2]
+        #ln = re.sub(r'\[.*?\]\[\d+\]', '', ln)              # [Link name][3]
+        #ln = re.sub(r'\[.*?\]\(.*?\)', '', ln)              # [Name](https://...)
 
         if len(ln) != line_len:
             self.saved_size += line_len - len(ln)
