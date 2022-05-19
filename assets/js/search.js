@@ -271,20 +271,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // <empty string>> is being returned for both vars??
 });
 
+elmBody = document.getElementById('body')
+
 function reverseContentDimmed() {
     //document.getElementById('content').style.backgroundColor = saveBackgroundColor
     var elm = document.getElementById('content')
     elm.style.filter = "brightness(1)"
     elm.style.backgroundColor = "white"
     elm.style.opacity = 1
-    document.getElementById('body').style.overflow = "auto"
+    if (elmBody !== undefined) { elmBody.style.overflow = "auto" }
 }
 function setContentDimmed() {
     var elm = document.getElementById('content')
     //elm.style.filter = "brightness(.7)"
     elm.style.backgroundColor = "silver"
     elm.style.opacity = .6
-    document.getElementById('body').style.overflow = "hidden"
+    if (elmBody !== undefined) { elmBody.style.overflow = "hidden" }
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
     console.log("Current marginRight: " + style.marginRight);
