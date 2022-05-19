@@ -89,8 +89,8 @@ if (tcmButtonId !== null) {
     });
 }
 
-// Copy from tcm-common-code.js because it's undefined for some reason??
-// var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
+// Copy from tcm-common-code.js because it's undefined for some reason?? DOM not loaded?
+tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
 
 for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
     // Listen for TCM button click on webpage header by tcm-button class
