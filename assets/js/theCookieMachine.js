@@ -91,34 +91,19 @@ if (tcmButtonId !== null) {
 
 // Copy from tcm-common-code.js because it's undefined for some reason?? DOM not loaded?
 var tcmButtonClassNdx; // Global variable
-//window.addEventListener('DOMContentLoaded', (event) => {
-//    tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
-
-    for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
-        // Listen for TCM button click on webpage header by tcm-button class
-        //if (tcmButtonClasses[ndx] == null) { continue }
-        //if (tcmButtonClasses[ndx] === null) { continue }
-        tcmButtonClassNdx = ndx
-        //if (tcmButtonClasses[ndx] == undefined) { continue }
-        tcmButtonClasses[ndx].addEventListener('click', () => {
-            // Display the TCM draggable window
-            document.querySelector('#tcm_window').style.cssText = `
-                display: flex;
-                flex-direction: column;
-            `;
-            // Remove the TCM Button so it can't be clicked again
-            // INITIAL ERROR: Uncaught TypeError: tcmButtonClasses[ndx] is undefined
-            console.log("tcmButtonClasses[ndx]:", tcmButtonClasses[ndx],
-                        "ndx:", ndx, "tcmButtonClassNdx:", tcmButtonClassNdx)
-            // ABOVE: tcmButtonClasses[ndx]: undefined
-
-            // NOW ERROR: theCookieMachine.js:715 Uncaught TypeError:
-            //       Cannot read properties of undefined (reading 'style')
-            //      at HTMLButtonElement.<anonymous> (theCookieMachine.js:715:31)
-            tcmButtonClasses[tcmButtonClassNdx].style.cssText = cssTcmButtonHide()
-        });
-    }
-//});
+for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
+    tcmButtonClassNdx = ndx  // When async listener runs, ndx is end of loop = 2 not 1
+    tcmButtonClasses[ndx].addEventListener('click', () => {
+        console.log("tcm button class ndx:", ndx, "tcmButtonClassNdx:", tcmButtonClassNdx)
+        // Display the TCM draggable window
+        document.querySelector('#tcm_window').style.cssText = `
+            display: flex;
+            flex-direction: column;
+        `;
+        // Remove the TCM Button so it can't be clicked again
+        tcmButtonClasses[tcmButtonClassNdx].style.cssText = cssTcmButtonHide()
+    });
+}
 
 function cssTcmButtonHide () {
     // TCM Page Header TCM Button CSS text set by /assets/css/style.scss .tcm-button {}
