@@ -90,13 +90,16 @@ if (tcmButtonId !== null) {
 }
 
 // Copy from tcm-common-code.js because it's undefined for some reason?? DOM not loaded?
+var tcmButtonClassNdx; // Global variable
 window.addEventListener('DOMContentLoaded', (event) => {
     tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
 
-
     for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
         // Listen for TCM button click on webpage header by tcm-button class
-        if (tcmButtonClasses[ndx] === null) { continue }
+        //if (tcmButtonClasses[ndx] == null) { continue }
+        //if (tcmButtonClasses[ndx] === null) { continue }
+        tcmButtonClassNdx = ndx
+        if (tcmButtonClasses[ndx] == undefined) { continue }
         tcmButtonClasses[ndx].addEventListener('click', () => {
             // Display the TCM draggable window
             document.querySelector('#tcm_window').style.cssText = `
@@ -104,9 +107,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 flex-direction: column;
             `;
             // Remove the TCM Button so it can't be clicked again
-            // ERROR: Uncaught TypeError: tcmButtonClasses[ndx] is undefined
-            console.log("tcmButtonClasses[ndx]:", tcmButtonClasses[ndx])
-            tcmButtonClasses[ndx].style.cssText = cssTcmButtonHide()
+            // INITIAL ERROR: Uncaught TypeError: tcmButtonClasses[ndx] is undefined
+            console.log("tcmButtonClasses[ndx]:", tcmButtonClasses[ndx],
+                        "ndx:", ndx, "tcmButtonClassNdx:", tcmButtonClassNdx)
+            // ABOVE: tcmButtonClasses[ndx]: undefined
+
+            // NOW ERROR: theCookieMachine.js:715 Uncaught TypeError:
+            //       Cannot read properties of undefined (reading 'style')
+            //      at HTMLButtonElement.<anonymous> (theCookieMachine.js:715:31)
+            tcmButtonClasses[tcmButtonClassNdx].style.cssText = cssTcmButtonHide()
         });
     }
 });
