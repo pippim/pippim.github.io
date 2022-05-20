@@ -165,10 +165,12 @@ const c = document.getElementById('search-modal-close');    // 'X' close search 
 const d = document.getElementById('page-header-dropdown');  // The hamburger menu
 const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
 const f = document.getElementById('search-form');           // Wrapper around query & close button
-const g = document.getElementsByClassName('page-header-search-button');
 const h = document.getElementById('search-modal-text')      // Search results html codes
 const i = document.getElementById('search-clear-input');    // 'X' to clear search words
 const m = document.getElementById('search-modal');          // Where search results appear
+// n = page header search button Class list beside hamburger.
+// Will replace p (page-header-search ID) after all pages are converted
+const n = document.getElementsByClassName('page-header-search-button');
 const p = document.getElementById('page-header-search');    // page search beside hamburger
 const q = document.getElementById('search-query');          // Search words input by user
 const s = document.getElementById('search-symbol');         // Mag glass beside search-query
@@ -215,6 +217,9 @@ if (p !== null) {
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
         //const f = document.getElementById('search-form');           // Wrapper around query & close button
         //const m = document.getElementById('search-modal');          // Where search results appear
+        // n = page header search button Class list beside hamburger.
+        // Will replace p (page-header-search ID) after all pages are converted
+        //const n = document.getElementsByClassName('page-header-search-button');
         //const p = document.getElementById('page-header-search');    // page search beside hamburger
         event.stopPropagation()  // Don't let window.onclick see this click
         boolSearchForm = !boolSearchForm
@@ -236,6 +241,40 @@ if (p !== null) {
     }
 }
 
+// Loop through all class named .tcm-button
+var ndxPageHeaderButton; // Global variable
+for (var ndx = 0; ndx < n.length; ndx++) {
+    ndxPageHeaderButton = ndx  // When async listener runs, ndx is end of loop = 2 not 1
+    n[ndx].onclick = function (event) {
+        //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
+        //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
+        //const f = document.getElementById('search-form');           // Wrapper around query & close button
+        //const m = document.getElementById('search-modal');          // Where search results appear
+        // n = page header search button Class list beside hamburger.
+        // Will replace p (page-header-search ID) after all pages are converted
+        //const n = document.getElementsByClassName('page-header-search-button');
+        //const p = document.getElementById('page-header-search');    // page search beside hamburger
+        event.stopPropagation()  // Don't let window.onclick see this click
+        boolSearchForm = !boolSearchForm
+        if (boolSearchForm) {
+            f.style.display = "flex"
+            setContentDimmed()
+            // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
+            // Hamburger dropdown may be open and stopPropagation stops window.click() running
+            if (e !== null) {
+                e.style.display = "none";  // Close dropdown menu options
+                boolDropdown = false
+            }
+        }
+        else  {
+            f.style.display = "none"
+            reverseContentDimmed()
+        }
+        //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
+
+    }
+}
+
 // When the user clicks anywhere outside of the modal(m) close it
 window.onclick = function (event) {
     /* We only get clicks not handled by above functions that stopPropagation */
@@ -243,7 +282,6 @@ window.onclick = function (event) {
     //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
     //const m = document.getElementById('search-modal');          // Where search results appear
-    //const p = document.getElementById('page-header-search');    // page search beside hamburger
     if (!m.contains(event.target) && m.style.display != "none") {
         m.style.display = "none"  // Close search results modal
         return
@@ -272,7 +310,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // <empty string>> is being returned for both vars??
 });
 
-elmBody = document.getElementById('body')
+elmBody = document.getElementById('body')  // All the main-content / {{ content }}
 
 function reverseContentDimmed() {
     //document.getElementById('content').style.backgroundColor = saveBackgroundColor
