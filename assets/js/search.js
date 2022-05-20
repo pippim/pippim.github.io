@@ -210,7 +210,7 @@ if (d !== null) {
     }
 }
 
-// When the user clicks on page-header-search button, display mobile search-form
+// When the user clicks ID page-header-search button, display mobile search-form
 var boolSearchForm = false
 if (p !== null) {
     p.onclick = function (event) {
@@ -225,8 +225,9 @@ if (p !== null) {
         event.stopPropagation()  // Don't let window.onclick see this click
         boolSearchForm = !boolSearchForm
         if (boolSearchForm) {
-            f.scrollIntoView()  // Move to top so children have room to grown
+            p.scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
+            f.scrollIntoView()  // Move to top so children have room to grown
             setContentDimmed()
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
@@ -243,7 +244,8 @@ if (p !== null) {
     }
 }
 
-// Loop through all class named .tcm-button
+// Loop through all class named .page-header-search-button
+var ndxPageHeaderSearchButton
 for (var ndx = 0; ndx < n.length; ndx++) {
     // When a class name appears turn off search form display as it means we are using
     // new format and search form no longer appears in page-header. After full conversion
@@ -260,6 +262,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
     background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
     */
 
+    ndxPageHeaderSearchButton = ndx
     n[ndx].onclick = function (event) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
@@ -272,8 +275,9 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         event.stopPropagation()  // Don't let window.onclick see this click
         boolSearchForm = !boolSearchForm
         if (boolSearchForm) {
-            f.scrollIntoView()  // Move to top so children have room to grown
+            n{ndxPageHeaderSearchButton].scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
+            f.scrollIntoView()  // Move to top so children have room to grown
             setContentDimmed()
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
