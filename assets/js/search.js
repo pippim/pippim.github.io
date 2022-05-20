@@ -249,6 +249,14 @@ for (var ndx = 0; ndx < n.length; ndx++) {
     f.style.display = "none"
     f.style.marginTop = "1rem"
     f.style.marginBottom = "1rem"
+    f.style.padding = "1rem"
+    q.style.fontSize = "1.2rem"
+    q.style.height = "auto"
+    /* Make it look like giant button
+    f.style.color = "white"
+    background-color: $header-bg-color;  // For Cayman
+    background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+    */
 
     n[ndx].onclick = function (event) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
