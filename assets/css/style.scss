@@ -30,6 +30,7 @@ $lavender: #E6E6FA !default; // lavender
     @include small { display: block; }
 }
 
+.page-header-search-button,
 #page-header-search {
     margin-left: 2rem;
 }
@@ -479,6 +480,7 @@ details[open] > summary {
 
 #search-symbol {
     background-image: url({{ site.url }}/assets/img/icons//search_symbol.png);
+    margin-left: .5rem;
     margin-right: .5rem;
 }
 
