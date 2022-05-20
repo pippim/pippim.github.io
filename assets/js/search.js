@@ -194,6 +194,7 @@ if (d !== null) {
         event.stopPropagation()  // Don't let window.onclick see this click
         boolDropdown = !boolDropdown
         if (boolDropdown) {
+            d.scrollIntoView(alignToTop)  // Move to top so children have room to grown
             e.style.display = "block"
             setContentDimmed()
             // Search form may be open and stopPropagation stops window.click() running
@@ -225,10 +226,11 @@ if (p !== null) {
         boolSearchForm = !boolSearchForm
         if (boolSearchForm) {
             f.style.display = "flex"
+            e.scrollIntoView(alignToTop)  // Move to top so children have room to grown
             setContentDimmed()
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
-            if (e !== null) {
+            if (e !== null && e != "none") {
                 e.style.display = "none";  // Close dropdown menu options
                 boolDropdown = false
             }
@@ -270,11 +272,12 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         event.stopPropagation()  // Don't let window.onclick see this click
         boolSearchForm = !boolSearchForm
         if (boolSearchForm) {
+            e.scrollIntoView(alignToTop)  // Move to top so children have room to grown
             f.style.display = "flex"
             setContentDimmed()
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
-            if (e !== null) {
+            if (e !== null && e != "none") {
                 e.style.display = "none";  // Close dropdown menu options
                 boolDropdown = false
             }
