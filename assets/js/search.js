@@ -244,8 +244,10 @@ if (p !== null) {
 // Loop through all class named .tcm-button
 for (var ndx = 0; ndx < n.length; ndx++) {
     // When a class name appears turn off search form display as it means we are using
-    // new format and search form no longer appears in page-header
+    // new format and search form no longer appears in page-header. After full conversion
+    // these will be defaults
     f.style.display = "none"
+    f.style.marginTop = "1rem"
 
     n[ndx].onclick = function (event) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
