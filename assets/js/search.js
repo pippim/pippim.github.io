@@ -225,8 +225,8 @@ if (p !== null) {
         event.stopPropagation()  // Don't let window.onclick see this click
         boolSearchForm = !boolSearchForm
         if (boolSearchForm) {
+            f.scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
-            e.scrollIntoView()  // Move to top so children have room to grown
             setContentDimmed()
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
@@ -272,7 +272,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         event.stopPropagation()  // Don't let window.onclick see this click
         boolSearchForm = !boolSearchForm
         if (boolSearchForm) {
-            e.scrollIntoView()  // Move to top so children have room to grown
+            f.scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
             setContentDimmed()
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
