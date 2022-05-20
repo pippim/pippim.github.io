@@ -310,7 +310,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // <empty string>> is being returned for both vars??
 });
 
-elmBody = document.getElementById('body')  // All the main-content / {{ content }}
+elmBody = document.getElementById('body')  // All the main-content
 
 function reverseContentDimmed() {
     //document.getElementById('content').style.backgroundColor = saveBackgroundColor
