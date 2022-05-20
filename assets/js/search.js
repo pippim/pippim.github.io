@@ -238,6 +238,7 @@ if (p !== null) {
         }
         else  {
             f.style.display = "none"
+            m.style.display = "none"  // Search modal may be open
             reverseContentDimmed()
         }
         //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
@@ -275,7 +276,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         event.stopPropagation()  // Don't let window.onclick see this click
         boolSearchForm = !boolSearchForm
         if (boolSearchForm) {
-            n{ndxPageHeaderSearchButton].scrollIntoView()  // Move to top so children have room to grown
+            n[ndxPageHeaderSearchButton].scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
             f.scrollIntoView()  // Move to top so children have room to grown
             setContentDimmed()
@@ -288,6 +289,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         }
         else  {
             f.style.display = "none"
+            m.style.display = "none"  // Search modal may be open
             reverseContentDimmed()
         }
         //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
