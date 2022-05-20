@@ -242,9 +242,11 @@ if (p !== null) {
 }
 
 // Loop through all class named .tcm-button
-var ndxPageHeaderButton; // Global variable
 for (var ndx = 0; ndx < n.length; ndx++) {
-    ndxPageHeaderButton = ndx  // When async listener runs, ndx is end of loop = 2 not 1
+    // When a class name appears turn off search form display as it means we are using
+    // new format and search form no longer appears in page-header
+    f.style.display = "none"
+
     n[ndx].onclick = function (event) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
