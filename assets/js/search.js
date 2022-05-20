@@ -248,6 +248,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
     // these will be defaults
     f.style.display = "none"
     f.style.marginTop = "1rem"
+    f.style.marginBottom = "1rem"
 
     n[ndx].onclick = function (event) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
