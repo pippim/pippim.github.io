@@ -227,7 +227,7 @@ if (p !== null) {
         if (boolSearchForm) {
             //p.scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
-            f.scrollIntoView()  // Move to top so children have room to grown
+            //f.scrollIntoView()  // Move to top so children have room to grown
             setContentDimmed()
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
@@ -246,7 +246,7 @@ if (p !== null) {
 }
 
 // Loop through all class named .page-header-search-button
-var ndxPageHeaderSearchButton
+//var ndxPageHeaderSearchButton
 for (var ndx = 0; ndx < n.length; ndx++) {
     // When a class name appears turn off search form display as it means we are using
     // new format and search form no longer appears in page-header. After full conversion
@@ -263,7 +263,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
     background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
     */
 
-    ndxPageHeaderSearchButton = ndx
+    //ndxPageHeaderSearchButton = ndx
     n[ndx].onclick = function (event) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
@@ -276,9 +276,8 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         event.stopPropagation()  // Don't let window.onclick see this click
         boolSearchForm = !boolSearchForm
         if (boolSearchForm) {
-            n[ndxPageHeaderSearchButton].scrollIntoView()  // Move to top so children have room to grown
+            //n[ndxPageHeaderSearchButton].scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
-            // ABOVE WORKS. BELOW DOESN'T for mobile
             // f.scrollIntoView()  // Move to top so children have room to grown
             setContentDimmed()
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
@@ -408,8 +407,9 @@ function submitted(event) {
     }
     html += "</ol>\n";
 
-    h.innerHTML = html;              // Put search results into modal box
-    m.style.display = "block";       // Display search results by revealing modal
+    h.innerHTML = html;             // Put search results into modal box
+    m.style.display = "block";      // Display search results by revealing modal
+    m.scrollIntoView()              // Give room to display results without scrolling
 }
 
 function get_hits(submit_str) {
