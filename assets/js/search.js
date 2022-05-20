@@ -409,7 +409,12 @@ function submitted(event) {
 
     h.innerHTML = html;             // Put search results into modal box
     m.style.display = "block";      // Display search results by revealing modal
-    m.scrollIntoView()              // Give room to display results without scrolling
+    scrollToJustAbove(m)            // Give room to display results without scrolling
+}
+
+function scrollToJustAbove(element, margin=20) {
+  let dims = element.getBoundingClientRect();
+  window.scrollTo(window.scrollX, dims.top - margin);
 }
 
 function get_hits(submit_str) {
