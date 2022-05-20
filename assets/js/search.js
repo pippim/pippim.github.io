@@ -414,7 +414,8 @@ function submitted(event) {
 
 function scrollToJustAbove(element, margin=10) {
     // From: https://stackoverflow.com/questions/52570291/scrollintoview-20px-above-element
-    let dims = element.getBoundingClientRect();
+    //let dims = element.getBoundingClientRect();
+    let dims = element.offsetTop
     window.scrollTo(window.scrollX, dims.top - margin);
 }
 
