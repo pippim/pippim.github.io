@@ -182,6 +182,7 @@ c.onclick = function () {
     event.stopPropagation()  // Don't let window.onclick see this click
     m.style.display = "none";   // Turn off display for search results modal
     // TODO: Restore original Y Offset before scrolling to make room for modal
+    //       Do we want to close search form too? Saves clicks for user
 }
 
 // When the user clicks on page-header-hamburger button, display mobile dropdown list
@@ -212,6 +213,7 @@ if (d !== null) {
 }
 
 // When the user clicks ID page-header-search button, display mobile search-form
+// TO BE DELETED AFTER CONVERSION
 var boolSearchForm = false
 if (p !== null) {
     p.onclick = function (event) {
@@ -229,6 +231,7 @@ if (p !== null) {
             //p.scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
             //f.scrollIntoView()  // Move to top so children have room to grown
+            scrollToJustAbove(f)
             setContentDimmed()
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
@@ -279,7 +282,8 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         if (boolSearchForm) {
             //n[ndxPageHeaderSearchButton].scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
-            // f.scrollIntoView()  // Move to top so children have room to grown
+            // Move to top so children have room to grown
+            scrollToJustAbove(f)
             setContentDimmed()
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
