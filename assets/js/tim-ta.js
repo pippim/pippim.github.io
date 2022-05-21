@@ -416,7 +416,7 @@ progress {
 }
 
 progress::-webkit-progress-value {
-    width: 20vw;
+    width: 15vw;
     border-radius: .5rem;
 }/* for Chrome/safari*/
 
