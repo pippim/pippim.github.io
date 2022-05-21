@@ -398,11 +398,18 @@ audio { vertical-align:middle }
 }
 
 /* progress bar in Run Timers table */
-progress[value] {
+progress::-moz-progress-bar { background: green; } /* Same color as chrome */
+/* progress[value] { */
+progress {
     /* Reset the default appearance */
     -webkit-appearance: none;
     appearance: none;
 
+    /* TODO
+    @include large { }
+    @include medium { }
+    @include small { }
+    */
     width: 7rem;
     height: 1rem;
     border-radius: .3rem;
