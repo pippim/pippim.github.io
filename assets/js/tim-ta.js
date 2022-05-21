@@ -29,6 +29,7 @@ function scrSetSize() {
     const y = x.getElementsByTagName("progress");  /* To override styling of progress { */
     for (var i=0; i<y.length; i++) {
         console.log("y[i].id:", y[i].id, "y[i].style.width:", y[i].style.width)
+        console.log("getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
 /*
         for (const key of Object.keys(elm)) {
             //console.log("elm[key].style.width:", elm[key].style.width)
