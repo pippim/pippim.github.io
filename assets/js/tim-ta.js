@@ -1097,7 +1097,7 @@ function tabRunTimersHeading() {
     // Format table heading for RunTimers form
     var html = "<tr><th>Progress</th>";
     //if (!scrSmall) { html += "<th>Remaining</th>"; }
-    if (true) { html += "<th>Remaining</th>"; }
+    if (true) { html += "<th>Time</th>"; }
     html += "<th>Task Name</th>";
     return html += "</tr>\n";
 }
