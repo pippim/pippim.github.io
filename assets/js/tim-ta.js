@@ -415,13 +415,13 @@ progress {
     border-radius: .5rem;
 }
 
-::-webkit-progress-bar {
-    width: 7rem;
+progress::-webkit-progress-bar {
+    width: 6rem;
     border-radius: .5rem;
 }/* for Chrome/safari*/
 
 progress::-webkit-progress-value {
-    width: 7rem;
+    width: 6rem;
     border-radius: .5rem;
 }/* for Chrome/safari*/
 
