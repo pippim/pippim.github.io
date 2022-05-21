@@ -31,7 +31,14 @@ function scrSetSize() {
         console.log("y[i].id:", y[i].id,
                     "getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
         if (scrLarge) { y[i].style.width = "26rem" }
-        if (scrMedium) { y[i].style.width = "12rem" }
+        if (scrMedium) {
+            if (scrWidth < 750) {
+                /* Chrome can't handle without splitting Task Name "Tasks Total" */
+                y[i].style.width = "10rem"
+            } else {
+                y[i].style.width = "16rem"
+            }
+        }
         if (scrSmall) { y[i].style.width = "6rem" }
 /*
 
