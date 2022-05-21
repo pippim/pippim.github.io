@@ -410,7 +410,7 @@ progress {
     @include medium { }
     @include small { }
     */
-    width: 7rem;
+    width: 6rem;
     height: 1rem;
     border-radius: .5rem;
 }
