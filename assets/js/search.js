@@ -416,10 +416,14 @@ function scrollToJustAbove(element) {
     // From: https://stackoverflow.com/questions/52570291/scrollintoview-20px-above-element
     //let dims = element.getBoundingClientRect();
     //let dims = element.offsetTop
+    //var margin = 10
     //window.scrollTo(window.scrollX, dims.top - margin);
     // From: https://stackoverflow.com/a/56391657/6929343
     const yOffset = -10;
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    console.log("element.getBoundingClientRect().top:",
+                element.getBoundingClientRect().top,
+                "window.pageYOffset:", window.pageYOffset)
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
