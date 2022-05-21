@@ -29,6 +29,9 @@ function scrSetSize() {
     const y = x.getElementsByTagName("progress");
     for (elm in y) {
         console.log("elm:", elm)
+        for (const key of Object.keys(elm)) {
+            console.log("key:", key)
+        }
 /*    @include large { width: 26rem; }
     @include medium { width: 16rem; }
     @include small { width: 6rem; }
