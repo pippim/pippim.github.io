@@ -397,6 +397,16 @@ audio { vertical-align:middle }
     color: #fff;
 }
 
+/* progress bar in Run Timers table */
+progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 8rem;
+    height: 1rem;
+}
+
 .inpOnOffSwitch {
     vertical-align: middle;
     width: 40px;
@@ -1173,7 +1183,7 @@ function htmlRunTimersDetail(id, name, index, seconds, sound) {
 }  // End of htmlRunTimersDetail(id, name, index, seconds, sound)
 
 function initTimersAfterDOM() {
-    // After innerHTML is set we can bet the elements and set sources
+    // After innerHTML is set we can retrieve elements and set listeners
     for (const name of Object.keys(allTimers)) {
         //var element = document.getElementById(allTimers[name].id);
         let element = document.getElementById(name);
@@ -1186,8 +1196,6 @@ function initTimersAfterDOM() {
     }
 }
 
-/* START OF DUPLICATE CODE
-
 function progressTouched(i, element) {
     /* Pop up control box for Task Name progress bar with:
 
@@ -1196,154 +1204,6 @@ function progressTouched(i, element) {
         - 23EF ⏯︎ play/pause toggle
         - 23E9 ⏩︎ fast forward
         - 23ED ⏭︎ skip to end, next
-
-        Every action (except close) clears control and
-        mounts a new one.
-
-        From: https://www.w3.org/TR/WD-wwwicn.html
-
-         [test: &play.start;]
-    &play.start; - play. Play button for starting a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.fast.forward, play.fast.reverse).
-[test: &play.stop;]
-    &play.stop; - stop play. Stop button for stopping a movie or sound, as on cassette or CD player (cf. play.start, play.pause, play.fast.forward, play.fast.reverse).
-[test: &play.pause;]
-    &play.pause; - pause. Pause button for pausing a movie or sound, as on cassette or CD player (cf. play.start, play.stop, play.fast.forward, play.fast.reverse).
-[test: &play.fast.forward;]
-    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
-[test: &play.fast.reverse;]
-    &play.fast.reverse; - fast reverse. fast reverse button for going back in a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
-    * /
-    popClearByError("task_progress");  // Clear control box, not an error
-    // Was a total progress bar clicked?
-    const cntIndexTasks = ttaProject.arrTasks.length - 1
-    const boolTotalBar = i > cntIndexTasks ? true : false;
-    // What is the running ones-based progress bar number?
-    const activeBarNo = getActiveTimerNo();
-    const boolTouchedActive = i + 1 === activeBarNo ? true : false;
-    //console.log("Clicked on a boolTotalBar?:", boolTotalBar);
-    //console.log("Active Progress Bar number:", activeBarNo);
-    //console.log("boolTouchedActive?:", boolTouchedActive);
-
-    popClearByError("no_tasks_running");
-    if (activeBarNo == 0) {
-        popCreate("e", "No timers are running yet", "no_tasks_running");
-        return;
-    }
-
-    popClearByError("total_task_clicked");
-    if (boolTotalBar) {
-        popCreate("e", "Cannot select a total progress bar",
-                  "total_task_clicked", "elm", element);
-        return;
-    }
-
-    popClearByError("task_not_running");
-    if (!boolTouchedActive) {
-        popCreate("e", "Can only select a running progress bar",
-                  "task_not_running", "elm", element);
-        return;
-    }
-
-    // Create our control box
-    let msg = buildProgressControlBoxBody(i);
-    let btn = buildProgressControlButtons(i);
-    var popId = popCreate("i", msg, "task_progress", "elm", element, btn);
-    popRegisterClose(popId, pcbClose)
-}  // End of progressTouched(i, element)
-
-function buildProgressControlBoxBody(i) {
-    // Get task details into work buffer
-    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
-    var msg = "";
-    msg += "<b><font size='+2'>Timed Task Overrides</font></b><br><br>\n";
-    msg += "Project: <b>" + ttaProject.project_name +
-           "</b> - Task: <b>" + workTask.task_name + "</b><br>";
-    return msg;
-}
-
-function buildProgressControlButtons(i) {
-    /*  list of buttons for popCreate to use:
-        - 23EE ⏮︎ skip to start, previous
-        - 23EA ⏪︎ rewind, fast backwards
-        - 23EF ⏯︎ play/pause toggle
-        - 23E9 ⏩︎ fast forward
-        - 23ED ⏭︎ skip to end, next
-        }
-[test: &play.fast.reverse;]
-        "rewind", "&play.fast.reverse;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        DOUBLE LEFT ARROW:
-        "rewind", "&#xAB;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        DOUBLE LEFT ARROW:
-        "rewind", "&#x2BEC;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
-        "forward", "&play.fast.forward;", "Fast forward", "pcbClickForward(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
-        DOUBLE RIGHT ARROW:
-        "forward", "&#xBB;", "Fast forward", "pcbClickForward(" + i +")",
-        DOUBLE RIGHT ARROW:
-        "forward", "&#x2BEE;", "Fast forward", "pcbClickForward(" + i +")",
-
-    * /
-
-    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
-    var arrButtons = [
-        "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
-        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        "play_toggle", "&#x23EF;︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
-        "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
-    ]
-
-    return arrButtons;
-}  // End of buildProgressControlButtons(i)
-
-function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
-function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
-
-function pcbClickPlayPause(i) {
-    pcbClickCommon(i, "play_toggle");
-    pauseAllTimers = !pauseAllTimers;
-}
-
-function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
-function pcbClickEnd(i) { pcbClickCommon(i, "end"); }
-
-function pcbClickCommon(i, caller) {
-    console.log("pcbClickCommon(i) called from:", caller)
-}
-
-function pcbClose() {
-    // Called from popClose() using preset callback msgq[idWindow] = pcbClose();
-    pauseAllTimers = false;
-}
-
-END OF DUPLICATE CODE */
-
-function progressTouched(i, element) {
-    /* Pop up control box for Task Name progress bar with:
-
-        - 23EE ⏮︎ skip to start, previous
-        - 23EA ⏪︎ rewind, fast backwards
-        - 23EF ⏯︎ play/pause toggle
-        - 23E9 ⏩︎ fast forward
-        - 23ED ⏭︎ skip to end, next
-
-        Every action (except close) clears control and
-        mounts a new one.
-
-        From: https://www.w3.org/TR/WD-wwwicn.html
-
-         [test: &play.start;]
-    &play.start; - play. Play button for starting a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.fast.forward, play.fast.reverse).
-[test: &play.stop;]
-    &play.stop; - stop play. Stop button for stopping a movie or sound, as on cassette or CD player (cf. play.start, play.pause, play.fast.forward, play.fast.reverse).
-[test: &play.pause;]
-    &play.pause; - pause. Pause button for pausing a movie or sound, as on cassette or CD player (cf. play.start, play.stop, play.fast.forward, play.fast.reverse).
-[test: &play.fast.forward;]
-    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
-[test: &play.fast.reverse;]
-    &play.fast.reverse; - fast reverse. fast reverse button for going back in a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
     */
     popClearByError("task_progress");  // Clear control box, not an error
     // Was a total progress bar clicked?
@@ -1400,22 +1260,6 @@ function buildProgressControlButtons(i) {
         - 23EF ⏯︎ play/pause toggle
         - 23E9 ⏩︎ fast forward
         - 23ED ⏭︎ skip to end, next
-        }
-[test: &play.fast.reverse;]
-        "rewind", "&play.fast.reverse;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        DOUBLE LEFT ARROW:
-        "rewind", "&#xAB;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        DOUBLE LEFT ARROW:
-        "rewind", "&#x2BEC;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-    &play.fast.forward; - fast forward. fast-forward button for skipping along a movie or sound, as on cassette or CD player (cf. play.stop, play.pause, play.start, play.fast.reverse).
-        "forward", "&play.fast.forward;", "Fast forward", "pcbClickForward(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
-        DOUBLE RIGHT ARROW:
-        "forward", "&#xBB;", "Fast forward", "pcbClickForward(" + i +")",
-        DOUBLE RIGHT ARROW:
-        "forward", "&#x2BEE;", "Fast forward", "pcbClickForward(" + i +")",
-
     */
 
     workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
