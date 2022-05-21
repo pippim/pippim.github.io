@@ -24,6 +24,15 @@ function scrSetSize() {
     else if (scrWidth > 1007) { scrLarge = true; }
     else { scrMedium = true; }
     //console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
+
+    const y = x.getElementsByTagName("progress");
+    for (elm in y) {
+        console.log("elm:", elm)
+/*    @include large { width: 26rem; }
+    @include medium { width: 16rem; }
+    @include small { width: 6rem; }
+*/
+    }
 }
 
 // window.addEventListener('resize', () => { func1(); func2(); });
@@ -405,14 +414,7 @@ progress {
     -webkit-appearance: none;
     appearance: none;
 
-    /* TODO
-    @include large { }
-    @include medium { }
-    @include small { }
-    */
-    @include large { width: 26rem; }
-    @include medium { width: 16rem; }
-    @include small { width: 6rem; }
+    width: 6rem; /* mobile default width for chrome specifically */
     height: .8rem;
     border-radius: .5rem;
 }
