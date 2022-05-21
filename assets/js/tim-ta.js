@@ -28,8 +28,8 @@ function scrSetSize() {
     const x = document.getElementById("content");  /* Exists in every _layout */
     const y = x.getElementsByTagName("progress");  /* To override styling of progress { */
     for (var i=0; i<y.length; i++) {
-        console.log("y[i].id:", y[i].id,
-                    "getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
+        //console.log("y[i].id:", y[i].id,
+        //            "getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
         if (scrLarge) {
             if (scrWidth < 1200) {
                 /* Chrome can't handle without splitting Task Name "Wash Cycle" */
