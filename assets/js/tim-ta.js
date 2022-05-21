@@ -403,8 +403,9 @@ progress[value] {
     -webkit-appearance: none;
     appearance: none;
 
-    width: 8rem;
+    width: 7rem;
     height: 1rem;
+    border-radius: .3rem;
 }
 
 .inpOnOffSwitch {
