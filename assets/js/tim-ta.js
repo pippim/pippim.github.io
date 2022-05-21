@@ -412,12 +412,12 @@ progress {
     */
     width: 7rem;
     height: 1rem;
-    border-radius: .3rem;
+    border-radius: .5rem;
 }
 
 progress::-webkit-progress-value {
-    width: 7rem;
-    border-radius: .3rem;
+    width: 20vw;
+    border-radius: .5rem;
 }/* for Chrome/safari*/
 
 .inpOnOffSwitch {
