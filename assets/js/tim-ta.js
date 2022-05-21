@@ -31,7 +31,7 @@ function scrSetSize() {
         console.log("y[i].id:", y[i].id,
                     "getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
         if (scrLarge)
-            if (scrWidth < 1150) {
+            if (scrWidth < 1200) {
                 /* Chrome can't handle without splitting Task Name "Wash Cycle" */
                 y[i].style.width = "24rem"
             } else {
@@ -1146,6 +1146,7 @@ function paintRunTimers(i) {
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     initTimersAfterDOM();  // Initialize elements for table row IDs
     ttaElm.scrollIntoView();  // Scroll top level element into view
+    scrSetSize();  // Call on document load. Must also call when RunTimers is painted
 
     // TODO: prompt to begin running
     runAllTimers();  // Run through all timers
