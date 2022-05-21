@@ -412,11 +412,15 @@ function submitted(event) {
     scrollToJustAbove(m)            // Give room to display results without scrolling
 }
 
-function scrollToJustAbove(element, margin=10) {
+function scrollToJustAbove(element) {
     // From: https://stackoverflow.com/questions/52570291/scrollintoview-20px-above-element
     //let dims = element.getBoundingClientRect();
-    let dims = element.offsetTop
-    window.scrollTo(window.scrollX, dims.top - margin);
+    //let dims = element.offsetTop
+    //window.scrollTo(window.scrollX, dims.top - margin);
+    // From: https://stackoverflow.com/a/56391657/6929343
+    const yOffset = -10;
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({top: y, behavior: 'smooth'});
 }
 
 function get_hits(submit_str) {
