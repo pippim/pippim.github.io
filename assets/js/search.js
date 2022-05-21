@@ -181,6 +181,7 @@ set_x_to_close();  // Initial 'X' (close on input bar) status when page refreshe
 c.onclick = function () {
     event.stopPropagation()  // Don't let window.onclick see this click
     m.style.display = "none";   // Turn off display for search results modal
+    // TODO: Restore original Y Offset before scrolling to make room for modal
 }
 
 // When the user clicks on page-header-hamburger button, display mobile dropdown list
@@ -422,8 +423,9 @@ function scrollToJustAbove(element) {
     const yOffset = -80;
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
     console.log("element.getBoundingClientRect().top:",
-                element.getBoundingClientRect().top, "y:", y,
+                element.getBoundingClientRect().top,
                 "window.pageYOffset:", window.pageYOffset)
+    console.log("Applying yOffset:", yOffset, "Results in y:", y)
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
