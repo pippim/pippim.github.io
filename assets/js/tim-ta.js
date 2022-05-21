@@ -27,13 +27,13 @@ function scrSetSize() {
 
     const x = document.getElementById("content");  /* Exists in every _layout */
     const y = x.getElementsByTagName("progress");
-    for (elm in y) {
-        console.log("elm:", elm, "elm.item:", elm.item,
-                    "elm.namedItem:", elm.namedItem,
-                    "elm.length:", elm.length)
+    for (const i; i<y.length; i++) {
+        console.log("y[i].id:", y[i].id, "y[i].width:", y[i].width)
+/*
         for (const key of Object.keys(elm)) {
             //console.log("elm[key].style.width:", elm[key].style.width)
         }
+*/
 /*    @include large { width: 26rem; }
     @include medium { width: 16rem; }
     @include small { width: 6rem; }
