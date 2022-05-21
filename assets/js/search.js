@@ -419,7 +419,7 @@ function scrollToJustAbove(element) {
     //var margin = 10
     //window.scrollTo(window.scrollX, dims.top - margin);
     // From: https://stackoverflow.com/a/56391657/6929343
-    const yOffset = -10;
+    const yOffset = -100;
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
     console.log("element.getBoundingClientRect().top:",
                 element.getBoundingClientRect().top, "y:", y,
