@@ -410,18 +410,18 @@ progress {
     @include medium { }
     @include small { }
     */
-    width: 6rem;
+    @include small { width: 6rem; }
     height: 1rem;
     border-radius: .5rem;
 }
 
 progress::-webkit-progress-bar {
-    width: 6rem;
+    /* width: 6rem; */
     border-radius: .5rem;
 }/* for Chrome/safari*/
 
 progress::-webkit-progress-value {
-    width: 6rem;
+    /* width: 6rem; */
     border-radius: .5rem;
 }/* for Chrome/safari*/
 
