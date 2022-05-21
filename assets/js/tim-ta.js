@@ -416,7 +416,7 @@ progress {
 }
 
 ::-webkit-progress-bar {
-    width: 15vw;
+    width: 7rem;
     border-radius: .5rem;
 }/* for Chrome/safari*/
 
