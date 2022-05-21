@@ -25,6 +25,7 @@ function scrSetSize() {
     else { scrMedium = true; }
     //console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
 
+    const x = document.getElementById("content");  /* Exists in every _layout */
     const y = x.getElementsByTagName("progress");
     for (elm in y) {
         console.log("elm:", elm)
