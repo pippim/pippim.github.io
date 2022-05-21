@@ -14,7 +14,7 @@
 
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
 
-scrSetSize();  // Call on document load
+scrSetSize();  // Call on document load. Must also call when RunTimers is painted
 
 function scrSetSize() {
     // mobiles don't have window.innerWidth
@@ -26,9 +26,9 @@ function scrSetSize() {
     //console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
 
     const x = document.getElementById("content");  /* Exists in every _layout */
-    const y = x.getElementsByTagName("progress");
+    const y = x.getElementsByTagName("progress");  /* To override styling of progress { */
     for (var i=0; i<y.length; i++) {
-        console.log("y[i].id:", y[i].id, "y[i].width:", y[i].width)
+        console.log("y[i].id:", y[i].id, "y[i].style.width:", y[i].style.width)
 /*
         for (const key of Object.keys(elm)) {
             //console.log("elm[key].style.width:", elm[key].style.width)
