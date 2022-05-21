@@ -410,10 +410,15 @@ progress {
     @include medium { }
     @include small { }
     */
-    width: 20rem;
+    width: 7rem;
     height: 1rem;
     border-radius: .5rem;
 }
+
+::-webkit-progress-bar {
+    width: 15vw;
+    border-radius: .5rem;
+}/* for Chrome/safari*/
 
 progress::-webkit-progress-value {
     width: 15vw;
