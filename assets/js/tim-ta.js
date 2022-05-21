@@ -28,7 +28,7 @@ function scrSetSize() {
     const x = document.getElementById("content");  /* Exists in every _layout */
     const y = x.getElementsByTagName("progress");
     for (elm in y) {
-        console.log("elm:", elm, "elm.item:", elm.item,
+        console.log("elm:", elm, "item:", item,
                     "elm.namedItem:", elm.namedItem,
                     "elm.length:", elm.length)
         for (const key of Object.keys(elm)) {
