@@ -31,7 +31,7 @@ function scrSetSize() {
         console.log("y[i].id:", y[i].id,
                     "getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
         if (scrLarge) { y[i].style.width = "26rem" }
-        if (scrMedium) { y[i].style.width = "16rem" }
+        if (scrMedium) { y[i].style.width = "14rem" }
         if (scrSmall) { y[i].style.width = "6rem" }
 /*
 
