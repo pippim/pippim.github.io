@@ -197,7 +197,10 @@ if (d !== null) {
         boolDropdown = !boolDropdown
         if (boolDropdown) {
             d.scrollIntoView()  // Move to top so children have room to grown
+            scrollToJustAbove(d)
+
             e.style.display = "block"
+            scrollToJustAbove(e)
             setContentDimmed()
             // Search form may be open and stopPropagation stops window.click() running
             f.style.display = "none";  // Close search form
