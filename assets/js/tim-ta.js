@@ -30,7 +30,11 @@ function scrSetSize() {
     for (var i=0; i<y.length; i++) {
         console.log("y[i].id:", y[i].id, "y[i].style.width:", y[i].style.width)
         console.log("getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
+        if scrLarge { y[i].style.width = "26rem" }
+        if scrMedium { y[i].style.width = "16rem" }
+        if scrSmall { y[i].style.width = "6rem" }
 /*
+
         for (const key of Object.keys(elm)) {
             //console.log("elm[key].style.width:", elm[key].style.width)
         }
