@@ -30,7 +30,7 @@ function scrSetSize() {
     for (elm in y) {
         console.log("elm:", elm)
         for (const key of Object.keys(elm)) {
-            console.log("elm[key].style.width:", elm[key].style.width)
+            //console.log("elm[key].style.width:", elm[key].style.width)
         }
 /*    @include large { width: 26rem; }
     @include medium { width: 16rem; }
