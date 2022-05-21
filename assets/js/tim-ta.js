@@ -415,6 +415,11 @@ progress {
     border-radius: .3rem;
 }
 
+progress::-webkit-progress-value {
+    width: 7rem;
+    border-radius: .3rem;
+}/* for Chrome/safari*/
+
 .inpOnOffSwitch {
     vertical-align: middle;
     width: 40px;
