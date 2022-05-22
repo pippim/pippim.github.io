@@ -489,6 +489,11 @@ details[open] > summary {
                       url({{ site.url }}/assets/img/icons/button_background.png);
     margin-left: .5rem;
     margin-right: .5rem;
+    cursor: pointer;
+}
+
+.search-symbol-white {
+    cursor: pointer;
 }
 
 .search-symbol-back {
