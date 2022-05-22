@@ -41,6 +41,20 @@ $lavender: #E6E6FA !default; // lavender
     cursor: pointer;
 }
 
+.search-symbol-white {
+    // white search symbol follows hamburger menu button
+    // padding: .25rem .75rem;   // already set in .button { padding: 0px 1rem;
+    //margin-top: 0;  // Set as .4rem in .button {}
+    // Set button size around magnifying glass image fixed at 28x28 size
+    vertical-align: middle;
+    @include large { width: 4.5rem;  height: 3.1rem; }
+    @include medium { width: 4.25rem;  height: 2.75rem; }
+    @include small { width: 4rem;  height: 2.5rem; }
+    // Below doesn't put space between hamburger
+    // @include small { width: 64px;  height: 40px; margin-left: 2rem; }
+    cursor: pointer;
+}
+
 /*
 .page-header-search-button {
     margin-left: 4rem;
@@ -121,6 +135,11 @@ $lavender: #E6E6FA !default; // lavender
         margin-right: .25rem;
         padding: .4rem 0.9rem;
         font-size: 0.8rem;
+        + img {
+            width: 20px;
+            height: 20px;
+        }
+
     }
 }
 
@@ -502,18 +521,6 @@ details[open] > summary {
 }
 */
 
-.search-symbol-white {
-    // padding: .25rem .75rem;   // already set in .button { padding: 0px 1rem;
-    //margin-top: 0;  // Set as .4rem in .button {}
-    // Set button size around magnifying glass image fixed at 28x28 size
-    vertical-align: middle;
-    @include large { width: 72px;  height: 50px; }
-    @include medium { width: 68px;  height: 44px; }
-    @include small { width: 64px;  height: 40px; }
-    // Below doesn't put space between hamburger
-    // @include small { width: 64px;  height: 40px; margin-left: 2rem; }
-    cursor: pointer;
-}
 
 // From: https://stackoverflow.com/a/46296164/692934
 .search-modal {
