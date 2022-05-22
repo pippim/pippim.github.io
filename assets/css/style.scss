@@ -33,6 +33,8 @@ $lavender: #E6E6FA !default; // lavender
 #page-header-buttons, #page-header-hamburger {
     //justify-content: space-between;  // Hamburger and Mag Glass far left and right
     justify-content: center;  // Hamburger and Mag Glass side-by-side
+    flex-direction: row;
+    margin-left: 2rem;
     align-items: center;
     cursor: pointer;
 }
