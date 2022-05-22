@@ -45,7 +45,6 @@ $lavender: #E6E6FA !default; // lavender
     // white search symbol follows hamburger menu button
     -webkit-padding-before: .2rem;  // Chrome has too much padding top
     -webkit-padding-after: .2rem;   // bottom
-    padding: .5rem 1rem;
     @include large { width: 4.5rem;  height: 3.1rem; }
     @include medium { width: 4.25rem;  height: 2.75rem; }
     @include small { width: 4rem;  height: 2.9rem; }
