@@ -25,6 +25,8 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 #page-header-hamburger {
+    margin-left: 2rem;
+    margin-right: 2rem;
     @include large { display: none; }
     @include medium { display: none; }
     @include small { display: block; }
@@ -40,12 +42,9 @@ $lavender: #E6E6FA !default; // lavender
     cursor: pointer;
 }
 
-#page-header-search {
-    margin-left: 2rem;
-}
-
 .page-header-search-button {
-    margin-left: 2rem;
+    margin-left: 4rem;
+    vertical-align: middle;
 }
 
 #dropdown-content {
@@ -137,7 +136,7 @@ $lavender: #E6E6FA !default; // lavender
 
         + .button {
             // margin-top: 1rem;
-            margin-left: 0;
+            //margin-left: 0;
         }
     }
 }
