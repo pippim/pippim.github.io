@@ -484,6 +484,12 @@ details[open] > summary {
     margin-right: .5rem;
 }
 
+.search-symbol {
+    background-image: url({{ site.url }}/assets/img/icons//search_symbol.png);
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
 // From: https://stackoverflow.com/a/46296164/692934
 .search-modal {
     display: none;  // Hidden by default
@@ -522,7 +528,7 @@ details[open] > summary {
 }
 
 #search-clear-input {
-    margin-right: .7rem;
+    margin-left: .7rem;
 }
 
 #search-clear-input,
