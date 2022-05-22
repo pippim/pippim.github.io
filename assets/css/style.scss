@@ -503,10 +503,10 @@ details[open] > summary {
     // float: right;
     cursor: pointer;
 
-    &:hover { opacity: 1.0; filter: brightness(150%); }
-    @include large { height: 2rem; width: 2rem; }
-    @include medium { height: 2rem; width: 2rem; }
-    @include small { height: 2rem; width: 2rem; }
+    &:hover { opacity: 1.0; background-color: yellow; filter: brightness(150%); }
+    @include large { height: 3rem; width: 3rem; }
+    @include medium { height: 3rem; width: 3rem; }
+    @include small { height: 3rem; width: 3rem; }
 }
 
 // From: https://stackoverflow.com/a/46296164/692934
