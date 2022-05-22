@@ -43,6 +43,8 @@ $lavender: #E6E6FA !default; // lavender
 
 .search-symbol-white {
     // white search symbol follows hamburger menu button
+    -webkit-padding-before: .2rem;  // Chrome has too much padding top
+    -webkit-padding-after: .2rem;   // bottom
     @include large { width: 4.5rem;  height: 3.1rem; }
     @include medium { width: 4.25rem;  height: 2.75rem; }
     @include small { width: 4rem;  height: 2.9rem; }
@@ -121,8 +123,6 @@ $lavender: #E6E6FA !default; // lavender
     margin-left: 1rem; // Defaults for large & small
     margin-right: 1rem;
     padding: .5rem 1rem;
-    -webkit-padding-before: .4rem;  // Chrome has too much padding
-    -webkit-padding-after: .4rem;
 
     @include medium {
         // medium screen is a tight squeeze
