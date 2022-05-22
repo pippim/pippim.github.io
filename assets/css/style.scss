@@ -19,16 +19,12 @@ $salmon: #FA8072 !default; // salmon
 $lavender: #E6E6FA !default; // lavender
 
 #page-header-buttons {
-    margin-left: 1rem;
-    margin-right: 1rem;
     @include large { display: flex; }
     @include medium { display: flex; }
     @include small { display: none; }
 }
 
 #page-header-hamburger {
-    margin-left: 1rem;
-    margin-right: 1rem;
     @include large { display: none; }
     @include medium { display: none; }
     @include small { display: block; }
@@ -39,15 +35,16 @@ $lavender: #E6E6FA !default; // lavender
     //justify-content: space-between;  // Hamburger and Mag Glass far left and right
     justify-content: center;  // Hamburger and Mag Glass side-by-side
     flex-direction: row;
-    //margin-left: 2rem;
     align-items: center;
     cursor: pointer;
 }
 
+/*
 .page-header-search-button {
     margin-left: 4rem;
     vertical-align: middle;
 }
+*/
 
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown
@@ -70,6 +67,56 @@ $lavender: #E6E6FA !default; // lavender
     display: block;
 }
 
+.page-header-button {
+    display: inline-block;
+    border-radius: 2rem;
+    vertical-align: middle;
+    color: white;
+    border: 2px solid white;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $header-bg-color;  // For Cayman
+        background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+        border-radius: 2rem;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
+        transition: all .3s;
+        border-radius: 2rem;
+        z-index: -1;
+    }
+    &:hover {
+        color: white;  // hyperlink hover color is blue
+        &:before {
+            width: 100%;
+        }
+    }
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    @include large { padding: .5rem 1rem; }
+    @include medium { padding: .4rem 0.9rem; font-size: 0.8rem; }
+    @include small { padding: .5rem 1rem; }
+}
+
+/* OLD .button to be phased out */
 .button {
     display: inline-block;
     border-radius: 2rem;
@@ -141,53 +188,6 @@ $lavender: #E6E6FA !default; // lavender
             //margin-left: 0;
         }
     }
-}
-
-.page-header-button {
-    display: inline-block;
-    border-radius: 2rem;
-    vertical-align: middle;
-    color: white;
-    border: 2px solid white;
-    transition: all .3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: $header-bg-color;  // For Cayman
-        background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
-        border-radius: 2rem;
-        z-index: -2;
-    }
-    &:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        height: 100%;
-        background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
-        transition: all .3s;
-        border-radius: 2rem;
-        z-index: -1;
-    }
-    &:hover {
-        color: white;  // hyperlink hover color is blue
-        &:before {
-            width: 100%;
-        }
-    }
-
-    @include large { padding: .5rem 1rem; }
-    @include medium { padding: .4rem 0.9rem; font-size: 0.8rem; }
-    @include small { padding: .5rem 1rem; }
 }
 
 .hdr-bar {
