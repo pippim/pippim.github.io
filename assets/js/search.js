@@ -357,7 +357,7 @@ function setContentDimmed() {
     //elm.style.filter = "blur(.1)"
     elm.style.backgroundColor = "#787878"
     //elm.style.filter = "invert(.5)"
-    elm.style.opacity = .5
+    elm.style.opacity = .85
     if (elmBody !== null) { elmBody.style.overflow = "hidden" }
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
