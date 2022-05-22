@@ -206,8 +206,7 @@ if (d !== null) {
             f.style.display = "none";  // Close search form
             boolSearchForm = false
             m.style.display = "none";  // close search results modal
-        }
-        else  {
+        } else  {
             e.style.display = "none"
             reverseContentDimmed()
         }
@@ -352,9 +351,9 @@ function reverseContentDimmed() {
 }
 function setContentDimmed() {
     var elm = document.getElementById('content')
-    //elm.style.filter = "brightness(.7)"
-    elm.style.backgroundColor = "silver"
-    elm.style.opacity = .6
+    elm.style.filter = "brightness(.25)"
+    //elm.style.backgroundColor = "silver"
+    //elm.style.opacity = .6
     if (elmBody !== null) { elmBody.style.overflow = "hidden" }
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
