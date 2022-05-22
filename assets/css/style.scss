@@ -503,9 +503,9 @@ details[open] > summary {
     cursor: pointer;
 
     &:hover { opacity: 1.0; filter: brightness(150%); }
-    @include large { height: 1.2rem; width: 1.2rem; }
-    @include medium { height: 1.1rem; width: 1.1rem; }
-    @include small { height: 1.2rem; width: 1.2rem; }  // May 16/22 Was 16/16
+    @include large { height: 2rem; width: 2rem; }
+    @include medium { height: 2rem; width: 2rem; }
+    @include small { height: 2rem; width: 2rem; }
 }
 
 // From: https://stackoverflow.com/a/46296164/692934
