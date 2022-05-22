@@ -490,6 +490,24 @@ details[open] > summary {
     margin-right: .5rem;
 }
 
+.search-symbol-back {
+    // Used by #tcm_window_close, #search-modal-close & #search-clear-input
+    //display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+    //vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border: none;
+    opacity: 0.5;
+    // float: right;
+    cursor: pointer;
+
+    &:hover { opacity: 1.0; filter: brightness(150%); }
+    @include large { height: 1.2rem; width: 1.2rem; }
+    @include medium { height: 1.1rem; width: 1.1rem; }
+    @include small { height: 1.2rem; width: 1.2rem; }  // May 16/22 Was 16/16
+}
+
 // From: https://stackoverflow.com/a/46296164/692934
 .search-modal {
     display: none;  // Hidden by default
@@ -529,6 +547,7 @@ details[open] > summary {
 
 #search-clear-input {
     margin-left: .7rem;
+    margin-right: .7rem;
 }
 
 #search-clear-input,
