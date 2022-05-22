@@ -344,20 +344,20 @@ elmBody = document.getElementById('body')  // All the main-content
 function reverseContentDimmed() {
     //document.getElementById('content').style.backgroundColor = saveBackgroundColor
     var elm = document.getElementById('content')
-    //elm.style.filter = "brightness(1)"
+    elm.style.filter = "brightness(1)"
     //elm.style.filter = "blur(0)"
     elm.style.backgroundColor = "white"
     //elm.style.filter = "invert(0)"
-    //elm.style.opacity = 1
+    elm.style.opacity = 1
     if (elmBody !== null) { elmBody.style.overflow = "auto" }
 }
 function setContentDimmed() {
     var elm = document.getElementById('content')
-    //elm.style.filter = "brightness(.15)"
+    elm.style.filter = "brightness(.8)"
     //elm.style.filter = "blur(.1)"
     elm.style.backgroundColor = "#787878"
     //elm.style.filter = "invert(.5)"
-    //elm.style.opacity = .8
+    elm.style.opacity = .5
     if (elmBody !== null) { elmBody.style.overflow = "hidden" }
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
