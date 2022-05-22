@@ -345,19 +345,21 @@ function reverseContentDimmed() {
     //document.getElementById('content').style.backgroundColor = saveBackgroundColor
     var elm = document.getElementById('content')
     elm.style.filter = "brightness(1)"
-    elm.style.backgroundColor = "white"
-    elm.style.opacity = 1
+    elm.style.filter = "blur(0)"
+    //elm.style.backgroundColor = "white"
+    //elm.style.opacity = 1
     if (elmBody !== null) { elmBody.style.overflow = "auto" }
 }
 function setContentDimmed() {
     var elm = document.getElementById('content')
-    elm.style.filter = "brightness(.25)"
+    elm.style.filter = "brightness(.15)"
+    elm.style.filter = "blur(10)"
     //elm.style.backgroundColor = "silver"
     //elm.style.opacity = .6
     if (elmBody !== null) { elmBody.style.overflow = "hidden" }
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
-    console.log("Current marginRight: " + style.marginRight);
+    //console.log("Current marginRight: " + style.marginRight);
 
 }
 
@@ -428,10 +430,10 @@ function scrollToJustAbove(element) {
     // From: https://stackoverflow.com/a/56391657/6929343
     const yOffset = -80;
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    console.log("element.getBoundingClientRect().top:",
-                element.getBoundingClientRect().top,
-                "window.pageYOffset:", window.pageYOffset)
-    console.log("Applying yOffset:", yOffset, "Results in y:", y)
+    //console.log("element.getBoundingClientRect().top:",
+    //            element.getBoundingClientRect().top,
+    //            "window.pageYOffset:", window.pageYOffset)
+    //console.log("Applying yOffset:", yOffset, "Results in y:", y)
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
