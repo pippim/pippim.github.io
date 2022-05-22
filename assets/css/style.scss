@@ -506,7 +506,7 @@ details[open] > summary {
 
     &:hover { opacity: 1.0; background-color: yellow; filter: brightness(150%); }
     @include large { height: 3rem; width: 3rem; }
-    @include medium { height: 2.5rem; width: 2.5rem; }
+    @include medium { height: 2.3rem; width: 2.3rem; }
     @include small { height: 3rem; width: 3rem; }
 }
 
