@@ -197,11 +197,11 @@ if (d !== null) {
         boolDropdown = !boolDropdown
         if (boolDropdown) {
             d.scrollIntoView()  // Move to top so children have room to grown
-            scrollToJustAbove(d)
 
             e.style.display = "block"
-            scrollToJustAbove(e)
             setContentDimmed()
+            // Move to top so children have room to grown (after scrollbar removed)
+            scrollToJustAbove(e)
             // Search form may be open and stopPropagation stops window.click() running
             f.style.display = "none";  // Close search form
             boolSearchForm = false
@@ -233,9 +233,9 @@ if (p !== null) {
         if (boolSearchForm) {
             //p.scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
-            //f.scrollIntoView()  // Move to top so children have room to grown
-            scrollToJustAbove(f)
             setContentDimmed()
+            // Move to top so children have room to grown (after scrollbar removed)
+            scrollToJustAbove(f)
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
             if (e !== null && e != "none") {
@@ -285,9 +285,9 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         if (boolSearchForm) {
             //n[ndxPageHeaderSearchButton].scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
-            // Move to top so children have room to grown
-            scrollToJustAbove(f)
             setContentDimmed()
+            // Move to top so children have room to grown (after scrollbar removed)
+            scrollToJustAbove(f)
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
             if (e !== null && e != "none") {
