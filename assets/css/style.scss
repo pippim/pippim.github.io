@@ -19,12 +19,14 @@ $salmon: #FA8072 !default; // salmon
 $lavender: #E6E6FA !default; // lavender
 
 #page-header-buttons {
+    margin-top: 1rem;
     @include large { display: flex; }
     @include medium { display: flex; }
     @include small { display: none; }
 }
 
 #page-header-hamburger {
+    margin-top: 1rem;
     @include large { display: none; }
     @include medium { display: none; }
     @include small { display: block; }
@@ -48,6 +50,7 @@ $lavender: #E6E6FA !default; // lavender
 
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown
+    margin-top: 1rem;
     position: absolute;
     width: 100%;
     margin-top: .7rem;
@@ -57,7 +60,6 @@ $lavender: #E6E6FA !default; // lavender
     color: white;
     padding: 6px;
     font-size: 1rem;
-    text-decoration: none;
     display: block;
 }
 
@@ -109,11 +111,17 @@ $lavender: #E6E6FA !default; // lavender
         }
     }
 
-    margin-left: 1rem;
+    margin-left: 1rem; // Defaults for large & small
     margin-right: 1rem;
-    @include large { padding: .5rem 1rem; }
-    @include medium { padding: .4rem 0.9rem; font-size: 0.8rem; }
-    @include small { padding: .5rem 1rem; }
+    padding: .5rem 1rem;
+
+    @include medium {
+        // medium screen is a tight squeeze
+        margin-left: .25rem;
+        margin-right: .25rem;
+        padding: .4rem 0.9rem;
+        font-size: 0.8rem;
+    }
 }
 
 /* OLD .button to be phased out */
