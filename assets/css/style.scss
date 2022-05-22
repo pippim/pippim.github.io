@@ -429,6 +429,22 @@ details[open] > summary {
     @include small { font-size: 1.1rem; }  // May 16/22 was 0.9
 }
 
+#search-symbol {
+    background-image: url({{ site.url }}/assets/img/icons//search_symbol.png);
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+/*
+.search-symbol {
+    background-image: url({{ site.url }}/assets/img/icons/search_symbol.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+    margin-left: .5rem;
+    margin-right: .5rem;
+    cursor: pointer;
+}
+*/
+
 .search-symbol-white {
     // padding: .25rem .75rem;   // already set in .button { padding: 0px 1rem;
     //margin-top: 0;  // Set as .4rem in .button {}
