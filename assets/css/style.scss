@@ -34,7 +34,7 @@ $lavender: #E6E6FA !default; // lavender
     //justify-content: space-between;  // Hamburger and Mag Glass far left and right
     justify-content: center;  // Hamburger and Mag Glass side-by-side
     flex-direction: row;
-    margin-left: 2rem;
+    //margin-left: 2rem;
     align-items: center;
     cursor: pointer;
 }
@@ -174,67 +174,6 @@ $lavender: #E6E6FA !default; // lavender
         color: #fff;       // WAS F0FFF0 or something like that Grayish
     }
 }
-
-// From: https://stackoverflow.com/questions/17233804/ho
-// DOESN'T work!
-//@media (hover: hover) {
-//    button:hover {
-//        background-color: DodgerBlue;
-//    }
-//}
-
-/* Alerts - https://www.w3schools.com/howto/howto_js_alert.asp
-
-    USAGE:
-        <h2>Alert Messages</h2>
-        <p>Click on the "x" symbol to close the alert message.</p>
-        <div class="alert">
-          <span class="closebtn">&times;</span>
-          <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-        </div>
-
-        <script>
-        var close = document.getElementsByClassName("closebtn");
-        var i;
-
-        for (i = 0; i < close.length; i++) {
-          close[i].onclick = function(){
-            var div = this.parentElement;
-            div.style.opacity = "0";
-            setTimeout(function(){ div.style.display = "none"; }, 600);
-          }
-        }
-        </script>
-
-.alert {
-    padding: 20px;
-    background-color: #f44336;
-    color: white;
-    opacity: 1;
-    transition: opacity 0.6s;
-    margin-bottom: 15px;
-}
-
-.alert.success {background-color: #04AA6D;}
-.alert.info {background-color: #2196F3;}
-.alert.warning {background-color: #ff9800;}
-
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    //vertical-align: middle;
-    font-weight: bold;
-    float: right;
-    //font-size: 32px;    // Was 22 then 32
-    //line-height: 29px;  // Was 20 then 29
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.closebtn:hover {
-    color: black;
-}
-*/
 
 /* Causing problems where visited gets hover property ...
 #markdown-toc a:visited { color: blue; }
@@ -490,20 +429,6 @@ details[open] > summary {
     @include small { font-size: 1.1rem; }  // May 16/22 was 0.9
 }
 
-#search-symbol {
-    background-image: url({{ site.url }}/assets/img/icons//search_symbol.png);
-    margin-left: .5rem;
-    margin-right: .5rem;
-}
-
-.search-symbol {
-    background-image: url({{ site.url }}/assets/img/icons/search_symbol.png),
-                      url({{ site.url }}/assets/img/icons/button_background.png);
-    margin-left: .5rem;
-    margin-right: .5rem;
-    cursor: pointer;
-}
-
 .search-symbol-white {
     // padding: .25rem .75rem;   // already set in .button { padding: 0px 1rem;
     //margin-top: 0;  // Set as .4rem in .button {}
@@ -514,25 +439,6 @@ details[open] > summary {
     // Below doesn't put space between hamburger
     // @include small { width: 64px;  height: 40px; margin-left: 2rem; }
     cursor: pointer;
-}
-
-.search-symbol-back {
-    // Used by #tcm_window_close, #search-modal-close & #search-clear-input
-    //display: inline-block; // https://stackoverflow.com/a/9577070/6929343
-    //vertical-align: middle;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 1rem;
-    //padding: .5rem;
-    //opacity: 0.5;
-    // float: right;
-    cursor: pointer;
-
-    &:hover { opacity: 1.0; background-color: yellow; filter: brightness(150%); }
-    @include large { height: 3rem; width: 3rem; }
-    @include medium { height: 2.3rem; width: 2.3rem; }
-    @include small { height: 3rem; width: 3rem; }
 }
 
 // From: https://stackoverflow.com/a/46296164/692934
