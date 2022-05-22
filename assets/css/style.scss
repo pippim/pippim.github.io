@@ -485,7 +485,8 @@ details[open] > summary {
 }
 
 .search-symbol {
-    background-image: url({{ site.url }}/assets/img/icons//search_symbol.png);
+    background-image: url({{ site.url }}/assets/img/icons/search_symbol),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
     margin-left: .5rem;
     margin-right: .5rem;
 }
