@@ -32,7 +32,8 @@ $lavender: #E6E6FA !default; // lavender
 
 #page-header-buttons,
 #page-header-hamburger {
-    justify-content: center;
+    justify-content: space-between;
+    // justify-content: center;  // Hamburger and Mag Glass side-by-side
     align-items: center;
     cursor: pointer;
 }
@@ -504,7 +505,9 @@ details[open] > summary {
     // Set button size around magnifying glass image fixed at 28x28 size
     @include large { width: 72px;  height: 50px; }
     @include medium { width: 68px;  height: 44px; }
-    @include small { width: 64px;  height: 40px; margin-left: 2rem; }
+    @include small { width: 64px;  height: 40px; }
+    // Below doesn't put space between hamburger
+    // @include small { width: 64px;  height: 40px; margin-left: 2rem; }
     cursor: pointer;
 }
 
