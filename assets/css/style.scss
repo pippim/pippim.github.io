@@ -502,8 +502,8 @@ details[open] > summary {
     // padding: .25rem .75rem;   // already set in .button { padding: 0px 1rem;
     //margin-top: 0;  // Set as .4rem in .button {}
     // Set button size around magnifying glass image fixed at 28x28 size
-    @include large { width: 64px;  height: 50px; }
-    @include medium { width: 64px;  height: 44px; }
+    @include large { width: 72px;  height: 50px; }
+    @include medium { width: 68px;  height: 44px; }
     @include small { width: 64px;  height: 40px; }
     cursor: pointer;
 }
