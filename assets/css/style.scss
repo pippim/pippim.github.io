@@ -501,6 +501,9 @@ details[open] > summary {
 }
 
 #page-header-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
