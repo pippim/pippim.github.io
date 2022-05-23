@@ -347,16 +347,26 @@ window.onclick = function (event) {
 }
 
 var saveBackgroundColor;  // May 18/22 - New code not working
-window.addEventListener('DOMContentLoaded', (event) => {
-    // https://stackoverflow.com/a/42526074/6929343
-    saveBackgroundColor = document.getElementById('content').style.backgroundColor
-    var filter = document.getElementById('content').style.filter
-    //console.log("filter.brightness:", filter, "saveBackgroundColor:", saveBackgroundColor)
-    // <empty string>> is being returned for both vars??
-    //console.log("saveBackgroundColor:", saveBackgroundColor)
-});
+elmBody = document.getElementById('body')  // All the main-content. Why it works without var?
 
-elmBody = document.getElementById('body')  // All the main-content
+function setContentDimmed() {
+    // Must be called first. Set background to dimmed for whole content
+    var elm = document.getElementById('content')
+    //elm.style.filter = "brightness(.9)"
+    //elm.style.filter = "blur(.1)"
+    if (saveBackgroundColor === null) {
+        saveBackgroundColor = elm.style.backgroundColor
+        console.log("saveBackgroundColor:", saveBackgroundColor)
+    }
+    elm.style.backgroundColor = "#909090"  // Doesn't change Rouge or hdr-btn backgrounds
+    //elm.style.filter = "invert(.5)"
+    //elm.style.opacity = .85
+    if (elmBody !== null) { elmBody.style.overflow = "hidden" }
+
+    var style = elm.currentStyle || window.getComputedStyle(elm);
+    //console.log("Current marginRight: " + style.marginRight);
+
+}
 
 function reverseContentDimmed() {
     //document.getElementById('content').style.backgroundColor = saveBackgroundColor
@@ -367,19 +377,6 @@ function reverseContentDimmed() {
     //elm.style.filter = "invert(0)"
     //elm.style.opacity = 1
     if (elmBody !== null) { elmBody.style.overflow = "auto" }
-}
-function setContentDimmed() {
-    var elm = document.getElementById('content')
-    //elm.style.filter = "brightness(.9)"
-    //elm.style.filter = "blur(.1)"
-    elm.style.backgroundColor = "#909090"  // Doesn't change Rouge or hdr-btn backgrounds
-    //elm.style.filter = "invert(.5)"
-    //elm.style.opacity = .85
-    if (elmBody !== null) { elmBody.style.overflow = "hidden" }
-
-    var style = elm.currentStyle || window.getComputedStyle(elm);
-    //console.log("Current marginRight: " + style.marginRight);
-
 }
 
 f.addEventListener('submit', submitted);
