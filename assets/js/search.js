@@ -355,7 +355,7 @@ function setContentDimmed() {
     var elm = document.getElementById('content')
     //elm.style.filter = "brightness(.9)"
     //elm.style.filter = "blur(.1)"
-    elm.style.backgroundColor = "#787878"
+    elm.style.backgroundColor = "#909090"
     //elm.style.filter = "invert(.5)"
     //elm.style.opacity = .85
     if (elmBody !== null) { elmBody.style.overflow = "hidden" }
