@@ -353,7 +353,7 @@ function reverseContentDimmed() {
 }
 function setContentDimmed() {
     var elm = document.getElementById('content')
-    elm.style.filter = "brightness(.9)"
+    //elm.style.filter = "brightness(.9)"
     //elm.style.filter = "blur(.1)"
     elm.style.backgroundColor = "#787878"
     //elm.style.filter = "invert(.5)"
