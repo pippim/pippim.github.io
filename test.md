@@ -32,7 +32,7 @@ https://github.com/AleksandrHovhannisyan/aleksandrhovhannisyan.com/issues/35
 
 ## Old CSS
 
-{% include codeHeader.html %}
+{% include copyHeader.html %}
 ```css
 .copy-code-button {
     display: grid;
@@ -63,7 +63,7 @@ https://github.com/AleksandrHovhannisyan/aleksandrhovhannisyan.com/issues/35
 
 ## Old Javascript
 
-{% include codeHeader.html %}
+{% include copyHeader.html %}
 ``` js
 // Copy code block contents to clipboard. 
 // See _includes/copyHeader.html for credit
