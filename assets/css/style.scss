@@ -48,24 +48,16 @@ $lavender: #E6E6FA !default; // lavender
 
 .search-symbol-white {
     // white search symbol follows hamburger menu button
-    -webkit-padding-before: .2rem;  // Chrome has too much padding top
-    -webkit-padding-after: .2rem;   // bottom
-    @include large { width: 4.5rem;  height: 3.1rem; }
-    @include medium { width: 4.25rem;  height: 2.75rem; }
-    @include small { width: 4rem;  height: 2.9rem; }
+    // from: https://stackoverflow.com/a/14101451/6929343
+    @include large { width: 4.5rem; height: -moz-calc(2.6rem); height: 3.1rem; }
+    @include medium { width: 4.25rem;  height: -moz-calc(2.3rem); height: 2.75rem; }
+    @include small { width: 4rem;  height: -moz-calc(2.4rem); height: 2.9rem; }
     cursor: pointer;
 }
 
-/*
-.page-header-search-button {
-    margin-left: 4rem;
-    vertical-align: middle;
-}
-*/
-
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown
-    margin-top: 1.5rem;
+    margin-top: 1.3rem;
     position: absolute;
     width: 100%;
 }
