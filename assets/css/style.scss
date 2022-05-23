@@ -26,7 +26,7 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 #page-header-hamburger {
-    // margin-top: .5rem;
+    margin-top: -.5rem;
     @include large { display: none; }
     @include medium { display: none; }
     @include small { display: block; }
