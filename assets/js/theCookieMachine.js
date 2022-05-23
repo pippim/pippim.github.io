@@ -16,6 +16,9 @@ import { getCookie , setCookie } from './theCookieJar.js';
 /* include tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
+
+    DELETE tcmButtonId after conversion.
+    
 */
 {% include tcm-common-code.js %}
 {% include draggable-window.js %}
@@ -89,7 +92,7 @@ if (tcmButtonId !== null) {
     });
 }
 
-// Copy from tcm-common-code.js because it's undefined for some reason?? DOM not loaded?
+// Loop through all class named .tcm-button
 var tcmButtonClassNdx; // Global variable
 for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
     tcmButtonClassNdx = ndx  // When async listener runs, ndx is end of loop = 2 not 1
