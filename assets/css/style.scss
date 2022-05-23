@@ -19,13 +19,13 @@ $salmon: #FA8072 !default; // salmon
 $lavender: #E6E6FA !default; // lavender
 
 #page-header-buttons {
-    margin-top: 1rem;
+
     justify-content: center;  // Hamburger and Mag Glass side-by-side
     flex-direction: row;
     align-items: center;
     cursor: pointer;
-    @include large { display: flex; }
-    @include medium { display: flex; }
+    @include large { display: flex; margin-top: 2.5rem; }
+    @include medium { display: flex;margin-top: 1.5rem;  }
     @include small { display: none; }
 }
 
@@ -48,13 +48,14 @@ $lavender: #E6E6FA !default; // lavender
 
 .search-symbol-white {
     // white search symbol follows hamburger menu button
-    // from: https://stackoverflow.com/a/14101451/6929343
-    @include large {  width: 4.5rem; height: 2.6rem; height: -moz-calc(3.1rem); }
-    @include medium { width: 4.2rem; height: -moz-calc(2.7rem); height: 2.3rem; }
-    @include small {  width: 4.1rem; height: -moz-calc(2.9rem); height: 2.4rem; }
+    // Heights for Chrome below. Presumably work for MS Edge as well.
+    @include large {  width: 4.5rem; height: 2.6rem; }
+    @include medium { width: 4.2rem; height: 2.3rem; }
+    @include small {  width: 4.1rem; height: 2.4rem; }
     cursor: pointer;
 }
 
+// heights for Firefox below. Unknown how long this will be supported.
 @-moz-document url-prefix() {
     .search-symbol-white {
         @include large {  width: 4.5rem; height: 3.1rem; }
