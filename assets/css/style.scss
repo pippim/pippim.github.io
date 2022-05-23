@@ -24,15 +24,15 @@ $lavender: #E6E6FA !default; // lavender
     flex-direction: row;
     align-items: center;
     cursor: pointer;
-    @include large {  display: flex; margin-top: 2rem; margin-bottom: -1rem; }
-    @include medium { display: flex; margin-top: 1rem; margin-bottom: -.5rem; }
+    @include large {  display: flex; margin-bottom: -2rem; }
+    @include medium { display: flex; margin-bottom: -1rem; }
     @include small {  display: none; }
 }
 
 #page-header-hamburger {
     @include large {  display: none; }
     @include medium { display: none; }
-    @include small {  display: block; }
+    @include small {  display: block; margin-bottom: -.5rem; }
 }
 
 /*
