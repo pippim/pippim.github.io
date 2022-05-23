@@ -49,11 +49,21 @@ $lavender: #E6E6FA !default; // lavender
 .search-symbol-white {
     // white search symbol follows hamburger menu button
     // from: https://stackoverflow.com/a/14101451/6929343
-    @include large {  width: 4.5rem; height: -moz-calc(3.1rem); height: 2.6rem; }
+    @include large {  width: 4.5rem; height: 2.6rem; height: -moz-calc(3.1rem); }
     @include medium { width: 4.2rem; height: -moz-calc(2.7rem); height: 2.3rem; }
     @include small {  width: 4.1rem; height: -moz-calc(2.9rem); height: 2.4rem; }
     cursor: pointer;
 }
+
+/*
+@-moz-document {
+    .search-symbol-white {
+        @include large {  width: 4.5rem; height: 3.1rem; }
+        @include medium { width: 4.2rem; height: 2.7rem; }
+        @include small {  width: 4.1rem; height: 2.9rem; }
+    }
+}
+*/
 
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown
