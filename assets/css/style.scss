@@ -55,15 +55,14 @@ $lavender: #E6E6FA !default; // lavender
     cursor: pointer;
 }
 
-/*
-@-moz-document {
+@-moz-document url-prefix() {
     .search-symbol-white {
         @include large {  width: 4.5rem; height: 3.1rem; }
         @include medium { width: 4.2rem; height: 2.7rem; }
         @include small {  width: 4.1rem; height: 2.9rem; }
     }
 }
-*/
+
 
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown
