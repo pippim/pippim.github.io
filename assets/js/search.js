@@ -208,6 +208,7 @@ if (d !== null) {
             m.style.display = "none";  // close search results modal
         } else  {
             e.style.display = "none"
+            window.scrollTo({top: 0, behavior: 'smooth'});
             reverseContentDimmed()
         }
         //console.log("d.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
@@ -245,6 +246,7 @@ if (p !== null) {
         else  {
             f.style.display = "none"
             m.style.display = "none"  // Search modal may be open
+            window.scrollTo({top: 0, behavior: 'smooth'});
             reverseContentDimmed()
         }
         //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
@@ -297,6 +299,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         else  {
             f.style.display = "none"
             m.style.display = "none"  // Search modal may be open
+            window.scrollTo({top: 0, behavior: 'smooth'});
             reverseContentDimmed()
         }
         //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
