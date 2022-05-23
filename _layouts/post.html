@@ -14,31 +14,68 @@
 
     {% include head-custom.html %}
 
+    <!-- javascript for TCM -->
+    <script type="module" src="/assets/js/theCookieMachine.js" ></script>
+
     <!--  Mar 27/22 type="module" gives error checkCookie is not defined  -->
     <script type="text/javascript" src="{{ site.url }}/assets/js/post_fm.js"></script>
 
     <!--  <link rel="shortcut icon" type="image/jpg" href="/assets/img/earth-from-space.jpg"> -->
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
   </head>
-  <body>
+  <body id="body">
     <header class="page-header" role="banner">
       <h1 class="project-name linear-wipe">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <!-- <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
-      {% include search.html %}
 
-      <!-- javascript for search bar -->
-      <script type="text/javascript" src="/assets/js/search.js" ></script>
+      <div id="page-header-buttons">
+        <a href="https://pippim.github.io/" class="page-header-button">⌂ Home</a>
+        <a href="about.html" class="page-header-button">❓ About</a>
+        <a href="answers.html" class="page-header-button">✅ Answers</a>
+        <a href="programs.html" class="page-header-button">💻 Programs</a>
+        <a href="mailto:pippim.com@gmail.com" class="page-header-button">📧 Email</a>
+        <button class="page-header-search-button search-symbol-white page-header-button"
+          title="Search {{ site.title }} Website"
+          ><img src="{{ site.baseurl }}/assets/img/icons/search_symbol_white.png"
+                alt="" width="24" height="24">
+        </button>
+        <!-- The Cookie Machine (TCM) - Transparent Button -->
+        <button class="tcm-button"
+          title="The Cookie Machine, not-so-secret, popup, draggable window">
+        </button>
 
-      <!-- Removing email button from current blog page, as separate button bar provided for it -->
-      <a href="{{ site.baseurl }}/index.html" style="display: inline" class="button">⌂ Home</a>
-      <a href="/about.html" style="display: inline" class="button">❓ About</a>
-      <a href="/answers.html" style="display: inline" class="button">✅ Answers</a>
-      <a href="{{ site.baseurl }}/programs.html" style="display: inline" class="button">💻 Programs</a>
-
-      <!-- Draggable DIV -->
-      {% include tcm-window.html %}
-
+      </div>
+      <div id="page-header-hamburger">
+        <button id="page-header-dropdown" class="page-header-button"
+          title="Navigation buttons"
+          >&#x2630;
+        </button>
+        <button class="page-header-search-button search-symbol-white page-header-button"
+          title="Search {{ site.title }} Website"
+          ><img src="{{ site.baseurl }}/assets/img/icons/search_symbol_white.png"
+                alt="" width="24" height="24">
+        </button>
+        <button class="tcm-button" style="float: right"
+          title="The Cookie Machine, not-so-secret, popup, draggable window">
+        </button>
+        <!-- Normally hidden dropdown button list -->
+        <div id="dropdown-content">
+          <a href="https://pippim.github.io/" class="page-header-button">⌂ Home</a>
+          <a href="about.html" class="page-header-button">❓ About</a>
+          <a href="answers.html" class="page-header-button">✅ Answers</a>
+          <a href="programs.html" class="page-header-button">💻 Programs</a>
+          <a href="mailto:pippim.com@gmail.com" class="page-header-button">📧 Email</a>
+        </div>
+      </div>
     </header>
+
+    <!-- Search form below page header -->
+    {% include search.html %}
+
+    <!-- javascript for search bar -->
+    <script type="text/javascript" src="/assets/js/search.js" ></script>
+
+    {% include tcm-draggable-window.html %}
 
     <main id="content" class="main-content" role="main">
 
@@ -249,9 +286,6 @@
 
     <!-- Recommended location is at end of body -->
     <script src="{{ site.url }}/assets/js/copyCode.js"></script>
-
-    <!-- javascript for TCM -->
-    <script type="module" src="/assets/js/theCookieMachine.js" ></script>
 
   </body>
 </html>
