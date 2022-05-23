@@ -51,7 +51,6 @@ $lavender: #E6E6FA !default; // lavender
     }
 }
 
-
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown
     margin-top: 1.3rem;
@@ -109,7 +108,7 @@ $lavender: #E6E6FA !default; // lavender
         z-index: -1;
     }
     &:hover {
-        color: white;  // hyperlink hover color is blue
+        color: yellow;  // hyperlink hover color is blue
         &:before {
             width: 100%;
         }
