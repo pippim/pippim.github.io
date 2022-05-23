@@ -171,7 +171,9 @@ const m = document.getElementById('search-modal');          // Where search resu
 // n = page header search button Class list beside hamburger.
 // Will replace p (page-header-search ID) after all pages are converted
 const n = document.getElementsByClassName('page-header-search-button');
+/*
 const p = document.getElementById('page-header-search');    // page search beside hamburger
+*/
 const q = document.getElementById('search-query');          // Search words input by user
 const s = document.getElementById('search-symbol');         // Mag glass beside search-query
 
@@ -218,6 +220,7 @@ if (d !== null) {
 // When the user clicks ID page-header-search button, display mobile search-form
 // TO BE DELETED AFTER CONVERSION
 var boolSearchForm = false
+/*
 if (p !== null) {
     p.onclick = function (event) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
@@ -252,6 +255,7 @@ if (p !== null) {
         //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
     }
 }
+*/
 
 // Loop through all class named .page-header-search-button
 //var ndxPageHeaderSearchButton
@@ -349,7 +353,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var filter = document.getElementById('content').style.filter
     //console.log("filter.brightness:", filter, "saveBackgroundColor:", saveBackgroundColor)
     // <empty string>> is being returned for both vars??
-    console.log("saveBackgroundColor:", saveBackgroundColor)
+    //console.log("saveBackgroundColor:", saveBackgroundColor)
 });
 
 elmBody = document.getElementById('body')  // All the main-content
