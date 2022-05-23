@@ -34,6 +34,13 @@ https://github.com/AleksandrHovhannisyan/aleksandrhovhannisyan.com/issues/35
 
 {% include copyHeader.html %}
 ```css
+// Copy code block contents to clipboard
+// See: _includes/copyHeader.html for credit
+.code-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .copy-code-button {
     display: grid;
     grid-auto-flow: column;
