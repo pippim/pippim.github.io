@@ -11,6 +11,7 @@
 
 var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
 var tcmButtonId = document.getElementById("tcm_button");  // Old method < May 18/22
+/* After conversion DELETE tcmButtonId */
 
 var tcmButtonClick = function() {
     // TCM button was clicked on one of page header <div>s
@@ -465,25 +466,15 @@ function makeTcmButtonVisible () {
     // Make #tcm_button at Top of Page (header section) visible
     // Can be ID #tcm_button or multiple classes .tcm-button
     if (tcmButtonId !== null) {
-        tcmButtonId.style.cssText = cssTcmButton()
+        tcmButtonId.style.cssText = cssTcmButtonShow()
     }
+    // May 18/22 - Support multiple class definitions of .tcm-button
     for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
-        tcmButtonClasses[ndx].style.cssText = cssTcmButton()
+        tcmButtonClasses[ndx].style.cssText = cssTcmButtonShow()
     }
-    /*
-    document.getElementById('tcm_button').style.cssText = `
-        opacity: 1.0;
-        border: thin solid black;
-        border-radius: .5rem;
-        background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
-                          url({{ site.url }}/assets/img/icons/button_background.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-    `;
-    */
 }
 
-function cssTcmButton () {
+function cssTcmButtonShow () {
     // Return the CSS text that makes a TCM Button visible on page header
     return `
         opacity: 1.0;
@@ -493,7 +484,7 @@ function cssTcmButton () {
                           url({{ site.url }}/assets/img/icons/button_background.png);
         background-repeat: no-repeat;
         background-size: cover;
-    `;
+    `
 }
 
 var objTcmVisById = {};  // Current state (on/"true" or off/"false") by id
