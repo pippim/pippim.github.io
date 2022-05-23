@@ -313,17 +313,26 @@ window.onclick = function (event) {
     //const m = document.getElementById('search-modal');          // Where search results appear
     if (!m.contains(event.target) && m.style.display != "none") {
         m.style.display = "none"  // Close search results modal
+        scrollToJustAbove(f)      // Full focus back to #search-query input
+    /* OPTIONAL - Close #search-form altogether
+        f.style.display = "none"  // Close search form
+        boolSearchForm = false
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        reverseContentDimmed()
+    */
         return
     }
     if (!f.contains(event.target) && f.style.display != "none") {
         f.style.display = "none"  // Close search form
         boolSearchForm = false
+        window.scrollTo({top: 0, behavior: 'smooth'});
         reverseContentDimmed()
         return
     }
     if (e !== null && e.style.display != "none") {
         e.style.display = "none"  // Close dropdown menu options
         boolDropdown = false
+        window.scrollTo({top: 0, behavior: 'smooth'});
         reverseContentDimmed()
         return
     }
@@ -344,18 +353,18 @@ elmBody = document.getElementById('body')  // All the main-content
 function reverseContentDimmed() {
     //document.getElementById('content').style.backgroundColor = saveBackgroundColor
     var elm = document.getElementById('content')
-    elm.style.filter = "brightness(1)"
+    //elm.style.filter = "brightness(1)"
     //elm.style.filter = "blur(0)"
     elm.style.backgroundColor = "white"
     //elm.style.filter = "invert(0)"
-    elm.style.opacity = 1
+    //elm.style.opacity = 1
     if (elmBody !== null) { elmBody.style.overflow = "auto" }
 }
 function setContentDimmed() {
     var elm = document.getElementById('content')
     //elm.style.filter = "brightness(.9)"
     //elm.style.filter = "blur(.1)"
-    elm.style.backgroundColor = "#909090"
+    elm.style.backgroundColor = "#909090"  // Doesn't change Rouge or hdr-btn backgrounds
     //elm.style.filter = "invert(.5)"
     //elm.style.opacity = .85
     if (elmBody !== null) { elmBody.style.overflow = "hidden" }
