@@ -19,11 +19,9 @@ $salmon: #FA8072 !default; // salmon
 $lavender: #E6E6FA !default; // lavender
 
 #page-header-buttons {
-
     justify-content: center;  // Hamburger and Mag Glass side-by-side
     flex-direction: row;
     align-items: center;
-    cursor: pointer;
     @include large {  display: flex; margin-bottom: -2rem; }
     @include medium { display: flex; margin-bottom: -1rem; }
     @include small {  display: none; }
@@ -34,17 +32,6 @@ $lavender: #E6E6FA !default; // lavender
     @include medium { display: none; }
     @include small {  display: block; margin-bottom: -.5rem; }
 }
-
-/*
-#page-header-buttons {
-    // Cannot apply to page-header-hamburger because drop down becomes centered
-    //justify-content: space-between;  // Hamburger and Mag Glass far left and right
-    justify-content: center;  // Hamburger and Mag Glass side-by-side
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
-}
-*/
 
 .search-symbol-white {
     // white search symbol follows hamburger menu button
