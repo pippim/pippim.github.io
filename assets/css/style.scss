@@ -20,18 +20,22 @@ $lavender: #E6E6FA !default; // lavender
 
 #page-header-buttons {
     margin-top: 1rem;
+    justify-content: center;  // Hamburger and Mag Glass side-by-side
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
     @include large { display: flex; }
     @include medium { display: flex; }
     @include small { display: none; }
 }
 
 #page-header-hamburger {
-    margin-top: -.5rem;
     @include large { display: none; }
     @include medium { display: none; }
     @include small { display: block; }
 }
 
+/*
 #page-header-buttons {
     // Cannot apply to page-header-hamburger because drop down becomes centered
     //justify-content: space-between;  // Hamburger and Mag Glass far left and right
@@ -40,6 +44,7 @@ $lavender: #E6E6FA !default; // lavender
     align-items: center;
     cursor: pointer;
 }
+*/
 
 .search-symbol-white {
     // white search symbol follows hamburger menu button
@@ -60,7 +65,7 @@ $lavender: #E6E6FA !default; // lavender
 
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     position: absolute;
     width: 100%;
 }
