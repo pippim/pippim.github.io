@@ -346,6 +346,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var filter = document.getElementById('content').style.filter
     //console.log("filter.brightness:", filter, "saveBackgroundColor:", saveBackgroundColor)
     // <empty string>> is being returned for both vars??
+    console.log("saveBackgroundColor:", saveBackgroundColor)
 });
 
 elmBody = document.getElementById('body')  // All the main-content
