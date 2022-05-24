@@ -354,6 +354,7 @@ pre[class*="language-"] {
     /* more stuff */
 }
 copy-rouge-button{
+    /* Appearing at page top, not within Rouge class */
     position:absolute;
     top:4px;
     right:4px;
@@ -365,17 +366,17 @@ copy-rouge-button{
 const copyButtonLabel = "Copy Code";
 
 // You can use a class selector instead if available.
-let blocks = document.querySelectorAll("pre");
-console.log("blocks.length:", blocks.length) 
+let blocks = document.querySelectorAll("highlighter-rouge")
+//console.log("blocks.length:", blocks.length)
 
 blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
         console.log("Adding copyRougeButton")
-        let copyRougeButton = document.createElement("copy-rouge-button");
-        copyRougeButton.innerText = copyButtonLabel;
-        copyRougeButton.addEventListener("click", copyRougeCode);
-        block.appendChild(copyRougeButton);
+        let copyRougeButton = document.createElement("copy-rouge-button")
+        copyRougeButton.innerText = copyButtonLabel
+        copyRougeButton.addEventListener("click", copyRougeCode)
+        block.appendChild(copyRougeButton)
     }
 });
  
