@@ -30,6 +30,19 @@ contains Cayman Theme defaults for historical reference purposes.
 
 https://github.com/AleksandrHovhannisyan/aleksandrhovhannisyan.com/issues/35
 
+## Old HTML
+
+```html
+<!-- Copy code block contents to system clipboard. From: 
+https://www.aleksandrhovhannisyan.com/blog/
+how-to-add-a-copy-to-clipboard-button-to-your-jekyll-blog/
+-->
+<div class="code-header">
+    <button class="copy-code-button" title="Copy code to clipboard"
+            aria-label="Copy code to clipboard"></button>
+</div>
+```
+
 ## Old CSS
 
 {% include copyHeader.html %}
