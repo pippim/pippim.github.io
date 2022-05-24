@@ -209,6 +209,7 @@ if (d !== null) {
             boolSearchForm = false
             m.style.display = "none";  // close search results modal
         } else  {
+            console.log("boolDropDown:")
             e.style.display = "none"
             window.scrollTo({top: 0, behavior: 'smooth'});
             reverseContentDimmed()
@@ -303,6 +304,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         else  {
             f.style.display = "none"
             m.style.display = "none"  // Search modal may be open
+            console.log("boolSearchForm")
             window.scrollTo({top: 0, behavior: 'smooth'});
             reverseContentDimmed()
         }
@@ -453,6 +455,7 @@ function scrollToJustAbove(element) {
     //            element.getBoundingClientRect().top,
     //            "window.pageYOffset:", window.pageYOffset)
     //console.log("Applying yOffset:", yOffset, "Results in y:", y)
+    console.log("scrollToJustAbove")
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
