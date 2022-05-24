@@ -258,6 +258,7 @@ if (p !== null) {
 }
 */
 
+// For some reason this isn't "none"
 // Loop through all class named .page-header-search-button
 //var ndxPageHeaderSearchButton
 for (var ndx = 0; ndx < n.length; ndx++) {
@@ -312,6 +313,10 @@ for (var ndx = 0; ndx < n.length; ndx++) {
 
     }
 }
+
+// For some reason this is blank (at least one space)
+console.log("e.style.display.length:", e.style.display.length)
+e.style.display = "none"
 
 // When the user clicks anywhere outside of the modal(m) close it
 window.onclick = function (event) {
