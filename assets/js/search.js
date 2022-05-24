@@ -319,6 +319,7 @@ window.onclick = function (event) {
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
     //const m = document.getElementById('search-modal');          // Where search results appear
     if (!m.contains(event.target) && m.style.display != "none") {
+        console.log("m.style.display:", m.style.display)
         m.style.display = "none"  // Close search results modal
         scrollToJustAbove(f)      // Full focus back to #search-query input
     /* OPTIONAL - Close #search-form altogether
@@ -330,6 +331,7 @@ window.onclick = function (event) {
         return
     }
     if (!f.contains(event.target) && f.style.display != "none") {
+        console.log("f.style.display:", f.style.display)
         f.style.display = "none"  // Close search form
         boolSearchForm = false
         window.scrollTo({top: 0, behavior: 'smooth'});
@@ -337,6 +339,7 @@ window.onclick = function (event) {
         return
     }
     if (e !== null && e.style.display != "none") {
+        console.log("e.style.display:", e.style.display)
         e.style.display = "none"  // Close dropdown menu options
         boolDropdown = false
         window.scrollTo({top: 0, behavior: 'smooth'});
