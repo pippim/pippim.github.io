@@ -107,6 +107,7 @@ copyCodeButtons.forEach((copyCodeButton, index) => {
 
 ## New JavaScript on Author's Website
 
+{% include copyHeader.html %}
 ``` js
 import { THEME_KEY, Themes, copyToClipboardButtonStrings } from './constants.mjs';
 import ThemeToggle from './components/ThemeToggle/index.mjs';
@@ -161,6 +162,176 @@ copyableCodeBlocks.forEach((codeBlock) => {
   });
 });
 ```
+
+## Author's new CSS
+
+{% include copyHeader.html %}
+```css
+/* stylelint-disable no-descending-specificity */
+@import "../functions";
+@import "../mixins";
+
+/* VS Code Dark Plus theme: https://github.com/PrismJS/prism-themes/blob/master/themes/prism-vsc-dark-plus.css */
+
+$code-block-padding: spacing(5);
+
+pre[class*="language-"] {
+  background: var(--color-code-background);
+  box-shadow: var(--shadow-code-block);
+  color: var(--color-code-text);
+  position: relative;
+
+  @include full-bleed;
+  @include tablet {
+    border-radius: spacing(-2);
+  }
+
+  &:hover {
+    .copy-code-button {
+      opacity: 1;
+    }
+  }
+
+  code {
+    padding: $code-block-padding;
+    text-align: start;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    tab-size: 2;
+    overflow-x: auto;
+    display: block;
+
+    &[data-file] {
+      padding-top: calc(#{$code-block-padding} + 3em);
+
+      // File name
+      &::before {
+        content: "Filename: " attr(data-file);
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: var(--color-code-text);
+        word-break: break-all;
+        padding: $code-block-padding $code-block-padding 0;
+        @include font-family("title");
+        @include font-weight("title", "bold");
+        @include font-size("sm");
+      }
+    }
+  }
+
+  .namespace {
+    opacity: 0.7;
+  }
+
+  &::selection,
+  & *::selection {
+    text-shadow: none;
+    color: unset;
+    background: var(--color-code-selection);
+  }
+}
+
+.token {
+  &:is(.doctype, .doctype-tag) {
+    .name {
+      color: var(--color-code-attribute);
+    }
+  }
+
+  &.comment {
+    margin: 0;
+  }
+
+  &:is(.comment, .prolog) {
+    color: var(--color-code-comment);
+  }
+
+  &.number {
+    color: var(--color-code-constant);
+  }
+
+  &.script {
+    color: var(--color-code-text);
+  }
+
+  &.punctuation,
+  &.cdata {
+    color: var(--color-code-punctuation);
+  }
+
+  /* stylelint-disable-next-line max-line-length */
+  &:is(.keyword, .tag, .boolean, .constant, .inserted, .operator.arrow, .key.atrule, .rule, .keyword.module, .keyword.control-flow, .entity, .important, .punctuation.interpolation-punctuation, .doctype, .doctype-tag, .directive-hash),
+  &.atrule .url {
+    color: var(--color-code-keyword);
+  }
+
+  &:is(.selector, .string, .char, .builtin, .deleted, .regex, .attr-value),
+  &.attr-value &.punctuation {
+    color: var(--color-code-string);
+  }
+
+  &:is(.operator, .entity, .function),
+  &.atrule &.url &.punctuation,
+  &.attr-value &.punctuation.attr-equals,
+  &.function &.maybe-class-name {
+    color: var(--color-code-text);
+  }
+
+  &:is(.attr-name, .constant, .console, .property, .variable),
+  &.imports &.maybe-class-name,
+  &.exports &.maybe-class-name {
+    color: var(--color-code-attribute);
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+}
+
+/* Language Specific */
+
+pre[class*="language-css"],
+pre[class*="language-scss"],
+pre[class*="language-sass"] {
+  .token.selector {
+    color: var(--color-code-selector);
+  }
+}
+
+pre[class*="language-bash"] {
+  .token:not(.comment) {
+    color: var(--color-code-text) !important;
+  }
+}
+
+.copy-code-button {
+  opacity: 0;
+  position: absolute;
+  right: $code-block-padding;
+  top: $code-block-padding;
+  display: none;
+  color: var(--color-code-text);
+  background-color: var(--color-code-overlay-1);
+  padding: spacing(-2) spacing(0);
+  border-radius: spacing(-3);
+
+  &:is(.copied, :focus) {
+    opacity: 1;
+  }
+
+  &:is(.copied, :hover) {
+    color: black;
+    background-color: var(--color-code-overlay-2);
+  }
+
+  @include tablet {
+    display: unset;
+  }
+}
+```
+
 
 ---
 
