@@ -26,6 +26,20 @@ contains Cayman Theme defaults for historical reference purposes.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
+<style>
+pre[class*="language-"] {
+  position:relative;
+  margin:5px;
+  padding:2rem .5rem .5rem .5rem;
+  /* more stuff */
+}
+copy-rouge-button{
+  position:absolute;
+  top:4px;
+  right:4px;
+  /* more stuff */
+}
+</style>
 # Copy code
 
 https://github.com/AleksandrHovhannisyan/aleksandrhovhannisyan.com/issues/35
