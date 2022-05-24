@@ -209,7 +209,6 @@ if (d !== null) {
             boolSearchForm = false
             m.style.display = "none";  // close search results modal
         } else  {
-            console.log("boolDropDown:")
             e.style.display = "none"
             window.scrollTo({top: 0, behavior: 'smooth'});
             reverseContentDimmed()
@@ -305,7 +304,6 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         else  {
             f.style.display = "none"
             m.style.display = "none"  // Search modal may be open
-            console.log("boolSearchForm")
             window.scrollTo({top: 0, behavior: 'smooth'});
             reverseContentDimmed()
         }
@@ -314,8 +312,8 @@ for (var ndx = 0; ndx < n.length; ndx++) {
     }
 }
 
-// For some reason this is blank (at least one space)
-console.log("e.style.display.length:", e.style.display.length)
+// For some reason 'e' is empty (length is zero) causing first page click to scroll to top
+//console.log("e.style.display.length:", e.style.display.length)
 e.style.display = "none"
 
 // When the user clicks anywhere outside of the modal(m) close it
@@ -326,7 +324,6 @@ window.onclick = function (event) {
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
     //const m = document.getElementById('search-modal');          // Where search results appear
     if (!m.contains(event.target) && m.style.display != "none") {
-        console.log("m.style.display:", m.style.display)
         m.style.display = "none"  // Close search results modal
         scrollToJustAbove(f)      // Full focus back to #search-query input
     /* OPTIONAL - Close #search-form altogether
@@ -338,7 +335,6 @@ window.onclick = function (event) {
         return
     }
     if (!f.contains(event.target) && f.style.display != "none") {
-        console.log("f.style.display:", f.style.display)
         f.style.display = "none"  // Close search form
         boolSearchForm = false
         window.scrollTo({top: 0, behavior: 'smooth'});
@@ -346,7 +342,7 @@ window.onclick = function (event) {
         return
     }
     if (e !== null && e.style.display != "none") {
-        console.log("e.style.display:", e.style.display)
+        //console.log("e.style.display:", e.style.display)
         e.style.display = "none"  // Close dropdown menu options
         boolDropdown = false
         window.scrollTo({top: 0, behavior: 'smooth'});
@@ -364,7 +360,7 @@ function setContentDimmed() {
     var elm = document.getElementById('content')
     //elm.style.filter = "brightness(.9)"
     //elm.style.filter = "blur(.1)"
-    if (saveBackgroundColor === null) {
+    if (saveBackgroundColor == null) {
         saveBackgroundColor = elm.style.backgroundColor
         console.log("saveBackgroundColor:", saveBackgroundColor)
     }
@@ -460,7 +456,7 @@ function scrollToJustAbove(element) {
     //            element.getBoundingClientRect().top,
     //            "window.pageYOffset:", window.pageYOffset)
     //console.log("Applying yOffset:", yOffset, "Results in y:", y)
-    console.log("scrollToJustAbove")
+    //console.log("scrollToJustAbove")
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
