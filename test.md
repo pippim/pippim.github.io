@@ -32,7 +32,6 @@ https://github.com/AleksandrHovhannisyan/aleksandrhovhannisyan.com/issues/35
 
 ## Old HTML
 
-{% include copyHeader.html %}
 ```html
 <!-- Copy code block contents to system clipboard. From: 
 https://www.aleksandrhovhannisyan.com/blog/
