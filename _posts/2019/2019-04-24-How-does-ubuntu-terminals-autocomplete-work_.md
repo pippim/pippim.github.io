@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1137560
 type:         Answer
 tags:         auto-completion
 created_date: 2019-04-24 02:55:56
-edit_date:    2020-06-12 14:37:07
+edit_date:    2022-05-16 04:19:19
 votes:        "2 "
 favorites:    
-views:        "555 "
+views:        "570 "
 accepted:     
-uploaded:     2022-05-15 07:50:38
+uploaded:     2022-05-23 21:10:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-24-How-does-ubuntu-terminals-autocomplete-work_.md
 toc:          false
 navigation:   false
@@ -35,11 +35,11 @@ An almost identical question was asked in StackExchange:
 
 There are two parts to the autocompletion:
 
-* The readline library, as already mentioned by fixje, manages the command line editing, and calls back to bash when tab is pressed, to enable completion. Bash then gives (see next point) a list of possible completions, and readline inserts as much characters as are identified unambiguously by the characters already typed in. (You can configure the readline library quite much, see the section [Command line editing][2] of the Bash manual for details.)
+* The readline library, as [already mentioned by fixje][2], manages the command line editing, and calls back to bash when tab is pressed, to enable completion. Bash then gives (see next point) a list of possible completions, and readline inserts as much characters as are identified unambiguously by the characters already typed in. (You can configure the readline library quite much, see the section [Command line editing][3] of the Bash manual for details.)
 
 * Bash itself has the built-in `complete` to define a completion mechanism for individual commands. If for the current command nothing is defined, it used completion by file name (using opendir/readdir, as Ignacio said).
 
-   The part to define your own completions is described in the section [Programmable Completion][3]. In short, with
+   The part to define your own completions is described in the section [Programmable Completion][4]. In short, with
    `complete «options» «command»` you define the completion for some command. For example `complete -u su` says
 ``` 
 *when completing an argument for the `su` command, search for users of the current system*.
@@ -55,5 +55,6 @@ You can list the existing completions defined in your current bash environment u
 
 
   [1]: https://stackoverflow.com/questions/5570795/how-does-bash-tab-completion-work
-  [2]: http://info2html.sourceforge.net/cgi-bin/info2html-demo/info2html?%28bash.info.gz%29Command%2520Line%2520Editing
-  [3]: http://info2html.sourceforge.net/cgi-bin/info2html-demo/info2html?%28bash.info.gz%29Programmable%2520Completion
+  [2]: https://stackoverflow.com/a/5573983/6010333
+  [3]: http://info2html.sourceforge.net/cgi-bin/info2html-demo/info2html?%28bash.info.gz%29Command%2520Line%2520Editing
+  [4]: http://info2html.sourceforge.net/cgi-bin/info2html-demo/info2html?%28bash.info.gz%29Programmable%2520Completion

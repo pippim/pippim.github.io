@@ -8,11 +8,11 @@ type:         Answer
 tags:         display-resolution amd-graphics
 created_date: 2020-01-04 20:40:07
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "866 "
+views:        "872 "
 accepted:     
-uploaded:     2022-05-15 07:50:38
+uploaded:     2022-05-23 21:10:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-04-Display-Resolution-Setting-is-Lost-After-Wake-from-Suspend.md
 toc:          false
 navigation:   false

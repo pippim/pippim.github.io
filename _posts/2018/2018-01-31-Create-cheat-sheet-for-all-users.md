@@ -10,9 +10,9 @@ created_date: 2018-01-31 05:58:18
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "119 "
+views:        "120 "
 accepted:     
-uploaded:     2022-05-15 07:50:38
+uploaded:     2022-05-23 21:10:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-31-Create-cheat-sheet-for-all-users.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         xorg multiple-monitors display-resolution xrandr scaling
 created_date: 2019-12-05 11:46:08
 edit_date:    
-votes:        "1 "
+votes:        "2 "
 favorites:    
-views:        "9,167 "
+views:        "9,289 "
 accepted:     Accepted
-uploaded:     2022-05-15 07:50:38
+uploaded:     2022-05-23 21:10:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-05-Setting-monitor-scaling-to-200_-with-xrandr.md
 toc:          false
 navigation:   false

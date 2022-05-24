@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,205 "
 accepted:     
-uploaded:     2022-05-15 07:50:38
+uploaded:     2022-05-23 21:10:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-01-Which-LTS-version-is-supported_-18.04.1-or-18.04.2_-both_.md
 toc:          false
 navigation:   false

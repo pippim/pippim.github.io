@@ -8,11 +8,11 @@ type:         Answer
 tags:         keyboard 18.04
 created_date: 2018-04-29 17:39:09
 edit_date:    
-votes:        "9 "
+votes:        "10 "
 favorites:    
-views:        "9,308 "
+views:        "9,347 "
 accepted:     Accepted
-uploaded:     2022-05-15 07:50:38
+uploaded:     2022-05-23 21:10:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Keys-get-_stuck_-randomly-and-type-endless-line-of-a-particular-letter_command.md
 toc:          false
 navigation:   false
