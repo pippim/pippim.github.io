@@ -52,8 +52,8 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 #dropdown-content {
-    display: none;  // Turned on by page-header-dropdown
-    margin-top: 1.3rem;
+    display: none;  // Turned on by page-header-dropdown. Not initializing see search.js for fix
+    margin-top: .7rem;
     position: absolute;
     width: 100%;
 }
