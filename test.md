@@ -367,10 +367,12 @@ const copyButtonLabel = "Copy Code";
 
 // You can use a class selector instead if available.
 let blocks = document.querySelectorAll("pre");
+console.log("blocks.length:", blocks.length) 
 
 blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
+        console.log("Adding copyRougeButton")
         let copyRougeButton = document.createElement("copy-rouge-button");
         copyRougeButton.innerText = copyButtonLabel;
         copyRougeButton.addEventListener("click", copyRougeCode);
