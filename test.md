@@ -374,7 +374,8 @@ const copyButtonLabel = "Copy Code";
 //let blocks = document.querySelectorAll("pre")
 //let blocks = document.getElementsByClassName("highlighter-rouge")
 //let blocks = document.getElementsByClassName("highlight")
-let blocks = document.querySelectorAll("pre.highlight")
+//let blocks = document.querySelectorAll("pre.highlight")
+let blocks = document.querySelectorAll("div.highlight")
 console.log("blocks.length:", blocks.length)
 
 //for(var ndxRouge=0; ndxRouge<blocks.length; ndxRouge++) {
