@@ -370,8 +370,8 @@ const copyButtonLabel = "Copy Code";
 let blocks = document.getElementsByClassName("highlighter-rouge")
 console.log("blocks.length:", blocks.length)
 
-for(var i=0; i<blocks.length; i++) {
-    block = blocks[i]
+for(var ndxRouge=0; ndxRouge<blocks.length; ndxRouge++) {
+    block = blocks[ndxRouge]
 //blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
