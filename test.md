@@ -365,7 +365,7 @@ pre[class*="language-bash"] {
 }
 
 /* From: https://stackoverflow.com/a/2776136/6929343 */
-.rouge-code-block:hover span { display: block; }
+.rouge-code-block:hover .copy-rouge-button { display: block; }
 
 </style>
 
