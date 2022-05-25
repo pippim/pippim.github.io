@@ -366,7 +366,7 @@ copy-rouge-button{
 const copyButtonLabel = "Copy Code";
 
 // You can use a class selector instead if available.
-let blocks = document.querySelectorAll("highlighter-rouge")
+let blocks = document.querySelectorAll("highlight")
 //console.log("blocks.length:", blocks.length)
 
 blocks.forEach((block) => {
