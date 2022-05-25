@@ -45,7 +45,6 @@ how-to-add-a-copy-to-clipboard-button-to-your-jekyll-blog/
 
 ## Old CSS
 
-{% include copyHeader.html %}
 ```css
 // Copy code block contents to clipboard
 // See: _includes/copyHeader.html for credit
@@ -120,7 +119,6 @@ copyCodeButtons.forEach((copyCodeButton, index) => {
 
 ## New JavaScript on Author's Website
 
-{% include copyHeader.html %}
 ``` js
 import { THEME_KEY, Themes, copyToClipboardButtonStrings } from './constants.mjs';
 import ThemeToggle from './components/ThemeToggle/index.mjs';
@@ -178,7 +176,6 @@ copyableCodeBlocks.forEach((codeBlock) => {
 
 ## Author's new CSS
 
-{% include copyHeader.html %}
 ```css
 /* stylelint-disable no-descending-specificity */
 @import "../functions";
@@ -356,7 +353,8 @@ pre[class*="language-bash"] {
 }
 .copy-rouge-button{
     /* Appearing at page top, not within Rouge class */
-    position:absolute;
+    /* position:absolute; */
+    position: sticky;
     color: red;
     display: none;
     top:4px;
