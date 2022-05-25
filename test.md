@@ -352,7 +352,7 @@ pre[class*="language-bash"] {
     position: absolute;
     color: red;
     display: none;
-    top: 4rem;
+    top: 2rem;
     right: 1rem;
 }
 
