@@ -361,6 +361,9 @@ pre[class*="language-"] {
     right:4px;
     /* more stuff */
 }
+
+.rouge-code-block:hover + .copy-rouge-button { color: blue; }
+
 </style>
 
 <script>
