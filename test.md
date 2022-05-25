@@ -352,8 +352,8 @@ pre[class*="language-bash"] {
     position: absolute;
     color: red;
     display: none;
-    top: 2rem;
-    right: 1rem;
+    top: 1rem;
+    right: .5rem;
 }
 
 /* From: https://stackoverflow.com/a/2776136/6929343 */
@@ -377,7 +377,7 @@ console.log("blocks.length:", blocks.length)
 blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
-        block.classList.add("rouge-code-block")
+        block.classList.add("rouge-code-block button")
         console.log("Adding copyRougeButton")
         let copyRougeButton = document.createElement("button")
         copyRougeButton.classList.add("copy-rouge-button")
