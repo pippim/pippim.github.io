@@ -382,6 +382,7 @@ blocks.forEach((block) => {
         let copyRougeButton = document.createElement("button")
         copyRougeButton.classList.add("copy-rouge-button")
         copyRougeButton.innerText = copyButtonLabel
+        copyRougeButton.setAttribute('title', 'Copy code to clipboard')
         copyRougeButton.addEventListener("click", copyRougeCode)
         block.appendChild(copyRougeButton)
     }
@@ -399,6 +400,7 @@ async function copyRougeCode(event) {
     button.style.color = "green"
     setTimeout(()=> {
         button.innerText = copyButtonLabel
+        button.style.color = "red"
     },1000)
 }
 </script>
