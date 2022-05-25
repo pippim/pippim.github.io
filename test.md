@@ -82,7 +82,6 @@ how-to-add-a-copy-to-clipboard-button-to-your-jekyll-blog/
 
 ## Old Javascript
 
-{% include copyHeader.html %}
 ``` js
 // Copy code block contents to clipboard. 
 // See _includes/copyHeader.html for credit
@@ -345,21 +344,16 @@ pre[class*="language-bash"] {
 
 <style>
 .rouge-code-block {
-/* pre[class*="language-"] { */
-    position:relative;
-    margin:5px;
-    padding:2rem .5rem .5rem .5rem;
-    /* more stuff */
+    position: relative;
+    margin: 5px;
+    /* padding:2rem .5rem .5rem .5rem; */
 }
 .copy-rouge-button{
-    /* Appearing at page top, not within Rouge class */
-    position:absolute;
-    /* position: sticky;  // MAKES IT APPEAR AT BOTTOM LEFT */
+    position: absolute;
     color: red;
     display: none;
-    top:4px;
-    right:4px;
-    /* more stuff */
+    top: 4rem;
+    right: 1rem;
 }
 
 /* From: https://stackoverflow.com/a/2776136/6929343 */
