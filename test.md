@@ -377,10 +377,10 @@ console.log("blocks.length:", blocks.length)
 blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
-        block.classList.add("rouge-code-block", "page-header-button")
+        block.classList.add("rouge-code-block")
         console.log("Adding copyRougeButton")
         let copyRougeButton = document.createElement("button")
-        copyRougeButton.classList.add("copy-rouge-button")
+        copyRougeButton.classList.add("copy-rouge-button", "page-header-button")
         copyRougeButton.innerText = copyButtonLabel
         copyRougeButton.setAttribute('title', 'Copy code to clipboard')
         copyRougeButton.addEventListener("click", copyRougeCode)
