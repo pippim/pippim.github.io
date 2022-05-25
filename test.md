@@ -355,7 +355,7 @@ pre[class*="language-"] {
 }
 copy-rouge-button{
     /* Appearing at page top, not within Rouge class */
-    position:absolute;
+    //position:absolute;
     top:4px;
     right:4px;
     /* more stuff */
