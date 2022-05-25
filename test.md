@@ -353,8 +353,8 @@ pre[class*="language-bash"] {
 }
 .copy-rouge-button{
     /* Appearing at page top, not within Rouge class */
-    /* position:absolute; */
-    position: sticky;
+    position:absolute;
+    /* position: sticky;  // MAKES IT APPEAR AT BOTTOM LEFT */
     color: red;
     display: none;
     top:4px;
@@ -394,15 +394,16 @@ blocks.forEach((block) => {
 //}
  
 async function copyRougeCode(event) {
-    const button = event.srcElement;
-    const pre = button.parentElement;
-    let code = pre.querySelector("code");
-    let text = code.innerText;
-    await navigator.clipboard.writeText(text);
+    const button = event.srcElement
+    const pre = button.parentElement
+    let code = pre.querySelector("code")
+    let text = code.innerText
+    await navigator.clipboard.writeText(text)
 
-    button.innerText = "Code Copied";
+    button.innerText = "Code Copied"
+    button.style.color = "green"
     setTimeout(()=> {
-        button.innerText = copyButtonLabel;
+        button.innerText = copyButtonLabel
     },1000)
 }
 </script>
