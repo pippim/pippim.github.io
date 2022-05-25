@@ -347,8 +347,8 @@ pre[class*="language-bash"] {
 
 
 <style>
-.rouge-code-block,
-pre[class*="language-"] {
+.rouge-code-block {
+/* pre[class*="language-"] { */
     position:relative;
     margin:5px;
     padding:2rem .5rem .5rem .5rem;
@@ -357,12 +357,15 @@ pre[class*="language-"] {
 .copy-rouge-button{
     /* Appearing at page top, not within Rouge class */
     position:absolute;
+    color: red;
+    display: none;
     top:4px;
     right:4px;
     /* more stuff */
 }
 
-.rouge-code-block:hover + .copy-rouge-button { color: blue; }
+/* From: https://stackoverflow.com/a/2776136/6929343 */
+.rouge-code-block:hover span { display: block; }
 
 </style>
 
