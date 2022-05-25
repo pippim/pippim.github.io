@@ -361,7 +361,7 @@ pre[class*="language-bash"] {
 </style>
 
 <script>
-const copyButtonLabel = "Copy Code";
+const copyButtonLabel = "Copy 📋";
 
 // You can use a class selector instead if available.
 //let blocks = document.querySelectorAll("pre")
@@ -395,11 +395,9 @@ async function copyRougeCode(event) {
     let text = code.innerText
     await navigator.clipboard.writeText(text)
 
-    button.innerText = "Code Copied"
-    button.style.color = "green"
+    button.innerText = "Copied ✔️"
     setTimeout(()=> {
         button.innerText = copyButtonLabel
-        button.style.color = "red"
     },1000)
 }
 </script>
