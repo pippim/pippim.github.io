@@ -283,6 +283,21 @@ mark {
     padding: .2rem .5rem .2rem .5rem;
 }
 
+.rouge-code-block {
+    position: relative;
+    margin: 5px;
+    /* padding:2rem .5rem .5rem .5rem; */
+}
+.copy-rouge-button{
+    position: absolute;
+    display: none;
+    top: .75rem;
+    right: .5rem;
+}
+
+/* TO BE REMOVED: From: https://stackoverflow.com/a/2776136/6929343 */
+.rouge-code-block:hover .copy-rouge-button { display: block; }
+
 // Copy code block contents to clipboard
 // See: _includes/copyHeader.html for credit
 .code-header {
