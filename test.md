@@ -348,7 +348,7 @@ pre[class*="language-bash"] {
 
 <style>
 pre[class*="language-"] {
-    //position:relative;
+    position:relative;
     margin:5px;
     padding:2rem .5rem .5rem .5rem;
     /* more stuff */
@@ -374,7 +374,7 @@ blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
         console.log("Adding copyRougeButton")
-        let copyRougeButton = document.createElement("copy-rouge-button")
+        let copyRougeButton = document.createElement("button")
         copyRougeButton.innerText = copyButtonLabel
         copyRougeButton.addEventListener("click", copyRougeCode)
         block.appendChild(copyRougeButton)
