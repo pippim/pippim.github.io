@@ -370,12 +370,12 @@ const copyButtonLabel = "Copy Code";
 //let blocks = document.querySelectorAll("pre")
 //let blocks = document.getElementsByClassName("highlighter-rouge")
 //let blocks = document.getElementsByClassName("highlight")
-let blocks = document.getElementsByClassName("pre.highlight")
+let blocks = document.querySelectorAll("pre.highlight")
 console.log("blocks.length:", blocks.length)
 
-for(var ndxRouge=0; ndxRouge<blocks.length; ndxRouge++) {
-    block = blocks[ndxRouge]
-//blocks.forEach((block) => {
+//for(var ndxRouge=0; ndxRouge<blocks.length; ndxRouge++) {
+//    block = blocks[ndxRouge]
+blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
         block.classList.add("rouge-code-block")
@@ -386,8 +386,8 @@ for(var ndxRouge=0; ndxRouge<blocks.length; ndxRouge++) {
         copyRougeButton.addEventListener("click", copyRougeCode)
         block.appendChild(copyRougeButton)
     }
-//});
-}
+});
+//}
  
 async function copyRougeCode(event) {
     const button = event.srcElement;
