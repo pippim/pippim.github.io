@@ -347,13 +347,14 @@ pre[class*="language-bash"] {
 
 
 <style>
+.rouge-code-block,
 pre[class*="language-"] {
     position:relative;
     margin:5px;
     padding:2rem .5rem .5rem .5rem;
     /* more stuff */
 }
-copy-rouge-button{
+.copy-rouge-button{
     /* Appearing at page top, not within Rouge class */
     position:absolute;
     top:4px;
@@ -377,6 +378,7 @@ for(var ndxRouge=0; ndxRouge<blocks.length; ndxRouge++) {
     if (navigator.clipboard) {
         console.log("Adding copyRougeButton")
         let copyRougeButton = document.createElement("button")
+        copyRougeButton.classList.add("copy-rouge-button")
         copyRougeButton.innerText = copyButtonLabel
         copyRougeButton.addEventListener("click", copyRougeCode)
         block.appendChild(copyRougeButton)
