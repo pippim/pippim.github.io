@@ -343,6 +343,7 @@ pre[class*="language-bash"] {
 
 
 <style>
+/*
 .rouge-code-block {
     position: relative;
     margin: 5px;
@@ -357,22 +358,15 @@ pre[class*="language-bash"] {
 
 /* From: https://stackoverflow.com/a/2776136/6929343 */
 .rouge-code-block:hover .copy-rouge-button { display: block; }
-
+*/
 </style>
 
 <script>
 const copyButtonLabel = "Copy 📋";
 
-// You can use a class selector instead if available.
-//let blocks = document.querySelectorAll("pre")
-//let blocks = document.getElementsByClassName("highlighter-rouge")
-//let blocks = document.getElementsByClassName("highlight")
-//let blocks = document.querySelectorAll("pre.highlight")
 let blocks = document.querySelectorAll("div.highlight")
 console.log("blocks.length:", blocks.length)
 
-//for(var ndxRouge=0; ndxRouge<blocks.length; ndxRouge++) {
-//    block = blocks[ndxRouge]
 blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
@@ -386,7 +380,6 @@ blocks.forEach((block) => {
         block.appendChild(copyRougeButton)
     }
 });
-//}
  
 async function copyRougeCode(event) {
     const button = event.srcElement
