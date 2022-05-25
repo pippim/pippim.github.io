@@ -348,14 +348,14 @@ pre[class*="language-bash"] {
 
 <style>
 pre[class*="language-"] {
-    position:relative;
+    //position:relative;
     margin:5px;
     padding:2rem .5rem .5rem .5rem;
     /* more stuff */
 }
 copy-rouge-button{
     /* Appearing at page top, not within Rouge class */
-    //position:absolute;
+    position:absolute;
     top:4px;
     right:4px;
     /* more stuff */
