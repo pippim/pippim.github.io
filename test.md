@@ -376,6 +376,7 @@ for(var ndxRouge=0; ndxRouge<blocks.length; ndxRouge++) {
 //blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
+        block.classList.add("rouge-code-block")
         console.log("Adding copyRougeButton")
         let copyRougeButton = document.createElement("button")
         copyRougeButton.classList.add("copy-rouge-button")
