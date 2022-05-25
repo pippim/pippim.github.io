@@ -380,7 +380,8 @@ for(block in blocks) {
         copyRougeButton.addEventListener("click", copyRougeCode)
         block.appendChild(copyRougeButton)
     }
-});
+//});
+}
  
 async function copyRougeCode(event) {
     const button = event.srcElement;
