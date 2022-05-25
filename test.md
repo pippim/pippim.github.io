@@ -350,9 +350,8 @@ pre[class*="language-bash"] {
 }
 .copy-rouge-button{
     position: absolute;
-    color: red;
     display: none;
-    top: 1rem;
+    top: .75rem;
     right: .5rem;
 }
 
