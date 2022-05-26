@@ -80,7 +80,7 @@ for {{ site.title }} on GitHub Pages looked like this:
 </div>
 <style> 
 #line_draw.highlight pre, pre { line-height: 1 ! important; }
-.highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } 
+/* .highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } */ 
 </style>
 
 
