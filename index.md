@@ -358,13 +358,13 @@ of the Pippim website at `pippim.github.io`. As of
 {{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
 for {{ site.title }} on GitHub Pages looked like this:
 
-<style> #line_draw.highlight pre, pre { line-height: 1 ! important; } </style>
 <div id="line_draw">
 {% highlight text %}
 {% include website_tree.txt %}
 {% endhighlight %}
 </div>
-<style> #line_draw.highlight pre, pre { line-height: 1.45 ! important; } </style>
+<style> #line_draw.highlight pre, pre { line-height: 1 ! important; } </style>
+<style>.highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } </style>
 
 
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts
