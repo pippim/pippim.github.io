@@ -297,6 +297,7 @@ mark {
 /* From: https://stackoverflow.com/a/2776136/6929343 */
 .rouge-code-block:hover .copy-rouge-button { display: block; }
 
+/*
 // TO BE REMOVED: Copy code block contents to clipboard
 // See: _includes/copyHeader.html for credit
 .code-header {
@@ -329,6 +330,7 @@ mark {
         &::after { content: "✔️"; }
     }
 }
+*/
 
 /*
 // Visited links in purple
