@@ -274,7 +274,7 @@ blocks.forEach((block) => {
         copyRougeButton.classList.add("copy-rouge-button", "page-header-button")
         copyRougeButton.innerText = copyButtonLabel
         copyRougeButton.setAttribute('title', 'Copy code to clipboard')
-        copyRougeButton.setAttribute('aria-label', "Copy code to clipboard"
+        copyRougeButton.setAttribute('aria-label', "Copy code to clipboard")
         copyRougeButton.addEventListener("click", copyRougeCode)
         block.appendChild(copyRougeButton)
     }
