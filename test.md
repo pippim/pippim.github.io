@@ -362,6 +362,7 @@ pre[class*="language-bash"] {
 </style>
 
 <script>
+/*
 const copyButtonLabel = "Copy 📋";
 
 let blocks = document.querySelectorAll("div.highlight")
@@ -393,6 +394,7 @@ async function copyRougeCode(event) {
         button.innerText = copyButtonLabel
     },1000)
 }
+*/
 </script>
 
 ---
