@@ -18,7 +18,7 @@ import { getCookie , setCookie } from './theCookieJar.js';
     /tcm.md - The Cookie Machine documentation webpage
 
     DELETE tcmButtonId after conversion.
-    
+
 */
 {% include tcm-common-code.js %}
 {% include draggable-window.js %}
@@ -79,6 +79,8 @@ function dragElementOld(elm) {
   }
 }
 
+/* MAY 24/2022 no longer used
+
 if (tcmButtonId !== null) {
     // TCM button ID click on webpage header (being phased out)
     document.querySelector('#tcm_button').addEventListener('click', () => {
@@ -91,6 +93,7 @@ if (tcmButtonId !== null) {
         tcmButtonId.style.cssText = cssTcmButtonHide()
     });
 }
+*/
 
 // Loop through all class named .tcm-button
 var tcmButtonClassNdx; // Global variable
@@ -251,6 +254,43 @@ function introduction_to_html() {
 }
 
 introduction_to_html()  // Load immediately
+
+/* MISCELLANEOUS GLOBAL FUNCTIONS AND VARIABLES
+*/
+
+// COPY ROUGE CODE BLOCKS
+
+const copyButtonLabel = "Copy 📋";
+
+let blocks = document.querySelectorAll("div.highlight")
+console.log("blocks.length:", blocks.length)
+
+blocks.forEach((block) => {
+    // only add button if browser supports Clipboard API
+    if (navigator.clipboard) {
+        block.classList.add("rouge-code-block")
+        console.log("Adding copyRougeButton")
+        let copyRougeButton = document.createElement("button")
+        copyRougeButton.classList.add("copy-rouge-button", "page-header-button")
+        copyRougeButton.innerText = copyButtonLabel
+        copyRougeButton.setAttribute('title', 'Copy code to clipboard')
+        copyRougeButton.addEventListener("click", copyRougeCode)
+        block.appendChild(copyRougeButton)
+    }
+});
+
+async function copyRougeCode(event) {
+    const button = event.srcElement
+    const pre = button.parentElement
+    let code = pre.querySelector("code")
+    let text = code.innerText
+    await navigator.clipboard.writeText(text)
+
+    button.innerText = "Copied ✔️"
+    setTimeout(()=> {
+        button.innerText = copyButtonLabel
+    },1000)
+}
 
 // Assign tooltip (title=) to section navigation bar buttons
 set_hdr_tooltips();
