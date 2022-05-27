@@ -30,6 +30,20 @@ contains Cayman Theme defaults for historical reference purposes.
 
 https://github.com/AleksandrHovhannisyan/aleksandrhovhannisyan.com/issues/35
 
+## Test Single Text Line
+
+```html
+<!-- This is a single line of HTML comment -->
+```
+
+
+## Test Two Text Lines
+
+```html
+<!-- This is the first line of HTML comment -->
+<!-- This is the second line -->
+```
+
 ## Old HTML
 
 ```html
@@ -340,62 +354,6 @@ pre[class*="language-bash"] {
   }
 }
 ```
-
-
-<style>
-/*
-.rouge-code-block {
-    position: relative;
-    margin: 5px;
-    /* padding:2rem .5rem .5rem .5rem; */
-}
-.copy-rouge-button{
-    position: absolute;
-    display: none;
-    top: .75rem;
-    right: .5rem;
-}
-
-/* From: https://stackoverflow.com/a/2776136/6929343 */
-.rouge-code-block:hover .copy-rouge-button { display: block; }
-*/
-</style>
-
-<script>
-/*
-const copyButtonLabel = "Copy 📋";
-
-let blocks = document.querySelectorAll("div.highlight")
-console.log("blocks.length:", blocks.length)
-
-blocks.forEach((block) => {
-    // only add button if browser supports Clipboard API
-    if (navigator.clipboard) {
-        block.classList.add("rouge-code-block")
-        console.log("Adding copyRougeButton")
-        let copyRougeButton = document.createElement("button")
-        copyRougeButton.classList.add("copy-rouge-button", "page-header-button")
-        copyRougeButton.innerText = copyButtonLabel
-        copyRougeButton.setAttribute('title', 'Copy code to clipboard')
-        copyRougeButton.addEventListener("click", copyRougeCode)
-        block.appendChild(copyRougeButton)
-    }
-});
- 
-async function copyRougeCode(event) {
-    const button = event.srcElement
-    const pre = button.parentElement
-    let code = pre.querySelector("code")
-    let text = code.innerText
-    await navigator.clipboard.writeText(text)
-
-    button.innerText = "Copied ✔️"
-    setTimeout(()=> {
-        button.innerText = copyButtonLabel
-    },1000)
-}
-*/
-</script>
 
 ---
 
