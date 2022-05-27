@@ -15,7 +15,6 @@ var tcmButtonId = document.getElementById("tcm_button");  // Old method < May 18
 
 var tcmButtonClick = function() {
     // TCM button was clicked on one of page header <div>s
-    console.log("tcmButtonClick:")
     document.querySelector('#tcm_window').style.cssText = `
         display: flex;
         flex-direction: column;
