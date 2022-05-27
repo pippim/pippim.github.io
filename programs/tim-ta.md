@@ -175,6 +175,13 @@ May 14, 2022 update:
 - Then media controls for running timers will be moved from separate window to the footer section of Run Project. 
 - Then a mechanism for exporting and importing Tim-ta Projects will be started. 
 
+May 27, 2022 update:
+
+- New design for mobile complete.
+- New copy code button implemented.
+- Exporting (download) and importing (upload) Tim-ta Projects has begun. 
+
+
 ---
 
 <a id='hdr7'></a>
@@ -323,7 +330,17 @@ A note about alternating fast backward and fast forward button clicks:
 <a id='hdr11'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
-# localStorage Object
+# Local Storage Files
+
+A single file called `ttaConfig` is used to store Settings, Projects and Tasks. 
+`ttaConfig` is kept in "***Local Storage***". Local Storage is also used to 
+store every stock and custom sound file. 
+
+To view Local Storage (from Chrome and Firefox browsers):
+
+- Use <kbd>Control</kbd> + <kbd>i</kbd> to open "***Developer Tools***"
+- Select the "***Storage***" tab in Developer Tools
+- Scroll down to the "***Local Storage***" section and expand the details
 
 ``` javascript
 // Configuration & Container for all Tim-ta Projects
