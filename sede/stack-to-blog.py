@@ -148,7 +148,8 @@ NAV_LAST_LINES = 13         # Minimum of 13 lines since last navigation bar. Not
 
 ''' Copy code block contents to clipboard options. '''
 # If Copy button is never wanted, set to None
-COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
+# COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
+COPY_TO_CLIPBOARD = None    # May 26/2022 Copy to Clipboard now baked into website
 COPY_LINE_MIN = 20          # Number of lines required to qualify for button
 
 # If question or answer contains one of these "pseudo tags" then jekyll front matter
