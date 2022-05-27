@@ -100,7 +100,6 @@ var tcmButtonClassNdx; // Global variable
 for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
     tcmButtonClassNdx = ndx  // When async listener runs, ndx is end of loop = 2 not 1
     tcmButtonClasses[ndx].addEventListener('click', () => {
-        console.log("tcm button class ndx:", ndx, "tcmButtonClassNdx:", tcmButtonClassNdx)
         // Display the TCM draggable window
         document.querySelector('#tcm_window').style.cssText = `
             display: flex;
