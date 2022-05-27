@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "2,220 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-17-Can-we-disable-cron-services-in-desktop_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 *Note:* This is for companies with multi-million dollar yearly operating budgets. It would take a week to setup and requires an hour or two after upgrades to audit and even more to incorporate new scripts from an upgrade.
@@ -55,7 +55,6 @@ I would call all my `crony` scrips from `/etc/rc.local` but there are other ways
 
 The format would be like this:
 
-{% include copyHeader.html %}
 ``` bash
 $ cat /etc/rc.local
 
@@ -88,7 +87,6 @@ exit 0
 
 This is what a typical installation has for entries that are already setup in `/etc/rc.local` along with new `crony` entries after them. The last two of my `crony` entries are custom scripts my machine has in `/etc/cron.daily`
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

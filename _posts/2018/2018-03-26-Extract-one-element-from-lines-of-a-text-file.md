@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "1,390 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Extract-one-element-from-lines-of-a-text-file.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 This is one of those questions where it is helpful to have test input file and examples of desired output.
@@ -25,7 +25,6 @@ This is one of those questions where it is helpful to have test input file and e
 
 Here is a test input file I copied from the Internet and modified to encase search words within `**` pairs:
 
-{% include copyHeader.html %}
 ``` 
 $ cat ~/Downloads/wordlist.txt
 **Schadenfreude**

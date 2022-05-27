@@ -12,18 +12,17 @@ votes:        "7 "
 favorites:    
 views:        "22,360 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-24-Why-is-ls-R-called-_recursive_-listing_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 -R is for recursion, which could loosely be called "repeatedly".
 
 Take this code for example:
 
-{% include copyHeader.html %}
 ``` 
 ───────────────────────────────────────────────────────────────────────────────
 $ mkdir -p temp/a

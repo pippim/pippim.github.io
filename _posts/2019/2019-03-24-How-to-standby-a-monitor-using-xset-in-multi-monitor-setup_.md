@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "3,555 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-24-How-to-standby-a-monitor-using-xset-in-multi-monitor-setup_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 For years I had my laptop setup such that when lid is closed laptop would suspend and external monitors would go blank.
@@ -33,7 +33,6 @@ For your reason of wanting to watch a video for 90 minutes on external monitor a
 
 I'm not using DPMS for external monitors but you could check your settings with `xset q` command:
 
-{% include copyHeader.html %}
 ``` 
 $ xset q
 Keyboard Control:

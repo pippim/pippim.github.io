@@ -12,16 +12,15 @@ votes:        "2 "
 favorites:    
 views:        "364,619 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-07-07-Using-global-variables-between-files_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Based on above answers and links within I created a new module called `global_variables.py`:
 
-{% include copyHeader.html %}
 ``` python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-

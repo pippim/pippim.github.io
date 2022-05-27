@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "1,252 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-15-Is-it-possible-to-schedule-_fsck_-command-and-run-it-in-background_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -46,7 +46,6 @@ This is a good question for some types of users.
 
 You can run `fsck -n` but it won't accurately report errors for ReiserFS (whatever that filesystem is). There is another obscure file system called it refuses to check altogether.
 
-{% include copyHeader.html %}
 ``` 
 $ man fsck
 
@@ -97,7 +96,6 @@ OPTIONS
 
 I have three partitions; Old (broken) Ubuntu 16.04, Ubuntu 19.04 (called `Ubuntu 18.04`) and New Ubuntu 16.04. When running `fchk` they look like this:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo fsck -n /dev/nvme0n1p7
 fsck from util-linux 2.27.1

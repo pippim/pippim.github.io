@@ -12,11 +12,11 @@ votes:        "23 "
 favorites:    
 views:        "311,283 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-05-How-can-I-check-the-SMART-status-of-a-SSD-or-HDD-on-current-versions-of-Ubuntu-14.04-through-20.04_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## Ubuntu 16.04
@@ -58,7 +58,6 @@ sudo apt install nvme-cli
 
 Then run the program to report health of drive:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo nvme smart-log /dev/nvme0
 Smart Log for NVME device:nvme0 namespace-id:ffffffff

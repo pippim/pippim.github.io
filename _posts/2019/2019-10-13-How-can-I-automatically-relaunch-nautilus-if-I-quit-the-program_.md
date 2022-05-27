@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "631 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-13-How-can-I-automatically-relaunch-nautilus-if-I-quit-the-program_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ### Update: October 16, 2019.
@@ -33,7 +33,6 @@ Copy this script to a file called `~/ttlus`:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

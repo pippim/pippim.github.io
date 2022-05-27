@@ -12,11 +12,11 @@ votes:        "6 "
 favorites:    
 views:        "34,382 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-28-How-can-I-install-_mpich_-library_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Go to [http://www.mpich.org/downloads/][1] and click on `Xenial` for Ubuntu 16.04. This takes you here: [https://packages.ubuntu.com/xenial/mpich][2]. Then click on `amd64` and you are here: [https://packages.ubuntu.com/xenial/amd64/mpich/download](https://packages.ubuntu.com/xenial/amd64/mpich/download). Where it says:
@@ -27,7 +27,6 @@ Go to [http://www.mpich.org/downloads/][1] and click on `Xenial` for Ubuntu 16.0
 
 So instead of installing manually, use:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo apt install mpich
 Reading package lists... Done

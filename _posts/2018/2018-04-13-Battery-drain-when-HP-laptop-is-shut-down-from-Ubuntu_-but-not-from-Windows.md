@@ -12,11 +12,11 @@ votes:        "6 "
 favorites:    
 views:        "3,952 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-13-Battery-drain-when-HP-laptop-is-shut-down-from-Ubuntu_-but-not-from-Windows.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Another user with an HP Pavilion was [loosing 10% battery overnight][1]. Apparently there was no BIOS configuration for Wake-on-LAN and they had to use this method:
@@ -31,7 +31,6 @@ The logical name starting with `e` is for Ethernet which means "LAN". The logica
 
 Then take the Ethernet/LAN logical name and pass it to the `ethtool` command:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo ethtool enp59s0
 Settings for enp59s0:

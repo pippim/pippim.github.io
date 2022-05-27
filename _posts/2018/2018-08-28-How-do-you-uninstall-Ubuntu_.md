@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "125 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-28-How-do-you-uninstall-Ubuntu_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Don't Uninstall, reformat the partition
@@ -35,7 +35,6 @@ There are a few ways of discovering the correct partitions to reformat.
 
 If when you installed Ubuntu 16.10 and Kali Linux you gave the partitions a label they would be revealed with the `lsblk` command:
 
-{% include copyHeader.html %}
 ``` 
 $ lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL
 NAME         FSTYPE LABEL            MOUNTPOINT   SIZE MODEL

@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "50 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-04-How-to-speed-up-1_2-hour-to-sort-133-new-entries-in-2_700-entry-Bash-Array-in-RAM_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Cut time from 1/2 hour in RAM to 9 seconds with disk
@@ -27,7 +27,6 @@ Bash arrays can be notoriously slow in many instances. You need to call the exte
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #-------------------------------------------------------------------------------
 ExternalSortDirsArr () {
@@ -114,7 +113,6 @@ rm -f $YadNamedPipe             # Remove FIFO named pipe for IPC
 
 Here are the benchmark time displays. Notice how 1/2 hour has dropped to 9 seconds:
 
-{% include copyHeader.html %}
 ``` bash
 Create Keys-Index Pairs File
 

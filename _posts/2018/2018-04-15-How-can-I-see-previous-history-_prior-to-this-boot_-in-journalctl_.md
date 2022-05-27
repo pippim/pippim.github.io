@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "2,267 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-15-How-can-I-see-previous-history-_prior-to-this-boot_-in-journalctl_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -35,7 +35,6 @@ Firstly only new installs will have boot history stored by `journalctl` as per t
 
 `journalctl` references boot history by boot number. Use `--list-boots` parameter and then use <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>PgUp</kbd> <kbd>PgDn</kbd> or <kbd>Up</kbd>/<kbd>Down</kbd> **arrow** keys to scroll the list. When done press <kbd>Q</kbd> to quit:
 
-{% include copyHeader.html %}
 ``` 
 $ journalctl --list-boots
 -49 14b941ea19ec411cb20d6a78d3775084 Fri 2018-03-09 04:30:01 MST—Fri 2018-03-09 04:30:38 MST
@@ -80,7 +79,6 @@ On the screen we see a boot on March 27th and then one on March 30th. So the boo
 
 Today's boot is `-b`, previous boot is `-b-1`, boot before that is `-b-2`, etc. We will use `journalctl -b-22` to see the appropriate boot history:
 
-{% include copyHeader.html %}
 ``` 
 -- Logs begin at Mon 2018-03-05 05:53:18 MST, end at Sun 2018-04-15 16:02:56 MDT. --
 Mar 27 17:17:52 alien systemd-journald[295]: Runtime journal (/run/log/journal/) is 8.0M, max 75.8M, 67.8M free.
@@ -124,7 +122,6 @@ After the first few lines we see the Kernel version that was booted is: `4.14.23
 
 Of course there is alot more information in the logs available to you. If you wanted to know about say `lightdm` you could use:
 
-{% include copyHeader.html %}
 ``` 
 $ journalctl -b-22 | grep lightdm
 Mar 27 17:17:55 alien lightdm[1315]: PAM unable to dlopen(pam_kwallet.so): /lib/security/pam_kwallet.so: cannot open shared object file: No such file or directory

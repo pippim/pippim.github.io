@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "1,054 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-01-Lowering-screen-max-brightness-with-Ubuntu-18.04.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I wrote a script to monitor `/sys/class/backlight/*/brightness` and redirect it: [How to switch between options in `/sys/class/backlight` to solve brightness problem?][1].
@@ -33,7 +33,6 @@ It can be quickly modified to your needs by adding three lines:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

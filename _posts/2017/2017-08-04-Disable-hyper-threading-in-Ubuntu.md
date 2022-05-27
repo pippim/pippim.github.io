@@ -12,11 +12,11 @@ votes:        "12 "
 favorites:    
 views:        "25,450 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-04-Disable-hyper-threading-in-Ubuntu.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -129,7 +129,6 @@ Also note no matter if you turn Hyper-Threading on or off the script still displ
 
 When viewing the script below keep in mind that Conky numbers the CPUs from 1 to 8 but Linux numbers the CPUs from 0 to 7.
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
     

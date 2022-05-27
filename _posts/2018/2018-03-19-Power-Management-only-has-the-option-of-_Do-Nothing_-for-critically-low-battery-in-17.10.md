@@ -12,11 +12,11 @@ votes:        "8 "
 favorites:    
 views:        "2,886 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-19-Power-Management-only-has-the-option-of-_Do-Nothing_-for-critically-low-battery-in-17.10.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -54,7 +54,6 @@ Note on my system they are just fine, so I changed them back to what they were i
 
 Gnome power management utilizes `upower` to do the heavy lifting. To ensure it is running and collecting battery statistics as it should, use:
 
-{% include copyHeader.html %}
 ``` 
 $ upower -d 
 Device: /org/freedesktop/UPower/devices/line_power_ACAD

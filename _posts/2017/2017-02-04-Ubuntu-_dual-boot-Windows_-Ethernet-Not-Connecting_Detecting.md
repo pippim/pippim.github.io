@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "17,118 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-04-Ubuntu-_dual-boot-Windows_-Ethernet-Not-Connecting_Detecting.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## The bible of network connection problems
@@ -25,7 +25,6 @@ The best place to start is with your favorite bible of network connections like 
 
 Although there are dozens of things you can try:
 
-{% include copyHeader.html %}
 ``` 
 1 Check the connection 2 Set the hostname
 2.1 Local network hostname resolution 3 Device driver

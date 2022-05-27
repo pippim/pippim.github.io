@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "4,499 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-17-source-command-error-from-_usr_share_bash-completion_bash-completion-when-I-open-a-terminal.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 To see if any of your aliases are conflicting with a bash built-in or a system command use this script:
@@ -54,7 +54,6 @@ alias test='ls test'
 
 Now run the script `alias-check`:
 
-{% include copyHeader.html %}
 ``` text
 bash: /home/rick/.bashrc: line 171: syntax error: unexpected end of file
 alert is aliased to `notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e 's/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//')"'

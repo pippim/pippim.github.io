@@ -12,11 +12,11 @@ votes:        "5 "
 favorites:    1
 views:        "2,273 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-30-xdotool-how-to-select-desktop-send-F5-and-return_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 It sounds simple; `xdotool` selects desktop, simulates <kbd>F5</kbd> key press and returns focus to calling window / program. 
@@ -36,7 +36,6 @@ This project is related to this Q&A where the icons drop off the left screen int
 
 Thanks to [Podesta's help][1] I created this code:
 
-{% include copyHeader.html %}
 ``` 
 TestIcons () {
 

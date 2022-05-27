@@ -12,11 +12,11 @@ votes:        "7 "
 favorites:    
 views:        "6,229 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-Increment-Brightness-by-value-using-xrandr.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Copy bash script below to a file called `bright`
@@ -27,7 +27,6 @@ Then mark it executable with `chmod a+x bright`
 
 # Bash Script
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

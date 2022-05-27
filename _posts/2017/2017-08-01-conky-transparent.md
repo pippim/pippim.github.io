@@ -12,11 +12,11 @@ votes:        "12 "
 favorites:    
 views:        "18,433 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-01-conky-transparent.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Change:
@@ -46,7 +46,6 @@ At least this worked for my conky display:
 
 In comments it was asked to share my `conky` script. It was just changed a couple days ago so I've updated the `.gif` above and included the edited (stripped out experimental code /comments) script below:
 
-{% include copyHeader.html %}
 ``` 
 # November 16, 2014 copied from 081114 version written for Core 2 Duo @ 2 Ghz
 #   and modified for i-7 Quad Core 3630 QM @ 3.4 Ghz with 8 cores @1920x1080 again.

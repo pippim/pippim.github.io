@@ -12,18 +12,17 @@ votes:        "5 "
 favorites:    
 views:        "2,942 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-02-WiFi-signal-icon-switches-to-Ethernet-icon-_up-down-arrows_-after-Suspend_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Automatic Method
 
 Using sudo powers create the file `/lib/systemd/system-sleep/iwlwifi-reset` containing:
 
-{% include copyHeader.html %}
 ``` sh
 #!/bin/sh
 

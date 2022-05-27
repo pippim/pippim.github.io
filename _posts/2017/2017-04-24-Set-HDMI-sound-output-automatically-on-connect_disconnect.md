@@ -12,11 +12,11 @@ votes:        "6 "
 favorites:    
 views:        "20,865 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-24-Set-HDMI-sound-output-automatically-on-connect_disconnect.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## Ubuntu 16.04 - 20.04 Answer
@@ -26,7 +26,6 @@ This works for Ubuntu 16.04 - 20.04 which introduced a bug with Pulse Audio 8. C
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

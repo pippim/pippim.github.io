@@ -12,16 +12,15 @@ votes:        "2 "
 favorites:    
 views:        "6,209 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-06-Turning-off-text-highlighting.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 `ll` is an alias defined in `~/.bashrc` along with other alias's that use color:
 
-{% include copyHeader.html %}
 ``` 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

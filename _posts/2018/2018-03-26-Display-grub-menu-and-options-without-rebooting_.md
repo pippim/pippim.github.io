@@ -12,11 +12,11 @@ votes:        "18 "
 favorites:    
 views:        "9,091 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-26-Display-grub-menu-and-options-without-rebooting_.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 ### Updated May 7, 2018
@@ -58,7 +58,6 @@ This update introduces `grub-menu.sh` a much superior version to previous answer
 
 # Text Screen shot (long version)
 
-{% include copyHeader.html %}
 ``` 
 Grub Version: 2.02~beta2-36ubuntu3.15
 
@@ -131,7 +130,6 @@ grub-menu.sh long
 
 ## The code:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -296,7 +294,6 @@ Here is the full program listing you can copy and paste:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 
 <a id="hdr6"></a>
@@ -418,7 +415,6 @@ Here's what it looks like when invoked from the command line. Unfortunately I wa
 
 ## Turn off mouse support for copy & paste
 
-{% include copyHeader.html %}
 ``` bash
  Grub Version: 2.02~beta2-36ubuntu3.15
  ──────────────────────────────────────────────────────────────────────────────────────────
@@ -462,7 +458,6 @@ The argument `--no-mouse` has been inserted below `--default-item`. This means y
 
 Use the navigation keys to highlight an option and press <kbd>Enter</kbd> to see the boot parameters for it:
 
-{% include copyHeader.html %}
 ``` bash
 menuentry 'Ubuntu, with Linux 4.14.27-041427-generic' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.14.27-041427-generic-advanced-f3f8e7bc-b337-4194-88b8-3a513f6be55b' {
 recordfail
@@ -524,7 +519,6 @@ The disadvantage of `whiptail` is less functions but they aren't used in this ca
 
 ## `grub-display-lite.sh` bash script
 
-{% include copyHeader.html %}
 ``` bash
 
 <a id="hdr9"></a>
@@ -623,7 +617,6 @@ The colour screen seems to be easier to read than `grub-display` which uses `dia
 
 Here is the text based image which needs no modifications to copy to clipboard:
 
-{% include copyHeader.html %}
 ``` bash
 Grub Version: 2.02~beta2-36ubuntu3.15
 

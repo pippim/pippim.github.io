@@ -12,11 +12,11 @@ votes:        "8 "
 favorites:    
 views:        "5,515 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-19-Automatically-adjust-display-brightness-based-on-sunrise-and-sunset.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -76,7 +76,6 @@ With sudo powers edit the file `/usr/local/bin/sun-hours` and paste this:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -168,7 +167,6 @@ Using sudo powers create the file `/usr/local/bin/auto-brightness-config` and pa
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -211,7 +209,6 @@ chmod a+x /usr/local/bin/auto-brightness-config
 Using sudo powers create the file `/usr/local/bin/display-auto-brightness` and paste in this code:
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -367,7 +364,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 You can suspend your computer at 6 am when it before the sun rises and your setting is at 300. You can resume it at 4 pm when the sun is bright and the setting should be 2000 but you have to wait 1 to 59 seconds for `display-auto-brightness` to reset the display. When the display does reset the change is dramatic. To solve this a `systemd` script is needed. Create the file `/lib/systemd/system-sleep/display-auto-brightness` containing:
 
-{% include copyHeader.html %}
 ``` sh
 #!/bin/sh
 
@@ -432,7 +428,6 @@ In this systray example brightness is set at `418` and it is about 20 minutes be
 
 The systray indicator is setup using this code:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

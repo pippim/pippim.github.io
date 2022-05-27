@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "1,457 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-04-How-to-integrate-_run-as-shell-script_-in-right-click-menu-of-file-manager_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ### Right click to run script in Nautilus
@@ -36,7 +36,6 @@ Paste in these lines:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

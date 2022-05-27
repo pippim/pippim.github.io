@@ -12,11 +12,11 @@ votes:        "8 "
 favorites:    
 views:        "1,965 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-01-Run-a-specific-command-with-root-password-prompt-even-if-running-as-root.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 You can use this code for `rm` wrapper script but you might want to create similar versions for `mv` and `find` as well. 
@@ -45,7 +45,6 @@ Use `gksu gedit /usr/local/bin/rm` and copy in these lines:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

@@ -12,11 +12,11 @@ votes:        "1 "
 favorites:    
 views:        "205 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-18-How-to-compress-3000-images-in-batches-of-50.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -35,7 +35,6 @@ Call the script using:
 
 Copy the following script into the file `~/CompressImages`:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -68,7 +67,6 @@ done
 
 After running `CompressImages` script check the results:
 
-{% include copyHeader.html %}
 ``` bash
 $ ll -h ~/Downloads/*.tar
 

@@ -12,11 +12,11 @@ votes:        "5 "
 favorites:    
 views:        "6,165 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-30-How-can-I-set-up-a-password-for-the-_rm_-command_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Sometimes it's not our friends, we are our own worst enemies
@@ -42,7 +42,6 @@ Use `gksu gedit /usr/local/bin/rm` and copy in these lines:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

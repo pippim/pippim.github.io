@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "7,604 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-26-Copy-group-of-files-_Filename*_-to-backup-_Filename*.bak_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I wrote this one-liner into my `~/.bashrc`. Much better answers using `find` can be posted I suppose. Even better answers could be written in in C. Hopefully this Q&A gets the ball rolling for better answers:
@@ -47,7 +47,6 @@ cps () {
 
 Using the question as an example here is how it looks in action:
 
-{% include copyHeader.html %}
 ``` bash
 ───────────────────────────────────────────────────────────────────────────────────────────
 rick@alien:~/gmail$ ll gmail-meta3*

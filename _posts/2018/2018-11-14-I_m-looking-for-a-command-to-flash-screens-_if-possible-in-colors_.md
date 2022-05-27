@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "1,314 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-14-I_m-looking-for-a-command-to-flash-screens-_if-possible-in-colors_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I made a bash script to meet the objective:
@@ -29,7 +29,6 @@ I made a bash script to meet the objective:
 
 Copy this bash script to your computer:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -224,7 +223,6 @@ You can also have color flashing ASCII Art text in the terminal:
 
 Here is the script:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

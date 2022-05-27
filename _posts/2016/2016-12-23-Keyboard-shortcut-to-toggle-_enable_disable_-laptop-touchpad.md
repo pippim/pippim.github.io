@@ -12,11 +12,11 @@ votes:        "9 "
 favorites:    
 views:        "3,662 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-23-Keyboard-shortcut-to-toggle-_enable_disable_-laptop-touchpad.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Script to toggle Touchpad on/off with screen notification
@@ -26,7 +26,6 @@ Partial credit to this post ([Enable/disable touchpad][1])
 ## Create toggle-touchpad script
 Create a new directory `/home/USER/bin` and then use `gedit /home/USER/bin/toggle-touchpad`. **NOTE:** Replace **USER** with your user ID. Copy and paste these lines into your editor:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

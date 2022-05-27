@@ -12,17 +12,16 @@ votes:        "3 "
 favorites:    
 views:        "670 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-10-Laptop-not-shutting-down-on-low-power.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Unless something has changed recently you should have this file: `/etc/UPower/UPower.conf` containing:
 
 
-{% include copyHeader.html %}
 ``` 
 # Only the system vendor should modify this file, ordinary users
 # should not have to change anything.

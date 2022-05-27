@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "4,564 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-01-Remove-second-hard-drive-OS-from-grub.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## Short Answer
@@ -33,7 +33,6 @@ Then `sudo update-grub` of course.
 
 Grub's OS_Prober checks each mounted drive for presence of `/boot/*` entries of `vmlinuz*` and `initrd.img*`. Then adds those options to your booted instance of `grub`. On my system for example:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo mount-menu.sh
 Mount Partition
@@ -85,7 +84,6 @@ DESCRIPTION:   Ubuntu 18.04 LTS
 
 Now update `grub` and look at the menu:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo update-grub
 $ grub-menu.sh
@@ -129,7 +127,6 @@ option 2 we want to keep, options 3 and 4 we want gone.
 
 So on my system use:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo mv /mnt/mount-menu.BkLzA/boot /mnt/mount-menu.BkLzA/boot.old
 $ sudo update-grub

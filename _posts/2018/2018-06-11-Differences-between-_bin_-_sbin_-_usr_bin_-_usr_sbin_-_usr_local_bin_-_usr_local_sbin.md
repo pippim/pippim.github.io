@@ -12,11 +12,11 @@ votes:        "29 "
 favorites:    
 views:        "309,457 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-11-Differences-between-_bin_-_sbin_-_usr_bin_-_usr_sbin_-_usr_local_bin_-_usr_local_sbin.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I had a similar question myself a year+ ago: [Best directory to place my bash scripts?](Best directory to place my bash scripts?)
@@ -26,7 +26,6 @@ I had a similar question myself a year+ ago: [Best directory to place my bash sc
 
 `man hier` (hierarchy) lists all the directories. To get the ones just for binaries use:
 
-{% include copyHeader.html %}
 ``` 
 $ man hier | grep -E 'bin$|sbin$|^.{7}(/bin)|^.{7}(/sbin)' -A2
 

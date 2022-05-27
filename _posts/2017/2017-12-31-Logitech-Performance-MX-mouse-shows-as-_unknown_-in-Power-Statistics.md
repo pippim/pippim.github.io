@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "2,622 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-31-Logitech-Performance-MX-mouse-shows-as-_unknown_-in-Power-Statistics.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Permanent Fix
@@ -51,7 +51,6 @@ At the boot-up login screen the system tray displays the battery icon. Clicking 
 
 This [bug report][5] details how `udev` rules aren't running on boot but only when replugging cables. This "sounds" similar to the unifying receiver here. The bug report does provide clues on additional information to look for. ie `udev` (or something else) has enumerated devices in the system paths:
 
-{% include copyHeader.html %}
 ``` 
 $ udevadm info /sys/class/power_supply/hidpp_battery_0
 P: /devices/pci0000:00/0000:00:14.0/usb1/1-9/1-9:1.2/0003:046D:C52B.0005/0003:046D:2010.0007/power_supply/hidpp_battery_0

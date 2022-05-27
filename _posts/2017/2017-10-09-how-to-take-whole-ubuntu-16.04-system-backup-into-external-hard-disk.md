@@ -12,18 +12,17 @@ votes:        "3 "
 favorites:    
 views:        "8,322 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-09-how-to-take-whole-ubuntu-16.04-system-backup-into-external-hard-disk.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 This is what I use for a full backup:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

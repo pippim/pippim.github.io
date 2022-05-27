@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "686 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-How-can-I-record-cpu-_-ram-usage-on-Ubuntu_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 You can use the built-in utility `vmstat`. You can get a technical overview using `man vmstat`. One note is the software in its default parameters doesn't lend itself well to modern computers with abundant RAM. For example:
@@ -74,7 +74,6 @@ In this example, the first line of data provides the average since the last boot
 
 `vmstat` is often run with an interval of 1 second for a small number of seconds depending on kind of problem the administrator is trying to diagnose. The following example illustrates an interval of one (1) second twenty (20) times:
 
-{% include copyHeader.html %}
 ``` 
 $ vmstat 1 20
 procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----

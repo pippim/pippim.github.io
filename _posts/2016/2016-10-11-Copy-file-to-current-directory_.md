@@ -12,11 +12,11 @@ votes:        "15 "
 favorites:    
 views:        "241,618 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-11-Copy-file-to-current-directory_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 For the destination directory use a single dot '**`.`**'
@@ -26,7 +26,6 @@ For the destination directory use a single dot '**`.`**'
 
 From your home directory type the following:
 
-{% include copyHeader.html %}
 ``` 
 rick@dell:~$ mkdir a && mkdir a/b && mkdir a/b/c && mkdir a/b/c2
 ────────────────────────────────────────────────────────────────

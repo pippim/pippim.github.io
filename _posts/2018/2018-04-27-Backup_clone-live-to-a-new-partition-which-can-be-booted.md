@@ -12,11 +12,11 @@ votes:        "30 "
 favorites:    
 views:        "15,913 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -100,7 +100,6 @@ This is your last chance to abort by pressing any key except `y` or `Y`.
 
 When you run the script you will get this output (excluding the output already listed above):
 
-{% include copyHeader.html %}
 ``` 
 =====================================================================
 Using rsync to clone / to /dev/nvme0n1p8 mounted as /mnt/clone16.04
@@ -220,7 +219,6 @@ When `rsync` reclones it never hits `100%` because files that never changed are 
 
 ## Bash script - `clone-ubuntu.sh`
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

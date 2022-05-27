@@ -12,18 +12,17 @@ votes:        "2 "
 favorites:    
 views:        "2,098 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-How-to-set-S3_S4-state-for-devices-on-suspend.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I had a similar problem recently when all of a sudden suspend stopped working due to USB. I wrote this script to fix it:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -94,7 +93,6 @@ Jun 14 17:30:51 alien kernel: usb 1-1.2: USB disconnect, device number 6
 
 Then press <kbd>Page Down</kbd> numerous times to see the resume messages:
 
-{% include copyHeader.html %}
 ``` bash
 Jun 14 17:31:07 alien systemd-sleep[16326]: /lib/systemd/system-sleep/custom-xhci_hcd: Wakin
 Jun 14 17:31:07 alien systemd-sleep[16326]: Selected interface 'p2p-dev-wlp60s0'

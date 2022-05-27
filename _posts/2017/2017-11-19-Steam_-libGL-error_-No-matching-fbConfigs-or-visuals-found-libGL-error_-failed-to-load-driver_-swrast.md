@@ -12,11 +12,11 @@ votes:        "15 "
 favorites:    
 views:        "167,308 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-19-Steam_-libGL-error_-No-matching-fbConfigs-or-visuals-found-libGL-error_-failed-to-load-driver_-swrast.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Windows Subsystem for Linux (WSL) has same error
@@ -27,7 +27,6 @@ In Windows Subsystem for Linux (WSL) under Windows 10 there the file `/usr/lib/i
 
 If you rename the file and then rename it back the errors disappear and it works a lot faster:
 
-{% include copyHeader.html %}
 ``` 
 ───────────────────────────────────────────────────────────────────────────────
 rick@alien:/mnt/e/etc$ lock-screen-timer

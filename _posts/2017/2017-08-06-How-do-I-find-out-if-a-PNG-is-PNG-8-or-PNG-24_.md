@@ -12,11 +12,11 @@ votes:        "28 "
 favorites:    
 views:        "15,054 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-06-How-do-I-find-out-if-a-PNG-is-PNG-8-or-PNG-24_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 The `file` command use in other answers is sometimes inconsistent. For example:
@@ -43,7 +43,6 @@ rick@dell:~/Pictures$ identify "256 colors.jpg"
 
 I have [ImageMagick][1] installed which allows me to use:
 
-{% include copyHeader.html %}
 ``` 
 $ identify -verbose vnStat.png
 Image: vnStat.png

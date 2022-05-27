@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "1,751 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-How-to-edit-target-path-of-broken-symbolic-link-from-GUI_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Edit Symbolic Link in Nautilus
@@ -36,7 +36,6 @@ Paste in the following:
 
 <!-- lang-bash -->
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -107,7 +106,6 @@ The method is similar to Nautilus but with some Caja specifics. We should follow
 
 So we need create script in the `~/.config/caja/scripts`:
 
-{% include copyHeader.html %}
 ``` bash
 mkdir -p ~/.config/caja/scripts
 cat > ~/.config/caja/scripts/edit-link << \EOF

@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "1,090 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-05-28-Make-Ubuntu_s-Night-Light-look-like-Manjaro-KDE_s-Night-Color.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # eyesome
@@ -61,7 +61,6 @@ Here's a few screenshots (of a dozen screens) to give you an idea about eyesome:
 ## Reply to comment Color Temperature to Gamma
 
 The new version has a Color to Gamma conversion table (bash syntax):
-{% include copyHeader.html %}
 ``` bash
 #                 Red         Green       Blue     Color Temperature
 GammaRampArr=( 1.00000000  0.05181963  0.00000000   500 \

@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "490 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-12-Downgrade-of-kernel-fails.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Rather than compiling a kernel, you can use a pre-compiled version released by Ubuntu. `3.16` kernel chain is supported and it might suit your needs.
@@ -72,7 +72,6 @@ Errors were encountered while processing:
 
 **OH OH** There is a dependency problem. Install missing module:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo apt install module-init-tools
 Reading package lists... Done

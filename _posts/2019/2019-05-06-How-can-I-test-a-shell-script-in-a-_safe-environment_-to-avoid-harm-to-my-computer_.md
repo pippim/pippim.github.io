@@ -12,11 +12,11 @@ votes:        "11 "
 favorites:    
 views:        "7,853 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-06-How-can-I-test-a-shell-script-in-a-_safe-environment_-to-avoid-harm-to-my-computer_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## As the school you are attending has published the scripts, the best place to voice your concerns is with your instructors.
@@ -25,7 +25,6 @@ That said we can help you decipher the code on a line by line basis. It is proba
 
 You actually have 40 bash scripts with a total 5,360 lines. I've combined them together and looked for bash/shell commands that could be abused. ***They all appear to be used normally***:
 
-{% include copyHeader.html %}
 ``` 
 $ cat /tmp/sshellcheck.mrg | grep " rm "
 

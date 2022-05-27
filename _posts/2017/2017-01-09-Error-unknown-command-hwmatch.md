@@ -12,16 +12,15 @@ votes:        "5 "
 favorites:    
 views:        "26,056 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-09-Error-unknown-command-hwmatch.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Dealing strictly with the `hwmatch` problem look into `/etc/grub.d/10_linux` and you will find it listed something like this near the bottom (9th line down on this display):
 
-{% include copyHeader.html %}
 ``` 
 # Use ELILO's generic "efifb" when it's known to be available.
 # FIXME: We need an interface to select vesafb in case efifb can't be used.
@@ -52,7 +51,6 @@ fi
 
 For whatever reason your grub installation is incomplete and missing `hwmatch` module. You should see it among many other files when you use `ll /boot/grub/i386-pc`:
 
-{% include copyHeader.html %}
 ``` 
 -rw-r--r-- 1 root root  47292 Dec  5 07:13 hwmatch.mod
 -rw-r--r-- 1 root root   2928 Dec  5 07:13 iorw.mod

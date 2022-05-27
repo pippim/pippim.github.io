@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "507 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-05-How-do-I-get-a-Zenity-feature-in-Yad_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 For learning `yad` I found this great reference: [YAD - Smokey01.com][1]
@@ -27,7 +27,6 @@ As mentioned in comments you want to use the option `--search-column=N`
 
 Take the following code snippet as an example:
 
-{% include copyHeader.html %}
 ``` bash
 while true ; do
     local Selected INSTRUCTIONS

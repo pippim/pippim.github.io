@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "34,129 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-08-help!-W_-Possible-missing-firmware-_lib_firmware_i915_kbl_guc_ver9_14.bin-for-module-i915.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 This answer appears to best solution for missing Intel Graphics Driver warnings:
@@ -29,7 +29,6 @@ This answer appears to best solution for missing Intel Graphics Driver warnings:
 
 As requested in comments it appears warnings do not go away with `linux-firmware` reinstall:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo apt install --reinstall linux-firmware
 Reading package lists... Done

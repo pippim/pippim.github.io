@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "1,364 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-How-to-quickly-find-the-deepest-subdirectory.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## `locate` command is the fastest
@@ -77,7 +77,6 @@ Comments point out how people won't know the starting point. I wrote a script th
 
 ### Script output:
 
-{% include copyHeader.html %}
 ``` bash
 $ time deepdir
 
@@ -110,7 +109,6 @@ sys     0m0.080s
 
 ## The bash script
 
-{% include copyHeader.html %}
 ``` bash
 # !/bin/bash
 

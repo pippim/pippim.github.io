@@ -12,18 +12,17 @@ votes:        "4 "
 favorites:    
 views:        "420 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-05-Code-version-control-between-local-files-and-AU-answers.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## `websync` script
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -819,7 +818,6 @@ exit
 
 ***If you don't put `spawn-progress-multi` file in your path websync will not be able to run it***
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

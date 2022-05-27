@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "1,519 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-06-Strange-LED-blinking-problem-with-USB-flash-drives-is-it-just-me_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 The problem of LED blinking after `Eject` is selected in **Nautilus**, is very close to this Launchpad Bug Report from 2013:
@@ -37,7 +37,6 @@ Scouring through the first bug report (the one closed as a duplicate) you see th
 
 I think in the bug report they missed some of the important aspects of one user's output. Here is the equivalent output from my system (that works):
 
-{% include copyHeader.html %}
 ``` 
 $ gvfs-mount -li
 

@@ -12,11 +12,11 @@ votes:        "5 "
 favorites:    
 views:        "285 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-23-Find-out-the-full-path-of-the-program-that-runs-when-I-enter-a-command.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # If all you want to know is the command location
@@ -49,7 +49,6 @@ You don't need the `pid` of commands called in order to find the names of variou
 
 For your `uname -n` example the output is:
 
-{% include copyHeader.html %}
 ``` 
 $ strace uname -n
 execve("/bin/uname", ["uname", "-n"], [/* 62 vars */]) = 0
@@ -95,7 +94,6 @@ exit_group(0)                           = ?
 
 For more information refer to `man strace`:
 
-{% include copyHeader.html %}
 ``` 
 STRACE(1)                           General Commands Manual                           STRACE(1)
 

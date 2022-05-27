@@ -12,11 +12,11 @@ votes:        "12 "
 favorites:    
 views:        "1,660 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Turn-off-all-monitors-while-watching-VLC-media-on-TV.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 I've created a script that slowly dims two monitors after 5 minutes of keyboard or mouse inactivity while you watch a movie on a third monitor. When you move your mouse or use your keyboard the two dimmed monitors quickly brighten (but not suddenly to shock you).
@@ -65,7 +65,6 @@ movie.sh
 
 ## The script
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

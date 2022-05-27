@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "3,457 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-25-No-sound-on-wake_-Dummy-Output-always-takes-over.-_pulseaudio-k_-the-fix.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 It be caused by a new kernel introduced in 19.10 like this case:
@@ -27,7 +27,6 @@ It be caused by a new kernel introduced in 19.10 like this case:
 
 If not then you can use this script `/etc/systemd/system-sleep/reloadpulse`:
 
-{% include copyHeader.html %}
 ``` sh
 #!/bin/sh
 

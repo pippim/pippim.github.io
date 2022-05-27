@@ -12,11 +12,11 @@ votes:        "9 "
 favorites:    
 views:        "2,096 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-08-When-terminal-is-opened-can-I-get-current-calendar-and-time-displayed_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -71,7 +71,6 @@ Here is the code you need to make it all work. It's recommended to place this sc
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

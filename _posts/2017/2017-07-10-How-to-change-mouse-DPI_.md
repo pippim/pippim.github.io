@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "30,296 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-10-How-to-change-mouse-DPI_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # KISS - Keeping It Simple Solution
@@ -60,7 +60,6 @@ From the list we see the mouse is named "**Logitech Performance MX**".
 
 Next we need the details of the mouse using `xinput --list-props "Logitech Performance MX"`:
 
-{% include copyHeader.html %}
 ``` 
 Device 'Logitech Performance MX':
     Device Enabled (139):   1

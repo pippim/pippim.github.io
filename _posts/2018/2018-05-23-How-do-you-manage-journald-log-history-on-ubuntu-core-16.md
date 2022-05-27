@@ -12,11 +12,11 @@ votes:        "1 "
 favorites:    
 views:        "1,059 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-How-do-you-manage-journald-log-history-on-ubuntu-core-16.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 For multiple boot logs ([How to find previous boot log after Ubuntu 16.04 restarts?][1]) you don't need read/write access to `/etc`. You need read/write access to `/var/log` which you should have already.
@@ -55,7 +55,6 @@ $ journalctl --list-boots
 
 ### Display last boot log
 
-{% include copyHeader.html %}
 ``` 
 $ journalctl -b-1
 -- Logs begin at Fri 2018-02-02 18:34:35 MST, end at Thu 2018-03-01 16:43:25 MST. --

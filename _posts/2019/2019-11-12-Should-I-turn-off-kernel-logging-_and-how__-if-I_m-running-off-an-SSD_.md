@@ -12,11 +12,11 @@ votes:        "10 "
 favorites:    
 views:        "3,214 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Should-I-turn-off-kernel-logging-_and-how__-if-I_m-running-off-an-SSD_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 The linux kernel is well aware of SSDs for a long time and default installations seem to work just fine "out-of-the-box".
@@ -35,7 +35,6 @@ sudo apt install nvme-cli
 
 Next gather information available from SSD:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo nvme smart-log /dev/nvme0
 Smart Log for NVME device:nvme0 namespace-id:ffffffff

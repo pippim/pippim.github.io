@@ -12,18 +12,17 @@ votes:        "1 "
 favorites:    
 views:        "3,012 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-04-Monitor-network-traffic-_during-a-specific-time_-in-linux.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # `vnstat -l` does do what you need
 
 Simply open a terminal window and type `vnstat -l`. Then start your program that consumes network bandwidth. When your program ends return to the terminal window and press <kbd>Ctrl</kbd>+<kbd>C</kbd>. The terminal will then show time elapsed and network traffic consumed:
 
-{% include copyHeader.html %}
 ``` 
 $ vnstat -l
 Monitoring enp59s0...    (press CTRL-C to stop)

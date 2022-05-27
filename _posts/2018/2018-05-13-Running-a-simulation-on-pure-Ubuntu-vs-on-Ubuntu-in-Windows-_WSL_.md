@@ -12,11 +12,11 @@ votes:        "12 "
 favorites:    
 views:        "10,805 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-13-Running-a-simulation-on-pure-Ubuntu-vs-on-Ubuntu-in-Windows-_WSL_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Ubuntu in Windows (WSL - 2017 Fall Creators Update) is definitely slower than "Pure" Ubuntu in Linux environment.
@@ -40,7 +40,6 @@ From this Ask Ubuntu Q&A: [CPU benchmarking utility for Linux](CPU benchmarking 
 
 ### Ubuntu 16.04 on Linux
 
-{% include copyHeader.html %}
 ``` 
 $ sysbench --test=cpu --cpu-max-prime=20000 run
 sysbench 0.4.12:  multi-threaded system evaluation benchmark
@@ -73,7 +72,6 @@ Threads fairness:
 
 ### Ubuntu 16.04 on Windows 10 build 1709
 
-{% include copyHeader.html %}
 ``` 
 $ sysbench --test=cpu --cpu-max-prime=20000 run
 sysbench 0.4.12:  multi-threaded system evaluation benchmark
@@ -107,7 +105,6 @@ Threads fairness:
 
 ### Ubuntu 16.04 on Windows 10 build 1803
 
-{% include copyHeader.html %}
 ``` 
 $ sysbench --test=cpu --cpu-max-prime=20000 run
 sysbench 0.4.12:  multi-threaded system evaluation benchmark

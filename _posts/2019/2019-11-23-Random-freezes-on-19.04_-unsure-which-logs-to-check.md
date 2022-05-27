@@ -12,18 +12,17 @@ votes:        "2 "
 favorites:    
 views:        "1,755 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-23-Random-freezes-on-19.04_-unsure-which-logs-to-check.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## Enable systemd multi-boot message logs
 
 The best solution is to enable [multi-boot message logging][1] and then displaying the last messages of the previous boot:
 
-{% include copyHeader.html %}
 ``` 
 $ journalctl -xe -b-1
 

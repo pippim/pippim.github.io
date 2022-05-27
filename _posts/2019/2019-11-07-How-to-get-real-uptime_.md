@@ -12,11 +12,11 @@ votes:        "6 "
 favorites:    
 views:        "1,380 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-07-How-to-get-real-uptime_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 On one hand this answer is six years late, on the other hand it's a blink of the eye if the internet is eternal! 
@@ -46,7 +46,6 @@ Linux will report uptime as 8 days and 40 minutes. The real uptime (after subtra
 ## `suspendtime` bash script
 
 Here's the code you can copy to your system:
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

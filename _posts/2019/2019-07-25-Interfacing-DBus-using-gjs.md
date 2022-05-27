@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "794 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-25-Interfacing-DBus-using-gjs.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I've read Gnome is going the route of Java Script (GJS) for much of it's desktop and reducing amount of C++ and Python. So I found this question particularly interesting today.
@@ -25,7 +25,6 @@ Here is an [example Java Script][1] and I will be trying it myself. In this exam
 
 
 
-{% include copyHeader.html %}
 ``` java
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;

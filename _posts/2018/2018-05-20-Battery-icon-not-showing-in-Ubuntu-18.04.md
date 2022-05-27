@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "3,928 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-20-Battery-icon-not-showing-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Make sure you are running the correct parameter. For example using your parameters on my system:
@@ -35,7 +35,6 @@ $ upower -i /org/freedesktop/uPower/devices/battery/BAT0
 
 Using the correct parameter however:
 
-{% include copyHeader.html %}
 ``` 
 $ upower -i /org/freedesktop/UPower/devices/battery_BAT1
   native-path:          BAT1
@@ -65,7 +64,6 @@ $ upower -i /org/freedesktop/UPower/devices/battery_BAT1
 
 To see everything (including what the correct parameter would be) use:
 
-{% include copyHeader.html %}
 ``` 
 $ upower -d
 Device: /org/freedesktop/UPower/devices/line_power_ACAD

@@ -12,11 +12,11 @@ votes:        "1 "
 favorites:    
 views:        "417 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-03-Strange-suspension-issues-on-macbook-pro-Ubuntu-18.04-LTS.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Power off / on all during suspend / resume
@@ -25,7 +25,6 @@ It's very difficult to isolate what is going on. One good chance of making every
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

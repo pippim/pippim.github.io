@@ -12,11 +12,11 @@ votes:        "11 "
 favorites:    5
 views:        "4,536 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-23-Kernel-suspends-too-quickly_-upon-resume-continues-suspend-tasks.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -71,7 +71,6 @@ Oct 21 16:13:14 alien kernel: Freezing user space processes ... (elapsed 0.002 s
 
 When this question was originally posted I had a laptop that was upgraded from 14.04 to 16.04. Since then I have a new laptop with a 16.04 fresh install. The issue still remains though:
 
-{% include copyHeader.html %}
 ``` 
     (... Feb 24/2018 laptop lid closed system suspends ...)
 Feb 24 23:20:39 alien systemd[1]: Starting TLP suspend/resume...
@@ -178,7 +177,6 @@ My concern is other things are starting to break 6 months after this question wa
 
 Here's relevant `/var/log/syslog`:
 
-{% include copyHeader.html %}
 ``` 
 Apr 11 05:05:47 dell NetworkManager[21298]: <info>  [1491908747.8097] manager: sleep requested (sleeping: no  enabled: yes)
 Apr 11 05:05:47 dell NetworkManager[21298]: <info>  [1491908747.8098] manager: sleeping...

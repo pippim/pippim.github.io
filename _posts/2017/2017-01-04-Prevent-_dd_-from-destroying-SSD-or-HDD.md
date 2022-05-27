@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "2,731 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-04-Prevent-_dd_-from-destroying-SSD-or-HDD.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ### Create `dd` wrapper script
@@ -31,7 +31,6 @@ and copy and paste these commands:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -110,7 +109,6 @@ sudo chmod +x /usr/local/bin/dd
 
 Below is how it appears on your terminal screen when you've called the new `dd` script without using the protected drives.
 
-{% include copyHeader.html %}
 ``` bash
 $ sudo dd if=/dev/zero of=/dev/sdd bs=512 count=100
 ╔════════════════════════════════════════════════════════════════╗

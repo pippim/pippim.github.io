@@ -12,18 +12,17 @@ votes:        "7 "
 favorites:    
 views:        "6,247 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-25-How-to-disable-sleep-_-suspend-_-hibernate-HP-keyboard-buttons-for-Ubuntu-18.04_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 In addition to the Gnome Power settings you can set the `systemd` settings found in `/etc/systemd/logind.conf`:
 
 My laptop looks like this:
 
-{% include copyHeader.html %}
 ``` 
 $ cat /etc/systemd/logind.conf
 

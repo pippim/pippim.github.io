@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "3,797 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-09-High-DPi-screen-xrandr-scaling-on-ubuntu-18.04-LTS.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 This answers both the OP's question and the other answer's bonus question.
@@ -31,7 +31,6 @@ sudo -H gedit /lib/systemd/system-sleep/scale
 
 Copy these lines into `gedit`:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

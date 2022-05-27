@@ -51,6 +51,7 @@
 │   ├── posts_by_tag.html
 │   ├── posts_by_vote.html
 │   ├── search.html
+│   ├── stack.md
 │   ├── tcm-common-code.js
 │   ├── tcm-draggable-window.html
 │   ├── tcm-window.html
@@ -60,10 +61,8 @@
 ├── _layouts
 │   ├── default.html
 │   ├── hrb.html
-│   ├── index.md
 │   ├── post.html
 │   ├── program.html
-│   ├── tcm-window.html
 │   └── test.html
 ├── _posts
 │   ├── 2016 [176 entries exceeds filelimit, not opening dir]
@@ -113,4 +112,4 @@
 ├── programs.md
 └── test.md
 
-26 directories, 88 files
+26 directories, 87 files

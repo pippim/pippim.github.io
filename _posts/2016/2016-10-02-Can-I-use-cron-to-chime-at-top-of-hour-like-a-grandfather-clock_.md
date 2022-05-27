@@ -12,11 +12,11 @@ votes:        "9 "
 favorites:    
 views:        "2,734 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-02-Can-I-use-cron-to-chime-at-top-of-hour-like-a-grandfather-clock_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 [heemayl][1] has provided the correct answer to get `cron` to run at the top of the hour and bottom of the hour. **Thanks again!** However as other users have discovered a `cronjob` cannot play sound files by default:
@@ -84,7 +84,6 @@ eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome
 
 ### Contents of `top-of-hour-chime`
 
-{% include copyHeader.html %}
 ``` bash
 #! /bin/bash
 

@@ -12,11 +12,11 @@ votes:        "7 "
 favorites:    
 views:        "1,556 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-15-How-can-I-make-stars-appear-when-I-type-sudo-password_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 After entering `sudo` at the Terminal if you want stars / asterisks to appear with each password character you type you need to configure it using:
@@ -27,7 +27,6 @@ sudo visudo
 
 Locate the line containing `env_reset` and add the parameter `, pwfeedback` behind it.  Here is an example:
 
-{% include copyHeader.html %}
 ``` 
   GNU nano 2.5.3                      File: /etc/sudoers.tmp                                          Modified  
 

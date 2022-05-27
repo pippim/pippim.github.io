@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "125,568 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-10-Can_t-upgrade-due-to-low-disk-space-on-_boot.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 Compared to other GUI answers here, the advantage of this answer is native Ubuntu Bash is used without installing third-party applications.
@@ -72,7 +72,6 @@ Copy this code to an executable file named `rm-kernels` in `/usr/local/bin`:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

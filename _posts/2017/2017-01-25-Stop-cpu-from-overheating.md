@@ -12,11 +12,11 @@ votes:        "13 "
 favorites:    
 views:        "25,786 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-25-Stop-cpu-from-overheating.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -174,7 +174,6 @@ Have been using `TLP` (described above) for many months now and temperatures are
 
 Because this is a Dell I had installed I8K Fan Monitor / Control in hopes it would speed up the fan sooner and faster. When I type `sensors` I get:
 
-{% include copyHeader.html %}
 ``` 
 $ sensors
 dell_smm-virtual-0

@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "17,530 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-21-Check-if-Bash-version-is-__-given-version-number.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # One-liner not possible but a bash script is possible
@@ -30,7 +30,6 @@ The bash script below needs to be marked as executable using the command `chmod 
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

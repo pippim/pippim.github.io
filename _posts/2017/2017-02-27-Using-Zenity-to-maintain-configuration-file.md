@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "1,110 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-27-Using-Zenity-to-maintain-configuration-file.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 Zenity can only display previous value when there is only one entry field. As such the code below puts the previous values into the label fields and instructs user to type new value into entry fields or leave it blank to keep existing value.
@@ -30,7 +30,6 @@ Zenity can only display previous value when there is only one entry field. As su
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -120,7 +119,6 @@ yad --plug=$KEY --tabnum=4 --form \
 The `BuildMonitorPage` function does the heavy lifting though. Here is what it looks like:
 
 
-{% include copyHeader.html %}
 ``` bash
 BuildMonitorPage () {
     # Move configuration array monitor 1-3 to Working Screen fields

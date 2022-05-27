@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "9,967 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-11-How-to-test-oom-killer-from-command-line.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## Revised answer
@@ -87,7 +87,6 @@ The `oom-killer` **[ pid ]** fields are explained [here][3]:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

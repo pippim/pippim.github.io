@@ -12,18 +12,17 @@ votes:        "2 "
 favorites:    
 views:        "3,625 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-14-Nvidia-drivers-Ubuntu-18.04-Dell-G5-15.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 It might be an "18.04 thing": [External monitor not detected on Ubuntu 18.04](External monitor not detected on Ubuntu 18.04). I've never experienced it upgrading to 18.04 or 19.04 but I'm already using LightDM.
 
 I have a close but not identical system. Dell AW 17R3, I-7 6700HQ Intel HD 530 iGPU, nVidia GTX 970M GPU. Besides comments above, I'll share my `xorg.conf` in hopes it might help:
 
-{% include copyHeader.html %}
 ``` 
 $ cat /etc/X11/xorg.conf
 

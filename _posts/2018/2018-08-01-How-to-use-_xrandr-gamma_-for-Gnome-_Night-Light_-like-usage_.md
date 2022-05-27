@@ -12,11 +12,11 @@ votes:        "25 "
 favorites:    
 views:        "16,441 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-01-How-to-use-_xrandr-gamma_-for-Gnome-_Night-Light_-like-usage_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## December 9, 2018 Update - `sct`
@@ -25,7 +25,6 @@ I found source code for program `sct` which allows user to set color temperature
 
 
 
-{% include copyHeader.html %}
 ``` c
 /* cribbed from redshift, but truncated with 500K steps */
 static const struct { float r; float g; float b; } whitepoints[] = {

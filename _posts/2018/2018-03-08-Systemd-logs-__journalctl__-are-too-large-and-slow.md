@@ -12,11 +12,11 @@ votes:        "91 "
 favorites:    
 views:        "50,221 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Systemd-logs-__journalctl__-are-too-large-and-slow.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## `systemd` comes with a nifty vacuum cleaner
@@ -55,7 +55,6 @@ Size has dropped from 312 MB to 136 MB a savings of 176 MB and 64 MB more than e
 
 The number of `journalctl` boot logs was 32 but now it is reduced to 26:
 
-{% include copyHeader.html %}
 ``` 
 $ journalctl --list-boots
 -26 0f230cc546fd4aec8f5233e0074ab3e1 Tue 2018-02-13 03:57:20 MST—Wed 2018-02-14 

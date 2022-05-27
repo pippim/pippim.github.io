@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "8,118 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-25-How-can-I-_diff_-two-files-with-Nautilus_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Using Nautilus to compare file to clipboard containing text
@@ -29,7 +29,6 @@ This answer uses Nautilus's built-in function to run a custom script after selec
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

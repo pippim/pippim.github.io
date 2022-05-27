@@ -12,11 +12,11 @@ votes:        "6 "
 favorites:    
 views:        "63,313 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-07-Difference-between-Legacy-BIOS-and-UEFI.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Legacy (CSM) booting vs UEFI booting
@@ -81,7 +81,6 @@ $ du -hs /boot/efi
 
 Whilst researching this answer I found a link to the `gdisk` command which I ran and may regret when I boot into Windows again. This is here so you don't repeat this if it turns out to be a mistake for Windows dual-boot:
 
-{% include copyHeader.html %}
 ``` 
 sudo gdisk -l /dev/sda
 [sudo] password for rick:          

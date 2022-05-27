@@ -12,11 +12,11 @@ votes:        "13 "
 favorites:    
 views:        "12,735 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-06-Boot-Repair-created-too-many-grub-menu-entries-for-Windows.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Every time I've run `boot-repair` it adds a **5** extra Windows boot options to my main `grub` menu that do not work. In your case it has added **11** extra entries!
@@ -27,7 +27,6 @@ The secret can be found within `/etc/grub/grub.cfg` file:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 ### BEGIN /etc/grub.d/25_custom ###
     menuentry "Windows UEFI bootmgfw.efi" {
@@ -100,7 +99,6 @@ $ locate 25_custom
 
 Take a look at the extra Windows options that were setup (and don't work):
 
-{% include copyHeader.html %}
 ``` bash
 $ cat /boot/efi/boot-repair/log/20171208_030854/nvme0n1p5/25_custom
 #!/bin/sh

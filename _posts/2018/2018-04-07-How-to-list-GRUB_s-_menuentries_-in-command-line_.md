@@ -12,11 +12,11 @@ votes:        "16 "
 favorites:    
 views:        "94,496 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-07-How-to-list-GRUB_s-_menuentries_-in-command-line_.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -50,7 +50,6 @@ The bash script uses `whiptail` instead of `dialog` to display the menu. One adv
 
 Here's a text screen shot:
 
-{% include copyHeader.html %}
 ``` 
 Grub Version: 2.02~beta2-36ubuntu3.15
 
@@ -89,7 +88,6 @@ Grub Version: 2.02~beta2-36ubuntu3.15
 
 Use the navigation keys to highlight an option and press <kbd>Enter</kbd> to see the pre-kernel drivers loaded by `grub` and the boot parameters passed by `grub` to the kernel when booting it:
 
-{% include copyHeader.html %}
 ``` 
 menuentry 'Ubuntu, with Linux 4.14.27-041427-generic' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.14.27-041427-generic-advanced-f3f8e7bc-b337-4194-88b8-3a513f6be55b' {
 recordfail
@@ -148,7 +146,6 @@ grub-menu.sh long
 
 ## The code:
 
-{% include copyHeader.html %}
 ``` bash
 
 <a id="hdr6"></a>

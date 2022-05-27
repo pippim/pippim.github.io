@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "59,619 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-22-How-do-I-restrict-my-kids_-computing-time_.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -72,7 +72,6 @@ gedit lock-screen-timer
 
 Toggle back to this screen and copy the following code by highlighting it and pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

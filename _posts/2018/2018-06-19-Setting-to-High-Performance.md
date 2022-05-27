@@ -12,11 +12,11 @@ votes:        "50 "
 favorites:    
 views:        "97,919 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-19-Setting-to-High-Performance.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 To view available speed governors use this command:
@@ -68,7 +68,6 @@ CPU% utilization has spiked by 5%, but CPU frequency has dropped by 1500 MHz and
 April 12, 2019 - Someone requested [conky][3] code so I'm including today's version. The refresh rate is set at 2.5 seconds today whereas in .gifs it's probably 1 second or .75 second. I've edited the code a bit here because mine is setup for three monitors and most people will have one monitor.
 
 The storage section is a little tricky. You need to change the device names to your own and there are `if` tests if a partition isn't mounted shows system information like cache and buffers.
-{% include copyHeader.html %}
 ``` 
 
 override_utf8_locale yes

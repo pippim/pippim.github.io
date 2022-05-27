@@ -12,11 +12,11 @@ votes:        "6 "
 favorites:    
 views:        "2,021 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -89,7 +89,6 @@ This `.gif` shows how it looks when Ubuntu’s Unity System Tray is updated.
 
 Create a script similar to the following script called `indicator-sysmonitor-display`. Assign the script's filename to the variable `{Custom}` in **Sysmonitor Indicator**:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -144,7 +143,6 @@ The `text-spinner` bash script creates a spinning pizza effect by cycling throug
 
 Here is the `text-spinner` bash script:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

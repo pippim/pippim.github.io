@@ -12,11 +12,11 @@ votes:        "8 "
 favorites:    
 views:        "2,274 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-12-Command-line-snake-game_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -63,7 +63,6 @@ Remove the comment from the first three code lines and add a comment (`#`) to th
 
 Here's the complete code:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 #

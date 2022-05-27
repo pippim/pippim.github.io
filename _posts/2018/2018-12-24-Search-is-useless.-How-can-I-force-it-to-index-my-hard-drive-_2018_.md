@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "999 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-24-Search-is-useless.-How-can-I-force-it-to-index-my-hard-drive-_2018_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 Files are indexed for the `locate` command but normally it is updated every day so any new file you created today won't show up until tomorrow. I've circumvented this shortfall by putting `sudo updatedb` as a cron job that runs every 15 minutes (it only takes a few seconds to run).
@@ -115,7 +115,6 @@ sudo -H gedit /usr/local/bin/glocate
 
 Then copy and paste the following line:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

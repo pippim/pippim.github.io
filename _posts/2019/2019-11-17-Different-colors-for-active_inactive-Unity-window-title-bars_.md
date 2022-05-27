@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "1,011 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-17-Different-colors-for-active_inactive-Unity-window-title-bars_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -51,7 +51,6 @@ This new script `revealwindow3` can be assigned to a shortcut key so no matter w
 
 ## `revealwindow3` bash script
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -154,7 +153,6 @@ This method uses shortcut key. I used <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>W</kbd
 
 The script shrinks the active window in 10 steps and then expands it in 5 steps. Originally I wrote the script using `wmctrl` but it wouldn't work for me. So I used `xdotool` instead:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

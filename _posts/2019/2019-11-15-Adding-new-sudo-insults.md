@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "1,061 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-15-Adding-new-sudo-insults.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 You can add new insults only by replacing existing insults of equal or greater length.
@@ -59,7 +59,6 @@ $ ll /usr/lib/sudo/sudoers{.so,.so.bak}
 
 Then make our script called `sudoinsults`:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -137,7 +136,6 @@ It can only be attributed to the beer.
 
 ## Run the script and check results
 
-{% include copyHeader.html %}
 ``` bash
 $ sudo ./sudoinsult
 

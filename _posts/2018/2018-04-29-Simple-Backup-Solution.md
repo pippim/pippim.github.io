@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "4,081 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Simple-Backup-Solution.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Here is part of a solution from my daily backup script which is called by cron: [Backup Linux configuration, scripts and documents to Gmail][1]. The full script is in appropriate because:
@@ -30,7 +30,6 @@ Here is the relevant script, parts of the which you might adapt:
 
 
 
-{% include copyHeader.html %}
 ``` sh
 #!/bin/sh
 #

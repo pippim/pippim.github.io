@@ -12,11 +12,11 @@ votes:        "10 "
 favorites:    
 views:        "19,380 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Unable-to-upgrade-kernel-after-4.16.3.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -61,7 +61,6 @@ I just tried `4.14.38` tonight and it exhibits the same errors as `4.14.36` and 
 
 In my case tonight the errors are:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo dpkg -i *.deb
 Selecting previously unselected package linux-headers-4.14.38-041438.
@@ -134,7 +133,6 @@ linux-image-unsigned-4.14.36-041436-generic/now 4.14.36-041436.201804240906 amd6
 
 Let's try to remove it:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo apt remove linux-modules-4.14.38-041438-generic
 Reading package lists... Done
@@ -189,7 +187,6 @@ exit 0
 
 Save the file and rerun the failed command:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo apt remove linux-image-unsigned-4.14.38-041438-generic
 Reading package lists... Done

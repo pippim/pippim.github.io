@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "343 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-19-Can-I-make-a-_choice-image-list_-in-MAAS-UBUNTU_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Grub multi-boot MAAS feature Request
@@ -29,7 +29,6 @@ I've spent hours looking into this using google and it appears a good ole grub m
 
 For example from ([Feature Request Allow grub to multi-boot MAAS images][2]) this:
 
-{% include copyHeader.html %}
 ``` 
 John George (jog) wrote on 2016-05-20:  #18
 Ran into this issue multiple times while using Landscape Autopilot to 

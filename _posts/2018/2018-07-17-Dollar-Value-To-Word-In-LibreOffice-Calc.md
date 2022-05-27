@@ -12,11 +12,11 @@ votes:        "5 "
 favorites:    
 views:        "1,324 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-17-Dollar-Value-To-Word-In-LibreOffice-Calc.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 In Libreoffice Calc, you can turn on "macros" which use the "BASIC" (Beginners All-purpose Symbolic Instruction Code) language similar to Microsoft Excel's "VBA" (Visual Basic for Applications).
@@ -39,7 +39,6 @@ From Apache Open Office (almost identical to LibreOffice): [SpellNumber in Calc 
 
 For Microsoft Excel: [How to spell out or convert numbers to English words in Excel?][3]. Libreoffice has experimental support for Excel's VBA (Visual Basic for Applications). So you can implement the macro below as is, or convert it to Libre Office BASIC syntax.
 
-{% include copyHeader.html %}
 ``` vb
 Function SpellNumberToEnglish(ByVal pNumber)
 'Updateby20131113
@@ -149,7 +148,6 @@ End Function
 
 A Calc Basic Macro was posted [here][4] to convert numbers to words:
 
-{% include copyHeader.html %}
 ``` vb
 REM  *****  BASIC  *****
 Option Explicit

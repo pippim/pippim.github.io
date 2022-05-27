@@ -12,11 +12,11 @@ votes:        "5 "
 favorites:    
 views:        "603 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-11-_cal-h_-command_-Bash-substring-___string_offset_length__-error.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Beware the Ides of March Caesar
@@ -53,7 +53,6 @@ The code is pretty straight forward:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

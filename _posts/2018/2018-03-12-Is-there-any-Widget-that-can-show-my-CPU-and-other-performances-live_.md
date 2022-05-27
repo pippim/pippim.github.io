@@ -12,11 +12,11 @@ votes:        "24 "
 favorites:    
 views:        "58,438 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-Is-there-any-Widget-that-can-show-my-CPU-and-other-performances-live_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Conky
@@ -29,7 +29,6 @@ The GIF animation show 2 dozen seconds with youtube running and then closed. The
 
 This is the `conky` code I used (minus the header section which can be desktop specific):
 
-{% include copyHeader.html %}
 ``` 
 TEXT
 #------------+

@@ -12,11 +12,11 @@ votes:        "6 "
 favorites:    
 views:        "1,109 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Dual-booting_-every-time-Windows-boots_-it-increases-the-scrolling-speed-of-the-mouse-on-Ubuntu.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Reset mouse
@@ -33,7 +33,6 @@ Here is a new script I've tested and doesn't lock up the mouse/keyboard like the
 
 Add this script to `/usr/local/bin/reset-usb`:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

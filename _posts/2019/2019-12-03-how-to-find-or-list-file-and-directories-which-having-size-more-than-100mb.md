@@ -12,18 +12,17 @@ votes:        "3 "
 favorites:    
 views:        "2,002 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-03-how-to-find-or-list-file-and-directories-which-having-size-more-than-100mb.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 This is a good article: [How to Find Out Top Directories and Files (Disk Space) in Linux][1]
 
 One of the commands listed comes close to your directory needs:
 
-{% include copyHeader.html %}
 ``` 
 $ du -Sh | sort -rh | head -20
 8.0G	./Videos
@@ -50,7 +49,6 @@ $ du -Sh | sort -rh | head -20
 
 Another of the commands comes close to solving your file size needs:
 
-{% include copyHeader.html %}
 ``` 
 $ find -type f -exec du -Sh {} + | sort -rh | head -n 20
 2.8G	./Videos/simplescreenrecorder-2019-11-24_17.20.17.mkv

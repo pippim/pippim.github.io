@@ -12,18 +12,17 @@ votes:        "1 "
 favorites:    
 views:        "217 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-12-How-to-remove-text-from-a-folder-name-after-a-certain-word.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Here's the code you need plus some test data you don't need:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

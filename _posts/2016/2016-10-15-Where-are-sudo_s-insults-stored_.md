@@ -12,11 +12,11 @@ votes:        "88 "
 favorites:    
 views:        "47,868 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-15-Where-are-sudo_s-insults-stored_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Make your own insults
@@ -94,7 +94,6 @@ When we look at all the insults we discover an interesting tidbit: saying Brocco
 
 ## `ins_goons.h` (Goon Show insults):
 
-{% include copyHeader.html %}
 ``` 
 .
     /*

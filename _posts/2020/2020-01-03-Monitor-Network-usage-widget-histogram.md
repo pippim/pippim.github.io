@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "985 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-03-Monitor-Network-usage-widget-histogram.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I've upvoted your own answer which is more specific but in general you can also consider conky for network usage.
@@ -31,7 +31,6 @@ The GIF animation show 2 dozen seconds with youtube running and then closed. The
 
 This is the `conky` code I used (minus the header section which can be desktop specific):
 
-{% include copyHeader.html %}
 ``` 
 TEXT
 #------------+

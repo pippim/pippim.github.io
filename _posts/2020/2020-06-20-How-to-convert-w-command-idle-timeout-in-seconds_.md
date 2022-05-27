@@ -12,18 +12,17 @@ votes:        "1 "
 favorites:    
 views:        "162 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-20-How-to-convert-w-command-idle-timeout-in-seconds_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Here is a bash solution:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 WishSeconds () {
 

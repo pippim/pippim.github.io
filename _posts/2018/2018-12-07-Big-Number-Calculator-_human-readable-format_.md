@@ -12,11 +12,11 @@ votes:        "8 "
 favorites:    
 views:        "519 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Big-Number-Calculator-_human-readable-format_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 An initial solution only took a few minutes by taking this readily available [Python Calculator GUI][1].
@@ -80,7 +80,6 @@ There are a few other cosmetic changes for larger font on HDPI monitor (1920x108
 
 # Full Python Script
 
-{% include copyHeader.html %}
 ``` python
 #-*-coding: utf-8-*-
 # NAME: calc.py

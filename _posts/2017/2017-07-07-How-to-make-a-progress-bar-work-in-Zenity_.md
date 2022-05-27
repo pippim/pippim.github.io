@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "12,439 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-07-How-to-make-a-progress-bar-work-in-Zenity_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 The way `zenity` works for displaying progress bars is capturing your `echo` commands from your `bash` script via the `|` (pipe) redirection command (symbol).
@@ -25,7 +25,6 @@ Here is an example you can try that I lifted from [Ubuntu Forums][1]:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

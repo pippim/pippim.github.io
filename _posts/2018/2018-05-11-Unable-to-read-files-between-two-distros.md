@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "280 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-11-Unable-to-read-files-between-two-distros.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -80,7 +80,6 @@ To create the script, copy the following to a file called `/usr/local/bin/mount-
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -257,7 +256,6 @@ exit 0
 
 To unmount the partition setup by `mount-menu.sh` run the command `sudo umount-menu.sh`. The same screen shown above appears except the partition is already mounted and you select it to unmount it. First you need to create the script `/usr/local/bin/umount-menu.sh` and copy in the lines below:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

@@ -12,11 +12,11 @@ votes:        "7 "
 favorites:    
 views:        "6,859 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-25-How-do-I-fix-very-slow-scrolling-USB-wheel-mouse-_after-waking-from-suspend_-which-started-after-upgrade-to-19.04_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # ResetMsMice
@@ -80,7 +80,6 @@ Use `sudo -H gedit /lib/systemd/system-sleep/custom-xhci_hcd`
 
 Copy these lines into the editor:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

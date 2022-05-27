@@ -12,18 +12,17 @@ votes:        "3 "
 favorites:    
 views:        "12,094 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-16-Force-Xorg-to-use-CPU-not-GPU.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 This answer: [Use integrated graphics for display and NVIDIA GPU for CUDA on Ubuntu 14.04][1] appears relevant for you.
 
 In summary setting up `/etc/X11/xorg.conf` as follows:
 
-{% include copyHeader.html %}
 ``` 
 Section "ServerLayout"
     Identifier "layout"

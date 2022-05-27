@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "903 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-23-Another-_unsolvable_-_old-glib_-problem.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Your `dpkg` command doesn't catch everything. Try this command instead:
@@ -35,7 +35,6 @@ ii  libglib2.0-data   2.48.2-0ubunt all           Common files for GLib library
 
 Although my Ubuntu 16.04 works perfectly for my needs it appears I have similar `glib` errors to you. I'll just ignore them though because I don't need to reinstall `glib`:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo apt install libglib2.0
 Reading package lists... Done

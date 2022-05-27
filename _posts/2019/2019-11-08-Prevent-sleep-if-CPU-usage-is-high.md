@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "3,293 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-08-Prevent-sleep-if-CPU-usage-is-high.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Discover your current sleep settings with this:
@@ -53,7 +53,6 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 
 
 Your screen saver settings are related at times:
 
-{% include copyHeader.html %}
 ``` 
 $ gsettings list-recursively | grep top.screensaver
 org.gnome.desktop.screensaver picture-opacity 100

@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "2,461 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-13-Nautilus-can-set-desktop-wallpaper.-How-can-it-set-login-and-lock-screen-wallpaper_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 After using Nautilus to navigate and view an appropriate .png or .jpg file to use as login screen and lock screen wallpaper, Nautilus can set this for you using a script:
@@ -37,7 +37,6 @@ Paste in these lines:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

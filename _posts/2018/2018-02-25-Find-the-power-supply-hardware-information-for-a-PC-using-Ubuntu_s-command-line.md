@@ -12,18 +12,17 @@ votes:        "7 "
 favorites:    
 views:        "67,498 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-25-Find-the-power-supply-hardware-information-for-a-PC-using-Ubuntu_s-command-line.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Software interface to Power Supply
 
 As mentioned in the top voted answer a special communication channel to the Power Supply is required. On my laptop there is a USB 3 self powered hub connected to the UPS (Interruptible Power Supply). Although you don't have this type of power supply the communication concept would be similar:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo pwrstat -status
 

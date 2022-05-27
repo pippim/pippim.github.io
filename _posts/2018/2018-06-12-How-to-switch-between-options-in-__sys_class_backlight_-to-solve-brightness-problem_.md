@@ -12,11 +12,11 @@ votes:        "5 "
 favorites:    
 views:        "3,528 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-12-How-to-switch-between-options-in-__sys_class_backlight_-to-solve-brightness-problem_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -69,7 +69,6 @@ If all works well add `redirect-brightness` to your startup applications.
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

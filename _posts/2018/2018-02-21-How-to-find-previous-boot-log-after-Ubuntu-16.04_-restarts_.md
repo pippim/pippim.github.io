@@ -12,11 +12,11 @@ votes:        "30 "
 favorites:    
 views:        "58,577 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04_-restarts_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -106,7 +106,6 @@ $ journalctl --list-boots
 
 ## Display last boot log
 
-{% include copyHeader.html %}
 ``` 
 $ journalctl -b-1
 -- Logs begin at Fri 2018-02-02 18:34:35 MST, end at Thu 2018-03-01 16:43:25 MST. --

@@ -12,16 +12,15 @@ votes:        "3 "
 favorites:    1
 views:        "198 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-09-How-do-I-add-up-file-sizes-in-Bash-by-pattern-into-array-_-list_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I have these kernel versions installed which via cron reboot job have been "touched" with the last access date:
 
-{% include copyHeader.html %}
 ``` 
 /boot$ ll vmlinuz*
 -rw------- 1 root root 5836336 Jan  8 20:00 vmlinuz-3.13.0-92-generic

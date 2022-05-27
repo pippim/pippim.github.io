@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "936 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-15-Change-dynamic-wallpaper-directory-every-season.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -91,7 +91,6 @@ Edit the script using: `gedit ~/bin/season.sh`
 
 Copy and paste the following lines into `gedit`:
 
-{% include copyHeader.html %}
 ``` bash
 
 <a id="hdr4"></a>

@@ -12,18 +12,17 @@ votes:        "4 "
 favorites:    
 views:        "797 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Can-I-make-_sudo_-follow-my-path-via-CLI_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 You can edit `sudoers` file and set `secure_path` to match your path. This is documented in [Unix & Linux][1].
 
 Is there a command line switch I can pass to `sudo` such that it uses the path I have set? For example:
 
-{% include copyHeader.html %}
 ``` 
 rick@alien:~$ sudo echo $PATH
 /home/rick/bin:/home/rick/.local/bin:/mnt/e/bin:/mnt/e/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin

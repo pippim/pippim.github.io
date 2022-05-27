@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "580 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-03-Can-line-draw-characters-_or-colors_-be-added-to-a-Bash-file-list-menu_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 I created the world's ugliest menu using the first Linux tool I'm learning, BASH.
@@ -57,7 +57,6 @@ The following /usr/local/bin/bell/sounds were found
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #! /bin/bash
 
@@ -183,7 +182,6 @@ A screen shot shows the colors accurately and you can see the screen has been pr
 ## New Menu Code
 
 
-{% include copyHeader.html %}
 ``` bash
 #! /bin/bash
 

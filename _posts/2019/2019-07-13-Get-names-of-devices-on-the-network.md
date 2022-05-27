@@ -12,16 +12,15 @@ votes:        "8 "
 favorites:    
 views:        "99,407 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-Get-names-of-devices-on-the-network.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Three answers here refer to `nmap` but I found prefixing `sudo` (which none of the answers do) makes all the difference in the world:
 
-{% include copyHeader.html %}
 ``` 
 $ nmap -sP 192.168.1.0/24
 

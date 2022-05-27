@@ -12,11 +12,11 @@ votes:        "5 "
 favorites:    
 views:        "2,546 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-Can-I-uninstall-Ubuntu-Software-Centre-from-18.04_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 You can simulate `software-center` removal to see what will be impacted:
@@ -29,7 +29,6 @@ I don't have it installed so cannot show you what removal would look like.
 
 A simulated install looks like this though:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo apt -s install software-center
 Reading package lists... Done

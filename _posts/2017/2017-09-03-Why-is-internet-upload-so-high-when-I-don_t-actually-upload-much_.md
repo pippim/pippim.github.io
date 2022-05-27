@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "3,698 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-03-Why-is-internet-upload-so-high-when-I-don_t-actually-upload-much_.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -129,7 +129,6 @@ Data collected show below. In light of these results I will redo `4.4.0-93` test
 
 ## Firefox Flashplayer 5 minutes live news at 1080p:
 
-{% include copyHeader.html %}
 ``` 
 rick@dell:~$ vnstat -l
 Monitoring eth0...    (press CTRL-C to stop)
@@ -162,7 +161,6 @@ Monitoring eth0...    (press CTRL-C to stop)
 
 ## Chrome Flashplayer 5 minutes live news at 1080p:
 
-{% include copyHeader.html %}
 ``` 
 rick@dell:~$ vnstat -l
 Monitoring eth0...    (press CTRL-C to stop)
@@ -199,7 +197,6 @@ I was a little premature with my kernel version `4.12.10` hypothesis. Doing furt
 
 ## Chrome 26 minute Flashplayer live broadcast with 5 other tabs open:
 
-{% include copyHeader.html %}
 ``` 
 rick@dell:~$ vnstat -l
 Monitoring eth0...    (press CTRL-C to stop)
@@ -238,7 +235,6 @@ The next test will be 7 tabs open and doing normal surfing / Ask Ubuntu question
 
 First the test results of 7 taps open answering a Ubuntu question (the one above):
 
-{% include copyHeader.html %}
 ``` 
 rick@dell:~$ vnstat -l
 Monitoring eth0...    (press CTRL-C to stop)
@@ -267,7 +263,6 @@ Monitoring eth0...    (press CTRL-C to stop)
 
 Next a test with 7 tabs open doing nothing for 1/2 hour on the machine:
 
-{% include copyHeader.html %}
 ``` 
 rick@dell:~$ vnstat -l
 Monitoring eth0...    (press CTRL-C to stop)
@@ -331,7 +326,6 @@ The totals at the bottom are since the last boot, not since conky was turned on.
 
 I ran a 27.5 minute test under Kernel 4.12.10 of a youtube.com live news channel (with 4 hour time shift) at 1080p:
 
-{% include copyHeader.html %}
 ``` 
 rick@dell:~$ vnstat -l
 Monitoring eth0...    (press CTRL-C to stop)

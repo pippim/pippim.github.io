@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "1,408 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-22-Improve-initial-use-of-_find_-performance-time.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -29,7 +29,6 @@ In the following sections are things that should work but don't work. In the end
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 # NAME: find-cache
@@ -67,7 +66,6 @@ chmod a+x /<path-to-script>/find-cache
 
 Every time I login I usually startup `conky` and `firefox`. You probably do other things. To fine-tune settings for your system check the log file:
 
-{% include copyHeader.html %}
 ``` bash
 $ cat /tmp/find-cache.log
 ========================

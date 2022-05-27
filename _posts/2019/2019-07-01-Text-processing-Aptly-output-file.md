@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "177 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-01-Text-processing-Aptly-output-file.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -40,7 +40,6 @@ I've turned off gnome-terminal line wrap to make input and output files easier t
 
 
 
-{% include copyHeader.html %}
 ``` bash
 ───────────────────────────────────────────────────────────────────────────────────────────
 rick@alien:~/askubuntu$ tput rmam # Turn off line wrap
@@ -80,7 +79,6 @@ rick@alien:~/askubuntu$
 
 Remember to make the script executable with `chmod a+x script.sh`
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

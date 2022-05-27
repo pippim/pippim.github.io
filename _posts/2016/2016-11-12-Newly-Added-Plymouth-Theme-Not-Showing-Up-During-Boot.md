@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "7,270 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-12-Newly-Added-Plymouth-Theme-Not-Showing-Up-During-Boot.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 I had the same problem (plus many more) getting earth-sunrise theme from 2011 to work under Ubuntu 16.04.
@@ -90,7 +90,6 @@ Note `plymouth:debug` is the important thing. Also `splash` is always required t
 
 After rebooting look into the file `/var/log/plymouth-debug.log` and it should look something like this:
 
-{% include copyHeader.html %}
 ``` 
 [main.c:1865]                                 check_logging:checking if console messages should be redirected and logged
 [main.c:1874]                                 check_logging:logging will be enabled!

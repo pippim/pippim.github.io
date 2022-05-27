@@ -12,11 +12,11 @@ votes:        "13 "
 favorites:    
 views:        "31,980 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-How-do-I-check-system-health_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Electronics generally work 100% or zero percent. Mechanical devices such as hard drives do have indicators of impending failure as per **SMART** reporting which you already know about.
@@ -46,7 +46,6 @@ sudo apt install nvme-cli
 
 Next gather information available from SSD:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo nvme smart-log /dev/nvme0
 Smart Log for NVME device:nvme0 namespace-id:ffffffff

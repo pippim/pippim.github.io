@@ -12,11 +12,11 @@ votes:        "17 "
 favorites:    
 views:        "24,699 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-How-to-prevent-wifi-sleep-after-suspend.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 There are two ways of enabling WiFi after sleep. The first is a common patch to Network Manager as you can see I've made by listing the file:
@@ -41,7 +41,6 @@ The second is a `systemd` script which reloads the WiFi kernel module when resum
 
 This script is written for iwlwifi` which is the common Intel driver name. If your's is different change that name below:
 
-{% include copyHeader.html %}
 ``` sh
 #!/bin/sh
 

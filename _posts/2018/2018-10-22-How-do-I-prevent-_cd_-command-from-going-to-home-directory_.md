@@ -12,11 +12,11 @@ votes:        "15 "
 favorites:    
 views:        "4,322 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-22-How-do-I-prevent-_cd_-command-from-going-to-home-directory_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Use `gedit ~/.bashrc` and insert these lines at the bottom:
@@ -62,7 +62,6 @@ Usage:
 
 The expanded code to accomplish this is:
 
-{% include copyHeader.html %}
 ``` bash
 cd() {
     if [[ $# -eq 0 ]] ; then

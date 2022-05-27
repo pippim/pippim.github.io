@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "2,614 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-21-How-to-edit-YAD-question-labels-_example__.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I happened to write this a few days ago for a question of my own ([Bash template to use zenity (or yad) to insert / edit / delete records in a file or database][1]) and thought it was worth sharing:
@@ -25,7 +25,6 @@ I happened to write this a few days ago for a question of my own ([Bash template
 
 Notice the six buttons on the screen and how they are handled in the code below (sorry still a work in progress). An important note is when using custom buttons to always trap default return codes like 252 for Escape and Windows close (clicking X).
 
-{% include copyHeader.html %}
 ``` 
 while true ; do
 

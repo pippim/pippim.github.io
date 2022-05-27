@@ -12,18 +12,17 @@ votes:        "3 "
 favorites:    
 views:        "1,738 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-28-Printer-Brother-DCP-1610W-not-working-under-Xubuntu-16.04.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Your 1610 printer is listed twice in `/etc/cups/printers.conf` with different UUID's each time.
 
 In my configuration file the Brother printer is only listed once:
 
-{% include copyHeader.html %}
 ``` 
 # Printer configuration file for CUPS v2.1.3
 # Written by cupsd

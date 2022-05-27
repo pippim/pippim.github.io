@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "5,507 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-05-How-to-get-the-temperature-using-hddtemp-for-a-Samsung-SSD_NVMe-in-Thinkpad-T480.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 From:
@@ -33,7 +33,6 @@ sudo apt install nvme-cli
 
 Next gather information available from SSD:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo nvme smart-log /dev/nvme0
 Smart Log for NVME device:nvme0 namespace-id:ffffffff

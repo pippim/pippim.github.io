@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "268 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-19-How-do-I-distinguish-between-a-command_-utility_-or-builtin-for-getting-documentation_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Some builtin commands are included for efficiency sake and exist as external commands in the first place. For example:
@@ -40,7 +40,6 @@ A detailed analysis of builtins and external commands can be found in [Unix & Li
 
 As far as getting help for dual builtins/external commands such as `echo` you have two choices. One method is by using `man echo`:
 
-{% include copyHeader.html %}
 ``` bash
 ECHO(1)                               User Commands                               ECHO(1)
 
@@ -76,7 +75,6 @@ DESCRIPTION
 
 And you can type:
 
-{% include copyHeader.html %}
 ``` bash
 $ help echo
 echo: echo [-neE] [arg ...]

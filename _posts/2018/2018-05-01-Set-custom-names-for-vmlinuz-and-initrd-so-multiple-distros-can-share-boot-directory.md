@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "1,279 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-01-Set-custom-names-for-vmlinuz-and-initrd-so-multiple-distros-can-share-boot-directory.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 You can't change the names for Ubuntu kernels because so many programs refers back to the original names. Take for example my current kernel `4.14.34`:
@@ -43,7 +43,6 @@ As mentioned in comments there is little danger of ArchLinux using the same kern
 
 Below is the beginning of the `locate` listing. If `vmlinuz` were to be renamed the module files would likely not be locatable:
 
-{% include copyHeader.html %}
 ``` 
 $ locate 4.14.34 | head -n1000
 /boot/System.map-4.14.34-041434-generic

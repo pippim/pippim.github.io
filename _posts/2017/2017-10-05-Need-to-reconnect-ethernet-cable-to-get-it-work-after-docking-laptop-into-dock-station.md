@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "1,093 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-05-Need-to-reconnect-ethernet-cable-to-get-it-work-after-docking-laptop-into-dock-station.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 A few months ago an automatic update broke my Ethernet suspend/resume after it was working perfectly for 6 months or so. It happened to a few other users here around the same time.
@@ -25,7 +25,6 @@ The solution for me was to create a script that gets executed when resuming from
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

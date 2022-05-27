@@ -12,11 +12,11 @@ votes:        "9 "
 favorites:    
 views:        "10,992 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-27-Switch-between-internal-and-HDMI-speakers-automatically.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -46,7 +46,6 @@ gksu gedit hotplugtv
 
 When the editor opens with a blank screen, copy and paste the following into it:
 
-{% include copyHeader.html %}
 ``` bash
 #! /bin/bash
 

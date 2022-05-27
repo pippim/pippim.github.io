@@ -12,16 +12,15 @@ votes:        "4 "
 favorites:    
 views:        "259 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-03-How-can-I-identify-an-empty-window_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Answering the first half of your question `How can I identify what produces this empty window`, with the window open, open the Terminal and type `xlsclients`:
 
-{% include copyHeader.html %}
 ``` 
 dell  bamfdaemon
 dell  ibus-ui-gtk3

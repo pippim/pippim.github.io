@@ -12,11 +12,11 @@ votes:        "8 "
 favorites:    
 views:        "4,925 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-06-06-Backup-Linux-configuration_-scripts-and-documents-to-Gmail.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -56,7 +56,6 @@ EmailAddr="EMAIL_ADDR@gmail.com"        #  where $HOME is not setup for us.
 
 ### daily-backup.sh
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -253,7 +252,6 @@ This is the current backup script:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -453,7 +451,6 @@ This package contains the program `uuencode` which is need to convert binary fil
 
 Create the file `/etc/cron.daily/daily-backup` containing:
 
-{% include copyHeader.html %}
 ``` sh
 #!/bin/sh
 #
@@ -524,7 +521,6 @@ It took a month waiting for an answer and then a month writing an answer but, no
 
 The next project will be a full backup but it is 6 GB large and will be copied to gdrive (Google Drive) because gmail is limited to 25 MB. That script is called `/usr/local/bin/full-backup` and is included here if you are interested:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

@@ -12,16 +12,15 @@ votes:        "31 "
 favorites:    
 views:        "42,853 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-30-What-is-the-difference-between-touch-file-and-_-file_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Both `touch` and `>` will create a new file if it doesn't exist. As the following terminal commands show when you `touch` an existing file the access/last modified time are updated. But if you `>` to an existing file it is truncated and the last modified time is updated (access time is not).  Note that `>` does not delete/unlink the file.  The inode stays the same -- which is why `>` / or `truncate` are commonly used to clear out log files even with an open file handle.
 
-{% include copyHeader.html %}
 ``` 
 rick@dell:~$ > EmptyFile
 

@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "9,011 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-02-HP-Truevision-HD-built-in-webcam-not-working-in-ubuntu-18.04.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 The `cheese` error messages are similar to those in this report:
@@ -29,7 +29,6 @@ Other users in the link suggest other packages that work when `cheese` doesn't w
 
 That said use the following commands to make sure webcam is connected:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo apt install hwinfo
 

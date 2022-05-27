@@ -12,18 +12,17 @@ votes:        "3 "
 favorites:    
 views:        "1,877 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-02-line-56-syntax-error_-unexpected-end-of-file.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 You can run your script through [shell checker][1]:
 
 
 
-{% include copyHeader.html %}
 ``` text
 $ shellcheck myscript
  

@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "1,451 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-14-how-to-tell-GRUB-to-show-the-user-preferred-names-of-OS_es.-Ubuntu-18.04.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I hate to break a taboo but the easiest way is modifying `grub.cfg`.
@@ -25,7 +25,6 @@ Create the script `my-update-grub` containing:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

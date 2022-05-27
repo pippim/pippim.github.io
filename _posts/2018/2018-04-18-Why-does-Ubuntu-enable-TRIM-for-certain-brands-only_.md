@@ -12,18 +12,17 @@ votes:        "14 "
 favorites:    
 views:        "3,051 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-18-Why-does-Ubuntu-enable-TRIM-for-certain-brands-only_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 When it comes to low-level Disk I/O such as TRIM, Ubuntu doesn't have much control. It's really up to the Linux Kernel and the SSD manufacturer. Before running TRIM you have to make sure your SSD supports it or it could become an expensive paperweight.
 
 To find out for sure use:
 
-{% include copyHeader.html %}
 ``` 
 $ lsblk --discard
 NAME        DISC-ALN DISC-GRAN DISC-MAX DISC-ZERO
@@ -52,7 +51,6 @@ nvme0n1          512      512B       2T         0
 
 When `DISC-GRAN DISC-MAX` columns contain non-zero values it is safe to use TRIM. If you are unsure which disk is which in this display you can get the model name and number using:
 
-{% include copyHeader.html %}
 ``` 
 $ lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL
 NAME        FSTYPE  LABEL                  MOUNTPOINT          SIZE MODEL

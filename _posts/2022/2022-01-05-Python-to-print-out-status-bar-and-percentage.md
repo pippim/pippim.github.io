@@ -12,11 +12,11 @@ votes:        "6 "
 favorites:    
 views:        "243,301 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-01-05-Python-to-print-out-status-bar-and-percentage.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 [![enter image description here][1]][1]
@@ -49,7 +49,6 @@ The `total_steps` was about 2,500 for `len(rows)` in Stack Exchange Data Dump in
 
 The code is straight forward, but a bit longer than the other answers:
 
-{% include copyHeader.html %}
 ``` python
 def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True):
     import sys

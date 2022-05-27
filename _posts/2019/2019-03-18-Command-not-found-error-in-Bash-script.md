@@ -12,16 +12,15 @@ votes:        "4 "
 favorites:    
 views:        "5,383 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-18-Command-not-found-error-in-Bash-script.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Pasting your code into [https://www.shellcheck.net/](https://www.shellcheck.net/)/ reports:
 
-{% include copyHeader.html %}
 ``` 
 $ shellcheck myscript
  

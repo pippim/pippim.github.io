@@ -12,11 +12,11 @@ votes:        "7 "
 favorites:    
 views:        "6,057 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-14-How-to-turn-off-the-USB-power-to-my-mouse_-when-I-suspend-the-notebook_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -27,7 +27,6 @@ The current stumbling block with OP links, follow up comments and proposed answe
 
 Create a script (any name you want) in the directory `/etc/pm/sleep.d/` and place the following in it:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 ZeroBUS=$(lsusb | grep 1b1a:7001 | cut -c  5-7 )
@@ -73,7 +72,6 @@ I recently ran into a problem where an unknown port was preventing laptop from s
 
 Create the file `/lib/systemd/system-sleep/custom-xhci_hcd` using `sudo` powers and insert this code:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

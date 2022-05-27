@@ -12,16 +12,15 @@ votes:        "2 "
 favorites:    
 views:        "2,965 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-13-How-do-I-identify-the-partitions-of-my-hard-drive-in-order-to-then-shred-them-all_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 To get a more meaningful report from `lsblk` without the **noise** from dozens of `loop` devices use:
 
-{% include copyHeader.html %}
 ``` 
 $ lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL | egrep -v "^loop"
 

@@ -12,11 +12,11 @@ votes:        "14 "
 favorites:    
 views:        "19,262 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-04-Is-it-still-bad-to-use-swap-on-a-modern-SSD_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I have the exact same SSD w/512 GB and Ubuntu 16.04 setup an GB SWAP partition on it. I see no problem because:
@@ -38,7 +38,6 @@ sudo apt install nvme-cli
 
 Next gather information available from SSD:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo nvme smart-log /dev/nvme0
 Smart Log for NVME device:nvme0 namespace-id:ffffffff

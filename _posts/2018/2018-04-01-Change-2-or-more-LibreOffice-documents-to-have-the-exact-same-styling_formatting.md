@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "643 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-Change-2-or-more-LibreOffice-documents-to-have-the-exact-same-styling_formatting.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -165,7 +165,6 @@ I spent a few days attempting to record a macro using "Tools" -> "Macros" -> "Re
 
 
 
-{% include copyHeader.html %}
 ``` vb
 Sub ChangeAllFonts
     rem - Change all font names to Ubuntu.

@@ -12,16 +12,15 @@ votes:        "44 "
 favorites:    
 views:        "113,252 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-28-How-to-manually-mount-a-partition_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 The first step is to list all your partitions to find the one you want to mount:
 
-{% include copyHeader.html %}
 ``` 
 $ lsblk -o NAME,FSTYPE,LABEL,SIZE,MOUNTPOINT
 NAME        FSTYPE  LABEL                    SIZE MOUNTPOINT

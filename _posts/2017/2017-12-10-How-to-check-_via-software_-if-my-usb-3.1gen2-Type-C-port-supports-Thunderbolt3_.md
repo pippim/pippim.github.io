@@ -12,11 +12,11 @@ votes:        "13 "
 favorites:    
 views:        "25,984 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-10-How-to-check-_via-software_-if-my-usb-3.1gen2-Type-C-port-supports-Thunderbolt3_.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -39,7 +39,6 @@ My system has Thunderbolt 3, USB 3.1 Gen 2 Type-C jack. I use it to drive a seco
 
 ## lsusb -t
 
-{% include copyHeader.html %}
 ``` 
 $ lsusb -t
 /:  Bus 04.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/2p, 10000M
@@ -72,7 +71,6 @@ Notice the speed of `10000M` which doesn't appear on your display.
 
 ## Bottom of `sudo lshw | grep -A10 -i usb`
 
-{% include copyHeader.html %}
 ``` 
                  *-usb
                       description: USB controller
@@ -126,7 +124,6 @@ The best way to find out is to look for the "thunderbolt" picture next to the US
 
 ## PCIe tree
 
-{% include copyHeader.html %}
 ``` 
 $ lspci -tv
 -[0000:00]-+-00.0  Intel Corporation Sky Lake Host Bridge/DRAM Registers
@@ -172,7 +169,6 @@ The report below had to be truncated heavily because it won't fit into Ask Ubunt
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 ## Partial contents of `sudo lspci -vv` (73 kb initially):
-{% include copyHeader.html %}
 ``` 
 
 00:00.0 Host bridge: Intel Corporation Sky Lake Host Bridge/DRAM Registers (rev 07)

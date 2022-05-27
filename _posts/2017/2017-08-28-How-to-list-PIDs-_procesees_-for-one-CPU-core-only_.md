@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "981 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-28-How-to-list-PIDs-_procesees_-for-one-CPU-core-only_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 # Use `ps -eLF` to list PIDs by CPU core number
@@ -25,7 +25,6 @@ The command `ps -eLF` will list PIDs by CPU core number. Then a script can filte
 
 Create a file called `~/bin/one-cpu-pids` and mark it as executable using `chmod a+x ~/bin/one-cpu-pids`. Copy the following text into the file and save it:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -53,7 +52,6 @@ ps -eLF | awk -v a="$ZeroCPU" '$9 == a {print;}'
 
 Here is what the output looks like:
 
-{% include copyHeader.html %}
 ``` 
 $ one-cpu-pids 8
 UID        PID  PPID   LWP  C NLWP    SZ   RSS PSR STIME TTY          TIME CMD

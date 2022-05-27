@@ -12,11 +12,11 @@ votes:        "9 "
 favorites:    
 views:        "9,212 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-12-GUI-or-simple-Bash-script-to-throttle-the-CPU_.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -87,7 +87,6 @@ Make the script executable with `sudo chmod a+x /usr/local/bin/cpuf`.
 
 ### `cpuf` code to copy to your editor
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

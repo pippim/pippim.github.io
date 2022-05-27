@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "2,912 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-01-Wakes-from-suspend-immediately-when-bluetooth-device-disconnected.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 My laptop which used to suspend OK most of the time started having problems last week. Perhaps due to a faulty cable. I created a bash script which suspends and resumes faster than before and more reliably.
@@ -31,7 +31,6 @@ sudo -H gedit /lib/systemd/system-sleep/custom-xhci_hcd
 
 Copy and paste the following into the editor:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "514 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-29-Expand-_PATH-problem-_HOME_bin-is-set-twice.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Ubuntu is already configured to automatically add `$HOME/bin` to the path.
@@ -25,7 +25,6 @@ You mentioned you're distribution was Server converted to Desktop and I'm not su
 
 
 
-{% include copyHeader.html %}
 ``` bash
 $ cat ~/.profile
 

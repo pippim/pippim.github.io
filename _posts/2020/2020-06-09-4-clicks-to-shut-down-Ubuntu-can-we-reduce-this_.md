@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "17,013 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-09-4-clicks-to-shut-down-Ubuntu-can-we-reduce-this_.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -110,7 +110,6 @@ PWRD=123            # Password for Sony TV IP Connect
 ## `tvpowered` complete bash script
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -442,7 +441,6 @@ For nighttime viewing, there is a light behind the TV. Whenever the laptop goes 
 
 Create the script `/etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off` and place into it:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

@@ -12,18 +12,17 @@ votes:        "3 "
 favorites:    
 views:        "13,970 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-04-Is-it-possible-to-list-only-the-filename-and-size-for-each-file-in-a-directory-using-only-options-found-in-the-ls-utility_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 It's impossible to do with the `ls` command by itself. You can do it by piping `ls -l` output to other commands or with a totally different command like `find` as others have answered.
 
 The `tree` command gives another alternative:
 
-{% include copyHeader.html %}
 ``` 
 rick@alien:~/askubuntu$ tree -h
 .

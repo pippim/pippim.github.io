@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "16,847 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-02-How-to-enable-NVIDIA_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## June 3, 2019 Update
@@ -35,7 +35,6 @@ sudo apt-get install lightdm
 
 I have a GTX 970M but I know this driver also works with the GTX 1060M which is one step above yours:
 
-{% include copyHeader.html %}
 ``` 
 $ sudo ubuntu-drivers devices
 

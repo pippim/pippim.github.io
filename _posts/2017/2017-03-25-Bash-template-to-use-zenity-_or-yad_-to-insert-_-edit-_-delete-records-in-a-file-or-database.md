@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "3,311 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-25-Bash-template-to-use-zenity-_or-yad_-to-insert-_-edit-_-delete-records-in-a-file-or-database.md
 toc:          false
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -61,7 +61,6 @@ Here is the bash code to make the sample YAD insert/edit/delete records template
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

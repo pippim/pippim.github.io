@@ -12,11 +12,11 @@ votes:        "4 "
 favorites:    
 views:        "380,936 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-27-How-can-I-boot-with-an-older-kernel-version_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 [Jackkobec's Answer][1] describes a method of viewing `grub.cfg` and scrolling through source code to find a menu number. An easier way is with [this script][2]:
@@ -24,7 +24,6 @@ clipboard:    true
 <pre><code>Grub Version: 2.02~beta2-36ubuntu3.22
 
 
-{% include copyHeader.html %}
 ``` 
      ┌───────────┤ <b>Use arrow, page, home & end keys. Tab toggle option</b> ├────────────┐
      │ Menu No.     ----------- Menu Name -----------                               │ 
@@ -72,7 +71,6 @@ After scrolling through entries (you can use the mouse scroll wheel or arrow key
 
 If you press <kbd>Enter</kbd> the associate grub commands for the entry are displayed:
 
-{% include copyHeader.html %}
 ``` 
 menuentry 'Ubuntu, with Linux 4.14.134-0414134-generic' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.14.134-0414134-generic-advanced-b40b3925-70ef-447f-923e-1b05467c00e7' {
 recordfail

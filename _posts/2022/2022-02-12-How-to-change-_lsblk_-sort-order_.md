@@ -12,18 +12,17 @@ votes:        "3 "
 favorites:    
 views:        "144 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-12-How-to-change-_lsblk_-sort-order_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I ended up writing a generic sorting function to solve the problem.
 
 ## New `lsblk` sort order
 
-{% include copyHeader.html %}
 ``` terminal
 $ lsdrv | sblk
 
@@ -54,7 +53,6 @@ sda                                                                931.5G HGST H
 
 It took a couple hours of googling different bash commands to make a solution. The bash script, initially called `sblk`, can be adapted for other purposes:
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 # Ask Ubuntu: https://askubuntu.com/questions/1392560/how-to-change-lsblk-sort-order

@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "47,725 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-12-I-need-an-equivalent-of-gksu-in-18.04.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 I use a script called `sgedit` which inherits user preferences for font, tabs, and extensions. It uses `sudo -H gedit` instead of `gksu gedit` for stability in GUI environment. It prompts for a password.
@@ -50,7 +50,6 @@ I've been nagged by the same issue for years. This weekend's project was to writ
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "2,941 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-24-A-new-command-combining-apt-update-__-apt-upgrade-in-18.04-or-some-later-beta_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Edit your `~/.bashrc` file and add this:
@@ -32,7 +32,6 @@ Save the file, close any open terminal(s) and open a new terminal.
 
 Test from the command line like this:
 
-{% include copyHeader.html %}
 ``` 
 $ update -s
 Hit:1 http://archive.canonical.com/ubuntu xenial InRelease

@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "399 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-16-How-to-auto-execute-command-when-starting-second-monitor_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 This is a work-in-progress script I'm developing for a package to control monitor brightness and gamma based on sunrise/sunset times.
@@ -31,7 +31,6 @@ Use `ll /sys/class/drm/*/status` to discover your monitor card name(s). Then rep
 
 ## Bash script
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "2,606 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-23-How-do-I-create-a-fake-process-bar_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## Fake Progress Bar
@@ -35,7 +35,6 @@ Here's the code:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

@@ -12,16 +12,15 @@ votes:        "2 "
 favorites:    
 views:        "6,740 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-What-software-is-in-the-Canonical-Partners-repository_.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 Not sure how up-to-date this is but you can use two commands:
 
-{% include copyHeader.html %}
 ``` 
 $ wget --spider -r --no-parent http://archive.canonical.com/ubuntu/pool/partner/
     (...SNIP...)

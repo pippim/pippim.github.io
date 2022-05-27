@@ -12,11 +12,11 @@ votes:        "2 "
 favorites:    
 views:        "28,706 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-05-What-is-Ubuntu_s-status-on-the-Meltdown-and-Spectre-vulnerabilities_.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 
@@ -41,7 +41,6 @@ Spectre protection ([Retpoline][1]) was released for Kernel 4.9.77 and 4.14.14 b
 
 I thought some would be interested in the changes in 4.14.14 (from 4.14.13) as documented in programmers' comments which I think are pretty detailed for kernel C programmers from my limited exposure. Here are the changes from 4.14.13 to 4.14.14 kernel focusing mainly on [Spectre][3] support:
 
-{% include copyHeader.html %}
 ``` 
 +What:  /sys/devices/system/cpu/vulnerabilities
 +		/sys/devices/system/cpu/vulnerabilities/meltdown

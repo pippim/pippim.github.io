@@ -12,11 +12,11 @@ votes:        "5 "
 favorites:    
 views:        "7,178 "
 accepted:     Accepted
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-11-How-to-selectively-purge-old-kernels-all-at-once.md
 toc:          true
 navigation:   true
-clipboard:    true
+clipboard:    false
 ---
 
 The advantage of this answer is native Ubuntu Bash is used without installing third-party applications. Users of custom kernels who didn't use `apt` or `dpkg` can change this bash script to suit their needs.
@@ -84,7 +84,6 @@ Copy this code to a file named `rm-kernels` in `/usr/local/bin`:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -271,7 +270,6 @@ Dialog is in the default Ubuntu Desktop installation but not in Ubuntu Server.
 
 ## `rm-kernels-server` bash code
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 

@@ -12,11 +12,11 @@ votes:        "3 "
 favorites:    
 views:        "207 "
 accepted:     
-uploaded:     2022-05-23 21:10:28
+uploaded:     2022-05-26 18:50:50
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-09-Find-likely-processes-based-on-snapshot-in-time.md
 toc:          false
 navigation:   false
-clipboard:    true
+clipboard:    false
 ---
 
 ## `awk` to the rescue
@@ -27,7 +27,6 @@ Here is the full script for those who are interested:
 
 
 
-{% include copyHeader.html %}
 ``` bash
 #!/bin/bash
 
@@ -95,7 +94,6 @@ awk '($1 < var) ' var="$HighCnt" ~/pid.tmp
 
 The `gnome-calculator` PID shows up as desired. There is an extra line `sleep 60` which is not wanted but occurs because a daemon woke up and slept again during the test period.
 
-{% include copyHeader.html %}
 ``` bash
 $ ps-suspects.sh
 10 times / second ps -elf is captured to /home/rick/pid.log
