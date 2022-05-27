@@ -35,9 +35,6 @@ for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
     tcmButtonClasses[ndx].addEventListener('click', tcmButtonClick, false);
 }
 
-console.log("/_includes/tcm-common-code.js tcm-button classes found:",
-            tcmButtonClasses.length, "tcm_button ID:", tcmButtonId)
-
 function htmlFrontMatter(results, name) {
     // home button & webpage info button uses
     if (results.length == 0) {
