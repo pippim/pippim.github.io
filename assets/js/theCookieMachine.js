@@ -261,16 +261,14 @@ introduction_to_html()  // Load immediately
 // COPY ROUGE CODE BLOCKS
 
 const copyButtonLabel = "Copy 📋";
-
-let blocks = document.querySelectorAll("div.highlight")
-console.log("blocks.length:", blocks.length)
+let blocks = document.querySelectorAll("div.highlight")  // Rouge second level out of three
 
 blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
         block.classList.add("rouge-code-block")
-        console.log("Adding copyRougeButton")
         let copyRougeButton = document.createElement("button")
+        // Remove ', "page-header-button"' or replace with your own button styling class name
         copyRougeButton.classList.add("copy-rouge-button", "page-header-button")
         copyRougeButton.innerText = copyButtonLabel
         copyRougeButton.setAttribute('title', 'Copy code to clipboard')
