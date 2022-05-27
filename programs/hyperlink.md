@@ -152,7 +152,6 @@ Finally create a markdown document with the HRB, or use the stub markdown
 
 A scaled down version of your webpage top level `_layout` file:
 
-{% include copyHeader.html %}
 ``` html
 <!DOCTYPE html>
 <!--  https://github.com/pippim/pippim.github.io/new/main/_layhouts/hrb.html
@@ -198,7 +197,6 @@ A scaled down version of your webpage top level `_layout` file:
 
 For HRB installation, The only lines of particular interest are:
 
-{% include copyHeader.html %}
 ```html
 <!-- Top level JavaScript defined as module so it can import hyperlinkRecipe.js -->
 <script type="module" src="/assets/js/hrb.js"></script>
@@ -219,7 +217,6 @@ section.
 Then in one of your javaScript files (in this case we used `hrb.js`)
 setup the code to invoke HRB:
 
-{% include copyHeader.html %}
 ``` javascript
 /* /assets/js/hrb.js - Stub for importing Hyperlink Recipe Baker
 
@@ -253,7 +250,6 @@ as `_layouts/default.html`, `_layouts/post.html`, etc.
 
 The `hrb.html` markdown file is rendered to HTML:
 
-{% include copyHeader.html %}
 ```html
 ---
 title: Hyperlink Recipe Baker
@@ -300,7 +296,6 @@ As the text shrinks, so does the size of the box they it is in.
 
 At the top of HRB's `/assets/js/hyperlinkRecipe.js` file you see:
 
-{% include copyHeader.html %}
 ``` javascript
         autoRows:   "0" = No auto resizing
                   > "0" = maximum number of auto-resized rows
@@ -315,7 +310,6 @@ If you wish to have manually resize the `<textare>` element,
 then set `autoRows = '0'`. If you are interested, here is
 the function called to automatically resize `<textarea>`:
 
-{% include copyHeader.html %}
 ``` javascript
 export function setTextAreaRows (textarea) {
     var minRows = Number(autoMinRows)       // autoMinRows must be declared globally above

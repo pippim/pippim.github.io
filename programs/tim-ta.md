@@ -325,7 +325,6 @@ A note about alternating fast backward and fast forward button clicks:
 
 # localStorage Object
 
-{% include copyHeader.html %}
 ``` javascript
 // Configuration & Container for all Tim-ta Projects
 // Default below for creation, overwritten when retrieved from localStorage

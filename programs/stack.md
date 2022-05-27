@@ -79,7 +79,7 @@ for {{ site.title }} on GitHub Pages looked like this:
 {% endhighlight %}
 </div>
 <style> 
-#line_draw.highlight pre, pre { line-height: .55 ! important; }
+#line_draw.highlight pre, pre { line-height: 1 ! important; }
 /* #line_draw { line-height: 1 ! important; } */
 /* .highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } */ 
 </style>
@@ -104,7 +104,7 @@ daily backup to gmail.com (in the cloud, so it should be safe):
 # WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
 tar -rpf "$Filename" website/*.md       # about.md, answers.md, programs.md
 tar -rpf "$Filename" website/*.yml      # _config.yml
-tar -rpf "$Filename" website/_includes  # copyHeader.html, image.html & toc.md
+tar -rpf "$Filename" website/_includes  # search.html, image.html & toc.md
 tar -rpf "$Filename" website/_layouts   # default.html & post.html
 tar -rpf "$Filename" website/_plugins   # insert_git_code.rb (NOT supported)
 tar -rpf "$Filename" website/_sass      # jekyll-theme-cayman.scss & toc.scss
@@ -362,7 +362,6 @@ After downloading the query results, the next
 steps require you to open a terminal and type the following
 after then command prompt (`$`):
 
-{% include copyHeader.html %}
 ``` terminal
 me@host:~$ cd ~/website/sede
 
@@ -588,7 +587,6 @@ This python code shows how
 [Jekyll front matter 🔗](https://jekyllrb.com/docs/front-matter/){:target="_blank"}
 is controlled inside `stack-to-blog.py`:
 
-{% include copyHeader.html %}
 ``` python
 FRONT_SITE      = "site:         "  # EG "site:         Ask Ubuntu"
 FRONT_POST_ID   = None              # EG "post_id:      1104017"
@@ -903,7 +901,7 @@ code block, the user can easily highlight with mouse and use
 ``` python
 ''' Copy code block contents to clipboard options. '''
 # If Copy button is never wanted, set to None
-COPY_TO_CLIPBOARD = "{% include copyHeader.html %}"
+COPY_TO_CLIPBOARD = None
 COPY_LINE_MIN = 20          # Number of lines required to qualify for button
 ```
 
@@ -1179,7 +1177,6 @@ a new markdown line to the blog post file in memory. Here is what
 Pass 2 does as it loops through every `line` in the `lines` list:
 
 
-{% include copyHeader.html %}
 ``` python
 check_code_block(line)      # Turn off formatting when in code block
 # Did this post qualify for adding navigation bar?
@@ -1372,7 +1369,6 @@ Note that the `../` in the `OUTPUT_DIR` constant is only to navigate from `/sede
 Here is the `create_blog_filename(r)` python functions which
 create the blog post's filename:
 
-{% include copyHeader.html %}
 ``` python
 def create_blog_filename(r):
  """ Return blog filename.
@@ -1564,7 +1560,6 @@ for pseudo in PSEUDO_TAGS:
 When Stack Exchange uses `<!-- language-all` it is converted to appropriate
 format for GitHub using this multi-purpose `check_code_block(ln)` function:
 
-{% include copyHeader.html %}
 ``` python
  """ If line starts with ``` we are now in code block.
 
@@ -1659,7 +1654,6 @@ block. When this happens, the language is lost to GitHub Pages
 markdown. Therefore they are converted to a ```` ``` fenced code
 block```` with a suitable language tag. The following code is used:
 
-{% include copyHeader.html %}
 ``` python
 def check_code_indent(ln):
     """ If line starts with "    " we are now in code indent.
@@ -1790,7 +1784,6 @@ blocks begin, how many lines are in the code block and
 what liquid command (if any) is inserted before the code
 block.
 
-{% include copyHeader.html %}
 ``` python
 def check_copy_code(this_index):
     """ Check to insert copy to clipboard include.
@@ -1851,93 +1844,27 @@ def check_copy_code(this_index):
 <a id="hdr31"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr30">ToS</a>  <a href="#hdr2">ToC</a></div>
 
-### Liquid Tag for Copy Code Block
-
-The Liquid Tag to include the Copy Code Block button is inserted
-into markdown this way:
-
-```` python
-{% raw %}
-{% include copyHeader.html %}
-``` python
-def check_copy_code(this_index):
-    (... SNIP rest of code shown in previous section ...)
-{% endraw %}
-````
-
-`copyHeader.html` is located in the `_includes/` directory:
-
-``` terminal
-│   ├── copyHeader.html
-│   ├── head-custom.html
-│   ├── image.html
-│   ├── posts_by_tag.html
-│   ├── posts_by_vote.html
-│   └── toc.md
-```
-
-<a id="hdr31"></a>
-<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr30" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr32" class="hdr-btn">Skip</a></div>
-
-### Copy Code Block HTML
-
-`copyHeader.html` contains the following HTML code:
-
-``` html
-<!-- Copy code block contents to system clipboard. From:
-https://www.aleksandrhovhannisyan.com/blog/
-how-to-add-a-copy-to-clipboard-button-to-your-jekyll-blog/
--->
-<div class="code-header">
-    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
-</div>
-```
-
 <a id="hdr32"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr31" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr33" class="hdr-btn">Skip</a></div>
 
 ### Copy Code Block CSS
 
-The `code-header` and `copy-code-button` classes are kept in `assets/css/style.scss`:
+The `rouge-code-block` and `copy-rouge-button` classes are kept in `assets/css/style.scss`:
 
 ``` scss
-// Copy code block contents to clipboard
-// See: _includes/copyHeader.html for credit
-.code-header {
-  display: flex;
-  justify-content: flex-end;
+// Copy Rouge Code Block to system clipboard
+.rouge-code-block {
+    position: relative;
+}
+.copy-rouge-button{
+    position: absolute;
+    display: none;
+    top: .75rem;
+    right: .5rem;
 }
 
-.copy-code-button {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  grid-column-gap: 4px;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 4px 8px;
-
-  &::before {
-    content: "Copy";
-  }
-
-  &::after {
-    content: "📋";
-    display: block;
-  }
-
-  // This class will be toggled via JavaScript
-  &.copied {
-    &::before {
-      content: "Copied!";
-    }
-
-    &::after {
-      content: "✔️";
-    }
-  }
-}
+/* From: https://stackoverflow.com/a/2776136/6929343 */
+.rouge-code-block:hover .copy-rouge-button { display: block; }
 ```
 
 <a id="hdr33"></a>
@@ -1949,25 +1876,38 @@ JavaScript is used to copy a Fenced Code Block
 to the System Clipboard. The code is located in `assets/js/copyCode.js`:
 
 ``` js
-// Copy code block contents to clipboard.
-// See _includes/copyHeader.html for credit
+// COPY ROUGE CODE BLOCKS
 
-const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
-const copyCodeButtons = document.querySelectorAll('.copy-code-button');
+const copyButtonLabel = "Copy 📋";
+let blocks = document.querySelectorAll("div.highlight")  // Rouge second level out of three
 
-copyCodeButtons.forEach((copyCodeButton, index) => {
-  const code = codeBlocks[index].innerText;
-
-  copyCodeButton.addEventListener('click', () => {
-    window.navigator.clipboard.writeText(code);
-    copyCodeButton.classList.add('copied');
-
-    setTimeout(() => {
-      copyCodeButton.classList.remove('copied');
-    }, 2000);
-  });
+blocks.forEach((block) => {
+    // only add button if browser supports Clipboard API
+    if (navigator.clipboard) {
+        block.classList.add("rouge-code-block")
+        let copyRougeButton = document.createElement("button")
+        // Remove ', "page-header-button"' or replace with your own button styling class name
+        copyRougeButton.classList.add("copy-rouge-button", "page-header-button")
+        copyRougeButton.innerText = copyButtonLabel
+        copyRougeButton.setAttribute('title', 'Copy code to clipboard')
+        copyRougeButton.setAttribute('aria-label', "Copy code to clipboard")
+        copyRougeButton.addEventListener("click", copyRougeCode)
+        block.appendChild(copyRougeButton)
+    }
 });
-```
+
+async function copyRougeCode(event) {
+    const button = event.srcElement
+    const pre = button.parentElement
+    let code = pre.querySelector("code")
+    let text = code.innerText
+    await navigator.clipboard.writeText(text)
+
+    button.innerText = "Copied ✔️"
+    setTimeout(()=> {
+        button.innerText = copyButtonLabel
+    },1000)
+}```
 
 <a id="hdr34"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr33" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr35" class="hdr-btn">Skip</a></div>
@@ -2010,7 +1950,6 @@ for saving as a Jekyll blog post.
 
 If you want to change the totals' layout, it is found in the code below:
 
-{% include copyHeader.html %}
 ``` python
 if RANDOM_LIMIT is None:
     random_limit = '   None'
