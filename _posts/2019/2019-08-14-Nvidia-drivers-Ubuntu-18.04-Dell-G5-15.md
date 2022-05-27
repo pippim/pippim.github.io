@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "3,625 "
 accepted:     
-uploaded:     2022-05-26 18:50:50
+uploaded:     2022-05-26 19:39:28
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-14-Nvidia-drivers-Ubuntu-18.04-Dell-G5-15.md
 toc:          false
 navigation:   false
