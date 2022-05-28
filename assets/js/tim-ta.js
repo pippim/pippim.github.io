@@ -2093,7 +2093,7 @@ function handleDrop(e) {
 var customSoundsHold = Object.assign({}, customSounds)
 
 function previewFile(file) {
-    /*  Firefox will let you drop the same filename twice. Chrome will not.
+    /*  Firefox will let you drag and drop the same filename twice. Chrome will not.
         For consistency then, if filename already exists, skip adding.
     */
     if (uploadNames.includes(file.name)) { return }
@@ -2112,12 +2112,9 @@ function previewFile(file) {
         fileInfo(html)  // add size and type to gallery
 
         var base64FileData = reader.result.toString()
-        /*  TODO: Cannot assign just any name because it might match ID
-                  Must use "Custom_999.ext" as new fileURL name.
-                  Can register Custom_999.ext at time of reading localStorage.
-                  If a file is deleted, then another takes its place automatically.
-                  An object tracks custom[key]=filenameCustomSound
-        */
+
+        //  NOTE: Cannot assign just any name because it might match ID
+        //        Must use "Custom_999.ext" as new fileURL name.
         var key = makeSoundFilename(file.name, file.size, file.type)
         var mediaFile = {
             fileUrl: key,
@@ -2133,9 +2130,8 @@ function previewFile(file) {
     }
 }
 
+/*  From: sound.js (EVENTUALLY MOVE THIS FUNCTION THERE)
 function makeSoundFilename(name, size, type) {
-    /*  From: sound.js (EVENTUALLY MOVE THIS FUNCTION THERE)
-    */
     const existing = checkSoundFilename(name)
     if (existing) {
         // Only thing to change is sound['timeAdded']
@@ -2170,12 +2166,14 @@ function makeSoundFilename(name, size, type) {
         customSounds.sounds.key = record
             above displays "key:Object" and not "Custom_001:Object"
     */
+    /*
     // console.log("key:", key)
-    var records = customSounds.sounds
-    records[key] = record
+    var records = customSounds.sounds  // Update only works with
+    records[key] = record              //   3rd party reference
 
     return(key)
 }
+*/
 
 function checkSoundFilename(name) {
     // If audio filename exists return the custom key, else return undefined
