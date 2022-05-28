@@ -137,6 +137,16 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 <a id='hdr6'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
+# Download Tim-ta Configuration
+
+Download your TIm-ta Configuration from Local Storage to back it up.
+You can also send the download to another device or browser.
+
+---
+
+<a id='hdr7'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Tim-ta Under Construction.png"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
@@ -184,8 +194,8 @@ May 27, 2022 update:
 
 ---
 
-<a id='hdr7'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+<a id='hdr8'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 {% include image.html src="/assets/img/tim-ta/cartoon-alarm-clock.jpg"
    alt="Tim-ta Introduction.png"
@@ -213,8 +223,8 @@ fabrics in hot water to end up with PINK clothes though!
 
 ---
 
-<a id='hdr8'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+<a id='hdr9'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 # Tim-ta Buttons
 
@@ -278,8 +288,8 @@ detail line for small screen, open more buttons control box.
 
 ---
 
-<a id='hdr9'></a>
-<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+<a id='hdr10'></a>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 ## Timer Countdown Override Buttons
 
@@ -478,26 +488,6 @@ function get_dd_field (name) {
     get_dd_field("fail_test_2")
 */
 
-function updateRadioSounds () {
-    /* Called on load and after drag & drop sound files */
-    // Convert array of sound filenames to string delineated by |
-    var replaceString = "";
-    for (var i = 0; i < stockNames.length; i++) {
-        if (i != 0) { replaceString += "/"; }  // Add | if not first in array
-        replaceString += stockNames[i];
-    }
-
-    for (const key of Object.keys(data_dictionary)) {
-        if (key.startsWith("fail_test")) { continue; }
-        get_dd_field(key);
-        if (dd_field.type == "select" && dd_field.lower == "sound_filenames") {
-            // Update data dictionary key with list of REAL filenames
-            data_dictionary[key] = dd_field.name + "|select|" + replaceString;
-         }
-    }
-}
-
-updateRadioSounds();
 ```
 
 ---
