@@ -242,7 +242,7 @@ function htmlLocalStorage() {
 
     for (const [key, value] of Object.entries(localStorage)) {
         html += '  <tr><td>' + key + '</td>\n' ;
-        html += value.length.toLocaleString();
+        html += '  <td>' + value.length.toLocaleString(); + '</td></tr>\n';
     }
     html += '</table>\n';     // End of our table and form
 
