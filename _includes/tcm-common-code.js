@@ -264,7 +264,7 @@ function htmlLocalStorage() {
 
 function sortLocalStorage() {
     // Sort table by first column: https://stackoverflow.com/a/67853424/6929343
-    let table = document.getElementById('#localTable');
+    let table = document.getElementById('localTable');
     let trs = table.rows;
 
     Array.from(trs)
