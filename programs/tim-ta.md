@@ -139,7 +139,7 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Tim-ta Under Construction.png"
-   style="float: none; width: 100%; margin: 2rem 0px 1rem 0px;"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
    caption="Tim-ta Under Construction.png"
 %}
 <style>
@@ -189,7 +189,7 @@ May 27, 2022 update:
 
 {% include image.html src="/assets/img/tim-ta/cartoon-alarm-clock.jpg"
    alt="Tim-ta Introduction.png"
-   style="float: left; width: 50%; margin: 2rem 1rem; 1rem;"
+   style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
    caption="Tim-ta webpage header"
 %}
 
