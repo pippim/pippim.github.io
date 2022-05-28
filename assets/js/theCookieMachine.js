@@ -200,7 +200,8 @@ function table_sort() {
             } else {
                 th_elem.querySelector('span').innerHTML = '▼'
             }
-            const arr = Array.from(th_elem.closest("table").querySelectorAll('tbody tr'))
+            //const arr = Array.from(th_elem.closest("table").querySelectorAll('tbody tr'))
+            const arr = Array.from(th_elem.closest("table").querySelectorAll('tbody tr')).slice(1)
             arr.sort((a, b) => {
                 const a_val = a.children[index].innerText
                 const b_val = b.children[index].innerText
