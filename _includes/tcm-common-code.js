@@ -269,7 +269,7 @@ function sortLocalStorage() {
 
     Array.from(trs)
          .sort((a, b) => a.cells[0].textContent - b.cells[0].textContent)
-         .forEach(tr => table.appendChild(tr));}
+         .forEach(tr => table.appendChild(tr));
 }
 
 function htmlScreenInfo() {
