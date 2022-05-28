@@ -1857,7 +1857,7 @@ function getInputValues() {
         var item = elements.item(i);
         if (item.name == "") {
             //console.log("getInputValues() blank item.name:", item.value);
-            // You can see when select use it's value is returned but it has no key
+            // Above shows that "select" type value is returned with empty string for key
             continue;
         }
         formValues[item.name] = item.value;
@@ -1865,33 +1865,11 @@ function getInputValues() {
 
     // Get switch values and add to formValues
     for (const name of Object.keys(inpSwitches)) {
-        if (name == "") { console.log("inpSwitches empty name:", inpSwitches); continue; }
-        /* SWITCH
-            inpSwitches[name] = {
-                id: fullId,
-                elm: "Pippim Promise",
-                value: bool,
-                mode: mode
-        */
         formValues[name] = inpSwitches[name].value;
     }
     // Add select values to formValues
-    // console.log("getInputValues() inpSelects:", inpSelects)
     for (const name of Object.keys(inpSelects)) {
-        if (name == "") { console.log("getInputValues() inpSelects empty name:", inpSelects); continue; }
-        /* SELECT
-            inpSelects[key] = {
-                id: key,
-                elm: "Pippim Promise",
-                value: value,
-                mode: mode
-        */
-        //console.log("getInputValues() name/value", name, inpSelects[name].value);
-        if (inpSelects[name].id != name) {
-            console.log("names differ:", inpSelects[name].id, name)
-        }
         formValues[name] = inpSelects[name].value;
-        //console.log("getInputValues() read back name:", formValues[name])
     }
 
     return formValues;
