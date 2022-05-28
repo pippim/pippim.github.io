@@ -151,12 +151,7 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
     // Display cookies and cache (WIP)
     var html = htmlVisibilitySwitches();
     html += htmlSearchStats();
-    /*
-        TODO
-        {% include ttaConfig.html %}
-        html += htmlTtaConfig();
-
-    */
+    html += htmlLocalStorage();
     html += htmlScreenInfo();
     b.innerHTML = html;
 
