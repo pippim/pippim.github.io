@@ -67,6 +67,12 @@ window.onresize = function() {
     scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
 }
 
+// Shared ttaConfig definition
+{% include tim-ta-storage.js %}
+
+// ORIGINAL tim-ta-storage.js code below
+
+/*
 // Configuration & Container for all Tim-ta Projects
 // Default below for creation, overwritten when retrieved from localStorage
 // The order arrProjects names appear is order they are displayed
@@ -163,12 +169,12 @@ var dd_field = {
 }
 
 function get_dd_field (name) {
-    /* Extract dd_field from data_dictionary for easier referencing
-       NOTE: lower is generic term, it can be "non-blank" for keys and
-             there is no upper. If numeric and lower or upper is blank
-             they are converted to 0. If select it contains all the
-             possible values.
-    */
+    // Extract dd_field from data_dictionary for easier referencing
+    //   NOTE: lower is generic term, it can be "non-blank" for keys and
+    //         there is no upper. If numeric and lower or upper is blank
+    //         they are converted to 0. If select it contains all the
+    //         possible values.
+
     const raw = data_dictionary[name];
     if (raw == null) {
         alert("Critical Error. Data dictionary field doesn't exist: " + name);
@@ -196,16 +202,15 @@ function get_dd_field (name) {
     return true;
 }
 
-/* UNIT TESTING
-    get_dd_field("haha")
-    get_dd_field("fail_test_1")
-    get_dd_field("fail_test_2")
-*/
+// UNIT TESTING
+//    get_dd_field("haha")
+//    get_dd_field("fail_test_1")
+//    get_dd_field("fail_test_2")
 
 var savedSelectStockNames;
 
 function initSelectFiles() {
-    /* Called on javascript load, DOM not loaded yet */
+    // Called on javascript load, DOM not loaded yet
 
     // Convert array of stock sound filenames to string delineated by '/'
     savedSelectStockNames = "";
@@ -227,9 +232,8 @@ function initSelectFiles() {
 initSelectFiles();
 
 function updateSelectFiles() {
-    /*  Called after custom sound files added after drag & drop sound files
-        DOM must be loaded before calling.
-    */
+    //  Called after custom sound files added after drag & drop sound files
+    //    DOM must be loaded before calling.
 
     // Convert array of stock sound filenames to string delineated by '/'
     //console.log("updateSelectFiles() customNames.length:", customNames.length)
@@ -314,6 +318,8 @@ function ttaTaskDuration(hours, minutes, seconds) {
     ttaTask.minutes = minutes;
     ttaTask.seconds = seconds;
 }
+
+*/
 
 // +===========================================================+
 // | Listen | Up | Down | Edit | Delete | Task Name | Duration |
