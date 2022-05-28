@@ -154,7 +154,7 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
     html += htmlLocalStorage();
     html += htmlScreenInfo();
     b.innerHTML = html;
-
+    sortLocalStorage();  // Sort localStorage table (#loclTable) by first column (Name)
     /*  Process TCM Window Button Visibility slider switches - shared  with ~/tcm.md
         USE: % include tcm-common-code.js %} */
     tcmButtonVisibility()});
