@@ -68,11 +68,11 @@ window.onresize = function() {
 }
 
 // Shared ttaConfig definition
-{% include tim-ta-storage.js %}
+// { % include tim-ta-storage.js %}
+// ERROR: tim-ta.js:150 Uncaught SyntaxError: Unexpected token 'var'
 
 // ORIGINAL tim-ta-storage.js code below
 
-/*
 // Configuration & Container for all Tim-ta Projects
 // Default below for creation, overwritten when retrieved from localStorage
 // The order arrProjects names appear is order they are displayed
@@ -319,7 +319,7 @@ function ttaTaskDuration(hours, minutes, seconds) {
     ttaTask.seconds = seconds;
 }
 
-*/
+
 
 // +===========================================================+
 // | Listen | Up | Down | Edit | Delete | Task Name | Duration |
