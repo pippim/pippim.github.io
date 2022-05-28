@@ -155,39 +155,53 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
     html += htmlScreenInfo();
     b.innerHTML = html;
 
-    // From: https://stackoverflow.com/a/49041392/6929343
-    // Styling to sort localStorage by name (column 1) or size (column 2)
-    // Getting error on: #localTable table, #localTable th, #localTable td {
-    document.querySelector('#localTable').style.cssText = `
-        table, th, td {
-            border: 1px solid black;
+    table_sort()
+    //sortLocalStorage();  // Sort localStorage table (#loclTable) by first column (Name)
+    /*  Process TCM Window Button Visibility slider switches - shared  with ~/tcm.md
+        USE: % include tcm-common-code.js %} */
+    tcmButtonVisibility()
+});
+
+// From: https://stackoverflow.com/a/70024272/6929343
+function table_sort() {
+    const styleSheet = document.createElement('style')
+    styleSheet.innerHTML = `
+        .order-inactive span {
+            visibility:hidden;
         }
-        #localTable th {
-            cursor: pointer;
+        .order-inactive:hover span {
+            visibility:visible;
         }
-    `;
-    // heading click listener to sort table on that column a-z then z-a
-    const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+        .order-active span {
+            visibility: visible;
+        }
+    `
+    document.head.appendChild(styleSheet)
 
-    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
-        v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
-        )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
-
-    // do the work...
-    document.querySelectorAll('th.order').forEach(th => th.addEventListener('click', (() => {
-        const table = th.closest('table');
-        Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
-            .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
-            .forEach(tr => table.appendChild(tr) );
-    })));
-
-    /* Another sort method from:
     document.querySelectorAll('th.order').forEach(th_elem => {
-        let asc=true
+        let asc = true
+        const span_elem = document.createElement('span')
+        span_elem.style = "font-size:0.8rem; margin-left:0.5rem"
+        span_elem.innerHTML = "▼"
+        th_elem.appendChild(span_elem)
+        th_elem.classList.add('order-inactive')
+
         const index = Array.from(th_elem.parentNode.children).indexOf(th_elem)
         th_elem.addEventListener('click', (e) => {
-            const arr = [... th_elem.closest("table").querySelectorAll('tbody tr')]
-            arr.sort( (a, b) => {
+            document.querySelectorAll('th.order').forEach(elem => {
+                elem.classList.remove('order-active')
+                elem.classList.add('order-inactive')
+            })
+            th_elem.classList.remove('order-inactive')
+            th_elem.classList.add('order-active')
+
+            if (!asc) {
+                th_elem.querySelector('span').innerHTML = '▲'
+            } else {
+                th_elem.querySelector('span').innerHTML = '▼'
+            }
+            const arr = Array.from(th_elem.closest("table").querySelectorAll('tbody tr'))
+            arr.sort((a, b) => {
                 const a_val = a.children[index].innerText
                 const b_val = b.children[index].innerText
                 return (asc) ? a_val.localeCompare(b_val) : b_val.localeCompare(a_val)
@@ -198,13 +212,7 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
             asc = !asc
         })
     })
-    */
-
-    sortLocalStorage();  // Sort localStorage table (#loclTable) by first column (Name)
-    /*  Process TCM Window Button Visibility slider switches - shared  with ~/tcm.md
-        USE: % include tcm-common-code.js %} */
-    tcmButtonVisibility()
-});
+}
 
 document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
     processHyperlinkRecipe('tcm_window_body');
