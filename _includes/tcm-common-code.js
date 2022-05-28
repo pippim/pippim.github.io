@@ -237,8 +237,8 @@ function htmlLocalStorage() {
     var html = "<h3>Local Storage</h3>"
     html += '<table id="localTable">\n' ;
     // Statistics Table heading
-    html += '  <tr><th>Name</th>\n' +
-            '  <th>Size</th></tr>\n';
+    html += '  <tr><th class="order">Name</th>\n' +
+            '  <th class="order">Size</th></tr>\n';
 
     for (const [key, value] of Object.entries(localStorage)) {
         html += '  <tr><td>' + key + '</td>\n' ;
