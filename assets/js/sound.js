@@ -188,4 +188,10 @@ function checkSoundFilename(name) {
     }
 }
 
+function pad(num, size) {
+    num = num.toString();
+    while (num.length < size) num = "0" + num;
+    return num;
+}
+
 /* End of /assets/js/sound.js */

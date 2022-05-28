@@ -2129,12 +2129,6 @@ function previewFile(file) {
     }
 }
 
-function pad(num, size) {
-    num = num.toString();
-    while (num.length < size) num = "0" + num;
-    return num;
-}
-
 function fileInfo(info) {
     /* Add single text line (paragraph) to gallery */
     var par = document.createElement("p")
