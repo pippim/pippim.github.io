@@ -157,8 +157,9 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
 
     // From: https://stackoverflow.com/a/49041392/6929343
     // Styling to sort localStorage by name (column 1) or size (column 2)
+    // Getting error on: #localTable table, #localTable th, #localTable td {
     document.querySelector('#localTable').style.cssText = `
-        #localTable table, #localTable th, #localTable td {
+        table, th, td {
             border: 1px solid black;
         }
         #localTable th {
