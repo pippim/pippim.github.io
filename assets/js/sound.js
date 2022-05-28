@@ -131,12 +131,12 @@ function setSoundSource (name, item) {
 }
 
 function playSoundSource (name) {
-    // Called by tim-ta.js
+    // Called by /assets/js/tim-ta.js
     audioControl = document.getElementById(name);
     audioControl.play();
 }
 
-function makeSoundFilename(name, size, type) {
+function makeCustomSound(name, size, type) {
     /*  Called from /assets/js/tim-ta.js
         Create a custom sound record with a unique key
     */
@@ -179,6 +179,13 @@ function makeSoundFilename(name, size, type) {
     records[key] = record              //   3rd party reference
 
     return(key)
+}
+
+function checkSoundFilename(name) {
+    // If audio filename exists return the custom key, else return undefined
+    for (const key of Object.keys(customSounds.sounds)) {
+        if (customSounds.sounds[key].name == name) { return key }
+    }
 }
 
 /* End of /assets/js/sound.js */

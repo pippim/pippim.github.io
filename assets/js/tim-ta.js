@@ -2113,9 +2113,9 @@ function previewFile(file) {
 
         var base64FileData = reader.result.toString()
 
-        //  NOTE: Cannot assign just any name because it might match ID
-        //        Must use "Custom_999.ext" as new fileURL name.
-        var key = makeSoundFilename(file.name, file.size, file.type)
+        //  assets/js/search.js/makeCustomSound() will assign
+        //  "Custom_999.ext" as new fileURL name.
+        var key = makeCustomSound(file.name, file.size, file.type)
         var mediaFile = {
             fileUrl: key,
             name: file.name,
@@ -2126,59 +2126,6 @@ function previewFile(file) {
         localStorage.setItem("x" + key, JSON.stringify(mediaFile))
         uploadKeys.push(key)
         uploadNames.push(file.name)
-        // console.log("uploadNames:", uploadNames)
-    }
-}
-
-/*  From: sound.js (EVENTUALLY MOVE THIS FUNCTION THERE)
-function makeSoundFilename(name, size, type) {
-    const existing = checkSoundFilename(name)
-    if (existing) {
-        // Only thing to change is sound['timeAdded']
-        customSounds.sounds[existing].timeAdded = new Date().getTime()
-        return
-    }
-
-    var key = CUSTOM_SOUND_ROOT + CUSTOM_SOUND_SEP +
-              pad(customSounds['nextNumber'], CUSTOM_SOUND_DIGITS)
-    if (key < customSounds['firstKey']) {
-        customSounds['firstKey'] = key
-    }
-    if (key > customSounds['lastKey']) {
-        customSounds['lastKey'] = key
-    }
-    customSounds['count'] += 1
-    customSounds['nextNumber'] += 1
-    // Create short hand reference allRecords
-    var record = {}
-    record['key'] = key
-    record['name'] = name
-    record['size'] = size
-    record['type'] = type
-    record['timeAdded'] = new Date().getTime()
-
-    /*  TODO: Find out why shorthand is broken:
-
-        customSounds.sounds[key] = record
-            above displays "key:Object" and not "Custom_001:Object"
-            yet customSounds.sounds[key].key displays "Custom_001.wav"
-
-        customSounds.sounds.key = record
-            above displays "key:Object" and not "Custom_001:Object"
-    */
-    /*
-    // console.log("key:", key)
-    var records = customSounds.sounds  // Update only works with
-    records[key] = record              //   3rd party reference
-
-    return(key)
-}
-*/
-
-function checkSoundFilename(name) {
-    // If audio filename exists return the custom key, else return undefined
-    for (const key of Object.keys(customSounds.sounds)) {
-        if (customSounds.sounds[key].name == name) { return key }
     }
 }
 
