@@ -154,10 +154,56 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
     html += htmlLocalStorage();
     html += htmlScreenInfo();
     b.innerHTML = html;
+
+    // From: https://stackoverflow.com/a/49041392/6929343
+    // Styling to sort localStorage by name (column 1) or size (column 2)
+    document.querySelector('#localTable').style.cssText = `
+        #localTable table, #localTable th, #localTable td {
+            border: 1px solid black;
+        }
+        #localTable th {
+            cursor: pointer;
+        }
+    `;
+    // heading click listener to sort table on that column a-z then z-a
+    const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+
+    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+        v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+        )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+    // do the work...
+    document.querySelectorAll('th.order').forEach(th => th.addEventListener('click', (() => {
+        const table = th.closest('table');
+        Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+            .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+            .forEach(tr => table.appendChild(tr) );
+    })));
+
+    /* Another sort method from:
+    document.querySelectorAll('th.order').forEach(th_elem => {
+        let asc=true
+        const index = Array.from(th_elem.parentNode.children).indexOf(th_elem)
+        th_elem.addEventListener('click', (e) => {
+            const arr = [... th_elem.closest("table").querySelectorAll('tbody tr')]
+            arr.sort( (a, b) => {
+                const a_val = a.children[index].innerText
+                const b_val = b.children[index].innerText
+                return (asc) ? a_val.localeCompare(b_val) : b_val.localeCompare(a_val)
+            })
+            arr.forEach(elem => {
+                th_elem.closest("table").querySelector("tbody").appendChild(elem)
+            })
+            asc = !asc
+        })
+    })
+    */
+
     sortLocalStorage();  // Sort localStorage table (#loclTable) by first column (Name)
     /*  Process TCM Window Button Visibility slider switches - shared  with ~/tcm.md
         USE: % include tcm-common-code.js %} */
-    tcmButtonVisibility()});
+    tcmButtonVisibility()
+});
 
 document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
     processHyperlinkRecipe('tcm_window_body');
