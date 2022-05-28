@@ -228,7 +228,39 @@ function htmlSearchStats() {
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     return html; // Update TCM Window body
-}
+}  // End of htmlSearchStats()
+
+function htmlLocalStorage() {
+    /* return html code <table> <td> for:
+        Name                Size
+    */
+    var html = "<h3>Local Storage</h3>"
+    html += '<table id="localTable">\n' ;
+    // Statistics Table heading
+    html += '  <tr><th>Name</th>\n' +
+            '  <th>Size</th></tr>\n';
+
+    for (const [key, value] of Object.entries(localStorage)) {
+        html += '  <tr><td>' + key + '</td>\n' ;
+        html += value.length.toLocaleString();
+    }
+    html += '</table>\n';     // End of our table and form
+
+    // TODO: Move next 9 lines to a shared function
+    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style>\n#localTable th, #localTable td {\n' +
+            '  padding: 0 .5rem;\n' +
+            '}\n'
+    html += '#localTable th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #f1f1f1;\n' +
+            '}\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    return html; // Update TCM Window body
+}  // End of htmlLocalStorage()
 
 function htmlScreenInfo() {
     /* return html code <table> <td> for:
@@ -266,7 +298,7 @@ function htmlScreenInfo() {
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
     return html;
-}
+}  // End of htmlScreenInfo()
 
 function htmlWindowInfo() {
     var html = "<h3>Window Object</h3>"
@@ -317,7 +349,7 @@ function htmlWindowInfo() {
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
     return html;
-}
+}  // End of htmlWindowInfo()
 
 function htmlNavigatorInfo() {
     var html = "<h3>Navigator Object</h3>"
@@ -364,7 +396,7 @@ function htmlNavigatorInfo() {
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
     return html;
-}
+}  // End of htmlNavigatorInfo()
 
 function buildScreenEval(prop, orientation) {
     // Build html using eval() of screen.availTop, etc.
