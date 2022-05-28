@@ -262,6 +262,16 @@ function htmlLocalStorage() {
     return html; // Update TCM Window body
 }  // End of htmlLocalStorage()
 
+function sortLocalStorage() {
+    // Sort table by first column: https://stackoverflow.com/a/67853424/6929343
+    let table = document.getElementById('#localTable');
+    let trs = table.rows;
+
+    Array.from(trs)
+         .sort((a, b) => a.cells[0].textContent - b.cells[0].textContent)
+         .forEach(tr => table.appendChild(tr));}
+}
+
 function htmlScreenInfo() {
     /* return html code <table> <td> for:
         Screen Property     Value
