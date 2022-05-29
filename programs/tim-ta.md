@@ -144,6 +144,40 @@ You can also send the download to another device or browser.
 
 ---
 
+# Upload Tim-ta Configuration
+
+Upload TIm-ta Configuration to Local Storage. New Projects
+and new Tasks will be added. Existing Projects and Tasks
+will be updated.
+
+***Projects and Tasks will never be deleted***
+
+
+<span id="configSelect"><font size='+2'>Selected Configuration in Memory</font></span>
+
+<div id="config-drop-area">
+    <form class="my-form">
+        <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
+        <input type="file" id="fileElem" multiple accept="application/json" onchange="configHandleFiles(this.files)">
+        <label class="page-header-button" for="fileElem">Select some files</label>
+    </form>
+    <div id="configGallery"></div>
+    <div id="configButtonGroup" >
+        <div class="leftFoot">
+            <button id="configBtnCancel" class="tta-btn" title="Clear list of files" 
+                type="button" onclick="configClickCancel()" >&#x232B;</button>
+            Remove files
+        </div>
+        <div class="rightFoot">
+            <button id="configBtnUpload" class="tta-btn" title="Upload to local storage" 
+                type="button" onclick="configClickUpload()" >&#x2b;</button>
+            Upload files
+        </div>
+    </div>
+</div>
+
+---
+
 <a id='hdr7'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
