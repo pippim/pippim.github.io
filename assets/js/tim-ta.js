@@ -2272,11 +2272,15 @@ function configPreviewFile(file) {
                         "objImportProjects.length:", objImportProjects.length)
             return
         }
-        for (const name of Object.keys(objImportProjects)) {
-            if (arrImportProjects.includes(name)) continue
-            console.log("objImportProjects[" + name + "] not in arrImportProjects")
+        // arrImportProjects to objImportProjects sanity check
+        // Can't use const key and const name causes grief in toggleSwitch(name) function below
+        for (const projectName of Object.keys(objImportProjects)) {
+            if (arrImportProjects.includes(projectName)) continue
+            console.log("objImportProjects{} key:", projectName,
+                        "not found in array arrImportProjects[]")
             return
         }
+
         configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
         let html = "Size: <b>" + file.size.toLocaleString() +
                "</b>&emsp;&emsp;Type:&nbsp;<b>" + file.type + "</b>"
@@ -2317,7 +2321,7 @@ function configClickCancel() {
 }
 
 function configClickUpload() {
-    // Rename temp files to real files
+    // Loop through input files. Validation has already been done during Preview
     for (var i = 0; i < configUploadKeys.length; i++) {
         //localStorage.setItem(uploadKeys[i], localStorage.getItem("x" + configUploadKeys[i]))
         localStorage.removeItem("x" + configUploadKeys[i])
