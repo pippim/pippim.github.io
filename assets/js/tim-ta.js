@@ -2276,10 +2276,11 @@ function configPreviewFile(file) {
         }
         // arrImportProjects to objImportProjects sanity check
         for (const projectName of Object.keys(objImportProjects)) {
+            if (projectName == null) continue
             if (arrImportProjects.includes(projectName)) continue
             console.log("objImportProjects{} key:", projectName,
                         "not found in array arrImportProjects[]")
-            return
+            // return
         }
 
         configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
