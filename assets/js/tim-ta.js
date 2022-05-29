@@ -2256,15 +2256,15 @@ function configPreviewFile(file) {
 
         //  assets/js/search.js/makeCustomSound() will assign
         //  "Custom_999.ext" as new fileURL name.
-        //var key = makeCustomSound(file.name, file.size, file.type)
-        var mediaFile = {
+        var key = file.name
+        var configFile = {
             fileUrl: file.name,
             name: file.name,
             size: file.size,
             type: file.type,
-            src: configImport
+            data: configImport
         }
-        localStorage.setItem("x" + key, JSON.stringify(mediaFile))
+        localStorage.setItem("x" + key, JSON.stringify(configFile))
         configUploadKeys.push(key)  // Not needed
         configUploadNames.push(file.name)
     }
