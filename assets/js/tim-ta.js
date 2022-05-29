@@ -2249,7 +2249,8 @@ function configPreviewFile(file) {
         var configImport = JSON.parse(str)
         //configImport = JSON.parse(result);
         console.log("result(100):", result.slice(0,100))
-        console.log("configImport(100):", configImport.slice(0,100))
+        // Uncaught TypeError: configImport.slice is not a function:
+        //console.log("configImport(100):", configImport.slice(0,100))
         // audio.controls="true"  // Paints control box
         // TODO insert list of projects with task counts instead of file data dump
         //document.getElementById('configGallery').appendChild(configImport)  // stick it in
