@@ -2237,7 +2237,8 @@ function configPreviewFile(file) {
     console.log("configPreviewFile:", file)
 
     let reader = new FileReader()
-    reader.readAsDataURL(file)  // Asynchronous function
+    //reader.readAsDataURL(file)  // Asynchronous function
+    reader.readAsArrayBuffer(file)  // Asynchronous function
     reader.onloadend = function() {  // Wait until async loaded
         //let audio = document.createElement('audio')  // audio element
         let result = reader.result  // get data
@@ -2257,6 +2258,7 @@ function configPreviewFile(file) {
         var base64FileData = reader.result.toString()
         var decodedString = reader.result.toString('base64')
         console.log("decodedString(100):", decodedString.slice(0,100))
+
 
         //  assets/js/search.js/makeCustomSound() will assign
         //  "Custom_999.ext" as new fileURL name.
