@@ -2174,6 +2174,142 @@ function handleFiles(files) {
     document.getElementById('buttonGroup').style.display = "flex"
 }
 
+/*
+    Upload Tim-ta Configuration
+
+    Copied from Upload Custom Sound Files
+
+*/
+
+var configDropArea;
+
+document.addEventListener("DOMContentLoaded", function(event){
+    // Must wait due to error: Uncaught TypeError: dropArea is null
+    var configDropArea = document.getElementById('config-drop-area')
+    ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false)
+    })
+    ;['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, configHighlight, false)
+    })
+    ;['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, configUnhighlight, false)
+    })
+    configDropArea.addEventListener('drop', configHandleDrop, false)
+});
+
+var configUploadKeys = []
+var configUploadNames = []
+
+//function preventDefaults (e) {
+//    e.preventDefault()
+//    e.stopPropagation()
+//}
+
+function configHighlight(e) {
+    configDropArea.classList.add('highlight')
+}
+
+function configUnhighlight(e) {
+    configDropArea.classList.remove('highlight')
+}
+
+function configHandleDrop(e) {
+    let dt = e.dataTransfer
+    let files = dt.files
+
+    configHandleFiles(files)
+}
+
+/* Create hold for when Cancel clicked */
+var configHold = Object.assign({}, ttaConfig)
+
+function configPreviewFile(file) {
+    /*  Firefox will let you drag and drop the same filename twice. Chrome will not.
+        For consistency then, if filename already exists, skip adding.
+    */
+    if (configUploadNames.includes(file.name)) { return }
+    console.log("configPreviewFile:", file)
+
+    let reader = new FileReader()
+    reader.readAsDataURL(file)  // Asynchronous function
+    reader.onloadend = function() {  // Wait until async loaded
+        //let audio = document.createElement('audio')  // audio element
+        let result = reader.result  // set audio source
+        configImport = JSON.parse(result);
+        // audio.controls="true"  // Paints control box
+        document.getElementById('configGallery').appendChild(configImport)  // stick it in
+
+        configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
+        let html = "Size: <b>" + file.size.toLocaleString() +
+               "</b>&emsp;&emsp;Type:&nbsp;<b>" + file.type + "</b>"
+        configFileInfo(html)  // add size and type to gallery
+
+        //var base64FileData = reader.result.toString()
+
+        //  assets/js/search.js/makeCustomSound() will assign
+        //  "Custom_999.ext" as new fileURL name.
+        //var key = makeCustomSound(file.name, file.size, file.type)
+        var mediaFile = {
+            fileUrl: file.name,
+            name: file.name,
+            size: file.size,
+            type: file.type,
+            src: base64FileData
+        }
+        localStorage.setItem("x" + key, JSON.stringify(mediaFile))
+        configUploadKeys.push(key)
+        configUploadNames.push(file.name)
+    }
+}
+
+function configFileInfo(info) {
+    /* Add single text line (paragraph) to gallery */
+    var par = document.createElement("p")
+    par.innerHTML = info
+    document.getElementById('configGallery').appendChild(par)
+}
+
+function configClickCancel() {
+    // Remove temp files
+    for (var i = 0; i < configUploadKeys.length; i++) {
+        localStorage.removeItem("x" + configUploadKeys[i])
+    }
+    // Restore hold before files selected for uploading
+    ttaConfig = Object.assign({}, configHold)
+    configInitializeFiles()
+    document.getElementById('configSelect').scrollIntoView()
+}
+
+function configClickUpload() {
+    // Rename temp files to real files
+    for (var i = 0; i < configUploadKeys.length; i++) {
+        //localStorage.setItem(uploadKeys[i], localStorage.getItem("x" + configUploadKeys[i]))
+        //localStorage.removeItem("x" + configUploadKeys[i])
+    }
+    //localStorage.setItem(CUSTOM_SOUNDS,
+    //                     JSON.stringify(customSounds))
+    configInitializeFiles()
+    // paintCustomSounds()  // Update display with custom sound files
+    // document.getElementById('customSounds').scrollIntoView()
+}
+
+function configInitializeFiles() {
+    configUploadKeys = []
+    configUploadNames = []
+    configHold = Object.assign({}, ttaConfig)
+    document.getElementById('configGallery').textContent = ""
+    document.getElementById('configButtonGroup').style.display = "none"
+}
+
+function configHandleFiles(files) {
+    files = [...files]
+    files.forEach(configPreviewFile)
+    document.getElementById('configButtonGroup').style.display = "flex"
+}
+
+
+
 /*  Build Custom Sounds div
 
     Parent contains: <div id="PaintedSounds"></div>
