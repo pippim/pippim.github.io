@@ -2257,6 +2257,7 @@ function configPreviewFile(file) {
             console.log("Found arrImportProjects:", arrImportProjects.length)
         } else {
             // TODO: Error message then return
+            arrImportProjects = []
             console.log("arrImportProjects NOT FOUND!")
         }
         configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
