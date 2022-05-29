@@ -2244,16 +2244,20 @@ function configPreviewFile(file) {
         let result = reader.result  // get data
         var str = new TextDecoder().decode(result)
         console.log("str(100):", str.slice(0,100))
-        var json = await new Response(result).json()
+        var configImport = await new Response(result).json()
         // var json = JSON.parse(str)
         //configImport = JSON.parse(result);
-        configImport = result.toString()
         console.log("result(100):", result.slice(0,100))
         console.log("configImport(100):", configImport.slice(0,100))
         // audio.controls="true"  // Paints control box
         // TODO insert list of projects with task counts instead of file data dump
         //document.getElementById('configGallery').appendChild(configImport)  // stick it in
-
+        var arrImportProjects = configImport['arrProjects']
+        if (arrImportProjects !== null) {
+            console.log("Found arrProjects:", arrImportProjects.length)
+        } else {
+            console.log("arrProjects NOT FOUND!")
+        }
         configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
         let html = "Size: <b>" + file.size.toLocaleString() +
                "</b>&emsp;&emsp;Type:&nbsp;<b>" + file.type + "</b>"
