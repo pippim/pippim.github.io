@@ -48,7 +48,7 @@ Each project can have an unlimited number of Tasks.
     <form class="my-form">
         <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
         <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
-        <label class="button" for="fileElem">Select some files</label>
+        <label class="page-header-button" for="fileElem">Select some files</label>
     </form>
     <div id="gallery"></div>
     <div id="buttonGroup" >
@@ -77,12 +77,6 @@ have been uploaded so far.</span>
 
 
 <div id="PaintedSounds"></div>
-<script>
-// document.addEventListener("DOMContentLoaded", function(event){
-   // With or Without delay, random sound file duration is 6 hours 45 minutes 48 seconds
-   paintCustomSounds() 
-// })
-</script>
 
 **NOTE:** 
 > The Firefox Web Browser limits localStorage to
