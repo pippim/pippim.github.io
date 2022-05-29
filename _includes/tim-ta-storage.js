@@ -250,5 +250,19 @@ function ttaTaskDuration(hours, minutes, seconds) {
 }
 
 // TODO add import/export variables and functions
+/* How to call ttaExportConfig
+<button onclick="ttaExportConfig()">Export Tim-ta Configuration to local json file</button>
+*/
+
+function ttaExportConfig() {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(ttaConfig, null, 2)], {
+        type: "application/json"
+    }));
+    a.setAttribute("download", "Tim-ta Configuration.json");
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
 
 /* End of /_includes/tim-ta-storage.js */
