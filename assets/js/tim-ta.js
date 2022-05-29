@@ -2261,15 +2261,17 @@ function configPreviewFile(file) {
         }
         if (configImport['objProjects']) {
             var objImportProjects = configImport['objProjects']
-            console.log("Found objImportProjects:", arrImportProjects.length)
+            console.log("Found objImportProjects:",
+                        Object.keys(objImportProjects).length)
         } else {
             // TODO: Error message then return
             console.log("objImportProjects NOT FOUND!")
             return
         }
-        if (arrImportProjects.length != objImportProjects.length) {
+        if (arrImportProjects.length != Object.keys(objImportProjects).length) {
             console.log("arrImportProjects.length:", arrImportProjects.length,
-                        "objImportProjects.length:", objImportProjects.length)
+                        "objImportProjects key count:",
+                        Object.keys(objImportProjects).length)
             return
         }
         // arrImportProjects to objImportProjects sanity check
