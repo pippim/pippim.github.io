@@ -2242,6 +2242,9 @@ function configPreviewFile(file) {
     reader.onloadend = function() {  // Wait until async loaded
         //let audio = document.createElement('audio')  // audio element
         let result = reader.result  // get data
+        var str = new TextDecoder().decode(result)
+        console.log("str(100):", str.slice(0,100))
+        // var json = JSON.parse(str)
         //configImport = JSON.parse(result);
         configImport = result.toString()
         console.log("result(100):", result.slice(0,100))
