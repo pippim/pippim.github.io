@@ -2303,7 +2303,7 @@ function configClickUpload() {
     // Rename temp files to real files
     for (var i = 0; i < configUploadKeys.length; i++) {
         //localStorage.setItem(uploadKeys[i], localStorage.getItem("x" + configUploadKeys[i]))
-        //localStorage.removeItem("x" + configUploadKeys[i])
+        localStorage.removeItem("x" + configUploadKeys[i])
     }
     //localStorage.setItem(CUSTOM_SOUNDS,
     //                     JSON.stringify(customSounds))
