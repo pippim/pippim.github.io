@@ -2249,9 +2249,11 @@ function configPreviewFile(file) {
         } catch(e) {
             // TODO: Error message then return
             alert(e); // error in the above string
+            var configImport = {}
         }
-        var arrImportProjects = configImport['arrProjects']
-        if (arrImportProjects !== null) {
+        var arrImportProjects;
+        if (configImport['arrProjects']) {
+            arrImportProjects = configImport['arrProjects']
             console.log("Found arrImportProjects:", arrImportProjects.length)
         } else {
             // TODO: Error message then return
