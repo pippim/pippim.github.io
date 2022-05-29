@@ -2244,8 +2244,9 @@ function configPreviewFile(file) {
         let result = reader.result  // get data
         var str = new TextDecoder().decode(result)
         console.log("str(100):", str.slice(0,100))
-        var configImport = await new Response(result).json()
-        // var json = JSON.parse(str)
+        // await is only valid in async functions and async generators:
+        // var configImport = await new Response(result).json()
+        var configImport = JSON.parse(str)
         //configImport = JSON.parse(result);
         console.log("result(100):", result.slice(0,100))
         console.log("configImport(100):", configImport.slice(0,100))
