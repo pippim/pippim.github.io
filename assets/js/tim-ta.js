@@ -2272,7 +2272,7 @@ function configPreviewFile(file) {
             console.log("arrImportProjects.length:", arrImportProjects.length,
                         "objImportProjects key count:",
                         Object.keys(objImportProjects).length)
-            return
+            //return
         }
         // arrImportProjects to objImportProjects sanity check
         for (const projectName of Object.keys(objImportProjects)) {
