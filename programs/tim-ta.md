@@ -158,8 +158,8 @@ will be updated.
 <div id="config-drop-area">
     <form class="my-form">
         <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
-        <input type="file" id="fileElem" multiple accept="json" onchange="configHandleFiles(this.files)">
-        <label class="page-header-button" for="fileElem">Select some files</label>
+        <input type="file" id="configFileElem" multiple accept="application/json" onchange="configHandleFiles(this.files)">
+        <label class="page-header-button" for="configFileElem">Select some files</label>
     </form>
     <div id="configGallery"></div>
     <div id="configButtonGroup" >
