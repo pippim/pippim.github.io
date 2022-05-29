@@ -2245,7 +2245,7 @@ function configPreviewFile(file) {
         configImport = result
         // audio.controls="true"  // Paints control box
         // TODO insert list of projects with task counts instead of file data dump
-        document.getElementById('configGallery').appendChild(configImport)  // stick it in
+        //document.getElementById('configGallery').appendChild(configImport)  // stick it in
 
         configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
         let html = "Size: <b>" + file.size.toLocaleString() +
