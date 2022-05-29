@@ -2249,16 +2249,33 @@ function configPreviewFile(file) {
         } catch(e) {
             // TODO: Error message then return
             alert(e); // error in the above string
-            var configImport = {}
+            return
         }
-        var arrImportProjects;
         if (configImport['arrProjects']) {
-            arrImportProjects = configImport['arrProjects']
+            var arrImportProjects = configImport['arrProjects']
             console.log("Found arrImportProjects:", arrImportProjects.length)
         } else {
             // TODO: Error message then return
-            arrImportProjects = []
             console.log("arrImportProjects NOT FOUND!")
+            return
+        }
+        if (configImport['objProjects']) {
+            var objImportProjects = configImport['objProjects']
+            console.log("Found objImportProjects:", arrImportProjects.length)
+        } else {
+            // TODO: Error message then return
+            console.log("objImportProjects NOT FOUND!")
+            return
+        }
+        if (arrImportProjects.length != objImportProjects.length) {
+            console.log("arrImportProjects.length:", arrImportProjects.length
+                        "objImportProjects.length:", objImportProjects.length)
+            return
+        }
+        for (const name of Object.keys(objImportProjects)) {
+            if (arrImportProjects.includes(name)) continue
+            console.log("objImportProjects[" + name + "] not in arrImportProjects")
+            return
         }
         configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
         let html = "Size: <b>" + file.size.toLocaleString() +
