@@ -289,6 +289,7 @@ table.tta-table th {
     margin: 0rem 0 0 1rem ! important;
 }
 
+#configFileElem,
 #fileElem {
     /* Prevents default "BROWSE" button and last filename(s) appearing */
     display: none;
@@ -2262,7 +2263,7 @@ function configPreviewFile(file) {
             src: base64FileData
         }
         localStorage.setItem("x" + key, JSON.stringify(mediaFile))
-        configUploadKeys.push(key)
+        configUploadKeys.push(key)  // Not needed
         configUploadNames.push(file.name)
     }
 }
