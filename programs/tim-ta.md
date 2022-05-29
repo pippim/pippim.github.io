@@ -139,8 +139,8 @@ You can also send the download to another device or browser.
 <button class="page-header-button" 
         title="Download Settings, Projects and Tasks"  
         onclick="ttaExportConfig()"
-        >Download Tim-ta Configuration to JSON file<
-/button>
+        >Download Tim-ta Configuration to JSON file
+</button>
 
 ---
 
