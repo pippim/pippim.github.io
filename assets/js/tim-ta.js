@@ -2268,12 +2268,11 @@ function configPreviewFile(file) {
             return
         }
         if (arrImportProjects.length != objImportProjects.length) {
-            console.log("arrImportProjects.length:", arrImportProjects.length
+            console.log("arrImportProjects.length:", arrImportProjects.length,
                         "objImportProjects.length:", objImportProjects.length)
             return
         }
         // arrImportProjects to objImportProjects sanity check
-        // Can't use const key and const name causes grief in toggleSwitch(name) function below
         for (const projectName of Object.keys(objImportProjects)) {
             if (arrImportProjects.includes(projectName)) continue
             console.log("objImportProjects{} key:", projectName,
