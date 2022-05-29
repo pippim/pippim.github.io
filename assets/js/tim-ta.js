@@ -2254,7 +2254,9 @@ function configPreviewFile(file) {
                "</b>&emsp;&emsp;Type:&nbsp;<b>" + file.type + "</b>"
         configFileInfo(html)  // add size and type to gallery
 
-        //var base64FileData = reader.result.toString()
+        var base64FileData = reader.result.toString()
+        var decodedString = reader.result.toString('base64')
+        console.log("decodedString(100):", decodedString.slice(0,100))
 
         //  assets/js/search.js/makeCustomSound() will assign
         //  "Custom_999.ext" as new fileURL name.
