@@ -2182,7 +2182,7 @@ function handleFiles(files) {
 /*
     Upload Tim-ta Configuration
 
-    Copied from Upload Custom Sound Files
+    Copied from Upload Custom Sound Files and then prefix "config" added.
 
 */
 
@@ -2240,9 +2240,10 @@ function configPreviewFile(file) {
     reader.readAsDataURL(file)  // Asynchronous function
     reader.onloadend = function() {  // Wait until async loaded
         //let audio = document.createElement('audio')  // audio element
-        let result = reader.result  // set audio source
+        let result = reader.result.toString()  // get data
         configImport = JSON.parse(result);
         // audio.controls="true"  // Paints control box
+        // TODO insert list of projects with task counts instead of file data dump
         document.getElementById('configGallery').appendChild(configImport)  // stick it in
 
         configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
