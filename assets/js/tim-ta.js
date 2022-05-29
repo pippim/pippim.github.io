@@ -2240,10 +2240,11 @@ function configPreviewFile(file) {
     reader.readAsDataURL(file)  // Asynchronous function
     reader.onloadend = function() {  // Wait until async loaded
         //let audio = document.createElement('audio')  // audio element
-        let result = reader.result.toString()  // get data
+        let result = reader.result  // get data
         //configImport = JSON.parse(result);
-        configImport = result
+        configImport = result.toString()
         console.log("result(100):", result.slice(0,100))
+        console.log("configImport(100):", configImport.slice(0,100))
         // audio.controls="true"  // Paints control box
         // TODO insert list of projects with task counts instead of file data dump
         //document.getElementById('configGallery').appendChild(configImport)  // stick it in
