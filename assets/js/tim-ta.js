@@ -2241,7 +2241,8 @@ function configPreviewFile(file) {
     reader.onloadend = function() {  // Wait until async loaded
         //let audio = document.createElement('audio')  // audio element
         let result = reader.result.toString()  // get data
-        configImport = JSON.parse(result);
+        //configImport = JSON.parse(result);
+        configImport = result
         // audio.controls="true"  // Paints control box
         // TODO insert list of projects with task counts instead of file data dump
         document.getElementById('configGallery').appendChild(configImport)  // stick it in
@@ -2261,7 +2262,7 @@ function configPreviewFile(file) {
             name: file.name,
             size: file.size,
             type: file.type,
-            src: base64FileData
+            src: configImport
         }
         localStorage.setItem("x" + key, JSON.stringify(mediaFile))
         configUploadKeys.push(key)  // Not needed
