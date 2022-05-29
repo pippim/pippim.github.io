@@ -136,31 +136,15 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 Download your TIm-ta Configuration from Local Storage to back it up.
 You can also send the download to another device or browser.
 
-<button onclick="export2txt()">Export data to local txt file</button>
+<button onclick="export2txt()">Export Tim-ta Configuration to local txt file</button>
 
 <script>
 function export2txt() {
-  const originalData = {
-    members: [{
-        name: "cliff",
-        age: "34"
-      },
-      {
-        name: "ted",
-        age: "42"
-      },
-      {
-        name: "bob",
-        age: "12"
-      }
-    ]
-  };
-
   const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([JSON.stringify(originalData, null, 2)], {
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(ttaConfig, null, 2)], {
     type: "text/plain"
   }));
-  a.setAttribute("download", "data.txt");
+  a.setAttribute("download", "Tim-ta Configuration.json");
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
