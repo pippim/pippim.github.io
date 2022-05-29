@@ -2244,6 +2244,7 @@ function configPreviewFile(file) {
         let result = reader.result  // get data
         var str = new TextDecoder().decode(result)
         console.log("str(100):", str.slice(0,100))
+        var json = await new Response(result).json()
         // var json = JSON.parse(str)
         //configImport = JSON.parse(result);
         configImport = result.toString()
