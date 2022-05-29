@@ -2243,6 +2243,7 @@ function configPreviewFile(file) {
         let result = reader.result.toString()  // get data
         //configImport = JSON.parse(result);
         configImport = result
+        console.log("result(100):", result.slice(0,100))
         // audio.controls="true"  // Paints control box
         // TODO insert list of projects with task counts instead of file data dump
         //document.getElementById('configGallery').appendChild(configImport)  // stick it in
