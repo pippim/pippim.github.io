@@ -260,6 +260,7 @@ table.tta-table th {
     color: black;
 }
 
+#config-drop-area,
 #drop-area {
     border: 2px dashed #ccc;
     border-radius: 2rem;
@@ -269,6 +270,7 @@ table.tta-table th {
     padding: 1rem;
 }
 
+#config-drop-area.highlight,
 #drop-area.highlight {
     border-color: purple;
 }
@@ -282,6 +284,7 @@ table.tta-table th {
     margin-bottom: .5rem;
 }
 
+#configGallery,
 #gallery p {
     margin: 0rem 0 0 1rem ! important;
 }
@@ -291,6 +294,7 @@ table.tta-table th {
     display: none;
 }
 
+#configButtonGroup,
 #buttonGroup {
     display: none;
     justify-content: space-around;
@@ -2184,16 +2188,16 @@ function handleFiles(files) {
 var configDropArea;
 
 document.addEventListener("DOMContentLoaded", function(event){
-    // Must wait due to error: Uncaught TypeError: dropArea is null
+    // Must wait due to error: Uncaught TypeError: configDropArea is null
     var configDropArea = document.getElementById('config-drop-area')
     ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-        dropArea.addEventListener(eventName, preventDefaults, false)
+        configDropArea.addEventListener(eventName, preventDefaults, false)
     })
     ;['dragenter', 'dragover'].forEach(eventName => {
-        dropArea.addEventListener(eventName, configHighlight, false)
+        configDropArea.addEventListener(eventName, configHighlight, false)
     })
     ;['dragleave', 'drop'].forEach(eventName => {
-        dropArea.addEventListener(eventName, configUnhighlight, false)
+        configDropArea.addEventListener(eventName, configUnhighlight, false)
     })
     configDropArea.addEventListener('drop', configHandleDrop, false)
 });
