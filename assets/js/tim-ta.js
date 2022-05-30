@@ -1831,62 +1831,47 @@ function clickUpdateConfig() {
 
 function validateInput() {
     // Validate input fields
-    var formValues = getInputValues();
-
-    // Validation - Non-blank Task name, numeric fields, "true" or "false"
-    // Assign "default" to fields if they match parent
-    var no = 0;
+    var formValues = getInputValues()
+    var no = 0  // Field number in case blank name error is printed
     for (const name of Object.keys(formValues)) {
-        no += 1;
-        if (name == "") { console.log("validateInput() empty name on:",
-                                      currentForm, "formValues:", formValues[""]);
-                          console.log("Current field Number:", no);
-                          alertError("validateInput() empty name. Check console log.");
-                          continue;
+        no += 1
+        if (name == "") {
+            popCreateUniqueError("e", "validateInput() empty name on: " + currentForm +
+                "\nformValues:" + formValues[""] + "\nCurrent field Number: " + no,
+                "empty_name", "elm", ttaElm)
+            continue
         }
-        var value = formValues[name];
+        var value = formValues[name]
+        // Validation - Non-blank Task name, Unique Task name, numeric ranges, etc.
         if (validateDdField(name, value) == false) return false  // validation failed
-        /*
-        get_dd_field(name);
-
-        if (!validateNonBlank(value)) { return false; }
-        // task_name can't be duplicates
-        if (name == "task_name" && !validateTaskName (value)) { return false; }
-        if (name == "project_name" && !validateProjectName (value)) { return false; }
-        if (!validateNumber(value)) { return false; }
-        if (dd_field.type == "number") { value = 0 + value } // '' to 0
-        if (!validateRange(value)) { return false; }
-        if (!validateRadioButton(value)) { return false; }
-        */
     }
     return true;
 }  // End of validateInput()
 
 function getInputValues() {
-    // Get input field values from <form> for "text" ONLY
-    // Separate functions required for "switch" and "select"
-    var elements = document.getElementById(currentForm).elements;
-    var formValues = {};
+    // Get input field values from <form> for "text" which includes number strings
+    var elements = document.getElementById(currentForm).elements
+    var formValues = {}
     for (var i = 0; i < elements.length; i++) {
-        var item = elements.item(i);
+        var item = elements.item(i)
         if (item.name == "") {
             //console.log("getInputValues() blank item.name:", item.value);
             // Above shows that "select" type value is returned with empty string for key
-            continue;
+            continue
         }
-        formValues[item.name] = item.value;
+        formValues[item.name] = item.value
     }
 
     // Get switch values and add to formValues
     for (const name of Object.keys(inpSwitches)) {
-        formValues[name] = inpSwitches[name].value;
+        formValues[name] = inpSwitches[name].value
     }
     // Add select values to formValues
     for (const name of Object.keys(inpSelects)) {
-        formValues[name] = inpSelects[name].value;
+        formValues[name] = inpSelects[name].value
     }
 
-    return formValues;
+    return formValues
 }  // End of getInputValues()
 
 function validateDdField(name, value) {
@@ -2371,12 +2356,18 @@ function configClickUpload() {
     for (var i = 0; i < configUploadKeys.length; i++) {
         var configFile = localStorage.getItem("x" + configUploadKeys[i])
         localStorage.removeItem("x" + configUploadKeys[i])
-        var configImport = configFile['data']
-        var arrImportProjects = configImport['arrProjects']
-        var objImportProjects = configImport['objProjects']
-        for (var i=0; i<arrImportProjects.length; i++) {
-            // If in array but not in object it is a critical error
-            if (objImportProjects[arrImportProjects[i]]) continue
+        var objConfig = configFile['data']
+        var arrProjects = objConfig['arrProjects']
+        var objProjects = objConfig['objProjects']
+        for (var i=0; i<arrProjects.length; i++) {
+            var objProject = objProjects[arrProjects[i]]
+            var arrTasks = objProject['arrTasks']
+            var objTasks = objProject['objTasks']
+            for (var j=0; i<arrTasks.length; i++) {
+                var objTask = objTasks[arrTasks[j]]
+                console.log("Project:", objProject['project_name'],
+                            "Task:", objTask['task_name'])
+            }
         }
     }
     //localStorage.setItem(CUSTOM_SOUNDS,
