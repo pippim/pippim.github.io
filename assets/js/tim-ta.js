@@ -2305,6 +2305,13 @@ function configPreviewFile(file) {
         }
 
         configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
+        for (var i=0; i<arrImportProjects.length; i++) {
+            // Print Project list
+            var objImportProject = objImportProjects[arrImportProjects[i]]
+            configFileInfo("&emsp;Project: <b>" + objImportProject['project_name'] +
+                           "</b>&emsp;# Tasks: <b>" +
+                           objImportProject['arrTasks'].length + "</b>")
+        }
         let html = "Size: <b>" + file.size.toLocaleString() +
                "</b>&emsp;&emsp;Type:&nbsp;<b>" + file.type + "</b>"
         configFileInfo(html)  // add size and type to gallery
