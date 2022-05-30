@@ -2302,7 +2302,7 @@ function configPreviewFile(file) {
 
         for (var i=0; i<arrImportProjects.length; i++) {
             // If in array but not in object it is a critical error
-            if (objImportProjects[arrImportProjects[i]) continue
+            if (objImportProjects[arrImportProjects[i]]) continue
             console.log("arrImportProjects[" + arrImportProjects[i] +
                         "] not found in objImportProjects{} keys")
             return
