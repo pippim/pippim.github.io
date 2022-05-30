@@ -1755,8 +1755,15 @@ function clickUpdateProject() {
     if (currentMode == "Delete") {
         var confirm = getProjectValue('confirm_delete_phrase');
         if (confirmDelete(confirm)) {
+            // TODO: Project Key not getting deleted, sometimes becomes undefined
+            var arrCntBefore = ttaConfig.arrProjects.length
+            var objCntBefore = Object.keys(tta.Config.objProjects).length
             delete ttaConfig.objProjects[ttaProject.project_name];
             ttaConfig.arrProjects.splice(original_index, 1);
+            var arrCntAfter = ttaConfig.arrProjects.length
+            var objCntAfter = Object.keys(tta.Config.objProjects).length
+            console.log("arrCntBefore:", arrCntBefore, "arrCntAfter:", arrCntAfter
+                        "objCntBefore:", objCntBefore, "objCntAfter:", objCntAfter)
             saveConfig();
             paintProjectsTable();  // What if there are no Projects left?
             return true;
@@ -2275,8 +2282,17 @@ function configPreviewFile(file) {
             //return
         }
         // arrImportProjects to objImportProjects sanity check
+        /*
+            LOTS OF UNRESOLVED OLDER ISSUES:
+                objImportProjects{} key: undefined not found
+                objImportProjects{} key: Project 3 not found
+                objImportProjects{} key: 6th Project not found
+                objImportProjects{} key: 5h Project not found
+                objImportProjects{} key: 8th Project not found
+                objImportProjects{} key: 7th Project not found
+        */
         for (const projectName of Object.keys(objImportProjects)) {
-            if (projectName == null) continue
+            if (projectName === null) continue
             if (arrImportProjects.includes(projectName)) continue
             console.log("objImportProjects{} key:", projectName,
                         "not found in array arrImportProjects[]")
