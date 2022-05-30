@@ -2299,7 +2299,7 @@ function configPreviewFile(file) {
             // If in array but not in object it is a critical error
             if (objImportProjects[arrImportProjects[i]]) continue
             var msg = "arrImportProjects[" + arrImportProjects[i] +
-                      "]\nnot found in objImportProjects{} keys")
+                      "]\nnot found in objImportProjects{} keys"
             popCreateUniqueError("e", msg, "arrProjects", "id", 'configGallery')
             return
         }
