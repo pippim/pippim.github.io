@@ -1755,7 +1755,8 @@ function clickUpdateProject() {
     if (currentMode == "Delete") {
         var confirm = getProjectValue('confirm_delete_phrase');
         if (confirmDelete(confirm)) {
-            // TODO: Project Key not getting deleted, sometimes becomes undefined
+            // NOTE: Project Key not getting deleted, sometimes becomes undefined
+            //       Works correctly May 29, 2022. Must be older bug now fixed.
             var arrCntBefore = ttaConfig.arrProjects.length
             var objCntBefore = Object.keys(ttaConfig.objProjects).length
             delete ttaConfig.objProjects[ttaProject.project_name];
@@ -2279,7 +2280,7 @@ function configPreviewFile(file) {
             console.log("arrImportProjects.length:", arrImportProjects.length,
                         "objImportProjects key count:",
                         Object.keys(objImportProjects).length)
-            //return
+            // WARNING only because historical errors have objImportProjects with no arrImportProjects
         }
         // arrImportProjects to objImportProjects sanity check
         /*
@@ -2296,7 +2297,15 @@ function configPreviewFile(file) {
             if (arrImportProjects.includes(projectName)) continue
             console.log("objImportProjects{} key:", projectName,
                         "not found in array arrImportProjects[]")
-            // return
+            // WARNING only because historical errors have objImportProjects with no arrImportProjects
+        }
+
+        for (var i=0; i<arrImportProjects.length; i++) {
+            // If in array but not in object it is a critical error
+            if (objImportProjects[arrImportProjects[i]) continue
+            console.log("arrImportProjects[" + arrImportProjects[i] +
+                        "] not found in objImportProjects{} keys")
+            return
         }
 
         configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
