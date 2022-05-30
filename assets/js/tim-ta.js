@@ -2253,23 +2253,22 @@ function configPreviewFile(file) {
         try {
             var configImport = JSON.parse(str)
         } catch(e) {
-            alert(e); // error in the above string
+            popCreateUniqueError("e", e, "json", "id", 'configGallery')
+            //alert(e); // error in the above string
             return
         }
         if (configImport['arrProjects']) {
             var arrImportProjects = configImport['arrProjects']
         } else {
-            // TODO: Error message then return
-            alert("arrImportProjects NOT FOUND!")
+            popCreateUniqueError("e", "arrImportProjects NOT FOUND!",
+                                 "arrProjects", "id", 'configGallery')
             return
         }
         if (configImport['objProjects']) {
             var objImportProjects = configImport['objProjects']
-            //console.log("Found objImportProjects:",
-            //            Object.keys(objImportProjects).length)
         } else {
-            // TODO: Error message then return
-            alert("objImportProjects NOT FOUND!")
+            popCreateUniqueError("e", "objImportProjects NOT FOUND!",
+                                 "objProjects", "id", 'configGallery')
             return
         }
         if (arrImportProjects.length != Object.keys(objImportProjects).length) {
@@ -2299,8 +2298,9 @@ function configPreviewFile(file) {
         for (var i=0; i<arrImportProjects.length; i++) {
             // If in array but not in object it is a critical error
             if (objImportProjects[arrImportProjects[i]]) continue
-            alert("arrImportProjects[" + arrImportProjects[i] +
-                  "] not found in objImportProjects{} keys")
+            var msg = "arrImportProjects[" + arrImportProjects[i] +
+                      "]\nnot found in objImportProjects{} keys")
+            popCreateUniqueError("e", msg, "arrProjects", "id", 'configGallery')
             return
         }
 
@@ -2362,6 +2362,7 @@ function configInitializeFiles() {
     configHold = Object.assign({}, ttaConfig)
     document.getElementById('configGallery').textContent = ""
     document.getElementById('configButtonGroup').style.display = "none"
+    msgqClear()
 }
 
 function configHandleFiles(files) {
