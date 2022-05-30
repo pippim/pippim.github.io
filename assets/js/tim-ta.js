@@ -1841,10 +1841,12 @@ function validateInput() {
         if (name == "") { console.log("validateInput() empty name on:",
                                       currentForm, "formValues:", formValues[""]);
                           console.log("Current field Number:", no);
-                          alertError("validateInput() empty nam");
+                          alertError("validateInput() empty name. Check console log.");
                           continue;
         }
         var value = formValues[name];
+        if !(validateDdField(name, value)) return false
+        /*
         get_dd_field(name);
 
         if (!validateNonBlank(value)) { return false; }
@@ -1855,9 +1857,25 @@ function validateInput() {
         if (dd_field.type == "number") { value = 0 + value } // '' to 0
         if (!validateRange(value)) { return false; }
         if (!validateRadioButton(value)) { return false; }
+        */
     }
     return true;
 }  // End of validateInput()
+
+function validateDdField(name, value) {
+    get_dd_field(name);
+    // Using contents after getDdField
+    if (!validateNonBlank(value)) { return false; }
+    // task_name can't be duplicates
+    if (name == "task_name" && !validateTaskName (value)) { return false; }
+    if (name == "project_name" && !validateProjectName (value)) { return false; }
+    if (!validateNumber(value)) { return false; }
+    if (dd_field.type == "number") { value = 0 + value } // '' to 0
+    if (!validateRange(value)) { return false; }
+    if (!validateRadioButton(value)) { return false; }
+
+    return true;
+}  // End of validateDdField(value)
 
 function getInputValues() {
     // Get input field values from <form> for "text" ONLY
@@ -2350,8 +2368,15 @@ function configClickCancel() {
 function configClickUpload() {
     // Loop through input files. Validation has already been done during Preview
     for (var i = 0; i < configUploadKeys.length; i++) {
-        //localStorage.setItem(uploadKeys[i], localStorage.getItem("x" + configUploadKeys[i]))
+        var configFile = localStorage.getItem("x" + configUploadKeys[i])
         localStorage.removeItem("x" + configUploadKeys[i])
+        var configImport = configFile['data']
+        var arrImportProjects = configImport['arrProjects']
+        var objImportProjects = configImport['objProjects']
+        for (var i=0; i<arrImportProjects.length; i++) {
+            // If in array but not in object it is a critical error
+            if (objImportProjects[arrImportProjects[i]]) continue
+        }
     }
     //localStorage.setItem(CUSTOM_SOUNDS,
     //                     JSON.stringify(customSounds))
