@@ -284,10 +284,8 @@ table.tta-table th {
     margin-bottom: .5rem;
 }
 
-#configGallery,
-#gallery p {
-    margin: 0rem 0 0 1rem ! important;
-}
+#configGallery p { margin: 0rem 0 0 .5rem ! important; }
+#gallery p { margin: 0rem 0 0 1rem ! important; }
 
 #configFileElem,
 #fileElem {
@@ -2304,7 +2302,7 @@ function configPreviewFile(file) {
             return
         }
 
-        configFileInfo("<b>" + file.name + "</b>")  // Add name to gallery
+        configFileInfo("<br><b>" + file.name + "</b>")  // Add name to gallery
         for (var i=0; i<arrImportProjects.length; i++) {
             // Print Project list
             var objImportProject = objImportProjects[arrImportProjects[i]]
