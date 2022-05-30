@@ -2356,11 +2356,11 @@ function configClickUpload() {
     for (var i = 0; i < configUploadKeys.length; i++) {
         var configFile = localStorage.getItem("x" + configUploadKeys[i])
         localStorage.removeItem("x" + configUploadKeys[i])
-        console.log("configFile:", configFile)
+        //console.log("configFile:", configFile)
         var jsonFile = JSON.parse(configFile)
-        console.log("jsonFile:", jsonFile)
-        continue
-        var objConfig = configFile['data']
+        //console.log("jsonFile:", jsonFile)
+        //continue
+        var objConfig = jsonFile['data']
         var arrProjects = objConfig['arrProjects']
         var objProjects = objConfig['objProjects']
         for (var i=0; i<arrProjects.length; i++) {
