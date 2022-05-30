@@ -2310,9 +2310,8 @@ function configPreviewFile(file) {
                            "</b>&emsp;# Tasks: <b>" +
                            objImportProject['arrTasks'].length + "</b>")
         }
-        let html = "Size: <b>" + file.size.toLocaleString() +
-               "</b>&emsp;&emsp;Type:&nbsp;<b>" + file.type + "</b>"
-        configFileInfo(html)  // add size and type to gallery
+        configFileInfo("&emsp;Size: <b>" + file.size.toLocaleString() +
+                       "</b>&emsp;&emsp;Type:&nbsp;<b>" + file.type + "</b>")
 
         //  assets/js/search.js/makeCustomSound() will assign
         //  "Custom_999.ext" as new fileURL name.
