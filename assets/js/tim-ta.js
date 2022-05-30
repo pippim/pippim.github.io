@@ -2248,32 +2248,28 @@ function configPreviewFile(file) {
     //reader.readAsDataURL(file)  // Asynchronous function
     reader.readAsArrayBuffer(file)  // Asynchronous function
     reader.onloadend = function() {  // Wait until async loaded
-        //let audio = document.createElement('audio')  // audio element
         let result = reader.result  // get data
         var str = new TextDecoder().decode(result)
-        console.log("str(200):", str.slice(0,200))
         try {
             var configImport = JSON.parse(str)
         } catch(e) {
-            // TODO: Error message then return
             alert(e); // error in the above string
             return
         }
         if (configImport['arrProjects']) {
             var arrImportProjects = configImport['arrProjects']
-            console.log("Found arrImportProjects:", arrImportProjects.length)
         } else {
             // TODO: Error message then return
-            console.log("arrImportProjects NOT FOUND!")
+            alert("arrImportProjects NOT FOUND!")
             return
         }
         if (configImport['objProjects']) {
             var objImportProjects = configImport['objProjects']
-            console.log("Found objImportProjects:",
-                        Object.keys(objImportProjects).length)
+            //console.log("Found objImportProjects:",
+            //            Object.keys(objImportProjects).length)
         } else {
             // TODO: Error message then return
-            console.log("objImportProjects NOT FOUND!")
+            alert("objImportProjects NOT FOUND!")
             return
         }
         if (arrImportProjects.length != Object.keys(objImportProjects).length) {
@@ -2303,8 +2299,8 @@ function configPreviewFile(file) {
         for (var i=0; i<arrImportProjects.length; i++) {
             // If in array but not in object it is a critical error
             if (objImportProjects[arrImportProjects[i]]) continue
-            console.log("arrImportProjects[" + arrImportProjects[i] +
-                        "] not found in objImportProjects{} keys")
+            alert("arrImportProjects[" + arrImportProjects[i] +
+                  "] not found in objImportProjects{} keys")
             return
         }
 
