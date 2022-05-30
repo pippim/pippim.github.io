@@ -1762,7 +1762,7 @@ function clickUpdateProject() {
             ttaConfig.arrProjects.splice(original_index, 1);
             var arrCntAfter = ttaConfig.arrProjects.length
             var objCntAfter = Object.keys(tta.Config.objProjects).length
-            console.log("arrCntBefore:", arrCntBefore, "arrCntAfter:", arrCntAfter
+            console.log("arrCntBefore:", arrCntBefore, "arrCntAfter:", arrCntAfter,
                         "objCntBefore:", objCntBefore, "objCntAfter:", objCntAfter)
             saveConfig();
             paintProjectsTable();  // What if there are no Projects left?
