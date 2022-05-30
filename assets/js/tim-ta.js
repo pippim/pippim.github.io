@@ -1845,7 +1845,7 @@ function validateInput() {
                           continue;
         }
         var value = formValues[name];
-        if !(validateDdField(name, value)) return false
+        if (validateDdField(name, value) == false) return false  // validation failed
         /*
         get_dd_field(name);
 
@@ -1861,21 +1861,6 @@ function validateInput() {
     }
     return true;
 }  // End of validateInput()
-
-function validateDdField(name, value) {
-    get_dd_field(name);
-    // Using contents after getDdField
-    if (!validateNonBlank(value)) { return false; }
-    // task_name can't be duplicates
-    if (name == "task_name" && !validateTaskName (value)) { return false; }
-    if (name == "project_name" && !validateProjectName (value)) { return false; }
-    if (!validateNumber(value)) { return false; }
-    if (dd_field.type == "number") { value = 0 + value } // '' to 0
-    if (!validateRange(value)) { return false; }
-    if (!validateRadioButton(value)) { return false; }
-
-    return true;
-}  // End of validateDdField(value)
 
 function getInputValues() {
     // Get input field values from <form> for "text" ONLY
@@ -1903,6 +1888,22 @@ function getInputValues() {
 
     return formValues;
 }  // End of getInputValues()
+
+function validateDdField(name, value) {
+    // Shared by validateInput() and validateImport() functions
+    get_dd_field(name)
+    // Using contents after get_dd_field(), compare the value to rules
+    if (!validateNonBlank(value)) return false
+    // task_name can't be duplicates
+    if (name == "task_name" && !validateTaskName (value)) return false
+    if (name == "project_name" && !validateProjectName (value)) return false
+    if (!validateNumber(value)) return false
+    if (dd_field.type == "number") value = 0 + value  // '' to 0
+    if (!validateRange(value)) return false
+    if (!validateRadioButton(value)) return false
+
+    return true
+}  // End of validateDdField(value)
 
 function validateProjectName(value) {
     // The task_name key must be unique
