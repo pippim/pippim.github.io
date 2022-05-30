@@ -1757,11 +1757,11 @@ function clickUpdateProject() {
         if (confirmDelete(confirm)) {
             // TODO: Project Key not getting deleted, sometimes becomes undefined
             var arrCntBefore = ttaConfig.arrProjects.length
-            var objCntBefore = Object.keys(tta.Config.objProjects).length
+            var objCntBefore = Object.keys(ttaConfig.objProjects).length
             delete ttaConfig.objProjects[ttaProject.project_name];
             ttaConfig.arrProjects.splice(original_index, 1);
             var arrCntAfter = ttaConfig.arrProjects.length
-            var objCntAfter = Object.keys(tta.Config.objProjects).length
+            var objCntAfter = Object.keys(ttaConfig.objProjects).length
             console.log("arrCntBefore:", arrCntBefore, "arrCntAfter:", arrCntAfter,
                         "objCntBefore:", objCntBefore, "objCntAfter:", objCntAfter)
             saveConfig();
