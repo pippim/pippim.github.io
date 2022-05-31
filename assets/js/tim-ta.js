@@ -2354,32 +2354,20 @@ function configClickCancel() {
 function configClickUpload() {
     // Loop through input files. Validation has already been done during Preview
     for (var i = 0; i < configUploadKeys.length; i++) {
-        //if (i>1000) break
         var configFile = localStorage.getItem("x" + configUploadKeys[i])
         localStorage.removeItem("x" + configUploadKeys[i])
-        //console.log("configFile:", configFile)
         var jsonFile = JSON.parse(configFile)
-        //console.log("jsonFile:", jsonFile)
-        //continue
         var objConfig = jsonFile['data']
         var arrProjects = objConfig['arrProjects']
         var objProjects = objConfig['objProjects']
         for (var j=0; j<arrProjects.length; j++) {
-            //if (j>1000) break
             var objProject = objProjects[arrProjects[j]]
             var arrTasks = objProject['arrTasks']
             var objTasks = objProject['objTasks']
             for (var k=0; k<arrTasks.length; k++) {
-                //console.log("arrTasks.length:", arrTasks.length)
-                //if (k>1000) break
-                if (objTasks[arrTasks[k]]) {
-                    var objTask = objTasks[arrTasks[k]]
-                    console.log("Project:", objProject['project_name'],
-                                "Task:", objTask['task_name'])
-                } else {
-                    console.log("ERROR Project:", objProject['project_name'],
-                                "Task NOT FOUND:", arrTasks[k])
-                }
+                var objTask = objTasks[arrTasks[k]]
+                console.log("Project:", objProject['project_name'],
+                            "Task:", objTask['task_name'])
             }
         }
     }
