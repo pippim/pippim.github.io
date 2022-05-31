@@ -2352,8 +2352,8 @@ function configClickCancel() {
 
 function configClickUpload() {
     // Loop through input files. Validation has already been done during Preview
-    var oldProject = Object.assign({}, ttaProject)
-    var oldTask = Object.assign({}, ttaTask)
+    var oldProject = Object.assign( {}, ttaProject)
+    var oldTask = Object.assign( {}, ttaTask)
     for (var i = 0; i < configUploadKeys.length; i++) {
         var configFile = localStorage.getItem("x" + configUploadKeys[i])
         localStorage.removeItem("x" + configUploadKeys[i])
@@ -2368,7 +2368,7 @@ function configClickUpload() {
             if (existingProject == true)
                 ttaProject = ttaConfig.objProjects[objProject['project_name']]
             else ttaProject = Object.assign({}, tta_project)
-            console.log("Project", objProject['project_name'],
+            console.log(j, "Project", objProject['project_name'],
                         "is an existing project?", existingProject)
             var arrTasks = objProject['arrTasks']
             var objTasks = objProject['objTasks']
@@ -2379,7 +2379,7 @@ function configClickUpload() {
                 if (existingTask == true)
                     ttaTask = ttaProject.objTasks[objTask['task_name']]
                 else ttaTask = Object.assign({}, tta_task)
-                console.log("  Task", objTask['task_name'],
+                console.log(k, "  Task", objTask['task_name'],
                             "is an existing task?", existingTask)
 
                 //console.log("Project:", objProject['project_name'],
@@ -2388,8 +2388,8 @@ function configClickUpload() {
         }
     }
     // Restore state for existing Paint Project/Task Table/Form/Run
-    ttaProject = ttaConfig.objProjects[oldProject['project_name']]
-    ttaTask = ttaProject.objTasks[oldTask['task_name']]
+    ttaProject = ttaConfig.objProjects [oldProject ['project_name']]
+    ttaTask = ttaProject.objTasks [oldTask ['task_name']]
     //localStorage.setItem(CUSTOM_SOUNDS,
     //                     JSON.stringify(customSounds))
     configInitializeFiles()
