@@ -2379,7 +2379,7 @@ function configClickUpload() {
                 if (existingTask == true)
                     ttaTask = ttaProject.objTasks[objTask['task_name']]
                 else ttaTask = Object.assign({}, tta_task)
-                console.log(k, "  Task", objTask['task_name'],
+                console.log("  ", k, "Task", objTask['task_name'],
                             "is an existing task?", existingTask)
 
                 //console.log("Project:", objProject['project_name'],
