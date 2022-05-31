@@ -2244,7 +2244,7 @@ function configPreviewFile(file) {
         For consistency then, if filename already exists, skip adding.
     */
     if (configUploadNames.includes(file.name)) { return }
-    console.log("configPreviewFile:", file)
+    //console.log("configPreviewFile:", file)
 
     let reader = new FileReader()
     //reader.readAsDataURL(file)  // Asynchronous function
@@ -2352,6 +2352,7 @@ function configClickCancel() {
 
 function configClickUpload() {
     // Loop through input files. Validation has already been done during Preview
+    // TODO: As ttaProject and ttaTask change shape, existing Painted Project/Task will be effected.
     for (var i = 0; i < configUploadKeys.length; i++) {
         var configFile = localStorage.getItem("x" + configUploadKeys[i])
         localStorage.removeItem("x" + configUploadKeys[i])
@@ -2362,9 +2363,10 @@ function configClickUpload() {
         for (var j=0; j<arrProjects.length; j++) {
             var objProject = objProjects[arrProjects[j]]
             var existingProject = (ttaConfig.arrProjects.includes(objProject['project_name']))
-            if (existingProject == true) ttaProject = ttaConfig.objProjects[objProject['project_name']]
-                                    else ttaProject = Object.assign({}, tta_project)
-                                    // When adding project, how to get it in right spot?
+            if (existingProject == true)
+                 ttaProject = ttaConfig.objProjects[objProject['project_name']]
+            else ttaProject = Object.assign({}, tta_project)
+                                    // When adding project, how to get it in right spot? -- USE j
             console.log(objProject['project_name'], "is an existing project?", existingProject)
             var arrTasks = objProject['arrTasks']
             var objTasks = objProject['objTasks']
@@ -2374,7 +2376,7 @@ function configClickUpload() {
                                     ttaProject.arrTasks.includes(objTask['task_name']))
                 if (existingTask == true) ttaTask = ttaProject.objTasks[objTask['task_name']]
                                      else ttaTask = Object.assign({}, tta_task)
-                                     // When adding task, how to get it in right spot?
+                                     // When adding task, how to get it in right spot? -- USE k
                 console.log(objTask['task_name'], "is an existing task?", existingTask)
 
                 //console.log("Project:", objProject['project_name'],
