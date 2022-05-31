@@ -2280,21 +2280,20 @@ function configPreviewFile(file) {
             // WARNING only because historical errors have objImportProjects with no arrImportProjects
         }
         // arrImportProjects to objImportProjects sanity check
-        /*
-            LOTS OF UNRESOLVED OLDER ISSUES:
+        for (const projectName of Object.keys(objImportProjects)) {
+            if (projectName === null) continue
+            if (arrImportProjects.includes(projectName)) continue
+            //console.log("objImportProjects{} key:", projectName,
+            //            "not found in array arrImportProjects[]")
+            /*
+            LOTS OF UNRESOLVED OLDER DATA CORRUPTION ISSUES:
                 objImportProjects{} key: undefined not found
                 objImportProjects{} key: Project 3 not found
                 objImportProjects{} key: 6th Project not found
                 objImportProjects{} key: 5h Project not found
                 objImportProjects{} key: 8th Project not found
                 objImportProjects{} key: 7th Project not found
-        */
-        for (const projectName of Object.keys(objImportProjects)) {
-            if (projectName === null) continue
-            if (arrImportProjects.includes(projectName)) continue
-            console.log("objImportProjects{} key:", projectName,
-                        "not found in array arrImportProjects[]")
-            // WARNING only because historical errors have objImportProjects with no arrImportProjects
+            */
         }
 
         for (var i=0; i<arrImportProjects.length; i++) {
@@ -2360,14 +2359,17 @@ function configClickUpload() {
         var objConfig = jsonFile['data']
         var arrProjects = objConfig['arrProjects']
         var objProjects = objConfig['objProjects']
+        var existingProject = (if ttaConfig.arrProjects.includes(objProject))
         for (var j=0; j<arrProjects.length; j++) {
             var objProject = objProjects[arrProjects[j]]
+            var existingProject = (if ttaConfig.arrProjects.includes(objProject['project_name']))
+            console.log("existingProject:", existingProject)
             var arrTasks = objProject['arrTasks']
             var objTasks = objProject['objTasks']
             for (var k=0; k<arrTasks.length; k++) {
                 var objTask = objTasks[arrTasks[k]]
-                console.log("Project:", objProject['project_name'],
-                            "Task:", objTask['task_name'])
+                //console.log("Project:", objProject['project_name'],
+                //            "Task:", objTask['task_name'])
             }
         }
     }
