@@ -2359,10 +2359,9 @@ function configClickUpload() {
         var objConfig = jsonFile['data']
         var arrProjects = objConfig['arrProjects']
         var objProjects = objConfig['objProjects']
-        var existingProject = (ttaConfig.arrProjects.includes(objProject))
         for (var j=0; j<arrProjects.length; j++) {
             var objProject = objProjects[arrProjects[j]]
-            var existingProject = (if ttaConfig.arrProjects.includes(objProject['project_name']))
+            var existingProject = (ttaConfig.arrProjects.includes(objProject['project_name']))
             console.log("existingProject:", existingProject)
             var arrTasks = objProject['arrTasks']
             var objTasks = objProject['objTasks']
