@@ -2368,7 +2368,7 @@ function configClickUpload() {
             var arrTasks = objProject['arrTasks']
             var objTasks = objProject['objTasks']
             for (var j=0; i<arrTasks.length; j++) {
-                if (objTasks[arrTasks[j]) {
+                if (objTasks[arrTasks[j]]) {
                     var objTask = objTasks[arrTasks[j]]
                     console.log("Project:", objProject['project_name'],
                                 "Task:", objTask['task_name'])
