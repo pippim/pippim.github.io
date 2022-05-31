@@ -2353,6 +2353,8 @@ function configClickCancel() {
 function configClickUpload() {
     // Loop through input files. Validation has already been done during Preview
     // TODO: As ttaProject and ttaTask change shape, existing Painted Project/Task will be effected.
+    var oldProject = Object.assign({}, ttaProject)
+    var oldTask = Object.assign({}, ttaTask)
     for (var i = 0; i < configUploadKeys.length; i++) {
         var configFile = localStorage.getItem("x" + configUploadKeys[i])
         localStorage.removeItem("x" + configUploadKeys[i])
@@ -2384,6 +2386,9 @@ function configClickUpload() {
             }
         }
     }
+    // Restore state for existing Paint Project/Task Table/Form/Run
+    ttaProject = ttaConfig.objProjects[oldProject['project_name']]
+    ttaTask = ttaProject.objTasks[oldTask['task_name']]
     //localStorage.setItem(CUSTOM_SOUNDS,
     //                     JSON.stringify(customSounds))
     configInitializeFiles()
