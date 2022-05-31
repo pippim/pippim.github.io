@@ -2364,15 +2364,17 @@ function configClickUpload() {
             var existingProject = (ttaConfig.arrProjects.includes(objProject['project_name']))
             if (existingProject == true) ttaProject = ttaConfig.objProjects[objProject['project_name']]
                                     else ttaProject = Object.assign({}, tta_project)
+                                    // When adding project, how to get it in right spot?
             console.log(objProject['project_name'], "is an existing project?", existingProject)
             var arrTasks = objProject['arrTasks']
             var objTasks = objProject['objTasks']
             for (var k=0; k<arrTasks.length; k++) {
                 var objTask = objTasks[arrTasks[k]]
                 var existingTask = (existingProject == true &&
-                                    .arrProjects.includes(objProject['project_name']))
+                                    ttaProject.arrTasks.includes(objTask['task_name']))
                 if (existingTask == true) ttaTask = ttaProject.objTasks[objTask['task_name']]
                                      else ttaTask = Object.assign({}, tta_task)
+                                     // When adding task, how to get it in right spot?
                 console.log(objTask['task_name'], "is an existing task?", existingTask)
 
                 //console.log("Project:", objProject['project_name'],
