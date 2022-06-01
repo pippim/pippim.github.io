@@ -2368,7 +2368,7 @@ function configClickUpload() {
             if (existingProject == true)
                 ttaProject = ttaConfig.objProjects[objProject['project_name']]
             else ttaProject = Object.assign({}, tta_project)
-            console.log(j, "Project", objProject['project_name'],
+            console.log(j, "Project:", objProject['project_name'],
                         "is an existing project?", existingProject)
             var arrTasks = objProject['arrTasks']
             var objTasks = objProject['objTasks']
@@ -2379,22 +2379,50 @@ function configClickUpload() {
                 if (existingTask == true)
                     ttaTask = ttaProject.objTasks[objTask['task_name']]
                 else ttaTask = Object.assign({}, tta_task)
-                console.log("  ", k, "Task", objTask['task_name'],
+                console.log(" :", k, "Task:", objTask['task_name'],
                             "is an existing task?", existingTask)
-
-                //console.log("Project:", objProject['project_name'],
-                //            "Task:", objTask['task_name'])
+                importTask(k, existingTask, objTask)
             }
+            // Update project's arrTasks and objTasks
+            importProject(j, existingProject, objProject)
         }
+        // Update config's arrProjects and objProjects
+        importConfig(i)
     }
     // Restore state for existing Paint Project/Task Table/Form/Run
     ttaProject = ttaConfig.objProjects [oldProject ['project_name']]
     ttaTask = ttaProject.objTasks [oldTask ['task_name']]
-    //localStorage.setItem(CUSTOM_SOUNDS,
-    //                     JSON.stringify(customSounds))
     configInitializeFiles()
-    // paintCustomSounds()  // Update display with custom sound files
+    // TODO: Where to scroll to after importing? Probably call paintProjectsTable()
     // document.getElementById('customSounds').scrollIntoView()
+}
+
+function importConfig(ndx) {
+    // Nothing to do???
+}
+
+function importProject(ndx, existingProject, objProject) {
+    //validateDdField(name, value)
+}
+
+function importTask(ndx, existingTask, objTask) {
+    var cntTaskKeys = 0
+    var cntChanged = 0
+    var cntDefaults = 0
+    for (const key of Object.keys(ttaTask)) {
+        cntTaskKeys++
+        if (ttaTask[key] != objTask[key]) {
+            cntChanged++
+            if (key.endsWith("_filename")) {
+                cntDefaults++
+                continue // Cannot change filenames
+            }
+        }
+        var value = objTask[key]
+        //if (validateDdField(key, value)) ttaTask[key] = objTask[key]
+    }
+    console.log("cntTaskKeys:", cntTaskKeys, "cntChanged:", cntChanged,
+                "cntDefaults:", cntDefaults)
 }
 
 function configInitializeFiles() {
