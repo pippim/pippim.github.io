@@ -2412,7 +2412,7 @@ function importTask(ndx, existingTask, objTask) {
     var cntDefaults = 0
     for (const key of Object.keys(ttaTask)) {
         cntTaskKeys++
-        if (!(objTask[key])) {
+        if (objTask[key] == undefined) {
             cntMissing++
             console.log("Missing key:", key)
             continue
