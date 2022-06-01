@@ -2428,8 +2428,8 @@ function importTask(ndx, existingTask, objTask) {
         var value = objTask[key]
         //if (validateDdField(key, value)) ttaTask[key] = objTask[key]
     }
-    console.log("cntTaskKeys:", cntTaskKeys, "cntChanged:", cntChanged,
-                "cntDefaults:", cntDefaults)
+    console.log("    cntTaskKeys:", cntTaskKeys, "cntChanged:", cntChanged,
+                "cntMissing:", cntMissing, "cntDefaults:", cntDefaults)
 }
 
 function configInitializeFiles() {
