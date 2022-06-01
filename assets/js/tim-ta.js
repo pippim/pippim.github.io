@@ -2423,6 +2423,7 @@ function importTask(ndx, existingTask, objTask) {
                 cntDefaults++
                 continue // Cannot change filenames
             }
+            console.log("    #", key, "On file:", ttaTask[key], "Imported:", objTask[key])
         }
         var value = objTask[key]
         //if (validateDdField(key, value)) ttaTask[key] = objTask[key]
