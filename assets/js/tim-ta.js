@@ -2407,10 +2407,16 @@ function importProject(ndx, existingProject, objProject) {
 
 function importTask(ndx, existingTask, objTask) {
     var cntTaskKeys = 0
+    var cntMissing = 0
     var cntChanged = 0
     var cntDefaults = 0
     for (const key of Object.keys(ttaTask)) {
         cntTaskKeys++
+        if (!(objTask[key])) {
+            cntMissing++
+            console.log("Missing key:", key)
+            continue
+        }
         if (ttaTask[key] != objTask[key]) {
             cntChanged++
             if (key.endsWith("_filename")) {
