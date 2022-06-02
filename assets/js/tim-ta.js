@@ -1874,7 +1874,7 @@ function getInputValues() {
     return formValues
 }  // End of getInputValues()
 
-function validateDdField(name, value, output="") {
+function validateDdField(name, value, output={}) {
     // Shared by validateInput() and validateImport() functions
     get_dd_field(name, output)
     // Using contents after get_dd_field(), compare the value to rules
@@ -2410,6 +2410,7 @@ function importTask(ndx, existingTask, objTask) {
     var cntMissing = 0
     var cntChanged = 0
     var cntDefaults = 0
+    var output = {}         // Receives output error messages not sent to screen
     for (const key of Object.keys(ttaTask)) {
         cntTaskKeys++
         if (objTask[key] == undefined) {
@@ -2429,7 +2430,10 @@ function importTask(ndx, existingTask, objTask) {
                         "'  Imported: '" + objTask[key] + "'")
         }
         var value = objTask[key]
-        //if (validateDdField(key, value)) ttaTask[key] = objTask[key]
+        if (validateDdField(key, value, output)) {
+            console.log("         Updating:", key)
+            //ttaTask[key] = objTask[key]
+        }
     }
     console.log("      cntTaskKeys:", cntTaskKeys, " cntChanged:", cntChanged,
                 " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
