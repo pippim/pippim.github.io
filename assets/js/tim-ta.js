@@ -1874,23 +1874,23 @@ function getInputValues() {
     return formValues
 }  // End of getInputValues()
 
-function validateDdField(name, value) {
+function validateDdField(name, value, output="") {
     // Shared by validateInput() and validateImport() functions
-    get_dd_field(name)
+    get_dd_field(name, output)
     // Using contents after get_dd_field(), compare the value to rules
-    if (!validateNonBlank(value)) return false
+    if (!validateNonBlank(value, output)) return false
     // task_name can't be duplicates
-    if (name == "task_name" && !validateTaskName (value)) return false
-    if (name == "project_name" && !validateProjectName (value)) return false
-    if (!validateNumber(value)) return false
+    if (name == "task_name" && !validateTaskName (value, output)) return false
+    if (name == "project_name" && !validateProjectName (value, output)) return false
+    if (!validateNumber(value, output)) return false
     if (dd_field.type == "number") value = 0 + value  // '' to 0
-    if (!validateRange(value)) return false
-    if (!validateRadioButton(value)) return false
+    if (!validateRange(value, output)) return false
+    if (!validateRadioButton(value, output)) return false
 
     return true
 }  // End of validateDdField(value)
 
-function validateProjectName(value) {
+function validateProjectName(value, output) {
     // The task_name key must be unique
     popClearByError("project_name")
     const new_index = ttaConfig.arrProjects.indexOf(value);
@@ -1905,7 +1905,7 @@ function validateProjectName(value) {
     return false;
 }
 
-function validateTaskName(value) {
+function validateTaskName(value, output) {
     // The task_name key must be unique
     popClearByError("task_name")
     const new_index = ttaProject.arrTasks.indexOf(value);
@@ -1921,7 +1921,7 @@ function validateTaskName(value) {
     return false;
 }
 
-function validateNonBlank(value) {
+function validateNonBlank(value, output) {
     // NOTE: get_dd_field must be called first.
     if (dd_field.lower == "non-blank") {
         if (value.trim() == "") {
@@ -1935,7 +1935,7 @@ function validateNonBlank(value) {
     return true;
 }
 
-function validateNumber(value) {
+function validateNumber(value, output) {
     if (dd_field.type != "number") { return true; } // Not "number" type
     // console.log("value: '" + value + "' typeof:", typeof value)
     // From: https://stackoverflow.com/a/175787/6929343
@@ -1949,7 +1949,7 @@ function validateNumber(value) {
     return true;
 }
 
-function validateRange(value) {
+function validateRange(value, output) {
     popClearByError("range")
     if (dd_field.type != "number") { return true; } // Not "number" type
     lower = parseInt(dd_field.lower, 10);  // base 10
@@ -1963,7 +1963,7 @@ function validateRange(value) {
     return false;
 }
 
-function validateRadioButton(value) {
+function validateRadioButton(value, output) {
     // SHORT TERM (I think?)
     // LONG TERM still needed for sound filenames if user deleted one?
     // Thorough Doc: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
@@ -1971,7 +1971,7 @@ function validateRadioButton(value) {
     return true;
 }
 
-function validateSelect(value) {
+function validateSelect(value, output) {
     // SO Example: https://stackoverflow.com/a/44736840/6929343
     // Thorough Doc: https://www.w3schools.com/howto/howto_js_dropdown.asp
     if (dd_field.type != "select") { return true; } // Not "number" type
@@ -2379,7 +2379,7 @@ function configClickUpload() {
                 if (existingTask == true)
                     ttaTask = ttaProject.objTasks[objTask['task_name']]
                 else ttaTask = Object.assign({}, tta_task)
-                console.log(" :", k, "Task:", objTask['task_name'],
+                console.log("  :", k, "Task:", objTask['task_name'],
                             "is an existing task?", existingTask)
                 importTask(k, existingTask, objTask)
             }
@@ -2402,7 +2402,7 @@ function importConfig(ndx) {
 }
 
 function importProject(ndx, existingProject, objProject) {
-    //validateDdField(name, value)
+    //
 }
 
 function importTask(ndx, existingTask, objTask) {
@@ -2414,24 +2414,24 @@ function importTask(ndx, existingTask, objTask) {
         cntTaskKeys++
         if (objTask[key] == undefined) {
             cntMissing++
-            console.log("Missing key:", key)
+            console.log("        Missing key: '", key + "'.")
             continue
         }
         if (ttaTask[key] != objTask[key]) {
             cntChanged++
             if (key.endsWith("_filename")) {
                 cntDefaults++
-                console.log("     < Key: '" + key + "'  Keeping: '" +  ttaTask[key] +
+                console.log("      < Key: '" + key + "'  Keeping: '" +  ttaTask[key] +
                             "'  Ignoring: '" + objTask[key] + "'.")
                 continue // Cannot change filenames
             }
-            console.log("     > Key: '" + key + "'  On file: '" +  ttaTask[key] +
+            console.log("      > Key: '" + key + "'  On file: '" +  ttaTask[key] +
                         "'  Imported: '" + objTask[key] + "'")
         }
         var value = objTask[key]
         //if (validateDdField(key, value)) ttaTask[key] = objTask[key]
     }
-    console.log("     cntTaskKeys:", cntTaskKeys, " cntChanged:", cntChanged,
+    console.log("      cntTaskKeys:", cntTaskKeys, " cntChanged:", cntChanged,
                 " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
 }
 
