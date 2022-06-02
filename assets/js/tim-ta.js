@@ -2421,18 +2421,18 @@ function importTask(ndx, existingTask, objTask) {
             cntChanged++
             if (key.endsWith("_filename")) {
                 cntDefaults++
-                console.log("    < Key: '" + key + "'.  Keeping: '" +  ttaTask[key] +
-                            "'.  Ignoring: '" + objTask[key]) + "'."
+                console.log("    < Key: '" + key + "'  Keeping: '" +  ttaTask[key] +
+                            "'  Ignoring: '" + objTask[key]) + "'.")
                 continue // Cannot change filenames
             }
-            console.log("    > Key: '" + key + "'.  On file: '" +  ttaTask[key] +
-                        "'.  Imported: '" + objTask[key]) + "'."
+            console.log("    > Key: '" + key + "'  On file: '" +  ttaTask[key] +
+                        "'  Imported: '" + objTask[key]) + "'")
         }
         var value = objTask[key]
         //if (validateDdField(key, value)) ttaTask[key] = objTask[key]
     }
-    console.log("    cntTaskKeys:", cntTaskKeys, "cntChanged:", cntChanged,
-                "cntMissing:", cntMissing, "cntDefaults:", cntDefaults)
+    console.log("    cntTaskKeys:", cntTaskKeys, " cntChanged:", cntChanged,
+                " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
 }
 
 function configInitializeFiles() {
