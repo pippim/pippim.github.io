@@ -1780,7 +1780,12 @@ function clickUpdateProject() {
     if (!validateInput()) { return false; }
 
     // Save old project name in case it changes
-    if (original_index >= 0) var original_project_name = ttaProject[project_name]
+    if (original_index >= 0) {
+        var original_project_name = ttaProject[project_name]
+        console.log("Saving original_project_name:", original_project_name)
+        console.log("ttaConfig.arrProjects[original_index]:",
+                    ttaConfig.arrProjects[original_index])
+    }
 
     // Get form input values including switches and selects
     // NOTE formValues is really formValues
