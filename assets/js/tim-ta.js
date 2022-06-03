@@ -1708,6 +1708,9 @@ function clickUpdateTask() {
     /* Validate input field values for Save/Add */
     if (!validateInput()) { return false; }
 
+    // Save old task name in case it changes
+    if (original_index >= 0) var original_task_name = ttaProject[project_name]
+
     // Get form input values including switches and selects
     var formValues = getInputValues();
 
@@ -1729,11 +1732,14 @@ function clickUpdateTask() {
         if (original_index != new_index) {
             // Replace old key with new at same spot
             ttaProject.arrTasks[original_index] = formValues.task_name;
-        } // At this point it's Edit mode and key hasn't changed.
+            // June 3, 2022: BIG ERROR: Old objTasks[OLD NAME] is still on file!!!
+            delete ttaConfig.objTasks[original_task_name]
+
+        } // else edit mode and key hasn't changed.
     }
 
     // Update object values
-    ttaProject.objTasks[formValues.task_name] = formValues;
+    ttaProject.objTasks[formValues.task_name] = formValues;  // switches & selects are set??
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
     saveConfig();
     paintTasksTable()
@@ -1773,6 +1779,9 @@ function clickUpdateProject() {
     /* Validate input field values for Save/Add */
     if (!validateInput()) { return false; }
 
+    // Save old project name in case it changes
+    if (original_index >= 0) var original_project_name = ttaProject[project_name]
+
     // Get form input values including switches and selects
     // NOTE formValues is really formValues
     var formValues = getInputValues();
@@ -1797,7 +1806,9 @@ function clickUpdateProject() {
         if (original_index != new_index) {
             // Replace old key with new at same spot
             ttaConfig.arrProjects[original_index] = formValues.project_name;
-        } // At this point it's Edit mode and key hasn't changed.
+            // June 3, 2022: BIG ERROR: Old objProjects[OLD NAME] is still on file!!!
+            delete ttaConfig.objProjects[original_project_name]
+        } // else Edit mode and key hasn't changed.
     }
 
     // Update Project values
@@ -2277,7 +2288,7 @@ function configPreviewFile(file) {
             return
         }
         if (arrImportProjects.length != Object.keys(objImportProjects).length) {
-            console.debug("arrImportProjects.length:", arrImportProjects.length,
+            console.warn("arrImportProjects.length:", arrImportProjects.length,
                         "objImportProjects key count:",
                         Object.keys(objImportProjects).length)
             // WARNING only because historical errors have objImportProjects with no arrImportProjects
