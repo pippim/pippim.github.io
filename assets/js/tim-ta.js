@@ -1874,16 +1874,21 @@ function getInputValues() {
     return formValues
 }  // End of getInputValues()
 
-function validateDdField(name, value, output={}) {
+function validateDdField(name, value, output) {
     // Shared by validateInput() and validateImport() functions
-    get_dd_field(name, output)
-    // Using contents after get_dd_field(), compare the value to rules
+    output = typeof output !== 'undefined' ? output : { destination: "window" };
+    /* When output passed it is typically
+        output = { destination: "file",
+                   format: "html",
+                   newline: "<br>"
+                 }
+    */
+    get_dd_field(name, output)  // seed data dictionary decision making fields
     if (!validateNonBlank(value, output)) return false
-    // task_name can't be duplicates
     if (name == "task_name" && !validateTaskName (value, output)) return false
     if (name == "project_name" && !validateProjectName (value, output)) return false
     if (!validateNumber(value, output)) return false
-    if (dd_field.type == "number") value = 0 + value  // '' to 0
+    if (dd_field.type == "number") value = 0 + value  // '' to 0 for range tests
     if (!validateRange(value, output)) return false
     if (!validateRadioButton(value, output)) return false
 
@@ -1899,7 +1904,7 @@ function validateProjectName(value, output) {
     const original_index = ttaConfig.arrProjects.indexOf(ttaProject.project_name);
     if (original_index == new_index) { return true; }  // Key hasn't changed
 
-    // We have a new key that already exists
+    // We have a new key that already exists n popCreateUniqueError(
     popCreateUniqueError("e", dd_field.label + " must be unique", "project_name",
                          "id", dd_field.name);
     return false;
@@ -1937,10 +1942,8 @@ function validateNonBlank(value, output) {
 
 function validateNumber(value, output) {
     if (dd_field.type != "number") { return true; } // Not "number" type
-    // console.log("value: '" + value + "' typeof:", typeof value)
     // From: https://stackoverflow.com/a/175787/6929343
     if (isNaN(value)) {
-        //alert(dd_field.label + " must be a number");
         popCreateUniqueError("e", dd_field.label + " must be a number", "number",
                              "id", dd_field.name);
         return false;
@@ -2410,7 +2413,13 @@ function importTask(ndx, existingTask, objTask) {
     var cntMissing = 0
     var cntChanged = 0
     var cntDefaults = 0
-    var output = {}         // Receives output error messages not sent to screen
+    var output = {
+            destination: "file",
+            format: "html",
+            newline: "<br>",
+            returned: ""
+        }
+
     for (const key of Object.keys(ttaTask)) {
         cntTaskKeys++
         if (objTask[key] == undefined) {
@@ -2623,12 +2632,11 @@ function popClearById(idWindow) {
         let entry = msgq[key];
         if (entry.idWindow == idWindow) { popClearByEntry(entry); return; }
     }
-    //console.log("popClearById() not found:", idWindow)
-    // When window closed by popYesNo we get here.
+    alert("popClearById() not found: " + idWindow)
 }
 
 function popClearByEntry(entry) {
-    /* Delete element from document, set to active to "false" */
+    /* Delete element from document and msgq */
     var elm = entry.elmWindow;
     if (document.contains(elm)) {
         elm.remove();  // Might move below bottom of document but still there
@@ -2638,15 +2646,15 @@ function popClearByEntry(entry) {
     }
     delete msgq[entry.idWindow];  // Remove from msgq {}
 }
+
 function popRegisterClose(idWindow, callback) {
+    // For a specific window, register function called when window closed
     msgq[idWindow].callbackClose = callback;
 }
 
 function popClose(idWindow) {
     // Close window by ID name
-    // elmWindow = idWindow.getElementsByClassName("msgq-window")[0];
     elmWindow = document.getElementById(idWindow);
-    // TODO: Grab entry for idWindow and check for popClose call back
     if (elmWindow == null) {
         alert("popClose() received bad idWindow: " + idWindow);
         return;
@@ -2654,28 +2662,37 @@ function popClose(idWindow) {
     elmWindow.style.opacity = "0";
     setTimeout(function(){
         elmWindow.style.display = "none";
+        /* June 2, 2022 shorten
+        QUESTION: When would idWindow not be in msgq???
         if (idWindow in msgq) {
-            if (msgq[idWindow].callbackClose != null) { msgq[idWindow].callbackClose(); }
+            if (msgq[idWindow].callbackClose != null) {
+                msgq[idWindow].callbackClose();
+            }
+        } */
+        if (idWindow in msgq && msgq[idWindow].callbackClose != null) {
+            msgq[idWindow].callbackClose();
         }
         popClearById(idWindow);
     }, 600);
 }
 
-function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
+function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm,
+                              buttons, output) {
     // Create window if same error isn't displayed yet. Prevents multiple
     // windows for same thing, E.G. "Name cannot be blank".
     var popId;
     var existingIds = popGetIdsByError(error_id);
     if (existingIds.length == 0) {
-        popId = popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons);
+        popId = popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
+                          buttons, output);
         return popId;
     } else {
-        return existingIds[0];  /* Hopefully there is only 1. TODO: List when > 1 */
+        return existingIds[0];  /* There should only be 1. TODO: List  > 1 */
     }
-
 }
 
-function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
+function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, 
+                   buttons, output) {
     /*  MAJOR FUNCTION to display error messages (and control boxes)
         msg_type = "e" red error message
                    "w" orange warning message
@@ -2688,6 +2705,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, buttons) {
         elm = an ID or an element. If an ID convert it to an element.
         buttons = array of 5 fields per button:
             "name", "text", "title", "onclick(arg)"
+        output = { destination: "window", format: "html" }
 
         RETURNS the window element created
     */
