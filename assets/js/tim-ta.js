@@ -1709,7 +1709,10 @@ function clickUpdateTask() {
     if (!validateInput()) { return false; }
 
     // Save old task name in case it changes
-    if (original_index >= 0) var original_task_name = ttaProject[project_name]
+    if (original_index >= 0) {
+        var original_task_name = ttaProject.arrTasks[original_index]
+        console.log("Saving original_task_name:", original_task_name)
+    }
 
     // Get form input values including switches and selects
     var formValues = getInputValues();
@@ -1781,10 +1784,7 @@ function clickUpdateProject() {
 
     // Save old project name in case it changes
     if (original_index >= 0) {
-        var original_project_name = ttaProject[project_name]
-        console.log("Saving original_project_name:", original_project_name)
-        console.log("ttaConfig.arrProjects[original_index]:",
-                    ttaConfig.arrProjects[original_index])
+        var original_project_name = ttaConfig.arrProjects[original_index]
     }
 
     // Get form input values including switches and selects
