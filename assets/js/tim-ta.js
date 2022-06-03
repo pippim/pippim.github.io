@@ -1733,8 +1733,8 @@ function clickUpdateTask() {
             // Replace old key with new at same spot
             ttaProject.arrTasks[original_index] = formValues.task_name;
             // June 3, 2022: BIG ERROR: Old objTasks[OLD NAME] is still on file!!!
+            console.log("Deleting original_task_name:", original_task_name)
             delete ttaConfig.objTasks[original_task_name]
-
         } // else edit mode and key hasn't changed.
     }
 
@@ -1792,7 +1792,6 @@ function clickUpdateProject() {
         var parent_value = ttaConfig[name];  // Get Config's value
         // If new Project value same as Config's value it is a "default".
         if (value == parent_value) { formValues[name] = "default" }
-        // Below is different than updateTask
         ttaProject[name] = formValues[name];
     }
 
@@ -1807,6 +1806,7 @@ function clickUpdateProject() {
             // Replace old key with new at same spot
             ttaConfig.arrProjects[original_index] = formValues.project_name;
             // June 3, 2022: BIG ERROR: Old objProjects[OLD NAME] is still on file!!!
+            console.log("Deleting original_project_name:", original_project_name)
             delete ttaConfig.objProjects[original_project_name]
         } // else Edit mode and key hasn't changed.
     }
