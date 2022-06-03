@@ -2444,7 +2444,7 @@ function importTask(ndx, existingTask, objTask) {
             console.log("         Updating:", key)
             //ttaTask[key] = objTask[key]
         } else {
-            console.log("         Update FAILED:", key)
+            console.error("         Update FAILED:", key)
             //ttaTask[key] = objTask[key]
         }
     }
