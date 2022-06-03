@@ -1737,7 +1737,7 @@ function clickUpdateTask() {
             ttaProject.arrTasks[original_index] = formValues.task_name;
             // June 3, 2022: BIG ERROR: Old objTasks[OLD NAME] is still on file!!!
             console.log("Deleting original_task_name:", original_task_name)
-            delete ttaConfig.objTasks[original_task_name]
+            delete ttaProject.objTasks[original_task_name]
         } // else edit mode and key hasn't changed.
     }
 
