@@ -2277,7 +2277,7 @@ function configPreviewFile(file) {
             return
         }
         if (arrImportProjects.length != Object.keys(objImportProjects).length) {
-            console.log("arrImportProjects.length:", arrImportProjects.length,
+            console.debug("arrImportProjects.length:", arrImportProjects.length,
                         "objImportProjects key count:",
                         Object.keys(objImportProjects).length)
             // WARNING only because historical errors have objImportProjects with no arrImportProjects
@@ -2425,14 +2425,14 @@ function importTask(ndx, existingTask, objTask) {
         cntTaskKeys++
         if (objTask[key] == undefined) {
             cntMissing++
-            console.log("        Missing key: '", key + "'.")
+            console.warn("        Missing key: '", key + "'.")
             continue
         }
         if (ttaTask[key] != objTask[key]) {
             cntChanged++
             if (key.endsWith("_filename")) {
                 cntDefaults++
-                console.log("      < Key: '" + key + "'  Keeping: '" +  ttaTask[key] +
+                console.info("      < Key: '" + key + "'  Keeping: '" +  ttaTask[key] +
                             "'  Ignoring: '" + objTask[key] + "'.")
                 continue // Cannot change filenames
             }
@@ -2441,7 +2441,7 @@ function importTask(ndx, existingTask, objTask) {
         }
         var value = objTask[key]
         if (validateDdField(key, value, output)) {
-            console.log("         Updating:", key)
+            console.info ("         Updating:", key)
             //ttaTask[key] = objTask[key]
         } else {
             console.error("         Update FAILED:", key)
