@@ -2425,20 +2425,21 @@ function importTask(ndx, existingTask, objTask) {
         cntTaskKeys++
         if (objTask[key] == undefined) {
             cntMissing++
-            console.warn("        Missing key: '", key + "'.")
+            console.warn("        Missing key: '" + key + "'.")
             continue
         }
         if (ttaTask[key] != objTask[key]) {
             cntChanged++
             if (key.endsWith("_filename")) {
                 cntDefaults++
-                console.info("      < Key: '" + key + "'  Keeping: '" +  ttaTask[key] +
+                console.info("      - Key: '" + key + "'  Keeping: '" +  ttaTask[key] +
                             "'  Ignoring: '" + objTask[key] + "'.")
                 continue // Cannot change filenames
             }
-            console.log("      > Key: '" + key + "'  On file: '" +  ttaTask[key] +
+            console.log("      + Key: '" + key + "'  On file: '" +  ttaTask[key] +
                         "'  Imported: '" + objTask[key] + "'")
-        }
+        } else continue  // Keys are same, no need to update
+
         var value = objTask[key]
         if (validateDdField(key, value, output)) {
             console.info ("         Updating:", key)
