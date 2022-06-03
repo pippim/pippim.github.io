@@ -2417,6 +2417,7 @@ function importTask(ndx, existingTask, objTask) {
             destination: "file",
             format: "html",
             newline: "<br>",
+            parent: "configGallery",
             returned: ""
         }
 
@@ -2441,6 +2442,9 @@ function importTask(ndx, existingTask, objTask) {
         var value = objTask[key]
         if (validateDdField(key, value, output)) {
             console.log("         Updating:", key)
+            //ttaTask[key] = objTask[key]
+        } else {
+            console.log("         Update FAILED:", key)
             //ttaTask[key] = objTask[key]
         }
     }
