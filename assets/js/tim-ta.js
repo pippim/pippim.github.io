@@ -2479,8 +2479,10 @@ function importTask(ndx, existingTask, objTask) {
             //ttaTask[key] = objTask[key]
         }
     }
-    console.log("      cntTaskKeys:", cntTaskKeys, " cntChanged:", cntChanged,
-                " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
+    // Total line only when something to report
+    if (cntChanged > 0 || cntMissing > 0 || cntDefaults > 0)
+        console.log("      cntTaskKeys:", cntTaskKeys, " cntChanged:", cntChanged,
+                    " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
 }
 
 function configInitializeFiles() {
