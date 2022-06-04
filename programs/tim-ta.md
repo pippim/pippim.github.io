@@ -136,7 +136,7 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 Download your TIm-ta Configuration from Local Storage to back it up.
 You can also send the download to another device or browser.
 
-<button class="page-header-button" 
+<button id="download-config-button" class="page-header-button" 
         title="Download Settings, Projects and Tasks"  
         onclick="ttaExportConfig()"
         >Download Tim-ta Configuration to JSON file
@@ -152,13 +152,16 @@ will be updated.
 
 ***Projects and Tasks will never be deleted***
 
+***Sound filenames will be ignored. The system defaults will be used***
 
 <span id="configSelect"><font size='+2'>Selected Configuration in Memory</font></span>
 
 <div id="config-drop-area">
     <form class="my-form">
-        <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
-        <input type="file" id="configFileElem" multiple accept="application/json" onchange="configHandleFiles(this.files)">
+        <p>Upload multiple files with the file dialog or by dragging
+            and dropping files onto the dashed region</p>
+        <input type="file" id="configFileElem" multiple accept="application/json"
+            onchange="configHandleFiles(this.files)">
         <label class="page-header-button" for="configFileElem">Select some files</label>
     </form>
     <div id="configGallery"></div>
@@ -169,7 +172,8 @@ will be updated.
             Remove files
         </div>
         <div class="rightFoot">
-            <button id="configBtnUpload" class="tta-btn" title="Upload to local storage" 
+            <button id="configBtnUpload" class="tta-btn" 
+                title="Update Projects and Tasks from selected files" 
                 type="button" onclick="configClickUpload()" >&#x2b;</button>
             Upload files
         </div>
@@ -210,11 +214,11 @@ As of May 8, 2022, these features have been developed:
 - Sound files are saved to local storage. This saves bandwidth when they are played.
 - Configuration, Projects, Tasks and Run Timers tables / forms are complete.
 - Advanced draggable window alert/prompt technology is complete.
-- Upload Alarm Sound Files has begun.
+- Upload Alarm Custom Sound Files has begun.
 
 May 14, 2022 update:
 
-- Upload Custom Sound Files has been completed.
+- Upload Custom Sound Files has been completed. Take note how to increase Local Storage quota from 5 MB (Megabytes). 
 - Global Pippim Website redesign for mobile screens begins shortly.
 - Then media controls for running timers will be moved from separate window to the footer section of Run Project. 
 - Then a mechanism for exporting and importing Tim-ta Projects will be started. 
@@ -225,6 +229,10 @@ May 27, 2022 update:
 - New copy code button implemented.
 - Exporting (download) and importing (upload) Tim-ta Projects has begun. 
 
+May 31, 2022 update:
+
+- Exporting (download) Tim-ta configuration went very quickly (a few hours).
+- Importing (upload) Tim-ta Projects and Tasks has taken a few days so far and it is only half done. 
 
 ---
 
