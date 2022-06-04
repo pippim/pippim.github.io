@@ -2455,6 +2455,9 @@ function importProject(ndx, existingProject, objProject) {
             console.warn("        Missing key: '" + key + "'.")
             continue
         }
+        // arrTasks and objTasks are handled in importTask() function
+        if (key == "arrTasks" || key == "objTasks") continue
+
         if (ttaProject[key] != objProject[key]) {
             cntChanged++
             if (key.endsWith("_filename")) {
