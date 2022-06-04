@@ -1892,12 +1892,19 @@ function getInputValues() {
 
 function validateDdField(name, value, output) {
     // Shared by validateInput() and validateImport() functions
-    output = typeof output !== 'undefined' ? output : { destination: "window" };
+    // output = typeof output !== 'undefined' ? output : { destination: "window" };
+    if (typeof output !== 'undefined') {
+        output.returned = ""  // Clear any previous error message
+    }
+
     /* When output passed it is typically
-        output = { destination: "file",
-                   format: "html",
-                   newline: "<br>"
-                 }
+        var output = {
+                destination: "file",
+                format: "html",
+                newline: "<br>",
+                parent: "configGallery",
+                returned: ""
+            }
     */
     get_dd_field(name, output)  // seed data dictionary decision making fields
     if (!validateNonBlank(value, output)) return false
@@ -1922,7 +1929,7 @@ function validateProjectName(value, output) {
 
     // We have a new key that already exists n popCreateUniqueError(
     popCreateUniqueError("e", dd_field.label + " must be unique", "project_name",
-                         "id", dd_field.name);
+                         "id", dd_field.name, null, output);
     return false;
 }
 
@@ -1937,7 +1944,7 @@ function validateTaskName(value, output) {
 
     // We have a new key that already exists
     popCreateUniqueError("e", dd_field.label + " must be unique", "task_name",
-                         "id", dd_field.name);
+                         "id", dd_field.name, null, output);
     // "id", dd_field.name
     return false;
 }
@@ -1948,7 +1955,7 @@ function validateNonBlank(value, output) {
         if (value.trim() == "") {
             //alert(dd_field.label + " cannot be blank");
             popCreateUniqueError("e", dd_field.label + " cannot be blank", "blank",
-                                 "id", dd_field.name);
+                                 "id", dd_field.name, null, output);
             return false;
         }
     }
@@ -1961,7 +1968,7 @@ function validateNumber(value, output) {
     // From: https://stackoverflow.com/a/175787/6929343
     if (isNaN(value)) {
         popCreateUniqueError("e", dd_field.label + " must be a number", "number",
-                             "id", dd_field.name);
+                             "id", dd_field.name, null, output);
         return false;
     }
     popClearByError("number")
@@ -1977,7 +1984,7 @@ function validateRange(value, output) {
 
     var msg = dd_field.label + " must be between " + lower.toString() + " and " +
           upper.toString();
-    popCreateUniqueError("e", msg, "range", "id", dd_field.name);
+    popCreateUniqueError("e", msg, "range", "id", dd_field.name, null, output);
 
     return false;
 }
@@ -2760,6 +2767,12 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
         }
         // Rewrite id in elm parameter with actual element.
         elm = document.getElementById(id_elm);
+    }
+
+    // If output passed, don't display message but return it
+    if (typeof output !== 'undefined') {
+        output.returned = msg
+        return
     }
 
     var p = {};
