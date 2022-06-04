@@ -2486,7 +2486,7 @@ function importProject(ndx, existingProject, objProject) {
                     " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
 
     // taaConfig - Add new project name, or save changed name
-    if(existingTask == false)
+    if(existingProject == false)
         // Add mode, push new key onto array
         ttaConfig.arrProjects.push(objProject.project_name);
     // Update Project values
