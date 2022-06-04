@@ -2393,6 +2393,7 @@ function configClickUpload() {
         var arrProjects = objConfig['arrProjects']
         var objProjects = objConfig['objProjects']
         for (var j=0; j<arrProjects.length; j++) {
+            if (objProject.project_name == "") { alert("blank project_name"); continue }
             var objProject = objProjects[arrProjects[j]]
             var existingProject =
                 (ttaConfig.arrProjects.includes(objProject['project_name']))
@@ -2412,7 +2413,7 @@ function configClickUpload() {
                 else ttaTask = Object.assign({}, tta_task)
                 console.log("  :", k, "Task:", objTask['task_name'],
                             "is an existing task?", existingTask)
-                importTask(k, existingTask, objTask)
+                importTask(k, existingTask, objProject, objTask)
             }
             // Update project's arrTasks and objTasks
             importProject(j, existingProject, objProject)
@@ -2426,6 +2427,7 @@ function configClickUpload() {
     configInitializeFiles()
     // TODO: Where to scroll to after importing? Probably call paintProjectsTable()
     // document.getElementById('customSounds').scrollIntoView()
+    paintProjectsTable()
 }
 
 function importConfig(ndx) {
@@ -2462,27 +2464,27 @@ function importProject(ndx, existingProject, objProject) {
             cntChanged++
             if (key.endsWith("_filename")) {
                 cntDefaults++
-                console.info("      - Key: '" + key + "' | Keeping: '" +
+                console.info("  - Key: '" + key + "' | Keeping: '" +
                              ttaProject[key] + "' | Ignoring: '" + objProject[key] + "'.")
                 continue // Cannot change filenames
             }
-            console.log("      + Key: '" + key + "' | On file: '" +
+            console.log("  + Key: '" + key + "' | On file: '" +
                         ttaProject[key] + "' | Imported: '" + objProject[key] + "'")
         } else continue  // Keys are same, no need to update
 
         var value = objProject[key]
         if (validateDdField(key, value, output)) {
-            console.info ("         Updating:", key,
+            console.info ("     Updating:", key,
                           "| output.returned:", output.returned)
             ttaProject[key] = objProject[key]
         } else {
-            console.error("         Update FAILED:", key,
+            console.error("     Update FAILED:", key,
                           "| output.returned:", output.returned)
         }
     }
     // Total line only when something to report
     if (cntChanged > 0 || cntMissing > 0 || cntDefaults > 0)
-        console.log("      cntKeys:", cntKeys, "| cntChanged:", cntChanged,
+        console.log("  cntKeys:", cntKeys, "| cntChanged:", cntChanged,
                     "| cntMissing:", cntMissing, "| cntDefaults:", cntDefaults)
 
     // taaConfig - Add new project name, or save changed name
@@ -2494,7 +2496,7 @@ function importProject(ndx, existingProject, objProject) {
     saveConfig()
 }
 
-function importTask(ndx, existingTask, objTask) {
+function importTask(ndx, existingTask, objProject, objTask) {
     var cntTaskKeys = 0
     var cntMissing = 0
     var cntChanged = 0
@@ -2549,7 +2551,8 @@ function importTask(ndx, existingTask, objTask) {
         // TODO: Track last task processed and insert new task after it
         ttaProject.arrTasks.push(objTask.task_name)
     ttaProject.objTasks[objTask.task_name] = ttaTask
-    ttaConfig.objProjects[ttaProject.project_name] = ttaProject
+    //ttaConfig.objProjects[ttaProject.project_name] = ttaProject
+    ttaConfig.objProjects[objProject.project_name] = ttaProject
 }
 
 function configInitializeFiles() {
