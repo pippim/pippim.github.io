@@ -1736,7 +1736,7 @@ function clickUpdateTask() {
             // Replace old key with new at same spot
             ttaProject.arrTasks[original_index] = formValues.task_name;
             // June 3, 2022: BIG ERROR: Old objTasks[OLD NAME] is still on file!!!
-            console.log("Deleting original_task_name:", original_task_name)
+            // console.log("Deleting original_task_name:", original_task_name)
             delete ttaProject.objTasks[original_task_name]
         } // else edit mode and key hasn't changed.
     }
@@ -2434,6 +2434,8 @@ function importConfig(ndx) {
 
 function importProject(ndx, existingProject, objProject) {
     //
+    if (objProject.project_name == "") return
+
 }
 
 function importTask(ndx, existingTask, objTask) {
@@ -2448,6 +2450,8 @@ function importTask(ndx, existingTask, objTask) {
             parent: "configGallery",
             returned: ""
         }
+
+    if (objTask.task_name == "") return
 
     for (const key of Object.keys(ttaTask)) {
         cntTaskKeys++
@@ -2483,6 +2487,13 @@ function importTask(ndx, existingTask, objTask) {
     if (cntChanged > 0 || cntMissing > 0 || cntDefaults > 0)
         console.log("      cntTaskKeys:", cntTaskKeys, " cntChanged:", cntChanged,
                     " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
+    return
+    // From clickUpdateTask() function
+    if(existingTask == false)
+        // TODO: Track last task processed and insert new task after it
+        ttaProject.arrTasks.push(objTask.task_name)
+    ttaProject.objTasks[objTask.task_name] = ttaTask
+    ttaConfig.objProjects[ttaProject.project_name] = ttaProject
 }
 
 function configInitializeFiles() {
