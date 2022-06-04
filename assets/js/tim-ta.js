@@ -1811,7 +1811,7 @@ function clickUpdateProject() {
             // Replace old key with new at same spot
             ttaConfig.arrProjects[original_index] = formValues.project_name;
             // June 3, 2022: BIG ERROR: Old objProjects[OLD NAME] is still on file!!!
-            console.log("Deleting original_project_name:", original_project_name)
+            //console.log("Deleting original_project_name:", original_project_name)
             delete ttaConfig.objProjects[original_project_name]
         } // else Edit mode and key hasn't changed.
     }
@@ -2429,13 +2429,66 @@ function configClickUpload() {
 }
 
 function importConfig(ndx) {
-    // Nothing to do???
+    saveConfig()
 }
 
 function importProject(ndx, existingProject, objProject) {
     //
     if (objProject.project_name == "") return
 
+    var cntKeys = 0
+    var cntMissing = 0
+    var cntChanged = 0
+    var cntDefaults = 0
+    var output = {
+            destination: "file",
+            format: "html",
+            newline: "<br>",
+            parent: "configGallery",
+            returned: ""
+        }
+
+    for (const key of Object.keys(ttaProject)) {
+        cntKeys++
+        if (objProject[key] == undefined) {
+            cntMissing++
+            console.warn("        Missing key: '" + key + "'.")
+            continue
+        }
+        if (ttaProject[key] != objProject[key]) {
+            cntChanged++
+            if (key.endsWith("_filename")) {
+                cntDefaults++
+                console.info("      - Key: '" + key + "'  Keeping: '" +
+                             ttaProject[key] + "'  Ignoring: '" + objProject[key] + "'.")
+                continue // Cannot change filenames
+            }
+            console.log("      + Key: '" + key + "'  On file: '" +
+                        ttaProject[key] + "'  Imported: '" + objProject[key] + "'")
+        } else continue  // Keys are same, no need to update
+
+        var value = objProject[key]
+        if (validateDdField(key, value, output)) {
+            console.info ("         Updating:", key,
+                          "output.returned:", output.returned)
+            ttaProject[key] = objProject[key]
+        } else {
+            console.error("         Update FAILED:", key,
+                          "output.returned:", output.returned)
+        }
+    }
+    // Total line only when something to report
+    if (cntChanged > 0 || cntMissing > 0 || cntDefaults > 0)
+        console.log("      cntKeys:", cntTaskKeys, " cntChanged:", cntChanged,
+                    " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
+
+    // taaConfig - Add new project name, or save changed name
+    if(existingTask == false)
+        // Add mode, push new key onto array
+        ttaConfig.arrProjects.push(objProject.project_name);
+    // Update Project values
+    ttaConfig.objProjects[objProject.project_name] = ttaProject
+    saveConfig()
 }
 
 function importTask(ndx, existingTask, objTask) {
@@ -2476,7 +2529,7 @@ function importTask(ndx, existingTask, objTask) {
         if (validateDdField(key, value, output)) {
             console.info ("         Updating:", key,
                           "output.returned:", output.returned)
-            //ttaTask[key] = objTask[key]
+            ttaTask[key] = objTask[key]
         } else {
             console.error("         Update FAILED:", key,
                           "output.returned:", output.returned)
@@ -2487,8 +2540,8 @@ function importTask(ndx, existingTask, objTask) {
     if (cntChanged > 0 || cntMissing > 0 || cntDefaults > 0)
         console.log("      cntTaskKeys:", cntTaskKeys, " cntChanged:", cntChanged,
                     " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
-    return
-    // From clickUpdateTask() function
+
+    // From function clickUpdateTask() function
     if(existingTask == false)
         // TODO: Track last task processed and insert new task after it
         ttaProject.arrTasks.push(objTask.task_name)
