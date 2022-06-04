@@ -2462,28 +2462,28 @@ function importProject(ndx, existingProject, objProject) {
             cntChanged++
             if (key.endsWith("_filename")) {
                 cntDefaults++
-                console.info("      - Key: '" + key + "'  Keeping: '" +
-                             ttaProject[key] + "'  Ignoring: '" + objProject[key] + "'.")
+                console.info("      - Key: '" + key + "' | Keeping: '" +
+                             ttaProject[key] + "' | Ignoring: '" + objProject[key] + "'.")
                 continue // Cannot change filenames
             }
-            console.log("      + Key: '" + key + "'  On file: '" +
-                        ttaProject[key] + "'  Imported: '" + objProject[key] + "'")
+            console.log("      + Key: '" + key + "' | On file: '" +
+                        ttaProject[key] + "' | Imported: '" + objProject[key] + "'")
         } else continue  // Keys are same, no need to update
 
         var value = objProject[key]
         if (validateDdField(key, value, output)) {
             console.info ("         Updating:", key,
-                          "output.returned:", output.returned)
+                          "| output.returned:", output.returned)
             ttaProject[key] = objProject[key]
         } else {
             console.error("         Update FAILED:", key,
-                          "output.returned:", output.returned)
+                          "| output.returned:", output.returned)
         }
     }
     // Total line only when something to report
     if (cntChanged > 0 || cntMissing > 0 || cntDefaults > 0)
-        console.log("      cntKeys:", cntTaskKeys, " cntChanged:", cntChanged,
-                    " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
+        console.log("      cntKeys:", cntKeys, "| cntChanged:", cntChanged,
+                    "| cntMissing:", cntMissing, "| cntDefaults:", cntDefaults)
 
     // taaConfig - Add new project name, or save changed name
     if(existingProject == false)
@@ -2520,29 +2520,29 @@ function importTask(ndx, existingTask, objTask) {
             cntChanged++
             if (key.endsWith("_filename")) {
                 cntDefaults++
-                console.info("      - Key: '" + key + "'  Keeping: '" +
-                             ttaTask[key] + "'  Ignoring: '" + objTask[key] + "'.")
+                console.info("      - Key: '" + key + "' | Keeping: '" +
+                             ttaTask[key] + "' | Ignoring: '" + objTask[key] + "'.")
                 continue // Cannot change filenames
             }
-            console.log("      + Key: '" + key + "'  On file: '" +
-                        ttaTask[key] + "'  Imported: '" + objTask[key] + "'")
+            console.log("      + Key: '" + key + "' | On file: '" +
+                        ttaTask[key] + "' | Imported: '" + objTask[key] + "'")
         } else continue  // Keys are same, no need to update
 
         var value = objTask[key]
         if (validateDdField(key, value, output)) {
             console.info ("         Updating:", key,
-                          "output.returned:", output.returned)
+                          "| output.returned:", output.returned)
             ttaTask[key] = objTask[key]
         } else {
             console.error("         Update FAILED:", key,
-                          "output.returned:", output.returned)
+                          "| output.returned:", output.returned)
             //ttaTask[key] = objTask[key]
         }
     }
     // Total line only when something to report
     if (cntChanged > 0 || cntMissing > 0 || cntDefaults > 0)
-        console.log("      cntTaskKeys:", cntTaskKeys, " cntChanged:", cntChanged,
-                    " cntMissing:", cntMissing, " cntDefaults:", cntDefaults)
+        console.log("      cntTaskKeys:", cntTaskKeys, "| cntChanged:", cntChanged,
+                    "| cntMissing:", cntMissing, "| cntDefaults:", cntDefaults)
 
     // From function clickUpdateTask() function
     if(existingTask == false)
