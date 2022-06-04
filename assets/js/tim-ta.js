@@ -2199,13 +2199,13 @@ function ttaExportConfig() {
     //browser.downloads.onChanged.addListener(handleDownloadChanged)
     // Uncaught ReferenceError: browser is not defined
     //download.onChanged.addListener(handleDownloadChanged)
-    downloads.download.onChanged.addListener(handleDownloadChanged)
+    //downloads.download.onChanged.addListener(handleDownloadChanged)
     a.click()
     document.body.removeChild(a)
     //browser.downloads.onChanged.removeListener(handleDownloadChanged)
-    downloads.download.onChanged.removeListener(handleDownloadChanged)
-    //popCreateUniqueError("s", "Download configuration success!", "download_config",
-    //                     "id", "download-config-button")
+    //downloads.download.onChanged.removeListener(handleDownloadChanged)
+    popCreateUniqueError("s", "Download configuration success!",
+                         "download_config", "id", "download-config-button")
 }
 
 function handleDownloadChanged(delta) {
