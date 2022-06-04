@@ -2182,24 +2182,34 @@ function handleFiles(files) {
 }
 
 /*
-    Upload Tim-ta Configuration
+    Download Tim-ta Configuration
 
-    How to call ttaExportConfig
+    How to call ttaExportConfig from HTML
     <button  class="page-header-button" id="download-config-button"
              onclick="ttaExportConfig()" ...
 */
 
 function ttaExportConfig() {
-    const a = document.createElement("a");
+    const a = document.createElement("a")
     a.href = URL.createObjectURL(new Blob([JSON.stringify(ttaConfig, null, 2)], {
         type: "application/json"
-    }));
-    a.setAttribute("download", "Tim-ta Configuration.json");
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    popCreateUniqueError("s", "Download configuration success!", "download_config",
-                         "id", "download-config-button")
+    }))
+    a.setAttribute("download", "Tim-ta Configuration.json")
+    document.body.appendChild(a)
+    browser.downloads.onChanged.addListener(handleDownloadChanged)
+    a.click()
+    document.body.removeChild(a)
+    browser.downloads.onChanged.removeListener(handleDownloadChanged)
+    //popCreateUniqueError("s", "Download configuration success!", "download_config",
+    //                     "id", "download-config-button")
+}
+
+function handleDownloadChanged(delta) {
+    if (delta.state && delta.state.current === "complete") {
+        popCreateUniqueError("s", "Download configuration success!",
+                             "download_config", "id", "download-config-button")
+        // console.log(`Download ${delta.id} has completed.`);
+    }
 }
 
 /*
@@ -2250,6 +2260,9 @@ var configHold = Object.assign({}, ttaConfig)
 function configPreviewFile(file) {
     /*  Firefox will let you drag and drop the same filename twice. Chrome will not.
         For consistency then, if filename already exists, skip adding.
+        console.warn() from: https://www.freecodecamp.org/news/
+            javascript-console-log-example-how-to-print-to-the-console-in-js/
+        See webpage for how to do console.table, console.time, etc.
     */
     if (configUploadNames.includes(file.name)) { return }
     //console.log("configPreviewFile:", file)
