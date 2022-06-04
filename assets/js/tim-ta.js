@@ -2055,34 +2055,7 @@ function confirmDelete(text) {
     return (value.toLowerCase() == text.toLowerCase());
 }
 
-/* Drop area for Custom Sound Files
-
-    tim-ta.md contains:
-
-<span id="customSelect"><font size='+3'>Sound Screening in Memory (not saved yet)</font></span>
-
-<div id="drop-area">
-    <form class="my-form">
-        <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
-        <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
-        <label class="button" for="fileElem">Select some files</label>
-    </form>
-    <div id="gallery"></div>
-    <div id="buttonGroup" >
-        <div class="leftFoot">
-            <button id="btnCancel" class="tta-btn" title="Clear list of files"
-                type="button" onclick="clickCancel()" >&#x232B;</button>
-            Remove files
-        </div>
-        <div class="rightFoot">
-            <button id="btnUpload" class="tta-btn" title="Upload to local storage"
-                type="button" onclick="clickUpload()" >&#x2b;</button>
-            Upload files
-        </div>
-    </div>
-</div>
-
-*/
+/* UPLOAD Custom Sound Files */
 
 var dropArea;
 document.addEventListener("DOMContentLoaded", function(event){
@@ -2211,6 +2184,27 @@ function handleFiles(files) {
 /*
     Upload Tim-ta Configuration
 
+    How to call ttaExportConfig
+    <button  class="page-header-button" id="download-config-button"
+             onclick="ttaExportConfig()" ...
+*/
+
+function ttaExportConfig() {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(ttaConfig, null, 2)], {
+        type: "application/json"
+    }));
+    a.setAttribute("download", "Tim-ta Configuration.json");
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    popCreateUniqueError("s", "Download configuration success!", "download_config",
+                         "id", "download-config-button")
+}
+
+/*
+    Upload Tim-ta Configuration
+
     Copied from Upload Custom Sound Files and then prefix "config" added.
 
 */
@@ -2234,11 +2228,6 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 var configUploadKeys = []
 var configUploadNames = []
-
-//function preventDefaults (e) {
-//    e.preventDefault()
-//    e.stopPropagation()
-//}
 
 function configHighlight(e) {
     configDropArea.classList.add('highlight')
@@ -2300,7 +2289,6 @@ function configPreviewFile(file) {
         }
         // arrImportProjects to objImportProjects sanity check
         for (const projectName of Object.keys(objImportProjects)) {
-            if (projectName === null) continue
             if (arrImportProjects.includes(projectName)) continue
             //console.log("objImportProjects{} key:", projectName,
             //            "not found in array arrImportProjects[]")
