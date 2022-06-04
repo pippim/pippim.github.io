@@ -2196,10 +2196,13 @@ function ttaExportConfig() {
     }))
     a.setAttribute("download", "Tim-ta Configuration.json")
     document.body.appendChild(a)
-    browser.downloads.onChanged.addListener(handleDownloadChanged)
+    //browser.downloads.onChanged.addListener(handleDownloadChanged)
+    // Uncaught ReferenceError: browser is not defined
+    downloads.onChanged.addListener(handleDownloadChanged)
     a.click()
     document.body.removeChild(a)
-    browser.downloads.onChanged.removeListener(handleDownloadChanged)
+    //browser.downloads.onChanged.removeListener(handleDownloadChanged)
+    downloads.onChanged.removeListener(handleDownloadChanged)
     //popCreateUniqueError("s", "Download configuration success!", "download_config",
     //                     "id", "download-config-button")
 }
