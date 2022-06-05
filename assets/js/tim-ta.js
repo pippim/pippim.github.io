@@ -1116,6 +1116,10 @@ function getActiveTimerNo() {
 
 async function runAllTimers() {
     // TODO: When cancelling, reset all timers to zero
+    if (ttaProject.arrTasks.length == 0) {
+        popCreateUniqueError("e", "Project has no Tasks to run", "no_tasks")
+        return
+    }
     var timeLast = new Date().getTime();
     var myTable = document.getElementById("tabRunTimers")
     var index = 0;
