@@ -962,14 +962,14 @@ function tabRunTimersDetail(i) {
 function htmlRunTimersSet() {
     // Format table detail Tasks Total line for RunTimers form
     var sound = getProjectValue("set_end_filename");
-    return htmlRunTimersDetail("tabTimerSet", "Tasks Total",
+    return htmlRunTimersDetail("tabTimerSet", "Tasks Total", cntTimedTasks,
                                ttaProject.arrTasks.length, secondsSet, sound);
 }
 
 function htmlRunTimersAllSets() {
     // Format table detail All Sets Total line for RunTimers form
     var sound = getProjectValue("all_sets_end_filename");
-    return htmlRunTimersDetail("tabTimerAllSets", "All Sets Total",
+    return htmlRunTimersDetail("tabTimerAllSets", "All Sets Total", cntTimedTasks + 1,
                                ttaProject.arrTasks.length + 1, secondsAllSets, sound);
 }
 
