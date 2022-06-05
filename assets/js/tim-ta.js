@@ -2399,7 +2399,7 @@ function configClickUpload() {
                 (ttaConfig.arrProjects.includes(objProject['project_name']))
             if (existingProject == true)
                 ttaProject = ttaConfig.objProjects[objProject['project_name']]
-            else ttaProject = Object.assign({}, tta_project)
+            else ttaProject = Object.assign ( {}, tta_project)
             console.log(j, "Project:", objProject['project_name'],
                         "is an existing project?", existingProject)
             var arrTasks = objProject['arrTasks']
@@ -2410,7 +2410,7 @@ function configClickUpload() {
                     ttaProject.arrTasks.includes(objTask['task_name']))
                 if (existingTask == true)
                     ttaTask = ttaProject.objTasks[objTask['task_name']]
-                else ttaTask = Object.assign({}, tta_task)
+                else ttaTask = Object.assign ( {}, tta_task)
                 console.log("  :", k, "Task:", objTask['task_name'],
                             "is an existing task?", existingTask)
                 importTask(k, existingTask, objProject, objTask)
@@ -2421,6 +2421,7 @@ function configClickUpload() {
         // Update config's arrProjects and objProjects
         importConfig(i)
     }
+
     // Restore state for existing Paint Project/Task Table/Form/Run
     ttaProject = ttaConfig.objProjects [oldProject ['project_name']]
     ttaTask = ttaProject.objTasks [oldTask ['task_name']]
@@ -2436,8 +2437,6 @@ function importConfig(ndx) {
 
 function importProject(ndx, existingProject, objProject) {
     //
-    if (objProject.project_name == "") return
-
     var cntKeys = 0
     var cntMissing = 0
     var cntChanged = 0
@@ -2492,7 +2491,7 @@ function importProject(ndx, existingProject, objProject) {
         // Add mode, push new key onto array
         ttaConfig.arrProjects.push(objProject.project_name);
     // Update Project values
-    ttaConfig.objProjects[objProject.project_name] = ttaProject
+    ttaConfig.objProjects[objProject.project_name] = Object.assign ( {}, ttaProject)
     saveConfig()
 }
 
@@ -2547,7 +2546,7 @@ function importTask(ndx, existingTask, objProject, objTask) {
                     "| cntMissing:", cntMissing, "| cntDefaults:", cntDefaults)
 
     // From function clickUpdateTask() function
-    if(existingTask == false)
+    if (existingTask == false)
         // TODO: Track last task processed and insert new task after it
         ttaProject.arrTasks.push(objTask.task_name)
     ttaProject.objTasks[objTask.task_name] = ttaTask
