@@ -2393,7 +2393,7 @@ function configClickUpload() {
         localStorage.removeItem("x" + configUploadKeys[i])
         var jsonFile = JSON.parse(configFile)
         var objConfig = jsonFile['data']
-        var arrProjects = [...objConfig['arrProjects']]
+        var arrProjects = Array.from(objConfig['arrProjects'])
         var objProjects = Object.assign ( {}, objConfig['objProjects'])
 
         for (var j=0; j<arrProjects.length; j++) {
@@ -2410,7 +2410,8 @@ function configClickUpload() {
             else ttaProject = Object.assign ( {}, tta_project)
             //console.log(j, "Project:", objProject['project_name'],
             //            "is an existing project?", existingProject)
-            var arrTasks = [...objProject['arrTasks']]
+            var arrTasks = Array.fom(objProject['arrTasks'])
+            console.log(objProject.project_name, arrTasks)
             var objTasks = Object.assign ( {}, objProject['objTasks'])
 
             for (var k=0; k<arrTasks.length; k++) {
