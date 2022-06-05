@@ -2387,6 +2387,7 @@ function configClickUpload() {
     // Loop through input files. Validation has already been done during Preview
     var oldProject = Object.assign( {}, ttaProject)
     var oldTask = Object.assign( {}, ttaTask)
+
     for (var i = 0; i < configUploadKeys.length; i++) {
         var configFile = localStorage.getItem("x" + configUploadKeys[i])
         localStorage.removeItem("x" + configUploadKeys[i])
@@ -2394,8 +2395,9 @@ function configClickUpload() {
         var objConfig = jsonFile['data']
         var arrProjects = objConfig['arrProjects']
         var objProjects = objConfig['objProjects']
+
         for (var j=0; j<arrProjects.length; j++) {
-            var objProject = objProjects[arrProjects[j]]
+            var objProject = assign ( {}, objProjects[arrProjects[j]])
             if (objProject.project_name == "") { alert("blank project_name"); continue }
             var existingProject =
                 (ttaConfig.arrProjects.includes(objProject['project_name']))
@@ -2407,6 +2409,7 @@ function configClickUpload() {
                         "is an existing project?", existingProject)
             var arrTasks = objProject['arrTasks']
             var objTasks = Object.assign ( {}, objProject['objTasks'])
+
             for (var k=0; k<arrTasks.length; k++) {
                 var objTask = objTasks[arrTasks[k]]
                 var existingTask = (existingProject == true &&
