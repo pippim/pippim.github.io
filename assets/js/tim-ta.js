@@ -946,6 +946,7 @@ function tabRunTimersDetail(i) {
     //console.log("secondsTask:", secondsTask, typeof secondsTask,
     //            "secondsSet:", secondsSet, typeof secondsSet,
     //            "secondsAllSets:", secondsAllSets, typeof secondsAllSets);
+    console.log("secondsTask:", secondsTask)
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
     hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
     hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
