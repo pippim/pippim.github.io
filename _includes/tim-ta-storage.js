@@ -213,15 +213,15 @@ function ttaNewConfig() {
     ttaProject.project_name = "Laundry";
 
     ttaNewTask("Wash Cycle");
-    ttaTaskDuration(0, 16, 15);
+    ttaTaskDuration("", "16", "15");
     ttaAddTask(ttaTask);
 
     ttaNewTask("Rinse Cycle");
-    ttaTaskDuration(0, 13);
+    ttaTaskDuration("", "13", "");
     ttaAddTask(ttaTask);
 
     ttaNewTask("Dryer");
-    ttaTaskDuration(0, 58, 30);
+    ttaTaskDuration("", "58", "30");
     ttaAddTask(ttaTask);
 
     ttaConfig.arrProjects = [ttaProject.project_name];
@@ -233,7 +233,7 @@ function ttaNewTask(name) {
     // Only used for creating test data
     ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
     ttaTask.task_name = name;
-    ttaTask.hours = ttaTask.minutes = ttaTask.seconds = 0;
+    ttaTask.hours = ttaTask.minutes = ttaTask.seconds = "";
 }
 
 function ttaAddTask(obj) {
