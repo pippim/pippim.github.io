@@ -2410,7 +2410,7 @@ function configClickUpload() {
             else ttaProject = Object.assign ( {}, tta_project)
             //console.log(j, "Project:", objProject['project_name'],
             //            "is an existing project?", existingProject)
-            var arrTasks = Array.fom(objProject['arrTasks'])
+            var arrTasks = Array.from(objProject['arrTasks'])
             console.log(objProject.project_name, arrTasks)
             var objTasks = Object.assign ( {}, objProject['objTasks'])
 
