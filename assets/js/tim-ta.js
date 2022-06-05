@@ -2397,8 +2397,11 @@ function configClickUpload() {
         var objProjects = objConfig['objProjects']
 
         for (var j=0; j<arrProjects.length; j++) {
-            var objProject = assign ( {}, objProjects[arrProjects[j]])
-            if (objProject.project_name == "") { alert("blank project_name"); continue }
+            var objProject = Object.assign ( {}, objProjects[arrProjects[j]])
+            if (objProject.project_name == "") {
+                alert("blank project_name")
+                continue
+            }
             var existingProject =
                 (ttaConfig.arrProjects.includes(objProject['project_name']))
             if (existingProject == true)
