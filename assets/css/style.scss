@@ -53,6 +53,7 @@ $lavender: #E6E6FA !default; // lavender
 
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown. Not initializing see search.js for fix
+    z-index: 20;  // High enough to cover up msgq
     margin-top: .7rem;
     position: absolute;
     width: 100%;
