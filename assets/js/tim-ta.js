@@ -2393,7 +2393,7 @@ function configClickUpload() {
         localStorage.removeItem("x" + configUploadKeys[i])
         var jsonFile = JSON.parse(configFile)
         var objConfig = jsonFile['data']
-        var arrProjects = objConfig['arrProjects']
+        var arrProjects = [...objConfig['arrProjects']]
         var objProjects = Object.assign ( {}, objConfig['objProjects'])
 
         for (var j=0; j<arrProjects.length; j++) {
@@ -2408,20 +2408,21 @@ function configClickUpload() {
                 ttaProject = Object.assign ( {},
                     ttaConfig.objProjects[objProject['project_name']])
             else ttaProject = Object.assign ( {}, tta_project)
-            console.log(j, "Project:", objProject['project_name'],
-                        "is an existing project?", existingProject)
-            var arrTasks = objProject['arrTasks']
+            //console.log(j, "Project:", objProject['project_name'],
+            //            "is an existing project?", existingProject)
+            var arrTasks = [...objProject['arrTasks']]
             var objTasks = Object.assign ( {}, objProject['objTasks'])
 
             for (var k=0; k<arrTasks.length; k++) {
-                var objTask = objTasks[arrTasks[k]]
+                var objTask = Object.assign ( {}, objTasks[arrTasks[k]])
                 var existingTask = (existingProject == true &&
                     ttaProject.arrTasks.includes(objTask['task_name']))
                 if (existingTask == true)
-                    ttaTask = ttaProject.objTasks[objTask['task_name']]
+                    ttaTask = Object.assign ( {},
+                        ttaProject.objTasks[objTask['task_name']])
                 else ttaTask = Object.assign ( {}, tta_task)
-                console.log("  :", k, "Task:", objTask['task_name'],
-                            "is an existing task?", existingTask)
+                //console.log("  :", k, "Task:", objTask['task_name'],
+                //            "is an existing task?", existingTask)
                 importTask(k, existingTask, objProject, objTask)
             }
             // Update project's arrTasks and objTasks
@@ -2558,9 +2559,9 @@ function importTask(ndx, existingTask, objProject, objTask) {
     if (existingTask == false)
         // TODO: Track last task processed and insert new task after it
         ttaProject.arrTasks.push(objTask.task_name)
-    ttaProject.objTasks[objTask.task_name] = ttaTask
+    ttaProject.objTasks[objTask.task_name] = Object.assign ( {}, ttaTask)
     //ttaConfig.objProjects[ttaProject.project_name] = ttaProject
-    ttaConfig.objProjects[objProject.project_name] = ttaProject
+    ttaConfig.objProjects[objProject.project_name] = Object.assign ( {}, ttaProject)
 }
 
 function configInitializeFiles() {
