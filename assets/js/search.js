@@ -326,7 +326,7 @@ function setContentDimmed() {
         saveBackgroundColor = elm.style.backgroundColor
         console.log("saveBackgroundColor:", saveBackgroundColor)
     }
-    elm.style.backgroundColor = "#909090"  // Doesn't change Rouge or hdr-btn backgrounds
+    //elm.style.backgroundColor = "#909090"  // Doesn't change Rouge or hdr-btn backgrounds
     //elm.style.filter = "invert(.5)"
     //elm.style.opacity = .85
     if (elmBody !== null) { elmBody.style.overflow = "hidden" }
@@ -342,7 +342,7 @@ function reverseContentDimmed() {
     var elm = document.getElementById('content')
     //elm.style.filter = "brightness(1)"
     //elm.style.filter = "blur(0)"
-    elm.style.backgroundColor = "white"
+    //elm.style.backgroundColor = "white"
     //elm.style.filter = "invert(0)"
     //elm.style.opacity = 1
     if (elmBody !== null) { elmBody.style.overflow = "auto" }
