@@ -432,6 +432,19 @@ details[open] > summary {
     display: inline-block;
 }
 #search-form {
+    display: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    /*  Port from /assets/js/search.js
+    f.style.display = "none"
+    f.style.marginTop = "1rem"
+    f.style.marginBottom = "1rem"
+    f.style.padding = "1rem"
+    q.style.fontSize = "1.2rem"
+    q.style.height = "auto"
+    */
     background-color: $honeydew;
     color: $header-bg-color;
     vertical-align: middle;
@@ -458,8 +471,18 @@ details[open] > summary {
 
 #search-query {
     // could be called `search-input` as that is the process being styled
-    // all: unset;
-    height: 100%;
+    font-size: 1.2rem;
+    height: auto;
+    /*  Port from /assets/js/search.js
+    f.style.display = "none"
+    f.style.marginTop = "1rem"
+    f.style.marginBottom = "1rem"
+    f.style.padding = "1rem"
+    q.style.fontSize = "1.2rem"
+    q.style.height = "auto"
+    */
+
+    //height: 100%;
     width: 100%;
     max-width: 100%;  // https://stackoverflow.com/a/54336954/6929343
     box-sizing: border-box;  // https://stackoverflow.com/a/54336954/6929343
