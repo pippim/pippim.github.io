@@ -2400,13 +2400,13 @@ function configClickUpload() {
             var existingProject =
                 (ttaConfig.arrProjects.includes(objProject['project_name']))
             if (existingProject == true)
-                ttaProject = Object.assign ( {}, 
+                ttaProject = Object.assign ( {},
                     ttaConfig.objProjects[objProject['project_name']])
             else ttaProject = Object.assign ( {}, tta_project)
             console.log(j, "Project:", objProject['project_name'],
                         "is an existing project?", existingProject)
             var arrTasks = objProject['arrTasks']
-            var objTasks = objProject['objTasks']
+            var objTasks = Object.assign ( {}, objProject['objTasks'])
             for (var k=0; k<arrTasks.length; k++) {
                 var objTask = objTasks[arrTasks[k]]
                 var existingTask = (existingProject == true &&
