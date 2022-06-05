@@ -834,16 +834,16 @@ function clickAddProject() {
 }
 
 // Global variables for Task countdown timers
-var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets;
-var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock;
-var pauseAllTimers;
+var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets
+var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock
+var pauseAllTimers, cntTimedTasks
 
 function paintRunTimers(i) {
     // Run Project - Countdown all tasks. Scroll into view as needed.
     // When i null called from Tasks Table footer, else called from Projects Table.
     msgqClear();
     if (i != null) { clickCommon(i); }  // load selected ttaProject
-    secondsTask = secondsSet = secondsAllSets = 0;
+    secondsTask = secondsSet = secondsAllSets = cntTimedTasks = 0
     allTimers = {};
     sleepMillis = 1000;
     cancelAllTimers = false;
@@ -875,8 +875,15 @@ function paintRunTimers(i) {
     html += '<table id="tabRunTimers" class="tta-table">\n' ;
     // If All Sets used, insert it first. Then insert Set total duration
     html += tabRunTimersHeading();
-        // NOTE: Timers of zero duration are omitted from list
-        for (var i = 0; i < cnt; i++) { html += tabRunTimersDetail(i); }
+    // NOTE: Timers of zero duration are omitted from list but i still
+    //       increases with index number for table entry. So there was
+    //       holes which have been plugged with cntTimedTasks
+    for (var i = 0; i < cnt; i++) {
+        var str = tabRunTimersDetail(i);
+        if (str == "") continue
+        html += str
+        cntTimedTasks++
+    }
 
     /* Add progress for tasks total and All sets totals */
     if (secondsSet > 0) {
@@ -945,9 +952,10 @@ function tabRunTimersDetail(i) {
     //console.log("hhmmssTask:", hhmmssTask, "hhmmssSet", hhmmssSet)
     // var html = '<tr">\n';  // This shouldn't have worked before???
 
-    var id = "tabTimer" + i;
+    var id = "tabTimer" + cntTimedTasks;
     var sound = getTaskValue("task_end_filename");
-    return htmlRunTimersDetail(id, ttaTask.task_name, i, secondsTask, sound);
+    return htmlRunTimersDetail(id, ttaTask.task_name, cntTimedTasks,
+                               secondsTask, sound);
 }  // End of tabRunTimersDetail(i)
 
 function htmlRunTimersSet() {
@@ -1125,6 +1133,7 @@ async function runAllTimers() {
                              "no_tasks")
         return
     }
+    // allTimers =
     var timeLast = new Date().getTime();
     var myTable = document.getElementById("tabRunTimers")
     var index = 0;
@@ -1175,7 +1184,8 @@ async function runAllTimers() {
             }
             // Grab next task in project array
             index += 1;
-            if (index >= ttaProject.arrTasks.length) {
+            //if (index >= ttaProject.arrTasks.length) {
+            if (index >= cntTimedTasks) {
                 // The last task has ended, is it the last set too?
                 remaining_run_times -= 1;
                 if (remaining_run_times <= 0) {
