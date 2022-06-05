@@ -2385,8 +2385,8 @@ function configClickCancel() {
 
 function configClickUpload() {
     // Loop through input files. Validation has already been done during Preview
-    var oldProject = Object.assign( {}, ttaProject)
-    var oldTask = Object.assign( {}, ttaTask)
+    var oldProject = Object.assign ( {}, ttaProject)
+    var oldTask = Object.assign ( {}, ttaTask)
 
     for (var i = 0; i < configUploadKeys.length; i++) {
         var configFile = localStorage.getItem("x" + configUploadKeys[i])
@@ -2394,7 +2394,7 @@ function configClickUpload() {
         var jsonFile = JSON.parse(configFile)
         var objConfig = jsonFile['data']
         var arrProjects = objConfig['arrProjects']
-        var objProjects = objConfig['objProjects']
+        var objProjects = Object.assign ( {}, objConfig['objProjects'])
 
         for (var j=0; j<arrProjects.length; j++) {
             var objProject = Object.assign ( {}, objProjects[arrProjects[j]])
