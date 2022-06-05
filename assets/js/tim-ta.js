@@ -1228,7 +1228,7 @@ function updateRunTimerDuration(myTable, entry) {
     var strDuration = hhmmssShorten(hhmmss);
     if (strDuration == "") { strDuration = "Done"}
     //if (scrSmall) { return; }  // Duration doesn't display on small screen
-    myTable.rows[entry.i + 1].cells[1].innerHTML = strDuration;
+    myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration;
 }
 
 function resetTimersSet(myTable, run_times, remaining_run_times) {
