@@ -2412,6 +2412,7 @@ function configClickUpload() {
             //            "is an existing project?", existingProject)
             var arrTasks = Array.from(objProject['arrTasks'])
             console.log(objProject.project_name, arrTasks)
+            console.log("ttaProject.arrTasks", ttaProject.arrTasks)
             var objTasks = Object.assign ( {}, objProject['objTasks'])
 
             for (var k=0; k<arrTasks.length; k++) {
