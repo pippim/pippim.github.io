@@ -2059,7 +2059,8 @@ function toggleSwitch(name) {
 function confirmDelete(text) {
     if (text == "") { return true; }
     let value = prompt('Enter "' + text + '" (without the quotes) to confirm:');
-    return (value.toLowerCase() == text.toLowerCase());
+    if (value.toLowerCase() == text.toLowerCase()) return true
+    popCreateUniqueError("w", "'" + text + "' must be entered to delete.")
 }
 
 /* UPLOAD Custom Sound Files */
