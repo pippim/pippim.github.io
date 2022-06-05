@@ -2407,9 +2407,14 @@ function configClickUpload() {
             if (existingProject == true)
                 ttaProject = Object.assign ( {},
                     ttaConfig.objProjects[objProject['project_name']])
-            else ttaProject = Object.assign ( {}, tta_project)
-            //console.log(j, "Project:", objProject['project_name'],
-            //            "is an existing project?", existingProject)
+            else {
+                ttaProject = Object.assign ( {}, tta_project)
+                // June 5, 2022 - Above isn't wiping out arrTasks
+                ttaProject.arrTasks = []
+                ttaProject.objTasks = {}
+            }
+            console.log(j, "Project:", objProject['project_name'],
+                        "is an existing project?", existingProject)
             var arrTasks = Array.from(objProject['arrTasks'])
             console.log(objProject.project_name, arrTasks)
             console.log("ttaProject.arrTasks", ttaProject.arrTasks)
