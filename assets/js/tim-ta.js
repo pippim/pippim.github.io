@@ -2400,7 +2400,8 @@ function configClickUpload() {
             var existingProject =
                 (ttaConfig.arrProjects.includes(objProject['project_name']))
             if (existingProject == true)
-                ttaProject = ttaConfig.objProjects[objProject['project_name']]
+                ttaProject = Object.assign ( {}, 
+                    ttaConfig.objProjects[objProject['project_name']])
             else ttaProject = Object.assign ( {}, tta_project)
             console.log(j, "Project:", objProject['project_name'],
                         "is an existing project?", existingProject)
