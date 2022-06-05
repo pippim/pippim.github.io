@@ -2061,6 +2061,7 @@ function confirmDelete(text) {
     let value = prompt('Enter "' + text + '" (without the quotes) to confirm:');
     if (value.toLowerCase() == text.toLowerCase()) return true
     popCreateUniqueError("w", "'" + text + "' must be entered to delete.")
+    return false
 }
 
 /* UPLOAD Custom Sound Files */
