@@ -51,6 +51,16 @@ $lavender: #E6E6FA !default; // lavender
     }
 }
 
+body.dim_body {
+    z-index: 19;  // High enough to cover up msgq but not dropdown menu
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown. Not initializing see search.js for fix
     z-index: 20;  // High enough to cover up msgq
