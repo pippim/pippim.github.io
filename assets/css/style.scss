@@ -51,7 +51,7 @@ $lavender: #E6E6FA !default; // lavender
     }
 }
 
-body.dim_body {
+body.dim-body {
     z-index: 19;  // High enough to cover up msgq but not dropdown menu
     position: absolute;
     top: 0;
