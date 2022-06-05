@@ -943,15 +943,9 @@ function tabRunTimersDetail(i) {
     //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
     run_set_times = parseInt(getProjectValue('run_set_times'), 10);
     secondsAllSets += secondsTask * run_set_times;
-    //console.log("secondsTask:", secondsTask, typeof secondsTask,
-    //            "secondsSet:", secondsSet, typeof secondsSet,
-    //            "secondsAllSets:", secondsAllSets, typeof secondsAllSets);
-    console.log("secondsTask:", secondsTask)
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
     hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
     hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
-    //console.log("hhmmssTask:", hhmmssTask, "hhmmssSet", hhmmssSet)
-    // var html = '<tr">\n';  // This shouldn't have worked before???
 
     var id = "tabTimer" + cntTimedTasks;
     var sound = getTaskValue("task_end_filename");
@@ -976,10 +970,10 @@ function htmlRunTimersAllSets() {
 function htmlRunTimersDetail(id, name, index, i, seconds, sound) {
     // Return html for new Run Timers Table entry
     entryTimer = {};
-    entryTimer["id"] = id;  // Suffix is allTimers index
+    entryTimer["id"] = id;
     entryTimer["elm"] = "Pippim Promise";
-    entryTimer["index"] = index;  // Run Timers
-    entryTimer["i"] = i;  // arrTasks index
+    entryTimer["index"] = index  // Run Timers Table index
+    entryTimer["i"] = i          // arrTasks index
     entryTimer["name"] = name;
     entryTimer["seconds"] = seconds;
     entryTimer["remaining"] = seconds;
