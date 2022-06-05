@@ -217,59 +217,21 @@ if (d !== null) {
     }
 }
 
-// When the user clicks ID page-header-search button, display mobile search-form
-// TO BE DELETED AFTER CONVERSION
-var boolSearchForm = false
-/*
-if (p !== null) {
-    p.onclick = function (event) {
-        //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
-        //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
-        //const f = document.getElementById('search-form');           // Wrapper around query & close button
-        //const m = document.getElementById('search-modal');          // Where search results appear
-        // n = page header search button Class list beside hamburger.
-        // Will replace p (page-header-search ID) after all pages are converted
-        //const n = document.getElementsByClassName('page-header-search-button');
-        //const p = document.getElementById('page-header-search');    // page search beside hamburger
-        event.stopPropagation()  // Don't let window.onclick see this click
-        boolSearchForm = !boolSearchForm
-        if (boolSearchForm) {
-            //p.scrollIntoView()  // Move to top so children have room to grown
-            f.style.display = "flex"
-            setContentDimmed()
-            // Move to top so children have room to grown (after scrollbar removed)
-            scrollToJustAbove(f)
-            // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
-            // Hamburger dropdown may be open and stopPropagation stops window.click() running
-            if (e !== null && e != "none") {
-                e.style.display = "none";  // Close dropdown menu options
-                boolDropdown = false
-            }
-        }
-        else  {
-            f.style.display = "none"
-            m.style.display = "none"  // Search modal may be open
-            window.scrollTo({top: 0, behavior: 'smooth'});
-            reverseContentDimmed()
-        }
-        //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
-    }
-}
-*/
+var boolSearchForm = false  // Is search form active?
 
-// For some reason this isn't "none"
 // Loop through all class named .page-header-search-button
-//var ndxPageHeaderSearchButton
 for (var ndx = 0; ndx < n.length; ndx++) {
     // When a class name appears turn off search form display as it means we are using
     // new format and search form no longer appears in page-header. After full conversion
     // these will be defaults
+    /* Moved to style.css
     f.style.display = "none"
     f.style.marginTop = "1rem"
     f.style.marginBottom = "1rem"
     f.style.padding = "1rem"
     q.style.fontSize = "1.2rem"
     q.style.height = "auto"
+    */
     /* Make it look like giant button
     f.style.color = "white"
     background-color: $header-bg-color;  // For Cayman
@@ -368,6 +330,7 @@ function setContentDimmed() {
     //elm.style.filter = "invert(.5)"
     //elm.style.opacity = .85
     if (elmBody !== null) { elmBody.style.overflow = "hidden" }
+    elm.classList.add("dim-body")
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
     //console.log("Current marginRight: " + style.marginRight);
@@ -383,6 +346,7 @@ function reverseContentDimmed() {
     //elm.style.filter = "invert(0)"
     //elm.style.opacity = 1
     if (elmBody !== null) { elmBody.style.overflow = "auto" }
+    elm.classList.remove("dim-body")
 }
 
 f.addEventListener('submit', submitted);

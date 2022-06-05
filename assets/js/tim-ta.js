@@ -1105,8 +1105,6 @@ function pcbClose() {
     pauseAllTimers = false;
 }
 
-/* START OF CODE NEVER DUPLICATED */
-
 function getActiveTimerNo() {
     for (const key of Object.keys(allTimers)) {
         var entry = allTimers[key];
@@ -1114,7 +1112,6 @@ function getActiveTimerNo() {
             return entry.index + 1
         }
     }
-
     return 0;   /* No active timers */
 }
 
@@ -1409,7 +1406,7 @@ function swapTask(source, target) {
 function flashGrey(id) {
     // Flash grey for row just moved then remove after 3 seconds  jump
     var elm = document.getElementById(id);
-    elm.classList.add("flash");
+    elm.classList.add("dim-body");
     setTimeout(function(){
         elm.classList.remove("flash");
     }, 2000);

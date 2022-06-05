@@ -79,22 +79,6 @@ function dragElementOld(elm) {
   }
 }
 
-/* MAY 24/2022 no longer used
-
-if (tcmButtonId !== null) {
-    // TCM button ID click on webpage header (being phased out)
-    document.querySelector('#tcm_button').addEventListener('click', () => {
-        // Display the TCM draggable window
-        document.querySelector('#tcm_window').style.cssText = `
-            display: flex;
-            flex-direction: column;
-        `;
-        // Remove the TCM Button so it can't be clicked again
-        tcmButtonId.style.cssText = cssTcmButtonHide()
-    });
-}
-*/
-
 // Loop through all class named .tcm-button
 var tcmButtonClassNdx; // Global variable
 for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
