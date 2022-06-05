@@ -954,7 +954,7 @@ function tabRunTimersDetail(i) {
 
     var id = "tabTimer" + cntTimedTasks;
     var sound = getTaskValue("task_end_filename");
-    return htmlRunTimersDetail(id, ttaTask.task_name, cntTimedTasks,
+    return htmlRunTimersDetail(id, ttaTask.task_name, i,
                                secondsTask, sound);
 }  // End of tabRunTimersDetail(i)
 
@@ -972,12 +972,12 @@ function htmlRunTimersAllSets() {
                                ttaProject.arrTasks.length + 1, secondsAllSets, sound);
 }
 
-function htmlRunTimersDetail(id, name, index, seconds, sound) {
+function htmlRunTimersDetail(id, name, i, seconds, sound) {
     // Return html for new Run Timers Table entry
     entryTimer = {};
-    entryTimer["id"] = id;
+    entryTimer["id"] = id;  // Suffix is allTimers index
     entryTimer["elm"] = "Pippim Promise";
-    entryTimer["index"] = index;
+    entryTimer["index"] = i;  // arrTasks index
     entryTimer["name"] = name;
     entryTimer["seconds"] = seconds;
     entryTimer["remaining"] = seconds;
@@ -1201,7 +1201,7 @@ async function runAllTimers() {
             // Grab next task in projects array
             id = "tabTimer" + index
             entry = allTimers[id];
-            name = ttaProject.arrTasks[index];
+            name = ttaProject.arrTasks[entry.index];
             ttaTask = ttaProject.objTasks[name];
             continue;  // Wait for first second to expire
         }
