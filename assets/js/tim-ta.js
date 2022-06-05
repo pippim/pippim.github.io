@@ -1120,8 +1120,7 @@ async function runAllTimers() {
         popCreateUniqueError("e", "Project has no Tasks to run", "no_tasks")
         return
     }
-    console.log("allTimers:", allTimers)
-    if (allTimers.length == 0) {
+    if (Object.keys(allTimers).length == 0) {
         popCreateUniqueError("e", "Project has no Tasks containing time",
                              "no_tasks")
         return
