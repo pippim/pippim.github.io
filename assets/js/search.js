@@ -232,7 +232,6 @@ for (var ndx = 0; ndx < n.length; ndx++) {
     q.style.fontSize = "1.2rem"
     q.style.height = "auto"
     */
-    f.style.display = "none"
     /* Make it look like giant button
     f.style.color = "white"
     background-color: $header-bg-color;  // For Cayman
