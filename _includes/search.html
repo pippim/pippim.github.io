@@ -1,26 +1,18 @@
-<!-- Search bar and search results. NOTE: Autocomplete turned off because Google Chrome
-     (but not Firefox) makes input bar extra tall when inserting autocomplete results from
-     drop down list
+<!-- NOTE: Autocomplete turned off because Google Chrome (but not Firefox)
+           makes input bar extra tall. June 6/22 can turn back on now?
 -->
-<!-- class clearable-input from: https://stackoverflow.com/a/33683886/6929343 -->
 <form role="search" id="search-form" style="display: none;">
-  <input type="search" class="clearable-input" id="search-query" name="search-q" autocomplete="off"
-   placeholder="Search..."
-   aria-label="Search through site content">
-  <!-- class name "icon_back" formats x.png background image as close button -->
-  <span id="search-clear-input" class="icon_back" title="Clear search words"></span>
-  <button id="search-symbol" class="icon_back" type="submit"
-    title="Search {{ site.title }} Website">
-  </button>
+    <input type="search" class="clearable-input" id="search-query" name="search-q"
+        autocomplete="off" placeholder="Search..." aria-label="Search site content">
+    <span id="search-clear-input" class="icon_back" title="Clear search words"></span>
+    <button id="search-symbol" class="icon_back" type="submit"
+        title="Search {{ site.title }} Website">
+    </button>
 </form>
 
-<!-- The Modal: https://stackoverflow.com/a/46296164/6929343 -->
 <div id="search-modal" class="modal" style="display: none">
-
-    <!-- Modal content -->
     <div class="search-modal-content">
         <span id="search-modal-close" class="icon_back"></span>
         <p id="search-modal-text">/assets/js/search.js will update text..</p>
     </div>
-
 </div>
