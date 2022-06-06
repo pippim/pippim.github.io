@@ -168,12 +168,7 @@ const f = document.getElementById('search-form');           // Wrapper around qu
 const h = document.getElementById('search-modal-text')      // Search results html codes
 const i = document.getElementById('search-clear-input');    // 'X' to clear search words
 const m = document.getElementById('search-modal');          // Where search results appear
-// n = page header search button Class list beside hamburger.
-// Will replace p (page-header-search ID) after all pages are converted
-const n = document.getElementsByClassName('page-header-search-button');
-/*
-const p = document.getElementById('page-header-search');    // page search beside hamburger
-*/
+const n = document.getElementsByClassName('page-header-search-button')  // In two places
 const q = document.getElementById('search-query');          // Search words input by user
 const s = document.getElementById('search-symbol');         // Mag glass beside search-query
 
@@ -315,7 +310,6 @@ window.onclick = function (event) {
 }
 
 var saveBackgroundColor;  // May 18/22 - New code not working
-elmBody = document.getElementById('body')  // All the main-content. Why it works without var?
 
 function setContentDimmed() {
     // Must be called first. Set background to dimmed for whole content
@@ -326,11 +320,11 @@ function setContentDimmed() {
         saveBackgroundColor = elm.style.backgroundColor
         console.log("saveBackgroundColor:", saveBackgroundColor)
     }
-    elm.style.backgroundColor = "#969696"  // Doesn't change Rouge or hdr-btn backgrounds
+    //elm.style.backgroundColor = "#969696"  // Doesn't change Rouge or hdr-btn backgrounds
     //elm.style.filter = "invert(.5)"
     //elm.style.opacity = .85
-    if (elmBody !== null) { elmBody.style.overflow = "hidden" }
-    //elm.classList.add("dim-body")  // NOT working, projects table rises up
+    document.body.style.overflow = "hidden"
+    document.body.classList.add("dim-body")
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
     //console.log("Current marginRight: " + style.marginRight);
@@ -342,11 +336,12 @@ function reverseContentDimmed() {
     var elm = document.getElementById('content')
     //elm.style.filter = "brightness(1)"
     //elm.style.filter = "blur(0)"
-    elm.style.backgroundColor = "white"
+    //elm.style.backgroundColor = "white"
     //elm.style.filter = "invert(0)"
     //elm.style.opacity = 1
-    if (elmBody !== null) { elmBody.style.overflow = "auto" }
+    document.body.style.overflow = "auto"
     // elm.classList.remove("dim-body")   // NOT working, projects table rises up
+    document.body.classList.remove("dim-body")
 }
 
 f.addEventListener('submit', submitted);
