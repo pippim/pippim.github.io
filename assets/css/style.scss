@@ -456,7 +456,7 @@ details[open] > summary {
     q.style.fontSize = "1.2rem"
     q.style.height = "auto"
     */
-    background-color: yellow;
+    background-color: $honeydew;
     color: $header-bg-color;
     vertical-align: middle;
     //margin: auto;
@@ -566,7 +566,7 @@ details[open] > summary {
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
     }
-    font-size 1.1rem;
+    font-size: 1.1rem;
     /*
     @include large { font-size: 1.1rem; }
     @include medium { font-size: 1rem; }
