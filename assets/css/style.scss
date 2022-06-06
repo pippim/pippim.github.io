@@ -527,6 +527,7 @@ details[open] > summary {
 
 
 // From: https://stackoverflow.com/a/46296164/692934
+// Weirdly not even used: <div id="search-modal" class="modal" style="display: none">
 .search-modal {
     display: none;  // Hidden by default
     position: fixed;  // Stay in place
@@ -551,8 +552,8 @@ details[open] > summary {
     padding: 1rem 1rem 1.5rem 1rem;
     border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
     border-radius: .5rem;
-    width: 80%;
-    margin-left: 5%;    // Added May 15/22 as search-input is now width: 90%;
+    //width: 80%;
+    //margin-left: 5%;    // Added May 15/22 as search-input is now width: 90%;
     overflow: auto;
     // top: 90px;    // top: 90px; goes over page title beginning of text
     // left: 8px; goes over page title far left gutter
@@ -561,10 +562,16 @@ details[open] > summary {
     max-height: 80vh;     // After 80% of viewport height, scroll bar appears on right
     -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
-    z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
+    //z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
+    @include large {
+        max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
+    }
+    font-size 1.1rem;
+    /*
     @include large { font-size: 1.1rem; }
     @include medium { font-size: 1rem; }
     @include small { font-size: 0.9rem; }
+    */
 }
 
 #search-clear-input {
