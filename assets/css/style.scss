@@ -52,13 +52,15 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 .dim-body {
-    z-index: 19;  // High enough to cover up msgq but not dropdown menu
+    //z-index: 19;  // High enough to cover up msgq but not dropdown menu
     //position: absolute;
-    top: 0;
-    left: 0;
+    //top: 0;
+    //left: 0;
     //width: 100%;
     //height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    //background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    box-shadow: 0 0 0 10000px rgba(0, 0, 0, .3)  // IE
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .3)  // Normal world
 }
 
 #dropdown-content {
