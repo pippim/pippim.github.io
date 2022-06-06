@@ -444,9 +444,8 @@ details[open] > summary {
     display: inline-block;
 }
 #search-form {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
     padding: 1rem;
 
     /*  Port from /assets/js/search.js
@@ -457,7 +456,7 @@ details[open] > summary {
     q.style.fontSize = "1.2rem"
     q.style.height = "auto"
     */
-    background-color: $honeydew;
+    background-color: yellow;
     color: $header-bg-color;
     vertical-align: middle;
     //margin: auto;
