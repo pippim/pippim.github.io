@@ -53,11 +53,11 @@ $lavender: #E6E6FA !default; // lavender
 
 .dim-body {
     z-index: 19;  // High enough to cover up msgq but not dropdown menu
-    position: absolute;
+    //position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    //width: 100%;
+    //height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
 }
 
@@ -442,7 +442,6 @@ details[open] > summary {
     display: inline-block;
 }
 #search-form {
-    display: none;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 1rem;
@@ -458,12 +457,12 @@ details[open] > summary {
     background-color: $honeydew;
     color: $header-bg-color;
     vertical-align: middle;
-    margin: auto;
+    //margin: auto;
     border-radius: .5rem;
     display: flex;
     flex-direction: row;
     //align: center;
-    margin: 0 auto;
+    //margin: 0 auto;
     align-items: center;
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
