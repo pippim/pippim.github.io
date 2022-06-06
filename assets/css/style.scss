@@ -531,10 +531,14 @@ details[open] > summary {
 .search-modal {
     display: none;  // Hidden by default
     position: fixed;  // Stay in place
-    z-index: 2;  // Place over header buttons appearing top of every page
+    //z-index: 2;  // Place over header buttons appearing top of every page
     width: 100%;
     height: 100%;
     overflow: auto;
+    @include large {
+        max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
+    }
+
 }
 
 // Modal Content
