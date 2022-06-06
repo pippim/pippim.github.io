@@ -468,14 +468,14 @@ details[open] > summary {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
         //margin: 0 6rem 0 6rem;  // Too radical on resize
         //padding: 0 6rem 0 6rem;  // causing search-query to shrink inside
-        height: 2rem; }
+        //height: 2rem; }
     @include medium {
         //padding: 0 4rem 0 4rem;  // causing search-query to shrink inside
-        height: 1.6rem; }
+        //height: 1.6rem; }
     @include small {
         //padding: 0 2rem 0 2rem;  // causing search-query to shrink inside
-        height: 1.8rem;  // May 16/22 was 1.2rem
-        display: none; }  // May 16/22 - use page-header-search magnifying glass
+        //height: 1.8rem;  // May 16/22 was 1.2rem
+        //display: none; }  // May 16/22 - use page-header-search magnifying glass
 }
 
 #search-query {
