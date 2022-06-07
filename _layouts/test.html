@@ -63,16 +63,17 @@
           <a href="/programs.html" class="page-header-button">💻 Programs</a>
           <a href="mailto:pippim.com@gmail.com" class="page-header-button">📧 Email</a>
         </div>
+
+        {% include search.html %}
+        <script type="text/javascript" src="/assets/js/search.js" ></script>
+
       </div>
     </header>
-
 
     {% include tcm-draggable-window.html %}
 
     <main id="content" class="main-content" role="main">
 
-      {% include search.html %}
-      <script type="text/javascript" src="/assets/js/search.js" ></script>
 
       {{ content }}
 
