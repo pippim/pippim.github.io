@@ -67,7 +67,8 @@ $lavender: #E6E6FA !default; // lavender
     display: none;  // Turned on by page-header-dropdown
     z-index: 20;  // High enough to cover up msgq
     margin-top: .7rem;
-    background-color: #969696;
+    margin-bottom: .5rem;
+    background-color: #fff;
     position: absolute;
     width: 100%;
 }
@@ -452,9 +453,9 @@ details[open] > summary {
     border-radius: .5rem;
     flex-direction: row;
     align-items: center;
-    @include large {
-        max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
-        }
+    //@include large {
+    //    max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
+    //    }
     max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
 }
 
@@ -489,9 +490,9 @@ details[open] > summary {
     -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     z-index: 12;  // Cover up Tim-Ta table header (1) and msgq (10 & 11)
-    @include large {
-        max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
-    }
+    //@include large {
+    //    max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
+    //}
     max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
     font-size: 1.1rem;
 }
