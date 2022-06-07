@@ -324,7 +324,7 @@ function setContentDimmed() {
     //elm.style.filter = "invert(.5)"
     //elm.style.opacity = .85
     document.body.style.overflow = "hidden"
-    document.body.classList.add("dim-body")
+    f.classList.add("dim-body")
 
     var style = elm.currentStyle || window.getComputedStyle(elm);
     //console.log("Current marginRight: " + style.marginRight);
@@ -341,7 +341,7 @@ function reverseContentDimmed() {
     //elm.style.opacity = 1
     document.body.style.overflow = "auto"
     // elm.classList.remove("dim-body")   // NOT working, projects table rises up
-    document.body.classList.remove("dim-body")
+    f.classList.remove("dim-body")
 }
 
 f.addEventListener('submit', submitted);
