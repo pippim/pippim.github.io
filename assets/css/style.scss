@@ -66,8 +66,8 @@ $lavender: #E6E6FA !default; // lavender
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown
     z-index: 20;  // High enough to cover up msgq
-    margin-top: .7rem;
-    padding: 0 0 6px 0;
+    //margin-top: .7rem;
+    padding: .2rem 0 .2rem 0;
     border: 0;
     background-color: black;
     //color: black;
