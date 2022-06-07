@@ -68,7 +68,7 @@ $lavender: #E6E6FA !default; // lavender
     z-index: 20;  // High enough to cover up msgq
     margin-top: .7rem;
     margin-bottom: .5rem;
-    background-color: #fff;
+    padding: 0 0 6px 0;
     position: absolute;
     width: 100%;
 }
