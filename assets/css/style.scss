@@ -562,16 +562,11 @@ details[open] > summary {
     max-height: 80vh;     // After 80% of viewport height, scroll bar appears on right
     -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
-    //z-index: 2;  // Attempt to place over buttons but should have no effect with position: absolute;
+    z-index: 12;  // Cover up Tim-Ta table header (1) and msgq (10 & 11)
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
     }
     font-size: 1.1rem;
-    /*
-    @include large { font-size: 1.1rem; }
-    @include medium { font-size: 1rem; }
-    @include small { font-size: 0.9rem; }
-    */
 }
 
 #search-clear-input {
