@@ -67,6 +67,7 @@ $lavender: #E6E6FA !default; // lavender
     display: none;  // Turned on by page-header-dropdown. Not initializing see search.js for fix
     z-index: 20;  // High enough to cover up msgq
     margin-top: .7rem;
+    background-color: #969696;
     position: absolute;
     width: 100%;
 }
@@ -444,9 +445,10 @@ details[open] > summary {
     display: inline-block;
 }
 #search-form {
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+    //margin-top: .5rem;
+    //margin-bottom: .5rem;
     padding: 1rem;
+    z-index: 20;  // High enough to cover up msgq
 
     /*  Port from /assets/js/search.js
     f.style.display = "none"
