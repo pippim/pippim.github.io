@@ -70,15 +70,12 @@
 
     </header>
 
-    <!-- Search form below page header -->
-    {% include search.html %}
-
-    <!-- javascript for search bar -->
-    <script type="text/javascript" src="/assets/js/search.js" ></script>
-
     {% include tcm-draggable-window.html %}
 
     <main id="content" class="main-content" role="main">
+
+      {% include search.html %}
+      <script type="text/javascript" src="/assets/js/search.js" ></script>
 
       {{ content }}
 
