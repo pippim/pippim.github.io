@@ -196,7 +196,7 @@ if (d !== null) {
             d.scrollIntoView()  // Move to top so children have room to grown
 
             e.style.display = "block"
-            setContentDimmed()
+            setContentDimmed(e)
             // Move to top so children have room to grown (after scrollbar removed)
             scrollToJustAbove(e)
             // Search form may be open and stopPropagation stops window.click() running
@@ -248,7 +248,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         if (boolSearchForm) {
             //n[ndxPageHeaderSearchButton].scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
-            setContentDimmed()
+            setContentDimmed(f)
             // Move to top so children have room to grown (after scrollbar removed)
             scrollToJustAbove(f)
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
@@ -311,37 +311,15 @@ window.onclick = function (event) {
 
 var saveBackgroundColor;  // May 18/22 - New code not working
 
-function setContentDimmed() {
-    // Must be called first. Set background to dimmed for whole content
-    var elm = document.getElementById('content')
-    //elm.style.filter = "brightness(.9)"
-    //elm.style.filter = "blur(.1)"
-    if (saveBackgroundColor == null) {
-        saveBackgroundColor = elm.style.backgroundColor
-        console.log("saveBackgroundColor:", saveBackgroundColor)
-    }
-    //elm.style.backgroundColor = "#969696"  // Doesn't change Rouge or hdr-btn backgrounds
-    //elm.style.filter = "invert(.5)"
-    //elm.style.opacity = .85
+function setContentDimmed(elm) {
     document.body.style.overflow = "hidden"
-    f.classList.add("dim-body")
-
-    var style = elm.currentStyle || window.getComputedStyle(elm);
-    //console.log("Current marginRight: " + style.marginRight);
-
+    elm.classList.add("dim-body")
 }
 
 function reverseContentDimmed() {
-    //document.getElementById('content').style.backgroundColor = saveBackgroundColor
-    var elm = document.getElementById('content')
-    //elm.style.filter = "brightness(1)"
-    //elm.style.filter = "blur(0)"
-    //elm.style.backgroundColor = "white"
-    //elm.style.filter = "invert(0)"
-    //elm.style.opacity = 1
     document.body.style.overflow = "auto"
-    // elm.classList.remove("dim-body")   // NOT working, projects table rises up
-    f.classList.remove("dim-body")
+    e.classList.remove("dim-body")  // dropdown menu dimming
+    f.classList.remove("dim-body")  // search form dimming
 }
 
 f.addEventListener('submit', submitted);
