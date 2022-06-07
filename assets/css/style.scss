@@ -447,7 +447,7 @@ details[open] > summary {
 }
 
 #search-form {
-    //position: absolute;
+    position: sticky;
     padding: .2rem 1rem;
     z-index: 20;  // High enough to cover up msgq
     background-color: $honeydew;
