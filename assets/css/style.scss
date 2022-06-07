@@ -67,8 +67,9 @@ $lavender: #E6E6FA !default; // lavender
     display: none;  // Turned on by page-header-dropdown
     z-index: 20;  // High enough to cover up msgq
     margin-top: .7rem;
-    margin-bottom: .5rem;
     padding: 0 0 6px 0;
+    background-color: black;
+    color: black;
     position: absolute;
     width: 100%;
 }
@@ -552,7 +553,7 @@ a.search-results:visited {
     background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
     background-size: 200% auto;
 
-    color: #000;
+    color: #fff;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
