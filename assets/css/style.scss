@@ -447,7 +447,7 @@ details[open] > summary {
 }
 
 #search-form {
-    position: absolute;
+    //position: absolute;
     padding: .2rem 1rem;
     z-index: 20;  // High enough to cover up msgq
     background-color: $honeydew;
@@ -487,7 +487,7 @@ details[open] > summary {
     border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
     border-radius: .5rem;
     overflow: auto;
-    position: relative;
+    //position: absolute;
     text-align: start;  // parent flex box is centering text
     max-height: 80vh;     // After 80% of viewport height, scroll bar appears on right
     -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
