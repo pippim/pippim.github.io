@@ -64,7 +64,7 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 #dropdown-content {
-    display: none;  // Turned on by page-header-dropdown. Not initializing see search.js for fix
+    display: none;  // Turned on by page-header-dropdown
     z-index: 20;  // High enough to cover up msgq
     margin-top: .7rem;
     background-color: #969696;
@@ -434,81 +434,38 @@ details[open] > summary {
 /* MAJOR SECTION ======== search.html styling */
 
 ::placeholder {
-    // color: #fff;  // White doesn't work with background: $honeydew;
     color: $header-bg-color;
     opacity: 0.7;
 }
 
-/* Text version (UTF-8) of magnifying glass */
 .normalised:first-line {
     // Override <input> line-height problems: https://stackoverflow.com/a/26103611/6929343
     display: inline-block;
 }
+
 #search-form {
-    //margin-top: .5rem;
-    //margin-bottom: .5rem;
     padding: 1rem;
     z-index: 20;  // High enough to cover up msgq
-
-    /*  Port from /assets/js/search.js
-    f.style.display = "none"
-    f.style.marginTop = "1rem"
-    f.style.marginBottom = "1rem"
-    f.style.padding = "1rem"
-    q.style.fontSize = "1.2rem"
-    q.style.height = "auto"
-    */
     background-color: $honeydew;
     color: $header-bg-color;
     vertical-align: middle;
-    //margin: auto;
     border-radius: .5rem;
-    //display: flex;
     flex-direction: row;
-    //align: center;
-    //margin: 0 auto;
     align-items: center;
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
-        //margin: 0 6rem 0 6rem;  // Too radical on resize
-        //padding: 0 6rem 0 6rem;  // causing search-query to shrink inside
-        //height: 2rem;
         }
-    @include medium {
-        //padding: 0 4rem 0 4rem;  // causing search-query to shrink inside
-        //height: 1.6rem;
-        }
-    @include small {
-        //padding: 0 2rem 0 2rem;  // causing search-query to shrink inside
-        //height: 1.8rem;  // May 16/22 was 1.2rem
-        //display: none;
-        }  // May 16/22 - use page-header-search magnifying glass
+    max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
 }
 
 #search-query {
     // could be called `search-input` as that is the process being styled
     font-size: 1.2rem;
     height: auto;
-    /*  Port from /assets/js/search.js
-    f.style.display = "none"
-    f.style.marginTop = "1rem"
-    f.style.marginBottom = "1rem"
-    f.style.padding = "1rem"
-    q.style.fontSize = "1.2rem"
-    q.style.height = "auto"
-    */
-
-    //height: 100%;
     width: 100%;
     max-width: 100%;  // https://stackoverflow.com/a/54336954/6929343
     box-sizing: border-box;  // https://stackoverflow.com/a/54336954/6929343
-    //width: 90%;     // May 15/22 was 100% but too wide
     padding: .5rem .8rem;
-/*
-    @include large { font-size: 1.2rem; }
-    @include medium { font-size: 1rem; }
-    @include small { font-size: 1.1rem; }  // May 16/22 was 0.9
-*/
 }
 
 #search-symbol {
@@ -517,48 +474,15 @@ details[open] > summary {
     margin-right: .5rem;
 }
 
-/*
-.search-symbol {
-    background-image: url({{ site.url }}/assets/img/icons/search_symbol.png),
-                      url({{ site.url }}/assets/img/icons/button_background.png);
-    margin-left: .5rem;
-    margin-right: .5rem;
-    cursor: pointer;
-}
-*/
-
-
-// From: https://stackoverflow.com/a/46296164/692934
-// Weirdly not even used: <div id="search-modal" class="modal" style="display: none">
-.search-modal {
-    display: none;  // Hidden by default
-    position: fixed;  // Stay in place
-    //z-index: 2;  // Place over header buttons appearing top of every page
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    @include large {
-        max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
-    }
-
-}
-
 // Modal Content
 .search-modal-content {
     // background-color: #fefefe;
     background-color: $honeydew;
     color: $header-bg-color;
-
-    // margin: auto;  // too far down and too far to the left
-    // margin: -1rem 0 0 1rem;
     padding: 1rem 1rem 1.5rem 1rem;
     border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
     border-radius: .5rem;
-    //width: 80%;
-    //margin-left: 5%;    // Added May 15/22 as search-input is now width: 90%;
     overflow: auto;
-    // top: 90px;    // top: 90px; goes over page title beginning of text
-    // left: 8px; goes over page title far left gutter
     position: absolute;
     text-align: start;  // parent flex box is centering text
     max-height: 80vh;     // After 80% of viewport height, scroll bar appears on right
@@ -568,6 +492,7 @@ details[open] > summary {
     @include large {
         max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
     }
+    max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
     font-size: 1.1rem;
 }
 
