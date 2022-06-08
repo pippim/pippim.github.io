@@ -453,7 +453,6 @@ details[open] > summary {
 }
 
 #search-form {
-    //position: sticky;
     padding: 1rem;
     z-index: 20;  // High enough to cover up msgq
     background-color: $honeydew;
@@ -493,12 +492,12 @@ details[open] > summary {
     border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
     border-radius: .5rem;
     overflow: auto;
-    position: sticky;
+    //position: sticky;
     text-align: start;  // parent flex box is centering text
     max-height: 80vh;     // After 80% of viewport height, scroll bar appears on right
     -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
-    z-index: 12;  // Cover up Tim-Ta table header (1) and msgq (10 & 11)
+    //z-index: 12;  // Cover up Tim-Ta table header (1) and msgq (10 & 11)
     //@include large {
     //    max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
     //}
@@ -736,9 +735,9 @@ a.search-results:visited {
     border: none;
     opacity: 0.0;  // Make image invisible
 
-    @include large { height: 38px; width: 38px; margin-top: 1.25rem; }
-    @include medium { height: 32px; width: 32px; margin-top: .75rem; }
-    @include small { height: 38px; width: 38px; margin-top: 1.25rem; }  // May 18/22-was 26x26x.5
+    @include large { height: 38px; width: 38px; margin-top: 1.1rem; }
+    @include medium { height: 32px; width: 32px; margin-top: .6rem; }
+    @include small { height: 38px; width: 38px; margin-top: .75rem; }  // May 18/22-was 26x26x.5
 
     &:hover {
         filter: brightness(150%);
