@@ -449,13 +449,14 @@ details[open] > summary {
 #search-container {
     position: sticky;
     z-index: 20;  // High enough to cover up msgq
-    margin-top: -1rem;
+    margin-top: -2rem;
     border-radius: .5rem;
+    background-color: $honeydew;
 }
 
 #search-form {
     padding: 1rem;
-    background-color: $honeydew;
+    //background-color: $honeydew;
     color: $header-bg-color;
     vertical-align: middle;
     border-radius: .5rem;
@@ -479,7 +480,8 @@ details[open] > summary {
 }
 
 .search-modal-content {
-    background-color: $honeydew;
+    margin-top: .5rem;
+    //background-color: $honeydew;
     color: $header-bg-color;
     padding: 1rem 1rem 1.5rem 1rem;
     border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
