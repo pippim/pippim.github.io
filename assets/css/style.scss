@@ -448,14 +448,14 @@ details[open] > summary {
 
 #search-container {
     position: sticky;
-    padding: 1rem;
+    //padding: 1rem;
     z-index: 20;  // High enough to cover up msgq
-    background-color: $honeydew;
-    color: $header-bg-color;
-    vertical-align: middle;
-    border-radius: .5rem;
-    flex-direction: row;
-    align-items: center;
+    //background-color: $honeydew;
+    //color: $header-bg-color;
+    //vertical-align: middle;
+    //border-radius: .5rem;
+    //flex-direction: row;
+    //align-items: center;
     //@include large {
     //    max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
     //    }
@@ -463,7 +463,7 @@ details[open] > summary {
 }
 
 #search-form {
-    position: sticky;
+    //position: sticky;
     padding: 1rem;
     z-index: 20;  // High enough to cover up msgq
     background-color: $honeydew;
