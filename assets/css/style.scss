@@ -730,14 +730,14 @@ a.search-results:visited {
     vertical-align: middle;
     position: absolute;
     right: 0;
-    margin-right: .2rem;
+    margin-right: .3rem;
     background: transparent;
     border: none;
     opacity: 0.0;  // Make image invisible
 
     @include large  { height: 40px; width: 40px; margin-top: 1rem; }
-    @include medium { height: 36px; width: 36px; margin-top: .6rem; }
-    @include small  { height: 38px; width: 38px; margin-top: .6rem; }  // May 18/22-was 26x26x.5
+    @include medium { height: 36px; width: 36px; margin-top: .5rem; }
+    @include small  { height: 38px; width: 38px; margin-top: .5rem; }
 
     &:hover {
         filter: brightness(150%);
