@@ -735,9 +735,9 @@ a.search-results:visited {
     border: none;
     opacity: 0.0;  // Make image invisible
 
-    @include large { height: 38px; width: 38px; margin-top: 1.1rem; }
-    @include medium { height: 32px; width: 32px; margin-top: .6rem; }
-    @include small { height: 38px; width: 38px; margin-top: .75rem; }  // May 18/22-was 26x26x.5
+    @include large  { height: 40px; width: 40px; margin-top: 1rem; }
+    @include medium { height: 36px; width: 36px; margin-top: .6rem; }
+    @include small  { height: 38px; width: 38px; margin-top: .6rem; }  // May 18/22-was 26x26x.5
 
     &:hover {
         filter: brightness(150%);
