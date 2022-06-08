@@ -165,6 +165,7 @@ const c = document.getElementById('search-modal-close');    // 'X' close search 
 const d = document.getElementById('page-header-dropdown');  // The hamburger menu
 const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
 const f = document.getElementById('search-form');           // Wrapper around query & close button
+const g = document.getElementById('search-container');      // Wrapper around form & modal
 const h = document.getElementById('search-modal-text')      // Search results html codes
 const i = document.getElementById('search-clear-input');    // 'X' to clear search words
 const m = document.getElementById('search-modal');          // Where search results appear
@@ -216,23 +217,6 @@ var boolSearchForm = false  // Is search form active?
 
 // Loop through all class named .page-header-search-button
 for (var ndx = 0; ndx < n.length; ndx++) {
-    // When a class name appears turn off search form display as it means we are using
-    // new format and search form no longer appears in page-header. After full conversion
-    // these will be defaults
-    /* Moved to style.css
-    f.style.display = "none"
-    f.style.marginTop = "1rem"
-    f.style.marginBottom = "1rem"
-    f.style.padding = "1rem"
-    q.style.fontSize = "1.2rem"
-    q.style.height = "auto"
-    */
-    /* Make it look like giant button
-    f.style.color = "white"
-    background-color: $header-bg-color;  // For Cayman
-    background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
-    */
-
     //ndxPageHeaderSearchButton = ndx
     n[ndx].onclick = function (event) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
@@ -248,9 +232,9 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         if (boolSearchForm) {
             //n[ndxPageHeaderSearchButton].scrollIntoView()  // Move to top so children have room to grown
             f.style.display = "flex"
-            setContentDimmed(f)
+            setContentDimmed(g)  // New g replaces f
             // Move to top so children have room to grown (after scrollbar removed)
-            scrollToJustAbove(f)
+            scrollToJustAbove(g)
             // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
             if (e !== null && e != "none") {
@@ -320,6 +304,7 @@ function reverseContentDimmed() {
     document.body.style.overflow = "auto"
     e.classList.remove("dim-body")  // dropdown menu dimming
     f.classList.remove("dim-body")  // search form dimming
+    g.classList.remove("dim-body")  // search form dimming
 }
 
 f.addEventListener('submit', submitted);
