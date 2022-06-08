@@ -735,9 +735,9 @@ a.search-results:visited {
     border: none;
     opacity: 0.0;  // Make image invisible
 
-    @include large  { height: 40px; width: 40px; margin-top: 1rem; }
+    @include large  { height: 44px; width: 44px; margin-top: .9rem; }
     @include medium { height: 36px; width: 36px; margin-top: .5rem; }
-    @include small  { height: 38px; width: 38px; margin-top: .5rem; }
+    @include small  { height: 38px; width: 38px; margin-top: .4rem; }
 
     &:hover {
         filter: brightness(150%);
