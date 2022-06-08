@@ -449,12 +449,12 @@ details[open] > summary {
 #search-container {
     position: sticky;
     z-index: 20;  // High enough to cover up msgq
+    margin-top: -1rem;
     border-radius: .5rem;
 }
 
 #search-form {
     padding: 1rem;
-    // z-index: 20;  // High enough to cover up msgq
     background-color: $honeydew;
     color: $header-bg-color;
     vertical-align: middle;
