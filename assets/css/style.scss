@@ -449,27 +449,22 @@ details[open] > summary {
 #search-container {
     position: sticky;
     z-index: 20;  // High enough to cover up msgq
-    //max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
+    border-radius: .5rem;
 }
 
 #search-form {
     padding: 1rem;
-    z-index: 20;  // High enough to cover up msgq
+    // z-index: 20;  // High enough to cover up msgq
     background-color: $honeydew;
     color: $header-bg-color;
     vertical-align: middle;
     border-radius: .5rem;
     flex-direction: row;
     align-items: center;
-    //@include large {
-    //    max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
-    //    }
-    max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
 }
 
 #search-query {
-    // could be called `search-input` as that is the process being styled
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     height: auto;
     width: 100%;
     max-width: 100%;  // https://stackoverflow.com/a/54336954/6929343
@@ -483,24 +478,17 @@ details[open] > summary {
     margin-right: .5rem;
 }
 
-// Modal Content
 .search-modal-content {
-    // background-color: #fefefe;
     background-color: $honeydew;
     color: $header-bg-color;
     padding: 1rem 1rem 1.5rem 1rem;
     border: .0625rem solid #888;  // 1px equivalent when when 1rem = 16px
     border-radius: .5rem;
     overflow: auto;
-    //position: sticky;
     text-align: start;  // parent flex box is centering text
-    max-height: 80vh;     // After 80% of viewport height, scroll bar appears on right
+    max-height: 75vh;     // After 80% of viewport height, scroll bar appears on right
     -webkit-box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
     box-shadow: 1rem 1rem .7rem $header-bg-color-secondary;
-    //z-index: 12;  // Cover up Tim-Ta table header (1) and msgq (10 & 11)
-    //@include large {
-    //    max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
-    //}
     max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
     font-size: 1.1rem;
 }
