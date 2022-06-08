@@ -1,18 +1,20 @@
 <!-- NOTE: Autocomplete turned off because Google Chrome (but not Firefox)
            makes input bar extra tall. June 6/22 can turn back on now?
 -->
-<form role="search" id="search-form" style="display: none;">
-    <input type="search" class="clearable-input" id="search-query" name="search-q"
-        autocomplete="off" placeholder="Search..." aria-label="Search site content">
-    <span id="search-clear-input" class="icon_back" title="Clear search words"></span>
-    <button id="search-symbol" class="icon_back" type="submit"
-        title="Search {{ site.title }} Website">
-    </button>
-</form>
+<div id="search-container">
+    <form role="search" id="search-form" style="display: none;">
+        <input type="search" class="clearable-input" id="search-query" name="search-q"
+            autocomplete="off" placeholder="Search..." aria-label="Search site content">
+        <span id="search-clear-input" class="icon_back" title="Clear search words"></span>
+        <button id="search-symbol" class="icon_back" type="submit"
+            title="Search {{ site.title }} Website">
+        </button>
+    </form>
 
-<div id="search-modal" class="modal" style="display: none">
-    <div class="search-modal-content">
-        <span id="search-modal-close" class="icon_back"></span>
-        <p id="search-modal-text">/assets/js/search.js will update text..</p>
+    <div id="search-modal" class="modal" style="display: none">
+        <div class="search-modal-content">
+            <span id="search-modal-close" class="icon_back"></span>
+            <p id="search-modal-text">/assets/js/search.js will update text..</p>
+        </div>
     </div>
 </div>
