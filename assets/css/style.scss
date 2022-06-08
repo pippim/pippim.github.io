@@ -521,9 +521,12 @@ details[open] > summary {
     cursor: pointer;
 
     &:hover { opacity: 1.0; filter: brightness(150%); }
+    height: 20px; width: 20px;
+    /*
     @include large { height: 20px; width: 20px; }
     @include medium { height: 18px; width: 18px; }
     @include small { height: 20px; width: 20px; }  // May 16/22 Was 16/16
+    */
 }
 
 // Search Result links that have been visited in purple
