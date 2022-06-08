@@ -10,8 +10,6 @@
 // only class used. In the meantime both are supported.
 
 var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
-var tcmButtonId = document.getElementById("tcm_button");  // Old method < May 18/22
-/* After conversion DELETE tcmButtonId */
 
 var tcmButtonClick = function() {
     // TCM button was clicked on one of page header <div>s
@@ -262,16 +260,6 @@ function htmlLocalStorage() {
     return html; // Update TCM Window body
 }  // End of htmlLocalStorage()
 
-function sortLocalStorage() {
-    // Sort table by first column: https://stackoverflow.com/a/67853424/6929343
-    let table = document.getElementById('localTable');
-    let trs = table.rows;
-
-    Array.from(trs)
-         .sort((a, b) => a.cells[0].textContent - b.cells[0].textContent)
-         .forEach(tr => table.appendChild(tr));
-}
-
 function htmlScreenInfo() {
     /* return html code <table> <td> for:
         Screen Property     Value
@@ -502,10 +490,6 @@ var switch_off_image = "{{ site.url }}/assets/img/icons/switch_off_left.png"
 
 function makeTcmButtonVisible () {
     // Make #tcm_button at Top of Page (header section) visible
-    // Can be ID #tcm_button or multiple classes .tcm-button
-    if (tcmButtonId !== null) {
-        tcmButtonId.style.cssText = cssTcmButtonShow()
-    }
     // May 18/22 - Support multiple class definitions of .tcm-button
     for (var ndx = 0; ndx < tcmButtonClasses.length; ndx++) {
         tcmButtonClasses[ndx].style.cssText = cssTcmButtonShow()
