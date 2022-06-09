@@ -4,7 +4,7 @@
 */
 
 /* June 9/2022 - setCookie and getCookie No longer visible */
-function setCookie(cname, value, exp_days) {
+function setCookieDuplicate(cname, value, exp_days) {
     const d = new Date();
     d.setTime(d.getTime() + (exp_days * 24*60*60*1000));
     let expires = "expires=" + d.toGMTString();
@@ -13,7 +13,7 @@ function setCookie(cname, value, exp_days) {
     // console.log("document.cookie: " + document.cookie)
 }
 
-function getCookie(cname) {
+function getCookieDuplicate(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
