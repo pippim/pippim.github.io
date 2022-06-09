@@ -25,8 +25,8 @@ layout: program
 
 *The Cookie Machine*, commonly abbreviated as **TCM**,
 button is on the webpage header as shown above. The normally
-transparent "Gingerbread Man" icon, is now visible. 
-When visible, it always appears in the same spot at 
+transparent "Gingerbread Man" icon, is now visible.
+When visible, it always appears in the same spot at
 the top of the {{ site.title }} webpage.
 
 TCM is new technology that repurposes "Cookies". Cookies
@@ -35,7 +35,7 @@ the internet. With TCM, cookies are used to
 save, share and quickly import configurations from other
 browsers, users and devices.
 
-Development began on February 25, 2022 and should take 
+Development began on February 25, 2022 and should take
 about six months to complete.
 
 ---
@@ -52,7 +52,7 @@ about six months to complete.
 
 # How to Open The Cookie Machine (TCM)
 
-There is a transparent button you can select to open 
+There is a transparent button you can select to open
 *The Cookie Machine* (TCM).
 
 As the `.gif` animation above shows, the transparent button is
@@ -73,7 +73,7 @@ the same height as the regular buttons.
 %}
 
 When you open *The Cookie Machine* (TCM for short), a draggable
-window appears. As show above, click and hold the title bar 
+window appears. As show above, click and hold the title bar
 to drag the window anywhere on your screen.  If you drag it so
 far off the screen you can't access the title bar anymore,
 simply refresh the screen and no work is lost.
@@ -118,57 +118,57 @@ to get more details.
    <tr><th>Button</th>
        <th>Description</th>
    </tr>
-   <tr><td><button id="tcm_window_icon" class="tcm_documentation" 
+   <tr><td><button id="tcm_window_icon" class="tcm_documentation"
       onClick='window.location="#tcm_icon"'
       title="The Cookie Machine Window Icon" ></button></td>
    <td><b>TCM Icon</b> - <em>The Cookie Machine</em> (<b>TCM</b>)
       Icon appears in the TCM Window title bar.
       It also appears in the webpage header after you close TCM.
-      Clicking the TCM icon in the webpage header reopens TCM. 
-      <a href="#tcm_icon">Read more...</a></td></tr> 
-   <tr><td><button id="tcm_display_home" class="tcm_documentation" 
+      Clicking the TCM icon in the webpage header reopens TCM.
+      <a href="#tcm_icon">Read more...</a></td></tr>
+   <tr><td><button id="tcm_display_home" class="tcm_documentation"
       onClick='window.location="#home_button"'
       title="The Cookie Machine Home Page" ></button></td>
-   <td><b>Home Page</b> - Displays site wide global Jekyll Front Matter such as; 
+   <td><b>Home Page</b> - Displays site wide global Jekyll Front Matter such as;
       URLs, number of views, number of posts, etc.
-      <a href="#home_button">Read more...</a></td></tr> 
-   <tr><td><button id="tcm_display_cloud" class="tcm_documentation" 
+      <a href="#home_button">Read more...</a></td></tr>
+   <tr><td><button id="tcm_display_cloud" class="tcm_documentation"
       onClick='window.location="#cloud_button"'
-      title="Cloud storage - Display website tree" ></button></td> 
+      title="Cloud storage - Display website tree" ></button></td>
    <td><b>Cloud Storage</b> - Displays {{ site.title }} website directory tree
-      <a href="#cloud_button">Read more...</a></td></tr> 
-   <tr><td><button id="tcm_display_local" class="tcm_documentation" 
+      <a href="#cloud_button">Read more...</a></td></tr>
+   <tr><td><button id="tcm_display_local" class="tcm_documentation"
       onClick='window.location="#local_button"'
-      title="Local storage - Display cookies and cache" > </button></td> 
+      title="Local storage - Display cookies and cache" > </button></td>
    <td><b>Local Storage</b> - Change cookies used for option settings such as;
       Less/More front matter and TCM Button visibility on page header.
       <a href="#local_button">Read more...</a></td></tr>
-   <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation" 
+   <tr><td><button id="tcm_hyperlink_recipe" class="tcm_documentation"
       onClick='window.location="#hyperlink_button"'
-      title="Hyperlink Recipe Baker" > </button></td> 
-   <td><b>Hyperlink Recipe Baker (HRB)</b> - Used to create hyperlinks 
+      title="Hyperlink Recipe Baker" > </button></td>
+   <td><b>Hyperlink Recipe Baker (HRB)</b> - Used to create hyperlinks
       in HTML or Markdown format See the
-      <a href="https://pippim.github.io/programs/hyperlink.html#" target="_blank" 
+      <a href="https://pippim.github.io/programs/hyperlink.html#" target="_blank"
       title="Complete instructions for using Hyperlink Recipe Baker"
       >full documentation</a>. Very handy for creating hyperlinks to
       the current webpage, without having to switch to another browser tab.
       <a href="#hyperlink_button">Read more...</a></td></tr>
-   <tr><td><button id="tcm_webpage_info" class="tcm_documentation" 
+   <tr><td><button id="tcm_webpage_info" class="tcm_documentation"
       onClick='window.location="#webpage_button"'
       title="Webpage Name and Front Matter" ></button></td>
-   <td><b>Webpage Information</b> - Display Jekyll Front Matter 
+   <td><b>Webpage Information</b> - Display Jekyll Front Matter
       for current webpage <a href="#webpage_button">Read more...</a></td></tr>
-   <tr><td><button id="tcm_cookie_jar" class="tcm_documentation" 
+   <tr><td><button id="tcm_cookie_jar" class="tcm_documentation"
       onClick='window.location="#cookie_jar_button"'
       title="The Cookie Jar - Import/Export cookies" ></button></td>
-   <td><b>Cookie Jar</b> - 
+   <td><b>Cookie Jar</b> -
       The Cookie jar is for file uploads and downloads.
       Cookies and local storage is saved and retrieved
-      from the Cookie Jar. <a href="#cookie_jar_button">Read more...</a></td></tr> 
+      from the Cookie Jar. <a href="#cookie_jar_button">Read more...</a></td></tr>
 </table>
 
 <!-- NOTE: Button image IDs for  #tcm_window_icon through #tcm_cookie_jar
-           are defined in /assets/css/style.scss 
+           are defined in /assets/css/style.scss
 -->
 
 <style>
@@ -183,7 +183,7 @@ to get more details.
     margin: .5rem .5rem;
     background-repeat: no-repeat;
     background-size: cover;
-    border: none;  
+    border: none;
   }
   .tcm_documentation:hover {
     filter: brightness(150%);
@@ -193,8 +193,8 @@ to get more details.
 
 ---
 
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 <a id="tcm_icon"></a>
 ## TCM Icon
@@ -215,14 +215,14 @@ After selecting and then closing the TCM Window, the TCM Icon will
 appear in the webpage header. It will remain visible until a new
 webpage is loaded.
 
-You can change the rules for TCM Icon visibility in the 
-<a href="#tcm_icon" title="Change TCM Button visibility 
+You can change the rules for TCM Icon visibility in the
+<a href="#tcm_icon" title="Change TCM Button visibility
 rules" >Local Storage</a> section.
 
 ---
 
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 <a id="home_button"></a>
 
@@ -232,16 +232,16 @@ rules" >Local Storage</a> section.
     <button id="tcm_display_home" title="Home Page - Site summary"></button>
 </div>
 
-The ***Home Button*** displays Jekyll Front Matter for the 
-{{ site.title }} website. Front matter is stored as 
-YAML key/value pairs in `_config.yml`. 
+The ***Home Button*** displays Jekyll Front Matter for the
+{{ site.title }} website. Front matter is stored as
+YAML key/value pairs in `_config.yml`.
 
-Comments and 
-blank lines are not displayed. The total number 
-of lines count will includes comments and blank 
+Comments and
+blank lines are not displayed. The total number
+of lines count will includes comments and blank
 lines which are not displayed in the window.
 
-The Home Button window contents are displayed below: 
+The Home Button window contents are displayed below:
 
 
 
@@ -264,8 +264,8 @@ document.getElementById("tcm_home").innerHTML = html;
 
 ---
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 <a id="cloud_button"></a>
 
@@ -282,8 +282,8 @@ The website tree is not displayed in real time. Contents are
 taken from the file `_includes/website_tree.txt` which is
 manually uploaded from time to time. The file contents can
 be generated using the Linux `tree` command. See the
-`refresh.sh` bash script for an 
-[example 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/refresh.sh 
+`refresh.sh` bash script for an
+[example 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/refresh.sh
 "Using the `tree` command to generate website_tree.txt"){:target="_blank"}.
 
 The {{ site.title }} website tree is displayed below:
@@ -318,8 +318,8 @@ fetch(raw_url + '/assets/json/website_tree.json')
 ---
 
 
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 <a id="local_button"></a>
 
@@ -358,16 +358,16 @@ In the TCM window's local storage section you will see:
 
 The Session Storage Statistics will list the objects that
 are kept in Session Storage in order to save webpage load
-times. Once every 24 hours, Session Storage objects are 
+times. Once every 24 hours, Session Storage objects are
 refreshed from the internet. When a refresh occurs,
 an extra couple of seconds delay will occur on the first
 webpage read.
 
 <div id="tcm_doc_screen_info"></div>
 
-The [Screen Interface 🔗](https://developer.mozilla.org/en-US/docs/Web/API/Screen 
-"Details on Screen Interface Properties and Values"){:target="_blank"} 
-is used by the {{ site.title }} website to open new 
+The [Screen Interface 🔗](https://developer.mozilla.org/en-US/docs/Web/API/Screen
+"Details on Screen Interface Properties and Values"){:target="_blank"}
+is used by the {{ site.title }} website to open new
 windows at appropriate screen locations.
 
 <style>
@@ -390,8 +390,8 @@ tcmButtonVisibility()
 
 ----
 
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 <a id="hyperlink_button"></a>
 
@@ -404,7 +404,7 @@ tcmButtonVisibility()
 The ***Hyperlink Recipe Baker*** Button spins up an instance of the
 Hyperlink Recipe Baker or, **HRB** for short.
 
-This allows you to quickly create hyperlinks on any 
+This allows you to quickly create hyperlinks on any
 {{ site.title }} website page
 without having to switch browser tabs.
 
@@ -418,13 +418,13 @@ There are actually four instances of HRB available:
 <div id="hrb_body"></div>
 <script>
 // wait until DOM loaded before Hyperlink call
-// Swap DOMContentLoaded with 'load'
+// Swap "DOMContentLoaded" with "load"
 document.addEventListener("load", function(event){
    processHyperlinkRecipe("hrb_body")
 });
 </script>
 
-Instructions for using the Hyperlink Recipe Baker can be found 
+Instructions for using the Hyperlink Recipe Baker can be found
 [here](https://www.pippim.com/programs/hyperlink.html "Hyperlink Recipe Baker").
 
 ---
@@ -438,20 +438,20 @@ Instructions for using the Hyperlink Recipe Baker can be found
 ## Webpage Information Button
 
 <div class="tcm_doc_window_button">
-    <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
+    <button id="tcm_doc_webpage_info" title="Webpage information - Front Matter"></button>
 </div>
 
 The ***Webpage Information*** Button displays
-Jekyll Front Matter for the current webpage on the 
+Jekyll Front Matter for the current webpage on the
 {{ site.title }} website. Front matter is internally
 stored as YAML key/value pairs at the top of each page.
 
-Comments and 
-blank lines are not displayed. The total number 
-of lines count *may* include comments and blank 
+Comments and
+blank lines are not displayed. The total number
+of lines count *may* include comments and blank
 lines which are not displayed in the window.
 
-The Webpage Information window contents are displayed below: 
+The Webpage Information window contents are displayed below:
 
 <div id="tcm_doc_webpage"></div>
 
@@ -461,18 +461,18 @@ section) however, then you would see a lot more Front Matter.
 
 <div id="tcm_doc_window_info"></div>
 
-The [Window Object 🔗](https://www.w3schools.com/js/js_window.asp 
+The [Window Object 🔗](https://www.w3schools.com/js/js_window.asp
 "The window object is supported by all browsers. It represents the browser's window."){:target="_blank"}
-is used by the {{ site.title }} website to open new 
+is used by the {{ site.title }} website to open new
 windows at appropriate screen locations.
 
 <div id="tcm_doc_navigator_info"></div>
 
-The Navigator interface represents the state and the 
+The Navigator interface represents the state and the
 identity of the user agent. It allows scripts to query
 it and to register themselves to carry on some activities.
 
-See [Navigator object 🔗](https://developer.mozilla.org/en-US/docs/Web/API/Navigator 
+See [Navigator object 🔗](https://developer.mozilla.org/en-US/docs/Web/API/Navigator
 "A Navigator object can be retrieved using the read-only window.navigator property."){:target="_blank"}
 on MDN.
 
