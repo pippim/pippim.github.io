@@ -86,6 +86,7 @@ ini
 io
 irb
 irb_output
+isabelle
 isbl
 j
 janet

@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,536 "
 accepted:     Accepted
-uploaded:     2022-05-26 19:39:28
+uploaded:     2022-06-09 04:50:37
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Run-script-every-4-minutes-but-don_t-run-from-3_00-to-3_40.md
 toc:          false
 navigation:   false
