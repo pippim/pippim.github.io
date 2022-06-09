@@ -3,12 +3,35 @@
     /tcm.md - The Cookie Machine documentation webpage
 */
 
+/* June 9/2022 - setCookie and getCookie No longer visible */
+function setCookie(cname, value, exp_days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exp_days * 24*60*60*1000));
+    let expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + value + ";" + expires + ";path=/" +
+                    ";SameSite=Strict";
+    // console.log("document.cookie: " + document.cookie)
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
 
 // Get all .tcm-button class instances `/_layouts/default.html` has
-// .tcm-button in two different place. Old format was to have #tcm_button
-// ID in only one place. Gradual transition will have removal of ID and
-// only class used. In the meantime both are supported.
-
+// .tcm-button in two different place.
 var tcmButtonClasses = document.getElementsByClassName("tcm-button");  // New class
 
 var tcmButtonClick = function() {
