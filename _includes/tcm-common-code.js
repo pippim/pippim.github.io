@@ -560,7 +560,11 @@ function switch_set(id, bool) {
     }
     if (id == "switch_all_sessions") {
         vis_all_sessions = bool;
-        setCookie("vis_all_sessions", vis_all_sessions, 30);
+        document.addEventListener("DOMContentLoaded", function(event){
+            setCookie("vis_all_sessions", vis_all_sessions, 30);
+        });
+
+        // setCookie("vis_all_sessions", vis_all_sessions, 30);
     }
 }
 
