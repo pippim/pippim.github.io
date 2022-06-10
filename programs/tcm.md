@@ -366,8 +366,10 @@ an extra couple of seconds delay will occur on the first
 webpage read.
 
 
-<div id="tcm_doc_local_info" class="storageTable"></div>
+<div id="tcm_doc_local_info"></div>
 
+> **NOTE:** Tim-ta Storage will not appear until you 
+> [visit the page]({{ site.url }}/tim-ta.html).
 
 <div id="tcm_doc_screen_info"></div>
 
