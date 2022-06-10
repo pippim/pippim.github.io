@@ -377,8 +377,8 @@ function htmlNavigatorInfo() {
             '  <th>Value</th></tr>\n';
 
     var position;
-    function success(p) position = p
-    function error(msg) console.log (msg)
+    function success(p) { position = p }
+    function error(msg) { console.log(msg) }
     if (navigator.geolocation)
         navigator.geolocation.getCurrentPosition(success, error)
 
