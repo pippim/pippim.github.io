@@ -3,14 +3,13 @@
     /tcm.md - The Cookie Machine documentation webpage
 */
 
-/* June 9/2022 - setCookie and getCookie No longer visible */
+/* June 9/2022 - setCookie() and getCookie() are no longer visible */
 function setCookie(cname, value, exp_days) {
     const d = new Date();
     d.setTime(d.getTime() + (exp_days * 24*60*60*1000));
     let expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + value + ";" + expires + ";path=/" +
                     ";SameSite=Strict";
-    // console.log("document.cookie: " + document.cookie)
 }
 
 function getCookie(cname) {
@@ -329,19 +328,17 @@ function htmlWindowInfo() {
             '  <th>Value</th></tr>\n';
 
     for (const [key, value] of Object.entries(window)) {
-        html += '  <tr><td>' + key + '</td>\n' ;
-        html += '  <td>';  // Start of table cell
-        var display = value;
-        if (typeof display === 'undefined') { var display = "Undefined" }
-        if (display === null) { display = "Null" };
-        if (typeof display === 'number') { display = display.toLocaleString(); }
-        else { display = display.toString(); }
-        if (display.startsWith("function")) { display = "function() { ... }" };
+        html += '  <tr><td>' + key + '</td>\n'
+        html += '  <td>'  // Start of table cell
+        var display = value
+        if (typeof display === 'undefined') var display = "Undefined"
+        if (display === null) display = "Null"
+        if (typeof display === 'number') display = display.toLocaleString()
+        else display = display.toString()
+        if (display.startsWith("function")) display = "function() { ... }"
         if (display.endsWith("BarProp]")) {
-            if (eval("window." + key + ".visible")) { display = "Visible"}
-            else { display = "Invisible" }
-            //var return_eval = eval("window." + key + ".visible");
-            //console.log("return_eval: " + return_eval.toString())
+            if (eval("window." + key + ".visible")) display = "Visible"
+            else display = "Invisible"
         }
         html += display.toString();
         html += '</td></tr>\n';  // End of table cell and table row
@@ -380,11 +377,10 @@ function htmlNavigatorInfo() {
             '  <th>Value</th></tr>\n';
 
     var position;
-    function success(p) { position = p; /* console.log(Object.keys(position)) */ }
-    function error(msg) { console.log (msg); }
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(success, error);
-    }
+    function success(p) position = p
+    function error(msg) console.log (msg)
+    if (navigator.geolocation)
+        navigator.geolocation.getCurrentPosition(success, error)
 
     var arrProp = ["connection", "cookieEnabled", "credentials",
                    "deviceMemory", "geolocation", "hid", "hardwareConcurrency",
@@ -394,7 +390,7 @@ function htmlNavigatorInfo() {
                    "presentation", "serial", "serviceWorker", "storage",
                    "userAgent", "userAgentData", "webDriver",
                    "windowControlsOverlay", "xr"];
-    for (var i=0; i<arrProp.length; i++){ html += buildNavigatorEval(arrProp[i]) ; }
+    for (var i=0; i<arrProp.length; i++) html += buildNavigatorEval(arrProp[i])
 
     html += '</table>\n';     // End of our table and form
 
@@ -498,10 +494,6 @@ function tcmButtonVisibility() {
 var vis_this_page = "true";     // Global default for exiting TCM Window.
 var vis_all_pages = sessionStorage.vis_all_pages;
 if (vis_all_pages === undefined) { vis_all_pages = "false" }
-//var vis_all_sessions;
-//document.addEventListener("DOMContentLoaded", function(event){
-//    vis_all_sessions = getCookie("vis_all_sessions")
-//});
 var vis_all_sessions = getCookie("vis_all_sessions")
 
 // getCookie() will return "" when cookie is undefined.
@@ -561,10 +553,6 @@ function switch_set(id, bool) {
     }
     if (id == "switch_all_sessions") {
         vis_all_sessions = bool;
-        //document.addEventListener("DOMContentLoaded", function(event){
-        //    setCookie("vis_all_sessions", vis_all_sessions, 30);
-        //});
-
         setCookie("vis_all_sessions", vis_all_sessions, 30);
     }
 }
@@ -580,4 +568,4 @@ function switch_toggle(id) {
                                         else { switch_set(id, "true"); }
 }
 
-/* End of /_includes/tcm_button_visibility.js */
+/* End of /_includes/tcm-common-code.js */
