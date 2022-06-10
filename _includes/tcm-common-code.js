@@ -4,7 +4,7 @@
 */
 
 /* June 9/2022 - setCookie and getCookie No longer visible */
-function setCookieDuplicate(cname, value, exp_days) {
+function setCookie(cname, value, exp_days) {
     const d = new Date();
     d.setTime(d.getTime() + (exp_days * 24*60*60*1000));
     let expires = "expires=" + d.toGMTString();
@@ -13,7 +13,7 @@ function setCookieDuplicate(cname, value, exp_days) {
     // console.log("document.cookie: " + document.cookie)
 }
 
-function getCookieDuplicate(cname) {
+function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
@@ -498,10 +498,11 @@ function tcmButtonVisibility() {
 var vis_this_page = "true";     // Global default for exiting TCM Window.
 var vis_all_pages = sessionStorage.vis_all_pages;
 if (vis_all_pages === undefined) { vis_all_pages = "false" }
-var vis_all_sessions;
-document.addEventListener("DOMContentLoaded", function(event){
-    vis_all_sessions = getCookie("vis_all_sessions")
-});
+//var vis_all_sessions;
+//document.addEventListener("DOMContentLoaded", function(event){
+//    vis_all_sessions = getCookie("vis_all_sessions")
+//});
+var vis_all_sessions = getCookie("vis_all_sessions")
 
 // getCookie() will return "" when cookie is undefined.
 if (vis_all_sessions == "") { vis_all_sessions = "false" }
@@ -560,11 +561,11 @@ function switch_set(id, bool) {
     }
     if (id == "switch_all_sessions") {
         vis_all_sessions = bool;
-        document.addEventListener("DOMContentLoaded", function(event){
-            setCookie("vis_all_sessions", vis_all_sessions, 30);
-        });
+        //document.addEventListener("DOMContentLoaded", function(event){
+        //    setCookie("vis_all_sessions", vis_all_sessions, 30);
+        //});
 
-        // setCookie("vis_all_sessions", vis_all_sessions, 30);
+        setCookie("vis_all_sessions", vis_all_sessions, 30);
     }
 }
 
