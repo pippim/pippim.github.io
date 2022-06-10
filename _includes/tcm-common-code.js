@@ -250,6 +250,50 @@ function htmlSearchStats() {
     return html; // Update TCM Window body
 }  // End of htmlSearchStats()
 
+function htmlLocalInfo() {
+    /* return html code <table> <td> for:
+        Statistic Key       Statistic Value
+        timeCreated         999999?
+        Search Words Count  888,888
+    */
+    var html = "<h3>Tim-ta Storage</h3>"
+    html += '<table id="ttaTable">\n' ;
+    // Local Storage Table heading
+    html += '  <tr><th>Tim-ta Item</th>\n' +
+            '  <th>Item Value</th></tr>\n';
+
+    // If Tim-ta has never been run, objects won't exist
+    if (true == false) {
+        for (const [key, value] of Object.entries(search_stats)) {
+            html += '  <tr><td>' + key + '</td>\n' ;
+            // TODO: Need database of object keys and their value format
+            // If greater than 123 MB it's a Unix Date in Epoch
+            var d = new Date(value);
+            html += '  <td>';  // Start of table cell
+            // html += value.toLocaleString();
+            if (value < 123456789) { html += value.toLocaleString(); }
+            else { html += d.toLocaleDateString() +  ' ' + d.toLocaleTimeString() }
+            html += '</td></tr>\n';  // End of table cell and table row
+        }
+    }
+    html += '</table>\n';     // End of our table and form
+
+    // TODO: Move next 9 lines to a shared function
+    // Heading: "999 Pippim website entries found." <h3> styling
+    html += '<style>\n#ttaTable th, #ttaTable td {\n' +
+            '  padding: 0 .5rem;\n' +
+            '}\n'
+    html += '#ttaTable th {\n' +
+            'position: -webkit-sticky;\n' +
+            'position: sticky;\n' +
+            'top: 0;\n' +
+            'z-index: 1;\n' +
+            'background: #f1f1f1;\n' +
+            '}\n'
+    html += '</style>'  // Was extra \n causing empty space at bottom?
+    return html; // Update TCM Window body
+}  // End of htmlLocalInfo()
+
 function htmlLocalStorage() {
     /* return html code <table> <td> for:
         Name                Size
