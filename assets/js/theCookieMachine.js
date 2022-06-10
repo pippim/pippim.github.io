@@ -4,20 +4,18 @@
 
 // Note: Requires search.js to be loaded first for getJSON function.
 //       search.js defines global variables
-//       tcm_window defined in _includes/tcm-window.html
 
 // Button Image source: https://www.cleanpng.com/free/
 
 // imported functions.  Parent needs <script type="module"...
 // See: /_layouts +> /default.html, / hrb.html, /program.html, etc.
 import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
-import { getCookie , setCookie } from './theCookieJar.js';
+//  Move below to tcm-common-code.js
+// import { getCookie , setCookie } from './theCookieJar.js';
 
 /* include tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
-
-    DELETE tcmButtonId after conversion.
 
 */
 {% include tcm-common-code.js %}
@@ -108,10 +106,9 @@ function cssTcmButtonHide () {
 document.querySelector('#tcm_window_close').addEventListener('click', () => {
     // Hide tcm_window
     document.querySelector('#tcm_window').style.display = "none";
-    // Make tcm_button (main page header) visible?
+    // Make tcmButtonClasses (main page header) visible?
     if (vis_this_page == "true") { makeTcmButtonVisible() }
 });
-
 
 const b = document.getElementById('tcm_window_body')  // Website tree entries html codes
 
