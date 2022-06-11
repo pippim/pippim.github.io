@@ -216,7 +216,7 @@ function htmlSearchStats() {
         Search Words Count  888,888
     */
     var html = "<h3>Session Storage</h3>"
-    html += '<table id="statTable">\n' ;
+    html += '<table id="statTable" class="objectTableStyle">\n' ;
     // Statistics Table heading
     html += '  <tr><th>Statistic Key</th>\n' +
             '  <th>Statistic Value</th></tr>\n';
@@ -251,13 +251,9 @@ function htmlSearchStats() {
 }  // End of htmlSearchStats()
 
 function htmlLocalInfo() {
-    /* return html code <table> <td> for:
-        Statistic Key       Statistic Value
-        timeCreated         999999?
-        Search Words Count  888,888
-    */
+    /* NOT USED */
     var html = "<h3>Tim-ta Storage</h3>"
-    html += '<table id="ttaTable">\n' ;
+    html += '<table id="ttaTable" class="objectTableStyle">\n' ;
     // Local Storage Table heading
     html += '  <tr><th>Tim-ta Item</th>\n' +
             '  <th>Item Value</th></tr>\n';
@@ -299,7 +295,7 @@ function htmlLocalStorage() {
         Name                Size
     */
     var html = "<h3>Local Storage</h3>"
-    html += '<table id="localTable">\n' ;
+    html += '<table id="localTable" class="objectTableStyle">\n' ;
     // Local Storage Table heading. Use class "order" to allow sorting column
     html += '  <tr><th class="order">Name</th>\n' +
             '  <th>Size</th></tr>\n';
@@ -326,6 +322,59 @@ function htmlLocalStorage() {
     return html; // Update TCM Window body
 }  // End of htmlLocalStorage()
 
+// From: https://stackoverflow.com/a/70024272/6929343
+function table_sort() {
+    const styleSheet = document.createElement('style')
+    styleSheet.innerHTML = `
+        .order-inactive span {
+            visibility:hidden;
+        }
+        .order-inactive:hover span {
+            visibility:visible;
+        }
+        .order-active span {
+            visibility: visible;
+        }
+    `
+    document.head.appendChild(styleSheet)
+
+    document.querySelectorAll('th.order').forEach(th_elem => {
+        let asc = true
+        const span_elem = document.createElement('span')
+        span_elem.style = "font-size:0.8rem; margin-left:0.5rem"
+        span_elem.innerHTML = "▼"
+        th_elem.appendChild(span_elem)
+        th_elem.classList.add('order-inactive')
+
+        const index = Array.from(th_elem.parentNode.children).indexOf(th_elem)
+        th_elem.addEventListener('click', (e) => {
+            document.querySelectorAll('th.order').forEach(elem => {
+                elem.classList.remove('order-active')
+                elem.classList.add('order-inactive')
+            })
+            th_elem.classList.remove('order-inactive')
+            th_elem.classList.add('order-active')
+
+            if (!asc) {
+                th_elem.querySelector('span').innerHTML = '▲'
+            } else {
+                th_elem.querySelector('span').innerHTML = '▼'
+            }
+            //const arr = Array.from(th_elem.closest("table").querySelectorAll('tbody tr'))
+            const arr = Array.from(th_elem.closest("table").querySelectorAll('tbody tr')).slice(1)
+            arr.sort((a, b) => {
+                const a_val = a.children[index].innerText
+                const b_val = b.children[index].innerText
+                return (asc) ? a_val.localeCompare(b_val) : b_val.localeCompare(a_val)
+            })
+            arr.forEach(elem => {
+                th_elem.closest("table").querySelector("tbody").appendChild(elem)
+            })
+            asc = !asc
+        })
+    })
+}
+
 function htmlScreenInfo() {
     /* return html code <table> <td> for:
         Screen Property     Value
@@ -334,7 +383,7 @@ function htmlScreenInfo() {
         ETC.
     */
     var html = "<h3>Screen Interface</h3>"
-    html += '<table id="screenTable">\n' ;
+    html += '<table id="screenTable" class="objectTableStyle">\n' ;
     // Screen Table heading
     html += '  <tr><th>Screen Property</th>\n' +
             '  <th>Value</th></tr>\n';
@@ -366,7 +415,7 @@ function htmlScreenInfo() {
 
 function htmlWindowInfo() {
     var html = "<h3>Window Object</h3>"
-    html += '<table id="windowTable">\n' ;
+    html += '<table id="windowTable" class="objectTableStyle">\n' ;
     // Screen Table heading
     html += '  <tr><th>Window Property</th>\n' +
             '  <th>Value</th></tr>\n';
@@ -415,7 +464,7 @@ function htmlWindowInfo() {
 
 function htmlNavigatorInfo() {
     var html = "<h3>Navigator Object</h3>"
-    html += '<table id="navigatorTable">\n' ;
+    html += '<table id="navigatorTable" class="objectTableStyle">\n' ;
     // Screen Table heading
     html += '  <tr><th>Navigator Property</th>\n' +
             '  <th>Value</th></tr>\n';
@@ -500,6 +549,8 @@ function showProps(obj, objName) {
   }
   console.log(result);
 }
+
+/* MAJOR SECTION */
 
 function tcmButtonVisibility() {
     // Initialize switches with values after HTML declared with IDs
