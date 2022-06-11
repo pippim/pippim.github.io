@@ -143,6 +143,8 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
     tcmButtonVisibility()
 });
 
+/* Port over to tcm-common-code.js
+
 // From: https://stackoverflow.com/a/70024272/6929343
 function table_sort() {
     const styleSheet = document.createElement('style')
@@ -195,6 +197,8 @@ function table_sort() {
         })
     })
 }
+
+*/
 
 document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
     processHyperlinkRecipe('tcm_window_body');
