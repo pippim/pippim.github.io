@@ -389,7 +389,7 @@ windows at appropriate screen locations.
 <script>
 document.getElementById("tcm_doc_switches").innerHTML = htmlVisibilitySwitches()
 document.getElementById("tcm_doc_search_stats").innerHTML = htmlSearchStats()
-document.getElementById("tcm_doc_local_info").innerHTML = htmlLocalInfo()
+document.getElementById("tcm_doc_local_info").innerHTML = htmlLocalStorage()
 document.getElementById("tcm_doc_screen_info").innerHTML = htmlScreenInfo()
 
 tcmButtonVisibility()  // Live processing of on/off switches
