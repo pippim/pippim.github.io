@@ -331,7 +331,7 @@ fetch(raw_url + '/assets/json/website_tree.json')
     <button id="tcm_display_local" title="Local storage - Cookies and cache"></button>
 </div>
 
-The **Local Storage*** Button is used to view and control
+The ***Local Storage*** Button is used to view and control
 cookie settings.
 
 Cookies are stored locally within your Web Browser client
@@ -358,11 +358,10 @@ In the TCM window's local storage section you will see:
 
 <div id="tcm_doc_search_stats"></div>
 
-The Session Storage Statistics will list the objects that
-are kept in Session Storage in order to save webpage load
+Objects are kept in Session Storage to save webpage load
 times. Once every 24 hours, Session Storage objects are
-refreshed from the internet. When a refresh occurs,
-an extra couple of seconds delay will occur on the first
+refreshed from the {{ site.title }} Website. When a refresh
+occurs, a couple seconds of delay will occur on the first
 webpage read.
 
 
@@ -390,6 +389,7 @@ windows at appropriate screen locations.
 document.getElementById("tcm_doc_switches").innerHTML = htmlVisibilitySwitches()
 document.getElementById("tcm_doc_search_stats").innerHTML = htmlSearchStats()
 document.getElementById("tcm_doc_local_storage").innerHTML = htmlLocalStorage()
+table_sort()  // support supporting by local storage name key by clicking heading
 document.getElementById("tcm_doc_screen_info").innerHTML = htmlScreenInfo()
 
 tcmButtonVisibility()  // Live processing of on/off switches
