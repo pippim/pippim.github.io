@@ -368,10 +368,7 @@ webpage read.
 
 <div id="tcm_doc_local_storage"></div>
 
-> **NOTE:** Tim-ta Storage will not appear until you 
-> [visit the page]({{ site.url }}/tim-ta.html).
-> 
-> Click the Name heading to sort rows
+> **NOTE:** Click the Name heading to sort rows
 
 <div id="tcm_doc_screen_info"></div>
 
