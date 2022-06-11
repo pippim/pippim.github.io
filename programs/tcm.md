@@ -366,10 +366,12 @@ an extra couple of seconds delay will occur on the first
 webpage read.
 
 
-<div id="tcm_doc_local_info"></div>
+<div id="tcm_doc_local_storage"></div>
 
 > **NOTE:** Tim-ta Storage will not appear until you 
 > [visit the page]({{ site.url }}/tim-ta.html).
+> 
+> Click the Name heading to sort rows
 
 <div id="tcm_doc_screen_info"></div>
 
@@ -379,7 +381,8 @@ is used by the {{ site.title }} website to open new
 windows at appropriate screen locations.
 
 <style>
-#tcm_doc_switches, #tcm_doc_search_stats, #tcm_doc_local_info, #tcm_doc_screen_info {
+#tcm_doc_switches, #tcm_doc_search_stats, 
+#tcm_doc_local_storage, #tcm_doc_screen_info {
    max-width: 30rem;
    border: 3px solid grey;
    margin-left: 1em;
@@ -389,7 +392,7 @@ windows at appropriate screen locations.
 <script>
 document.getElementById("tcm_doc_switches").innerHTML = htmlVisibilitySwitches()
 document.getElementById("tcm_doc_search_stats").innerHTML = htmlSearchStats()
-document.getElementById("tcm_doc_local_info").innerHTML = htmlLocalStorage()
+document.getElementById("tcm_doc_local_storage").innerHTML = htmlLocalStorage()
 document.getElementById("tcm_doc_screen_info").innerHTML = htmlScreenInfo()
 
 tcmButtonVisibility()  // Live processing of on/off switches
