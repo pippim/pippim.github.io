@@ -216,7 +216,7 @@ function htmlSearchStats() {
         Search Words Count  888,888
     */
     var html = "<h3>Session Storage</h3>"
-    html += '<table id="statTable" class="objectTableStyle">\n' ;
+    html += '<table class="objectTableStyle">\n' ;
     // Statistics Table heading
     html += '  <tr><th>Statistic Key</th>\n' +
             '  <th>Statistic Value</th></tr>\n';
@@ -234,26 +234,13 @@ function htmlSearchStats() {
     }
     html += '</table>\n';     // End of our table and form
 
-    // TODO: Move next 9 lines to a shared function
-    // Heading: "999 Pippim website entries found." <h3> styling
-    html += '<style>\n#statTable th, #statTable td {\n' +
-            '  padding: 0 .5rem;\n' +
-            '}\n'
-    html += '#statTable th {\n' +
-            'position: -webkit-sticky;\n' +
-            'position: sticky;\n' +
-            'top: 0;\n' +
-            'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
-            '}\n'
-    html += '</style>'  // Was extra \n causing empty space at bottom?
     return html; // Update TCM Window body
 }  // End of htmlSearchStats()
 
 function htmlLocalInfo() {
     /* NOT USED */
     var html = "<h3>Tim-ta Storage</h3>"
-    html += '<table id="ttaTable" class="objectTableStyle">\n' ;
+    html += '<table class="objectTableStyle">\n' ;
     // Local Storage Table heading
     html += '  <tr><th>Tim-ta Item</th>\n' +
             '  <th>Item Value</th></tr>\n';
@@ -274,19 +261,6 @@ function htmlLocalInfo() {
     }
     html += '</table>\n';     // End of our table and form
 
-    // TODO: Move next 9 lines to a shared function
-    // Heading: "999 Pippim website entries found." <h3> styling
-    html += '<style>\n#ttaTable th, #ttaTable td {\n' +
-            '  padding: 0 .5rem;\n' +
-            '}\n'
-    html += '#ttaTable th {\n' +
-            'position: -webkit-sticky;\n' +
-            'position: sticky;\n' +
-            'top: 0;\n' +
-            'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
-            '}\n'
-    html += '</style>'  // Was extra \n causing empty space at bottom?
     return html; // Update TCM Window body
 }  // End of htmlLocalInfo()
 
@@ -307,19 +281,6 @@ function htmlLocalStorage() {
     }
     html += '</table>\n';     // End of our table and form
 
-    // TODO: Move next 9 lines to a shared function
-    // Heading: "999 Pippim website entries found." <h3> styling
-    html += '<style>\n#localTable th, #localTable td {\n' +
-            '  padding: 0 .5rem;\n' +
-            '}\n'
-    html += '#localTable th {\n' +
-            'position: -webkit-sticky;\n' +
-            'position: sticky;\n' +
-            'top: 0;\n' +
-            'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
-            '}\n'
-    html += '</style>'  // Was extra \n causing empty space at bottom?
     return html; // Update TCM Window body
 }  // End of htmlLocalStorage()
 
@@ -409,7 +370,7 @@ function htmlScreenInfo() {
         ETC.
     */
     var html = "<h3>Screen Interface</h3>"
-    html += '<table id="screenTable" class="objectTableStyle">\n' ;
+    html += '<table class="objectTableStyle">\n' ;
     // Screen Table heading
     html += '  <tr><th>Screen Property</th>\n' +
             '  <th>Value</th></tr>\n';
@@ -422,19 +383,6 @@ function htmlScreenInfo() {
     for (var i=0; i<arrProp.length; i++){ html += buildScreenEval(arrProp[i], o) ; }
 
     html += '</table>\n';     // End of our table and form
-
-    html += '<style>\n#screenTable th, #screenTable td {\n' +
-            '  text-align: left;\n' +
-            '  padding: 0 .5rem;\n' +
-            '}\n'
-    html += '#screenTable th {\n' +
-            'position: -webkit-sticky;\n' +
-            'position: sticky;\n' +
-            'top: 0;\n' +
-            'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
-            '}\n'
-    html += '</style>'  // Was extra \n causing empty space at bottom?
 
     return html;
 }  // End of htmlScreenInfo()
@@ -467,21 +415,10 @@ function htmlWindowInfo() {
 
     html += '</table>\n';     // End of our table and form
 
-    html += '<style>\n#windowTable th, #windowTable td {\n' +
-            '  text-align: left;\n' +
-            '  padding: 0 .5rem;\n' +
-            '}\n'
-    html += '#windowTable {\n' +
+    html += '<style>\n#windowTable {\n' +
             '  max-width: 100vw;\n' +
             '  max-height: 80vh;\n' +
             '  overflow: auto;\n' +
-            '}\n'
-    html += '#windowTable th {\n' +
-            'position: -webkit-sticky;\n' +
-            'position: sticky;\n' +
-            'top: 0;\n' +
-            'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
@@ -513,21 +450,10 @@ function htmlNavigatorInfo() {
 
     html += '</table>\n';     // End of our table and form
 
-    html += '<style>\n#navigatorTable th, #navigatorTable td {\n' +
-            '  text-align: left;\n' +
-            '  padding: 0 .5rem;\n' +
-            '}\n'
-    html += '#navigatorTable {\n' +
+    html += '<style>\n#navigatorTable {\n' +
             '  max-width: 100vw;\n' +
             '  max-height: 80vh;\n' +
             '  overflow: auto;\n' +
-            '}\n'
-    html += '#navigatorTable th {\n' +
-            'position: -webkit-sticky;\n' +
-            'position: sticky;\n' +
-            'top: 0;\n' +
-            'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
 
