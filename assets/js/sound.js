@@ -13,26 +13,15 @@
             how-to-base64-and-save-a-binary-audio-file-to-local-storage-and-
             play-it-back-in-the-browser/
 
-    Sound file: Alarm_01.wav from Scorpion2185. GPL3 license.
+    OPEN SOURCE SOUND FILES FROM: https://mixkit.co/free-sound-effects/
 
-    Temporary usage as BBC commercial license investigated. May be easier to
-    simply record a Dollar-rama alarm clock from China. In the meantime,
-    here is credit to the BBC (British Broadcasting Corporation):
+    Alarm_01.mp3 = mixkit-alarm-tone-996.mp3
+    Alarm_02.mp3 = mixkit-classic-alarm-995.mp3
+    Alarm_03.mp3 = mixkit-digital-clock-digital-alarm-buzzer-992.mp3
 
-    SOURCE: https://sound-effects.bbcrewind.co.uk/search?q=alarm%20clock&resultSize=40
-
-    Alarm_01.mp3 = Clocks - Domestic clock striking three o'clock.
-                            (Domestic clock with bell.)
-                 Filename - bbc_clocks---d_07022030.mp3
-    Alarm_02.mp3 = Clocks - Domestic clock striking five o'clock.
-                            (Domestic clock with bell.)
-                 Filename - bbc_clocks---d_07022056.mp3
-    Alarm_03.mp3 = Clocks - Domestic clock striking twelve o'clock.
-                            (Domestic clock with bell.)
-                 Filename - bbc_clocks---d_07022051.mp3
 ============================================================================ */
 
-// TODO: Ensure Sound filenames don't contain "|"
+// TODO: Ensure Custom Sound filenames don't contain "|" or "/"
 
 // Session Storage statistics. stockNames match ID Name on screen
 const stockNames = ["Alarm_01.mp3", "Alarm_02.mp3", "Alarm_03.mp3"]
@@ -47,6 +36,8 @@ function loadStockNames () {
         else { setSoundSource(stockNames[i], localItem); }
     }
 }
+
+window.addEventListener( 'DOMContentLoaded', (event) => loadStockNames() )
 
 const CUSTOM_SOUNDS = "custom_sounds";
 const CUSTOM_SOUND_ROOT = "Custom";
@@ -87,14 +78,6 @@ function loadCustomNames () {
 }
 
 loadCustomNames();
-
-window.addEventListener( 'DOMContentLoaded', (event) => loadStockNames() )
-/*
-document.addEventListener("DOMContentLoaded", function(event){
-    // Must wait due to error: Uncaught TypeError: audioControl is null
-    loadStockNames();
-});
-*/
 
 async function fetch_sound(name) {
     // Get sound file from website and add to localStorage
