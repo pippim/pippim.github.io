@@ -116,17 +116,14 @@ want them visible to user. This is because the ID is referenced by javascript. -
 
 These are Tim-ta stock sound files you can use when a timer task ends:
 <br>
-- **Alarm_01.wav** &emsp;&emsp;<audio controls="true" id="Alarm_01.wav"></audio>
-<br><br>
 - **Alarm_01.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_01.mp3"></audio>
 <br><br>
 - **Alarm_02.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_02.mp3"></audio>
 <br><br>
 - **Alarm_03.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_03.mp3"></audio>
-<br><br>
-- **Alarm_05.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_05.mp3"></audio>
-<br><br>
-- **Alarm_12.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_12.mp3"></audio>
+<audio controls="false" id="Alarm_01.wav"></audio>
+<audio controls="false" id="Alarm_05.mp3"></audio>
+<audio controls="false" id="Alarm_12.mp3"></audio>
 
 ---
 
