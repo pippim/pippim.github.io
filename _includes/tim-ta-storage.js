@@ -9,16 +9,16 @@ var tta_config = {
     objProjects: {},
     task_prompt: "true",
     task_end_alarm: "true",
-    task_end_filename: "Alarm_03.mp3",
+    task_end_filename: "Alarm_01.mp3",
     task_end_notification: "false",
     run_set_times: 1,
     set_prompt: "false",
     set_end_alarm: "false",
-    set_end_filename: "Alarm_05.mp3",
+    set_end_filename: "Alarm_02.mp3",
     set_end_notification: "false",
     all_sets_prompt: "false",
     all_sets_end_alarm: "false",
-    all_sets_end_filename: "Alarm_12.mp3",
+    all_sets_end_filename: "Alarm_03.mp3",
     all_sets_end_notification: "false",
     progress_bar_update_seconds: 1,
     confirm_delete_phrase: "y"
@@ -213,15 +213,15 @@ function ttaNewConfig() {
     ttaProject.project_name = "Laundry";
 
     ttaNewTask("Wash Cycle");
-    ttaTaskDuration("", "16", "15");
+    ttaTaskDuration("", "16", "30");
     ttaAddTask(ttaTask);
 
     ttaNewTask("Rinse Cycle");
-    ttaTaskDuration("", "13", "");
+    ttaTaskDuration("", "13", "15");
     ttaAddTask(ttaTask);
 
     ttaNewTask("Dryer");
-    ttaTaskDuration("", "58", "30");
+    ttaTaskDuration("", "58", "");
     ttaAddTask(ttaTask);
 
     ttaConfig.arrProjects = [ttaProject.project_name];
