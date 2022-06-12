@@ -104,7 +104,6 @@ async function fetch_sound(name) {
 }
 
 function setSoundSource (name, item) {
-    console.log("SetSoundSource(name):", name)
     audioControl = document.getElementById(name);
     audioControl.src = item.src;
     // May 14, 2022, random wav files getting 6 hours, 45 minutes and 48 seconds
