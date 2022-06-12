@@ -251,17 +251,24 @@ May 31, 2022 update:
 where each task is always a predetermined amount of time.
 For example, when doing the laundry it might be:
 
-- 16 minutes and 30 seconds for the wash cycle
-- 13 minutes and 15 seconds for the rinse cycle
-- 58 minutes and 40 seconds for the dryer
+16 minutes and 30 seconds for the wash cycle
+
+13 minutes and 15 seconds for the rinse cycle
+
+58 minutes for the dryer
 
 With Tim-ta you arrive at the washer and dryer the exact
 second you need to be there. You'll Never miss the rinse
 cycle fabric softener to eliminate static cling. You'll
 never have wrinkled clothes from being left overnight in
-the dryer. It doesn't stop you from mixing red and white
-fabrics in hot water to end up with PINK clothes though!
+the dryer.
 
+There are other examples where you can use Tim-ta:
+
+- Cooking food
+- Working out
+- Education class time for different topics
+- Sharing computer time between siblings
 
 ---
 
