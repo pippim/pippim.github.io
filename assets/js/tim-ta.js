@@ -2650,7 +2650,10 @@ function paintCustomSounds() {
 
 }
 
-paintCustomSounds()
+window.addEventListener('DOMContentLoaded', (event) => {
+    paintCustomSounds()
+});
+
 
 /* CONTROLS and MESSAGES boxes
 
