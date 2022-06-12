@@ -121,6 +121,7 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 - **Alarm_02.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_02.mp3"></audio>
 <br><br>
 - **Alarm_03.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_03.mp3"></audio>
+<!-- June 12/22: Old filenames no longer distributed but in localStorage -->
 <audio id="Alarm_01.wav"></audio>
 <audio id="Alarm_05.mp3"></audio>
 <audio id="Alarm_12.mp3"></audio>
