@@ -295,7 +295,8 @@ function htmlLocalStorage() {
         Name                Size
     */
     var html = "<h3>Local Storage</h3>"
-    html += '<table id="localTable" class="objectTableStyle">\n' ;
+    //html += '<table id="localTable" class="objectTableStyle">\n' ;
+    html += '<table class="objectTableStyle">\n' ;
     // Local Storage Table heading. Use class "order" to allow sorting column
     html += '  <tr><th class="order">Name</th>\n' +
             '  <th>Size</th></tr>\n';
