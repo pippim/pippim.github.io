@@ -1406,7 +1406,6 @@ function swapTask(source, target) {
 function flashGrey(id) {
     // Flash grey for row just moved then remove after 3 seconds  jump
     var elm = document.getElementById(id);
-    elm.classList.add("dim-body");
     setTimeout(function(){
         elm.classList.remove("flash");
     }, 2000);
@@ -2650,6 +2649,8 @@ function paintCustomSounds() {
 
 
 }
+
+paintCustomSounds()
 
 /* CONTROLS and MESSAGES boxes
 
