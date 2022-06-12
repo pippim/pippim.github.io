@@ -322,6 +322,30 @@ function htmlLocalStorage() {
     return html; // Update TCM Window body
 }  // End of htmlLocalStorage()
 
+/* Style for session/local storage object tables
+    Upgrade from unique IDs for #statTable, #localTable, #screenTable, etc.
+*/
+const objectTableStyleSheet = document.createElement('style')
+
+objectTableStyleSheet.innerHTML = `
+
+.objectTableStyle th, .objectTableStyle td {
+    padding: 0 .5rem;
+}
+.objectTableStyle th {\n' +
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #f1f1f1;
+}
+`
+document.head.appendChild(objectTableStyleSheet)
+
+// TODO: Move next 9 lines to a shared function
+// Heading: "999 Pippim website entries found." <h3> styling
+
+
 // From: https://stackoverflow.com/a/70024272/6929343
 function table_sort() {
     const styleSheet = document.createElement('style')
