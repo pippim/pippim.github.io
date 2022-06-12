@@ -120,6 +120,8 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 <br><br>
 - **Alarm_01.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_01.mp3"></audio>
 <br><br>
+- **Alarm_02.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_02.mp3"></audio>
+<br><br>
 - **Alarm_03.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_03.mp3"></audio>
 <br><br>
 - **Alarm_05.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_05.mp3"></audio>
@@ -234,15 +236,20 @@ May 31, 2022 update:
 - Exporting (download) Tim-ta configuration went very quickly (a few hours).
 - Importing (upload) Tim-ta Projects and Tasks has taken a few days so far and it is only half done. 
 
+June 12, 2022 update:
+
+- Importing (upload) Tim-ta Projects and Tasks completed.
+- New stock sound files (Alarm_01.mp3, Alarm_02.mp3 and Alarm_03.mp3) uploaded.
+
 ---
 
 <a id='hdr8'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
-   alt="Tim-ta Introduction.png"
+   alt="Tim-ta Alarm Clock Image"
    style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
-   caption="Tim-ta webpage header"
+   caption="Tim-ta alarm-clock.jpg"
 %}
 
 # Introduction
