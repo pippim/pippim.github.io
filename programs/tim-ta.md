@@ -239,7 +239,7 @@ May 31, 2022 update:
 <a id='hdr8'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
-{% include image.html src="/assets/img/tim-ta/cartoon-alarm-clock.jpg"
+{% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
    alt="Tim-ta Introduction.png"
    style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
    caption="Tim-ta webpage header"
