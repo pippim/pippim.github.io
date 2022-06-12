@@ -2614,9 +2614,6 @@ function configHandleFiles(files) {
 
 function paintCustomSounds() {
     var html = "<ul>"
-    //console.log("customSounds:", customSounds)
-    //console.log("paintCustomSounds() customNames.length:", customNames.length)
-
     for (const key of Object.keys(customSounds.sounds)) {
         var record = customSounds.sounds[key]
         html += "<li>Key:&nbsp;<b>" + key
@@ -2629,31 +2626,24 @@ function paintCustomSounds() {
     }
     html += "</ul>"
 
-    // console.log("html:", html)
     document.getElementById("PaintedSounds").innerHTML = html
     loadCustomNames()
     updateSelectFiles()
 
-    /* Console log below never displays, so this is never run??? */
-
-    // Below not needed because in parent <div id="PaintedSounds"
-    //document.addEventListener("DOMContentLoaded", function(event){
-        // Must wait due to error: Uncaught TypeError: audioControl is null
-        for (const key of Object.keys(customSounds.sounds)) {
-            // audioControl
-            var localItem = JSON.parse(localStorage.getItem(key))
-            setSoundSource(key, localItem)  // From sound.js
-        }
-        //console.log("DOMContentLoaded{} customNames.length:", customNames.length)
-    //});
-
-
+    for (const key of Object.keys(customSounds.sounds)) {
+        // audioControl
+        var localItem = JSON.parse(localStorage.getItem(key))
+        setSoundSource(key, localItem)  // From sound.js
+    }
 }
 
+/* TEST SINGLE LINE
 window.addEventListener('DOMContentLoaded', (event) => {
     paintCustomSounds()
 });
+*/
 
+window.addEventListener( 'DOMContentLoaded', (event) => paintCustomSounds() )
 
 /* CONTROLS and MESSAGES boxes
 
