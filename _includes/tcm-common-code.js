@@ -332,7 +332,8 @@ objectTableStyleSheet.innerHTML = `
 .objectTableStyle th, .objectTableStyle td {
     padding: 0 .5rem;
 }
-.objectTableStyle th {\n' +
+
+.objectTableStyle th {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
