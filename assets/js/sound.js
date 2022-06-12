@@ -21,13 +21,13 @@
 
     SOURCE: https://sound-effects.bbcrewind.co.uk/search?q=alarm%20clock&resultSize=40
 
-    Alarm_03.mp3 = Clocks - Domestic clock striking three o'clock.
+    Alarm_01.mp3 = Clocks - Domestic clock striking three o'clock.
                             (Domestic clock with bell.)
                  Filename - bbc_clocks---d_07022030.mp3
-    Alarm_05.mp3 = Clocks - Domestic clock striking five o'clock.
+    Alarm_02.mp3 = Clocks - Domestic clock striking five o'clock.
                             (Domestic clock with bell.)
                  Filename - bbc_clocks---d_07022056.mp3
-    Alarm_12.mp3 = Clocks - Domestic clock striking twelve o'clock.
+    Alarm_03.mp3 = Clocks - Domestic clock striking twelve o'clock.
                             (Domestic clock with bell.)
                  Filename - bbc_clocks---d_07022051.mp3
 ============================================================================ */
@@ -35,9 +35,8 @@
 // TODO: Ensure Sound filenames don't contain "|"
 
 // Session Storage statistics. stockNames match ID Name on screen
-const stockNames = ["Alarm_01.wav", "Alarm_01.mp3",
-                    "Alarm_03.mp3", "Alarm_05.mp3", "Alarm_12.mp3"];
-const stockPrefix = "{{ site.url }}/assets/sound/";
+const stockNames = ["Alarm_01.mp3", "Alarm_02.mp3", "Alarm_03.mp3"]
+const stockPrefix = "{{ site.url }}/assets/sound/"
 var customNames = []
 
 function loadStockNames () {
@@ -89,10 +88,13 @@ function loadCustomNames () {
 
 loadCustomNames();
 
+window.addEventListener( 'DOMContentLoaded', (event) => loadStockNames() )
+/*
 document.addEventListener("DOMContentLoaded", function(event){
     // Must wait due to error: Uncaught TypeError: audioControl is null
     loadStockNames();
 });
+*/
 
 async function fetch_sound(name) {
     // Get sound file from website and add to localStorage
