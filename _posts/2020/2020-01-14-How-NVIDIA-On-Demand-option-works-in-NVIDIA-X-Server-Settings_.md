@@ -8,11 +8,11 @@ type:         Answer
 tags:         nvidia graphics hybrid-graphics nvidia-prime
 created_date: 2020-01-14 12:35:15
 edit_date:    2020-06-12 14:37:07
-votes:        "14 "
+votes:        "15 "
 favorites:    
-views:        "42,426 "
+views:        "43,291 "
 accepted:     Accepted
-uploaded:     2022-06-09 04:50:37
+uploaded:     2022-06-12 17:09:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-14-How-NVIDIA-On-Demand-option-works-in-NVIDIA-X-Server-Settings_.md
 toc:          false
 navigation:   false

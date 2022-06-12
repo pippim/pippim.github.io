@@ -8,11 +8,11 @@ type:         Answer
 tags:         scripts text-editor
 created_date: 2019-11-13 12:46:32
 edit_date:    2020-06-12 14:37:07
-votes:        "17 "
+votes:        "16 "
 favorites:    
-views:        "9,588 "
+views:        "9,671 "
 accepted:     Accepted
-uploaded:     2022-06-09 04:50:37
+uploaded:     2022-06-12 17:09:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-13-Is-there-a-text-editor-that-can-run-shell-scripts_.md
 toc:          false
 navigation:   false

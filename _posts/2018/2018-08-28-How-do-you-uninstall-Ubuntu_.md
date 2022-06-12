@@ -10,9 +10,9 @@ created_date: 2018-08-28 23:49:08
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "125 "
+views:        "136 "
 accepted:     Accepted
-uploaded:     2022-06-09 04:50:37
+uploaded:     2022-06-12 17:09:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-28-How-do-you-uninstall-Ubuntu_.md
 toc:          false
 navigation:   false

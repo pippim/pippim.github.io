@@ -10,9 +10,9 @@ created_date: 2022-02-18 02:52:22
 edit_date:    2022-04-21 11:42:25
 votes:        "4 "
 favorites:    
-views:        "124 "
+views:        "132 "
 accepted:     
-uploaded:     2022-06-09 04:50:37
+uploaded:     2022-06-12 17:09:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
 toc:          false
 navigation:   false

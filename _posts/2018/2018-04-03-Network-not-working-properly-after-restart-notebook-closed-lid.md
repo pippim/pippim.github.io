@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "137 "
 accepted:     Accepted
-uploaded:     2022-06-09 04:50:37
+uploaded:     2022-06-12 17:09:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-03-Network-not-working-properly-after-restart-notebook-closed-lid.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         python tkinter treeview hidpi
 created_date: 2019-12-30 11:59:50
 edit_date:    2019-12-30 12:19:51
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "9,631 "
+views:        "9,866 "
 accepted:     
-uploaded:     2022-06-09 04:50:37
+uploaded:     2022-06-12 17:09:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-30-How-can-I-set-the-row-height-in-Tkinter-TreeView_.md
 toc:          false
 navigation:   false

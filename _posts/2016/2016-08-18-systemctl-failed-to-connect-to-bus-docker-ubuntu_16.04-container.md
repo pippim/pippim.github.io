@@ -8,11 +8,11 @@ type:         Answer
 tags:         server 16.04 systemd docker
 created_date: 2016-08-18 03:57:34
 edit_date:    2017-07-22 16:16:42
-votes:        "20 "
+votes:        "21 "
 favorites:    
-views:        "263,034 "
+views:        "265,583 "
 accepted:     
-uploaded:     2022-06-09 04:50:37
+uploaded:     2022-06-12 17:09:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-18-systemctl-failed-to-connect-to-bus-docker-ubuntu_16.04-container.md
 toc:          false
 navigation:   false

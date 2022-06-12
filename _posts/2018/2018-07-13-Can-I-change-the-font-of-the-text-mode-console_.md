@@ -8,11 +8,11 @@ type:         Answer
 tags:         console tty fonts
 created_date: 2018-07-13 00:09:43
 edit_date:    
-votes:        "6 "
+votes:        "7 "
 favorites:    
-views:        "207,828 "
+views:        "209,049 "
 accepted:     
-uploaded:     2022-06-09 04:50:37
+uploaded:     2022-06-12 17:09:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-13-Can-I-change-the-font-of-the-text-mode-console_.md
 toc:          false
 navigation:   false

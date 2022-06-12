@@ -10,9 +10,9 @@ created_date: 2018-02-22 00:25:35
 edit_date:    2020-06-12 14:37:07
 votes:        "8 "
 favorites:    
-views:        "13,952 "
+views:        "14,000 "
 accepted:     
-uploaded:     2022-06-09 04:50:37
+uploaded:     2022-06-12 17:09:52
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-22-cannot-stop-network-printers-are-being-automatically-added.md
 toc:          false
 navigation:   false
