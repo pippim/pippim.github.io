@@ -182,7 +182,8 @@ audio { vertical-align:middle }
 }
 
 /* Not sure why hover not working like hdr-btn does. So make separate below. */
-.tta-btn:hover, .tta-btn:focus {
+/* .tta-btn:hover, .tta-btn:focus { FOCUS = BUTTON STAYS HIGHLIGHTED AFTER CLICK */
+.tta-btn:hover {
     background-color: DodgerBlue;
     color: #fff;
 }
