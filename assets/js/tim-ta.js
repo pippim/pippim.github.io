@@ -1080,8 +1080,8 @@ function buildProgressControlButtons(i) {
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
         "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        "play_toggle", "&#x23EF;︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
+        "play_toggle", "⏸︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
+        "forward", "&#x23E9;", "Pause timer", "pcbClickForward(" + i +")",
         "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
     ]
 
@@ -1092,7 +1092,15 @@ function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
 function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
 function pcbClickPlayPause(i) {
     pcbClickCommon(i, "play_toggle");
+    var elm = document.getElementById("play_toggle")
     pauseAllTimers = !pauseAllTimers;
+    if (pauseAllTimers) {
+        elm.firstChild.data = "▶";
+        elm.setAttribute('title', 'Resume timer countdown');
+    } else {
+        elm.firstChild.data = "⏸";
+        elm.setAttribute('title', 'Pause timer');
+    }
 }
 function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
 function pcbClickEnd(i) { pcbClickCommon(i, "end"); }
@@ -1939,7 +1947,7 @@ function validateProjectName(value, output) {
     const original_index = ttaConfig.arrProjects.indexOf(ttaProject.project_name);
     if (original_index == new_index) { return true; }  // Key hasn't changed
 
-    // We have a new key that already exists n popCreateUniqueError(
+    // We have a new key that already exists
     popCreateUniqueError("e", dd_field.label + " must be unique", "project_name",
                          "id", dd_field.name, null, output);
     return false;
@@ -2827,8 +2835,9 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
         id_elm_type = "id" a ID is passed in next field
                       "elm" an element is passed in next field.
         elm = an ID or an element. If an ID convert it to an element.
-        buttons = array of 5 fields per button:
+        buttons = array of 4 fields per button:
             "name", "text", "title", "onclick(arg)"
+
         output = { destination: "window", format: "html" }
 
         RETURNS the window element created
@@ -2880,7 +2889,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
 
     var html = "";
     html += popBuildHtml(msg_type, msg, popIndex, buttons);
-    html += popBuildStyle(msg_type);
+    html += popBuildStyle(msg_type)  // Title bar red, green, blue, etc.
     p['elmWindow'].innerHTML = html;
     document.body.appendChild(p['elmWindow']);  // Created <div> element
 
