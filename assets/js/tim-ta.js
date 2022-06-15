@@ -188,11 +188,11 @@ audio { vertical-align:middle }
     color: #fff;
 }
 .tta-btn:focus-visible {
-  /* remove default focus style */
-  outline: none;
-  /* custom focus styles */
-  box-shadow: 0 0 2px 2px black;
-  color: black;
+    /* remove default focus style */
+    outline: none;
+    /* custom focus styles */
+    box-shadow: 0 0 2px 2px yellow;
+    color: DodgerBlue;
 }
 
 /* progress bar in Run Timers table */
