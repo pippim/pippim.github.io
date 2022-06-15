@@ -187,7 +187,7 @@ audio { vertical-align:middle }
     background-color: DodgerBlue;
     color: #fff;
 }
-tta-btn:focus-visible {
+.tta-btn:focus-visible {
   /* remove default focus style */
   outline: none;
   /* custom focus styles */
