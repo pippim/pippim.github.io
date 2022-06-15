@@ -187,6 +187,13 @@ audio { vertical-align:middle }
     background-color: DodgerBlue;
     color: #fff;
 }
+tta-btn:focus-visible {
+  /* remove default focus style */
+  outline: none;
+  /* custom focus styles */
+  box-shadow: 0 0 2px 2px #51a7e8;
+  color: lime;
+}
 
 /* progress bar in Run Timers table */
 progress::-moz-progress-bar { background: green; } /* Same color as chrome */
