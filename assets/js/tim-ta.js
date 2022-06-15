@@ -191,8 +191,8 @@ audio { vertical-align:middle }
   /* remove default focus style */
   outline: none;
   /* custom focus styles */
-  box-shadow: 0 0 2px 2px #51a7e8;
-  color: lime;
+  box-shadow: 0 0 2px 2px black;
+  color: black;
 }
 
 /* progress bar in Run Timers table */
