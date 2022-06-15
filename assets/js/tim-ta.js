@@ -1080,8 +1080,8 @@ function buildProgressControlButtons(i) {
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
         "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        "play_toggle", "⏸︎", "Play/Pause toggle", "pcbClickPlayPause(" + i +")",
-        "forward", "&#x23E9;", "Pause timer", "pcbClickForward(" + i +")",
+        "play_toggle", "⏸︎", "Pause timer", "pcbClickPlayPause(" + i +")",
+        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
         "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
     ]
 
