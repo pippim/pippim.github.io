@@ -951,8 +951,8 @@ function tabRunTimersDetail(i) {
     //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
     run_set_times = parseInt(getProjectValue('run_set_times'), 10);
     secondsAllSets += secondsTask * run_set_times;
-    // Below Edge needs + but not Chrome or FireFox
-    hhmmssTask = new Date(+secondsTask * 1000).toISOString().substr(11, 8);
+    // Below Edge needs + but not Chrome or FireFox parseInt
+    hhmmssTask = new Date(parseInt(secondsTask * 1000)).toISOString().substr(11, 8);
     hhmmssSet = new Date(+secondsSet * 1000).toISOString().substr(11, 8);
     hhmmssAllSets = new Date(+secondsAllSets * 1000).toISOString().substr(11, 8);
 
