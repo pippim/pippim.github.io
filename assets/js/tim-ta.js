@@ -676,11 +676,16 @@ function clickListen(i) {
     // June 17, 2022 surprise bug of no sound
     console.log("sound:", sound)
     if (sound != null) {
-        if (currentTable != "RunTimers") { soundAlarm (i, sound); }
-        else {
-            audioControl = document.getElementById(sound);
-            audioControl.play();
-        }
+        if (localStorage.getItem(sound)) {
+            if (currentTable != "RunTimers") soundAlarm (i, sound)
+            else {
+                // Run timers is calling us
+                audioControl = document.getElementById(sound);
+                audioControl.play();
+            }
+        } else // If sound file doesn't exist give error
+               popCreate("e", "Sound filename: " + sound +
+                         " doesn't exist. Check settings.", "missing_sound");
     }
 
     if (notify != null) { sendNotify (i, notify); }
