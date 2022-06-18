@@ -673,6 +673,8 @@ function clickListen(i) {
 
     // <audio> tags buried on the page with ID name same as sound filename.
     var audioControl;
+    // June 17, 2022 surprise bug of no sound
+    console.log("sound:", sound)
     if (sound != null) {
         if (currentTable != "RunTimers") { soundAlarm (i, sound); }
         else {
@@ -1195,8 +1197,10 @@ async function runAllTimers() {
             // Timer has ended, sound alarm and start next timer
             var audioControl = clickListen(index);
             if (audioControl != null) {
+            // June 17, 2022 -  Something happened today where we now end up here
+            //      and no sound is heard.
                 // When !== null used, "TypeError: audioControl is undefined"
-                // Zero time is always appears so sleep 1/10th second for it to start.
+                // Zero time always appears so sleep 1/10th second for it to start.
                 await sleep(100);
                 console.log("audioControl.currentTime:", audioControl.currentTime);
                 // TODO green success message while alarm sounds, then clear if stopped
