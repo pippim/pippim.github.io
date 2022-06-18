@@ -671,10 +671,8 @@ function clickListen(i) {
     else if (fSetEndNotify == "true") { notify = "Set " + ttaProject.project_name; }
     else if (fAllSetsEndNotify == "true") { notify = "All Sets " + ttaProject.project_name; }
 
-    // <audio> tags buried on the page with ID name same as sound filename.
+    // <audio> tags on page with same ID name as sound filename.
     var audioControl;
-    // June 17, 2022 surprise bug of no sound
-    console.log("sound:", sound)
     if (sound != null) {
         if (localStorage.getItem(sound)) {
             if (currentTable != "RunTimers") soundAlarm (i, sound)
@@ -683,9 +681,8 @@ function clickListen(i) {
                 audioControl = document.getElementById(sound);
                 audioControl.play();
             }
-        } else // If sound file doesn't exist give error
-               popCreate("e", "Sound filename: " + sound +
-                         " doesn't exist. Check settings.", "missing_sound");
+        } else popCreate("e", "Sound filename: " + sound +
+                         " doesn't exist. Check settings.", "missing_sound")
     }
 
     if (notify != null) { sendNotify (i, notify); }
@@ -708,7 +705,6 @@ function soundAlarm(i, sound) {
     const btnId = "tabBtnId_clickListen" + i ;  // Rebuild btnId used in ttaButton()
     var BtnElm;  // Only used by currentTable == "Tasks"
     btnElm = document.getElementById(btnId);
-    console.log("sound:", sound);
     var audioControl = document.getElementById(sound);
     if (audioControl.currentTime > 0) {
         // If already playing then stop it and reset icon to "Listen"
@@ -790,8 +786,8 @@ function sendNotification(body, header, icon) {
 function clickUp(i) {
     clickCommon(i);
     if (i == 0) {
-        popCreateUniqueError('w', "Already at top, can't move up", 'at_top',
-                             "id", currentRoot + i);
+        popCreateUniqueError('w', "Already at top, can't move up",
+                             'at_top', "id", currentRoot + i)
         return;
     }
     swapRows(i, i - 1);
@@ -803,8 +799,8 @@ function clickDown(i) {
     // TODO: After moving, update & save localStorage
     clickCommon(i);
     if (i == cntTable - 1) {
-        popCreateUniqueError('w', "Already at bottom, can't move down", 'at_bottom',
-                             "id", currentRoot + i);
+        popCreateUniqueError('w', "Already at bottom, can't move down",
+                             'at_bottom', "id", currentRoot + i)
         return;
     }
     swapRows(i, i + 1);
@@ -1202,8 +1198,6 @@ async function runAllTimers() {
             // Timer has ended, sound alarm and start next timer
             var audioControl = clickListen(index);
             if (audioControl != null) {
-            // June 17, 2022 -  Something happened today where we now end up here
-            //      and no sound is heard.
                 // When !== null used, "TypeError: audioControl is undefined"
                 // Zero time always appears so sleep 1/10th second for it to start.
                 await sleep(100);
