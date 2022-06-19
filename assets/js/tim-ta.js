@@ -1206,10 +1206,15 @@ async function runAllTimers() {
                 while(true) {
                     await sleep(50);
                     var rem = audioControl.duration - audioControl.currentTime
-                    if (rem <= 0.0) { popClose(popId); break; }  // n popClose(
-                    // When a popCreate window is closed, it disappears after 600ms
+                    // Has sound automatically ended
+                    if (rem <= 0.0) {
+                        // If window not closed already, then close it
+                        if (document.body.contains(elm)) popClose(popId)
+                        break
+                    }  // n popClose(
+                    // Was window manually closed?
                     if (document.body.contains(elm)) { continue; }
-                    audioControl.pause()
+                    audioControl.pause()  // Kill the sound
                     audioControl.currentTime = 0.0
                     break  // Clicked X to close, or clicked "OK" & element removed
                 }
