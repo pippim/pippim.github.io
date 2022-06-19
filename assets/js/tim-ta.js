@@ -1201,20 +1201,19 @@ async function runAllTimers() {
                 // When !== null used, "TypeError: audioControl is undefined"
                 // currentTime is always 0 as if "await clickListen()" was used
                 // currentTime 0 when sleep 1/10th second so sleep 1/4 second
-                await sleep(250)
-                console.log("1", audioControl.id,
-                            "audioControl.currentTime:", audioControl.currentTime)
+                var remaining = audioControl.duration - audioControl.currentTime
+                console.log("1", audioControl.id, "remaining:", remaining)
                 /* RESULTS with 1/10th second is 0.0, with 1/4 second:
                     Alarm_01.mp3 (1 second ) - audioControl.currentTime: 0.094308
                     Alarm_02.mp3 (5 seconds) - audioControl.currentTime: 0.091315
                     Alarm_03.mp3 (8 seconds) - audioControl.currentTime: 0.080362
                 */
                 await sleep(100)
-                console.log("2", audioControl.id,
-                            "audioControl.currentTime:", audioControl.currentTime)
+                remaining = audioControl.duration - audioControl.currentTime
+                console.log("2", audioControl.id, "remaining:", remaining)
                 await sleep(100)
-                console.log("3", audioControl.id,
-                            "audioControl.currentTime:", audioControl.currentTime)
+                remaining = audioControl.duration - audioControl.currentTime
+                console.log("3", audioControl.id, "remaining:", remaining)
             }
             // Grab next task in project array
             index += 1;
