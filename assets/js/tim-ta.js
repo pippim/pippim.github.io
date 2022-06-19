@@ -2976,7 +2976,7 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '  <div class="msq-window-body">\n';
     if (msg_type == "a") html += '    <img src="' + msg + '" ' +
                                  'class="shake-image" ' +
-                                 'width="250" height="250" ' +
+                                 'width="200" height="200" ' +
                                  '/>\n'
                     else html += '    <p>' + msg + '</p>\n'
     html += '  </div>\n';
