@@ -3061,7 +3061,7 @@ function popBuildStyle(msg_type) {
             '  font-size: 1.2rem;\n' +
             '  padding: .1rem .5rem;\n' +
             '  margin: .1rem;\n' +
-            '  border-radius: 1rem;\n' +
+            '  border-radius: .5rem;\n' +
             '}\n';
 
     html += "</style>\n";
