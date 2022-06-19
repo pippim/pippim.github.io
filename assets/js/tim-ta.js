@@ -3058,9 +3058,9 @@ function popBuildStyle(msg_type) {
 
     html += '.msgq-window-button {\n' +
             //'  flex: 0 0 100%;\n' +
-            '  font-size: 1rem;\n' +
-            '  padding: .1rem;\n' +
-            '  margin: .25rem;\n' +
+            '  font-size: 1.2rem;\n' +
+            '  padding: .1rem .5rem;\n' +
+            '  margin: .1rem;\n' +
             '  border-radius: 1rem;\n' +
             '}\n';
 
