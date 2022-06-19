@@ -1201,6 +1201,7 @@ async function runAllTimers() {
                 // When !== null used, "TypeError: audioControl is undefined"
                 // currentTime is always 0 as if "await clickListen()" was used
                 // currentTime 0 when sleep 1/10th second so sleep 1/4 second
+                await sleep(100)
                 var remaining = audioControl.duration - audioControl.currentTime
                 console.log("1", audioControl.id, "remaining:", remaining)
                 /* RESULTS with 1/10th second is 0.0, with 1/4 second:
@@ -1214,6 +1215,10 @@ async function runAllTimers() {
                 await sleep(100)
                 remaining = audioControl.duration - audioControl.currentTime
                 console.log("3", audioControl.id, "remaining:", remaining)
+                if (audioControl.ended) {}
+                var msg = "/assets/img/tim-ta/alarm-clock.jpg"
+                var popId = popCreate("a", msg, audioControl)  // n popCreate(
+                // popRegisterClose(popId, ctlClose);
             }
             // Grab next task in project array
             index += 1;
@@ -2867,11 +2872,11 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
                    "a" alarm image is shaken/wiggled
         msg = message text where <br> will start a new line.
         error_id = optional error number or name.
-            when msg_type = "a" then msg is image filename
-                and error_id is sound filename
-        id_elm_type = "id" a ID is passed in next field
+            IF msg_type = "a" then: msg is image filename
+                                  : error_id is sound filename
+        id_elm_type = "id" an ID is passed in next field
                       "elm" an element is passed in next field.
-        elm = an ID or an element. If an ID convert it to an element.
+        elm = an ID name or an element. If an ID convert it to an element.
         buttons = array of 4 fields per button:
             "name", "text", "title", "onclick(arg)"
 
@@ -2919,8 +2924,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     p['msg_type'] = msg_type;  // e, w, i or s
     p['msg'] = msg;  // Might contain HTML. Doubles as alarm image filename
     p['error_id'] = error_id;  // Doubles as alarm sound filename
-    p['id_elm_type'] = id_elm_type;  // 'id' or anything else
-    p['id_elm'] = id_elm;
+    p['id_elm_type'] = id_elm_type;  // 'id' or anything else but usually 'elm'
+    p['id_elm'] = id_elm;  // ID name or an element
     p['elmLink'] = elm;
     p['active'] = "true";
 
@@ -2964,25 +2969,22 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '       class="msgq-window-header ' + msgq_class + '">' + msg_head +
                     '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closeBtn" \n';
-    // TODO: if (msg_type == "a") popAlarmClose
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
     html += '    </span>\n';
     html += '  </div>\n';
     html += '  <div class="msq-window-body">\n';
-    // TODO: if (msg_type == "a") Image filename
-    html += '    <p>' + msg + '</p>\n';
+    if (msg_type == "a") html += '    <img src="' + msg + '"/><p>\n'
+                    else html += '    <p>' + msg + '</p>\n'
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     if (buttons == null) {
-    html += '    <button class="tta-btn msgq-window-button"\n';
-    html += '      title="Click to close" \n';
-    // TODO: if (msg_type == "a") popAlarmClose
-    html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
-    html += '       >OK</button>\n';
-    } else {
-    html += htmlButtons(buttons);
-    }
+        html += '    <button class="tta-btn msgq-window-button"\n'
+        html += '      title="Click to close" \n'
+        // TODO: if (msg_type == "a") popAlarmClose
+        html += '      onclick="popClose(\'popIndex' + index + '\')" \n'
+        html += '       >OK</button>\n'
+    } else html += htmlButtons(buttons)
     html += '  </div>\n';
     html += '</div>\n';
     return html;
@@ -3059,7 +3061,7 @@ function popBuildStyle(msg_type) {
 
     html += '.msgq-window-button {\n' +
             //'  flex: 0 0 100%;\n' +
-            '  font-size: 22px;\n' +
+            '  font-size: 18px;\n' +
             '  padding: .25rem;\n' +
             '  margin: .25rem;\n' +
             '  border-radius: 1rem;\n' +
