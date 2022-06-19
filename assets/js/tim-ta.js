@@ -2960,8 +2960,7 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     if (msg_type == "w") { msg_head = "WARNING"; msgq_class = "msgq-warning"; }
     if (msg_type == "i") { msg_head = "Info"; msgq_class = "msgq-info"; }
     if (msg_type == "s") { msg_head = "Success"; msgq_class = "msgq-success"; }
-    // .shake-image{} class defined in /assets/css/style.scss
-    if (msg_type == "a") { msg_head = "Alarm"; msgq_class = "shake-image"; }
+    if (msg_type == "a") { msg_head = "Alarm"; msgq_class = "msgq-success"; }
     var html = "";
     // For historical reasons must be "_header" not "-header" to drag window
     html += '<div id="popIndex' + index + '" class="msgq-window">\n';
