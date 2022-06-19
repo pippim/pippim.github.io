@@ -1200,13 +1200,13 @@ async function runAllTimers() {
             if (audioControl != null) {
                 // When !== null used, "TypeError: audioControl is undefined"
                 if (audioControl.ended) {}
-                var msg = "/assets/img/tim-ta/alarm-clock.jpg"
-                var popId = popCreate("a", msg, audioControl)  // n popCreate(
+                var popId = popCreate("a", "/assets/img/tim-ta/alarm-clock.jpg",
+                                      audioControl)  // n popCreate(
                 var elm = msgq[popId].elmWindow
                 while(true) {
                     await sleep(50);
                     var rem = audioControl.duration - audioControl.currentTime
-                    if (rem <= 0.0) break
+                    if (rem <= 0.0) { popClose(popId); break; }  // n popClose(
                     // When a popCreate window is closed, it disappears after 600ms
                     if (document.body.contains(elm)) { continue; }
                     break  // Clicked X to close, or clicked "OK" & element removed
