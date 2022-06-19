@@ -1199,25 +1199,18 @@ async function runAllTimers() {
             var audioControl = clickListen(index);
             if (audioControl != null) {
                 // When !== null used, "TypeError: audioControl is undefined"
-                // currentTime is always 0 as if "await clickListen()" was used
-                // currentTime 0 when sleep 1/10th second so sleep 1/4 second
-                await sleep(100)
-                var remaining = audioControl.duration - audioControl.currentTime
-                console.log("1", audioControl.id, "remaining:", remaining)
-                /* RESULTS with 1/10th second is 0.0, with 1/4 second:
-                    Alarm_01.mp3 (1 second ) - audioControl.currentTime: 0.094308
-                    Alarm_02.mp3 (5 seconds) - audioControl.currentTime: 0.091315
-                    Alarm_03.mp3 (8 seconds) - audioControl.currentTime: 0.080362
-                */
-                await sleep(100)
-                remaining = audioControl.duration - audioControl.currentTime
-                console.log("2", audioControl.id, "remaining:", remaining)
-                await sleep(100)
-                remaining = audioControl.duration - audioControl.currentTime
-                console.log("3", audioControl.id, "remaining:", remaining)
                 if (audioControl.ended) {}
                 var msg = "/assets/img/tim-ta/alarm-clock.jpg"
                 var popId = popCreate("a", msg, audioControl)  // n popCreate(
+                var elm = msgq[popId].elmWindow
+                while(true) {
+                    await sleep(50);
+                    var rem = audioControl.duration - audioControl.currentTime
+                    if (rem <= 0.0) break
+                    // When a popCreate window is closed, it disappears after 600ms
+                    if (document.body.contains(elm)) { continue; }
+                    break  // Clicked X to close, or clicked "OK" & element removed
+                }
                 // popRegisterClose(popId, ctlClose);
             }
             // Grab next task in project array
@@ -2750,8 +2743,6 @@ async function popYesNo(msg_type, msg, error_id) {
     var elmWindow = document.getElementById(popYesNoId);
     if (popYesNoId == null) { return false; }
 
-    // popRegisterClose(popYesNoId, popNo);
-    // Aha don't want above! after "Yes" window closes and response is "No"
     while(true) {
         await sleep(50);
         // When a popCreate window is closed, it disappears after 600ms
@@ -3061,8 +3052,8 @@ function popBuildStyle(msg_type) {
 
     html += '.msgq-window-button {\n' +
             //'  flex: 0 0 100%;\n' +
-            '  font-size: 18px;\n' +
-            '  padding: .25rem;\n' +
+            '  font-size: 1rem;\n' +
+            '  padding: .1rem;\n' +
             '  margin: .25rem;\n' +
             '  border-radius: 1rem;\n' +
             '}\n';
