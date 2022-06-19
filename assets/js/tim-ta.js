@@ -2974,14 +2974,16 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '    </span>\n';
     html += '  </div>\n';
     html += '  <div class="msq-window-body">\n';
-    if (msg_type == "a") html += '    <img src="' + msg + '"/><p>\n'
+    if (msg_type == "a") html += '    <img src="' + msg + '" ' +
+                                 'class="shake-image" ' +
+                                 'width="250" height="250" ' +
+                                 '/>\n'
                     else html += '    <p>' + msg + '</p>\n'
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
     if (buttons == null) {
         html += '    <button class="tta-btn msgq-window-button"\n'
         html += '      title="Click to close" \n'
-        // TODO: if (msg_type == "a") popAlarmClose
         html += '      onclick="popClose(\'popIndex' + index + '\')" \n'
         html += '       >OK</button>\n'
     } else html += htmlButtons(buttons)
@@ -3041,8 +3043,7 @@ function popBuildStyle(msg_type) {
     html += '.msgq-window-header.msgq-error { background-color: #f44336; }\n';
     html += '.msgq-window-header.msgq-warning { background-color: #ff9800; }\n';
     html += '.msgq-window-header.msgq-info { background-color: #2196F3; }\n';
-    html += '.msgq-window-header.msgq-success, .shake-image {\n' +
-            '  background-color: #04AA6D; }\n';
+    html += '.msgq-window-header.msgq-success { background-color: #04AA6D; }\n';
 
     html += '.msgq-window-buttons {\n' +
             '  display: flex;\n' +
