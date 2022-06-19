@@ -2851,8 +2851,11 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
                    "w" orange warning message
                    "i" blue information message
                    "s" green success message
+                   "a" alarm image file is displayed
         msg = message text where <br> will start a new line.
         error_id = optional error number or name.
+            when msg_type = "a" then msg is image filename
+                and error_id is sound filename
         id_elm_type = "id" a ID is passed in next field
                       "elm" an element is passed in next field.
         elm = an ID or an element. If an ID convert it to an element.
@@ -2872,10 +2875,10 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
         return;
     }
     if (msg_type != "e" && msg_type != "w" &&
-        msg_type != "i" && msg_type != "s") {
-            //popCreate('e', "msgAlert() msg_type must be 'e', 'w', 'i' or 's'.");
+        msg_type != "i" && msg_type != "s" && msg_type != "a") {
+            //popCreate('e', "msgAlert() msg_type must be 'e', 'w', 'i', 's', 'a'.");
             // Catastrophe when you call popCreate from itself (CPU burn out)
-            alert('e', "msgAlert() msg_type must be 'e', 'w', 'i' or 's'.");
+            alert('e', "msgAlert() msg_type must be 'e', 'w', 'i', 's' or 'a'.");
             console.trace();
             return;
     }
@@ -2939,6 +2942,8 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     if (msg_type == "w") { msg_head = "WARNING"; msgq_class = "msgq-warning"; }
     if (msg_type == "i") { msg_head = "Info"; msgq_class = "msgq-info"; }
     if (msg_type == "s") { msg_head = "Success"; msgq_class = "msgq-success"; }
+    // .shake-image{} class defined in /assets/css/style.scss
+    if (msg_type == "a") { msg_head = "Alarm"; msgq_class = "shake-image"; }
     var html = "";
     // For historical reasons must be "_header" not "-header" to drag window
     html += '<div id="popIndex' + index + '" class="msgq-window">\n';
@@ -2946,11 +2951,13 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '       class="msgq-window-header ' + msgq_class + '">' + msg_head +
                     '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closeBtn" \n';
+    // TODO: if (msg_type == "a") popAlarmClose
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
     html += '    </span>\n';
     html += '  </div>\n';
     html += '  <div class="msq-window-body">\n';
+    // TODO: if (msg_type == "a") Image filename
     html += '    <p>' + msg + '</p>\n';
     html += '  </div>\n';
     html += '  <div class="msgq-window-buttons"> <!-- Buttons: OK -->\n';
