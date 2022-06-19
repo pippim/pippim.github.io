@@ -1199,8 +1199,8 @@ async function runAllTimers() {
             var audioControl = clickListen(index);
             if (audioControl != null) {
                 // When !== null used, "TypeError: audioControl is undefined"
-                // Zero time always appears so sleep 1/10th second for it to start.
-                await sleep(100);
+                // Zero time initially appears so sleep 1/4 second for it to start.
+                await sleep(250);
                 console.log("audioControl.currentTime:", audioControl.currentTime);
                 // TODO green success message while alarm sounds, then clear if stopped
                 // currentTime is always 0 as if "await clickListen()" was used?
@@ -2690,16 +2690,17 @@ window.addEventListener( 'DOMContentLoaded', (event) => paintCustomSounds() )
 
 */
 
-var msgq = {};  // Message Queue. Data struction is popEntry
+var msgq = {};  // Message Queue.
 var btnBox = {};  // Extra buttons boxed up for small screen which is <= 640 px wide.
 var popIndex = 0;  // Key into msgq returned from popCreate()
+/*
 var popEntry = {
         index: undefined,
         elmWindow: undefined,
         typeMsg: undefined,
+        errorId: undefined,
         elmLink: undefined,
         typeIdOrElm: undefined,
-        errorId: undefined,
         rectMounted: undefined,
         rectTarget: undefined,
         cntRepeats: undefined,
@@ -2707,6 +2708,7 @@ var popEntry = {
         style: undefined,
         buttons: {}
     };
+*/
 
 function msgqClear() {
     // Clear existing messages and control box from document
@@ -2815,16 +2817,17 @@ function popClose(idWindow) {
     elmWindow.style.opacity = "0";
     setTimeout(function(){
         elmWindow.style.display = "none";
-        /* June 2, 2022 shorten
-        QUESTION: When would idWindow not be in msgq???
-        if (idWindow in msgq) {
-            if (msgq[idWindow].callbackClose != null) {
-                msgq[idWindow].callbackClose();
-            }
-        } */
+        /* June 2, 2022 QUESTION: When would idWindow not be in msgq???
+        */
         if (idWindow in msgq && msgq[idWindow].callbackClose != null) {
             msgq[idWindow].callbackClose();
         }
+        if (idWindow in msgq && msgq[idWindow].msg_type == 'a') {
+            // clickListen(i) has started playing sound
+            // p['msg'] = msg;  // Doubles as alarm image filename
+            // p['error_id'] = error_id;  // Doubles as alarm sound filename
+        }
+
         popClearById(idWindow);
     }, 600);
 }
@@ -2851,7 +2854,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
                    "w" orange warning message
                    "i" blue information message
                    "s" green success message
-                   "a" alarm image file is displayed
+                   "a" alarm image is shaken/wiggled
         msg = message text where <br> will start a new line.
         error_id = optional error number or name.
             when msg_type = "a" then msg is image filename
@@ -2904,9 +2907,9 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     p['elmWindow'] = document.createElement('div');
     //p['elmWindow'] = document.createElement('template');  // BROKEN
     p['msg_type'] = msg_type;  // e, w, i or s
-    p['msg'] = msg;  // Might contain HTML
-    p['id_elm_type'] = id_elm_type;
-    p['error_id'] = error_id;
+    p['msg'] = msg;  // Might contain HTML. Doubles as alarm image filename
+    p['error_id'] = error_id;  // Doubles as alarm sound filename
+    p['id_elm_type'] = id_elm_type;  // 'id' or anything else
     p['id_elm'] = id_elm;
     p['elmLink'] = elm;
     p['active'] = "true";
@@ -2964,6 +2967,7 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     if (buttons == null) {
     html += '    <button class="tta-btn msgq-window-button"\n';
     html += '      title="Click to close" \n';
+    // TODO: if (msg_type == "a") popAlarmClose
     html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
     html += '       >OK</button>\n';
     } else {
@@ -3020,20 +3024,13 @@ function popBuildStyle(msg_type) {
     html += '.msgq-window-header {\n' +
             '  cursor: move;  z-index: 10;\n' +
             '  color: #fff;\n' +
-            // Prevent touch move from highlighting text
-            //'  -webkit-touch-callout: none;\n' +
-            //'  -webkit-user-select: none;\n' +
-            //'  -k html-user-select: none;\n' +
-            //'  -moz-user-select: none;\n' +
-            //'  -ms-user-select: none;\n' +
-            //'  user-select: none;\n' +
-            //'  -webkit-tap-highlight-color:rgba(0,0,0,0);\n' +
             '}\n';
 
     html += '.msgq-window-header.msgq-error { background-color: #f44336; }\n';
     html += '.msgq-window-header.msgq-warning { background-color: #ff9800; }\n';
     html += '.msgq-window-header.msgq-info { background-color: #2196F3; }\n';
-    html += '.msgq-window-header.msgq-success { background-color: #04AA6D; }\n';
+    html += '.msgq-window-header.msgq-success, .shake-image {\n' +
+            '  background-color: #04AA6D; }\n';
 
     html += '.msgq-window-buttons {\n' +
             '  display: flex;\n' +
