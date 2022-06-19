@@ -1209,9 +1209,10 @@ async function runAllTimers() {
                     if (rem <= 0.0) { popClose(popId); break; }  // n popClose(
                     // When a popCreate window is closed, it disappears after 600ms
                     if (document.body.contains(elm)) { continue; }
+                    audioControl.pause()
+                    audioControl.currentTime = 0.0
                     break  // Clicked X to close, or clicked "OK" & element removed
                 }
-                // popRegisterClose(popId, ctlClose);
             }
             // Grab next task in project array
             index += 1;
