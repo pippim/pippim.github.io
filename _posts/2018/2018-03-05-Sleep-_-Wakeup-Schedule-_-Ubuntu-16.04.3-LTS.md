@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "13,388 "
 accepted:     
-uploaded:     2022-06-12 17:09:52
+uploaded:     2022-06-19 17:56:58
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-05-Sleep-_-Wakeup-Schedule-_-Ubuntu-16.04.3-LTS.md
 toc:          false
 navigation:   false

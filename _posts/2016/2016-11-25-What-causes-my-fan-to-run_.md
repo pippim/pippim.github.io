@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,731 "
 accepted:     Accepted
-uploaded:     2022-06-12 17:09:52
+uploaded:     2022-06-19 17:56:58
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-25-What-causes-my-fan-to-run_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "6,736 "
 accepted:     Accepted
-uploaded:     2022-06-12 17:09:52
+uploaded:     2022-06-19 17:56:58
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-to-analyze-and-defragment-drive-in-ubuntu-16.04.md
 toc:          false
 navigation:   false
