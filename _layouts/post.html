@@ -87,7 +87,6 @@
           >View markdown on GitHub Pages 🔗
         </button>
 
-      <!-- LESS FRONT MATTER -->
       <h4 id="minimal_front_matter" style="margin-top: .1rem;">
         <style>
             fmVar {
@@ -150,7 +149,6 @@
              <mark>{{ page.created_date | date: "%B %e, %Y" }}</mark>
         {% endif %}
         {% if page.edit_date and page.edit_date != "" and page.edit_date != nil %}
-          <!-- Assumes Created always used if Edited is used! -->
           &nbsp;&nbsp; Edited:&nbsp;&nbsp;<mark>{{ page.edit_date | date: "%B %e, %Y" }}</mark>
         {% endif %}
         {% if page.favorites and page.favorites != "" and page.favorites != nil %}
@@ -164,7 +162,6 @@
         {% if page.layout and page.layout != "" and page.layout != nil %}
           &nbsp;&nbsp; Layout:&nbsp;&nbsp;<mark>{{ page.layout }}</mark>
         {% endif %}
-        <!-- Don't test "if page.toc" value because "false" prevents displaying FM -->
         {% if page.toc != "" and page.toc != nil %}
           <br/>
           <fmVar>TOC:</fmVar>
@@ -183,6 +180,7 @@
           showHide(fm_state);  // fm_state is a global var set by checkCookie()
         </script>
       </h4>
+      <p> <br></p>
     </div>
 
       {% include search.html %}
