@@ -948,7 +948,8 @@ function tabRunTimersDetail(i) {
     if (strDuration == "") { return ""; }  // No duration = no timer displayed
 
     secondsTask = 0;  // Abundant caution.
-    var sec = +ttaTask.seconds;  // TODO: Test convertNumber(ttaTask.seconds);
+    //var sec = +ttaTask.seconds;  // Only works in Chrome and Firefox
+    var sec = +ttaTask.seconds * 1;  // Add support for MS Edge
     sec += +ttaTask.minutes * 60;  // Tricky you can multiply a +String
     sec += +ttaTask.hours * 60 * 60;
     secondsTask = parseInt(sec, 10);
