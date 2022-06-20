@@ -244,7 +244,7 @@ $lavender: #E6E6FA !default; // lavender
 
 // Blog post front matter
 .front-matter {
-    padding: 4px 4px 0 4px;
+    padding: 4px 4px 1rem 4px;
     margin-bottom: 1rem;  // June 20/2022 - ToC / Skp button overlapping border
     border-color: $header-bg-color-secondary;  // Cayman blue DOESN'T WORK :(
     border-top: 1px solid #999;
