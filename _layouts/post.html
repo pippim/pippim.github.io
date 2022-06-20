@@ -89,12 +89,6 @@
 
       <!-- LESS FRONT MATTER -->
       <h4 id="minimal_front_matter" style="margin-top: .1rem;">
-
-        <!-- Less / More button hidden until hover
-                class="hidden-child"        /assets/css/style.scss
-                id="more_less_button"       /assets/css/style.scss
-                onclick="fm_toggle();"      /assets/js/post_fm.js
-        -->
         <style>
             fmVar {
                 float: left;
@@ -119,11 +113,9 @@
           <br/>
           <fmVar>Tag{% if page.tags.size > 1 %}s{% else %}&nbsp;{% endif %}:</fmVar>
             {% for tag in page.tags %}
-              <!-- &#32; is a breaking space: https://stackoverflow.com/a/38663112/6929343 -->
               <mark>{{ tag }}</mark>&nbsp;&nbsp;
             {% endfor %}
         {% endif %}
-
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
           {% if page.type and page.type != "" and page.type != nil %}
             {% if page.site and page.site != "" and page.site != nil %}
@@ -136,31 +128,11 @@
           {% endif %}
         {% endif %}
       </h4>
-
-      <!-- MORE FRONT MATTER. Date formatting: https://shopify.dev/api/liquid/filters/additional-filters#date -->
       <h4 id="hidden_front_matter" style="margin-top: -1rem;">
-        <!-- MORE FRONT MATTER VARIABLES
-        FRONT_POST_ID   = None              # EG "post_id:      1104017"
-        FRONT_URL       = "stack_url:    "  # EG "stack_url:    https://askubuntu.com/q/1104017"
-        FRONT_LINK      = None              # EG "post_link:    https://askubuntu.com/q/1104017|How can I
-        FRONT_TITLE     = "title:        "  # Always appears in front matter!
-        FRONT_CREATED   = "created_date: "  # EG "created_date: 2020-01-15 15:21:55"
-        FRONT_LAST_EDIT = "edit_date:    "  # EG "edit_date:    2020-05-27 17:27:45"
-        FRONT_EDITED_BY = None              # EG "edit_user:    Community (-1)"
-        FRONT_SCORE     = "votes:        "  # EG "votes:        64" or blank/nil
-        FRONT_FAVORITES = "favorites:    "  # EG "favorites:    33" or blank/nil
-        FRONT_VIEWS     = "views:        "  # EG "views:        72,056" or blank/nil
-        FRONT_ANSWERS   = None              # EG "answers:      3" or blank/nil
-        FRONT_ACCEPTED  = "accepted:     "  # EG "accepted:     Accepted" or blank/nil
-        FRONT_CW        = None              # EG "community:    CW" blank/nil
-        FRONT_CLOSED    = None              # EG "closed:       Closed" or blank/nil
-        -->
         {% if page.stack_url and page.stack_url != "" and page.stack_url != nil %}
-          <!-- No br/ required because new H4 already inserts a big line break -->
           <fmVar>URL:</fmVar>
             <mark>{{ page.stack_url }}</mark>
         {% endif %}
-        <!-- title: is always present anyway AND displayed at top of page! -->
         {% if page.title and page.title != "" and page.title != nil %}
           <br/>
           <fmVar>Title:</fmVar>
@@ -172,33 +144,7 @@
             <mark>{{ page.id }}</mark>
           <br/>
         {% endif %}
-<!-- page.name & page.dir has NOTHING. Hide other less useful fields too
-        {% if page.name and page.name != "" and page.name != nil %}
-          <fmVar>Name:</fmVar>
-            <mark>{{ page.name }}</mark>
-          <br/>
-        {% endif %}
-        {% if page.path and page.path != "" and page.path != nil %}
-          <fmVar>Path:</fmVar>
-            <mark>{{ page.path }}</mark>
-          <br/>
-        {% endif %}
-        {% if page.dir and page.dir != "" and page.dir != nil %}
-          <fmVar>Directory:</fmVar>
-            <mark>{{ page.dir }}</mark>
-          <br/>
-        {% endif %}
-        {% if page.previous and page.previous != "" and page.previous != nil %}
-          <fmVar>Previous:</fmVar>
-            <mark>{{ page.previous.title }}</mark>
-          <br/>
-        {% endif %}
-        {% if page.next and page.next != "" and page.next != nil %}
-          <fmVar>Next:</fmVar>
-            <mark>{{ page.next.title }}</mark>
-          <br/>
-        {% endif %}
--->
+
         {% if page.created_date and page.created_date != "" and page.created_date != nil %}
           <fmVar>Created:</fmVar>
              <mark>{{ page.created_date | date: "%B %e, %Y" }}</mark>
@@ -210,13 +156,6 @@
         {% if page.favorites and page.favorites != "" and page.favorites != nil %}
           &nbsp;&nbsp; Favorites:&nbsp;&nbsp;<mark>{{ page.favorites }}</mark>
         {% endif %}
-
-        <!-- EXTRA FRONT MATTER VARIABLES:
-        FRONT_LAYOUT    = "layout:       post"  # "layout:" MUST be used "post" can be changed
-        FRONT_UPLOADED  = "uploaded:     "  # Date & Time this program was run
-        FRONT_TOC       = "toc:          "  # Table of Contents? "true" or "false"
-        FRONT_NAV_BAR   = "navigation:   "  # Section navigation bar? "true" or "false"
-        -->
         {% if page.uploaded and page.uploaded != "" and page.uploaded != nil %}
           <br/>
           <fmVar>Upload:</fmVar>
@@ -250,8 +189,6 @@
       <script type="text/javascript" src="/assets/js/search.js" ></script>
 
       {{ content }}
-
-      <!-- From: https://www.bytedude.com/jekyll-previous-and-next-posts/ -->
       <div class="post-nav" style="display: flex; justify-content: space-between;
                                    flex-wrap: wrap; align-content: stretch;
                                    margin-top: 2em; background-color: #F0FFF0;">
@@ -266,19 +203,6 @@
           {% endif %}
         </span>
       </div>
-
-      <!-- Taking up too much space at bottom of page
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}"
-             >{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}"
-             >{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
-        <span class="site-footer-credits">This page was generated by <a
-            href="https://pages.github.com" title="GitHub Pages powered by Jekyll Static
-            Site Generator running Ruby Gems, Kramdown and Rouge">GitHub Pages 🔗</a>.</span>
-      </footer>
-      -->
     </main>
   </body>
 </html>
