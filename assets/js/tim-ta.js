@@ -961,13 +961,13 @@ function tabRunTimersDetail(i) {
 
     // Below Edge Invalid Time error but not Chrome or FireFox parseInt
     //hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
-    var milliTask = Number(secondsTask * 1000)
+    var milliTask = Number(secondsTask) * 1000
     var dateTask = new Date(milliTask)
     console.log("milliTask:", milliTask, typeof milliTask, "dateTask:", dateTask)
     console.log("dateTask.toISOString():", dateTask.toISOString().substr(11, 8))
     //hhmmssTask = new Date(+secondsTask * 1000).toISOString().substr(11, 8);
 
-    hhmmssTask = new Date(Number(secondsTask * 1000)).toISOString().substr(11, 8);
+    hhmmssTask = new Date(Number(secondsTask) * 1000).toISOString().substr(11, 8);
     hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
     hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
 
