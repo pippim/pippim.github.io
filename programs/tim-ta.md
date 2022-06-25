@@ -121,7 +121,7 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 - **Alarm_02.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_02.mp3"></audio>
 <br><br>
 - **Alarm_03.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_03.mp3"></audio>
-<!-- June 12/22: Old filenames no longer distributed but in localStorage -->
+<!-- June 12/22: Non-display filenames no longer distributed (in localStorage) -->
 <audio id="Alarm_01.wav"></audio>
 <audio id="Alarm_05.mp3"></audio>
 <audio id="Alarm_12.mp3"></audio>
@@ -150,9 +150,9 @@ Upload TIm-ta Configuration to Local Storage. New Projects
 and new Tasks will be added. Existing Projects and Tasks
 will be updated.
 
-***Projects and Tasks will never be deleted***
+***Projects and Tasks are never be deleted.***
 
-***Sound filenames will be ignored. The system defaults will be used***
+***Imported Sound filenames are ignored because they may not exist.***
 
 <span id="configSelect"><font size='+2'>Selected Configuration in Memory</font></span>
 
