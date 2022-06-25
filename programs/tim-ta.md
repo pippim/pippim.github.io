@@ -239,6 +239,11 @@ June 12, 2022 update:
 - Importing (upload) Tim-ta Projects and Tasks completed.
 - New stock sound files (Alarm_01.mp3, Alarm_02.mp3 and Alarm_03.mp3) uploaded.
 
+June 25, 2022 update:
+
+- When alarm sounds, image of shaking alarm clock appears. Close window to end alarm sound early.
+- New code (HTML & CSS) for system wide buttons. 
+
 ---
 
 <a id='hdr8'></a>
