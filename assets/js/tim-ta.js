@@ -952,8 +952,8 @@ function tabRunTimersDetail(i) {
     var sec = convertNumber(ttaTask.seconds)  // Add support for MS Edge
     sec += convertNumber(ttaTask.minutes) * 60  // Tricky you can multiply a +String
     sec += convertNumber(ttaTask.hours) * 60 * 60
-    secondsTask = convertNumber(sec) * 1
-    secondsSet += secondsTask * 1
+    secondsTask = convertNumber(sec)
+    secondsSet += secondsTask
     //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
     var run_set_times = convertNumber(getProjectValue('run_set_times'))
     if (run_set_times == 0) run_set_times = 1
@@ -962,7 +962,7 @@ function tabRunTimersDetail(i) {
 
     // Below Edge Invalid Time error but not Chrome or FireFox parseInt
     //hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
-    var milliTask = convertNumber(secondsTask) * 1000
+    var milliTask = secondsTask * 1000
     var dateTask = new Date(milliTask)
     console.log("milliTask:", milliTask, typeof milliTask, "dateTask:", dateTask)
     console.log("secondsTask:", secondsTask, "secondsSet:", secondsSet,
@@ -1360,8 +1360,8 @@ function convertNumber(value) {
         if (typeof value != "string") return 0  // It's not a number or a string
         var value2 = Number(value)  // blank becomes 0
         if (isNaN(value2)) return 0  // string not a number
-        return value2  // Return the number converted from string
-    } else return value  // Already a number
+        return value2 * 1  // Return the number converted from string
+    } else return value * 1  // Already a number but may be string
 }
 
 function clickControls(i) {
