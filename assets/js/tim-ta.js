@@ -949,25 +949,26 @@ function tabRunTimersDetail(i) {
 
     //var sec = +ttaTask.seconds;  // Only works in Chrome and Firefox
     //var sec = +ttaTask.seconds + 0  // Add support for MS Edge
-    var sec = +ttaTask.seconds * 1  // Add support for MS Edge
-    sec += +ttaTask.minutes * 60  // Tricky you can multiply a +String
-    sec += +ttaTask.hours * 60 * 60
-    secondsTask = Number(sec)
-    secondsSet += Number(secondsTask)
+    var sec = convertNumber(ttaTask.seconds)  // Add support for MS Edge
+    sec += convertNumber(ttaTask.minutes) * 60  // Tricky you can multiply a +String
+    sec += convertNumber(ttaTask.hours) * 60 * 60
+    secondsTask = sec
+    secondsSet += secondsTask
     //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
-    var run_set_times = Number(getProjectValue('run_set_times'))
+    var run_set_times = convertNumber(getProjectValue('run_set_times'))
+    if (run_set_times == 0) run_set_times = 1
     // run_set_times = Number(getProjectValue('run_set_times')
     secondsAllSets += secondsTask * run_set_times
 
     // Below Edge Invalid Time error but not Chrome or FireFox parseInt
     //hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
-    var milliTask = Number(secondsTask) * 1000
+    var milliTask = convertNumber(secondsTask) * 1000
     var dateTask = new Date(milliTask)
     console.log("milliTask:", milliTask, typeof milliTask, "dateTask:", dateTask)
     //console.log("dateTask.toISOString():", dateTask.toISOString().substr(11, 8))
     //hhmmssTask = new Date(+secondsTask * 1000).toISOString().substr(11, 8);
 
-    hhmmssTask = new Date(Number(secondsTask) * 1000).toISOString().substr(11, 8);
+    hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
     hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
     hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
 
