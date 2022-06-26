@@ -943,25 +943,19 @@ var debugTime = false
 
 function tabRunTimersDetail(i) {
     // Format table detail line for RunTimers form
-    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]];
-    var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds);
-    if (strDuration == "") { return ""; }  // No duration = no timer displayed
+    ttaTask = ttaProject.objTasks[ttaProject.arrTasks[i]]
+    var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds)
+    if (strDuration == "") return ""  // No duration = no timer displayed
 
-    //var sec = +ttaTask.seconds;  // Only works in Chrome and Firefox
-    //var sec = +ttaTask.seconds + 0  // Add support for MS Edge
-    var sec = convertNumber(ttaTask.seconds)  // Add support for MS Edge
-    sec += convertNumber(ttaTask.minutes) * 60  // Tricky you can multiply a +String
-    sec += convertNumber(ttaTask.hours) * 60 * 60
-    secondsTask = convertNumber(sec)
-    secondsSet += secondsTask
-    //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
+    secondsTask = convertNumber(ttaTask.seconds)
+    secondsTask += convertNumber(ttaTask.minutes) * 60
+    secondsTask += convertNumber(ttaTask.hours) * 60 * 60
+
+    secondsSet += secondsTask  // Total Seconds for all project's tasks
     var run_set_times = convertNumber(getProjectValue('run_set_times'))
     if (run_set_times == 0) run_set_times = 1
-    // run_set_times = Number(getProjectValue('run_set_times')
-    secondsAllSets += secondsTask * run_set_times
+    secondsAllSets += secondsTask * run_set_times  // Total Seconds
 
-    // Below Edge Invalid Time error but not Chrome or FireFox parseInt
-    //hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
     var milliTask = secondsTask * 1000
     var dateTask = new Date(milliTask)
     console.log("milliTask:", milliTask, typeof milliTask, "dateTask:", dateTask)
@@ -969,8 +963,7 @@ function tabRunTimersDetail(i) {
                 "secondsAllSets:", secondsAllSets,
                 "dateTask.toISOString():", dateTask.toISOString().substr(11, 8))
 
-    //hhmmssTask = new Date(+secondsTask * 1000).toISOString().substr(11, 8);
-
+    /* hhmmss fields are not used. May be used for timer overrides */
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
     hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
     hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
