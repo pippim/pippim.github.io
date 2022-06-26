@@ -10,9 +10,9 @@ created_date: 2016-10-08 17:06:47
 edit_date:    2016-10-08 17:16:22
 votes:        "2 "
 favorites:    
-views:        "797 "
+views:        "802 "
 accepted:     Accepted
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-08-How-to-understand-frequency-in-powertop.md
 toc:          false
 navigation:   false

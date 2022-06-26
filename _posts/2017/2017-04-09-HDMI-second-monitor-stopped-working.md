@@ -10,9 +10,9 @@ created_date: 2017-04-09 20:07:06
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "4,722 "
+views:        "4,724 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-09-HDMI-second-monitor-stopped-working.md
 toc:          false
 navigation:   false

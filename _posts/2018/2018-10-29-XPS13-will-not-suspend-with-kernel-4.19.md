@@ -10,9 +10,9 @@ created_date: 2018-10-29 01:37:01
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "349 "
+views:        "350 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-29-XPS13-will-not-suspend-with-kernel-4.19.md
 toc:          false
 navigation:   false

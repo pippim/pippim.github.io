@@ -10,9 +10,9 @@ created_date: 2020-01-04 20:40:07
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "888 "
+views:        "897 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-04-Display-Resolution-Setting-is-Lost-After-Wake-from-Suspend.md
 toc:          false
 navigation:   false

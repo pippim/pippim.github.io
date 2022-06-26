@@ -10,9 +10,9 @@ created_date: 2019-10-11 11:52:50
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "8,156 "
+views:        "8,161 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-11-When-will-Ubuntu-18.04-get-kernel-version-5.3_.md
 toc:          false
 navigation:   false

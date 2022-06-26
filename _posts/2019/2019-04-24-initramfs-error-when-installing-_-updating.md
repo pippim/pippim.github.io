@@ -10,9 +10,9 @@ created_date: 2019-04-24 11:33:50
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "62,980 "
+views:        "64,110 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-24-initramfs-error-when-installing-_-updating.md
 toc:          false
 navigation:   false

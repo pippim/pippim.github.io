@@ -10,9 +10,9 @@ created_date: 2018-05-21 02:11:57
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "6,760 "
+views:        "6,783 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-What-software-is-in-the-Canonical-Partners-repository_.md
 toc:          false
 navigation:   false

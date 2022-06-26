@@ -10,9 +10,9 @@ created_date: 2018-08-12 20:13:20
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "6,106 "
+views:        "6,136 "
 accepted:     Accepted
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Can_t-get-bootable-usb-to-show-up-in-bios.md
 toc:          false
 navigation:   false

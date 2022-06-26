@@ -10,9 +10,9 @@ created_date: 2018-07-14 02:11:40
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "1,465 "
+views:        "1,475 "
 accepted:     Accepted
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-14-how-to-tell-GRUB-to-show-the-user-preferred-names-of-OS_es.-Ubuntu-18.04.md
 toc:          false
 navigation:   false

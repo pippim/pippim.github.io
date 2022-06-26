@@ -10,9 +10,9 @@ created_date: 2016-11-24 00:29:27
 edit_date:    2017-04-13 12:24:08
 votes:        "1 "
 favorites:    
-views:        "772 "
+views:        "773 "
 accepted:     Accepted
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-24-Laptop-freezes-after-connecting-external-monitor.md
 toc:          false
 navigation:   false

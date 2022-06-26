@@ -10,9 +10,9 @@ created_date: 2018-09-02 16:45:25
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "19,607 "
+views:        "19,640 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-02-Adding-a-GRUB2-background-image-and-custom-font.md
 toc:          false
 navigation:   false

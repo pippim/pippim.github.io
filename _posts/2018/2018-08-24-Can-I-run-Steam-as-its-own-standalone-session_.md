@@ -10,9 +10,9 @@ created_date: 2018-08-24 01:08:33
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "15,308 "
+views:        "15,332 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-24-Can-I-run-Steam-as-its-own-standalone-session_.md
 toc:          false
 navigation:   false

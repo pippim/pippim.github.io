@@ -10,9 +10,9 @@ created_date: 2018-05-14 00:19:42
 edit_date:    
 votes:        "10 "
 favorites:    
-views:        "35,917 "
+views:        "36,104 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-14-Can-I-do-a-Silent-or-Unattended-Release-Upgrade_.md
 toc:          false
 navigation:   false

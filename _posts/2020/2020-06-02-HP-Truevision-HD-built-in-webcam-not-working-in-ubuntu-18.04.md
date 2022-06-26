@@ -8,11 +8,11 @@ type:         Answer
 tags:         drivers 18.04 hp webcam camera
 created_date: 2020-06-02 00:17:28
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "9,145 "
+views:        "9,219 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-02-HP-Truevision-HD-built-in-webcam-not-working-in-ubuntu-18.04.md
 toc:          false
 navigation:   false

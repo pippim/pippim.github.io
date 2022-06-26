@@ -10,9 +10,9 @@ created_date: 2016-09-01 11:03:05
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "603 "
+views:        "604 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-01-Why-does-xubuntu-require-less-ram-than-ubuntu_.md
 toc:          false
 navigation:   false

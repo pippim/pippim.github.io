@@ -10,9 +10,9 @@ created_date: 2021-08-06 04:21:31
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "554 "
+views:        "559 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-08-06-Weird-walkie-talkie-interference-with-Logitech-unifying-receiver.md
 toc:          false
 navigation:   false

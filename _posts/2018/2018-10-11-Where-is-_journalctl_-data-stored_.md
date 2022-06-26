@@ -8,11 +8,11 @@ type:         Answer
 tags:         log systemd systemd-journald
 created_date: 2018-10-11 22:31:25
 edit_date:    2021-08-02 18:46:52
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "123,930 "
+views:        "124,734 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-11-Where-is-_journalctl_-data-stored_.md
 toc:          false
 navigation:   false

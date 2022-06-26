@@ -10,9 +10,9 @@ created_date: 2016-10-29 14:51:48
 edit_date:    2022-01-05 17:20:13
 votes:        "6 "
 favorites:    
-views:        "33,016 "
+views:        "33,178 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-29-What-are-Kernel-Version-number-components-_w.x.yy-zzz_-called_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-06-29 02:13:38
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "6,993 "
+views:        "7,018 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-29-How-to-debug-suspend_.md
 toc:          false
 navigation:   false

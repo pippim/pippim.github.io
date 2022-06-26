@@ -10,9 +10,9 @@ created_date: 2018-04-29 05:32:41
 edit_date:    2018-07-07 04:07:13
 votes:        "3 "
 favorites:    
-views:        "8,254 "
+views:        "8,257 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Long-boot-times-on-18.04.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-03-31 17:44:58
 edit_date:    2019-07-08 10:35:06
 votes:        "15 "
 favorites:    
-views:        "432,961 "
+views:        "435,783 "
 accepted:     
-uploaded:     2022-06-19 17:56:58
+uploaded:     2022-06-26 14:24:55
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-to-measure-GPU-usage_.md
 toc:          false
 navigation:   false
