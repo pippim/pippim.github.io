@@ -1353,10 +1353,10 @@ function sleep(ms) {
 
 /* NOT USED for now */
 function convertNumber(value) {
-    if (isNan(value)) {
+    if (isNaN(value)) {
         if (typeof value != "string") return 0  // It's not a number or a string
         var value2 = Number(value)  // blank becomes 0
-        if (isNan(value2)) return 0  // string not a number
+        if (isNaN(value2)) return 0  // string not a number
         return value2  // Return the number converted from string
     } else return value  // Already a number
 }
