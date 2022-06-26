@@ -952,7 +952,7 @@ function tabRunTimersDetail(i) {
     var sec = convertNumber(ttaTask.seconds)  // Add support for MS Edge
     sec += convertNumber(ttaTask.minutes) * 60  // Tricky you can multiply a +String
     sec += convertNumber(ttaTask.hours) * 60 * 60
-    secondsTask = sec
+    secondsTask = convertNumber(sec)
     secondsSet += secondsTask
     //console.log("ttaProject:", ttaProject);  // What does run_set_times contain?
     var run_set_times = convertNumber(getProjectValue('run_set_times'))
