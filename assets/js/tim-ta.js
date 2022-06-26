@@ -965,7 +965,10 @@ function tabRunTimersDetail(i) {
     var milliTask = convertNumber(secondsTask) * 1000
     var dateTask = new Date(milliTask)
     console.log("milliTask:", milliTask, typeof milliTask, "dateTask:", dateTask)
-    //console.log("dateTask.toISOString():", dateTask.toISOString().substr(11, 8))
+    console.log("secondsTask:", secondsTask, "secondsSet:", secondsSet,
+                "secondsAllSets:", secondsAllSets,
+                "dateTask.toISOString():", dateTask.toISOString().substr(11, 8))
+
     //hhmmssTask = new Date(+secondsTask * 1000).toISOString().substr(11, 8);
 
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
