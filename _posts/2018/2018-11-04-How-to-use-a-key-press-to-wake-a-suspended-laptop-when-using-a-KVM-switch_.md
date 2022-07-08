@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "5,197 "
 accepted:     
-uploaded:     2022-06-26 14:24:55
+uploaded:     2022-07-08 06:07:35
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-How-to-use-a-key-press-to-wake-a-suspended-laptop-when-using-a-KVM-switch_.md
 toc:          false
 navigation:   true

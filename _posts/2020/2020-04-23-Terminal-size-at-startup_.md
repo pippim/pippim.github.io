@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "1,721 "
 accepted:     
-uploaded:     2022-06-26 14:24:55
+uploaded:     2022-07-08 06:07:35
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-04-23-Terminal-size-at-startup_.md
 toc:          false
 navigation:   false

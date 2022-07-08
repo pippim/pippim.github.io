@@ -3117,7 +3117,8 @@ def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True)
     part_ticks = num_ticks % 8      # Size of partial block (array index)
 
     disp = bar = ""                 # Blank out variables
-    bar += utf_8s[0] * full_ticks   # Add full blocks into Progress Bar
+    # https://stackoverflow.com/a/70586588/6929343 use int(full_ticks)
+    bar += utf_8s[0] * int(full_ticks)  # Add full blocks into Progress Bar
 
     # If part_ticks is zero, then no partial block, else append part char
     if part_ticks > 0:

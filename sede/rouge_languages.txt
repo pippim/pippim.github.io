@@ -126,6 +126,7 @@ mxml
 nasm
 nesasm
 nginx
+nial
 nim
 nix
 objective_c
