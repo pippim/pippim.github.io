@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "73,317 "
 accepted:     
-uploaded:     2022-07-08 06:07:35
+uploaded:     2022-07-12 16:19:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-03-Is-Turbo-Boost-Working_.md
 toc:          false
 navigation:   false

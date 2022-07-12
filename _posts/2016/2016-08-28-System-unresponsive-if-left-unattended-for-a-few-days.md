@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "225 "
 accepted:     
-uploaded:     2022-07-08 06:07:35
+uploaded:     2022-07-12 16:19:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-28-System-unresponsive-if-left-unattended-for-a-few-days.md
 toc:          false
 navigation:   false

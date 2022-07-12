@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "59,717 "
 accepted:     
-uploaded:     2022-07-08 06:07:35
+uploaded:     2022-07-12 16:19:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-26-Switch-between-Intel_AMD-GPU-on-18.04.md
 toc:          false
 navigation:   false

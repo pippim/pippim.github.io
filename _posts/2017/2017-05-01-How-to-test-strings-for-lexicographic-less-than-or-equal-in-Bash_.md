@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "35,388 "
 accepted:     
-uploaded:     2022-07-08 06:07:35
+uploaded:     2022-07-12 16:19:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-01-How-to-test-strings-for-lexicographic-less-than-or-equal-in-Bash_.md
 toc:          false
 navigation:   false

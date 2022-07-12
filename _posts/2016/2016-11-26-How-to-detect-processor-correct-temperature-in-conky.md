@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "70,617 "
 accepted:     
-uploaded:     2022-07-08 06:07:35
+uploaded:     2022-07-12 16:19:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-26-How-to-detect-processor-correct-temperature-in-conky.md
 toc:          false
 navigation:   false

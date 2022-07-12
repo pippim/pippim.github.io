@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "248,345 "
 accepted:     
-uploaded:     2022-07-08 06:07:35
+uploaded:     2022-07-12 16:19:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-13-How-can-I-shorten-my-command-line-_bash_-prompt_.md
 toc:          false
 navigation:   false

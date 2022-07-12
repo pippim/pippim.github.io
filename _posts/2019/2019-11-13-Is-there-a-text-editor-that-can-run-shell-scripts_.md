@@ -12,7 +12,7 @@ votes:        "16 "
 favorites:    
 views:        "9,721 "
 accepted:     Accepted
-uploaded:     2022-07-08 06:07:35
+uploaded:     2022-07-12 16:19:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-13-Is-there-a-text-editor-that-can-run-shell-scripts_.md
 toc:          false
 navigation:   false

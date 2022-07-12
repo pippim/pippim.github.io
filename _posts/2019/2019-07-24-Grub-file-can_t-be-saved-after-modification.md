@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "713 "
 accepted:     
-uploaded:     2022-07-08 06:07:35
+uploaded:     2022-07-12 16:19:56
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-Grub-file-can_t-be-saved-after-modification.md
 toc:          false
 navigation:   false
