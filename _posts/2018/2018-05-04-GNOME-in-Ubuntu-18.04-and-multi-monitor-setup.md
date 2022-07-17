@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "25,660 "
 accepted:     
-uploaded:     2022-07-12 16:19:56
+uploaded:     2022-07-17 08:13:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-04-GNOME-in-Ubuntu-18.04-and-multi-monitor-setup.md
 toc:          false
 navigation:   false

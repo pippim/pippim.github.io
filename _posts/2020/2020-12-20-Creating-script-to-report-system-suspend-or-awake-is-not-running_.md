@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "136 "
 accepted:     Accepted
-uploaded:     2022-07-12 16:19:56
+uploaded:     2022-07-17 08:13:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-20-Creating-script-to-report-system-suspend-or-awake-is-not-running_.md
 toc:          false
 navigation:   false

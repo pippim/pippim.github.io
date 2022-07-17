@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "5,853 "
 accepted:     
-uploaded:     2022-07-12 16:19:56
+uploaded:     2022-07-17 08:13:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-09-Where-is-the-power-off-button-in-Ubuntu-18.04-LTS-_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "587 "
 accepted:     
-uploaded:     2022-07-12 16:19:56
+uploaded:     2022-07-17 08:13:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-10-Long-kernel-load-time.md
 toc:          false
 navigation:   false

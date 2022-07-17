@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "48 "
 accepted:     Accepted
-uploaded:     2022-07-12 16:19:56
+uploaded:     2022-07-17 08:13:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-11-Directly-selecting-text-on-hyperlinks_-_In-Windows-with-Alternate_Drag-cursor_-no-drag_drop_.md
 toc:          false
 navigation:   false
