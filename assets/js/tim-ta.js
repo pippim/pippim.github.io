@@ -1050,7 +1050,7 @@ function progressTouched(i, element) {
     //console.log("Active Progress Bar number:", activeBarNo);
     //console.log("boolTouchedActive?:", boolTouchedActive);
 
-    popClearByError("no_tasks_running");
+    popClearByError("no_tasks_running");  // If clicked on good bar, remove old msg
     if (activeBarNo == 0) {
         popCreate("e", "No timers are running yet", "no_tasks_running");
         return;
@@ -1195,6 +1195,8 @@ async function runAllTimers() {
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
+            window.focus()  // Bring to top of window stack
+            console.log("window.focus()")
             var audioControl = clickListen(index);
             if (audioControl != null) {
                 // When !== null used, "TypeError: audioControl is undefined"
