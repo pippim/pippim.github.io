@@ -1195,7 +1195,8 @@ async function runAllTimers() {
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
-            window.focus()  // Bring to top of window stack
+            window.blur()
+            setTimeout(window.focus, 0)  // Bring to top of window stack
             console.log("window.focus()")
             var audioControl = clickListen(index);
             if (audioControl != null) {
