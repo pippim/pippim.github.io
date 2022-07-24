@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "9,101 "
 accepted:     Accepted
-uploaded:     2022-07-17 08:13:45
+uploaded:     2022-07-24 17:42:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-15-USB-ports-not-working-after-resume-from-sleep-on-Ubuntu-18.04.md
 toc:          false
 navigation:   false

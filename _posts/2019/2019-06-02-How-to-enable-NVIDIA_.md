@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "17,451 "
 accepted:     Accepted
-uploaded:     2022-07-17 08:13:45
+uploaded:     2022-07-24 17:42:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-02-How-to-enable-NVIDIA_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "590 "
 accepted:     Accepted
-uploaded:     2022-07-17 08:13:45
+uploaded:     2022-07-24 17:42:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-02-Conky-problem-indicator.md
 toc:          false
 navigation:   false

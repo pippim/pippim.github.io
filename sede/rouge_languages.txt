@@ -118,6 +118,7 @@ markdown
 mason
 mathematica
 matlab
+meson
 minizinc
 moonscript
 mosel

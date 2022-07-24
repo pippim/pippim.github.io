@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "4,765 "
 accepted:     Accepted
-uploaded:     2022-07-17 08:13:45
+uploaded:     2022-07-24 17:42:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-04-How-to-change-the-order-on-my-dual-booting-distros.md
 toc:          false
 navigation:   false

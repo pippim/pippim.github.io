@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "59,795 "
 accepted:     Accepted
-uploaded:     2022-07-17 08:13:45
+uploaded:     2022-07-24 17:42:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-22-How-do-I-restrict-my-kids_-computing-time_.md
 toc:          true
 navigation:   true

@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "52 "
 accepted:     Accepted
-uploaded:     2022-07-17 08:13:45
+uploaded:     2022-07-24 17:42:03
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-06-12-How-to-kill-a-program-after-it_s-executed-from-a-script_.md
 toc:          false
 navigation:   false
