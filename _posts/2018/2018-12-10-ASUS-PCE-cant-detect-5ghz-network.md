@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "5,732 "
 accepted:     Accepted
-uploaded:     2022-07-24 17:42:03
+uploaded:     2022-08-01 16:49:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-10-ASUS-PCE-cant-detect-5ghz-network.md
 toc:          false
 navigation:   false
