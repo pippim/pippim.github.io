@@ -159,6 +159,7 @@ racket
 reasonml
 rego
 rescript
+rml
 robot_framework
 ruby
 rust
