@@ -10,9 +10,9 @@ created_date: 2022-02-18 18:19:34
 edit_date:    2022-02-21 14:36:05
 votes:        "1 "
 favorites:    
-views:        "89 "
+views:        "112 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-18-Unable-to-lock-screen-with-Cron-or-Settings.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2019-09-07 22:41:56
 edit_date:    2019-09-08 16:49:40
 votes:        "3 "
 favorites:    
-views:        "3,447 "
+views:        "3,566 "
 accepted:     
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-07-Output-channel-for-audio-resets-after-every-reboot.md
 toc:          false
 navigation:   false

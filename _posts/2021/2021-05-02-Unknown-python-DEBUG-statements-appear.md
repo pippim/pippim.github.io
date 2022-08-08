@@ -10,9 +10,9 @@ created_date: 2021-05-02 01:40:30
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "116 "
+views:        "152 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-05-02-Unknown-python-DEBUG-statements-appear.md
 toc:          false
 navigation:   false

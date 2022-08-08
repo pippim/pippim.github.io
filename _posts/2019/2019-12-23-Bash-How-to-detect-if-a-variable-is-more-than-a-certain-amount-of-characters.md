@@ -8,11 +8,11 @@ type:         Answer
 tags:         bash
 created_date: 2019-12-23 20:43:29
 edit_date:    2020-06-12 14:37:07
-votes:        "10 "
+votes:        "11 "
 favorites:    
-views:        "9,937 "
+views:        "10,435 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-23-Bash-How-to-detect-if-a-variable-is-more-than-a-certain-amount-of-characters.md
 toc:          false
 navigation:   false

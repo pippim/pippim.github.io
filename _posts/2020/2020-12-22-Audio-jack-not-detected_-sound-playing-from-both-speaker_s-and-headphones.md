@@ -10,9 +10,9 @@ created_date: 2020-12-22 11:42:41
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "57 "
+views:        "60 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-22-Audio-jack-not-detected_-sound-playing-from-both-speaker_s-and-headphones.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line calendar
 created_date: 2017-03-03 11:10:55
 edit_date:    2022-03-11 00:10:36
-votes:        "55 "
+votes:        "56 "
 favorites:    
-views:        "34,904 "
+views:        "35,825 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-03-Is-there-a-command-to-display-a-Calendar-in-the-terminal_.md
 toc:          false
 navigation:   false

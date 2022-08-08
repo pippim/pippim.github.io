@@ -7,12 +7,12 @@ stack_url:    https://stackoverflow.com/q/70586588
 type:         Answer
 tags:         python
 created_date: 2022-01-05 00:33:35
-edit_date:    2022-01-30 19:39:30
-votes:        "8 "
+edit_date:    2022-06-29 11:37:55
+votes:        "9 "
 favorites:    
-views:        "246,445 "
+views:        "249,963 "
 accepted:     
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-01-05-How-to-print-out-status-bar-and-percentage_.md
 toc:          false
 navigation:   true
@@ -62,7 +62,7 @@ def percent_complete(step, total_steps, bar_width=60, title="", print_perc=True)
     part_ticks = num_ticks % 8      # Size of partial block (array index)
     
     disp = bar = ""                 # Blank out variables
-    bar += utf_8s[0] * full_ticks   # Add full blocks into Progress Bar
+    bar += utf_8s[0] * int(full_ticks)  # Add full blocks into Progress Bar
     
     # If part_ticks is zero, then no partial block, else append part char
     if part_ticks > 0:

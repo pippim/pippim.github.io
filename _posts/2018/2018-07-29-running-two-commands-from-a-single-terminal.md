@@ -10,9 +10,9 @@ created_date: 2018-07-29 02:07:35
 edit_date:    2018-07-29 02:13:27
 votes:        "2 "
 favorites:    
-views:        "1,153 "
+views:        "1,175 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-29-running-two-commands-from-a-single-terminal.md
 toc:          false
 navigation:   false

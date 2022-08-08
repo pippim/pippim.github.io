@@ -8,11 +8,11 @@ type:         Answer
 tags:         nvme
 created_date: 2018-02-23 01:08:23
 edit_date:    2020-06-12 14:37:07
-votes:        "9 "
+votes:        "10 "
 favorites:    
-views:        "23,727 "
+views:        "24,727 "
 accepted:     
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-23-How-can-I-check-the-NVME-specs.md
 toc:          false
 navigation:   false

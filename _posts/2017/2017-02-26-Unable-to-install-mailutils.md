@@ -10,9 +10,9 @@ created_date: 2017-02-26 16:22:38
 edit_date:    2017-02-26 19:36:49
 votes:        "2 "
 favorites:    
-views:        "15,295 "
+views:        "15,512 "
 accepted:     
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-26-Unable-to-install-mailutils.md
 toc:          false
 navigation:   false

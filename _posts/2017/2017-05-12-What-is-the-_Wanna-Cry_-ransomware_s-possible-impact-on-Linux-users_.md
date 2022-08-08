@@ -10,9 +10,9 @@ created_date: 2017-05-12 23:57:00
 edit_date:    2017-05-16 00:03:39
 votes:        "64 "
 favorites:    11
-views:        "49,115 "
+views:        "49,153 "
 accepted:     
-uploaded:     2022-08-07 18:03:28
+uploaded:     2022-08-07 18:07:53
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-12-What-is-the-_Wanna-Cry_-ransomware_s-possible-impact-on-Linux-users_.md
 toc:          false
 navigation:   false
