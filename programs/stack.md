@@ -78,7 +78,8 @@ for {{ site.title }} on GitHub Pages looked like this:
 {% include website_tree.txt %}
 {% endhighlight %}
 </div>
-<style> 
+<style>
+/* August 11, 2022 - Below is not working. All code lines are compressed */
 /* #line_draw.highlight pre, pre { line-height: 1 ! important; } */
 /* #line_draw { line-height: 1 ! important; } */
 /* .highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } */ 
@@ -1784,6 +1785,11 @@ exit 0
 <a id="hdr31"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr30">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr32" class="hdr-btn">Skip</a></div>
 
+
+### Old Code No Longer Used
+
+> **NOTE:** There is a new copy code block function and below functions
+> are no longer used.
 
 The `check_copy_code()` function below keeps track of where code
 blocks begin, how many lines are in the code block and
