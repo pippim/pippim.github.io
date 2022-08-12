@@ -1779,6 +1779,12 @@ exit 0
 ```
 ````
 
+---
+
+<a id="hdr31"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr30">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr32" class="hdr-btn">Skip</a></div>
+
+
 The `check_copy_code()` function below keeps track of where code
 blocks begin, how many lines are in the code block and
 what liquid command (if any) is inserted before the code
@@ -1840,9 +1846,6 @@ def check_copy_code(this_index):
 
     return inserted_command
 ```
-
-<a id="hdr31"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr30">ToS</a>  <a href="#hdr2">ToC</a></div>
 
 <a id="hdr32"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr31" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr33" class="hdr-btn">Skip</a></div>
@@ -1907,7 +1910,8 @@ async function copyRougeCode(event) {
     setTimeout(()=> {
         button.innerText = copyButtonLabel
     },1000)
-}```
+}
+```
 
 <a id="hdr34"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr33" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr35" class="hdr-btn">Skip</a></div>
