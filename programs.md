@@ -18,6 +18,8 @@ of charge and free of Ads too!
    caption="Tim-ta webpage header"
 %}
 
+**Runs in your browser!**
+
 Do you have a project with a fixed set of tasks and, each task 
 always takes the same amount of time?
 
@@ -35,6 +37,8 @@ the job done with each task started at the exact second!
    style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
    caption="Hyperlink Recipe Baker Example"
 %}
+
+**Runs in your browser!**
 
 Just click a few buttons to paste clipboard contents into the 
 *Hyperlink Recipe Baker*, or **HRB** for short, ingredient fields.
