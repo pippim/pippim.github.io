@@ -6,8 +6,25 @@ layout: default
 
 This page lists programs you can run on your browser from any 
 device and Linux programs by {{ site.title }}.  Use them free 
-of charge and free of Ads too!. No need to buy {{ site.title }}
-a coffee because too much is consumed whilst working already!
+of charge and free of Ads too!
+
+---
+
+## Tim-ta (Timed Tasks) - Run Set of Alarms Consecutively
+
+{% include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
+   alt="Tim-ta Introduction.png"
+   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
+   caption="Tim-ta webpage header"
+%}
+
+Do you have a project with a fixed set of tasks and, each task 
+always takes the same amount of time?
+
+Then ***Tim-ta*** (**Tim**ed-**ta**sks) will help you get
+the job done with each task started at the exact second!
+
+<a href="programs/tim-ta.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
@@ -76,24 +93,6 @@ includes the Top Ten Answers and the Posts by Tag nested accordion with
 the same time.
 
 <a href="programs/stack.html" style="font-size: 20px;">Read More...</a>
-
----
-
-## Tim-ta (Timed Tasks) - Run Set of Alarms Consecutively
-
-{% include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
-   alt="Tim-ta Introduction.png"
-   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
-   caption="Tim-ta webpage header"
-%}
-
-Do you have a project with a fixed set of tasks and, each task 
-always takes the same amount of time?
-
-Then ***Tim-ta*** (**Tim**ed-**ta**sks) will help you get
-the job done with each task started at the exact second!
-
-<a href="programs/tim-ta.html" style="font-size: 20px;">Read More...</a>
 
 ---
 
