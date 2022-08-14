@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "149 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-13-Looping-command-line-program.md
 toc:          false
 navigation:   false

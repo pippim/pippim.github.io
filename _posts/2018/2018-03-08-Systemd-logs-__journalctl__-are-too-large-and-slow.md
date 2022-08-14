@@ -10,9 +10,9 @@ created_date: 2018-03-08 01:13:36
 edit_date:    2022-06-13 06:36:01
 votes:        "98 "
 favorites:    
-views:        "54,077 "
+views:        "54,434 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Systemd-logs-__journalctl__-are-too-large-and-slow.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2017-08-24 14:56:49
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "4,656 "
+views:        "4,665 "
 accepted:     
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-24-Can_t-delete-empty-directories-with-strange-names.md
 toc:          false
 navigation:   false

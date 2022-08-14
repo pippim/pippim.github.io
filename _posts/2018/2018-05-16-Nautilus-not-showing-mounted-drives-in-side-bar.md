@@ -8,11 +8,11 @@ type:         Answer
 tags:         nautilus 18.04
 created_date: 2018-05-16 03:43:47
 edit_date:    2019-07-23 02:48:35
-votes:        "26 "
+votes:        "27 "
 favorites:    
-views:        "20,965 "
+views:        "20,996 "
 accepted:     
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-16-Nautilus-not-showing-mounted-drives-in-side-bar.md
 toc:          false
 navigation:   false

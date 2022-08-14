@@ -8,11 +8,11 @@ type:         Answer
 tags:         apt gui
 created_date: 2018-08-23 21:47:16
 edit_date:    2018-08-23 23:43:28
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "1,461 "
+views:        "1,469 "
 accepted:     
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-23-What-will-happen-if-I-install-the-same-package-twice_-for-example-the-ubuntu-desktop_.md
 toc:          false
 navigation:   false

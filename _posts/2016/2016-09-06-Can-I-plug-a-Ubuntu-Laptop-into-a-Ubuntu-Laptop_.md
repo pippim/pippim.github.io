@@ -10,9 +10,9 @@ created_date: 2016-09-06 02:03:35
 edit_date:    2016-10-10 20:16:09
 votes:        "4 "
 favorites:    1
-views:        "605 "
+views:        "607 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-06-Can-I-plug-a-Ubuntu-Laptop-into-a-Ubuntu-Laptop_.md
 toc:          false
 navigation:   false

@@ -119,8 +119,6 @@
 ├── index.md
 ├── LICENSE
 ├── programs.md
-├── test.md
-├── tim-ta.js
-└── tim-ta.md
+└── test.md
 
-26 directories, 98 files
+26 directories, 96 files

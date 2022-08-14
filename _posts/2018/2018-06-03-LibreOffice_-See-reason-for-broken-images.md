@@ -10,9 +10,9 @@ created_date: 2018-06-03 16:52:47
 edit_date:    2018-06-09 00:11:06
 votes:        "4 "
 favorites:    
-views:        "651 "
+views:        "652 "
 accepted:     
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-03-LibreOffice_-See-reason-for-broken-images.md
 toc:          false
 navigation:   false

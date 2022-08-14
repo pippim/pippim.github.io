@@ -10,9 +10,9 @@ created_date: 2017-02-03 01:12:04
 edit_date:    2020-06-12 14:37:07
 votes:        "25 "
 favorites:    
-views:        "186,372 "
+views:        "186,415 "
 accepted:     
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-03-_W_-Possible-missing-firmware-for-module-i915_bpo_-when-updating-initramfs.md
 toc:          true
 navigation:   true

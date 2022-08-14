@@ -8,11 +8,11 @@ type:         Answer
 tags:         suspend password lock-screen 18.04
 created_date: 2018-04-29 18:04:15
 edit_date:    2022-02-13 23:55:05
-votes:        "65 "
+votes:        "66 "
 favorites:    
-views:        "51,640 "
+views:        "51,742 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Disable-password-request-from-suspend-18.04.md
 toc:          false
 navigation:   false

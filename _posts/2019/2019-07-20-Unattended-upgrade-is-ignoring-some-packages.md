@@ -10,9 +10,9 @@ created_date: 2019-07-20 00:07:30
 edit_date:    2019-07-22 16:31:21
 votes:        "2 "
 favorites:    
-views:        "5,942 "
+views:        "5,984 "
 accepted:     
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-20-Unattended-upgrade-is-ignoring-some-packages.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2021-01-01 18:37:26
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "449,441 "
+views:        "450,462 "
 accepted:     
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-01-How-to-add-a-progress-bar-to-a-shell-script_.md
 toc:          false
 navigation:   false

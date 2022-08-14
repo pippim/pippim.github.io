@@ -10,9 +10,9 @@ created_date: 2017-02-12 16:45:03
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "576 "
+views:        "583 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-12-Considerations-for-using-__tmp_-directory-on-multi-user-systems.md
 toc:          false
 navigation:   false

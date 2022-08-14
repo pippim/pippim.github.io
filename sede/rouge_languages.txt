@@ -176,7 +176,6 @@ slim
 smalltalk
 smarty
 sml
-solidity
 sparql
 sqf
 sql

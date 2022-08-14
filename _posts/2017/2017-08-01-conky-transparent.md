@@ -10,9 +10,9 @@ created_date: 2017-08-01 01:14:46
 edit_date:    2020-06-12 14:37:07
 votes:        "13 "
 favorites:    
-views:        "19,488 "
+views:        "19,569 "
 accepted:     Accepted
-uploaded:     2022-08-07 18:07:53
+uploaded:     2022-08-14 16:55:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-01-conky-transparent.md
 toc:          false
 navigation:   false
