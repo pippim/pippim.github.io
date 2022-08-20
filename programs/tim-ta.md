@@ -211,6 +211,17 @@ will be updated.
 
 # Work In Progress
 
+**Tim-ta Version 2.0 Plans**
+
+August 20, 2022 planned enhancements:
+
+- Launch timers in a new window. 
+- New window is opened over parent browser window or at fixed position.
+- Running timer task name in window title bar.
+- Popup controls to override time remaining, next/previous timer.
+
+**The history of Tim-ta Version 1.0**
+
 Tim-ta development started April 11, 2022. A budget of two months
 has been given to this project.
 
@@ -255,13 +266,6 @@ June 25, 2022 update:
 
 - When alarm sounds, image of shaking alarm clock appears. Close window to end alarm sound early.
 - New code (HTML & CSS) for system wide buttons. 
-
-August 20, 2022 planned enhancements:
-
-- Launch timers in a new window. 
-- New window is opened over parent browser window or at fixed position.
-- Running timer task name in window title bar.
-- Popup controls to override time remaining, next/previous timer.
 
 ---
 
