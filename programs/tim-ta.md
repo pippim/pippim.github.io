@@ -24,10 +24,22 @@ no projects defined. After adding
 your own project(s), you can delete the sample project.
 </div>
 
-You can have an unlimited number of projects.
-Each project can have an unlimited number of Tasks.
+**KEY FEATURES:**
+
+- You can have an unlimited number of projects.
+- Each project can have an unlimited number of Tasks.
+- Optional Alarms, Desktop Notifications and Prompts when task ends.
+- All tasks can be repeated in what is called a set.
+- Prompts to begin each task and each (if any) set repetitions.
+- Upload custom sound files or choose from stock alarm sound files.
+- Download Tim-ta Configuration for backup or to send to other devices.
+- Upload Tim-ta Configuration from other devices or from friends.
+- Launch timers in new window (under development).
+- Progress bars for each task. Current timer in window title bar (under development).
 
 ---
+
+<!-- TABLE OF CONTENTS -->
 
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
@@ -244,6 +256,13 @@ June 25, 2022 update:
 - When alarm sounds, image of shaking alarm clock appears. Close window to end alarm sound early.
 - New code (HTML & CSS) for system wide buttons. 
 
+August 20, 2022 planned enhancements:
+
+- Launch timers in a new window. 
+- New window is opened over parent browser window or at fixed position.
+- Running timer task name in window title bar.
+- Popup controls to override time remaining, next/previous timer.
+
 ---
 
 <a id='hdr8'></a>
@@ -261,7 +280,7 @@ June 25, 2022 update:
 where each task is always a predetermined amount of time.
 For example, when doing the laundry it might be:
 
-16 minutes and 30 seconds for the wash cycle
+15 minutes and 30 seconds for the wash cycle
 
 13 minutes and 15 seconds for the rinse cycle
 
