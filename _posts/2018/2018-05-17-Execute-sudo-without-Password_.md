@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "841,045 "
 accepted:     
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Execute-sudo-without-Password_.md
 toc:          false
 navigation:   false

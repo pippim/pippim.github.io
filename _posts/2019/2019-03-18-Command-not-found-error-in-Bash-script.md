@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "5,505 "
 accepted:     
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-03-18-Command-not-found-error-in-Bash-script.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "32,890 "
 accepted:     
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-23-Alternative-to-Dragon-NaturallySpeaking_.md
 toc:          false
 navigation:   false

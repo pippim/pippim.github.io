@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "3,340 "
 accepted:     
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-16-How-to-run-script-after-resuming-from-sleep_.md
 toc:          false
 navigation:   false

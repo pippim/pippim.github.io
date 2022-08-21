@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "315 "
 accepted:     Accepted
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-01-WSL_-Is-there-a-conditional-to-detect-_Open-Linux-Shell-Here_-case_.md
 toc:          false
 navigation:   false

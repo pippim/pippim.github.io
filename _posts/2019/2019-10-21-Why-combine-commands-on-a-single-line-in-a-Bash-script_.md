@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "21,957 "
 accepted:     
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-21-Why-combine-commands-on-a-single-line-in-a-Bash-script_.md
 toc:          false
 navigation:   false

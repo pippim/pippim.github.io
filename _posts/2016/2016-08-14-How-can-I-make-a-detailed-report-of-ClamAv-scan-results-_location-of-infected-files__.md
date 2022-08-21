@@ -12,7 +12,7 @@ votes:        "8 "
 favorites:    
 views:        "34,880 "
 accepted:     
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-14-How-can-I-make-a-detailed-report-of-ClamAv-scan-results-_location-of-infected-files__.md
 toc:          false
 navigation:   false

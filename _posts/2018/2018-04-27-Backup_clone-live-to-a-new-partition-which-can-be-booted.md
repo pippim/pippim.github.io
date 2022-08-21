@@ -12,7 +12,7 @@ votes:        "31 "
 favorites:    
 views:        "16,430 "
 accepted:     Accepted
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-27-Backup_clone-live-to-a-new-partition-which-can-be-booted.md
 toc:          true
 navigation:   true

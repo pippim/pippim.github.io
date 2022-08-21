@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,861 "
 accepted:     Accepted
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-05-How-to-determine-which-python-modules-were-installed-with-_pip_-and-which-with-_apt__.md
 toc:          false
 navigation:   false

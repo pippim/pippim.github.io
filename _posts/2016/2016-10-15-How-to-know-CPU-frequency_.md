@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "6,340 "
 accepted:     
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-15-How-to-know-CPU-frequency_.md
 toc:          false
 navigation:   false

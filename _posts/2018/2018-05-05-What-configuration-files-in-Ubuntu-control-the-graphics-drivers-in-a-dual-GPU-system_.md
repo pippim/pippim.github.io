@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "229 "
 accepted:     Accepted
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-05-What-configuration-files-in-Ubuntu-control-the-graphics-drivers-in-a-dual-GPU-system_.md
 toc:          false
 navigation:   false

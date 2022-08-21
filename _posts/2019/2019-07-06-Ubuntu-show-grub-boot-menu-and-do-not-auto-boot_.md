@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "1,440 "
 accepted:     Accepted
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-06-Ubuntu-show-grub-boot-menu-and-do-not-auto-boot_.md
 toc:          false
 navigation:   false

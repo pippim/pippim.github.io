@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,795 "
 accepted:     Accepted
-uploaded:     2022-08-14 16:55:34
+uploaded:     2022-08-21 17:57:54
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-04-Prevent-_dd_-from-destroying-SSD-or-HDD.md
 toc:          false
 navigation:   false
