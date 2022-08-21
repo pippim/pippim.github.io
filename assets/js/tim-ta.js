@@ -960,10 +960,10 @@ function tabRunTimersDetail(i) {
 
     var milliTask = secondsTask * 1000
     var dateTask = new Date(milliTask)
-    console.log("milliTask:", milliTask, typeof milliTask, "dateTask:", dateTask)
-    console.log("secondsTask:", secondsTask, "secondsSet:", secondsSet,
-                "secondsAllSets:", secondsAllSets,
-                "dateTask.toISOString():", dateTask.toISOString().substr(11, 8))
+    //console.log("milliTask:", milliTask, typeof milliTask, "dateTask:", dateTask)
+    //console.log("secondsTask:", secondsTask, "secondsSet:", secondsSet,
+    //            "secondsAllSets:", secondsAllSets,
+    //            "dateTask.toISOString():", dateTask.toISOString().substr(11, 8))
 
     /* hhmmss fields are not used. May be used for timer overrides */
     hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
