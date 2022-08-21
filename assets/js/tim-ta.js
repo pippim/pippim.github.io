@@ -929,7 +929,13 @@ function paintRunTimers(i) {
     ttaRunElm.scrollIntoView();  // Scroll top level element into view
     scrSetSize();  // Call on document load. Must also call when RunTimers is painted
 
-    var runWindow = window.open('','runWindowElm','directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=400,height=350');
+
+    /* Create popup window. */
+    var runWindow = window.open('', '_blank',
+        'directories=no,titlebar=no,toolbar=no,location=no,' +
+        'status=no,menubar=no,scrollbars=no,resizable=no,width=400,height=350');
+    runWindow.focus();
+    runWindow.document.title = "Now I've changed it"
     console.log("popup window runWindow.id", runWindow.id)
     runAllTimers();  // Run through all timers
     // Get to this point instantly while runAllTimers() runs asynchronously
