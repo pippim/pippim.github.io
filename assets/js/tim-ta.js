@@ -931,13 +931,14 @@ function paintRunTimers(i) {
     runWindow.focus()
     runWindow.document.title = "Now I've changed it"
     // Create parent <div>
-    let div = runWindow.document.createElement("div");
-    div.id = "div_id" ;
-    div.className = "div_class";
-    div.style = "background-color: red;";
-    div.style.width = "100px";
-    div.style.height = "100px";
-    runWindow.document.body.appendChild(div);
+    let div = runWindow.document.createElement("div")
+    div.id = "div_id"
+    div.className = "div_class"
+    div.style = "background-color: red;"
+    div.style.width = "100px"
+    div.style.height = "100px"
+    runWindow.document.body.appendChild(div)
+    div.innerHTML = html  // Set top-level's element with new HTML
 
     ttaRunElm.innerHTML = html  // Set top-level's element with new HTML
     initTimersAfterDOM();  // Initialize elements for table row IDs
