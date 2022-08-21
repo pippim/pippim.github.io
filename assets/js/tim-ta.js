@@ -1256,6 +1256,7 @@ async function runAllTimers() {
 
 function endAllTimers() {
     // TODO: Restore ttaElm from oldElm
+    ttaRunElm = null
 }
 
 function updateRunTimer(myTable, entry) {
@@ -1291,7 +1292,7 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
 
 async function testAllTimers() {
     // Speed up 10 times for previewing.
-    // TODO: If totalAllTimersTime for more than 1 minute, confirm intent
+    // If not already sped up and > 30 seconds passed, confirm intent
     if (sleepMillis == 1000 && totalAllTimersTime > 30) {
         var msg = "More than 30 seconds elapsed.<br>";
         msg += "Are you sure you want to 10x speed?";
@@ -2741,7 +2742,7 @@ function msgqClear() {
 var popResponse;    // true/false value
 var popYesNoId;     // Assumes only 1 yes/no window appears at a time...
 
-async function popYesNo(msg_type, msg, error_id) {
+async function popYesNo(msg_type, msg, error_id, overrideElm) {
     /* Prompt with Yes/No buttons, return true if Yes. */
     popResponse = false;
     var arrBtn = [
@@ -2749,8 +2750,16 @@ async function popYesNo(msg_type, msg, error_id) {
         "response_yes", "Yes", "Proceed", "popYes()"
     ]
 
+    // If output passed, don't display message but return it
+    var trgElm = ttaElm
+    if (typeof overrideElm !== 'undefined') {
+        trgElm = overrideElm
+        console.log("Using overrideElm.id:", overrideElm.id)
+    }
+
     // Create our prompt window with two buttons
-    popYesNoId = popCreateUniqueError(msg_type, msg, error_id, "elm", ttaElm, arrBtn);
+    popYesNoId = popCreateUniqueError(msg_type, msg, error_id,
+                                      "elm", overrideElm, arrBtn);
     var elmWindow = document.getElementById(popYesNoId);
     if (popYesNoId == null) { return false; }
 
