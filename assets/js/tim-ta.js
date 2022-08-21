@@ -108,6 +108,7 @@ var tabTasksTitle = "View/Add/Edit/Delete Tasks";
 var ttaElm, currentTable, currentRoot, currentRow, currentMode, currentForm;
 
 function ttaRunConfiguration (parentElm) {
+    // Top-level function called by main webpage
     ttaElm = parentElm;
     // Setup border color #155799 is Cayman Blue
     ttaElm.style.cssText = `
@@ -1296,7 +1297,8 @@ async function testAllTimers() {
     if (sleepMillis == 1000 && totalAllTimersTime > 30) {
         var msg = "More than 30 seconds elapsed.<br>";
         msg += "Are you sure you want to 10x speed?";
-        var response = await popYesNo("w", msg, "timer_override");
+        // Use ttaRunElm for separate popup window rather than main webpage
+        var response = await popYesNo("w", msg, "timer_override", ttaRunElm);
         if (!response) { return }
     }
 
@@ -1310,7 +1312,8 @@ async function exitAllTimers() {
     if (cancelAllTimers == false && totalAllTimersTime > 30) {
         var msg = "More than 30 seconds elapsed.<br>";
         msg += "Are you sure you want to exit?";
-        var response = await popYesNo("w", msg, "timer_override");
+        // Use ttaRunElm for separate popup window rather than main webpage
+        var response = await popYesNo("w", msg, "timer_override", ttaRunElm);
         if (!response) { return }
     }
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
