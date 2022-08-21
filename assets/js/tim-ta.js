@@ -8,6 +8,7 @@
     ttaTask into "check Buffers". If they are different
     then advise user and force reread.
 
+    TODO: Run timer in new window flag
 */
 
 {% include draggable-window.js %}
@@ -23,7 +24,7 @@ function scrSetSize() {
     if (scrWidth < 641) { scrSmall = true; }
     else if (scrWidth > 1007) { scrLarge = true; }
     else { scrMedium = true; }
-    //console.log("scr Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
+    //console.log("scrXxxx: Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
 
     const x = document.getElementById("content");  /* Exists in every _layout */
     const y = x.getElementsByTagName("progress");  /* To override styling of progress { */
@@ -75,7 +76,7 @@ window.onresize = function() {
 // | Listen | Up | Down | Edit | Delete | Task Name | Duration |
 // +--------+----+------+------+--------+-----------+----------+
 
-// SMALL VERSION only Listen & Edit controls AND drop Duration
+// Small screen contains Listen, Edit, Controls, Duration
 // HTML Codes for buttons
 
 var tabListenSym = "&#9835;"; // options x1f50a (speaker) 9835 (notes)
@@ -460,7 +461,7 @@ function tabProjectDetail(i) {
     return html += "</tr>\n";
 }  // End of tabProjectDetail(i)
 
-/* These buttons are for actions/controls box used on mobiles  jump */
+/* These buttons are for actions/controls box used on small screens */
 function buildProjectButtons (i) {
     var tabProjectButtons = [
         "project_up", tabUpSym, tabUpTitle, "clickUp(" + i + ")",
@@ -847,14 +848,16 @@ function clickAddProject() {
 // Global variables for Task countdown timers
 var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets
 var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock
-var pauseAllTimers, cntTimedTasks
+var pauseAllTimers, cntTimedTasks, ttaRunElm
 
 function paintRunTimers(i) {
+    // TODO: Run in popup window. ttaElm needs to be remapped to runElm
     // Run Project - Countdown all tasks. Scroll into view as needed.
     // When i null called from Tasks Table footer, else called from Projects Table.
     msgqClear();
     if (i != null) { clickCommon(i); }  // load selected ttaProject
     secondsTask = secondsSet = secondsAllSets = cntTimedTasks = 0
+    ttaRunElm = ttaElm  // Default to no pop-up window, runs on main webpage
     allTimers = {};
     sleepMillis = 1000;
     cancelAllTimers = false;
@@ -920,12 +923,11 @@ function paintRunTimers(i) {
 
     html += ttaNameColumnStyle();  // Set name column width
 
-    ttaElm.innerHTML = html;  // Set top-level's element with new HTML
+    ttaRunElm.innerHTML = html;  // Set top-level's element with new HTML
     initTimersAfterDOM();  // Initialize elements for table row IDs
-    ttaElm.scrollIntoView();  // Scroll top level element into view
+    ttaRunElm.scrollIntoView();  // Scroll top level element into view
     scrSetSize();  // Call on document load. Must also call when RunTimers is painted
 
-    // TODO: prompt to begin running
     runAllTimers();  // Run through all timers
     // Get to this point instantly while runAllTimers() runs asynchronously
 }  // End of paintRunTimers(i)
@@ -1252,6 +1254,10 @@ async function runAllTimers() {
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
 
+function endAllTimers() {
+    // TODO: Restore ttaElm from oldElm
+}
+
 function updateRunTimer(myTable, entry) {
     if (pauseAllTimers) { return; }
     entry.progress += 1
@@ -1447,7 +1453,7 @@ function swapTask(source, target) {
 }
 
 function flashGrey(id) {
-    // Flash grey for row just moved then remove after 3 seconds  jump
+    // Flash grey for row just moved then remove after 3 seconds
     var elm = document.getElementById(id);
     setTimeout(function(){
         elm.classList.remove("flash");
