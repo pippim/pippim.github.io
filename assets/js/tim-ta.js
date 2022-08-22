@@ -883,7 +883,6 @@ function paintRunTimers(i) {
     const cnt = ttaProject.arrTasks.length;
     const strHuman = cntHuman(cnt, "Task");
     var html = ttaProject.project_name + " - Run timer for " + strHuman
-    // html = htmlSetContainer(html);  // Why was this working commented out???
     html = htmlSetContainer(html);
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
@@ -933,8 +932,8 @@ function paintRunTimers(i) {
     // Create parent <div>
     let div = runWindow.document.createElement("div")
     div.id = "runWindowId"
-    div.className = "div_class"
-    div.style = "background-color: red;"
+    //div.className = "tta-table"
+    //div.style = "background-color: red;"
     //div.style.width = "100px"
     //div.style.height = "100px"
     runWindow.document.body.appendChild(div)
