@@ -932,10 +932,7 @@ function paintRunTimers(i) {
     // Create parent <div>
     let div = runWindow.document.createElement("div")
     div.id = "runWindowId"
-    //div.className = "tta-table"
-    //div.style = "background-color: red;"
-    //div.style.width = "100px"
-    //div.style.height = "100px"
+    runWindow.document.head.appendChild(ttaStyleSheet)
     runWindow.document.body.appendChild(div)
     div.innerHTML = html  // Set top-level's element with new HTML
 
