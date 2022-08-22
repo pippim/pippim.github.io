@@ -932,7 +932,8 @@ function paintRunTimers(i) {
     // Create parent <div>
     let div = runWindow.document.createElement("div")
     div.id = "runWindowId"
-    runWindow.document.head.appendChild(ttaStyleSheet)
+    //runWindow.document.head.appendChild(ttaStyleSheet)
+    // Above causes main webpage formatting to disappear?
     runWindow.document.body.appendChild(div)
     div.innerHTML = html  // Set top-level's element with new HTML
 
