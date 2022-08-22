@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,562 "
 accepted:     Accepted
-uploaded:     2022-08-21 17:57:54
+uploaded:     2022-08-21 18:02:02
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-14-Would-I-install-android-studio-with-2-GB-RAM.md
 toc:          false
 navigation:   false
