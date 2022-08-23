@@ -131,13 +131,14 @@ function ttaRunConfiguration (parentElm) {
     if (cnt < 1) { ttaNewConfig(); paintTasksTable(); }
 }
 
-var ttaStyleSheet;
+var ttaStyleSheet, styles
+//var styles
 
 function ttaApplyGlobalStyles() {
     // Your CSS as text: https://stackoverflow.com/a/707580/6929343
     // root colors: Cayman green, Cayman blue, Honeydew
     // name-column fluctuates based on currentTable and scrSize
-    var styles = `
+    styles = `
 
 :root {
     --bg-color: #159957;
