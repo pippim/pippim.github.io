@@ -851,6 +851,8 @@ var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSet
 var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock
 var pauseAllTimers, cntTimedTasks, ttaRunElm
 
+var ttaRunStyleSheet;  // Clone of ttaStyleSheet
+
 function paintRunTimers(i) {
     // TODO: Run in popup window. ttaElm needs to be remapped to runElm
     // Run Project - Countdown all tasks. Scroll into view as needed.
@@ -934,6 +936,13 @@ function paintRunTimers(i) {
     div.id = "runWindowId"
     //runWindow.document.head.appendChild(ttaStyleSheet)
     // Above causes main webpage formatting to disappear?
+    // Hopefully below creates shadow definition that doesn't clash with original
+    // Clone of ttaStyleSheet
+    ttaRunStyleSheet = runWindow.document.createElement("style");
+    // 'styles' is shared with main webpage
+    ttaRunStyleSheet.innerText = styles;
+    runWindow.document.head.appendChild(ttaRunStyleSheet);
+
     runWindow.document.body.appendChild(div)
     div.innerHTML = html  // Set top-level's element with new HTML
 
