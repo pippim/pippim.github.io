@@ -928,7 +928,7 @@ function paintRunTimers(i) {
 
     scrSetSize();  // Call on document load. Must also call when RunTimers is painted
 
-    setRunWindow()
+    setRunWindow(html)
 
     ttaRunElm.innerHTML = html  // Set top-level's element with new HTML
     initTimersAfterDOM();  // Initialize elements for table row IDs
@@ -938,7 +938,7 @@ function paintRunTimers(i) {
     // Get to this point instantly while runAllTimers() runs asynchronously
 }  // End of paintRunTimers(i)
 
-function setRunWindow() {
+function setRunWindow(html) {
     /* Create popup window when not on large screen and option on. */
     runWindow = window.open('', '_blank',
         'directories=no,titlebar=no,toolbar=no,location=no,' +
