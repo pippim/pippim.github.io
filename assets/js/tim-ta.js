@@ -132,7 +132,7 @@ function ttaRunConfiguration (parentElm) {
 }
 
 var ttaStyleSheet, styles
-//var styles
+// 'styles' is shared with ttaRunStyleSheet
 
 function ttaApplyGlobalStyles() {
     // Your CSS as text: https://stackoverflow.com/a/707580/6929343
@@ -852,7 +852,7 @@ var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSet
 var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock
 var pauseAllTimers, cntTimedTasks, ttaRunElm
 
-var ttaRunStyleSheet;  // Clone of ttaStyleSheet
+var runWindow  // main webpage window or launched popup window
 
 function paintRunTimers(i) {
     // TODO: Run in popup window. ttaElm needs to be remapped to runElm
@@ -926,8 +926,10 @@ function paintRunTimers(i) {
 
     html += ttaNameColumnStyle();  // Set name column width
 
-    /* Create popup window. */
-    var runWindow = window.open('', '_blank',
+    scrSetSize();  // Call on document load. Must also call when RunTimers is painted
+
+    /* Create popup window when not on large screen and option on. */
+    runWindow = window.open('', '_blank',
         'directories=no,titlebar=no,toolbar=no,location=no,' +
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
     runWindow.focus()
@@ -939,7 +941,7 @@ function paintRunTimers(i) {
     // Above causes main webpage formatting to disappear?
     // Hopefully below creates shadow definition that doesn't clash with original
     // Clone of ttaStyleSheet
-    ttaRunStyleSheet = runWindow.document.createElement("style");
+    var ttaRunStyleSheet = runWindow.document.createElement("style");
     // 'styles' is shared with main webpage
     ttaRunStyleSheet.innerText = styles;
     runWindow.document.head.appendChild(ttaRunStyleSheet);
@@ -950,7 +952,6 @@ function paintRunTimers(i) {
     ttaRunElm.innerHTML = html  // Set top-level's element with new HTML
     initTimersAfterDOM();  // Initialize elements for table row IDs
     ttaRunElm.scrollIntoView()  // Scroll top level element into view
-    scrSetSize();  // Call on document load. Must also call when RunTimers is painted
 
     runAllTimers();  // Run through all timers
     // Get to this point instantly while runAllTimers() runs asynchronously
