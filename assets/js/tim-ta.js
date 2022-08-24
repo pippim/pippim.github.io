@@ -928,6 +928,17 @@ function paintRunTimers(i) {
 
     scrSetSize();  // Call on document load. Must also call when RunTimers is painted
 
+    setRunWindow()
+
+    ttaRunElm.innerHTML = html  // Set top-level's element with new HTML
+    initTimersAfterDOM();  // Initialize elements for table row IDs
+    ttaRunElm.scrollIntoView()  // Scroll top level element into view
+
+    runAllTimers();  // Run through all timers
+    // Get to this point instantly while runAllTimers() runs asynchronously
+}  // End of paintRunTimers(i)
+
+function setRunWindow() {
     /* Create popup window when not on large screen and option on. */
     runWindow = window.open('', '_blank',
         'directories=no,titlebar=no,toolbar=no,location=no,' +
@@ -937,9 +948,6 @@ function paintRunTimers(i) {
     // Create parent <div>
     let div = runWindow.document.createElement("div")
     div.id = "runWindowId"
-    //runWindow.document.head.appendChild(ttaStyleSheet)
-    // Above causes main webpage formatting to disappear?
-    // Hopefully below creates shadow definition that doesn't clash with original
     // Clone of ttaStyleSheet
     var ttaRunStyleSheet = runWindow.document.createElement("style");
     // 'styles' is shared with main webpage
@@ -948,14 +956,7 @@ function paintRunTimers(i) {
 
     runWindow.document.body.appendChild(div)
     div.innerHTML = html  // Set top-level's element with new HTML
-
-    ttaRunElm.innerHTML = html  // Set top-level's element with new HTML
-    initTimersAfterDOM();  // Initialize elements for table row IDs
-    ttaRunElm.scrollIntoView()  // Scroll top level element into view
-
-    runAllTimers();  // Run through all timers
-    // Get to this point instantly while runAllTimers() runs asynchronously
-}  // End of paintRunTimers(i)
+}
 
 function tabRunTimersHeading() {
     // Format table heading for RunTimers form
