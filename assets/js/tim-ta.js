@@ -2983,18 +2983,19 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     p['active'] = "true";
 
     var html = "";
+    var win = window  // Default to "normal" main webpage
+    if (runWindow !== null) win = runWindow  // Working in popup Window, not main
     html += popBuildHtml(msg_type, msg, popIndex, buttons);
     html += popBuildStyle(msg_type)  // Title bar red, green, blue, etc.
     p['elmWindow'].innerHTML = html;
-    if (runWindow !== null) runWindow.document.body.appendChild(p['elmWindow'])
-    else document.body.appendChild(p['elmWindow']);  // In main webpage
+    win.document.body.appendChild(p['elmWindow'])
 
     if (p['elmLink'] == null) {
         //console.log("p['elmLink'] not passed. Setting to ttaElm");
         p['elmLink'] = ttaElm;
     }
 
-    var elmDraggable = document.getElementById(p['idWindow']);  // ID inside <div>
+    var elmDraggable = win.document.getElementById(p['idWindow']);  // ID inside <div>
     let rect = p['elmLink'].getBoundingClientRect();
     var oldX = parseInt(rect.left + window.scrollX);  // Get link (anchor reference point)
     var oldY = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
@@ -3133,7 +3134,7 @@ function popBuildScript() {
     // Apply 600ms close time when close button clicked. Matches
     // 0.3 s fade out applied by .closeBtn {} style
     var html = "<script>\n";
-    html += 'var close = document.getElementsByClassName("closeBtn");\n';
+    html += 'var close = win.document.getElementsByClassName("closeBtn");\n';
     html += 'var i;\n';
 
     html += 'for (i = 0; i < close.length; i++) {\n';
