@@ -951,7 +951,7 @@ function setRunWindow(html) {
     link.rel = "stylesheet"
     //link.href = "/assets/css/syntax.scss"
     link.href = "{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
-    // runWindow.head.appendChild(link);  // Getting blank window?
+    runWindow.document.head.appendChild(link)  // Getting blank window?
     // Create parent <div>
     let div = runWindow.document.createElement("div")
     div.id = "runWindowId"
@@ -962,7 +962,6 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet);
 
     runWindow.document.body.appendChild(div)
-    runWindow.head.appendChild(link);  // link stylesheet after div
     div.innerHTML = html  // Set top-level's element with new HTML
 }
 
