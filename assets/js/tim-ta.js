@@ -962,6 +962,7 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet);
 
     runWindow.document.body.appendChild(div)
+    runWindow.head.appendChild(link);  // link stylesheet after div
     div.innerHTML = html  // Set top-level's element with new HTML
 }
 
