@@ -947,7 +947,8 @@ function setRunWindow(html) {
     runWindow.document.title = "Now I've changed it"
     // Create link in <head> section <link>
     var link = runWindow.document.createElement('link');
-    link.href = '<link rel="stylesheet" href="/assets/css/syntax.scss">';
+    // link.href = '<link rel="stylesheet" href="/assets/css/syntax.scss">';
+    link.href = '/assets/css/syntax.scss';
     runWindow.head.appendChild(link);
     // Create parent <div>
     let div = runWindow.document.createElement("div")
