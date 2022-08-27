@@ -945,16 +945,19 @@ function setRunWindow(html) {
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
     runWindow.focus()
     runWindow.document.title = "Now I've changed it"
+
     // Create link in <head> section <link>
     var link = runWindow.document.createElement('link');
-    // link.href = '<link rel="stylesheet" href="/assets/css/syntax.scss">';
     link.rel = "stylesheet"
-    //link.href = "/assets/css/syntax.scss"
     link.href = "{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
-    runWindow.document.head.appendChild(link)  // Getting blank window?
+    runWindow.document.head.appendChild(link)  // Try to get arial font
+    link.href = "/_sass/jekyll-theme-cayman.scss"
+    runWindow.document.head.appendChild(link)  // Try to get arial font
+
     // Create parent <div>
     let div = runWindow.document.createElement("div")
     div.id = "runWindowId"
+
     // Clone of ttaStyleSheet
     var ttaRunStyleSheet = runWindow.document.createElement("style");
     // 'styles' is shared with main webpage
