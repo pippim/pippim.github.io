@@ -948,7 +948,7 @@ function setRunWindow(html) {
         'directories=no,titlebar=no,toolbar=no,location=no,' +
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
     runWindow.focus()
-    runWindow.document.title = "Now I've changed it"
+    runWindow.document.title = "Tim-ta run project " + ttaProject.project_name
 
     // Create link in <head> section <link> (Not working for arial font?)
     var link = runWindow.document.createElement('link')
