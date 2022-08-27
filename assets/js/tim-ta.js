@@ -945,14 +945,17 @@ function setRunWindow(html) {
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
     runWindow.focus()
     runWindow.document.title = "Now I've changed it"
+    // Create link in <head> section <link>
+    var link = runWindow.document.createElement('link');
+    link.href = '<link rel="stylesheet" href="/assets/css/syntax.scss">';
+    runWindow.head.appendChild(link);
     // Create parent <div>
     let div = runWindow.document.createElement("div")
     div.id = "runWindowId"
     // Clone of ttaStyleSheet
     var ttaRunStyleSheet = runWindow.document.createElement("style");
     // 'styles' is shared with main webpage
-    var links = '<head><link rel="stylesheet" href="/assets/css/syntax.scss"></head>'
-    ttaRunStyleSheet.innerText = links + styles;
+    ttaRunStyleSheet.innerText = styles;
     runWindow.document.head.appendChild(ttaRunStyleSheet);
 
     runWindow.document.body.appendChild(div)
