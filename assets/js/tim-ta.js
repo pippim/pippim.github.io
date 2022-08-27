@@ -939,15 +939,19 @@ function paintRunTimers(i) {
 }  // End of paintRunTimers(i)
 
 function setRunWindow(html) {
-    /* Create popup window when not on large screen and option on. */
+    /* Create popup window when on large screen and option on. */
+    if (!scrLarge) {
+        runWindow = window
+        return
+    }
     runWindow = window.open('', '_blank',
         'directories=no,titlebar=no,toolbar=no,location=no,' +
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
     runWindow.focus()
     runWindow.document.title = "Now I've changed it"
 
-    // Create link in <head> section <link>
-    var link = runWindow.document.createElement('link');
+    // Create link in <head> section <link> (Not working for arial font?)
+    var link = runWindow.document.createElement('link')
     link.rel = "stylesheet"
     link.href = "{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
     runWindow.document.head.appendChild(link)  // Try to get arial font
@@ -959,10 +963,10 @@ function setRunWindow(html) {
     div.id = "runWindowId"
 
     // Clone of ttaStyleSheet
-    var ttaRunStyleSheet = runWindow.document.createElement("style");
+    var ttaRunStyleSheet = runWindow.document.createElement("style")
     // 'styles' is shared with main webpage
-    ttaRunStyleSheet.innerText = styles;
-    runWindow.document.head.appendChild(ttaRunStyleSheet);
+    ttaRunStyleSheet.innerText = styles
+    runWindow.document.head.appendChild(ttaRunStyleSheet)
 
     runWindow.document.body.appendChild(div)
     div.innerHTML = html  // Set top-level's element with new HTML
