@@ -1202,7 +1202,7 @@ async function runAllTimers() {
     if (typeof runWindow !== 'undefined')
         if (runWindow != null) win = runWindow  // Working in popup Window, not main
     var timeLast = new Date().getTime();
-    var myTable = document.getElementById("tabRunTimers")
+    var myTable = win.document.getElementById("tabRunTimers")
     var index = 0;
     var id = "tabTimer" + index
     var entry = allTimers[id];  // A variable name easier to read
