@@ -2986,7 +2986,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     html += popBuildHtml(msg_type, msg, popIndex, buttons);
     html += popBuildStyle(msg_type)  // Title bar red, green, blue, etc.
     p['elmWindow'].innerHTML = html;
-    document.body.appendChild(p['elmWindow']);  // Created <div> element
+    if (runWindow !== null) runWindow.document.body.appendChild(p['elmWindow'])
+    else document.body.appendChild(p['elmWindow']);  // In main webpage
 
     if (p['elmLink'] == null) {
         //console.log("p['elmLink'] not passed. Setting to ttaElm");
