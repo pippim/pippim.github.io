@@ -1506,7 +1506,8 @@ function swapTask(source, target) {
 
 function flashGrey(id) {
     // Flash grey for row just moved then remove after 3 seconds
-    var elm = document.getElementById(id);
+    var win = getWin()
+    var elm = win.document.getElementById(id);
     setTimeout(function(){
         elm.classList.remove("flash");
     }, 2000);
@@ -1785,8 +1786,9 @@ function setSelectInput(data) {
 
 function initSelectsAfterDOM() {
     // After innerHTML is set we can bet the elements and set sources
+    var win = getWin()
     for (const name of Object.keys(inpSelects)) {
-        element = document.getElementById(inpSelects[name].id);
+        element = win.document.getElementById(inpSelects[name].id);
         inpSelects[name].elm = element;
         //console.log("initSelectsAfterDOM() name/value:", name, inpSelects[name].value)
     }
@@ -1978,7 +1980,8 @@ function validateInput() {
 
 function getInputValues() {
     // Get input field values from <form> for "text" which includes number strings
-    var elements = document.getElementById(currentForm).elements
+    var win = getWin()
+    var elements = win.document.getElementById(currentForm).elements
     var formValues = {}
     for (var i = 0; i < elements.length; i++) {
         var item = elements.item(i)
@@ -2143,8 +2146,9 @@ function buildSwitch(name, bool, mode) {
 function initSwitchesAfterDOM() {
     // After innerHTML is set we can bet the elements and set sources
     //console.log("initSwitchesAfterDOM()");
+    var win = getWin()
     for (const name of Object.keys(inpSwitches)) {
-        element = document.getElementById(inpSwitches[name].id);
+        element = win.document.getElementById(inpSwitches[name].id);
         inpSwitches[name].elm = element;
         element.addEventListener('click', () => { toggleSwitch(name); });
         setSwitch(name, inpSwitches[name].value);
@@ -2795,6 +2799,7 @@ var popYesNoId;     // Assumes only 1 yes/no window appears at a time...
 
 async function popYesNo(msg_type, msg, error_id, overrideElm) {
     /* Prompt with Yes/No buttons, return true if Yes. */
+    var win = getWin()
     popResponse = false;
     var arrBtn = [
         "response_no", "No", "Don't do it", "popNo()",
@@ -2811,7 +2816,7 @@ async function popYesNo(msg_type, msg, error_id, overrideElm) {
     // Create our prompt window with two buttons
     popYesNoId = popCreateUniqueError(msg_type, msg, error_id,
                                       "elm", overrideElm, arrBtn);
-    var elmWindow = document.getElementById(popYesNoId);
+    var elmWindow = win.document.getElementById(popYesNoId);
     if (popYesNoId == null) { return false; }
 
     while(true) {
@@ -2827,13 +2832,14 @@ function popNo() { popResponse = false; popClose(popYesNoId); }
 
 async function popPrompt(msg_type, msg, error_id) {
     /* Display message and wait for acknowledgement. */
+    var win = getWin()
     var idWindow = popCreate(msg_type, msg, error_id);
-    var elmWindow = document.getElementById(idWindow);
+    var elmWindow = win.document.getElementById(idWindow);
 
     while(true) {
         await sleep(50);
         // When a popCreate window is closed, it disappears after 600ms
-        if (document.body.contains(elmWindow)) { continue; }
+        if (win.document.body.contains(elmWindow)) { continue; }
         return;  // Clicked X to close, or clicked "OK" & element removed
     }
 }  // End of async function popPrompt(msg_type, msg, error_id)
@@ -2886,7 +2892,8 @@ function popRegisterClose(idWindow, callback) {
 
 function popClose(idWindow) {
     // Close window by ID name
-    elmWindow = document.getElementById(idWindow);
+    var win = getWin()
+    elmWindow = win.document.getElementById(idWindow);
     if (elmWindow == null) {
         alert("popClose() received bad idWindow: " + idWindow);
         return;
@@ -2924,7 +2931,14 @@ function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm,
     }
 }
 
-function popCreate(msg_type, msg, error_id, id_elm_type, id_elm, 
+function getWin() {
+    var win = window  // Default to "normal" main webpage
+    if (typeof runWindow !== 'undefined')
+        if (runWindow != null) win = runWindow  // Working in popup Window, not main
+    return win
+}
+
+function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
                    buttons, output) {
     /*  MAJOR FUNCTION to display error messages (and control boxes)
         msg_type = "e" red error message
@@ -2946,6 +2960,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
 
         RETURNS the window element created
     */
+    var win = getWin()
     // Sanity checks - After writing your development code you can delete
     // these prior to migration to production environment.
     if (arguments.length < 2) {
@@ -2970,7 +2985,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
             return;
         }
         // Rewrite id in elm parameter with actual element.
-        elm = document.getElementById(id_elm);
+        elm = win.document.getElementById(id_elm);
     }
 
     // If output passed, don't display message but return it
@@ -2981,7 +2996,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
 
     var p = {};
     p['idWindow'] = "popIndex" + popIndex;
-    p['elmWindow'] = document.createElement('div');
+    p['elmWindow'] = win.document.createElement('div');
     //p['elmWindow'] = document.createElement('template');  // BROKEN
     p['msg_type'] = msg_type;  // e, w, i or s
     p['msg'] = msg;  // Might contain HTML. Doubles as alarm image filename
@@ -2992,9 +3007,6 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     p['active'] = "true";
 
     var html = "";
-    var win = window  // Default to "normal" main webpage
-    if (typeof runWindow !== 'undefined')
-        if (runWindow != null) win = runWindow  // Working in popup Window, not main
     html += popBuildHtml(msg_type, msg, popIndex, buttons);
     html += popBuildStyle(msg_type)  // Title bar red, green, blue, etc.
     p['elmWindow'].innerHTML = html;
