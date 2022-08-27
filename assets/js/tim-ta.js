@@ -951,7 +951,8 @@ function setRunWindow(html) {
     // Clone of ttaStyleSheet
     var ttaRunStyleSheet = runWindow.document.createElement("style");
     // 'styles' is shared with main webpage
-    ttaRunStyleSheet.innerText = styles;
+    var links = '<link rel="stylesheet" href="/assets/css/syntax.scss">'
+    ttaRunStyleSheet.innerText = links + styles;
     runWindow.document.head.appendChild(ttaRunStyleSheet);
 
     runWindow.document.body.appendChild(div)
