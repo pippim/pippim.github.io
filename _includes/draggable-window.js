@@ -8,7 +8,7 @@
 function dragElement(elm) {
     var offX = 0, offY = 0, oldX = 0, oldY = 0, x = 0, y = 0, useTouch = false;
     var win = window  // Default to "normal" main webpage
-    if (runWindow !== null) win = runWindow  // Working in popup Window, not main
+    if (runWindow != null) win = runWindow  // Working in popup Window, not main
     if (win.document.getElementById(elm.id + "_header")) {
         // if present, the header is where you move the DIV from:
         win.document.getElementById(elm.id + "_header").ontouchstart = dragTouchStart;
