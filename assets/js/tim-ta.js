@@ -951,7 +951,7 @@ function setRunWindow(html) {
     link.rel = "stylesheet"
     //link.href = "/assets/css/syntax.scss"
     link.href = "{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
-    runWindow.head.appendChild(link);
+    // runWindow.head.appendChild(link);  // Getting blank window?
     // Create parent <div>
     let div = runWindow.document.createElement("div")
     div.id = "runWindowId"
