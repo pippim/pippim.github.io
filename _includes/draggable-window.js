@@ -7,10 +7,12 @@
 // dragElement() copied from theCookieMachine.js
 function dragElement(elm) {
     var offX = 0, offY = 0, oldX = 0, oldY = 0, x = 0, y = 0, useTouch = false;
-    if (document.getElementById(elm.id + "_header")) {
+    var win = window  // Default to "normal" main webpage
+    if (runWindow !== null) win = runWindow  // Working in popup Window, not main
+    if (win.document.getElementById(elm.id + "_header")) {
         // if present, the header is where you move the DIV from:
-        document.getElementById(elm.id + "_header").ontouchstart = dragTouchStart;
-        document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
+        win.document.getElementById(elm.id + "_header").ontouchstart = dragTouchStart;
+        win.document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
     } else {
         // otherwise, move the DIV from anywhere inside the DIV:
         elm.ontouchstart = dragTouchStart;
@@ -22,8 +24,8 @@ function dragElement(elm) {
         e.preventDefault();  // Prevents text highlighting while dragging header
         setXY(e);
         saveXY();
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
+        win.document.onmouseup = closeDragElement;
+        win.document.onmousemove = elementDrag;
     }
 
     function dragTouchStart(e) {
@@ -32,8 +34,8 @@ function dragElement(elm) {
         useTouch = true;
         setXY(e);
         saveXY();
-        document.ontouchend = closeDragElement;
-        document.ontouchmove = elementDrag;
+        win.document.ontouchend = closeDragElement;
+        win.document.ontouchmove = elementDrag;
     }
 
     function setXY(e) {
@@ -64,10 +66,10 @@ function dragElement(elm) {
 
     function closeDragElement() {
         // stop moving when mouse button is released or touch ends:
-        document.onmouseup = null;
-        document.onmousemove = null;
-        document.ontouchend = null;
-        document.ontouchmove = null;
+        win.document.onmouseup = null;
+        win.document.onmousemove = null;
+        win.document.ontouchend = null;
+        win.document.ontouchmove = null;
     }
 }  // End of dragElement2(elm)
 
