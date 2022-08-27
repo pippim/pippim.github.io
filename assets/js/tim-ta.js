@@ -1198,6 +1198,9 @@ async function runAllTimers() {
         return
     }
     // allTimers =
+    var win = window  // Default to "normal" main webpage
+    if (typeof runWindow !== 'undefined')
+        if (runWindow != null) win = runWindow  // Working in popup Window, not main
     var timeLast = new Date().getTime();
     var myTable = document.getElementById("tabRunTimers")
     var index = 0;
@@ -1221,8 +1224,9 @@ async function runAllTimers() {
             pauseAllTimers = false;  // Progress Control Box can pause. But not now
             if (getTaskValue('task_prompt') == "true") {
                 // Prompt to begin timer
-                msg = "Ready to begin Task: <b>" + ttaTask.task_name; + "</b>";
-                await popPrompt('i', msg);  // Blocking function, we wait...
+                msg = "Ready to begin Task: <b>" + ttaTask.task_name + "</b>"
+                await popPrompt('i', msg, "elm", ttaRunElm)
+                // Blocking function, we wait until user reacts...
             }
         }
 
@@ -1237,8 +1241,8 @@ async function runAllTimers() {
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
-            window.blur()
-            setTimeout(window.focus, 0)  // Bring to top of window stack
+            win.blur()  // win linked to 'window' or 'runWindow'
+            setTimeout(win.focus, 0)  // Bring to top of window stack
             console.log("window.focus()")
             var audioControl = clickListen(index);
             if (audioControl != null) {
@@ -1253,11 +1257,11 @@ async function runAllTimers() {
                     // Has sound automatically ended
                     if (rem <= 0.0) {
                         // If window not closed already, then close it
-                        if (document.body.contains(elm)) popClose(popId)
+                        if (win.document.body.contains(elm)) popClose(popId)
                         break
                     }  // n popClose(
                     // Was window manually closed?
-                    if (document.body.contains(elm)) { continue; }
+                    if (win.document.body.contains(elm)) continue
                     audioControl.pause()  // Kill the sound
                     audioControl.currentTime = 0.0
                     break  // Clicked X to close, or clicked "OK" & element removed
@@ -1272,7 +1276,8 @@ async function runAllTimers() {
                 if (remaining_run_times <= 0) {
                     cancelAllTimers = true;  // Exit from while(true) & updates
                     await popPrompt("s", "Run Project " +
-                                    ttaProject.project_name + " completed.");
+                                    ttaProject.project_name + " completed.",
+                                    "elm", ttaRunElm);
                     exitAllTimers();  // Go back to calling table
                 }
                 // Rebuild allTimers{} to fresh state for new set
@@ -1293,11 +1298,6 @@ async function runAllTimers() {
 
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
-
-function endAllTimers() {
-    // TODO: Restore ttaElm from oldElm
-    ttaRunElm = null
-}
 
 function updateRunTimer(myTable, entry) {
     if (pauseAllTimers) { return; }
@@ -1357,6 +1357,14 @@ async function exitAllTimers() {
     }
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
     wakeLockOff();  // Allow mobile screen to sleep again
+    if (typeof runWindow !== 'undefined')
+        if (runWindow != null) {
+            // Running on large screen with popup window option
+            runWindow.close()
+            runWindow = null  // Tell functions not to use anymore
+            ttaRunElm = null  // parent element to anchor messages to
+            return  // No need to paint Projects or Tasks because
+        }
 
     if (calledFromTable == "Projects") { paintProjectsTable(); }
     else if (calledFromTable == "Tasks") { paintTasksTable(); }
@@ -1367,6 +1375,7 @@ async function exitAllTimers() {
 
 async function wakeLockOn() {
     wakeLock = false;
+    if (scrLarge) return  // We are not on Android (bad way to test though)
     if ('wakeLock' in navigator) {
         wakeLock = await navigator.wakeLock.request('screen');
         popCreate('w', "Do NOT leave this screen while\n" +
@@ -1378,7 +1387,7 @@ async function wakeLockOn() {
 }
 
 async function wakeLockOff() {
-    if (!wakeLock) { return; }
+    if (!wakeLock) return
     wakeLock.release()
         .then(() => {
           wakeLock = false;
@@ -1452,25 +1461,25 @@ function buildActionControlBoxBody(i) {
 
 function ctlClose() {
     // Called from popClose() using preset callback msgq[idWindow] = ctlClose();
-    var ctlActionsBoxActive = false;
+    var ctlActionsBoxActive = false
     // console.log("ctlClose() successfully reached.")
 }
 
 function getTaskValue(key) {
-    value = ttaTask[key];
-    if (value == "default") { return getProjectValue(key); }
-    return value;
+    value = ttaTask[key]
+    if (value == "default") return getProjectValue(key)
+    return value
 }
 function getProjectValue(key) {
-    value = ttaProject[key];
-    if (value == "default") { return ttaConfig[key]; }
-    return value;
+    value = ttaProject[key]
+    if (value == "default") return ttaConfig[key]
+    return value
 }
 
 function swapRows(source, target) {
     // Called from clickUp() and clickDown()
-    if (currentTable == "Projects") { swapProject(source, target); }
-                               else { swapTask(source, target); }
+    if (currentTable == "Projects") swapProject(source, target)
+                               else swapTask(source, target)
 }
 function swapProject(source, target) {
     // Project parameter source index and target index
@@ -2984,7 +2993,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
 
     var html = "";
     var win = window  // Default to "normal" main webpage
-    if (runWindow !== null) win = runWindow  // Working in popup Window, not main
+    if (typeof runWindow !== 'undefined')
+        if (runWindow != null) win = runWindow  // Working in popup Window, not main
     html += popBuildHtml(msg_type, msg, popIndex, buttons);
     html += popBuildStyle(msg_type)  // Title bar red, green, blue, etc.
     p['elmWindow'].innerHTML = html;
@@ -2995,6 +3005,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
         p['elmLink'] = ttaElm;
     }
 
+    // error/info dialog box is draggable
     var elmDraggable = win.document.getElementById(p['idWindow']);  // ID inside <div>
     let rect = p['elmLink'].getBoundingClientRect();
     var oldX = parseInt(rect.left + window.scrollX);  // Get link (anchor reference point)
