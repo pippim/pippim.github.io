@@ -915,7 +915,8 @@ function paintRunTimers(i) {
 
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
-    html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
+    //html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
+    html += taskButton("10x", "Run 10 times normal speed", "window.opener.testAllTimers")
     html += "Testing";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
