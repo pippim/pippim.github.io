@@ -3046,7 +3046,8 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     html += '       class="msgq-window-header ' + msgq_class + '">' + msg_head +
                     '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closeBtn" \n';
-    html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
+//    html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
+    html += '      onclick="window.opener.popClose(\'popIndex' + index + '\')" \n'
     html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
     html += '    </span>\n';
     html += '  </div>\n';
@@ -3061,7 +3062,8 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     if (buttons == null) {
         html += '    <button class="tta-btn msgq-window-button"\n'
         html += '      title="Click to close" \n'
-        html += '      onclick="popClose(\'popIndex' + index + '\')" \n'
+        // html += '      onclick="popClose(\'popIndex' + index + '\')" \n'
+        html += '      onclick="window.opener.popClose(\'popIndex' + index + '\')" \n'
         html += '       >OK</button>\n'
     } else html += htmlButtons(buttons)
     html += '  </div>\n';
