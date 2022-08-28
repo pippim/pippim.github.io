@@ -963,7 +963,7 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(link)  // Try to get arial font
 
     // Create parent <div>
-    let div = runWindow.document.createElement("div")
+    var div = runWindow.document.createElement("div")
     div.id = "runWindowId"
 
     // Clone of ttaStyleSheet
