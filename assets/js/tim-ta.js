@@ -1293,7 +1293,6 @@ async function runAllTimers() {
                                     ttaProject.project_name + " completed.",
                                     "elm", ttaRunElm);
                     exitAllTimers();  // Go back to calling table
-                    return
                 }
                 // Rebuild allTimers{} to fresh state for new set
                 index = 0;
@@ -1362,7 +1361,6 @@ async function testAllTimers() {
 
 async function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
-    // TODO: If called from Footer (not normal end) totalAllTimersTime more than 1 minute, confirm exit
     if (cancelAllTimers == false && totalAllTimersTime > 30) {
         var msg = "More than 30 seconds elapsed.<br>";
         msg += "Are you sure you want to exit?";
@@ -1381,7 +1379,7 @@ async function exitAllTimers() {
         ttaRunElm = null  // parent element to anchor messages to
         runWindowAsPopup = false
         remaining_run_times = 0  // Force "big timer loop" exit
-        return  // No need to paint Projects or Tasks because
+        // return  // No need to paint Projects or Tasks because
     }
 
     if (calledFromTable == "Projects") { paintProjectsTable(); }
