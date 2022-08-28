@@ -2816,18 +2816,13 @@ var popYesNoId;     // Assumes only 1 yes/no window appears at a time...
 async function popYesNo(msg_type, msg, error_id, overrideElm) {
     /* Prompt with Yes/No buttons, return true if Yes. */
     var win = getWin()
+    if (win == window) var pre = ""
+                  else var pre = "window.opener."
     popResponse = false;
     var arrBtn = [
-        "response_no", "No", "Don't do it", "popNo()",
-        "response_yes", "Yes", "Proceed", "popYes()"
+        "response_no", "No", "Don't do it", pre + "popNo()",
+        "response_yes", "Yes", "Proceed", pre + "popYes()"
     ]
-
-    // If output passed, don't display message but return it
-    var trgElm = ttaElm
-    if (typeof overrideElm !== 'undefined') {
-        trgElm = overrideElm
-        console.log("Using overrideElm.id:", overrideElm.id)
-    }
 
     // Create our prompt window with two buttons
     popYesNoId = popCreateUniqueError(msg_type, msg, error_id,
