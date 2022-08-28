@@ -1231,7 +1231,7 @@ async function runAllTimers() {
             if (getTaskValue('task_prompt') == "true") {
                 // Prompt to begin timer
                 msg = "Ready to begin Task: <b>" + ttaTask.task_name + "</b>"
-                await popPrompt('i', msg, "elm", ttaRunElm)
+                await popPrompt('i', msg, "task_prompt", "elm", ttaRunElm) // n popPrompt(
                 // Blocking function, we wait until user reacts...
             }
         }
@@ -2839,10 +2839,13 @@ async function popYesNo(msg_type, msg, error_id, overrideElm) {
 function popYes() { popResponse = true; popClose(popYesNoId); }
 function popNo() { popResponse = false; popClose(popYesNoId); }
 
-async function popPrompt(msg_type, msg, error_id) {
-    /* Display message and wait for acknowledgement. */
+async function popPrompt(msg_type, msg, error_id, elm_id, elm) {
+    /* Display message and wait for acknowledgement.
+       elm_id contains "elm" or is not passed
+       elm contains the element id serving as anchor point for dialog box
+    */
     var win = getWin()
-    var idWindow = popCreate(msg_type, msg, error_id);
+    var idWindow = popCreate(msg_type, msg, error_id, elm_id, elm)
     var elmWindow = win.document.getElementById(idWindow);
 
     while(true) {
