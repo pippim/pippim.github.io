@@ -28,7 +28,6 @@
 │   │   ├── post_fm.js
 │   │   ├── search.js
 │   │   ├── sound.js
-│   │   ├── style.scss
 │   │   ├── theCookieJar.js
 │   │   ├── theCookieMachine.js
 │   │   └── tim-ta.js
@@ -121,4 +120,4 @@
 ├── programs.md
 └── test.md
 
-26 directories, 96 files
+26 directories, 95 files

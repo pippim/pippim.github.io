@@ -10,9 +10,9 @@ created_date: 2018-04-29 06:01:54
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,709 "
+views:        "2,721 "
 accepted:     Accepted
-uploaded:     2022-08-21 18:02:02
+uploaded:     2022-08-28 08:01:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Cannot-remove-apt-package-_unmet-dependencies_.md
 toc:          false
 navigation:   false

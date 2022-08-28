@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "72 "
 accepted:     Accepted
-uploaded:     2022-08-21 18:02:02
+uploaded:     2022-08-28 08:01:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-24-Problem-switching-to-Ubuntu-from-Windows.md
 toc:          false
 navigation:   false

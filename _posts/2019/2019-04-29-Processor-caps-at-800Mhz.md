@@ -8,11 +8,11 @@ type:         Answer
 tags:         16.04 cpufreq intel-cpu
 created_date: 2019-04-29 23:17:43
 edit_date:    
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "2,215 "
+views:        "2,229 "
 accepted:     Accepted
-uploaded:     2022-08-21 18:02:02
+uploaded:     2022-08-28 08:01:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-29-Processor-caps-at-800Mhz.md
 toc:          false
 navigation:   false

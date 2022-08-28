@@ -8,11 +8,11 @@ type:         Answer
 tags:         upgrade kernel disk-usage
 created_date: 2017-05-10 02:54:21
 edit_date:    2017-07-28 22:26:01
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "127,348 "
+views:        "127,626 "
 accepted:     
-uploaded:     2022-08-21 18:02:02
+uploaded:     2022-08-28 08:01:45
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-10-Can_t-upgrade-due-to-low-disk-space-on-_boot.md
 toc:          false
 navigation:   true
