@@ -965,6 +965,7 @@ function setRunWindow(html) {
     // Create parent <div>
     let div = runWindow.document.createElement("div")
     div.id = "runWindowId"
+    ttaRunElm = div
 
     // Clone of ttaStyleSheet
     var ttaRunStyleSheet = runWindow.document.createElement("style")
@@ -973,9 +974,8 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
 
     runWindow.document.body.appendChild(div)
-    div.innerHTML = html  // Set top-level's element with new HTML
+    //div.innerHTML = html  // Set top-level's element with new HTML
     // Above keeps dialog boxes anchored near top, even though redundant
-    ttaRunElm = div
 }
 
 function tabRunTimersHeading() {
