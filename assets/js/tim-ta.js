@@ -964,7 +964,7 @@ function setRunWindow(html) {
 
     // Create parent <div>
     var div = runWindow.document.createElement("div")
-    div.id = "runWindowId"
+    div.id = "PaintedTable"  // Same name in /programs/tim-ta.md
 
     // Clone of ttaStyleSheet
     var ttaRunStyleSheet = runWindow.document.createElement("style")
