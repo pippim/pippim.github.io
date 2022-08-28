@@ -1366,7 +1366,7 @@ async function exitAllTimers() {
         msg += "Are you sure you want to exit?";
         // Use ttaRunElm for separate popup window rather than main webpage
         var response = await popYesNo("w", msg, "timer_override", ttaRunElm);
-        if (!response) { alert("response:" + response); return }
+        if (!response) return
     }
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
     wakeLockOff();  // Allow mobile screen to sleep again
@@ -2815,7 +2815,7 @@ var popYesNoId;     // Assumes only 1 yes/no window appears at a time...
 
 async function popYesNo(msg_type, msg, error_id, overrideElm) {
     /* Prompt with Yes/No buttons, return true if Yes. */
-    var win = getWin()
+    var win = getWin()  // win='window' or = 'runWindow' (popup)
     if (win == window) var pre = ""
                   else var pre = "window.opener."
     popResponse = false;
@@ -2828,12 +2828,11 @@ async function popYesNo(msg_type, msg, error_id, overrideElm) {
     popYesNoId = popCreateUniqueError(msg_type, msg, error_id,
                                       "elm", overrideElm, arrBtn);
     var elmWindow = win.document.getElementById(popYesNoId);
-    if (popYesNoId == null) { alert("popYesNoId is null"); return false; }
 
     while(true) {
         await sleep(50);
         // When a popCreate window is closed, it disappears after 600ms
-        if (document.body.contains(elmWindow)) { continue; }
+        if (win.document.body.contains(elmWindow)) { continue; }
         return popResponse;
     }
 }  // End of async function popYesNo(msg_type, msg, error_id)
