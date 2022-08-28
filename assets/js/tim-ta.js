@@ -1293,6 +1293,7 @@ async function runAllTimers() {
                                     ttaProject.project_name + " completed.",
                                     "elm", ttaRunElm);
                     exitAllTimers();  // Go back to calling table
+                    return
                 }
                 // Rebuild allTimers{} to fresh state for new set
                 index = 0;
@@ -1379,6 +1380,7 @@ async function exitAllTimers() {
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
         runWindowAsPopup = false
+        remaining_run_times = 0  // Force "big timer loop" exit
         return  // No need to paint Projects or Tasks because
     }
 
