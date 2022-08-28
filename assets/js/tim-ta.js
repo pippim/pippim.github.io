@@ -916,7 +916,10 @@ function paintRunTimers(i) {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
     //html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
-    html += taskButton("10x", "Run 10 times normal speed", "window.opener.testAllTimers")
+    if (window.opener == null)
+        html += taskButton("10x", "Run 10 times normal speed", "testAllTimers")
+    else
+        html += taskButton("10x", "Run 10 times normal speed", "window.opener.testAllTimers")
     html += "Testing";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
@@ -3048,7 +3051,10 @@ function popBuildHtml(msg_type, msg, index, buttons) {
                     '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closeBtn" \n';
 //    html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
-    html += '      onclick="window.opener.popClose(\'popIndex' + index + '\')" \n'
+    if (window.opener == null)
+        html += '      onclick="popClose(\'popIndex' + index + '\')" \n'
+    else
+        html += '      onclick="window.opener.popClose(\'popIndex' + index + '\')" \n'
     html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
     html += '    </span>\n';
     html += '  </div>\n';
