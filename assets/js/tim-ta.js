@@ -955,15 +955,15 @@ function setRunWindow(html) {
     runWindow.document.title = "Tim-ta run project " + ttaProject.project_name
 
     // Create link in <head> section <link> (Not working for arial font?)
-    var link = runWindow.document.createElement('link')
-    link.rel = "stylesheet"
-    link.href = "{{ site.url }}/_sass/jekyll-theme-cayman.scss"
-    runWindow.document.head.appendChild(link)  // Try to get arial font
+    //var link = runWindow.document.createElement('link')
+    //link.rel = "stylesheet"
+    //link.href = "{{ site.url }}/_sass/jekyll-theme-cayman.scss"
+    // runWindow.document.head.appendChild(link)  // Try to get arial font
 
     var link2 = runWindow.document.createElement('link')
     link2.rel = "stylesheet"
     var buildName = '{{ site.url }}/assets/css/style.css'
-    alert("buildName: " + buildName)
+    // alert("buildName: " + buildName)
     // link2.href = "{{ '{{ site.url }}/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
     link2.href = buildName
     runWindow.document.head.appendChild(link2)  // class shake-image
