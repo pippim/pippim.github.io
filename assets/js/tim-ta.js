@@ -1365,7 +1365,8 @@ async function exitAllTimers() {
         if (runWindow != null) {
             // Running on large screen with popup window option
             console.log("runWindow.close():", runWindow)
-            runWindow.close()
+            // runWindow.close()
+            open(location, '_self').close()
             runWindow = null  // Tell functions not to use anymore
             ttaRunElm = null  // parent element to anchor messages to
             return  // No need to paint Projects or Tasks because
