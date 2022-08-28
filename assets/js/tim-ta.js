@@ -842,8 +842,8 @@ function clickAddTask() {
 
 function clickAddProject() {
     // Create empty record for add
-    ttaProject = Object.assign({}, tta_project); // https://stackoverflow.com/a/34294740/6929343
-    oldProject = Object.assign({}, tta_project);
+    ttaProject = Object.assign({}, tta_project)
+    oldProject = Object.assign({}, tta_project)
     paintProjectForm("Add");
 }
 
@@ -852,7 +852,8 @@ var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSet
 var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock
 var pauseAllTimers, cntTimedTasks, ttaRunElm
 
-var runWindow = null  // main webpage window or launched popup window
+var runWindowAsPopup  // Are we running windows as a popup?
+var runWindow  // main webpage window or launched popup window
 
 function paintRunTimers(i) {
     // TODO: Run in popup window. ttaElm needs to be remapped to runElm
@@ -868,6 +869,12 @@ function paintRunTimers(i) {
     pauseAllTimers = false;
     totalAllTimersTime = 0 ;
     wakeLock = false;  // Force mobile screen to stay on
+
+    scrSetSize();  // Call on document load. Must also call when RunTimers is painted
+    runWindowAsPopup = false // Are we running windows as a popup?
+    if (!scrLarge) runWindow = window  // If no popup runWindow is our window
+    else runWindowAsPopup = true // Later we will open a popup window
+
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
@@ -916,26 +923,24 @@ function paintRunTimers(i) {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
     //html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
-    if (window.opener == null)
-        html += taskButton("10x", "Run 10 times normal speed", "testAllTimers")
-    else
+    if (runWindowAsPopup)
         html += taskButton("10x", "Run 10 times normal speed", "window.opener.testAllTimers")
+    else
+        html += taskButton("10x", "Run 10 times normal speed", "testAllTimers")
     html += "Testing";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
-    if (window.opener == null)
-        html += taskButton(tabBackSym, "Go back to last table", "exitAllTimers");
-    else
+    if (runWindowAsPopup)
         html += taskButton(tabBackSym, "Go back to last table", "window.opener.exitAllTimers");
+    else
+        html += taskButton(tabBackSym, "Go back to last table", "exitAllTimers");
     html += "Cancel";
     html += '</div>\n';
     html += '</div>\n';
 
     html += ttaNameColumnStyle();  // Set name column width
 
-    scrSetSize();  // Call on document load. Must also call when RunTimers is painted
-
-    setRunWindow(html)
+    if (runWindowAsPopup) setRunWindow(html)
 
     ttaRunElm.innerHTML = html  // Set top-level's element with new HTML
     initTimersAfterDOM();  // Initialize elements for table row IDs
@@ -947,10 +952,6 @@ function paintRunTimers(i) {
 
 function setRunWindow(html) {
     /* Create popup window when on large screen and option on. */
-    if (!scrLarge) {
-        runWindow = window
-        return
-    }
     runWindow = window.open('', '_blank',
         'directories=no,titlebar=no,toolbar=no,location=no,' +
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
