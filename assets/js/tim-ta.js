@@ -3070,7 +3070,10 @@ function popBuildHtml(msg_type, msg, index, buttons) {
         html += '    <button class="tta-btn msgq-window-button"\n'
         html += '      title="Click to close" \n'
         // html += '      onclick="popClose(\'popIndex' + index + '\')" \n'
-        html += '      onclick="window.opener.popClose(\'popIndex' + index + '\')" \n'
+        if (window.opener == null)
+            html += '      onclick="popClose(\'popIndex' + index + '\')" \n'
+        else
+            html += '      onclick="window.opener.popClose(\'popIndex' + index + '\')" \n'
         html += '       >OK</button>\n'
     } else html += htmlButtons(buttons)
     html += '  </div>\n';
