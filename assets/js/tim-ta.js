@@ -3055,6 +3055,7 @@ function popBuildHtml(msg_type, msg, index, buttons) {
     if (msg_type == "s") { msg_head = "Success"; msgq_class = "msgq-success"; }
     if (msg_type == "a") { msg_head = "Alarm"; msgq_class = "msgq-success"; }
     var html = "";
+    var win = getWin()
     // For historical reasons must be "_header" not "-header" to drag window
     html += '<div id="popIndex' + index + '" class="msgq-window">\n';
     html += '  <div id="popIndex' + index + '_header" \n';
@@ -3062,17 +3063,17 @@ function popBuildHtml(msg_type, msg, index, buttons) {
                     '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closeBtn" \n';
 //    html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
-    // If window.opener is null, we are running in main webpage, else popup
-    if (window.opener == null) var pre = ""
-                          else var pre = "window.opener."
+    // Are we are running in main webpage, else popup
+    if (win == window) var pre = ""
+                  else var pre = "window.opener."
 
-    // html += '      onclick="' + pre + 'popClose(\'popIndex' + index + '\')" \n';
-    /* */
+    html += '      onclick="' + pre + 'popClose(\'popIndex' + index + '\')" \n';
+    /*
     if (window.opener == null)
         html += '      onclick="popClose(\'popIndex' + index + '\')" \n'
     else
         html += '      onclick="window.opener.popClose(\'popIndex' + index + '\')" \n'
-    /* */
+    */
     html += '      >&#65336;\n';  // #65336 latin full x is latter: ✕XＸ
     html += '    </span>\n';
     html += '  </div>\n';
@@ -3088,13 +3089,13 @@ function popBuildHtml(msg_type, msg, index, buttons) {
         html += '    <button class="tta-btn msgq-window-button"\n'
         html += '      title="Click to close" \n'
         // html += '      onclick="popClose(\'popIndex' + index + '\')" \n'
-        // html += '      onclick="' + pre + 'popClose(\'popIndex' + index + '\')" \n'
-        /* */
+        html += '      onclick="' + pre + 'popClose(\'popIndex' + index + '\')" \n'
+        /*
         if (window.opener == null)
             html += '      onclick="popClose(\'popIndex' + index + '\')" \n'
         else
             html += '      onclick="window.opener.popClose(\'popIndex' + index + '\')" \n'
-        /* */
+        */
         html += '       >OK</button>\n'
     } else html += htmlButtons(buttons)
     html += '  </div>\n';
