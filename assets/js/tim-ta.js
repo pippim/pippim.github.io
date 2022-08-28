@@ -1366,7 +1366,7 @@ async function exitAllTimers() {
         msg += "Are you sure you want to exit?";
         // Use ttaRunElm for separate popup window rather than main webpage
         var response = await popYesNo("w", msg, "timer_override", ttaRunElm);
-        if (!response) { return }
+        if (!response) { alert("response:" + response); return }
     }
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
     wakeLockOff();  // Allow mobile screen to sleep again
