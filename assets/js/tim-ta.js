@@ -973,7 +973,8 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
 
     runWindow.document.body.appendChild(div)
-    // div.innerHTML = html  // Set top-level's element with new HTML
+    div.innerHTML = html  // Set top-level's element with new HTML
+    // Above keeps dialog boxes anchored near top, even though redundant
     ttaRunElm = div
 }
 
