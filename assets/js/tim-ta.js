@@ -923,7 +923,10 @@ function paintRunTimers(i) {
     html += "Testing";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
-    html += taskButton(tabBackSym, "Go back to last table", "exitAllTimers");
+    if (window.opener == null)
+        html += taskButton(tabBackSym, "Go back to last table", "exitAllTimers");
+    else
+        html += taskButton(tabBackSym, "Go back to last table", "window.opener.exitAllTimers");
     html += "Cancel";
     html += '</div>\n';
     html += '</div>\n';
