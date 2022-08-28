@@ -923,17 +923,13 @@ function paintRunTimers(i) {
     html += '<div class="bigFoot">\n';  // Start footer buttons
     html += '<div class="leftFoot">\n';
     //html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
-    if (runWindowAsPopup)
-        html += taskButton("10x", "Run 10 times normal speed", "window.opener.testAllTimers")
-    else
-        html += taskButton("10x", "Run 10 times normal speed", "testAllTimers")
+    var pre = ""
+    if (runWindowAsPopup) pre = "window.opener."
+    html += taskButton("10x", "Run 10 times normal speed", pre + "testAllTimers")
     html += "Testing";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
-    if (runWindowAsPopup)
-        html += taskButton(tabBackSym, "Go back to last table", "window.opener.exitAllTimers");
-    else
-        html += taskButton(tabBackSym, "Go back to last table", "exitAllTimers");
+    html += taskButton(tabBackSym, "Go back to last table", pre + "exitAllTimers");
     html += "Cancel";
     html += '</div>\n';
     html += '</div>\n';
@@ -1070,7 +1066,7 @@ function initTimersAfterDOM() {
     // After innerHTML is set we can retrieve elements and set listeners
     for (const name of Object.keys(allTimers)) {
         //var element = document.getElementById(allTimers[name].id);
-        let element = runWindow.document.getElementById(name);
+        let element = runWindow.document.getElementById(name)
         if (element == null) {  alert("initTimersAfterDOM(): element null"); }
         allTimers[name].elm = element;
         //var i = allTimers[name].index; // var assigns last value to all occurrences
@@ -1146,13 +1142,15 @@ function buildProgressControlButtons(i) {
         - 23ED ⏭︎ skip to end, next
     */
 
-    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
+    workTask = Object.assign({}, ttaTask)
+    var pre = ""
+    if (runWindowAsPopup) pre = "window.opener."
     var arrButtons = [
-        "begin", "&#x23EE;", "Skip to start, Previous", "pcbClickBegin(" + i +")",
-        "rewind", "&#x23EA;", "Rewind, Fast backwards", "pcbClickRewind(" + i +")",
-        "play_toggle", "⏸︎", "Pause timer", "pcbClickPlayPause(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", "pcbClickForward(" + i +")",
-        "end", "&#x23ED;", "Skip to end, Next", "pcbClickEnd(" + i +")"
+        "begin", "&#x23EE;", "Skip to start, Previous", pre + "pcbClickBegin(" + i +")",
+        "rewind", "&#x23EA;", "Rewind, Fast backwards", pre + "pcbClickRewind(" + i +")",
+        "play_toggle", "⏸︎", "Pause timer", pre + "pcbClickPlayPause(" + i +")",
+        "forward", "&#x23E9;", "Fast forward", pre + "pcbClickForward(" + i +")",
+        "end", "&#x23ED;", "Skip to end, Next", pre + "pcbClickEnd(" + i +")"
     ]
 
     return arrButtons;
