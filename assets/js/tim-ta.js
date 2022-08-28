@@ -852,7 +852,7 @@ var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSet
 var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock
 var pauseAllTimers, cntTimedTasks, ttaRunElm
 
-var runWindow  // main webpage window or launched popup window
+var runWindow null  // main webpage window or launched popup window
 
 function paintRunTimers(i) {
     // TODO: Run in popup window. ttaElm needs to be remapped to runElm
