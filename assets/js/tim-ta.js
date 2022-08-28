@@ -1365,16 +1365,16 @@ async function exitAllTimers() {
     }
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
     wakeLockOff();  // Allow mobile screen to sleep again
-    if (typeof runWindow !== 'undefined')
-        if (runWindow != null) {
-            // Running on large screen with popup window option
-            console.log("runWindow.close():", runWindow)
-            // runWindow.close()
-            open(location, '_self').close()
-            runWindow = null  // Tell functions not to use anymore
-            ttaRunElm = null  // parent element to anchor messages to
-            return  // No need to paint Projects or Tasks because
-        }
+    if (runWindowAsPopup) {
+        // Running on large screen with popup window option
+        console.log("runWindow.close():", runWindow)
+        runWindow.close()
+        // open(location, '_self').close()
+        runWindow = null  // Tell functions not to use anymore
+        ttaRunElm = null  // parent element to anchor messages to
+        runWindowAsPopup = false
+        return  // No need to paint Projects or Tasks because
+    }
 
     if (calledFromTable == "Projects") { paintProjectsTable(); }
     else if (calledFromTable == "Tasks") { paintTasksTable(); }
