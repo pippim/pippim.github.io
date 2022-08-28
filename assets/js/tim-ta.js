@@ -962,7 +962,10 @@ function setRunWindow(html) {
 
     var link2 = runWindow.document.createElement('link')
     link2.rel = "stylesheet"
-    link2.href = "{{ '{{ site.url }}/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    var buildName = '{{ site.url }}/assets/css/style.css'
+    alert("buildName: " + buildName)
+    // link2.href = "{{ '{{ site.url }}/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    link2.href = buildName
     runWindow.document.head.appendChild(link2)  // class shake-image
 
     // Create parent <div>
