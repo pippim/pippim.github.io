@@ -1070,7 +1070,7 @@ function initTimersAfterDOM() {
     // After innerHTML is set we can retrieve elements and set listeners
     for (const name of Object.keys(allTimers)) {
         //var element = document.getElementById(allTimers[name].id);
-        let element = document.getElementById(name);
+        let element = runWindow.document.getElementById(name);
         if (element == null) {  alert("initTimersAfterDOM(): element null"); }
         allTimers[name].elm = element;
         //var i = allTimers[name].index; // var assigns last value to all occurrences
@@ -1251,13 +1251,14 @@ async function runAllTimers() {
             // Timer has ended, sound alarm and start next timer
             win.blur()  // win linked to 'window' or 'runWindow'
             setTimeout(win.focus, 0)  // Bring to top of window stack
-            console.log("window.focus()")
+            console.log("win.focus()")
             var audioControl = clickListen(index);
             if (audioControl != null) {
                 // When !== null used, "TypeError: audioControl is undefined"
-                if (audioControl.ended) {}
+                if (audioControl.ended) {}  // TODO: short audio ended already?
                 var popId = popCreate("a", "/assets/img/tim-ta/alarm-clock.jpg",
-                                      audioControl)  // n popCreate(
+                                      audioControl, "elm", ttaRunElm)
+                                      // n popCreate( n popPrompt(
                 var elm = msgq[popId].elmWindow
                 while(true) {
                     await sleep(50);
@@ -2959,7 +2960,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
         msg = message text where <br> will start a new line.
         error_id = optional error number or name.
             IF msg_type = "a" then: msg is image filename
-                                  : error_id is sound filename
+                                  : error_id is audio control
         id_elm_type = "id" an ID is passed in next field
                       "elm" an element is passed in next field.
         elm = an ID name or an element. If an ID convert it to an element.
@@ -2981,7 +2982,6 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     }
     if (msg_type != "e" && msg_type != "w" &&
         msg_type != "i" && msg_type != "s" && msg_type != "a") {
-            //popCreate('e', "msgAlert() msg_type must be 'e', 'w', 'i', 's', 'a'.");
             // Catastrophe when you call popCreate from itself (CPU burn out)
             alert('e', "msgAlert() msg_type must be 'e', 'w', 'i', 's' or 'a'.");
             console.trace();
