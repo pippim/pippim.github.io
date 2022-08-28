@@ -1231,7 +1231,7 @@ async function runAllTimers() {
             pauseAllTimers = false;  // Progress Control Box can pause. But not now
             if (getTaskValue('task_prompt') == "true") {
                 // Prompt to begin timer
-                msg = "Ready to begin Task: <b>" + ttaTask.task_name + "</b>"
+                msg = "Ready to begin task <b>" + ttaTask.task_name + "</b>"
                 await popPrompt('i', msg, "task_prompt", "elm", ttaRunElm) // n popPrompt(
                 // Blocking function, we wait until user reacts...
             }
@@ -1257,6 +1257,7 @@ async function runAllTimers() {
                 if (audioControl.ended) {}  // TODO: short audio ended already?
                 var popId = popCreate("a", "/assets/img/tim-ta/alarm-clock.jpg",
                                       audioControl, "elm", ttaRunElm)
+                                      // TODO: Image is blank in Popup Window
                                       // n popCreate( n popPrompt(
                 var elm = msgq[popId].elmWindow
                 while(true) {
@@ -2840,13 +2841,13 @@ async function popYesNo(msg_type, msg, error_id, overrideElm) {
 function popYes() { popResponse = true; popClose(popYesNoId); }
 function popNo() { popResponse = false; popClose(popYesNoId); }
 
-async function popPrompt(msg_type, msg, error_id, elm_id, elm) {
+async function popPrompt(msg_type, msg, error_id, id_elm_type, id_elm) {
     /* Display message and wait for acknowledgement.
        elm_id contains "elm" or is not passed
        elm contains the element id serving as anchor point for dialog box
     */
     var win = getWin()
-    var idWindow = popCreate(msg_type, msg, error_id, elm_id, elm)
+    var idWindow = popCreate(msg_type, msg, error_id, id_elm_type, id_elm)
     var elmWindow = win.document.getElementById(idWindow);
 
     while(true) {
@@ -3029,11 +3030,13 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
         p['elmLink'] = ttaElm;
     }
 
-    // error/info dialog box is draggable
+    // error/info dialog box is draggable. win=window(webpage) or runWindow(popup)
     var elmDraggable = win.document.getElementById(p['idWindow']);  // ID inside <div>
     let rect = p['elmLink'].getBoundingClientRect();
-    var oldX = parseInt(rect.left + window.scrollX);  // Get link (anchor reference point)
-    var oldY = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
+    //var oldX = parseInt(rect.left + window.scrollX);  // Get link (anchor reference point)
+    //var oldY = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
+    var oldX = parseInt(rect.left + win.scrollX);  // Get link (anchor reference point)
+    var oldY = parseInt(rect.top + win.scrollY);  //  x (left) and y (top
     elmDraggable.style.left = (oldX + 20) + "px";
     elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
     dragElement(elmDraggable);  // Hooks to make window draggable by title bar
