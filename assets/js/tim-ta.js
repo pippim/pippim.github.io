@@ -965,6 +965,7 @@ function setRunWindow(html) {
     // Create parent <div>
     let div = runWindow.document.createElement("div")
     div.id = "runWindowId"
+    ttaRunElm = div
 
     // Clone of ttaStyleSheet
     var ttaRunStyleSheet = runWindow.document.createElement("style")
