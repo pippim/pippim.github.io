@@ -1364,6 +1364,7 @@ async function exitAllTimers() {
     if (typeof runWindow !== 'undefined')
         if (runWindow != null) {
             // Running on large screen with popup window option
+            console.log("runWindow.close():", runWindow)
             runWindow.close()
             runWindow = null  // Tell functions not to use anymore
             ttaRunElm = null  // parent element to anchor messages to
