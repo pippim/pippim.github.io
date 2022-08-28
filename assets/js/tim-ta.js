@@ -3035,8 +3035,8 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     let rect = p['elmLink'].getBoundingClientRect();
     //var oldX = parseInt(rect.left + window.scrollX);  // Get link (anchor reference point)
     //var oldY = parseInt(rect.top + window.scrollY);  //  x (left) and y (top
-    var oldX = parseInt(rect.left + win.scrollX);  // Get link (anchor reference point)
-    var oldY = parseInt(rect.top + win.scrollY);  //  x (left) and y (top
+    var oldX = parseInt(rect.left + win.scrollX)  // Get link (anchor reference point)
+    var oldY = parseInt(rect.top + win.scrollY)  //  x (left) and y (top
     elmDraggable.style.left = (oldX + 20) + "px";
     elmDraggable.style.top = (oldY + 40) + "px";  // target line visible
     dragElement(elmDraggable);  // Hooks to make window draggable by title bar
@@ -3062,8 +3062,10 @@ function popBuildHtml(msg_type, msg, index, buttons) {
                     '&emsp; (Click here to drag)\n';
     html += '    <span class="msgq-window-close closeBtn" \n';
 //    html += '      onclick="popClose(\'popIndex' + index + '\')" \n';
-    var pre = ""
-    if (window.opener != null) pre = "window.opener."
+    // If window.opener is null, we are running in main webpage, else popup
+    if (window.opener == null) var pre = ""
+                          else var pre = "window.opener."
+
     html += '      onclick="' + pre + 'popClose(\'popIndex' + index + '\')" \n';
     /*
     if (window.opener == null)
