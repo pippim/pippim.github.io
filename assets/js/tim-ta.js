@@ -2828,7 +2828,7 @@ async function popYesNo(msg_type, msg, error_id, overrideElm) {
     popYesNoId = popCreateUniqueError(msg_type, msg, error_id,
                                       "elm", overrideElm, arrBtn);
     var elmWindow = win.document.getElementById(popYesNoId);
-    if (popYesNoId == null) { return false; }
+    if (popYesNoId == null) { alert("popYesNoId is null"); return false; }
 
     while(true) {
         await sleep(50);
