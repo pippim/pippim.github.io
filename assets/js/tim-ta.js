@@ -957,7 +957,7 @@ function setRunWindow(html) {
     // Create link in <head> section <link> (Not working for arial font?)
     var link = runWindow.document.createElement('link')
     link.rel = "stylesheet"
-    link.href = "{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    link.href = "{{ '{{ site.url }}/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
     runWindow.document.head.appendChild(link)  // Try to get arial font
     link.href = "/_sass/jekyll-theme-cayman.scss"
     runWindow.document.head.appendChild(link)  // Try to get arial font
