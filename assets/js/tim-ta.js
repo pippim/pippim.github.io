@@ -904,7 +904,7 @@ function paintRunTimers(i) {
     //       holes which have been plugged with cntTimedTasks
     for (var i = 0; i < cnt; i++) {
         var str = tabRunTimersDetail(i);
-        if (str == "") continue
+        if (str == "") continue  // skip zero duration timer
         html += str
         cntTimedTasks++
     }
@@ -965,6 +965,7 @@ function setRunWindow(html) {
     // Create parent <div>
     var div = runWindow.document.createElement("div")
     div.id = "PaintedTable"  // Same name in /programs/tim-ta.md
+    ttaRunElm = div
 
     // Clone of ttaStyleSheet
     var ttaRunStyleSheet = runWindow.document.createElement("style")
@@ -973,8 +974,7 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
 
     runWindow.document.body.appendChild(div)
-    div.innerHTML = html  // Set top-level's element with new HTML
-    ttaRunElm = div
+    //div.innerHTML = html  // Set top-level's element with new HTML
 }
 
 function tabRunTimersHeading() {
