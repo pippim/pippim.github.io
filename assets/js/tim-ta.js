@@ -318,6 +318,14 @@ table.tta-table th {
         var(--bg-color-secondary), var(--bg-color));
 }
 
+/* For running timers in popup window copy from Config Init style */
+#ttaRunWindowId {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 1rem;
+    border-color: var(--bg-color-secondary);
+    margin: 1rem;
+}
     `  /* End of block: var styles =
 
     /* --name-column is NOT WORKING so that style omitted
@@ -914,7 +922,7 @@ function paintRunTimers(i) {
         // Passed sanity check to make sure there is time for set...
         html += htmlRunTimersSet();  // Paint line for Total Tasks
         // Paint extra line for Total All Sets
-        if (getProjectValue('run_set_times') > 1) { html += htmlRunTimersAllSets(); }
+        if (getProjectValue('run_set_times') > 1) html += htmlRunTimersAllSets()
     }
 
     html += '</table>\n';
@@ -970,7 +978,7 @@ function setRunWindow(html) {
 
     // Create parent <div>
     var div = runWindow.document.createElement("div")
-    div.id = "PaintedTable"  // Same name in /programs/tim-ta.md
+    div.id = "ttaRunWindowId"
     ttaRunElm = div
 
     // Clone of ttaStyleSheet
