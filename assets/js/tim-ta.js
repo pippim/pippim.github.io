@@ -526,7 +526,7 @@ function ttaNameColumnStyle() {
     ttaStyleSheet.style.setProperty("--name-column", col);
     // get variable from inline style - NOT WORKING
     var display_col = ttaStyleSheet.style.getPropertyValue("--name-column");
-    console.log("css variable --name-column:", display_col)
+    // console.log("css variable --name-column:", display_col)
 
     var html = "<style>\n";
     html += 'table.tta-table td:nth-child(' + col + ') {\n' +
@@ -1372,9 +1372,7 @@ async function exitAllTimers() {
     wakeLockOff();  // Allow mobile screen to sleep again
     if (runWindowAsPopup) {
         // Running on large screen with popup window option
-        console.log("runWindow.close():", runWindow)
         runWindow.close()
-        // open(location, '_self').close()
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
         runWindowAsPopup = false
@@ -1382,11 +1380,10 @@ async function exitAllTimers() {
         // return  // No need to paint Projects or Tasks because
     }
 
-    if (calledFromTable == "Projects") { paintProjectsTable(); }
-    else if (calledFromTable == "Tasks") { paintTasksTable(); }
-    else {
-        popCreate('e', "Unknown caller to exitAllTimers(): " + calledFromTable);
-    }
+    if (calledFromTable == "Projects") paintProjectsTable()
+    else if (calledFromTable == "Tasks") paintTasksTable()
+    else popCreate('e', "Unknown caller to exit/runAllTimers(): " +
+                   calledFromTable)
 }
 
 async function wakeLockOn() {
