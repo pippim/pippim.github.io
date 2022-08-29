@@ -324,7 +324,8 @@ table.tta-table th {
     border-width: 2px;
     border-radius: 1rem;
     border-color: var(--bg-color-secondary);
-    margin: 1rem;
+    margin: .5rem;
+    padding: .25rem;
 }
     `  /* End of block: var styles =
 
