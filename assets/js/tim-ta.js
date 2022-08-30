@@ -3285,6 +3285,6 @@ async function lazyTimeouts(){
         // Return the ID as per native functionality to allow clearTimeout to work
         return timeoutId;
     };
-}();
+}
 
 /* End of /assets/js/tim-ta.js */
