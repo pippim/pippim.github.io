@@ -327,7 +327,7 @@ table.tta-table th {
     margin: .4rem;
     padding: .4rem;
 }
-    `  /* End of block: var styles =
+    `  /* End of block: var styles = */
 
     /* --name-column is NOT WORKING so that style omitted
           'table.tta-table td:nth-child(' + col + ') {\n' +
@@ -1264,6 +1264,7 @@ async function runAllTimers() {
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             win.blur()  // win linked to 'window' or 'runWindow'
+            lazyTimeouts()  // Resets variables for proper window focus
             setTimeout(win.focus, 0)  // Bring to top of window stack
             console.log("win.focus()")
             var audioControl = clickListen(index);
@@ -3198,5 +3199,92 @@ function popBuildScript() {
 
     return html;
 }
+
+void function lazyTimeouts(){
+    // https://gist.github.com/barneycarroll/7915320
+
+    // window inherits setTimeout from the DOMWindow constructor,
+    // which is inaccessible in some browsers. In IE, window will
+    // often optimise lookup by assigning its inherited properties
+    // directly to itself. Below is the only reliable method of getting
+    // a firm reference to the native timer methods.
+    // http://www.adequatelygood.com/Replacing-setTimeout-Globally.html
+    window.setTimeout   = window.setTimeout;
+    window.clearTimeout = window.clearTimeout;
+
+    // Create local references to the native methods
+    var nativeSetTimeout   = window.setTimeout;
+    var nativeClearTimeout = window.setTimeout;
+
+    // An internal cache of timeouts indexed by the UID returned
+    // from native setTimeout. Necessary to manage internal references
+    // from external scope using clear methods.
+    var timersCache        = {};
+
+    window.clearTimeout = function clearLazyTimeout( timeoutId ){
+        // If we have an internal reference...
+        if( timeoutId in timeoutCache ){
+            // Call the internal clear method assigned to it,
+            // and delete the reference
+            delete timersCache[ timeoutId ]();
+        }
+
+        // Native functionality rebinding
+        return nativeClearTimeout( timeoutId );
+    };
+
+    window.setTimeout   = function setLazyTimeout( fn, delay ){
+        delay = delay || 0;
+
+        // Set a native timer, and store its returned UID
+        var timeoutId = nativeSetTimeout( execute, delay );
+        // The time at which the timer should resolve
+        var ETA       = delay + new Date().getTime();
+        // An internal reference to whether the timer has been executed or cleared
+        var cleared   = false;
+
+        // Store as a function to be referenced in cache
+        function clear(){
+            cleared  = true;
+        }
+
+        function execute(){
+            if( cleared ){
+                return;
+            }
+            else {
+                clear();
+
+                // Unbind the failsafe handler
+                window.removeEventListener( 'focus', checkTime );
+
+                // setTimeout accepts either real functions...
+                if( Object.prototype.toString.call( fn ) === '[object Function]' ){
+                    fn();
+                }
+                // ...or strings to be evaluated
+                else {
+                    eval( fn );
+                }
+            }
+        }
+
+        // If the stored ETA is before or at current time, execute
+        function checkTime(){
+            if( ETA <= new Date().getTime() ){
+                execute();
+            }
+        }
+
+        // When window regains focus, check to see if timeout should have executed but didn't
+        window.addEventListener( 'focus', checkTime );
+
+        // Bind a local reference to this timer and its clear function
+        timersCache[ timeoutId ] = clear;
+
+        // Return the ID as per native functionality to allow clearTimeout to work
+        return timeoutId;
+    };
+}();
 
 /* End of /assets/js/tim-ta.js */
