@@ -1264,7 +1264,7 @@ async function runAllTimers() {
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
             win.blur()  // win linked to 'window' or 'runWindow'
-            lazyTimeouts()  // Resets variables for proper window focus
+            await lazyTimeouts()  // Resets variables for proper window focus
             setTimeout(win.focus, 0)  // Bring to top of window stack
             console.log("win.focus()")
             var audioControl = clickListen(index);
@@ -3200,7 +3200,7 @@ function popBuildScript() {
     return html;
 }
 
-void function lazyTimeouts(){
+async function lazyTimeouts(){
     // https://gist.github.com/barneycarroll/7915320
 
     // window inherits setTimeout from the DOMWindow constructor,
