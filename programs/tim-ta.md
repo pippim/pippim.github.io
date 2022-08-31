@@ -576,3 +576,17 @@ function get_dd_field (name) {
 
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a></div>
+
+# Running timer in popup Window
+
+Go to Firefox settings:
+
+{% include image.html src="/assets/img/tim-ta/pippim website allow popups.png"
+   alt="Tim-ta Under Construction.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="pippim website allow popups.png"
+%}
+
+and allow popups by pippim.com website. This allows the popup window to gain
+focus when alarm sounds. If you don't set this then popup window still runs
+but doesn't steal focus when alarm sounds. EG it stays in the background.
