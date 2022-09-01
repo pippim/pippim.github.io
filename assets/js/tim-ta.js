@@ -1256,8 +1256,7 @@ async function runAllTimers() {
             // Timer has ended, sound alarm and start next timer
             win.blur()  // win linked to 'window' or 'runWindow'
             // NOTE: for allow popups for pippim.com
-            testPopup(win)
-            //win.focus()
+            if (testPopup(win)) win.focus()  // Force focus on true
             console.log("win.focus()")
             var audioControl = clickListen(index);
             if (audioControl != null) {
