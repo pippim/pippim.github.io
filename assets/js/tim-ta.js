@@ -963,19 +963,10 @@ function setRunWindow(html) {
     runWindow.focus()
     runWindow.document.title = "Tim-ta run project " + ttaProject.project_name
 
-    // Create link in <head> section <link> (Not working for arial font?)
-    //var link = runWindow.document.createElement('link')
-    //link.rel = "stylesheet"
-    //link.href = "{{ site.url }}/_sass/jekyll-theme-cayman.scss"
-    // runWindow.document.head.appendChild(link)  // Try to get arial font
-
-    var link2 = runWindow.document.createElement('link')
-    link2.rel = "stylesheet"
-    var buildName = '{{ site.url }}/assets/css/style.css'
-    // alert("buildName: " + buildName)
-    // link2.href = "{{ '{{ site.url }}/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
-    link2.href = buildName
-    runWindow.document.head.appendChild(link2)  // class shake-image
+    var link = runWindow.document.createElement('link')
+    link.rel = "stylesheet"
+    link.href = '{{ site.url }}/assets/css/style.css'
+    runWindow.document.head.appendChild(link)  // define class shake-image
 
     // Create parent <div>
     var div = runWindow.document.createElement("div")
@@ -989,7 +980,6 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
 
     runWindow.document.body.appendChild(div)
-    //div.innerHTML = html  // Set top-level's element with new HTML
 }
 
 function tabRunTimersHeading() {
@@ -3200,5 +3190,16 @@ function popBuildScript() {
 
     return html;
 }
+
+openPopUp: function(urlToOpen) {
+    // https://stackoverflow.com/a/27725432/6929343
+    var popup_window=window.open(urlToOpen,"myWindow","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=yes, width=400, height=400");
+    try {
+        popup_window.focus();
+    } catch (e) {
+        alert("Pop-up Blocker is enabled! Please add this site to your exception list.");
+    }
+}
+
 
 /* End of /assets/js/tim-ta.js */
