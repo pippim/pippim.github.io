@@ -3191,14 +3191,19 @@ function popBuildScript() {
     return html;
 }
 
-openPopUp: function(urlToOpen) {
+function testPopup(popup_window) {
     // https://stackoverflow.com/a/27725432/6929343
-    var popup_window=window.open(urlToOpen,"myWindow","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=yes, width=400, height=400");
-    try {
-        popup_window.focus();
-    } catch (e) {
-        alert("Pop-up Blocker is enabled! Please add this site to your exception list.");
-    }
+    try popup_window.focus()
+    catch (e) alert("Pop-up Blocker is enabled!\n" +
+                    "Please add {{ site.url }} to your exception list.")
+    /*
+
+@Surendra please, can you specify what you mean with "not working"?
+An error at parse time? An error at runtime? The popup opens but it is
+marked as blocked? The popup is blocked but it is marked as open?
+I don't see any reason why explorer would fail this, unless calling focus()
+on NULL is allowed in which case, a test for NULL before the try would just work.
+    */
 }
 
 
