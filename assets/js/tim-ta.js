@@ -960,7 +960,8 @@ function setRunWindow(html) {
     runWindow = window.open('', '_blank',
         'directories=no,titlebar=no,toolbar=no,location=no,' +
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
-    runWindow.focus()
+    testPopup(runWindow)
+    //runWindow.focus()
     runWindow.document.title = "Tim-ta run project " + ttaProject.project_name
 
     var link = runWindow.document.createElement('link')
@@ -1255,8 +1256,8 @@ async function runAllTimers() {
             // Timer has ended, sound alarm and start next timer
             win.blur()  // win linked to 'window' or 'runWindow'
             // NOTE: for allow popups for pippim.com
-            //setTimeout(win.focus, 0)  // Bring to top of window stack
-            win.focus()
+            testPopup(win)
+            //win.focus()
             console.log("win.focus()")
             var audioControl = clickListen(index);
             if (audioControl != null) {
@@ -3193,17 +3194,15 @@ function popBuildScript() {
 
 function testPopup(popup_window) {
     // https://stackoverflow.com/a/27725432/6929343
-    try popup_window.focus()
-    catch (e) alert("Pop-up Blocker is enabled!\n" +
-                    "Please add {{ site.url }} to your exception list.")
-    /*
-
-@Surendra please, can you specify what you mean with "not working"?
-An error at parse time? An error at runtime? The popup opens but it is
-marked as blocked? The popup is blocked but it is marked as open?
-I don't see any reason why explorer would fail this, unless calling focus()
-on NULL is allowed in which case, a test for NULL before the try would just work.
-    */
+    try {
+        popup_window.focus()
+        return true
+    }
+    catch (e) {
+        alert("Pop-up Blocker is enabled!\n" +
+              "Please add {{ site.url }} to your exception list.")
+        return false
+    }
 }
 
 
