@@ -960,7 +960,11 @@ function setRunWindow(html) {
     runWindow = window.open('', '_blank',
         'directories=no,titlebar=no,toolbar=no,location=no,' +
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
-    testPopup(runWindow)
+    if (!testPopup(runWindow)) {
+        runWindowAsPopup = false  // Reset to run in main webpage
+        runWindow = window  // Use main webpage window
+        return false
+    }
     //runWindow.focus()
     runWindow.document.title = "Tim-ta run project " + ttaProject.project_name
 
@@ -981,6 +985,7 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
 
     runWindow.document.body.appendChild(div)
+    return true
 }
 
 function tabRunTimersHeading() {
