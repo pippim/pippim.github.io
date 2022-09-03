@@ -994,16 +994,28 @@ function setRunWindow(html) {
     return true
 }
 
+var webpageInactiveMessage
+
 function setWebpageDimmed() {
     // based on setContentDimmed from /assets/js/search.js
     document.body.style.overflow = "hidden"  // Main webpage!
-    ttaElm.classList.add("dim-body")  // Popup window has focus
+    // n popCreate
+    let btn = ["cancel", "Cancel", "Close popup window",
+               "window.opener.exitAllTimers()"]
+    let msg = "Timer tasks running in popup window"
+
+    let idWindow = popCreate("i", msg, "webpageInactive", "elm", ttaElm, btn);
+    popRegisterClose(idWindow, "window.opener.exitAllTimers()")
+    webpageInactiveMessage = document.getElementById(idWindow);
+    webpageInactiveMessage.classList.add("dim-body")  // Popup window has focus
 }
 
 function reverseWebpageDimmed() {
     // based on reverseContentDimmed from /assets/js/search.js
     document.body.style.overflow = "auto"
-    ttaElm.classList.remove("dim-body")  // popup window dimming
+    webpageInactiveMessage.classList.remove("dim-body")  // popup window dimming
+    // n popClose
+    popClose(webpageInactiveMessage.id)
 }
 
 function tabRunTimersHeading() {
@@ -1173,8 +1185,16 @@ function buildProgressControlButtons(i) {
     */
 
     workTask = Object.assign({}, ttaTask)
+    // When running in popup window, the function is in calling window
     var pre = ""
     if (fRunWindowAsPopup) pre = "window.opener."
+    var arrButtons = [
+        "begin", "&#x23EE;", "Skip to start, Previous", pre + "pcbClickBegin(" + i +")",
+        "rewind", "&#x23EA;", "Rewind, Fast backwards", pre + "pcbClickRewind(" + i +")",
+        "play_toggle", "⏸︎", "Pause timer", pre + "pcbClickPlayPause(" + i +")",
+        "forward", "&#x23E9;", "Fast forward", pre + "pcbClickForward(" + i +")",
+        "end", "&#x23ED;", "Skip to end, Next", pre + "pcbClickEnd(" + i +")"
+    ]
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", pre + "pcbClickBegin(" + i +")",
         "rewind", "&#x23EA;", "Rewind, Fast backwards", pre + "pcbClickRewind(" + i +")",
