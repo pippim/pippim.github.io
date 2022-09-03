@@ -987,7 +987,22 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
 
     runWindow.document.body.appendChild(div)
+
+    // Dim main webpage window by adding class .dim-body
+    setWebpageDimmed()
     return true
+}
+
+function setWebpageDimmed() {
+    // based on setContentDimmed from /assets/js/search.js
+    document.body.style.overflow = "hidden"  // Main webpage!
+    document.body.classList.add("dim-body")  // Popup window has focus
+}
+
+function reverseWebpageDimmed() {
+    // based on reverseContentDimmed from /assets/js/search.js
+    document.body.style.overflow = "auto"
+    document.body.classList.remove("dim-body")  // popup window dimming
 }
 
 function tabRunTimersHeading() {
@@ -1407,6 +1422,7 @@ async function exitAllTimers() {
         ttaRunElm = null  // parent element to anchor messages to
         fRunWindowAsPopup = false
         remaining_run_times = 0  // Force "big timer loop" exit
+        reverseWebpageDimmed()  // undim main webpage
         // return  // No need to paint Projects or Tasks because
     }
 
