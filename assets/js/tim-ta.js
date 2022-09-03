@@ -1332,18 +1332,16 @@ function updateRunTimer(myTable, entry, fHeading) {
 
 function updateRunTimerDuration(myTable, entry, fHeading) {
     // fHeading can be undefined
-    var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
-    var strDuration = hhmmssShorten(hhmmss);
-    if (strDuration == "") { strDuration = "Done"}
-    myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration;
+    let hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8)
+    var strDuration = hhmmssShorten(hhmmss)
+    if (strDuration == "") strDuration = "Done"
+    myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration
     // if fHeading is undefined, return now
     if (typeof fHeading == 'undefined') return
-    var projectName = ttaProject.project_name
-    var taskName = myTable.rows[entry.index + 1].cells[2].innerHTML
-    // taskName contains: '<font size="+2">TASK NAME</font>'
-    taskName = stripHtml(taskName)
-    console.log(projectName, taskName, strDuration)
-    // Saving original_task_name
+    let projectName = ttaProject.project_name
+    let htmlTaskName = myTable.rows[entry.index + 1].cells[2].innerHTML
+    // htmlTaskName contains: '<font size="+2">TASK NAME</font>'
+    let taskName = stripHtml(htmlTaskName)
     let newHeading = projectName + " - " +
                      taskName + ": " + strDuration
     setTaskAndTimeInHeading(newHeading)
