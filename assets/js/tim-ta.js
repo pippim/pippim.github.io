@@ -1373,7 +1373,7 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
 
 function setTaskAndTimeInHeading(newText) {
     if(!fTaskAndTimeInHeading) return
-    document.getElementsByClassName("ttaContainer")[0].firstChild.nodeValue = newText
+    runWindow.document.getElementsByClassName("ttaContainer")[0].firstChild.nodeValue = newText
 }
 
 async function testAllTimers() {
