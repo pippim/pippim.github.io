@@ -31,51 +31,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 // Draggable window: https://www.w3schools.com/howto/howto_js_draggable.asp
-// Make the DIV element draggable:
-dragElement(document.getElementById("tcm_window"));
-
-function dragElementOld(elm) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elm.id + "_header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elm.id + "_header").onmousedown = dragMouseDown;
-    // https://stackoverflow.com/a/52554777/6929343
-
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elm.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elm.style.top = (elm.offsetTop - pos2) + "px";
-    elm.style.left = (elm.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
+// Make the DIV element draggable (_includes/draggable-window.js):
+dragElement(document.getElementById("tcm_window"))
 
 // Loop through all class named .tcm-button
 var tcmButtonClassNdx; // Global variable
@@ -136,69 +93,11 @@ document.querySelector('#tcm_display_local').addEventListener('click', () => {
     html += htmlScreenInfo();
     b.innerHTML = html;
 
-    table_sort()
-    //sortLocalStorage();  // Sort localStorage table (#loclTable) by first column (Name)
+    table_sort()  // Call to tcm-common-code.js
     /*  Process TCM Window Button Visibility slider switches - shared  with ~/tcm.md
         USE: % include tcm-common-code.js %} */
     tcmButtonVisibility()
 });
-
-/* Port over to tcm-common-code.js
-
-// From: https://stackoverflow.com/a/70024272/6929343
-function table_sort() {
-    const styleSheet = document.createElement('style')
-    styleSheet.innerHTML = `
-        .order-inactive span {
-            visibility:hidden;
-        }
-        .order-inactive:hover span {
-            visibility:visible;
-        }
-        .order-active span {
-            visibility: visible;
-        }
-    `
-    document.head.appendChild(styleSheet)
-
-    document.querySelectorAll('th.order').forEach(th_elem => {
-        let asc = true
-        const span_elem = document.createElement('span')
-        span_elem.style = "font-size:0.8rem; margin-left:0.5rem"
-        span_elem.innerHTML = "▼"
-        th_elem.appendChild(span_elem)
-        th_elem.classList.add('order-inactive')
-
-        const index = Array.from(th_elem.parentNode.children).indexOf(th_elem)
-        th_elem.addEventListener('click', (e) => {
-            document.querySelectorAll('th.order').forEach(elem => {
-                elem.classList.remove('order-active')
-                elem.classList.add('order-inactive')
-            })
-            th_elem.classList.remove('order-inactive')
-            th_elem.classList.add('order-active')
-
-            if (!asc) {
-                th_elem.querySelector('span').innerHTML = '▲'
-            } else {
-                th_elem.querySelector('span').innerHTML = '▼'
-            }
-            //const arr = Array.from(th_elem.closest("table").querySelectorAll('tbody tr'))
-            const arr = Array.from(th_elem.closest("table").querySelectorAll('tbody tr')).slice(1)
-            arr.sort((a, b) => {
-                const a_val = a.children[index].innerText
-                const b_val = b.children[index].innerText
-                return (asc) ? a_val.localeCompare(b_val) : b_val.localeCompare(a_val)
-            })
-            arr.forEach(elem => {
-                th_elem.closest("table").querySelector("tbody").appendChild(elem)
-            })
-            asc = !asc
-        })
-    })
-}
-
-*/
 
 document.querySelector('#tcm_hyperlink_recipe').addEventListener('click', () => {
     processHyperlinkRecipe('tcm_window_body');
