@@ -1340,7 +1340,20 @@ function updateRunTimerDuration(myTable, entry, fHeading) {
     if (typeof fHeading == 'undefined') return
     var projectName = ttaProject.project_name
     var taskName = myTable.rows[entry.index + 1].cells[2].innerHTML
+    // taskName contains: '<font size="+2">TASK NAME</font>'
+    taskName = stripHtml(taskName)
     console.log(projectName, taskName, strDuration)
+    // Saving original_task_name
+    let newHeading = projectName + " - " +
+                     taskName + ": " + strDuration
+    setTaskAndTimeInHeading(newHeading)
+}
+
+function stripHtml(html) {
+    // https://stackoverflow.com/a/822486/6929343
+    let tmp = document.createElement("DIV");
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || "";
 }
 
 function resetTimersSet(myTable, run_times, remaining_run_times) {
@@ -1857,7 +1870,7 @@ function clickUpdateTask() {
     // Save old task name in case it changes
     if (original_index >= 0) {
         var original_task_name = ttaProject.arrTasks[original_index]
-        console.log("Saving original_task_name:", original_task_name)
+        // console.log("Saving original_task_name:", original_task_name)
     }
 
     // Get form input values including switches and selects
