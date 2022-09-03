@@ -861,7 +861,8 @@ var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSet
 var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock
 var pauseAllTimers, cntTimedTasks, ttaRunElm
 
-var runWindowAsPopup  // Are we running windows as a popup?
+var fRunWindowAsPopup  // Are we running windows as a popup?
+var fTaskAndTimeInHeading  // Dynamic remaining time in div heading
 var runWindow  // main webpage window or launched popup window
 
 function paintRunTimers(i) {
@@ -880,9 +881,10 @@ function paintRunTimers(i) {
     wakeLock = false;  // Force mobile screen to stay on
 
     scrSetSize();  // Call on document load. Must also call when RunTimers is painted
-    runWindowAsPopup = false // Are we running windows as a popup?
+    fRunWindowAsPopup = false  // Are we running windows as a popup?
+    fTaskAndTimeInHeading = true  // Later on set this up in configuration
     if (!scrLarge) runWindow = window  // If no popup runWindow is our window
-    else runWindowAsPopup = true // Later we will open a popup window
+    else fRunWindowAsPopup = true // Later we will set 'runWindow' variable
 
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
@@ -933,7 +935,7 @@ function paintRunTimers(i) {
     html += '<div class="leftFoot">\n';
     //html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
     var pre = ""
-    if (runWindowAsPopup) pre = "window.opener."
+    if (fRunWindowAsPopup) pre = "window.opener."
     html += taskButton("10x", "Run 10 times normal speed", pre + "testAllTimers")
     html += "Testing";
     html += '</div>\n';
@@ -945,7 +947,7 @@ function paintRunTimers(i) {
 
     html += ttaNameColumnStyle();  // Set name column width
 
-    if (runWindowAsPopup) setRunWindow(html)
+    if (fRunWindowAsPopup) setRunWindow(html)
 
     ttaRunElm.innerHTML = html  // Set top-level's element with new HTML
     initTimersAfterDOM();  // Initialize elements for table row IDs
@@ -961,7 +963,7 @@ function setRunWindow(html) {
         'directories=no,titlebar=no,toolbar=no,location=no,' +
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
     if (!testPopup(runWindow)) {
-        runWindowAsPopup = false  // Reset to run in main webpage
+        fRunWindowAsPopup = false  // Reset to run in main webpage
         runWindow = window  // Use main webpage window
         return false
     }
@@ -1156,7 +1158,7 @@ function buildProgressControlButtons(i) {
 
     workTask = Object.assign({}, ttaTask)
     var pre = ""
-    if (runWindowAsPopup) pre = "window.opener."
+    if (fRunWindowAsPopup) pre = "window.opener."
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", pre + "pcbClickBegin(" + i +")",
         "rewind", "&#x23EA;", "Rewind, Fast backwards", pre + "pcbClickRewind(" + i +")",
@@ -1312,27 +1314,33 @@ async function runAllTimers() {
             continue;  // Wait for first second to expire
         }
 
-        updateRunTimer(myTable, entry);
+        updateRunTimer(myTable, entry, fTaskAndTimeInHeading);
         updateRunTimer(myTable, entrySet);
         if (run_times > 1) { updateRunTimer(myTable, entryAllSets); }
 
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
 
-function updateRunTimer(myTable, entry) {
+function updateRunTimer(myTable, entry, fHeading) {
+    // fHeading can be undefined
     if (pauseAllTimers) { return; }
     entry.progress += 1
     entry.remaining -= 1
     entry.elm.value = entry.progress.toString();
-    updateRunTimerDuration(myTable, entry);
+    updateRunTimerDuration(myTable, entry, fHeading);
 }
 
-function updateRunTimerDuration(myTable, entry) {
+function updateRunTimerDuration(myTable, entry, fHeading) {
+    // fHeading can be undefined
     var hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8);
     var strDuration = hhmmssShorten(hhmmss);
     if (strDuration == "") { strDuration = "Done"}
-    //if (scrSmall) { return; }  // Duration doesn't display on small screen
     myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration;
+    // if fHeading is undefined, return now
+    if (typeof fHeading == 'undefined') return
+    var projectName = ttaProject.project_name
+    var taskName = myTable.rows[entry.index + 1].cells[2].innerHTML
+    console.log(projectName, taskName, strDuration)
 }
 
 function resetTimersSet(myTable, run_times, remaining_run_times) {
@@ -1348,6 +1356,11 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
             updateRunTimerDuration(myTable, entry);
         }
     }
+}
+
+function setTaskAndTimeInHeading(newText) {
+    if(!fTaskAndTimeInHeading) return
+    document.getElementsByClassName("ttaContainer")[0].firstChild.nodeValue = newText
 }
 
 async function testAllTimers() {
@@ -1376,12 +1389,12 @@ async function exitAllTimers() {
     }
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
     wakeLockOff();  // Allow mobile screen to sleep again
-    if (runWindowAsPopup) {
+    if (fRunWindowAsPopup) {
         // Running on large screen with popup window option
         runWindow.close()
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
-        runWindowAsPopup = false
+        fRunWindowAsPopup = false
         remaining_run_times = 0  // Force "big timer loop" exit
         // return  // No need to paint Projects or Tasks because
     }
