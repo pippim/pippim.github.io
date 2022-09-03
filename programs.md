@@ -26,7 +26,8 @@ always takes the same amount of time?
 Then ***Tim-ta*** (**Tim**ed-**ta**sks) will help you get
 the job done with each task started at the exact second!
 
-<a href="programs/tim-ta.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/tim-ta.html" style="font-size: 20px;">Run self-documenting app...</a>
+[GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"}
 
 ---
 
@@ -53,7 +54,8 @@ Then switch to your document and paste the clipboard contents with
 Each time you use it, **HRB** saves you from 
 googling the hyperlink syntax, typing text and confused head scratching.
 
-<a href="programs/hyperlink.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/hyperlink.html" style="font-size: 20px;">Run self-documenting app...</a>
+[GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/hrb.js){:target="_blank"}
 
 
 ---
@@ -79,7 +81,8 @@ browsers and other devices.
 Development began on February 25, 2022 and should take 
 about six months to complete.
 
-<a href="programs/tcm.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/tcm.html" style="font-size: 20px;">Run self-documenting app...</a>
+[GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/theCookieMachine.js){:target="_blank"}
 
 ---
 
@@ -97,6 +100,7 @@ includes the Top Ten Answers and the Posts by Tag nested accordion with
 the same time.
 
 <a href="programs/stack.html" style="font-size: 20px;">Read More...</a>
+[GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"}
 
 ---
 
