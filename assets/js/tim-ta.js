@@ -960,14 +960,10 @@ function paintRunTimers(i) {
 function setRunWindow(html) {
     /* Create popup window when on large screen and option on. */
 
-    // Dim main webpage window by adding class .dim-body
-    setWebpageDimmed()  // Was at bottom but not working. move to top
-
     runWindow = window.open('', '_blank',
         'directories=no,titlebar=no,toolbar=no,location=no,' +
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
     if (!testPopup(runWindow)) {
-        reverseWebpageDimmed()
         fRunWindowAsPopup = false  // Reset to run in main webpage
         runWindow = window  // Use main webpage window
         return false
@@ -990,21 +986,24 @@ function setRunWindow(html) {
     // 'styles' is shared with main webpage
     ttaRunStyleSheet.innerText = styles
     runWindow.document.head.appendChild(ttaRunStyleSheet)
-
     runWindow.document.body.appendChild(div)
+
+    // Dim main webpage window by adding class .dim-body
+    setWebpageDimmed()
+
     return true
 }
 
 function setWebpageDimmed() {
     // based on setContentDimmed from /assets/js/search.js
     document.body.style.overflow = "hidden"  // Main webpage!
-    document.body.classList.add("dim-body")  // Popup window has focus
+    ttaElm.classList.add("dim-body")  // Popup window has focus
 }
 
 function reverseWebpageDimmed() {
     // based on reverseContentDimmed from /assets/js/search.js
     document.body.style.overflow = "auto"
-    document.body.classList.remove("dim-body")  // popup window dimming
+    ttaElm.classList.remove("dim-body")  // popup window dimming
 }
 
 function tabRunTimersHeading() {
