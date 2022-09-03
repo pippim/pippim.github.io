@@ -960,12 +960,16 @@ function paintRunTimers(i) {
 function setRunWindow(html) {
     /* Create popup window when on large screen and option on. */
 
+    // Dim main webpage window by adding class .dim-body
+    setWebpageDimmed()
+
     runWindow = window.open('', '_blank',
         'directories=no,titlebar=no,toolbar=no,location=no,' +
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
     if (!testPopup(runWindow)) {
         fRunWindowAsPopup = false  // Reset to run in main webpage
         runWindow = window  // Use main webpage window
+        reverseWebpageDimmed()
         return false
     }
     //runWindow.focus()
@@ -988,9 +992,6 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
     runWindow.document.body.appendChild(div)
 
-    // Dim main webpage window by adding class .dim-body
-    setWebpageDimmed()
-
     return true
 }
 
@@ -1004,6 +1005,7 @@ function setWebpageDimmed() {
                "window.opener.exitAllTimers()"]
     let msg = "Timer tasks running in popup window"
 
+    // Must call popCreate before popup is actually opened
     let idWindow = popCreate("i", msg, "webpageInactive", "elm", ttaElm, btn);
     popRegisterClose(idWindow, "window.opener.exitAllTimers()")
     webpageInactiveMessage = document.getElementById(idWindow);
