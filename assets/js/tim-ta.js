@@ -260,7 +260,7 @@ table.tta-table th {
 
 .dim-main-webpage {
     /* Set entire screen dim. Reverse with removing class */
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .9);
 }
 
 .closeBtn {
@@ -1018,7 +1018,6 @@ function setWebpageDimmed() {
     popRegisterClose(webpageInactiveWindowId, "closePopupWindow()")
     webpageInactiveMessage = document.getElementById(webpageInactiveWindowId)
     webpageInactiveMessage.classList.add("dim-main-webpage")  // Popup window has focus
-    //webpageInactiveMessage.classList.add("dim-body")  // Popup window has focus
     // dim-main-webpage similar to /assets/css/style.scss/dim-body
 }
 
@@ -1026,7 +1025,6 @@ function reverseWebpageDimmed() {
     // based on reverseContentDimmed from /assets/js/search.js
     document.body.style.overflow = "auto"
     webpageInactiveMessage.classList.remove("dim-main-webpage")  // popup window dimming
-    //webpageInactiveMessage.classList.remove("dim-body")  // popup window dimming
     // n popClose popClearById() not found: popIndex0
     // popClose(webpageInactiveWindowId)
 }
