@@ -967,6 +967,7 @@ function setRunWindow(html) {
         'directories=no,titlebar=no,toolbar=no,location=no,' +
         'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
     if (!testPopup(runWindow)) {
+        // Test failed to focus on popup window
         fRunWindowAsPopup = false  // Reset to run in main webpage
         runWindow = window  // Use main webpage window
         reverseWebpageDimmed()
@@ -1002,12 +1003,12 @@ function setWebpageDimmed() {
     document.body.style.overflow = "hidden"  // Main webpage!
     // n popCreate
     let btn = ["cancel", "Cancel", "Close popup window",
-               "window.opener.exitAllTimers()"]
+               "exitAllTimers()"]
     let msg = "Timer tasks running in popup window"
 
     // Must call popCreate before popup is actually opened
     let idWindow = popCreate("i", msg, "webpageInactive", "elm", ttaElm, btn);
-    popRegisterClose(idWindow, "window.opener.exitAllTimers()")
+    popRegisterClose(idWindow, "exitAllTimers()")
     webpageInactiveMessage = document.getElementById(idWindow);
     webpageInactiveMessage.classList.add("dim-body")  // Popup window has focus
 }
