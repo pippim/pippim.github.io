@@ -260,7 +260,8 @@ table.tta-table th {
 
 .dim-main-webpage {
     // Set entire screen dim. Reverse with removing class
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75)
+    box-shadow: 0 0 0 10000px rgba(0, 0, 0, .75);  // IE & Firefox 88?
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75);  // Normal world
 }
 
 .closeBtn {
