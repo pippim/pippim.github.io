@@ -997,18 +997,20 @@ function setRunWindow(html) {
 }
 
 var webpageInactiveMessage
+var webpageInactiveWindowId
 
 function setWebpageDimmed() {
     // based on setContentDimmed from /assets/js/search.js
     document.body.style.overflow = "hidden"  // Main webpage!
     // n popCreate
     let btn = ["cancel", "Cancel", "Close popup window",
-               "exitAllTimers()"]
+               "closePopupWindow()"]
     let msg = "Timer tasks running in popup window"
 
     // Must call popCreate before popup is actually opened
-    let idWindow = popCreate("i", msg, "webpageInactive", "elm", ttaElm, btn);
-    popRegisterClose(idWindow, "exitAllTimers()")
+    webpageInactiveWindowId =
+        popCreate("i", msg, "webpageInactive", "elm", ttaElm, btn);
+    popRegisterClose(webpageInactiveWindowId, "closePopupWindow()")
     webpageInactiveMessage = document.getElementById(idWindow);
     webpageInactiveMessage.classList.add("dim-body")  // Popup window has focus
 }
@@ -1018,7 +1020,12 @@ function reverseWebpageDimmed() {
     document.body.style.overflow = "auto"
     webpageInactiveMessage.classList.remove("dim-body")  // popup window dimming
     // n popClose
-    // popClose(webpageInactiveMessage.id)  // get error message ID not found?
+    popClose(webpageInactiveWindowId)
+}
+
+function closePopupWindow() {
+    cancelAllTimers = true
+    exitAllTimers()
 }
 
 function tabRunTimersHeading() {
@@ -1409,8 +1416,19 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
 }
 
 function setTaskAndTimeInHeading(newText) {
-    if(!fTaskAndTimeInHeading) return
-    runWindow.document.getElementsByClassName("ttaContainer")[0].firstChild.nodeValue = newText
+    if(!fTaskAndTimeInHeading) return  // Heading option turned off
+
+    try {
+        runWindow.document.getElementsByClassName("ttaContainer")[0].
+            firstChild.nodeValue = newText
+    }
+    catch (e) {
+        // Popup window was closed when error message is
+        // Uncaught (in promise) TypeError: runWindow is null
+        cancelAllTimers = true
+        exitAllTimers()
+    }
+
 }
 
 async function testAllTimers() {
