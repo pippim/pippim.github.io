@@ -3025,12 +3025,13 @@ function popClose(idWindow) {
         return;
     }
     elmWindow.style.opacity = "0";
+    console.log("elmWindow:", elmWindow)
+    console.log("msgq[idWindow]:", msgq[idWindow])
     setTimeout(function(){
         elmWindow.style.display = "none";
-        if (idWindow in msgq && msgq[idWindow].callbackClose != null) {
-            msgq[idWindow].callbackClose();
-            console.log(elmWindow, msgq[idWindow])
-        }
+        if (idWindow in msgq && msgq[idWindow].callbackClose != null)
+            msgq[idWindow].callbackClose()
+
         if (idWindow in msgq && msgq[idWindow].msg_type == 'a') {
             // clickListen(i) has started playing sound
             // p['msg'] = msg;  // Doubles as alarm image filename
