@@ -1025,6 +1025,7 @@ function setWebpageDimmed() {
 
 function reverseWebpageDimmed() {
     // based on reverseContentDimmed from /assets/js/search.js
+    // Called by exitAllTimers()
     document.body.style.overflow = "auto"
     webpageInactiveMessage.classList.remove("dim-main-webpage")  // popup window dimming
     // n popClose popClearById() not found: popIndex0
@@ -1035,7 +1036,7 @@ function reverseWebpageDimmed() {
 function closePopupWindow() {
     cancelAllTimers = true
     exitAllTimers()
-    popClearById(webpageInactiveWindowId)
+    // popClearById(webpageInactiveWindowId)
 }
 
 function tabRunTimersHeading() {
