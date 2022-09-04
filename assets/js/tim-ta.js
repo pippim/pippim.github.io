@@ -1018,7 +1018,7 @@ function reverseWebpageDimmed() {
     document.body.style.overflow = "auto"
     webpageInactiveMessage.classList.remove("dim-body")  // popup window dimming
     // n popClose
-    popClose(webpageInactiveMessage.id)
+    // popClose(webpageInactiveMessage.id)  // get error message ID not found?
 }
 
 function tabRunTimersHeading() {
