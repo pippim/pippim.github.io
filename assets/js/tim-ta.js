@@ -3013,7 +3013,9 @@ function popRegisterClose(idWindow, callback) {
 function popClose(idWindow) {
     // Close window by ID name
     var win = getWin()
-    elmWindow = win.document.getElementById(idWindow);
+    var elmWindow = win.document.getElementById(idWindow);
+    // closePopupWindow() function may be removing the pop inactive message
+    if (elmWindow == null) elmWindow = document.getElementById(idWindow)
     if (elmWindow == null) {
         alert("popClose() received bad idWindow: " + idWindow);
         return;
@@ -3021,8 +3023,6 @@ function popClose(idWindow) {
     elmWindow.style.opacity = "0";
     setTimeout(function(){
         elmWindow.style.display = "none";
-        /* June 2, 2022 QUESTION: When would idWindow not be in msgq???
-        */
         if (idWindow in msgq && msgq[idWindow].callbackClose != null) {
             msgq[idWindow].callbackClose();
         }
