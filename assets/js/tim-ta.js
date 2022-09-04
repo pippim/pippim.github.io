@@ -1482,7 +1482,7 @@ async function exitAllTimers() {
         ttaRunElm = null  // parent element to anchor messages to
         fRunWindowAsPopup = false
         remaining_run_times = 0  // Force "big timer loop" exit
-        reverseWebpageDimmed()  // undim main webpage
+        reverseWebpageDimmed()  // main webpage normal background
         // return  // No need to paint Projects or Tasks because
     }
 
@@ -3020,7 +3020,7 @@ function popClose(idWindow) {
     // var elmWindow = win.document.getElementById(idWindow);
     var elmWindow = msgq[idWindow].ElmWindow
     // closePopupWindow() function may be removing the pop inactive message
-    if (elmWindow == null) elmWindow = document.getElementById(idWindow)
+    // if (elmWindow == null) elmWindow = document.getElementById(idWindow)
     if (elmWindow == null) {
         alert("popClose() received bad idWindow: " + idWindow);
         return;
