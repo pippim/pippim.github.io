@@ -3018,9 +3018,9 @@ function popClose(idWindow) {
     // Close window by ID name
     var win = getWin()
     // var elmWindow = win.document.getElementById(idWindow);
-    var elmWindow = msgq[idWindow].ElmWindow
+    var elmWindow = msgq[idWindow].elmWindow
     // closePopupWindow() function may be removing the pop inactive message
-    // if (elmWindow == null) elmWindow = document.getElementById(idWindow)
+    //if (elmWindow == null) elmWindow = document.getElementById(idWindow)
     if (elmWindow == null) {
         alert("popClose() received bad idWindow: " + idWindow);
         return;
