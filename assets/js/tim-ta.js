@@ -3006,30 +3006,11 @@ function popRegisterClose(idWindow, callback) {
 function popClose(idWindow) {
     // Close window by ID name
     var elmWindow = msgq[idWindow].elmWindow
-    /* OLD CODE
-    var win = getWin()
-    var elmWindow = win.document.getElementById(idWindow);
-    // closePopupWindow() function may be removing the pop inactive message
-    if (elmWindow == null) elmWindow = document.getElementById(idWindow)
-    if (elmWindow == null) {
-        alert("popClose() received bad idWindow: " + idWindow);
-        return;
-    }
-    */
     elmWindow.style.opacity = "0";
-    console.log("elmWindow:", elmWindow)
-    console.log("msgq[idWindow]:", msgq[idWindow])
     setTimeout(function(){
         elmWindow.style.display = "none";
         if (idWindow in msgq && msgq[idWindow].callbackClose != null)
             msgq[idWindow].callbackClose()
-
-        if (idWindow in msgq && msgq[idWindow].msg_type == 'a') {
-            // clickListen(i) has started playing sound
-            // p['msg'] = msg;  // Doubles as alarm image filename
-            // p['error_id'] = error_id;  // Doubles as alarm sound filename
-        }
-
         popClearById(idWindow);
     }, 600);
 }
