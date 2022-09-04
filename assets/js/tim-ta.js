@@ -1005,9 +1005,10 @@ var webpageInactiveMessage
 var webpageInactiveWindowId
 
 function setWebpageDimmed() {
-    // based on setContentDimmed from /assets/js/search.js
+    /*  set main webpage background dimmed and mount message that popup window
+        is running. Provide option to close popup window.
+    */
     document.body.style.overflow = "hidden"  // Main webpage!
-    // n popCreate
     let btn = ["cancel", "Cancel", "Close popup window",
                "closePopupWindow()"]
     let msg = "Timer tasks running in popup window"
@@ -1015,35 +1016,22 @@ function setWebpageDimmed() {
     // Must call popCreate before popup is actually opened
     webpageInactiveWindowId =
         popCreate("i", msg, "webpageInactive", "elm", ttaElm, btn)
-    // When using "X" to close message get error:
-    // popClose() received bad idWindow: popIndex0
+    // Register when message closed using "X"
     popRegisterClose(webpageInactiveWindowId, closePopupWindow)
     webpageInactiveMessage = document.getElementById(webpageInactiveWindowId)
-    webpageInactiveMessage.classList.add("dim-main-webpage")  // Popup window has focus
-    // dim-main-webpage similar to /assets/css/style.scss/dim-body
+    webpageInactiveMessage.classList.add("dim-main-webpage")
 }
 
 function reverseWebpageDimmed() {
     // based on reverseContentDimmed from /assets/js/search.js
     // Called by exitAllTimers()
     document.body.style.overflow = "auto"
-    webpageInactiveMessage.classList.remove("dim-main-webpage")  // popup window dimming
-    // n popClose popClearById() not found: popIndex0
-    // popClose(webpageInactiveWindowId)
-    // popClearById(webpageInactiveWindowId)
+    webpageInactiveMessage.classList.remove("dim-main-webpage")
 }
 
 function closePopupWindow() {
     cancelAllTimers = true
     exitAllTimers()
-    // popClearById(webpageInactiveWindowId)
-    // Uncaught TypeError: msgq[idWindow].callbackClose is not a function
-}
-
-function closePopupWindowUsingX() {
-    cancelAllTimers = true
-    exitAllTimers()
-    // popClearById(webpageInactiveWindowId)
 }
 
 function tabRunTimersHeading() {
@@ -2950,13 +2938,14 @@ async function popPrompt(msg_type, msg, error_id, id_elm_type, id_elm) {
     */
     var win = getWin()
     var idWindow = popCreate(msg_type, msg, error_id, id_elm_type, id_elm)
-    var elmWindow = win.document.getElementById(idWindow);
+    var elmWindow = msgq[idWindow].elmWindow
+    // var elmWindow = win.document.getElementById(idWindow);
 
     while(true) {
-        await sleep(50);
+        await sleep(50)
         // When a popCreate window is closed, it disappears after 600ms
-        if (win.document.body.contains(elmWindow)) { continue; }
-        return;  // Clicked X to close, or clicked "OK" & element removed
+        if (win.document.body.contains(elmWindow)) continue
+        return  // Clicked X to close, or clicked "OK" & element removed
     }
 }  // End of async function popPrompt(msg_type, msg, error_id)
 
@@ -3016,15 +3005,17 @@ function popRegisterClose(idWindow, callback) {
 
 function popClose(idWindow) {
     // Close window by ID name
-    var win = getWin()
-    // var elmWindow = win.document.getElementById(idWindow);
     var elmWindow = msgq[idWindow].elmWindow
+    /* OLD CODE
+    var win = getWin()
+    var elmWindow = win.document.getElementById(idWindow);
     // closePopupWindow() function may be removing the pop inactive message
-    //if (elmWindow == null) elmWindow = document.getElementById(idWindow)
+    if (elmWindow == null) elmWindow = document.getElementById(idWindow)
     if (elmWindow == null) {
         alert("popClose() received bad idWindow: " + idWindow);
         return;
     }
+    */
     elmWindow.style.opacity = "0";
     console.log("elmWindow:", elmWindow)
     console.log("msgq[idWindow]:", msgq[idWindow])
