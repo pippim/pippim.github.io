@@ -260,7 +260,7 @@ table.tta-table th {
 
 .dim-main-webpage {
     /* Set entire screen dim. Reverse with removing class */
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .9);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .8);
 }
 
 .closeBtn {
@@ -1015,6 +1015,8 @@ function setWebpageDimmed() {
     // Must call popCreate before popup is actually opened
     webpageInactiveWindowId =
         popCreate("i", msg, "webpageInactive", "elm", ttaElm, btn)
+    // When using "X" to close message get error:
+    // popClose() received bad idWindow: popIndex0
     popRegisterClose(webpageInactiveWindowId, "closePopupWindow()")
     webpageInactiveMessage = document.getElementById(webpageInactiveWindowId)
     webpageInactiveMessage.classList.add("dim-main-webpage")  // Popup window has focus
@@ -1027,11 +1029,13 @@ function reverseWebpageDimmed() {
     webpageInactiveMessage.classList.remove("dim-main-webpage")  // popup window dimming
     // n popClose popClearById() not found: popIndex0
     // popClose(webpageInactiveWindowId)
+    popClearById(webpageInactiveWindowId)
 }
 
 function closePopupWindow() {
     cancelAllTimers = true
     exitAllTimers()
+    popClearById(webpageInactiveWindowId)
 }
 
 function tabRunTimersHeading() {
@@ -2970,6 +2974,9 @@ function popClearByError(error_id) {
 function popClearById(idWindow) {
     // Clear a specific window id (same as msgq[key]) from document
     // The error may have occurred multiple times during validation
+    /*  Delete element from document and msgq
+        NOTE: Do not use win.document because closePopupWindow() would break
+    */
     for (const key of Object.keys(msgq)) {
         let entry = msgq[key];
         if (entry.idWindow == idWindow) { popClearByEntry(entry); return; }
@@ -2978,7 +2985,9 @@ function popClearById(idWindow) {
 }
 
 function popClearByEntry(entry) {
-    /* Delete element from document and msgq */
+    /*  Delete element from document and msgq
+        NOTE: Do not use win.document because closePopupWindow() would break
+    */
     var elm = entry.elmWindow;
     if (document.contains(elm)) {
         elm.remove();  // Might move below bottom of document but still there
