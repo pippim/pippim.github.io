@@ -1003,10 +1003,9 @@ function setRunWindow(html) {
 }
 
 function closingCode(){
+    // "X" closed popup Window
     cancelAllTimers = true
     exitAllTimers()
-    reverseWebpageDimmed()
-    // return null
 }
 
 var webpageInactiveMessage
