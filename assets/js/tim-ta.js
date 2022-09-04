@@ -2989,7 +2989,7 @@ function popClearById(idWindow) {
         let entry = msgq[key];
         if (entry.idWindow == idWindow) { popClearByEntry(entry); return; }
     }
-    alert("popClearById() not found: " + idWindow)
+    console.log("popClearById() not found: " + idWindow)
 }
 
 function popClearByEntry(entry) {
