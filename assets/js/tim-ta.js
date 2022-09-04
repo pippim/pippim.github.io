@@ -2977,18 +2977,18 @@ function popClearByError(error_id) {
 
 function popClearById(idWindow) {
     // Clear a specific window id (same as msgq[key]) from document
-    popClearByEntry(msgq[idWindow])
     /*  Delete element from document and msgq
         NOTE: Do not use win.document because closePopupWindow() would break
+              msgq[idWindow] isn't always found
+    */
     for (const key of Object.keys(msgq)) {
         let entry = msgq[key];
         if (entry.idWindow == idWindow) { popClearByEntry(entry); return; }
     }
-    */
     /* Sept 4/22 - change alert to console.log because "X" on
        inactive main webpage message due to popup window is always
        getting error */
-    //console.log("popClearById() not found: " + idWindow)
+    console.log("popClearById() not found: " + idWindow)
 }
 
 function popClearByEntry(entry) {
