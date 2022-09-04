@@ -3017,7 +3017,8 @@ function popRegisterClose(idWindow, callback) {
 function popClose(idWindow) {
     // Close window by ID name
     var win = getWin()
-    var elmWindow = win.document.getElementById(idWindow);
+    // var elmWindow = win.document.getElementById(idWindow);
+    var elmWindow = msgq[idWindow].ElmWindow
     // closePopupWindow() function may be removing the pop inactive message
     if (elmWindow == null) elmWindow = document.getElementById(idWindow)
     if (elmWindow == null) {
