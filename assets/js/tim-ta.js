@@ -1029,7 +1029,7 @@ function reverseWebpageDimmed() {
     webpageInactiveMessage.classList.remove("dim-main-webpage")  // popup window dimming
     // n popClose popClearById() not found: popIndex0
     // popClose(webpageInactiveWindowId)
-    popClearById(webpageInactiveWindowId)
+    // popClearById(webpageInactiveWindowId)
 }
 
 function closePopupWindow() {
