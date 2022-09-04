@@ -2989,6 +2989,9 @@ function popClearById(idWindow) {
         let entry = msgq[key];
         if (entry.idWindow == idWindow) { popClearByEntry(entry); return; }
     }
+    /* Sept 4/22 - change alert to console.log because "X" on
+       inactive main webpage message due to popup window is always
+       getting error */
     console.log("popClearById() not found: " + idWindow)
 }
 
@@ -3026,6 +3029,7 @@ function popClose(idWindow) {
         elmWindow.style.display = "none";
         if (idWindow in msgq && msgq[idWindow].callbackClose != null) {
             msgq[idWindow].callbackClose();
+            console.log(elmWindow, msgq[idWindow])
         }
         if (idWindow in msgq && msgq[idWindow].msg_type == 'a') {
             // clickListen(i) has started playing sound
