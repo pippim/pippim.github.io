@@ -997,8 +997,16 @@ function setRunWindow(html) {
     ttaRunStyleSheet.innerText = styles
     runWindow.document.head.appendChild(ttaRunStyleSheet)
     runWindow.document.body.appendChild(div)
+    runWindow.onbeforeunload = closingCode  // When "X" closes popup window
 
     return true
+}
+
+function closingCode(){
+    cancelAllTimers = true
+    exitAllTimers()
+    reverseWebpageDimmed()
+    // return null
 }
 
 var webpageInactiveMessage
@@ -3063,7 +3071,7 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     // Sanity checks - After writing your development code you can delete
     // these prior to migration to production environment.
     if (arguments.length < 2) {
-        popCreate('e', "msgAlert() minimum of 2 arguments required:\n" +
+        alert("popCreate() minimum of 2 arguments required:\n" +
               "msg_type, msg, id_elm_type, elm, error_id, clear_flag");
         console.trace();
         return;
@@ -3071,14 +3079,14 @@ function popCreate(msg_type, msg, error_id, id_elm_type, id_elm,
     if (msg_type != "e" && msg_type != "w" &&
         msg_type != "i" && msg_type != "s" && msg_type != "a") {
             // Catastrophe when you call popCreate from itself (CPU burn out)
-            alert('e', "msgAlert() msg_type must be 'e', 'w', 'i', 's' or 'a'.");
+            alert("popCreate() msg_type must be 'e', 'w', 'i', 's' or 'a'.");
             console.trace();
             return;
     }
     var elm = id_elm; // May be undefined, an element or an ID
     if (arguments.length >= 4 && id_elm_type == "id") {
         if (arguments.length < 5) {
-            alert('e', "msgAlert() when 'id_elm_type' = 'id', next argument required.");
+            alert("popCreate() when 'id_elm_type' = 'id', next argument required.");
             console.trace();
             return;
         }
