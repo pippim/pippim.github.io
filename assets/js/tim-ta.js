@@ -1017,7 +1017,7 @@ function setWebpageDimmed() {
         popCreate("i", msg, "webpageInactive", "elm", ttaElm, btn)
     // When using "X" to close message get error:
     // popClose() received bad idWindow: popIndex0
-    popRegisterClose(webpageInactiveWindowId, "closePopupWindowUsingX()")
+    popRegisterClose(webpageInactiveWindowId, "closePopupWindow()")
     webpageInactiveMessage = document.getElementById(webpageInactiveWindowId)
     webpageInactiveMessage.classList.add("dim-main-webpage")  // Popup window has focus
     // dim-main-webpage similar to /assets/css/style.scss/dim-body
@@ -1037,12 +1037,13 @@ function closePopupWindow() {
     cancelAllTimers = true
     exitAllTimers()
     // popClearById(webpageInactiveWindowId)
+    // Uncaught TypeError: msgq[idWindow].callbackClose is not a function
 }
 
 function closePopupWindowUsingX() {
     cancelAllTimers = true
     exitAllTimers()
-    popClearById(webpageInactiveWindowId)
+    // popClearById(webpageInactiveWindowId)
 }
 
 function tabRunTimersHeading() {
