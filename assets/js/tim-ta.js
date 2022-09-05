@@ -1018,7 +1018,7 @@ function setWebpageDimmed() {
     document.body.style.overflow = "hidden"  // Main webpage!
     let btn = ["cancel", "Cancel", "Close popup window",
                "closePopupWindow()"]
-    let msg = "Timer tasks running in popup window.\n" +
+    let msg = "Timer tasks running in popup window.<br>" +
               "Select 'Cancel' to close popup window."
 
     // Must call popCreate before popup is actually opened
