@@ -10,9 +10,9 @@ created_date: 2018-11-25 19:01:19
 edit_date:    2020-06-12 14:37:07
 votes:        "11 "
 favorites:    
-views:        "2,326 "
+views:        "2,339 "
 accepted:     Accepted
-uploaded:     2022-08-28 08:01:45
+uploaded:     2022-09-05 06:35:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-25-Temporarily-switch-to-a-full-screen_-hairline-cursor.md
 toc:          false
 navigation:   false

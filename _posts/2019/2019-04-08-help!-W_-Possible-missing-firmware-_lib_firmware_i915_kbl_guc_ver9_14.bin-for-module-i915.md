@@ -10,9 +10,9 @@ created_date: 2019-04-08 08:51:03
 edit_date:    2019-04-09 00:22:11
 votes:        "3 "
 favorites:    
-views:        "34,537 "
+views:        "34,581 "
 accepted:     
-uploaded:     2022-08-28 08:01:45
+uploaded:     2022-09-05 06:35:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-08-help!-W_-Possible-missing-firmware-_lib_firmware_i915_kbl_guc_ver9_14.bin-for-module-i915.md
 toc:          false
 navigation:   false

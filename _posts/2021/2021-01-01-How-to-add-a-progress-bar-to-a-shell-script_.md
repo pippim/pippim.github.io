@@ -5,14 +5,14 @@ title:        >
 site:         Stack Overflow
 stack_url:    https://stackoverflow.com/q/65532561
 type:         Answer
-tags:         bash shell zsh
+tags:         bash shell progress-bar zsh
 created_date: 2021-01-01 18:37:26
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "452,416 "
+views:        "453,388 "
 accepted:     
-uploaded:     2022-08-28 08:01:45
+uploaded:     2022-09-05 06:35:09
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-01-How-to-add-a-progress-bar-to-a-shell-script_.md
 toc:          false
 navigation:   false
