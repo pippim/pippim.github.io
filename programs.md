@@ -10,7 +10,7 @@ of charge and free of Ads too!
 
 ---
 
-## Tim-ta (Timed Tasks) - Run Set of Alarms Consecutively
+## Tim-ta (Timed Tasks) App - Run Set of Alarms Consecutively
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
    alt="Tim-ta Introduction.png"
@@ -26,8 +26,10 @@ always takes the same amount of time?
 Then ***Tim-ta*** (**Tim**ed-**ta**sks) will help you get
 the job done with each task started at the exact second!
 
-<a href="programs/tim-ta.html" style="font-size: 20px;">Run self-documenting app...</a>
-[GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"}
+<a href="programs/tim-ta.html" style="font-size: 20px;">Run</a> 
+self-documenting app. <emsp><emsp>
+[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"} 
+GitHub source code.
 
 ---
 
@@ -54,9 +56,10 @@ Then switch to your document and paste the clipboard contents with
 Each time you use it, **HRB** saves you from 
 googling the hyperlink syntax, typing text and confused head scratching.
 
-<a href="programs/hyperlink.html" style="font-size: 20px;">Run self-documenting app...</a>
-[GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/hrb.js){:target="_blank"}
-
+<a href="programs/hyperlink.html" style="font-size: 20px;">Run</a>
+self-documenting app. <emsp><emsp>
+[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/hrb.js){:target="_blank"}
+GitHub source code
 
 ---
 
@@ -81,8 +84,10 @@ browsers and other devices.
 Development began on February 25, 2022 and should take 
 about six months to complete.
 
-<a href="programs/tcm.html" style="font-size: 20px;">Run self-documenting app...</a>
-[GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/theCookieMachine.js){:target="_blank"}
+<a href="programs/tcm.html" style="font-size: 20px;">Run</a>
+self-documenting app. <emsp><emsp>
+[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/theCookieMachine.js){:target="_blank"}
+GitHub source code.
 
 ---
 
