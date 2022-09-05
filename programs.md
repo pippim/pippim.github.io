@@ -28,8 +28,7 @@ the job done with each task started at the exact second!
 
 <a href="programs/tim-ta.html" style="font-size: 20px;">Run</a> 
 self-documenting app. &emsp;&emsp; 
-[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"}  
-GitHub source code.
+[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"} GitHub source code.
 
 ---
 
@@ -57,9 +56,8 @@ Each time you use it, **HRB** saves you from
 googling the hyperlink syntax, typing text and confused head scratching.
 
 <a href="programs/hyperlink.html" style="font-size: 20px;">Run</a>
-self-documenting app. <emsp><emsp> 
-[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/hrb.js){:target="_blank"} 
-GitHub source code
+self-documenting app.  &emsp;&emsp; 
+[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/hrb.js){:target="_blank"} GitHub source code
 
 ---
 
@@ -85,9 +83,8 @@ Development began on February 25, 2022 and should take
 about six months to complete.
 
 <a href="programs/tcm.html" style="font-size: 20px;">Run</a>
-self-documenting app. <emsp><emsp>
-[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/theCookieMachine.js){:target="_blank"}  
-GitHub source code.
+self-documenting app. &emsp;&emsp; 
+[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/theCookieMachine.js){:target="_blank"} GitHub source code.
 
 ---
 
@@ -104,7 +101,7 @@ includes the Top Ten Answers and the Posts by Tag nested accordion with
 {{ site.post_count }} posts. The site search engine is generated at
 the same time.
 
-<a href="programs/stack.html" style="font-size: 20px;">Read More...</a> <emsp><emsp> 
+<a href="programs/stack.html" style="font-size: 20px;">Read More...</a>  &emsp;&emsp;  
 [GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"}
 
 ---
