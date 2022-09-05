@@ -137,7 +137,7 @@ var ttaStyleSheet, styles
 function ttaApplyGlobalStyles() {
     // Your CSS as text: https://stackoverflow.com/a/707580/6929343
     // root colors: Cayman green, Cayman blue, Honeydew
-    // name-column fluctuates based on currentTable and scrSize
+    // name-column fluctuates based on currentTable and scrSetSize
     styles = `
 
 :root {
@@ -1483,17 +1483,22 @@ async function exitAllTimers() {
     wakeLockOff();  // Allow mobile screen to sleep again
     if (fRunWindowAsPopup) {
         // Running on large screen with popup window option
-        var WinX
+        var WinX, WinY, WinW, WinH  // Save popup window position and size
         if(runWindow.screenX)
             WinX=runWindow.screenX
         else if(runWindow.screenLeft)
             WinX=runWindow.screenLeft
-        var WinY
+
         if(runWindow.screenY)
             WinY=runWindow.screenY
         else if(runWindow.screenTop)
             WinY=runWindow.screenTop
-        console.log("WinX:", WinX, "WinY:", WinY)
+
+        WinW = (runWindow.innerWidth > 0) ? runWindow.innerWidth : screen.width
+        WinH = (runWindow.innerHeight > 0) ? runWindow.innerHeight : screen.height
+
+        console.log("WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
+
         runWindow.close()
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
