@@ -1018,7 +1018,8 @@ function setWebpageDimmed() {
     document.body.style.overflow = "hidden"  // Main webpage!
     let btn = ["cancel", "Cancel", "Close popup window",
                "closePopupWindow()"]
-    let msg = "Timer tasks running in popup window"
+    let msg = "Timer tasks running in popup window.\n" +
+              "Select 'Cancel' to close popup window."
 
     // Must call popCreate before popup is actually opened
     webpageInactiveWindowId =
@@ -1211,6 +1212,7 @@ function buildProgressControlButtons(i) {
     // When running in popup window, the function is in calling window
     var pre = ""
     if (fRunWindowAsPopup) pre = "window.opener."
+    /* Strangely these were defined twice with no error reported
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", pre + "pcbClickBegin(" + i +")",
         "rewind", "&#x23EA;", "Rewind, Fast backwards", pre + "pcbClickRewind(" + i +")",
@@ -1218,6 +1220,7 @@ function buildProgressControlButtons(i) {
         "forward", "&#x23E9;", "Fast forward", pre + "pcbClickForward(" + i +")",
         "end", "&#x23ED;", "Skip to end, Next", pre + "pcbClickEnd(" + i +")"
     ]
+    */
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", pre + "pcbClickBegin(" + i +")",
         "rewind", "&#x23EA;", "Rewind, Fast backwards", pre + "pcbClickRewind(" + i +")",
@@ -2879,17 +2882,17 @@ window.addEventListener( 'DOMContentLoaded', (event) => paintCustomSounds() )
 
 */
 
-var msgq = {};  // Message Queue.
-var btnBox = {};  // Extra buttons boxed up for small screen which is <= 640 px wide.
-var popIndex = 0;  // Key into msgq returned from popCreate()
+var msgq = {}       // Message Queue.
+var btnBox = {}     // Extra buttons boxed up for small screen which is <= 640 px wide.
+var popIndex = 0    // Key into msgq returned from popCreate()
 /*
 var popEntry = {
-        index: undefined,
-        elmWindow: undefined,
-        typeMsg: undefined,
-        errorId: undefined,
-        elmLink: undefined,
-        typeIdOrElm: undefined,
+        idWindow: undefined,    // Contains popIndex# (Where # is 0 to open count)
+        elmWindow: undefined,   // HTML element
+        typeMsg: undefined,     // "s"=success, "a"=alarm, "e"=error, etc.
+        errorId: undefined,     // Optional pseudo class name for error group
+        elmLink: undefined,     // Anchor point for mounting message window
+        typeIdOrElm: undefined, //
         rectMounted: undefined,
         rectTarget: undefined,
         cntRepeats: undefined,
@@ -2901,11 +2904,11 @@ var popEntry = {
 
 function msgqClear() {
     // Clear existing messages and control box from document
-    for (const key of Object.keys(msgq)) { popClearByEntry(msgq[key]); }
+    for (const key of Object.keys(msgq)) popClearByEntry(msgq[key])
     // Reset objects and counters
-    msgq = {};
-    btnBox = {};
-    popIndex = 0;
+    msgq = {}
+    btnBox = {}
+    popIndex = 0
 }
 
 var popResponse;    // true/false value
