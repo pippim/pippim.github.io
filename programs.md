@@ -27,13 +27,13 @@ Then ***Tim-ta*** (**Tim**ed-**ta**sks) will help you get
 the job done with each task started at the exact second!
 
 <a href="programs/tim-ta.html" style="font-size: 20px;">Run</a> 
-self-documenting app. <emsp><emsp>
-[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"} 
+self-documenting app. <emsp><emsp> 
+[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"}  
 GitHub source code.
 
 ---
 
-## Hyperlink Recipe Baker
+## Hyperlink Recipe Baker App
 
 {% include image.html src="/assets/img/hrb/HRB Example.gif"
    alt="TCM transparent button.gif"
@@ -57,13 +57,13 @@ Each time you use it, **HRB** saves you from
 googling the hyperlink syntax, typing text and confused head scratching.
 
 <a href="programs/hyperlink.html" style="font-size: 20px;">Run</a>
-self-documenting app. <emsp><emsp>
-[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/hrb.js){:target="_blank"}
+self-documenting app. <emsp><emsp> 
+[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/hrb.js){:target="_blank"} 
 GitHub source code
 
 ---
 
-## The Cookie Machine
+## The Cookie Machine App
 
 {% include image.html src="/assets/img/tcm/TCM Window Buttons.gif"
    alt="TCM transparent button.gif"
@@ -86,7 +86,7 @@ about six months to complete.
 
 <a href="programs/tcm.html" style="font-size: 20px;">Run</a>
 self-documenting app. <emsp><emsp>
-[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/theCookieMachine.js){:target="_blank"}
+[View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/theCookieMachine.js){:target="_blank"}  
 GitHub source code.
 
 ---
@@ -104,7 +104,7 @@ includes the Top Ten Answers and the Posts by Tag nested accordion with
 {{ site.post_count }} posts. The site search engine is generated at
 the same time.
 
-<a href="programs/stack.html" style="font-size: 20px;">Read More...</a>
+<a href="programs/stack.html" style="font-size: 20px;">Read More...</a> <emsp><emsp> 
 [GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"}
 
 ---
@@ -126,7 +126,7 @@ Multi-Timer is called with `mt` from
 the command line or a Desktop Shortcut that calls `mt`. 
 
 The Multi-Timer program (`mt`) can be downloaded from the 
-[Pippim Multi-Timer Repository 🔗](https://github.com/pippim/multi-timer/blob/main/src/mt).
+[Pippim Multi-Timer Repository 🔗](https://github.com/pippim/multi-timer/blob/main/src/mt){:target="_blank"}
 
 
 
