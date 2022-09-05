@@ -1010,9 +1010,9 @@ function setRunWindow(html) {
     return true
 }
 
-function closingCode(){
+function closingCode() {
     // "X" closed popup Window
-    console.log("ClosingCode() has been called with 'X' to close window")
+    console.log("closingCode() called with 'X' to close window, cancelAllTimers =", cancelAllTimers)
     cancelAllTimers = true
     exitAllTimers()
 }
@@ -1048,6 +1048,7 @@ function reverseWebpageDimmed() {
 
 function closePopupWindow() {
     // Called when 'Cancel' clicked or 'X' on main webpage inactive message
+    console.log("closePopupWindow() has been called, cancelAllTimers =", cancelAllTimers)
     cancelAllTimers = true
     exitAllTimers()
 }
