@@ -101,8 +101,10 @@ includes the Top Ten Answers and the Posts by Tag nested accordion with
 {{ site.post_count }} posts. The site search engine is generated at
 the same time.
 
-<a href="programs/stack.html" style="font-size: 20px;">Read More...</a>  &emsp;&emsp;  
-[GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"}
+The website conversion programs can be downloaded from the 
+[GitHub source code 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede){:target="_blank"}
+
+<a href="programs/stack.html" style="font-size: 20px;">Read More...</a>  
 
 ---
 
@@ -119,13 +121,11 @@ takes the same amount of time?
 
 Then ***Multi-Timer*** will help you get the job done with no wasted time!
 
-Multi-Timer is called with `mt` from
+Multi-Timer program can be run using `mt` from
 the command line or a Desktop Shortcut that calls `mt`. 
 
 The Multi-Timer program (`mt`) can be downloaded from the 
 [Pippim Multi-Timer Repository 🔗](https://github.com/pippim/multi-timer/blob/main/src/mt){:target="_blank"}
-
-
 
 <a href="programs/mt.html" style="font-size: 20px;">Read More...</a>
 
