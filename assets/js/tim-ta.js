@@ -970,7 +970,7 @@ function setRunWindow(html) {
 
     runWindow = window.open('', '_blank',
         'directories=no,titlebar=no,toolbar=no,location=no,' +
-        'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350')
+        'status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=400')
     if (!testPopup(runWindow)) {
         // Test failed to focus on popup window
         fRunWindowAsPopup = false  // Reset to run in main webpage
@@ -997,7 +997,15 @@ function setRunWindow(html) {
     ttaRunStyleSheet.innerText = styles
     runWindow.document.head.appendChild(ttaRunStyleSheet)
     runWindow.document.body.appendChild(div)
+
+    /* Hook to code run when popup window closed via desktop manager */
     runWindow.onbeforeunload = closingCode  // When "X" closes popup window
+
+    /* Set window size and coordinates based on project options
+        1) ttaProject.fUseLastPopupBoundary is undefined/"false"/"true"
+        2) ttaProject.
+    */
+
 
     return true
 }
@@ -1018,7 +1026,7 @@ function setWebpageDimmed() {
     document.body.style.overflow = "hidden"  // Main webpage!
     let btn = ["cancel", "Cancel", "Close popup window",
                "closePopupWindow()"]
-    let msg = "Timer tasks running in popup window.<br>" +
+    let msg = "Timed Tasks running in popup window.<br>" +
               "Select 'Cancel' to close popup window."
 
     // Must call popCreate before popup is actually opened
@@ -1475,6 +1483,17 @@ async function exitAllTimers() {
     wakeLockOff();  // Allow mobile screen to sleep again
     if (fRunWindowAsPopup) {
         // Running on large screen with popup window option
+        var WinX
+        if(runWindow.screenX)
+            WinX=runWindow.screenX
+        else if(runWindow.screenLeft)
+            WinX=runWindow.screenLeft
+        var WinY
+        if(runWindow.screenY)
+            WinY=runWindow.screenY
+        else if(runWindow.screenTop)
+            WinY=runWindow.screenTop
+        console.log("WinX:", WinX, "WinY:", WinY)
         runWindow.close()
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
