@@ -1012,6 +1012,7 @@ function setRunWindow(html) {
 
 function closingCode(){
     // "X" closed popup Window
+    console.log("ClosingCode() has been called with 'X' to close window")
     cancelAllTimers = true
     exitAllTimers()
 }
@@ -1039,13 +1040,14 @@ function setWebpageDimmed() {
 }
 
 function reverseWebpageDimmed() {
-    // based on reverseContentDimmed from /assets/js/search.js
+    // Remove shadow from main webpage and restore scrollbars
     // Called by exitAllTimers()
     document.body.style.overflow = "auto"
     webpageInactiveMessage.classList.remove("dim-main-webpage")
 }
 
 function closePopupWindow() {
+    // Called when 'Cancel' clicked or 'X' on main webpage inactive message
     cancelAllTimers = true
     exitAllTimers()
 }
@@ -1456,31 +1458,35 @@ function setTaskAndTimeInHeading(newText) {
 }
 
 async function testAllTimers() {
+    /*  Version 1.0 function now disabled in version 1.1
+        However kept here for development testing
+    */
     // Speed up 10 times for previewing.
     // If not already sped up and > 30 seconds passed, confirm intent
     if (sleepMillis == 1000 && totalAllTimersTime > 30) {
-        var msg = "More than 30 seconds elapsed.<br>";
-        msg += "Are you sure you want to 10x speed?";
+        var msg = "More than 30 seconds elapsed.<br>" +
+                  "Are you sure you want to 10x speed?"
         // Use ttaRunElm for separate popup window rather than main webpage
-        var response = await popYesNo("w", msg, "timer_override", ttaRunElm);
-        if (!response) { return }
+        var response = await popYesNo("w", msg, "timer_override", ttaRunElm)
+        if (!response) return
     }
 
-    sleepMillis = sleepMillis / 10;
-    if (sleepMillis < 1) { sleeMillis = 1; }
+    sleepMillis = sleepMillis / 10
+    if (sleepMillis < 1) sleepMillis = 1
 }
 
 async function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
     if (cancelAllTimers == false && totalAllTimersTime > 30) {
-        var msg = "More than 30 seconds elapsed.<br>";
-        msg += "Are you sure you want to exit?";
+        var msg = "More than 30 seconds elapsed.<br>" +
+                  "Are you sure you want to exit?"
         // Use ttaRunElm for separate popup window rather than main webpage
         var response = await popYesNo("w", msg, "timer_override", ttaRunElm);
         if (!response) return
     }
     cancelAllTimers = true;  // Force runAllTimers() to exit if running
     wakeLockOff();  // Allow mobile screen to sleep again
+
     if (fRunWindowAsPopup) {
         // Running on large screen with popup window option
         var WinX, WinY, WinW, WinH  // Save popup window position and size
@@ -1505,7 +1511,6 @@ async function exitAllTimers() {
         fRunWindowAsPopup = false
         remaining_run_times = 0  // Force "big timer loop" exit
         reverseWebpageDimmed()  // main webpage normal background
-        // return  // No need to paint Projects or Tasks because
     }
 
     if (calledFromTable == "Projects") paintProjectsTable()
