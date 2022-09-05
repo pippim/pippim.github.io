@@ -27,7 +27,7 @@ Then ***Tim-ta*** (**Tim**ed-**ta**sks) will help you get
 the job done with each task started at the exact second!
 
 <a href="programs/tim-ta.html" style="font-size: 20px;">Run</a> 
-self-documenting app. <emsp><emsp> 
+self-documenting app. &emsp;&emsp; 
 [View 🔗](https://github.com/pippim/pippim.github.io/blob/main/assets/js/tim-ta.js){:target="_blank"}  
 GitHub source code.
 
