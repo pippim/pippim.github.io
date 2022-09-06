@@ -1049,6 +1049,7 @@ function reverseWebpageDimmed() {
 
 function closePopupWindow() {
     // Called when 'Cancel' clicked or 'X' on main webpage inactive message
+    return
     console.log("closePopupWindow() has been called, cancelAllTimers =", cancelAllTimers)
     cancelAllTimers = true
     exitAllTimers()
@@ -1508,7 +1509,9 @@ async function exitAllTimers() {
         console.log("WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
         console.log("screen.availWidth:", screen.availWidth,
                     "screen.availHeight:", screen.availHeight)
-
+        // STRANGE RESULTS: screen.availWidth: 1280 screen.availHeight: 720
+        console.log("screen.width:", screen.width,
+                    "screen.height:", screen.height)
         runWindow.close()
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
