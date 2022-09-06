@@ -945,7 +945,7 @@ function paintRunTimers(i) {
     html += "Testing";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
-    html += taskButton(tabBackSym, "Go back to last table", pre + "exitAllTimers");
+    html += taskButton(tabBackSym, "Back to last form", pre + "exitAllTimers");
     html += "Cancel";
     html += '</div>\n';
     html += '</div>\n';
@@ -1011,6 +1011,12 @@ function setRunWindow(html) {
 }
 
 function closingCode() {
+    /*  Four ways to close popup window
+        1. Clicking 'X' on dimmed main webpage inactive message
+        2. Select 'Cancel' on dimmed main webpage inactive message
+        3. Clicking 'X' on popup window
+        4. Select '<-' (Back button) on popup window
+    */
     // "X" closed popup Window
     console.log("closingCode() called with 'X' to close window, cancelAllTimers =", cancelAllTimers)
     cancelAllTimers = true
@@ -1048,8 +1054,13 @@ function reverseWebpageDimmed() {
 }
 
 function closePopupWindow() {
+    /*  Four ways to close popup window
+        1. Clicking 'X' on dimmed main webpage inactive message
+        2. Select 'Cancel' on dimmed main webpage inactive message
+        3. Clicking 'X' on popup window
+        4. Select '<-' (Back button) on popup window
+    */
     // Called when 'Cancel' clicked or 'X' on main webpage inactive message
-    return
     console.log("closePopupWindow() has been called, cancelAllTimers =", cancelAllTimers)
     cancelAllTimers = true
     exitAllTimers()
@@ -1507,11 +1518,12 @@ async function exitAllTimers() {
         WinH = (runWindow.innerHeight > 0) ? runWindow.innerHeight : screen.height
 
         console.log("WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
-        console.log("screen.availWidth:", screen.availWidth,
-                    "screen.availHeight:", screen.availHeight)
+        console.log("runWindow.screen.availWidth:", runWindow.screen.availWidth,
+                    "runWindow.screen.availHeight:", runWindow.screen.availHeight)
         // STRANGE RESULTS: screen.availWidth: 1280 screen.availHeight: 720
-        console.log("screen.width:", screen.width,
-                    "screen.height:", screen.height)
+        console.log("runWindow.screen.width:", runWindow.screen.width,
+                    "runWindow.screen.height:", runWindow.screen.height)
+        console.log("window.getScreenDetails:", window.getScreenDetails)
         runWindow.close()
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
