@@ -1034,7 +1034,8 @@ function setWebpageDimmed() {
     webpageInactiveWindowId =
         popCreate("i", msg, "webpageInactive", "elm", ttaElm, btn)
     // Register when message closed using "X"
-    popRegisterClose(webpageInactiveWindowId, closePopupWindow)
+    // popRegisterClose(webpageInactiveWindowId, closePopupWindow)
+    //   Getting called twice when beforeunload is used?
     webpageInactiveMessage = document.getElementById(webpageInactiveWindowId)
     webpageInactiveMessage.classList.add("dim-main-webpage")
 }
@@ -1505,6 +1506,8 @@ async function exitAllTimers() {
         WinH = (runWindow.innerHeight > 0) ? runWindow.innerHeight : screen.height
 
         console.log("WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
+        console.log("screen.availWidth:", screen.availWidth,
+                    "screen.availHeight:", screen.availHeight)
 
         runWindow.close()
         runWindow = null  // Tell functions not to use anymore
