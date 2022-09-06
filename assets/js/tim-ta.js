@@ -945,6 +945,12 @@ function paintRunTimers(i) {
     html += "Testing";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
+    /*  Four ways to close popup window
+        1. Clicking 'X' on dimmed main webpage inactive message
+        2. Select 'Cancel' on dimmed main webpage inactive message
+        3. Clicking 'X' on popup window
+        4. Select '<-' (Back button) on popup window
+    */
     html += taskButton(tabBackSym, "Back to last form", pre + "exitAllTimers");
     html += "Cancel";
     html += '</div>\n';
@@ -998,7 +1004,14 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
     runWindow.document.body.appendChild(div)
 
-    /* Hook to code run when popup window closed via desktop manager */
+    // Hook to code run when popup window closed via desktop manager
+    /*  Four ways to close popup window
+        1. Clicking 'X' on dimmed main webpage inactive message
+        2. Select 'Cancel' on dimmed main webpage inactive message
+        3. Clicking 'X' on popup window
+        4. Select '<-' (Back button) on popup window
+    */
+
     runWindow.onbeforeunload = closingCode  // When "X" closes popup window
 
     /* Set window size and coordinates based on project options
@@ -1031,6 +1044,12 @@ function setWebpageDimmed() {
         is running. Provide option to close popup window.
     */
     document.body.style.overflow = "hidden"  // Main webpage!
+    /*  Four ways to close popup window
+        1. Clicking 'X' on dimmed main webpage inactive message
+        2. Select 'Cancel' on dimmed main webpage inactive message
+        3. Clicking 'X' on popup window
+        4. Select '<-' (Back button) on popup window
+    */
     let btn = ["cancel", "Cancel", "Close popup window",
                "closePopupWindow()"]
     let msg = "Timed Tasks running in popup window.<br>" +
@@ -1040,7 +1059,13 @@ function setWebpageDimmed() {
     webpageInactiveWindowId =
         popCreate("i", msg, "webpageInactive", "elm", ttaElm, btn)
     // Register when message closed using "X"
-    // popRegisterClose(webpageInactiveWindowId, closePopupWindow)
+    /*  Four ways to close popup window
+        1. Clicking 'X' on dimmed main webpage inactive message
+        2. Select 'Cancel' on dimmed main webpage inactive message
+        3. Clicking 'X' on popup window
+        4. Select '<-' (Back button) on popup window
+    */
+    popRegisterClose(webpageInactiveWindowId, closePopupWindow)
     //   Getting called twice when beforeunload is used?
     webpageInactiveMessage = document.getElementById(webpageInactiveWindowId)
     webpageInactiveMessage.classList.add("dim-main-webpage")
