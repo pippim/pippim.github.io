@@ -814,6 +814,8 @@ function clickUp(i) {
 
 function clickDown(i) {
     // TODO: After moving, update & save localStorage
+    //          This means before painting each screen ReadConfiguration()
+    //          should be called.
     clickCommon(i);
     if (i == cntTable - 1) {
         popCreateUniqueError('w', "Already at bottom, can't move down",
@@ -1017,6 +1019,43 @@ function setRunWindow(html) {
     /* Set window size and coordinates based on project options
         1) ttaProject.fUseLastPopupBoundary is undefined/"false"/"true"
         2) ttaProject.
+
+WinX: 2031 WinY: 65 WinW: 601 WinH: 400 tim-ta.js:1870:17
+runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
+runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
+window.getScreenDetails: undefined tim-ta.js:1876:17
+closingCode() called with 'X' to close window, cancelAllTimers = true tim-ta.js:1359:13
+WinX: 2031 WinY: 65 WinW: 601 WinH: 400 tim-ta.js:1870:17
+runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
+runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
+window.getScreenDetails: undefined tim-ta.js:1876:17
+closingCode() called with 'X' to close window, cancelAllTimers = false tim-ta.js:1359:13
+WinX: 3159 WinY: 38 WinW: 601 WinH: 400 tim-ta.js:1870:17
+runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
+runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
+window.getScreenDetails: undefined tim-ta.js:1876:17
+closePopupWindow() has been called, cancelAllTimers = false tim-ta.js:1414:13
+WinX: 2087 WinY: 932 WinW: 601 WinH: 400 tim-ta.js:1870:17
+runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
+runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
+window.getScreenDetails: undefined tim-ta.js:1876:17
+closingCode() called with 'X' to close window, cancelAllTimers = true tim-ta.js:1359:13
+WinX: 2087 WinY: 932 WinW: 601 WinH: 400 tim-ta.js:1870:17
+runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
+runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
+window.getScreenDetails: undefined tim-ta.js:1876:17
+closePopupWindow() has been called, cancelAllTimers = false tim-ta.js:1414:13
+WinX: 3739 WinY: 877 WinW: 601 WinH: 400 tim-ta.js:1870:17
+runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
+runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
+window.getScreenDetails: undefined tim-ta.js:1876:17
+closingCode() called with 'X' to close window, cancelAllTimers = true tim-ta.js:1359:13
+WinX: 3739 WinY: 877 WinW: 601 WinH: 400 tim-ta.js:1870:17
+runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
+runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
+window.getScreenDetails: undefined tim-ta.js:1876:17
+popClearById() not found: popIndex0
+
     */
 
 
@@ -1359,6 +1398,8 @@ async function runAllTimers() {
                 await popPrompt('i', msg, "task_prompt", "elm", ttaRunElm) // n popPrompt(
                 // Blocking function, we wait until user reacts...
             }
+            // TODO: track time paused as well.
+            var timeTaskStarted = new Date().getTime()
         }
 
         var timeCurrent = new Date().getTime();
@@ -1372,6 +1413,14 @@ async function runAllTimers() {
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
+            // How much time was lost sleeping 1 second many times?
+            timeCurrent = new Date().getTime();
+            var timeTaskElapsed = timeCurrent - timeTaskStarted
+            console.log("timeTaskElapsed:", timeTaskElapsed)
+            // 11, 8
+            var hhmmss = timeTaskElapsed.toISOString().substr(11, 8);
+            console.log("hhmmss:", hhmmss)
+
             win.blur()  // win linked to 'window' or 'runWindow'
             // NOTE: for allow popups for pippim.com
             if (testPopup(win)) win.focus()  // Force focus on true
@@ -1380,6 +1429,7 @@ async function runAllTimers() {
             if (audioControl != null) {
                 // When !== null used, "TypeError: audioControl is undefined"
                 if (audioControl.ended) {}  // TODO: short audio ended already?
+
                 var popId = popCreate("a",
                     "{{ site.url }}/assets/img/tim-ta/alarm-clock.jpg",
                     audioControl, "elm", ttaRunElm)  // n popCreate( n popPrompt(
@@ -1595,6 +1645,8 @@ function hhmmssShorten(hhmmss){
 }
 
 function sleep(ms) {
+    //  TODO: When timer running in background seems OK in Firefox but stalls
+    //  out in Chrome.
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
