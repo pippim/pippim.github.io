@@ -1416,7 +1416,7 @@ async function runAllTimers() {
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
-            await signalEndTask(index)
+            index = await signalEndTask(index)
             /*
             // How much time was lost sleeping 1 second many times?
             timeCurrent = new Date().getTime();
@@ -1567,7 +1567,7 @@ async function signalEndTask (index) {
         index = 0;
         resetTimersSet(myTable, run_times, remaining_run_times);
     }
-
+    return index
 }
 
 function updateRunTimer(myTable, entry, fHeading) {
