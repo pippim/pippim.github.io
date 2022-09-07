@@ -1418,10 +1418,13 @@ async function runAllTimers() {
             var timeTaskElapsed = timeCurrent - timeTaskStarted
             console.log("timeTaskElapsed:", timeTaskElapsed)
             // 11, 8
-            var hhmmss = timeTaskElapsed.toISOString().substr(11, 8);
+            //var hhmmss = timeTaskElapsed.toISOString().substr(11, 8);
+            // TypeError: timeTaskElapsed.toISOString is not a function
+            var hhmmss = new timeTaskElapsed.toISOString().substr(11, 8);
             console.log("hhmmss:", hhmmss)
 
-            win.blur()  // win linked to 'window' or 'runWindow'
+            win.blur()  // Send window to the background
+            // win linked to 'window' or 'runWindow'
             // NOTE: for allow popups for pippim.com
             if (testPopup(win)) win.focus()  // Force focus on true
             console.log("win.focus()")
