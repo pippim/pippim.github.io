@@ -1490,7 +1490,7 @@ async function runAllTimers() {
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
 
-function signalStartTask () {
+async function signalStartTask () {
     // A timer is ready to start
     popClearByError("task_progress")  // Clear Progress Control Box
     pauseAllTimers = false  // Progress Control Box can pause. But not now
@@ -1504,7 +1504,7 @@ function signalStartTask () {
     var timeTaskStarted = new Date().getTime()
 }
 
-function signalEndTask () {
+async function signalEndTask () {
     // Timer has ended, sound alarm and start next timer
     var win = getWin()
     // How much time was lost sleeping 1 second many times?
