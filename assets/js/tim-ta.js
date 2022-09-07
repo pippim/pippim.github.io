@@ -1416,7 +1416,7 @@ async function runAllTimers() {
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
-            index = await signalEndTask(index)
+            await signalEndTask()
             /*
             // How much time was lost sleeping 1 second many times?
             timeCurrent = new Date().getTime();
@@ -1475,7 +1475,22 @@ async function runAllTimers() {
                 resetTimersSet(myTable, run_times, remaining_run_times);
             }
             */
-            // Grab next task in projects array
+            // Grab next task in project array
+            index += 1;
+            if (index >= cntTimedTasks) {
+                // The last task has ended, is it the last set too?
+                remaining_run_times -= 1;
+                if (remaining_run_times <= 0) {
+                    cancelAllTimers = true;  // Exit from while(true) & updates
+                    await popPrompt("s", "Run Project " +
+                                    ttaProject.project_name + " completed.",
+                                    "elm", ttaRunElm);
+                    exitAllTimers();  // Go back to calling table
+                }
+                // Rebuild allTimers{} to fresh state for new set
+                index = 0;
+                resetTimersSet(myTable, run_times, remaining_run_times);
+            }
             id = "tabTimer" + index
             entry = allTimers[id];
             name = ttaProject.arrTasks[entry.i];
@@ -1550,24 +1565,6 @@ async function signalEndTask (index) {
             break  // Clicked X to close, or clicked "OK" & element removed
         }
     }
-    // Grab next task in project array
-    index += 1;
-    //if (index >= ttaProject.arrTasks.length) {
-    if (index >= cntTimedTasks) {
-        // The last task has ended, is it the last set too?
-        remaining_run_times -= 1;
-        if (remaining_run_times <= 0) {
-            cancelAllTimers = true;  // Exit from while(true) & updates
-            await popPrompt("s", "Run Project " +
-                            ttaProject.project_name + " completed.",
-                            "elm", ttaRunElm);
-            exitAllTimers();  // Go back to calling table
-        }
-        // Rebuild allTimers{} to fresh state for new set
-        index = 0;
-        resetTimersSet(myTable, run_times, remaining_run_times);
-    }
-    return index
 }
 
 function updateRunTimer(myTable, entry, fHeading) {
