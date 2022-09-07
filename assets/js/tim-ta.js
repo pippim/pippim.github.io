@@ -1420,7 +1420,9 @@ async function runAllTimers() {
             // 11, 8
             //var hhmmss = timeTaskElapsed.toISOString().substr(11, 8);
             // TypeError: timeTaskElapsed.toISOString is not a function
-            var hhmmss = new timeTaskElapsed.toISOString().substr(11, 8);
+            //var hhmmss = new timeTaskElapsed.toISOString().substr(11, 8);
+            // TypeError: timeTaskElapsed.toISOString is not a constructor
+            var hhmmss = new Date(timeTaskElapsed).toISOString().substr(11, 8)
             console.log("hhmmss:", hhmmss)
 
             win.blur()  // Send window to the background
