@@ -1416,7 +1416,7 @@ async function runAllTimers() {
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
-            await signalEndTask()
+            await signalEndTask(index)
             /*
             // How much time was lost sleeping 1 second many times?
             timeCurrent = new Date().getTime();
@@ -1504,7 +1504,7 @@ async function signalStartTask () {
     timeTaskStarted = new Date().getTime()
 }
 
-async function signalEndTask () {
+async function signalEndTask (index) {
     // Timer has ended, sound alarm and start next timer
     // var win = getWin()
     // How much time was lost sleeping 1 second many times?
