@@ -871,6 +871,7 @@ var pauseAllTimers, cntTimedTasks, ttaRunElm
 var fRunWindowAsPopup  // Are we running windows as a popup?
 var fTaskAndTimeInHeading  // Dynamic remaining time in div heading
 var runWindow  // main webpage window or launched popup window
+var timeTaskStarted  // time the Timer Task started
 
 function paintRunTimers(i) {
     // TODO: Run in popup window. ttaElm needs to be remapped to runElm
@@ -1367,12 +1368,14 @@ async function runAllTimers() {
                              "no_tasks")
         return
     }
-    // allTimers =
+    /*
     var win = window  // Default to "normal" main webpage
     if (typeof runWindow !== 'undefined')
         if (runWindow != null) win = runWindow  // Working in popup Window, not main
+    */
     var timeLast = new Date().getTime();
-    var myTable = win.document.getElementById("tabRunTimers")
+    //var myTable = win.document.getElementById("tabRunTimers")
+    var myTable = runWindow.document.getElementById("tabRunTimers")
     var index = 0;
     var id = "tabTimer" + index
     var entry = allTimers[id];  // A variable name easier to read
@@ -1387,11 +1390,13 @@ async function runAllTimers() {
     wakeLockOn();  // Keep mobile screen turned on
 
     while (true) {
-        if (cancelAllTimers) { return; }  // cancel button picked in footer
+        if (cancelAllTimers) return  // cancel button picked in footer
         if (entry.progress == 0) {
             // A timer is ready to start
-            popClearByError("task_progress");  // Clear Progress Control Box
-            pauseAllTimers = false;  // Progress Control Box can pause. But not now
+            signalStartTask()
+            /*
+            popClearByError("task_progress")  // Clear Progress Control Box
+            pauseAllTimers = false  // Progress Control Box can pause. But not now
             if (getTaskValue('task_prompt') == "true") {
                 // Prompt to begin timer
                 msg = "Ready to begin task <b>" + ttaTask.task_name + "</b>"
@@ -1399,12 +1404,10 @@ async function runAllTimers() {
                 // Blocking function, we wait until user reacts...
             }
             // TODO: track time paused as well.
-            var timeTaskStarted = new Date().getTime()
+            timeTaskStarted = new Date().getTime()
+            */
         }
 
-        var timeCurrent = new Date().getTime();
-        var timeElapsed = timeCurrent - timeLast
-        timeLast = timeCurrent
         // console.log("timeElapsed:", timeElapsed) // 1 to 12 milliseconds LOST
         // TODO: If update interval every two seconds and only one second left
         //       on timer then massaging is required.
@@ -1413,6 +1416,8 @@ async function runAllTimers() {
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
+            signalEndTask()
+            /*
             // How much time was lost sleeping 1 second many times?
             timeCurrent = new Date().getTime();
             var timeTaskElapsed = timeCurrent - timeTaskStarted
@@ -1469,6 +1474,7 @@ async function runAllTimers() {
                 index = 0;
                 resetTimersSet(myTable, run_times, remaining_run_times);
             }
+            */
             // Grab next task in projects array
             id = "tabTimer" + index
             entry = allTimers[id];
@@ -1483,6 +1489,86 @@ async function runAllTimers() {
 
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
+
+function signalStartTask () {
+    // A timer is ready to start
+    popClearByError("task_progress")  // Clear Progress Control Box
+    pauseAllTimers = false  // Progress Control Box can pause. But not now
+    if (getTaskValue('task_prompt') == "true") {
+        // Prompt to begin timer
+        msg = "Ready to begin task <b>" + ttaTask.task_name + "</b>"
+        await popPrompt('i', msg, "task_prompt", "elm", ttaRunElm) // n popPrompt(
+        // Blocking function, we wait until user reacts...
+    }
+    // TODO: track time paused as well.
+    var timeTaskStarted = new Date().getTime()
+}
+
+function signalEndTask () {
+    // Timer has ended, sound alarm and start next timer
+    var win = getWin()
+    // How much time was lost sleeping 1 second many times?
+    var timeCurrent = new Date().getTime();
+    var timeTaskElapsed = timeCurrent - timeTaskStarted
+    console.log("timeTaskElapsed:", timeTaskElapsed)
+    var hhmmss = new Date(timeTaskElapsed).toISOString().substr(11, 8)
+    var strDuration = hhmmssShorten(hhmmss)
+    // 16:30 lost time results in 16:32
+    console.log("Actual Task strDuration:", strDuration)
+
+    // win.blur()  // Send window to the background, WHY??
+    // win linked to 'window' or 'runWindow'
+    // NOTE: for allow popups for pippim.com
+    //if (testPopup(win)) win.focus()  // Force focus on true
+    if (testPopup(runWindow)) runWindow.focus()  // Force focus on true
+    //console.log("win.focus()")
+    console.log("runWindow.focus()")
+    var audioControl = clickListen(index);
+    if (audioControl != null) {
+        // When !== null used, "TypeError: audioControl is undefined"
+        if (audioControl.ended) {}  // TODO: short audio ended already?
+
+        var popId = popCreate("a",
+            "{{ site.url }}/assets/img/tim-ta/alarm-clock.jpg",
+            audioControl, "elm", ttaRunElm)  // n popCreate( n popPrompt(
+        var elm = msgq[popId].elmWindow
+        while(true) {
+            await sleep(50);
+            var rem = audioControl.duration - audioControl.currentTime
+            // Has sound automatically ended
+            if (rem <= 0.0) {
+                // If window not closed already, then close it
+                //if (win.document.body.contains(elm)) popClose(popId)
+                if (runWindow.document.body.contains(elm)) popClose(popId)
+                break
+            }  // n popClose(
+            // Was window manually closed?
+            //if (win.document.body.contains(elm)) continue
+            if (runWindow.document.body.contains(elm)) continue
+            audioControl.pause()  // Kill the sound
+            audioControl.currentTime = 0.0
+            break  // Clicked X to close, or clicked "OK" & element removed
+        }
+    }
+    // Grab next task in project array
+    index += 1;
+    //if (index >= ttaProject.arrTasks.length) {
+    if (index >= cntTimedTasks) {
+        // The last task has ended, is it the last set too?
+        remaining_run_times -= 1;
+        if (remaining_run_times <= 0) {
+            cancelAllTimers = true;  // Exit from while(true) & updates
+            await popPrompt("s", "Run Project " +
+                            ttaProject.project_name + " completed.",
+                            "elm", ttaRunElm);
+            exitAllTimers();  // Go back to calling table
+        }
+        // Rebuild allTimers{} to fresh state for new set
+        index = 0;
+        resetTimersSet(myTable, run_times, remaining_run_times);
+    }
+
+}
 
 function updateRunTimer(myTable, entry, fHeading) {
     // fHeading can be undefined
