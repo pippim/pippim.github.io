@@ -1501,12 +1501,12 @@ async function signalStartTask () {
         // Blocking function, we wait until user reacts...
     }
     // TODO: track time paused as well.
-    var timeTaskStarted = new Date().getTime()
+    timeTaskStarted = new Date().getTime()
 }
 
 async function signalEndTask () {
     // Timer has ended, sound alarm and start next timer
-    var win = getWin()
+    // var win = getWin()
     // How much time was lost sleeping 1 second many times?
     var timeCurrent = new Date().getTime();
     var timeTaskElapsed = timeCurrent - timeTaskStarted
