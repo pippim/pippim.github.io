@@ -1417,15 +1417,12 @@ async function runAllTimers() {
             timeCurrent = new Date().getTime();
             var timeTaskElapsed = timeCurrent - timeTaskStarted
             console.log("timeTaskElapsed:", timeTaskElapsed)
-            // 11, 8
-            //var hhmmss = timeTaskElapsed.toISOString().substr(11, 8);
-            // TypeError: timeTaskElapsed.toISOString is not a function
-            //var hhmmss = new timeTaskElapsed.toISOString().substr(11, 8);
-            // TypeError: timeTaskElapsed.toISOString is not a constructor
             var hhmmss = new Date(timeTaskElapsed).toISOString().substr(11, 8)
-            console.log("hhmmss:", hhmmss)
+            var strDuration = hhmmssShorten(hhmmss)
+            // 16:30 lost time results in 16:32
+            console.log("Actual Task strDuration:", strDuration)
 
-            win.blur()  // Send window to the background
+            // win.blur()  // Send window to the background, WHY??
             // win linked to 'window' or 'runWindow'
             // NOTE: for allow popups for pippim.com
             if (testPopup(win)) win.focus()  // Force focus on true
