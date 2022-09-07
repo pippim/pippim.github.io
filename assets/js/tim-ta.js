@@ -1393,7 +1393,7 @@ async function runAllTimers() {
         if (cancelAllTimers) return  // cancel button picked in footer
         if (entry.progress == 0) {
             // A timer is ready to start
-            signalStartTask()
+            await signalStartTask()
             /*
             popClearByError("task_progress")  // Clear Progress Control Box
             pauseAllTimers = false  // Progress Control Box can pause. But not now
@@ -1416,7 +1416,7 @@ async function runAllTimers() {
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
-            signalEndTask()
+            await signalEndTask()
             /*
             // How much time was lost sleeping 1 second many times?
             timeCurrent = new Date().getTime();
