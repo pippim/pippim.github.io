@@ -1275,14 +1275,13 @@ function progressOverride() {
         // https://stackoverflow.com/a/36946222/6929343
         let i = allTimers[name].index;  // Must use "let" and not "var"
     */
-    popClearByError("progress_override");  // Clear control box, not an error
-    popClearByError("no_tasks_running");  // If clicked on good bar, remove old msg
+    popClearByError("progress_override")  // Clear control box, not an error
+    popClearByError("no_tasks_running")  // If clicked on good bar, remove old msg
     var i = getActiveTimerNo()
     if (i == 0) {
-    if (activeBarNo == 0) {
         // Better method is to hide button until timers are running
-        popCreate("e", "No timers are running", "no_tasks_running");
-        return;
+        popCreate("e", "No timers are running", "no_tasks_running")
+        return
     }
 
     i -= 1  // Convert i from timer number to index
@@ -1297,9 +1296,9 @@ function progressOverride() {
 function createProgressControl(i, element) {
     // Shared by progressTouched() and progressOverride()
     // TODO: Track amount of time paused and set prev/next timer as required
-    let msg = buildProgressControlBoxBody(i);
-    let btn = buildProgressControlButtons(i);
-    var popId = popCreate("i", msg, "progress_override", "elm", element, btn);
+    let msg = buildProgressControlBoxBody(i)
+    let btn = buildProgressControlButtons(i)
+    var popId = popCreate("i", msg, "progress_override", "elm", element, btn)
     popRegisterClose(popId, pcbClose)
 }
 
