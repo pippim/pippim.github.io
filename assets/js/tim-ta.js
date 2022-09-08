@@ -964,7 +964,7 @@ function paintRunTimers(i) {
     if (fRunWindowAsPopup) setRunWindow(html)
 
     ttaRunElm.innerHTML = html  // Set top-level's element with new HTML
-    initTimersAfterDOM();  // Initialize elements for table row IDs
+    listenProgressBarTouched();  // Listeners for progress bars being touched
     ttaRunElm.scrollIntoView()  // Scroll top level element into view
 
     runAllTimers();  // Run through all timers
@@ -1217,13 +1217,12 @@ function htmlRunTimersDetail(id, name, index, i, seconds, sound) {
     return html += "</tr>\n";
 }  // End of htmlRunTimersDetail(id, name, index, seconds, sound)
 
-function initTimersAfterDOM() {
-    // After innerHTML is set we can retrieve elements and set listeners
+function listenProgressBarTouched() {
+    // After innerHTML is set, set listeners for progress bars being touched
     for (const name of Object.keys(allTimers)) {
-        //var element = document.getElementById(allTimers[name].id);
         let element = runWindow.document.getElementById(name)
-        if (element == null) {  alert("initTimersAfterDOM(): element null"); }
-        allTimers[name].elm = element;
+        if (element == null) alert("listenProgressBarTouched(): element null")
+        allTimers[name].elm = element
         //var i = allTimers[name].index; // var assigns last value to all occurrences
         // https://stackoverflow.com/a/36946222/6929343
         let i = allTimers[name].index;  // Must use "let" and not "var"
@@ -1232,15 +1231,8 @@ function initTimersAfterDOM() {
 }
 
 function progressTouched(i, element) {
-    /* Pop up control box for Task Name progress bar with:
-
-        - 23EE ⏮︎ skip to start, previous
-        - 23EA ⏪︎ rewind, fast backwards
-        - 23EF ⏯︎ play/pause toggle
-        - 23E9 ⏩︎ fast forward
-        - 23ED ⏭︎ skip to end, next
-    */
-    popClearByError("task_progress");  // Clear control box, not an error
+    /* Pop up control box when active progress bar touched */
+    popClearByError("progress_override");  // Clear control box, not an error
     // Was a total progress bar clicked?
     const cntIndexTasks = ttaProject.arrTasks.length - 1
     const boolTotalBar = i > cntIndexTasks ? true : false;
@@ -1253,7 +1245,7 @@ function progressTouched(i, element) {
 
     popClearByError("no_tasks_running");  // If clicked on good bar, remove old msg
     if (activeBarNo == 0) {
-        popCreate("e", "No timers are running yet", "no_tasks_running");
+        popCreate("e", "No timers are running", "no_tasks_running");
         return;
     }
 
@@ -1270,21 +1262,55 @@ function progressTouched(i, element) {
                   "task_not_running", "elm", element);
         return;
     }
+    createProgressControl(i, element)  // Create dialog box with buttons
 
-    // Create our control box
+}  // End of progressTouched(i, element)
+
+function progressOverride() {
+    /*  Pop up control box when Override button selected in footer
+
+        Code from above:
+        allTimers[name].elm = element
+        //var i = allTimers[name].index; // var assigns last value to all occurrences
+        // https://stackoverflow.com/a/36946222/6929343
+        let i = allTimers[name].index;  // Must use "let" and not "var"
+    */
+    popClearByError("progress_override");  // Clear control box, not an error
+    popClearByError("no_tasks_running");  // If clicked on good bar, remove old msg
+    var i = getActiveTimerNo()
+    if (i == 0) {
+    if (activeBarNo == 0) {
+        // Better method is to hide button until timers are running
+        popCreate("e", "No timers are running", "no_tasks_running");
+        return;
+    }
+
+    i -= 1  // Convert i from timer number to index
+    for (const name of Object.keys(allTimers)) {
+        let element = runWindow.document.getElementById(name)
+        if (i == allTimers[name].index)) break
+    }
+    createProgressControl(i, element)  // Create dialog box with buttons
+
+}  // End of progressOverride()
+
+function createProgressControl(i, element) {
+    // Shared by progressTouched() and progressOverride()
+    // TODO: Track amount of time paused and set prev/next timer as required
     let msg = buildProgressControlBoxBody(i);
     let btn = buildProgressControlButtons(i);
-    var popId = popCreate("i", msg, "task_progress", "elm", element, btn);
+    var popId = popCreate("i", msg, "progress_override", "elm", element, btn);
     popRegisterClose(popId, pcbClose)
-}  // End of progressTouched(i, element)
+}
 
 function buildProgressControlBoxBody(i) {
     // Get task details into work buffer
-    workTask = Object.assign({}, ttaTask); // https://stackoverflow.com/a/34294740/6929343
+    //workTask = Object.assign({}, ttaTask)
     var msg = "";
     msg += "<b><font size='+2'>Timed Task Overrides</font></b><br><br>\n";
     msg += "Project: <b>" + ttaProject.project_name +
-           "</b> - Task: <b>" + workTask.task_name + "</b><br>";
+           //"</b> - Task: <b>" + workTask.task_name + "</b><br>";
+           "</b> - Task: <b>" + ttaTask.task_name + "</b><br>";
     return msg;
 }
 
@@ -1297,19 +1323,10 @@ function buildProgressControlButtons(i) {
         - 23ED ⏭︎ skip to end, next
     */
 
-    workTask = Object.assign({}, ttaTask)
     // When running in popup window, the function is in calling window
     var pre = ""
     if (fRunWindowAsPopup) pre = "window.opener."
-    /* Strangely these were defined twice with no error reported
-    var arrButtons = [
-        "begin", "&#x23EE;", "Skip to start, Previous", pre + "pcbClickBegin(" + i +")",
-        "rewind", "&#x23EA;", "Rewind, Fast backwards", pre + "pcbClickRewind(" + i +")",
-        "play_toggle", "⏸︎", "Pause timer", pre + "pcbClickPlayPause(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", pre + "pcbClickForward(" + i +")",
-        "end", "&#x23ED;", "Skip to end, Next", pre + "pcbClickEnd(" + i +")"
-    ]
-    */
+
     var arrButtons = [
         "begin", "&#x23EE;", "Skip to start, Previous", pre + "pcbClickBegin(" + i +")",
         "rewind", "&#x23EA;", "Rewind, Fast backwards", pre + "pcbClickRewind(" + i +")",
@@ -1350,6 +1367,7 @@ function pcbClose() {
 function getActiveTimerNo() {
     for (const key of Object.keys(allTimers)) {
         var entry = allTimers[key];
+        // If it hasn't started and hasn't ended it's the active timer
         if (entry.seconds != entry.progress && entry.seconds != entry.remaining) {
             return entry.index + 1
         }
@@ -1372,26 +1390,24 @@ async function runAllTimers() {
     var index = 0;
     var id = "tabTimer" + index
     var entry = allTimers[id];  // A variable name easier to read
-    var entrySet = allTimers["tabTimerSet"];  // Total Tasks
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[index]];
     var run_times = getProjectValue('run_set_times');
     var remaining_run_times = run_times;
-    // Setup Total All Sets entry if required
-    if (run_times > 1) { var entryAllSets = allTimers["tabTimerAllSets"]; }
 
-    //console.log("run_times:", run_times);
     wakeLockOn();  // Keep mobile screen turned on
 
     while (true) {
-        if (cancelAllTimers) return  // cancel button picked in footer
-        // Is the next timer is ready to start?
+        if (cancelAllTimers) return  // All timers and sets finished
+        // Is the next timer ready to start?
         if (entry.progress == 0) await signalStartTask()
-        await sleep(sleepMillis)  // Sleep for a second
+        // setTimeout to sleep for desired period
+        await sleep(sleepMillis)
+        // TODO: totalAllTimersTime requires time delta calculation
         totalAllTimersTime += 1  // Total seconds, not including pauses
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
-            await signalEndTask()
+            await signalEndTask()  // Typical wait 1 to 5 seconds for sound file
             // Grab next task in project array
             index += 1;
             if (index >= cntTimedTasks) {
@@ -1416,15 +1432,15 @@ async function runAllTimers() {
         }
 
         updateRunTimer(myTable, entry, fTaskAndTimeInHeading)
-        updateRunTimer(myTable, entrySet)
-        if (run_times > 1) updateRunTimer(myTable, entryAllSets)
+        updateRunTimer(myTable, allTimers["tabTimerSet"])
+        if (run_times > 1) updateRunTimer(myTable, allTimers["tabTimerAllSets"])
 
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
 
 async function signalStartTask () {
     // A timer is ready to start
-    popClearByError("task_progress")  // Clear Progress Control Box
+    popClearByError("progress_override")  // Clear Progress Control Box if mounted
     pauseAllTimers = false  // Progress Control Box can pause. But not now
     if (getTaskValue('task_prompt') == "true") {
         // Prompt to begin timer
@@ -1437,8 +1453,7 @@ async function signalStartTask () {
 }
 
 async function signalEndTask (index) {
-    // Timer has ended, sound alarm and start next timer
-    // var win = getWin()
+    // Timer has ended, sound alarm and display image
     // How much time was lost sleeping 1 second many times?
     var timeCurrent = new Date().getTime();
     var timeTaskElapsed = timeCurrent - timeTaskStarted
