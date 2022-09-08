@@ -18,47 +18,36 @@ var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
 scrSetSize();  // Call on document load. Must also call when RunTimers is painted
 
 function scrSetSize() {
+    /*  On window resize, set width of progress bar accordingly
+    */
     // mobiles don't have window.innerWidth
-    scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    scrSmall = scrMedium = scrLarge = false;
-    if (scrWidth < 641) { scrSmall = true; }
-    else if (scrWidth > 1007) { scrLarge = true; }
-    else { scrMedium = true; }
-    //console.log("scrXxxx: Width Small Medium Large: ", scrWidth, scrSmall, scrMedium, scrLarge)
+    scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width
+    scrSmall = scrMedium = scrLarge = false
+    if (scrWidth < 641) scrSmall = true
+    else if (scrWidth > 1007) scrLarge = true
+    else scrMedium = true
 
     const x = document.getElementById("content");  /* Exists in every _layout */
     const y = x.getElementsByTagName("progress");  /* To override styling of progress { */
     for (var i=0; i<y.length; i++) {
         //console.log("y[i].id:", y[i].id,
         //            "getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
-        if (scrLarge) {
-            if (scrWidth < 1200) {
+        if (scrLarge)
+            if (scrWidth < 1200)
                 /* Chrome can't handle without splitting Task Name "Wash Cycle" */
-                y[i].style.width = "24rem"
-            } else {
-                y[i].style.width = "30rem"
-            }
-        }
-        if (scrMedium) {
-            if (scrWidth < 750) {
-                /* Chrome can't handle without splitting Task Name "Tasks Total" */
-                y[i].style.width = "10rem"
-            } else {
-                y[i].style.width = "16rem"
-            }
-        }
-        if (scrSmall) { y[i].style.width = "6rem" }
-/*
+                y[i].style.width = "24rem"  // 1008 to 1199
+            else
+                y[i].style.width = "30rem"  // 1200+
 
-        for (const key of Object.keys(elm)) {
-            //console.log("elm[key].style.width:", elm[key].style.width)
-        }
-*/
-/*    @include large { width: 26rem; }
-    @include medium { width: 16rem; }
-    @include small { width: 6rem; }
-*/
-    }
+        if (scrMedium)
+            if (scrWidth < 750)
+                /* Chrome can't handle without splitting Task Name "Tasks Total" */
+                y[i].style.width = "10rem"  // 641 to 749
+            else
+                y[i].style.width = "16rem"  // 750 to 1007
+
+        if (scrSmall) y[i].style.width = "6rem"  // 0 to 640
+    }  // End of looping for all elements with Tag Name "progress"
 }
 
 // window.addEventListener('resize', () => { func1(); func2(); });
@@ -66,6 +55,11 @@ window.onresize = function() {
     // Can be called many times during a real window resize
     clearTimeout(scrTimeout);  // Reset window resize delay to zero
     scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
+}
+
+window.beforeunload = function() {
+    // Can be called many times during a real window resize
+    leavingMainWebpage()
 }
 
 // Shared ttaConfig definition
@@ -1126,9 +1120,19 @@ function closePopupWindow() {
         4. Select '<-' (Back button) on popup window
     */
     // Called when 'Cancel' clicked or 'X' on main webpage inactive message
-    console.log("closePopupWindow() has been called, cancelAllTimers =", cancelAllTimers)
+    // console.log("closePopupWindow() has been called, cancelAllTimers =", cancelAllTimers)
     cancelAllTimers = true
     exitAllTimers()
+}
+
+function leavingMainWebpage() {
+    /*  'X' clicked on browser tab or refresh clicked
+        called automatically with listener on window.beforeunload
+    */
+    var win = getWin()
+    if (win == window) return  // No popup window to close
+    // TODO: There could be a warning that popup window is closing
+    closePopupWindow()
 }
 
 function tabRunTimersHeading() {
@@ -1236,12 +1240,9 @@ function progressTouched(i, element) {
     // Was a total progress bar clicked?
     const cntIndexTasks = ttaProject.arrTasks.length - 1
     const boolTotalBar = i > cntIndexTasks ? true : false;
-    // What is the running ones-based progress bar number?
+    // What is the running progress bar number?
     const activeBarNo = getActiveTimerNo();
     const boolTouchedActive = i + 1 === activeBarNo ? true : false;
-    //console.log("Clicked on a boolTotalBar?:", boolTotalBar);
-    //console.log("Active Progress Bar number:", activeBarNo);
-    //console.log("boolTouchedActive?:", boolTouchedActive);
 
     popClearByError("no_tasks_running");  // If clicked on good bar, remove old msg
     if (activeBarNo == 0) {
@@ -1268,26 +1269,24 @@ function progressTouched(i, element) {
 
 function progressOverride() {
     /*  Pop up control box when Override button selected in footer
-
-        Code from above:
-        allTimers[name].elm = element
-        //var i = allTimers[name].index; // var assigns last value to all occurrences
-        // https://stackoverflow.com/a/36946222/6929343
-        let i = allTimers[name].index;  // Must use "let" and not "var"
+        Cannot click override button when no timers are running.
     */
+    // TODO: If pcb already mounted and paused, do we want to mount again?
     popClearByError("progress_override")  // Clear control box, not an error
-    popClearByError("no_tasks_running")  // If clicked on good bar, remove old msg
+    // What is the running progress bar number?
     var i = getActiveTimerNo()
     if (i == 0) {
-        // Better method is to hide button until timers are running
-        popCreate("e", "No timers are running", "no_tasks_running")
+        // TODO: Rather than saying "You can't touch that" a better
+        // method is to hide the button until timers are running
+        popCreateUniqueError("e", "No timers are running", "no_tasks_running")
         return
     }
 
     i -= 1  // Convert i from timer number to index
-    for (const name of Object.keys(allTimers)) {
-        let element = runWindow.document.getElementById(name)
-        if (i == allTimers[name].index) break
+    for (const key of Object.keys(allTimers)) {
+        let element = runWindow.document.getElementById(key)
+        // TODO: Review [key].index relationship with i, improvements?
+        if (i == allTimers[key].index) break
     }
     createProgressControl(i, element)  // Create dialog box with buttons
 
