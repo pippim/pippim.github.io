@@ -1615,12 +1615,12 @@ async function exitAllTimers() {
         WinH = (runWindow.innerHeight > 0) ? runWindow.innerHeight : screen.height
 
         console.log("WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
-        console.log("runWindow.screen.availWidth:", runWindow.screen.availWidth,
-                    "runWindow.screen.availHeight:", runWindow.screen.availHeight)
+        //console.log("runWindow.screen.availWidth:", runWindow.screen.availWidth,
+        //            "runWindow.screen.availHeight:", runWindow.screen.availHeight)
         // STRANGE RESULTS: screen.availWidth: 1280 screen.availHeight: 720
-        console.log("runWindow.screen.width:", runWindow.screen.width,
-                    "runWindow.screen.height:", runWindow.screen.height)
-        console.log("window.getScreenDetails:", window.getScreenDetails)
+        //console.log("runWindow.screen.width:", runWindow.screen.width,
+        //            "runWindow.screen.height:", runWindow.screen.height)
+        //console.log("window.getScreenDetails:", window.getScreenDetails)
         runWindow.close()
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
