@@ -57,10 +57,15 @@ window.onresize = function() {
     scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
 }
 
+window.addEventListener("beforeunload", function(event) {
+    leavingMainWebpage()
+})
+
+/*
 window.beforeunload = function() {
     // Can be called many times during a real window resize
-    leavingMainWebpage()
 }
+*/
 
 // Shared ttaConfig definition
 {% include tim-ta-storage.js %}
@@ -1130,9 +1135,11 @@ function leavingMainWebpage() {
         called automatically with listener on window.beforeunload
     */
     var win = getWin()
+    console.log("  leavingMainWebpage()")
     if (win == window) return  // No popup window to close
     // TODO: There could be a warning that popup window is closing
     closePopupWindow()
+    console.log("    closePopupWindow()")
 }
 
 function tabRunTimersHeading() {
