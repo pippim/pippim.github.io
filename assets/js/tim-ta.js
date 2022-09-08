@@ -1288,7 +1288,7 @@ function progressOverride() {
     i -= 1  // Convert i from timer number to index
     for (const name of Object.keys(allTimers)) {
         let element = runWindow.document.getElementById(name)
-        if (i == allTimers[name].index)) break
+        if (i == allTimers[name].index) break
     }
     createProgressControl(i, element)  // Create dialog box with buttons
 
