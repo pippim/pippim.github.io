@@ -1202,30 +1202,29 @@ function htmlRunTimersAllSets() {
 
 function htmlRunTimersDetail(id, name, index, i, seconds, sound) {
     // Return html for new Run Timers Table entry
-    entryTimer = {};
-    entryTimer["id"] = id;
-    entryTimer["elm"] = "Pippim Promise";
-    entryTimer["index"] = index  // Run Timers Table index
-    entryTimer["i"] = i          // arrTasks index
-    entryTimer["name"] = name;
-    entryTimer["seconds"] = seconds;
-    entryTimer["remaining"] = seconds;
-    entryTimer["progress"] = 0;
-    entryTimer["sound"] = sound;  // Not used!
-    allTimers[id] = entryTimer;
+    entry = {};
+    entry["id"] = id;  // "tabTimer" + cntTimedTasks
+    entry["elm"] = "Waiting for DOM";
+    entry["index"] = index  // Run Timers Table index
+    entry["i"] = i          // arrTasks index
+    entry["name"] = name;
+    entry["seconds"] = seconds;
+    entry["remaining"] = seconds;
+    entry["progress"] = 0;
+    entry["sound"] = sound;  // Not used!
+    allTimers[id] = entry
 
-    var html = '<tr>\n';
+    var html = '<tr>\n'
 
     html += '<td><progress id="' + id + '" value="0" max="' +
     seconds.toString() + '"></progress></td>\n';  // > 32% < possible??
 
-    var hhmmss = new Date(seconds * 1000).toISOString().substr(11, 8);
-    var strDuration = hhmmssShorten(hhmmss);
-    //if (!scrSmall) { html += "<td>" + strDuration + "</td>\n"; }
-    if (true) { html += "<td>" + strDuration + "</td>\n"; }
-    html += "<td><font size='+2'>" + name + "</font></td>\n";
+    var hhmmss = new Date(seconds * 1000).toISOString().substr(11, 8)
+    var strDuration = hhmmssShorten(hhmmss)
+    html += "<td>" + strDuration + "</td>\n"
+    html += "<td><font size='+2'>" + name + "</font></td>\n"
 
-    return html += "</tr>\n";
+    return html += "</tr>\n"
 }  // End of htmlRunTimersDetail(id, name, index, seconds, sound)
 
 function listenProgressBarTouched() {
@@ -1340,7 +1339,7 @@ function buildProgressControlButtons(i) {
         "end", "&#x23ED;", "Skip to end, Next", pre + "pcbClickEnd(" + i +")"
     ]
 
-    return arrButtons;
+    return arrButtons
 }
 
 function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
@@ -1636,16 +1635,14 @@ async function exitAllTimers() {
 }
 
 async function wakeLockOn() {
-    wakeLock = false;
+    wakeLock = false
     if (scrLarge) return  // We are not on Android (bad way to test though)
     if ('wakeLock' in navigator) {
-        wakeLock = await navigator.wakeLock.request('screen');
+        wakeLock = await navigator.wakeLock.request('screen')
         popCreate('w', "Do NOT leave this screen while\n" +
                        "Timers are running! They can be\n" +
-                       "suspended by power saving mode.");
-    } else {
-        wakeLock = false;  // Not supported
-    }
+                       "suspended by power saving mode.")
+    } else wakeLock = false  // Not supported
 }
 
 async function wakeLockOff() {
@@ -1811,6 +1808,11 @@ function paintConfigForm() {
     html += buildLine("Default Options for all Projects and Tasks");
     html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
+    /* TODO: Version 1.1 add new fields:
+    countdown_in_title: "true"
+    use_popup_window: "true",
+    use_popup_last_position: "false"
+    */
     html += '</table></form>\n' ;
     html += '</div>\n';
 
@@ -1870,6 +1872,15 @@ function paintProjectForm(mode) {
     html += buildLine("Miscellaneous Options");
     html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
+    /* TODO: Version 1.1 add new fields:
+    countdown_in_title: "default"
+    use_popup_window: "default",
+    use_popup_last_position: "default",
+    popup_position_x: "30",
+    popup_position_y: "30",
+    popup_size_w:  "600",
+    popup_size_h: "400"
+    */
     html += '</table></form>\n' ;
     html += '</div>\n';
 
@@ -2006,7 +2017,7 @@ function buildSelect(key, value, mode) {
     // Can only initialize select elements after HTML declared with IDs
     inpSelects[key] = {
         id: key,
-        elm: "Pippim Promise",
+        elm: "Waiting for DOM",
         value: value,
         mode: mode
     };
@@ -2395,7 +2406,7 @@ function buildSwitch(name, bool, mode) {
     // console.log("name passed to buildSwitch:", name, bool, mode);
     inpSwitches[name] = {
         id: fullId,
-        elm: "Pippim Promise",
+        elm: "Waiting for DOM",
         value: bool,
         mode: mode
     };
