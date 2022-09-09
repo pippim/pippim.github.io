@@ -871,6 +871,8 @@ var fRunWindowAsPopup  // Are we running windows as a popup?
 var fTaskAndTimeInHeading  // Dynamic remaining time in div heading
 var runWindow  // main webpage window or launched popup window
 var timeTaskStarted  // time the Timer Task started
+var timePauseStarted  // time paused started. After end calc total seconds
+var secondsTaskPaused  // current time minus timePauseStarted above
 
 function paintRunTimers(i) {
     // TODO: Run in popup window. ttaElm needs to be remapped to runElm
@@ -1351,9 +1353,13 @@ function pcbClickPlayPause(i) {
     if (pauseAllTimers) {
         elm.firstChild.data = "▶";
         elm.setAttribute('title', 'Resume timer countdown');
+        var timePauseStarted = new Date().getTime();
     } else {
         elm.firstChild.data = "⏸";
         elm.setAttribute('title', 'Pause timer');
+        var timeCurrent = new Date().getTime();
+        var secondsPauseElapsed = timeCurrent - timePauseStarted
+        secondsTaskPaused += secondsPauseElapsed
     }
 }
 function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
@@ -1454,15 +1460,16 @@ async function signalStartTask () {
     }
     // TODO: track time paused as well.
     timeTaskStarted = new Date().getTime()
+    secondsTaskPaused = 0  // All 'seconds' fields are in milliseconds
 }
 
 async function signalEndTask (index) {
     // Timer has ended, sound alarm and display image
     // How much time was lost sleeping 1 second many times?
     var timeCurrent = new Date().getTime();
-    var timeTaskElapsed = timeCurrent - timeTaskStarted
-    console.log("timeTaskElapsed:", timeTaskElapsed)
-    var hhmmss = new Date(timeTaskElapsed).toISOString().substr(11, 8)
+    var secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
+    console.log("secondsTaskElapsed:", secondsTaskElapsed)
+    var hhmmss = new Date(secondsTaskElapsed).toISOString().substr(11, 8)
     var strDuration = hhmmssShorten(hhmmss)
     // 16:30 lost time results in 16:32
     console.log("Actual Task strDuration:", strDuration)
