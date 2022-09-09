@@ -1349,17 +1349,22 @@ function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
 function pcbClickPlayPause(i) {
     pcbClickCommon(i, "play_toggle");
     var elm = document.getElementById("play_toggle")
-    pauseAllTimers = !pauseAllTimers;
+    pauseAllTimers = !pauseAllTimers  // Toggle to new state
     if (pauseAllTimers) {
         elm.firstChild.data = "▶"
         elm.setAttribute('title', 'Resume timer countdown')
         timePauseStarted = new Date().getTime()
+        console.log("Timer paused. timePauseStarted:", timePauseStarted)
     } else {
         elm.firstChild.data = "⏸"
         elm.setAttribute('title', 'Pause timer')
         var timeCurrent = new Date().getTime()
         var secondsPauseElapsed = timeCurrent - timePauseStarted
         secondsTaskPaused += secondsPauseElapsed
+        console.log("  timePauseStarted:", timePauseStarted,
+                    "timeCurrent:", timeCurrent,
+                    "secondsPauseElapsed:",secondsPauseElapsed,
+                    "secondsTaskPaused:", secondsTaskPaused)
     }
 }
 function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
