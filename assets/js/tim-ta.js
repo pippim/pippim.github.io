@@ -1009,6 +1009,20 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
     runWindow.document.body.appendChild(div)
 
+    /* Capture window resizing to make progress bars wider
+        window.onresize = function() {
+            // Can be called many times during a real window resize
+            clearTimeout(scrTimeout);  // Reset window resize delay to zero
+            scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
+        }
+    */
+
+    runWindow.addEventListener('resize', () => {
+        // Can be called many times during a real window resize
+        clearTimeout(scrTimeout);  // Reset window resize delay to zero
+        scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
+    })
+
     // Hook to code run when popup window closed via desktop manager
     /*  Four ways to close popup window
         1. Clicking 'X' on dimmed main webpage inactive message
@@ -1028,42 +1042,12 @@ runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1
 runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
 window.getScreenDetails: undefined tim-ta.js:1876:17
 closingCode() called with 'X' to close window, cancelAllTimers = true tim-ta.js:1359:13
-WinX: 2031 WinY: 65 WinW: 601 WinH: 400 tim-ta.js:1870:17
-runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
-runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
-window.getScreenDetails: undefined tim-ta.js:1876:17
-closingCode() called with 'X' to close window, cancelAllTimers = false tim-ta.js:1359:13
-WinX: 3159 WinY: 38 WinW: 601 WinH: 400 tim-ta.js:1870:17
-runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
-runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
-window.getScreenDetails: undefined tim-ta.js:1876:17
-closePopupWindow() has been called, cancelAllTimers = false tim-ta.js:1414:13
-WinX: 2087 WinY: 932 WinW: 601 WinH: 400 tim-ta.js:1870:17
-runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
-runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
-window.getScreenDetails: undefined tim-ta.js:1876:17
-closingCode() called with 'X' to close window, cancelAllTimers = true tim-ta.js:1359:13
-WinX: 2087 WinY: 932 WinW: 601 WinH: 400 tim-ta.js:1870:17
-runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
-runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
-window.getScreenDetails: undefined tim-ta.js:1876:17
-closePopupWindow() has been called, cancelAllTimers = false tim-ta.js:1414:13
-WinX: 3739 WinY: 877 WinW: 601 WinH: 400 tim-ta.js:1870:17
-runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
-runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
-window.getScreenDetails: undefined tim-ta.js:1876:17
-closingCode() called with 'X' to close window, cancelAllTimers = true tim-ta.js:1359:13
-WinX: 3739 WinY: 877 WinW: 601 WinH: 400 tim-ta.js:1870:17
-runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
-runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
-window.getScreenDetails: undefined tim-ta.js:1876:17
-popClearById() not found: popIndex0
 
     */
 
-
     return true
 }
+
 
 function closingCode() {
     /*  Four ways to close popup window
