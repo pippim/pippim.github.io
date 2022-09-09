@@ -1347,16 +1347,13 @@ function buildProgressControlButtons(i) {
 function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
 function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
 function pcbClickPlayPause(i) {
-    // pcbClickCommon(i, "play_toggle");
-    console.log("Begin play_toggle() pauseAllTimers:", pauseAllTimers)
+    pcbClickCommon(i, "play_toggle")
     var elm = runWindow.document.getElementById("play_toggle")
-    console.log("var elm.id:", elm.id)
     pauseAllTimers = !pauseAllTimers  // Toggle to new state
     if (pauseAllTimers) {
         elm.firstChild.data = "▶"
         elm.setAttribute('title', 'Resume timer countdown')
         timePauseStarted = new Date().getTime()
-        console.log("Timer paused. timePauseStarted:", timePauseStarted)
     } else {
         elm.firstChild.data = "⏸"
         elm.setAttribute('title', 'Pause timer')
@@ -1364,10 +1361,6 @@ function pcbClickPlayPause(i) {
         var secondsPauseElapsed = timeCurrent - timePauseStarted
         secondsTaskPaused += secondsPauseElapsed
         timePauseStarted = 0  // Precautionary
-        console.log("  timePauseStarted:", timePauseStarted,
-                    "timeCurrent:", timeCurrent,
-                    "secondsPauseElapsed:",secondsPauseElapsed,
-                    "secondsTaskPaused:", secondsTaskPaused)
     }
 }
 function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
