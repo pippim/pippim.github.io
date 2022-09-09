@@ -27,7 +27,8 @@ function scrSetSize() {
     else if (scrWidth > 1007) scrLarge = true
     else scrMedium = true
 
-    const x = document.getElementById("content");  /* Exists in every _layout */
+    var win = getWin()  // Will be main webpage or popup window
+    const x = win.document.getElementById("content");  /* Exists in every _layout */
     const y = x.getElementsByTagName("progress");  /* To override styling of progress { */
     for (var i=0; i<y.length; i++) {
         //console.log("y[i].id:", y[i].id,
@@ -1459,7 +1460,7 @@ async function signalStartTask () {
         await popPrompt('i', msg, "task_prompt", "elm", ttaRunElm) // n popPrompt(
         // Blocking function, we wait until user reacts...
     }
-    // TODO: track time paused as well.
+    // Reset new task's delta calculation fields
     timeTaskStarted = new Date().getTime()
     secondsTaskPaused = 0  // All 'seconds' fields are in milliseconds
 }
@@ -1469,20 +1470,19 @@ async function signalEndTask (index) {
     // How much time was lost sleeping 1 second many times?
     var timeCurrent = new Date().getTime();
     var secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
-    console.log("secondsTaskElapsed:", secondsTaskElapsed,
-                "secondsTaskPaused:", secondsTaskPaused)
+    //console.log("secondsTaskElapsed:", secondsTaskElapsed,
+    //            "secondsTaskPaused:", secondsTaskPaused)
     var hhmmss = new Date(secondsTaskElapsed).toISOString().substr(11, 8)
     var strDuration = hhmmssShorten(hhmmss)
     // 16:30 lost time results in 16:32
-    console.log("Actual Task strDuration:", strDuration)
+    //console.log("Actual Task strDuration:", strDuration)
 
     // win.blur()  // Send window to the background, WHY??
     // win linked to 'window' or 'runWindow'
     // NOTE: for allow popups for pippim.com
     //if (testPopup(win)) win.focus()  // Force focus on true
     if (testPopup(runWindow)) runWindow.focus()  // Force focus on true
-    //console.log("win.focus()")
-    console.log("runWindow.focus()")
+    //console.log("runWindow.focus()")
     var audioControl = clickListen(index);
     if (audioControl != null) {
         // When !== null used, "TypeError: audioControl is undefined"
