@@ -1347,7 +1347,8 @@ function buildProgressControlButtons(i) {
 function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
 function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
 function pcbClickPlayPause(i) {
-    pcbClickCommon(i, "play_toggle");
+    // pcbClickCommon(i, "play_toggle");
+    console.log("Begin play_toggle() pauseAllTimers:", pauseAllTimers)
     var elm = document.getElementById("play_toggle")
     pauseAllTimers = !pauseAllTimers  // Toggle to new state
     if (pauseAllTimers) {
@@ -1361,6 +1362,7 @@ function pcbClickPlayPause(i) {
         var timeCurrent = new Date().getTime()
         var secondsPauseElapsed = timeCurrent - timePauseStarted
         secondsTaskPaused += secondsPauseElapsed
+        timePauseStarted = 0  // Precautionary
         console.log("  timePauseStarted:", timePauseStarted,
                     "timeCurrent:", timeCurrent,
                     "secondsPauseElapsed:",secondsPauseElapsed,
