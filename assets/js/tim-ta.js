@@ -1349,7 +1349,8 @@ function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
 function pcbClickPlayPause(i) {
     // pcbClickCommon(i, "play_toggle");
     console.log("Begin play_toggle() pauseAllTimers:", pauseAllTimers)
-    var elm = document.getElementById("play_toggle")
+    var elm = runWindow.document.getElementById("play_toggle")
+    console.log("var elm.id:", elm.id)
     pauseAllTimers = !pauseAllTimers  // Toggle to new state
     if (pauseAllTimers) {
         elm.firstChild.data = "▶"
