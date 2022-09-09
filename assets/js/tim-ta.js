@@ -1468,7 +1468,8 @@ async function signalEndTask (index) {
     // How much time was lost sleeping 1 second many times?
     var timeCurrent = new Date().getTime();
     var secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
-    console.log("secondsTaskElapsed:", secondsTaskElapsed)
+    console.log("secondsTaskElapsed:", secondsTaskElapsed,
+                "secondsTaskPaused:", secondsTaskPaused)
     var hhmmss = new Date(secondsTaskElapsed).toISOString().substr(11, 8)
     var strDuration = hhmmssShorten(hhmmss)
     // 16:30 lost time results in 16:32
@@ -1495,13 +1496,11 @@ async function signalEndTask (index) {
             var rem = audioControl.duration - audioControl.currentTime
             // Has sound automatically ended
             if (rem <= 0.0) {
-                // If window not closed already, then close it
-                //if (win.document.body.contains(elm)) popClose(popId)
+                // If dialog not closed already, then close it
                 if (runWindow.document.body.contains(elm)) popClose(popId)
                 break
-            }  // n popClose(
-            // Was window manually closed?
-            //if (win.document.body.contains(elm)) continue
+            }
+            // Was dialog manually closed before sound ended?
             if (runWindow.document.body.contains(elm)) continue
             audioControl.pause()  // Kill the sound
             audioControl.currentTime = 0.0
