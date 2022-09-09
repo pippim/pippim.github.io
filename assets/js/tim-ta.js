@@ -1351,13 +1351,13 @@ function pcbClickPlayPause(i) {
     var elm = document.getElementById("play_toggle")
     pauseAllTimers = !pauseAllTimers;
     if (pauseAllTimers) {
-        elm.firstChild.data = "▶";
-        elm.setAttribute('title', 'Resume timer countdown');
-        var timePauseStarted = new Date().getTime();
+        elm.firstChild.data = "▶"
+        elm.setAttribute('title', 'Resume timer countdown')
+        timePauseStarted = new Date().getTime()
     } else {
-        elm.firstChild.data = "⏸";
-        elm.setAttribute('title', 'Pause timer');
-        var timeCurrent = new Date().getTime();
+        elm.firstChild.data = "⏸"
+        elm.setAttribute('title', 'Pause timer')
+        var timeCurrent = new Date().getTime()
         var secondsPauseElapsed = timeCurrent - timePauseStarted
         secondsTaskPaused += secondsPauseElapsed
     }
