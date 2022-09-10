@@ -1026,12 +1026,14 @@ function setRunWindow(html) {
         }
     */
 
+    /* NOT WORKING???
     runWindow.addEventListener('resize', () => {
         // Can be called many times during a real window resize
         clearTimeout(scrTimeout);  // Reset window resize delay to zero
         scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
     })
-
+    */
+    
     // Hook to code run when popup window closed via desktop manager
     /*  Four ways to close popup window
         1. Clicking 'X' on dimmed main webpage inactive message
