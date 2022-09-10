@@ -1395,12 +1395,6 @@ async function runAllTimers() {
         if (entry.progress == 0) await signalStartTask()
         // setTimeout to sleep for desired period
         await sleep(sleepMillis)
-        // TODO: totalAllTimersTime requires time delta calculation
-        totalAllTimersTime += 1  // Total seconds, not including pauses
-        var timeCurrent = new Date().getTime();
-        var secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
-        if (secondsTaskElapsed - entry.progress > 1000)
-            console.log ("More than 1 second lost in entry.progress")
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
@@ -1432,7 +1426,16 @@ async function runAllTimers() {
         updateRunTimer(myTable, entry, fTaskAndTimeInHeading)
         updateRunTimer(myTable, allTimers["tabTimerSet"])
         if (run_times > 1) updateRunTimer(myTable, allTimers["tabTimerAllSets"])
+        // Why is totalAllTimersTime here?
+        totalAllTimersTime += 1  // Total seconds, not including pauses
 
+        var timeCurrent = new Date().getTime();
+        var secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
+        if (!pauseAllTimers)
+            if (secondsTaskElapsed - entry.progress > 1000)
+                console.log ("More than 1 second lost in entry.progress:",
+                             entry.progress, "secondsTaskElapsed:",
+                             secondsTaskElapsed)
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
 
@@ -1498,11 +1501,11 @@ async function signalEndTask (index) {
 
 function updateRunTimer(myTable, entry, fHeading) {
     // fHeading can be undefined
-    if (pauseAllTimers) { return; }
+    if (pauseAllTimers) return
     entry.progress += 1
     entry.remaining -= 1
-    entry.elm.value = entry.progress.toString();
-    updateRunTimerDuration(myTable, entry, fHeading);
+    entry.elm.value = entry.progress.toString()
+    updateRunTimerDuration(myTable, entry, fHeading)
 }
 
 function updateRunTimerDuration(myTable, entry, fHeading) {
