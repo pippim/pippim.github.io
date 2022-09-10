@@ -17,10 +17,11 @@ var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
 function scrSetSize() {
     /*  On window resize, set width of progress bar accordingly
+        scrLarge variable is used elsewhere to determine popup eligibility.
+        Assumes Task name with two words
     */
     // mobiles don't have window.innerWidth
     var win = getWin()  // Will be main webpage or popup window
-    //scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width
     scrWidth = (win.innerWidth > 0) ? win.innerWidth : win.screen.width
     scrSmall = scrMedium = scrLarge = false
     if (scrWidth < 641) scrSmall = true
@@ -29,7 +30,6 @@ function scrSetSize() {
 
     var x, y, t, pix, pop
     if (win == window) {
-        // TODO: What is the body left & right padding in effect?
         x = win.document.getElementById("content")  /* Exists in every _layout */
         t = ttaElm.offsetWidth  // Use width to adjust progress bar size
         pop = 0
@@ -878,13 +878,15 @@ var fRunWindowAsPopup  // Are we running windows as a popup?
 var fTaskAndTimeInHeading  // Dynamic remaining time in div heading
 var runWindow  // main webpage window or launched popup window
 var timeTaskStarted  // time the Timer Task started
-var timePauseStarted  // time paused started. After end calc total seconds
+var timePauseStarted  // time paused started. After play calc total seconds paused
 var secondsTaskPaused  // current time minus timePauseStarted above
 
 function paintRunTimers(i) {
-    // TODO: Run in popup window. ttaElm needs to be remapped to runElm
-    // Run Project - Countdown all tasks. Scroll into view as needed.
-    // When i null called from Tasks Table footer, else called from Projects Table.
+    /*  Run Project - Countdown all tasks. Scroll into view as needed.
+        When i is null then function called from the Tasks Table footer,
+        else called from Projects Table.
+        On large screen, can run in a popup window
+    */
     msgqClear();
     if (i != null) { clickCommon(i); }  // load selected ttaProject
     secondsTask = secondsSet = secondsAllSets = cntTimedTasks = 0
@@ -896,7 +898,7 @@ function paintRunTimers(i) {
     totalAllTimersTime = 0 ;
     wakeLock = false;  // Force mobile screen to stay on
 
-    scrSetSize();  // Call on document load. Must also call when RunTimers is painted
+    scrSetSize()  // get scrLarge setting (greater 1007 pixels wide)
     fRunWindowAsPopup = false  // Are we running windows as a popup?
     fTaskAndTimeInHeading = true  // Later on set this up in configuration
     if (!scrLarge) runWindow = window  // If no popup runWindow is our window
@@ -908,19 +910,11 @@ function paintRunTimers(i) {
     calledFromTable = currentTable;
     // console.log("currentTable / i:", currentTable, i)
     currentTable = "RunTimers"
-    currentRoot = "tabTimer";
-
-    /* TODO:
-        When early exit (cancel) a bogus warning message comes up:
-
-            "Alarm and Notification turned off for this task."
-    */
-
-    // Back to same Table
-    const cnt = ttaProject.arrTasks.length;
-    const strHuman = cntHuman(cnt, "Task");
+    currentRoot = "tabTimer"
+    const cnt = ttaProject.arrTasks.length  // cnt = number of tasks
+    const strHuman = cntHuman(cnt, "Task")  // count string
     var html = ttaProject.project_name + " - Run timer for " + strHuman
-    html = htmlSetContainer(html);
+    html = htmlSetContainer(html)  // Set title for table container
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
     html += '<table id="tabRunTimers" class="tta-table">\n' ;
@@ -1373,7 +1367,9 @@ function getActiveTimerNo() {
 }
 
 async function runAllTimers() {
-    // TODO: When cancelling, reset all timers to zero
+    /*  Central Run Project function
+        runWindow can be main webpage or popup window
+    */
     if (ttaProject.arrTasks.length == 0) {
         popCreateUniqueError("e", "Project has no Tasks to run", "no_tasks")
         return
@@ -1401,6 +1397,10 @@ async function runAllTimers() {
         await sleep(sleepMillis)
         // TODO: totalAllTimersTime requires time delta calculation
         totalAllTimersTime += 1  // Total seconds, not including pauses
+        var timeCurrent = new Date().getTime();
+        var secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
+        if (secondsTaskElapsed - entry.progress > 1000)
+            console.log ("More than 1 second lost in entry.progress")
 
         if (entry.progress >= entry.seconds) {
             // Timer has ended, sound alarm and start next timer
@@ -1428,6 +1428,7 @@ async function runAllTimers() {
             continue;  // Wait for first second to expire
         }
 
+        // Update progress. fTaskAndTimeInHeading displays value in countdown
         updateRunTimer(myTable, entry, fTaskAndTimeInHeading)
         updateRunTimer(myTable, allTimers["tabTimerSet"])
         if (run_times > 1) updateRunTimer(myTable, allTimers["tabTimerAllSets"])
