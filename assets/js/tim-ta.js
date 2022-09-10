@@ -27,15 +27,17 @@ function scrSetSize() {
     else if (scrWidth > 1007) scrLarge = true
     else scrMedium = true
 
-    var x, y, t, pix
+    var x, y, t, pix, pop
     if (win == window) {
         // TODO: What is the body left & right padding in effect?
         x = win.document.getElementById("content")  /* Exists in every _layout */
         t = ttaElm.offsetWidth  // Use width to adjust progress bar size
+        pop = 0
     } else {
         // Run only within popup window
         x = win.document.getElementById("ttaRunWindowId")
         t = ttaRunElm.offsetWidth
+        pop = 20
     }
     // Scroll anchoring was disabled in a scroll container because of too many consecutive adjustments (10) with too little total distance (-2.44833335876465 px average, -24.4833 px total). tim-ta.html
     // const x = document.getElementById("content")  /* Exists in every _layout */
@@ -46,7 +48,7 @@ function scrSetSize() {
                 "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
 
-    pix = (t < 380) ? 100 : t - 280  // 100 pixel minimum for progress bar
+    pix = (t < 400) ? 100 : t - 300 + pop // 100 pixel minimum for progress bar
     for (var i=0; i<y.length; i++) {
         y[i].style.width = pix + "px"  //
         /*  Set width of progress bars. main webpage has wide borders.
