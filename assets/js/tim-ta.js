@@ -33,12 +33,13 @@ function scrSetSize() {
     too many consecutive adjustments (10) with too little total
     distance (-0.608333349227905 px average, -6.08333 px total).
     */
-    console.log("scrWidth:", scrWidth, "(win == window):", (win == window))
     //const x = win.document.getElementById("content")  /* Exists in every _layout */
     // Scroll anchoring was disabled in a scroll container because of too many consecutive adjustments (10) with too little total distance (-2.44833335876465 px average, -24.4833 px total). tim-ta.html
     const x = document.getElementById("content")  /* Exists in every _layout */
     // When called from popup: Uncaught TypeError: x is null
     const y = x.getElementsByTagName("progress")  /* To override styling of progress { */
+    console.log("scrWidth:", scrWidth, "(win == window):", (win == window),
+                "const x:", x, "const y.length:", y.length)
     for (var i=0; i<y.length; i++) {
         console.log("y[i].id:", y[i].id,
                     "getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
@@ -1033,7 +1034,7 @@ function setRunWindow(html) {
         scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
     })
     */
-    
+
     // Hook to code run when popup window closed via desktop manager
     /*  Four ways to close popup window
         1. Clicking 'X' on dimmed main webpage inactive message
