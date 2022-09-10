@@ -27,7 +27,7 @@ function scrSetSize() {
     else if (scrWidth > 1007) scrLarge = true
     else scrMedium = true
 
-    var x, y, t
+    var x, y, t, pix
     if (win == window) {
         // TODO: What is the body left & right padding in effect?
         x = win.document.getElementById("content")  /* Exists in every _layout */
@@ -40,33 +40,35 @@ function scrSetSize() {
     // Scroll anchoring was disabled in a scroll container because of too many consecutive adjustments (10) with too little total distance (-2.44833335876465 px average, -24.4833 px total). tim-ta.html
     // const x = document.getElementById("content")  /* Exists in every _layout */
     // When called from popup: Uncaught TypeError: x is null
-    y = x.getElementsByTagName("progress")  /* To override styling of progress { */
+    y = x.getElementsByTagName("progress")  // To override styling of progress type
     console.log("scrWidth:", scrWidth, "table width t:", t,
                 "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
     var remMultiplier = (win == window) ? 1.5 : 2.1
+    pix = (t < 400) ? 100 : t - 300  // 100 pixel minimum for progress bar
     for (var i=0; i<y.length; i++) {
+        y[i].style.width = pix + "px"  //
         /*  Set width of progress bars. main webpage has wide borders.
             popup window has no borders per say.
-        */
-        console.log("y[i].id:", y[i].id,
-                    "getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
         if (scrLarge)
             if (scrWidth < 1200)
-                /* Chrome can't handle without splitting Task Name "Wash Cycle" */
+                // Chrome can't handle without splitting Task Name "Wash Cycle"
                 y[i].style.width = "24rem"  // 1008 to 1199
             else
                 y[i].style.width = "30rem"  // 1200+
 
         if (scrMedium)
             if (scrWidth < 750)
-                /* Chrome can't handle without splitting Task Name "Tasks Total" */
+                // Chrome can't handle without splitting Task Name "Tasks Total"
                 y[i].style.width = "10rem"  // 641 to 749
             else
                 y[i].style.width = "16rem"  // 750 to 1007
 
         if (scrSmall) y[i].style.width = "6rem"  // 0 to 640
-    }  // End of looping for all elements with Tag Name "progress"
+        */
+    }  // End of looping for all html elements "progress" type
+    console.log("y[0].id:", y[0].id,
+                "getComputedStyle(y[0]).width:", getComputedStyle(y[0]).width)
 }
 
 // window.addEventListener('resize', () => { func1(); func2(); });
