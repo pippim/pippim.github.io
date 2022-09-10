@@ -980,7 +980,8 @@ function paintRunTimers(i) {
     if (fRunWindowAsPopup) setRunWindow(html)
 
     ttaRunElm.innerHTML = html  // Set top-level's element with new HTML
-    listenProgressBarTouched();  // Listeners for progress bars being touched
+    scrSetSize()  // Adjust progress bar width for popup window size
+    listenProgressBarTouched()  // Listeners for progress bars being touched
     ttaRunElm.scrollIntoView()  // Scroll top level element into view
 
     runAllTimers();  // Run through all timers
@@ -1023,7 +1024,6 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
     runWindow.document.body.appendChild(div)
 
-    scrSetSize()  // Adjust progress bar width for popup window size
     /* Add listener for window resizing */
     runWindow.addEventListener('resize', () => {
         // Can be called many times during a real window resize
