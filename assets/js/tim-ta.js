@@ -1505,7 +1505,7 @@ function updateRunTimer(myTable, entry, fHeading) {
     const secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
 
     // Convert increment to full seconds
-    const increment = (secondsTaskElapsed / 1000) * 1000
+    const increment = Math.round(secondsTaskElapsed / 1000) * 1000
     if (increment != 1000) console.log("increment:", increment, secondsTaskElapsed)
     entry.progress += 1000 // secondsTaskElapsed
     entry.remaining -= 1000 // secondsTaskElapsed
