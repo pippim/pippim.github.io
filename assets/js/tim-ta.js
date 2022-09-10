@@ -41,6 +41,8 @@ function scrSetSize() {
     // const x = document.getElementById("content")  /* Exists in every _layout */
     // When called from popup: Uncaught TypeError: x is null
     y = x.getElementsByTagName("progress")  // To override styling of progress type
+    if (typeof y == 'undefined') return  // No progress bar, no need to adjust
+
     console.log("scrWidth:", scrWidth, "table width t:", t,
                 "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
@@ -67,7 +69,7 @@ function scrSetSize() {
         if (scrSmall) y[i].style.width = "6rem"  // 0 to 640
         */
     }  // End of looping for all html elements "progress" type
-    if (y != null) console.log("y[0].id:", y[0].id,
+    console.log("y[0].id:", y[0].id,
                 "getComputedStyle(y[0]).width:", getComputedStyle(y[0]).width)
 }
 
