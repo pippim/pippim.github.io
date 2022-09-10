@@ -37,7 +37,7 @@ function scrSetSize() {
         // Run only within popup window
         x = win.document.getElementById("ttaRunWindowId")
         t = ttaRunElm.offsetWidth
-        pop = 23
+        pop = 22
     }
     // Scroll anchoring was disabled in a scroll container because of too many consecutive adjustments (10) with too little total distance (-2.44833335876465 px average, -24.4833 px total). tim-ta.html
     // const x = document.getElementById("content")  /* Exists in every _layout */
@@ -1622,6 +1622,7 @@ async function exitAllTimers() {
         fRunWindowAsPopup = false
         remaining_run_times = 0  // Force "big timer loop" exit
         reverseWebpageDimmed()  // main webpage normal background
+        scrSetSize()  // Restore scrLarge variable status
     }
 
     if (calledFromTable == "Projects") paintProjectsTable()
