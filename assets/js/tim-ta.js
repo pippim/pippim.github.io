@@ -43,7 +43,7 @@ function scrSetSize() {
     // const x = document.getElementById("content")  /* Exists in every _layout */
     // When called from popup: Uncaught TypeError: x is null
     const y = x.getElementsByTagName("progress")  /* To override styling of progress { */
-    console.log("scrWidth:", scrWidth, "win.screen.width:", win.screen.width
+    console.log("scrWidth:", scrWidth, "win.screen.width:", win.screen.width,
                 "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
     for (var i=0; i<y.length; i++) {
