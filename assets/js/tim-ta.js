@@ -44,36 +44,16 @@ function scrSetSize() {
     // When called from popup: Uncaught TypeError: x is null
     y = x.getElementsByTagName("progress")  // To override styling of progress type
 
+    /*
     console.log("scrWidth:", scrWidth, "table width t:", t,
                 "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
-
+    */
     pix = (t < 400) ? 100 : t - 300 + pop // 100 pixel minimum for progress bar
-    for (var i=0; i<y.length; i++) {
-        y[i].style.width = pix + "px"  //
-        /*  Set width of progress bars. main webpage has wide borders.
-            popup window has no borders per say.
-        if (scrLarge)
-            if (scrWidth < 1200)
-                // Chrome can't handle without splitting Task Name "Wash Cycle"
-                y[i].style.width = "24rem"  // 1008 to 1199
-            else
-                y[i].style.width = "30rem"  // 1200+
+    for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
 
-        if (scrMedium)
-            if (scrWidth < 750)
-                // Chrome can't handle without splitting Task Name "Tasks Total"
-                y[i].style.width = "10rem"  // 641 to 749
-            else
-                y[i].style.width = "16rem"  // 750 to 1007
-
-        if (scrSmall) y[i].style.width = "6rem"  // 0 to 640
-        */
-    }  // End of looping for all html elements "progress" type
-    //     if (typeof y.length == 'undefined') return
-
-    if (y.length > 0) console.log("y[0].id:", y[0].id,
-                "getComputedStyle(y[0]).width:", getComputedStyle(y[0]).width)
+    //if (y.length > 0) console.log("y[0].id:", y[0].id,
+    //            "getComputedStyle(y[0]).width:", getComputedStyle(y[0]).width)
 }
 
 // window.addEventListener('resize', () => { func1(); func2(); });
