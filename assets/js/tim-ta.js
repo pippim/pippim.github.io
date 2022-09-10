@@ -34,10 +34,10 @@ function scrSetSize() {
     distance (-0.608333349227905 px average, -6.08333 px total).
     */
     if (win == window) { // braces needed for error?
-        const x = win.document.getElementById("content")  /* Exists in every _layout */
+        var x = win.document.getElementById("content")  /* Exists in every _layout */
     } else {
         // Run only within popup window
-        const x = win.document.getElementById("ttaRunWindowId")
+        var x = win.document.getElementById("ttaRunWindowId")
     }
     // Scroll anchoring was disabled in a scroll container because of too many consecutive adjustments (10) with too little total distance (-2.44833335876465 px average, -24.4833 px total). tim-ta.html
     // const x = document.getElementById("content")  /* Exists in every _layout */
