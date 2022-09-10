@@ -28,7 +28,12 @@ function scrSetSize() {
     else scrMedium = true
 
     var win = getWin()  // Will be main webpage or popup window
-    console.log("scrWidth:", scrWidth, "(win == window)", (win == window))
+    /*
+    scroll anchoring was disabled in a scroll container because of
+    too many consecutive adjustments (10) with too little total
+    distance (-0.608333349227905 px average, -6.08333 px total).
+    */
+    console.log("scrWidth:", scrWidth, "(win == window):", (win == window))
     //const x = win.document.getElementById("content")  /* Exists in every _layout */
     // Scroll anchoring was disabled in a scroll container because of too many consecutive adjustments (10) with too little total distance (-2.44833335876465 px average, -24.4833 px total). tim-ta.html
     const x = document.getElementById("content")  /* Exists in every _layout */
