@@ -46,7 +46,7 @@ function scrSetSize() {
                 "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
 
-    pix = (t < 350) ? 100 : t - 250  // 100 pixel minimum for progress bar
+    pix = (t < 360) ? 100 : t - 260  // 100 pixel minimum for progress bar
     for (var i=0; i<y.length; i++) {
         y[i].style.width = pix + "px"  //
         /*  Set width of progress bars. main webpage has wide borders.
