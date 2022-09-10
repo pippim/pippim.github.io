@@ -67,7 +67,7 @@ function scrSetSize() {
         if (scrSmall) y[i].style.width = "6rem"  // 0 to 640
         */
     }  // End of looping for all html elements "progress" type
-    console.log("y[0].id:", y[0].id,
+    if (y != null) console.log("y[0].id:", y[0].id,
                 "getComputedStyle(y[0]).width:", getComputedStyle(y[0]).width)
 }
 
