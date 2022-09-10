@@ -1140,26 +1140,19 @@ function tabRunTimersDetail(i) {
     var strDuration = hmsToString(ttaTask.hours, ttaTask.minutes, ttaTask.seconds)
     if (strDuration == "") return ""  // No duration = no timer displayed
 
-    secondsTask = convertNumber(ttaTask.seconds)
-    secondsTask += convertNumber(ttaTask.minutes) * 60
-    secondsTask += convertNumber(ttaTask.hours) * 60 * 60
+    secondsTask = convertNumber(ttaTask.seconds) * 1000
+    secondsTask += convertNumber(ttaTask.minutes) * 60 * 1000
+    secondsTask += convertNumber(ttaTask.hours) * 60 * 60 * 1000
 
     secondsSet += secondsTask  // Total Seconds for all project's tasks
     var run_set_times = convertNumber(getProjectValue('run_set_times'))
     if (run_set_times == 0) run_set_times = 1
     secondsAllSets += secondsTask * run_set_times  // Total Seconds
 
-    var milliTask = secondsTask * 1000
-    var dateTask = new Date(milliTask)
-    //console.log("milliTask:", milliTask, typeof milliTask, "dateTask:", dateTask)
-    //console.log("secondsTask:", secondsTask, "secondsSet:", secondsSet,
-    //            "secondsAllSets:", secondsAllSets,
-    //            "dateTask.toISOString():", dateTask.toISOString().substr(11, 8))
-
     /* hhmmss fields are not used. May be used for timer overrides */
-    hhmmssTask = new Date(secondsTask * 1000).toISOString().substr(11, 8);
-    hhmmssSet = new Date(secondsSet * 1000).toISOString().substr(11, 8);
-    hhmmssAllSets = new Date(secondsAllSets * 1000).toISOString().substr(11, 8);
+    hhmmssTask = new Date(secondsTask).toISOString().substr(11, 8);
+    hhmmssSet = new Date(secondsSet).toISOString().substr(11, 8);
+    hhmmssAllSets = new Date(secondsAllSets).toISOString().substr(11, 8);
 
     var id = "tabTimer" + cntTimedTasks;
     var sound = getTaskValue("task_end_filename");
@@ -1189,7 +1182,7 @@ function htmlRunTimersDetail(id, name, index, i, seconds, sound) {
     entry["index"] = index  // Run Timers Table index
     entry["i"] = i          // arrTasks index
     entry["name"] = name;
-    entry["seconds"] = seconds;
+    entry["seconds"] = seconds  // milliseconds
     entry["remaining"] = seconds;
     entry["progress"] = 0;
     entry["sound"] = sound;  // Not used!
@@ -1200,7 +1193,7 @@ function htmlRunTimersDetail(id, name, index, i, seconds, sound) {
     html += '<td><progress id="' + id + '" value="0" max="' +
     seconds.toString() + '"></progress></td>\n';  // > 32% < possible??
 
-    var hhmmss = new Date(seconds * 1000).toISOString().substr(11, 8)
+    var hhmmss = new Date(seconds).toISOString().substr(11, 8)
     var strDuration = hhmmssShorten(hhmmss)
     html += "<td>" + strDuration + "</td>\n"
     html += "<td><font size='+2'>" + name + "</font></td>\n"
@@ -1281,7 +1274,6 @@ function progressOverride() {
 
 function createProgressControl(i, element) {
     // Shared by progressTouched() and progressOverride()
-    // TODO: Track amount of time paused and set prev/next timer as required
     let msg = buildProgressControlBoxBody(i)
     let btn = buildProgressControlButtons(i)
     var popId = popCreate("i", msg, "progress_override", "elm", element, btn)
@@ -1437,7 +1429,7 @@ async function runAllTimers() {
         var timeCurrent = new Date().getTime();
         var secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
         if (!pauseAllTimers)
-            if (secondsTaskElapsed - entry.progress * 1000 > 1000)
+            if (secondsTaskElapsed - entry.progress > 1000)
                 console.log ("More than 1 second lost in entry.progress:",
                              entry.progress, "secondsTaskElapsed:",
                              secondsTaskElapsed)
@@ -1507,15 +1499,19 @@ async function signalEndTask (index) {
 function updateRunTimer(myTable, entry, fHeading) {
     // fHeading can be undefined
     if (pauseAllTimers) return
-    entry.progress += 1
-    entry.remaining -= 1
+    const timeCurrent = new Date().getTime();
+    if (timeTaskStarted == 0) timeCurrent = 0
+    const secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
+
+    entry.progress += 1000
+    entry.remaining -= 1000
     entry.elm.value = entry.progress.toString()
     updateRunTimerDuration(myTable, entry, fHeading)
 }
 
 function updateRunTimerDuration(myTable, entry, fHeading) {
     // fHeading can be undefined
-    let hhmmss = new Date(entry.remaining * 1000).toISOString().substr(11, 8)
+    let hhmmss = new Date(entry.remaining).toISOString().substr(11, 8)
     var strDuration = hhmmssShorten(hhmmss)
     if (strDuration == "") strDuration = "Done"
     myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration
