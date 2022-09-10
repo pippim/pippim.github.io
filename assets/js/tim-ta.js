@@ -45,8 +45,8 @@ function scrSetSize() {
     console.log("scrWidth:", scrWidth, "table width t:", t,
                 "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
-    var remMultiplier = (win == window) ? 1.5 : 2.1
-    pix = (t < 400) ? 100 : t - 300  // 100 pixel minimum for progress bar
+
+    pix = (t < 350) ? 100 : t - 250  // 100 pixel minimum for progress bar
     for (var i=0; i<y.length; i++) {
         y[i].style.width = pix + "px"  //
         /*  Set width of progress bars. main webpage has wide borders.
@@ -68,6 +68,8 @@ function scrSetSize() {
         if (scrSmall) y[i].style.width = "6rem"  // 0 to 640
         */
     }  // End of looping for all html elements "progress" type
+    //     if (typeof y.length == 'undefined') return
+
     if (y.length > 0) console.log("y[0].id:", y[0].id,
                 "getComputedStyle(y[0]).width:", getComputedStyle(y[0]).width)
 }
