@@ -29,24 +29,27 @@ function scrSetSize() {
     else if (scrWidth > 1007) scrLarge = true
     else scrMedium = true
 
-    /*
-    scroll anchoring was disabled in a scroll container because of
-    too many consecutive adjustments (10) with too little total
-    distance (-0.608333349227905 px average, -6.08333 px total).
-    */
+    var x, y, t
     if (win == window)
-        var x = win.document.getElementById("content")  /* Exists in every _layout */
+        // TODO: What is the body left & right padding in effect?
+        x = win.document.getElementById("content")  /* Exists in every _layout */
+        t = ttaElm.offsetWidth  // Use width to adjust progress bar size
     else
         // Run only within popup window
-        var x = win.document.getElementById("ttaRunWindowId")
+        x = win.document.getElementById("ttaRunWindowId")
+        t = ttaRunElm.offsetWidth
     // Scroll anchoring was disabled in a scroll container because of too many consecutive adjustments (10) with too little total distance (-2.44833335876465 px average, -24.4833 px total). tim-ta.html
     // const x = document.getElementById("content")  /* Exists in every _layout */
     // When called from popup: Uncaught TypeError: x is null
-    const y = x.getElementsByTagName("progress")  /* To override styling of progress { */
-    console.log("scrWidth:", scrWidth, "win.screen.width:", win.screen.width,
+    y = x.getElementsByTagName("progress")  /* To override styling of progress { */
+    console.log("scrWidth:", scrWidth, "table width t:", t,
                 "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
+    var remMultiplier = (win == window) ? 1.5 : 2.1
     for (var i=0; i<y.length; i++) {
+        /*  Set width of progress bars. main webpage has wide borders.
+            popup window has no borders per say.
+        */
         console.log("y[i].id:", y[i].id,
                     "getComputedStyle(y[i]).width:", getComputedStyle(y[i]).width)
         if (scrLarge)
