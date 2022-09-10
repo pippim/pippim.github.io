@@ -33,12 +33,11 @@ function scrSetSize() {
     too many consecutive adjustments (10) with too little total
     distance (-0.608333349227905 px average, -6.08333 px total).
     */
-    if (win == window) { // braces needed for error?
+    if (win == window)
         var x = win.document.getElementById("content")  /* Exists in every _layout */
-    } else {
+    else
         // Run only within popup window
         var x = win.document.getElementById("ttaRunWindowId")
-    }
     // Scroll anchoring was disabled in a scroll container because of too many consecutive adjustments (10) with too little total distance (-2.44833335876465 px average, -24.4833 px total). tim-ta.html
     // const x = document.getElementById("content")  /* Exists in every _layout */
     // When called from popup: Uncaught TypeError: x is null
@@ -1024,15 +1023,8 @@ function setRunWindow(html) {
     runWindow.document.head.appendChild(ttaRunStyleSheet)
     runWindow.document.body.appendChild(div)
 
-    /* Capture window resizing to make progress bars wider
-        window.onresize = function() {
-            // Can be called many times during a real window resize
-            clearTimeout(scrTimeout);  // Reset window resize delay to zero
-            scrTimeout = setTimeout(scrSetSize, 250);  // After 250 ms set screen size
-        }
-    */
-
-    /* NOT WORKING??? */
+    scrSetSize()  // Adjust progress bar width for popup window size
+    /* Add listener for window resizing */
     runWindow.addEventListener('resize', () => {
         // Can be called many times during a real window resize
         clearTimeout(scrTimeout);  // Reset window resize delay to zero
