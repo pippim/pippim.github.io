@@ -1503,8 +1503,8 @@ function updateRunTimer(myTable, entry, fHeading) {
     if (timeTaskStarted == 0) timeCurrent = 0
     const secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
 
-    entry.progress += secondsTaskElapsed
-    entry.remaining -= secondsTaskElapsed
+    entry.progress += 1000 // secondsTaskElapsed
+    entry.remaining -= 1000 // secondsTaskElapsed
     entry.elm.value = entry.progress.toString()
     updateRunTimerDuration(myTable, entry, fHeading)
 }
