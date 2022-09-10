@@ -37,7 +37,7 @@ function scrSetSize() {
         // Run only within popup window
         x = win.document.getElementById("ttaRunWindowId")
         t = ttaRunElm.offsetWidth
-        pop = 25
+        pop = 23
     }
     // Scroll anchoring was disabled in a scroll container because of too many consecutive adjustments (10) with too little total distance (-2.44833335876465 px average, -24.4833 px total). tim-ta.html
     // const x = document.getElementById("content")  /* Exists in every _layout */
