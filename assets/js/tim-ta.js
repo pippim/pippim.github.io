@@ -1432,7 +1432,7 @@ async function runAllTimers() {
         var timeCurrent = new Date().getTime();
         var secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
         if (!pauseAllTimers)
-            if (secondsTaskElapsed - entry.progress > 1000)
+            if (secondsTaskElapsed - entry.progress * 1000 > 1000)
                 console.log ("More than 1 second lost in entry.progress:",
                              entry.progress, "secondsTaskElapsed:",
                              secondsTaskElapsed)
