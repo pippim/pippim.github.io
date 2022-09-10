@@ -15,8 +15,6 @@
 
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
-scrSetSize()  // Call on document load. Must also call when RunTimers is painted
-
 function scrSetSize() {
     /*  On window resize, set width of progress bar accordingly
     */
@@ -145,6 +143,7 @@ function ttaRunConfiguration (parentElm) {
 
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
     const cnt = ttaConfig.arrProjects.length;
+    scrSetSize()  // Call on document load. Must also call when RunTimers is painted
     if (cnt == 1) { paintTasksTable(); }
     if (cnt > 1) { paintProjectsTable(); }
     // When no projects exist, create Sample Laundry Project
