@@ -13,21 +13,22 @@
 
 {% include draggable-window.js %}
 
-var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge;
+var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
-scrSetSize();  // Call on document load. Must also call when RunTimers is painted
+scrSetSize()  // Call on document load. Must also call when RunTimers is painted
 
 function scrSetSize() {
     /*  On window resize, set width of progress bar accordingly
     */
     // mobiles don't have window.innerWidth
-    scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width
+    var win = getWin()  // Will be main webpage or popup window
+    //scrWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width
+    scrWidth = (win.innerWidth > 0) ? win.innerWidth : win.screen.width
     scrSmall = scrMedium = scrLarge = false
     if (scrWidth < 641) scrSmall = true
     else if (scrWidth > 1007) scrLarge = true
     else scrMedium = true
 
-    var win = getWin()  // Will be main webpage or popup window
     /*
     scroll anchoring was disabled in a scroll container because of
     too many consecutive adjustments (10) with too little total
@@ -42,7 +43,8 @@ function scrSetSize() {
     // const x = document.getElementById("content")  /* Exists in every _layout */
     // When called from popup: Uncaught TypeError: x is null
     const y = x.getElementsByTagName("progress")  /* To override styling of progress { */
-    console.log("scrWidth:", scrWidth, "(win == window):", (win == window),
+    console.log("scrWidth:", scrWidth, "win.screen.width:", win.screen.width
+                "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
     for (var i=0; i<y.length; i++) {
         console.log("y[i].id:", y[i].id,
