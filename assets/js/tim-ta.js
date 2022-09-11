@@ -1532,7 +1532,7 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
             entry.progress = 0;
             entry.remaining = entry.seconds;
             entry.elm.value = entry.progress.toString();
-            updateRunTimerDuration(myTable, entry, delta);
+            updateRunTimerDuration(myTable, entry, 0);
         }
     }
 }
