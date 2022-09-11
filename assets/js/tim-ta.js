@@ -37,7 +37,7 @@ function scrSetSize() {
         // Run only within popup window
         x = win.document.getElementById("ttaRunWindowId")
         t = ttaRunElm.offsetWidth
-        pop = 20  // Silly method. Should add up size of cells 1 & 2 for cell 0
+        pop = 18  // Silly method. Should add up size of cells 1 & 2 for cell 0
     }
 
     y = x.getElementsByTagName("progress")  // To override styling of progress type
@@ -1323,8 +1323,10 @@ function pcbClickBegin(i) {
     /*  Restart timer from beginning. If at beginning go to previous track
     */
     var entry = pcbClickCommon(i, "begin")
-    entry.progress = 0
-    entry.remaining = entry.seconds
+    var delta = entry.progress * -1
+    updateAllRunTimers(entry, delta)
+    //entry.progress = 0
+    //entry.remaining = entry.seconds
     timeTaskStarted = 0
     console.log("entry:", entry)
 }
@@ -1332,9 +1334,10 @@ function pcbClickRewind(i) {
     /*  Add remaining time to timer and subtract progress time
     */
     var entry = pcbClickCommon(i, "rewind")
-    // Test to subtract 10 seconds
-    entry.progress -= 10 * 1000
-    entry.remaining += 10 * 1000
+    var delta = -10 * 1000
+    updateAllRunTimers(entry, delta)
+    //entry.progress -= 10 * 1000
+    //entry.remaining += 10 * 1000
     secondsTaskPaused += 10 * 1000
     console.log("entry:", entry)
 }
@@ -1359,9 +1362,11 @@ function pcbClickForward(i) {
     /*  Subtract remaining time to timer and add to progress time
     */
     var entry = pcbClickCommon(i, "forward")
+    var delta = 10 * 1000
+    updateAllRunTimers(entry, delta)
     // Test to add 10 seconds
-    entry.progress += 10 * 1000
-    entry.remaining -= 10 * 1000
+    //entry.progress += 10 * 1000
+    //entry.remaining -= 10 * 1000
     secondsTaskPaused -= 10 * 1000
     console.log("entry:", entry)
 }
@@ -1369,9 +1374,11 @@ function pcbClickEnd(i) {
     /*  Finish timer and go to next timer
     */
     var entry = pcbClickCommon(i, "end")
-    entry.progress = entry.seconds
-    entry.remaining = 0
-    secondsTaskPaused = entry.seconds
+    var delta = entry.remaining
+    updateAllRunTimers(entry, delta)
+    //entry.progress = entry.seconds
+    //entry.remaining = 0
+    //secondsTaskPaused = entry.seconds
     //timeTaskStarted = new Date().getTime()
     timeTaskStarted = 0
     console.log("entry:", entry)
