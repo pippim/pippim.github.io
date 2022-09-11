@@ -1072,8 +1072,8 @@ function setWebpageDimmed() {
     */
     let btn = ["cancel", "Cancel", "Close popup window",
                "closePopupWindow()"]
-    let msg = "Timed Tasks running in popup window.<br>" +
-              "Select 'Cancel' to close popup window."
+    let msg = "Timed Tasks running in popup window.<br><br>" +
+              "Select 'Cancel' to close popup window.<br>"
 
     // Must call popCreate before popup is actually opened
     webpageInactiveWindowId =
@@ -1437,6 +1437,9 @@ async function runAllTimers() {
         if (delta < sleepMillis - 10 || delta > sleepMillis + 10)
             console.log("delta:", delta, "increment:", increment,
                         "entry.progress:", entry.progress)
+            // delta: 200 increment: 459400 entry.progress: 459200
+            // delta: 200 increment: 470500 entry.progress: 470300
+            // delta: 200 increment: 482000 entry.progress: 481800
         //if (delta < 1000) delta = 0  // Might be running at 10x speed
         updateRunTimer(myTable, entry, delta, fTaskAndTimeInHeading)
         updateRunTimer(myTable, allTimers["tabTimerSet"], delta)
@@ -1658,8 +1661,6 @@ function hhmmssShorten(hhmmss){
 }
 
 function sleep(ms) {
-    //  TODO: When timer running in background seems OK in Firefox but stalls
-    //  out in Chrome.
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -1675,7 +1676,6 @@ function convertNumber(value) {
 
 function clickControls(i) {
     // Popup actions/control buttons box for small screens
-    // TODO: Separate functions for Projects Table and Tasks Table.
     clickCommon(i);
     /* Pop up control box for Projects Table and Tasks Table mobile screen
 
