@@ -946,7 +946,7 @@ function paintRunTimers(i) {
     //html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
     var pre = ""
     if (fRunWindowAsPopup) pre = "window.opener."
-    html += taskButton("10x", "Run 10 times normal speed", pre + "testAllTimers")
+    html += taskButton("Δ", "Timer Progress Override", pre + "progressOverride")
     html += "Testing";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
@@ -1433,14 +1433,7 @@ async function runAllTimers() {
 
         // Update progress. fTaskAndTimeInHeading displays value in countdown
         const delta = increment - entry.progress  // delta multiple of 1000 millis
-        // Not sure how to address console.log spam below
-        //if (delta < sleepMillis - 10 || delta > sleepMillis + 10)
-        //    console.log("delta:", delta, "increment:", increment,
-        //                "entry.progress:", entry.progress)
-            // delta: 200 increment: 459400 entry.progress: 459200
-            // delta: 200 increment: 470500 entry.progress: 470300
-            // delta: 200 increment: 482000 entry.progress: 481800
-        //if (delta < 1000) delta = 0  // Might be running at 10x speed
+
         updateRunTimer(myTable, entry, delta, fTaskAndTimeInHeading)
         updateRunTimer(myTable, allTimers["tabTimerSet"], delta)
         if (run_times > 1)
@@ -1565,7 +1558,7 @@ function setTaskAndTimeInHeading(newText) {
 
 async function testAllTimers() {
     /*  Version 1.0 function now disabled in version 1.1
-        However kept here for development testing
+        However kept here for future redevelopment
     */
     // Speed up 10 times for previewing.
     // If not already sped up and > 30 seconds passed, confirm intent
