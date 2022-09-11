@@ -1293,9 +1293,6 @@ function buildProgressControlBoxBody(i) {
 function buildProgressControlButtons(i) {
     /*  list of buttons for popCreate to use:
         - 23EE ⏮︎ skip to start, previous
-        - 23EA ⏪︎ rewind, fast backwards
-        - 23EF ⏯︎ play/pause toggle
-        - 23E9 ⏩︎ fast forward
         - 23ED ⏭︎ skip to end, next
     */
 
@@ -1304,15 +1301,15 @@ function buildProgressControlButtons(i) {
     if (fRunWindowAsPopup) pre = "window.opener."
     // "➖" "➖" "−"
     var arrButtons = [
-        "begin", "&#x23EE;", "Restart timer",
+        "begin", "⏮", "Restart timer",
             pre + "pcbClickBegin(" + i +")",
-        "rewind", "−", "Reverse timer specific number of seconds",
+        "rewind", "−", "Reverse timer 10 seconds",
             pre + "pcbClickRewind(" + i +")",
         "play_toggle", "⏸︎", "Pause timer",
             pre + "pcbClickPlayPause(" + i +")",
-        "forward", "+", "Advance timer specific number of seconds",
+        "forward", "+", "Advance timer 10 seconds",
             pre + "pcbClickForward(" + i +")",
-        "end", "&#x23ED;", "Finish timer",
+        "end", "⏭", "Finish timer",
             pre + "pcbClickEnd(" + i +")"
     ]
 
@@ -1325,10 +1322,7 @@ function pcbClickBegin(i) {
     var entry = pcbClickCommon(i, "begin")
     var delta = entry.progress * -1
     updateAllRunTimers(entry, delta)
-    //entry.progress = 0
-    //entry.remaining = entry.seconds
     timeTaskStarted = 0
-    console.log("entry:", entry)
 }
 function pcbClickRewind(i) {
     /*  Add remaining time to timer and subtract progress time
@@ -1336,16 +1330,12 @@ function pcbClickRewind(i) {
     var entry = pcbClickCommon(i, "rewind")
     var delta = -10 * 1000
     updateAllRunTimers(entry, delta)
-    //entry.progress -= 10 * 1000
-    //entry.remaining += 10 * 1000
     secondsTaskPaused += 10 * 1000
-    console.log("entry:", entry)
 }
 function pcbClickPlayPause(i) {
     /*  Toggle pause/play button
     */
     var entry = pcbClickCommon(i, "play_toggle")
-    console.log("entry:", entry)
     var elm = runWindow.document.getElementById("play_toggle")
     pauseAllTimers = !pauseAllTimers  // Toggle to new state
     if (pauseAllTimers) {
@@ -1364,11 +1354,7 @@ function pcbClickForward(i) {
     var entry = pcbClickCommon(i, "forward")
     var delta = 10 * 1000
     updateAllRunTimers(entry, delta)
-    // Test to add 10 seconds
-    //entry.progress += 10 * 1000
-    //entry.remaining -= 10 * 1000
     secondsTaskPaused -= 10 * 1000
-    console.log("entry:", entry)
 }
 function pcbClickEnd(i) {
     /*  Finish timer and go to next timer
@@ -1376,16 +1362,11 @@ function pcbClickEnd(i) {
     var entry = pcbClickCommon(i, "end")
     var delta = entry.remaining
     updateAllRunTimers(entry, delta)
-    //entry.progress = entry.seconds
-    //entry.remaining = 0
-    //secondsTaskPaused = entry.seconds
-    //timeTaskStarted = new Date().getTime()
     timeTaskStarted = 0
-    console.log("entry:", entry)
 }
 
 function pcbClickCommon(i, caller) {
-    console.log("WIP (no code yet) pcbClickCommon(i) called from:", caller, "i:", i)
+    //console.log("WIP (no code yet) pcbClickCommon(i) called from:", caller, "i:", i)
     return allTimers["tabTimer" + i]
 }
 
