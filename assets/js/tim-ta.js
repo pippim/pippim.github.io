@@ -1503,16 +1503,6 @@ async function signalEndTask (index) {
 
 function updateRunTimer(myTable, entry, delta, fHeading) {
     // fHeading can be undefined
-    if (pauseAllTimers) return
-
-    const timeCurrent = new Date().getTime()
-    if (timeTaskStarted == 0) timeCurrent = 0
-    const secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
-
-    // Convert increment to full seconds
-    const increment = Math.round(secondsTaskElapsed / 1000) * 1000
-    if (timeTaskStarted - increment > 500)
-        console.log("increment:", increment, "secondsTaskElapsed:", secondsTaskElapsed)
     entry.progress += 1000 // secondsTaskElapsed
     entry.remaining -= 1000 // secondsTaskElapsed
     entry.elm.value = entry.progress.toString()
@@ -1521,13 +1511,16 @@ function updateRunTimer(myTable, entry, delta, fHeading) {
 
 function updateRunTimerDuration(myTable, entry, delta, fHeading) {
     // Update progress bar for task, all tasks and run sets of tasks
+    // Called during run loop and after resetting loop
     let hhmmss = new Date(entry.remaining).toISOString().substr(11, 8)
     var strDuration = hhmmssShorten(hhmmss)
     if (strDuration == "") strDuration = "Done"
     myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration
+
     // if fHeading is undefined, return now
     if (typeof fHeading == 'undefined') return
     if (!fHeading) return  // heading option is switched off
+
     let projectName = ttaProject.project_name
     let htmlTaskName = myTable.rows[entry.index + 1].cells[2].innerHTML
     // htmlTaskName contains: '<font size="+2">TASK NAME</font>'
