@@ -1369,7 +1369,9 @@ function pcbClickEnd(i) {
     var entry = pcbClickCommon(i, "end")
     entry.progress = entry.seconds
     entry.remaining = 0
-    secondsTaskPaused = 0
+    secondsTaskPaused = entry.seconds
+    //timeTaskStarted = new Date().getTime()
+    timeTaskStarted = 0
     console.log("entry:", entry)
 }
 
