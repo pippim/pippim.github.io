@@ -1413,10 +1413,10 @@ async function runAllTimers() {
                 resetTimersSet(myTable, run_times, remaining_run_times);
             }
             id = "tabTimer" + index
-            entry = allTimers[id];
-            name = ttaProject.arrTasks[entry.i];
-            ttaTask = ttaProject.objTasks[name];
-            continue;  // Wait for next timer to start
+            entry = allTimers[id]  // easier to read reference
+            name = ttaProject.arrTasks[entry.i]  // Task name
+            ttaTask = ttaProject.objTasks[name]  // Retrieve Task record
+            continue  // Wait for next timer to start
         }
 
         if (pauseAllTimers || timeTaskStarted == 0) continue
@@ -1427,12 +1427,12 @@ async function runAllTimers() {
 
         // Convert increment to full seconds
         const increment = Math.round(elapsed / 1000) * 1000
-        if (elapsed - entry.progress > 1000)
-            console.log ("More than 1 second lost in entry.progress:",
-                         entry.progress, "elapsed:", elapsed)
+        if (increment - entry.progress > 2000)
+            console.log ("More than 2 seconds lost in entry.progress:",
+                         entry.progress, "increment:", increment)
 
         // Update progress. fTaskAndTimeInHeading displays value in countdown
-        let delta = increment
+        let delta = increment - entry.progress  // delta multiple of 1000 millis
         updateRunTimer(myTable, entry, delta, fTaskAndTimeInHeading)
         updateRunTimer(myTable, allTimers["tabTimerSet"], delta)
         if (run_times > 1) updateRunTimer(myTable, allTimers["tabTimerAllSets"], delta)
