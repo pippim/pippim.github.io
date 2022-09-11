@@ -1264,6 +1264,9 @@ function progressOverride() {
     }
 
     i -= 1  // Convert i from timer number to index
+    var element = runWindow.document.getElementById("tabTimer" + i)
+    console.log("Extracting element.id:", element.id)
+    /*
     console.log(Object.keys(allTimers), "looking for i:", i)
     for (const key of Object.keys(allTimers)) {
         console.log("Checking key:", key,
@@ -1275,6 +1278,7 @@ function progressOverride() {
         i++
     }
     console.log("Found allTimers[key].index:", allTimers[key].index)
+    */
     createProgressControl(i, element)  // Create dialog box with buttons
 
 }  // End of progressOverride()
