@@ -1427,7 +1427,7 @@ async function runAllTimers() {
 
         // Convert increment to full seconds
         const increment = Math.round(elapsed / 1000) * 1000
-        if (secondsTaskElapsed - entry.progress > 1000)
+        if (elapsed - entry.progress > 1000)
             console.log ("More than 1 second lost in entry.progress:",
                          entry.progress, "secondsTaskElapsed:",
                          secondsTaskElapsed)
