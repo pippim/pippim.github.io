@@ -1302,11 +1302,16 @@ function buildProgressControlButtons(i) {
     if (fRunWindowAsPopup) pre = "window.opener."
 
     var arrButtons = [
-        "begin", "&#x23EE;", "Skip to start, Previous", pre + "pcbClickBegin(" + i +")",
-        "rewind", "&#x23EA;", "Rewind, Fast backwards", pre + "pcbClickRewind(" + i +")",
-        "play_toggle", "⏸︎", "Pause timer", pre + "pcbClickPlayPause(" + i +")",
-        "forward", "&#x23E9;", "Fast forward", pre + "pcbClickForward(" + i +")",
-        "end", "&#x23ED;", "Skip to end, Next", pre + "pcbClickEnd(" + i +")"
+        "begin", "&#x23EE;", "Restart timer / Previous timer",
+            pre + "pcbClickBegin(" + i +")",
+        "rewind", "➖", "Reverse timer specific number of seconds",
+            pre + "pcbClickRewind(" + i +")",
+        "play_toggle", "⏸︎", "Pause timer",
+            pre + "pcbClickPlayPause(" + i +")",
+        "forward", "+", "Advance timer specific number of seconds",
+            pre + "pcbClickForward(" + i +")",
+        "end", "&#x23ED;", "End of timer / Next timer",
+            pre + "pcbClickEnd(" + i +")"
     ]
 
     return arrButtons
@@ -1322,6 +1327,9 @@ function pcbClickRewind(i) {
     /*  Add remaining time to timer and subtract progress time
     */
     var entry = pcbClickCommon(i, "rewind")
+    // Test to subtract 10 seconds
+    entry.progress -= 10 * 1000
+    entry.remaining += 10 * 1000
     console.log("entry:", entry)
 }
 function pcbClickPlayPause(i) {
@@ -1345,6 +1353,9 @@ function pcbClickForward(i) {
     /*  Subtract remaining time to timer and add to progress time
     */
     var entry = pcbClickCommon(i, "forward")
+    // Test to add 10 seconds
+    entry.progress += 10 * 1000
+    entry.remaining -= 10 * 1000
     console.log("entry:", entry)
 }
 function pcbClickEnd(i) {
