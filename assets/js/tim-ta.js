@@ -1252,11 +1252,11 @@ function progressTouched(i, element) {
 function progressOverride() {
     /*  Pop up control box when Override button selected in footer
         Cannot click override button when no timers are running.
+        Note that clicking while already mounted, erases and starts again
     */
-    // TODO: If pcb already mounted and paused, do we want to mount again?
     popClearByError("progress_override")  // Clear control box, not an error
-    // What is the running progress bar number?
-    var i = getActiveTimerNo()
+
+    var i = getActiveTimerNo()  // What is the running progress bar number?
     if (i == 0) {
         popCreateUniqueError("e", "Timers haven't started yet",
                              "no_tasks_running")
@@ -1265,20 +1265,6 @@ function progressOverride() {
 
     i -= 1  // Convert i from timer number to index
     var element = runWindow.document.getElementById("tabTimer" + i)
-    console.log("Extracting element.id:", element.id)
-    /*
-    console.log(Object.keys(allTimers), "looking for i:", i)
-    for (const key of Object.keys(allTimers)) {
-        console.log("Checking key:", key,
-                    "allTimers[key].index:", allTimers[key].index)
-        let element = runWindow.document.getElementById(key)
-        console.log("Extracting element.id:", element.id)
-        if (i == allTimers[key].index) break
-        console.log("Incrementing i:", i)
-        i++
-    }
-    console.log("Found allTimers[key].index:", allTimers[key].index)
-    */
     createProgressControl(i, element)  // Create dialog box with buttons
 
 }  // End of progressOverride()
@@ -1326,10 +1312,23 @@ function buildProgressControlButtons(i) {
     return arrButtons
 }
 
-function pcbClickBegin(i) { pcbClickCommon(i, "begin"); }
-function pcbClickRewind(i) { pcbClickCommon(i, "rewind"); }
+function pcbClickBegin(i) {
+    /*  Restart timer from beginning. If at beginning go to previous track
+    */
+    var entry = pcbClickCommon(i, "begin")
+    console.log("entry:", entry)
+}
+function pcbClickRewind(i) {
+    /*  Add remaining time to timer and subtract progress time
+    */
+    var entry = pcbClickCommon(i, "rewind")
+    console.log("entry:", entry)
+}
 function pcbClickPlayPause(i) {
-    pcbClickCommon(i, "play_toggle")
+    /*  Toggle pause/play button
+    */
+    var entry = pcbClickCommon(i, "play_toggle")
+    console.log("entry:", entry)
     var elm = runWindow.document.getElementById("play_toggle")
     pauseAllTimers = !pauseAllTimers  // Toggle to new state
     if (pauseAllTimers) {
@@ -1342,11 +1341,22 @@ function pcbClickPlayPause(i) {
         calcPauseTotal()
     }
 }
-function pcbClickForward(i) { pcbClickCommon(i, "forward"); }
-function pcbClickEnd(i) { pcbClickCommon(i, "end"); }
+function pcbClickForward(i) {
+    /*  Subtract remaining time to timer and add to progress time
+    */
+    var entry = pcbClickCommon(i, "forward")
+    console.log("entry:", entry)
+}
+function pcbClickEnd(i) {
+    /*  Finish timer and go to next timer
+    */
+    var entry = pcbClickCommon(i, "end")
+    console.log("entry:", entry)
+}
 
 function pcbClickCommon(i, caller) {
     console.log("WIP (no code yet) pcbClickCommon(i) called from:", caller, "i:", i)
+    return allTimers["tabTimer" + i]
 }
 
 function pcbClose() {
