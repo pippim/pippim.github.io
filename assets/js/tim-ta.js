@@ -891,7 +891,7 @@ function paintRunTimers(i) {
     secondsTask = secondsSet = secondsAllSets = cntTimedTasks = 0
     ttaRunElm = ttaElm  // Default to no pop-up window, runs on main webpage
     allTimers = {};
-    sleepMillis = 1000  // Update progress bar 10 times / second
+    sleepMillis = 100  // Update progress bar 10 times / second
     cancelAllTimers = false;
     pauseAllTimers = false;
     totalAllTimersTime = 0 ;
@@ -1419,7 +1419,7 @@ async function runAllTimers() {
             continue  // Wait for next timer to start
         }
 
-        if (pauseAllTimers || timeTaskStarted == 0) continue
+        if (cancelAllTimers || pauseAllTimers || timeTaskStarted == 0) continue
 
         const timeCurrent = new Date().getTime()
         if (timeTaskStarted == 0) timeCurrent = 0
