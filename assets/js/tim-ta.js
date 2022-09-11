@@ -1460,7 +1460,7 @@ async function signalEndTask (index) {
     // Timer has ended, sound alarm and display image
 
     var audioControl = clickListen(index)
-    if audioControl == null) return  // There is no ending signal
+    if (audioControl == null) return  // There is no ending signal
 
     // NOTE: You must allow popups for pippim.com
     if (testPopup(runWindow)) runWindow.focus()
