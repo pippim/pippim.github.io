@@ -1266,7 +1266,8 @@ function progressOverride() {
     i -= 1  // Convert i from timer number to index
     console.log("looking for i:", i)
     for (const key of Object.keys(allTimers)) {
-        console.log("Checking key:", key)
+        console.log("Checking key:", key,
+                    "allTimers[key].index:", allTimers[key].index)
         let element = runWindow.document.getElementById(key)
         if (i == allTimers[key].index) break
     }
