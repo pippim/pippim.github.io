@@ -870,7 +870,7 @@ function clickAddProject() {
 
 // Global variables for Task countdown timers
 var secondsTask, secondsSet, secondsAllSets, hhmmssTask, hhmmssSet, hhmmssAllSets
-var calledFromTable, sleepMillis, cancelAllTimers, totalAllTimersTime, wakeLock
+var calledFromTable, sleepMillis, cancelAllTimers, secondsTotalElapsed, wakeLock
 var pauseAllTimers, cntTimedTasks, ttaRunElm
 
 var fRunWindowAsPopup  // Are we running windows as a popup?
@@ -891,10 +891,11 @@ function paintRunTimers(i) {
     secondsTask = secondsSet = secondsAllSets = cntTimedTasks = 0
     ttaRunElm = ttaElm  // Default to no pop-up window, runs on main webpage
     allTimers = {};
-    sleepMillis = 100  // Update progress bar 10 times / second
+    var SLEEP_MILLIS = 100
+    sleepMillis = SLEEP_MILLIS  // Update progress bar 10 times / second
     cancelAllTimers = false;
     pauseAllTimers = false;
-    totalAllTimersTime = 0 ;
+    secondsTotalElapsed = 0 ;
     wakeLock = false;  // Force mobile screen to stay on
 
     scrSetSize()  // get scrLarge setting (greater 1007 pixels wide)
@@ -1041,7 +1042,6 @@ closingCode() called with 'X' to close window, cancelAllTimers = true tim-ta.js:
 
     return true
 }
-
 
 function closingCode() {
     /*  Four ways to close popup window
@@ -1446,8 +1446,7 @@ async function runAllTimers() {
         if (run_times > 1)
             updateRunTimer(myTable, allTimers["tabTimerAllSets"], delta)
 
-        if (delta == 1000)
-            totalAllTimersTime += 1  // Total seconds, not including pauses
+        secondsTotalElapsed += delta  // Total seconds, not including pauses
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
 
@@ -1570,7 +1569,7 @@ async function testAllTimers() {
     */
     // Speed up 10 times for previewing.
     // If not already sped up and > 30 seconds passed, confirm intent
-    if (sleepMillis == 1000 && totalAllTimersTime > 30) {
+    if (sleepMillis == SLEEP_MILLIS, secondsTotalElapsed > 30 * 1000) {
         var msg = "More than 30 seconds elapsed.<br>" +
                   "Are you sure you want to 10x speed?"
         // Use ttaRunElm for separate popup window rather than main webpage
@@ -1584,8 +1583,10 @@ async function testAllTimers() {
 
 async function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
-    console.log("totalAllTimersTime:", totalAllTimersTime)
-    if (cancelAllTimers == false && totalAllTimersTime > 30) {
+    console.log("secondsTotalElapsed:", secondsTotalElapsed)
+    // After 10 seconds: secondsTotalElapsed: 0
+    // After 90 seconds: secondsTotalElapsed: 0
+    if (cancelAllTimers == false && secondsTotalElapsed > 30 * 1000) {
         var msg = "More than 30 seconds elapsed.<br>" +
                   "Are you sure you want to exit?"
         // Use ttaRunElm for separate popup window rather than main webpage
