@@ -1219,6 +1219,7 @@ function listenProgressBarTouched() {
 function progressTouched(i, element) {
     /* Pop up control box when active progress bar touched */
     popClearByError("progress_override");  // Clear control box, not an error
+    pauseAllTimers = false
     // Was a total progress bar clicked?
     const cntIndexTasks = ttaProject.arrTasks.length - 1
     const boolTotalBar = i > cntIndexTasks ? true : false;
@@ -1255,6 +1256,7 @@ function progressOverride() {
         Note that clicking while already mounted, erases and starts again
     */
     popClearByError("progress_override")  // Clear control box, not an error
+    pauseAllTimers = false
 
     var i = getActiveTimerNo()  // What is the running progress bar number?
     if (i == 0) {
@@ -1476,30 +1478,44 @@ async function runAllTimers() {
         // Update progress. fTaskAndTimeInHeading displays value in countdown
         const delta = increment - entry.progress  // delta multiple of 1000 millis
 
+        updateAllRunTimers(entry, delta)
+        /*
         updateRunTimer(myTable, entry, delta, fTaskAndTimeInHeading)
         updateRunTimer(myTable, allTimers["tabTimerSet"], delta)
         if (run_times > 1)
             updateRunTimer(myTable, allTimers["tabTimerAllSets"], delta)
-
         secondsTotalElapsed += delta  // Total seconds, not including pauses
+        */
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
+
+function updateAllRunTimers(entry, delta) {
+    /* Called from runAllTimers and Progress Control Overrides */
+    const myTable = runWindow.document.getElementById("tabRunTimers")
+    const run_times = getProjectValue('run_set_times');
+
+    updateRunTimer(myTable, entry, delta, fTaskAndTimeInHeading)
+    updateRunTimer(myTable, allTimers["tabTimerSet"], delta)
+    if (run_times > 1)
+        updateRunTimer(myTable, allTimers["tabTimerAllSets"], delta)
+    secondsTotalElapsed += delta  // Total seconds, not including pauses
+}
 
 async function signalStartTask () {
     // A timer is ready to start
     popClearByError("progress_override")  // Clear Progress Control Box if mounted
-    pauseAllTimers = false  // Progress Control Box can pause. But not now
-    /* reset title bar */
+    pauseAllTimers = false
+    /* reset title bar description */
     const cnt = ttaProject.arrTasks.length  // cnt = number of tasks
     const strHuman = cntHuman(cnt, "Task")  // count string
     var newText = ttaProject.project_name + " - Run timer for " + strHuman
     runWindow.document.getElementsByClassName("ttaContainer")[0].
-    firstChild.nodeValue = newText
+        firstChild.nodeValue = newText
 
     if (getTaskValue('task_prompt') == "true") {
         // Prompt to begin timer
         msg = "Ready to begin task <b>" + ttaTask.task_name + "</b>"
-        await popPrompt('i', msg, "task_prompt", "elm", ttaRunElm) // n popPrompt(
+        await popPrompt('i', msg, "task_prompt", "elm", ttaRunElm)
         // Blocking function, we wait until user reacts...
     }
     // Reset new task's delta calculation fields
