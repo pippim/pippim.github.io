@@ -1270,9 +1270,9 @@ function progressOverride() {
                     "allTimers[key].index:", allTimers[key].index)
         let element = runWindow.document.getElementById(key)
         console.log("Extracting element.id:", element.id)
-        if (i == allTimers[key].index) break else i++
+        if (i == allTimers[key].index) break
         console.log("Incrementing i:", i)
-        // i++
+        i++
     }
     console.log("Found allTimers[key].index:", allTimers[key].index)
     createProgressControl(i, element)  // Create dialog box with buttons
