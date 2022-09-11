@@ -1300,9 +1300,9 @@ function buildProgressControlButtons(i) {
     // When running in popup window, the function is in calling window
     var pre = ""
     if (fRunWindowAsPopup) pre = "window.opener."
-
+    // "➖" "➖" "−"
     var arrButtons = [
-        "begin", "&#x23EE;", "Restart timer / Previous timer",
+        "begin", "&#x23EE;", "Restart timer",
             pre + "pcbClickBegin(" + i +")",
         "rewind", "➖", "Reverse timer specific number of seconds",
             pre + "pcbClickRewind(" + i +")",
@@ -1310,7 +1310,7 @@ function buildProgressControlButtons(i) {
             pre + "pcbClickPlayPause(" + i +")",
         "forward", "+", "Advance timer specific number of seconds",
             pre + "pcbClickForward(" + i +")",
-        "end", "&#x23ED;", "End of timer / Next timer",
+        "end", "&#x23ED;", "Finish timer",
             pre + "pcbClickEnd(" + i +")"
     ]
 
@@ -1330,6 +1330,7 @@ function pcbClickRewind(i) {
     // Test to subtract 10 seconds
     entry.progress -= 10 * 1000
     entry.remaining += 10 * 1000
+    secondsTaskPaused += 10 * 1000
     console.log("entry:", entry)
 }
 function pcbClickPlayPause(i) {
@@ -1356,6 +1357,7 @@ function pcbClickForward(i) {
     // Test to add 10 seconds
     entry.progress += 10 * 1000
     entry.remaining -= 10 * 1000
+    secondsTaskPaused -= 10 * 1000
     console.log("entry:", entry)
 }
 function pcbClickEnd(i) {
