@@ -1376,10 +1376,10 @@ async function runAllTimers() {
                              "no_tasks")
         return
     }
-    var myTable = runWindow.document.getElementById("tabRunTimers")
-    var index = 0;
-    var id = "tabTimer" + index
-    var entry = allTimers[id];  // A variable name easier to read
+    const myTable = runWindow.document.getElementById("tabRunTimers")
+    var index = 0  // Current task index being processed
+    var id = "tabTimer" + index  // Current table row ID being processed
+    var entry = allTimers[id]  // 'entry' variable name easier to read
     ttaTask = ttaProject.objTasks[ttaProject.arrTasks[index]];
     var run_times = getProjectValue('run_set_times');
     var remaining_run_times = run_times;
@@ -1416,23 +1416,29 @@ async function runAllTimers() {
             entry = allTimers[id];
             name = ttaProject.arrTasks[entry.i];
             ttaTask = ttaProject.objTasks[name];
-            continue;  // Wait for first second to expire
+            continue;  // Wait for next timer to start
         }
 
+        if (pauseAllTimers || timeTaskStarted == 0) continue
+
+        const timeCurrent = new Date().getTime()
+        if (timeTaskStarted == 0) timeCurrent = 0
+        const elapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
+
+        // Convert increment to full seconds
+        const increment = Math.round(elapsed / 1000) * 1000
+        if (secondsTaskElapsed - entry.progress > 1000)
+            console.log ("More than 1 second lost in entry.progress:",
+                         entry.progress, "secondsTaskElapsed:",
+                         secondsTaskElapsed)
+
         // Update progress. fTaskAndTimeInHeading displays value in countdown
-        updateRunTimer(myTable, entry, fTaskAndTimeInHeading)
-        updateRunTimer(myTable, allTimers["tabTimerSet"])
-        if (run_times > 1) updateRunTimer(myTable, allTimers["tabTimerAllSets"])
+        let delta = increment
+        updateRunTimer(myTable, entry, delta, fTaskAndTimeInHeading)
+        updateRunTimer(myTable, allTimers["tabTimerSet"], delta)
+        if (run_times > 1) updateRunTimer(myTable, allTimers["tabTimerAllSets"], delta)
 
         totalAllTimersTime += 1  // Total seconds, not including pauses
-
-        var timeCurrent = new Date().getTime();
-        var secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
-        if (!pauseAllTimers)
-            if (secondsTaskElapsed - entry.progress > 1000)
-                console.log ("More than 1 second lost in entry.progress:",
-                             entry.progress, "secondsTaskElapsed:",
-                             secondsTaskElapsed)
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
 
@@ -1496,7 +1502,7 @@ async function signalEndTask (index) {
     }
 }
 
-function updateRunTimer(myTable, entry, fHeading) {
+function updateRunTimer(myTable, entry, delta, fHeading) {
     // fHeading can be undefined
     if (pauseAllTimers) return
 
@@ -1506,21 +1512,23 @@ function updateRunTimer(myTable, entry, fHeading) {
 
     // Convert increment to full seconds
     const increment = Math.round(secondsTaskElapsed / 1000) * 1000
-    if (increment != 1000) console.log("increment:", increment, secondsTaskElapsed)
+    if (timeTaskStarted - increment > 500)
+        console.log("increment:", increment, "secondsTaskElapsed:", secondsTaskElapsed)
     entry.progress += 1000 // secondsTaskElapsed
     entry.remaining -= 1000 // secondsTaskElapsed
     entry.elm.value = entry.progress.toString()
-    updateRunTimerDuration(myTable, entry, fHeading)
+    updateRunTimerDuration(myTable, entry, delta, fHeading)
 }
 
-function updateRunTimerDuration(myTable, entry, fHeading) {
-    // fHeading can be undefined
+function updateRunTimerDuration(myTable, entry, delta, fHeading) {
+    // Update progress bar for task, all tasks and run sets of tasks
     let hhmmss = new Date(entry.remaining).toISOString().substr(11, 8)
     var strDuration = hhmmssShorten(hhmmss)
     if (strDuration == "") strDuration = "Done"
     myTable.rows[entry.index + 1].cells[1].innerHTML = strDuration
     // if fHeading is undefined, return now
     if (typeof fHeading == 'undefined') return
+    if (!fHeading) return  // heading option is switched off
     let projectName = ttaProject.project_name
     let htmlTaskName = myTable.rows[entry.index + 1].cells[2].innerHTML
     // htmlTaskName contains: '<font size="+2">TASK NAME</font>'
@@ -1547,7 +1555,7 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
             entry.progress = 0;
             entry.remaining = entry.seconds;
             entry.elm.value = entry.progress.toString();
-            updateRunTimerDuration(myTable, entry);
+            updateRunTimerDuration(myTable, entry, delta);
         }
     }
 }
