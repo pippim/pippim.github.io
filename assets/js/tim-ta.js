@@ -1304,7 +1304,7 @@ function buildProgressControlButtons(i) {
     var arrButtons = [
         "begin", "&#x23EE;", "Restart timer",
             pre + "pcbClickBegin(" + i +")",
-        "rewind", "➖", "Reverse timer specific number of seconds",
+        "rewind", "−", "Reverse timer specific number of seconds",
             pre + "pcbClickRewind(" + i +")",
         "play_toggle", "⏸︎", "Pause timer",
             pre + "pcbClickPlayPause(" + i +")",
@@ -1321,6 +1321,9 @@ function pcbClickBegin(i) {
     /*  Restart timer from beginning. If at beginning go to previous track
     */
     var entry = pcbClickCommon(i, "begin")
+    entry.progress = 0
+    entry.remaining = entry.seconds
+    secondsTaskPaused = 0
     console.log("entry:", entry)
 }
 function pcbClickRewind(i) {
@@ -1364,6 +1367,9 @@ function pcbClickEnd(i) {
     /*  Finish timer and go to next timer
     */
     var entry = pcbClickCommon(i, "end")
+    entry.progress = entry.seconds
+    entry.remaining = 0
+    secondsTaskPaused = 0
     console.log("entry:", entry)
 }
 
