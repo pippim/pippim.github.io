@@ -1323,7 +1323,7 @@ function pcbClickBegin(i) {
     var entry = pcbClickCommon(i, "begin")
     entry.progress = 0
     entry.remaining = entry.seconds
-    secondsTaskPaused = entry.seconds  // Test to fix?
+    timeTaskStarted = new Date().getTime()
     console.log("entry:", entry)
 }
 function pcbClickRewind(i) {
