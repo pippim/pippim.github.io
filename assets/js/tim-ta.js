@@ -1458,46 +1458,31 @@ async function signalStartTask () {
 
 async function signalEndTask (index) {
     // Timer has ended, sound alarm and display image
-    // How much time was lost sleeping 1 second many times?
-    var timeCurrent = new Date().getTime();
-    var secondsTaskElapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
-    //console.log("secondsTaskElapsed:", secondsTaskElapsed,
-    //            "secondsTaskPaused:", secondsTaskPaused)
-    var hhmmss = new Date(secondsTaskElapsed).toISOString().substr(11, 8)
-    var strDuration = hhmmssShorten(hhmmss)
-    // 16:30 lost time results in 16:32
-    //console.log("Actual Task strDuration:", strDuration)
 
-    // win.blur()  // Send window to the background, WHY??
-    // win linked to 'window' or 'runWindow'
-    // NOTE: for allow popups for pippim.com
-    //if (testPopup(win)) win.focus()  // Force focus on true
-    if (testPopup(runWindow)) runWindow.focus()  // Force focus on true
-    //console.log("runWindow.focus()")
-    var audioControl = clickListen(index);
-    if (audioControl != null) {
-        // When !== null used, "TypeError: audioControl is undefined"
-        if (audioControl.ended) {}  // TODO: short audio ended already?
+    var audioControl = clickListen(index)
+    if audioControl == null) return  // There is no ending signal
 
-        var popId = popCreate("a",
-            "{{ site.url }}/assets/img/tim-ta/alarm-clock.jpg",
-            audioControl, "elm", ttaRunElm)  // n popCreate( n popPrompt(
-        var elm = msgq[popId].elmWindow
-        while(true) {
-            await sleep(50);
-            var rem = audioControl.duration - audioControl.currentTime
-            // Has sound automatically ended
-            if (rem <= 0.0) {
-                // If dialog not closed already, then close it
-                if (runWindow.document.body.contains(elm)) popClose(popId)
-                break
-            }
-            // Was dialog manually closed before sound ended?
-            if (runWindow.document.body.contains(elm)) continue
-            audioControl.pause()  // Kill the sound
-            audioControl.currentTime = 0.0
-            break  // Clicked X to close, or clicked "OK" & element removed
+    // NOTE: You must allow popups for pippim.com
+    if (testPopup(runWindow)) runWindow.focus()
+
+    var popId = popCreate("a",
+        "{{ site.url }}/assets/img/tim-ta/alarm-clock.jpg",
+        audioControl, "elm", ttaRunElm)  // n popCreate( n popPrompt(
+    var elm = msgq[popId].elmWindow
+    while(true) {
+        await sleep(50);
+        var rem = audioControl.duration - audioControl.currentTime
+        // Has sound automatically ended
+        if (rem <= 0.0) {
+            // If dialog not closed already, then close it
+            if (runWindow.document.body.contains(elm)) popClose(popId)
+            break
         }
+        // Was dialog manually closed before sound ended?
+        if (runWindow.document.body.contains(elm)) continue
+        audioControl.pause()  // Kill the sound
+        audioControl.currentTime = 0.0
+        break  // Clicked X to close, or clicked "OK" & element removed
     }
 }
 
