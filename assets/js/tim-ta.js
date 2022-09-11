@@ -1443,7 +1443,8 @@ async function runAllTimers() {
         //if (delta < 1000) delta = 0  // Might be running at 10x speed
         updateRunTimer(myTable, entry, delta, fTaskAndTimeInHeading)
         updateRunTimer(myTable, allTimers["tabTimerSet"], delta)
-        if (run_times > 1) updateRunTimer(myTable, allTimers["tabTimerAllSets"], delta)
+        if (run_times > 1)
+            updateRunTimer(myTable, allTimers["tabTimerAllSets"], delta)
 
         if (delta == 1000)
             totalAllTimersTime += 1  // Total seconds, not including pauses
@@ -1583,6 +1584,7 @@ async function testAllTimers() {
 
 async function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
+    console.log("totalAllTimersTime:", totalAllTimersTime)
     if (cancelAllTimers == false && totalAllTimersTime > 30) {
         var msg = "More than 30 seconds elapsed.<br>" +
                   "Are you sure you want to exit?"
