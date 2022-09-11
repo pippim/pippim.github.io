@@ -1429,8 +1429,7 @@ async function runAllTimers() {
         const increment = Math.round(elapsed / 1000) * 1000
         if (elapsed - entry.progress > 1000)
             console.log ("More than 1 second lost in entry.progress:",
-                         entry.progress, "secondsTaskElapsed:",
-                         secondsTaskElapsed)
+                         entry.progress, "elapsed:", elapsed)
 
         // Update progress. fTaskAndTimeInHeading displays value in countdown
         let delta = increment
