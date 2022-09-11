@@ -1427,12 +1427,14 @@ async function runAllTimers() {
 
         // Convert increment to full seconds
         const increment = Math.round(elapsed / 1000) * 1000
+        // Trace when Chrome over-throttles
         if (increment - entry.progress > 2000)
             console.log ("More than 2 seconds lost in entry.progress:",
                          entry.progress, "increment:", increment)
 
         // Update progress. fTaskAndTimeInHeading displays value in countdown
-        let delta = increment - entry.progress  // delta multiple of 1000 millis
+        var delta = increment - entry.progress  // delta multiple of 1000 millis
+        if (delta < 1000) delta = 0  // Might be running at 10x speed
         updateRunTimer(myTable, entry, delta, fTaskAndTimeInHeading)
         updateRunTimer(myTable, allTimers["tabTimerSet"], delta)
         if (run_times > 1) updateRunTimer(myTable, allTimers["tabTimerAllSets"], delta)
@@ -1488,8 +1490,8 @@ async function signalEndTask (index) {
 
 function updateRunTimer(myTable, entry, delta, fHeading) {
     // fHeading can be undefined
-    entry.progress += 1000 // secondsTaskElapsed
-    entry.remaining -= 1000 // secondsTaskElapsed
+    entry.progress += delta // 1000 or zero
+    entry.remaining -= delta // 1000 or zero
     entry.elm.value = entry.progress.toString()
     updateRunTimerDuration(myTable, entry, delta, fHeading)
 }
@@ -1527,6 +1529,7 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
         var entry = allTimers[key];
         if (key == "tabTimerAllSets") {
             // NOTE: AllSets NEVER gets reset when an old set ends
+            // Sep 10 22 - Why was above comment made?
             // TODO, Timer description with "Set Number x of y"
         } else {
             entry.progress = 0;
