@@ -1264,12 +1264,12 @@ function progressOverride() {
     }
 
     i -= 1  // Convert i from timer number to index
-    console.log("looking for i:", i)
+    console.log(Object.keys(allTimers), "looking for i:", i)
     for (const key of Object.keys(allTimers)) {
         console.log("Checking key:", key,
                     "allTimers[key].index:", allTimers[key].index)
         let element = runWindow.document.getElementById(key)
-        if (i == allTimers[key].index) break
+        if (i == allTimers[key].index) { break }  // braces needed?
     }
     console.log("Found allTimers[key].index:", allTimers[key].index)
     createProgressControl(i, element)  // Create dialog box with buttons
