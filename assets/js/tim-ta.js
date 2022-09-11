@@ -879,6 +879,7 @@ var runWindow  // main webpage window or launched popup window
 var timeTaskStarted  // time the Timer Task started
 var timePauseStarted  // time paused started. After play calc total seconds paused
 var secondsTaskPaused  // current time minus timePauseStarted above
+var SLEEP_MILLIS = 100  // When 10x clicked, this stays the same
 
 function paintRunTimers(i) {
     /*  Run Project - Countdown all tasks. Scroll into view as needed.
@@ -891,8 +892,7 @@ function paintRunTimers(i) {
     secondsTask = secondsSet = secondsAllSets = cntTimedTasks = 0
     ttaRunElm = ttaElm  // Default to no pop-up window, runs on main webpage
     allTimers = {};
-    var SLEEP_MILLIS = 100
-    sleepMillis = SLEEP_MILLIS  // Update progress bar 10 times / second
+    sleepMillis = SLEEP_MILLIS  // Update progress bar interval. Changes with 10x
     cancelAllTimers = false;
     pauseAllTimers = false;
     secondsTotalElapsed = 0 ;
