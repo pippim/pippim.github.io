@@ -1422,18 +1422,18 @@ async function runAllTimers() {
         if (cancelAllTimers || pauseAllTimers || timeTaskStarted == 0) continue
 
         const timeCurrent = new Date().getTime()
-        if (timeTaskStarted == 0) timeCurrent = 0
+        if (timeTaskStarted == 0) timeCurrent = 0  // Equalizer
         const elapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
 
-        // Convert increment to full seconds
-        const increment = Math.round(elapsed / 1000) * 1000
+        // Convert increment to full sleepMillis
+        const increment = Math.round(elapsed / sleepMillis) * sleepMillis
         // Trace when Chrome over-throttles
         if (increment - entry.progress > 2000)
             console.log ("More than 2 seconds lost in entry.progress:",
                          entry.progress, "increment:", increment)
 
         // Update progress. fTaskAndTimeInHeading displays value in countdown
-        var delta = increment - entry.progress  // delta multiple of 1000 millis
+        const delta = increment - entry.progress  // delta multiple of 1000 millis
         if (delta < sleepMillis - 10 || delta > sleepMillis + 10)
             console.log("delta:", delta, "increment:", increment,
                         "entry.progress:", entry.progress)
@@ -1442,7 +1442,8 @@ async function runAllTimers() {
         updateRunTimer(myTable, allTimers["tabTimerSet"], delta)
         if (run_times > 1) updateRunTimer(myTable, allTimers["tabTimerAllSets"], delta)
 
-        totalAllTimersTime += 1  // Total seconds, not including pauses
+        if (delta == 1000)
+            totalAllTimersTime += 1  // Total seconds, not including pauses
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
 
