@@ -891,7 +891,7 @@ function paintRunTimers(i) {
     secondsTask = secondsSet = secondsAllSets = cntTimedTasks = 0
     ttaRunElm = ttaElm  // Default to no pop-up window, runs on main webpage
     allTimers = {};
-    sleepMillis = 1000;
+    sleepMillis = 100  // Update progress bar 10 times / second
     cancelAllTimers = false;
     pauseAllTimers = false;
     totalAllTimersTime = 0 ;
