@@ -1265,7 +1265,6 @@ function progressOverride() {
     i -= 1  // Convert i from timer number to index
     for (const key of Object.keys(allTimers)) {
         let element = runWindow.document.getElementById(key)
-        // TODO: Review [key].index relationship with i, improvements?
         if (i == allTimers[key].index) break
     }
     createProgressControl(i, element)  // Create dialog box with buttons
@@ -1434,9 +1433,10 @@ async function runAllTimers() {
 
         // Update progress. fTaskAndTimeInHeading displays value in countdown
         const delta = increment - entry.progress  // delta multiple of 1000 millis
-        if (delta < sleepMillis - 10 || delta > sleepMillis + 10)
-            console.log("delta:", delta, "increment:", increment,
-                        "entry.progress:", entry.progress)
+        // Not sure how to address console.log spam below
+        //if (delta < sleepMillis - 10 || delta > sleepMillis + 10)
+        //    console.log("delta:", delta, "increment:", increment,
+        //                "entry.progress:", entry.progress)
             // delta: 200 increment: 459400 entry.progress: 459200
             // delta: 200 increment: 470500 entry.progress: 470300
             // delta: 200 increment: 482000 entry.progress: 481800
