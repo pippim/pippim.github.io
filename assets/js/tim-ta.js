@@ -1464,7 +1464,6 @@ async function runAllTimers() {
         if (cancelAllTimers || pauseAllTimers || timeTaskStarted == 0) continue
 
         const timeCurrent = new Date().getTime()
-        if (timeTaskStarted == 0) timeCurrent = 0  // Equalizer
         const elapsed = timeCurrent - timeTaskStarted - secondsTaskPaused
 
         // Convert increment to full sleepMillis
@@ -1490,6 +1489,13 @@ async function signalStartTask () {
     // A timer is ready to start
     popClearByError("progress_override")  // Clear Progress Control Box if mounted
     pauseAllTimers = false  // Progress Control Box can pause. But not now
+    /* reset title bar */
+    const cnt = ttaProject.arrTasks.length  // cnt = number of tasks
+    const strHuman = cntHuman(cnt, "Task")  // count string
+    var newText = ttaProject.project_name + " - Run timer for " + strHuman
+    runWindow.document.getElementsByClassName("ttaContainer")[0].
+    firstChild.nodeValue = newText
+
     if (getTaskValue('task_prompt') == "true") {
         // Prompt to begin timer
         msg = "Ready to begin task <b>" + ttaTask.task_name + "</b>"
