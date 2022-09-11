@@ -946,8 +946,9 @@ function paintRunTimers(i) {
     //html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
     var pre = ""
     if (fRunWindowAsPopup) pre = "window.opener."
-    html += taskButton("Δ", "Timer Progress Override", pre + "progressOverride")
-    html += "Testing";
+    html += taskButton("Δ", "Timer Progress Override",
+                       pre + "progressOverride")
+    html += "Override";
     html += '</div>\n';
     html += '<div class="rightFoot">\n';
     /*  Four ways to close popup window
@@ -956,7 +957,8 @@ function paintRunTimers(i) {
         3. Clicking 'X' on popup window
         4. Select '<-' (Back button) on popup window
     */
-    html += taskButton(tabBackSym, "Back to last form", pre + "exitAllTimers");
+    html += taskButton(tabBackSym, "Return back to last form",
+                       pre + "exitAllTimers");
     html += "Cancel";
     html += '</div>\n';
     html += '</div>\n';
@@ -1256,17 +1258,19 @@ function progressOverride() {
     // What is the running progress bar number?
     var i = getActiveTimerNo()
     if (i == 0) {
-        // TODO: Rather than saying "You can't touch that" a better
-        // method is to hide the button until timers are running
-        popCreateUniqueError("e", "No timers are running", "no_tasks_running")
+        popCreateUniqueError("e", "Timers haven't started yet",
+                             "no_tasks_running")
         return
     }
 
     i -= 1  // Convert i from timer number to index
+    console.log("looking for i:", i)
     for (const key of Object.keys(allTimers)) {
+        console.log("Checking key:", key)
         let element = runWindow.document.getElementById(key)
         if (i == allTimers[key].index) break
     }
+    console.log("Found allTimers[key].index:", allTimers[key].index)
     createProgressControl(i, element)  // Create dialog box with buttons
 
 }  // End of progressOverride()
