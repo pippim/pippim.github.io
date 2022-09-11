@@ -1269,7 +1269,8 @@ function progressOverride() {
         console.log("Checking key:", key,
                     "allTimers[key].index:", allTimers[key].index)
         let element = runWindow.document.getElementById(key)
-        if (i == allTimers[key].index) { break }  // braces needed?
+        if (i == allTimers[key].index) break;  // ; needed?
+        i++
     }
     console.log("Found allTimers[key].index:", allTimers[key].index)
     createProgressControl(i, element)  // Create dialog box with buttons
