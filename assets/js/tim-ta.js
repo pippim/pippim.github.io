@@ -1435,7 +1435,7 @@ async function runAllTimers() {
         // Update progress. fTaskAndTimeInHeading displays value in countdown
         var delta = increment - entry.progress  // delta multiple of 1000 millis
         if (delta < sleepMillis - 10 || delta > sleepMillis + 10)
-            console.log("delta:", delta, "increment:", increment
+            console.log("delta:", delta, "increment:", increment,
                         "entry.progress:", entry.progress)
         //if (delta < 1000) delta = 0  // Might be running at 10x speed
         updateRunTimer(myTable, entry, delta, fTaskAndTimeInHeading)
