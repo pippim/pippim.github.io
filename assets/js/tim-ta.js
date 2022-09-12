@@ -414,10 +414,10 @@ function readPopupProject11(name, winName) {
     //if (ttaProject11.use_popup_last_location == "false") return
 
     var WinX, WinY, WinW, WinH  // Save popup window position and size
-    WinX = ttaProject11.popup_position_x.toNumber()
-    WinY = ttaProject11.popup_position_y.toNumber()
-    WinW = ttaProject11.popup_size_w.toNumber()
-    WinH = ttaProject11.popup_size_h.toNumber()
+    WinX = parseInt(ttaProject11.popup_position_x)
+    WinY = parseInt(ttaProject11.popup_position_y)
+    WinW = parseInt(ttaProject11.popup_size_w)
+    WinH = parseInt(ttaProject11.popup_size_h)
     // Move and resize window
     winName.moveTo(WinX, WinY)
     winName.resizeTo(WinW, WinH)
