@@ -370,7 +370,7 @@ function savePopupProject11(name, winName) {
         Update project's popup window data and save configuration
     */
 
-    console.log("savePopupProject11(name, winName):", name, winName)
+    //console.log("savePopupProject11(name, winName):", name, winName)
     readConfig11()
 
     const [winX, winY, winW, winH] = winReadGeometry(winName)
@@ -384,16 +384,12 @@ function savePopupProject11(name, winName) {
     ttaProject11.popup_size_h = winH.toString()
     // Update new fields
     ttaConfig11.objProjects[name] = ttaProject11
-
-    console.log("Get winX:", winX, "winY:", winY, "winW:", winW, "winH:", winH)
     saveConfig11()
 }
 
 function winReadGeometry(winName) {
     /*  Read window geometry. Return X, Y, width and height.
     */
-    console.log("winReadGeometry(winName):", winName)
-
     var winX, winY, winW, winH  // Save popup window position and size
     if(winName.screenX)
         winX=winName.screenX
@@ -408,6 +404,9 @@ function winReadGeometry(winName) {
     winW = (winName.innerWidth > 0) ? winName.innerWidth : screen.width
     winH = (winName.innerHeight > 0) ? winName.innerHeight : screen.height
 
+    console.log("winReadGeometry() winX:", winX, "winY:", winY,
+                "winW:", winW, "winH:", winH)
+
     return [winX, winY, winW, winH]
 }
 
@@ -416,7 +415,7 @@ function readPopupProject11(name, winName) {
         Get popup window coordinates from last move/resizing.
     */
 
-    console.log("readPopupProject11 (name):", name)
+    // console.log("readPopupProject11 (name):", name)
     readConfig11()
     ttaProject11 = ttaConfig11.objProjects[name]
 
@@ -424,26 +423,6 @@ function readPopupProject11(name, winName) {
     //if (ttaProject11.use_popup_last_location == "false") return
 
     /*  WINDOW DRIFTING
-Get winX: 3299 winY: 272 winW: 790 winH: 425
-Move/Size to winX: 3299 winY: 272 winW: 790 winH: 425
-savePopup
-Get          winX: 2600 winY: 272 winW: 790 winH: 389
-readPopup
-Move/Size to winX: 2600 winY: 272 winW: 790 winH: 389
-savePopup
-Get          winX: 2600 winY: 272 winW: 790 winH: 353
-readPopup
-Move/Size to winX: 2600 winY: 272 winW: 790 winH: 353
-savePopup
-Get          winX: 2600 winY: 272 winW: 790 winH: 317
-readPopup
-Move/Size to winX: 2600 winY: 272 winW: 790 winH: 317
-savePopup
-Get          winX: 2600 winY: 272 winW: 790 winH: 281
-        X -1074
-        y 0
-        W 0
-        H -36 (Window decoration?)
     */
     var winX, winY, winW, winH  // Save popup window position and size
     winX = parseInt(ttaProject11.popup_position_x)
@@ -460,22 +439,23 @@ Get          winX: 2600 winY: 272 winW: 790 winH: 281
 
 }
 
-function winMoveGeometry(winName, winX, winY, winW, winH) {
+function winMoveGeometry(winName, setX, setY, setW, setH) {
     /*  Move window and set geometry.
         Return X, Y, width and height adjustments made.
+
     */
-    console.log("winMoveGeometry(winName, winX, winY, winW, winH):",
-                winName, winX, winY, winW, winH)
+    console.log("winMoveGeometry(winName, setX, setY, setW, setH):",
+                winName, setX, setY, setW, setH)
 
     // Move and resize window
-    winName.moveTo(winX, winY)
-    winName.resizeTo(winW, winH)
+    winName.moveTo(setX, setY)
+    winName.resizeTo(setW, setH)
 
     const [newX, newY, newW, newH] = winReadGeometry(winName)
-    const chgX = winX - newX
-    const chgY = winY - newY
-    const chgW = winW - newW
-    const chgH = winH - newH
+    const chgX = setX - newX
+    const chgY = setY - newY
+    const chgW = setW - newW
+    const chgH = setH - newH
 
     return [chgX, chgY, chgW, chgH]
 }
