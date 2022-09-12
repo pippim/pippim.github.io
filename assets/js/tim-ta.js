@@ -357,8 +357,16 @@ function paintProjectsTable() {
     currentTable = "Projects";
     currentRoot = "tabProject";
 
-    // Just in case another browser tab changed configuration...
-    readConfig();
+    // readConfig() already called on document load but reread now
+    // just in case another browser tab changed configuration
+    readConfig()
+
+    /* Testing for version 1.1 without committing to upgrade yet */
+    console.log("BEGIN ttaConfig.arrProjects:")
+    console.log(ttaConfig.arrProjects)
+    console.log("BEGIN ttaConfig.arrProjects:")
+    console.log(ttaConfig.objProjects)
+
     //ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
     const cnt = ttaConfig.arrProjects.length;
     const strHuman = cntHuman(cnt, "Project");
@@ -2842,7 +2850,7 @@ function configClickUpload() {
                     ttaConfig.objProjects[objProject['project_name']])
             else {
                 ttaProject = Object.assign ( {}, tta_project)
-                // June 5, 2022 - Above isn't wiping out arrTasks
+                // June 5, 2022 - Above isn't wiping out arrTasks so do below
                 ttaProject.arrTasks = []
                 ttaProject.objTasks = {}
             }
