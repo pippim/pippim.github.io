@@ -401,7 +401,7 @@ function savePopupProject11(name) {
     saveConfig11()
 }
 
-function readPopupProject11(winName) {
+function readPopupProject11(name, winName) {
     /*  Reread configuration in case another app changed.
         Get popup window coordinates from last move/resizing.
     */
@@ -1105,7 +1105,8 @@ function setRunWindow(html) {
         return false
     }
 
-    readPopupProject11(runWindow)  // move to last location and size
+    // move to last location and size
+    readPopupProject11(ttaProject.project_name, runWindow)
     //runWindow.focus()
     runWindow.document.title = "Tim-ta run project " + ttaProject.project_name
 
