@@ -364,41 +364,51 @@ function saveConfig11() {
     localStorage.setItem('delete_me_1.1', JSON.stringify(ttaConfig11));
 }
 
-function savePopupProject11(name) {
+function savePopupProject11(name, winName) {
     /*  Reread configuration in case another app changed.
         Get popup window coordinates during onload operation.
         Update project's popup window data and save configuration
     */
 
-    console.log("savePopupProject11 (name):", name)
+    console.log("savePopupProject11(name, winName):", name, winName)
     readConfig11()
 
-    var WinX, WinY, WinW, WinH  // Save popup window position and size
-    if(runWindow.screenX)
-        WinX=runWindow.screenX
-    else if(runWindow.screenLeft)
-        WinX=runWindow.screenLeft
-
-    if(runWindow.screenY)
-        WinY=runWindow.screenY
-    else if(runWindow.screenTop)
-        WinY=runWindow.screenTop
-
-    WinW = (runWindow.innerWidth > 0) ? runWindow.innerWidth : screen.width
-    WinH = (runWindow.innerHeight > 0) ? runWindow.innerHeight : screen.height
+    const [winX, winY, winW, winH] = winReadGeometry(winName)
 
     /*  Although popup window last location might be turned off now, it may
         be turned on in the future. So save popup window position and size. */
     ttaProject11 = ttaConfig11.objProjects[name]
-    ttaProject11.popup_position_x = WinX.toString()
-    ttaProject11.popup_position_y = WinY.toString()
-    ttaProject11.popup_size_w = WinW.toString()
-    ttaProject11.popup_size_h = WinH.toString()
+    ttaProject11.popup_position_x = winX.toString()
+    ttaProject11.popup_position_y = winY.toString()
+    ttaProject11.popup_size_w = winW.toString()
+    ttaProject11.popup_size_h = winH.toString()
     // Update new fields
     ttaConfig11.objProjects[name] = ttaProject11
 
-    console.log("Get WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
+    console.log("Get winX:", winX, "winY:", winY, "winW:", winW, "winH:", winH)
     saveConfig11()
+}
+
+function winReadGeometry(winName) {
+    /*  Read window geometry. Return X, Y, width and height.
+    */
+    console.log("winReadGeometry(winName):", winName)
+
+    var winX, winY, winW, winH  // Save popup window position and size
+    if(winName.screenX)
+        winX=winName.screenX
+    else if(winName.screenLeft)
+        winX=winName.screenLeft
+
+    if(winName.screenY)
+        winY=winName.screenY
+    else if(winName.screenTop)
+        winY=winName.screenTop
+
+    winW = (winName.innerWidth > 0) ? winName.innerWidth : screen.width
+    winH = (winName.innerHeight > 0) ? winName.innerHeight : screen.height
+
+    return [winX, winY, winW, winH]
 }
 
 function readPopupProject11(name, winName) {
@@ -413,16 +423,61 @@ function readPopupProject11(name, winName) {
     /*  Cannot check field until stored in real configuration file. */
     //if (ttaProject11.use_popup_last_location == "false") return
 
-    var WinX, WinY, WinW, WinH  // Save popup window position and size
-    WinX = parseInt(ttaProject11.popup_position_x)
-    WinY = parseInt(ttaProject11.popup_position_y)
-    WinW = parseInt(ttaProject11.popup_size_w)
-    WinH = parseInt(ttaProject11.popup_size_h)
-    // Move and resize window
-    winName.moveTo(WinX, WinY)
-    winName.resizeTo(WinW, WinH)
+    /*  WINDOW DRIFTING
+Get winX: 3299 winY: 272 winW: 790 winH: 425
+Move/Size to winX: 3299 winY: 272 winW: 790 winH: 425
+savePopup
+Get          winX: 2600 winY: 272 winW: 790 winH: 389
+readPopup
+Move/Size to winX: 2600 winY: 272 winW: 790 winH: 389
+savePopup
+Get          winX: 2600 winY: 272 winW: 790 winH: 353
+readPopup
+Move/Size to winX: 2600 winY: 272 winW: 790 winH: 353
+savePopup
+Get          winX: 2600 winY: 272 winW: 790 winH: 317
+readPopup
+Move/Size to winX: 2600 winY: 272 winW: 790 winH: 317
+savePopup
+Get          winX: 2600 winY: 272 winW: 790 winH: 281
+        X -1074
+        y 0
+        W 0
+        H -36 (Window decoration?)
+    */
+    var winX, winY, winW, winH  // Save popup window position and size
+    winX = parseInt(ttaProject11.popup_position_x)
+    winY = parseInt(ttaProject11.popup_position_y)
+    winW = parseInt(ttaProject11.popup_size_w)
+    winH = parseInt(ttaProject11.popup_size_h)
 
-    console.log("Move/Size to WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
+    const [chgX, chgY, chgW, chgH] =
+        winMoveGeometry(winName, winX, winY, winW, winH)
+
+    console.log("Move/Size to winX:", winX, "winY:", winY, "winW:", winW, "winH:", winH)
+    if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
+        console.log("Changes  to  chgX:", chgX, "chgY:", chgY, "chgW:", chgW, "chgH:", chgH)
+
+}
+
+function winMoveGeometry(winName, winX, winY, winW, winH) {
+    /*  Move window and set geometry.
+        Return X, Y, width and height adjustments made.
+    */
+    console.log("winMoveGeometry(winName, winX, winY, winW, winH):",
+                winName, winX, winY, winW, winH)
+
+    // Move and resize window
+    winName.moveTo(winX, winY)
+    winName.resizeTo(winW, winH)
+
+    const [newX, newY, newW, newH] = winReadGeometry(winName)
+    const chgX = winX - newX
+    const chgY = winY - newY
+    const chgW = winW - newW
+    const chgH = winH - newH
+
+    return [chgX, chgY, chgW, chgH]
 }
 
 function convertVersion11() {
@@ -1149,7 +1204,7 @@ function setRunWindow(html) {
         1) ttaProject.fUseLastPopupBoundary is undefined/"false"/"true"
         2) ttaProject.
 
-WinX: 2031 WinY: 65 WinW: 601 WinH: 400 tim-ta.js:1870:17
+winX: 2031 winY: 65 winW: 601 winH: 400 tim-ta.js:1870:17
 runWindow.screen.availWidth: 2560 runWindow.screen.availHeight: 1440 tim-ta.js:1871:17
 runWindow.screen.width: 2560 runWindow.screen.height: 1440 tim-ta.js:1874:17
 window.getScreenDetails: undefined tim-ta.js:1876:17
@@ -1756,7 +1811,7 @@ async function exitAllTimers() {
 
     if (fRunWindowAsPopup) {
         // Running on large screen with popup window option
-        savePopupProject11(ttaProject.project_name)
+        savePopupProject11(ttaProject.project_name, runWindow)  // Save geometry
         runWindow.close()
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
