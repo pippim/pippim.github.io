@@ -1053,7 +1053,7 @@ function closingCode() {
         4. Select '<-' (Back button) on popup window
     */
     // "X" closed popup Window
-    console.log("closingCode() called with 'X' to close window, cancelAllTimers =", cancelAllTimers)
+    //console.log("closingCode() called with 'X' to close window, cancelAllTimers =", cancelAllTimers)
     cancelAllTimers = true
     exitAllTimers()
 }
@@ -1629,9 +1629,6 @@ async function testAllTimers() {
 
 async function exitAllTimers() {
     // Set cancelAllTimers to true. Forces exit from forever while(true) loop.
-    console.log("secondsTotalElapsed:", secondsTotalElapsed)
-    // After 10 seconds: secondsTotalElapsed: 0
-    // After 90 seconds: secondsTotalElapsed: 0
     if (cancelAllTimers == false && secondsTotalElapsed > 30 * 1000) {
         var msg = "More than 30 seconds elapsed.<br>" +
                   "Are you sure you want to exit?"
@@ -1658,7 +1655,9 @@ async function exitAllTimers() {
         WinW = (runWindow.innerWidth > 0) ? runWindow.innerWidth : screen.width
         WinH = (runWindow.innerHeight > 0) ? runWindow.innerHeight : screen.height
 
-        console.log("WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
+        //console.log("WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
+        // WinX: 3870 WinY: 2176 WinW: 600 WinH: 400
+
         //console.log("runWindow.screen.availWidth:", runWindow.screen.availWidth,
         //            "runWindow.screen.availHeight:", runWindow.screen.availHeight)
         // STRANGE RESULTS: screen.availWidth: 1280 screen.availHeight: 720
