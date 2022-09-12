@@ -328,7 +328,7 @@ table.tta-table th {
         var(--bg-color-secondary), var(--bg-color));
 }
 
-/* For running timers in popup window copy from Config Init style */
+/*  For running timers in popup window copy from Config Init style */
 #ttaRunWindowId {
     border-style: solid;
     border-width: 2px;
@@ -365,9 +365,9 @@ function saveConfig11() {
 }
 
 function savePopupProject11(name) {
-    /* Reread configuration in case another app changed.
-       Get popup window coordinates during onload operation.
-       Update project's popup window data and save configuration
+    /*  Reread configuration in case another app changed.
+        Get popup window coordinates during onload operation.
+        Update project's popup window data and save configuration
     */
 
     console.log("savePopupProject11 (name):", name)
@@ -397,23 +397,36 @@ function savePopupProject11(name) {
     // Update new fields
     ttaConfig11.objProjects[name] = ttaProject11
 
-    console.log("WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
-    // WinX: 3870 WinY: 2176 WinW: 600 WinH: 400
-
-    //console.log("runWindow.screen.availWidth:", runWindow.screen.availWidth,
-    //            "runWindow.screen.availHeight:", runWindow.screen.availHeight)
-    // STRANGE RESULTS: screen.availWidth: 1280 screen.availHeight: 720
-    //console.log("runWindow.screen.width:", runWindow.screen.width,
-    //            "runWindow.screen.height:", runWindow.screen.height)
-    //console.log("window.getScreenDetails:", window.getScreenDetails)
+    console.log("Get WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
     saveConfig11()
 }
 
-function readPopupProject11 () {
+function readPopupProject11(winName) {
+    /*  Reread configuration in case another app changed.
+        Get popup window coordinates from last move/resizing.
+    */
+
+    console.log("readPopupProject11 (name):", name)
+    readConfig11()
+    ttaProject11 = ttaConfig11.objProjects[name]
+
+    /*  Cannot check field until stored in real configuration file. */
+    //if (ttaProject11.use_popup_last_location == "false") return
+
+    var WinX, WinY, WinW, WinH  // Save popup window position and size
+    WinX = ttaProject11.popup_position_x.toNumber()
+    WinY = ttaProject11.popup_position_y.toNumber()
+    WinW = ttaProject11.popup_size_w.toNumber()
+    WinH = ttaProject11.popup_size_h.toNumber()
+    // Move and resize window
+    winName.moveTo(WinX, WinY)
+    winName.resizeTo(WinW, WinH)
+
+    console.log("Move/Size to WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
 }
 
 function convertVersion11() {
-    /* Testing for version 1.1 without committing to upgrade yet */
+    /*  Testing for version 1.1 without committing to upgrade yet */
     if (localStorage.getItem("delete_me_1.1") === null)
         readConfigToVersion11()
     else
@@ -1091,6 +1104,8 @@ function setRunWindow(html) {
         reverseWebpageDimmed()
         return false
     }
+
+    readPopupProject11(runWindow)  // move to last location and size
     //runWindow.focus()
     runWindow.document.title = "Tim-ta run project " + ttaProject.project_name
 
