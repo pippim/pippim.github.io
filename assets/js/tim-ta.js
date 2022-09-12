@@ -366,8 +366,11 @@ function saveConfig2() {
 
 function convertVersion11() {
     /* Testing for version 1.1 without committing to upgrade yet */
+    if (localStorage.getItem("delete_me_1.1") === null)
+        readConfigToVersion2()
+    else
+        readConfig2()
 
-    readConfigToVersion2()
     if ("use_popup_window" in ttaConfig2) return  // At version 1.1 already
 
     console.log("Converting Tim-ta version 1.0 to version 1.1")
