@@ -350,55 +350,103 @@ table.tta-table th {
 
 }  // End of ttaApplyGlobalStyles()
 
-var ttaConfig2, ttaProject2
+var ttaConfig11, ttaProject11
 
-function readConfigToVersion2() {
-    ttaConfig2 = JSON.parse(localStorage.getItem('ttaConfig'));
+function readConfigToVersion11() {
+    ttaConfig11 = JSON.parse(localStorage.getItem('ttaConfig'));
 }
 
-function readConfig2() {
-    ttaConfig2 = JSON.parse(localStorage.getItem('delete_me_1.1'));
+function readConfig11() {
+    ttaConfig11 = JSON.parse(localStorage.getItem('delete_me_1.1'));
 }
 
-function saveConfig2() {
-    localStorage.setItem('delete_me_1.1', JSON.stringify(ttaConfig2));
+function saveConfig11() {
+    localStorage.setItem('delete_me_1.1', JSON.stringify(ttaConfig11));
+}
+
+function savePopupProject11(name) {
+    /* Reread configuration in case another app changed.
+       Get popup window coordinates during onload operation.
+       Update project's popup window data and save configuration
+    */
+
+    console.log("savePopupProject11 (name):", name)
+    readConfig11()
+
+    var WinX, WinY, WinW, WinH  // Save popup window position and size
+    if(runWindow.screenX)
+        WinX=runWindow.screenX
+    else if(runWindow.screenLeft)
+        WinX=runWindow.screenLeft
+
+    if(runWindow.screenY)
+        WinY=runWindow.screenY
+    else if(runWindow.screenTop)
+        WinY=runWindow.screenTop
+
+    WinW = (runWindow.innerWidth > 0) ? runWindow.innerWidth : screen.width
+    WinH = (runWindow.innerHeight > 0) ? runWindow.innerHeight : screen.height
+
+    /*  Although popup window last location might be turned off now, it may
+        be turned on in the future. So save popup window position and size. */
+    ttaProject11 = ttaConfig11.objProjects[name]
+    ttaProject11.popup_position_x = WinX.toString()
+    ttaProject11.popup_position_y = WinY.toString()
+    ttaProject11.popup_size_w = WinW.toString()
+    ttaProject11.popup_size_h = WinH.toString()
+    // Update new fields
+    ttaConfig11.objProjects[name] = ttaProject11
+
+    console.log("WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
+    // WinX: 3870 WinY: 2176 WinW: 600 WinH: 400
+
+    //console.log("runWindow.screen.availWidth:", runWindow.screen.availWidth,
+    //            "runWindow.screen.availHeight:", runWindow.screen.availHeight)
+    // STRANGE RESULTS: screen.availWidth: 1280 screen.availHeight: 720
+    //console.log("runWindow.screen.width:", runWindow.screen.width,
+    //            "runWindow.screen.height:", runWindow.screen.height)
+    //console.log("window.getScreenDetails:", window.getScreenDetails)
+    saveConfig11()
+}
+
+function readPopupProject11 () {
 }
 
 function convertVersion11() {
     /* Testing for version 1.1 without committing to upgrade yet */
     if (localStorage.getItem("delete_me_1.1") === null)
-        readConfigToVersion2()
+        readConfigToVersion11()
     else
-        readConfig2()
+        readConfig11()
 
-    if ("use_popup_window" in ttaConfig2) return  // At version 1.1 already
+    if ("use_popup_window" in ttaConfig11) return  // At version 1.1 already
 
     console.log("Converting Tim-ta version 1.0 to version 1.1")
-    ttaConfig2.countdown_in_title = "true"
-    ttaConfig2.use_popup_window = "true"
-    ttaConfig2.use_popup_last_position = "false"
+    ttaConfig11.countdown_in_title = "true"
+    ttaConfig11.use_popup_window = "true"
+    ttaConfig11.use_popup_last_position = "false"
 
-    for (const name of Object.keys(ttaConfig2.objProjects)) {
-        console.log("BEGIN ttaConfig2.objProjects name:", name)
+    for (const name of Object.keys(ttaConfig11.objProjects)) {
+        console.log("BEGIN ttaConfig11.objProjects name:", name)
         // Initialize new fields
-        ttaProject2 = ttaConfig2.objProjects[name]
-        ttaProject2.countdown_in_title = "default"
-        ttaProject2.use_popup_window = "default"
-        ttaProject2.use_popup_last_position = "default"
-        ttaProject2.popup_position_x = "30"
-        ttaProject2.popup_position_y = "30"
-        ttaProject2.popup_size_w = "600"
-        ttaProject2.popup_size_h = "400"
+        ttaProject11 = ttaConfig11.objProjects[name]
+        ttaProject11.countdown_in_title = "default"
+        ttaProject11.use_popup_window = "default"
+        ttaProject11.use_popup_last_position = "default"
+        ttaProject11.popup_position_x = "30"
+        ttaProject11.popup_position_y = "30"
+        ttaProject11.popup_size_w = "600"
+        ttaProject11.popup_size_h = "400"
         // Update new fields
-        ttaConfig2.objProjects[name] = ttaProject2
-        for (const key of Object.keys(ttaProject2))
-            console.log("  ttaProject2 key:", key,
-                        "value:", ttaProject2[key])
+        ttaConfig11.objProjects[name] = ttaProject11
+        for (const key of Object.keys(ttaProject11))
+            console.log("  ttaProject11 key:", key,
+                        "value:", ttaProject11[key])
     }
-    saveConfig2()
+    saveConfig11()
 }
 
-convertVersion11()
+convertVersion11()  // One time conversion
 
 function paintProjectsTable() {
     // Assumes ttaConfig and ttaProject are populated
@@ -1692,29 +1740,7 @@ async function exitAllTimers() {
 
     if (fRunWindowAsPopup) {
         // Running on large screen with popup window option
-        var WinX, WinY, WinW, WinH  // Save popup window position and size
-        if(runWindow.screenX)
-            WinX=runWindow.screenX
-        else if(runWindow.screenLeft)
-            WinX=runWindow.screenLeft
-
-        if(runWindow.screenY)
-            WinY=runWindow.screenY
-        else if(runWindow.screenTop)
-            WinY=runWindow.screenTop
-
-        WinW = (runWindow.innerWidth > 0) ? runWindow.innerWidth : screen.width
-        WinH = (runWindow.innerHeight > 0) ? runWindow.innerHeight : screen.height
-
-        //console.log("WinX:", WinX, "WinY:", WinY, "WinW:", WinW, "WinH:", WinH)
-        // WinX: 3870 WinY: 2176 WinW: 600 WinH: 400
-
-        //console.log("runWindow.screen.availWidth:", runWindow.screen.availWidth,
-        //            "runWindow.screen.availHeight:", runWindow.screen.availHeight)
-        // STRANGE RESULTS: screen.availWidth: 1280 screen.availHeight: 720
-        //console.log("runWindow.screen.width:", runWindow.screen.width,
-        //            "runWindow.screen.height:", runWindow.screen.height)
-        //console.log("window.getScreenDetails:", window.getScreenDetails)
+        savePopupProject11(ttaProject.project_name)
         runWindow.close()
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
