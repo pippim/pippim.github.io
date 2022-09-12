@@ -350,6 +350,46 @@ table.tta-table th {
 
 }  // End of ttaApplyGlobalStyles()
 
+var ttaConfig2, ttaProject2
+
+function readConfigToVersion2() {
+    ttaConfig2 = JSON.parse(localStorage.getItem('ttaConfig'));
+}
+
+function readConfig2() {
+    ttaConfig2 = JSON.parse(localStorage.getItem('delete_me_1.1'));
+}
+
+function saveConfig2() {
+    localStorage.setItem('delete_me_1.1', JSON.stringify(ttaConfig2));
+}
+
+/* Testing for version 1.1 without committing to upgrade yet */
+readConfigToVersion2()
+console.log("BEGIN ttaConfig2.arrProjects doesn't require changes:")
+console.log(ttaConfig2.arrProjects)
+console.log("BEGIN ttaConfig2.objProjects requires expansion:")
+console.log(ttaConfig2.objProjects)
+
+for (const name of Object.keys(ttaConfig2.objProjects)) {
+    console.log("BEGIN ttaConfig2.objProjects name:", name)
+    // Initialize new fields
+    ttaProject2 = ttaConfig2.objProjects[name]
+    ttaProject2.countdown_in_title: "default"
+    ttaProject2.use_popup_window: "default"
+    ttaProject2.use_popup_last_position: "default"
+    ttaProject2.popup_position_x: "30"
+    ttaProject2.popup_position_y: "30"
+    ttaProject2.popup_size_w: "600"
+    ttaProject2.popup_size_h: "400"
+    // Update new fields
+    ttaConfig2.objProjects[name] = ttaProject2
+    for (const key of Object.keys(ttaProject2))
+        console.log("  ttaProject2 key:", key,
+                    "value:", ttaProject2[key])
+}
+saveConfig2()
+
 function paintProjectsTable() {
     // Assumes ttaConfig and ttaProject are populated
     // Button at bottom allows calling paintConfig(id)
@@ -361,16 +401,6 @@ function paintProjectsTable() {
     // just in case another browser tab changed configuration
     readConfig()
 
-    /* Testing for version 1.1 without committing to upgrade yet */
-    console.log("BEGIN ttaConfig.arrProjects doesn't require changes:")
-    console.log(ttaConfig.arrProjects)
-    console.log("BEGIN ttaConfig.objProjects requires expansion:")
-    console.log(ttaConfig.objProjects)
-    for (const name of Object.keys(ttaConfig.objProjects)) {
-        console.log("BEGIN ttaConfig.objProjects name:", name)
-    }
-
-    //ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
     const cnt = ttaConfig.arrProjects.length;
     const strHuman = cntHuman(cnt, "Project");
     var html = "Tim-ta - " + strHuman;
