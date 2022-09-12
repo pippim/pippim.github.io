@@ -362,10 +362,13 @@ function paintProjectsTable() {
     readConfig()
 
     /* Testing for version 1.1 without committing to upgrade yet */
-    console.log("BEGIN ttaConfig.arrProjects:")
+    console.log("BEGIN ttaConfig.arrProjects doesn't require changes:")
     console.log(ttaConfig.arrProjects)
-    console.log("BEGIN ttaConfig.arrProjects:")
+    console.log("BEGIN ttaConfig.objProjects requires expansion:")
     console.log(ttaConfig.objProjects)
+    for (const name of Object.keys(ttaConfig.objProjects)) {
+        console.log("BEGIN ttaConfig.objProjects name:", name)
+    }
 
     //ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
     const cnt = ttaConfig.arrProjects.length;
