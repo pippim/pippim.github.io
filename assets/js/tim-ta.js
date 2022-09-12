@@ -364,7 +364,7 @@ function saveConfig2() {
     localStorage.setItem('delete_me_1.1', JSON.stringify(ttaConfig2));
 }
 
-function convertVersion11 {
+function convertVersion11() {
     /* Testing for version 1.1 without committing to upgrade yet */
     readConfigToVersion2()
     console.log("BEGIN ttaConfig2.arrProjects doesn't require changes:")
@@ -389,9 +389,10 @@ function convertVersion11 {
             console.log("  ttaProject2 key:", key,
                         "value:", ttaProject2[key])
     }
-
     saveConfig2()
 }
+
+convertVersion11()
 
 function paintProjectsTable() {
     // Assumes ttaConfig and ttaProject are populated
