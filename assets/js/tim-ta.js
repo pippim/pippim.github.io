@@ -366,11 +366,14 @@ function saveConfig2() {
 
 function convertVersion11() {
     /* Testing for version 1.1 without committing to upgrade yet */
+
     readConfigToVersion2()
-    console.log("BEGIN ttaConfig2.arrProjects doesn't require changes:")
-    console.log(ttaConfig2.arrProjects)
-    console.log("BEGIN ttaConfig2.objProjects requires expansion:")
-    console.log(ttaConfig2.objProjects)
+    if ("use_popup_window" in ttaConfig2) return  // At version 1.1 already
+
+    console.log("Converting Tim-ta version 1.0 to version 1.1")
+    ttaConfig2.countdown_in_title = "true"
+    ttaConfig2.use_popup_window = "true"
+    ttaConfig2.use_popup_last_position = "false"
 
     for (const name of Object.keys(ttaConfig2.objProjects)) {
         console.log("BEGIN ttaConfig2.objProjects name:", name)
