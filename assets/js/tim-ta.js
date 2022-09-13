@@ -370,13 +370,12 @@ function savePopupProject11(name, winName) {
         Update project's popup window data and save configuration
     */
 
-    //console.log("savePopupProject11(name, winName):", name, winName)
-    readConfig11()
-
-    const [winX, winY, winW, winH] = winReadGeometry(winName)
+    // Get popup windows position and size
+    const [winX, winY, winW, winH] = winViewGeometry(winName)
 
     /*  Although popup window last location might be turned off now, it may
         be turned on in the future. So save popup window position and size. */
+    readConfig11()
     ttaProject11 = ttaConfig11.objProjects[name]
     ttaProject11.popup_position_x = winX.toString()
     ttaProject11.popup_position_y = winY.toString()
@@ -387,8 +386,8 @@ function savePopupProject11(name, winName) {
     saveConfig11()
 }
 
-function winReadGeometry(winName) {
-    /*  Read window geometry. Return X, Y, width and height.
+function winViewGeometry(winName) {
+    /*  Get passed window's geometry. Return X, Y, width and height.
     */
     var winX, winY, winW, winH  // Save popup window position and size
     if(winName.screenX)
@@ -401,10 +400,12 @@ function winReadGeometry(winName) {
     else if(winName.screenTop)
         winY=winName.screenTop
 
-    winW = (winName.innerWidth > 0) ? winName.innerWidth : screen.width
-    winH = (winName.innerHeight > 0) ? winName.innerHeight : screen.height
+    winW = (winName.innerWidth > 0) ?
+        winName.innerWidth : winName.screen.width
+    winH = (winName.innerHeight > 0) ?
+        winName.innerHeight : winName.screen.height
 
-    console.log("winReadGeometry() winX:", winX, "winY:", winY,
+    console.log("winViewGeometry() winX:", winX, "winY:", winY,
                 "winW:", winW, "winH:", winH)
 
     return [winX, winY, winW, winH]
@@ -423,6 +424,33 @@ function readPopupProject11(name, winName) {
     //if (ttaProject11.use_popup_last_location == "false") return
 
     /*  WINDOW DRIFTING
+winMoveGeometry(winName, setX, setY, setW, setH):
+Window about:blank
+ 2600 272 790 269 tim-ta.js:772:13
+winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400 tim-ta.js:732:13
+Move/Size to winX: 2600 winY: 272 winW: 790 winH: 269 tim-ta.js:761:13
+Changes  to  chgX: NaN chgY: NaN chgW: 190 chgH: -131 tim-ta.js:763:17
+winViewGeometry() winX: 3115 winY: 171 winW: 848 winH: 476 2 tim-ta.js:732:13
+winMoveGeometry(winName, setX, setY, setW, setH):
+Window about:blank
+ 3115 171 848 476 tim-ta.js:772:13
+winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400 tim-ta.js:732:13
+Move/Size to winX: 3115 winY: 171 winW: 848 winH: 476 tim-ta.js:761:13
+Changes  to  chgX: NaN chgY: NaN chgW: 248 chgH: 76 tim-ta.js:763:17
+winViewGeometry() winX: 2600 winY: 171 winW: 848 winH: 439 2 tim-ta.js:732:13
+winMoveGeometry(winName, setX, setY, setW, setH):
+Window about:blank
+ 2600 171 848 439 tim-ta.js:772:13
+winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400 tim-ta.js:732:13
+Move/Size to winX: 2600 winY: 171 winW: 848 winH: 439 tim-ta.js:761:13
+Changes  to  chgX: NaN chgY: NaN chgW: 248 chgH: 39 tim-ta.js:763:17
+winViewGeometry() winX: 2600 winY: 171 winW: 848 winH: 403 2 tim-ta.js:732:13
+winMoveGeometry(winName, setX, setY, setW, setH):
+Window about:blank
+ 2600 171 848 403 tim-ta.js:772:13
+winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400 tim-ta.js:732:13
+Move/Size to winX: 2600 winY: 171 winW: 848 winH: 403 tim-ta.js:761:13
+Changes  to  chgX: NaN chgY: NaN chgW: 248 chgH: 3
     */
     var winX, winY, winW, winH  // Save popup window position and size
     winX = parseInt(ttaProject11.popup_position_x)
@@ -444,14 +472,14 @@ function winMoveGeometry(winName, setX, setY, setW, setH) {
         Return X, Y, width and height adjustments made.
 
     */
-    console.log("winMoveGeometry(winName, setX, setY, setW, setH):",
-                winName, setX, setY, setW, setH)
+    console.log("winMoveGeometry()  setX:", setX, "setY:", setY,
+                "setW:", setW, "setH", setH")
 
     // Move and resize window
     winName.moveTo(setX, setY)
     winName.resizeTo(setW, setH)
 
-    const [newX, newY, newW, newH] = winReadGeometry(winName)
+    const [newX, newY, newW, newH] = winViewGeometry(winName)
     const chgX = setX - newX
     const chgY = setY - newY
     const chgW = setW - newW
