@@ -469,7 +469,13 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
 
     console.log("Calling from winMoveGeometry, winViewGeometry(winName)", winName)
     // await sleep(250)  // newX & newY undefined so wait 250 ms
-    const [newX, newY, newW, newH] = winViewGeometry(winName)
+
+    clearTimeout(scrTimeout);  // Reset window resize delay to zero
+    // After 100 ms get screen size, otherwise X & Y are undefined
+    scrTimeout = setTimeout(const [newX, newY, newW, newH] =
+                            winViewGeometry(winName), 100)
+
+    // const [newX, newY, newW, newH] = winViewGeometry(winName)
     const chgX = setX - newX
     const chgY = setY - newY
     const chgW = setW - newW
@@ -1694,7 +1700,7 @@ async function signalEndTask (index) {
 
     var popId = popCreate("a",
         "{{ site.url }}/assets/img/tim-ta/alarm-clock.jpg",
-        audioControl, "elm", ttaRunElm)  // n popCreate( n popPrompt(
+        audioControl, "elm", ttaRunElm)
     var elm = msgq[popId].elmWindow
     while(true) {
         await sleep(50);
@@ -3640,6 +3646,10 @@ function popBuildScript() {
 }
 
 function testPopup(popup_window) {
+    /*  Test popup window permissions - a new browser window.
+        Don't confuse with popCreate() and other popFunctions() which are
+        messages within existing window.
+    */
     // https://stackoverflow.com/a/27725432/6929343
     try {
         popup_window.focus()
