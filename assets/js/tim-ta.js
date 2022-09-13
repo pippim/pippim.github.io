@@ -445,7 +445,7 @@ function winMoveGeometry(winName, setX, setY, setW, setH) {
 
     */
     console.log("winMoveGeometry() setX:", setX, "setY:", setY,
-                "setW:", setW, "setH", setH")
+                "setW:", setW, "setH", setH)
 
     // Move and resize window
     winName.moveTo(setX, setY)
