@@ -400,10 +400,9 @@ function winViewGeometry(winName) {
     else if(winName.screenTop)
         winY=winName.screenTop
 
-    winW = (winName.innerWidth > 0) ?
-        winName.innerWidth : winName.screen.width
-    winH = (winName.innerHeight > 0) ?
-        winName.innerHeight : winName.screen.height
+    // Tried two lines but line break error message
+    winW = (winName.innerWidth > 0) ? winName.innerWidth : winName.screen.width
+    winH = (winName.innerHeight > 0) ? winName.innerHeight : winName.screen.height
 
     console.log("winViewGeometry() winX:", winX, "winY:", winY,
                 "winW:", winW, "winH:", winH)
@@ -424,33 +423,6 @@ function readPopupProject11(name, winName) {
     //if (ttaProject11.use_popup_last_location == "false") return
 
     /*  WINDOW DRIFTING
-winMoveGeometry(winName, setX, setY, setW, setH):
-Window about:blank
- 2600 272 790 269 tim-ta.js:772:13
-winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400 tim-ta.js:732:13
-Move/Size to winX: 2600 winY: 272 winW: 790 winH: 269 tim-ta.js:761:13
-Changes  to  chgX: NaN chgY: NaN chgW: 190 chgH: -131 tim-ta.js:763:17
-winViewGeometry() winX: 3115 winY: 171 winW: 848 winH: 476 2 tim-ta.js:732:13
-winMoveGeometry(winName, setX, setY, setW, setH):
-Window about:blank
- 3115 171 848 476 tim-ta.js:772:13
-winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400 tim-ta.js:732:13
-Move/Size to winX: 3115 winY: 171 winW: 848 winH: 476 tim-ta.js:761:13
-Changes  to  chgX: NaN chgY: NaN chgW: 248 chgH: 76 tim-ta.js:763:17
-winViewGeometry() winX: 2600 winY: 171 winW: 848 winH: 439 2 tim-ta.js:732:13
-winMoveGeometry(winName, setX, setY, setW, setH):
-Window about:blank
- 2600 171 848 439 tim-ta.js:772:13
-winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400 tim-ta.js:732:13
-Move/Size to winX: 2600 winY: 171 winW: 848 winH: 439 tim-ta.js:761:13
-Changes  to  chgX: NaN chgY: NaN chgW: 248 chgH: 39 tim-ta.js:763:17
-winViewGeometry() winX: 2600 winY: 171 winW: 848 winH: 403 2 tim-ta.js:732:13
-winMoveGeometry(winName, setX, setY, setW, setH):
-Window about:blank
- 2600 171 848 403 tim-ta.js:772:13
-winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400 tim-ta.js:732:13
-Move/Size to winX: 2600 winY: 171 winW: 848 winH: 403 tim-ta.js:761:13
-Changes  to  chgX: NaN chgY: NaN chgW: 248 chgH: 3
     */
     var winX, winY, winW, winH  // Save popup window position and size
     winX = parseInt(ttaProject11.popup_position_x)
@@ -472,7 +444,7 @@ function winMoveGeometry(winName, setX, setY, setW, setH) {
         Return X, Y, width and height adjustments made.
 
     */
-    console.log("winMoveGeometry()  setX:", setX, "setY:", setY,
+    console.log("winMoveGeometry() setX:", setX, "setY:", setY,
                 "setW:", setW, "setH", setH")
 
     // Move and resize window
