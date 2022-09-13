@@ -445,7 +445,7 @@ Changes  to  chgX: NaN chgY: NaN chgW: -63 chgH: 145
 
 }
 
-async function winMoveGeometry(winName, setX, setY, setW, setH) {
+function winMoveGeometry(winName, setX, setY, setW, setH) {
     /*  Move window and set geometry.
         Return X, Y, width and height adjustments made.
 
