@@ -475,6 +475,10 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     const chgW = setW - newW
     const chgH = setH - newH
 
+    /* Fudge - Add chgH to setH and call again */
+    var overrideH = setH + chgH * -1
+    winName.resizeTo(setW, overrideH)
+
     return [chgX, chgY, chgW, chgH]
 }
 
