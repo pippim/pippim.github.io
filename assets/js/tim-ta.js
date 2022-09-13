@@ -445,7 +445,7 @@ Changes  to  chgX: NaN chgY: NaN chgW: -63 chgH: 145
 
 }
 
-function winMoveGeometry(winName, setX, setY, setW, setH) {
+async function winMoveGeometry(winName, setX, setY, setW, setH) {
     /*  Move window and set geometry.
         Return X, Y, width and height adjustments made.
 
@@ -454,8 +454,8 @@ function winMoveGeometry(winName, setX, setY, setW, setH) {
                 "setW:", setW, "setH", setH)
 
     // Move and resize window
-    winName.moveTo(setX, setY)
-    winName.resizeTo(setW, setH)
+    await winName.moveTo(setX, setY)
+    await winName.resizeTo(setW, setH)
     /*  WINDOW DRIFTING
 SAVE over top of Nautilus main pane:
     winViewGeometry() winX: 3293 winY: 199 winW: 669 winH: 473
@@ -468,7 +468,7 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     */
 
     console.log("Calling from winMoveGeometry, winViewGeometry(winName)", winName)
-    await sleep(250)  // newX & newY undefined so wait 250 ms
+    // await sleep(250)  // newX & newY undefined so wait 250 ms
     const [newX, newY, newW, newH] = winViewGeometry(winName)
     const chgX = setX - newX
     const chgY = setY - newY
