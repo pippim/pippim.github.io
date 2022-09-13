@@ -389,25 +389,27 @@ function savePopupProject11(name, winName) {
 function winViewGeometry(winName) {
     /*  Get passed window's geometry. Return X, Y, width and height.
     */
-    var winX, winY, winW, winH  // Save popup window position and size
+    var getX, getY, getW, getH  // Save popup window position and size
     if(winName.screenX)
-        winX=winName.screenX
+        getX=winName.screenX
     else if(winName.screenLeft)
-        winX=winName.screenLeft
+        getX=winName.screenLeft
 
     if(winName.screenY)
-        winY=winName.screenY
+        getY=winName.screenY
     else if(winName.screenTop)
-        winY=winName.screenTop
+        getY=winName.screenTop
 
-    // Tried two lines but line break error message
-    winW = (winName.innerWidth > 0) ? winName.innerWidth : winName.screen.width
-    winH = (winName.innerHeight > 0) ? winName.innerHeight : winName.screen.height
+    // Mobile phones have no .innerWidth value
+    getW = (winName.innerWidth > 0) ?
+        winName.innerWidth : winName.screen.width
+    getH = (winName.innerHeight > 0) ?
+        winName.innerHeight : winName.screen.height
 
-    console.log("winViewGeometry() winX:", winX, "winY:", winY,
-                "winW:", winW, "winH:", winH)
+    console.log("winViewGeometry() getX:", getX, "getY:", getY,
+                "getW:", getW, "getH:", getH)
 
-    return [winX, winY, winW, winH]
+    return [getX, getY, getW, getH]
 }
 
 function readPopupProject11(name, winName) {
@@ -423,6 +425,10 @@ function readPopupProject11(name, winName) {
     //if (ttaProject11.use_popup_last_location == "false") return
 
     /*  WINDOW DRIFTING
+winMoveGeometry() setX: 2600 setY: 24 setW: 537 setH 545
+winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400
+Move/Size to winX: 2600 winY: 24 winW: 537 winH: 545
+Changes  to  chgX: NaN chgY: NaN chgW: -63 chgH: 145
     */
     var winX, winY, winW, winH  // Save popup window position and size
     winX = parseInt(ttaProject11.popup_position_x)
@@ -450,7 +456,15 @@ function winMoveGeometry(winName, setX, setY, setW, setH) {
     // Move and resize window
     winName.moveTo(setX, setY)
     winName.resizeTo(setW, setH)
+    /*  WINDOW DRIFTING
+winViewGeometry() winX: 3186 winY: 203 winW: 778 winH: 509 2
+winMoveGeometry() setX: 3186 setY: 203 setW: 778 setH 509
+winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400
+Move/Size to winX: 3186 winY: 203 winW: 778 winH: 509
+Changes  to  chgX: NaN chgY: NaN chgW: 178 chgH: 109
+    */
 
+    console.log("Calling from winMoveGeometry, winViewGeometry(winName)", winName)
     const [newX, newY, newW, newH] = winViewGeometry(winName)
     const chgX = setX - newX
     const chgY = setY - newY
