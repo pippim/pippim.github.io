@@ -412,7 +412,7 @@ function winViewGeometry(winName) {
     return [getX, getY, getW, getH]
 }
 
-function readPopupProject11(name, winName) {
+async function readPopupProject11(name, winName) {
     /*  Reread configuration in case another app changed.
         Get popup window coordinates from last move/resizing.
     */
@@ -437,7 +437,7 @@ Changes  to  chgX: NaN chgY: NaN chgW: -63 chgH: 145
     winH = parseInt(ttaProject11.popup_size_h)
 
     const [chgX, chgY, chgW, chgH] =
-        winMoveGeometry(winName, winX, winY, winW, winH)
+        await winMoveGeometry(winName, winX, winY, winW, winH)
 
     console.log("Move/Size to winX:", winX, "winY:", winY, "winW:", winW, "winH:", winH)
     if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
