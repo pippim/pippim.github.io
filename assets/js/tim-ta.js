@@ -412,7 +412,7 @@ function winViewGeometry(winName) {
     return [getX, getY, getW, getH]
 }
 
-async function readPopupProject11(name, winName) {
+function readPopupProject11(name, winName) {
     /*  Reread configuration in case another app changed.
         Get popup window coordinates from last move/resizing.
     */
@@ -437,7 +437,7 @@ Changes  to  chgX: NaN chgY: NaN chgW: -63 chgH: 145
     winH = parseInt(ttaProject11.popup_size_h)
 
     const [chgX, chgY, chgW, chgH] =
-        await winMoveGeometry(winName, winX, winY, winW, winH)
+        winMoveGeometry(winName, winX, winY, winW, winH)
 
     console.log("Move/Size to winX:", winX, "winY:", winY, "winW:", winW, "winH:", winH)
     if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
@@ -445,7 +445,7 @@ Changes  to  chgX: NaN chgY: NaN chgW: -63 chgH: 145
 
 }
 
-async function winMoveGeometry(winName, setX, setY, setW, setH) {
+function winMoveGeometry(winName, setX, setY, setW, setH) {
     /*  Move window and set geometry.
         Return X, Y, width and height adjustments made.
 
@@ -454,8 +454,8 @@ async function winMoveGeometry(winName, setX, setY, setW, setH) {
                 "setW:", setW, "setH", setH)
 
     // Move and resize window
-    await winName.moveTo(setX, setY)
-    await winName.resizeTo(setW, setH)
+    winName.moveTo(setX, setY)
+    winName.resizeTo(setW, setH)
     /*  WINDOW DRIFTING
 SAVE over top of Nautilus main pane:
     winViewGeometry() winX: 3293 winY: 199 winW: 669 winH: 473
