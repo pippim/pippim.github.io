@@ -478,7 +478,7 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     //moveTimeout = setTimeout(let [newX, newY, newW, newH] =
     //                         winViewGeometry(winName), 100)
     moveTimeout = setTimeout(
-        setViewChanges(winName, setX, setY, setW, setH), 100)
+        setViewChanges(winName, setX, setY, setW, setH), 200)
     return [0, 0, 0, 0]  // Fudge it
     /*
     console.log("After  set Timeout:", Date.now())
@@ -499,8 +499,11 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
 
 function setViewChanges(winName, setX, setY, setW, setH) {
     /* Awkward
-Before set Timeout: 1663117167058 tim-ta.js:801:13
-After  set Timeout: 1663117167058
+Before set Timeout: 1663118959786 tim-ta.js:802:13
+winViewGeometry() getX: undefined getY: undefined getW: 600 getH: 400 tim-ta.js:734:13
+After  set Timeout: 1663118959787 tim-ta.js:831:13
+Changes  to  chgX: NaN chgY: NaN chgW: -82 chgH: -37 tim-ta.js:843:17
+Move/Size to winX: 1971 winY: 217 winW: 518 winH: 363
     */
     const [newX, newY, newW, newH] =  winViewGeometry(winName)
     console.log("After  set Timeout:", Date.now())
