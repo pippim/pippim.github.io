@@ -476,7 +476,32 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     console.log("Before set Timeout:", Date.now())
     //moveTimeout = setTimeout(let [newX, newY, newW, newH] =
     //                         winViewGeometry(winName), 100)
-    moveTimeout = setTimeout(setViewChanges(winName), 100)
+    moveTimeout = setTimeout(
+        setViewChanges(winName, setX, setY, setW, setH), 100)
+    return [0, 0, 0, 0]  // Fudge it
+    /*
+    console.log("After  set Timeout:", Date.now())
+
+    // const [newX, newY, newW, newH] = winViewGeometry(winName)
+    const chgX = setX - newX
+    const chgY = setY - newY
+    const chgW = setW - newW
+    const chgH = setH - newH
+
+    // Fudge - Add chgH to setH and call again
+    var overrideH = setH + chgH * -1
+    winName.resizeTo(setW, overrideH)
+
+    return [chgX, chgY, chgW, chgH]
+    */
+}
+
+function setViewChanges(winName, setX, setY, setW, setH) {
+    /* Awkward
+Before set Timeout: 1663117167058 tim-ta.js:801:13
+After  set Timeout: 1663117167058
+    */
+    const [newX, newY, newW, newH] =  winViewGeometry(winName)
     console.log("After  set Timeout:", Date.now())
 
     // const [newX, newY, newW, newH] = winViewGeometry(winName)
@@ -488,12 +513,9 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     /* Fudge - Add chgH to setH and call again */
     var overrideH = setH + chgH * -1
     winName.resizeTo(setW, overrideH)
-
-    return [chgX, chgY, chgW, chgH]
-}
-
-function setViewChanges(winName) {
-    /* Awkward */
+    if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
+        console.log("Changes  to  chgX:", chgX, "chgY:", chgY,
+                    "chgW:", chgW, "chgH:", chgH)
 }
 
 function convertVersion11() {
