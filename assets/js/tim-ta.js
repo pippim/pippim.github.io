@@ -474,8 +474,9 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     clearTimeout(moveTimeout);  // Reset window resize delay to zero
     // After 100 ms get screen size, otherwise X & Y are undefined
     console.log("Before set Timeout:", Date.now())
-    moveTimeout = setTimeout(let [newX, newY, newW, newH] =
-                             winViewGeometry(winName), 100)
+    //moveTimeout = setTimeout(let [newX, newY, newW, newH] =
+    //                         winViewGeometry(winName), 100)
+    moveTimeout = setTimeout(setViewChanges(winName), 100)
     console.log("After  set Timeout:", Date.now())
 
     // const [newX, newY, newW, newH] = winViewGeometry(winName)
@@ -489,6 +490,10 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     winName.resizeTo(setW, overrideH)
 
     return [chgX, chgY, chgW, chgH]
+}
+
+function setViewChanges(winName) {
+    /* Awkward */
 }
 
 function convertVersion11() {
