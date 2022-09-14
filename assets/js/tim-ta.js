@@ -478,7 +478,7 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     //moveTimeout = setTimeout(let [newX, newY, newW, newH] =
     //                         winViewGeometry(winName), 100)
     moveTimeout = setTimeout(
-        setViewChanges(winName, setX, setY, setW, setH), 300)
+        setViewChanges(winName, setX, setY, setW, setH), 3000)
     return [0, 0, 0, 0]  // Fudge it
     /*
     console.log("After  set Timeout:", Date.now())
@@ -511,6 +511,18 @@ winViewGeometry() getX: undefined getY: undefined getW: 600 getH: 400 tim-ta.js:
 After  set Timeout: 1663121926044
 Changes  to  chgX: NaN chgY: NaN chgW: -82 chgH: -37 tim-ta.js:846:17
 Move/Size to winX: 1971 winY: 217 winW: 518 winH: 363
+    USING 300ms
+winMoveGeometry() setX: 1971 setY: 217 setW: 518 setH 363 tim-ta.js:780:13
+Calling from winMoveGeometry, winViewGeometry(winName)
+Window about:blank
+tim-ta.js:797:13
+Before set Timeout: 1663122888903 tim-ta.js:802:13
+winViewGeometry() getX: undefined getY: undefined getW: 600 getH: 400 tim-ta.js:734:13
+After  set Timeout: 1663122888904 tim-ta.js:841:13
+Changes  to  chgX: NaN chgY: NaN chgW: -82 chgH: -37 tim-ta.js:853:17
+Move/Size to winX: 1971 winY: 217 winW: 518 winH: 363
+    USING 3000ms (3 seconds)
+
     */
     const [newX, newY, newW, newH] =  winViewGeometry(winName)
     console.log("After  set Timeout:", Date.now())
