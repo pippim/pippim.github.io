@@ -10,9 +10,9 @@ created_date: 2018-05-12 00:11:57
 edit_date:    2020-06-12 14:37:07
 votes:        "13 "
 favorites:    
-views:        "18,835 "
+views:        "18,883 "
 accepted:     Accepted
-uploaded:     2022-09-14 04:35:44
+uploaded:     2022-09-14 04:51:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-What-is-_run_user_1000_gvfs_.md
 toc:          false
 navigation:   false

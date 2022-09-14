@@ -7,23 +7,23 @@ stack_url:    https://askubuntu.com/q/1299008
 type:         Answer
 tags:         scripts wayland xdotool
 created_date: 2020-12-10 12:00:19
-edit_date:    
-votes:        "7 "
+edit_date:    2022-09-07 19:05:23
+votes:        "8 "
 favorites:    
-views:        "7,880 "
+views:        "7,945 "
 accepted:     
-uploaded:     2022-09-14 04:35:44
+uploaded:     2022-09-14 04:51:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-10-Equivalent-to-xdotool-for-Wayland.md
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-There is the [ydotool][1] package for wayland:
+There is the [ydotool][1] package for Wayland:
 
 ## Package ydotool
 
-Generic command-line automation tool (no X!)
+Generic Linux command-line automation tool (no X!)
 
 [https://github.com/ReimuNotMoe/ydotool](https://github.com/ReimuNotMoe/ydotool)
 
@@ -32,20 +32,15 @@ however, it generally requires root permission (to open /dev/uinput)
 
 Currently implemented command(s):
 
-- type - Type a string
-- key - Press keys
-- mousemove - Move mouse pointer to absolute position
-- mousemove_relative - Move mouse pointer to relative position
-- mouseup - Generate mouse up event
-- mousedown - Generate mouse down event
-- click - Click on mouse buttons
-- recorder - Record/replay input events
+- `type` - Type a string
+- `key` - Press keys
+- `mousemove` - Move mouse pointer to absolute position
+- `click` - Click on mouse buttons
 
-N.B. optionally, you can start the ydotoold daemon with:
+N.B. optionally, you can enable and start the ydotoold daemon with:
 
-- systemctl enable ydotool
-- systemctl start ydotool
+1. `systemctl enable ydotool`
+1. `systemctl start ydotool`
 
-Version: 0.1.9
 
   [1]: https://www.mankier.com/package/ydotool

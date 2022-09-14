@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line performance disk-usage systemd systemd-journald
 created_date: 2018-03-08 01:13:36
 edit_date:    2022-06-13 06:36:01
-votes:        "101 "
+votes:        "102 "
 favorites:    
-views:        "55,539 "
+views:        "55,900 "
 accepted:     Accepted
-uploaded:     2022-09-14 04:35:44
+uploaded:     2022-09-14 04:51:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Systemd-logs-__journalctl__-are-too-large-and-slow.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2016-08-22 04:21:51
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,719 "
+views:        "1,720 "
 accepted:     Accepted
-uploaded:     2022-09-14 04:35:44
+uploaded:     2022-09-14 04:51:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-22-best-way-to-dual-boot-Ubuntu-with-windows-10_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-08-20 23:06:33
 edit_date:    
 votes:        "9 "
 favorites:    
-views:        "244,704 "
+views:        "245,630 "
 accepted:     
-uploaded:     2022-09-14 04:35:44
+uploaded:     2022-09-14 04:51:06
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-20-What-is-the-correct-way-to-view-your-CPU-speed-on-Linux_.md
 toc:          false
 navigation:   false
