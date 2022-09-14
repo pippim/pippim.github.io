@@ -477,8 +477,8 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     console.log("Before set Timeout:", Date.now())
     //moveTimeout = setTimeout(let [newX, newY, newW, newH] =
     //                         winViewGeometry(winName), 100)
-    moveTimeout = setTimeout(
-        setViewChanges(winName, setX, setY, setW, setH), 3000)
+    // moveTimeout = setTimeout(
+    //    setViewChanges(winName, setX, setY, setW, setH), 3000)
     sleepAndReportCoordinates()
     return [0, 0, 0, 0]  // Fudge it
     /*
@@ -500,6 +500,9 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
 
 async function sleepAndReportCoordinates() {
     console.log("sleepAndReportCoordinates() {")
+    console.log("Before sleep:", Date.now())
+    await sleep(250)  // newX & newY undefined so wait 250 ms
+    console.log("After  sleep:", Date.now())
 }
 
 function setViewChanges(winName, setX, setY, setW, setH) {
