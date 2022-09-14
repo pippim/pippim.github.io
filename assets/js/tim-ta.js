@@ -445,7 +445,7 @@ Changes  to  chgX: NaN chgY: NaN chgW: -63 chgH: 145
 
 }
 
-var moveTimeout
+// var moveTimeout
 
 function winMoveGeometry(winName, setX, setY, setW, setH) {
     /*  Move window and set geometry.
@@ -469,8 +469,7 @@ Move/Size to winX: 3293 winY: 199 winW: 669 winH: 473 tim-ta.js:767:13
 Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     */
 
-    console.log("Calling from winMoveGeometry, winViewGeometry(winName)", winName)
-    // await sleep(250)  // newX & newY undefined so wait 250 ms
+    //console.log("Calling from winMoveGeometry, winViewGeometry(winName)", winName)
 
     //clearTimeout(moveTimeout);  // Reset window resize delay to zero
     // After 100 ms get screen size, otherwise X & Y are undefined
@@ -499,10 +498,21 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
 }
 
 async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
-    console.log("sleepAndReportCoordinates() {")
+    /*
+        Window has just been moved and resized (together = geometry).
+        A small delay is required before checking new window geometry.
+    */
     let start = Date.now()
-    console.log("Before sleep:", start)
-    await sleep(250)  // newX & newY undefined so wait 250 ms
+    console.log("sleepAndReportCoordinates() Before sleep:", start)
+    for (let i = 0; i < 10; i++) {
+        let sleepTime = 10 * i
+        await sleep(sleepTime)  // newX & newY undefined so wait
+        const [newX, newY, newW, newH] =  winViewGeometry(winName)
+        console.log ("newX:", newX, sleepTime)
+    }
+    let end = Date.now()
+    console.log("sleepAndReportCoordinates() After  sleep:", end)
+    console.log("Elapsed milliseconds:", end - start)
 
     const [newX, newY, newW, newH] =  winViewGeometry(winName)
     const chgX = setX - newX
@@ -516,8 +526,6 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
         console.log("Changes  to  chgX:", chgX, "chgY:", chgY,
                     "chgW:", chgW, "chgH:", chgH)
-    let end = Date.now()
-    console.log("After  sleep:", end)
     /*
 sleepAndReportCoordinates() { tim-ta.js:827:13
 Before sleep: 1663195390683 tim-ta.js:828:13
