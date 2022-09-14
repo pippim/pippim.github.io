@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,151 "
 accepted:     Accepted
-uploaded:     2022-09-05 06:35:09
+uploaded:     2022-09-14 04:35:44
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-23-Is-there-a-way-to-show-external-IP-in-top-bar-using-GNOME-3.28.2-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false

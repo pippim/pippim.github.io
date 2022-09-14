@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "6,216 "
 accepted:     
-uploaded:     2022-09-05 06:35:09
+uploaded:     2022-09-14 04:35:44
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-13-How-do-I-force-_sudo_-to-ask-for-a-password-each-time-when-a-specific-command-is-used_.md
 toc:          false
 navigation:   false

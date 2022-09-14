@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "41,277 "
 accepted:     
-uploaded:     2022-09-05 06:35:09
+uploaded:     2022-09-14 04:35:44
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-26-Desktop-Facebook-application-for-Ubuntu.md
 toc:          false
 navigation:   false

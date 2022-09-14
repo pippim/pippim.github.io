@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "4,297 "
 accepted:     Accepted
-uploaded:     2022-09-05 06:35:09
+uploaded:     2022-09-14 04:35:44
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-22-Windows-Subsystem-for-Linux-display-Linux-distribution_.md
 toc:          false
 navigation:   false

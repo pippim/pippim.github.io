@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "57,561 "
 accepted:     
-uploaded:     2022-09-05 06:35:09
+uploaded:     2022-09-14 04:35:44
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-26-writing-a-text-file-in-the-terminal-with-touch.md
 toc:          false
 navigation:   false

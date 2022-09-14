@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "65 "
 accepted:     Accepted
-uploaded:     2022-09-05 06:35:09
+uploaded:     2022-09-14 04:35:44
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-29-Mounting-multiple-external-HDD-storages-as-_mnt_sdx-might-cause-I_O-error-on-wake-from-suspend_.md
 toc:          false
 navigation:   false

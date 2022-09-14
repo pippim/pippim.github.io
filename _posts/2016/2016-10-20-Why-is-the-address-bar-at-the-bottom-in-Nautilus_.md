@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "87 "
 accepted:     
-uploaded:     2022-09-05 06:35:09
+uploaded:     2022-09-14 04:35:44
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-20-Why-is-the-address-bar-at-the-bottom-in-Nautilus_.md
 toc:          false
 navigation:   false

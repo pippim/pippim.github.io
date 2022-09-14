@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "1,854 "
 accepted:     Accepted
-uploaded:     2022-09-05 06:35:09
+uploaded:     2022-09-14 04:35:44
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-15-Cannot-update-NVIDIA-driver-to-version-r387.md
 toc:          false
 navigation:   false

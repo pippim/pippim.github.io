@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "1,161 "
 accepted:     
-uploaded:     2022-09-05 06:35:09
+uploaded:     2022-09-14 04:35:44
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-12-How-To-View-Process-Instead-Of-Splash-Screen-During-Boot-By-Pressing-A-Key_.md
 toc:          false
 navigation:   false
