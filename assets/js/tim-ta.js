@@ -472,14 +472,14 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     console.log("Calling from winMoveGeometry, winViewGeometry(winName)", winName)
     // await sleep(250)  // newX & newY undefined so wait 250 ms
 
-    clearTimeout(moveTimeout);  // Reset window resize delay to zero
+    //clearTimeout(moveTimeout);  // Reset window resize delay to zero
     // After 100 ms get screen size, otherwise X & Y are undefined
-    console.log("Before set Timeout:", Date.now())
+    //console.log("Before set Timeout:", Date.now())
     //moveTimeout = setTimeout(let [newX, newY, newW, newH] =
     //                         winViewGeometry(winName), 100)
     // moveTimeout = setTimeout(
     //    setViewChanges(winName, setX, setY, setW, setH), 3000)
-    sleepAndReportCoordinates()
+    sleepAndReportCoordinates(winName, setX, setY, setW, setH)
     return [0, 0, 0, 0]  // Fudge it
     /*
     console.log("After  set Timeout:", Date.now())
@@ -498,11 +498,32 @@ Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
     */
 }
 
-async function sleepAndReportCoordinates() {
+async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     console.log("sleepAndReportCoordinates() {")
-    console.log("Before sleep:", Date.now())
+    let start = Date.now()
+    console.log("Before sleep:", start)
     await sleep(250)  // newX & newY undefined so wait 250 ms
-    console.log("After  sleep:", Date.now())
+
+    const [newX, newY, newW, newH] =  winViewGeometry(winName)
+    const chgX = setX - newX
+    const chgY = setY - newY
+    const chgW = setW - newW
+    const chgH = setH - newH
+
+    /* Fudge - Add chgH to setH and call again */
+    var overrideH = setH + chgH * -1
+    winName.resizeTo(setW, overrideH)
+    if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
+        console.log("Changes  to  chgX:", chgX, "chgY:", chgY,
+                    "chgW:", chgW, "chgH:", chgH)
+    let end = Date.now()
+    console.log("After  sleep:", end)
+    /*
+sleepAndReportCoordinates() { tim-ta.js:827:13
+Before sleep: 1663195390683 tim-ta.js:828:13
+Move/Size to winX: 2600 winY: 34 winW: 715 winH: 363 tim-ta.js:767:13
+After  sleep: 1663195390933
+    */
 }
 
 function setViewChanges(winName, setX, setY, setW, setH) {
