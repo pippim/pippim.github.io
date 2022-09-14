@@ -508,7 +508,9 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         let sleepTime = 10 * i
         await sleep(sleepTime)  // newX & newY undefined so wait
         const [newX, newY, newW, newH] =  winViewGeometry(winName)
+        if (typeof newX == 'undefined') continue
         console.log ("newX:", newX, sleepTime)
+        break
     }
     let end = Date.now()
     console.log("sleepAndReportCoordinates() After  sleep:", end)
