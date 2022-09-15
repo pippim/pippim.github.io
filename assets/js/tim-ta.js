@@ -406,8 +406,8 @@ function winViewGeometry(winName) {
     getH = (winName.innerHeight > 0) ?
         winName.innerHeight : winName.screen.height
 
-    console.log("winViewGeometry() getX:", getX, "getY:", getY,
-                "getW:", getW, "getH:", getH)
+    //console.log("winViewGeometry() getX:", getX, "getY:", getY,
+    //            "getW:", getW, "getH:", getH)
 
     return [getX, getY, getW, getH]
 }
@@ -440,8 +440,8 @@ Changes  to  chgX: NaN chgY: NaN chgW: -63 chgH: 145
         winMoveGeometry(winName, winX, winY, winW, winH)
 
     console.log("Move/Size to winX:", winX, "winY:", winY, "winW:", winW, "winH:", winH)
-    if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
-        console.log("Changes  to  chgX:", chgX, "chgY:", chgY, "chgW:", chgW, "chgH:", chgH)
+    //if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
+    //    console.log("Changes  to  chgX:", chgX, "chgY:", chgY, "chgW:", chgW, "chgH:", chgH)
 
 }
 
@@ -475,7 +475,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     for (let i = 0; i < 10; i++) {
         let sleepTime = 10 * i
         await sleep(sleepTime)  // newX & newY undefined so wait
-        let [newX, newY, newW, newH] =  winViewGeometry(winName)
+        var [newX, newY, newW, newH] =  winViewGeometry(winName)
         if (typeof newX == 'undefined') continue
         console.log("Double-check newX", newX, "newY:", newY,
                     "newW:", newW, "newH:", newH)
@@ -489,7 +489,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     console.log("Elapsed milliseconds:", end - start)
 
     // Not sure why have to invoke function again because newX undefined
-    let [newX, newY, newW, newH] =  winViewGeometry(winName)
+    // let [newX, newY, newW, newH] =  winViewGeometry(winName)
     const chgX = setX - newX
     const chgY = setY - newY
     const chgW = setW - newW
