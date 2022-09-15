@@ -472,8 +472,8 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
                 "setW:", setW, "setH:", setH)
     let start = Date.now()
     // console.log("sleepAndReportCoordinates() Before sleep:", start)
-    for (let i = 0; i < 40; i++) {
-        let sleepTime = 25 * i
+    for (let i = 1; i < 50; i++) {
+        let sleepTime = 2 * i
         await sleep(sleepTime)  // newX & newY undefined so wait
         var [newX, newY, newW, newH] =  winViewGeometry(winName)
         if (typeof newX == 'undefined') continue
@@ -484,7 +484,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
             setW != newW && setH != newH) continue
         */
         if (setW != newW) continue  // Keep looping while Width is different
-        console.log ("newX:", newX, "i loop:", i)
+        console.log ("newW:", newW, "Loop for 1s based i:", i)
         break
     }
     let end = Date.now()
