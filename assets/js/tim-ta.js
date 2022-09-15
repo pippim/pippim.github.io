@@ -503,7 +503,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         A small delay is required before checking new window geometry.
     */
     let start = Date.now()
-    console.log("sleepAndReportCoordinates() Before sleep:", start)
+    // console.log("sleepAndReportCoordinates() Before sleep:", start)
     for (let i = 0; i < 10; i++) {
         let sleepTime = 10 * i
         await sleep(sleepTime)  // newX & newY undefined so wait
@@ -513,26 +513,28 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         break
     }
     let end = Date.now()
-    console.log("sleepAndReportCoordinates() After  sleep:", end)
+    // console.log("sleepAndReportCoordinates() After  sleep:", end)
     console.log("Elapsed milliseconds:", end - start)
 
-    const [newX, newY, newW, newH] =  winViewGeometry(winName)
+    // const [newX, newY, newW, newH] =  winViewGeometry(winName)
     const chgX = setX - newX
     const chgY = setY - newY
     const chgW = setW - newW
     const chgH = setH - newH
 
     /* Fudge - Add chgH to setH and call again */
-    var overrideH = setH + chgH * -1
+    var overrideW = setW - chgW
+    var overrideH = setH - chgH
     winName.resizeTo(setW, overrideH)
-    if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
-        console.log("Changes  to  chgX:", chgX, "chgY:", chgY,
+    if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0) {
+        console.log("Last-save  setX:", setX, "setY:", setY,
+                    "setW:", setW, "setH:", setH)
+        console.log("Post-move  newX:", newX, "newY:", newY,
+                    "newW:", newW, "newH:", newH)
+        console.log("Difference chgX:", chgX, "chgY:", chgY,
                     "chgW:", chgW, "chgH:", chgH)
+    }
     /*
-sleepAndReportCoordinates() { tim-ta.js:827:13
-Before sleep: 1663195390683 tim-ta.js:828:13
-Move/Size to winX: 2600 winY: 34 winW: 715 winH: 363 tim-ta.js:767:13
-After  sleep: 1663195390933
     */
 }
 
