@@ -477,7 +477,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         if (typeof newX == 'undefined') continue
         console.log("winViewGeometry newX:", newX, "newY:", newY,
                     "newW:", newW, "newH:", newH)
-        if (setx != newX && setY != newY &&
+        if (setX != newX && setY != newY &&
             setW != newW && setH != newH) continue
         console.log ("newX:", newX, "i loop:", i)
         break
