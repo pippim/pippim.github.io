@@ -518,7 +518,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     console.log("Elapsed milliseconds:", end - start)
 
     // Not sure why have to invoke function again because newX undefined
-    // const [newX, newY, newW, newH] =  winViewGeometry(winName)
+    let [newX, newY, newW, newH] =  winViewGeometry(winName)
     const chgX = setX - newX
     const chgY = setY - newY
     const chgW = setW - newW
