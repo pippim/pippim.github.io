@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "28,764 "
 accepted:     
-uploaded:     2022-09-14 04:51:06
+uploaded:     2022-09-15 05:40:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-05-What-is-Ubuntu_s-status-on-the-Meltdown-and-Spectre-vulnerabilities_.md
 toc:          true
 navigation:   true

@@ -12,7 +12,7 @@ votes:        "11 "
 favorites:    
 views:        "10,610 "
 accepted:     
-uploaded:     2022-09-14 04:51:06
+uploaded:     2022-09-15 05:40:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-19-Failure-to-download-extra-data-files_-flashplugin-installer-_not-a-duplicate-question_.md
 toc:          false
 navigation:   false

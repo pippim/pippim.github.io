@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "1,367 "
 accepted:     
-uploaded:     2022-09-14 04:51:06
+uploaded:     2022-09-15 05:40:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-17-Dollar-Value-To-Word-In-LibreOffice-Calc.md
 toc:          false
 navigation:   false

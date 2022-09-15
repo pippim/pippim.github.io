@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "4,362 "
 accepted:     Accepted
-uploaded:     2022-09-14 04:51:06
+uploaded:     2022-09-15 05:40:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Output-redirection-to-a-file_-used-inside-script_-is-not-working-when-executed-from-crontab.md
 toc:          false
 navigation:   false

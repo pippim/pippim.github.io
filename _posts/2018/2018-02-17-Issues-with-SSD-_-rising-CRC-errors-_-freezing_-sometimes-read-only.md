@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,744 "
 accepted:     
-uploaded:     2022-09-14 04:51:06
+uploaded:     2022-09-15 05:40:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-17-Issues-with-SSD-_-rising-CRC-errors-_-freezing_-sometimes-read-only.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "19,817 "
 accepted:     
-uploaded:     2022-09-14 04:51:06
+uploaded:     2022-09-15 05:40:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-26-How-is-being-able-to-break-into-any-Linux-machine-through-grub2-secure_.md
 toc:          false
 navigation:   false

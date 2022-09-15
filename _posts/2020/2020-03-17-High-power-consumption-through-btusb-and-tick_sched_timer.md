@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "7,381 "
 accepted:     
-uploaded:     2022-09-14 04:51:06
+uploaded:     2022-09-15 05:40:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-03-17-High-power-consumption-through-btusb-and-tick_sched_timer.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "21,886 "
 accepted:     
-uploaded:     2022-09-14 04:51:06
+uploaded:     2022-09-15 05:40:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-18-Lock-screen-without-blank-in-18.04.md
 toc:          false
 navigation:   false

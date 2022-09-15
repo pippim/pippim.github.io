@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "2,297 "
 accepted:     Accepted
-uploaded:     2022-09-14 04:51:06
+uploaded:     2022-09-15 05:40:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-08-When-terminal-is-opened-can-I-get-current-calendar-and-time-displayed_.md
 toc:          false
 navigation:   true

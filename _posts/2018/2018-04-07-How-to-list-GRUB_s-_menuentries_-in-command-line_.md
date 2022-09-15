@@ -12,7 +12,7 @@ votes:        "17 "
 favorites:    
 views:        "101,626 "
 accepted:     
-uploaded:     2022-09-14 04:51:06
+uploaded:     2022-09-15 05:40:42
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-07-How-to-list-GRUB_s-_menuentries_-in-command-line_.md
 toc:          true
 navigation:   true
