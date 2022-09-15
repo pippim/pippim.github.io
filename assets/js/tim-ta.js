@@ -504,7 +504,6 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     */
     let start = Date.now()
     // console.log("sleepAndReportCoordinates() Before sleep:", start)
-    var newX, newY, newW, newH
     for (let i = 0; i < 10; i++) {
         let sleepTime = 5 * i
         await sleep(sleepTime)  // newX & newY undefined so wait
