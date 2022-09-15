@@ -458,43 +458,9 @@ function winMoveGeometry(winName, setX, setY, setW, setH) {
     // Move and resize window
     winName.moveTo(setX, setY)
     winName.resizeTo(setW, setH)
-    /*  WINDOW DRIFTING
-SAVE over top of Nautilus main pane:
-    winViewGeometry() winX: 3293 winY: 199 winW: 669 winH: 473
-RELOAD new version:
-winMoveGeometry() setX: 3293 setY: 199 setW: 669 setH 473
-Calling from winMoveGeometry, winViewGeometry(winName) Window about:blank
-winViewGeometry() getX: undefined getY: undefined getW: 600 getH: 400 tim-ta.js:734:13
-Move/Size to winX: 3293 winY: 199 winW: 669 winH: 473 tim-ta.js:767:13
-Changes  to  chgX: NaN chgY: NaN chgW: 69 chgH: 73
-    */
 
-    //console.log("Calling from winMoveGeometry, winViewGeometry(winName)", winName)
-
-    //clearTimeout(moveTimeout);  // Reset window resize delay to zero
-    // After 100 ms get screen size, otherwise X & Y are undefined
-    //console.log("Before set Timeout:", Date.now())
-    //moveTimeout = setTimeout(let [newX, newY, newW, newH] =
-    //                         winViewGeometry(winName), 100)
-    // moveTimeout = setTimeout(
-    //    setViewChanges(winName, setX, setY, setW, setH), 3000)
     sleepAndReportCoordinates(winName, setX, setY, setW, setH)
     return [0, 0, 0, 0]  // Fudge it
-    /*
-    console.log("After  set Timeout:", Date.now())
-
-    // const [newX, newY, newW, newH] = winViewGeometry(winName)
-    const chgX = setX - newX
-    const chgY = setY - newY
-    const chgW = setW - newW
-    const chgH = setH - newH
-
-    // Fudge - Add chgH to setH and call again
-    var overrideH = setH + chgH * -1
-    winName.resizeTo(setW, overrideH)
-
-    return [chgX, chgY, chgW, chgH]
-    */
 }
 
 async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
@@ -509,6 +475,10 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         await sleep(sleepTime)  // newX & newY undefined so wait
         let [newX, newY, newW, newH] =  winViewGeometry(winName)
         if (typeof newX == 'undefined') continue
+        console.log("winViewGeometry newX:", newX, "newY:", newY,
+                    "newW:", newW, "newH:", newH)
+        if (setx != newX && setY != newY &&
+            setW != newW && setH != newH) continue
         console.log ("newX:", newX, "i loop:", i)
         break
     }
@@ -537,41 +507,6 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     }
     /*
     */
-}
-
-function setViewChanges(winName, setX, setY, setW, setH) {
-    /* Awkward
-    USING 300ms
-winMoveGeometry() setX: 1971 setY: 217 setW: 518 setH 363
-Before set Timeout: 1663122888903
-winViewGeometry() getX: undefined getY: undefined getW: 600 getH: 400
-After  set Timeout: 1663122888904
-Changes  to  chgX: NaN chgY: NaN chgW: -82 chgH: -37
-Move/Size to winX: 1971 winY: 217 winW: 518 winH: 363
-    USING 3000ms (3 seconds)
-winMoveGeometry() setX: 1971 setY: 217 setW: 518 setH 363
-Before set Timeout: 1663123164044
-winViewGeometry() getX: undefined getY: undefined getW: 600 getH: 400
-After  set Timeout: 1663123164045
-Changes  to  chgX: NaN chgY: NaN chgW: -82 chgH: -37
-Move/Size to winX: 1971 winY: 217 winW: 518 winH: 363
-
-    */
-    const [newX, newY, newW, newH] =  winViewGeometry(winName)
-    console.log("After  set Timeout:", Date.now())
-
-    // const [newX, newY, newW, newH] = winViewGeometry(winName)
-    const chgX = setX - newX
-    const chgY = setY - newY
-    const chgW = setW - newW
-    const chgH = setH - newH
-
-    /* Fudge - Add chgH to setH and call again */
-    var overrideH = setH + chgH * -1
-    winName.resizeTo(setW, overrideH)
-    if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
-        console.log("Changes  to  chgX:", chgX, "chgY:", chgY,
-                    "chgW:", chgW, "chgH:", chgH)
 }
 
 function convertVersion11() {
