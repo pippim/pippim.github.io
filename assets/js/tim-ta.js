@@ -507,7 +507,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     for (let i = 0; i < 10; i++) {
         let sleepTime = 10 * i
         await sleep(sleepTime)  // newX & newY undefined so wait
-        const [newX, newY, newW, newH] =  winViewGeometry(winName)
+        let [newX, newY, newW, newH] =  winViewGeometry(winName)
         if (typeof newX == 'undefined') continue
         console.log ("newX:", newX, sleepTime)
         break
