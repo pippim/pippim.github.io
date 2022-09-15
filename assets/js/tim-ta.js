@@ -468,14 +468,16 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         Window has just been moved and resized (together = geometry).
         A small delay is required before checking new window geometry.
     */
+    console.log("Last-save  setX:", setX, "setY:", setY,
+                "setW:", setW, "setH:", setH)
     let start = Date.now()
     // console.log("sleepAndReportCoordinates() Before sleep:", start)
     for (let i = 0; i < 10; i++) {
-        let sleepTime = 5 * i
+        let sleepTime = 10 * i
         await sleep(sleepTime)  // newX & newY undefined so wait
         let [newX, newY, newW, newH] =  winViewGeometry(winName)
         if (typeof newX == 'undefined') continue
-        console.log("winViewGeometry newX:", newX, "newY:", newY,
+        console.log("Double-check newX", newX, "newY:", newY,
                     "newW:", newW, "newH:", newH)
         if (setX != newX && setY != newY &&
             setW != newW && setH != newH) continue
