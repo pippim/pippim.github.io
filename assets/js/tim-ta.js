@@ -473,7 +473,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     let start = Date.now()
     // console.log("sleepAndReportCoordinates() Before sleep:", start)
     for (let i = 0; i < 10; i++) {
-        let sleepTime = 10 * i
+        let sleepTime = 20 * i
         await sleep(sleepTime)  // newX & newY undefined so wait
         var [newX, newY, newW, newH] =  winViewGeometry(winName)
         if (typeof newX == 'undefined') continue
@@ -496,8 +496,8 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     const chgH = setH - newH
 
     /* Fudge - Add chgH to setH and call again */
-    var overrideW = setW - chgW
-    var overrideH = setH - chgH
+    var overrideW = setW + chgW
+    var overrideH = setH + chgH
     winName.resizeTo(setW, overrideH)
     if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0) {
         console.log("Last-save  setX:", setX, "setY:", setY,
