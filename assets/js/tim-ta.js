@@ -504,18 +504,20 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     */
     let start = Date.now()
     // console.log("sleepAndReportCoordinates() Before sleep:", start)
+    var newX, newY, newW, newH
     for (let i = 0; i < 10; i++) {
-        let sleepTime = 10 * i
+        let sleepTime = 5 * i
         await sleep(sleepTime)  // newX & newY undefined so wait
-        let [newX, newY, newW, newH] =  winViewGeometry(winName)
+        [newX, newY, newW, newH] =  winViewGeometry(winName)
         if (typeof newX == 'undefined') continue
-        console.log ("newX:", newX, sleepTime)
+        console.log ("newX:", newX, "i loop:", i)
         break
     }
     let end = Date.now()
     // console.log("sleepAndReportCoordinates() After  sleep:", end)
     console.log("Elapsed milliseconds:", end - start)
 
+    // Not sure why have to invoke function again because newX undefined
     // const [newX, newY, newW, newH] =  winViewGeometry(winName)
     const chgX = setX - newX
     const chgY = setY - newY
