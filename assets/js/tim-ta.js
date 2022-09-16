@@ -424,43 +424,31 @@ function readPopupProject11(name, winName) {
     /*  Cannot check field until stored in real configuration file. */
     //if (ttaProject11.use_popup_last_location == "false") return
 
-    /*  WINDOW DRIFTING
-winMoveGeometry() setX: 2600 setY: 24 setW: 537 setH 545
-winViewGeometry() winX: undefined winY: undefined winW: 600 winH: 400
-Move/Size to winX: 2600 winY: 24 winW: 537 winH: 545
-Changes  to  chgX: NaN chgY: NaN chgW: -63 chgH: 145
-    */
     var winX, winY, winW, winH  // Save popup window position and size
     winX = parseInt(ttaProject11.popup_position_x)
     winY = parseInt(ttaProject11.popup_position_y)
     winW = parseInt(ttaProject11.popup_size_w)
     winH = parseInt(ttaProject11.popup_size_h)
 
-    const [chgX, chgY, chgW, chgH] =
-        winMoveGeometry(winName, winX, winY, winW, winH)
+    winMoveGeometry(winName, winX, winY, winW, winH)
 
-    console.log("Move/Size to winX:", winX, "winY:", winY, "winW:", winW, "winH:", winH)
-    //if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0)
-    //    console.log("Changes  to  chgX:", chgX, "chgY:", chgY, "chgW:", chgW, "chgH:", chgH)
-
+    //console.log("Move/Size to winX:", winX, "winY:", winY,
+    //            "winW:", winW, "winH:", winH)
 }
 
-// var moveTimeout
-
 function winMoveGeometry(winName, setX, setY, setW, setH) {
-    /*  Move window and set geometry.
-        Return X, Y, width and height adjustments made.
-
+    /*  Set popup window geometry.
+        Returns immediately but calls sleeping function that
+        adjusts window height to match requested amount.
     */
-    console.log("winMoveGeometry() setX:", setX, "setY:", setY,
-                "setW:", setW, "setH", setH)
+    //console.log("winMoveGeometry() setX:", setX, "setY:", setY,
+    //            "setW:", setW, "setH", setH)
 
-    // Move and resize window
+    // Move and resize window based on last saved
     winName.moveTo(setX, setY)
     winName.resizeTo(setW, setH)
 
     sleepAndReportCoordinates(winName, setX, setY, setW, setH)
-    return [0, 0, 0, 0]  // Fudge it
 }
 
 async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
@@ -476,15 +464,16 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         let sleepTime = 2 * i
         await sleep(sleepTime)  // newX & newY undefined so wait
         var [newX, newY, newW, newH] =  winViewGeometry(winName)
+        /*  Lag before winViewGeometry returns a number (but may be invalid) */
         if (typeof newX == 'undefined') continue
         console.log("Double-check newX", newX, "newY:", newY,
                     "newW:", newW, "newH:", newH)
-        /* newX, newY and newH is always out to lunch
-        if (setX != newX && setY != newY &&
-            setW != newW && setH != newH) continue
+        /* newX, newY and newH can always out to lunch, but newW
+            eventually gets it right after 120ms delay or so.
         */
         if (setW != newW) continue  // Keep looping while Width is different
-        console.log ("newW:", newW, "Loop for 1s based i:", i)
+        console.log ("sleepAndReportCoordinates() - newW:", newW,
+                     "Loop for 1s based i:", i)
         break
     }
     let end = Date.now()
