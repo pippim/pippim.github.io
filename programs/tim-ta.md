@@ -211,14 +211,19 @@ will be updated.
 
 # Work In Progress
 
-**Tim-ta Version 2.0 Plans**
+**Tim-ta Version 1.1**
 
-August 20, 2022 planned enhancements:
+September 16, 2022 update:
 
-- Launch timers in a new window. 
-- New window is opened over parent browser window or at fixed position.
+- Running timers can appear in popup windows that launch when 
+large screen (>1200 pixels) is active.
+- When you move or resize a popup window it restarts the same way next time.
+- There are limitations with browsers being able to move to 
+far right and far bottom positions.
 - Running timer task name in window title bar.
 - Popup controls to override time remaining, next/previous timer.
+- A new enhancement has begun to convert version 1.0 of Tim-ta
+with saved popup window locations and sizes in version 1.1.
 
 **The history of Tim-ta Version 1.0**
 
