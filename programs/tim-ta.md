@@ -388,7 +388,7 @@ currently running progress bar is automatically selected.
 
 {% include image.html src="/assets/img/tim-ta/Open task override.gif"
    alt="Open task override.gif"
-   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+   style="float: none; width: 957px; height: 619px; margin: 0px 0px 0px 0px;"
 %}
 
 ---
