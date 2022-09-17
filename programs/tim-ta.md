@@ -59,7 +59,7 @@ your own project(s), you can delete the sample project.
 
 <div id="drop-area">
     <form class="my-form">
-        <p>Upload multiple files with the file dialog or by dragging and dropping files onto the dashed region</p>
+        <p>Upload Tim-ta JSON files with the file dialog or by dragging and dropping files onto the dashed region</p>
         <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
         <label class="page-header-button" for="fileElem">Select some files</label>
     </form>
@@ -236,9 +236,9 @@ far right and far bottom positions.
 - A new enhancement has begun to convert version 1.0 of Tim-ta
 with saved popup window locations and sizes in version 1.1.
 
-## Tim-ta Version 1.0 History
+## Tim-ta Version 1.0 Development History
 
-### As of May 8, 2022, these features have been developed:
+### May 8, 2022 update:
 
 - Sound files are saved to local storage. This saves bandwidth when they are played.
 - Configuration, Projects, Tasks and Run Timers tables / forms are complete.
