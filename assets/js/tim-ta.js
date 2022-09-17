@@ -30,19 +30,28 @@ function scrSetSize() {
 
     var x, y, t, pix, pop
     if (win == window) {
+        // Running on main webpage
         x = win.document.getElementById("content")  /* Exists in every _layout */
         t = ttaElm.offsetWidth  // Use width to adjust progress bar size
         pop = 0
     } else {
         // Run only within popup window
         x = win.document.getElementById("ttaRunWindowId")
-        t = ttaRunElm.offsetWidth
+        t = ttaRunElm.offsetWidth  // Width in popup window slightly wider
         pop = 18  // Silly method. Should add up size of cells 1 & 2 for cell 0
     }
+
+    const myTable = win.document.getElementById("tabRunTimers")
+    if (myTable === null) return  // Task timers not running
+    console.log("myTable found:", myTable.id)
+    const timeWidth = myTable.rows[0].cells[1].offsetWidth
+    const nameWidth = myTable.rows[0].cells[2].offsetWidth
+    const progWidth = t - timeWidth - nameWidth
 
     y = x.getElementsByTagName("progress")  // To override styling of progress type
 
     /*
+
     console.log("scrWidth:", scrWidth, "table width t:", t,
                 "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
@@ -50,6 +59,7 @@ function scrSetSize() {
     pix = (t < 400) ? 100 : t - 300 + pop // 100 pixel minimum for progress bar
     for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
 
+    console.log("t pixels:", t, "progWidth:", progWidth)
     //if (y.length > 0) console.log("y[0].id:", y[0].id,
     //            "getComputedStyle(y[0]).width:", getComputedStyle(y[0]).width)
 }
@@ -472,13 +482,11 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
             eventually gets it right after 120ms delay or so.
         */
         if (setW != newW) continue  // Keep looping while Width is different
+        let end = Date.now()
         console.log ("sleepAndReportCoordinates() - newW:", newW,
-                     "Loop for 1s based i:", i)
+                     "Loop for 1s based i:", i, "milliseconds:", end - start)
         break
     }
-    let end = Date.now()
-    // console.log("sleepAndReportCoordinates() After  sleep:", end)
-    console.log("Elapsed milliseconds:", end - start)
 
     // Not sure why have to invoke function again because newX undefined
     // let [newX, newY, newW, newH] =  winViewGeometry(winName)
@@ -1660,13 +1668,6 @@ async function runAllTimers() {
         const delta = increment - entry.progress  // delta multiple of 1000 millis
 
         updateAllRunTimers(entry, delta)
-        /*
-        updateRunTimer(myTable, entry, delta, fTaskAndTimeInHeading)
-        updateRunTimer(myTable, allTimers["tabTimerSet"], delta)
-        if (run_times > 1)
-            updateRunTimer(myTable, allTimers["tabTimerAllSets"], delta)
-        secondsTotalElapsed += delta  // Total seconds, not including pauses
-        */
     }  // End of forever while(true) loop
 }  // End of async function runAllTimers()
 
