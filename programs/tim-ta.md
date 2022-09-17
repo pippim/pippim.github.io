@@ -386,7 +386,10 @@ progress bar and the task timer override box appears. You
 can also click the Delta ("Δ" Override) button and the
 currently running progress bar is automatically selected.
 
-TODO: Add gif
+{% include image.html src="/assets/img/tim-ta/Open task override.gif"
+   alt="Open task override.gif"
+   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+%}
 
 ---
 
