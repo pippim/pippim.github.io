@@ -211,21 +211,21 @@ will be updated.
 
 # Work In Progress
 
-**Tim-ta Version 1.1**
+## Tim-ta Version 1.1
 
-September 16, 2022 update:
+### September 16, 2022 update:
 
 - Running timers can appear in popup windows that launch when 
 large screen (>1200 pixels) is active.
 - When you move or resize a popup window it restarts the same way next time.
 - There are limitations with browsers being able to move to 
 far right and far bottom positions.
-- Running timer task name in window title bar.
-- Popup controls to override time remaining, next/previous timer.
+- Running timer task name and remaining time appears in window title bar.
+- "Override" button for next/previous timer, +/- time remaining, play/pause.
 - A new enhancement has begun to convert version 1.0 of Tim-ta
 with saved popup window locations and sizes in version 1.1.
 
-**The history of Tim-ta Version 1.0**
+## Tim-ta Version 1.0 History
 
 Tim-ta development started April 11, 2022. A budget of two months
 has been given to this project.
