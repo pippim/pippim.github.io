@@ -44,9 +44,10 @@ function scrSetSize() {
     const myTable = win.document.getElementById("tabRunTimers")
     if (myTable === null) return  // Task timers not running
     console.log("myTable found:", myTable.id)
+    const progWidth = myTable.rows[0].cells[0].offsetWidth
     const timeWidth = myTable.rows[0].cells[1].offsetWidth
     const nameWidth = myTable.rows[0].cells[2].offsetWidth
-    const progWidth = t - timeWidth - nameWidth
+    const calcWidth = t - timeWidth - nameWidth - 40  // 40 for cell spacing
 
     y = x.getElementsByTagName("progress")  // To override styling of progress type
 
@@ -60,7 +61,8 @@ function scrSetSize() {
     for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
 
     console.log("t pixels:", t, "pix:", pix, "progWidth:", progWidth,
-                "timeWidth:", timeWidth, "nameWidth:", nameWidth)
+                "timeWidth:", timeWidth, "nameWidth:", nameWidth,
+                "calcWidth:", calcWidth)
     //if (y.length > 0) console.log("y[0].id:", y[0].id,
     //            "getComputedStyle(y[0]).width:", getComputedStyle(y[0]).width)
 }
