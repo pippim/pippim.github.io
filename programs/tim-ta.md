@@ -31,11 +31,12 @@ your own project(s), you can delete the sample project.
 - Optional Alarms, Desktop Notifications and Prompts when task ends.
 - All tasks can be repeated in what is called a set.
 - Prompts to begin each task and each (if any) set repetitions.
+- Alarm sounds and message is displayed when task timer ends.
 - Upload custom sound files or choose from stock alarm sound files.
 - Download Tim-ta Configuration for backup or to send to other devices.
 - Upload Tim-ta Configuration from other devices or from friends.
 - Launch timers in new window (under development).
-- Progress bars for each task. Current timer in window title bar (under development).
+- Progress bars for each task.
 
 ---
 
@@ -211,6 +212,16 @@ will be updated.
 
 # Work In Progress
 
+Tim-ta development started April 11, 2022. A budget of two months
+has been given to this project.
+
+Initially all the features in
+[Multi-Timer](https://www.pippim.com/programs/mt.html)
+will be provided. After that, new features will be added.
+
+> NOTE: Some Multi-timer features such as locking the screen
+> cannot be done from a web browser.
+
 ## Tim-ta Version 1.1
 
 ### September 16, 2022 update:
@@ -227,47 +238,37 @@ with saved popup window locations and sizes in version 1.1.
 
 ## Tim-ta Version 1.0 History
 
-Tim-ta development started April 11, 2022. A budget of two months
-has been given to this project.
-
-Initially all the features in
-[Multi-Timer](https://www.pippim.com/programs/mt.html)
-will be provided. After that, new features will be added.
-
-> NOTE: Some Multi-timer features such as locking the screen
-> cannot be done from a web browser.
-
-As of May 8, 2022, these features have been developed:
+### As of May 8, 2022, these features have been developed:
 
 - Sound files are saved to local storage. This saves bandwidth when they are played.
 - Configuration, Projects, Tasks and Run Timers tables / forms are complete.
 - Advanced draggable window alert/prompt technology is complete.
 - Upload Alarm Custom Sound Files has begun.
 
-May 14, 2022 update:
+### May 14, 2022 update:
 
 - Upload Custom Sound Files has been completed. Take note how to increase Local Storage quota from 5 MB (Megabytes). 
 - Global Pippim Website redesign for mobile screens begins shortly.
 - Then media controls for running timers will be moved from separate window to the footer section of Run Project. 
 - Then a mechanism for exporting and importing Tim-ta Projects will be started. 
 
-May 27, 2022 update:
+### May 27, 2022 update:
 
 - New design for mobile complete.
 - New copy code button implemented.
 - Exporting (download) and importing (upload) Tim-ta Projects has begun. 
 
-May 31, 2022 update:
+### May 31, 2022 update:
 
 - Exporting (download) Tim-ta configuration went very quickly (a few hours).
 - Importing (upload) Tim-ta Projects and Tasks has taken a few days so far and it is only half done. 
 
-June 12, 2022 update:
+### June 12, 2022 update:
 
 - Importing (upload) Tim-ta Projects and Tasks completed.
 - New stock sound files (Alarm_01.mp3, Alarm_02.mp3 and Alarm_03.mp3) uploaded.
 
-June 25, 2022 update:
+### June 25, 2022 update:
 
 - When alarm sounds, image of shaking alarm clock appears. Close window to end alarm sound early.
 - New code (HTML & CSS) for system wide buttons. 
