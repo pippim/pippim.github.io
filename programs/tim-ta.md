@@ -143,6 +143,7 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 
 <a id='hdr6'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+<a id='Download'></a>
 
 # Download Tim-ta Configuration
 
@@ -157,6 +158,7 @@ You can also send the download to another device or browser.
 
 ---
 
+<a id='Upload'></a>
 # Upload Tim-ta Configuration
 
 Upload TIm-ta Configuration to Local Storage. New Projects
@@ -388,7 +390,7 @@ currently running progress bar is automatically selected.
 
 {% include image.html src="/assets/img/tim-ta/Open task override.gif"
    alt="Open task override.gif"
-   style="float: none; width: 718px; height: 464px; margin: 0px 0px 0px 0px;"
+   style="float: left; width: 718px; height: 464px; margin: 0px 0px 0px 0px;"
 %}
 
 ---
@@ -423,7 +425,12 @@ currently running progress bar is automatically selected.
 
 # Local Storage Files
 
-A single file called `ttaConfig` is used to store Settings, Projects and Tasks. 
+A single file called `ttaConfig` is used to store Configuration settings,
+Projects and Tasks. You should back this file up. 
+See <a href="#Download">Download</a> section. The
+backup can be used on another device or browser. 
+See <a href="#Upload">Upload</a> section.
+
 `ttaConfig` is kept in "***Local Storage***". Local Storage is also used to 
 store every stock and custom sound file. 
 
