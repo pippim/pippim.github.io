@@ -224,7 +224,7 @@ will be provided. After that, new features will be added.
 
 ## Tim-ta Version 1.1
 
-### September 16, 2022 update:
+### September 16, 2022 Update
 
 - Running timers can appear in popup windows that launch when 
 large screen (>1200 pixels) is active.
@@ -232,43 +232,43 @@ large screen (>1200 pixels) is active.
 - There are limitations with browsers being able to move to 
 far right and far bottom positions.
 - Running timer task name and remaining time appears in window title bar.
-- "Override" button for next/previous timer, +/- time remaining, play/pause.
+- "Override" button for task timer to restart/end, +/- time remaining, play/pause.
 - A new enhancement has begun to convert version 1.0 of Tim-ta
 with saved popup window locations and sizes in version 1.1.
 
 ## Tim-ta Version 1.0 Development History
 
-### May 8, 2022 update:
+### May 8, 2022 Update
 
 - Sound files are saved to local storage. This saves bandwidth when they are played.
 - Configuration, Projects, Tasks and Run Timers tables / forms are complete.
 - Advanced draggable window alert/prompt technology is complete.
 - Upload Alarm Custom Sound Files has begun.
 
-### May 14, 2022 update:
+### May 14, 2022 Update
 
 - Upload Custom Sound Files has been completed. Take note how to increase Local Storage quota from 5 MB (Megabytes). 
 - Global Pippim Website redesign for mobile screens begins shortly.
 - Then media controls for running timers will be moved from separate window to the footer section of Run Project. 
 - Then a mechanism for exporting and importing Tim-ta Projects will be started. 
 
-### May 27, 2022 update:
+### May 27, 2022 Update
 
 - New design for mobile complete.
 - New copy code button implemented.
 - Exporting (download) and importing (upload) Tim-ta Projects has begun. 
 
-### May 31, 2022 update:
+### May 31, 2022 Update
 
 - Exporting (download) Tim-ta configuration went very quickly (a few hours).
 - Importing (upload) Tim-ta Projects and Tasks has taken a few days so far and it is only half done. 
 
-### June 12, 2022 update:
+### June 12, 2022 Update
 
 - Importing (upload) Tim-ta Projects and Tasks completed.
 - New stock sound files (Alarm_01.mp3, Alarm_02.mp3 and Alarm_03.mp3) uploaded.
 
-### June 25, 2022 update:
+### June 25, 2022 Update
 
 - When alarm sounds, image of shaking alarm clock appears. Close window to end alarm sound early.
 - New code (HTML & CSS) for system wide buttons. 
@@ -382,18 +382,21 @@ detail line for small screen, open more buttons control box.
 ## Timer Countdown Override Buttons
 
 While a Task Timer is counting down, you can click on the
-progress bar and an action/controls override box appears. 
+progress bar and the task timer override box appears. You
+can also click the Delta ("Δ" Override) button and the
+currently running progress bar is automatically selected.
+
+TODO: Add gif
 
 ---
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
-&#x23EE;</span>&emsp; skip to Task start. If at start, go to previous Task.
+&#x23EE;</span>&emsp; Restart Task timer.
 
 ---
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
-&#x23EA;</span>&emsp; If last button fast forward, fast backwards half
-the fast forward amount. Otherwise, fast backwards 10%.
+−</span>&emsp; Rewind Task timer 10 seconds.
 
 ---
 
@@ -403,25 +406,12 @@ the fast forward amount. Otherwise, fast backwards 10%.
 ---
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
-&#x23E9;</span>&emsp; If last button fast backwards, then fast forward 
-half the fast backwards amount. Otherwise, fast forward 10%
++</span>&emsp; Fast forward Task timer 10 seconds.
 
 ---
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
-&#x23ED;</span>&emsp; Skip to next Task.
-
----
-
-A note about alternating fast backward and fast forward button clicks:
-
-- Assume you are at 50% progress
-- You click fast forward and now you are at 60% because the default step amount is 10%.
-- You click fast backward and now you are 55% (half the last fast forward is 5%).
-- You click fast forward and now you are at 57.5% (half the last fast backward is 2.5%).
-- You click fast backward and now you are at 56.25% (half the last fast forward is 1.25%).
-- You click fast backward and now you are at 46.25% because the default step amount is 10%.
-- You click fast backward and now you are at 36.25% because the default step amount is 10%.
+&#x23ED;</span>&emsp; Go to Task timer end.
 
 ---
 
@@ -440,148 +430,10 @@ To view Local Storage (from Chrome and Firefox browsers):
 - Select the "***Storage***" tab in Developer Tools
 - Scroll down to the "***Local Storage***" section and expand the details
 
-``` javascript
-// Configuration & Container for all Tim-ta Projects
-// Default below for creation, overwritten when retrieved from localStorage
-// The order arrProjects names appear is order they are displayed
-var tta_store = {
-    arrProjects: [],
-    objProjects: {},
-    task_prompt: "true",
-    task_end_alarm: "true",
-    task_end_filename: "Alarm_03.mp3",
-    task_end_notification: "false",
-    run_set_times: 1,
-    set_prompt: "false",
-    set_end_alarm: "false",
-    set_end_filename: "Alarm_05.mp3",
-    set_end_notification: "false",
-    all_sets_prompt: "false",
-    all_sets_end_alarm: "false",
-    all_sets_end_filename: "Alarm_12.mp3",
-    all_sets_end_notification: "false",
-    progress_bar_update_seconds: 1,
-    confirm_delete_phrase: "y"
-}
-
-// SINGLE Tim-ta Project
-// When value is "default" it is inherited from Configuration
-// The order arrTasks names appear is order they are displayed
-var tta_project = {
-    project_name: null,
-    arrTasks: [],
-    objTasks: {},
-    task_prompt: "default",
-    task_end_alarm: "default",
-    task_end_filename: "default",
-    task_end_notification: "default",
-    run_set_times: "default",
-    set_prompt: "default",
-    set_end_alarm: "default",
-    set_end_filename: "default",
-    set_end_notification: "default",
-    all_sets_prompt: "default",
-    all_sets_end_alarm: "default",
-    all_sets_end_filename: "default",
-    all_sets_end_notification: "default",
-    progress_bar_update_seconds: "default",
-    confirm_delete_phrase: "default"
-}
-
-// SINGLE Timer within a Tim-ta Project
-// When value is "default" it is inherited from Project
-var tta_task = {
-    task_name: null,
-    hours: null,
-    minutes: null,
-    seconds: null,
-    task_prompt: "default",
-    task_end_alarm: "default",
-    task_end_filename: "default",
-    task_end_notification: "default",
-    progress_bar_update_seconds: "default",
-    confirm_delete_phrase: "default"
-}
-
-var data_dictionary = {
-    project_name: "Project Name|text|non-blank",
-    task_name: "Task Name|text|non-blank",
-    hours: "Hours|number|0|1000",
-    minutes: "Minutes|number|0|1000",
-    seconds: "Seconds|number|0|1000",
-    task_prompt: "Prompt to begin Task?|switch",
-    task_end_alarm: "Play sound when Task ends?|switch",
-    task_end_filename: "Task ending sound filename|select|sound_filenames",
-    task_end_notification: "Desktop notification when Task ends?|switch",
-    run_set_times: "Number of times to run Set|number|1|1000",
-    set_prompt: "Prompt to begin Set?|switch",
-    set_end_alarm: "Play sound when Set ends?|switch",
-    set_end_filename: "Set ending sound filename|select|sound_filenames",
-    set_end_notification: "Desktop notification when Set ends?|switch",
-    all_sets_prompt: "Prompt to begin All Sets?|switch",
-    all_sets_end_alarm: "Play sound when All Sets end?|switch",
-    all_sets_end_filename: "All Sets ending sound filename|select|sound_filenames",
-    all_sets_end_notification: "Desktop notification when All Sets end?|switch",
-    progress_bar_update_seconds: "Seconds between countdown updates|number|1|1000",
-    fail_test_1: "Hello World",
-    fail_test_2: "Good-bye Cruel World...|text|lower|upper|No such place!",
-    confirm_delete_phrase: "Text to confirm delete action|text"
-}
-
-var dd_field = {
-    name: "",
-    label: "",
-    type: "",
-    lower: "",
-    upper: ""
-}
-
-function get_dd_field (name) {
-    /* Extract dd_field from data_dictionary for easier referencing
-       NOTE: lower is generic term, it can be "non-blank" for keys and
-             there is no upper. If numeric and lower or upper is blank
-             they are converted to 0. If select it contains all the
-             possible values.
-    */
-    const raw = data_dictionary[name];
-    if (raw == null) {
-        alert("Critical Error. Data dictionary field doesn't exist: " + name);
-        console.trace();
-        return false;
-    }
-    const arr = raw.split('|')
-    if (arr.length < 2) {
-        alert("Critical Error. Data dictionary field has < 3 parts: " + name);
-        console.trace();
-        return false;
-    }
-    dd_field.name = name;       // Used programmatically as field name
-    dd_field.label = arr[0];    // Used for labels on forms & tables
-    dd_field.type = arr[1];     // Used for <table> <input> type="dd_field.type"
-    if (arr.length >= 3) { dd_field.lower = arr[2]; }
-    else dd_field.lower = "";   // See top of function comments
-    if (arr.length >= 4) { dd_field.upper = arr[3]; }
-    else dd_field.upper = "";
-    if (arr.length > 4 && dd_field.type != "select") {       // See top of function comments
-        alert("Critical Error. Non-Select field has > 4 parts: " + name);
-        console.trace();
-        return false;
-    }
-    return true;
-}
-
-/* UNIT TESTING
-    get_dd_field("haha")
-    get_dd_field("fail_test_1")
-    get_dd_field("fail_test_2")
-*/
-
-```
-
 ---
 
 <a id="hdr12"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a></div>
+<div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
 
 # Running timer in popup Window
 
@@ -596,3 +448,6 @@ Go to Firefox settings:
 and allow popups by pippim.com website. This allows the popup window to gain
 focus when alarm sounds. If you don't set this then popup window still runs
 but doesn't steal focus when alarm sounds. EG it stays in the background.
+
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a></div>
