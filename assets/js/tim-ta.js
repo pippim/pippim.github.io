@@ -59,7 +59,8 @@ function scrSetSize() {
     pix = (t < 400) ? 100 : t - 300 + pop // 100 pixel minimum for progress bar
     for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
 
-    console.log("t pixels:", t, "progWidth:", progWidth)
+    console.log("t pixels:", t, "pix:", pix, "progWidth:", progWidth,
+                "timeWidth:", timeWidth, "nameWidth:", nameWidth)
     //if (y.length > 0) console.log("y[0].id:", y[0].id,
     //            "getComputedStyle(y[0]).width:", getComputedStyle(y[0]).width)
 }
