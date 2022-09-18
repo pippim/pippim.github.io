@@ -2563,7 +2563,7 @@ function validateNotification(value, output) {
             all_sets_end_notification: "Notification when All Sets end?|switch",
     */
     if (!dd_field.name.includes("end_notification")) return true
-    console.log("Notification:", name)
+    console.log("Check Desktop Notification Permission for:", dd_field.name)
     popClearByError("notification_permission")
     return true
 }
