@@ -42,7 +42,7 @@ function scrSetSize() {
     const progWidth = myTable.rows[0].cells[0].offsetWidth
     const timeWidth = myTable.rows[0].cells[1].offsetWidth
     const nameWidth = myTable.rows[0].cells[2].offsetWidth
-    const calcWidth = t - timeWidth - nameWidth - 20  // 20 for cell spacing
+    const calcWidth = t - timeWidth - nameWidth - 30  // 30 for cell spacing
 
     pix = (calcWidth < 100) ? 100 : calcWidth // 100 pixel minimum for progress bar
     for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
@@ -2065,7 +2065,7 @@ function paintTaskForm(mode) {
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
     // May 1/22 remove below: <table id="tabTask" class="tta-table">\n' ;
     html += '<form id="formTask"><table class="tta-table">\n' ;
-    // TODO: Put these in a loop
+
     html += buildInput("task_name", mode);
     html += buildInput("hours", mode);
     html += buildInput("minutes", mode);
@@ -2171,7 +2171,6 @@ function buildSelect(key, value, mode) {
     };
 
     var html = "";
-    // TODO: When mode is delete make Select display only
     // See: inpSelects[data.id] = data.value;
     html += '<select id="' + key + '" class="tabInput" required \n' +
         'onchange="setSelectInput(this)" \n' +
@@ -2982,8 +2981,6 @@ function configClickUpload() {
     ttaProject = ttaConfig.objProjects [oldProject ['project_name']]
     ttaTask = ttaProject.objTasks [oldTask ['task_name']]
     configInitializeFiles()
-    // TODO: Where to scroll to after importing? Probably call paintProjectsTable()
-    // document.getElementById('customSounds').scrollIntoView()
     paintProjectsTable()
 }
 
@@ -3103,7 +3100,6 @@ function importTask(ndx, existingTask, objProject, objTask) {
 
     // From function clickUpdateTask() function
     if (existingTask == false)
-        // TODO: Track last task processed and insert new task after it
         ttaProject.arrTasks.push(objTask.task_name)
     ttaProject.objTasks[objTask.task_name] = Object.assign ( {}, ttaTask)
     //ttaConfig.objProjects[ttaProject.project_name] = ttaProject
@@ -3342,7 +3338,7 @@ function popCreateUniqueError(msg_type, msg, error_id, id_elm_type, id_elm,
                           buttons, output);
         return popId;
     } else {
-        return existingIds[0];  /* There should only be 1. TODO: List  > 1 */
+        return existingIds[0];
     }
 }
 
