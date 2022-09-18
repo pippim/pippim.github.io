@@ -2,15 +2,6 @@
 ---
 // Tim-ta (Timed Tasks)
 
-/* TODO: Multiple Browser tabs concurrency.
-
-    Before any update, reread ttaConfig, ttaProject and
-    ttaTask into "check Buffers". If they are different
-    then advise user and force reread.
-
-    TODO: Run timer in new window flag
-*/
-
 {% include draggable-window.js %}
 
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
@@ -28,6 +19,9 @@ function scrSetSize() {
     else if (scrWidth > 1007) scrLarge = true
     else scrMedium = true
 
+    const myTable = win.document.getElementById("tabRunTimers")
+    if (myTable === null) return  // Task timers not running
+
     var x, y, t, pix, pop
     if (win == window) {
         // Running on main webpage
@@ -41,43 +35,25 @@ function scrSetSize() {
         pop = 18  // Silly method. Should add up size of cells 1 & 2 for cell 0
     }
 
-    const myTable = win.document.getElementById("tabRunTimers")
-    if (myTable === null) return  // Task timers not running
-
     // Reset all progress bars to 100px to see what full length will be
     y = x.getElementsByTagName("progress")  // To override styling of progress type
     for (var i=0; i<y.length; i++) y[i].style.width = "100px"
+
     const progWidth = myTable.rows[0].cells[0].offsetWidth
     const timeWidth = myTable.rows[0].cells[1].offsetWidth
     const nameWidth = myTable.rows[0].cells[2].offsetWidth
     const calcWidth = t - timeWidth - nameWidth - 20  // 20 for cell spacing
 
-    /*
-
-    console.log("scrWidth:", scrWidth, "table width t:", t,
-                "(win == window):", (win == window),
-                "const x:", x, "const y.length:", y.length)
-    */
     pix = (calcWidth < 100) ? 100 : calcWidth // 100 pixel minimum for progress bar
     for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
 
+    /*
     console.log("t pixels:", t, "pix:", pix, "progWidth:", progWidth,
                 "timeWidth:", timeWidth, "nameWidth:", nameWidth,
                 "calcWidth:", calcWidth)
-    /*
-    PIXEL MINUS 40 Firefox
-    t pixels: 532 pix: 250 progWidth: 298 timeWidth: 62 nameWidth: 148
-    calcWidth: 282
-    PIXEL MINUS 40 Chrome
-    t pixels: 860 pix: 578 progWidth: 588 timeWidth: 78 nameWidth: 174
-    calcWidth: 568
-    t pixels: 574 pix: 292 progWidth: 588 timeWidth: 78 nameWidth: 118
-    calcWidth: 338
     */
 }
 
-// window.addEventListener('resize', () => { func1(); func2(); });
-// window.addEventListener('resize', () => { func1(); func2(); });
 window.onresize = function() {
     // Can be called many times during a real window resize
     clearTimeout(scrTimeout);  // Reset window resize delay to zero
@@ -87,12 +63,6 @@ window.onresize = function() {
 window.addEventListener("beforeunload", function(event) {
     leavingMainWebpage()
 })
-
-/*
-window.beforeunload = function() {
-    // Can be called many times during a real window resize
-}
-*/
 
 // Shared ttaConfig definition
 {% include tim-ta-storage.js %}
@@ -592,49 +562,6 @@ function paintProjectsTable() {
     html += "New Project";
     html += '</div>\n';
     html += '</div>\n';
-
-    // TODO: Redo using: https://stackoverflow.com/a/58563703/6929343
-
-    // Note sure why #tabProjects is required for proper column width only
-    // in this case is .tta-table styling failing...
-    //html += '#tabProjects table { table-layout: auto; width: 100%; }\n';
-    //html += '#tabProjects th, #tabProjects td {\n' +
-    //        '  padding: .25rem .25rem;\n' +
-    //        '}\n'
-
-    /*
-        table {
-          text-align: left;
-          position: relative;
-        }
-
-        th {
-          background: white;
-          position: sticky;
-          top: 0;
-        }
-
-        NOTE: It's necessary to wrap the table with a div with max-height:
-
-        <div id="managerTable" >
-        ...
-        </div>
-
-        WHERE:
-
-        #managerTable {
-            max-height: 500px;
-            overflow: auto;
-        }
-
-    html += '#tabProjectss th {\n' +
-            'position: -webkit-sticky;\n' +
-            'position: sticky;\n' +
-            'top: 0;\n' +
-            'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
-            '}\n'
-    */
     html += ttaNameColumnStyle();  // Set name column width
     ttaElm.innerHTML = html;  // Set top-level's element with new HTML
     ttaElm.scrollIntoView();
@@ -790,7 +717,6 @@ function tabTaskDetail(i) {
         html += tabButton(i, tabEditSym, tabEditTitle, "clickEdit");
     }           // Five columns of buttons
 
-    // TODO, each row in tabTasks and tabProjects has ID to assign .flashGrey {}
     html += "<td><font size='+2'>" + ttaTask.task_name + "</font></td>\n";
 
     if (!scrSmall) {
@@ -1028,7 +954,6 @@ function clickUp(i) {
 }
 
 function clickDown(i) {
-    // TODO: After moving, update & save localStorage
     //          This means before painting each screen ReadConfiguration()
     //          should be called.
     clickCommon(i);
@@ -1333,7 +1258,6 @@ function leavingMainWebpage() {
     var win = getWin()
     console.log("  leavingMainWebpage()")
     if (win == window) return  // No popup window to close
-    // TODO: There could be a warning that popup window is closing
     closePopupWindow()
     console.log("    closePopupWindow()")
 }
@@ -1789,7 +1713,6 @@ function resetTimersSet(myTable, run_times, remaining_run_times) {
         if (key == "tabTimerAllSets") {
             // NOTE: AllSets NEVER gets reset when an old set ends
             // Sep 10 22 - Why was above comment made?
-            // TODO, Timer description with "Set Number x of y"
         } else {
             entry.progress = 0;
             entry.remaining = entry.seconds;
@@ -2014,7 +1937,7 @@ function paintConfigForm() {
 
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
     html += '<form id="formConfig"><table id="tabConfig" class="tta-table">\n' ;
-    // TODO: Put these in a loop
+
     html += buildLine("Default Options for Tasks");
     html += buildInput("task_prompt", mode);
     html += buildInput("task_end_alarm", mode);
@@ -2035,9 +1958,10 @@ function paintConfigForm() {
     html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
     /* TODO: Version 1.1 add new fields:
-    countdown_in_title: "true"
-    use_popup_window: "true",
-    use_popup_last_position: "false"
+    html += buildLine("Window interface options");
+    html += buildInput("countdown_in_title", mode);
+    html += buildInput("use_popup_window", mode);
+    html += buildInput("use_popup_last_position", mode);
     */
     html += '</table></form>\n' ;
     html += '</div>\n';
@@ -2075,9 +1999,7 @@ function paintProjectForm(mode) {
     html += '<div style="max-height: 70vh; overflow: auto;">\n' ;
     // May 1/22 remove below: <table id="tabProject" class="tta-table">\n' ;
     html += '<form id="formProject"><table class="tta-table">\n' ;
-    // TODO: Why not just loop through all keys? - Because order is random!
-
-    // TODO: Put these in a loop
+    // Why not just loop through all keys? - Because order is random!
     html += buildInput("project_name", mode);
     html += buildLine("Default Options for Tasks");
     html += buildInput("task_prompt", mode);
@@ -2090,7 +2012,7 @@ function paintProjectForm(mode) {
     html += buildInput("set_end_alarm", mode);
     html += buildInput("set_end_filename", mode);
     html += buildInput("set_end_notification", mode);
-    html += buildLine("Options for All Sets of tasks");
+    html += buildLine("Options for All Sets of Tasks");
     html += buildInput("all_sets_prompt", mode);
     html += buildInput("all_sets_end_alarm", mode);
     html += buildInput("all_sets_end_filename", mode);
@@ -2099,13 +2021,13 @@ function paintProjectForm(mode) {
     html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
     /* TODO: Version 1.1 add new fields:
-    countdown_in_title: "default"
-    use_popup_window: "default",
-    use_popup_last_position: "default",
-    popup_position_x: "30",
-    popup_position_y: "30",
-    popup_size_w:  "600",
-    popup_size_h: "400"
+    html += buildInput("countdown_in_title", mode);
+    html += buildInput("use_popup_window", mode);
+    html += buildInput("use_popup_last_position", mode);
+    html += buildInput("popup_position_x", mode);
+    html += buildInput("popup_position_y", mode);
+    html += buildInput("popup_size_w", mode);
+    html += buildInput("popup_size_h", mode);
     */
     html += '</table></form>\n' ;
     html += '</div>\n';
