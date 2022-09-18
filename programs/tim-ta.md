@@ -428,20 +428,28 @@ currently running progress bar is automatically selected.
 <a id='hdr11'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
-# Local Storage Files
+# Tim-ta Configuration Kept in Local Storage
 
-A single file called `ttaConfig` is used to store Configuration settings,
+A single file called `ttaConfig` is used to store
+Tim-ta information for Configuration settings,
 Projects and Tasks. You should back this file up. 
 See <a href="#Download">Download</a> section. The
 backup can be used on another device or browser. 
 See <a href="#Upload">Upload</a> section.
 
-`ttaConfig` is kept in "***Local Storage***". Local Storage is also used to 
-store every stock and custom sound file. 
+`ttaConfig` is kept in "***Local Storage***". 
+Local Storage is also used to store every stock
+alarm sound file and custom sound file. Each
+of your devices and browsers will keep it's
+own copy of local storage. To transfer data
+between two browsers or different devices use
+the Upload/Download linked in the previous
+paragraph.
 
 To view Local Storage (from Chrome and Firefox browsers):
 
-- Use <kbd>Control</kbd> + <kbd>i</kbd> to open "***Developer Tools***"
+- Use <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>
+to open "***Developer Tools***"
 - Select the "***Storage***" tab in Developer Tools
 - Scroll down to the "***Local Storage***" section and expand the details
 
