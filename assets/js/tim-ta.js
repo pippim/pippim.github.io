@@ -45,13 +45,13 @@ function scrSetSize() {
     if (myTable === null) return  // Task timers not running
 
     // Reset all progress bars to 100px to see what full length will be
+    y = x.getElementsByTagName("progress")  // To override styling of progress type
     for (var i=0; i<y.length; i++) y[i].style.width = "100px"
     const progWidth = myTable.rows[0].cells[0].offsetWidth
     const timeWidth = myTable.rows[0].cells[1].offsetWidth
     const nameWidth = myTable.rows[0].cells[2].offsetWidth
     const calcWidth = t - timeWidth - nameWidth - 40  // 40 for cell spacing
 
-    y = x.getElementsByTagName("progress")  // To override styling of progress type
 
     /*
 
