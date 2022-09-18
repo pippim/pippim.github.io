@@ -31,6 +31,8 @@ function notifyMe() {
   // want to be respectful there is no need to bother them anymore.
 }
 
+notifyMe()
+
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
 function scrSetSize() {
