@@ -4,7 +4,7 @@
 
 {% include draggable-window.js %}
 
-console.log("browser popup:", browser.browserSettings.allowPopupsForUserEvents.get())
+// console.log("browser popup:", browser.browserSettings.allowPopupsForUserEvents.get())
 
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
