@@ -369,6 +369,11 @@ detail line for small screen, open more buttons control box.
 ---
 
 <span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
+Δ</span>&emsp; Override currently running Task's time remaining.
+
+---
+
+<span class='tta-btn' style='font-size:25px; vertical-align:middle;'>
 &#x21E7;</span>&emsp; Move a Project or Task up in list.
 
 ---
