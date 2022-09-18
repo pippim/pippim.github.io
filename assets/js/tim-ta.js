@@ -31,7 +31,8 @@ function notifyMe() {
   // want to be respectful there is no need to bother them anymore.
 }
 
-notifyMe()
+notifyMe()  // The Notification permission may only be requested from
+            // inside a short running user-generated event handler.
 
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
@@ -1956,6 +1957,7 @@ function flashGrey(id) {
 
 function paintConfigForm() {
     // Button at bottom allows calling paintProjectTasks()
+    notifyMe()  // Find out navigation permission
     msgqClear();
     var mode = "Edit";
     currentMode = mode;
