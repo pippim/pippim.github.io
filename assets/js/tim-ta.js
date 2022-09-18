@@ -2572,10 +2572,9 @@ function validateNotification(value, output) {
     if (value == "false") return true  // Not turned on
 
     console.log("Check Desktop Notification Permission for:", dd_field.name)
-    const permissionGranted = notifyMe("Notification test for:<br>" +
-                                       dd_field.label)
+    const permissionGranted = notifyMe("TEST: " + dd_field.label)
     if (!permissionGranted) {
-        popCreateUniqueError("e", dd_field.label + " requires browser permission.",
+        popCreateUniqueError("e", dd_field.label + "<br> requires browser permission.",
                              "notification_permission",
                              "id", dd_field.name, null, output)
         return false
