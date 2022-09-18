@@ -43,7 +43,9 @@ function scrSetSize() {
 
     const myTable = win.document.getElementById("tabRunTimers")
     if (myTable === null) return  // Task timers not running
-    console.log("myTable found:", myTable.id)
+
+    // Reset all progress bars to 100px to see what full length will be
+    for (var i=0; i<y.length; i++) y[i].style.width = "100px"
     const progWidth = myTable.rows[0].cells[0].offsetWidth
     const timeWidth = myTable.rows[0].cells[1].offsetWidth
     const nameWidth = myTable.rows[0].cells[2].offsetWidth
@@ -58,13 +60,21 @@ function scrSetSize() {
                 "const x:", x, "const y.length:", y.length)
     */
     pix = (t < 400) ? 100 : t - 300 + pop // 100 pixel minimum for progress bar
-    for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
+    for (var i=0; i<y.length; i++) y[i].style.width = calcWidth + "px"
 
     console.log("t pixels:", t, "pix:", pix, "progWidth:", progWidth,
                 "timeWidth:", timeWidth, "nameWidth:", nameWidth,
                 "calcWidth:", calcWidth)
-    //if (y.length > 0) console.log("y[0].id:", y[0].id,
-    //            "getComputedStyle(y[0]).width:", getComputedStyle(y[0]).width)
+    /*
+    PIXEL MINUS 40 Firefox
+    t pixels: 532 pix: 250 progWidth: 298 timeWidth: 62 nameWidth: 148
+    calcWidth: 282
+    PIXEL MINUS 40 Chrome
+    t pixels: 860 pix: 578 progWidth: 588 timeWidth: 78 nameWidth: 174
+    calcWidth: 568
+    t pixels: 574 pix: 292 progWidth: 588 timeWidth: 78 nameWidth: 118
+    calcWidth: 338
+    */
 }
 
 // window.addEventListener('resize', () => { func1(); func2(); });
