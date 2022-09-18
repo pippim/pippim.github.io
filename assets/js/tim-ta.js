@@ -75,31 +75,31 @@ window.addEventListener("beforeunload", function(event) {
 // Small screen contains Listen, Edit, Controls, Duration
 // HTML Codes for buttons
 
-var tabListenSym = "&#9835;"; // options x1f50a (speaker) 9835 (notes)
-var tabListenTitle = "Listen to task ending alarm";
-var tabStopSym = "&#x23F9;"; // options x1f50a (speaker) 9835 (notes)
-var tabStopTitle = "Stop sound now";
-var tabUpSym = "&#x21E7;";
-var tabUpTitle = "Move up list";
-var tabDownSym = "&#x21e9;";
-var tabDownTitle = "Move down list";
-var tabEditSym = "&#x270D;";
-var tabEditTitle = "Edit";
-var tabDeleteSym = "&#x1f5d1";
-var tabDeleteTitle = "Delete";
-var tabControlsSym = "&#x2699";
-var tabControlsTitle = "Buttons for: Move up, Move down, Edit and Delete";
-var tabConfigSym = "&#x2699";
-var tabConfigTitle = "Set defaults for all Projects and Tasks";
-var tabPlaySym = "&#x25b6;";
-var tabPlayTitle = "Countdown each task";
-var tabAddSym = "&#x2b;";
-var tabAddTitle = "Add new ";
-var tabBackSym = "&#x232B;";
-var tabBackTitle = "View/Add/Edit/Delete Projects";
-var tabListSym = "&#x2630;";
-var tabProjectsTitle = "View/Add/Edit/Delete Projects";
-var tabTasksTitle = "View/Add/Edit/Delete Tasks";
+var tabListenSym = "&#9835;"  // ♫ notes
+var tabListenTitle = "Listen to task ending alarm"
+var tabStopSym = "&#x23F9;"  // ⏹ stop
+var tabStopTitle = "Stop sound now"
+var tabUpSym = "&#x21E7;"  // ⇧ Up arrow
+var tabUpTitle = "Move up list"
+var tabDownSym = "&#x21e9;"  // ⇩ Down arrow
+var tabDownTitle = "Move down list"
+var tabEditSym = "&#x270D;"  // ✍ Hand writing with pencil
+var tabEditTitle = "Edit"
+var tabDeleteSym = "&#x1f5d1"  // 🗑 Trash can
+var tabDeleteTitle = "Delete"
+var tabControlsSym = "&#x2699"  // ⚙ Gear
+var tabControlsTitle = "Buttons for: Move up, Move down, Edit and Delete"
+var tabConfigSym = "&#x2699"  // ⚙ Gear
+var tabConfigTitle = "Set defaults for all Projects and Tasks"
+var tabPlaySym = "&#x25b6;"  // ▶ Play
+var tabPlayTitle = "Run task timers"
+var tabAddSym = "&#x2b;"  // + Plus
+var tabAddTitle = "Add new"
+var tabBackSym = "&#x232B;"  // ⌫ Back
+var tabBackTitle = "Cancel changes"
+var tabListSym = "&#x2630;"  // ☰ List or hamburger symbol
+var tabProjectsTitle = "View/Add/Edit/Delete Projects"
+var tabTasksTitle = "View/Add/Edit/Delete Tasks"
 
 var ttaElm, currentTable, currentRoot, currentRow, currentMode, currentForm;
 
@@ -1081,6 +1081,7 @@ function paintRunTimers(i) {
     //html += taskButton("10x", "Run 10 times normal speed", "testAllTimers");
     var pre = ""
     if (fRunWindowAsPopup) pre = "window.opener."
+    // Click Delta (Δ) button to override progress. Or click on progress bar.
     html += taskButton("Δ", "Timer Progress Override",
                        pre + "progressOverride")
     html += "Override";
@@ -1675,6 +1676,7 @@ function updateRunTimer(myTable, entry, delta, fHeading) {
     // fHeading can be undefined
     entry.progress += delta // 1000 or zero
     entry.remaining -= delta // 1000 or zero
+    if (entry.remaining < 0) entry.remaining = 0
     entry.elm.value = entry.progress.toString()
     updateRunTimerDuration(myTable, entry, delta, fHeading)
 }
