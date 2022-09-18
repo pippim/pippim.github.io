@@ -50,7 +50,7 @@ function scrSetSize() {
     const progWidth = myTable.rows[0].cells[0].offsetWidth
     const timeWidth = myTable.rows[0].cells[1].offsetWidth
     const nameWidth = myTable.rows[0].cells[2].offsetWidth
-    const calcWidth = t - timeWidth - nameWidth - 40  // 40 for cell spacing
+    const calcWidth = t - timeWidth - nameWidth - 30  // 30 for cell spacing
 
 
     /*
