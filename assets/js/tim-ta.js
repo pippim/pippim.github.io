@@ -50,8 +50,7 @@ function scrSetSize() {
     const progWidth = myTable.rows[0].cells[0].offsetWidth
     const timeWidth = myTable.rows[0].cells[1].offsetWidth
     const nameWidth = myTable.rows[0].cells[2].offsetWidth
-    const calcWidth = t - timeWidth - nameWidth - 30  // 30 for cell spacing
-
+    const calcWidth = t - timeWidth - nameWidth - 20  // 20 for cell spacing
 
     /*
 
@@ -59,8 +58,8 @@ function scrSetSize() {
                 "(win == window):", (win == window),
                 "const x:", x, "const y.length:", y.length)
     */
-    pix = (t < 400) ? 100 : t - 300 + pop // 100 pixel minimum for progress bar
-    for (var i=0; i<y.length; i++) y[i].style.width = calcWidth + "px"
+    pix = (calcWidth < 100) ? 100 : calcWidth // 100 pixel minimum for progress bar
+    for (var i=0; i<y.length; i++) y[i].style.width = pix + "px"
 
     console.log("t pixels:", t, "pix:", pix, "progWidth:", progWidth,
                 "timeWidth:", timeWidth, "nameWidth:", nameWidth,
