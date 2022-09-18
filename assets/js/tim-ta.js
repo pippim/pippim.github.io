@@ -2457,21 +2457,25 @@ function getInputValues() {
 }  // End of getInputValues()
 
 function validateDdField(name, value, output) {
-    // Shared by validateInput() and validateImport() functions
+    /*
+        Shared by validateInput() and validateImport() functions
+            name = dd_field.name, EG "project_name".
+            value = value entered on screen, EG "Laundry"
+            When output passed it is typically something like:
+                var output = {
+                        destination: "file",
+                        format: "html",
+                        newline: "<br>",
+                        parent: "configGallery",
+                        returned: ""
+                    }
+    */
+
     // output = typeof output !== 'undefined' ? output : { destination: "window" };
     if (typeof output !== 'undefined') {
         output.returned = ""  // Clear any previous error message
     }
 
-    /* When output passed it is typically
-        var output = {
-                destination: "file",
-                format: "html",
-                newline: "<br>",
-                parent: "configGallery",
-                returned: ""
-            }
-    */
     get_dd_field(name, output)  // seed data dictionary decision making fields
     if (!validateNonBlank(value, output)) return false
     if (name == "task_name" && !validateTaskName (value, output)) return false
@@ -2538,7 +2542,7 @@ function validateNumber(value, output) {
                              "id", dd_field.name, null, output);
         return false;
     }
-    popClearByError("number")
+    popClearByError("number")  // Sept 18/22 - Not sure why this is at bottom?
     return true;
 }
 
@@ -2562,8 +2566,16 @@ function validateNotification(value, output) {
             set_end_notification: "Notification when Set ends?|switch",
             all_sets_end_notification: "Notification when All Sets end?|switch",
     */
-    if (!dd_field.name.includes("end_notification")) return true
+    if (!dd_field.name.includes("end_notification")) return true  // Not notification
+    if (value == "false") return true  // Not turned on
+
     console.log("Check Desktop Notification Permission for:", dd_field.name)
+    if (false == true) {
+        popCreateUniqueError("e", dd_field.label + " requires browser permission.",
+                             "notification_permission",
+                             "id", dd_field.name, null, output);
+        return false;
+    }
     popClearByError("notification_permission")
     return true
 }
