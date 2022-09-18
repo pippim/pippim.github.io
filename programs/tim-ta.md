@@ -470,7 +470,28 @@ Go to Firefox settings:
 
 and allow popups by pippim.com website. This allows the popup window to gain
 focus when alarm sounds. If you don't set this then popup window still runs
-but doesn't steal focus when alarm sounds. EG it stays in the background.
+but, doesn't steal focus when alarm sounds. EG it stays in the background
+behind other windows when the alarm sounds.
+
+## Popup Window Geometry Saved Settings
+
+When you close a popup window the last position and size is saved.
+The next time you run the timer the popup window appears at the
+last saved location.
+
+Each project has it's own popup window location saved. So from two
+different browser tabs you can have two popup windows running
+simultaneously.
+
+As of September 18, 2022 browsers have limitations on multiple
+monitor setups. Namely on some monitors the popup window will
+refuse to open at the far right or far bottom. It will be moved
+by the browser further left or further up accordingly. The browser
+companies are currently working on upgrades for better support
+of multiple-monitor setups.
+
+
+
 
 <a id="hdr13"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a></div>
