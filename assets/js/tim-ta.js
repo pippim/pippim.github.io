@@ -4,36 +4,6 @@
 
 {% include draggable-window.js %}
 
-// console.log("browser popup:", browser.browserSettings.allowPopupsForUserEvents.get())
-
-function notifyMe() {
-  if (!("Notification" in window)) {
-    // Check if the browser supports notifications
-    console.log("This browser does not support desktop notification")
-  } else if (Notification.permission === "granted") {
-    // Check whether notification permissions have already been granted;
-    // if so, create a notification
-    // const notification = new Notification("Notifications permitted.");
-    console.log("Notifications permitted.")
-    // …
-  } else if (Notification.permission !== "denied") {
-    // We need to ask the user for permission
-    Notification.requestPermission().then((permission) => {
-      // If the user accepts, let's create a notification
-      if (permission === "granted") {
-        const notification = new Notification("Notifications permitted.");
-        // …
-      }
-    });
-  }
-
-  // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them anymore.
-}
-
-notifyMe()  // The Notification permission may only be requested from
-            // inside a short running user-generated event handler.
-
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
 function scrSetSize() {
@@ -1629,7 +1599,8 @@ async function runAllTimers() {
         // Trace when Chrome over-throttles
         if (increment - entry.progress > 2000)
             console.log ("More than 2 seconds lost in entry.progress:",
-                         entry.progress, "increment:", increment)
+                         entry.progress, "increment:", increment,
+                         "difference:", increment - entry.progress)
 
         // Update progress. fTaskAndTimeInHeading displays value in countdown
         const delta = increment - entry.progress  // delta multiple of 1000 millis
@@ -1953,6 +1924,31 @@ function flashGrey(id) {
     setTimeout(function(){
         elm.classList.remove("flash");
     }, 2000);
+}
+
+function notifyMe() {
+  if (!("Notification" in window)) {
+    // Check if the browser supports notifications
+    console.log("This browser does not support desktop notification")
+  } else if (Notification.permission === "granted") {
+    // Check whether notification permissions have already been granted;
+    // if so, create a notification
+    // const notification = new Notification("Notifications permitted.");
+    console.log("Notifications permitted.")
+    // …
+  } else if (Notification.permission !== "denied") {
+    // We need to ask the user for permission
+    Notification.requestPermission().then((permission) => {
+      // If the user accepts, let's create a notification
+      if (permission === "granted") {
+        const notification = new Notification("Notifications permitted.");
+        // …
+      }
+    });
+  }
+
+  // At last, if the user has denied notifications, and you
+  // want to be respectful there is no need to bother them anymore.
 }
 
 function paintConfigForm() {
@@ -2416,7 +2412,7 @@ function clickUpdateConfig() {
 
 function validateInput() {
     // Validate input fields
-    var formValues = getInputValues()
+    var formValues = getInputValues()  // Get from screen into object
     var no = 0  // Field number in case blank name error is printed
     for (const name of Object.keys(formValues)) {
         no += 1
@@ -2448,11 +2444,11 @@ function getInputValues() {
         formValues[item.name] = item.value
     }
 
-    // Get switch values and add to formValues
+    // Get switch values (green on/red off sliders) and add to formValues
     for (const name of Object.keys(inpSwitches)) {
         formValues[name] = inpSwitches[name].value
     }
-    // Add select values to formValues
+    // Add select values (dropdown menus) to formValues
     for (const name of Object.keys(inpSelects)) {
         formValues[name] = inpSelects[name].value
     }
@@ -2483,6 +2479,7 @@ function validateDdField(name, value, output) {
     if (!validateNumber(value, output)) return false
     if (dd_field.type == "number") value = 0 + value  // '' to 0 for range tests
     if (!validateRange(value, output)) return false
+    if (!validateNotification(value, output)) return false
     if (!validateRadioButton(value, output)) return false
 
     return true
@@ -2557,6 +2554,18 @@ function validateRange(value, output) {
     popCreateUniqueError("e", msg, "range", "id", dd_field.name, null, output);
 
     return false;
+}
+
+function validateNotification(value, output) {
+    /*  Trap these names and check if "true" then Notification Permission:
+            task_end_notification: "Notification when Task ends?|switch",
+            set_end_notification: "Notification when Set ends?|switch",
+            all_sets_end_notification: "Notification when All Sets end?|switch",
+    */
+    if (!dd_field.name.includes("end_notification")) return true
+    console.log("Notification:", name)
+    popClearByError("notification_permission")
+    return true
 }
 
 function validateRadioButton(value, output) {
