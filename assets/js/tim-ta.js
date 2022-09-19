@@ -452,12 +452,17 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
                 "setW:", setW, "setH:", setH)
     let start = Date.now()
     // console.log("sleepAndReportCoordinates() Before sleep:", start)
+    var lastH = null
     for (let i = 1; i < 50; i++) {
-        let sleepTime = 2 * i
-        await sleep(sleepTime)  // newX & newY undefined so wait
+        let sleepTime = i  // First time 1 ms is like no sleep at all
+        await sleep(sleepTime)
+        // newX & newY undefined for about 100 ms
         var [newX, newY, newW, newH] =  winViewGeometry(winName)
-        /*  Lag before winViewGeometry returns a number (but may be invalid) */
+        if (!isNaN(newH) && lastH == null) lastH = newH  // First time for Height
+        /*  Lag before winViewGeometry returns a variable */
         if (typeof newX == 'undefined') continue
+        if (isNaN(newX)) continue  // Chrome on Windows only so far discovered
+        if (lastH == newH) continue  // Height must change before we break
         console.log("Double-check newX", newX, "newY:", newY,
                     "newW:", newW, "newH:", newH)
         /* newX, newY and newH can always out to lunch, but newW
