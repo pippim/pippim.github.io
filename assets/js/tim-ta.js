@@ -472,6 +472,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         */
         if (lastH == newH) continue  // Height must change before we break
         // if (setW != newW) continue  // Keep looping while Width is different
+        await sleep(sleepTime)  // Extra sleep for double dipping
         let end = Date.now()
         console.log("LAST sleepAndReportCoordinates()",
                     "newX", newX, "newY:", newY,
@@ -479,6 +480,9 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
                     "Loop for 1s based i:", i, "milliseconds:", end - start)
         break
     }
+
+    // Double dipping
+    var [newX, newY, newW, newH] =  winViewGeometry(winName)
 
     // Not sure why have to invoke function again because newX undefined
     // let [newX, newY, newW, newH] =  winViewGeometry(winName)
@@ -490,7 +494,12 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     /* Fudge - Add chgH to setH and call again */
     var overrideW = setW + chgW
     var overrideH = setH + chgH
-    /* For Chrome - chgX & chgY is meaningful, for Firefox it is wild */
+    /* For Chrome - chgX & chgY is meaningful, for Firefox it is wild
+        Last-save  setX: -555 setY: 6 setW: 437 setH: 443
+        Last-save  setX: -555 setY: 6 setW: 437 setH: 443
+        Post-move  newX: undefined newY: 6 newW: 421 newH: 375
+        Difference chgX: NaN chgY: 0 chgW: 16 chgH: 68
+    */
     var overrideX = setX + chgX
     var overrideY = setY + chgY
     winName.resizeTo(setW, overrideH)
