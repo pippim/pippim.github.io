@@ -458,20 +458,25 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         await sleep(sleepTime)
         // newX & newY undefined for about 100 ms
         var [newX, newY, newW, newH] =  winViewGeometry(winName)
-        if (!isNaN(newH) && lastH == null) lastH = newH  // First time for Height
+        if (!isNaN(newH) && lastH == null) {
+            lastH = newH  // First time for Height
+            console.log("FIRST sleepAndReportCoordinates()",
+                        "newX", newX, "newY:", newY,
+                        "newW:", newW, "newH:", newH, "lastH:", lastH)
+        }
         /*  Lag before winViewGeometry returns a variable */
         if (typeof newX == 'undefined') continue
         if (isNaN(newX)) continue  // Chrome on Windows only so far discovered
-        console.log("Double-check newX", newX, "newY:", newY,
-                    "newW:", newW, "newH:", newH, "lastH:", lastH)
         /* newX, newY and newH can always out to lunch, but newW
             eventually gets it right after 120ms delay or so.
         */
         if (lastH == newH) continue  // Height must change before we break
         // if (setW != newW) continue  // Keep looping while Width is different
         let end = Date.now()
-        console.log ("sleepAndReportCoordinates() - newW:", newW,
-                     "Loop for 1s based i:", i, "milliseconds:", end - start)
+        console.log("LAST sleepAndReportCoordinates()",
+                    "newX", newX, "newY:", newY,
+                    "newW:", newW, "newH:", newH, "lastH:", lastH,
+                    "Loop for 1s based i:", i, "milliseconds:", end - start)
         break
     }
 
@@ -485,6 +490,9 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     /* Fudge - Add chgH to setH and call again */
     var overrideW = setW + chgW
     var overrideH = setH + chgH
+    /* For Chrome - chgX & chgY is meaningful, for Firefox it is wild */
+    var overrideX = setX + chgX
+    var overrideY = setY + chgY
     winName.resizeTo(setW, overrideH)
     if (chgX != 0 || chgY != 0 || chgW != 0 || chgH != 0) {
         console.log("Last-save  setX:", setX, "setY:", setY,
@@ -677,24 +685,26 @@ function paintTasksTable() {
 }  // End of paintTasksTable()
 
 function ttaNameColumnStyle() {
-    // project_name or task_name get extra padding.
-    var col = 99;
-    if (scrSmall) { col = 3; }  // The "name" column to receive extra padding
-    else if (currentTable == "Projects") { col = 7; }
-    else if (currentTable == "Tasks") { col = 6; }
-    else if (currentTable == "RunTimers") { col = 3; }
-    else { console.log("ttaNameColumnStyle() - currentTable not handled:", currentTable); }
-    ttaStyleSheet.style.setProperty("--name-column", col);
+    // 'col' = project_name or task_name that gets extra padding.
+    var col = 99
+    if (scrSmall) col = 3  // The "name" column to receive extra padding
+    else if (currentTable == "Projects")  col = 7
+    else if (currentTable == "Tasks")     col = 6
+    else if (currentTable == "RunTimers") col = 3
+    else console.log("ttaNameColumnStyle() - invalid 'currentTable':",
+                     currentTable)
+
+    ttaStyleSheet.style.setProperty("--name-column", col)
     // get variable from inline style - NOT WORKING
-    var display_col = ttaStyleSheet.style.getPropertyValue("--name-column");
+    var display_col = ttaStyleSheet.style.getPropertyValue("--name-column")
     // console.log("css variable --name-column:", display_col)
 
     var html = "<style>\n";
     html += 'table.tta-table td:nth-child(' + col + ') {\n' +
             '  padding: .25rem 1rem;\n' +
             '}\n'
-    html += "</style>\n";
-    return html;
+    html += "</style>\n"
+    return html
 }  // End of ttaNameColumnStyle()
 
 function tabTasksHeading() {
