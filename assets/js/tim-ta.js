@@ -511,9 +511,8 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
         console.log("Difference chgX:", chgX, "chgY:", chgY,
                     "chgW:", chgW, "chgH:", chgH)
     }
-    /*
-    */
-}
+
+}  // End of
 
 function convertVersion11() {
     /*  Testing for version 1.1 without committing to upgrade yet */
@@ -1022,7 +1021,19 @@ function clickAddTask() {
 
 function clickAddProject() {
     // Create empty record for add
-    ttaProject = Object.assign({}, tta_project)
+    /*  When:
+            starting with brand new storage
+            run sample data laundry project in a popup window
+            cancel timers
+            click "All Projects"
+            click "+ New Project"
+            Enter project_name and Save
+            Corrupt data has created new project with three laundry tasks
+    */
+    ttaProject = Object.assign({}, tta_project)  // Only a shallow copy
+    ttaProject.arrTasks = []    // Sept 21/22 array & object have values
+    ttaProject.objTasks = {}    // from last project in memory
+
     oldProject = Object.assign({}, tta_project)
     paintProjectForm("Add");
 }
