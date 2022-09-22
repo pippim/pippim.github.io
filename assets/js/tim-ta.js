@@ -512,7 +512,7 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
                     "chgW:", chgW, "chgH:", chgH)
     }
 
-}  // End of
+}  // End of sleepAndReportCoordinates(winName, setX, setY, setW, setH)
 
 function convertVersion11() {
     /*  Testing for version 1.1 without committing to upgrade yet */
@@ -524,6 +524,8 @@ function convertVersion11() {
     if ("use_popup_window" in ttaConfig11) return  // At version 1.1 already
 
     console.log("Converting Tim-ta version 1.0 to version 1.1")
+    ttaConfig11.device_name: "Unique device name for testing/development processing"
+    ttaConfig11.color_scheme: "Cayman Theme"
     ttaConfig11.countdown_in_title = "true"
     ttaConfig11.use_popup_window = "true"
     ttaConfig11.use_popup_last_position = "false"
@@ -532,7 +534,6 @@ function convertVersion11() {
         console.log("BEGIN ttaConfig11.objProjects name:", name)
         // Initialize new fields
         ttaProject11 = ttaConfig11.objProjects[name]
-        ttaProject11.countdown_in_title = "default"
         ttaProject11.use_popup_window = "default"
         ttaProject11.use_popup_last_position = "default"
         ttaProject11.popup_position_x = "30"
@@ -571,7 +572,9 @@ function get_browser() {
 var browser=get_browser(); // browser.name = 'Chrome'
                            // browser.version = '40'
 
-console.log(browser);
+console.log("browser() and navigator")
+console.log(browser)
+console.log(navigator)
 
 function paintProjectsTable() {
     // Assumes ttaConfig and ttaProject are populated
