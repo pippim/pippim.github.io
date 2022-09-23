@@ -236,7 +236,7 @@ function saveConfig() {
 /* Convert earlier versions of Tim-ta configuration to new version */
 function convertVersion11() {
     /*  Conversion for version 1.1  */
-    if ("use_popup_window" in ttaConfig11) return  // At version 1.1 already
+    if ("use_popup_window" in ttaConfig) return  // At version 1.1 already
 
     console.log("Converting Tim-ta version 1.0 to version 1.1")
     const browser = getBrowser()
