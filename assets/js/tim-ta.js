@@ -524,8 +524,9 @@ function convertVersion11() {
     if ("use_popup_window" in ttaConfig11) return  // At version 1.1 already
 
     console.log("Converting Tim-ta version 1.0 to version 1.1")
-    ttaConfig11.environment = navigator.oscpu + " " + getBrowser.name + " " +
-                              getBrowser.version
+    const browser = getBrowser()
+    ttaConfig11.environment = navigator.oscpu + " " + browser.name + " " +
+                              browser.version
     ttaConfig11.color_scheme = "Cayman Theme"
     ttaConfig11.countdown_in_title = "true"
     ttaConfig11.use_popup_window = "true"
