@@ -1976,7 +1976,7 @@ function paintConfigForm() {
     html += buildInput("confirm_delete_phrase", mode);
     html += buildLine("Window interface options")
     html += buildInput("environment", mode)
-    if (environment == "Linux x86_64 Firefox 88")
+    if (ttaConfig.environment == "Linux x86_64 Firefox 88")
         html += buildInput("color_scheme", mode)
     html += buildInput("countdown_in_title", mode)
     html += buildInput("use_popup_window", mode)
