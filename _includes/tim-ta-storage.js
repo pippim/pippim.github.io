@@ -1,4 +1,4 @@
-// Tim-ta (Timed Tasks) /_includes/tim-ta-storage.js
+// Tim-ta (Timed Tasks) Version 1.1 /_includes/tim-ta-storage.js
 
 // Configuration & Container for all Tim-ta Projects
 // Default below for creation, overwritten when retrieved from localStorage
@@ -21,7 +21,13 @@ var tta_config = {
     all_sets_end_filename: "Alarm_03.mp3",
     all_sets_end_notification: "false",
     progress_bar_update_seconds: 1,
-    confirm_delete_phrase: "y"
+    confirm_delete_phrase: "y",
+    /* Version 1.1 - for version 1.0 fields will be undefined. */
+    environment: "Unique device name for testing/development processing",
+    color_scheme: "Cayman Theme",  // Not supported yet but in local storage
+    countdown_in_title: "true",
+    use_popup_window: "true",
+    use_popup_last_position: "true"
 }
 
 // SINGLE Tim-ta Project
@@ -45,7 +51,14 @@ var tta_project = {
     all_sets_end_filename: "default",
     all_sets_end_notification: "default",
     progress_bar_update_seconds: "default",
-    confirm_delete_phrase: "default"
+    confirm_delete_phrase: "default",
+    /* Version 1.1 - for version 1.0 fields will be undefined. */
+    use_popup_window: "default",
+    use_popup_last_position: "default",
+    popup_position_x: "30",
+    popup_position_y: "30",
+    popup_size_w: "600",
+    popup_size_h: "400"
 }
 
 // SINGLE Timer within a Tim-ta Project
@@ -85,7 +98,17 @@ var data_dictionary = {
     progress_bar_update_seconds: "Seconds between countdown updates|number|1|1000",
     fail_test_1: "Hello World",
     fail_test_2: "Good-bye Cruel World...|text|lower|upper|No such place!",
-    confirm_delete_phrase: "Text to confirm delete action|text"
+    confirm_delete_phrase: "Text to confirm delete action|text",
+    /* Version 1.1 - for version 1.0 fields will be undefined. */
+    environment: "Device operating system & browser|text",
+    color_scheme: "Color scheme|select|color_schemes",
+    countdown_in_title: "Display countdown in task table title?|switch",
+    use_popup_window: "Use popup window on large screens?|switch",
+    use_popup_last_position: "Reuse last popup window location?|switch",
+    popup_position_x: "x-offset (left) popup window position|number|0|10000",
+    popup_position_y: "y-offset (top) popup window position|number|0|10000",
+    popup_size_w: "Popup window width|number|0|9999",
+    popup_size_h: "Popup window height|number|0|9999"
 }
 
 var dd_field = {
@@ -136,7 +159,8 @@ function get_dd_field (name) {
     get_dd_field("fail_test_2")
 */
 
-var savedSelectStockNames;
+var savedSelectStockNames
+var websiteColorSchemes
 
 function initSelectFiles() {
     /* Called on javascript load, DOM not loaded yet */
@@ -144,21 +168,26 @@ function initSelectFiles() {
     // Convert array of stock sound filenames to string delineated by '/'
     savedSelectStockNames = "";
     for (var i = 0; i < stockNames.length; i++) {
-        if (i != 0) { savedSelectStockNames += "/"; }  // Add / if not first in array
-        savedSelectStockNames += stockNames[i];
+        if (i != 0) savedSelectStockNames += "/"  // Add / if not first in array
+        savedSelectStockNames += stockNames[i]
     }
 
+    // Sept 21/22 - Only one color scheme. Later append "|Dark Theme"
+    websiteColorSchemes = "Cayman Theme"
+
     for (const key of Object.keys(data_dictionary)) {
-        if (key.startsWith("fail_test")) { continue; }
-        get_dd_field(key);
-        if (dd_field.type == "select" && dd_field.lower == "sound_filenames") {
+        if (key.startsWith("fail_test")) continue  // Ignore test fail data
+        get_dd_field(key)
+        if (dd_field.type == "select" && dd_field.lower == "sound_filenames")
             // Update data dictionary key with list of REAL filenames
-            data_dictionary[key] = dd_field.label + "|select|" + savedSelectStockNames;
-         }
+            data_dictionary[key] = dd_field.label + "|select|" + savedSelectStockNames
+        if (dd_field.type == "select" && dd_field.lower == "color_schemes")
+            // Update data dictionary key with list of REAL filenames
+            data_dictionary[key] = dd_field.label + "|select|" + websiteColorSchemes
     }
 }
 
-initSelectFiles();
+initSelectFiles()
 
 function updateSelectFiles() {
     /*  Called after custom sound files added after drag & drop sound files
@@ -168,85 +197,146 @@ function updateSelectFiles() {
     // Convert array of stock sound filenames to string delineated by '/'
     //console.log("updateSelectFiles() customNames.length:", customNames.length)
     var custom = ""
-    for (var i = 0; i < customNames.length; i++) {
-        custom += "/"  // Add '/' delimiter
-        custom += customNames[i]
-    }
+    for (var i = 0; i < customNames.length; i++) custom += "/" + customNames[i]
 
     for (const key of Object.keys(data_dictionary)) {
-        if (key.startsWith("fail_test")) { continue }
+        if (key.startsWith("fail_test")) continue
         get_dd_field(key)
+        // Update data dictionary with list of REAL filenames + custom names
         if (dd_field.type == "select" &&
-            dd_field.lower.startsWith(savedSelectStockNames)) {
-                // Update data dictionary key with list of REAL filenames
+            dd_field.lower.startsWith(savedSelectStockNames))
                 data_dictionary[key] = dd_field.label + "|select|" +
                                        savedSelectStockNames + custom
-                //console.log("data_dictionary[key]:", data_dictionary[key])
-        }
     }
 }
 
 // Global Names
 var ttaConfig, ttaProject, ttaTask;
 
-// Read localStorage copy of tta
-readConfig();
+// Read localStorage copy of tta, if null then build sample data
+readConfig()
 if (ttaConfig == null) {
-    ttaNewConfig();  // Create new config
-    saveConfig();
+    ttaNewConfig()  // Create new config
+    saveConfig()
 }
 
 function readConfig() {
     ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
+
+    if ("use_popup_window" in ttaConfig) return  // At version 1.1 already
+
+    /* Upgrade version 1.0 to version 1.1 */
+    convertVersion11()
 }
+
 function saveConfig() {
-    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig));
+    localStorage.setItem('ttaConfig', JSON.stringify(ttaConfig))
 }
+
+/* Convert earlier versions of Tim-ta configuration to new version */
+function convertVersion11() {
+    /*  Conversion for version 1.1  */
+    if ("use_popup_window" in ttaConfig11) return  // At version 1.1 already
+
+    console.log("Converting Tim-ta version 1.0 to version 1.1")
+    const browser = getBrowser()
+    ttaConfig.environment = navigator.oscpu + " " + browser.name + " " +
+                            browser.version
+    ttaConfig.color_scheme = "Cayman Theme"
+    ttaConfig.countdown_in_title = "true"
+    ttaConfig.use_popup_window = "true"
+    ttaConfig.use_popup_last_position = "false"
+
+    // Find all projects in configuration
+    for (const name of Object.keys(ttaConfig.objProjects)) {
+        console.log("BEGIN ttaConfig.objProjects name:", name)
+        // Initialize new fields in project
+        ttaProject = ttaConfig.objProjects[name]
+        ttaProject.use_popup_window = "default"
+        ttaProject.use_popup_last_position = "default"
+        ttaProject.popup_position_x = "30"
+        ttaProject.popup_position_y = "30"
+        ttaProject.popup_size_w = "600"
+        ttaProject.popup_size_h = "400"
+        // Update new fields from work name to real
+        ttaConfig.objProjects[name] = ttaProject
+        /* print fields in Project for verification */
+        for (const key of Object.keys(ttaProject))
+            console.log("  ttaProject key:", key,
+                        "value:", ttaProject[key])
+    }
+    saveConfig()
+}
+
+function getBrowser() {
+    // From: https://stackoverflow.com/a/16938481/6929343
+    var ua = navigator.userAgent, tem
+    var M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
+    if (/trident/i.test(M[1])) {
+        tem = /\brv[ :]+(\d+)/g.exec(ua) || []
+        return {name: 'IE', version: (tem[1] || '') }
+    }
+    if (M[1]==='Chrome') {
+        tem=ua.match(/\bOPR|Edge\/(\d+)/)
+        if (tem!=null) return { name:'Opera', version:tem[1] }
+    }
+    M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?']
+    if ((tem=ua.match(/version\/(\d+)/i))!=null) M.splice(1,1,tem[1])
+    return {
+        name: M[0],
+        version: M[1]
+    }
+ }
+
 // Uncomment below to erase corrupted configuration
 // ttaNewConfig();
 // saveConfig();
 
 function ttaNewConfig() {
-    // Object.assign: https://stackoverflow.com/a/34294740/6929343
-    ttaConfig = Object.assign({}, tta_config);
-    ttaProject = Object.assign({}, tta_project);
-    ttaProject.project_name = "Laundry";
+    // Create a new database with sample Laundry Project
+    ttaConfig = Object.assign({}, tta_config)
+    ttaProject = Object.assign({}, tta_project)
+    ttaProject.arrTasks = []  // Above shallow copy won't initialize arrays
+    ttaProject.objTasks = {}  //  and objects
+    ttaProject.project_name = "Laundry"
 
-    ttaNewTask("Wash Cycle");
-    ttaTaskDuration("", "16", "30");
-    ttaAddTask(ttaTask);
+    ttaNewTask("Wash Cycle")
+    ttaTaskDuration("", "16", "30")
+    ttaAddTask(ttaTask)
 
-    ttaNewTask("Rinse Cycle");
-    ttaTaskDuration("", "13", "15");
-    ttaAddTask(ttaTask);
+    ttaNewTask("Rinse Cycle")
+    ttaTaskDuration("", "13", "15")
+    ttaAddTask(ttaTask)
 
-    ttaNewTask("Dryer");
-    ttaTaskDuration("", "58", "");
-    ttaAddTask(ttaTask);
+    ttaNewTask("Dryer")
+    ttaTaskDuration("", "58", "")
+    ttaAddTask(ttaTask)
 
-    ttaConfig.arrProjects = [ttaProject.project_name];
-    ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
-    saveConfig();
+    ttaConfig.arrProjects = [ttaProject.project_name]
+    ttaConfig.objProjects[ttaProject.project_name] = ttaProject
+    saveConfig()
 }
 
 function ttaNewTask(name) {
-    // Only used for creating test data
-    ttaTask = Object.assign({}, tta_task); // https://stackoverflow.com/a/34294740/6929343
-    ttaTask.task_name = name;
-    ttaTask.hours = ttaTask.minutes = ttaTask.seconds = "";
+    // Only used for creating sample Laundry Timer data
+    // https://stackoverflow.com/a/34294740/6929343
+    ttaTask = Object.assign({}, tta_task)
+    ttaTask.task_name = name
+    // Numeric fields are stored as strings and converted as necessary
+    ttaTask.hours = ttaTask.minutes = ttaTask.seconds = ""
 }
 
 function ttaAddTask(obj) {
-    // Only used for creating test data
-    ttaProject.arrTasks.push(obj.task_name);
-    ttaProject.objTasks[obj.task_name] = obj;
+    // Only used for creating sample Laundry Timer data
+    ttaProject.arrTasks.push(obj.task_name)
+    ttaProject.objTasks[obj.task_name] = obj
 }
 
 function ttaTaskDuration(hours, minutes, seconds) {
-    // Only used for creating test data
-    ttaTask.hours = hours;
-    ttaTask.minutes = minutes;
-    ttaTask.seconds = seconds;
+    // Only used for creating sample Laundry Timer data. Already in string format
+    ttaTask.hours = hours
+    ttaTask.minutes = minutes
+    ttaTask.seconds = seconds
 }
 
-/* End of /_includes/tim-ta-storage.js */
+/* End of /_includes/tim-ta-storage.js (Version 1.1) */
