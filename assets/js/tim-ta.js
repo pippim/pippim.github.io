@@ -524,6 +524,9 @@ function convertVersion11() {
     if ("use_popup_window" in ttaConfig11) return  // At version 1.1 already
 
     console.log("Converting Tim-ta version 1.0 to version 1.1")
+    ttaConfig11.device_name = navigator.oscpu + " " + getBrowser.name + " " +
+                              getBrowser.version
+
     ttaConfig11.device_name = "Unique device name for testing/development processing"
     ttaConfig11.color_scheme = "Cayman Theme"
     ttaConfig11.countdown_in_title = "true"
@@ -552,6 +555,7 @@ function convertVersion11() {
 convertVersion11()  // One time conversion
 
 function getBrowser() {
+    // From: https://stackoverflow.com/a/16938481/6929343
     var ua = navigator.userAgent, tem
     var M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
     if (/trident/i.test(M[1])) {
