@@ -342,21 +342,8 @@ table.tta-table th {
 
 }  // End of ttaApplyGlobalStyles()
 
-var ttaConfig11, ttaProject11
 
-function readConfigToVersion11() {
-    ttaConfig11 = JSON.parse(localStorage.getItem('ttaConfig'));
-}
-
-function readConfig11() {
-    ttaConfig11 = JSON.parse(localStorage.getItem('delete_me_1.1'));
-}
-
-function saveConfig11() {
-    localStorage.setItem('delete_me_1.1', JSON.stringify(ttaConfig11));
-}
-
-function savePopupProject11(name, winName) {
+function savePopupProject(name, winName) {
     /*  Reread configuration in case another app changed.
         Get popup window coordinates during onload operation.
         Update project's popup window data and save configuration
@@ -367,15 +354,15 @@ function savePopupProject11(name, winName) {
 
     /*  Although popup window last location might be turned off now, it may
         be turned on in the future. So save popup window position and size. */
-    readConfig11()
-    ttaProject11 = ttaConfig11.objProjects[name]
-    ttaProject11.popup_position_x = winX.toString()
-    ttaProject11.popup_position_y = winY.toString()
-    ttaProject11.popup_size_w = winW.toString()
-    ttaProject11.popup_size_h = winH.toString()
+    readConfig()
+    ttaProject = ttaConfig.objProjects[name]
+    ttaProject.popup_position_x = winX.toString()
+    ttaProject.popup_position_y = winY.toString()
+    ttaProject.popup_size_w = winW.toString()
+    ttaProject.popup_size_h = winH.toString()
     // Update new fields
-    ttaConfig11.objProjects[name] = ttaProject11
-    saveConfig11()
+    ttaConfig.objProjects[name] = ttaProject
+    saveConfig()
 }
 
 function winViewGeometry(winName) {
@@ -404,23 +391,23 @@ function winViewGeometry(winName) {
     return [getX, getY, getW, getH]
 }
 
-function readPopupProject11(name, winName) {
+function readPopupProject(name, winName) {
     /*  Reread configuration in case another app changed.
         Get popup window coordinates from last move/resizing.
     */
 
-    // console.log("readPopupProject11 (name):", name)
-    readConfig11()
-    ttaProject11 = ttaConfig11.objProjects[name]
+    // console.log("readPopupProject (name):", name)
+    readConfig()
+    ttaProject = ttaConfig.objProjects[name]
 
     /*  Cannot check field until stored in real configuration file. */
-    //if (ttaProject11.use_popup_last_location == "false") return
+    //if (ttaProject.use_popup_last_location == "false") return
 
     var winX, winY, winW, winH  // Save popup window position and size
-    winX = parseInt(ttaProject11.popup_position_x)
-    winY = parseInt(ttaProject11.popup_position_y)
-    winW = parseInt(ttaProject11.popup_size_w)
-    winH = parseInt(ttaProject11.popup_size_h)
+    winX = parseInt(ttaProject.popup_position_x)
+    winY = parseInt(ttaProject.popup_position_y)
+    winW = parseInt(ttaProject.popup_size_w)
+    winH = parseInt(ttaProject.popup_size_h)
 
     winMoveGeometry(winName, winX, winY, winW, winH)
 
@@ -513,84 +500,6 @@ async function sleepAndReportCoordinates(winName, setX, setY, setW, setH) {
     }
 
 }  // End of sleepAndReportCoordinates(winName, setX, setY, setW, setH)
-
-function convertVersion11() {
-    /*  Testing for version 1.1 without committing to upgrade yet */
-    if (localStorage.getItem("delete_me_1.1") === null)
-        readConfigToVersion11()
-    else
-        readConfig11()
-
-    if ("use_popup_window" in ttaConfig11) return  // At version 1.1 already
-
-    console.log("Converting Tim-ta version 1.0 to version 1.1")
-    const browser = getBrowser()
-    ttaConfig11.environment = navigator.oscpu + " " + browser.name + " " +
-                              browser.version
-    ttaConfig11.color_scheme = "Cayman Theme"
-    ttaConfig11.countdown_in_title = "true"
-    ttaConfig11.use_popup_window = "true"
-    ttaConfig11.use_popup_last_position = "false"
-
-    for (const name of Object.keys(ttaConfig11.objProjects)) {
-        console.log("BEGIN ttaConfig11.objProjects name:", name)
-        // Initialize new fields
-        ttaProject11 = ttaConfig11.objProjects[name]
-        ttaProject11.use_popup_window = "default"
-        ttaProject11.use_popup_last_position = "default"
-        ttaProject11.popup_position_x = "30"
-        ttaProject11.popup_position_y = "30"
-        ttaProject11.popup_size_w = "600"
-        ttaProject11.popup_size_h = "400"
-        // Update new fields
-        ttaConfig11.objProjects[name] = ttaProject11
-        for (const key of Object.keys(ttaProject11))
-            console.log("  ttaProject11 key:", key,
-                        "value:", ttaProject11[key])
-    }
-    saveConfig11()
-}
-
-convertVersion11()  // One time conversion
-
-function getBrowser() {
-    // From: https://stackoverflow.com/a/16938481/6929343
-    var ua = navigator.userAgent, tem
-    var M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
-    if (/trident/i.test(M[1])) {
-        tem = /\brv[ :]+(\d+)/g.exec(ua) || []
-        return {name: 'IE', version: (tem[1] || '') }
-    }
-    if (M[1]==='Chrome') {
-        tem=ua.match(/\bOPR|Edge\/(\d+)/)
-        if (tem!=null) return { name:'Opera', version:tem[1] }
-    }
-    M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?']
-    if ((tem=ua.match(/version\/(\d+)/i))!=null) M.splice(1,1,tem[1])
-    return {
-        name: M[0],
-        version: M[1]
-    }
- }
-
-var browser = getBrowser()  // browser.name = 'Chrome'
-                            // browser.version = '40'
-
-console.log("browser() and navigator")
-console.log(browser.name, browser.version)
-/*
-console.log(browser)
-    Object { name: "Firefox", version: "88" }
-*/
-console.log(navigator.oscpu)
-
-/*
-console.log(navigator)
-    Navigator { permissions: Permissions, mimeTypes: MimeTypeArray,
-    plugins: PluginArray, doNotTrack: "unspecified", maxTouchPoints: 0,
-    mediaCapabilities: MediaCapabilities, oscpu: "Linux x86_64",
-    vendor: "", vendorSub: "", productSub: "20100101" }
-*/
 
 function paintProjectsTable() {
     // Assumes ttaConfig and ttaProject are populated
@@ -1207,7 +1116,7 @@ function setRunWindow(html) {
     }
 
     // move to last location and size
-    readPopupProject11(ttaProject.project_name, runWindow)
+    readPopupProject(ttaProject.project_name, runWindow)
     //runWindow.focus()
     runWindow.document.title = "Tim-ta run project " + ttaProject.project_name
 
@@ -1850,7 +1759,7 @@ async function exitAllTimers() {
 
     if (fRunWindowAsPopup) {
         // Running on large screen with popup window option
-        savePopupProject11(ttaProject.project_name, runWindow)  // Save geometry
+        savePopupProject(ttaProject.project_name, runWindow)  // Save geometry
         runWindow.close()
         runWindow = null  // Tell functions not to use anymore
         ttaRunElm = null  // parent element to anchor messages to
