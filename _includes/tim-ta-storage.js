@@ -254,10 +254,7 @@ function convertVersion11() {
         ttaProject = ttaConfig.objProjects[name]
         ttaProject.use_popup_window = "default"
         ttaProject.use_popup_last_position = "default"
-        ttaProject.popup_position_x = "30"
-        ttaProject.popup_position_y = "30"
-        ttaProject.popup_size_w = "600"
-        ttaProject.popup_size_h = "400"
+        setDefaultPopupWindow()
         // Update new fields from work name to real
         ttaConfig.objProjects[name] = ttaProject
         /* print fields in Project for verification */
@@ -266,6 +263,14 @@ function convertVersion11() {
                         "value:", ttaProject[key])
     }
     saveConfig()
+}
+
+function setDefaultPopupWindow () {
+    // called above and from /assets/js/tim-ta.js
+    ttaProject.popup_position_x = "30"
+    ttaProject.popup_position_y = "30"
+    ttaProject.popup_size_w = "600"
+    ttaProject.popup_size_h = "400"
 }
 
 function getBrowser() {
