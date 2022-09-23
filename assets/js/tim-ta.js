@@ -573,8 +573,20 @@ var browser=get_browser(); // browser.name = 'Chrome'
                            // browser.version = '40'
 
 console.log("browser() and navigator")
+console.log(browser.name, browser.version)
+/*
 console.log(browser)
+    Object { name: "Firefox", version: "88" }
+*/
+console.log(navigator.oscpu)
+
+/*
 console.log(navigator)
+    Navigator { permissions: Permissions, mimeTypes: MimeTypeArray,
+    plugins: PluginArray, doNotTrack: "unspecified", maxTouchPoints: 0,
+    mediaCapabilities: MediaCapabilities, oscpu: "Linux x86_64",
+    vendor: "", vendorSub: "", productSub: "20100101" }
+*/
 
 function paintProjectsTable() {
     // Assumes ttaConfig and ttaProject are populated
