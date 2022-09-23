@@ -1972,14 +1972,15 @@ function paintConfigForm() {
     html += buildInput("all_sets_end_filename", mode);
     html += buildInput("all_sets_end_notification", mode);
     html += buildLine("Default Options for all Projects and Tasks");
-    html += buildInput("progress_bar_update_seconds", mode);
+    // html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
-    /* TODO: Version 1.1 add new fields:
-    html += buildLine("Window interface options");
-    html += buildInput("countdown_in_title", mode);
-    html += buildInput("use_popup_window", mode);
-    html += buildInput("use_popup_last_position", mode);
-    */
+    html += buildLine("Window interface options")
+    html += buildInput("environment", mode)
+    if (environment == "Linux x86_64 Firefox 88")
+        html += buildInput("color_scheme", mode)
+    html += buildInput("countdown_in_title", mode)
+    html += buildInput("use_popup_window", mode)
+    html += buildInput("use_popup_last_position", mode)
     html += '</table></form>\n' ;
     html += '</div>\n';
 
@@ -2035,17 +2036,14 @@ function paintProjectForm(mode) {
     html += buildInput("all_sets_end_filename", mode);
     html += buildInput("all_sets_end_notification", mode);
     html += buildLine("Miscellaneous Options");
-    html += buildInput("progress_bar_update_seconds", mode);
+    // html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
-    /* TODO: Version 1.1 add new fields:
-    html += buildInput("countdown_in_title", mode);
     html += buildInput("use_popup_window", mode);
     html += buildInput("use_popup_last_position", mode);
     html += buildInput("popup_position_x", mode);
     html += buildInput("popup_position_y", mode);
     html += buildInput("popup_size_w", mode);
     html += buildInput("popup_size_h", mode);
-    */
     html += '</table></form>\n' ;
     html += '</div>\n';
 
@@ -2093,7 +2091,7 @@ function paintTaskForm(mode) {
     html += buildInput("task_end_filename", mode);
     html += buildInput("task_end_notification", mode);
     html += buildLine("Miscellaneous Options");
-    html += buildInput("progress_bar_update_seconds", mode);
+    // html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
     html += '</table></form>\n' ;
     html += '</div>\n';
