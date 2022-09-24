@@ -4,6 +4,9 @@
 
 {% include draggable-window.js %}
 
+const setColorScheme = colorScheme =>
+    document.documentElement.className = colorScheme
+
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
 function scrSetSize() {
@@ -1979,9 +1982,12 @@ function paintConfigForm() {
     html += buildLine("Default Options for all Projects and Tasks");
     // html += buildInput("progress_bar_update_seconds", mode);
     html += buildInput("confirm_delete_phrase", mode);
+
     html += buildLine("Window interface options")
     html += buildInput("environment", mode)
     if (ttaConfig.environment == "Linux x86_64 Firefox 88")
+        // https://www.lewismiddleton.net/cayman-dark/
+        // https://github.com/lewismiddleton/cayman-dark
         html += buildInput("color_scheme", mode)
     html += buildInput("countdown_in_title", mode)
     html += buildInput("use_popup_window", mode)
