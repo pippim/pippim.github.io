@@ -400,6 +400,10 @@ function readPopupProject(name, winName) {
     readConfig()
     ttaProject = ttaConfig.objProjects[name]
 
+    if (ttaProject.use_popup_last_position == "false")
+        // Override to use x,y = 30,30 and w,h = 600,400
+        setDefaultPopupWindow()
+
     /*  Cannot check field until stored in real configuration file. */
     //if (ttaProject.use_popup_last_location == "false") return
 
@@ -1023,6 +1027,7 @@ function paintRunTimers(i) {
     fRunWindowAsPopup = false  // Are we running windows as a popup?
     fTaskAndTimeInHeading = true  // Later on set this up in configuration
     if (!scrLarge) runWindow = window  // If no popup runWindow is our window
+    else if (ttaProject.use_popup_window == "false") runWindow = window
     else fRunWindowAsPopup = true // Later we will set 'runWindow' variable
 
     currentForm = "formRunTimers"
