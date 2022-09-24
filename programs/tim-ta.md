@@ -229,14 +229,23 @@ will be provided. After that, new features will be added.
 ### September 16, 2022 Update
 
 - Running timers can appear in popup windows that launch when 
-large screen (>1200 pixels) is active.
-- When you move or resize a popup window it restarts the same way next time.
+large screen (>1007 pixels) is active.
+- When you move or resize a popup window it restarts the same 
+way the next time that Project is run.
 - There are limitations with browsers being able to move to 
 far right and far bottom positions.
 - Running timer task name and remaining time appears in window title bar.
-- "Override" button for task timer to restart/end, +/- time remaining, play/pause.
+- "Override" button for task timer to restart/end, 
++/- time remaining, play/pause.
+- When switching on Desktop Notifications, immediately check if 
+browser permission has been granted.
 - A new enhancement has begun to convert version 1.0 of Tim-ta
 with saved popup window locations and sizes in version 1.1.
+
+### September 24, 2022 Update
+
+- Tim-ta conversion to version 1.1 is complete.
+- Development has begun on a dark theme for the popup window.
 
 ## Tim-ta Version 1.0 Development History
 
@@ -458,9 +467,18 @@ to open "***Developer Tools***"
 <a id="hdr12"></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
 
-# Running timer in popup Window
+# Running Project Timers in a Popup Window
 
-Go to Firefox settings:
+On large monitors, or on multiple-monitor systems, you can run
+Project Task Timers in a popup window. The smaller popup window
+can then be mostly covered up by other working windows.
+
+When the smaller popup window sounds an alarm it will move above
+the other working windows.
+
+## Browser Permissions
+
+In order to allow popup windows, go to Firefox settings:
 
 {% include image.html src="/assets/img/tim-ta/pippim website allow popups.png"
    alt="Tim-ta Under Construction.png"
@@ -468,10 +486,13 @@ Go to Firefox settings:
    caption="pippim website allow popups.png"
 %}
 
-and allow popups by pippim.com website. This allows the popup window to gain
-focus when alarm sounds. If you don't set this then popup window still runs
-but, doesn't steal focus when alarm sounds. EG it stays in the background
-behind other windows when the alarm sounds.
+Notice how popups are allowed for the `pippim.com` website. 
+This allows the popup window to gain focus when alarm sounds. 
+If you don't set this then popup window still runs but, it
+doesn't steal focus when alarm sounds. EG it stays in the 
+background behind other windows when the alarm sounds.
+
+<div id="BrowserPopupWindowPermissions"></div>
 
 ## Popup Window Geometry Saved Settings
 
