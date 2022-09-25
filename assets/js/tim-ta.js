@@ -212,7 +212,7 @@ audio { vertical-align:middle }
 /* .tta-btn:hover, .tta-btn:focus { FOCUS = BUTTON STAYS HIGHLIGHTED AFTER CLICK */
 .tta-btn:hover {
     background-color: var(--button-focus-color);
-    color: var(--header-text-color);
+    color: var(--header-heading-color);
 }
 .tta-btn:focus-visible {
     /* remove default focus style */
