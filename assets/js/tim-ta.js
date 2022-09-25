@@ -141,11 +141,25 @@ function ttaApplyGlobalStyles() {
     styles = `
 
 :root {
-    --bg-color: #159957;
-    --bg-color-secondary: #155799;
     --highlight-color: yellow;
     --honeydew: #F0FFF0;
     --name-column: 3;
+/* From github/page-themes/cayman/_sass/variables.scss */
+--header-heading-color: #fff;
+--header-bg-color: #159957;
+--header-bg-color-secondary: #155799;
+/* Text */
+--section-headings-color: #159957;
+--body-text-color: #606c71;
+--body-link-color: #1e6bb8;
+--blockquote-text-color: #819198;
+/* Code */
+--code-bg-color: #f3f6fa;
+--code-text-color: #567482;
+/* Borders */
+--border-color: #dce6f0;
+--table-border-color: #e9ebec;
+--hr-border-color: #eff0f1;
 }
 
 .ttaContainer {
@@ -164,9 +178,9 @@ function ttaApplyGlobalStyles() {
     padding: .25rem .5rem;
     font-size: x-large;
     color: var(--highlight-color);
-    background-color: var(--bg-color);
+    background-color: var(--header-bg-color);
     background-image: linear-gradient(120deg,
-        var(--bg-color-secondary), var(--bg-color));
+        var(--header-bg-color-secondary), var(--header-bg-color));
 }
 
 .leftFoot, .centerFoot, .rightFoot { }
@@ -176,7 +190,7 @@ audio { vertical-align:middle }
 
 /* .tta-btn WAS styled with hdr-btn that has left margin */
 .tta-btn {
-    color: var(--bg-color);
+    color: var(--header-bg-color);
     padding: 0px 10px;
     background-color: var(--honeydew);
     font-size: x-large;
@@ -318,9 +332,9 @@ table.tta-table th {
     padding: .25rem .5rem;
     font-size: x-large;
     color: var(--highlight-color);
-    background-color: var(--bg-color);
+    background-color: var(--header-bg-color);
     background-image: linear-gradient(120deg,
-        var(--bg-color-secondary), var(--bg-color));
+        var(--header-bg-color-secondary), var(--header-bg-color));
 }
 
 /*  For running timers in popup window copy from Config Init style */
@@ -328,7 +342,7 @@ table.tta-table th {
     border-style: solid;
     border-width: 2px;
     border-radius: 1rem;
-    border-color: var(--bg-color-secondary);
+    border-color: var(--header-bg-color-secondary);
     margin: .4rem;
     padding: .4rem;
 }
@@ -3602,9 +3616,9 @@ function popBuildStyle(msg_type) {
             //'  border: 2px solid grey;\n' +
             '  border-radius: 1rem;\n' +
             '  color: yellow;\n' +
-            '  background-color: var(--bg-color);\n' +
+            '  background-color: var(--header-bg-color);\n' +
             '  background-image: linear-gradient(120deg, \n' +
-            '    var(--bg-color-secondary), var(--bg-color));\n' +
+            '    var(--header-bg-color-secondary), var(--header-bg-color));\n' +
             '}\n';
 
     html += '.msgq-window-button {\n' +
