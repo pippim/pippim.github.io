@@ -5,6 +5,7 @@ layout: test
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
+<div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
 # Introduction
 
@@ -14,7 +15,7 @@ It uses `/_layouts/test.html` layout file.
 
 Test changes to `page-header-buttons` without effecting whole website.
 
-After testing, copy to other layouts `default.html`, `hrb.html`, 
+After testing, copy code changes to other layouts `default.html`, `hrb.html`, 
 `post.html` and  `programs.html`
 
 Note that `page.html` is frozen copy from when project started and
