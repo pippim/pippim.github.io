@@ -142,7 +142,6 @@ function ttaApplyGlobalStyles() {
 
 :root {
     --name-column: 3;
-    --highlight-color: yellow;
     --honeydew: #F0FFF0;
     --msgq-error-bg-color: #f44336;
     --msgq-warning-bg-color: #ff9800;
@@ -152,12 +151,15 @@ function ttaApplyGlobalStyles() {
     --msgq-border-color: #d3d3d3;
     --msgq-body-text-color: #000;
 
+    --header-accent-color: #FFFF00;  /* Yellow */
+    --button-focus-color: #1E90FF;  /* Dodger Blue */
+    --progress-bar-color: #008000;  /* Green */
 /* From github/page-themes/cayman/_sass/variables.scss */
---header-heading-color: #fff;
---header-bg-color: #159957;
---header-bg-color-secondary: #155799;
+--header-heading-color: #fff;  /* White */
+--header-bg-color: #159957;  /* Cayman Green */
+--header-bg-color-secondary: #155799;  /* Cayman Blue */
 /* Text */
---section-headings-color: #159957;
+--section-headings-color: #159957;  /* Cayman Green */
 --body-text-color: #606c71;
 --body-link-color: #1e6bb8;
 --blockquote-text-color: #819198;
@@ -185,7 +187,7 @@ function ttaApplyGlobalStyles() {
 .ttaContainer, .bigFoot {
     padding: .25rem .5rem;
     font-size: x-large;
-    color: var(--highlight-color);
+    color: var(--header-accent-color);
     background-color: var(--header-bg-color);
     background-image: linear-gradient(120deg,
         var(--header-bg-color-secondary), var(--header-bg-color));
@@ -209,19 +211,19 @@ audio { vertical-align:middle }
 /* Not sure why hover not working like hdr-btn does. So make separate below. */
 /* .tta-btn:hover, .tta-btn:focus { FOCUS = BUTTON STAYS HIGHLIGHTED AFTER CLICK */
 .tta-btn:hover {
-    background-color: DodgerBlue;
-    color: #fff;
+    background-color: var(--button-focus-color);
+    color: var(--header-text-color);
 }
 .tta-btn:focus-visible {
     /* remove default focus style */
     outline: none;
     /* custom focus styles */
-    box-shadow: 0 0 2px 2px yellow;
-    color: DodgerBlue;
+    box-shadow: 0 0 2px 2px var(--header-accent-color);
+    color: var(--button-focus-color);
 }
 
 /* progress bar in Run Timers table */
-progress::-moz-progress-bar { background: green; } /* Same color as chrome */
+progress::-moz-progress-bar { background: var(--progress-bar-color); } /* Same color as chrome */
 /* progress[value] { */
 progress {
     /* Reset the default appearance */
@@ -339,7 +341,7 @@ table.tta-table th {
     border-radius: 1rem;
     padding: .25rem .5rem;
     font-size: x-large;
-    color: var(--highlight-color);
+    color: var(--header-accent-color);  /* Yellow */
     background-color: var(--header-bg-color);
     background-image: linear-gradient(120deg,
         var(--header-bg-color-secondary), var(--header-bg-color));
@@ -3627,7 +3629,7 @@ function popBuildStyle(msg_type) {
             '  padding: .25rem;\n' +
             //'  border: 2px solid grey;\n' +
             '  border-radius: 1rem;\n' +
-            '  color: yellow;\n' +
+            '  color: var(--header-accent-color);\n' +  // yellow
             '  background-color: var(--header-bg-color);\n' +
             '  background-image: linear-gradient(120deg, \n' +
             '    var(--header-bg-color-secondary), var(--header-bg-color));\n' +
