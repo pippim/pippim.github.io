@@ -3,7 +3,7 @@
     /tcm.md - The Cookie Machine documentation webpage
 */
 
-/* June 9/2022 - setCookie() and getCookie() are no longer visible */
+/* June 9/2022 - setCookie() and getCookie() in theCookieJar.js */
 function setCookie(cname, value, exp_days) {
     const d = new Date();
     d.setTime(d.getTime() + (exp_days * 24*60*60*1000));
@@ -13,19 +13,16 @@ function setCookie(cname, value, exp_days) {
 }
 
 function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
+    // Sept 25 2022 - Compact code
+    let name = cname + "="
+    let decodedCookie = decodeURIComponent(document.cookie)
+    let ca = decodedCookie.split(';')
     for(let i = 0; i < ca.length; i++) {
         let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
+        while (c.charAt(0) == ' ') c = c.substring(1)
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length)
     }
-    return "";
+    return ""
 }
 
 
@@ -237,33 +234,6 @@ function htmlSearchStats() {
     return html; // Update TCM Window body
 }  // End of htmlSearchStats()
 
-function htmlLocalInfo() {
-    /* NOT USED */
-    var html = "<h3>Tim-ta Storage</h3>"
-    html += '<table class="objectTableStyle">\n' ;
-    // Local Storage Table heading
-    html += '  <tr><th>Tim-ta Item</th>\n' +
-            '  <th>Item Value</th></tr>\n';
-
-    // If Tim-ta has never been run, objects won't exist
-    if (true == false) {
-        for (const [key, value] of Object.entries(search_stats)) {
-            html += '  <tr><td>' + key + '</td>\n' ;
-            // TODO: Need database of object keys and their value format
-            // If greater than 123 MB it's a Unix Date in Epoch
-            var d = new Date(value);
-            html += '  <td>';  // Start of table cell
-            // html += value.toLocaleString();
-            if (value < 123456789) { html += value.toLocaleString(); }
-            else { html += d.toLocaleDateString() +  ' ' + d.toLocaleTimeString() }
-            html += '</td></tr>\n';  // End of table cell and table row
-        }
-    }
-    html += '</table>\n';     // End of our table and form
-
-    return html; // Update TCM Window body
-}  // End of htmlLocalInfo()
-
 function htmlLocalStorage() {
     /* return html code <table> <td> for:
         Name                Size
@@ -304,10 +274,6 @@ objectTableStyleSheet.innerHTML = `
 }
 `
 document.head.appendChild(objectTableStyleSheet)
-
-// TODO: Move next 9 lines to a shared function
-// Heading: "999 Pippim website entries found." <h3> styling
-
 
 // From: https://stackoverflow.com/a/70024272/6929343
 function table_sort() {
