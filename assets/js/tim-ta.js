@@ -3615,7 +3615,7 @@ function popBuildStyle(msg_type) {
             'var(--msgq-warning-bg-color); }\n';
     html += '.msgq-window-header.msgq-info { background-color: ' +
             'var(--msgq-info-bg-color); }\n';
-    html += '.msgq-window-header.msgq-success { background-color: ' +'
+    html += '.msgq-window-header.msgq-success { background-color: ' +
             'var(--msgq-success-bg-color); }\n';
 
     html += '.msgq-window-buttons {\n' +
