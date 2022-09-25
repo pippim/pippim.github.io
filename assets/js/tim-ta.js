@@ -141,9 +141,17 @@ function ttaApplyGlobalStyles() {
     styles = `
 
 :root {
+    --name-column: 3;
     --highlight-color: yellow;
     --honeydew: #F0FFF0;
-    --name-column: 3;
+    --msgq-error-bg-color: #f44336;
+    --msgq-warning-bg-color: #ff9800;
+    --msgq-info-bg-color: #2196F3;
+    --msgq-success-bg-color: #04AA6D;
+    --msgq-body-bg-color: #f1f1f1;
+    --msgq-border-color: #d3d3d3;
+    --msgq-body-text-color: #000;
+
 /* From github/page-themes/cayman/_sass/variables.scss */
 --header-heading-color: #fff;
 --header-bg-color: #159957;
@@ -3589,9 +3597,9 @@ function popBuildStyle(msg_type) {
             '  max-width: 90vw;\n' +
             '  max-height: 95vh;\n' +
             '  overflow: auto;\n' +
-            '  background-color: #f1f1f1;\n' +
-            '  border: .2rem solid #d3d3d3;\n' +
-            '  color: black;\n' +
+            '  background-color: var(--msgq-body-bg-color);\n' +
+            '  border: .2rem solid var(--msgq-border-color);\n' +
+            '  color: var(--msgq-body-text-color);\n' +
             '  text-align: center;\n' +
             '  padding: .5rem;\n' +
             '}\n';
@@ -3601,10 +3609,14 @@ function popBuildStyle(msg_type) {
             '  color: #fff;\n' +
             '}\n';
 
-    html += '.msgq-window-header.msgq-error { background-color: #f44336; }\n';
-    html += '.msgq-window-header.msgq-warning { background-color: #ff9800; }\n';
-    html += '.msgq-window-header.msgq-info { background-color: #2196F3; }\n';
-    html += '.msgq-window-header.msgq-success { background-color: #04AA6D; }\n';
+    html += '.msgq-window-header.msgq-error { background-color: ' +
+            'var(--msgq-error-bg-color); }\n';
+    html += '.msgq-window-header.msgq-warning { background-color: ' +
+            'var(--msgq-warning-bg-color); }\n';
+    html += '.msgq-window-header.msgq-info { background-color: ' +
+            'var(--msgq-info-bg-color); }\n';
+    html += '.msgq-window-header.msgq-success { background-color: ' +'
+            'var(--msgq-success-bg-color); }\n';
 
     html += '.msgq-window-buttons {\n' +
             '  display: flex;\n' +
