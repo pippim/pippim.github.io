@@ -8,11 +8,11 @@ type:         Answer
 tags:         unity themes window colors
 created_date: 2019-11-17 16:53:51
 edit_date:    2019-11-20 00:56:28
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "1,059 "
+views:        "1,065 "
 accepted:     
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-17-Different-colors-for-active_inactive-Unity-window-title-bars_.md
 toc:          false
 navigation:   true

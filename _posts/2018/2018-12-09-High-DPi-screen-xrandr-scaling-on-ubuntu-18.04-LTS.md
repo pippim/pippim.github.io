@@ -10,9 +10,9 @@ created_date: 2018-12-09 01:01:25
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,918 "
+views:        "3,934 "
 accepted:     
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-09-High-DPi-screen-xrandr-scaling-on-ubuntu-18.04-LTS.md
 toc:          false
 navigation:   false

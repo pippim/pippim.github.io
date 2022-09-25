@@ -10,9 +10,9 @@ created_date: 2018-08-14 11:01:17
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "6,065 "
+views:        "6,088 "
 accepted:     Accepted
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-14-Got-error-during-installation-of-Oracle-VM-VirtualBox-Extension-Pack.md
 toc:          false
 navigation:   false

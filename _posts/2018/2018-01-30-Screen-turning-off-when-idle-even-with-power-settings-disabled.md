@@ -8,11 +8,11 @@ type:         Answer
 tags:         gnome display 17.10
 created_date: 2018-01-30 12:07:54
 edit_date:    2018-01-31 00:46:37
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "7,510 "
+views:        "7,643 "
 accepted:     Accepted
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-30-Screen-turning-off-when-idle-even-with-power-settings-disabled.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-02-05 01:59:29
 edit_date:    2020-06-12 14:37:07
 votes:        "49 "
 favorites:    
-views:        "11,221 "
+views:        "11,232 "
 accepted:     Accepted
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-05-Is-it-safe-to-use-a-second-hand-laptop-after-reinstalling-ubuntu-on-it.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Question
 tags:         command-line stat
 created_date: 2017-05-24 03:01:14
 edit_date:    2017-05-24 03:59:08
-votes:        "13 "
+votes:        "14 "
 favorites:    1
-views:        "8,592 "
+views:        "8,666 "
 accepted:     Accepted
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-05-24-When-is-Birth-Date-for-a-file-actually-used_.md
 toc:          false
 navigation:   false

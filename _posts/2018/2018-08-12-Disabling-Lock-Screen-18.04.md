@@ -8,11 +8,11 @@ type:         Answer
 tags:         18.04 lock-screen
 created_date: 2018-08-12 16:22:14
 edit_date:    2022-01-02 01:15:57
-votes:        "66 "
+votes:        "67 "
 favorites:    
-views:        "47,713 "
+views:        "47,970 "
 accepted:     
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Disabling-Lock-Screen-18.04.md
 toc:          false
 navigation:   false

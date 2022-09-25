@@ -8,11 +8,11 @@ type:         Answer
 tags:         boot bios uefi
 created_date: 2017-01-11 05:03:29
 edit_date:    
-votes:        "3 "
+votes:        "2 "
 favorites:    
-views:        "503,381 "
+views:        "503,564 "
 accepted:     
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-11-What-is-CSM-option.md
 toc:          false
 navigation:   false

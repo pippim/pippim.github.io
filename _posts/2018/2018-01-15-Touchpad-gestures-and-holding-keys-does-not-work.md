@@ -10,9 +10,9 @@ created_date: 2018-01-15 00:00:49
 edit_date:    2018-02-11 16:41:20
 votes:        "14 "
 favorites:    
-views:        "8,169 "
+views:        "8,180 "
 accepted:     
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-15-Touchpad-gestures-and-holding-keys-does-not-work.md
 toc:          true
 navigation:   true

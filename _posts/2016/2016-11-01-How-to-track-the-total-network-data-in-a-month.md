@@ -10,9 +10,9 @@ created_date: 2016-11-01 17:28:52
 edit_date:    2021-08-05 10:19:27
 votes:        "22 "
 favorites:    
-views:        "40,629 "
+views:        "40,728 "
 accepted:     
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-01-How-to-track-the-total-network-data-in-a-month.md
 toc:          false
 navigation:   false

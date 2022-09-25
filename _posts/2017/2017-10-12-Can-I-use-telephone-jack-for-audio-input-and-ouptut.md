@@ -10,9 +10,9 @@ created_date: 2017-10-12 02:57:29
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "730 "
+views:        "738 "
 accepted:     Accepted
-uploaded:     2022-09-15 05:40:42
+uploaded:     2022-09-25 16:54:18
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-12-Can-I-use-telephone-jack-for-audio-input-and-ouptut.md
 toc:          false
 navigation:   false
