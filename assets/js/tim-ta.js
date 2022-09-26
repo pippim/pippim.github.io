@@ -149,13 +149,12 @@ function ttaApplyGlobalStyles() {
     --msgq-success-bg-color: #04AA6D;  /* Light Green */
     --msgq-body-bg-color: #f1f1f1;  /* Light Grey */
     --msgq-border-color: #d3d3d3;  /* Dark Grey */
-    --msgq-body-text-color: #000;  /* Black */
 
     --header-accent-color: #FFFF00;  /* Yellow */
     --button-focus-color: #1E90FF;  /* Dodger Blue */
     --progress-bar-color: #008000;  /* Green */
     --flash-bg-color: #808080;  /* Grey */
-    --boldest-color: #000000;  /* Black */
+    --boldest-color: #000;  /* Black */
 /* From github/page-themes/cayman/_sass/variables.scss */
     --header-heading-color: #fff;  /* White */
     --header-bg-color: #159957;  /* Cayman Green */
@@ -3603,7 +3602,7 @@ function popBuildStyle(msg_type) {
             '  overflow: auto;\n' +
             '  background-color: var(--msgq-body-bg-color);\n' +
             '  border: .2rem solid var(--msgq-border-color);\n' +
-            '  color: var(--msgq-body-text-color);\n' +
+            '  color: var(--boldest-color);\n' +
             '  text-align: center;\n' +
             '  padding: .5rem;\n' +
             '}\n';
