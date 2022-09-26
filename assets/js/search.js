@@ -485,8 +485,9 @@ function check_root_word(word, url_ndx_points) {
     }
 */
 
-    var kbdBackgroundColor = ctMainElm.getElementsByTagName('kbd')[0].
-        getAttribute('background-color')
+    //var kbdBackgroundColor = ctMainElm.getElementsByTagName('kbd')[0].
+    //    getAttribute('background-color')
+    var kbdBackgroundColor = ctMainElm.getElementsByTagName('kbd')
     console.log("kbdBackgroundColor:", kbdBackgroundColor)
 
 
