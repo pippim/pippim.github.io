@@ -472,7 +472,9 @@ function check_root_word(word, url_ndx_points) {
     colour codes
 */
 
-    var ctMainElm = document.getElementsByClassName('main-content')[0]
+    //var ctMainElm = document.getElementsByClassName('main-content')[0]
+    var ctMainElm = document.getElementById('content')
+    console.log("ctMainElm.id:", ctMainElm.id)
 
 /*  kbd {
         background-color: #fafbfc;
