@@ -155,6 +155,7 @@ function ttaApplyGlobalStyles() {
     --button-focus-color: #1E90FF;  /* Dodger Blue */
     --progress-bar-color: #008000;  /* Green */
     --flash-bg-color: #808080;  /* Grey */
+    --boldest-color: #000000;  /* Black */
 /* From github/page-themes/cayman/_sass/variables.scss */
     --header-heading-color: #fff;  /* White */
     --header-bg-color: #159957;  /* Cayman Green */
@@ -275,12 +276,12 @@ table.tta-table th {
 }
 
 @keyframes flash {
-    from { background-color: var(flash-bg-color); }
+    from { background-color: var(--flash-bg-color); }
     to { background-color: inherit; }
 }
 
 .flash {
-    animation:         flash 1s infinite;
+    animation: flash 1s infinite;
 }
 
 .dim-main-webpage {
@@ -290,7 +291,7 @@ table.tta-table th {
 
 .closeBtn {
     margin-left: 15px;
-    color: white;
+    color: var(--header-heading-color);
     font-weight: bold;
     float: right;
     cursor: pointer;
@@ -298,7 +299,7 @@ table.tta-table th {
 }
 
 .closeBtn:hover {
-    color: black;
+    color: var(--boldest-color);
 }
 
 #config-drop-area,
@@ -2163,7 +2164,7 @@ function buildInit() {
 function buildLine(text) {
     // WIP - line not appearing but heading does get grey background
     var html = "";
-    html += '<tr style="border-bottom: 1px solid black;">\n';
+    html += '<tr style="border-bottom: 1px solid var(--boldest-color);">\n';
     //html += '<td colspan="100%"><strong>' + text + '</strong></td></tr>\n';
     html += '<th colspan="100%">' + text + '</th></tr>\n';
     return html;
