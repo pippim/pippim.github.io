@@ -154,6 +154,7 @@ function ttaApplyGlobalStyles() {
     --header-accent-color: #FFFF00;  /* Yellow */
     --button-focus-color: #1E90FF;  /* Dodger Blue */
     --progress-bar-color: #008000;  /* Green */
+    --flash-bg-color: #808080;  /* Grey */
 /* From github/page-themes/cayman/_sass/variables.scss */
     --header-heading-color: #fff;  /* White */
     --header-bg-color: #159957;  /* Cayman Green */
@@ -253,7 +254,7 @@ progress::-webkit-progress-value {
     height: auto;
 }
 
-select:invalid { color: grey; }
+select:invalid { color: var(flash-bg-color); }
 
 .tta-table table {
     table-layout: auto;
@@ -274,7 +275,7 @@ table.tta-table th {
 }
 
 @keyframes flash {
-    from { background-color: grey; }
+    from { background-color: var(flash-bg-color); }
     to { background-color: inherit; }
 }
 
@@ -1917,10 +1918,9 @@ function swapProject(source, target) {
     hold = ttaConfig.arrProjects[target];
     ttaConfig.arrProjects[target] = ttaConfig.arrProjects[source];
     ttaConfig.arrProjects[source] = hold;
-    // How to stick in .classGrey
     saveConfig();
     paintProjectsTable();
-    // Flash grey for row just moved then remove after 3 seconds
+    // Flash grey for row just moved then remove after 2 seconds
     flashGrey("tabProject" + target);
 }
 function swapTask(source, target) {
@@ -1931,7 +1931,7 @@ function swapTask(source, target) {
     ttaConfig.objProjects[ttaProject.project_name] = ttaProject;
     saveConfig();
     paintTasksTable();
-    // Flash grey for row just moved then remove after 3 seconds
+    // Flash grey for row just moved then remove after 2 seconds
     flashGrey("tabTask" + target);
 }
 
