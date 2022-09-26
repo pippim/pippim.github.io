@@ -448,4 +448,44 @@ function check_root_word(word, url_ndx_points) {
     return false;  // After subtracting suffixes, no root word was found
 }
 
+/*
+    COLOR SCHEMES (Themes)
+    ======================
+
+    This file /assets/js/search.js is the only one that can achieve this:
+
+    </header>
+
+    {% include tcm-draggable-window.html %}
+
+    <main id="content" class="main-content" role="main">
+
+      {% include search.html %}
+      <script type="text/javascript" src="/assets/js/search.js" ></script>
+
+      {{ content }}
+
+    </main>
+  </body>
+
+    The class "main-content" (there should only be one) contains many of
+    colour codes
+*/
+
+    var ct-main-elm = document.getElementsByClassName('main-content')[0]
+
+/*  kbd {
+        background-color: #fafbfc;
+        border: 1px solid #c6cbd1;
+        border-bottom-color: #959da5;
+        box-shadow: inset 0 -1px 0 #959da5;
+        color: #444d56;
+    }
+*/
+
+    var kbd-background-color = ct-main-elm.getElementsByTagName('kbd')[0].
+        getAttribute('background-color')
+    console.log("kbd-background-color:", kbd-background-color)
+
+
 /* End of /assets/js/search.js */
