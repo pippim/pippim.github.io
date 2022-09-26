@@ -472,7 +472,7 @@ function check_root_word(word, url_ndx_points) {
     colour codes
 */
 
-    var ct-main-elm = document.getElementsByClassName('main-content')[0]
+    var ctMainElm = document.getElementsByClassName('main-content')[0]
 
 /*  kbd {
         background-color: #fafbfc;
@@ -483,9 +483,9 @@ function check_root_word(word, url_ndx_points) {
     }
 */
 
-    var kbd-background-color = ct-main-elm.getElementsByTagName('kbd')[0].
+    var kbdBackgroundColor = ctMainElm.getElementsByTagName('kbd')[0].
         getAttribute('background-color')
-    console.log("kbd-background-color:", kbd-background-color)
+    console.log("kbdBackgroundColor:", kbdBackgroundColor)
 
 
 /* End of /assets/js/search.js */
