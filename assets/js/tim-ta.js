@@ -143,21 +143,21 @@ function ttaApplyGlobalStyles() {
 :root {
     --name-column: 3;
     --honeydew: #F0FFF0;
-    --msgq-error-bg-color: #f44336;
-    --msgq-warning-bg-color: #ff9800;
-    --msgq-info-bg-color: #2196F3;
-    --msgq-success-bg-color: #04AA6D;
-    --msgq-body-bg-color: #f1f1f1;
-    --msgq-border-color: #d3d3d3;
-    --msgq-body-text-color: #000;
+    --msgq-error-bg-color: #f44336;  /* Light Red */
+    --msgq-warning-bg-color: #ff9800;  /* Light Orange */
+    --msgq-info-bg-color: #2196F3;  /* Light Blue */
+    --msgq-success-bg-color: #04AA6D;  /* Light Green */
+    --msgq-body-bg-color: #f1f1f1;  /* Light Grey */
+    --msgq-border-color: #d3d3d3;  /* Dark Grey */
+    --msgq-body-text-color: #000;  /* Black */
 
     --header-accent-color: #FFFF00;  /* Yellow */
     --button-focus-color: #1E90FF;  /* Dodger Blue */
     --progress-bar-color: #008000;  /* Green */
 /* From github/page-themes/cayman/_sass/variables.scss */
---header-heading-color: #fff;  /* White */
---header-bg-color: #159957;  /* Cayman Green */
---header-bg-color-secondary: #155799;  /* Cayman Blue */
+    --header-heading-color: #fff;  /* White */
+    --header-bg-color: #159957;  /* Cayman Green */
+    --header-bg-color-secondary: #155799;  /* Cayman Blue */
 /* Text */
 --section-headings-color: #159957;  /* Cayman Green */
 --body-text-color: #606c71;
@@ -1936,11 +1936,12 @@ function swapTask(source, target) {
 }
 
 function flashGrey(id) {
-    // Flash grey for row just moved then remove after 3 seconds
+    // Flash grey for row just moved then remove after 2 seconds
     var win = getWin()
     var elm = win.document.getElementById(id);
+    elm.classList.add("flash")
     setTimeout(function(){
-        elm.classList.remove("flash");
+        elm.classList.remove("flash")
     }, 2000);
 }
 
