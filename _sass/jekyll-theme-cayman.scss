@@ -4,7 +4,12 @@
  */
 
 :root {
-    --honeydew: #F0FFF0;
+    /*  Used by Pippim. Defaults are stored in memory (here). Also created
+        in memory is colorSchemeDark. You can copy and modify either scheme
+        and save to local storage.
+    */
+    --honeydew: #F0FFF0;  /* light greenish yellow used for nav-background-color */
+    --nav-button-bg-color: #F0FFF0;  /* Honeydew light greenish yellow */
     --msgq-error-bg-color: #f44336;  /* Light Red */
     --msgq-warning-bg-color: #ff9800;  /* Light Orange */
     --msgq-info-bg-color: #2196F3;  /* Light Blue */
@@ -12,8 +17,8 @@
     --msgq-body-bg-color: #f1f1f1;  /* Light Grey */
     --msgq-border-color: #d3d3d3;  /* Dark Grey */
 
-    --header-accent-color: #FFFF00;  /* Yellow */
-    --button-focus-color: #1E90FF;  /* Dodger Blue */
+    --header-accent-color: #FFFF00;  /* Yellow also button focus text */
+    --button-focus-color: #1E90FF;  /* Dodger Blue (for background) */
     --progress-bar-color: #008000;  /* Green */
     --flash-bg-color: #808080;  /* Grey */
     --boldest-color: #000;  /* Black on white screen, white on black screen */
@@ -27,6 +32,7 @@
     --section-headings-color: #159957;  /* Cayman Green */
     --body-text-color: #606c71;  /* grey */
     --body-link-color: #1e6bb8;  /* Link blue */
+    --body-link-inverted-color: #1e6bb8;  /* Have no clue used by cayman theme */
     --blockquote-text-color: #819198;
     /* Code */
     --code-bg-color: #f3f6fa;
@@ -35,8 +41,12 @@
     --border-color: #dce6f0;
     --table-border-color: #e9ebec;
     --hr-border-color: #eff0f1;
-/*  /assets/_sass/variables.scss that never had & prefix */
-
+/*  /assets/_sass/variables.scss that never had an '&' sass prefix */
+    --kbd-background-color: #fafbfc;
+    --kbd-border: 1px solid #c6cbd1;
+    --kbd-border-bottom-color: #959da5;
+    --kbd-box-shadow-color: #959da5;
+    --kbd-text-color: #444d56;
 }
 
 @import "normalize";
