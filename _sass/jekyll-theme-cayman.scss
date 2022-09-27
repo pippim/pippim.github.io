@@ -154,7 +154,9 @@ a {
   color: $header-heading-color;
   text-align: center;
   background-color: $header-bg-color;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  /* background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color); */
+  background-image: linear-gradient(120deg, var(--header-bg-color-secondary),
+                                            var(--header-bg-color));
 
   @include large {
     padding: 5rem 6rem;
@@ -255,7 +257,8 @@ a {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    color: $section-headings-color;
+    /* color: $section-headings-color; */
+    color: var(--section-headings-color);
   }
 
   p {
