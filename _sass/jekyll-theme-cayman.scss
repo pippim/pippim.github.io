@@ -25,8 +25,8 @@
     --header-bg-color-secondary: #155799;  /* Cayman Blue */
     /* Text */
     --section-headings-color: #159957;  /* Cayman Green */
-    --body-text-color: #606c71;
-    --body-link-color: #1e6bb8;
+    --body-text-color: #606c71;  /* grey */
+    --body-link-color: #1e6bb8;  /* Link blue */
     --blockquote-text-color: #819198;
     /* Code */
     --code-bg-color: #f3f6fa;
@@ -89,10 +89,12 @@ body {
     left: 10px;
     height: auto;
     width: auto;
+    // invert is a sass function that doesn't support var(--value)
+    // #skip-to-content is not used in Pippim Website
     background: invert($body-link-color);
     // background: invert(var(--body-link-color));
-    // outline: thick solid invert($body-link-color);
-    outline: thick solid invert( var(--body-link-color) );
+    outline: thick solid invert($body-link-color);
+    // outline: thick solid invert( var(--body-link-color) );
   }
 }
 
@@ -109,6 +111,7 @@ a {
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
+  // .btn is not used in Pippim Website, so below code not changed to color schemes
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
@@ -151,12 +154,11 @@ a {
 }
 
 .page-header {
-  color: $header-heading-color;
+  color: var(--header-heading-color);
   text-align: center;
-  background-color: $header-bg-color;
+  background-color: var(--header-bg-color);
   /* background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color); */
-  background-image: linear-gradient(120deg, var(--header-bg-color-secondary),
-                                            var(--header-bg-color));
+  background-image: linear-gradient(120deg, var(--header-bg-color-secondary), var(--header-bg-color));
 
   @include large {
     padding: 5rem 6rem;
