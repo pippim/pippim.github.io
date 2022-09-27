@@ -8,7 +8,7 @@
         in memory is colorSchemeDark. You can copy and modify either scheme
         and save to local storage.
     */
-    --honeydew: #F0FFF0;  /* light greenish yellow used for nav-background-color */
+    //--honeydew: #F0FFF0;  /* light greenish yellow used for nav-background-color */
     --nav-button-bg-color: #F0FFF0;  /* Honeydew light greenish yellow */
     --msgq-error-bg-color: #f44336;  /* Light Red */
     --msgq-warning-bg-color: #ff9800;  /* Light Orange */
@@ -22,9 +22,9 @@
     --progress-bar-color: #008000;  /* Green */
     --flash-bg-color: #808080;  /* Grey */
     --boldest-color: #000;  /* Black on white screen, white on black screen */
-/*  Copied from github/page-themes/cayman/_sass/variables.scss
-    to /assets/_sass/variables.scss and & prefix changed to --
-*/
+    /*  Copied from github/page-themes/cayman/_sass/variables.scss
+        to /assets/_sass/variables.scss and & prefix changed to --
+    */
     --header-heading-color: #fff;  /* White */
     --header-bg-color: #159957;  /* Cayman Green */
     --header-bg-color-secondary: #155799;  /* Cayman Blue */
@@ -41,7 +41,7 @@
     --border-color: #dce6f0;
     --table-border-color: #e9ebec;
     --hr-border-color: #eff0f1;
-/*  /assets/_sass/variables.scss that never had an '&' sass prefix */
+    /*  /assets/_sass/variables.scss that never had an '&' sass prefix */
     --kbd-background-color: #fafbfc;
     --kbd-border: 1px solid #c6cbd1;
     --kbd-border-bottom-color: #959da5;
@@ -528,7 +528,7 @@ test.md:    color: black;
     padding: 5px 15px;        // vertical, horizontal padding around button text
     font-size:0.75em;         // 75% of normal font for button text
     margin-left: 10px;        // Now that right aligned, switch margin side
-    background-color: var(nav-button-bg-color); // Light green yellow
+    background-color: var(--nav-button-bg-color); // Light green yellow
 
     &:hover {
         background-color: DodgerBlue;
