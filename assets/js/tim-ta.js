@@ -142,19 +142,20 @@ function ttaRunConfiguration (parentElm) {
 }
 
 // Create a function for getting a variable value
+var targetProperty = "--msgq-error-bg-color"
 function myFunction_get() {
     // Get the styles (properties and values) for the root
     var rs = getComputedStyle(rootElm);
     // Alert the value of the --blue variable
-    alert("The value of --msgq-error-bg-color is: " +
-          rs.getPropertyValue('--msgq-error-bg-color'));
+    alert("The value of " + targetProperty + " is: " +
+          rs.getPropertyValue(targetProperty));
 }
 
 // Create a function for setting a variable value
 function myFunction_set() {
     // Set the value of variable --msgq-error-bg-color to another value (in this case "lightblue")
     const red = '#FF0000'
-    rootElm.style.setProperty('--msgq-error-bg-color', red);
+    rootElm.style.setProperty(targetProperty, red);
 }
 
 var ttaStyleSheet, styles
@@ -200,7 +201,7 @@ audio { vertical-align:middle }
 .tta-btn {
     color: var(--header-bg-color);
     padding: 0px 10px;
-    background-color: var(--honeydew);
+    background-color: var(--nav-button-bg-color);
     font-size: x-large;
     border-radius: 1rem;
     outline: none;  /* Remove shadow effect? NOPE :( */
