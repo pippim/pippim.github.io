@@ -14,9 +14,268 @@ html { scroll-behavior: smooth; }
 $header-heading-color: #fff !default;
 $header-bg-color: #159957 !default;  // Cayman green
 $header-bg-color-secondary: #155799 !default;  // Cayman blue
-$honeydew: #F0FFF0 !default; // Honeydew
+// $honeydew: #F0FFF0 !default; // Light green yellow
 $salmon: #FA8072 !default; // salmon
 $lavender: #E6E6FA !default; // lavender
+
+/*  Colors in jekyll-theme-cayman.scss that are not above ^^^
+    =========================================================
+
+    border: solid 1px $border-color;
+    color: $blockquote-text-color;
+
+  code {
+    padding: 2px 4px;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 92%;  // Change 0.9rem to 92% for proper size in headings
+    color: $code-text-color;
+    background-color: $code-bg-color;
+
+  hr {
+    background-color: $hr-border-color;
+
+  &:focus {
+    background: invert($body-link-color);
+    outline: thick solid invert($body-link-color);
+
+body {
+  color: $body-text-color;
+
+.page-header {
+  color: $header-heading-color;
+  text-align: center;
+  background-color: $header-bg-color;
+  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: $section-headings-color;
+  }
+
+
+    cayman/_sass/variables.scss
+    ===========================
+
+// Breakpoints
+$large-breakpoint: 64em !default;
+$medium-breakpoint: 42em !default;
+
+// Headers
+$header-heading-color: #fff !default;
+$header-bg-color: #159957 !default;
+$header-bg-color-secondary: #155799 !default;
+
+// Text
+$section-headings-color: #159957 !default;
+$body-text-color: #606c71 !default;
+$body-link-color: #1e6bb8 !default;
+$blockquote-text-color: #819198 !default;
+
+// Code
+$code-bg-color: #f3f6fa !default;
+$code-text-color: #567482 !default;
+
+// Borders
+$border-color: #dce6f0 !default;
+$table-border-color: #e9ebec !default;
+$hr-border-color: #eff0f1 !default;
+
+    HARD-CODED COLORS
+    =================
+
+────────────────────────────────────────────────────────────────────────────────────────────
+rick@alien:~/website$ grep 'ellow;' -R *
+assets/css/style.scss:    --highlight-color: yellow;
+assets/css/style.scss:#dropdown-content a:hover { color: yellow; }
+assets/css/style.scss:        color: yellow;  // hyperlink hover color is blue
+assets/css/style.scss:        box-shadow: 0 0 2px 2px yellow;
+assets/js/tim-ta.1.0.js:    --highlight-color: yellow;
+assets/js/tim-ta.1.0.js:    box-shadow: 0 0 2px 2px yellow;
+assets/js/tim-ta.1.0.js:            '  color: yellow;\n' +
+assets/js/tim-ta.js:    --highlight-color: yellow;
+assets/js/tim-ta.js:    box-shadow: 0 0 2px 2px yellow;
+assets/js/tim-ta.js:            '  color: yellow;\n' +
+────────────────────────────────────────────────────────────────────────────────────────────
+rick@alien:~/website$ grep 'hite;' -R *
+assets/css/style.scss:    color: white;
+assets/css/style.scss:    color: white;
+assets/css/style.scss:    border: 2px solid white;
+assets/css/style.scss:    border: 2px solid white;
+assets/css/style.scss:    color: white;
+assets/js/tim-ta.1.0.js:    color: white;
+assets/js/tim-ta.js:    color: white;
+────────────────────────────────────────────────────────────────────────────────────────────
+rick@alien:~/website$ grep 'lack;' -R *
+assets/css/style.scss:    background-color: black;
+assets/css/style.scss:#markdown-toc a:hover { color:black; }
+assets/css/style.scss:    box-shadow: 3px 3px 4px black;
+assets/css/style.scss:    box-shadow: 3px 3px 4px black;
+assets/css/style.scss:details a:hover { color:black; }
+assets/css/style.scss:.top-ten a:hover { color:black; }
+assets/css/style.scss:.search-results a:hover { color:black; }
+assets/css/style.scss:    color: black;
+assets/css/style.scss:    //border: thin solid black;
+assets/js/tim-ta.1.0.js:    color: black;
+assets/js/tim-ta.1.0.js:    html += '<tr style="border-bottom: 1px solid black;">\n';
+assets/js/tim-ta.1.0.js:            '  color: black;\n' +
+assets/js/tim-ta.js:    color: black;
+assets/js/tim-ta.js:    html += '<tr style="border-bottom: 1px solid black;">\n';
+assets/js/tim-ta.js:            '  color: black;\n' +
+assets/json/search_words.json:  "black;": {
+_includes/tcm-common-code.js:        border: thin solid black;
+programs/tcm.md:  #tcm_window_table table { table-layout: fixed; width: 100%; border: 3px solid black; }
+test.md:    color: black;
+────────────────────────────────────────────────────────────────────────────────────────────
+rick@alien:~/website$grep 'lue;' -R *
+assets/css/style.scss:        background-color: DodgerBlue;
+assets/css/style.scss:        color: DodgerBlue;
+assets/css/style.scss:#markdown-toc a:visited { color: blue; }
+assets/css/style.scss:    &:hover { color: blue; }
+assets/js/tim-ta.1.0.js:    background-color: DodgerBlue;
+assets/js/tim-ta.1.0.js:    color: DodgerBlue;
+assets/js/tim-ta.js:    background-color: DodgerBlue;
+assets/js/tim-ta.js:    color: DodgerBlue;
+────────────────────────────────────────────────────────────────────────────────────────────
+rick@alien:~/website$ grep 'urple;' -R *
+assets/css/style.scss:  color: purple;
+assets/css/style.scss:        color: purple;
+assets/css/style.scss:details a:visited { color:purple; }
+assets/css/style.scss:.top-ten a:visited { color:purple; }
+assets/css/style.scss:    color: purple;
+assets/css/style.scss:.search-results a:visited { color:purple; }
+assets/js/tim-ta.1.0.js:    border-color: purple;
+assets/js/tim-ta.js:    border-color: purple;
+sede/QueryResults.csv:  color: purple;
+sede/QueryResults.csv:  color: purple;
+────────────────────────────────────────────────────────────────────────────────────────────
+rick@alien:~/website$ grep 'color: #' -R *
+assets/css/style.scss:    --bg-color: #159957;
+assets/css/style.scss:    color: #fff;
+assets/css/style.scss:        color: #fff;
+assets/css/style.scss:        color: #fff;       // WAS F0FFF0 or something like that Grayish
+assets/css/style.scss:        background-color: #ddd;
+assets/css/style.scss:    color: #fff;
+assets/css/style.scss:    background-color: #f1f1f1;
+assets/css/style.scss:    background-color: #2196F3;
+assets/css/style.scss:    color: #fff;
+assets/css/style.scss:    //background-color: #777;  // Causing slight shift upper right?
+assets/js/tim-ta.js:        border-color: #155799;
+assets/js/tim-ta.js:    --header-bg-color: #159957;
+assets/js/tim-ta.js:    color: #fff;
+assets/js/tim-ta.js:            '  background-color: #f1f1f1;\n' +
+assets/js/tim-ta.js:            '  color: #fff;\n' +
+assets/js/tim-ta.js:    html += '.msgq-window-header.msgq-error { background-color: #f44336; }\n';
+assets/js/tim-ta.js:    html += '.msgq-window-header.msgq-warning { background-color: #ff9800; }\n';
+assets/js/tim-ta.js:    html += '.msgq-window-header.msgq-info { background-color: #2196F3; }\n';
+assets/js/tim-ta.js:    html += '.msgq-window-header.msgq-success { background-color: #04AA6D; }\n';
+assets/js/hyperlinkRecipe.js:            '  color: #000;\n' +
+assets/js/hyperlinkRecipe.js:            '  color: #fff;\n' +
+_includes/tim-ta-storage.js:      background-color: #fafbfc;
+_includes/tim-ta-storage.js:      border-bottom-color: #959da5;
+_includes/tim-ta-storage.js:      color: #444d56;
+_layouts/post.html:                                   margin-top: 2em; background-color: #F0FFF0;">
+programs/tim-ta.md:   background-color: #159957;  /* For Cayman (don't use //)
+_sass/jekyll-theme-cayman.scss:    background-color: #fafbfc;
+_sass/jekyll-theme-cayman.scss:    border-bottom-color: #959da5;
+_sass/jekyll-theme-cayman.scss:    color: #444d56;
+
+────────────────────────────────────────────────────────────────────────────────────────────
+rick@alien:~/website$ grep 'color: ' -R * | grep -v 'color: #' | grep -v 'color: v' | grep -v 'color: \$'
+assets/css/style.scss:        background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
+assets/js/hyperlinkRecipe.js:            '  background-color: YellowGreen;\n' +
+assets/js/hyperlinkRecipe.js:            '  background-color: DarkGreen;\n' +
+assets/js/tim-ta.js:select:invalid { color: grey; }
+assets/js/tim-ta.js:    from { background-color: grey; }
+assets/js/tim-ta.js:    to { background-color: inherit; }
+_includes/tim-ta-storage.js:    color: rgba(255, 255, 255, 0.7);
+_includes/tim-ta-storage.js:    background-color: rgba(255, 255, 255, 0.08);
+_includes/tim-ta-storage.js:    border-color: rgba(255, 255, 255, 0.2);
+_includes/tim-ta-storage.js:      color: rgba(255, 255, 255, 0.8);
+_includes/tim-ta-storage.js:      background-color: rgba(255, 255, 255, 0.2);
+_includes/tim-ta-storage.js:      border-color: rgba(255, 255, 255, 0.3);
+_includes/tim-ta-storage.js:      background-color: transparent;
+_sass/jekyll-theme-cayman.scss:  color: rgba(255, 255, 255, 0.7);
+_sass/jekyll-theme-cayman.scss:  background-color: rgba(255, 255, 255, 0.08);
+_sass/jekyll-theme-cayman.scss:  border-color: rgba(255, 255, 255, 0.2);
+_sass/jekyll-theme-cayman.scss:    color: rgba(255, 255, 255, 0.8);
+_sass/jekyll-theme-cayman.scss:    background-color: rgba(255, 255, 255, 0.2);
+_sass/jekyll-theme-cayman.scss:    border-color: rgba(255, 255, 255, 0.3);
+_sass/jekyll-theme-cayman.scss:    background-color: transparent;
+test.md:    color: unset;
+test.md:    color: black;
+
+    CAYMAN THEME main-content CLASS ABRIDGED
+    ========================================
+
+
+.main-content {
+  word-wrap: break-word;
+
+  ...
+
+  kbd {
+    background-color: #fafbfc;
+    border: 1px solid #c6cbd1;
+    border-bottom-color: #959da5;
+    box-shadow: inset 0 -1px 0 #959da5;
+    color: #444d56;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $section-headings-color;
+  }
+
+  code {
+    color: $code-text-color;
+    background-color: $code-bg-color;
+  }
+
+  pre {
+    color: $code-text-color;
+    background-color: $code-bg-color;
+    border: solid 1px $border-color;
+
+    > code {
+      color: $code-text-color;
+      background: transparent;
+    }
+  }
+
+  pre code,
+  pre tt {
+    background-color: transparent;
+  }
+
+  blockquote {
+    color: $blockquote-text-color;
+  }
+
+  table {
+    th,
+    td {
+      padding: 0.5rem 1rem;
+      border: 1px solid $table-border-color;
+    }
+  }
+
+  hr {
+    background-color: $hr-border-color;
+  }
+}
+
+*/
 
 #page-header-buttons {
     justify-content: center;  // Hamburger and Mag Glass side-by-side
@@ -52,6 +311,7 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 .dim-body {
+    // Set entire screen dim. Reverse with removing class
     box-shadow: 0 0 0 10000px rgba(0, 0, 0, .5);  // IE
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);  // Normal world
 }
@@ -61,7 +321,8 @@ $lavender: #E6E6FA !default; // lavender
     z-index: 20;  // High enough to cover up msgq
     padding: .6rem 0 .6rem 0;
     border: 0;
-    background-color: black;
+    // background-color: black;
+    background-color: var(--boldest-color);
     position: absolute;
     width: 100%;
 }
@@ -222,7 +483,7 @@ $lavender: #E6E6FA !default; // lavender
     padding: 5px 15px;        // vertical, horizontal padding around button text
     font-size:0.75em;         // 75% of normal font for button text
     margin-left: 10px;        // Now that right aligned, switch margin side
-    background-color: $honeydew; // Honeydew
+    background-color: var(nav-button-bg-color); // Light green yellow
 
     &:hover {
         background-color: DodgerBlue;
@@ -265,7 +526,7 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 .front-matter:hover .hidden-child{
-    background-color: $honeydew; // Honeydew
+    background-color: var(--nav-button-bg-color); // Light green-yellow
     // https://stackoverflow.com/a/17260048/6929343
     max-height: 500px;
     transform: scaleY(1);
@@ -343,10 +604,10 @@ details > summary {
     margin-bottom: .6em;     // some spacing between groups
     padding: 2px 6px;
     width: 35em;          // 60% no good for cell phone
-    background-color: $honeydew;
-    color: $header-bg-color;
+    background-color: var(--nav-button-bg-color);
+    color: var(--header-bg-color);
     border: none;
-    box-shadow: 3px 3px 4px black;
+    box-shadow: 3px 3px 4px var(--boldest-color);
 
     &:hover {
         // background-position:bottom;
@@ -377,7 +638,7 @@ details[open] > summary::before {
 
 details > p {
     border-radius: 0 0 10px 10px;
-    background-color: $honeydew;
+    background-color: var(--nav-button-bg-color);
     color: $header-bg-color;
     margin-left: 1.3em;
     box-shadow: 3px 3px 4px black;
@@ -396,8 +657,8 @@ details a:hover { color:black; }
 .top-ten a:hover { color:black; }
 
 details[open] > summary {
-    background-color: $honeydew;
-    color: $header-bg-color;
+    background-color: var(--nav-button-bg-color);
+    color: var(--header-bg-color);
     transition: transform 250ms ease;
 }
 
@@ -437,7 +698,7 @@ details[open] > summary {
     z-index: 20;  // High enough to cover up msgq
     margin-top: -2rem;
     border-radius: .5rem;
-    background-color: $honeydew;
+    background-color: var(--nav-button-bg-color);
 }
 
 #search-form {
