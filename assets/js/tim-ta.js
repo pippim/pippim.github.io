@@ -106,6 +106,9 @@ var tabTasksTitle = "View/Add/Edit/Delete Tasks"
 
 var ttaElm, currentTable, currentRoot, currentRow, currentMode, currentForm;
 
+// Get the root element
+var r = document.querySelector(':root');
+
 function ttaRunConfiguration (parentElm) {
     // Top-level function called by main webpage
     ttaElm = parentElm;
@@ -122,6 +125,13 @@ function ttaRunConfiguration (parentElm) {
 
     ttaApplyGlobalStyles();  // Styles for tta-table, tta-btn, .big-foot, etc.
 
+    // TEST css variables
+    if (ttaConfig.environment == "Linux x86_64 Firefox 88") {
+        myFunction_get()
+        myFunction_set()
+        myFunction_get()
+    }
+
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
     const cnt = ttaConfig.arrProjects.length;
     scrSetSize()  // Call on document load. Must also call when RunTimers is painted
@@ -129,6 +139,21 @@ function ttaRunConfiguration (parentElm) {
     if (cnt > 1) { paintProjectsTable(); }
     // When no projects exist, create Sample Laundry Project
     if (cnt < 1) { ttaNewConfig(); paintTasksTable(); }
+}
+
+// Create a function for getting a variable value
+function myFunction_get() {
+    // Get the styles (properties and values) for the root
+    var rs = getComputedStyle(r);
+    // Alert the value of the --blue variable
+    alert("The value of --msgq-error-bg-color is: " +
+          rs.getPropertyValue('--msgq-error-bg-color'));
+}
+
+// Create a function for setting a variable value
+function myFunction_set() {
+    // Set the value of variable --msgq-error-bg-color to another value (in this case "lightblue")
+    r.style.setProperty('--msgq-error-bg-color', 'lightblue');
 }
 
 var ttaStyleSheet, styles
@@ -142,35 +167,6 @@ function ttaApplyGlobalStyles() {
 
 :root {
     --name-column: 3;
-    --honeydew: #F0FFF0;
-    --msgq-error-bg-color: #f44336;  /* Light Red */
-    --msgq-warning-bg-color: #ff9800;  /* Light Orange */
-    --msgq-info-bg-color: #2196F3;  /* Light Blue */
-    --msgq-success-bg-color: #04AA6D;  /* Light Green */
-    --msgq-body-bg-color: #f1f1f1;  /* Light Grey */
-    --msgq-border-color: #d3d3d3;  /* Dark Grey */
-
-    --header-accent-color: #FFFF00;  /* Yellow */
-    --button-focus-color: #1E90FF;  /* Dodger Blue */
-    --progress-bar-color: #008000;  /* Green */
-    --flash-bg-color: #808080;  /* Grey */
-    --boldest-color: #000;  /* Black */
-/* From github/page-themes/cayman/_sass/variables.scss */
-    --header-heading-color: #fff;  /* White */
-    --header-bg-color: #159957;  /* Cayman Green */
-    --header-bg-color-secondary: #155799;  /* Cayman Blue */
-/* Text */
---section-headings-color: #159957;  /* Cayman Green */
---body-text-color: #606c71;
---body-link-color: #1e6bb8;
---blockquote-text-color: #819198;
-/* Code */
---code-bg-color: #f3f6fa;
---code-text-color: #567482;
-/* Borders */
---border-color: #dce6f0;
---table-border-color: #e9ebec;
---hr-border-color: #eff0f1;
 }
 
 .ttaContainer {
