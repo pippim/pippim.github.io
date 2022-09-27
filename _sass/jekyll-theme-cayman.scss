@@ -89,15 +89,16 @@ body {
     left: 10px;
     height: auto;
     width: auto;
-    //background: invert($body-link-color);
+    /* background: invert($body-link-color); */
     background: invert(var(--body-link-color));
-    //outline: thick solid invert($body-link-color);
+    /* outline: thick solid invert($body-link-color); */
     outline: thick solid invert(var(--body-link-color));
   }
 }
 
 a {
-  color: $body-link-color;
+  /* color: $body-link-color; */
+  color: var(--body-link-color);
   text-decoration: none;
 
   &:hover {
