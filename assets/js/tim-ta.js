@@ -107,7 +107,7 @@ var tabTasksTitle = "View/Add/Edit/Delete Tasks"
 var ttaElm, currentTable, currentRoot, currentRow, currentMode, currentForm;
 
 // Get the root element
-var r = document.querySelector(':root');
+var rootElm = document.querySelector(':root');
 
 function ttaRunConfiguration (parentElm) {
     // Top-level function called by main webpage
@@ -144,7 +144,7 @@ function ttaRunConfiguration (parentElm) {
 // Create a function for getting a variable value
 function myFunction_get() {
     // Get the styles (properties and values) for the root
-    var rs = getComputedStyle(r);
+    var rs = getComputedStyle(rootElm);
     // Alert the value of the --blue variable
     alert("The value of --msgq-error-bg-color is: " +
           rs.getPropertyValue('--msgq-error-bg-color'));
@@ -153,7 +153,8 @@ function myFunction_get() {
 // Create a function for setting a variable value
 function myFunction_set() {
     // Set the value of variable --msgq-error-bg-color to another value (in this case "lightblue")
-    r.style.setProperty('--msgq-error-bg-color', 'lightblue');
+    const red = '#FF0000'
+    rootElm.style.setProperty('--msgq-error-bg-color', red);
 }
 
 var ttaStyleSheet, styles
