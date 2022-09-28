@@ -159,6 +159,7 @@ $lavender: #E6E6FA !default; // lavender
         height: 100%;
         // darken is sass function that can't be used with var(--color)
         // background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
+        background-color: var(--header-bg-color-secondary);  // For Cayman
         transition: all .3s;
         border-radius: 2rem;
         z-index: -1;
@@ -217,6 +218,7 @@ $lavender: #E6E6FA !default; // lavender
         height: 100%;
         // Sept 27/22 - darken is a sass function that can't be used with var(--)
         //background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
+        background-color: var(--header-bg-color-secondary);  // For Cayman
         transition: all .3s;
         border-radius: 2rem;
         z-index: -1;
