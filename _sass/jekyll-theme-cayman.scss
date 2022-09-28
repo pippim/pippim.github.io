@@ -36,7 +36,6 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  // color: $body-text-color;
   color: var(--body-text-color);
 }
 
@@ -56,14 +55,11 @@ body {
     // invert is a sass function that doesn't support var(--value)
     // #skip-to-content is not used in Pippim Website
     background: invert($body-link-color);
-    // background: invert(var(--body-link-color));
     outline: thick solid invert($body-link-color);
-    // outline: thick solid invert( var(--body-link-color) );
   }
 }
 
 a {
-  /* color: $body-link-color; */
   color: var(--body-link-color);
   text-decoration: none;
 
@@ -75,7 +71,6 @@ a {
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
-  // .btn is not used in Pippim Website, so below code not changed to color schemes
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
@@ -121,7 +116,6 @@ a {
   color: var(--header-heading-color);
   text-align: center;
   background-color: var(--header-bg-color);
-  /* background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color); */
   background-image: linear-gradient(120deg, var(--header-bg-color-secondary), var(--header-bg-color));
 
   @include large {
@@ -223,7 +217,6 @@ a {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    /* color: $section-headings-color; */
     color: var(--section-headings-color);
   }
 
@@ -250,10 +243,7 @@ a {
     background-color: $code-bg-color;
     border: solid 1px $border-color;
     border-radius: 0.3rem;
-    
-    /** Code Block scroll bar From: 
-     ** https://stackoverflow.com/a/38490989/6929343 **/
-    max-height: 400px;
+    max-height: 400px;  /* Force scroll bar for big code blocks */
     overflow-y: auto;
 
     > code {
