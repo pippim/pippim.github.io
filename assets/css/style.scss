@@ -21,18 +21,40 @@
     --button-focus-color: #1E90FF;  /* Dodger Blue (for background) */
     --progress-bar-color: #008000;  /* Green */
     --flash-bg-color: #808080;  /* Grey */
-    --boldest-color: #000;  /* Black on white screen, white on black screen */
+    --boldest-color: #000000;  /* Black on white screen, white on black screen */
+    --link-visited: #800080;  /* Purple */
     /*  Copied from github/page-themes/cayman/_sass/variables.scss
         to /assets/_sass/variables.scss and & prefix changed to --
     */
-    --header-heading-color: #fff;  /* White */
+    --header-heading-color: #ffffff;  /* White */
     --header-bg-color: #159957;  /* Cayman Green */
     --header-bg-color-secondary: #155799;  /* Cayman Blue */
     /* Text */
     --section-headings-color: #159957;  /* Cayman Green */
     --body-text-color: #606c71;  /* grey */
     --body-link-color: #1e6bb8;  /* Link blue */
-    --body-link-inverted-color: #1e6bb8;  /* Have no clue used by cayman theme */
+    --body-link-inverted-color: #e19447;  /* Have no clue used by cayman theme
+
+    1e = 30 - 255  = 225 = e1
+    6b = 107 - 255 = 148 = 94
+    b8 = 184 - 255 = 71  = 47
+
+    from: https://stackoverflow.com/a/36908191/6929343
+to calculate the invert of a color:
+
+    $color: #ff6699;
+    Convert the color value to RGB
+
+    #ff6699 = RGB 255, 102, 153
+
+    Flip the values by subtracting the original RGB values from 255
+
+    (255-255) (255-102) (255-153)
+    0          153       102
+
+    This corresponds to #009966
+
+     */
     --blockquote-text-color: #819198;
     /* Code */
     --code-bg-color: #f3f6fa;
@@ -121,7 +143,7 @@ $lavender: #E6E6FA !default; // lavender
     display: block;
 }
 
-#dropdown-content a:hover { color: yellow; }
+#dropdown-content a:hover { color: var(--header-accent-color); }
 
 .dropdown:hover #dropdown-content {
     display: block;
@@ -165,7 +187,7 @@ $lavender: #E6E6FA !default; // lavender
         z-index: -1;
     }
     &:hover {
-        color: yellow;  // hyperlink hover color is blue
+        color: var(--header-accent-color);  // hyperlink hover color is blue
         &:before {
             width: 100%;
         }
@@ -276,22 +298,22 @@ $lavender: #E6E6FA !default; // lavender
     background-color: var(--nav-button-bg-color); // Light green yellow
 
     &:hover {
-        background-color: DodgerBlue;
+        background-color: var(--button-focus-color);
         color: #fff;       // WAS F0FFF0 or something like that Grayish
     }
     &:focus-visible {
         /* remove default focus style */
         outline: none;
         /* custom focus styles */
-        box-shadow: 0 0 2px 2px yellow;
-        color: DodgerBlue;
+        box-shadow: 0 0 2px 2px var(--header-accent-color);
+        color: var(--button-focus-color);
     }
 }
 
 /* Causing problems where visited gets hover property ...
-#markdown-toc a:visited { color: blue; }
+#markdown-toc a:visited { color: var(--body-link-color); }
 */
-#markdown-toc a:hover { color:black; }
+#markdown-toc a:hover { color: var(--boldest-color); }
 
 // Blog post front matter
 .front-matter {
@@ -322,7 +344,7 @@ $lavender: #E6E6FA !default; // lavender
     max-height: 500px;
     transform: scaleY(1);
 
-    &:hover { color: blue; }
+    &:hover { color: var(--body-link-color); }
 }
 
 #view_button:hover {
@@ -357,7 +379,7 @@ mark {
 //a:visited:not(.tcm-btn),
 // THERE ARE TOO Many to skip: Table of Contents
 a:visited {
-  color: purple;
+  color: var(--link-visited);
 }
 
 a.button:visited {
@@ -432,20 +454,20 @@ details > p {
     background-color: var(--nav-button-bg-color);
     color: var(--header-bg-color);
     margin-left: 1.3em;
-    box-shadow: 3px 3px 4px black;
+    box-shadow: 3px 3px 4px var(--boldest-color);
     padding: 4px 4px 4px 4px;
 }
 
 details > a {
     &:visited {
-        color: purple;
+        color: var(--link-visited);
     }
 }
 
-details a:visited { color:purple; }
-details a:hover { color:black; }
-.top-ten a:visited { color:purple; }
-.top-ten a:hover { color:black; }
+details a:visited { color: var(--link-visited); }
+details a:hover { color: var(--boldest-color); }
+.top-ten a:visited { color: var(--link-visited); }
+.top-ten a:hover { color: var(--boldest-color); }
 
 details[open] > summary {
     background-color: var(--nav-button-bg-color);
@@ -572,11 +594,11 @@ details[open] > summary {
 
 // But none of the answers are working???
 a.search-results:visited {
-    color: purple;
+    color: var(--link-visited);
 }
 
-.search-results a:visited { color:purple; }
-.search-results a:hover { color:black; }
+.search-results a:visited { color: var(--link-visited); }
+.search-results a:hover { color: var(--boldest-color); }
 
 
 /* MAJOR SECTION ======== .linear-wipe {}
@@ -625,7 +647,7 @@ a.search-results:visited {
     z-index: 9;
     background-color: #f1f1f1;
     border: .2rem solid #d3d3d3;
-    color: black;
+    color: var(--boldest-color);
     text-align: left;
 
     @include large { padding: 0.5rem; font-size: 1rem; }
