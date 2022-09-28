@@ -23,6 +23,9 @@
     --flash-bg-color: #808080;  /* Grey */
     --boldest-color: #000000;  /* Black on white screen, white on black screen */
     --link-visited: #800080;  /* Purple */
+    // $salmon: #FA8072 !default; // salmon
+    // $lavender: #E6E6FA !default; // lavender
+
     /*  Copied from github/page-themes/cayman/_sass/variables.scss
         to /assets/_sass/variables.scss and & prefix changed to --
     */
@@ -147,6 +150,23 @@ $lavender: #E6E6FA !default; // lavender
 
 .dropdown:hover #dropdown-content {
     display: block;
+}
+
+.page-header {
+    /*  Sep 28/2022 - Strange have to add this today. Page header has
+        way too much white space above and below.
+    */
+    @include large {
+        margin-top: -4rem;
+    }
+
+    @include medium {
+        margin-top: -2rem;
+    }
+
+    @include small {
+        margin-top: -1rem;
+    }
 }
 
 .page-header-button {
