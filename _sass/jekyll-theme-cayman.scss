@@ -54,8 +54,8 @@ body {
     width: auto;
     // invert is a sass function that doesn't support var(--value)
     // #skip-to-content is not used in Pippim Website
-    background: invert($body-link-color);
-    outline: thick solid invert($body-link-color);
+    background: var(--body-link-inverted-color);
+    outline: thick solid var(--body-link-inverted-color);
   }
 }
 
