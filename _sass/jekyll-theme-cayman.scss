@@ -228,8 +228,8 @@ a {
     padding: 2px 4px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 92%;  // Change 0.9rem to 92% for proper size in headings
-    color: $code-text-color;
-    background-color: $code-bg-color;
+    color: var(--code-text-color);
+    background-color: var(--code-bg-color);
     border-radius: 0.3rem;
   }
 
@@ -238,10 +238,10 @@ a {
     margin-top: 0;
     margin-bottom: 1rem;
     font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    color: $code-text-color;
+    color: var(--code-text-color);
     word-wrap: normal;
-    background-color: $code-bg-color;
-    border: solid 1px $border-color;
+    background-color: var(--code-bg-color);
+    border: solid 1px var(--border-color);
     border-radius: 0.3rem;
     max-height: 400px;  /* Force scroll bar for big code blocks */
     overflow-y: auto;
@@ -250,7 +250,7 @@ a {
       padding: 0;
       margin: 0;
       font-size: 0.9rem;
-      color: $code-text-color;
+      color: var(--code-text-color);
       word-break: normal;
       white-space: pre;
       background: transparent;
@@ -304,8 +304,8 @@ a {
   blockquote {
     padding: 0 1rem;
     margin-left: 0;
-    color: $blockquote-text-color;
-    border-left: 0.3rem solid $border-color;
+    color: var(--blockquote-text-color);
+    border-left: 0.3rem solid var(--border-color);
 
     > :first-child {
       margin-top: 0;
@@ -331,7 +331,7 @@ a {
     th,
     td {
       padding: 0.5rem 1rem;
-      border: 1px solid $table-border-color;
+      border: 1px solid var(--table-border-color);
     }
   }
 
@@ -355,7 +355,7 @@ a {
     height: 2px;
     padding: 0;
     margin: 1rem 0;
-    background-color: $hr-border-color;
+    background-color: var(--hr-border-color);
     border: 0;
   }
 }
@@ -363,7 +363,7 @@ a {
 .site-footer {
   padding-top: 2rem;
   margin-top: 2rem;
-  border-top: solid 1px $hr-border-color;
+  border-top: solid 1px var(--hr-border-color);
 
   @include large {
     font-size: 1rem;
@@ -384,5 +384,5 @@ a {
 }
 
 .site-footer-credits {
-  color: $blockquote-text-color;
+  color: var(--$blockquote-text-color);
 }
