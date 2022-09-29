@@ -3,6 +3,12 @@
 
 @import "{{ site.theme }}";
 
+/* Color codes
+
+https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989
+
+*/
+
 :root {
     /*  Used by Pippim. Defaults are stored in memory (here). Also created
         in memory is colorSchemeDark. You can copy and modify either scheme
@@ -68,10 +74,10 @@ to calculate the invert of a color:
     --hr-border-color: #eff0f1;
     /*  /assets/_sass/variables.scss that never had an '&' sass prefix */
     --kbd-background-color: #fafbfc;
-    --kbd-border: 1px solid #c6cbd1;
+    --kbd-border-color: 1px solid #c6cbd1;
     --kbd-border-bottom-color: #959da5;
     --kbd-box-shadow-color: #959da5;
-    --kbd-text-color: #444d56;
+    --kbd-color: #444d56;
 }
 
 // Smooth scrolling
