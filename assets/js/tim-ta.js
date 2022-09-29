@@ -147,7 +147,7 @@ function myFunction_get() {
     // Get the styles (properties and values) for the root
     var rs = getComputedStyle(rootElm);
     // Alert the value of the --blue variable
-    alert("The value of " + targetProperty + " is: " +
+    console.log("The value of " + targetProperty + " is: " +
           rs.getPropertyValue(targetProperty));
 }
 
