@@ -94,7 +94,7 @@ $lavender: #E6E6FA !default; // lavender
     align-items: center;
     @include large {  display: flex; margin-top: 1.5rem; margin-bottom: -3rem; }
     @include medium { display: flex; margin-top: 1rem; margin-bottom: -1rem; }
-    @include small {  display: none; margin-top: 1rem; }
+    @include small {  display: none; margin-top: 1.5rem; margin-bottom: -.5rem; }
 }
 
 #page-header-hamburger {
