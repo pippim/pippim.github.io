@@ -29,6 +29,9 @@ contains Cayman Theme defaults for historical reference purposes.
 
 # Color Codes
 
+<h1 style="background-color:#1e6bb8;">--body-link-color: #1e6bb8;</h1>
+<h1 style="background-color:#e19447;">--body-link-inverted-color: #e19447;</h1>
+
 <h1 style="background-color:#819198;">#819198</h1>
 <h1 style="background-color:#f3f6fa;">#f3f6fa</h1>
 <h1 style="background-color:#567482;">#567482</h1>
