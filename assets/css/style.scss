@@ -92,23 +92,23 @@ $lavender: #E6E6FA !default; // lavender
     justify-content: center;  // Hamburger and Mag Glass side-by-side
     flex-direction: row;
     align-items: center;
-    @include large {  display: flex; margin-top: 1.5rem; margin-bottom: -3rem; }
+    @include large  { display: flex; margin-top: 1.5rem; margin-bottom: -3rem; }
     @include medium { display: flex; margin-top: 1rem; margin-bottom: -1rem; }
-    @include small {  display: none; margin-top: 1.5rem; margin-bottom: -.5rem; }
+    @include small  { display: none; }
 }
 
 #page-header-hamburger {
-    @include large {  display: none; }
+    @include large  { display: none; }
     @include medium { display: none; }
-    @include small {  display: block; margin-bottom: -.5rem; }
+    @include small  { display: block; margin-top: .5rem; margin-bottom: -1rem; }
 }
 
 .search-symbol-white {
     // white search symbol follows hamburger menu button
     // Heights for Chrome below. Presumably work for MS Edge as well.
-    @include large {  width: 4.5rem; height: 2.6rem; }
+    @include large  { width: 4.5rem; height: 2.6rem; }
     @include medium { width: 4.2rem; height: 2.3rem; }
-    @include small {  width: 4.1rem; height: 2.4rem; }
+    @include small  { width: 4.1rem; height: 2.4rem; }
     cursor: pointer;
 }
 
