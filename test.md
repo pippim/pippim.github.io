@@ -27,6 +27,21 @@ contains Cayman Theme defaults for historical reference purposes.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
+# Color Codes
+
+<h1 style="background-color:#819198;">#819198</h1>
+<h1 style="background-color:#f3f6fa;">#f3f6fa</h1>
+<h1 style="background-color:#567482;">#567482</h1>
+<h1 style="background-color:#dce6f0;">#dce6f0</h1>
+<h1 style="background-color:#e9ebec;">#e9ebec</h1>
+<h1 style="background-color:#eff0f1;">#eff0f1</h1>
+
+<h1 style="background-color:#fafbfc;">#fafbfc</h1>
+<h1 style="background-color:#c6cbd1;">#c6cbd1</h1>
+<h1 style="background-color:#959da5;">#959da5</h1>
+<h1 style="background-color:#444d56;">#444d56</h1>
+<h1 style="background-color:#e9ebec;">#e9ebec</h1>
+
 # Copy code
 
 https://github.com/AleksandrHovhannisyan/aleksandrhovhannisyan.com/issues/35
