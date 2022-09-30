@@ -257,7 +257,7 @@ function set_hdr_tooltips () {
 }
 
 // Color Schemes
-var colorSchemeCayman {
+var colorSchemeCayman = {
     "--nav-button-bg-color": "#F0FFF0",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
@@ -296,7 +296,7 @@ var colorSchemeCayman {
 console.log("colorSchemeCayman.length:", colorSchemeCayman.length)
 for (const key of Object.keys(colorSchemeCayman)) {
     if (key.startsWith("fail_test")) continue  // Ignore test fail data
-    console.log(key)
+    console.log(key, colorSchemeCayman[key])
 }
 
 /* End of /assets/js/theCookieMachine.js */
