@@ -41,12 +41,12 @@ var colorSchemeCayman = {
 }
 
 var colorSchemeDark = {
-    "--nav-button-bg-color": "#F0FFF0",
+    "--nav-button-bg-color": "#505F50",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
     "--msgq-success-bg-color": "#04AA6D",
-    "--msgq-body-bg-color": "#313161",
+    "--msgq-body-bg-color": "#313131",
     "--msgq-border-color": "#3333d3",
     "--header-accent-color": "#FFFF00",
     "--button-focus-color": "#1E90FF",
