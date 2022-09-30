@@ -256,6 +256,8 @@ function set_hdr_tooltips () {
     }
 }
 
+/* Moved to tcm-common-code.js
+
 // Color Schemes
 var colorSchemeCayman = {
     "--nav-button-bg-color": "#F0FFF0",
@@ -353,5 +355,6 @@ function setColorCode(scheme, key) {
     if (value === null) return
     rootElm.style.setProperty(key, value);
 }
+*/
 
 /* End of /assets/js/theCookieMachine.js */
