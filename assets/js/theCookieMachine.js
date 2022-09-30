@@ -296,7 +296,25 @@ var colorSchemeCayman = {
 console.log("colorSchemeCayman.length:", colorSchemeCayman.length)
 for (const key of Object.keys(colorSchemeCayman)) {
     if (key.startsWith("fail_test")) continue  // Ignore test fail data
-    console.log(key, colorSchemeCayman[key])
+    console.log(key, colorSchemeCayman[key], getColorCode(colorSchemeCayman, key))
+}
+
+function getColorCode(scheme, key) {
+    // Get the styles (properties and values) for the root
+    const rootElm = document.querySelector(':root')  // Will not work for popup
+    const rs = getComputedStyle(rootElm)
+    const value = scheme[key]
+    // Alert the value of the --blue variable
+    // console.log("The value of " + key + " is: " + value)
+    return key
+}
+
+// Create a function for setting a variable value
+function setColorCode(scheme, key, value) {
+    // Set the value of variable --msgq-error-bg-color to another value (in this case "lightblue")
+    const rootElm = document.querySelector(':root')  // Will not work for popup
+    const red = '#FF0000'
+    rootElm.style.setProperty(targetProperty, red);
 }
 
 /* End of /assets/js/theCookieMachine.js */
