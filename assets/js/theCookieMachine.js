@@ -315,16 +315,16 @@ var colorSchemeDark = {
     "--body-link-color": "#1e6bb8",
     "--body-link-inverted-color": "#e19447",
     "--blockquote-text-color": "#819198",
-    "--code-bg-color": "#f3f6fa",
-    "--code-text-color": "#567482",
-    "--border-color": "#dce6f0",
+    "--code-bg-color": "#13161a",
+    "--code-text-color": "#b6b4b2",
+    "--border-color": "#4c4640",
     "--table-border-color": "#e9ebec",
-    "--hr-border-color": "#eff0f1",
-    "--kbd-background-color": "#fafbfc",
+    "--hr-border-color": "#3f3031",
+    "--kbd-background-color": "#2a2b2c",
     "--kbd-border-color": "#c6cbd1",
-    "--kbd-border-bottom-color": "#959da5",
-    "--kbd-box-shadow-color": "#959da5",
-    "--kbd-color": "#444d56"
+    "--kbd-border-bottom-color": "#e5ede5",
+    "--kbd-box-shadow-color": "#e5ede5",
+    "--kbd-color": "#a4ada6"
 }
 
 // TEST list the color scheme
