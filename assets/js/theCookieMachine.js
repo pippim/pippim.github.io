@@ -2,8 +2,7 @@
 ---
 // The Cookie Machine (TCM for short)
 
-// Note: Requires search.js to be loaded first for getJSON function.
-//       search.js defines global variables
+// Note: Requires search.js to be loaded first for global variables
 
 // Button Image source: https://www.cleanpng.com/free/
 
@@ -257,5 +256,47 @@ function set_hdr_tooltips () {
     }
 }
 
+// Color Schemes
+var colorSchemeCayman {
+    "--nav-button-bg-color": "#F0FFF0",
+    "--msgq-error-bg-color": "#f44336",
+    "--msgq-warning-bg-color": "#ff9800",
+    "--msgq-info-bg-color": "#2196F3",
+    "--msgq-success-bg-color": "#04AA6D",
+    "--msgq-body-bg-color": "#f1f1f1",
+    "--msgq-border-color": "#d3d3d3",
+    "--header-accent-color": "#FFFF00",
+    "--button-focus-color": "#1E90FF",
+    "--progress-bar-color": "#008000",
+    "--flash-bg-color": "#808080",
+    "--boldest-color": "#000000",
+    "--link-visited": "#800080",
+    "--header-heading-color": "#ffffff",
+    "--header-bg-color": "#159957",
+    "--header-bg-color-secondary": "#155799",
+    "--section-headings-color": "#159957",
+    "--body-text-color": "#606c71",
+    "--body-link-color": "#1e6bb8",
+    "--body-link-inverted-color": "#e19447",
+    "--blockquote-text-color": "#819198",
+    "--code-bg-color": "#f3f6fa",
+    "--code-text-color": "#567482",
+    "--border-color": "#dce6f0",
+    "--table-border-color": "#e9ebec",
+    "--hr-border-color": "#eff0f1",
+    "--kbd-background-color": "#fafbfc",
+    "--kbd-border-color": "#c6cbd1",
+    "--kbd-border-bottom-color": "#959da5",
+    "--kbd-box-shadow-color": "#959da5",
+    "--kbd-color": "#444d56"
+}
+
+// TEST list the color scheme
+
+console.log("colorSchemeCayman.length:", colorSchemeCayman.length)
+for (const key of Object.keys(colorSchemeCayman)) {
+    if (key.startsWith("fail_test")) continue  // Ignore test fail data
+    console.log(key)
+}
 
 /* End of /assets/js/theCookieMachine.js */
