@@ -41,7 +41,7 @@ var colorSchemeCayman = {
 }
 
 var colorSchemeDark = {
-    "--nav-button-bg-color": "#503F50",
+    "--nav-button-bg-color": "#403040",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
