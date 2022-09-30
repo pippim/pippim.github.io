@@ -306,7 +306,7 @@ function getColorCode(scheme, key) {
     const value = scheme[key]
     // Alert the value of the --blue variable
     // console.log("The value of " + key + " is: " + value)
-    return key
+    return value
 }
 
 // Create a function for setting a variable value
