@@ -346,11 +346,12 @@ function getColorCode(scheme, key) {
 }
 
 // Create a function for setting a variable value
-function setColorCode(scheme, key, value) {
+function setColorCode(scheme, key) {
     // Set the value of variable --msgq-error-bg-color to another value (in this case "lightblue")
     const rootElm = document.querySelector(':root')  // Will not work for popup
-    const red = '#FF0000'
-    rootElm.style.setProperty(targetProperty, red);
+    const value = scheme[key]
+    if (value === null) return
+    rootElm.style.setProperty(key, value);
 }
 
 /* End of /assets/js/theCookieMachine.js */

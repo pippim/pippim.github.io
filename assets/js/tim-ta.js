@@ -106,9 +106,6 @@ var tabTasksTitle = "View/Add/Edit/Delete Tasks"
 
 var ttaElm, currentTable, currentRoot, currentRow, currentMode, currentForm;
 
-// Get the root element
-var rootElm = document.querySelector(':root');
-
 function ttaRunConfiguration (parentElm) {
     // Top-level function called by main webpage
     ttaElm = parentElm;
@@ -127,9 +124,14 @@ function ttaRunConfiguration (parentElm) {
 
     // TEST css variables
     if (ttaConfig.environment == "Linux x86_64 Firefox 88") {
-        myFunction_get()
-        myFunction_set()
-        myFunction_get()
+        // Set dark theme
+        console.log("colorSchemeDark.length:", colorSchemeDark.length)
+        for (const key of Object.keys(colorSchemeDark)) {
+            if (key.startsWith("fail_test")) continue  // Ignore test fail data
+            console.log(key, colorSchemeDark[key], getColorCode(colorSchemeDark, key))
+            setColorCode(colorSchemeDark, key)
+        }
+
     }
 
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
@@ -139,23 +141,6 @@ function ttaRunConfiguration (parentElm) {
     if (cnt > 1) { paintProjectsTable(); }
     // When no projects exist, create Sample Laundry Project
     if (cnt < 1) { ttaNewConfig(); paintTasksTable(); }
-}
-
-// Create a function for getting a variable value
-var targetProperty = "--msgq-error-bg-color"
-function myFunction_get() {
-    // Get the styles (properties and values) for the root
-    var rs = getComputedStyle(rootElm);
-    // Alert the value of the --blue variable
-    console.log("The value of " + targetProperty + " is: " +
-          rs.getPropertyValue(targetProperty));
-}
-
-// Create a function for setting a variable value
-function myFunction_set() {
-    // Set the value of variable --msgq-error-bg-color to another value (in this case "lightblue")
-    const red = '#FF0000'
-    rootElm.style.setProperty(targetProperty, red);
 }
 
 /*
