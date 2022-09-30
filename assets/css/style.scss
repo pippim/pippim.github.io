@@ -41,6 +41,7 @@ https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-ja
     /* Text */
     --section-headings-color: #159957;  /* Cayman Green */
     --body-text-color: #606c71;  /* grey */
+    --body-background-color: #ffffff; /* white */
     --body-link-color: #1e6bb8;  /* Link blue */
     --body-link-inverted-color: #e19447;  /* Have no clue used by cayman theme
 
@@ -64,20 +65,20 @@ to calculate the invert of a color:
     This corresponds to #009966
 
      */
-    --blockquote-text-color: #819198;
+    --blockquote-text-color: #819198;  /* steel blue/grey */
     /* Code */
-    --code-bg-color: #f3f6fa;
-    --code-text-color: #567482;
+    --code-bg-color: #f3f6fa;  /* faint grey */
+    --code-text-color: #567482;  /* light royal blue */
     /* Borders */
-    --border-color: #dce6f0;
-    --table-border-color: #e9ebec;
-    --hr-border-color: #eff0f1;
+    --border-color: #dce6f0;  /* faint sky blue */
+    --table-border-color: #e9ebec;  /* faint grey */
+    --hr-border-color: #eff0f1;  /* faint grey */
     /*  /assets/_sass/variables.scss that never had an '&' sass prefix */
-    --kbd-background-color: #fafbfc;
-    --kbd-border-color: 1px solid #c6cbd1;
-    --kbd-border-bottom-color: #959da5;
-    --kbd-box-shadow-color: #959da5;
-    --kbd-color: #444d56;
+    --kbd-background-color: #fafbfc;  /* white */
+    --kbd-border-color: 1px solid #c6cbd1;  /* light grey/blue */
+    --kbd-border-bottom-color: #959da5;  /* grey/blue */
+    --kbd-box-shadow-color: #959da5;  /* grey/blue */
+    --kbd-color: #444d56;  /* dark grey/blue */
 }
 
 // Smooth scrolling
