@@ -66,7 +66,7 @@ var colorSchemeDark = {
     "--code-bg-color": "#13161a",
     "--code-text-color": "#b6b4b2",
     "--border-color": "#4c4640",
-    "--table-border-color": "#e9ebec",
+    "--table-border-color": "#494b4c",
     "--hr-border-color": "#3f3031",
     "--kbd-background-color": "#2a2b2c",
     "--kbd-border-color": "#c6cbd1",
