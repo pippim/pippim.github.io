@@ -4,7 +4,6 @@
 
 {% include draggable-window.js %}
 
-
 // Color Schemes
 var colorSchemeCayman = {
     "--nav-button-bg-color": "#F0FFF0",
@@ -41,7 +40,6 @@ var colorSchemeCayman = {
     "--kbd-color": "#444d56"
 }
 
-/* Why isn't this inherited from theCookieMachine.js? */
 var colorSchemeDark = {
     "--nav-button-bg-color": "#F0FFF0",
     "--msgq-error-bg-color": "#f44336",
@@ -95,6 +93,9 @@ function setColorCode(scheme, key) {
     if (value === null) return
     rootElm.style.setProperty(key, value);
 }
+
+// Test if tcm-common-code.js variable is visible:
+console.log("var tcmButtonClassNdx:", tcmButtonClassNdx)
 
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
