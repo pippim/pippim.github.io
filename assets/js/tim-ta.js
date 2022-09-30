@@ -158,6 +158,9 @@ function myFunction_set() {
     rootElm.style.setProperty(targetProperty, red);
 }
 
+/*
+Uncaught SyntaxError: missing ) after argument list
+
 console.log(Array.from(document.styleSheets)
   .filter(
     sheet =>
@@ -184,6 +187,7 @@ console.log(Array.from(document.styleSheets)
     []
   );
 )
+*/
 
 var ttaStyleSheet, styles
 // 'styles' is shared with ttaRunStyleSheet
