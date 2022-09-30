@@ -4,7 +4,7 @@
 
 {% include draggable-window.js %}
 
-// Color Schemes
+// Color Schemes - style.scss for descriptions
 var colorSchemeCayman = {
     "--nav-button-bg-color": "#F0FFF0",
     "--msgq-error-bg-color": "#f44336",
@@ -41,7 +41,7 @@ var colorSchemeCayman = {
 }
 
 var colorSchemeDark = {
-    "--nav-button-bg-color": "#707F70",
+    "--nav-button-bg-color": "#803F80",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
