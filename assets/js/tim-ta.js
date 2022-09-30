@@ -95,7 +95,7 @@ function setColorCode(scheme, key) {
 }
 
 // Test if tcm-common-code.js variable is visible:
-console.log("var tcmButtonClassNdx:", tcmButtonClassNdx)
+// console.log("var tcmButtonClassNdx:", tcmButtonClassNdx)
 
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
