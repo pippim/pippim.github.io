@@ -77,6 +77,25 @@ var colorSchemeDark = {
     "--kbd-color": "#444d56"
 }
 
+function getColorCode(scheme, key) {
+    // Get the styles (properties and values) for the root
+    const rootElm = document.querySelector(':root')  // Will not work for popup
+    const rs = getComputedStyle(rootElm)
+    const value = scheme[key]
+    // Alert the value of the --blue variable
+    // console.log("The value of " + key + " is: " + value)
+    return value
+}
+
+// From theCookieMachine.js
+function setColorCode(scheme, key) {
+    // Set the value of variable --msgq-error-bg-color to another value (in this case "lightblue")
+    const rootElm = document.querySelector(':root')  // Will not work for popup
+    const value = scheme[key]
+    if (value === null) return
+    rootElm.style.setProperty(key, value);
+}
+
 var scrTimeout, scrWidth, scrSmall, scrMedium, scrLarge
 
 function scrSetSize() {
