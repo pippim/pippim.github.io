@@ -375,7 +375,7 @@ table.tta-table th {
     position: sticky;
     top: 0;
     z-index: 1;
-    background: #f1f1f1;
+    background: var(--table-border-color);
 }
 
 @keyframes flash {
