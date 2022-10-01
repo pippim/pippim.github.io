@@ -307,7 +307,7 @@ audio { vertical-align:middle }
 
 /* .tta-btn WAS styled with hdr-btn that has left margin */
 .tta-btn {
-    color: var(--nav-button-bg-color);
+    color: var(--nav-button-color);
     padding: 0px 10px;
     background-color: var(--nav-button-bg-color);
     font-size: x-large;
