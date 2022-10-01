@@ -173,8 +173,10 @@ $lavender: #E6E6FA !default; // lavender
     display: inline-block;
     border-radius: 2rem;
     vertical-align: middle;
-    color: var(--boldest-color);
-    border: 2px solid var(--boldest-color);
+    --boldest-color: #000000;  /* Black on white screen, white on black screen */
+    --link-visited: #800080;  /* Purple */
+    color: var(--header-heading-color);
+    border: 2px solid var(--header-heading-color);
     transition: all .3s;
     position: relative;
     overflow: hidden;
