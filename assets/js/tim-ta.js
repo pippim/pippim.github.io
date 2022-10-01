@@ -381,6 +381,10 @@ table.tta-table th {
     background: var(--table-border-color);
 }
 
+table.tta-table td {
+    background: #202020;
+}
+
 @keyframes flash {
     from { background-color: var(--flash-bg-color); }
     to { background-color: inherit; }
