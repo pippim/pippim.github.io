@@ -82,6 +82,16 @@ to calculate the invert of a color:
     --kbd-color: #444d56;  /* dark grey/blue */
 }
 
+// Input fields
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  background: var(--nav-button-bg-color);
+}
+
 // Smooth scrolling
 html { scroll-behavior: smooth; }
 
