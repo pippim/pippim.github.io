@@ -416,6 +416,7 @@ table.tta-table th {
     max-width: 500px;
     margin: 2rem 0px;
     padding: 1rem;
+    background-color: var(--nav-button-color)
 }
 
 #config-drop-area.highlight,
