@@ -399,6 +399,7 @@ table.tta-table th {
     border: 2px solid var(--kbd-border-color);
     border-radius: 2rem;
     background-color: var(--nav-button-bg-color)
+    padding: 1rem;
 }
 
 #config-drop-area,
@@ -3332,13 +3333,13 @@ function paintCustomSounds() {
     var html = "<ul>"
     for (const key of Object.keys(customSounds.sounds)) {
         var record = customSounds.sounds[key]
-        html += "<li>Key:&nbsp;<b>" + key
+        html += "<br><li>Key:&nbsp;<b>" + key
         html += '</b>&emsp;<audio controls="true" id="'
         html += key + '"></audio>'
         html += '&emsp; Size:&nbsp;<b>' + record.size.toLocaleString() + '</b>'
         html += "&emsp; Type:&nbsp;<nobr><b>" + record.type + '</b></nobr>'
         html += '&emsp; Name:&nbsp;<nobr><b>' + record.name + '</b></nobr>'
-        html += "</li><br>"
+        html += "</li>"
     }
     html += "</ul>"
 
