@@ -408,6 +408,17 @@ table.tta-table th {
     color: var(--boldest-color);
 }
 
+/* Display alarm01, alarm05 and alarm12 created by default in tim-ta */
+#stock-sound-files {
+    border: 2px solid #ccc;
+    border-radius: 2rem;
+    min-width: 50%;
+    max-width: 500px;
+    margin: 2rem 0px;
+    padding: 1rem;
+    background-color: var(--nav-button-bg-color)
+}
+
 #config-drop-area,
 #drop-area {
     border: 2px dashed #ccc;
@@ -424,6 +435,7 @@ table.tta-table th {
     border-color: purple;
 }
 
+/* my-form used in tim-ta.md (Upload Custom Sound Files) */
 .my-form {
     margin-bottom: 10px;
 }
