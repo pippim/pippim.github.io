@@ -120,15 +120,13 @@ have been uploaded so far.</span>
 The following sound files are always available direct from
 the {{ site.title }} Website.
 
-<style>
-/* audio { vertical-align:middle } */
-</style>
 
 <!-- WARNING: Do not delete these <audio> tags, simply hide them if you don't
 want them visible to user. This is because the ID is referenced by sound.js -->
 
 These are Tim-ta stock sound files you can use when a timer task ends:
 <br>
+<div id="stock-sound-files">
 - **Alarm_01.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_01.mp3"></audio>
 <br><br>
 - **Alarm_02.mp3** &emsp;&emsp;<audio controls="true" id="Alarm_02.mp3"></audio>
@@ -138,6 +136,7 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 <audio id="Alarm_01.wav"></audio>
 <audio id="Alarm_05.mp3"></audio>
 <audio id="Alarm_12.mp3"></audio>
+</div>
 
 ---
 
