@@ -3317,7 +3317,7 @@ function configHandleFiles(files) {
 
 /*  Build Custom Sounds div
 
-    Parent contains: <div id="PaintedSounds"></div>
+    Parent contains: <div id="uploadedSounds"></div>
 
     This function updates HTML with:
     <ul>
@@ -3342,7 +3342,7 @@ function paintCustomSounds() {
     }
     html += "</ul>"
 
-    document.getElementById("PaintedSounds").innerHTML = html
+    document.getElementById("uploadedSounds").innerHTML = html
     loadCustomNames()
     updateSelectFiles()
 
