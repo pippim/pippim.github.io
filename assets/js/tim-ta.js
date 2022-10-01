@@ -235,36 +235,6 @@ function ttaRunConfiguration (parentElm) {
     if (cnt < 1) { ttaNewConfig(); paintTasksTable(); }
 }
 
-/*
-Uncaught SyntaxError: missing ) after argument list
-
-console.log(Array.from(document.styleSheets)
-  .filter(
-    sheet =>
-      sheet.href === null || sheet.href.startsWith(window.location.origin)
-  )
-  .reduce(
-    (acc, sheet) =>
-      (acc = [
-        ...acc,
-        ...Array.from(sheet.cssRules).reduce(
-          (def, rule) =>
-            (def =
-              rule.selectorText === ":root"
-                ? [
-                    ...def,
-                    ...Array.from(rule.style).filter(name =>
-                      name.startsWith("--")
-                    )
-                  ]
-                : def),
-          []
-        )
-      ]),
-    []
-  );
-)
-*/
 
 var ttaStyleSheet, styles
 // 'styles' is shared with ttaRunStyleSheet
@@ -361,7 +331,12 @@ progress::-webkit-progress-value {
     height: auto;
 }
 
-select:invalid { color: var(flash-bg-color); }
+select:invalid { color: var(--flash-bg-color); }
+
+input.tabInput {
+    /* input fields */
+    background: var(--nav-button-bg-color);
+}
 
 .tta-table table {
     table-layout: auto;
@@ -379,10 +354,6 @@ table.tta-table th {
     top: 0;
     z-index: 1;
     background: var(--table-border-color);
-}
-
-table.tta-table td {
-    background-color: #202020;
 }
 
 @keyframes flash {
