@@ -409,7 +409,7 @@ table.tta-table th {
 }
 
 /* Display alarm01, alarm05 and alarm12 created by default in tim-ta */
-#stock-sound-files {
+#stock-sound-files-area {
     border: 2px solid #ccc;
     border-radius: 2rem;
     min-width: 50%;
