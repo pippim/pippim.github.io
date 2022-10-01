@@ -382,7 +382,7 @@ table.tta-table th {
 }
 
 table.tta-table td {
-    background: #202020;
+    background-color: #202020;
 }
 
 @keyframes flash {
