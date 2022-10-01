@@ -71,10 +71,10 @@ var colorSchemeDark = {
     "--table-border-color": "#494b4c",
     "--hr-border-color": "#3f3031",
     "--kbd-background-color": "#2a2b2c",
-    "--kbd-border-color": "#c600d1",
+    "--kbd-border-color": "#c6cbd1",
     "--kbd-border-bottom-color": "#e5ede5",
     "--kbd-box-shadow-color": "#e5ede5",
-    "--kbd-color": "#a4ada6"
+    "--kbd-color": "#040d06"
 }
 
 function getColorCode(scheme, key) {
