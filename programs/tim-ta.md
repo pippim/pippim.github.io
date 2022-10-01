@@ -85,8 +85,9 @@ your own project(s), you can delete the sample project.
 
 # Custom Sound Files (Uploaded)
 
-<span id="customSounds">These are all the custom sound files that 
-have been uploaded so far.</span>
+<span id="customSounds">Below are custom sound files that 
+have been uploaded. If no custom sounds have been uploaded,
+then you will only see a solid line.</span>
 
 
 <div id="uploadedSounds"></div>
