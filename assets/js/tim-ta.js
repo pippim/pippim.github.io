@@ -388,7 +388,7 @@ table.tta-table th {
     border: 2px solid var(--kbd-border-color);
     border-radius: 2rem;
     min-width: 50%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 2rem 0px;
     padding: 1rem;
     background-color: var(--nav-button-bg-color);
