@@ -41,7 +41,7 @@ var colorSchemeCayman = {
 }
 
 var colorSchemeDark = {
-    "--nav-button-bg-color": "#302030",
+    "--nav-button-bg-color": "#252025",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
@@ -310,6 +310,7 @@ audio { vertical-align:middle }
     background-color: var(--nav-button-bg-color);
     font-size: x-large;
     border-radius: 1rem;
+    border: none;  // Sept 30/22 - Dark theme looks better with no border
     outline: none;  /* Remove shadow effect? NOPE :( */
 }
 
