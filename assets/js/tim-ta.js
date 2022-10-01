@@ -2786,7 +2786,18 @@ function confirmDelete(text) {
     return false
 }
 
-/* UPLOAD Custom Sound Files */
+/*  UPLOAD Custom Sound Files
+
+    Oct 1/22 - No check for file type yet:
+
+        HTTP “Content-Type” of “application/x-javascript” is not
+        supported. Load of media resource data:application/x
+
+    And when you click "play" button you get:
+
+        Cannot play media. No decoders for requested
+        formats: application/x-javascript
+*/
 
 var dropArea;
 document.addEventListener("DOMContentLoaded", function(event){
@@ -2960,7 +2971,7 @@ var configDropArea;
 
 document.addEventListener("DOMContentLoaded", function(event){
     // Must wait due to error: Uncaught TypeError: configDropArea is null
-    var configDropArea = document.getElementById('config-drop-area')
+    configDropArea = document.getElementById('config-drop-area')
     ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
         configDropArea.addEventListener(eventName, preventDefaults, false)
     })
