@@ -56,7 +56,7 @@ var colorSchemeDark = {
     "--flash-bg-color": "#808080",
     "--boldest-color": "#ffffff",
     "--link-visited": "#800080",
-    "--header-heading-color": "#ffa0b0",
+    "--header-heading-color": "#ffa0d0",
     "--header-bg-color": "#057937",
     "--header-bg-color-secondary": "#053779",
     "--section-headings-color": "#159957",
