@@ -89,7 +89,7 @@ your own project(s), you can delete the sample project.
 have been uploaded so far.</span>
 
 
-<div id="PaintedSounds"></div>
+<div id="uploadedSounds"></div>
 
 **NOTE:** 
 > The Firefox Web Browser limits localStorage to
