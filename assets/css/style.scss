@@ -16,6 +16,7 @@ https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-ja
     */
     //--honeydew: #F0FFF0;  /* light greenish yellow used for nav-background-color */
     --nav-button-bg-color: #F0FFF0;  /* Honeydew light greenish yellow */
+    --nav-button-color: #159957;  /* Cayman green */
     --msgq-error-bg-color: #f44336;  /* Light Red */
     --msgq-warning-bg-color: #ff9800;  /* Light Orange */
     --msgq-info-bg-color: #2196F3;  /* Light Blue */
@@ -310,12 +311,11 @@ $lavender: #E6E6FA !default; // lavender
 .hdr-bar > a {
     display: inline-block;
     position: relative;
-    color: var(--header-bg-color);  // Cayman green
+    color: var(--nav-button-color);  // Cayman green
     padding: 5px 15px;        // vertical, horizontal padding around button text
     font-size:0.75em;         // 75% of normal font for button text
     margin-left: 10px;        // Now that right aligned, switch margin side
     background-color: var(--nav-button-bg-color); // Light green yellow
-    border: none;  // Sept 30/22 - Dark theme looks better with no border
 
     &:hover {
         background-color: var(--button-focus-color);
