@@ -7,6 +7,7 @@
 // Color Schemes - style.scss for descriptions
 var colorSchemeCayman = {
     "--nav-button-bg-color": "#F0FFF0",
+    "--nav-button-color": "#159957",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
@@ -42,6 +43,7 @@ var colorSchemeCayman = {
 
 var colorSchemeDark = {
     "--nav-button-bg-color": "#696b6c",
+    "--nav-button-color": "#e9ebec",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
@@ -305,7 +307,7 @@ audio { vertical-align:middle }
 
 /* .tta-btn WAS styled with hdr-btn that has left margin */
 .tta-btn {
-    color: var(--header-bg-color);
+    color: var(--nav-button-bg-color);
     padding: 0px 10px;
     background-color: var(--nav-button-bg-color);
     font-size: x-large;

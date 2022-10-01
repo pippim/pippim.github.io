@@ -2,8 +2,6 @@
 ---
 // The Cookie Machine (TCM for short)
 
-// Note: Requires search.js to be loaded first for global variables
-
 // Button Image source: https://www.cleanpng.com/free/
 
 // imported functions.  Parent needs <script type="module"...
@@ -261,6 +259,7 @@ function set_hdr_tooltips () {
 // Color Schemes
 var colorSchemeCayman = {
     "--nav-button-bg-color": "#F0FFF0",
+    "--nav-button-color": "#159957",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
