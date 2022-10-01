@@ -391,15 +391,14 @@ table.tta-table th {
     max-width: 500px;
     margin: 2rem 0px;
     padding: 1rem;
-    background-color: var(--nav-button-bg-color)
+    background-color: var(--nav-button-bg-color);
 }
 
 /* Custom sounds files manually uploaded */
 #uploadedSounds {
     border: 2px solid var(--kbd-border-color);
     border-radius: 2rem;
-    background-color: var(--nav-button-bg-color)
-    padding: 1rem;
+    background-color: var(--nav-button-bg-color);
 }
 
 #config-drop-area,
@@ -410,7 +409,7 @@ table.tta-table th {
     max-width: 500px;
     margin: 2rem 0px;
     padding: 1rem;
-    background-color: var(--nav-button-bg-color)
+    background-color: var(--nav-button-bg-color);
 }
 
 #config-drop-area.highlight,
