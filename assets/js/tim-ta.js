@@ -385,7 +385,7 @@ table.tta-table th {
 
 /* Display alarm01, alarm05 and alarm12 created by default in tim-ta */
 #stock-sound-files-area {
-    border: 2px solid #ccc;
+    border: 2px solid var(--kbd-border-color);
     border-radius: 2rem;
     min-width: 50%;
     max-width: 500px;
@@ -394,9 +394,16 @@ table.tta-table th {
     background-color: var(--nav-button-bg-color)
 }
 
+/* Custom sounds files manually uploaded */
+#uploadedSounds {
+    border: 2px solid var(--kbd-border-color);
+    border-radius: 2rem;
+    background-color: var(--nav-button-bg-color)
+}
+
 #config-drop-area,
 #drop-area {
-    border: 2px dashed #ccc;
+    border: 2px dashed var(--kbd-border-color);
     border-radius: 2rem;
     min-width: 50%;
     max-width: 500px;
@@ -407,7 +414,7 @@ table.tta-table th {
 
 #config-drop-area.highlight,
 #drop-area.highlight {
-    border-color: purple;
+    border-color: var(--link-visited);
 }
 
 /* my-form used in tim-ta.md (Upload Custom Sound Files) */
