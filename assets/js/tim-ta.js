@@ -2791,7 +2791,9 @@ function confirmDelete(text) {
 var dropArea;
 document.addEventListener("DOMContentLoaded", function(event){
     // Must wait due to error: Uncaught TypeError: dropArea is null
-    var dropArea = document.getElementById('drop-area')
+    // var dropArea = document.getElementById('drop-area')
+    // Oct 1/22 - drop-area was double declared and getting undefined error
+    dropArea = document.getElementById('drop-area')
     ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
         dropArea.addEventListener(eventName, preventDefaults, false)
     })
