@@ -163,7 +163,7 @@ to get more details.
       for current webpage <a href="#webpage_button">Read more...</a></td></tr>
    <tr><td><button id="tcm_color_scheme" class="tcm_documentation"
       onClick='window.location="#color_scheme_button"'
-      title="Color Scheme" ></button></td>
+      title="Color Scheme Picker" ></button></td>
    <td><b>Color Scheme</b> - Pick Color Scheme
       for current webpage <a href="#color_scheme_button">Read more...</a></td></tr>
    <tr><td><button id="tcm_cookie_jar" class="tcm_documentation"
@@ -562,7 +562,13 @@ created in your home directory.
 The ***Color Scheme*** Picker is used to choose
 website color settings.
 
-There are two stock color schemes:
+Originally the {{ site.title }} website only had
+one color scheme called "GitHub Pages Cayman Theme".
+After a short period someone asked for a "Dark Theme"
+and a new project was started September 2022 and
+finished in October 2022.
+
+Currently there are two stock color schemes:
 
 - Cayman Theme
 - Dark Theme
