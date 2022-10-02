@@ -585,7 +585,7 @@ function switch_toggle(id) {
 // Tried first in theCookieMachine.js and then in tim-ta.js because it
 // was not inherited.
 
-// Color Schemes
+// Color Schemes - style.scss for descriptions
 var colorSchemeCayman = {
     "--nav-button-bg-color": "#F0FFF0",
     "--nav-button-color": "#159957",
@@ -623,49 +623,44 @@ var colorSchemeCayman = {
 }
 
 var colorSchemeDark = {
-    "--nav-button-bg-color": "#F0FFF0",
+    "--nav-button-bg-color": "#494b4c",
     "--nav-button-color": "#f9fbfc",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
     "--msgq-success-bg-color": "#04AA6D",
-    "--msgq-body-bg-color": "#3131f1",
-    "--msgq-border-color": "#3333d3",
+    "--msgq-body-bg-color": "#313131",
+    "--msgq-border-color": "#434343",
     "--header-accent-color": "#FFFF00",
     "--button-focus-color": "#1E90FF",
     "--progress-bar-color": "#008000",
     "--flash-bg-color": "#808080",
-    "--boldest-color": "#000000",
+    "--boldest-color": "#ffffff",
     "--link-visited": "#800080",
-    "--header-heading-color": "#ffffff",
-    "--header-bg-color": "#159957",
-    "--header-bg-color-secondary": "#155799",
+    "--header-heading-color": "#ffd080",
+    "--header-bg-color": "#057937",
+    "--header-bg-color-secondary": "#053779",
     "--section-headings-color": "#159957",
     "--body-text-color": "#e0ece1",
     "--body-bg-color": "#101010",
-    "--body-link-color": "#1e6bb8",
+    "--body-link-color": "#5eabf8",
     "--body-link-inverted-color": "#e19447",
     "--blockquote-text-color": "#819198",
     "--code-bg-color": "#13161a",
     "--code-text-color": "#b6b4b2",
     "--border-color": "#4c4640",
-    "--table-border-color": "#e9ebec",
+    "--table-border-color": "#494b4c",
     "--hr-border-color": "#3f3031",
     "--kbd-background-color": "#2a2b2c",
     "--kbd-border-color": "#c6cbd1",
     "--kbd-border-bottom-color": "#e5ede5",
     "--kbd-box-shadow-color": "#e5ede5",
-    "--kbd-color": "#a4ada6"
+    "--kbd-color": "#040d06"
 }
 
 // TEST list the color scheme
 
-console.log("colorSchemeCayman.length:", colorSchemeCayman.length)
-for (const key of Object.keys(colorSchemeCayman)) {
-    if (key.startsWith("fail_test")) continue  // Ignore test fail data
-    console.log(key, colorSchemeCayman[key], getColorCode(colorSchemeCayman, key))
-}
-
+console.log("_includes/tcm-common-code.js colorSchemeCayman")
 function getColorCode(scheme, key) {
     // Get the styles (properties and values) for the root
     const rootElm = document.querySelector(':root')  // Will not work for popup
@@ -674,6 +669,15 @@ function getColorCode(scheme, key) {
     // Alert the value of the --blue variable
     // console.log("The value of " + key + " is: " + value)
     return value
+}
+
+// From theCookieMachine.js
+function setColorCode(scheme, key) {
+    // Set the value of variable --msgq-error-bg-color to another value (in this case "lightblue")
+    const rootElm = document.querySelector(':root')  // Will not work for popup
+    const value = scheme[key]
+    if (value === null) return
+    rootElm.style.setProperty(key, value);
 }
 
 /* End of /_includes/tcm-common-code.js */
