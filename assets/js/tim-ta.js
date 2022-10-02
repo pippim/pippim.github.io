@@ -450,6 +450,16 @@ table.tta-table th {
         var(--header-bg-color-secondary), var(--header-bg-color));
 }
 
+/*  Shake alarm clock image on hover */
+#alarm-clock-image:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+
 /*  For running timers in popup window copy from Config Init style */
 #ttaRunWindowId {
     border-style: solid;
