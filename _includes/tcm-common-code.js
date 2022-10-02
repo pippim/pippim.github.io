@@ -720,6 +720,7 @@ function htmlColorSchemes () {
         const scheme = schemes[i]
         console.log("tcm.common-code.js / htmlColorSchemes / scheme:",
                     scheme['name'])
+        html += "<h3>TCM Color Scheme:" + scheme + "</h3>"
         for (const key of Object.keys(scheme)) {
             if (!(key.slice(0,2) == "--")) {
                 console.log("Skipping key:", key, scheme[key])
@@ -737,11 +738,12 @@ function htmlStyleColorLine (scheme, key) {
     /* Get the scheme's color code (not the :root {} code) */
     const background = scheme[key]
     const foreground = calcBgColorCode(scheme[key])
-    var html = "<h3 "
+    var html = "<h4 "
     html += 'style="background-color: ' + background + ';\n'
     html += ' color: ' + foreground + ';\n'
+    html += ' padding: .5rem;\n'
     html += ' border: 2px solid ' + foreground + ';">'
-    html += key + ' : ' + scheme[key] + '</h3>\n'
+    html += key + ' : ' + scheme[key] + '</h4>\n'
     return html
 }
 
