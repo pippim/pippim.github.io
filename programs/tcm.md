@@ -572,15 +572,7 @@ Drop down menu is used to control which color scheme is used.
 }
 </style>
 <script>
-/*
-document.getElementById("tcm_doc_switches").innerHTML = htmlVisibilitySwitches()
-document.getElementById("tcm_doc_search_stats").innerHTML = htmlSearchStats()
-document.getElementById("tcm_doc_local_storage").innerHTML = htmlLocalStorage()
-table_sort()  // support supporting by local storage name key by clicking heading
-document.getElementById("tcm_doc_screen_info").innerHTML = htmlScreenInfo()
-
-tcmButtonVisibility()  // Live processing of on/off switches
-*/
+document.getElementById("tcm_doc_color_scheme_picker").innerHTML = htmlColorSchemes()
 </script>
 
 ---
