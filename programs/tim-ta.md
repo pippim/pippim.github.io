@@ -295,7 +295,7 @@ with saved popup window locations and sizes in version 1.1.
 {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
    alt="Tim-ta Alarm Clock Image"
    style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
-   caption="Tim-ta alarm-clock.jpg"
+   caption="Move mouse here for alarm simulation"
 %}
 </div>
 
