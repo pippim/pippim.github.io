@@ -587,6 +587,7 @@ function switch_toggle(id) {
 
 // Color Schemes - style.scss for descriptions
 var colorSchemeCayman = {
+    name: "colorSchemeCayman",
     "--nav-button-bg-color": "#F0FFF0",
     "--nav-button-color": "#159957",
     "--msgq-error-bg-color": "#f44336",
@@ -623,6 +624,7 @@ var colorSchemeCayman = {
 }
 
 var colorSchemeDark = {
+    name: "colorSchemeDark",
     "--nav-button-bg-color": "#494b4c",
     "--nav-button-color": "#f9fbfc",
     "--msgq-error-bg-color": "#f44336",
@@ -679,5 +681,68 @@ function setColorCode(scheme, key) {
     if (value === null) return
     rootElm.style.setProperty(key, value);
 }
+
+function separateRgbColors(colorCode) {
+    /*  '#99aabb' returns ['99', 'aa', 'bb']
+        "1234567890".match(/.{1,2}/g);
+            // Results in:
+            ["12", "34", "56", "78", "90"]
+    */
+    if (colorCode.length != 7) {alert("separateRgbColors()"); return "#f9e8d7";}
+    const numbers = colorCode.slice(1)  // Drop '#' prefix
+    return numbers.match(/.{1,2}/g)
+}
+
+function calcBgColorCode(colorCode) {
+    /*  Return black or white background depending on foreground
+    */
+    var colorRgbArr = separateRgbColors(colorCode)
+    if (colorRgbArr.length != 3) {alert("calcBgColorCode()"); return "#808080";}
+    var high = 0  // If two or more above 80 return black
+    for (var i = 0; i < 2; i++) if (colorRgbArr[i] > "80") high++
+    /*
+    if (colorRgbArr[0] > "80") high++
+    if (colorRgbArr[1] > "80") high++
+    if (colorRgbArr[2] > "80") high++
+    */
+    if (high > 1) return "#000000" else return "#ffffff"
+}
+
+
+function htmlColorSchemes () {
+    var html = "<h2>TCM Color Schemes</h2>"
+    html += "Available color schemes are listed below:<br>"
+
+    /* First list stock color schemes, later list user defined */
+    var schemes = [colorSchemeCayman, colorSchemeDark]
+    for (const i = 0; i < schemes.length; i++) {
+        const scheme = schemes[i]
+        console.log("tcm.common-code.js / htmlColorSchemes / scheme:",
+                    scheme['name'])
+        for (const key of Object.keys(scheme)) {
+            if (!(key.slice(0,1) == "--")) {
+                console.log("Skipping key:", key, scheme[key])
+                continue
+            }
+            html += htmlStyleColorLine(scheme, key))
+            console.log(key, scheme[key], getColorCode(scheme, key))
+        }
+    }
+
+    return html
+}
+
+function htmlStyleColorLine (scheme, key) {
+    /* Get the scheme's color code (not the :root {} code) */
+    const background = scheme[key]
+    const foreground = calcBgColorCode(colorCode)
+    var html = "<h3 "
+    html += 'style="background-color: ' + background + ';\n'
+    html += ' color: ' + foregound + ';\n'
+    html += ' border: 2px solid ' + foreground + ';">'
+    html += key + ' : ' + scheme[key] + '</h3>\n'
+    return html
+}
+
 
 /* End of /_includes/tcm-common-code.js */
