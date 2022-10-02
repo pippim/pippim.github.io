@@ -783,6 +783,11 @@ a.search-results:visited {
                       url({{ site.url }}/assets/img/icons/button_background.png);
 }
 
+#tcm_color_scheme, #tcm_doc_color_scheme {
+    background-image: url({{ site.url }}/assets/img/icons/color_scheme.png),
+                      url({{ site.url }}/assets/img/icons/button_background.png);
+}
+
 #tcm_doc_window_icon {
     background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
                       url({{ site.url }}/assets/img/icons/button_background.png);
