@@ -127,8 +127,7 @@ want them visible to user. This is because the ID is referenced by sound.js -->
 
 These are Tim-ta stock sound files you can use when a timer task ends:
 <br>
-<div id="stock-sound-files-area">
-    <ul>
+<div id="stock-sound-files-area"><ul>
     <li><b>Alarm_01.mp3</b>&emsp;<audio controls="true" id="Alarm_01.mp3"></audio>
     <br><br>
     <li><b>Alarm_02.mp3</b>&emsp;<audio controls="true" id="Alarm_02.mp3"></audio>
@@ -137,8 +136,8 @@ These are Tim-ta stock sound files you can use when a timer task ends:
     <!-- June 12/22: Non-display filenames no longer distributed (in localStorage) -->
     <audio id="Alarm_01.wav"></audio>
     <audio id="Alarm_05.mp3"></audio>
-    <audio id="Alarm_12.mp3"></audio></ul>
-</div>
+    <audio id="Alarm_12.mp3"></audio>
+</ul></div>
 
 ---
 
