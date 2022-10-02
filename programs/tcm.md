@@ -545,6 +545,44 @@ For example, a folder named `Cookie Jar` could be
 created in your home directory.
 
 
+<a id="color_scheme_button"></a>
+
+## Color Scheme Button
+
+<div class="tcm_doc_window_button">
+    <button id="tcm_color_scheme" title="Color Scheme Selector"></button>
+</div>
+
+The ***Color Scheme*** Button is used to view and control
+website color settings.
+
+Drop down menu is used to control which color scheme is used.
+
+<div id="tcm_doc_color_scheme_picker"></div>
+
+> **NOTE:** The drop down menu is live and will
+> effect color schemes immediately.
+
+<style>
+#tcm_doc_color_scheme_picker {
+   max-width: 30rem;
+   border: 3px solid grey;
+   margin-left: 1em;
+   padding: .5rem;
+}
+</style>
+<script>
+/*
+document.getElementById("tcm_doc_switches").innerHTML = htmlVisibilitySwitches()
+document.getElementById("tcm_doc_search_stats").innerHTML = htmlSearchStats()
+document.getElementById("tcm_doc_local_storage").innerHTML = htmlLocalStorage()
+table_sort()  // support supporting by local storage name key by clicking heading
+document.getElementById("tcm_doc_screen_info").innerHTML = htmlScreenInfo()
+
+tcmButtonVisibility()  // Live processing of on/off switches
+*/
+</script>
+
 ---
 
 <a id="hdr12"></a>
