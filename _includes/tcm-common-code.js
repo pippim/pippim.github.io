@@ -736,10 +736,10 @@ function htmlColorSchemes () {
 function htmlStyleColorLine (scheme, key) {
     /* Get the scheme's color code (not the :root {} code) */
     const background = scheme[key]
-    const foreground = calcBgColorCode(colorCode)
+    const foreground = calcBgColorCode(scheme[key])
     var html = "<h3 "
     html += 'style="background-color: ' + background + ';\n'
-    html += ' color: ' + foregound + ';\n'
+    html += ' color: ' + foreground + ';\n'
     html += ' border: 2px solid ' + foreground + ';">'
     html += key + ' : ' + scheme[key] + '</h3>\n'
     return html
