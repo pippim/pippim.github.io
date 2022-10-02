@@ -720,7 +720,7 @@ function htmlColorSchemes () {
         const scheme = schemes[i]
         //console.log("tcm.common-code.js / htmlColorSchemes / scheme:",
         //            scheme['name'])
-        html += "<h3>TCM Color Scheme:" + scheme.name + "</h3>"
+        html += "<h3>TCM Color Scheme: " + scheme.name + "</h3>"
         for (const key of Object.keys(scheme)) {
             if (!(key.slice(0,2) == "--")) {
                 console.log("Skipping key:", key, scheme[key])
