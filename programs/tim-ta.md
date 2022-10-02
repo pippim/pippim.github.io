@@ -124,6 +124,7 @@ the {{ site.title }} Website.
 
 <!-- WARNING: Do not delete these <audio> tags, simply hide them if you don't
 want them visible to user. This is because the ID is referenced by sound.js -->
+<!-- June 12/22: Non-display filenames no longer distributed (in localStorage) -->
 
 These are Tim-ta stock sound files you can use when a timer task ends:
 <br>
@@ -133,7 +134,6 @@ These are Tim-ta stock sound files you can use when a timer task ends:
     <li><b>Alarm_02.mp3</b>&emsp;<audio controls="true" id="Alarm_02.mp3"></audio>
     <br><br>
     <li><b>Alarm_03.mp3</b>&emsp;<audio controls="true" id="Alarm_03.mp3"></audio>
-    <!-- June 12/22: Non-display filenames no longer distributed (in localStorage) -->
     <audio id="Alarm_01.wav"></audio>
     <audio id="Alarm_05.mp3"></audio>
     <audio id="Alarm_12.mp3"></audio>
