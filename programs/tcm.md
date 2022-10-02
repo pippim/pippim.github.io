@@ -586,7 +586,7 @@ it to yourself on another device.
 #tcm_doc_color_scheme_picker {
    max-width: 30rem;
    border: 3px solid blue;
-   background-color: grey;
+   background-color: var(--nav-button-bg-color);
    margin-left: 1em;
    padding: .5rem;
 }
