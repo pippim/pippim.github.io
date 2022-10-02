@@ -107,6 +107,7 @@ animation however, each button is merely hovered over.
     <button id="tcm_hyperlink_recipe" title="Hyperlink Recipe Baker"></button>
     <button id="tcm_webpage_info" title="Webpage information - Front Matter"></button>
     <button id="tcm_cookie_jar" title="Cookie Jar - Import/Export cookies"></button>
+    <button id="tcm_color_scheme" title="Color Schemes"></button>
 </div>
 
 Here are all the TCM Window Buttons at twice their normal size.
@@ -160,6 +161,11 @@ to get more details.
       title="Webpage Name and Front Matter" ></button></td>
    <td><b>Webpage Information</b> - Display Jekyll Front Matter
       for current webpage <a href="#webpage_button">Read more...</a></td></tr>
+   <tr><td><button id="tcm_color_scheme" class="tcm_documentation"
+      onClick='window.location="#color_scheme_button"'
+      title="Color Scheme" ></button></td>
+   <td><b>Color Scheme</b> - Pick Color Scheme
+      for current webpage <a href="#color_scheme_button">Read more...</a></td></tr>
    <tr><td><button id="tcm_cookie_jar" class="tcm_documentation"
       onClick='window.location="#cookie_jar_button"'
       title="The Cookie Jar - Import/Export cookies" ></button></td>
