@@ -721,7 +721,7 @@ function htmlColorSchemes () {
         console.log("tcm.common-code.js / htmlColorSchemes / scheme:",
                     scheme['name'])
         for (const key of Object.keys(scheme)) {
-            if (!(key.slice(0,1) == "--")) {
+            if (!(key.slice(0,2) == "--")) {
                 console.log("Skipping key:", key, scheme[key])
                 continue
             }
