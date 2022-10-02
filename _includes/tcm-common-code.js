@@ -716,7 +716,7 @@ function htmlColorSchemes () {
 
     /* First list stock color schemes, later list user defined */
     var schemes = [colorSchemeCayman, colorSchemeDark]
-    for (const i = 0; i < schemes.length; i++) {
+    for (var i = 0; i < schemes.length; i++) {
         const scheme = schemes[i]
         console.log("tcm.common-code.js / htmlColorSchemes / scheme:",
                     scheme['name'])
