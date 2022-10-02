@@ -547,16 +547,23 @@ created in your home directory.
 
 <a id="color_scheme_button"></a>
 
-## Color Scheme Button
+## Color Scheme Picker
 
 <div class="tcm_doc_window_button">
     <button id="tcm_color_scheme" title="Color Scheme Selector"></button>
 </div>
 
-The ***Color Scheme*** Button is used to view and control
+The ***Color Scheme*** Picker is used to choose
 website color settings.
 
-Drop down menu is used to control which color scheme is used.
+There are two stock color schemes:
+
+- Cayman Theme
+- Dark Theme
+
+Eventually you will be able to copy a color scheme and modify it.
+Then you can save the color scheme and send it to others or send
+it to yourself on another device.
 
 <div id="tcm_doc_color_scheme_picker"></div>
 
