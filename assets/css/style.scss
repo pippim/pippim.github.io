@@ -331,7 +331,7 @@ $lavender: #E6E6FA !default; // lavender
 
     &:hover {
         background-color: var(--button-focus-color);
-        color: var(--boldest-color);
+        color: var(--nav-button-bg-color);
     }
     &:focus-visible {
         /* remove default focus style */
