@@ -705,7 +705,8 @@ function calcBgColorCode(colorCode) {
     if (colorRgbArr[1] > "80") high++
     if (colorRgbArr[2] > "80") high++
     */
-    if (high > 1) return "#000000" else return "#ffffff"
+    if (high > 1) return "#000000"
+             else return "#ffffff"
 }
 
 
