@@ -725,7 +725,7 @@ function htmlColorSchemes () {
                 console.log("Skipping key:", key, scheme[key])
                 continue
             }
-            html += htmlStyleColorLine(scheme, key))
+            html += htmlStyleColorLine(scheme, key)
             console.log(key, scheme[key], getColorCode(scheme, key))
         }
     }
