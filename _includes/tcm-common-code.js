@@ -401,9 +401,10 @@ function htmlNavigatorInfo() {
     var position;
     function success(p) { position = p }
     function error(msg) { console.log(msg) }
+    /*  Oct 2/22 - too much spamming after location tracking blocked each time
     if (navigator.geolocation)
         navigator.geolocation.getCurrentPosition(success, error)
-
+    */
     var arrProp = ["connection", "cookieEnabled", "credentials",
                    "deviceMemory", "geolocation", "hid", "hardwareConcurrency",
                    "keyboard", "language", "languages", "locks",
@@ -623,6 +624,7 @@ var colorSchemeCayman = {
 
 var colorSchemeDark = {
     "--nav-button-bg-color": "#F0FFF0",
+    "--nav-button-color": "#f9fbfc",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
