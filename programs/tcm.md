@@ -585,7 +585,8 @@ it to yourself on another device.
 <style>
 #tcm_doc_color_scheme_picker {
    max-width: 30rem;
-   border: 3px solid grey;
+   border: 3px solid blue;
+   background-color: grey;
    margin-left: 1em;
    padding: .5rem;
 }
