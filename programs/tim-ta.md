@@ -291,11 +291,13 @@ with saved popup window locations and sizes in version 1.1.
 <a id='hdr8'></a>
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
+<div id="alarm-clock-image">
 {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
    alt="Tim-ta Alarm Clock Image"
    style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
    caption="Tim-ta alarm-clock.jpg"
 %}
+</div>
 
 # Introduction
 
