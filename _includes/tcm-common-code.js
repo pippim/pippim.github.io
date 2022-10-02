@@ -718,16 +718,16 @@ function htmlColorSchemes () {
     var schemes = [colorSchemeCayman, colorSchemeDark]
     for (var i = 0; i < schemes.length; i++) {
         const scheme = schemes[i]
-        console.log("tcm.common-code.js / htmlColorSchemes / scheme:",
-                    scheme['name'])
-        html += "<h3>TCM Color Scheme:" + scheme + "</h3>"
+        //console.log("tcm.common-code.js / htmlColorSchemes / scheme:",
+        //            scheme['name'])
+        html += "<h3>TCM Color Scheme:" + scheme.name + "</h3>"
         for (const key of Object.keys(scheme)) {
             if (!(key.slice(0,2) == "--")) {
                 console.log("Skipping key:", key, scheme[key])
                 continue
             }
             html += htmlStyleColorLine(scheme, key)
-            console.log(key, scheme[key], getColorCode(scheme, key))
+            // console.log(key, scheme[key], getColorCode(scheme, key))
         }
     }
 
