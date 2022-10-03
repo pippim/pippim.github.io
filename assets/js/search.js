@@ -17,6 +17,7 @@ const timeNow = new Date().getTime();
 const oneDay= 1000 * 60 * 60 * 24;
 
 // Local Storage Color Active Color Scheme
+{% include tcm-common-code.js %}
 var active_color = {}
 if (localStorage.active_color === undefined) { newActiveColor() }
 else { active_color = JSON.parse(localStorage.getItem('active_color')); }
