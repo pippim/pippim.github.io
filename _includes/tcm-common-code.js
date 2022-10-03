@@ -1,6 +1,10 @@
 /* /_includes/tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
+    /assets/js/search.js
+
+    Called by: {% include head-custom.html %}
+
 */
 
 /* June 9/2022 - setCookie() and getCookie() in theCookieJar.js */
