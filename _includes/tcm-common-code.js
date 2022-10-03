@@ -3,7 +3,7 @@
     /tcm.md - The Cookie Machine documentation webpage
     /assets/js/search.js
 
-    Called by: {% include head-custom.html %}
+    Called by: { % include head-custom.html %}
 
 */
 
