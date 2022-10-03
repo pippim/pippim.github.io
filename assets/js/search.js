@@ -16,6 +16,11 @@ raw_url = raw_url.replace('/blob/', '/');
 const timeNow = new Date().getTime();
 const oneDay= 1000 * 60 * 60 * 24;
 
+// Local Storage Color Active Color Scheme
+var active_color = {}
+if (localStorage.active_color === undefined) { newActiveColor() }
+else { active_color = JSON.parse(localStorage.getItem('active_color')); }
+
 // Session Storage statistics
 var search_stats = {}
 if (sessionStorage.search_stats === undefined) { newStats(); }
@@ -123,6 +128,14 @@ function buildConfigYml () {
             }
         }
     }
+}
+
+function newActiveColor () {
+    active_color = {} // Wipe out previous active color
+    active_color["name"] = "Cayman Theme"
+    if (typeof colorSchemeDark === 'undefined') var display = "CAN'T SEE"
+    else var display = colorSchemeDark['name']
+    console.log("Set Cayman Theme. Other theme:", display)
 }
 
 function newStats () {
