@@ -8,11 +8,11 @@ type:         Answer
 tags:         python logging
 created_date: 2021-05-02 01:40:30
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "193 "
+views:        "203 "
 accepted:     Accepted
-uploaded:     2022-09-25 16:54:18
+uploaded:     2022-10-02 19:25:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-05-02-Unknown-python-DEBUG-statements-appear.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-09-16 17:30:00
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "439 "
+views:        "442 "
 accepted:     
-uploaded:     2022-09-25 16:54:18
+uploaded:     2022-10-02 19:25:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-16-How-to-auto-execute-command-when-starting-second-monitor_.md
 toc:          false
 navigation:   false

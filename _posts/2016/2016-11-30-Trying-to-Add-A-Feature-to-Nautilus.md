@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "123 "
 accepted:     
-uploaded:     2022-09-25 16:54:18
+uploaded:     2022-10-02 19:25:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-30-Trying-to-Add-A-Feature-to-Nautilus.md
 toc:          false
 navigation:   false

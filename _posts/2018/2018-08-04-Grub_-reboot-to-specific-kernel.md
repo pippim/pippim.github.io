@@ -10,9 +10,9 @@ created_date: 2018-08-04 12:12:49
 edit_date:    2020-06-12 14:37:07
 votes:        "5 "
 favorites:    
-views:        "15,671 "
+views:        "15,746 "
 accepted:     
-uploaded:     2022-09-25 16:54:18
+uploaded:     2022-10-02 19:25:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-04-Grub_-reboot-to-specific-kernel.md
 toc:          false
 navigation:   false

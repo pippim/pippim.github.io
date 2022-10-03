@@ -10,9 +10,9 @@ created_date: 2019-07-21 19:53:24
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,607 "
+views:        "3,615 "
 accepted:     
-uploaded:     2022-09-25 16:54:18
+uploaded:     2022-10-02 19:25:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-21-My-battery-is-not-charging-on-Ubuntu-18.04-while-in-use.md
 toc:          false
 navigation:   false

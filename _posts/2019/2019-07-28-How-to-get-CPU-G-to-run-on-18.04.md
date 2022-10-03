@@ -8,11 +8,11 @@ type:         Answer
 tags:         18.04
 created_date: 2019-07-28 17:57:25
 edit_date:    
-votes:        "7 "
+votes:        "6 "
 favorites:    
-views:        "6,056 "
+views:        "6,058 "
 accepted:     
-uploaded:     2022-09-25 16:54:18
+uploaded:     2022-10-02 19:25:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-28-How-to-get-CPU-G-to-run-on-18.04.md
 toc:          false
 navigation:   false

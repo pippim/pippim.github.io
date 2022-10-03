@@ -8,11 +8,11 @@ type:         Answer
 tags:         software-recommendation suspend power-management
 created_date: 2016-08-21 20:32:10
 edit_date:    
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "1,497 "
+views:        "1,502 "
 accepted:     
-uploaded:     2022-09-25 16:54:18
+uploaded:     2022-10-02 19:25:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-21-How-can-I-quickly-disable-standby-lid-off-in-Ubuntu-Unity-16.04_.md
 toc:          false
 navigation:   false
