@@ -13,23 +13,17 @@ const code_url = "{{ site.code_url }}";
 //  raw_url: https://raw.githubusercontent.com/pippim/pippim.github.io/main
 var raw_url = code_url.replace('github', 'raw.githubusercontent');
 raw_url = raw_url.replace('/blob/', '/');
-const timeNow = new Date().getTime();
+const timeScriptStarted = new Date().getTime();
 const oneDay= 1000 * 60 * 60 * 24;
-
-// Local Storage Color Active Color Scheme
-{% include tcm-common-code.js %}
-var active_color = {}
-if (localStorage.active_color === undefined) { newActiveColor() }
-else { active_color = JSON.parse(localStorage.getItem('active_color')); }
 
 // Session Storage statistics
 var search_stats = {}
-if (sessionStorage.search_stats === undefined) { newStats(); }
-else { search_stats = JSON.parse(sessionStorage.getItem('search_stats')); }
+if (sessionStorage.search_stats === undefined) newStats()
+else search_stats = JSON.parse(sessionStorage.getItem('search_stats'))
 
 // if search_stats["timeCreated"] > 24 hours old, erase sessionStorage
 // Don't use sessionStorage.clear() because we loose TCM Window Visibility
-if (search_stats["timeCreated"] < timeNow - oneDay) {
+if (search_stats["timeCreated"] < timeScriptStarted - oneDay) {
     newStats(); // Wipe out previous stats
     sessionStorage.removeItem("search_stats");
     sessionStorage.removeItem("search_words");
@@ -107,7 +101,7 @@ function buildConfigYml () {
     arrConfigYml = config_yml.split("\n")  // Convert string into array
     // Set flagPostsByYear flag
     flagPostsByYear = "false";
-    timeSiteRefreshed = timeNow;  // Give default if not found
+    timeSiteRefreshed = timeScriptStarted;  // Give default if not found
     for (var i = 0; i < arrConfigYml.length; i++) {
         //var ymlKeyValue = arrConfigYml[i].split(':');
         // Also in tcm-common-code.js consider glob
@@ -131,17 +125,10 @@ function buildConfigYml () {
     }
 }
 
-function newActiveColor () {
-    active_color = {} // Wipe out previous active color
-    active_color["name"] = "Cayman Theme"
-    if (typeof colorSchemeDark === 'undefined') var display = "CAN'T SEE"
-    else var display = colorSchemeDark['name']
-    console.log("Set Cayman Theme. Other theme:", display)
-}
 
 function newStats () {
     search_stats = {} // Wipe out previous stats
-    search_stats["timeCreated"] = timeNow;
+    search_stats["timeCreated"] = timeScriptStarted;
 }
 
 function buildStats (key, value) {

@@ -7,15 +7,24 @@
 // imported functions.  Parent needs <script type="module"...
 // See: /_layouts +> /default.html, / hrb.html, /program.html, etc.
 import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
-//  Move below to tcm-common-code.js
-// import { getCookie , setCookie } from './theCookieJar.js';
 
 /* include tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
+    /assets/js/search.js - color schemes loaded on init
 
+    Because this file is called first after stylesheet, the
+    the color scheme is set based on session storage, then
+    local storage and then website.
 */
+
 {% include tcm-common-code.js %}
+
+// Local Storage Color Active Color Scheme
+var active_color = {}
+if (localStorage.active_color === undefined) newActiveColor()
+else active_color = JSON.parse(localStorage.getItem('active_color'))
+
 {% include draggable-window.js %}
 
 // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
@@ -254,107 +263,12 @@ function set_hdr_tooltips () {
     }
 }
 
-/* Moved to tcm-common-code.js
-
-// Color Schemes
-var colorSchemeCayman = {
-    "--nav-button-bg-color": "#F0FFF0",
-    "--nav-button-color": "#159957",
-    "--msgq-error-bg-color": "#f44336",
-    "--msgq-warning-bg-color": "#ff9800",
-    "--msgq-info-bg-color": "#2196F3",
-    "--msgq-success-bg-color": "#04AA6D",
-    "--msgq-body-bg-color": "#f1f1f1",
-    "--msgq-border-color": "#d3d3d3",
-    "--header-accent-color": "#FFFF00",
-    "--button-focus-color": "#1E90FF",
-    "--progress-bar-color": "#008000",
-    "--flash-bg-color": "#808080",
-    "--boldest-color": "#000000",
-    "--link-visited": "#800080",
-    "--header-heading-color": "#ffffff",
-    "--header-bg-color": "#159957",
-    "--header-bg-color-secondary": "#155799",
-    "--section-headings-color": "#159957",
-    "--body-text-color": "#606c71",
-    "--body-bg-color": "#ffffff",
-    "--body-link-color": "#1e6bb8",
-    "--body-link-inverted-color": "#e19447",
-    "--blockquote-text-color": "#819198",
-    "--code-bg-color": "#f3f6fa",
-    "--code-text-color": "#567482",
-    "--border-color": "#dce6f0",
-    "--table-border-color": "#e9ebec",
-    "--hr-border-color": "#eff0f1",
-    "--kbd-background-color": "#fafbfc",
-    "--kbd-border-color": "#c6cbd1",
-    "--kbd-border-bottom-color": "#959da5",
-    "--kbd-box-shadow-color": "#959da5",
-    "--kbd-color": "#444d56"
+function newActiveColor () {
+    active_color = {} // Wipe out previous active color
+    active_color["name"] = "Cayman Theme"
+    if (typeof colorSchemeDark === 'undefined') var display = "CAN'T SEE"
+    else var display = colorSchemeDark['name']
+    console.log("Set Cayman Theme. Other theme:", display)
 }
-
-var colorSchemeDark = {
-    "--nav-button-bg-color": "#494b4c",
-    "--nav-button-color": "#f9fbfc",
-    "--msgq-error-bg-color": "#f44336",
-    "--msgq-warning-bg-color": "#ff9800",
-    "--msgq-info-bg-color": "#2196F3",
-    "--msgq-success-bg-color": "#04AA6D",
-    "--msgq-body-bg-color": "#3131f1",
-    "--msgq-border-color": "#3333d3",
-    "--header-accent-color": "#FFFF00",
-    "--button-focus-color": "#1E90FF",
-    "--progress-bar-color": "#008000",
-    "--flash-bg-color": "#808080",
-    "--boldest-color": "#000000",
-    "--link-visited": "#800080",
-    "--header-heading-color": "#ffffff",
-    "--header-bg-color": "#159957",
-    "--header-bg-color-secondary": "#155799",
-    "--section-headings-color": "#159957",
-    "--body-text-color": "#e0ece1",
-    "--body-bg-color": "#101010",
-    "--body-link-color": "#1e6bb8",
-    "--body-link-inverted-color": "#e19447",
-    "--blockquote-text-color": "#819198",
-    "--code-bg-color": "#13161a",
-    "--code-text-color": "#b6b4b2",
-    "--border-color": "#4c4640",
-    "--table-border-color": "#e9ebec",
-    "--hr-border-color": "#3f3031",
-    "--kbd-background-color": "#2a2b2c",
-    "--kbd-border-color": "#c6cbd1",
-    "--kbd-border-bottom-color": "#e5ede5",
-    "--kbd-box-shadow-color": "#e5ede5",
-    "--kbd-color": "#a4ada6"
-}
-
-// TEST list the color scheme
-
-console.log("colorSchemeCayman.length:", colorSchemeCayman.length)
-for (const key of Object.keys(colorSchemeCayman)) {
-    if (key.startsWith("fail_test")) continue  // Ignore test fail data
-    console.log(key, colorSchemeCayman[key], getColorCode(colorSchemeCayman, key))
-}
-
-function getColorCode(scheme, key) {
-    // Get the styles (properties and values) for the root
-    const rootElm = document.querySelector(':root')  // Will not work for popup
-    const rs = getComputedStyle(rootElm)
-    const value = scheme[key]
-    // Alert the value of the --blue variable
-    // console.log("The value of " + key + " is: " + value)
-    return value
-}
-
-// Create a function for setting a variable value
-function setColorCode(scheme, key) {
-    // Set the value of variable --msgq-error-bg-color to another value (in this case "lightblue")
-    const rootElm = document.querySelector(':root')  // Will not work for popup
-    const value = scheme[key]
-    if (value === null) return
-    rootElm.style.setProperty(key, value);
-}
-*/
 
 /* End of /assets/js/theCookieMachine.js */
