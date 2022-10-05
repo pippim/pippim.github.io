@@ -214,17 +214,6 @@ function ttaRunConfiguration (parentElm) {
 
     ttaApplyGlobalStyles();  // Styles for tta-table, tta-btn, .big-foot, etc.
 
-    // TEST css variables
-    if (ttaConfig.environment == "Linux x86_64 Firefox 88") {
-        // Set dark theme
-        console.log("colorSchemeDark.length:", colorSchemeDark.length)
-        for (const key of Object.keys(colorSchemeDark)) {
-            if (key.startsWith("fail_test")) continue  // Ignore test fail data
-            console.log(key, colorSchemeDark[key], getColorCode(colorSchemeDark, key))
-            setColorCode(colorSchemeDark, key)
-        }
-
-    }
 
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
     const cnt = ttaConfig.arrProjects.length;
