@@ -528,7 +528,7 @@ details[open] > summary {
 /* MAJOR SECTION ======== search.html styling */
 
 ::placeholder {
-    color: var(--header-bg-color);
+    color: var(--header-headings-color);
     opacity: 0.7;
 }
 
@@ -695,8 +695,6 @@ a.search-results:visited {
     float: left;
     margin-right: .5rem;
     opacity: 1.0;
-    //border: thin solid black;
-    // border-radius: .5rem;
     background-image: url({{ site.url }}/assets/img/icons/gingerbread_3.png),
                       url({{ site.url }}/assets/img/icons/button_background.png);
     cursor: move;
