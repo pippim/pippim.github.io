@@ -68,7 +68,7 @@ function setColorScheme(schemeName) {
     // Set dark theme
     console.log("/assets/js/theCookieMachine.js color scheme:", schemeName)
     for (const key of Object.keys(schemeName)) {
-        if (!(key.startsWith("--")) continue  // Ignore "name"
+        if (!(key.startsWith("--"))) continue  // Ignore "name"
         console.log(key, schemeName[key], getColorCode(schemeName, key))
         setColorCode(schemeName, key)
     }
