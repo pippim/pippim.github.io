@@ -2359,7 +2359,7 @@ function setSelectInput(data) {
 }
 
 function initSelectsAfterDOM() {
-    // After innerHTML is set we can bet the elements and set sources
+    // After innerHTML is set we can set the elements and set sources
     var win = getWin()
     for (const name of Object.keys(inpSelects)) {
         element = win.document.getElementById(inpSelects[name].id);

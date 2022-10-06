@@ -52,15 +52,27 @@ function getBrowser() {
 
 if (environment == "Linux x86_64 Firefox 88") {
     // Set dark theme
-    console.log("/assets/js/tim-ta.js colorSchemeCayman")
+    console.log("/assets/js/tim-ta.js environment:", environment)
+    setColorScheme(colorSchemeDark)
+    /*
     for (const key of Object.keys(colorSchemeDark)) {
         if (key.startsWith("fail_test")) continue  // Ignore test fail data
+        if (key.startsWith("name")) continue  // Ignore test fail data
         console.log(key, colorSchemeDark[key], getColorCode(colorSchemeDark, key))
         setColorCode(colorSchemeDark, key)
     }
-
+    */
 }
 
+function setColorScheme(schemeName) {
+    // Set dark theme
+    console.log("/assets/js/theCookieMachine.js color scheme:", schemeName)
+    for (const key of Object.keys(schemeName)) {
+        if (!(key.startsWith("--")) continue  // Ignore "name"
+        console.log(key, schemeName[key], getColorCode(schemeName, key))
+        setColorCode(schemeName, key)
+    }
+}
 
 {% include draggable-window.js %}
 
