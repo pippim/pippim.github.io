@@ -103,7 +103,7 @@ function getCurrentColors() {
     if (localStorage.getItem("colorScheme") === undefined )
         localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
     currentColorScheme = JSON.parse(localStorage.getItem('colorScheme'))
-    return (extractRootColors(currentColorScheme)
+    return (extractRootColors(currentColorScheme))
 }
 
 function extractRootColors(scheme) {
