@@ -677,7 +677,7 @@ a.search-results:visited {
     max-height: 95vh;     // Scroll after 95% of view height, scroll bar appears on right
     top: 20px;
     z-index: 9;
-    background-color: #f1f1f1;
+    background-color: var(--nav-button-bg-color);
     border: .2rem solid #d3d3d3;
     color: var(--boldest-color);
     text-align: left;
