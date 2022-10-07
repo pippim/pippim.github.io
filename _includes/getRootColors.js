@@ -90,13 +90,12 @@ function getCurrentColors() {
                     structure to save the name only
     */
     currentColorScheme = JSON.parse(localStorage.getItem('colorScheme'))
-    console.log("Reading currentColorScheme:", currentColorScheme)
-    //if (typeof localStorage.getItem("colorScheme") === 'undefined')
+    // console.log("Reading currentColorScheme:", currentColorScheme)
     if (currentColorScheme == null) {
         localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
         currentColorScheme = Object.assign( {}, colorSchemeCayman)
-        console.log("Creating currentColorScheme:", currentColorScheme)
         // Shallow object copy - https://stackoverflow.com/a/34294740/6929343
+        // console.log("Creating currentColorScheme:", currentColorScheme)
     }
     return (extractRootColors(currentColorScheme))
 }
@@ -142,7 +141,7 @@ function getBrowser() {
 
 if (environment == "Linux x86_64 Firefox 88") {
     // Set dark theme
-    console.log("/assets/js/tim-ta.js environment:", environment)
+    console.log("/_includes/getRootColors.js environment:", environment)
     setColorScheme(colorSchemeDark)
     /*
     for (const key of Object.keys(colorSchemeDark)) {
@@ -175,16 +174,66 @@ function setColorCode(scheme, key) {
 
 function setColorScheme(schemeName) {
     // Set dark theme
-    console.log("/assets/js/theCookieMachine.js color scheme:", schemeName)
+    console.log("/_includes/getRootColors.js setColorScheme:", schemeName.name)
     for (const key of Object.keys(schemeName)) {
         if (!(key.startsWith("--"))) continue  // Ignore "name"
-        console.log(key, schemeName[key], getColorCode(schemeName, key))
+        // console.log(key, schemeName[key], getColorCode(schemeName, key))
         setColorCode(schemeName, key)
     }
 }
 
-
 /* Long long comments
+
+:root {
+    //  Used by Pippim. Defaults are stored in memory (here). Also created
+    //  in memory is colorSchemeDark. You can copy and modify either scheme
+    //  and save to local storage under your own name.
+    //--honeydew: #F0FFF0;  /* light greenish yellow used for nav-background-color
+    --nav-button-bg-color: #F0FFF0;  // Honeydew light greenish yellow
+    --nav-button-color: #159957;  // Cayman green
+    --msgq-error-bg-color: #f44336;  // Light Red
+    --msgq-warning-bg-color: #ff9800;  // Light Orange
+    --msgq-info-bg-color: #2196F3;  // Light Blue
+    --msgq-success-bg-color: #04AA6D;  // Light Green
+    --msgq-body-bg-color: #f1f1f1;  // Light Grey
+    --msgq-border-color: #d3d3d3;  // Dark Grey
+
+    --header-accent-color: #FFFF00;  // Yellow also button focus text
+    --button-focus-color: #1E90FF;  // Dodger Blue (for background)
+    --progress-bar-color: #008000;  // Green
+    --flash-bg-color: #808080;  // Grey
+    --boldest-color: #000000;  // Black on white screen, white on black screen
+    --link-visited: #800080;  // Purple
+    // $salmon: #FA8072 !default; // salmon
+    // $lavender: #E6E6FA !default; // lavender
+
+    //  Copied from github/page-themes/cayman/_sass/variables.scss
+    //  to /assets/_sass/variables.scss and & prefix changed to --
+    --header-heading-color: #ffffff;  // White
+    --header-bg-color: #159957;  // Cayman Green
+    --header-bg-color-secondary: #155799;  // Cayman Blue
+    // Text
+    --section-headings-color: #159957;  // Cayman Green
+    --body-text-color: #606c71;  // grey
+    --body-bg-color: #ffffff;  // white
+    --body-link-color: #1e6bb8;  // Link blue
+    --body-link-inverted-color: #e19447;  // Have no clue used by cayman theme
+    // from: https://stackoverflow.com/a/36908191/6929343
+    --blockquote-text-color: #819198;  // steel blue/grey
+    // Code
+    --code-bg-color: #f3f6fa;  // faint grey
+    --code-text-color: #567482;  // light royal blue
+    // Borders
+    --border-color: #dce6f0;  // faint sky blue
+    --table-border-color: #e9ebec;  // faint grey
+    --hr-border-color: #eff0f1;  // faint grey
+    //  /assets/_sass/variables.scss that never had an '&' sass prefix
+    --kbd-background-color: #fafbfc;  // white
+    --kbd-border-color: #c6cbd1;  // light grey/blue
+    --kbd-border-bottom-color: #959da5;  // grey/blue
+    --kbd-box-shadow-color: #959da5;  // grey/blue
+    --kbd-color: #444d56;  // dark grey/blue
+}
 
 */
 
