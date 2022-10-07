@@ -124,7 +124,7 @@ $lavender: #E6E6FA !default; // lavender
 .search-symbol-white {
     // white search symbol follows hamburger menu button
     // Heights for Chrome below. Presumably work for MS Edge as well.
-    @include large  { width: 4.5rem; height: 2.6rem; }
+    @include large  { width: 4.5rem; height: 2.4rem; }
     @include medium { width: 4.2rem; height: 2.3rem; }
     @include small  { width: 4.1rem; height: 2.4rem; }
     cursor: pointer;
@@ -133,9 +133,9 @@ $lavender: #E6E6FA !default; // lavender
 // heights for Firefox below. Unknown how long this will be supported.
 @-moz-document url-prefix() {
     .search-symbol-white {
-        @include large {  width: 4.5rem; height: 3.1rem; }
-        @include medium { width: 4.2rem; height: 2.7rem; }
-        @include small {  width: 4.1rem; height: 2.9rem; }
+        @include large  { width: 4.5rem; height: 2.7rem; }
+        @include medium { width: 4.2rem; height: 2.3rem; }
+        @include small  { width: 4.1rem; height: 2.7rem; }
     }
 }
 
