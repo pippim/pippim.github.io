@@ -20,9 +20,6 @@ import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
 
 {% include tcm-common-code.js %}
 
-// Local Storage Color Active Color Scheme
-{% include getRootColors.js %}
-
 {% include draggable-window.js %}
 
 // Webpage (hrb.md) may have <div id="hrb_body" defined. If so populate it
