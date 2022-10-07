@@ -86,9 +86,13 @@ function getCurrentColors() {
     /*  Local storage key colorScheme contains our scheme name.
         If it doesn't exist use Cayman Theme and save to new key.
     */
-    if (typeof localStorage.getItem("colorScheme") === 'undefined')
-        localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
     currentColorScheme = JSON.parse(localStorage.getItem('colorScheme'))
+    //if (typeof localStorage.getItem("colorScheme") === 'undefined')
+    if (currentColorScheme === undefined) {
+        localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
+        currentColorScheme = Object.assign( {}, colorSchemeCayman)
+        // Shallow object copy - https://stackoverflow.com/a/34294740/6929343
+
     return (extractRootColors(currentColorScheme))
 }
 
