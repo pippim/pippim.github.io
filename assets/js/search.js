@@ -55,6 +55,7 @@ async function load_config_yml() {
             buildStats('_config.yml Size', config_yml.length);
         });
 }
+
 // Get sessionStorage search objects: search_words & search_urls
 var search_words = {}
 if (sessionStorage.search_words === undefined) { load_search_words(); }
@@ -448,48 +449,5 @@ function check_root_word(word, url_ndx_points) {
 
     return false;  // After subtracting suffixes, no root word was found
 }
-
-/*
-    COLOR SCHEMES (Themes)
-    ======================
-
-    This file /assets/js/search.js is the only one that can achieve this:
-
-    </header>
-
-    {% include tcm-draggable-window.html %}
-
-    <main id="content" class="main-content" role="main">
-
-      {% include search.html %}
-      <script type="text/javascript" src="/assets/js/search.js" ></script>
-
-      {{ content }}
-
-    </main>
-  </body>
-
-    The class "main-content" (there should only be one) contains many of
-    colour codes
-*/
-
-    //var ctMainElm = document.getElementsByClassName('main-content')[0]
-    const ctMainElm = document.getElementById('content')
-    console.log("ctMainElm:", ctMainElm)
-
-/*  kbd {
-        background-color: #fafbfc;
-        border: 1px solid #c6cbd1;
-        border-bottom-color: #959da5;
-        box-shadow: inset 0 -1px 0 #959da5;
-        color: #444d56;
-    }
-*/
-
-    //var kbdBackgroundColor = ctMainElm.getElementsByTagName('kbd')[0].
-    //    getAttribute('background-color')
-    var kbdBackgroundColor = ctMainElm.getElementsByTagName('kbd')
-    console.log("kbdBackgroundColor:", kbdBackgroundColor)
-
 
 /* End of /assets/js/search.js */
