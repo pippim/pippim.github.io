@@ -7,6 +7,9 @@
 
 */
 
+// Color Schemes - getRootColors.js for descriptions
+{% include getRootColors.js %}
+
 /* June 9/2022 - setCookie() and getCookie() in theCookieJar.js */
 function setCookie(cname, value, exp_days) {
     const d = new Date();
