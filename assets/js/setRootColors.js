@@ -2,8 +2,7 @@
 ---
 // /assets/js/setRootColors - Set Root Colors before /asset/css/style.scss
 
-{% include draggable-window.js %}
-
+console.log("Start of /_includes/test.html")
 // Color Schemes - style.scss for descriptions
 var colorSchemeCayman = {
     name: "colorSchemeCayman",
@@ -92,7 +91,7 @@ function applyRootColors() {
     rootStyleSheet.innerText = styles
     document.head.appendChild(rootStyleSheet)
 
-}  // End of ttaApplyGlobalStyles()
+}  // End of applyRootStyles()
 
 var currentColorScheme  // Global variable
 
