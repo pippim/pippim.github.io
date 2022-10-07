@@ -87,10 +87,12 @@ function getCurrentColors() {
         If it doesn't exist use Cayman Theme and save to new key.
     */
     currentColorScheme = JSON.parse(localStorage.getItem('colorScheme'))
+    console.log("Reading currentColorScheme:", currentColorScheme)
     //if (typeof localStorage.getItem("colorScheme") === 'undefined')
-    if (currentColorScheme === undefined) {
+    if (currentColorScheme == null) {
         localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
         currentColorScheme = Object.assign( {}, colorSchemeCayman)
+        console.log("Creating currentColorScheme:", currentColorScheme)
         // Shallow object copy - https://stackoverflow.com/a/34294740/6929343
     }
     return (extractRootColors(currentColorScheme))
