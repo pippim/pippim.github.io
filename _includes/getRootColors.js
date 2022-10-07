@@ -1,5 +1,3 @@
----
----
 /*  /_includes/setRootColors - get Root Colors before:
         /asset/css/style.scss in all /_layouts
         test.md
