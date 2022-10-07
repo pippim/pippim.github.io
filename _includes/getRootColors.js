@@ -92,7 +92,7 @@ function getCurrentColors() {
         localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
         currentColorScheme = Object.assign( {}, colorSchemeCayman)
         // Shallow object copy - https://stackoverflow.com/a/34294740/6929343
-
+    }
     return (extractRootColors(currentColorScheme))
 }
 
