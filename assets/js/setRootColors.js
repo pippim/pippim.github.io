@@ -2,7 +2,7 @@
 ---
 // /assets/js/setRootColors - Set Root Colors before /asset/css/style.scss
 
-console.log("Start of /_includes/test.html")
+console.log("Start of /_layouts/test.html")
 // Color Schemes - style.scss for descriptions
 var colorSchemeCayman = {
     name: "colorSchemeCayman",
@@ -99,7 +99,7 @@ function getCurrentColors() {
     /*  Local storage key colorScheme contains our scheme name.
         If it doesn't exist use Cayman Theme and save to new key.
     */
-    if (localStorage.getItem("colorScheme") === undefined )
+    if (typeof localStorage.getItem("colorScheme") === 'undefined')
         localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
     currentColorScheme = JSON.parse(localStorage.getItem('colorScheme'))
     return (extractRootColors(currentColorScheme))
