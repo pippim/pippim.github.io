@@ -586,6 +586,8 @@ function switch_toggle(id) {
                                         else { switch_set(id, "true"); }
 }
 
+/* TEST IF INHERITED
+
 // Tried first in theCookieMachine.js and then in tim-ta.js because it
 // was not inherited.
 
@@ -685,6 +687,7 @@ function setColorCode(scheme, key) {
     if (value === null) return
     rootElm.style.setProperty(key, value);
 }
+*/
 
 function separateRgbColors(colorCode) {
     /*  '#99aabb' returns ['99', 'aa', 'bb']
