@@ -31,22 +31,15 @@ function getCookie(cname) {
 }
 
 /*  Get all .color-scheme-button class instances `/_layouts/default.html` has
-    .color-scheme-button in two different HTML places:
-
-        <!-- Color Scheme Picker Button -->
-        <button class="color-scheme-button"
-          title="Switch {{ site.title }} Website to Dark color scheme"
-          ><img src="{{ site.baseurl }}/assets/img/icons/color_scheme_dark.png"
-                alt="" width="24" height="24">
-        </button>
+    .color-scheme-button in two different HTML places.
 
     Defined in `/_includes/getRootColors.js`:
 
-        var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
-        var imageColorSchemeCayman =
-                "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
-        var imageColorSchemeDark =
-                "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
+        currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
+        imageColorSchemeCayman =
+            "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
+        imageColorSchemeDark =
+            "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
 
 */
 
