@@ -48,6 +48,7 @@ var cspButtonClasses = document.getElementsByClassName("color-scheme-button")
 var cspButtonClick = function() {
     // Color Scheme Picker button was clicked on one of page header <div>s
     console.log("Page Header Color Scheme Picker clicked")
+    // image.style.transform = 'rotate(180deg)'; //add this
 }
 
 console.log("currentColorScheme:", currentColorScheme)
@@ -70,6 +71,15 @@ function setColorSchemeButtonImage(elm, schemeName) {
     else {
         elm.src = imageColorSchemeCayman
         elm.title = "Switch {{ site.title }} Website to Cayman color scheme"
+    }
+}
+
+if (environment == "Linux x86_64 Firefox 88") {
+    // Set dark theme on development machine
+    console.log("/_includes/getRootColors.js environment:", environment)
+    if (currentColorScheme != "colorSchemeDark") {
+        setColorScheme(colorSchemeDark)
+        setColorSchemeButtonImage(cspButtonClasses[0], "colorSchemeDark")
     }
 }
 
