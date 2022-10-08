@@ -147,16 +147,13 @@ function getBrowser() {
 
 if (environment == "Linux x86_64 Firefox 88") {
     // Set dark theme on development machine
-    if (currentColorScheme != "colorSchemeDark") {
-        console.log("/_includes/getRootColors.js environment:", environment)
-        setColorScheme(colorSchemeDark)
-        localStorage.setItem("colorScheme", "colorSchemeDark")
-    }
+    console.log("/_includes/getRootColors.js environment:", environment)
+    if (currentColorScheme != "colorSchemeDark") setColorScheme(colorSchemeDark)
 }
 
 function getColorCode(scheme, key) {
-    const rootElm = document.querySelector(':root')
-    const rs = getComputedStyle(rootElm)
+    //const rootElm = document.querySelector(':root')
+    //const rs = getComputedStyle(rootElm)
     const value = scheme[key]
     return value
 }
