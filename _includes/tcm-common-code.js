@@ -7,7 +7,7 @@
 
 */
 
-// Color Schemes - getRootColors.js for descriptions
+// Color Schemes - getRootColors.js for local storage current scheme
 {% include getRootColors.js %}
 
 /* June 9/2022 - setCookie() and getCookie() in theCookieJar.js */
@@ -32,8 +32,42 @@ function getCookie(cname) {
     return ""
 }
 
-// Get all .color-scheme-button class instances `/_layouts/default.html` has
-// .color-scheme-button in two different place.
+/*  Get all .color-scheme-button class instances `/_layouts/default.html` has
+    .color-scheme-button in two different HTML places:
+
+        <!-- Color Scheme Picker Button -->
+        <button class="color-scheme-button"
+          title="Switch {{ site.title }} Website to Dark color scheme"
+          ><img src="{{ site.baseurl }}/assets/img/icons/color_scheme_dark.png"
+                alt="" width="24" height="24">
+        </button>
+
+switch_off_left switch_off_image
+    objTcmVisById[id].setting = bool;
+    if (bool == "true" ) { objTcmVisById[id].element.src = switch_on_image;
+                           objTcmVisById[id].element.title = "Click to switch off"; }
+                    else { objTcmVisById[id].element.src = switch_off_image;
+                           objTcmVisById[id].element.title = "Click to switch on"; }
+    if (id == "switch_this_page") { vis_this_page = bool; }
+    if (id == "switch_all_pages") {
+        vis_all_pages = bool;
+        sessionStorage.vis_all_pages = vis_all_pages;
+    }
+    if (id == "switch_all_sessions") {
+        vis_all_sessions = bool;
+        setCookie("vis_all_sessions", vis_all_sessions, 30);
+    }
+
+    Defined in /_includes/getRootColors.js:
+
+        var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
+        var imageColorSchemeCayman =
+                "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
+        var imageColorSchemeDark =
+                "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
+
+*/
+
 var cspButtonClasses = document.getElementsByClassName("color-scheme-button");  // New class
 
 var cspButtonClick = function() {
@@ -42,7 +76,19 @@ var cspButtonClick = function() {
 }
 
 for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
-    cspButtonClasses[ndx].addEventListener('click', cspButtonClick, false);
+    cspButtonClasses[ndx].addEventListener('click', cspButtonClick, false)
+    // Above add listener. Below set appropriate icon image source & title
+    setColorSchemeButtonImage(cspButtonClasses[ndx], currentColorScheme)
+}
+
+function setColorSchemeButtonImage(elm, schemeName) {
+    var scheme = window[schemeName]  // Get scheme object from name
+    if (scheme == "colorSchemeCayman" ) {
+        elm.element.src = imageColorSchemeDark
+        elm.element.title = "Switch {{ site.title }} Website to Dark color scheme" }
+    else {
+        elm.element.src = imageColorSchemeCayman
+        elm.element.title = "Switch {{ site.title }} Website to Cayman color scheme" }
 }
 
 // Get all .tcm-button class instances `/_layouts/default.html` has
