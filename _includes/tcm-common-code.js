@@ -63,7 +63,7 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
     if (currentColorScheme == "colorSchemeCayman") newScheme = "colorSchemeDark"
     else newScheme = "colorSchemeCayman"
     setColorSchemeButtonImage(cspButtonClasses[ndx], newScheme)
-    colorCodeScheme = newScheme  // Temporary until setColorScheme() called.
+    currentColorScheme = newScheme  // Temporary until setColorScheme() called.
 }
 
 function setColorSchemeButtonImage(elm, schemeName) {
