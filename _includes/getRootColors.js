@@ -147,12 +147,11 @@ function getBrowser() {
 
 if (environment == "Linux x86_64 Firefox 88") {
     // Set dark theme on development machine
-    if (currentColorScheme == "colorSchemeDark") return  // Already set
-    console.log("/_includes/getRootColors.js environment:", environment)
-    setColorScheme(colorSchemeDark)
-    //    var scheme = window[schemeName]  // Get scheme object from name
-
-    //localStorage.setItem("colorScheme", "colorSchemeDark")
+    if (currentColorScheme != "colorSchemeDark") {
+        console.log("/_includes/getRootColors.js environment:", environment)
+        setColorScheme(colorSchemeDark)
+        localStorage.setItem("colorScheme", "colorSchemeDark")
+    }
 }
 
 function getColorCode(scheme, key) {
