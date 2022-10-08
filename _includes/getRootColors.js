@@ -92,7 +92,7 @@ function getCurrentColors() {
     */
     // currentColorScheme = JSON.parse(localStorage.getItem('colorScheme'))
     currentColorScheme = localStorage.getItem('colorScheme')
-    // console.log("Reading currentColorScheme:", currentColorScheme)
+    console.log("Reading currentColorScheme:", currentColorScheme)
     if (currentColorScheme == null) {
         // localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
         localStorage.setItem("colorScheme", "colorSchemeCayman")
@@ -105,7 +105,7 @@ function getCurrentColors() {
 }
 
 function extractRootColors(schemeName) {
-    // Set dark theme
+    // Set passed "colorScheme" of "Cayman" or "Dark"
     //var scheme = {[schemeName]}  // Get scheme object from name
     var scheme = window[schemeName]  // Get scheme object from name
     const margin = "    "
