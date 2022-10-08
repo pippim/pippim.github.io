@@ -83,25 +83,26 @@ var colorSchemeDark = {
 var currentColorScheme  // Object with all root keys
 
 function getCurrentColors() {
-    /*  Local storage key colorScheme contains our scheme name.
-        If it doesn't exist use Cayman Theme and save to new key.
-        BAD DESIGN: If website updates color scheme, user's saved colors
-                    in local storage is loaded with older colors. Change
-                    structure to save the name only
+    /*  Local storage key "colorScheme" contains our scheme name.
+        If it doesn't exist use "colorSchemeCayman" and save to new key.
     */
-    currentColorScheme = JSON.parse(localStorage.getItem('colorScheme'))
+    // currentColorScheme = JSON.parse(localStorage.getItem('colorScheme'))
+    currentColorScheme = localStorage.getItem('colorScheme')
     // console.log("Reading currentColorScheme:", currentColorScheme)
     if (currentColorScheme == null) {
-        localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
-        currentColorScheme = Object.assign( {}, colorSchemeCayman)
+        // localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
+        localStorage.setItem("colorScheme", "colorSchemeCayman")
+        currentColorScheme = "colorSchemeCayman"
+        // currentColorScheme = Object.assign( {}, colorSchemeCayman)
         // Shallow object copy - https://stackoverflow.com/a/34294740/6929343
         // console.log("Creating currentColorScheme:", currentColorScheme)
     }
     return (extractRootColors(currentColorScheme))
 }
 
-function extractRootColors(scheme) {
+function extractRootColors(schemeName) {
     // Set dark theme
+    var scheme = {[schemeName]}  // Get scheme object from name
     const margin = "    "
     var root = ""
     console.log("/assets/js/setRootColors.js color scheme:", scheme.name)
@@ -114,7 +115,7 @@ function extractRootColors(scheme) {
 
 getCurrentColors()  // We are done now. Rest of functions are optional
 
-
+/* Optional functions to control root variables */
 const browser = getBrowser()
 const environment = navigator.oscpu + " " + browser.name + " " +
                     browser.version
