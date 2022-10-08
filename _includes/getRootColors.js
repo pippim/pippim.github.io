@@ -102,7 +102,8 @@ function getCurrentColors() {
 
 function extractRootColors(schemeName) {
     // Set dark theme
-    var scheme = {[schemeName]}  // Get scheme object from name
+    //var scheme = {[schemeName]}  // Get scheme object from name
+    var scheme = window[schemeName]  // Get scheme object from name
     const margin = "    "
     var root = ""
     console.log("/assets/js/setRootColors.js color scheme:", scheme.name)
