@@ -1,9 +1,7 @@
-/* /_includes/tcm-common-code.js code shared by:
-    /assets/js/theCookieMachine.js - Draggable Modal Dialog
-    /tcm.md - The Cookie Machine documentation webpage
-    /assets/js/search.js
-
-    Called by: { % include head-custom.html %}
+/*  /_includes/tcm-common-code.js code shared by:
+        /assets/js/theCookieMachine.js - Draggable Modal Dialog
+        /tcm.md - The Cookie Machine documentation webpage
+        /assets/js/search.js
 
 */
 
@@ -46,9 +44,9 @@ function getCookie(cname) {
 
         var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
         var imageColorSchemeCayman =
-                "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
+                "{ { site.url }}/assets/img/icons/color_scheme_cayman.png"
         var imageColorSchemeDark =
-                "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
+                "{ { site.url }}/assets/img/icons/color_scheme_dark.png"
 
 */
 
