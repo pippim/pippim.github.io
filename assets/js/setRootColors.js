@@ -11,7 +11,6 @@ function applyRootColors() {
     // root colors: Cayman green, Cayman blue, Honeydew
     // name-column fluctuates based on currentTable and scrSetSize
     var styles = ':root {\n'
-    styles += '  --test-color: #1060F0;\n'
     styles += getCurrentColors()
     styles += '}\n'
 
