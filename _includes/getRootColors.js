@@ -1,3 +1,5 @@
+---
+---
 /*  /_includes/setRootColors - get Root Colors before:
         /asset/css/style.scss in all /_layouts
         test.md
@@ -80,7 +82,11 @@ var colorSchemeDark = {
     "--kbd-color": "#040d06"
 }
 
-var currentColorScheme  // Object with all root keys
+var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
+var imageColorSchemeCayman =
+        "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
+var imageColorSchemeDark =
+        "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
 
 function getCurrentColors() {
     /*  Local storage key "colorScheme" contains our scheme name.
@@ -142,45 +148,31 @@ function getBrowser() {
  }
 
 if (environment == "Linux x86_64 Firefox 88") {
-    // Set dark theme
+    // Set dark theme on development machine
     console.log("/_includes/getRootColors.js environment:", environment)
     setColorScheme(colorSchemeDark)
-    /*
-    for (const key of Object.keys(colorSchemeDark)) {
-        if (key.startsWith("fail_test")) continue  // Ignore test fail data
-        if (key.startsWith("name")) continue  // Ignore test fail data
-        console.log(key, colorSchemeDark[key], getColorCode(colorSchemeDark, key))
-        setColorCode(colorSchemeDark, key)
-    }
-    */
 }
 
 function getColorCode(scheme, key) {
-    // Get the styles (properties and values) for the root
-    const rootElm = document.querySelector(':root')  // Will not work for popup
+    const rootElm = document.querySelector(':root')
     const rs = getComputedStyle(rootElm)
     const value = scheme[key]
-    // Alert the value of the --blue variable
-    // console.log("The value of " + key + " is: " + value)
     return value
 }
 
-// From theCookieMachine.js
 function setColorCode(scheme, key) {
-    // Set the value of variable --msgq-error-bg-color to another value (in this case "lightblue")
-    const rootElm = document.querySelector(':root')  // Will not work for popup
     const value = scheme[key]
     if (value === null) return
+    const rootElm = document.querySelector(':root')
     rootElm.style.setProperty(key, value);
 }
 
-function setColorScheme(schemeName) {
+function setColorScheme(scheme) {
     // Set dark theme
-    console.log("/_includes/getRootColors.js setColorScheme:", schemeName.name)
-    for (const key of Object.keys(schemeName)) {
+    console.log("/_includes/getRootColors.js setColorScheme():", scheme.name)
+    for (const key of Object.keys(scheme)) {
         if (!(key.startsWith("--"))) continue  // Ignore "name"
-        // console.log(key, schemeName[key], getColorCode(schemeName, key))
-        setColorCode(schemeName, key)
+        setColorCode(scheme, key)
     }
 }
 
