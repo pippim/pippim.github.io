@@ -32,6 +32,18 @@ function getCookie(cname) {
     return ""
 }
 
+// Get all .color-scheme-button class instances `/_layouts/default.html` has
+// .color-scheme-button in two different place.
+var cspButtonClasses = document.getElementsByClassName("color-scheme-button");  // New class
+
+var cspButtonClick = function() {
+    // Color Scheme Picker button was clicked on one of page header <div>s
+    console.log("Page Header Color Scheme Picker clicked")
+}
+
+for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
+    cspButtonClasses[ndx].addEventListener('click', cspButtonClick, false);
+}
 
 // Get all .tcm-button class instances `/_layouts/default.html` has
 // .tcm-button in two different place.
