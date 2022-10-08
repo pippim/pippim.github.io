@@ -67,17 +67,17 @@ function setColorSchemeButtonImage(elm, schemeName) {
     console.log("elm, scheme.name:", elm, scheme.name)
     if (schemeName == "colorSchemeCayman") {
         elm.src = imageColorSchemeDark
-        elm.title = "Switch {{ site.title }} Website to Dark color scheme"
+        elm.title = "Switch {{ site.title }} Website to color scheme Dark"
     }
     else {
         elm.src = imageColorSchemeCayman
-        elm.title = "Switch {{ site.title }} Website to Cayman color scheme"
+        elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
     }
 }
 
 /* TESTING */
-console.log(extractRootColors("colorSchemeCayman"))
-console.log(extractRootColors("colorSchemeDark"))
+//console.log(extractRootColors("colorSchemeCayman"))
+//console.log(extractRootColors("colorSchemeDark"))
 
 if (environment == "Linux x86_64 Firefox 88") {
     // Set dark theme on development machine
