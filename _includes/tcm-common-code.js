@@ -59,7 +59,10 @@ console.log("imageColorSchemeDark:", imageColorSchemeDark)
 for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
     cspButtonClasses[ndx].addEventListener('click', cspButtonClick, false)
     // Above add listener. Below set appropriate icon image source & title
-    setColorSchemeButtonImage(cspButtonClasses[ndx], currentColorScheme)
+    var newScheme
+    if (currentColorScheme == "colorSchemeCayman") newScheme = "colorSchemeDark"
+    else newScheme = "colorSchemeCayman"
+    setColorSchemeButtonImage(cspButtonClasses[ndx], newScheme)
 }
 
 function setColorSchemeButtonImage(elm, schemeName) {
