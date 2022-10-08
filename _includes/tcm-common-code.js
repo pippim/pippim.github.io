@@ -40,13 +40,13 @@ function getCookie(cname) {
                 alt="" width="24" height="24">
         </button>
 
-    Defined in /_includes/getRootColors.js:
+    Defined in `/_includes/getRootColors.js`:
 
         var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
         var imageColorSchemeCayman =
-                "{ { site.url }}/assets/img/icons/color_scheme_cayman.png"
+                "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
         var imageColorSchemeDark =
-                "{ { site.url }}/assets/img/icons/color_scheme_dark.png"
+                "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
 
 */
 
