@@ -50,7 +50,7 @@ function getCookie(cname) {
 
 */
 
-var cspButtonClasses = document.getElementsByClassName("color-scheme-button");  // New class
+var cspButtonClasses = document.getElementsByClassName("color-scheme-button")
 
 var cspButtonClick = function() {
     // Color Scheme Picker button was clicked on one of page header <div>s
@@ -65,7 +65,8 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
 
 function setColorSchemeButtonImage(elm, schemeName) {
     var scheme = window[schemeName]  // Get scheme object from name
-    // console.log("elm, scheme:", elm, scheme)
+    console.log("elm, scheme:", elm, scheme)
+    return
     if (scheme == "colorSchemeCayman" ) {
         elm.src = imageColorSchemeDark
         elm.title = "Switch {{ site.title }} Website to Dark color scheme"
