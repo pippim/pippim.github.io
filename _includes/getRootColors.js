@@ -1,7 +1,7 @@
-/*  /_includes/setRootColors - get Root Colors before:
+/*  /_includes/getRootColors.js - get Root Colors before:
         /asset/css/style.scss in all /_layouts
         test.md
-        tcm-common-code.js
+        tcm-common-code.js (included in theCookieMachine.js)
 */
 
 console.log("Start of /_includes/getRootColors.js")

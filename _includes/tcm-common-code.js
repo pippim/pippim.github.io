@@ -57,6 +57,10 @@ var cspButtonClick = function() {
     console.log("Page Header Color Scheme Picker clicked")
 }
 
+console.log("currentColorScheme:", currentColorScheme)
+console.log("imageColorSchemeCayman:", imageColorSchemeCayman)
+console.log("imageColorSchemeDark:", imageColorSchemeDark)
+
 for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
     cspButtonClasses[ndx].addEventListener('click', cspButtonClick, false)
     // Above add listener. Below set appropriate icon image source & title
