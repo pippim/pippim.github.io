@@ -49,12 +49,7 @@ var cspButtonClick = function() {
     // Color Scheme Picker button was clicked on one of page header <div>s
     console.log("Page Header Color Scheme Picker clicked")
     this.classList.toggle('rotate-button')  // Add/remove rotate image in button
-    // image.style.transform = 'rotate(180deg)'; //add this
 }
-
-console.log("currentColorScheme:", currentColorScheme)
-console.log("imageColorSchemeCayman:", imageColorSchemeCayman)
-console.log("imageColorSchemeDark:", imageColorSchemeDark)
 
 for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
     cspButtonClasses[ndx].addEventListener('click', cspButtonClick, false)
@@ -62,9 +57,7 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
     var newScheme
     if (currentColorScheme == "colorSchemeCayman") newScheme = "colorSchemeDark"
     else newScheme = "colorSchemeCayman"
-    //setColorSchemeButtonImage(cspButtonClasses[ndx], newScheme)
-    // Fudge fake for test
-    setColorSchemeButtonImage(cspButtonClasses[ndx], "colorSchemeDark")
+    setColorSchemeButtonImage(cspButtonClasses[ndx], newScheme)
     currentColorScheme = newScheme  // Temporary until setColorScheme() called.
 }
 

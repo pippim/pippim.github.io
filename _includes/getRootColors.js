@@ -90,23 +90,16 @@ function getCurrentColors() {
     /*  Local storage key "colorScheme" contains our scheme name.
         If it doesn't exist use "colorSchemeCayman" and save to new key.
     */
-    // currentColorScheme = JSON.parse(localStorage.getItem('colorScheme'))
     currentColorScheme = localStorage.getItem('colorScheme')
-    console.log("Reading currentColorScheme:", currentColorScheme)
     if (currentColorScheme == null) {
-        // localStorage.setItem("colorScheme", JSON.stringify(colorSchemeCayman))
         localStorage.setItem("colorScheme", "colorSchemeCayman")
         currentColorScheme = "colorSchemeCayman"
-        // currentColorScheme = Object.assign( {}, colorSchemeCayman)
-        // Shallow object copy - https://stackoverflow.com/a/34294740/6929343
-        // console.log("Creating currentColorScheme:", currentColorScheme)
     }
     return (extractRootColors(currentColorScheme))
 }
 
 function extractRootColors(schemeName) {
     // Set passed "colorScheme" of "Cayman" or "Dark"
-    //var scheme = {[schemeName]}  // Get scheme object from name
     var scheme = window[schemeName]  // Get scheme object from name
     const margin = "    "
     var root = ""
