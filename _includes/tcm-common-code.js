@@ -62,7 +62,9 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
     var newScheme
     if (currentColorScheme == "colorSchemeCayman") newScheme = "colorSchemeDark"
     else newScheme = "colorSchemeCayman"
-    setColorSchemeButtonImage(cspButtonClasses[ndx], newScheme)
+    //setColorSchemeButtonImage(cspButtonClasses[ndx], newScheme)
+    // Fudge fake for test
+    setColorSchemeButtonImage(cspButtonClasses[ndx], "colorSchemeCayman")
     currentColorScheme = newScheme  // Temporary until setColorScheme() called.
 }
 
