@@ -739,6 +739,26 @@ a.search-results:visited {
     }
 }
 
+/* Color Scheme Picker Button in page header */
+.color-scheme-button {
+    // The Cookie Machine HIDDEN button positioned after regular buttons
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    margin-left: .3rem;
+    background: transparent;
+    border: none;
+
+    @include large  { height: 44px; width: 44px; }
+    @include medium { height: 36px; width: 36px; }
+    @include small  { height: 38px; width: 38px; }
+
+    &:hover {
+        filter: brightness(150%);
+    }
+}
+
 /* Button in the MAIN window's header NOT in the tcm window! */
 .tcm-button {
     // The Cookie Machine HIDDEN button positioned after regular buttons
@@ -751,10 +771,14 @@ a.search-results:visited {
     border: none;
     opacity: 0.0;  // Make image invisible
 
+    /* Oct 8/22 margin top adjustment no longer needed
     @include large  { height: 44px; width: 44px; margin-top: .9rem; }
     @include medium { height: 36px; width: 36px; margin-top: .5rem; }
     @include small  { height: 38px; width: 38px; margin-top: .4rem; }
-
+    */
+    @include large  { height: 44px; width: 44px; }
+    @include medium { height: 36px; width: 36px; }
+    @include small  { height: 38px; width: 38px; }
     &:hover {
         filter: brightness(150%);
     }
