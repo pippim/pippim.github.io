@@ -42,22 +42,6 @@ function getCookie(cname) {
                 alt="" width="24" height="24">
         </button>
 
-switch_off_left switch_off_image
-    objTcmVisById[id].setting = bool;
-    if (bool == "true" ) { objTcmVisById[id].element.src = switch_on_image;
-                           objTcmVisById[id].element.title = "Click to switch off"; }
-                    else { objTcmVisById[id].element.src = switch_off_image;
-                           objTcmVisById[id].element.title = "Click to switch on"; }
-    if (id == "switch_this_page") { vis_this_page = bool; }
-    if (id == "switch_all_pages") {
-        vis_all_pages = bool;
-        sessionStorage.vis_all_pages = vis_all_pages;
-    }
-    if (id == "switch_all_sessions") {
-        vis_all_sessions = bool;
-        setCookie("vis_all_sessions", vis_all_sessions, 30);
-    }
-
     Defined in /_includes/getRootColors.js:
 
         var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
@@ -83,12 +67,15 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
 
 function setColorSchemeButtonImage(elm, schemeName) {
     var scheme = window[schemeName]  // Get scheme object from name
+    // console.log("elm, scheme:", elm, scheme)
     if (scheme == "colorSchemeCayman" ) {
-        elm.element.src = imageColorSchemeDark
-        elm.element.title = "Switch {{ site.title }} Website to Dark color scheme" }
+        elm.src = imageColorSchemeDark
+        elm.title = "Switch {{ site.title }} Website to Dark color scheme"
+    }
     else {
-        elm.element.src = imageColorSchemeCayman
-        elm.element.title = "Switch {{ site.title }} Website to Cayman color scheme" }
+        elm.src = imageColorSchemeCayman
+        elm.title = "Switch {{ site.title }} Website to Cayman color scheme"
+    }
 }
 
 // Get all .tcm-button class instances `/_layouts/default.html` has
