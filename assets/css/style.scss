@@ -8,80 +8,58 @@
 https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989
 
 */
-
+/*
 :root {
-    /*  Used by Pippim. Defaults are stored in memory (here). Also created
-        in memory is colorSchemeDark. You can copy and modify either scheme
-        and save to local storage under your own name.
-    */
-    //--honeydew: #F0FFF0;  /* light greenish yellow used for nav-background-color */
-    --nav-button-bg-color: #F0FFF0;  /* Honeydew light greenish yellow */
-    --nav-button-color: #159957;  /* Cayman green */
-    --msgq-error-bg-color: #f44336;  /* Light Red */
-    --msgq-warning-bg-color: #ff9800;  /* Light Orange */
-    --msgq-info-bg-color: #2196F3;  /* Light Blue */
-    --msgq-success-bg-color: #04AA6D;  /* Light Green */
-    --msgq-body-bg-color: #f1f1f1;  /* Light Grey */
-    --msgq-border-color: #d3d3d3;  /* Dark Grey */
+    //  Used by Pippim. Defaults are stored in memory (here). Also created
+    //  in memory is colorSchemeDark. You can copy and modify either scheme
+    //  and save to local storage under your own name.
+    //--honeydew: #F0FFF0;  /* light greenish yellow used for nav-background-color
+    --nav-button-bg-color: #F0FFF0;  // Honeydew light greenish yellow
+    --nav-button-color: #159957;  // Cayman green
+    --msgq-error-bg-color: #f44336;  // Light Red
+    --msgq-warning-bg-color: #ff9800;  // Light Orange
+    --msgq-info-bg-color: #2196F3;  // Light Blue
+    --msgq-success-bg-color: #04AA6D;  // Light Green
+    --msgq-body-bg-color: #f1f1f1;  // Light Grey
+    --msgq-border-color: #d3d3d3;  // Dark Grey
 
-    --header-accent-color: #FFFF00;  /* Yellow also button focus text */
-    --button-focus-color: #1E90FF;  /* Dodger Blue (for background) */
-    --progress-bar-color: #008000;  /* Green */
-    --flash-bg-color: #808080;  /* Grey */
-    --boldest-color: #000000;  /* Black on white screen, white on black screen */
-    --link-visited: #800080;  /* Purple */
+    --header-accent-color: #FFFF00;  // Yellow also button focus text
+    --button-focus-color: #1E90FF;  // Dodger Blue (for background)
+    --progress-bar-color: #008000;  // Green
+    --flash-bg-color: #808080;  // Grey
+    --boldest-color: #000000;  // Black on white screen, white on black screen
+    --link-visited: #800080;  // Purple
     // $salmon: #FA8072 !default; // salmon
     // $lavender: #E6E6FA !default; // lavender
 
-    /*  Copied from github/page-themes/cayman/_sass/variables.scss
-        to /assets/_sass/variables.scss and & prefix changed to --
-    */
-    --header-heading-color: #ffffff;  /* White */
-    --header-bg-color: #159957;  /* Cayman Green */
-    --header-bg-color-secondary: #155799;  /* Cayman Blue */
-    /* Text */
-    --section-headings-color: #159957;  /* Cayman Green */
-    --body-text-color: #606c71;  /* grey */
-    --body-bg-color: #ffffff;  /* white */
-    --body-link-color: #1e6bb8;  /* Link blue */
-    --body-link-inverted-color: #e19447;  /* Have no clue used by cayman theme
-
-    1e = 30 - 255  = 225 = e1
-    6b = 107 - 255 = 148 = 94
-    b8 = 184 - 255 = 71  = 47
-
-    from: https://stackoverflow.com/a/36908191/6929343
-to calculate the invert of a color:
-
-    $color: #ff6699;
-    Convert the color value to RGB
-
-    #ff6699 = RGB 255, 102, 153
-
-    Flip the values by subtracting the original RGB values from 255
-
-    (255-255) (255-102) (255-153)
-    0          153       102
-
-    This corresponds to #009966
-
-     */
-    --blockquote-text-color: #819198;  /* steel blue/grey */
-    /* Code */
-    --code-bg-color: #f3f6fa;  /* faint grey */
-    --code-text-color: #567482;  /* light royal blue */
-    /* Borders */
-    --border-color: #dce6f0;  /* faint sky blue */
-    --table-border-color: #e9ebec;  /* faint grey */
-    --hr-border-color: #eff0f1;  /* faint grey */
-    /*  /assets/_sass/variables.scss that never had an '&' sass prefix */
-    --kbd-background-color: #fafbfc;  /* white */
-    --kbd-border-color: #c6cbd1;  /* light grey/blue */
-    --kbd-border-bottom-color: #959da5;  /* grey/blue */
-    --kbd-box-shadow-color: #959da5;  /* grey/blue */
-    --kbd-color: #444d56;  /* dark grey/blue */
+    //  Copied from github/page-themes/cayman/_sass/variables.scss
+    //  to /assets/_sass/variables.scss and & prefix changed to --
+    --header-heading-color: #ffffff;  // White
+    --header-bg-color: #159957;  // Cayman Green
+    --header-bg-color-secondary: #155799;  // Cayman Blue
+    // Text
+    --section-headings-color: #159957;  // Cayman Green
+    --body-text-color: #606c71;  // grey
+    --body-bg-color: #ffffff;  // white
+    --body-link-color: #1e6bb8;  // Link blue
+    --body-link-inverted-color: #e19447;  // Have no clue used by cayman theme
+    // from: https://stackoverflow.com/a/36908191/6929343
+    --blockquote-text-color: #819198;  // steel blue/grey
+    // Code
+    --code-bg-color: #f3f6fa;  // faint grey
+    --code-text-color: #567482;  // light royal blue
+    // Borders
+    --border-color: #dce6f0;  // faint sky blue
+    --table-border-color: #e9ebec;  // faint grey
+    --hr-border-color: #eff0f1;  // faint grey
+    //  /assets/_sass/variables.scss that never had an '&' sass prefix
+    --kbd-background-color: #fafbfc;  // white
+    --kbd-border-color: #c6cbd1;  // light grey/blue
+    --kbd-border-bottom-color: #959da5;  // grey/blue
+    --kbd-box-shadow-color: #959da5;  // grey/blue
+    --kbd-color: #444d56;  // dark grey/blue
 }
-
+*/
 // Input fields
 button,
 input,
