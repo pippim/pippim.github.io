@@ -77,7 +77,7 @@ var colorSchemeDark = {
     "--kbd-border-color": "#c6cbd1",
     "--kbd-border-bottom-color": "#e5ede5",
     "--kbd-box-shadow-color": "#e5ede5",
-    "--kbd-color": "#040d06"
+    "--kbd-color": "#c4cdd6"
 }
 
 var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
@@ -147,10 +147,12 @@ function getBrowser() {
 
 if (environment == "Linux x86_64 Firefox 88") {
     // Set dark theme on development machine
-    if (currentColorSchem == "colorSchemeDark") return  // Already set
+    if (currentColorScheme == "colorSchemeDark") return  // Already set
     console.log("/_includes/getRootColors.js environment:", environment)
     setColorScheme(colorSchemeDark)
-    localStorage.setItem("colorScheme", "colorSchemeDark")
+    //    var scheme = window[schemeName]  // Get scheme object from name
+
+    //localStorage.setItem("colorScheme", "colorSchemeDark")
 }
 
 function getColorCode(scheme, key) {
@@ -171,6 +173,7 @@ function setColorScheme(scheme) {
     // Set dark theme
     console.log("/_includes/getRootColors.js setColorScheme():", scheme.name)
     currentColorScheme = scheme.name
+    localStorage.setItem("colorScheme", "colorSchemeDark")
     for (const key of Object.keys(scheme)) {
         if (!(key.startsWith("--"))) continue  // Ignore "name"
         setColorCode(scheme, key)
