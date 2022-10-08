@@ -52,7 +52,7 @@ var cspButtonClick = function() {
     var newScheme
     if (currentColorScheme == "colorSchemeCayman") newScheme = "colorSchemeDark"
     else newScheme = "colorSchemeCayman"
-    setColorSchemeButtonImage(cspButtonClasses[ndx], newScheme)
+    setColorSchemeButtonImage(this, newScheme)
     currentColorScheme = newScheme  // Temporary until setColorScheme() called.
 }
 
