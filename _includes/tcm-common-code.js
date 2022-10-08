@@ -62,9 +62,8 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
 
 function setColorSchemeButtonImage(elm, schemeName) {
     var scheme = window[schemeName]  // Get scheme object from name
-    console.log("elm, scheme:", elm, scheme)
-    return
-    if (scheme == "colorSchemeCayman" ) {
+    console.log("elm, scheme.name:", elm, scheme.name)
+    if (scheme == "colorSchemeCayman") {
         elm.src = imageColorSchemeDark
         elm.title = "Switch {{ site.title }} Website to Dark color scheme"
     }
