@@ -740,6 +740,7 @@ a.search-results:visited {
     margin-left: .3rem;
     background: transparent;
     border: none;
+    transition: transform 0.5s;
 
     @include large  { height: 44px; width: 44px; }
     @include medium { height: 36px; width: 36px; }
@@ -748,6 +749,10 @@ a.search-results:visited {
     &:hover {
         filter: brightness(150%);
     }
+}
+
+.rotate-button {
+  transform: rotate(180deg);
 }
 
 /* Button in the MAIN window's header NOT in the tcm window! */
