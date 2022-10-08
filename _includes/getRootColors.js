@@ -163,7 +163,8 @@ function setColorScheme(scheme) {
     // Set dark theme
     console.log("/_includes/getRootColors.js setColorScheme():", scheme.name)
     currentColorScheme = scheme.name
-    localStorage.setItem("colorScheme", "colorSchemeDark")
+    //localStorage.setItem("colorScheme", "colorSchemeDark")
+    // Above is breaking system???
     for (const key of Object.keys(scheme)) {
         if (!(key.startsWith("--"))) continue  // Ignore "name"
         setColorCode(scheme, key)
