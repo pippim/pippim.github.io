@@ -4,7 +4,7 @@
         tcm-common-code.js (included in theCookieMachine.js)
 */
 
-console.log("Start of /_includes/getRootColors.js")
+// console.log("Start of /_includes/getRootColors.js")
 // Color Schemes - See below for descriptions
 var colorSchemeCayman = {
     name: "colorSchemeCayman",
@@ -103,7 +103,7 @@ function extractRootColors(schemeName) {
     var scheme = window[schemeName]  // Get scheme object from name
     const margin = "    "
     var root = ""
-    console.log("/assets/js/setRootColors.js color scheme:", scheme.name)
+    // console.log("/assets/js/setRootColors.js color scheme:", scheme.name)
     for (const key of Object.keys(scheme)) {
         if (!(key.startsWith("--"))) continue  // Ignore "name"
         root += margin + key + ": " + scheme[key] + ";\n"
@@ -154,7 +154,7 @@ function setColorCode(scheme, key) {
 
 function setColorScheme(scheme) {
     // Set dark theme
-    console.log("/_includes/getRootColors.js setColorScheme():", scheme.name)
+    //console.log("/_includes/getRootColors.js setColorScheme():", scheme.name)
     currentColorScheme = scheme.name
     //localStorage.setItem("colorScheme", "colorSchemeDark")
     // Above is breaking system???

@@ -47,7 +47,6 @@ var cspButtonClasses = document.getElementsByClassName("color-scheme-button")
 
 var cspButtonClick = function() {
     // Color Scheme Picker button was clicked on one of page header <div>s
-    console.log("Page Header Color Scheme Picker clicked:", currentColorScheme)
     this.classList.toggle('rotate-button')  // Add/remove rotate image in button
     if (currentColorScheme == "colorSchemeCayman") {
         currentColorScheme = "colorSchemeDark"
@@ -73,33 +72,12 @@ function setColorSchemeButtonImage(schemeName) {
         var elm = cspButtonClasses[ndx]
         if (schemeName == "colorSchemeCayman") {
             elm.src = imageColorSchemeDark
-            elm.src = "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
             elm.title = "Switch {{ site.title }} Website to color scheme Dark"
         }
         else {
             elm.src = imageColorSchemeCayman
-            elm.src = "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
             elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
         }
-    }
-}
-
-/* TESTING */
-//console.log(extractRootColors("colorSchemeCayman"))
-//console.log(extractRootColors("colorSchemeDark"))
-
-/* Only black & white when called earlier in setRootColors.js
-if (currentColorScheme == "colorSchemeCayman")
-    setColorScheme(colorSchemeCayman)
-else
-    setColorScheme(colorSchemeDark)
-*/
-if (environment == "Linux x86_64 Firefox 87") {
-    // Set dark theme on development machine
-    console.log("/_includes/getRootColors.js environment:", environment)
-    if (currentColorScheme != "colorSchemeDark") {
-        setColorScheme(colorSchemeDark)
-        setColorSchemeButtonImage(cspButtonClasses[0], "colorSchemeDark")
     }
 }
 
