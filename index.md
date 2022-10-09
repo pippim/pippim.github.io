@@ -40,13 +40,13 @@ Welcome to {{ site.title }}'s website powered by GitHub.
 "Create and run timers for Laundry, Cooking, Workouts, etc.") 
 lets you create and run timers for:
 
-<-- Image next to bullets suck the bullets into image
+<!-- Image next to bullets suck the bullets into image
 - Doing Laundry
 - Cooking Food
 - Working Out
 - Limiting Computer time
 -->
-<div style="margin: 0 0 0 2rem;">
+<div style="margin: 0 0 0 4rem;">
    <ul>
       <li> Doing Laundry </li>
       <li> Cooking Food </li>
