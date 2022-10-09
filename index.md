@@ -36,18 +36,32 @@ layout: default
 
 Welcome to {{ site.title }}'s website.
 
+[Tim-ta](https://pippim.github.io/programs/tim-ta.html 
+"Create and run timers for Laundry, Cooking, Workouts, etc.") 
+lets you create and run timers for:
+
+- Doing Laundry
+- Cooking Food
+- Working Out
+- Limiting Computer time
+
 A ***different kind*** of site search engine greets you. Others
 operate at an average speed of 2.5 MB/s (Megabytes per second)
 over the internet. This one runs at the speed of RAM; about
 19,200 MB/s!
 
-[Convert](https://pippim.github.io/programs/stack.html "Convert Stack Exchange Posts to Your Own Website") your popular *Stack Exchange
-Posts* to **your own website** with additional features like;
+[Convert](https://pippim.github.io/programs/stack.html 
+"Convert Stack Exchange Posts to Your Own Website") 
+your popular *Stack Exchange Posts* to **your own website** 
+with additional features like;
 Table of Contents, Section Navigation buttons, Copy code
 blocks to clipboard and Show summary statistics.
 
-There are **no ads** on {{ site.title }}. You don't need to buy
-{{ site.title }} a coffee (it's already free at work!).
+There are **no ads** on {{ site.title }}. You can't buy
+{{ site.title }} a coffee. No third party websites are used
+to deliver {{ site.title }} website content. It is impossible
+for {{ site.title }} to collect your data and store it on
+the {{ site.title }} website because it is hosted by GitHub.
 
 ## Navigation Buttons
 
