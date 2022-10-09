@@ -73,11 +73,11 @@ var colorSchemeDark = {
     "--border-color": "#4c4640",
     "--table-border-color": "#494b4c",
     "--hr-border-color": "#3f3031",
-    "--kbd-background-color": "#fafbfc",
+    "--kbd-background-color": "#dadbdc",
     "--kbd-border-color": "#c6cbd1",
     "--kbd-border-bottom-color": "#959da5",
     "--kbd-box-shadow-color": "#959da5",
-    "--kbd-color": "#444d56"
+    "--kbd-color": "#242d36"
 }
 /* Oct 9/22 - Too dark of background, so switch to Cayman colors
     "--code-bg-color": "#13161a",
