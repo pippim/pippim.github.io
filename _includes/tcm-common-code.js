@@ -68,8 +68,8 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
 }
 
 function setColorSchemeButtonImage(schemeName) {
-    console.log("imageColorSchemeDark:", imageColorSchemeDark)
-    console.log("imageColorSchemeCayman:", imageColorSchemeCayman)
+    console.log(cspButtonClasses.length, "imageColorSchemeDark:", imageColorSchemeDark)
+    console.log(cspButtonClasses.length, "imageColorSchemeCayman:", imageColorSchemeCayman)
     for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
         var elm = cspButtonClasses[ndx]
         if (schemeName == "colorSchemeCayman") {
@@ -83,7 +83,7 @@ function setColorSchemeButtonImage(schemeName) {
             elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
         }
         // https://stackoverflow.com/a/47814427/6929343
-        elm.hide().show(0)
+        // elm.hide().show(0) -- elm.hide is not a function error
     }
 }
 
