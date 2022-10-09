@@ -1,4 +1,4 @@
-/* Github Pages Jekyll Cayman Theme. Make code block font size larger. Copied from:
+/* Add color themes. Make code block font size larger. Copied from:
  * https://github.com/pages-themes/cayman/blob/master/_sass/jekyll-theme-cayman.scss
  * Source code version: January 2021
  */
@@ -288,7 +288,8 @@ a {
 
     line-height: inherit;
     word-wrap: normal;
-    background-color: transparent;
+    // Oct 9/22 Fix code blocks // background-color: transparent;
+    background-color: #ffffff;
     border: 0;
 
     &:before,
