@@ -67,10 +67,12 @@ function setColorSchemeButtonImage(elm, schemeName) {
     console.log("setColorSchemeButtonImage() scheme.name:", scheme.name)
     if (schemeName == "colorSchemeCayman") {
         elm.src = imageColorSchemeDark
+        elm.srcset = imageColorSchemeDark
         elm.title = "Switch {{ site.title }} Website to color scheme Dark"
     }
     else {
         elm.src = imageColorSchemeCayman
+        elm.srcset = imageColorSchemeCayman
         elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
     }
 }
