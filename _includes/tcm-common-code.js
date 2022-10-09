@@ -57,6 +57,7 @@ var cspButtonClick = function() {
         currentColorScheme = "colorSchemeCayman"
         setColorScheme(colorSchemeCayman)
     }
+    localStorage.setItem("colorScheme", currentColorScheme)
     // Wait 400 ms for transition to finish then change image
     setTimeout(function(){
         setColorSchemeButtonImage(currentColorScheme)
