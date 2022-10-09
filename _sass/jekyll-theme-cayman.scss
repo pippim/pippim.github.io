@@ -252,8 +252,8 @@ a {
       color: var(--code-text-color);
       word-break: normal;
       white-space: pre;
-      // Oct 9/22 - Too Dark - background: transparent;
-      background: #ffffff;  // Use what would be Cayman Default
+      // Oct 9/22 background: transparent;
+      background-color: #ffffff;
       border: 0;
     }
   }
