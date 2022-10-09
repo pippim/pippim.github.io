@@ -82,9 +82,9 @@ var colorSchemeDark = {
 
 var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
 var imageColorSchemeCayman =
-        "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
+        "/assets/img/icons/color_scheme_cayman.png"
 var imageColorSchemeDark =
-        "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
+        "/assets/img/icons/color_scheme_dark.png"
 
 function getCurrentColors() {
     /*  Local storage key "colorScheme" contains our scheme name.

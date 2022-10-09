@@ -68,6 +68,8 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
 }
 
 function setColorSchemeButtonImage(schemeName) {
+    console.log("imageColorSchemeDark:", imageColorSchemeDark)
+    console.log("imageColorSchemeCayman:", imageColorSchemeCayman)
     for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
         var elm = cspButtonClasses[ndx]
         if (schemeName == "colorSchemeCayman") {
