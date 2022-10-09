@@ -40,22 +40,31 @@ Welcome to {{ site.title }}'s website.
 "Create and run timers for Laundry, Cooking, Workouts, etc.") 
 lets you create and run timers for:
 
+<div style="margin: 0 0 0 2rem;">
 - Doing Laundry
 - Cooking Food
 - Working Out
 - Limiting Computer time
+</div>
 
-A ***different kind*** of site search engine greets you. Others
-operate at an average speed of 2.5 MB/s (Megabytes per second)
-over the internet. This one runs at the speed of RAM; about
-19,200 MB/s!
+[Hyperlink Recipe Baker](https://pippim.github.io/programs/hyperlink.html 
+"Generate hyperlinks for markdown or HTML") 
+is an invaluable tool for those who write articles about
+the internet, technical documents or sales literature that
+reference other articles.
 
 [Convert](https://pippim.github.io/programs/stack.html 
 "Convert Stack Exchange Posts to Your Own Website") 
 your popular *Stack Exchange Posts* to **your own website** 
 with additional features like;
 Table of Contents, Section Navigation buttons, Copy code
-blocks to clipboard and Show summary statistics.
+blocks to clipboard and Show summary statistics. You can see
+the results by clicking the <kbd>✅ Answers</kbd> button above.
+
+A ***different kind*** of site search engine greets you. Others
+operate at an average speed of 2.5 MB/s (Megabytes per second)
+over the internet. This one runs at the speed of RAM; about
+19,200 MB/s!
 
 There are **no ads** on {{ site.title }}. You can't buy
 {{ site.title }} a coffee. No third party websites are used
