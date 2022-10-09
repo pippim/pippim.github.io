@@ -75,11 +75,13 @@ function setColorSchemeButtonImage(schemeName) {
         if (schemeName == "colorSchemeCayman") {
             //elm.src = imageColorSchemeDark
             elm.setAttribute('src', imageColorSchemeDark)
+            elm.style.backgroundImage = "url('" + imageColorSchemeDark + "')"
             elm.title = "Switch {{ site.title }} Website to color scheme Dark"
         }
         else {
             //elm.src = imageColorSchemeCayman
             elm.setAttribute('src', imageColorSchemeCayman)
+            elm.style.backgroundImage = "url('" + imageColorSchemeCayman + "')"
             elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
         }
         // https://stackoverflow.com/a/47814427/6929343
