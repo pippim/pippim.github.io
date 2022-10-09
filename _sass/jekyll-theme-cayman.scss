@@ -252,7 +252,7 @@ a {
       color: var(--code-text-color);
       word-break: normal;
       white-space: pre;
-      background: transparent;
+      background-color: transparent;  // Oct 9/22 was 'background:'
       border: 0;
     }
   }
