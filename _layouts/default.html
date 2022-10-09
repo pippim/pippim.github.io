@@ -14,13 +14,9 @@
     <script type="text/javascript" src="/assets/js/setRootColors.js"></script>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <!--  Comment out Feb 5/22   <link rel="stylesheet" href="/assets/css/syntax.scss">   -->
-
     {% include head-custom.html %}
-
     <!-- javascript for TCM -->
-    <script type="module" src="/assets/js/theCookieMachine.js" ></script>
-
-    <!--  <link rel="shortcut icon" type="image/jpg" href="/assets/img/earth-from-space.jpg"> -->
+    <script type="module" src="/assets/js/theCookieMachine.js"></script>
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
   </head>
   <body id="body">
@@ -29,6 +25,12 @@
       <!-- <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
 
       <div id="page-header-buttons">
+        <!-- Color Scheme Picker Button -->
+        <button class="color-scheme-button"
+          title="Switch {{ site.title }} Website to Dark color scheme"
+          ><img src="{{ site.baseurl }}/assets/img/icons/color_scheme_dark.png"
+                alt="Color Scheme Picker" width="40" height="40">
+        </button>
         <a href="{{ site.baseurl }}/" class="page-header-button">⌂ Home</a>
         <a href="about.html" class="page-header-button">❓ About</a>
         <a href="answers.html" class="page-header-button">✅ Answers</a>
@@ -46,6 +48,12 @@
 
       </div>
       <div id="page-header-hamburger">
+        <!-- Color Scheme Picker Button -->
+        <button class="color-scheme-button"
+          title="Switch {{ site.title }} Website to Dark color scheme"
+          ><img src="{{ site.baseurl }}/assets/img/icons/color_scheme_dark.png"
+                alt="Color Scheme Picker" width="40" height="40">
+        </button>
         <button id="page-header-dropdown" class="page-header-button"
           title="Navigation buttons"
           >&#x2630;
