@@ -68,17 +68,26 @@ var colorSchemeDark = {
     "--body-link-color": "#5eabf8",
     "--body-link-inverted-color": "#e19447",
     "--blockquote-text-color": "#819198",
-    "--code-bg-color": "#13161a",
-    "--code-text-color": "#b6b4b2",
+    "--code-bg-color": "#f3f6fa",
+    "--code-text-color": "#567482",
     "--border-color": "#4c4640",
     "--table-border-color": "#494b4c",
     "--hr-border-color": "#3f3031",
+    "--kbd-background-color": "#fafbfc",
+    "--kbd-border-color": "#c6cbd1",
+    "--kbd-border-bottom-color": "#959da5",
+    "--kbd-box-shadow-color": "#959da5",
+    "--kbd-color": "#444d56"
+}
+/* Oct 9/22 - Too dark of background, so switch to Cayman colors
+    "--code-bg-color": "#13161a",
+    "--code-text-color": "#b6b4b2",
     "--kbd-background-color": "#2a2b2c",
     "--kbd-border-color": "#c6cbd1",
     "--kbd-border-bottom-color": "#e5ede5",
     "--kbd-box-shadow-color": "#e5ede5",
     "--kbd-color": "#c4cdd6"
-}
+*/
 
 var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
 var imageColorSchemeCayman =
