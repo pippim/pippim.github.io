@@ -118,7 +118,7 @@ link to the original answer on Stack Exchange.
 #### GitHub Repos
 
 ![Inspector cat detective with magnifying glass](/assets/img/inspectocat.jpg){: 
-style="float: left" width="20%" "margin-right: 2rem"}
+style="float: left" width="20%" "margin-right: 2rem;"}
 
 For {{ site.title }} programs on GitHub Repos, you can go directly
 to the repository and post a new issue. Issues can be bug reports,
