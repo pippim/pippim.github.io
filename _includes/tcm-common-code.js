@@ -58,7 +58,7 @@ var cspButtonClick = function() {
         setColorSchemeButtonImage(this, newScheme)
     }, 400)
     //sleep(300)
-    //setColorSchemeButtonImage(this, newScheme)
+    setColorSchemeButtonImage(this, newScheme)
 }
 
 for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
@@ -69,8 +69,8 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
 
 function setColorSchemeButtonImage(elm, schemeName) {
     var scheme = window[schemeName]  // Get scheme object from name
-    console.log("setColorSchemeButtonImage() scheme.name:", scheme.name)
-    console.log("setColorSchemeButtonImage() BEFORE elm.src:", elm.src)
+    //console.log("setColorSchemeButtonImage() scheme.name:", scheme.name)
+    //console.log("setColorSchemeButtonImage() BEFORE elm.src:", elm.src)
     if (schemeName == "colorSchemeCayman") {
         elm.src = imageColorSchemeDark
         elm.src = "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
@@ -81,7 +81,7 @@ function setColorSchemeButtonImage(elm, schemeName) {
         elm.src = "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
         elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
     }
-    console.log("setColorSchemeButtonImage() AFTER elm.src:", elm.src)
+    //console.log("setColorSchemeButtonImage() AFTER elm.src:", elm.src)
 }
 
 /* TESTING */
