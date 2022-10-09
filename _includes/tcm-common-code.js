@@ -88,6 +88,8 @@ function setColorSchemeButtonImage(elm, schemeName) {
 //console.log(extractRootColors("colorSchemeCayman"))
 //console.log(extractRootColors("colorSchemeDark"))
 
+setColorScheme(colorSchemeCayman)
+
 if (environment == "Linux x86_64 Firefox 87") {
     // Set dark theme on development machine
     console.log("/_includes/getRootColors.js environment:", environment)
