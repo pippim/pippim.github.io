@@ -240,8 +240,8 @@ a {
     color: var(--code-text-color);
     word-wrap: normal;
     background-color: var(--code-bg-color);
-    border: solid 1px var(--border-color);
-    border-radius: 0.3rem;
+    border: solid 0.2rem var(--border-color);  // Oct 9/22 was 1px
+    border-radius: 1rem;  // Oct 9/22 was 0.3
     max-height: 400px;  /* Force scroll bar for big code blocks */
     overflow-y: auto;
 
