@@ -47,7 +47,7 @@ var cspButtonClasses = document.getElementsByClassName("color-scheme-button")
 
 var cspButtonClick = function() {
     // Color Scheme Picker button was clicked on one of page header <div>s
-    console.log("Page Header Color Scheme Picker clicked")
+    console.log("Page Header Color Scheme Picker clicked:", currentColorScheme)
     this.classList.toggle('rotate-button')  // Add/remove rotate image in button
     var newScheme
     if (currentColorScheme == "colorSchemeCayman") newScheme = "colorSchemeDark"
