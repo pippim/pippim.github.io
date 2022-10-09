@@ -88,16 +88,17 @@ The top of major sections contain navigation buttons to take you to other sectio
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr3">Skip</a></div>
 ## Get in Touch
 
-There are many ways of getting in touch with {{ site.title }}.
-The conventional way via email and on other websites. The direct
-method on Stack Exchange Answers or GitHub Repos.
+There are many ways to contact {{ site.title }}.
+The conventional way is via email. Another way is commenting
+on Stack Exchange Posts or GitHub Repos.
 
 ### The Conventional Way of Getting in Touch
 
 Get in touch with {{ site.title }} by sending an email.
 
 <!-- Change Pippim to your contact info below -->
-- [📧 Send an Email to Pippim 🔗](mailto:pippim.com@gmail.com "Send email to pippim.com@gmail.com 🔗")
+- [📧 Send an Email to Pippim 🔗](mailto:pippim.com@gmail.com
+"Send email to pippim.com@gmail.com 🔗")
 
 ### Leave a Comment / Question at The Source
 
@@ -108,7 +109,7 @@ specifying what your communication is referring to.
 #### Stack Exchange Answers (Ask Ubuntu)
 
 ![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: 
-style="float: left" height="20%" width="20%"}
+style="float: left; margin: 0 2rem 0 0;" width="20%" }
 
 You can leave a comment or question where the Stack Exchange
 answer appears. Each answer on this website here has a direct
