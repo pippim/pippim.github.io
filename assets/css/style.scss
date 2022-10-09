@@ -732,14 +732,16 @@ a.search-results:visited {
 
 /* Color Scheme Picker Button in page header */
 .color-scheme-button {
-    // The Cookie Machine HIDDEN button positioned after regular buttons
+    // button rotates when clicked see tcm-common-code.js
     display: inline-block;
     vertical-align: middle;
     position: absolute;
     left: 0;
     margin-left: .3rem;
-    background: transparent;
+    // background: transparent;
     border: none;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: transform 0.5s;
 
     @include large  { height: 44px; width: 44px; }
@@ -752,6 +754,7 @@ a.search-results:visited {
 }
 
 .rotate-button {
+    // Toggle this class on/off color-scheme-button when clicked
     transform: rotate(-180deg);
 }
 
