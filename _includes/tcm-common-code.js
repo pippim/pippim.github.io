@@ -58,49 +58,29 @@ var cspButtonClick = function() {
         setColorScheme(colorSchemeCayman)
     }
     // Wait 400 ms for transition to finish then change image
-    /* Lagging screen
     setTimeout(function(){
-        setColorSchemeButtonImage(this, currentColorScheme)
-    }, 400)
-    */
+        setColorSchemeButtonImage(currentColorScheme)
+    }, 300)
 }
 
 for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
     cspButtonClasses[ndx].addEventListener('click', cspButtonClick, false)
-    // Above add listener. Below set appropriate icon image source & title
-    // However cannot set scheme until after DOM loaded...
 }
 
-function setColorSchemeButtonImage(elm, schemeName) {
-    var scheme = window[schemeName]  // Get scheme object from name
-    //console.log("setColorSchemeButtonImage() scheme.name:", scheme.name)
-    //console.log("setColorSchemeButtonImage() BEFORE elm.src:", elm.src)
+function setColorSchemeButtonImage(schemeName) {
     for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
-        var elem = cspButtonClasses[ndx]
+        var elm = cspButtonClasses[ndx]
         if (schemeName == "colorSchemeCayman") {
-            elem.src = imageColorSchemeDark
-            elem.src = "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
-            elem.title = "Switch {{ site.title }} Website to color scheme Dark"
+            elm.src = imageColorSchemeDark
+            elm.src = "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
+            elm.title = "Switch {{ site.title }} Website to color scheme Dark"
         }
         else {
-            elem.src = imageColorSchemeCayman
-            elem.src = "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
-            elem.title = "Switch {{ site.title }} Website to color scheme Cayman"
+            elm.src = imageColorSchemeCayman
+            elm.src = "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
+            elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
         }
     }
-    /* Old not working
-    if (schemeName == "colorSchemeCayman") {
-        elm.src = imageColorSchemeDark
-        elm.src = "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
-        elm.title = "Switch {{ site.title }} Website to color scheme Dark"
-    }
-    else {
-        elm.src = imageColorSchemeCayman
-        elm.src = "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
-        elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
-    }
-    */
-    //console.log("setColorSchemeButtonImage() AFTER elm.src:", elm.src)
 }
 
 /* TESTING */
