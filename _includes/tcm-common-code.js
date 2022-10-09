@@ -53,10 +53,10 @@ var cspButtonClick = function() {
     if (currentColorScheme == "colorSchemeCayman") newScheme = "colorSchemeDark"
     else newScheme = "colorSchemeCayman"
     currentColorScheme = newScheme  // Temporary until setColorScheme() called.
-    // Wait 300 ms for transition to finish
+    // Wait 400 ms for transition to finish
     setTimeout(function(){
         setColorSchemeButtonImage(this, newScheme)
-    }, 300)
+    }, 400)
     //sleep(300)
     //setColorSchemeButtonImage(this, newScheme)
 }
