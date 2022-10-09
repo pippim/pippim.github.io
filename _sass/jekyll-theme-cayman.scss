@@ -53,8 +53,6 @@ body {
     left: 10px;
     height: auto;
     width: auto;
-    // invert is a sass function that doesn't support var(--value)
-    // #skip-to-content is not used in Pippim Website
     background: var(--body-link-inverted-color);
     outline: thick solid var(--body-link-inverted-color);
   }
@@ -288,8 +286,7 @@ a {
 
     line-height: inherit;
     word-wrap: normal;
-    // Oct 9/22 Fix code blocks // background-color: transparent;
-    background-color: #ffffff;
+    background-color: transparent;
     border: 0;
 
     &:before,
