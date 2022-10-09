@@ -49,16 +49,18 @@ var cspButtonClick = function() {
     // Color Scheme Picker button was clicked on one of page header <div>s
     console.log("Page Header Color Scheme Picker clicked:", currentColorScheme)
     this.classList.toggle('rotate-button')  // Add/remove rotate image in button
-    var newScheme
-    if (currentColorScheme == "colorSchemeCayman") newScheme = "colorSchemeDark"
-    else newScheme = "colorSchemeCayman"
-    currentColorScheme = newScheme  // Temporary until setColorScheme() called.
-    // Wait 400 ms for transition to finish
+    if (currentColorScheme == "colorSchemeCayman") {
+        currentColorScheme = "colorSchemeDark"
+        setColorScheme(colorSchemeDark)
+    }
+    else {
+        currentColorScheme = "colorSchemeCayman"
+        setColorScheme(colorSchemeCayman)
+    }
+    // Wait 400 ms for transition to finish then change image
     setTimeout(function(){
-        setColorSchemeButtonImage(this, newScheme)
+        setColorSchemeButtonImage(this, currentColorScheme)
     }, 400)
-    //sleep(300)
-    setColorSchemeButtonImage(this, newScheme)
 }
 
 for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
@@ -71,6 +73,20 @@ function setColorSchemeButtonImage(elm, schemeName) {
     var scheme = window[schemeName]  // Get scheme object from name
     //console.log("setColorSchemeButtonImage() scheme.name:", scheme.name)
     //console.log("setColorSchemeButtonImage() BEFORE elm.src:", elm.src)
+    for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
+        var elem = cspButtonClasses[ndx]
+        if (schemeName == "colorSchemeCayman") {
+            elem.src = imageColorSchemeDark
+            elem.src = "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
+            elem.title = "Switch {{ site.title }} Website to color scheme Dark"
+        }
+        else {
+            elem.src = imageColorSchemeCayman
+            elem.src = "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
+            elem.title = "Switch {{ site.title }} Website to color scheme Cayman"
+        }
+    }
+    /* Old not working
     if (schemeName == "colorSchemeCayman") {
         elm.src = imageColorSchemeDark
         elm.src = "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
@@ -81,6 +97,7 @@ function setColorSchemeButtonImage(elm, schemeName) {
         elm.src = "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
         elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
     }
+    */
     //console.log("setColorSchemeButtonImage() AFTER elm.src:", elm.src)
 }
 
@@ -88,7 +105,7 @@ function setColorSchemeButtonImage(elm, schemeName) {
 //console.log(extractRootColors("colorSchemeCayman"))
 //console.log(extractRootColors("colorSchemeDark"))
 
-/* Strange doesn't work when called earlier in setRootColors.js */
+/* Only black & white when called earlier in setRootColors.js */
 if (currentColorScheme == "colorSchemeCayman")
     setColorScheme(colorSchemeCayman)
 else
