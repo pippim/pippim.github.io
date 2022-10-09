@@ -88,13 +88,11 @@ function setColorSchemeButtonImage(schemeName) {
 //console.log(extractRootColors("colorSchemeCayman"))
 //console.log(extractRootColors("colorSchemeDark"))
 
-/* Only black & white when called earlier in setRootColors.js
+/* Only black & white when called earlier in setRootColors.js */
 if (currentColorScheme == "colorSchemeCayman")
     setColorScheme(colorSchemeCayman)
 else
     setColorScheme(colorSchemeDark)
-CHECK IF MISSING var WAS REASON FOR NOT WORKING
-*/
 
 if (environment == "Linux x86_64 Firefox 87") {
     // Set dark theme on development machine
