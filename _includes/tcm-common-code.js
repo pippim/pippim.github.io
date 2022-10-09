@@ -65,16 +65,16 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
 function setColorSchemeButtonImage(elm, schemeName) {
     var scheme = window[schemeName]  // Get scheme object from name
     console.log("setColorSchemeButtonImage() scheme.name:", scheme.name)
+    console.log("setColorSchemeButtonImage() BEFORE elm.src:", elm.src)
     if (schemeName == "colorSchemeCayman") {
         elm.src = imageColorSchemeDark
-        elm.srcset = imageColorSchemeDark
         elm.title = "Switch {{ site.title }} Website to color scheme Dark"
     }
     else {
         elm.src = imageColorSchemeCayman
-        elm.srcset = imageColorSchemeCayman
         elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
     }
+    console.log("setColorSchemeButtonImage() AFTER elm.src:", elm.src)
 }
 
 /* TESTING */
