@@ -1262,7 +1262,7 @@ function setRunWindow(html) {
 
     /* Below copied from setRootColors.js */
     {% include getRootColors.js %}
-    function applyRootColors() {
+    function applyPopupColors() {
         // Your CSS as text: https://stackoverflow.com/a/707580/6929343
         // root colors: Cayman green, Cayman blue, Honeydew
         // name-column fluctuates based on currentTable and scrSetSize
@@ -1273,9 +1273,9 @@ function setRunWindow(html) {
         rootStyleSheet = runWindow.document.createElement("style")
         rootStyleSheet.innerText = styles
         runWindow.document.head.appendChild(rootStyleSheet)
-
+        console.log("styles:", styles)
     }  // End of applyRootStyles()
-    applyRootColors()
+    applyPopupColors()
 
     // Create parent <div>
     var div = runWindow.document.createElement("div")
