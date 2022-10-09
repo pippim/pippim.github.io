@@ -71,11 +71,13 @@ function setColorSchemeButtonImage(schemeName) {
     for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
         var elm = cspButtonClasses[ndx]
         if (schemeName == "colorSchemeCayman") {
-            elm.src = imageColorSchemeDark
+            //elm.src = imageColorSchemeDark
+            elm.setAttribute('src', imageColorSchemeDark)
             elm.title = "Switch {{ site.title }} Website to color scheme Dark"
         }
         else {
-            elm.src = imageColorSchemeCayman
+            //elm.src = imageColorSchemeCayman
+            elm.setAttribute('src', imageColorSchemeCayman)
             elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
         }
     }
