@@ -34,17 +34,25 @@ layout: default
 
 # Introduction
 
-Welcome to {{ site.title }}'s website.
+Welcome to {{ site.title }}'s website powered by GitHub.
 
 [Tim-ta](https://pippim.github.io/programs/tim-ta.html 
 "Create and run timers for Laundry, Cooking, Workouts, etc.") 
 lets you create and run timers for:
 
-<div style="margin: 0 0 0 2rem;">
+<-- Image next to bullets suck the bullets into image
 - Doing Laundry
 - Cooking Food
 - Working Out
 - Limiting Computer time
+-->
+<div style="margin: 0 0 0 2rem;">
+   <ul>
+      <li> Doing Laundry </li>
+      <li> Cooking Food </li>
+      <li> Working Out </li>
+      <li> Limiting Computer time </li>
+   </ul>
 </div>
 
 [Hyperlink Recipe Baker](https://pippim.github.io/programs/hyperlink.html 
