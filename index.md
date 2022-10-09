@@ -3,6 +3,24 @@ title: Welcome to Pippim
 layout: default
 ---
 
+<!-- TODO:
+
+   Turn into promotion:
+
+      Slide show with pop up points:
+
+         Day / Night mode            
+         Tim-Ta (Dancing alarm clocks - Wash DONE!, Rinse DONE!, Dryer DONE!
+         Copy Code to clipboard button
+         Super-Slim Super-Fast Search
+         Long Document Section Navigation
+         Hyperlink Recipe Baker
+         Convert external website to your own brand website
+         Bash can do GUI - Multi-Timer
+
+-->
+
+
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr6">ToC</a>  <a href="#hdr2">Skip</a></div>
@@ -89,7 +107,8 @@ specifying what your communication is referring to.
 
 #### Stack Exchange Answers (Ask Ubuntu)
 
-![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: style="float: left" height="20%" width="20%"}
+![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: 
+style="float: left" height="20%" width="20%"}
 
 You can leave a comment or question where the Stack Exchange
 answer appears. Each answer on this website here has a direct
@@ -98,7 +117,8 @@ link to the original answer on Stack Exchange.
 
 #### GitHub Repos
 
-![Inspector cat detective with magnifying glass](/assets/img/inspectocat.jpg){: style="float: left" width="20%"}
+![Inspector cat detective with magnifying glass](/assets/img/inspectocat.jpg){: 
+style="float: left" width="20%" "margin-right: 2rem"}
 
 For {{ site.title }} programs on GitHub Repos, you can go directly
 to the repository and post a new issue. Issues can be bug reports,
@@ -363,8 +383,10 @@ for {{ site.title }} on GitHub Pages looked like this:
 {% include website_tree.txt %}
 {% endhighlight %}
 </div>
-<style> #line_draw.highlight pre, pre { line-height: 1 ! important; } </style>
-<style>.highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } </style>
+<style> 
+#line_draw.highlight pre, pre { line-height: 1 ! important; }
+.highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } 
+</style>
 
 
 **NOTE:** The `_posts` directory contains {{ site.post_count }} posts
