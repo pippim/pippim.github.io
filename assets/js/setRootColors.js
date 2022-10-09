@@ -14,7 +14,7 @@ function applyRootColors() {
     styles += getCurrentColors()
     styles += '}\n'
 
-    rootStyleSheet = document.createElement("style")
+    var rootStyleSheet = document.createElement("style")
     rootStyleSheet.innerText = styles
     document.head.appendChild(rootStyleSheet)
 
