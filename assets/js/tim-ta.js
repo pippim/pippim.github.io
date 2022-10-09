@@ -1270,13 +1270,18 @@ function setRunWindow(html) {
         styles += getCurrentColors()
         styles += '}\n'
 
-        rootStyleSheet = runWindow.document.createElement("style")
+        var rootStyleSheet = runWindow.document.createElement("style")
         rootStyleSheet.innerText = styles
         runWindow.document.head.appendChild(rootStyleSheet)
-        console.log("styles:", styles)
+        // console.log("styles:", styles)
     }  // End of applyRootStyles()
     applyPopupColors()
-
+    /* Only black & white when called in applyPopupColors.js
+    if (currentColorScheme == "colorSchemeCayman")
+        setColorScheme(colorSchemeCayman)
+    else
+        setColorScheme(colorSchemeDark)
+    */
     // Create parent <div>
     var div = runWindow.document.createElement("div")
     div.id = "ttaRunWindowId"

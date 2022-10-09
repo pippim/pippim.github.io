@@ -2,7 +2,7 @@
 ---
 // /assets/js/setRootColors - Set Root Colors before /asset/css/style.scss
 
-console.log("Start of /_layouts/test.html")
+// console.log("Start of /_layouts/test.html")
 // Color Schemes - getRootColors.js for descriptions
 {% include getRootColors.js %}
 
