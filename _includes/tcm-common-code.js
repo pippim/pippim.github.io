@@ -82,6 +82,8 @@ function setColorSchemeButtonImage(schemeName) {
             elm.setAttribute('src', imageColorSchemeCayman)
             elm.title = "Switch {{ site.title }} Website to color scheme Cayman"
         }
+        // https://stackoverflow.com/a/47814427/6929343
+        elm.hide().show(0)
     }
 }
 
