@@ -1254,9 +1254,14 @@ function setRunWindow(html) {
     //runWindow.focus()
     runWindow.document.title = "Tim-ta run project " + ttaProject.project_name
 
+
+    var link = runWindow.document.createElement('link')
+    link.rel = "stylesheet"
+    link.href = '{{ site.url }}/assets/css/style.css'
+    runWindow.document.head.appendChild(link)  // define class shake-image
+
     /* Below copied from setRootColors.js */
     {% include getRootColors.js %}
-
     function applyRootColors() {
         // Your CSS as text: https://stackoverflow.com/a/707580/6929343
         // root colors: Cayman green, Cayman blue, Honeydew
@@ -1270,13 +1275,7 @@ function setRunWindow(html) {
         runWindow.document.head.appendChild(rootStyleSheet)
 
     }  // End of applyRootStyles()
-
     applyRootColors()
-
-    var link = runWindow.document.createElement('link')
-    link.rel = "stylesheet"
-    link.href = '{{ site.url }}/assets/css/style.css'
-    runWindow.document.head.appendChild(link)  // define class shake-image
 
     // Create parent <div>
     var div = runWindow.document.createElement("div")
