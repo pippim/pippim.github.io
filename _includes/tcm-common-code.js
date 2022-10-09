@@ -58,9 +58,11 @@ var cspButtonClick = function() {
         setColorScheme(colorSchemeCayman)
     }
     // Wait 400 ms for transition to finish then change image
+    /* Lagging screen
     setTimeout(function(){
         setColorSchemeButtonImage(this, currentColorScheme)
     }, 400)
+    */
 }
 
 for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
