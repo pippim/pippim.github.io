@@ -106,7 +106,7 @@ function extractRootColors(schemeName) {
     console.log("/assets/js/setRootColors.js color scheme:", scheme.name)
     for (const key of Object.keys(scheme)) {
         if (!(key.startsWith("--"))) continue  // Ignore "name"
-        root += margin + scheme[key]
+        root += margin + key + ": " + scheme[key] + ";\n"
     }
     return root
 }
