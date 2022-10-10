@@ -4,6 +4,8 @@
 
 {% include draggable-window.js %}
 
+{% include getRootColors.js %}
+/*
 // Color Schemes - style.scss for descriptions
 var colorSchemeCayman = {
     "--nav-button-bg-color": "#F0FFF0",
@@ -95,6 +97,7 @@ function setColorCode(scheme, key) {
     if (value === null) return
     rootElm.style.setProperty(key, value);
 }
+*/
 
 // Test if tcm-common-code.js variable is visible:
 //console.log("var objTcmVisById:", objTcmVisById)
