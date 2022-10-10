@@ -45,7 +45,6 @@ lets you create and run timers for:
 - Cooking Food
 - Working Out
 - Limiting Computer time
--->
 <div style="left: 2rem;">
    <ul>
       <li> Doing Laundry </li>
@@ -54,6 +53,13 @@ lets you create and run timers for:
       <li> Limiting Computer time </li>
    </ul>
 </div>
+-->
+
+&emsp; ◆ Doing Laundry
+&emsp; ◆ Cooking Food
+&emsp; ◆ Working Out
+&emsp; ◆ Limiting Computer time
+
 
 [Hyperlink Recipe Baker](https://pippim.github.io/programs/hyperlink.html 
 "Generate hyperlinks for markdown or HTML") 
