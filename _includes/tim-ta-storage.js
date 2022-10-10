@@ -222,7 +222,6 @@ if (ttaConfig == null) {
 
 function readConfig() {
     ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
-    console.log("browser:", browser)
     if ("use_popup_window" in ttaConfig) return  // At version 1.1 already
 
     /* Upgrade version 1.0 to version 1.1 */
@@ -235,11 +234,11 @@ function saveConfig() {
 
 /* Convert earlier versions of Tim-ta configuration to new version */
 function convertVersion11() {
-    /*  Conversion for version 1.1  */
+    /*  Conversion to Tim-ta Version 1.1  */
     if ("use_popup_window" in ttaConfig) return  // At version 1.1 already
 
     console.log("Converting Tim-ta version 1.0 to version 1.1")
-    // const browser = getBrowser()
+    // const browser = getBrowser()  // Oct 10/22 - Duplicate definition
     ttaConfig.environment = navigator.oscpu + " " + browser.name + " " +
                             browser.version
     ttaConfig.color_scheme = "Cayman Theme"
@@ -273,7 +272,7 @@ function setDefaultPopupWindow () {
     ttaProject.popup_size_h = "400"
 }
 
-/*
+/* Oct 10/22 - Duplicate definition
 function getBrowser() {
     // From: https://stackoverflow.com/a/16938481/6929343
     var ua = navigator.userAgent, tem
