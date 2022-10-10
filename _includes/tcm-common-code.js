@@ -6,7 +6,7 @@
 */
 
 // Color Schemes - getRootColors.js for local storage current scheme
-{ % include getRootColors.js %}  // Already imported at top of _layout
+// { % include getRootColors.js %}  // Already imported at top of _layout
 
 /* June 9/2022 - setCookie() and getCookie() in theCookieJar.js */
 function setCookie(cname, value, exp_days) {
