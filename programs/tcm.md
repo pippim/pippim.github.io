@@ -579,7 +579,9 @@ Currently there are two stock color schemes:
 
 Click the icon to switch color scheme:
 
+<div>
 <button class="color-scheme-button" ></button>
+</div>
 
 Eventually you will be able to copy a color scheme and modify it.
 Then you can save the color scheme and send it to others or send
