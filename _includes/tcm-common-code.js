@@ -6,7 +6,9 @@
 */
 
 // Color Schemes - getRootColors.js for local storage current scheme
-{% include getRootColors.js %}  // Already imported at top of _layout
+// { % include getRootColors.js %}  // Breaks tcm.md window displays
+// Oct 10/22 commented out above and colorScheme went undefined for 20 minutes
+// At that period everyone will need to delete localStorage.colorScheme
 
 /* June 9/2022 - setCookie() and getCookie() in theCookieJar.js */
 function setCookie(cname, value, exp_days) {
