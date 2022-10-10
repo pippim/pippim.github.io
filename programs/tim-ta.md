@@ -59,7 +59,7 @@ your own project(s), you can delete the sample project.
 
 <div id="drop-area">
     <form class="my-form">
-        <p>Upload Tim-ta JSON files with the file dialog or by dragging and dropping files onto the dashed region</p>
+        <p>Upload sound files with the file dialog ("Select some files") or by dragging and dropping files onto the dashed region</p>
         <input type="file" id="fileElem" multiple accept="audio/*" onchange="handleFiles(this.files)">
         <label class="page-header-button" for="fileElem">Select some files</label>
     </form>
@@ -149,8 +149,9 @@ These are Tim-ta stock sound files you can use when a timer task ends:
 
 # Download Tim-ta Configuration
 
-Download your TIm-ta Configuration from Local Storage to back it up.
-You can also send the download to another device or browser.
+Download your TIm-ta Configuration from your browser's Local Storage.
+You can send the download to another device or browser. You can attach
+the file to an email message to yourself to serve as a backup.
 
 <button id="download-config-button" class="page-header-button" 
         title="Download Settings, Projects and Tasks"  
@@ -175,8 +176,8 @@ will be updated.
 
 <div id="config-drop-area">
     <form class="my-form">
-        <p>Upload multiple files with the file dialog or by dragging
-            and dropping files onto the dashed region</p>
+        <p>Upload Tim-ta JSON files with the file dialog ("Select some files")
+            or by dragging and dropping files onto the dashed region</p>
         <input type="file" id="configFileElem" multiple accept="application/json"
             onchange="configHandleFiles(this.files)">
         <label class="page-header-button" for="configFileElem">Select some files</label>
@@ -209,8 +210,8 @@ will be updated.
 %}
 <style>
 .img-class {
-   background-color: #159957;  /* For Cayman (don't use //) */
-   background-image: linear-gradient(120deg, #155799, #159957)
+   background-color: var(--header-bg-color);
+   background-image: linear-gradient(120deg, var(--header-bg-color-secondary), var(--header-bg-color));
 }
 </style>
 
