@@ -55,10 +55,10 @@ lets you create and run timers for:
 </div>
 -->
 
-&emsp; ◆ Doing Laundry<br>
-&emsp; ◆ Cooking Food<br>
-&emsp; ◆ Working Out<br>
-&emsp; ◆ Limiting Computer time<br>
+&ensp; ◆ &ensp; Doing Laundry<br>
+&ensp; ◆ &ensp; Cooking Food<br>
+&ensp; ◆ &ensp; Working Out<br>
+&ensp; ◆ &ensp; Limiting Computer time<br>
 
 Pick from stock alarm sounds or upload your own alarm sounds.
 Backup your ***Tim-ta*** projects and transfer them to other
