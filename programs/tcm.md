@@ -7,6 +7,16 @@ layout: program
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
+<script>
+
+/* include tcm-common-code.js code shared by:
+    /assets/js/theCookieMachine.js - Draggable Modal Dialog
+    /tcm.md - The Cookie Machine documentation webpage
+*/
+{% include tcm-common-code.js %}
+
+</script>
+
 # Introduction
 
 {% include image.html src="/assets/img/tcm/TCM Header with Gingerbread Man.png"
