@@ -683,11 +683,6 @@ function calcBgColorCode(colorCode) {
     if (colorRgbArr.length != 3) {alert("calcBgColorCode()"); return "#808080";}
     var high = 0  // If two or more above 80 return black
     for (var i = 0; i < 2; i++) if (colorRgbArr[i] > "80") high++
-    /*
-    if (colorRgbArr[0] > "80") high++
-    if (colorRgbArr[1] > "80") high++
-    if (colorRgbArr[2] > "80") high++
-    */
     if (high > 1) return "#000000"
              else return "#ffffff"
 }
