@@ -4,7 +4,6 @@
 
 {% include draggable-window.js %}
 
-{% include getRootColors.js %}
 /*
 // Color Schemes - style.scss for descriptions
 var colorSchemeCayman = {
