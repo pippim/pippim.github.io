@@ -27,6 +27,7 @@
 │   │   ├── hyperlinkRecipe.js
 │   │   ├── post_fm.js
 │   │   ├── search.js
+│   │   ├── setRootColors.js
 │   │   ├── sound.js
 │   │   ├── theCookieJar.js
 │   │   ├── theCookieMachine.js
@@ -51,7 +52,9 @@
 │       ├── mixkit-slot-machine-win-alarm-1995.mp3
 │       └── mixkit-street-public-alarm-997.mp3
 ├── _includes
+│   ├── color-scheme-button.html
 │   ├── draggable-window.js
+│   ├── getRootColors.js
 │   ├── head-custom.html
 │   ├── image.html
 │   ├── posts_by_tag.html
@@ -67,6 +70,7 @@
 ├── _layouts
 │   ├── default.html
 │   ├── hrb.html
+│   ├── page.html
 │   ├── post.html
 │   ├── program.html
 │   └── test.html
@@ -121,4 +125,4 @@
 ├── programs.md
 └── test.md
 
-26 directories, 96 files
+26 directories, 100 files
