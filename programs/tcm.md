@@ -180,7 +180,7 @@ to get more details.
 -->
 
 <style>
-  #tcm_window_table table { table-layout: fixed; width: 100%; border: 3px solid black; }
+  #tcm_window_table table { table-layout: fixed; width: 100%; border: 3px solid var(--hr-border-color); }
   #tcm_window_table table tr th:nth-child(1){ width: 10rem; }
   #tcm_window_table td { padding: 0 1rem; }
   #tcm_window_table td+td { width: auto; }
@@ -251,13 +251,11 @@ lines which are not displayed in the window.
 
 The Home Button window contents are displayed below:
 
-
-
 <div id="tcm_home"></div>
 
 <style>
 #tcm_home {
-   border: 3px solid grey;
+   border: 3px solid var(--hr-border-color);
    margin-left: 1em;
    padding: .5rem;
 }
@@ -304,7 +302,7 @@ The {{ site.title }} website tree is displayed below:
 
 <style>
 #tcm_website_tree {
-   border: 3px solid grey;
+   border: 3px solid var(--hr-border-color);
    margin-left: 1em;
    padding: .5rem;
    max-height: 90vh;
@@ -370,7 +368,6 @@ refreshed from the {{ site.title }} Website. When a refresh
 occurs, a couple seconds of delay will occur on the first
 webpage read.
 
-
 <div id="tcm_doc_local_storage"></div>
 
 > **NOTE:** Click the Name heading to sort rows
@@ -386,7 +383,7 @@ windows at appropriate screen locations.
 #tcm_doc_switches, #tcm_doc_search_stats, 
 #tcm_doc_local_storage, #tcm_doc_screen_info {
    max-width: 30rem;
-   border: 3px solid grey;
+   border: 3px solid var(--hr-border-color);
    margin-left: 1em;
    padding: .5rem;
 }
@@ -395,7 +392,7 @@ windows at appropriate screen locations.
 document.getElementById("tcm_doc_switches").innerHTML = htmlVisibilitySwitches()
 document.getElementById("tcm_doc_search_stats").innerHTML = htmlSearchStats()
 document.getElementById("tcm_doc_local_storage").innerHTML = htmlLocalStorage()
-table_sort()  // support supporting by local storage name key by clicking heading
+table_sort()  // sort local storage name key by clicking heading
 document.getElementById("tcm_doc_screen_info").innerHTML = htmlScreenInfo()
 
 tcmButtonVisibility()  // Live processing of on/off switches
@@ -493,7 +490,7 @@ on MDN.
 
 <style>
 #tcm_doc_webpage, #tcm_doc_window_info, #tcm_doc_navigator_info {
-   border: 3px solid grey;
+   border: 3px solid var(--hr-border-color);
    margin-left: 1em;
    padding: .5rem;
 }
@@ -535,15 +532,17 @@ document.getElementById("tcm_doc_navigator_info").innerHTML = htmlNavigatorInfo(
 The ***Cookie Jar*** Button allows you to see, download/export,
 upload/import, create and delete Cookies.
 
-The Cookie Jar wsa created because Cookies, Session Storage,
+The Cookie Jar was created because Cookies, Session Storage,
 Local Storage and Indexed DB are tightly controlled by
-Web Browsers.
+Web Browsers. Web Browsers do not provide any means of
+transferring data in Cookies, Session Storage or Local Storage.
 
-You can use the Cookie Jar to:
+You can use the Cookie Jar for transferring data to:
 
-- Transfer cookies to another Web Browser
-- Transfer cookies to another Device
-- Transfer cookies to another User
+- Another Web Browser
+- Another Device
+- Another User
+- Backup file for disaster recovery purposes
 
 Although the Cookie Jar can be set to the conventional
 folder name `Donwloads`, a separate folder can be used.
@@ -585,7 +584,7 @@ it to yourself on another device.
 <style>
 #tcm_doc_color_scheme_picker {
    max-width: 30rem;
-   border: 3px solid blue;
+   border: 3px solid var(--hr-border-color);
    background-color: var(--nav-button-bg-color);
    margin-left: 1em;
    padding: .5rem;
@@ -602,8 +601,8 @@ document.getElementById("tcm_doc_color_scheme_picker").innerHTML = htmlColorSche
 
 # Future Plans
 
-A web version where you can run Multi-Timer on any web browser on any
-platform anywhere in the world.
+Create your own color schemes and share them with other users around the world
+or share them with your other devices and browsers.
 
 ---
 
