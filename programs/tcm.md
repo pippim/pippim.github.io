@@ -13,8 +13,8 @@ layout: program
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
 */
+alert("include tcm-common-code.js %} loaded next. Check console.log")
 {% include tcm-common-code.js %}
-alert("include tcm-common-code.js %} loaded. Check console.log")
 </script>
 
 # Introduction
