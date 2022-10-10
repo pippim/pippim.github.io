@@ -55,11 +55,15 @@ lets you create and run timers for:
 </div>
 -->
 
-&emsp; ◆ Doing Laundry
-&emsp; ◆ Cooking Food
-&emsp; ◆ Working Out
-&emsp; ◆ Limiting Computer time
+&emsp; ◆ Doing Laundry<br>
+&emsp; ◆ Cooking Food<br>
+&emsp; ◆ Working Out<br>
+&emsp; ◆ Limiting Computer time<br>
 
+Pick from stock alarm sounds or upload your own alarm sounds.
+Backup your ***Tim-ta*** projects and transfer them to other
+browsers, other devices or other users. Import projects from
+other Users or Devices.
 
 [Hyperlink Recipe Baker](https://pippim.github.io/programs/hyperlink.html 
 "Generate hyperlinks for markdown or HTML") 
