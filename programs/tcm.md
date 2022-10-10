@@ -577,10 +577,11 @@ Currently there are two stock color schemes:
 - Cayman Theme
 - Dark Theme
 
-Click the icon to switch color scheme:
+Click the icon on the far left of screen to switch color scheme:
 
 <div>
 <button class="color-scheme-button" ></button>
+<br><br><br>
 </div>
 
 Eventually you will be able to copy a color scheme and modify it.
