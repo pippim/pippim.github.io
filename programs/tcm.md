@@ -16,6 +16,8 @@ layout: program
 
 // alert("include tcm-common-code.js %} loaded next. Check console.log")
 // { % include getRootColors.js %}  // Causing redeclaration error
+// NOTE: Now rotate color-scheme-button isn't working?
+
 {% include tcm-common-code.js %}
 
 </script>
@@ -574,6 +576,10 @@ Currently there are two stock color schemes:
 
 - Cayman Theme
 - Dark Theme
+
+Click the icon to switch color scheme:
+
+<button class="color-scheme-button" ></button>
 
 Eventually you will be able to copy a color scheme and modify it.
 Then you can save the color scheme and send it to others or send
