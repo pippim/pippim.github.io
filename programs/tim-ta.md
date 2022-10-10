@@ -208,12 +208,6 @@ will be updated.
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
    caption="Tim-ta Under Construction.png"
 %}
-<style>
-.img-class {
-   background-color: var(--header-bg-color);
-   background-image: linear-gradient(120deg, var(--header-bg-color-secondary), var(--header-bg-color));
-}
-</style>
 
 # Work In Progress
 
