@@ -14,7 +14,7 @@ layout: program
     /tcm.md - The Cookie Machine documentation webpage
 */
 {% include tcm-common-code.js %}
-
+alert("include tcm-common-code.js %} loaded. Check console.log")
 </script>
 
 # Introduction
