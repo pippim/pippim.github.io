@@ -6,7 +6,7 @@
 */
 
 // Color Schemes - getRootColors.js for local storage current scheme
-{% include getRootColors.js %}
+{ % include getRootColors.js %}  // Already imported at top of _layout
 
 /* June 9/2022 - setCookie() and getCookie() in theCookieJar.js */
 function setCookie(cname, value, exp_days) {
@@ -677,7 +677,7 @@ function separateRgbColors(colorCode) {
 }
 
 function calcBgColorCode(colorCode) {
-    /*  Return black or white background depending on foreground
+    /*  Return black or white contrasting color depending on passed color
     */
     var colorRgbArr = separateRgbColors(colorCode)
     if (colorRgbArr.length != 3) {alert("calcBgColorCode()"); return "#808080";}
