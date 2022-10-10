@@ -18,6 +18,8 @@ import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
     local storage and then website.
 */
 
+{% include getRootColors.js %}  // Used by tcm-common-code.js
+
 {% include tcm-common-code.js %}
 
 {% include draggable-window.js %}
