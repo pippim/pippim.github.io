@@ -16,7 +16,7 @@ layout: program
 
 */
 alert("include tcm-common-code.js %} loaded next. Check console.log")
-{% include getRootColors.js %}
+// { % include getRootColors.js %}  // Causing redeclaration error
 {% include tcm-common-code.js %}
 </script>
 
