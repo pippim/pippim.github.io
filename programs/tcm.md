@@ -12,8 +12,11 @@ layout: program
 /* include tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
     /tcm.md - The Cookie Machine documentation webpage
+
+
 */
 alert("include tcm-common-code.js %} loaded next. Check console.log")
+{% include getRootColors.js %}
 {% include tcm-common-code.js %}
 </script>
 
