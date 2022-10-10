@@ -222,7 +222,7 @@ if (ttaConfig == null) {
 
 function readConfig() {
     ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
-
+    console.log("browser:", browser)
     if ("use_popup_window" in ttaConfig) return  // At version 1.1 already
 
     /* Upgrade version 1.0 to version 1.1 */
@@ -239,7 +239,7 @@ function convertVersion11() {
     if ("use_popup_window" in ttaConfig) return  // At version 1.1 already
 
     console.log("Converting Tim-ta version 1.0 to version 1.1")
-    const browser = getBrowser()
+    // const browser = getBrowser()
     ttaConfig.environment = navigator.oscpu + " " + browser.name + " " +
                             browser.version
     ttaConfig.color_scheme = "Cayman Theme"
@@ -273,6 +273,7 @@ function setDefaultPopupWindow () {
     ttaProject.popup_size_h = "400"
 }
 
+/*
 function getBrowser() {
     // From: https://stackoverflow.com/a/16938481/6929343
     var ua = navigator.userAgent, tem
@@ -292,6 +293,7 @@ function getBrowser() {
         version: M[1]
     }
  }
+*/
 
 // Uncomment below to erase corrupted configuration
 // ttaNewConfig();
@@ -343,5 +345,6 @@ function ttaTaskDuration(hours, minutes, seconds) {
     ttaTask.minutes = minutes
     ttaTask.seconds = seconds
 }
+
 
 /* End of /_includes/tim-ta-storage.js (Version 1.1) */
