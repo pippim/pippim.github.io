@@ -163,7 +163,8 @@ function htmlFrontMatter(results, name) {
             'position: sticky;\n' +
             'top: 0;\n' +
             'z-index: 1;\n' +
-            'background: #f1f1f1;\n' +
+            // 'background: #f1f1f1;\n' +  (Oct 10/22)
+            'background: var(--table-border-color);\n' +
             '}\n'
     html += '</style>'  // Was extra \n causing empty space at bottom?
     return html
@@ -327,7 +328,8 @@ objectTableStyleSheet.innerHTML = `
     position: sticky;
     top: 0;
     z-index: 1;
-    background: #f1f1f1;
+    /* background: #f1f1f1; Oct 10/22 */
+    background: var(--table-border-color);
 }
 `
 document.head.appendChild(objectTableStyleSheet)
