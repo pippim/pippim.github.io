@@ -244,6 +244,10 @@ with saved popup window locations and sizes in version 1.1.
 - Tim-ta conversion to version 1.1 is complete.
 - Development has begun on a dark theme for the popup window.
 
+### October 10, 2022 Update
+
+- Dark theme for entire {{ site.title }} website is complete.
+
 ## Tim-ta Version 1.0 Development History
 
 ### May 8, 2022 Update
@@ -480,9 +484,9 @@ the other working windows.
 In order to allow popup windows, go to Firefox settings:
 
 {% include image.html src="/assets/img/tim-ta/pippim website allow popups.png"
-   alt="Tim-ta Under Construction.png"
+   alt="Pippim website allow popups.png"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
-   caption="pippim website allow popups.png"
+   caption="Pippim website allow popups.png"
 %}
 
 Notice how popups are allowed for the `pippim.com` website. 
