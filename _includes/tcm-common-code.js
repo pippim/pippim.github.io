@@ -49,7 +49,6 @@ var cspButtonClasses = document.getElementsByClassName("color-scheme-button")
 
 var cspButtonClick = function() {
     // Color Scheme Picker button was clicked on one of page header <div>s
-    this.classList.toggle('rotate-button')  // Add/remove rotate image in button
     if (currentColorScheme == "colorSchemeCayman") {
         currentColorScheme = "colorSchemeDark"
         setColorScheme(colorSchemeDark)
@@ -60,9 +59,9 @@ var cspButtonClick = function() {
     }
     localStorage.setItem("colorScheme", currentColorScheme)
     // Wait 400 ms for transition to finish then change image
-    setTimeout(function(){
+    //setTimeout(function(){
         setColorSchemeButtonImage(currentColorScheme)
-    }, 300)
+    //}, 300)
 }
 
 for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
@@ -70,8 +69,10 @@ for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
 }
 
 function setColorSchemeButtonImage(schemeName) {
+    // Changing foreground image problematic. Use background image instead
     for (var ndx = 0; ndx < cspButtonClasses.length; ndx++) {
         var elm = cspButtonClasses[ndx]
+        elm.classList.toggle('rotate-button')  // Add/remove rotate image in button
         if (schemeName == "colorSchemeCayman") {
             elm.style.backgroundImage = "url('" + imageColorSchemeDark + "')"
             elm.title = "Switch {{ site.title }} Website to color scheme Dark"
