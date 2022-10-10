@@ -46,7 +46,7 @@ lets you create and run timers for:
 - Working Out
 - Limiting Computer time
 -->
-<div style="margin: 0 0 0 4rem;">
+<div style="left: 2rem;">
    <ul>
       <li> Doing Laundry </li>
       <li> Cooking Food </li>
