@@ -200,6 +200,7 @@ progress {
     /* Reset the default appearance */
     -webkit-appearance: none;
     appearance: none;
+    background-color: var(--progress-bar-bg-color);
 
     width: 6rem; /* mobile default width for chrome specifically */
     height: .8rem;
