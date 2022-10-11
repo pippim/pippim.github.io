@@ -12,18 +12,28 @@ of charge and free of Ads too!
 
 ## Tim-ta (Timed Tasks) App - Run Set of Alarms Consecutively
 
-{% include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
+<div id="alarm-clock-image">
+{% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
+   alt="Tim-ta Alarm Clock Image"
+   style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
+   caption="Move mouse here for alarm simulation"
+%}
+</div>
+
+<!--
+{ % include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
    alt="Tim-ta Introduction.png"
    style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
    caption="Tim-ta webpage header"
 %}
+-->
 
 **Runs in your browser!**
 
 Do you have a project with a fixed set of tasks and, each task 
 always takes the same amount of time?
 
-Then ***Tim-ta*** (**Tim**ed-**ta**sks) will help you get
+Then ***Tim-ta*** (**Tim**ed**-ta**sks) will help you get
 the job done with each task started at the exact second!
 
 <a href="programs/tim-ta.html" style="font-size: 20px;">Run</a> 
@@ -40,7 +50,7 @@ self-documenting app. &emsp;&emsp;
    caption="Hyperlink Recipe Baker Example"
 %}
 
-**Runs in your browser!**
+**HRB runs in your browser**
 
 Just click a few buttons to paste clipboard contents into the 
 *Hyperlink Recipe Baker*, or **HRB** for short, ingredient fields.
