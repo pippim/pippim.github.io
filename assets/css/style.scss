@@ -790,8 +790,16 @@ a.search-results:visited {
     }
 }
 
-/* Add class to an image to shake / wiggle it */
+/*  Shake alarm clock image on hover (tim-ta.md & programs.md)*/
+#alarm-clock-image:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
 
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+/* Add class to an image to shake / wiggle it */
 .shake-image {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 0.5s;
