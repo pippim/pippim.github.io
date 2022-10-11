@@ -749,7 +749,7 @@ a.search-results:visited {
     outline: none;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: transform 0.5s;
+    transition: transform 0.3s;
 
     @include large  { height: 44px; width: 44px; }
     @include medium { height: 36px; width: 36px; }
@@ -762,7 +762,7 @@ a.search-results:visited {
 
 .rotate-button {
     // Toggle this class on/off color-scheme-button when clicked
-    transform: rotate(-180deg);
+    transform: rotate(180deg);
 }
 
 /* Button in the MAIN window's header NOT in the tcm window! */
