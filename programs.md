@@ -15,15 +15,19 @@ of charge and free of Ads too!
 <div id="alarm-clock-image">
 {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
    alt="Tim-ta Alarm Clock Image"
-   style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
+   style="float: left; width: 50%; margin: 1rem 1rem 1rem;"
    caption="Move mouse here for alarm simulation"
 %}
 </div>
 
 **Runs in your browser!** - No programs to install or configure.
 
+---
+
 *<- Move mouse over image to see how alarm looks when it
 sounds.*
+
+---
 
 ### Introduction
 
