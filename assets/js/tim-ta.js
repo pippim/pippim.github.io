@@ -1050,13 +1050,16 @@ function paintRunTimers(i) {
     scrSetSize()  // get scrLarge setting (greater 1007 pixels wide)
     fRunWindowAsPopup = false  // Are we running windows as a popup?
     fTaskAndTimeInHeading = true  // Later on set this up in configuration
+    var value = getProjectValue("use_popup_window")
+
     if (!scrLarge) runWindow = window  // If no popup runWindow is our window
-    else if (ttaProject.use_popup_window == "false") runWindow = window
+    else if (value == "false") runWindow = window
+    /* get_dd */
     else fRunWindowAsPopup = true // Later we will set 'runWindow' variable
-    console.log("ttaProject.use_popup_window:", ttaProject.use_popup_window,
+    console.log("ttaProject.use_popup_window:", value,
                 "fRunWindowAsPopup:", fRunWindowAsPopup)
 
-/*
+/* From: https://www.w3schools.com/howto/howto_js_progressbar.asp
 #myProgress {
   width: 100%;
   background-color: grey;
