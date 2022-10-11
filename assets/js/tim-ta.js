@@ -15,6 +15,7 @@ function scrSetSize() {
     var win = getWin()  // Will be main webpage or popup window
     scrWidth = (win.innerWidth > 0) ? win.innerWidth : win.screen.width
     scrSmall = scrMedium = scrLarge = false
+
     if (scrWidth < 641) scrSmall = true
     else if (scrWidth > 1007) scrLarge = true
     else scrMedium = true
@@ -119,7 +120,6 @@ function ttaRunConfiguration (parentElm) {
 
     ttaApplyGlobalStyles();  // Styles for tta-table, tta-btn, .big-foot, etc.
 
-
     ttaProject = ttaConfig.objProjects[ttaConfig.arrProjects[0]];
     const cnt = ttaConfig.arrProjects.length;
     scrSetSize()  // Call on document load. Must also call when RunTimers is painted
@@ -128,7 +128,6 @@ function ttaRunConfiguration (parentElm) {
     // When no projects exist, create Sample Laundry Project
     if (cnt < 1) { ttaNewConfig(); paintTasksTable(); }
 }
-
 
 var ttaStyleSheet, styles
 // 'styles' is shared with ttaRunStyleSheet
@@ -342,15 +341,6 @@ table.tta-table th {
     background-color: var(--header-bg-color);
     background-image: linear-gradient(120deg,
         var(--header-bg-color-secondary), var(--header-bg-color));
-}
-
-/*  Shake alarm clock image on hover */
-#alarm-clock-image:hover {
-  /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 0.5s;
-
-  /* When the animation is finished, start again */
-  animation-iteration-count: infinite;
 }
 
 
@@ -1063,7 +1053,8 @@ function paintRunTimers(i) {
     if (!scrLarge) runWindow = window  // If no popup runWindow is our window
     else if (ttaProject.use_popup_window == "false") runWindow = window
     else fRunWindowAsPopup = true // Later we will set 'runWindow' variable
-
+    console.log("ttaProject.use_popup_window:", ttaProject.use_popup_window
+                "fRunWindowAsPopup:", fRunWindowAsPopup)
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
