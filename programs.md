@@ -30,11 +30,25 @@ of charge and free of Ads too!
 
 **Runs in your browser!**
 
+<- Move your mouse over image to see how alarm looks when it
+sounds.
+
+### Introduction
+
 Do you have a project with a fixed set of tasks and, each task 
 always takes the same amount of time?
 
 Then ***Tim-ta*** (**Tim**ed**-ta**sks) will help you get
 the job done with each task started at the exact second!
+
+### Sample projects
+
+There are other examples where you can use Tim-ta:
+
+- Cooking food
+- Working out
+- Education class time for different topics
+- Sharing computer time between siblings
 
 <a href="programs/tim-ta.html" style="font-size: 20px;">Run</a> 
 self-documenting app. &emsp;&emsp; 
