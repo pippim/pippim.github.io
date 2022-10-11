@@ -20,30 +20,22 @@ of charge and free of Ads too!
 %}
 </div>
 
-<!--
-{ % include image.html src="/assets/img/tim-ta/Tim-ta Introduction.png"
-   alt="Tim-ta Introduction.png"
-   style="float: left; width: 75%; margin: .25rem 1rem 1rem 0px;"
-   caption="Tim-ta webpage header"
-%}
--->
+**Runs in your browser!** - No programs to install or configure.
 
-**Runs in your browser!**
-
-<- Move your mouse over image to see how alarm looks when it
-sounds.
+*<- Move mouse over image to see how alarm looks when it
+sounds.*
 
 ### Introduction
 
-Do you have a project with a fixed set of tasks and, each task 
-always takes the same amount of time?
+Perfect for projects with a set of tasks where each task 
+always takes the same amount of time.
 
-Then ***Tim-ta*** (**Tim**ed**-ta**sks) will help you get
+***Tim-ta*** (**Tim**ed**-ta**sks) will help you get
 the job done with each task started at the exact second!
 
 ### Sample projects
 
-There are other examples where you can use Tim-ta:
+Some examples where you can use Tim-ta:
 
 - Cooking food
 - Working out
