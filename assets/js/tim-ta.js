@@ -1053,8 +1053,21 @@ function paintRunTimers(i) {
     if (!scrLarge) runWindow = window  // If no popup runWindow is our window
     else if (ttaProject.use_popup_window == "false") runWindow = window
     else fRunWindowAsPopup = true // Later we will set 'runWindow' variable
-    console.log("ttaProject.use_popup_window:", ttaProject.use_popup_window
+    console.log("ttaProject.use_popup_window:", ttaProject.use_popup_window,
                 "fRunWindowAsPopup:", fRunWindowAsPopup)
+
+/*
+#myProgress {
+  width: 100%;
+  background-color: grey;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: green;
+}*/
+
     currentForm = "formRunTimers"
     // Can be called from Projects Table so need to retrieve ttaProject for i
     // Can be called from Projects Tasks Table so ttaProject is current
