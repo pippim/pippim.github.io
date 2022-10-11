@@ -175,12 +175,13 @@ audio { vertical-align:middle }
     background-color: var(--nav-button-bg-color);
     font-size: x-large;
     border-radius: 1rem;
-    border: none;  // Sept 30/22 - Dark theme looks better with no border
+    border: none;  /* Sept 30/22 - Dark theme looks better with no border */
     outline: none;  /* Remove shadow effect? NOPE :( */
 }
 
 /* Not sure why hover not working like hdr-btn does. So make separate below. */
 /* .tta-btn:hover, .tta-btn:focus { FOCUS = BUTTON STAYS HIGHLIGHTED AFTER CLICK */
+
 .tta-btn:hover {
     background-color: var(--button-focus-color);
     color: var(--header-heading-color);
