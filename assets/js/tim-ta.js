@@ -699,8 +699,8 @@ function ttaNameColumnStyle() {
     ttaStyleSheet.style.setProperty("--name-column", col)
     // get variable from inline style - NOT WORKING
     var display_col = ttaStyleSheet.style.getPropertyValue("--name-column")
-    console.log("css variable --name-column:", display_col, 'original col:', col)
-    console.log("scr Width/Small/Medium/Large:", scrWidth, scrSmall, scrMedium, scrLarge)
+    //console.log("css variable --name-column:", display_col, 'original col:', col)
+    //console.log("scr Width/Small/Medium/Large:", scrWidth, scrSmall, scrMedium, scrLarge)
 
     var html = "<style>\n";
     html += 'table.tta-table td:nth-child(' + col + ') {\n' +
