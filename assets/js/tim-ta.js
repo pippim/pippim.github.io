@@ -219,22 +219,24 @@ progress {
     border-radius: .5rem;
 }
 
+/* -webkit- is for Chrome/safari*/
 progress::-webkit-progress-bar {
-    /* width: 6rem; */
     border-radius: .5rem;
-}/* for Chrome/safari*/
+}
 progress::-webkit-progress-inner-element {
     border-radius: .5rem;
-}/* for Chrome/safari*/
+}
 progress::-webkit-progress-value {
-    /* width: 6rem; */
     border-radius: .5rem;
-}/* for Chrome/safari*/
+}
 
+/* Slider switches */
 .inpOnOffSwitch {
     vertical-align: middle;
     width: 40px;
     height: auto;
+    opacity: 1.0;
+    /* hover */
 }
 
 select:invalid { color: var(--flash-bg-color); }
