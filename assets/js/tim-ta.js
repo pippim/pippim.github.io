@@ -235,7 +235,7 @@ progress::-webkit-progress-value {
     vertical-align: middle;
     width: 40px;
     height: auto;
-    opacity: 1.0;
+    opacity: var(--on-off-switch-opacity);
     /* hover */
 }
 
