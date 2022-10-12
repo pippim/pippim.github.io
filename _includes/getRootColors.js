@@ -59,7 +59,7 @@ var colorSchemeDark = {
     "--button-focus-color": "#1E90FF",
     "--progress-bar-color": "#008000",
     "--progress-bar-bg-color": "#303030",
-    "--on-off-switch-opacity": "0.6",
+    "--on-off-switch-opacity": "0.75",
     "--flash-bg-color": "#808080",
     "--boldest-color": "#ffffff",
     "--link-visited": "#800080",
