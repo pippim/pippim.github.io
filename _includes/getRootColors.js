@@ -19,6 +19,8 @@ var colorSchemeCayman = {
     "--header-accent-color": "#FFFF00",
     "--button-focus-color": "#1E90FF",
     "--progress-bar-color": "#008000",
+    "--progress-bar-bg-color": "#c0c0c0",
+    "--on-off-switch-opacity": "1.0",
     "--flash-bg-color": "#808080",
     "--boldest-color": "#000000",
     "--link-visited": "#800080",
@@ -56,6 +58,8 @@ var colorSchemeDark = {
     "--header-accent-color": "#FFFF00",
     "--button-focus-color": "#1E90FF",
     "--progress-bar-color": "#008000",
+    "--progress-bar-bg-color": "#303030",
+    "--on-off-switch-opacity": "0.6",
     "--flash-bg-color": "#808080",
     "--boldest-color": "#ffffff",
     "--link-visited": "#800080",
@@ -176,9 +180,7 @@ function setColorScheme(scheme) {
 /* Long long comments
 
 :root {
-    //  Used by Pippim. Defaults are stored in memory (here). Also created
-    //  in memory is colorSchemeDark. You can copy and modify either scheme
-    //  and save to local storage under your own name.
+    //  Color Scheme Cayman Theme alternate is colorSchemeDark.
     //--honeydew: #F0FFF0;  /* light greenish yellow used for nav-background-color
     --nav-button-bg-color: #F0FFF0;  // Honeydew light greenish yellow
     --nav-button-color: #159957;  // Cayman green
@@ -192,6 +194,8 @@ function setColorScheme(scheme) {
     --header-accent-color: #FFFF00;  // Yellow also button focus text
     --button-focus-color: #1E90FF;  // Dodger Blue (for background)
     --progress-bar-color: #008000;  // Green
+    --progress-bar-bg-color: c0c0c0 // Almost white
+    --on-off-switch-opacity: 1.0;  // 100 %
     --flash-bg-color: #808080;  // Grey
     --boldest-color: #000000;  // Black on white screen, white on black screen
     --link-visited: #800080;  // Purple
