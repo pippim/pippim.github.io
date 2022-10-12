@@ -221,7 +221,9 @@ if (ttaConfig == null) {
 }
 
 function readConfig() {
-    ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'));
+    ttaConfig = JSON.parse(localStorage.getItem('ttaConfig'))
+    if (ttaConfig == null) return  // Drop out to create new configuration
+    // Oct 12/22 bug fixed below: if ("use_popup_window" in ttaConfig)
     if ("use_popup_window" in ttaConfig) return  // At version 1.1 already
 
     /* Upgrade version 1.0 to version 1.1 */
@@ -238,7 +240,6 @@ function convertVersion11() {
     if ("use_popup_window" in ttaConfig) return  // At version 1.1 already
 
     console.log("Converting Tim-ta version 1.0 to version 1.1")
-    // const browser = getBrowser()  // Oct 10/22 - Duplicate definition
     ttaConfig.environment = navigator.oscpu + " " + browser.name + " " +
                             browser.version
     ttaConfig.color_scheme = "Cayman Theme"
@@ -271,28 +272,6 @@ function setDefaultPopupWindow () {
     ttaProject.popup_size_w = "600"
     ttaProject.popup_size_h = "400"
 }
-
-/* Oct 10/22 - Duplicate definition
-function getBrowser() {
-    // From: https://stackoverflow.com/a/16938481/6929343
-    var ua = navigator.userAgent, tem
-    var M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
-    if (/trident/i.test(M[1])) {
-        tem = /\brv[ :]+(\d+)/g.exec(ua) || []
-        return {name: 'IE', version: (tem[1] || '') }
-    }
-    if (M[1]==='Chrome') {
-        tem=ua.match(/\bOPR|Edge\/(\d+)/)
-        if (tem!=null) return { name:'Opera', version:tem[1] }
-    }
-    M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?']
-    if ((tem=ua.match(/version\/(\d+)/i))!=null) M.splice(1,1,tem[1])
-    return {
-        name: M[0],
-        version: M[1]
-    }
- }
-*/
 
 // Uncomment below to erase corrupted configuration
 // ttaNewConfig();
