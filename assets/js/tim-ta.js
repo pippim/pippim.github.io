@@ -215,6 +215,7 @@ progress {
 
     width: 6rem; /* mobile default width for chrome specifically */
     height: 1.2rem; /* Oct 12/22 was .8rem */
+    vertical-align: middle;
     border-radius: .5rem;
 }
 
