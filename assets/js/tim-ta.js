@@ -179,7 +179,17 @@ audio { vertical-align:middle }
     outline: none;  /* Remove shadow effect? NOPE :( */
 }
 
-/* Not sure why hover not working like hdr-btn does. So make separate below. */
+/* Not sure why hover not working like hdr-btn does. So make separate below.
+ Scorpion2185
+
+1:49 AM (2 hours ago)
+
+to me
+I think that the bar on the pop-up window should be high as when
+ you disable the pop-up window.
+
+
+ */
 /* .tta-btn:hover, .tta-btn:focus { FOCUS = BUTTON STAYS HIGHLIGHTED AFTER CLICK */
 
 .tta-btn:hover {
@@ -204,7 +214,7 @@ progress {
     background-color: var(--progress-bar-bg-color);
 
     width: 6rem; /* mobile default width for chrome specifically */
-    height: .8rem;
+    height: 1.2rem; /* Oct 12/22 was .8rem */
     border-radius: .5rem;
 }
 
