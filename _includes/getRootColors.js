@@ -77,11 +77,11 @@ var colorSchemeDark = {
     "--border-color": "#4c4640",
     "--table-border-color": "#494b4c",
     "--hr-border-color": "#3f3031",
-    "--kbd-background-color": "#dadbdc",
+    "--kbd-background-color": "#101040",
     "--kbd-border-color": "#c6cbd1",
     "--kbd-border-bottom-color": "#959da5",
     "--kbd-box-shadow-color": "#959da5",
-    "--kbd-color": "#242d36"
+    "--kbd-color": "#f0f0f0"
 }
 /* Oct 9/22 - Too dark of background, so switch to Cayman colors
     "--code-bg-color": "#13161a",
@@ -91,6 +91,12 @@ var colorSchemeDark = {
     "--kbd-border-bottom-color": "#e5ede5",
     "--kbd-box-shadow-color": "#e5ede5",
     "--kbd-color": "#c4cdd6"
+    OCT 13/22 - Save before changes
+    "--kbd-background-color": "#dadbdc",
+    "--kbd-border-color": "#c6cbd1",
+    "--kbd-border-bottom-color": "#959da5",
+    "--kbd-box-shadow-color": "#959da5",
+    "--kbd-color": "#242d36"
 */
 
 var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
