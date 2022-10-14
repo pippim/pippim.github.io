@@ -476,7 +476,7 @@ details[open] > summary {
 #search-form {
     // Resides inside search-container
     padding: 1rem;
-    color: var(--header-bg-color);
+    color: var(--nav-button-color);  // Oct 13/22 was header-bg-color
     vertical-align: middle;
     border-radius: .5rem;
     flex-direction: row;
