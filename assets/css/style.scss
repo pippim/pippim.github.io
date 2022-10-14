@@ -534,8 +534,10 @@ details[open] > summary {
     // Used by #tcm_window_close, #search-modal-close & #search-clear-input
     display: inline-block; // https://stackoverflow.com/a/9577070/6929343
     vertical-align: middle;
-    height: 20px;  // TODO: Convert to rem
-    width: 20px;
+    height: 1.5rem;  // TODO: Convert to rem based on size
+    width: 1.5rem;
+    padding: .25rem;
+    background-color: var(--nav-button-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
