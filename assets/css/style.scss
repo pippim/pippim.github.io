@@ -544,7 +544,7 @@ details[open] > summary {
     float: right;
     cursor: pointer;
 
-    &:hover { opacity: 1.0; filter: brightness(150%); }
+    &:hover { opacity: 1.0; } // Oct 14/22:  filter: brightness(150%);
 }
 
 // Search Result links that have been visited in purple
