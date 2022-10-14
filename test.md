@@ -1,5 +1,5 @@
 ---
-title: Test New page-header-buttons and New page-header-hamburger menu
+title: test-search.js - New close button
 layout: test
 ---
 
