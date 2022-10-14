@@ -531,8 +531,8 @@ details[open] > summary {
 }
 
 .icon_back {
-    // Used by #tcm_window_close, #search-modal-close & #search-clear-input
-    // & #search-symbol
+    // Used by #tcm_window_close, #search-modal-close, #search-clear-input
+    // & #search-symbol TODO: Remove tcm_button from background & padding
     display: inline-block; // https://stackoverflow.com/a/9577070/6929343
     vertical-align: middle;
     height: 2rem;  // TODO: Convert to rem based on size
