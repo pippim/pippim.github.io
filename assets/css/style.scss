@@ -532,11 +532,13 @@ details[open] > summary {
 
 .icon_back {
     // Used by #tcm_window_close, #search-modal-close & #search-clear-input
+    // & #search-symbol
     display: inline-block; // https://stackoverflow.com/a/9577070/6929343
     vertical-align: middle;
-    height: 1.5rem;  // TODO: Convert to rem based on size
-    width: 1.5rem;
-    padding: .25rem;
+    height: 2rem;  // TODO: Convert to rem based on size
+    width: 2rem;
+    padding: .5rem;
+    background-origin: content-box;  // https://stackoverflow.com/a/32309948/6929343
     background-color: var(--nav-button-color);
     background-repeat: no-repeat;
     background-size: cover;
