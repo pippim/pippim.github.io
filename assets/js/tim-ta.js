@@ -205,17 +205,26 @@ I think that the bar on the pop-up window should be high as when
 }
 
 /* progress bar in Run Timers table */
-progress::-moz-progress-bar { background: var(--progress-bar-color); } /* Same color as chrome */
-/* progress[value] { */
+progress::-moz-progress-bar {
+    background: var(--progress-bar-color); /* Same color as chrome */
+    border-radius: .5rem;
+}
+
 progress {
-    /* Reset the default appearance */
+    /* Reset the default appearance
     -webkit-appearance: none;
     appearance: none;
+    */
     background-color: var(--progress-bar-bg-color);
 
     width: 6rem; /* mobile default width for chrome specifically */
     height: 1.2rem; /* Oct 12/22 was .8rem */
     vertical-align: middle;
+    border-radius: .5rem;
+    overflow: hidden; /* Prevent bar stretching past round corners */
+}
+
+progress::progress-inner-element {
     border-radius: .5rem;
 }
 
@@ -227,6 +236,15 @@ progress::-webkit-progress-inner-element {
     border-radius: .5rem;
 }
 progress::-webkit-progress-value {
+    border-radius: .5rem;
+}
+progress::-moz-progress-bar {
+    border-radius: .5rem;
+}
+progress::-moz-progress-inner-element {
+    border-radius: .5rem;
+}
+progress::-moz-progress-value {
     border-radius: .5rem;
 }
 
