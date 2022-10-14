@@ -238,6 +238,7 @@ progress::-webkit-progress-inner-element {
 progress::-webkit-progress-value {
     border-radius: .5rem;
 }
+/*
 progress::-moz-progress-bar {
     border-radius: .5rem;
 }
@@ -247,6 +248,7 @@ progress::-moz-progress-inner-element {
 progress::-moz-progress-value {
     border-radius: .5rem;
 }
+*/
 
 /* Slider switches */
 .inpOnOffSwitch {
