@@ -10,6 +10,7 @@ var colorSchemeCayman = {
     name: "colorSchemeCayman",
     "--nav-button-bg-color": "#F0FFF0",
     "--nav-button-color": "#159957",
+    "--search-bg-color": "#F0FFF0",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
@@ -49,6 +50,7 @@ var colorSchemeDark = {
     name: "colorSchemeDark",
     "--nav-button-bg-color": "#494b4c",
     "--nav-button-color": "#f9fbfc",
+    "--search-bg-color": "#112131",
     "--msgq-error-bg-color": "#f44336",
     "--msgq-warning-bg-color": "#ff9800",
     "--msgq-info-bg-color": "#2196F3",
@@ -62,7 +64,7 @@ var colorSchemeDark = {
     "--on-off-switch-opacity": "0.75",
     "--flash-bg-color": "#808080",
     "--boldest-color": "#ffffff",
-    "--link-visited": "#800080",
+    "--link-visited": "#CF9FFF",
     "--header-heading-color": "#ffd080",
     "--header-bg-color": "#057937",
     "--header-bg-color-secondary": "#053779",
@@ -190,6 +192,7 @@ function setColorScheme(scheme) {
     //--honeydew: #F0FFF0;  /* light greenish yellow used for nav-background-color
     --nav-button-bg-color: #F0FFF0;  // Honeydew light greenish yellow
     --nav-button-color: #159957;  // Cayman green
+    --search-bg-color: #F0FFF0  // Honeydew
     --msgq-error-bg-color: #f44336;  // Light Red
     --msgq-warning-bg-color: #ff9800;  // Light Orange
     --msgq-info-bg-color: #2196F3;  // Light Blue
