@@ -315,7 +315,7 @@ mark {
     // total new style: https://www.abeautifulsite.net/posts/a-clever-way-to-style-the-mark-element/
     background: linear-gradient(-100deg, hsla(48,92%,75%,.3), hsla(48,92%,75%,.7) 95%, hsla(48,92%,75%,.1));
     border-radius: 1em 0;
-    padding: .1rem .75rem; /* Oct 15/22: .2rem .5rem .2rem .5rem */
+    padding: .1rem .75rem; /* Oct 15/22 was: .2rem .5rem .2rem .5rem */
     margin-right: .5rem;
 }
 
@@ -381,33 +381,15 @@ details > summary {
     color: var(--header-bg-color);
     border: none;
     box-shadow: 3px 3px 4px var(--boldest-color);
-
-    &:hover {
-        // background-position:bottom;
-        background-color: #ddd;
-    }
+    &:hover { background-color: #ddd; }
 }
 
-details > summary::-webkit-details-marker {
-    // Fringe browsers from https://stackoverflow.com/a/10813665/6929343
-    display: none;
-}
-
-details > summary {
-    cursor: s-resize;
-}
-
-details[open] > summary {
-    cursor: n-resize;
-}
-
-details > summary::before {
-    content: '▶️ ';
-}
-
-details[open] > summary::before {
-    content: '🔽 ';
-}
+// Fringe browsers from https://stackoverflow.com/a/10813665/6929343
+details > summary::-webkit-details-marker { display: none; }
+details > summary { cursor: s-resize; }
+details[open] > summary { cursor: n-resize; }
+details > summary::before { content: '▶️ '; }
+details[open] > summary::before { content: '🔽 '; }
 
 details > p {
     border-radius: 0 0 10px 10px;
@@ -502,7 +484,7 @@ details[open] > summary {
 }
 
 .search-modal-content {
-    // Resides inside search-container
+    // Search results - Resides inside search-container
     margin-top: .75rem;
     color: var(--nav-button-color);  // Oct 13/22 was header-bg-color
     padding: 1rem 1rem 1.5rem 1rem;
@@ -521,14 +503,19 @@ details[open] > summary {
     // Resides inside search-form
     margin-left: .7rem;
     margin-right: .7rem;
+    // Requires class name .icon_back{} - When text entered use erase button
+    background-image: url({{ site.url }}/assets/img/icons/x.png);
+}
+
+#search-modal-close {
+    // Big 'X' image - Requires class name .icon_back{}
+    background-image: url({{ site.url }}/assets/img/icons/x.png);
 }
 
 #search-clear-input,
 #search-modal-close {
-    // Requires class name .icon_back{}
-    background-image: url({{ site.url }}/assets/img/icons/x.png);
+    // Dim button background: https://stackoverflow.com/a/24084708/6929343
     box-shadow: inset 0 0 0 1000px rgba(255,255,255,.2);
-      // https://stackoverflow.com/a/24084708/6929343
 }
 
 .icon_back {
