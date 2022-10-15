@@ -211,17 +211,11 @@ progress::-moz-progress-bar {
 }
 
 progress {
-    /* Reset the default appearance
-    -webkit-appearance: none;
-    appearance: none;
-    */
     background-color: var(--progress-bar-bg-color);
-
     width: 6rem; /* mobile default width for chrome specifically */
     height: 1.2rem; /* Oct 12/22 was .8rem */
     vertical-align: middle;
     border-radius: .5rem;
-    /* overflow: hidden; /* Prevent bar stretching past round corners */
 }
 
 /* -webkit- is for Chrome/safari*/
@@ -229,13 +223,10 @@ progress::-webkit-progress-bar {
     border-radius: .5rem;
 }
 /*
-progress::-webkit-progress-inner-element {
-    border-radius: .5rem;
-}
-*/
 progress::-webkit-progress-value {
     border-radius: .5rem;
 }
+*/
 
 /* Slider switches */
 .inpOnOffSwitch {
