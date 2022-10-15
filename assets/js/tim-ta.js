@@ -216,12 +216,14 @@ progress {
     height: 1.2rem; /* Oct 12/22 was .8rem */
     vertical-align: middle;
     border-radius: .5rem;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
+    overflow: hidden; /* For Chrome */
 }
+/* Requires -webkit-appearance: none;
 progress::-webkit-inner-element {
-    /* Requires -webkit-appearance: none; */
     border-radius: .5rem;
 }
+*/
 
 /* -webkit- is for Chrome/Safari.  Oct 14/22 confirm both below needed.*/
 progress::-webkit-progress-bar {
