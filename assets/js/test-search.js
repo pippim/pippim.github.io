@@ -256,9 +256,8 @@ window.onclick = function (event) {
         scrollToJustAbove(f)      // Full focus back to #search-query input
         return
     }
-    console.log("q.value:", q.value)
 
-    if (!f.contains(event.target) && f.style.display != "none")
+    if (!f.contains(event.target) && f.style.display != "none") {
         closeSearchForm()
         return
     }
@@ -273,13 +272,7 @@ window.onclick = function (event) {
 
 function closeSearchForm() {
     /* Shared between 'X' to close and click outside search query */
-    //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
-    //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
-    //const m = document.getElementById('search-modal');          // Where search results appear
-    //const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
-                                                                  // Black 'X' to close search
-    //const q = document.getElementById('search-query');          // Search words input by user
     f.style.display = "none"  // Close search form
     boolSearchForm = false
     window.scrollTo({top: 0, behavior: 'smooth'});
