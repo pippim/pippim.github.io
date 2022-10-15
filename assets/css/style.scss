@@ -19,11 +19,6 @@ html { scroll-behavior: smooth; }
 //                    Pure CSS Button Hover effect
 // From: https://www.sliderrevolution.com/resources/css-button-hover-effects/
 
-// Headers (From: https://github.com/pages-themes/cayman/blob/master/_sass/variables.scss)
-// $header-heading-color: #fff !default;
-// $header-bg-color: #159957 !default;  // Cayman green
-// $header-bg-color-secondary: #155799 !default;  // Cayman blue
-// $honeydew: #F0FFF0 !default; // Light green yellow
 $salmon: #FA8072 !default; // salmon
 $lavender: #E6E6FA !default; // lavender
 
@@ -523,8 +518,6 @@ details[open] > summary {
     // & #search-symbol TODO: Remove tcm_button from background & padding
     display: inline-block; // https://stackoverflow.com/a/9577070/6929343
     vertical-align: middle;
-    text-align: center;
-    font-size: 1.1rem;  // Font only used by #search-clear-input
     height: 2rem;  // TODO: Convert to rem based on size
     width: 2rem;
     padding: .5rem;
