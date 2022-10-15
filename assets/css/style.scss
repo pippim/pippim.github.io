@@ -524,6 +524,7 @@ details[open] > summary {
     display: inline-block; // https://stackoverflow.com/a/9577070/6929343
     vertical-align: middle;
     text-align: center;
+    font-size: 2rem;  // Font only used by #search-clear-input
     height: 2rem;  // TODO: Convert to rem based on size
     width: 2rem;
     padding: .5rem;
