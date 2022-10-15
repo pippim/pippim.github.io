@@ -158,7 +158,7 @@ const e = document.getElementById('dropdown-content');      // hamburger menu dr
 const f = document.getElementById('search-form');           // Wrapper around query & close button
 const g = document.getElementById('search-container');      // Wrapper around form & modal
 const h = document.getElementById('search-modal-text')      // Search results html codes
-const i = document.getElementById('search-clear-input');    // Red 'X' to clear search words
+const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
                                                             // Black 'X' to close search
 const m = document.getElementById('search-modal');          // Where search results appear
 const n = document.getElementsByClassName('page-header-search-button')  // In two places
@@ -266,7 +266,11 @@ function closeSearchForm() {
     //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
     //const m = document.getElementById('search-modal');          // Where search results appear
-    if (!f.contains(event.target) && f.style.display != "none") {
+    //const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
+                                                                  // Black 'X' to close search
+
+    if ((!f.contains(event.target) && f.style.display != "none") ||
+        (i.contains(event.target) && f.style.display != "none")) {
         f.style.display = "none"  // Close search form
         boolSearchForm = false
         window.scrollTo({top: 0, behavior: 'smooth'});
@@ -319,11 +323,13 @@ function set_x_to_close() {
     if (q.value == "") {
         i.style.backgroundImage = "url({{ site.url }}/assets/img/icons/x.png)"
         i.textContent = ""
+        i.title = "Close search form"
     }
     else {
         i.style.backgroundImage = "none"
         i.textContent = "⌫"
         i.style.color = "red"
+        i.title = "Clear search word(s)"
     }
     // When search words typed, turn on "X" image to clear the words
     // const q = document.getElementById('search-query');
