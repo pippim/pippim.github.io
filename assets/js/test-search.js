@@ -304,11 +304,8 @@ i.onclick = function(event) {
         q.value = ""  // Erase search string
         set_x_to_close()  // Set 'X' (Close) icon or back tab character
     }
-    else {
-        console.log("Calling closeSearchForm()")
-        closeSearchForm()
-    }
-};
+    else closeSearchForm()
+}
 
 function set_x_to_close() {
     // Oct 15/22: Instead of making 'X' icon appear, change to: ⌫ ("&#x232B;")
