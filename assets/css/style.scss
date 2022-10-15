@@ -503,6 +503,7 @@ details[open] > summary {
     // Resides inside search-form
     margin-left: .7rem;
     margin-right: .7rem;
+    text-align: center;
     // Requires class name .icon_back{} - When text entered use erase button
     background-image: url({{ site.url }}/assets/img/icons/x.png);
 }
