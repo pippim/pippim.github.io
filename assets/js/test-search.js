@@ -301,22 +301,29 @@ f.addEventListener('submit', submitted);
 
 f.addEventListener('input', set_x_to_close);
 
-// Close ('X') clicked on search input bar
+// Close ('X') or back tab character clicked on search input bar
 i.onclick = function() {
     // Oct 15/22: Instead of making 'X' icon appear, change to: ⌫ ("&#x232B;")
     if (q.value !== "") {
-        q.value = "" /* Erase search string */
+        q.value = ""  // Erase search string
+        set_x_to_close()  // Set 'X' (Close) icon or back tab character
     }
     else {
         i.style.display = "none";
+        closeSearchForm()
     }
-    set_x_to_close();       // Set 'X' (Close) icon or back tab character
 };
 
 function set_x_to_close() {
     // Oct 15/22: Instead of making 'X' icon appear, change to: ⌫ ("&#x232B;")
-    if (q.value !== "") i.style.display = "inline-block"
-                   else i.style.display = "none"
+    if (q.value == "") {
+        i.style.backgroundImage = "url({{ site.url }}/assets/img/icons/x.png)"
+        i.innerHtml = ""
+    }
+    else {
+        i.style.backgroundImage = "none"
+        i.innerHtml = "⌫"
+    }
     // When search words typed, turn on "X" image to clear the words
     // const q = document.getElementById('search-query');
     // const i = document.getElementById('search-clear-input');
