@@ -221,35 +221,21 @@ progress {
     height: 1.2rem; /* Oct 12/22 was .8rem */
     vertical-align: middle;
     border-radius: .5rem;
-    overflow: hidden; /* Prevent bar stretching past round corners */
+    /* overflow: hidden; /* Prevent bar stretching past round corners */
 }
 
-/*
-progress::progress-inner-element {
-    border-radius: .5rem;
-}
-*/
 /* -webkit- is for Chrome/safari*/
 progress::-webkit-progress-bar {
     border-radius: .5rem;
 }
+/*
 progress::-webkit-progress-inner-element {
     border-radius: .5rem;
 }
+*/
 progress::-webkit-progress-value {
     border-radius: .5rem;
 }
-/*
-progress::-moz-progress-bar {
-    border-radius: .5rem;
-}
-progress::-moz-progress-inner-element {
-    border-radius: .5rem;
-}
-progress::-moz-progress-value {
-    border-radius: .5rem;
-}
-*/
 
 /* Slider switches */
 .inpOnOffSwitch {
