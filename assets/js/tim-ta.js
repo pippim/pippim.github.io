@@ -218,11 +218,10 @@ progress {
     border-radius: .5rem;
 }
 
-/* -webkit- is for Chrome/safari
+/* -webkit- is for Chrome/Safari.  Oct 14/22 confirm both below needed.*/
 progress::-webkit-progress-bar {
     border-radius: .5rem;
 }
-*/
 progress::-webkit-progress-value {
     border-radius: .5rem;
 }
