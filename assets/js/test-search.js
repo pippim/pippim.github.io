@@ -270,7 +270,7 @@ function closeSearchForm() {
                                                                   // Black 'X' to close search
     //const q = document.getElementById('search-query');          // Search words input by user
     if ((!f.contains(event.target) && f.style.display != "none") ||
-        (i.contains(event.target) && q.value == "")) {
+        (i.contains(event.target) && q.value !== "")) {
         f.style.display = "none"  // Close search form
         boolSearchForm = false
         window.scrollTo({top: 0, behavior: 'smooth'});
@@ -330,8 +330,8 @@ function set_x_to_close() {
         i.textContent = "⌫"
         i.style.color = "red"
         i.title = "Clear search word(s)"
-        i.horizontalAlign = "center"
-        i.verticalAlign = "center"
+        i.horizontalAlign = "middle"
+        i.verticalAlign = "middle"
     }
     // When search words typed, turn on "X" image to clear the words
     // const q = document.getElementById('search-query');
