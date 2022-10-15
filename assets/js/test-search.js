@@ -268,7 +268,6 @@ window.onclick = function (event) {
         boolDropdown = false
         window.scrollTo({top: 0, behavior: 'smooth'});
         reverseContentDimmed()
-        return
     }
 }
 
