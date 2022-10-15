@@ -227,10 +227,10 @@ progress::-webkit-inner-element {
 progress::-webkit-progress-bar {
     border-radius: .5rem;
 }
-*/
 progress::-webkit-progress-value {
     border-radius: .5rem;
 }
+*/
 
 /* Slider switches */
 .inpOnOffSwitch {
