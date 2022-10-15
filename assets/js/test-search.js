@@ -256,8 +256,20 @@ window.onclick = function (event) {
         scrollToJustAbove(f)      // Full focus back to #search-query input
         return
     }
+    console.log("q.value:", q.value)
 
-    closeSearchForm()
+    if (!f.contains(event.target) && f.style.display != "none")
+        closeSearchForm()
+        return
+    }
+    if (e !== null && e.style.display != "none") {
+        //console.log("e.style.display:", e.style.display)
+        e.style.display = "none"  // Close dropdown menu options
+        boolDropdown = false
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        reverseContentDimmed()
+        return
+    }
 }
 
 function closeSearchForm() {
@@ -269,23 +281,10 @@ function closeSearchForm() {
     //const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
                                                                   // Black 'X' to close search
     //const q = document.getElementById('search-query');          // Search words input by user
-    console.log("q.value:", q.value)
-    if ((!f.contains(event.target) && f.style.display != "none") ||
-        (i.contains(event.target) && q.value == "")) {
-        f.style.display = "none"  // Close search form
-        boolSearchForm = false
-        window.scrollTo({top: 0, behavior: 'smooth'});
-        reverseContentDimmed()
-        return
-    }
-    if (e !== null && e.style.display != "none") {
-        //console.log("e.style.display:", e.style.display)
-        e.style.display = "none"  // Close dropdown menu options
-        boolDropdown = false
-        window.scrollTo({top: 0, behavior: 'smooth'});
-        reverseContentDimmed()
-        return
-    }
+    f.style.display = "none"  // Close search form
+    boolSearchForm = false
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    reverseContentDimmed()
 }
 
 var saveBackgroundColor;  // May 18/22 - New code not working
