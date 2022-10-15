@@ -218,15 +218,14 @@ progress {
     border-radius: .5rem;
 }
 
-/* -webkit- is for Chrome/safari*/
+/* -webkit- is for Chrome/safari
 progress::-webkit-progress-bar {
     border-radius: .5rem;
 }
-/*
+*/
 progress::-webkit-progress-value {
     border-radius: .5rem;
 }
-*/
 
 /* Slider switches */
 .inpOnOffSwitch {
