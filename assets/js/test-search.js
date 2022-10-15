@@ -269,6 +269,7 @@ function closeSearchForm() {
     //const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
                                                                   // Black 'X' to close search
     //const q = document.getElementById('search-query');          // Search words input by user
+    console.log("q.value:", q.value)
     if ((!f.contains(event.target) && f.style.display != "none") ||
         (i.contains(event.target) && q.value !== "")) {
         f.style.display = "none"  // Close search form
