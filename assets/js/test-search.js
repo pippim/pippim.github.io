@@ -302,7 +302,7 @@ f.addEventListener('submit', submitted);
 f.addEventListener('input', set_x_to_close);
 
 // Close ('X') or back tab character clicked on search input bar
-i.onclick = function() {
+i.onclick = function(event) {
     // Oct 15/22: Instead of making 'X' icon appear, change to: ⌫ ("&#x232B;")
     if (q.value !== "") {
         q.value = ""  // Erase search string
