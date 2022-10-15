@@ -330,8 +330,8 @@ function set_x_to_close() {
         i.textContent = "⌫"
         i.style.color = "red"
         i.title = "Clear search word(s)"
-        i.justifyContent = "center"
-        i.alignItems = "center"
+        i.horizontalAlign = "center"
+        i.verticalAlign = "center"
     }
     // When search words typed, turn on "X" image to clear the words
     // const q = document.getElementById('search-query');
