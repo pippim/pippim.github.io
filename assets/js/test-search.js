@@ -309,7 +309,7 @@ i.onclick = function() {
         set_x_to_close()  // Set 'X' (Close) icon or back tab character
     }
     else {
-        i.style.display = "none";
+        console.log("Calling closeSearchForm()")
         closeSearchForm()
     }
 };
@@ -323,6 +323,7 @@ function set_x_to_close() {
     else {
         i.style.backgroundImage = "none"
         i.innerHtml = "⌫"
+        i.style.color = "red"
     }
     // When search words typed, turn on "X" image to clear the words
     // const q = document.getElementById('search-query');
