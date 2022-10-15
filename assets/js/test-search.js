@@ -318,11 +318,11 @@ function set_x_to_close() {
     // Oct 15/22: Instead of making 'X' icon appear, change to: ⌫ ("&#x232B;")
     if (q.value == "") {
         i.style.backgroundImage = "url({{ site.url }}/assets/img/icons/x.png)"
-        i.innerHtml = ""
+        i.textContent = ""
     }
     else {
         i.style.backgroundImage = "none"
-        i.innerHtml = "⌫"
+        i.textContent = "⌫"
         i.style.color = "red"
     }
     // When search words typed, turn on "X" image to clear the words
