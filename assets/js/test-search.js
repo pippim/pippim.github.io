@@ -1,6 +1,7 @@
 ---
 ---
 /*  /assets/js/test-search.js - Test version of search.js
+    icons from: https://www.cleanpng.com/
 */
 
 // Use site.code from _config.yml to build raw_url
@@ -315,8 +316,9 @@ function set_x_to_close() {
         i.title = "Close search form"
     }
     else {
-        i.style.backgroundImage = "none"
-        i.textContent = "⌫"
+        i.style.backgroundImage = "url({{ site.url }}/assets/img/icons/erase_input.png)"
+        //i.style.backgroundImage = "none"
+        // i.textContent = "⌫"
         i.style.color = "red"
         i.title = "Clear search word(s)"
         i.horizontalAlign = "middle"
