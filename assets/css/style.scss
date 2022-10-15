@@ -503,7 +503,6 @@ details[open] > summary {
     // Resides inside search-form
     margin-left: .7rem;
     margin-right: .7rem;
-    text-align: center;
     // Requires class name .icon_back{} - When text entered use erase button
     background-image: url({{ site.url }}/assets/img/icons/x.png);
 }
@@ -524,6 +523,7 @@ details[open] > summary {
     // & #search-symbol TODO: Remove tcm_button from background & padding
     display: inline-block; // https://stackoverflow.com/a/9577070/6929343
     vertical-align: middle;
+    text-align: center;
     height: 2rem;  // TODO: Convert to rem based on size
     width: 2rem;
     padding: .5rem;
