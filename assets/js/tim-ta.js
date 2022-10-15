@@ -224,10 +224,11 @@ progress {
     overflow: hidden; /* Prevent bar stretching past round corners */
 }
 
+/*
 progress::progress-inner-element {
     border-radius: .5rem;
 }
-
+*/
 /* -webkit- is for Chrome/safari*/
 progress::-webkit-progress-bar {
     border-radius: .5rem;
