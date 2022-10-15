@@ -1,10 +1,7 @@
 ---
 ---
-/* TODO: Get Server/Local storage:  https://stackoverflow.com/a/23516713/6929343
-         Page refreshed date/time:  https://stackoverflow.com/a/47145745/6929343
-         Reload Window if obsolete, flag all cached pages as dirty so they reload:
-                                    https://stackoverflow.com/a/28041336/6929343
-                                    https://stackoverflow.com/a/118886/6929343
+/*  /assets/js/search.js - Search word processing
+    icons from: https://www.cleanpng.com/
 */
 
 // Use site.code from _config.yml to build raw_url
@@ -16,7 +13,7 @@ raw_url = raw_url.replace('/blob/', '/');
 const timeScriptStarted = new Date().getTime();
 const oneDay= 1000 * 60 * 60 * 24;
 
-// Session Storage statistics
+// search statistics kept in sessionStorage
 var search_stats = {}
 if (sessionStorage.search_stats === undefined) newStats()
 else search_stats = JSON.parse(sessionStorage.getItem('search_stats'))
@@ -101,31 +98,24 @@ function buildConfigYml () {
     // NOTE: Cannot call on page load because fetch is running asynchronously
     arrConfigYml = config_yml.split("\n")  // Convert string into array
     // Set flagPostsByYear flag
-    flagPostsByYear = "false";
+    flagPostsByYear = "false"
     timeSiteRefreshed = timeScriptStarted;  // Give default if not found
     for (var i = 0; i < arrConfigYml.length; i++) {
-        //var ymlKeyValue = arrConfigYml[i].split(':');
-        // Also in tcm-common-code.js consider glob
-        var a = arrConfigYml[i].split(':');
+        // Also in tcm-common-code.js consider global function
+        var a = arrConfigYml[i].split(':')
         var ymlKey = a.shift()      // https://stackoverflow.com/a/5746883/6929343
         var ymlValue = a.join(':')  // Some values have : in them
 
         var ymlKeyValue = arrConfigYml[i].split(':')
-        // if (i == 14) {alert(ymlKey +" ymlValue.trim(): " + ymlValue.trim());}
-        //if (ymlKeyValue.length == 2 && !ymlKeyValue[0].startsWith('#')) {
+        // if (i == 14) alert(ymlKey +" ymlValue.trim(): " + ymlValue.trim())
         if (ymlValue.length > 0 && !ymlKey.startsWith('#')) {
-            if (ymlKeyValue[0] == "posts_by_year") {
-                flagPostsByYear = ymlKeyValue[1].trim();
-            }
-            if (ymlKey == "refreshed") {
-                //alert("ymlValue.trim(): " + ymlValue.trim());
+            if (ymlKeyValue[0] == "posts_by_year")
+                flagPostsByYear = ymlKeyValue[1].trim()
+            if (ymlKey == "refreshed")
                 timeSiteRefreshed = Date.parse(ymlValue.trim());
-                //alert("timeSiteRefreshed: " + timeSiteRefreshed);
-            }
         }
     }
 }
-
 
 function newStats () {
     search_stats = {} // Wipe out previous stats
@@ -169,7 +159,8 @@ const e = document.getElementById('dropdown-content');      // hamburger menu dr
 const f = document.getElementById('search-form');           // Wrapper around query & close button
 const g = document.getElementById('search-container');      // Wrapper around form & modal
 const h = document.getElementById('search-modal-text')      // Search results html codes
-const i = document.getElementById('search-clear-input');    // 'X' to clear search words
+const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
+                                                            // Black 'X' to close search
 const m = document.getElementById('search-modal');          // Where search results appear
 const n = document.getElementsByClassName('page-header-search-button')  // In two places
 const q = document.getElementById('search-query');          // Search words input by user
@@ -225,19 +216,15 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
         //const f = document.getElementById('search-form');           // Wrapper around query & close button
         //const m = document.getElementById('search-modal');          // Where search results appear
-        // n = page header search button Class list beside hamburger.
-        // Will replace p (page-header-search ID) after all pages are converted
         //const n = document.getElementsByClassName('page-header-search-button');
-        //const p = document.getElementById('page-header-search');    // page search beside hamburger
         event.stopPropagation()  // Don't let window.onclick see this click
         boolSearchForm = !boolSearchForm
         if (boolSearchForm) {
-            //n[ndxPageHeaderSearchButton].scrollIntoView()  // Move to top so children have room to grown
+            // Search form is open
             f.style.display = "flex"
             setContentDimmed(g)  // New g replaces f
-            // Move to top so children have room to grown (after scrollbar removed)
+            // Move to top so children have room to grow (after scrollbar removed)
             scrollToJustAbove(g)
-            // f.insertAfter('#search-form-location')  // No longer needed plus causes bump down
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
             if (e !== null && e != "none") {
                 e.style.display = "none";  // Close dropdown menu options
@@ -251,7 +238,6 @@ for (var ndx = 0; ndx < n.length; ndx++) {
             reverseContentDimmed()
         }
         //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
-
     }
 }
 
@@ -269,19 +255,11 @@ window.onclick = function (event) {
     if (!m.contains(event.target) && m.style.display != "none") {
         m.style.display = "none"  // Close search results modal
         scrollToJustAbove(f)      // Full focus back to #search-query input
-    /* OPTIONAL - Close #search-form altogether
-        f.style.display = "none"  // Close search form
-        boolSearchForm = false
-        window.scrollTo({top: 0, behavior: 'smooth'});
-        reverseContentDimmed()
-    */
         return
     }
+
     if (!f.contains(event.target) && f.style.display != "none") {
-        f.style.display = "none"  // Close search form
-        boolSearchForm = false
-        window.scrollTo({top: 0, behavior: 'smooth'});
-        reverseContentDimmed()
+        closeSearchForm()
         return
     }
     if (e !== null && e.style.display != "none") {
@@ -290,9 +268,16 @@ window.onclick = function (event) {
         boolDropdown = false
         window.scrollTo({top: 0, behavior: 'smooth'});
         reverseContentDimmed()
-        return
     }
-    //console.log("window.onclick: boolDropdown:", boolDropdown)
+}
+
+function closeSearchForm() {
+    /* Shared between 'X' to close and click outside search query */
+    //const f = document.getElementById('search-form');           // Wrapper around query & close button
+    f.style.display = "none"  // Close search form
+    boolSearchForm = false
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    reverseContentDimmed()
 }
 
 var saveBackgroundColor;  // May 18/22 - New code not working
@@ -313,18 +298,28 @@ f.addEventListener('submit', submitted);
 
 f.addEventListener('input', set_x_to_close);
 
-// Close ('X') clicked on search input bar
-i.onclick = function(){
-    q.value = "";           // Clear all search words
-    set_x_to_close();       // Turn off 'X' (Close) icon
-};
+// Close ('X') or back tab character clicked on search input bar
+i.onclick = function(event) {
+    // Oct 15/22: Instead of making 'X' icon appear, change to: ⌫ ("&#x232B;")
+    if (q.value !== "") {
+        q.value = ""  // Erase search string
+        set_x_to_close()  // Set 'X' (Close) icon or back tab character
+    }
+    else closeSearchForm()
+}
 
 function set_x_to_close() {
-    // When search words typed, turn on "X" image to clear the words
+    // Oct 15/22: Instead of making 'X' icon appear, change to erase icon
     // const q = document.getElementById('search-query');
     // const i = document.getElementById('search-clear-input');
-    if (q.value !== "") { i.style.display = "inline-block"; }
-                   else { i.style.display = "none"; }
+    if (q.value == "") {
+        i.style.backgroundImage = "url({{ site.url }}/assets/img/icons/x.png)"
+        i.title = "Close search form"
+    }
+    else {
+        i.style.backgroundImage = "url({{ site.url }}/assets/img/icons/erase_input.png)"
+        i.title = "Clear search word(s)"
+    }
 }
 
 // From: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
