@@ -268,9 +268,9 @@ function closeSearchForm() {
     //const m = document.getElementById('search-modal');          // Where search results appear
     //const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
                                                                   // Black 'X' to close search
-
+    //const q = document.getElementById('search-query');          // Search words input by user
     if ((!f.contains(event.target) && f.style.display != "none") ||
-        (i.contains(event.target) && f.style.display != "none")) {
+        (i.contains(event.target) && q.value == "")) {
         f.style.display = "none"  // Close search form
         boolSearchForm = false
         window.scrollTo({top: 0, behavior: 'smooth'});
