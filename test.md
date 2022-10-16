@@ -29,6 +29,7 @@ contains Cayman Theme defaults for historical reference purposes.
 
 # Color Codes
 
+<h1 style="background-color:#555555;">.highlight .gp { color: #555555; }</h1>
 <h1 style="background-color:#5F9EA0;">.highlight .cm { color: #5F9EA0; }</h1>
 <h1 style="background-color:#00cdcd">.highlight .vc { color: #00cdcd; }</h1>
 
