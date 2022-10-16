@@ -27,15 +27,28 @@ contains Cayman Theme defaults for historical reference purposes.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
 
-# Color Codes
+# Color Codes - `rouge-github-monokai-sublime.scss`
 
+<h1 style="background-color:#999999;">.highlight .gh { color: #999999; }</h1>
+<h1 style="background-color:#f6aa11;">.highlight .sr { color: #f6aa11; }</h1>
+<h1 style="background-color:#888888;">.highlight .go { color: #888888; }</h1>
 <h1 style="background-color:#555555;">.highlight .gp { color: #555555; }</h1>
-<h1 style="background-color:#960050;">.highlight .err{ color: #960050; }</h1>
-<h1 style="background-color:#49483e;">.highlight .gd { color: #49483e; }}</h1>
+<h1 style="background-color:#aaaaaa;">.highlight .gu { color: #aaaaaa; }</h1>
+<h1 style="background-color:#f6aa11;">.highlight .nb { color: #f6aa11; }</h1>
 <h1 style="background-color:#5F9EA0;">.highlight .cm { color: #5F9EA0; }</h1>
+<h1 style="background-color:#960050;">.highlight .err{ color: #960050; }</h1>
+<h1 style="background-color:#49483e;">.highlight .gd { color: #49483e; }</h1>
+<h1 style="background-color:#66d9ef;">.highlight .kc { color: #66d9ef; }</h1>
+<h1 style="background-color:#ae81ff;">.highlight .mf { color: #ae81ff; }</h1>
+<h1 style="background-color:#e6db74;">.highlight .sd { color: #e6db74; }</h1>
 <h1 style="background-color:#a6e22e;">.highlight .fm { color: #a6e22e; }</h1>
-<h1 style="background-color:#00cdcd">.highlight .vc { color: #00cdcd; }</h1>
+<h1 style="background-color:#00cdcd;">.highlight .vc { color: #00cdcd; }</h1>
+<h1 style="background-color:#ffffff;">.highlight .w  { color: #ffffff; }</h1>
+<h1 style="background-color:#f92672;">.highlight .ow { color: #f92672; }</h1>
+<h1 style="background-color:#fbf1c7;">.highlight .pi { color: #fbf1c7; }</h1>
+<h1 style="background-color:#272822;">ALL { background-color: #272822; }</h1>
 
+# Miscellaneous Color Codes
 
 <h1 style="background-color:#1e6bb8;">--body-link-color: #1e6bb8;</h1>
 <h1 style="background-color:#e19447;">--body-link-inverted-color: #e19447;</h1>
