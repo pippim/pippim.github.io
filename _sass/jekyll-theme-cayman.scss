@@ -239,9 +239,9 @@ a {
     margin-bottom: 1rem;
     font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
     // Oct 15/22 - for monokai theme remove colors
-    // color: var(--code-text-color);
+    // Oct 15/22 - color: var(--code-text-color);
     word-wrap: normal;
-    // background-color: var(--code-bg-color);
+    // Oct 15/22 - background-color: var(--code-bg-color);
     border: solid 0.2rem var(--border-color);  // Oct 9/22 was 1px
     border-radius: 1rem;  // Oct 9/22 was 0.3
     max-height: 400px;  /* Force scroll bar for big code blocks */
@@ -251,7 +251,7 @@ a {
       padding: 0;
       margin: 0;
       font-size: 0.9rem;
-      // color: var(--code-text-color);
+      // Oct 15/22 - color: var(--code-text-color);
       word-break: normal;
       white-space: pre;
       background-color: transparent;  // Oct 9/22 was 'background:'
