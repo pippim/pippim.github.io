@@ -204,7 +204,7 @@ I think that the bar on the pop-up window should be high as when
     color: var(--button-focus-color);
 }
 
-/* progress bar in Run Timers table */
+/* Required for Firefox */
 progress::-moz-progress-bar {
     background: var(--progress-bar-color); /* Same color as chrome */
     border-radius: .5rem;
@@ -216,21 +216,15 @@ progress {
     height: 1.2rem; /* Oct 12/22 was .8rem */
     vertical-align: middle;
     border-radius: .5rem;
+    /* Next two lines for Chrome only */
     -webkit-appearance: none;
-    overflow: hidden; /* For Chrome */
+    overflow: hidden;
 }
-/* Requires -webkit-appearance: none; */
+
+/* Required for Chrome so progress bar is rounded*/
 progress::-webkit-inner-element {
     border-radius: .5rem;
 }
-/* -webkit- is for Chrome/Safari.  Oct 14/22 confirm both below needed.
-progress::-webkit-progress-bar {
-    border-radius: .5rem;
-}
-progress::-webkit-progress-value {
-    border-radius: .5rem;
-}
-*/
 
 /* Slider switches */
 .inpOnOffSwitch {
@@ -1437,6 +1431,7 @@ function progressTouched(i, element) {
     // What is the running progress bar number?
     const activeBarNo = getActiveTimerNo();
     const boolTouchedActive = i + 1 === activeBarNo ? true : false;
+    console.log("Debug boolTouchedActive > i:", i, "activeBarNo:", activeBarNo)
 
     popClearByError("no_tasks_running");  // If clicked on good bar, remove old msg
     if (activeBarNo == 0) {
