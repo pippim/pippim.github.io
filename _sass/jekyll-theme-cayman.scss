@@ -227,9 +227,10 @@ a {
     padding: 2px 4px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 92%;  // Change 0.9rem to 92% for proper size in headings
-    color: var(--code-text-color);
-    background-color: var(--code-bg-color);
-    border-radius: 0.3rem;
+    // Oct 15/22 - for monokaie theme remove colors
+    // color: var(--code-text-color);
+    // background-color: var(--code-bg-color);
+    // border-radius: 0.3rem;
   }
 
   pre {
