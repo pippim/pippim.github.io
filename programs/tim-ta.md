@@ -248,6 +248,11 @@ with saved popup window locations and sizes in version 1.1.
 
 - Dark theme for entire {{ site.title }} website is complete.
 
+### October 16, 2022 Update
+
+- Fix rounded ends of progress bar. They were straight.
+- Begin fine-tuning Rouge Code Syntax Highlighting theme "Monokai Sublime" 
+
 ## Tim-ta Version 1.0 Development History
 
 ### May 8, 2022 Update
