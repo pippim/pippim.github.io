@@ -33,6 +33,7 @@ contains Cayman Theme defaults for historical reference purposes.
 <h1 style="background-color:#960050;">.highlight .err{ color: #960050; }</h1>
 <h1 style="background-color:#49483e;">.highlight .gd { color: #49483e; }}</h1>
 <h1 style="background-color:#5F9EA0;">.highlight .cm { color: #5F9EA0; }</h1>
+<h1 style="background-color:#a6e22e;">.highlight .fm { color: #a6e22e; }</h1>
 <h1 style="background-color:#00cdcd">.highlight .vc { color: #00cdcd; }</h1>
 
 
