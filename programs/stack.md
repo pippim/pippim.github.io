@@ -73,7 +73,7 @@ of the Pippim website at `pippim.github.io`. As of
 {{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
 for {{ site.title }} on GitHub Pages looked like this:
 
-<div id="line_draw">
+<div class="line-draw">
 {% highlight text %}
 {% include website_tree.txt %}
 {% endhighlight %}
