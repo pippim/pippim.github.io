@@ -47,6 +47,7 @@ contains Cayman Theme defaults for historical reference purposes.
 <h1 style="background-color:#f92672;">.highlight .ow { color: #f92672; }</h1>
 <h1 style="background-color:#fbf1c7;">.highlight .pi { color: #fbf1c7; }</h1>
 <h1 style="background-color:#272822;">ALL { background-color: #272822; }</h1>
+<h1 style="background-color:#75715e;">dimgrey => '#75715e'</h1>
 
 # Rouge Legend
 
