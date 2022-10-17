@@ -430,6 +430,9 @@ details[open] > summary {
     text-align: center;
 }
 
+/* For /_includes/website.txt */
+.line-draw { line-height: 1 ! important; }
+
 /* MAJOR SECTION ======== search.html styling */
 
 ::placeholder {
