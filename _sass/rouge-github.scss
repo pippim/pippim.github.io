@@ -1,53 +1,46 @@
 /*  https://github.com/pages-themes/cayman/blob/master/_sass/rouge-github.scss
     Oct 15/22 copy from rouge-github-monokai-sublime.scss (backup version)
+    // = found in original cayman theme
 */
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
-.highlight .gh { color: #999999; }
+.highlight .gh { color: #999999; } //
 .highlight .sr { color: #f6aa11; }
-.highlight .go { color: #888888; }
-.highlight .gp { color: #555555; }
-.highlight .gs {
-  font-weight: bold;
-}
-.highlight .gu { color: #aaaaaa; }
+.highlight .go { color: #888888; } //
+.highlight .gp { color: #555555; } //
+.highlight .gs {    font-weight: bold; } //
+.highlight .gu { color: #aaaaaa; } //
 .highlight .nb { color: #f6aa11; }
-
-.highlight .cm { color: #5F9EA0; font-style: italic; }
-.highlight .cp { color: #5F9EA0; }
-.highlight .c1 { color: #5F9EA0; }
-.highlight .cs { color: #5F9EA0; }
-.highlight .c,
-.highlight .ch,
-.highlight .cd,
-.highlight .cpf{ color: #5F9EA0; font-style: italic; }
-
-.highlight .err{ color: #960050; }
-.highlight .gr { color: #960050; }
-.highlight .gt { color: #960050; }
-
-.highlight .gd { color: #49483e; }
-.highlight .gi { color: #49483e; }
-.highlight .ge { color: #49483e; }
-
-.highlight .kc { color: #66d9ef; }
-.highlight .kd { color: #66d9ef; }
-.highlight .kr { color: #66d9ef; }
+.highlight .cm { color: #5F9EA0; font-style: italic; } //
+.highlight .cp { color: #5F9EA0; } //
+.highlight .c1 { color: #5F9EA0; font-style: italic; } //
+.highlight .cs { color: #5F9EA0; font-weight: bold; font-style: italic; } //
+.highlight .c  { color: #5F9EA0; font-style: italic; } //
+.highlight .ch { color: #5F9EA0; } // missing
+.highlight .cd { color: #5F9EA0; font-style: italic; } //
+.highlight .cpf{ color: #5F9EA0; } // missing
+.highlight .err{ color: #960050; } // background ?
+.highlight .gr { color: #960050; } //
+.highlight .gt { color: #960050; } //
+.highlight .gd { color: #49483e; } // background ?
+.highlight .gi { color: #49483e; } //
+.highlight .ge { color: #49483e; font-style: italic; } //
+.highlight .kc { color: #66d9ef; font-weight: bold; } //
+.highlight .kd { color: #66d9ef; font-weight: bold; } //
+.highlight .kr { color: #66d9ef; font-weight: bold; } //
 .highlight .no { color: #66d9ef; }
-.highlight .kt { color: #66d9ef; }
-
+.highlight .kt { color: #66d9ef; font-weight: bold; } //
 .highlight .mf { color: #ae81ff; }
 .highlight .mh { color: #ae81ff; }
 .highlight .il { color: #ae81ff; }
 .highlight .mi { color: #ae81ff; }
 .highlight .mo { color: #ae81ff; }
-.highlight .m,
-.highlight .mb,
+.highlight .m  { color: #ae81ff; }
+.highlight .mb { color: #ae81ff; }
 .highlight .mx { color: #ae81ff; }
 .highlight .sc { color: #ae81ff; }
 .highlight .se { color: #ae81ff; }
 .highlight .ss { color: #ae81ff; }
-
 .highlight .sd { color: #e6db74; }
 .highlight .s2 { color: #e6db74; }
 .highlight .sb { color: #e6db74; }
@@ -55,17 +48,15 @@
 .highlight .si { color: #e6db74; }
 .highlight .sx { color: #e6db74; }
 .highlight .s1 { color: #e6db74; }
-.highlight .s,
-.highlight .sa,
+.highlight .s  { color: #e6db74; }
+.highlight .sa { color: #e6db74; }
 .highlight .dl { color: #e6db74; }
-
 .highlight .na { color: #a6e22e; }
 .highlight .nc { color: #a6e22e; }
 .highlight .nd { color: #a6e22e; }
 .highlight .ne { color: #a6e22e; }
-.highlight .nf,
+.highlight .nf { color: #a6e22e; }
 .highlight .fm { color: #a6e22e; }
-
 .highlight .vc { color: #00cdcd; }
 .highlight .nn { color: #00cdcd; }
 .highlight .nl { color: #00cdcd; }
@@ -73,23 +64,20 @@
 .highlight .bp { color: #00cdcd; }
 .highlight .vg { color: #00cdcd; }
 .highlight .vi { color: #00cdcd; }
-.highlight .nv,
+.highlight .nv { color: #00cdcd; }
 .highlight .vm { color: #00cdcd; }
-
 .highlight .w  { color: #ffffff; }
 .highlight .n  { color: #ffffff; }
-.highlight .py,
+.highlight .py { color: #ffffff; }
 .highlight .nx { color: #ffffff; }
-
 .highlight .ow { color: #f92672; }
 .highlight .nt { color: #f92672; }
-.highlight .k,
-.highlight .kv { color: #f92672; }
-.highlight .kn { color: #f92672; }
-.highlight .kp { color: #f92672; }
+.highlight .k  { color: #f92672; font-weight: bold; } //
+.highlight .kv { color: #f92672; font-weight: bold; } //
+.highlight .kn { color: #f92672; font-weight: bold; } //
+.highlight .kp { color: #f92672; font-weight: bold; } //
 .highlight .o  { color: #f92672; }
-
-.highlight .p,
+.highlight .p  { color: #fbf1c7; }
 .highlight .pi { color: #fbf1c7; }
 
 .highlight {
@@ -101,7 +89,7 @@
   margin-top: 27px;
   margin-left: 0px;
   margin-right: 0px;
-  width: 100%;*/
+  width: 100%; */
 }
 
 /* End of rouge-github-monokai-sublime.scss */
