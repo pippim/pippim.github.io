@@ -53,6 +53,8 @@ contains Cayman Theme defaults for historical reference purposes.
 
 ## Rouge List of Tokens
 
+
+
 [Rouge Ruby List of Tokens 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-tokens 
 "CSS class names used by Rouge in Jekyll Github Pages"){:target="_blank"}.
 
@@ -61,6 +63,7 @@ contains Cayman Theme defaults for historical reference purposes.
 | Text |  | Any type of text data |
 | Text.Whitespace | w | Specially highlighted whitespace |
 | Error | err | Lexer errors |
+| Escape | esc | Escape (NEW) |
 | Other | x | Token for data not matched by a parser (e.g. HTML markup in PHP code)|
 | Keyword | k | Any keyword |
 | Keyword.Constant | kc | Keywords that are constants |
@@ -88,11 +91,14 @@ contains Cayman Theme defaults for historical reference purposes.
 | Name.Variable.Class | vc | Token for class variables (e.g. @@var in Ruby) |
 | Name.Variable.Global | vg | For global variables (such as $LOAD_PATH in Ruby) |
 | Name.Variable.Instance | vi | Token for instance variables (such as @var in Ruby) |
+| Name.Variable.Magic | vm | Token for magic variables (NEW) |
 | Literal | l | Any literal (if not further defined) |
 | Literal.Date | ld | Date literals |
 | Literal.String | s | String literals |
+| Literal.String.Affix | sa | String Affix (NEW) |
 | Literal.String.Backtick | sb | String enclosed in backticks |
 | Literal.String.Char | sc | Token type for single characters |
+| Literal.String.Delimiter | dl | String Delimiter (NEW) |
 | Literal.String.Doc | sd | Documentation strings (such as in Python) |
 | Literal.String.Double | s2 | Double quoted strings |
 | Literal.String.Escape | se | Escaped sequences in strings |
@@ -113,9 +119,13 @@ contains Cayman Theme defaults for historical reference purposes.
 | Operator | o | Operators (commonly +, -, /, *) |
 | Operator.Word | ow | Word operators (e.g. and) |
 | Punctuation | p | Punctuation which is not an operator |
+| Punctuation.Indicator | pi | Punctuation indicator (NEW) |
 | Comment | c | Single line comments |
+| Comment.Hashbang | ch | Hashbang comment (NEW) |
+| Comment.Doc | cd | Doc comment (NEW) |
 | Comment.Multiline | cm | Multiline comments |
 | Comment.Preproc | cp | Preprocessor comments such as <% %> in ERb |
+| Comment.PreprocFile | cpf | Preprocessor comments file (NEW) |
 | Comment.Single | c1 | Comments that end at the end of the line |
 | Comment.Special | cs | Special data in comments such as @license in Javadoc |
 | Generic | g | Unstyled token |
@@ -130,6 +140,12 @@ contains Cayman Theme defaults for historical reference purposes.
 | Generic.Subheading | gu | Marked as a sub-headline |
 | Generic.Traceback | gt | Mark the token as a part of an error traceback |
 | Generic.Lineno | gl | Line numbers |
+
+
+
+NEW discovered in code provided by tech support on Github.
+[Rouge `token.rb` 🔗](https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/token.rb#L75 
+"CSS class names used by Rouge in Jekyll Github Pages"){:target="_blank"}
 
 <script>
 async function myFetch() {
