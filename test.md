@@ -53,8 +53,8 @@ contains Cayman Theme defaults for historical reference purposes.
 
 ## Rouge List of Tokens
 
-[See](https://github.com/rouge-ruby/rouge/wiki/List-of-tokens) 
-website for original table.
+[Rouge Ruby List of Tokens 🔗](https://github.com/rouge-ruby/rouge/wiki/List-of-tokens 
+"CSS class names used by Rouge in Jekyll Github Pages"){:target="_blank"}.
 
 | ***Token name*** | ***Token shortname*** | ***Description*** |
 |-------|-------|---------|
