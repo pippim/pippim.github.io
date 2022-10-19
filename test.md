@@ -51,6 +51,11 @@ contains Cayman Theme defaults for historical reference purposes.
 
 # Test Fetch API
 
+## Rouge List of Tokens
+
+[See](https://github.com/rouge-ruby/rouge/wiki/List-of-tokens) 
+website for original table.
+
 | ***Token name*** | ***Token shortname*** | ***Description*** |
 |-------|-------|---------|
 | Text |  | Any type of text data |
@@ -138,7 +143,10 @@ async function myFetch() {
     console.log(text);
 }
 
-myFetch()
+// myFetch()
+// Cross-Origin Request Blocked: The Same Origin Policy disallows reading the 
+// remote resource at https://github.com/rouge-ruby/rouge/wiki/List-of-tokens. 
+// (Reason: CORS header “Access-Control-Allow-Origin” missing).
 
 </script>
 
