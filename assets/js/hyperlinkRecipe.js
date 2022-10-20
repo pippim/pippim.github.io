@@ -97,8 +97,9 @@ export function processHyperlinkRecipe(id) {
     html += '<style>\n'
     /* Oct 19/22 - When message is needed, set 'display: block' */
     html += '#hrbMessageId {\n' +
-            '  display: none;\n' +
+            '  display: block;\n' +
             '  border: 4px solid var(--hr-border-color);\n' +
+            '  padding: 1rem;\n' +
             '  margin-bottom: 1rem;\n' +
             '}\n'
     // Parent <div> should have border for better looks
@@ -218,7 +219,7 @@ export function processHyperlinkRecipe(id) {
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
-    showMessage("Test Message")
+    // showMessage("Test Message")
 
 }
 
