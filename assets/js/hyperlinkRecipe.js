@@ -108,7 +108,7 @@ export function processHyperlinkRecipe(id) {
     // No borders inside the table
     html += '#' + id + ' table, tr, th, td { border: none ! important; }\n'
     // Table details: Space between columns
-    html += '#' + id + ' td { padding: 0 1rem; }\n'
+    html += '#' + id + ' td { padding: .25rem 1rem; }\n' /* Oct 20/22 was padding: 0 1rem; */
     // html += '#' + id + ' td+td { width: auto; }\n'
     // Because Chrome and Firefox vary between shrinking & expanding on hover
     html += '.hrbBtn {\n' +
