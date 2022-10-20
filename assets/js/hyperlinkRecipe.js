@@ -31,7 +31,7 @@ export function processHyperlinkRecipe(id) {
 
     var html = '<div id="hrbMessageId">\n' +  // This div above HRB will show error messages
                '<span id="hrbMessageText">Test message</span>\n' +
-               '<button class="icon_back" onclick="closeMessage()" \n' +
+               '<button class="icon_back" id="hrbMessageBtn" \n' +
                'style = "display: inline-block; float: right; width: 2rem; height: 2rem; \n' +
                '         background-image: url(/assets/img/icons/x.png);"\n' +
                '</button>\n' +
@@ -210,6 +210,8 @@ export function processHyperlinkRecipe(id) {
     document.getElementById("btnNewWindow").onclick = doNewWindow;
     document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
     document.getElementById("btnRecipeMd").onclick = doRecipeMd;
+    /* onclick= doesn't work inside user script */
+    document.getElementById("hrbMessageBtn").onclick = closeMessage;
 
     /* When user changes a character or pastes directly */
     inputHref.oninput = function() {buildRecipes()};
