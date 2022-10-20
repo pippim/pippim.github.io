@@ -34,7 +34,7 @@ export function processHyperlinkRecipe(id) {
     html += '<form><table id="hrbTable" class="hrb_table">\n'
     // Ingredients heading
     html += '<tr><th>Ingredients</th>\n' +
-            '<th>Ingredient button inserts the clipboard contents, or type below</th></tr>\n'
+            '<th>Click button or use <kbd>Ctrl</kbd> + <kbd>V</kbd> to insert clipboard contents</th></tr>\n'
     // Button and textarea for URL (href)
     html += '<tr><td><button class="hrbBtn" id="btnHref" type="button"\n' +
             'title="Browser address bar (paste from the clipboard)"\n' +
