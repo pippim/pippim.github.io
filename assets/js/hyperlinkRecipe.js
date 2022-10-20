@@ -32,7 +32,7 @@ export function processHyperlinkRecipe(id) {
     var html = '<div id="hrbMessageId">\n' +  // This div above HRB will show error messages
                '<button class="icon_back" onclick="closeMessage()"\n' +
                'style = "float: right; width: 2rem; height: 2rem; \n' +
-               '         background-image: /assets/img/icons/x.png);"\n' +
+               '         background-image: url(/assets/img/icons/x.png);"\n' +
                '</button>\n' +
                '</div>\n'
     html += '<h3 id="hrbHdr">Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
@@ -98,8 +98,8 @@ export function processHyperlinkRecipe(id) {
     /* Oct 19/22 - When message is needed, set 'display: block' */
     html += '#hrbMessageId {\n' +
             '  display: none;\n' +
-            '  border: .2rem solid;\n' +
-            '  padding-bottom: 1rem;\n' +
+            '  border: 4px solid var(--hr-border-color);\n' +
+            '  margin-bottom: 1rem;\n' +
             '}\n'
     // Parent <div> should have border for better looks
     // ONLY for hrb_body, not for tcm_window_body!
