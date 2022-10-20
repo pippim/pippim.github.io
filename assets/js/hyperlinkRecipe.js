@@ -22,6 +22,7 @@ var inputExternal = null
 var inputNewWindow = null
 var inputRecipeHtml = null
 var inputRecipeMd = null
+var hrbMessageElm
 
 export function processHyperlinkRecipe(id) {
     const b = document.getElementById(id)  // div body id where html codes go
@@ -89,6 +90,12 @@ export function processHyperlinkRecipe(id) {
 
     // Styling for Hyperlink Recipe table
     html += '<style>\n'
+    /* Oct 19/22 - When message is needed, set 'display: block' */
+    html += '#hrbMessageId {\n' +
+            '  display: none;\n' +
+            '  border: .2rem solid;\n' +
+            '  padding-bottom: 1rem;\n' +
+            '}\n'
     // Parent <div> should have border for better looks
     // ONLY for hrb_body, not for tcm_window_body!
     html += '#hrb_body' + ' { border: .2rem solid; padding-bottom: 1rem; }\n'
@@ -133,7 +140,7 @@ export function processHyperlinkRecipe(id) {
 
     // Some space between columns
     document.getElementById("hrbTable").style.borderSpacing = ".3rem";
-
+    hrbMessageElm = document.getElementById("hrbMessageId")
     /* Set easier to use element names for inputs by id */
     inputHref = document.getElementById('hrHref');
     inputText = document.getElementById('hrText');
