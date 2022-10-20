@@ -1,8 +1,6 @@
 /*
     /assets/js/hyperlinkRecipe.js - Hyperlink Recipe Baker (HRM for short)
 
-    Instructions: https://pippim.github.io/hyperlink.html
-
     TODO: Need cookies for:
         autoRows:   "0" = No auto resizing
                   > "0" = maximum number of auto-resized rows
@@ -30,7 +28,8 @@ export function processHyperlinkRecipe(id) {
     // Button class = "hrbBtn". Don't use "button" which parent may have!!!
     // NOTE: onclick is not supported: https://stackoverflow.com/a/17378538/6929343
 
-    var html = '<h3 id="hrbHdr">Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
+    var html = '<div id="hrbMessageId"></div>\n'  // Top of page will show errors
+    html += '<h3 id="hrbHdr">Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
     // Table must be created wrapped inside form for <input variables
     html += '<form><table id="hrbTable" class="hrb_table">\n'
     // Ingredients heading
@@ -144,7 +143,45 @@ export function processHyperlinkRecipe(id) {
     inputRecipeHtml = document.getElementById('hrRecipeHtml');
     inputRecipeMd = document.getElementById('hrRecipeMd');
 
-    /* Clipboard read functions (HIGH SECURITY) for href, text and title buttons */
+    /* Clipboard read functions (HIGH SECURITY) for href, text and title buttons
+
+    Oct 18/2022 = Get error:
+
+    Uncaught TypeError: navigator.clipboard.readText is not a function
+    processHyperlinkRecipe https://www.pippim.com/assets/js/hyperlinkRecipe.js:148
+
+    need something like:
+
+        async function pasteImage() {
+          try {
+            const permission = await navigator.permissions.query({ name: 'clipboard-read' });
+            if (permission.state === 'denied') {
+              throw new Error('Not allowed to read clipboard.');
+            }
+            const clipboardContents = await navigator.clipboard.read();
+            for (const item of clipboardContents) {
+              if (!item.types.includes('image/png')) {
+                throw new Error('Clipboard contains non-image data.');
+              }
+              const blob = await item.getType('image/png');
+              destinationImage.src = URL.createObjectURL(blob);
+            }
+          }
+          catch (error) {
+            console.error(error.message);
+          }
+        }
+
+    Display instructions:
+
+    The only way to enable clipboard reading (and writing) is to enable
+    dom.events.testing.asyncClipboard on Firefox client:
+
+    1. Enter about:config in navigation bar
+    2. Click "Accept the Risk and Continue"
+    3. Search dom.events.testing.asyncClipboard and set true
+
+    */
     btnHref.addEventListener( 'click', () => { navigator.clipboard.readText().then(
             clipText => updateInput (inputHref, clipText)); });
     btnText.addEventListener( 'click', () => { navigator.clipboard.readText().then(
