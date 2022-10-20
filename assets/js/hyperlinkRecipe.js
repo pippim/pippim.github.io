@@ -220,14 +220,14 @@ export function processHyperlinkRecipe(id) {
 
 }
 
-showMessage(msg) {
+function showMessage(msg) {
     hrbMessageElm.innerHTML = msg
     hrbMessageElm.style.display = "block"
 }
 
 showMessage("Test Message")
 
-closeMessage() {
+function closeMessage() {
     hrbMessageElm.style.display = "none"
 }
 
