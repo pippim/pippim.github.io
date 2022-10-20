@@ -22,7 +22,7 @@ var inputExternal = null
 var inputNewWindow = null
 var inputRecipeHtml = null
 var inputRecipeMd = null
-var hrbMessageElm
+var hrbMessageElm, hrbMessageTextElm
 
 export function processHyperlinkRecipe(id) {
     const b = document.getElementById(id)  // div body id where html codes go
@@ -148,6 +148,7 @@ export function processHyperlinkRecipe(id) {
     // Some space between columns
     document.getElementById("hrbTable").style.borderSpacing = ".3rem";
     hrbMessageElm = document.getElementById("hrbMessageId")
+    hrbMessageTextElm = document.getElementById("hrbMessageText")
     closeMessage()  // Set display none
     /* Set easier to use element names for inputs by id */
     inputHref = document.getElementById('hrHref');
@@ -220,12 +221,12 @@ export function processHyperlinkRecipe(id) {
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
-    // showMessage("Test Message")
+    showMessage("Test from showMessage()")
 
 }
 
 function showMessage(msg) {
-    hrbMessageElm.innerHTML = msg
+    hrbMessageTextElm.innerHTML = msg
     hrbMessageElm.style.display = "block"
 }
 
