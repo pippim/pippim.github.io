@@ -30,7 +30,7 @@ export function processHyperlinkRecipe(id) {
     // NOTE: onclick is not supported: https://stackoverflow.com/a/17378538/6929343
 
     var html = '<div id="hrbMessageId">\n' +  // This div above HRB will show error messages
-               '<button class="icon_back" onclick="closeMessage()\n" +
+               '<button class="icon_back" onclick="closeMessage()"\n' +
                'style = "float: right; width: 2rem; height: 2rem; \n' +
                '         background-image: /assets/img/icons/x.png);"\n' +
                '</button>\n' +
