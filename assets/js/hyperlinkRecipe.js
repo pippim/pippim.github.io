@@ -218,14 +218,14 @@ export function processHyperlinkRecipe(id) {
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
+    showMessage("Test Message")
+
 }
 
 function showMessage(msg) {
     hrbMessageElm.innerHTML = msg
     hrbMessageElm.style.display = "block"
 }
-
-showMessage("Test Message")
 
 function closeMessage() {
     hrbMessageElm.style.display = "none"
