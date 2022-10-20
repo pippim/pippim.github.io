@@ -29,7 +29,12 @@ export function processHyperlinkRecipe(id) {
     // Button class = "hrbBtn". Don't use "button" which parent may have!!!
     // NOTE: onclick is not supported: https://stackoverflow.com/a/17378538/6929343
 
-    var html = '<div id="hrbMessageId"></div>\n'  // Top of page will show errors
+    var html = '<div id="hrbMessageId">\n' +  // This div above HRB will show error messages
+               '<button class="icon_back" onclick="closeMessage()\n" +
+               'style = "float: right; width: 2rem; height: 2rem; \n' +
+               '         background-image: /assets/img/icons/x.png);"\n' +
+               '</button>\n' +
+               '</div>\n'
     html += '<h3 id="hrbHdr">Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
     // Table must be created wrapped inside form for <input variables
     html += '<form><table id="hrbTable" class="hrb_table">\n'
@@ -141,6 +146,7 @@ export function processHyperlinkRecipe(id) {
     // Some space between columns
     document.getElementById("hrbTable").style.borderSpacing = ".3rem";
     hrbMessageElm = document.getElementById("hrbMessageId")
+    closeMessage()  // Set display none
     /* Set easier to use element names for inputs by id */
     inputHref = document.getElementById('hrHref');
     inputText = document.getElementById('hrText');
@@ -212,6 +218,17 @@ export function processHyperlinkRecipe(id) {
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
+}
+
+showMessage(msg) {
+    hrbMessageElm.innerHTML = msg
+    hrbMessageElm.style.display = "block"
+}
+
+showMessage("Test Message")
+
+closeMessage() {
+    hrbMessageElm.style.display = "none"
 }
 
 /* Shared function to read clipboard and update input */
