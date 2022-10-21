@@ -250,8 +250,12 @@ async function pasteText(targetElm) {
             clipText => updateInput (targetElm, clipText))
     }
     catch (error) {
+        const link = '<a href="https://www.pippim.com/programs/hyperlink.html' +
+                     '#read-clipboard-special-permissions" target="_blank"  ' +
+                     'title="Review how to grant read clipboard permission">' +
+                     'grant clipboard permission</a>'
         showMessage("Permissions for reading clipboard not set. "+
-                    "Give clipboard read permissions or use " +
+                    "Either " + link + " or use " +
                     "<kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>V</kbd> " +
                     "to paste clipboard contents.");
     }
