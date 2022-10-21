@@ -74,6 +74,7 @@ Voila! You are now a master baker.
 
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
+<a id="read-clipboard-permissions"></a>
 
 ## Read Clipboard Special Permissions
 
@@ -108,7 +109,8 @@ permission with these steps:
 
 If you don't want to grant permissions you can still use HRB by
 using <kbd>Control</kbd> + <kbd>V</kbd> to paste clipboard
-contents directly in the input field instead of using the button.
+contents directly in the input field instead of using the button
+to insert clipboard contents.
 
 ---
 
