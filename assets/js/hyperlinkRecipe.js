@@ -199,13 +199,14 @@ export function processHyperlinkRecipe(id) {
 
     btnHref.addEventListener( 'click', () => { navigator.clipboard.readText().then(
             clipText => updateInput (inputHref, clipText)); });
-    */
-    btnHref.addEventListener( 'click', () => { pasteText(inputHref) })
-
     btnText.addEventListener( 'click', () => { navigator.clipboard.readText().then(
             clipText => updateInput (inputText, clipText)); });
     btnTitle.addEventListener('click', () => { navigator.clipboard.readText().then(
             clipText => updateInput (inputTitle, clipText)); });
+    */
+    btnHref.addEventListener( 'click', () => { pasteText(inputHref) })
+    btnHref.addEventListener( 'click', () => { pasteText(inputText) })
+    btnHref.addEventListener( 'click', () => { pasteText(inputTitle) })
 
     /* Functions to format recipe & put into clipboard (low security) */
     document.getElementById("btnExternal").onclick = doExternal;
@@ -251,7 +252,9 @@ async function pasteText(targetElm) {
             clipText => updateInput (targetElm, clipText))
     }
     catch (error) {
-        showMessage("Permissions for reading clipboard not set.");
+        showMessage("Permissions for reading clipboard not set. "+
+                    "Give clipboard read permissions or use <kbd>Ctrl</kbd> " +
+                    "+ <kbd>V</kbd> to paste clipboard contents.");
     }
 }
 
