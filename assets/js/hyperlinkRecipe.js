@@ -99,7 +99,8 @@ export function processHyperlinkRecipe(id) {
     html += '<style>\n'
     /* Oct 19/22 - When message is needed, set 'display: block' */
     html += '#hrbMessageId {\n' +
-            '  display: none;\n' +
+            '  display: flex;\n' +
+            '  justify-content: space-between;\n' +
             '  border: 4px solid var(--hr-border-color);\n' +
             '  padding: 1rem;\n' +
             '  margin-bottom: 1rem;\n' +
@@ -230,7 +231,7 @@ export function processHyperlinkRecipe(id) {
 
 function showMessage(msg) {
     hrbMessageTextElm.innerHTML = msg
-    hrbMessageElm.style.display = "block"
+    hrbMessageElm.style.display = "flex"
 }
 
 function closeMessage() {
