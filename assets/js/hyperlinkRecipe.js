@@ -251,13 +251,13 @@ async function pasteText(targetElm) {
     }
     catch (error) {
         const link = '<a href="https://www.pippim.com/programs/hyperlink.html' +
-                     '#read-clipboard-special-permissions" target="_blank"  ' +
+                     '#read_clipboard_permissions" target="_blank"  ' +
                      'title="Review how to grant read clipboard permission">' +
                      'grant clipboard permission</a>'
-        showMessage("Permissions for reading clipboard not set. "+
-                    "Either " + link + " or use " +
-                    "<kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>V</kbd> " +
-                    "to paste clipboard contents.");
+        showMessage ("Permissions for reading clipboard not set. "+
+                     "Either " + link + " or use " +
+                     "<kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>V</kbd> " +
+                     "to paste clipboard contents.")
     }
 }
 
