@@ -33,6 +33,7 @@ export function processHyperlinkRecipe(id) {
                '<span id="hrbMessageText">Test message</span>\n' +
                '<button class="icon_back" id="hrbMessageBtn" \n' +
                'style = "float: right; width: 2rem; height: 2rem; \n' +
+               '         position: absolute; right: 1rem;"\n' +
                '         background-image: url(/assets/img/icons/x.png);"\n' +
                '</button>\n' +
                '</div>\n'
