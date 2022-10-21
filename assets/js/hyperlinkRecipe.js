@@ -206,8 +206,8 @@ export function processHyperlinkRecipe(id) {
             clipText => updateInput (inputTitle, clipText)); });
     */
     btnHref.addEventListener( 'click', () => { pasteText(inputHref) })
-    btnHref.addEventListener( 'click', () => { pasteText(inputText) })
-    btnHref.addEventListener( 'click', () => { pasteText(inputTitle) })
+    btnText.addEventListener( 'click', () => { pasteText(inputText) })
+    btnTitle.addEventListener( 'click', () => { pasteText(inputTitle) })
 
     /* Functions to format recipe & put into clipboard (low security) */
     document.getElementById("btnExternal").onclick = doExternal;
@@ -288,29 +288,26 @@ var newClip = null
 
 function updateInput (elm, text) {
     // Pasting from clipboard could have line break at end of string
-    var text = text.replace(/\n$/, '');
+    var text = text.replace(/\n$/, '')
     if (text == null || text == "") {
-        alert('Clipboard is empty or permissions not granted to read clipboard.\n\n' +
-              'Chrome will seek your permission per website.\n\n' +
-              'Firefox requires you to grant permissions to all websites:\n' +
-              '  Enter "about:config" in the address bar (without quotes).\n' +
-              '  Search on "dom.events.testing.asyncClipboard" (without quotes).\n' +
-              '  Click the toggle icon to switch "False" to "True".\n\n' +
-              'Or use "CTRL" + "V" or "Right-Click" then "Paste" to paste manually.\n' +
-              'Then click button to add ingredient to recipe.')
+        showMessage("Clipboard is empty. Make sure you copy text first.")
+        return
+    }
+    if (text.length > 2048) {
+        showMessage("Clipboard text > 2048 characters. Verify what was copied.")
         return
     }
     oldClip = elm.value
     elm.value = text            // Set value of Input to clipboard contents
     newClip = text
     if (autoRows != "0") { setTextAreaRows(elm) }
-    buildRecipes();
-    if (elm == inputHref) { validateUrl(text); }
+    buildRecipes()
+    if (elm == inputHref) { validateUrl(text) }
 }
 
 /* Non-clipboard reading functions called on button click */
 var useExternal = false;
-var stringExternal = " 🔗";  // TODO: Make into cookie
+var stringExternal = " 🔗";  // TODO: Make into local storage option
 
 function doExternal () {
     // If external off turn on, if on then turn off
