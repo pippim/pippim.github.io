@@ -251,7 +251,7 @@ async function pasteText(targetElm) {
     }
     catch (error) {
         const link = '<a href="https://www.pippim.com/programs/hyperlink.html' +
-                     '#read_clipboard_permissions" target="_blank"  ' +
+                     '#read-clipboard-permissions" target="_blank"  ' +
                      'title="Review how to grant read clipboard permission">' +
                      'grant clipboard permission</a>'
         showMessage ("Permissions for reading clipboard not set. "+
