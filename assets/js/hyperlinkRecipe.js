@@ -31,9 +31,9 @@ export function processHyperlinkRecipe(id) {
 
     var html = '<div id="hrbMessageId">\n' +  // This div above HRB will show error messages
                '<span id="hrbMessageText">Test message</span>\n' +
-               '<button class="icon_back" id="hrbMessageBtn" \n' +
-               'style = "float: right; width: 2rem; height: 2rem; \n' +
-               '         position: relative; margin-right: 1rem; \n' +
+               '<button class="icon_back_fixed" id="hrbMessageBtn" \n' +
+               'style = "float: right; \n' +
+               '         margin-left: 1rem; margin-right: 1rem; \n' +
                '         background-image: url(/assets/img/icons/x.png);"\n' +
                '</button>\n' +
                '</div>\n'
@@ -92,14 +92,14 @@ export function processHyperlinkRecipe(id) {
             '>Markdown</button></td>\n' +
             '<td><textarea id="hrRecipeMd" class="hrbInput" cols="45" rows="1"\n' +
             'placeholder="Markdown Recipe will be built here"></textarea></td></tr>\n'
-    html += '</table></form>\n'     // End of our table and form
+    html += '</table></form>\n'  // End of our table and form
 
 
     // Styling for Hyperlink Recipe table
     html += '<style>\n'
     /* Oct 19/22 - When message is needed, set 'display: block' */
     html += '#hrbMessageId {\n' +
-            '  display: block;\n' +
+            '  display: none;\n' +
             '  border: 4px solid var(--hr-border-color);\n' +
             '  padding: 1rem;\n' +
             '  margin-bottom: 1rem;\n' +
@@ -226,10 +226,7 @@ export function processHyperlinkRecipe(id) {
 
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
-
-    showMessage("Test from showMessage()")
-
-}
+}  // End of processHyperlinkRecipe(id)
 
 function showMessage(msg) {
     hrbMessageTextElm.innerHTML = msg
