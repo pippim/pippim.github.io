@@ -253,8 +253,9 @@ async function pasteText(targetElm) {
     }
     catch (error) {
         showMessage("Permissions for reading clipboard not set. "+
-                    "Give clipboard read permissions or use <kbd>Ctrl</kbd> " +
-                    "+ <kbd>V</kbd> to paste clipboard contents.");
+                    "Give clipboard read permissions or use " +
+                    ""<kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>V</kbd> " +
+                    "to paste clipboard contents.");
     }
 }
 
