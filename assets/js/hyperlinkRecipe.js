@@ -293,6 +293,7 @@ function updateInput (elm, text) {
         showMessage("Clipboard is empty. Make sure you copy text first.")
         return
     }
+    console.log("text.length:", text.length)
     if (text.length > 2048) {
         showMessage("Clipboard text > 2048 characters. Verify what was copied.")
         return
@@ -314,7 +315,7 @@ function doExternal () {
     useExternal = !useExternal;
     if (useExternal) { inputExternal.value = stringExternal; }
                 else { inputExternal.value = ""; }
-    // TODO: If value not blank, save as stringExternal?
+    // TODO: If user keys in string, save as stringExternal?
     buildRecipes();
 }
 
