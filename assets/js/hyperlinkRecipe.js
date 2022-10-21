@@ -197,9 +197,11 @@ export function processHyperlinkRecipe(id) {
     2. Click "Accept the Risk and Continue"
     3. Search dom.events.testing.asyncClipboard and set true
 
-    */
     btnHref.addEventListener( 'click', () => { navigator.clipboard.readText().then(
             clipText => updateInput (inputHref, clipText)); });
+    */
+    btnHref.addEventListener( 'click', () => { pasteText(inputHref) })
+
     btnText.addEventListener( 'click', () => { navigator.clipboard.readText().then(
             clipText => updateInput (inputText, clipText)); });
     btnTitle.addEventListener('click', () => { navigator.clipboard.readText().then(
@@ -234,6 +236,43 @@ function showMessage(msg) {
 
 function closeMessage() {
     hrbMessageElm.style.display = "none"
+}
+
+/*
+    OLD FORMAT:
+        btnHref.addEventListener( 'click', () => { navigator.clipboard.readText().then(
+            clipText => updateInput (inputHref, clipText)); });
+    NEW FORMAT:
+        btnHref.addEventListener( 'click', () => { pasteText(inputHref) })
+*/
+async function pasteText(targetElm) {
+    try {
+        navigator.clipboard.readText().then(
+            clipText => updateInput (targetElm, clipText))
+    }
+    catch (error) {
+        showMessage("Permissions for reading clipboard not set.");
+    }
+}
+
+async function pasteImage() {
+    try {
+        const permission = await navigator.permissions.query({ name: 'clipboard-read' });
+        if (permission.state === 'denied') {
+            throw new Error('Not allowed to read clipboard.');
+        }
+        const clipboardContents = await navigator.clipboard.read();
+        for (const item of clipboardContents) {
+            if (!item.types.includes('image/png')) {
+                throw new Error('Clipboard contains non-image data.');
+            }
+            const blob = await item.getType('image/png');
+            destinationImage.src = URL.createObjectURL(blob);
+        }
+    }
+    catch (error) {
+        console.error(error.message);
+    }
 }
 
 /* Shared function to read clipboard and update input */
