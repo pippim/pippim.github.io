@@ -520,6 +520,12 @@ details[open] > summary {
     // Used by #tcm_window_close, #search-modal-close, #search-clear-input
     // & #search-symbol TODO: Remove tcm_button from background & padding
     display: inline-block; // https://stackoverflow.com/a/9577070/6929343
+}
+
+.icon_back_fixed,
+.icon_back {
+    // Used by #tcm_window_close, #search-modal-close, #search-clear-input
+    // & #search-symbol TODO: Remove tcm_button from background & padding
     vertical-align: middle;
     height: 2rem;  // TODO: Convert to rem based on size
     width: 2rem;
