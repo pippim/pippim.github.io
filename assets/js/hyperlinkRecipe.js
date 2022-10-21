@@ -32,8 +32,7 @@ export function processHyperlinkRecipe(id) {
     var html = '<div id="hrbMessageId">\n' +  // This div above HRB will show error messages
                '<span id="hrbMessageText">Test message</span>\n' +
                '<button class="icon_back_fixed" id="hrbMessageBtn" \n' +
-               'style = "float: right; \n' +
-               '         margin-left: 1rem; margin-right: 1rem; \n' +
+               'style = "margin-left: 3rem; \n' +
                '         background-image: url(/assets/img/icons/x.png);"\n' +
                '</button>\n' +
                '</div>\n'
@@ -97,7 +96,9 @@ export function processHyperlinkRecipe(id) {
 
     // Styling for Hyperlink Recipe table
     html += '<style>\n'
-    /* Oct 19/22 - When message is needed, set 'display: block' */
+    /* Oct 19/22 - When message is needed, set 'display: flex'
+                   https://stackoverflow.com/a/28922140/6929343
+    */
     html += '#hrbMessageId {\n' +
             '  display: flex;\n' +
             '  justify-content: space-between;\n' +
