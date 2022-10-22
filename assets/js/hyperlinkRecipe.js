@@ -347,6 +347,15 @@ function doRecipeMd () {
 
 function doRecipe (value) {
     // Write inputRecipeHtml.value or inputRecipeMd.value to clipboard
+    // If either mandatory fields are empty then do nothing
+    if (inputHref.value === "") {
+        showError("Hyperlink URL (href) is blank. Recipe can't be baked.")
+        return
+    }
+    if (inputText.value === "") {
+        showError("Hyperlink Name (text) is blank. Recipe can't be baked.")
+        return
+    }
     buildRecipes()
     validateUrl(inputHref.value)
     if (validUrlExists == true)
@@ -357,7 +366,7 @@ function doRecipe (value) {
 function buildRecipes () {
     /* Create HTML & Markdown recipes using ingredients */
 
-    // If both mandatory fields are empty then do nothing
+    // If both mandatory fields are empty then do nothing - DOES NOTHING?
     if (inputHref === "" && inputText === "") {
         inputRecipeHtml.value = ""
         inputRecipeMd.value = ""
