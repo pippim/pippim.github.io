@@ -331,7 +331,7 @@ function doRecipeHtml () {
     // TODO: check mandatory fields href and text are non-blank
     buildRecipes()
     validateUrl(inputHref.value)
-    if (validUrlExists)
+    if (validUrlExists == true)
         window.navigator.clipboard.writeText(inputRecipeHtml.value)
         showSuccess("HTML hyperlink saved to clipboard.")
 }
@@ -340,7 +340,7 @@ function doRecipeMd () {
     // TODO: Can RecipeHtml and RecipeMd be combined into single function?
     buildRecipes()
     validateUrl(inputHref.value)
-    if (validUrlExists)
+    if (validUrlExists == true)
         window.navigator.clipboard.writeText(inputRecipeMd.value)
         showSuccess("Markdown hyperlink saved to clipboard.")
 }
@@ -349,9 +349,9 @@ function doRecipe (value) {
     // Write inputRecipeHtml.value or inputRecipeMd.value to clipboard
     buildRecipes()
     validateUrl(inputHref.value)
-    if (validUrlExists)
+    if (validUrlExists == true)
         window.navigator.clipboard.writeText(value)
-        showSuccess("Markdown hyperlink saved to clipboard.")
+        showSuccess("Hyperlink saved to clipboard.")
 }
 
 function buildRecipes () {
@@ -457,9 +457,8 @@ function validateUrl(Url) {
     validUrlExists = UrlExists(Url)
     var endTime = performance.now()
     var elapsedTime = endTime - startTime
-    if (validUrlExists == false){
+    if (validUrlExists == false)
         showMessage('The website address (URL) does not exist (404 error):\n\n' + Url)
-    }
 
     lastUrl = Url   // If next time same URL we can skip the tests for 404.
     return validUrlExists
