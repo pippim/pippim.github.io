@@ -354,7 +354,8 @@ function doRecipe (type, text) {
     }
     buildRecipes()
     validateUrl(inputHref.value)
-    if (validUrlExists == true) {
+
+    if (validUrlExists) {
         window.navigator.clipboard.writeText(text)
         showSuccess(type + " Hyperlink saved to clipboard.<br>" + text)
     }
