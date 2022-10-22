@@ -36,7 +36,7 @@ export function processHyperlinkRecipe(id) {
                    '         background-image: url(/assets/img/icons/x.png);"\n' +
                  '</button>\n' +
                '</div>\n'
-    html += '<h3 id="hrbHdr">Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
+    html += '<h3 id="hrbHdr">Hyperlink Recipe Baker</h3>\n'  // heading level 3 font
     // Table must be created wrapped inside form for <input variables
     html += '<form><table id="hrbTable" class="hrb_table">\n'
     // Ingredients heading
@@ -102,8 +102,8 @@ export function processHyperlinkRecipe(id) {
     html += '#hrbMessageId {\n' +
             '  display: flex;\n' +
             '  justify-content: space-between;\n' +
-            '  color: var(--msgq-header-color);\n' +
-            '  background-color: var(--msgq-error-bg-color);\n' +
+            '  color: var(--msgq-header-color);\n' +  // Oct 22/22: always white
+            '  background-color: var(--msgq-error-bg-color);\n' +  // can override
             '  border: 4px solid var(--hr-border-color);\n' +
             '  padding: 1rem;\n' +
             '  margin-bottom: 1rem;\n' +
@@ -241,6 +241,25 @@ function closeMessage() {
     hrbMessageElm.style.display = "none"
 }
 
+function showInfo(msg) {
+    hrbMessageElm.style.backgroundColor = "var(--msgq-info-bg-color)"
+    splashMessage(msg)
+    hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
+}
+
+function showSuccess(msg) {
+    hrbMessageElm.style.backgroundColor = "var(--msgq-success-bg-color)"
+    splashMessage(msg)
+    hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
+}
+
+function splashMessage(msg) {
+    showMessage(msg)
+    setTimeout(()=> {
+        closeMessage()
+    },2000)  // Display message for 2 seconds
+}
+
 /*
     OLD FORMAT:
         btnHref.addEventListener( 'click', () => { navigator.clipboard.readText().then(
@@ -309,6 +328,7 @@ function updateInput (elm, text) {
     if (autoRows != "0") { setTextAreaRows(elm) }
     buildRecipes()
     if (elm == inputHref) { validateUrl(text) }
+    showInfo("Clipboard successfully read.")
 }
 
 /* Non-clipboard reading functions called on button click */
@@ -332,8 +352,10 @@ function doNewWindow () {
     useNewWindow = !useNewWindow;
     if (useNewWindow) {
         inputNewWindow.value = stringNewWindow;
+        showInfo("Link will open in new Browser Window or Tab.")
     } else {
         inputNewWindow.value = "";
+        showInfo("Link will open in same Browser Tab.")
     }
     buildRecipes();
 }
@@ -342,14 +364,16 @@ function doRecipeHtml () {
     // TODO: check mandatory fields href and text are non-blank
     buildRecipes();
     window.navigator.clipboard.writeText(inputRecipeHtml.value)
-    validateUrl(inputHref.value)  // Validate can crash with Cross-Origin
+    if (validateUrl(inputHref.value))  // Validate can crash with Cross-Origin
+        showSuccess("HTML hyperlink saved to clipboard.")
 }
 
 function doRecipeMd () {
     // TODO: Can RecipeHtml and RecipeMd be combined into single function?
     buildRecipes();
     window.navigator.clipboard.writeText(inputRecipeMd.value)
-    validateUrl(inputHref.value)  // Validate can crash with Cross-Origin
+    if (validateUrl(inputHref.value))  // Validate can crash with Cross-Origin
+        showSuccess("Markdown hyperlink saved to clipboard.")
 }
 
 function buildRecipes () {
