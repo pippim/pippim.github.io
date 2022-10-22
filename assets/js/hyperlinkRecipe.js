@@ -284,7 +284,7 @@ function updateInput (elm, text) {
     if (autoRows != "0") { setTextAreaRows(elm) }
     buildRecipes()
     if (elm == inputHref)
-        if (!(validateUrl(text))
+        if (!(validateUrl(text)))
             return
 
     showInfo("Clipboard successfully read.")
