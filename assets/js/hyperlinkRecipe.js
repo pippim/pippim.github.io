@@ -326,7 +326,7 @@ function doNewWindow () {
     }
     buildRecipes();
 }
-
+/* OLD independent functions
 function doRecipeHtml () {
     // TODO: check mandatory fields href and text are non-blank
     buildRecipes()
@@ -335,7 +335,6 @@ function doRecipeHtml () {
         window.navigator.clipboard.writeText(inputRecipeHtml.value)
         showSuccess("HTML hyperlink saved to clipboard.")
 }
-
 function doRecipeMd () {
     // TODO: Can RecipeHtml and RecipeMd be combined into single function?
     buildRecipes()
@@ -344,9 +343,9 @@ function doRecipeMd () {
         window.navigator.clipboard.writeText(inputRecipeMd.value)
         showSuccess("Markdown hyperlink saved to clipboard.")
 }
-
-function doRecipe (value) {
-    // Write inputRecipeHtml.value or inputRecipeMd.value to clipboard
+*/
+function doRecipe (text) {
+    // Write text (inputRecipeHtml.value or inputRecipeMd.value) to clipboard
     // If either mandatory fields are empty then do nothing
     if (inputHref.value === "") {
         showError("Hyperlink URL (href) is blank. Recipe can't be baked.")
@@ -355,11 +354,11 @@ function doRecipe (value) {
     if (inputText.value === "") {
         showError("Hyperlink Name (text) is blank. Recipe can't be baked.")
         return
-    }
+    } else console.log("inputText.value:", inputText.value)
     buildRecipes()
     validateUrl(inputHref.value)
     if (validUrlExists == true)
-        window.navigator.clipboard.writeText(value)
+        window.navigator.clipboard.writeText(text)
         showSuccess("Hyperlink saved to clipboard.")
 }
 
