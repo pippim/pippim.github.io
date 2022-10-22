@@ -3671,7 +3671,7 @@ function popBuildStyle(msg_type) {
 
     html += '.msgq-window-header {\n' +
             '  cursor: move;  z-index: 10;\n' +
-            '  color: #fff;\n' +
+            '  color: var(--msgq-header-color);\n' +
             '}\n';
 
     html += '.msgq-window-header.msgq-error { background-color: ' +
