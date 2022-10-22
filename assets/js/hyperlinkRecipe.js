@@ -29,12 +29,12 @@ export function processHyperlinkRecipe(id) {
     // Button class = "hrbBtn". Don't use "button" which parent may have!!!
     // NOTE: onclick is not supported: https://stackoverflow.com/a/17378538/6929343
 
-    var html = '<div id="hrbMessageId">\n' +  // This div above HRB will show error messages
-               '<span id="hrbMessageText">Test message</span>\n' +
-               '<button class="icon_back_fixed" id="hrbMessageBtn" \n' +
-               'style = "margin-left: 3rem; \n' +
-               '         background-image: url(/assets/img/icons/x.png);"\n' +
-               '</button>\n' +
+    var html = '<div id="hrbMessageId">\n' +  // This div will show error messages
+                 '<span id="hrbMessageText">Test message</span>\n' +
+                 '<button class="icon_back_fixed" id="hrbMessageBtn" \n' +
+                   'style = "margin-left: 3rem; \n' +
+                   '         background-image: url(/assets/img/icons/x.png);"\n' +
+                 '</button>\n' +
                '</div>\n'
     html += '<h3 id="hrbHdr">Hyperlink Recipe Baker</h3>\n'  // HRB heading in level 3 larger font
     // Table must be created wrapped inside form for <input variables
@@ -295,7 +295,6 @@ function updateInput (elm, text) {
         showMessage("Clipboard is empty. Make sure you copy text first.")
         return
     }
-    console.log("text.length:", text.length)
     if (text.length > 2048) {
         showMessage("Clipboard text > 2048 characters. Verify what was copied.")
         return
@@ -436,7 +435,7 @@ function validateUrl(Url) {
     validUrlSyntax = isValidUrl(Url)
     if (validUrlSyntax == false){
         validUrlExists = false
-        alert('The website address (URL) has invalid format:\n\n' + Url)
+        showMessage('The website address (URL) has invalid format:\n\n' + Url)
         return  false // No point getting an error message in developer tools
     }
 
@@ -454,7 +453,7 @@ function validateUrl(Url) {
     var endTime = performance.now()
     var elapsedTime = endTime - startTime
     if (validUrlExists == false){
-        alert('The website address (URL) does not exist (404 error):\n\n' + Url)
+        showMessage('The website address (URL) does not exist (404 error):\n\n' + Url)
     }
 
     lastUrl = Url   // If next time same URL we can skip the tests for 404.
