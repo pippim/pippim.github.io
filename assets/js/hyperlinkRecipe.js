@@ -265,6 +265,7 @@ async function pasteImage() {
 
 var oldClip = null
 var newClip = null
+var validUrlExists = false
 
 function updateInput (elm, text) {
     // Pasting from clipboard could have line break at end of string
@@ -283,9 +284,11 @@ function updateInput (elm, text) {
     newClip = text
     if (autoRows != "0") { setTextAreaRows(elm) }
     buildRecipes()
-    if (elm == inputHref)
-        if (!(validateUrl(text)))
+    if (elm == inputHref) {
+        validateUrl(text)
+        if (validUrlExists == false)
             return
+    }
 
     showInfo("Clipboard successfully read.")
 }
@@ -413,17 +416,16 @@ function sanitizeQuote (value) {
 var lastUrl = null
 var lastTime = null
 var validUrlSyntax = null
-var validUrlExists = null
 
 function validateUrl(Url) {
+    validUrlExists = false
     if (Url == lastUrl) {
         return validUrlExists  // Same URL would be same 404 status
     }
     validUrlSyntax = isValidUrl(Url)
-    if (validUrlSyntax == false){
-        validUrlExists = false
+    if (validUrlSyntax == false) {
         showMessage('The website address (URL) has invalid format:\n\n' + Url)
-        return  false // No point getting an error message in developer tools
+        return false
     }
 
     if (lastTime == null) {
