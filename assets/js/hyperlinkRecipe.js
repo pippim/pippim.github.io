@@ -102,6 +102,7 @@ export function processHyperlinkRecipe(id) {
     html += '#hrbMessageId {\n' +
             '  display: flex;\n' +
             '  justify-content: space-between;\n' +
+            '  color: var(--msgq-header-color);\n' +
             '  background-color: var(--msgq-error-bg-color);\n' +
             '  border: 4px solid var(--hr-border-color);\n' +
             '  padding: 1rem;\n' +
