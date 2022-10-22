@@ -173,13 +173,10 @@ export function processHyperlinkRecipe(id) {
     /* Functions to format recipe & put into clipboard (low security) */
     document.getElementById("btnExternal").onclick = doExternal;
     document.getElementById("btnNewWindow").onclick = doNewWindow;
-    // document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
     document.getElementById("btnRecipeHtml").onclick = function() {
-        doRecipe(inputRecipeHtml.value) }
-
-    // document.getElementById("btnRecipeMd").onclick = doRecipeMd;
-    document.getElementById("btnRecipeHtml").onclick = function() {
-        doRecipe(inputRecipeMd.value) }
+        doRecipe("HTML", inputRecipeHtml.value) }
+    document.getElementById("btnRecipeMd").onclick = function() {
+        doRecipe("Markdown", inputRecipeMd.value) }
     /* onclick= doesn't work inside user script */
     document.getElementById("hrbMessageBtn").onclick = closeMessage;
 
@@ -344,22 +341,26 @@ function doRecipeMd () {
         showSuccess("Markdown hyperlink saved to clipboard.")
 }
 */
-function doRecipe (text) {
+function doRecipe (type, text) {
     // Write text (inputRecipeHtml.value or inputRecipeMd.value) to clipboard
     // If either mandatory fields are empty then do nothing
     if (inputHref.value === "") {
-        showMessage("Hyperlink URL (href) is blank. Recipe can't be baked.")
+        showMessage("Hyperlink URL (href) is blank. " + type + " Recipe can't be baked.")
         return
     }
     if (inputText.value === "") {
-        showMessage("Hyperlink Name (text) is blank. Recipe can't be baked.")
+        showMessage("Hyperlink Name (text) is blank. " + type + " Recipe can't be baked.")
         return
     }
     buildRecipes()
     validateUrl(inputHref.value)
-    if (validUrlExists == true)
+    if (validUrlExists == true) {
         window.navigator.clipboard.writeText(text)
-        showSuccess("Hyperlink saved to clipboard.<br>" + text)
+        showSuccess(type + " Hyperlink saved to clipboard.<br>" + text)
+    }
+    else
+        showMessage("Invalid Hyperlink URL(href). " + type + " Recipe can't be baked.")
+
 }
 
 function buildRecipes () {
