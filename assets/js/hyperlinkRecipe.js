@@ -102,6 +102,7 @@ export function processHyperlinkRecipe(id) {
     html += '#hrbMessageId {\n' +
             '  display: flex;\n' +
             '  justify-content: space-between;\n' +
+            '  background-color: var(--msgq-error-bg-color);\n' +
             '  border: 4px solid var(--hr-border-color);\n' +
             '  padding: 1rem;\n' +
             '  margin-bottom: 1rem;\n' +
@@ -247,6 +248,7 @@ function closeMessage() {
         btnHref.addEventListener( 'click', () => { pasteText(inputHref) })
 */
 async function pasteText(targetElm) {
+    closeMessage()  // Clear any old error messages
     try {
         navigator.clipboard.readText().then(
             clipText => updateInput (targetElm, clipText))
@@ -291,6 +293,7 @@ var newClip = null
 function updateInput (elm, text) {
     // Pasting from clipboard could have line break at end of string
     var text = text.replace(/\n$/, '')
+    closeMessage()  // Clear any old error messages
     if (text == null || text == "") {
         showMessage("Clipboard is empty. Make sure you copy text first.")
         return
