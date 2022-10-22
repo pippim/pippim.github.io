@@ -443,10 +443,10 @@ var lastTime = null
 var validUrlSyntax = null
 
 function validateUrl(Url) {
-    validUrlExists = false
     if (Url == lastUrl) {
         return validUrlExists  // Same URL would be same 404 status
     }
+    validUrlExists = false
     validUrlSyntax = isValidUrl(Url)
     if (validUrlSyntax == false) {
         showMessage('The website address (URL) shown below ' +
