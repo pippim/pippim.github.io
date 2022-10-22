@@ -165,49 +165,6 @@ export function processHyperlinkRecipe(id) {
     inputRecipeMd = document.getElementById('hrRecipeMd');
 
     /* Clipboard read functions (HIGH SECURITY) for href, text and title buttons
-
-    Oct 18/2022 = Get error:
-
-    Uncaught TypeError: navigator.clipboard.readText is not a function
-    processHyperlinkRecipe https://www.pippim.com/assets/js/hyperlinkRecipe.js:148
-
-    need something like:
-
-        async function pasteImage() {
-          try {
-            const permission = await navigator.permissions.query({ name: 'clipboard-read' });
-            if (permission.state === 'denied') {
-              throw new Error('Not allowed to read clipboard.');
-            }
-            const clipboardContents = await navigator.clipboard.read();
-            for (const item of clipboardContents) {
-              if (!item.types.includes('image/png')) {
-                throw new Error('Clipboard contains non-image data.');
-              }
-              const blob = await item.getType('image/png');
-              destinationImage.src = URL.createObjectURL(blob);
-            }
-          }
-          catch (error) {
-            console.error(error.message);
-          }
-        }
-
-    Display instructions:
-
-    The only way to enable clipboard reading (and writing) is to enable
-    dom.events.testing.asyncClipboard on Firefox client:
-
-    1. Enter about:config in navigation bar
-    2. Click "Accept the Risk and Continue"
-    3. Search dom.events.testing.asyncClipboard and set true
-
-    btnHref.addEventListener( 'click', () => { navigator.clipboard.readText().then(
-            clipText => updateInput (inputHref, clipText)); });
-    btnText.addEventListener( 'click', () => { navigator.clipboard.readText().then(
-            clipText => updateInput (inputText, clipText)); });
-    btnTitle.addEventListener('click', () => { navigator.clipboard.readText().then(
-            clipText => updateInput (inputTitle, clipText)); });
     */
     btnHref.addEventListener( 'click', () => { pasteText(inputHref) })
     btnText.addEventListener( 'click', () => { pasteText(inputText) })
@@ -244,19 +201,18 @@ function closeMessage() {
 function showInfo(msg) {
     hrbMessageElm.style.backgroundColor = "var(--msgq-info-bg-color)"
     splashMessage(msg)
-    hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
 }
 
 function showSuccess(msg) {
     hrbMessageElm.style.backgroundColor = "var(--msgq-success-bg-color)"
     splashMessage(msg)
-    hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
 }
 
 function splashMessage(msg) {
     showMessage(msg)
     setTimeout(()=> {
         closeMessage()
+        hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
     },2000)  // Display message for 2 seconds
 }
 
@@ -327,7 +283,10 @@ function updateInput (elm, text) {
     newClip = text
     if (autoRows != "0") { setTextAreaRows(elm) }
     buildRecipes()
-    if (elm == inputHref) { validateUrl(text) }
+    if (elm == inputHref)
+        if (!(validateUrl(text))
+            return
+
     showInfo("Clipboard successfully read.")
 }
 
