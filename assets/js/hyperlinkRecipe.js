@@ -359,7 +359,7 @@ function doRecipe (text) {
     validateUrl(inputHref.value)
     if (validUrlExists == true)
         window.navigator.clipboard.writeText(text)
-        showSuccess("Hyperlink saved to clipboard.")
+        showSuccess("Hyperlink saved to clipboard.<br>" + text)
 }
 
 function buildRecipes () {
