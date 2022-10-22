@@ -325,16 +325,18 @@ function doNewWindow () {
 function doRecipeHtml () {
     // TODO: check mandatory fields href and text are non-blank
     buildRecipes();
-    window.navigator.clipboard.writeText(inputRecipeHtml.value)
-    if (validateUrl(inputHref.value))  // Validate can crash with Cross-Origin
+    validateUrl(inputHref.value)
+    if (validUrlExists)
+        window.navigator.clipboard.writeText(inputRecipeHtml.value)
         showSuccess("HTML hyperlink saved to clipboard.")
 }
 
 function doRecipeMd () {
     // TODO: Can RecipeHtml and RecipeMd be combined into single function?
     buildRecipes();
-    window.navigator.clipboard.writeText(inputRecipeMd.value)
-    if (validateUrl(inputHref.value))  // Validate can crash with Cross-Origin
+    validateUrl(inputHref.value)
+    if (validUrlExists)
+        window.navigator.clipboard.writeText(inputRecipeMd.value)
         showSuccess("Markdown hyperlink saved to clipboard.")
 }
 
@@ -345,7 +347,6 @@ function buildRecipes () {
     if (inputHref === "" && inputText === "") {
         inputRecipeHtml.value = ""
         inputRecipeMd.value = ""
-        return
     }
 
     // Convert special characters to HTML &code; values
@@ -424,7 +425,8 @@ function validateUrl(Url) {
     }
     validUrlSyntax = isValidUrl(Url)
     if (validUrlSyntax == false) {
-        showMessage('The website address (URL) has invalid format:<br><br>' + Url)
+        showMessage('The website address (URL) shown below ' +
+                    'has invalid format:<br><br>&ensp;-&emsp;' + Url)
         return false
     }
 
