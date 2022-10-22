@@ -213,7 +213,7 @@ function splashMessage(msg) {
     setTimeout(()=> {
         closeMessage()
         hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
-    },2000)  // Display message for 2 seconds
+    },1500)  // Display message for 1.5 seconds
 }
 
 /*
@@ -424,7 +424,7 @@ function validateUrl(Url) {
     }
     validUrlSyntax = isValidUrl(Url)
     if (validUrlSyntax == false) {
-        showMessage('The website address (URL) has invalid format:\n\n' + Url)
+        showMessage('The website address (URL) has invalid format:<br><br>' + Url)
         return false
     }
 
