@@ -173,8 +173,13 @@ export function processHyperlinkRecipe(id) {
     /* Functions to format recipe & put into clipboard (low security) */
     document.getElementById("btnExternal").onclick = doExternal;
     document.getElementById("btnNewWindow").onclick = doNewWindow;
-    document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
-    document.getElementById("btnRecipeMd").onclick = doRecipeMd;
+    // document.getElementById("btnRecipeHtml").onclick = doRecipeHtml;
+    document.getElementById("btnRecipeHtml").onclick = function() {
+        doRecipe(inputRecipeHtml.value) }
+
+    // document.getElementById("btnRecipeMd").onclick = doRecipeMd;
+    document.getElementById("btnRecipeHtml").onclick = function() {
+        doRecipe(inputRecipeMd.value) }
     /* onclick= doesn't work inside user script */
     document.getElementById("hrbMessageBtn").onclick = closeMessage;
 
@@ -324,7 +329,7 @@ function doNewWindow () {
 
 function doRecipeHtml () {
     // TODO: check mandatory fields href and text are non-blank
-    buildRecipes();
+    buildRecipes()
     validateUrl(inputHref.value)
     if (validUrlExists)
         window.navigator.clipboard.writeText(inputRecipeHtml.value)
@@ -333,10 +338,19 @@ function doRecipeHtml () {
 
 function doRecipeMd () {
     // TODO: Can RecipeHtml and RecipeMd be combined into single function?
-    buildRecipes();
+    buildRecipes()
     validateUrl(inputHref.value)
     if (validUrlExists)
         window.navigator.clipboard.writeText(inputRecipeMd.value)
+        showSuccess("Markdown hyperlink saved to clipboard.")
+}
+
+function doRecipe (value) {
+    // Write inputRecipeHtml.value or inputRecipeMd.value to clipboard
+    buildRecipes()
+    validateUrl(inputHref.value)
+    if (validUrlExists)
+        window.navigator.clipboard.writeText(value)
         showSuccess("Markdown hyperlink saved to clipboard.")
 }
 
