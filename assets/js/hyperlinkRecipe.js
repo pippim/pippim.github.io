@@ -360,7 +360,6 @@ function testUrl(url) {
         Success on http://www.google.com/   04:827
         Error on http://www.goo000gle.com   07:477
     */
-}
 
 function doRecipe (type, text) {
     // Write text (inputRecipeHtml.value or inputRecipeMd.value) to clipboard
