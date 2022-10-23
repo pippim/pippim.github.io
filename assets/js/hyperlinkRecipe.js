@@ -439,7 +439,6 @@ function sanitizeQuote (value) {
 }
 
 var lastUrl = null
-var lastTime = null
 var validUrlSyntax = null
 
 function validateUrl(Url) {
@@ -454,17 +453,9 @@ function validateUrl(Url) {
         return false
     }
 
-    if (lastTime == null) {
-        // TODO: This is only being called during paste inputHref, not typing
-        //       This is also called when Baking Recipes to clipboard
-        //       If we were validating whilst typing though we would only do
-        //       so after a few seconds since last key or when focus moves
-        //       out of field or when mouse moves out of bounding box.
-        lastTime = performance.now()
-    }
-
     var startTime = performance.now()
-    validUrlExists = UrlExists(Url)
+    validUrlExists = UrlExists(Url)  // Currently always returns true
+    //
     var endTime = performance.now()
     var elapsedTime = endTime - startTime
     if (validUrlExists == false)
@@ -496,6 +487,38 @@ export function UrlExists(Url) {
          disallows reading the remote resource at
          https://stackoverflow.com/questions/13591339/html2canvas-offscreen.
          (Reason: CORS header “Access-Control-Allow-Origin” missing).
+    */
+
+    /*
+    ANSWER: Oct 23/22: https://stackoverflow.com/a/66757948/6929343
+    SOURCE CODE: */
+// Based on https://stackoverflow.com/a/18552771
+// @author Irvin Dominin <https://stackoverflow.com/u/975520>
+function urlExists(url)
+{
+  var iframe = document.createElement('iframe');
+  var iframeError; // Store the iframe timeout
+
+  iframe.onload = function () {
+    console.log("Success on " + url);
+    clearTimeout(iframeError);
+  }
+
+  iframeError = setTimeout(function () {
+    console.log("Error on " + url)
+  }, 3000);
+
+  iframe.src = url;
+  document.getElementsByTagName("body")[0].appendChild(iframe);
+}
+
+urlExists('http://www.google.com/');
+urlExists('http://www.goo000gle.com');
+
+    /*
+    OUTPUT:
+        Success on http://www.google.com/   04:827
+        Error on http://www.goo000gle.com   07:477
     */
 }
 
