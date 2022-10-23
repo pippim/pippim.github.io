@@ -328,24 +328,40 @@ function doNewWindow () {
     }
     buildRecipes();
 }
-/* OLD independent functions
-function doRecipeHtml () {
-    // TODO: check mandatory fields href and text are non-blank
-    buildRecipes()
-    validateUrl(inputHref.value)
-    if (validUrlExists == true)
-        window.navigator.clipboard.writeText(inputRecipeHtml.value)
-        showSuccess("HTML hyperlink saved to clipboard.")
+
+function testUrl(url) {
+    /*
+    Oct 23/22: https://stackoverflow.com/a/66757948/6929343
+    Based on https://stackoverflow.com/a/18552771
+    @author Irvin Dominin <https://stackoverflow.com/u/975520>
+    */
+    var iframe = document.createElement('iframe')
+    var iframeError  // Store the iframe timeout
+
+    iframe.onload = function () {
+        console.log("Success on " + url)
+        clearTimeout(iframeError)
+    }
+
+    iframeError = setTimeout(function () {
+        console.log("Error on " + url)
+    }, 3000)
+
+    iframe.src = url
+    document.getElementsByTagName("body")[0].appendChild(iframe)
 }
-function doRecipeMd () {
-    // TODO: Can RecipeHtml and RecipeMd be combined into single function?
-    buildRecipes()
-    validateUrl(inputHref.value)
-    if (validUrlExists == true)
-        window.navigator.clipboard.writeText(inputRecipeMd.value)
-        showSuccess("Markdown hyperlink saved to clipboard.")
+
+// Doesn't run when functions are imported from parent versus include
+//testUrl('http://www.google.com/');
+//testUrl('http://www.goo000gle.com');
+
+    /*
+    OUTPUT:
+        Success on http://www.google.com/   04:827
+        Error on http://www.goo000gle.com   07:477
+    */
 }
-*/
+
 function doRecipe (type, text) {
     // Write text (inputRecipeHtml.value or inputRecipeMd.value) to clipboard
     // If either mandatory fields are empty then do nothing
@@ -494,38 +510,6 @@ export function UrlExists(Url) {
          (Reason: CORS header “Access-Control-Allow-Origin” missing).
     */
 
-function testUrl(url) {
-    /*
-    Oct 23/22: https://stackoverflow.com/a/66757948/6929343
-    Based on https://stackoverflow.com/a/18552771
-    @author Irvin Dominin <https://stackoverflow.com/u/975520>
-    */
-    var iframe = document.createElement('iframe')
-    var iframeError  // Store the iframe timeout
-
-    iframe.onload = function () {
-        console.log("Success on " + url)
-        clearTimeout(iframeError)
-    }
-
-    iframeError = setTimeout(function () {
-        console.log("Error on " + url)
-    }, 3000)
-
-    iframe.src = url
-    document.getElementsByTagName("body")[0].appendChild(iframe)
-}
-
-// Doesn't run when functions are imported from parent versus include
-//testUrl('http://www.google.com/');
-//testUrl('http://www.goo000gle.com');
-
-    /*
-    OUTPUT:
-        Success on http://www.google.com/   04:827
-        Error on http://www.goo000gle.com   07:477
-    */
-}
 
 export function setTextAreaRows (textarea) {
     var minRows = Number(autoMinRows)       // autoMinRows must be declared globally above
