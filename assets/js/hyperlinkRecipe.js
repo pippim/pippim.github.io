@@ -494,7 +494,7 @@ export function UrlExists(Url) {
          (Reason: CORS header “Access-Control-Allow-Origin” missing).
     */
 
-export function testUrl(url) {
+function testUrl(url) {
     /*
     Oct 23/22: https://stackoverflow.com/a/66757948/6929343
     Based on https://stackoverflow.com/a/18552771
