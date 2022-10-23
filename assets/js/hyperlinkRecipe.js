@@ -494,32 +494,33 @@ export function UrlExists(Url) {
          (Reason: CORS header “Access-Control-Allow-Origin” missing).
     */
 
+
     /*
     ANSWER: Oct 23/22: https://stackoverflow.com/a/66757948/6929343
     SOURCE CODE: */
 // Based on https://stackoverflow.com/a/18552771
 // @author Irvin Dominin <https://stackoverflow.com/u/975520>
-function urlExists(url)
-{
-  var iframe = document.createElement('iframe');
-  var iframeError; // Store the iframe timeout
 
-  iframe.onload = function () {
-    console.log("Success on " + url);
-    clearTimeout(iframeError);
-  }
+export function urlExists(url) {
+    var iframe = document.createElement('iframe');
+    var iframeError; // Store the iframe timeout
 
-  iframeError = setTimeout(function () {
-    console.log("Error on " + url)
-  }, 3000);
+    iframe.onload = function () {
+        console.log("Success on " + url);
+        clearTimeout(iframeError);
+    }
 
-  iframe.src = url;
-  document.getElementsByTagName("body")[0].appendChild(iframe);
+    iframeError = setTimeout(function () {
+        console.log("Error on " + url)
+    }, 3000);
+
+    iframe.src = url;
+    document.getElementsByTagName("body")[0].appendChild(iframe);
 }
 
 // Doesn't run when functions are imported from parent versus include
-urlExists('http://www.google.com/');
-urlExists('http://www.goo000gle.com');
+//urlExists('http://www.google.com/');
+//urlExists('http://www.goo000gle.com');
 
     /*
     OUTPUT:
