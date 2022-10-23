@@ -193,14 +193,41 @@ export function processHyperlinkRecipe(id) {
     // TEST URL
     // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
     const req = new XMLHttpRequest()
-    //req.addEventListener("load", reqListener)
+    req.addEventListener("load", reqListener)
     req.addEventListener("status", reqListener)
-    req.open("GET", "http://www.example.org/example.txt")
+    //req.open("GET", "http://www.example.org/example.txt")
+    req.open("GET", "https://www.example.org/example.txt")
     req.send()
 
     // Test new testUrl (url)
     testUrl('https://www.google.com/')
     testUrl('https://www.goo000gle.com')
+
+    // from: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/statusText
+    const xhr = new XMLHttpRequest();
+    console.log('0 UNSENT', xhr.statusText);
+
+    xhr.open('GET', 'http://www.example.org/example.txt', true);
+    console.log('1 OPENED', xhr.statusText);
+
+    xhr.onprogress = () => {
+      console.log('3 LOADING', xhr.statusText);
+    };
+
+    xhr.onload = () => {
+      console.log('4 DONE', xhr.statusText);
+    };
+
+    xhr.send(null);
+
+    /**
+     * Outputs the following:
+     *
+     * 0 UNSENT
+     * 1 OPENED
+     * 3 LOADING OK
+     * 4 DONE OK
+     */
 
 }  // End of processHyperlinkRecipe(id)
 
