@@ -190,9 +190,9 @@ export function processHyperlinkRecipe(id) {
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
-    // Test new urlExists (url)
-    urlExists('http://www.google.com/');
-    urlExists('http://www.goo000gle.com');
+    // Test new testUrl (url)
+    testUrl('http://www.google.com/')
+    testUrl('http://www.goo000gle.com')
 
 }  // End of processHyperlinkRecipe(id)
 
@@ -494,33 +494,31 @@ export function UrlExists(Url) {
          (Reason: CORS header “Access-Control-Allow-Origin” missing).
     */
 
-
+export function testUrl(url) {
     /*
-    ANSWER: Oct 23/22: https://stackoverflow.com/a/66757948/6929343
-    SOURCE CODE: */
-// Based on https://stackoverflow.com/a/18552771
-// @author Irvin Dominin <https://stackoverflow.com/u/975520>
-
-export function urlExists(url) {
-    var iframe = document.createElement('iframe');
-    var iframeError; // Store the iframe timeout
+    Oct 23/22: https://stackoverflow.com/a/66757948/6929343
+    Based on https://stackoverflow.com/a/18552771
+    @author Irvin Dominin <https://stackoverflow.com/u/975520>
+    */
+    var iframe = document.createElement('iframe')
+    var iframeError  // Store the iframe timeout
 
     iframe.onload = function () {
-        console.log("Success on " + url);
-        clearTimeout(iframeError);
+        console.log("Success on " + url)
+        clearTimeout(iframeError)
     }
 
     iframeError = setTimeout(function () {
         console.log("Error on " + url)
-    }, 3000);
+    }, 3000)
 
-    iframe.src = url;
-    document.getElementsByTagName("body")[0].appendChild(iframe);
+    iframe.src = url
+    document.getElementsByTagName("body")[0].appendChild(iframe)
 }
 
 // Doesn't run when functions are imported from parent versus include
-//urlExists('http://www.google.com/');
-//urlExists('http://www.goo000gle.com');
+//testUrl('http://www.google.com/');
+//testUrl('http://www.goo000gle.com');
 
     /*
     OUTPUT:
