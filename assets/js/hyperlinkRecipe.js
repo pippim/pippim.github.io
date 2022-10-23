@@ -191,8 +191,8 @@ export function processHyperlinkRecipe(id) {
     // hrHref.addEventListener('paste', handlePaste);
 
     // Test new testUrl (url)
-    testUrl('http://www.google.com/')
-    testUrl('http://www.goo000gle.com')
+    testUrl('https://www.google.com/')
+    testUrl('https://www.goo000gle.com')
 
 }  // End of processHyperlinkRecipe(id)
 
