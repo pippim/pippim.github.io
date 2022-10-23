@@ -189,6 +189,11 @@ export function processHyperlinkRecipe(id) {
 
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
+
+    // Test new urlExists (url)
+    urlExists('http://www.google.com/');
+    urlExists('http://www.goo000gle.com');
+
 }  // End of processHyperlinkRecipe(id)
 
 function showMessage(msg) {
@@ -512,6 +517,7 @@ function urlExists(url)
   document.getElementsByTagName("body")[0].appendChild(iframe);
 }
 
+// Doesn't run when functions are imported from parent versus include
 urlExists('http://www.google.com/');
 urlExists('http://www.goo000gle.com');
 
