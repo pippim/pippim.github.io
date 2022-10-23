@@ -472,7 +472,7 @@ function validateUrl(Url) {
     }
     validUrlExists = false
     validUrlSyntax = isValidUrl(Url)
-    browserUrl = URL(Url)
+    const browserUrl = new URL(Url)
     console.log("browserUrl:", browserUrl)
     if (validUrlSyntax == false) {
         showMessage('The website address (URL) shown below ' +
