@@ -190,6 +190,12 @@ export function processHyperlinkRecipe(id) {
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
+    // Test new testUrl (url)
+    testUrl('http://www.google.com/')
+    testUrl('http://www.goo000gle.com')
+    testUrl('https://www.google.com/')
+    testUrl('https://www.goo000gle.com')
+
     // TEST URL
     // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
     const req = new XMLHttpRequest()
@@ -198,10 +204,6 @@ export function processHyperlinkRecipe(id) {
     //req.open("GET", "http://www.example.org/example.txt")
     req.open("GET", "https://www.example.org/example.txt")
     req.send()
-
-    // Test new testUrl (url)
-    testUrl('https://www.google.com/')
-    testUrl('https://www.goo000gle.com')
 
     // from: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/statusText
     const xhr = new XMLHttpRequest();
