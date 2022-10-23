@@ -508,7 +508,7 @@ export function UrlExists(Url) {
          https://stackoverflow.com/questions/13591339/html2canvas-offscreen.
          (Reason: CORS header “Access-Control-Allow-Origin” missing).
     */
-
+}
 
 export function setTextAreaRows (textarea) {
     var minRows = Number(autoMinRows)       // autoMinRows must be declared globally above
