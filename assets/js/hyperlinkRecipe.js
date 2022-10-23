@@ -472,6 +472,8 @@ function validateUrl(Url) {
     }
     validUrlExists = false
     validUrlSyntax = isValidUrl(Url)
+    browserUrl = URL(Url)
+    console.log("browserUrl:", browserUrl)
     if (validUrlSyntax == false) {
         showMessage('The website address (URL) shown below ' +
                     'has invalid format:<br><br>&ensp;-&emsp;' + Url)
