@@ -472,8 +472,19 @@ function validateUrl(Url) {
     }
     validUrlExists = false
     validUrlSyntax = isValidUrl(Url)
-    const browserUrl = new URL(Url)
-    console.log("browserUrl:", browserUrl)
+    try {
+        const browserUrl = new URL(Url)
+        console.log("browserUrl:", browserUrl)
+    } catch (e) {
+        console.log(e instanceof TypeError)  // true
+        console.log(e.message)               // "null has no properties"
+        console.log(e.name)                  // "TypeError"
+        console.log(e.fileName)              // "Scratchpad/1"
+        console.log(e.lineNumber)            // 2
+        console.log(e.columnNumber)          // 2
+        console.log(e.stack)                 // "@Scratchpad/2:2:3\n"
+    }
+
     if (validUrlSyntax == false) {
         showMessage('The website address (URL) shown below ' +
                     'has invalid format:<br><br>&ensp;-&emsp;' + Url)
