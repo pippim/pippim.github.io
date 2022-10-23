@@ -190,6 +190,13 @@ export function processHyperlinkRecipe(id) {
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
+    // TEST URL
+    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+    const req = new XMLHttpRequest()
+    req.addEventListener("load", reqListener)
+    req.open("GET", "http://www.example.org/example.txt")
+    req.send()
+
     // Test new testUrl (url)
     testUrl('https://www.google.com/')
     testUrl('https://www.goo000gle.com')
@@ -328,38 +335,6 @@ function doNewWindow () {
     }
     buildRecipes();
 }
-
-function testUrl(url) {
-    /*
-    Oct 23/22: https://stackoverflow.com/a/66757948/6929343
-    Based on https://stackoverflow.com/a/18552771
-    @author Irvin Dominin <https://stackoverflow.com/u/975520>
-    */
-    var iframe = document.createElement('iframe')
-    var iframeError  // Store the iframe timeout
-
-    iframe.onload = function () {
-        console.log("Success on " + url)
-        clearTimeout(iframeError)
-    }
-
-    iframeError = setTimeout(function () {
-        console.log("Error on " + url)
-    }, 3000)
-
-    iframe.src = url
-    document.getElementsByTagName("body")[0].appendChild(iframe)
-}
-
-// Doesn't run when functions are imported from parent versus include
-//testUrl('http://www.google.com/');
-//testUrl('http://www.goo000gle.com');
-
-    /*
-    OUTPUT:
-        Success on http://www.google.com/   04:827
-        Error on http://www.goo000gle.com   07:477
-    */
 
 function doRecipe (type, text) {
     // Write text (inputRecipeHtml.value or inputRecipeMd.value) to clipboard
@@ -509,6 +484,45 @@ export function UrlExists(Url) {
          (Reason: CORS header “Access-Control-Allow-Origin” missing).
     */
 }
+
+function reqListener () {
+  console.log(this.responseText);
+}
+
+export function testUrl(url) {
+    /*
+    Oct 23/22: https://stackoverflow.com/a/66757948/6929343
+    Based on https://stackoverflow.com/a/18552771
+    @author Irvin Dominin <https://stackoverflow.com/u/975520>
+    */
+    var iframe = document.createElement('iframe')
+    var iframeError  // Store the iframe timeout
+
+    iframe.onload = function () {
+        console.log("Success on " + url)
+        clearTimeout(iframeError)
+    }
+
+    iframeError = setTimeout(function () {
+        console.log("Error on " + url)
+    }, 3000)
+
+    iframe.src = url
+    document.getElementsByTagName("body")[0].appendChild(iframe)
+    /*
+    OUTPUT:
+The loading of “https://www.google.com/” in a frame is denied by
+“X-Frame-Options“ directive set to “SAMEORIGIN“.
+www.google.com
+Success on https://www.google.com/ hyperlinkRecipe.js:  342:17
+Error on https://www.goo000gle.com hyperlinkRecipe.js:  347:17
+    */
+}
+
+// http: always returns error whilst https does not.
+//testUrl('http://www.google.com/');
+//testUrl('http://www.goo000gle.com');
+
 
 export function setTextAreaRows (textarea) {
     var minRows = Number(autoMinRows)       // autoMinRows must be declared globally above
