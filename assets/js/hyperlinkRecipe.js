@@ -234,8 +234,14 @@ export function processHyperlinkRecipe(id) {
 }  // End of processHyperlinkRecipe(id)
 
 function showMessage(msg) {
+    /*  Shared function for all messages but defaults to error message which
+        is permanent until user clicks 'X' to close. When called by showInfo()
+        or showSuccess() the splashMessage() is called which calls showMessage()
+        and message is only displayed for a short time.
+    */
     hrbMessageTextElm.innerHTML = msg
     hrbMessageElm.style.display = "flex"
+    hrbMessageElm.scrollIntoView()
 }
 
 function closeMessage() {
@@ -254,10 +260,10 @@ function showSuccess(msg) {
 
 function splashMessage(msg) {
     showMessage(msg)
-    setTimeout(()=> {
+    setTimeout( ()=> {
         closeMessage()
         hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
-    },1500)  // Display message for 1.5 seconds
+    }, 2000)  // Display message for 2 seconds
 }
 
 /*
@@ -477,11 +483,11 @@ function validateUrl(Url) {
         console.log("browserUrl:", browserUrl)
     } catch (e) {
         console.log(e instanceof TypeError)  // true
-        console.log(e.message)               // "null has no properties"
+        console.log(e.message)               // "URL Constructor: " + Url
         console.log(e.name)                  // "TypeError"
-        console.log(e.fileName)              // "Scratchpad/1"
-        console.log(e.lineNumber)            // 2
-        console.log(e.columnNumber)          // 2
+        console.log(e.fileName)              // "https://www.pippim.com/assets/js/hyperlinkRecipe.js"
+        console.log(e.lineNumber)            // 476
+        console.log(e.columnNumber)          // 28
         console.log(e.stack)                 // "@Scratchpad/2:2:3\n"
     }
 
