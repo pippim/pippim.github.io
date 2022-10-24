@@ -246,6 +246,8 @@ function showMessage(msg) {
 
 function closeMessage() {
     hrbMessageElm.style.display = "none"
+    // Restore default color red just in case it was changed
+    hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
 }
 
 function showInfo(msg) {
@@ -260,21 +262,23 @@ function showSuccess(msg) {
 
 function splashMessage(msg) {
     showMessage(msg)
-    setTimeout( ()=> {
+    setTimeout ( ()=> closeMessage(), 2000 )  // 2 second duration for msg
+    /*
+    setTimeout ( ()=> {
         closeMessage()
-        hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
-    }, 2000)  // Display message for 2 seconds
+    }, 2000 )  // Display message for 2 seconds
+    */
 }
 
 /*
     OLD FORMAT:
         btnHref.addEventListener( 'click', () => { navigator.clipboard.readText().then(
             clipText => updateInput (inputHref, clipText)); });
-    NEW FORMAT:
+    OCT 21/2022 NEW FORMAT:
         btnHref.addEventListener( 'click', () => { pasteText(inputHref) })
 */
 async function pasteText(targetElm) {
-    closeMessage()  // Clear any old error messages
+    closeMessage()  // Clear any lingering error messages
     try {
         navigator.clipboard.readText().then(
             clipText => updateInput (targetElm, clipText))
