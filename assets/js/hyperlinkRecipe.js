@@ -190,47 +190,6 @@ export function processHyperlinkRecipe(id) {
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
-    // Test new testUrl (url)
-    testUrl('http://www.google.com/')
-    testUrl('http://www.goo000gle.com')
-    testUrl('https://www.google.com/')
-    testUrl('https://www.goo000gle.com')
-
-    // TEST URL
-    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
-    const req = new XMLHttpRequest()
-    req.addEventListener("load", reqListener)
-    req.addEventListener("status", reqListener)
-    //req.open("GET", "http://www.example.org/example.txt")
-    req.open("GET", "https://www.example.org/example.txt")
-    req.send()
-
-    // from: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/statusText
-    const xhr = new XMLHttpRequest();
-    console.log('0 UNSENT', xhr.statusText);
-
-    xhr.open('GET', 'http://www.example.org/example.txt', true);
-    console.log('1 OPENED', xhr.statusText);
-
-    xhr.onprogress = () => {
-      console.log('3 LOADING', xhr.statusText);
-    };
-
-    xhr.onload = () => {
-      console.log('4 DONE', xhr.statusText);
-    };
-
-    xhr.send(null);
-
-    /**
-     * Outputs the following:
-     *
-     * 0 UNSENT
-     * 1 OPENED
-     * 3 LOADING OK
-     * 4 DONE OK
-     */
-
 }  // End of processHyperlinkRecipe(id)
 
 function showMessage(msg) {
@@ -563,21 +522,19 @@ export function testUrl(url) {
         console.log("Success on " + url)
         validUrlExists = true
         clearTimeout(iframeError)
-        showSuccess('Website address (URL) visited and confirmed to be valid:\n\n' + url)
+        showSuccess('Website address (URL) visited and confirmed to be valid:' +
+                    '<br><br>' + url)
     }
 
     iframeError = setTimeout(function () {
         console.log("Error on " + url)
         validUrlExists = false
-        showMessage('The website address (URL) does not exist (404 error):\n\n' + url)
+        showMessage('The website address (URL) does not exist (404 error):' +
+                    '<br><br>' + url)
     }, 3000)
 
     iframe.remove()
 }
-
-// http: always returns error whilst https does not.
-//testUrl('http://www.google.com/');
-//testUrl('http://www.goo000gle.com');
 
 
 export function setTextAreaRows (textarea) {
