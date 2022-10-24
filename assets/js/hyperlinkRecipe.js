@@ -491,8 +491,11 @@ async function validateUrl(Url) {
     validUrlSyntax = false
     try {
         const browserUrl = await new URL(Url)
+        console.log("browserUrl.protocol:", browserUrl.protocol)
         // console.log("browserUrl:", browserUrl)
         validUrlSyntax = true
+        if (browserUrl.protocol == "https") {
+        }
     } catch (e) {
         console.log(e instanceof TypeError)  // true
         console.log(e.message)               // "URL Constructor: " + Url
@@ -510,9 +513,6 @@ async function validateUrl(Url) {
         return false
     }
 
-    console.log("browserUrl.protocol:", browserUrl.protocol)
-    if (browserUrl.protocol == "https") {
-    }
 
     var startTime = performance.now()
     validUrlExists = UrlExists(Url)  // Currently always returns true
