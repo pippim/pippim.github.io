@@ -490,7 +490,7 @@ async function validateUrl(Url) {
     validUrlExists = false
     validUrlSyntax = false
     try {
-        await const browserUrl = new URL(Url)
+        await browserUrl = new URL(Url)
         // console.log("browserUrl:", browserUrl)
         validUrlSyntax = true
     } catch (e) {
