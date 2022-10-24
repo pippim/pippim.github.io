@@ -563,13 +563,13 @@ export function testUrl(url) {
         console.log("Success on " + url)
         validUrlExists = true
         clearTimeout(iframeError)
-        showSuccess('Website address (URL) visited and confirmed to be valid:\n\n' + Url)
+        showSuccess('Website address (URL) visited and confirmed to be valid:\n\n' + url)
     }
 
     iframeError = setTimeout(function () {
         console.log("Error on " + url)
         validUrlExists = false
-        showMessage('The website address (URL) does not exist (404 error):\n\n' + Url)
+        showMessage('The website address (URL) does not exist (404 error):\n\n' + url)
     }, 3000)
 
     iframe.remove()
