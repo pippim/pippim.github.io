@@ -284,6 +284,7 @@ async function pasteText(targetElm) {
             clipText => updateInput (targetElm, clipText))
     }
     catch (error) {
+        // Need to set special clipboard read permissions
         const link = '<a href="https://www.pippim.com/programs/hyperlink.html' +
                      '#read-clipboard-permissions" target="_blank"  ' +
                      'title="Review how to grant read clipboard permission">' +
@@ -378,6 +379,12 @@ function doNewWindow () {
 
 function doRecipe (type, text) {
     // Write text (inputRecipeHtml.value or inputRecipeMd.value) to clipboard
+
+    if (!(navigator.clipboard)) {
+        // Clipboard write permissions don't exist
+        showMessage("No permission to write to system clipboard.")
+        return
+    }
     // If either mandatory fields are empty then do nothing
     if (inputHref.value === "") {
         showMessage("Hyperlink URL (href) is blank. " + type + " Recipe can't be baked.")
@@ -391,7 +398,7 @@ function doRecipe (type, text) {
     validateUrl(inputHref.value)
 
     if (validUrlExists) {
-        window.navigator.clipboard.writeText(text)
+        navigator.clipboard.writeText(text)
         showSuccess(type + " Hyperlink saved to clipboard.<br>" + text)
     }
     else
@@ -481,10 +488,11 @@ function validateUrl(Url) {
         return validUrlExists  // Same URL would be same 404 status
     }
     validUrlExists = false
-    validUrlSyntax = isValidUrl(Url)
+    validUrlSyntax = false
     try {
         const browserUrl = new URL(Url)
-        console.log("browserUrl:", browserUrl)
+        // console.log("browserUrl:", browserUrl)
+        validUrlSyntax = true
     } catch (e) {
         console.log(e instanceof TypeError)  // true
         console.log(e.message)               // "URL Constructor: " + Url
@@ -492,13 +500,18 @@ function validateUrl(Url) {
         console.log(e.fileName)              // "https://www.pippim.com/assets/js/hyperlinkRecipe.js"
         console.log(e.lineNumber)            // 476
         console.log(e.columnNumber)          // 28
-        console.log(e.stack)                 // "@Scratchpad/2:2:3\n"
+        console.log(e.stack)                 // function list
     }
 
     if (validUrlSyntax == false) {
         showMessage('The website address (URL) shown below ' +
-                    'has invalid format:<br><br>&ensp;-&emsp;' + Url)
+                    'has invalid format:<br><br>&ensp;-&emsp;' + Url +
+                    '<br><br>Did you copy the address from browser bar?')
         return false
+    }
+
+    console.log("browserUrl.protocol:", browserUrl.protocol)
+    if (browserUrl.protocol == "https") {
     }
 
     var startTime = performance.now()
