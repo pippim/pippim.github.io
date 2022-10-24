@@ -494,7 +494,7 @@ async function validateUrl(Url) {
         console.log("browserUrl.protocol:", browserUrl.protocol)
         // console.log("browserUrl:", browserUrl)
         validUrlSyntax = true
-        if (browserUrl.protocol == "https") {
+        if (browserUrl.protocol == "https:") {
         }
     } catch (e) {
         console.log(e instanceof TypeError)  // true
@@ -516,12 +516,7 @@ async function validateUrl(Url) {
 
     var startTime = performance.now()
     validUrlExists = UrlExists(Url)  // Currently always returns true
-    //
-    var endTime = performance.now()
-    var elapsedTime = endTime - startTime
-    if (validUrlExists == false)
-        showMessage('The website address (URL) does not exist (404 error):\n\n' + Url)
-
+    testUrl(Url)  // 3 seconds to complete for invalid URL
     lastUrl = Url   // If next time same URL we can skip the tests for 404.
     return validUrlExists
 }
@@ -557,32 +552,27 @@ function reqListener () {
 
 export function testUrl(url) {
     /*
-    Oct 23/22: https://stackoverflow.com/a/66757948/6929343
-    Based on https://stackoverflow.com/a/18552771
-    @author Irvin Dominin <https://stackoverflow.com/u/975520>
+        Oct 23/22: https://stackoverflow.com/a/66757948/6929343
+        Based on https://stackoverflow.com/a/18552771
+        @author Irvin Dominin <https://stackoverflow.com/u/975520>
     */
     var iframe = document.createElement('iframe')
     var iframeError  // Store the iframe timeout
 
     iframe.onload = function () {
         console.log("Success on " + url)
+        validUrlExists = true
         clearTimeout(iframeError)
+        showSuccess('Website address (URL) visited and confirmed to be valid:\n\n' + Url)
     }
 
     iframeError = setTimeout(function () {
         console.log("Error on " + url)
+        validUrlExists = false
+        showMessage('The website address (URL) does not exist (404 error):\n\n' + Url)
     }, 3000)
 
-    iframe.src = url
-    document.getElementsByTagName("body")[0].appendChild(iframe)
-    /*
-    OUTPUT:
-The loading of “https://www.google.com/” in a frame is denied by
-“X-Frame-Options“ directive set to “SAMEORIGIN“.
-www.google.com
-Success on https://www.google.com/ hyperlinkRecipe.js:  342:17
-Error on https://www.goo000gle.com hyperlinkRecipe.js:  347:17
-    */
+    iframe.remove()
 }
 
 // http: always returns error whilst https does not.
