@@ -483,14 +483,14 @@ function sanitizeQuote (value) {
 var lastUrl = null
 var validUrlSyntax = null
 
-function validateUrl(Url) {
+async function validateUrl(Url) {
     if (Url == lastUrl) {
         return validUrlExists  // Same URL would be same 404 status
     }
     validUrlExists = false
     validUrlSyntax = false
     try {
-        const browserUrl = new URL(Url)
+        await const browserUrl = new URL(Url)
         // console.log("browserUrl:", browserUrl)
         validUrlSyntax = true
     } catch (e) {
