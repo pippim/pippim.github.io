@@ -543,6 +543,8 @@ export function testUrl(Url) {
     }, 3000)
 
     iframe.src = Url
+    document.getElementsByTagName("body")[0].appendChild(iframe)  // trigger .onload
+}
 }
 
 export function setTextAreaRows (textarea) {
