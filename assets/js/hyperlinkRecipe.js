@@ -545,7 +545,6 @@ export function testUrl(Url) {
     iframe.src = Url
     document.getElementsByTagName("body")[0].appendChild(iframe)  // trigger .onload
 }
-}
 
 export function setTextAreaRows (textarea) {
     var minRows = Number(autoMinRows)       // autoMinRows must be declared globally above
