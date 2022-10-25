@@ -522,18 +522,18 @@ export function testUrl(Url) {
         console.log("Success on " + Url)
         validUrlExists = true
         clearTimeout(iframeError)
+        iframe.remove()
         showSuccess('Website address (URL) visited and confirmed to be valid:' +
                     '<br><br>' + Url)
     }
 
     iframeError = setTimeout(function () {
         console.log("Error on " + Url)
-        validUrlExists = false
+        // validUrlExists = false
         showMessage('The website address (URL) does not exist (404 error):' +
                     '<br><br>' + Url)
     }, 3000)
 
-    iframe.remove()
 }
 
 export function setTextAreaRows (textarea) {
