@@ -454,6 +454,7 @@ async function validateUrl(Url) {
         // console.log("browserUrl:", browserUrl)
         validUrlSyntax = true
         if (browserUrl.protocol == "https:") {
+            testUrl(Url)  // 3 seconds to complete for invalid URL
         }
     } catch (e) {
         console.log(e instanceof TypeError)  // true
@@ -475,7 +476,6 @@ async function validateUrl(Url) {
 
     var startTime = performance.now()
     validUrlExists = UrlExists(Url)  // Currently always returns true
-    testUrl(Url)  // 3 seconds to complete for invalid URL
     lastUrl = Url   // If next time same URL we can skip the tests for 404.
     return validUrlExists
 }
@@ -509,7 +509,7 @@ function reqListener () {
   console.log(this.responseText);
 }
 
-export function testUrl(url) {
+export function testUrl(Url) {
     /*
         Oct 23/22: https://stackoverflow.com/a/66757948/6929343
         Based on https://stackoverflow.com/a/18552771
@@ -519,23 +519,22 @@ export function testUrl(url) {
     var iframeError  // Store the iframe timeout
 
     iframe.onload = function () {
-        console.log("Success on " + url)
+        console.log("Success on " + Url)
         validUrlExists = true
         clearTimeout(iframeError)
         showSuccess('Website address (URL) visited and confirmed to be valid:' +
-                    '<br><br>' + url)
+                    '<br><br>' + Url)
     }
 
     iframeError = setTimeout(function () {
-        console.log("Error on " + url)
+        console.log("Error on " + Url)
         validUrlExists = false
         showMessage('The website address (URL) does not exist (404 error):' +
-                    '<br><br>' + url)
+                    '<br><br>' + Url)
     }, 3000)
 
     iframe.remove()
 }
-
 
 export function setTextAreaRows (textarea) {
     var minRows = Number(autoMinRows)       // autoMinRows must be declared globally above
