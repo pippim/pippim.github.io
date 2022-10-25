@@ -279,7 +279,7 @@ async function pasteImage() {
 
 var oldClip = null
 var newClip = null
-var validUrlExists = false
+var validUrl = false
 
 function updateInput (elm, text) {
     // Pasting from clipboard could have line break at end of string
@@ -300,7 +300,7 @@ function updateInput (elm, text) {
     buildRecipes()
     if (elm == inputHref) {
         validateUrl(text)
-        if (validUrlExists == false)
+        if (validUrl == false)
             return
     }
 
@@ -356,12 +356,23 @@ function doRecipe (type, text) {
     buildRecipes()
     validateUrl(inputHref.value)
 
-    if (validUrlExists) {
+    if (validUrl == false) {
+        showMessage("Invalid Hyperlink URL(href). " + type + " Recipe can't be baked.")
+        return
+    }
+    try {
         navigator.clipboard.writeText(text)
         showSuccess(type + " Hyperlink saved to clipboard.<br>" + text)
+    } catch (e) {
+        // console.log(e instanceof TypeError)  // N/A
+        console.log(e.message)               // "URL Constructor: " + Url
+        console.log(e.name)                  // "?"
+        console.log(e.fileName)              // "https://www.pippim.com/assets/js/hyperlinkRecipe.js"
+        console.log(e.lineNumber)            // 364
+        console.log(e.columnNumber)          // 28
+        console.log(e.stack)                 // function list
+        showMessage(type + " Hyperlink FAILED to save to clipboard.<br>" + e.message)
     }
-    else
-        showMessage("Invalid Hyperlink URL(href). " + type + " Recipe can't be baked.")
 
 }
 
@@ -444,9 +455,9 @@ var validUrlSyntax = null
 
 async function validateUrl(Url) {
     if (Url == lastUrl) {
-        return validUrlExists  // Same URL would be same 404 status
+        return validUrl  // Same URL would be same 404 status
     }
-    validUrlExists = false
+    validUrl = false
     validUrlSyntax = false
     try {
         const browserUrl = await new URL(Url)
@@ -473,13 +484,12 @@ async function validateUrl(Url) {
         return false
     }
 
-
-    var startTime = performance.now()
-    validUrlExists = UrlExists(Url)  // Currently always returns true
+    validUrl = UrlExists(Url)  // Currently always returns true
     lastUrl = Url   // If next time same URL we can skip the tests for 404.
-    return validUrlExists
+    return validUrl
 }
 
+/* No longer used */
 export function isValidUrl(Url) {
     // See:  https://stackoverflow.com/a/49849482
     var res = Url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
@@ -487,10 +497,11 @@ export function isValidUrl(Url) {
     return (res != null)
 }
 
+/* No longer relevant replaced by testUrl() - simply returns tru*/
 export function UrlExists(Url) {
     // See: https://stackoverflow.com/a/31936894
-    var http = new XMLHttpRequest();
-    return true;
+    // var http = new XMLHttpRequest();
+    return true
     /* The rest of this is hopeless
     http.open('HEAD', Url, false);
     http.send();
@@ -505,10 +516,6 @@ export function UrlExists(Url) {
     */
 }
 
-function reqListener () {
-  console.log(this.responseText);
-}
-
 export function testUrl(Url) {
     /*
         Oct 23/22: https://stackoverflow.com/a/66757948/6929343
@@ -520,7 +527,7 @@ export function testUrl(Url) {
 
     iframe.onload = function () {
         console.log("Success on " + Url)
-        validUrlExists = true
+        validUrl = true
         clearTimeout(iframeError)
         iframe.remove()
         showSuccess('Website address (URL) visited and confirmed to be valid:' +
@@ -529,11 +536,13 @@ export function testUrl(Url) {
 
     iframeError = setTimeout(function () {
         console.log("Error on " + Url)
-        // validUrlExists = false
+        validUrl = false
+        // validUrl = false
         showMessage('The website address (URL) does not exist (404 error):' +
                     '<br><br>' + Url)
     }, 3000)
 
+    iframe.src = Url
 }
 
 export function setTextAreaRows (textarea) {
