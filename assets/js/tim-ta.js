@@ -1986,8 +1986,9 @@ function swapTask(source, target) {
 
 function flashGrey(id) {
     // Flash grey for row just moved then remove after 2 seconds
-    var win = getWin()
-    var elm = win.document.getElementById(id);
+    // Similar function in /assets/js/hyperlinkRecipe.js
+    const win = getWin()
+    const elm = win.document.getElementById(id);
     elm.classList.add("flash")
     setTimeout(function(){
         elm.classList.remove("flash")
