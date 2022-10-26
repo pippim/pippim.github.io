@@ -207,6 +207,7 @@ function closeMessage() {
     hrbMessageElm.style.display = "none"
     // Restore default color red just in case it was changed
     hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
+    hrbMessageElm.scrollIntoView()
 }
 
 function showInfo(msg) {
