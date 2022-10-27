@@ -187,6 +187,8 @@ export function processHyperlinkRecipe(id) {
     inputExternal.oninput = function() {buildRecipes()};
     inputNewWindow.oninput = function() {buildRecipes()};
 
+    testUrl("http://www.example.org/example.txt")
+
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
 
@@ -207,7 +209,7 @@ function closeMessage() {
     hrbMessageElm.style.display = "none"
     // Restore default color red just in case it was changed
     hrbMessageElm.style.backgroundColor = "var(--msgq-error-bg-color)"
-    hrbMessageElm.scrollIntoView()
+    //document.getElementById("hrbHdr").scrollIntoView()
 }
 
 function showInfo(msg) {
@@ -228,6 +230,16 @@ function splashMessage(msg) {
         closeMessage()
     }, 2000 )  // Display message for 2 seconds
     */
+}
+
+function flashGrey(id) {
+    // Flash grey for row just moved then remove after 2 seconds
+    // Similar function in /assets/js/tim-ta.js
+    const elm = document.getElementById(id);
+    elm.classList.add("flash")
+    setTimeout(function(){
+        elm.classList.remove("flash")
+    }, 2000);
 }
 
 /*
