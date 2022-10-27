@@ -486,8 +486,8 @@ async function validateUrl(Url) {
                 accessing 'http:'.  Strip out 'http:' to prevent Firefox error
                 but will get a 404 error. However if valid still get "Success"
             */
-            testUrl(browserUrl.slice(7))  // 3 seconds to complete for invalid URL
-            console.log("browserUrl.slice(7):", browserUrl.slice(7))
+            testUrl(Url.slice(7))  // 3 seconds to complete for invalid URL
+            console.log("Url.slice(7):", Url.slice(7))
         } else {
             validUrl = true  // Assume it works: TCP, IP, UDP, POP, SMTP, FTP
             showInfo("Internet protocol can't be verified: " + browserUrl.protocol)
@@ -509,7 +509,6 @@ async function validateUrl(Url) {
         return false
     }
 
-    // validUrl = UrlExists(Url)  // Currently always returns true
     lastUrl = Url   // If next time same URL we can skip the tests
     return validUrl
 }
