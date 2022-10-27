@@ -466,11 +466,11 @@ function sanitizeQuote (value) {
 }
 
 var lastUrl = null
-var validUrlSyntax = null
+var validUrlSyntax = false
 
 async function validateUrl(Url) {
     if (Url == lastUrl) {
-        return validUrl  // Same URL would be same 404 status
+        return validUrl  // Same as last URL used so skip test
     }
     validUrl = false
     validUrlSyntax = false
@@ -480,7 +480,17 @@ async function validateUrl(Url) {
         // console.log("browserUrl:", browserUrl)
         validUrlSyntax = true
         if (browserUrl.protocol == "https:") {
-            testUrl(Url)  // 3 seconds to complete for invalid URL
+            testUrl(Url)  // Check the Url and set 'validUrl' to true/false
+        } else if (browserUrl.protocol == "http:") {
+            /*  Because our website is 'https:', Firefox will give error about
+                accessing 'http:'.  Strip out 'http:' to prevent Firefox error
+                but will get a 404 error. However if valid still get "Success"
+            */
+            testUrl(Url.slice(5))  // 3 seconds to complete for invalid URL
+            console.log("Url.slice(5):", Url.slice(5))
+        } else {
+            validUrl = true  // Assume it works: TCP, IP, UDP, POP, SMTP, FTP
+            showInfo("Internet protocol can't be verified: " + browserUrl.protocol)
         }
     } catch (e) {
         console.log(e instanceof TypeError)  // true
@@ -499,7 +509,7 @@ async function validateUrl(Url) {
         return false
     }
 
-    validUrl = UrlExists(Url)  // Currently always returns true
+    // validUrl = UrlExists(Url)  // Currently always returns true
     lastUrl = Url   // If next time same URL we can skip the tests for 404.
     return validUrl
 }
