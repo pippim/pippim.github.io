@@ -486,8 +486,8 @@ async function validateUrl(Url) {
                 accessing 'http:'.  Strip out 'http:' to prevent Firefox error
                 but will get a 404 error. However if valid still get "Success"
             */
-            testUrl(Url.slice(5))  // 3 seconds to complete for invalid URL
-            console.log("Url.slice(5):", Url.slice(5))
+            testUrl(browserUrl.slice(7))  // 3 seconds to complete for invalid URL
+            console.log("browserUrl.slice(7):", browserUrl.slice(7))
         } else {
             validUrl = true  // Assume it works: TCP, IP, UDP, POP, SMTP, FTP
             showInfo("Internet protocol can't be verified: " + browserUrl.protocol)
@@ -510,7 +510,7 @@ async function validateUrl(Url) {
     }
 
     // validUrl = UrlExists(Url)  // Currently always returns true
-    lastUrl = Url   // If next time same URL we can skip the tests for 404.
+    lastUrl = Url   // If next time same URL we can skip the tests
     return validUrl
 }
 
@@ -549,21 +549,20 @@ export function testUrl(Url) {
     */
     var iframe = document.createElement('iframe')
     var iframeError  // Store the iframe timeout
+    validUrl = false  // Assume failure
 
     iframe.onload = function () {
         console.log("Success on " + Url)
         validUrl = true
         clearTimeout(iframeError)
         iframe.remove()
-        showSuccess('Website address (URL) visited and confirmed to be valid:' +
+        showSuccess('Website address (URL) is valid:' +
                     '<br><br>' + Url)
     }
 
     iframeError = setTimeout(function () {
         console.log("Error on " + Url)
-        validUrl = false
-        // validUrl = false
-        showMessage('The website address (URL) does not exist (404 error):' +
+        showMessage('Website address (URL) does not exist:' +
                     '<br><br>' + Url)
     }, 3000)
 
