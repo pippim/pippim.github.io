@@ -187,7 +187,9 @@ export function processHyperlinkRecipe(id) {
     inputExternal.oninput = function() {buildRecipes()};
     inputNewWindow.oninput = function() {buildRecipes()};
 
-    testUrl("http://www.example.org/example.txt")
+    // Doesn't work: https://stackoverflow.com/a/18251129/6929343
+    // https://stackoverflow.com/a/18992497/6929343
+    testUrl("//www.example.org/example.txt")
 
     /* Manual paste event handlers - These work but suppress for now... */
     // hrHref.addEventListener('paste', handlePaste);
