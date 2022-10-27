@@ -550,9 +550,9 @@ export function testUrl(Url) {
         console.log("Success on " + Url)
         validUrl = true
         clearTimeout(iframeError)
-        iframe.remove()
         showSuccess('Website address (URL) is valid:' +
                     '<br><br>' + Url)
+        iframe.remove()
     }
 
     iframeError = setTimeout(function () {
