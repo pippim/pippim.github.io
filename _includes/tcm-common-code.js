@@ -3,6 +3,7 @@
         /tcm.md - The Cookie Machine documentation webpage
         /assets/js/search.js
 
+    icons from: https://www.cleanpng.com/
 */
 
 // Color Schemes - getRootColors.js for local storage current scheme
@@ -704,7 +705,13 @@ function htmlColorSchemes () {
         html += "<h3>TCM Color Scheme: " + scheme.name + "</h3>"
         for (const key of Object.keys(scheme)) {
             if (!(key.slice(0,2) == "--")) {
+                // Skip "name" key EG colorSchemeCayman
                 console.log("Skipping key:", key, scheme[key])
+                continue
+            }
+            if (!(scheme[key].slice(0,1) == "#")) {
+                // Skip non-color code EG "1.0" (for opacity)
+                console.log("Skipping non-color code value:", key, scheme[key])
                 continue
             }
             html += htmlStyleColorLine(scheme, key)
