@@ -471,7 +471,8 @@ async function validateUrl(Url) {
     validUrl = false
     validUrlSyntax = false
     try {
-        const browserUrl = await new URL(Url)
+        //const browserUrl = await new URL(Url)
+        const browserUrl = await fetch(new URL(Url))
         console.log("browserUrl.host:", browserUrl.host)
         console.log("browserUrl.hostname:", browserUrl.hostname)
         console.log("browserUrl.pathname:", browserUrl.pathname)
@@ -481,7 +482,7 @@ async function validateUrl(Url) {
         if (browserUrl.protocol == "https:") {
             testUrl(Url)  // Check the Url and set 'validUrl' to true/false
         } else if (browserUrl.protocol == "http:") {
-            /*  Because our website is 'https:', Firefox will give error about
+            /*  Because our website is 'https:', Firefox will give origin error
                 accessing 'http:'.  Strip out 'http:' to prevent Firefox error
                 but will get a 404 error. However if valid still get "Success"
             */
