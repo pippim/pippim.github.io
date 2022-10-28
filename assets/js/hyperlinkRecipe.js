@@ -472,6 +472,8 @@ async function validateUrl(Url) {
     validUrlSyntax = false
     try {
         const browserUrl = await new URL(Url)
+        console.log("browserUrl.host:", browserUrl.host)
+        console.log("browserUrl.hostname:", browserUrl.hostname)
         console.log("browserUrl.pathname:", browserUrl.pathname)
         console.log("browserUrl.protocol:", browserUrl.protocol)
         // console.log("browserUrl:", browserUrl)
