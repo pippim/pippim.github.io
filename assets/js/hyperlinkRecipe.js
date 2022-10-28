@@ -472,6 +472,7 @@ async function validateUrl(Url) {
     validUrlSyntax = false
     try {
         const browserUrl = await new URL(Url)
+        console.log("browserUrl.pathname:", browserUrl.pathname)
         console.log("browserUrl.protocol:", browserUrl.protocol)
         // console.log("browserUrl:", browserUrl)
         validUrlSyntax = true
@@ -550,9 +551,9 @@ export function testUrl(Url) {
         console.log("Success on " + Url)
         validUrl = true
         clearTimeout(iframeError)
+        iframe.remove()
         showSuccess('Website address (URL) is valid:' +
                     '<br><br>' + Url)
-        iframe.remove()
     }
 
     iframeError = setTimeout(function () {
