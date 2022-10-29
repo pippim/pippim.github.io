@@ -57,6 +57,7 @@ self-documenting app. &emsp;&emsp;
 
 ## Hyperlink Recipe Baker App
 
+<div id="dummy-link-to-test-click">
 <a href="programs/hyperlink.html">
    {% include image.html src="/assets/img/hrb/HRB Example.gif"
       alt="TCM transparent button.gif"
@@ -64,6 +65,7 @@ self-documenting app. &emsp;&emsp;
       caption="Hyperlink Recipe Baker Example"
    %}
 </a>
+</div>
 
 **HRB runs in your browser!** - No programs to install or configure.
 
