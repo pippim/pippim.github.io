@@ -6,7 +6,9 @@
 
 // imported functions.  Parent needs <script type="module"...
 // See: /_layouts +> /default.html, / hrb.html, /program.html, etc.
-import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
+// Oct 29/22 missing in "Save page as" change './hyperlinkRecipe.js'
+import {processHyperlinkRecipe}
+  from '{{ site.url }}/assets/js/hyperlinkRecipe.js';
 
 /* include tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
@@ -16,6 +18,9 @@ import {processHyperlinkRecipe} from './hyperlinkRecipe.js';
     Because this file is called first after stylesheet, the
     the color scheme is set based on session storage, then
     local storage and then website.
+
+    icons from: https://www.cleanpng.com/
+
 */
 
 {% include getRootColors.js %}  // Used by tcm-common-code.js
