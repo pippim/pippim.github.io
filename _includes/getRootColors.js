@@ -104,10 +104,11 @@ var colorSchemeDark = {
 */
 
 var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
+// {{ site.url }} is required when File Save As used for off-line copy
 var imageColorSchemeCayman =
-        "/assets/img/icons/color_scheme_cayman.png"
+        "{{ site.url }}/assets/img/icons/color_scheme_cayman.png"
 var imageColorSchemeDark =
-        "/assets/img/icons/color_scheme_dark.png"
+        "{{ site.url }}/assets/img/icons/color_scheme_dark.png"
 
 function getCurrentColors() {
     /*  Local storage key "colorScheme" contains our scheme name.
@@ -124,12 +125,11 @@ function getCurrentColors() {
 function extractRootColors(schemeName) {
     // Set passed "colorScheme" of "Cayman" or "Dark"
     var scheme = window[schemeName]  // Get scheme object from name
-    const margin = "    "
     var root = ""
     // console.log("/assets/js/setRootColors.js color scheme:", scheme.name)
     for (const key of Object.keys(scheme)) {
         if (!(key.startsWith("--"))) continue  // Ignore "name"
-        root += margin + key + ": " + scheme[key] + ";\n"
+        root += "    " + key + ": " + scheme[key] + ";\n"
     }
     return root
 }
