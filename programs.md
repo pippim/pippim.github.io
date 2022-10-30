@@ -57,7 +57,7 @@ self-documenting app. &emsp;&emsp;
 
 ## Hyperlink Recipe Baker App
 
-<div id="dummy-link-to-test-click">
+<div id="dummy-div-to-test-click">
 <a href="programs/hyperlink.html">
    {% include image.html src="/assets/img/hrb/HRB Example.gif"
       alt="TCM transparent button.gif"
@@ -90,6 +90,7 @@ self-documenting app.  &emsp;&emsp;
 
 ## The Cookie Machine App
 
+<div id="dummy-div-to-test-click2">
 <a href="programs/tcm.html">
    {% include image.html src="/assets/img/tcm/TCM Window Buttons.gif"
       alt="TCM transparent button.gif"
@@ -97,6 +98,7 @@ self-documenting app.  &emsp;&emsp;
       caption="The Cookie Machine Buttons"
    %}
 </a>
+</div>
 
 *The Cookie Machine*, commonly abbreviated as **TCM**,
 is accessed using a transparent button at the top of
@@ -119,12 +121,14 @@ self-documenting app. &emsp;&emsp;
 
 ## Convert Stack Exchange Posts to Your Own Website
 
+<div id="dummy-div-to-test-click3">
 <a href="programs/stack.html">
    {% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
       alt="stack-to-blog.py"
       style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
    %}
 </a>
+</div>
 
 The {{ site.title }} Website's *Answers* page was created automatically
 by converting Stack Exchange Posts to GitHub Pages Jekyll Posts. That
@@ -164,12 +168,14 @@ The Multi-Timer program (`mt`) can be downloaded from the
 
 ## Music Player with CD encoding, lyrics scraping and synchronization
 
+<div id="dummy-div-to-test-click4">
 <a href="programs/mserve.html">
    {% include image.html src="/assets/img/mserve/mserve small demo.gif"
       alt="mserve small demo"
       style="float: left; width: 80%; margin: 0em 1rem 1rem 0px;"
    %}
 </a>
+</div>
 
 This short `.gif` video clip, with no sound, shows one third
 of the main `mserve` music player window.
