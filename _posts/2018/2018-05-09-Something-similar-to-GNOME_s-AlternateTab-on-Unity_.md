@@ -10,9 +10,9 @@ created_date: 2018-05-09 01:39:33
 edit_date:    2020-06-12 14:37:07
 votes:        "2 "
 favorites:    
-views:        "214 "
+views:        "215 "
 accepted:     
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-09-Something-similar-to-GNOME_s-AlternateTab-on-Unity_.md
 toc:          false
 navigation:   false

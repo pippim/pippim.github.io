@@ -10,9 +10,9 @@ created_date: 2016-11-13 22:15:58
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "588 "
+views:        "589 "
 accepted:     Accepted
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-13-Sony-VAIO-mute-button.md
 toc:          false
 navigation:   false

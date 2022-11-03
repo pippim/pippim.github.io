@@ -10,9 +10,9 @@ created_date: 2019-06-25 21:56:00
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "571 "
+views:        "576 "
 accepted:     Accepted
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-25-Linux-keeps-on-Logging-and-freezing-after-entering-password.md
 toc:          false
 navigation:   false

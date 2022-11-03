@@ -8,11 +8,11 @@ type:         Answer
 tags:         18.04 gui gnome-shell tty
 created_date: 2019-07-11 22:54:48
 edit_date:    2019-07-12 01:56:22
-votes:        "13 "
+votes:        "14 "
 favorites:    
-views:        "24,834 "
+views:        "25,635 "
 accepted:     
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-11-How-to-enable_-Switch-back-to-running-GUI-from-TTY-in-18.04.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         image python-3.x fonts python-imaging-library
 created_date: 2020-08-01 00:17:46
 edit_date:    
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "60,886 "
+views:        "62,564 "
 accepted:     
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-01-PIL-Issue_-OSError_-cannot-open-resource.md
 toc:          false
 navigation:   false

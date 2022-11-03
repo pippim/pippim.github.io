@@ -10,9 +10,9 @@ created_date: 2018-02-04 16:56:48
 edit_date:    2020-06-12 14:37:07
 votes:        "15 "
 favorites:    
-views:        "1,428 "
+views:        "1,435 "
 accepted:     Accepted
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-04-How-can-PPAs-be-removed-using-GUI_.md
 toc:          false
 navigation:   false

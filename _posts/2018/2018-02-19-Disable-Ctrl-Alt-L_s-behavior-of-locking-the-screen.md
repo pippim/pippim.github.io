@@ -10,9 +10,9 @@ created_date: 2018-02-19 17:26:48
 edit_date:    2020-06-12 14:37:07
 votes:        "9 "
 favorites:    
-views:        "10,891 "
+views:        "11,008 "
 accepted:     
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-19-Disable-Ctrl-Alt-L_s-behavior-of-locking-the-screen.md
 toc:          false
 navigation:   false

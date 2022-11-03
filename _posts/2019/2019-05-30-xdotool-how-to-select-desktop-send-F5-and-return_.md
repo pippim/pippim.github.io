@@ -9,10 +9,10 @@ tags:         command-line bash gnome-shell window-manager xdotool
 created_date: 2019-05-30 02:56:14
 edit_date:    2019-05-31 01:04:55
 votes:        "5 "
-favorites:    1
-views:        "2,531 "
+favorites:    
+views:        "2,595 "
 accepted:     Accepted
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-30-xdotool-how-to-select-desktop-send-F5-and-return_.md
 toc:          false
 navigation:   false

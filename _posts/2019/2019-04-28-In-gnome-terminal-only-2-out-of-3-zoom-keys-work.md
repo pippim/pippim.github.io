@@ -10,9 +10,9 @@ created_date: 2019-04-28 20:09:31
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "180 "
+views:        "182 "
 accepted:     Accepted
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-In-gnome-terminal-only-2-out-of-3-zoom-keys-work.md
 toc:          false
 navigation:   false

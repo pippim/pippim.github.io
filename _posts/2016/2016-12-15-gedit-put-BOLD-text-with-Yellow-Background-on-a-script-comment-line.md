@@ -8,11 +8,11 @@ type:         Question
 tags:         bash gedit
 created_date: 2016-12-15 22:18:40
 edit_date:    2016-12-21 03:11:58
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "1,281 "
+views:        "1,296 "
 accepted:     Accepted
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-15-gedit-put-BOLD-text-with-Yellow-Background-on-a-script-comment-line.md
 toc:          false
 navigation:   false

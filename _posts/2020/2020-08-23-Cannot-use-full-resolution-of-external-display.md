@@ -10,9 +10,9 @@ created_date: 2020-08-23 01:21:03
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,046 "
+views:        "1,071 "
 accepted:     
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-23-Cannot-use-full-resolution-of-external-display.md
 toc:          false
 navigation:   false

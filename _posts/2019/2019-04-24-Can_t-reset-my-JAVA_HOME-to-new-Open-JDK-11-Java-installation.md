@@ -8,11 +8,11 @@ type:         Answer
 tags:         software-installation java environment-variables jdk openjdk
 created_date: 2019-04-24 23:11:45
 edit_date:    2020-06-12 14:37:07
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "20,367 "
+views:        "20,670 "
 accepted:     Accepted
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-24-Can_t-reset-my-JAVA_HOME-to-new-Open-JDK-11-Java-installation.md
 toc:          false
 navigation:   false

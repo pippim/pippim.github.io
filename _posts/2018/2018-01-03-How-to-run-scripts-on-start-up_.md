@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/991672
 type:         Answer
 tags:         startup autostart
 created_date: 2018-01-03 01:02:31
-edit_date:    2020-06-12 14:37:07
+edit_date:    2022-10-29 18:17:59
 votes:        "9 "
 favorites:    
-views:        "1,418,523 "
+views:        "1,428,478 "
 accepted:     
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-03-How-to-run-scripts-on-start-up_.md
 toc:          false
 navigation:   false
@@ -71,7 +71,8 @@ drwxr-xr-x 139 root root 12288 Dec 31 13:58 ../
 Here are a couple of scripts I have setup to run each boot:
 
 ``` 
-$ cat /etc/cron.d/cycle-grub-background SHELL=/bin/sh
+$ cat /etc/cron.d/cycle-grub-background 
+SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin 
 @reboot   root    /usr/local/bin/cron-reboot-cycle-grub-background
 

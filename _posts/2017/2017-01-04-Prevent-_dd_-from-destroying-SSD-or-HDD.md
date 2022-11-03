@@ -8,11 +8,11 @@ type:         Answer
 tags:         hard-drive ssd dd undelete
 created_date: 2017-01-04 03:17:07
 edit_date:    2017-06-25 19:26:08
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "2,825 "
+views:        "2,848 "
 accepted:     Accepted
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-04-Prevent-_dd_-from-destroying-SSD-or-HDD.md
 toc:          false
 navigation:   false

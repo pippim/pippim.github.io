@@ -9,10 +9,10 @@ tags:         notify-osd notify-send systemd-journald conky
 created_date: 2020-01-11 00:03:00
 edit_date:    
 votes:        "2 "
-favorites:    1
+favorites:    
 views:        "57 "
 accepted:     
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-11-Pop-up-bubble-messages-for-boot-related-issues.md
 toc:          false
 navigation:   false

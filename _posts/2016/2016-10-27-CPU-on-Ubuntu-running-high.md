@@ -10,9 +10,9 @@ created_date: 2016-10-27 01:21:01
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "252 "
+views:        "255 "
 accepted:     Accepted
-uploaded:     2022-10-09 18:31:55
+uploaded:     2022-11-03 05:01:04
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-27-CPU-on-Ubuntu-running-high.md
 toc:          false
 navigation:   false
