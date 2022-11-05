@@ -225,10 +225,8 @@ async function copyRougeCode(event) {
     let text = code.innerText
     await navigator.clipboard.writeText(text)
 
-    button.innerText = "Copied ✓ to clipboard!️" /* ✓ or  ✔️ ✓ */
-    setTimeout(()=> {
-        button.innerText = copyButtonLabel
-    },1000)
+    button.innerText = "Copied ✓" /* ✓ or  ✔️ ✓ */
+    setTimeout(()=> button.innerText = copyButtonLabel, 1500)
 }
 
 // Assign tooltip (title=) to section navigation bar buttons
