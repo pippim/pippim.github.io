@@ -11,12 +11,9 @@ layout: program
 
 /* include tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
-    /tcm.md - The Cookie Machine documentation webpage
+    /programs/tcm.md - The Cookie Machine documentation webpage
+    /programs/stack.md - Convert Stack Exchange Posts
 */
-
-// alert("include tcm-common-code.js %} loaded next. Check console.log")
-// { % include getRootColors.js %}  // Causing redeclaration error
-// NOTE: Now rotate color-scheme-button isn't working?
 
 {% include tcm-common-code.js %}
 
@@ -303,9 +300,11 @@ The {{ site.title }} website tree is displayed below:
 
 > **NOTE:** Directory level depth is suppressed for `/assets/img/icons`
 > subdirectory through `/assets/img/stack/` subdirectory. This keeps the
-> number of lines down.
+> number of lines down. Similarly, the `_posts` directory contains 
+> {{ site.post_count }} posts which are not displayed above.
 
 <style>
+/* NOTE the following code is identical in stack.md and tcm.md */
 #tcm_website_tree {
    border: 3px solid var(--hr-border-color);
    margin-left: 1em;

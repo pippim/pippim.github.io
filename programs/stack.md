@@ -89,9 +89,11 @@ The {{ site.title }} website tree is displayed below:
 
 > **NOTE:** Directory level depth is suppressed for `/assets/img/icons`
 > subdirectory through `/assets/img/stack/` subdirectory. This keeps the
-> number of lines down.
+> number of lines down. Similarly, the `_posts` directory contains 
+> {{ site.post_count }} posts which are not displayed above.
 
 <style>
+/* NOTE the following code is identical in stack.md and tcm.md */
 #tcm_website_tree {
    border: 3px solid var(--hr-border-color);
    margin-left: 1em;
@@ -110,22 +112,6 @@ fetch(raw_url + '/assets/json/website_tree.json')
       document.getElementById("tcm_website_tree").innerHTML = html;
 });
 </script>
-
-<div class="line-draw">
-{% highlight text %}
-{% include website_tree.txt %}
-{% endhighlight %}
-</div>
-<style>
-/* August 11, 2022 - Below is not working. All code lines are compressed */
-/* #line_draw.highlight pre, pre { line-height: 1 ! important; } */
-/* #line_draw { line-height: 1 ! important; } */
-/* .highlight:not(#line_draw) pre, pre { line-height: 1.45 ! important; } */ 
-</style>
-
-
-**NOTE:** The `_posts` directory contains {{ site.post_count }} posts
-which are not displayed above.
 
 ---
 
