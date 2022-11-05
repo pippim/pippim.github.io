@@ -1,0 +1,44 @@
+<!--  /_includes/website_tree.html code shared by:
+        /programs/tcm.md - The Cookie Machine documentation webpage
+        /programs/stack.md - Convert Stack Exchange Posts
+
+    Requires include of /_includes/tcm-common-code.js
+-->
+
+The website tree is not displayed in real time. Contents are
+taken from the file `_includes/website_tree.txt` which is
+manually uploaded from time to time. The file contents can
+be generated using the Linux `tree` command. See the
+`refresh.sh` bash script for an
+[example 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/refresh.sh
+"Using the `tree` command to generate website_tree.txt"){:target="_blank"}.
+
+The {{ site.title }} website tree is displayed below:
+
+<div id="tcm_website_tree"></div>
+
+> **NOTE:** Directory level depth is suppressed for `/assets/img/icons`
+> subdirectory through `/assets/img/stack/` subdirectory. This keeps the
+> number of lines down. Similarly, the `_posts` directory contains
+> {{ site.post_count }} posts which are not displayed above.
+
+<style>
+/* NOTE the following code is identical in stack.md and tcm.md */
+#tcm_website_tree {
+   border: 3px solid var(--hr-border-color);
+   margin-left: 1em;
+   padding: .5rem;
+   max-height: 90vh;
+   overflow: auto;
+   white-space: pre;  /* 2022-03-12 Proper spacing in website_tree.json */
+}
+</style>
+
+<script>
+fetch(raw_url + '/assets/json/website_tree.json')
+   .then((response) => response.json())
+   .then((website_tree) => {
+      var html = htmlWebsiteTree(website_tree);
+      document.getElementById("tcm_website_tree").innerHTML = html;
+});
+</script>
