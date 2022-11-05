@@ -211,9 +211,6 @@ After logging in, the top of the window provides a search bar to find a query.
 Enter; *"All my posts on the SE network"* or copy with the button below
 and, paste into the search bar.
 
-<div class="code-header">
-    <button class="copy-code-button" aria-label="Copy code to clipboard"></button>
-</div>
 ``` text
 All my posts on the SE network
 ```
