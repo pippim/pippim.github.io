@@ -10,20 +10,13 @@
 import {processHyperlinkRecipe}
   from '{{ site.url }}/assets/js/hyperlinkRecipe.js';
 
+{% include getRootColors.js %}  // Used by tcm-common-code.js
+
 /* include tcm-common-code.js code shared by:
     /assets/js/theCookieMachine.js - Draggable Modal Dialog
-    /tcm.md - The Cookie Machine documentation webpage
-    /assets/js/search.js - color schemes loaded on init
-
-    Because this file is called first after stylesheet, the
-    the color scheme is set based on session storage, then
-    local storage and then website.
-
-    icons from: https://www.cleanpng.com/
-
+    /programs/tcm.md - The Cookie Machine documentation webpage
+    /programs/stack.md - Convert Stack Exchange Posts
 */
-
-{% include getRootColors.js %}  // Used by tcm-common-code.js
 
 {% include tcm-common-code.js %}
 
@@ -232,7 +225,7 @@ async function copyRougeCode(event) {
     let text = code.innerText
     await navigator.clipboard.writeText(text)
 
-    button.innerText = "Copied ✔️"
+    button.innerText = "Copied ✓ to clipboard!️" /* ✓ or  ✔️ ✓ */
     setTimeout(()=> {
         button.innerText = copyButtonLabel
     },1000)
