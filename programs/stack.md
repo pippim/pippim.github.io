@@ -73,9 +73,9 @@ of the Pippim website at `pippim.github.io`. As of
 for {{ site.title }} on GitHub Pages looked like this:
 
 <div class="line-draw">
-{% highlight text %}
+/* { % highlight text %} */
 {% include website_tree.txt %}
-{% endhighlight %}
+/* { % endhighlight %} */
 </div>
 <style>
 /* August 11, 2022 - Below is not working. All code lines are compressed */
