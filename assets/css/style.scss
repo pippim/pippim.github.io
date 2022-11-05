@@ -432,7 +432,10 @@ details[open] > summary {
 
 /* For /_includes/website.txt */
 .line-draw.highlight pre { line-height: .55 ! important; }
-.line-draw { line-height: .55 ! important; }
+.line-draw {
+    white-space: pre;  /* 2022-03-12 Proper spacing in website_tree.json */
+    line-height: .55 ! important;
+}
 
 /* MAJOR SECTION ======== search.html styling */
 
