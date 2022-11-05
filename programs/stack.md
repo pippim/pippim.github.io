@@ -78,10 +78,13 @@ This video shows:
 
 # {{ site.title }} Website Directory Tree
 
-The directory tree will help you get a better understanding
-of the Pippim website at `pippim.github.io`. As of
-{{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
-for {{ site.title }} on GitHub Pages looked like this:
+The website tree is not displayed in real time. Contents are
+taken from the file `_includes/website_tree.txt` which is
+manually uploaded from time to time. The file contents can
+be generated using the Linux `tree` command. See the
+`refresh.sh` bash script for an
+[example 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/refresh.sh
+"Using the `tree` command to generate website_tree.txt"){:target="_blank"}.
 
 The {{ site.title }} website tree is displayed below:
 
