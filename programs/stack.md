@@ -21,6 +21,17 @@ NOTE Fonts not being used error message in Developer Tools:
 
 -->
 
+<script>
+
+/* include tcm-common-code.js code shared by:
+    /assets/js/theCookieMachine.js - Draggable Modal Dialog
+    /programs/tcm.md - The Cookie Machine documentation webpage
+    /programs/stack.md - Convert Stack Exchange Posts
+*/
+
+{% include tcm-common-code.js %}
+
+</script>
 
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
@@ -71,6 +82,34 @@ The directory tree will help you get a better understanding
 of the Pippim website at `pippim.github.io`. As of
 {{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
 for {{ site.title }} on GitHub Pages looked like this:
+
+The {{ site.title }} website tree is displayed below:
+
+<div id="tcm_website_tree"></div>
+
+> **NOTE:** Directory level depth is suppressed for `/assets/img/icons`
+> subdirectory through `/assets/img/stack/` subdirectory. This keeps the
+> number of lines down.
+
+<style>
+#tcm_website_tree {
+   border: 3px solid var(--hr-border-color);
+   margin-left: 1em;
+   padding: .5rem;
+   max-height: 90vh;
+   overflow: auto;
+   white-space: pre;         /* 2022-03-12 Proper spacing in website_tree.json */
+}
+</style>
+
+<script>
+fetch(raw_url + '/assets/json/website_tree.json')
+   .then((response) => response.json())
+   .then((website_tree) => {
+      var html = htmlWebsiteTree(website_tree);
+      document.getElementById("tcm_website_tree").innerHTML = html;
+});
+</script>
 
 <div class="line-draw">
 {% highlight text %}
