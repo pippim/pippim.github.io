@@ -3,12 +3,14 @@ title: The 5 W's of Pippim
 layout: default
 ---
 
+<div class="slide-left">
 {% include image.html src="/assets/img/Blog_Project-Management-101.png"
    alt="The 5 Ws (and 1 H) that should be asked of every project!"
    style="float: right; width: 60%; margin: 2em 0px 0px 1em; text-align: center;"
    caption="Image credit: 
       <a href='https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project'>The 5 Ws (and 1 H)</a>"
 %}
+</div>
 
 # About Pippim
 
