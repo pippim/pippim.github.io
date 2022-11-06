@@ -431,16 +431,12 @@ details[open] > summary {
 }
 
 
-.slide-left { animation: slideInFromRight 1s ease-in; }
-
-@keyframes slideInFromRight {
+.slide-left {
     // https://stackoverflow.com/a/64622534/6929343
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(0);
+    animation: slideInFromRight 1s ease-in;
+    @keyframes slideInFromRight {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(0); }
     }
 }
 
@@ -454,10 +450,10 @@ details[open] > summary {
 
 .slide-up {
     animation: slideInFromBottom 1s ease-in;
-}
-@keyframes slideInFromBottom {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(0); }
+    @keyframes slideInFromBottom {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(0); }
+    }
 }
 
 /* MAJOR SECTION ======== search.html styling */
