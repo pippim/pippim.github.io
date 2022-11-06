@@ -447,13 +447,13 @@ details[open] > summary {
 .slide-right {
     animation: slideInFromLeft 1s ease-in;
     @keyframes slideInFromLeft {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(100%); }
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(0); }
     }
 }
 
 .slide-up {
-    animation: slideInFromRight 1s ease-in;
+    animation: slideInFromBottom 1s ease-in;
 }
 @keyframes slideInFromBottom {
     0% { transform: translateY(100%); }
