@@ -212,7 +212,7 @@ visibility on all pages.
 
 {% include image.html src="/assets/img/Octocat.png"
    alt="Octocat image by GitHub.com"
-   style="float: right; width: 40%; margin: 2em 0px 0px 1em;"
+   style="float: right; width: 40%; margin: 2em 0px 0px 1em; animation: slideInFromBottom 1s ease-in;"
    caption="Octocat image credit 🔗:
       <a href='https://github.com/logos'>github.com logos</a>"
 %}
