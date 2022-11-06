@@ -430,11 +430,20 @@ details[open] > summary {
     text-align: center;
 }
 
-/* For /_includes/website.txt */
-.line-draw.highlight pre { line-height: .55 ! important; }
-.line-draw {
-    white-space: pre;  /* 2022-03-12 Proper spacing in website_tree.json */
-    line-height: .55 ! important;
+@keyframes slideInFromRight {
+    // https://stackoverflow.com/a/64622534/6929343
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
 }
 
 /* MAJOR SECTION ======== search.html styling */
