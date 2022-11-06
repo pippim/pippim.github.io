@@ -35,7 +35,7 @@ layout: default
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {
-    document.getElementById('mascot-image').classList.add('slide-up'); 
+    document.getElementById('mascot-image').classList.add('slide-left'); 
 });
 </script>
 
