@@ -441,6 +441,10 @@ details[open] > summary {
     }
 }
 
+.slideInFromBottom {
+    animation: slideInFromBottom 1s ease-in;
+}
+
 @keyframes slideInFromBottom {
     0% { transform: translateY(100%); }
     100% { transform: translateY(0); }
