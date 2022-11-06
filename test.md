@@ -141,7 +141,6 @@ The table below is from the
 | Generic.Lineno | gl | Line numbers |
 
 
-
 NEW discovered in code provided by tech support on Github.
 [Rouge `token.rb` 🔗](https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/token.rb#L75 
 "CSS class names used by Rouge in Jekyll Github Pages"){:target="_blank"}
@@ -149,16 +148,17 @@ NEW discovered in code provided by tech support on Github.
 <script>
 async function myFetch() {
     let response = await fetch('https://github.com/rouge-ruby/rouge/wiki/List-of-tokens');
-    
+    console.log("response 1:", response)
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
+    console.log("response 2:", response)
     
     let text = await response.text(); // await ensures variable has fulfilled Promise
     console.log(text);
 }
 
-// myFetch()
+myFetch()
 // Cross-Origin Request Blocked: The Same Origin Policy disallows reading the 
 // remote resource at https://github.com/rouge-ruby/rouge/wiki/List-of-tokens. 
 // (Reason: CORS header “Access-Control-Allow-Origin” missing).
