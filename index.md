@@ -220,7 +220,7 @@ visibility on all pages.
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {
-    document.getElementById('octocat-image').classList.add('slide-up'); 
+    document.getElementById('octocat-image').classList.add('slide-left'); 
 });
 </script>
 
