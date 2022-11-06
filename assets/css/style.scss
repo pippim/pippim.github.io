@@ -445,7 +445,7 @@ details[open] > summary {
 }
 
 .slide-up {
-    animation: slideInFromBottom 1s ease-in;
+    animation: slideInFromRight 1s ease-in;
 }
 @keyframes slideInFromBottom {
     0% { transform: translateY(100%); }
