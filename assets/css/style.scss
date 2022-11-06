@@ -444,11 +444,12 @@ details[open] > summary {
     }
 }
 
-.slide-up { animation: slideInFromBottom 1s ease-in; }
-
-@keyframes slideInFromBottom {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(0); }
+.slide-up {
+    animation: slideInFromBottom 1s ease-in;
+    @keyframes slideInFromBottom {
+        0% { transform: translateY(100%); }
+        100% { transform: translateY(0); }
+    }
 }
 
 /* MAJOR SECTION ======== search.html styling */
@@ -596,6 +597,7 @@ a.search-results:visited {
 
 /* MAJOR SECTION ======== On/Off Slider Switches
     Note: .with-action copied to inpSwitchStyle() in tim-ta.js
+          .with-action is only used by /_includes/tcm-common-code.js
 */
 .with-action {
     vertical-align: middle;
