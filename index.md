@@ -25,12 +25,19 @@ layout: default
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr6">ToC</a>  <a href="#hdr2">Skip</a></div>
 
+<div id="mascot-image">
 {% include image.html src="/assets/img/pngwing.com.png"
    alt="GitHub Octocat Mascot by pngwing.com"
    style="float: left; width: 45%; margin: 2em 1em 0px 0px;"
    caption="GitHub's Octocat Mascot image credit:
       <a href='https://www.pngwing.com/en/free-png-medya'>PNGWING  🔗</a>"
 %}
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById('mascot-image').classList.add('slide-up'); 
+});
+</script>
 
 # Introduction
 
