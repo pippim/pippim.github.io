@@ -436,11 +436,11 @@ details[open] > summary {
 @keyframes slideInFromRight {
     // https://stackoverflow.com/a/64622534/6929343
     0% {
-        transform: translateX(100%);
+        transform: translateY(100%);
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
