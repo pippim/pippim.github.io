@@ -441,9 +441,7 @@ details[open] > summary {
     }
 }
 
-.slideInFromBottom {
-    animation: slideInFromBottom 1s ease-in;
-}
+.slide-up { animation: slideInFromBottom 1s ease-in; }
 
 @keyframes slideInFromBottom {
     0% { transform: translateY(100%); }
