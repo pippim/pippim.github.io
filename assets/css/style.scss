@@ -430,6 +430,9 @@ details[open] > summary {
     text-align: center;
 }
 
+
+.slide-left { animation: slideInFromRight 1s ease-in; }
+
 @keyframes slideInFromRight {
     // https://stackoverflow.com/a/64622534/6929343
     0% {
