@@ -7,7 +7,7 @@ layout: default
    <a href="programs/tim-ta.html">
       {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
          alt="Tim-ta Alarm Clock Image"
-         style="float: left; width: 50%; margin: 1rem 1rem 1rem;"
+         style="float: left; width: 50%; margin: 2rem 1rem 1rem;"
          caption="Move mouse here for alarm simulation"
       %}
    </a>
