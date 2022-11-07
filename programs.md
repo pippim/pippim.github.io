@@ -15,7 +15,8 @@ layout: default
 
 ## Tim-ta (Timed Tasks) App - Run Set of Alarms Consecutively
 
-**Runs in your browser!** - No programs to install or configure.
+***Tim-ta*** runs in your browser. 
+There are no programs to install!
 
 ---
 
@@ -26,11 +27,9 @@ sounds. Click on image to open Tim-ta app.*
 
 ### Introduction
 
-Perfect for projects with a set of tasks where each task 
-always takes the same amount of time.
-
-***Tim-ta*** (**Tim**ed**-ta**sks) will help you get
-the job done with each task started at the exact second!
+***Tim-ta*** (***Tim***ed - ***ta***sks) is perfect for projects
+with a fixed set of tasks that take a specific amount of time.
+It gets the job done with each task started at the exact second!
 
 ### Sample projects
 
