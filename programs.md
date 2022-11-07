@@ -1,18 +1,9 @@
 ---
-title: Free Programs From Pippim
+title: Free Programs and Apps
 layout: default
 ---
-# {{ site.title }} Programs
 
-This page lists programs you can run on your browser from any 
-device and Linux programs by {{ site.title }}.  Use them free 
-of charge and free of Ads too!
-
----
-
-## Tim-ta (Timed Tasks) App - Run Set of Alarms Consecutively
-
-<div id="alarm-clock-image">
+<div id="alarm-clock-image" class="slide-right">
    <a href="programs/tim-ta.html">
       {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
          alt="Tim-ta Alarm Clock Image"
@@ -21,6 +12,8 @@ of charge and free of Ads too!
       %}
    </a>
 </div>
+
+## Tim-ta (Timed Tasks) App - Run Set of Alarms Consecutively
 
 **Runs in your browser!** - No programs to install or configure.
 
