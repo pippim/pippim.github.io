@@ -8,11 +8,11 @@ type:         Answer
 tags:         power-management cpu 19.04 frequency cpuf conky yad
 created_date: 2019-05-12 17:09:10
 edit_date:    2020-06-12 14:37:07
-votes:        "9 "
+votes:        "10 "
 favorites:    
-views:        "9,885 "
+views:        "9,930 "
 accepted:     Accepted
-uploaded:     2022-11-03 05:01:04
+uploaded:     2022-11-13 08:20:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-12-GUI-or-simple-Bash-script-to-throttle-the-CPU_.md
 toc:          false
 navigation:   true

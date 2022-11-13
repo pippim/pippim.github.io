@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line software-recommendation gui system monitoring conky
 created_date: 2018-05-08 02:27:12
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "344,300 "
+views:        "345,058 "
 accepted:     
-uploaded:     2022-11-03 05:01:04
+uploaded:     2022-11-13 08:20:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-What-system-monitoring-tools-are-available_.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         hard-drive performance benchmarks
 created_date: 2018-05-09 11:07:51
 edit_date:    
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "15,056 "
+views:        "15,148 "
 accepted:     Accepted
-uploaded:     2022-11-03 05:01:04
+uploaded:     2022-11-13 08:20:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-09-Benchmarking-a-HDD-using-the-Benchmark-utility-in-_Disks_-on-Ubuntu-16.04.md
 toc:          false
 navigation:   false

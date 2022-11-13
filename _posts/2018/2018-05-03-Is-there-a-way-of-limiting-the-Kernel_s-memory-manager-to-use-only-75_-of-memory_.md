@@ -10,9 +10,9 @@ created_date: 2018-05-03 23:51:15
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "434 "
+views:        "436 "
 accepted:     Accepted
-uploaded:     2022-11-03 05:01:04
+uploaded:     2022-11-13 08:20:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-03-Is-there-a-way-of-limiting-the-Kernel_s-memory-manager-to-use-only-75_-of-memory_.md
 toc:          false
 navigation:   false

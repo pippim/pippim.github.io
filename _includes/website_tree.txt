@@ -37,21 +37,20 @@
 │   │   ├── search_url.json
 │   │   ├── search_words.json
 │   │   └── website_tree.json
-│   ├── sound
-│   │   ├── Alarm_01.mp3
-│   │   ├── Alarm_02.mp3
-│   │   ├── Alarm_03.mp3
-│   │   ├── mixkit-alarm-clock-beep-988.mp3
-│   │   ├── mixkit-alarm-digital-clock-beep-989.mp3
-│   │   ├── mixkit-alert-alarm-1005.mp3
-│   │   ├── mixkit-critical-alarm-1004.mp3
-│   │   ├── mixkit-game-notification-wave-alarm-987.mp3
-│   │   ├── mixkit-rooster-crowing-in-the-morning-2462.mp3
-│   │   ├── mixkit-security-facility-breach-alarm-994.mp3
-│   │   ├── mixkit-short-rooster-crowing-2470.mp3
-│   │   ├── mixkit-slot-machine-win-alarm-1995.mp3
-│   │   └── mixkit-street-public-alarm-997.mp3
-│   └── hyperlinkRecipe.js
+│   └── sound
+│       ├── Alarm_01.mp3
+│       ├── Alarm_02.mp3
+│       ├── Alarm_03.mp3
+│       ├── mixkit-alarm-clock-beep-988.mp3
+│       ├── mixkit-alarm-digital-clock-beep-989.mp3
+│       ├── mixkit-alert-alarm-1005.mp3
+│       ├── mixkit-critical-alarm-1004.mp3
+│       ├── mixkit-game-notification-wave-alarm-987.mp3
+│       ├── mixkit-rooster-crowing-in-the-morning-2462.mp3
+│       ├── mixkit-security-facility-breach-alarm-994.mp3
+│       ├── mixkit-short-rooster-crowing-2470.mp3
+│       ├── mixkit-slot-machine-win-alarm-1995.mp3
+│       └── mixkit-street-public-alarm-997.mp3
 ├── _includes
 │   ├── draggable-window.js
 │   ├── getRootColors.js
@@ -66,6 +65,7 @@
 │   ├── timne-ta-storage.1.0.js
 │   ├── tim-ta-storage.js
 │   ├── toc.md
+│   ├── website_tree.html
 │   └── website_tree.txt
 ├── _layouts
 │   ├── default.html
@@ -77,7 +77,7 @@
 ├── _posts
 │   ├── 2016 [178 entries exceeds filelimit, not opening dir]
 │   ├── 2017 [155 entries exceeds filelimit, not opening dir]
-│   ├── 2018 [441 entries exceeds filelimit, not opening dir]
+│   ├── 2018 [442 entries exceeds filelimit, not opening dir]
 │   ├── 2019 [271 entries exceeds filelimit, not opening dir]
 │   ├── 2020 [64 entries exceeds filelimit, not opening dir]
 │   ├── 2021 [32 entries exceeds filelimit, not opening dir]
@@ -127,6 +127,7 @@
 ├── index.md
 ├── LICENSE
 ├── programs.md
+├── style.scss
 └── test.md
 
-26 directories, 104 files
+26 directories, 105 files

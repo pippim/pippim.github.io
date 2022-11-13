@@ -9,10 +9,10 @@ tags:         assemblies mbr grub2
 created_date: 2016-10-06 03:46:20
 edit_date:    
 votes:        "2 "
-favorites:    1
+favorites:    0
 views:        "70 "
 accepted:     
-uploaded:     2022-11-03 05:01:04
+uploaded:     2022-11-13 08:20:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-06-Call-Grub-_MBR_-from-Linux.md
 toc:          false
 navigation:   false

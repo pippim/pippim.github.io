@@ -8,11 +8,11 @@ type:         Answer
 tags:         touchpad suspend asus synaptics
 created_date: 2016-09-24 01:23:55
 edit_date:    2016-09-24 02:26:03
-votes:        "18 "
+votes:        "19 "
 favorites:    
-views:        "47,418 "
+views:        "47,664 "
 accepted:     
-uploaded:     2022-11-03 05:01:04
+uploaded:     2022-11-13 08:20:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-24-Touchpad-not-working-after-suspending-laptop.md
 toc:          false
 navigation:   false

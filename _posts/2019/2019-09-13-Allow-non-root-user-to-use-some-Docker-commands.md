@@ -8,11 +8,11 @@ type:         Answer
 tags:         18.04 permissions docker
 created_date: 2019-09-13 21:50:40
 edit_date:    2020-06-12 14:37:07
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "11,255 "
+views:        "11,409 "
 accepted:     
-uploaded:     2022-11-03 05:01:04
+uploaded:     2022-11-13 08:20:30
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-13-Allow-non-root-user-to-use-some-Docker-commands.md
 toc:          false
 navigation:   false
