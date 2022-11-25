@@ -8,11 +8,11 @@ type:         Answer
 tags:         kernel hard-drive
 created_date: 2017-01-06 11:53:34
 edit_date:    
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "8,836 "
+views:        "8,857 "
 accepted:     
-uploaded:     2022-11-13 08:20:30
+uploaded:     2022-11-24 17:18:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-06-Block-devices-sda_-sdb_-sdc.-What-comes-after-sdz_.md
 toc:          false
 navigation:   false

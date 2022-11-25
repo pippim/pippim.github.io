@@ -8,11 +8,11 @@ type:         Question
 tags:         gsettings
 created_date: 2019-09-04 00:29:57
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "352 "
+views:        "357 "
 accepted:     
-uploaded:     2022-11-13 08:20:30
+uploaded:     2022-11-24 17:18:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-04-List-gsettings-changes-from-default.md
 toc:          false
 navigation:   false

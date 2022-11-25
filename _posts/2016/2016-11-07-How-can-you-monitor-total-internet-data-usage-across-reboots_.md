@@ -8,11 +8,11 @@ type:         Answer
 tags:         networking system-monitor bandwidth vnstat conky
 created_date: 2016-11-07 04:50:28
 edit_date:    2017-10-31 23:50:16
-votes:        "68 "
+votes:        "69 "
 favorites:    
-views:        "101,857 "
+views:        "102,048 "
 accepted:     
-uploaded:     2022-11-13 08:20:30
+uploaded:     2022-11-24 17:18:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-07-How-can-you-monitor-total-internet-data-usage-across-reboots_.md
 toc:          false
 navigation:   false

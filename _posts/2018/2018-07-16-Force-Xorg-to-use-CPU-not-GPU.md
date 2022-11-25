@@ -10,9 +10,9 @@ created_date: 2018-07-16 01:33:58
 edit_date:    2019-02-21 10:47:27
 votes:        "3 "
 favorites:    
-views:        "13,262 "
+views:        "13,307 "
 accepted:     
-uploaded:     2022-11-13 08:20:30
+uploaded:     2022-11-24 17:18:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-16-Force-Xorg-to-use-CPU-not-GPU.md
 toc:          false
 navigation:   false

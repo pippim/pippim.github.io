@@ -8,11 +8,11 @@ type:         Answer
 tags:         ubuntu-touch
 created_date: 2017-03-26 03:39:10
 edit_date:    
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "61,634 "
+views:        "62,066 "
 accepted:     
-uploaded:     2022-11-13 08:20:30
+uploaded:     2022-11-24 17:18:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-26-writing-a-text-file-in-the-terminal-with-touch.md
 toc:          false
 navigation:   false

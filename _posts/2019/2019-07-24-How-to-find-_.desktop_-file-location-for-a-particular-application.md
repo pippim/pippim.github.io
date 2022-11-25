@@ -10,9 +10,9 @@ created_date: 2019-07-24 16:22:34
 edit_date:    
 votes:        "8 "
 favorites:    
-views:        "5,937 "
+views:        "6,018 "
 accepted:     Accepted
-uploaded:     2022-11-13 08:20:30
+uploaded:     2022-11-24 17:18:39
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-How-to-find-_.desktop_-file-location-for-a-particular-application.md
 toc:          false
 navigation:   false
