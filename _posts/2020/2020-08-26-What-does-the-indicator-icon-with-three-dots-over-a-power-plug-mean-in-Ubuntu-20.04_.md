@@ -8,11 +8,11 @@ type:         Answer
 tags:         dell 20.04 gnome-shell indicator docking
 created_date: 2020-08-26 11:02:45
 edit_date:    2020-08-26 22:41:40
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "2,142 "
+views:        "2,300 "
 accepted:     
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-08-26-What-does-the-indicator-icon-with-three-dots-over-a-power-plug-mean-in-Ubuntu-20.04_.md
 toc:          false
 navigation:   false

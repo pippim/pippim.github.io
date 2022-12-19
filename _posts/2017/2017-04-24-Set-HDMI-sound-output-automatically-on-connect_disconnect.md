@@ -8,11 +8,11 @@ type:         Answer
 tags:         12.04 sound hdmi events
 created_date: 2017-04-24 22:54:02
 edit_date:    2020-06-12 14:37:07
-votes:        "7 "
+votes:        "8 "
 favorites:    
-views:        "22,506 "
+views:        "22,724 "
 accepted:     
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-04-24-Set-HDMI-sound-output-automatically-on-connect_disconnect.md
 toc:          false
 navigation:   false

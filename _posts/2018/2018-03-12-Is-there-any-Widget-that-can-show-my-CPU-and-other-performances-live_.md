@@ -10,9 +10,9 @@ created_date: 2018-03-12 19:23:55
 edit_date:    2020-06-12 14:37:07
 votes:        "25 "
 favorites:    
-views:        "63,306 "
+views:        "64,061 "
 accepted:     
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-Is-there-any-Widget-that-can-show-my-CPU-and-other-performances-live_.md
 toc:          false
 navigation:   false

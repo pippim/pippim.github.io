@@ -10,9 +10,9 @@ created_date: 2016-08-28 23:41:48
 edit_date:    2017-10-04 19:46:26
 votes:        "34 "
 favorites:    
-views:        "21,284 "
+views:        "21,445 "
 accepted:     
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-28-Google-Chrome-will-take-up-my-memory-to-the-point-where-it-causes-my-computer-to-freeze-to-a-near-halt.-What-can-I-do-to-prevent-this_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2020-01-13 12:51:21
 edit_date:    2020-01-19 14:00:20
 votes:        "0 "
 favorites:    
-views:        "3,887 "
+views:        "4,006 "
 accepted:     Accepted
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-01-13-Where-is-the-output-from-startup-scripts-stored-in-Ubuntu-19.10_.md
 toc:          false
 navigation:   false

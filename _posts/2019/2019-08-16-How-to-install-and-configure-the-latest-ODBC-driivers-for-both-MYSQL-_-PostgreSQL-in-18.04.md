@@ -10,9 +10,9 @@ created_date: 2019-08-16 23:43:36
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "6,076 "
+views:        "6,235 "
 accepted:     
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-16-How-to-install-and-configure-the-latest-ODBC-driivers-for-both-MYSQL-_-PostgreSQL-in-18.04.md
 toc:          false
 navigation:   false

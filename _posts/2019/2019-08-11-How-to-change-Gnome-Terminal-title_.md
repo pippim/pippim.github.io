@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1164880
 type:         Answer
 tags:         command-line gnome-terminal titlebar
 created_date: 2019-08-11 00:45:50
-edit_date:    2022-02-27 14:23:21
-votes:        "20 "
+edit_date:    2022-11-21 07:54:47
+votes:        "24 "
 favorites:    
-views:        "266,007 "
+views:        "267,580 "
 accepted:     
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-11-How-to-change-Gnome-Terminal-title_.md
 toc:          false
 navigation:   false
@@ -22,7 +22,7 @@ clipboard:    false
 
 # Works on Ubuntu 16.04 to 20.04
 
-This answer is simpler than most others. To use it, you would simply type:
+This answer is simpler than most others. To use it, you would just type:
 
 ## `title "My new title"`
 
@@ -48,7 +48,7 @@ function title() {
 }
 ```
 
-Save the `~ /.bashrc` file. After opening a new terminal tab use:
+Save the `~/.bashrc` file. After opening a new terminal tab use:
 
 ``` bash
 title "Special Projects"

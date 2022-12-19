@@ -10,9 +10,9 @@ created_date: 2021-01-14 00:24:34
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,536 "
+views:        "1,562 "
 accepted:     Accepted
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-01-14-Laptop-wakes-up-seconds-after-suspend.md
 toc:          false
 navigation:   false

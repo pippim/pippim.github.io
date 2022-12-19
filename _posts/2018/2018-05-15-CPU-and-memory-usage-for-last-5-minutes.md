@@ -8,11 +8,11 @@ type:         Answer
 tags:         16.04
 created_date: 2018-05-15 11:52:58
 edit_date:    
-votes:        "1 "
+votes:        "2 "
 favorites:    
-views:        "2,708 "
+views:        "2,754 "
 accepted:     Accepted
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-15-CPU-and-memory-usage-for-last-5-minutes.md
 toc:          false
 navigation:   false

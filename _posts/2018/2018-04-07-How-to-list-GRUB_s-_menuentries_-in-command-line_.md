@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line grub2
 created_date: 2018-04-07 00:14:42
 edit_date:    2019-07-27 19:16:36
-votes:        "17 "
+votes:        "18 "
 favorites:    
-views:        "106,270 "
+views:        "108,137 "
 accepted:     
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-07-How-to-list-GRUB_s-_menuentries_-in-command-line_.md
 toc:          true
 navigation:   true

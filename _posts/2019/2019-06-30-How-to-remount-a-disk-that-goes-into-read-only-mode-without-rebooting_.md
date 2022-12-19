@@ -10,9 +10,9 @@ created_date: 2019-06-30 23:21:56
 edit_date:    2019-07-01 22:22:32
 votes:        "3 "
 favorites:    
-views:        "8,368 "
+views:        "8,518 "
 accepted:     
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-30-How-to-remount-a-disk-that-goes-into-read-only-mode-without-rebooting_.md
 toc:          false
 navigation:   false

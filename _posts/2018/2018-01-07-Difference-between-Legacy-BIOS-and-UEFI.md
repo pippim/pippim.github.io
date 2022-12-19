@@ -10,9 +10,9 @@ created_date: 2018-01-07 18:36:55
 edit_date:    
 votes:        "7 "
 favorites:    
-views:        "64,500 "
+views:        "64,663 "
 accepted:     
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-01-07-Difference-between-Legacy-BIOS-and-UEFI.md
 toc:          false
 navigation:   false

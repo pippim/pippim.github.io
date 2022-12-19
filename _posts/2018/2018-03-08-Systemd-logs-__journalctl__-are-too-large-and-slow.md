@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1012913
 type:         Answer
 tags:         command-line performance disk-usage systemd systemd-journald
 created_date: 2018-03-08 01:13:36
-edit_date:    2022-06-13 06:36:01
-votes:        "108 "
+edit_date:    2022-12-01 11:15:31
+votes:        "110 "
 favorites:    
-views:        "59,428 "
+views:        "60,854 "
 accepted:     Accepted
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-08-Systemd-logs-__journalctl__-are-too-large-and-slow.md
 toc:          false
 navigation:   false
@@ -33,7 +33,7 @@ To limit log files to a specific size `systemd` provides a `vacuum` feature to "
 For example to reduce 312 MB consumption down to 200 MB (or less) use:
 
 ``` 
-$ journalctl --vacuum-size=200M
+$ sudo journalctl --vacuum-size=200M
 Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/system@00056515dbdd9a4e-a6fe2ec77e516045.journal~ (56.0M).
 Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/user-65534@00056515dbfe731d-b7bab56cb4efcbf6.journal~ (8.0M).
 Deleted archived journal /var/log/journal/d7b25a27fe064cadb75a2f2f6ca7764e/user-1000@1bbb77599cf14c65a18af51646751696-000000000000064f-00056444d58433e1.journal (112.0M).

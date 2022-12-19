@@ -10,14 +10,14 @@ posts_by_year: true
 code_url: https://github.com/pippim/pippim.github.io/blob/main
 
 # Following site-wide values automatically set by sede/refresh.sh script
-views: "59,292,935 "
-views_human: 59.3 million
-refreshed: 2022-11-24 17:18:39
+views: "59,677,884 "
+views_human: 59.7 million
+refreshed: 2022-12-19 12:51:29
 questions: "303 "
-answers: "2,169 "
-accepted: "480 "
-post_count: "1,154 "
+answers: "2,168 "
+accepted: "481 "
+post_count: "1,157 "
 question_count: "53 "
-answer_count: "1,101 "
-accepted_count: "491 "
-all_tag_counts: "3,544 "
+answer_count: "1,104 "
+accepted_count: "492 "
+all_tag_counts: "3,552 "

@@ -10,9 +10,9 @@ created_date: 2016-08-14 01:52:35
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "2,676 "
+views:        "2,679 "
 accepted:     Accepted
-uploaded:     2022-11-24 17:18:39
+uploaded:     2022-12-19 12:51:29
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-14-USB-Hub-not-working-with-Ubuntu-16.04.md
 toc:          false
 navigation:   false
