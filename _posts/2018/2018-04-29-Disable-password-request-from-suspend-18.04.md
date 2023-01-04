@@ -10,9 +10,9 @@ created_date: 2018-04-29 18:04:15
 edit_date:    2022-02-13 23:55:05
 votes:        "68 "
 favorites:    
-views:        "53,457 "
+views:        "53,677 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Disable-password-request-from-suspend-18.04.md
 toc:          false
 navigation:   false

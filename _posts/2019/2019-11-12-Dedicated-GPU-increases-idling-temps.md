@@ -10,9 +10,9 @@ created_date: 2019-11-12 15:28:31
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "298 "
+views:        "301 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-12-Dedicated-GPU-increases-idling-temps.md
 toc:          false
 navigation:   false

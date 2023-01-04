@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "815 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-26-Is-Ubuntu-Server-required-for-LAMP-server-or-will-anything-break-if-I-install-LAMP-on-Ubuntu-Desktop_.md
 toc:          false
 navigation:   false

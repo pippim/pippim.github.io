@@ -10,9 +10,9 @@ created_date: 2017-01-11 05:03:29
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "504,849 "
+views:        "505,077 "
 accepted:     
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-11-What-is-CSM-option.md
 toc:          false
 navigation:   false

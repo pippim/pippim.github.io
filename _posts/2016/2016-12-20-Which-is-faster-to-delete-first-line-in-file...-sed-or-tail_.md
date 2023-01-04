@@ -8,11 +8,11 @@ type:         Question
 tags:         scripts sed tail
 created_date: 2016-12-20 20:32:09
 edit_date:    2017-04-13 12:25:10
-votes:        "15 "
+votes:        "14 "
 favorites:    
-views:        "16,139 "
+views:        "16,166 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-20-Which-is-faster-to-delete-first-line-in-file...-sed-or-tail_.md
 toc:          false
 navigation:   false

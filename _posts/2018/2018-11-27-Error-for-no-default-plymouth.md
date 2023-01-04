@@ -10,9 +10,9 @@ created_date: 2018-11-27 02:45:41
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "5,012 "
+views:        "5,054 "
 accepted:     
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-27-Error-for-no-default-plymouth.md
 toc:          false
 navigation:   true

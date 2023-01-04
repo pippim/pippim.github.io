@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line sudo password
 created_date: 2016-12-15 03:10:27
 edit_date:    
-votes:        "7 "
+votes:        "8 "
 favorites:    
-views:        "1,967 "
+views:        "1,984 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-15-How-can-I-make-stars-appear-when-I-type-sudo-password_.md
 toc:          false
 navigation:   false

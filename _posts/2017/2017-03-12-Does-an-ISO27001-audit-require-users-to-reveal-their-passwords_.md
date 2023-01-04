@@ -8,11 +8,11 @@ type:         Answer
 tags:         passwords password-management iso27001
 created_date: 2017-03-12 05:35:48
 edit_date:    
-votes:        "45 "
+votes:        "46 "
 favorites:    
-views:        "20,365 "
+views:        "20,378 "
 accepted:     
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-12-Does-an-ISO27001-audit-require-users-to-reveal-their-passwords_.md
 toc:          false
 navigation:   false

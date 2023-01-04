@@ -10,9 +10,9 @@ created_date: 2019-09-29 14:32:55
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "66,459 "
+views:        "66,641 "
 accepted:     
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-29-How-to-set-intel_idle.max_cstate_1.md
 toc:          false
 navigation:   false

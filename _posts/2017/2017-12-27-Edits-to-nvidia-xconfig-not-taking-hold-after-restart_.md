@@ -10,9 +10,9 @@ created_date: 2017-12-27 03:30:59
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "3,268 "
+views:        "3,275 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-27-Edits-to-nvidia-xconfig-not-taking-hold-after-restart_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-04-28 03:00:41
 edit_date:    2020-06-12 14:37:07
 votes:        "48 "
 favorites:    
-views:        "130,283 "
+views:        "131,277 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-28-How-to-manually-mount-a-partition_.md
 toc:          false
 navigation:   false

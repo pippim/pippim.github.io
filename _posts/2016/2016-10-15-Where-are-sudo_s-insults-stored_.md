@@ -10,9 +10,9 @@ created_date: 2016-10-15 20:22:01
 edit_date:    2019-11-15 03:43:34
 votes:        "88 "
 favorites:    
-views:        "49,155 "
+views:        "49,207 "
 accepted:     
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-15-Where-are-sudo_s-insults-stored_.md
 toc:          false
 navigation:   false

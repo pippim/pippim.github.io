@@ -10,9 +10,9 @@ created_date: 2019-06-10 22:45:51
 edit_date:    2019-06-10 22:56:03
 votes:        "3 "
 favorites:    
-views:        "829 "
+views:        "834 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-10-Laptop-not-shutting-down-on-low-power.md
 toc:          false
 navigation:   false

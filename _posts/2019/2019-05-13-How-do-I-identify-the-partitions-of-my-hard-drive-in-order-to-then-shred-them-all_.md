@@ -10,9 +10,9 @@ created_date: 2019-05-13 10:45:35
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,132 "
+views:        "3,144 "
 accepted:     
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-05-13-How-do-I-identify-the-partitions-of-my-hard-drive-in-order-to-then-shred-them-all_.md
 toc:          false
 navigation:   false

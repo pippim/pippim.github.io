@@ -10,9 +10,9 @@ created_date: 2019-07-11 21:43:30
 edit_date:    
 votes:        "0 "
 favorites:    
-views:        "167 "
+views:        "168 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-11-problem-installing-sqlite3-using-apt-get-install.md
 toc:          false
 navigation:   false

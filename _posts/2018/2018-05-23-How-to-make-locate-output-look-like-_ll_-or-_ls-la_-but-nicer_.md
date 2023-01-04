@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1039236
 type:         Answer
 tags:         command-line ls locate
 created_date: 2018-05-23 02:45:51
-edit_date:    2020-07-05 22:04:26
+edit_date:    2022-12-30 10:05:43
 votes:        "2 "
 favorites:    
-views:        "3,257 "
+views:        "3,265 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-How-to-make-locate-output-look-like-_ll_-or-_ls-la_-but-nicer_.md
 toc:          false
 navigation:   false
@@ -50,7 +50,7 @@ The bash code is fairly straight forward. Copy the script below into the directo
 
 
 ``` bash
-chmod a+x /home/YOUR_NAME/bin/llocate`
+chmod a+x /home/YOUR_NAME/bin/llocate
 ```
 
 Here's the script `llocate`:
@@ -106,7 +106,7 @@ while read -r Line; do
     StatLine="${StatLine/$Seconds/$HumanDate}"
     tmpForm="$tmpForm$StatLine"$'\n'
 
-done <<< "$tmpLine"                           # Read next locate line.
+done <<< "$tmpLine"    # Read next locate line.
 
 column -t -s '|' <<< "$tmpForm"
 

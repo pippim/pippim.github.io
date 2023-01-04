@@ -8,11 +8,11 @@ type:         Answer
 tags:         terminal
 created_date: 2019-04-28 01:15:29
 edit_date:    2022-02-18 17:27:07
-votes:        "19 "
+votes:        "20 "
 favorites:    
-views:        "116,608 "
+views:        "116,963 "
 accepted:     
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-28-How-to-disable-line-wrap-in-a-terminal_.md
 toc:          false
 navigation:   false

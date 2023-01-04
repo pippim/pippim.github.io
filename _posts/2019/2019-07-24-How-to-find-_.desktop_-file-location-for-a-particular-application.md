@@ -8,11 +8,11 @@ type:         Answer
 tags:         configuration .desktop ftp default-programs image-viewers
 created_date: 2019-07-24 16:22:34
 edit_date:    
-votes:        "8 "
+votes:        "9 "
 favorites:    
-views:        "6,330 "
+views:        "6,496 "
 accepted:     Accepted
-uploaded:     2022-12-19 12:51:29
+uploaded:     2023-01-03 19:49:43
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-How-to-find-_.desktop_-file-location-for-a-particular-application.md
 toc:          false
 navigation:   false
