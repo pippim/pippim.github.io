@@ -1448,7 +1448,8 @@ function progressTouched(i, element) {
 
     popClearByError("task_not_running");
     if (!boolTouchedActive) {
-        popCreate("e", "Can only select a running progress bar",
+        popCreate("e", "Can only select a running progress bar. i=" + i +
+                  " activeBarNo=" + activeBarNo,
                   "task_not_running", "elm", element);
         return;
     }
