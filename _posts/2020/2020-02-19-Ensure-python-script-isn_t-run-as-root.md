@@ -10,9 +10,9 @@ created_date: 2020-02-19 02:37:54
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "100 "
+views:        "111 "
 accepted:     
-uploaded:     2023-01-03 19:49:43
+uploaded:     2023-02-20 16:38:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-02-19-Ensure-python-script-isn_t-run-as-root.md
 toc:          false
 navigation:   false

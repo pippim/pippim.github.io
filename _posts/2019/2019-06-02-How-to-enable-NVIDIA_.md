@@ -8,11 +8,11 @@ type:         Answer
 tags:         nvidia graphics 19.04
 created_date: 2019-06-02 22:46:33
 edit_date:    2019-06-03 10:32:14
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "20,659 "
+views:        "21,594 "
 accepted:     Accepted
-uploaded:     2023-01-03 19:49:43
+uploaded:     2023-02-20 16:38:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-02-How-to-enable-NVIDIA_.md
 toc:          false
 navigation:   false

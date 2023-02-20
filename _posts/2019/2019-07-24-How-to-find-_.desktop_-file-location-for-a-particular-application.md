@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1160753
 type:         Answer
 tags:         configuration .desktop ftp default-programs image-viewers
 created_date: 2019-07-24 16:22:34
-edit_date:    
-votes:        "9 "
+edit_date:    2023-02-01 09:14:18
+votes:        "10 "
 favorites:    
-views:        "6,496 "
+views:        "7,335 "
 accepted:     Accepted
-uploaded:     2023-01-03 19:49:43
+uploaded:     2023-02-20 16:38:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-24-How-to-find-_.desktop_-file-location-for-a-particular-application.md
 toc:          false
 navigation:   false
@@ -22,7 +22,7 @@ clipboard:    false
 A much faster and more universal search is with `locate` command:
 
 ``` 
-$ locate *image*desktop
+$ locate '*image*desktop'
 /usr/share/app-install/desktop/gimagereader:gimagereader-gtk.desktop
 /usr/share/app-install/desktop/gnome-disk-utility:gnome-disk-image-mounter.desktop
 /usr/share/app-install/desktop/gnome-disk-utility:gnome-disk-image-writer.desktop
@@ -46,7 +46,7 @@ real	0m52.563s
 user	0m6.271s
 sys	    0m9.002s
 
-$ time locate *image*desktop
+$ time locate '*image*desktop'
 real	0m0.705s
 user	0m0.693s
 sys	    0m0.012s
@@ -59,3 +59,12 @@ The disadvantage of `locate` is the database is updated daily. If you just insta
 ``` 
 sudo updatedb
 ```
+
+### Installation
+
+In newer versions of Ubuntu, you can install `locate` by installing the package `plocate`:
+
+``` 
+sudo apt install plocate
+```
+

@@ -8,11 +8,11 @@ type:         Answer
 tags:         16.04 multiple-monitors brightness hdmi
 created_date: 2019-06-12 00:48:29
 edit_date:    2020-06-12 14:37:07
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "44,536 "
+views:        "46,229 "
 accepted:     
-uploaded:     2023-01-03 19:49:43
+uploaded:     2023-02-20 16:38:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-06-12-Changing-the-screen-brightness-of-the-external-screen.md
 toc:          false
 navigation:   false

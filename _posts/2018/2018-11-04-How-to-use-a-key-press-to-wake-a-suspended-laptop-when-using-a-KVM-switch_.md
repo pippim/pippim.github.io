@@ -8,11 +8,11 @@ type:         Answer
 tags:         laptop wakeup lid kvm-switch
 created_date: 2018-11-04 00:33:56
 edit_date:    2018-11-04 15:41:57
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "5,480 "
+views:        "5,559 "
 accepted:     
-uploaded:     2023-01-03 19:49:43
+uploaded:     2023-02-20 16:38:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-04-How-to-use-a-key-press-to-wake-a-suspended-laptop-when-using-a-KVM-switch_.md
 toc:          false
 navigation:   true

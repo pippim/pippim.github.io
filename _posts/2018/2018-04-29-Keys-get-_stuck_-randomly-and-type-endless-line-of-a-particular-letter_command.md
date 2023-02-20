@@ -10,9 +10,9 @@ created_date: 2018-04-29 17:39:09
 edit_date:    
 votes:        "11 "
 favorites:    
-views:        "10,599 "
+views:        "10,832 "
 accepted:     Accepted
-uploaded:     2023-01-03 19:49:43
+uploaded:     2023-02-20 16:38:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Keys-get-_stuck_-randomly-and-type-endless-line-of-a-particular-letter_command.md
 toc:          false
 navigation:   false

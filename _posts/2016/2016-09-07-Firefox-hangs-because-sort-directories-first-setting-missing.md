@@ -10,9 +10,9 @@ created_date: 2016-09-07 01:02:36
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "2,207 "
+views:        "2,227 "
 accepted:     
-uploaded:     2023-01-03 19:49:43
+uploaded:     2023-02-20 16:38:25
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-07-Firefox-hangs-because-sort-directories-first-setting-missing.md
 toc:          false
 navigation:   false
