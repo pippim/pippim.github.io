@@ -67,7 +67,7 @@ This video shows:
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-# Clone GitHub Pages Website Locally
+# Clone {{ site.title }} Website Locally
 
 These are the Linux instructions for cloning the 
 {{ site.title }} website to your local drive.
