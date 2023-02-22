@@ -3,24 +3,6 @@ title: Convert Stack Exchange Posts to Your Own Website
 layout: program
 ---
 
-<!-- Jan 30/22 - Initial attempt at search using javascript
-
-1. Add search bar: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/
-
-NOTE Fonts not being used error message in Developer Tools:
-
-   $ grep -R "https://fonts.googleapis.com/css?family=Open+Sans:400" --with-filename
-
-   _layouts/post.html:    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-   _layouts/default.html:    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-   _layouts/program.html:    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-   _sass/jekyll-theme-cayman.scss:@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
-
-<button onclick="load_search_objects();">Load search objects</button>
-<button onclick="search_fetched();">Search fetched test</button>
-
--->
-
 <script>
 
 /* include tcm-common-code.js code shared by:
@@ -85,27 +67,22 @@ This video shows:
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-# Daily Backup
+# Clone GitHub Pages Website Locally
 
-Normally you will `git pull` all the directories and files from your website
-to your local drive. If you plan on developing locally, you probably want
-to save your daily work. This script is what {{ site.title }} uses for
-daily backup to gmail.com (in the cloud, so it should be safe):
+These are the Linux instructions for cloning the 
+{{ site.title }} website to your local drive.
 
 ``` bash
-# WEBSITE - Local copies of files on pippim.github.io (EXCLUDES /assets/css/img)
-tar -rpf "$Filename" website/*.md       # about.md, answers.md, programs.md
-tar -rpf "$Filename" website/*.yml      # _config.yml
-tar -rpf "$Filename" website/_includes  # search.html, image.html & toc.md
-tar -rpf "$Filename" website/_layouts   # default.html & post.html
-tar -rpf "$Filename" website/_plugins   # insert_git_code.rb (NOT supported)
-tar -rpf "$Filename" website/_sass      # jekyll-theme-cayman.scss & toc.scss
-tar -rpf "$Filename" website/assets/css # style.scss file
-tar -rpf "$Filename" website/assets/js  # javascript files
-tar -rpf "$Filename" website/sede/*.sh  # refresh GitHub Pages each week
-tar -rpf "$Filename" website/sede/*.py  # stack-to-blog.py and SEDE query below
-tar -rpf "$Filename" website/sede/StackQuery
+sudo apt update && sudo apt install git
+cd ~
+git clone https://github.com/pippim/pippim.github.io.git website2
+cp -ar ~/website2 ~/website
 ```
+
+> NOTE: `~/website` is your working directory and
+> `~/website2` is a mirror copy of the website needed
+> to publish changes with `refresh.sh` bash script.
+
 
 <h3><b> IMPORTANT NOTE: </b></h3>
 
