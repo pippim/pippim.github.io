@@ -83,18 +83,6 @@ cp -ar ~/website2 ~/website
 > `~/website2` is a mirror copy of the website needed
 > to publish changes with `refresh.sh` bash script.
 
-
-<h3><b> IMPORTANT NOTE: </b></h3>
-
-> Images are ***NOT*** included in the daily backup.  This is because this is a small subset of my daily backup script that is called from `cron` every morning.
->
-> The full script compresses files and emails to gmail.com. Including images would make the backup exceed Google quotas of 20 MB per backup and 15 GB for all backups.
->
->  If you want to include images  in your own backup, add the following to the daily backup script:
->    ``` bash
->    tar -rpf "$Filename" website/assets/img # Image files
->    ````
-
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
