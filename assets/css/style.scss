@@ -430,7 +430,6 @@ details[open] > summary {
     text-align: center;
 }
 
-
 .slide-left {
     // https://stackoverflow.com/a/64622534/6929343
     animation: slideInFromRight 1s ease-in;
@@ -455,11 +454,21 @@ details[open] > summary {
         100% { transform: translateY(0); }
     }
 }
+
 .slide-up {
     animation: slideInFromBottom 1s ease-in;
     @keyframes slideInFromBottom {
         0% { transform: translateY(100vh); }
         100% { transform: translateY(0); }
+    }
+}
+
+.fade-in {
+    /* Fade text in */
+    animation: fadeIn 2s;
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
     }
 }
 
