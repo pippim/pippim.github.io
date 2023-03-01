@@ -20,8 +20,10 @@ There are no programs to install!
 
 ---
 
+<div class="fade-in">
 *<- Move mouse over image to see how alarm looks when it
 sounds. Click on image to open Tim-ta app.*
+</div>
 
 ---
 
