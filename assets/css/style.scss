@@ -464,8 +464,8 @@ details[open] > summary {
 }
 
 .fade-in {
-    /* Fade text in */
-    animation: fadeIn 2s;
+    /* Fade text in over 4 seconds */
+    animation: fadeIn 4s;
     @keyframes fadeIn {
         from { opacity: 0; }
         to   { opacity: 1; }
