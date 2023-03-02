@@ -23,7 +23,7 @@ There are no programs to install!
 
 &#10229; <i>Move mouse over clock to see how it shakes when alarm
 sounds.</i><br>
-<b>Click on clock to open <i>Tim-ta</i> app.</b>
+&#10229; Click on the clock to open <i>Tim-ta</i> app.
 
 <hr />
 </div>
