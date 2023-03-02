@@ -21,8 +21,9 @@ There are no programs to install!
 <div class="fade-in">
 <hr />
 
-&#10229; <i>Move mouse over image to see how alarm looks when it
-sounds. Click on image to open Tim-ta app.</i>
+&#10229; <i>Move mouse over clock to see how it shakes when alarm
+sounds.</i>
+<b>Click on clock to open Tim-ta app.</b>
 
 <hr />
 </div>
