@@ -1596,6 +1596,9 @@ function getActiveTimerNo() {
         var entry = allTimers[key];
         // If it hasn't started and hasn't ended it's the active timer
         if (entry.seconds != entry.progress && entry.seconds != entry.remaining) {
+            console.log("entry.seconds:", entry.seconds,
+                        "entry.progress", entry.progress,
+                        "entry.remaining", entry.remaining)
             return entry.index + 1
         }
     }
