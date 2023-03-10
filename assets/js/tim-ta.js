@@ -1595,10 +1595,10 @@ function getActiveTimerNo() {
     for (const key of Object.keys(allTimers)) {
         var entry = allTimers[key];
         // If it hasn't started and hasn't ended it's the active timer
+        console.log("index", entry.index, "entry.seconds:", entry.seconds,
+                    "entry.progress", entry.progress,
+                    "entry.remaining", entry.remaining)
         if (entry.seconds != entry.progress && entry.seconds != entry.remaining) {
-            console.log("entry.seconds:", entry.seconds,
-                        "entry.progress", entry.progress,
-                        "entry.remaining", entry.remaining)
             return entry.index + 1
         }
     }
