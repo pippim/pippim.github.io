@@ -42,6 +42,7 @@ in Ask Ubuntu you will see the image on the right.
 
 The philosophy is free open source software.
 
+<div>
 {% include image.html src="/assets/img/jail-break-cropped.png"
    alt="Break out of software jail image"
    style="float: right; width: 70%; 
@@ -72,6 +73,7 @@ website. To speed up the process, variables
 such as the name "Pippim" only needs to be
 changed in one place. Then hundreds or thousands
 of pages are automatically updated.
+</div>
 
 {% include image.html src="/assets/img/Edm Temp 2022-01-26.png"
    alt="Edmonton Temperature"
