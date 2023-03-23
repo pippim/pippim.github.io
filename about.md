@@ -35,30 +35,29 @@ of Pippim. Here you will discover:
 ## Who is Pippim?
 
 Pippim is a one-man-show that has been answering questions since 2016 
-on AskUbuntu.com under the awkward name of "WinEunuuchs2Unix". When you 
+on AskUbuntu.com under the user name of "WinEunuuchs2Unix". When you 
 look at
 **[WinEnuuchs2Unix's profile 🔗](https://askubuntu.com/users/307523/wineunuuchs2unix)**
 in Ask Ubuntu you will see the image on the right.
 
-At the time the "WinEunuuchs2Unix" name was created,
- the intention was to signal 
-abandoning MicroSoft Windows for the open-source world of Linux (Unix). That said,
-Windows is undeniably the go-to platform for Governments, Corporations and most 
-individuals in the world. No doubt most people who actually make money in the
-Linux World still use Windows from time to time.
+The philosophy is free open source software.
+
+{% include image.html src="/assets/img/jail-break.png"
+   alt="Ask Ubuntu Profile"
+   style="float: right; width: 80%; margin: 1em 0px 0px 1em; text-align: center;"
+   caption="Break out of restrictive software jail"
+%}
 
 <a id="what-is-pippim?"></a>
 ## What is Pippim?
 
 Pippim is a website providing free and open source computer software primarily for
-use on Linux. The focus is mostly on Ubuntu but, nowadays some of the solutions
-work on 
-[Windows Subsystem for Linux 🔗](https://docs.microsoft.com/en-us/windows/wsl/about) as
-well.
+use on Linux.
 
-Pippim has no business model for making money today. You will find no user tracking,
-no ads and no spamming. Maybe someday Pippim will make money but in the meantime it
-is simply a labour of love.
+This website has no cookies.
+No registration.
+No fees.
+No tracking.
 
 {% include image.html src="/assets/img/Edm Temp 2022-01-26.png"
    alt="Edmonton Temperature"
