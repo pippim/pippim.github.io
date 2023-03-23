@@ -42,16 +42,17 @@ in Ask Ubuntu you will see the image on the right.
 
 The philosophy is free open source software.
 
-{% include image.html src="/assets/img/jail-break.png"
+{% include image.html src="/assets/img/jail-break-cropped.png"
    alt="Break out of software jail image"
-   style="float: right; width: 70%; margin: 1em 0px 0px 1em; text-align: center;"
+   style="float: right; width: 70%; 
+          margin: 1em 0px 0px 1em; text-align: center;"
    caption="Break out of restrictive software jail"
 %}
 
 <a id="what-is-pippim?"></a>
 ## What is Pippim?
 
-Pippim is a website providing free and open source software.
+Pippim is a website with free and open source software.
 
 The software is primarily for use on Linux. There are also
 free on-line apps you can use in your browser.
@@ -63,10 +64,14 @@ Pippim website features:
 - Fast search engine
 - Day and night themes
 - Scrape Stack Exchange
-- No registration
-- No cookies
-- No tracking
-- No fees
+- No ads or cookies
+
+The website is designed for you to copy it
+(fork on GitHub Pages) and create your own
+website. To speed up the process, variables
+such as the name "Pippim" only needs to be
+changed in one place. Then hundreds or thousands
+of pages are automatically updated.
 
 {% include image.html src="/assets/img/Edm Temp 2022-01-26.png"
    alt="Edmonton Temperature"
