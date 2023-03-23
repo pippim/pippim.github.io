@@ -84,7 +84,8 @@ of pages are automatically updated.
 
 {% include image.html src="/assets/img/Edm Temp 2022-01-26.png"
    alt="Edmonton Temperature"
-   style="float: right; width: 60%; margin: 1em 0px 0px 1em; text-align: center;"
+   style="float: right; width: 60%; margin: 1em 0px 0px 1em; 
+          text-align: center;"
    caption="Image Credit: Apple's DarkSky.net"
 %}
 
@@ -122,17 +123,17 @@ made -- 1,020 commits (revisions) and still counting as of December 5, 2021.
 
 Pippim was created to make it easier to list the free software created on 
 the websites [Ask Ubuntu 🔗](https://askubuntu.com) and [GitHub 🔗](https://github.com).
-Pippim Posts which are 95% Answers and 5% Questions, have over **{{ site.views_human }}
-views** as of {{ site.refreshed | date: "%B %e, %Y" }}. With over 2,000 answers, 
-managing them on a Pippim website just makes sense.
 
-It's common practice to create websites to make money. That isn't why Pippim 
-was created though.
-Of course we all need money and maybe someday Pippim will earn revenue,
-open an office in Silicon Valley and hire some employees. But in the
-meantime, Pippim is strictly a labour of love (yes that was already 
-said earlier). It would not be unfair to classify Pippim as *"Software
-Development as a Hobby"*.
+Thousands of Pippim Posts, under the pen-name **WinEunuuchs2Unix**, 
+on **Ask Ubuntu** are about 95% Answers and 5% Questions. 
+The questions that Pippim has answered have had over **{{ site.views_human }} 
+views** as of {{ site.refreshed | date: "%B %e, %Y" }}. 
+
+The best of the thousands of posts are selected by number of
+votes. Then the best posts are copied from Ask Ubuntu into
+the Pippim website. If you have written posts in Stack Exchange,
+you can create a copy of Pippim on GitHub Pages and make your
+own website.
 
 <a id="how-was-pippim-created?"></a>
 ## How was Pippim created?
@@ -143,7 +144,7 @@ as the saying goes:
 
 > Who, What, Where, When, Why *and sometimes How*
 
-So how as Pippin created? Well the
+So how as Pippim created? Well the
 first step was to find a domain name (website name) that:
 
 1. Was easy to remember
@@ -158,14 +159,10 @@ first step was to find a domain name (website name) that:
 After finding out that the "pippim.com" was available, more weeks of contemplation 
 went by before "pulling the trigger" and buying the name for $17 CAD per year.
 
-Then the [www.pippim.com website 🔗](https://pippim.com) was
-created using Google Sites for free.
-
-Next the [pippim.github.io website](https://pippim.github.io) (Don't bother
-clicking the link as you are here now!) was created using 
+Then this Pippim website was created using 
 GitHub Pages for free. More details about how the website
 was created can be found on in the middle of the
-[Home Page](https://pippim.github.io/#how-the-table-of-contents-is-generated).
+[Home Page](https://pippim.github.io/#github-pages).
 
 ### Hopefully you enjoy the freedom! :)
 
