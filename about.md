@@ -44,7 +44,7 @@ The philosophy is free open source software.
 
 {% include image.html src="/assets/img/jail-break.png"
    alt="Break out of software jail image"
-   style="float: right; width: 80%; margin: 1em 0px 0px 1em; text-align: center;"
+   style="float: right; width: 70%; margin: 1em 0px 0px 1em; text-align: center;"
    caption="Break out of restrictive software jail"
 %}
 
@@ -52,11 +52,17 @@ The philosophy is free open source software.
 ## What is Pippim?
 
 Pippim is a website providing free and open source software.
+
 The software is primarily for use on Linux. There are also
 free on-line apps you can use in your browser.
 
 Pippim website features:
 
+- Tim-ta project timer
+- HRB website links 
+- Fast search engine
+- Day and night themes
+- Scrape Stack Exchange
 - No registration
 - No cookies
 - No tracking
