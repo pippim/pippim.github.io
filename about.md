@@ -35,7 +35,7 @@ of Pippim. Here you will discover:
 ## Who is Pippim?
 
 Pippim is a one-man-show that has been answering questions since 2016 
-on AskUbuntu.com under the user name of "WinEunuuchs2Unix". When you 
+on AskUbuntu.com under the user name "WinEunuuchs2Unix". When you 
 look at
 **[WinEnuuchs2Unix's profile 🔗](https://askubuntu.com/users/307523/wineunuuchs2unix)**
 in Ask Ubuntu you will see the image on the right.
@@ -43,7 +43,7 @@ in Ask Ubuntu you will see the image on the right.
 The philosophy is free open source software.
 
 {% include image.html src="/assets/img/jail-break.png"
-   alt="Ask Ubuntu Profile"
+   alt="Break out of software jail image"
    style="float: right; width: 80%; margin: 1em 0px 0px 1em; text-align: center;"
    caption="Break out of restrictive software jail"
 %}
@@ -51,13 +51,16 @@ The philosophy is free open source software.
 <a id="what-is-pippim?"></a>
 ## What is Pippim?
 
-Pippim is a website providing free and open source computer software primarily for
-use on Linux.
+Pippim is a website providing free and open source software.
+The software is primarily for use on Linux. There are also
+free on-line apps you can use in your browser.
 
-This website has no cookies.
-No registration.
-No fees.
-No tracking.
+Pippim website features:
+
+- No registration
+- No cookies
+- No tracking
+- No fees
 
 {% include image.html src="/assets/img/Edm Temp 2022-01-26.png"
    alt="Edmonton Temperature"
