@@ -196,6 +196,7 @@ the remote drives as local partitions.
 
 ## Other Pippim programs
 
+- `iothings` ["Internet of Things" to Control TV's and TV backlights.](programs/iothings.html)
 - `eyesome` [Multi-monitor brightness and color temperature based on sun times](https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime)
 - `clone-ubuntu` [Bash script to clone active Ubuntu Partition to clone partition](https://askubuntu.com/questions/1028604/bash-script-to-backup-clone-ubuntu-to-another-partition/1028605#1028605)
 - `cpuf` [GUI to set CPU Min/Max Frequency](https://askubuntu.com/questions/1141605/gui-or-simple-bash-script-to-throttle-the-cpu/1142671#1142671)
