@@ -34,7 +34,7 @@ The bash script `fliptv` toggles the wall outlet power
 behind the main TV. In this case the power controls a
 lamp to provide back lighting which reduces eye strain.
 
-The bash script `flipkitchen` toggles the wall outlet power
+The bash script `fliptv2` toggles the wall outlet power
 behind the second TV. In this case the power controls a
 lamp to provide back lighting which reduces eye strain.
 
@@ -43,6 +43,7 @@ There are three bash scripts to control a Sony TV screen:
 - `pictureoff.sh` Turns off the Sony TV screen but leaves sound on
 - `pictureon.sh` Turns on the Sony TV screen which consumes 100 watts
 - `picturetog.sh` Toggles Sony TV screen off and on
+- `picturetog` same as `picturetog.sh` but resides in path
 
 ---
 
