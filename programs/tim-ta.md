@@ -19,24 +19,24 @@ layout: program
 </script>
 
 <div id="sample_laundry_div">
-A sample project for doing Laundry appears when you have
+A sample project for doing Laundry appears above when you have
 no projects defined. After adding
 your own project(s), you can delete the sample project.
 </div>
 
 **KEY FEATURES:**
 
-- You can have an unlimited number of projects.
+- Unlimited number of projects.
 - Each project can have an unlimited number of Tasks.
-- Optional Alarms, Desktop Notifications and Prompts when task ends.
-- All tasks can be repeated in what is called a set.
+- Optional repeat a Project's Tasks multiple times in what is called a set.
 - Prompts to begin each task and each (if any) set repetitions.
 - Alarm sounds and message is displayed when task timer ends.
 - Upload custom sound files or choose from stock alarm sound files.
 - Download Tim-ta Configuration for backup or to send to other devices.
 - Upload Tim-ta Configuration from other devices or from friends.
-- Launch timers in new window (under development).
-- Progress bars for each task.
+- Launch timers in a separate smaller pop-up window.
+- Progress bars for each task and total project.
+- Override running task timer by increasing/decreasing time.
 
 ---
 
