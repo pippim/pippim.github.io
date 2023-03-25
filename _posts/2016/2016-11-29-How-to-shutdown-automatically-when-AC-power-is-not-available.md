@@ -8,11 +8,11 @@ type:         Answer
 tags:         power-management shutdown battery automation
 created_date: 2016-11-29 01:00:23
 edit_date:    2019-04-09 10:43:58
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "2,223 "
+views:        "2,252 "
 accepted:     Accepted
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-29-How-to-shutdown-automatically-when-AC-power-is-not-available.md
 toc:          false
 navigation:   false

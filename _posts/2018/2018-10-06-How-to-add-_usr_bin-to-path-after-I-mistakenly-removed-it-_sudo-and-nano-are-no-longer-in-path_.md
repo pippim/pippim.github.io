@@ -10,9 +10,9 @@ created_date: 2018-10-06 20:52:42
 edit_date:    2023-01-10 17:08:00
 votes:        "6 "
 favorites:    
-views:        "2,389 "
+views:        "2,404 "
 accepted:     Accepted
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-06-How-to-add-_usr_bin-to-path-after-I-mistakenly-removed-it-_sudo-and-nano-are-no-longer-in-path_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-08-12 16:22:14
 edit_date:    2022-01-02 01:15:57
 votes:        "66 "
 favorites:    
-views:        "50,101 "
+views:        "50,491 "
 accepted:     
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Disabling-Lock-Screen-18.04.md
 toc:          false
 navigation:   false

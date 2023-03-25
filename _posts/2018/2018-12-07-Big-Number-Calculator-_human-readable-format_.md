@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1099280
 type:         Answer
 tags:         software-recommendation
 created_date: 2018-12-07 21:12:04
-edit_date:    2020-06-12 14:37:07
+edit_date:    2023-02-22 23:52:07
 votes:        "8 "
 favorites:    
-views:        "560 "
+views:        "579 "
 accepted:     Accepted
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-07-Big-Number-Calculator-_human-readable-format_.md
 toc:          false
 navigation:   false
@@ -20,6 +20,20 @@ clipboard:    false
 ---
 
 An initial solution only took a few minutes by taking this readily available [Python Calculator GUI][1].
+
+# Sample Calculator Window
+
+[![Big Number Calculator - calc.py.gif][2]][2]
+
+- Type `100K` for 100,000 users
+- Type `x` to multiply
+- Type `100` for $100 per month
+- Type `=`
+- The result will be displayed as `10 M` ($10 million dollars). 
+
+So 10 million dollars a month is what you can expect for 100,000 users paying $100 / month.
+
+
 
 
 
@@ -66,18 +80,6 @@ Insert these lines in the middle:
 ```
 
 There are a few other cosmetic changes for larger font on HDPI monitor (1920x1080 pixels)
-
-# Sample Calculator Window
-
-[![calc.py.png][2]][2]
-
-- This is a pretty standard calculator layout.
-- Notice the bottom row of keys we added. 
-- You can click the keys or simply type in `T` instead of clicking `T` button.
-- Also notice how we entered `20 t / 50 M` to represent *20 Trillion* divided by *50 Million*.
-- The result will be displayed as `400 K`
-
-
 # Full Python Script
 
 ``` python
@@ -241,4 +243,4 @@ sudo apt install python-tk
 
 
   [1]: https://www.techinfected.net/2016/02/make-gui-calculator-in-python-windows-linux.html
-  [2]: https://i.stack.imgur.com/5mOltm.png
+  [2]: https://i.stack.imgur.com/ooyUk.gif

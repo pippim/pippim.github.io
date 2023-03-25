@@ -10,9 +10,9 @@ created_date: 2016-09-24 00:04:02
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,129 "
+views:        "1,136 "
 accepted:     
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-24-Module-disabled-after-kernel-upgrade.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         software-recommendation command-line sound mp3-player
 created_date: 2020-12-19 23:07:00
 edit_date:    2021-03-08 11:39:49
-votes:        "2 "
+votes:        "3 "
 favorites:    
-views:        "52,240 "
+views:        "52,411 "
 accepted:     
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-19-Command-line-audio-players.md
 toc:          false
 navigation:   true

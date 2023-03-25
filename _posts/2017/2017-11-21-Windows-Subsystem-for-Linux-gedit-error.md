@@ -8,11 +8,11 @@ type:         Answer
 tags:         xubuntu xfce gedit windows-subsystem-for-linux
 created_date: 2017-11-21 01:51:11
 edit_date:    
-votes:        "4 "
+votes:        "5 "
 favorites:    
-views:        "1,415 "
+views:        "1,425 "
 accepted:     
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-21-Windows-Subsystem-for-Linux-gedit-error.md
 toc:          false
 navigation:   false

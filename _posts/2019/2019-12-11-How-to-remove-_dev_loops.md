@@ -8,11 +8,11 @@ type:         Answer
 tags:         fdisk disk-management loop-device
 created_date: 2019-12-11 11:36:12
 edit_date:    2020-06-12 14:37:07
-votes:        "14 "
+votes:        "15 "
 favorites:    
-views:        "36,462 "
+views:        "37,526 "
 accepted:     
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-11-How-to-remove-_dev_loops.md
 toc:          false
 navigation:   false

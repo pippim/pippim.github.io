@@ -10,9 +10,9 @@ created_date: 2019-11-08 13:31:16
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "131 "
+views:        "133 "
 accepted:     Accepted
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-08-Does-the-size-of-your-home-directory-affect-startup-performance_.md
 toc:          false
 navigation:   false

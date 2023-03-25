@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line bash scripts
 created_date: 2019-07-31 19:47:55
 edit_date:    2019-08-01 10:56:49
-votes:        "26 "
+votes:        "27 "
 favorites:    
-views:        "10,669 "
+views:        "10,915 "
 accepted:     Accepted
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-31-How-can-you-tell-the-version-of-Ubuntu-on-a-system-in-a-.sh-_bash_-script_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-02-22 00:09:14
 edit_date:    2018-03-29 23:56:22
 votes:        "3 "
 favorites:    
-views:        "1,036 "
+views:        "1,038 "
 accepted:     Accepted
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-22-Mistyped-_Ctrl___Alt___T_-split-existing-terminal-window.md
 toc:          false
 navigation:   false

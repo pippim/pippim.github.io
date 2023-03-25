@@ -8,11 +8,11 @@ type:         Answer
 tags:         suspend cron rtc
 created_date: 2018-03-05 11:50:48
 edit_date:    2020-06-12 14:37:07
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "16,050 "
+views:        "16,268 "
 accepted:     
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-05-Sleep-_-Wakeup-Schedule-_-Ubuntu-16.04.3-LTS.md
 toc:          false
 navigation:   false

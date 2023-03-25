@@ -1,27 +1,7 @@
 ├── assets
 │   ├── css
 │   │   └── style.scss
-│   ├── img
-│   │   ├── hrb
-│   │   ├── icons
-│   │   ├── mserve
-│   │   ├── mt
-│   │   ├── stack
-│   │   ├── tcm
-│   │   ├── tim-ta
-│   │   ├── ask_ubuntu.png
-│   │   ├── Ask Ubuntu profile.png
-│   │   ├── Blog_Project-Management-101.png
-│   │   ├── cookie-clicker.png
-│   │   ├── earth-from-space.jpg
-│   │   ├── Edm Temp 2022-01-26.png
-│   │   ├── Edm temperature April 7, 2022.png
-│   │   ├── Edm Temperature December 7, 2021.png
-│   │   ├── github pages themes.png
-│   │   ├── inspectocat.jpg
-│   │   ├── Octocat.png
-│   │   ├── octojekyll-opt.jpg
-│   │   └── pngwing.com.png
+│   ├── img [21 entries exceeds filelimit, not opening dir]
 │   ├── js
 │   │   ├── hrb.js
 │   │   ├── hyperlinkRecipe.js
@@ -78,7 +58,7 @@
 │   ├── 2016 [179 entries exceeds filelimit, not opening dir]
 │   ├── 2017 [155 entries exceeds filelimit, not opening dir]
 │   ├── 2018 [443 entries exceeds filelimit, not opening dir]
-│   ├── 2019 [273 entries exceeds filelimit, not opening dir]
+│   ├── 2019 [276 entries exceeds filelimit, not opening dir]
 │   ├── 2020 [65 entries exceeds filelimit, not opening dir]
 │   ├── 2021 [33 entries exceeds filelimit, not opening dir]
 │   └── 2022
@@ -97,6 +77,7 @@
 │       └── 2022-06-12-How-to-kill-a-program-after-it_s-executed-from-a-script_.md
 ├── programs
 │   ├── hyperlink.md
+│   ├── iothings.md
 │   ├── mserve.md
 │   ├── mt.md
 │   ├── programs.md
@@ -130,4 +111,4 @@
 ├── style.scss
 └── test.md
 
-26 directories, 105 files
+19 directories, 93 files

@@ -10,9 +10,9 @@ created_date: 2017-09-08 03:21:29
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "445 "
+views:        "446 "
 accepted:     
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-08-After-dual-booting-from-Ubuntu-to-Windows-nVidia-GPU-disappears_.md
 toc:          false
 navigation:   false

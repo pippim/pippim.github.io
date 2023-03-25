@@ -8,11 +8,11 @@ type:         Answer
 tags:         dual-boot grub2 windows
 created_date: 2018-03-13 10:34:15
 edit_date:    2018-03-30 17:17:19
-votes:        "23 "
+votes:        "24 "
 favorites:    
-views:        "12,246 "
+views:        "12,359 "
 accepted:     Accepted
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-13-Is-there-a-way-for-grub-to-automatically-reboot-into-Windows-from-Windows_.md
 toc:          false
 navigation:   false

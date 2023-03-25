@@ -10,9 +10,9 @@ created_date: 2016-09-06 23:57:03
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,049 "
+views:        "1,051 "
 accepted:     Accepted
-uploaded:     2023-02-20 16:38:25
+uploaded:     2023-03-25 14:58:19
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-06-Toshiba-Satellite-FN-key-animation.md
 toc:          false
 navigation:   false
