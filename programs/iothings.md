@@ -1,5 +1,5 @@
 ---
-title: "Internet of Things" - Control TV's and power outlets
+title: Internet of Things - Control TV's and power outlets
 layout: program
 ---
 
