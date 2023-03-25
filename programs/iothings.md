@@ -3,18 +3,6 @@ title: "Internet of Things" - Control TV's and TV Backlights
 layout: program
 ---
 
-<script>
-
-/* include tcm-common-code.js code shared by:
-    /assets/js/theCookieMachine.js - Draggable Modal Dialog
-    /programs/tcm.md - The Cookie Machine documentation webpage
-    /programs/stack.md - Convert Stack Exchange Posts
-*/
-
-{% include tcm-common-code.js %}
-
-</script>
-
 <!-- Define hdr1 id with ToC and Skip navigation buttons (No "Top" or "ToS" buttons -->
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
