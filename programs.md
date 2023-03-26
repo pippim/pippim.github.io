@@ -114,6 +114,29 @@ self-documenting app. &emsp;&emsp;
 
 ---
 
+## Internet of Things - Control TVs and Electric Smartplugs
+
+<a href="programs/iothings.html">
+   {% include image.html src="/assets/img/iothings/volume change.gif"
+      alt="volume change.gif"
+      style="float: right; width: 50%; margin: .25rem 0px 1rem 1rem;"
+      caption="Notification when TV volume is changed"
+   %}
+</a>
+
+Control your TVs and the powered lights behind your TVs with
+the "Internet of Things" (IoT). As the video shows, when your 
+TV remote control volume is adjusted a notification shows up
+on your computer screen.
+
+When TV remote power button is used, the TV turns off, the
+lights behind two TVs are turned off and your laptop is put
+to sleep.
+
+<a href="programs/iothings.html" style="font-size: 20px;">Read More...</a>  
+
+---
+
 ## Convert Stack Exchange Posts to Your Own Website
 
 <div id="dummy-div-to-test-click3">
@@ -196,7 +219,6 @@ the remote drives as local partitions.
 
 ## Other Pippim programs
 
-- `iothings` ["Internet of Things" to Control TV's and TV backlights.](programs/iothings.html)
 - `eyesome` [Multi-monitor brightness and color temperature based on sun times](https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime)
 - `clone-ubuntu` [Bash script to clone active Ubuntu Partition to clone partition](https://askubuntu.com/questions/1028604/bash-script-to-backup-clone-ubuntu-to-another-partition/1028605#1028605)
 - `cpuf` [GUI to set CPU Min/Max Frequency](https://askubuntu.com/questions/1141605/gui-or-simple-bash-script-to-throttle-the-cpu/1142671#1142671)
