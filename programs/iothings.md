@@ -93,8 +93,8 @@ off to save electricity but the sound system remains
 energized.
 
 {% include image.html src="/assets/img/iothings/volume change.gif"
-   alt="Stack Exchange Data Explorer Download CSV"
-   style="float: right; width: 50%; margin: 1rem 0px 1rem 1rem;"
+   alt="volume change.gif"
+   style="float: right; width: 50%; margin: 2rem 0px 1rem 1rem;"
    caption="Notification when TV volume is changed"
 %}
 
