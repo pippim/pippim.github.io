@@ -10,6 +10,8 @@ layout: program
 # Introduction
 
 This page describes how to **Control TV's and power outlets.**
+The control programs are designed for Linux and have
+been tested in Ubuntu. The coding is done in Bash.
 
 At the heart of the system is the `tvpowered` program
 which starts after you login. This is a bash script stored
@@ -27,15 +29,18 @@ When resuming from system sleep (waking up your laptop)
 the `/lib/systemd/system-sleep` directory contains the
 bash scripts:
 
-- `sound.sh` Turns on sound for nVidia 970 HDMI output
-- `sonytv` Turns Sony TV picture off and leaves sound on
+- `sound.sh` Enables sound for nVidia GeForce
+GTX 970M HDMI output. On Linux there is a bug where
+there is no sound over HDMI channel. The program
+`nvhda` is called to enable sound.
+- `sonytv` Turns Sony TV picture off and leaves sound on.
 
 The bash script `fliptv` toggles the wall outlet power
-behind the main TV. In this case the power controls a
+behind the main TV (Sony). In this case the power controls a
 lamp to provide back lighting which reduces eye strain.
 
 The bash script `fliptv2` toggles the wall outlet power
-behind the second TV. In this case the power controls a
+behind the second TV (TCL). In this case the power controls a
 lamp to provide back lighting which reduces eye strain.
 
 There are four bash scripts to control a Sony TV screen:
@@ -55,7 +60,7 @@ There are four bash scripts to control a Sony TV screen:
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
-# `tvpowered` Sony Bravia TV to Computer controller
+# `tvpowered` Sony Bravia TV Controller
 
 The `tvpowered` bash script is the heart of the
 IoT (Internet of Things) system provided by {{ site.title }}.
@@ -70,9 +75,13 @@ when successful.
 
 There are some unique "bells & whistles":
 
-- When volume is changed via TV remote control the
-volume leve is displayed in desktop notification.
-- When TV is powered off with TV remote control
+- When volume is changed via TV remote control, the
+volume level is displayed in desktop notification.
+- The desktop notification is instantly updated
+when consecutive volume changes are made. The usual
+five or ten second delay is overriden for instant
+feedback.
+- When TV is powered off via TV remote control,
 the power outlet for the light behind the TV
 and secondary TV is turned off and your system
 is put to sleep or shutdown.
@@ -447,6 +456,11 @@ and your computer.
 The IP address assigned to your Sony TV must be entered
 into the file `~/.config/iothings/tvip`.
 
+Linux is required and preferably the Ubuntu distribution. 
+The following Linux programs are required:
+
+- curl
+- libnotify-bin
 
 ---
 
