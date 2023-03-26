@@ -116,6 +116,7 @@ self-documenting app. &emsp;&emsp;
 
 ## Internet of Things - Control TVs and Electric Smartplugs
 
+<div>
 <a href="programs/iothings.html">
    {% include image.html src="/assets/img/iothings/volume change.gif"
       alt="volume change.gif"
@@ -123,6 +124,7 @@ self-documenting app. &emsp;&emsp;
       caption="Notification when TV volume is changed"
    %}
 </a>
+</div>
 
 Control your TVs and the powered lights behind your TVs with
 the "Internet of Things" (IoT). As the video shows, when your 
