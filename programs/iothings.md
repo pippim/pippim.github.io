@@ -94,17 +94,51 @@ energized.
 
 {% include image.html src="/assets/img/iothings/volume change.gif"
    alt="Stack Exchange Data Explorer Download CSV"
-   style="float: right; width: 25%; margin: 3em 0px 1rem 1rem;"
+   style="float: right; width: 50%; margin: 3em 0px 1rem 1rem;"
    caption="Notification when TV volume is changed"
 %}
 
-## Change TV Volume
+## Change Primary TV Volume
 
-Because the main TV (Sony) picture is normally turned off you
+Because the main TV (Sony) picture is normally turned off, you
 have no idea what the sound system current volume level is. The
 `tvpowered` script will display a notification on whatever
 monitor you are currently working on when the volume is changed
 using the TV's remote control.
+
+If you are interested in the Bash code to make a progress bar,
+the relevant code is below:
+
+```bash
+VolumeBar () {
+
+    Bar=""                      # Progress Bar / Volume level
+    Len=25                      # Length of Progress Bar / Volume level
+    Div=4                       # Divisor into Volume for # of full blocks
+    Fill="▒"                    # Fill background up to $Len
+    Parts=8                     # Divisor into  Volume for # of part blocks
+    # UTF-8 left blocks: 1, 1/8, 1/4, 3/8, 1/2, 5/8, 3/4, 7/8
+    Arr=("█" "▏" "▎" "▍" "▌" "▋" "▊" "█")
+
+    FullBlock=$((${1} / Div))   # Number of full blocks
+    PartBlock=$((${1} % Parts)) # Size of partial block (array index)
+
+    while [[ $FullBlock -gt 0 ]]; do
+        Bar="$Bar${Arr[0]}"     # Add 1 full block into Progress Bar
+        (( FullBlock-- ))       # Decrement full blocks counter
+    done
+
+    # If remainder zero no partial block, else append character from array
+    if [[ $PartBlock -gt 0 ]]; then
+        Bar="$Bar${Arr[$PartBlock]}"
+    fi
+
+    while [[ "${#Bar}" -lt "$Len" ]]; do
+        Bar="$Bar$Fill"         # Pad Progress Bar with fill character
+    done
+
+} # VolumeBar
+```
 
 ## `tvpowered` Bash Script
 
