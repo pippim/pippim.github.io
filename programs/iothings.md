@@ -94,7 +94,7 @@ energized.
 
 {% include image.html src="/assets/img/iothings/volume change.gif"
    alt="Stack Exchange Data Explorer Download CSV"
-   style="float: right; width: 50%; margin: 3em 0px 1rem 1rem;"
+   style="float: right; width: 50%; margin: 0px 0px 1rem 1rem;"
    caption="Notification when TV volume is changed"
 %}
 
