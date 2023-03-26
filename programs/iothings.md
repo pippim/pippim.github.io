@@ -92,6 +92,20 @@ resumes from suspend, the Sony TV picture is turned
 off to save electricity but the sound system remains
 energized.
 
+{% include image.html src="/assets/img/iothings/volume change.gif"
+   alt="Stack Exchange Data Explorer Download CSV"
+   style="float: right; width: 25%; margin: 3em 0px 1rem 1rem;"
+   caption="Notification when TV volume is changed"
+%}
+
+## Change TV Volume
+
+Because the main TV (Sony) picture is normally turned off you
+have no idea what the sound system current volume level is. The
+`tvpowered` script will display a notification on whatever
+monitor you are currently working on when the volume is changed
+using the TV's remote control.
+
 ## `tvpowered` Bash Script
 
 Below is the Bash script you can copy to your system:
@@ -135,6 +149,8 @@ Below is the Bash script you can copy to your system:
 #       Jan 31 2021: Switch from /tmp to /run/user/1000 (RAM).
 
 #       Mar 13 2023: New IP address 19 after power outage.
+
+#       Mar 26 2023: Change volume partial UTF-8 ticks from 4 to 8.
 
 # Sources:
 
@@ -252,11 +268,13 @@ VolumeBar () {
     Bar=""                      # Progress Bar / Volume level
     Len=25                      # Length of Progress Bar / Volume level
     Div=4                       # Divisor into Volume for # of blocks
-    Fill="▒"                    # Fill up to $Len
-    Arr=( "▉" "▎" "▌" "▊" )   # UTF-8 left blocks: 7/8, 1/4, 1/2, 3/4
+    Fill="▒"                    # Fill background up to $Len
+    Parts=8                     # Divisor into  Volume for # of part blocks
+    # UTF-8 left blocks: 1, 1/8, 1/4, 3/8, 1/2, 5/8, 3/4, 7/8
+    Arr=("█" "▏" "▎" "▍" "▌" "▋" "▊" "█")
 
     FullBlock=$((${1} / Div))   # Number of full blocks
-    PartBlock=$((${1} % Div))   # Size of partial block (array index)
+    PartBlock=$((${1} % Parts)) # Size of partial block (array index)
 
     while [[ $FullBlock -gt 0 ]]; do
         Bar="$Bar${Arr[0]}"     # Add 1 full block into Progress Bar
@@ -365,7 +383,7 @@ Main () {
 
     Cnt=0
     FirstTime=true
-    VolumeCnt=0             # TV Remote changed volume, so shrorter sleep
+    VolumeCnt=0             # TV Remote changed volume, so shorter sleep
 
     while : ; do
 
@@ -422,7 +440,7 @@ Main () {
                 --icon=/usr/share/icons/gnome/48x48/devices/audio-speakers.png \
                 "Volume: $CurrVolume $Bar"
             LastVolume=$CurrVolume
-            VolumeCnt=10
+                        VolumeCnt=100  # For 1 second, faster checks for volume change
             # TODO: Process VolumeCnt internally in loop instead of larger loop
         fi
 
@@ -455,12 +473,34 @@ SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 IP=192.168.0.19     # IP address for Sony TV on LAN
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
   ...
-/home/rick/sony/pictureoff.sh   # Picture off energy saving
+/home/"$UserName"/sony/pictureoff.sh   # Picture off energy saving
 ```
 
 Note the last tine is buried deep inside the program. Change
-the path `/home/rick/sony/` to the directory where you copied
-the `pictureoff.sh` bash script to. 
+the path `/home/"$UserName"/sony/` to the directory where you 
+placed the `pictureoff.sh` bash script. 
+
+## Automatically Start Bash Script
+
+In your `~/.config/autostart` directory create the file
+`tvpowered.desktop`. The file needs to contain:
+
+```bash
+[Desktop Entry]
+Type=Application
+Exec=/home/rick/sony/tvpowered
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_CA]=tvpowered
+Name=tvpowered
+Comment[en_CA]=Powering off Sony TV suspends system
+Comment=Powering off Sony TV suspends system
+```
+
+Change the line with `/home/rick/sony/`
+to the directory where the `tvpowered` script is
+stored.
 
 ## `tvpowered` prerequisites
 
@@ -498,8 +538,7 @@ because it is located in the
 `/etc/NetworkManager/dispatcher.d/pre-down.d/` directory.
 
 The script `tvpowered` can lose communications at any
-time so it cannot be used for
-`smartplug_off` functionality.
+time so it cannot be used for `smartplug_off` function.
 
 ## `smartplug_off` Key Features
 
