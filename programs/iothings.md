@@ -87,6 +87,10 @@ and secondary TV is turned off and your system
 is put to sleep or shutdown.
 - You are reminded if communication between the TV
 and your computer isn't working.
+- When your computer system wakes up from sleep /
+resumes from suspend, the Sony TV picture is turned
+off to save electricity but the sound system remains
+energized.
 
 ## `tvpowered` Bash Script
 
@@ -444,14 +448,19 @@ Main "$@"
 
 ## Configuring Bash Script
 
-There are three lines you need to configure to your system:
+There are four lines you need to configure to your system:
 
 ```bash
 SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 IP=192.168.0.19     # IP address for Sony TV on LAN
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
+  ...
+/home/rick/sony/pictureoff.sh   # Picture off energy saving
 ```
 
+Note the last tine is buried deep inside the program. Change
+the path `/home/rick/sony/` to the directory where you copied
+the `pictureoff.sh` bash script to. 
 
 ## `tvpowered` prerequisites
 
@@ -469,8 +478,10 @@ into the file `~/.config/iothings/tvip`.
 Linux is required and preferably the Ubuntu distribution. 
 The following Linux programs are required:
 
-- curl
-- libnotify-bin
+- `curl` - Linux package
+- `libnotify-bin` - Linux package
+- `pictureoff.sh` - Bash Script provided below
+- `smartplug_off` - Bash Script provided below
 
 ---
 
@@ -645,73 +656,37 @@ It is assumed you are running Pulse Audio in Linux.
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
-# `sonytv` Turn Off Sony Picture (Screen)
+# Primary TV (Sony) and Second TV (TCL) Setup
 
-The `sonytv` bash script is called whenever the
-computer system resumes from suspend / wakes from sleep.
+Here is what the system setup looks like:
 
-The script needs to be created with `sudo` powers
-because it is located in the
-`/lib/systemd/system-sleep/` directory.
+{% include image.html src="/assets/img/iothings/Multiple Monitors Manager.png"
+   alt="Multiple Monitors Manager.png"
+   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+   caption="mmm Overview of Monitors"
+%}
 
-## `sonytv` Key Features
+- Top Left is Sony 50" Full HD TV
+- Top Right is TCL 43" 4K TV
+- Bottom Right is Alienware 17" Full HD laptop
 
-When your computer resumes from suspend (wakes from sleep),
-it is assumed you will be working on your laptop screen
-and the second TV. The primary TV will not be used until
-later in the evening.
+There are lamps behind the Sony TV and TCL TVs which are
+powered by Kasa TP-Link Smartplugs.
 
-The `sontv` script turns off the picture to save 100 watts
-of electricity. The main TV has the expensive sound system
-which you want left on as the system sound output device.
+The Sony TV has a sound system with subwoofer that is used
+all the time. The Sony TV picture is only used occasionally
+for viewing movies and YouTube. On the Sony TV you can see
+that YouTube is currently running.
 
-## `sonytv` Bash Script
+The TCL TV is 4K which allows four screen sizes of full HD.
+Consequently this TV is where most of the work is done. You
+can comfortably have 10 windows open on a 4K screen. This is
+also a good monitor for stashing all your Desktop Icons for
+Shortcuts. The program `iconic` is used to move desktop icons
+to the middle monitor.
 
-Below is the Bash script you can copy to your system:
-
-```bash
-#!/bin/sh
-
-# NAME: sonytv
-# PATH: /lib/systemd/system-sleep
-# CALL: Called from SystemD automatically - DOES NOT WORK!
-
-# DESC: Enable power savings mode of Sony TV on resume.
-
-# DATE: December 19, 2020.
-
-# NOTE: This keeps TV on but turns off picture.
-
-case $1/$2 in
-  pre/*)
-    echo "$0: Going to $2..."
-    # Place your pre suspend commands here, or `exit 0` if no pre suspend action required
-    #    modprobe -r psmouse
-    ;;
-  post/*)
-    echo "$0: Waking up from $2..."
-    # sleeping just delays network coming up.
-    # sleep 90                    # Time for WiFi to come up
-    /mnt/e/bin/pictureoff
-    ;;
-esac
-```
-
-## Configuring Bash Script
-
-There is one line you need to configure to your system:
-
-```bash
-/mnt/e/bin/pictureoff
-```
-
-Change the path and filename for `pictureoff.sh` to where
-you placed it on your system.
-
-## `sonytv` Prerequisites
-
-The bash script `pictureoff.sh` (can be renamed to `pictureoff`)
-needs to be installed.
+The Alienware 17" laptop screen is where the file manager,
+web browser and music player playlist windows reside.
 
 ---
 
