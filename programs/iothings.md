@@ -29,7 +29,7 @@ When resuming from system sleep (waking up your laptop)
 the `/lib/systemd/system-sleep` directory contains the
 bash scripts:
 
-- `sound.sh` Enables sound for nVidia GeForce
+- `sound` Enables sound for nVidia GeForce
 GTX 970M HDMI output. On Linux there is a bug where
 there is no sound over HDMI channel. The program
 `nvhda` is called to enable sound.
@@ -477,8 +477,7 @@ The following Linux programs are required:
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-
-# `smartplug_off` Power Off Wall Outlets
+# `smartplug_off` Power Off Wall Outlet Smartplugs
 
 The `smartplug_off` bash script is called whenever the
 computer system is shutdown or suspended.
@@ -539,7 +538,8 @@ elif [ $status == "ON" ] ; then
     hs100.sh -i "$PlugName" off
 else
     echo Error hs100.sh not responding check connection and IP "$PlugName".
-fi```
+fi
+```
 
 ## Configuring Bash Script
 
@@ -551,104 +551,364 @@ PlugName="192.168.0.15"  # Sony TV backlight
 PlugName="192.168.0.17"  # Google TV backlight
 ```
 
-## `smarplug_off` prerequisites
+## `smarplug_off` Prerequisites
 
 `myisp.sh` and `hs100.sh` must be installed to control 
 the hs100 tp-link power plug.
 
+---
+
+
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
-# Convert Stack Exchange to GitHub Pages
+# `sound` Switch System Sound Output to HDMI
 
-{% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
-   alt="stack-to-blog.py"
-   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
-%}
+The `sound` bash script is called whenever the
+computer system resumes from suspend / wakes from sleep.
 
-Converting thousands of Stack Exchange Q&A in markdown format isn't as easy
-as simply copying them over to GitHub Pages. The python program
-`stack-to-blog.py` was used to convert Stack Exchange posts to
-GitHub Pages Posts.
-The full `stack-to-blog.py` program can be accessed on the
-[Pippim Website repo 🔗](https://github.com/pippim/pippim.github.io/blob/main/sede/stack-to-blog.py){:target="_blank"}.
+The script needs to be created with `sudo` powers
+because it is located in the
+`/lib/systemd/system-sleep/` directory.
 
-The program automatically:
+## `sound` Key Features
 
-- Creates Jekyll front matter on posts and front matter totals for site.
-- Selects Stack Exchange Posts based on meeting minimum criteria such as up-votes or accepted answer status.
-- If self-answered question, the answer is included and not the question.
-- If self-answered question, the accepted answer alone doesn't qualify. Votes from other are the qualifier.
-- Initial testing allows selecting small set of random record numbers to convert.
-- Converts Stack Exchange Markdown formats to GitHub Pages Kramdown Markdown format.
-- Creates hyperlinks to original Answer in Stack Exchange and Kramdown in GitHub Pages.
-- Creates search word to URL indices excluding 50% of words like "a", "the", etc. to save space.
-- Selectively inserts Table of Contents based on minimum criteria settings.
-- Selectively inserts Section Navigation Buttons for: <kbd>Top</kbd> (Top of Page), <kbd>ToS</kbd> (Top of Section), <kbd>ToC</kbd> (Table of Contents) and <kbd>Skip</kbd> (Skip section).
-- Selectively inserts "Copy Code Block to System Clipboard" button based on lines of code.
-- Creates HTML with "Top Ten Answers" with the most votes.
-- Creates powerful nested expandable/collapsible detail/summary HTML for many thousands of tags by post.
-- Remaps hyperlinks in Stack Exchange Posts to {{ site.title }} website posts if they were converted.
-- Fixes old broken `#header` Stack Exchange Markdown.
-- Converts `< block quote` Stack Exchange Markdown into what works in Jekyll Kramdown.
-- Convert Stack Exchange `<!-- language -->` tags to fenced code block language.
-- When no fenced code block language is provided, uses shebang language first (if available).
-- Converts older four-space indented code blocks to fenced code blocks.
-- Converts Stack Exchange Hyperlinks where the website post title is implied and not explicit.
-- Prints list of self-answered questions that were not accepted after the mandatory two day wait period.
-- Prints list of Rouge Syntax Highlighting languages not supported in fenced code blocks.
-- Prints summary totals when finished.
+A bug in Pulse Audio 8 sets the output sound device to
+Laptop when system goes to sleep.
+The system sound device doesn't default to HDMI
+when the system wakes up / resumes from suspend.
+
+To solve this problem the Pulse Audio settings are
+modified.
+
+## `sound` Bash Script
+
+Below is the Bash script you can copy to your system:
+
+```bash
+#!/bin/sh
+
+# NAME: sound
+# PATH: /lib/systemd/system-sleep
+# CALL: Called from SystemD automatically
+
+# DESC: PulseAudo 8 sets sound to laptop when going to sleep.
+#       This script sets sound back to TV.
+
+# DATE: Sep 23 2016. Modified: Dec 19 2020.
+
+# NOTE: Test psmouse for askubuntu.com "Touchpad not working after suspending laptop"
+
+# UPDT: Dec 19 2020 - Comment out sleep commands to speedup suspend/resume.
+
+# Aug 5, 2018  -    Turn off executition bit. As per AU turn off automatic switching:
+# https://askubuntu.com/questions/1061414/how-to-disable-pulseaudio-automatic-device-switch/1061578#1061578
+#                   Turn execution bit back on as there is no sound at all.
+case $1/$2 in
+  pre/*)
+    echo "$0: Going to $2..."
+    # Place your pre suspend commands here, or `exit 0` if no pre suspend action required
+    #    modprobe -r psmouse
+    # sleep 1                       # Dec 19 2020 - Sleep slows down suspend.
+    ;;
+  post/*)
+    echo "$0: Waking up from $2..."
+    # Place your post suspend (resume) commands here, or `exit 0` if no post suspend action required
+    # sleep 2                       # Dec 19 2020 - Sleep slows down resume.
+    # modprobe psmouse
+    export PULSE_RUNTIME_PATH="/run/user/1000/pulse/"
+    sudo -u rick -E pacmd set-card-profile 0 output:hdmi-stereo
+    ;;
+esac
+```
+
+## Configuring Bash Script
+
+There are two lines you need to configure to your system:
+
+```bash
+export PULSE_RUNTIME_PATH="/run/user/1000/pulse/"
+sudo -u rick -E pacmd set-card-profile 0 output:hdmi-stereo
+```
+
+If your User Number is the standard "1000" then no changes
+are needed for the first line.
+
+In the second line replace `rick` with your Username.
+
+## `sound` Prerequisites
+
+It is assumed you are running Pulse Audio in Linux. 
 
 ---
 
 <a id="hdr6"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
-# Stack Exchange Data Explorer
+# `sonytv` Turn Off Sony Picture (Screen)
 
-The **Stack Exchange Data Explorer** retrieves all your posts from the
-Stack Exchange (SE) network into a CSV file (up to 10 MB) for downloading.
+The `sonytv` bash script is called whenever the
+computer system resumes from suspend / wakes from sleep.
 
-To download your SE posts you will need to:
+The script needs to be created with `sudo` powers
+because it is located in the
+`/lib/systemd/system-sleep/` directory.
 
-- Click the link below
-- Log in to the SE Data Explorer
-- Search for the query: *"All my posts on the SE network"*
-- Enter your network ID for the query parameter. E.G. 4775729
-- After a few minutes, when the query completes, download the Query Results.
+## `sonytv` Key Features
 
-Each of these steps is described in detail in the following sections.
+When your computer resumes from suspend (wakes from sleep),
+it is assumed you will be working on your laptop screen
+and the second TV. The primary TV will not be used until
+later in the evening.
 
-## First Step is to Log In
+The `sontv` script turns off the picture to save 100 watts
+of electricity. The main TV has the expensive sound system
+which you want left on as the system sound output device.
 
-The first step in converting Stack Exchange posts to {{ site.title }}
-website posts is to run a
-[Stack Exchange Data Explorer Query 🔗](https://data.stackexchange.com/){:target="_blank"}.
-After clicking the link you are presented with the Log In screen:
+## `sonytv` Bash Script
 
-{% include image.html src="/assets/img/stack/stack exchange data explorer login.png"
-   alt="Stack Exchange Data Explorer Log In Screen"
-   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
-%}
+Below is the Bash script you can copy to your system:
 
-Click the <kbd>log in</kbd> button at the top right of the screen.
-Then you can log in using **Google** or **Stack Overflow**. I use
-the latter since Google already knows too much about us :)
+```bash
+#!/bin/sh
+
+# NAME: sonytv
+# PATH: /lib/systemd/system-sleep
+# CALL: Called from SystemD automatically - DOES NOT WORK!
+
+# DESC: Enable power savings mode of Sony TV on resume.
+
+# DATE: December 19, 2020.
+
+# NOTE: This keeps TV on but turns off picture.
+
+case $1/$2 in
+  pre/*)
+    echo "$0: Going to $2..."
+    # Place your pre suspend commands here, or `exit 0` if no pre suspend action required
+    #    modprobe -r psmouse
+    ;;
+  post/*)
+    echo "$0: Waking up from $2..."
+    # sleeping just delays network coming up.
+    # sleep 90                    # Time for WiFi to come up
+    /mnt/e/bin/pictureoff
+    ;;
+esac
+```
+
+## Configuring Bash Script
+
+There is one line you need to configure to your system:
+
+```bash
+/mnt/e/bin/pictureoff
+```
+
+Change the path and filename for `pictureoff.sh` to where
+you placed it on your system.
+
+## `sonytv` Prerequisites
+
+The bash script `pictureoff.sh` (can be renamed to `pictureoff`)
+needs to be installed.
+
+---
 
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-{% include image.html src="/assets/img/stack/stack exchange data explorer search bar.png"
-   alt="Stack Exchange Data Explorer Query Search Bar"
-   style="float: right; width: 60%; margin: 3rem 0px 0px 1rem;"
-%}
+# `fliptv` Toggle Light Behind Primary TV
 
-## Search For Query
+The `fliptv` bash script is called whenever you
+want to toggle the light behind your TV off or on.
+Generally during the day the light is turned off
+and during night the light is turned on.
 
-After logging in, the top of the window provides a search bar to find a query.
-Enter; *"All my posts on the SE network"* or copy with the button below
-and, paste into the search bar.
+## `fliptv` Key Features
 
-``` text
-All my posts on the SE network
+A light behind your TV is hard to reach. The `fliptv`
+script makes it easy to turn the light off and on.
+
+## `fliptv` Bash Script
+
+Below is the Bash script you can copy to your system:
+
+```bash
+#!/bin/bash
+
+# NAME: fliptv
+# PATH: /mnt/e/bin
+# DESC: Flip light power for TV light
+# DATE: Janauary 20, 2020. Modified March 26, 2023.
+
+# CALL: fliptv
+
+# NOTE: myisp.sh and hs100.sh must be installed for hs100 tp-link power plug.
+
+PlugName="192.168.0.15"  # hs100 Wi-Fi smart plug behind Sony TV.
+
+status=$(hs100.sh -i "$PlugName" check | cut -f2)
+if [ $status == "OFF" ] ; then
+    hs100.sh -i "$PlugName" on
+elif [ $status == "ON" ] ; then
+    hs100.sh -i "$PlugName" off
+else
+    echo Error hs100.sh not responding. Check Sony TV smartplug and IP "$PlugName".
+fi
 ```
+
+## Configuring Bash Script
+
+There is one line you need to configure to your system:
+
+```bash
+PlugName="192.168.0.15"  # hs100 Wi-Fi smart plug behind Sony TV.
+```
+
+Change the IP address to what your network assigned it. See the
+`ssh-setup` script output. For example:
+
+```text
+==========  nmap -sn 192.168.0/24  ============================================
+
+hitronhub.home (192.168.0.1) (0.00073s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
+hs100 (192.168.0.15) (0.00084s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
+HS103.hitronhub.home (192.168.0.17) (-0.066s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
+sony (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
+hs103 (192.168.0.20) (0.21s latency). MAC: FC:D4:36:EA:82:36 (Unknown)
+GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2F:1F (Unknown)
+192.168.0.254 (0.00045s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
+alien (192.168.0.12) LOCAL NETWORK CARD
+```
+
+## `fliptv` Prerequisites
+
+The bash script `/usr/bin/hs100.sh` 
+needs to be installed. This script communicates between
+your computer and the Kasa TP-Link Smart Plug.
+
+---
+
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+
+# `fliptv2` Toggle Light Behind Second TV
+
+The `fliptv2` bash script is called whenever you
+want to toggle the light behind your second TV off or on.
+Generally during the day the light is turned off
+and during night the light is turned on.
+
+## `fliptv2` Key Features
+
+The light behind your second TV is hard to reach. 
+The `fliptv2` script makes it easy to turn the light 
+off and on.
+
+## `fliptv2` Bash Script
+
+Below is the Bash script you can copy to your system:
+
+```bash
+#!/bin/bash
+
+# NAME: fliptv2
+# PATH: /mnt/e/bin
+# DESC: Flip power for Kitchen light behind TCL TV
+# DATE: September 4, 2022.  Modified March 26, 2023.
+
+# CALL: flipkitchen
+
+# NOTE: myisp.sh and hs100.sh must be installed for hs100 tp-link power plug.
+
+# UPDT: Septmber 29, 2022. After power outage IP changed from 20 to 19.
+#       March 14, 2023. After power outage IP changed from 19 to 20.
+#       March 23, 2023. After power outage IP changed from 20 to 17.
+#       March 25, 2023. Name chnage flipkitchen to fliptv2
+
+PlugName="192.168.0.17"  # hs103 Wi-Fi smart plug in kitchen behind TCL TV.
+
+status=$(hs100.sh -i "$PlugName" check | cut -f2)
+if [ $status == "OFF" ] ; then
+    hs100.sh -i "$PlugName" on
+elif [ $status == "ON" ] ; then
+    hs100.sh -i "$PlugName" off
+else
+    echo Error hs100.sh not responding. Check TCL TV smartplug and IP "$PlugName".
+fi
+```
+
+## Configuring Bash Script
+
+There is one line you need to configure to your system:
+
+```bash
+PlugName="192.168.0.17"  # hs103 Wi-Fi smart plug in kitchen behind TCL TV.
+```
+
+Change the IP address to what your network assigned it. See the
+`ssh-setup` script output. For example:
+
+```text
+==========  nmap -sn 192.168.0/24  ============================================
+
+hitronhub.home (192.168.0.1) (0.00073s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
+hs100 (192.168.0.15) (0.00084s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
+HS103.hitronhub.home (192.168.0.17) (-0.066s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
+sony (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
+hs103 (192.168.0.20) (0.21s latency). MAC: FC:D4:36:EA:82:36 (Unknown)
+GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2F:1F (Unknown)
+192.168.0.254 (0.00045s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
+alien (192.168.0.12) LOCAL NETWORK CARD
+```
+
+## `fliptv2` Prerequisites
+
+The bash script `/usr/bin/hs100.sh` 
+needs to be installed. This script communicates between
+your computer and the Kasa TP-Link Smart Plug.
+
+---
+
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+
+---
+
+
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
+
+---
+
+<a id="hdr11"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
+
+---
+
+<a id="hdr12"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
+
+---
+
+
+# `nvhda` Enable nVidia GeForce GTX 970M HDMI Sound
+
+The `sound` bash script is called whenever the
+computer system resumes from suspend / wakes from sleep.
+
+The script needs to be created with `sudo` powers
+because it is located in the
+`/lib/systemd/system-sleep/` directory.
+
+## `nvhda` Key Features
+
+Due to a bug between nVidia and Linux there is no sound
+when the system is powered up. The bug can be avoided
+if you boot with windows first and then reboot into
+Ubuntu.
+
+To solve this problem the `nvhda` C program is used. Whenever
+you install a new Linux Kernel version the program is
+automatically recompiled by DKMS.
