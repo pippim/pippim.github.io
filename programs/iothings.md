@@ -442,6 +442,16 @@ Main () {
 Main "$@"
 ```
 
+## Configuring Bash Script
+
+There are three lines you need to configure to your system:
+
+```bash
+SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
+IP=192.168.0.19     # IP address for Sony TV on LAN
+PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
+```
+
 
 ## `tvpowered` prerequisites
 
@@ -467,21 +477,84 @@ The following Linux programs are required:
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-# Clone {{ site.title }} Website Locally
 
-These are the Linux instructions for cloning the 
-{{ site.title }} website to your local drive.
+# `smartplug_off` Power Off Wall Outlets
 
-``` bash
-sudo apt update && sudo apt install git
-cd ~
-git clone https://github.com/pippim/pippim.github.io.git website2
-cp -ar ~/website2 ~/website
+The `smartplug_off` bash script is called whenever the
+computer system is shutdown or suspended.
+
+The script needs to be created with `sudo` powers
+because it is located in the
+`/etc/NetworkManager/dispatcher.d/pre-down.d/` directory.
+
+The script `tvpowered` can lose communications at any
+time so it cannot be used for
+`smartplug_off` functionality.
+
+## `smartplug_off` Key Features
+
+Called by Network Manager when the network is going down.
+The Network is always brought down when computer system is
+shutting down or being suspended. This makes the Network
+Manager a convenient way to shut off power to wall outlet
+smart plugs behind the TV that control the nighttime 
+back lighting. 
+
+## `smartplug_off` Bash Script
+
+Below is the Bash script you can copy to your system:
+
+```bash
+#!/bin/bash
+
+# NAME: smartplug_off
+# PATH: /etc/NetworkManager/dispatcher.d/pre-down.d
+# DESC: Turn off smartplug light power for TV light
+# DATE: March 7, 2020.
+
+# CALL: Called by Network Manager before going down. Network manager in turn
+#       is called by systemd during suspend/hibernate/shutdown
+
+# NOTE: myisp.sh and hs100.sh must be installed for hs100 tp-link power plug.
+#       https://developer.gnome.org/NetworkManager/stable/NetworkManager.html
+
+PlugName="192.168.0.15"  # Sony TV backlight
+
+status=$(hs100.sh -i "$PlugName" check | cut -f2)
+if [ $status == "OFF" ] ; then
+    : # Nothing to do already off
+elif [ $status == "ON" ] ; then
+    hs100.sh -i "$PlugName" off
+else
+    echo Error hs100.sh not responding check connection and IP "$PlugName".
+fi
+
+
+PlugName="192.168.0.17"  # Google TV backlight
+
+status=$(hs100.sh -i "$PlugName" check | cut -f2)
+if [ $status == "OFF" ] ; then
+    : # Nothing to do already off
+elif [ $status == "ON" ] ; then
+    hs100.sh -i "$PlugName" off
+else
+    echo Error hs100.sh not responding check connection and IP "$PlugName".
+fi```
+
+## Configuring Bash Script
+
+There are two lines you need to configure to your system:
+
+```bash
+PlugName="192.168.0.15"  # Sony TV backlight
+...
+PlugName="192.168.0.17"  # Google TV backlight
 ```
 
-> NOTE: `~/website` is your working directory and
-> `~/website2` is a mirror copy of the website needed
-> to publish changes with `refresh.sh` bash script.
+## `smarplug_off` prerequisites
+
+`myisp.sh` and `hs100.sh` must be installed to control 
+the hs100 tp-link power plug.
 
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
