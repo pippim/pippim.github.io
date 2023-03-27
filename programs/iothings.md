@@ -70,7 +70,7 @@ attached to your LAN and/or Wi-Fi router.
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
-# 'tvpowered' Sony Bravia TV Controller
+# `tvpowered` Sony Bravia TV Controller
 
 {% include image.html src="/assets/img/iothings/tv remote off.gif"
    alt="tv remote off.gif"
@@ -581,11 +581,11 @@ The following Linux programs are required:
 
 # `smartplug_off` Smart Plugs Turn Off Lights
 
+<-- Crop 20% off the right side of image -->
 {% include image.html src="/assets/img/iothings/conybrown-lights-off.gif"
    alt="conybrown-lights-off.gif"
    style="float: right; width: 40%; margin: .25rem 0px 1rem 1rem;
           clip-path: inset(100% 80%);"
-          <-- Crop 20% of right of image -->
    caption="Smart Plug turns off lights"
 %}
 
