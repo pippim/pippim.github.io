@@ -7,6 +7,12 @@ layout: program
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
+{% include image.html src="/assets/img/iothings/volume change.gif"
+   alt="volume change.gif"
+   style="float: right; width: 50%; margin: 2rem 0px 1rem 1rem;"
+   caption="Notification when TV volume is changed"
+%}
+
 # Introduction
 
 This page describes how to **Control TV's and power outlets.**
@@ -766,7 +772,13 @@ web browser and music player playlist windows reside.
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-# `fliptv` Toggle Light Behind Primary TV
+# `fliptv` Toggle Light Behind Primary (Sony) TV
+
+{% include image.html src="/assets/img/iothings/Toggle Desktop Shortcuts.png"
+   alt="Toggle Desktop Shortcuts.png"
+   style="float: right; width: 50%; margin: 2rem 0px 1rem 1rem;"
+   caption="Sample Desktop Icons"
+%}
 
 The `fliptv` bash script is called whenever you
 want to toggle the light behind your TV off or on.
