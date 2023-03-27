@@ -579,12 +579,13 @@ The following Linux programs are required:
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-# 'smartplug_off' Smart Plugs Turn Off Lights
+# `smartplug_off` Smart Plugs Turn Off Lights
 
+<-- Crop 20% of right of image -->
 {% include image.html src="/assets/img/iothings/conybrown-lights-off.gif"
    alt="conybrown-lights-off.gif"
    style="float: right; width: 40%; margin: .25rem 0px 1rem 1rem;
-          margin-right: -20%;"
+          margin-right: -20%; overflow: hidden;"
    caption="Smart Plug turns off lights"
 %}
 
