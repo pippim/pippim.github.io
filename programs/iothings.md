@@ -905,7 +905,7 @@ for more information.
 
 {% include image.html src="/assets/img/iothings/Light Off On.gif"
    alt="Light Off On.gif"
-   style="float: right; width: 40%; margin: 1rem 0px 1rem 1rem;"
+   style="float: left; width: 40%; margin: 1rem 0px 1rem 1rem;"
    caption="Smart Plug Controls Light"
 %}
 
