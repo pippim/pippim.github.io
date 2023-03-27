@@ -583,7 +583,8 @@ The following Linux programs are required:
 
 {% include image.html src="/assets/img/iothings/conybrown-lights-off.gif"
    alt="conybrown-lights-off.gif"
-   style="float: right; width: 40%; margin: .25rem 0px 1rem 1rem;"
+   style="float: right; width: 40%; margin: .25rem 0px 1rem 1rem;
+          margin-right: -20%;"
    caption="Smart Plug turns off lights"
 %}
 
