@@ -579,7 +579,13 @@ The following Linux programs are required:
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-# `smartplug_off` Power Off Wall Outlet Smartplugs
+# 'smartplug_off' Smart Plugs Turn Off Lights
+
+{% include image.html src="/assets/img/iothings/conybrown-lights-off.gif"
+   alt="conybrown-lights-off.gif"
+   style="float: right; width: 40%; margin: .25rem 0px 1rem 1rem;"
+   caption="Smart Plug turns off lights"
+%}
 
 The `smartplug_off` bash script is called whenever the
 computer system is shutdown or suspended.
@@ -591,7 +597,7 @@ because it is located in the
 The script `tvpowered` can lose communications at any
 time so it cannot be used for `smartplug_off` function.
 
-## `smartplug_off` Key Features
+## 'smartplug_off' Key Features
 
 Called by Network Manager when the network is going down.
 The Network is always brought down when computer system is
@@ -600,9 +606,10 @@ Manager a convenient way to shut off power to wall outlet
 smart plugs behind the TV that control the nighttime 
 back lighting. 
 
-## `smartplug_off` Bash Script
+## 'smartplug_off' Bash Script
 
-Below is the Bash script you can copy to your system:
+Below is the Bash script that needs to placed in the
+`/etc/NetworkManager/dispatcher.d/pre-down.d/` directory:
 
 ```bash
 #!/bin/bash
