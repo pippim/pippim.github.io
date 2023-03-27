@@ -776,7 +776,7 @@ web browser and music player playlist windows reside.
 
 {% include image.html src="/assets/img/iothings/Toggle Desktop Shortcuts.png"
    alt="Toggle Desktop Shortcuts.png"
-   style="float: right; width: 50%; margin: 2rem 0px 1rem 1rem;"
+   style="float: right; width: 40%; margin: 1rem 0px 1rem 1rem;"
    caption="Sample Desktop Icons"
 %}
 
