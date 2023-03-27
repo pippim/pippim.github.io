@@ -795,7 +795,7 @@ script makes it easy to turn the light off and on.
 Instead of typing `fliptv` in the command line, it
 is convenient to have a Desktop Shortcut you can click.
 
-In your `~/Desktop/` create the file `fliptv.desktop`
+In your `~/Desktop/` directory, create the file `fliptv.desktop`
 containing:
 
 ```bash
@@ -891,7 +891,7 @@ off and on.
 Instead of typing `fliptv2` in the command line, it
 is convenient to have a Desktop Shortcut you can click.
 
-In your `~/Desktop/` create the file `fliptv2.desktop`
+In your `~/Desktop/` directory, create the file `fliptv2.desktop`
 containing:
 
 ```bash
@@ -973,6 +973,199 @@ your computer and the Kasa TP-Link Smart Plug.
 
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
+
+
+# `picturetog` Toggle Primary (Sony) TV picture Off and On
+
+The `picturetog` bash script is called whenever you
+want to toggle the Sony TV picture off and on.
+
+## `picturetog` Key Features
+
+When your system is turned on or you resume from suspend /
+wake from sleep the Sony TV (Primary) picture is turned
+off automatically. The `picturetog` script is used to turn
+the Sony TV picture back on so you can watch a movie or
+whatever.
+
+## `picturetog` Desktop Shortcut
+
+Instead of typing `picturetog` in the command line, it
+is convenient to have a Desktop Shortcut you can click.
+
+In your `~/Desktop/` directory, create the file 
+`picturetog.desktop` containing:
+
+```bash
+[Desktop Entry]
+Name=Toggle TV Picture
+GenericName=Toggle TV Picture
+Comment=Toggle TV Picture
+Exec=picturetog
+Icon=preferences-desktop-display
+Terminal=false
+Type=Application
+Categories=Application;
+```
+
+## `picturetog` Bash Script
+
+Below is the Bash script you can copy to your system:
+
+```bash
+#!/bin/bash
+
+# Toggle picture off/on.
+
+IP=192.168.0.16  # Wifi for Sony
+IP=192.168.0.21  # LAN for Sony
+IP=192.168.0.19  # LAN for Sony March 13, 2023 (router power outage)
+PWRD=123
+
+cURLit () {
+
+    # $1 = JSON String, $2 = Sony subsystem to talk to, eg accessControl,
+    #   audio, system
+    
+    # Returns $Retn currently must be defined as global variable.
+
+    # Create temporary file in RAM for curl command
+    TEMP=$(mktemp --tmpdir json.XXXXXXXX)
+    echo "$1" > "$TEMP"
+
+    # -s = silent
+    Retn=$(curl -s -H "Content-Type: application/json; charset=UTF-8" \
+         -H "X-Auth-PSK: $PWRD" \
+         --data @"$TEMP" \
+         http://$IP/sony/"$2")
+
+    # TO-DO: check $? and if non-zero pop up dialog with $TEMP contents
+    rm "$TEMP"
+
+} # cURLit
+
+GetPowerStatus () {
+
+    # Copy and paste JSON strings from Sony website: 
+    # https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/system/v1_0/getPowerStatus/index.html
+    JSONstr='{
+                "method": "getPowerStatus",
+                "id": 50,
+                "params": [],
+                "version": "1.0"
+             }'
+
+    # TO-DO: Make Retn passed parm instead of global var
+    Retn=""
+    # Then pass string to cURL for execution
+    cURLit "$JSONstr" "system"
+
+    # Retn: {"result":[{"status":"active"}],"id":50}
+    #   or: {"result":[{"status":"standby"}],"id":50}
+    [[ "${Retn#*active}" != "$Retn" ]] && return 0
+
+    # TV is turned off
+    # Might want timer tests to make sure we aren't repeatedly turning off
+    return 1
+
+} # GetPowerStatus
+
+GetPowerSavingMode () {
+
+    # Copy and paste JSON strings from Sony website: 
+    # https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/system/v1_0/getPowerSavingMode/index.html
+    JSONstr='{
+                "method": "getPowerSavingMode",
+                "id": 51,
+                "params": [],
+                "version": "1.0"
+             }'
+
+    # TO-DO: Make Retn passed parm instead of global var
+    Retn=""
+    # Then pass string to cURL for execution
+    cURLit "$JSONstr" "system"
+
+    # "off" - Power saving mode is disabled.
+    # "low" - Power saving mode is enabled at a low level.
+    # "high" - Power saving mode is enabled at a high level.
+    # "pictureOff" - Power saving mode is enabled with the panel output off.
+
+    echo $Retn
+    return 0
+
+} # GetPowerSavingMode
+
+SetPowerSavingMode () {
+
+    # Copy and paste JSON strings from Sony website: 
+    # https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/system/v1_0/setPowerSavingMode/index.html
+    JSONstr='{
+                "method": "setPowerSavingMode",
+                "id": 52,
+                "params": [{"mode": "'"${1}"'"}],
+                "version": "1.0"
+             }'
+
+    # TO-DO: Make Retn passed parm instead of global var
+    Retn=""
+    # Then pass string to cURL for execution
+    cURLit "$JSONstr" "system"
+
+    # "off" - Power saving mode is disabled.
+    # "low" - Power saving mode is enabled at a low level.
+    # "high" - Power saving mode is enabled at a high level.
+    # "pictureOff" - Power saving mode is enabled with the panel output off.
+
+    echo $Retn
+    return 0
+
+} # SetPowerSavingMode
+
+#SysInfo            # Meaningless stuff
+if GetPowerStatus ; then
+    GetPowerSavingMode
+    # Try to strip out word "off" in current power saving status
+    if [[ "${Retn#*off}" != "$Retn" ]] ; then
+        # Currrent power saving mode is "off"
+        SetPowerSavingMode "pictureOff"
+    else
+        # Currrent power saving mode is "pictureOff"
+        SetPowerSavingMode "off"
+    fi
+
+fi
+```
+
+## Configuring Bash Script
+
+There is one line you need to configure to your system:
+
+```bash
+PlugName="192.168.0.17"  # hs103 Wi-Fi smart plug in kitchen behind TCL TV.
+```
+
+Change the IP address to what your network assigned it. See the
+`ssh-setup` script output. For example:
+
+```text
+==========  nmap -sn 192.168.0/24  ============================================
+
+hitronhub.home (192.168.0.1) (0.00073s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
+hs100 (192.168.0.15) (0.00084s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
+HS103.hitronhub.home (192.168.0.17) (-0.066s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
+sony (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
+hs103 (192.168.0.20) (0.21s latency). MAC: FC:D4:36:EA:82:36 (Unknown)
+GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2F:1F (Unknown)
+192.168.0.254 (0.00045s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
+alien (192.168.0.12) LOCAL NETWORK CARD
+```
+
+## `picturetog` Prerequisites
+
+The bash script `/usr/bin/hs100.sh` 
+needs to be installed. This script communicates between
+your computer and the Kasa TP-Link Smart Plug.
 
 ---
 
