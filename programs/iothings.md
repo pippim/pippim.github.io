@@ -591,8 +591,7 @@ The following Linux programs are required:
 The `smartplug_off` bash script is called whenever the
 computer system is shutdown or suspended.
 
-The script needs to be created with `sudo` powers
-because it is located in the
+The script needs to be created with `sudo` powers in the
 `/etc/NetworkManager/dispatcher.d/pre-down.d/` directory.
 
 The script `tvpowered` can lose communications at any
@@ -660,10 +659,12 @@ PlugName="192.168.0.15"  # Sony TV backlight
 PlugName="192.168.0.17"  # Google TV backlight
 ```
 
-## `smarplug_off` Prerequisites
+## 'smarplug_off' Prerequisites
 
-`myisp.sh` and `hs100.sh` must be installed to control 
-the hs100 tp-link power plug.
+`/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
+See [tp-link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
+"Visit GitHub Page for more details"){:target="_blank"} 
+for more information.
 
 ---
 
@@ -673,14 +674,20 @@ the hs100 tp-link power plug.
 
 # `sound` Switch System Sound Output to HDMI
 
+{% include image.html src="/assets/img/iothings/volume change.gif"
+   alt="volume change.gif"
+   style="float: right; width: 50%; margin: 2rem 0px 1rem 1rem;"
+   caption="Notification when TV volume is changed"
+%}
+
+
 The `sound` bash script is called whenever the
 computer system resumes from suspend / wakes from sleep.
 
-The script needs to be created with `sudo` powers
-because it is located in the
+The script needs to be created with `sudo` powers in the
 `/lib/systemd/system-sleep/` directory.
 
-## `sound` Key Features
+## 'sound' Key Features
 
 A bug in Pulse Audio 8 sets the output sound device to
 Laptop when system goes to sleep.
@@ -690,7 +697,7 @@ when the system wakes up / resumes from suspend.
 To solve this problem the Pulse Audio settings are
 modified.
 
-## `sound` Bash Script
+## 'sound' Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -745,7 +752,7 @@ are needed for the first line.
 
 In the second line replace `rick` with your Username.
 
-## `sound` Prerequisites
+## 'sound' Prerequisites
 
 It is assumed you are running Pulse Audio in Linux. 
 
@@ -883,9 +890,11 @@ alien (192.168.0.12) LOCAL NETWORK CARD
 
 ## `light-tog` Prerequisites
 
-The bash script `/usr/bin/hs100.sh` 
-needs to be installed. This script communicates between
-your computer and the Kasa TP-Link Smart Plug.
+
+`/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
+See [tp-link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
+"Visit GitHub Page for more details"){:target="_blank"} 
+for more information.
 
 ---
 
@@ -985,9 +994,11 @@ alien (192.168.0.12) LOCAL NETWORK CARD
 
 ## `light-tog2` Prerequisites
 
-The bash script `/usr/bin/hs100.sh` 
-needs to be installed. This script communicates between
-your computer and the Kasa TP-Link Smart Plug.
+
+`/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
+See [tp-link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
+"Visit GitHub Page for more details"){:target="_blank"} 
+for more information.
 
 ---
 
@@ -1214,12 +1225,8 @@ following Linux package(s) must be installed:
 
 # `nvhda` Enable nVidia GeForce GTX 970M HDMI Sound
 
-The `sound` bash script is called whenever the
-computer system resumes from suspend / wakes from sleep.
-
-The script needs to be created with `sudo` powers
-because it is located in the
-`/lib/systemd/system-sleep/` directory.
+https://github.com/hhfeuer/nvhda#install-using-dkms
+https://bugs.freedesktop.org/show_bug.cgi?id=75985#c37
 
 ## `nvhda` Key Features
 
