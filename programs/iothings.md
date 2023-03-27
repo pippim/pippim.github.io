@@ -41,11 +41,11 @@ when the system wakes up / resumes from suspend.
 A variety of scripts are provided to make life
 convenient. 
 
-The bash script `fliptv` toggles the wall outlet power
+The bash script `light-tog` toggles the wall outlet power
 behind the main TV (Sony). In this case the power controls a
 lamp to provide back lighting which reduces eye strain.
 
-The bash script `fliptv2` toggles the wall outlet power
+The bash script `light-tog2` toggles the wall outlet power
 behind the second TV (TCL). In this case the power controls a
 lamp to provide back lighting which reduces eye strain.
 
@@ -776,7 +776,7 @@ web browser and music player playlist windows reside.
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-# `fliptv` Toggle Light Behind Primary (Sony) TV
+# `light-tog` Toggle Light Behind Primary (Sony) TV
 
 {% include image.html src="/assets/img/iothings/Toggle Desktop Shortcuts.png"
    alt="Toggle Desktop Shortcuts.png"
@@ -784,22 +784,22 @@ web browser and music player playlist windows reside.
    caption="Sample Desktop Icons"
 %}
 
-The `fliptv` bash script is used whenever you
+The `light-tog` bash script is used whenever you
 want to toggle the light behind your TV off or on.
 Generally during the day the light is turned off
 and during night the light is turned on.
 
-## `fliptv` Key Features
+## `light-tog` Key Features
 
-A light behind your TV is hard to reach. The `fliptv`
+A light behind your TV is hard to reach. The `light-tog`
 script makes it easy to turn the light off and on.
 
-## `fliptv` Desktop Shortcut
+## `light-tog` Desktop Shortcut
 
-Instead of typing `fliptv` in the command line, it
+Instead of typing `light-tog` in the command line, it
 is convenient to have a Desktop Shortcut you can click.
 
-In your `~/Desktop/` directory, create the file `fliptv.desktop`
+In your `~/Desktop/` directory, create the file `light-tog.desktop`
 containing:
 
 ```bash
@@ -807,26 +807,26 @@ containing:
 Name=Toggle Sony TV Light
 GenericName=Toggle Sony TV Light
 Comment=Toggle Sony TV Light
-Exec=fliptv
+Exec=light-tog
 Icon=preferences-desktop-screensaver
 Terminal=false
 Type=Application
 Categories=Application;
 ```
 
-## `fliptv` Bash Script
+## `light-tog` Bash Script
 
 Below is the Bash script you can copy to your system:
 
 ```bash
 #!/bin/bash
 
-# NAME: fliptv
+# NAME: light-tog
 # PATH: /mnt/e/bin
 # DESC: Flip light power for TV light
 # DATE: Janauary 20, 2020. Modified March 26, 2023.
 
-# CALL: fliptv
+# CALL: light-tog
 
 # NOTE: myisp.sh and hs100.sh must be installed for hs100 tp-link power plug.
 
@@ -866,7 +866,7 @@ GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
-## `fliptv` Prerequisites
+## `light-tog` Prerequisites
 
 The bash script `/usr/bin/hs100.sh` 
 needs to be installed. This script communicates between
@@ -877,25 +877,25 @@ your computer and the Kasa TP-Link Smart Plug.
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
-# `fliptv2` Toggle Light Behind Second TV
+# `light-tog2` Toggle Light Behind Second TV
 
-The `fliptv2` bash script is called whenever you
+The `light-tog2` bash script is called whenever you
 want to toggle the light behind your second TV off or on.
 Generally during the day the light is turned off
 and during night the light is turned on.
 
-## `fliptv2` Key Features
+## `light-tog2` Key Features
 
 The light behind your second TV is hard to reach. 
-The `fliptv2` script makes it easy to turn the light 
+The `light-tog2` script makes it easy to turn the light 
 off and on.
 
-## `fliptv2` Desktop Shortcut
+## `light-tog2` Desktop Shortcut
 
-Instead of typing `fliptv2` in the command line, it
+Instead of typing `light-tog2` in the command line, it
 is convenient to have a Desktop Shortcut you can click.
 
-In your `~/Desktop/` directory, create the file `fliptv2.desktop`
+In your `~/Desktop/` directory, create the file `light-tog2.desktop`
 containing:
 
 ```bash
@@ -903,33 +903,34 @@ containing:
 Name=Toggle TCL TV Light
 GenericName=Toggle TCL TV Light
 Comment=Toggle TCL TV Light
-Exec=fliptv2
+Exec=light-tog2
 Icon=preferences-desktop-screensaver
 Terminal=false
 Type=Application
 Categories=Application;
 ```
 
-## `fliptv2` Bash Script
+## `light-tog2` Bash Script
 
 Below is the Bash script you can copy to your system:
 
 ```bash
 #!/bin/bash
 
-# NAME: fliptv2
+# NAME: light-tog2
 # PATH: /mnt/e/bin
 # DESC: Flip power for Kitchen light behind TCL TV
-# DATE: September 4, 2022.  Modified March 26, 2023.
+# DATE: September 4, 2022.  Modified March 27, 2023.
 
-# CALL: flipkitchen
+# CALL: light-tog2
 
 # NOTE: myisp.sh and hs100.sh must be installed for hs100 tp-link power plug.
 
-# UPDT: Septmber 29, 2022. After power outage IP changed from 20 to 19.
+# UPDT: September 29, 2022. After power outage IP changed from 20 to 19.
 #       March 14, 2023. After power outage IP changed from 19 to 20.
 #       March 23, 2023. After power outage IP changed from 20 to 17.
-#       March 25, 2023. Name chnage flipkitchen to fliptv2
+#       March 25, 2023. Name change from flipkitchen to fliptv2.
+#       March 27, 2023. Name change from fliptv2 to light-tog2.
 
 PlugName="192.168.0.17"  # hs103 Wi-Fi smart plug in kitchen behind TCL TV.
 
@@ -967,7 +968,7 @@ GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
-## `fliptv2` Prerequisites
+## `light-tog2` Prerequisites
 
 The bash script `/usr/bin/hs100.sh` 
 needs to be installed. This script communicates between
