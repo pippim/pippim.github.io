@@ -594,8 +594,6 @@ computer system is shutdown or suspended.
 The script needs to be created with `sudo` powers in the
 `/etc/NetworkManager/dispatcher.d/pre-down.d/` directory.
 
-The script `tvpowered` can lose communications at any
-time so it cannot be used for `smartplug_off` function.
 
 ## 'smartplug_off' Key Features
 
