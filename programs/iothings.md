@@ -780,7 +780,7 @@ web browser and music player playlist windows reside.
    caption="Sample Desktop Icons"
 %}
 
-The `fliptv` bash script is called whenever you
+The `fliptv` bash script is used whenever you
 want to toggle the light behind your TV off or on.
 Generally during the day the light is turned off
 and during night the light is turned on.
@@ -789,6 +789,26 @@ and during night the light is turned on.
 
 A light behind your TV is hard to reach. The `fliptv`
 script makes it easy to turn the light off and on.
+
+## `fliptv` Desktop Shortcut
+
+Instead of typing `fliptv` in the command line, it
+is convenient to have a Desktop Shortcut you can click.
+
+In your `~/Desktop/` create the file `fliptv.desktop`
+containing:
+
+```bash
+[Desktop Entry]
+Name=Toggle Sony TV Light
+GenericName=Toggle Sony TV Light
+Comment=Toggle Sony TV Light
+Exec=fliptv
+Icon=preferences-desktop-screensaver
+Terminal=false
+Type=Application
+Categories=Application;
+```
 
 ## `fliptv` Bash Script
 
@@ -865,6 +885,26 @@ and during night the light is turned on.
 The light behind your second TV is hard to reach. 
 The `fliptv2` script makes it easy to turn the light 
 off and on.
+
+## `fliptv2` Desktop Shortcut
+
+Instead of typing `fliptv2` in the command line, it
+is convenient to have a Desktop Shortcut you can click.
+
+In your `~/Desktop/` create the file `fliptv2.desktop`
+containing:
+
+```bash
+[Desktop Entry]
+Name=Toggle TCL TV Light
+GenericName=Toggle TCL TV Light
+Comment=Toggle TCL TV Light
+Exec=fliptv2
+Icon=preferences-desktop-screensaver
+Terminal=false
+Type=Application
+Categories=Application;
+```
 
 ## `fliptv2` Bash Script
 
