@@ -16,16 +16,13 @@ layout: program
 # Introduction
 
 This page describes how to **Control TV's and power outlets.**
-The control programs are designed for Linux and have
+The process is called "Internet of Things" (IoT).
+The IoT programs here are designed for Linux and have
 been tested in Ubuntu. The coding is done in Bash.
 
 At the heart of the system is the `tvpowered` program
 which starts after you login. This is a bash script stored
 in your `~/.config/autostart` directory.
-
-To assist with setting up your "Internet of Things" (IoT)
-the program `ssh-setup` is called to document the devices
-attached to your LAN and/or Wi-Fi router.
 
 To power off electric lights when you shut down or suspend
 your computer the `/etc/NetworkManager/dispatcher.d/pre-down.d`
@@ -33,13 +30,16 @@ directory contains the bash script `smartplug_off`.
 
 When resuming from system sleep (waking up your laptop)
 the `/lib/systemd/system-sleep` directory contains the
-bash scripts:
+bash scripts. Of particular note is:
 
-- `sound` Enables sound for nVidia GeForce
-GTX 970M HDMI output. On Linux there is a bug where
-there is no sound over HDMI channel. The program
-`nvhda` is called to enable sound.
-- `sonytv` Turns Sony TV picture off and leaves sound on.
+- `sound` Enables sound for the HDMI stereo system.
+A bug in Pulse Audio 8 sets the output sound to the
+Laptop when system goes to sleep. The system sound 
+device doesn't default to HDMI
+when the system wakes up / resumes from suspend.
+
+A variety of scripts are provided to make life
+convenient. 
 
 The bash script `fliptv` toggles the wall outlet power
 behind the main TV (Sony). In this case the power controls a
@@ -55,6 +55,10 @@ There are four bash scripts to control a Sony TV screen:
 - `pictureon.sh` Turns on the Sony TV screen which consumes 100 watts
 - `picturetog.sh` Toggles Sony TV screen off and on
 - `picturetog` same as `picturetog.sh` but resides in path
+
+To assist with setting up your "Internet of Things" (IoT)
+the program `ssh-setup` is used to document the devices
+attached to your LAN and/or Wi-Fi router.
 
 ---
 
@@ -1015,7 +1019,13 @@ Below is the Bash script you can copy to your system:
 ```bash
 #!/bin/bash
 
-# Toggle picture off/on.
+# Sony TV - Toggle Power Savings (picture / screen) off/on.
+
+# When Power Savings is on, picture is turned off saving 100 watts.
+
+# For reference see https://pro-bravia.sony.net/develop/integrate/rest-api/spec/
+# https://pro-bravia.sony.net/develop/
+
 
 IP=192.168.0.16  # Wifi for Sony
 IP=192.168.0.21  # LAN for Sony
@@ -1142,7 +1152,7 @@ fi
 There is one line you need to configure to your system:
 
 ```bash
-PlugName="192.168.0.17"  # hs103 Wi-Fi smart plug in kitchen behind TCL TV.
+IP=192.168.0.19  # LAN for Sony March 13, 2023 (router power outage)
 ```
 
 Change the IP address to what your network assigned it. See the
@@ -1163,12 +1173,12 @@ alien (192.168.0.12) LOCAL NETWORK CARD
 
 ## `picturetog` Prerequisites
 
-The bash script `/usr/bin/hs100.sh` 
-needs to be installed. This script communicates between
-your computer and the Kasa TP-Link Smart Plug.
+A Sony Bravia TV or Professional Display is required. The
+following Linux package(s) must be installed:
+
+- curl
 
 ---
-
 
 <a id="hdr10"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
