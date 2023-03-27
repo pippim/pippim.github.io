@@ -811,12 +811,12 @@ want to toggle the light behind your TV off or on.
 Generally during the day the light is turned off
 and during night the light is turned on.
 
-## `light-tog` Key Features
+## 'light-tog' Key Features
 
 A light behind your TV is hard to reach. The `light-tog`
 script makes it easy to turn the light off and on.
 
-## `light-tog` Desktop Shortcut
+## 'light-tog' Desktop Shortcut
 
 Instead of typing `light-tog` in the command line, it
 is convenient to have a Desktop Shortcut you can click.
@@ -836,7 +836,7 @@ Type=Application
 Categories=Application;
 ```
 
-## `light-tog` Bash Script
+## 'light-tog' Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -888,7 +888,7 @@ GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
-## `light-tog` Prerequisites
+## 'light-tog' Prerequisites
 
 
 `/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
@@ -903,18 +903,24 @@ for more information.
 
 # `light-tog2` Toggle Light Behind Second TV
 
+{% include image.html src="/assets/img/iothings/Light Off On.gif"
+   alt="Light Off On.gif"
+   style="float: right; width: 40%; margin: 1rem 0px 1rem 1rem;"
+   caption="Smart Plug Controls Light"
+%}
+
 The `light-tog2` bash script is called whenever you
 want to toggle the light behind your second TV off or on.
 Generally during the day the light is turned off
 and during night the light is turned on.
 
-## `light-tog2` Key Features
+## 'light-tog2' Key Features
 
 The light behind your second TV is hard to reach. 
 The `light-tog2` script makes it easy to turn the light 
 off and on.
 
-## `light-tog2` Desktop Shortcut
+## 'light-tog2' Desktop Shortcut
 
 Instead of typing `light-tog2` in the command line, it
 is convenient to have a Desktop Shortcut you can click.
@@ -934,7 +940,7 @@ Type=Application
 Categories=Application;
 ```
 
-## `light-tog2` Bash Script
+## 'light-tog2' Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -992,7 +998,7 @@ GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
-## `light-tog2` Prerequisites
+## 'light-tog2' Prerequisites
 
 
 `/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
@@ -1011,7 +1017,7 @@ for more information.
 The `picturetog` bash script is called whenever you
 want to toggle the Sony TV picture off and on.
 
-## `picturetog` Key Features
+## 'picturetog' Key Features
 
 When your system is turned on or you resume from suspend /
 wake from sleep the Sony TV (Primary) picture is turned
@@ -1019,7 +1025,7 @@ off automatically. The `picturetog` script is used to turn
 the Sony TV picture back on so you can watch a movie or
 whatever.
 
-## `picturetog` Desktop Shortcut
+## 'picturetog' Desktop Shortcut
 
 Instead of typing `picturetog` in the command line, it
 is convenient to have a Desktop Shortcut you can click.
@@ -1039,7 +1045,7 @@ Type=Application
 Categories=Application;
 ```
 
-## `picturetog` Bash Script
+## 'picturetog' Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -1198,7 +1204,7 @@ GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
-## `picturetog` Prerequisites
+## 'picturetog' Prerequisites
 
 A Sony Bravia TV or Professional Display is required. The
 following Linux package(s) must be installed:
@@ -1228,7 +1234,7 @@ following Linux package(s) must be installed:
 https://github.com/hhfeuer/nvhda#install-using-dkms
 https://bugs.freedesktop.org/show_bug.cgi?id=75985#c37
 
-## `nvhda` Key Features
+## 'nvhda' Key Features
 
 Due to a bug between nVidia and Linux there is no sound
 when the system is powered up. The bug can be avoided
