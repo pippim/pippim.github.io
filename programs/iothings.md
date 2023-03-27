@@ -32,11 +32,11 @@ When resuming from system sleep (waking up your laptop)
 the `/lib/systemd/system-sleep` directory contains the
 bash scripts. Of particular note is:
 
-- `sound` Enables sound for the HDMI stereo system.
-A bug in Pulse Audio 8 sets the output sound to the
-Laptop when system goes to sleep. The system sound 
+- A bug in Pulse Audio 8 sets the output sound to the
+Laptop speakers when system goes to sleep. The system sound 
 device doesn't default to HDMI
 when the system wakes up / resumes from suspend.
+The `sound` script enables sound for the HDMI stereo system.
 
 A variety of scripts are provided to make life
 convenient. 
@@ -70,7 +70,14 @@ attached to your LAN and/or Wi-Fi router.
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
-# `tvpowered` Sony Bravia TV Controller
+# 'tvpowered' Sony Bravia TV Controller
+
+{% include image.html src="/assets/img/iothings/tv remote off.gif"
+   alt="tv remote off.gif"
+   style="float: right; width: 50%; margin: .25rem 0px 1rem 1rem;"
+   caption="Use TV remote to power off system"
+%}
+
 
 The `tvpowered` bash script is the heart of the
 IoT (Internet of Things) system provided by {{ site.title }}.
@@ -81,7 +88,7 @@ is stored in the `~/.config/autostart` directory.
 with your Sony TV and displays a desktop notification
 when successful.
 
-## `tvpowered` Key Features
+## 'tvpowered' Key Features
 
 There are some unique "bells & whistles":
 
@@ -150,7 +157,7 @@ VolumeBar () {
 } # VolumeBar
 ```
 
-## `tvpowered` Bash Script
+## 'tvpowered' Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -546,7 +553,7 @@ Change the line with `/home/rick/sony/`
 to the directory where the `tvpowered` script is
 stored.
 
-## `tvpowered` prerequisites
+## 'tvpowered' prerequisites
 
 This program only works with Sony Bravia TVs. The Sony
 REST API is required. For more details visit
@@ -1003,9 +1010,9 @@ In your `~/Desktop/` directory, create the file
 
 ```bash
 [Desktop Entry]
-Name=Toggle TV Picture
-GenericName=Toggle TV Picture
-Comment=Toggle TV Picture
+Name=Toggle Sony TV Picture
+GenericName=Toggle Sony TV Picture
+Comment=Toggle Sony TV Picture
 Exec=picturetog
 Icon=preferences-desktop-display
 Terminal=false
