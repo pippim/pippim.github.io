@@ -9,7 +9,7 @@ layout: program
 
 {% include image.html src="/assets/img/iothings/volume change.gif"
    alt="volume change.gif"
-   style="float: right; width: 50%; margin: 2rem 0px 1rem 1rem;"
+   style="float: right; width: 50%; margin: 3rem 0px 1rem 1rem;"
    caption="Notification when TV volume is changed"
 %}
 
