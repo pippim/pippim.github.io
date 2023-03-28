@@ -165,10 +165,7 @@ Below is the Bash script you can copy to your system:
 #!/bin/bash
 
 # NAME: tvpowered
-#
-#       Original name slave2tv announced as politically incorrect after one day:
-#       https://www.rt.com/news/491343-microsoft-coding-blacklists-slaves/
-#
+# PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
 # DESC: When TV is powered off automatically suspend the laptop.
 # DATE: June 9, 2020.  Modified March 28, 2023.
 #
@@ -951,7 +948,7 @@ Below is the Bash script you can copy to your system:
 #!/bin/bash
 
 # NAME: light-tog2
-# PATH: /mnt/e/bin
+# PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
 # DESC: Flip power for Kitchen light behind TCL TV
 # DATE: September 4, 2022.  Modified: March 28, 2023.
 
