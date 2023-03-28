@@ -1174,7 +1174,13 @@ SetPowerSavingMode () {
 
 } # SetPowerSavingMode
 
-#SysInfo            # Meaningless stuff
+
+###################################
+#            MAINLINE             #
+###################################
+
+# Get current Power Saving Setting and toggle it.
+
 if GetPowerStatus ; then
     GetPowerSavingMode
     # Try to strip out word "off" in current power saving status
@@ -1365,7 +1371,13 @@ SetPowerSavingMode () {
 
 } # SetPowerSavingMode
 
-#SysInfo            # Meaningless stuff
+
+###################################
+#            MAINLINE             #
+###################################
+
+# Get current Power Saving Setting and turn off picture.
+
 if GetPowerStatus ; then
     SetPowerSavingMode "pictureOff"
     GetPowerSavingMode
