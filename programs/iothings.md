@@ -607,13 +607,13 @@ Below is the Bash script that needs to placed in the
 
 # NAME: smartplug_off
 # PATH: /etc/NetworkManager/dispatcher.d/pre-down.d
-# DESC: Turn off smartplug light power for TV light
-# DATE: March 7, 2020.
+# DESC: Turn off Smart Plug controlled lights behind TVs.
+# DATE: March 7, 2020.  Modified: March 28, 2023.
 
 # CALL: Called by Network Manager before going down. Network manager in turn
 #       is called by systemd during suspend/hibernate/shutdown
 
-# NOTE: myisp.sh and hs100.sh must be installed for hs100 TP-Link power plug.
+# NOTE: hs100.sh must be installed for hs100 TP-Link power plug.
 #       https://developer.gnome.org/NetworkManager/stable/NetworkManager.html
 
 PlugName="192.168.0.15"  # Sony TV backlight
@@ -846,13 +846,13 @@ Below is the Bash script you can copy to your system:
 #!/bin/bash
 
 # NAME: light-tog
-# PATH: /mnt/e/bin
+# PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
 # DESC: Flip light power for TV light
-# DATE: Janauary 20, 2020. Modified March 26, 2023.
+# DATE: January 20, 2020.  Modified: March 28, 2023.
 
 # CALL: light-tog
 
-# NOTE: myisp.sh and hs100.sh must be installed for hs100 TP-Link power plug.
+# NOTE: hs100.sh must be installed for hs100 TP-Link power plug.
 
 PlugName="192.168.0.15"  # hs100 Wi-Fi smart plug behind Sony TV.
 
@@ -953,11 +953,11 @@ Below is the Bash script you can copy to your system:
 # NAME: light-tog2
 # PATH: /mnt/e/bin
 # DESC: Flip power for Kitchen light behind TCL TV
-# DATE: September 4, 2022.  Modified March 27, 2023.
+# DATE: September 4, 2022.  Modified: March 28, 2023.
 
 # CALL: light-tog2
 
-# NOTE: myisp.sh and hs100.sh must be installed for hs100 TP-Link power plug.
+# NOTE: hs100.sh must be installed for hs100 TP-Link power plug.
 
 # UPDT: September 29, 2022. After power outage IP changed from 20 to 19.
 #       March 14, 2023. After power outage IP changed from 19 to 20.
