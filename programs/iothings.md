@@ -657,6 +657,9 @@ PlugName="192.168.0.15"  # Sony TV backlight
 PlugName="192.168.0.17"  # Google TV backlight
 ```
 
+The first `PlugName` is 1/3rd of the way in the file.
+The second `PlugName` is 2/3rds of the way in the file.
+
 ## 'smarplug_off' Prerequisites
 
 `/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
@@ -738,17 +741,18 @@ esac
 
 ## Configuring Bash Script
 
-There are two lines you need to configure to your system:
+There are two lines (near the bottom of the file) that you need to configure to your system:
 
 ```bash
 export PULSE_RUNTIME_PATH="/run/user/1000/pulse/"
 sudo -u rick -E pacmd set-card-profile 0 output:hdmi-stereo
 ```
 
-If your User Number is the standard "1000" then no changes
-are needed for the first line.
+The first line shows your User Number which is usually "1000". 
+The User Number is assigned when you sign on. If `1000` is 
+not your user number, then change it appropriately.
 
-In the second line replace `rick` with your Username.
+On the second line, replace `rick` with your Username.
 
 ## 'sound' Prerequisites
 
@@ -765,16 +769,23 @@ Here is what the system setup looks like:
 
 {% include image.html src="/assets/img/iothings/Multiple Monitors Manager.png"
    alt="Multiple Monitors Manager.png"
-   style="float: none; width: 100%; margin: 0px 0px 0px 0px;"
+   style="float: none; width: 100%; margin: 0px 0px 1rem 0px;"
    caption="mmm Overview of Monitors"
 %}
 
-- Top Left is Sony 50" Full HD TV
-- Top Right is TCL 43" 4K TV
-- Bottom Right is Alienware 17" Full HD laptop
+- Top Left is a Sony 50" Full HD Android TV. 
+The picture is usually turned off to save power but the
+sound system is always on. 
+- Top Right is a TCL 43" 4K Google TV. 
+Because it is 4K, it has size of four Full HD screens.
+- Bottom Right is an Alienware 17" Full HD laptop screen. The 
+laptop has two HDMI channels. One channel is powered by a 
+nVidia GeForce GTX 970M. The other channel is powered by an
+Intel Core i-7 GPU using ThunderBolt 3 USB-C to HDMI converter.
 
-There are lamps behind the Sony TV and TCL TVs which are
-powered by Kasa TP-Link Smartplugs.
+
+There are two lamps. One behind the Sony TV and one behind the 
+TCL TV. Both lamps are controlled by Kasa TP-Link Smart Plugs.
 
 The Sony TV has a sound system with subwoofer that is used
 all the time. The Sony TV picture is only used occasionally
@@ -1011,10 +1022,12 @@ for more information.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 
-# `picturetog` Toggle Primary (Sony) TV picture Off and On
+# `picturetog` Toggle Sony TV picture Off and On
 
-The `picturetog` bash script is called whenever you
-want to toggle the Sony TV picture off and on.
+The `picturetog` bash script toggles the Sony TV picture
+(screen) off and on. When the picture is turned off this
+is also known as "Power Savings Mode On". The reason being
+that 100 watts of power is saved.
 
 ## 'picturetog' Key Features
 
@@ -1059,9 +1072,7 @@ Below is the Bash script you can copy to your system:
 # https://pro-bravia.sony.net/develop/
 
 
-IP=192.168.0.16  # Wifi for Sony
-IP=192.168.0.21  # LAN for Sony
-IP=192.168.0.19  # LAN for Sony March 13, 2023 (router power outage)
+IP=192.168.0.19  # LAN for Sony
 PWRD=123
 
 cURLit () {
@@ -1184,7 +1195,7 @@ fi
 There is one line you need to configure to your system:
 
 ```bash
-IP=192.168.0.19  # LAN for Sony March 13, 2023 (router power outage)
+IP=192.168.0.19  # LAN for Sony
 ```
 
 Change the IP address to what your network assigned it. See the
@@ -1206,9 +1217,7 @@ alien (192.168.0.12) LOCAL NETWORK CARD
 ## 'picturetog' Prerequisites
 
 A Sony Bravia TV or Professional Display is required. The
-following Linux package(s) must be installed:
-
-- curl
+Linux package `curl` must also be installed.
 
 ---
 
@@ -1228,17 +1237,15 @@ following Linux package(s) must be installed:
 ---
 
 
-# `nvhda` Enable nVidia GeForce GTX 970M HDMI Sound
+# `nvhda` Enable nVidia GeForce GTX 970M Sound
 
 https://github.com/hhfeuer/nvhda#install-using-dkms
 https://bugs.freedesktop.org/show_bug.cgi?id=75985#c37
 
 ## 'nvhda' Key Features
 
-Due to a bug between nVidia and Linux there is no sound
-when the system is powered up. The bug can be avoided
-if you boot with windows first and then reboot into
-Ubuntu.
+Due to a bug between nVidia and Linux (perhaps caused by TLP)
+there is no sound when the system is powered up.
 
 To solve this problem the `nvhda` C program is used. Whenever
 you install a new Linux Kernel version the program is
