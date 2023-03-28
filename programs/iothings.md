@@ -1816,111 +1816,492 @@ automatically recompiled by DKMS.
 <a id="hdr13"></a>
 <div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
 
-## Summary Totals
+# Discover IP addresses With `ssh-setup`
 
-When the `stack-to-blog.py` finishes a summary appears on your screen:
+``` bash
+#!/bin/bash
 
-```  cpp
-// =============================/   T O T A L S   \============================== \\
-Run-time options:
+# NAME: ssh-setup
+# PATH: /mnt/e/bin
+# DESC: Display network details needed to setup SSH or debug after setup.
+# CALL: Called from terminal with `sudo` permissions.
+# DATE: June 18, 2020. Modified: June 23, 2020.
 
-RANDOM_LIMIT:     10,000  | PRINT_RANDOM:        False  | NAV_FORCE_TOC:        True
-NAV_BAR_MIN:           3  | NAV_WORD_MIN:          700  | COPY_LINE_MIN:          20
+# NOTE: When debugging script place terminal results in appropriate sections.
 
-Totals written to: '../_config.yml' (relative to /sede directory)
+# UPDT: Jun 23 2020: Change 'sshd.config' to 'ssh_config'. Add route and arp.
 
-accepted_count:      632  | total_votes:         7,149  | total_views:    52,632,065
-question_count:      300  | answer_count:        2,145  | save_blog_count:     1,218
-blog_question_count:  50  | blog_answer_count:   1,073  | blog_accepted_count:   491
-total_self_answer:   112  | total_self_accept:      58  | Self Needing Accept:    54
-total_headers:     1,651  | total_header_spaces:   402  | total_quote_spaces:  1,574
-total_lines:      56,558  | total_paragraphs:   16,050  | total_words:       324,607
-total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     59
-total_code_blocks: 2,587  | total_block_lines:   3,606  | total_clipboards:      293
-total_code_indents:2,319  | total_indent_lines: 22,274  | total_half_links:      205
-total_tail_links:    111  | total_bad_half_links:    0  | Half Links Changed:    187
-total_no_links:      291  | total_full_links:       80  | Bad No Links:          211
-total_pseudo_tags:   425  | total_copy_lines:   17,240  | total_toc:              26
-most_lines:          820  | total_force_end:     1,057  | total_nav_bar:          55
-total_header_levels:  [600, 828, 221, 2, 0, 0]
-```
+# From: https://askubuntu.com/questions/628383/output-only-mac-address-on-ubuntu#comment892989_628387
 
-Every total name with an underscore (`_`) is the
-python program internal variable name. The
-first four total lines apply to all Stack Exchange
-Questions and Answers you have posted.
-The remaining total lines apply only to posts that qualify
-for saving as a Jekyll blog post.
+export LANG=C       # Force english names for sed search. For example in
+                    # another language HWaddr is direcciónHW
 
-If you want to change the totals' layout, it is found in the code below:
+if [[ $(id -u) != 0 ]]; then # root powers needed to call this script
+    echo >&2 "'$(basename $0)' must be called with 'sudo'"
+    exit 1
+fi
 
-``` python
-if RANDOM_LIMIT is None:
-    random_limit = '   None'
-else:
-    # noinspection PyStringFormat
-    random_limit = '{:>6,}'.format(RANDOM_LIMIT)
+# Must have the nmap package.
+command -v nmap >/dev/null 2>&1 || { echo >&2 \
+        "'nmap' package required but it is not installed.  Aborting."; \
+        exit 2; }
 
-print('// =====================/   T O T A L S   \\====================== \\\\')
-print('Run-time options:\n')
-print('RANDOM_LIMIT:   ', random_limit,
-      ' | PRINT_RANDOM:  {:>11}'.format(str(PRINT_RANDOM)),
-      ' | NAV_FORCE_TOC: {:>11}'.format(str(NAV_FORCE_TOC)))
-print('NAV_BAR_MIN:      {:>6,}'.format(NAV_BAR_MIN),
-      ' | NAV_WORD_MIN:  {:>11}'.format(NAV_WORD_MIN),
-      ' | COPY_LINE_MIN: {:>11}'.format(COPY_LINE_MIN))
-print()
-print('Totals written to:', "'" + CONFIG_YML + "'",
-      '(relative to /sede directory)\n')
-print('accepted_count:   {:>6,}'.format(accepted_count),
-      ' | total_votes:   {:>11,}'.format(total_votes),
-      ' | total_views:   {:>11,}'.format(total_views))
-print('question_count:   {:>6,}'.format(question_count),
-      ' | answer_count:       {:>6,}'.format(answer_count),
-      ' | save_blog_count:    {:>6,}'.format(save_blog_count))
-print('blog_question_count:{:>4,}'.format(blog_question_count),
-      ' | blog_answer_count:  {:>6,}'.format(blog_answer_count),
-      ' | blog_accepted_count:{:>6,}'.format(blog_accepted_count))
-print('total_self_answer:{:>6,}'.format(total_self_answer),
-      ' | total_self_accept:  {:>6,}'.format(total_self_accept),
-      ' | Self Needing Accept:{:>6,}'.format(total_self_answer -
-                                             total_self_accept))
-print('total_headers:    {:>6,}'.format(total_headers),
-      ' | total_header_spaces:{:>6,}'.format(total_header_spaces),
-      ' | total_quote_spaces: {:>6,}'.format(total_quote_spaces))
-print('total_lines: {:>11,}'.format(total_lines),
-      ' | total_paragraphs:{:>9,}'.format(total_paragraphs),
-      ' | total_words: {:>13,}'.format(total_words))
-print('total_pre_codes:  {:>6,}'.format(total_pre_codes),
-      ' | total_alternate_h1: {:>6,}'.format(total_alternate_h1),
-      ' | total_alternate_h2: {:>6,}'.format(total_alternate_h2))
-print('total_code_blocks:{:>6,}'.format(total_code_blocks),
-      ' | total_block_lines: {:>7,}'.format(total_block_lines),
-      ' | total_clipboards:  {:>7,}'.format(total_clipboards))
-print('total_code_indents:{:>5,}'.format(total_code_indents),
-      ' | total_indent_lines:{:>7,}'.format(total_indent_lines),
-      ' | total_half_links:  {:>7,}'.format(total_half_links))
-print('total_tail_links:  {:>5,}'.format(total_tail_links),
-      ' | total_bad_half_links:{:>5,}'.format(total_bad_half_links),
-      ' | Half Links Changed:{:>7,}'.format(total_half_links -
-                                            total_bad_half_links))
-print('total_no_links:    {:>5,}'.format(total_no_links),
-      ' | total_full_links:    {:>5,}'.format(total_full_links),
-      ' | Bad No Links:      {:>7,}'.format(total_no_links -
-                                            total_full_links))
-# Note "Bad No Links" only accurate when full_links aren't native in posts
-# and are created internally by stack-to-blog.py. Therefore, a negative total
-# is possible when [https://...](https://...) appears in a post.
-print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
-      ' | total_copy_lines:  {:>7,}'.format(total_copy_lines),
-      ' | total_toc:         {:>7,}'.format(total_toc))
-print('# total_tag_names:{:>6,}'.format(len(total_tag_names)),
-      ' | total_force_end:  {:>8,}'.format(total_force_end),
-      ' | total_nav_bar:     {:>7,}'.format(total_nav_bar))
-print('all_tag_counts: {:>8,}'.format(all_tag_counts),
-      ' | # tag_posts:      {:>8,}'.format(len(tag_posts)),
-      ' | # total_tag_letters:{:>6,}'.format(len(total_tag_letters)))
-print('total_header_levels:       ', total_header_levels)
+# Must have the lshw package.
+command -v lshw >/dev/null 2>&1 || { echo >&2 \
+        "'lshw' package required but it is not installed.  Aborting."; \
+        exit 3; }
+
+# OTHER PACKAGES CONSIDERED AND REJECTED:
+
+# $ network-test
+# The program 'network-test' is currently not installed. You can install it
+# by typing: 'sudo apt install ifupdown-extra'
+# Seems kind of lame and has md5 checksum error.
+
+# $ netstat | wc -l
+# 824
+# Way to many lines to make use of. Might be good to track down specific addy.
+
+# $ iwconfig
+# wlp60s0   IEEE 802.11  ESSID:"XXXXXXXXXXXXXX"  
+#           Mode:Managed  Frequency:5.22 GHz  Access Point: AE:20:2E:CC:94:50   
+#           Bit Rate=6 Mb/s   Tx-Power=23 dBm
+# Reveals router name (EESID) which is bad for neighbours to know us by....
+
+echo
+echo "Gathering system details - Will take 15 - 30 seconds"
+
+Display () {
+
+# $1 = command that was run (sometimes abridged version if lots of seds)
+# $2 = output from command
+
+echo " "
+String1="==========  $1  "
+String2="====================================================================="
+String3="$String1$String2"
+echo "${String3:0:79}"
+echo " "
+echo "$2"
+
+} # Display
+
+# What systemd network services are running?
+NET_Service="" # Default no directory
+NET_Service=$(systemctl status net*)
+Display 'systemctl status net*' "$NET_Service"
+
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+(ABRIDGED)
+
+* network-online.target - Network is Online
+* networking.service - Raise network interfaces
+* network.target - Network
+* network-pre.target - Network (Pre)
+ 
+---------------------------------------------------------------------------- */
+END
+# Is SSH systemd service (aliased as sshd) running?
+SSH_Service="" # Default no directory
+SSH_Service=$(systemctl status ssh)
+Display 'systemctl status ssh' "$SSH_Service"
+
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+● ssh.service
+   Loaded: not-found (Reason: No such file or directory)
+   Active: inactive (dead)
+
+---------------------------------------------------------------------------- */
+END
+
+# What SSH keys are already setup?
+SSH_Keys="" # Default no directory
+[[ -d ~/.ssh ]] && SSH_Keys=$(ls -l ~/.ssh | \
+                              grep -v ^total)
+                              # remove total line
+Display '[[ -d ~/.ssh ]] && SSH_Keys=$(ls -l ~/.ssh)' "$SSH_Keys"
+
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+id_rsa
+id_rsa.pub
+known_hosts
+
+---------------------------------------------------------------------------- */
+END
+
+# What SSH packages are currently installed?
+SSH_Installed="" # Default no SSH packages
+SSH_Installed=$(apt list 2>/dev/null | grep ssh | grep installed | \
+                     sed 's/ \[installed.*//')
+                     # remove [installed] & [installed, automatic] strings
+
+Display "apt list 2>/dev/null | grep ssh | grep installed" "$SSH_Installed"
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+libssh-4/xenial-updates,xenial-security,now 0.6.3-4.3ubuntu0.5 amd64
+libssh-gcrypt-4/xenial-updates,xenial-security,now 0.6.3-4.3ubuntu0.5 amd64
+libssh2-1/xenial-updates,xenial-security,now 1.5.0-2ubuntu0.1 amd64
+openssh-client/xenial-updates,xenial-security,now 1:7.2p2-4ubuntu2.8 amd64
+sshfs/xenial,now 2.5-1ubuntu1 amd64
+
+---------------------------------------------------------------------------- */
+END
+
+# What is the SSH configuration?
+SSH_Config="" # Default no SSH packages
+[[ -f /etc/ssh/ssh_config ]] && SSH_Config=$(cat /etc/ssh/ssh_config)
+Display "cat /etc/ssh/ssh_config" "$SSH_Config"
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+---------------------------------------------------------------------------- */
+END
+
+# What IP address are on this machine?
+LOCAL_IP_Addresses="" # Default machine has no network cards
+LOCAL_IP_Addresses=$(ifconfig -a | grep -v ^' ' -A1 | \
+                     grep -v '\-\-')
+                     # grep to -v to remove extra lines
+Display "ifconfig -a | grep -v ^' ' -A1" "$LOCAL_IP_Addresses"
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+enp59s0   Link encap:Ethernet  HWaddr 28:f1:0e:2a:1a:ed  
+          inet addr:192.168.0.12  Bcast:192.168.0.255  Mask:255.255.255.0
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+
+wlp60s0   Link encap:Ethernet  HWaddr 9c:b6:d0:10:37:f7  
+          inet addr:192.168.0.10  Bcast:192.168.0.255  Mask:255.255.255.0
+ 
+---------------------------------------------------------------------------- */
+END
+
+# What IP address (potential servers/clients) are visible on network?
+NET_IP_Addresses="" # Default LAN is not running
+NET_IP_Addresses=$(nmap -sn 192.168.0/24 | \
+                   sed '/^Starting Nmap/d' | \
+                   sed '/^Nmap done/d' | \
+                   sed -z 's/Nmap scan report for //g' | \
+                   sed -z 's/\nHost is up\./ LOCAL NETWORK CARD/g' | \
+                   sed -z 's/\nHost is up / /g' | \
+                   sed -z 's/\nMAC Address: / MAC: /g' )
+#                   sed 's/MAC.*(/(/g') # MAC makes line too long
+                   # Use sed to remove line breaks making results lengthy
+Display "nmap -sn 192.168.0/24" "$NET_IP_Addresses"
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+hitronhub.home (192.168.0.1) (0.0011s latency). MAC: AC:20:2E:CC:94:52 (Unknown)
+dell (192.168.0.13) (0.00026s latency). MAC: 5C:F9:DD:5C:9C:53 (Dell)
+dell (192.168.0.14) (0.00026s latency). MAC: 5C:F9:DD:5C:9C:53 (Dell)
+hs100 (192.168.0.15) (-0.078s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
+android-47cdabb50f83a5ee (192.168.0.16) (-0.076s latency). MAC: 18:4F:32:8D:AA:97 (Hon Hai Precision Ind.)
+192.168.0.254 (0.00045s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
+alien (192.168.0.10) LOCAL NETWORK CARD
+alien (192.168.0.12) LOCAL NETWORK CARD
+
+---------------------------------------------------------------------------- */
+END
+
+#What network cards are installed:
+NetworkCards="" # Contents of /etc/hosts should contain all IP addresses on LAN
+NetworkCards=$(lshw -c network | grep -Ei 'description|product|serial' | \
+               sed 's/       description: //g' |  \
+               sed -z 's/\n       product: /: /g' | \
+               sed -z 's/\n       serial: / - /g')
+Display "lshw -c network | grep -Ei 'description|product|serial'" "$NetworkCards"
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+Ethernet interface: Killer E2400 Gigabit Ethernet Controller - 28:f1:0e:2a:1a:ed
+Wireless interface: QCA6174 802.11ac Wireless Network Adapter - 9c:b6:d0:10:37:f7
+ 
+---------------------------------------------------------------------------- */
+END
+
+# Email /etc/hosts file to yourself and update contents below on machine
+STATIC_IP_Addresses="" # Contents of /etc/hosts should contain all IP addresses on LAN
+STATIC_IP_Addresses=$(cat /etc/hosts | grep 192.168)
+Display "cat /etc/hosts | grep 192.168" "$STATIC_IP_Addresses"
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+192.168.0.10    alien  AW 17R3 WiFi                   9c:b6:d0:10:37:f7
+192.168.0.12    alien  AW 17R3 Ethernet               28:f1:0e:2a:1a:ed
+192.168.0.13    dell   Inspiron 17R-SE-7720 Ethernet  5c:f9:dd:5c:9c:53
+192.168.0.14    dell   Inspiron 17R-SE-7720 WiFi      60:6c:66:86:de:bd
+192.168.0.15    hs100  Sony TV Wall Light
+192.168.0.16    android-47cdabb50f83a5ee  Sony Bravia TV KBL 50W800C
+
+---------------------------------------------------------------------------- */
+END
+
+# Firewall
+# Selecteend TLP stats that might prove helpful for debuggin.
+ufw_stats="" # Contents of /etc/hosts should contain all IP addresses on LAN
+ufw_stats=$(ufw status verbose)
+Display "FIREWALL: ufw status verbose" "$ufw_stats"
+
+echo "-------------- \
+For above setting check that ports 9 & 22 allowed --------------"
+echo "Port  9 is usually used for Wake On Lan (WOL)"
+echo "Port 22 is usually used for remote terminal login"
+
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+-------------- Any error messages below are coming from tlp-stat --------------
+cat: /sys/class/power_supply/hidpp_battery_23/present: No such file or directory
+cat: /sys/class/power_supply/hidpp_battery_24/present: No such file or directory
+
+---------------------------------------------------------------------------- */
+END
+
+echo -------------- \
+Any error messages below are coming from tlp-stat --------------
+# Selected TLP stats that might prove helpful for debuggin.
+TLP_stats="" # Contents of /etc/hosts should contain all IP addresses on LAN
+command -v tlp-stat >/dev/null 2>&1 && \
+    TLP_stats=$(tlp-stat | grep -E '^autosuspend|ENABLE|WOL')
+Display "tlp-stat | grep -E '^autosuspend|ENABLE|WOL'" "$TLP_stats"
+: <<'END'
+
+/* ------------ RESULTS -------------------------------------------------------
+
+TLP_ENABLE=1
+WOL_DISABLE=Y
+autosuspend        = enabled
+
+---------------------------------------------------------------------------- */
+END
+
+: <<'END'
+/* ------------------  WOL (Wake On LAN) General Comments  --------------------
+
+*******************  UBUNTU 16.04  *******************
+
+From: https://askubuntu.com/questions/764158/
+      how-to-enable-wake-on-lan-wol-in-ubuntu-16-04
+
+Also:  http://manpages.ubuntu.com/manpages/xenial/man8/NetworkManager.8.html
+
+In Ubuntu 16.04 set WOL_DISABLE=N in /etc/default/tlp to avoid getting WOL 
+disabled by TLP power management.
+
+http://linrunner.de/en/tlp/docs/tlp-configuration.html
+
+Add NETDOWN=no in /etc/default/halt to prevent powering off the network
+card during shutdown
+
+Enable Wake on LAN in /etc/network/interfaces when static network 
+configuration is used.
+
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+# The loopback network interface
+
+auto lo
+iface lo inet loopback
+# The primary network interface
+
+auto eth0
+iface eth0 inet static
+        address 192.168.0.10
+        netmask 255.255.255.0
+        gateway 192.168.0.1
+        dns-nameservers 192.168.0.1
+        up ethtool -s eth0 wol g
+
+Enable wake on lan in BIOS, enter the BIOS setup and look for something
+called "Wake up on PCI event", "Wake up on LAN" or similar. Change it so
+that it is enabled. Save your settings and reboot.
+
+https://help.ubuntu.com/community/WakeOnLan
+
+Warning some motherboards / network controllers don't support WOL from the
+cold boot (S5 state, where the power to the system is physically turned off 
+and back on again). In that case, at least one power cycle (power up, 
+shutdown) has to be performed. To mitigate to the problem, the BIOS can be 
+configured to power up when AC is restored and schedule a shutdown inside 
+Ubuntu afterwards. Refer to the motherboard's manual for further details.
+
+
+*******************  UBUNTU 18.04  *******************
+
+
+NOTE: In Ubuntu 18.04 /etc/network/interfaces maybe DEPRECATED
+      You might have to create your own script for WOL in:
+      /etc/NetworkManager/dispatcher.d/99-Xxxxxx
+      
+      See: https://askubuntu.com/a/1111656/307523
+           https://wiki.archlinux.org/index.php/
+           NetworkManager#Network_services_with_NetworkManager_dispatcher
+
+
+---------------------------------------------------------------------------- */
+END
+
+# WOL from: https://wiki.debian.org/WakeOnLan
+# apt install ethtool
+# ethtool -s eth0 wol g
+
+# Above is NOT PERSISTENT across suspend/resume cycle so issue upon resume
+# not just boot. /etc/network/interfaces above has setup.
+
+# Archwiki: https://wiki.archlinux.org/index.php/Wake-on-LAN
+# apt install wakeonlan
+# wol target_MAC_address
+
+# From: https://www.thegeekstuff.com/2008/11/
+# wol-wakeonlan-guide-remotely-turn-on-servers-without-physical-access/
+# wakeonlan 5c:f9:dd:5c:9c:53
+
+# Do we have 'NETDOWN=no' line present for machines that shutdown"?
+HaltConfig="" # Default no file
+[[ -f /etc/default/halt ]] && HaltConfig=$(cat /etc/default/halt)
+Display 'cat /etc/default/halt' "$HaltConfig"
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+# Default behaviour of shutdown -h / halt. Set to "halt" or "poweroff".
+HALT=poweroff
+
+---------------------------------------------------------------------------- */
+END
+
+# Do we have static IP addresses setup?
+NetworkInterfaces="" # Default no file
+[[ -f /etc/network/interfaces ]] && NetworkInterfaces=$(cat /etc/network/interfaces)
+Display 'cat /etc/network/interfaces' "$NetworkInterfaces"
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+# interfaces(5) file used by ifup(8) and ifdown(8)
+# /etc/network/interfaces
+# For Ubuntu 16.04 ONLY according to notes in ssh-setup
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+        address 192.168.0.10
+        netmask 255.255.255.0
+        gateway 192.168.0.1
+        dns-nameservers 192.168.0.1
+        up ethtool -s eth0 wol g
+
+
+---------------------------------------------------------------------------- */
+END
+
+# Hide your router address below if publishing!
+nmcliConnections="" # Default no file
+nmcliConnections=$(nmcli -p connection show)
+Display 'nmcli -p connection show' "$nmcliConnections"
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+====================================================================================
+                         NetworkManager connection profiles
+====================================================================================
+NAME                UUID                                  TYPE             DEVICE  
+------------------------------------------------------------------------------------
+Xxxx-Xxxxxx-Xx      cf8fda92-0e59-4d0e-8821-cedb4be10d26  802-11-wireless  wlp60s0 
+Wired connection 1  378122bb-ad44-3ddd-a616-c93e1bf0f828  802-3-ethernet   enp59s0 
+Xxxxxxxxx-5G        73c40a50-0f2e-431c-b12c-e4712b3abdb4  802-11-wireless  --      
+
+---------------------------------------------------------------------------- */
+END
+
+EthernetInterface=$(ifconfig -a | grep ^'e' | cut -d' ' -f1)
+Display "ifconfig -a | grep ^'e' | cut -d' ' -f1" \
+"Ethernet Interface that could be used for WOL:   $EthernetInterface"
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+
+Ethernet Interface that could be used for WOL:   enp59s0
+
+---------------------------------------------------------------------------- */
+END
+
+# What WOL_Settings exist for Ethernet Interface?
+WOL_Setting="'ethtool' not installed."
+command -v ethtool >/dev/null 2>&1 && \
+    WOL_Setting="$(ethtool $EthernetInterface | grep -i 'Wake-on:')"
+Display "ethtool $EthernetInterface | grep -i 'Wake-on:'" "$WOL_Setting"
+: <<'END'
+
+/* ------------ RESULTS -------------------------------------------------------
+
+Supports Wake-on: pumbag
+Wake-on: g
+
+---------------------------------------------------------------------------- */
+END
+
+# What WOL_Settings exist for Ethernet Interface?
+Route="'ethtool' not installed."
+Route="$(route)"
+Display "route" "$Route"
+: <<'END'
+
+/* ------------ RESULTS -------------------------------------------------------
+
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         hitronhub.home  0.0.0.0         UG    100    0        0 enp59s0
+default         hitronhub.home  0.0.0.0         UG    600    0        0 wlp60s0
+link-local      *               255.255.0.0     U     1000   0        0 enp59s0
+192.168.0.0     *               255.255.255.0   U     100    0        0 enp59s0
+192.168.0.0     *               255.255.255.0   U     600    0        0 wlp60s0
+
+---------------------------------------------------------------------------- */
+END
+
+Arp="'apr' not installed."
+Arp="$(arp)"
+Display "arp" "$Arp"
+: <<'END'
+
+/* ------------ RESULTS -------------------------------------------------------
+
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.0.4                      (incomplete)                              enp59s0
+192.168.0.254            ether   00:05:ca:00:00:09   C                     enp59s0
+hs100                    ether   50:d4:f7:eb:41:35   C                     enp59s0
+dell                     ether   5c:f9:dd:5c:9c:53   C                     enp59s0
+hitronhub.home           ether   ac:20:2e:cc:94:52   C                     enp59s0
+android-47cdabb50f83a5e  ether   18:4f:32:8d:aa:97   C                     enp59s0
+hitronhub.home           ether   ac:20:2e:cc:94:52   C                     wlp60s0
+20.20.20.1               ether   ac:20:2e:cc:94:52   C                     enp59s0
+dell                             (incomplete)                              enp59s0
+
+
+---------------------------------------------------------------------------- */
+END
+
+Display 'END OF REPORT' ""
+
+## TEST STUFF
+
+#Spare:
+: <<'END'
+/* ------------ RESULTS -------------------------------------------------------
+---------------------------------------------------------------------------- */
+END
+
 ```
 
 <a id="hdr14"></a>
