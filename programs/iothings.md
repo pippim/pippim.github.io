@@ -170,7 +170,7 @@ Below is the Bash script you can copy to your system:
 #       https://www.rt.com/news/491343-microsoft-coding-blacklists-slaves/
 #
 # DESC: When TV is powered off automatically suspend the laptop.
-# DATE: June 9, 2020. Modified December 31, 2020
+# DATE: June 9, 2020.  Modified March 28, 2023.
 #
 # NOTE: Written for Ask Ubuntu question:
 #       https://askubuntu.com/questions/1247484/
@@ -471,10 +471,11 @@ Main () {
             else
                 log "TV Powered off. 'systemctl $SCTL' being called."
                 systemctl "$SCTL"
+                # systemctl will suspend. When resuming we hit next line
                 log "System powered back up. Checking if TV powered on. '$0'."
                 sleep 10                        # Time to wake from suspend
                 TenMinuteSpam                   # Wait for network connection
-                /home/rick/sony/pictureoff.sh   # Picture off energy saving
+                pictureoff                      # Picture off energy saving
             fi
         fi
 
@@ -517,19 +518,15 @@ Main "$@"
 
 ## Configuring Bash Script
 
-There are four lines you need to configure to your system:
+There are three lines near the top of the script you may need to
+
+configure to your system:
 
 ```bash
 SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 IP=192.168.0.19     # IP address for Sony TV on LAN
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
-  ...
-/home/"$UserName"/sony/pictureoff.sh   # Picture off energy saving
 ```
-
-Note the last tine is buried deep inside the program. Change
-the path `/home/"$UserName"/sony/` to the directory where you 
-placed the `pictureoff.sh` bash script. 
 
 ## Automatically Start Bash Script
 
@@ -539,7 +536,7 @@ In your `~/.config/autostart` directory create the file
 ```bash
 [Desktop Entry]
 Type=Application
-Exec=/home/rick/sony/tvpowered
+Exec=tvpowered
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
@@ -548,10 +545,6 @@ Name=tvpowered
 Comment[en_CA]=Powering off Sony TV suspends system
 Comment=Powering off Sony TV suspends system
 ```
-
-Change the line with `/home/rick/sony/`
-to the directory where the `tvpowered` script is
-stored.
 
 ## 'tvpowered' prerequisites
 
@@ -571,7 +564,7 @@ The following Linux programs are required:
 
 - `curl` - Linux package
 - `libnotify-bin` - Linux package
-- `pictureoff.sh` - Bash Script provided below
+- `pictureoff - Bash Script provided below
 - `smartplug_off` - Bash Script provided below
 
 ---
@@ -620,7 +613,7 @@ Below is the Bash script that needs to placed in the
 # CALL: Called by Network Manager before going down. Network manager in turn
 #       is called by systemd during suspend/hibernate/shutdown
 
-# NOTE: myisp.sh and hs100.sh must be installed for hs100 tp-link power plug.
+# NOTE: myisp.sh and hs100.sh must be installed for hs100 TP-Link power plug.
 #       https://developer.gnome.org/NetworkManager/stable/NetworkManager.html
 
 PlugName="192.168.0.15"  # Sony TV backlight
@@ -663,7 +656,7 @@ The second `PlugName` is 2/3rds of the way in the file.
 ## 'smarplug_off' Prerequisites
 
 `/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
-See [tp-link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
+See [TP-Link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
 "Visit GitHub Page for more details"){:target="_blank"} 
 for more information.
 
@@ -859,7 +852,7 @@ Below is the Bash script you can copy to your system:
 
 # CALL: light-tog
 
-# NOTE: myisp.sh and hs100.sh must be installed for hs100 tp-link power plug.
+# NOTE: myisp.sh and hs100.sh must be installed for hs100 TP-Link power plug.
 
 PlugName="192.168.0.15"  # hs100 Wi-Fi smart plug behind Sony TV.
 
@@ -901,7 +894,7 @@ alien (192.168.0.12) LOCAL NETWORK CARD
 
 
 `/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
-See [tp-link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
+See [TP-Link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
 "Visit GitHub Page for more details"){:target="_blank"} 
 for more information.
 
@@ -964,7 +957,7 @@ Below is the Bash script you can copy to your system:
 
 # CALL: light-tog2
 
-# NOTE: myisp.sh and hs100.sh must be installed for hs100 tp-link power plug.
+# NOTE: myisp.sh and hs100.sh must be installed for hs100 TP-Link power plug.
 
 # UPDT: September 29, 2022. After power outage IP changed from 20 to 19.
 #       March 14, 2023. After power outage IP changed from 19 to 20.
@@ -1012,7 +1005,7 @@ alien (192.168.0.12) LOCAL NETWORK CARD
 
 
 `/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
-See [tp-link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
+See [TP-Link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
 "Visit GitHub Page for more details"){:target="_blank"} 
 for more information.
 
@@ -1065,16 +1058,24 @@ Below is the Bash script you can copy to your system:
 ```bash
 #!/bin/bash
 
-# Sony TV - Toggle Power Savings (picture / screen) off/on.
+# NAME: picturetog
+# PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin)
+# DESC: Toggle Sony Bravia TV picture off/on but leave on sound.
+# DATE: March 7, 2020. Modified March 28, 2023.
 
-# When Power Savings is on, picture is turned off saving 100 watts.
+# CALL: Called by command line or Desktop Application Shortcut Icon.
 
-# For reference see https://pro-bravia.sony.net/develop/integrate/rest-api/spec/
-# https://pro-bravia.sony.net/develop/
+# NOTE: A Sony Bravia TV or Sony Professional Display is required.
+#       In Sony documentation (links below) turning the picture off
+#       is called "Turning Power Savings Mode On". About 100 watts is saved.
+#       https://pro-bravia.sony.net/develop/integrate/rest-api/spec/
+#       https://developer.gnome.org/NetworkManager/stable/NetworkManager.html
 
+# UPDT: March 23, 2023. Change Sony TV IP address from 16 to 19
+#       March 28, 2023. Update documentation.
 
-IP=192.168.0.19  # LAN for Sony
-PWRD=123
+IP=192.168.0.19  # LAN IP address for Sony Bravia TV
+PWRD=123         # Sony Bravia TV Password for Communicaations
 
 cURLit () {
 
@@ -1181,10 +1182,10 @@ if GetPowerStatus ; then
     GetPowerSavingMode
     # Try to strip out word "off" in current power saving status
     if [[ "${Retn#*off}" != "$Retn" ]] ; then
-        # Currrent power saving mode is "off"
+        # Current power saving mode is "off"
         SetPowerSavingMode "pictureOff"
     else
-        # Currrent power saving mode is "pictureOff"
+        # Current power saving mode is "pictureOff"
         SetPowerSavingMode "off"
     fi
 
@@ -1225,10 +1226,562 @@ Linux package `curl` must also be installed.
 <a id="hdr10"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
+# `pictureoff` Turn Off Sony TV Picture
+
+{% include image.html src="/assets/img/iothings/tv picture off.gif"
+   alt="tv remote off.gif"
+   style="float: right; width: 50%; margin: .25rem 0px 1rem 1rem;"
+   caption="Turn Sony Bravia TV Picture Off"
+%}
+
+The `pictureoff` bash script is called when the computer
+is turned on, rebooted or resumes from suspend (wakes from sleep).
+
+## 'pictureoff' Key Features
+
+`pictureoff` is automatically called by `tvpowered` script
+after it establishes communication
+with your Sony TV.
+
+
+Below is the Bash script you can copy to your system:
+
+```bash
+#!/bin/bash
+
+# NAME: pictureoff
+# PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
+# DESC: Toggle Sony Bravia TV picture off/on but leave on sound.
+# DATE: March 7, 2020. Modified March 28, 2023.
+
+# CALL: Called by command line or .../bin/tvpowered
+
+# NOTE: A Sony Bravia TV or Sony Professional Display is required.
+#       In Sony documentation (links below) turning the picture off
+#       is called "Turning Power Savings Mode On". About 100 watts is saved.
+#       https://pro-bravia.sony.net/develop/integrate/rest-api/spec/
+#       https://developer.gnome.org/NetworkManager/stable/NetworkManager.html
+
+# UPDT: March 23, 2023. Change Sony TV IP address from 16 to 19
+#       March 28, 2023. Update documentation.
+
+IP=192.168.0.19  # LAN IP address for Sony Bravia TV
+PWRD=123         # Sony Bravia TV Password for Communications
+
+cURLit () {
+
+    # $1 = JSON String, $2 = Sony subsystem to talk to, eg accessControl,
+    #   audio, system
+    
+    # Returns $Retn currently must be defined as global variable.
+
+    # Create temporary file in RAM for curl command
+    TEMP=$(mktemp --tmpdir json.XXXXXXXX)
+    echo "$1" > "$TEMP"
+
+    # -s = silent
+    Retn=$(curl -s -H "Content-Type: application/json; charset=UTF-8" \
+         -H "X-Auth-PSK: $PWRD" \
+         --data @"$TEMP" \
+         http://$IP/sony/"$2")
+
+    # TO-DO: check $? and if non-zero pop up dialog with $TEMP contents
+    rm "$TEMP"
+
+} # cURLit
+
+GetPowerStatus () {
+
+    # Copy and paste JSON strings from Sony website: 
+    # https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/system/v1_0/getPowerStatus/index.html
+    JSONstr='{
+                "method": "getPowerStatus",
+                "id": 50,
+                "params": [],
+                "version": "1.0"
+             }'
+
+    # TO-DO: Make Retn passed parm instead of global var
+    Retn=""
+    # Then pass string to cURL for execution
+    cURLit "$JSONstr" "system"
+
+    # Retn: {"result":[{"status":"active"}],"id":50}
+    #   or: {"result":[{"status":"standby"}],"id":50}
+    [[ "${Retn#*active}" != "$Retn" ]] && return 0
+
+    # TV is turned off
+    # Might want timer tests to make sure we aren't repeatedly turning off
+    return 1
+
+} # GetPowerStatus
+
+GetPowerSavingMode () {
+
+    # Copy and paste JSON strings from Sony website: 
+    # https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/system/v1_0/getPowerSavingMode/index.html
+    JSONstr='{
+                "method": "getPowerSavingMode",
+                "id": 51,
+                "params": [],
+                "version": "1.0"
+             }'
+
+    # TO-DO: Make Retn passed parm instead of global var
+    Retn=""
+    # Then pass string to cURL for execution
+    cURLit "$JSONstr" "system"
+
+    # "off" - Power saving mode is disabled.
+    # "low" - Power saving mode is enabled at a low level.
+    # "high" - Power saving mode is enabled at a high level.
+    # "pictureOff" - Power saving mode is enabled with the panel output off.
+
+    echo $Retn
+    return 0
+
+} # GetPowerSavingMode
+
+SetPowerSavingMode () {
+
+    # Copy and paste JSON strings from Sony website: 
+    # https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/system/v1_0/setPowerSavingMode/index.html
+    JSONstr='{
+                "method": "setPowerSavingMode",
+                "id": 52,
+                "params": [{"mode": "'"${1}"'"}],
+                "version": "1.0"
+             }'
+
+    # TO-DO: Make Retn passed parm instead of global var
+    Retn=""
+    # Then pass string to cURL for execution
+    cURLit "$JSONstr" "system"
+
+    # "off" - Power saving mode is disabled.
+    # "low" - Power saving mode is enabled at a low level.
+    # "high" - Power saving mode is enabled at a high level.
+    # "pictureOff" - Power saving mode is enabled with the panel output off.
+
+    echo $Retn
+    return 0
+
+} # SetPowerSavingMode
+
+#SysInfo            # Meaningless stuff
+if GetPowerStatus ; then
+    SetPowerSavingMode "pictureOff"
+    GetPowerSavingMode
+fi
+```
+
+## Configuring Bash Script
+
+There is one line you need to configure to your system:
+
+```bash
+IP=192.168.0.19  # LAN IP address for Sony Bravia TV
+```
+
+Change the IP address to what your network assigned it. See the
+`ssh-setup` script output. For example:
+
+```text
+==========  nmap -sn 192.168.0/24  ============================================
+
+hitronhub.home (192.168.0.1) (0.00073s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
+hs100 (192.168.0.15) (0.00084s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
+HS103.hitronhub.home (192.168.0.17) (-0.066s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
+sony (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
+hs103 (192.168.0.20) (0.21s latency). MAC: FC:D4:36:EA:82:36 (Unknown)
+GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2F:1F (Unknown)
+192.168.0.254 (0.00045s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
+alien (192.168.0.12) LOCAL NETWORK CARD
+```
+
+## 'pictureoff' Prerequisites
+
+A Sony Bravia TV or Professional Display is required. The
+Linux package `curl` must also be installed.
+
 ---
 
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
+
+# TP-Link Wi-Fi Smart Plug `hs100.sh` Script
+
+
+{% include image.html src="/assets/img/iothings/CNET Setup Smart Plug.jpg"
+   alt="CNET Setup Smart Plug.jpg"
+   style="float: right; width: 50%; margin: .25rem 0px 1rem 1rem;"
+   caption="How to setup TP-Link / Kasa Smart Plug"
+%}
+
+The [CNET Tutorial 🔗](https://www.cnet.com/home/smart-home/set-up-your-new-smart-plug-in-minutes-heres-your-step-by-step-guide/
+"Set up your new smart plug in minutes. Here's your step-by-step guide "){:target="_blank"}
+will help you physically install your Smart Plug and connect it to your
+network.
+
+The bash script
+`/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
+See [TP-Link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
+"Visit GitHub Page for more details"){:target="_blank"} 
+for more information.
+
+The Bash Script is listed below but you must visit GitHub Page
+to get instructions.
+
+## 'hs100.sh' Bash Script
+
+```bash
+#!/bin/bash
+
+set -o errexit
+
+(( "$DEBUG" )) && set -o xtrace
+
+here=$(cd $(dirname $BASH_SOURCE[0]); echo $PWD)
+
+##
+#  Switch the TP-LINK HS100 wlan smart plug on and off, query for status
+#  Tested with firmware 1.0.8
+#
+#  Credits to Thomas Baust for the query/status/emeter commands
+#
+#  Author George Georgovassilis, https://github.com/ggeorgovassilis/linuxscripts
+
+# encoded (the reverse of decode) commands to send to the plug
+
+# encoded {"system":{"set_relay_state":{"state":1}}}
+payload_on="AAAAKtDygfiL/5r31e+UtsWg1Iv5nPCR6LfEsNGlwOLYo4HyhueT9tTu36Lfog=="
+
+# encoded {"system":{"set_relay_state":{"state":0}}}
+payload_off="AAAAKtDygfiL/5r31e+UtsWg1Iv5nPCR6LfEsNGlwOLYo4HyhueT9tTu3qPeow=="
+
+# encoded { "system":{ "get_sysinfo":null } }
+payload_query="AAAAI9Dw0qHYq9+61/XPtJS20bTAn+yV5o/hh+jK8J7rh+vLtpbr"
+
+# the encoded request { "emeter":{ "get_realtime":null } }
+payload_emeter="AAAAJNDw0rfav8uu3P7Ev5+92r/LlOaD4o76k/6buYPtmPSYuMXlmA=="
+
+# BSD base64 decode on osx has different options
+# BSD od (octal dump) on osx has different options
+od_offset=4
+# BSD netcat on osx has different options
+nc_timeout=2
+NCOPTS=""
+#NCOPTS+='-v' # verbose
+case $OSTYPE in
+   darwin*)
+      BASE64DEC="-D"
+      ODOPTS="-j $od_offset -A n -t u1"
+      NCOPTS+=" -G $nc_timeout"
+      ;;
+   linux*)
+      BASE64DEC="-d"
+      ODOPTS="--skip-bytes=$od_offset --address-radix=n -t u1 --width=9999"
+      NCOPTS+=" -w $nc_timeout"
+      ;;
+esac
+
+
+# tools
+
+error(){
+   echo >&2 "$@"
+   exit 2
+}
+
+quiet(){
+   $@ >/dev/null 2>&1
+}
+
+mac_from_ip()
+{
+    # if you've contacted an IP recently, the arp cache has juicy info
+    local ip=$1
+    mac=$(arp -a \
+            | grep "($ip)" \
+            | egrep -o '(([0-9a-fA-F]{1,2}:){5}[0-9a-fA-F]{1,2})' )
+    [ -z "$mac" ] && { echo 2>&1 "arp didn't find a MAC for $ip!"; return 1; }
+    echo $mac
+}
+
+unique_hostname()
+{
+    # given a prefix and a MAC for a host, construct a unique name for the host
+    local prefix=$1;    [ -n $prefix ] || return 1
+    local mac=$2;       [ -n $mac ] || return 1
+
+    # use the first 7 characters of the shasum as unique ID
+    hash=$(echo $mac | shasum)
+    hs100host=hs100${hash:0:7}
+    echo $hs100host
+}
+
+host_entry()
+{
+    host=$1
+    ip=$2
+    printf "${ip}\t${host}\n" >> /etc/hosts
+    echo plug $host has ip $ip
+}
+
+my_plugs()
+{
+    cat /etc/hosts | grep hs100 | awk '{ print $2 }'
+}
+
+check_dependency()
+{
+    dep=$1; shift
+    message=$@
+    quiet command -v "$dep" || error "$message"
+}
+
+check_dependencies() {
+    check_dependency nc \
+       "The nc programme for sending data over the network isn't" \
+       "in the path, communication with the plug will fail"
+    check_dependency base64 \
+       "The base64 programme for decoding base64 encoded strings isn't" \
+       "info the path, decoding of payloads will fail"
+    check_dependency od \
+        "The od programme for converting binary data to numbers isn't" \
+        "in the path, the status and emeter commands will fail"
+    check_dependency nmap \
+        "The nmap programme for mapping networks isn't"\
+        "in the path, the discover command will fail"
+    check_dependency shasum \
+        "The shasum programme for hashing strings isn't"\
+        "in the path, the sudo discover command will fail"
+    check_dependency arp \
+        "The arp programme to access Address Resolution Protocol cache isn't"\
+        "in the path, the sudo discover command will fail"
+}
+
+usage() {
+   echo "Usage: $0 [-i IP] [-p PORT] COMMAND"
+   echo "where COMMAND is one of: ${commands[@]}"
+   exit 1
+}
+
+check_arg() {
+   name="$1"
+   value="$2"
+   if [ -z "$value" ]; then
+      echo "missing argument $name"
+      usage
+   fi
+}
+
+# Check for a single string in a list of space-separated strings.
+# e.g. has "foo" "foo bar baz" is true, but has "f" "foo bar baz" is not.
+# from https://chromium.googlesource.com/chromiumos/platform/crosutils/+/master/common.sh
+has()
+{ [[ " ${*:2} " == *" $1 "* ]]; }
+
+check_command()
+{ has "$1" "$commands"; }
+
+send_to_plug() {
+   ip="$1"
+   port="$2"
+   payload="$3"
+   if ! echo -n "$payload" | base64 ${BASE64DEC} | nc $NCOPTS $ip $port
+   then
+      echo couldn''t connect to $ip:$port, nc failed with exit code $?
+   fi
+}
+
+decode(){
+   code=171
+   input_num=`od $ODOPTS`
+   IFS=' ' read -r -a array <<< "$input_num"
+   args_for_printf=""
+   for element in "${array[@]}"
+   do
+      output=$(( $element ^ $code ))
+      args_for_printf="$args_for_printf\x$(printf %x $output)"
+      code=$element
+   done
+   printf "$args_for_printf"
+}
+
+pretty_json()
+{
+    # read from stdin
+    if quiet command -v python
+    then
+         python -m json.tool
+    else
+         cat
+         echo
+    fi
+}
+
+query_plug(){
+   payload=$1
+   check_dependency od \
+       "The od programme for converting binary data to numbers isn't" \
+       "in the path, the status and emeter commands will fail"
+   check_arg "ip" $plugs
+   check_arg "port" $port
+   for ip in ${plugs[@]}
+   do
+        send_to_plug $ip $port "$payload" | decode | pretty_json
+   done
+}
+
+# plug commands
+cmd_discover(){
+    check_arg "port" $port
+    check_dependency nmap \
+        "The nmap programme for mapping networks isn't"\
+        "in the path, the discover command will fail"
+    myip="`${here}/myip.sh`"
+    subnet=$(echo $myip | egrep -o '([0-9]{1,3}\.){3}')
+    subnet=${subnet}0-255
+    declare -a hs100ip
+    hs100ip=( $(nmap -Pn -p ${port} --open ${subnet} \
+                | grep 'Nmap scan report for' \
+                | egrep -o '(([0-9]{1,3}\.){3}[0-9]{1,3})' ) \
+            ) \
+        || error "Could not find any hs100 plugs"
+
+    # if we can't write this to /etc/hosts, echo what we found and quit
+    if ! [ -w /etc/hosts ]
+    then
+        echo HS100 plugs found: ${hs100ip[@]}
+        return 0
+    fi
+
+    check_dependency shasum \
+        "The shasum programme for hashing strings isn't"\
+        "in the path, the sudo discover command will fail"
+    check_dependency arp \
+        "The arp programme to access Address Resolution Protocol cache isn't"\
+        "in the path, the sudo discover command will fail"
+
+    # remove existing hs100* hosts entries
+    sed -i.bak /hs100/d /etc/hosts
+
+    if [[ ${#hs100ip[@]} = 1 ]]
+    then
+        host_entry hs100 $hs100ip
+        return 0
+    fi
+
+    # multiple HS100 plugs on the network, hash MAC address for unique hostname
+    for ip in ${hs100ip[@]}
+    do
+        # since we just hit it with nmap, it should be in the arp cache
+        mac=`mac_from_ip $ip`
+        hs100host=`unique_hostname hs100 $mac`
+        host_entry $hs100host $ip
+    done
+    return 0
+}
+
+cmd_print_plug_relay_state(){
+   check_arg "ip" $plugs
+   check_arg "port" $port
+   for ip in ${plugs[@]}
+   do
+       printf "$ip\t"
+       output=`send_to_plug $ip $port "$payload_query" \
+               | decode \
+               | egrep -o 'relay_state":[0,1]' \
+               | egrep -o '[0,1]'`
+       if (( output == 0 )); then
+         echo OFF
+       elif (( output == 1 )); then
+         echo ON
+       else
+         echo Couldn''t understand plug response $output
+       fi
+   done
+}
+
+cmd_print_plug_status(){
+   query_plug "$payload_query"
+}
+
+cmd_print_plug_consumption(){
+   query_plug "$payload_emeter"
+}
+
+cmd_switch_on(){
+   check_arg "ip" $plugs
+   check_arg "port" $port
+   for ip in ${plugs[@]}
+   do
+      send_to_plug $ip $port $payload_on > /dev/null
+   done
+}
+
+cmd_switch_off(){
+   check_arg "ip" $plugs
+   check_arg "port" $port
+   for ip in ${plugs[@]}
+   do
+       send_to_plug $ip $port $payload_off > /dev/null
+   done
+}
+
+commands=" on off check status emeter discover list "
+
+# run the Main progamme, if we are not being sourced
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+
+# process args with getopt(1). See `man getopt`
+args=`getopt qvi:p: $*` || { usage; exit 1; }
+set -- $args
+
+declare -a plugs;
+
+for i #in $@
+do
+    case "$i" in
+    -q) opt_quiet=yes; shift;;
+    -v) set -o xtrace; shift;;
+    -i) plugs=$2; shift; shift;;
+    -p) port=$2; shift; shift;;
+    --) shift; break;;
+    #*)  error "Getopt broke! Found $i"
+    esac
+done
+
+: ${plugs=`my_plugs`}
+: ${port=9999}
+cmd=$1
+
+#check_dependencies
+
+check_dependency nc \
+   "The nc programme for sending data over the network isn't" \
+   "in the path, communication with the plug will fail"
+check_dependency base64 \
+   "The base64 programme for decoding base64 encoded strings isn't" \
+   "info the path, decoding of payloads will fail"
+
+check_arg "command" $cmd
+check_command $cmd
+
+case "$cmd" in
+  discover) cmd_discover;;
+  list)     plugs=`my_plugs`; for p in ${plugs[@]}; do echo $p; done;;
+  on)       cmd_switch_on;;
+  off)      cmd_switch_off;;
+  check)    cmd_print_plug_relay_state;;
+  status)   cmd_print_plug_status;;
+  emeter)   cmd_print_plug_consumption;;
+  *)        usage;;
+esac
+
+fi # end main program
+```
 
 ---
 
