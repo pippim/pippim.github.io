@@ -1797,9 +1797,6 @@ fi # end main program
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
 
----
-
-
 # `nvhda` Enable nVidia GeForce GTX 970M Sound
 
 https://github.com/hhfeuer/nvhda#install-using-dkms
@@ -1813,3 +1810,118 @@ there is no sound when the system is powered up.
 To solve this problem the `nvhda` C program is used. Whenever
 you install a new Linux Kernel version the program is
 automatically recompiled by DKMS.
+
+---
+
+<a id="hdr13"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr12" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a>  <a href="#hdr14" class="hdr-btn">Skip</a></div>
+
+## Summary Totals
+
+When the `stack-to-blog.py` finishes a summary appears on your screen:
+
+```  cpp
+// =============================/   T O T A L S   \============================== \\
+Run-time options:
+
+RANDOM_LIMIT:     10,000  | PRINT_RANDOM:        False  | NAV_FORCE_TOC:        True
+NAV_BAR_MIN:           3  | NAV_WORD_MIN:          700  | COPY_LINE_MIN:          20
+
+Totals written to: '../_config.yml' (relative to /sede directory)
+
+accepted_count:      632  | total_votes:         7,149  | total_views:    52,632,065
+question_count:      300  | answer_count:        2,145  | save_blog_count:     1,218
+blog_question_count:  50  | blog_answer_count:   1,073  | blog_accepted_count:   491
+total_self_answer:   112  | total_self_accept:      58  | Self Needing Accept:    54
+total_headers:     1,651  | total_header_spaces:   402  | total_quote_spaces:  1,574
+total_lines:      56,558  | total_paragraphs:   16,050  | total_words:       324,607
+total_pre_codes:       0  | total_alternate_h1:      0  | total_alternate_h2:     59
+total_code_blocks: 2,587  | total_block_lines:   3,606  | total_clipboards:      293
+total_code_indents:2,319  | total_indent_lines: 22,274  | total_half_links:      205
+total_tail_links:    111  | total_bad_half_links:    0  | Half Links Changed:    187
+total_no_links:      291  | total_full_links:       80  | Bad No Links:          211
+total_pseudo_tags:   425  | total_copy_lines:   17,240  | total_toc:              26
+most_lines:          820  | total_force_end:     1,057  | total_nav_bar:          55
+total_header_levels:  [600, 828, 221, 2, 0, 0]
+```
+
+Every total name with an underscore (`_`) is the
+python program internal variable name. The
+first four total lines apply to all Stack Exchange
+Questions and Answers you have posted.
+The remaining total lines apply only to posts that qualify
+for saving as a Jekyll blog post.
+
+If you want to change the totals' layout, it is found in the code below:
+
+``` python
+if RANDOM_LIMIT is None:
+    random_limit = '   None'
+else:
+    # noinspection PyStringFormat
+    random_limit = '{:>6,}'.format(RANDOM_LIMIT)
+
+print('// =====================/   T O T A L S   \\====================== \\\\')
+print('Run-time options:\n')
+print('RANDOM_LIMIT:   ', random_limit,
+      ' | PRINT_RANDOM:  {:>11}'.format(str(PRINT_RANDOM)),
+      ' | NAV_FORCE_TOC: {:>11}'.format(str(NAV_FORCE_TOC)))
+print('NAV_BAR_MIN:      {:>6,}'.format(NAV_BAR_MIN),
+      ' | NAV_WORD_MIN:  {:>11}'.format(NAV_WORD_MIN),
+      ' | COPY_LINE_MIN: {:>11}'.format(COPY_LINE_MIN))
+print()
+print('Totals written to:', "'" + CONFIG_YML + "'",
+      '(relative to /sede directory)\n')
+print('accepted_count:   {:>6,}'.format(accepted_count),
+      ' | total_votes:   {:>11,}'.format(total_votes),
+      ' | total_views:   {:>11,}'.format(total_views))
+print('question_count:   {:>6,}'.format(question_count),
+      ' | answer_count:       {:>6,}'.format(answer_count),
+      ' | save_blog_count:    {:>6,}'.format(save_blog_count))
+print('blog_question_count:{:>4,}'.format(blog_question_count),
+      ' | blog_answer_count:  {:>6,}'.format(blog_answer_count),
+      ' | blog_accepted_count:{:>6,}'.format(blog_accepted_count))
+print('total_self_answer:{:>6,}'.format(total_self_answer),
+      ' | total_self_accept:  {:>6,}'.format(total_self_accept),
+      ' | Self Needing Accept:{:>6,}'.format(total_self_answer -
+                                             total_self_accept))
+print('total_headers:    {:>6,}'.format(total_headers),
+      ' | total_header_spaces:{:>6,}'.format(total_header_spaces),
+      ' | total_quote_spaces: {:>6,}'.format(total_quote_spaces))
+print('total_lines: {:>11,}'.format(total_lines),
+      ' | total_paragraphs:{:>9,}'.format(total_paragraphs),
+      ' | total_words: {:>13,}'.format(total_words))
+print('total_pre_codes:  {:>6,}'.format(total_pre_codes),
+      ' | total_alternate_h1: {:>6,}'.format(total_alternate_h1),
+      ' | total_alternate_h2: {:>6,}'.format(total_alternate_h2))
+print('total_code_blocks:{:>6,}'.format(total_code_blocks),
+      ' | total_block_lines: {:>7,}'.format(total_block_lines),
+      ' | total_clipboards:  {:>7,}'.format(total_clipboards))
+print('total_code_indents:{:>5,}'.format(total_code_indents),
+      ' | total_indent_lines:{:>7,}'.format(total_indent_lines),
+      ' | total_half_links:  {:>7,}'.format(total_half_links))
+print('total_tail_links:  {:>5,}'.format(total_tail_links),
+      ' | total_bad_half_links:{:>5,}'.format(total_bad_half_links),
+      ' | Half Links Changed:{:>7,}'.format(total_half_links -
+                                            total_bad_half_links))
+print('total_no_links:    {:>5,}'.format(total_no_links),
+      ' | total_full_links:    {:>5,}'.format(total_full_links),
+      ' | Bad No Links:      {:>7,}'.format(total_no_links -
+                                            total_full_links))
+# Note "Bad No Links" only accurate when full_links aren't native in posts
+# and are created internally by stack-to-blog.py. Therefore, a negative total
+# is possible when [https://...](https://...) appears in a post.
+print('total_pseudo_tags:{:>6,}'.format(total_pseudo_tags),
+      ' | total_copy_lines:  {:>7,}'.format(total_copy_lines),
+      ' | total_toc:         {:>7,}'.format(total_toc))
+print('# total_tag_names:{:>6,}'.format(len(total_tag_names)),
+      ' | total_force_end:  {:>8,}'.format(total_force_end),
+      ' | total_nav_bar:     {:>7,}'.format(total_nav_bar))
+print('all_tag_counts: {:>8,}'.format(all_tag_counts),
+      ' | # tag_posts:      {:>8,}'.format(len(tag_posts)),
+      ' | # total_tag_letters:{:>6,}'.format(len(total_tag_letters)))
+print('total_header_levels:       ', total_header_levels)
+```
+
+<a id="hdr14"></a>
+<div class="hdr-bar">  <a href="#" class="hdr-btn">Top</a>  <a href="#hdr13" class="hdr-btn">ToS</a>  <a href="#hdr2" class="hdr-btn">ToC</a></div>
