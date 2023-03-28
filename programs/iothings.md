@@ -1026,8 +1026,9 @@ for more information.
 
 The `picturetog` bash script toggles the Sony TV picture
 (screen) off and on. When the picture is turned off this
-is also known as "Power Savings Mode On". The reason being
-that 100 watts of power is saved.
+is known as "Power Savings Mode On". The reason being
+that 100 watts of power is saved. The sound system and
+all other TV functions like volume change still work.
 
 ## 'picturetog' Key Features
 
