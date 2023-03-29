@@ -1816,7 +1816,7 @@ Due to a bug between nVidia and Linux (perhaps caused by TLP)
 there is no sound when the system is powered up.
 
 To solve this problem the `nvhda` C program is used. Whenever
-you install a new Linux Kernel version the program is
+you install a new Linux Kernel version, the program is
 automatically recompiled by DKMS.
 
 ---
