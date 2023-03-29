@@ -1799,8 +1799,16 @@ fi # end main program
 
 # `nvhda` Enable nVidia GeForce GTX 970M Sound
 
-https://github.com/hhfeuer/nvhda#install-using-dkms
-https://bugs.freedesktop.org/show_bug.cgi?id=75985#c37
+Using DKMS (Dynamic Kernel Management System) the `nvhda`
+C program is automatically compiled with each kernel update.
+
+[`nvhda` - Install using DKMS 🔗](https://github.com/hhfeuer/nvhda#install-using-dkms
+"GitHub instructions for installing `nvhda`"){:target="_blank"}
+
+There is a [nVidia GTX 970M Bug Report 🔗](https://bugs.freedesktop.org/show_bug.cgi?id=75985#c121
+"TLP might be powering off nVidia Sound Circuit"){:target="_blank"}
+that suggests problems may be caused by Laptop Management Package
+called `TLP`.
 
 ## 'nvhda' Key Features
 
