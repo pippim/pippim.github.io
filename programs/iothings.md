@@ -22,7 +22,14 @@ been tested in Ubuntu. The coding is done in Bash.
 
 At the heart of the system is the `tvpowered` program
 which starts after you login. This is a bash script stored
-in your `~/.config/autostart` directory.
+in your `~/.config/autostart` directory. When you press the
+power button on your Sony TV remote:
+
+- The Sony TV will be shut off
+- The Google Android TV will be shut off
+- The light behind the Sony TV will be shut off
+- The light behind the Google TV will be shut off
+- The laptop will be put to sleep
 
 To power off electric lights when you shut down or suspend
 your computer the `/etc/NetworkManager/dispatcher.d/pre-down.d`
@@ -98,10 +105,11 @@ volume level is displayed in desktop notification.
 when consecutive volume changes are made. The usual
 five or ten second delay is overriden for instant
 feedback.
-- When TV is powered off via TV remote control,
+- When Sony TV is powered off via TV remote control,
 the power outlet for the light behind the TV
 and secondary TV is turned off and your system
-is put to sleep or shutdown.
+is put to sleep or shutdown. The Google TV is
+also powered off.
 - You are reminded if communication between the TV
 and your computer isn't working.
 - When your computer system wakes up from sleep /
@@ -215,8 +223,6 @@ Below is the Bash script you can copy to your system:
 # https://stackoverflow.com/questions/2829613/how-do-you-tell-if-a-string-contains-another-string-in-posix-sh
 
 SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
-# 192.168.0.21 (-0.087s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
-# 192.168.0.16    android-47cdabb50f83a5ee  Sony Bravia 18:4F:32:8D:AA:97
 IP=192.168.0.19     # IP address for Sony TV on LAN
 ADB_IP=192.168.0.21 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
@@ -228,8 +234,13 @@ command -v curl >/dev/null 2>&1 || { echo >&2 \
 
 # Must have notify-send from libnotify-bin package
 command -v notify-send >/dev/null 2>&1 || { echo >&2 \
-        "libnotify-bin package required but it is not installed.  Aborting."; \
+        "'libnotify-bin' package required but it is not installed.  Aborting."; \
         exit 3; }
+
+# Must have adb (Android Debug Bridge) package
+command -v adb >/dev/null 2>&1 || { echo >&2 \
+        "'adb' package required but it is not installed.  Aborting."; \
+        exit 4; }
 
 cURLit () {
 
@@ -524,13 +535,13 @@ Main "$@"
 
 ## Configuring Bash Script
 
-There are three lines near the top of the script you may need to
-
-configure to your system:
+There are four lines near the top of the script you need to
+configure for your system:
 
 ```bash
 SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 IP=192.168.0.19     # IP address for Sony TV on LAN
+ADB_IP=192.168.0.21 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
 ```
 
