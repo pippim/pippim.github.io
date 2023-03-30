@@ -166,8 +166,9 @@ Below is the Bash script you can copy to your system:
 
 # NAME: tvpowered
 # PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
+#
 # DESC: When TV is powered off automatically suspend the laptop.
-# DATE: June 9, 2020.  Modified March 28, 2023.
+# DATE: June 9, 2020.  Modified March 30, 2023.
 #
 # NOTE: Written for Ask Ubuntu question:
 #       https://askubuntu.com/questions/1247484/
@@ -200,6 +201,10 @@ Below is the Bash script you can copy to your system:
 
 #       Mar 26 2023: Change volume partial UTF-8 ticks from 4 to 8.
 
+#       Mar 28 2023: Change call to `pictureoff`
+
+#       Mar 30 2023: Google TV to sleep (TV Remote Power Off).
+
 # Sources:
 
 # https://gist.github.com/kalleth/e10e8f3b8b7cb1bac21463b0073a65fb#cec-sonycec
@@ -209,10 +214,11 @@ Below is the Bash script you can copy to your system:
 # https://stackoverflow.com/questions/7172784/how-do-i-post-json-data-with-curl
 # https://stackoverflow.com/questions/2829613/how-do-you-tell-if-a-string-contains-another-string-in-posix-sh
 
-SCTL=suspend        # systemctl paramater: suspend or poweroff
+SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 # 192.168.0.21 (-0.087s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
 # 192.168.0.16    android-47cdabb50f83a5ee  Sony Bravia 18:4F:32:8D:AA:97
-IP=192.168.0.19     # IP address for Sony TV
+IP=192.168.0.19     # IP address for Sony TV on LAN
+ADB_IP=192.168.0.21 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
 
 # Must have curl package.
@@ -315,7 +321,7 @@ VolumeBar () {
 
     Bar=""                      # Progress Bar / Volume level
     Len=25                      # Length of Progress Bar / Volume level
-    Div=4                       # Divisor into Volume for # of blocks
+    Div=4                       # Divisor into Volume for # of full blocks
     Fill="▒"                    # Fill background up to $Len
     Parts=8                     # Divisor into  Volume for # of part blocks
     # UTF-8 left blocks: 1, 1/8, 1/4, 3/8, 1/2, 5/8, 3/4, 7/8
@@ -413,7 +419,8 @@ TenMinuteSpam () {
     notify-send --urgency=critical "tvpowered" \
         --icon=/usr/share/icons/gnome/48x48/devices/display.png \
         "Fully activated.\n System will $SCTL when TV powered off.  Volume: $LastVolume $Bar"
-    
+
+    adb connect "$ABD_IP"  # Connect to Google TV.
     return 0
 
 } # TenMinuteSpam
@@ -467,6 +474,8 @@ Main () {
                 echo "Unexpected disconnect, aborting suspend."
             else
                 log "TV Powered off. 'systemctl $SCTL' being called."
+                adb connect "$ABD_IP"  # Connect to Google TV.
+                adb shell input keyevent 26  # Google TV to sleep (remote off)
                 systemctl "$SCTL"
                 # systemctl will suspend. When resuming we hit next line
                 log "System powered back up. Checking if TV powered on. '$0'."
@@ -489,7 +498,7 @@ Main () {
                 --icon=/usr/share/icons/gnome/48x48/devices/audio-speakers.png \
                 "Volume: $CurrVolume $Bar"
             LastVolume=$CurrVolume
-                        VolumeCnt=100  # For 1 second, faster checks for volume change
+            VolumeCnt=100  # For 1 second, faster checks for volume change
             # TODO: Process VolumeCnt internally in loop instead of larger loop
         fi
 
@@ -782,12 +791,24 @@ all the time. The Sony TV picture is only used occasionally
 for viewing movies and YouTube. On the Sony TV you can see
 that YouTube is currently running.
 
-The TCL TV is 4K which allows four screen sizes of full HD.
+The TCL Google TV is 4K which allows four screen sizes of full HD.
 Consequently this TV is where most of the work is done. You
 can comfortably have 10 windows open on a 4K screen. This is
 also a good monitor for stashing all your Desktop Icons for
 Shortcuts. The program `iconic` is used to move desktop icons
 to the middle monitor.
+
+To communicate with the Google TV you need to enable
+Android Developer mode. See 
+[How to Set Up and Use ADB on Android TV 🔗](https://www.makeuseof.com/how-to-use-adb-on-android-tv/ 
+"Turn on Google TV ADB (Android Debug Bridge)"){:target="_blank"}.
+On March 30, 2023 work has begun to automatically power
+off the TCL Google (Secondary) TV when the Sony (Primary)
+TV remote is powered off. Use:
+
+- `sudo apt install abd` To install *Android Bridge Debug*
+- `abd connect 192.168.0.21` to connect TV at IP address 21.
+- `adb shell input keyevent 26` to turn off the TV.
 
 The Alienware 17" laptop screen is where the file manager,
 web browser and music player playlist windows reside.
