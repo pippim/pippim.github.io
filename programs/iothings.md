@@ -573,9 +573,6 @@ REST API is required. For more details visit
 A LAN or Wi-Fi connection is required for both your TV
 and your computer.
 
-The IP address assigned to your Sony TV must be entered
-into the file `~/.config/iothings/tvip`.
-
 Linux is required and preferably the Ubuntu distribution. 
 The following programs are required:
 
