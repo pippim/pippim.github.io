@@ -472,6 +472,7 @@ async function validateUrl(Url) {
 
     // Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource
     validUrlSyntax = true  // Force Cross-Origin error to be ignored.
+    validUrl = true  // March 30, 2023: Test is no longer done
 
     try {
         // const browserUrl = await new URL(Url)
