@@ -577,12 +577,12 @@ The IP address assigned to your Sony TV must be entered
 into the file `~/.config/iothings/tvip`.
 
 Linux is required and preferably the Ubuntu distribution. 
-The following Linux programs are required:
+The following programs are required:
 
+- `adb` - Linux package
 - `curl` - Linux package
 - `libnotify-bin` - Linux package
-- `pictureoff - Bash Script provided below
-- `smartplug_off` - Bash Script provided below
+- `pictureoff` - Bash Script provided below
 
 ---
 
