@@ -1,9 +1,8 @@
 /*
     /assets/js/hyperlinkRecipe.js - Hyperlink Recipe Baker (HRM for short)
 
-    TODO: Need cookies for:
-        autoRows:   "0" = No auto resizing
-                  > "0" = maximum number of auto-resized rows
+    TODO: Popup window based on mouse position.
+          https://stackoverflow.com/a/70691308/6929343
 
 */
 
@@ -470,8 +469,13 @@ async function validateUrl(Url) {
     }
     validUrl = false
     validUrlSyntax = false
+
+    // Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource
+    validUrlSyntax = true  // Force Cross-Origin error to be ignored.
+
     try {
-        //const browserUrl = await new URL(Url)
+        // const browserUrl = await new URL(Url)
+        // Above command causes "transferring data" message to stay mounted
         const browserUrl = await fetch(new URL(Url))
         console.log("browserUrl.host:", browserUrl.host)
         console.log("browserUrl.hostname:", browserUrl.hostname)
@@ -488,8 +492,10 @@ async function validateUrl(Url) {
             */
             testUrl(Url.slice(7))  // 3 seconds to complete for invalid URL
             console.log("Url.slice(7):", Url.slice(7))
+            // Periodic test to confirm http:// won't work from GitHub (https)
+            testUrl(Url)  // Uncomment periodically to test
         } else {
-            validUrl = true  // Assume it works: TCP, IP, UDP, POP, SMTP, FTP
+            validUrl = true  // Assume: TCP, IP, UDP, POP, SMTP, FTP, etc works
             showInfo("Internet protocol can't be verified: " + browserUrl.protocol)
         }
     } catch (e) {
