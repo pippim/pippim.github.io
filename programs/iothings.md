@@ -431,6 +431,7 @@ TenMinuteSpam () {
         --icon=/usr/share/icons/gnome/48x48/devices/display.png \
         "Fully activated.\n System will $SCTL when TV powered off.  Volume: $LastVolume $Bar"
 
+    echo "Connecting to ADB (Android Debugging Bridge) on: $ADB_IP"
     adb connect "$ADB_IP"  # Connect to Google TV.
     return 0
 
@@ -485,7 +486,7 @@ Main () {
                 echo "Unexpected disconnect, aborting suspend."
             else
                 log "TV Powered off. 'systemctl $SCTL' being called."
-                adb connect "$ADB_IP"  # Connect to Google TV.
+                echo ADB shut off TV on "$ADB_IP"
                 adb shell input keyevent 26  # Google TV to sleep (remote off)
                 systemctl "$SCTL"
                 # systemctl will suspend. When resuming we hit next line
