@@ -26,11 +26,11 @@ your own project(s), you can delete the sample project.
 
 **KEY FEATURES:**
 
-- Share projects with other browser, devices and users.
+- Share projects with other browsers, devices and users.
 - Unlimited number of projects and project tasks.
-- Optional repeat a Project's Tasks multiple times in what is called a set.
-- Prompts to begin each task and each (if any) set repetitions.
-- Alarm sounds and message is displayed when task timer ends.
+- Optional repeat a project's tasks multiple times in what is called a set.
+- Prompts to begin each task and each set (when more than 1).
+- Alarm sounds and messages are displayed when task timer ends.
 - Upload custom sound files or choose from stock alarm sound files.
 - Backup Tim-ta projects and tasks (Configuration) for sharing.
 - Upload Tim-ta Configuration from other browsers, devices or users.
