@@ -26,17 +26,17 @@ your own project(s), you can delete the sample project.
 
 **KEY FEATURES:**
 
-- Unlimited number of projects.
-- Each project can have an unlimited number of Tasks.
+- Share projects with other browser, devices and users.
+- Unlimited number of projects and project tasks.
 - Optional repeat a Project's Tasks multiple times in what is called a set.
 - Prompts to begin each task and each (if any) set repetitions.
 - Alarm sounds and message is displayed when task timer ends.
 - Upload custom sound files or choose from stock alarm sound files.
-- Download Tim-ta Configuration for backup or to send to other devices.
-- Upload Tim-ta Configuration from other devices or from friends.
-- Launch timers in a separate smaller pop-up window.
-- Progress bars for each task and total project.
-- Override running task timer by increasing/decreasing time.
+- Backup Tim-ta projects and tasks (Configuration) for sharing.
+- Upload Tim-ta Configuration from other browsers, devices or users.
+- Run project timers in a separate, smaller, pop-up window.
+- Progress bars for each task and project total time.
+- Pause running task timer or increase / decrease running time.
 
 ---
 
