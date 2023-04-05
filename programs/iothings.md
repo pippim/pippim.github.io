@@ -21,15 +21,17 @@ The IoT programs here are designed for Linux and have
 been tested in Ubuntu. The coding is done in Bash.
 
 At the heart of the system is the `tvpowered` program
-which starts after you login. This is a bash script stored
-in your `~/.config/autostart` directory. When you press the
-power button on your Sony TV remote:
+which starts after you login. A configuration file is required
+in your `~/.config/autostart` directory to launch it. 
 
-- The Sony TV will be shut off
-- The Google Android TV will be shut off
-- The light behind the Sony TV will be shut off
-- The light behind the Google TV will be shut off
-- The laptop will be put to sleep
+Press the power button on Sony TV remote control then:
+
+- Sony TV will be shut off
+- Google Android TV will be shut off
+- Light behind the Sony TV will be shut off
+- Light behind the Google TV will be shut off
+- Computer will be put to sleep
+- `tvpowered` continues when system wakes up
 
 To power off electric lights when you shut down or suspend
 your computer the `/etc/NetworkManager/dispatcher.d/pre-down.d`
@@ -45,7 +47,7 @@ device doesn't default to HDMI
 when the system wakes up / resumes from suspend.
 The `sound` script enables sound for the HDMI stereo system.
 
-A variety of scripts are provided to make life
+A variety of independent scripts are provided to make life
 convenient. 
 
 The bash script `light-tog` toggles the wall outlet power
@@ -56,9 +58,10 @@ The bash script `light-tog2` toggles the wall outlet power
 behind the second TV (TCL). In this case the power controls a
 lamp to provide back lighting which reduces eye strain.
 
-There are four bash scripts to control a Sony TV screen:
+There are five bash scripts to control a Sony TV screen:
 
 - `pictureoff.sh` Turns off the Sony TV screen but leaves sound on
+- `pictureoff` same as `pictureoff.sh` but resides in path
 - `pictureon.sh` Turns on the Sony TV screen which consumes 100 watts
 - `picturetog.sh` Toggles Sony TV screen off and on
 - `picturetog` same as `picturetog.sh` but resides in path
