@@ -8,11 +8,11 @@ type:         Answer
 tags:         mount
 created_date: 2018-04-28 03:00:41
 edit_date:    2020-06-12 14:37:07
-votes:        "50 "
+votes:        "51 "
 favorites:    
-views:        "137,778 "
+views:        "140,268 "
 accepted:     Accepted
-uploaded:     2023-03-25 14:58:19
+uploaded:     2023-04-23 15:09:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-28-How-to-manually-mount-a-partition_.md
 toc:          false
 navigation:   false

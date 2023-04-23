@@ -10,9 +10,9 @@ created_date: 2018-05-08 02:27:12
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "349,829 "
+views:        "350,943 "
 accepted:     
-uploaded:     2023-03-25 14:58:19
+uploaded:     2023-04-23 15:09:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-08-What-system-monitoring-tools-are-available_.md
 toc:          false
 navigation:   false
@@ -31,4 +31,4 @@ For a tutorial on setting up "Indicator-Sysmonitor" see: [Can BASH display in sy
 
 
   [1]: https://i.stack.imgur.com/uvvZ6.gif
-  [2]: {% post_url /2017/2017-02-11-Can-BASH-display-in-systray-as-application-indicator_ %}
+  [2]: {% post_url /2017/2017-02-11-In-Ubuntu-Unity_-can-I-display-the-output-of-a-bash-script-in-the-systray-area_ %}

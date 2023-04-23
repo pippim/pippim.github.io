@@ -8,11 +8,11 @@ type:         Answer
 tags:         environment-variables matlab paths boost
 created_date: 2018-08-19 14:30:47
 edit_date:    
-votes:        "6 "
+votes:        "7 "
 favorites:    
-views:        "13,257 "
+views:        "13,397 "
 accepted:     
-uploaded:     2023-03-25 14:58:19
+uploaded:     2023-04-23 15:09:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-19-Set-LD_LIBRARY_PATH-correctly.md
 toc:          false
 navigation:   false

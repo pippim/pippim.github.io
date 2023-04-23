@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1248665
 type:         Answer
 tags:         20.04 shutdown gnome-shell
 created_date: 2020-06-09 23:16:55
-edit_date:    2022-02-23 11:57:02
+edit_date:    2023-03-30 17:34:47
 votes:        "2 "
 favorites:    
-views:        "18,906 "
+views:        "19,134 "
 accepted:     
-uploaded:     2023-03-25 14:58:19
+uploaded:     2023-04-23 15:09:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-09-4-clicks-to-shut-down-Ubuntu-can-we-reduce-this_.md
 toc:          true
 navigation:   true
@@ -23,13 +23,25 @@ clipboard:    false
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
-# Sony TV remote suspends laptop via network control
+# Sony TV remote suspends laptop
 
-`tvpowered` (TV controls power to the computer) is a bash script that automatically suspends laptop when Sony Bravia TV is powered off. Additionally it will:
+This answer is based on IoT (Inernet of Things).
+
+`tvpowered` (TV controls power to the computer) is a bash script. When you press the
+power button on your Sony TV remote:
+
+- The Sony TV will be shut off
+- The Google Android TV will be shut off
+- The light behind the Sony TV will be shut off
+- The light behind the Google TV will be shut off
+- The laptop will be put to sleep
+
+Additionally the `tvpowered` script will:
 
 - Turn off picture of TV to save power when you are not watching movies on TV.
 - Display pop-up bubble when you change volume of TV used for listening to music.
 
+[![volume change.gif][1]][1]
 
 Please note this **only works with Sony Bravia TVs**.
 
@@ -97,9 +109,10 @@ You can also user your file manager (like Nautilus) to make the file executable.
 
 In the script below there are a few constants you will need to set:
 
-``` bash
+```bash
 SCTL=suspend        # systemctl paramater: suspend or poweroff
-IP=192.168.0.16     # IP address for Sony TV
+IP=192.168.0.19     # IP address for Sony TV on LAN
+ADB_IP=192.168.0.21 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect
 ```
 
@@ -110,16 +123,14 @@ PWRD=123            # Password for Sony TV IP Connect
 ## `tvpowered` complete bash script
 
 
-``` bash
+```bash
 #!/bin/bash
 
 # NAME: tvpowered
-#
-#       Original name slave2tv announced as politically incorrect after one day:
-#       https://www.rt.com/news/491343-microsoft-coding-blacklists-slaves/
+# PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
 #
 # DESC: When TV is powered off automatically suspend the laptop.
-# DATE: June 9, 2020. Modified December 31, 2020
+# DATE: June 9, 2020.  Modified March 30, 2023.
 #
 # NOTE: Written for Ask Ubuntu question:
 #       https://askubuntu.com/questions/1247484/
@@ -144,6 +155,18 @@ PWRD=123            # Password for Sony TV IP Connect
 
 #       Dec 31 2020: Fast popping bubble messages when volume changes.
 
+#       Jan 09 2021: Improve performance and reduce system resources.
+
+#       Jan 31 2021: Switch from /tmp to /run/user/1000 (RAM).
+
+#       Mar 13 2023: New IP address 19 after power outage.
+
+#       Mar 26 2023: Change volume partial UTF-8 ticks from 4 to 8.
+
+#       Mar 28 2023: Change call to `pictureoff`
+
+#       Mar 30 2023: Google TV to sleep (TV Remote Power Off).
+
 # Sources:
 
 # https://gist.github.com/kalleth/e10e8f3b8b7cb1bac21463b0073a65fb#cec-sonycec
@@ -153,8 +176,9 @@ PWRD=123            # Password for Sony TV IP Connect
 # https://stackoverflow.com/questions/7172784/how-do-i-post-json-data-with-curl
 # https://stackoverflow.com/questions/2829613/how-do-you-tell-if-a-string-contains-another-string-in-posix-sh
 
-SCTL=suspend        # systemctl paramater: suspend or poweroff
-IP=192.168.0.16     # IP address for Sony TV
+SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
+IP=192.168.0.19     # IP address for Sony TV on LAN
+ADB_IP=192.168.0.21 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
 
 # Must have curl package.
@@ -164,8 +188,13 @@ command -v curl >/dev/null 2>&1 || { echo >&2 \
 
 # Must have notify-send from libnotify-bin package
 command -v notify-send >/dev/null 2>&1 || { echo >&2 \
-        "libnotify-bin package required but it is not installed.  Aborting."; \
+        "'libnotify-bin' package required but it is not installed.  Aborting."; \
         exit 3; }
+
+# Must have adb (Android Debug Bridge) package
+command -v adb >/dev/null 2>&1 || { echo >&2 \
+        "'adb' package required but it is not installed.  Aborting."; \
+        exit 4; }
 
 cURLit () {
 
@@ -179,7 +208,7 @@ cURLit () {
     declare -n Result=$3  # ERROR: declare: `': not a valid identifier
 
     # Create temporary file in RAM for curl command
-    TEMP=$(mktemp --tmpdir json.XXXXXXXX)
+    TEMP=$(mktemp --tmpdir=/run/user/1000 tvpowered.XXXXXXXX)
     echo "$1" > "$TEMP"
 
     # -s = silent
@@ -187,11 +216,13 @@ cURLit () {
              -H "X-Auth-PSK: $PWRD" \
              --data @"$TEMP" \
              http://$IP/sony/"$2")
-#echo "Result: $Result"    # Remove leading # for debugging
+    # echo "Result: $Result"    # Remove leading # for debugging
     ReturnState="$?"
     # TO-DO: check $? and if non-zero pop up dialog with $TEMP contents
     rm "$TEMP"
 
+    # Test string
+#curl -s -H "Content-Type: application/json; charset=UTF-8" -H "X-Auth-PSK: 123" --data "{ "method": "getPowerStatus", "id": 50, "params": [], "version": "1.0" }" http://192.168.0.16sony/system
 } # cURLit
 
 GetPowerStatus () {
@@ -208,17 +239,16 @@ GetPowerStatus () {
              }'
 
     cURLit "$JSONstr" "system" Reply    # No $ for Reply variable! pass pointer
-    ReturnState="$?"
+    ReturnState="$?"                    # Usually '6', not checked.
 
-#echo "Reply: $Reply"    # Remove leading # for debugging
+    #echo "ReturnState: $ReturnState Reply: $Reply"    # Remove # for debugging
     # Reply: {"result":[{"status":"active"}],"id":50}
     #    or: {"result":[{"status":"standby"}],"id":50}
 
     # Does 'active' substring exist in TV's reply?
     [[ "${Reply#*active}" != "$Reply" ]] && return 0
 
-    # TV is turned off
-    # Might want timer tests to make sure we aren't repeatedly turning off
+    # TV is turned off (standby) or no network (blank)
     return 1
     
 } # GetPowerStatus
@@ -248,6 +278,38 @@ GetVolume () {
     return $Volume
 
 } # GetVolume
+
+
+Bar=""                          # Global Volume Level bar
+
+VolumeBar () {
+
+    Bar=""                      # Progress Bar / Volume level
+    Len=25                      # Length of Progress Bar / Volume level
+    Div=4                       # Divisor into Volume for # of full blocks
+    Fill="▒"                    # Fill background up to $Len
+    Parts=8                     # Divisor into  Volume for # of part blocks
+    # UTF-8 left blocks: 1, 1/8, 1/4, 3/8, 1/2, 5/8, 3/4, 7/8
+    Arr=("█" "▏" "▎" "▍" "▌" "▋" "▊" "█")
+
+    FullBlock=$((${1} / Div))   # Number of full blocks
+    PartBlock=$((${1} % Parts)) # Size of partial block (array index)
+
+    while [[ $FullBlock -gt 0 ]]; do
+        Bar="$Bar${Arr[0]}"     # Add 1 full block into Progress Bar
+        (( FullBlock-- ))       # Decrement full blocks counter
+    done
+
+    # If remainder zero no partial block, else append character from array
+    if [[ $PartBlock -gt 0 ]]; then
+        Bar="$Bar${Arr[$PartBlock]}"
+    fi
+
+    while [[ "${#Bar}" -lt "$Len" ]]; do
+        Bar="$Bar$Fill"         # Pad Progress Bar with fill character
+    done
+
+} # VolumeBar
 
 
 log () {
@@ -301,8 +363,7 @@ TenMinuteSpam () {
     Cnt=0
     while : ; do
 
-        GetPowerStatus
-        if [[ "$?" == "0" ]] ; then
+        if GetPowerStatus ; then
             log "TV is powered on. 'tvpowered' is now waiting for TV to power off."
             break
         else
@@ -319,10 +380,12 @@ TenMinuteSpam () {
     
     GetVolume
     LastVolume="$?"
+    VolumeBar $LastVolume
     notify-send --urgency=critical "tvpowered" \
         --icon=/usr/share/icons/gnome/48x48/devices/display.png \
-        "Fully activated.\n System will $SCTL when TV powered off.  Volume: $LastVolume"
-    
+        "Fully activated.\n System will $SCTL when TV powered off.  Volume: $LastVolume $Bar"
+
+    adb connect "$ABD_IP"  # Connect to Google TV.
     return 0
 
 } # TenMinuteSpam
@@ -340,38 +403,50 @@ Main () {
 
     Cnt=0
     FirstTime=true
-    VolumeCnt=0             # TV Remote changed volume, so shrorter sleep
+    VolumeCnt=0             # TV Remote changed volume, so shorter sleep
 
     while : ; do
-        #etherup=$(cat /sys/class/net/e*/carrier) # Returns 1 even disconnected
-        #wifi_up=$(cat /sys/class/net/w*/carrier)
-        #if [[ $etherup <> "1" && $wifi_up <> "1" ]] ; then
-        state=$(nmcli -f STATE -t g)            # Network manager takes .5 CPU
-        if [[ $state == disconnected ]] ; then
-            # Spam user every 60 * Cot seconds
-            notify-send --urgency=critical "tvpowered" \
-                -h string:x-canonical-private-synchronous:startup \
-                --icon=/usr/share/icons/gnome/48x48/devices/display.png \
-                "Internet not up.\nChecking Ethernet and/or  WiFi state again..."
-            sleep $((Cnt * 60))
-            (( Cnt++ ))
-            continue
-        else
-            Cnt=0                               # Reset timer for next loop
-        fi
 
-        GetPowerStatus
-        if [[ "$?" != "0" ]] ; then
+        if ! GetPowerStatus; then
+
+            # START FROM ABOVE: 
+            # This was causing 2% CPU drain with Network Manager and
+            # debus-daemon. So move from above GetPowerStatus to below.
+
+            # If network down then wait for it to come up. 
+            #etherup=$(cat /sys/class/net/e*/carrier) # Returns 1 even disconnected
+            #wifi_up=$(cat /sys/class/net/w*/carrier)
+            #if [[ $etherup <> "1" && $wifi_up <> "1" ]] ; then
+            state=$(nmcli -f STATE -t g)            # Network manager takes .5 CPU
+            if [[ $state == disconnected ]] ; then
+                # Spam user every 60 * Cot seconds
+                notify-send --urgency=critical "tvpowered" \
+                    -h string:x-canonical-private-synchronous:startup \
+                    --icon=/usr/share/icons/gnome/48x48/devices/display.png \
+                    "Internet not up.\nChecking Ethernet and/or  WiFi state again..."
+                sleep $((Cnt * 60))
+                (( Cnt++ ))
+                continue
+            else
+                Cnt=0                               # Reset timer for next loop
+            fi
+
+            # END FROM ABOVE: If network down then wait for it to come up
+
+
             state=$(nmcli -f STATE -t g)        # Network manager takes .5 CPU
             if [[ $state == disconnected ]] ; then
                 echo "Unexpected disconnect, aborting suspend."
             else
                 log "TV Powered off. 'systemctl $SCTL' being called."
+                adb connect "$ABD_IP"  # Connect to Google TV.
+                adb shell input keyevent 26  # Google TV to sleep (remote off)
                 systemctl "$SCTL"
+                # systemctl will suspend. When resuming we hit next line
                 log "System powered back up. Checking if TV powered on. '$0'."
-                sleep 10 #  Give system time to wake from suspend
-                TenMinuteSpam
-                /home/rick/sony/pictureoff.sh
+                sleep 10                        # Time to wake from suspend
+                TenMinuteSpam                   # Wait for network connection
+                pictureoff                      # Picture off energy saving
             fi
         fi
 
@@ -380,13 +455,15 @@ Main () {
         # echo CurrVolume: $CurrVolume LastVolume: $LastVolume
 
         if [[ "$CurrVolume" != "$LastVolume" ]] ; then
+            # Make volume bar using progress bar methods
+            VolumeBar $CurrVolume
             # Ask Ubuntu: https://askubuntu.com/a/871207/307523
             notify-send --urgency=critical "tvpowered" \
                 -h string:x-canonical-private-synchronous:volume \
                 --icon=/usr/share/icons/gnome/48x48/devices/audio-speakers.png \
-                "Volume: $CurrVolume"
+                "Volume: $CurrVolume $Bar"
             LastVolume=$CurrVolume
-            VolumeCnt=10
+            VolumeCnt=100  # For 1 second, faster checks for volume change
             # TODO: Process VolumeCnt internally in loop instead of larger loop
         fi
 
@@ -394,7 +471,7 @@ Main () {
             (( VolumeCnt-- ))
             SleepTime=.01
         else
-            SleepTime=2.5
+            SleepTime=.75
         fi
 
         sleep $SleepTime
@@ -428,6 +505,8 @@ I was inspired by OP's question and never realized how cumbersome and time-consu
 6. Power off Toshiba TV
 
 `tvpowered` has eliminated time consuming steps 1. through 4.
+
+**EDIT:** A [website](https://www.pippim.com/programs/iothings.html#) was made to document `tvpowered`
 
 ---
 
@@ -466,6 +545,9 @@ else
     echo Error hs100.sh not responding check connection and IP "$PlugName".
 fi
 ```
+
+
+  [1]: https://i.stack.imgur.com/2CVMx.gif
 
 
 <a id="hdr8"></a>

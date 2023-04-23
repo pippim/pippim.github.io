@@ -8,11 +8,11 @@ type:         Answer
 tags:         scripts wallpaper
 created_date: 2018-12-15 14:24:49
 edit_date:    2022-01-06 12:14:05
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "1,110 "
+views:        "1,136 "
 accepted:     Accepted
-uploaded:     2023-03-25 14:58:19
+uploaded:     2023-04-23 15:09:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-15-Change-dynamic-wallpaper-directory-every-season.md
 toc:          false
 navigation:   true

@@ -10,9 +10,9 @@ created_date: 2016-11-18 03:27:18
 edit_date:    2016-11-18 03:39:45
 votes:        "2 "
 favorites:    
-views:        "4,838 "
+views:        "4,847 "
 accepted:     Accepted
-uploaded:     2023-03-25 14:58:19
+uploaded:     2023-04-23 15:09:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-18-Getting-error-code_1_-when-installing-MSSQL-server-in-Ubuntu-16.04.md
 toc:          false
 navigation:   false

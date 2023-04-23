@@ -8,11 +8,11 @@ type:         Answer
 tags:         upgrade release-management
 created_date: 2018-05-14 00:19:42
 edit_date:    
-votes:        "10 "
+votes:        "11 "
 favorites:    
-views:        "40,290 "
+views:        "40,925 "
 accepted:     
-uploaded:     2023-03-25 14:58:19
+uploaded:     2023-04-23 15:09:15
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-14-Can-I-do-a-Silent-or-Unattended-Release-Upgrade_.md
 toc:          false
 navigation:   false
