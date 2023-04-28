@@ -14,6 +14,18 @@ It includes functions to encode CDs with track titles using MusicBrainz database
 It will get lyrics from the internet and let you synchronize them in real time
 by simply clicking each line as it is sung.
 
+{% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
+   alt="Under Construction.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="Under Construction.png"
+%}
+
+Development started in 2020 when a few months of work was
+devoted to the project. Each following year another month
+was devoted. A beta version is still years away. There are
+dreams of making a web browser version and a version for
+automobile head units.
+
 The `mserve.py` Music Player program can be accessed on the
 [Pippim mserve Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py).
 
@@ -319,7 +331,7 @@ def open_db():
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
-# Reopen Windows on Same Monitor with Same Size
+# Reopen Windows at Same Location
 
 Here is how mserve remembers and restores window positions and sizes:
 
@@ -1242,6 +1254,15 @@ If the File Server spends most of its life sleeping, you can wake it
 up with a "Magic Packet" and keep it awake by "touching" a specific
 filename on the server.
 
+## Compare Locations
+
+Here we see how files can be synchronized across devices.
+
+{% include image.html src="/assets/img/mserve/Synchronize Actions.png"
+   alt="Synchronize Actions.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="Synchronize Actions.png"
+%}
 
 
 <a id="hdr16"></a>
