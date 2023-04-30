@@ -1264,6 +1264,9 @@ Here we see how files can be synchronized across devices.
    caption="Synchronize Actions.png"
 %}
 
+The "Action" column states the reason for updating is that the 
+file size has increased. This was due to album artwork being
+added to the source files.
 
 <a id="hdr16"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr15">ToS</a>  <a href="#hdr2">ToC</a></div>
