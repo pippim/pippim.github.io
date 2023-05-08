@@ -31,7 +31,12 @@ The `mserve.py` Music Player program can be accessed on the
 
 `mserve.py` is called with `m` from the command line or a desktop shortcut.
 
-> **IMPORTANT NOTE:** Only tested with Linux, specifically Ubuntu 16.04 LTS
+> **IMPORTANT NOTES:** 
+> 
+> Only tested with Linux, specifically Ubuntu 16.04 LTS
+> 
+> There is NO installation script. You will have to manually
+> install dependencies with `sudo apt install python-xxxxx`.
 
 ---
 
