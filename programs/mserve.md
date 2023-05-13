@@ -1191,6 +1191,21 @@ This video shows:
 7. Clicking each line as it is sung is the same behavior as the *Basic time index* function except that additional details are displayed
 8. Finally, the *Fine-tune time index* window is closed and regular music player resumes where it was interrupted
 
+
+#### 80% of lines must be basic synchronized
+
+This screen appears when you have not completed basic
+time synchronization for at least 80% of the lines:
+
+{% include image.html src="/assets/img/mserve/Basic Time Not Done.png"
+   alt="Basic Time Not Done.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="Basic Time Not Done.png"
+%}
+
+Fine-Tune Time Index cannot be done until 80% of lines have
+Basic Time Index completed.
+
 ---
 
 <a id="hdr13"></a>
@@ -1274,4 +1289,15 @@ file size has increased. This was due to album artwork being
 added to the source files.
 
 <a id="hdr16"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr15">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr17">Skip</a></div>
+
+
+---
+
+<a id="hdr15"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr14">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr16">Skip</a></div>
+
+# Lyrics
+
+<a id="hdr17"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr15">ToS</a>  <a href="#hdr2">ToC</a></div>
