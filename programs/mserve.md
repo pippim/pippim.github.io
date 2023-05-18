@@ -1225,15 +1225,22 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-This also video shows:
+**Video Highlights:**
 
-1. The "Paused" graphic in the regular music player. It is programmatically generated and not an image file.
-2. The regular music is resumed and the Hamburger menu is used to select the *Fine-tune time index* option
+1. The "Paused" graphic in the regular music player. It is 
+programmatically generated and not an image file that can be changed.
+2. The regular music is resumed and the Hamburger menu is used to 
+select the *Fine-tune time index* option
 3. The <kbd>Sample all</kbd> button is selected
 4. The function plays the first second of each line
-5. We noticed at time index `154` seconds the instrumental section was left on too long. This caused the Chorus line and next line to start too late.
-6. Those three lines were selected and <kbd>Being sync</kbd> button was used to fix the timing
-7. When fixing the timing though we clicked too soon rather than too late as before. So we click back on a previous line and take a "mulligan". Then we click again as the music catches up.
+5. We noticed at time index `154` seconds the instrumental section 
+was left on too long. This caused the Chorus line and next line 
+to start too late.
+6. Those three lines were selected and <kbd>Begin sync</kbd> 
+button is used to fine-tune the timing
+7. When fixing the timing though we clicked too soon rather than  
+too late as before. So we click back on a previous line and take 
+a "mulligan". Then we click again as the music catches up.
 8. Next, the time indices are saved by clicking the <kbd>Save</kbd> button
 9. Finally, the function is closed by clicking the <kbd>Close</kbd> button and the regular music player resumes play automatically.
 
@@ -1260,6 +1267,12 @@ expands accordingly. It will maintain the "square" proportions and the
 skin background color can change depending on the color of the pixel at
 "3, 3" in the artwork.
 
+**May 18, 2023 Revision**
+
+When the Chronology (Playlist) is hidden the lyrics are moved below
+the Current song details and VU meters. This allows better space
+utilization with larger artwork size.
+
 ---
 
 <a id="hdr15"></a>
@@ -1269,6 +1282,10 @@ skin background color can change depending on the color of the pixel at
 
 In addition to the music stored on your local storage, you can access
 music stored on a File Server or your Cell Phone.
+
+When you startup mserve or select a different location, music resumes
+playing where you left off. Or if music was paused, it is paused at the
+same song position where you left off.
 
 If the File Server spends most of its life sleeping, you can wake it
 up with a "Magic Packet" and keep it awake by "touching" a specific
