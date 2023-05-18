@@ -167,38 +167,31 @@ supported.
 
 # Programs At a Glance
 
-There are 9,300 lines in the `mserve.py` core Music Player program.
+There are over 10k lines in the `mserve.py` core Music Player program.
 
-The 9,300 lines doesn't include the other programs like CD encoding
-(`encoding.py`) which is 2,450 lines. In turn, it calls sub-programs
-`mbz_get1.py` which is 1,136 lines, `mbz_get2.py` which is 186 lines
-and `get_disc.py` which is 65 lines.  **Total CD Encoding Lines:**
-3,837.
+All programs written for `mserve`:
 
-All programs though can use common python modules that Pippim
-has written such as:
-
-- `external.py` - 215 lines
-- `global_variables.py` - 69 lines
-- `iamge.py` - 1,543 lines
-- `location.py` - 764 lines
-- `message.py` - 1247 lines
-- `monitor.py` - 763 lines
+- `disc_get.py` - 65 lines 
+- `encoding.py` - 2,580 lines
+- `external.py` - 248 lines
+- `global_variables.py` - 73 lines
+- `iamge.py` - 1,583 lines
+- `location.py` - 788 lines
+- `m` - 152 lines
+- `mbz_get1.py` - 1,144 lines
+- `mbz_get2.py` - 166 lines
+- `message.py` - 1,598 lines
+- `monitor.py` - 772 lines
+- `mserve.py` - 10,823 lines
 - `scrape.py` - 1,843 lines
-- `sql.py` - 1,629 lines
+- `sql.py` - 2,492 lines
 - `timefmt.py` - 207 lines
-- `toolkit.py` - 1,974 lines
-- `vu_meter.py` - 179 lines
-- `webscrape.py` - 1,342 lines
+- `toolkit.py` - 2,408 lines
+- `vu_meter.py` - 181 lines
+- `webscrape.py` - 1,348 lines
 - `x11.py` - 262 lines (but might be deprecated soon)
 
-Then there is the splash screen program `m` which is 155 lines.
-
-**Total Lines Other Modules:** 12,172
-
-**Grand Total Line Count:** 25,309
-
-And, there is still more work to be done...
+*Line counts updated May 18, 2023.*
 
 ---
 
