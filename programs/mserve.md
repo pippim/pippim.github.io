@@ -203,22 +203,28 @@ under version 2.7.12 and, you may have to substitute `python3` where
 it says `python`:
 
 ``` shell
-sudo apt install python-tk
-sudo apt install python-pil
-sudo apt install python-pil.imagetk
-sudo apt install python-subprocess32             # To compare locations
-sudo apt install ffmpeg                          # To get artwork
-sudo apt install xdotool                         # To move Kid3 into our
-sudo apt install wmctrl                          #  lib_top parent window
+sudo apt install compiz                          # for Hockey Commercials
+sudo apt install dconf-editor                    # for Hockey Commercials (gsettings)
+sudo apt install ffmpeg                          # To get artwork (ffprobe) and ffplay
+sudo apt install gstreamer1.0-tools              # For encoding CDs gst-launch-1.0
+sudo apt install python-appdirs                  # Application directory names
+sudo apt install python-beautifulsoup            # Scrape Song lyrics
 sudo apt install python-libdiscid                # Get CD's disc ID
-sudo apt install python-musicbrainzngs           # Get metadata for CD
-sudo apt install python-requests                 # Get Cover Art
 sudo apt install python-notify2                  # Popup bubble messages
+sudo apt install python-numpy                    # Installed by default in Ubuntu
 sudo apt install python-magic                    # Get file type information
+sudo apt install python-musicbrainzngs           # Get metadata for CD
 sudo apt install python-mutagen                  # Encode and ID3 tags
+sudo apt install python-pil                      # Pillow graphics routines
+sudo apt install python-pil.imagetk              # Pillow image processing
+sudo apt install python-subprocess32             # To compare locations
+sudo apt install python-requests                 # Get Cover Art
+sudo apt install python-tk                       # Tkinter (default in Windows and Mac)
+sudo apt install pqiv                            # Make transparent (Hockey Commercials)
 sudo apt install x11-apps                        # xwd window dump (screen shot)
 sudo apt install xclip                           # Insert clipboard
-sudo apt install python-beautifulsoup            # Scrape Song lyrics
+sudo apt install xdotool                         # To move Kid3 into invoking
+sudo apt install wmctrl                          #  lib_top / play_top window
 ```
 
 Additionally, there are external repositories (PPA) that need to be
