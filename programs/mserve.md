@@ -1319,11 +1319,11 @@ added to the source files.
 <a id="hdr17"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr16">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr18">Skip</a></div>
 
-# Hockey Commercial Buttons
+# Hockey TV Commercial Buttons
 
-When mserve opens the Rewind 10 seconds and Fast Forward 10 seconds
-buttons are active. You can change these buttons for Stanley Cup
-Hockey Playoff buttons.
+When mserve starts, the Rewind 10 seconds and Fast Forward 10 seconds
+buttons are active. You can change these buttons to Stanley Cup
+Hockey Playoff TV Commercial buttons.
 
 {% include image.html src="/assets/img/mserve/mserve ff button.gif"
    alt="Basic Time Not Done.png"
@@ -1331,14 +1331,21 @@ Hockey Playoff buttons.
    caption="Basic Time Not Done.png"
 %}
 
-From the Music Library window select the "View" dropdown menu.
+**`.gif` (there is no sound) Highlights:**
 
-- When FF/Rewind buttons are visible you the option of
+- From the Music Library window select the "View" dropdown menu.
+- When FF/Rewind buttons are visible you have the option of
 enabling the Hockey TV commercial buttons.
+- Hockey TV Commercial button turns down TV commercial and
+resumes mserve play for 90 seconds.
+- Hockey TV Intermission button turns down TV commercial and
+resumes mserve play for 18 minutes.
 - When Hockey TV commercial buttons are active you have
 the option of enabling the FF/Rewind buttons.
+- When changing buttons, the Music Library window is
+sent to bottom and Play Window is raised to the top.
 
-This `.gif` (there is no sound) also shows how the Show/Hide
+This `.gif` also shows how the Show/Hide
 Chronology button places song lyrics in a suitable location
 when the artwork size changes.
 
