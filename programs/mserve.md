@@ -205,8 +205,9 @@ it says `python`:
 ``` shell
 sudo apt install compiz                          # for Hockey Commercials
 sudo apt install dconf-editor                    # for Hockey Commercials (gsettings)
-sudo apt install ffmpeg                          # To get artwork (ffprobe) and ffplay
+sudo apt install ffmpeg                          # file artwork, ffprobe (meta) and ffplay
 sudo apt install gstreamer1.0-tools              # For encoding CDs gst-launch-1.0
+sudo apt install pqiv                            # Make transparent (Hockey Commercials)
 sudo apt install python-appdirs                  # Application directory names
 sudo apt install python-beautifulsoup            # Scrape Song lyrics
 sudo apt install python-libdiscid                # Get CD's disc ID
@@ -217,10 +218,9 @@ sudo apt install python-musicbrainzngs           # Get metadata for CD
 sudo apt install python-mutagen                  # Encode and ID3 tags
 sudo apt install python-pil                      # Pillow graphics routines
 sudo apt install python-pil.imagetk              # Pillow image processing
-sudo apt install python-subprocess32             # To compare locations
 sudo apt install python-requests                 # Get Cover Art
+sudo apt install python-subprocess32             # To compare locations
 sudo apt install python-tk                       # Tkinter (default in Windows and Mac)
-sudo apt install pqiv                            # Make transparent (Hockey Commercials)
 sudo apt install x11-apps                        # xwd window dump (screen shot)
 sudo apt install xclip                           # Insert clipboard
 sudo apt install xdotool                         # To move Kid3 into invoking
@@ -244,9 +244,10 @@ Finally, there are programs that have no `sudo apt install` capability
 such as [`pulsectl`](https://github.com/mk-fg/python-pulse-control/tree/master/pulsectl)
 that require `git pull` command followed by `cp` command.
 
-Unfortunately as of {{ site.refreshed }}, dependencies have to be
-manually installed. It is a priority to create an installation
-script that installs all dependencies automatically.
+As of {{ site.refreshed }}, dependencies have to be manually
+installed. A long term plan is to create an installation
+script that installs all dependencies automatically. In the short
+term, development has begun to identify installed versions.
 
 ---
 
@@ -337,7 +338,12 @@ def open_db():
 
 # Reopen Windows at Same Location
 
-Here is how mserve remembers and restores window positions and sizes:
+Most applications always open their windows at the same locations.
+Then you have to move the windows to where you want them. `mserve` 
+remembers where you like your windows to be and moves them to the
+location you last moved them to.
+
+This is how mserve remembers and restores window positions and sizes:
 
 ``` python
 def save_window_geom(name, geom):
@@ -1310,10 +1316,31 @@ added to the source files.
 
 ---
 
-<a id="hdr15"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr14">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr16">Skip</a></div>
-
-# Lyrics
-
 <a id="hdr17"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr15">ToS</a>  <a href="#hdr2">ToC</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr16">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr18">Skip</a></div>
+
+# Hockey Commercial Buttons
+
+When mserve opens the Rewind 10 seconds and Fast Forward 10 seconds
+buttons are active. You can change these buttons for Stanley Cup
+Hockey Playoff buttons.
+
+{% include image.html src="/assets/img/mserve/mserve ff button.gif"
+   alt="Basic Time Not Done.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="Basic Time Not Done.png"
+%}
+
+From the Music Library window select the "View" dropdown menu.
+
+- When FF/Rewind buttons are visible you the option of
+enabling the Hockey TV commercial buttons.
+- When Hockey TV commercial buttons are active you have
+the option of enabling the FF/Rewind buttons.
+
+This `.gif` (there is no sound) also shows how the Show/Hide
+Chronology button places song lyrics in a suitable location
+when the artwork size changes.
+
+<a id="hdr18"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr17">ToS</a>  <a href="#hdr2">ToC</a></div>
