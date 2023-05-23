@@ -137,13 +137,14 @@ This `.gif` (no sound) shows how a custom image is used when
 a song with no artwork is played:
 
 
-{% include image.html src="/assets/img/mserve/No Artwork.gif"
-   alt="No Artwork.gif"
+{% include image.html src="/assets/img/mserve/No Art 5.gif"
+   alt="No Art 5.gif"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
-   caption="No Artwork.gif"
+   caption="No Art 5.gif"
 %}
 
-Here are the lines you need to change in `mserve.py`:
+Show below are the lines you need to change
+in the `mserve.py` Python script:
 
 ```python
 # When less than 300x300 or no artwork for song use this image file
@@ -152,6 +153,13 @@ ARTWORK_FOR_LOW_RES = g.PROGRAM_DIR + "Be Creative 2 cropped.jpg"
 ```
 
 Copy your image file to the directory where you installed `mserve`.
+
+> NOTE:
+> 
+> The `.gif` video was created using:
+> `mmm` to get the window coordinates. However, you can use `wmctrl -lG`
+> `byzanz-record -c --verbose --delay=1 --duration=5 --x=3668 --y=481 --width=1506 --height=737 "No Art 4.gif"`
+> Then an on-line `.gif` optimizer reduced size from 33 MB to 21 MB using 35% compression.
 
 ---
 
