@@ -138,9 +138,9 @@ a song with no artwork is played:
 
 
 {% include image.html src="/assets/img/mserve/No Artwork.gif"
-   alt="Basic Time Not Done.png"
+   alt="No Artwork.gif"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
-   caption="mserve hockey buttons.png"
+   caption="No Artwork.gif"
 %}
 
 Here are the lines you need to change in `mserve.py`:
