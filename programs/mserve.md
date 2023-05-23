@@ -1325,23 +1325,23 @@ When mserve starts, the Rewind 10 seconds and Fast Forward 10 seconds
 buttons are active. You can change these buttons to Stanley Cup
 Hockey Playoff TV Commercial buttons.
 
-{% include image.html src="/assets/img/mserve/mserve ff button.gif"
+{% include image.html src="/assets/img/mserve/mserve hockey buttons.gif"
    alt="Basic Time Not Done.png"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
-   caption="Basic Time Not Done.png"
+   caption="mserve hockey buttons.png"
 %}
 
 **`.gif` (there is no sound) Highlights:**
 
 - From the Music Library window select the "View" dropdown menu.
 - When FF/Rewind buttons are visible you have the option of
-enabling the Hockey TV commercial buttons.
-- Hockey TV Commercial button turns down TV commercial and
+enabling the Hockey buttons.
+- The Hockey TV Commercial button turns down TV commercial and
 resumes mserve play for 90 seconds.
-- Hockey TV Intermission button turns down TV commercial and
+- The Hockey TV Intermission button turns down TV commercial and
 resumes mserve play for 18 minutes.
 - When Hockey TV commercial buttons are active you have
-the option of enabling the FF/Rewind buttons.
+the option of restoring the FF/Rewind buttons.
 - When changing buttons, the Music Library window is
 sent to bottom and Play Window is raised to the top.
 
