@@ -1360,15 +1360,21 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
 
-- On the left is TV with Hockey Game airing in full screen mode
-- On the right is another TV with mserve running
+**Video Highlights:**
+
+- On the left is Big Screen TV with Hockey Game airing in full 
+screen mode
+- On the right is a 4K TV running mserve
 - The Hockey TV Commercial button is clicked and the left TV
-goes "non-Full Screen".
+goes "non-Full Screen"
 - A man falling into water appears on the left TV
 - A shark outline appears mimicking mserve on the right TV
 - The shark swims right to left to gobble up the falling man
 - mserve moves to left TV and right TV has outline where mserve
 will return to when hockey commercial countdown ends
+- The Commercial and Intermission Buttons change with text that
+counts down time remaining until Hockey Game resumes. Click
+either button to end the countdown immediately
 
 <a id="hdr18"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr17">ToS</a>  <a href="#hdr2">ToC</a></div>
