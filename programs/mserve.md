@@ -1349,5 +1349,26 @@ This `.gif` also shows how the Show/Hide
 Chronology button places song lyrics in a suitable location
 when the artwork size changes.
 
+## Using Hockey TV Commercial Button
+
+This video shows what you see and hear when you click 
+one of the Hockey TV Commercial Buttons.
+
+<video src="https://user-images.githubusercontent.com/92641463/240093886-487a0db3-8c9d-4217-ba58-17d5adad7dae.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/240093886-487a0db3-8c9d-4217-ba58-17d5adad7dae.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+</video>
+
+- On the left is TV with Hockey Game airing in full screen mode
+- On the right is another TV with mserve running
+- The Hockey TV Commercial button is clicked and the left TV
+goes "non-Full Screen".
+- A man falling into water appears on the left TV
+- A shark outline appears mimicking mserve on the right TV
+- The shark swims right to left to gobble up the falling man
+- mserve moves to left TV and right TV has outline where mserve
+will return to when hockey commercial countdown ends
+
 <a id="hdr18"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr17">ToS</a>  <a href="#hdr2">ToC</a></div>
