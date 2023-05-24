@@ -291,39 +291,59 @@ term, development has begun to identify installed versions.
 
 # SQL Tables and Pickled Data Files
 
+`mserve` data is stored in a unique fashion. This section lists
+the filenames you will need to backup. A brief explanation is
+given for how each file is used.
+
+## Pickled Data Files
+
+The pickle data file format allows serialized Python objects
+such as variables, lists and dictionaries to be stored in
+non-serialized format on storage devices.
+
+An abbreviation system is used for the filenames below:
+
+- `~/` represents your home directory.
+- `.../` represents the subdirectory, under your home directory,
+where your application data files are stored.
 
 Here are the data files (stored in pickle format) created under
 the `~/.../mserve`:
 
-- `last_location` - lc.FNAME_LAST_LOCATION - The last location ID 
+- **last_location** - lc.FNAME_LAST_LOCATION - The last location ID 
 used. E.G. "L001", "L002", etc.
-- `locations` - lc.FNAME_LOCATIONS - All available locations and 
+- **locations** - lc.FNAME_LOCATIONS - All available locations and 
 their control settings.
-- `library.db` - lc.FNAME_LIBRARY - sqlite3 database with Music
-Table and History Table.
+- **library.db** - lc.FNAME_LIBRARY - *This is not in pickle format.*
+It is an sqlite3 database with Music Table and History Table.
 
 One subdirectory is created for every location. E.G. the subdirectory 
 `~/.../mserve/L004` contains:
 
-- `last_open_states` - lc.FNAME_LAST_OPN_STATES - Each Artist and Album
+- **last_open_states** - lc.FNAME_LAST_OPN_STATES - Each Artist and Album
 and whether or not they are open (down triangle / chevron) or closed
 (left pointing triangle / chevron) in the Music Library window.
-- `last_playlist` - lc.FNAME_LAST_PLAYLIST - Full path names of all
+- **last_playlist** - lc.FNAME_LAST_PLAYLIST - Full path names of all
 songs checked (have the blue square) in the Music Library window. 
 Sorted in playlist order.
-- `last_selections` - lc.FNAME_LAST_SELECTIONS - Full path names of all
+- **last_selections** - lc.FNAME_LAST_SELECTIONS - Full path names of all
 songs checked (have the blue square) in the Music Library window.
 Sorted alphabetically.
-- `last_song_ndx` - lc.FNAME_LAST_SONG_NDX - Zero based index into
-`last_playlist` indicating the song that was playing when `mserve`
+- **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
+**last_playlist** indicating the song that was playing when **mserve**
 was shutdown.
 
-`lc.FNAME` stands for "location.py" (lc.), "Filename" (FNAME). 
-When working inside the location.py module, drop the `lc.` prefix.
-In the other Python modules, `import location as lc` is used.
+**lc.FNAME** stands for "location.py" (lc.), "Filename" (FNAME). 
+When working inside the location.py module, drop the **lc.** prefix.
+In the other Python modules, **import location as lc** is used.
+
+## SQL Tables
+
+The popular SQL database engine `sqlite3` which is used by your
+web browser is also used by `mserve`.
 
 Here are the SQL Tables and Indices that are created in
-the sqlite3 file `~/.../mserve/library.db`:
+the sqlite3 file **~/.../mserve/library.db**:
 
 ``` python
 def open_db():
