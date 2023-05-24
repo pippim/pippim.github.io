@@ -289,9 +289,41 @@ term, development has begun to identify installed versions.
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-# SQL Tables
+# SQL Tables and Pickled Data Files
 
-Here are the tables and indices used:
+
+Here are the data files (stored in pickle format) created under
+the `~/.../mserve`:
+
+- `last_location` - lc.FNAME_LAST_LOCATION - The last location ID 
+used. E.G. "L001", "L002", etc.
+- `locations` - lc.FNAME_LOCATIONS - All available locations and 
+their control settings.
+- `library.db` - lc.FNAME_LIBRARY - sqlite3 database with Music
+Table and History Table.
+
+One subdirectory is created for every location. E.G. the subdirectory 
+`~/.../mserve/L004` contains:
+
+- `last_open_states` - lc.FNAME_LAST_OPN_STATES - Each Artist and Album
+and whether or not they are open (down triangle / chevron) or closed
+(left pointing triangle / chevron) in the Music Library window.
+- `last_playlist` - lc.FNAME_LAST_PLAYLIST - Full path names of all
+songs checked (have the blue square) in the Music Library window. 
+Sorted in playlist order.
+- `last_selections` - lc.FNAME_LAST_SELECTIONS - Full path names of all
+songs checked (have the blue square) in the Music Library window.
+Sorted alphabetically.
+- `last_song_ndx` - lc.FNAME_LAST_SONG_NDX - Zero based index into
+`last_playlist` indicating the song that was playing when `mserve`
+was shutdown.
+
+`lc.FNAME` stands for "location.py" (lc.), "Filename" (FNAME). 
+When working inside the location.py module, drop the `lc.` prefix.
+In the other Python modules, `import location as lc` is used.
+
+Here are the SQL Tables and Indices that are created in
+the sqlite3 file `~/.../mserve/library.db`:
 
 ``` python
 def open_db():
@@ -701,6 +733,9 @@ will return to when hockey commercial countdown ends
 - The Commercial and Intermission Buttons change with text that
 counts down time remaining until Hockey Game resumes. Click
 either button to end the countdown immediately
+- When hockey countdown ends the Big Screen TV returns to full
+screen and the Music Player window goes back to it's original
+location on the 4K TV.
 
 <a id="hdr18"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr17">ToS</a>  <a href="#hdr2">ToC</a></div>
