@@ -20,23 +20,25 @@ by simply clicking each line as it is sung.
    caption="Under Construction.png"
 %}
 
-Development started in 2020 when a few months of work was
-devoted to the project. Each following year another month
-was devoted. A beta version is still years away. There are
-dreams of making a web browser version and a version for
-automobile head units.
-
-The `mserve.py` Music Player program can be accessed on the
+**mserve** (Music Server) is written in Python.
+The main program is called `mserve.py` and can be found on the
 [Pippim mserve Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py).
 
 `mserve.py` is called with `m` from the command line or a desktop shortcut.
 
 > **IMPORTANT NOTES:** 
 > 
-> Only tested with Linux, specifically Ubuntu 16.04 LTS
+> Primarily tested with Linux, specifically Ubuntu 16.04 LTS
+> Briefly tested with ChromeOS for about a month and modified
 > 
 > There is NO installation script. You will have to manually
-> install dependencies with `sudo apt install python-xxxxx`.
+> install dependencies with:
+> 
+>    `sudo apt install python-xxxxx`.
+
+Below you will find the dependencies required by **mserve**.
+Power users will have most of the dependencies already
+installed on their system.
 
 ---
 
