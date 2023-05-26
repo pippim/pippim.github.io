@@ -326,9 +326,6 @@ and whether or not they are open (down triangle / chevron) or closed
 - **last_playlist** - lc.FNAME_LAST_PLAYLIST - Full path names of all
 songs checked (have the blue square) in the Music Library window. 
 Sorted in playlist order.
-- **last_selections** - lc.FNAME_LAST_SELECTIONS - Full path names of all
-songs checked (have the blue square) in the Music Library window.
-Sorted alphabetically.
 - **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
 **last_playlist** indicating the song that was playing when **mserve**
 was shutdown.
@@ -396,7 +393,7 @@ def open_db():
                 Album = str(groups [START_DIR_SEP+2])
                 Song = str(groups [START_DIR_SEP+3])
 
-            (last_playlist and last_selections uses the same record format)
+            (last_playlist pickle data file uses the same record format)
 
         Saving/retrieving LyricsTimeIndex (seconds from start):
 
