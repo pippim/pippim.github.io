@@ -24,6 +24,16 @@ At the heart of the system is the `tvpowered` program
 which starts after you login. A configuration file is required
 in your `~/.config/autostart` directory to launch it. 
 
+Press the power button on your computer and then:
+
+- **tvpowered** script wakes up from sleep
+- Light behind Sony TV (a.k.a. Primary TV or TV #1)
+turns on
+- Light behind Google TV (a.k.a. Secondary TV or TV #2)
+turns on
+- Google TV turns on (work in progress)
+- Sony TV turns on (work in progress)
+
 Press the power button on Sony TV remote control then:
 
 - Sony TV will be shut off
@@ -31,7 +41,7 @@ Press the power button on Sony TV remote control then:
 - Light behind the Sony TV will be shut off
 - Light behind the Google TV will be shut off
 - Computer will be put to sleep
-- `tvpowered` continues when system wakes up
+- **tvpowered** script continues when system wakes up
 
 To power off electric lights when you shut down or suspend
 your computer the `/etc/NetworkManager/dispatcher.d/pre-down.d`
@@ -58,16 +68,16 @@ The bash script `light-tog2` toggles the wall outlet power
 behind the second TV (TCL). In this case the power controls a
 lamp to provide back lighting which reduces eye strain.
 
-There are five bash scripts to control a Sony TV screen:
+There are five additional bash scripts to control a Sony TV screen:
 
 - `pictureoff.sh` Turns off the Sony TV screen but leaves sound on
-- `pictureoff` same as `pictureoff.sh` but resides in path
+- `pictureoff` same as **pictureoff.sh** but resides in path
 - `pictureon.sh` Turns on the Sony TV screen which consumes 100 watts
 - `picturetog.sh` Toggles Sony TV screen off and on
-- `picturetog` same as `picturetog.sh` but resides in path
+- `picturetog` same as **picturetog.sh** but resides in path
 
 To assist with setting up your "Internet of Things" (IoT)
-the program `ssh-setup` is used to document the devices
+the program **ssh-setup** is used to document the devices
 attached to your LAN and/or Wi-Fi router.
 
 ---
@@ -80,7 +90,7 @@ attached to your LAN and/or Wi-Fi router.
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
-# `tvpowered` Sony Bravia TV Controller
+# **'tvpowered'** Sony Bravia TV Controller
 
 {% include image.html src="/assets/img/iothings/tv remote off.gif"
    alt="tv remote off.gif"
@@ -89,16 +99,16 @@ attached to your LAN and/or Wi-Fi router.
 %}
 
 
-The `tvpowered` bash script is the heart of the
+The **tvpowered** bash script is the heart of the
 IoT (Internet of Things) system provided by {{ site.title }}.
 The script is loaded when you sign on because it
 is stored in the `~/.config/autostart` directory.
 
-`tvpowered` automatically establishes communication
+**tvpowered** automatically establishes communication
 with your Sony TV and displays a desktop notification
 when successful.
 
-## 'tvpowered' Key Features
+## **'tvpowered'** Key Features
 
 There are some unique "bells & whistles":
 
@@ -116,9 +126,10 @@ also powered off.
 - You are reminded if communication between the TV
 and your computer isn't working.
 - When your computer system wakes up from sleep /
-resumes from suspend, the Sony TV picture is turned
-off to save electricity but the sound system remains
-energized.
+resumes from suspend, the lights behind the 
+Sony TV and Google TV are turned on.
+- Work in Progress is to turn on Sony TV and Google
+TV as well.
 
 {% include image.html src="/assets/img/iothings/volume change.gif"
    alt="volume change.gif"
@@ -128,11 +139,12 @@ energized.
 
 ## Change Primary TV Volume
 
-Because the main TV (Sony) picture is normally turned off, you
+When the main TV (Sony) picture is normally turned off, you
 have no idea what the sound system current volume level is. The
-`tvpowered` script will display a notification on whatever
+**tvpowered** script will display a notification on whatever
 monitor you are currently working on when the volume is changed
-using the TV's remote control.
+using the TV's remote control.  The notification message includes
+a progress bar from 0 (TV muted) to 100 (TV maximum volume).
 
 If you are interested in the Bash code to make a progress bar,
 the relevant code is below:
@@ -168,7 +180,7 @@ VolumeBar () {
 } # VolumeBar
 ```
 
-## 'tvpowered' Bash Script
+## **'tvpowered'** Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -179,7 +191,7 @@ Below is the Bash script you can copy to your system:
 # PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
 #
 # DESC: When TV is powered off automatically suspend the laptop.
-# DATE: June 9, 2020.  Modified March 30, 2023.
+# DATE: June 9, 2020.  Modified May 28, 2023.
 #
 # NOTE: Written for Ask Ubuntu question:
 #       https://askubuntu.com/questions/1247484/
@@ -216,6 +228,8 @@ Below is the Bash script you can copy to your system:
 
 #       Mar 30 2023: Google TV to sleep (TV Remote Power Off).
 
+#       May 28 2023: Turn on TVs and lights behind TVs on resume.
+
 # Sources:
 
 # https://gist.github.com/kalleth/e10e8f3b8b7cb1bac21463b0073a65fb#cec-sonycec
@@ -229,6 +243,10 @@ SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 IP=192.168.0.19     # IP address for Sony TV on LAN
 ADB_IP=192.168.0.21 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
+# Sony TV MAC address for wake on lan. No effect if TV already on.
+STV_MAC="ac:9b:0a:df:3f:d9"  # May 28, 2023 - Not working yet.
+# Goggle TV MAC address for wake on lan. No effect if TV already on.
+GTV_MAC="c0:79:82:41:2f:1f"
 
 # Must have curl package.
 command -v curl >/dev/null 2>&1 || { echo >&2 \
@@ -446,9 +464,9 @@ TenMinuteSpam () {
 
 Main () {
 
-    echo "$0: Initialization. Ensuring TV is powered on before starting."
+    echo "$0: tvpowered Initialization. Ensuring TV is powered on before starting."
     TenMinuteSpam
-    echo "$0: Fully activated. Waiting for TV to powered off and then $SCTL."
+    echo "$0: Fully activated. Waiting for TV to power off and then will $SCTL."
     echo "$0: LastVolume: $LastVolume"
 
     Cnt=0
@@ -495,8 +513,21 @@ Main () {
                 # systemctl will suspend. When resuming we hit next line
                 log "System powered back up. Checking if TV powered on. '$0'."
                 sleep 10                        # Time to wake from suspend
+                if command -v wakeonlan >/dev/null 2>&1 ; then
+                    wakeonlan "$STV_MAC"        # Turn on Sony TV & wait
+                fi
                 TenMinuteSpam                   # Wait for network connection
-                pictureoff                      # Picture off energy saving
+                # pictureoff                    # Picture off energy saving
+                if command -v light-tog >/dev/null 2>&1 ; then
+                    light-tog                   # Turn on light behind TV 1
+                fi
+                if command -v light-tog2 >/dev/null 2>&1 ; then
+                    light-tog2                  # Turn on light behind TV 2
+                fi
+                if command -v wakeonlan >/dev/null 2>&1 ; then
+                    sleep 5                     # Doesn't work right away...
+                    wakeonlan "$GTV_MAC"        # Turn on google TV
+                fi
             fi
         fi
 
@@ -539,7 +570,7 @@ Main "$@"
 
 ## Configuring Bash Script
 
-There are four lines near the top of the script you need to
+There are six lines near the top of the script you need to
 configure for your system:
 
 ```bash
@@ -547,6 +578,10 @@ SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 IP=192.168.0.19     # IP address for Sony TV on LAN
 ADB_IP=192.168.0.21 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
+# Sony TV MAC address for wake on lan. No effect if TV already on.
+STV_MAC="ac:9b:0a:df:3f:d9"  # May 28, 2023 - Not working yet.
+# Goggle TV MAC address for wake on lan. No effect if TV already on.
+GTV_MAC="c0:79:82:41:2f:1f"
 ```
 
 ## Automatically Start Bash Script
@@ -567,7 +602,7 @@ Comment[en_CA]=Powering off Sony TV suspends system
 Comment=Powering off Sony TV suspends system
 ```
 
-## 'tvpowered' prerequisites
+## **'tvpowered'** prerequisites
 
 This program only works with Sony Bravia TVs. The Sony
 REST API is required. For more details visit
@@ -580,17 +615,22 @@ and your computer.
 Linux is required and preferably the Ubuntu distribution. 
 The following programs are required:
 
-- `adb` - Linux package
-- `curl` - Linux package
-- `libnotify-bin` - Linux package
-- `pictureoff` - Bash Script provided below
+- `adb` - Linux package for powering off Google TV
+- `curl` - Linux package for communicating with Sony TV
+- `libnotify-bin` - Linux package For popup messages
+
+Optionally if these programs are installed they will be run.
+
+- `lighttog` - Bash Script provided below
+- `lighttog2` - Bash Script provided below
+- `wakeonlan` - For turning on Sony TV & Google TV
 
 ---
 
 <a id="hdr4"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
-# `smartplug_off` Smart Plugs Turn Off Lights
+# **'smartplug_off'** Smart Plugs Turn Off Lights
 
 {% include image.html src="/assets/img/iothings/conybrown-lights-off.gif"
    alt="conybrown-lights-off.gif"
@@ -606,7 +646,7 @@ The script needs to be created with `sudo` powers in the
 `/etc/NetworkManager/dispatcher.d/pre-down.d/` directory.
 
 
-## 'smartplug_off' Key Features
+## **'smartplug_off'** Key Features
 
 Called by Network Manager when the network is going down.
 The Network is always brought down when computer system is
@@ -615,7 +655,7 @@ Manager a convenient way to shut off power to wall outlet
 smart plugs behind the TV that control the nighttime 
 back lighting. 
 
-## 'smartplug_off' Bash Script
+## **'smartplug_off'** Bash Script
 
 Below is the Bash script that needs to placed in the
 `/etc/NetworkManager/dispatcher.d/pre-down.d/` directory:
@@ -668,10 +708,10 @@ PlugName="192.168.0.15"  # Sony TV backlight
 PlugName="192.168.0.17"  # Google TV backlight
 ```
 
-The first `PlugName` is 1/3rd of the way in the file.
-The second `PlugName` is 2/3rds of the way in the file.
+The first **'PlugName'** is 1/3rd of the way in the file.
+The second **'PlugName'** is 2/3rds of the way in the file.
 
-## 'smarplug_off' Prerequisites
+## **'smarplug_off'** Prerequisites
 
 `/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
 See [TP-Link Wi-Fi Smart Plug HS100 🔗](https://github.com/benlye/hs100
@@ -684,7 +724,7 @@ for more information.
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
-# `sound` Switch System Sound Output to HDMI
+# **'sound'** Switch System Sound Output to HDMI
 
 {% include image.html src="/assets/img/iothings/volume change.gif"
    alt="volume change.gif"
@@ -693,13 +733,13 @@ for more information.
 %}
 
 
-The `sound` bash script is called whenever the
+The **'sound'** bash script is called whenever the
 computer system resumes from suspend / wakes from sleep.
 
 The script needs to be created with `sudo` powers in the
 `/lib/systemd/system-sleep/` directory.
 
-## 'sound' Key Features
+## **'sound'** Key Features
 
 A bug in Pulse Audio 8 sets the output sound device to
 Laptop when system goes to sleep.
@@ -709,7 +749,7 @@ when the system wakes up / resumes from suspend.
 To solve this problem the Pulse Audio settings are
 modified.
 
-## 'sound' Bash Script
+## **'sound'** Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -765,7 +805,7 @@ not your user number, then change it appropriately.
 
 On the second line, replace `rick` with your Username.
 
-## 'sound' Prerequisites
+## **'sound'** Prerequisites
 
 It is assumed you are running Pulse Audio in Linux. 
 
@@ -830,7 +870,7 @@ web browser and music player playlist windows reside.
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-# `light-tog` Toggle Light Behind Primary (Sony) TV
+# **'light-tog'** Toggle Light Behind Primary (Sony) TV
 
 {% include image.html src="/assets/img/iothings/Toggle Desktop Shortcuts.png"
    alt="Toggle Desktop Shortcuts.png"
@@ -843,14 +883,14 @@ want to toggle the light behind your TV off or on.
 Generally during the day the light is turned off
 and during night the light is turned on.
 
-## 'light-tog' Key Features
+## **'light-tog'** Key Features
 
-A light behind your TV is hard to reach. The `light-tog`
+A light behind your TV is hard to reach. The **'light-tog'**
 script makes it easy to turn the light off and on.
 
-## 'light-tog' Desktop Shortcut
+## **'light-tog'** Desktop Shortcut
 
-Instead of typing `light-tog` in the command line, it
+Instead of typing **'light-tog'** in the command line, it
 is convenient to have a Desktop Shortcut you can click.
 
 In your `~/Desktop/` directory, create the file `light-tog.desktop`
@@ -868,7 +908,7 @@ Type=Application
 Categories=Application;
 ```
 
-## 'light-tog' Bash Script
+## **'light-tog'** Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -920,7 +960,7 @@ GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
-## 'light-tog' Prerequisites
+## **'light-tog'** Prerequisites
 
 
 `/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
@@ -933,7 +973,7 @@ for more information.
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
-# `light-tog2` Toggle Light Behind Second TV
+# **'light-tog2'** Toggle Light Behind Second TV
 
 {% include image.html src="/assets/img/iothings/Light Off On.gif"
    alt="Light Off On.gif"
@@ -942,18 +982,18 @@ for more information.
    caption="Smart Plug Controls Light"
 %}
 
-The `light-tog2` bash script is called whenever you
+The **'light-tog2'** bash script is called whenever you
 want to toggle the light behind your second TV off or on.
 Generally during the day the light is turned off
 and during night the light is turned on.
 
-## 'light-tog2' Key Features
+## **'light-tog2'** Key Features
 
 The light behind your second TV is hard to reach. 
-The `light-tog2` script makes it easy to turn the light 
+The **'light-tog2'** script makes it easy to turn the light 
 off and on.
 
-## 'light-tog2' Desktop Shortcut
+## **'light-tog2'** Desktop Shortcut
 
 Instead of typing `light-tog2` in the command line, it
 is convenient to have a Desktop Shortcut you can click.
@@ -973,7 +1013,7 @@ Type=Application
 Categories=Application;
 ```
 
-## 'light-tog2' Bash Script
+## **'light-tog2'** Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -1031,7 +1071,7 @@ GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
-## 'light-tog2' Prerequisites
+## **'light-tog2'** Prerequisites
 
 
 `/usr/bin/hs100.sh` must be installed to control Smart Plugs. 
@@ -1045,7 +1085,7 @@ for more information.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 
-# `picturetog` Toggle Sony TV picture Off and On
+# **'picturetog'** Toggle Sony TV picture Off and On
 
 The `picturetog` bash script toggles the Sony TV picture
 (screen) off and on. When the picture is turned off this
@@ -1053,7 +1093,7 @@ is known as "Power Savings Mode On". The reason being
 that 100 watts of power is saved. The sound system and
 all other TV functions like volume change still work.
 
-## 'picturetog' Key Features
+## **'picturetog'** Key Features
 
 When your system is turned on or you resume from suspend /
 wake from sleep the Sony TV (Primary) picture is turned
@@ -1061,9 +1101,9 @@ off automatically. The `picturetog` script is used to turn
 the Sony TV picture back on so you can watch a movie or
 whatever.
 
-## 'picturetog' Desktop Shortcut
+## **'picturetog'** Desktop Shortcut
 
-Instead of typing `picturetog` in the command line, it
+Instead of typing **picturetog** in the command line, it
 is convenient to have a Desktop Shortcut you can click.
 
 In your `~/Desktop/` directory, create the file 
@@ -1081,7 +1121,7 @@ Type=Application
 Categories=Application;
 ```
 
-## 'picturetog' Bash Script
+## **'picturetog'** Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -1252,7 +1292,7 @@ GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
-## 'picturetog' Prerequisites
+## **'picturetog'** Prerequisites
 
 A Sony Bravia TV or Professional Display is required. The
 Linux package `curl` must also be installed.
@@ -1262,7 +1302,7 @@ Linux package `curl` must also be installed.
 <a id="hdr10"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
-# `pictureoff` Turn Off Sony TV Picture
+# **'pictureoff'** Turn Off Sony TV Picture
 
 {% include image.html src="/assets/img/iothings/tv picture off.gif"
    alt="tv remote off.gif"
@@ -1273,12 +1313,7 @@ Linux package `curl` must also be installed.
 The `pictureoff` bash script is called when the computer
 is turned on, rebooted or resumes from suspend (wakes from sleep).
 
-## 'pictureoff' Key Features
-
-`pictureoff` is automatically called by `tvpowered` script
-after it establishes communication
-with your Sony TV.
-
+## **'pictureoff'** Bash Script
 
 Below is the Bash script you can copy to your system:
 
@@ -1441,18 +1476,29 @@ GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
-## 'pictureoff' Prerequisites
+## **'pictureoff'** Prerequisites
 
 A Sony Bravia TV or Professional Display is required. The
-Linux package `curl` must also be installed.
+Linux package `curl` must also be installed. 
+
+On your Sony TV go to "Settings", "Network", and then go to:
+
+- Remote device settings section, turn on the
+"Control Remotely" option. 
+- Home Network, IP control section, set Authentication 
+to "Normal and Pre-Shared Key". Also turn on the
+"Simple IP control" option.
+
+Do not try to reconfigure your Sony TV while `tvpowered`
+script is already running. Your desktop manager may not
+see the Sony TV as powered up and will rearrange windows.
 
 ---
 
 <a id="hdr11"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr10">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr12">Skip</a></div>
 
-# TP-Link Wi-Fi Smart Plug `hs100.sh` Script
-
+# TP-Link Wi-Fi Smart Plug **'hs100.sh'** Script
 
 {% include image.html src="/assets/img/iothings/CNET Setup Smart Plug.jpg"
    alt="CNET Setup Smart Plug.jpg"
@@ -1474,7 +1520,7 @@ for more information.
 The Bash Script is listed below but you must visit GitHub Page
 to get instructions.
 
-## 'hs100.sh' Bash Script
+## **'hs100.sh'** Bash Script
 
 ```bash
 #!/bin/bash
