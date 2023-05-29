@@ -1,5 +1,5 @@
 ---
-title: Internet of Things - Control TV's and power outlets
+title: TV Remote Turns Off Five "Things"
 layout: program
 ---
 
@@ -31,7 +31,7 @@ Press the power button on your computer and then:
 turns on
 - Light behind Google TV (a.k.a. Secondary TV or TV #2)
 turns on
-- Google TV turns on (work in progress)
+- Google TV turns on
 - Sony TV turns on (work in progress)
 
 Press the power button on Sony TV remote control then:
