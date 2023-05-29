@@ -241,7 +241,7 @@ Below is the Bash script you can copy to your system:
 
 SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 IP=192.168.0.19     # IP address for Sony TV on LAN
-ADB_IP=192.168.0.21 # IP address for Google TV on LAN for Android Debug Bridge
+ADB_IP=192.168.0.17 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
 # Sony TV MAC address for wake on lan. No effect if TV already on.
 STV_MAC="ac:9b:0a:df:3f:d9"  # May 28, 2023 - Not working yet.
@@ -450,10 +450,34 @@ TenMinuteSpam () {
     VolumeBar $LastVolume
     notify-send --urgency=critical "tvpowered" \
         --icon=/usr/share/icons/gnome/48x48/devices/display.png \
-        "Fully activated.\n System will $SCTL when TV powered off.  Volume: $LastVolume $Bar"
+        "Fully activated.\n System will $SCTL when TV powered off. Volume: $LastVolume $Bar"
 
-    echo "Connecting to ADB (Android Debugging Bridge) on: $ADB_IP"
-    adb connect "$ADB_IP"  # Connect to Google TV.
+    if command -v wakeonlan >/dev/null 2>&1 ; then
+        # May 29, 2023 - Still need to configure Sony Bravia KDL TV.
+        wakeonlan "$STV_MAC"        # Turn on Sony TV & wait
+    fi
+
+    if command -v light-tog >/dev/null 2>&1 ; then
+        light-tog                   # Turn on light behind TV 1
+    fi
+    if command -v light-tog2 >/dev/null 2>&1 ; then
+        light-tog2                  # Turn on light behind TV 2
+    fi
+    if command -v wakeonlan >/dev/null 2>&1 ; then
+        wakeonlan "$GTV_MAC"        # Turn on google TV
+        sleep 1                     # Doesn't work right away...
+        wakeonlan "$GTV_MAC"        # Turn on google TV
+        sleep 1                     # Doesn't work right away...
+        wakeonlan "$GTV_MAC"        # Turn on google TV
+        sleep 1                     # Doesn't work right away...
+        wakeonlan "$GTV_MAC"        # Turn on google TV
+        sleep 1                     # Doesn't work right away...
+        wakeonlan "$GTV_MAC"        # Turn on google TV
+    fi
+    if command -v adb >/dev/null 2>&1 ; then
+        echo "Connecting to ADB (Android Debugging Bridge) on: $ADB_IP"
+        adb connect "$ADB_IP"  # Connect to Google TV.
+    fi
     return 0
 
 } # TenMinuteSpam
@@ -507,27 +531,19 @@ Main () {
                 echo "Unexpected disconnect, aborting suspend."
             else
                 log "TV Powered off. 'systemctl $SCTL' being called."
-                echo ADB shut off TV on "$ADB_IP"
-                adb shell input keyevent 26  # Google TV to sleep (remote off)
-                systemctl "$SCTL"
+                if command -v adb >/dev/null 2>&1 ; then
+                    echo ADB Power off TCL / Google TV on "$ADB_IP"
+                    adb shell input keyevent 26 # Google TV off (remote off)
+                    adb disconnect              # Will reconnect on resume
+                fi
+
+                systemctl "$SCTL"               # Computer off or sleep
+
                 # systemctl will suspend. When resuming we hit next line
                 log "System powered back up. Checking if TV powered on. '$0'."
-                sleep 10                        # Time to wake from suspend
-                if command -v wakeonlan >/dev/null 2>&1 ; then
-                    wakeonlan "$STV_MAC"        # Turn on Sony TV & wait
-                fi
                 TenMinuteSpam                   # Wait for network connection
+                # May 28, 2023 only turn picture off during work hours
                 # pictureoff                    # Picture off energy saving
-                if command -v light-tog >/dev/null 2>&1 ; then
-                    light-tog                   # Turn on light behind TV 1
-                fi
-                if command -v light-tog2 >/dev/null 2>&1 ; then
-                    light-tog2                  # Turn on light behind TV 2
-                fi
-                if command -v wakeonlan >/dev/null 2>&1 ; then
-                    sleep 5                     # Doesn't work right away...
-                    wakeonlan "$GTV_MAC"        # Turn on google TV
-                fi
             fi
         fi
 
