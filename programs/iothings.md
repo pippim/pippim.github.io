@@ -27,35 +27,25 @@ in your `~/.config/autostart` directory to launch it.
 Press the power button on your computer and then:
 
 - **tvpowered** script wakes up from sleep
+- Sony TV turns on
 - Light behind Sony TV (a.k.a. Primary TV or TV #1)
 turns on
 - Light behind Google TV (a.k.a. Secondary TV or TV #2)
 turns on
 - Google TV turns on
-- Sony TV turns on (work in progress)
 
 Press the power button on Sony TV remote control then:
 
-- Sony TV will be shut off
+- Sony TV will be shut off (which power button does anyway)
 - Google Android TV will be shut off
 - Light behind the Sony TV will be shut off
 - Light behind the Google TV will be shut off
-- Computer will be put to sleep
+- Computer will be put to sleep (or shutdown if configured)
 - **tvpowered** script continues when system wakes up
 
-To power off electric lights when you shut down or suspend
-your computer the `/etc/NetworkManager/dispatcher.d/pre-down.d`
-directory contains the bash script `smartplug_off`.
-
-When resuming from system sleep (waking up your laptop)
-the `/lib/systemd/system-sleep` directory contains the
-bash scripts. Of particular note is:
-
-- A bug in Pulse Audio 8 sets the output sound to the
-Laptop speakers when system goes to sleep. The system sound 
-device doesn't default to HDMI
-when the system wakes up / resumes from suspend.
-The `sound` script enables sound for the HDMI stereo system.
+To power off electric lights the 
+`/etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off`
+script is run. See below for details on setting up script.
 
 A variety of independent scripts are provided to make life
 convenient. 
@@ -191,7 +181,7 @@ Below is the Bash script you can copy to your system:
 # PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
 #
 # DESC: When TV is powered off automatically suspend the laptop.
-# DATE: June 9, 2020.  Modified May 28, 2023.
+# DATE: June 9, 2020.  Modified May 30, 2023.
 #
 # NOTE: Written for Ask Ubuntu question:
 #       https://askubuntu.com/questions/1247484/
@@ -292,6 +282,28 @@ cURLit () {
 #curl -s -H "Content-Type: application/json; charset=UTF-8" -H "X-Auth-PSK: 123" --data "{ "method": "getPowerStatus", "id": 50, "params": [], "version": "1.0" }" http://192.168.0.16sony/system
 } # cURLit
 
+TurnSonyOn () {
+
+    local Reply ReturnState
+
+    # Copy and paste JSON strings from Sony website: 
+    # https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/system/v1_0/setPowerStatus/index.html
+    JSONstr='{
+                 "method": "setPowerStatus",
+                 "id": 55,
+                 "params": [{"status": true}],
+                 "version": "1.0"
+             }'
+
+    cURLit "$JSONstr" "system" Reply    # No $ for Reply variable! pass pointer
+    ReturnState="$?"                    # Usually '6', not checked.
+
+    #echo "ReturnState: $ReturnState Reply: $Reply"    # Remove # for debugging
+    # Reply: { "result": [], "id": 55 }
+    echo ReturnState from TurnSonyOn function: "$ReturnState"
+    
+} # TurnSonyOn
+
 GetPowerStatus () {
 
     local Reply ReturnState
@@ -319,6 +331,7 @@ GetPowerStatus () {
     return 1
     
 } # GetPowerStatus
+
 
 GetVolume () {
 
@@ -430,6 +443,9 @@ TenMinuteSpam () {
     Cnt=0
     while : ; do
 
+        echo Waking up Sony TV "$Cnt"
+        TurnSonyOn
+
         if GetPowerStatus ; then
             log "TV is powered on. 'tvpowered' is now waiting for TV to power off."
             break
@@ -452,18 +468,16 @@ TenMinuteSpam () {
         --icon=/usr/share/icons/gnome/48x48/devices/display.png \
         "Fully activated.\n System will $SCTL when TV powered off. Volume: $LastVolume $Bar"
 
-    if command -v wakeonlan >/dev/null 2>&1 ; then
-        # May 29, 2023 - Still need to configure Sony Bravia KDL TV.
-        wakeonlan "$STV_MAC"        # Turn on Sony TV & wait
-    fi
-
     if command -v light-tog >/dev/null 2>&1 ; then
+        echo Tunring on Sony TV Light
         light-tog                   # Turn on light behind TV 1
     fi
     if command -v light-tog2 >/dev/null 2>&1 ; then
+        echo Tunring on TCL TV Light
         light-tog2                  # Turn on light behind TV 2
     fi
     if command -v wakeonlan >/dev/null 2>&1 ; then
+        echo Waking up TCL TV
         wakeonlan "$GTV_MAC"        # Turn on google TV
         sleep 1                     # Doesn't work right away...
         wakeonlan "$GTV_MAC"        # Turn on google TV
