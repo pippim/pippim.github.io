@@ -233,8 +233,6 @@ SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 IP=192.168.0.19     # IP address for Sony TV on LAN
 ADB_IP=192.168.0.17 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
-# Sony TV MAC address for wake on lan. No effect if TV already on.
-STV_MAC="ac:9b:0a:df:3f:d9"  # May 28, 2023 - Not working yet.
 # Goggle TV MAC address for wake on lan. No effect if TV already on.
 GTV_MAC="c0:79:82:41:2f:1f"
 
@@ -628,7 +626,7 @@ Main "$@"
 
 ## Configuring Bash Script
 
-There are six lines near the top of the script you need to
+There are five lines near the top of the script you need to
 configure for your system:
 
 ```bash
@@ -636,9 +634,7 @@ SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 IP=192.168.0.19     # IP address for Sony TV on LAN
 ADB_IP=192.168.0.21 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
-# Sony TV MAC address for wake on lan. No effect if TV already on.
-STV_MAC="ac:9b:0a:df:3f:d9"  # May 28, 2023 - Not working yet.
-# Goggle TV MAC address for wake on lan. No effect if TV already on.
+# TCL / Goggle TV MAC address for wake on lan. No effect if TV already on.
 GTV_MAC="c0:79:82:41:2f:1f"
 ```
 
@@ -679,8 +675,8 @@ The following programs are required:
 
 Optionally if these programs are installed they will be run.
 
-- `lighttog` - Bash Script provided below
-- `lighttog2` - Bash Script provided below
+- `light-tog` - Bash Script provided below
+- `light-tog2` - Bash Script provided below
 - `wakeonlan` - For turning on Sony TV & Google TV
 
 ---
@@ -763,7 +759,7 @@ There are two lines you need to configure to your system:
 ```bash
 PlugName="192.168.0.15"  # Sony TV backlight
 ...
-PlugName="192.168.0.17"  # Google TV backlight
+PlugName="192.168.0.21"  # Google TV backlight
 ```
 
 The first **'PlugName'** is 1/3rd of the way in the file.
@@ -1008,13 +1004,12 @@ Change the IP address to what your network assigned it. See the
 ```text
 ==========  nmap -sn 192.168.0/24  ============================================
 
-hitronhub.home (192.168.0.1) (0.00073s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
-hs100 (192.168.0.15) (0.00084s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
-HS103.hitronhub.home (192.168.0.17) (-0.066s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
-sony (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
-hs103 (192.168.0.20) (0.21s latency). MAC: FC:D4:36:EA:82:36 (Unknown)
-GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2F:1F (Unknown)
-192.168.0.254 (0.00045s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
+hitronhub.home (192.168.0.1) (0.0012s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
+SONY.light (192.168.0.15) (0.010s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
+TCL.LAN (192.168.0.17) (-0.100s latency). MAC: C0:79:82:41:2F:1F (Unknown)
+SONY.LAN (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
+TCL.light (192.168.0.21) (0.010s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
+Router.Login (192.168.0.254) (-0.087s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
@@ -1093,7 +1088,7 @@ Below is the Bash script you can copy to your system:
 #       March 25, 2023. Name change from flipkitchen to fliptv2.
 #       March 27, 2023. Name change from fliptv2 to light-tog2.
 
-PlugName="192.168.0.17"  # hs103 Wi-Fi smart plug in kitchen behind TCL TV.
+PlugName="192.168.0.21"  # hs103 Wi-Fi smart plug in kitchen behind TCL TV.
 
 status=$(hs100.sh -i "$PlugName" check | cut -f2)
 if [ $status == "OFF" ] ; then
@@ -1110,7 +1105,7 @@ fi
 There is one line you need to configure to your system:
 
 ```bash
-PlugName="192.168.0.17"  # hs103 Wi-Fi smart plug in kitchen behind TCL TV.
+PlugName="192.168.0.21"  # hs103 Wi-Fi smart plug in kitchen behind TCL TV.
 ```
 
 Change the IP address to what your network assigned it. See the
@@ -1119,13 +1114,12 @@ Change the IP address to what your network assigned it. See the
 ```text
 ==========  nmap -sn 192.168.0/24  ============================================
 
-hitronhub.home (192.168.0.1) (0.00073s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
-hs100 (192.168.0.15) (0.00084s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
-HS103.hitronhub.home (192.168.0.17) (-0.066s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
-sony (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
-hs103 (192.168.0.20) (0.21s latency). MAC: FC:D4:36:EA:82:36 (Unknown)
-GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2F:1F (Unknown)
-192.168.0.254 (0.00045s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
+hitronhub.home (192.168.0.1) (0.0012s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
+SONY.light (192.168.0.15) (0.010s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
+TCL.LAN (192.168.0.17) (-0.100s latency). MAC: C0:79:82:41:2F:1F (Unknown)
+SONY.LAN (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
+TCL.light (192.168.0.21) (0.010s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
+Router.Login (192.168.0.254) (-0.087s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
@@ -1340,13 +1334,12 @@ Change the IP address to what your network assigned it. See the
 ```text
 ==========  nmap -sn 192.168.0/24  ============================================
 
-hitronhub.home (192.168.0.1) (0.00073s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
-hs100 (192.168.0.15) (0.00084s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
-HS103.hitronhub.home (192.168.0.17) (-0.066s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
-sony (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
-hs103 (192.168.0.20) (0.21s latency). MAC: FC:D4:36:EA:82:36 (Unknown)
-GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2F:1F (Unknown)
-192.168.0.254 (0.00045s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
+hitronhub.home (192.168.0.1) (0.0012s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
+SONY.light (192.168.0.15) (0.010s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
+TCL.LAN (192.168.0.17) (-0.100s latency). MAC: C0:79:82:41:2F:1F (Unknown)
+SONY.LAN (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
+TCL.light (192.168.0.21) (0.010s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
+Router.Login (192.168.0.254) (-0.087s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
@@ -1524,13 +1517,12 @@ Change the IP address to what your network assigned it. See the
 ```text
 ==========  nmap -sn 192.168.0/24  ============================================
 
-hitronhub.home (192.168.0.1) (0.00073s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
-hs100 (192.168.0.15) (0.00084s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
-HS103.hitronhub.home (192.168.0.17) (-0.066s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
-sony (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
-hs103 (192.168.0.20) (0.21s latency). MAC: FC:D4:36:EA:82:36 (Unknown)
-GoogleTV7781.hitronhub.home (192.168.0.21) (-0.067s latency). MAC: C0:79:82:41:2F:1F (Unknown)
-192.168.0.254 (0.00045s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
+hitronhub.home (192.168.0.1) (0.0012s latency). MAC: A8:4E:3F:82:98:B2 (Unknown)
+SONY.light (192.168.0.15) (0.010s latency). MAC: 50:D4:F7:EB:41:35 (Unknown)
+TCL.LAN (192.168.0.17) (-0.100s latency). MAC: C0:79:82:41:2F:1F (Unknown)
+SONY.LAN (192.168.0.19) (-0.100s latency). MAC: AC:9B:0A:DF:3F:D9 (Sony)
+TCL.light (192.168.0.21) (0.010s latency). MAC: 50:D4:F7:EB:46:7C (Unknown)
+Router.Login (192.168.0.254) (-0.087s latency). MAC: 00:05:CA:00:00:09 (Hitron Technology)
 alien (192.168.0.12) LOCAL NETWORK CARD
 ```
 
