@@ -52,7 +52,8 @@ self-documenting app. &emsp;&emsp;
 
 ## Hyperlink Recipe Baker App
 
-<div id="dummy-div-to-test-click">
+<-- Dummy div required for <a href...> to work for clicking -->
+<div>
 <a href="programs/hyperlink.html">
    {% include image.html src="/assets/img/hrb/HRB Example.gif"
       alt="TCM transparent button.gif"
@@ -85,7 +86,8 @@ self-documenting app.  &emsp;&emsp;
 
 ## The Cookie Machine App
 
-<div id="dummy-div-to-test-click2">
+<-- Dummy div required for <a href...> to work for clicking -->
+<div>
 <a href="programs/tcm.html">
    {% include image.html src="/assets/img/tcm/TCM Window Buttons.gif"
       alt="TCM transparent button.gif"
@@ -114,8 +116,9 @@ self-documenting app. &emsp;&emsp;
 
 ---
 
-## Internet of Things - Control TVs and Electric Smartplugs
+## TV Remote Turns Off Five "Things"
 
+<-- Dummy div required for <a href...> to work for clicking -->
 <div>
 <a href="programs/iothings.html">
    {% include image.html src="/assets/img/iothings/volume change.gif"
@@ -126,14 +129,14 @@ self-documenting app. &emsp;&emsp;
 </a>
 </div>
 
-Control your TVs and the powered lights behind your TVs with
+Control your TVs and the smart plug lights behind your TVs with
 the "Internet of Things" (IoT). As the video shows, when your 
 TV remote control volume is adjusted a notification shows up
 on your computer screen.
 
-When TV remote power button is used, the TV turns off, the
+When TV remote power button is used, two TVs turn off, the
 lights behind two TVs are turned off and your laptop is put
-to sleep.
+to sleep. Five devices turned off with one TV remote button!
 
 <a href="programs/iothings.html" style="font-size: 20px;">Read More...</a>  
 
@@ -141,7 +144,8 @@ to sleep.
 
 ## Convert Stack Exchange Posts to Your Own Website
 
-<div id="dummy-div-to-test-click3">
+<-- Dummy div required for <a href...> to work for clicking -->
+<div>
 <a href="programs/stack.html">
    {% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
       alt="stack-to-blog.py"
@@ -188,7 +192,8 @@ The Multi-Timer program (`mt`) can be downloaded from the
 
 ## Music Player with CD encoding, lyrics scraping and synchronization
 
-<div id="dummy-div-to-test-click4">
+<-- Dummy div required for <a href...> to work for clicking -->
+<div>
 <a href="programs/mserve.html">
    {% include image.html src="/assets/img/mserve/mserve small demo.gif"
       alt="mserve small demo"
