@@ -30,16 +30,16 @@ Press the power button on your computer and then:
 - Sony TV turns on
 - Light behind Sony TV (a.k.a. Primary TV or TV #1)
 turns on
-- Light behind Google TV (a.k.a. Secondary TV or TV #2)
+- Light behind TCL TV (a.k.a. Google TV, Secondary TV or TV #2)
 turns on
-- Google TV turns on
+- TCL / Google TV turns on
 
 Press the power button on Sony TV remote control then:
 
 - Sony TV will be shut off (which power button does anyway)
 - Google Android TV will be shut off
 - Light behind the Sony TV will be shut off
-- Light behind the Google TV will be shut off
+- Light behind the TCL / Google TV will be shut off
 - Computer will be put to sleep (or shutdown if configured)
 - **tvpowered** script continues when system wakes up
 
@@ -111,13 +111,13 @@ feedback.
 - When Sony TV is powered off via TV remote control,
 the power outlet for the light behind the TV
 and secondary TV is turned off and your system
-is put to sleep or shutdown. The Google TV is
+is put to sleep or shutdown. The TCL / Google TV is
 also powered off.
 - You are reminded if communication between the TV
 and your computer isn't working.
 - When your computer system wakes up from sleep /
 resumes from suspend, the lights behind the 
-Sony TV and Google TV are turned on.
+Sony TV and TCL / Google TV are turned on.
 - Work in Progress is to turn on Sony TV and Google
 TV as well.
 
@@ -669,7 +669,7 @@ and your computer.
 Linux is required and preferably the Ubuntu distribution. 
 The following programs are required:
 
-- `adb` - Linux package for powering off Google TV
+- `adb` - Linux package for powering off TCL / Google TV
 - `curl` - Linux package for communicating with Sony TV
 - `libnotify-bin` - Linux package For popup messages
 
@@ -677,7 +677,7 @@ Optionally if these programs are installed they will be run.
 
 - `light-tog` - Bash Script provided below
 - `light-tog2` - Bash Script provided below
-- `wakeonlan` - For turning on Sony TV & Google TV
+- `wakeonlan` - For turning on Sony TV & TCL / Google TV
 
 ---
 
