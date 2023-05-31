@@ -304,6 +304,28 @@ TurnSonyOn () {
     
 } # TurnSonyOn
 
+TurnOffSony () {
+
+    local Reply ReturnState
+
+    # Copy and paste JSON strings from Sony website: 
+    # https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/system/v1_0/setPowerStatus/index.html
+    JSONstr='{
+                 "method": "setPowerStatus",
+                 "id": 55,
+                 "params": [{"status": false}],
+                 "version": "1.0"
+             }'
+
+    cURLit "$JSONstr" "system" Reply    # No $ for Reply variable! pass pointer
+    ReturnState="$?"                    # Usually '6', not checked.
+
+    #echo "ReturnState: $ReturnState Reply: $Reply"    # Remove # for debugging
+    # Reply: { "result": [], "id": 55 }
+    echo ReturnState from TurnSonyOn function: "$ReturnState"
+    
+} # TurnOffSony
+
 GetPowerStatus () {
 
     local Reply ReturnState
@@ -443,13 +465,13 @@ TenMinuteSpam () {
     Cnt=0
     while : ; do
 
-        echo Waking up Sony TV "$Cnt"
-        TurnSonyOn
-
         if GetPowerStatus ; then
             log "TV is powered on. 'tvpowered' is now waiting for TV to power off."
             break
         else
+            echo Waking up Sony TV "$Cnt"
+            TurnSonyOn
+
             # Spam user every 60 seconds
             (( $(( Cnt % 20 )) == 0 )) && \
                 notify-send --urgency=critical "tvpowered" \
@@ -542,7 +564,7 @@ Main () {
 
             state=$(nmcli -f STATE -t g)        # Network manager takes .5 CPU
             if [[ $state == disconnected ]] ; then
-                echo "Unexpected disconnect, aborting suspend."
+                echo "Unexpected Network disconnect, aborting suspend."
             else
                 log "TV Powered off. 'systemctl $SCTL' being called."
                 if command -v adb >/dev/null 2>&1 ; then
@@ -551,10 +573,16 @@ Main () {
                     adb disconnect              # Will reconnect on resume
                 fi
 
+                echo /etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off
+                #echo "Turning off Sony TV just in case abnormal suspend."
+                #TurnOffSony
                 systemctl "$SCTL"               # Computer off or sleep
+                sleep 2  # Without sleep, TenMinuteSpam starts during suspend
 
                 # systemctl will suspend. When resuming we hit next line
                 log "System powered back up. Checking if TV powered on. '$0'."
+                echo
+                echo "System powered back up. Checking if TV powered on. '$0'."
                 TenMinuteSpam                   # Wait for network connection
                 # May 28, 2023 only turn picture off during work hours
                 # pictureoff                    # Picture off energy saving
