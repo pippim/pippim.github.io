@@ -913,7 +913,7 @@ off the TCL Google (Secondary) TV when the Sony (Primary)
 TV remote is powered off. Use:
 
 - `sudo apt install abd` To install *Android Bridge Debug*
-- `abd connect 192.168.0.21` to connect TV at IP address 21.
+- `adb connect 192.168.0.21` to connect TV at IP address 21.
 - `adb shell input keyevent 26` to turn off the TV.
 
 The Alienware 17" laptop screen is where the file manager,
