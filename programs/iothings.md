@@ -890,12 +890,24 @@ Intel Core i-7 GPU using ThunderBolt 3 USB-C to HDMI converter.
 
 
 There are two lamps. One behind the Sony TV and one behind the 
-TCL TV. Both lamps are controlled by Kasa TP-Link Smart Plugs.
+TCL TV. Each lamp is controlled by a Kasa TP-Link Smart Plug.
+The lamps serve as "backlights" to reduce eyestrain at night.
 
 The Sony TV has a sound system with subwoofer that is used
 all the time. The Sony TV picture is only used occasionally
 for viewing movies and YouTube. On the Sony TV you can see
 that YouTube is currently running.
+
+For your computer to communicate with the Sony TV the REST
+API needs to be configured.  **tvpowered** uses the following
+Sony Bravia TV REST API functions:
+
+- [Power on Sony TV 🔗](https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/system/v1_0/setPowerStatus/index.html 
+"Power on Sony TV using REST API"){:target="_blank"}.
+- [Get TV Power Status 🔗](https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/system/v1_0/getPowerStatus/index.html 
+"Get Sony TV power status using REST API"){:target="_blank"}.
+- [Get TV Volume Level 🔗](https://pro-bravia.sony.net/develop/integrate/rest-api/spec/service/audio/v1_0/getVolumeInformation/index.html 
+"Get Sony TV volume level using REST API"){:target="_blank"}.
 
 The TCL Google TV is 4K which allows four screen sizes of full HD.
 Consequently this TV is where most of the work is done. You
