@@ -197,6 +197,27 @@ copied from Amazon, etc. More work is required in encoding process
 to support more than just .OGA, .WAV and .FLAC formats currently
 supported.
 
+## Legal Fine-Print
+
+When an Artist, Album or Song have these characters in the name:
+
+- `/`, `:`, `?`, `.`
+
+The directory names and song filenames will use `_` instead.
+
+For example, if the name would have been:
+
+- `Great: Band/Songs of 70's/80's/05 Simple.Little.Thing?.m4a`
+
+The file created will be:
+
+- `Great_ Band/Songs of 70's_80's/05 Simple_Little_Thing_.m4a`
+
+
+
+This is necessary to conform to operating system rules for
+directory and filenames.
+
 ---
 
 <a id="hdr6"></a>
