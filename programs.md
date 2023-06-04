@@ -52,7 +52,7 @@ self-documenting app. &emsp;&emsp;
 
 ## Hyperlink Recipe Baker App
 
-<-- Dummy div required for <a href...> to work for clicking -->
+<!-- Dummy div required for <a href...> to work for clicking -->
 <div>
 <a href="programs/hyperlink.html">
    {% include image.html src="/assets/img/hrb/HRB Example.gif"
@@ -86,7 +86,7 @@ self-documenting app.  &emsp;&emsp;
 
 ## The Cookie Machine App
 
-<-- Dummy div required for <a href...> to work for clicking -->
+<!-- Dummy div required for <a href...> to work for clicking -->
 <div>
 <a href="programs/tcm.html">
    {% include image.html src="/assets/img/tcm/TCM Window Buttons.gif"
@@ -118,7 +118,7 @@ self-documenting app. &emsp;&emsp;
 
 ## TV Remote Turns Off Five "Things"
 
-<-- Dummy div required for <a href...> to work for clicking -->
+<!-- Dummy div required for <a href...> to work for clicking -->
 <div>
 <a href="programs/iothings.html">
    {% include image.html src="/assets/img/iothings/volume change.gif"
@@ -144,7 +144,7 @@ to sleep. Five devices turned off with one TV remote button!
 
 ## Convert Stack Exchange Posts to Your Own Website
 
-<-- Dummy div required for <a href...> to work for clicking -->
+<!-- Dummy div required for <a href...> to work for clicking -->
 <div>
 <a href="programs/stack.html">
    {% include image.html src="/assets/img/stack/stack-to-blog progress display.gif"
@@ -192,7 +192,7 @@ The Multi-Timer program (`mt`) can be downloaded from the
 
 ## Music Player with CD encoding, lyrics scraping and synchronization
 
-<-- Dummy div required for <a href...> to work for clicking -->
+<!-- Dummy div required for <a href...> to work for clicking -->
 <div>
 <a href="programs/mserve.html">
    {% include image.html src="/assets/img/mserve/mserve small demo.gif"
