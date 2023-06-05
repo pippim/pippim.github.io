@@ -197,15 +197,17 @@ copied from Amazon, etc. More work is required in encoding process
 to support more than just .OGA, .WAV and .FLAC formats currently
 supported.
 
-## Legal Fine-Print
+## Substituting Special Characters in Filenames
 
 When an Artist, Album or Song have these characters in the name:
 
 - `/`, `:`, `?`, `<`, `>`, `"`, `\`, `|` or `.`
 
 The character will be replaced with the `_` character instead.
+This is necessary to conform to operating system rules for
+directory and filenames.
 
-For example, if the real names are:
+For example, if the names with special characters are:
 
 - Artist: `The Great Band.`
 - Album: `Songs of: 70's/80's`
@@ -221,11 +223,6 @@ The file created in Windows will be:
 
 Note in Linux the `/` character is used to separate directory levels. 
 In Windows the `\` character is used to separate directory levels.
-The examples shown above are for 
-
-
-This is necessary to conform to operating system rules for
-directory and filenames.
 
 ---
 
