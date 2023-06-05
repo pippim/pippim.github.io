@@ -201,18 +201,27 @@ supported.
 
 When an Artist, Album or Song have these characters in the name:
 
-- `/`, `:`, `?`, `.`
+- `/`, `:`, `?`, `<`, `>`, `"`, `\`, `|` or `.`
 
-The directory names and song filenames will use `_` instead.
+The character will be replaced with the `_` character instead.
 
-For example, if the name would have been:
+For example, if the real names are:
 
-- `Great: Band/Songs of 70's/80's/05 Simple.Little.Thing?.m4a`
+- Artist: `The Great Band.`
+- Album: `Songs of: 70's/80's`
+- Title: `05 Simple <Little> Thing?.m4a`
 
-The file created will be:
+The file created in Linux will be:
 
-- `Great_ Band/Songs of 70's_80's/05 Simple_Little_Thing_.m4a`
+- `The Great Band_/Songs of_ 70's_80's/05 Simple _Little_ Thing_.m4a`
 
+The file created in Windows will be:
+
+- `The Great Band_\Songs of_ 70's_80's\05 Simple _Little_ Thing_.m4a`
+
+Note in Linux the `/` character is used to separate directory levels. 
+In Windows the `\` character is used to separate directory levels.
+The examples shown above are for 
 
 
 This is necessary to conform to operating system rules for
