@@ -753,6 +753,58 @@ This `.gif` also shows how the Show/Hide
 Chronology button places song lyrics in a suitable location
 when the artwork size changes.
 
+## Hockey TV Commercial Button Without `compiz`
+
+This video shows what you see and hear when you click 
+one of the Hockey TV Commercial Buttons and `compiz`
+code is commented out.
+
+{% include image.html src="/assets/img/mserve/Gone Fishing no compiz.mp4"
+   alt="Gone Fishing no compiz.mp4"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="Gone Fishing no compiz.mp4"
+%}
+
+
+**Video Highlights:**
+
+- On the top left is Big Screen TV with Hockey Game airing in full 
+screen mode
+- On the top right is a 4K TV running mserve
+- On the bottom is laptop screen with mserve play running.
+- The Hockey TV Commercial button is clicked and the top left TV
+goes "non-Full Screen"
+- A man falling into water appears on the left TV
+- A shark outline appears mimicking mserve on the right TV
+- The shark swims up then left to right to gobble up the falling man
+- The shark momentarily stops and then jumps between right TV
+and left TV. This reflects fact that Compiz is disabled. See
+code below
+- mserve moves to top left TV and bottom right Laptop has outline
+where mserve returns to when hockey commercial countdown ends
+- The Commercial and Intermission Buttons change with text that
+counts down time remaining until Hockey Game resumes. Click
+either button to end the countdown immediately
+- When hockey countdown ends the Big Screen TV returns to full
+screen and the Music Player window goes back to it's original
+location on the 4K TV.
+
+In `image.py` around line 1119 comment out the code:
+
+```python
+# Removing "place" from gsettings allows smooth shark movement over
+# monitors. However there are screen resets with disappearing windows
+# for a couple seconds from time to time. Keeping "place" has shark
+# stop at monitor border then "jump" into the next monitor.
+'''
+if "'place', " in self.old_compiz_plugins:
+    self.place_in_plugins = True
+    override = self.old_compiz_plugins.replace("'place', ", '')
+    #print('override:', override)
+    self.set_gsettings(override)
+'''
+```
+
 ## Using Hockey TV Commercial Button
 
 This video shows what you see and hear when you click 
@@ -785,7 +837,7 @@ location on the 4K TV.
 
 ## mserve Volume During Hockey TV Commercials
 
-This image shows mserve volume (**ffplay**) is 60%:
+This image shows **mserve** volume (`ffplay`) is 60%:
 
 {% include image.html src="/assets/img/mserve/hockey_volume.png"
    alt="hockey_volume.png"
@@ -797,6 +849,24 @@ This image shows mserve volume (**ffplay**) is 60%:
 - mserve volume (reflected by ffplay) is 60%
 
 When TV commercial ends, TV volume returns to 100%.
+
+Currently mserve volume is fixed at 60% for TV commercials:
+
+```python
+TV_BREAK1 = 90          # Hockey TV commercial is 90 seconds
+TV_BREAK2 = 1080        # Hockey TV intermission break is 18 minutes
+TV_VOLUME = 60          # Hockey music play 66% of mserve volume level
+TV_SOUND = "Firefox"    # Hockey broadcast is aired on Firefox browser
+```
+
+60% was found to be a suitable volume level for CBC broadcasts
+of the NHL Stanley Cup Playoffs. YMMV. Note that `TV_VOLUME` is a 
+bit of a misnomer. A more appropriate name would be: *"mserve volume
+when covering up a hockey game's TV commercial break of 90 seconds
+or 18 minutes"(.
+
+FYI the "ALSA plug-in [python2.7]" sound processor is used by
+**mserve** to display the VU meters (`vu_meter.py`).
 
 <a id="hdr18"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr17">ToS</a>  <a href="#hdr2">ToC</a></div>
