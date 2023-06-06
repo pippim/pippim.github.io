@@ -783,5 +783,20 @@ either button to end the countdown immediately
 screen and the Music Player window goes back to it's original
 location on the 4K TV.
 
+## mserve Volume During Hockey TV Commercials
+
+This image shows mserve volume (**ffplay**) is 60%:
+
+{% include image.html src="/assets/img/mserve/hockey_volume.png"
+   alt="hockey_volume.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="hockey_volume.png"
+%}
+
+- The TV volume (reflected by Firefox) is 25%
+- mserve volume (reflected by ffplay) is 60%
+
+When TV commercial ends, TV volume returns to 100%.
+
 <a id="hdr18"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr17">ToS</a>  <a href="#hdr2">ToC</a></div>
