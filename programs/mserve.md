@@ -917,6 +917,10 @@ onboard Intel chipset.
 In order for VU Meters to work in **mserve**, The Pulse Audio
 Volume Control GUI application (**pavucontrol**) is used.
 
+---
+
+### Pulse Audio Volume Control Sound Output
+
 {% include image.html src="/assets/img/mserve/pavucontrol output devices.png"
    alt="pavucontrol output devices.png"
    style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
@@ -935,6 +939,8 @@ can confirm the correct device is selected.
 
 ---
 
+### Pulse Audio Volume Control Recording Tab
+
 {% include image.html src="/assets/img/mserve/pavucontrol recording tab.png"
    alt="pavucontrol recording tab.png"
    style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
@@ -952,6 +958,8 @@ the 50" Sony TV connected to nVidia 970M card.
 Remember in the last screenshot we used Ubuntu's sound
 setting to change output from 50" TV to built-in laptop
 speakers.
+
+### Pulse Audio Volume Control Change Recording Source
 
 ---
 
@@ -975,6 +983,13 @@ with sound volume levels.
 When you change the output device loopback to recording
 **YOU MUST RESTART mserve**. Otherwise the VU meters will
 merely be blank.
+
+References:
+
+- https://github.com/pippim/mserve/blob/main/src/vu_meter.py
+- https://wiki.ubuntu.com/record_system_sound
+- https://github.com/kmein/vu-meter
+
 
 <!-- Foot section doesn't have "skip" button -->
 <a id="hdr19"></a>
