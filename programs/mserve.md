@@ -892,7 +892,7 @@ illustrates how Ubuntu 16.04 displays sound output devices.
 
 {% include image.html src="/assets/img/mserve/Ubuntu 16.04 Sound Settings Panel.png"
    alt="Ubuntu 16.04 Sound Settings Panel.png"
-   style="float: left; width: 60%; margin: 2rem 2rem 1rem 0;"
+   style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
    caption="Ubuntu 16.04 Sound Settings Panel.png"
 %}
 
@@ -917,6 +917,57 @@ onboard Intel chipset.
 In order for VU Meters to work in **mserve**, The Pulse Audio
 Volume Control GUI application (**pavucontrol**) is used.
 
+{% include image.html src="/assets/img/mserve/pavucontrol output devices.png"
+   alt="pavucontrol output devices.png"
+   style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
+   caption="pavucontrol output devices.png"
+%}
+
+This screenshot shows the **pavucontrol** "Output Devices" Tab.
+In this example the output was changed from the first device
+to the Built-in Audio speakers. The changes were made from the
+Ubuntu 16.04 Sound System Settings panel show in the previous
+section.
+
+Notice the thick progress bar. It displays the sound playing
+on the output device and jumps very quickly. This is how you
+can confirm the correct device is selected.
+
+{% include image.html src="/assets/img/mserve/pavucontrol recording tab.png"
+   alt="pavucontrol recording tab.png"
+   style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
+   caption="pavucontrol recording tab.png"
+%}
+
+This screenshot shows the **pavucontrol** "Recording" Tab.
+
+Notice the thick progress bar at the bottom show no sound
+being recorded. That is because it is listening to the
+wrong stream: "Monitor of GM204 High Definition Audio
+Controller Digital Stereo (HDMI)". This stream is for
+the 50" Sony TV connected to nVidia 970M card.
+
+Remember in the last screenshot we used Ubuntu's sound
+setting to change output from 50" TV to built-in laptop
+speakers.
+
+
+{% include image.html src="/assets/img/mserve/pavucontrol recording change capture.png"
+   alt="pavucontrol recording change capture.png"
+   style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
+   caption="pavucontrol recording change capture.png"
+%}
+
+This screenshot also shows the **pavucontrol** "Recording" Tab.
+This time the recording stream is different.
+
+That is because the steam name
+"Monitor of GM204 High Definition Audio
+Controller Digital Stereo (HDMI)" was clicked.
+
+Then the stream "Monitor of Built-in Audio Analog Stereo"
+was selected. Notice the thick progress bar is now populated
+with sound volume levels.
 
 
 <!-- Foot section doesn't have "skip" button -->
