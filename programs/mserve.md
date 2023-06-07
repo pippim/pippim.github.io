@@ -887,8 +887,11 @@ in the next section.
 # VU Meters
 
 The VU Meters show in **mserve** need to be configured using
-`pavucontrol` (*Pulse Audio Volume Control*). The screen shot below
-illustrates how Ubuntu 16.04 displays sound output devices.
+`pavucontrol` (*Pulse Audio Volume Control*). Before we dive
+into **pavucontrol** though, the screenshot below shows
+how Ubuntu 16.04 displays sound output devices. This is for
+comparison purposes and to show you a screen you may already
+be familiar with.
 
 {% include image.html src="/assets/img/mserve/Ubuntu 16.04 Sound Settings Panel.png"
    alt="Ubuntu 16.04 Sound Settings Panel.png"
@@ -896,11 +899,12 @@ illustrates how Ubuntu 16.04 displays sound output devices.
    caption="Ubuntu 16.04 Sound Settings Panel.png"
 %}
 
-In the example **mserve** application the first output device
+In the example **mserve** application used on this webpage, 
+the first output device
 called "GM204 High Definition Audio Controller" is usually used
 for sound output. This belongs to a 50" big screen Sony TV with
-good sound system including a sub-woofer. The soundcard is
-on board a nVidia 970M discrete graphics card.
+good sound system including a sub-woofer. The soundcard (chipset)
+is located on a nVidia 970M discrete graphics card.
 
 The middle output device is "HDMI / DisplayPort - Built-in Audio".
 This sound device is 43" 4K TCL / Google (Android) TV. The
@@ -909,8 +913,8 @@ to HDMI converter plug.
 
 The bottom output device is "Speakers - Built-in Audio". These
 are sub-par speakers on a laptop. The only time they would be
-used if the laptop is unplugged. The sound card is built into
-onboard Intel chipset. 
+used if the laptop was unplugged from the local network (LAN).
+The soundcard is built into onboard Intel chipset. 
 
 ## `pavucontrol` Sound Output Loopback to Microphone
 
@@ -927,7 +931,8 @@ Volume Control GUI application (**pavucontrol**) is used.
    caption="pavucontrol output devices.png"
 %}
 
-This screenshot shows the **pavucontrol** "Output Devices" Tab.
+This screenshot shows the *Pulse Audio Volume Control* 
+"Output Devices" Tab.
 In this example the output was changed from the first device
 to the Built-in Audio speakers. The changes were made from the
 Ubuntu 16.04 Sound System Settings panel show in the previous
@@ -947,7 +952,8 @@ can confirm the correct device is selected.
    caption="pavucontrol recording tab.png"
 %}
 
-This screenshot shows the **pavucontrol** "Recording" Tab.
+This screenshot shows the *Pulse Audio Volume Control*
+"Recording" Tab.
 
 Notice the thick progress bar at the bottom show no sound
 being recorded. That is because it is listening to the
@@ -969,8 +975,10 @@ speakers.
    caption="pavucontrol recording change capture.png"
 %}
 
-This screenshot also shows the **pavucontrol** "Recording" Tab.
-This time the recording stream is different.
+This screenshot also shows the *Pulse Audio Volume Control*
+"Recording" Tab.
+In this example, the recording stream is different than
+the last example.
 
 That is because the steam name
 "Monitor of GM204 High Definition Audio
