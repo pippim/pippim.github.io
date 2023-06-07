@@ -817,9 +817,18 @@ counts down time remaining until Hockey Game resumes. Click
 either button to end the countdown immediately
 - When hockey countdown ends the Big Screen TV returns to full
 screen and the Music Player window goes back to it's original
-location on the 4K TV.
+location on the laptop screen (bottom right).
+- Hockey countdown is prematurely ended in this example by
+clicking "Time remaining" button and selected "Yes" to
+confirmation question to end early.
 
-In `image.py` around line 1119 comment out the code:
+---
+
+Although it doesn't look as nice with the shark "jumping" between
+monitors, it works more reliably. To disable `gsettings` and the
+`compiz` option to disable `place` windows (which allows for smooth
+shark movement across monitors but leads to instability), open the
+file  `image.py` and around line 1119 comment out the code:
 
 ```python
 # Removing "place" from gsettings allows smooth shark movement over
@@ -866,7 +875,50 @@ when covering up a hockey game's TV commercial break of 90 seconds
 or 18 minutes"(.
 
 FYI the "ALSA plug-in [python2.7]" sound processor is used by
-**mserve** to display the VU meters (`vu_meter.py`).
+**mserve** to display the VU meters (`vu_meter.py`). Configuring the
+VU Meters using system output loopback to input stream is described
+in the next section.
+
+---
 
 <a id="hdr18"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr17">ToS</a>  <a href="#hdr2">ToC</a></div>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr17">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr19">Skip</a></div>
+
+# VU Meters
+
+The VU Meters show in **mserve** need to be configured using
+`pavucontrol` (*Pulse Audio Volume Control*). The screen shot below
+illustrates how Ubuntu 16.04 displays sound output devices.
+
+{% include image.html src="/assets/img/mserve/Ubuntu 16.04 Sound Settings Panel.png"
+   alt="Ubuntu 16.04 Sound Settings Panel.png"
+   style="float: left; width: 60%; margin: 2rem 2rem 1rem 0;"
+   caption="Ubuntu 16.04 Sound Settings Panel.png"
+%}
+
+In the example **mserve** application the first output device
+called "GM204 High Definition Audio Controller" is usually used
+for sound output. This belongs to a 50" big screen Sony TV with
+good sound system including a sub-woofer. The soundcard is
+on board a nVidia 970M discrete graphics card.
+
+The middle output device is "HDMI / DisplayPort - Built-in Audio".
+This sound device is 43" 4K TCL / Google (Android) TV. The
+sound card is built into Intel Skylake (Thunderbolt 3) USB-C
+to HDMI converter plug.
+
+The bottom output device is "Speakers - Built-in Audio". These
+are sub-par speakers on a laptop. The only time they would be
+used if the laptop is unplugged. The sound card is built into
+onboard Intel chipset. 
+
+## `pavucontrol` Sound Output Loopback to Microphone
+
+In order for VU Meters to work in **mserve**, The Pulse Audio
+Volume Control GUI application (**pavucontrol**) is used.
+
+
+
+<!-- Foot section doesn't have "skip" button -->
+<a id="hdr19"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr18">ToS</a>  <a href="#hdr2">ToC</a></div>
