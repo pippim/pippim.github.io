@@ -933,6 +933,8 @@ Notice the thick progress bar. It displays the sound playing
 on the output device and jumps very quickly. This is how you
 can confirm the correct device is selected.
 
+---
+
 {% include image.html src="/assets/img/mserve/pavucontrol recording tab.png"
    alt="pavucontrol recording tab.png"
    style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
@@ -951,6 +953,7 @@ Remember in the last screenshot we used Ubuntu's sound
 setting to change output from 50" TV to built-in laptop
 speakers.
 
+---
 
 {% include image.html src="/assets/img/mserve/pavucontrol recording change capture.png"
    alt="pavucontrol recording change capture.png"
@@ -969,6 +972,9 @@ Then the stream "Monitor of Built-in Audio Analog Stereo"
 was selected. Notice the thick progress bar is now populated
 with sound volume levels.
 
+When you change the output device loopback to recording
+**YOU MUST RESTART mserve**. Otherwise the VU meters will
+merely be blank.
 
 <!-- Foot section doesn't have "skip" button -->
 <a id="hdr19"></a>
