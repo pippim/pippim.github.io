@@ -34,18 +34,18 @@ turns on
 turns on
 - TCL / Google TV turns on
 
-Press the power button on Sony TV remote control then:
+Press the power button on Sony TV remote control and then:
 
 - Sony TV will be shut off (which power button does anyway)
-- Google Android TV will be shut off
+- TCL/Google Android TV will be shut off
 - Light behind the Sony TV will be shut off
 - Light behind the TCL / Google TV will be shut off
-- Computer will be put to sleep (or shutdown if configured)
+- Computer will be put to sleep or shutdown
 - **tvpowered** script continues when system wakes up
 
-To power off electric lights the 
+To power off the electric lights behind the TVs, the script 
 `/etc/NetworkManager/dispatcher.d/pre-down.d/smartplug_off`
-script is run. See below for details on setting up script.
+is run. See below for details on setting up script.
 
 A variety of independent scripts are provided to make life
 convenient. 
@@ -181,7 +181,7 @@ Below is the Bash script you can copy to your system:
 # PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
 #
 # DESC: When TV is powered off automatically suspend the laptop.
-# DATE: June 9, 2020.  Modified May 30, 2023.
+# DATE: June 9, 2020.  Modified June 10, 2023.
 #
 # NOTE: Written for Ask Ubuntu question:
 #       https://askubuntu.com/questions/1247484/
@@ -220,6 +220,8 @@ Below is the Bash script you can copy to your system:
 
 #       May 28 2023: Turn on TVs and lights behind TVs on resume.
 
+#       Jun 10 2023: Use nmap to verify TCL/Google TV on-line
+
 # Sources:
 
 # https://gist.github.com/kalleth/e10e8f3b8b7cb1bac21463b0073a65fb#cec-sonycec
@@ -233,7 +235,7 @@ SCTL=suspend        # systemctl parameter: 'suspend' or 'poweroff'
 IP=192.168.0.19     # IP address for Sony TV on LAN
 ADB_IP=192.168.0.17 # IP address for Google TV on LAN for Android Debug Bridge
 PWRD=123            # Password for Sony TV IP Connect (Pre-Shared key)
-# Goggle TV MAC address for wake on lan. No effect if TV already on.
+# TCL / Goggle TV MAC address for wake on lan. No effect if TV already on.
 GTV_MAC="c0:79:82:41:2f:1f"
 
 # Must have curl package.
@@ -250,6 +252,11 @@ command -v notify-send >/dev/null 2>&1 || { echo >&2 \
 command -v adb >/dev/null 2>&1 || { echo >&2 \
         "'adb' package required but it is not installed.  Aborting."; \
         exit 4; }
+
+# Must have nmap package
+command -v nmap >/dev/null 2>&1 || { echo >&2 \
+        "'nmap' package required but it is not installed.  Aborting."; \
+        exit 5; }
 
 cURLit () {
 
@@ -481,6 +488,8 @@ TenMinuteSpam () {
         (( Cnt++ ))
     done
     
+    GTV_Online=$(nmap "$ADB_IP" | grep 'host up')
+    echo 'GTV_Online for Ten Minute Span Start:' "$GTV_Online"
     GetVolume
     LastVolume="$?"
     VolumeBar $LastVolume
@@ -497,16 +506,15 @@ TenMinuteSpam () {
         light-tog2                  # Turn on light behind TV 2
     fi
     if command -v wakeonlan >/dev/null 2>&1 ; then
-        echo Waking up TCL TV
-        wakeonlan "$GTV_MAC"        # Turn on google TV
-        sleep 1                     # Doesn't work right away...
-        wakeonlan "$GTV_MAC"        # Turn on google TV
-        sleep 1                     # Doesn't work right away...
-        wakeonlan "$GTV_MAC"        # Turn on google TV
-        sleep 1                     # Doesn't work right away...
-        wakeonlan "$GTV_MAC"        # Turn on google TV
-        sleep 1                     # Doesn't work right away...
-        wakeonlan "$GTV_MAC"        # Turn on google TV
+        echo GTV_Online start value: "$GTV_Online"
+        while [[ "$GTV_Online" == "" ]]; do
+            echo Waking up TCL TV
+            wakeonlan "$GTV_MAC"        # Turn on google TV
+            GTV_Online=$(nmap "$ADB_IP" | grep 'host up')
+            # nmap takes 3 seconds to run and fail but .1 to succeed
+        done
+        GTV_Online=$(nmap "$ADB_IP" | grep 'host up')
+        echo GTV_Online end value: "$GTV_Online"
     fi
     if command -v adb >/dev/null 2>&1 ; then
         echo "Connecting to ADB (Android Debugging Bridge) on: $ADB_IP"
