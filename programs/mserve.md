@@ -449,12 +449,17 @@ def open_db():
 <a id="hdr8"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
-# Reopen Windows at Same Location
+# Windows Open Where You Want Them
 
 Most applications always open their windows at the same locations.
 Then you have to move the windows to where you want them. `mserve` 
-remembers where you like your windows to be and moves them to the
-location you last moved them to.
+remembers where you like your windows to be and moves them there.
+
+Besides the dozen or so windows that **mserve** uses, it also
+remembers if you use Hockey TV commercial buttons or FF & Rewind
+buttons instead. It also remembers if you prefer the Chronology
+(playlist) hidden or shown and the exact second of the last song
+you were listening to, or even if it was paused. 
 
 This is how mserve remembers and restores window positions and sizes:
 
@@ -495,11 +500,11 @@ def save_window_geom(name, geom):
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
-# Tooltips
+# Delayed Tooltips That Slowly Fade-In and Fade-Out
 
 A lot of work has gone into crafting the tooltips to delay before
-gradually fading in. Also, to gradually fade out. And finally, to
-follow the mouse pointer.
+gradually fading in. Also, to gradually fade out. And finally, the
+Tooltip message bubble follows the moving mouse pointer.
 
 <video src="https://user-images.githubusercontent.com/92641463/149630335-998fb026-67c5-4a4f-9cd0-fd2336f16e78.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149630335-998fb026-67c5-4a4f-9cd0-fd2336f16e78.mp4"
@@ -515,6 +520,9 @@ Key features of tooltips:
 - They move instep with mouse movements
 - They fade out
 
+Besides the regular Button Tooltips, Tooltips are also provided
+for menu options, and full panels such as Lyrics and Chronology 
+(playlist pane).
 
 ---
 
@@ -859,7 +867,7 @@ This image shows **mserve** volume (`ffplay`) is 60%:
 
 When TV commercial ends, TV volume returns to 100%.
 
-Currently mserve volume is fixed at 60% for TV commercials:
+Currently mserve volume is initialized at 60% for TV commercials:
 
 ```python
 TV_BREAK1 = 90          # Hockey TV commercial is 90 seconds
@@ -872,12 +880,25 @@ TV_SOUND = "Firefox"    # Hockey broadcast is aired on Firefox browser
 of the NHL Stanley Cup Playoffs. YMMV. Note that `TV_VOLUME` is a 
 bit of a misnomer. A more appropriate name would be: *"mserve volume
 when covering up a hockey game's TV commercial break of 90 seconds
-or 18 minutes"(.
+or 18 minutes".
 
 FYI the "ALSA plug-in [python2.7]" sound processor is used by
 **mserve** to display the VU meters (`vu_meter.py`). Configuring the
 VU Meters using system output loopback to input stream is described
 in the next section.
+
+## Change **mserve** Volume Default for TV Commercials
+
+Click the 'Edit' dropdown menu and then select
+'Volume for TV Commercials' and this screen appears:
+
+{% include image.html src="/assets/img/mserve/mserve volume for tv commercials.png"
+   alt="mserve volume for tv commercials.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="mserve volume for tv commercials.png"
+%}
+
+Hopefully this screen is self-explanatory.
 
 ---
 
@@ -916,12 +937,12 @@ are sub-par speakers on a laptop. The only time they would be
 used if the laptop was unplugged from the local network (LAN).
 The soundcard is built into onboard Intel chipset. 
 
+---
+
 ## `pavucontrol` Sound Output Loopback to Microphone
 
 In order for VU Meters to work in **mserve**, The Pulse Audio
 Volume Control GUI application (**pavucontrol**) is used.
-
----
 
 ### Pulse Audio Volume Control Sound Output
 
@@ -965,9 +986,10 @@ Remember in the last screenshot we used Ubuntu's sound
 setting to change output from 50" TV to built-in laptop
 speakers.
 
-### Pulse Audio Volume Control Change Recording Source
 
 ---
+
+### Pulse Audio Volume Control Change Recording Source
 
 {% include image.html src="/assets/img/mserve/pavucontrol recording change capture.png"
    alt="pavucontrol recording change capture.png"
