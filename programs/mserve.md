@@ -852,7 +852,7 @@ if "'place', " in self.old_compiz_plugins:
 '''
 ```
 
-## mserve Volume During Hockey TV Commercials
+## **mserve** Volume During Hockey TV Commercials
 
 This image shows **mserve** volume (`ffplay`) is 60%:
 
@@ -880,7 +880,7 @@ TV_SOUND = "Firefox"    # Hockey broadcast is aired on Firefox browser
 of the NHL Stanley Cup Playoffs. YMMV. Note that `TV_VOLUME` is a 
 bit of a misnomer. A more appropriate name would be: *"mserve volume
 when covering up a hockey game's TV commercial break of 90 seconds
-or 18 minutes".
+or 18 minutes"*.
 
 FYI the "ALSA plug-in [python2.7]" sound processor is used by
 **mserve** to display the VU meters (`vu_meter.py`). Configuring the
