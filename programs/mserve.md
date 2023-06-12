@@ -138,7 +138,6 @@ Additional Notes:
 This `.gif` (no sound) shows how a custom image is used when
 a song with no artwork is played:
 
-
 {% include image.html src="/assets/img/mserve/No Art 5.gif"
    alt="No Art 5.gif"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
@@ -149,8 +148,8 @@ Show below are the lines you need to change
 in the `mserve.py` Python script:
 
 ```python
-# When less than 300x300 or no artwork for song use this image file
-ARTWORK_FOR_LOW_RES = g.PROGRAM_DIR + "Be Creative 2 cropped.jpg"
+# When no artwork for song use this image file
+ARTWORK_SUBSTITUTE = g.PROGRAM_DIR + "Be Creative 2 cropped.jpg"
 # "Be Creative 2 cropped.png" is a 4.4 MB image 3120x3120
 ```
 
@@ -500,7 +499,7 @@ def save_window_geom(name, geom):
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
-# Delayed Tooltips That Slowly Fade-In and Fade-Out
+# Tooltips Slowly Fade-In and Fade-Out
 
 A lot of work has gone into crafting the tooltips to delay before
 gradually fading in. Also, to gradually fade out. And finally, the
@@ -722,9 +721,50 @@ The "Action" column states the reason for updating is that the
 file size has increased. This was due to album artwork being
 added to the source files.
 
+---
+
 <a id="hdr16"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr15">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr17">Skip</a></div>
 
+# Playlists
+
+The main music library window follows the directory structure of
+your storage device:
+
+- The top level points to "My Music"
+- The second level points to Artists under "My Music"
+- The third level points to Albums under each Artist
+- The fourth level points to Songs under each Album
+
+> **NOTE:** "My Music" is an over simplification for the sake of
+> example. You can start `m` (the splash screen for **mserve.py**)
+> by typing: 
+> `m "/mnt/music/Users/Person/Music/iTunes/iTunes Media/Music/"`
+> 
+> You can also call `m` after changing to a music directory. E.G.
+> `cd ~/Music/Pink Floyd`. Type type `m .` and you will be presented
+> with all the Albums you have for ***Pink Floyd***
+> 
+> If you don't pass a parameter to `m` it will reload the last
+> location used and continue playing where it left off.
+
+The chevron (triangle) is clicked to expand / collapse entries
+under Artists and Albums.
+
+The check box is colored solid when "checked" and is hollow
+when "unchecked". If a line appears that means "tri-state" and
+underneath the Artist or Album some songs are "checked" and
+some songs are "unchecked".
+
+As you check and uncheck individual songs, or entire Artists or,
+entire Albums a list is built in memory. Then you can Apply or
+Cancel changes.
+
+New songs are added into the Chronology (Playlist) after the 
+current playing song position.
+
+If you make huge mistakes you can abandon changes with the
+option "*Exit without saving Playlist*".
 
 ---
 
@@ -865,9 +905,12 @@ This image shows **mserve** volume (`ffplay`) is 60%:
 - The TV volume (reflected by Firefox) is 25%
 - mserve volume (reflected by ffplay) is 60%
 
-When TV commercial ends, TV volume returns to 100%.
+When TV commercial ends, TV volume returns to 100% in 10 steps
+over 1/2 second. Music is paused in **mserve** and volume is
+reduced from 60% to 25% in 10 steps over 1/2 second.
 
-Currently mserve volume is initialized at 60% for TV commercials:
+As of June 11, 2023, **mserve** TV Commercial volume is initialized 
+at 60% on line 401 in `mserve.py`:
 
 ```python
 TV_BREAK1 = 90          # Hockey TV commercial is 90 seconds
