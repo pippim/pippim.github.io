@@ -181,7 +181,7 @@ Below is the Bash script you can copy to your system:
 # PATH: /usr/bin/ OR ~/bin (/home/USERNAME/bin) OR /mnt/e/bin/
 #
 # DESC: When TV is powered off automatically suspend the laptop.
-# DATE: June 9, 2020.  Modified June 10, 2023.
+# DATE: June 9, 2020.  Modified June 15, 2023.
 #
 # NOTE: Written for Ask Ubuntu question:
 #       https://askubuntu.com/questions/1247484/
@@ -498,11 +498,11 @@ TenMinuteSpam () {
         "Fully activated.\n System will $SCTL when TV powered off. Volume: $LastVolume $Bar"
 
     if command -v light-tog >/dev/null 2>&1 ; then
-        echo Tunring on Sony TV Light
+        echo Turning on Sony TV Light
         light-tog                   # Turn on light behind TV 1
     fi
     if command -v light-tog2 >/dev/null 2>&1 ; then
-        echo Tunring on TCL TV Light
+        echo Turning on TCL TV Light
         light-tog2                  # Turn on light behind TV 2
     fi
     if command -v wakeonlan >/dev/null 2>&1 ; then
