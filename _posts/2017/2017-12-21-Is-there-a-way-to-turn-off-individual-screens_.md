@@ -10,9 +10,9 @@ created_date: 2017-12-21 02:02:42
 edit_date:    2020-06-12 14:37:07
 votes:        "6 "
 favorites:    
-views:        "11,219 "
+views:        "11,549 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-12-21-Is-there-a-way-to-turn-off-individual-screens_.md
 toc:          false
 navigation:   false

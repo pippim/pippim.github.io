@@ -8,11 +8,11 @@ type:         Answer
 tags:         hard-drive
 created_date: 2017-02-25 23:02:23
 edit_date:    2017-05-26 17:20:04
-votes:        "68 "
+votes:        "69 "
 favorites:    
-views:        "190,762 "
+views:        "194,502 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-25-Does-Ubuntu-have-a-_device-manager_-equivalent_-And-what-is-an-easy-way-to-access-USB-drives_.md
 toc:          false
 navigation:   false

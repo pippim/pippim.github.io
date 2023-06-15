@@ -10,9 +10,9 @@ created_date: 2017-08-26 02:34:42
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,919 "
+views:        "1,933 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-08-26-Prevent-automatic-reboot-after-Ubuntu-Core-update-on-16.xx.md
 toc:          false
 navigation:   false

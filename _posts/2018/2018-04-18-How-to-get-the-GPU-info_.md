@@ -10,9 +10,9 @@ created_date: 2018-04-18 23:05:59
 edit_date:    2020-06-12 14:37:07
 votes:        "8 "
 favorites:    
-views:        "1,640,276 "
+views:        "1,685,518 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-18-How-to-get-the-GPU-info_.md
 toc:          false
 navigation:   false

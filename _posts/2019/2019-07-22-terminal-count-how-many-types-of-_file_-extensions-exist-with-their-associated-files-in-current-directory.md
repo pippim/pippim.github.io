@@ -10,9 +10,9 @@ created_date: 2019-07-22 04:26:20
 edit_date:    2019-07-22 04:35:45
 votes:        "1 "
 favorites:    
-views:        "830 "
+views:        "852 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-22-terminal-count-how-many-types-of-_file_-extensions-exist-with-their-associated-files-in-current-directory.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-05-17 01:29:22
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "10,118 "
+views:        "10,252 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-17-Bash-script-to-run-python-script-for-all-images-in-all-subdirectories.md
 toc:          false
 navigation:   false

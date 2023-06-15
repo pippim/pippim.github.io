@@ -10,9 +10,9 @@ created_date: 2018-06-28 10:34:17
 edit_date:    2018-06-28 10:50:02
 votes:        "4 "
 favorites:    
-views:        "459 "
+views:        "468 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-28-How-to-reassign-touchpad-buttons-to-keyboard_.md
 toc:          false
 navigation:   false

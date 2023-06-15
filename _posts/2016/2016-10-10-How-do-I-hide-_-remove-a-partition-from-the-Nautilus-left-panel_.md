@@ -10,9 +10,9 @@ created_date: 2016-10-10 00:48:42
 edit_date:    2016-10-14 01:09:17
 votes:        "8 "
 favorites:    
-views:        "12,554 "
+views:        "12,688 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-10-How-do-I-hide-_-remove-a-partition-from-the-Nautilus-left-panel_.md
 toc:          false
 navigation:   false

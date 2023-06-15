@@ -10,9 +10,9 @@ created_date: 2019-07-13 22:31:16
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "5,908 "
+views:        "5,959 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-13-CPU-overheating-in-Ubuntu-18.04.md
 toc:          false
 navigation:   false

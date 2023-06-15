@@ -55,32 +55,32 @@
 │   ├── program.html
 │   └── test.html
 ├── _posts
-│   ├── 2016 [179 entries exceeds filelimit, not opening dir]
+│   ├── 2016 [180 entries exceeds filelimit, not opening dir]
 │   ├── 2017 [156 entries exceeds filelimit, not opening dir]
-│   ├── 2018 [443 entries exceeds filelimit, not opening dir]
-│   ├── 2019 [278 entries exceeds filelimit, not opening dir]
+│   ├── 2018 [444 entries exceeds filelimit, not opening dir]
+│   ├── 2019 [280 entries exceeds filelimit, not opening dir]
 │   ├── 2020 [65 entries exceeds filelimit, not opening dir]
 │   ├── 2021 [33 entries exceeds filelimit, not opening dir]
-│   └── 2022
-│       ├── 2022-01-05-How-to-print-out-status-bar-and-percentage_.md
-│       ├── 2022-01-05-Python-to-print-out-status-bar-and-percentage.md
-│       ├── 2022-02-12-How-to-change-_lsblk_-sort-order_.md
-│       ├── 2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
-│       ├── 2022-02-18-Unable-to-lock-screen-with-Cron-or-Settings.md
-│       ├── 2022-02-23-Frequent-switches-between-Ethernet-and-Wifi.md
-│       ├── 2022-02-24-stdin_-invalid-argument.md
-│       ├── 2022-03-09-SyntaxError_-__-string-literal-contains-an-unescaped-line-break.md
-│       ├── 2022-03-13-Temporarily-disable-distracting-software.md
-│       ├── 2022-03-14-How-to-adjust-Trackpad-_Tap-Sensitivity_-without-adjusting-mouse-speed.md
-│       ├── 2022-03-20-Ubuntu-can_t-find-Wifi-Driver-on-Maestro-Laptop.md
-│       ├── 2022-04-13-How-does-Ubuntu-handle-addition-of-RAM_.md
-│       └── 2022-06-12-How-to-kill-a-program-after-it_s-executed-from-a-script_.md
+│   ├── 2022
+│   │   ├── 2022-01-05-How-to-print-out-status-bar-and-percentage_.md
+│   │   ├── 2022-01-05-Python-to-print-out-status-bar-and-percentage.md
+│   │   ├── 2022-02-12-How-to-change-_lsblk_-sort-order_.md
+│   │   ├── 2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
+│   │   ├── 2022-02-18-Unable-to-lock-screen-with-Cron-or-Settings.md
+│   │   ├── 2022-02-23-Frequent-switches-between-Ethernet-and-Wifi.md
+│   │   ├── 2022-02-24-stdin_-invalid-argument.md
+│   │   ├── 2022-03-09-SyntaxError_-__-string-literal-contains-an-unescaped-line-break.md
+│   │   ├── 2022-03-13-Temporarily-disable-distracting-software.md
+│   │   ├── 2022-03-14-How-to-adjust-Trackpad-_Tap-Sensitivity_-without-adjusting-mouse-speed.md
+│   │   ├── 2022-03-20-Ubuntu-can_t-find-Wifi-Driver-on-Maestro-Laptop.md
+│   │   ├── 2022-04-13-How-does-Ubuntu-handle-addition-of-RAM_.md
+│   │   └── 2022-06-12-How-to-kill-a-program-after-it_s-executed-from-a-script_.md
+│   └── 2023
 ├── programs
 │   ├── hyperlink.md
 │   ├── iothings.md
 │   ├── mserve.md
 │   ├── mt.md
-│   ├── programs.md
 │   ├── stack.md
 │   ├── tcm.md
 │   └── tim-ta.md
@@ -111,4 +111,4 @@
 ├── style.scss
 └── test.md
 
-19 directories, 93 files
+20 directories, 92 files

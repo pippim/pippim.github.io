@@ -8,11 +8,11 @@ type:         Answer
 tags:         system-monitor cpuinfo conky vnstat
 created_date: 2018-03-12 19:23:55
 edit_date:    2020-06-12 14:37:07
-votes:        "27 "
+votes:        "28 "
 favorites:    
-views:        "67,326 "
+views:        "68,485 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-12-Is-there-any-Widget-that-can-show-my-CPU-and-other-performances-live_.md
 toc:          false
 navigation:   false

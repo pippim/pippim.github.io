@@ -10,9 +10,9 @@ created_date: 2016-08-29 10:40:46
 edit_date:    2017-04-13 12:24:53
 votes:        "3 "
 favorites:    
-views:        "1,861 "
+views:        "1,895 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-29-How-to-Prevent-users-from-copying-files-to-usb.._.md
 toc:          false
 navigation:   false

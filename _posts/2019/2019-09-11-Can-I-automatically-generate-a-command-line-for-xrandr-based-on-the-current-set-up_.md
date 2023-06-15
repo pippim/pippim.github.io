@@ -10,9 +10,9 @@ created_date: 2019-09-11 11:20:30
 edit_date:    
 votes:        "5 "
 favorites:    
-views:        "1,405 "
+views:        "1,471 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-11-Can-I-automatically-generate-a-command-line-for-xrandr-based-on-the-current-set-up_.md
 toc:          false
 navigation:   false

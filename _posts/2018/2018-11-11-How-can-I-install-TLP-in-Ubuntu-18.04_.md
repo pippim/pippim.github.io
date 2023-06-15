@@ -10,9 +10,9 @@ created_date: 2018-11-11 14:47:09
 edit_date:    2018-12-29 06:11:21
 votes:        "19 "
 favorites:    
-views:        "24,236 "
+views:        "24,439 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-11-11-How-can-I-install-TLP-in-Ubuntu-18.04_.md
 toc:          false
 navigation:   false

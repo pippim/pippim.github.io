@@ -10,9 +10,9 @@ created_date: 2018-03-14 02:56:23
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "51,109 "
+views:        "52,832 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-14-How-to-access-Advanced-Options-in-GRUB_.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-02-07 01:49:21
 edit_date:    2018-02-07 02:22:34
 votes:        "3 "
 favorites:    
-views:        "10,776 "
+views:        "10,785 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-07-How-does-the-new-_Bash-on-Windows-10_-really-work_.md
 toc:          false
 navigation:   false

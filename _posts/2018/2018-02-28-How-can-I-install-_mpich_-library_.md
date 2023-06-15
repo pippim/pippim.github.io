@@ -10,9 +10,9 @@ created_date: 2018-02-28 01:26:56
 edit_date:    2018-03-02 12:47:01
 votes:        "6 "
 favorites:    
-views:        "38,788 "
+views:        "39,467 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-28-How-can-I-install-_mpich_-library_.md
 toc:          false
 navigation:   false

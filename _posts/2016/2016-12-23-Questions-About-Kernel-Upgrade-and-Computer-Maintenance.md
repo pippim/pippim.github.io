@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "136 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-23-Questions-About-Kernel-Upgrade-and-Computer-Maintenance.md
 toc:          false
 navigation:   false

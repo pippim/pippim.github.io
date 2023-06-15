@@ -8,11 +8,11 @@ type:         Answer
 tags:         grub2 fsck
 created_date: 2018-05-21 16:44:54
 edit_date:    
-votes:        "5 "
+votes:        "6 "
 favorites:    
-views:        "34,492 "
+views:        "35,072 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-21-how-to-do-I-force-yes-on-fsck.md
 toc:          false
 navigation:   false

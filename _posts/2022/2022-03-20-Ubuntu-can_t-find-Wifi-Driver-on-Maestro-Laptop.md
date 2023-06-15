@@ -10,9 +10,9 @@ created_date: 2022-03-20 23:29:09
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "397 "
+views:        "426 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-03-20-Ubuntu-can_t-find-Wifi-Driver-on-Maestro-Laptop.md
 toc:          false
 navigation:   false

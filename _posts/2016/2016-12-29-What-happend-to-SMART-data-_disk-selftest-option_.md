@@ -10,9 +10,9 @@ created_date: 2016-12-29 01:33:11
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "1,273 "
+views:        "1,278 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-29-What-happend-to-SMART-data-_disk-selftest-option_.md
 toc:          false
 navigation:   false

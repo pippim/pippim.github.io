@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "268 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-18-Is-there-a-way-to-install-Ubuntu-completely-on-a-portable-external-HDD-and-boot-into-it-on-any-computer_laptop_.md
 toc:          false
 navigation:   false

@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1039377
 type:         Answer
 tags:         software-recommendation multi-timer yad
 created_date: 2018-05-23 11:14:12
-edit_date:    2021-12-04 22:06:42
-votes:        "12 "
+edit_date:    2023-04-25 00:19:00
+votes:        "13 "
 favorites:    
-views:        "5,091 "
+views:        "5,231 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-23-Set-of-countdown-timers-with-alarm.md
 toc:          true
 navigation:   true
@@ -23,11 +23,9 @@ clipboard:    false
 <a id="hdr1"></a>
 <div class="hdr-bar">  <a href="#hdr2">ToC</a>  <a href="#hdr2">Skip</a></div>
 
-# Multi-timer
+## Edit April 24, 2023 - Tim-ta (Timed Tasks)
 
-`multi-timer` is a bash script that works in all Ubuntu versions. It also works in Windows 10 with Ubuntu Desktop installed. `yad` is used for GUI setup and countdown progress bars.
-
-[![peek wash cycle.png][1]][1]
+Multi-timer described below has been superseded by ***Tim-ta*** which [runs](https://www.pippim.com/programs/tim-ta.html) in your web browser on any device.
 
 
 <a id="hdr2"></a>
@@ -38,6 +36,16 @@ clipboard:    false
 
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
+
+# Multi-timer
+
+`multi-timer` is a bash script that works in all Ubuntu versions. It also works in Windows 10 with Ubuntu Desktop installed. `yad` is used for GUI setup and countdown progress bars.
+
+[![peek wash cycle.png][1]][1]
+
+
+<a id="hdr4"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
 
 ## Features
 
@@ -57,8 +65,8 @@ clipboard:    false
 Requires `yad` package `sudo apt install yad`
 
 
-<a id="hdr4"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr3">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr5">Skip</a></div>
+<a id="hdr5"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 ## Notebook Configuration Tab
 
@@ -75,8 +83,8 @@ The ***Configuration Tab*** lets you:
 [![multi-timer configuration.png][2]][2]
 
 
-<a id="hdr5"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
+<a id="hdr6"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
 
 ## Notebook Timers Tab
 
@@ -88,8 +96,8 @@ The ***Timers Tab*** allows you to:
 [![multi-timer timers.png][3]][3]
 
 
-<a id="hdr6"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr5">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr7">Skip</a></div>
+<a id="hdr7"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
 ## Progress Bar Display
 
@@ -102,8 +110,8 @@ As `multi-timer` counts down progress bars are used for:
 [![multi-timer progress bars.gif][4]][4]
 
 
-<a id="hdr7"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
+<a id="hdr8"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 ## Bash Script
 
@@ -792,8 +800,8 @@ exit 0
 ```
 
 
-<a id="hdr8"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr9">Skip</a></div>
+<a id="hdr9"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 ## Sysmonitor Indicator Interface
 
@@ -809,6 +817,6 @@ To setup Sysmonitor Indicator see this Q&A: [In Ubuntu Unity, can I display the 
 
 
 
-<a id="hdr9"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a></div>
+<a id="hdr10"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a></div>
 

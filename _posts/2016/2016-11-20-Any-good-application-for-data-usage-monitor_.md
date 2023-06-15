@@ -8,11 +8,11 @@ type:         Answer
 tags:         software-recommendation broadband vnstat conky
 created_date: 2016-11-20 22:49:02
 edit_date:    2018-01-13 16:40:21
-votes:        "10 "
+votes:        "11 "
 favorites:    
-views:        "41,107 "
+views:        "41,328 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-20-Any-good-application-for-data-usage-monitor_.md
 toc:          false
 navigation:   true

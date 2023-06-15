@@ -10,9 +10,9 @@ created_date: 2017-07-13 00:35:40
 edit_date:    
 votes:        "8 "
 favorites:    
-views:        "666,017 "
+views:        "671,791 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-07-13-Any-way-to-check-the-clock-speed-of-my-processor_.md
 toc:          false
 navigation:   false

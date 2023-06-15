@@ -10,9 +10,9 @@ created_date: 2018-05-15 11:52:58
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "3,003 "
+views:        "3,126 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-15-CPU-and-memory-usage-for-last-5-minutes.md
 toc:          false
 navigation:   false

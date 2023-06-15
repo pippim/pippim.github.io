@@ -10,9 +10,9 @@ created_date: 2020-12-08 11:57:27
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "29,345 "
+views:        "30,149 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-12-08-How-to-change-boot-priority_.md
 toc:          false
 navigation:   false

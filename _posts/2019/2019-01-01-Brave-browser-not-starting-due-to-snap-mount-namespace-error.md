@@ -10,9 +10,9 @@ created_date: 2019-01-01 02:06:48
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,849 "
+views:        "1,894 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-01-01-Brave-browser-not-starting-due-to-snap-mount-namespace-error.md
 toc:          false
 navigation:   false

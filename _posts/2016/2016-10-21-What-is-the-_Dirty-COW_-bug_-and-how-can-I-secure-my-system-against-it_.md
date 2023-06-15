@@ -10,9 +10,9 @@ created_date: 2016-10-21 03:35:38
 edit_date:    2020-06-12 14:37:07
 votes:        "19 "
 favorites:    
-views:        "17,483 "
+views:        "17,492 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-21-What-is-the-_Dirty-COW_-bug_-and-how-can-I-secure-my-system-against-it_.md
 toc:          false
 navigation:   false

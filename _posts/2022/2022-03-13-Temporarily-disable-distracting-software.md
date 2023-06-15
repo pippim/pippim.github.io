@@ -10,9 +10,9 @@ created_date: 2022-03-13 22:28:08
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "354 "
+views:        "374 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-03-13-Temporarily-disable-distracting-software.md
 toc:          false
 navigation:   false

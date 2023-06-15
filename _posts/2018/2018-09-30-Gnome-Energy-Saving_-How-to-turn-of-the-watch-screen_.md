@@ -10,9 +10,9 @@ created_date: 2018-09-30 20:04:05
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "619 "
+views:        "621 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-09-30-Gnome-Energy-Saving_-How-to-turn-of-the-watch-screen_.md
 toc:          false
 navigation:   false

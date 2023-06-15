@@ -10,9 +10,9 @@ created_date: 2018-05-22 12:05:03
 edit_date:    2018-05-22 12:25:26
 votes:        "3 "
 favorites:    
-views:        "1,232 "
+views:        "1,262 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-22-How-to-have-script-detect-if-terminal-emulator-is-running-in-a-desktop-session-or-not_.md
 toc:          false
 navigation:   false

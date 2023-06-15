@@ -8,11 +8,11 @@ type:         Answer
 tags:         upgrade 18.04 grub
 created_date: 2018-04-29 20:51:34
 edit_date:    2018-05-03 22:59:55
-votes:        "27 "
+votes:        "28 "
 favorites:    
-views:        "61,151 "
+views:        "61,729 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-29-Why-am-I-not-getting-the-Ubuntu-18.04-upgrade_.md
 toc:          false
 navigation:   false

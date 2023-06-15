@@ -8,11 +8,11 @@ type:         Answer
 tags:         prompt
 created_date: 2016-11-23 04:10:00
 edit_date:    
-votes:        "11 "
+votes:        "12 "
 favorites:    
-views:        "64,148 "
+views:        "66,162 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-23-How-do-I-stop-Ubuntu-from-asking-for-my-password-every-time-I-install-something_.md
 toc:          false
 navigation:   false

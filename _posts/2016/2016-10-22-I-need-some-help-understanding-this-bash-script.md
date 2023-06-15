@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "105 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-22-I-need-some-help-understanding-this-bash-script.md
 toc:          false
 navigation:   false

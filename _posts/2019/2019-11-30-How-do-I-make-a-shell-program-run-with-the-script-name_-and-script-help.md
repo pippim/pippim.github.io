@@ -10,9 +10,9 @@ created_date: 2019-11-30 17:38:12
 edit_date:    2019-11-30 18:25:09
 votes:        "1 "
 favorites:    
-views:        "163 "
+views:        "164 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-30-How-do-I-make-a-shell-program-run-with-the-script-name_-and-script-help.md
 toc:          false
 navigation:   false

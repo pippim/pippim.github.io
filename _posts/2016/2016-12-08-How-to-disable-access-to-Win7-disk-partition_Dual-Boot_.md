@@ -8,11 +8,11 @@ type:         Answer
 tags:         dual-boot 16.04 partitioning
 created_date: 2016-12-08 00:13:27
 edit_date:    
-votes:        "1 "
+votes:        "2 "
 favorites:    
-views:        "1,513 "
+views:        "1,529 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-08-How-to-disable-access-to-Win7-disk-partition_Dual-Boot_.md
 toc:          false
 navigation:   false

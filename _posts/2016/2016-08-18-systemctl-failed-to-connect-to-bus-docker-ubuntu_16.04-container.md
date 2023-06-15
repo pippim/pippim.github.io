@@ -10,9 +10,9 @@ created_date: 2016-08-18 03:57:34
 edit_date:    2017-07-22 16:16:42
 votes:        "21 "
 favorites:    
-views:        "297,186 "
+views:        "300,589 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-18-systemctl-failed-to-connect-to-bus-docker-ubuntu_16.04-container.md
 toc:          false
 navigation:   false

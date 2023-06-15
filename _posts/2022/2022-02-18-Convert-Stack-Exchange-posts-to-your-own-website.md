@@ -5,14 +5,14 @@ title:        >
 site:         Stack Apps
 stack_url:    https://stackapps.com/q/9329
 type:         Question
-tags:         app website
+tags:         app website export
 created_date: 2022-02-18 02:52:22
-edit_date:    2022-04-21 11:42:25
-votes:        "4 "
+edit_date:    2023-05-19 12:46:59
+votes:        "6 "
 favorites:    
-views:        "191 "
+views:        "214 "
 accepted:     
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2022/2022-02-18-Convert-Stack-Exchange-posts-to-your-own-website.md
 toc:          false
 navigation:   false

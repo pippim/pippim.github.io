@@ -10,9 +10,9 @@ created_date: 2017-09-24 00:05:12
 edit_date:    
 votes:        "4 "
 favorites:    
-views:        "2,846 "
+views:        "2,876 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-06-14 19:08:00
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-09-24-Font-size-changes-after-running-xrandr-off.md
 toc:          false
 navigation:   false
