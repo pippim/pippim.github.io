@@ -14,6 +14,35 @@ It includes functions to encode CDs with track titles using MusicBrainz database
 It will get lyrics from the internet and let you synchronize them in real time
 by simply clicking each line as it is sung.
 
+## Multiple Every Things
+
+Why have one when you can have multiples?:
+
+- Multiple Locations (Devices including mobile and file server)
+- Multiple Windows for music library, current playing, encoding, etc.
+- Multiple Monitors (remembers where each window was last used)
+- Multiple processes allow VU meters to run in background
+- Multiple Playlists per location
+- Multiple Show Chronology/Resume/Menu option states per location
+and per Playlist within location. 
+- Single SQL library with shared lyrics across all locations
+ 
+Innovative features not in other applications:
+
+- Information Centre (history of dialog boxes and actions)
+- Fade in/out Tooltips that follow mouse pointer
+- Basic Time Synchronization and Advanced Synchronization
+- Scrape MusicBrainz for Artist / Album details and artwork
+- OGA encoding for music files from CD
+
+Common features:
+
+- Cross-fading songs and TV Hockey Commercials
+- Encode CD to music files in MP3 and WAV format
+
+
+## **mserve** is Still Under Construction
+
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Under Construction.png"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
@@ -94,10 +123,6 @@ Additional notes:
 -    Encode CDs with automatic Cover Art download or Image paste from clipboard.
 -    SQLite3 now used to replace old pickles and to add new features for history tracking.
 -    Music player runs while encoding process takes dozens of minutes per CD.
--    Original version in Linux but hopefully minor port to Windows and Apple.
--    Hopefully in a couple of years port to cars with Apple or Android decks.
--    Hopefully in a few years Record Companies will give away mserve.
--    If anyone is "disturbed" by sample video please advise ASAP, and I'll find a different one.
 
 ---
 
@@ -519,10 +544,6 @@ Key features of tooltips:
 - They move instep with mouse movements
 - They fade out
 
-Besides the regular Button Tooltips, Tooltips are also provided
-for menu options, and full panels such as Lyrics and Chronology 
-(playlist pane).
-
 ---
 
 <a id="hdr10"></a>
@@ -742,8 +763,8 @@ your storage device:
 > `m "/mnt/music/Users/Person/Music/iTunes/iTunes Media/Music/"`
 > 
 > You can also call `m` after changing to a music directory. E.G.
-> `cd ~/Music/Pink Floyd`. Type type `m .` and you will be presented
-> with all the Albums you have for ***Pink Floyd***
+> Enter `cd ~/Music/Pink Floyd`. Then enter `m .` and you will be
+> presented with all the Albums you have for ***Pink Floyd***.
 > 
 > If you don't pass a parameter to `m` it will reload the last
 > location used and continue playing where it left off.
