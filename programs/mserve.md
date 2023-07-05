@@ -53,10 +53,14 @@ Features most music players don't have. Requiring separate packages:
 %}
 
 **mserve** (Music Server) is written in Python.
-The main program is called `mserve.py` and can be found on the
-[Pippim mserve Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py).
+The main program is called `mserve.py` and can be found in 
+[GitHub Repsitory for mserve 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py 
+"View Python script (source code)"){:target="_blank"}
 
-`mserve.py` is called with `m` from the command line or a desktop shortcut.
+`mserve.py` is called with `m` from the command line or a 
+desktop shortcut. `m` is a wrapper Python script to center
+a logo on your screen for a couple seconds whilst **mserve**
+is loaded into memory.
 
 > **IMPORTANT NOTES:** 
 > 
