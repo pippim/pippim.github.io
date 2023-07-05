@@ -27,19 +27,22 @@ Why have one when you can have multiples?:
 and per Playlist within location. 
 - Single SQL library with shared lyrics across all locations
  
-Innovative features not in other applications:
+Innovative features:
 
+- Album Artwork animations and VU Meters during playback
 - Information Centre (history of dialog boxes and actions)
 - Fade in/out Tooltips that follow mouse pointer
 - Basic Time Synchronization and Advanced Synchronization
+- Two timers for playing music during TV broadcast commercials
+- Detailed SQL History of actions performed on each song
+- Cross-fading other sound input sinks on play/pause
+
+Features most music players don't have. Requiring separate packages:
+
+- Encode CD to music files in MP3, WAV and OGA format
 - Scrape MusicBrainz for Artist / Album details and artwork
-- OGA encoding for music files from CD
-
-Common features:
-
-- Cross-fading songs and TV Hockey Commercials
-- Encode CD to music files in MP3 and WAV format
-
+- Scrape genius.com and other websites to get song lyrics
+- Compare song files between locations and update differences
 
 ## **mserve** is Still Under Construction
 
@@ -588,11 +591,13 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 This video shows:
 
-1. The "Hamburger Drop Down Menu" where the *Basic time index* option is picked.
+1. The "☰" (Hamburger) Dropdown Menu where the *Basic time index* option is picked.
 2. Canceling the *Basic time index* option once started.
-3. Restarting the *Basic time index* from the Hamburger menu.
+3. Restarting the *Basic time index* from the "☰" menu.
 4. Clicking each line as it is sung.
-5. The time indices are automatically saved when the song ends or, you can choose the "Save index" option from the Hamburger menu if you don't want to wait for the song to end.
+5. The time indices are automatically saved when the song ends, 
+or you can choose the "Save index" option from the "☰" menu if,
+you don't want to wait for the song to end.
 
 ---
 
@@ -608,7 +613,7 @@ cases the *Fine-tune Time Synchronization* window is provided.
 ### Begin Sync option
 
 In the following video notice how the option is included in
-the "Hamburger" menu and is selected. The video delays long
+the "☰" (Hamburger) menu and is selected. The video delays long
 enough so that you can see all the menu options.
 
 <video src="https://user-images.githubusercontent.com/92641463/149632176-7ce43ab5-a207-4825-bf27-70000b494e64.mp4"
@@ -619,14 +624,20 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 This video shows:
 
-1. The Lyrics "Hamburger Drop Down Menu" options
-2. The "Ignore click" option on the menu. This closes the menu which is the same as moving the mouse off the menu and clicking outside the menu.
-3. Access the hamburger menu again and select the "Fine-tune time index" option
-4. The *Fine-tune time-index* window opens up and pauses the regular music player
+1. The Lyrics "☰" (Hamburger) Dropdown Menu options
+2. The "Ignore click" option on the menu. This closes the menu 
+which is the same as moving the mouse off the menu and clicking 
+outside the menu.
+3. Access the hamburger menu again and select the "Fine-tune time 
+index" option
+4. The *Fine-tune time-index* window opens up and pauses the regular 
+music player
 5. Select lyric lines in the lyrics score
 6. Begin sync button. As music plays you can click the line as it is sung
-7. Clicking each line as it is sung is the same behavior as the *Basic time index* function except that additional details are displayed
-8. Finally, the *Fine-tune time index* window is closed and regular music player resumes where it was interrupted
+7. Clicking each line as it is sung is the same behavior as the 
+*Basic time index* function except that additional details are displayed
+8. Finally, the *Fine-tune time index* window is closed and regular 
+music player resumes where it was interrupted
 
 
 #### 80% of lines must be basic synchronized
@@ -650,11 +661,13 @@ Basic Time Index completed.
 
 ### Sample All option
 
-The following video shows again how the *Fine-tune time index* function is selected.
-This time the video spends a little time showing you all the buttons in the function.
-After turning on sound for the video below and clicking play, make sure you move your
-mouse outside the video. This way you can see the entire contents underneath the video
-control bar.
+The following video also shows how the *Fine-tune time index* 
+function is selected. This time the video spends a little time 
+showing you all the buttons in the function.
+
+After turning on sound for the video below and clicking play, 
+make sure you move your mouse outside the video. This way you can 
+see the entire contents underneath your browser's video control bar.
 
 <video src="https://user-images.githubusercontent.com/92641463/149672896-ed6b96ac-9c1f-4017-9b15-e41adac8126b.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149672896-ed6b96ac-9c1f-4017-9b15-e41adac8126b.mp4"
@@ -666,7 +679,7 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 1. The "Paused" graphic in the regular music player. It is 
 programmatically generated and not an image file that can be changed.
-2. The regular music is resumed and the Hamburger menu is used to 
+2. The regular music is resumed and the "☰" menu is used to 
 select the *Fine-tune time index* option
 3. The <kbd>Sample all</kbd> button is selected
 4. The function plays the first second of each line
