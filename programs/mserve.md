@@ -605,15 +605,17 @@ you don't want to wait for the song to end.
 
 ---
 
+<a id="HelpT"></a>
 <a id="hdr12"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr11">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr13">Skip</a></div>
 
-## Fine-tune Time Synchronization
+## Fine-Tune Time Index
 
 Sometimes you just can't seem to click at the right time using
-*Basic Time Synchronization* in the previous section. For those
-cases the *Fine-tune Time Synchronization* window is provided.
+*Basic Time Index* in the previous section. For those
+cases the *Fine-Tune Time Index* window is provided.
 
+<a id="HelpB"></a>
 ### Begin Sync option
 
 In the following video notice how the option is included in
@@ -660,6 +662,7 @@ Basic Time Index completed.
 
 ---
 
+<a id="HelpS"></a>
 <a id="hdr13"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr14">Skip</a></div>
 
