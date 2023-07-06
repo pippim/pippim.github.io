@@ -29,6 +29,7 @@ and per Playlist within location.
  
 Innovative features:
 
+- Help buttons bring you to this web page appropriate sections
 - Album Artwork animations and VU Meters during playback
 - Information Centre (history of dialog boxes and actions)
 - Fade in/out Tooltips that follow mouse pointer
@@ -558,7 +559,13 @@ Key features of tooltips:
 
 # Lyrics Synchronization
 
-You can synchronize each lyrics line to highlight as it is being sung.
+After song lyrics have been trained (Time Index assigned to each
+lyrics line) each line is highlighted as it is sung. Before training,
+lyrics are auto-scroll based on preset algorithm. Manual scrolling
+can be turn on to override Auto and Time scrolling.
+
+A sample video is shown below. It shows how the toggle button works
+between automatic lyrics scrolling and manual scrolling:
 
 <video src="https://user-images.githubusercontent.com/92641463/149630735-8d579143-0d6f-4a7f-84a6-c7349c349e82.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149630735-8d579143-0d6f-4a7f-84a6-c7349c349e82.mp4"
@@ -584,8 +591,22 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 ## Basic Time Synchronization
 
-Basic Time Synchronization is fairly straight forward. You start playing
-the song and then click each line as it is sung.
+The "☰" (Hamburger) Dropdown Menu is shown below:
+
+{% include image.html src="/assets/img/mserve/mserve lyrics hamburger menu.png"
+   alt="mserve lyrics hamburger menu.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="mserve lyrics hamburger menu.png"
+%}
+
+The same Dropdown menu appears when you left-click or right-click
+on the lyrics score (the song's lyrics).
+
+---
+
+A sample video is shown below. It shows how the *Basic Time Index*
+feature works. Simply click to highlight and synchronize each 
+lyrics line as it is being sung:
 
 <video src="https://user-images.githubusercontent.com/92641463/149671978-18e1a98f-3a55-472c-9de2-ae3246ee3969.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149671978-18e1a98f-3a55-472c-9de2-ae3246ee3969.mp4"
