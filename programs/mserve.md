@@ -18,34 +18,43 @@ by simply clicking each line as it is sung.
 
 Why have one when you can have multiples?:
 
-- Multiple Locations (Devices including mobile and file server)
-- Multiple Windows for music library, current playing, encoding, etc.
+- Multiple Locations (directories including mobile and file server)
+- Multiple Playlists per location (every location has default favorites)
+- Multiple Window save positions for music library, current playing, 
+volume control, playlists control, fine-tune time index, and CD encoding
 - Multiple Monitors (remembers where each window was last used)
 - Multiple processes allow VU meters to run in background
-- Multiple Playlists per location
-- Multiple Show Chronology/Resume/Menu option states per location
-and per Playlist within location. 
-- Single SQL library with shared lyrics across all locations
+- Multiple Show Chronology/Resume Position/TV Volume option states
+per location and per Playlist within location. 
  
 Innovative features:
 
-- Help buttons bring you to this web page appropriate sections
+- Help buttons in **mserve** bring you directly to this web
+page's appropriate sections
 - Album Artwork animations and VU Meters during playback
-- Information Centre (history of dialog boxes and actions)
-- Fade in/out Tooltips that follow mouse pointer
-- Basic Time Synchronization and Advanced Synchronization
+- Album Artwork at pixel 3,3 sets a different color theme for
+each album (resizing window can result in different color theme)
+- Scrolling lyrics (automatically web scraped) during playback
+- Information Centre displays history of dialog boxes and actions
+- Time delayed, fade in/out, Tooltips that follow mouse pointer
+- Basic Lyrics Synchronization and Advanced Lyrics Synchronization
 - Two timers for playing music during TV broadcast commercials
 - Detailed SQL History of actions performed on each song
-- Cross-fading other sound input sinks on play/pause
+- Cross-fading other sound sources when toggling play/pause
+- Written in relatively easy to learn Python so you can modify
+for Linux, Windows WSL, Chrome OS, Windows and Mac
+- Single SQL library with shared lyrics score and time index 
+across all locations for one time song maintenance benefiting all
+
 
 Features most music players don't have. Requiring separate packages:
 
 - Encode CD to music files in MP3, WAV and OGA format
-- Scrape MusicBrainz for Artist / Album details and artwork
+- Scrape MusicBrainz for Artist / Album CD track details and artwork
 - Scrape genius.com and other websites to get song lyrics
 - Compare song files between locations and update differences
 
-## **mserve** is Still Under Construction
+## **mserve** Under Construction
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Under Construction.png"
@@ -79,6 +88,7 @@ installed on their system.
 
 ---
 
+<!--  TABLE OF CONTENTS  -->
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr3">Skip</a></div>
 {% include toc.md %}
