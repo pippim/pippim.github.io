@@ -33,11 +33,14 @@ Innovative features:
 page's appropriate sections
 - Album Artwork animations and VU Meters during playback
 - Album Artwork at pixel 3,3 sets a different color theme for
-each album (resizing window can result in different color theme)
-- Scrolling lyrics (automatically web scraped) during playback
+during song playback (resizing window can result in different 
+color theme)
+- Scrolling lyrics score during playback (automatically web scraped)
 - Information Centre displays history of dialog boxes and actions
 - Time delayed, fade in/out, Tooltips that follow mouse pointer
-- Basic Lyrics Synchronization and Advanced Lyrics Synchronization
+- Basic Lyrics Time Synchronization and Advanced Lyrics Time 
+Synchronization (Synchronized lyrics lines are stored in 
+a Time Index list and this term is frequently used)
 - Two timers for playing music during TV broadcast commercials
 - Detailed SQL History of actions performed on each song
 - Cross-fading other sound sources when toggling play/pause
@@ -45,6 +48,8 @@ each album (resizing window can result in different color theme)
 for Linux, Windows WSL, Chrome OS, Windows and Mac
 - Single SQL library with shared lyrics score and time index 
 across all locations for one time song maintenance benefiting all
+- Restores file's OS last access time to original if 
+less than 80% of song was played.
 
 
 Features most music players don't have. Requiring separate packages:
@@ -273,31 +278,32 @@ In Windows the `\` character is used to separate directory levels.
 
 # Programs At a Glance
 
-There are over 10k lines in the `mserve.py` core Music Player program.
+There are over 16k lines in the `mserve.py` core Music Player program.
 
 All programs written for `mserve`:
 
-- `disc_get.py` - 65 lines 
-- `encoding.py` - 2,580 lines
-- `external.py` - 248 lines
-- `global_variables.py` - 73 lines
-- `iamge.py` - 1,583 lines
-- `location.py` - 788 lines
-- `m` - 152 lines
-- `mbz_get1.py` - 1,144 lines
-- `mbz_get2.py` - 166 lines
-- `message.py` - 1,598 lines
-- `monitor.py` - 772 lines
-- `mserve.py` - 10,823 lines
-- `scrape.py` - 1,843 lines
-- `sql.py` - 2,492 lines
-- `timefmt.py` - 207 lines
-- `toolkit.py` - 2,408 lines
-- `vu_meter.py` - 181 lines
-- `webscrape.py` - 1,348 lines
-- `x11.py` - 262 lines (but might be deprecated soon)
+- `disc_get.py` - 80 lines 
+- `encoding.py` - 2,597 lines
+- `external.py` - 451 lines
+- `global_variables.py` - 155 lines
+- `iamge.py` - 1,472 lines
+- `location.py` - 765 lines
+- `m` - 84 lines
+- `mbz_get1.py` - 1,161 lines
+- `mbz_get2.py` - 183 lines
+- `message.py` - 1,633 lines
+- `monitor.py` - 813 lines
+- `mserve.py` - 16,127 lines
+- `mserve_config.py` - 980 lines
+- `sql.py` - 3,150 lines
+- `timefmt.py` - 224 lines
+- `toolkit.py` - 2,674 lines
+- `vu_meter.py` - 200 lines
+- `vu_pulse_audio.py` - 674 lines
+- `webscrape.py` - 1,399 lines
+- `x11.py` - 311 lines
 
-*Line counts updated May 18, 2023.*
+*Line counts updated July 13, 2023.*
 
 ---
 
