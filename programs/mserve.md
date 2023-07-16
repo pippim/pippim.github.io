@@ -277,12 +277,10 @@ mserve rename Greatest Hits Of The 80's [Disc 3].png
 %}
 
 
-> **Notes:**
+> **Usage Notes:**
 
-- Directories will be renamed internally but the Music Location Tree 
-will show the old name until the playlist is reloaded.
-- Blank names are not allowed.
-- Existing names are not allowed.
+- Cannot change name to blanks.
+- Cannot change name to an existing name.
 - Names currently playing cannot be renamed.
 - Special characters `/`, `?`, `:`, `<`, `>`, `_` `"`, `_` `\\`, `|` and `*`
 are changed to an underscore (`_`)
@@ -291,12 +289,19 @@ beginning the rename process.
 - The above error and warning messages are sent to the Information Centre
 for you to review later. Click the thin blue line. Or use the 'View'
 dropdown menu and select 'Information Centre'.
-- ID3 tags in the Music file are not touched. Use Kid3 or similar program.
-If Kid3 is installed, it can be called directly from **mserve**.
-- If you don't change the ID3 tags in the music file for say "New Album",
-then "Old Album" will creep back into **mserve** when the song is played.
-"New Album" will still appear in Music Location Tree because it is driven
-directly off Operating System Filenames.
+
+> **Special Notes about ID3 Tags**
+
+- The Artist and Album name are only renamed in te Operating System
+filename and **mserve** SQL database.
+- ID3 tags inside the music file are not touched. 
+- Use Kid3 or similar program to change Album and/or Artist name
+inside the music file.
+- If Kid3 is installed, it can be called directly from **mserve**.
+- Right click on the music file from the Music Location Tree and select
+the 'Kid3' from the popup menu.
+- ID3 tags in the music file are called "Metadata" by **mserve**.
+- **mserve** will display ID3 Tag metadata on certain screens.
 
 
 ## Substituting Special Characters in Filenames
