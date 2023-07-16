@@ -54,6 +54,8 @@ less than 80% of song was played.
 
 Features most music players don't have. Requiring separate packages:
 
+- Two clicks to rename Artists, Albums and Song files
+in both the storage device and the mserve SQL database at the same time.
 - Encode CD to music files in MP3, WAV and OGA format
 - Scrape MusicBrainz for Artist / Album CD track details and artwork
 - Scrape genius.com and other websites to get song lyrics
@@ -244,11 +246,64 @@ copied from Amazon, etc. More work is required in encoding process
 to support more than just .OGA, .WAV and .FLAC formats currently
 supported.
 
+## Renaming Artists, Albums and Song files After Encoding
+
+Sometimes the on-line databases contain errors. For example, on
+a three CD Greatest Hits collection, are these Album names:
+
+- Greatest Hits Of The 80's [Disc 2]
+- Greatest Hits Of The 80's Vol. 1
+- Greatest Hits of the 80's
+
+The last CD of the set doesn't say ***[Disc 3]*** nor does
+it say ***Volume 3***. It gets confusing when you are viewing
+the Music Location.
+
+To Rename using the Music Location tree:
+
+1. Right click on the third CD Album.
+2. Select *"Rename Album"* from the popup menu.
+3. In the dialog box enter "Greatest Hits Of The 80's [Disc 3]"
+4. Click the *"Apply"* button.
+
+A summary dialog box will appear:
+
+mserve rename Greatest Hits Of The 80's [Disc 3].png
+
+{% include image.html src="/assets/img/mserve/mserve rename Greatest Hits Of The 80's [Disc 3].png"
+   alt="mserve rename Greatest Hits Of The 80's [Disc 3].png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="mserve rename Greatest Hits Of The 80's [Disc 3].png"
+%}
+
+
+> **Notes:**
+
+- Directories will be renamed internally but the Music Location Tree 
+will show the old name until the playlist is reloaded.
+- Blank names are not allowed.
+- Existing names are not allowed.
+- Names currently playing cannot be renamed.
+- Special characters `/`, `?`, `:`, `<`, `>`, `_` `"`, `_` `\\`, `|` and `*`
+are changed to an underscore (`_`)
+- Pending additions or deletions to playlists must be updated before
+beginning the rename process.
+- The above error and warning messages are sent to the Information Centre
+for you to review later. Click the thin blue line. Or use the 'View'
+dropdown menu and select 'Information Centre'.
+- ID3 tags in the Music file are not touched. Use Kid3 or similar program.
+If Kid3 is installed, it can be called directly from **mserve**.
+- If you don't change the ID3 tags in the music file for say "New Album",
+then "Old Album" will creep back into **mserve** when the song is played.
+"New Album" will still appear in Music Location Tree because it is driven
+directly off Operating System Filenames.
+
+
 ## Substituting Special Characters in Filenames
 
 When an Artist, Album or Song have these characters in the name:
 
-- `/`, `:`, `?`, `<`, `>`, `"`, `\`, `|` or `.`
+- `/`, `:`, `?`, `<`, `>`, `"`, `\`, or `|`
 
 The character will be replaced with the `_` character instead.
 This is necessary to conform to operating system rules for
