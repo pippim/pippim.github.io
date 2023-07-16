@@ -301,7 +301,14 @@ inside the music file.
 - Right click on the music file from the Music Location Tree and select
 the 'Kid3' from the popup menu.
 - ID3 tags in the music file are called "Metadata" by **mserve**.
-- **mserve** will display ID3 Tag metadata on certain screens.
+- **mserve** will automatically displays ID3 Tag metadata on certain 
+screens when a music file is played.
+- **mserve** can display ID3 Tags on demand from the Music Location Tree
+when you right click on a music file and select 'View Metadata' from the
+popup menu.
+- **mserve** can also display ID3 Tags when you open the 'View' dropdown
+menu and select 'SQL Music'. Right click on a music file and select 
+View Metadata' from the popup menu.
 
 
 ## Substituting Special Characters in Filenames
