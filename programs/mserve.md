@@ -236,15 +236,40 @@ This video clip show how music player continues in real time while
 you use mserve to encode a CD.
 
 Great lengths are taken to ensure animations never lag even when
-focus grabbing dialog boxes require a response.
+focus grabbing dialog boxes require a response. If a focus grabbing
+dialog box is open when current song ends, the next song is played.
 
 The encoding process uses libdiscid to read the Audio CD's Disc ID.
 Then Musicbrainz is accessed to get track listings for Disc ID. It
-also automatically extracts coverart from the internet. You can
-also paste album artwork from the clipboard which you manually
-copied from Amazon, etc. More work is required in encoding process
-to support more than just .OGA, .WAV and .FLAC formats currently
-supported.
+accesses Musicbrainz a second time to get the first recorded release
+date. It then grabs Album Artwork from the internet. 
+
+You can paste album artwork from the clipboard which you previously
+copied from Amazon, or another website.
+
+## Encoding ID3 Tags
+
+The ID3 Tags encoded onto songs are:
+
+| ID3 TAG       | Description                                                   |
+|---------------|---------------------------------------------------------------|
+| DISC          | Disc Number. E.G. single CD is "1/1". 3 CD set could be "1/3" |
+| TRACKNUMBER   | E.G. first title "1/12", last title "12/12"                   |
+| ARTIST        | Name of band or solo artist                                   |
+| ALBUMARTIST   | Same as ARTIST except for Compilations then "Various Artists" |
+| ALBUM         | Name of the Album                                             |
+| TITLE         | Song title                                                    |
+| DATE          | First recording date. NOT the Album Date!                     |
+| CREATION_TIME | Date and time music file created (encoded)                    |
+| COMPILATION   | When value is "1", folder is /Compilations/<ALBUM>            |
+
+Besides these ID3 tags, **mserve*** SQL stores metadata for:
+
+- AlbumDate - The date the album was released
+- PlayCount - How many times music file was played > 80% of it's duration
+- LastPlayTime - The date and time song was last played
+- Composer - Who wrote the song (Work In Progress to get from MusicBrainz)
+
 
 ## Renaming Artists, Albums and Song files After Encoding
 
