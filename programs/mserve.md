@@ -251,24 +251,39 @@ copied from Amazon, or another website.
 
 The ID3 Tags encoded onto songs are:
 
-| ID3 TAG       | Description                                                   |
-|---------------|---------------------------------------------------------------|
-| DISC          | Disc Number. E.G. single CD is "1/1". 3 CD set could be "1/3" |
-| TRACKNUMBER   | E.G. first title "1/12", last title "12/12"                   |
-| ARTIST        | Name of band or solo artist                                   |
-| ALBUMARTIST   | Same as ARTIST except for Compilations then "Various Artists" |
-| ALBUM         | Name of the Album                                             |
-| TITLE         | Song title                                                    |
-| DATE          | First recording date. NOT the Album Date!                     |
-| CREATION_TIME | Date and time music file created (encoded)                    |
-| COMPILATION   | When value is "1", folder is /Compilations/<ALBUM>            |
+| ID3 TAG          | Description                                                   |
+|------------------|---------------------------------------------------------------|
+| DISC             | Disc Number. E.G. single CD is "1/1". 3 CD set could be "1/3" |
+| TRACKNUMBER      | E.G. first title "1/12", last title "12/12"                   |
+| ARTIST           | Name of band or solo artist                                   |
+| COMPOSER         | Same as ARTIST. Cannot find way to retrieve from MusicBrainz. |
+| ALBUM_ARTIST     | Same as ARTIST except for Compilations then "Various Artists" |
+| ALBUM            | Name of the Album                                             |
+| TITLE            | Name of the Song                                              |
+| DATE             | First recording date in YYYY format. NOT the Album Date!      |
+| GENRE            | E.G. "Rock", "Soundtrack", "Country", etc.                    |
+| CREATION_TIME    | Date and time music file created (encoded)                    |
+| COMPILATION      | When value is "1", folder is /Compilations/<ALBUM>            |
+| GAPLESS_PLAYBACK | "0" = Off/True "1" = On/False but **mserve** doesn't support. |
+| COMMENT          | One line comment about the Album.                             |
 
 Besides these ID3 tags, **mserve*** SQL stores metadata for:
 
 - AlbumDate - The date the album was released
 - PlayCount - How many times music file was played > 80% of it's duration
-- LastPlayTime - The date and time song was last played
-- Composer - Who wrote the song (Work In Progress to get from MusicBrainz)
+- LastPlayTime - Date and time song was last played > 80 %
+- Rating - Future feature not implemented
+- Hyperlink - Future feature
+
+When **mserve** first discovers a song it takes a "snapshot" of the file's:
+
+- OsAccessTime - Last access time
+- OsModifyTime - Last modification time
+- OsChangeTime - Last time permissions were changed
+- OsFileSize - Size of file in bytes
+
+When file times are updated by the Operating System, they are **NOT**
+refreshed in **mserve** SQL database.
 
 
 ## Renaming Artists, Albums and Song files After Encoding
