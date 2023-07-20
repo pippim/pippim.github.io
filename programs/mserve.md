@@ -249,25 +249,36 @@ copied from Amazon, or another website.
 
 ## Encoding ID3 Tags
 
-The ID3 Tags encoded onto songs are:
 
-| ID3 TAG          | Description                                                   |
+{% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
+   alt="Under Construction.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="Under Construction.png"
+%}
+
+**mserve** ID3 Tags are under construction and not yet stable. Encoding 
+works but granular tagging such as "Genre", "Composer", "Album Date" are 
+a WIP (Work In Progress).
+
+The ID3 Tags displayed in **mserve** use the `ffmpeg` naming conventions:
+
+| ffmpeg TAG       | Description                                                   |
 |------------------|---------------------------------------------------------------|
-| DISC             | Disc Number. E.G. single CD is "1/1". 3 CD set could be "1/3" |
-| TRACKNUMBER      | E.G. first title "1/12", last title "12/12"                   |
+| TITLE            | Name of the Song                                              |
 | ARTIST           | Name of band or solo artist                                   |
-| COMPOSER         | Same as ARTIST. Cannot find way to retrieve from MusicBrainz. |
 | ALBUM_ARTIST     | Same as ARTIST except for Compilations then "Various Artists" |
 | ALBUM            | Name of the Album                                             |
-| TITLE            | Name of the Song                                              |
-| DATE             | First recording date in YYYY format. NOT the Album Date!      |
+| DISC             | Disc Number. E.G. single CD is "1/1". 3 CD set could be "1/3" |
+| TRACKNUMBER      | E.G. first title "1/12", last title "12/12"                   |
+| DATE             | First ever release date in YYYY format. NOT the Album Date!   |
 | GENRE            | E.G. "Rock", "Soundtrack", "Country", etc.                    |
 | CREATION_TIME    | Date and time music file created (encoded)                    |
+| COMPOSER         | When not specified, defaults to ARTIST                        |
+| COMMENT          | One line comment                                              |
 | COMPILATION      | When value is "1", folder is /Compilations/<ALBUM>            |
-| GAPLESS_PLAYBACK | "0" = Off/True "1" = On/False but **mserve** doesn't support. |
-| COMMENT          | One line comment about the Album.                             |
+| GAPLESS_PLAYBACK | "0" = Off, "1" = On. However, **mserve** doesn't support it.  |
 
-Besides these ID3 tags, **mserve*** SQL stores metadata for:
+Besides these ID3 tags, **mserve** SQL stores metadata for:
 
 - AlbumDate - The date the album was released
 - PlayCount - How many times music file was played > 80% of it's duration
