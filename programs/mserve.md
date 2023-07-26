@@ -887,6 +887,7 @@ utilization with larger artwork size.
 
 ---
 
+<a id="HelpLocations"></a>
 <a id="hdr15"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr14">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr16">Skip</a></div>
 
