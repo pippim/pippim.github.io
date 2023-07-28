@@ -904,6 +904,12 @@ If the File Server spends most of its life sleeping, you can wake it
 up with a "Magic Packet" and keep it awake by "touching" a specific
 filename on the server.
 
+<a id="HelpTestHost"></a>
+## Optional Remote Host Support
+
+When the commands `nmap`, `nc`, `ssh` and `sshfs` are installed,
+extra fields appear for locations.
+
 ## Compare Locations
 
 Here we see how files can be synchronized across devices.
