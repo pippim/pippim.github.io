@@ -907,8 +907,29 @@ filename on the server.
 <a id="HelpTestHost"></a>
 ## Optional Remote Host Support
 
-When the commands `nmap`, `nc`, `ssh` and `sshfs` are installed,
-extra fields appear for locations.
+When the commands `fusermount`, `nmap`, `nc`, `ssh` and `sshfs`
+are installed, extra fields appear for location details.  See
+screenshots below.
+
+Ensure Music files are mounted on the Host. If you're using Windows
+iTunes, and need to mount in Linux, you may need something like:
+
+`sudo mount -t auto /dev/sdb1 /mnt/music`
+
+See: https://help.ubuntu.com/community/MountingWindowsPartitions
+
+Make sure your SSH is using the standard port 22. Otherwise, you
+will have to open `location.py` and search on `22 >` and `22/tcp`.
+
+Never use `-odebug` option for `sshfs` from mserve because it will
+lock up. Use debug only from command line for testing.  **mserve**
+will not let you define this debug option.
+
+If you crash make sure you run `fusermount -u /mnt/music` where,
+`/mnt/music` is the real name where you mounted Host's Music Top
+Directory locally.
+
+See: https://help.ubuntu.com/community/SSHFS
 
 ## Compare Locations
 
