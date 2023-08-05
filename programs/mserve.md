@@ -548,76 +548,69 @@ Here are the SQL Tables and Indices that are created in
 the sqlite3 file **~/.../mserve/library.db**:
 
 ``` python
-def open_db():
-    """ Open SQL Tables """
-    global con, cursor, hist_cursor
-    # con = sqlite3.connect(":memory:")
+def open_db(LCS=None):
+    """ Open SQL Tables - Music Table and History Table
+        Create Tables and Indices that don't exist
+    :param LCS: instance of Location() class for lcs.open_code, etc.
+    """
+
+    #open_new_db()  # Database 'library_new.db' only used for conversions.
+
+    global con, cursor, hist_cursor, loc_cursor, lcs
+    if LCS:
+        lcs = LCS  # Locations class
+
     con = sqlite3.connect(FNAME_LIBRARY)
-    # print('FNAME_LIBRARY:',FNAME_LIBRARY)
 
     # MUSIC TABLE
+    con.execute("CREATE TABLE IF NOT EXISTS Music(Id INTEGER PRIMARY KEY, " +
+                "OsFileName TEXT, OsAccessTime FLOAT, OsModifyTime FLOAT, " +
+                "OsChangeTime FLOAT, OsFileSize INT, " +
+                "Title TEXT, Artist TEXT, Album TEXT, " +
+                # Change ReleaseDate to FirstDate and RecordingDate to AlbumYear
+                # For old iTunes stuff initialize AlbumYear with FirstYear.
+                "ReleaseDate TEXT, RecordingDate TEXT, " +
+                "CreationTime TEXT, DiscNumber TEXT, TrackNumber TEXT, " +
+                "Rating TEXT, Genre TEXT, Composer TEXT, " +
+                "Comment TEXT, Hyperlink TEXT, Duration TEXT, " +
+                "Seconds INT, PlayCount INT, LastPlayTime FLOAT, " +
+                "LyricsScore BLOB, LyricsTimeIndex TEXT)")
 
-    # Create the table (key must be INTEGER not just INT !
-    # See https://stackoverflow.com/a/7337945/6929343 for explanation
-    con.execute("create table IF NOT EXISTS Music(Id INTEGER PRIMARY KEY, \
-                OsFileName TEXT, OsAccessTime FLOAT, \
-                OsModificationTime FLOAT, OsCreationTime FLOAT, \
-                OsFileSize INT, MetaArtistName TEXT, MetaAlbumName TEXT, \
-                MetaSongName TEXT, ReleaseDate FLOAT, OriginalDate FLOAT, \
-                Genre TEXT, Seconds INT, Duration TEXT, PlayCount INT, \
-                TrackNumber INT, Rating TEXT, UnsynchronizedLyrics BLOB, \
-                LyricsTimeIndex TEXT)")
-
-    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS OsFileNameIndex ON \
-                Music(OsFileName)")
-
+    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS OsFileNameIndex ON " +
+                "Music(OsFileName)")
 
     # HISTORY TABLE
+    con.execute("CREATE TABLE IF NOT EXISTS History(Id INTEGER PRIMARY KEY, " +
+                "Time FLOAT, MusicId INTEGER, User TEXT, Type TEXT, " +
+                "Action TEXT, SourceMaster TEXT, SourceDetail TEXT, " +
+                "Target TEXT, Size INT, Count INT, Seconds FLOAT, " +
+                "Comments TEXT)")
 
-    # One time table drop to rebuild new history format
-    # con.execute("DROP TABLE IF EXISTS History")
+    con.execute("CREATE INDEX IF NOT EXISTS MusicIdIndex ON " +
+                "History(MusicId)")
+    con.execute("CREATE INDEX IF NOT EXISTS TimeIndex ON " +
+                "History(Time)")
+    con.execute("CREATE INDEX IF NOT EXISTS TypeActionIndex ON " +
+                "History(Type, Action)")
 
-    con.execute("create table IF NOT EXISTS History(Id INTEGER PRIMARY KEY, \
-                Time FLOAT, MusicId INTEGER, User TEXT, Type TEXT, \
-                Action TEXT, SourceMaster TEXT, SourceDetail TEXT, \
-                Target TEXT, Size INT, Count INT, Seconds FLOAT, \
-                Comments TEXT)")
+    # LOCATION TABLE
+    con.execute("CREATE TABLE IF NOT EXISTS Location(Id INTEGER PRIMARY KEY, " +
+                "Code TEXT, Name TEXT, ModifyTime FLOAT, ImagePath TEXT, " +
+                "MountPoint TEXT, TopDir TEXT, HostName TEXT, " +
+                "HostWakeupCmd TEXT, HostTestCmd TEXT, HostTestRepeat INT, " +
+                "HostMountCmd TEXT, HostTouchCmd TEXT, HostTouchMinutes INT, " +
+                "Comments TEXT)")
+    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS LocationCodeIndex ON " +
+                "Location(Code)")
 
-    con.execute("CREATE INDEX IF NOT EXISTS MusicIdIndex ON \
-                History(MusicId)")
-    con.execute("CREATE INDEX IF NOT EXISTS TimeIndex ON \
-                History(Time)")
 
-    '''
-        INDEX on OsSongName and confirm original when OsArtistName and
-            OsAlbumName match up to SORTED_LIST (aka self.song_list) which is
-            format of:
-                # split song /mnt/music/Artist/Album/Song.m4a into names:
-                groups = os_name.split(os.sep)
-                Artist = str(groups [START_DIR_SEP+1])
-                Album = str(groups [START_DIR_SEP+2])
-                Song = str(groups [START_DIR_SEP+3])
+    ''' For mserve.py rename_file() function to rename "the" to "The" '''
+    con.execute("PRAGMA case_sensitive_like = ON;")
 
-            (last_playlist pickle data file uses the same record format)
-
-        Saving/retrieving LyricsTimeIndex (seconds from start):
-
-        >>> import json
-        >>> json.dumps([1.2,2.4,3.6])
-        '[1.2, 2.4, 3.6]'
-        >>> json.loads('[1.2, 2.4, 3.6]')
-        [1.2, 2.4, 3.6]
-
-    '''
-    # Retrieve column names
-    #    cs = con.execute('pragma table_info(Music)').fetchall() # sqlite column metadata
-    #    print('cs:', cs)
-    #    cursor = con.execute('select * from Music')
-    #    names = [description[0] for description in cursor.description]
-    #    print('names:', names)
     con.row_factory = sqlite3.Row
     cursor = con.cursor()
     hist_cursor = con.cursor()
+    loc_cursor = con.cursor()
 ```
 
 ---
