@@ -506,9 +506,11 @@ Here are the data files (stored in pickle format) created under
 the `~/.../mserve`:
 
 - **last_location** - lc.FNAME_LAST_LOCATION - The last location ID 
-used. E.G. "L001", "L002", etc.
+used. E.G. "L001", "L002", etc. August 5, 2023 Note: This will soon
+be replaced by SQL History Table row Type='location', Action='last'.
 - **locations** - lc.FNAME_LOCATIONS - All available locations and 
-their control settings.
+their control settings. August 5, 2023 Note: This will soon
+be replaced by SQL Location Table. 
 - **library.db** - lc.FNAME_LIBRARY - *This is not in pickle format.*
 It is an sqlite3 database with Music Table and History Table.
 
@@ -524,8 +526,16 @@ Sorted in playlist order.
 - **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
 **last_playlist** indicating the song that was playing when **mserve**
 was shutdown.
+- **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
+**last_playlist** indicating the song that was playing when **mserve**
+was shutdown.  August 5, 2023 Note: This is superseded by 
+SQL History Table Row Type='resume', Action=<LOCATION CODE>.
+- **modification_time** - lc.FNAME_MOD_TIME - Cell phones may not allow
+changes to music files' last modification time.  **mserve** uses this file
+as a shadow filesystem to track last modification time. Used by the 
+**Synchronize Locations** function.
 
-**lc.FNAME** stands for "location.py" (lc.), "Filename" (FNAME). 
+**lc.FNAME** represents "location.py" (**lc.**), "Filename" (**FNAME**). 
 When working inside the location.py module, drop the **lc.** prefix.
 In the other Python modules, **import location as lc** is used.
 
