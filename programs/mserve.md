@@ -928,11 +928,7 @@ Never use `-odebug` option for `sshfs` from mserve because it will
 lock up. Use debug only from command line for testing.  **mserve**
 will not let you define this debug option.
 
-If you crash make sure you run `fusermount -u /mnt/music` where,
-`/mnt/music` is the real name where you mounted Host's Music Top
-Directory locally.
-
-See: https://help.ubuntu.com/community/SSHFS
+More details: https://help.ubuntu.com/community/SSHFS
 
 ## Compare Locations
 
@@ -947,6 +943,34 @@ Here we see how files can be synchronized across devices.
 The "Action" column states the reason for updating is that the 
 file size has increased. This was due to album artwork being
 added to the source files.
+
+Here's a list of what can appear in "Action" column:
+
+- "Missing" - In target(other) location (hidden from view)
+- "Same" - within 2 seconds so no action required (hidden)
+- "Error: Size different, time same" - Don't know copy direction
+- "Error: contents different, time same" -    "   "   "   "
+- "OOPS" - programming error that should never happen (hidden)
+- "Copy Trg -> Src (Size)" - Based on size difference
+- "Copy Src -> Trg (Size)" - Based on size difference
+- "Copy Trg -> Src (Diff)" - Based on file difference
+- "Copy Src -> Trg (Diff)" - Based on file difference
+- "Timestamp Trg -> Src" - Prevents future checks
+- "Timestamp Src -> Trg" - Prevents future checks
+
+The "Src"/"Source" location is the location currently 
+opened in **mserve**. The "Trg"/"Target" location is 
+the location that was picked to synchronize with.
+
+The "OOPS" should never appear but is technically possible if
+another job is running that updates files in the Source or Target
+Location.
+
+Note that for Remote Hosts the `cp` command is used not `scp`.
+
+For cell phones the last modification time (used to compare files)
+may not be updated. In this case **mserve** creates a virtual
+filesystem to track what modification times should be.
 
 ---
 
