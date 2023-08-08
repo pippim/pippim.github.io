@@ -21,7 +21,8 @@ Why have one when you can have multiples?:
 - Multiple Locations (directories including mobile and file server)
 - Multiple Playlists per location (every location has default favorites)
 - Multiple Window save positions for music library, current playing, 
-volume control, playlists control, fine-tune time index, and CD encoding
+volume control, playlists control, fine-tune time index, location
+maintenance, and CD encoding (ripping)
 - Multiple Monitors (remembers where each window was last used)
 - Multiple processes allow VU meters to run in background
 - Multiple Show Chronology/Resume Position/TV Volume option states
@@ -36,7 +37,9 @@ page's appropriate sections
 during song playback (resizing window can result in different 
 color theme)
 - Scrolling lyrics score during playback (automatically web scraped)
-- Information Centre displays history of dialog boxes and actions
+- Synchronize files across multiple locations including sleeping hosts
+that are woken up and kept awake as long as necessary
+- Information Centre displays history of messages and actions
 - Time delayed, fade in/out, Tooltips that follow mouse pointer
 - Basic Lyrics Time Synchronization and Advanced Lyrics Time 
 Synchronization (Synchronized lyrics lines are stored in 
@@ -89,8 +92,9 @@ is loaded into memory.
 > 
 >    `sudo apt install python-xxxxx`.
 
-Below you will find the dependencies required by **mserve**.
-Power users will have most of the dependencies already
+<a href="#AllPippimDependencies5">Below</a>
+you will find the dependencies required by **mserve**.
+Many of the dependencies may already
 installed on their system.
 
 ---
@@ -400,6 +404,8 @@ There are over 16k lines in the `mserve.py` core Music Player program.
 
 All programs written for `mserve`:
 
+<a id="AllPippimModules"></a>
+
 - `disc_get.py` - 80 lines 
 - `encoding.py` - 2,597 lines
 - `external.py` - 451 lines
@@ -424,6 +430,9 @@ All programs written for `mserve`:
 *Line counts updated July 13, 2023.*
 
 ---
+
+
+<a id="AllPippimDependencies"></a>
 
 ## Dependencies
 
@@ -909,6 +918,21 @@ filename on the server.
 
 <a id="HelpTestHost"></a>
 ## Optional Remote Host Support
+
+For Debugging, run the following commands on the host and client:
+
+HOST - Open a terminal and enter command which runs forever:
+
+``` shell
+mserve_client.sh -d
+```
+
+CLIENT - Open a terminal, and paste below, replacing "<HOST>" 
+with Host name:
+
+``` shell
+while : ; do ssh <HOST> "cat /tmp/mserve_client.log" ; sleep 60 ; done
+```
 
 When the commands `fusermount`, `nmap`, `nc`, `ssh` and `sshfs`
 are installed, extra fields appear for location details.  See
