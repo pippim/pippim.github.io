@@ -82,7 +82,7 @@ desktop shortcut. `m` is a wrapper Python script to center
 a logo on your screen for a couple seconds whilst **mserve**
 is loaded into memory.
 
-> **IMPORTANT NOTES:** 
+> ***IMPORTANT NOTES:*** 
 > 
 > Primarily tested with Linux, specifically Ubuntu 16.04 LTS
 > Briefly tested with ChromeOS for about a month and modified
@@ -92,8 +92,9 @@ is loaded into memory.
 > 
 >    `sudo apt install python-xxxxx`.
 
-<a href="#AllPippimDependencies5">Below</a>
-you will find the dependencies required by **mserve**.
+Below you will find the
+<a href="#mserveDependencies">dependencies required</a>
+by **mserve**.
 Many of the dependencies may already
 installed on their system.
 
@@ -209,7 +210,7 @@ ARTWORK_SUBSTITUTE = g.PROGRAM_DIR + "Be Creative 2 cropped.jpg"
 
 Copy your image file to the directory where you installed `mserve`.
 
-> NOTE:
+> ***NOTE:***
 > 
 > The `.gif` video was created using:
 > 
@@ -332,7 +333,7 @@ mserve rename Greatest Hits Of The 80's [Disc 3].png
 %}
 
 
-> **Usage Notes:**
+> ***Usage Notes:***
 
 - Cannot change name to blanks.
 - Cannot change name to an existing name.
@@ -345,7 +346,7 @@ beginning the rename process.
 for you to review later. Click the thin blue line. Or use the 'View'
 dropdown menu and select 'Information Centre'.
 
-> **Special Notes about ID3 Tags**
+> ***Special Notes about ID3 Tags:***
 
 - The Artist and Album name are only renamed in te Operating System
 filename and **mserve** SQL database.
@@ -390,7 +391,7 @@ The file created in Windows will be:
 
 - `The Great Band_\Songs of_ 70's_80's\05 Simple _Little_ Thing_.m4a`
 
-Note in Linux the `/` character is used to separate directory levels. 
+***Note:*** In Linux the `/` character is used to separate directory levels. 
 In Windows the `\` character is used to separate directory levels.
 
 ---
@@ -418,8 +419,10 @@ All programs written for `mserve`:
 - `message.py` - 1,633 lines
 - `monitor.py` - 813 lines
 - `mserve.py` - 16,127 lines
+- `mserve_client.py` - 334 lines
 - `mserve_config.py` - 980 lines
 - `sql.py` - 3,150 lines
+- `test-for-sync.sh` - 21 lines
 - `timefmt.py` - 224 lines
 - `toolkit.py` - 2,674 lines
 - `vu_meter.py` - 200 lines
@@ -432,7 +435,7 @@ All programs written for `mserve`:
 ---
 
 
-<a id="AllPippimDependencies"></a>
+<a id="mserveDependencies"></a>
 
 ## Dependencies
 
@@ -719,7 +722,7 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-**Notes:**
+***Notes:***
 
 1. When video starts with song in orange the default is "Auto Scrolling"
 2. Click button to engage "Manual Scroll"
@@ -886,10 +889,10 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-Note that if you resize the window the artwork animation also shrinks and
-expands accordingly. It will maintain the "square" proportions and the
-skin background color can change depending on the color of the pixel at
-"3, 3" in the artwork.
+*Note:* If you resize the window, the artwork animation also resizes 
+accordingly. It will maintain the "square" proportions. The "skin"
+background color can change depending on the new color of the pixel at
+coordinates "3, 3" of the resized artwork.
 
 **May 18, 2023 Revision**
 
@@ -990,7 +993,7 @@ The "OOPS" should never appear but is technically possible if
 another job is running that updates files in the Source or Target
 Location.
 
-Note that for Remote Hosts the `cp` command is used not `scp`.
+*Note:* For Remote Hosts, the `cp` command is used not `scp`.
 
 For cell phones the last modification time (used to compare files)
 may not be updated. In this case **mserve** creates a virtual
@@ -1011,7 +1014,7 @@ your storage device:
 - The third level points to Albums under each Artist
 - The fourth level points to Songs under each Album
 
-> **NOTE:** "My Music" is an over simplification for the sake of
+> ***NOTE:*** "My Music" is an over simplification for the sake of
 > example. You can start `m` (the splash screen for **mserve.py**)
 > by typing: 
 > `m "/mnt/music/Users/Person/Music/iTunes/iTunes Media/Music/"`
@@ -1195,10 +1198,9 @@ TV_SOUND = "Firefox"    # Hockey broadcast is aired on Firefox browser
 ```
 
 60% was found to be a suitable volume level for CBC broadcasts
-of the NHL Stanley Cup Playoffs. YMMV. Note that `TV_VOLUME` is a 
-bit of a misnomer. A more appropriate name would be: *"mserve volume
-when covering up a hockey game's TV commercial break of 90 seconds
-or 18 minutes"*.
+of the NHL Stanley Cup Playoffs. YMMV. Note that `TV_VOLUME` is  
+a simplistic name. The full name would be: *"mserve volume
+when playing during hockey game muted TV commercials"*.
 
 FYI the "ALSA plug-in [python2.7]" sound processor is used by
 **mserve** to display the VU meters (`vu_meter.py`). Configuring the
