@@ -223,6 +223,7 @@ Copy your image file to the directory where you installed `mserve`.
 
 ---
 
+<a id="HelpEncoding"></a>
 <a id="hdr5"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr6">Skip</a></div>
 
@@ -412,7 +413,7 @@ All programs written for `mserve`:
 - `external.py` - 451 lines
 - `global_variables.py` - 155 lines
 - `iamge.py` - 1,472 lines
-- `location.py` - 765 lines
+- `location.py` - 3,821 lines
 - `m` - 84 lines
 - `mbz_get1.py` - 1,161 lines
 - `mbz_get2.py` - 183 lines
