@@ -10,9 +10,9 @@ created_date: 2016-10-05 23:16:40
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "1,197 "
+views:        "1,250 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-05-Nautilus-sidebar-menue_mounts-cannot-unmount.md
 toc:          false
 navigation:   false
@@ -43,5 +43,5 @@ Clock OK and enter password to apply changes. After the next reboot Nautilus won
 
 If you need clarification please post a comment below.
 
-  [1]: http://i.stack.imgur.com/e5LCU.png
-  [2]: http://i.stack.imgur.com/9zU2z.png
+  [1]: https://i.stack.imgur.com/e5LCU.png
+  [2]: https://i.stack.imgur.com/9zU2z.png

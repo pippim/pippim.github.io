@@ -10,9 +10,9 @@ created_date: 2018-05-06 01:44:40
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "1,132 "
+views:        "1,138 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-06-Signature-based-rootkit-scanner_.md
 toc:          false
 navigation:   false

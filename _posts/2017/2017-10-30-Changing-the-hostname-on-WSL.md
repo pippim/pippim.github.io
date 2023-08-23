@@ -8,11 +8,11 @@ type:         Answer
 tags:         ubuntu windows-10 windows-subsystem-for-linux
 created_date: 2017-10-30 03:06:11
 edit_date:    2017-11-24 14:43:32
-votes:        "25 "
+votes:        "24 "
 favorites:    
-views:        "45,522 "
+views:        "46,639 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-10-30-Changing-the-hostname-on-WSL.md
 toc:          false
 navigation:   false

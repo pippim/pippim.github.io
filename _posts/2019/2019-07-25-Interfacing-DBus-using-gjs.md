@@ -8,11 +8,11 @@ type:         Answer
 tags:         gnome gnome-shell ubuntu-gnome dbus javascript
 created_date: 2019-07-25 16:45:46
 edit_date:    2019-07-25 17:38:24
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "921 "
+views:        "955 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-07-25-Interfacing-DBus-using-gjs.md
 toc:          false
 navigation:   false

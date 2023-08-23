@@ -10,9 +10,9 @@ created_date: 2019-11-10 16:02:32
 edit_date:    2020-06-12 14:37:07
 votes:        "1 "
 favorites:    
-views:        "2,975 "
+views:        "3,185 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-How-should-I-setup-Tuned-adm_.md
 toc:          false
 navigation:   false

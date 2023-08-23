@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1164880
 type:         Answer
 tags:         command-line gnome-terminal titlebar
 created_date: 2019-08-11 00:45:50
-edit_date:    2022-11-21 07:54:47
-votes:        "26 "
+edit_date:    2023-06-15 15:31:39
+votes:        "28 "
 favorites:    
-views:        "276,308 "
+views:        "279,565 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-11-How-to-change-Gnome-Terminal-title_.md
 toc:          false
 navigation:   false
@@ -20,7 +20,7 @@ clipboard:    false
 ---
 
 
-# Works on Ubuntu 16.04 to 20.04
+# Works on Ubuntu 16.04 to 22.10
 
 This answer is simpler than most others. To use it, you would just type:
 

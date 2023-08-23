@@ -8,11 +8,11 @@ type:         Answer
 tags:         16.04 boot logs systemd-journald
 created_date: 2018-02-21 01:24:55
 edit_date:    2019-01-16 02:50:51
-votes:        "35 "
+votes:        "36 "
 favorites:    
-views:        "69,490 "
+views:        "71,570 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-21-How-to-find-previous-boot-log-after-Ubuntu-16.04_-restarts_.md
 toc:          false
 navigation:   true

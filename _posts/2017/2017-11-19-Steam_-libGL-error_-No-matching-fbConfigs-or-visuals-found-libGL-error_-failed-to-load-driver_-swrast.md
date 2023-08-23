@@ -7,19 +7,19 @@ stack_url:    https://askubuntu.com/q/978112
 type:         Answer
 tags:         drivers nvidia steam yad
 created_date: 2017-11-19 17:26:41
-edit_date:    2020-06-12 14:37:07
+edit_date:    2023-07-12 03:26:27
 votes:        "17 "
 favorites:    
-views:        "186,845 "
+views:        "189,465 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-11-19-Steam_-libGL-error_-No-matching-fbConfigs-or-visuals-found-libGL-error_-failed-to-load-driver_-swrast.md
 toc:          false
 navigation:   false
 clipboard:    false
 ---
 
-# Windows Subsystem for Linux (WSL) has same error
+# Windows Subsystem for Linux (WSL) Has Same Error
 
 In Windows Subsystem for Linux (WSL) under Windows 10 there the file `/usr/lib/i386-linux-gnu/mesa/libGL.so.1` does not exist. Instead there is the file `/usr/lib/x86_64-linux-gnu/mesa/libGL.so.1` seems to replace it. However if you delete the replacement file the library doesn't work at all.
 
@@ -62,7 +62,25 @@ rick@alien:/mnt/e/etc$
 
 I verified the change is persistent, ie close the WSL terminal window and open a new window.
 
-# What's using the library?
+# Quick Fix From Comments
+
+In comment below it is suggested to try [https://stackoverflow.com/a/63450299/6929343](https://stackoverflow.com/a/63450299/6929343)
+
+``` 
+export LIBGL_ALWAYS_INDIRECT=1
+```
+
+For a quick test, run:
+
+``` 
+glxinfo -B | grep renderer
+```
+
+
+> **NOTE:** I haven't tested this solution.  
+
+
+# What's Using the Library?
 
 The library is used by `yad` in the [lock-screen-timer][1] bash script upgraded with hybrid support for WSL in addition to Ubuntu. Yad is a fork of `Zenity` which is why you see the Zenity-like `Gtk-Message:` reference in the third error message above.
 

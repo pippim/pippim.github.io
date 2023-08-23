@@ -10,9 +10,9 @@ created_date: 2018-08-24 23:23:37
 edit_date:    
 votes:        "3 "
 favorites:    
-views:        "2,478 "
+views:        "2,577 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-24-What-is-the-smallest-file-size-Ubuntu-VirtualBox-image-with-a-GUI_.md
 toc:          false
 navigation:   false

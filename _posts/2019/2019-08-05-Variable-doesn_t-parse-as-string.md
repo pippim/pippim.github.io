@@ -10,9 +10,9 @@ created_date: 2019-08-05 17:29:46
 edit_date:    2019-08-05 18:38:45
 votes:        "6 "
 favorites:    
-views:        "1,395 "
+views:        "1,441 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-08-05-Variable-doesn_t-parse-as-string.md
 toc:          false
 navigation:   false

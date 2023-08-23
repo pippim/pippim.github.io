@@ -10,9 +10,9 @@ created_date: 2016-08-28 18:17:20
 edit_date:    2016-08-28 18:28:43
 votes:        "3 "
 favorites:    
-views:        "1,920 "
+views:        "1,947 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-28-Printer-Brother-DCP-1610W-not-working-under-Xubuntu-16.04.md
 toc:          false
 navigation:   false
@@ -64,4 +64,4 @@ sudo systemctl start cups
 One caveat I'm running Ubuntu 16.04 not Xubuntu 16.04.
 
 
-  [1]: http://i.stack.imgur.com/fnleS.png
+  [1]: https://i.stack.imgur.com/fnleS.png

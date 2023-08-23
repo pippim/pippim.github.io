@@ -10,9 +10,9 @@ created_date: 2016-12-31 23:10:06
 edit_date:    2019-12-22 04:45:08
 votes:        "24 "
 favorites:    
-views:        "48,627 "
+views:        "49,587 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-12-31-How-do-I-setup-keyboard-macros_.md
 toc:          false
 navigation:   false

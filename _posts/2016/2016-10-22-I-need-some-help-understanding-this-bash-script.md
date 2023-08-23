@@ -10,9 +10,9 @@ created_date: 2016-10-22 01:29:13
 edit_date:    2020-06-12 14:37:07
 votes:        "4 "
 favorites:    
-views:        "105 "
+views:        "106 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-22-I-need-some-help-understanding-this-bash-script.md
 toc:          false
 navigation:   false

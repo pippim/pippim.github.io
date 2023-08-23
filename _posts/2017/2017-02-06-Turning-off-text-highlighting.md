@@ -10,9 +10,9 @@ created_date: 2017-02-06 02:16:28
 edit_date:    
 votes:        "2 "
 favorites:    
-views:        "7,423 "
+views:        "7,611 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-02-06-Turning-off-text-highlighting.md
 toc:          false
 navigation:   false

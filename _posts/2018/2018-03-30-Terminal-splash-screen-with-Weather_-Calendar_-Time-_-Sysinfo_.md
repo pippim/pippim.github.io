@@ -8,11 +8,11 @@ type:         Answer
 tags:         command-line bash bashrc ascii-art
 created_date: 2018-03-30 20:07:59
 edit_date:    2020-06-12 14:37:07
-votes:        "18 "
+votes:        "19 "
 favorites:    
-views:        "17,711 "
+views:        "18,063 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-30-Terminal-splash-screen-with-Weather_-Calendar_-Time-_-Sysinfo_.md
 toc:          false
 navigation:   false

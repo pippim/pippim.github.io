@@ -10,9 +10,9 @@ created_date: 2016-08-11 01:08:41
 edit_date:    2016-08-11 01:13:50
 votes:        "1 "
 favorites:    
-views:        "51 "
+views:        "53 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-11-Plugging-network-adapter-in-causes-system-to-freeze.md
 toc:          false
 navigation:   false

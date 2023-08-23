@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1374281
 type:         Answer
 tags:         apt 20.04 kernel xubuntu dpkg
 created_date: 2021-11-08 12:21:01
-edit_date:    
-votes:        "4 "
+edit_date:    2023-06-29 05:15:00
+votes:        "6 "
 favorites:    
-views:        "4,360 "
+views:        "4,945 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2021/2021-11-08-Unmet-dependencies.-Try-_apt-fix-broken-install_-Conflict-in-linux-image.md
 toc:          false
 navigation:   false
@@ -29,9 +29,9 @@ The first method you can try is to reconfigure the package database. Probably th
 sudo dpkg --configure -a
 ```
 
-## Method 2: Use force install
+## Method 2: Use fix broken
 
-If a package installation was interrupted previously, you may try to do a force install.
+If a package installation was interrupted previously, you may use the `install -f` options to automatically attempt to correct a system with broken dependencies in place.
 
 ``` 
 sudo apt-get install -f

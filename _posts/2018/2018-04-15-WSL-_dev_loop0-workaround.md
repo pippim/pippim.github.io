@@ -10,9 +10,9 @@ created_date: 2018-04-15 17:45:00
 edit_date:    
 votes:        "6 "
 favorites:    
-views:        "7,198 "
+views:        "7,316 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-15-WSL-_dev_loop0-workaround.md
 toc:          false
 navigation:   false

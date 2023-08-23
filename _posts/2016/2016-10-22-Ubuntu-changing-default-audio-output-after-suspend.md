@@ -10,9 +10,9 @@ created_date: 2016-10-22 18:05:45
 edit_date:    2020-06-12 14:37:07
 votes:        "3 "
 favorites:    
-views:        "2,051 "
+views:        "2,071 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-22-Ubuntu-changing-default-audio-output-after-suspend.md
 toc:          false
 navigation:   false

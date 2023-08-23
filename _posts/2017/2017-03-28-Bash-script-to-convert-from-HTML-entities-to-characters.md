@@ -7,12 +7,12 @@ stack_url:    https://stackoverflow.com/q/43058947
 type:         Answer
 tags:         html bash html-escape-characters
 created_date: 2017-03-28 01:06:23
-edit_date:    2021-12-07 02:21:43
+edit_date:    2023-07-21 09:30:37
 votes:        "16 "
 favorites:    
-views:        "63,088 "
+views:        "64,060 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-28-Bash-script-to-convert-from-HTML-entities-to-characters.md
 toc:          false
 navigation:   false
@@ -21,7 +21,8 @@ clipboard:    false
 
 This answer is based on: [Short way to escape HTML in Bash?][1] which works fine for grabbing answers (using `wget`) on Stack Exchange and converting HTML to regular ASCII characters:
 
-``` 
+
+``` bash
 sed 's/&nbsp;/ /g; s/&amp;/\&/g; s/&lt;/\</g; s/&gt;/\>/g; s/&quot;/\"/g; s/#&#39;/\'"'"'/g; s/&ldquo;/\"/g; s/&rdquo;/\"/g;'
 ```
 
@@ -37,7 +38,7 @@ Using `sed` was taking ~3 seconds to convert HTML to ASCII on a 1K line file fro
 
 Here's the function:
 
-``` bash     
+``` bash     bash
 LineOut=""      # Make global
 HTMLtoText () {
     LineOut=$1  # Parm 1= Input line

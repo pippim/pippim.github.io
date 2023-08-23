@@ -8,11 +8,11 @@ type:         Answer
 tags:         networking wireless suspend
 created_date: 2018-05-12 15:32:16
 edit_date:    2019-04-05 10:58:19
-votes:        "21 "
+votes:        "22 "
 favorites:    
-views:        "31,459 "
+views:        "32,508 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-05-12-How-to-prevent-wifi-sleep-after-suspend.md
 toc:          false
 navigation:   false

@@ -10,9 +10,9 @@ created_date: 2018-10-18 01:48:54
 edit_date:    2020-08-09 15:24:54
 votes:        "10 "
 favorites:    
-views:        "185,181 "
+views:        "191,190 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-18-Set-CPU-governor-to-performance-in-18.04.md
 toc:          false
 navigation:   false

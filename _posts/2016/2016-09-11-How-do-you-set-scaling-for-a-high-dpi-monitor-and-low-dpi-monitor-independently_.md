@@ -10,9 +10,9 @@ created_date: 2016-09-11 04:03:18
 edit_date:    2020-06-12 14:37:07
 votes:        "7 "
 favorites:    
-views:        "58,530 "
+views:        "58,601 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-11-How-do-you-set-scaling-for-a-high-dpi-monitor-and-low-dpi-monitor-independently_.md
 toc:          false
 navigation:   false
@@ -54,6 +54,6 @@ EndSection
 
 I haven't played with this yet.
 
-  [1]: http://i.stack.imgur.com/Jh7ID.png
+  [1]: https://i.stack.imgur.com/Jh7ID.png
   [2]: https://i.stack.imgur.com/3hLVb.png
   [3]: https://i.stack.imgur.com/2utV8.png

@@ -10,9 +10,9 @@ created_date: 2016-09-06 02:34:18
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "26 "
+views:        "29 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-06-Is-there-a-way-to-remove-something-locked-to-the-launcher-using-terminal_.md
 toc:          false
 navigation:   false
@@ -27,4 +27,4 @@ mark the check box beside `Add show desktop icon to the launcher`
 
 Took me a year to stumble across it myself :)
 
-  [1]: http://i.stack.imgur.com/aQFlI.png
+  [1]: https://i.stack.imgur.com/aQFlI.png

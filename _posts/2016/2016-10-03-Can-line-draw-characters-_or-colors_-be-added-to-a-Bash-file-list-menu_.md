@@ -10,9 +10,9 @@ created_date: 2016-10-03 23:49:01
 edit_date:    2017-04-13 12:24:08
 votes:        "2 "
 favorites:    
-views:        "650 "
+views:        "660 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-03-Can-line-draw-characters-_or-colors_-be-added-to-a-Bash-file-list-menu_.md
 toc:          false
 navigation:   true
@@ -264,7 +264,7 @@ With a little work the **world's ugliest menu** and now become and acceptable lo
   [1]: https://askubuntu.com/questions/682095/create-bash-menu-based-on-file-list-map-files-to-numbers/682146#682146
   [2]: http://linuxcommand.org/lc3_adv_tput.php
   [3]: https://askubuntu.com/questions/829258/turn-off-motherboard-pc-speaker-beep-in-ubuntu-16-04-regression
-  [4]: http://i.stack.imgur.com/L9J10.png
+  [4]: https://i.stack.imgur.com/L9J10.png
 
 
 <a id="hdr5"></a>

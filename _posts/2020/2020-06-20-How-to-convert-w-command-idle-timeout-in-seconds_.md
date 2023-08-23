@@ -10,9 +10,9 @@ created_date: 2020-06-20 03:11:31
 edit_date:    2020-06-20 17:13:16
 votes:        "1 "
 favorites:    
-views:        "236 "
+views:        "275 "
 accepted:     Accepted
-uploaded:     2023-04-23 15:09:15
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2020/2020-06-20-How-to-convert-w-command-idle-timeout-in-seconds_.md
 toc:          false
 navigation:   false

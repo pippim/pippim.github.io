@@ -8,11 +8,11 @@ type:         Answer
 tags:         intel idle grub
 created_date: 2019-09-29 14:32:55
 edit_date:    
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "69,410 "
+views:        "70,486 "
 accepted:     
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-29-How-to-set-intel_idle.max_cstate_1.md
 toc:          false
 navigation:   false

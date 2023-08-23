@@ -10,9 +10,9 @@ created_date: 2016-10-23 21:36:09
 edit_date:    
 votes:        "1 "
 favorites:    
-views:        "121 "
+views:        "127 "
 accepted:     Accepted
-uploaded:     2023-06-14 19:08:00
+uploaded:     2023-08-23 11:47:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-10-23-How-do-I-change-permissions-so-I-can-edit-the-PAM-password-file_.md
 toc:          false
 navigation:   false
