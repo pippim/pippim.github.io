@@ -129,8 +129,15 @@ format must be:
 - `Artist Name/Album Name/Song Name.ext`
 
 Only *Song Names* with music type extensions are included.
+
 Here is a sample window with currently playing song 
 highlighted in green.
+
+{% include image.html src="/assets/img/tim-ta/mserve.py Music Location Tree.png"
+   alt="mserve.py Music Location Tree.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="mserve.py Music Location Tree.png"
+%}
 
 
 
