@@ -14,19 +14,20 @@ It includes functions to encode CDs with track titles using MusicBrainz database
 It will get lyrics from the internet and let you synchronize them in real time
 by simply clicking each line as it is sung.
 
-## Multiple Every Things
+## Multiple Everything
 
 Why have one when you can have multiples?:
 
-- Multiple Locations (directories including mobile and file server)
+- Multiple Locations Synchronization (including mobile and file servers)
 - Multiple Playlists per location (every location has default favorites)
 - Multiple Window save positions for music library, current playing, 
 volume control, playlists control, fine-tune time index, location
 maintenance, and CD encoding (ripping)
-- Multiple Monitors (remembers where each window was last used)
-- Multiple processes allow VU meters to run in background
+- Multiple Monitors (remembers monitor window last opened on)
+- Multiple processes for lag free animations
 - Multiple Show Chronology/Resume Position/TV Volume option states
-per location and per Playlist within location. 
+per location and per Playlist within location
+- Multiple CD Encoding formats, quality, images and filename formatting
  
 Innovative features:
 
@@ -37,29 +38,33 @@ page's appropriate sections
 during song playback (resizing window can result in different 
 color theme)
 - Scrolling lyrics score during playback (automatically web scraped)
-- Synchronize files across multiple locations including sleeping hosts
+- Synchronize files across multiple locations, including sleeping hosts
 that are woken up and kept awake as long as necessary
-- Information Centre displays history of messages and actions
-- Time delayed, fade in/out, Tooltips that follow mouse pointer
+- Information Centre displays history of messages, statuses and actions
+- Tooltips appear after time delay, fade in/out, and follow mouse pointer
 - Basic Lyrics Time Synchronization and Advanced Lyrics Time 
 Synchronization (Synchronized lyrics lines are stored in 
 a Time Index list and this term is frequently used)
 - Two timers for playing music during TV broadcast commercials
 - Detailed SQL History of actions performed on each song
-- Cross-fading other sound sources when toggling play/pause
+- Cross-fading other sound sources when toggling play/pause, FF/REW,
+and during TV broadcast commercials
 - Written in relatively easy to learn Python so you can modify
-for Linux, Windows WSL, Chrome OS, Windows and Mac
+for Linux, Windows WSL, Chrome OS, Windows (a lot more work) 
+and Mac (modest amount of more work)
 - Single SQL library with shared lyrics score and time index 
 across all locations for one time song maintenance benefiting all
 - Restores file's OS last access time to original if 
-less than 80% of song was played.
+less than 80% of song was played
+- Updates play count and last play time, if 80% of song played
 
 
 Features most music players don't have. Requiring separate packages:
 
 - Two clicks to rename Artists, Albums and Song files
 in both the storage device and the mserve SQL database at the same time.
-- Encode CD to music files in MP3, WAV and OGA format
+- Synchronize music across locations (already mentioned above)
+- Encode CD to music files in MP3, MP4, FLAC, WAV and OGA format
 - Scrape MusicBrainz for Artist / Album CD track details and artwork
 - Scrape genius.com and other websites to get song lyrics
 - Compare song files between locations and update differences
@@ -86,6 +91,7 @@ is loaded into memory.
 > 
 > Primarily tested with Linux, specifically Ubuntu 16.04 LTS
 > Briefly tested with ChromeOS for about a month and modified
+> Current plans are to upgrade to 24.04 in year 2024. 
 > 
 > There is NO installation script. You will have to manually
 > install dependencies with:
@@ -110,49 +116,24 @@ installed on their system.
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
-# Synchronized Lyrics
+# Music Location Tree
 
-This video shows how artwork, automatically obtained from the internet, is animated
-on your screen:
+The *Music Location Tree* is the main window which appears 
+when **mserve** starts up and it remains until 
+**mserve** is closed.
 
-- It rotates clockwise
-- At 90 degrees it slides right then resumes rotating
-- At 180 degrees it slides down then resumes rotating
-- At 270 degrees it slides left then resumes rotating
-- At 360 degrees it slides up, pixelates, then the process repeats
+Songs are listed under collapsed Album Names which are
+listed under collapsed Artist Names.  The directory 
+format must be:
 
-> **IMPORTANT:** Un-mute video to hear song
+- `Artist Name/Album Name/Song Name.ext`
+
+Only *Song Names* with music type extensions are included.
+Here is a sample window with currently playing song 
+highlighted in green.
 
 
-<video src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4"
-controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
-style="max-height:640px; width: 100% !important; height: auto !important;">
-</video>
 
-This video also shows:
-
-- Two real-time VU meters for left and right channels
-- Tooltips for buttons. **This is an OLD video:** The new tooltips fade in and out after delays and follow mouse cursor. See sections below for examples.
-- Lyrics are highlighted in time with the music
-- Lyrics are automatically retrieved from the internet (from eight different sites)
-- You can manually change the lyrics retrieved
-
-Additional notes:
-
--    Edit lyrics for minor changes or massive copy from internet and replace.
--    Click on each line to synchronize the time for future playback.
--    Auto scroll lyrics, time scroll lyrics or manually scroll lyrics score.
--    Fine-tune adjustments to time index are done on separate window.
--    Sample middle 10 seconds of song. Future select one or two key song lines.
--    Right click on song to bring up Kid3 which runs on Linux, Windows and Mac.
--    Multiple locations are supported including sleeping servers woken with magic packet.
--    Compare music files between locations and update differences.
--    Compare supports Android with shadow file system for last modified date.
--    Encode CDs with automatic track name retrieval from MusicBrainz.
--    Encode CDs with automatic Cover Art download or Image paste from clipboard.
--    SQLite3 now used to replace old pickles and to add new features for history tracking.
--    Music player runs while encoding process takes dozens of minutes per CD.
 
 ---
 
@@ -734,6 +715,51 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 7. Now each lyrics line is automatically highlighted as it is sung
 8. For Time Scrolling to work you need to train mserve with the timing.
 
+
+## Synchronized Lyrics in Action
+
+This video shows how artwork, automatically obtained from the internet, is animated
+on your screen:
+
+- It rotates clockwise
+- At 90 degrees it slides right then resumes rotating
+- At 180 degrees it slides down then resumes rotating
+- At 270 degrees it slides left then resumes rotating
+- At 360 degrees it slides up, pixelates, then the process repeats
+
+> **IMPORTANT:** Un-mute video to hear song
+
+
+<video src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/149242610-7c788f28-c0c7-457f-bf40-78082dc39837.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+</video>
+
+This video also shows:
+
+- Two real-time VU meters for left and right channels
+- Tooltips for buttons. **This is an OLD video:** The new tooltips fade in and out after delays and follow mouse cursor. See sections below for examples.
+- Lyrics are highlighted in time with the music
+- Lyrics are automatically retrieved from the internet (from eight different sites)
+- You can manually change the lyrics retrieved
+
+Additional notes:
+
+-    Edit lyrics for minor changes or massive copy from internet and replace.
+-    Click on each line to synchronize the time for future playback.
+-    Auto scroll lyrics, time scroll lyrics or manually scroll lyrics score.
+-    Fine-tune adjustments to time index are done on separate window.
+-    Sample middle 10 seconds of song. Future select one or two key song lines.
+-    Right click on song to bring up Kid3 which runs on Linux, Windows and Mac.
+-    Multiple locations are supported including sleeping servers woken with magic packet.
+-    Compare music files between locations and update differences.
+-    Compare supports Android with shadow file system for last modified date.
+-    Encode CDs with automatic track name retrieval from MusicBrainz.
+-    Encode CDs with automatic Cover Art download or Image paste from clipboard.
+-    SQLite3 now used to replace old pickles and to add new features for history tracking.
+-    Music player runs while encoding process takes dozens of minutes per CD.
+
 ---
 
 <a id="hdr11"></a>
@@ -1199,8 +1225,8 @@ TV_SOUND = "Firefox"    # Hockey broadcast is aired on Firefox browser
 ```
 
 60% was found to be a suitable volume level for CBC broadcasts
-of the NHL Stanley Cup Playoffs. YMMV. Note that `TV_VOLUME` is  
-a simplistic name. The full name would be: *"mserve volume
+of the NHL Stanley Cup Playoffs. YMMV. Note that `TV_VOLUME` is
+a short name. A full name would be something like: *"mserve volume
 when playing during hockey game muted TV commercials"*.
 
 FYI the "ALSA plug-in [python2.7]" sound processor is used by
