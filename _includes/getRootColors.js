@@ -101,6 +101,11 @@ var colorSchemeDark = {
     "--kbd-border-bottom-color": "#959da5",
     "--kbd-box-shadow-color": "#959da5",
     "--kbd-color": "#242d36"
+    Aug 24/23 - White font on black background is too white:
+    "--body-text-color": "#e0ece1",
+    "--body-bg-color": "#101010",
+    New:
+    "--body-text-color": "#d0dcd1",
 */
 
 var currentColorScheme  // "colorSchemeCayman" or "colorSchemeDark"
