@@ -120,7 +120,9 @@ installed on their system.
 
 The *Music Location Tree* is the main window which appears 
 when **mserve** starts up and it remains until 
-**mserve** is closed.
+**mserve** is closed. On startup, all files in the *Music
+Location Tree* are rediscovered. New songs since the last
+time are displayed.
 
 Songs are listed under collapsed Album Names which are
 listed under collapsed Artist Names.  The directory 
@@ -159,62 +161,62 @@ Options will be greyed out when then are not applicable. For example,
 the *Save Playlist* and *Close Playlist* options are disabled (greyed
 out) until a Playlist is opened.
 
-- **Open Location and Play** - Open a predefined location. If the
+- ***Open Location and Play*** - Open a predefined location. If the
 location is a sleeping host, it is woken up and tested.
-- **New Location** - Define a new location where music can be found. Locally
+- ***New Location*** - Define a new location where music can be found. Locally
 or remotely on a host such as a file server or mobile phone. 
-- **Open Playlist** - Open an existing playlist within the current location.
-- **New Playlist** - Define a new playlist within the current location.
-- **Save Playlist** - Save song selection changes made to Playlist.
-- **Close Playlist and Use Favorites** - Favorites are the songs which are
+- ***Open Playlist*** - Open an existing playlist within the current location.
+- ***New Playlist*** - Define a new playlist within the current location.
+- ***Save Playlist*** - Save song selection changes made to Playlist.
+- ***Close Playlist and Use Favorites*** - Favorites are the songs which are
 selected when no Playlist are open. Favorites do not require the SQL database
 but still use it for metadata information.
-- **Save Favorites** - Save song selection changes made to Playlist.
-- **Exit and CANCEL Pending** - (disabled until changes are made)
-- **Save Play and Exit** - Pending changes to song selections are applied
+- ***Save Favorites*** - Save song selection changes made to Playlist.
+- ***Exit and CANCEL Pending*** - (disabled until changes are made)
+- ***Save Play and Exit*** - Pending changes to song selections are applied
 to Playlist or Favorites and **mserve** exits.
 
 ### Edit Dropdown Menu
 
-- **Synchronize Location** - Compare current location to another location
+- ***Synchronize Location*** - Compare current location to another location
 and synchronize files based on date, size and file byte differences. Uses
 shadow file system for mobile phones that do not track files' last
 modification time.
-- **Edit Location** - Edit a predefined location. If it's the currently
+- ***Edit Location*** - Edit a predefined location. If it's the currently
 opened location, changes to the Top Directory are not permitted.
-- **Delete Location** - Delete a predefined location. The currently
+- ***Delete Location*** - Delete a predefined location. The currently
 opened location cannot be deleted.
-- **Rename Playlist** - Rename a predefined playlist without changing
+- ***Rename Playlist*** - Rename a predefined playlist without changing
 it's catalog of songs or any other details.
-- **Delete Playlist** - Delete a predefined playlist. Song selected
+- ***Delete Playlist*** - Delete a predefined playlist. Song selected
 in the playlist are not touched.
-- **Volume During TV Commercials** - Television broadcasts on the
+- ***Volume During TV Commercials*** - Television broadcasts on the
 internet are often at a lower volume than **mserve**. Use this function
 and it's volume slider to set **mserve** volume when it is playing during
 TV Commercials which automatically muted by **mserve**. 
 
 ### View Dropdown Menu
 
-- **Information Centre** - Displays history of messages **mserve** has
+- ***Information Centre*** - Displays history of messages **mserve** has
 shown along with key statistics, actions and events. Besides using the
 dropdown menu option, the light blue ruler below the dropdown menus
 can be clicked to open the *Information Centre*.
-- **View Locations** - View predefined locations.
-- **View Playlists** - View predefined playlists.
-- **Enable TV Commercial Buttons** - Remove *FF*/*Rewind* buttons and
+- ***View Locations*** - View predefined locations.
+- ***View Playlists*** - View predefined playlists.
+- ***Enable TV Commercial Buttons*** - Remove *FF*/*Rewind* buttons and
 replace with *TV Commercial* and *Intermission* buttons.
-- **Enable FF/Rewind Buttons** - Remove *TV Commercial* and *Intermission* 
+- ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
 buttons and replace with *FF*/*Rewind* buttons.
-- **SQL Music Table** - Scroll through all songs for all locations that
-**mserve** has discovered. "Drill-down" to view more details. Buttons
+- ***SQL Music Table*** - Scroll through all songs for all locations that
+***mserve*** has discovered. "Drill-down" to view more details. Buttons
 to select specific rows, search text, and update Metadata without 
 having to play each song first.
-- **SQL History Table** - Scroll through history rows. "Drill-down" to 
+- ***SQL History Table*** - Scroll through history rows. "Drill-down" to 
 view more details. Buttons to select specific rows and search text.
-- **SQL Location Table** - Scroll through location rows. Button to 
-search text. This function is inferior to the **View Locations** 
+- ***SQL Location Table*** - Scroll through location rows. Button to 
+search text. This function is inferior to the ***View Locations*** 
 function mentioned above.
-- **Debug Information** - Displays information to console and to the
+- ***Debug Information*** - Displays information to console and to the
 *Information Centre*. This information is helpful to those customizing
 **mserve**.
 
@@ -227,8 +229,6 @@ Location. Other locations and playlists maintain their button selection.
   
 ***NOTE:*** The three SQL views allow the column to be moved. Click and
 hold the heading to drag the column to a different position.
-
-
 
 
 ---
@@ -1031,6 +1031,18 @@ utilization with larger artwork size.
 
 # Locations
 
+When you start **mserve**, or open and play a different location, music 
+resumes playing where it left off. If music was paused, it is paused at 
+the the same song position when **mserve** ended.
+
+***Locations*** are the heart of controlling **mserve**.  *Locations* 
+keep track of where music is stored. 
+
+In addition to tracking music on local storage, *Locations* can access
+music stored on a File Server or a Mobile Phone.
+
+---
+
 Here is a sample *Edit Location* window with a location highlighted in green.
 
 {% include image.html src="/assets/img/mserve/mserve Edit Location.png"
@@ -1039,12 +1051,14 @@ Here is a sample *Edit Location* window with a location highlighted in green.
    caption="mserve Edit Location.png"
 %}
 
-In addition to the music on local storage, you can access
-music stored on a File Server, as is the case above, or a Mobile Phone.
+The first two fields are mandatory:
 
-When you start **mserve** or select a different location, music resumes
-playing where it left off. Or if music was paused, it is paused at the
-same song position where it off.
+- ***Location Name*** - Cannot be blank and must be unique
+- ***Music Top Directory*** - The parent folder / subdirectory that contains
+Artist subdirectories.
+
+The remaining fields, starting at ***Optional Remote Host Name*** are
+optional.
 
 If the File Server spends most of its life sleeping, **mserve** can wake it
 up with a "Magic Packet" over wired Ethernet. Then **mserve** keeps
@@ -1063,7 +1077,7 @@ HOST - Open a terminal and enter command which runs forever:
 mserve_client.sh -d
 ```
 
-CLIENT - Open a terminal, and paste below, replacing "<HOST>" 
+CLIENT - Open a terminal, and paste below, replacing `<HOST>` 
 with Host name:
 
 ``` shell
