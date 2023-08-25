@@ -171,7 +171,8 @@ selected when no Playlist are open. Favorites do not require the SQL database
 but still use it for metadata information.
 - **Save Favorites** - Save song selection changes made to Playlist.
 - **Exit and CANCEL Pending** - (disabled until changes are made)
-- **Save Play and Exit** - 
+- **Save Play and Exit** - Pending changes to song selections are applied
+to Playlist or Favorites and **mserve** exits.
 
 ### Edit Dropdown Menu
 
@@ -218,15 +219,16 @@ function mentioned above.
 **mserve**.
 
 
-***NOTE:*** The **Enable TV Commercial Buttons** and **Enable FF/Rewind Buttons**
-occupy the same space and replace each other when clicked. The buttons are
-changed for the current predefined Playlist within the current predefined
+***NOTE:*** The *Enable TV Commercial Buttons* and *Enable FF/Rewind Buttons*
+dropdown menu options occupy the same line and replace each other when they 
+are clicked. The button selection only effects the 
+the current predefined Playlist within the current predefined
 Location. Other locations and playlists maintain their button selection.
   
-***NOTE:*** The three SQL views allow column orders to be changed. Click and
+***NOTE:*** The three SQL views allow the column to be moved. Click and
 hold the heading to drag the column to a different position.
 
-### View Dropdown Menu
+
 
 
 ---
@@ -1029,16 +1031,26 @@ utilization with larger artwork size.
 
 # Locations
 
-In addition to the music stored on your local storage, you can access
-music stored on a File Server or your Cell Phone.
+Here is a sample *Edit Location* window with a location highlighted in green.
 
-When you startup mserve or select a different location, music resumes
-playing where you left off. Or if music was paused, it is paused at the
-same song position where you left off.
+{% include image.html src="/assets/img/mserve/mserve Edit Location.png"
+   alt="mserve Edit Location.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="mserve Edit Location.png"
+%}
 
-If the File Server spends most of its life sleeping, you can wake it
-up with a "Magic Packet" and keep it awake by "touching" a specific
-filename on the server.
+In addition to the music on local storage, you can access
+music stored on a File Server, as is the case above, or a Mobile Phone.
+
+When you start **mserve** or select a different location, music resumes
+playing where it left off. Or if music was paused, it is paused at the
+same song position where it off.
+
+If the File Server spends most of its life sleeping, **mserve** can wake it
+up with a "Magic Packet" over wired Ethernet. Then **mserve** keeps
+the host awake by "touching" a specific filename on the server. A special
+script called `mserve_client.sh` needs to be running on the host to keep it
+awake.
 
 <a id="HelpTestHost"></a>
 ## Optional Remote Host Support
