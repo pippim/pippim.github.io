@@ -497,7 +497,7 @@ All programs written for `mserve`:
 - `message.py` - 1,633 lines
 - `monitor.py` - 813 lines
 - `mserve.py` - 16,127 lines
-- `mserve_client.py` - 334 lines
+- `mserve_client.sh` - 334 lines
 - `mserve_config.py` - 980 lines
 - `sql.py` - 3,150 lines
 - `test-for-sync.sh` - 21 lines
@@ -1041,6 +1041,46 @@ keep track of where music is stored.
 In addition to tracking music on local storage, *Locations* can access
 music stored on a File Server or a Mobile Phone.
 
+### Miscellaneous Points TO RELOCATE
+
+The main music library window follows the directory structure of
+your storage device:
+
+- The top level points to "My Music"
+- The second level points to Artists under "My Music"
+- The third level points to Albums under each Artist
+- The fourth level points to Songs under each Album
+
+> ***NOTE:*** "My Music" is an over simplification for the sake of
+> example. You can start `m` (the splash screen for **mserve.py**)
+> by typing: 
+> `m "/mnt/music/Users/Person/Music/iTunes/iTunes Media/Music/"`
+> 
+> You can also call `m` after changing to a music directory. E.G.
+> Enter `cd ~/Music/Pink Floyd`. Then enter `m .` and you will be
+> presented with all the Albums you have for ***Pink Floyd***.
+> 
+> If you don't pass a parameter to `m` it will reload the last
+> location used and continue playing where it left off.
+
+The chevron (triangle) is clicked to expand / collapse entries
+under Artists and Albums.
+
+The check box is colored solid when "checked" and is hollow
+when "unchecked". If a line appears that means "tri-state" and
+underneath the Artist or Album some songs are "checked" and
+some songs are "unchecked".
+
+As you check and uncheck individual songs, or entire Artists or,
+entire Albums a list is built in memory. Then you can Apply or
+Cancel changes.
+
+New songs are added into the Chronology (Playlist) after the 
+current playing song position.
+
+If you make huge mistakes you can abandon changes with the
+option "*Exit without saving Playlist*".
+
 ---
 
 Here is a sample *Edit Location* window with a location highlighted in green.
@@ -1197,43 +1237,25 @@ filesystem to track what modification times should be.
 
 # Playlists
 
-The main music library window follows the directory structure of
-your storage device:
+Playlists are stored by location. Below is a sample screen from the
+***View Playlists*** function:
 
-- The top level points to "My Music"
-- The second level points to Artists under "My Music"
-- The third level points to Albums under each Artist
-- The fourth level points to Songs under each Album
+{% include image.html src="/assets/img/mserve/mserve View Playlists.png"
+   alt="mserve View Playlists.png"
+   style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
+   caption="mserve View Playlists.png"
+%}
 
-> ***NOTE:*** "My Music" is an over simplification for the sake of
-> example. You can start `m` (the splash screen for **mserve.py**)
-> by typing: 
-> `m "/mnt/music/Users/Person/Music/iTunes/iTunes Media/Music/"`
-> 
-> You can also call `m` after changing to a music directory. E.G.
-> Enter `cd ~/Music/Pink Floyd`. Then enter `m .` and you will be
-> presented with all the Albums you have for ***Pink Floyd***.
-> 
-> If you don't pass a parameter to `m` it will reload the last
-> location used and continue playing where it left off.
+The Playlist name cannot be blank and must be unique per location. A
+warning is issued when the Playlist name has been used in another location.
 
-The chevron (triangle) is clicked to expand / collapse entries
-under Artists and Albums.
+The Playlist description is optional.
 
-The check box is colored solid when "checked" and is hollow
-when "unchecked". If a line appears that means "tri-state" and
-underneath the Artist or Album some songs are "checked" and
-some songs are "unchecked".
+The device location (code) is automatically assigned.
 
-As you check and uncheck individual songs, or entire Artists or,
-entire Albums a list is built in memory. Then you can Apply or
-Cancel changes.
-
-New songs are added into the Chronology (Playlist) after the 
-current playing song position.
-
-If you make huge mistakes you can abandon changes with the
-option "*Exit without saving Playlist*".
+The columns for "Song Count", "Size of Files" and "Duration" are
+automatically calculated as songs are selected and deselected in
+Music Location Tree checkboxes. 
 
 ---
 
