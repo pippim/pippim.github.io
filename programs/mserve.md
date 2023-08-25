@@ -78,8 +78,8 @@ in both the storage device and the mserve SQL database at the same time.
 %}
 
 **mserve** (Music Server) is written in Python.
-The main program is called `mserve.py` and can be found in 
-[GitHub Repsitory for mserve 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py 
+The main program is called `mserve.py` and can be found in the 
+[mserve GitHub Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py 
 "View Python script (source code)"){:target="_blank"}
 
 `mserve.py` is called with `m` from the command line or a 
@@ -139,7 +139,94 @@ highlighted in green.
    caption="mserve.py Music Location Tree.png"
 %}
 
+The first three Artists are "collapsed" which is indicated by the “▶” 
+chevron (A.K.A. "right triangle). When you click the “▶” chevron the 
+Artist is opened and the “▼” chevron is displayed to indicate the 
+Artist is opened. The same chevrons and used for Albums.
 
+Songs have a checkbox which are clicked to include or exclude in
+playlists.
+
+## Dropdown Menus
+
+The top-left corner of the *Music Location Tree Window* contains 
+three dropdown menus; **File**, **Edit** and **View**. Click on
+the name and the dropdown menu options appear:
+
+### File Dropdown Menu
+
+Options will be greyed out when then are not applicable. For example,
+the *Save Playlist* and *Close Playlist* options are disabled (greyed
+out) until a Playlist is opened.
+
+- **Open Location and Play** - Open a predefined location. If the
+location is a sleeping host, it is woken up and tested.
+- **New Location** - Define a new location where music can be found. Locally
+or remotely on a host such as a file server or mobile phone. 
+- **Open Playlist** - Open an existing playlist within the current location.
+- **New Playlist** - Define a new playlist within the current location.
+- **Save Playlist** - Save song selection changes made to Playlist.
+- **Close Playlist and Use Favorites** - Favorites are the songs which are
+selected when no Playlist are open. Favorites do not require the SQL database
+but still use it for metadata information.
+- **Save Favorites** - Save song selection changes made to Playlist.
+- **Exit and CANCEL Pending** - (disabled until changes are made)
+- **Save Play and Exit** - 
+
+### Edit Dropdown Menu
+
+- **Synchronize Location** - Compare current location to another location
+and synchronize files based on date, size and file byte differences. Uses
+shadow file system for mobile phones that do not track files' last
+modification time.
+- **Edit Location** - Edit a predefined location. If it's the currently
+opened location, changes to the Top Directory are not permitted.
+- **Delete Location** - Delete a predefined location. The currently
+opened location cannot be deleted.
+- **Rename Playlist** - Rename a predefined playlist without changing
+it's catalog of songs or any other details.
+- **Delete Playlist** - Delete a predefined playlist. Song selected
+in the playlist are not touched.
+- **Volume During TV Commercials** - Television broadcasts on the
+internet are often at a lower volume than **mserve**. Use this function
+and it's volume slider to set **mserve** volume when it is playing during
+TV Commercials which automatically muted by **mserve**. 
+
+### View Dropdown Menu
+
+- **Information Centre** - Displays history of messages **mserve** has
+shown along with key statistics, actions and events. Besides using the
+dropdown menu option, the light blue ruler below the dropdown menus
+can be clicked to open the *Information Centre*.
+- **View Locations** - View predefined locations.
+- **View Playlists** - View predefined playlists.
+- **Enable TV Commercial Buttons** - Remove *FF*/*Rewind* buttons and
+replace with *TV Commercial* and *Intermission* buttons.
+- **Enable FF/Rewind Buttons** - Remove *TV Commercial* and *Intermission* 
+buttons and replace with *FF*/*Rewind* buttons.
+- **SQL Music Table** - Scroll through all songs for all locations that
+**mserve** has discovered. "Drill-down" to view more details. Buttons
+to select specific rows, search text, and update Metadata without 
+having to play each song first.
+- **SQL History Table** - Scroll through history rows. "Drill-down" to 
+view more details. Buttons to select specific rows and search text.
+- **SQL Location Table** - Scroll through location rows. Button to 
+search text. This function is inferior to the **View Locations** 
+function mentioned above.
+- **Debug Information** - Displays information to console and to the
+*Information Centre*. This information is helpful to those customizing
+**mserve**.
+
+
+***NOTE:*** The **Enable TV Commercial Buttons** and **Enable FF/Rewind Buttons**
+occupy the same space and replace each other when clicked. The buttons are
+changed for the current predefined Playlist within the current predefined
+Location. Other locations and playlists maintain their button selection.
+  
+***NOTE:*** The three SQL views allow column orders to be changed. Click and
+hold the heading to drag the column to a different position.
+
+### View Dropdown Menu
 
 
 ---
