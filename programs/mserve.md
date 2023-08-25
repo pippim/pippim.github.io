@@ -157,7 +157,7 @@ the name and the dropdown menu options appear:
 
 ### File Dropdown Menu
 
-Options will be greyed out when then are not applicable. For example,
+Some options will be disabled out when they are not applicable. For example,
 the *Save Playlist* and *Close Playlist* options are disabled (greyed
 out) until a Playlist is opened.
 
@@ -1051,14 +1051,58 @@ Here is a sample *Edit Location* window with a location highlighted in green.
    caption="mserve Edit Location.png"
 %}
 
-The first two fields are mandatory:
+Mandatory Location Fields. The first two fields are mandatory:
 
 - ***Location Name*** - Cannot be blank and must be unique
 - ***Music Top Directory*** - The parent folder / subdirectory that contains
 Artist subdirectories.
 
-The remaining fields, starting at ***Optional Remote Host Name*** are
+The remaining fields, starting at ***Optional Remote Host Name***, are
 optional.
+
+Optional Location Fields:
+
+- ***Optional Remote Host Name*** - If the *Music Top Directory* is on
+a remote host, enter that name here. This is the only field that 
+must be entered for a remote host. The remaining fields are optional for
+a remote host.
+- ***Command to wake up sleeping Host*** - If the host is normally
+asleep (to save electricity and extend life), enter the `waekonlan`
+command here. Make sure `&` is appended to launch command in the
+background. This is important for **mserve** to test when host is awake
+and move onto the next test step.
+- ***Command to test if Host is awake*** - Only enter a command if the
+previous field to wake Host was used. **mserve** tests if more than
+three lines were returned by this command to know host is awake.
+- ***Maximum tests every 0.1 second*** - Only enter a command if the
+previous field to test if Host is awake was used. **mserve** runs the
+previous field test this number of times. In the example 300 times is used
+which is 30 seconds.
+- ***Command to mount Host Music locally*** - If the Host's music isn't
+automatically mounted, enter the mount command here. Note in this example
+the `nonempty` parameter is used. This is helpful if **mserve** was
+restarted and the previous mount was still left mounted.
+- ***Command to prevent Host sleeping*** - If Host had to be woken up,
+enter a command to keep it awake. Assuming you are using the
+`mserve_client.sh` script on the host, the command would be:
+`ssh <HOST> "touch /tmp/mserve_client.time` where `<HOST> is the
+remote Host's name.
+- ***Send prevent sleep every x minutes*** - Only enter this field if
+the previous field was entered. In the screenshot `10` is entered such
+that every ten minutes the previous field's command is issued. When you
+exit **mserve** the host will fall asleep on it's own. If you suspend
+your laptop, the host will still fall asleep and when you wake up your
+laptop, the host will be unavailable and **mserve** will advise you it
+needs to be woken up again. In this case, **mserve** is forced to run
+the "Open Location and Play" function which is essentially a restart.
+- ***Optional Comments*** - Have no effect on **mserve** operation.
+Indeed in this case the comment is incorrect and says "10 seconds"
+instead of "100 seconds".
+- ***Optional picture of Location*** - Upload a picture to the subdirectory
+where `mserve.py` is installed.  Then use the filename picker to select
+that filename. An image of what the location looks like is helpful when
+you forget what the location looks like.
+
 
 If the File Server spends most of its life sleeping, **mserve** can wake it
 up with a "Magic Packet" over wired Ethernet. Then **mserve** keeps
@@ -1392,7 +1436,7 @@ the first output device
 called "GM204 High Definition Audio Controller" is usually used
 for sound output. This belongs to a 50" big screen Sony TV with
 good sound system including a sub-woofer. The soundcard (chipset)
-is located on a nVidia 970M discrete graphics card.
+is located on a Nvidia 970M discrete graphics card.
 
 The middle output device is "HDMI / DisplayPort - Built-in Audio".
 This sound device is 43" 4K TCL / Google (Android) TV. The
@@ -1447,7 +1491,7 @@ Notice the thick progress bar at the bottom show no sound
 being recorded. That is because it is listening to the
 wrong stream: "Monitor of GM204 High Definition Audio
 Controller Digital Stereo (HDMI)". This stream is for
-the 50" Sony TV connected to nVidia 970M card.
+the 50" Sony TV connected to Nvidia 970M card.
 
 Remember in the last screenshot we used Ubuntu's sound
 setting to change output from 50" TV to built-in laptop
