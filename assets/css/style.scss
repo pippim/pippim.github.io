@@ -5,14 +5,16 @@
 
 // bold / strong font
 b, strong {
-  // color: var(--boldest-color);  // Adverse effects on headings & links
   font-weight: bold;
+  body:not(a, h1, h2, h3, h4) {
+    color: var(--bold-color);  // Adverse effects on headings & links
+  }
 }
 
-body:not(a, h1, h2, h3, h4) > b, strong {
-  color: var(--bold-color);  // Adverse effects on headings & links
-  font-weight: bold;
-}
+//body:not(a, h1, h2, h3, h4) > b, strong {
+//  color: var(--bold-color);  // Adverse effects on headings & links
+//  font-weight: bold;
+//}
 
 
 // Input fields
