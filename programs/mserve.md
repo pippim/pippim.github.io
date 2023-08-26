@@ -1487,16 +1487,24 @@ Volume Control GUI application (**pavucontrol**) is used.
    caption="pavucontrol output devices.png"
 %}
 
-This screenshot shows the *Pulse Audio Volume Control* 
-"Output Devices" Tab.
-In this example the output was changed from the first device
-to the Built-in Audio speakers. The changes were made from the
+This screenshot shows the *Pulse Audio Volume Control* "Output 
+Devices" Tab.
+In this example, the output was changed from the first device
+to the **Built-in Audio** speakers. The changes were made from the
 Ubuntu 16.04 Sound System Settings panel show in the previous
 section.
 
 Notice the thick progress bar. It displays the sound playing
-on the output device and jumps very quickly. This is how you
-can confirm the correct device is selected.
+on the output device and jumps very quickly. Progress bar activity
+is how you can confirm the active output device is selected.
+
+When the output device is changed, the recording device must
+be changed for the VU meters to display the correct output sound
+device. See the section: *Pulse Audio Volume Control Change 
+Recording Source* below.
+
+Then **mserve** must be restarted 
+for the VU meters to display the correct output sound device. 
 
 ---
 
@@ -1511,8 +1519,8 @@ can confirm the correct device is selected.
 This screenshot shows the *Pulse Audio Volume Control*
 "Recording" Tab.
 
-Notice the thick progress bar at the bottom show no sound
-being recorded. That is because it is listening to the
+Notice the thick progress bar at the bottom indicates no sound
+is being recorded. That is because it is listening to the
 wrong stream: "Monitor of GM204 High Definition Audio
 Controller Digital Stereo (HDMI)". This stream is for
 the 50" Sony TV connected to Nvidia 970M card.
