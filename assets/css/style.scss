@@ -9,7 +9,7 @@ b, strong {
   font-weight: bold;
 }
 
-body:not(a) body:not(h1) body:not(h2) body:not(h3) b, strong {
+body:not(a):not(h1):not(h2):not(h3):not(h4) b, strong {
   color: var(--bold-color);  // Adverse effects on headings & links
   font-weight: bold;
 }
