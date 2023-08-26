@@ -19,15 +19,21 @@ by simply clicking each line as it is sung.
 Why have one when you can have multiples?:
 
 - Multiple Locations Synchronization (including mobile and file servers)
-- Multiple Playlists per location (every location has default favorites)
+- Multiple Playlists per location (every location also has default favorites)
 - Multiple Window save positions for music library, current playing, 
 volume control, playlists control, fine-tune time index, location
-maintenance, and CD encoding (ripping)
-- Multiple Monitors (remembers monitor window last opened on)
+maintenance, three SQL Table viewers, and CD encoding (ripping)
+- Multiple Monitors ensure windows open on correct monitor
 - Multiple processes for lag free animations
-- Multiple Show Chronology/Resume Position/TV Volume option states
-per location and per Playlist within location
+- Multiple Show Chronology/Resume Song/Volume/Playlist Buttons states
+per Playlist per location
 - Multiple CD Encoding formats, quality, images and filename formatting
+- Multiple MusicBrainz CD album/track releases to chose from for artist.
+- Multiple Website Scraping for Lyrics is in progress but currently
+defaults to `genius.com`
+
+
+## Features
  
 Innovative features:
 
@@ -59,7 +65,7 @@ less than 80% of song was played
 - Updates play count and last play time, if 80% of song played
 
 
-Features most music players don't have. Requiring separate packages:
+Features most music players don't have:
 
 - Two clicks to rename Artists, Albums and Song files
 in both the storage device and the mserve SQL database at the same time.
@@ -69,7 +75,7 @@ in both the storage device and the mserve SQL database at the same time.
 - Scrape genius.com and other websites to get song lyrics
 - Compare song files between locations and update differences
 
-## **mserve** Under Construction
+## **mserve** is Still Under Construction
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Under Construction.png"
@@ -80,29 +86,37 @@ in both the storage device and the mserve SQL database at the same time.
 **mserve** (Music Server) is written in Python.
 The main program is called `mserve.py` and can be found in the 
 [mserve GitHub Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py 
-"View Python script (source code)"){:target="_blank"}
+"View mserve Python source code"){:target="_blank"}
 
 `mserve.py` is called with `m` from the command line or a 
-desktop shortcut. `m` is a wrapper Python script to center
-a logo on your screen for a couple seconds whilst **mserve**
+desktop shortcut. It is recommended you start using **mserve**
+from the command line to see any error messages that might
+appear.
+
+`m` is a wrapper Python script that centers 
+a logo on your screen for a couple seconds while **mserve**
 is loaded into memory.
+
+`m` and `mserve.py` do not need to be added to your path.
+You can call them with `/path/to/m` or `/path/to/mserve.py`
+from the command line.
 
 > ***IMPORTANT NOTES:*** 
 > 
-> Primarily tested with Linux, specifically Ubuntu 16.04 LTS
-> Briefly tested with ChromeOS for about a month and modified
+> **mserve** was primarily tested with Linux, specifically Ubuntu 16.04 LTS.
+> **mserve** was briefly tested with ChromeOS for about a month and modified.
 > Current plans are to upgrade to 24.04 in year 2024. 
 > 
-> There is NO installation script. You will have to manually
+> There is **NO** installation script for **mserve**. You will have to manually
 > install dependencies with:
 > 
 >    `sudo apt install python-xxxxx`.
 
-Below you will find the
+See the
 <a href="#mserveDependencies">dependencies required</a>
-by **mserve**.
-Many of the dependencies may already
-installed on their system.
+by **mserve** section for more details. 
+For typical power users, many of the dependencies will already
+be installed.
 
 ---
 
@@ -130,7 +144,9 @@ format must be:
 
 - `Artist Name/Album Name/Song Name.ext`
 
-Only *Song Names* with music type extensions are included.
+Only Song Filenames with a music type extensions are included. For 
+example, extensions of `.flac`, `.mp3`, `.m4a`, `.oga`, `.wav`, etc,
+are included.
 
 Here is a sample window with currently playing song 
 highlighted in green.
@@ -145,11 +161,18 @@ The first three Artists are "collapsed" which is indicated by the “▶”
 chevron (A.K.A. "right triangle). When you click the “▶” chevron the 
 Artist is opened and the “▼” chevron is displayed to indicate the 
 Artist is opened. The same chevrons and used for Albums. As songs
-are automatically played by **mserve**, the Album Name and Artist
-Name are expanded and collapsed and the green bar highlighted.
+play and end in **mserve**, the Album Name and Artist
+Name are automatically expanded and collapsed to show the 
+green highlight bar.
 
 Songs have a checkbox which are clicked to include or exclude in
-playlists.
+playlists. The check box is colored solid when "checked" and is hollow
+when "unchecked". If a line appears, it indicates the Artist or Album 
+is "tri-state". This means some songs below are "checked" and
+some are "unchecked".
+
+You can check and uncheck individual songs, entire Artists or,
+entire Albums. 
 
 ## Dropdown Menus
 
@@ -332,20 +355,10 @@ date. It then grabs Album Artwork from the internet.
 You can paste album artwork from the clipboard which you previously
 copied from Amazon, or another website.
 
-## Encoding ID3 Tags
+## Encoding Metadata (ID3v2.4) Tags
 
-
-{% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
-   alt="Under Construction.png"
-   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
-   caption="Under Construction.png"
-%}
-
-**mserve** ID3 Tags are under construction and not yet stable. Encoding 
-works but granular tagging such as "Genre", "Composer", "Album Date" are 
-a WIP (Work In Progress).
-
-The ID3 Tags displayed in **mserve** use the `ffmpeg` naming conventions:
+**mserve** Metadata (ID3v2.4) Tags are displayed with common names. The
+common names follow the `ffmpeg` naming conventions:
 
 | ffmpeg TAG       | Description                                                   |
 |------------------|---------------------------------------------------------------|
@@ -353,15 +366,19 @@ The ID3 Tags displayed in **mserve** use the `ffmpeg` naming conventions:
 | ARTIST           | Name of band or solo artist                                   |
 | ALBUM_ARTIST     | Same as ARTIST except for Compilations then "Various Artists" |
 | ALBUM            | Name of the Album                                             |
+| COPYRIGHT        | Date the Album (not the song) was released                    |
 | DISC             | Disc Number. E.G. single CD is "1/1". 3 CD set could be "1/3" |
-| TRACKNUMBER      | E.G. first title "1/12", last title "12/12"                   |
-| DATE             | First ever release date in YYYY format. NOT the Album Date!   |
+| TRACK_NUMBER     | E.G. When 12 tracks, first track "1/12", last track "12/12"   |
+| DATE             | Song's first release date in YYYY format. NOT the Album Date! |
 | GENRE            | E.G. "Rock", "Soundtrack", "Country", etc.                    |
 | CREATION_TIME    | Date and time music file created (encoded)                    |
 | COMPOSER         | When not specified, defaults to ARTIST                        |
 | COMMENT          | One line comment                                              |
 | COMPILATION      | When value is "1", folder is /Compilations/<ALBUM>            |
 | GAPLESS_PLAYBACK | "0" = Off, "1" = On. However, **mserve** doesn't support it.  |
+| ENCODER          | E.G. "mserve 3.4.3" or "iTunes 11.4.0.18"                     |
+| DISCID           | CDDB Free Disc ID                                             |
+| MUSICBRAINZ_DISC | MusicBrainz Disc ID                                           |
 
 Besides these ID3 tags, **mserve** SQL stores metadata for:
 
@@ -1107,15 +1124,18 @@ Optional Location Fields:
 - ***Optional Remote Host Name*** - If the *Music Top Directory* is on
 a remote host, enter that name here. This is the only field that 
 must be entered for a remote host. The remaining fields are optional for
-a remote host.
+a remote host. This field does not appear unless `nmap` and `nc` are
+installed.
 - ***Command to wake up sleeping Host*** - If the host is normally
 asleep (to save electricity and extend life), enter the `waekonlan`
 command here. Make sure `&` is appended to launch command in the
 background. This is important for **mserve** to test when host is awake
-and move onto the next test step.
+and move onto the next test step.  This field does not appear unless 
+`nmap`, `nc` and `wakeonlan` are installed.
 - ***Command to test if Host is awake*** - Only enter a command if the
 previous field to wake Host was used. **mserve** tests if more than
-three lines were returned by this command to know host is awake.
+three lines were returned by this command to know host is awake.  This  
+field does not appear unless `nmap`, `nc` and `ssh` are installed.
 - ***Maximum tests every 0.1 second*** - Only enter a command if the
 previous field to test if Host is awake was used. **mserve** runs the
 previous field test this number of times. In the example 300 times is used
@@ -1123,12 +1143,14 @@ which is 30 seconds.
 - ***Command to mount Host Music locally*** - If the Host's music isn't
 automatically mounted, enter the mount command here. Note in this example
 the `nonempty` parameter is used. This is helpful if **mserve** was
-restarted and the previous mount was still left mounted.
+restarted and the previous mount was still left mounted. This field does
+not appear unless `nmap`, `nc` and `sshfs` are installed.
 - ***Command to prevent Host sleeping*** - If Host had to be woken up,
 enter a command to keep it awake. Assuming you are using the
 `mserve_client.sh` script on the host, the command would be:
-`ssh <HOST> "touch /tmp/mserve_client.time` where `<HOST> is the
-remote Host's name.
+`ssh <HOST> "touch /tmp/mserve_client.time` where `<HOST>` is the
+remote Host's name. This field does
+not appear unless `nmap`, `nc` and `ssh` are installed.
 - ***Send prevent sleep every x minutes*** - Only enter this field if
 the previous field was entered. In the screenshot `10` is entered such
 that every ten minutes the previous field's command is issued. When you
@@ -1190,7 +1212,7 @@ will not let you define this debug option.
 
 More details: https://help.ubuntu.com/community/SSHFS
 
-## Compare Locations
+## Synchronize Location
 
 Here we see how files can be synchronized across devices.
 
@@ -1553,7 +1575,7 @@ Then the stream "Monitor of Built-in Audio Analog Stereo"
 was selected. Notice the thick progress bar is now populated
 with sound volume levels.
 
-When you change the output device loopback to recording
+When you change the output device loopback to recording; 
 **YOU MUST RESTART mserve**. Otherwise the VU meters will
 merely be blank.
 
