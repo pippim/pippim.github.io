@@ -5,7 +5,7 @@
 
 // bold / strong font
 b, strong {
-  color: var(--boldest-color);
+  // color: var(--boldest-color);  // Adverse effects on headings & links
   font-weight: bold;
 }
 
