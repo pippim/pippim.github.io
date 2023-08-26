@@ -75,7 +75,7 @@ var colorSchemeDark = {
     "--body-bg-color": "#101010",
     "--body-link-color": "#5eabf8",
     "--body-link-inverted-color": "#e19447",
-    "--blockquote-text-color": "#819198",
+    "--blockquote-text-color": "#a1b1b8",
     "--code-bg-color": "#d3d6da",
     "--code-text-color": "#365462",
     "--border-color": "#4c4640",
@@ -108,8 +108,10 @@ var colorSchemeDark = {
     "--body-text-color": "#c0ccc1",
     Aug 26/22 - Heading color brighter on dark theme:
         "--section-headings-color": "#159957",
+        "--blockquote-text-color": "#819198",
     New:
         "--section-headings-color": "#25a967",
+        "--blockquote-text-color": "#a1b1b8",
 
 */
 
