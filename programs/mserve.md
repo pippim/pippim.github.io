@@ -172,7 +172,46 @@ is "tri-state". This means some songs below are "checked" and
 some are "unchecked".
 
 You can check and uncheck individual songs, entire Artists or,
-entire Albums. 
+entire Albums.
+
+The main music library window follows the directory structure of
+your storage device:
+
+- The top level points to "My Music"
+- The second level points to Artists under "My Music"
+- The third level points to Albums under each Artist
+- The fourth level points to Songs under each Album
+
+> ***NOTE:*** "My Music" is an over simplification for the sake of
+> example. You can start `m` (the splash screen for **mserve.py**)
+> by typing: 
+> `m "/mnt/music/Users/Person/Music/iTunes/iTunes Media/Music/"`
+> 
+> You can also call `m` after changing to a music directory. E.G.
+> Enter `cd ~/Music/Pink Floyd`. Then enter `m .` and you will be
+> presented with all the Albums you have for ***Pink Floyd***.
+> 
+> If you don't pass a parameter to `m` it will reload the last
+> location used and continue playing where it left off.
+
+The chevron (triangle) is clicked to expand / collapse entries
+under Artists and Albums.
+
+The check box is colored solid when "checked" and is hollow
+when "unchecked". If a line appears that means "tri-state" and
+underneath the Artist or Album some songs are "checked" and
+some songs are "unchecked".
+
+As you check and uncheck individual songs, or entire Artists or,
+entire Albums a list is built in memory. Then you can Apply or
+Cancel changes.
+
+New songs are added into the Chronology (Playlist) after the 
+current playing song position.
+
+If you make huge mistakes you can abandon changes with the
+option "*Exit without saving Playlist*".
+
 
 ## Dropdown Menus
 
@@ -355,9 +394,9 @@ date. It then grabs Album Artwork from the internet.
 You can paste album artwork from the clipboard which you previously
 copied from Amazon, or another website.
 
-## Encoding Metadata (ID3v2.4) Tags
+## Encoding Metadata Tags
 
-**mserve** Metadata (ID3v2.4) Tags are displayed with common names. The
+**mserve** Metadata Tags are displayed with common names. The
 common names follow the `ffmpeg` naming conventions:
 
 | ffmpeg TAG       | Description                                                   |
@@ -1059,46 +1098,6 @@ keep track of where music is stored.
 
 In addition to tracking music on local storage, *Locations* can access
 music stored on a File Server or a Mobile Phone.
-
-### Miscellaneous Points TO RELOCATE
-
-The main music library window follows the directory structure of
-your storage device:
-
-- The top level points to "My Music"
-- The second level points to Artists under "My Music"
-- The third level points to Albums under each Artist
-- The fourth level points to Songs under each Album
-
-> ***NOTE:*** "My Music" is an over simplification for the sake of
-> example. You can start `m` (the splash screen for **mserve.py**)
-> by typing: 
-> `m "/mnt/music/Users/Person/Music/iTunes/iTunes Media/Music/"`
-> 
-> You can also call `m` after changing to a music directory. E.G.
-> Enter `cd ~/Music/Pink Floyd`. Then enter `m .` and you will be
-> presented with all the Albums you have for ***Pink Floyd***.
-> 
-> If you don't pass a parameter to `m` it will reload the last
-> location used and continue playing where it left off.
-
-The chevron (triangle) is clicked to expand / collapse entries
-under Artists and Albums.
-
-The check box is colored solid when "checked" and is hollow
-when "unchecked". If a line appears that means "tri-state" and
-underneath the Artist or Album some songs are "checked" and
-some songs are "unchecked".
-
-As you check and uncheck individual songs, or entire Artists or,
-entire Albums a list is built in memory. Then you can Apply or
-Cancel changes.
-
-New songs are added into the Chronology (Playlist) after the 
-current playing song position.
-
-If you make huge mistakes you can abandon changes with the
-option "*Exit without saving Playlist*".
 
 ---
 
