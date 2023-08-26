@@ -3,6 +3,12 @@
 
 @import "{{ site.theme }}";
 
+// bold / strong font
+b, strong {
+  color: (var(--boldest-color);
+}
+
+
 // Input fields
 button,
 input,
