@@ -124,8 +124,8 @@ when **mserve** starts up and it remains until
 Location Tree* are rediscovered. New songs since the last
 time are displayed.
 
-Songs are listed under collapsed Album Names which are
-listed under collapsed Artist Names.  The directory 
+Songs are stored under collapsed Album Names which, in turn, are
+stored under collapsed Artist Names. The directory 
 format must be:
 
 - `Artist Name/Album Name/Song Name.ext`
@@ -144,7 +144,9 @@ highlighted in green.
 The first three Artists are "collapsed" which is indicated by the “▶” 
 chevron (A.K.A. "right triangle). When you click the “▶” chevron the 
 Artist is opened and the “▼” chevron is displayed to indicate the 
-Artist is opened. The same chevrons and used for Albums.
+Artist is opened. The same chevrons and used for Albums. As songs
+are automatically played by **mserve**, the Album Name and Artist
+Name are expanded and collapsed and the green bar highlighted.
 
 Songs have a checkbox which are clicked to include or exclude in
 playlists.
@@ -152,8 +154,8 @@ playlists.
 ## Dropdown Menus
 
 The top-left corner of the *Music Location Tree Window* contains 
-three dropdown menus; **File**, **Edit** and **View**. Click on
-the name and the dropdown menu options appear:
+three dropdown menus; <strong>File</strong>, <b>Edit</b> and **View**. 
+Click on the name and the dropdown menu options appear:
 
 ### File Dropdown Menu
 
