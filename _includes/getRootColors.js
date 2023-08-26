@@ -24,13 +24,14 @@ var colorSchemeCayman = {
     "--progress-bar-bg-color": "#c0c0c0",
     "--on-off-switch-opacity": "1.0",
     "--flash-bg-color": "#808080",
-    "--boldest-color": "#000000",
     "--link-visited": "#800080",
     "--header-heading-color": "#ffffff",
     "--header-bg-color": "#159957",
     "--header-bg-color-secondary": "#155799",
     "--section-headings-color": "#159957",
     "--body-text-color": "#606c71",
+    "--bold-color": "#303030",
+    "--boldest-color": "#000000",
     "--body-bg-color": "#ffffff",
     "--body-link-color": "#1e6bb8",
     "--body-link-inverted-color": "#e19447",
@@ -65,13 +66,14 @@ var colorSchemeDark = {
     "--progress-bar-bg-color": "#303030",
     "--on-off-switch-opacity": "0.75",
     "--flash-bg-color": "#808080",
-    "--boldest-color": "#ffffff",
     "--link-visited": "#CF9FFF",
     "--header-heading-color": "#ffd080",
     "--header-bg-color": "#057937",
     "--header-bg-color-secondary": "#053779",
     "--section-headings-color": "#25a967",
     "--body-text-color": "#c0ccc1",
+    "--bold-color": "#e9ede9",
+    "--boldest-color": "#ffffff",
     "--body-bg-color": "#101010",
     "--body-link-color": "#5eabf8",
     "--body-link-inverted-color": "#e19447",
@@ -101,17 +103,19 @@ var colorSchemeDark = {
     "--kbd-border-bottom-color": "#959da5",
     "--kbd-box-shadow-color": "#959da5",
     "--kbd-color": "#242d36"
+
     Aug 24/23 - White font on black background is too white:
-    "--body-text-color": "#e0ece1",
-    "--body-bg-color": "#101010",
-    New:
-    "--body-text-color": "#c0ccc1",
+        "--body-text-color": "#e0ece1",
+        "--body-bg-color": "#101010",
+        New:
+            "--body-text-color": "#c0ccc1",
+
     Aug 26/22 - Heading color brighter on dark theme:
         "--section-headings-color": "#159957",
         "--blockquote-text-color": "#819198",
-    New:
-        "--section-headings-color": "#25a967",
-        "--blockquote-text-color": "#a1b1b8",
+        New:
+            "--section-headings-color": "#25a967",
+            "--blockquote-text-color": "#a1b1b8",
 
 */
 
