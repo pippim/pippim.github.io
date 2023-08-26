@@ -71,7 +71,7 @@ var colorSchemeDark = {
     "--header-bg-color": "#057937",
     "--header-bg-color-secondary": "#053779",
     "--section-headings-color": "#159957",
-    "--body-text-color": "#e0ece1",
+    "--body-text-color": "#d0dcd1",
     "--body-bg-color": "#101010",
     "--body-link-color": "#5eabf8",
     "--body-link-inverted-color": "#e19447",
