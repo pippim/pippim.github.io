@@ -455,8 +455,8 @@ Tree* window. The video below shows how to select encoding format,
 quality, naming format, album date, artwork, genre, comments and track
 level overrides to genre:
 
-<video src="https://user-images.githubusercontent.com/92641463/263541419-a6c8ab0e-bb72-4440-bc22-08a84133eba0.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/263541419-a6c8ab0e-bb72-4440-bc22-08a84133eba0.mp4"
+<video src="https://user-images.githubusercontent.com/92641463/263543359-08445988-78b2-4a94-864e-4050df36388c.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/263543359-08445988-78b2-4a94-864e-4050df36388c.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
