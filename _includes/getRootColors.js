@@ -30,7 +30,7 @@ var colorSchemeCayman = {
     "--header-bg-color-secondary": "#155799",
     "--section-headings-color": "#159957",
     "--body-text-color": "#606c71",
-    "--bold-color": "#303030",
+    "--bold-color": "#404c51",
     "--boldest-color": "#000000",
     "--body-bg-color": "#ffffff",
     "--body-link-color": "#1e6bb8",
@@ -72,7 +72,7 @@ var colorSchemeDark = {
     "--header-bg-color-secondary": "#053779",
     "--section-headings-color": "#25a967",
     "--body-text-color": "#c0ccc1",
-    "--bold-color": "#e9ede9",
+    "--bold-color": "#e9eee9",
     "--boldest-color": "#ffffff",
     "--body-bg-color": "#101010",
     "--body-link-color": "#5eabf8",
@@ -116,6 +116,7 @@ var colorSchemeDark = {
         New:
             "--section-headings-color": "#25a967",
             "--blockquote-text-color": "#a1b1b8",
+            "--bold-color": "#e9ede9",
 
 */
 
