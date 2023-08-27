@@ -216,7 +216,7 @@ option "*Exit without saving Playlist*".
 ## Dropdown Menus
 
 The top-left corner of the *Music Location Tree Window* contains 
-three dropdown menus; <strong>File</strong>, <b>Edit</b> and **View**. 
+three dropdown menus; <strong><i>File</i></strong>, <b>Edit</b> and ***View***. 
 Click on the name and the dropdown menu options appear:
 
 ### File Dropdown Menu
