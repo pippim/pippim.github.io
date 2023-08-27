@@ -20,7 +20,7 @@ Why have one when you can have multiples?:
 
 - Multiple Locations Synchronization (including mobile and file servers)
 - Multiple Playlists per location (every location also has default favorites)
-- Multiple Window save positions for music library, current playing, 
+- Multiple Window save positions for music location, current playing, 
 volume control, playlists control, fine-tune time index, location
 maintenance, three SQL Table viewers, and CD encoding (ripping)
 - Multiple Monitors ensure windows open on correct monitor
@@ -174,7 +174,7 @@ some are "unchecked".
 You can check and uncheck individual songs, entire Artists or,
 entire Albums.
 
-The main music library window follows the directory structure of
+The main music location window follows the directory structure of
 your storage device:
 
 - The top level points to "My Music"
@@ -634,7 +634,7 @@ term, development has begun to identify installed versions.
 
 # SQL Tables and Pickled Data Files
 
-`mserve` data is stored in a unique fashion. This section lists
+`mserve` data is stored in various files. This section lists
 the filenames you will need to backup. A brief explanation is
 given for how each file is used.
 
@@ -667,9 +667,9 @@ One subdirectory is created for every location. E.G. the subdirectory
 
 - **last_open_states** - lc.FNAME_LAST_OPN_STATES - Each Artist and Album
 and whether or not they are open (down triangle / chevron) or closed
-(left pointing triangle / chevron) in the Music Library window.
+(left pointing triangle / chevron) in the Music Location window.
 - **last_playlist** - lc.FNAME_LAST_PLAYLIST - Full path names of all
-songs checked (have the blue square) in the Music Library window. 
+songs checked (have the blue square) in the Music Location window. 
 Sorted in playlist order.
 - **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
 **last_playlist** indicating the song that was playing when **mserve**
@@ -1299,7 +1299,7 @@ Hockey Playoff TV Commercial buttons.
 
 **`.gif` (there is no sound) Highlights:**
 
-- From the Music Library window select the "View" dropdown menu.
+- From the Music Location window select the "View" dropdown menu.
 - When FF/Rewind buttons are visible you have the option of
 enabling the Hockey buttons.
 - The Hockey TV Commercial button turns down TV commercial and
@@ -1308,7 +1308,7 @@ resumes mserve play for 90 seconds.
 resumes mserve play for 18 minutes.
 - When Hockey TV commercial buttons are active you have
 the option of restoring the FF/Rewind buttons.
-- When changing buttons, the Music Library window is
+- When changing buttons, the Music Location window is
 sent to bottom and Play Window is raised to the top.
 
 This `.gif` also shows how the Show/Hide
@@ -1345,7 +1345,7 @@ either button to end the countdown immediately
 screen and the Music Player window goes back to it's original
 location on the 4K TV.
 
-## Hockey TV Commercial Button Without `compiz`
+## Hockey TV Commercial Button Without **compiz**
 
 This video shows what you see and hear when you click 
 one of the Hockey TV Commercial Buttons and `compiz`
@@ -1495,7 +1495,7 @@ The soundcard is built into onboard Intel chipset.
 
 ---
 
-## `pavucontrol` Sound Output Loopback to Microphone
+## **pavucontrol** Sound Output Loopback to Microphone
 
 In order for VU Meters to work in **mserve**, The Pulse Audio
 Volume Control GUI application (**pavucontrol**) is used.
