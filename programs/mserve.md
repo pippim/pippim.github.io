@@ -1406,7 +1406,7 @@ if "'place', " in self.old_compiz_plugins:
 '''
 ```
 
-## ***mserve*** Volume During Hockey TV Commercials
+## **mserve** Volume During TV Commercials
 
 This image shows **mserve** volume (`ffplay`) is 60%:
 
@@ -1443,7 +1443,7 @@ FYI the "ALSA plug-in [python2.7]" sound processor is used by
 VU Meters using system output loopback to input stream is described
 in the next section.
 
-## Change **mserve** Volume Default for TV Commercials
+## Change <strong>mserve</strong> Volume Default for TV Commercials
 
 Click the 'Edit' dropdown menu and then select
 'Volume for TV Commercials' and this screen appears:
