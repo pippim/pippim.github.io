@@ -31,13 +31,15 @@ b, strong {
 
   // PLAN B: Change all then change back if heading or anchor
   color: var(--bold-color);  // Headings are green & links are blue
-  &h1, h2, h3, h4, h5, h6 {
-    color: var(--section-headings-color) ;
-  }
-  &a {
-    color: var(--body-link-color) ;
-  }
 }
+
+h1, h2, h3, h4, h5, h6 {  // PLAN B: Change back heading
+  color: var(--section-headings-color) ;
+}
+a {  // PLAN B: Change back anchor
+  color: var(--body-link-color) ;
+}
+
 
 //
 //body:not(a):not(h1):not(h2):not(h3):not(h4) {
