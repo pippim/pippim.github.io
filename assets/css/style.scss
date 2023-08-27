@@ -4,7 +4,8 @@
 @import "{{ site.theme }}";
 
 // bold / strong font in paragraphs and unordered lists
-p b, p strong, ul b, ul strong {
+// Do not want headings or TOC
+p b, p strong, ul b:not(#markdown-TOC), ul strong:not(#markdown-TOC) {
     font-weight: bolder;
     color: var(--bold-color);  // Headings are green & links are blue
 }
