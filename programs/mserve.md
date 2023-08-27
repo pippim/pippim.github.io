@@ -369,7 +369,8 @@ The third pixel to the right and third pixel down set the
 skin tone when you resize the window that could yield a
 different skin tone!
 
-Additional Notes:
+### Automatic Skin Color Notes:
+{:.no_toc}
 
 - Windows can be resized and Album Artwork grows and shrinks accordingly.
 - Primary color (@ coordinates 3x3) can change as artwork is resized.
@@ -424,6 +425,8 @@ Copy your image file to the directory where you installed `mserve`.
 
 # CD Encoding
 
+Great lengths were taken to ensure currently playing song's 
+animations never lag even when CD's are being encoded.
 This video shows how the music player keeps playing without any
 lag while a CD is being encoded:
 
@@ -433,10 +436,7 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
 
-This video clip show how music player continues in real time while
-you use mserve to encode a CD.
-
-Great lengths are taken to ensure animations never lag even when
+Great lengths were also taken to ensure animations never lag even when
 focus grabbing dialog boxes require a response. If a focus grabbing
 dialog box is open when current song ends, the next song is played.
 
@@ -447,6 +447,20 @@ date. It then grabs Album Artwork from the internet.
 
 You can paste album artwork from the clipboard which you previously
 copied from Amazon, or another website.
+
+## How-To Encode a CD Overview
+
+After inserting a CD, click the *Rip CD* button in the *Music Location
+Tree* window. The video below shows how to select encoding format,
+quality, naming format, album date, artwork, genre, comments and track
+level overrides to genre:
+
+<video src="https://user-images.githubusercontent.com/92641463/263541419-a6c8ab0e-bb72-4440-bc22-08a84133eba0.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/263541419-a6c8ab0e-bb72-4440-bc22-08a84133eba0.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+</video>
+
 
 ## Encoding Metadata Tags
 
@@ -473,29 +487,32 @@ common names follow the `ffmpeg` naming conventions:
 | DISCID           | CDDB Free Disc ID                                             |
 | MUSICBRAINZ_DISC | MusicBrainz Disc ID                                           |
 
-Besides these ID3 tags, **mserve** SQL stores metadata for:
+Besides these Metadata tags, **mserve** SQL stores metadata for:
 
-- AlbumDate - The date the album was released
-- PlayCount - How many times music file was played > 80% of it's duration
-- LastPlayTime - Date and time song was last played > 80 %
-- Rating - Future feature not implemented
-- Hyperlink - Future feature
+- *AlbumDate* - The date the album was released
+- *PlayCount* - How many times music file was played > 80% of it's duration
+- *LastPlayTime* - Date and time song was last played > 80 %
+- *Rating* - Future feature not implemented
+- *Hyperlink* - Future feature
 
 When **mserve** first discovers a song it takes a "snapshot" of the file's:
 
-- OsAccessTime - Last access time
-- OsModifyTime - Last modification time
-- OsChangeTime - Last time permissions were changed
-- OsFileSize - Size of file in bytes
+- *OsAccessTime* - Last access time
+- *OsModifyTime* - Last modification time
+- *OsChangeTime* - Last time permissions were changed
+- *OsFileSize* - Size of file in bytes
 
 When file times are updated by the Operating System, they are **NOT**
-refreshed in **mserve** SQL database.
+refreshed in **mserve** SQL database. A side-effect of this is **mserve**
+can reset all files last access time when a program like *Rhythm Box* reads
+every song file and resets last access time to current time. See `sql.py`
+for examples of "fixing" stuff.
 
 
 ## Renaming Artists, Albums and Song files After Encoding
 
 Sometimes the on-line databases contain errors. For example, on
-a three CD Greatest Hits collection, are these Album names:
+a three CD Greatest Hits collection, you will find these Album names:
 
 - Greatest Hits Of The 80's [Disc 2]
 - Greatest Hits Of The 80's Vol. 1
@@ -547,14 +564,14 @@ inside the music file.
 - Right click on the music file from the Music Location Tree and select
 the 'Kid3' from the popup menu.
 - ID3 tags in the music file are called "Metadata" by **mserve**.
-- **mserve** will automatically displays ID3 Tag metadata on certain 
+- **mserve** will automatically displays Metadata Tags on certain 
 screens when a music file is played.
-- **mserve** can display ID3 Tags on demand from the Music Location Tree
-when you right click on a music file and select 'View Metadata' from the
-popup menu.
-- **mserve** can also display ID3 Tags when you open the 'View' dropdown
-menu and select 'SQL Music'. Right click on a music file and select 
-View Metadata' from the popup menu.
+- **mserve** can display Metadata Tags on demand from the Music Location Tree
+when you right click on a music file and select *View Raw Metadata* 
+or *View SQL Metadata* from the popup menu.
+- **mserve** can also display Metadata Tags when you open the *View* dropdown
+menu and select *SQL Music Table*. Right-click on a music file and select 
+*View SQL Metadata* or *View Raw Metadata* from the popup menu.
 
 
 ## Substituting Special Characters in Filenames
