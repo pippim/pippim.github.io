@@ -12,10 +12,16 @@ b, strong {
   //:not(a) :not(h1) :not(h2) :not(h3) :not(h4) {  // NO bold color
     color: var(--bold-color);  // White is wrong color for headings & links
   }
-  // SLEDGE-HAMMER
-  &:not(a) { &:not(h1) { &:not(h2) { &:not(h3) { &:not(h4) {
-    color: var(--bold-color);  // White is wrong color for headings & links
+  // SLEDGE-HAMMER  // a & h1 are bold white
+  //&:not(a) { &:not(h1) { &:not(h2) { &:not(h3) { &:not(h4) {
+  //  color: var(--bold-color);  // Headings are green & links are blue
+  //}}}}}
+
+  // SLEDGE-HAMMER #2  //
+  &:not(a) { :not(h1) { :not(h2) { :not(h3) { :not(h4) {
+    color: var(--bold-color);  // Headings are green & links are blue
   }}}}}
+
 }
 
 //
