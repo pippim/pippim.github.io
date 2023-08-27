@@ -5,28 +5,38 @@
 
 // bold / strong font
 b, strong {
-  font-weight: bold;
-  :not(a, h1, h2, h3, h4) {  // bold color NOT appearing
+  font-weight: bolder;
+  //:not(a, h1, h2, h3, h4) {  // bold color NOT appearing
   //&:not(a, h1, h2, h3, h4) {  // a and h1 are body bold color white
   //&:not(a) :not(h1) :not(h2) :not(h3) :not(h4) {  // NO bold color
   //:not(a) :not(h1) :not(h2) :not(h3) :not(h4) {  // NO bold color
-    color: var(--bold-color);  // White is wrong color for headings & links
-  }
+  //  color: var(--bold-color);  // White is wrong color for headings & links
+  //}
+
   // SLEDGE-HAMMER  // a & h1 are bold white
   //&:not(a) { &:not(h1) { &:not(h2) { &:not(h3) { &:not(h4) {
-  //  color: var(--bold-color);  // Headings are green & links are blue
+  //  color: var(--bold-color);  // Headings are & links changed in error
   //}}}}}
 
   // SLEDGE-HAMMER #2  // bold color NOT appearing
   //&:not(a) { :not(h1) { :not(h2) { :not(h3) { :not(h4) {
-  //  color: var(--bold-color);  // Headings are green & links are blue
+  //  color: var(--bold-color);
   //}}}}}
 
-  // SLEDGE-HAMMER #3  // bold color NOT appearing
-  :not(a) { :not(h1) { :not(h2) { :not(h3) { :not(h4) {
-    color: var(--bold-color);  // Headings are green & links are blue
-  }}}}}
+  // SLEDGE-HAMMER #3  // bold color appearing ONLY when italics also used
+  //:not(a) { :not(h1) { :not(h2) { :not(h3) { :not(h4) {
+  //  color: var(--bold-color);  // Headings are green & links are blue
+  //  // heading and anchor change to bold color when italics used too.
+  //}}}}}
 
+  // PLAN B: Change all then change back if heading or anchor
+  color: var(--bold-color);  // Headings are green & links are blue
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--section-headings-color) ;
+  }
+  a {
+    color: var(--body-link-color) ;
+  }
 }
 
 //
