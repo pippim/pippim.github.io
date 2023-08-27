@@ -4,7 +4,7 @@
 @import "{{ site.theme }}";
 
 // bold / strong font
-b, strong {
+p b, p strong {
     font-weight: bolder;
     //:not(a, h1, h2, h3, h4) {  // bold color NOT appearing
     //&:not(a, h1, h2, h3, h4) {  // a and h1 are body bold color white
