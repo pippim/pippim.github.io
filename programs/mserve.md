@@ -16,7 +16,7 @@ by simply clicking each line as it is sung.
 
 ## Multiple Everything
 
-***<font size="4"> Why have one when you can have multiples?: </font>***
+***<font size="5"> Why have one when you can have multiples?: </font>***
 
 - Multiple Locations Synchronization (including mobile and file servers)
 - Multiple Playlists per location (every location also has default favorites)
@@ -67,7 +67,8 @@ less than 80% of song was played
 - Updates play count and last play time, if 80% of song played
 
 
-<font size="4"> ***Features most music players don't have:*** </font>
+### Features most music players don't have:
+{:.no_toc}
 
 - Two clicks to rename Artists, Albums and Song files
 in both the storage device and the mserve SQL database at the same time.
