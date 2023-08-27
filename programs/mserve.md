@@ -16,11 +16,11 @@ by simply clicking each line as it is sung.
 
 ## Multiple Everything
 
-Why have one when you can have multiples?:
+***Why have one when you can have multiples?:***
 
 - Multiple Locations Synchronization (including mobile and file servers)
 - Multiple Playlists per location (every location also has default favorites)
-- Multiple Window save positions for music location, current playing, 
+- Multiple Window save positions for music location tree, current playing, 
 volume control, playlists control, fine-tune time index, location
 maintenance, three SQL Table viewers, and CD encoding (ripping)
 - Multiple Monitors ensure windows open on correct monitor
@@ -35,7 +35,7 @@ defaults to `genius.com`
 
 ## Features
  
-Innovative features:
+***Innovative features:***
 
 - Help buttons in **mserve** bring you directly to this web
 page's appropriate sections
@@ -65,7 +65,7 @@ less than 80% of song was played
 - Updates play count and last play time, if 80% of song played
 
 
-Features most music players don't have:
+***Features most music players don't have:***
 
 - Two clicks to rename Artists, Albums and Song files
 in both the storage device and the mserve SQL database at the same time.
@@ -174,7 +174,17 @@ some are "unchecked".
 You can check and uncheck individual songs, entire Artists or,
 entire Albums.
 
-The main music location window follows the directory structure of
+As you check and uncheck individual songs, or entire Artists or,
+entire Albums a list is built in memory. Then you can Apply or
+Cancel changes.
+
+New songs are added into the Chronology (Playlist) after the 
+current playing song position.
+
+If you make huge mistakes you can abandon changes with the
+option "*Exit without saving Playlist*".
+
+The *Music Location Tree* window follows the directory structure of
 your storage device:
 
 - The top level points to "My Music"
@@ -192,30 +202,14 @@ your storage device:
 > presented with all the Albums you have for ***Pink Floyd***.
 > 
 > If you don't pass a parameter to `m` it will reload the last
-> location used and continue playing where it left off.
+> location used and continue playing favorites from where it left off.
 
-The chevron (triangle) is clicked to expand / collapse entries
-under Artists and Albums.
 
-The check box is colored solid when "checked" and is hollow
-when "unchecked". If a line appears that means "tri-state" and
-underneath the Artist or Album some songs are "checked" and
-some songs are "unchecked".
-
-As you check and uncheck individual songs, or entire Artists or,
-entire Albums a list is built in memory. Then you can Apply or
-Cancel changes.
-
-New songs are added into the Chronology (Playlist) after the 
-current playing song position.
-
-If you make huge mistakes you can abandon changes with the
-option "*Exit without saving Playlist*".
 
 
 ## Dropdown Menus
 
-The top-left corner of the *Music Location Tree Window* contains 
+The top-left corner of the *Music Location Tree* window contains 
 three dropdown menus; <strong><i>File</i></strong>, <b>Edit</b> and ***View***. 
 Click on the name and the dropdown menu options appear:
 
@@ -484,9 +478,9 @@ a three CD Greatest Hits collection, are these Album names:
 
 The last CD of the set doesn't say ***[Disc 3]*** nor does
 it say ***Volume 3***. It gets confusing when you are viewing
-the Music Location.
+the *Music Location Tree* window.
 
-To Rename using the Music Location tree:
+To Rename within the *Music Location Tree* window:
 
 1. Right click on the third CD Album.
 2. Select *"Rename Album"* from the popup menu.
@@ -702,9 +696,9 @@ One subdirectory is created for every location. E.G. the subdirectory
 
 - **last_open_states** - lc.FNAME_LAST_OPN_STATES - Each Artist and Album
 and whether or not they are open (down triangle / chevron) or closed
-(left pointing triangle / chevron) in the Music Location window.
+(left pointing triangle / chevron) in the *Music Location Tree* window.
 - **last_playlist** - lc.FNAME_LAST_PLAYLIST - Full path names of all
-songs checked (have the blue square) in the Music Location window. 
+songs checked (have the blue square) in the *Music Location Tree* window. 
 Sorted in playlist order.
 - **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
 **last_playlist** indicating the song that was playing when **mserve**
@@ -1313,7 +1307,7 @@ The device location (code) is automatically assigned.
 
 The columns for "Song Count", "Size of Files" and "Duration" are
 automatically calculated as songs are selected and deselected in
-Music Location Tree checkboxes. 
+*Music Location Tree* checkboxes. 
 
 ---
 
@@ -1334,7 +1328,7 @@ Hockey Playoff TV Commercial buttons.
 
 **`.gif` (there is no sound) Highlights:**
 
-- From the Music Location window select the "View" dropdown menu.
+- From the *Music Location Tree* window select the "View" dropdown menu.
 - When FF/Rewind buttons are visible you have the option of
 enabling the Hockey buttons.
 - The Hockey TV Commercial button turns down TV commercial and
@@ -1343,7 +1337,7 @@ resumes mserve play for 90 seconds.
 resumes mserve play for 18 minutes.
 - When Hockey TV commercial buttons are active you have
 the option of restoring the FF/Rewind buttons.
-- When changing buttons, the Music Location window is
+- When changing buttons, the *Music Location Tree* window is
 sent to bottom and Play Window is raised to the top.
 
 This `.gif` also shows how the Show/Hide
