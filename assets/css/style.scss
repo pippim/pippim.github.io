@@ -33,10 +33,13 @@ b, strong {
     color: var(--bold-color);  // Headings are green & links are blue
 }
 
-h1, h2, h3, h4, h5, h6 {  // PLAN B: Change back heading
+h1 b, h2, h3, h4, h5, h6 {  // PLAN B: Change back heading
     color: var(--section-headings-color);
 }
-a {  // PLAN B: Change back anchor
+a b {  // PLAN B: Change back anchor
+    color: var(--body-link-color);
+}
+b a {  // PLAN B: Change back anchor
     color: var(--body-link-color);
 }
 
