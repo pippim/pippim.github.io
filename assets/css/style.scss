@@ -6,7 +6,7 @@
 // bold / strong font
 b, strong {
   font-weight: bold;
-  :not(a, h1, h2, h3, h4) {  // NO bold color
+  :not(a, h1, h2, h3, h4) {  // bold color NOT appearing
   //&:not(a, h1, h2, h3, h4) {  // a and h1 are body bold color white
   //&:not(a) :not(h1) :not(h2) :not(h3) :not(h4) {  // NO bold color
   //:not(a) :not(h1) :not(h2) :not(h3) :not(h4) {  // NO bold color
@@ -17,8 +17,13 @@ b, strong {
   //  color: var(--bold-color);  // Headings are green & links are blue
   //}}}}}
 
-  // SLEDGE-HAMMER #2  //
-  &:not(a) { :not(h1) { :not(h2) { :not(h3) { :not(h4) {
+  // SLEDGE-HAMMER #2  // bold color NOT appearing
+  //&:not(a) { :not(h1) { :not(h2) { :not(h3) { :not(h4) {
+  //  color: var(--bold-color);  // Headings are green & links are blue
+  //}}}}}
+
+  // SLEDGE-HAMMER #3  // bold color NOT appearing
+  :not(a) { :not(h1) { :not(h2) { :not(h3) { :not(h4) {
     color: var(--bold-color);  // Headings are green & links are blue
   }}}}}
 
