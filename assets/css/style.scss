@@ -10,7 +10,8 @@ b, strong {
 
 // bold / strong font in paragraphs and unordered lists
 // Do not want headings or TOC
-p b, p strong, :not(#markdown-TOC) ul b, ul:not(#markdown-TOC) strong {
+//p b, p strong, :not(#markdown-TOC) ul b, ul:not(#markdown-TOC) strong {
+p b, p strong, {
     color: var(--bold-color);  // Headings are green & links are blue
 }
 
