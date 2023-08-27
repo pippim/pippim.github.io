@@ -295,6 +295,38 @@ Location. Other locations and playlists maintain their button selection.
 hold the heading to drag the column to a different position.
 
 
+## Right-Click Popup Menus
+
+When an Artist, Album or Song line is right-clicked, a popup menu appears. 
+
+### Artist or Album Right-Click Popup Menu
+
+When clicked, the Artist or Album is expanded and entries beneath
+are highlighted in yellow.
+
+***Menu Options:***
+
+- ***Collapse List*** - Yellow highlight is removed and entries beneath
+the Artist or Album are collapsed.
+- ***Rename Artist*** - Rename the artist, only appears when artist clicked.
+- ***Rename Album*** - Rename the album, only appears when album clicked.
+- ***Open Kid3 Audio Tagger*** - Use Kid3 to set Metadata tags.
+- ***Open Nautilus File Manager*** - Use File Manager to view directory.
+- ***Ignore Click*** - Remove yellow highlight, but leave list expanded.
+
+### Song Right-Click Popup Menu
+
+***Menu Options:***
+
+- ***Sample Middle 10 Seconds*** - Listen to middle ten seconds of song.
+- ***Sample Whole Song*** - Listen to the whole song.
+- ***Rename Song Title*** - Rename the song title.
+- ***Open Kid3 Audio Tagger*** - Use Kid3 to set Metadata tags.
+- ***Open Nautilus File Manager*** - Use File Manager to view directory.
+- ***View Raw Metadata*** - View metadata tags returned by `ffmpeg`.
+- ***View SQL Metadata*** - View metadata in pretty format kept by **mserve**.
+- ***Ignore Click*** - Close popup menu.
+
 ---
 
 <a id="hdr4"></a>
@@ -322,7 +354,10 @@ Additional Notes:
 
 - Windows can be resized and Album Artwork grows and shrinks accordingly.
 - Primary color (@ coordinates 3x3) can change as artwork is resized.
-- Commercial and Intermission buttons are for NHL Stanley Cup Playoffs. Click when they start and TV volume is turned down to 25% and music resumes play. When countdown ends music pauses and TV volume is turned back up to original state.
+- Commercial and Intermission buttons are for NHL Stanley Cup Playoffs. 
+Click when commercials start and the TV volume is turned down to 25%.
+**mserve** playlist resumes play. When countdown ends the music pauses 
+and TV volume is turned back up to normal volume.
 - Shuffle button resorts the selected songs in the playlist.
 - Playlists are currently stored in pickle format but plans are to convert to SQL. Also, SQL search engine is planned.
 - SQL is used for the music library of songs and their lyrics.
@@ -673,9 +708,6 @@ songs checked (have the blue square) in the Music Location window.
 Sorted in playlist order.
 - **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
 **last_playlist** indicating the song that was playing when **mserve**
-was shutdown.
-- **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
-**last_playlist** indicating the song that was playing when **mserve**
 was shutdown.  August 5, 2023 Note: This is superseded by 
 SQL History Table Row Type='resume', Action=<LOCATION CODE>.
 - **modification_time** - lc.FNAME_MOD_TIME - Cell phones may not allow
@@ -711,43 +743,45 @@ def open_db(LCS=None):
     con = sqlite3.connect(FNAME_LIBRARY)
 
     # MUSIC TABLE
-    con.execute("CREATE TABLE IF NOT EXISTS Music(Id INTEGER PRIMARY KEY, " +
-                "OsFileName TEXT, OsAccessTime FLOAT, OsModifyTime FLOAT, " +
-                "OsChangeTime FLOAT, OsFileSize INT, " +
-                "Title TEXT, Artist TEXT, Album TEXT, " +
-                # Change ReleaseDate to FirstDate and RecordingDate to AlbumYear
-                # For old iTunes stuff initialize AlbumYear with FirstYear.
-                "ReleaseDate TEXT, RecordingDate TEXT, " +
-                "CreationTime TEXT, DiscNumber TEXT, TrackNumber TEXT, " +
-                "Rating TEXT, Genre TEXT, Composer TEXT, " +
-                "Comment TEXT, Hyperlink TEXT, Duration TEXT, " +
-                "Seconds INT, PlayCount INT, LastPlayTime FLOAT, " +
-                "LyricsScore BLOB, LyricsTimeIndex TEXT)")
+    con.execute(
+        "create table IF NOT EXISTS Music(Id INTEGER PRIMARY KEY, " +
+        "OsFileName TEXT, OsAccessTime FLOAT, OsModifyTime FLOAT, " +
+        "OsChangeTime FLOAT, OsFileSize INT, " +
+        "ffMajor TEXT, ffMinor TEXT, ffCompatible TEXT, " +
+        "Title TEXT, Artist TEXT, Album TEXT, Compilation TEXT, " +
+        "AlbumArtist TEXT, AlbumDate TEXT, FirstDate TEXT, " +
+        "CreationTime TEXT, DiscNumber TEXT, TrackNumber TEXT, " +
+        "Rating TEXT, Genre TEXT, Composer TEXT, Comment TEXT, " +
+        "Hyperlink TEXT, Duration TEXT, Seconds FLOAT, " +
+        "GaplessPlayback TEXT, PlayCount INT, LastPlayTime FLOAT, " +
+        "LyricsScore BLOB, LyricsTimeIndex TEXT)")
 
     con.execute("CREATE UNIQUE INDEX IF NOT EXISTS OsFileNameIndex ON " +
                 "Music(OsFileName)")
 
     # HISTORY TABLE
-    con.execute("CREATE TABLE IF NOT EXISTS History(Id INTEGER PRIMARY KEY, " +
-                "Time FLOAT, MusicId INTEGER, User TEXT, Type TEXT, " +
-                "Action TEXT, SourceMaster TEXT, SourceDetail TEXT, " +
-                "Target TEXT, Size INT, Count INT, Seconds FLOAT, " +
-                "Comments TEXT)")
+    con.execute(
+        "create table IF NOT EXISTS History(Id INTEGER PRIMARY KEY, " +
+        "Time FLOAT, MusicId INTEGER, User TEXT, Type TEXT, " +
+        "Action TEXT, SourceMaster TEXT, SourceDetail TEXT, " +
+        "Target TEXT, Size INT, Count INT, Seconds FLOAT, " +
+        "Comments TEXT, Timestamp FLOAT)")
 
     con.execute("CREATE INDEX IF NOT EXISTS MusicIdIndex ON " +
                 "History(MusicId)")
-    con.execute("CREATE INDEX IF NOT EXISTS TimeIndex ON " +
-                "History(Time)")
+    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS TimeIndex ON " +
+                "History(Timestamp)")
     con.execute("CREATE INDEX IF NOT EXISTS TypeActionIndex ON " +
                 "History(Type, Action)")
 
     # LOCATION TABLE
-    con.execute("CREATE TABLE IF NOT EXISTS Location(Id INTEGER PRIMARY KEY, " +
-                "Code TEXT, Name TEXT, ModifyTime FLOAT, ImagePath TEXT, " +
-                "MountPoint TEXT, TopDir TEXT, HostName TEXT, " +
-                "HostWakeupCmd TEXT, HostTestCmd TEXT, HostTestRepeat INT, " +
-                "HostMountCmd TEXT, HostTouchCmd TEXT, HostTouchMinutes INT, " +
-                "Comments TEXT)")
+    con.execute(
+        "CREATE TABLE IF NOT EXISTS Location(Id INTEGER PRIMARY KEY, " +
+        "Code TEXT, Name TEXT, ModifyTime FLOAT, ImagePath TEXT, " +
+        "MountPoint TEXT, TopDir TEXT, HostName TEXT, " +
+        "HostWakeupCmd TEXT, HostTestCmd TEXT, HostTestRepeat INT, " +
+        "HostMountCmd TEXT, HostTouchCmd TEXT, HostTouchMinutes INT, " +
+        "Comments TEXT)")
     con.execute("CREATE UNIQUE INDEX IF NOT EXISTS LocationCodeIndex ON " +
                 "Location(Code)")
 
@@ -817,7 +851,7 @@ def save_window_geom(name, geom):
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
-# Tooltips Slowly Fade-In and Fade-Out
+# Tooltips Gradually Fade In and Out
 
 A lot of work has gone into crafting the tooltips to delay before
 gradually fading in. Also, to gradually fade out. And finally, the
@@ -831,11 +865,12 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 Key features of tooltips:
 
-- They appear after a delay
-- They fade in
-- The stay visible for a short time based on word count
-- They move instep with mouse movements
-- They fade out
+- When mouse hovers over a button, tooltips appear after a delay
+- Tooltips gradually fade in
+- They stay visible for a short time based on word count
+- Tooltips follow mouse mouse movements inside button
+- Clicking button or moving mouse out of button forces fade out 
+- Tooltips gradually fade out
 
 ---
 
