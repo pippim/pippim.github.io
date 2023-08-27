@@ -16,7 +16,7 @@ by simply clicking each line as it is sung.
 
 ## Multiple Everything
 
-***Why have one when you can have multiples?:***
+<font size="4">***Why have one when you can have multiples?:***</font>
 
 - Multiple Locations Synchronization (including mobile and file servers)
 - Multiple Playlists per location (every location also has default favorites)
@@ -25,6 +25,8 @@ volume control, playlists control, fine-tune time index, location
 maintenance, three SQL Table viewers, and CD encoding (ripping)
 - Multiple Monitors ensure windows open on correct monitor
 - Multiple processes for lag free animations
+- Multiple animations for artwork; spin, slide and pixelate
+- Multiple VU meters displaying sound level; left and right
 - Multiple Show Chronology/Resume Song/Volume/Playlist Buttons states
 per Playlist per location
 - Multiple CD Encoding formats, quality, images and filename formatting
@@ -35,7 +37,7 @@ defaults to `genius.com`
 
 ## Features
  
-***Innovative features:***
+<font size="4">***Innovative features:***</font>
 
 - Help buttons in **mserve** bring you directly to this web
 page's appropriate sections
@@ -65,7 +67,7 @@ less than 80% of song was played
 - Updates play count and last play time, if 80% of song played
 
 
-***Features most music players don't have:***
+<font size="4">***Features most music players don't have:***</font>
 
 - Two clicks to rename Artists, Albums and Song files
 in both the storage device and the mserve SQL database at the same time.
