@@ -9,10 +9,11 @@ layout: program
 
 # Introduction
 
-This Music Player entertains you with animated graphics, VU meters and scrolling lyrics.
-It includes functions to encode CDs with track titles using MusicBrainz database.
-It will get lyrics from the internet and let you synchronize them in real time
-by simply clicking each line as it is sung.
+This Music Player (**mserve**) entertains you with animated graphics,  
+VU meters and scrolling lyrics. It includes functions to encode CDs with 
+track titles and artwork automatically obtained from MusicBrainz database. 
+It automatically gets the lyrics score from the internet, and lets you
+synchronize them clicking each lyrics score line as it is sung.
 
 ## Multiple Everything
 
@@ -29,15 +30,21 @@ maintenance, three SQL Table viewers, and CD encoding (ripping)
 - Multiple VU meters displaying sound level; left and right
 - Multiple Show Chronology/Resume Song/Volume/Playlist Buttons states
 per Playlist per location
+- Multiple sound level fade methods for pause/play, switch sound
+source between TV and mserve, fine-tune lyrics time index, etc.
 - Multiple CD Encoding formats, quality, images and filename formatting
-- Multiple MusicBrainz CD album/track releases to chose from for artist.
+- Multiple MusicBrainz CD album/track releases to chose from for artist
 - Multiple Website Scraping for Lyrics is in progress but currently
 defaults to `genius.com`
 
 
 ## Features
+
+**mserve** has regular features you would expect. This section lists
+some unique features you might not expect.
  
-*** <font size="4">Innovative features:</font> ***
+### Innovative features:
+{:.no_toc}
 
 - Help buttons in **mserve** bring you directly to this web
 page's appropriate sections
@@ -207,9 +214,6 @@ your storage device:
 > If you don't pass a parameter to `m` it will reload the last
 > location used and continue playing favorites from where it left off.
 
-
-
-
 ## Dropdown Menus
 
 The top-left corner of the *Music Location Tree* window contains 
@@ -217,6 +221,7 @@ three dropdown menus; <strong><i>File</i></strong>, <b>Edit</b> and ***View***.
 Click on the name and the dropdown menu options appear:
 
 ### File Dropdown Menu
+{:.no_toc}
 
 Some options will be disabled out when they are not applicable. For example,
 the *Save Playlist* and *Close Playlist* options are disabled (greyed
@@ -238,6 +243,7 @@ but still use it for metadata information.
 to Playlist or Favorites and **mserve** exits.
 
 ### Edit Dropdown Menu
+{:.no_toc}
 
 - ***Synchronize Location*** - Compare current location to another location
 and synchronize files based on date, size and file byte differences. Uses
@@ -257,6 +263,7 @@ and it's volume slider to set **mserve** volume when it is playing during
 TV Commercials which automatically muted by **mserve**. 
 
 ### View Dropdown Menu
+{:.no_toc}
 
 - ***Information Centre*** - Displays history of messages **mserve** has
 shown along with key statistics, actions and events. Besides using the
@@ -294,26 +301,41 @@ hold the heading to drag the column to a different position.
 
 ## Right-Click Popup Menus
 
-When an Artist, Album or Song line is right-clicked, a popup menu appears. 
+In all **mserve** windows, you can move the mouse over rows and they
+are highlighted. You can right click on a row for a context-sensitive
+popup menu. 
+
+When an Artist, Album or Song line in the *Music Location Tree* window
+is right-clicked, a context-sensitive popup menu appears. The 
+context-sensitive popup menu changes depending on the line type, which
+is why it is called "context-sensitive".
 
 ### Artist or Album Right-Click Popup Menu
+{:.no_toc}
 
-When clicked, the Artist or Album is expanded and entries beneath
-are highlighted in yellow.
+When you click on an Artist or Album, 
+it is expanded and entries beneath are highlighted in yellow.
 
-***Menu Options:***
+#### Menu Options:
+{:.no_toc}
 
-- ***Collapse List*** - Yellow highlight is removed and entries beneath
-the Artist or Album are collapsed.
+- ***Collapse List*** - Yellow highlight is removed, entries beneath
+the Artist or Album are collapsed, and the pop-up menu is removed.
 - ***Rename Artist*** - Rename the artist, only appears when artist clicked.
 - ***Rename Album*** - Rename the album, only appears when album clicked.
 - ***Open Kid3 Audio Tagger*** - Use Kid3 to set Metadata tags.
 - ***Open Nautilus File Manager*** - Use File Manager to view directory.
-- ***Ignore Click*** - Remove yellow highlight, but leave list expanded.
+- ***Ignore Click*** - Remove yellow highlight, list remains expanded, and
+pop-up menu is removed.
 
 ### Song Right-Click Popup Menu
+{:.no_toc}
 
-***Menu Options:***
+When you highlight and right click a song in the *Music Location Tree*, a
+context-sensitive popup menu appears. 
+
+#### Menu Options:
+{:.no_toc}
 
 - ***Sample Middle 10 Seconds*** - Listen to middle ten seconds of song.
 - ***Sample Whole Song*** - Listen to the whole song.
