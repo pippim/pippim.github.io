@@ -12,7 +12,8 @@ b, strong {
 // Do not want headings (green) or TOC (blue)
 //p b, p strong, :not(#markdown-TOC) ul b, ul:not(#markdown-TOC) strong {
 //p b, p strong, ul b&:not(a), ul:&not(a) strong {
-p b, p strong, not(a) ul b, not(a) ul strong {
+//p b, p strong, not(a) ul b, not(a) ul strong {  // ERROR !
+p b, p strong, :not(a) ul b, :not(a) ul strong {
     color: var(--bold-color);  // Headings are green & links are blue
 }
 
