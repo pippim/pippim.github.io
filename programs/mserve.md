@@ -467,6 +467,7 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 ### Video Highlights:
 {:.no_toc}
+
 - This video starts *after* 1 minute is spent reading the CD disc **and**
 *after* 1 minute is spent retrieving Album and Track information from
 *MusicBrainz.com*.
@@ -513,6 +514,44 @@ the comment is changed.
 was changed. 
 - The "Rip CD" button is clicked and the same window for Album Level
 Overrides appear with a new name: "Encode CD Final Confirmation".
+
+<a id="HelpEncodingAlbumOverride"></a>
+### Notes About Album Level Overrides:
+{:.no_toc}
+
+- The same window can appear twice but the title changes between:
+*"Encode CD Final Confirmation"* and *"Album Level Overrides".
+- When Album Level Override variables are entered they filter down
+to each Track on the Album that previously had the same value. 
+- A Track that had unique values are not effected.
+- The Genre is not provided by MusicBrainz. It should always be entered.
+- Verify correct spelling/capitalization of Artist and Album names
+- Verify accuracy of the Album Date. It should be the copyright year.
+- If a compilation, Artist Name is forced to "Various Artists", 
+and the 1st sub-directory is forced to `Compilations`.
+- *Gapless Playback* has no effect in **mserve**. It is used by **iTunes**.
+- When overrides are applied, tracks matching the old value are given
+the new value. If track doesn't have old value it stays the same.
+- After override, tracks can be given a unique *Genre*, *Artist Name*, 
+*First Date*, *Composer* and *Comment*. 
+- Right-click on any track to set uniqueness.
+- Once again, the *Genre* field should always be entered.
+
+### Notes About Track Names in Bottom Pane
+{:.no_toc}
+
+- Album Level Override set the *Genre* to "Pop" but this doesn't
+appear in Track Names. All tracks were set to "Pop" when
+override was saved. Because they are the same as the Album Level
+nothing is displayed.
+- The Track Names only show differences from the Album Level. For
+example, all tracks show the "| artist: NAME" because it is different
+than the Album Artist which is "Various Artists"
+- Track difference on "3-12" the *Genre* was set to "Rock" and this
+does appear in Track Names.
+- Notice the *First Date* column there are a few entries for "2001".
+You need to research when the song was first released, E.G. "1985" and
+change the track.
 
 ## Encoding Metadata Tags
 
