@@ -137,6 +137,7 @@ be installed.
 
 ---
 
+<a id="HelpMusicLocationTree"></a>
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
@@ -493,12 +494,16 @@ away after read or instantly fades when you move out of the dropdown menu.
 "70%" is displayed and it is changed to "80%."
 - The mouse moves to the "Naming" dropdown menu. The last use naming of
 "99 " is displayed. It is changed to "99 -". Notice how all the song
-filenames change in the top pane and bottom pane. Then it is changed back
-to "99"
-- The mouse down to the very bottom of the window. Here is the button bar.
-The *"? Override"* option is chosen to provide Album Level details.
-- The *Genre* field is set to "Pop". It is important you always fill this
-field in because it is never provided by *MusicBrainz*.
+filenames change in the top pane and bottom pane.
+- Scrolling down the top pane you see two artworks are selected; the low
+resolution and the high resolution. Oops! This means artwork would be
+alternated between tracks. Track 1 low-res, track 2 high-res, track 3 
+low-res, track 4 high-res, etc. So the low resolution artwork is deselected.
+- Next the *Naming* format is changed back to "99".
+- The mouse moves down to the very bottom of the window. This is the button 
+bar. The *"? Override"* clicked open the *Album Level Overrides* window.
+- The *Genre* field is set to "Pop". It is important to always enter a
+*Genre* because it is never provided by *MusicBrainz*.
 - An optional *Comment* is entered.
 - The *Save* button is clicked and the window is closed.
 - A message appears advising that Tracks have been changed. Click OK.
@@ -537,6 +542,7 @@ the new value. If track doesn't have old value it stays the same.
 - Right-click on any track to set uniqueness.
 - Once again, the *Genre* field should always be entered.
 
+<a id="HelpEncodingTrackEdit"></a>
 ### Notes About Track Names in Bottom Pane
 {:.no_toc}
 
