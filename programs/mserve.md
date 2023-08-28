@@ -434,8 +434,8 @@ animations never lag even when CD's are being encoded.
 This video shows how the music player keeps playing without any
 lag while a CD is being encoded:
 
-<video src="https://user-images.githubusercontent.com/92641463/263824863-d1b15db2-095f-465a-a4c2-f090fe0ada7d.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/263824863-d1b15db2-095f-465a-a4c2-f090fe0ada7d.mp4"
+<video src="https://user-images.githubusercontent.com/92641463/263828968-f8c7dc3d-384a-4cca-b615-1a80f6d141e9.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/263828968-f8c7dc3d-384a-4cca-b615-1a80f6d141e9.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
