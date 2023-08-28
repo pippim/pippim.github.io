@@ -286,7 +286,11 @@ search text. This function is inferior to the ***View Locations***
 function mentioned above.
 - ***Debug Information*** - Displays information to console and to the
 *Information Centre*. This information is helpful to those customizing
-**mserve**.
+**mserve**. If any applications windows are off visible desktop they are
+half moved to the closest monitor. Also note 18 minutes after booting,
+you may get 4 `speech-dispatcher` jobs in pulse audio but these are
+automatically deleted if you respond `Yes` to the prompt that appears
+(only when playing music).
 
 
 ***NOTE:*** The *Enable TV Commercial Buttons* and *Enable FF/Rewind Buttons*
@@ -455,12 +459,60 @@ Tree* window. The video below shows how to select encoding format,
 quality, naming format, album date, artwork, genre, comments and track
 level overrides to genre:
 
-<video src="https://user-images.githubusercontent.com/92641463/263543359-08445988-78b2-4a94-864e-4050df36388c.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/263543359-08445988-78b2-4a94-864e-4050df36388c.mp4"
+<video src="https://user-images.githubusercontent.com/92641463/263755302-c0df643c-711b-4604-aea7-5c954033e87a.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/263755302-c0df643c-711b-4604-aea7-5c954033e87a.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
 
+### Video Highlights:
+{:.no_toc}
+- This video starts *after* 1 minute is spent reading the CD disc **and**
+*after* 1 minute is spent retrieving Album and Track information from
+*MusicBrainz.com*.
+- The top pane shows "Selections". Initially this is only "Tips" because
+nothing has been selected yet. The "Tips" are also sent to the *Information
+Centre* where you can always review later.
+- The bottom pane shows information retrieved from *MusicBrainz*.
+- A light blue highlight bar follows the mouse as it travels over rows in
+the bottom pane.
+- The Album Date of "2001" is checked.
+- The Medium group is checked. This in turn automatically checks all tracks
+(songs) within the Medium.
+- The second artwork box is checked. This would be the highest resolution
+of 65k. Behind the scenes, **mserve** has skipped downloading artwork that is
+6k x 2k pixels in dimension and size of 10 MB. You can however copy and paste
+large artwork from the internet if you choose to. You will be warned whenever
+artwork exceeds 2 MB though.
+- The mouse moves up to select the *Format* dropdown menu. The last used
+format of ".mp3" is displayed and it is changed to ".oga". Notice the tooltip
+window that appears when the dropdown menu is entered. It automatically fades
+away after read or instantly fades when you move out of the dropdown menu.
+- The mouse moves to the *Quality* dropdown menu. The last used quality of 
+"70%" is displayed and it is changed to "80%."
+- The mouse moves to the "Naming" dropdown menu. The last use naming of
+"99 " is displayed. It is changed to "99 -". Notice how all the song
+filenames change in the top pane and bottom pane. Then it is changed back
+to "99"
+- The mouse down to the very bottom of the window. Here is the button bar.
+The *"? Override"* option is chosen to provide Album Level details.
+- The *Genre* field is set to "Pop". It is important you always fill this
+field in because it is never provided by *MusicBrainz*.
+- An optional *Comment* is entered.
+- The *Save* button is clicked and the window is closed.
+- A message appears advising that Tracks have been changed. Click OK.
+- The mouse highlights track number 12.
+- Right-click is pressed on track number 12 and the popup menu appears.
+- The *Edit* option is picked from the popup menu.
+- The *Edit Song Differences* window appears. Here you enter details
+about the song that makes it different from other tracks. Preexisting
+details come from *MusicBrainz* plus the *Album Level Overrides* entered
+a couple of steps ago. The *Genre* is changed from "Pop" to "Rock" and
+the comment is changed.
+- Changes are saved and the line is colored green to show that track 3-12
+was changed. 
+- The "Rip CD" button is clicked and the same window for Album Level
+Overrides appear with a new name: "Encode CD Final Confirmation".
 
 ## Encoding Metadata Tags
 
@@ -1281,6 +1333,8 @@ lock up. Use debug only from command line for testing.  **mserve**
 will not let you define this debug option.
 
 More details: https://help.ubuntu.com/community/SSHFS
+
+
 
 ## Synchronize Location
 
