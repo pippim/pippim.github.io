@@ -1380,6 +1380,48 @@ will not let you define this debug option.
 More details: https://help.ubuntu.com/community/SSHFS
 
 
+<a id="HelpTestHostStatus"></a>
+### Test Remote Host Status Display
+{:.no_toc}
+
+These steps are followed when a remote host is tested:
+
+- If the host was active less than 10 minutes ago, `nc` is run
+- If the host has been inactive for more than 10 minutes, `nmap` is run
+- After `nc` or `nmap` passes test, the music top directory is mounted
+- After the music top directory is mounted, it is validated
+- After validation the test window can be closed
+- Until closing you can scroll up to review results
+
+Sample Status display video:
+
+
+<video src="https://user-images.githubusercontent.com/92641463/264155349-1d0e2f89-6e3a-41b6-83bd-64178a3470df.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/264155349-1d0e2f89-6e3a-41b6-83bd-64178a3470df.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+The above video demonstrates:
+
+- You cannot synchronize a location to itself (L004 is currently open)
+- The *Test Host* button replaces the top frame with location treeview
+with an old-style TTY terminal.
+- Information messages are in green font with highlights in yellow font.
+- It takes 5.8 seconds for `nmap` to test if host is connected to network.
+- `nmap` console results are shown inside the GUI window.
+- **mserve** reports that host "dell" can be accessed but is ***NOT awake***.
+- It takes 7 seconds for `wakeonlan` to wake up host.
+- `ssh dell ls` is run on host "dell" until files appear in output.
+- The Music Top Directory `/mnt/music` is already mounted from earlier tests.
+If it wasn't mounted, then **mserve** would mount it now.
+- After the test is completed, the mouse wheel is used to scroll up
+and down the status results display frame.
+- After reviewing results, the ***Help Test*** button is clicked. The
+bottom-right corner of a new browser window partially covers the 
+test window. The browser window is dragged over-top.   
+
+
 <a id="HelpSynchronizeLocation"></a>
 ## Synchronize Location
 
@@ -1467,31 +1509,6 @@ Location.
 For cell phones the last modification time (used to compare files)
 may not be updated. In this case **mserve** creates a virtual
 filesystem to track what modification times should be.
-
-
-<a id="HelpTestHostStatus"></a>
-### Test Remote Host Status Display
-{:.no_toc}
-
-These steps are followed when a remote host is tested:
-
-- If the host was active less than 10 minutes ago, `nc` is run
-- If the host has been inactive for more than 10 minutes, `nmap` is run
-- After `nc` or `nmap` passes test, the music top directory is mounted
-- After the music top directory is mounted, it is validated
-- After validation the test window can be closed
-- Until closing you can scroll up to review results
-
-Sample Status display video:
-
-
-<video src="https://user-images.githubusercontent.com/92641463/264155349-1d0e2f89-6e3a-41b6-83bd-64178a3470df.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/264155349-1d0e2f89-6e3a-41b6-83bd-64178a3470df.mp4"
-controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
-style="max-height:640px; width: 100% !important; height: auto !important;">
-  </video>
-
-
 
 
 ---
