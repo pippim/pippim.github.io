@@ -1383,25 +1383,70 @@ More details: https://help.ubuntu.com/community/SSHFS
 <a id="HelpSynchronizeLocation"></a>
 ## Synchronize Location
 
-Here we see how files can be synchronized across devices.
+When locations are synchronized, new files are NEVER added, and old files
+are NEVER deleted. If you would like to test the function first, review
+the script `test_for_synch.sh`.
 
-{% include image.html src="/assets/img/mserve/Synchronize Actions.png"
-   alt="Synchronize Actions.png"
+Below is a sample screen where a location has been picked to synchronize:
+
+{% include image.html src="/assets/img/mserve/mserve Synchronize Location.png"
+   alt="mserve Synchronize Location.png"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
-   caption="Synchronize Actions.png"
+   caption="mserve Synchronize Location.png"
+%}
+
+When the *🔗 Help* button is clicked you are brought to this web page.
+
+When the *✘ Close* button is clicked the window is closed. The same
+is true if `Escape` key is pressed or the window's *✘*  
+button is clicked.
+
+The steps below describe what happens when the *✔ Synchronize* button
+is clicked.
+
+<a id="HelpSynchronizeActions"></a>
+### Synchronize Location Actions
+{:.no_toc}
+
+A quick test is made to see if files have the same modification time 
+and same size. If so the next file is checked.
+
+If files have the same size but different times, the `diff` command is
+used to test every byte to see if they are different. If the files
+are identical, the modification times are set the same to the oldest
+modification time. The rationale is a new location was created, files
+were copied from an original location and the operating system reset
+the modification time to the current time.
+
+If the files have the same time but different sizes or different
+contents, an error message is displayed because **mserve** has no
+clue which direction to copy files in.
+
+If files are different, then the file with the newest modification
+time is copied over the oldest.
+
+Before copying you are always given a chance to review action plans.
+
+Below is an example of the action plan window:
+
+{% include image.html src="/assets/img/mserve/mserve Synchronize Actions.png"
+   alt="mserve Synchronize Actions.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="mserve Synchronize Actions.png"
 %}
 
 The "Action" column states the reason for updating is that the 
 file size has increased. This was due to album artwork being
 added to the source files.
 
-Here's a list of what can appear in "Action" column:
+Here's a list of actions. All appear in "Action" column except 
+those denoted as "hidden":
 
 - "Missing" - In target(other) location (hidden from view)
 - "Same" - within 2 seconds so no action required (hidden)
 - "Error: Size different, time same" - Don't know copy direction
-- "Error: contents different, time same" -    "   "   "   "
-- "OOPS" - programming error that should never happen (hidden)
+- "Error: Contents different, time same" - Don't know copy direction
+- "OOPS" - Programming error that should never happen (hidden)
 - "Copy Trg -> Src (Size)" - Based on size difference
 - "Copy Src -> Trg (Size)" - Based on size difference
 - "Copy Trg -> Src (Diff)" - Based on file difference
