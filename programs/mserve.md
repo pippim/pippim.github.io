@@ -1470,22 +1470,34 @@ filesystem to track what modification times should be.
 
 ---
 
+<a id="HelpPlaylists"></a>
 <a id="hdr16"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr15">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr17">Skip</a></div>
 
 # Playlists
 
-Playlists are stored by location. Below is a sample screen from the
-***View Playlists*** function:
+Playlists are stored by location. 
 
-{% include image.html src="/assets/img/mserve/mserve View Playlists.png"
-   alt="mserve View Playlists.png"
+These functions all share the same window:
+
+- Open Playlist
+- New Playlist
+- Rename Playlist
+- Delete Playlist
+- View Playlists
+
+Below is a sample screen from the
+***Rename Playlists*** function:
+
+{% include image.html src="/assets/img/mserve/mserve Rename Playlists.png"
+   alt="mserve Rename Playlists.png"
    style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
-   caption="mserve View Playlists.png"
+   caption="mserve Rename Playlists.png"
 %}
 
 The Playlist name cannot be blank and must be unique per location. A
-warning is issued when the Playlist name has been used in another location.
+warning is issued when the Playlist name has been used in another 
+location.
 
 The Playlist description is optional.
 
