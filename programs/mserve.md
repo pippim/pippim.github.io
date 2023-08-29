@@ -1476,36 +1476,41 @@ filesystem to track what modification times should be.
 
 # Playlists
 
-Playlists are stored by location. 
+Playlists are stored by location. Each location can have one million
+playlists. Each playlist can have an unlimited number of songs, but
+only songs from the current music location.
 
-These functions all share the same window:
+Below is a sample *Playlist Maintenance* window from the 
+***Rename Playlist*** function:
 
-- Open Playlist
-- New Playlist
-- Rename Playlist
-- Delete Playlist
-- View Playlists
+### Sample *Rename Playlist* Window
+{:.no_toc}
 
-Below is a sample screen from the
-***Rename Playlists*** function:
-
-{% include image.html src="/assets/img/mserve/mserve Rename Playlists.png"
-   alt="mserve Rename Playlists.png"
+{% include image.html src="/assets/img/mserve/mserve Rename Playlist.png"
+   alt="mserve Rename Playlist.png"
    style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
-   caption="mserve Rename Playlists.png"
+   caption="mserve Rename Playlist.png"
 %}
 
-The Playlist name cannot be blank and must be unique per location. A
+The *Playlist name* cannot be blank and must be unique per location. A
 warning is issued when the Playlist name has been used in another 
 location.
 
-The Playlist description is optional.
+The *Playlist description* is optional.
 
-The device location (code) is automatically assigned.
+The *Device location* code is automatically assigned.
 
 The columns for "Song Count", "Size of Files" and "Duration" are
 automatically calculated as songs are selected and deselected in
 *Music Location Tree* checkboxes. 
+
+Five functions share the same *Playlist Maintenance* window:
+
+- Open Playlist, called from the *File* dropdown menu
+- New Playlist, called from the *File* dropdown menu
+- Rename Playlist, called from the *Edit* dropdown menu
+- Delete Playlist, called from the *Edit* dropdown menu
+- View Playlists, called from the *View* dropdown menu
 
 ---
 
