@@ -1380,7 +1380,7 @@ will not let you define this debug option.
 More details: https://help.ubuntu.com/community/SSHFS
 
 
-
+<a id="HelpSynchronizeLocation"></a>
 ## Synchronize Location
 
 Here we see how files can be synchronized across devices.
