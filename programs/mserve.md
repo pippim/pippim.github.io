@@ -1468,6 +1468,27 @@ For cell phones the last modification time (used to compare files)
 may not be updated. In this case **mserve** creates a virtual
 filesystem to track what modification times should be.
 
+
+<a id="HelpTestHostStatus"></a>
+### Test Remote Host Status Display
+{:.no_toc}
+
+These steps are followed when a remote host is tested:
+
+- If the host was active less than 10 minutes ago, `nc` is run
+- If the host has been inactive for more than 10 minutes, `nmap` is run
+- After `nc` or `nmap` passes test, the music top directory is mounted
+- After the music top directory is mounted, it is validated
+- After validation the test window can be closed
+- Until closing you can scroll up to review results
+
+Sample Status display video:
+
+
+
+
+
+
 ---
 
 <a id="HelpPlaylists"></a>
