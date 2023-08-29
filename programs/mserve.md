@@ -435,8 +435,8 @@ animations never lag even when CD's are being encoded.
 This video shows how the music player keeps playing without any
 lag while a CD is being encoded:
 
-<video src="https://user-images.githubusercontent.com/92641463/263828968-f8c7dc3d-384a-4cca-b615-1a80f6d141e9.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/263828968-f8c7dc3d-384a-4cca-b615-1a80f6d141e9.mp4"
+<video src="https://user-images.githubusercontent.com/92641463/149241934-99d01df8-2cbf-4488-aa14-efe9e4d4f3aa.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/149241934-99d01df8-2cbf-4488-aa14-efe9e4d4f3aa.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
@@ -460,8 +460,8 @@ Tree* window. The video below shows how to select encoding format,
 quality, naming format, album date, artwork, genre, comments and track
 level overrides to genre:
 
-<video src="https://user-images.githubusercontent.com/92641463/263755302-c0df643c-711b-4604-aea7-5c954033e87a.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/263755302-c0df643c-711b-4604-aea7-5c954033e87a.mp4"
+<video src="https://user-images.githubusercontent.com/92641463/263828968-f8c7dc3d-384a-4cca-b615-1a80f6d141e9.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/263828968-f8c7dc3d-384a-4cca-b615-1a80f6d141e9.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
@@ -1476,9 +1476,9 @@ filesystem to track what modification times should be.
 
 # Playlists
 
-Playlists are stored by location. Each location can have one million
-playlists. Each playlist can have an unlimited number of songs, but
-only songs from the current music location.
+Playlists are stored by location. Each location can have an unlimited
+number of playlists. Each playlist can have an unlimited number of songs, 
+but only songs from the current music location.
 
 Below is a sample *Playlist Maintenance* window from the 
 ***Rename Playlist*** function:
@@ -1641,7 +1641,7 @@ if "'place', " in self.old_compiz_plugins:
 <a id="HelpTvVolume"></a>
 ## **mserve** Volume During TV Commercials
 
-This image shows **mserve** volume (`ffplay`) is 60%:
+This image shows **mserve** volume (`ffplay`) is at 60%:
 
 {% include image.html src="/assets/img/mserve/hockey_volume.png"
    alt="hockey_volume.png"
@@ -1676,10 +1676,10 @@ FYI the "ALSA plug-in [python2.7]" sound processor is used by
 VU Meters using system output loopback to input stream is described
 in the next section.
 
-## Change <strong>mserve</strong> Volume Default for TV Commercials
+## Change **mserve** Default Volume During for TV Commercials
 
-Click the 'Edit' dropdown menu and then select
-'Volume for TV Commercials' and this screen appears:
+When you click the *Edit* dropdown menu and select
+*Volume During TV Commercials*, then this window appears:
 
 {% include image.html src="/assets/img/mserve/mserve volume for tv commercials.png"
    alt="mserve volume for tv commercials.png"
@@ -1687,7 +1687,10 @@ Click the 'Edit' dropdown menu and then select
    caption="mserve volume for tv commercials.png"
 %}
 
-Hopefully this screen is self-explanatory.
+This window changes the program variables shown in the last section.
+
+Every location and every playlist within every location has a separate
+volume control for **mserve** when TV commercials are muted by **mserve**.
 
 ---
 
