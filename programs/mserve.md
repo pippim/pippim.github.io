@@ -23,7 +23,8 @@ each line as it is sung.
 
 - Multiple Locations Synchronization (including mobile and file servers)
 - Multiple Playlists per location (every location also has default favorites)
-- Multiple Window save positions for music location tree, current playing, 
+- <a href="#windows-open-where-you-want-them">Multiple Window</a> 
+save positions for music location tree, current playing, 
 volume control, playlists control, fine-tune time index, location
 maintenance, three SQL Table viewers, and CD encoding (ripping)
 - Multiple Monitors ensure windows open on correct monitor
@@ -221,7 +222,7 @@ your storage device:
 ## Dropdown Menus
 
 The top-left corner of the *Music Location Tree* window contains 
-three dropdown menus; <strong><i>File</i></strong>, <b>Edit</b> and ***View***. 
+three dropdown menus; ***File***, ***Edit*** and ***View***. 
 Click on the name and the dropdown menu options appear:
 
 ### File Dropdown Menu
@@ -1328,7 +1329,8 @@ Mandatory Location Fields. The first two fields are mandatory:
 
 - ***Location Name*** - Cannot be blank and must be unique
 - ***Music Top Directory*** - The parent folder / subdirectory that contains
-Artist subdirectories.
+Artist subdirectories. The music top directory is validated to contain  
+Artist/Album/Song File subdirectory structure with at least 10 song files.
 
 The remaining fields, starting at ***Optional Remote Host Name***, are
 optional.
@@ -1436,9 +1438,9 @@ These steps are followed when a remote host is tested:
 - If the host was active less than 10 minutes ago, `nc` is run
 - If the host has been inactive for more than 10 minutes, `nmap` is run
 - After `nc` or `nmap` passes test, the music top directory is mounted
-- After the music top directory is mounted, it is validated
-- After validation the test window can be closed
-- Until closing you can scroll up to review results
+- After mounting, **mserve** checks that artist subdirectories exist
+- After validation, scroll up to review results
+- After review, click the *Close Test Results* button
 
 
 ### Sample *Synchronize Location* Test Host Video
