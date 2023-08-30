@@ -51,15 +51,6 @@ some unique features you might not expect.
 
 - Help buttons in **mserve** bring you directly to this web
 page's appropriate sections
-- Album Artwork animations and VU Meters during playback
-- Album Artwork at pixel 3,3 coordinates, sets a <a 
-href="#automatic-skin-color-based-on-artwork">different color theme</a>, 
-during song playback (resizing window can result in different 
-color theme)
-- Define image file for 
-<a href="#image-for-songs-with-no-artwork">songs with no artwork</a>.  
-- <a href="#synchronized-lyrics-in-action">Scrolling lyrics</a> 
-score during playback (automatically web scraped)
 - <a href="#synchronize-location">Synchronize files</a> 
 across multiple locations, including sleeping hosts 
 that are woken up and kept awake as long as necessary
@@ -75,22 +66,29 @@ Synchronization (Synchronized lyrics lines are stored in
 a Time Index list and this term is frequently used)
 - Two timers for playing music during 
 <a href="#hockey-tv-commercial-buttons">TV broadcast commercials</a>
-- Cross-fading other sound sources when toggling play/pause, FF/REW,
-and during TV broadcast commercials
 - Written in relatively easy to learn Python so you can modify
 for Linux, Windows WSL, Chrome OS, Windows (a lot more work) 
 and Mac (modest amount of more work)
 - An <a href="#sql-database-using-sqlite3">SQL Database</a> 
 shares lyrics score and time index 
 across all locations for conformity and reduced storage space.
-- Restores file's OS last access time to original if 
-less than 80% of song was played
-- Updates play count and last play time, if 80% of song played
+- Proprietary data dictionary technology to quickly 
+view SQL table rows and even 
+<a href="#sql-location-table-viewer-sample-video">rearrange columns</a>.
 
 
-### Features most music players don't have:
+### Features Most Music Players Don't Have:
 {:.no_toc}
 
+- Album Artwork animations and VU Meters during playback
+- Album Artwork at pixel 3,3 coordinates, sets a <a 
+href="#automatic-skin-color-based-on-artwork">different color theme</a>, 
+during song playback (resizing window can result in different 
+color theme)
+- Define image file for 
+<a href="#image-for-songs-with-no-artwork">songs with no artwork</a>.  
+- <a href="#synchronized-lyrics-in-action">Scrolling lyrics</a> 
+score during playback (automatically web scraped)
 - Two clicks to
 <a href="#renaming-artists-albums-and-song-files-after-encoding">
 rename Artists, Albums and Song files</a> 
@@ -109,6 +107,11 @@ for Artist / Album CD track details and artwork
 - Scrape [genius.com 🔗](https://genius.com/ 
 "search song lyrics"){:target="_blank"} 
 and other websites to get song lyrics
+- Restores file's OS last access time to original if 
+less than 80% of song was played
+- Updates play count and last play time, if 80% of song played
+- Cross-fading other sound sources when toggling play/pause, FF/REW,
+and during TV broadcast commercials
 
 ## **mserve** is Still Under Construction
 {:.no_toc}
@@ -916,14 +919,54 @@ term, development has begun to identify installed versions.
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-# SQL Database using Sqlite3
+## SQL Views
 
-`mserve` data is stored in various files. This section lists
+`mserve` uses proprietary data dictionary technology to quickly 
+view rows in the three SQL tables:
+
+- Music Table contains OS song file information, metadata, 
+song lyrics, lyric time indices, play counts and the like.
+- History Table contains records of actions taken such as; 
+initial metadata encounters, webscraping lyrics and encoding 
+CDs.
+- Location Table defines the various music locations on your 
+local device, external storage, remote hosts and mobile phones.
 the filenames you will need to backup. A brief explanation is
 given for how each file is used.
 
-The SQL database can be accessed with external tools like 
-`sqlitebrowser`.
+
+### *SQL Location Table* Data Dictionary Driven Viewer
+{:.no_toc}
+
+The *SQL Location Table* defines the various music locations on your 
+local device, external storage, remote hosts and mobile phones.
+
+**mserve** uses proprietary data dictionary technology to quickly 
+view rows in the *SQL Location Table*. Use the *View* dropdown menu 
+from the *Music Location Tree* (main) window of **mserve**. A sample 
+video appears below.
+
+#### *SQL Location Table* Viewer Sample Video
+{:.no_toc}
+
+<video src="https://user-images.githubusercontent.com/92641463/264485639-b5489eb8-7594-4529-b7f0-9841ef26f1ac.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/264485639-b5489eb8-7594-4529-b7f0-9841ef26f1ac.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+##### Sample Video Highlights
+{:.no_toc}
+
+- The options for *File*, *Edit* and *View* dropdown menu are shown
+- The mouse hovers over button bar at bottom of window 
+- Tooltips for buttons appear after a short delay
+- Tooltips gradually fade in, remain a short period, then gradually 
+fade out
+- The *Help* button is clicked and results appear
+
+---
+
 
 ## SQL Tables
 
