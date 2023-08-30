@@ -121,21 +121,26 @@ and other websites to get song lyrics
 
 > ***IMPORTANT NOTES:*** 
 > 
-> **mserve** was primarily tested with Linux, specifically 
+> ⬤ **mserve** was primarily tested with Linux, specifically 
 Ubuntu 16.04 LTS and Python 2.7.12.
-> **mserve** was briefly tested with ChromeOS for about a month 
+> 
+> ⬤ **mserve** was briefly tested with ChromeOS for about a month 
 and modified.
-> You *should* be able to toggle between Pyhon 2.7.x and 
+> 
+> ⬤ You *should* be able to toggle between Pyhon 2.7.x and 
 Python 3.x by changing the *"shebang"* at the top of each `.py`. 
 Testing on Python 3.x will begin prior to next **mserve** upgrade.
-> Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
+> 
+> ⬤ Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
 in year 2024. A "lite" Ubuntu 16.04 version running Unity may be 
 created as some sort of virtual machine. It's already been announced 
 that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
-> Support for `sshfs` has been discontinued by the developer in  
+> 
+> ⬤ Support for `sshfs` has been discontinued by the developer in  
 November 2022. Plans are underway to switch over to FTP and and 
 `curlftps` to mount host drives locally.
-> There is **NO** installation script for **mserve**. You will 
+> 
+> ⬤ There is **NO** installation script for **mserve**. You will 
 have to manually install dependencies with:
 > 
 >    `sudo apt install python-xxxxx`.
