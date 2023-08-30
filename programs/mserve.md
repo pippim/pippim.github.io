@@ -102,7 +102,7 @@ when location opened for playing or synchronization.
 as this 
 <a href="#how-to-encode-a-cd-overview">sample video</a> 
 demonstrates
-- Scrape [MusicBrainz 🔗](https://musicbrainz.org/ 
+- Scrape [MusicBrainz.org 🔗](https://musicbrainz.org/ 
 "MusicBrainz for Artist / Album CD track details"){:target="_blank"} 
 for Artist / Album CD track details and artwork
 - Scrape [genius.com 🔗](https://genius.com/ 
@@ -114,12 +114,31 @@ and other websites to get song lyrics
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Under Construction.png"
-   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   style="float: left; width: 50%; margin: 2rem 0 1rem 0;"
    caption="Under Construction.png"
 %}
 
+> ***IMPORTANT NOTES:*** 
+> 
+> **mserve** was primarily tested with Linux, specifically 
+Ubuntu 16.04 LTS and Python 2.7.12.
+> **mserve** was briefly tested with ChromeOS for about a month 
+and modified.
+> Current plans are to upgrade to 24.04 in year 2024. 
+> 
+> There is **NO** installation script for **mserve**. You will 
+have to manually install dependencies with:
+> 
+>    `sudo apt install python-xxxxx`.
 
-### **mserve** Installation
+See the
+<a href="#mserveDependencies">dependencies required</a>
+by **mserve** section for more details. 
+For typical power users, many of the dependencies will already
+be installed.
+
+
+## **mserve** Installation
 
 **mserve** (Music Server) is written in Python.
 The main program is called `mserve.py` and can be found in the 
@@ -149,23 +168,6 @@ from the command line. If you followed the installation tip
 above, it would be `<HOME>/mserve/m` for Linux-like machines, 
 or `<HOME>\mserve\m` for Windows. As of August 30, 2023, 
 **mserve** will not run under Windows without modification.
-
-> ***IMPORTANT NOTES:*** 
-> 
-> **mserve** was primarily tested with Linux, specifically Ubuntu 16.04 LTS.
-> **mserve** was briefly tested with ChromeOS for about a month and modified.
-> Current plans are to upgrade to 24.04 in year 2024. 
-> 
-> There is **NO** installation script for **mserve**. You will have to manually
-> install dependencies with:
-> 
->    `sudo apt install python-xxxxx`.
-
-See the
-<a href="#mserveDependencies">dependencies required</a>
-by **mserve** section for more details. 
-For typical power users, many of the dependencies will already
-be installed.
 
 ---
 
