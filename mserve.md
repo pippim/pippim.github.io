@@ -9,100 +9,165 @@ layout: program
 
 # Introduction
 
-This Music Player entertains you with animated graphics, VU meters and scrolling lyrics.
-It includes functions to encode CDs with track titles using MusicBrainz database.
-It will get lyrics from the internet and let you synchronize them in real time
-by simply clicking each line as it is sung.
+**mserve** (Music Server) is firstly a Music Player entertains you with 
+animated graphics, VU meters and scrolling lyrics. Secondly, it encode CDs
+with track titles and artwork automatically obtained from the *MusicBrainz* 
+database. **mserve** automatically downloads lyrics scores from the 
+internet. Lyrics score lines can be synchronized by simply clicking 
+each line as it is sung.
 
 ## Multiple Everything
+{:.no_toc}
 
-Why have one when you can have multiples?:
+***<font size="5"> Why have one when you can have multiples?: </font>***
 
 - Multiple Locations Synchronization (including mobile and file servers)
-- Multiple Playlists per location (every location has default favorites)
-- Multiple Window save positions for music library, current playing, 
+- Multiple Playlists per location (every location also has default favorites)
+- <a href="#windows-open-where-you-want-them">Multiple Window</a> 
+save positions for music location tree, current playing, 
 volume control, playlists control, fine-tune time index, location
-maintenance, and CD encoding (ripping)
-- Multiple Monitors (remembers monitor window last opened on)
+maintenance, three SQL Table viewers, and CD encoding (ripping)
+- Multiple Monitors ensure windows open on correct monitor
 - Multiple processes for lag free animations
-- Multiple Show Chronology/Resume Position/TV Volume option states
-per location and per Playlist within location
+- Multiple animations for artwork; spin, slide and pixelate
+- Multiple VU meters displaying sound level; left and right
+- Multiple Show Chronology/Resume Song/Volume/Playlist Buttons states
+per Playlist per location
+- Multiple sound level fade methods for pause/play, switch sound
+source between TV and mserve, fine-tune lyrics time index, etc.
 - Multiple CD Encoding formats, quality, images and filename formatting
+- Multiple MusicBrainz CD album/track releases to chose from for artist
+- Multiple Website Scraping for Lyrics is in progress but currently
+defaults to `genius.com`
+
+
+## Features
+
+**mserve** has regular features you would expect. This section lists
+some unique features you might not expect.
  
-Innovative features:
+### Innovative Features Most Applications Don't Have:
+{:.no_toc}
 
 - Help buttons in **mserve** bring you directly to this web
 page's appropriate sections
 - Album Artwork animations and VU Meters during playback
-- Album Artwork at pixel 3,3 sets a different color theme for
+- Album Artwork at pixel 3,3 coordinates, sets a <a 
+href="#automatic-skin-color-based-on-artwork">different color theme</a>, 
 during song playback (resizing window can result in different 
 color theme)
-- Scrolling lyrics score during playback (automatically web scraped)
-- Synchronize files across multiple locations, including sleeping hosts
+- Define image file for 
+<a href="#image-for-songs-with-no-artwork">songs with no artwork</a>.  
+- <a href="#synchronized-lyrics-in-action">Scrolling lyrics</a> 
+score during playback (automatically web scraped)
+- <a href="#synchronize-location">Synchronize files</a> 
+across multiple locations, including sleeping hosts 
 that are woken up and kept awake as long as necessary
 - Information Centre displays history of messages, statuses and actions
-- Tooltips appear after time delay, fade in/out, and follow mouse pointer
-- Basic Lyrics Time Synchronization and Advanced Lyrics Time 
+- Tooltips appear after time delay, 
+<a href="#tooltips-gradually-fade-in-and-out">fade in/out</a>, 
+and follow mouse pointer
+- <a href="#basic-time-synchronization">Basic Lyrics Time</a> 
+Synchronization and 
+<a href="#fine-tune-time-index">Advanced Lyrics Time</a> 
 Synchronization (Synchronized lyrics lines are stored in 
 a Time Index list and this term is frequently used)
-- Two timers for playing music during TV broadcast commercials
-- Detailed SQL History of actions performed on each song
+- Two timers for playing music during 
+<a href="#hockey-tv-commercial-buttons">TV broadcast commercials</a>
 - Cross-fading other sound sources when toggling play/pause, FF/REW,
 and during TV broadcast commercials
 - Written in relatively easy to learn Python so you can modify
 for Linux, Windows WSL, Chrome OS, Windows (a lot more work) 
 and Mac (modest amount of more work)
-- Single SQL library with shared lyrics score and time index 
-across all locations for one time song maintenance benefiting all
+- An <a href="#sql-database-using-sqlite3">SQL Database</a> 
+shares lyrics score and time index 
+across all locations for conformity and reduced storage space.
 - Restores file's OS last access time to original if 
 less than 80% of song was played
 - Updates play count and last play time, if 80% of song played
 
 
-Features most music players don't have. Requiring separate packages:
+### Features most music players don't have:
+{:.no_toc}
 
-- Two clicks to rename Artists, Albums and Song files
-in both the storage device and the mserve SQL database at the same time.
-- Synchronize music across locations (already mentioned above)
-- Encode CD to music files in MP3, MP4, FLAC, WAV and OGA format
-- Scrape MusicBrainz for Artist / Album CD track details and artwork
-- Scrape genius.com and other websites to get song lyrics
-- Compare song files between locations and update differences
+- Two clicks to
+<a href="#renaming-artists-albums-and-song-files-after-encoding">
+rename Artists, Albums and Song files</a> 
+in both the storage device and the **mserve** SQL database 
+at the same time.
+- <a href="#sample-synchronize-location-test-host-video">
+Granular remote host tests</a> 
+when location opened for playing or synchronization.
+- Encode CD to music files in MP3, MP4, FLAC, WAV and OGA format 
+as this 
+<a href="#how-to-encode-a-cd-overview">sample video</a> 
+demonstrates
+- Scrape [MusicBrainz.org 🔗](https://musicbrainz.org/ 
+"MusicBrainz for Artist / Album CD track details"){:target="_blank"} 
+for Artist / Album CD track details and artwork
+- Scrape [genius.com 🔗](https://genius.com/ 
+"search song lyrics"){:target="_blank"} 
+and other websites to get song lyrics
 
-## **mserve** Under Construction
+## **mserve** is Still Under Construction
+{:.no_toc}
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Under Construction.png"
-   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   style="float: left; width: 50%; margin: 2rem 0 1rem 0;"
    caption="Under Construction.png"
 %}
+
+> ***IMPORTANT NOTES:*** 
+> 
+> **mserve** was primarily tested with Linux, specifically 
+Ubuntu 16.04 LTS and Python 2.7.12.
+> **mserve** was briefly tested with ChromeOS for about a month 
+and modified.
+> Current plans are to upgrade to 24.04 in year 2024. 
+> 
+> There is **NO** installation script for **mserve**. You will 
+have to manually install dependencies with:
+> 
+>    `sudo apt install python-xxxxx`.
+
+See the
+<a href="#mserveDependencies">required dependencies</a>
+for **mserve** section for more details. 
+For typical power users, many of the dependencies will already
+be installed.
+
+
+## **mserve** Installation
 
 **mserve** (Music Server) is written in Python.
 The main program is called `mserve.py` and can be found in the 
 [mserve GitHub Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py 
-"View Python script (source code)"){:target="_blank"}
+"View mserve Python source code"){:target="_blank"}. Copy all 
+files in the `src` folder to a new directory on your machine. 
+For example, `<HOME>/mserve` for Linux, Mac, Chrome OS or 
+Windows Subsystem for Linux (WSL), ***or***, `<HOME>\mserve`
+for Windows. As of August 30, 2023, **mserve** 
+will not run under Windows without modification.
 
 `mserve.py` is called with `m` from the command line or a 
-desktop shortcut. `m` is a wrapper Python script to center
-a logo on your screen for a couple seconds whilst **mserve**
-is loaded into memory.
+desktop shortcut. It is recommended you start using **mserve**
+from the command line to see any error messages that might
+appear.
 
-> ***IMPORTANT NOTES:*** 
-> 
-> Primarily tested with Linux, specifically Ubuntu 16.04 LTS
-> Briefly tested with ChromeOS for about a month and modified
-> Current plans are to upgrade to 24.04 in year 2024. 
-> 
-> There is NO installation script. You will have to manually
-> install dependencies with:
-> 
->    `sudo apt install python-xxxxx`.
+`m` is a wrapper Python script that centers 
+a logo on your screen for a moment while **mserve**
+is loaded into memory. Using `m` instead of `mserve.py` 
+speeds up loading because `mserve.pyc` is automatically 
+called and it is half the size. As of August 30, 2023, 
+the former is 765 KB and the latter is 409 KB.
 
-Below you will find the
-<a href="#mserveDependencies">dependencies required</a>
-by **mserve**.
-Many of the dependencies may already
-installed on their system.
+`m` and `mserve.py` do not need to be added to your path.
+You can call them with `/path/to/m` or `/path/to/mserve.py` 
+from the command line. If you followed the installation tip 
+above, it would be `<HOME>/mserve/m` for Linux-like machines, 
+or `<HOME>\mserve\m` for Windows. As of August 30, 2023, 
+**mserve** will not run under Windows without modification.
 
 ---
 
@@ -113,6 +178,7 @@ installed on their system.
 
 ---
 
+<a id="HelpMusicLocationTree"></a>
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr4">Skip</a></div>
 
@@ -124,13 +190,15 @@ when **mserve** starts up and it remains until
 Location Tree* are rediscovered. New songs since the last
 time are displayed.
 
-Songs are listed under collapsed Album Names which are
-listed under collapsed Artist Names.  The directory 
+Songs are stored under collapsed Album Names which, in turn, are
+stored under collapsed Artist Names. The directory 
 format must be:
 
 - `Artist Name/Album Name/Song Name.ext`
 
-Only *Song Names* with music type extensions are included.
+Only Song Filenames with a music type extensions are included. For 
+example, extensions of `.flac`, `.mp3`, `.m4a`, `.oga`, `.wav`, etc,
+are included.
 
 Here is a sample window with currently playing song 
 highlighted in green.
@@ -144,18 +212,58 @@ highlighted in green.
 The first three Artists are "collapsed" which is indicated by the “▶” 
 chevron (A.K.A. "right triangle). When you click the “▶” chevron the 
 Artist is opened and the “▼” chevron is displayed to indicate the 
-Artist is opened. The same chevrons and used for Albums.
+Artist is opened. The same chevrons and used for Albums. As songs
+play and end in **mserve**, the Album Name and Artist
+Name are automatically expanded and collapsed to show the 
+green highlight bar.
 
 Songs have a checkbox which are clicked to include or exclude in
-playlists.
+playlists. The check box is colored solid when "checked" and is hollow
+when "unchecked". If a line appears, it indicates the Artist or Album 
+is "tri-state". This means some songs below are "checked" and
+some are "unchecked".
+
+You can check and uncheck individual songs, entire Artists or,
+entire Albums.
+
+As you check and uncheck individual songs, or entire Artists or,
+entire Albums a list is built in memory. Then you can Apply or
+Cancel changes.
+
+New songs are added into the Chronology (Playlist) after the 
+current playing song position.
+
+If you make huge mistakes you can abandon changes with the
+option "*Exit without saving Playlist*".
+
+The *Music Location Tree* window follows the directory structure of
+your storage device:
+
+- The top level points to "My Music"
+- The second level points to Artists under "My Music"
+- The third level points to Albums under each Artist
+- The fourth level points to Songs under each Album
+
+> ***NOTE:*** "My Music" is an over simplification for the sake of
+> example. You can start `m` (the splash screen for **mserve.py**)
+> by typing: 
+> `m "/mnt/music/Users/Person/Music/iTunes/iTunes Media/Music/"`
+> 
+> You can also call `m` after changing to a music directory. E.G.
+> Enter `cd ~/Music/Pink Floyd`. Then enter `m .` and you will be
+> presented with all the Albums you have for ***Pink Floyd***.
+> 
+> If you don't pass a parameter to `m` it will reload the last
+> location used and continue playing favorites from where it left off.
 
 ## Dropdown Menus
 
-The top-left corner of the *Music Location Tree Window* contains 
-three dropdown menus; **File**, **Edit** and **View**. Click on
-the name and the dropdown menu options appear:
+The top-left corner of the *Music Location Tree* window contains 
+three dropdown menus; ***File***, ***Edit*** and ***View***. 
+Click on the name and the dropdown menu options appear:
 
 ### File Dropdown Menu
+{:.no_toc}
 
 Some options will be disabled out when they are not applicable. For example,
 the *Save Playlist* and *Close Playlist* options are disabled (greyed
@@ -177,6 +285,7 @@ but still use it for metadata information.
 to Playlist or Favorites and **mserve** exits.
 
 ### Edit Dropdown Menu
+{:.no_toc}
 
 - ***Synchronize Location*** - Compare current location to another location
 and synchronize files based on date, size and file byte differences. Uses
@@ -196,6 +305,7 @@ and it's volume slider to set **mserve** volume when it is playing during
 TV Commercials which automatically muted by **mserve**. 
 
 ### View Dropdown Menu
+{:.no_toc}
 
 - ***Information Centre*** - Displays history of messages **mserve** has
 shown along with key statistics, actions and events. Besides using the
@@ -218,7 +328,11 @@ search text. This function is inferior to the ***View Locations***
 function mentioned above.
 - ***Debug Information*** - Displays information to console and to the
 *Information Centre*. This information is helpful to those customizing
-**mserve**.
+**mserve**. If any applications windows are off visible desktop they are
+half moved to the closest monitor. Also note 18 minutes after booting,
+you may get 4 `speech-dispatcher` jobs in pulse audio but these are
+automatically deleted if you respond `Yes` to the prompt that appears
+(only when playing music).
 
 
 ***NOTE:*** The *Enable TV Commercial Buttons* and *Enable FF/Rewind Buttons*
@@ -229,6 +343,84 @@ Location. Other locations and playlists maintain their button selection.
   
 ***NOTE:*** The three SQL views allow the column to be moved. Click and
 hold the heading to drag the column to a different position.
+
+
+## Right-Click Popup Menus
+
+In all **mserve** windows, you can move the mouse over rows and they
+are highlighted. You can right click on a row for a context-sensitive
+popup menu. 
+
+When an Artist, Album or Song line in the *Music Location Tree* window
+is right-clicked, a context-sensitive popup menu appears. The 
+context-sensitive popup menu changes depending on the line type, which
+is why it is called "context-sensitive".
+
+### Artist or Album Right-Click Popup Menu
+{:.no_toc}
+
+When you click on an Artist or Album, 
+it is expanded and entries beneath are highlighted in yellow.
+
+#### Menu Options:
+{:.no_toc}
+
+- ***Collapse List*** - Yellow highlight is removed, entries beneath
+the Artist or Album are collapsed, and the pop-up menu is removed.
+- ***Rename Artist*** - Rename the artist, only appears when artist clicked.
+- ***Rename Album*** - Rename the album, only appears when album clicked.
+- ***Open Kid3 Audio Tagger*** - Use Kid3 to set Metadata tags.
+- ***Open Nautilus File Manager*** - Use File Manager to view directory.
+- ***Ignore Click*** - Remove yellow highlight, list remains expanded, and
+pop-up menu is removed.
+
+### Song Right-Click Popup Menu
+{:.no_toc}
+
+When you highlight and right click a song in the *Music Location Tree*, a
+context-sensitive popup menu appears. 
+
+#### Menu Options:
+{:.no_toc}
+
+- ***Sample Middle 10 Seconds*** - Listen to middle ten seconds of song.
+- ***Sample Whole Song*** - Listen to the whole song.
+- ***Rename Song Title*** - Rename the song title.
+- ***Open Kid3 Audio Tagger*** - Use Kid3 to set Metadata tags.
+- ***Open Nautilus File Manager*** - Use File Manager to view directory.
+- ***View Raw Metadata*** - View metadata tags returned by `ffmpeg`.
+- ***View SQL Metadata*** - View metadata in pretty format kept by **mserve**.
+- ***Ignore Click*** - Close popup menu.
+
+
+## Information Centre
+
+Just like other applications, **mserve** uses dialog boxes to display:
+
+- Status messages
+- Information messages
+- Warning messages
+- Error messages
+- Confirmation messages with "Proceed" / "Cancel"
+
+However, unlike other applications, **mserve** also records these 
+in the *Information Centre* for the duration of your session.
+
+Additionally **mserve** records system events and user actions where 
+there was no dialog box presented.
+
+The *Information Centre* is accessed from the *Music Location Tree* 
+window's *View* dropdown menu. It can also be accessed by clicking
+the light blue thin ruler near the top of the window, as the video 
+below illustrates.
+
+### Information Centre Sample Video
+
+<video src="https://user-images.githubusercontent.com/92641463/264455606-c5e9e5cf-e782-4cef-b643-6c0a7290b508.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/264455606-c5e9e5cf-e782-4cef-b643-6c0a7290b508.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
 
 
 ---
@@ -254,11 +446,15 @@ The third pixel to the right and third pixel down set the
 skin tone when you resize the window that could yield a
 different skin tone!
 
-Additional Notes:
+### Automatic Skin Color Notes:
+{:.no_toc}
 
 - Windows can be resized and Album Artwork grows and shrinks accordingly.
 - Primary color (@ coordinates 3x3) can change as artwork is resized.
-- Commercial and Intermission buttons are for NHL Stanley Cup Playoffs. Click when they start and TV volume is turned down to 25% and music resumes play. When countdown ends music pauses and TV volume is turned back up to original state.
+- Commercial and Intermission buttons are for NHL Stanley Cup Playoffs. 
+Click when commercials start and the TV volume is turned down to 25%.
+**mserve** playlist resumes play. When countdown ends the music pauses 
+and TV volume is turned back up to normal volume.
 - Shuffle button resorts the selected songs in the playlist.
 - Playlists are currently stored in pickle format but plans are to convert to SQL. Also, SQL search engine is planned.
 - SQL is used for the music library of songs and their lyrics.
@@ -306,6 +502,8 @@ Copy your image file to the directory where you installed `mserve`.
 
 # CD Encoding
 
+Great lengths were taken to ensure currently playing song's 
+animations never lag even when CD's are being encoded.
 This video shows how the music player keeps playing without any
 lag while a CD is being encoded:
 
@@ -315,10 +513,7 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
 </video>
 
-This video clip show how music player continues in real time while
-you use mserve to encode a CD.
-
-Great lengths are taken to ensure animations never lag even when
+Great lengths were also taken to ensure animations never lag even when
 focus grabbing dialog boxes require a response. If a focus grabbing
 dialog box is open when current song ends, the next song is played.
 
@@ -330,20 +525,116 @@ date. It then grabs Album Artwork from the internet.
 You can paste album artwork from the clipboard which you previously
 copied from Amazon, or another website.
 
-## Encoding ID3 Tags
+## How-To Encode a CD Overview
 
+After inserting a CD, click the *Rip CD* button in the *Music Location
+Tree* window. The video below shows how to select encoding format,
+quality, naming format, album date, artwork, genre, comments and track
+level overrides to genre:
 
-{% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
-   alt="Under Construction.png"
-   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
-   caption="Under Construction.png"
-%}
+<video src="https://user-images.githubusercontent.com/92641463/263828968-f8c7dc3d-384a-4cca-b615-1a80f6d141e9.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/263828968-f8c7dc3d-384a-4cca-b615-1a80f6d141e9.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+</video>
 
-**mserve** ID3 Tags are under construction and not yet stable. Encoding 
-works but granular tagging such as "Genre", "Composer", "Album Date" are 
-a WIP (Work In Progress).
+### Video Highlights:
+{:.no_toc}
 
-The ID3 Tags displayed in **mserve** use the `ffmpeg` naming conventions:
+- This video starts *after* 1 minute is spent reading the CD disc **and**
+*after* 1 minute is spent retrieving Album and Track information from
+*MusicBrainz.com*.
+- The top pane shows "Selections". Initially this is only "Tips" because
+nothing has been selected yet. The "Tips" are also sent to the *Information
+Centre* where you can always review later.
+- The bottom pane shows information retrieved from *MusicBrainz*.
+- A light blue highlight bar follows the mouse as it travels over rows in
+the bottom pane.
+- The Album Date of "2001" is checked.
+- The Medium group is checked. This in turn automatically checks all tracks
+(songs) within the Medium.
+- The second artwork box is checked. This would be the highest resolution
+of 65k. Behind the scenes, **mserve** has skipped downloading artwork that is
+6k x 2k pixels in dimension and size of 10 MB. You can however copy and paste
+large artwork from the internet if you choose to. You will be warned whenever
+artwork exceeds 2 MB though.
+- The mouse moves up to select the *Format* dropdown menu. The last used
+format of ".mp3" is displayed and it is changed to ".oga". Notice the tooltip
+window that appears when the dropdown menu is entered. It automatically fades
+away after read or instantly fades when you move out of the dropdown menu.
+- The mouse moves to the *Quality* dropdown menu. The last used quality of 
+"70%" is displayed and it is changed to "80%."
+- The mouse moves to the "Naming" dropdown menu. The last use naming of
+"99 " is displayed. It is changed to "99 -". Notice how all the song
+filenames change in the top pane and bottom pane.
+- Scrolling down the top pane you see two artworks are selected; the low
+resolution and the high resolution. Oops! This means artwork would be
+alternated between tracks. Track 1 low-res, track 2 high-res, track 3 
+low-res, track 4 high-res, etc. So the low resolution artwork is deselected.
+- Next the *Naming* format is changed back to "99".
+- The mouse moves down to the very bottom of the window. This is the button 
+bar. The *"? Override"* clicked open the *Album Level Overrides* window.
+- The *Genre* field is set to "Pop". It is important to always enter a
+*Genre* because it is never provided by *MusicBrainz*.
+- An optional *Comment* is entered.
+- The *Save* button is clicked and the window is closed.
+- A message appears advising that Tracks have been changed. Click OK.
+- The mouse highlights track number 12.
+- Right-click is pressed on track number 12 and the popup menu appears.
+- The *Edit* option is picked from the popup menu.
+- The *Edit Song Differences* window appears. Here you enter details
+about the song that makes it different from other tracks. Preexisting
+details come from *MusicBrainz* plus the *Album Level Overrides* entered
+a couple of steps ago. The *Genre* is changed from "Pop" to "Rock" and
+the comment is changed.
+- Changes are saved and the line is colored green to show that track 3-12
+was changed. 
+- The "Rip CD" button is clicked and the same window for Album Level
+Overrides appear with a new name: "Encode CD Final Confirmation".
+
+<a id="HelpEncodingAlbumOverride"></a>
+### Notes About Album Level Overrides:
+{:.no_toc}
+
+- The same window can appear twice but the title changes between:
+*"Encode CD Final Confirmation"* and *"Album Level Overrides".
+- When Album Level Override variables are entered they filter down
+to each Track on the Album that previously had the same value. 
+- A Track that had unique values are not effected.
+- The Genre is not provided by MusicBrainz. It should always be entered.
+- Verify correct spelling/capitalization of Artist and Album names
+- Verify accuracy of the Album Date. It should be the copyright year.
+- If a compilation, Artist Name is forced to "Various Artists", 
+and the 1st sub-directory is forced to `Compilations`.
+- *Gapless Playback* has no effect in **mserve**. It is used by **iTunes**.
+- When overrides are applied, tracks matching the old value are given
+the new value. If track doesn't have old value it stays the same.
+- After override, tracks can be given a unique *Genre*, *Artist Name*, 
+*First Date*, *Composer* and *Comment*. 
+- Right-click on any track to set uniqueness.
+- Once again, the *Genre* field should always be entered.
+
+<a id="HelpEncodingTrackEdit"></a>
+### Notes About Track Names in Bottom Pane
+{:.no_toc}
+
+- Album Level Override set the *Genre* to "Pop" but this doesn't
+appear in Track Names. All tracks were set to "Pop" when
+override was saved. Because they are the same as the Album Level
+nothing is displayed.
+- The Track Names only show differences from the Album Level. For
+example, all tracks show the "| artist: NAME" because it is different
+than the Album Artist which is "Various Artists"
+- Track difference on "3-12" the *Genre* was set to "Rock" and this
+does appear in Track Names.
+- Notice the *First Date* column there are a few entries for "2001".
+You need to research when the song was first released, E.G. "1985" and
+change the track.
+
+## Encoding Metadata Tags
+
+**mserve** Metadata Tags are displayed with common names. The
+common names follow the `ffmpeg` naming conventions:
 
 | ffmpeg TAG       | Description                                                   |
 |------------------|---------------------------------------------------------------|
@@ -351,39 +642,46 @@ The ID3 Tags displayed in **mserve** use the `ffmpeg` naming conventions:
 | ARTIST           | Name of band or solo artist                                   |
 | ALBUM_ARTIST     | Same as ARTIST except for Compilations then "Various Artists" |
 | ALBUM            | Name of the Album                                             |
+| COPYRIGHT        | Date the Album (not the song) was released                    |
 | DISC             | Disc Number. E.G. single CD is "1/1". 3 CD set could be "1/3" |
-| TRACKNUMBER      | E.G. first title "1/12", last title "12/12"                   |
-| DATE             | First ever release date in YYYY format. NOT the Album Date!   |
+| TRACK_NUMBER     | E.G. When 12 tracks, first track "1/12", last track "12/12"   |
+| DATE             | Song's first release date in YYYY format. NOT the Album Date! |
 | GENRE            | E.G. "Rock", "Soundtrack", "Country", etc.                    |
 | CREATION_TIME    | Date and time music file created (encoded)                    |
 | COMPOSER         | When not specified, defaults to ARTIST                        |
 | COMMENT          | One line comment                                              |
 | COMPILATION      | When value is "1", folder is /Compilations/<ALBUM>            |
 | GAPLESS_PLAYBACK | "0" = Off, "1" = On. However, **mserve** doesn't support it.  |
+| ENCODER          | E.G. "mserve 3.4.3" or "iTunes 11.4.0.18"                     |
+| DISCID           | CDDB Free Disc ID                                             |
+| MUSICBRAINZ_DISC | MusicBrainz Disc ID                                           |
 
-Besides these ID3 tags, **mserve** SQL stores metadata for:
+Besides these Metadata tags, **mserve** SQL stores metadata for:
 
-- AlbumDate - The date the album was released
-- PlayCount - How many times music file was played > 80% of it's duration
-- LastPlayTime - Date and time song was last played > 80 %
-- Rating - Future feature not implemented
-- Hyperlink - Future feature
+- *AlbumDate* - The date the album was released
+- *PlayCount* - How many times music file was played > 80% of it's duration
+- *LastPlayTime* - Date and time song was last played > 80 %
+- *Rating* - Future feature not implemented
+- *Hyperlink* - Future feature
 
 When **mserve** first discovers a song it takes a "snapshot" of the file's:
 
-- OsAccessTime - Last access time
-- OsModifyTime - Last modification time
-- OsChangeTime - Last time permissions were changed
-- OsFileSize - Size of file in bytes
+- *OsAccessTime* - Last access time
+- *OsModifyTime* - Last modification time
+- *OsChangeTime* - Last time permissions were changed
+- *OsFileSize* - Size of file in bytes
 
 When file times are updated by the Operating System, they are **NOT**
-refreshed in **mserve** SQL database.
+refreshed in **mserve** SQL database. A side-effect of this is **mserve**
+can reset all files last access time when a program like *Rhythm Box* reads
+every song file and resets last access time to current time. See `sql.py`
+for examples of "fixing" stuff.
 
 
 ## Renaming Artists, Albums and Song files After Encoding
 
 Sometimes the on-line databases contain errors. For example, on
-a three CD Greatest Hits collection, are these Album names:
+a three CD Greatest Hits collection, you will find these Album names:
 
 - Greatest Hits Of The 80's [Disc 2]
 - Greatest Hits Of The 80's Vol. 1
@@ -391,9 +689,9 @@ a three CD Greatest Hits collection, are these Album names:
 
 The last CD of the set doesn't say ***[Disc 3]*** nor does
 it say ***Volume 3***. It gets confusing when you are viewing
-the Music Location.
+the *Music Location Tree* window.
 
-To Rename using the Music Location tree:
+To Rename within the *Music Location Tree* window:
 
 1. Right click on the third CD Album.
 2. Select *"Rename Album"* from the popup menu.
@@ -435,14 +733,14 @@ inside the music file.
 - Right click on the music file from the Music Location Tree and select
 the 'Kid3' from the popup menu.
 - ID3 tags in the music file are called "Metadata" by **mserve**.
-- **mserve** will automatically displays ID3 Tag metadata on certain 
+- **mserve** will automatically displays Metadata Tags on certain 
 screens when a music file is played.
-- **mserve** can display ID3 Tags on demand from the Music Location Tree
-when you right click on a music file and select 'View Metadata' from the
-popup menu.
-- **mserve** can also display ID3 Tags when you open the 'View' dropdown
-menu and select 'SQL Music'. Right click on a music file and select 
-View Metadata' from the popup menu.
+- **mserve** can display Metadata Tags on demand from the Music Location Tree
+when you right click on a music file and select *View Raw Metadata* 
+or *View SQL Metadata* from the popup menu.
+- **mserve** can also display Metadata Tags when you open the *View* dropdown
+menu and select *SQL Music Table*. Right-click on a music file and select 
+*View SQL Metadata* or *View Raw Metadata* from the popup menu.
 
 
 ## Substituting Special Characters in Filenames
@@ -497,7 +795,7 @@ All programs written for `mserve`:
 - `message.py` - 1,633 lines
 - `monitor.py` - 813 lines
 - `mserve.py` - 16,127 lines
-- `mserve_client.py` - 334 lines
+- `mserve_client.sh` - 334 lines
 - `mserve_config.py` - 980 lines
 - `sql.py` - 3,150 lines
 - `test-for-sync.sh` - 21 lines
@@ -574,11 +872,90 @@ term, development has begun to identify installed versions.
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-# SQL Tables and Pickled Data Files
+# SQL Database using Sqlite3
 
-`mserve` data is stored in a unique fashion. This section lists
+`mserve` data is stored in various files. This section lists
 the filenames you will need to backup. A brief explanation is
 given for how each file is used.
+
+The SQL database can be accessed with external tools like 
+`sqlitebrowser`.
+
+## SQL Tables
+
+The popular SQL database engine `sqlite3` which is used by your
+web browser is also used by `mserve`.
+
+Here are the SQL Tables and Indices that are created in
+the sqlite3 file **~/.../mserve/library.db**:
+
+``` python
+def open_db(LCS=None):
+    """ Open SQL Tables - Music Table and History Table
+        Create Tables and Indices that don't exist
+    :param LCS: instance of Location() class for lcs.open_code, etc.
+    """
+
+    #open_new_db()  # Database 'library_new.db' only used for conversions.
+
+    global con, cursor, hist_cursor, loc_cursor, lcs
+    if LCS:
+        lcs = LCS  # Locations class
+
+    con = sqlite3.connect(FNAME_LIBRARY)
+
+    # MUSIC TABLE
+    con.execute(
+        "create table IF NOT EXISTS Music(Id INTEGER PRIMARY KEY, " +
+        "OsFileName TEXT, OsAccessTime FLOAT, OsModifyTime FLOAT, " +
+        "OsChangeTime FLOAT, OsFileSize INT, " +
+        "ffMajor TEXT, ffMinor TEXT, ffCompatible TEXT, " +
+        "Title TEXT, Artist TEXT, Album TEXT, Compilation TEXT, " +
+        "AlbumArtist TEXT, AlbumDate TEXT, FirstDate TEXT, " +
+        "CreationTime TEXT, DiscNumber TEXT, TrackNumber TEXT, " +
+        "Rating TEXT, Genre TEXT, Composer TEXT, Comment TEXT, " +
+        "Hyperlink TEXT, Duration TEXT, Seconds FLOAT, " +
+        "GaplessPlayback TEXT, PlayCount INT, LastPlayTime FLOAT, " +
+        "LyricsScore BLOB, LyricsTimeIndex TEXT)")
+
+    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS OsFileNameIndex ON " +
+                "Music(OsFileName)")
+
+    # HISTORY TABLE
+    con.execute(
+        "create table IF NOT EXISTS History(Id INTEGER PRIMARY KEY, " +
+        "Time FLOAT, MusicId INTEGER, User TEXT, Type TEXT, " +
+        "Action TEXT, SourceMaster TEXT, SourceDetail TEXT, " +
+        "Target TEXT, Size INT, Count INT, Seconds FLOAT, " +
+        "Comments TEXT, Timestamp FLOAT)")
+
+    con.execute("CREATE INDEX IF NOT EXISTS MusicIdIndex ON " +
+                "History(MusicId)")
+    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS TimeIndex ON " +
+                "History(Timestamp)")
+    con.execute("CREATE INDEX IF NOT EXISTS TypeActionIndex ON " +
+                "History(Type, Action)")
+
+    # LOCATION TABLE
+    con.execute(
+        "CREATE TABLE IF NOT EXISTS Location(Id INTEGER PRIMARY KEY, " +
+        "Code TEXT, Name TEXT, ModifyTime FLOAT, ImagePath TEXT, " +
+        "MountPoint TEXT, TopDir TEXT, HostName TEXT, " +
+        "HostWakeupCmd TEXT, HostTestCmd TEXT, HostTestRepeat INT, " +
+        "HostMountCmd TEXT, HostTouchCmd TEXT, HostTouchMinutes INT, " +
+        "Comments TEXT)")
+    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS LocationCodeIndex ON " +
+                "Location(Code)")
+
+
+    ''' For mserve.py rename_file() function to rename "the" to "The" '''
+    con.execute("PRAGMA case_sensitive_like = ON;")
+
+    con.row_factory = sqlite3.Row
+    cursor = con.cursor()
+    hist_cursor = con.cursor()
+    loc_cursor = con.cursor()
+```
 
 ## Pickled Data Files
 
@@ -609,13 +986,10 @@ One subdirectory is created for every location. E.G. the subdirectory
 
 - **last_open_states** - lc.FNAME_LAST_OPN_STATES - Each Artist and Album
 and whether or not they are open (down triangle / chevron) or closed
-(left pointing triangle / chevron) in the Music Library window.
+(left pointing triangle / chevron) in the *Music Location Tree* window.
 - **last_playlist** - lc.FNAME_LAST_PLAYLIST - Full path names of all
-songs checked (have the blue square) in the Music Library window. 
+songs checked (have the blue square) in the *Music Location Tree* window. 
 Sorted in playlist order.
-- **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
-**last_playlist** indicating the song that was playing when **mserve**
-was shutdown.
 - **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
 **last_playlist** indicating the song that was playing when **mserve**
 was shutdown.  August 5, 2023 Note: This is superseded by 
@@ -628,80 +1002,6 @@ as a shadow filesystem to track last modification time. Used by the
 **lc.FNAME** represents "location.py" (**lc.**), "Filename" (**FNAME**). 
 When working inside the location.py module, drop the **lc.** prefix.
 In the other Python modules, **import location as lc** is used.
-
-## SQL Tables
-
-The popular SQL database engine `sqlite3` which is used by your
-web browser is also used by `mserve`.
-
-Here are the SQL Tables and Indices that are created in
-the sqlite3 file **~/.../mserve/library.db**:
-
-``` python
-def open_db(LCS=None):
-    """ Open SQL Tables - Music Table and History Table
-        Create Tables and Indices that don't exist
-    :param LCS: instance of Location() class for lcs.open_code, etc.
-    """
-
-    #open_new_db()  # Database 'library_new.db' only used for conversions.
-
-    global con, cursor, hist_cursor, loc_cursor, lcs
-    if LCS:
-        lcs = LCS  # Locations class
-
-    con = sqlite3.connect(FNAME_LIBRARY)
-
-    # MUSIC TABLE
-    con.execute("CREATE TABLE IF NOT EXISTS Music(Id INTEGER PRIMARY KEY, " +
-                "OsFileName TEXT, OsAccessTime FLOAT, OsModifyTime FLOAT, " +
-                "OsChangeTime FLOAT, OsFileSize INT, " +
-                "Title TEXT, Artist TEXT, Album TEXT, " +
-                # Change ReleaseDate to FirstDate and RecordingDate to AlbumYear
-                # For old iTunes stuff initialize AlbumYear with FirstYear.
-                "ReleaseDate TEXT, RecordingDate TEXT, " +
-                "CreationTime TEXT, DiscNumber TEXT, TrackNumber TEXT, " +
-                "Rating TEXT, Genre TEXT, Composer TEXT, " +
-                "Comment TEXT, Hyperlink TEXT, Duration TEXT, " +
-                "Seconds INT, PlayCount INT, LastPlayTime FLOAT, " +
-                "LyricsScore BLOB, LyricsTimeIndex TEXT)")
-
-    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS OsFileNameIndex ON " +
-                "Music(OsFileName)")
-
-    # HISTORY TABLE
-    con.execute("CREATE TABLE IF NOT EXISTS History(Id INTEGER PRIMARY KEY, " +
-                "Time FLOAT, MusicId INTEGER, User TEXT, Type TEXT, " +
-                "Action TEXT, SourceMaster TEXT, SourceDetail TEXT, " +
-                "Target TEXT, Size INT, Count INT, Seconds FLOAT, " +
-                "Comments TEXT)")
-
-    con.execute("CREATE INDEX IF NOT EXISTS MusicIdIndex ON " +
-                "History(MusicId)")
-    con.execute("CREATE INDEX IF NOT EXISTS TimeIndex ON " +
-                "History(Time)")
-    con.execute("CREATE INDEX IF NOT EXISTS TypeActionIndex ON " +
-                "History(Type, Action)")
-
-    # LOCATION TABLE
-    con.execute("CREATE TABLE IF NOT EXISTS Location(Id INTEGER PRIMARY KEY, " +
-                "Code TEXT, Name TEXT, ModifyTime FLOAT, ImagePath TEXT, " +
-                "MountPoint TEXT, TopDir TEXT, HostName TEXT, " +
-                "HostWakeupCmd TEXT, HostTestCmd TEXT, HostTestRepeat INT, " +
-                "HostMountCmd TEXT, HostTouchCmd TEXT, HostTouchMinutes INT, " +
-                "Comments TEXT)")
-    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS LocationCodeIndex ON " +
-                "Location(Code)")
-
-
-    ''' For mserve.py rename_file() function to rename "the" to "The" '''
-    con.execute("PRAGMA case_sensitive_like = ON;")
-
-    con.row_factory = sqlite3.Row
-    cursor = con.cursor()
-    hist_cursor = con.cursor()
-    loc_cursor = con.cursor()
-```
 
 ---
 
@@ -759,7 +1059,7 @@ def save_window_geom(name, geom):
 <a id="hdr9"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr10">Skip</a></div>
 
-# Tooltips Slowly Fade-In and Fade-Out
+# Tooltips Gradually Fade In and Out
 
 A lot of work has gone into crafting the tooltips to delay before
 gradually fading in. Also, to gradually fade out. And finally, the
@@ -773,11 +1073,12 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 Key features of tooltips:
 
-- They appear after a delay
-- They fade in
-- The stay visible for a short time based on word count
-- They move instep with mouse movements
-- They fade out
+- When mouse hovers over a button, tooltips appear after a delay
+- Tooltips gradually fade in
+- They stay visible for a short time based on word count
+- Tooltips follow mouse mouse movements inside button
+- Clicking button or moving mouse out of button forces fade out 
+- Tooltips gradually fade out
 
 ---
 
@@ -1041,7 +1342,51 @@ keep track of where music is stored.
 In addition to tracking music on local storage, *Locations* can access
 music stored on a File Server or a Mobile Phone.
 
+
+
+### Sample *View Locations* Window
+{:.no_toc}
+
 ---
+
+Here is a sample *View Locations* window with a location highlighted in green.
+
+{% include image.html src="/assets/img/mserve/mserve View Locations.png"
+   alt="mserve View Locations.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="mserve View Locations.png"
+%}
+
+Mandatory Location Fields. The first two fields are mandatory:
+
+- ***Location Name*** - Cannot be blank and must be unique
+- ***Music Top Directory*** - The parent folder / subdirectory that contains
+Artist subdirectories. The *Top Directory* cannot be changed for the
+currently opened location. To change the current location's *Top Directory*,
+Open and play a different location with the *File* dropdown menu in the
+*Music Location Tree* window. That is the main window when **mserve** 
+starts.
+
+The above sample screen was generated when optional host commands
+are **not** installed. 20,000 lines deep inside **mserve**, are these
+`python` tests:
+
+``` python
+self.nmap_installed = ext.check_command('nmap')
+if self.nmap_installed:
+   ''' Command 'nc' also required to quickly check if host is up '''
+   self.nmap_installed = ext.check_command('nc')
+self.ssh_installed = ext.check_command('ssh')
+self.sshfs_installed = ext.check_command('sshfs')
+if self.sshfs_installed:
+   self.sshfs_installed = ext.check_command('fusermount')
+self.wakeonlan_installed = ext.check_command('wakeonlan')
+```
+
+---
+
+### Sample *Edit Location* Window
+{:.no_toc}
 
 Here is a sample *Edit Location* window with a location highlighted in green.
 
@@ -1055,7 +1400,8 @@ Mandatory Location Fields. The first two fields are mandatory:
 
 - ***Location Name*** - Cannot be blank and must be unique
 - ***Music Top Directory*** - The parent folder / subdirectory that contains
-Artist subdirectories.
+Artist subdirectories. The music top directory is validated to contain  
+Artist/Album/Song File subdirectory structure with at least 10 song files.
 
 The remaining fields, starting at ***Optional Remote Host Name***, are
 optional.
@@ -1065,15 +1411,18 @@ Optional Location Fields:
 - ***Optional Remote Host Name*** - If the *Music Top Directory* is on
 a remote host, enter that name here. This is the only field that 
 must be entered for a remote host. The remaining fields are optional for
-a remote host.
+a remote host. This field does not appear unless `nmap` and `nc` are
+installed.
 - ***Command to wake up sleeping Host*** - If the host is normally
 asleep (to save electricity and extend life), enter the `waekonlan`
 command here. Make sure `&` is appended to launch command in the
 background. This is important for **mserve** to test when host is awake
-and move onto the next test step.
+and move onto the next test step.  This field does not appear unless 
+`nmap`, `nc` and `wakeonlan` are installed.
 - ***Command to test if Host is awake*** - Only enter a command if the
 previous field to wake Host was used. **mserve** tests if more than
-three lines were returned by this command to know host is awake.
+three lines were returned by this command to know host is awake.  This  
+field does not appear unless `nmap`, `nc` and `ssh` are installed.
 - ***Maximum tests every 0.1 second*** - Only enter a command if the
 previous field to test if Host is awake was used. **mserve** runs the
 previous field test this number of times. In the example 300 times is used
@@ -1081,12 +1430,14 @@ which is 30 seconds.
 - ***Command to mount Host Music locally*** - If the Host's music isn't
 automatically mounted, enter the mount command here. Note in this example
 the `nonempty` parameter is used. This is helpful if **mserve** was
-restarted and the previous mount was still left mounted.
+restarted and the previous mount was still left mounted. This field does
+not appear unless `nmap`, `nc` and `sshfs` are installed.
 - ***Command to prevent Host sleeping*** - If Host had to be woken up,
 enter a command to keep it awake. Assuming you are using the
 `mserve_client.sh` script on the host, the command would be:
-`ssh <HOST> "touch /tmp/mserve_client.time` where `<HOST> is the
-remote Host's name.
+`ssh <HOST> "touch /tmp/mserve_client.time` where `<HOST>` is the
+remote Host's name. This field does
+not appear unless `nmap`, `nc` and `ssh` are installed.
 - ***Send prevent sleep every x minutes*** - Only enter this field if
 the previous field was entered. In the screenshot `10` is entered such
 that every ten minutes the previous field's command is issued. When you
@@ -1103,47 +1454,6 @@ where `mserve.py` is installed.  Then use the filename picker to select
 that filename. An image of what the location looks like is helpful when
 you forget what the location looks like.
 
-
-### Miscellaneous Points TO RELOCATE
-
-
-The main music library window follows the directory structure of
-your storage device:
-
-- The top level points to "My Music"
-- The second level points to Artists under "My Music"
-- The third level points to Albums under each Artist
-- The fourth level points to Songs under each Album
-
-> ***NOTE:*** "My Music" is an over simplification for the sake of
-> example. You can start `m` (the splash screen for **mserve.py**)
-> by typing: 
-> `m "/mnt/music/Users/Person/Music/iTunes/iTunes Media/Music/"`
-> 
-> You can also call `m` after changing to a music directory. E.G.
-> Enter `cd ~/Music/Pink Floyd`. Then enter `m .` and you will be
-> presented with all the Albums you have for ***Pink Floyd***.
-> 
-> If you don't pass a parameter to `m` it will reload the last
-> location used and continue playing where it left off.
-
-The chevron (triangle) is clicked to expand / collapse entries
-under Artists and Albums.
-
-The check box is colored solid when "checked" and is hollow
-when "unchecked". If a line appears that means "tri-state" and
-underneath the Artist or Album some songs are "checked" and
-some songs are "unchecked".
-
-As you check and uncheck individual songs, or entire Artists or,
-entire Albums a list is built in memory. Then you can Apply or
-Cancel changes.
-
-New songs are added into the Chronology (Playlist) after the 
-current playing song position.
-
-If you make huge mistakes you can abandon changes with the
-option "*Exit without saving Playlist*".
 
 If the File Server spends most of its life sleeping, **mserve** can wake it
 up with a "Magic Packet" over wired Ethernet. Then **mserve** keeps
@@ -1189,27 +1499,123 @@ will not let you define this debug option.
 
 More details: https://help.ubuntu.com/community/SSHFS
 
-## Compare Locations
 
-Here we see how files can be synchronized across devices.
+<a id="HelpTestHostStatus"></a>
+### Test Remote Host Status Display
+{:.no_toc}
 
-{% include image.html src="/assets/img/mserve/Synchronize Actions.png"
-   alt="Synchronize Actions.png"
+These steps are followed when a remote host is tested:
+
+- If the host was active less than 10 minutes ago, `nc` is run
+- If the host has been inactive for more than 10 minutes, `nmap` is run
+- After `nc` or `nmap` passes test, the music top directory is mounted
+- After mounting, **mserve** checks that artist subdirectories exist
+- After validation, scroll up to review results
+- After review, click the *Close Test Results* button
+
+
+### Sample *Synchronize Location* Test Host Video
+{:.no_toc}
+
+<video src="https://user-images.githubusercontent.com/92641463/264155349-1d0e2f89-6e3a-41b6-83bd-64178a3470df.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/264155349-1d0e2f89-6e3a-41b6-83bd-64178a3470df.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+The above video demonstrates:
+
+- You cannot synchronize a location to itself (L004 is currently open)
+- The *Test Host* button replaces the top frame with location treeview
+with a new frame with old-style TTY terminal output.
+- Information messages are in green font with highlights in yellow font.
+- It takes 5.8 seconds for `nmap` to test if host is connected to network.
+- `nmap` console results are shown inside the GUI window.
+- **mserve** reports that host "dell" can be accessed but is ***NOT awake***.
+- It takes 7 seconds for `wakeonlan` to wake up host.
+- `ssh dell ls` is run on host "dell" until files appear in output.
+- The Music Top Directory `/mnt/music` is already mounted from earlier tests.
+If it wasn't mounted, then **mserve** would mount it now.
+- After the test is completed, the mouse wheel is used to scroll up
+and down the status results display frame.
+- After reviewing results, the ***Help Test*** button is clicked. The
+bottom-right corner of a new browser window partially covers the 
+test window. The browser window is dragged over-top.
+- This is where the video ends, but after the *Close Test Results* button
+is pressed and the regular buttons and location treeview frame appear.
+
+
+<a id="HelpSynchronizeLocation"></a>
+## Synchronize Location
+
+When locations are synchronized, new files are NEVER added, and old files
+are NEVER deleted. If you would like to test the function first, review
+the script `test_for_synch.sh`.
+
+
+### Sample *Synchronize Location* Window
+{:.no_toc}
+
+Below is a sample screen where a location has been picked to synchronize:
+
+{% include image.html src="/assets/img/mserve/mserve Synchronize Location.png"
+   alt="mserve Synchronize Location.png"
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
-   caption="Synchronize Actions.png"
+   caption="mserve Synchronize Location.png"
+%}
+
+When the *"🔗 Help"* button is clicked you are brought to this web page.
+
+When the *"✘ Close"* button is clicked the window is closed. The same
+is true if `Escape` key is pressed or the window's *"✘"*  
+button is clicked.
+
+The steps below describe what happens when the *"✔ Synchronize"* button
+is clicked.
+
+<a id="HelpSynchronizeActions"></a>
+### Synchronize Location Actions
+{:.no_toc}
+
+A quick test is made to see if files have the same modification time 
+and same size. If so the next file is checked.
+
+If files have the same size but different times, the `diff` command is
+used to test every byte to see if they are different. If the files
+are identical, the modification times are set the same to the oldest
+modification time. The rationale is a new location was created, files
+were copied from an original location and the operating system reset
+the modification time to the current time.
+
+If the files have the same time but different sizes or different
+contents, an error message is displayed because **mserve** has no
+clue which direction to copy files in.
+
+If files are different, then the file with the newest modification
+time is copied over the oldest.
+
+Before copying you are always given a chance to review action plans.
+
+Below is an example of the action plan window:
+
+{% include image.html src="/assets/img/mserve/mserve Synchronize Actions.png"
+   alt="mserve Synchronize Actions.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="mserve Synchronize Actions.png"
 %}
 
 The "Action" column states the reason for updating is that the 
 file size has increased. This was due to album artwork being
 added to the source files.
 
-Here's a list of what can appear in "Action" column:
+Here's a list of actions. All appear in "Action" column except 
+those denoted as "hidden":
 
 - "Missing" - In target(other) location (hidden from view)
 - "Same" - within 2 seconds so no action required (hidden)
 - "Error: Size different, time same" - Don't know copy direction
-- "Error: contents different, time same" -    "   "   "   "
-- "OOPS" - programming error that should never happen (hidden)
+- "Error: Contents different, time same" - Don't know copy direction
+- "OOPS" - Programming error that should never happen (hidden)
 - "Copy Trg -> Src (Size)" - Based on size difference
 - "Copy Src -> Trg (Size)" - Based on size difference
 - "Copy Trg -> Src (Diff)" - Based on file difference
@@ -1231,32 +1637,50 @@ For cell phones the last modification time (used to compare files)
 may not be updated. In this case **mserve** creates a virtual
 filesystem to track what modification times should be.
 
+
 ---
 
+<a id="HelpPlaylists"></a>
 <a id="hdr16"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr15">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr17">Skip</a></div>
 
 # Playlists
 
-Playlists are stored by location. Below is a sample screen from the
-***View Playlists*** function:
+Playlists are stored by location. Each location can have an unlimited
+number of playlists. Each playlist can have an unlimited number of songs, 
+but only songs from the current music location.
 
-{% include image.html src="/assets/img/mserve/mserve View Playlists.png"
-   alt="mserve View Playlists.png"
+Below is a sample *Playlist Maintenance* window from the 
+***Rename Playlist*** function:
+
+### Sample *Rename Playlist* Window
+{:.no_toc}
+
+{% include image.html src="/assets/img/mserve/mserve Rename Playlist.png"
+   alt="mserve Rename Playlist.png"
    style="float: left; width: 60%; margin: 1rem 2rem 1rem 0;"
-   caption="mserve View Playlists.png"
+   caption="mserve Rename Playlist.png"
 %}
 
-The Playlist name cannot be blank and must be unique per location. A
-warning is issued when the Playlist name has been used in another location.
+The *Playlist name* cannot be blank and must be unique per location. A
+warning is issued when the Playlist name has been used in another 
+location.
 
-The Playlist description is optional.
+The *Playlist description* is optional.
 
-The device location (code) is automatically assigned.
+The *Device location* code is automatically assigned.
 
 The columns for "Song Count", "Size of Files" and "Duration" are
 automatically calculated as songs are selected and deselected in
-Music Location Tree checkboxes. 
+*Music Location Tree* checkboxes. 
+
+Five functions share the same *Playlist Maintenance* window:
+
+- Open Playlist, called from the *File* dropdown menu
+- New Playlist, called from the *File* dropdown menu
+- Rename Playlist, called from the *Edit* dropdown menu
+- Delete Playlist, called from the *Edit* dropdown menu
+- View Playlists, called from the *View* dropdown menu
 
 ---
 
@@ -1277,7 +1701,7 @@ Hockey Playoff TV Commercial buttons.
 
 **`.gif` (there is no sound) Highlights:**
 
-- From the Music Library window select the "View" dropdown menu.
+- From the *Music Location Tree* window select the "View" dropdown menu.
 - When FF/Rewind buttons are visible you have the option of
 enabling the Hockey buttons.
 - The Hockey TV Commercial button turns down TV commercial and
@@ -1286,7 +1710,7 @@ resumes mserve play for 90 seconds.
 resumes mserve play for 18 minutes.
 - When Hockey TV commercial buttons are active you have
 the option of restoring the FF/Rewind buttons.
-- When changing buttons, the Music Library window is
+- When changing buttons, the *Music Location Tree* window is
 sent to bottom and Play Window is raised to the top.
 
 This `.gif` also shows how the Show/Hide
@@ -1294,6 +1718,7 @@ Chronology button places song lyrics in a suitable location
 when the artwork size changes.
 
 ## Using Hockey TV Commercial Button
+{:.no_toc}
 
 This video shows what you see and hear when you click 
 one of the Hockey TV Commercial Buttons.
@@ -1323,7 +1748,8 @@ either button to end the countdown immediately
 screen and the Music Player window goes back to it's original
 location on the 4K TV.
 
-## Hockey TV Commercial Button Without `compiz`
+## Hockey TV Commercial Button Without **compiz**
+{:.no_toc}
 
 This video shows what you see and hear when you click 
 one of the Hockey TV Commercial Buttons and `compiz`
@@ -1384,9 +1810,11 @@ if "'place', " in self.old_compiz_plugins:
 '''
 ```
 
-## **mserve** Volume During Hockey TV Commercials
+<a id="HelpTvVolume"></a>
+## **mserve** Volume During TV Commercials
+{:.no_toc}
 
-This image shows **mserve** volume (`ffplay`) is 60%:
+This image shows **mserve** volume (`ffplay`) is at 60%:
 
 {% include image.html src="/assets/img/mserve/hockey_volume.png"
    alt="hockey_volume.png"
@@ -1421,10 +1849,10 @@ FYI the "ALSA plug-in [python2.7]" sound processor is used by
 VU Meters using system output loopback to input stream is described
 in the next section.
 
-## Change **mserve** Volume Default for TV Commercials
+## Configure **mserve** Volume During Muted TV Commercials
 
-Click the 'Edit' dropdown menu and then select
-'Volume for TV Commercials' and this screen appears:
+To set the **mserve** volume during muted TV commercials, click 
+the *Edit* dropdown menu and select *Volume During TV Commercials*:
 
 {% include image.html src="/assets/img/mserve/mserve volume for tv commercials.png"
    alt="mserve volume for tv commercials.png"
@@ -1432,7 +1860,10 @@ Click the 'Edit' dropdown menu and then select
    caption="mserve volume for tv commercials.png"
 %}
 
-Hopefully this screen is self-explanatory.
+This window changes the program variables shown in the last section.
+
+Every location and every playlist within every location has a separate
+volume control for **mserve** when TV commercials are muted by **mserve**.
 
 ---
 
@@ -1473,12 +1904,14 @@ The soundcard is built into onboard Intel chipset.
 
 ---
 
-## `pavucontrol` Sound Output Loopback to Microphone
+## **pavucontrol** Sound Output Loopback to Microphone
+{:.no_toc}
 
 In order for VU Meters to work in **mserve**, The Pulse Audio
 Volume Control GUI application (**pavucontrol**) is used.
 
 ### Pulse Audio Volume Control Sound Output
+{:.no_toc}
 
 {% include image.html src="/assets/img/mserve/pavucontrol output devices.png"
    alt="pavucontrol output devices.png"
@@ -1486,20 +1919,29 @@ Volume Control GUI application (**pavucontrol**) is used.
    caption="pavucontrol output devices.png"
 %}
 
-This screenshot shows the *Pulse Audio Volume Control* 
-"Output Devices" Tab.
-In this example the output was changed from the first device
-to the Built-in Audio speakers. The changes were made from the
+This screenshot shows the *Pulse Audio Volume Control* "Output 
+Devices" Tab.
+In this example, the output was changed from the first device
+to the **Built-in Audio** speakers. The changes were made from the
 Ubuntu 16.04 Sound System Settings panel show in the previous
 section.
 
 Notice the thick progress bar. It displays the sound playing
-on the output device and jumps very quickly. This is how you
-can confirm the correct device is selected.
+on the output device and jumps very quickly. Progress bar activity
+is how you can confirm the active output device is selected.
+
+When the output device is changed, the recording device must
+be changed for the VU meters to display the correct output sound
+device. See the section: *Pulse Audio Volume Control Change 
+Recording Source* below.
+
+Then **mserve** must be restarted 
+for the VU meters to display the correct output sound device. 
 
 ---
 
 ### Pulse Audio Volume Control Recording Tab
+{:.no_toc}
 
 {% include image.html src="/assets/img/mserve/pavucontrol recording tab.png"
    alt="pavucontrol recording tab.png"
@@ -1510,8 +1952,8 @@ can confirm the correct device is selected.
 This screenshot shows the *Pulse Audio Volume Control*
 "Recording" Tab.
 
-Notice the thick progress bar at the bottom show no sound
-being recorded. That is because it is listening to the
+Notice the thick progress bar at the bottom indicates no sound
+is being recorded. That is because it is listening to the
 wrong stream: "Monitor of GM204 High Definition Audio
 Controller Digital Stereo (HDMI)". This stream is for
 the 50" Sony TV connected to Nvidia 970M card.
@@ -1524,6 +1966,7 @@ speakers.
 ---
 
 ### Pulse Audio Volume Control Change Recording Source
+{:.no_toc}
 
 {% include image.html src="/assets/img/mserve/pavucontrol recording change capture.png"
    alt="pavucontrol recording change capture.png"
@@ -1544,7 +1987,7 @@ Then the stream "Monitor of Built-in Audio Analog Stereo"
 was selected. Notice the thick progress bar is now populated
 with sound volume levels.
 
-When you change the output device loopback to recording
+When you change the output device loopback to recording; 
 **YOU MUST RESTART mserve**. Otherwise the VU meters will
 merely be blank.
 
