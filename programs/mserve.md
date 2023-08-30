@@ -52,8 +52,8 @@ some unique features you might not expect.
 - Help buttons in **mserve** bring you directly to this web
 page's appropriate sections
 - Album Artwork animations and VU Meters during playback
-- Album Artwork at pixel 3,3 sets a 
-<a href="#automatic-skin-color-based-on-artwork">different color theme</a>, 
+- Album Artwork at pixel 3,3 coordinates, sets a <a 
+href="#automatic-skin-color-based-on-artwork">different color theme</a>, 
 for during song playback (resizing window can result in different 
 color theme)
 - Define image file for 
