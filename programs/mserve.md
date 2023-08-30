@@ -54,7 +54,7 @@ page's appropriate sections
 - Album Artwork animations and VU Meters during playback
 - Album Artwork at pixel 3,3 coordinates, sets a <a 
 href="#automatic-skin-color-based-on-artwork">different color theme</a>, 
-for during song playback (resizing window can result in different 
+during song playback (resizing window can result in different 
 color theme)
 - Define image file for 
 <a href="#image-for-songs-with-no-artwork">songs with no artwork</a>.  
@@ -102,8 +102,12 @@ when location opened for playing or synchronization.
 as this 
 <a href="#how-to-encode-a-cd-overview">sample video</a> 
 demonstrates
-- Scrape MusicBrainz for Artist / Album CD track details and artwork
-- Scrape genius.com and other websites to get song lyrics
+- Scrape [MusicBrainz 🔗](https://musicbrainz.org/ 
+"MusicBrainz for Artist / Album CD track details"){:target="_blank"} 
+for Artist / Album CD track details and artwork
+- Scrape [genius.com 🔗](https://genius.com/ 
+"search song lyrics"){:target="_blank"} 
+and other websites to get song lyrics
 
 ## **mserve** is Still Under Construction
 {:.no_toc}
