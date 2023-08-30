@@ -1267,7 +1267,34 @@ keep track of where music is stored.
 In addition to tracking music on local storage, *Locations* can access
 music stored on a File Server or a Mobile Phone.
 
+
+
+### Sample *View Locations* Window
+{:.no_toc}
+
 ---
+
+Here is a sample *View Locations* window with a location highlighted in green.
+
+{% include image.html src="/assets/img/mserve/mserve View Locations.png"
+   alt="mserve View Locations.png"
+   style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
+   caption="mserve View Locations.png"
+%}
+
+Mandatory Location Fields. The first two fields are mandatory:
+
+- ***Location Name*** - Cannot be blank and must be unique
+- ***Music Top Directory*** - The parent folder / subdirectory that contains
+Artist subdirectories. The *Top Directory* cannot be changed for the
+currently opened location. To change the current locations *Top Directory*,
+Open and play a different location with the *File* dropdown menu in the
+*Music Location Tree* (main) window.
+
+---
+
+### Sample *Edit Location* Window
+{:.no_toc}
 
 Here is a sample *Edit Location* window with a location highlighted in green.
 
@@ -1393,8 +1420,9 @@ These steps are followed when a remote host is tested:
 - After validation the test window can be closed
 - Until closing you can scroll up to review results
 
-Sample Status display video:
 
+### Sample *Synchronize Location* Test Host Video
+{:.no_toc}
 
 <video src="https://user-images.githubusercontent.com/92641463/264155349-1d0e2f89-6e3a-41b6-83bd-64178a3470df.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/264155349-1d0e2f89-6e3a-41b6-83bd-64178a3470df.mp4"
@@ -1406,7 +1434,7 @@ The above video demonstrates:
 
 - You cannot synchronize a location to itself (L004 is currently open)
 - The *Test Host* button replaces the top frame with location treeview
-with an old-style TTY terminal.
+with a new frame with old-style TTY terminal output.
 - Information messages are in green font with highlights in yellow font.
 - It takes 5.8 seconds for `nmap` to test if host is connected to network.
 - `nmap` console results are shown inside the GUI window.
@@ -1419,7 +1447,9 @@ If it wasn't mounted, then **mserve** would mount it now.
 and down the status results display frame.
 - After reviewing results, the ***Help Test*** button is clicked. The
 bottom-right corner of a new browser window partially covers the 
-test window. The browser window is dragged over-top.   
+test window. The browser window is dragged over-top.
+- This is where the video ends, but after the *Close Test Results* button
+is pressed and the regular buttons and location treeview frame appear.
 
 
 <a id="HelpSynchronizeLocation"></a>
@@ -1429,6 +1459,10 @@ When locations are synchronized, new files are NEVER added, and old files
 are NEVER deleted. If you would like to test the function first, review
 the script `test_for_synch.sh`.
 
+
+### Sample *Synchronize Location* Window
+{:.no_toc}
+
 Below is a sample screen where a location has been picked to synchronize:
 
 {% include image.html src="/assets/img/mserve/mserve Synchronize Location.png"
@@ -1437,13 +1471,13 @@ Below is a sample screen where a location has been picked to synchronize:
    caption="mserve Synchronize Location.png"
 %}
 
-When the *🔗 Help* button is clicked you are brought to this web page.
+When the *"🔗 Help"* button is clicked you are brought to this web page.
 
-When the *✘ Close* button is clicked the window is closed. The same
-is true if `Escape` key is pressed or the window's *✘*  
+When the *"✘ Close"* button is clicked the window is closed. The same
+is true if `Escape` key is pressed or the window's *"✘"*  
 button is clicked.
 
-The steps below describe what happens when the *✔ Synchronize* button
+The steps below describe what happens when the *"✔ Synchronize"* button
 is clicked.
 
 <a id="HelpSynchronizeActions"></a>
