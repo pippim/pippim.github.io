@@ -46,32 +46,42 @@ defaults to `genius.com`
 **mserve** has regular features you would expect. This section lists
 some unique features you might not expect.
  
-### Innovative features:
+### Innovative Features Most Applications Don't Have:
 {:.no_toc}
 
 - Help buttons in **mserve** bring you directly to this web
 page's appropriate sections
 - Album Artwork animations and VU Meters during playback
-- Album Artwork at pixel 3,3 sets a different color theme for
-during song playback (resizing window can result in different 
+- Album Artwork at pixel 3,3 sets a  
+<a href="#automatic-skin-color-based-on-artwork">different color theme</a>,  
+for during song playback (resizing window can result in different 
 color theme)
-- Scrolling lyrics score during playback (automatically web scraped)
-- Synchronize files across multiple locations, including sleeping hosts
+- Define image file for 
+<a href="#image-for-songs-with-no-artwork">songs with no artwork</a>.  
+- <a href="#synchronized-lyrics-in-action">Scrolling lyrics</a> 
+score during playback (automatically web scraped)
+- <a href="#synchronize-location">Synchronize files</a> 
+across multiple locations, including sleeping hosts 
 that are woken up and kept awake as long as necessary
 - Information Centre displays history of messages, statuses and actions
-- Tooltips appear after time delay, fade in/out, and follow mouse pointer
-- Basic Lyrics Time Synchronization and Advanced Lyrics Time 
+- Tooltips appear after time delay, 
+<a href="#tooltips-gradually-fade-in-and-out">fade in/out</a>, 
+and follow mouse pointer
+- <a href="#basic-time-synchronization">Basic Lyrics Time</a> 
+Synchronization and 
+<a href="#fine-tune-time-index">Advanced Lyrics Time</a> 
 Synchronization (Synchronized lyrics lines are stored in 
 a Time Index list and this term is frequently used)
-- Two timers for playing music during TV broadcast commercials
-- Detailed SQL History of actions performed on each song
+- Two timers for playing music during 
+<a href="#hockey-tv-commercial-buttons">TV broadcast commercials</a>
 - Cross-fading other sound sources when toggling play/pause, FF/REW,
 and during TV broadcast commercials
 - Written in relatively easy to learn Python so you can modify
 for Linux, Windows WSL, Chrome OS, Windows (a lot more work) 
 and Mac (modest amount of more work)
-- Single SQL library with shared lyrics score and time index 
-across all locations for one time song maintenance benefiting all
+- An <a href="#sql-database-using-sqlite3">SQL Database</a> 
+shares lyrics score and time index 
+across all locations for conformity and reduced storage space.
 - Restores file's OS last access time to original if 
 less than 80% of song was played
 - Updates play count and last play time, if 80% of song played
@@ -80,8 +90,11 @@ less than 80% of song was played
 ### Features most music players don't have:
 {:.no_toc}
 
-- Two clicks to rename Artists, Albums and Song files
-in both the storage device and the mserve SQL database at the same time.
+- Two clicks to 
+<a href="#renaming-artists,-albums-and-song-files-after-encoding">
+rename Artists, Albums and Song files</a> 
+in both the storage device and the **mserve** SQL database 
+at the same time.
 - Synchronize music across locations (already mentioned above)
 - Encode CD to music files in MP3, MP4, FLAC, WAV and OGA format
 - Scrape MusicBrainz for Artist / Album CD track details and artwork
@@ -100,7 +113,12 @@ in both the storage device and the mserve SQL database at the same time.
 **mserve** (Music Server) is written in Python.
 The main program is called `mserve.py` and can be found in the 
 [mserve GitHub Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py 
-"View mserve Python source code"){:target="_blank"}
+"View mserve Python source code"){:target="_blank"}. Copy all 
+files in the `src` folder to a new directory on your machine. 
+For example, `<HOME>/mserve` for Linux, Mac, Chrome OS or 
+Windows Subsystem for Linux (WSL), ***or***, `<HOME>\mserve`
+for Windows. As of August 30, 2023, **mserve** 
+will not run under Windows without modification.
 
 `mserve.py` is called with `m` from the command line or a 
 desktop shortcut. It is recommended you start using **mserve**
@@ -112,8 +130,11 @@ a logo on your screen for a couple seconds while **mserve**
 is loaded into memory.
 
 `m` and `mserve.py` do not need to be added to your path.
-You can call them with `/path/to/m` or `/path/to/mserve.py`
-from the command line.
+You can call them with `/path/to/m` or `/path/to/mserve.py` 
+from the command line. If you followed the installation tip 
+above it would be `<HOME>/mserve/m` for Linux like machines 
+or `<HOME>\mserve\m` for Windows. As of August 30, 2023, 
+**mserve** will not run under Windows without modification.
 
 > ***IMPORTANT NOTES:*** 
 > 
@@ -804,57 +825,14 @@ term, development has begun to identify installed versions.
 <a id="hdr7"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr6">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr8">Skip</a></div>
 
-# SQL Tables and Pickled Data Files
+# SQL Database using Sqlite3
 
 `mserve` data is stored in various files. This section lists
 the filenames you will need to backup. A brief explanation is
 given for how each file is used.
 
-## Pickled Data Files
-
-The pickle data file format allows serialized Python objects
-such as variables, lists and dictionaries to be stored in
-non-serialized format on storage devices.
-
-An abbreviation system is used for the filenames below:
-
-- `~/` represents your home directory.
-- `.../` represents the subdirectory, under your home directory,
-where your application data files are stored.
-
-Here are the data files (stored in pickle format) created under
-the `~/.../mserve`:
-
-- **last_location** - lc.FNAME_LAST_LOCATION - The last location ID 
-used. E.G. "L001", "L002", etc. August 5, 2023 Note: This will soon
-be replaced by SQL History Table row Type='location', Action='last'.
-- **locations** - lc.FNAME_LOCATIONS - All available locations and 
-their control settings. August 5, 2023 Note: This will soon
-be replaced by SQL Location Table. 
-- **library.db** - lc.FNAME_LIBRARY - *This is not in pickle format.*
-It is an sqlite3 database with Music Table and History Table.
-
-One subdirectory is created for every location. E.G. the subdirectory 
-`~/.../mserve/L004` contains:
-
-- **last_open_states** - lc.FNAME_LAST_OPN_STATES - Each Artist and Album
-and whether or not they are open (down triangle / chevron) or closed
-(left pointing triangle / chevron) in the *Music Location Tree* window.
-- **last_playlist** - lc.FNAME_LAST_PLAYLIST - Full path names of all
-songs checked (have the blue square) in the *Music Location Tree* window. 
-Sorted in playlist order.
-- **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
-**last_playlist** indicating the song that was playing when **mserve**
-was shutdown.  August 5, 2023 Note: This is superseded by 
-SQL History Table Row Type='resume', Action=<LOCATION CODE>.
-- **modification_time** - lc.FNAME_MOD_TIME - Cell phones may not allow
-changes to music files' last modification time.  **mserve** uses this file
-as a shadow filesystem to track last modification time. Used by the 
-**Synchronize Locations** function.
-
-**lc.FNAME** represents "location.py" (**lc.**), "Filename" (**FNAME**). 
-When working inside the location.py module, drop the **lc.** prefix.
-In the other Python modules, **import location as lc** is used.
+The SQL database can be accessed with external tools like 
+`sqlitebrowser`.
 
 ## SQL Tables
 
@@ -931,6 +909,52 @@ def open_db(LCS=None):
     hist_cursor = con.cursor()
     loc_cursor = con.cursor()
 ```
+
+## Pickled Data Files
+
+The pickle data file format allows serialized Python objects
+such as variables, lists and dictionaries to be stored in
+non-serialized format on storage devices.
+
+An abbreviation system is used for the filenames below:
+
+- `~/` represents your home directory.
+- `.../` represents the subdirectory, under your home directory,
+where your application data files are stored.
+
+Here are the data files (stored in pickle format) created under
+the `~/.../mserve`:
+
+- **last_location** - lc.FNAME_LAST_LOCATION - The last location ID 
+used. E.G. "L001", "L002", etc. August 5, 2023 Note: This will soon
+be replaced by SQL History Table row Type='location', Action='last'.
+- **locations** - lc.FNAME_LOCATIONS - All available locations and 
+their control settings. August 5, 2023 Note: This will soon
+be replaced by SQL Location Table. 
+- **library.db** - lc.FNAME_LIBRARY - *This is not in pickle format.*
+It is an sqlite3 database with Music Table and History Table.
+
+One subdirectory is created for every location. E.G. the subdirectory 
+`~/.../mserve/L004` contains:
+
+- **last_open_states** - lc.FNAME_LAST_OPN_STATES - Each Artist and Album
+and whether or not they are open (down triangle / chevron) or closed
+(left pointing triangle / chevron) in the *Music Location Tree* window.
+- **last_playlist** - lc.FNAME_LAST_PLAYLIST - Full path names of all
+songs checked (have the blue square) in the *Music Location Tree* window. 
+Sorted in playlist order.
+- **last_song_ndx** - lc.FNAME_LAST_SONG_NDX - Zero based index into
+**last_playlist** indicating the song that was playing when **mserve**
+was shutdown.  August 5, 2023 Note: This is superseded by 
+SQL History Table Row Type='resume', Action=<LOCATION CODE>.
+- **modification_time** - lc.FNAME_MOD_TIME - Cell phones may not allow
+changes to music files' last modification time.  **mserve** uses this file
+as a shadow filesystem to track last modification time. Used by the 
+**Synchronize Locations** function.
+
+**lc.FNAME** represents "location.py" (**lc.**), "Filename" (**FNAME**). 
+When working inside the location.py module, drop the **lc.** prefix.
+In the other Python modules, **import location as lc** is used.
 
 ---
 
