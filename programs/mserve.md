@@ -63,7 +63,8 @@ score during playback (automatically web scraped)
 - <a href="#synchronize-location">Synchronize files</a> 
 across multiple locations, including sleeping hosts 
 that are woken up and kept awake as long as necessary
-- Information Centre displays history of messages, statuses and actions
+- <a href="#information-centre">Information Centre</a> 
+displays history of messages, statuses and actions
 - Tooltips appear after time delay, 
 <a href="#tooltips-gradually-fade-in-and-out">fade in/out</a>, 
 and follow mouse pointer
@@ -114,7 +115,7 @@ and other websites to get song lyrics
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Under Construction.png"
-   style="float: left; width: 50%; margin: 2rem 0 1rem 0;"
+   style="float: left; width: 50%; margin: 1rem 2rem 1rem 2rem;"
    caption="Under Construction.png"
 %}
 
@@ -124,16 +125,24 @@ and other websites to get song lyrics
 Ubuntu 16.04 LTS and Python 2.7.12.
 > **mserve** was briefly tested with ChromeOS for about a month 
 and modified.
-> Current plans are to upgrade to 24.04 in year 2024. 
-> 
+> You *should* be able to toggle between Pyhon 2.7.x and 
+Python 3.x by changing the *"shebang"* at the top of each `.py`. 
+Testing on Python 3.x will begin prior to next **mserve** upgrade.
+> Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
+in year 2024. A "lite" Ubuntu 16.04 version running Unity may be 
+created as some sort of virtual machine. It's already been announced 
+that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
+> Support for `sshfs` has been discontinued by the developer in  
+November 2022. Plans are underway to switch over to FTP and and 
+`curlftps` to mount host drives locally.
 > There is **NO** installation script for **mserve**. You will 
 have to manually install dependencies with:
 > 
 >    `sudo apt install python-xxxxx`.
 
 See the
-<a href="#mserveDependencies">dependencies required</a>
-by **mserve** section for more details. 
+<a href="#mserveDependencies">required dependencies</a>
+for **mserve** section for more details. 
 For typical power users, many of the dependencies will already
 be installed.
 
@@ -391,6 +400,38 @@ context-sensitive popup menu appears.
 - ***View Raw Metadata*** - View metadata tags returned by `ffmpeg`.
 - ***View SQL Metadata*** - View metadata in pretty format kept by **mserve**.
 - ***Ignore Click*** - Close popup menu.
+
+
+## Information Centre
+
+Just like other applications, **mserve** uses dialog boxes to display:
+
+- Status messages
+- Information messages
+- Warning messages
+- Error messages
+- Confirmation messages with "Proceed" / "Cancel"
+
+However, unlike other applications, **mserve** also records these 
+in the *Information Centre* for the duration of your session.
+
+Additionally **mserve** records system events and user actions where 
+there was no dialog box presented.
+
+The *Information Centre* is accessed from the *Music Location Tree* 
+window's *View* dropdown menu. It can also be accessed by clicking
+the light blue thin ruler near the top of the window, as the video 
+below illustrates.
+
+### Information Centre Sample Video
+{:.no_toc}
+
+<video src="https://user-images.githubusercontent.com/92641463/264455606-c5e9e5cf-e782-4cef-b643-6c0a7290b508.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/264455606-c5e9e5cf-e782-4cef-b643-6c0a7290b508.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
 
 ---
 
