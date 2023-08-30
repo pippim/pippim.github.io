@@ -52,8 +52,8 @@ some unique features you might not expect.
 - Help buttons in **mserve** bring you directly to this web
 page's appropriate sections
 - Album Artwork animations and VU Meters during playback
-- Album Artwork at pixel 3,3 sets a  
-<a href="#automatic-skin-color-based-on-artwork">different color theme</a>,  
+- Album Artwork at pixel 3,3 sets a 
+<a href="#automatic-skin-color-based-on-artwork">different color theme</a>, 
 for during song playback (resizing window can result in different 
 color theme)
 - Define image file for 
@@ -90,16 +90,20 @@ less than 80% of song was played
 ### Features most music players don't have:
 {:.no_toc}
 
-- Two clicks to 
-<a href="#renaming-artists,-albums-and-song-files-after-encoding">
+- Two clicks to
+<a href="#renaming-artists-albums-and-song-files-after-encoding">
 rename Artists, Albums and Song files</a> 
 in both the storage device and the **mserve** SQL database 
 at the same time.
-- Synchronize music across locations (already mentioned above)
-- Encode CD to music files in MP3, MP4, FLAC, WAV and OGA format
+- <a href="#sample-synchronize-location-test-host-video">
+Granular remote host tests</a> 
+when location opened for playing or synchronization.
+- Encode CD to music files in MP3, MP4, FLAC, WAV and OGA format 
+as this 
+<a href="#how-to-encode-a-cd-overview">sample video</a> 
+demonstrates
 - Scrape MusicBrainz for Artist / Album CD track details and artwork
 - Scrape genius.com and other websites to get song lyrics
-- Compare song files between locations and update differences
 
 ## **mserve** is Still Under Construction
 {:.no_toc}
@@ -109,6 +113,9 @@ at the same time.
    style="float: none; width: 100%; margin: 2rem 0 1rem 0;"
    caption="Under Construction.png"
 %}
+
+
+### **mserve** Installation
 
 **mserve** (Music Server) is written in Python.
 The main program is called `mserve.py` and can be found in the 
@@ -126,13 +133,16 @@ from the command line to see any error messages that might
 appear.
 
 `m` is a wrapper Python script that centers 
-a logo on your screen for a couple seconds while **mserve**
-is loaded into memory.
+a logo on your screen for a moment while **mserve**
+is loaded into memory. Using `m` instead of `mserve.py` 
+speeds up loading because `mserve.pyc` is automatically 
+called and it is half the size. As of August 30, 2023, 
+the former is 765 KB and the latter is 409 KB.
 
 `m` and `mserve.py` do not need to be added to your path.
 You can call them with `/path/to/m` or `/path/to/mserve.py` 
 from the command line. If you followed the installation tip 
-above it would be `<HOME>/mserve/m` for Linux like machines 
+above, it would be `<HOME>/mserve/m` for Linux-like machines, 
 or `<HOME>\mserve\m` for Windows. As of August 30, 2023, 
 **mserve** will not run under Windows without modification.
 
