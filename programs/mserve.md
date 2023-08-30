@@ -136,9 +136,9 @@ in year 2024. A "lite" Ubuntu 16.04 version running Unity may be
 created as some sort of virtual machine. It's already been announced 
 that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
 > 
-> ⬤ Support for `sshfs` has been discontinued by the developer in  
+> ⬤ Support for `sshfs` has been discontinued by the developer in 
 November 2022. Plans are underway to switch over to FTP and and 
-`curlftps` to mount host drives locally.
+`curlftpss` to mount host drives locally.
 > 
 > ⬤ There is **NO** installation script for **mserve**. You will 
 have to manually install dependencies with:
@@ -437,6 +437,35 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
+
+---
+
+## *Music Location Tree* Help Button
+
+**mserve** windows contain "Help" buttons that:
+
+- Open a new web browser window
+- Open this web page
+- Navigate down to the appropriate section on the web page
+
+### Help Button Sample Video
+{:.no_toc}
+
+<video src="https://user-images.githubusercontent.com/92641463/264478542-c9d7f483-3774-44b4-9bac-cf5f9b048034.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/264478542-c9d7f483-3774-44b4-9bac-cf5f9b048034.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+#### Sample Video Highlights
+{:.no_toc}
+
+- The options for *File*, *Edit* and *View* dropdown menu are shown
+- The mouse hovers over button bar at bottom of window 
+- Tooltips for buttons appear after a short delay
+- Tooltips gradually fade in, remain a short period, then gradually 
+fade out
+- The *Help* button is clicked and results appear
 
 ---
 
