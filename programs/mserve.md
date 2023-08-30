@@ -9,13 +9,15 @@ layout: program
 
 # Introduction
 
-This Music Player (**mserve**) entertains you with animated graphics,  
-VU meters and scrolling lyrics. It includes functions to encode CDs with 
-track titles and artwork automatically obtained from MusicBrainz database. 
-It automatically gets the lyrics score from the internet, and lets you
-synchronize them clicking each lyrics score line as it is sung.
+**mserve** (Music Server) is firstly a Music Player entertains you with 
+animated graphics, VU meters and scrolling lyrics. Secondly, it encode CDs
+with track titles and artwork automatically obtained from the *MusicBrainz* 
+database. **mserve** automatically downloads lyrics scores from the 
+internet. Lyrics score lines can be synchronized by simply clicking 
+each line as it is sung.
 
 ## Multiple Everything
+{:.no_toc}
 
 ***<font size="5"> Why have one when you can have multiples?: </font>***
 
@@ -86,6 +88,7 @@ in both the storage device and the mserve SQL database at the same time.
 - Compare song files between locations and update differences
 
 ## **mserve** is Still Under Construction
+{:.no_toc}
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Under Construction.png"
@@ -1287,9 +1290,26 @@ Mandatory Location Fields. The first two fields are mandatory:
 - ***Location Name*** - Cannot be blank and must be unique
 - ***Music Top Directory*** - The parent folder / subdirectory that contains
 Artist subdirectories. The *Top Directory* cannot be changed for the
-currently opened location. To change the current locations *Top Directory*,
+currently opened location. To change the current location's *Top Directory*,
 Open and play a different location with the *File* dropdown menu in the
-*Music Location Tree* (main) window.
+*Music Location Tree* window. That is the main window when **mserve** 
+starts.
+
+The above sample screen was generated when optional host commands
+are **not** installed. 20,000 lines deep inside **mserve**, are these
+`python` tests:
+
+``` python
+self.nmap_installed = ext.check_command('nmap')
+if self.nmap_installed:
+   ''' Command 'nc' also required to quickly check if host is up '''
+   self.nmap_installed = ext.check_command('nc')
+self.ssh_installed = ext.check_command('ssh')
+self.sshfs_installed = ext.check_command('sshfs')
+if self.sshfs_installed:
+   self.sshfs_installed = ext.check_command('fusermount')
+self.wakeonlan_installed = ext.check_command('wakeonlan')
+```
 
 ---
 
@@ -1625,6 +1645,7 @@ Chronology button places song lyrics in a suitable location
 when the artwork size changes.
 
 ## Using Hockey TV Commercial Button
+{:.no_toc}
 
 This video shows what you see and hear when you click 
 one of the Hockey TV Commercial Buttons.
@@ -1655,6 +1676,7 @@ screen and the Music Player window goes back to it's original
 location on the 4K TV.
 
 ## Hockey TV Commercial Button Without **compiz**
+{:.no_toc}
 
 This video shows what you see and hear when you click 
 one of the Hockey TV Commercial Buttons and `compiz`
@@ -1717,6 +1739,7 @@ if "'place', " in self.old_compiz_plugins:
 
 <a id="HelpTvVolume"></a>
 ## **mserve** Volume During TV Commercials
+{:.no_toc}
 
 This image shows **mserve** volume (`ffplay`) is at 60%:
 
@@ -1753,10 +1776,10 @@ FYI the "ALSA plug-in [python2.7]" sound processor is used by
 VU Meters using system output loopback to input stream is described
 in the next section.
 
-## Change **mserve** Default Volume During for TV Commercials
+## Configure **mserve** Volume During Muted TV Commercials
 
-When you click the *Edit* dropdown menu and select
-*Volume During TV Commercials*, then this window appears:
+To set the **mserve** volume during muted TV commercials, click 
+the *Edit* dropdown menu and select *Volume During TV Commercials*:
 
 {% include image.html src="/assets/img/mserve/mserve volume for tv commercials.png"
    alt="mserve volume for tv commercials.png"
@@ -1809,11 +1832,13 @@ The soundcard is built into onboard Intel chipset.
 ---
 
 ## **pavucontrol** Sound Output Loopback to Microphone
+{:.no_toc}
 
 In order for VU Meters to work in **mserve**, The Pulse Audio
 Volume Control GUI application (**pavucontrol**) is used.
 
 ### Pulse Audio Volume Control Sound Output
+{:.no_toc}
 
 {% include image.html src="/assets/img/mserve/pavucontrol output devices.png"
    alt="pavucontrol output devices.png"
@@ -1843,6 +1868,7 @@ for the VU meters to display the correct output sound device.
 ---
 
 ### Pulse Audio Volume Control Recording Tab
+{:.no_toc}
 
 {% include image.html src="/assets/img/mserve/pavucontrol recording tab.png"
    alt="pavucontrol recording tab.png"
@@ -1867,6 +1893,7 @@ speakers.
 ---
 
 ### Pulse Audio Volume Control Change Recording Source
+{:.no_toc}
 
 {% include image.html src="/assets/img/mserve/pavucontrol recording change capture.png"
    alt="pavucontrol recording change capture.png"
