@@ -1482,13 +1482,14 @@ In addition to tracking music on local storage, *Locations* can access
 music stored on a File Server or a Mobile Phone.
 
 
-
-### Sample *View Locations* Window
-{:.no_toc}
-
 ---
 
-Here is a sample *View Locations* window with a location highlighted in green.
+
+## Sample *View Locations* Window
+{:.no_toc}
+
+Here is a sample *View Locations* window with the selected location 
+highlighted in green.
 
 {% include image.html src="/assets/img/mserve/mserve View Locations.png"
    alt="mserve View Locations.png"
@@ -1524,10 +1525,11 @@ self.wakeonlan_installed = ext.check_command('wakeonlan')
 
 ---
 
-### Sample *Edit Location* Window
+## Sample *Edit Location* Window
 {:.no_toc}
 
-Here is a sample *Edit Location* window with a location highlighted in green.
+Here is a sample *Edit Location* window with the selected location 
+highlighted in green. This location is a "Sleeping Host".
 
 {% include image.html src="/assets/img/mserve/mserve Edit Location.png"
    alt="mserve Edit Location.png"
@@ -1590,15 +1592,55 @@ Indeed in this case the comment is incorrect and says "10 seconds"
 instead of "100 seconds".
 - ***Optional picture of Location*** - Upload a picture to the subdirectory
 where `mserve.py` is installed.  Then use the filename picker to select
-that filename. An image of what the location looks like is helpful when
-you forget what the location looks like.
-
+that filename. An image of what the location looks like is helpful 
+because sometimes nested directory names don't jog your memory.
 
 If the File Server spends most of its life sleeping, **mserve** can wake it
 up with a "Magic Packet" over wired Ethernet. Then **mserve** keeps
 the host awake by "touching" a specific filename on the server. A special
 script called `mserve_client.sh` needs to be running on the host to keep it
 awake.
+
+
+---
+
+## Android Wifi FTP Server Host
+
+For wireless location synchronizing with your mobile phone, 
+`curlftpfs` is used instead of `sshfs`. Older versions of 
+**mserve** used to use **sshfs** but recently *Wifi SSH Server*  
+stopped working on the mobile phone. On August 30, 2023, **mserve**
+was upgraded to use *Wifi FTP Server* instead.
+
+These notes on *Wifi FTP Server* were quickly put together 
+to meet August 31, 2023 deadline to complete website.
+
+Install 
+[Wifi FTP Server 🔗](https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver&amp;hl=en_CA&amp;gl=US 
+"Link to Google Play"){:target="_blank"} 
+from Google Play.
+
+Initially you can accept the defaults for anonymous user and port `2221`.
+
+Grant access to the **Music** folder in Android
+
+In the *Command to wake up sleeping Host* field enter:
+
+``` shell
+curlftpfs -o nonempty,uid=1000,gid=1000,umask=0022,user=android:android phone:2221 /mnt/phone
+```
+
+Above assumes local mount point is `/mnt/phone` and you have permissions.
+
+Above assumes your `/etc/hosts` contains hostname `phone` with 
+appropriate IP address such as `192.168.0.11` or whatever static IP 
+address you assigned with the router software.
+
+Above assumes your user id (not user name!) is `1000`. Without this files
+are mounted as owned by **root**.
+
+---
+
 
 <a id="HelpTestHost"></a>
 ## Optional Remote Host Support
@@ -1695,7 +1737,8 @@ the script `test_for_synch.sh`.
 ### Sample *Synchronize Location* Window
 {:.no_toc}
 
-Below is a sample screen where a location has been picked to synchronize:
+Below is a sample screen where the selected location is highlighted 
+in green:
 
 {% include image.html src="/assets/img/mserve/mserve Synchronize Location.png"
    alt="mserve Synchronize Location.png"
@@ -1753,6 +1796,7 @@ those denoted as "hidden":
 - "Missing" - In target(other) location (hidden from view)
 - "Same" - within 2 seconds so no action required (hidden)
 - "Error: Size different, time same" - Don't know copy direction
+- "Error: Permission denied on 'diff' check"
 - "Error: Contents different, time same" - Don't know copy direction
 - "OOPS" - Programming error that should never happen (hidden)
 - "Copy Trg -> Src (Size)" - Based on size difference
