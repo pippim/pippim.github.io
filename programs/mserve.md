@@ -1604,16 +1604,27 @@ awake.
 
 ---
 
-## Android Wifi FTP Server Host
+## Android *Wifi FTP Server* Host
 
-For wireless location synchronizing with your mobile phone, 
+
+{% include image.html src="/assets/img/mserve/mserve Wifi FTP Server cropped.png"
+   alt="mserve Wifi FTP Server cropped.png"
+   style="float: left; width: 50%; margin: 1rem 2rem 1rem 2rem;"
+   caption="mserve Wifi FTP Server cropped.png"
+%}
+
+For wireless location synchronizing with an Android mobile phone, 
 `curlftpfs` is used instead of `sshfs`. Older versions of 
-**mserve** used to use **sshfs** but recently *Wifi SSH Server* 
-stopped working on the mobile phone. On August 30, 2023, **mserve** 
-was upgraded to use *Wifi FTP Server* instead.
+**mserve** used **sshfs** but recently Android *Wifi SSH Server* 
+stopped working on Android 10 mobile phone. On August 30, 2023,
+**mserve** was upgraded to use *Wifi FTP Server* instead.
 
 These notes on *Wifi FTP Server* were quickly put together 
-to meet August 31, 2023 deadline to complete website.
+to meet August 31, 2023 **mserve** documentation deadline.
+
+Make sure `m` or `mserve.py` is run from the command line when
+synchronizing phone locations. Extra messages are printed that
+do not appear in dialog boxes or the *Information Centre*
 
 Install 
 [Wifi FTP Server 🔗](https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver&amp;hl=en_CA&amp;gl=US 
@@ -1668,6 +1679,28 @@ From: https://github.com/JackSlateur/curlftpfs/blob/master/README
 - A future upgrade to **mserve** will deal with this issue. In the
 meantime, **mserve** will report:
 *"Error: Permission denied on 'diff' check"*
+
+Occasionally false-positives will be displayed in the console like
+this:
+
+``` shell
+wait_for_cp_verbose() 60 second time-out
+Error on file: /mnt/phone/30 Seconds To Mars/A Beautiful Lie/10 A Modern Myth.m4a
+Error: Permission denied on 'diff' check return code: 4
+
+wait_for_cp_verbose() 60 second time-out
+Error on file: /mnt/phone/30 Seconds To Mars/A Beautiful Lie/11 The Battle Of One.m4a
+Error: Permission denied on 'diff' check return code: 4
+```
+
+The reason is unknown but the next synchronization is run, the error
+doesn't appear on the same files. If 60 seconds needs to be increased,
+change the line number **4034** in **location.py**:
+
+``` python
+if elapsed > 60.0:  # Aug 31/23 WiFi change 10.0 to 60.0 for `diff`
+```
+
 
 ---
 
