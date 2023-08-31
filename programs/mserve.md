@@ -9,10 +9,10 @@ layout: program
 
 # Introduction
 
-**mserve** (Music Server) is firstly a Music Player entertains you with 
-animated graphics, VU meters and scrolling lyrics. Secondly, it encode CDs
-with track titles and artwork automatically obtained from the *MusicBrainz* 
-database. **mserve** automatically downloads lyrics scores from the 
+**mserve** (Music Server) is firstly a Music Player that entertains with 
+animated graphics, VU meters and scrolling lyrics. Secondly, it encodes 
+CDs with track titles and artwork automatically obtained from *MusicBrainz*. 
+Finally, **mserve** automatically downloads lyrics scores from the 
 internet. Lyrics score lines can be synchronized by simply clicking 
 each line as it is sung.
 
@@ -22,9 +22,11 @@ at one of the many **merve** videos on this website.
 ## Multiple Everything
 {:.no_toc}
 
-***<font size="5"> Why have one when you can have multiples?: </font>***
+**mserve** has multiple window save positions and dimensions plus 
+much more.
 
-- Multiple Locations Synchronization (including mobile and file servers)
+- Multiple Locations Music File Synchronization (including mobile phones 
+and file servers)
 - Multiple Playlists per location (every location also has default favorites)
 - <a href="#windows-open-where-you-want-them">Multiple Window</a> 
 save positions for music location tree, current playing, 
