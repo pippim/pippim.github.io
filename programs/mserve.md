@@ -1608,8 +1608,8 @@ awake.
 
 For wireless location synchronizing with your mobile phone, 
 `curlftpfs` is used instead of `sshfs`. Older versions of 
-**mserve** used to use **sshfs** but recently *Wifi SSH Server*  
-stopped working on the mobile phone. On August 30, 2023, **mserve**
+**mserve** used to use **sshfs** but recently *Wifi SSH Server* 
+stopped working on the mobile phone. On August 30, 2023, **mserve** 
 was upgraded to use *Wifi FTP Server* instead.
 
 These notes on *Wifi FTP Server* were quickly put together 
@@ -1630,14 +1630,44 @@ In the *Command to wake up sleeping Host* field enter:
 curlftpfs -o nonempty,uid=1000,gid=1000,umask=0022,user=android:android phone:2221 /mnt/phone
 ```
 
-Above assumes local mount point is `/mnt/phone` and you have permissions.
+Above assumes local mount point is `/mnt/phone` and you have permissions 
+to `/phone` directory but not `/mnt` directory which is owned by **root**.
 
 Above assumes your `/etc/hosts` contains hostname `phone` with 
 appropriate IP address such as `192.168.0.11` or whatever static IP 
 address you assigned with the router software.
 
-Above assumes your user id (not user name!) is `1000`. Without this files
+Above assumes your user id (not user name!) is `1000`. Without this, files 
 are mounted as owned by **root**.
+
+The first time synchronization is run every file is `diff` checked which 
+takes considerable time. Then modification time stamps are synchronized 
+and subsequent synchronizations are 100 times faster. The first time
+it takes 1.5 hours for 4,000 songs over Wifi using `curlftpfs`. Subsequent
+synchronizations take x minutes for 4,000 songs.
+
+The *Wifi FTP Server* screen will stay lit on your phone. Do not switch
+permanently to another Android App that will dim the screen. If you do,
+then **mserve** will report permission errors because host will be down.
+
+`curlftpfs` chokes on filenames containing `#` of `%`.
+
+From: https://github.com/JackSlateur/curlftpfs/blob/master/README
+
+> Note
+> 
+> This is not the official project, which can be found there:
+> http://curlftpfs.sourceforge.net/
+> I just added some code the correctly handle filename which contains
+> url-special chars (actually, just # and %) by url-encoding them :
+>  % -> %25
+>  # -> %23
+> Using that, curl will not translate them, and will target the correct
+> filename.
+
+- A future upgrade to **mserve** will deal with this issue. In the
+meantime, **mserve** will report:
+*"Error: Permission denied on 'diff' check"*
 
 ---
 
@@ -1746,10 +1776,10 @@ in green:
    caption="mserve Synchronize Location.png"
 %}
 
-When the *"🔗 Help"* button is clicked you are brought to this web page.
+- When the *"🔗 Help"* button is clicked you are brought to this web page.
 
-When the *"✘ Close"* button is clicked the window is closed. The same
-is true if `Escape` key is pressed or the window's *"✘"*  
+- When the *"✘ Close"* button is clicked the window is closed. The same
+is true if `Escape` key is pressed or the window's *"✘"*
 button is clicked.
 
 The steps below describe what happens when the *"✔ Synchronize"* button
