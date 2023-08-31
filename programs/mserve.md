@@ -1430,28 +1430,26 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 - The volume is slide lower and the VU meters lower in strength
 - The mouse hovers over the metadata
 - Metadata changes depending on each song and amount of information
-- 14 is the maximum number metadata display lines
+- 14 is the maximum number of metadata display lines
 - Metadata display for more than 14 lines is selected on a priority system
 - The mouse pointer moves over the scrolling lyrics
 - Notice the lyrics are highlighted as each line is sung
 - The mouse moves down to the *Hide Chronology* button
-- Tooltip slowly fade in and then the button is clicked
-- Notice *Hide Chronology* button text changes to *Show Chronolog*
-- The Artwork size doubles occupying space where the chronology used 
-to be
-- The Lyrics score moves from the right side, down below the 
-metadata occupying space where the chronology used to be
+- After the tooltip slowly fades in, the button is clicked
+- Notice the *Hide Chronology* button text changes to *Show Chronology*
+- The Artwork size doubles and occupies some of the space where the
+chronology used to be
+- The Lyrics score moves from the right side, down below the metadata 
+and occupies the rest of the space where the chronology used to be
 - Lyrics score lines are now wider to reduce line wrapping
-- More space is available for metadata (future upgrade)
+- More space is available for wider metadata display (future upgrade)
 - The volume slider is wider and VU meters are shorter
 
-*Note:* If you resize the window, the artwork animation also resizes 
-accordingly. It will maintain the "square" proportions. The "skin"
+*Note:* When the artwork animation resizes, the "skin"
 background color can change depending on the new color of the pixel at
 coordinates "3, 3" of the resized artwork.
 
 ## Chronology Popup Menu
-{:.no_toc}
 
 Right-click on a song in the Chronology to:
 
