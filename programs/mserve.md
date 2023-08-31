@@ -1672,7 +1672,9 @@ synchronizations take x minutes for 4,000 songs.
 
 `curlftpfs` chokes on filenames containing `#` of `%`.
 
-From: https://github.com/JackSlateur/curlftpfs/blob/master/README
+Quote below from:
+[ JackSlateur / curlftpfs 🔗](https://github.com/JackSlateur/curlftpfs#readme 
+"Link to GitHub"){:target="_blank"}
 
 > ***Note:***
 > 
@@ -1681,8 +1683,11 @@ From: https://github.com/JackSlateur/curlftpfs/blob/master/README
 > 
 > I just added some code the correctly handle filename which contains 
 > url-special chars (actually, just # and %) by url-encoding them :
+> 
 >  % -> %25 
+> 
 >  # -> %23 
+> 
 > Using that, curl will not translate them, and will target the correct 
 > filename.
 
@@ -1694,18 +1699,19 @@ Occasionally false-positives will be displayed in the console like
 this:
 
 ``` shell
-wait_for_cp_verbose() 60 second time-out
+wait_for_cmd_output() 60 second time-out
 Error on file: /mnt/phone/30 Seconds To Mars/A Beautiful Lie/10 A Modern Myth.m4a
 Error: Permission denied on 'diff' check return code: 4
 
-wait_for_cp_verbose() 60 second time-out
+wait_for_cmd_output() 60 second time-out
 Error on file: /mnt/phone/30 Seconds To Mars/A Beautiful Lie/11 The Battle Of One.m4a
 Error: Permission denied on 'diff' check return code: 4
 ```
 
-The reason is unknown but the next synchronization is run, the error
-doesn't appear on the same files. If 60 seconds needs to be increased,
-change the line number **4034** in **location.py**:
+The reason is unknown, but when the next synchronization is run,
+the error doesn't appear on the same files. If more than 60 seconds
+is needed for the time-out, increase the value on
+line number **4034** in the file **location.py**:
 
 ``` python
 if elapsed > 60.0:  # Aug 31/23 WiFi change 10.0 to 60.0 for `diff`
@@ -1718,7 +1724,8 @@ if elapsed > 60.0:  # Aug 31/23 WiFi change 10.0 to 60.0 for `diff`
 <a id="HelpTestHost"></a>
 ## Optional Remote Host Support
 
-For Debugging, run the following commands on the host and client:
+To debug keeping host awake, run the following commands
+on the host and client:
 
 HOST - Open a terminal and enter command which runs forever:
 
@@ -1748,7 +1755,7 @@ Make sure your SSH is using the standard port 22. Otherwise, you
 will have to open `location.py` and search on `22 >` and `22/tcp`.
 
 Never use `-odebug` option for `sshfs` from mserve because it will
-lock up. Use debug only from command line for testing.  **mserve**
+lock up. Use debug only from command line for testing. **mserve**
 will not let you define this debug option.
 
 More details: https://help.ubuntu.com/community/SSHFS
@@ -1767,6 +1774,8 @@ These steps are followed when a remote host is tested:
 - After validation, scroll up to review results
 - After review, click the *Close Test Results* button
 
+***Note:*** When synchronizing a remote host location, the same
+test is automatically run.
 
 ### Sample *Synchronize Location* Test Host Video
 {:.no_toc}
@@ -1887,11 +1896,13 @@ The "OOPS" should never appear but is technically possible if
 another job is running that updates files in the Source or Target
 Location.
 
-*Note:* For Remote Hosts, the `cp` command is used not `scp`.
+*Note:* For Remote Hosts, the linux `cp` command is used
+not the SSH `scp` command.
 
-For cell phones the last modification time (used to compare files)
-may not be updated. In this case **mserve** creates a virtual
-filesystem to track what modification times should be.
+For Android mobile phones the last modification time
+(used to compare files)
+may not work properly. In this case, **mserve** creates a virtual
+modification time file to track what modification times should be.
 
 
 ---
