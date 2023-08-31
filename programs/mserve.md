@@ -125,7 +125,7 @@ to balance screen real estate.
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Under Construction.png"
-   style="float: left; width: 50%; margin: 1rem 2rem 1rem 2rem;"
+   style="float: left; width: 50%; margin: .5rem 2rem 1rem 2rem;"
    caption="Under Construction.png"
 %}
 
@@ -1609,7 +1609,7 @@ awake.
 
 {% include image.html src="/assets/img/mserve/mserve Wifi FTP Server cropped.png"
    alt="mserve Wifi FTP Server cropped.png"
-   style="float: left; width: 50%; margin: 1rem 2rem 1rem 2rem;"
+   style="float: left; width: 50%; margin: .5rem 2rem 1rem 0;"
    caption="mserve Wifi FTP Server cropped.png"
 %}
 
