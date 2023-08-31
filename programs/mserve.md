@@ -1633,9 +1633,22 @@ from Google Play.
 
 Initially you can accept the defaults for anonymous user and port `2221`.
 
-Grant access to the **Music** folder in Android
+Grant access to the **Music** folder in Android. Android 10 requires you
+to press a weird icon to select SD Card instead of Internal Storage before
+selecting **Music** folder which exists on both medium.
 
-In the *Command to wake up sleeping Host* field enter:
+The *Wifi FTP Server* screen will stay lit on your phone. Do not switch
+permanently to another Android App that will dim the screen. If you do,
+then **mserve** will report permission errors because host will be down.
+Of course this only applies when synchronizing. Normal phone usage
+doesn't matter about *Wifi FTP Server* one way or the other.
+
+
+---
+
+
+In **mserve** *Edit Location* window go to the
+*Command to wake up sleeping Host* field and enter:
 
 ``` shell
 curlftpfs -o nonempty,uid=1000,gid=1000,umask=0022,user=android:android phone:2221 /mnt/phone
@@ -1657,28 +1670,25 @@ and subsequent synchronizations are 100 times faster. The first time
 it takes 1.5 hours for 4,000 songs over Wifi using `curlftpfs`. Subsequent
 synchronizations take x minutes for 4,000 songs.
 
-The *Wifi FTP Server* screen will stay lit on your phone. Do not switch
-permanently to another Android App that will dim the screen. If you do,
-then **mserve** will report permission errors because host will be down.
-
 `curlftpfs` chokes on filenames containing `#` of `%`.
 
 From: https://github.com/JackSlateur/curlftpfs/blob/master/README
 
-> Note
+> ***Note:***
 > 
-> This is not the official project, which can be found there:
+> This is not the official project, which can be found there: 
 > http://curlftpfs.sourceforge.net/
-> I just added some code the correctly handle filename which contains
+> 
+> I just added some code the correctly handle filename which contains 
 > url-special chars (actually, just # and %) by url-encoding them :
->  % -> %25
->  # -> %23
-> Using that, curl will not translate them, and will target the correct
+>  % -> %25 
+>  # -> %23 
+> Using that, curl will not translate them, and will target the correct 
 > filename.
 
-- A future upgrade to **mserve** will deal with this issue. In the
-meantime, **mserve** will report:
-*"Error: Permission denied on 'diff' check"*
+A future upgrade to **mserve** will deal with the `#` and `%` issues.
+In the meantime, **mserve** will report:
+*"Error: Permission denied on 'diff' check"*.
 
 Occasionally false-positives will be displayed in the console like
 this:
