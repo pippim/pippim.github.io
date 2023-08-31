@@ -16,6 +16,9 @@ database. **mserve** automatically downloads lyrics scores from the
 internet. Lyrics score lines can be synchronized by simply clicking 
 each line as it is sung.
 
+Take a <a href="#hide-chronology-sample-video">quick peek</a> 
+at one of the many **merve** videos on this website.
+
 ## Multiple Everything
 {:.no_toc}
 
@@ -112,6 +115,8 @@ less than 80% of song was played
 - Updates play count and last play time, if 80% of song played
 - Cross-fading other sound sources when toggling play/pause, FF/REW,
 and during TV broadcast commercials
+- <a href="#hide-chonology-button">Show/Hide Chronology</a> 
+to balance screen real estate. 
 
 ## **mserve** is Still Under Construction
 {:.no_toc}
@@ -1268,13 +1273,19 @@ A sample video is shown below. It shows how the *Basic Time Index*
 feature works. Simply click to highlight and synchronize each 
 lyrics line as it is being sung:
 
+
+### Basic Time Synchronization Sample Video
+{:.no_toc}
+
 <video src="https://user-images.githubusercontent.com/92641463/149671978-18e1a98f-3a55-472c-9de2-ae3246ee3969.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/149671978-18e1a98f-3a55-472c-9de2-ae3246ee3969.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-This video shows:
+
+#### Basic Time Synchronization Sample Video Highlights
+{:.no_toc}
 
 1. The "☰" (Hamburger) Dropdown Menu where the *Basic time index* option is picked.
 2. Canceling the *Basic time index* option once started.
@@ -1387,29 +1398,70 @@ a "mulligan". Then we click again as the music catches up.
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr13">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr15">Skip</a></div>
 
-# Hide Chronology
+# Hide Chronology Button
 
-The chronology section shows the previous three songs played, the current song
-being played and the next six songs coming up in the playlist.
+The chronology section shows:
+ 
+- The previous three songs played
+- The current song being played, highlighted in green
+- The next six songs coming up in the playlist
 
-You can hide the chronology section, which expands the art work dynamically:
+You can hide the chronology section. This expands the art work 
+and shifts the Lyrics Score beneath the Metadata and VU Meters. 
+The sample video belows shows **mserve** playing Favorites playlist 
+and the *Hide Chronology* button being used.
 
-<video src="https://user-images.githubusercontent.com/92641463/149675348-e8471842-2755-4a22-9a7c-4ea432c7b5c3.mp4"
-data-canonical-src="https://user-images.githubusercontent.com/92641463/149675348-e8471842-2755-4a22-9a7c-4ea432c7b5c3.mp4"
+## Hide Chronology Sample Video
+{:.no_toc}
+
+<video src="https://user-images.githubusercontent.com/92641463/264507380-0174bf6d-bb96-4dd8-89d0-c505ce322589.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/264507380-0174bf6d-bb96-4dd8-89d0-c505ce322589.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
+
+
+### Hide Chronology Sample Video Highlights
+{:.no_toc}
+
+- The cursor moves over the artwork
+- The artwork is clicked to resume playing the music
+- The mouse hovers over the volume slider 
+- The volume is slide lower and the VU meters lower in strength
+- The mouse hovers over the metadata
+- Metadata changes depending on each song and amount of information
+- 14 is the maximum number metadata display lines
+- Metadata display for more than 14 lines is selected on a priority system
+- The mouse pointer moves over the scrolling lyrics
+- Notice the lyrics are highlighted as each line is sung
+- The mouse moves down to the *Hide Chronology* button
+- Tooltip slowly fade in and then the button is clicked
+- Notice *Hide Chronology* button text changes to *Show Chronolog*
+- The Artwork size doubles occupying space where the chronology used 
+to be
+- The Lyrics score moves from the right side, down below the 
+metadata occupying space where the chronology used to be
+- Lyrics score lines are now wider to reduce line wrapping
+- More space is available for metadata (future upgrade)
+- The volume slider is wider and VU meters are shorter
 
 *Note:* If you resize the window, the artwork animation also resizes 
 accordingly. It will maintain the "square" proportions. The "skin"
 background color can change depending on the new color of the pixel at
 coordinates "3, 3" of the resized artwork.
 
-**May 18, 2023 Revision**
+## Chronology Popup Menu
+{:.no_toc}
 
-When the Chronology (Playlist) is hidden the lyrics are moved below
-the Current song details and VU meters. This allows better space
-utilization with larger artwork size.
+Right-click on a song in the Chronology to:
+
+- Play that song
+- Filter chronology list by synchronized songs only
+- Filter chronology list by unsynchronized songs only
+- Filter chronology list for the same artist
+- Filter chronology list for songs longer than five minutes
+- Open that song in *Kid3* (Metadata Tag Editor)
+- Open that song in the File Manager (AKA *Nautilus*)
 
 ---
 
