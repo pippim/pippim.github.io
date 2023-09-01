@@ -39,7 +39,7 @@ if (sessionStorage.config_yml === undefined) { load_config_yml(); }
 else { config_yml = sessionStorage.getItem('config_yml'); buildConfigYml(); }
 
 async function load_config_yml() {
-    // Get from internet and store in session
+    // Get from server and store in session for faster access
     fetch(raw_url + '/_config.yml')
         .then((response)=>response.text())
         .then((responseJson)=>{
@@ -189,7 +189,8 @@ if (d !== null) {
         if (boolDropdown) {
             d.scrollIntoView()  // Move to top so children have room to grown
 
-            e.style.display = "block"
+            //e.style.display = "block"
+            e.style.display = "inline-block"  // Sep 1/23 was overlapping header
             setContentDimmed(e)
             // Move to top so children have room to grown (after scrollbar removed)
             scrollToJustAbove(e)
