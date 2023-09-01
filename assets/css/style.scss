@@ -84,7 +84,7 @@ $lavender: #E6E6FA !default; // lavender
     border: 0;
     background-color: black;  // works better in dark theme too
     position: absolute;
-    @include medium { width: calc(100% - 9rem) }
+    @include medium { width: calc(100% - 8rem) }
     @include small { width: calc(100% - 2rem) }
 }
 
