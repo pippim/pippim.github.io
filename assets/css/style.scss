@@ -84,7 +84,6 @@ $lavender: #E6E6FA !default; // lavender
     border: 0;
     border-radius: 2rem;
     background-color: black;  // works better in dark theme too
-    color: white;  // Works better in light theme too
     position: relative;
     top: 1rem;
     bottom: 1rem;  // experiment 9/1/23
@@ -94,7 +93,8 @@ $lavender: #E6E6FA !default; // lavender
 // #dropdown-content :first-child { margin-top: 2rem; }  // no effect
 
 #dropdown-content a {
-    color: var(--boldest-color);
+    //color: var(--boldest-color);
+    color: white;  // Works better in light theme too
     margin-top: 1.5rem;  // 2 too big for short window
     padding: .5rem;  // .6 too big for short window
     font-size: 1.25rem;  // 1.5 too big for short window
