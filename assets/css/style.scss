@@ -79,15 +79,15 @@ $lavender: #E6E6FA !default; // lavender
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown button click
     z-index: 20;  // High enough to cover up msgq
-    //padding: 0 1.5rem 2rem 1.5rem;  // absolute padding
-    padding: 2rem;  // relative padding
+    padding: 0 1.5rem 2rem 1.5rem;
+    // padding: 2rem;  // relative padding - too much top
     margin-right: 2rem;
     border: 0;
     border-radius: 2rem;
     background-color: black;  // works better in dark theme too
     // position: absolute;  // below page header with 2 rem overlap
     position: relative;  // inside page header
-    top: .5rem;  // for relative directly into page header region
+    top: 1rem;  // for relative directly into page header region
     //margin-top: 2rem;  // commit got stuck with this???
     //@include medium { width: calc(100% - 8rem) }  // absolute width
     //@include small { width: calc(100% - 2rem) }  // absolute width
