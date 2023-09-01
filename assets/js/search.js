@@ -191,6 +191,7 @@ if (d !== null) {
 
             //e.style.display = "block"
             e.style.display = "inline-block"  // Sep 1/23 was overlapping header
+            e.style.width = "100%"  // Sep 1/23 was overlapping header
             setContentDimmed(e)
             // Move to top so children have room to grown (after scrollbar removed)
             scrollToJustAbove(e)
