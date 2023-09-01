@@ -806,10 +806,11 @@ a.search-results:visited {
     background-size: cover;
     transition: transform 0.3s;
 
-    @include large  { height: 44px; width: 44px; }
+    //@include large  { height: 44px; width: 44px; }
     // @include medium { height: 36px; width: 36px; }
-    @include medium { height: 42px; width: 42px; }
-    @include small  { height: 42px; width: 42px; }
+    //@include medium { height: 42px; width: 42px; }
+    //@include small  { height: 42px; width: 42px; }
+    height: 44px;
 
     &:hover {
         filter: brightness(150%);
