@@ -89,7 +89,7 @@ $lavender: #E6E6FA !default; // lavender
     @include small { width: calc(100% - 2rem) }
 }
 
-#dropdown-content :first-child { margin-top: 2rem; }
+#dropdown-content :first-child { margin-top: -2rem; }
 
 #dropdown-content a {
     color: var(--boldest-color);
