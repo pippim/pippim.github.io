@@ -74,15 +74,10 @@ $lavender: #E6E6FA !default; // lavender
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);  // Normal world
 }
 
-#page-header-dropdown {
-    margin-left: -1rem;  // Too far right and too far up
-    margin-top: 1rem;
-}
-
 #dropdown-content {
-    display: none;  // Turned on by page-header-dropdown
+    display: none;  // Turned on by page-header-dropdown button click
     z-index: 20;  // High enough to cover up msgq
-    padding: .6rem 0 .6rem 0;
+    padding: -.6rem 0 .6rem 0;
     border: 0;
     background-color: black;  // works better in dark theme too
     // background-color: var(--boldest-color);
