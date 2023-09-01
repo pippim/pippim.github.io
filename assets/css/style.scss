@@ -108,11 +108,11 @@ $lavender: #E6E6FA !default; // lavender
 
 .page-header {
     /*  Sep 28/2022 - Strange have to add this today. Page header has
-        way too much white space above. */
-    //@include large { margin-top: -4rem; }
-    //@include medium { margin-top: -2rem; }
-    //@include small { margin-top: -1rem; }
-    margin-top: -3rem;
+        way too much empty space above. */
+    @include large { margin-top: -4rem; }
+    @include medium { margin-top: -2rem; }
+    @include small { margin-top: -1rem; }
+    // margin-top: -3rem;  // Chops test
 }
 
 .page-header-button {
@@ -165,13 +165,13 @@ $lavender: #E6E6FA !default; // lavender
     margin-right: 1rem;
     padding: .5rem 1rem;
 
-    @include medium {  // Sep 1/23 - convert to hamburger
+    //@include medium {  // Sep 1/23 - convert to hamburger
     //    // medium screen is a tight squeeze
     //    margin-left: .25rem;
     //    margin-right: .25rem;
     //    padding: .4rem 0.9rem;
     //    font-size: 1.5rem;  // only makes hamburger icon larger
-    }
+    //}
 }
 
 /* OLD .button to be phased out */
