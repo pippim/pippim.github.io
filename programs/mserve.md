@@ -22,25 +22,27 @@ at one of the many **merve** videos on this website.
 ## Multiple Everything
 {:.no_toc}
 
-**mserve** has multiple window save positions and dimensions plus 
-much more.
+**mserve** remembers and restores positions and sizes for multiple
+windows plus a whole lot more.
 
-- Multiple Locations Music File Synchronization (including mobile phones 
-and file servers)
-- Multiple Playlists per location (every location also has default favorites)
+- Multiple Locations Music File
+<a href="#synchronize-location">Synchronization</a>
+(including mobile phones and file servers)
+- Multiple <a href="#playlists">Playlists</a> per location
 - <a href="#windows-open-where-you-want-them">Multiple Window</a> 
 save positions for music location tree, current playing, 
 volume control, playlists control, fine-tune time index, location
 maintenance, three SQL Table viewers, and CD encoding (ripping)
-- Multiple Monitors ensure windows open on correct monitor
 - Multiple processes for lag free animations
-- Multiple animations for artwork; spin, slide and pixelate
+- Multiple <a href="#hide-chronology-sample-video">animations</a>
+for artwork; spin, slide and pixelate
 - Multiple VU meters displaying sound level; left and right
 - Multiple Show Chronology/Resume Song/Volume/Playlist Buttons states
 per Playlist per location
 - Multiple sound level fade methods for pause/play, switch sound
 source between TV and mserve, fine-tune lyrics time index, etc.
-- Multiple CD Encoding formats, quality, images and filename formatting
+- Multiple <a href="#how-to-encode-a-cd-overview">CD Encoding</a>
+formats, quality, images and filename formatting
 - Multiple MusicBrainz CD album/track releases to chose from for artist
 - Multiple Website Scraping for Lyrics is in progress but currently
 defaults to `genius.com`
@@ -54,8 +56,9 @@ some unique features you might not expect.
 ### Innovative Features Most Applications Don't Have:
 {:.no_toc}
 
-- Help buttons in **mserve** bring you directly to this web
-page's appropriate sections
+- <a href="#music-location-tree-help-button">Help buttons</a>
+in **mserve** bring you directly to this web
+page and scroll to the appropriate section
 - <a href="#synchronize-location">Synchronize files</a> 
 across multiple locations, including sleeping hosts 
 that are woken up and kept awake as long as necessary
@@ -1673,7 +1676,7 @@ synchronizations take x minutes for 4,000 songs.
 `curlftpfs` chokes on filenames containing `#` of `%`.
 
 Quote below from:
-[ JackSlateur / curlftpfs 🔗](https://github.com/JackSlateur/curlftpfs#readme 
+[JackSlateur / curlftpfs 🔗](https://github.com/JackSlateur/curlftpfs#readme 
 "Link to GitHub"){:target="_blank"}
 
 > ***Note:***
@@ -1695,21 +1698,22 @@ A future upgrade to **mserve** will deal with the `#` and `%` issues.
 In the meantime, **mserve** will report:
 *"Error: Permission denied on 'diff' check"*.
 
-Occasionally false-positives will be displayed in the console like
+Occasionally time-out errors are displayed in the console like
 this:
 
 ``` shell
-wait_for_cmd_output() 60 second time-out
+wait_for_cmd_output() 10 second time-out
 Error on file: /mnt/phone/30 Seconds To Mars/A Beautiful Lie/10 A Modern Myth.m4a
 Error: Permission denied on 'diff' check return code: 4
 
-wait_for_cmd_output() 60 second time-out
+wait_for_cmd_output() 10 second time-out
 Error on file: /mnt/phone/30 Seconds To Mars/A Beautiful Lie/11 The Battle Of One.m4a
 Error: Permission denied on 'diff' check return code: 4
 ```
 
 The reason is unknown, but when the next synchronization is run,
-the error doesn't appear on the same files. If more than 60 seconds
+the error doesn't appear on the same files. To fix the error, the
+time-out was increased from 10 to 60 seconds. If more than 60 seconds
 is needed for the time-out, increase the value on
 line number **4034** in the file **location.py**:
 
