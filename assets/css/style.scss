@@ -78,8 +78,6 @@ $lavender: #E6E6FA !default; // lavender
     display: none;  // Turned on by page-header-dropdown
     z-index: 20;  // High enough to cover up msgq
     padding: .6rem 0 .6rem 0;
-    margin-left: -1rem;  // Aug 31/23 too far right & too high
-    margin-top: -1rem;
     border: 0;
     background-color: black;  // works better in dark theme too
     // background-color: var(--boldest-color);
