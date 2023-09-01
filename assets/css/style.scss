@@ -86,7 +86,8 @@ $lavender: #E6E6FA !default; // lavender
     background-color: black;  // works better in dark theme too
     // position: absolute;
     position: relative;
-    top: 2rem;
+    //top: 2rem;  // goes directly into page header region
+    margin-top: 2rem;
     @include medium { width: calc(100% - 8rem) }
     @include small { width: calc(100% - 2rem) }
 }
