@@ -40,13 +40,15 @@ $lavender: #E6E6FA !default; // lavender
     flex-direction: row;
     align-items: center;
     @include large  { display: flex; margin-top: 1.5rem; margin-bottom: -3rem; }
-    @include medium { display: flex; margin-top: 1rem; margin-bottom: -1.5rem; }
+    // @include medium { display: flex; margin-top: 1rem; margin-bottom: -1.5rem; }
+    @include medium  { display: none; }  // Sep 1/23 - convert to hamburger
     @include small  { display: none; }
 }
 
 #page-header-hamburger {
     @include large  { display: none; }
-    @include medium { display: none; }
+    // @include medium { display: none; }  // Sep 1/23 - convert to hamburger
+    @include medium { display: block; margin-top: .5rem; margin-bottom: -1rem; }
     @include small  { display: block; margin-top: .5rem; margin-bottom: -1rem; }
 }
 
@@ -159,13 +161,13 @@ $lavender: #E6E6FA !default; // lavender
     margin-right: 1rem;
     padding: .5rem 1rem;
 
-    @include medium {
-        // medium screen is a tight squeeze
-        margin-left: .25rem;
-        margin-right: .25rem;
-        padding: .4rem 0.9rem;
-        font-size: 0.8rem;
-    }
+    //@include medium {  // Sep 1/23 - convert to hamburger
+    //    // medium screen is a tight squeeze
+    //    margin-left: .25rem;
+    //    margin-right: .25rem;
+    //    padding: .4rem 0.9rem;
+    //    font-size: 0.8rem;
+    //}
 }
 
 /* OLD .button to be phased out */
@@ -223,7 +225,7 @@ $lavender: #E6E6FA !default; // lavender
         padding: .5rem 1rem;
     }
 
-    @include medium {
+    @include medium {  // Sep 1/23 - convert to hamburger
         top: .75rem;
         padding: .4rem 0.9rem;
         font-size: 0.8rem;
@@ -802,7 +804,8 @@ a.search-results:visited {
     transition: transform 0.3s;
 
     @include large  { height: 44px; width: 44px; }
-    @include medium { height: 36px; width: 36px; }
+    // @include medium { height: 36px; width: 36px; }
+    @include medium { height: 42px; width: 42px; }
     @include small  { height: 42px; width: 42px; }
 
     &:hover {
