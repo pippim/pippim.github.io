@@ -189,9 +189,9 @@ if (d !== null) {
         if (boolDropdown) {
             d.scrollIntoView()  // Move to top so children have room to grown
 
-            //e.style.display = "block"
-            e.style.display = "inline-block"  // Sep 1/23 was overlapping header
-            e.style.width = "100%"  // Sep 1/23 was overlapping header
+            e.style.display = "block"  // Sep 1/23 overlaps header bottom
+            //e.style.display = "inline-block"  // Sep 1/23 was overlapping header
+            //e.style.width = "100%"  // Sep 1/23 force below header
             setContentDimmed(e)
             // Move to top so children have room to grown (after scrollbar removed)
             scrollToJustAbove(e)
