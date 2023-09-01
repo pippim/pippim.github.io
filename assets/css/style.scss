@@ -82,14 +82,15 @@ $lavender: #E6E6FA !default; // lavender
     padding: 0 1.5rem 2rem 1.5rem;
     margin-right: 2rem;
     border: 0;
+    border-radius: 2rem;
     background-color: black;  // works better in dark theme too
     position: absolute;
     @include medium { width: calc(100% - 8rem) }
     @include small { width: calc(100% - 2rem) }
 }
 
-#dropdown-content :first-child { border-radius: 10% 10% 0 0; }
-#dropdown-content :last-child  { border-radius: 0 0 10% 10%; }
+//#dropdown-content :first-child { border-radius: 10% 10% 0 0; }
+//#dropdown-content :last-child  { border-radius: 0 0 10% 10%; }
 
 #dropdown-content a {
     color: var(--boldest-color);
