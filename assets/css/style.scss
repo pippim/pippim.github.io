@@ -77,14 +77,11 @@ $lavender: #E6E6FA !default; // lavender
 #dropdown-content {
     display: none;  // Turned on by page-header-dropdown button click
     z-index: 20;  // High enough to cover up msgq
-    //padding: .6rem 0 .6rem 0;
-    padding: .6rem;
+    padding: 1rem;
     margin-right: 2rem;
     border: 0;
     background-color: black;  // works better in dark theme too
-    // background-color: var(--boldest-color);
     position: absolute;
-    //width: 100%;
     width: calc(100% - 2rem)
 }
 
