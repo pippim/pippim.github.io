@@ -224,6 +224,7 @@ $lavender: #E6E6FA !default; // lavender
         margin-left: 1rem;
     }
 
+    /*
     @include large {
         top: 1.5rem;  // Force buttons down a bit for vertical centering
         padding: .5rem 1rem;
@@ -239,6 +240,9 @@ $lavender: #E6E6FA !default; // lavender
         top: .25rem;
         padding: .3rem .75rem;
     }
+    */
+    top: 1.5rem;  // Try singular definition for all
+    padding: .5rem 1rem;
 }
 
 .hdr-bar {
@@ -811,6 +815,7 @@ a.search-results:visited {
     //@include medium { height: 42px; width: 42px; }
     //@include small  { height: 42px; width: 42px; }
     height: 44px;
+    width: 44px;
 
     &:hover {
         filter: brightness(150%);
