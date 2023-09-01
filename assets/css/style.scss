@@ -77,20 +77,16 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 #dropdown-content {
-    display: none;  // Turned on by page-header-dropdown button click
+    display: none;  // Toggled by page-header-dropdown button
     z-index: 20;  // High enough to cover up msgq
-    //padding: .25rem 1.25rem 2rem 1.25rem;  // top was .75rem
-    padding: .125rem 1.25rem 1rem 1.25rem;  // Reduce for short windows
+    padding: .125rem .75rem 1rem .75rem;
     margin-right: 2rem;
     border: 0;
     border-radius: 2rem;
     background-color: black;  // works better in dark theme too
-    // position: absolute;  // below page header with 2 rem overlap
-    position: relative;  // inside page header
-    top: 1rem;  // for relative directly into page header region
-    //@include medium { width: calc(100% - 8rem) }  // absolute width
-    //@include small { width: calc(100% - 2rem) }  // absolute width
-    width: 100%  // relative width
+    position: relative;
+    top: 1rem;
+    width: 100%
 }
 
 // #dropdown-content :first-child { margin-top: 2rem; }  // no effect
