@@ -84,7 +84,8 @@ $lavender: #E6E6FA !default; // lavender
     border: 0;
     background-color: black;  // works better in dark theme too
     position: absolute;
-    width: calc(100% - 2rem)
+    @include medium { width: calc(100% - 6rem) }
+    @include small { width: calc(100% - 2rem) }
 }
 
 #dropdown-content a {
