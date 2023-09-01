@@ -235,7 +235,7 @@ $lavender: #E6E6FA !default; // lavender
     @include medium {  // Sep 1/23 - convert to hamburger
         top: .75rem;
         padding: .4rem 0.9rem;
-        font-size: 0.8rem;
+        padding: 0 1.5rem 2rem 1.5rem;  // didn't work :(  // Sep 1/23 - double check
     }
 
     @include small {
