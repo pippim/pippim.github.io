@@ -109,10 +109,11 @@ $lavender: #E6E6FA !default; // lavender
 .page-header {
     /*  Sep 28/2022 - Strange have to add this today. Page header has
         way too much white space above.
-    */
     @include large { margin-top: -4rem; }
     @include medium { margin-top: -2rem; }
     @include small { margin-top: -1rem; }
+    */
+    margin-top: -3rem;
 }
 
 .page-header-button {
