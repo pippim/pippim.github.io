@@ -31,6 +31,9 @@ of Pippim. Here you will discover:
    caption="WinEunuuchs2Unix Ask Ubuntu Profile Page"
 %}
 
+---
+
+
 <a id="who-is-pippim?"></a>
 ## Who is Pippim?
 
@@ -48,6 +51,9 @@ The philosophy is free open source software.
           margin: 1em 0px 0px 1em; text-align: center;"
    caption="Break out of restrictive software jail"
 %}
+
+---
+
 
 <a id="what-is-pippim?"></a>
 ## What is Pippim?
@@ -89,6 +95,9 @@ of pages are automatically updated.
    caption="Image Credit: Apple's DarkSky.net"
 %}
 
+---
+
+
 <a id="where-is-pippim?"></a>
 ## Where is Pippim located?
 
@@ -109,6 +118,9 @@ For a better view, right-click on the picture, select
 On January 26, 2022, after long bouts of cold weather, it is
 surprisingly warm in Edmonton.
 
+---
+
+
 <a id="when-was-pippim-created?"></a>
 ## When was Pippim created?
 
@@ -117,6 +129,9 @@ created on October 16, 2021.
 Initially, www.pippim.com was created on Google Sites.
 After a few weeks,
 the website was moved to GitHub Pages.
+
+---
+
 
 <a id="why-was-pippim-created?"></a>
 ## Why was Pippim created?
@@ -133,6 +148,9 @@ that Pippim has answered.
 
 The best answers that Pippim posted in *Ask Ubuntu* are downloaded
 and inserted into the Pippim website.
+
+---
+
 
 <a id="how-was-pippim-created?"></a>
 ## How was Pippim created?
@@ -162,6 +180,8 @@ GitHub Pages for free. More details about how the website
 was created can be found on in the middle of the
 [Home Page](https://pippim.github.io/#github-pages).
 
+---
+
 ## Resume
 
 - Graduated NAIT Computer Systems Technology -
@@ -190,7 +210,8 @@ in the world with 29,278 points in *Ask Ubuntu*
 
 #### Bash development 2019
 
-- Develop Eyesome, Iconic, cdd, cpuf and miscellaneous scripts in bash
+- Develop Multi-Timer, Eyesome, Iconic, cdd, cpuf
+and miscellaneous scripts in bash
 
 #### Python development 2020
 
@@ -200,8 +221,10 @@ in the world with 29,278 points in *Ask Ubuntu*
 
 #### Internet development 2022
 
-- Pippim Website with Javascript on-line apps, local storage files
-- Stack Overflow SQL database query of 1500 posts converted to website
+- Pippim Website with Javascript on-line apps. Export, email and import
+web browser local storage files
+- Stack Overflow SQL database query of 1500 posts converted to Pippim 
+website *Answers* webpage.
 - Internet of Things - control electrical devices, computers and
 Smart TVs (Sony REST API and Android Debugging Bridge)
 - GitHub, pyCharm, HTML, CSS, SCSS, SASS, Kramdown and Jekyll. 
