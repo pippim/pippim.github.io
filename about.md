@@ -166,14 +166,15 @@ was created can be found on in the middle of the
 
 - Graduated NAIT Computer Systems Technology -
 IBM S/390 and CDC Cyber 720 Mainframes.
-- IBM S/36, IBM AS/400, PC LAN multi-user applications 
+- Two decades developing multi-user applications on 
+IBM S/36, IBM AS/400 and PC LAN 
 
-### Linux Journey Began 2014
+### Linux Skills Begin in 2014
 
 #### Operating System development 2014
 
-- Enhanced I/O (written in C), kernel block device giving Intel
-Window's Rapid Storage Technology to Linux
+- Modify Enhanced I/O (written in C), kernel block device 
+giving Intel Window's Rapid Storage Technology to Linux
 - Conky System Monitor scripts
 - System Monitor Indicator scripts
 - Grub multiple-boot OS (written in C) enhancement from whole
