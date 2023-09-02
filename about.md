@@ -182,16 +182,16 @@ was created can be found on in the middle of the
 
 ---
 
-## Resume
+# Resume
 
 - Graduated NAIT Computer Systems Technology -
 IBM S/390 and CDC Cyber 720 Mainframes.
 - Two decades developing multi-user applications on 
 IBM S/36, IBM AS/400 and PC LAN 
 
-### Linux Skills Begin in 2014
+## Linux Skills Begin in 2014
 
-#### Operating System development 2014
+### Operating System development 2014
 
 - Modify Enhanced I/O (written in C), kernel block device 
 giving Intel Window's Rapid Storage Technology to Linux
@@ -201,25 +201,25 @@ giving Intel Window's Rapid Storage Technology to Linux
 seconds countdown to decisecond countdown (1/10th of a second)
 for smooth circular progress animation
 
-#### Volunteer Technical Support 2016
+### Volunteer Technical Support 2016
 
 - Volunteer helping others to learn, fix and use Linux and Ubuntu
 - In 2018, [ranked #1](https://github.com/pippim/pippim.github.io/blob/main/assets/img/ask%20ubuntu%20points%202018.png
 "Screenshot (with link at top)"){:target="_blank"}
 in the world with 29,278 points in *Ask Ubuntu*
 
-#### Bash development 2019
+### Bash development 2019
 
 - Develop Multi-Timer, Eyesome, Iconic, cdd, cpuf
 and miscellaneous scripts in bash
 
-#### Python development 2020
+### Python development 2020
 
 - Create mmm (Multiple Monitor Management)
 - Begin mserve (Music Server) development. Complete alpha version in 2023.
 - SQLite3, beautiful soup, tkinter (TCL), x-lib, GNOME
 
-#### Internet development 2022
+### Internet development 2022
 
 - Pippim Website with Javascript on-line apps. Export, email and import
 web browser local storage files
@@ -228,6 +228,17 @@ website *Answers* webpage.
 - Internet of Things - control electrical devices, computers and
 Smart TVs (Sony REST API and Android Debugging Bridge)
 - GitHub, pyCharm, HTML, CSS, SCSS, SASS, Kramdown and Jekyll. 
+
+### Python development 2023
+
+- Complete **mserve** (Music Server) alpha version
+- Extensive **mserve** documentation on Pippim website
+
+### Objectives
+
+- Seeking fast-paced challenging software development projects
+- Work with teams that share passion for software development
+
 
 ---
 
