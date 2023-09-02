@@ -19,34 +19,6 @@ each line as it is sung.
 Take a <a href="#hide-chronology-sample-video">quick peek</a> 
 at one of the many **merve** videos on this website.
 
-## Multiple Everything
-{:.no_toc}
-
-**mserve** remembers and restores positions and sizes for multiple
-windows plus a whole lot more.
-
-- Multiple Locations Music File
-<a href="#synchronize-location">Synchronization</a>
-(including mobile phones and file servers)
-- Multiple <a href="#playlists">Playlists</a> per location
-- <a href="#windows-open-where-you-want-them">Multiple Window</a> 
-save positions for music location tree, current playing, 
-volume control, playlists control, fine-tune time index, location
-maintenance, three SQL Table viewers, and CD encoding (ripping)
-- Multiple processes for lag free animations
-- Multiple <a href="#hide-chronology-sample-video">animations</a>
-for artwork; spin, slide and pixelate
-- Multiple VU meters displaying sound level; left and right
-- Multiple Show Chronology/Resume Song/Volume/Playlist Buttons states
-per Playlist per location
-- Multiple sound level fade methods for pause/play, switch sound
-source between TV and mserve, fine-tune lyrics time index, etc.
-- Multiple <a href="#how-to-encode-a-cd-overview">CD Encoding</a>
-formats, quality, images and filename formatting
-- Multiple MusicBrainz CD album/track releases to chose from for artist
-- Multiple Website Scraping for Lyrics is in progress but currently
-defaults to `genius.com`
-
 
 ## Features
 
@@ -123,6 +95,35 @@ and during TV broadcast commercials
 - <a href="#hide-chonology-button">Show/Hide Chronology</a> 
 to balance screen real estate. 
 
+### Multiple Everything
+{:.no_toc}
+
+**mserve** remembers and restores positions and sizes for multiple
+windows plus a whole lot more.
+
+- Multiple Locations Music File
+<a href="#synchronize-location">Synchronization</a>
+(including mobile phones and file servers)
+- Multiple <a href="#playlists">Playlists</a> per location
+- <a href="#windows-open-where-you-want-them">Multiple Window</a> 
+save positions for music location tree, current playing, 
+volume control, playlists control, fine-tune time index, location
+maintenance, three SQL Table viewers, and CD encoding (ripping)
+- Multiple processes for lag free animations
+- Multiple <a href="#hide-chronology-sample-video">animations</a>
+for artwork; spin, slide and pixelate
+- Multiple VU meters displaying sound level; left and right
+- Multiple Show Chronology/Resume Song/Volume/Playlist Buttons states
+per Playlist per location
+- Multiple sound level fade methods for pause/play, switch sound
+source between TV and mserve, fine-tune lyrics time index, etc.
+- Multiple <a href="#how-to-encode-a-cd-overview">CD Encoding</a>
+formats, quality, images and filename formatting
+- Multiple MusicBrainz CD album/track releases to chose from for artist
+- Multiple Website Scraping for Lyrics is in progress but currently
+defaults to `genius.com`
+
+
 ## **mserve** is Still Under Construction
 {:.no_toc}
 
@@ -134,26 +135,26 @@ to balance screen real estate.
 
 > ***IMPORTANT NOTES:*** 
 > 
-> ⬤ **mserve** was primarily tested with Linux, specifically 
+> &ensp; ◆ &ensp;  **mserve** was primarily tested with Linux, specifically 
 Ubuntu 16.04 LTS and Python 2.7.12.
 > 
-> ⬤ **mserve** was briefly tested with ChromeOS for about a month 
+> &ensp; ◆ &ensp;  **mserve** was briefly tested with ChromeOS for about a month 
 and modified.
 > 
-> ⬤ You *should* be able to toggle between Pyhon 2.7.x and 
+> &ensp; ◆ &ensp;  You *should* be able to toggle between Pyhon 2.7.x and 
 Python 3.x by changing the *"shebang"* at the top of each `.py`. 
 Testing on Python 3.x will begin prior to next **mserve** upgrade.
 > 
-> ⬤ Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
+> &ensp; ◆ &ensp;  Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
 in year 2024. A "lite" Ubuntu 16.04 version running Unity may be 
 created as some sort of virtual machine. It's already been announced 
 that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
 > 
-> ⬤ Support for `sshfs` has been discontinued by the developer in 
+> &ensp; ◆ &ensp;  Support for `sshfs` has been discontinued by the developer in 
 November 2022. Plans are underway to switch over to FTP and and 
 `curlftpss` to mount host drives locally.
 > 
-> ⬤ There is **NO** installation script for **mserve**. You will 
+> &ensp; ◆ &ensp;  There is **NO** installation script for **mserve**. You will 
 have to manually install dependencies with:
 > 
 >    `sudo apt install python-xxxxx`.
