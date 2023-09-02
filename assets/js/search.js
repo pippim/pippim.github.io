@@ -210,6 +210,7 @@ if (d !== null) {
 
 var boolSearchForm = false  // Is search form active?
 
+// Search Magnify Glass button clicked
 // Loop through all class named .page-header-search-button
 for (var ndx = 0; ndx < n.length; ndx++) {
     //ndxPageHeaderSearchButton = ndx
@@ -227,6 +228,9 @@ for (var ndx = 0; ndx < n.length; ndx++) {
             setContentDimmed(g)  // New g replaces f
             // Move to top so children have room to grow (after scrollbar removed)
             scrollToJustAbove(g)
+            // Cursor into search words input field
+            q.focus();  // _includes/search.html id="search_query"
+            q.select();
             // Hamburger dropdown may be open and stopPropagation stops window.click() running
             if (e !== null && e != "none") {
                 e.style.display = "none";  // Close dropdown menu options
@@ -354,8 +358,6 @@ function submitted(event) {
         hyper_link = arr[0];
         hyper_title = search_urls[key].substring(hyper_link.length + 3);
         html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a></li>\n"
-        //html += "  <li><a href='" + hyper_link + "'>" + hyper_title + "</a>" +
-        //         " <badge> " + value.toString() + " </badge> points." + "</li>\n";
     }
     html += "</ol>\n";
 
@@ -365,19 +367,9 @@ function submitted(event) {
 }
 
 function scrollToJustAbove(element) {
-    // From: https://stackoverflow.com/questions/52570291/scrollintoview-20px-above-element
-    //let dims = element.getBoundingClientRect();
-    //let dims = element.offsetTop
-    //var margin = 10
-    //window.scrollTo(window.scrollX, dims.top - margin);
     // From: https://stackoverflow.com/a/56391657/6929343
     const yOffset = -80;
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    //console.log("element.getBoundingClientRect().top:",
-    //            element.getBoundingClientRect().top,
-    //            "window.pageYOffset:", window.pageYOffset)
-    //console.log("Applying yOffset:", yOffset, "Results in y:", y)
-    //console.log("scrollToJustAbove")
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
