@@ -104,43 +104,41 @@ learn web design, I can't believe how cheap the process has been!
 
 As you may have deduced by the little yellow dot in this image
 though, Pippim is physically located in Edmonton, Canada. 
-For a better view, right click on the picture, select
-"Open in new tab" and then zoom in with your browser.
-This morning, after long bouts of cold weather, it is
-surprisingly warm.
+For a better view, right-click on the picture, select
+*Open in new tab*, and then zoom in with your browser.
+On January 26, 2022, after long bouts of cold weather, it is
+surprisingly warm in Edmonton.
 
 <a id="when-was-pippim-created?"></a>
 ## When was Pippim created?
 
-That's an easy question; The Domain Name and website was created October 16, 2021.
-Initially www.pippim.com was quickly created on Google Sites. Then the
-[main Pippim Website](pippim.github.io) (don't click the link because you are
-already here!) was created much slower on GitHhub Pages. Many revisions were 
-made -- 1,020 commits (revisions) and still counting as of December 5, 2021.
+That's an easy question; The Domain Name and Website were
+created on October 16, 2021.
+Initially, www.pippim.com was created on Google Sites.
+After a few weeks,
+the website was moved to GitHub Pages.
 
 <a id="why-was-pippim-created?"></a>
 ## Why was Pippim created?
 
-Pippim was created to make it easier to list the free software created on 
-the websites [Ask Ubuntu 🔗](https://askubuntu.com) and [GitHub 🔗](https://github.com).
+This website was created to document the free software that Pippim
+created on the websites [Ask Ubuntu 🔗](https://askubuntu.com)
+and [GitHub 🔗](https://github.com).
 
-Thousands of Pippim Posts, under the pen-name **WinEunuuchs2Unix**, 
+Thousands of Pippim Posts, under the pen-name **WinEunuchs2Unix**, 
 on **Ask Ubuntu** are about 95% Answers and 5% Questions. 
-The questions that Pippim has answered have had over **{{ site.views_human }} 
-views** as of {{ site.refreshed | date: "%B %e, %Y" }}. 
+There have been over **{{ site.views_human }} views**, 
+as of {{ site.refreshed | date: "%B %e, %Y" }}, to the questions
+that Pippim has answered. 
 
-The best of the thousands of posts are selected by number of
-votes. Then the best posts are copied from Ask Ubuntu into
-the Pippim website. If you have written posts in Stack Exchange,
-you can create a copy of Pippim on GitHub Pages and make your
-own website.
+The best answers that Pippim posted in *Ask Ubuntu* are downloaded
+and inserted into the Pippim website.
 
 <a id="how-was-pippim-created?"></a>
 ## How was Pippim created?
 
-Yes this is the 6th section which contradicts the "5 W's". Additionally,
-"How" doesn't begin with a "W" which also seems to contradict the "5 W's" but,
-as the saying goes:
+*"How"* doesn't begin with a "W", which seems to contradict the 
+"5 W's" but, as the saying goes:
 
 > Who, What, Where, When, Why *and sometimes How*
 
@@ -164,7 +162,48 @@ GitHub Pages for free. More details about how the website
 was created can be found on in the middle of the
 [Home Page](https://pippim.github.io/#github-pages).
 
-### Hopefully you enjoy the freedom! :)
+## Resume
+
+- Graduated NAIT Computer Systems Technology -
+IBM S/390 and CDC Cyber 720 Mainframes.
+- IBM S/36, IBM AS/400, PC LAN multi-user applications 
+
+### Linux Journey Began 2014
+
+#### Operating System development 2014
+
+- Enhanced I/O (written in C), kernel block device giving Intel
+Window's Rapid Storage Technology to Linux
+- Conky System Monitor scripts
+- System Monitor Indicator scripts
+- Grub multiple-boot OS (written in C) enhancement from whole
+seconds countdown to decisecond countdown (1/10th of a second)
+for smooth circular progress animation
+
+#### Volunteer Technical Support 2016
+
+- Volunteer helping others to learn, fix and use Linux and Ubuntu
+- In 2018, [ranked #1](https://github.com/pippim/pippim.github.io/blob/main/assets/img/ask%20ubuntu%20points%202018.png
+"Screenshot (with link at top)"){:target="_blank"}
+in the world with 29,278 points in *Ask Ubuntu*
+
+#### Bash development 2019
+
+- Develop Eyesome, Iconic, cdd, cpuf and miscellaneous scripts in bash
+
+#### Python development 2020
+
+- Create mmm (Multiple Monitor Management)
+- Begin mserve (Music Server) development. Complete alpha version in 2023.
+- SQLite3, beautiful soup, tkinter (TCL), x-lib, GNOME
+
+#### Internet development 2022
+
+- Pippim Website with Javascript on-line apps, local storage files
+- Stack Overflow SQL database query of 1500 posts converted to website
+- Internet of Things - control electrical devices, computers and
+Smart TVs (Sony REST API and Android Debugging Bridge)
+- GitHub, pyCharm, HTML, CSS, SCSS, SASS, Kramdown and Jekyll. 
 
 ---
 
