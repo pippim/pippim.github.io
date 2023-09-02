@@ -102,14 +102,20 @@ the {{ site.title }} website because it is hosted by GitHub.
 data-canonical-src="https://user-images.githubusercontent.com/92641463/265217653-4cf8577d-9bf7-49ad-a516-09c7b98c59b0.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="float: left; width: 40%; margin: 1rem 2rem 1rem 0; 
-max-height:640px; width: 100% !important; height: auto !important;">
+max-height:640px; !important; height: auto !important;">
   </video>
+
+<!-- OLD:
+
+style="max-height:640px; width: 100% !important; height: auto !important;">
+
+-->
 
 ---
 
 
 This website works on mobile phones. This video shows a
-typical mobile phone screen. Using `Control` + `I` opens
+typical mobile phone screen. Using `Control` + `i` opens
 Google Chrome's debugger. The **Console** tab is selected
 so you can see there are no errors in the Pippim website.
 Go to almost any website in the world and you will see
