@@ -238,14 +238,33 @@ for (var ndx = 0; ndx < n.length; ndx++) {
             }
         }
         else  {
-            f.style.display = "none"
-            m.style.display = "none"  // Search modal may be open
-            window.scrollTo({top: 0, behavior: 'smooth'});
-            reverseContentDimmed()
+            //f.style.display = "none"
+            //m.style.display = "none"  // Search modal may be open
+            //window.scrollTo({top: 0, behavior: 'smooth'});
+            //reverseContentDimmed()
+            closeSearchForm()  // Sep 2/23
+            /* TODO: Check function below:
+                function closeSearchForm() {
+                    f.style.display = "none"  // Close search form
+                    boolSearchForm = false
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                    reverseContentDimmed()
+                }
+            */
         }
         //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
     }
 }
+
+// Handle ESC key (key code 27)
+// https://stackoverflow.com/a/27759070/6929343
+document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 27 && boolSearchForm) {
+        searchCloseForm();
+    }
+});
+
+
 
 // For some reason 'e' is empty (length is zero) causing first page click to scroll to top
 //console.log("e.style.display.length:", e.style.display.length)
@@ -281,6 +300,7 @@ function closeSearchForm() {
     /* Shared between 'X' to close and click outside search query */
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
     f.style.display = "none"  // Close search form
+    m.style.display = "none"  // Sep 2/23 - Search modal may be open
     boolSearchForm = false
     window.scrollTo({top: 0, behavior: 'smooth'});
     reverseContentDimmed()
