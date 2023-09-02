@@ -101,8 +101,8 @@ the {{ site.title }} website because it is hosted by GitHub.
 <video src="https://user-images.githubusercontent.com/92641463/265217653-4cf8577d-9bf7-49ad-a516-09c7b98c59b0.mp4"
 data-canonical-src="https://user-images.githubusercontent.com/92641463/265217653-4cf8577d-9bf7-49ad-a516-09c7b98c59b0.mp4"
 controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
-style="float: left; width: 40%; margin: 1rem 2rem 1rem 0; 
-max-height:640px; !important; height: auto !important;">
+style="float: left; width: 40% !important; margin: 1rem 2rem 1rem 0; 
+max-height:640px; height: auto !important;">
   </video>
 
 <!-- OLD:
