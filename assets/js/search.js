@@ -260,7 +260,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
 // https://stackoverflow.com/a/27759070/6929343
 document.addEventListener('keyup', function(e) {
     if (e.keyCode == 27 && boolSearchForm) {
-        searchCloseForm();
+        closeSearchForm();
     }
 });
 
