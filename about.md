@@ -172,8 +172,9 @@ first step was to find a domain name (website name) that:
 7. Wasn't a name already reserved and being sold for thousands of dollars
 8. Could be purchased from Google Domains which offers good security, performance and reliability
 
-After finding out that the "pippim.com" was available, more weeks of contemplation 
-went by before "pulling the trigger" and buying the name for $17 CAD per year.
+After finding out the name "pippim.com" was available, a few more weeks
+of contemplation went by, before *"pulling the trigger"*, and buying the
+name for $17 CAD per year.
 
 Then this Pippim website was created using 
 GitHub Pages for free. More details about how the website
@@ -185,7 +186,7 @@ was created can be found on in the middle of the
 # Resume
 
 - Graduated NAIT Computer Systems Technology -
-IBM S/390 and CDC Cyber 720 Mainframes.
+IBM S/390 and CDC Cyber 720 Mainframes
 - Two decades developing multi-user applications on 
 IBM S/36, IBM AS/400 and PC LAN 
 
@@ -216,18 +217,18 @@ and miscellaneous scripts in bash
 ### Python development 2020
 
 - Create mmm (Multiple Monitor Management)
-- Begin mserve (Music Server) development. Complete alpha version in 2023.
-- SQLite3, beautiful soup, tkinter (TCL), x-lib, GNOME
+- Begin mserve (Music Server) development. Complete alpha version in 2023
+- SQLite3, beautiful soup, tkinter (TCL), x-lib, GNOME and other packages
 
 ### Internet development 2022
 
 - Pippim Website with Javascript on-line apps. Export, email and import
 web browser local storage files
 - Stack Overflow SQL database query of 1500 posts converted to Pippim 
-website *Answers* webpage.
+website *Answers* webpage
 - Internet of Things - control electrical devices, computers and
 Smart TVs (Sony REST API and Android Debugging Bridge)
-- GitHub, pyCharm, HTML, CSS, SCSS, SASS, Kramdown and Jekyll. 
+- GitHub, pyCharm, HTML, CSS, SCSS, SASS, Kramdown and Jekyll
 
 ### Python development 2023
 
