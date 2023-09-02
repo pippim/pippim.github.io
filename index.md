@@ -111,13 +111,11 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 -->
 
----
-
-
 This website works on mobile phones. This video shows a
-typical mobile phone screen. Using `Control` + `i` opens
-Google Chrome's debugger. The **Console** tab is selected
-so you can see there are no errors in the Pippim website.
+typical mobile phone screen. Using `<Control>` +
+`<Shift>` + `i` opens
+Google Chrome's debugger. The **Console** tab is selected.
+There are no errors in the Pippim website.
 Go to almost any website in the world and you will see
 errors. Of course Pippim isn't perfect and had errors too.
 But attention to detail means errors are tracked down
@@ -148,6 +146,7 @@ Some words are intentionally removed such as "the", "error", etc.
 Multiple search words are based on "or" tests. Most search 
 engines use the "and" tests.
 
+---
 
 ## Navigation Buttons
 
@@ -292,6 +291,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById('octocat-image').classList.add('slide-left'); 
 });
 </script>
+
+---
 
 # GitHub Pages
 
