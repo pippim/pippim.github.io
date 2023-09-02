@@ -9,7 +9,6 @@ layout: default
 
       Slide show with pop up points:
 
-         Day / Night mode            
          Tim-Ta (Dancing alarm clocks - Wash DONE!, Rinse DONE!, Dryer DONE!
          Copy Code to clipboard button
          Super-Slim Super-Fast Search
@@ -44,30 +43,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
 Welcome to {{ site.title }}'s website powered by GitHub.
 
 [Tim-ta](https://pippim.github.io/programs/tim-ta.html 
-"Create and run timers for Laundry, Cooking, Workouts, etc.") 
-lets you create and run timers for:
+"Create and run timers for Laundry, Workouts, Breaks etc.") 
+runs inside your browser. Use it for project timers:
 
 <!-- Image next to bullets suck the bullets into image
 - Doing Laundry
-- Cooking Food
-- Working Out
-- Limiting Computer time
+- Repetitive Workout Sets<br>
+- Coffee and Lunch Breaks<br>
 <div style="left: 2rem;">
    <ul>
       <li> Doing Laundry </li>
-      <li> Cooking Food </li>
-      <li> Working Out </li>
-      <li> Limiting Computer time </li>
+      <li> Repetitive Workout Sets </li>
+      <li> Coffee and Lunch Breaks </li>
    </ul>
 </div>
 -->
 
 &ensp; ◆ &ensp; Doing Laundry<br>
-&ensp; ◆ &ensp; Cooking Food<br>
-&ensp; ◆ &ensp; Working Out<br>
-&ensp; ◆ &ensp; Limiting Computer time<br>
+&ensp; ◆ &ensp; Repetitive Workout Sets<br>
+&ensp; ◆ &ensp; Coffee and Lunch Breaks<br>
 
-Pick from stock alarm sounds or upload your own alarm sounds.
+Pick from stock alarm sounds and upload your own sounds.
 Backup your ***Tim-ta*** projects and transfer them to other
 browsers, other devices or other users. Import projects from
 other Users or Devices.
@@ -97,6 +93,55 @@ to deliver {{ site.title }} website content. It is impossible
 for {{ site.title }} to collect your data and store it on
 the {{ site.title }} website because it is hosted by GitHub.
 
+---
+
+## Pippim Website on Mobile Phones
+
+
+<video src="https://user-images.githubusercontent.com/92641463/265217653-4cf8577d-9bf7-49ad-a516-09c7b98c59b0.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/265217653-4cf8577d-9bf7-49ad-a516-09c7b98c59b0.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+---
+
+
+This website works on mobile phones. This video shows a
+typical mobile phone screen. Using `Control` + `I` opens
+Google Chrome's debugger. The **Console** tab is selected
+so you can see there are no errors in the Pippim website.
+Go to almost any website in the world and you will see
+errors. Of course Pippim isn't perfect and had errors too.
+But attention to detail means errors are tracked down
+and fixed.
+
+### Color Theme
+
+At the top of each page, the "Sun" / "Crescent Moon" will
+spin when clicked. Click the "Sun" to use your phone outside.
+Click the "Crescent Moon" to use your phone inside.
+
+### Hamburger Button
+
+The “☰” (Hamburger) button reveals Page Header Buttons that
+will not fit horizontally on a phone screen. A dropdown
+menu appears with buttons arranged vertically.
+
+
+### Search Button
+
+The “🔍” (Magnifying Glass) button opens Pippim engineered
+search engine. Search results are point-weighted with words
+appearing in the Page Titles getting more weight then the
+same word appearing in the Page Body.
+
+Some words are intentionally removed such as "the", "error", etc.
+
+Multiple search words are based on "or" tests. Most search 
+engines use the "and" tests.
+
+
 ## Navigation Buttons
 
 This section discusses the *Page Navigation
@@ -105,6 +150,7 @@ we will discuss the *Section Navigation Buttons*
 that can appear at the top of major sections.
 
 ### Page Navigation Buttons
+{:.no_toc}
 
 The top of each page contains a search bar and
 navigation buttons to take you to other pages:
@@ -120,6 +166,7 @@ navigation buttons to take you to other pages:
 - <kbd>📧 Email</kbd> lets you send an email to {{ site.title }}.
 
 ### Section Navigation Buttons
+{:.no_toc}
 
 The top of major sections contain navigation buttons to take you to other sections:
 
@@ -132,6 +179,7 @@ The top of major sections contain navigation buttons to take you to other sectio
 - <kbd>Skip</kbd> - Skips the section and displays the next section
 
 ---
+
 <a id="hdr2"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr1">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr3">Skip</a></div>
 ## Get in Touch
@@ -141,6 +189,7 @@ The conventional way is via email. Another way is commenting
 on Stack Exchange Posts or GitHub Repos.
 
 ### The Conventional Way of Getting in Touch
+{:.no_toc}
 
 Get in touch with {{ site.title }} by sending an email.
 
@@ -149,12 +198,14 @@ Get in touch with {{ site.title }} by sending an email.
 "Send email to pippim.com@gmail.com 🔗")
 
 ### Leave a Comment / Question at The Source
+{:.no_toc}
 
 Leaving a comment or question at the source such as
 Stack Exchange answer or GitHub Repo saves you from
 specifying what your communication is referring to.
 
 #### Stack Exchange Answers (Ask Ubuntu)
+{:.no_toc}
 
 ![Ask Ubuntu image](/assets/img/ask_ubuntu.png){: 
 style="float: left; margin: 0 2rem 0 0;" width="20%" }
@@ -165,6 +216,7 @@ link to the original answer on Stack Exchange.
 <br clear="left"/>
 
 #### GitHub Repos
+{:.no_toc}
 
 ![Inspector cat detective with magnifying glass](/assets/img/inspectocat.jpg){: 
 style="float: left; margin: 0 2rem 0 0;" width="20%" }
@@ -176,6 +228,7 @@ functions.
 <br clear="left"/>
 
 ---
+
 <a id="hdr3"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr2">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr4">Skip</a></div>
 
@@ -193,10 +246,12 @@ It remembers the status of the "More" or "Less" button
 for blog posts. You can disable the cookie using links below.
 
 ### Disable Cookies in Chrome
+{:.no_toc}
 
 [Clear, enable, and manage cookies in Chrome 🔗](https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop "How to clear cookies with Chrome Browser 🔗")
 
 ### Disable Cookies in Firefox
+{:.no_toc}
 
 [Block websites from storing cookies in Firefox 🔗](https://support.mozilla.org/en-US/kb/block-websites-storing-cookies-site-data-firefox "How to clear cookies with Chrome Browser 🔗")
 
@@ -247,11 +302,12 @@ GitHub Pages is free. Change your website from a MAC,
 a PC running Windows or Linux, and even a smart phone.
 
 ## **TL;DR**
+{:.no_toc}
 
-"**TL;DR**" stands for "**Too Long, Didn't Read**". So unless you
-are truly interested in the technology of websites and how this website
+"**TL;DR**" stands for "**Too Long, Didn't Read**". Unless you
+are interested in the technology of websites, and how this website
 in particular was created, you will probably want to stop reading
-the rest of this page.
+here.
 
 Whenever you commit to a website repository, GitHub Pages will run
 [Jekyll 🔗](https://jekyllrb.com/ "See how Jekyll rebuilds GitHub Pages websites 🔗")
@@ -298,6 +354,7 @@ For more details see
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr4">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr6">Skip</a></div>
 
 ## How the Table of Contents is Generated
+{:.no_toc}
 
 All markdown headers with `#`, `##` and `###`, etc. are used to create the **Table of Contents** (TOC). A little bit of one-time prep work is required for TOC support. For example, the file `_sass/toc.scss` is setup with:
 
@@ -404,6 +461,7 @@ There are many open-source providers involved in the {{ site.title }} website:
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr7">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr9">Skip</a></div>
 
 ## Images, Javascript, CSS and HTML
+{:.no_toc}
 
 It is important to follow these instructions to setup your site:
 [Adding a theme to your GitHub Pages site using Jekyll 🔗](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll).
@@ -427,6 +485,7 @@ locations:
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr8">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr10">Skip</a></div>
 
 ## {{ site.title }} Website Directory Tree
+{:.no_toc}
 
 The directory tree will help you get a better understanding
 of the Pippim website at `pippim.github.io`. As of
@@ -444,13 +503,11 @@ for {{ site.title }} on GitHub Pages looked like this:
 </style>
 
 
-**NOTE:** The `_posts` directory contains {{ site.post_count }} posts
-which are not displayed above.
-
 <a id="hdr10"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr6">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 ## Daily Backup
+{:.no_toc}
 
 Normally you will `git pull` all the directories and files from your website
 to your local drive. If you plan on developing locally, you probably want
