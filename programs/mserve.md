@@ -16,7 +16,7 @@ Finally, **mserve** automatically downloads lyrics scores from the
 internet. Lyrics score lines can be synchronized by simply clicking 
 each line as it is sung.
 
-Take a <a href="#hide-chronology-sample-video">quick peek</a> 
+Take a <a href="#hide-chronology-list-sample-video">quick peek</a> 
 at one of the many **merve** videos on this website.
 
 
@@ -110,7 +110,7 @@ save positions for music location tree, current playing,
 volume control, playlists control, fine-tune time index, location
 maintenance, three SQL Table viewers, and CD encoding (ripping)
 - Multiple processes for lag free animations
-- Multiple <a href="#hide-chronology-sample-video">animations</a>
+- Multiple <a href="#hide-chronology-list-sample-video">animations</a>
 for artwork; spin, slide and pixelate
 - Multiple VU meters displaying sound level; left and right
 - Multiple Show Chronology/Resume Song/Volume/Playlist Buttons states
@@ -1095,10 +1095,10 @@ SQL History Table Row Type='resume', Action=<LOCATION CODE>.
 - **modification_time** - lc.FNAME_MOD_TIME - Cell phones may not allow
 changes to music files' last modification time.  **mserve** uses this file
 as a shadow filesystem to track last modification time. Used by the 
-**Synchronize Locations** function.
+*Synchronize Location* function.
 
 **lc.FNAME** represents "location.py" (**lc.**), "Filename" (**FNAME**). 
-When working inside the location.py module, drop the **lc.** prefix.
+When working inside the `location.py` module, drop the **lc.** prefix.
 In the other Python modules, **import location as lc** is used.
 
 ---
@@ -1270,7 +1270,7 @@ The "☰" (Hamburger) Dropdown Menu is shown below:
    caption="mserve lyrics hamburger menu.png"
 %}
 
-The same Dropdown menu appears when you left-click or right-click
+The same Dropdown menu appears when you *right-click*
 on the lyrics score (the song's lyrics).
 
 ---
@@ -1404,20 +1404,20 @@ a "mulligan". Then we click again as the music catches up.
 <a id="hdr14"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr13">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr15">Skip</a></div>
 
-# Hide Chronology Button
+# Hide Chronology List Button
 
-The chronology section shows:
+The *Chronology Song List* shows:
  
 - The previous three songs played
 - The current song being played, highlighted in green
 - The next six songs coming up in the playlist
 
-You can hide the chronology section. This expands the art work 
+You can hide the *Chronology Song List*. This expands the art work 
 and shifts the Lyrics Score beneath the Metadata and VU Meters. 
 The sample video belows shows **mserve** playing Favorites playlist 
-and the *Hide Chronology* button being used.
+and the *Hide Chronology* button being clicked.
 
-## Hide Chronology Sample Video
+## Hide Chronology List Sample Video
 {:.no_toc}
 
 <video src="https://user-images.githubusercontent.com/92641463/264507380-0174bf6d-bb96-4dd8-89d0-c505ce322589.mp4"
@@ -1426,8 +1426,7 @@ controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
 style="max-height:640px; width: 100% !important; height: auto !important;">
   </video>
 
-
-### Hide Chronology Sample Video Highlights
+### Hide Chronology List Sample Video Highlights
 {:.no_toc}
 
 - The cursor moves over the artwork
@@ -1455,9 +1454,9 @@ and occupies the rest of the space where the chronology used to be
 background color can change depending on the new color of the pixel at
 coordinates "3, 3" of the resized artwork.
 
-## Chronology Popup Menu
+## Chronology List Popup Menu
 
-Right-click on a song in the Chronology to:
+Right-click on any song in the *Chronology Song List* to:
 
 - Play that song
 - Filter chronology list by synchronized songs only
