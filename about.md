@@ -187,9 +187,11 @@ was created can be found on in the middle of the
 
 - Graduated NAIT Computer Systems Technology -
 IBM S/390 and CDC Cyber 720 Mainframes
+- Education in three Accounting Levels, Business, Statistics, 
+COBOL, Assembly Language, RPG, Mark IV, Fortran and BASIC
 - Two decades developing multi-user, multiple-host, multiple-vendor
 applications on IBM System/36, IBM AS/400 and IBM PC Networks
-- President IBM System/36 Users Group for one year
+- President of Edmonton IBM System/36 Users Group for one year
 - Information Systems Professional (I.S.P.) designation from
 Canadian Information Processing Society (C.I.P.S.)
 
