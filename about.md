@@ -187,8 +187,11 @@ was created can be found on in the middle of the
 
 - Graduated NAIT Computer Systems Technology -
 IBM S/390 and CDC Cyber 720 Mainframes
-- Two decades developing multi-user applications on 
-IBM S/36, IBM AS/400 and PC LAN 
+- Two decades developing multi-user, multiple-host, multiple-vendor
+applications on IBM System/36, IBM AS/400 and IBM PC Networks
+- President IBM System/36 Users Group for one year
+- Information Systems Professional (I.S.P.) designation from
+Canadian Information Processing Society (C.I.P.S.)
 
 ## Linux Skills Begin in 2014
 
@@ -218,7 +221,8 @@ and miscellaneous scripts in bash
 
 - Create mmm (Multiple Monitor Management)
 - Begin mserve (Music Server) development. Complete alpha version in 2023
-- SQLite3, beautiful soup, tkinter (TCL), x-lib, GNOME and other packages
+- SQLite3, beautiful soup, tkinter (TCL), x-lib, GNOME, FTP, SSH
+and many other Python packages
 
 ### Internet development 2022
 
