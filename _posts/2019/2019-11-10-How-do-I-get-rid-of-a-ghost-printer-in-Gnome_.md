@@ -10,9 +10,9 @@ created_date: 2019-11-10 17:02:59
 edit_date:    2019-11-10 17:12:37
 votes:        "2 "
 favorites:    
-views:        "9,893 "
+views:        "9,916 "
 accepted:     
-uploaded:     2023-08-23 11:47:13
+uploaded:     2023-09-03 11:16:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-How-do-I-get-rid-of-a-ghost-printer-in-Gnome_.md
 toc:          false
 navigation:   false

@@ -8,11 +8,11 @@ type:         Answer
 tags:         sound cron
 created_date: 2018-06-10 16:17:17
 edit_date:    2018-06-10 17:39:19
-votes:        "10 "
+votes:        "11 "
 favorites:    
-views:        "6,681 "
+views:        "6,725 "
 accepted:     
-uploaded:     2023-08-23 11:47:13
+uploaded:     2023-09-03 11:16:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-10-Help-using-crontab-to-play-a-sound.md
 toc:          false
 navigation:   false

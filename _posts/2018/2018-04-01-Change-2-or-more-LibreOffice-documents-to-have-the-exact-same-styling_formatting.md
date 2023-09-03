@@ -10,9 +10,9 @@ created_date: 2018-04-01 20:56:11
 edit_date:    2022-01-09 13:25:41
 votes:        "4 "
 favorites:    
-views:        "739 "
+views:        "743 "
 accepted:     Accepted
-uploaded:     2023-08-23 11:47:13
+uploaded:     2023-09-03 11:16:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-04-01-Change-2-or-more-LibreOffice-documents-to-have-the-exact-same-styling_formatting.md
 toc:          true
 navigation:   true

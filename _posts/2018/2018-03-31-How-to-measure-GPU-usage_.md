@@ -8,11 +8,11 @@ type:         Answer
 tags:         software-recommendation gpu conky
 created_date: 2018-03-31 17:44:58
 edit_date:    2019-07-08 10:35:06
-votes:        "19 "
+votes:        "20 "
 favorites:    
-views:        "529,534 "
+views:        "532,557 "
 accepted:     
-uploaded:     2023-08-23 11:47:13
+uploaded:     2023-09-03 11:16:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-03-31-How-to-measure-GPU-usage_.md
 toc:          false
 navigation:   false

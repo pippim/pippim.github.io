@@ -7,12 +7,12 @@ stack_url:    https://askubuntu.com/q/1137679
 type:         Answer
 tags:         apt initramfs
 created_date: 2019-04-24 11:33:50
-edit_date:    
+edit_date:    2023-08-25 23:07:54
 votes:        "2 "
 favorites:    
-views:        "92,238 "
+views:        "93,314 "
 accepted:     
-uploaded:     2023-08-23 11:47:13
+uploaded:     2023-09-03 11:16:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-24-initramfs-error-when-installing-_-updating.md
 toc:          false
 navigation:   false
@@ -31,16 +31,16 @@ sudo apt-get -f install
 sudo dpkg --configure -a
 ```
 
-Additionally ensure this command:
+Additionally ensure this executable exists:
 
 ``` 
-ll /usr/share/initramfs-tools/hooks/fsck
+ls -alF /usr/share/initramfs-tools/hooks/fsck
 ```
 
 returns this output:
 
 ``` 
--rwxr-xr-x 1 root root 2468 Sep 18  2018 /usr/share/initramfs-tools/hooks/fsck*
+-rwxr-xr-x 1 root root 2468 Sep 18  2018 /usr/share/initramfs-tools/hooks/fsck
 ```
 
 

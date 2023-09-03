@@ -8,11 +8,11 @@ type:         Answer
 tags:         battery monitoring
 created_date: 2019-11-04 11:56:44
 edit_date:    
-votes:        "3 "
+votes:        "4 "
 favorites:    
-views:        "19,108 "
+views:        "19,289 "
 accepted:     
-uploaded:     2023-08-23 11:47:13
+uploaded:     2023-09-03 11:16:59
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-04-How-do-I-check-the-status-of-the-CMOS-battery_.md
 toc:          false
 navigation:   false
