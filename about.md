@@ -101,15 +101,12 @@ of pages are automatically updated.
 <a id="where-is-pippim?"></a>
 ## Where is Pippim located?
 
-Figuratively speaking, Pippim is located in "the clouds" on 
-[Google Sites 🔗](https://pippim.com) (https://pippim.com) and
+Figuratively speaking, Pippim is located in "the cloud" on
 [GitHub 🔗](https://github.com/pippim/pippim.github.io)
 (https://github.com/pippim/pippim.github.io) where all the 
 source code is kept. The website you are viewing now is found
 on [GitHub Pages 🔗](https://pippim.github.io) 
-(https://pippim.github.io). All three websites are hosted
-for free by the providers. Other than the cost of time to 
-learn web design, I can't believe how cheap the process has been!
+(https://pippim.github.io).
 
 As you may have deduced by the little yellow dot in this image
 though, Pippim is physically located in Edmonton, Canada. 
@@ -124,11 +121,12 @@ surprisingly warm in Edmonton.
 <a id="when-was-pippim-created?"></a>
 ## When was Pippim created?
 
-That's an easy question; The Domain Name and Website were
-created on October 16, 2021.
-Initially, www.pippim.com was created on Google Sites.
-After a few weeks,
-the website was moved to GitHub Pages.
+- The Pippim posts in
+***Ask Ubuntu*** started in 2016. 
+- Pippim major software development in Linux started in 2019.
+- The **pippim.com** Domain Name was 
+created on October 16, 2021. 
+- The **pippim.com** Website was created over 2022.
 
 ---
 
@@ -185,67 +183,57 @@ was created can be found on in the middle of the
 
 # Resume
 
-- Graduated NAIT Computer Systems Technology -
+## Formal Education and Accreditations
+
+- Graduated with Honours, NAIT Computer Systems Technology -
 IBM S/390 and CDC Cyber 720 Mainframes
 - Education in three Accounting Levels, Business, Statistics, 
 COBOL, Assembly Language, RPG, Mark IV, Fortran and BASIC
-- Two decades developing multi-user, multiple-host, multiple-vendor
-applications on IBM System/36, IBM AS/400 and IBM PC Networks
-- President of Edmonton IBM System/36 Users Group for one year
+- President of the Edmonton IBM System/36 Users Group for one year
 - Information Systems Professional (I.S.P.) designation from
 Canadian Information Processing Society (C.I.P.S.)
 
-## Linux Skills Begin in 2014
+## Highlights
 
-### Operating System development 2014
+- Decades of Software Development Experience
+- Self-learner utilizing on-line resources from Vendors, GitHub,
+Stack Exchange, Open Source Software Code e.g. Linux
+- Fast learner with strong problem solving skills
+- Passionate hard worker motivated to do a good job
+- Doesn't give up where others throw in the towel and quit
+- Balance performance tuning and perfection with realistic timelines
+- Ability to prioritize / cost benefit analysis
+- Excellent documentation and people skills
+- Volunteer helping others to learn, fix and use Linux and Ubuntu
+- In 2018, [Ranked #1 🔗](https://stackexchange.com/leagues/89/year/askubuntu/2018-01-01
+"Stack Exchange 2018 Point Ranking"){:target="_blank"}
+in the world, with 29,278 points in *Ask Ubuntu*
+
+## OS to Application to Full-Stack Internet Development  
 
 - Modify Enhanced I/O (written in C), kernel block device 
 giving Intel Window's Rapid Storage Technology to Linux
-- Conky System Monitor scripts
-- System Monitor Indicator scripts
-- Grub multiple-boot OS (written in C) enhancement from whole
-seconds countdown to decisecond countdown (1/10th of a second)
-for smooth circular progress animation
-
-### Volunteer Technical Support 2016
-
-- Volunteer helping others to learn, fix and use Linux and Ubuntu
-- In 2018, [ranked #1](https://github.com/pippim/pippim.github.io/blob/main/assets/img/ask%20ubuntu%20points%202018.png
-"Screenshot (with link at top)"){:target="_blank"}
-in the world with 29,278 points in *Ask Ubuntu*
-
-### Bash development 2019
-
-- Develop Multi-Timer, Eyesome, Iconic, cdd, cpuf
-and miscellaneous scripts in bash
-
-### Python development 2020
-
-- Create mmm (Multiple Monitor Management)
-- Begin mserve (Music Server) development. Complete alpha version in 2023
+- Conky System Monitor, Network Bandwidth monitoring, System
+Monitor Indicator scripts
+- Developed Multi-Timer, Eyesome, Iconic, cdd and cpuf **BASH** scripts
+- Developed **mserve** (Music Server) with many 
+<a href="https://pippim.github.io/programs/mserve.html#features">innovative features</a>
 - SQLite3, beautiful soup, tkinter (TCL), x-lib, GNOME, FTP, SSH
 and many other Python packages
-
-### Internet development 2022
-
 - Pippim Website with Javascript on-line apps. Export, email and import
 web browser local storage files
 - Stack Overflow SQL database query of 1500 posts converted to Pippim 
 website *Answers* webpage
-- Internet of Things - control electrical devices, computers and
+- Internet of Things - network control of electrical outlets, computers and
 Smart TVs (Sony REST API and Android Debugging Bridge)
-- GitHub, pyCharm, HTML, CSS, SCSS, SASS, Kramdown and Jekyll
+- GitHub, Stack Exchange, pyCharm, HTML, CSS, SCSS, SASS, 
+Markdown, Kramdown, Rouge and Jekyll
 
-### Python development 2023
+## Summary and Objectives
 
-- Complete **mserve** (Music Server) alpha version
-- Extensive **mserve** documentation on Pippim website
-
-### Objectives
-
-- Seeking fast-paced challenging software development projects
-- Work with teams that share passion for software development
-
+- Strong problem solving and documentation skills
+- Quick learner of complex technologies
+- Seeking rewarding and challenging software development projects
 
 ---
 
