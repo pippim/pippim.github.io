@@ -116,9 +116,10 @@ self-documenting app. &emsp;&emsp;
 
 ---
 
+<a id="cdd"></a>
 ## `cdd` a Change Directory (`cd`) Power Tool
 
-<!-- Dummy div required for <a href...> to work for clicking -->
+<!-- id link above to click from Ask Ubuntu answer -->
 <div>
    <a href="https://askubuntu.com/a/1276376/307523">
 
