@@ -1262,7 +1262,7 @@ Additional notes:
 
 ## Basic Time Synchronization
 
-The "☰" (Hamburger) Dropdown Menu is shown below:
+The `☰` (Hamburger) Dropdown Menu is shown below:
 
 {% include image.html src="/assets/img/mserve/mserve lyrics hamburger menu.png"
    alt="mserve lyrics hamburger menu.png"
@@ -1293,12 +1293,12 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 #### Basic Time Synchronization Sample Video Highlights
 {:.no_toc}
 
-1. The "☰" (Hamburger) Dropdown Menu where the *Basic time index* option is picked.
+1. The `☰` (Hamburger) Dropdown Menu where the *Basic time index* option is picked.
 2. Canceling the *Basic time index* option once started.
-3. Restarting the *Basic time index* from the "☰" menu.
+3. Restarting the *Basic time index* from the `☰` menu.
 4. Clicking each line as it is sung.
 5. The time indices are automatically saved when the song ends, 
-or you can choose the "Save index" option from the "☰" menu if,
+or you can choose the "Save index" option from the `☰` menu if,
 you don't want to wait for the song to end.
 
 ---
@@ -1317,7 +1317,7 @@ cases the *Fine-Tune Time Index* window is provided.
 ### Begin Sync option
 
 In the following video notice how the option is included in
-the "☰" (Hamburger) menu and is selected. The video delays long
+the `☰` (Hamburger) menu and is selected. The video delays long
 enough so that you can see all the menu options.
 
 <video src="https://user-images.githubusercontent.com/92641463/149632176-7ce43ab5-a207-4825-bf27-70000b494e64.mp4"
@@ -1328,7 +1328,7 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 This video shows:
 
-1. The Lyrics "☰" (Hamburger) Dropdown Menu options
+1. The Lyrics `☰` (Hamburger) Dropdown Menu options
 2. The "Ignore click" option on the menu. This closes the menu 
 which is the same as moving the mouse off the menu and clicking 
 outside the menu.
@@ -1384,7 +1384,7 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 1. The "Paused" graphic in the regular music player. It is 
 programmatically generated and not an image file that can be changed.
-2. The regular music is resumed and the "☰" menu is used to 
+2. The regular music is resumed and the `☰` menu is used to 
 select the *Fine-tune time index* option
 3. The <kbd>Sample all</kbd> button is selected
 4. The function plays the first second of each line
