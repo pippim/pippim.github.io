@@ -222,6 +222,8 @@ utilizing YAD and Zenity GUI for console
 <a href="https://pippim.github.io/programs/mserve.html#features">innovative features</a>
 - SQLite3, beautiful soup, tkinter (TCL), x-lib, GNOME, FTP, SSH
 and many other Python packages
+- `gmail.com` programming for automated daily backups via email and 
+Backup Rotation
 - Pippim Website with Javascript on-line apps. Export, email and import
 web browser local storage files
 - Stack Overflow SQL database query of 1500 posts converted to Pippim 
