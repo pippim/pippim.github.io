@@ -204,6 +204,7 @@ Stack Exchange, Open Source Software Code e.g. Linux
 - Balance performance tuning and perfection with realistic timelines
 - Ability to prioritize / cost benefit analysis
 - Excellent documentation and people skills
+- Extensive business and financial systems experience
 - Volunteer helping others to learn, fix and use Linux and Ubuntu
 - In 2018, [Ranked #1 🔗](https://stackexchange.com/leagues/89/year/askubuntu/2018-01-01
 "Stack Exchange 2018 Point Ranking"){:target="_blank"}
@@ -215,7 +216,8 @@ in the world, with 29,278 points in *Ask Ubuntu*
 giving Intel Window's Rapid Storage Technology to Linux
 - Conky System Monitor, Network Bandwidth monitoring, System
 Monitor Indicator scripts
-- Developed Multi-Timer, Eyesome, Iconic, cdd and cpuf **BASH** scripts
+- Developed Multi-Timer, Eyesome, Iconic, cdd and cpuf **BASH** scripts 
+utilizing YAD and Zenity GUI for console
 - Developed **mserve** (Music Server) with many 
 <a href="https://pippim.github.io/programs/mserve.html#features">innovative features</a>
 - SQLite3, beautiful soup, tkinter (TCL), x-lib, GNOME, FTP, SSH
