@@ -135,14 +135,14 @@ way, on mobile and desktop systems.
 
 ### Hamburger Button
 
-The `☰` (Hamburger) button reveals Page Header Buttons that
+The <kbd> ☰ </kbd> (Hamburger) button reveals Page Header Buttons that
 will not fit horizontally on a phone screen. A dropdown
 menu appears with buttons arranged vertically.
 
 
 ### Search Button
 
-The `🔍` (Magnifying Glass) button opens {{ site.title }} engineered
+The <kbd> 🔍 </kbd> (Magnifying Glass) button opens {{ site.title }} engineered
 search engine. Search results are point-weighted with words
 appearing in the Page Titles getting more weight then the
 same word appearing in the Page Body.
@@ -171,7 +171,10 @@ navigation buttons to take you to other pages:
 
 - <kbd>❓ About</kbd> discusses everything you want to know about {{ site.title }}. Still have questions? Just email.
 
-- <kbd>✅ Answers</kbd> to questions people have using computers. As of {{ site.refreshed | date: "%B %e, %Y" }}, {{ site.title }} answers have over **{{ site.views_human }} views!**
+- <kbd>✅ Answers</kbd> to questions people have about computers. 
+As of {{ site.refreshed | date: "%B %e, %Y" }}, 
+there have been over **{{ site.views_human }} views**
+of the questions where {{ site.title }} has posted up-voted answers. 
 
 - <kbd>💻 Programs</kbd> are applications {{ site.title }} created to make your life easier.
 
