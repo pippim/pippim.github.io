@@ -113,9 +113,11 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 The video on the left shows the {{ site.title }} Website 
 on a typical mobile phone screen. The bottom of the video
-shows Google Chrome Debugger. Use `<Control>` +
-`<Shift>` + `i` to open
-Google Chrome's debugger. The **Console** tab is selected.
+shows Google Chrome Debugger. 
+
+Use `<Control>` +`<Shift>` + `i` to open
+Google Chrome's debugger. Then select the **Console** tab.
+
 There are no errors in the {{ site.title }} website.
 Go to almost any website in the world and you will see
 errors. Of course {{ site.title }} isn't perfect and had errors too.
@@ -126,18 +128,21 @@ and fixed.
 
 At the top of each page, the "Sun" / "Crescent Moon" will
 spin when clicked. Click the "Sun" to use your phone outside.
-Click the "Crescent Moon" to use your phone inside.
+Click the "Crescent Moon" to use your phone inside. 
+
+The *Color Theme* icon is in the same place, and works the same
+way, on mobile and desktop systems.
 
 ### Hamburger Button
 
-The “☰” (Hamburger) button reveals Page Header Buttons that
+The `☰` (Hamburger) button reveals Page Header Buttons that
 will not fit horizontally on a phone screen. A dropdown
 menu appears with buttons arranged vertically.
 
 
 ### Search Button
 
-The “🔍” (Magnifying Glass) button opens {{ site.title }} engineered
+The `🔍` (Magnifying Glass) button opens {{ site.title }} engineered
 search engine. Search results are point-weighted with words
 appearing in the Page Titles getting more weight then the
 same word appearing in the Page Body.
