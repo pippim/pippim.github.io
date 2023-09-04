@@ -116,6 +116,32 @@ self-documenting app. &emsp;&emsp;
 
 ---
 
+## `cdd` a Change Directory (`cd`) Power Tool
+
+<!-- Dummy div required for <a href...> to work for clicking -->
+<div>
+   <a href="https://askubuntu.com/a/1276376/307523">
+
+      <video src="https://user-images.githubusercontent.com/92641463/265505993-42c038ab-26c1-48f4-8ee5-457dcfb7638e.mp4"
+      data-canonical-src="https://user-images.githubusercontent.com/92641463/265505993-42c038ab-26c1-48f4-8ee5-457dcfb7638e.mp4"
+      controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+      style="max-height:640px; width: 100% !important; height: auto !important;">
+        </video>
+   </a>
+</div>
+
+Type `cdd` and automatically go down one directory when only one exists.
+
+Type `cdd` and pick from list of sub-directories to move down to. Type a
+letter and move to group of sub-directories beginning with that letter.
+
+Double-click on entry in sub-directory list or use arrow keys and press
+<kbd>Enter</kbd>.
+
+<a href="https://askubuntu.com/a/1276376/307523" style="font-size: 20px;">Read More on *Ask Ubuntu*...</a>  
+
+---
+
 ## TV Remote Turns Off Five "Things"
 
 <!-- Dummy div required for <a href...> to work for clicking -->
