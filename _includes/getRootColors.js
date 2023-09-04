@@ -78,8 +78,8 @@ var colorSchemeDark = {
     "--body-link-inverted-color": "#e19447",
     "--link-visited": "#CF9FFF",
     "--blockquote-text-color": "#a1b1b8",
-    "--code-bg-color": "#d3d6da",
-    "--code-text-color": "#365462",
+    "--code-bg-color": "#365462",
+    "--code-text-color": "#d3d6da",
     "--border-color": "#4c4640",
     "--table-border-color": "#494b4c",
     "--hr-border-color": "#3f3031",
@@ -87,8 +87,7 @@ var colorSchemeDark = {
     "--kbd-border-color": "#c6cbd1",
     "--kbd-border-bottom-color": "#959da5",
     "--kbd-box-shadow-color": "#959da5",
-    //"--kbd-color": "#fffff0"
-    "--kbd-color": "#444d56"
+    "--kbd-color": "#fffff0"
 }
 /* Oct 9/22 - Too dark of background, so switch to Cayman colors
     "--code-bg-color": "#13161a",
@@ -126,18 +125,22 @@ var colorSchemeDark = {
         "--kbd-box-shadow-color": "#959da5",
         "--kbd-color": "#444d56"
              - Keyboard dark colors:
+        "--code-bg-color": "#d3d6da",
+        "--code-text-color": "#365462",
         "--kbd-background-color": "#002147",
         "--kbd-border-color": "#c6cbd1",
         "--kbd-border-bottom-color": "#959da5",
         "--kbd-box-shadow-color": "#959da5",
         "--kbd-color": "#fffff0"
         New:
+        "--code-bg-color": "#365462",
+        "--code-text-color": "#d3d6da",
         "--kbd-background-color": "#002147",
         "--kbd-border-color": "#c6cbd1",
         "--kbd-border-bottom-color": "#959da5",
         "--kbd-box-shadow-color": "#959da5",
         X "--kbd-color": "#fffff0"
-        "--kbd-color": "#444d56"
+        "--kbd-color": "#444d56"  # NO VISIBLE CHANGES
 
 
 */
