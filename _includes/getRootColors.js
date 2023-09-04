@@ -24,7 +24,6 @@ var colorSchemeCayman = {
     "--progress-bar-bg-color": "#c0c0c0",
     "--on-off-switch-opacity": "1.0",
     "--flash-bg-color": "#808080",
-    "--link-visited": "#800080",
     "--header-heading-color": "#ffffff",
     "--header-bg-color": "#159957",
     "--header-bg-color-secondary": "#155799",
@@ -35,6 +34,7 @@ var colorSchemeCayman = {
     "--body-bg-color": "#ffffff",
     "--body-link-color": "#1e6bb8",
     "--body-link-inverted-color": "#e19447",
+    "--link-visited": "#800080",
     "--blockquote-text-color": "#819198",
     "--code-bg-color": "#f3f6fa",
     "--code-text-color": "#567482",
@@ -66,7 +66,6 @@ var colorSchemeDark = {
     "--progress-bar-bg-color": "#303030",
     "--on-off-switch-opacity": "0.75",
     "--flash-bg-color": "#808080",
-    "--link-visited": "#CF9FFF",
     "--header-heading-color": "#ffd080",
     "--header-bg-color": "#057937",
     "--header-bg-color-secondary": "#053779",
@@ -77,6 +76,7 @@ var colorSchemeDark = {
     "--body-bg-color": "#101010",
     "--body-link-color": "#5eabf8",
     "--body-link-inverted-color": "#e19447",
+    "--link-visited": "#CF9FFF",
     "--blockquote-text-color": "#a1b1b8",
     "--code-bg-color": "#d3d6da",
     "--code-text-color": "#365462",
@@ -87,7 +87,8 @@ var colorSchemeDark = {
     "--kbd-border-color": "#c6cbd1",
     "--kbd-border-bottom-color": "#959da5",
     "--kbd-box-shadow-color": "#959da5",
-    "--kbd-color": "#fffff0"
+    //"--kbd-color": "#fffff0"
+    "--kbd-color": "#444d56"
 }
 /* Oct 9/22 - Too dark of background, so switch to Cayman colors
     "--code-bg-color": "#13161a",
@@ -117,6 +118,27 @@ var colorSchemeDark = {
             "--section-headings-color": "#25a967",
             "--blockquote-text-color": "#a1b1b8",
             "--bold-color": "#e9ede9",
+
+    Sep 4/23 - Keyboard cayman colors:
+        "--kbd-background-color": "#fafbfc",
+        "--kbd-border-color": "#c6cbd1",
+        "--kbd-border-bottom-color": "#959da5",
+        "--kbd-box-shadow-color": "#959da5",
+        "--kbd-color": "#444d56"
+             - Keyboard dark colors:
+        "--kbd-background-color": "#002147",
+        "--kbd-border-color": "#c6cbd1",
+        "--kbd-border-bottom-color": "#959da5",
+        "--kbd-box-shadow-color": "#959da5",
+        "--kbd-color": "#fffff0"
+        New:
+        "--kbd-background-color": "#002147",
+        "--kbd-border-color": "#c6cbd1",
+        "--kbd-border-bottom-color": "#959da5",
+        "--kbd-box-shadow-color": "#959da5",
+        X "--kbd-color": "#fffff0"
+        "--kbd-color": "#444d56"
+
 
 */
 
