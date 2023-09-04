@@ -111,13 +111,14 @@ style="max-height:640px; width: 100% !important; height: auto !important;">
 
 -->
 
-This website works on mobile phones. This video shows a
-typical mobile phone screen. Using `<Control>` +
-`<Shift>` + `i` opens
+The video on the left shows the {{ site.title }} Website 
+on a typical mobile phone screen. The bottom of the video
+shows Google Chrome Debugger. Use `<Control>` +
+`<Shift>` + `i` to open
 Google Chrome's debugger. The **Console** tab is selected.
-There are no errors in the Pippim website.
+There are no errors in the {{ site.title }} website.
 Go to almost any website in the world and you will see
-errors. Of course Pippim isn't perfect and had errors too.
+errors. Of course {{ site.title }} isn't perfect and had errors too.
 But attention to detail means errors are tracked down
 and fixed.
 
@@ -136,7 +137,7 @@ menu appears with buttons arranged vertically.
 
 ### Search Button
 
-The “🔍” (Magnifying Glass) button opens Pippim engineered
+The “🔍” (Magnifying Glass) button opens {{ site.title }} engineered
 search engine. Search results are point-weighted with words
 appearing in the Page Titles getting more weight then the
 same word appearing in the Page Body.
@@ -504,6 +505,9 @@ locations:
 - A few local images are stored in `assets/img/` directory. The 
 hundreds of images in blog posts come directly from *Stack Exchange* 
 and are not stored on the `pippim.github.io` website.
+- Videos (up to 10 MB) are stored as comments in the associated 
+GitHub Repository (e.g. **mserve**), and then linked as an HTML 
+image source.
 - SCSS and [Sass CSS 🔗](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/
 "What is the difference between SCSS and SASS?"){:target="_blank"} 
 files are mostly stored in the `assets/css/` directory. Some are 
@@ -532,7 +536,7 @@ the `_includes` directory.
 {:.no_toc}
 
 The directory tree will help you get a better understanding
-of the Pippim website at `pippim.github.io`. As of
+of the {{ site.title }} website at `pippim.github.io`. As of
 {{ site.refreshed | date: "%B %e, %Y" }}, the directory tree
 for {{ site.title }} on GitHub Pages looked like this:
 
