@@ -300,7 +300,8 @@ The {{ site.title }} website is hosted on **GitHub Pages**.
 You can download (or simply view) the {{ site.title }}
 website markdown files. For example, `index.md` is the markdown
 file for the page you are reading now and available
-[here 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md "See this page's markdown code in GitHub Pages 🔗").
+[here 🔗](https://github.com/pippim/pippim.github.io/edit/main/index.md 
+"See this page's markdown code in GitHub Pages 🔗"){:target="_blank"}.
 
 Get your own website up and running in a weekend by picking
 from a collection of website designs called themes. Then
