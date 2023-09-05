@@ -3,6 +3,10 @@ title: Free Programs and Apps
 layout: default
 ---
 
+{% include toc.md %}
+
+---
+
 <div id="alarm-clock-image" class="slide-right">
    <a href="programs/tim-ta.html">
       {% include image.html src="/assets/img/tim-ta/alarm-clock.jpg"
@@ -29,12 +33,14 @@ sounds.</i><br>
 </div>
 
 ### Introduction
+{:.no_toc}
 
 ***Tim-ta*** (***Tim***ed - ***ta***sks) is perfect for projects
 with a fixed set of tasks that take a specific amount of time.
 It gets the job done with each task started at the exact second!
 
 ### Sample projects
+{:.no_toc}
 
 Some examples where you can use Tim-ta:
 
@@ -117,7 +123,7 @@ self-documenting app. &emsp;&emsp;
 ---
 
 <a id="cdd"></a>
-## `cdd` a Change Directory (`cd`) Power Tool
+## `cdd` - a Change Directory (`cd`) Power Tool
 
 <!-- id link above to click from Ask Ubuntu answer -->
 <div>
@@ -126,25 +132,34 @@ self-documenting app. &emsp;&emsp;
       <video src="https://user-images.githubusercontent.com/92641463/265505993-42c038ab-26c1-48f4-8ee5-457dcfb7638e.mp4"
       data-canonical-src="https://user-images.githubusercontent.com/92641463/265505993-42c038ab-26c1-48f4-8ee5-457dcfb7638e.mp4"
       controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
-      style="float: left; width: 60% !important; margin: 1rem 2rem 1rem 0; 
+      style="float: left; width: 75% !important; margin: 1rem 2rem 1rem 0; 
       max-height:640px; height: auto !important;">
         </video>
    </a>
 </div>
 
-<font size = "6">No more typing long cryptic directory names!</font>
+<font size = "5">No more typing long cryptic directory names!</font>
 
-Using `cdd` - a Change Directory (`cd`) Power Tool will save you time
+Using `cdd` - a Change Directory (`cd`) Power Tool, will save you time
 and annoyance. It's a small Bash script you can easily drop into your
-terminal startup file or put into your path. It uses `zenity` which is
+terminal startup file (`~/.bashrc`) or put into a bash script file 
+within your path. `cdd` uses `zenity` which is
 available for most distributions.
 
-Type `cdd` and automatically go down one directory when only one exists.
+The [small `cdd` bash script 🔗](https://askubuntu.com/a/1276376/307523 
+"Open Ask Ubuntu Answer containing the `cdd` bash script"){:target="_blank"}
+is stored in an *Ask Ubuntu* answer post.
 
-Type `cdd` and pick from list of sub-directories to move down to. Type a
+### Simple To Use:
+{:.no_toc}
+
+- Type `cdd` and automatically go down one directory when only one 
+sub-directory exists below.
+
+- Type `cdd` and pick from list of sub-directories to move down to. Type a
 letter and move to group of sub-directories beginning with that letter.
 
-Double-click on entry in sub-directory list or use arrow keys and press
+- Double-click on entry in sub-directory list or use arrow keys and press
 <kbd>Enter</kbd>.
 
 <a href="https://askubuntu.com/a/1276376/307523" style="font-size: 20px;">Read More on *Ask Ubuntu*...</a>  
@@ -259,9 +274,8 @@ the remote drives as local partitions.
 
 ---
 
-## Other Pippim programs
+## Other {{ site.title }} Programs
 
 - `eyesome` [Multi-monitor brightness and color temperature based on sun times](https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime)
 - `clone-ubuntu` [Bash script to clone active Ubuntu Partition to clone partition](https://askubuntu.com/questions/1028604/bash-script-to-backup-clone-ubuntu-to-another-partition/1028605#1028605)
 - `cpuf` [GUI to set CPU Min/Max Frequency](https://askubuntu.com/questions/1141605/gui-or-simple-bash-script-to-throttle-the-cpu/1142671#1142671)
-- `cdd` [GUI to "cd" down into directory](https://askubuntu.com/questions/930334/how-can-i-move-down-one-directory/1276376#1276376)
