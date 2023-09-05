@@ -138,13 +138,15 @@ self-documenting app. &emsp;&emsp;
    </a>
 </div>
 
-<font size = "5">No more typing long cryptic directory names!</font>
+<font size = "5">No more struggling with long cryptic directory names!</font>
 
 Using `cdd` - a Change Directory (`cd`) Power Tool, will save you time
-and annoyance. It's a small Bash script you can easily drop into your
+and annoyance. 
+
+`cdd` is a small Bash script you can easily drop into your
 terminal startup file (`~/.bashrc`) or put into a bash script file 
-within your path. `cdd` uses `zenity` which is
-available for most distributions.
+within your path. It uses the `zenity` GUI from the console. `zenity`
+is available in most distributions.
 
 The [small `cdd` bash script 🔗](https://askubuntu.com/a/1276376/307523 
 "Open Ask Ubuntu Answer containing the `cdd` bash script"){:target="_blank"}
@@ -153,14 +155,15 @@ is stored in an *Ask Ubuntu* answer post.
 ### Simple To Use:
 {:.no_toc}
 
-- Type `cdd` and automatically go down one directory when only one 
-sub-directory exists below.
+- Type `cdd` and automatically go down one directory if only one 
+sub-directory exists.
 
-- Type `cdd` and pick from list of sub-directories to move down to. Type a
-letter and move to group of sub-directories beginning with that letter.
+- Type `cdd` and then a list of sub-directories appears in a nifty
+GUI window. Type a letter and the lists scrolls to the group of 
+sub-directories names that begin with that letter.
 
-- Double-click on entry in sub-directory list or use arrow keys and press
-<kbd>Enter</kbd>.
+- To select an entry in the sub-directory list, double-click on 
+the entry or use arrow keys to highlight and press <kbd>Enter</kbd>.
 
 <a href="https://askubuntu.com/a/1276376/307523" style="font-size: 20px;">Read More on *Ask Ubuntu*...</a>  
 
