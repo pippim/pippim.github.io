@@ -126,10 +126,18 @@ self-documenting app. &emsp;&emsp;
       <video src="https://user-images.githubusercontent.com/92641463/265505993-42c038ab-26c1-48f4-8ee5-457dcfb7638e.mp4"
       data-canonical-src="https://user-images.githubusercontent.com/92641463/265505993-42c038ab-26c1-48f4-8ee5-457dcfb7638e.mp4"
       controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
-      style="max-height:640px; width: 100% !important; height: auto !important;">
+      style="float: left; width: 60% !important; margin: 1rem 2rem 1rem 0; 
+      max-height:640px; height: auto !important;">
         </video>
    </a>
 </div>
+
+<font size = "6">No more typing long cryptic directory names!</font>
+
+Using `cdd` - a Change Directory (`cd`) Power Tool will save you time
+and annoyance. It's a small Bash script you can easily drop into your
+terminal startup file or put into your path. It uses `zenity` which is
+available for most distributions.
 
 Type `cdd` and automatically go down one directory when only one exists.
 
