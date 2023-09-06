@@ -1728,6 +1728,14 @@ if elapsed > 60.0:  # Aug 31/23 WiFi change 10.0 to 60.0 for `diff`
 <a id="HelpTestHost"></a>
 ## Optional Remote Host Support
 
+There are two types of remote hosts supported:
+
+- Linux File Server supported with ssh / sshfs
+- Android Mobile Phone supported with ftp / curlftpfs
+
+### Linux File Server
+{:.no_toc}
+
 To debug keeping host awake, run the following commands
 on the host and client:
 
@@ -1765,6 +1773,39 @@ will not let you define this debug option.
 More details: https://help.ubuntu.com/community/SSHFS
 
 
+### Android Mobile Phone
+{:.no_toc}
+
+Older versions of **mserve** supported ssh on mobile but
+the Android application Wifi SSH Server no longer supports
+sshfs. In September 2023, **mserve** switched to FTP for
+mobile phones, with local filename caching.
+
+Install 
+[Wifi FTP Server 🔗](https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver&amp;hl=en_CA&amp;gl=US 
+"Link to Google Play"){:target="_blank"} 
+from Google Play.
+
+More details on using FTP are 
+<a href="#android-wifi-ftp-server">above</a>. 
+
+Initially FTP startup time was 5 minutes in **mserve**. Subsequently
+file-caching was utilized and startup time is now a few seconds for
+4,000 music files.
+
+Problems still exist using `curlftpfs` which hasn't been updated in
+9 years. For example, go to *Location Music Tree* (main window) and
+select *View* Dropdown Menu, *View SQL Music Table* option, and then
+*Update Metadata* button. All files with `#` in the name are reported
+as `2) Other Location`. As of September 6, 2023, these songs:
+
+- Cannot be played 
+- Cannot be synced
+
+
+
+---
+
 <a id="HelpTestHostStatus"></a>
 ### Test Remote Host Status Display
 {:.no_toc}
@@ -1776,6 +1817,8 @@ These steps are followed when a remote host is tested:
 - After `nc` or `nmap` passes test, the music top directory is mounted
 - After mounting, **mserve** checks that artist subdirectories exist
 - After validation, scroll up to review results
+- For FTP Hosts, there can be thousands of results to review, so use: 
+<kbd>Ctrl</kbd> + <kbd>Home</kbd> and <kbd>Ctrl</kbd> + <kbd>End</kbd>.  
 - After review, click the *Close Test Results* button
 
 ***Note:*** When synchronizing a remote host location, the same
