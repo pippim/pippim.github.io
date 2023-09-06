@@ -181,6 +181,7 @@ was created can be found on in the middle of the
 
 ---
 
+<a id="resume"></a>
 # Resume
 
 ## Formal Education and Accreditations
