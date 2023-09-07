@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,017 "
 accepted:     
-uploaded:     2023-09-03 11:16:59
+uploaded:     2023-09-07 12:06:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-11-10-How-to-quickly-find-the-deepest-subdirectory.md
 toc:          false
 navigation:   false

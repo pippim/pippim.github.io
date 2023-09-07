@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,563 "
 accepted:     Accepted
-uploaded:     2023-09-03 11:16:59
+uploaded:     2023-09-07 12:06:34
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-07-22-CPU-Frequency-is-allways-the-lowest-possible-_and-high-CPU-usage_.md
 toc:          false
 navigation:   false
