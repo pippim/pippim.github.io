@@ -49,9 +49,10 @@ a Time Index list and this term is frequently used)
 - Written in relatively easy to learn Python so you can modify
 for Linux, Windows WSL, Chrome OS, Windows (a lot more work) 
 and Mac (modest amount of more work)
-- An <a href="#sql-database-using-sqlite3">SQL Database</a> 
+- Centralized <a href="#sql-database-using-sqlite3">SQL Database</a> 
 shares lyrics score and time index 
 across all locations for conformity and reduced storage space.
+- Make `.lrc` (synchronized lyrics) file for other music players.
 - Proprietary data dictionary technology to quickly 
 view SQL table rows and even 
 <a href="#sql-location-table-viewer-sample-video">rearrange columns</a>.
@@ -416,6 +417,8 @@ context-sensitive popup menu appears.
 - ***Rename Song Title*** - Rename the song title.
 - ***Open Kid3 Audio Tagger*** - Use Kid3 to set Metadata tags.
 - ***Open Nautilus File Manager*** - Use File Manager to view directory.
+- ***Make `.lrc` file*** - Make synchronized lyrics file for other music
+players. File created in same album directory as the music file.
 - ***View Raw Metadata*** - View metadata tags returned by `ffmpeg`.
 - ***View SQL Metadata*** - View metadata in pretty format kept by **mserve**.
 - ***Ignore Click*** - Close popup menu.
@@ -1795,7 +1798,8 @@ file-caching was utilized and startup time is now a few seconds for
 
 Problems still exist using `curlftpfs` which hasn't been updated in
 9 years. For example, go to *Location Music Tree* (main window) and
-select *View* Dropdown Menu, *View SQL Music Table* option, and then
+select the *View* Dropdown Menu. Then select the *SQL Music Table* 
+option, and then the
 *Update Metadata* button. All files with `#` in the name are reported
 as `2) Other Location`. As of September 6, 2023, these songs:
 
