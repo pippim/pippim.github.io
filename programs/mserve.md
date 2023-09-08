@@ -288,7 +288,7 @@ your storage device:
 ## Dropdown Menus
 
 The top-left corner of the *Music Location Tree* window contains 
-three dropdown menus; ***File***, ***Edit*** and ***View***. 
+three dropdown menus; ***File***, ***Edit***, ***View*** and ***Tools***. 
 Click on the name and the dropdown menu options appear:
 
 ### File Dropdown Menu
@@ -342,8 +342,6 @@ dropdown menu option, the light blue ruler below the dropdown menus
 can be clicked to open the *Information Centre*.
 - ***View Locations*** - View predefined locations.
 - ***View Playlists*** - View predefined playlists.
-- ***Enable TV Commercial Buttons*** - Remove *FF*/*Rewind* buttons and
-replace with *TV Commercial* and *Intermission* buttons.
 - ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
 buttons and replace with *FF*/*Rewind* buttons.
 - ***SQL Music Table*** - Scroll through all songs for all locations that
@@ -355,6 +353,18 @@ view more details. Buttons to select specific rows and search text.
 - ***SQL Location Table*** - Scroll through location rows. Button to 
 search text. This function is inferior to the ***View Locations*** 
 function mentioned above.
+  
+***NOTE:*** The three SQL views allow the column to be moved. Click and
+hold the heading to drag the column to a different position.
+
+
+### Tools Dropdown Menu
+{:.no_toc}
+
+- ***Enable TV Commercial Buttons*** - Remove *FF*/*Rewind* buttons and
+replace with *TV Commercial* and *Intermission* buttons.
+- ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
+buttons and replace with *FF*/*Rewind* buttons.
 - ***Debug Information*** - Displays information to console and to the
 *Information Centre*. This information is helpful to those customizing
 **mserve**. If any applications windows are off visible desktop they are
@@ -369,9 +379,6 @@ dropdown menu options occupy the same line and replace each other when they
 are clicked. The button selection only effects the 
 the current predefined Playlist within the current predefined
 Location. Other locations and playlists maintain their button selection.
-  
-***NOTE:*** The three SQL views allow the column to be moved. Click and
-hold the heading to drag the column to a different position.
 
 
 ## Right-Click Popup Menus
@@ -390,6 +397,8 @@ is why it is called "context-sensitive".
 
 When you click on an Artist or Album, 
 it is expanded and entries beneath are highlighted in yellow.
+The yellow highlighted entries is a reminder of what will be
+effected by the next action.
 
 #### Menu Options:
 {:.no_toc}
@@ -401,7 +410,9 @@ the Artist or Album are collapsed, and the pop-up menu is removed.
 - ***Open Kid3 Audio Tagger*** - Use Kid3 to set Metadata tags.
 - ***Open Nautilus File Manager*** - Use File Manager to view directory.
 - ***Ignore Click*** - Remove yellow highlight, list remains expanded, and
-pop-up menu is removed.
+pop-up menu is removed. Popup menu can also be closed
+by moving mouse out-of-menu and clicking.
+
 
 ### Song Right-Click Popup Menu
 {:.no_toc}
@@ -419,9 +430,12 @@ context-sensitive popup menu appears.
 - ***Open Nautilus File Manager*** - Use File Manager to view directory.
 - ***Make `.lrc` file*** - Make synchronized lyrics file for other music
 players. File created in same album directory as the music file.
-- ***View Raw Metadata*** - View metadata tags returned by `ffmpeg`.
-- ***View SQL Metadata*** - View metadata in pretty format kept by **mserve**.
-- ***Ignore Click*** - Close popup menu.
+- ***View Raw Metadata*** - View metadata values returned by `ffprobe` 
+which uses common tag names.
+- ***View SQL Metadata*** - View metadata in pretty format from the SQL 
+Music Table inside **mserve**.
+- ***Ignore Click*** - Close popup menu. Popup menu can also be closed
+by moving mouse out-of-menu and clicking.
 
 
 ## Information Centre
@@ -2019,7 +2033,8 @@ Hockey Playoff TV Commercial buttons.
 
 **`.gif` (there is no sound) Highlights:**
 
-- From the *Music Location Tree* window select the "View" dropdown menu.
+- From the *Music Location Tree* window select the ***Tools***
+dropdown menu.
 - When FF/Rewind buttons are visible you have the option of
 enabling the Hockey buttons.
 - The Hockey TV Commercial button turns down TV commercial and
@@ -2028,8 +2043,6 @@ resumes mserve play for 90 seconds.
 resumes mserve play for 18 minutes.
 - When Hockey TV commercial buttons are active you have
 the option of restoring the FF/Rewind buttons.
-- When changing buttons, the *Music Location Tree* window is
-sent to bottom and Play Window is raised to the top.
 
 This `.gif` also shows how the Show/Hide
 Chronology button places song lyrics in a suitable location
@@ -2315,7 +2328,63 @@ References:
 - https://wiki.ubuntu.com/record_system_sound
 - https://github.com/kmein/vu-meter
 
+---
+
+<a id="hdr19"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr18">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr20">Skip</a></div>
+
+# ***Tools*** Dropdown Menu
+
+The ***Tools*** Dropdown Menu is found on the
+*Music Location Tree* Window.
+
+There are three options in the The ***Tools*** Dropdown Menu: 
+
+- ***Enable TV Commercial Buttons*** - this option is documented above.
+- ***Big Number Calculator*** - is a calculator that accept Kilobytes,
+Megabytes and Gigabytes as Units of Measure. This is helpful so you
+don't have to enter or view numbers over 1,000. You can easily deal
+with numbers past Terabytes and Petabytes.
+- ***Debug Information*** - displays internal **mserve** information
+which is useful to software developers.
+
+
+## Sample *Big Number Calculator* Video
+
+<video src="https://user-images.githubusercontent.com/92641463/266503906-999896b9-5d03-418e-98fc-028cae900e35.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/266503906-999896b9-5d03-418e-98fc-028cae900e35.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="float: left; width: 40% !important; margin: 1rem 2rem 1rem 0; 
+max-height:640px; height: auto !important;">
+  </video>
+
+### *Big Number Calculator* Sample Video Highlights
+{:.no_toc}
+
+- The video starts out showing the top-left corner of the
+*Music Location Tree* window
+- The *Music Playing* window is briefly dragged into view
+- The Dropdown Menus are highlighted by the cursor
+- The ***Tools*** Dropdown Menu is opened
+- The ***Big Number Calculator*** function is selected
+- Enter `3800x8M` for 3,800 songs times 8 megabytes
+- Click <kbd> = </kbd> to calculate the result
+- `30.4 G` (Thirty Gigabytes) is required to hold 3,000 songs
+
+> *NOTES:*
+>
+> - why
+> 
+- Decimals can't be entered. So `3.8 K` must be entered as `3800`.
+- The video shows the mouse clicking buttons but
+you can type on your keyboard. 
+- You can enter upper-case <kbd> M </kbd> or lower-case <kbd> m </kbd>
+- You can add or omit spaces between digits and letter. e.g. `8M` or `8 m`
+
+
+
+---
 
 <!-- Foot section doesn't have "skip" button -->
-<a id="hdr19"></a>
-<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr18">ToS</a>  <a href="#hdr2">ToC</a></div>
+<a id="hdr20"></a>
+<div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr19">ToS</a>  <a href="#hdr2">ToC</a></div>
