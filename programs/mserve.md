@@ -365,9 +365,10 @@ hold the heading to drag the column to a different position.
 replace with *TV Commercial* and *Intermission* buttons.
 - ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
 buttons and replace with *FF*/*Rewind* buttons.
-- ***Big Number Calculator*** -  
-<a href="#big-number-calculator-sample-video">Indispensable calculator</a>
-for calculating Megabytes, Gigabytes, Terabytes, etc.
+- ***Big Number Calculator*** - 
+<a href="#big-number-calculator-video">Indispensable calculator</a>
+for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
+**TB** (Terabytes), etc.
 - ***Debug Information*** - Displays information to console and to the
 *Information Centre*. This information is helpful to those customizing
 **mserve**. If any applications windows are off visible desktop they are
@@ -2391,9 +2392,9 @@ to hold the music. What size should we buy?
 can also type using your keyboard. 
 > - Upper-case <kbd> M </kbd> or lower-case <kbd> m </kbd> can be entered
 > - You can add or omit spaces between digits and letter. e.g. `8M` or `8 m`
+> - If you accidentally cover up the calculator, call it from the menu again
 > - The ***Big Number Calculator*** can be run stand-alone by
 calling `calc.py` 
-
 
 
 ---
