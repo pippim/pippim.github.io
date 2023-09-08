@@ -291,7 +291,7 @@ The top-left corner of the *Music Location Tree* window contains
 three dropdown menus; ***File***, ***Edit***, ***View*** and ***Tools***. 
 Click on the name and the dropdown menu options appear:
 
-### File Dropdown Menu
+### *File* Dropdown Menu
 {:.no_toc}
 
 Some options will be disabled out when they are not applicable. For example,
@@ -313,7 +313,7 @@ but still use it for metadata information.
 - ***Save Play and Exit*** - Pending changes to song selections are applied
 to Playlist or Favorites and **mserve** exits.
 
-### Edit Dropdown Menu
+### *Edit* Dropdown Menu
 {:.no_toc}
 
 - ***Synchronize Location*** - Compare current location to another location
@@ -333,7 +333,7 @@ internet are often at a lower volume than **mserve**. Use this function
 and it's volume slider to set **mserve** volume when it is playing during
 TV Commercials which automatically muted by **mserve**. 
 
-### View Dropdown Menu
+### *View* Dropdown Menu
 {:.no_toc}
 
 - ***Information Centre*** - Displays history of messages **mserve** has
@@ -358,13 +358,16 @@ function mentioned above.
 hold the heading to drag the column to a different position.
 
 
-### Tools Dropdown Menu
+### *Tools* Dropdown Menu
 {:.no_toc}
 
 - ***Enable TV Commercial Buttons*** - Remove *FF*/*Rewind* buttons and
 replace with *TV Commercial* and *Intermission* buttons.
 - ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
 buttons and replace with *FF*/*Rewind* buttons.
+- ***Big Number Calculator*** -  
+<a href="#big-number-calculator-sample-video">Indispensable calculator</a>
+for calculating Megabytes, Gigabytes, Terabytes, etc.
 - ***Debug Information*** - Displays information to console and to the
 *Information Centre*. This information is helpful to those customizing
 **mserve**. If any applications windows are off visible desktop they are
