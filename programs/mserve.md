@@ -2333,7 +2333,7 @@ References:
 <a id="hdr19"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr18">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr20">Skip</a></div>
 
-# ***Tools*** Dropdown Menu
+# *Tools* Dropdown Menu
 
 The ***Tools*** Dropdown Menu is found on the
 *Music Location Tree* Window.
@@ -2358,6 +2358,16 @@ style="float: left; width: 40% !important; margin: 1rem 2rem 1rem 0;
 max-height:640px; height: auto !important;">
   </video>
 
+Dealing with large numbers can make the mind numb. For example, the
+average drive of 1 Terabyte is 1000000000000 bytes. An average
+video of 4 Gigabytes is 4000000000. An average song of 8 Megabytes
+is 8000000 which is a little easier to type and read. However, it's
+much easier with the ***Big Number Calculator***.
+
+In this video, we have 3,800 songs and we need to buy a USB stick
+to hold the music. What size should we buy?
+
+
 ### *Big Number Calculator* Sample Video Highlights
 {:.no_toc}
 
@@ -2373,13 +2383,13 @@ max-height:640px; height: auto !important;">
 
 > *NOTES:*
 >
-> - why
-> 
-- Decimals can't be entered. So `3.8 K` must be entered as `3800`.
-- The video shows the mouse clicking buttons but
-you can type on your keyboard. 
-- You can enter upper-case <kbd> M </kbd> or lower-case <kbd> m </kbd>
-- You can add or omit spaces between digits and letter. e.g. `8M` or `8 m`
+> - Decimals can't be entered. Therefore, `3.8 K` must be entered as `3800`.
+> - Although the video shows the mouse clicking buttons, you
+can also type using your keyboard. 
+> - Upper-case <kbd> M </kbd> or lower-case <kbd> m </kbd> can be entered
+> - You can add or omit spaces between digits and letter. e.g. `8M` or `8 m`
+> - The ***Big Number Calculator*** can be run stand-alone by
+calling `calc.py` 
 
 
 
