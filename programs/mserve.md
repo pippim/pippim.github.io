@@ -125,46 +125,52 @@ formats, quality, images and filename formatting
 defaults to `genius.com`
 
 
-## **mserve** is Still Under Construction
+## Under Construction
 {:.no_toc}
 
 {% include image.html src="/assets/img/tim-ta/Tim-ta Under Construction.png"
    alt="Under Construction.png"
-   style="float: left; width: 50%; margin: .5rem 2rem 1rem 2rem;"
+   style="float: right; width: 50%; margin: .5rem 2rem 1rem 2rem;"
    caption="Under Construction.png"
 %}
 
-> ***IMPORTANT NOTES:*** 
-> 
-> &ensp; ◆ &ensp;  **mserve** was primarily tested with Linux, specifically 
-Ubuntu 16.04 LTS and Python 2.7.12.
-> 
-> &ensp; ◆ &ensp;  **mserve** was briefly tested with ChromeOS for about a month 
-and modified.
-> 
-> &ensp; ◆ &ensp;  You *should* be able to toggle between Pyhon 2.7.x and 
-Python 3.x by changing the *"shebang"* at the top of each `.py`. 
-Testing on Python 3.x will begin prior to next **mserve** upgrade.
-> 
-> &ensp; ◆ &ensp;  Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
-in year 2024. A "lite" Ubuntu 16.04 version running Unity may be 
-created as some sort of virtual machine. It's already been announced 
-that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
-> 
-> &ensp; ◆ &ensp;  Support for `sshfs` has been discontinued by the developer in 
-November 2022. Plans are underway to switch over to FTP and and 
-`curlftpss` to mount host drives locally.
-> 
-> &ensp; ◆ &ensp;  There is **NO** installation script for **mserve**. You will 
-have to manually install dependencies with:
-> 
->    `sudo apt install python-xxxxx`.
+**mserve** is still under construction. Installation requires
+manually downloading files from GitHub and installing any
+missing dependencies with `apt get install` in Debian/Ubuntu
+or `pip install` on other Operating Systems.
 
 See the
 <a href="#mserveDependencies">required dependencies</a>
 for **mserve** section for more details. 
 For typical power users, many of the dependencies will already
 be installed.
+
+
+> ***IMPORTANT NOTES:*** 
+> 
+> - **mserve** was primarily tested with Linux, specifically 
+Ubuntu 16.04 LTS and Python 2.7.12.
+> 
+> - **mserve** was briefly tested with ChromeOS for about a month 
+and modified.
+> 
+> - You *should* be able to toggle between Pyhon 2.7.x and 
+Python 3.x by changing the *"shebang"* at the top of each `.py`. 
+Testing on Python 3.x will begin prior to next **mserve** upgrade.
+> 
+> - Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
+in year 2024. A "lite" Ubuntu 16.04 version running Unity may be 
+created as some sort of virtual machine. It's already been announced 
+that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
+> 
+> - Support for `sshfs` has been discontinued by the developer in 
+November 2022. Plans are underway to switch over to FTP and and 
+`curlftpss` to mount host drives locally.
+> 
+> - There is **NO** installation script for **mserve**. You will 
+have to manually install dependencies with:
+> 
+>    `sudo apt install python-xxxxx`.
 
 
 ## **mserve** Installation
@@ -343,7 +349,7 @@ can be clicked to open the *Information Centre*.
 - ***View Locations*** - View predefined locations.
 - ***View Playlists*** - View predefined playlists.
 - ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
-buttons and replace with *FF*/*Rewind* buttons.
+buttons and replace with *FF/Rewind* buttons.
 - ***SQL Music Table*** - Scroll through all songs for all locations that
 ***mserve*** has discovered. "Drill-down" to view more details. Buttons
 to select specific rows, search text, and update Metadata without 
@@ -361,10 +367,10 @@ hold the heading to drag the column to a different position.
 ### *Tools* Dropdown Menu
 {:.no_toc}
 
-- ***Enable TV Commercial Buttons*** - Remove *FF*/*Rewind* buttons and
+- ***Enable TV Commercial Buttons*** - Remove *FF/Rewind* buttons and
 replace with *TV Commercial* and *Intermission* buttons.
 - ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
-buttons and replace with *FF*/*Rewind* buttons.
+buttons and replace with *FF/Rewind* buttons.
 - ***Big Number Calculator*** - 
 <a href="#big-number-calculator-video">Indispensable calculator</a>
 for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
@@ -1336,6 +1342,7 @@ cases the *Fine-Tune Time Index* window is provided.
 
 <a id="HelpB"></a>
 ### Begin Sync option
+{:.no_toc}
 
 In the following video notice how the option is included in
 the `☰` (Hamburger) menu and is selected. The video delays long
@@ -1366,6 +1373,7 @@ music player resumes where it was interrupted
 
 
 #### 80% of lines must be basic synchronized
+{:.no_toc}
 
 This screen appears when you have not completed basic
 time synchronization for at least 80% of the lines:
@@ -1386,6 +1394,7 @@ Basic Time Index completed.
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr12">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr14">Skip</a></div>
 
 ### Sample All option
+{:.no_toc}
 
 The following video also shows how the *Fine-tune time index* 
 function is selected. This time the video spends a little time 
@@ -2185,6 +2194,7 @@ VU Meters using system output loopback to input stream is described
 in the next section.
 
 ## Configure **mserve** Volume During Muted TV Commercials
+{:.no_toc}
 
 To set the **mserve** volume during muted TV commercials, click 
 the *Edit* dropdown menu and select *Volume During TV Commercials*:
