@@ -162,15 +162,6 @@ Testing on Python 3.x will begin prior to next **mserve** upgrade.
 in year 2024. A "lite" Ubuntu 16.04 version running Unity may be 
 created as some sort of virtual machine. It's already been announced 
 that Ubuntu 24.04 (via Debian) will not ship with Python 2.7 anymore.
-> 
-> - Support for `sshfs` has been discontinued by the developer in 
-November 2022. Plans are underway to switch over to FTP and and 
-`curlftpss` to mount host drives locally.
-> 
-> - There is **NO** installation script for **mserve**. You will 
-have to manually install dependencies with:
-> 
->    `sudo apt install python-xxxxx`.
 
 
 ## **mserve** Installation
@@ -178,12 +169,18 @@ have to manually install dependencies with:
 **mserve** (Music Server) is written in Python.
 The main program is called `mserve.py` and can be found in the 
 [mserve GitHub Repository 🔗](https://github.com/pippim/mserve/blob/main/src/mserve.py 
-"View mserve Python source code"){:target="_blank"}. Copy all 
-files in the `src` folder to a new directory on your machine. 
+"View mserve Python source code"){:target="_blank"}. 
+
+Copy all 
+files in the GitHub `src` folder to a new directory on your machine. 
 For example, `<HOME>/mserve` for Linux, Mac, Chrome OS or 
-Windows Subsystem for Linux (WSL), ***or***, `<HOME>\mserve`
-for Windows. As of August 30, 2023, **mserve** 
-will not run under Windows without modification.
+Windows Subsystem for Linux (WSL). Unless you are running Ubuntu 16.04
+LTS under extended security maintenance, you will have to make
+changes to `mserve.py` and the programs it calls. 
+
+For Windows, the installation directory would be  `<HOME>\mserve`
+As of {{ site.refreshed | date: "%B %e, %Y" }}
+**mserve** will not run under Windows without modification.
 
 `mserve.py` is called with `m` from the command line or a 
 desktop shortcut. It is recommended you start using **mserve**
