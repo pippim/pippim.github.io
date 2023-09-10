@@ -52,7 +52,7 @@ and Mac (modest amount of more work)
 - Centralized <a href="#sql-database-using-sqlite3">SQL Database</a> 
 shares lyrics score and time index 
 across all locations for conformity and reduced storage space.
-- Make `.lrc` (synchronized lyrics) file for other music players.
+- Make LRC (`.lrc` - synchronized lyrics) file for other music players.
 - Proprietary data dictionary technology to quickly 
 view SQL table rows and even 
 <a href="#sql-location-table-viewer-sample-video">rearrange columns</a>.
@@ -154,9 +154,10 @@ Ubuntu 16.04 LTS and Python 2.7.12.
 > - **mserve** was briefly tested with ChromeOS for about a month 
 and modified.
 > 
-> - You *should* be able to toggle between Pyhon 2.7.x and 
+> - You *"should"* be able to toggle between Pyhon 2.7.x and 
 Python 3.x by changing the *"shebang"* at the top of each `.py`. 
-Testing on Python 3.x will begin prior to next **mserve** upgrade.
+Currently, **mserve** *"should"* run with the default Python version.
+Testing on Python 3.x will begin prior to next major **mserve** upgrade.
 > 
 > - Current plans are to upgrade to Ubuntu 24.04 LTS and Python 3.12 
 in year 2024. A "lite" Ubuntu 16.04 version running Unity may be 
@@ -368,13 +369,16 @@ hold the heading to drag the column to a different position.
 replace with *TV Commercial* and *Intermission* buttons.
 - ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
 buttons and replace with *FF/Rewind* buttons.
+- ***Make LRC For Checked Files*** - Create synchronized lyrics file 
+(`.lrc`) for checked songs in the *Music Location Tree*
 - ***Big Number Calculator*** - 
 <a href="#big-number-calculator-video">Indispensable calculator</a>
 for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
 **TB** (Terabytes), etc.
 - ***Debug Information*** - Displays information to console and to the
 *Information Centre*. This information is helpful to those customizing
-**mserve**. If any applications windows are off visible desktop they are
+**mserve**. Moves lost windows into monitor! If any applications 
+windows are off visible desktop they are
 half moved to the closest monitor. Also note 18 minutes after booting,
 you may get 4 `speech-dispatcher` jobs in pulse audio but these are
 automatically deleted if you respond `Yes` to the prompt that appears
@@ -382,10 +386,10 @@ automatically deleted if you respond `Yes` to the prompt that appears
 
 
 ***NOTE:*** The *Enable TV Commercial Buttons* and *Enable FF/Rewind Buttons*
-dropdown menu options occupy the same line and replace each other when they 
-are clicked. The button selection only effects the 
-the current predefined Playlist within the current predefined
-Location. Other locations and playlists maintain their button selection.
+dropdown menu options occupy the same space and replace each other
+when they are clicked. The button selection only effects the 
+the current Playlist.
+Other locations and playlists maintain their own button selection.
 
 
 ## Right-Click Popup Menus
@@ -435,7 +439,7 @@ context-sensitive popup menu appears.
 - ***Rename Song Title*** - Rename the song title.
 - ***Open Kid3 Audio Tagger*** - Use Kid3 to set Metadata tags.
 - ***Open Nautilus File Manager*** - Use File Manager to view directory.
-- ***Make `.lrc` file*** - Make synchronized lyrics file for other music
+- ***Make LRC file*** - Make synchronized lyrics file for other music
 players. File created in same album directory as the music file.
 - ***View Raw Metadata*** - View metadata values returned by `ffprobe` 
 which uses common tag names.
@@ -2349,15 +2353,60 @@ References:
 The ***Tools*** Dropdown Menu is found on the
 *Music Location Tree* Window.
 
-There are three options in the The ***Tools*** Dropdown Menu: 
+These are the options in the ***Tools*** Dropdown Menu: 
 
 - ***Enable TV Commercial Buttons*** - this option is documented above.
+- ***Make LRC For Checked Songs*** - will create an LRC (`.lrc` -
+synchronized lyrics) file for ever checked song in the *Music Location
+Tree*. This only applies to songs that have a lyrics score web scraped
+and where you have clicked on 80% of the lines to synchronize them.
 - ***Big Number Calculator*** - is a calculator that accept Kilobytes,
 Megabytes and Gigabytes as Units of Measure. This is helpful so you
 don't have to enter or view numbers over 1,000. You can easily deal
 with numbers past Terabytes and Petabytes.
 - ***Debug Information*** - displays internal **mserve** information
 which is useful to software developers.
+
+
+## Sample *Make LRC For Checked Songs* Video
+
+The *Make LRC For Checked Songs* feature will create an LRC (`.lrc` -
+synchronized lyrics) file for ever checked song in the *Music Location
+Tree*. This only applies to songs that have a lyrics score web scraped
+and where you have clicked on 80% of the lines to synchronize them.
+
+<video src="https://user-images.githubusercontent.com/92641463/266809382-6bd64fc2-2836-40db-aa10-f7c230801ec1.mp4"
+data-canonical-src="https://user-images.githubusercontent.com/92641463/266809382-6bd64fc2-2836-40db-aa10-f7c230801ec1.mp4"
+controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit"
+style="max-height:640px; width: 100% !important; height: auto !important;">
+  </video>
+
+
+### *Make LRC For Checked Songs* Sample Video Highlights
+{:.no_toc}
+
+- The video starts out showing the *Music Playing* window
+covering most of the *Music Location Tree* window
+- The cursor moves to 
+the top-left corner of the *Music Location Tree* window
+- The ***Tools*** Dropdown Menu is opened
+- The ***Make LRC For Checked Songs*** function is selected
+- An information dialog box is displayed
+- The `Yes` option is selected to proceed
+- The *Music Playing* window is selected again to show
+how music keeps playing during LRC file creation
+
+> *NOTES:*
+>
+> - Only songs with 80% or more lyrics synchronization are selected
+> - LRC files are created for the current location. For other locations
+you must open the location and repeat the process
+> - LRC files are not used inside **mserve** they are created for other
+music players like 
+[Musicolet 🔗](https://krosbits.in/musicolet/
+"small yet powerful offline Music Player for Android"){:target="_blank"}
+Musicolet is a small yet powerful offline Music Player for Android,
+which organizes and plays local audio-files stored on your device. 
 
 
 ## Sample *Big Number Calculator* Video
@@ -2399,9 +2448,9 @@ to hold the music. What size should we buy?
 can also type using your keyboard. 
 > - Upper-case <kbd> M </kbd> or lower-case <kbd> m </kbd> can be entered
 > - You can add or omit spaces between digits and letter. e.g. `8M` or `8 m`
-> - If you accidentally cover up the calculator, call it from the menu again
 > - The ***Big Number Calculator*** can be run stand-alone by
-calling `calc.py` 
+calling `calc.py`. You may have to mark it as an executable first using
+`chmod a+x calc.py`.
 
 
 ---
