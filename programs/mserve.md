@@ -365,7 +365,7 @@ hold the heading to drag the column to a different position.
 ### *Tools* Dropdown Menu
 {:.no_toc}
 
-<a href="#tools-dropdown-menu-examples"Sample videos</a>
+<a href="#tools-dropdown-menu-examples">Sample videos</a>
 for the ***Tools*** Dropdown Menu are available below with
 detailed explanations.
 
@@ -2378,7 +2378,6 @@ It is an
 <a href="#big-number-calculator-video">Indispensable calculator</a>
 for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
 **TB** (Terabytes), etc.
-
 - ***Make LRC For Checked Songs*** - will create an LRC (`.lrc` -
 synchronized lyrics) file for every checked song in the *Music Location
 Tree*. This only applies to songs that have a lyrics score web scraped
