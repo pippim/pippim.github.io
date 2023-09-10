@@ -365,16 +365,30 @@ hold the heading to drag the column to a different position.
 ### *Tools* Dropdown Menu
 {:.no_toc}
 
+<a href="#tools-dropdown-menu-examples"Sample videos</a>
+for the ***Tools*** Dropdown Menu are available below with
+detailed explanations.
+
 - ***Enable TV Commercial Buttons*** - Remove *FF/Rewind* buttons and
 replace with *TV Commercial* and *Intermission* buttons.
 - ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
 buttons and replace with *FF/Rewind* buttons.
-- ***Make LRC For Checked Files*** - Create synchronized lyrics file 
-(`.lrc`) for checked songs in the *Music Location Tree*
 - ***Big Number Calculator*** - 
 <a href="#big-number-calculator-video">Indispensable calculator</a>
 for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
 **TB** (Terabytes), etc.
+- ***Make LRC For Checked Songs*** - will create an LRC (`.lrc` -
+synchronized lyrics) file for every checked song in the *Music Location
+Tree*. This only applies to songs that have a lyrics score web scraped
+and where you have clicked on 80% of the lines to synchronize them.
+- ***Copy Checked To New Location*** - will copy both the LRC (`.lrc` -
+synchronized lyrics) file AND every checked song in the *Music Location
+Tree*. If there is no LRC file, the original music file is still copied.
+The new location must be empty. For locations already containing music 
+the synchronize location function must be used instead. That ensures
+the correct direction for copying files. To update LRC files in locations
+already containing music, use *Open Location and Play*, then use the
+*Make LRC For Checked Songs* option.
 - ***Debug Information*** - Displays information to console and to the
 *Information Centre*. This information is helpful to those customizing
 **mserve**. Moves lost windows into monitor! If any applications 
@@ -2348,7 +2362,7 @@ References:
 <a id="hdr19"></a>
 <div class="hdr-bar">  <a href="#">Top</a>  <a href="#hdr18">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr20">Skip</a></div>
 
-# *Tools* Dropdown Menu
+# *Tools* Dropdown Menu Examples
 
 The ***Tools*** Dropdown Menu is found on the
 *Music Location Tree* Window.
@@ -2360,6 +2374,11 @@ These are the options in the ***Tools*** Dropdown Menu:
 Megabytes and Gigabytes as Units of Measure. This is helpful so you
 don't have to enter or view numbers over 1,000. You can easily deal
 with numbers past Terabytes and Petabytes.
+It is an 
+<a href="#big-number-calculator-video">Indispensable calculator</a>
+for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
+**TB** (Terabytes), etc.
+
 - ***Make LRC For Checked Songs*** - will create an LRC (`.lrc` -
 synchronized lyrics) file for every checked song in the *Music Location
 Tree*. This only applies to songs that have a lyrics score web scraped
