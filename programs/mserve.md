@@ -2356,14 +2356,22 @@ The ***Tools*** Dropdown Menu is found on the
 These are the options in the ***Tools*** Dropdown Menu: 
 
 - ***Enable TV Commercial Buttons*** - this option is documented above.
-- ***Make LRC For Checked Songs*** - will create an LRC (`.lrc` -
-synchronized lyrics) file for ever checked song in the *Music Location
-Tree*. This only applies to songs that have a lyrics score web scraped
-and where you have clicked on 80% of the lines to synchronize them.
 - ***Big Number Calculator*** - is a calculator that accept Kilobytes,
 Megabytes and Gigabytes as Units of Measure. This is helpful so you
 don't have to enter or view numbers over 1,000. You can easily deal
 with numbers past Terabytes and Petabytes.
+- ***Make LRC For Checked Songs*** - will create an LRC (`.lrc` -
+synchronized lyrics) file for every checked song in the *Music Location
+Tree*. This only applies to songs that have a lyrics score web scraped
+and where you have clicked on 80% of the lines to synchronize them.
+- ***Copy Checked To New Location*** - will copy both the LRC (`.lrc` -
+synchronized lyrics) file AND every checked song in the *Music Location
+Tree*. If there is no LRC file, the original music file is still copied.
+The new location must be empty. For locations already containing music 
+the synchronize location function must be used instead. That ensures
+the correct direction for copying files. To update LRC files in locations
+already containing music, use *Open Location and Play*, then use the
+*Make LRC For Checked Songs* option.
 - ***Debug Information*** - displays internal **mserve** information
 which is useful to software developers.
 
@@ -2395,6 +2403,11 @@ the top-left corner of the *Music Location Tree* window
 - The `Yes` option is selected to proceed
 - The *Music Playing* window is selected again to show
 how music keeps playing during LRC file creation
+- While the *Make LRC For Checked Songs* is running,
+the *Music Player* window has reduced number of buttons. All processes
+in *mserve* that take a long time to run will have the same
+restriction. When the long running process ends, the *Music
+Player* window buttons are fully restored.
 
 > *NOTES:*
 >
