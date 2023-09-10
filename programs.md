@@ -279,7 +279,9 @@ the remote drives as local partitions.
 
 ## Other {{ site.title }} Programs
 
-- `eyesome` [Multi-monitor brightness and color temperature based on sun times](https://askubuntu.com/questions/829814/set-initial-startup-background-brightness-depending-on-daytime)
+- [`eyesome`](https://www.pippim.com/2017/03/19/Automatically-adjust-display-brightness-based-on-sunrise-and-sunset.html 
+"Automatically adjust brightness and color based on sunlight times"){:target="_blank"}
+Multi-monitor brightness and color temperature based on sun times
 - `clone-ubuntu` [Bash script to clone active Ubuntu Partition to clone partition](https://askubuntu.com/questions/1028604/bash-script-to-backup-clone-ubuntu-to-another-partition/1028605#1028605)
 - `cpuf` [GUI to set CPU Min/Max Frequency](https://www.pippim.com/2019/05/12/GUI-or-simple-Bash-script-to-throttle-the-CPU_.html 
 "Originally posted on Ask Ubuntu")
