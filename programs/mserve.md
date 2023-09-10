@@ -374,7 +374,7 @@ replace with *TV Commercial* and *Intermission* buttons.
 - ***Enable FF/Rewind Buttons*** - Remove *TV Commercial* and *Intermission* 
 buttons and replace with *FF/Rewind* buttons.
 - ***Big Number Calculator*** - 
-<a href="#big-number-calculator-video">Indispensable calculator</a>
+<a href="#sample-big-number-calculator-video">Indispensable calculator</a>
 for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
 **TB** (Terabytes), etc.
 - ***Make LRC For Checked Songs*** - will create an LRC (`.lrc` -
@@ -2375,7 +2375,7 @@ Megabytes and Gigabytes as Units of Measure. This is helpful so you
 don't have to enter or view numbers over 1,000. You can easily deal
 with numbers past Terabytes and Petabytes.
 It is an 
-<a href="#big-number-calculator-video">Indispensable calculator</a>
+<a href="#sample-big-number-calculator-video">Indispensable calculator</a>
 for math equations using **MB** (Megabytes), **GB** (Gigabytes), 
 **TB** (Terabytes), etc.
 - ***Make LRC For Checked Songs*** - will create an LRC (`.lrc` -
