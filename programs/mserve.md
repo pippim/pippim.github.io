@@ -1497,9 +1497,10 @@ and occupies the rest of the space where the chronology used to be
 - More space is available for wider metadata display (future upgrade)
 - The volume slider is wider and VU meters are shorter
 
-*Note:* When the artwork animation resizes, the "skin"
-background color can change depending on the new color of the pixel at
-coordinates "3, 3" of the resized artwork.
+***Note:*** The software used to create this video, made volume
+changes jump when volume slider was moved. 
+Volume changes are "as smooth
+as silk", when using **mserve** in real life.
 
 ## Chronology List Popup Menu
 
