@@ -26,12 +26,14 @@ your own project(s), you can delete the sample project.
 
 **KEY FEATURES:**
 
+- Enter new projects, or *Drag and Drop* new projects.
+- Use stock alarm sounds, or *Drag and Drop* new custom sound files.
 - Share projects with other browsers, devices and users.
+- Projects stored in local storage and not a website.
 - Unlimited number of projects and project tasks.
 - Optional repeat a project's tasks multiple times in what is called a set.
 - Prompts to begin each task and each set (when more than 1).
 - Alarm sounds and messages are displayed when task timer ends.
-- Upload custom sound files or choose from stock alarm sound files.
 - Backup Tim-ta projects and tasks (Configuration) for sharing.
 - Upload Tim-ta Configuration from other browsers, devices or users.
 - Run project timers in a separate, smaller, pop-up window.
@@ -224,6 +226,7 @@ will be provided. After that, new features will be added.
 ## Tim-ta Version 1.1
 
 ### September 16, 2022 Update
+{:.no_toc}
 
 - Running timers can appear in popup windows that launch when 
 large screen (>1007 pixels) is active.
@@ -240,15 +243,18 @@ browser permission has been granted.
 with saved popup window locations and sizes in version 1.1.
 
 ### September 24, 2022 Update
+{:.no_toc}
 
 - Tim-ta conversion to version 1.1 is complete.
 - Development has begun on a dark theme for the popup window.
 
 ### October 10, 2022 Update
+{:.no_toc}
 
 - Dark theme for entire {{ site.title }} website is complete.
 
 ### October 16, 2022 Update
+{:.no_toc}
 
 - Fix rounded ends of progress bar. They were straight.
 - Begin fine-tuning Rouge Code Syntax Highlighting theme "Monokai Sublime" 
@@ -256,6 +262,7 @@ with saved popup window locations and sizes in version 1.1.
 ## Tim-ta Version 1.0 Development History
 
 ### May 8, 2022 Update
+{:.no_toc}
 
 - Sound files are saved to local storage. This saves bandwidth when they are played.
 - Configuration, Projects, Tasks and Run Timers tables / forms are complete.
@@ -263,6 +270,7 @@ with saved popup window locations and sizes in version 1.1.
 - Upload Alarm Custom Sound Files has begun.
 
 ### May 14, 2022 Update
+{:.no_toc}
 
 - Upload Custom Sound Files has been completed. Take note how to increase Local Storage quota from 5 MB (Megabytes). 
 - Global Pippim Website redesign for mobile screens begins shortly.
@@ -270,22 +278,26 @@ with saved popup window locations and sizes in version 1.1.
 - Then a mechanism for exporting and importing Tim-ta Projects will be started. 
 
 ### May 27, 2022 Update
+{:.no_toc}
 
 - New design for mobile complete.
 - New copy code button implemented.
 - Exporting (download) and importing (upload) Tim-ta Projects has begun. 
 
 ### May 31, 2022 Update
+{:.no_toc}
 
 - Exporting (download) Tim-ta configuration went very quickly (a few hours).
 - Importing (upload) Tim-ta Projects and Tasks has taken a few days so far and it is only half done. 
 
 ### June 12, 2022 Update
+{:.no_toc}
 
 - Importing (upload) Tim-ta Projects and Tasks completed.
 - New stock sound files (Alarm_01.mp3, Alarm_02.mp3 and Alarm_03.mp3) uploaded.
 
 ### June 25, 2022 Update
+{:.no_toc}
 
 - When alarm sounds, image of shaking alarm clock appears. Close window to end alarm sound early.
 - New code (HTML & CSS) for system wide buttons. 
@@ -404,6 +416,7 @@ detail line for small screen, open more buttons control box.
 <div class='hdr-bar'>  <a href='#'>Top</a>  <a href="#hdr9">ToS</a>  <a href="#hdr2">ToC</a>  <a href="#hdr11">Skip</a></div>
 
 ## Timer Countdown Override Buttons
+{:.no_toc}
 
 While a Task Timer is counting down, you can click on the
 progress bar and the task timer override box appears. You
@@ -447,21 +460,39 @@ currently running progress bar is automatically selected.
 
 # Tim-ta Configuration Kept in Local Storage
 
-A single file called `ttaConfig` is used to store
-Tim-ta information for Configuration settings,
-Projects and Tasks. You should back this file up. 
-See <a href="#Download">Download</a> section. The
-backup can be used on another device or browser. 
-See <a href="#Upload">Upload</a> section.
+A single file called `ttaConfig` stores
+Configuration settings,
+Projects and Tasks. You should backup this file! 
+See the <a href="#Download">Download</a> section
+to create a backup. The
+backup can be used on another device or browser.
+For example you can create projects in FireFox,
+make a backup and restore it in Chrome Browser.
+See the <a href="#Upload">Upload</a> section to
+restore a backup or add new projects another
+person sent you.
 
 `ttaConfig` is kept in "***Local Storage***". 
-Local Storage is also used to store every stock
-alarm sound file and custom sound file. Each
+Local Storage is also used to store stock
+alarm sound file and custom sound files. Each
 of your devices and browsers will keep it's
 own copy of local storage. To transfer data
 between two browsers or different devices use
-the Upload/Download linked in the previous
+the Upload/Download discussed in the previous
 paragraph.
+
+One advantage of Local Storage is your ISP can't
+see your projects. Websites, including this 
+{{ site.title }} website, can't see your projects,
+and any internet traffic hackers can't see your
+projects. Although the **Tim-ta** application is
+"in the clouds", your project data is not stored
+"in the clouds" and never transmitted.
+
+Another advantage of Local Storage is it's many
+times faster than the internet because it simply
+sits on your device and isn't transmitted over
+external wires into your building.
 
 To view Local Storage (from Chrome and Firefox browsers):
 
@@ -485,6 +516,7 @@ When the smaller popup window sounds an alarm it will move above
 the other working windows.
 
 ## Browser Permissions
+{:.no_toc}
 
 In order to allow popup windows, go to Firefox settings:
 
@@ -503,6 +535,7 @@ background behind other windows when the alarm sounds.
 <div id="BrowserPopupWindowPermissions"></div>
 
 ## Popup Window Geometry Saved Settings
+{:.no_toc}
 
 When you close a popup window the last position and size is saved.
 The next time you run the timer the popup window appears at the
@@ -518,8 +551,6 @@ refuse to open at the far right or far bottom. It will be moved
 by the browser further left or further up accordingly. The browser
 companies are currently working on upgrades for better support
 of multiple-monitor setups.
-
-
 
 
 <a id="hdr13"></a>

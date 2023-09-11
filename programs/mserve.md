@@ -1921,7 +1921,7 @@ in green:
    caption="mserve Synchronize Location.png"
 %}
 
-- When the *"🔗 Help"* button is clicked you are brought to this web page.
+- When the *"⧉ Help"* button is clicked you are brought to this web page.
 
 - When the *"✘ Close"* button is clicked the window is closed. The same
 is true if `Escape` key is pressed or the window's *"✘"*
