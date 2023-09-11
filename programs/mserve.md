@@ -693,7 +693,7 @@ was changed.
 Overrides appear with a new name: "Encode CD Final Confirmation".
 
 <a id="HelpEncodingAlbumOverride"></a>
-### Notes About Album Level Overrides:
+### ***Album Level Overrides*** Notes:
 {:.no_toc}
 
 - The same window can appear twice but the title changes between:
@@ -732,6 +732,7 @@ You need to research when the song was first released, E.G. "1985" and
 change the track.
 
 ## Encoding Metadata Tags
+{:.no_toc}
 
 **mserve** Metadata Tags are displayed with common names. The
 common names follow the `ffmpeg` naming conventions:
@@ -844,6 +845,7 @@ menu and select *SQL Music Table*. Right-click on a music file and select
 
 
 ## Substituting Special Characters in Filenames
+{:.no_toc}
 
 When an Artist, Album or Song have these characters in the name:
 
