@@ -12,7 +12,7 @@ votes:        "5 "
 favorites:    
 views:        "4,545 "
 accepted:     Accepted
-uploaded:     2023-09-11 23:17:13
+uploaded:     2023-09-12 11:43:57
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-12-How-to-switch-between-options-in-__sys_class_backlight_-to-solve-brightness-problem_.md
 toc:          false
 navigation:   true

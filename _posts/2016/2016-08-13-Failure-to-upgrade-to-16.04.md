@@ -12,7 +12,7 @@ votes:        "0 "
 favorites:    
 views:        "79 "
 accepted:     Accepted
-uploaded:     2023-09-11 23:17:13
+uploaded:     2023-09-12 11:43:57
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-08-13-Failure-to-upgrade-to-16.04.md
 toc:          false
 navigation:   false
