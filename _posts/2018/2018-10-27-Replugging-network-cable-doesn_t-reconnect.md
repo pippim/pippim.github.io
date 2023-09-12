@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "938 "
 accepted:     Accepted
-uploaded:     2023-09-12 14:58:05
+uploaded:     2023-09-12 15:48:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-10-27-Replugging-network-cable-doesn_t-reconnect.md
 toc:          false
 navigation:   false

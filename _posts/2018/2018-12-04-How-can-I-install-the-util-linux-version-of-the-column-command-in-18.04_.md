@@ -12,7 +12,7 @@ votes:        "9 "
 favorites:    
 views:        "7,686 "
 accepted:     
-uploaded:     2023-09-12 14:58:05
+uploaded:     2023-09-12 15:48:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-04-How-can-I-install-the-util-linux-version-of-the-column-command-in-18.04_.md
 toc:          false
 navigation:   false

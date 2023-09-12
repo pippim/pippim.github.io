@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "448 "
 accepted:     
-uploaded:     2023-09-12 14:58:05
+uploaded:     2023-09-12 15:48:27
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-10-18-Zenity-progress_-no-window.md
 toc:          false
 navigation:   false
