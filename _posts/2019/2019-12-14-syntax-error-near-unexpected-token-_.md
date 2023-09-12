@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "2,368 "
 accepted:     Accepted
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-12-14-syntax-error-near-unexpected-token-_.md
 toc:          false
 navigation:   false

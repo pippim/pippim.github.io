@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "4,800 "
 accepted:     Accepted
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-06-06-Which-intel-graphics-firmware-version-is-in-use-_-how-to-change-that.md
 toc:          false
 navigation:   false

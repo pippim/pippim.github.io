@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    0
 views:        "1,089 "
 accepted:     Accepted
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-01-Convert-today_s-HH_MM-am_pm-to-epoch-in-Bash.md
 toc:          false
 navigation:   false

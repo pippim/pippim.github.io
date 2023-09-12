@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "2,781 "
 accepted:     
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-12-Serious-screen-flickering-when-WiFi-is-on-_Dell-XPS-15_.md
 toc:          false
 navigation:   false

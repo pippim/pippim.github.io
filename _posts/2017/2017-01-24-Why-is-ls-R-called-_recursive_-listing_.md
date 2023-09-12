@@ -12,7 +12,7 @@ votes:        "7 "
 favorites:    
 views:        "23,933 "
 accepted:     
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-01-24-Why-is-ls-R-called-_recursive_-listing_.md
 toc:          false
 navigation:   false

@@ -12,7 +12,7 @@ votes:        "2 "
 favorites:    
 views:        "2,957 "
 accepted:     
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2017/2017-03-09-How-do-I-prevent-my-display-from-turning-off-when-screen-is-locked_.md
 toc:          false
 navigation:   false

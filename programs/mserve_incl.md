@@ -1,5 +1,6 @@
 ### Python Modules used in {{ site.title }} **mserve** Version 3.5.0
 {:.no_toc}
+
 | Python Module         |   Lines |      Modified       | Description                             |
 |-----------------------|--------:|:-------------------:|-----------------------------------------|
 | `calc.py`             |     229 | 2023-09-08 00:47:41 | Calculator for big numbers              |
@@ -15,7 +16,7 @@
 | `message.py`          |   1,856 | 2023-09-04 23:05:30 | Message Dialog Boxes                    |
 | `monitor.py`          |     890 | 2023-09-07 21:28:01 | Multiple Monitor Management             |
 | `mserve.py`           |  16,735 | 2023-09-11 15:23:44 | Description: mserve - Music Server      |
-| `mserve_config.py`    |   1,294 | 2023-09-12 14:48:06 | Configuration                           |
+| `mserve_config.py`    |   1,293 | 2023-09-12 14:57:38 | Configuration                           |
 | `sql.py`              |   3,796 | 2023-09-10 11:34:12 | SQLite3 Interface                       |
 | `timefmt.py`          |     232 | 2023-09-03 12:48:58 | Date & Time formatting                  |
 | `toolkit.py`          |   2,833 | 2023-09-09 15:30:07 | Description not found!                  |
@@ -23,4 +24,4 @@
 | `vu_pulse_audio.py`   |     793 | 2023-09-05 11:16:30 | Pulse Audio controls                    |
 | `webscrape.py`        |   1,408 | 2023-08-22 09:12:42 | Description not found!                  |
 | `x11.py`              |     309 | 2023-07-12 23:14:15 | X11 window client                       |
-| ALL Modules           |  42,658 |                     |                                         |
+| ALL Modules           |  42,657 |                     |                                         |

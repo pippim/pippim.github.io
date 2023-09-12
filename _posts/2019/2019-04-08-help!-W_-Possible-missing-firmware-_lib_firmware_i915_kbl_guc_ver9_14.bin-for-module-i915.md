@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "35,572 "
 accepted:     
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-04-08-help!-W_-Possible-missing-firmware-_lib_firmware_i915_kbl_guc_ver9_14.bin-for-module-i915.md
 toc:          false
 navigation:   false

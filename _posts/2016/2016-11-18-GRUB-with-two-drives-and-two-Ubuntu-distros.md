@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "2,269 "
 accepted:     
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-11-18-GRUB-with-two-drives-and-two-Ubuntu-distros.md
 toc:          false
 navigation:   false

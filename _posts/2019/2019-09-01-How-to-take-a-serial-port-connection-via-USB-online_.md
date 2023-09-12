@@ -12,7 +12,7 @@ votes:        "3 "
 favorites:    
 views:        "9,819 "
 accepted:     
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2019/2019-09-01-How-to-take-a-serial-port-connection-via-USB-online_.md
 toc:          false
 navigation:   false

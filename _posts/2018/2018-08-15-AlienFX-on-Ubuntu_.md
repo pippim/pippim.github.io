@@ -12,7 +12,7 @@ votes:        "4 "
 favorites:    
 views:        "16,035 "
 accepted:     
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-08-15-AlienFX-on-Ubuntu_.md
 toc:          false
 navigation:   false

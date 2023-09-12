@@ -12,7 +12,7 @@ votes:        "24 "
 favorites:    
 views:        "91,415 "
 accepted:     Accepted
-uploaded:     2023-09-12 14:50:17
+uploaded:     2023-09-12 14:58:05
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-12-31-How-to-make-grub-menu-appear-instead-grub-minimal-bash-like-in-booting_.md
 toc:          false
 navigation:   false
