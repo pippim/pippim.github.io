@@ -12,7 +12,7 @@ votes:        "6 "
 favorites:    
 views:        "23,951 "
 accepted:     
-uploaded:     2023-09-11 23:16:07
+uploaded:     2023-09-11 23:17:13
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2016/2016-09-11-Where-are-cursor-icons-stored-on-Ubuntu-16.04_.md
 toc:          false
 navigation:   false

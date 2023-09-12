@@ -149,7 +149,9 @@ if [ $retVal -ne 0 ]; then
 fi
 
 # Generate mserve module listing and line counts
-python ~/python/mserve_config.py line_count ~/website/programs/mserve_incl.md
+cd ~/python
+python mserve_config.py line_count ~/website/programs/mserve_incl.md
+cd ~/website2
 cp ~/website/programs/mserve_incl.md programs/
 git add programs/mserve_incl.md
 
