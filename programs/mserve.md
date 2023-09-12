@@ -886,7 +886,7 @@ All programs written for `mserve`:
 <a id="AllPippimModules"></a>
 
 | Python Module       | # Lines |
-|---------------------|---------|
+|---------------------|--------:|
 | calc.py             | 229     |
 | disc_get.py         | 47      |
 | encoding.py         | 4,077   |
