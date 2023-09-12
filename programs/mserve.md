@@ -884,31 +884,40 @@ There are over 16k lines in the `mserve.py` core Music Player program.
 All programs written for `mserve`:
 
 <a id="AllPippimModules"></a>
-
-- `disc_get.py` - 80 lines 
-- `encoding.py` - 2,597 lines
-- `external.py` - 451 lines
-- `global_variables.py` - 155 lines
-- `iamge.py` - 1,472 lines
-- `location.py` - 3,821 lines
-- `m` - 84 lines
-- `mbz_get1.py` - 1,161 lines
-- `mbz_get2.py` - 183 lines
-- `message.py` - 1,633 lines
-- `monitor.py` - 813 lines
-- `mserve.py` - 16,127 lines
-- `mserve_client.sh` - 334 lines
-- `mserve_config.py` - 980 lines
-- `sql.py` - 3,150 lines
-- `test-for-sync.sh` - 21 lines
-- `timefmt.py` - 224 lines
-- `toolkit.py` - 2,674 lines
-- `vu_meter.py` - 200 lines
-- `vu_pulse_audio.py` - 674 lines
-- `webscrape.py` - 1,399 lines
-- `x11.py` - 311 lines
+| Python Module  | # Lines |
+|----------------|---------|
+| calc.py | 229 |
+| disc_get.py | 47 |
+| encoding.py | 4,077 |
+| external.py | 574 |
+| global_variables.py | 205 |
+| image.py | 1,717 |
+| location.py | 4,818 |
+| m | 83 |
+| mbz_get1.py | 418 |
+| mbz_get2.py | 143 |
+| message.py | 1,856 |
+| monitor.py | 890 |
+| mserve.py | 16,735 |
+| mserve_config.py | 1,326 |
+| sql.py | 3,796 |
+| timefmt.py | 232 |
+| toolkit.py | 2,833 |
+| vu_meter.py | 200 |
+| vu_pulse_audio.py | 793 |
+| webscrape.py | 1,408 |
+| x11.py | 309 |
+| ALL Modules | 42,689 |
+<a id="EndAllPippimModules"></a>
 
 *Line counts updated July 13, 2023.*
+
+There are also some Bash scripts:
+
+- `mserve_client.sh` - 334 lines
+- `test-for-sync.sh` - 21 lines
+
+
 
 ---
 
