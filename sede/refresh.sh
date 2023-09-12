@@ -148,6 +148,11 @@ if [ $retVal -ne 0 ]; then
     exit $retVal
 fi
 
+# Generate mserve module listing and line counts
+python ~/python/mserve_config.py line_count ~/website/programs/mserve_incl.md
+cp ~/website/programs/mserve_incl.md programs/
+git add programs/mserve_incl.md
+
 # Refresh stack-to-blog and rouge_languages.txt
 cp ~/website/sede/refresh.sh sede/
 cp ~/website/sede/stack-to-blog.py sede/

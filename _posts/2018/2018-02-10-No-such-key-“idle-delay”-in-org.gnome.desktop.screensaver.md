@@ -12,7 +12,7 @@ votes:        "1 "
 favorites:    
 views:        "416 "
 accepted:     Accepted
-uploaded:     2023-09-07 12:06:34
+uploaded:     2023-09-11 23:13:58
 git_md_url:   https://github.com/pippim/pippim.github.io/blob/main/_posts/2018/2018-02-10-No-such-key-“idle-delay”-in-org.gnome.desktop.screensaver.md
 toc:          false
 navigation:   false
