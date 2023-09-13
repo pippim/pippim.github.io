@@ -181,7 +181,7 @@ c.onclick = function () {
 }
 
 // When the user clicks on <span> (x), close the modal
-var boolJumpModal = false  // Is jump form active?
+var boolJumpModal = false  // Is jump modal active?
 jc.onclick = function () {
     event.stopPropagation()  // Don't let window.onclick see this click
     closeJumpModal()
@@ -281,6 +281,9 @@ document.addEventListener('keyup', function(e) {
     if (e.keyCode == 27 && boolSearchForm) {
         closeSearchForm();
     }
+    if (e.keyCode == 27 && boolJumpModal) {
+        closeJumpModal()
+    }
 });
 
 
@@ -354,14 +357,19 @@ jb.onclick = function (event) {
 
     boolJumpModal = !boolJumpModal
     if (boolJumpModal) {
-        jm.style.display = "block";      // Display search results by revealing modal
+        jm.style.display = "block";  // Display #jump-modal
+        // Where is jump button in viewport now?
+        var viewportOffset = jb.getBoundingClientRect();
+        // these are relative to the viewport
+        var top = viewportOffset.top;
+        var left = viewportOffset.left;
+        console.log("jb.onclick jm top:", top, "jm left:", left)
         setContentDimmed(jm)
     }
     else {
         //window.scrollTo({top: 0, behavior: 'smooth'});
         closeJumpModal()
     }
-    //console.log("p.onclick boolDropdown:", boolDropdown, "boolJumpModal:", boolJumpModal)
 }
 
 function closeJumpModal() {
