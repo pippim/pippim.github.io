@@ -353,12 +353,20 @@ jb.onclick = function (event) {
                   //jb.document.defaultView.pageYOffset
         var left = viewportOffset.left;
         console.log("jb.onclick REAL jm top:", top, "scrollY:", window.scrollY)
+        /* Messes up page-header font size
         for (hi=1; hi<=3; hi++) {  // h1, h2, h3
             var headers = document.getElementsByTagName('h'+hi);
             for (hj=0; hj<headers.length; hj++) {
                 headers[hj].className = 'h';
             }
         }
+        */
+        var headers = document.getElementsByClassName('h');
+        /* Messes up page-header font size
+        for (hi=0; hi<headers.length; hi++) {
+            headers[hi].innerHTML += ' '+hi;
+        }
+        */
         console.log("h1, h2, h3 count:", headers.length)
         setContentDimmed(jm)
     }
