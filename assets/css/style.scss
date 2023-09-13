@@ -141,11 +141,11 @@ $lavender: #E6E6FA !default; // lavender
 
     &:after {
         content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        //position: absolute;
+        //bottom: 0;
+        //left: 0;
+        //width: 100%;
+        //height: 100%;
         background-color: var(--header-bg-color);  // For Cayman
         background-image: linear-gradient(120deg, var(--header-bg-color-secondary), var(--header-bg-color));
         border-radius: 2rem;
@@ -153,11 +153,11 @@ $lavender: #E6E6FA !default; // lavender
     }
     &:before {
         content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        height: 100%;
+        //position: absolute;
+        //bottom: 0;
+        //left: 0;
+        //width: 0%;
+        //height: 100%;
         // darken is sass function that can't be used with var(--color)
         // background-color: darken($header-bg-color-secondary, 1%);  // For Cayman
         background-color: var(--header-bg-color-secondary);  // For Cayman
