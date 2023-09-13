@@ -205,7 +205,7 @@ if (d !== null) {
             f.style.display = "none";  // Close search form
             boolSearchForm = false
             m.style.display = "none";  // close search results modal
-        } else  {
+        } else {
             e.style.display = "none"
             window.scrollTo({top: 0, behavior: 'smooth'});
             reverseContentDimmed()
@@ -246,7 +246,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
                 boolDropdown = false
             }
         }
-        else  {
+        else {
             //f.style.display = "none"
             //m.style.display = "none"  // Search modal may be open
             //window.scrollTo({top: 0, behavior: 'smooth'});
@@ -347,9 +347,8 @@ jb.onclick = function (event) {
     if (boolJumpModal) {
         jm.style.display = "block";      // Display search results by revealing modal
         setContentDimmed(jm)
-        }
     }
-    else  {
+    else {
         //window.scrollTo({top: 0, behavior: 'smooth'});
         closeJumpModal()
     }
