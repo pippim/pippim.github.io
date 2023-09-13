@@ -572,7 +572,7 @@ details[open] > summary {
     margin-right: .5rem;
 }
 
-.search-modal-content {  // Deprecated
+.search-modal-content {
     // Search results - Resides inside search-container
     margin-top: .75rem;
     color: var(--nav-button-color);  // Oct 13/22 was header-bg-color
@@ -599,8 +599,8 @@ details[open] > summary {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    //width: 100%; /* Full width */
+    //height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     margin: 15% auto; /* 15% from the top and centered */
     background-color: rgb(0,0,0); /* Fallback color */
