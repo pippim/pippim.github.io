@@ -135,15 +135,6 @@ $lavender: #E6E6FA !default; // lavender
     //margin-left: -.5rem;  // balance .page-header-button class
 }
 
-#jump-button {  // In conjunction with class .page-header-button in HTML
-    position: sticky;
-    top: 1rem;  // From Top of screen when no page header
-    margin-top: 4rem;  // From page <header>
-    margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
-    //right: 0;
-    float: right;
-}
-
 .page-header-button {
     display: inline-block;
     border-radius: 2rem;
@@ -593,13 +584,27 @@ details[open] > summary {
     text-align: start;  // parent flex box is centering text
 }
 
+#jump-button {  // In conjunction with class .page-header-button in HTML
+    position: sticky;
+    top: 1rem;  // From Top of screen when no page header
+    margin-top: 4rem;  // From page <header>
+    margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
+    //right: 0;
+    float: right;
+}
+
 .jump-modal {
     display: none;  /* Midden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 1rem;
-    float: right;
     top: 0;
+
+    position: sticky;  // Try #jump-button
+    top: 1rem;  // From Top of screen when no page header
+    margin-top: 4rem;  // From page <header>
+    margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
+    float: right;
     //margin-top: -7rem;
     //width: 100%; /* Full width */
     //height: 100%; /* Full height */
