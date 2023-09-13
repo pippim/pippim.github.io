@@ -21,13 +21,6 @@ p b, p strong, :not(a) ul b, :not(a) ul strong {
     color: var(--bold-color);  // anchor links are not getting skipped :(
 }
 
-#hidden-menu {  // revealed when .page-header scrolls away
-    position: fixed;
-    top: 1rem;
-    left: 0;
-    margin-left: 1rem;
-    z-index: -1;
-}
 
 // Input fields
 button,
@@ -126,10 +119,19 @@ $lavender: #E6E6FA !default; // lavender
 .page-header {
     /*  Sep 28/2022 - Strange have to add this today. Page header has
         way too much empty space above. */
+    z-index: 2;
     @include large { margin-top: -4rem; }
     @include medium { margin-top: -2rem; }
     @include small { margin-top: -1rem; }
     // margin-top: -3rem;  // Chops test
+}
+
+#hidden-menu {  // In conjunction with class .page-header-button in HTML
+    position: fixed;
+    top: 1rem;  // revealed when .page-header scrolls away
+    left: 0;
+    margin-left: .3rem;
+    z-index: 1;
 }
 
 .page-header-button {
