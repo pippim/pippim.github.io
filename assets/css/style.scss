@@ -594,8 +594,8 @@ details[open] > summary {
 }
 
 .modal #jump-modal {
+    position: fixed;  // fixed to viewport not page
     // copied from #jump-button
-    position: sticky;
     top: 1rem;  // From Top of screen when no page header
     margin-top: 4rem;  // From page <header>
     margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
