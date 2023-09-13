@@ -594,9 +594,26 @@ details[open] > summary {
 }
 
 .modal #jump-modal {
-    position: fixed;
-    z-index: 4;  // above body and jump button
-    float: right;
+    //position: fixed;
+    //z-index: 4;  // above body and jump button
+    //float: right;
+    // From: https://www.w3schools.com/howto/howto_css_modals.asp
+    // original stub with deleted modal-content id
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    margin: 15% auto; /* 15% from the top and centered */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
 }
 
 .modal {
