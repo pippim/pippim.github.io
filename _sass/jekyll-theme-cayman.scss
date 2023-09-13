@@ -1,5 +1,4 @@
-/* 2022 - Add color themes. Make code block font size larger. Copied from:
- * Sep. 12/23 - .page-header z-index: 2;  // High enough to cover hamburger
+/* Add color themes. Make code block font size larger. Copied from:
  * https://github.com/pages-themes/cayman/blob/master/_sass/jekyll-theme-cayman.scss
  * Source code version: January 2021
  */
@@ -113,7 +112,6 @@ a {
 }
 
 .page-header {
-  z-index: 2;  // High enough to cover hamburger menu
   color: var(--header-heading-color);
   text-align: center;
   background-color: var(--header-bg-color);
