@@ -163,6 +163,7 @@ const i = document.getElementById('search-clear-input');    // Red BackTab to cl
                                                             // Black 'X' to close search
 const jb = document.getElementById('jump-button');          // Jump to h1, h2, menu
 const jm = document.getElementById('jump-modal');           // Jump modal container
+const jc = document.getElementById('jump-modal-text')       // Jump modal 'X' close button
 const jt = document.getElementById('jump-modal-text');      // Jump modal text
 const m = document.getElementById('search-modal');          // Where search results appear
 const n = document.getElementsByClassName('page-header-search-button')  // In two places
@@ -175,6 +176,16 @@ set_x_to_close();  // Initial 'X' (close on input bar) status when page refreshe
 c.onclick = function () {
     event.stopPropagation()  // Don't let window.onclick see this click
     m.style.display = "none";   // Turn off display for search results modal
+    // TODO: Restore original Y Offset before scrolling to make room for modal
+    //       Do we want to close search form too? Saves clicks for user
+}
+
+// When the user clicks on <span> (x), close the modal
+var boolJumpModal = false  // Is jump form active?
+jc.onclick = function () {
+    event.stopPropagation()  // Don't let window.onclick see this click
+    jm.style.display = "none";   // Turn off display for search results modal
+    boolJumpModal = false
     // TODO: Restore original Y Offset before scrolling to make room for modal
     //       Do we want to close search form too? Saves clicks for user
 }
@@ -321,8 +332,6 @@ function closeSearchForm() {
 }
 
 var saveBackgroundColor;  // May 18/22 - New code not working
-
-var boolJumpModal = false  // Is jump form active?
 
 // Search Magnify Glass button clicked
 // Loop through all class named .page-header-search-button
