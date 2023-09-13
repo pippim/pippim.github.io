@@ -161,7 +161,7 @@ const g = document.getElementById('search-container');      // Wrapper around fo
 const h = document.getElementById('search-modal-text')      // Search results html codes
 const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
                                                             // Black 'X' to close search
-const j = document.getElementById('hamburger-button');      // Hidden hamburger menu
+const j = document.getElementById('jump-button');           // Jump to h1, h2, menu
 const m = document.getElementById('search-modal');          // Where search results appear
 const n = document.getElementsByClassName('page-header-search-button')  // In two places
 const q = document.getElementById('search-query');          // Search words input by user
@@ -184,7 +184,7 @@ if (d !== null) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
         //const f = document.getElementById('search-form');           // Wrapper around query & close button
-        //const j = document.getElementById('hamburger-button');      // Hidden hamburger menu
+        //const j = document.getElementById('jump-button');           // Jump to h1, h2, menu
         //const m = document.getElementById('search-modal');          // Where search results appear
         event.stopPropagation()  // Don't let window.onclick see this click
         boolDropdown = !boolDropdown
@@ -220,7 +220,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
         //const f = document.getElementById('search-form');           // Wrapper around query & close button
-        //const j = document.getElementById('hamburger-button');      // Hidden hamburger menu
+        //const j = document.getElementById('jump-button');           // Jump to h1, h2, menu
         //const m = document.getElementById('search-modal');          // Where search results appear
         //const n = document.getElementsByClassName('page-header-search-button');
         event.stopPropagation()  // Don't let window.onclick see this click
@@ -319,7 +319,7 @@ j.onclick = function (event) {
     //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
     //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
-    //const j = document.getElementById('hamburger-button');      // Hidden hamburger menu
+    //const j = document.getElementById('jump-button');           // Jump to h1, h2, menu
     //const m = document.getElementById('search-modal');          // Where search results appear
     //const n = document.getElementsByClassName('page-header-search-button');
     event.stopPropagation()  // Don't let window.onclick see this click
@@ -365,6 +365,18 @@ function closeJumpForm() {
     boolJumpForm = false
     //window.scrollTo({top: 0, behavior: 'smooth'});
     //reverseContentDimmed()
+}
+
+// From: https://stackoverflow.com/a/35376840/6929343
+for (i=1; i<=6; i++) {
+    var headers = document.getElementsByTagName('h'+i);
+    for (j=0; j<headers.length; j++) {
+        headers[j].className = 'h';
+    }
+}
+var headers = document.getElementsByClassName('h');
+for (i=0; i<headers.length; i++) {
+    headers[i].innerHTML += ' '+i;
 }
 
 function setContentDimmed(elm) {
