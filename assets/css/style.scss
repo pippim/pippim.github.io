@@ -128,6 +128,8 @@ $lavender: #E6E6FA !default; // lavender
 
 #hidden-menu {  // In conjunction with class .page-header-button in HTML
     position: sticky;
+    max-width: 66rem;  // Override cayman theme 64rem & padding 2rem 6rem
+    padding: 0;        // in _layouts/jekyll-theme-cayman.scss
     top: 1rem;  // revealed when .page-header scrolls away
     left: 0;
     margin-left: -.5rem;  // balance .page-header-button class
