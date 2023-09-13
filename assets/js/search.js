@@ -163,7 +163,7 @@ const i = document.getElementById('search-clear-input');    // Red BackTab to cl
                                                             // Black 'X' to close search
 const jb = document.getElementById('jump-button');          // Jump to h1, h2, menu
 const jm = document.getElementById('jump-modal');           // Jump modal container
-const jc = document.getElementById('jump-modal-text')       // Jump modal 'X' close button
+const jc = document.getElementById('jump-modal-close')      // Jump modal 'X' close button
 const jt = document.getElementById('jump-modal-text');      // Jump modal text
 const m = document.getElementById('search-modal');          // Where search results appear
 const n = document.getElementsByClassName('page-header-search-button')  // In two places
@@ -257,19 +257,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
             }
         }
         else {
-            //f.style.display = "none"
-            //m.style.display = "none"  // Search modal may be open
-            //window.scrollTo({top: 0, behavior: 'smooth'});
-            //reverseContentDimmed()
-            closeSearchForm()  // Sep 2/23
-            /* TODO: Check function below:
-                function closeSearchForm() {
-                    f.style.display = "none"  // Close search form
-                    boolSearchForm = false
-                    window.scrollTo({top: 0, behavior: 'smooth'});
-                    reverseContentDimmed()
-                }
-            */
+            closeSearchForm()
         }
         //console.log("p.onclick boolDropdown:", boolDropdown, "boolSearchForm:", boolSearchForm)
     }
@@ -285,8 +273,6 @@ document.addEventListener('keyup', function(e) {
         closeJumpModal()
     }
 });
-
-
 
 // For some reason 'e' is empty (length is zero) causing first page click to scroll to top
 //console.log("e.style.display.length:", e.style.display.length)
@@ -420,8 +406,7 @@ i.onclick = function(event) {
         set_x_to_close()  // Set 'X' (Close) icon or back tab character
     }
     else {
-        closeSearchForm()
-        closeJumpModal()  // Sep 13/23 new modal shares 'X' close
+        closeSearchForm()  // Only modal with input form (so far)
     }
 }
 
