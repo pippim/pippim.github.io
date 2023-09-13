@@ -161,7 +161,9 @@ const g = document.getElementById('search-container');      // Wrapper around fo
 const h = document.getElementById('search-modal-text')      // Search results html codes
 const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
                                                             // Black 'X' to close search
-const j = document.getElementById('jump-button');           // Jump to h1, h2, menu
+const jb = document.getElementById('jump-button');          // Jump to h1, h2, menu
+const jm = document.getElementById('jump-modal');           // Jump modal container
+const jt = document.getElementById('jump-modal-text');      // Jump modal text
 const m = document.getElementById('search-modal');          // Where search results appear
 const n = document.getElementsByClassName('page-header-search-button')  // In two places
 const q = document.getElementById('search-query');          // Search words input by user
@@ -184,7 +186,9 @@ if (d !== null) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
         //const f = document.getElementById('search-form');           // Wrapper around query & close button
-        //const j = document.getElementById('jump-button');           // Jump to h1, h2, menu
+        //const jb = document.getElementById('jump-button');          // Jump to h1, h2, menu
+        //const jm = document.getElementById('jump-modal');           // Jump modal container
+        //const jt = document.getElementById('jump-modal-text');      // Jump modal text
         //const m = document.getElementById('search-modal');          // Where search results appear
         event.stopPropagation()  // Don't let window.onclick see this click
         boolDropdown = !boolDropdown
@@ -220,7 +224,9 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
         //const f = document.getElementById('search-form');           // Wrapper around query & close button
-        //const j = document.getElementById('jump-button');           // Jump to h1, h2, menu
+        //const jb = document.getElementById('jump-button');          // Jump to h1, h2, menu
+        //const jm = document.getElementById('jump-modal');           // Jump modal container
+        //const jt = document.getElementById('jump-modal-text');      // Jump modal text
         //const m = document.getElementById('search-modal');          // Where search results appear
         //const n = document.getElementsByClassName('page-header-search-button');
         event.stopPropagation()  // Don't let window.onclick see this click
@@ -311,22 +317,23 @@ function closeSearchForm() {
 
 var saveBackgroundColor;  // May 18/22 - New code not working
 
-var boolJumpForm = false  // Is jump form active?
+var boolJumpModal = false  // Is jump form active?
 
 // Search Magnify Glass button clicked
 // Loop through all class named .page-header-search-button
-j.onclick = function (event) {
+jb.onclick = function (event) {
     //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
     //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
-    //const j = document.getElementById('jump-button');           // Jump to h1, h2, menu
+    //const jb = document.getElementById('jump-button');          // Jump to h1, h2, menu
+    //const jm = document.getElementById('jump-modal');           // Jump modal container
+    //const jt = document.getElementById('jump-modal-text');      // Jump modal text
     //const m = document.getElementById('search-modal');          // Where search results appear
     //const n = document.getElementsByClassName('page-header-search-button');
     event.stopPropagation()  // Don't let window.onclick see this click
-    boolJumpForm = !boolJumpForm
-    if (boolJumpForm) {
-        // Jump form is open
-        // f.style.display = "flex"  // No form yet
+    boolJumpModal = !boolJumpModal
+    if (boolJumpModal) {
+        jm.style.display = "block";      // Display search results by revealing modal
         // setContentDimmed(g)  // New g replaces f  // Don't know about dim yet
         // Move to top so children have room to grow (after scrollbar removed)
         // scrollToJustAbove(g)  // Will need jump later to header
@@ -344,25 +351,25 @@ j.onclick = function (event) {
         //m.style.display = "none"  // Jump modal may be open
         //window.scrollTo({top: 0, behavior: 'smooth'});
         //reverseContentDimmed()
-        closeJumpForm()
+        closeJumpModal()
         /* TODO: Check function below:
-            function closeJumpForm() {
+            function closeJumpModal() {
                 f.style.display = "none"  // Close search form
-                boolJumpForm = false
+                boolJumpModal = false
                 window.scrollTo({top: 0, behavior: 'smooth'});
                 reverseContentDimmed()
             }
         */
     }
-    //console.log("p.onclick boolDropdown:", boolDropdown, "boolJumpForm:", boolJumpForm)
+    //console.log("p.onclick boolDropdown:", boolDropdown, "boolJumpModal:", boolJumpModal)
 }
 
-function closeJumpForm() {
-    /* Shared between 'X' to close and click outside search query */
+function closeJumpModal() {
+    /* Shared between 'X' to close and click outside modal */
     //const f = document.getElementById('search-form');           // Wrapper around query & close button
-    //f.style.display = "none"  // Close search form
+    jm.style.display = "none"  // Close jump modal
     //m.style.display = "none"  // Sep 2/23 - Search modal may be open
-    boolJumpForm = false
+    boolJumpModal = false
     //window.scrollTo({top: 0, behavior: 'smooth'});
     //reverseContentDimmed()
 }
