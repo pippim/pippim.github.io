@@ -127,11 +127,10 @@ $lavender: #E6E6FA !default; // lavender
 }
 
 #hidden-menu {  // In conjunction with class .page-header-button in HTML
-    position: fixed;
+    position: sticky;
     top: 1rem;  // revealed when .page-header scrolls away
     left: 0;
-    margin-left: -1rem;  // balance .page-header-button class
-    z-index: 1;  // Back to square 1
+    margin-left: -.5rem;  // balance .page-header-button class
 }
 
 .page-header-button {
