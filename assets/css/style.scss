@@ -594,7 +594,7 @@ details[open] > summary {
 }
 
 .modal #jump-modal {
-    position: sticky;
+    position: absolute;
     //text-align: start;  // parent flex box is centering text
 }
 
