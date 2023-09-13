@@ -331,6 +331,9 @@ jb.onclick = function (event) {
     //const m = document.getElementById('search-modal');          // Where search results appear
     //const n = document.getElementsByClassName('page-header-search-button');
     event.stopPropagation()  // Don't let window.onclick see this click
+    e.style.display = "none"  // Drop down content
+    f.style.display = "none"  // Search form
+    m.style.display = "none"  // Search modal
     boolJumpModal = !boolJumpModal
     if (boolJumpModal) {
         jm.style.display = "block";      // Display search results by revealing modal
@@ -347,19 +350,9 @@ jb.onclick = function (event) {
         }
     }
     else  {
-        //f.style.display = "none"
-        //m.style.display = "none"  // Jump modal may be open
         //window.scrollTo({top: 0, behavior: 'smooth'});
         //reverseContentDimmed()
         closeJumpModal()
-        /* TODO: Check function below:
-            function closeJumpModal() {
-                f.style.display = "none"  // Close search form
-                boolJumpModal = false
-                window.scrollTo({top: 0, behavior: 'smooth'});
-                reverseContentDimmed()
-            }
-        */
     }
     //console.log("p.onclick boolDropdown:", boolDropdown, "boolJumpModal:", boolJumpModal)
 }
