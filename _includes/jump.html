@@ -1,0 +1,26 @@
+<!-- In _layouts/program.html, default.html, post.html, etc. USE:
+{% include jump.html %}
+-->
+
+<button id="jump-button" class="page-header-button"
+    title="Quick Jump Menu"
+    >&#x2630;
+</button>
+
+<div id="jump-container">
+    <form role="search" id="jump-form" style="display: none;">
+        <input type="search" class="clearable-input" id="jump-query" name="jump-q"
+            placeholder="Search..." aria-label="Search site content">
+        <span id="jump-clear-input" class="icon_back" title="Clear jump words"></span>
+        <button id="jump-symbol" class="icon_back" type="submit"
+            title="Search {{ site.title }} Website">
+        </button>
+    </form>
+
+    <div id="jump-modal" class="modal" style="display: none">
+        <div class="jump-modal-content">
+            <span id="jump-modal-close" class="icon_back"></span>
+            <p id="jump-modal-text">/assets/js/jump.js will update text..</p>
+        </div>
+    </div>
+</div>
