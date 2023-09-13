@@ -74,23 +74,13 @@
 
     </header>
 
-    {% include jump.html %}
-    <!--
-    <button id="jump-button" class="page-header-button"
-        title="Quick Jump Menu"
-        >&#x2630;
-    </button>
-    -->
-
     {% include tcm-draggable-window.html %}
-
+    {% include jump_button.html %}
     <main id="content" class="main-content" role="main">
-
+      {% include jump_modal.html %}
       {% include search.html %}
       <script type="text/javascript" src="/assets/js/search.js" ></script>
-
       {{ content }}
-
     </main>
   </body>
 </html>
