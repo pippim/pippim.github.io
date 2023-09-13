@@ -184,10 +184,9 @@ c.onclick = function () {
 var boolJumpModal = false  // Is jump form active?
 jc.onclick = function () {
     event.stopPropagation()  // Don't let window.onclick see this click
-    jm.style.display = "none";   // Turn off display for search results modal
-    boolJumpModal = false
-    // TODO: Restore original Y Offset before scrolling to make room for modal
-    //       Do we want to close search form too? Saves clicks for user
+    closeJumpModal()
+    //jm.style.display = "none";   // Turn off display for search results modal
+    //boolJumpModal = false
 }
 
 // When the user clicks on page-header-hamburger button, display mobile dropdown list
@@ -304,7 +303,8 @@ window.onclick = function (event) {
     }
 
     if (!jm.contains(event.target) && jm.style.display != "none") {
-        jm.style.display = "none"  // Close search results modal
+        closeJumpModal()
+        //jm.style.display = "none"
         return
     }
 
