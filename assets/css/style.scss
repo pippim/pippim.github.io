@@ -131,7 +131,8 @@ $lavender: #E6E6FA !default; // lavender
     //max-width: 66rem;  // Override cayman theme 64rem & padding 2rem 6rem
     //padding: 0;        // in _layouts/jekyll-theme-cayman.scss
     top: 1rem;  // From Top of screen when no page header
-    margin-top: 6rem;  // From page header
+    margin-top: 2rem;  // From page <header>
+    margin-bottom: -2rem;  // Raise up <main>
     left: 0;
     //margin-left: -.5rem;  // balance .page-header-button class
 }
@@ -139,7 +140,8 @@ $lavender: #E6E6FA !default; // lavender
 #jump-button {  // In conjunction with class .page-header-button in HTML
     position: sticky;
     top: 1rem;  // From Top of screen when no page header
-    margin-top: 6rem;  // From page header
+    margin-top: 2rem;  // From page <header>
+    margin-bottom: -2rem;  // Raise up <main>
     left: 0;
 }
 
