@@ -30,6 +30,13 @@
       <h1 class="project-name linear-wipe">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <!-- <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
 
+      <div id="hidden-menu">
+        <button id="hamburger-button" class="page-header-button"
+          title="Fly Out Menu {{ site.title }} Website"
+          >&#x2630;
+        </button>
+      </div>
+
       <div id="page-header-buttons">
         <button class="color-scheme-button" ></button>
         <a href="{{ site.baseurl }}/" class="page-header-button">⌂ Home</a>
