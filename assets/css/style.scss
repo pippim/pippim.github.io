@@ -26,7 +26,7 @@ p b, p strong, :not(a) ul b, :not(a) ul strong {
     top: 1rem;
     left: 0;
     margin-left: 1rem;
-    // z-index: -3;
+    z-index: -1;
 }
 
 // Input fields
