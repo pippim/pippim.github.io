@@ -76,14 +76,14 @@
 
     {% include tcm-draggable-window.html %}
 
-    <main id="content" class="main-content" role="main">
+    <div id="hidden-menu">
+      <button id="hamburger-button" class="page-header-button"
+        title="Quick Jump Menu"
+        >&#x2630;
+      </button>
+    </div>
 
-      <div id="hidden-menu">
-        <button id="hamburger-button" class="page-header-button"
-          title="Quick Jump Menu"
-          >&#x2630;
-        </button>
-      </div>
+    <main id="content" class="main-content" role="main">
 
       {% include search.html %}
       <script type="text/javascript" src="/assets/js/search.js" ></script>
