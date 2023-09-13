@@ -23,12 +23,10 @@ p b, p strong, :not(a) ul b, :not(a) ul strong {
 
 #hidden-menu {  // revealed when .page-header scrolls away
     position: fixed;
-    position: absolute;
+    top: 1rem;
     left: 0;
     margin-left: .3rem;
-    top: 2rem;
-    left: 2rem;
-    z-index: 1;  // class page-header has z-index 2
+    z-index: 0;  // class page-header has z-index 2
 }
 
 // Input fields
