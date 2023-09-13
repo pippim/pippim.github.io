@@ -161,6 +161,7 @@ const g = document.getElementById('search-container');      // Wrapper around fo
 const h = document.getElementById('search-modal-text')      // Search results html codes
 const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
                                                             // Black 'X' to close search
+const j = document.getElementById('hamburger-button');      // Hidden hamburger menu
 const m = document.getElementById('search-modal');          // Where search results appear
 const n = document.getElementsByClassName('page-header-search-button')  // In two places
 const q = document.getElementById('search-query');          // Search words input by user
@@ -183,6 +184,7 @@ if (d !== null) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
         //const f = document.getElementById('search-form');           // Wrapper around query & close button
+        //const j = document.getElementById('hamburger-button');      // Hidden hamburger menu
         //const m = document.getElementById('search-modal');          // Where search results appear
         event.stopPropagation()  // Don't let window.onclick see this click
         boolDropdown = !boolDropdown
@@ -218,6 +220,7 @@ for (var ndx = 0; ndx < n.length; ndx++) {
         //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
         //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
         //const f = document.getElementById('search-form');           // Wrapper around query & close button
+        //const j = document.getElementById('hamburger-button');      // Hidden hamburger menu
         //const m = document.getElementById('search-modal');          // Where search results appear
         //const n = document.getElementsByClassName('page-header-search-button');
         event.stopPropagation()  // Don't let window.onclick see this click
@@ -308,6 +311,52 @@ function closeSearchForm() {
 
 var saveBackgroundColor;  // May 18/22 - New code not working
 
+var boolJumpForm = false  // Is jump form active?
+
+// Search Magnify Glass button clicked
+// Loop through all class named .page-header-search-button
+j.onclick = function (event) {
+    //const d = document.getElementById('page-header-dropdown');  // The hamburger menu
+    //const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
+    //const f = document.getElementById('search-form');           // Wrapper around query & close button
+    //const j = document.getElementById('hamburger-button');      // Hidden hamburger menu
+    //const m = document.getElementById('search-modal');          // Where search results appear
+    //const n = document.getElementsByClassName('page-header-search-button');
+    event.stopPropagation()  // Don't let window.onclick see this click
+    boolJumpForm = !boolJumpForm
+    if (boolJumpForm) {
+        // Jump form is open
+        // f.style.display = "flex"  // No form yet
+        // setContentDimmed(g)  // New g replaces f  // Don't know about dim yet
+        // Move to top so children have room to grow (after scrollbar removed)
+        // scrollToJustAbove(g)  // Will need jump later to header
+        // Cursor into search words input field
+        // q.focus();  // _includes/search.html id="search_query"
+        // q.select();
+        // Hamburger dropdown may be open and stopPropagation stops window.click() running
+        if (e !== null && e != "none") {
+            e.style.display = "none";  // Close dropdown menu options
+            boolDropdown = false
+        }
+    }
+    else  {
+        //f.style.display = "none"
+        //m.style.display = "none"  // Jump modal may be open
+        //window.scrollTo({top: 0, behavior: 'smooth'});
+        //reverseContentDimmed()
+        //closeJumpForm()  // Sep 2/23
+        /* TODO: Check function below:
+            function closeJumpForm() {
+                f.style.display = "none"  // Close search form
+                boolJumpForm = false
+                window.scrollTo({top: 0, behavior: 'smooth'});
+                reverseContentDimmed()
+            }
+        */
+    }
+    //console.log("p.onclick boolDropdown:", boolDropdown, "boolJumpForm:", boolJumpForm)
+}
+
 function setContentDimmed(elm) {
     document.body.style.overflow = "hidden"
     elm.classList.add("dim-body")
@@ -389,8 +438,8 @@ function submitted(event) {
 function scrollToJustAbove(element) {
     // From: https://stackoverflow.com/a/56391657/6929343
     const yOffset = -80;
-    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({top: y, behavior: 'smooth'});
+    const y_new = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({top: y_new, behavior: 'smooth'});
 }
 
 function get_hits(submit_str) {
