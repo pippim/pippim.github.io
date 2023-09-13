@@ -594,8 +594,12 @@ details[open] > summary {
 }
 
 .modal #jump-modal {
-    position: fixed;
-    //text-align: start;  // parent flex box is centering text
+    // copied from #jump-button
+    position: sticky;
+    top: 1rem;  // From Top of screen when no page header
+    margin-top: 4rem;  // From page <header>
+    margin-bottom: -7rem;  // Raise up <main> that jump-button forced down
+    float: right;
 }
 
 .modal {
