@@ -1,5 +1,6 @@
 <!-- In _layouts/program.html, default.html, post.html, etc. USE:
-{ % include jump.html %}
+    jump_button.html between <header> and <main>, position: sticky;
+    jump_modal.html inside <main>, position: aboslute; then top: 99px;
 -->
 
 <button id="jump-button" class="page-header-button"
@@ -7,9 +8,9 @@
     >&#x2630;
 </button>
 
-<div id="jump-modal" class="modal" style="display: none">
-    <div class="jump-modal-content">
+<div id="jump-modal" class="jump-modal" style="display: none">
+    <div id="jump-modal-content">
         <span id="jump-modal-close" class="icon_back"></span>
-        <p id="jump-modal-text">/assets/js/jump.js will update text..</p>
+        <p id="jump-modal-text">Jump Button - Work In Progress!</p>
     </div>
 </div>
