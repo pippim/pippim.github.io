@@ -158,15 +158,15 @@ const d = document.getElementById('page-header-dropdown');  // The hamburger men
 const e = document.getElementById('dropdown-content');      // hamburger menu dropdown options
 const f = document.getElementById('search-form');           // Wrapper around query & close button
 const g = document.getElementById('search-container');      // Wrapper around form & modal
-const h = document.getElementById('search-modal-text')      // Search results html codes
+const h = document.getElementById('search-modal-text');     // Search results html codes
 const i = document.getElementById('search-clear-input');    // Red BackTab to clear search words
                                                             // Black 'X' to close search
 const jb = document.getElementById('jump-button');          // Jump to h1, h2, menu
 const jm = document.getElementById('jump-modal');           // Jump modal container
-const jc = document.getElementById('jump-modal-close')      // Jump modal 'X' close button
+const jc = document.getElementById('jump-modal-close');     // Jump modal 'X' close button
 const jt = document.getElementById('jump-modal-text');      // Jump modal text
 const m = document.getElementById('search-modal');          // Where search results appear
-const n = document.getElementsByClassName('page-header-search-button')  // In two places
+const n = document.getElementsByClassName('page-header-search-button');  // In two places
 const q = document.getElementById('search-query');          // Search words input by user
 const s = document.getElementById('search-symbol');         // Mag glass beside search-query
 
