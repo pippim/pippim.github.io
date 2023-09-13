@@ -572,8 +572,24 @@ details[open] > summary {
     margin-right: .5rem;
 }
 
-.search-modal-content {
+.search-modal-content {  // Deprecate after switch to .modal below
     // Search results - Resides inside search-container
+    margin-top: .75rem;
+    color: var(--nav-button-color);  // Oct 13/22 was header-bg-color
+    padding: 1rem 1rem 1.5rem 1rem;
+    border: .0625rem solid #888;  // 1px equivalent when 1rem = 16px
+    border-radius: .5rem;
+    overflow: auto;
+    text-align: start;  // parent flex box is centering text
+    max-height: 75vh;   // After 80% of viewport height, scroll bar appears on right
+    -webkit-box-shadow: 1rem 1rem .7rem var(--header-bg-color-secondary);
+    box-shadow: 1rem 1rem .7rem var(--header-bg-color-secondary);
+    max-width: 64rem;  // From: /_sass/jekyll-theme-cayman.scss
+    font-size: 1.1rem;
+}
+
+.modal {
+    // Resides inside search-modal and jump-modal
     margin-top: .75rem;
     color: var(--nav-button-color);  // Oct 13/22 was header-bg-color
     padding: 1rem 1rem 1.5rem 1rem;
@@ -596,11 +612,13 @@ details[open] > summary {
     background-image: url({{ site.url }}/assets/img/icons/x.png);
 }
 
+#jump-modal-close,
 #search-modal-close {
     // Big 'X' image - Requires class name .icon_back{}
     background-image: url({{ site.url }}/assets/img/icons/x.png);
 }
 
+#jump-modal-close,
 #search-clear-input,
 #search-modal-close {
     // Dim button background: https://stackoverflow.com/a/24084708/6929343
