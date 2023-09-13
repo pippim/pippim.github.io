@@ -343,7 +343,8 @@ jb.onclick = function (event) {
 
     boolJumpModal = !boolJumpModal
     if (boolJumpModal) {
-        jm.style.display = "block";  // Display #jump-modal
+        jm.style.display = "block"  // Display #jump-modal
+        jm.style.top = window.scrollY + "px"
         // Where is jump button in viewport now?
         var viewportOffset = jb.getBoundingClientRect();
         // these are relative to the viewport
