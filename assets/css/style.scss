@@ -119,7 +119,7 @@ $lavender: #E6E6FA !default; // lavender
 .page-header {
     /*  Sep 28/2022 - Strange have to add this today. Page header has
         way too much empty space above. */
-    z-index: 2;  // experiments with #hidden-menu
+    // z-index: 2;  // experiments with #hidden-menu
     @include large { margin-top: -4rem; }
     @include medium { margin-top: -2rem; }
     @include small { margin-top: -1rem; }
