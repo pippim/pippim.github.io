@@ -346,7 +346,8 @@ jb.onclick = function (event) {
         jm.style.display = "block"  // Display #jump-modal
         top = window.scrollY + "px"
         console.log("New jm top:", top, "scrollY:", window.scrollY)
-        jm.style.top = top
+        jm.style.top = top  // doesn't work
+        jm.style.marginTop = "200px"
         // Where is jump button in viewport now?
         var viewportOffset = jb.getBoundingClientRect();
         // these are relative to the viewport
