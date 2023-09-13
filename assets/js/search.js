@@ -369,6 +369,7 @@ function closeJumpForm() {
 
 // From: https://stackoverflow.com/a/35376840/6929343
 // Change 'i' to 'hi' and 'j' to 'hj'
+/*
 for (hi=1; hi<=6; hi++) {
     var headers = document.getElementsByTagName('h'+hi);
     for (hj=0; hj<headers.length; hj++) {
@@ -379,6 +380,7 @@ var headers = document.getElementsByClassName('h');
 for (hi=0; hi<headers.length; hi++) {
     headers[hi].innerHTML += ' '+hi;
 }
+*/
 
 function setContentDimmed(elm) {
     document.body.style.overflow = "hidden"
