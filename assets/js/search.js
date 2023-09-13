@@ -368,15 +368,16 @@ function closeJumpForm() {
 }
 
 // From: https://stackoverflow.com/a/35376840/6929343
-for (i=1; i<=6; i++) {
-    var headers = document.getElementsByTagName('h'+i);
-    for (j=0; j<headers.length; j++) {
-        headers[j].className = 'h';
+// Change 'i' to 'hi' and 'j' to 'hj'
+for (hi=1; hi<=6; hi++) {
+    var headers = document.getElementsByTagName('h'+hi);
+    for (hj=0; hj<headers.length; hj++) {
+        headers[hj].className = 'h';
     }
 }
 var headers = document.getElementsByClassName('h');
-for (i=0; i<headers.length; i++) {
-    headers[i].innerHTML += ' '+i;
+for (hi=0; hi<headers.length; hi++) {
+    headers[hi].innerHTML += ' '+hi;
 }
 
 function setContentDimmed(elm) {
