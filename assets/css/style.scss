@@ -595,6 +595,8 @@ details[open] > summary {
 }
 
 .jump-modal {
+    display: none;  // Start invisible
+    margin-right: 1rem;
     z-index: 1; /* Sit on top */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
