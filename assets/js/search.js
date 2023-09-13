@@ -292,6 +292,11 @@ window.onclick = function (event) {
         return
     }
 
+    if (!jm.contains(event.target) && jm.style.display != "none") {
+        jm.style.display = "none"  // Close search results modal
+        return
+    }
+
     if (!f.contains(event.target) && f.style.display != "none") {
         closeSearchForm()
         return
