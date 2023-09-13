@@ -351,14 +351,14 @@ jb.onclick = function (event) {
                   window.pageYOffset
                   //jb.document.defaultView.pageYOffset
         var left = viewportOffset.left;
-        console.log("jb.onclick REAL jm top:", top, "jm left:", left)
+        console.log("jb.onclick REAL jm top:", top, "scrollY:", window.scrollY)
         for (hi=1; hi<=3; hi++) {  // h1, h2, h3
             var headers = document.getElementsByTagName('h'+hi);
             for (hj=0; hj<headers.length; hj++) {
                 headers[hj].className = 'h';
             }
         }
-        console.log("h1, h2, h3 count:", top, "jm left:", left)
+        console.log("h1, h2, h3 count:", headers.length)
         setContentDimmed(jm)
     }
     else {
