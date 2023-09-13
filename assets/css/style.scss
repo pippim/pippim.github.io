@@ -594,6 +594,7 @@ details[open] > summary {
 }
 
 .modal #jump-modal {
+    position: absolute;  // Override with window.scrollY in search.js
     float: right;
 }
 
